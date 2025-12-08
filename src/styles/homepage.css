@@ -119,19 +119,12 @@
   padding: var(--space-xl);
 }
 
-.badger-placeholder {
-  text-align: center;
-  color: var(--text-muted);
-}
-
-.badger-placeholder span {
-  display: block;
-  font-size: var(--text-xl);
-  margin-bottom: var(--space-sm);
-}
-
-.badger-placeholder p {
-  font-size: var(--text-sm);
+.hero-badger {
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
 }
 
 /* ===== FEATURES SECTION ===== */

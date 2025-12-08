@@ -40,10 +40,17 @@ const { title, description = t('meta.description') } = Astro.props;
 
     <slot name="header">
       <header class="site-header">
+        <div class="christmas-lights">
+          <div class="wire"></div>
+          <ul class="lights">
+            <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+            <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+          </ul>
+        </div>
         <nav class="container flex items-center justify-between" style="position: relative;">
           <a href="/" class="logo">
-            <img src="/images/logo-transparent.png" alt={t('header.logoText')} height="40" />
-            <span class="logo-text">{t('header.logoText')}</span>
+            <img src="/images/logo-transparent-small.png" alt={t('header.logoText')} height="100" />
           </a>
 
           <ul class="nav-links flex items-center gap-lg">
@@ -64,7 +71,7 @@ const { title, description = t('meta.description') } = Astro.props;
         <div class="footer-grid">
           <div class="footer-brand">
             <a href="/" class="logo">
-              <img src="/images/logo-transparent.png" alt={t('header.logoText')} height="28" />
+              <img src="/images/logo-transparent-small.png" alt={t('header.logoText')} height="28" />
             </a>
             <p class="text-muted text-sm" set:html={t('footer.tagline')} />
           </div>

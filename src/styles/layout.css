@@ -9,10 +9,14 @@
   left: 0;
   right: 0;
   z-index: var(--z-sticky);
-  padding: var(--space-md) 0;
   background: rgba(10, 40, 24, 0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--glass-border);
+}
+
+.site-header .container {
+  padding-top: var(--space-xs);
+  padding-bottom: var(--space-xs);
 }
 
 .logo {
@@ -26,7 +30,9 @@
 }
 
 .logo img {
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-lg);
+  background: radial-gradient(ellipse at center, rgba(40, 80, 55, 0.9) 30%, rgba(40, 80, 55, 0) 70%);
+  padding: var(--space-xs);
 }
 
 .logo-text {
@@ -71,6 +77,112 @@
 
 .btn-launch {
   padding: var(--space-sm) var(--space-lg) !important;
+}
+
+/* ===== CHRISTMAS LIGHTS ===== */
+.christmas-lights {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  overflow: hidden;
+  pointer-events: none;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.christmas-lights .wire {
+  position: absolute;
+  top: 8px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    #1a1a1a 5%,
+    #1a1a1a 95%,
+    transparent 100%
+  );
+}
+
+.christmas-lights .lights {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+  list-style: none;
+  margin: 0;
+}
+
+.christmas-lights .lights li {
+  position: relative;
+  width: 12px;
+  height: 18px;
+  border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+  margin-top: 6px;
+  animation: twinkle 1.5s ease-in-out infinite;
+}
+
+/* Wire connector on each bulb */
+.christmas-lights .lights li::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 8px;
+  background: #2a2a2a;
+  border-radius: 2px 2px 0 0;
+}
+
+/* Light colors - cycling through festive colors */
+.christmas-lights .lights li:nth-child(5n+1) {
+  background: #ff4444;
+  box-shadow: 0 2px 10px #ff4444, 0 0 20px #ff444488;
+  animation-delay: 0s;
+}
+
+.christmas-lights .lights li:nth-child(5n+2) {
+  background: #44ff44;
+  box-shadow: 0 2px 10px #44ff44, 0 0 20px #44ff4488;
+  animation-delay: 0.3s;
+}
+
+.christmas-lights .lights li:nth-child(5n+3) {
+  background: #4444ff;
+  box-shadow: 0 2px 10px #4444ff, 0 0 20px #4444ff88;
+  animation-delay: 0.6s;
+}
+
+.christmas-lights .lights li:nth-child(5n+4) {
+  background: #ffff44;
+  box-shadow: 0 2px 10px #ffff44, 0 0 20px #ffff4488;
+  animation-delay: 0.9s;
+}
+
+.christmas-lights .lights li:nth-child(5n+5) {
+  background: #ff44ff;
+  box-shadow: 0 2px 10px #ff44ff, 0 0 20px #ff44ff88;
+  animation-delay: 1.2s;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.6;
+    filter: brightness(0.7);
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .christmas-lights .lights li {
+    animation: none;
+  }
 }
 
 /* ===== MAIN CONTENT ===== */

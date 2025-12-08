@@ -29,7 +29,7 @@ const { locale } = Astro.props;
         </p>
 
         <div class="hero-actions flex gap-md flex-wrap">
-          <a href="https://app.sidebadger.com" class="btn btn-primary btn-lg btn-confetti" target="_blank" rel="noopener">
+          <a href={t('app.url', locale)} class="btn btn-primary btn-lg btn-confetti" target="_blank" rel="noopener">
             {t('hero.cta', locale)}
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14"></path>
@@ -422,7 +422,7 @@ const { locale } = Astro.props;
       <div class="cta-card glass fade-up">
         <h2>{t('cta.title', locale)}</h2>
         <p>{t('cta.subtitle', locale)}</p>
-        <a href="https://app.sidebadger.com" class="btn btn-primary btn-lg btn-confetti" target="_blank" rel="noopener">
+        <a href={t('app.url', locale)} class="btn btn-primary btn-lg btn-confetti" target="_blank" rel="noopener">
           {t('cta.button', locale)}
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14"></path>

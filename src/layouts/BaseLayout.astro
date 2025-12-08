@@ -54,7 +54,7 @@ const { title, description = t('meta.description') } = Astro.props;
           </a>
 
           <ul class="nav-links flex items-center gap-lg">
-            <li><a href="https://app.sidebadger.com" class="btn btn-primary btn-launch" target="_blank" rel="noopener">
+            <li><a href={t('app.url')} class="btn btn-primary btn-launch" target="_blank" rel="noopener">
               {t('header.launchApp')}
             </a></li>
           </ul>
@@ -80,7 +80,7 @@ const { title, description = t('meta.description') } = Astro.props;
             <h4>{t('footer.product')}</h4>
             <ul>
               <li><a href="/pricing">{t('footer.pricing')}</a></li>
-              <li><a href="https://app.sidebadger.com" target="_blank" rel="noopener">{t('footer.launchApp')}</a></li>
+              <li><a href={t('app.url')} target="_blank" rel="noopener">{t('footer.launchApp')}</a></li>
             </ul>
           </div>
 

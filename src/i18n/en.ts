@@ -39,8 +39,8 @@ export default {
   'features.invites.title': 'Easy Invites',
   'features.invites.desc': 'Share a link, friends join. No app download required. Optionally require approval before new members can join.',
 
-  'features.roles.title': 'Four Member Roles',
-  'features.roles.desc': 'Owner, Admin, Member, Viewer. Control who can add expenses, settle up, or just watch from the sidelines.',
+  'features.roles.title': 'Configurable Permissions',
+  'features.roles.desc': 'Control who can add expenses, settle up, or just watch from the sidelines. Your group, your rules.',
 
   'features.splits.title': 'Three Ways to Split',
   'features.splits.desc': 'Equal (divide evenly), Exact (specific amounts), or Percentage. Pick what works for your group. Who doesn\'t like a 3-way?',
@@ -51,8 +51,8 @@ export default {
   'features.currency.title': 'Any Currency',
   'features.currency.desc': 'USD, EUR, JPY, GBP, whatever. Full support for all currencies with proper decimal handling. Quick-pick from recent ones.',
 
-  'features.balances.title': 'See Who Owes What',
-  'features.balances.desc': "Color-coded balance view shows who owes whom. Green = you're owed. Red = you owe. Zero = you're good.",
+  'features.balances.title': 'Simplified Balances',
+  'features.balances.desc': "Smart debt simplification minimizes the number of payments needed. Instead of everyone paying everyone, we figure out the shortest path to settled.",
 
   'features.settle.title': 'One-Click Settle',
   'features.settle.desc': 'See a debt? Tap "Quick Settle" and mark it paid. Done. Confetti optional but highly recommended.',
@@ -60,8 +60,8 @@ export default {
   'features.activity.title': 'Activity Feed',
   'features.activity.desc': `See everything that happens: new expenses, settlements, members joining. Stay in sync with your group without asking "wait, what happened?"`,
 
-  'features.comments.title': 'Comments',
-  'features.comments.desc': 'Add notes to any expense. "Who ordered the extra nachos?" Keep the conversation where it belongs.',
+  'features.comments.title': 'Chat & Comment',
+  'features.comments.desc': 'Group chat for general discussion, plus comments on individual expenses. "Who ordered the extra nachos?" Keep the conversation where it belongs.',
 
   'features.edit.title': 'Fix Mistakes',
   'features.edit.desc': 'Entered the wrong amount? Edit expenses after creation. Change the split, fix the date, update descriptions. No stress.',

@@ -1,0 +1,16 @@
+services:
+  website:
+    build: .
+    container_name: side-badger-website
+    restart: unless-stopped
+    networks:
+      - snowmonkey-proxy-network
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+networks:
+  snowmonkey-proxy-network:
+    external: true

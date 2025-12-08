@@ -1,0 +1,247 @@
+---
+// Easter Eggs Component
+// Hidden surprises for chaotic good energy
+---
+
+<script>
+  import confetti from 'canvas-confetti';
+
+  // === KONAMI CODE ===
+  // Up, Up, Down, Down, Left, Right, Left, Right, B, A
+  const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA'];
+  let konamiIndex = 0;
+
+  document.addEventListener('keydown', (e) => {
+    if (e.code === konamiCode[konamiIndex]) {
+      konamiIndex++;
+      if (konamiIndex === konamiCode.length) {
+        triggerBadgerRain();
+        konamiIndex = 0;
+      }
+    } else {
+      konamiIndex = 0;
+    }
+  });
+
+  function triggerBadgerRain() {
+    // Show secret message
+    showSecretMessage("🦡 BADGER MODE ACTIVATED! 🦡");
+
+    // Epic confetti explosion
+    const duration = 5000;
+    const end = Date.now() + duration;
+
+    const colors = ['#8b5cf6', '#22d3ee', '#ec4899', '#34d399'];
+
+    (function frame() {
+      confetti({
+        particleCount: 4,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0, y: 0.6 },
+        colors: colors,
+        disableForReducedMotion: true
+      });
+      confetti({
+        particleCount: 4,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1, y: 0.6 },
+        colors: colors,
+        disableForReducedMotion: true
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+
+    // Change the page title temporarily
+    const originalTitle = document.title;
+    document.title = "🦡 BADGER BADGER BADGER 🦡";
+    setTimeout(() => {
+      document.title = originalTitle;
+    }, 5000);
+  }
+
+  // === SECRET CLICK SEQUENCE ===
+  // Click the logo 7 times for a surprise
+  let logoClickCount = 0;
+  let logoClickTimer: ReturnType<typeof setTimeout> | null = null;
+
+  document.querySelectorAll('.logo').forEach(logo => {
+    logo.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).closest('nav')) {
+        logoClickCount++;
+
+        if (logoClickTimer) clearTimeout(logoClickTimer);
+        logoClickTimer = setTimeout(() => {
+          logoClickCount = 0;
+        }, 2000);
+
+        if (logoClickCount === 7) {
+          e.preventDefault();
+          triggerSecretDance();
+          logoClickCount = 0;
+        }
+      }
+    });
+  });
+
+  function triggerSecretDance() {
+    showSecretMessage("You found the secret! The badger is pleased.");
+
+    // Make everything wobble
+    document.body.classList.add('secret-wobble');
+    setTimeout(() => {
+      document.body.classList.remove('secret-wobble');
+    }, 3000);
+
+    // Confetti burst
+    confetti({
+      particleCount: 200,
+      spread: 180,
+      origin: { y: 0.5 },
+      colors: ['#8b5cf6', '#22d3ee', '#ec4899', '#34d399'],
+      disableForReducedMotion: true
+    });
+  }
+
+  // === SECRET MESSAGE DISPLAY ===
+  function showSecretMessage(message: string) {
+    // Remove any existing message
+    const existing = document.querySelector('.secret-message');
+    if (existing) existing.remove();
+
+    const div = document.createElement('div');
+    div.className = 'secret-message';
+    div.textContent = message;
+    document.body.appendChild(div);
+
+    setTimeout(() => {
+      div.classList.add('show');
+    }, 10);
+
+    setTimeout(() => {
+      div.classList.remove('show');
+      setTimeout(() => div.remove(), 500);
+    }, 3000);
+  }
+
+  // === DISCO MODE (type "disco") ===
+  let discoBuffer = '';
+  document.addEventListener('keydown', (e) => {
+    if (e.key.length === 1) {
+      discoBuffer += e.key.toLowerCase();
+      if (discoBuffer.includes('disco')) {
+        triggerDiscoMode();
+        discoBuffer = '';
+      }
+      // Keep buffer small
+      if (discoBuffer.length > 10) {
+        discoBuffer = discoBuffer.slice(-5);
+      }
+    }
+  });
+
+  function triggerDiscoMode() {
+    showSecretMessage("🪩 DISCO MODE 🪩");
+    document.body.classList.add('disco-mode');
+    setTimeout(() => {
+      document.body.classList.remove('disco-mode');
+    }, 5000);
+  }
+
+  // === APPRECIATION CLICK ===
+  // Click footer copyright 5 times
+  let footerClickCount = 0;
+  document.addEventListener('click', (e) => {
+    if ((e.target as HTMLElement).closest('.footer-bottom')) {
+      footerClickCount++;
+      if (footerClickCount === 5) {
+        showSecretMessage("Thanks for clicking! You're awesome! 💜");
+        confetti({
+          particleCount: 50,
+          spread: 60,
+          origin: { y: 0.8 },
+          colors: ['#8b5cf6'],
+          disableForReducedMotion: true
+        });
+        footerClickCount = 0;
+      }
+    }
+  });
+</script>
+
+<style is:global>
+  /* Secret message popup */
+  .secret-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
+    color: white;
+    padding: var(--space-lg) var(--space-2xl);
+    border-radius: var(--radius-xl);
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 700;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    text-align: center;
+    box-shadow: var(--shadow-glow-lg);
+  }
+
+  .secret-message.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  /* Secret wobble animation */
+  @keyframes secret-wobble {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-2deg); }
+    75% { transform: rotate(2deg); }
+  }
+
+  .secret-wobble {
+    animation: secret-wobble 0.2s ease-in-out infinite;
+  }
+
+  .secret-wobble * {
+    animation: secret-wobble 0.2s ease-in-out infinite reverse;
+  }
+
+  /* Disco mode */
+  @keyframes disco-bg {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+  }
+
+  .disco-mode {
+    animation: disco-bg 0.5s linear infinite;
+  }
+
+  .disco-mode::before,
+  .disco-mode::after {
+    animation: disco-bg 0.3s linear infinite reverse !important;
+  }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .secret-message {
+      transition: opacity 0.1s ease;
+    }
+
+    .secret-wobble,
+    .secret-wobble *,
+    .disco-mode,
+    .disco-mode::before,
+    .disco-mode::after {
+      animation: none !important;
+    }
+  }
+</style>

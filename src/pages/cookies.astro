@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Cookie Policy - Side Badger">
+  <section class="legal-page">
+    <div class="container">
+      <div class="legal-header fade-up">
+        <h1>Cookie Policy</h1>
+        <p class="text-muted">Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+      </div>
+
+      <div class="legal-content glass fade-up">
+        <div class="placeholder-notice">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="8" cy="9" r="1"/>
+            <circle cx="15" cy="9" r="1"/>
+            <circle cx="9" cy="14" r="1"/>
+            <circle cx="14" cy="14" r="1"/>
+            <circle cx="12" cy="11" r="1"/>
+          </svg>
+          <h2>Cookie Policy Coming Soon</h2>
+          <p>The actual cookie policy content will be loaded from the Side Badger API.</p>
+          <p class="text-muted">Spoiler alert: We don't really use cookies for tracking.</p>
+        </div>
+
+        <div class="quick-summary">
+          <h3>The Cookie Situation (It's Pretty Boring)</h3>
+          <ul>
+            <li><strong>No tracking cookies.</strong> We're not following you around the internet. That's creepy.</li>
+            <li><strong>No advertising cookies.</strong> We don't show ads, so we don't need to profile you.</li>
+            <li><strong>No analytics cookies.</strong> We're not counting your visits or measuring your engagement.</li>
+            <li><strong>Functional cookies only.</strong> Just the basics to make the app work (like keeping you logged in).</li>
+            <li><strong>No cookie consent popup.</strong> Because we don't need one. You're welcome.</li>
+          </ul>
+        </div>
+
+        <div class="cookie-illustration">
+          <p>🍪 → 🦡 → 🚫</p>
+          <p class="text-muted text-sm">Badger sees cookie. Badger says no thanks.</p>
+        </div>
+
+        <div class="api-placeholder">
+          <code>// Cookie policy content will be fetched from:</code>
+          <code>// GET app.sidebadger.com/api/legal/cookies</code>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    padding: var(--space-4xl) 0;
+    min-height: 70vh;
+  }
+
+  .legal-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .legal-header h1 {
+    margin-bottom: var(--space-sm);
+  }
+
+  .legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-2xl);
+  }
+
+  .placeholder-notice {
+    text-align: center;
+    padding: var(--space-2xl);
+    margin-bottom: var(--space-xl);
+  }
+
+  .placeholder-notice svg {
+    color: var(--accent-secondary);
+    margin-bottom: var(--space-lg);
+  }
+
+  .placeholder-notice h2 {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .placeholder-notice p {
+    max-width: none;
+    margin-bottom: var(--space-sm);
+  }
+
+  .quick-summary {
+    background: rgba(34, 211, 238, 0.1);
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin-bottom: var(--space-xl);
+  }
+
+  .quick-summary h3 {
+    color: var(--accent-secondary);
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-md);
+  }
+
+  .quick-summary ul {
+    list-style: none;
+  }
+
+  .quick-summary li {
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-lg);
+    position: relative;
+  }
+
+  .quick-summary li::before {
+    content: '🚫';
+    position: absolute;
+    left: 0;
+  }
+
+  .cookie-illustration {
+    text-align: center;
+    padding: var(--space-xl);
+    margin-bottom: var(--space-xl);
+  }
+
+  .cookie-illustration p:first-child {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-sm);
+  }
+
+  .api-placeholder {
+    background: var(--bg-deep);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+
+  .api-placeholder code {
+    display: block;
+    margin-bottom: var(--space-xs);
+  }
+</style>

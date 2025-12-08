@@ -1,0 +1,276 @@
+---
+import ParticleStarfield from '../components/ParticleStarfield.astro';
+import EasterEggs from '../components/EasterEggs.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Side Badger - The totally free, no-tracking, no-ads bill splitter. Badgering your bills into submission since... just now." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0a2818" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Side Badger" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="icon" type="image/png" href="/images/logo-face-very-large-2.png" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <ParticleStarfield />
+    <EasterEggs />
+    <div id="cursor-glow"></div>
+
+    <slot name="header">
+      <header class="site-header">
+        <nav class="container flex items-center justify-between">
+          <a href="/" class="logo">
+            <img src="/images/logo-transparent.png" alt="Side Badger" height="40" />
+          </a>
+
+          <ul class="nav-links flex items-center gap-lg">
+            <li><a href="/">Home</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="https://app.sidebadger.com" class="btn btn-primary btn-launch" target="_blank" rel="noopener">
+              Launch App
+            </a></li>
+          </ul>
+        </nav>
+      </header>
+    </slot>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="logo">
+              <img src="/images/logo-transparent.png" alt="Side Badger" height="28" />
+            </a>
+            <p class="text-muted text-sm">Totally free. No tracking. No ads.<br />Just badgers splitting bills.</p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/pricing">Pricing</a></li>
+              <li><a href="https://app.sidebadger.com" target="_blank" rel="noopener">Launch App</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms of Service</a></li>
+              <li><a href="/cookies">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom flex items-center justify-between">
+          <p class="text-muted text-sm">&copy; {new Date().getFullYear()} Side Badger. All rights reserved (but not really, it's free).</p>
+          <p class="text-muted text-sm">Made with chaos and coffee</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Scroll-triggered fade-up animations
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+
+      // Cursor glow effect
+      const cursorGlow = document.getElementById('cursor-glow');
+      let mouseX = 0, mouseY = 0;
+      let glowX = 0, glowY = 0;
+
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      function animateCursor() {
+        glowX += (mouseX - glowX) * 0.1;
+        glowY += (mouseY - glowY) * 0.1;
+
+        if (cursorGlow) {
+          cursorGlow.style.transform = `translate(${glowX - 150}px, ${glowY - 150}px)`;
+        }
+
+        requestAnimationFrame(animateCursor);
+      }
+
+      // Only enable cursor glow on non-touch devices
+      if (window.matchMedia('(pointer: fine)').matches) {
+        animateCursor();
+      }
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>
+
+<style>
+  /* Header */
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-sticky);
+    padding: var(--space-md) 0;
+    background: rgba(10, 40, 24, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--text-lg);
+    color: var(--text-primary);
+  }
+
+  .logo img {
+    border-radius: var(--radius-sm);
+  }
+
+  .nav-links {
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+  }
+
+  .nav-links a:hover {
+    color: var(--text-primary);
+  }
+
+  .btn-launch {
+    padding: var(--space-sm) var(--space-lg) !important;
+  }
+
+  /* Main content padding for fixed header */
+  main {
+    padding-top: 80px;
+    min-height: calc(100vh - 80px);
+  }
+
+  /* Footer */
+  .site-footer {
+    border-top: 1px solid var(--glass-border);
+    padding: var(--space-3xl) 0 var(--space-xl);
+    margin-top: var(--space-4xl);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--space-2xl);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .footer-brand p {
+    margin-top: var(--space-md);
+  }
+
+  .footer-links h4 {
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: var(--space-md);
+  }
+
+  .footer-links ul {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin-bottom: var(--space-sm);
+  }
+
+  .footer-links a {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+  }
+
+  .footer-bottom {
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--glass-border);
+  }
+
+  /* Cursor glow */
+  #cursor-glow {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(126, 199, 134, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: var(--z-cursor);
+    mix-blend-mode: screen;
+    will-change: transform;
+  }
+
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .nav-links {
+      gap: var(--space-md);
+    }
+
+    .nav-links li:not(:last-child) {
+      display: none;
+    }
+
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: var(--space-sm);
+      text-align: center;
+    }
+
+    #cursor-glow {
+      display: none;
+    }
+  }
+</style>

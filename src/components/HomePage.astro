@@ -1,0 +1,782 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<BaseLayout title={t('meta.title', locale)}>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-stamp">
+        {t('hero.badge', locale)}<a href="#disclaimer" class="disclaimer-link"><sup>*</sup></a>
+      </div>
+
+      <div class="hero-content fade-up">
+        <h1>
+          {t('hero.title', locale)}
+          <span class="gradient-text">{t('hero.titleHighlight', locale)}</span>
+        </h1>
+        <p class="hero-title-disclaimer">{t('hero.titleDisclaimer', locale)}</p>
+
+        <p class="hero-subtitle">
+          {t('hero.subtitle', locale)}
+        </p>
+
+        <div class="hero-actions flex gap-md flex-wrap">
+          <a href="https://app.sidebadger.com" class="btn btn-primary btn-lg btn-confetti" target="_blank" rel="noopener">
+            {t('hero.cta', locale)}
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual fade-up" data-delay="200">
+        <div class="hero-image-container glass">
+          <div class="badger-placeholder">
+            <span>Your Badger Here</span>
+            <p>Drop your mascot into /public/images/</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header text-center fade-up">
+        <h2>{t('features.title', locale)}</h2>
+        <p>{t('features.subtitle', locale)}</p>
+      </div>
+
+      <div class="bento-grid-lg">
+        <!-- Groups -->
+        <div class="feature-card glass fade-up">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>{t('features.groups.title', locale)}</h3>
+          <p>{t('features.groups.desc', locale)}</p>
+        </div>
+
+        <!-- Invites -->
+        <div class="feature-card glass fade-up" data-delay="50">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+            </svg>
+          </div>
+          <h3>{t('features.invites.title', locale)}</h3>
+          <p>{t('features.invites.desc', locale)}</p>
+        </div>
+
+        <!-- Roles -->
+        <div class="feature-card glass fade-up" data-delay="100">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+            </svg>
+          </div>
+          <h3>{t('features.roles.title', locale)}</h3>
+          <p>{t('features.roles.desc', locale)}</p>
+        </div>
+
+        <!-- Splits -->
+        <div class="feature-card glass fade-up" data-delay="150">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" x2="12" y1="2" y2="22"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <h3>{t('features.splits.title', locale)}</h3>
+          <p>{t('features.splits.desc', locale)}</p>
+        </div>
+
+        <!-- Participants -->
+        <div class="feature-card glass fade-up" data-delay="200">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>{t('features.participants.title', locale)}</h3>
+          <p>{t('features.participants.desc', locale)}</p>
+        </div>
+
+        <!-- Currency -->
+        <div class="feature-card glass fade-up" data-delay="250">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2v20M2 12h20"/>
+            </svg>
+          </div>
+          <h3>{t('features.currency.title', locale)}</h3>
+          <p>{t('features.currency.desc', locale)}</p>
+        </div>
+
+        <!-- Balances -->
+        <div class="feature-card glass fade-up" data-delay="300">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18"/>
+              <path d="m19 9-5 5-4-4-3 3"/>
+            </svg>
+          </div>
+          <h3>{t('features.balances.title', locale)}</h3>
+          <p>{t('features.balances.desc', locale)}</p>
+        </div>
+
+        <!-- Settle -->
+        <div class="feature-card glass fade-up" data-delay="350">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22,4 12,14.01 9,11.01"/>
+            </svg>
+          </div>
+          <h3>{t('features.settle.title', locale)}</h3>
+          <p>{t('features.settle.desc', locale)}</p>
+        </div>
+
+        <!-- Activity -->
+        <div class="feature-card glass fade-up" data-delay="400">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9"/>
+              <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/>
+            </svg>
+          </div>
+          <h3>{t('features.activity.title', locale)}</h3>
+          <p>{t('features.activity.desc', locale)}</p>
+        </div>
+
+        <!-- Comments -->
+        <div class="feature-card glass fade-up" data-delay="450">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3>{t('features.comments.title', locale)}</h3>
+          <p>{t('features.comments.desc', locale)}</p>
+        </div>
+
+        <!-- Edit -->
+        <div class="feature-card glass fade-up" data-delay="500">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/>
+              <path d="m15 5 4 4"/>
+            </svg>
+          </div>
+          <h3>{t('features.edit.title', locale)}</h3>
+          <p>{t('features.edit.desc', locale)}</p>
+        </div>
+
+        <!-- No Tracking -->
+        <div class="feature-card glass fade-up" data-delay="600">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/>
+              <circle cx="12" cy="12" r="3"/>
+              <line x1="2" y1="2" x2="22" y2="22"/>
+            </svg>
+          </div>
+          <h3>{t('features.noTracking.title', locale)}</h3>
+          <p>{t('features.noTracking.desc', locale)}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Little Things Section -->
+  <section class="little-things">
+    <div class="container">
+      <div class="section-header text-center fade-up">
+        <h2>{t('littleThings.title', locale)}</h2>
+        <p>{t('littleThings.subtitle', locale)}</p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Dates -->
+        <div class="feature-card glass fade-up">
+          <div class="feature-icon feature-icon-small">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+              <line x1="16" x2="16" y1="2" y2="6"/>
+              <line x1="8" x2="8" y1="2" y2="6"/>
+              <line x1="3" x2="21" y1="10" y2="10"/>
+            </svg>
+          </div>
+          <h3>{t('littleThings.dates.title', locale)}</h3>
+          <p>{t('littleThings.dates.desc', locale)}</p>
+        </div>
+
+        <!-- Amounts -->
+        <div class="feature-card glass fade-up" data-delay="100">
+          <div class="feature-icon feature-icon-small">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12,6 12,12 16,14"/>
+            </svg>
+          </div>
+          <h3>{t('littleThings.amounts.title', locale)}</h3>
+          <p>{t('littleThings.amounts.desc', locale)}</p>
+        </div>
+
+        <!-- Names -->
+        <div class="feature-card glass fade-up" data-delay="200">
+          <div class="feature-icon feature-icon-small">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <h3>{t('littleThings.names.title', locale)}</h3>
+          <p>{t('littleThings.names.desc', locale)}</p>
+        </div>
+
+        <!-- Archive -->
+        <div class="feature-card glass fade-up" data-delay="300">
+          <div class="feature-icon feature-icon-small">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="5" x="2" y="3" rx="1"/>
+              <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/>
+              <path d="M10 12h4"/>
+            </svg>
+          </div>
+          <h3>{t('littleThings.archive.title', locale)}</h3>
+          <p>{t('littleThings.archive.desc', locale)}</p>
+        </div>
+
+        <!-- Celebrations -->
+        <div class="feature-card glass fade-up" data-delay="400">
+          <div class="feature-icon feature-icon-small">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+            </svg>
+          </div>
+          <h3>{t('littleThings.celebrations.title', locale)}</h3>
+          <p>{t('littleThings.celebrations.desc', locale)}</p>
+        </div>
+
+        <!-- Everywhere -->
+        <div class="feature-card glass fade-up" data-delay="500">
+          <div class="feature-icon feature-icon-small">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
+              <path d="M12 18h.01"/>
+            </svg>
+          </div>
+          <h3>{t('littleThings.everywhere.title', locale)}</h3>
+          <p>{t('littleThings.everywhere.desc', locale)}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coming Soon Section -->
+  <section class="coming-soon">
+    <div class="container">
+      <div class="section-header text-center fade-up">
+        <h2>{t('comingSoon.title', locale)}</h2>
+        <p>{t('comingSoon.subtitle', locale)}</p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Currency Conversions -->
+        <div class="feature-card glass fade-up coming-soon-card">
+          <div class="coming-soon-badge">Coming Soon</div>
+          <div class="feature-icon feature-icon-small">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2v20M2 12h20"/>
+            </svg>
+          </div>
+          <h3>{t('comingSoon.conversion.title', locale)}</h3>
+          <p>{t('comingSoon.conversion.desc', locale)}</p>
+        </div>
+
+        <!-- Receipt Uploading -->
+        <div class="feature-card glass fade-up coming-soon-card" data-delay="100">
+          <div class="coming-soon-badge">Coming Soon</div>
+          <div class="feature-icon feature-icon-small">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" x2="12" y1="3" y2="15"/>
+            </svg>
+          </div>
+          <h3>{t('comingSoon.receipts.title', locale)}</h3>
+          <p>{t('comingSoon.receipts.desc', locale)}</p>
+        </div>
+
+        <!-- AI Receipt Scanning -->
+        <div class="feature-card glass fade-up coming-soon-card" data-delay="200">
+          <div class="coming-soon-badge">Coming Soon</div>
+          <div class="feature-icon feature-icon-small">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+            </svg>
+          </div>
+          <h3>{t('comingSoon.ai.title', locale)}</h3>
+          <p>{t('comingSoon.ai.desc', locale)}</p>
+        </div>
+
+        <!-- Export Data -->
+        <div class="feature-card glass fade-up coming-soon-card" data-delay="300">
+          <div class="coming-soon-badge">Coming Soon</div>
+          <div class="feature-icon feature-icon-small">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" x2="12" y1="15" y2="3"/>
+            </svg>
+          </div>
+          <h3>{t('comingSoon.export.title', locale)}</h3>
+          <p>{t('comingSoon.export.desc', locale)}</p>
+        </div>
+
+        <!-- Native Mobile Apps -->
+        <div class="feature-card glass fade-up coming-soon-card" data-delay="400">
+          <div class="coming-soon-badge">Coming Soon</div>
+          <div class="feature-icon feature-icon-small">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
+              <path d="M12 18h.01"/>
+            </svg>
+          </div>
+          <h3>{t('comingSoon.mobile.title', locale)}</h3>
+          <p>{t('comingSoon.mobile.desc', locale)}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Free Section -->
+  <section class="why-free">
+    <div class="container">
+      <div class="section-header text-center fade-up">
+        <h2>{t('whyFree.title', locale)}</h2>
+        <p>{t('whyFree.subtitle', locale)}</p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="feature-card glass fade-up">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <h3>{t('whyFree.trackers.title', locale)}</h3>
+          <p>{t('whyFree.trackers.desc', locale)}</p>
+        </div>
+
+        <div class="feature-card glass fade-up" data-delay="100">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+              <line x1="9" x2="9.01" y1="9" y2="9"/>
+              <line x1="15" x2="15.01" y1="9" y2="9"/>
+            </svg>
+          </div>
+          <h3>{t('whyFree.ads.title', locale)}</h3>
+          <p>{t('whyFree.ads.desc', locale)}</p>
+        </div>
+
+        <div class="feature-card glass fade-up" data-delay="200">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+            </svg>
+          </div>
+          <h3>{t('whyFree.badgers.title', locale)}</h3>
+          <p>{t('whyFree.badgers.desc', locale)}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card glass fade-up">
+        <h2>{t('cta.title', locale)}</h2>
+        <p>{t('cta.subtitle', locale)}</p>
+        <a href="https://app.sidebadger.com" class="btn btn-primary btn-lg btn-confetti" target="_blank" rel="noopener">
+          {t('cta.button', locale)}
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <footer class="disclaimer" id="disclaimer">
+    <div class="container">
+      <p>{t('hero.disclaimer', locale)}</p>
+    </div>
+  </footer>
+
+  <script>
+    import confetti from 'canvas-confetti';
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    document.querySelectorAll('.btn-confetti').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const rect = (e.target as HTMLElement).getBoundingClientRect();
+        const x = (rect.left + rect.width / 2) / window.innerWidth;
+        const y = (rect.top + rect.height / 2) / window.innerHeight;
+
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { x, y },
+          colors: ['#7ec786', '#5fb0c4', '#f0c05c', '#4eeab5'],
+          disableForReducedMotion: true
+        });
+      });
+    });
+
+    if (Math.random() < 0.05) {
+      setTimeout(() => {
+        confetti({
+          particleCount: 50,
+          spread: 100,
+          origin: { y: 0.6 },
+          colors: ['#7ec786', '#5fb0c4', '#f0c05c'],
+          disableForReducedMotion: true
+        });
+      }, 2000);
+    }
+  </script>
+</BaseLayout>
+
+<style>
+  /* Fade-in animation */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hero {
+    padding: var(--space-4xl) 0;
+    overflow: hidden;
+  }
+
+  .hero .container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+  }
+
+  .hero-stamp {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
+    color: white;
+    padding: var(--space-md) var(--space-3xl);
+    font-size: var(--text-lg);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transform: rotate(12deg);
+    transform-origin: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-lg);
+    z-index: 10;
+  }
+
+  .hero-stamp .disclaimer-link {
+    color: inherit;
+  }
+
+  .hero h1 {
+    margin-bottom: var(--space-xs);
+  }
+
+  .hero-title-disclaimer {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    opacity: 0.5;
+    font-style: italic;
+    margin-bottom: var(--space-lg);
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-lg);
+    max-width: 550px;
+    margin-bottom: var(--space-xl);
+  }
+
+  .hero-actions {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .hero-trust {
+    padding: var(--space-lg);
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--glass-border);
+  }
+
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+
+  .trust-item strong {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--accent-secondary);
+  }
+
+  .trust-item span {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+
+  .trust-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--glass-border);
+  }
+
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image-container {
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xl);
+  }
+
+  .badger-placeholder {
+    text-align: center;
+    color: var(--text-muted);
+  }
+
+  .badger-placeholder span {
+    display: block;
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-sm);
+  }
+
+  .badger-placeholder p {
+    font-size: var(--text-sm);
+  }
+
+  .features {
+    padding: var(--space-2xl) 0 var(--space-4xl);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-3xl);
+  }
+
+  .section-header h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .section-header p {
+    font-size: var(--text-lg);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .feature-card {
+    padding: var(--space-xl);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow-sm);
+  }
+
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-lg);
+    color: white;
+  }
+
+  .feature-icon-small {
+    width: 48px;
+    height: 48px;
+  }
+
+  .feature-card h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-sm);
+  }
+
+  .feature-card p {
+    font-size: var(--text-sm);
+    line-height: 1.7;
+  }
+
+  .little-things {
+    padding: var(--space-4xl) 0;
+  }
+
+  .coming-soon {
+    padding: var(--space-4xl) 0;
+  }
+
+  .coming-soon-card {
+    position: relative;
+    opacity: 0.85;
+  }
+
+  .coming-soon-badge {
+    position: absolute;
+    top: var(--space-md);
+    right: var(--space-md);
+    background: linear-gradient(135deg, var(--accent-secondary), var(--accent-tertiary));
+    color: white;
+    font-size: var(--text-xs);
+    font-weight: 600;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .cta-section {
+    padding: var(--space-4xl) 0;
+  }
+
+  .cta-card {
+    padding: var(--space-3xl);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .cta-card h2 {
+    margin-bottom: var(--space-md);
+  }
+
+  .cta-card p {
+    margin: 0 auto var(--space-xl);
+  }
+
+  .disclaimer-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .disclaimer-link:hover {
+    text-decoration: underline;
+  }
+
+  .disclaimer {
+    padding: var(--space-xl) 0;
+    text-align: center;
+  }
+
+  .disclaimer p {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 900px) {
+    .hero .container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .hero-subtitle {
+      margin: 0 auto var(--space-xl);
+    }
+
+    .hero-actions {
+      justify-content: center;
+    }
+
+    .hero-trust {
+      justify-content: center;
+    }
+
+    .hero-visual {
+      order: -1;
+    }
+
+    .hero-image-container {
+      max-width: 300px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero-trust {
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+
+    .trust-divider {
+      width: 40px;
+      height: 1px;
+    }
+  }
+</style>

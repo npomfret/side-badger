@@ -5,7 +5,11 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "docker:start": "docker compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.watch.yml up --build -d && docker compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.watch.yml watch",
+    "docker:stop": "docker compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.watch.yml down",
+    "docker:restart": "npm run docker:stop && npm run docker:start",
+    "docker:logs": "docker logs -f side-badger-website"
   },
   "dependencies": {
     "astro": "^5.0.0",

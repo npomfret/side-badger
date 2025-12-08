@@ -1,0 +1,15 @@
+services:
+  website:
+    develop:
+      watch:
+        - path: src
+          target: /app/src
+          action: sync
+        - path: public
+          target: /app/public
+          action: sync
+        - path: astro.config.mjs
+          target: /app/astro.config.mjs
+          action: sync
+        - path: package.json
+          action: rebuild

@@ -1,5 +1,5 @@
-# Build stage
-FROM node:22-alpine AS builder
+# Base stage with dependencies
+FROM node:22-alpine AS base
 
 WORKDIR /app
 
@@ -11,6 +11,16 @@ RUN npm ci
 
 # Copy source files
 COPY . .
+
+# Development stage - for local dev with hot reload
+FROM base AS dev
+
+EXPOSE 4321
+
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+
+# Build stage
+FROM base AS builder
 
 # Build the site
 RUN npm run build

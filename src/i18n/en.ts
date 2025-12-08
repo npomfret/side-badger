@@ -21,7 +21,7 @@ export default {
 
   // Hero
   'hero.badge': '100% free and unlimited',
-  'hero.disclaimer': "* Obviously there are some limitations. Fair usage, and other limitations apply.",
+  'hero.disclaimer': "* Obviously there are some limitations. Fair usage, and other many other limitations apply. It's free until it isn't.",
   'hero.title': 'Split expenses like a',
   'hero.titleHighlight': 'side badger',
   'hero.titleDisclaimer': '',

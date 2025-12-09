@@ -287,6 +287,24 @@
   }
 }
 
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-xl) 0;
+  }
+
+  .features,
+  .little-things,
+  .coming-soon,
+  .why-free,
+  .cta-section {
+    padding: var(--space-xl) 0;
+  }
+
+  .section-header {
+    margin-bottom: var(--space-xl);
+  }
+}
+
 @media (max-width: 600px) {
   .hero-trust {
     flex-direction: column;

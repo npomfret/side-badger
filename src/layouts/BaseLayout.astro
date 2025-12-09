@@ -30,7 +30,7 @@ const { title, description = t('meta.description') } = Astro.props;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
 
-    <link rel="icon" type="image/png" href="/images/logo-face-very-large-2.png" />
+    <link rel="icon" type="image/png" href="/images/logo-face-only-large.png" />
     <title>{title}</title>
   </head>
   <body>
@@ -48,7 +48,7 @@ const { title, description = t('meta.description') } = Astro.props;
             <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
           </ul>
         </div>
-        <nav class="container flex items-center justify-between" style="position: relative;">
+        <nav class="header-nav container" style="position: relative;">
           <a href="/" class="logo">
             <img src="/images/logo-transparent-small.png" alt={t('header.logoText')} height="100" />
           </a>

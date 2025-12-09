@@ -164,15 +164,17 @@ a:hover {
 
 /* ===== LAYOUT UTILITIES ===== */
 .container {
-  width: min(1200px, 92vw);
+  width: min(1200px, 100%);
   margin: 0 auto;
-  padding: var(--space-lg);
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
 }
 
 .container-wide {
-  width: min(1400px, 95vw);
+  width: min(1400px, 100%);
   margin: 0 auto;
-  padding: var(--space-lg);
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
 }
 
 /* Bento Grid */
@@ -184,7 +186,7 @@ a:hover {
 
 .bento-grid-lg {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
   gap: var(--space-xl);
 }
 

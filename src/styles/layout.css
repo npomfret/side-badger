@@ -164,6 +164,13 @@
   }
 }
 
+/* Hide some lights on mobile */
+@media (max-width: 768px) {
+  .christmas-lights .lights li:nth-child(2n) {
+    display: none;
+  }
+}
+
 /* ===== MAIN CONTENT ===== */
 main {
   padding-top: 80px;

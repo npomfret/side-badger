@@ -8,7 +8,10 @@ interface Props {
   description?: string;
 }
 
-const { title, description = t('meta.description') } = Astro.props;
+const {
+  title,
+  description = t('meta.description'),
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -25,13 +28,35 @@ const { title, description = t('meta.description') } = Astro.props;
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Side Badger" />
 
+    <meta property="og:image" content="/images/logo-large-transparent-3.png" />
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/images/logo-large-transparent-3.png" />
 
     <link rel="icon" type="image/png" href="/images/logo-face-only-large.png" />
     <title>{title}</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Side Badger",
+        "url": "https://sidebadger.com",
+        "logo": "https://sidebadger.com/images/logo-large-transparent-3.png",
+        "sameAs": []
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Side Badger",
+        "url": "https://sidebadger.com"
+      }
+    </script>
   </head>
   <body>
     <ParticleStarfield />

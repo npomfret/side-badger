@@ -3,7 +3,69 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { t } from '../i18n';
 ---
 
-<BaseLayout title="Pricing - Side Badger | It's Free. Seriously.">
+<BaseLayout
+  title="Pricing - Side Badger | It's Free. Seriously."
+  description="Side Badger is a 100% free and unlimited expense splitting app. No hidden fees, no ads, and no tracking. Find out why we're giving it away for free."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is it really free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We're not hiding features behind a paywall. We're not going to suddenly charge you after you're hooked. It's a demo/white-label implementation. Free means free."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's the catch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No catch. Side Badger is a demonstration of what a white-label expense splitting app can look like. We built it to show off the technology, and we figured why not make it actually useful while we're at it?"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Will you sell my data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely not. We don't collect personal data beyond what's necessary to run the app. We have zero trackers, zero analytics pixels, and zero interest in your shopping habits."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why a badger?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Why NOT a badger? Badgers are determined, resourceful, and work well in groups. Just like you when you're trying to figure out who owes what for that Airbnb."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use this for my business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sure! If you want to track shared expenses for your small business or team, go for it. It's free. We won't judge."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if I find a bug?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "First of all, how dare you imply our code has bugs. Second, yeah probably there are bugs. This is a demo. Be gentle with us."
+            }
+          }
+        ]
+      }
+    </script>
+  </Fragment>
+
   <section class="pricing-hero">
     <div class="container text-center">
       <div class="fade-up">

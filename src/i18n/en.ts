@@ -4,7 +4,7 @@ export default {
 
   // Meta
   'meta.title': 'Side Badger - Free Bill Splitting for Humans (and Badgers)',
-  'meta.description': "Side Badger - The totally free, no-tracking, no-ads bill splitter. Badgering your bills into submission since... just now.",
+  'meta.description': 'Side Badger is the totally free, no-tracking, no-ads bill splitter that makes it easy to split expenses with friends. Create groups, add expenses, and settle up with ease. No drama, just simple bill splitting.',
 
   // Header
   'header.logoText': 'Side Badger',

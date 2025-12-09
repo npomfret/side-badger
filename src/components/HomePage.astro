@@ -9,7 +9,25 @@ interface Props {
 const { locale } = Astro.props;
 ---
 
-<BaseLayout title={t('meta.title', locale)}>
+<BaseLayout
+  title={t('meta.title', locale)}
+  description="The totally free, no-tracking, no-ads expense splitter that's suspiciously good. We don't want your data. We don't want your money. We just want you to split bills with your friends without crying."
+>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Side Badger",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0"
+        }
+      }
+    </script>
+  </Fragment>
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">

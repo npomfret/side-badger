@@ -36,23 +36,22 @@ The site auto-deploys to `sidebadger.com` when you push to `main`.
 
 ### How it works:
 
-1. Push to `main` triggers GitHub Actions
-2. Docker image is built and pushed to `ghcr.io/npomfret/side-badger`
-3. Server pulls the new image and restarts the container
+```
+git push main
+    ↓
+GitHub Actions triggers
+    ↓
+Docker image built (~1 min)
+    ↓
+Image pushed to ghcr.io/npomfret/side-badger:latest
+    ↓
+Server pulls image and restarts container
+```
 
-### First-time setup:
+### Monitoring:
 
-1. Add SSH private key as GitHub secret:
-   - Go to: https://github.com/npomfret/side-badger/settings/secrets/actions
-   - Click "New repository secret"
-   - Name: `SSH_PRIVATE_KEY`
-   - Value: Contents of `~/.ssh/id_rsa`
-
-2. Ensure server can pull from GitHub Container Registry:
-   ```bash
-   ssh root@sidebadger.com "docker login ghcr.io -u npomfret"
-   # Use a GitHub Personal Access Token with `read:packages` scope as password
-   ```
+- **View deployments:** https://github.com/npomfret/side-badger/actions
+- **View images:** https://github.com/npomfret/side-badger/pkgs/container/side-badger
 
 ### Manual deploy (if needed):
 
@@ -63,15 +62,18 @@ ssh root@sidebadger.com "cd /opt/side-badger-website && docker pull ghcr.io/npom
 ### Rollback to previous version:
 
 ```bash
-# Find available tags
-# Check https://github.com/npomfret/side-badger/pkgs/container/side-badger
-
-# Deploy specific version
+# 1. Find the SHA of the version you want from the packages page or git log
+# 2. Deploy that specific version:
 ssh root@sidebadger.com "cd /opt/side-badger-website && docker pull ghcr.io/npomfret/side-badger:<sha> && docker compose up -d"
 ```
 
-### Server location:
-- Host: `sidebadger.com`
-- Path: `/opt/side-badger-website/`
-- Container: `side-badger-website`
-- Image: `ghcr.io/npomfret/side-badger:latest`
+### First-time setup (already done):
+
+1. Add SSH private key as GitHub secret `SSH_PRIVATE_KEY`
+2. Login to ghcr.io on server: `ssh root@sidebadger.com "docker login ghcr.io -u npomfret"`
+
+### Server details:
+- **Host:** `sidebadger.com`
+- **Path:** `/opt/side-badger-website/`
+- **Container:** `side-badger-website`
+- **Image:** `ghcr.io/npomfret/side-badger:latest`

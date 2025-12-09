@@ -1,6 +1,6 @@
 export default {
   // App
-  'app.url': 'https://app.sidebadger.com/dashboard',
+  'app.url': 'https://demo.sidebadger.com/dashboard',
 
   // Meta
   'meta.title': 'Side Badger - Free Bill Splitting for Humans (and Badgers)',

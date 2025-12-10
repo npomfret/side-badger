@@ -253,13 +253,28 @@ main {
     gap: var(--space-sm);
   }
 
+  /* Move Launch App button below header as full-width bar */
+  .site-header .nav-links li:has(.btn-launch) {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: var(--space-xs) var(--space-md);
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+    z-index: var(--z-sticky);
+  }
+
   .btn-launch {
-    padding: var(--space-xs) var(--space-sm) !important;
+    width: 100%;
+    text-align: center;
+    padding: var(--space-sm) var(--space-md) !important;
     font-size: var(--text-sm);
   }
 
   main {
-    padding-top: 90px;
+    padding-top: 120px;
   }
 
   /* Footer */

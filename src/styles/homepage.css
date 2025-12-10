@@ -293,6 +293,14 @@
     padding: var(--space-xl) 0;
   }
 
+  /* Smaller badge on mobile */
+  .hero-stamp {
+    padding: var(--space-xs) var(--space-md);
+    font-size: var(--text-xs);
+    inset-inline-end: var(--space-sm);
+    transform: rotate(8deg);
+  }
+
   .features,
   .little-things,
   .coming-soon,

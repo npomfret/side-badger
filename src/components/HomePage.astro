@@ -12,6 +12,7 @@ const { locale } = Astro.props;
 <BaseLayout
   title={t('meta.title', locale)}
   description="The totally free, no-tracking, no-ads expense splitter that's suspiciously good. We don't want your data. We don't want your money. We just want you to split bills with your friends without crying."
+  locale={locale}
 >
   <Fragment slot="head">
     <script type="application/ld+json">

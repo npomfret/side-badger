@@ -1,0 +1,64 @@
+---
+// Client-side language detection for static sites
+// Runs on first visit to detect browser language and redirect if needed
+import { locales, type Locale } from '../i18n';
+
+interface Props {
+  currentLocale: Locale;
+}
+
+const { currentLocale } = Astro.props;
+const supportedLocales = locales;
+---
+
+<script define:vars={{ currentLocale, supportedLocales }}>
+  // Only run detection on first visit (no stored preference)
+  const LOCALE_KEY = 'preferred-locale';
+
+  function detectAndRedirect() {
+    // Skip if already have a preference stored
+    const storedLocale = localStorage.getItem(LOCALE_KEY);
+    if (storedLocale) {
+      return;
+    }
+
+    // Get browser's preferred languages
+    const browserLocales = navigator.languages || [navigator.language];
+
+    // Find first matching supported locale
+    let preferredLocale = null;
+    for (const browserLocale of browserLocales) {
+      // Check exact match first (e.g., 'uk' or 'en')
+      const langCode = browserLocale.split('-')[0].toLowerCase();
+      if (supportedLocales.includes(langCode)) {
+        preferredLocale = langCode;
+        break;
+      }
+    }
+
+    // Default to English if no match
+    if (!preferredLocale) {
+      preferredLocale = 'en';
+    }
+
+    // Store the preference
+    localStorage.setItem(LOCALE_KEY, preferredLocale);
+
+    // Redirect if needed (user is on wrong locale page)
+    if (preferredLocale !== currentLocale && preferredLocale !== 'en') {
+      // Only redirect from root English pages to other locales
+      // Don't redirect if user manually navigated to a specific locale
+      const currentPath = window.location.pathname;
+      const isOnEnglishPage = !supportedLocales.some(l => l !== 'en' && currentPath.startsWith(`/${l}`));
+
+      if (isOnEnglishPage) {
+        // Build the new URL with the preferred locale
+        let newPath = `/${preferredLocale}${currentPath === '/' ? '' : currentPath}`;
+        window.location.href = newPath;
+      }
+    }
+  }
+
+  // Run detection
+  detectAndRedirect();
+</script>

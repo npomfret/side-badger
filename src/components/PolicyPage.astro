@@ -134,6 +134,10 @@ const apiBaseUrl = t('api.baseUrl');
   }
 
   /* Markdown content styles */
+  .markdown-content {
+    font-size: var(--text-xs);
+  }
+
   .markdown-content :global(h1),
   .markdown-content :global(h2),
   .markdown-content :global(h3),
@@ -141,29 +145,29 @@ const apiBaseUrl = t('api.baseUrl');
   .markdown-content :global(h5),
   .markdown-content :global(h6) {
     font-family: var(--font-display);
-    margin-top: var(--space-xl);
-    margin-bottom: var(--space-md);
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-xs);
   }
 
-  .markdown-content :global(h1) { font-size: var(--text-3xl); }
-  .markdown-content :global(h2) { font-size: var(--text-2xl); }
-  .markdown-content :global(h3) { font-size: var(--text-xl); }
-  .markdown-content :global(h4) { font-size: var(--text-lg); }
+  .markdown-content :global(h1) { font-size: var(--text-base); }
+  .markdown-content :global(h2) { font-size: var(--text-sm); }
+  .markdown-content :global(h3) { font-size: var(--text-xs); }
+  .markdown-content :global(h4) { font-size: var(--text-xs); }
 
   .markdown-content :global(p) {
-    margin-bottom: var(--space-md);
-    line-height: 1.7;
+    margin-bottom: var(--space-sm);
+    line-height: 1.6;
   }
 
   .markdown-content :global(ul),
   .markdown-content :global(ol) {
-    margin-bottom: var(--space-md);
-    padding-left: var(--space-xl);
+    margin-bottom: var(--space-sm);
+    padding-left: var(--space-lg);
   }
 
   .markdown-content :global(li) {
-    margin-bottom: var(--space-sm);
-    line-height: 1.6;
+    margin-bottom: var(--space-xs);
+    line-height: 1.5;
   }
 
   .markdown-content :global(a) {

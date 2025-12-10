@@ -1,0 +1,20 @@
+---
+import PricingPage from '../../components/PricingPage.astro';
+import { resolveLocale, type LocaleOrAlias } from '../../i18n';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: undefined } },     // /pricing
+    { params: { locale: 'uk' } },          // /uk/pricing
+    { params: { locale: 'en-us' } },       // /en-us/pricing
+    { params: { locale: 'en-au' } },       // /en-au/pricing
+    { params: { locale: 'en-ca' } },       // /en-ca/pricing
+    { params: { locale: 'en-gb' } },       // /en-gb/pricing
+  ];
+}
+
+const localeParam = (Astro.params.locale || 'en') as LocaleOrAlias;
+const locale = resolveLocale(localeParam);
+---
+
+<PricingPage locale={locale} />

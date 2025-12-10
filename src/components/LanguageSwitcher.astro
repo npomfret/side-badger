@@ -1,0 +1,296 @@
+---
+import { allLocales, localeNames, localeFlags, getPathWithoutLocale, t, resolveLocale, type Locale, type LocaleOrAlias } from '../i18n';
+
+interface Props {
+  currentLocale: Locale;
+  currentPath: string;
+}
+
+const { currentLocale, currentPath } = Astro.props;
+
+// Get the path without any locale prefix
+const basePath = getPathWithoutLocale(currentPath);
+
+// Prepare locale data for the template (includes comedy aliases)
+const localeData = allLocales.map(locale => ({
+  code: locale,
+  name: localeNames[locale],
+  flag: localeFlags[locale],
+  href: `/${locale}${basePath === '/' ? '' : basePath}`,
+  active: resolveLocale(locale) === currentLocale,
+}));
+
+const searchPlaceholder = t('languageSwitcher.search', currentLocale);
+const noResultsText = t('languageSwitcher.noResults', currentLocale);
+---
+
+<div class="language-switcher">
+  <button class="language-switcher-btn" aria-label="Change language" aria-expanded="false">
+    <span class="current-flag">{localeFlags[currentLocale]}</span>
+    <span class="current-lang">{localeNames[currentLocale]}</span>
+    <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m6 9 6 6 6-6"/>
+    </svg>
+  </button>
+  <div class="language-dropdown">
+    <div class="language-search-wrapper">
+      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/>
+        <path d="m21 21-4.3-4.3"/>
+      </svg>
+      <input
+        type="text"
+        class="language-search"
+        placeholder={searchPlaceholder}
+        autocomplete="off"
+        aria-label="Search languages"
+      />
+    </div>
+    <div class="language-options">
+      {localeData.map((locale) => (
+        <a
+          href={locale.href}
+          class:list={['language-option', { active: locale.active }]}
+          data-locale={locale.code}
+          data-name={locale.name.toLowerCase()}
+        >
+          <span class="option-flag">{locale.flag}</span>
+          <span class="option-name">{locale.name}</span>
+        </a>
+      ))}
+    </div>
+    <div class="no-results" style="display: none;">
+      {noResultsText}
+    </div>
+  </div>
+</div>
+
+<script>
+  const LOCALE_KEY = 'preferred-locale';
+
+  document.querySelectorAll('.language-switcher').forEach(switcher => {
+    const btn = switcher.querySelector('.language-switcher-btn');
+    const dropdown = switcher.querySelector('.language-dropdown');
+    const searchInput = switcher.querySelector('.language-search') as HTMLInputElement;
+    const options = switcher.querySelectorAll('.language-option');
+    const noResults = switcher.querySelector('.no-results');
+
+    // Toggle dropdown
+    btn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', (!isExpanded).toString());
+      switcher.classList.toggle('open');
+
+      // Focus search input when opening
+      if (!isExpanded && searchInput) {
+        setTimeout(() => searchInput.focus(), 100);
+      }
+    });
+
+    // Filter languages as user types
+    searchInput?.addEventListener('input', (e) => {
+      const query = (e.target as HTMLInputElement).value.toLowerCase().trim();
+      let visibleCount = 0;
+
+      options.forEach(option => {
+        const name = option.getAttribute('data-name') || '';
+        const locale = option.getAttribute('data-locale') || '';
+        const matches = name.includes(query) || locale.includes(query);
+
+        (option as HTMLElement).style.display = matches ? '' : 'none';
+        if (matches) visibleCount++;
+      });
+
+      // Show/hide no results message
+      if (noResults) {
+        (noResults as HTMLElement).style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+    });
+
+    // Prevent dropdown from closing when clicking inside
+    dropdown?.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+    // Store preference when selecting a language
+    options.forEach(option => {
+      option.addEventListener('click', () => {
+        const locale = option.getAttribute('data-locale');
+        if (locale) {
+          localStorage.setItem(LOCALE_KEY, locale);
+        }
+      });
+    });
+
+    // Clear search when dropdown closes
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === 'class') {
+          if (!switcher.classList.contains('open') && searchInput) {
+            searchInput.value = '';
+            options.forEach(option => {
+              (option as HTMLElement).style.display = '';
+            });
+            if (noResults) {
+              (noResults as HTMLElement).style.display = 'none';
+            }
+          }
+        }
+      });
+    });
+    observer.observe(switcher, { attributes: true });
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.language-switcher').forEach(switcher => {
+      switcher.classList.remove('open');
+      switcher.querySelector('button')?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
+
+<style>
+  .language-switcher {
+    position: relative;
+  }
+
+  .language-switcher-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-xs) var(--space-sm);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .language-switcher-btn:hover {
+    background: var(--glass-bg-hover, rgba(255, 255, 255, 0.1));
+    color: var(--text-primary);
+  }
+
+  .current-flag {
+    font-size: 1.1em;
+    line-height: 1;
+  }
+
+  .chevron {
+    transition: transform 0.2s ease;
+  }
+
+  .language-switcher.open .chevron {
+    transform: rotate(180deg);
+  }
+
+  .language-dropdown {
+    position: absolute;
+    top: calc(100% + var(--space-xs));
+    right: 0;
+    min-width: 220px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.2s ease;
+    z-index: 100;
+    overflow: hidden;
+  }
+
+  .language-switcher.open .language-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .language-search-wrapper {
+    position: relative;
+    padding: var(--space-sm);
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  .search-icon {
+    position: absolute;
+    left: calc(var(--space-sm) + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+  }
+
+  .language-search {
+    width: 100%;
+    padding: var(--space-xs) var(--space-sm) var(--space-xs) calc(var(--space-sm) + 20px);
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+
+  .language-search::placeholder {
+    color: var(--text-muted);
+  }
+
+  .language-search:focus {
+    border-color: var(--accent-primary);
+  }
+
+  .language-options {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  .language-option {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    transition: all 0.15s ease;
+  }
+
+  .language-option:hover {
+    background: var(--glass-bg-hover, rgba(255, 255, 255, 0.1));
+    color: var(--text-primary);
+  }
+
+  .language-option.active {
+    color: var(--accent-primary);
+    font-weight: 500;
+  }
+
+  .option-flag {
+    font-size: 1.2em;
+    line-height: 1;
+  }
+
+  .option-name {
+    flex: 1;
+  }
+
+  .no-results {
+    padding: var(--space-md);
+    text-align: center;
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+  }
+
+  @media (max-width: 768px) {
+    .current-lang {
+      display: none;
+    }
+  }
+</style>

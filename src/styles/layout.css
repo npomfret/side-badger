@@ -6,8 +6,7 @@
 .site-header {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  inset-inline: 0;
   z-index: var(--z-sticky);
   background: rgba(10, 40, 24, 0.85);
   backdrop-filter: blur(12px);
@@ -64,8 +63,7 @@
 .christmas-lights {
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  inset-inline: 0;
   height: 60px;
   overflow: hidden;
   pointer-events: none;
@@ -77,8 +75,7 @@
 .christmas-lights .wire {
   position: absolute;
   top: 8px;
-  left: 0;
-  right: 0;
+  inset-inline: 0;
   height: 3px;
   background: linear-gradient(90deg,
     transparent 0%,

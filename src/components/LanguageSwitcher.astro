@@ -229,7 +229,7 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
   .language-dropdown {
     position: absolute;
     top: calc(100% + var(--space-xs));
-    right: 0;
+    inset-inline-end: 0;
     min-width: 220px;
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
@@ -257,7 +257,7 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
 
   .search-icon {
     position: absolute;
-    left: calc(var(--space-sm) + 8px);
+    inset-inline-start: calc(var(--space-sm) + 8px);
     top: 50%;
     transform: translateY(-50%);
     color: var(--text-muted);
@@ -266,7 +266,9 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
 
   .language-search {
     width: 100%;
-    padding: var(--space-xs) var(--space-sm) var(--space-xs) calc(var(--space-sm) + 20px);
+    padding-block: var(--space-xs);
+    padding-inline-start: calc(var(--space-sm) + 20px);
+    padding-inline-end: var(--space-sm);
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-sm);

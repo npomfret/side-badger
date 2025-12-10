@@ -31,7 +31,7 @@
 .hero-stamp {
   position: absolute;
   top: 20px;
-  right: 0;
+  inset-inline-end: 0;
   background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
   color: white;
   padding: var(--space-md) var(--space-3xl);
@@ -201,7 +201,7 @@
 .coming-soon-badge {
   position: absolute;
   top: var(--space-md);
-  right: var(--space-md);
+  inset-inline-end: var(--space-md);
   background: linear-gradient(135deg, var(--accent-secondary), var(--accent-tertiary));
   color: white;
   font-size: var(--text-xs);

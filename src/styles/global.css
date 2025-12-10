@@ -166,15 +166,13 @@ a:hover {
 .container {
   width: min(1200px, 100%);
   margin: 0 auto;
-  padding-left: var(--space-lg);
-  padding-right: var(--space-lg);
+  padding-inline: var(--space-lg);
 }
 
 .container-wide {
   width: min(1400px, 100%);
   margin: 0 auto;
-  padding-left: var(--space-lg);
-  padding-right: var(--space-lg);
+  padding-inline: var(--space-lg);
 }
 
 /* Bento Grid */
@@ -327,4 +325,10 @@ section {
     transform: none;
     transition: none;
   }
+}
+
+/* ===== RTL UTILITIES ===== */
+/* Flip directional icons in RTL mode */
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
 }

@@ -13,9 +13,11 @@ interface Props {
 
 const {
   title,
-  description = t('meta.description'),
+  description: descriptionProp,
   locale = 'en',
 } = Astro.props;
+
+const description = descriptionProp ?? t('meta.description', locale);
 
 const currentPath = Astro.url.pathname;
 const siteUrl = Astro.site?.origin || 'https://sidebadger.com';

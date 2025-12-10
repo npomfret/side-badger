@@ -8,6 +8,9 @@ interface Props {
 
 const { currentLocale, currentPath } = Astro.props;
 
+// Map 'en' to 'en-gb' for display (since we show comedy aliases, not plain 'en')
+const displayLocale = currentLocale === 'en' ? 'en-gb' : currentLocale;
+
 // Get the path without any locale prefix
 const basePath = getPathWithoutLocale(currentPath);
 
@@ -26,8 +29,8 @@ const noResultsText = t('languageSwitcher.noResults', currentLocale);
 
 <div class="language-switcher">
   <button class="language-switcher-btn" aria-label="Change language" aria-expanded="false">
-    <span class="current-flag">{localeFlags[currentLocale]}</span>
-    <span class="current-lang">{localeNames[currentLocale]}</span>
+    <span class="current-flag">{localeFlags[displayLocale]}</span>
+    <span class="current-lang">{localeNames[displayLocale]}</span>
     <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="m6 9 6 6 6-6"/>
     </svg>

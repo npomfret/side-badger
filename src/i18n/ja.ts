@@ -4,11 +4,11 @@ export default {
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
-  'meta.title': 'Side Badger - 人間（とアナグマ）のための無料割り勘アプリ',
-  'meta.description': 'Side Badgerは完全無料、トラッキングなし、広告なしの割り勘アプリです。グループを作成し、費用を追加し、簡単に精算できます。ドラマなし、シンプルな割り勘だけ。',
+  'meta.title': 'サイドバジャー - 無料の割り勘、経費分担、サイドバジャー',
+  'meta.description': 'サイドバジャーは完全無料、トラッキングなし、広告なしの割り勘アプリです。グループを作成し、費用を追加し、簡単に精算できます。ドラマなし、シンプルな割り勘だけ。',
 
   // Header
-  'header.logoText': 'Side Badger',
+  'header.logoText': 'サイドバジャー',
   'header.launchApp': 'アプリを起動',
 
   // Footer
@@ -20,7 +20,7 @@ export default {
   'footer.privacy': 'プライバシーポリシー',
   'footer.terms': '利用規約',
   'footer.cookies': 'Cookieポリシー',
-  'footer.copyright': 'Side Badger. 全著作権所有（でも本当は無料です）。',
+  'footer.copyright': 'サイドバジャー. 全著作権所有（でも本当は無料です）。',
   'footer.madeWith': '混沌とコーヒーで作りました',
 
   // Hero
@@ -125,16 +125,16 @@ export default {
   'whyFree.ads.desc': '4,723円の夕食代を割り勘するだけでも十分面倒なのに、ミールキットの広告は不要です。',
 
   'whyFree.badgers.title': 'ただのアナグマ',
-  'whyFree.badgers.desc': 'Side Badgerはホワイトラベル割り勘のデモです。隠れた意図なし。ただの雰囲気とアナグマ。',
+  'whyFree.badgers.desc': 'サイドバジャーはホワイトラベル割り勘のデモです。隠れた意図なし。ただの雰囲気とアナグマ。',
 
   // CTA section
   'cta.title': '割り勘する準備はできた？',
   'cta.subtitle': 'アナグマ革命に参加しよう。無料で、プライベートで、最高の意味でちょっとカオス。',
-  'cta.button': 'Side Badgerを起動',
+  'cta.button': 'サイドバジャーを起動',
 
   // Pricing page
-  'pricing.meta.title': '料金 - Side Badger | 今なら無料',
-  'pricing.meta.description': 'Side Badgerは現在完全無料で、隠れた料金、広告、トラッキングはありません。なぜ無料で提供しているのかをご覧ください。',
+  'pricing.meta.title': '料金 - サイドバジャー | 今なら無料',
+  'pricing.meta.description': 'サイドバジャーは現在完全無料で、隠れた料金、広告、トラッキングはありません。なぜ無料で提供しているのかをご覧ください。',
   'pricing.hero.price1': '￥9,900/月',
   'pricing.hero.price2': '￥4,900/月',
   'pricing.hero.price3': '￥900/月',
@@ -178,7 +178,7 @@ export default {
   'pricing.faq.q1.question': '本当に無料ですか？',
   'pricing.faq.q1.answer': 'はい、現在は完全に無料です。機能を有料化していません。これはホワイトラベル割り勘技術のデモなので、プラットフォームを構築中は無料で提供しています。',
   'pricing.faq.q2.question': '裏は何ですか？',
-  'pricing.faq.q2.answer': '裏はありません。Side Badgerはホワイトラベル割り勘アプリがどのようなものかを示すデモンストレーションです。技術を披露するために作りましたが、せっかくなので実際に役立つものにしました。',
+  'pricing.faq.q2.answer': '裏はありません。サイドバジャーはホワイトラベル割り勘アプリがどのようなものかを示すデモンストレーションです。技術を披露するために作りましたが、せっかくなので実際に役立つものにしました。',
   'pricing.faq.q3.question': 'データを売りますか？',
   'pricing.faq.q3.answer': '絶対に売りません。アプリの運用に必要なもの以上の個人データは収集しません。トラッカーゼロ、アナリティクスピクセルゼロ、あなたの買い物習慣への興味ゼロです。',
   'pricing.faq.q4.question': 'なぜアナグマ？',
@@ -190,21 +190,21 @@ export default {
 
   // Policy pages
   'policy.privacy.title': 'プライバシーポリシー',
-  'policy.privacy.meta.title': 'プライバシーポリシー - Side Badger',
-  'policy.privacy.meta.description': '当社のプライバシーポリシーでは、Side Badgerがデータをどのように扱うかを説明します。ネタバレ：トラッキングなし、データ販売なし、広告なし。',
+  'policy.privacy.meta.title': 'プライバシーポリシー - サイドバジャー',
+  'policy.privacy.meta.description': '当社のプライバシーポリシーでは、サイドバジャーがデータをどのように扱うかを説明します。ネタバレ：トラッキングなし、データ販売なし、広告なし。',
   'policy.terms.title': '利用規約',
-  'policy.terms.meta.title': '利用規約 - Side Badger',
-  'policy.terms.meta.description': '利用規約では、Side Badgerの使用方法を説明します。要約：マナーを守り、違法なことをせず、無料を楽しんでください。',
+  'policy.terms.meta.title': '利用規約 - サイドバジャー',
+  'policy.terms.meta.description': '利用規約では、サイドバジャーの使用方法を説明します。要約：マナーを守り、違法なことをせず、無料を楽しんでください。',
   'policy.cookies.title': 'Cookieポリシー',
-  'policy.cookies.meta.title': 'Cookieポリシー - Side Badger',
-  'policy.cookies.meta.description': '当社のCookieポリシーでは、Side Badgerが使用するCookieを説明します。ネタバレ：トラッキングCookieは使用せず、アプリを動作させるための基本的なものだけです。',
+  'policy.cookies.meta.title': 'Cookieポリシー - サイドバジャー',
+  'policy.cookies.meta.description': '当社のCookieポリシーでは、サイドバジャーが使用するCookieを説明します。ネタバレ：トラッキングCookieは使用せず、アプリを動作させるための基本的なものだけです。',
 
   // Language switcher
   'languageSwitcher.search': '検索...',
   'languageSwitcher.noResults': '言語が見つかりません',
 
   // 404 page
-  'notFound.meta.title': 'ページが見つかりません - Side Badger',
+  'notFound.meta.title': 'ページが見つかりません - サイドバジャー',
   'notFound.meta.description': 'おっと！このページは存在しません。アナグマが迷子になりました。',
   'notFound.title': 'ページが見つかりません',
   'notFound.description': 'このアナグマは道に迷ったようです。お探しのページは存在しません。',

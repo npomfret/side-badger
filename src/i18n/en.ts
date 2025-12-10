@@ -4,7 +4,7 @@ export default {
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
-  'meta.title': 'Side Badger - Free Bill Splitting for Humans (and Badgers)',
+  'meta.title': 'Side Badger - Free bill splitting, expense sharing and side-badgers',
   'meta.description': 'Side Badger is the totally free, no-tracking, no-ads bill splitter that makes it easy to split expenses with friends. Create groups, add expenses, and settle up with ease. No drama, just simple bill splitting.',
 
   // Header

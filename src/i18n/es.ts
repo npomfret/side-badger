@@ -5,7 +5,7 @@ export default {
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
-  'meta.title': 'Side Badger - División de gastos gratis para humanos (y tejones)',
+  'meta.title': 'Side Badger - División de gastos gratis, compartir gastos y side-badgers',
   'meta.description': 'Side Badger es el divisor de gastos totalmente gratis, sin rastreo ni anuncios, que facilita dividir gastos con amigos. Crea grupos, añade gastos y salda cuentas con facilidad. Sin drama, solo división de gastos simple.',
 
   // Header

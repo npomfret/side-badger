@@ -36,12 +36,37 @@
   font-weight: 700;
   font-size: var(--text-lg);
   color: var(--text-primary);
+  overflow: visible;
+}
+
+.logo-glow-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.logo-glow-spacer {
+  width: 40px;
+  flex-shrink: 0;
+  order: 2;
+}
+
+.logo-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -40px;
+  bottom: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(90, 180, 125, 1) 0%, rgba(70, 140, 95, 0.85) 32%, rgba(40, 80, 55, 0) 62%);
+  z-index: 0;
+}
+
+.logo-glow-wrapper img {
+  position: relative;
+  z-index: 1;
 }
 
 .logo img {
   border-radius: var(--radius-lg);
-  background: radial-gradient(ellipse at center, rgba(40, 80, 55, 0.9) 30%, rgba(40, 80, 55, 0) 70%);
-  padding: var(--space-xs);
 }
 
 .nav-links {

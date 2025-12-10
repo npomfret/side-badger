@@ -103,7 +103,11 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
         </div>
         <nav class="header-nav container" style="position: relative;">
           <a href={getLocalizedPath('/', locale)} class="logo">
-            <img src="/images/logo-transparent-small.png" alt={t('header.logoText', locale)} height="100" />
+            <div class="logo-glow-wrapper">
+              <div class="logo-glow-spacer"></div>
+              <div class="logo-glow"></div>
+              <img src="/images/logo-transparent-small.png" alt={t('header.logoText', locale)} height="100" />
+            </div>
           </a>
 
           <ul class="nav-links flex items-center gap-lg">

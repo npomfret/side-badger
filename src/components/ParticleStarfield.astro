@@ -124,16 +124,6 @@
   });
 </script>
 
-<style>
-  #tsparticles {
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-  }
-
-  /* Allow pointer events only for interactivity */
-  :global(#tsparticles canvas) {
-    pointer-events: auto;
-  }
+<style is:global>
+  @import '../styles/starfield.css';
 </style>

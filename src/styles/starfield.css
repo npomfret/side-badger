@@ -1,0 +1,15 @@
+/*
+ * Particle Starfield Styles
+ */
+
+#tsparticles {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Allow pointer events only for interactivity */
+#tsparticles canvas {
+  pointer-events: auto;
+}

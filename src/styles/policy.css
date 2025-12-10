@@ -1,0 +1,152 @@
+/*
+ * Policy Page Styles (Privacy, Terms, Cookies)
+ */
+
+.legal-page {
+  padding: var(--space-4xl) 0;
+  min-height: 70vh;
+}
+
+.legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-2xl);
+}
+
+.loading-state {
+  text-align: center;
+  padding: var(--space-3xl);
+}
+
+.loading-state p {
+  margin-top: var(--space-lg);
+  color: var(--text-muted);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  border: 3px solid var(--glass-border);
+  border-top-color: var(--accent-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-state {
+  text-align: center;
+  padding: var(--space-2xl);
+}
+
+.error-state svg {
+  color: var(--accent-tertiary);
+  margin-bottom: var(--space-lg);
+}
+
+.error-state p {
+  margin-bottom: var(--space-sm);
+}
+
+/* Markdown content styles */
+.markdown-content {
+  font-size: var(--text-xs);
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  font-family: var(--font-display);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-xs);
+}
+
+.markdown-content h1 { font-size: var(--text-base); }
+.markdown-content h2 { font-size: var(--text-sm); }
+.markdown-content h3 { font-size: var(--text-xs); }
+.markdown-content h4 { font-size: var(--text-xs); }
+
+.markdown-content p {
+  margin-bottom: var(--space-sm);
+  line-height: 1.6;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin-bottom: var(--space-sm);
+  padding-inline-start: var(--space-lg);
+}
+
+.markdown-content li {
+  margin-bottom: var(--space-xs);
+  line-height: 1.5;
+}
+
+.markdown-content a {
+  color: var(--accent-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.markdown-content a:hover {
+  color: var(--accent-success);
+}
+
+.markdown-content code {
+  font-family: var(--font-mono);
+  background: var(--bg-deep);
+  padding: 0.2em 0.4em;
+  border-radius: var(--radius-sm);
+  font-size: 0.9em;
+}
+
+.markdown-content pre {
+  background: var(--bg-deep);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  margin-bottom: var(--space-md);
+}
+
+.markdown-content pre code {
+  background: none;
+  padding: 0;
+}
+
+.markdown-content blockquote {
+  border-inline-start: 3px solid var(--accent-primary);
+  padding-inline-start: var(--space-lg);
+  margin: var(--space-lg) 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.markdown-content hr {
+  border: none;
+  border-top: 1px solid var(--glass-border);
+  margin: var(--space-xl) 0;
+}
+
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-md);
+}
+
+.markdown-content th,
+.markdown-content td {
+  border: 1px solid var(--glass-border);
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+}
+
+.markdown-content th {
+  background: var(--bg-deep);
+  font-weight: 600;
+}

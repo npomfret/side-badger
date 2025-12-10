@@ -1,5 +1,6 @@
 ---
 import ParticleStarfield from '../components/ParticleStarfield.astro';
+import GlowingConnections from '../components/GlowingConnections.astro';
 import EasterEggs from '../components/EasterEggs.astro';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import LanguageDetection from '../components/LanguageDetection.astro';
@@ -87,6 +88,7 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <ParticleStarfield />
+    <GlowingConnections />
     <EasterEggs />
     <LanguageDetection currentLocale={locale} />
     <div id="cursor-glow" aria-hidden="true"></div>

@@ -11,11 +11,13 @@
   background: rgba(10, 40, 24, 0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--glass-border);
+  overflow: visible;
 }
 
 .site-header .container {
   padding-top: var(--space-xs);
   padding-bottom: var(--space-xs);
+  overflow: visible;
 }
 
 /* Header navigation layout */
@@ -23,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: visible;
 }
 
 .logo {
@@ -43,6 +46,7 @@
 
 .nav-links {
   list-style: none;
+  overflow: visible;
 }
 
 .nav-links a {
@@ -233,27 +237,29 @@ main {
 
 /* ===== MOBILE LAYOUT ===== */
 @media (max-width: 768px) {
-  /* Header: stack logo and button vertically */
+  /* Header: keep horizontal layout but tighter */
   .header-nav {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: var(--space-sm);
-    padding-top: var(--space-sm);
-    padding-bottom: var(--space-sm);
   }
 
-  .site-header .logo {
-    justify-content: center;
+  .site-header .logo img {
+    height: 60px;
   }
 
   .site-header .nav-links {
-    justify-content: center;
+    gap: var(--space-sm);
   }
 
-  /* Increase main padding to account for taller header */
+  .btn-launch {
+    padding: var(--space-xs) var(--space-sm) !important;
+    font-size: var(--text-sm);
+  }
+
   main {
-    padding-top: 140px;
+    padding-top: 90px;
   }
 
   /* Footer */

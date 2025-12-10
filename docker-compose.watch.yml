@@ -5,11 +5,13 @@ services:
         - path: src
           target: /app/src
           action: sync
+          ignore:
+            - node_modules/
         - path: public
           target: /app/public
           action: sync
         - path: astro.config.mjs
           target: /app/astro.config.mjs
-          action: sync
+          action: sync+restart
         - path: package.json
           action: rebuild

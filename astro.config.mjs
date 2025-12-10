@@ -12,5 +12,13 @@ export default defineConfig({
       prefixDefaultLocale: false,
       redirectToDefaultLocale: false
     }
+  },
+  vite: {
+    server: {
+      watch: {
+        usePolling: true,
+        interval: 1000
+      }
+    }
   }
 });

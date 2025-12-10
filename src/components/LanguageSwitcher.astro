@@ -45,6 +45,7 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
 ---
 
 <div class="language-switcher">
+  <div class="language-backdrop"></div>
   <button class="language-switcher-btn" aria-label="Change language" aria-expanded="false">
     <span class="current-flag">{localeFlags[displayLocale]}</span>
     <span class="current-lang">
@@ -101,17 +102,37 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
     const options = switcher.querySelectorAll('.language-option');
     const noResults = switcher.querySelector('.no-results');
 
+    const backdrop = switcher.querySelector('.language-backdrop');
+
+    const openDropdown = () => {
+      btn?.setAttribute('aria-expanded', 'true');
+      switcher.classList.add('open');
+
+      // Focus search input when opening
+      if (searchInput) {
+        setTimeout(() => searchInput.focus(), 100);
+      }
+    };
+
+    const closeDropdown = () => {
+      btn?.setAttribute('aria-expanded', 'false');
+      switcher.classList.remove('open');
+    };
+
     // Toggle dropdown
     btn?.addEventListener('click', (e) => {
       e.stopPropagation();
       const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', (!isExpanded).toString());
-      switcher.classList.toggle('open');
-
-      // Focus search input when opening
-      if (!isExpanded && searchInput) {
-        setTimeout(() => searchInput.focus(), 100);
+      if (isExpanded) {
+        closeDropdown();
+      } else {
+        openDropdown();
       }
+    });
+
+    // Close on backdrop click
+    backdrop?.addEventListener('click', () => {
+      closeDropdown();
     });
 
     // Filter languages as user types
@@ -174,12 +195,17 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
       switcher.classList.remove('open');
       switcher.querySelector('button')?.setAttribute('aria-expanded', 'false');
     });
+    document.body.style.overflow = '';
   });
 </script>
 
 <style>
   .language-switcher {
     position: relative;
+  }
+
+  .language-backdrop {
+    display: none;
   }
 
   .language-switcher-btn {
@@ -239,7 +265,7 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
     visibility: hidden;
     transform: translateY(-8px);
     transition: all 0.2s ease;
-    z-index: 100;
+    z-index: 1000;
     overflow: hidden;
   }
 
@@ -345,6 +371,19 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
   @media (max-width: 768px) {
     .current-lang {
       display: none;
+    }
+
+    .language-backdrop {
+      display: none;
+    }
+
+    .language-dropdown {
+      min-width: 200px;
+      max-height: 50vh;
+    }
+
+    .language-options {
+      max-height: calc(50vh - 60px);
     }
   }
 </style>

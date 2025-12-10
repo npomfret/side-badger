@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { t, type Locale } from '../i18n';
+import { t, getAppUrl, type Locale } from '../i18n';
 
 interface Props {
   locale: Locale;
@@ -113,7 +113,7 @@ const checkIcon = `<svg class="check" xmlns="http://www.w3.org/2000/svg" width="
             <li><Fragment set:html={checkIcon} />{t('pricing.plan.feature7', locale)}</li>
           </ul>
 
-          <a href={t('app.url', locale)} class="btn btn-primary btn-lg btn-confetti btn-full" target="_blank" rel="noopener">
+          <a href={getAppUrl(locale)} class="btn btn-primary btn-lg btn-confetti btn-full">
             {t('pricing.plan.cta', locale)}
           </a>
         </div>

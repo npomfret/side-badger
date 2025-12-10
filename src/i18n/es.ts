@@ -203,4 +203,11 @@ export default {
   // Language switcher
   'languageSwitcher.search': 'Buscar...',
   'languageSwitcher.noResults': 'No se encontraron idiomas',
+
+  // 404 page
+  'notFound.meta.title': 'Página No Encontrada - Side Badger',
+  'notFound.meta.description': '¡Ups! Esta página no existe. El tejón se perdió.',
+  'notFound.title': 'Página No Encontrada',
+  'notFound.description': 'Parece que este tejón se salió del camino. La página que buscas no existe.',
+  'notFound.backHome': 'Volver al Inicio',
 } as const;

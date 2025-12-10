@@ -202,4 +202,11 @@ export default {
   // Language switcher
   'languageSwitcher.search': 'Search...',
   'languageSwitcher.noResults': 'No languages found',
+
+  // 404 page
+  'notFound.meta.title': 'Page Not Found - Side Badger',
+  'notFound.meta.description': "Oops! This page doesn't exist. The badger got lost.",
+  'notFound.title': 'Page Not Found',
+  'notFound.description': "Looks like this badger wandered off the trail. The page you're looking for doesn't exist.",
+  'notFound.backHome': 'Back to Home',
 } as const;

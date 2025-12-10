@@ -3,7 +3,7 @@ import ParticleStarfield from '../components/ParticleStarfield.astro';
 import EasterEggs from '../components/EasterEggs.astro';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import LanguageDetection from '../components/LanguageDetection.astro';
-import { t, locales, getLocalizedPath, isRTL, type Locale } from '../i18n';
+import { t, locales, getLocalizedPath, isRTL, getAppUrl, type Locale } from '../i18n';
 
 interface Props {
   title: string;
@@ -101,7 +101,7 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
             <li>
               <LanguageSwitcher currentLocale={locale} currentPath={currentPath} />
             </li>
-            <li><a href={t('app.url', locale)} class="btn btn-primary btn-launch" target="_blank" rel="noopener">
+            <li><a href={getAppUrl(locale)} class="btn btn-primary btn-launch">
               {t('header.launchApp', locale)}
             </a></li>
           </ul>
@@ -127,7 +127,7 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
             <h4>{t('footer.product', locale)}</h4>
             <ul>
               <li><a href={getLocalizedPath('/pricing', locale)}>{t('footer.pricing', locale)}</a></li>
-              <li><a href={t('app.url', locale)} target="_blank" rel="noopener">{t('footer.launchApp', locale)}</a></li>
+              <li><a href={getAppUrl(locale)}>{t('footer.launchApp', locale)}</a></li>
             </ul>
           </div>
 

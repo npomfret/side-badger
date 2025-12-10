@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { t, type Locale } from '../i18n';
+import { t, getAppUrl, type Locale } from '../i18n';
 
 interface Props {
   locale: Locale;
@@ -48,7 +48,7 @@ const { locale } = Astro.props;
         </p>
 
         <div class="hero-actions flex gap-md flex-wrap">
-          <a href={t('app.url', locale)} class="btn btn-primary btn-lg btn-confetti" target="_blank" rel="noopener">
+          <a href={getAppUrl(locale)} class="btn btn-primary btn-lg btn-confetti">
             {t('hero.cta', locale)}
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14"></path>
@@ -441,7 +441,7 @@ const { locale } = Astro.props;
       <div class="cta-card glass fade-up">
         <h2>{t('cta.title', locale)}</h2>
         <p>{t('cta.subtitle', locale)}</p>
-        <a href={t('app.url', locale)} class="btn btn-primary btn-lg btn-confetti" target="_blank" rel="noopener">
+        <a href={getAppUrl(locale)} class="btn btn-primary btn-lg btn-confetti">
           {t('cta.button', locale)}
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14"></path>

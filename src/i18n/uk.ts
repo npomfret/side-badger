@@ -202,5 +202,12 @@ export default {
 
   // Language switcher
   'languageSwitcher.search': 'Пошук...',
-  'languageSwitcher.noResults': 'Мови не знайдено'
+  'languageSwitcher.noResults': 'Мови не знайдено',
+
+  // 404 page
+  'notFound.meta.title': 'Сторінку не знайдено - Side Badger',
+  'notFound.meta.description': 'Ой! Цієї сторінки не існує. Борсук загубився.',
+  'notFound.title': 'Сторінку не знайдено',
+  'notFound.description': 'Схоже, цей борсук зійшов зі стежки. Сторінки, яку ви шукаєте, не існує.',
+  'notFound.backHome': 'Назад на головну',
 } as const;

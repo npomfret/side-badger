@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t } from '../i18n';
+
+const locale = 'en';
+
+// All translations for client-side locale switching
+const translations = {
+  en: {
+    title: t('notFound.title', 'en'),
+    description: t('notFound.description', 'en'),
+    backHome: t('notFound.backHome', 'en'),
+  },
+  uk: {
+    title: t('notFound.title', 'uk'),
+    description: t('notFound.description', 'uk'),
+    backHome: t('notFound.backHome', 'uk'),
+  },
+  es: {
+    title: t('notFound.title', 'es'),
+    description: t('notFound.description', 'es'),
+    backHome: t('notFound.backHome', 'es'),
+  },
+  ja: {
+    title: t('notFound.title', 'ja'),
+    description: t('notFound.description', 'ja'),
+    backHome: t('notFound.backHome', 'ja'),
+  },
+};
+
+const localePaths = {
+  en: '/',
+  uk: '/uk/',
+  es: '/es/',
+  ja: '/ja/',
+};
+---
+
+<BaseLayout
+  title={t('notFound.meta.title', locale)}
+  description={t('notFound.meta.description', locale)}
+  locale={locale}
+>
+  <section class="not-found">
+    <div class="badger-background">
+      <img src="/images/logo-face-only-large.png" alt="" aria-hidden="true" />
+    </div>
+    <div class="container not-found-content">
+      <h1 class="not-found-title">404</h1>
+      <p class="not-found-subtitle" data-i18n="title">{t('notFound.title', locale)}</p>
+      <p class="not-found-description" data-i18n="description">{t('notFound.description', locale)}</p>
+      <a href="/" class="btn btn-primary btn-lg" data-i18n-href="home">
+        <span data-i18n="backHome">{t('notFound.backHome', locale)}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <script define:vars={{ translations, localePaths }}>
+    const LOCALE_KEY = 'preferred-locale';
+    const storedLocale = localStorage.getItem(LOCALE_KEY);
+
+    if (storedLocale && translations[storedLocale]) {
+      const t = translations[storedLocale];
+
+      // Update text content
+      document.querySelector('[data-i18n="title"]').textContent = t.title;
+      document.querySelector('[data-i18n="description"]').textContent = t.description;
+      document.querySelector('[data-i18n="backHome"]').textContent = t.backHome;
+
+      // Update home link to localized path
+      const homeLink = document.querySelector('[data-i18n-href="home"]');
+      if (homeLink && localePaths[storedLocale]) {
+        homeLink.href = localePaths[storedLocale];
+      }
+
+      // Update html lang attribute
+      document.documentElement.lang = storedLocale;
+    }
+  </script>
+</BaseLayout>
+
+<style>
+  .not-found {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .badger-background {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .badger-background img {
+    width: min(70vw, 500px);
+    height: auto;
+    opacity: 0.15;
+    filter: grayscale(30%);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .badger-background img {
+      animation: none;
+    }
+  }
+
+  .not-found-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  .not-found-title {
+    font-size: clamp(6rem, 20vw, 12rem);
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+  }
+
+  .not-found-subtitle {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+  }
+
+  .not-found-description {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--text-muted);
+    max-width: 40ch;
+    margin: 0;
+  }
+
+  .btn {
+    margin-top: var(--space-md);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+</style>

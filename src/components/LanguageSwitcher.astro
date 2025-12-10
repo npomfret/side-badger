@@ -14,14 +14,28 @@ const displayLocale = currentLocale === 'en' ? 'en-gb' : currentLocale;
 // Get the path without any locale prefix
 const basePath = getPathWithoutLocale(currentPath);
 
+// Parse locale name into main part and parenthetical subtitle
+function parseLocaleName(name: string): { main: string; subtitle?: string } {
+  const match = name.match(/^(.+?)\s*\((.+)\)$/);
+  if (match) {
+    return { main: match[1], subtitle: match[2] };
+  }
+  return { main: name };
+}
+
 // Prepare locale data for the template (includes comedy aliases)
-const localeData = allLocales.map(locale => ({
-  code: locale,
-  name: localeNames[locale],
-  flag: localeFlags[locale],
-  href: `/${locale}${basePath === '/' ? '' : basePath}`,
-  active: resolveLocale(locale) === currentLocale,
-}));
+const localeData = allLocales.map(locale => {
+  const parsed = parseLocaleName(localeNames[locale]);
+  return {
+    code: locale,
+    name: localeNames[locale],
+    mainName: parsed.main,
+    subtitle: parsed.subtitle,
+    flag: localeFlags[locale],
+    href: `/${locale}${basePath === '/' ? '' : basePath}`,
+    active: resolveLocale(locale) === currentLocale,
+  };
+});
 
 const searchPlaceholder = t('languageSwitcher.search', currentLocale);
 const noResultsText = t('languageSwitcher.noResults', currentLocale);
@@ -58,7 +72,10 @@ const noResultsText = t('languageSwitcher.noResults', currentLocale);
           data-name={locale.name.toLowerCase()}
         >
           <span class="option-flag">{locale.flag}</span>
-          <span class="option-name">{locale.name}</span>
+          <span class="option-name">
+            {locale.mainName}
+            {locale.subtitle && <span class="option-subtitle">{locale.subtitle}</span>}
+          </span>
         </a>
       ))}
     </div>
@@ -282,6 +299,20 @@ const noResultsText = t('languageSwitcher.noResults', currentLocale);
 
   .option-name {
     flex: 1;
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-xs);
+  }
+
+  .option-subtitle {
+    font-size: 0.8em;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  .language-option.active .option-subtitle {
+    color: var(--accent-primary);
+    opacity: 0.7;
   }
 
   .no-results {

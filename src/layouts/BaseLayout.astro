@@ -3,7 +3,7 @@ import ParticleStarfield from '../components/ParticleStarfield.astro';
 import EasterEggs from '../components/EasterEggs.astro';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import LanguageDetection from '../components/LanguageDetection.astro';
-import { t, locales, getLocalizedPath, type Locale } from '../i18n';
+import { t, locales, getLocalizedPath, isRTL, type Locale } from '../i18n';
 
 interface Props {
   title: string;
@@ -22,7 +22,7 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
 ---
 
 <!DOCTYPE html>
-<html lang={locale}>
+<html lang={locale} dir={isRTL(locale) ? 'rtl' : 'ltr'}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

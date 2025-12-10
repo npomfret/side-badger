@@ -28,10 +28,10 @@ export default {
   'hero.badge': '100% gratis e ilimitado',
   'hero.disclaimer': "* Obviamente hay algunas limitaciones. Aplican reglas de uso justo y muchas otras limitaciones. Es gratis hasta que deje de serlo.",
   'hero.title': 'Divide gastos como un',
-  'hero.titleHighlight': 'tejón experto',
+  'hero.titleHighlight': 'side badger',
   'hero.titleDisclaimer': '',
   'hero.subtitle': "El divisor de gastos totalmente gratis, sin rastreo ni anuncios, que es sospechosamente bueno. No queremos tus datos. No queremos tu dinero. Solo queremos que dividas cuentas con tus amigos sin llorar.",
-  'hero.cta': '...sidebadger me',
+  'hero.cta': '...hazme un sidebadger',
 
   // Features section
   'features.title': 'Todo lo que necesitas',

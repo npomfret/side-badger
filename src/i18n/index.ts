@@ -89,3 +89,8 @@ export const localeFlags: Record<DropdownLocale, string> = {
   'en-ca': '🇨🇦',
   'en-gb': '🇬🇧',
 };
+
+// RTL language detection for future RTL language support
+const RTL_LANGUAGES = ['ar', 'he', 'fa', 'ur'];
+export const isRTL = (locale: string): boolean =>
+  RTL_LANGUAGES.includes(locale.split('-')[0]);

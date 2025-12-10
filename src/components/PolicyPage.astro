@@ -13,9 +13,9 @@ const apiBaseUrl = t('api.baseUrl');
 <section class="legal-page">
   <div class="container">
     <div class="legal-content glass fade-up">
-      <div class="policy-content markdown-content" data-api-base={apiBaseUrl} data-endpoint={endpoint}>
+      <div class="policy-content markdown-content" data-api-base={apiBaseUrl} data-endpoint={endpoint} aria-live="polite">
         <div class="loading-state">
-          <div class="spinner"></div>
+          <div class="spinner" aria-hidden="true"></div>
           <p>Loading {title.toLowerCase()}...</p>
         </div>
       </div>
@@ -28,8 +28,8 @@ const apiBaseUrl = t('api.baseUrl');
 
   function showError(container: Element, message = 'Unable to load policy.') {
     container.innerHTML = `
-      <div class="error-state">
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="error-state" role="alert">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="10"/>
           <line x1="12" y1="8" x2="12" y2="12"/>
           <line x1="12" y1="16" x2="12.01" y2="16"/>

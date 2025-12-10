@@ -50,7 +50,7 @@ const { locale } = Astro.props;
         <div class="hero-actions flex gap-md flex-wrap">
           <a href={getAppUrl(locale)} class="btn btn-primary btn-lg btn-confetti">
             {t('hero.cta', locale)}
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14"></path>
               <path d="m12 5 7 7-7 7"></path>
             </svg>
@@ -77,7 +77,7 @@ const { locale } = Astro.props;
       <div class="bento-grid-lg">
         <!-- Groups -->
         <div class="feature-card glass fade-up">
-          <div class="feature-icon">
+          <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
               <circle cx="9" cy="7" r="4"/>
@@ -91,7 +91,7 @@ const { locale } = Astro.props;
 
         <!-- Invites -->
         <div class="feature-card glass fade-up" data-delay="50">
-          <div class="feature-icon">
+          <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
               <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
@@ -103,7 +103,7 @@ const { locale } = Astro.props;
 
         <!-- Roles -->
         <div class="feature-card glass fade-up" data-delay="100">
-          <div class="feature-icon">
+          <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
             </svg>
@@ -114,7 +114,7 @@ const { locale } = Astro.props;
 
         <!-- Splits -->
         <div class="feature-card glass fade-up" data-delay="150">
-          <div class="feature-icon">
+          <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="12" x2="12" y1="2" y2="22"/>
               <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
@@ -126,7 +126,7 @@ const { locale } = Astro.props;
 
         <!-- Participants -->
         <div class="feature-card glass fade-up" data-delay="200">
-          <div class="feature-icon">
+          <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
               <circle cx="9" cy="7" r="4"/>
@@ -140,7 +140,7 @@ const { locale } = Astro.props;
 
         <!-- Currency -->
         <div class="feature-card glass fade-up" data-delay="250">
-          <div class="feature-icon">
+          <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"/>
               <path d="M12 2v20M2 12h20"/>
@@ -152,7 +152,7 @@ const { locale } = Astro.props;
 
         <!-- Balances -->
         <div class="feature-card glass fade-up" data-delay="300">
-          <div class="feature-icon">
+          <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 3v18h18"/>
               <path d="m19 9-5 5-4-4-3 3"/>
@@ -164,7 +164,7 @@ const { locale } = Astro.props;
 
         <!-- Settle -->
         <div class="feature-card glass fade-up" data-delay="350">
-          <div class="feature-icon">
+          <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
               <polyline points="22,4 12,14.01 9,11.01"/>
@@ -176,7 +176,7 @@ const { locale } = Astro.props;
 
         <!-- Activity -->
         <div class="feature-card glass fade-up" data-delay="400">
-          <div class="feature-icon">
+          <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 20h9"/>
               <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/>
@@ -188,7 +188,7 @@ const { locale } = Astro.props;
 
         <!-- Comments -->
         <div class="feature-card glass fade-up" data-delay="450">
-          <div class="feature-icon">
+          <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
             </svg>
@@ -199,7 +199,7 @@ const { locale } = Astro.props;
 
         <!-- Edit -->
         <div class="feature-card glass fade-up" data-delay="500">
-          <div class="feature-icon">
+          <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/>
               <path d="m15 5 4 4"/>
@@ -211,7 +211,7 @@ const { locale } = Astro.props;
 
         <!-- No Tracking -->
         <div class="feature-card glass fade-up" data-delay="600">
-          <div class="feature-icon">
+          <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/>
               <circle cx="12" cy="12" r="3"/>
@@ -236,7 +236,7 @@ const { locale } = Astro.props;
       <div class="bento-grid">
         <!-- Dates -->
         <div class="feature-card glass fade-up">
-          <div class="feature-icon feature-icon-small">
+          <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
               <line x1="16" x2="16" y1="2" y2="6"/>
@@ -250,7 +250,7 @@ const { locale } = Astro.props;
 
         <!-- Amounts -->
         <div class="feature-card glass fade-up" data-delay="100">
-          <div class="feature-icon feature-icon-small">
+          <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"/>
               <polyline points="12,6 12,12 16,14"/>
@@ -262,7 +262,7 @@ const { locale } = Astro.props;
 
         <!-- Names -->
         <div class="feature-card glass fade-up" data-delay="200">
-          <div class="feature-icon feature-icon-small">
+          <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
               <circle cx="12" cy="7" r="4"/>
@@ -274,7 +274,7 @@ const { locale } = Astro.props;
 
         <!-- Archive -->
         <div class="feature-card glass fade-up" data-delay="300">
-          <div class="feature-icon feature-icon-small">
+          <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect width="20" height="5" x="2" y="3" rx="1"/>
               <path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/>
@@ -287,7 +287,7 @@ const { locale } = Astro.props;
 
         <!-- Celebrations -->
         <div class="feature-card glass fade-up" data-delay="400">
-          <div class="feature-icon feature-icon-small">
+          <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
             </svg>
@@ -298,7 +298,7 @@ const { locale } = Astro.props;
 
         <!-- Everywhere -->
         <div class="feature-card glass fade-up" data-delay="500">
-          <div class="feature-icon feature-icon-small">
+          <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
               <path d="M12 18h.01"/>
@@ -323,7 +323,7 @@ const { locale } = Astro.props;
         <!-- Currency Conversions -->
         <div class="feature-card glass fade-up coming-soon-card">
           <div class="coming-soon-badge">Coming Soon</div>
-          <div class="feature-icon feature-icon-small">
+          <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"/>
               <path d="M12 2v20M2 12h20"/>
@@ -336,7 +336,7 @@ const { locale } = Astro.props;
         <!-- Receipt Uploading -->
         <div class="feature-card glass fade-up coming-soon-card" data-delay="100">
           <div class="coming-soon-badge">Coming Soon</div>
-          <div class="feature-icon feature-icon-small">
+          <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="17 8 12 3 7 8"/>
@@ -350,7 +350,7 @@ const { locale } = Astro.props;
         <!-- AI Receipt Scanning -->
         <div class="feature-card glass fade-up coming-soon-card" data-delay="200">
           <div class="coming-soon-badge">Coming Soon</div>
-          <div class="feature-icon feature-icon-small">
+          <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
             </svg>
@@ -362,7 +362,7 @@ const { locale } = Astro.props;
         <!-- Export Data -->
         <div class="feature-card glass fade-up coming-soon-card" data-delay="300">
           <div class="coming-soon-badge">Coming Soon</div>
-          <div class="feature-icon feature-icon-small">
+          <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
@@ -376,7 +376,7 @@ const { locale } = Astro.props;
         <!-- Native Mobile Apps -->
         <div class="feature-card glass fade-up coming-soon-card" data-delay="400">
           <div class="coming-soon-badge">Coming Soon</div>
-          <div class="feature-icon feature-icon-small">
+          <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
               <path d="M12 18h.01"/>
@@ -399,7 +399,7 @@ const { locale } = Astro.props;
 
       <div class="bento-grid">
         <div class="feature-card glass fade-up">
-          <div class="feature-icon">
+          <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
               <path d="m9 12 2 2 4-4"/>
@@ -410,7 +410,7 @@ const { locale } = Astro.props;
         </div>
 
         <div class="feature-card glass fade-up" data-delay="100">
-          <div class="feature-icon">
+          <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"/>
               <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
@@ -423,7 +423,7 @@ const { locale } = Astro.props;
         </div>
 
         <div class="feature-card glass fade-up" data-delay="200">
-          <div class="feature-icon">
+          <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
             </svg>
@@ -443,7 +443,7 @@ const { locale } = Astro.props;
         <p>{t('cta.subtitle', locale)}</p>
         <a href={getAppUrl(locale)} class="btn btn-primary btn-lg btn-confetti">
           {t('cta.button', locale)}
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M5 12h14"></path>
             <path d="m12 5 7 7-7 7"></path>
           </svg>

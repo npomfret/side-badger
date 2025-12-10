@@ -33,6 +33,14 @@ const url = t('app.url');
 
 **CSS**: Uses CSS custom properties from `tokens.css`. Glassmorphism pattern with `--glass-bg`, `--glass-border`.
 
+## Internationalization (i18n)
+
+- **Text & Routing**: All text is handled via `src/i18n/*.ts`. Astro's dynamic routes provide locale-based URLs (e.g., `/ja/pricing`).
+- **RTL Support**: The layout automatically flips for RTL languages (e.g., Arabic) using `[dir="rtl"]` styles in `layout.css`.
+- **Fonts**: Loads and applies locale-specific fonts (`Noto Sans JP`, `Noto Sans Arabic`) via `:lang()` styles in `global.css`.
+- **SEO**: `BaseLayout.astro` generates `hreflang` tags and a correct `og:locale` meta tag for social sharing.
+- **Formatting**: The `src/i18n/index.ts` file includes helpers like `getFormattedDate` for locale-aware date formatting.
+
 ## Components
 
 - `BaseLayout.astro` - HTML wrapper, header/footer, background effects

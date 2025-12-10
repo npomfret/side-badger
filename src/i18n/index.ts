@@ -109,3 +109,19 @@ export function getAppUrl(locale: Locale = 'en'): string {
   }
   return `${baseUrl}?lang=${locale}`;
 }
+
+export function getFormattedDate(locale: Locale): string {
+  const date = new Date();
+  // Map our locales to BCP 47 language tags for robust formatting
+  const localeForIntl = {
+    ar: 'ar-EG',
+    ja: 'ja-JP',
+    es: 'es-ES',
+    uk: 'uk-UA',
+    en: 'en-US',
+  }[locale];
+
+  return new Intl.DateTimeFormat(localeForIntl, {
+    year: 'numeric',
+  }).format(date);
+}

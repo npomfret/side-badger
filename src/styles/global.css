@@ -3,7 +3,7 @@
  * Forest theme with misty aurora backgrounds and glassmorphism
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+Arabic:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 @import './tokens.css';
 
 /* ===== RESET & BASE ===== */
@@ -11,6 +11,26 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* ===== SKIP LINK (Accessibility) ===== */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--accent-primary);
+  color: var(--bg-void);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  z-index: calc(var(--z-modal) + 1);
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: var(--space-sm);
 }
 
 html {
@@ -332,4 +352,13 @@ section {
 /* Flip directional icons in RTL mode */
 [dir="rtl"] .rtl-flip {
   transform: scaleX(-1);
+}
+
+/* ===== LANGUAGE-SPECIFIC FONT STYLES ===== */
+body:lang(ja) {
+  font-family: 'Noto Sans JP', var(--font-sans);
+}
+
+body:lang(ar) {
+  font-family: 'Noto Sans Arabic', var(--font-sans);
 }

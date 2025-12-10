@@ -3,7 +3,7 @@ import ParticleStarfield from '../components/ParticleStarfield.astro';
 import EasterEggs from '../components/EasterEggs.astro';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import LanguageDetection from '../components/LanguageDetection.astro';
-import { t, locales, getLocalizedPath, isRTL, getAppUrl, type Locale } from '../i18n';
+import { t, locales, getLocalizedPath, isRTL, getAppUrl, getFormattedDate, type Locale } from '../i18n';
 
 interface Props {
   title: string;
@@ -46,7 +46,13 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Side Badger" />
-    <meta property="og:locale" content={locale === 'uk' ? 'uk_UA' : 'en_US'} />
+    <meta property="og:locale" content={{
+      en: 'en_US',
+      uk: 'uk_UA',
+      es: 'es_ES',
+      ja: 'ja_JP',
+      ar: 'ar_AE'
+    }[locale] || 'en_US'} />
 
     <meta property="og:image" content="/images/logo-large-transparent-1200x628.png" />
 
@@ -79,14 +85,15 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
     </script>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <ParticleStarfield />
     <EasterEggs />
     <LanguageDetection currentLocale={locale} />
-    <div id="cursor-glow"></div>
+    <div id="cursor-glow" aria-hidden="true"></div>
 
     <slot name="header">
       <header class="site-header">
-        <div class="christmas-lights">
+        <div class="christmas-lights" aria-hidden="true">
           <div class="wire"></div>
           <ul class="lights">
             <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
@@ -111,7 +118,7 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
       </header>
     </slot>
 
-    <main>
+    <main id="main-content">
       <slot />
     </main>
 
@@ -144,7 +151,7 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
         </div>
 
         <div class="footer-bottom flex items-center justify-between">
-          <p class="text-muted text-sm">&copy; {new Date().getFullYear()} {t('footer.copyright', locale)}</p>
+          <p class="text-muted text-sm">&copy; {getFormattedDate(locale)} {t('footer.copyright', locale)}</p>
           <p class="text-muted text-sm">{t('footer.madeWith', locale)}</p>
         </div>
       </div>

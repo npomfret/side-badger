@@ -15,3 +15,5 @@ services:
           action: sync+restart
         - path: package.json
           action: rebuild
+        - path: package-lock.json
+          action: rebuild

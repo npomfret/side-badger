@@ -1,5 +1,5 @@
 ---
-import { allLocales, localeNames, localeFlags, getPathWithoutLocale, t, resolveLocale, type Locale, type LocaleOrAlias } from '../i18n';
+import { allLocales, localeNames, localeFlags, getPathWithoutLocale, t, resolveLocale, localeAliases, type Locale, type LocaleOrAlias, type DropdownLocale } from '../i18n';
 
 interface Props {
   currentLocale: Locale;
@@ -8,8 +8,25 @@ interface Props {
 
 const { currentLocale, currentPath } = Astro.props;
 
-// Map 'en' to 'en-gb' for display (since we show comedy aliases, not plain 'en')
-const displayLocale = currentLocale === 'en' ? 'en-gb' : currentLocale;
+// Extract the actual locale/alias from the URL path to display the correct variant
+function getDisplayLocaleFromPath(path: string): DropdownLocale {
+  // Check if the path starts with any locale alias (e.g., /en-us/, /en-gb/)
+  for (const alias of localeAliases) {
+    if (path.startsWith(`/${alias}/`) || path === `/${alias}`) {
+      return alias;
+    }
+  }
+  // For non-English locales, check the dropdown locales
+  for (const loc of allLocales) {
+    if (path.startsWith(`/${loc}/`) || path === `/${loc}`) {
+      return loc;
+    }
+  }
+  // Default: if no locale prefix (root path), default to en-gb
+  return 'en-gb';
+}
+
+const displayLocale = getDisplayLocaleFromPath(currentPath);
 
 // Get the path without any locale prefix
 const basePath = getPathWithoutLocale(currentPath);

@@ -1,79 +1,68 @@
-# Side Badger Website
+i# Side Badger - White Label Bill Splitting Website
 
-Marketing website for Side Badger - a free, no-tracking bill splitter.
+A customizable marketing website for white-label expense splitting applications. Built with Astro, deployed via Docker.
 
-## Local Development
-
-Requires Docker.
+## Quick Start
 
 ```bash
-# Start dev server with hot-reload
-npm run docker:start
-
-# Stop
-npm run docker:stop
-
-# Restart
-npm run docker:restart
-
-# View logs
-npm run docker:logs
+# Requires Docker
+npm run docker:start    # Start dev server at http://localhost:4321
+npm run docker:stop     # Stop
+npm run docker:logs     # View logs
 ```
 
-Site runs at http://localhost:4321
+## Setting Up Your White Label
 
-## Production Build
+Add a CNAME record for your app subdomain pointing to `splitifyd.web.app`:
 
-```bash
-npm run build
+```
+app.yourdomain.com  CNAME  splitifyd.web.app
 ```
 
-Output goes to `dist/`.
+The app will run on your subdomain (e.g., `app.yourdomain.com`).
+
+## Project Structure
+
+```
+src/
+├── i18n/en.ts          # All text content (customize here)
+├── styles/tokens.css   # Design tokens (colors, spacing, fonts)
+├── components/         # Reusable components
+├── layouts/            # Page layouts
+└── pages/              # Routes (index, pricing, privacy, etc.)
+```
 
 ## Deployment
 
-The site auto-deploys to `sidebadger.com` when you push to `main`.
+### Automatic (GitHub Actions)
 
-### How it works:
+Push to `main` → Docker image builds → Deploys to your server.
 
-```
-git push main
-    ↓
-GitHub Actions triggers
-    ↓
-Docker image built (~1 min)
-    ↓
-Image pushed to ghcr.io/npomfret/side-badger:latest
-    ↓
-Server pulls image and restarts container
-```
+Setup requirements:
+1. Add `SSH_PRIVATE_KEY` as GitHub secret
+2. Configure server path in `.github/workflows/deploy.yml`
+3. Login to ghcr.io on server: `docker login ghcr.io -u YOUR_USERNAME`
 
-### Monitoring:
-
-- **View deployments:** https://github.com/npomfret/side-badger/actions
-- **View images:** https://github.com/npomfret/side-badger/pkgs/container/side-badger
-
-### Manual deploy (if needed):
+### Manual
 
 ```bash
-ssh root@sidebadger.com "cd /opt/side-badger-website && docker pull ghcr.io/npomfret/side-badger:latest && docker compose up -d"
+npm run build                    # Build static site to dist/
+docker build -t your-app .       # Build Docker image
+docker run -p 80:80 your-app     # Run container
 ```
 
-### Rollback to previous version:
+## Policy Pages
 
-```bash
-# 1. Find the SHA of the version you want from the packages page or git log
-# 2. Deploy that specific version:
-ssh root@sidebadger.com "cd /opt/side-badger-website && docker pull ghcr.io/npomfret/side-badger:<sha> && docker compose up -d"
-```
+Privacy, Terms, and Cookie pages fetch content from your API:
+- `GET {api.baseUrl}/api/policies/privacy-policy/text`
+- `GET {api.baseUrl}/api/policies/terms-of-service/text`
+- `GET {api.baseUrl}/api/policies/cookie-policy/text`
 
-### First-time setup (already done):
+Expected response: Markdown text.
 
-1. Add SSH private key as GitHub secret `SSH_PRIVATE_KEY`
-2. Login to ghcr.io on server: `ssh root@sidebadger.com "docker login ghcr.io -u npomfret"`
+## Tech Stack
 
-### Server details:
-- **Host:** `sidebadger.com`
-- **Path:** `/opt/side-badger-website/`
-- **Container:** `side-badger-website`
-- **Image:** `ghcr.io/npomfret/side-badger:latest`
+- **Astro 5** - Static site generation
+- **TypeScript** - Type safety
+- **Docker + Nginx** - Production deployment
+- **GitHub Actions** - CI/CD

@@ -166,7 +166,7 @@ export default {
   'pricing.enterprise.feature1': 'Viss, kas ir Pilnajā āpsī',
   'pricing.enterprise.feature2': 'Skaists PDF atskaite',
   'pricing.enterprise.feature3': 'Sinerģijas optimizācija',
-  'pricing.enterprise.feature4': 'Kaut kas bloķēts',
+  'pricing.enterprise.feature4': 'Blokķēde kaut kas',
   'pricing.enterprise.feature5': 'AI darbināti modes vārdi',
   'pricing.enterprise.feature6': 'Īsts cilvēks, ar ko runāt*',
   'pricing.enterprise.cta': 'Sazinieties ar tirdzniecības nodaļu',

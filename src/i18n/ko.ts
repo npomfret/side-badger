@@ -26,10 +26,10 @@ export default {
   // Hero
   'hero.badge': '100% 무료 및 무제한',
   'hero.disclaimer': "* 물론 몇 가지 제한이 있습니다. 공정한 사용 및 기타 많은 제한이 적용됩니다. 무료가 아닐 때까지 무료입니다.",
-  'hero.title': '다음과 같이 비용 분할',
+  'hero.title': '비용을',
   'hero.titleHighlight': '사이드 배저',
-  'hero.titleDisclaimer': '',
-  'hero.subtitle': "데이터를 원하지 않습니다. 돈을 원하지 않습니다. 친구들과 울지 않고 계산서를 나누기만 하면 됩니다.",
+  'hero.titleDisclaimer': '처럼 나누세요',
+  'hero.subtitle': "완전 무료, 추적 없음, 광고 없는 의심스러울 정도로 훌륭한 비용 분할 앱입니다. 우리는 당신의 데이터를 원하지 않습니다. 당신의 돈도 원하지 않습니다. 단지 친구들과 울지 않고 계산서를 나누기를 바랄 뿐입니다.",
   'hero.cta': '...사이드배저 해줘',
 
   // Features section

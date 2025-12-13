@@ -3,17 +3,18 @@ import uk from './uk';
 import es from './es';
 import ja from './ja';
 import ar from './ar';
+import de from './de';
 
-export type Locale = 'en' | 'uk' | 'es' | 'ja' | 'ar';
+export type Locale = 'en' | 'uk' | 'es' | 'ja' | 'ar' | 'de';
 export type TranslationKey = keyof typeof en;
 
 // Comedy aliases that all point to English
 export type LocaleAlias = 'en-us' | 'en-au' | 'en-ca' | 'en-gb';
 export type LocaleOrAlias = Locale | LocaleAlias;
 // Locales shown in dropdown (excludes base 'en' since aliases cover it)
-export type DropdownLocale = 'uk' | 'es' | 'ja' | 'ar' | LocaleAlias;
+export type DropdownLocale = 'uk' | 'es' | 'ja' | 'ar' | 'de' | LocaleAlias;
 
-const translations: Record<Locale, typeof en> = { en, uk, es, ja, ar };
+const translations: Record<Locale, typeof en> = { en, uk, es, ja, ar, de };
 
 // Map aliases to their actual locale
 export const localeAliasMap: Record<LocaleAlias, Locale> = {
@@ -70,15 +71,16 @@ export function getLocalizedPath(pathname: string, locale: Locale): string {
   return `/${locale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
 }
 
-export const locales: Locale[] = ['en', 'uk', 'es', 'ja', 'ar'];
+export const locales: Locale[] = ['en', 'uk', 'es', 'ja', 'ar', 'de'];
 export const localeAliases: LocaleAlias[] = ['en-us', 'en-au', 'en-ca', 'en-gb'];
-export const allLocales: DropdownLocale[] = ['uk', 'es', 'ja', 'ar', ...localeAliases];
+export const allLocales: DropdownLocale[] = ['uk', 'es', 'ja', 'ar', 'de', ...localeAliases];
 
 export const localeNames: Record<DropdownLocale, string> = {
   uk: 'Українська',
   es: 'Español',
   ja: '日本語',
   ar: 'العربية',
+  de: 'Deutsch',
   'en-us': 'English (American)',
   'en-au': 'English (Australian)',
   'en-ca': 'English (Canadian)',
@@ -90,6 +92,7 @@ export const localeFlags: Record<DropdownLocale, string> = {
   es: '🇪🇸',
   ja: '🇯🇵',
   ar: '🇸🇦',
+  de: '🇩🇪',
   'en-us': '🇺🇸',
   'en-au': '🇦🇺',
   'en-ca': '🇨🇦',
@@ -118,6 +121,7 @@ export function getFormattedDate(locale: Locale): string {
     ja: 'ja-JP',
     es: 'es-ES',
     uk: 'uk-UA',
+    de: 'de-DE',
     en: 'en-US',
   }[locale];
 

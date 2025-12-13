@@ -79,7 +79,8 @@ export function getLocalizedPath(pathname: string, locale: Locale): string {
 
 export const locales: Locale[] = ['en', 'uk', 'es', 'ja', 'ar', 'de', 'ko', 'sv', 'it', 'lv', 'no', 'ph'];
 export const localeAliases: LocaleAlias[] = ['en-us', 'en-au', 'en-ca', 'en-gb'];
-export const allLocales: DropdownLocale[] = ['uk', 'es', 'ja', 'ar', 'de', 'ko', 'sv', 'it', 'lv', 'no', 'ph', ...localeAliases];
+// Alphabetically by English name (Arabic, English variants, German, Italian, etc.)
+export const allLocales: DropdownLocale[] = ['ar', 'en-gb', 'en-us', 'en-au', 'en-ca', 'de', 'it', 'ja', 'ko', 'lv', 'no', 'es', 'sv', 'ph', 'uk'];
 
 export const localeNames: Record<DropdownLocale, string> = {
   uk: 'Українська',

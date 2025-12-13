@@ -112,7 +112,54 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
 <script>
   const LOCALE_KEY = 'preferred-locale';
 
+  // Reorder options based on browser language preferences
+  function prioritizeUserLanguages(optionsContainer: Element) {
+    const options = Array.from(optionsContainer.querySelectorAll('.language-option')) as HTMLElement[];
+    const browserLangs = navigator.languages || [navigator.language];
+
+    // Normalize browser languages (e.g., 'en-US' -> 'en-us', 'de' -> 'de')
+    const normalizedBrowserLangs = browserLangs.map(lang => lang.toLowerCase());
+
+    // Sort: matching languages first (in browser preference order), then rest alphabetically
+    const prioritized: HTMLElement[] = [];
+    const rest: HTMLElement[] = [];
+
+    options.forEach(option => {
+      const locale = option.getAttribute('data-locale') || '';
+      const langBase = locale.split('-')[0]; // 'en-us' -> 'en', 'de' -> 'de'
+
+      // Check if this locale matches any browser language
+      const matchIndex = normalizedBrowserLangs.findIndex(browserLang =>
+        browserLang === locale ||
+        browserLang.startsWith(locale + '-') ||
+        browserLang === langBase ||
+        locale.startsWith(browserLang + '-')
+      );
+
+      if (matchIndex !== -1) {
+        // Store with priority index for sorting
+        (option as any)._priority = matchIndex;
+        prioritized.push(option);
+      } else {
+        rest.push(option);
+      }
+    });
+
+    // Sort prioritized by browser preference order
+    prioritized.sort((a, b) => (a as any)._priority - (b as any)._priority);
+
+    // Reorder DOM
+    [...prioritized, ...rest].forEach(option => {
+      optionsContainer.appendChild(option);
+    });
+  }
+
   document.querySelectorAll('.language-switcher').forEach(switcher => {
+    // Prioritize languages based on browser settings
+    const optionsContainer = switcher.querySelector('.language-options');
+    if (optionsContainer) {
+      prioritizeUserLanguages(optionsContainer);
+    }
     const btn = switcher.querySelector('.language-switcher-btn');
     const dropdown = switcher.querySelector('.language-dropdown');
     const searchInput = switcher.querySelector('.language-search') as HTMLInputElement;

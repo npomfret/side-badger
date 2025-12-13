@@ -41,6 +41,10 @@ const url = t('app.url');
 - **SEO**: `BaseLayout.astro` generates `hreflang` tags and a correct `og:locale` meta tag for social sharing.
 - **Formatting**: The `src/i18n/index.ts` file includes helpers like `getFormattedDate` for locale-aware date formatting.
 
+### Adding a New Language
+
+`src/i18n/index.ts` is the **single source of truth**. See the checklist at the top of that file. Pages use `getLocalePaths()` and `astro.config.mjs` imports `locales` from there, so you only update one file.
+
 ## Components
 
 - `BaseLayout.astro` - HTML wrapper, header/footer, background effects

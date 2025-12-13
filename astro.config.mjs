@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { locales } from './src/i18n/index.ts';
 
 export default defineConfig({
   site: 'https://sidebadger.com',
@@ -7,7 +8,8 @@ export default defineConfig({
   integrations: [sitemap()],
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'uk', 'es', 'ja', 'ar', 'de', 'ko', 'sv', 'it', 'lv', 'no', 'ph'],
+    // Imported from src/i18n/index.ts - single source of truth
+    locales: locales,
     routing: {
       prefixDefaultLocale: false,
       redirectToDefaultLocale: false

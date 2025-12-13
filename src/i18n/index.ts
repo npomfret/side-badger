@@ -1,3 +1,18 @@
+/**
+ * ADDING A NEW LANGUAGE CHECKLIST:
+ * 1. Create translation file: src/i18n/{locale}.ts (copy from en.ts)
+ * 2. Import it below
+ * 3. Add to Locale type
+ * 4. Add to translations record
+ * 5. Add to locales array
+ * 6. Add to DropdownLocale type (if showing in dropdown)
+ * 7. Add to allLocales array (for dropdown ordering)
+ * 8. Add to localeNames and localeFlags records
+ * 9. Add to getFormattedDate locale map
+ *
+ * That's it! Pages automatically use getLocalePaths() and
+ * astro.config.mjs imports locales from here.
+ */
 import en from './en';
 import uk from './uk';
 import es from './es';
@@ -153,4 +168,20 @@ export function getFormattedDate(locale: Locale): string {
   return new Intl.DateTimeFormat(localeForIntl, {
     year: 'numeric',
   }).format(date);
+}
+
+/**
+ * Generate static paths for all locales.
+ * Use this in getStaticPaths() to ensure all languages are included.
+ * This is the SINGLE SOURCE OF TRUTH for locale routing.
+ */
+export function getLocalePaths() {
+  return [
+    // Default locale (English) - no prefix
+    { params: { locale: undefined } },
+    // All non-English locales
+    ...locales.filter(l => l !== 'en').map(locale => ({ params: { locale } })),
+    // English aliases (comedy variants)
+    ...localeAliases.map(alias => ({ params: { locale: alias } })),
+  ];
 }

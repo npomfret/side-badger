@@ -1,22 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PolicyPage from '../../components/PolicyPage.astro';
-import { t, resolveLocale, type LocaleOrAlias } from '../../i18n';
+import { t, resolveLocale, getLocalePaths, type LocaleOrAlias } from '../../i18n';
 
-export function getStaticPaths() {
-  return [
-    { params: { locale: undefined } },     // /cookies
-    { params: { locale: 'uk' } },          // /uk/cookies
-    { params: { locale: 'es' } },          // /es/cookies
-    { params: { locale: 'ja' } },          // /ja/cookies
-    { params: { locale: 'ar' } },          // /ar/cookies
-    { params: { locale: 'de' } },          // /de/cookies
-    { params: { locale: 'en-us' } },       // /en-us/cookies
-    { params: { locale: 'en-au' } },       // /en-au/cookies
-    { params: { locale: 'en-ca' } },       // /en-ca/cookies
-    { params: { locale: 'en-gb' } },       // /en-gb/cookies
-  ];
-}
+export const getStaticPaths = getLocalePaths;
 
 const localeParam = (Astro.params.locale || 'en') as LocaleOrAlias;
 const locale = resolveLocale(localeParam);

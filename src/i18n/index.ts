@@ -4,17 +4,23 @@ import es from './es';
 import ja from './ja';
 import ar from './ar';
 import de from './de';
+import ko from './ko';
+import sv from './sv';
+import it from './it';
+import lv from './lv';
+import no from './no';
+import ph from './ph';
 
-export type Locale = 'en' | 'uk' | 'es' | 'ja' | 'ar' | 'de';
+export type Locale = 'en' | 'uk' | 'es' | 'ja' | 'ar' | 'de' | 'ko' | 'sv' | 'it' | 'lv' | 'no' | 'ph';
 export type TranslationKey = keyof typeof en;
 
 // Comedy aliases that all point to English
 export type LocaleAlias = 'en-us' | 'en-au' | 'en-ca' | 'en-gb';
 export type LocaleOrAlias = Locale | LocaleAlias;
 // Locales shown in dropdown (excludes base 'en' since aliases cover it)
-export type DropdownLocale = 'uk' | 'es' | 'ja' | 'ar' | 'de' | LocaleAlias;
+export type DropdownLocale = 'uk' | 'es' | 'ja' | 'ar' | 'de' | 'ko' | 'sv' | 'it' | 'lv' | 'no' | 'ph' | LocaleAlias;
 
-const translations: Record<Locale, typeof en> = { en, uk, es, ja, ar, de };
+const translations: Record<Locale, typeof en> = { en, uk, es, ja, ar, de, ko, sv, it, lv, no, ph };
 
 // Map aliases to their actual locale
 export const localeAliasMap: Record<LocaleAlias, Locale> = {
@@ -71,9 +77,9 @@ export function getLocalizedPath(pathname: string, locale: Locale): string {
   return `/${locale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
 }
 
-export const locales: Locale[] = ['en', 'uk', 'es', 'ja', 'ar', 'de'];
+export const locales: Locale[] = ['en', 'uk', 'es', 'ja', 'ar', 'de', 'ko', 'sv', 'it', 'lv', 'no', 'ph'];
 export const localeAliases: LocaleAlias[] = ['en-us', 'en-au', 'en-ca', 'en-gb'];
-export const allLocales: DropdownLocale[] = ['uk', 'es', 'ja', 'ar', 'de', ...localeAliases];
+export const allLocales: DropdownLocale[] = ['uk', 'es', 'ja', 'ar', 'de', 'ko', 'sv', 'it', 'lv', 'no', 'ph', ...localeAliases];
 
 export const localeNames: Record<DropdownLocale, string> = {
   uk: 'Українська',
@@ -81,6 +87,12 @@ export const localeNames: Record<DropdownLocale, string> = {
   ja: '日本語',
   ar: 'العربية',
   de: 'Deutsch',
+  ko: '한국어',
+  sv: 'Svenska',
+  it: 'Italiano',
+  lv: 'Latviešu',
+  no: 'Norsk',
+  ph: 'Tagalog',
   'en-us': 'English (American)',
   'en-au': 'English (Australian)',
   'en-ca': 'English (Canadian)',
@@ -93,6 +105,12 @@ export const localeFlags: Record<DropdownLocale, string> = {
   ja: '🇯🇵',
   ar: '🇸🇦',
   de: '🇩🇪',
+  ko: '🇰🇷',
+  sv: '🇸🇪',
+  it: '🇮🇹',
+  lv: '🇱🇻',
+  no: '🇳🇴',
+  ph: '🇵🇭',
   'en-us': '🇺🇸',
   'en-au': '🇦🇺',
   'en-ca': '🇨🇦',
@@ -122,6 +140,12 @@ export function getFormattedDate(locale: Locale): string {
     es: 'es-ES',
     uk: 'uk-UA',
     de: 'de-DE',
+    ko: 'ko-KR',
+    sv: 'sv-SE',
+    it: 'it-IT',
+    lv: 'lv-LV',
+    no: 'nb-NO',
+    ph: 'fil-PH',
     en: 'en-US',
   }[locale];
 

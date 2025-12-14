@@ -81,7 +81,7 @@ export default {
   'comingSoon.conversion.desc': 'Automatisk konvertering mellan valutor. Dela i euro, gör upp i dollar.',
 
   'comingSoon.receipts.title': 'Kvittouppladdning',
-  'comingSoon.receipts.desc': 'Bifoga foton av kvitton till vilken utgift som helst. Tappa aldrig bort vad du har spenderat.',
+  'comingSoon.receipts.desc': 'Bifoga foton av kvitton till vilken utgift som helst. Tappa aldrig koll på vad du har spenderat.',
 
   'comingSoon.ai.title': 'AI-kvittoskanning',
   'comingSoon.ai.desc': 'Ta ett foto, låt AI extrahera detaljerna. Snabbare utgiftsskapande med mindre skrivande.',
@@ -89,7 +89,7 @@ export default {
   'comingSoon.export.title': 'Exportera dina data',
   'comingSoon.export.desc': 'Ladda ner dina utgifter som Excel, CSV eller PDF. Dina data, ditt format, på ditt sätt.',
 
-  'comingSoon.mobile.title': 'Inhemska mobilappar',
+  'comingSoon.mobile.title': 'Nativa mobilappar',
   'comingSoon.mobile.desc': 'iOS- och Android-appar för utgiftsspårning på språng. Lägg till utgifter direkt efter att du har betalat.',
 
   // Little things section
@@ -112,7 +112,7 @@ export default {
   'littleThings.celebrations.desc': 'När alla har gjort upp får du konfetti. Det är de små sakerna.',
 
   'littleThings.everywhere.title': 'Fungerar överallt',
-  'littleThings.everywhere.desc': 'Dator, surfplatta, telefon. Ingen app att ladda ner. Fungerar bara i din webbläsare.',
+  'littleThings.everywhere.desc': 'Dator, surfplatta, telefon. Ingen app att ladda ner. Bara fungerar i din webbläsare.',
 
   // Why free section
   'whyFree.title': 'Varför är det gratis?',
@@ -208,5 +208,5 @@ export default {
   'notFound.meta.description': 'Hoppsan! Den här sidan finns inte. Grävlingen gick vilse.',
   'notFound.title': 'Sidan hittades inte',
   'notFound.description': 'Det ser ut som att den här grävlingen vandrade utanför stigen. Sidan du letar efter finns inte.',
-  'notFound.backHome': 'Tillbaka till hem',
+  'notFound.backHome': 'Tillbaka till startsidan',
 } as const;

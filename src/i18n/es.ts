@@ -5,7 +5,7 @@ export default {
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
-  'meta.title': 'Side Badger - División de gastos gratis, compartir gastos y side-badgers',
+  'meta.title': 'Side Badger - División de gastos gratis, gastos compartidos y side-badgers',
   'meta.description': 'Side Badger es el divisor de gastos totalmente gratis, sin rastreo ni anuncios, que facilita dividir gastos con amigos. Crea grupos, añade gastos y salda cuentas con facilidad. Sin drama, solo división de gastos simple.',
 
   // Header
@@ -21,12 +21,12 @@ export default {
   'footer.privacy': 'Política de Privacidad',
   'footer.terms': 'Términos de Servicio',
   'footer.cookies': 'Política de Cookies',
-  'footer.copyright': 'Side Badger. Todos los derechos reservados (pero no realmente, es gratis).',
+  'footer.copyright': 'Side Badger. Todos los derechos reservados (aunque en realidad no, es gratis).',
   'footer.madeWith': 'Hecho con caos y café',
 
   // Hero
   'hero.badge': '100% gratis e ilimitado',
-  'hero.disclaimer': "* Obviamente hay algunas limitaciones. Aplican reglas de uso justo y muchas otras limitaciones. Es gratis hasta que deje de serlo.",
+  'hero.disclaimer': "* Obviamente hay algunas limitaciones. Se aplican reglas de uso justo y muchas otras limitaciones. Es gratis hasta que deje de serlo.",
   'hero.title': 'Divide gastos como un',
   'hero.titleHighlight': 'side badger',
   'hero.titleDisclaimer': '',
@@ -42,7 +42,7 @@ export default {
   'features.groups.desc': 'Compañeros de piso, viajes, eventos, partidas de D&D. Crea tantos grupos como necesites y mantén los gastos organizados.',
 
   'features.invites.title': 'Invitaciones fáciles',
-  'features.invites.desc': 'Comparte un enlace y tus amigos se unen. No necesitan descargar ninguna app. Opcionalmente requiere aprobación antes de que nuevos miembros puedan unirse.',
+  'features.invites.desc': 'Comparte un enlace y tus amigos se unen. No necesitan descargar ninguna app. Opcionalmente, puedes requerir aprobación antes de que nuevos miembros se unan.',
 
   'features.roles.title': 'Permisos configurables',
   'features.roles.desc': 'Controla quién puede añadir gastos, saldar cuentas o solo mirar desde la barrera. Tu grupo, tus reglas.',
@@ -85,7 +85,7 @@ export default {
   'comingSoon.receipts.desc': 'Adjunta fotos de recibos a cualquier gasto. Nunca pierdas el rastro de lo que gastaste.',
 
   'comingSoon.ai.title': 'Escaneo de recibos con IA',
-  'comingSoon.ai.desc': 'Toma una foto y deja que la IA extraiga los detalles. Creación de gastos más rápida con menos escritura.',
+  'comingSoon.ai.desc': 'Toma una foto y deja que la IA extraiga los detalles. Creación de gastos más rápida escribiendo menos.',
 
   'comingSoon.export.title': 'Exporta tus datos',
   'comingSoon.export.desc': 'Descarga tus gastos como Excel, CSV o PDF. Tus datos, tu formato, a tu manera.',
@@ -120,7 +120,7 @@ export default {
   'whyFree.subtitle': "Porque dividir cuentas no debería costar dinero. Eso es ridículo.",
 
   'whyFree.trackers.title': 'Cero rastreadores',
-  'whyFree.trackers.desc': 'Sin analíticas. Sin píxeles de rastreo. Sin "podemos compartir con socios." Tus datos de gastos son tuyos.',
+  'whyFree.trackers.desc': 'Sin analíticas. Sin píxeles de rastreo. Sin "podemos compartir con socios". Tus datos de gastos son tuyos.',
 
   'whyFree.ads.title': 'Sin anuncios',
   'whyFree.ads.desc': 'Dividir una cuenta de $47.23 ya es suficientemente molesto sin anuncios de suscripciones de comida.',
@@ -130,7 +130,7 @@ export default {
 
   // CTA section
   'cta.title': '¿Listo para dividir algunas cuentas?',
-  'cta.subtitle': "Únete a la revolución tejón. Es gratis, es privado, y es ligeramente caótico de la mejor manera.",
+  'cta.subtitle': "Únete a la revolución de los tejones. Es gratis, es privado, y es ligeramente caótico de la mejor manera.",
   'cta.button': 'Abrir Side Badger',
 
   // Pricing page
@@ -154,7 +154,7 @@ export default {
   'pricing.plan.feature3': 'Miembros ilimitados por grupo',
   'pricing.plan.feature4': 'Cero rastreo',
   'pricing.plan.feature5': 'Cero anuncios',
-  'pricing.plan.feature6': 'Energía tejón completa',
+  'pricing.plan.feature6': 'Toda la energía tejón',
   'pricing.plan.feature7': 'Una sensación cálida por dentro',
   'pricing.plan.cta': 'Empezar a dividir cuentas',
 
@@ -179,7 +179,7 @@ export default {
   'pricing.faq.q1.question': '¿Es realmente gratis?',
   'pricing.faq.q1.answer': "Sí, ahora mismo es completamente gratis. No escondemos funciones detrás de un muro de pago. Es una demo de nuestra tecnología de división de gastos de marca blanca, así que lo ofrecemos sin costo mientras desarrollamos la plataforma.",
   'pricing.faq.q2.question': "¿Cuál es la trampa?",
-  'pricing.faq.q2.answer': "Ninguna trampa. Side Badger es una demostración de cómo puede verse una app de división de gastos de marca blanca. Lo construimos para mostrar la tecnología, y pensamos ¿por qué no hacerlo realmente útil mientras tanto?",
+  'pricing.faq.q2.answer': "Ninguna trampa. Side Badger es una demostración de cómo puede verse una app de división de gastos de marca blanca. Lo construimos para mostrar la tecnología, y pensamos: ¿por qué no hacerlo realmente útil mientras tanto?",
   'pricing.faq.q3.question': '¿Venderán mis datos?',
   'pricing.faq.q3.answer': "Absolutamente no. No recolectamos datos personales más allá de lo necesario para que funcione la app. Tenemos cero rastreadores, cero píxeles de analítica, y cero interés en tus hábitos de compra.",
   'pricing.faq.q4.question': '¿Por qué un tejón?',
@@ -187,7 +187,7 @@ export default {
   'pricing.faq.q5.question': '¿Puedo usar esto para mi negocio?',
   'pricing.faq.q5.answer': "¡Claro! Si quieres seguir gastos compartidos para tu pequeño negocio o equipo, adelante. Es gratis. No te juzgaremos.",
   'pricing.faq.q6.question': '¿Qué pasa si encuentro un bug?',
-  'pricing.faq.q6.answer': "Primero que nada, ¿cómo te atreves a insinuar que nuestro código tiene bugs? Segundo, sí, probablemente hay bugs. Esto es una demo. Sé gentil con nosotros.",
+  'pricing.faq.q6.answer': "Primero que nada, ¿cómo te atreves a insinuar que nuestro código tiene bugs? Segundo, sí, probablemente hay bugs. Esto es una demo. Sé amable con nosotros.",
 
   // Policy pages
   'policy.privacy.title': 'Política de Privacidad',

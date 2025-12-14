@@ -4,7 +4,7 @@ export default {
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
-  'meta.title': 'サイドバジャー - 無料の割り勘、経費分担、サイドバジャー',
+  'meta.title': 'サイドバジャー - 無料の割り勘、経費分担、サイドバジャー仲間',
   'meta.description': 'サイドバジャーは完全無料、トラッキングなし、広告なしの割り勘アプリです。グループを作成し、費用を追加し、簡単に精算できます。ドラマなし、シンプルな割り勘だけ。',
 
   // Header
@@ -20,12 +20,12 @@ export default {
   'footer.privacy': 'プライバシーポリシー',
   'footer.terms': '利用規約',
   'footer.cookies': 'Cookieポリシー',
-  'footer.copyright': 'サイドバジャー. 全著作権所有（でも本当は無料です）。',
+  'footer.copyright': 'サイドバジャー. 全著作権所有（まあ、そこまで厳しくないけど）。',
   'footer.madeWith': '混沌とコーヒーで作りました',
 
   // Hero
   'hero.badge': '100%無料・無制限',
-  'hero.disclaimer': '* 当然ながらいくつかの制限があります。公正な使用、その他多くの制限が適用されます。無料は無料じゃなくなるまで無料です。',
+  'hero.disclaimer': '* 当然ながらいくつかの制限があります。公正な使用、その他多くの制限が適用されます。無料です...今のところは。',
   'hero.title': '割り勘を',
   'hero.titleHighlight': 'サイドバジャー',
   'hero.titleDisclaimer': 'のように',
@@ -37,7 +37,7 @@ export default {
   'features.subtitle': 'すべての機能。トラッキングなし。博士号不要。',
 
   // Feature cards
-  'features.groups.title': 'あらゆるグループに対応',
+  'features.groups.title': '何にでもグループを',
   'features.groups.desc': 'ルームメイト、旅行、イベント、D&Dパーティー。必要なだけグループを作成して費用を整理できます。',
 
   'features.invites.title': '簡単招待',
@@ -122,7 +122,7 @@ export default {
   'whyFree.trackers.desc': 'アナリティクスなし。トラッキングピクセルなし。「パートナーと共有する場合があります」なし。あなたの費用データはあなたのもの。',
 
   'whyFree.ads.title': '広告なし',
-  'whyFree.ads.desc': '4,723円の夕食代を割り勘するだけでも十分面倒なのに、ミールキットの広告は不要です。',
+  'whyFree.ads.desc': '5,000円の夕食代を割り勘するだけでも十分面倒なのに、ミールキットの広告は不要です。',
 
   'whyFree.badgers.title': 'ただのアナグマ',
   'whyFree.badgers.desc': 'サイドバジャーはホワイトラベル割り勘のデモです。隠れた意図なし。ただの雰囲気とアナグマ。',
@@ -177,16 +177,16 @@ export default {
   'pricing.faq.title': 'よくある質問',
   'pricing.faq.q1.question': '本当に無料ですか？',
   'pricing.faq.q1.answer': 'はい、現在は完全に無料です。機能を有料化していません。これはホワイトラベル割り勘技術のデモなので、プラットフォームを構築中は無料で提供しています。',
-  'pricing.faq.q2.question': '裏は何ですか？',
+  'pricing.faq.q2.question': '何か裏がありますか？',
   'pricing.faq.q2.answer': '裏はありません。サイドバジャーはホワイトラベル割り勘アプリがどのようなものかを示すデモンストレーションです。技術を披露するために作りましたが、せっかくなので実際に役立つものにしました。',
-  'pricing.faq.q3.question': 'データを売りますか？',
+  'pricing.faq.q3.question': '私のデータを売りますか？',
   'pricing.faq.q3.answer': '絶対に売りません。アプリの運用に必要なもの以上の個人データは収集しません。トラッカーゼロ、アナリティクスピクセルゼロ、あなたの買い物習慣への興味ゼロです。',
   'pricing.faq.q4.question': 'なぜアナグマ？',
   'pricing.faq.q4.answer': 'なぜアナグマじゃダメなんですか？アナグマは決意があり、機知に富み、グループでうまく働きます。Airbnbの誰がいくら払うか計算しようとしているあなたのように。',
   'pricing.faq.q5.question': 'ビジネスに使えますか？',
-  'pricing.faq.q5.answer': 'もちろん！小規模ビジネスやチームの共有費用を追跡したいなら、どうぞ。無料です。批判しません。',
+  'pricing.faq.q5.answer': 'もちろん！小規模ビジネスやチームの共有費用を追跡したいなら、どうぞ。無料です。気にしませんよ。',
   'pricing.faq.q6.question': 'バグを見つけたら？',
-  'pricing.faq.q6.answer': 'まず、私たちのコードにバグがあるなんて言わないでください。次に、はい、おそらくバグはあります。これはデモです。優しくしてください。',
+  'pricing.faq.q6.answer': 'まず、私たちのコードにバグがあるなんて失礼な！次に、はい、おそらくバグはあります。これはデモです。優しくしてください。',
 
   // Policy pages
   'policy.privacy.title': 'プライバシーポリシー',

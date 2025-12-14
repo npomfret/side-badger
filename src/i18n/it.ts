@@ -4,15 +4,15 @@ export default {
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
-  'meta.title': 'Side Badger - Divisione gratuita delle bollette, condivisione delle spese e side-badgers',
-  'meta.description': 'Side Badger è il divisore di bollette totalmente gratuito, senza tracciamento e senza pubblicità che rende facile dividere le spese con gli amici. Crea gruppi, aggiungi spese e salda con facilità. Nessun dramma, solo una semplice divisione delle bollette.',
+  'meta.title': 'Side Badger - Divisione gratuita dei conti, condivisione delle spese e side-badgers',
+  'meta.description': 'Side Badger è il divisore di conti totalmente gratuito, senza tracciamento e senza pubblicità che rende facile dividere le spese con gli amici. Crea gruppi, aggiungi spese e salda con facilità. Nessun dramma, solo una semplice divisione dei conti.',
 
   // Header
   'header.logoText': 'Side Badger',
   'header.launchApp': 'Avvia app',
 
   // Footer
-  'footer.tagline': 'Totalmente gratuito. Nessun tracciamento. Nessuna pubblicità.<br />Solo tassi che dividono le bollette.',
+  'footer.tagline': 'Totalmente gratuito. Nessun tracciamento. Nessuna pubblicità.<br />Solo tassi che dividono i conti.',
   'footer.product': 'Prodotto',
   'footer.pricing': 'Prezzi',
   'footer.launchApp': 'Avvia app',
@@ -29,7 +29,7 @@ export default {
   'hero.title': 'Dividi le spese come un',
   'hero.titleHighlight': 'side badger',
   'hero.titleDisclaimer': '',
-  'hero.subtitle': "Il divisore di spese totalmente gratuito, senza tracciamento e senza pubblicità che è sospettosamente buono. Non vogliamo i tuoi dati. Non vogliamo i tuoi soldi. Vogliamo solo che tu divida le bollette con i tuoi amici senza piangere.",
+  'hero.subtitle': "Il divisore di spese totalmente gratuito, senza tracciamento e senza pubblicità che è sospettosamente buono. Non vogliamo i tuoi dati. Non vogliamo i tuoi soldi. Vogliamo solo che tu divida i conti con i tuoi amici senza piangere.",
   'hero.cta': '...sidebadger me',
 
   // Features section
@@ -47,7 +47,7 @@ export default {
   'features.roles.desc': 'Controlla chi può aggiungere spese, saldare o semplicemente guardare da bordo campo. Il tuo gruppo, le tue regole.',
 
   'features.splits.title': 'Tre modi per dividere',
-  'features.splits.desc': 'Uguale (dividi equamente), Esatto (importi specifici) o Percentuale. Scegli ciò che funziona per il tuo gruppo. A chi non piace un 3 vie?',
+  'features.splits.desc': 'Uguale (dividi equamente), Esatto (importi specifici) o Percentuale. Scegli ciò che funziona per il tuo gruppo. A chi non piace fare le cose in tre?',
 
   'features.participants.title': 'Scegli chi partecipa',
   'features.participants.desc': "Non tutti dividono tutto. Seleziona esattamente chi è coinvolto in ogni spesa. \"Ho mangiato solo un\'insalata\" è ora un\'opzione.",
@@ -106,7 +106,7 @@ export default {
   'littleThings.names.desc': 'Nome visualizzato diverso per gruppo. "Mamma" in famiglia, "Sarah" al lavoro, "Animale da festa" con gli amici.',
 
   'littleThings.archive.title': 'Archivia vecchi gruppi',
-  'littleThings.archive.desc': 'Viaggio finito? Archivialo. Il gruppo rimane al sicuro ma fuori dal tuo percorso. Riportalo indietro in qualsiasi momento.',
+  'littleThings.archive.desc': 'Viaggio finito? Archivialo. Il gruppo rimane al sicuro ma non ti dà fastidio. Riportalo indietro in qualsiasi momento.',
 
   'littleThings.celebrations.title': 'Celebrazioni',
   'littleThings.celebrations.desc': "Quando tutti hanno saldato, ricevi coriandoli. Sono le piccole cose.",
@@ -116,19 +116,19 @@ export default {
 
   // Why free section
   'whyFree.title': 'Perché è gratuito?',
-  'whyFree.subtitle': 'Perché dividere le bollette non dovrebbe costare denaro. È semplicemente sciocco.',
+  'whyFree.subtitle': 'Perché dividere i conti non dovrebbe costare denaro. È semplicemente sciocco.',
 
   'whyFree.trackers.title': 'Zero tracker',
   'whyFree.trackers.desc': "Nessuna analisi. Nessun pixel di tracciamento. Nessun \"potremmo condividere con i partner\". I tuoi dati sulle spese rimangono tuoi.",
 
   'whyFree.ads.title': 'Nessuna pubblicità',
-  'whyFree.ads.desc': 'Dividere una bolletta della cena di 47,23 dollari è già abbastanza fastidioso senza pubblicità per abbonamenti a kit di pasti.',
+  'whyFree.ads.desc': 'Dividere un conto della cena da 47,23 dollari è già abbastanza fastidioso senza pubblicità per abbonamenti a kit di pasti.',
 
   'whyFree.badgers.title': 'Solo tassi',
   'whyFree.badgers.desc': 'Side Badger è una demo della divisione delle spese white-label. Nessuna agenda nascosta. Solo vibrazioni e tassi.',
 
   // CTA section
-  'cta.title': 'Pronto a dividere alcune bollette?',
+  'cta.title': 'Pronto a dividere qualche conto?',
   'cta.subtitle': 'Unisciti alla rivoluzione dei tassi. È gratuito, è privato ed è leggermente caotico nel migliore dei modi.',
   'cta.button': 'Avvia Side Badger',
 
@@ -155,7 +155,7 @@ export default {
   'pricing.plan.feature5': 'Zero pubblicità',
   'pricing.plan.feature6': 'Piena energia da tasso',
   'pricing.plan.feature7': 'Una calda sensazione di benessere',
-  'pricing.plan.cta': 'Inizia a dividere le bollette',
+  'pricing.plan.cta': 'Inizia a dividere i conti',
 
   // Enterprise Plan (joke)
   'pricing.enterprise.badge': 'Aziendale',

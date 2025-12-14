@@ -65,13 +65,13 @@ export default {
   'features.activity.desc': `새로운 비용, 정산, 회원 가입 등 모든 것을 확인하세요. "잠깐, 무슨 일이야?"라고 묻지 않고도 그룹과 동기화 상태를 유지하세요.`,
 
   'features.comments.title': '채팅 및 댓글',
-  'features.comments.desc': '일반 토론을 위한 그룹 채팅과 개별 비용에 대한 댓글. "누가 추가 나초를 주문했어?" 대화를 제자리에 두세요.',
+  'features.comments.desc': '일반 토론을 위한 그룹 채팅과 개별 비용에 대한 댓글. "누가 추가 나초를 주문했어?" 대화를 있어야 할 곳에 두세요.',
 
   'features.edit.title': '실수 수정',
   'features.edit.desc': '잘못된 금액을 입력했나요? 생성 후 비용을 편집하세요. 분할을 변경하고, 날짜를 수정하고, 설명을 업데이트하세요. 스트레스 없이.',
 
   'features.noTracking.title': '추적 없음',
-  'features.noTracking.desc': "분석 없음. 추적 픽셀 없음. 데이터 수집 없음. 우리는 당신이 무엇에 돈을 쓰는지 모르며, 그렇게 두는 것을 좋아합니다.",
+  'features.noTracking.desc': "분석 없음. 추적 픽셀 없음. 데이터 수집 없음. 우리는 당신이 무엇에 돈을 쓰는지 모르고, 그게 좋습니다.",
 
   // Coming soon section
   'comingSoon.title': '출시 예정',
@@ -109,7 +109,7 @@ export default {
   'littleThings.archive.desc': '여행이 끝났나요? 보관하세요. 그룹은 안전하게 유지되지만 방해가 되지 않습니다. 언제든지 다시 가져오세요.',
 
   'littleThings.celebrations.title': '축하',
-  'littleThings.celebrations.desc': "모두가 정산하면 색종이를 받습니다. 작은 것들이죠.",
+  'littleThings.celebrations.desc': "모두가 정산하면 색종이가 터집니다. 이런 작은 게 좋은 거죠.",
 
   'littleThings.everywhere.title': '어디서나 작동',
   'littleThings.everywhere.desc': '데스크톱, 태블릿, 휴대폰. 다운로드할 앱 없음. 브라우저에서 바로 작동합니다.',
@@ -170,7 +170,7 @@ export default {
   'pricing.enterprise.feature5': 'AI 기반 버즈워드',
   'pricing.enterprise.feature6': '실제 대화 상대*',
   'pricing.enterprise.cta': '영업팀에 문의',
-  'pricing.enterprise.note': '*오소리에 대해서만 독점적으로 이야기할 것입니다',
+  'pricing.enterprise.note': '*오소리에 대해서만 이야기할 것입니다',
   'pricing.enterprise.alert': "🦡 빵빵! 농담입니다, 엔터프라이즈 등급은 없습니다. 무료 요금제에 모든 것이 있습니다. 대신 그것을 사용하세요!",
 
   // FAQ Section
@@ -180,13 +180,13 @@ export default {
   'pricing.faq.q2.question': "속셈이 뭔가요?",
   'pricing.faq.q2.answer': "속셈 없습니다. 사이드 배저는 화이트 라벨 비용 분할 앱이 어떻게 생겼는지 보여주는 데모입니다. 우리는 기술을 과시하기 위해 그것을 만들었고, 만드는 김에 실제로 유용하게 만들면 어떨까 생각했습니다.",
   'pricing.faq.q3.question': '내 데이터를 판매할 건가요?',
-  'pricing.faq.q3.answer': "절대 아닙니다. 우리는 앱을 실행하는 데 필요한 것 이상의 개인 데이터를 수집하지 않습니다. 우리는 추적기, 분석 픽셀, 쇼핑 습관에 대한 관심이 전혀 없습니다.",
+  'pricing.faq.q3.answer': "절대 아닙니다. 우리는 앱을 실행하는 데 필요한 것 이상의 개인 데이터를 수집하지 않습니다. 추적기 제로, 분석 픽셀 제로, 당신의 쇼핑 습관에 대한 관심도 제로입니다.",
   'pricing.faq.q4.question': '왜 오소리인가요?',
   'pricing.faq.q4.answer': "왜 오소리가 아니겠어요? 오소리는 단호하고, 수완이 풍부하며, 그룹으로 잘 일합니다. 에어비앤비에 대해 누가 얼마를 빚졌는지 알아내려고 할 때 당신처럼 말이죠.",
   'pricing.faq.q5.question': '이것을 내 사업에 사용할 수 있나요?',
   'pricing.faq.q5.answer': "물론입니다! 중소기업이나 팀의 공유 비용을 추적하고 싶다면 그렇게 하세요. 무료입니다. 우리는 판단하지 않을 것입니다.",
   'pricing.faq.q6.question': '버그를 찾으면 어떻게 하나요?',
-  'pricing.faq.q6.answer': "우선, 우리 코드에 버그가 있다고 감히 암시하는 건가요. 둘째, 예, 아마도 버그가 있을 것입니다. 이것은 데모입니다. 우리에게 관대하게 대해주세요.",
+  'pricing.faq.q6.answer': "우선, 감히 우리 코드에 버그가 있다고 암시하다니요. 둘째, 예, 아마도 버그가 있을 것입니다. 이것은 데모입니다. 우리에게 관대하게 대해주세요.",
 
   // Policy pages
   'policy.privacy.title': '개인정보 보호정책',

@@ -53,7 +53,7 @@ export default {
   'features.participants.desc': `Ikke alle deler alt. Velg nøyaktig hvem som er involvert i hver utgift. "Jeg spiste bare en salat" er nå et alternativ.`,
 
   'features.currency.title': 'Enhver valuta',
-  'features.currency.desc': 'USD, EUR, JPY, GBP, hva som helst. Full støtte for alle valutaer med riktig desimalhåndtering. Raskt valg fra nylige.',
+  'features.currency.desc': 'USD, EUR, JPY, GBP, hva som helst. Full støtte for alle valutaer med riktig desimalhåndtering. Velg raskt fra nylig brukte.',
 
   'features.balances.title': 'Forenklede saldoer',
   'features.balances.desc': 'Smart gjeldsforenkling minimerer antall betalinger som trengs. I stedet for at alle betaler alle, finner vi den korteste veien til oppgjør.',
@@ -97,7 +97,7 @@ export default {
   'littleThings.subtitle': 'Detaljene som gjør utgiftsdeling faktisk hyggelig.',
 
   'littleThings.dates.title': 'Raske datoer',
-  'littleThings.dates.desc': '"I dag", "I går" og "I går kveld"-knapper. For ingen ønsker å bruke en datovelger til middag.',
+  'littleThings.dates.desc': '"I dag", "I går" og "I går kveld"-knapper. Fordi ingen vil bruke en datovelger for middagen.',
 
   'littleThings.amounts.title': 'Nylige beløp',
   'littleThings.amounts.desc': 'Dine ofte brukte beløp vises for raskt valg. Er husleien alltid den samme? Ett trykk.',
@@ -122,10 +122,10 @@ export default {
   'whyFree.trackers.desc': 'Ingen analyser. Ingen sporingspiksler. Ingen "vi kan dele med partnere." Dine utgiftsdata forblir dine.',
 
   'whyFree.ads.title': 'Ingen annonser',
-  'whyFree.ads.desc': 'Å dele en middagsregning på 47,23 dollar er irriterende nok uten annonser for måltidssettabonnementer.',
+  'whyFree.ads.desc': 'Å dele en middagsregning på 47,23 dollar er irriterende nok uten annonser for matkasseabonnementer.',
 
   'whyFree.badgers.title': 'Bare grevlinger',
-  'whyFree.badgers.desc': 'Side Badger er en demo av hvitmerkede utgiftsdeling. Ingen skjult agenda. Bare stemning og grevlinger.',
+  'whyFree.badgers.desc': 'Side Badger er en demo av hvitmerket utgiftsdeling. Ingen skjult agenda. Bare stemning og grevlinger.',
 
   // CTA section
   'cta.title': 'Klar til å dele noen regninger?',
@@ -174,9 +174,9 @@ export default {
   'pricing.enterprise.alert': '🦡 HONK HONK! Bare tuller, det er ingen bedriftsnivå. Den gratis planen har alt. Bruk den i stedet!',
 
   // FAQ Section
-  'pricing.faq.title': 'Spørsmål du måtte ha',
+  'pricing.faq.title': 'Spørsmål du kanskje har',
   'pricing.faq.q1.question': 'Er det virkelig gratis?',
-  'pricing.faq.q1.answer': 'Ja, akkurat nå er det helt gratis. Vi skjuler ingen funksjoner bak en betalingsmur. Det er en demo av vår hvitmerkede teknologi for utgiftsdeling, så vi tilbyr det gratis mens vi bygger ut plattformen.',
+  'pricing.faq.q1.answer': 'Ja, akkurat nå er det helt gratis. Vi skjuler ingen funksjoner bak en betalingsmur. Det er en demo av vår hvitmerket teknologi for utgiftsdeling, så vi tilbyr det gratis mens vi bygger ut plattformen.',
   'pricing.faq.q2.question': 'Hva er haken?',
   'pricing.faq.q2.answer': 'Ingen hake. Side Badger er en demonstrasjon av hvordan en hvitmerket utgiftsdelingsapp kan se ut. Vi bygde den for å vise frem teknologien, og vi tenkte hvorfor ikke gjøre den faktisk nyttig mens vi er i gang?',
   'pricing.faq.q3.question': 'Vil dere selge dataene mine?',
@@ -208,5 +208,5 @@ export default {
   'notFound.meta.description': 'Oops! Denne siden eksisterer ikke. Grevlingen gikk seg vill.',
   'notFound.title': 'Side ikke funnet',
   'notFound.description': 'Det ser ut som om denne grevlingen vandret av stien. Siden du leter etter eksisterer ikke.',
-  'notFound.backHome': 'Tilbake til hjem',
+  'notFound.backHome': 'Tilbake til forsiden',
 } as const;

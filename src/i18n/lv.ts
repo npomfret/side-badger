@@ -4,7 +4,7 @@ export default {
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
-  'meta.title': 'Side Badger — bezmaksas rēķinu sadale, izdevumu koplietošana un blakusuzņēmumi',
+  'meta.title': 'Side Badger — bezmaksas rēķinu sadale, izdevumu koplietošana un side-badgers',
   'meta.description': 'Side Badger ir pilnīgi bezmaksas, bez izsekošanas, bez reklāmām rēķinu sadalītājs, kas atvieglo izdevumu dalīšanu ar draugiem. Izveidojiet grupas, pievienojiet izdevumus un nokārtojiet to ar vieglumu. Nekādu drāmu, tikai vienkārša rēķinu sadale.',
 
   // Header
@@ -16,7 +16,7 @@ export default {
   'footer.product': 'Produkts',
   'footer.pricing': 'Cenas',
   'footer.launchApp': 'Palaist lietotni',
-  'footer.legal': 'Juridisks',
+  'footer.legal': 'Juridiskā informācija',
   'footer.privacy': 'Privātuma politika',
   'footer.terms': 'Lietošanas noteikumi',
   'footer.cookies': 'Sīkdatņu politika',
@@ -71,7 +71,7 @@ export default {
   'features.edit.desc': 'Ievadījāt nepareizu summu? Rediģējiet izdevumus pēc izveides. Mainiet sadalījumu, labojiet datumu, atjauniniet aprakstus. Bez stresa.',
 
   'features.noTracking.title': 'Bez izsekošanas',
-  'features.noTracking.desc': 'Bez analītikas. Bez izsekošanas pikseļiem. Bez datu vākšanas. Mēs nezinām, kam jūs tērējat naudu, un mums tas patīk.',
+  'features.noTracking.desc': 'Bez analītikas. Bez izsekošanas pikseļu. Bez datu vākšanas. Mēs nezinām, kam jūs tērējat naudu, un mums tas patīk.',
 
   // Coming soon section
   'comingSoon.title': 'Drīzumā',
@@ -87,7 +87,7 @@ export default {
   'comingSoon.ai.desc': 'Nofotografējiet, ļaujiet AI izvilkt detaļas. Ātrāka izdevumu izveide ar mazāku rakstīšanu.',
 
   'comingSoon.export.title': 'Eksportēt savus datus',
-  'comingSoon.export.desc': 'Lejupielādējiet savus izdevumus kā Excel, CSV vai PDF. Jūsu dati, jūsu formāts, jūsu veids.',
+  'comingSoon.export.desc': 'Lejupielādējiet savus izdevumus kā Excel, CSV vai PDF. Jūsu dati, jūsu formāts, kā vēlaties.',
 
   'comingSoon.mobile.title': 'Vietējās mobilās lietotnes',
   'comingSoon.mobile.desc': 'iOS un Android lietotnes izdevumu izsekošanai kustībā. Pievienojiet izdevumus tūlīt pēc apmaksas.',
@@ -118,14 +118,14 @@ export default {
   'whyFree.title': 'Kāpēc tas ir bez maksas?',
   'whyFree.subtitle': 'Jo rēķinu sadalīšanai nevajadzētu maksāt naudu. Tas ir vienkārši muļķīgi.',
 
-  'whyFree.trackers.title': 'Nulle izsekošanas',
-  'whyFree.trackers.desc': 'Bez analītikas. Bez izsekošanas pikseļiem. Bez "mēs varam koplietot ar partneriem". Jūsu izdevumu dati paliek jūsu.',
+  'whyFree.trackers.title': 'Bez izsekotāju',
+  'whyFree.trackers.desc': 'Bez analītikas. Bez izsekošanas pikseļu. Bez "mēs varam koplietot ar partneriem". Jūsu izdevumu dati paliek jūsu.',
 
   'whyFree.ads.title': 'Bez reklāmām',
   'whyFree.ads.desc': '47,23 $ vakariņu rēķina sadalīšana ir pietiekami kaitinoša bez reklāmām par maltīšu komplekta abonementiem.',
 
   'whyFree.badgers.title': 'Tikai āpši',
-  'whyFree.badgers.desc': 'Side Badger ir balto zīmolu izdevumu sadalīšanas demonstrācija. Nekādas slēptas darbakārtības. Tikai noskaņas un āpši.',
+  'whyFree.badgers.desc': 'Side Badger ir privātā zīmola izdevumu sadalīšanas demonstrācija. Nekādas slēptas darbakārtības. Tikai noskaņas un āpši.',
 
   // CTA section
   'cta.title': 'Gatavs sadalīt dažus rēķinus?',
@@ -151,8 +151,8 @@ export default {
   'pricing.plan.feature1': 'Neierobežotas grupas',
   'pricing.plan.feature2': 'Neierobežoti izdevumi',
   'pricing.plan.feature3': 'Neierobežots dalībnieku skaits grupā',
-  'pricing.plan.feature4': 'Nulle izsekošanas',
-  'pricing.plan.feature5': 'Nulle reklāmu',
+  'pricing.plan.feature4': 'Bez izsekošanas',
+  'pricing.plan.feature5': 'Bez reklāmām',
   'pricing.plan.feature6': 'Pilna āpša enerģija',
   'pricing.plan.feature7': 'Silta, jauka sajūta',
   'pricing.plan.cta': 'Sākt dalīt rēķinus',
@@ -164,10 +164,10 @@ export default {
   'pricing.enterprise.period': '/???',
   'pricing.enterprise.description': 'Kad nepieciešama sanāksme par sanāksmes rīkošanu.',
   'pricing.enterprise.feature1': 'Viss, kas ir Pilnajā āpsī',
-  'pricing.enterprise.feature2': 'Skaists PDF atskaite',
+  'pricing.enterprise.feature2': 'Skaista PDF atskaite',
   'pricing.enterprise.feature3': 'Sinerģijas optimizācija',
-  'pricing.enterprise.feature4': 'Blokķēde kaut kas',
-  'pricing.enterprise.feature5': 'AI darbināti modes vārdi',
+  'pricing.enterprise.feature4': 'Kaut kas ar blokķēdi',
+  'pricing.enterprise.feature5': 'AI radīti modvārdi',
   'pricing.enterprise.feature6': 'Īsts cilvēks, ar ko runāt*',
   'pricing.enterprise.cta': 'Sazinieties ar tirdzniecības nodaļu',
   'pricing.enterprise.note': '*Mēs runāsim tikai par āpšiem',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Jautājumi, kas jums var rasties',
   'pricing.faq.q1.question': 'Vai tas tiešām ir bez maksas?',
-  'pricing.faq.q1.answer': 'Jā, pašlaik tas ir pilnīgi bez maksas. Mēs neslēpjam funkcijas aiz maksas sienas. Tā ir mūsu balto zīmolu izdevumu sadalīšanas tehnoloģijas demonstrācija, tāpēc mēs to piedāvājam bez maksas, kamēr veidojam platformu.',
-  'pricing.faq.q2.question': 'Kas par to ir jāmaksā?',
-  'pricing.faq.q2.answer': 'Nekādas slēptās maksas. Side Badger ir demonstrācija tam, kā var izskatīties balto zīmolu izdevumu sadalīšanas lietotne. Mēs to uzbūvējām, lai parādītu tehnoloģiju, un mēs domājām, kāpēc gan to nepadarīt patiešām noderīgu, kamēr mēs to darām?',
+  'pricing.faq.q1.answer': 'Jā, pašlaik tas ir pilnīgi bez maksas. Mēs neslēpjam funkcijas aiz maksas sienas. Tā ir mūsu privātā zīmola izdevumu sadalīšanas tehnoloģijas demonstrācija, tāpēc mēs to piedāvājam bez maksas, kamēr veidojam platformu.',
+  'pricing.faq.q2.question': 'Kur ir āķis?',
+  'pricing.faq.q2.answer': 'Nekāda āķa. Side Badger ir demonstrācija tam, kā var izskatīties privātā zīmola izdevumu sadalīšanas lietotne. Mēs to uzbūvējām, lai parādītu tehnoloģiju, un mēs domājām, kāpēc gan to nepadarīt patiešām noderīgu, kamēr mēs to darām?',
   'pricing.faq.q3.question': 'Vai jūs pārdosiet manus datus?',
   'pricing.faq.q3.answer': 'Absolūti nē. Mēs nevācam personas datus, kas nav nepieciešami lietotnes darbībai. Mums ir nulle izsekošanas, nulle analītikas pikseļu un nulle interese par jūsu iepirkšanās paradumiem.',
   'pricing.faq.q4.question': 'Kāpēc āpsis?',

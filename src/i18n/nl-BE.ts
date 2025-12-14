@@ -5,7 +5,7 @@ export default {
 
   // Meta
   'meta.title': 'Side Badger - Gratis rekeningen splitsen, kosten delen en side-badgers',
-  'meta.description': 'Side Badger is de volledig gratis, geen-tracking, geen-advertenties rekening splitter die het makkelijk maakt om kosten te delen met vrienden. Maak groepen aan, voeg uitgaven toe en reken makkelijk af. Geen gedoe, gewoon simpel rekeningen splitsen.',
+  'meta.description': 'Side Badger is de volledig gratis, geen-tracking, geen-advertenties rekensplitser die het makkelijk maakt om kosten te delen met vrienden. Maak groepen aan, voeg uitgaven toe en reken makkelijk af. Geen gedoe, gewoon simpel rekeningen splitsen.',
 
   // Header
   'header.logoText': 'Side Badger',
@@ -29,25 +29,25 @@ export default {
   'hero.title': 'Splits uitgaven als een',
   'hero.titleHighlight': 'side badger',
   'hero.titleDisclaimer': '',
-  'hero.subtitle': 'De volledig gratis, geen-tracking, geen-advertenties uitgaven splitter die verdacht goed is. We willen je gegevens niet. We willen je geld niet. We willen alleen dat je rekeningen kunt splitsen met je vrienden zonder te huilen.',
+  'hero.subtitle': 'De volledig gratis, geen-tracking, geen-advertenties uitgavensplitser die verdacht goed is. We willen je gegevens niet. We willen je geld niet. We willen alleen dat je rekeningen kunt splitsen met je vrienden zonder te huilen.',
   'hero.cta': '...sidebadger mij',
 
   // Features section
   'features.title': 'Alles Wat Je Nodig Hebt',
-  'features.subtitle': 'Alle functies. Geen tracking. Geen diploma vereist.',
+  'features.subtitle': 'Alle functies. Geen tracking. Geen doctoraat vereist.',
 
   // Feature cards
   'features.groups.title': 'Groepen voor Alles',
   'features.groups.desc': 'Huisgenoten, reizen, evenementen, D&D-avonden. Maak zoveel groepen aan als je nodig hebt en houd uitgaven georganiseerd.',
 
   'features.invites.title': 'Makkelijke Uitnodigingen',
-  'features.invites.desc': 'Deel een link, vrienden doen mee. Geen app download nodig. Optioneel goedkeuring vereist voordat nieuwe leden kunnen toetreden.',
+  'features.invites.desc': 'Deel een link, vrienden doen mee. Geen app download nodig. Je kunt optioneel goedkeuring vereisen voordat nieuwe leden kunnen toetreden.',
 
   'features.roles.title': 'Configureerbare Rechten',
   'features.roles.desc': 'Bepaal wie uitgaven kan toevoegen, kan afrekenen of gewoon kan meekijken. Jouw groep, jouw regels.',
 
   'features.splits.title': 'Drie Manieren om te Splitsen',
-  'features.splits.desc': 'Gelijk (eerlijk verdelen), Exact (specifieke bedragen) of Percentage. Kies wat werkt voor jouw groep. Wie houdt er niet van een 3-weg?',
+  'features.splits.desc': 'Gelijk (eerlijk verdelen), Exact (specifieke bedragen) of Percentage. Kies wat werkt voor jouw groep. Wie houdt er niet van een triootje?',
 
   'features.participants.title': 'Kies Wie Meedoet',
   'features.participants.desc': 'Niet iedereen deelt alles. Selecteer precies wie betrokken is bij elke uitgave. "Ik had alleen een salade" is nu een optie.',
@@ -56,7 +56,7 @@ export default {
   'features.currency.desc': 'USD, EUR, JPY, GBP, wat dan ook. Volledige ondersteuning voor alle valuta\'s met correcte decimalen. Snel kiezen uit recente valuta\'s.',
 
   'features.balances.title': 'Vereenvoudigde Saldi',
-  'features.balances.desc': 'Slimme schuldvereenvoudiging minimaliseert het aantal betalingen. In plaats van dat iedereen iedereen betaalt, berekenen wij de kortste weg naar afgerekend.',
+  'features.balances.desc': 'Slimme schuldvereenvoudiging minimaliseert het aantal betalingen. In plaats van dat iedereen iedereen betaalt, berekenen wij de kortste weg om af te rekenen.',
 
   'features.settle.title': 'Afrekenen met 1 Klik',
   'features.settle.desc': 'Zie je een schuld? Tik op "Snel Afrekenen" en markeer het als betaald. Klaar. Confetti optioneel maar sterk aanbevolen.',
@@ -81,7 +81,7 @@ export default {
   'comingSoon.conversion.desc': 'Automatische conversie tussen valuta\'s. Split in euro\'s, reken af in dollars.',
 
   'comingSoon.receipts.title': 'Bonnetjes Uploaden',
-  'comingSoon.receipts.desc': 'Voeg foto\'s van bonnetjes toe aan elke uitgave. Nooit meer kwijtraken wat je hebt uitgegeven.',
+  'comingSoon.receipts.desc': 'Voeg foto\'s van bonnetjes toe aan elke uitgave. Raak nooit meer kwijt wat je hebt uitgegeven.',
 
   'comingSoon.ai.title': 'AI Bonnetjes Scannen',
   'comingSoon.ai.desc': 'Maak een foto, laat AI de details eruit halen. Sneller uitgaven aanmaken met minder typen.',
@@ -90,7 +90,7 @@ export default {
   'comingSoon.export.desc': 'Download je uitgaven als Excel, CSV of PDF. Jouw gegevens, jouw formaat, jouw manier.',
 
   'comingSoon.mobile.title': 'Native Mobiele Apps',
-  'comingSoon.mobile.desc': 'iOS en Android apps voor uitgaven bijhouden onderweg. Voeg uitgaven toe direct nadat je betaalt.',
+  'comingSoon.mobile.desc': 'iOS en Android apps om onderweg uitgaven bij te houden. Voeg uitgaven toe direct nadat je betaalt.',
 
   // Little things section
   'littleThings.title': 'Kleine Dingen Die Ertoe Doen',
@@ -103,10 +103,10 @@ export default {
   'littleThings.amounts.desc': 'Je veelgebruikte bedragen verschijnen voor snelle selectie. Huur is altijd hetzelfde? Eén tik.',
 
   'littleThings.names.title': 'Wees Wie Je Wilt',
-  'littleThings.names.desc': 'Andere weergavenaam per groep. "Mama" bij familie, "Sarah" op werk, "Feestvarken" bij vrienden.',
+  'littleThings.names.desc': 'Andere weergavenaam per groep. "Mama" bij familie, "Sarah" op het werk, "Feestvarken" bij vrienden.',
 
   'littleThings.archive.title': 'Archiveer Oude Groepen',
-  'littleThings.archive.desc': 'Reis voorbij? Archiveer het. Groep blijft veilig maar uit de weg. Haal het terug wanneer je wilt.',
+  'littleThings.archive.desc': 'Reis voorbij? Archiveer de groep. De groep blijft veilig maar uit de weg. Haal hem terug wanneer je wilt.',
 
   'littleThings.celebrations.title': 'Vieringen',
   'littleThings.celebrations.desc': 'Als iedereen heeft afgerekend, krijg je confetti. Het zijn de kleine dingen.',
@@ -119,7 +119,7 @@ export default {
   'whyFree.subtitle': 'Omdat rekeningen splitsen geen geld zou moeten kosten. Dat is gewoon dom.',
 
   'whyFree.trackers.title': 'Nul Trackers',
-  'whyFree.trackers.desc': 'Geen analytics. Geen tracking pixels. Geen "we kunnen delen met partners." Je uitgavengegevens blijven van jou.',
+  'whyFree.trackers.desc': 'Geen analytics. Geen tracking pixels. Geen "we mogen delen met partners". Je uitgavengegevens blijven van jou.',
 
   'whyFree.ads.title': 'Geen Advertenties',
   'whyFree.ads.desc': 'Een rekening van 47,23 euro splitsen is al vervelend genoeg zonder advertenties voor maaltijdboxen.',
@@ -176,15 +176,15 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Vragen Die Je Misschien Hebt',
   'pricing.faq.q1.question': 'Is het echt gratis?',
-  'pricing.faq.q1.answer': 'Ja, op dit moment is het volledig gratis. We verbergen geen functies achter een betaalmuur. Het is een demo van onze white-label uitgaven split technologie, dus we bieden het gratis aan terwijl we het platform verder bouwen.',
+  'pricing.faq.q1.answer': 'Ja, op dit moment is het volledig gratis. We verbergen geen functies achter een betaalmuur. Het is een demo van onze white-label uitgavensplittechnologie, dus we bieden het gratis aan terwijl we het platform verder bouwen.',
   'pricing.faq.q2.question': 'Wat is het addertje?',
-  'pricing.faq.q2.answer': 'Geen addertje. Side Badger is een demonstratie van hoe een white-label uitgaven split app eruit kan zien. We hebben het gebouwd om de technologie te tonen, en we dachten waarom niet ook nuttig maken terwijl we toch bezig zijn?',
+  'pricing.faq.q2.answer': 'Geen addertje. Side Badger is een demonstratie van hoe een white-label uitgavensplit-app eruit kan zien. We hebben het gebouwd om de technologie te tonen, en we dachten: waarom het niet ook nuttig maken terwijl we toch bezig zijn?',
   'pricing.faq.q3.question': 'Gaan jullie mijn gegevens verkopen?',
   'pricing.faq.q3.answer': 'Absoluut niet. We verzamelen geen persoonlijke gegevens behalve wat nodig is om de app te laten werken. We hebben nul trackers, nul analytics pixels en nul interesse in je koopgewoonten.',
   'pricing.faq.q4.question': 'Waarom een das?',
   'pricing.faq.q4.answer': 'Waarom NIET een das? Dassen zijn vastberaden, vindingrijk en werken goed in groepen. Net als jij als je probeert uit te zoeken wie wat verschuldigd is voor die Airbnb.',
   'pricing.faq.q5.question': 'Kan ik dit gebruiken voor mijn bedrijf?',
-  'pricing.faq.q5.answer': 'Tuurlijk! Als je gedeelde uitgaven wilt bijhouden voor je klein bedrijf of team, ga je gang. Het is gratis. We oordelen niet.',
+  'pricing.faq.q5.answer': 'Tuurlijk! Als je gedeelde uitgaven wilt bijhouden voor je kleine bedrijf of team, ga je gang. Het is gratis. We oordelen niet.',
   'pricing.faq.q6.question': 'Wat als ik een bug vind?',
   'pricing.faq.q6.answer': 'Ten eerste, hoe durf je te suggereren dat onze code bugs heeft. Ten tweede, ja er zijn waarschijnlijk bugs. Dit is een demo. Wees lief voor ons.',
 

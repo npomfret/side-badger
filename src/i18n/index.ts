@@ -25,6 +25,7 @@ import nlBE from './nl-BE';
 import ga from './ga';
 import cy from './cy';
 import eu from './eu';
+import hi from './hi';
 
 // =============================================================================
 // CENTRAL CONFIGURATION - Single source of truth for all locales
@@ -87,6 +88,14 @@ const localeConfig = {
     translations: de,
     inDropdown: true,
     dropdownOrder: 70, // German
+  },
+  hi: {
+    name: 'हिन्दी',
+    flag: '🇮🇳',
+    intlCode: 'hi-IN',
+    translations: hi,
+    inDropdown: true,
+    dropdownOrder: 75, // Hindi
   },
   ga: {
     name: 'Gaeilge',

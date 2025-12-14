@@ -31,7 +31,7 @@ export type Locale = 'en' | 'uk' | 'es' | 'ja' | 'ar' | 'de' | 'ko' | 'sv' | 'it
 export type TranslationKey = keyof typeof en;
 
 // Aliases that point to base locales (English variants -> en, Netherlands -> nl-BE)
-export type LocaleAlias = 'en-us' | 'en-au' | 'en-ca' | 'en-gb' | 'nl-NL';
+export type LocaleAlias = 'en-us' | 'en-au' | 'en-ca' | 'en-gb' | 'en-ie' | 'en-sc' | 'nl-NL';
 export type LocaleOrAlias = Locale | LocaleAlias;
 // Locales shown in dropdown (excludes base 'en' since aliases cover it)
 export type DropdownLocale = 'uk' | 'es' | 'ja' | 'ar' | 'de' | 'ko' | 'sv' | 'it' | 'lv' | 'no' | 'ph' | 'nl-BE' | LocaleAlias;
@@ -44,6 +44,8 @@ export const localeAliasMap: Record<LocaleAlias, Locale> = {
   'en-au': 'en',
   'en-ca': 'en',
   'en-gb': 'en',
+  'en-ie': 'en',
+  'en-sc': 'en',
   'nl-NL': 'nl-BE',
 };
 
@@ -95,9 +97,9 @@ export function getLocalizedPath(pathname: string, locale: Locale): string {
 }
 
 export const locales: Locale[] = ['en', 'uk', 'es', 'ja', 'ar', 'de', 'ko', 'sv', 'it', 'lv', 'no', 'ph', 'nl-BE'];
-export const localeAliases: LocaleAlias[] = ['en-us', 'en-au', 'en-ca', 'en-gb', 'nl-NL'];
+export const localeAliases: LocaleAlias[] = ['en-us', 'en-au', 'en-ca', 'en-gb', 'en-ie', 'en-sc', 'nl-NL'];
 // Alphabetically by English name (Arabic, Dutch variants, English variants, German, Italian, etc.)
-export const allLocales: DropdownLocale[] = ['ar', 'nl-BE', 'nl-NL', 'en-gb', 'en-us', 'en-au', 'en-ca', 'de', 'it', 'ja', 'ko', 'lv', 'no', 'es', 'sv', 'ph', 'uk'];
+export const allLocales: DropdownLocale[] = ['ar', 'nl-BE', 'nl-NL', 'en-us', 'en-au', 'en-ca', 'en-ie', 'en-sc', 'en-gb', 'de', 'it', 'ja', 'ko', 'lv', 'no', 'es', 'sv', 'ph', 'uk'];
 
 export const localeNames: Record<DropdownLocale, string> = {
   uk: 'Українська',
@@ -116,7 +118,9 @@ export const localeNames: Record<DropdownLocale, string> = {
   'en-us': 'English (American)',
   'en-au': 'English (Australian)',
   'en-ca': 'English (Canadian)',
-  'en-gb': 'English (Actual)',
+  'en-gb': 'English (actual)',
+  'en-ie': 'English (Irish)',
+  'en-sc': 'English (Scotch)',
 };
 
 export const localeFlags: Record<DropdownLocale, string> = {
@@ -137,6 +141,8 @@ export const localeFlags: Record<DropdownLocale, string> = {
   'en-au': '🇦🇺',
   'en-ca': '🇨🇦',
   'en-gb': '🇬🇧',
+  'en-ie': '🇮🇪',
+  'en-sc': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
 };
 
 // RTL language detection for future RTL language support

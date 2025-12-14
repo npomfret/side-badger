@@ -30,8 +30,8 @@ import nlBE from './nl-BE';
 export type Locale = 'en' | 'uk' | 'es' | 'ja' | 'ar' | 'de' | 'ko' | 'sv' | 'it' | 'lv' | 'no' | 'ph' | 'nl-BE';
 export type TranslationKey = keyof typeof en;
 
-// Comedy aliases that all point to English
-export type LocaleAlias = 'en-us' | 'en-au' | 'en-ca' | 'en-gb';
+// Aliases that point to base locales (English variants -> en, Netherlands -> nl-BE)
+export type LocaleAlias = 'en-us' | 'en-au' | 'en-ca' | 'en-gb' | 'nl-NL';
 export type LocaleOrAlias = Locale | LocaleAlias;
 // Locales shown in dropdown (excludes base 'en' since aliases cover it)
 export type DropdownLocale = 'uk' | 'es' | 'ja' | 'ar' | 'de' | 'ko' | 'sv' | 'it' | 'lv' | 'no' | 'ph' | 'nl-BE' | LocaleAlias;
@@ -44,6 +44,7 @@ export const localeAliasMap: Record<LocaleAlias, Locale> = {
   'en-au': 'en',
   'en-ca': 'en',
   'en-gb': 'en',
+  'nl-NL': 'nl-BE',
 };
 
 export function resolveLocale(localeOrAlias: LocaleOrAlias): Locale {
@@ -94,9 +95,9 @@ export function getLocalizedPath(pathname: string, locale: Locale): string {
 }
 
 export const locales: Locale[] = ['en', 'uk', 'es', 'ja', 'ar', 'de', 'ko', 'sv', 'it', 'lv', 'no', 'ph', 'nl-BE'];
-export const localeAliases: LocaleAlias[] = ['en-us', 'en-au', 'en-ca', 'en-gb'];
-// Alphabetically by English name (Arabic, Dutch, English variants, German, Italian, etc.)
-export const allLocales: DropdownLocale[] = ['ar', 'nl-BE', 'en-gb', 'en-us', 'en-au', 'en-ca', 'de', 'it', 'ja', 'ko', 'lv', 'no', 'es', 'sv', 'ph', 'uk'];
+export const localeAliases: LocaleAlias[] = ['en-us', 'en-au', 'en-ca', 'en-gb', 'nl-NL'];
+// Alphabetically by English name (Arabic, Dutch variants, English variants, German, Italian, etc.)
+export const allLocales: DropdownLocale[] = ['ar', 'nl-BE', 'nl-NL', 'en-gb', 'en-us', 'en-au', 'en-ca', 'de', 'it', 'ja', 'ko', 'lv', 'no', 'es', 'sv', 'ph', 'uk'];
 
 export const localeNames: Record<DropdownLocale, string> = {
   uk: 'Українська',
@@ -111,6 +112,7 @@ export const localeNames: Record<DropdownLocale, string> = {
   no: 'Norsk',
   ph: 'Tagalog',
   'nl-BE': 'Nederlands (België)',
+  'nl-NL': 'Nederlands',
   'en-us': 'English (American)',
   'en-au': 'English (Australian)',
   'en-ca': 'English (Canadian)',
@@ -130,6 +132,7 @@ export const localeFlags: Record<DropdownLocale, string> = {
   no: '🇳🇴',
   ph: '🇵🇭',
   'nl-BE': '🇧🇪',
+  'nl-NL': '🇳🇱',
   'en-us': '🇺🇸',
   'en-au': '🇦🇺',
   'en-ca': '🇨🇦',

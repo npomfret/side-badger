@@ -4,7 +4,7 @@ import GlowingConnections from '../components/GlowingConnections.astro';
 import EasterEggs from '../components/EasterEggs.astro';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import LanguageDetection from '../components/LanguageDetection.astro';
-import { t, locales, getLocalizedPath, isRTL, getAppUrl, getFormattedDate, type Locale } from '../i18n';
+import { t, locales, logoLocales, getLocalizedPath, isRTL, getAppUrl, getFormattedDate, type Locale } from '../i18n';
 
 interface Props {
   title: string;
@@ -20,8 +20,7 @@ const {
 
 const description = descriptionProp ?? t('meta.description', locale);
 
-// Locales that have translated logo files
-const logoLocales = ['en', 'ja', 'ko', 'ar', 'uk'];
+// Use locale's logo if available, otherwise fall back to English
 const logoLocale = logoLocales.includes(locale) ? locale : 'en';
 const smallLogoPath = `/images/${logoLocale}/logo-transparent-small.png`;
 const largeLogoPath = `/images/${logoLocale}/logo-large-transparent.png`;

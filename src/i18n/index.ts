@@ -39,6 +39,7 @@ import hi from './hi';
  * - translations: The imported translation object
  * - inDropdown: Whether to show in language picker (false for 'en' since aliases cover it)
  * - dropdownOrder: Sort order in dropdown (alphabetical by English name)
+ * - hasLogo: Whether this locale has translated logo images in /public/images/{locale}/
  */
 const localeConfig = {
   en: {
@@ -48,6 +49,7 @@ const localeConfig = {
     translations: en,
     inDropdown: false,
     dropdownOrder: 999, // Not shown
+    hasLogo: true,
   },
   ar: {
     name: 'العربية',
@@ -56,6 +58,7 @@ const localeConfig = {
     translations: ar,
     inDropdown: true,
     dropdownOrder: 10, // Arabic
+    hasLogo: true,
   },
   eu: {
     name: 'Euskara',
@@ -64,6 +67,7 @@ const localeConfig = {
     translations: eu,
     inDropdown: true,
     dropdownOrder: 20, // Basque
+    hasLogo: false,
   },
   cy: {
     name: 'Cymraeg',
@@ -72,6 +76,7 @@ const localeConfig = {
     translations: cy,
     inDropdown: true,
     dropdownOrder: 195, // Welsh
+    hasLogo: false,
   },
   'nl-BE': {
     name: 'Nederlands (België)',
@@ -80,6 +85,7 @@ const localeConfig = {
     translations: nlBE,
     inDropdown: true,
     dropdownOrder: 30, // Dutch (Belgium)
+    hasLogo: false,
   },
   de: {
     name: 'Deutsch',
@@ -88,6 +94,7 @@ const localeConfig = {
     translations: de,
     inDropdown: true,
     dropdownOrder: 70, // German
+    hasLogo: false,
   },
   hi: {
     name: 'हिन्दी',
@@ -96,6 +103,7 @@ const localeConfig = {
     translations: hi,
     inDropdown: true,
     dropdownOrder: 75, // Hindi
+    hasLogo: true,
   },
   ga: {
     name: 'Gaeilge',
@@ -104,6 +112,7 @@ const localeConfig = {
     translations: ga,
     inDropdown: true,
     dropdownOrder: 80, // Irish
+    hasLogo: false,
   },
   it: {
     name: 'Italiano',
@@ -112,6 +121,7 @@ const localeConfig = {
     translations: it,
     inDropdown: true,
     dropdownOrder: 90, // Italian
+    hasLogo: false,
   },
   ja: {
     name: '日本語',
@@ -120,6 +130,7 @@ const localeConfig = {
     translations: ja,
     inDropdown: true,
     dropdownOrder: 100, // Japanese
+    hasLogo: true,
   },
   ko: {
     name: '한국어',
@@ -128,6 +139,7 @@ const localeConfig = {
     translations: ko,
     inDropdown: true,
     dropdownOrder: 110, // Korean
+    hasLogo: true,
   },
   lv: {
     name: 'Latviešu',
@@ -136,6 +148,7 @@ const localeConfig = {
     translations: lv,
     inDropdown: true,
     dropdownOrder: 120, // Latvian
+    hasLogo: false,
   },
   no: {
     name: 'Norsk',
@@ -144,6 +157,7 @@ const localeConfig = {
     translations: no,
     inDropdown: true,
     dropdownOrder: 130, // Norwegian
+    hasLogo: false,
   },
   es: {
     name: 'Español',
@@ -152,6 +166,7 @@ const localeConfig = {
     translations: es,
     inDropdown: true,
     dropdownOrder: 160, // Spanish
+    hasLogo: false,
   },
   sv: {
     name: 'Svenska',
@@ -160,6 +175,7 @@ const localeConfig = {
     translations: sv,
     inDropdown: true,
     dropdownOrder: 170, // Swedish
+    hasLogo: false,
   },
   ph: {
     name: 'Tagalog',
@@ -168,6 +184,7 @@ const localeConfig = {
     translations: ph,
     inDropdown: true,
     dropdownOrder: 180, // Tagalog
+    hasLogo: false,
   },
   uk: {
     name: 'Українська',
@@ -176,6 +193,7 @@ const localeConfig = {
     translations: uk,
     inDropdown: true,
     dropdownOrder: 190, // Ukrainian
+    hasLogo: true,
   },
 } as const;
 
@@ -260,6 +278,11 @@ const translations: Record<Locale, typeof en> = Object.fromEntries(
 export const localeAliasMap: Record<LocaleAlias, Locale> = Object.fromEntries(
   Object.entries(aliasConfig).map(([key, config]) => [key, config.target])
 ) as Record<LocaleAlias, Locale>;
+
+// Locales that have translated logo images
+export const logoLocales: Locale[] = Object.entries(localeConfig)
+  .filter(([, config]) => config.hasLogo)
+  .map(([key]) => key as Locale);
 
 // All locales shown in dropdown, sorted by dropdownOrder
 export const allLocales: DropdownLocale[] = [

@@ -41,19 +41,19 @@ export default {
   'features.groups.desc': 'Mitbewohner, Reisen, Veranstaltungen, D&D-Partys. Erstellen Sie so viele Gruppen, wie Sie benötigen, und halten Sie die Ausgaben organisiert.',
 
   'features.invites.title': 'Einfache Einladungen',
-  'features.invites.desc': 'Teilen Sie einen Link, Freunde treten bei. Kein App-Download erforderlich. Optional die Genehmigung neuer Mitglieder erforderlich machen.',
+  'features.invites.desc': 'Teilen Sie einen Link, Freunde treten bei. Kein App-Download erforderlich. Optional: Genehmigung für neue Mitglieder aktivieren.',
 
   'features.roles.title': 'Konfigurierbare Berechtigungen',
   'features.roles.desc': 'Kontrollieren Sie, wer Ausgaben hinzufügen, abrechnen oder nur zusehen kann. Ihre Gruppe, Ihre Regeln.',
 
   'features.splits.title': 'Drei Arten der Aufteilung',
-  'features.splits.desc': 'Gleichmäßig (gleichmäßig aufteilen), genau (bestimmte Beträge) oder prozentual. Wählen Sie, was für Ihre Gruppe funktioniert. Wer mag keinen Dreier?',
+  'features.splits.desc': 'Gleichmäßig (zu gleichen Teilen), Genau (bestimmte Beträge) oder Prozentual. Wählen Sie, was für Ihre Gruppe funktioniert. Wer mag keinen Dreier?',
 
   'features.participants.title': "Wählen Sie, wer dabei ist",
   'features.participants.desc': `Nicht jeder teilt alles. Wählen Sie genau aus, wer an jeder Ausgabe beteiligt ist. "Ich hatte nur einen Salat" ist jetzt eine Option.`,
 
   'features.currency.title': 'Jede Währung',
-  'features.currency.desc': 'USD, EUR, JPY, GBP, was auch immer. Volle Unterstützung für alle Währungen mit korrekter Dezimalbehandlung. Schnellauswahl aus den letzten.',
+  'features.currency.desc': 'USD, EUR, JPY, GBP, was auch immer. Volle Unterstützung für alle Währungen mit korrekter Dezimalbehandlung. Schnellauswahl aus kürzlich verwendeten.',
 
   'features.balances.title': 'Vereinfachte Salden',
   'features.balances.desc': "Intelligente Schuldenvereinfachung minimiert die Anzahl der erforderlichen Zahlungen. Anstatt dass jeder jeden bezahlt, finden wir den kürzesten Weg zur Begleichung.",
@@ -75,7 +75,7 @@ export default {
 
   // Coming soon section
   'comingSoon.title': 'Demnächst verfügbar',
-  'comingSoon.subtitle': "Wir fangen gerade erst an. Das ist auf dem Weg.",
+  'comingSoon.subtitle': "Wir fangen gerade erst an. Hier ist, was kommt.",
 
   'comingSoon.conversion.title': 'Währungsumrechnungen',
   'comingSoon.conversion.desc': 'Automatische Umrechnung zwischen Währungen. In Euro aufteilen, in Dollar abrechnen.',
@@ -96,17 +96,17 @@ export default {
   'littleThings.title': 'Kleine Dinge, die wichtig sind',
   'littleThings.subtitle': 'Die Details, die das Teilen von Ausgaben wirklich angenehm machen.',
 
-  'littleThings.dates.title': 'Schnelle Daten',
+  'littleThings.dates.title': 'Schnelle Datumsauswahl',
   'littleThings.dates.desc': '"Heute", "Gestern" und "Letzte Nacht" Schaltflächen. Weil niemand einen Datumswähler für das Abendessen verwenden möchte.',
 
   'littleThings.amounts.title': 'Letzte Beträge',
   'littleThings.amounts.desc': 'Ihre häufig verwendeten Beträge werden zur Schnellauswahl angezeigt. Die Miete ist immer gleich? Ein Fingertipp.',
 
-  'littleThings.names.title': 'Sei, wer du sein willst',
+  'littleThings.names.title': 'Seien Sie, wer Sie sein wollen',
   'littleThings.names.desc': 'Unterschiedlicher Anzeigename pro Gruppe. "Mama" in der Familie, "Sarah" bei der Arbeit, "Partytier" mit Freunden.',
 
   'littleThings.archive.title': 'Alte Gruppen archivieren',
-  'littleThings.archive.desc': 'Reise vorbei? Archivieren Sie sie. Die Gruppe bleibt sicher, aber aus dem Weg. Jederzeit zurückholen.',
+  'littleThings.archive.desc': 'Reise vorbei? Archivieren Sie sie. Die Gruppe bleibt sicher, aber aus dem Weg. Holen Sie sie jederzeit zurück.',
 
   'littleThings.celebrations.title': 'Feierlichkeiten',
   'littleThings.celebrations.desc': "Wenn alle abgerechnet haben, gibt es Konfetti. Es sind die kleinen Dinge.",
@@ -119,7 +119,7 @@ export default {
   'whyFree.subtitle': "Weil das Teilen von Rechnungen kein Geld kosten sollte. Das ist einfach albern.",
 
   'whyFree.trackers.title': 'Null Tracker',
-  'whyFree.trackers.desc': 'Keine Analysen. Keine Tracking-Pixel. Kein "wir können mit Partnern teilen." Ihre Ausgabendaten bleiben Ihre.',
+  'whyFree.trackers.desc': 'Keine Analysen. Keine Tracking-Pixel. Kein "wir können mit Partnern teilen." Ihre Ausgabendaten gehören nur Ihnen.',
 
   'whyFree.ads.title': 'Keine Werbung',
   'whyFree.ads.desc': 'Das Teilen einer Rechnung über 47,23 $ ist schon nervig genug ohne Werbung für Essens-Abos.',
@@ -163,7 +163,7 @@ export default {
   'pricing.enterprise.amount': '???',
   'pricing.enterprise.period': '/???',
   'pricing.enterprise.description': 'Wenn Sie ein Meeting über ein Meeting abhalten müssen.',
-  'pricing.enterprise.feature1': 'Alles im vollen Dachs',
+  'pricing.enterprise.feature1': 'Alles aus dem Voller-Dachs-Plan',
   'pricing.enterprise.feature2': 'Ein schicker PDF-Bericht',
   'pricing.enterprise.feature3': 'Synergie-Optimierung',
   'pricing.enterprise.feature4': 'Blockchain irgendwas',

@@ -209,4 +209,28 @@ export default {
   'notFound.title': 'Page Not Found',
   'notFound.description': "Looks like this badger wandered off the trail. The page you're looking for doesn't exist.",
   'notFound.backHome': 'Back to Home',
+
+  // Accessibility
+  'a11y.skipToContent': 'Skip to main content',
+  'a11y.changeLanguage': 'Change language',
+  'a11y.searchLanguages': 'Search languages',
+  'a11y.mainNavigation': 'Main navigation',
+  'a11y.footerNavigation': 'Footer navigation',
+  'a11y.openInNewTab': 'Opens in new tab',
+  'a11y.externalLink': 'External link',
+  'a11y.currentPage': 'Current page',
+  'a11y.loading': 'Loading',
+  'a11y.homeLink': 'Go to home page',
+
+  // Coming Soon badge
+  'comingSoon.badge': 'Coming Soon',
+
+  // Policy page
+  'policy.loading': 'Loading policy...',
+  'policy.error.generic': 'Unable to load policy.',
+  'policy.error.config': 'Configuration error.',
+  'policy.error.status': 'Unable to load policy (error {status}).',
+  'policy.error.unavailable': 'Policy not available.',
+  'policy.error.empty': 'Policy content is empty.',
+  'policy.error.tryAgain': 'Please try again later or contact support.',
 } as const;

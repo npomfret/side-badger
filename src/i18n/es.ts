@@ -210,4 +210,28 @@ export default {
   'notFound.title': 'Página No Encontrada',
   'notFound.description': 'Parece que este tejón se salió del camino. La página que buscas no existe.',
   'notFound.backHome': 'Volver al Inicio',
+
+  // Accessibility
+  'a11y.skipToContent': 'Saltar al contenido principal',
+  'a11y.changeLanguage': 'Cambiar idioma',
+  'a11y.searchLanguages': 'Buscar idiomas',
+  'a11y.mainNavigation': 'Navegación principal',
+  'a11y.footerNavigation': 'Navegación del pie de página',
+  'a11y.openInNewTab': 'Se abre en una nueva pestaña',
+  'a11y.externalLink': 'Enlace externo',
+  'a11y.currentPage': 'Página actual',
+  'a11y.loading': 'Cargando',
+  'a11y.homeLink': 'Ir a la página de inicio',
+
+  // Coming Soon badge
+  'comingSoon.badge': 'Próximamente',
+
+  // Policy page
+  'policy.loading': 'Cargando política...',
+  'policy.error.generic': 'No se pudo cargar la política.',
+  'policy.error.config': 'Error de configuración.',
+  'policy.error.status': 'No se pudo cargar la política (error {status}).',
+  'policy.error.unavailable': 'Política no disponible.',
+  'policy.error.empty': 'El contenido de la política está vacío.',
+  'policy.error.tryAgain': 'Por favor, inténtelo de nuevo más tarde o contacte con soporte.',
 } as const;

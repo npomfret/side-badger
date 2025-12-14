@@ -73,25 +73,26 @@ const checkIcon = `<svg class="check" xmlns="http://www.w3.org/2000/svg" width="
     })} />
   </Fragment>
 
-  <section class="pricing-hero">
+  <section class="pricing-hero" aria-labelledby="pricing-title">
     <div class="container text-center">
       <div class="fade-up">
-        <h1>
-          <span class="strikethrough">{t('pricing.hero.price1', locale)}</span>
-          <span class="strikethrough">{t('pricing.hero.price2', locale)}</span>
-          <span class="strikethrough">{t('pricing.hero.price3', locale)}</span>
+        <h1 id="pricing-title">
+          <span class="strikethrough" aria-hidden="true">{t('pricing.hero.price1', locale)}</span>
+          <span class="strikethrough" aria-hidden="true">{t('pricing.hero.price2', locale)}</span>
+          <span class="strikethrough" aria-hidden="true">{t('pricing.hero.price3', locale)}</span>
+          <span class="sr-only">{t('pricing.hero.finalPrice', locale)}</span>
         </h1>
-        <h1 class="price-reveal gradient-text">{t('pricing.hero.finalPrice', locale)}</h1>
+        <p class="price-reveal gradient-text" aria-hidden="true">{t('pricing.hero.finalPrice', locale)}</p>
         <p class="price-subtitle">{t('pricing.hero.subtitle', locale)}</p>
       </div>
     </div>
   </section>
 
-  <section class="pricing-table">
+  <section class="pricing-table" aria-label="Pricing plans">
     <div class="container">
-      <div class="plans-grid">
+      <div class="plans-grid" role="list">
         <!-- The Only Plan -->
-        <div class="plan-card glass fade-up featured">
+        <article class="plan-card glass fade-up featured" role="listitem">
           <div class="plan-badge">{t('pricing.plan.badge', locale)}</div>
           <div class="plan-header">
             <h2>{t('pricing.plan.name', locale)}</h2>
@@ -116,10 +117,10 @@ const checkIcon = `<svg class="check" xmlns="http://www.w3.org/2000/svg" width="
           <a href={getAppUrl(locale)} class="btn btn-primary btn-lg btn-confetti btn-full">
             {t('pricing.plan.cta', locale)}
           </a>
-        </div>
+        </article>
 
         <!-- Fake Enterprise Plan -->
-        <div class="plan-card glass fade-up enterprise" data-delay="150">
+        <article class="plan-card glass fade-up enterprise" role="listitem" data-delay="150">
           <div class="plan-badge enterprise-badge">{t('pricing.enterprise.badge', locale)}</div>
           <div class="plan-header">
             <h2>{t('pricing.enterprise.name', locale)}</h2>
@@ -147,15 +148,15 @@ const checkIcon = `<svg class="check" xmlns="http://www.w3.org/2000/svg" width="
           <p class="enterprise-note text-muted text-sm">
             {t('pricing.enterprise.note', locale)}
           </p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- FAQ Section -->
-  <section class="faq-section">
+  <section class="faq-section" aria-labelledby="faq-title">
     <div class="container">
-      <h2 class="text-center fade-up">{t('pricing.faq.title', locale)}</h2>
+      <h2 id="faq-title" class="text-center fade-up">{t('pricing.faq.title', locale)}</h2>
 
       <div class="faq-grid">
         <div class="faq-item glass fade-up">

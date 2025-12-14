@@ -91,7 +91,7 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
     </script>
   </head>
   <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link">{t('a11y.skipToContent', locale)}</a>
     <ParticleStarfield />
     <GlowingConnections />
     <EasterEggs />
@@ -99,7 +99,7 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
     <div id="cursor-glow" aria-hidden="true"></div>
 
     <slot name="header">
-      <header class="site-header">
+      <header class="site-header" role="banner">
         <div class="christmas-lights" aria-hidden="true">
           <div class="wire"></div>
           <ul class="lights">
@@ -108,8 +108,8 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
             <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
           </ul>
         </div>
-        <nav class="header-nav container" style="position: relative;">
-          <a href={getLocalizedPath('/', locale)} class="logo">
+        <nav class="header-nav container" style="position: relative;" aria-label={t('a11y.mainNavigation', locale)}>
+          <a href={getLocalizedPath('/', locale)} class="logo" aria-label={t('a11y.homeLink', locale)}>
             <div class="logo-glow-wrapper">
               <div class="logo-glow-spacer"></div>
               <div class="logo-glow"></div>
@@ -117,12 +117,13 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
             </div>
           </a>
 
-          <ul class="nav-links flex items-center gap-lg">
+          <ul class="nav-links flex items-center gap-lg" role="list">
             <li>
               <LanguageSwitcher currentLocale={locale} currentPath={currentPath} />
             </li>
             <li><a href={getAppUrl(locale)} class="btn btn-primary btn-launch">
               {t('header.launchApp', locale)}
+              <span class="sr-only">{t('a11y.externalLink', locale)}</span>
             </a></li>
           </ul>
         </nav>
@@ -133,33 +134,38 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
       <slot />
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
       <div class="container">
-        <div class="footer-grid">
+        <nav class="footer-grid" aria-label={t('a11y.footerNavigation', locale)}>
           <div class="footer-brand">
-            <a href={getLocalizedPath('/', locale)} class="logo">
+            <a href={getLocalizedPath('/', locale)} class="logo" aria-label={t('a11y.homeLink', locale)}>
               <img src={smallLogoPath} alt={t('header.logoText', locale)} height="28" />
             </a>
             <p class="text-muted text-sm" set:html={t('footer.tagline', locale)} />
           </div>
 
           <div class="footer-links">
-            <h4>{t('footer.product', locale)}</h4>
-            <ul>
+            <h4 id="footer-product-heading">{t('footer.product', locale)}</h4>
+            <ul aria-labelledby="footer-product-heading" role="list">
               <li><a href={getLocalizedPath('/pricing', locale)}>{t('footer.pricing', locale)}</a></li>
-              <li><a href={getAppUrl(locale)}>{t('footer.launchApp', locale)}</a></li>
+              <li>
+                <a href={getAppUrl(locale)}>
+                  {t('footer.launchApp', locale)}
+                  <span class="sr-only">{t('a11y.externalLink', locale)}</span>
+                </a>
+              </li>
             </ul>
           </div>
 
           <div class="footer-links">
-            <h4>{t('footer.legal', locale)}</h4>
-            <ul>
+            <h4 id="footer-legal-heading">{t('footer.legal', locale)}</h4>
+            <ul aria-labelledby="footer-legal-heading" role="list">
               <li><a href={getLocalizedPath('/privacy', locale)}>{t('footer.privacy', locale)}</a></li>
               <li><a href={getLocalizedPath('/terms', locale)}>{t('footer.terms', locale)}</a></li>
               <li><a href={getLocalizedPath('/cookies', locale)}>{t('footer.cookies', locale)}</a></li>
             </ul>
           </div>
-        </div>
+        </nav>
 
         <div class="footer-bottom flex items-center justify-between">
           <p class="text-muted text-sm">&copy; {getFormattedDate(locale)} {t('footer.copyright', locale)}</p>

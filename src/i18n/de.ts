@@ -209,4 +209,28 @@ export default {
   'notFound.title': 'Seite nicht gefunden',
   'notFound.description': "Sieht so aus, als wäre dieser Dachs vom Weg abgekommen. Die von Ihnen gesuchte Seite existiert nicht.",
   'notFound.backHome': 'Zurück zur Startseite',
+
+  // Accessibility
+  'a11y.skipToContent': 'Zum Hauptinhalt springen',
+  'a11y.changeLanguage': 'Sprache ändern',
+  'a11y.searchLanguages': 'Sprachen suchen',
+  'a11y.mainNavigation': 'Hauptnavigation',
+  'a11y.footerNavigation': 'Fußzeilennavigation',
+  'a11y.openInNewTab': 'Öffnet in neuem Tab',
+  'a11y.externalLink': 'Externer Link',
+  'a11y.currentPage': 'Aktuelle Seite',
+  'a11y.loading': 'Wird geladen',
+  'a11y.homeLink': 'Zur Startseite',
+
+  // Coming Soon badge
+  'comingSoon.badge': 'Demnächst',
+
+  // Policy page
+  'policy.loading': 'Richtlinie wird geladen...',
+  'policy.error.generic': 'Richtlinie konnte nicht geladen werden.',
+  'policy.error.config': 'Konfigurationsfehler.',
+  'policy.error.status': 'Richtlinie konnte nicht geladen werden (Fehler {status}).',
+  'policy.error.unavailable': 'Richtlinie nicht verfügbar.',
+  'policy.error.empty': 'Richtlinieninhalt ist leer.',
+  'policy.error.tryAgain': 'Bitte versuchen Sie es später erneut oder kontaktieren Sie den Support.',
 } as const;

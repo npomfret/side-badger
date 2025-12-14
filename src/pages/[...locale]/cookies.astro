@@ -17,5 +17,6 @@ const locale = resolveLocale(localeParam);
   <PolicyPage
     title={t('policy.cookies.title', locale)}
     endpoint="/api/policies/cookie-policy/text"
+    locale={locale}
   />
 </BaseLayout>

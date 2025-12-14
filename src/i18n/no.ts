@@ -209,4 +209,28 @@ export default {
   'notFound.title': 'Side ikke funnet',
   'notFound.description': 'Det ser ut som om denne grevlingen vandret av stien. Siden du leter etter eksisterer ikke.',
   'notFound.backHome': 'Tilbake til forsiden',
+
+  // Accessibility
+  'a11y.skipToContent': 'Hopp til hovedinnhold',
+  'a11y.changeLanguage': 'Bytt språk',
+  'a11y.searchLanguages': 'Søk språk',
+  'a11y.mainNavigation': 'Hovednavigasjon',
+  'a11y.footerNavigation': 'Bunntekstnavigasjon',
+  'a11y.openInNewTab': 'Åpnes i ny fane',
+  'a11y.externalLink': 'Ekstern lenke',
+  'a11y.currentPage': 'Gjeldende side',
+  'a11y.loading': 'Laster',
+  'a11y.homeLink': 'Gå til forsiden',
+
+  // Coming Soon badge
+  'comingSoon.badge': 'Kommer snart',
+
+  // Policy page
+  'policy.loading': 'Laster retningslinjer...',
+  'policy.error.generic': 'Kunne ikke laste retningslinjer.',
+  'policy.error.config': 'Konfigurasjonsfeil.',
+  'policy.error.status': 'Kunne ikke laste retningslinjer (feil {status}).',
+  'policy.error.unavailable': 'Retningslinjer ikke tilgjengelig.',
+  'policy.error.empty': 'Retningslinjer er tomme.',
+  'policy.error.tryAgain': 'Prøv igjen senere eller kontakt support.',
 } as const;

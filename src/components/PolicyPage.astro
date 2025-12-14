@@ -1,22 +1,41 @@
 ---
-import { t } from '../i18n';
+import { t, type Locale } from '../i18n';
 
 interface Props {
   title: string;
   endpoint: string;
+  locale: Locale;
 }
 
-const { title, endpoint } = Astro.props;
+const { title, endpoint, locale } = Astro.props;
 const apiBaseUrl = t('api.baseUrl');
+
+// Translations for client-side error handling
+const translations = {
+  loading: t('policy.loading', locale),
+  errorGeneric: t('policy.error.generic', locale),
+  errorConfig: t('policy.error.config', locale),
+  errorUnavailable: t('policy.error.unavailable', locale),
+  errorEmpty: t('policy.error.empty', locale),
+  errorTryAgain: t('policy.error.tryAgain', locale),
+};
 ---
 
-<section class="legal-page">
+<section class="legal-page" aria-labelledby="policy-title">
   <div class="container">
     <div class="legal-content glass fade-up">
-      <div class="policy-content markdown-content" data-api-base={apiBaseUrl} data-endpoint={endpoint} aria-live="polite">
-        <div class="loading-state">
+      <h1 id="policy-title" class="sr-only">{title}</h1>
+      <div
+        class="policy-content markdown-content"
+        data-api-base={apiBaseUrl}
+        data-endpoint={endpoint}
+        data-translations={JSON.stringify(translations)}
+        aria-live="polite"
+        aria-busy="true"
+      >
+        <div class="loading-state" role="status">
           <div class="spinner" aria-hidden="true"></div>
-          <p>Loading {title.toLowerCase()}...</p>
+          <p>{translations.loading}</p>
         </div>
       </div>
     </div>
@@ -26,7 +45,17 @@ const apiBaseUrl = t('api.baseUrl');
 <script>
   import { marked } from 'marked';
 
-  function showError(container: Element, message = 'Unable to load policy.') {
+  interface Translations {
+    loading: string;
+    errorGeneric: string;
+    errorConfig: string;
+    errorUnavailable: string;
+    errorEmpty: string;
+    errorTryAgain: string;
+  }
+
+  function showError(container: Element, message: string, tryAgainText: string) {
+    container.setAttribute('aria-busy', 'false');
     container.innerHTML = `
       <div class="error-state" role="alert">
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -35,7 +64,7 @@ const apiBaseUrl = t('api.baseUrl');
           <line x1="12" y1="16" x2="12.01" y2="16"/>
         </svg>
         <p>${message}</p>
-        <p class="text-muted">Please try again later or contact support.</p>
+        <p class="text-muted">${tryAgainText}</p>
       </div>
     `;
   }
@@ -46,9 +75,24 @@ const apiBaseUrl = t('api.baseUrl');
     containers.forEach(async (container) => {
       const apiBase = container.getAttribute('data-api-base');
       const endpoint = container.getAttribute('data-endpoint');
+      const translationsStr = container.getAttribute('data-translations');
+
+      let translations: Translations;
+      try {
+        translations = JSON.parse(translationsStr || '{}');
+      } catch {
+        translations = {
+          loading: 'Loading...',
+          errorGeneric: 'Unable to load policy.',
+          errorConfig: 'Configuration error.',
+          errorUnavailable: 'Policy not available.',
+          errorEmpty: 'Policy content is empty.',
+          errorTryAgain: 'Please try again later or contact support.',
+        };
+      }
 
       if (!apiBase || !endpoint) {
-        showError(container, 'Configuration error.');
+        showError(container, translations.errorConfig, translations.errorTryAgain);
         return;
       }
 
@@ -56,26 +100,27 @@ const apiBaseUrl = t('api.baseUrl');
         const res = await fetch(`${apiBase}${endpoint}`);
 
         if (!res.ok) {
-          showError(container, `Unable to load policy (${res.status}).`);
+          showError(container, `${translations.errorGeneric} (${res.status})`, translations.errorTryAgain);
           return;
         }
 
         const contentType = res.headers.get('content-type') || '';
         if (contentType.includes('application/json')) {
-          showError(container, 'Policy not available.');
+          showError(container, translations.errorUnavailable, translations.errorTryAgain);
           return;
         }
 
         const markdown = await res.text();
 
         if (!markdown || markdown.trim().length === 0) {
-          showError(container, 'Policy content is empty.');
+          showError(container, translations.errorEmpty, translations.errorTryAgain);
           return;
         }
 
-        container.innerHTML = marked.parse(markdown);
+        container.setAttribute('aria-busy', 'false');
+        container.innerHTML = marked.parse(markdown) as string;
       } catch (err) {
-        showError(container, 'Unable to load policy.');
+        showError(container, translations.errorGeneric, translations.errorTryAgain);
       }
     });
   }

@@ -30,14 +30,14 @@ const { locale } = Astro.props;
     </script>
   </Fragment>
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" aria-labelledby="hero-title">
     <div class="container">
       <div class="hero-stamp">
         {t('hero.badge', locale)}<a href="#disclaimer" class="disclaimer-link"><sup>*</sup></a>
       </div>
 
       <div class="hero-content fade-up">
-        <h1>
+        <h1 id="hero-title">
           {t('hero.title', locale)}
           <span class="gradient-text">{t('hero.titleHighlight', locale)}</span>
         </h1>
@@ -67,10 +67,10 @@ const { locale } = Astro.props;
   </section>
 
   <!-- Features Section -->
-  <section class="features">
+  <section class="features" aria-labelledby="features-title">
     <div class="container">
       <div class="section-header text-center fade-up">
-        <h2>{t('features.title', locale)}</h2>
+        <h2 id="features-title">{t('features.title', locale)}</h2>
         <p>{t('features.subtitle', locale)}</p>
       </div>
 
@@ -226,10 +226,10 @@ const { locale } = Astro.props;
   </section>
 
   <!-- Little Things Section -->
-  <section class="little-things">
+  <section class="little-things" aria-labelledby="little-things-title">
     <div class="container">
       <div class="section-header text-center fade-up">
-        <h2>{t('littleThings.title', locale)}</h2>
+        <h2 id="little-things-title">{t('littleThings.title', locale)}</h2>
         <p>{t('littleThings.subtitle', locale)}</p>
       </div>
 
@@ -312,17 +312,17 @@ const { locale } = Astro.props;
   </section>
 
   <!-- Coming Soon Section -->
-  <section class="coming-soon">
+  <section class="coming-soon" aria-labelledby="coming-soon-title">
     <div class="container">
       <div class="section-header text-center fade-up">
-        <h2>{t('comingSoon.title', locale)}</h2>
+        <h2 id="coming-soon-title">{t('comingSoon.title', locale)}</h2>
         <p>{t('comingSoon.subtitle', locale)}</p>
       </div>
 
       <div class="bento-grid">
         <!-- Currency Conversions -->
         <div class="feature-card glass fade-up coming-soon-card">
-          <div class="coming-soon-badge">Coming Soon</div>
+          <div class="coming-soon-badge">{t('comingSoon.badge', locale)}</div>
           <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"/>
@@ -335,7 +335,7 @@ const { locale } = Astro.props;
 
         <!-- Receipt Uploading -->
         <div class="feature-card glass fade-up coming-soon-card" data-delay="100">
-          <div class="coming-soon-badge">Coming Soon</div>
+          <div class="coming-soon-badge">{t('comingSoon.badge', locale)}</div>
           <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
@@ -349,7 +349,7 @@ const { locale } = Astro.props;
 
         <!-- AI Receipt Scanning -->
         <div class="feature-card glass fade-up coming-soon-card" data-delay="200">
-          <div class="coming-soon-badge">Coming Soon</div>
+          <div class="coming-soon-badge">{t('comingSoon.badge', locale)}</div>
           <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
@@ -361,7 +361,7 @@ const { locale } = Astro.props;
 
         <!-- Export Data -->
         <div class="feature-card glass fade-up coming-soon-card" data-delay="300">
-          <div class="coming-soon-badge">Coming Soon</div>
+          <div class="coming-soon-badge">{t('comingSoon.badge', locale)}</div>
           <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
@@ -375,7 +375,7 @@ const { locale } = Astro.props;
 
         <!-- Native Mobile Apps -->
         <div class="feature-card glass fade-up coming-soon-card" data-delay="400">
-          <div class="coming-soon-badge">Coming Soon</div>
+          <div class="coming-soon-badge">{t('comingSoon.badge', locale)}</div>
           <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect width="14" height="20" x="5" y="2" rx="2" ry="2"/>
@@ -390,10 +390,10 @@ const { locale } = Astro.props;
   </section>
 
   <!-- Why Free Section -->
-  <section class="why-free">
+  <section class="why-free" aria-labelledby="why-free-title">
     <div class="container">
       <div class="section-header text-center fade-up">
-        <h2>{t('whyFree.title', locale)}</h2>
+        <h2 id="why-free-title">{t('whyFree.title', locale)}</h2>
         <p>{t('whyFree.subtitle', locale)}</p>
       </div>
 
@@ -436,10 +436,10 @@ const { locale } = Astro.props;
   </section>
 
   <!-- CTA Section -->
-  <section class="cta-section">
+  <section class="cta-section" aria-labelledby="cta-title">
     <div class="container">
       <div class="cta-card glass fade-up">
-        <h2>{t('cta.title', locale)}</h2>
+        <h2 id="cta-title">{t('cta.title', locale)}</h2>
         <p>{t('cta.subtitle', locale)}</p>
         <a href={getAppUrl(locale)} class="btn btn-primary btn-lg btn-confetti">
           {t('cta.button', locale)}

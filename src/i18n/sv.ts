@@ -209,4 +209,28 @@ export default {
   'notFound.title': 'Sidan hittades inte',
   'notFound.description': 'Det ser ut som att den här grävlingen vandrade utanför stigen. Sidan du letar efter finns inte.',
   'notFound.backHome': 'Tillbaka till startsidan',
+
+  // Accessibility
+  'a11y.skipToContent': 'Hoppa till huvudinnehåll',
+  'a11y.changeLanguage': 'Byt språk',
+  'a11y.searchLanguages': 'Sök språk',
+  'a11y.mainNavigation': 'Huvudnavigering',
+  'a11y.footerNavigation': 'Sidfotsnavigering',
+  'a11y.openInNewTab': 'Öppnas i ny flik',
+  'a11y.externalLink': 'Extern länk',
+  'a11y.currentPage': 'Nuvarande sida',
+  'a11y.loading': 'Laddar',
+  'a11y.homeLink': 'Gå till startsidan',
+
+  // Coming Soon badge
+  'comingSoon.badge': 'Kommer snart',
+
+  // Policy page
+  'policy.loading': 'Laddar policy...',
+  'policy.error.generic': 'Kunde inte ladda policy.',
+  'policy.error.config': 'Konfigurationsfel.',
+  'policy.error.status': 'Kunde inte ladda policy (fel {status}).',
+  'policy.error.unavailable': 'Policy inte tillgänglig.',
+  'policy.error.empty': 'Policyinnehåll är tomt.',
+  'policy.error.tryAgain': 'Försök igen senare eller kontakta support.',
 } as const;

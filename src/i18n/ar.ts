@@ -209,4 +209,28 @@ export default {
   'notFound.title': 'الصفحة غير موجودة',
   'notFound.description': 'يبدو أن هذا الغرير خرج عن المسار. الصفحة التي تبحث عنها غير موجودة.',
   'notFound.backHome': 'العودة للرئيسية',
+
+  // Accessibility
+  'a11y.skipToContent': 'انتقل إلى المحتوى الرئيسي',
+  'a11y.changeLanguage': 'تغيير اللغة',
+  'a11y.searchLanguages': 'البحث عن اللغات',
+  'a11y.mainNavigation': 'التنقل الرئيسي',
+  'a11y.footerNavigation': 'تنقل التذييل',
+  'a11y.openInNewTab': 'يفتح في علامة تبويب جديدة',
+  'a11y.externalLink': 'رابط خارجي',
+  'a11y.currentPage': 'الصفحة الحالية',
+  'a11y.loading': 'جاري التحميل',
+  'a11y.homeLink': 'انتقل إلى الصفحة الرئيسية',
+
+  // Coming Soon badge
+  'comingSoon.badge': 'قريباً',
+
+  // Policy page
+  'policy.loading': 'جاري تحميل السياسة...',
+  'policy.error.generic': 'تعذر تحميل السياسة.',
+  'policy.error.config': 'خطأ في الإعداد.',
+  'policy.error.status': 'تعذر تحميل السياسة (خطأ {status}).',
+  'policy.error.unavailable': 'السياسة غير متاحة.',
+  'policy.error.empty': 'محتوى السياسة فارغ.',
+  'policy.error.tryAgain': 'يرجى المحاولة مرة أخرى لاحقاً أو الاتصال بالدعم.',
 } as const;

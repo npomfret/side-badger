@@ -209,4 +209,28 @@ export default {
   'notFound.title': '페이지를 찾을 수 없음',
   'notFound.description': "이 오소리가 길을 잃은 것 같습니다. 찾고 있는 페이지가 존재하지 않습니다.",
   'notFound.backHome': '홈으로 돌아가기',
+
+  // Accessibility
+  'a11y.skipToContent': '메인 콘텐츠로 건너뛰기',
+  'a11y.changeLanguage': '언어 변경',
+  'a11y.searchLanguages': '언어 검색',
+  'a11y.mainNavigation': '메인 내비게이션',
+  'a11y.footerNavigation': '푸터 내비게이션',
+  'a11y.openInNewTab': '새 탭에서 열림',
+  'a11y.externalLink': '외부 링크',
+  'a11y.currentPage': '현재 페이지',
+  'a11y.loading': '로딩 중',
+  'a11y.homeLink': '홈페이지로 이동',
+
+  // Coming Soon badge
+  'comingSoon.badge': '곧 출시',
+
+  // Policy page
+  'policy.loading': '정책을 불러오는 중...',
+  'policy.error.generic': '정책을 불러올 수 없습니다.',
+  'policy.error.config': '구성 오류.',
+  'policy.error.status': '정책을 불러올 수 없습니다 (오류 {status}).',
+  'policy.error.unavailable': '정책을 사용할 수 없습니다.',
+  'policy.error.empty': '정책 내용이 비어 있습니다.',
+  'policy.error.tryAgain': '나중에 다시 시도하거나 지원팀에 문의하세요.',
 } as const;

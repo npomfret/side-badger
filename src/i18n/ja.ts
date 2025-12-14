@@ -209,4 +209,28 @@ export default {
   'notFound.title': 'ページが見つかりません',
   'notFound.description': 'このアナグマは道に迷ったようです。お探しのページは存在しません。',
   'notFound.backHome': 'ホームに戻る',
+
+  // Accessibility
+  'a11y.skipToContent': 'メインコンテンツへスキップ',
+  'a11y.changeLanguage': '言語を変更',
+  'a11y.searchLanguages': '言語を検索',
+  'a11y.mainNavigation': 'メインナビゲーション',
+  'a11y.footerNavigation': 'フッターナビゲーション',
+  'a11y.openInNewTab': '新しいタブで開く',
+  'a11y.externalLink': '外部リンク',
+  'a11y.currentPage': '現在のページ',
+  'a11y.loading': '読み込み中',
+  'a11y.homeLink': 'ホームページへ移動',
+
+  // Coming Soon badge
+  'comingSoon.badge': '近日公開',
+
+  // Policy page
+  'policy.loading': 'ポリシーを読み込んでいます...',
+  'policy.error.generic': 'ポリシーを読み込めませんでした。',
+  'policy.error.config': '設定エラー。',
+  'policy.error.status': 'ポリシーを読み込めませんでした（エラー {status}）。',
+  'policy.error.unavailable': 'ポリシーは利用できません。',
+  'policy.error.empty': 'ポリシーの内容が空です。',
+  'policy.error.tryAgain': '後でもう一度お試しいただくか、サポートにお問い合わせください。',
 } as const;

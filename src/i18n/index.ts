@@ -26,17 +26,19 @@ import lv from './lv';
 import no from './no';
 import ph from './ph';
 import nlBE from './nl-BE';
+import ga from './ga';
+import cy from './cy';
 
-export type Locale = 'en' | 'uk' | 'es' | 'ja' | 'ar' | 'de' | 'ko' | 'sv' | 'it' | 'lv' | 'no' | 'ph' | 'nl-BE';
+export type Locale = 'en' | 'uk' | 'es' | 'ja' | 'ar' | 'de' | 'ko' | 'sv' | 'it' | 'lv' | 'no' | 'ph' | 'nl-BE' | 'ga' | 'cy';
 export type TranslationKey = keyof typeof en;
 
 // Aliases that point to base locales (English variants -> en, Netherlands -> nl-BE)
 export type LocaleAlias = 'en-us' | 'en-au' | 'en-ca' | 'en-gb' | 'en-ie' | 'en-sc' | 'nl-NL';
 export type LocaleOrAlias = Locale | LocaleAlias;
 // Locales shown in dropdown (excludes base 'en' since aliases cover it)
-export type DropdownLocale = 'uk' | 'es' | 'ja' | 'ar' | 'de' | 'ko' | 'sv' | 'it' | 'lv' | 'no' | 'ph' | 'nl-BE' | LocaleAlias;
+export type DropdownLocale = 'uk' | 'es' | 'ja' | 'ar' | 'de' | 'ko' | 'sv' | 'it' | 'lv' | 'no' | 'ph' | 'nl-BE' | 'ga' | 'cy' | LocaleAlias;
 
-const translations: Record<Locale, typeof en> = { en, uk, es, ja, ar, de, ko, sv, it, lv, no, ph, 'nl-BE': nlBE };
+const translations: Record<Locale, typeof en> = { en, uk, es, ja, ar, de, ko, sv, it, lv, no, ph, 'nl-BE': nlBE, ga, cy };
 
 // Map aliases to their actual locale
 export const localeAliasMap: Record<LocaleAlias, Locale> = {
@@ -96,10 +98,10 @@ export function getLocalizedPath(pathname: string, locale: Locale): string {
   return `/${locale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
 }
 
-export const locales: Locale[] = ['en', 'uk', 'es', 'ja', 'ar', 'de', 'ko', 'sv', 'it', 'lv', 'no', 'ph', 'nl-BE'];
+export const locales: Locale[] = ['en', 'uk', 'es', 'ja', 'ar', 'de', 'ko', 'sv', 'it', 'lv', 'no', 'ph', 'nl-BE', 'ga', 'cy'];
 export const localeAliases: LocaleAlias[] = ['en-us', 'en-au', 'en-ca', 'en-gb', 'en-ie', 'en-sc', 'nl-NL'];
-// Alphabetically by English name (Arabic, Dutch variants, English variants, German, Italian, etc.)
-export const allLocales: DropdownLocale[] = ['ar', 'nl-BE', 'nl-NL', 'en-us', 'en-au', 'en-ca', 'en-ie', 'en-sc', 'en-gb', 'de', 'it', 'ja', 'ko', 'lv', 'no', 'es', 'sv', 'ph', 'uk'];
+// Alphabetically by English name (Arabic, Dutch variants, English variants, German, Irish, Italian, etc.)
+export const allLocales: DropdownLocale[] = ['ar', 'nl-BE', 'nl-NL', 'en-us', 'en-au', 'en-ca', 'en-ie', 'en-sc', 'en-gb', 'de', 'ga', 'it', 'ja', 'ko', 'lv', 'no', 'es', 'sv', 'ph', 'uk', 'cy'];
 
 export const localeNames: Record<DropdownLocale, string> = {
   uk: 'Українська',
@@ -113,6 +115,8 @@ export const localeNames: Record<DropdownLocale, string> = {
   lv: 'Latviešu',
   no: 'Norsk',
   ph: 'Tagalog',
+  ga: 'Gaeilge',
+  cy: 'Cymraeg',
   'nl-BE': 'Nederlands (België)',
   'nl-NL': 'Nederlands',
   'en-us': 'English (American)',
@@ -135,6 +139,8 @@ export const localeFlags: Record<DropdownLocale, string> = {
   lv: '🇱🇻',
   no: '🇳🇴',
   ph: '🇵🇭',
+  ga: '🇮🇪',
+  cy: '🏴󠁧󠁢󠁷󠁬󠁳󠁿',
   'nl-BE': '🇧🇪',
   'nl-NL': '🇳🇱',
   'en-us': '🇺🇸',
@@ -174,6 +180,8 @@ export function getFormattedDate(locale: Locale): string {
     lv: 'lv-LV',
     no: 'nb-NO',
     ph: 'fil-PH',
+    ga: 'ga-IE',
+    cy: 'cy-GB',
     'nl-BE': 'nl-BE',
     en: 'en-US',
   }[locale];

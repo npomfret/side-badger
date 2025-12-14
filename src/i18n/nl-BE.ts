@@ -209,4 +209,28 @@ export default {
   'notFound.title': 'Pagina Niet Gevonden',
   'notFound.description': 'Het lijkt erop dat deze das van het pad is afgedwaald. De pagina die je zoekt bestaat niet.',
   'notFound.backHome': 'Terug naar Home',
+
+  // Accessibility
+  'a11y.skipToContent': 'Ga naar hoofdinhoud',
+  'a11y.changeLanguage': 'Verander taal',
+  'a11y.searchLanguages': 'Zoek talen',
+  'a11y.mainNavigation': 'Hoofdnavigatie',
+  'a11y.footerNavigation': 'Voettekstnavigatie',
+  'a11y.openInNewTab': 'Opent in nieuw tabblad',
+  'a11y.externalLink': 'Externe link',
+  'a11y.currentPage': 'Huidige pagina',
+  'a11y.loading': 'Laden',
+  'a11y.homeLink': 'Ga naar startpagina',
+
+  // Coming Soon badge
+  'comingSoon.badge': 'Binnenkort',
+
+  // Policy page
+  'policy.loading': 'Beleid laden...',
+  'policy.error.generic': 'Kan beleid niet laden.',
+  'policy.error.config': 'Configuratiefout.',
+  'policy.error.status': 'Kan beleid niet laden (fout {status}).',
+  'policy.error.unavailable': 'Beleid niet beschikbaar.',
+  'policy.error.empty': 'Beleidsinhoud is leeg.',
+  'policy.error.tryAgain': 'Probeer het later opnieuw of neem contact op met support.',
 } as const;

@@ -209,4 +209,28 @@ export default {
   'notFound.title': 'Hindi Nakita ang Pahina',
   'notFound.description': 'Mukhang naligaw ang badger na ito. Hindi umiiral ang pahinang hinahanap mo.',
   'notFound.backHome': 'Bumalik sa Home',
+
+  // Accessibility
+  'a11y.skipToContent': 'Lumipat sa pangunahing nilalaman',
+  'a11y.changeLanguage': 'Palitan ang wika',
+  'a11y.searchLanguages': 'Maghanap ng wika',
+  'a11y.mainNavigation': 'Pangunahing nabigasyon',
+  'a11y.footerNavigation': 'Nabigasyon sa footer',
+  'a11y.openInNewTab': 'Bubukas sa bagong tab',
+  'a11y.externalLink': 'Panlabas na link',
+  'a11y.currentPage': 'Kasalukuyang pahina',
+  'a11y.loading': 'Naglo-load',
+  'a11y.homeLink': 'Pumunta sa home page',
+
+  // Coming Soon badge
+  'comingSoon.badge': 'Paparating na',
+
+  // Policy page
+  'policy.loading': 'Naglo-load ng patakaran...',
+  'policy.error.generic': 'Hindi ma-load ang patakaran.',
+  'policy.error.config': 'Error sa pagsasaayos.',
+  'policy.error.status': 'Hindi ma-load ang patakaran (error {status}).',
+  'policy.error.unavailable': 'Hindi available ang patakaran.',
+  'policy.error.empty': 'Walang laman ang patakaran.',
+  'policy.error.tryAgain': 'Subukan muli mamaya o makipag-ugnayan sa suporta.',
 } as const;

@@ -209,4 +209,28 @@ export default {
   'notFound.title': 'Lapa nav atrasta',
   'notFound.description': 'Izskatās, ka šis āpsis aizklīda no takas. Lapa, ko meklējat, nepastāv.',
   'notFound.backHome': 'Atgriezties sākumlapā',
+
+  // Accessibility
+  'a11y.skipToContent': 'Pāriet uz galveno saturu',
+  'a11y.changeLanguage': 'Mainīt valodu',
+  'a11y.searchLanguages': 'Meklēt valodas',
+  'a11y.mainNavigation': 'Galvenā navigācija',
+  'a11y.footerNavigation': 'Kājenes navigācija',
+  'a11y.openInNewTab': 'Atveras jaunā cilnē',
+  'a11y.externalLink': 'Ārējā saite',
+  'a11y.currentPage': 'Pašreizējā lapa',
+  'a11y.loading': 'Ielādē',
+  'a11y.homeLink': 'Doties uz sākumlapu',
+
+  // Coming Soon badge
+  'comingSoon.badge': 'Drīzumā',
+
+  // Policy page
+  'policy.loading': 'Ielādē politiku...',
+  'policy.error.generic': 'Nevar ielādēt politiku.',
+  'policy.error.config': 'Konfigurācijas kļūda.',
+  'policy.error.status': 'Nevar ielādēt politiku (kļūda {status}).',
+  'policy.error.unavailable': 'Politika nav pieejama.',
+  'policy.error.empty': 'Politikas saturs ir tukšs.',
+  'policy.error.tryAgain': 'Lūdzu, mēģiniet vēlāk vai sazinieties ar atbalstu.',
 } as const;

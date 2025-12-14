@@ -17,5 +17,6 @@ const locale = resolveLocale(localeParam);
   <PolicyPage
     title={t('policy.terms.title', locale)}
     endpoint="/api/policies/terms-of-service/text"
+    locale={locale}
   />
 </BaseLayout>

@@ -7,6 +7,8 @@ interface Props {
 }
 
 const { currentLocale, currentPath } = Astro.props;
+const changeLanguageLabel = t('a11y.changeLanguage', currentLocale);
+const searchLanguagesLabel = t('a11y.searchLanguages', currentLocale);
 
 // Extract the actual locale/alias from the URL path to display the correct variant
 function getDisplayLocaleFromPath(path: string): DropdownLocale {
@@ -63,7 +65,7 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
 
 <div class="language-switcher">
   <div class="language-backdrop"></div>
-  <button class="language-switcher-btn" aria-label="Change language" aria-expanded="false">
+  <button class="language-switcher-btn" aria-label={changeLanguageLabel} aria-expanded="false" aria-haspopup="listbox">
     <span class="current-flag">{localeFlags[displayLocale]}</span>
     <span class="current-lang">
       {currentParsed.main}
@@ -84,18 +86,21 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
         class="language-search"
         placeholder={searchPlaceholder}
         autocomplete="off"
-        aria-label="Search languages"
+        aria-label={searchLanguagesLabel}
       />
     </div>
-    <div class="language-options">
+    <div class="language-options" role="listbox" aria-label={changeLanguageLabel}>
       {localeData.map((locale) => (
         <a
           href={locale.href}
           class:list={['language-option', { active: locale.active }]}
           data-locale={locale.code}
           data-name={locale.name.toLowerCase()}
+          role="option"
+          aria-selected={locale.active ? 'true' : 'false'}
+          lang={locale.code.split('-')[0]}
         >
-          <span class="option-flag">{locale.flag}</span>
+          <span class="option-flag" aria-hidden="true">{locale.flag}</span>
           <span class="option-name">
             {locale.mainName}
             {locale.subtitle && <span class="option-subtitle">{locale.subtitle}</span>}

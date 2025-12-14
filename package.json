@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "test": "vitest",
     "docker:start": "docker compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.watch.yml up --build -d && docker compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.watch.yml watch",
     "docker:stop": "docker compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.watch.yml down",
     "docker:restart": "npm run docker:stop && npm run docker:start",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@types/canvas-confetti": "^1.6.4",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "vitest": "^4.0.15"
   }
 }

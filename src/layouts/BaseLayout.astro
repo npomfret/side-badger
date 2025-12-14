@@ -25,6 +25,7 @@ const logoLocales = ['en', 'ja', 'ko', 'ar', 'uk'];
 const logoLocale = logoLocales.includes(locale) ? locale : 'en';
 const smallLogoPath = `/images/logo-transparent-small.${logoLocale}.png`;
 const largeLogoPath = `/images/logo-large-transparent.${logoLocale}.png`;
+const socialImagePath = `/images/logo-large-transparent-1200x628.${logoLocale}.png`;
 
 const currentPath = Astro.url.pathname;
 const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
@@ -61,13 +62,13 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
       ar: 'ar_AE'
     }[locale] || 'en_US'} />
 
-    <meta property="og:image" content="/images/logo-large-transparent-1200x628.png" />
+    <meta property="og:image" content={socialImagePath} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="/images/logo-large-transparent-1200x628.png" />
+    <meta name="twitter:image" content={socialImagePath} />
 
     <link rel="icon" type="image/png" href="/images/logo-face-only-large.png" />
     <title>{title}</title>

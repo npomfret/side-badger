@@ -1,17 +1,13 @@
 /**
- * ADDING A NEW LANGUAGE CHECKLIST:
+ * ADDING A NEW LANGUAGE:
  * 1. Create translation file: src/i18n/{locale}.ts (copy from en.ts)
  * 2. Import it below
- * 3. Add to Locale type
- * 4. Add to translations record
- * 5. Add to locales array
- * 6. Add to DropdownLocale type (if showing in dropdown)
- * 7. Add to allLocales array (for dropdown ordering)
- * 8. Add to localeNames and localeFlags records
- * 9. Add to getFormattedDate locale map
+ * 3. Add entry to localeConfig
  *
- * That's it! Pages automatically use getLocalePaths() and
- * astro.config.mjs imports locales from here.
+ * That's it! Everything else is derived automatically.
+ *
+ * ADDING A NEW ALIAS (e.g., regional variant):
+ * 1. Add entry to aliasConfig pointing to base locale
  */
 import en from './en';
 import uk from './uk';
@@ -30,27 +26,270 @@ import ga from './ga';
 import cy from './cy';
 import eu from './eu';
 
-export type Locale = 'en' | 'uk' | 'es' | 'ja' | 'ar' | 'de' | 'ko' | 'sv' | 'it' | 'lv' | 'no' | 'ph' | 'nl-BE' | 'ga' | 'cy' | 'eu';
+// =============================================================================
+// CENTRAL CONFIGURATION - Single source of truth for all locales
+// =============================================================================
+
+/**
+ * Main locale configuration. Each locale needs:
+ * - name: Display name in the locale's own language
+ * - flag: Emoji flag for the dropdown
+ * - intlCode: BCP 47 code for Intl.DateTimeFormat
+ * - translations: The imported translation object
+ * - inDropdown: Whether to show in language picker (false for 'en' since aliases cover it)
+ * - dropdownOrder: Sort order in dropdown (alphabetical by English name)
+ */
+const localeConfig = {
+  en: {
+    name: 'English',
+    flag: '🇺🇸',
+    intlCode: 'en-US',
+    translations: en,
+    inDropdown: false,
+    dropdownOrder: 999, // Not shown
+  },
+  ar: {
+    name: 'العربية',
+    flag: '🇸🇦',
+    intlCode: 'ar-EG',
+    translations: ar,
+    inDropdown: true,
+    dropdownOrder: 10, // Arabic
+  },
+  eu: {
+    name: 'Euskara',
+    flag: '🟩',
+    intlCode: 'eu-ES',
+    translations: eu,
+    inDropdown: true,
+    dropdownOrder: 20, // Basque
+  },
+  cy: {
+    name: 'Cymraeg',
+    flag: '🏴󠁧󠁢󠁷󠁬󠁳󠁿',
+    intlCode: 'cy-GB',
+    translations: cy,
+    inDropdown: true,
+    dropdownOrder: 195, // Welsh
+  },
+  'nl-BE': {
+    name: 'Nederlands (België)',
+    flag: '🇧🇪',
+    intlCode: 'nl-BE',
+    translations: nlBE,
+    inDropdown: true,
+    dropdownOrder: 30, // Dutch (Belgium)
+  },
+  de: {
+    name: 'Deutsch',
+    flag: '🇩🇪',
+    intlCode: 'de-DE',
+    translations: de,
+    inDropdown: true,
+    dropdownOrder: 70, // German
+  },
+  ga: {
+    name: 'Gaeilge',
+    flag: '🇮🇪',
+    intlCode: 'ga-IE',
+    translations: ga,
+    inDropdown: true,
+    dropdownOrder: 80, // Irish
+  },
+  it: {
+    name: 'Italiano',
+    flag: '🇮🇹',
+    intlCode: 'it-IT',
+    translations: it,
+    inDropdown: true,
+    dropdownOrder: 90, // Italian
+  },
+  ja: {
+    name: '日本語',
+    flag: '🇯🇵',
+    intlCode: 'ja-JP',
+    translations: ja,
+    inDropdown: true,
+    dropdownOrder: 100, // Japanese
+  },
+  ko: {
+    name: '한국어',
+    flag: '🇰🇷',
+    intlCode: 'ko-KR',
+    translations: ko,
+    inDropdown: true,
+    dropdownOrder: 110, // Korean
+  },
+  lv: {
+    name: 'Latviešu',
+    flag: '🇱🇻',
+    intlCode: 'lv-LV',
+    translations: lv,
+    inDropdown: true,
+    dropdownOrder: 120, // Latvian
+  },
+  no: {
+    name: 'Norsk',
+    flag: '🇳🇴',
+    intlCode: 'nb-NO',
+    translations: no,
+    inDropdown: true,
+    dropdownOrder: 130, // Norwegian
+  },
+  es: {
+    name: 'Español',
+    flag: '🇪🇸',
+    intlCode: 'es-ES',
+    translations: es,
+    inDropdown: true,
+    dropdownOrder: 160, // Spanish
+  },
+  sv: {
+    name: 'Svenska',
+    flag: '🇸🇪',
+    intlCode: 'sv-SE',
+    translations: sv,
+    inDropdown: true,
+    dropdownOrder: 170, // Swedish
+  },
+  ph: {
+    name: 'Tagalog',
+    flag: '🇵🇭',
+    intlCode: 'fil-PH',
+    translations: ph,
+    inDropdown: true,
+    dropdownOrder: 180, // Tagalog
+  },
+  uk: {
+    name: 'Українська',
+    flag: '🇺🇦',
+    intlCode: 'uk-UA',
+    translations: uk,
+    inDropdown: true,
+    dropdownOrder: 190, // Ukrainian
+  },
+} as const;
+
+/**
+ * Alias configuration for regional variants that share translations.
+ * Each alias points to a base locale but has its own name/flag in the dropdown.
+ */
+const aliasConfig = {
+  'nl-NL': {
+    name: 'Nederlands',
+    flag: '🇳🇱',
+    target: 'nl-BE' as const,
+    dropdownOrder: 35, // Dutch (Netherlands) - after Dutch (Belgium)
+  },
+  'en-us': {
+    name: 'English (American)',
+    flag: '🇺🇸',
+    target: 'en' as const,
+    dropdownOrder: 40, // English variants start here
+  },
+  'en-au': {
+    name: 'English (Australian)',
+    flag: '🇦🇺',
+    target: 'en' as const,
+    dropdownOrder: 41,
+  },
+  'en-ca': {
+    name: 'English (Canadian)',
+    flag: '🇨🇦',
+    target: 'en' as const,
+    dropdownOrder: 42,
+  },
+  'en-ie': {
+    name: 'English (Irish)',
+    flag: '🇮🇪',
+    target: 'en' as const,
+    dropdownOrder: 43,
+  },
+  'en-sc': {
+    name: 'English (Scotch)',
+    flag: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+    target: 'en' as const,
+    dropdownOrder: 44,
+  },
+  'en-gb': {
+    name: 'English (actual)',
+    flag: '🇬🇧',
+    target: 'en' as const,
+    dropdownOrder: 45,
+  },
+} as const;
+
+// =============================================================================
+// DERIVED TYPES - Automatically generated from config
+// =============================================================================
+
+export type Locale = keyof typeof localeConfig;
+export type LocaleAlias = keyof typeof aliasConfig;
+export type LocaleOrAlias = Locale | LocaleAlias;
+export type DropdownLocale =
+  | { [K in Locale]: typeof localeConfig[K]['inDropdown'] extends true ? K : never }[Locale]
+  | LocaleAlias;
+
 export type TranslationKey = keyof typeof en;
 
-// Aliases that point to base locales (English variants -> en, Netherlands -> nl-BE)
-export type LocaleAlias = 'en-us' | 'en-au' | 'en-ca' | 'en-gb' | 'en-ie' | 'en-sc' | 'nl-NL';
-export type LocaleOrAlias = Locale | LocaleAlias;
-// Locales shown in dropdown (excludes base 'en' since aliases cover it)
-export type DropdownLocale = 'uk' | 'es' | 'ja' | 'ar' | 'de' | 'ko' | 'sv' | 'it' | 'lv' | 'no' | 'ph' | 'nl-BE' | 'ga' | 'cy' | 'eu' | LocaleAlias;
+// =============================================================================
+// DERIVED DATA - Automatically generated from config
+// =============================================================================
 
-const translations: Record<Locale, typeof en> = { en, uk, es, ja, ar, de, ko, sv, it, lv, no, ph, 'nl-BE': nlBE, ga, cy, eu };
+// All core locales
+export const locales = Object.keys(localeConfig) as Locale[];
 
-// Map aliases to their actual locale
-export const localeAliasMap: Record<LocaleAlias, Locale> = {
-  'en-us': 'en',
-  'en-au': 'en',
-  'en-ca': 'en',
-  'en-gb': 'en',
-  'en-ie': 'en',
-  'en-sc': 'en',
-  'nl-NL': 'nl-BE',
-};
+// All aliases
+export const localeAliases = Object.keys(aliasConfig) as LocaleAlias[];
+
+// Translations record
+const translations: Record<Locale, typeof en> = Object.fromEntries(
+  Object.entries(localeConfig).map(([key, config]) => [key, config.translations])
+) as Record<Locale, typeof en>;
+
+// Map aliases to their target locale
+export const localeAliasMap: Record<LocaleAlias, Locale> = Object.fromEntries(
+  Object.entries(aliasConfig).map(([key, config]) => [key, config.target])
+) as Record<LocaleAlias, Locale>;
+
+// All locales shown in dropdown, sorted by dropdownOrder
+export const allLocales: DropdownLocale[] = [
+  ...Object.entries(localeConfig)
+    .filter(([, config]) => config.inDropdown)
+    .map(([key, config]) => ({ key: key as Locale, order: config.dropdownOrder })),
+  ...Object.entries(aliasConfig)
+    .map(([key, config]) => ({ key: key as LocaleAlias, order: config.dropdownOrder })),
+]
+  .sort((a, b) => a.order - b.order)
+  .map(item => item.key) as DropdownLocale[];
+
+// Display names for dropdown
+export const localeNames: Record<DropdownLocale, string> = {
+  ...Object.fromEntries(
+    Object.entries(localeConfig)
+      .filter(([, config]) => config.inDropdown)
+      .map(([key, config]) => [key, config.name])
+  ),
+  ...Object.fromEntries(
+    Object.entries(aliasConfig).map(([key, config]) => [key, config.name])
+  ),
+} as Record<DropdownLocale, string>;
+
+// Flags for dropdown
+export const localeFlags: Record<DropdownLocale, string> = {
+  ...Object.fromEntries(
+    Object.entries(localeConfig)
+      .filter(([, config]) => config.inDropdown)
+      .map(([key, config]) => [key, config.flag])
+  ),
+  ...Object.fromEntries(
+    Object.entries(aliasConfig).map(([key, config]) => [key, config.flag])
+  ),
+} as Record<DropdownLocale, string>;
+
+// =============================================================================
+// FUNCTIONS
+// =============================================================================
 
 export function resolveLocale(localeOrAlias: LocaleOrAlias): Locale {
   if (localeOrAlias in localeAliasMap) {
@@ -65,19 +304,16 @@ export function t(key: TranslationKey, locale: Locale = 'en'): string {
 
 export function getLocaleFromUrl(url: URL): Locale {
   const pathname = url.pathname;
-  // Check if URL starts with a locale prefix
   for (const locale of locales) {
     if (pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`) {
       return locale;
     }
   }
-  // Default to English (no prefix means English)
   return 'en';
 }
 
 export function getPathWithoutLocale(pathname: string): string {
-  // Check both core locales and aliases
-  const allPrefixes = [...locales, ...Object.keys(localeAliasMap)];
+  const allPrefixes = [...locales, ...localeAliases];
   for (const prefix of allPrefixes) {
     if (pathname.startsWith(`/${prefix}/`)) {
       return pathname.slice(prefix.length + 1);
@@ -91,75 +327,17 @@ export function getPathWithoutLocale(pathname: string): string {
 
 export function getLocalizedPath(pathname: string, locale: Locale): string {
   const pathWithoutLocale = getPathWithoutLocale(pathname);
-  // English uses root path (no prefix)
   if (locale === 'en') {
     return pathWithoutLocale;
   }
-  // Other locales get prefixed
   return `/${locale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
 }
 
-export const locales: Locale[] = ['en', 'uk', 'es', 'ja', 'ar', 'de', 'ko', 'sv', 'it', 'lv', 'no', 'ph', 'nl-BE', 'ga', 'cy', 'eu'];
-export const localeAliases: LocaleAlias[] = ['en-us', 'en-au', 'en-ca', 'en-gb', 'en-ie', 'en-sc', 'nl-NL'];
-// Alphabetically by English name (Arabic, Basque, Dutch variants, English variants, German, Irish, Italian, etc.)
-export const allLocales: DropdownLocale[] = ['ar', 'eu', 'nl-BE', 'nl-NL', 'en-us', 'en-au', 'en-ca', 'en-ie', 'en-sc', 'en-gb', 'de', 'ga', 'it', 'ja', 'ko', 'lv', 'no', 'es', 'sv', 'ph', 'uk', 'cy'];
-
-export const localeNames: Record<DropdownLocale, string> = {
-  uk: 'Українська',
-  es: 'Español',
-  ja: '日本語',
-  ar: 'العربية',
-  de: 'Deutsch',
-  ko: '한국어',
-  sv: 'Svenska',
-  it: 'Italiano',
-  lv: 'Latviešu',
-  no: 'Norsk',
-  ph: 'Tagalog',
-  ga: 'Gaeilge',
-  cy: 'Cymraeg',
-  eu: 'Euskara',
-  'nl-BE': 'Nederlands (België)',
-  'nl-NL': 'Nederlands',
-  'en-us': 'English (American)',
-  'en-au': 'English (Australian)',
-  'en-ca': 'English (Canadian)',
-  'en-ie': 'English (Irish)',
-  'en-sc': 'English (Scotch)',
-  'en-gb': 'English (actual)',
-};
-
-export const localeFlags: Record<DropdownLocale, string> = {
-  uk: '🇺🇦',
-  es: '🇪🇸',
-  ja: '🇯🇵',
-  ar: '🇸🇦',
-  de: '🇩🇪',
-  ko: '🇰🇷',
-  sv: '🇸🇪',
-  it: '🇮🇹',
-  lv: '🇱🇻',
-  no: '🇳🇴',
-  ph: '🇵🇭',
-  ga: '🇮🇪',
-  cy: '🏴󠁧󠁢󠁷󠁬󠁳󠁿',
-  eu: '🟩',
-  'nl-BE': '🇧🇪',
-  'nl-NL': '🇳🇱',
-  'en-us': '🇺🇸',
-  'en-au': '🇦🇺',
-  'en-ca': '🇨🇦',
-  'en-gb': '🇬🇧',
-  'en-ie': '🇮🇪',
-  'en-sc': '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
-};
-
-// RTL language detection for future RTL language support
+// RTL language detection
 const RTL_LANGUAGES = ['ar', 'he', 'fa', 'ur'];
 export const isRTL = (locale: string): boolean =>
   RTL_LANGUAGES.includes(locale.split('-')[0]);
 
-// Get app URL with language parameter
 export function getAppUrl(locale: Locale = 'en'): string {
   const baseUrl = translations.en['app.url'];
   if (locale === 'en') {
@@ -170,27 +348,8 @@ export function getAppUrl(locale: Locale = 'en'): string {
 
 export function getFormattedDate(locale: Locale): string {
   const date = new Date();
-  // Map our locales to BCP 47 language tags for robust formatting
-  const localeForIntl = {
-    ar: 'ar-EG',
-    ja: 'ja-JP',
-    es: 'es-ES',
-    uk: 'uk-UA',
-    de: 'de-DE',
-    ko: 'ko-KR',
-    sv: 'sv-SE',
-    it: 'it-IT',
-    lv: 'lv-LV',
-    no: 'nb-NO',
-    ph: 'fil-PH',
-    ga: 'ga-IE',
-    cy: 'cy-GB',
-    eu: 'eu-ES',
-    'nl-BE': 'nl-BE',
-    en: 'en-US',
-  }[locale];
-
-  return new Intl.DateTimeFormat(localeForIntl, {
+  const intlCode = localeConfig[locale].intlCode;
+  return new Intl.DateTimeFormat(intlCode, {
     year: 'numeric',
   }).format(date);
 }
@@ -198,15 +357,11 @@ export function getFormattedDate(locale: Locale): string {
 /**
  * Generate static paths for all locales.
  * Use this in getStaticPaths() to ensure all languages are included.
- * This is the SINGLE SOURCE OF TRUTH for locale routing.
  */
 export function getLocalePaths() {
   return [
-    // Default locale (English) - no prefix
-    { params: { locale: undefined } },
-    // All non-English locales
+    { params: { locale: undefined } }, // Default (English)
     ...locales.filter(l => l !== 'en').map(locale => ({ params: { locale } })),
-    // English aliases (comedy variants)
     ...localeAliases.map(alias => ({ params: { locale: alias } })),
   ];
 }

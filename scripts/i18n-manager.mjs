@@ -68,15 +68,27 @@ function parseTranslationFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf-8');
   const translations = {};
 
-  // Match key-value pairs in the format: 'key': 'value',
-  // Values can contain escaped single quotes as \'
-  const regex = /'([^']+)':\s*'((?:[^'\\]|\\.)*)'/g;
+  // Match key-value pairs with single-quoted keys and either single or double-quoted values
+  // Pattern 1: 'key': 'value' (with escaped single quotes)
+  // Pattern 2: 'key': "value" (with escaped double quotes)
+  const singleQuoteRegex = /'([^']+)':\s*'((?:[^'\\]|\\.)*)'/g;
+  const doubleQuoteRegex = /'([^']+)':\s*"((?:[^"\\]|\\.)*)"/g;
+
   let match;
 
-  while ((match = regex.exec(content)) !== null) {
+  // Parse single-quoted values
+  while ((match = singleQuoteRegex.exec(content)) !== null) {
     const key = match[1];
     // Unescape \' to '
     const value = match[2].replace(/\\'/g, "'");
+    translations[key] = value;
+  }
+
+  // Parse double-quoted values
+  while ((match = doubleQuoteRegex.exec(content)) !== null) {
+    const key = match[1];
+    // Unescape \" to "
+    const value = match[2].replace(/\\"/g, '"');
     translations[key] = value;
   }
 

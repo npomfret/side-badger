@@ -5,6 +5,7 @@ import { locales } from './src/i18n/index.ts';
 export default defineConfig({
   site: 'https://sidebadger.com',
   output: 'static',
+  devToolbar: { enabled: false },
   integrations: [sitemap()],
   i18n: {
     defaultLocale: 'en',

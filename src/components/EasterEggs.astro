@@ -31,7 +31,7 @@
     const duration = 5000;
     const end = Date.now() + duration;
 
-    const colors = ['#8b5cf6', '#22d3ee', '#ec4899', '#34d399'];
+    const colors = ['#7ec786', '#5fb0c4', '#f0c05c', '#4eeab5'];
 
     (function frame() {
       confetti({
@@ -102,7 +102,7 @@
       particleCount: 200,
       spread: 180,
       origin: { y: 0.5 },
-      colors: ['#8b5cf6', '#22d3ee', '#ec4899', '#34d399'],
+      colors: ['#7ec786', '#5fb0c4', '#f0c05c', '#4eeab5'],
       disableForReducedMotion: true
     });
   }
@@ -159,12 +159,12 @@
     if ((e.target as HTMLElement).closest('.footer-bottom')) {
       footerClickCount++;
       if (footerClickCount === 5) {
-        showSecretMessage("Thanks for clicking! You're awesome! 💜");
+        showSecretMessage("Thanks for clicking! You're awesome! 💚");
         confetti({
           particleCount: 50,
           spread: 60,
           origin: { y: 0.8 },
-          colors: ['#8b5cf6'],
+          colors: ['#7ec786', '#5fb0c4'],
           disableForReducedMotion: true
         });
         footerClickCount = 0;

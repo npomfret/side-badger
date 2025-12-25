@@ -1,28 +1,32 @@
 /*
  * Side Badger Design Tokens
- * Theme: Forest Badger - Deep woodland with misty greens
+ * Theme: Liquid Crystal Forest - Lighter woodland with caustic ripples
  */
 
 :root {
   /* ===== COLOR SYSTEM ===== */
 
-  /* Base backgrounds - light forest */
-  --bg-void: #0a2818;
-  --bg-deep: #0f3d24;
-  --bg-elevated: rgba(20, 70, 45, 0.65);
+  /* Base backgrounds - lighter forest (lifted from deep darkness) */
+  --bg-void: #0c1f16;
+  --bg-deep: #132f22;
+  --bg-surface: #1a4030;
+  --bg-elevated: rgba(26, 64, 48, 0.65);
 
-  /* Glass surfaces */
+  /* Glass surfaces - mint-tinted for liquid crystal feel */
   --glass-bg: rgba(30, 90, 60, 0.35);
+  --glass-primary: rgba(78, 170, 130, 0.10);
+  --glass-secondary: rgba(95, 176, 196, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.12);
   --glass-border: rgba(255, 255, 255, 0.15);
   --glass-border-hover: rgba(255, 255, 255, 0.3);
 
-  /* Aurora colors - bright forest mist */
-  --aurora-green: rgba(104, 170, 111, 0.6);
-  --aurora-teal: rgba(78, 138, 154, 0.55);
-  --aurora-amber: rgba(217, 169, 75, 0.45);
-  --aurora-mint: rgba(52, 211, 153, 0.5);
+  /* Aurora/Caustic colors - forest mist for ripple effect */
+  --aurora-green: rgba(126, 199, 134, 0.5);
+  --aurora-teal: rgba(95, 176, 196, 0.45);
+  --aurora-amber: rgba(240, 192, 92, 0.35);
+  --aurora-mint: rgba(78, 234, 181, 0.4);
 
-  /* Accent colors - from logo (brightened) */
+  /* Accent colors - brand colors (green/teal/amber) */
   --accent-primary: #7ec786;
   --accent-secondary: #5fb0c4;
   --accent-tertiary: #f0c05c;
@@ -38,6 +42,7 @@
   --gradient-text: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary), var(--accent-tertiary));
 
   /* ===== SPACING SYSTEM ===== */
+  /* Fixed spacing */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
@@ -46,6 +51,13 @@
   --space-2xl: 3rem;
   --space-3xl: 4rem;
   --space-4xl: 6rem;
+
+  /* Fluid spacing with clamp() */
+  --space-fluid-sm: clamp(0.5rem, 1vw, 1rem);
+  --space-fluid-md: clamp(1rem, 2vw, 1.5rem);
+  --space-fluid-lg: clamp(1.5rem, 4vw, 3rem);
+  --space-fluid-xl: clamp(2rem, 6vw, 4rem);
+  --space-fluid-2xl: clamp(3rem, 8vw, 6rem);
 
   /* ===== RADIUS SYSTEM ===== */
   --radius-sm: 8px;
@@ -78,10 +90,24 @@
   --text-5xl: clamp(3rem, 2.5rem + 4vw, 5rem);
 
   /* ===== MOTION SYSTEM ===== */
-  --transition-fast: 150ms cubic-bezier(0.22, 1, 0.36, 1);
-  --transition-base: 250ms cubic-bezier(0.22, 1, 0.36, 1);
-  --transition-slow: 400ms cubic-bezier(0.22, 1, 0.36, 1);
+  /* Easing curves */
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-float: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Duration tokens (calm & floating) */
+  --duration-instant: 100ms;
+  --duration-fast: 200ms;
+  --duration-base: 400ms;
+  --duration-slow: 600ms;
+  --duration-ambient: 8000ms;
+
+  /* Transition presets */
+  --transition-fast: var(--duration-fast) var(--ease-smooth);
+  --transition-base: var(--duration-base) var(--ease-smooth);
+  --transition-slow: var(--duration-slow) var(--ease-float);
   --transition-aurora: 24s ease-in-out;
+  --transition-breathing: var(--duration-ambient) var(--ease-float);
 
   /* ===== Z-INDEX SCALE ===== */
   --z-background: -1;
@@ -96,9 +122,24 @@
 /* Reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   :root {
+    --duration-instant: 0ms;
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+    --duration-ambient: 0ms;
     --transition-fast: 0ms;
     --transition-base: 0ms;
     --transition-slow: 0ms;
     --transition-aurora: 0ms;
+    --transition-breathing: 0ms;
   }
+}
+
+/* Runtime reduced motion class (set via JS) */
+.reduce-motion {
+  --duration-instant: 0ms;
+  --duration-fast: 0ms;
+  --duration-base: 0ms;
+  --duration-slow: 0ms;
+  --duration-ambient: 0ms;
 }

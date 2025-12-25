@@ -2,13 +2,16 @@
  * Easter Eggs Styles (Konami code, disco mode, secret messages)
  */
 
-/* Secret message popup */
+/* Secret message popup - Enhanced glass treatment */
 .secret-message {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.8);
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border-hover);
   color: white;
   padding: var(--space-lg) var(--space-2xl);
   border-radius: var(--radius-xl);
@@ -17,15 +20,24 @@
   font-weight: 700;
   z-index: 10000;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  filter: blur(4px);
+  transition:
+    opacity var(--duration-base) var(--ease-smooth),
+    transform var(--duration-base) var(--ease-smooth),
+    filter var(--duration-base) var(--ease-smooth);
   pointer-events: none;
   text-align: center;
-  box-shadow: var(--shadow-glow-lg);
+  box-shadow:
+    0 0 0 1px var(--glass-border-hover),
+    0 0 40px rgba(126, 199, 134, 0.3),
+    0 0 80px rgba(95, 176, 196, 0.2),
+    var(--shadow-card);
 }
 
 .secret-message.show {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
+  filter: blur(0);
 }
 
 /* Secret wobble animation */
@@ -61,7 +73,8 @@
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .secret-message {
-    transition: opacity 0.1s ease;
+    transition: opacity var(--duration-instant);
+    filter: none;
   }
 
   .secret-wobble,

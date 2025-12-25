@@ -1,6 +1,5 @@
 ---
-import ParticleStarfield from '../components/ParticleStarfield.astro';
-import GlowingConnections from '../components/GlowingConnections.astro';
+import CausticRipples from '../components/CausticRipples.astro';
 import EasterEggs from '../components/EasterEggs.astro';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import LanguageDetection from '../components/LanguageDetection.astro';
@@ -36,7 +35,7 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#0a2818" />
+    <meta name="theme-color" content="#0c1f16" />
 
     <!-- hreflang tags for SEO -->
     {locales.map((loc) => (
@@ -91,23 +90,14 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
   </head>
   <body>
     <a href="#main-content" class="skip-link">{t('a11y.skipToContent', locale)}</a>
-    <ParticleStarfield />
-    <GlowingConnections />
+    <CausticRipples />
     <EasterEggs />
     <LanguageDetection currentLocale={locale} />
     <div id="cursor-glow" aria-hidden="true"></div>
 
     <slot name="header">
       <header class="site-header" role="banner">
-        <div class="christmas-lights" aria-hidden="true">
-          <div class="wire"></div>
-          <ul class="lights">
-            <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-            <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-            <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-          </ul>
-        </div>
-        <nav class="header-nav container" style="position: relative;" aria-label={t('a11y.mainNavigation', locale)}>
+        <nav class="header-nav container" aria-label={t('a11y.mainNavigation', locale)}>
           <a href={getLocalizedPath('/', locale)} class="logo" aria-label={t('a11y.homeLink', locale)}>
             <div class="logo-glow-wrapper">
               <div class="logo-glow-spacer"></div>
@@ -174,6 +164,14 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
     </footer>
 
     <script>
+      // Runtime motion preference listener
+      const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const handleMotionPreference = (e: MediaQueryListEvent | MediaQueryList) => {
+        document.body.classList.toggle('reduce-motion', e.matches);
+      };
+      handleMotionPreference(motionQuery);
+      motionQuery.addEventListener('change', handleMotionPreference);
+
       // Scroll-triggered fade-up animations
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -186,7 +184,7 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
 
       document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
 
-      // Cursor glow effect
+      // Cursor glow effect (cursor aurora)
       const cursorGlow = document.getElementById('cursor-glow');
       let mouseX = 0, mouseY = 0;
       let glowX = 0, glowY = 0;
@@ -197,11 +195,12 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
       });
 
       function animateCursor() {
-        glowX += (mouseX - glowX) * 0.1;
-        glowY += (mouseY - glowY) * 0.1;
+        // Smooth interpolation (0.08 factor for dreamy lag)
+        glowX += (mouseX - glowX) * 0.08;
+        glowY += (mouseY - glowY) * 0.08;
 
         if (cursorGlow) {
-          cursorGlow.style.transform = `translate(${glowX - 150}px, ${glowY - 150}px)`;
+          cursorGlow.style.transform = `translate(${glowX - 300}px, ${glowY - 300}px)`;
         }
 
         requestAnimationFrame(animateCursor);

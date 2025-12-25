@@ -60,7 +60,7 @@ npm run i18n audit   # Check for missing/extra keys
 - `BaseLayout.astro` - HTML wrapper, header/footer, background effects
 - `HomePage.astro` - Landing page with features, CTA sections
 - `PolicyPage.astro` - Fetches markdown from API, renders legal pages
-- `ParticleStarfield.astro` - tsParticles background (respects reduced motion)
+- `CausticRipples.astro` - Canvas-based caustic light background (respects reduced motion)
 - `EasterEggs.astro` - Konami code, disco mode, hidden interactions
 
 ## Pages
@@ -93,7 +93,10 @@ The app URL (`app.url`) points to the external Firebase-hosted app.
 
 ## Styling Notes
 
-- Aurora background effect via CSS animations in `global.css`
+- Caustic ripples background via Canvas 2D + Perlin noise in `CausticRipples.astro`
+- Glassmorphism with multi-layer glass system (`glass-layer-1/2/3`)
+- Cursor aurora effect follows mouse with dreamy lag
+- Breathing animations on hero elements
 - Confetti via `canvas-confetti` on CTA clicks
 - All animations respect `prefers-reduced-motion`
-- Fluid typography using `clamp()`
+- Fluid typography and spacing using `clamp()`

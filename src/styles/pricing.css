@@ -23,12 +23,17 @@
   font-size: var(--text-5xl);
   opacity: 0;
   transform: scale(0.8);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  filter: blur(8px);
+  transition:
+    opacity var(--duration-slow) var(--ease-smooth),
+    transform var(--duration-slow) var(--ease-smooth),
+    filter var(--duration-slow) var(--ease-smooth);
 }
 
 .price-reveal.revealed {
   opacity: 1;
   transform: scale(1);
+  filter: blur(0);
 }
 
 .price-subtitle {
@@ -55,11 +60,32 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  transition:
+    transform var(--duration-fast) var(--ease-smooth),
+    box-shadow var(--duration-fast) var(--ease-smooth),
+    border-color var(--duration-fast) var(--ease-smooth);
+}
+
+.plan-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--glass-border-hover);
 }
 
 .plan-card.featured {
   border-color: var(--accent-primary);
-  box-shadow: var(--shadow-glow-sm);
+  box-shadow:
+    0 0 0 1px rgba(126, 199, 134, 0.3),
+    0 0 40px rgba(126, 199, 134, 0.2),
+    0 0 80px rgba(95, 176, 196, 0.1),
+    var(--shadow-card);
+}
+
+.plan-card.featured:hover {
+  box-shadow:
+    0 0 0 1px rgba(126, 199, 134, 0.5),
+    0 0 50px rgba(126, 199, 134, 0.3),
+    0 0 100px rgba(95, 176, 196, 0.15),
+    var(--shadow-card);
 }
 
 .plan-badge {
@@ -176,6 +202,19 @@
 
 .faq-item {
   padding: var(--space-xl);
+  transition:
+    transform var(--duration-fast) var(--ease-smooth),
+    box-shadow var(--duration-fast) var(--ease-smooth),
+    border-color var(--duration-fast) var(--ease-smooth);
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--glass-border-hover);
+  box-shadow:
+    0 0 0 1px var(--glass-border-hover),
+    0 0 20px rgba(126, 199, 134, 0.15),
+    var(--shadow-card);
 }
 
 .faq-item h3 {

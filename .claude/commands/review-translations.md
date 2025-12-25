@@ -2,10 +2,10 @@
 
 1. Confirm the source of truth. Review `src/i18n/index.ts` for locale config changes and make sure `src/i18n/en.ts` remains the master copy before touching tooling.
 2. Establish the baseline. Run `npm run i18n stats` for per-locale completion numbers and `npm run i18n audit` to catch missing or extra keys.
-3. Do a key-by-key verification using the CLI so nothing gets skipped:
+3. Do a key-by-key verification using the CLI so nothing gets skipped—the quality of every translation is paramount:
    - `npm run i18n list` to print the canonical key order; treat it like a checklist and move to the next key only after signing off the current one.
    - For each key, run `npm run i18n get -- --key hero.cta --locales en,ja` (swap in the locale under review) and confirm the non-English value faithfully reflects the English master—catch mistranslations, tone issues, incorrect numbers, or cultural faux pas before proceeding.
-   - Keep a QA mindset on every key: flag anything literally wrong, awkward, inconsistent with product terminology, or legally risky; don't accept a translation just because the key exists.
+   - Keep a QA mindset on every key: flag anything literally wrong, awkward, inconsistent with product terminology, or legally risky; quality and accuracy outweigh speed, so don't accept a translation just because the key exists.
    - If a key looks off, immediately open a side-by-side diff with `npm run i18n compare -- --locales en,ja --key hero.cta` so you can adjust it in context.
    - When you need an offline checklist, `npm run i18n export -- --format csv --locales en,ja` and tick through each row while verifying translations manually.
    - Use `npm run i18n search -- --text "split bill"` anytime you suspect repeated copy needs alignment across keys.

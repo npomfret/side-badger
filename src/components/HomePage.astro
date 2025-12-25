@@ -462,42 +462,222 @@ const { locale } = Astro.props;
   <script>
     import confetti from 'canvas-confetti';
 
-    // Fade-in on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+    // Check for reduced motion preference
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ===== 3D CARD TILT =====
+    if (!prefersReducedMotion) {
+      document.querySelectorAll('.feature-card').forEach(card => {
+        const cardEl = card as HTMLElement;
+
+        cardEl.addEventListener('mousemove', (e: MouseEvent) => {
+          const rect = cardEl.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = (y - centerY) / 10;
+          const rotateY = (centerX - x) / 10;
+
+          cardEl.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        });
+
+        cardEl.addEventListener('mouseleave', () => {
+          cardEl.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+        });
+      });
+    }
+
+    // ===== TEXT SCRAMBLE REVEAL =====
+    class TextScramble {
+      private el: HTMLElement;
+      private chars = '!<>-_\\/[]{}—=+*^?#________';
+      private queue: Array<{from: string, to: string, start: number, end: number, char?: string}> = [];
+      private frame = 0;
+      private frameRequest: number = 0;
+      private resolve!: () => void;
+
+      constructor(el: HTMLElement) {
+        this.el = el;
+      }
+
+      setText(newText: string): Promise<void> {
+        const oldText = this.el.innerText;
+        const length = Math.max(oldText.length, newText.length);
+        this.queue = [];
+
+        for (let i = 0; i < length; i++) {
+          const from = oldText[i] || '';
+          const to = newText[i] || '';
+          const start = Math.floor(Math.random() * 40);
+          const end = start + Math.floor(Math.random() * 40);
+          this.queue.push({ from, to, start, end });
+        }
+
+        cancelAnimationFrame(this.frameRequest);
+        this.frame = 0;
+
+        return new Promise(resolve => {
+          this.resolve = resolve;
+          this.update();
+        });
+      }
+
+      private update = () => {
+        let output = '';
+        let complete = 0;
+
+        for (let i = 0; i < this.queue.length; i++) {
+          let { from, to, start, end, char } = this.queue[i];
+
+          if (this.frame >= end) {
+            complete++;
+            output += to;
+          } else if (this.frame >= start) {
+            if (!char || Math.random() < 0.28) {
+              char = this.chars[Math.floor(Math.random() * this.chars.length)];
+              this.queue[i].char = char;
+            }
+            output += `<span class="scramble-char">${char}</span>`;
+          } else {
+            output += from;
+          }
+        }
+
+        this.el.innerHTML = output;
+
+        if (complete === this.queue.length) {
+          this.resolve();
+        } else {
+          this.frameRequest = requestAnimationFrame(this.update);
+          this.frame++;
+        }
+      }
+    }
+
+    // Apply text scramble to hero title on load
+    if (!prefersReducedMotion) {
+      const heroTitle = document.querySelector('#hero-title') as HTMLElement;
+      if (heroTitle) {
+        const originalText = heroTitle.innerText;
+        // Start with scrambled text
+        const scrambleChars = '!<>-_\\/[]{}—=+*^?#';
+        heroTitle.innerText = originalText.split('').map(c =>
+          c === ' ' ? ' ' : scrambleChars[Math.floor(Math.random() * scrambleChars.length)]
+        ).join('');
+
+        const scrambler = new TextScramble(heroTitle);
+        // Resolve to actual text after a short delay
+        setTimeout(() => scrambler.setText(originalText), 300);
+      }
+    }
+
+    // ===== STAGGERED CARD REVEALS =====
+    const staggerObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+          const el = entry.target as HTMLElement;
+          const delay = parseInt(el.dataset.delay || '0');
+
+          setTimeout(() => {
+            el.classList.add('visible');
+          }, delay);
+
+          staggerObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-up').forEach((el, index) => {
+      // Auto-assign stagger delays if not set
+      if (!(el as HTMLElement).dataset.delay) {
+        (el as HTMLElement).dataset.delay = String((index % 6) * 100);
+      }
+      staggerObserver.observe(el);
+    });
 
-    document.querySelectorAll('.btn-confetti').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const rect = (e.target as HTMLElement).getBoundingClientRect();
-        const x = (rect.left + rect.width / 2) / window.innerWidth;
-        const y = (rect.top + rect.height / 2) / window.innerHeight;
+    // ===== BUTTON RIPPLE EFFECT =====
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', function(e: MouseEvent) {
+        const button = e.currentTarget as HTMLElement;
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
-        confetti({
-          particleCount: 100,
-          spread: 70,
-          origin: { x, y },
-          colors: ['#7ec786', '#5fb0c4', '#f0c05c', '#4eeab5'],
-          disableForReducedMotion: true
-        });
+        const ripple = document.createElement('span');
+        ripple.className = 'btn-ripple';
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+
+        button.appendChild(ripple);
+
+        setTimeout(() => ripple.remove(), 600);
       });
     });
 
-    if (Math.random() < 0.05) {
+    // ===== SATISFYING CONFETTI BURST =====
+    const fireConfetti = (x: number, y: number) => {
+      // First burst - main explosion
+      confetti({
+        particleCount: 80,
+        spread: 60,
+        origin: { x, y },
+        colors: ['#7ec786', '#5fb0c4', '#f0c05c', '#4eeab5'],
+        disableForReducedMotion: true,
+        startVelocity: 30,
+        gravity: 0.8,
+        scalar: 1.2
+      });
+
+      // Second burst - delayed sparkle
       setTimeout(() => {
         confetti({
-          particleCount: 50,
+          particleCount: 40,
           spread: 100,
-          origin: { y: 0.6 },
-          colors: ['#7ec786', '#5fb0c4', '#f0c05c'],
+          origin: { x, y },
+          colors: ['#ffffff', '#7ec786', '#5fb0c4'],
+          disableForReducedMotion: true,
+          startVelocity: 20,
+          gravity: 0.6,
+          scalar: 0.8,
+          shapes: ['circle']
+        });
+      }, 150);
+
+      // Third burst - side cannons
+      setTimeout(() => {
+        confetti({
+          particleCount: 30,
+          angle: 60,
+          spread: 40,
+          origin: { x: x - 0.1, y },
+          colors: ['#7ec786', '#f0c05c'],
           disableForReducedMotion: true
         });
+        confetti({
+          particleCount: 30,
+          angle: 120,
+          spread: 40,
+          origin: { x: x + 0.1, y },
+          colors: ['#5fb0c4', '#4eeab5'],
+          disableForReducedMotion: true
+        });
+      }, 100);
+    };
+
+    document.querySelectorAll('.btn-confetti').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+        const x = (rect.left + rect.width / 2) / window.innerWidth;
+        const y = (rect.top + rect.height / 2) / window.innerHeight;
+        fireConfetti(x, y);
+      });
+    });
+
+    // Random celebration (5% chance)
+    if (Math.random() < 0.05 && !prefersReducedMotion) {
+      setTimeout(() => {
+        fireConfetti(0.5, 0.6);
       }, 2000);
     }
   </script>

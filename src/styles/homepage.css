@@ -170,9 +170,12 @@
     var(--glass-bg) 60%
   );
   transition:
-    transform var(--duration-fast) var(--ease-smooth),
+    transform 0.15s ease-out,
     box-shadow var(--duration-fast) var(--ease-smooth),
-    border-color var(--duration-fast) var(--ease-smooth);
+    border-color var(--duration-fast) var(--ease-smooth),
+    background var(--duration-fast) var(--ease-smooth);
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .feature-card:hover {
@@ -215,12 +218,32 @@
 }
 
 .feature-card:hover .feature-icon {
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(5deg);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.3),
     0 0 40px rgba(126, 199, 134, 0.6),
     0 0 80px rgba(95, 176, 196, 0.3),
     0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: icon-wiggle 0.5s ease-in-out;
+}
+
+@keyframes icon-wiggle {
+  0%, 100% { transform: scale(1.1) rotate(5deg); }
+  25% { transform: scale(1.15) rotate(-3deg); }
+  50% { transform: scale(1.1) rotate(5deg); }
+  75% { transform: scale(1.12) rotate(-2deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-card:hover .feature-icon {
+    animation: none;
+    transform: scale(1.05);
+  }
+
+  .feature-card {
+    transform-style: flat;
+    will-change: auto;
+  }
 }
 
 .feature-icon-small {

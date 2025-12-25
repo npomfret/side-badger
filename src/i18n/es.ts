@@ -30,49 +30,49 @@ export default {
   'hero.title': 'Divide gastos como un',
   'hero.titleHighlight': 'side badger',
   'hero.titleDisclaimer': '',
-  'hero.subtitle': "El divisor de gastos totalmente gratis, sin rastreo ni anuncios, que es sospechosamente bueno. No queremos tus datos. No queremos tu dinero. Solo queremos que dividas cuentas con tus amigos sin llorar.",
+  'hero.subtitle': 'Panel en tiempo real, reacciones con emojis, enlaces de invitación que se regeneran a demanda, y un formulario de gastos sorprendentemente inteligente. Todo lo que la app realmente hace, explicado para humanos.',
   'hero.cta': '...hazme un sidebadger',
 
   // Features section
-  'features.title': 'Todo lo que necesitas',
-  'features.subtitle': 'Todas las funciones. Sin rastreo. No se requiere doctorado.',
+  'features.title': 'Dentro de Side Badger',
+  'features.subtitle': 'Una lista curada de los poderes reales y listos para usar que te esperan en el panel.',
 
   // Feature cards
-  'features.groups.title': 'Grupos para todo',
-  'features.groups.desc': 'Compañeros de piso, viajes, eventos, partidas de D&D. Crea tantos grupos como necesites y mantén los gastos organizados.',
+  'features.groups.title': 'Panel en tiempo real',
+  'features.groups.desc': 'Feed de actividad enriquecido con texto personalizado, pestañas de archivados/activos, tarjetas de grupo con hover pulido, esqueletos de carga, paginación, estados vacíos y recuperación de errores en escritorio y móvil.',
 
-  'features.invites.title': 'Invitaciones fáciles',
-  'features.invites.desc': 'Comparte un enlace y tus amigos se unen. No necesitan descargar ninguna app. Opcionalmente, puedes requerir aprobación antes de que nuevos miembros se unan.',
+  'features.invites.title': 'Enlaces compartidos + invitaciones QR',
+  'features.invites.desc': 'Cada tarjeta de grupo tiene un modal para compartir con URLs cortas, códigos QR, regeneración de tokens, feedback del portapapeles, enlaces adaptados al idioma y una página de destino que gestiona aprobaciones y miembros pendientes con elegancia.',
 
-  'features.roles.title': 'Permisos configurables',
-  'features.roles.desc': 'Controla quién puede añadir gastos, saldar cuentas o solo mirar desde la barrera. Tu grupo, tus reglas.',
+  'features.roles.title': 'Permisos a prueba de bloqueos',
+  'features.roles.desc': 'Reglas de seguridad predefinidas vs personalizadas, menús desplegables de roles, moderación de invitaciones pendientes, interruptores de bloqueo, filtros "incluir eliminados" y ajustes solo para admins para que el caos se mantenga controlado.',
 
-  'features.splits.title': 'Tres formas de dividir',
-  'features.splits.desc': 'Igual (dividir equitativamente), Exacto (cantidades específicas) o Porcentaje. Elige lo que funcione para tu grupo. ¿A quién no le gusta un trío?',
+  'features.splits.title': 'Formulario de gastos ridículamente inteligente',
+  'features.splits.desc': 'Divisiones igual/exacta/personalizada con manejo de cambios sin guardar, selector multidivisa, análisis de enlaces de Google Maps, chips de etiquetas, subida de recibos, atajos de cantidades recientes y protección de gastos bloqueados.',
 
-  'features.participants.title': "Elige quién participa",
-  'features.participants.desc': "No todos dividen todo. Selecciona exactamente quién está involucrado en cada gasto. \"Yo solo pedí una ensalada\" ahora es una opción.",
+  'features.participants.title': 'Hilos, archivos y reacciones',
+  'features.participants.desc': 'Los comentarios de gastos y grupos soportan adjuntos, toggles de emojis, paginación y actualizaciones en tiempo real, para que planificar el próximo viaje ocurra justo al lado de los números.',
 
-  'features.currency.title': 'Cualquier moneda',
-  'features.currency.desc': 'USD, EUR, JPY, GBP, lo que sea. Soporte completo para todas las monedas con manejo correcto de decimales. Selección rápida de las recientes.',
+  'features.currency.title': 'Control de divisas',
+  'features.currency.desc': 'Los admins pueden restringir grupos a divisas aprobadas, elegir predeterminadas, preservar las antiguas para gastos viejos, y aún permitir recibos multidivisa cuando los necesites.',
 
-  'features.balances.title': 'Balances simplificados',
-  'features.balances.desc': "La simplificación inteligente de deudas minimiza el número de pagos necesarios. En lugar de que todos paguen a todos, encontramos el camino más corto para saldar.",
+  'features.balances.title': 'Balances en los que puedes confiar',
+  'features.balances.desc': 'Paneles de balance siempre visibles muestran deudas optimizadas, confirmaciones de "todo saldado" y filtros para revelar deudas indirectas para que nadie discuta sobre quién debe a quién.',
 
-  'features.settle.title': 'Saldar en un clic',
-  'features.settle.desc': '¿Ves una deuda? Toca "Saldar rápido" y márcala como pagada. Listo. Confeti opcional pero muy recomendado.',
+  'features.settle.title': 'Saldar rápido + historial',
+  'features.settle.desc': 'Botones de liquidación con un toque lanzan formularios pre-rellenados con validación de pagos de más/menos, los mosaicos de historial muestran ediciones, los bloqueos imponen solo lectura, y las reacciones mantienen los reembolsos divertidos.',
 
-  'features.activity.title': 'Feed de actividad',
-  'features.activity.desc': 'Ve todo lo que pasa: nuevos gastos, liquidaciones, miembros que se unen. Mantente al día con tu grupo sin preguntar "espera, ¿qué pasó?"',
+  'features.activity.title': 'Enlaces profundos a todo',
+  'features.activity.desc': 'URLs como /groups/:id/add-expense abren modales automáticamente, Escape limpia el historial, las pilas de navegación del panel se mantienen intactas, y las notificaciones/menús reflejan el feed.',
 
-  'features.comments.title': 'Chat y comentarios',
-  'features.comments.desc': 'Chat grupal para discusión general, más comentarios en gastos individuales. "¿Quién pidió los nachos extra?" Mantén la conversación donde corresponde.',
+  'features.comments.title': 'Emojis en todas partes',
+  'features.comments.desc': 'Gastos, comentarios y liquidaciones comparten el mismo selector de emojis, conteos agregados, estados destacados y UX de toggle, porque la responsabilidad también puede ser divertida.',
 
-  'features.edit.title': 'Corrige errores',
-  'features.edit.desc': '¿Pusiste la cantidad incorrecta? Edita gastos después de crearlos. Cambia la división, corrige la fecha, actualiza descripciones. Sin estrés.',
+  'features.edit.title': 'Ajustes que realmente funcionan',
+  'features.edit.desc': 'Alias de identidad por grupo, ajustes generales con renombrar/describir/eliminar + confirmaciones, presets de seguridad, editores de roles de miembros e interruptores de bloqueo protegidos en pestañas solo para admins.',
 
-  'features.noTracking.title': 'Sin rastreo',
-  'features.noTracking.desc': "Sin analíticas. Sin píxeles de rastreo. Sin recolección de datos. No sabemos en qué gastas tu dinero, y nos gusta así.",
+  'features.noTracking.title': 'Sin rastreadores. Respeto total.',
+  'features.noTracking.desc': 'Modales de aceptación de políticas, obtención de cookies/términos/privacidad, banners de advertencia, y cero anuncios o rastreadores. Solo almacenamos lo que mantiene a los tejones amigables.',
 
   // Coming soon section
   'comingSoon.title': 'Próximamente',
@@ -97,23 +97,23 @@ export default {
   'littleThings.title': 'Pequeñas cosas que importan',
   'littleThings.subtitle': 'Los detalles que hacen que dividir gastos sea realmente agradable.',
 
-  'littleThings.dates.title': 'Fechas rápidas',
-  'littleThings.dates.desc': 'Botones de "Hoy", "Ayer" y "Anoche". Porque nadie quiere usar un selector de fechas para una cena.',
+  'littleThings.dates.title': 'Enlaces profundos y rutas',
+  'littleThings.dates.desc': 'Las URLs directas abren modales (detalle de gasto, añadir gasto, liquidaciones), Escape restaura el historial, y los anclajes hash auto-expanden secciones sin romper el botón atrás.',
 
-  'littleThings.amounts.title': 'Cantidades recientes',
-  'littleThings.amounts.desc': 'Tus cantidades más usadas aparecen para selección rápida. ¿El alquiler siempre es igual? Un toque.',
+  'littleThings.amounts.title': 'Registro y unión pulidos',
+  'littleThings.amounts.desc': 'Las URLs de retorno sobreviven los flujos de login/registro/reseteo, las casillas de políticas bloquean envíos, reenviar verificación vive en banners, y las redirecciones de auth mantienen fuera a los gorrones.',
 
-  'littleThings.names.title': 'Sé quien quieras',
-  'littleThings.names.desc': 'Nombre diferente por grupo. "Mamá" en familia, "Sara" en el trabajo, "Fiestero" con amigos.',
+  'littleThings.names.title': 'Accesibilidad incorporada',
+  'littleThings.names.desc': 'Trampas de foco, objetivos de auto-foco, foco restaurado al cerrar, enlaces de salto para lectores de pantalla, tooltips en acciones deshabilitadas, y layouts adaptados a RTL para idiomas como el árabe.',
 
-  'littleThings.archive.title': 'Archiva grupos viejos',
-  'littleThings.archive.desc': '¿Terminó el viaje? Archívalo. El grupo queda seguro pero fuera de tu camino. Recupéralo cuando quieras.',
+  'littleThings.archive.title': 'Controles de ciclo de vida',
+  'littleThings.archive.desc': 'Archivar/desarchivar desde acciones rápidas del panel, flujos de salir del grupo que advierten sobre balances abiertos, y banners de grupo bloqueado que deshabilitan botones arriesgados.',
 
-  'littleThings.celebrations.title': 'Celebraciones',
-  'littleThings.celebrations.desc': "Cuando todos han saldado, recibes confeti. Son las pequeñas cosas.",
+  'littleThings.celebrations.title': 'Señales que importan',
+  'littleThings.celebrations.desc': 'Banners de verificación de email, barras de advertencia, confirmaciones toast, diálogos que preservan estado, y menús de notificaciones mantienen a todos informados.',
 
-  'littleThings.everywhere.title': 'Funciona en todas partes',
-  'littleThings.everywhere.desc': 'Escritorio, tablet, teléfono. Sin app que descargar. Simplemente funciona en tu navegador.',
+  'littleThings.everywhere.title': 'Paginación responsive',
+  'littleThings.everywhere.desc': 'Paginación del panel, botones "cargar más" en comentarios/gastos, controles optimizados para móvil, y refrescos instantáneos cuando los datos cambian entre bastidores.',
 
   // Why free section
   'whyFree.title': '¿Por qué es gratis?',
@@ -177,9 +177,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Preguntas que podrías tener',
   'pricing.faq.q1.question': '¿Es realmente gratis?',
-  'pricing.faq.q1.answer': "Sí, ahora mismo es completamente gratis. No escondemos funciones detrás de un muro de pago. Lo mantenemos gratis porque todos merecen dividir cuentas sin estrés mientras seguimos lanzando cosas nuevas.",
+  'pricing.faq.q1.answer': "Sí, ahora mismo es completamente gratis. No escondemos funciones detrás de un muro de pago. Lo mantenemos gratis porque todos merecen dividir cuentas sin estrés mientras lanzamos cosas nuevas.",
   'pricing.faq.q2.question': "¿Cuál es la trampa?",
-  'pricing.faq.q2.answer': "Ninguna trampa. Side Badger existe para que dividir gastos sea simple, privado y divertido. Eso es todo.",
+  'pricing.faq.q2.answer': "Ninguna trampa. Side Badger existe para hacer que dividir gastos sea simple, privado y divertido. Esa es toda la historia.",
   'pricing.faq.q3.question': '¿Venderán mis datos?',
   'pricing.faq.q3.answer': "Absolutamente no. No recolectamos datos personales más allá de lo necesario para que funcione la app. Tenemos cero rastreadores, cero píxeles de analítica, y cero interés en tus hábitos de compra.",
   'pricing.faq.q4.question': '¿Por qué un tejón?',
@@ -187,7 +187,7 @@ export default {
   'pricing.faq.q5.question': '¿Puedo usar esto para mi negocio?',
   'pricing.faq.q5.answer': "¡Claro! Si quieres seguir gastos compartidos para tu pequeño negocio o equipo, adelante. Es gratis. No te juzgaremos.",
   'pricing.faq.q6.question': '¿Qué pasa si encuentro un bug?',
-  'pricing.faq.q6.answer': "Primero que nada, ¿cómo te atreves a insinuar que nuestro código tiene bugs? Segundo, sí, probablemente hay bugs. Estamos lanzando rápido, así que sé amable con nosotros.",
+  'pricing.faq.q6.answer': "Primero que nada, ¿cómo te atreves a insinuar que nuestro código tiene bugs? Segundo, sí, probablemente hay bugs. Estamos lanzando rápido, así que ten paciencia con nosotros.",
 
   // Policy pages
   'policy.privacy.title': 'Política de Privacidad',

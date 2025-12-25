@@ -29,49 +29,49 @@ export default {
   'hero.title': '割り勘を',
   'hero.titleHighlight': 'サイドバジャー',
   'hero.titleDisclaimer': 'のように',
-  'hero.subtitle': '完全無料、トラッキングなし、広告なしの、怪しいほど優れた割り勘アプリ。あなたのデータも、お金も要りません。友達と泣かずに割り勘できればそれでいいのです。',
+  'hero.subtitle': 'リアルタイムダッシュボード、絵文字リアクション、オンデマンドで再生成できる招待リンク、驚くほどスマートな費用入力フォーム。アプリの本当の機能を、人間にわかりやすくまとめました。',
   'hero.cta': '...サイドバジャーする',
 
   // Features section
-  'features.title': '必要なものすべて',
-  'features.subtitle': 'すべての機能。トラッキングなし。博士号不要。',
+  'features.title': 'Side Badgerの中身',
+  'features.subtitle': 'ダッシュボードに搭載された、実際に使える機能の厳選リスト。',
 
   // Feature cards
-  'features.groups.title': '何にでもグループを',
-  'features.groups.desc': 'ルームメイト、旅行、イベント、D&Dパーティー。必要なだけグループを作成して費用を整理できます。',
+  'features.groups.title': 'リアルタイムダッシュボード',
+  'features.groups.desc': '「あなた」表示のリッチなアクティビティフィード、アーカイブ/アクティブタブ、ホバー対応のグループカード、スケルトンローダー、ページネーション、空状態、エラーリカバリー。デスクトップ＆モバイル両対応。',
 
-  'features.invites.title': '簡単招待',
-  'features.invites.desc': 'リンクを共有するだけで友達が参加できます。アプリのダウンロード不要。オプションで新メンバーの承認を必須にできます。',
+  'features.invites.title': '共有リンク + QR招待',
+  'features.invites.desc': 'すべてのグループカードに共有モーダル。短縮URL、QRコード、トークン再生成、クリップボードフィードバック、言語対応リンク、承認・保留メンバーをスマートに処理するランディングページ。',
 
-  'features.roles.title': '権限設定',
-  'features.roles.desc': '費用の追加、精算、または傍観者として見るだけの権限を制御できます。あなたのグループ、あなたのルール。',
+  'features.roles.title': 'ロックダウン対応の権限',
+  'features.roles.desc': 'プリセット＆カスタムセキュリティルール、メンバー権限ドロップダウン、保留中の招待モデレーション、ロックトグル、「削除済みを含む」フィルター、管理者専用設定でカオスを封じ込め。',
 
-  'features.splits.title': '3つの分割方法',
-  'features.splits.desc': '均等（等分）、金額指定、パーセンテージ。グループに合った方法を選べます。3つの選択肢、いいでしょ？',
+  'features.splits.title': '驚くほどスマートな費用フォーム',
+  'features.splits.desc': '均等/金額指定/カスタム分割、未保存変更の処理、複数通貨セレクター、Googleマップリンク解析、ラベルチップ、レシートアップローダー、最近の金額ショートカット、ロック済み費用の保護機能。',
 
-  'features.participants.title': '参加者を選択',
-  'features.participants.desc': '全員がすべてを分割するわけではありません。各費用に誰が関わるかを正確に選択できます。「サラダしか食べてない」も選択肢に。',
+  'features.participants.title': 'スレッド、ファイル＆リアクション',
+  'features.participants.desc': '費用とグループのコメントは添付ファイル、絵文字トグル、ページネーション、リアルタイム更新に対応。次の旅行の計画が、数字のすぐ隣でできます。',
 
-  'features.currency.title': 'あらゆる通貨に対応',
-  'features.currency.desc': 'USD、EUR、JPY、GBP、なんでも。適切な小数点処理ですべての通貨に完全対応。最近使った通貨からクイック選択も。',
+  'features.currency.title': '通貨のガードレール',
+  'features.currency.desc': '管理者はグループを承認済み通貨にロックし、デフォルトを設定し、過去の費用用にレガシー通貨を保持しながら、必要に応じて複数通貨のレシートも処理可能。',
 
-  'features.balances.title': '残高の簡素化',
-  'features.balances.desc': '賢い債務簡素化で必要な支払い回数を最小限に。全員が全員に払う代わりに、精算への最短経路を計算します。',
+  'features.balances.title': '信頼できる残高',
+  'features.balances.desc': '常時表示の残高ペインで最適化された債務を確認。「全員精算済み」の確認表示と、間接的な債務を明らかにするフィルターで、誰が誰にいくら払うかの議論に終止符。',
 
-  'features.settle.title': 'ワンクリック精算',
-  'features.settle.desc': '債務を確認したら「クイック精算」をタップして支払い完了。紙吹雪は任意ですが強く推奨します。',
+  'features.settle.title': 'クイック精算 + 履歴',
+  'features.settle.desc': 'ワンタップ精算ボタンで過払い/不足のバリデーション付きフォームを起動。履歴タイルで編集確認、ロックで読み取り専用を強制、リアクションで返済も楽しく。',
 
-  'features.activity.title': 'アクティビティフィード',
-  'features.activity.desc': 'すべての出来事が見えます：新しい費用、精算、メンバーの参加。「えっ、何があったの？」と聞かなくてもグループと同期できます。',
+  'features.activity.title': 'あらゆるものへのディープリンク',
+  'features.activity.desc': '/groups/:id/add-expense のようなURLでモーダルが自動オープン。Escapeキーで履歴をクリーン、ダッシュボードのバックスタックは維持、通知やドロップダウンはフィードと連動。',
 
-  'features.comments.title': 'チャット＆コメント',
-  'features.comments.desc': '一般的な議論用のグループチャットに加え、個別の費用へのコメント機能。「追加のナチョス頼んだの誰？」会話は適切な場所で。',
+  'features.comments.title': 'どこでも絵文字',
+  'features.comments.desc': '費用、コメント、精算で同じ絵文字ピッカー、集計カウント、ハイライト状態、トグルUXを共有。責任追及だって楽しくできます。',
 
-  'features.edit.title': 'ミスを修正',
-  'features.edit.desc': '金額を間違えた？作成後でも費用を編集できます。分割方法の変更、日付の修正、説明の更新。ストレスなし。',
+  'features.edit.title': '実際にリリースされる設定',
+  'features.edit.desc': 'グループごとのIDエイリアス、名前変更/説明/削除＋確認付きの一般設定、セキュリティプリセット、メンバー権限エディター、管理者専用タブで保護されたロックトグル。',
 
-  'features.noTracking.title': 'トラッキングなし',
-  'features.noTracking.desc': 'アナリティクスなし。トラッキングピクセルなし。データ収集なし。あなたが何にお金を使っているか知りませんし、知りたくもありません。',
+  'features.noTracking.title': 'トラッカーなし。完全なリスペクト。',
+  'features.noTracking.desc': 'ポリシー同意モーダル、Cookie/規約/プライバシーの取得、警告バナー、広告やトラッカーは一切なし。アナグマたちをフレンドリーに保つために必要なものだけを保存します。',
 
   // Coming soon section
   'comingSoon.title': '近日公開',
@@ -96,23 +96,23 @@ export default {
   'littleThings.title': '大切な小さなこと',
   'littleThings.subtitle': '割り勘を実際に快適にする細部へのこだわり。',
 
-  'littleThings.dates.title': 'クイック日付',
-  'littleThings.dates.desc': '「今日」「昨日」「昨夜」ボタン。夕食のために日付ピッカーを使いたい人はいないから。',
+  'littleThings.dates.title': 'ディープリンク＆ルーティング',
+  'littleThings.dates.desc': '直接URLでモーダルを開く（費用詳細、費用追加、精算）。Escapeで履歴を復元、ハッシュアンカーで戻るボタンを壊さずにセクションを自動展開。',
 
-  'littleThings.amounts.title': '最近の金額',
-  'littleThings.amounts.desc': 'よく使う金額がクイック選択で表示されます。家賃はいつも同じ？ワンタップ。',
+  'littleThings.amounts.title': '参加＆登録の磨き込み',
+  'littleThings.amounts.desc': 'ログイン/登録/リセットフローで戻りURLを保持、ポリシーチェックボックスで送信をゲート、バナーで再認証メール送信、認証リダイレクトでフリーローダーをブロック。',
 
-  'littleThings.names.title': 'なりたい自分に',
-  'littleThings.names.desc': 'グループごとに異なる表示名。家族では「ママ」、職場では「花子」、友達とは「パーティーアニマル」。',
+  'littleThings.names.title': 'アクセシビリティを標準装備',
+  'littleThings.names.desc': 'フォーカストラップ、自動フォーカスターゲット、閉じた時のフォーカス復元、スクリーンリーダー用スキップリンク、無効アクション時のツールチップ、アラビア語などのRTL対応レイアウト。',
 
-  'littleThings.archive.title': '古いグループをアーカイブ',
-  'littleThings.archive.desc': '旅行が終わった？アーカイブ。グループは安全に保存されつつ邪魔にならない。いつでも復元可能。',
+  'littleThings.archive.title': 'ライフサイクル管理',
+  'littleThings.archive.desc': 'ダッシュボードのクイックアクションからアーカイブ/解除、未精算残高を警告するグループ退出フロー、危険なボタンを無効化するロック済みグループバナー。',
 
-  'littleThings.celebrations.title': 'お祝い',
-  'littleThings.celebrations.desc': '全員が精算完了すると紙吹雪が出ます。小さなことが大切です。',
+  'littleThings.celebrations.title': '大切なシグナル',
+  'littleThings.celebrations.desc': 'メール認証バナー、警告バー、トースト確認、状態を保持するダイアログ、通知ドロップダウンで全員が最新情報を把握。',
 
-  'littleThings.everywhere.title': 'どこでも動作',
-  'littleThings.everywhere.desc': 'デスクトップ、タブレット、スマートフォン。アプリのダウンロード不要。ブラウザで動きます。',
+  'littleThings.everywhere.title': 'レスポンシブページネーション',
+  'littleThings.everywhere.desc': 'ダッシュボードのページング、コメント/費用の「もっと読み込む」ボタン、モバイル最適化コントロール、データが裏で変わった時の即時リフレッシュ。',
 
   // Why free section
   'whyFree.title': 'なぜ無料？',
@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': '5,000円の夕食代を割り勘するだけでも十分面倒なのに、ミールキットの広告は不要です。',
 
   'whyFree.badgers.title': 'ただのアナグマ',
-  'whyFree.badgers.desc': 'Side Badgerは無料でプライバシー第一の割り勘アプリです。隠しごとはありません。ただの雰囲気とアナグマです。',
+  'whyFree.badgers.desc': 'Side Badgerは無料でプライバシー第一の割り勘アプリです。裏の意図はありません。ただの雰囲気とアナグマです。',
 
   // CTA section
   'cta.title': '割り勘する準備はできた？',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'よくある質問',
   'pricing.faq.q1.question': '本当に無料ですか？',
-  'pricing.faq.q1.answer': 'はい、現在は完全に無料です。機能を有料化していません。みんながストレスなく割り勘できるよう、新機能を届けながら無料のままにしています。',
+  'pricing.faq.q1.answer': 'はい、今は完全に無料です。機能を有料の壁の後ろに隠していません。新しいものを届けながら、誰もがストレスなく割り勘できるように無料を維持しています。',
   'pricing.faq.q2.question': '何か裏がありますか？',
-  'pricing.faq.q2.answer': '裏はありません。Side Badgerは割り勘をシンプルでプライベートで楽しいものにするために存在します。それだけです。',
+  'pricing.faq.q2.answer': '裏はありません。Side Badgerは割り勘をシンプルでプライベートで楽しくするために存在します。それだけです。',
   'pricing.faq.q3.question': '私のデータを売りますか？',
   'pricing.faq.q3.answer': '絶対に売りません。アプリの運用に必要なもの以上の個人データは収集しません。トラッカーゼロ、アナリティクスピクセルゼロ、あなたの買い物習慣への興味ゼロです。',
   'pricing.faq.q4.question': 'なぜアナグマ？',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'ビジネスに使えますか？',
   'pricing.faq.q5.answer': 'もちろん！小規模ビジネスやチームの共有費用を追跡したいなら、どうぞ。無料です。気にしませんよ。',
   'pricing.faq.q6.question': 'バグを見つけたら？',
-  'pricing.faq.q6.answer': 'まず、私たちのコードにバグがあるなんてよく言えましたね。次に、ええ、たぶんあります。猛スピードでリリースしているので、やさしくしてください。',
+  'pricing.faq.q6.answer': 'まず、私たちのコードにバグがあるなんて失礼な。次に、ええ、たぶんあります。猛スピードでリリースしているので、やさしくしてください。',
 
   // Policy pages
   'policy.privacy.title': 'プライバシーポリシー',

@@ -29,49 +29,49 @@ export default {
   'hero.title': 'Rhannwch gostau fel',
   'hero.titleHighlight': 'mochyn daear ochr',
   'hero.titleDisclaimer': '',
-  'hero.subtitle': "Y rhannwr costau cwbl am ddim, heb olrhain, heb hysbysebion, sy'n amheus o dda. Dydyn ni ddim eisiau eich data. Dydyn ni ddim eisiau eich arian. Rydyn ni jest eisiau i chi rannu biliau gyda'ch ffrindiau heb grio.",
+  'hero.subtitle': "Mewnwelediad dangosfwrdd amser real, adweithiau wedi'u pweru gan emoji, dolenni gwahodd sy'n adfywio ar alw, a ffurflen gostau syfrdanol o glyfar. Popeth mae'r ap yn ei wneud mewn gwirionedd, wedi'i osod allan i bobl.",
   'hero.cta': '...gwnewch fi\'n fochyn daear ochr',
 
   // Features section
-  'features.title': 'Popeth Sydd Ei Angen Arnoch',
-  'features.subtitle': 'Yr holl nodweddion. Dim olrhain. Dim angen PhD.',
+  'features.title': 'Tu Mewn i Side Badger',
+  'features.subtitle': "Rhestr guradiedig o'r pwerau go iawn, parod i'w cludo sy'n aros yn y dangosfwrdd.",
 
   // Feature cards
-  'features.groups.title': 'Grwpiau ar gyfer Popeth',
-  'features.groups.desc': 'Cyd-letywyr, teithiau, digwyddiadau, partïon D&D. Crëwch gymaint o grwpiau ag sydd ei angen a chadwch gostau wedi\'u trefnu.',
+  'features.groups.title': 'Dangosfwrdd amser real',
+  'features.groups.desc': 'Ffrwd weithgaredd gyfoethog gyda chopi "Chi", tabiau wedi\'u harchifo/gweithredol, cardiau grŵp wedi\'u caboli ar hofran, llwythwyr sgerbwd, tudalennu, cyflyrau gwag, ac adfer gwallau ar draws bwrdd gwaith a symudol.',
 
-  'features.invites.title': 'Gwahoddiadau Hawdd',
-  'features.invites.desc': 'Rhannwch ddolen, mae ffrindiau\'n ymuno. Dim angen lawrlwytho ap. Dewis i fynnu cymeradwyaeth cyn i aelodau newydd ymuno.',
+  'features.invites.title': 'Dolenni rhannu + gwahoddiadau QR',
+  'features.invites.desc': 'Mae gan bob cerdyn grŵp fodal rhannu gydag URLs byr, codau QR, tocynnau adfywio, adborth clipfwrdd, dolenni ymwybodol o iaith, a thudalen lanio sy\'n trin cymeradwyaethau/aelodau ar y gweill yn raslon.',
 
-  'features.roles.title': 'Caniatadau Addasadwy',
-  'features.roles.desc': 'Rheolwch pwy sy\'n gallu ychwanegu costau, setlo, neu jest gwylio o\'r ochr. Eich grŵp chi, eich rheolau chi.',
+  'features.roles.title': 'Caniatadau cyfeillgar i gloi',
+  'features.roles.desc': 'Rheolau diogelwch rhagosodedig vs personol, dewislenni rôl aelodau, cymedroli gwahoddiadau ar y gweill, togl cloi, hidlwyr "cynnwys wedi\'u dileu", a gosodiadau i weinyddwyr yn unig fel bod anhrefn yn aros o dan reolaeth.',
 
-  'features.splits.title': 'Tair Ffordd i Rannu',
-  'features.splits.desc': 'Cyfartal (rhannu\'n gyfartal), Union (symiau penodol), neu Canran. Dewiswch beth sy\'n gweithio i\'ch grŵp. Pwy sydd ddim yn hoffi rhannu tair ffordd?',
+  'features.splits.title': 'Ffurflen gostau chwerthinllyd o glyfar',
+  'features.splits.desc': 'Rhannau cyfartal/union/personol gyda thrin newidiadau heb eu cadw, dewiswr aml-arian, dosrannu dolenni Google Maps, sglodion labeli, uwchlwythwr derbynebau, llwybrau byr symiau diweddar, a diogelwch costau wedi\'u cloi.',
 
-  'features.participants.title': "Dewiswch Pwy Sy'n Rhan",
-  'features.participants.desc': `Nid yw pawb yn rhannu popeth. Dewiswch yn union pwy sy'n rhan o bob cost. "Dim ond salad ges i" nawr yn opsiwn.`,
+  'features.participants.title': 'Edafedd, ffeiliau ac adweithiau',
+  'features.participants.desc': 'Mae sylwadau costau a grwpiau yn cefnogi atodiadau, toglo emoji, tudalennu, a diweddariadau amser real, felly mae cynllunio\'r daith nesaf yn digwydd yn union wrth ymyl y rhifau.',
 
-  'features.currency.title': 'Unrhyw Arian Cyfred',
-  'features.currency.desc': 'USD, EUR, JPY, GBP, beth bynnag. Cefnogaeth lawn i bob arian cyfred gyda thrin degolion cywir. Dewis cyflym o\'r rhai diweddar.',
+  'features.currency.title': 'Rhwystrau arian cyfred',
+  'features.currency.desc': 'Gall gweinyddwyr gloi grwpiau i arian cyfred cymeradwy, dewis rhagosodiadau, cadw hen rai ar gyfer hen gostau, a dal i adael i dderbynebau aml-arian lifo pan fydd eu hangen arnoch.',
 
-  'features.balances.title': 'Balansau Symlach',
-  'features.balances.desc': "Mae symleiddio dyled clyfar yn lleihau nifer y taliadau sydd eu hangen. Yn lle pawb yn talu pawb, rydyn ni'n darganfod y llwybr byrraf i setlo.",
+  'features.balances.title': 'Balansau y gallwch ymddiried ynddynt',
+  'features.balances.desc': 'Mae paneli balans bob amser ymlaen yn dangos dyledion wedi\'u hoptimeiddio, cadarnhadau "popeth wedi\'i setlo", a hidlwyr i ddatgelu dyledion anuniongyrchol fel nad oes neb yn dadlau am bwy sy\'n ddyledus i bwy.',
 
-  'features.settle.title': 'Setlo Un Clic',
-  'features.settle.desc': 'Gweld dyled? Tapiwch "Setlo Cyflym" a\'i farcio fel wedi\'i dalu. Gorffen. Confetti yn ddewisol ond yn argymelledig iawn.',
+  'features.settle.title': 'Setlo cyflym + hanes',
+  'features.settle.desc': 'Mae botymau setlo un tap yn lansio ffurflenni wedi\'u llenwi ymlaen llaw gyda dilysiad ar gyfer gor-/tan-daliadau, mae teils hanes yn dangos golygiadau, mae cloeon yn gorfodi darllen yn unig, ac mae adweithiau\'n cadw ad-daliadau\'n chwareus.',
 
-  'features.activity.title': 'Ffrwd Gweithgaredd',
-  'features.activity.desc': `Gwelwch bopeth sy'n digwydd: costau newydd, setliadau, aelodau'n ymuno. Arhoswch mewn sync gyda'ch grŵp heb ofyn "aros, beth ddigwyddodd?"`,
+  'features.activity.title': 'Dolen-ddwfn popeth',
+  'features.activity.desc': 'Mae URLs fel /groups/:id/add-expense yn agor moddau\'n awtomatig, mae Escape yn glanhau hanes, mae pentyrrau ôl y dangosfwrdd yn aros yn gyfan, ac mae hysbysiadau/dewislenni\'n adlewyrchu\'r ffrwd.',
 
-  'features.comments.title': 'Sgwrsio a Sylwadau',
-  'features.comments.desc': 'Sgwrs grŵp ar gyfer trafodaeth gyffredinol, ynghyd â sylwadau ar gostau unigol. "Pwy archebodd y nachos ychwanegol?" Cadwch y sgwrs lle mae\'n perthyn.',
+  'features.comments.title': 'Emoji ym mhobman',
+  'features.comments.desc': 'Mae costau, sylwadau a setliadau\'n rhannu\'r un dewiswr emoji, cyfrif cyfanredol, cyflyrau amlygu, a UX toglo—oherwydd gall atebolrwydd fod yn hwyl o hyd.',
 
-  'features.edit.title': 'Cywiro Camgymeriadau',
-  'features.edit.desc': 'Wedi rhoi\'r swm anghywir? Golygwch gostau ar ôl eu creu. Newidiwch y rhaniad, cywirwch y dyddiad, diweddarwch ddisgrifiadau. Dim straen.',
+  'features.edit.title': 'Gosodiadau sy\'n cludo mewn gwirionedd',
+  'features.edit.desc': 'Aliasau hunaniaeth fesul grŵp, gosodiadau cyffredinol gydag ailenwi/disgrifio/dileu + cadarnhadau, rhagosodiadau diogelwch, golygyddion rôl aelodau, a thoglau cloi wedi\'u gwarchod y tu ôl i dabiau i weinyddwyr yn unig.',
 
-  'features.noTracking.title': 'Dim Olrhain',
-  'features.noTracking.desc': "Dim dadansoddeg. Dim picseli olrhain. Dim cynaeafu data. Dydyn ni ddim yn gwybod ar beth rydych chi'n gwario arian, ac rydyn ni'n hoffi hynny.",
+  'features.noTracking.title': 'Dim olrheinwyr. Parch llawn.',
+  'features.noTracking.desc': 'Moddau derbyn polisi, cyrchu cwcis/telerau/preifatrwydd, baneri rhybudd, a dim hysbysebion nac olrheinwyr. Dim ond yr hyn sy\'n cadw\'r moch daear yn gyfeillgar rydyn ni\'n ei storio.',
 
   // Coming soon section
   'comingSoon.title': 'Yn Dod yn Fuan',
@@ -96,23 +96,23 @@ export default {
   'littleThings.title': 'Pethau Bach sy\'n Bwysig',
   'littleThings.subtitle': 'Y manylion sy\'n gwneud rhannu costau\'n bleserus mewn gwirionedd.',
 
-  'littleThings.dates.title': 'Dyddiadau Cyflym',
-  'littleThings.dates.desc': 'Botymau "Heddiw", "Ddoe", a "Neithiwr". Oherwydd does neb eisiau defnyddio dewiswr dyddiad ar gyfer swper.',
+  'littleThings.dates.title': 'Dolenni dwfn a llwybro',
+  'littleThings.dates.desc': 'Mae URLs uniongyrchol yn agor moddau (manylion costau, ychwanegu costau, setliadau), mae Escape yn adfer hanes, ac mae angorau hash yn ehangu adrannau\'n awtomatig heb dorri\'r botwm nôl.',
 
-  'littleThings.amounts.title': 'Symiau Diweddar',
-  'littleThings.amounts.desc': 'Mae\'r symiau rydych chi\'n eu defnyddio\'n aml yn ymddangos ar gyfer dewis cyflym. Ydy\'r rhent yr un peth bob tro? Un tap.',
+  'littleThings.amounts.title': 'Sglein ymuno + cofrestru',
+  'littleThings.amounts.desc': 'Mae URLs dychwelyd yn goroesi llifoedd mewngofnodi/cofrestru/ailosod, mae blychau ticio polisi yn giatio cyflwyniadau, mae ailyrru dilysu yn byw mewn baneri, ac mae ailgyfeiriadau dilysu yn cadw elwyr allan.',
 
-  'littleThings.names.title': 'Byddwch Pwy Bynnag Rydych Chi Eisiau',
-  'littleThings.names.desc': 'Enw arddangos gwahanol fesul grŵp. "Mam" yn y teulu, "Sara" yn y gwaith, "Anifail Parti" gyda ffrindiau.',
+  'littleThings.names.title': 'Hygyrchedd wedi\'i bobi i mewn',
+  'littleThings.names.desc': 'Trapiau ffocws, targedau awtoffocws, ffocws wedi\'i adfer ar gau, dolenni neidio darllenwr sgrin, awgrymiadau ar weithredoedd wedi\'u hanalluogi, a chynlluniau ymwybodol o RTL ar gyfer ieithoedd fel Arabeg.',
 
-  'littleThings.archive.title': 'Archifo Hen Grwpiau',
-  'littleThings.archive.desc': 'Taith drosodd? Archifwch hi. Mae\'r grŵp yn aros yn ddiogel ond allan o\'ch ffordd. Dewch â hi\'n ôl unrhyw bryd.',
+  'littleThings.archive.title': 'Rheolyddion cylch bywyd',
+  'littleThings.archive.desc': 'Archifo/dadarchifo o weithredoedd cyflym y dangosfwrdd, llifoedd gadael-grŵp sy\'n rhybuddio am falansau agored, a baneri grŵp wedi\'u cloi sy\'n analluogi botymau peryglus.',
 
-  'littleThings.celebrations.title': 'Dathliadau',
-  'littleThings.celebrations.desc': "Pan fydd pawb wedi setlo, rydych chi'n cael confetti. Y pethau bach sy'n cyfrif.",
+  'littleThings.celebrations.title': 'Signalau sy\'n bwysig',
+  'littleThings.celebrations.desc': 'Mae baneri dilysu e-bost, bariau rhybudd, cadarnhadau tost, deialogau sy\'n cadw cyflwr, a dewislenni hysbysiadau yn cadw pawb yn y ddolen.',
 
-  'littleThings.everywhere.title': 'Yn Gweithio Ym Mhobman',
-  'littleThings.everywhere.desc': 'Bwrdd gwaith, tabled, ffôn. Dim ap i\'w lawrlwytho. Jest yn gweithio yn eich porwr.',
+  'littleThings.everywhere.title': 'Tudalennu ymatebol',
+  'littleThings.everywhere.desc': 'Tudalennu dangosfwrdd, botymau "llwytho mwy" sylwadau/costau, rheolyddion wedi\'u hoptimeiddio ar gyfer symudol, ac adnewyddiadau ar unwaith pan fydd data\'n newid y tu ôl i\'r llenni.',
 
   // Why free section
   'whyFree.title': 'Pam mae am ddim?',
@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': 'Mae rhannu bil swper £47.23 yn ddigon annifyr heb hysbysebion ar gyfer tanysgrifiadau pecynnau bwyd.',
 
   'whyFree.badgers.title': 'Dim ond Moch Daear',
-  'whyFree.badgers.desc': 'Ap rhannu costau am ddim yw Side Badger sy\'n rhoi preifatrwydd yn gyntaf. Dim agenda gudd. Dim ond vibes a moch daear.',
+  'whyFree.badgers.desc': 'Ap rhannu costau am ddim yw Side Badger sy\'n rhoi preifatrwydd yn gyntaf. Dim agenda gudd. Dim ond awyrgylch a moch daear.',
 
   // CTA section
   'cta.title': 'Yn barod i rannu biliau?',
@@ -176,8 +176,8 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Cwestiynau y Gallech Fod Gennych',
   'pricing.faq.q1.question': 'Ydy e wir am ddim?',
-  'pricing.faq.q1.answer': "Ie, ar hyn o bryd mae\'n hollol rhad ac am ddim. Dydyn ni ddim yn cuddio nodweddion y tu ôl i wal dalu. Rydyn ni\'n ei gadw\'n rhad ac am ddim oherwydd mae pawb yn haeddu rhannu biliau heb straen tra rydyn ni\'n parhau i lansio pethau newydd.",
-  'pricing.faq.q2.question': "Beth yw\'r trap?",
+  'pricing.faq.q1.answer': "Ydy, ar hyn o bryd mae'n gwbl am ddim. Dydyn ni ddim yn cuddio nodweddion y tu ôl i wal dalu. Rydyn ni'n ei gadw'n rhad ac am ddim oherwydd mae pawb yn haeddu rhannu biliau heb straen tra rydyn ni'n cludo pethau newydd.",
+  'pricing.faq.q2.question': "Beth yw'r trap?",
   'pricing.faq.q2.answer': "Dim tric. Mae Side Badger yn bodoli i wneud rhannu costau yn syml, yn breifat ac yn hwyl. Dyna'r stori gyfan.",
   'pricing.faq.q3.question': 'A fyddwch chi\'n gwerthu fy nata?',
   'pricing.faq.q3.answer': "Yn bendant ddim. Dydyn ni ddim yn casglu data personol y tu hwnt i\'r hyn sy\'n angenrheidiol i redeg yr ap. Mae gennym ni ddim olrheinwyr, dim picseli dadansoddeg, a dim diddordeb yn eich arferion siopa.",
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'Alla i ddefnyddio hwn ar gyfer fy musnes?',
   'pricing.faq.q5.answer': "Wrth gwrs! Os ydych chi eisiau olrhain costau a rennir ar gyfer eich busnes bach neu dîm, ewch amdani. Mae am ddim. Fyddwn ni ddim yn barnu.",
   'pricing.faq.q6.question': 'Beth os bydda i\'n dod o hyd i fyg?',
-  'pricing.faq.q6.answer': "Yn gyntaf oll, sut wyt ti\'n meiddio awgrymu bod gan ein cod chwilod. Yn ail, ie mae\'n debyg bod rhai. Rydyn ni\'n cludo\'n gyflym, felly bydd yn dyner gyda ni.",
+  'pricing.faq.q6.answer': "Yn gyntaf oll, sut wyt ti'n meiddio awgrymu bod gan ein cod chwilod. Yn ail, ydy mae'n debyg bod rhai. Rydyn ni'n cludo'n gyflym, felly byddwch yn dyner gyda ni.",
 
   // Policy pages
   'policy.privacy.title': 'Polisi Preifatrwydd',

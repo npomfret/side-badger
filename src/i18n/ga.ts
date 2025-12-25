@@ -29,49 +29,49 @@ export default {
   'hero.title': 'Roinn costais cosúil le',
   'hero.titleHighlight': 'broc taobh',
   'hero.titleDisclaimer': '',
-  'hero.subtitle': "An roinnteoír costais atá saor in aisce go hiomlán, gan rianú, gan fógraí, atá go hiontach amhrasach. Níl do chuid sonraí uainn. Níl d'airgead uainn. Níl uainn ach go roinnfidh tú billí le do chairde gan caoineadh.",
+  'hero.subtitle': 'Léargas fíor-ama ar an deais, imoibriúcháin lán de emoji, naisc chuiridh a athghintear ar éileamh, agus foirm costais atá cliste go suntasach. Gach rud a dhéanann an aip i ndáiríre, leagtha amach do dhaoine.',
   'hero.cta': '...déan broc taobh díom',
 
   // Features section
-  'features.title': 'Gach Rud a Theastaíonn Uait',
-  'features.subtitle': 'Na gnéithe go léir. Gan rianú ar bith. Níl PhD ag teastáil.',
+  'features.title': 'Istigh i Side Badger',
+  'features.subtitle': 'Liosta roghnaithe de na cumhachtaí fíora, inseachadta atá ag fanacht sa deais.',
 
   // Feature cards
-  'features.groups.title': 'Grúpaí do Gach Rud',
-  'features.groups.desc': 'Comhchónaitheoirí, turais, imeachtaí, páirtithe D&D. Cruthaigh an oiread grúpaí agus a theastaíonn agus coinnigh costais eagraithe.',
+  'features.groups.title': 'Deais fíor-ama',
+  'features.groups.desc': 'Fotha gníomhaíochta saibhir le cóip "Tusa", cluaisíní cartlainne/gníomhacha, cártaí grúpa snasta le hover, lódálaithe cnámharlaigh, leathanaigh, staideanna folmha, agus téarnamh earráide ar fud deisce agus móibíleach.',
 
-  'features.invites.title': 'Cuirí Éasca',
-  'features.invites.desc': 'Comhroinn nasc, téann cairde isteach. Ní gá aip a íoslódáil. Rogha ceadú a éileamh sula féidir le baill nua teacht isteach.',
+  'features.invites.title': 'Naisc chomhroinnte + cuirí QR',
+  'features.invites.desc': 'Tá móid comhroinnte ag gach cárta grúpa le URLanna gearra, cóid QR, comharthaí athghinte, aiseolas ghearrthaisce, naisc atá feasach ar theanga, agus leathanach tuirlingthe a láimhseálann ceaduithe/baill ar feitheamh go séimh.',
 
-  'features.roles.title': 'Ceadanna Inathraithe',
-  'features.roles.desc': 'Rialaigh cé atá in ann costais a chur leis, socraigh suas, nó díreach féachaint ón taobhlíne. Do ghrúpa, do rialacha.',
+  'features.roles.title': 'Ceadanna atá cairdiúil do ghlasáil',
+  'features.roles.desc': 'Rialacha slándála réamhshocraithe vs saincheaptha, roghchláir anuas do róil ball, modhnóireacht cuiridh ar feitheamh, scoráin ghlais, scagairí "cuir baill scriosta san áireamh", agus socruithe do riarthóirí amháin ionas go bhfanann an t-anord faoi smacht.',
 
-  'features.splits.title': 'Trí Bhealach le Roinnt',
-  'features.splits.desc': 'Cothrom (roinn go cothrom), Cruinn (méideanna sonracha), nó Céatadán. Roghnaigh an ceann a oibríonn do do ghrúpa. Cé nach maith le duine roinnt trí bhealach?',
+  'features.splits.title': 'Foirm costais atá dochreidte cliste',
+  'features.splits.desc': 'Roinntí cothroma/cruinne/saincheaptha le láimhseáil athruithe neamhshábháilte, roghnóir ilairgeadra, parsáil nasc Google Maps, sceallóga lipéad, uaslódálaí admhálacha, aicearraí méideanna le déanaí, agus cosaintí costais glasáilte.',
 
-  'features.participants.title': "Roghnaigh Cé atá Páirteach",
-  'features.participants.desc': `Ní roinneann gach duine gach rud. Roghnaigh go beacht cé atá páirteach i ngach costas. "Ní raibh agam ach sailéad" anois mar rogha.`,
+  'features.participants.title': 'Snáitheanna, comhaid & imoibriúcháin',
+  'features.participants.desc': 'Tacaíonn tráchtanna costais agus grúpa le ceangaltáin, scoráin emoji, leathanaigh, agus nuashonruithe fíor-ama, ionas go dtarlaíonn pleanáil an chéad turais eile díreach in aice leis na huimhreacha.',
 
-  'features.currency.title': 'Airgeadra ar Bith',
-  'features.currency.desc': 'USD, EUR, JPY, GBP, cibé rud. Tacaíocht iomlán do gach airgeadra le láimhseáil cheart deachúil. Rogha thapa ó na cinn a úsáideadh le déanaí.',
+  'features.currency.title': 'Cosaintí airgeadra',
+  'features.currency.desc': 'Is féidir le riarthóirí grúpaí a ghlasáil chuig airgeadraí ceadaithe, réamhshocruithe a roghnú, cinn oidhreachta a chaomhnú do sheanchostais, agus fós admhálacha ilairgeadra a ligean sreabhadh nuair a theastaíonn siad.',
 
-  'features.balances.title': 'Iarmhéideanna Simplithe',
-  'features.balances.desc': "Laghdaíonn simpliú cliste fiachais an líon íocaíochtaí atá ag teastáil. In ionad go n-íocfadh gach duine gach duine, faighimid amach an bealach is giorra go socraithe.",
+  'features.balances.title': 'Iarmhéideanna ar féidir muinín a bheith agat astu',
+  'features.balances.desc': 'Taispeánann painéil iarmhéide atá i gcónaí ar siúl fiachais optamaithe, deimhnithe "socraithe go léir", agus scagairí chun fiachais indíreacha a nochtadh ionas nach mbeidh argóint ag aon duine faoi cé atá i bhfiacha cé.',
 
-  'features.settle.title': 'Socraigh le Clic Amháin',
-  'features.settle.desc': 'Feiceann tú fiachas? Tapáil "Socraigh Go Tapa" agus marcáil é mar íoctha. Déanta. Confetti roghnach ach molta go mór.',
+  'features.settle.title': 'Socraigh go tapa + stair',
+  'features.settle.desc': 'Seolann cnaipí socraíochta aon-tapála foirmeacha réamhlíonta le bailíochtú do ró-íocaíochtaí/fo-íocaíochtaí, taispeánann tíleanna staire eagarthóireachtaí, forfheidhmíonn glasálacha inléite-amháin, agus coinníonn imoibriúcháin aisíocaíochtaí spraíúil.',
 
-  'features.activity.title': 'Fotha Gníomhaíochta',
-  'features.activity.desc': `Feic gach rud a tharlaíonn: costais nua, socraíochtaí, baill ag teacht isteach. Fan i sioncronú le do ghrúpa gan a fhiafraí "fan, cad a tharla?"`,
+  'features.activity.title': 'Domhainnasc gach rud',
+  'features.activity.desc': 'Osclaíonn URLanna cosúil le /groups/:id/add-expense módúil go huathoibríoch, glanann Escape stair, fanann cruacha siar deaise slán, agus scáthánaíonn fógraí/roghchláir anuas an fotha.',
 
-  'features.comments.title': 'Comhrá & Nótaí Tráchta',
-  'features.comments.desc': 'Comhrá grúpa le haghaidh plé ginearálta, móide nótaí tráchta ar chostais aonair. "Cé a d\'ordaigh na nachos breise?" Coinnigh an comhrá san áit cheart.',
+  'features.comments.title': 'Emoji i ngach áit',
+  'features.comments.desc': 'Comhroinneann costais, tráchtanna, agus socraíochtaí an roghnóir emoji céanna, comhairimh chomhiomlánaithe, staideanna buaicphointe, agus UX scoráin - mar is féidir le cuntasacht a bheith spraíúil fós.',
 
-  'features.edit.title': 'Ceartaigh Botúin',
-  'features.edit.desc': 'Chuir tú an méid mícheart isteach? Cuir costais in eagar tar éis a gcruthaithe. Athraigh an roinnt, ceartaigh an dáta, nuashonraigh cur síos. Gan strus.',
+  'features.edit.title': 'Socruithe a sheoltar i ndáiríre',
+  'features.edit.desc': 'Ailiasnna aitheantais in aghaidh an ghrúpa, socruithe ginearálta le hathainmniú/cur síos/scriosadh + deimhnithe, réamhshocruithe slándála, eagarthóirí róil ball, agus scoráin ghlais faoi chosaint ag cluaisíní riarthóra-amháin.',
 
-  'features.noTracking.title': 'Gan Rianú',
-  'features.noTracking.desc': "Gan anailísíocht. Gan picteilíní rianaithe. Gan bailiú sonraí. Níl a fhios againn cad air a gcaitheann tú airgead, agus is maith linn é sin.",
+  'features.noTracking.title': 'Gan rianairí. Meas iomlán.',
+  'features.noTracking.desc': 'Módúil glacadh polasaí, faisnéis fianán/téarmaí/príobháideachta, meirgí rabhaidh, agus náid fógraí nó rianairí. Ní stórálaimid ach an méid a choinníonn na brocacha cairdiúil.',
 
   // Coming soon section
   'comingSoon.title': 'Ag Teacht Go Luath',
@@ -96,23 +96,23 @@ export default {
   'littleThings.title': 'Rudaí Beaga a Bhfuil Tábhacht Leo',
   'littleThings.subtitle': 'Na sonraí a dhéanann roinnt costais taitneamhach i ndáiríre.',
 
-  'littleThings.dates.title': 'Dátaí Tapa',
-  'littleThings.dates.desc': 'Cnaipí "Inniu", "Inné", agus "Aréir". Mar nach bhfuil roghnóir dáta ag teastáil ó aon duine le haghaidh dinnéir.',
+  'littleThings.dates.title': 'Domhainnaisc & ródú',
+  'littleThings.dates.desc': 'Osclaíonn URLanna díreacha módúil (sonraí costais, cuir costas leis, socraíochtaí), athchóiríonn Escape stair, agus leathnaíonn hais-ancairí rannóga go huathoibríoch gan an cnaipe ar ais a bhriseadh.',
 
-  'littleThings.amounts.title': 'Méideanna a Úsáidtear Go Minic',
-  'littleThings.amounts.desc': 'Taispeántar na méideanna a úsáideann tú go minic le roghnú tapa. An bhfuil an cíos mar an gcéanna i gcónaí? Tapáil amháin.',
+  'littleThings.amounts.title': 'Snasú clárúcháin + teacht isteach',
+  'littleThings.amounts.desc': 'Maireann URLanna fillidh tríd sreabha logáil isteach/clárú/athshocrú, cuireann ticthaí polasaí cosc ar aighneachtaí, cónaíonn athsheoladh fíorúcháin i meirgí, agus coinníonn atreoruithe údarúcháin saorchosantóirí amach.',
 
-  'littleThings.names.title': 'Bí Cé Ba Mhaith Leat',
-  'littleThings.names.desc': 'Ainm taispeána difriúil in aghaidh an ghrúpa. "Mamaí" sa teaghlach, "Síle" ag an obair, "Ainmhí Cóisire" le cairde.',
+  'littleThings.names.title': 'Inrochtaineacht fuinte isteach',
+  'littleThings.names.desc': 'Gaistí fócais, spriocanna uathfhócais, fócas athchóirithe ar dhúnadh, naisc scipeála do léitheoirí scáileáin, leideanna uirlise ar ghníomhartha díchumasaithe, agus leaganacha amach atá feasach ar RTL do theangacha cosúil le hAraibis.',
 
-  'littleThings.archive.title': 'Cartlannaigh Seanghrúpaí',
-  'littleThings.archive.desc': 'Turas thart? Cartlannaigh é. Fanann an grúpa slán ach as do bhealach. Tabhair ar ais am ar bith é.',
+  'littleThings.archive.title': 'Rialuithe saolré',
+  'littleThings.archive.desc': 'Cartlannaigh/díchartlannaigh ó ghníomhartha tapa deaise, sreabha fág-grúpa a thugann rabhadh faoi iarmhéideanna oscailte, agus meirgí grúpa-glasáilte a dhíchumasaíonn cnaipí riosúla.',
 
-  'littleThings.celebrations.title': 'Ceiliúradh',
-  'littleThings.celebrations.desc': "Nuair atá gach duine socraithe suas, faigheann tú confetti. Is iad na rudaí beaga.",
+  'littleThings.celebrations.title': 'Comharthaí a bhfuil tábhacht leo',
+  'littleThings.celebrations.desc': 'Meirgí fíorúcháin ríomhphoist, barraí rabhaidh, deimhnithe tósta, dialóga a chaomhnaíonn staid, agus roghchláir anuas fógraí a choinníonn gach duine ar an eolas.',
 
-  'littleThings.everywhere.title': 'Oibríonn Sé Gach Áit',
-  'littleThings.everywhere.desc': 'Ríomhaire deisce, taibléad, fón. Gan aip le híoslódáil. Oibríonn sé díreach i do bhrabhsálaí.',
+  'littleThings.everywhere.title': 'Leathanaigh fhreagrúla',
+  'littleThings.everywhere.desc': 'Leathanaigh deaise, cnaipí "lódáil níos mó" do thráchtanna/chostais, rialuithe optamaithe do mhóibíleach, agus athnuachaintí láithreacha nuair a athraíonn sonraí taobh thiar den scáileán.',
 
   // Why free section
   'whyFree.title': 'Cén fáth go bhfuil sé saor in aisce?',
@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': 'Tá bille dinnéir €47.23 a roinnt crosta go leor gan fógraí do shíntiúis paca béile.',
 
   'whyFree.badgers.title': 'Díreach Brocacha',
-  'whyFree.badgers.desc': 'Is aip roinnte costais saor in aisce é Side Badger a chuireann príobháideachas ar dtús. Gan clár oibre folaithe. Díreach vibes agus brocacha.',
+  'whyFree.badgers.desc': 'Is aip roinnte costais saor in aisce é Side Badger a chuireann príobháideachas ar dtús. Gan clár oibre folaithe. Díreach vibeanna agus brocacha.',
 
   // CTA section
   'cta.title': 'Réidh le roinnt billí a dhéanamh?',
@@ -176,11 +176,11 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Ceisteanna a D\'fhéadfadh a Bheith Agat',
   'pricing.faq.q1.question': 'An bhfuil sé saor in aisce i ndáiríre?',
-  'pricing.faq.q1.answer': "Sea, faoi láthair tá sé saor in aisce go hiomlán. Ní cheilimíd gnéithe taobh thiar de bhalla íocaíochta. Coinnímid saor é mar go bhfuil gach duine i dteideal billí a roinnt gan strus agus muid ag seoladh rudaí nua.",
+  'pricing.faq.q1.answer': "Sea, faoi láthair tá sé saor in aisce go hiomlán. Níl gnéithe á gceilt againn taobh thiar de bhalla íocaíochta. Coinnímid saor in aisce é mar go bhfuil gach duine i dteideal billí a roinnt gan strus agus muid ag seoladh rudaí nua.",
   'pricing.faq.q2.question': "Cad é an gaiste?",
-  'pricing.faq.q2.answer': "Gan aon gaiste. Tá Side Badger ann chun roinnt costais a dhéanamh simplí, príobháideach agus spraíúil. Sin é an scéal ar fad.",
+  'pricing.faq.q2.answer': "Gan aon ghaiste. Tá Side Badger ann chun roinnt costais a dhéanamh simplí, príobháideach agus spraíúil. Sin an scéal ar fad.",
   'pricing.faq.q3.question': 'An ndíolfaidh sibh mo shonraí?',
-  'pricing.faq.q3.answer': "Cinnte nach ndíolfaidh. Ní bhailímid sonraí pearsanta lasmuigh de cad atá riachtanach chun an aip a rith. Tá náid rianairí againn, náid picteilíní anailísíochta, agus náid spéis i do nósanna siopadóireachta.",
+  'pricing.faq.q3.answer': "Go deimhin ní dhíolfaimid. Ní bhailímid sonraí pearsanta thar an méid atá riachtanach chun an aip a rith. Tá náid rianairí againn, náid picteilíní anailísíochta, agus náid spéis i do nósanna siopadóireachta.",
   'pricing.faq.q4.question': 'Cén fáth broc?',
   'pricing.faq.q4.answer': "Cén fáth NACH broc? Tá brocacha diongbháilte, acmhainneach, agus oibríonn siad go maith i ngrúpaí. Díreach cosúil leatsa nuair atá tú ag iarraidh a fháil amach cé atá i bhfiacha cad don Airbnb sin.",
   'pricing.faq.q5.question': 'An féidir liom é seo a úsáid do mo ghnó?',

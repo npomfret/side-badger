@@ -29,49 +29,49 @@ export default {
   'hero.title': 'Banatu gastuak',
   'hero.titleHighlight': 'azkonarra bezala',
   'hero.titleDisclaimer': '',
-  'hero.subtitle': 'Guztiz doakoa, jarraipenik gabeko, iragarkirik gabeko gastu banatzailea, susmagarriki ona dena. Ez dugu zure daturik nahi. Ez dugu zure dirurik nahi. Zure lagunekin fakturak banatu nahi dugu negar egin gabe.',
+  'hero.subtitle': 'Denbora errealeko aginte-panelaren ikuspegia, emoji bidezko erreakzioak, eskaeran birsortzen diren gonbidapen estekak, eta harrigarriro adimentsu den gastu formularioa. Aplikazioak benetan egiten duen guztia, gizakientzat azalduta.',
   'hero.cta': '...azkonarratu nazazu',
 
   // Features section
-  'features.title': 'Behar Duzun Guztia',
-  'features.subtitle': 'Ezaugarri guztiak. Jarraipen gabe. Doktoregoa behar gabe.',
+  'features.title': 'Side Badger-en Barruan',
+  'features.subtitle': 'Aginte-panelean zain dauden benetako ahalmen bidalkorraren zerrenda hautatu bat.',
 
   // Feature cards
-  'features.groups.title': 'Taldeak Guztirako',
-  'features.groups.desc': 'Gelakideak, bidaiak, ekitaldiak, D&D festak. Sortu behar dituzun talde guztiak eta mantendu gastuak antolatuta.',
+  'features.groups.title': 'Denbora errealeko aginte-panela',
+  'features.groups.desc': 'Jarduera-jario aberatsa "Zu" kopiarekin, artxibatutako/aktiboen fitxak, pasatzerakoan leundutako talde-txartelak, eskeletoko kargatzaileak, orrikatze-sistema, egoera hutsak eta erroreen berreskurapena mahaigainean eta mugikorrean.',
 
-  'features.invites.title': 'Gonbidapen Errazak',
-  'features.invites.desc': 'Partekatu esteka bat, lagunak elkartzen dira. Aplikaziorik deskargatu beharrik gabe. Aukeran, onartu behar da kide berriek sartu aurretik.',
+  'features.invites.title': 'Esteka laburrak + QR gonbidapenak',
+  'features.invites.desc': 'Talde-txartel bakoitzak partekatzeko modal bat du URL laburrekin, QR kodeekin, token birsorkuntza, arbelaren feedbacka, hizkuntzaren araberako estekak eta onespenak/kide zain daudenak dotore kudeatzen dituen lur-orria.',
 
-  'features.roles.title': 'Baimen Konfiguragarriak',
-  'features.roles.desc': 'Kontrolatu nork gehitu ditzakeen gastuak, nork kontura dezakeen, edo nork ikus dezakeen aldetik. Zure taldea, zure arauak.',
+  'features.roles.title': 'Blokeo-lagungarriak diren baimenak',
+  'features.roles.desc': 'Aurrez ezarritako vs segurtasun-arau pertsonalizatuak, kideen rolen goitibeherakoak, zain dauden gonbidapenen moderazioa, blokeo-aldagailuak, "ezabatutakoak sartu" iragazkiak eta administratzaileentzako soilik ezarpenak, kaosa kontrolatuta mantentzeko.',
 
-  'features.splits.title': 'Hiru Banatzeko Modu',
-  'features.splits.desc': 'Berdina (berdin banatu), Zehatza (zenbateko zehatzak), edo Ehunekoa. Aukeratu zure taldeari egokitzen zaiona. Nori ez zaio gustatzen 3-ko bat?',
+  'features.splits.title': 'Harrigarriro adimentsu den gastu formularioa',
+  'features.splits.desc': 'Banaketa berdina/zehatza/pertsonalizatua gorde gabeko aldaketen kudeaketarekin, moneta anitzeko hautatzailea, Google Maps esteka analizatzea, etiketa txipak, tiketen igotzailea, azken zenbatekoen lasterbideak eta blokeatutako gastuen babesak.',
 
-  'features.participants.title': 'Aukeratu Nor Dagoen',
-  'features.participants.desc': 'Ez da dena guztien artean banatzen. Aukeratu zehaztasunez nor dagoen gastu bakoitzean parte hartzen. "Nik entsalada bat bakarrik jan nuen" orain aukera bat da.',
+  'features.participants.title': 'Hariak, fitxategiak eta erreakzioak',
+  'features.participants.desc': 'Gastuen eta taldeen iruzkinek eranskinak, emoji aldagailuak, orrikatze-sistema eta denbora errealeko eguneraketak onartzen dituzte, hurrengo bidaiaren plangintza zenbakien ondoan gertatzeko.',
 
-  'features.currency.title': 'Edozein Moneta',
-  'features.currency.desc': 'USD, EUR, JPY, GBP, edozein. Moneta guztien laguntza osoa dezimalen tratamendu egokiarekin. Azken erabilitakoen aukeraketa azkarra.',
+  'features.currency.title': 'Moneta babesak',
+  'features.currency.desc': 'Administratzaileek taldeak onartutako monetetara blokeatu ditzakete, lehenetsiak aukeratu, zaharrak gastu zaharrentzat gorde eta moneta anitzeko tiketak jarraitu onartu behar denean.',
 
-  'features.balances.title': 'Saldo Sinplifikatuak',
-  'features.balances.desc': 'Zor sinplifikazio adimentsua beharrezko ordainketa kopurua minimizatzen du. Guztiek guztiei ordaindu beharrean, konpontzeko bide laburrena aurkitzen dugu.',
+  'features.balances.title': 'Fidagarriak diren saldoak',
+  'features.balances.desc': 'Beti aktibatutako saldo-panelak zor optimizatuak erakusten dituzte, "dena konponduta" baieztapenak eta zeharkako zorrak erakusteko iragazkiak, inork ez dezan eztabaidatu nork zor dion nori.',
 
-  'features.settle.title': 'Klik Bakarreko Konponketa',
-  'features.settle.desc': 'Zor bat ikusten duzu? Sakatu "Konponketa Azkarra" eta markatu ordainduta bezala. Eginda. Konfetia aukerakoa da baina oso gomendatua.',
+  'features.settle.title': 'Konponketa azkarra + historia',
+  'features.settle.desc': 'Ukitu bakarreko konponketa-botoiek aurrez betetako formularioak irekitzen dituzte gainordainketa/azpiordainketarako baliozkotzeekin, historiako lauzotak edizioak erakusten dituzte, blokeoek irakurtzeko soilik betearazten dute eta erreakzioek ordainketak dibertigarri mantentzen dituzte.',
 
-  'features.activity.title': 'Jarduera Jarioa',
-  'features.activity.desc': 'Ikusi gertatzen den guztia: gastu berriak, konponketak, kideak elkartzen. Mantendu zure taldearekin sinkronizatuta "itxaron, zer gertatu da?" galdetu gabe.',
+  'features.activity.title': 'Dena estekatu sakonki',
+  'features.activity.desc': '/groups/:id/add-expense bezalako URLek automatikoki irekitzen dituzte modalak, Escape-k historia garbitzen du, aginte-paneleko atzera-pilak osoak mantentzen dira eta jakinarazpenak/goitibehera menuek jarioa islatzen dute.',
 
-  'features.comments.title': 'Txateatu eta Iruzkindu',
-  'features.comments.desc': 'Talde txata eztabaida orokorrerako, gehi iruzkinak banakako gastuetan. "Nork eskatu zituen nacho gehigarriak?" Mantendu elkarrizketa dagokion tokian.',
+  'features.comments.title': 'Emojiak nonahi',
+  'features.comments.desc': 'Gastuek, iruzkinak eta konponketek emoji hautatzaile bera partekatzen dute, kontu agregatuekin, nabarmentze egoerak eta aldagailu UX-arekin, erantzukizuna ere dibertigarria izan daitekeelako.',
 
-  'features.edit.title': 'Konpondu Akatsak',
-  'features.edit.desc': 'Zenbateko okerra sartu duzu? Editatu gastuak sortu ondoren. Aldatu banaketa, konpondu data, eguneratu deskribapenak. Estresik gabe.',
+  'features.edit.title': 'Benetan bidaltzen diren ezarpenak',
+  'features.edit.desc': 'Nortasun-ezizenak taldeko, ezarpen orokorrak berrizendatzeko/deskribatzeko/ezabatzeko + baieztapenak, segurtasun-aurreezarpenak, kideen rol-editoreak eta blokeo-aldagailuak administratzaile-soilik fitxen atzean babestuta.',
 
-  'features.noTracking.title': 'Jarraipen Gabe',
-  'features.noTracking.desc': 'Analitikarik gabe. Jarraipen pixelik gabe. Datu bilketarik gabe. Ez dakigu zertan gastatzen duzun dirua, eta horrela gustatzen zaigu.',
+  'features.noTracking.title': 'Jarraipenrik gabe. Errespetu osoa.',
+  'features.noTracking.desc': 'Politika onarpen-modalak, cookie/baldintza/pribatutasun eskaerak, abisu-banderrolak eta zero iragarki edo jarraipenik. Azkonarrak adiskideak mantentzen dituena bakarrik gordetzen dugu.',
 
   // Coming soon section
   'comingSoon.title': 'Laster Etorriko Da',
@@ -96,23 +96,23 @@ export default {
   'littleThings.title': 'Garrantzia Duten Gauza Txikiak',
   'littleThings.subtitle': 'Gastuak banatzea atsegin bihurtzen duten xehetasunak.',
 
-  'littleThings.dates.title': 'Data Azkarrak',
-  'littleThings.dates.desc': '"Gaur", "Atzo" eta "Bart" botoiak. Inork ez duelako data hautatzailea erabili nahi afari baterako.',
+  'littleThings.dates.title': 'Esteka sakonak eta bideratzea',
+  'littleThings.dates.desc': 'Zuzeneko URLek modalak irekitzen dituzte (gastu xehetasunak, gastu gehitu, konponketak), Escape-k historia berreskuratzen du eta hash ainguratzeak atalak automatikoki zabaltzen ditu atzera botoia hautsi gabe.',
 
-  'littleThings.amounts.title': 'Azken Zenbatekoak',
-  'littleThings.amounts.desc': 'Maiz erabiltzen dituzun zenbatekoak agertzen dira aukeraketa azkarrerako. Alokairua beti berdina da? Ukitu bat.',
+  'littleThings.amounts.title': 'Batu + erregistro leunketa',
+  'littleThings.amounts.desc': 'Itzulera URLek saio-hasiera/erregistro/berrezarpen jarioetan bizirik jarraitzen dute, politika-laukitxoek bidalketak mugatzen dituzte, berregiaztapena birbidali banderroletan bizi da eta autentifikazio birbideratzeek alferrak kanpo mantentzen dituzte.',
 
-  'littleThings.names.title': 'Izan Nahi Duzuna',
-  'littleThings.names.desc': 'Talde bakoitzeko pantaila izen desberdina. "Ama" familian, "Miren" lanean, "Festazalea" lagunekin.',
+  'littleThings.names.title': 'Irisgarritasuna txertatuta',
+  'littleThings.names.desc': 'Foku-tranpak, foku automatikoko helburuak, ixtean fokua berreskuratu, pantaila-irakurgailuentzako salto-estekak, desgaitutako ekintzetan aholku-testuak eta RTL-kontzienteak diren diseinuak arabiera bezalako hizkuntzetan.',
 
-  'littleThings.archive.title': 'Artxibatu Talde Zaharrak',
-  'littleThings.archive.desc': 'Bidaia bukatu da? Artxibatu. Taldea seguru geratzen da baina zure bidetik kanpo. Itzuli edozein momentutan.',
+  'littleThings.archive.title': 'Bizi-ziklo kontrolak',
+  'littleThings.archive.desc': 'Artxibatu/desartxibatu aginte-paneleko ekintza azkarretatik, taldea utzi fluxuak saldo irekiei buruz abisatzen dutenak eta blokeatutako taldeen banderrolak botoi arriskutsuak desgaitzen dituztenak.',
 
-  'littleThings.celebrations.title': 'Ospakizunak',
-  'littleThings.celebrations.desc': 'Guztiak konponduta daudenean, konfetia jasotzen duzu. Gauza txikiak dira.',
+  'littleThings.celebrations.title': 'Garrantzia duten seinaleak',
+  'littleThings.celebrations.desc': 'Posta elektroniko egiaztapen-banderrolak, abisu-barrak, toast baieztapenak, egoera gordetzen duten elkarrizketak eta jakinarazpen goitibehera menuak guztiok informatuta mantentzen gaitu.',
 
-  'littleThings.everywhere.title': 'Nonahi Funtzionatzen Du',
-  'littleThings.everywhere.desc': 'Mahaigaina, tableta, telefonoa. Deskargatzeko aplikaziorik gabe. Zure nabigatzailean funtzionatzen du.',
+  'littleThings.everywhere.title': 'Orrikatze moldagarria',
+  'littleThings.everywhere.desc': 'Aginte-paneleko orrikatzea, iruzkin/gastuen "gehiago kargatu" botoiak, mugikorrerako optimizatutako kontrolak eta berehalako freskatzeak datuak atzean aldatzen direnean.',
 
   // Why free section
   'whyFree.title': 'Zergatik da doakoa?',
@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': '47,23 €-ko afari faktura bat banatzea nahikoa gogaikarria da janari-kit harpidetzetarako iragarkirik behar gabe.',
 
   'whyFree.badgers.title': 'Azkonarrak Bakarrik',
-  'whyFree.badgers.desc': 'Side Badger doako gastu-banaketa aplikazioa da, pribatutasuna lehenesten duena. Ezkutuko agendarik gabe. Bibrazio eta azkonarrak bakarrik.',
+  'whyFree.badgers.desc': 'Side Badger doako gastu-banaketa aplikazioa da, pribatutasuna lehenesten duena. Ezkutuko agendarik gabe. Bibe onak eta azkonarrak bakarrik.',
 
   // CTA section
   'cta.title': 'Faktura batzuk banatzeko prest?',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Izan Ditzakezun Galderak',
   'pricing.faq.q1.question': 'Benetan doakoa da?',
-  'pricing.faq.q1.answer': 'Bai, une honetan guztiz doakoa da. Ez ditugu ezaugarriak ordainketa-horma baten atzean ezkutatzen. Doan mantentzen dugu, edonork estresik gabe gastuak banatu ahal izan ditzan, guk gauza berriak argitaratzen ditugun bitartean.',
+  'pricing.faq.q1.answer': 'Bai, orain guztiz doakoa da. Ez ditugu ezaugarriak ordainketa-horma baten atzean ezkutatzen. Doan mantentzen dugu denek estresik gabeko faktura-banaketa merezi dutelako, guk gauza berriak bidaltzen ditugun bitartean.',
   'pricing.faq.q2.question': 'Zein da tranpa?',
-  'pricing.faq.q2.answer': 'Ez dago tranparik. Side Badger existitzen da gastu-banaketa erraza, pribatua eta dibertigarria izan dadin. Hori da istorio osoa.',
+  'pricing.faq.q2.answer': 'Tranparik ez. Side Badger existitzen da gastu-banaketa erraza, pribatua eta dibertigarria izan dadin. Hori da istorio osoa.',
   'pricing.faq.q3.question': 'Nire datuak salduko dituzu?',
   'pricing.faq.q3.answer': 'Inola ere ez. Ez dugu aplikazioa martxan jartzeko beharrezkoa dena baino datu pertsonalik biltzen. Zero jarraipen, zero analitika pixel eta zero interes zure eroste ohituretan.',
   'pricing.faq.q4.question': 'Zergatik azkonarra?',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'Nire negozioan erabil dezaket?',
   'pricing.faq.q5.answer': 'Jakina! Zure negozio txiki edo talderako partekatutako gastuak jarraitu nahi badituzu, aurrera. Doakoa da. Ez dugu epaitzen.',
   'pricing.faq.q6.question': 'Zer gertatzen da akatsa aurkitzen badut?',
-  'pricing.faq.q6.answer': 'Lehenik eta behin, nola ausartzen zara gure kodeak akatsak dituela iradokitzen? Bigarrenik, bai, ziurrenik akatsak daude. Azkar bidaltzen ari gara, beraz izan goxo gurekin.',
+  'pricing.faq.q6.answer': 'Lehenik eta behin, nola ausartzen zara gure kodeak akatsak dituela iradokitzen. Bigarrenik, bai, ziurrenik akatsak daude. Azkar bidaltzen ari gara, beraz izan leun gurekin.',
 
   // Policy pages
   'policy.privacy.title': 'Pribatutasun Politika',

@@ -29,49 +29,49 @@ export default {
   'hero.title': 'Split expenses like a',
   'hero.titleHighlight': 'side badger',
   'hero.titleDisclaimer': '',
-  'hero.subtitle': "The totally free, no-tracking, no-ads expense splitter that's suspiciously good. We don't want your data. We don't want your money. We just want you to split bills with your friends without crying.",
+  'hero.subtitle': 'Realtime dashboard insight, emoji-fueled reactions, invite links that regenerate on demand, and a shockingly smart expense form. Everything the app actually does, laid out for humans.',
   'hero.cta': '...sidebadger me',
 
   // Features section
-  'features.title': 'Everything You Need',
-  'features.subtitle': 'All the features. None of the tracking. No PhD required.',
+  'features.title': 'Inside Side Badger',
+  'features.subtitle': 'A curated list of the real, shippable powers waiting in the dashboard.',
 
   // Feature cards
-  'features.groups.title': 'Groups for Everything',
-  'features.groups.desc': 'Roommates, trips, events, D&D parties. Create as many groups as you need and keep expenses organized.',
+  'features.groups.title': 'Realtime dashboard',
+  'features.groups.desc': 'Rich activity feed with “You” copy, archived/active tabs, hover-polished group cards, skeleton loaders, pagination, empty states, and error recovery across desktop & mobile.',
 
-  'features.invites.title': 'Easy Invites',
-  'features.invites.desc': 'Share a link, friends join. No app download required. Optionally require approval before new members can join.',
+  'features.invites.title': 'Share links + QR invites',
+  'features.invites.desc': 'Every group card has a share modal with short URLs, QR codes, regenerate tokens, clipboard feedback, language-aware links, and a landing page that handles approvals/pending members gracefully.',
 
-  'features.roles.title': 'Configurable Permissions',
-  'features.roles.desc': 'Control who can add expenses, settle up, or just watch from the sidelines. Your group, your rules.',
+  'features.roles.title': 'Lockdown-friendly permissions',
+  'features.roles.desc': 'Preset vs custom security rules, member role dropdowns, pending invite moderation, lock toggles, “include deleted” filters, and admin-only settings so chaos stays contained.',
 
-  'features.splits.title': 'Three Ways to Split',
-  'features.splits.desc': 'Equal (divide evenly), Exact (specific amounts), or Percentage. Pick what works for your group. Who doesn\'t like a 3-way?',
+  'features.splits.title': 'Ridiculously smart expense form',
+  'features.splits.desc': 'Equal/exact/custom splits with unsaved-change handling, multi-currency selector, Google Maps link parsing, label chips, receipt uploader, recent-amount shortcuts, and locked-expense safeguards.',
 
-  'features.participants.title': "Pick Who's In",
-  'features.participants.desc': `Not everyone splits everything. Select exactly who's involved in each expense. "I only had a salad" is now an option.`,
+  'features.participants.title': 'Threads, files & reactions',
+  'features.participants.desc': 'Expense and group comments support attachments, emoji toggles, pagination, and real-time updates, so planning the next trip happens right beside the numbers.',
 
-  'features.currency.title': 'Any Currency',
-  'features.currency.desc': 'USD, EUR, JPY, GBP, whatever. Full support for all currencies with proper decimal handling. Quick-pick from recent ones.',
+  'features.currency.title': 'Currency guardrails',
+  'features.currency.desc': 'Admins can lock groups to approved currencies, pick defaults, preserve legacy ones for old expenses, and still let multi-currency receipts flow when you need them.',
 
-  'features.balances.title': 'Simplified Balances',
-  'features.balances.desc': "Smart debt simplification minimizes the number of payments needed. Instead of everyone paying everyone, we figure out the shortest path to settled.",
+  'features.balances.title': 'Balances you can trust',
+  'features.balances.desc': 'Always-on balance panes show optimized debts, “all settled up” confirmations, and filters to reveal indirect debts so nobody argues about who owes who.',
 
-  'features.settle.title': 'One-Click Settle',
-  'features.settle.desc': 'See a debt? Tap "Quick Settle" and mark it paid. Done. Confetti optional but highly recommended.',
+  'features.settle.title': 'Quick-settle + history',
+  'features.settle.desc': 'One-tap settlement buttons launch pre-filled forms with validation for over/under payments, history tiles show edits, locks enforce read-only, and reactions keep repayments playful.',
 
-  'features.activity.title': 'Activity Feed',
-  'features.activity.desc': `See everything that happens: new expenses, settlements, members joining. Stay in sync with your group without asking "wait, what happened?"`,
+  'features.activity.title': 'Deep-link everything',
+  'features.activity.desc': 'URLs like /groups/:id/add-expense auto-open modals, Escape cleans history, dashboard back-stacks stay intact, and notifications/dropdowns mirror the feed.',
 
-  'features.comments.title': 'Chat & Comment',
-  'features.comments.desc': 'Group chat for general discussion, plus comments on individual expenses. "Who ordered the extra nachos?" Keep the conversation where it belongs.',
+  'features.comments.title': 'Emoji everywhere',
+  'features.comments.desc': 'Expenses, comments, and settlements share the same emoji picker, aggregated counts, highlight states, and toggle UX—because accountability can still be fun.',
 
-  'features.edit.title': 'Fix Mistakes',
-  'features.edit.desc': 'Entered the wrong amount? Edit expenses after creation. Change the split, fix the date, update descriptions. No stress.',
+  'features.edit.title': 'Settings that actually ship',
+  'features.edit.desc': 'Identity aliases per group, general settings with rename/describe/delete + confirmations, security presets, member role editors, and lock toggles guarded behind admin-only tabs.',
 
-  'features.noTracking.title': 'No Tracking',
-  'features.noTracking.desc': "No analytics. No tracking pixels. No data harvesting. We don't know what you spend money on, and we like it that way.",
+  'features.noTracking.title': 'No trackers. Full respect.',
+  'features.noTracking.desc': 'Policy acceptance modals, cookie/terms/privacy fetches, warning banners, and zero ads or trackers. We only store what keeps the badgers friendly.',
 
   // Coming soon section
   'comingSoon.title': 'Coming Soon',
@@ -96,23 +96,23 @@ export default {
   'littleThings.title': 'Little Things That Matter',
   'littleThings.subtitle': 'The details that make expense splitting actually pleasant.',
 
-  'littleThings.dates.title': 'Quick Dates',
-  'littleThings.dates.desc': '"Today", "Yesterday", and "Last Night" buttons. Because nobody wants to use a date picker for dinner.',
+  'littleThings.dates.title': 'Deep links & routing',
+  'littleThings.dates.desc': 'Direct URLs open modals (expense detail, add expense, settlements), Escape restores history, and hash anchors auto-expand sections without breaking the back button.',
 
-  'littleThings.amounts.title': 'Recent Amounts',
-  'littleThings.amounts.desc': 'Your frequently used amounts show up for quick selection. Rent is always the same? One tap.',
+  'littleThings.amounts.title': 'Join + registration polish',
+  'littleThings.amounts.desc': 'Return URLs survive login/register/reset flows, policy checkboxes gate submissions, resend verification lives in banners, and auth redirects keep freeloaders out.',
 
-  'littleThings.names.title': 'Be Who You Want',
-  'littleThings.names.desc': 'Different display name per group. "Mom" in family, "Sarah" at work, "Party Animal" with friends.',
+  'littleThings.names.title': 'Accessibility baked in',
+  'littleThings.names.desc': 'Focus traps, auto-focus targets, restored focus on close, screen-reader skip links, tooltips on disabled actions, and RTL-aware layouts for languages like Arabic.',
 
-  'littleThings.archive.title': 'Archive Old Groups',
-  'littleThings.archive.desc': 'Trip over? Archive it. Group stays safe but out of your way. Bring it back anytime.',
+  'littleThings.archive.title': 'Lifecycle controls',
+  'littleThings.archive.desc': 'Archive/unarchive from dashboard quick actions, leave-group flows that warn about open balances, and locked-group banners that disable risky buttons.',
 
-  'littleThings.celebrations.title': 'Celebrations',
-  'littleThings.celebrations.desc': "When everyone's settled up, you get confetti. It's the little things.",
+  'littleThings.celebrations.title': 'Signals that matter',
+  'littleThings.celebrations.desc': 'Email verification banners, warning bars, toast confirmations, state-preserving dialogs, and notification dropdowns keep everyone in the loop.',
 
-  'littleThings.everywhere.title': 'Works Everywhere',
-  'littleThings.everywhere.desc': 'Desktop, tablet, phone. No app to download. Just works in your browser.',
+  'littleThings.everywhere.title': 'Responsive pagination',
+  'littleThings.everywhere.desc': 'Dashboard paging, comments/expenses “load more” buttons, mobile-optimized controls, and instant refreshes when data changes behind the scenes.',
 
   // Why free section
   'whyFree.title': 'Why is it free?',

@@ -29,49 +29,49 @@ export default {
   'hero.title': 'Sadaliet izdevumus kā',
   'hero.titleHighlight': 'side badger',
   'hero.titleDisclaimer': '',
-  'hero.subtitle': 'Pilnīgi bezmaksas, bez izsekošanas, bez reklāmām izdevumu sadalītājs, kas ir aizdomīgi labs. Mēs nevēlamies jūsu datus. Mēs nevēlamies jūsu naudu. Mēs tikai vēlamies, lai jūs bez raudāšanas sadalītu rēķinus ar draugiem.',
+  'hero.subtitle': 'Reāllaika paneļa ieskats, emocijzīmju reakcijas, ielūgumu saites, kas atjaunojas pēc pieprasījuma, un pārsteidzoši gudra izdevumu veidlapa. Viss, ko lietotne patiešām dara, izklāstīts cilvēkiem.',
   'hero.cta': '...sidebadger mani',
 
   // Features section
-  'features.title': 'Viss, kas jums nepieciešams',
-  'features.subtitle': 'Visas funkcijas. Nekādas izsekošanas. Nav nepieciešams PhD.',
+  'features.title': 'Side Badger iekšpusē',
+  'features.subtitle': 'Rūpīgi atlasīts saraksts ar reālām, nosūtāmām iespējām, kas gaida panelī.',
 
   // Feature cards
-  'features.groups.title': 'Grupas visam',
-  'features.groups.desc': 'Istabas biedri, ceļojumi, pasākumi, D&D ballītes. Izveidojiet tik daudz grupu, cik nepieciešams, un sakārtojiet izdevumus.',
+  'features.groups.title': 'Reāllaika panelis',
+  'features.groups.desc': 'Bagātīga aktivitāšu plūsma ar "Jūs" kopiju, arhivētas/aktīvas cilnes, uzlabotās grupas kartītes ar hover efektiem, skeleta ielādētāji, lapošana, tukšie stāvokļi un kļūdu atkopšana datorā un mobilajā.',
 
-  'features.invites.title': 'Vienkārši ielūgumi',
-  'features.invites.desc': 'Kopīgojiet saiti, draugi pievienojas. Nav nepieciešama lietotnes lejupielāde. Pēc izvēles pieprasiet apstiprinājumu pirms jaunu dalībnieku pievienošanās.',
+  'features.invites.title': 'Dalīšanās saites + QR ielūgumi',
+  'features.invites.desc': 'Katrai grupas kartītei ir dalīšanās modālis ar īsām saitēm, QR kodiem, tokenu atjaunošanu, starpliktuves atsauksmi, valodai atbilstošām saitēm un mērķlapu, kas graciozi apstrādā apstiprinājumus/gaidošos dalībniekus.',
 
-  'features.roles.title': 'Konfigurējamas atļaujas',
-  'features.roles.desc': 'Kontrolējiet, kurš var pievienot izdevumus, nokārtot vai vienkārši vērot no malas. Jūsu grupa, jūsu noteikumi.',
+  'features.roles.title': 'Bloķēšanai draudzīgas atļaujas',
+  'features.roles.desc': 'Iepriekš noteikti vs pielāgoti drošības noteikumi, dalībnieku lomu nolaižamās izvēlnes, gaidošo ielūgumu moderācija, bloķēšanas slēdži, "iekļaut dzēstos" filtri un tikai administratoriem pieejami iestatījumi, lai haoss paliktu kontrolēts.',
 
-  'features.splits.title': 'Trīs veidi, kā sadalīt',
-  'features.splits.desc': 'Vienādi (sadalīt vienmērīgi), Precīzi (konkrētas summas) vai Procentuāli. Izvēlieties to, kas der jūsu grupai. Kam nepatīk trīsvirzienu dalīšana?',
+  'features.splits.title': 'Pārsteidzoši gudra izdevumu veidlapa',
+  'features.splits.desc': 'Vienāda/precīza/pielāgota sadalīšana ar nesaglabāto izmaiņu apstrādi, daudzvalūtu atlasītājs, Google Maps saišu parsēšana, etiķešu čipi, kvīšu augšupielādētājs, neseno summu saīsnes un bloķēto izdevumu aizsardzība.',
 
-  'features.participants.title': 'Izvēlieties, kuri piedalās',
-  'features.participants.desc': `Ne visi dala visu. Precīzi atlasiet, kuri ir iesaistīti katrā izdevumā. "Es ēdu tikai salātus" tagad ir iespēja.`,
+  'features.participants.title': 'Pavedieni, faili un reakcijas',
+  'features.participants.desc': 'Izdevumu un grupu komentāri atbalsta pielikumus, emocijzīmju pārslēgšanu, lapošanu un reāllaika atjauninājumus, lai nākamā ceļojuma plānošana notiktu tieši blakus cipariem.',
 
-  'features.currency.title': 'Jebkura valūta',
-  'features.currency.desc': 'USD, EUR, JPY, GBP, jebkura. Pilnīgs atbalsts visām valūtām ar pareizu decimāldaļu apstrādi. Ātra izvēle no nesenajām.',
+  'features.currency.title': 'Valūtu aizsardzība',
+  'features.currency.desc': 'Administratori var bloķēt grupas uz apstiprinātām valūtām, izvēlēties noklusējumus, saglabāt vecās veciem izdevumiem un joprojām ļaut daudzvalūtu kvītīm plūst, kad nepieciešams.',
 
-  'features.balances.title': 'Vienkāršoti atlikumi',
-  'features.balances.desc': 'Gudra parādu vienkāršošana samazina nepieciešamo maksājumu skaitu. Tā vietā, lai visi maksātu visiem, mēs atrodam īsāko ceļu uz nokārtošanu.',
+  'features.balances.title': 'Atlikumi, kuriem varat uzticēties',
+  'features.balances.desc': 'Vienmēr ieslēgti atlikumu paneļi rāda optimizētos parādus, "viss nokārtots" apstiprinājumus un filtrus, lai atklātu netiešos parādus, lai neviens nestrīdētos par to, kurš kuram ir parādā.',
 
-  'features.settle.title': 'Nokārtot ar vienu klikšķi',
-  'features.settle.desc': 'Redzat parādu? Nospiediet "Ātrā nokārtošana" un atzīmējiet to kā apmaksātu. Gatavs. Konfeti pēc izvēles, bet ļoti ieteicami.',
+  'features.settle.title': 'Ātrā nokārtošana + vēsture',
+  'features.settle.desc': 'Viena pieskāriena nokārtošanas pogas atver iepriekš aizpildītas veidlapas ar pārmaksājumu/nepilnīgu maksājumu validāciju, vēstures elementi rāda labojumus, bloķēšanas nodrošina tikai lasīšanu, un reakcijas padara atmaksas jautras.',
 
-  'features.activity.title': 'Darbību plūsma',
-  'features.activity.desc': `Redziet visu, kas notiek: jaunus izdevumus, nokārtojumus, dalībnieku pievienošanos. Esiet sinhronizēti ar savu grupu, nejautājot "pagaidiet, kas notika?"`,
+  'features.activity.title': 'Dziļās saites visam',
+  'features.activity.desc': 'URL kā /groups/:id/add-expense automātiski atver modāļus, Escape notīra vēsturi, paneļa atpakaļ-steks paliek neskarts, un paziņojumi/nolaižamās izvēlnes atspoguļo plūsmu.',
 
-  'features.comments.title': 'Tērzēt un komentēt',
-  'features.comments.desc': 'Grupas tērzēšana vispārīgai diskusijai, kā arī komentāri par atsevišķiem izdevumiem. "Kurš pasūtīja papildu načo?" Saglabājiet sarunu tur, kur tā pieder.',
+  'features.comments.title': 'Emocijzīmes visur',
+  'features.comments.desc': 'Izdevumi, komentāri un nokārtojumi izmanto vienu emocijzīmju atlasītāju ar apkopotiem skaitītājiem, izcelšanas stāvokļiem un pārslēgšanas UX, jo atbildība joprojām var būt jautra.',
 
-  'features.edit.title': 'Labot kļūdas',
-  'features.edit.desc': 'Ievadījāt nepareizu summu? Rediģējiet izdevumus pēc izveides. Mainiet sadalījumu, labojiet datumu, atjauniniet aprakstus. Bez stresa.',
+  'features.edit.title': 'Iestatījumi, kas patiešām darbojas',
+  'features.edit.desc': 'Identitātes pseidonīmi katrai grupai, vispārīgi iestatījumi ar pārdēvēšanu/aprakstīšanu/dzēšanu + apstiprinājumi, drošības iepriekšējie iestatījumi, dalībnieku lomu redaktori un bloķēšanas slēdži, kas aizsargāti aiz tikai administratoriem pieejamām cilnēm.',
 
-  'features.noTracking.title': 'Bez izsekošanas',
-  'features.noTracking.desc': 'Bez analītikas. Bez izsekošanas pikseļu. Bez datu vākšanas. Mēs nezinām, kam jūs tērējat naudu, un mums tas patīk.',
+  'features.noTracking.title': 'Bez izsekotājiem. Pilnīga cieņa.',
+  'features.noTracking.desc': 'Politiku pieņemšanas modāļi, sīkdatņu/noteikumu/privātuma pieprasījumi, brīdinājuma baneri un nulle reklāmu vai izsekotāju. Mēs saglabājam tikai to, kas tur āpšus draudzīgus.',
 
   // Coming soon section
   'comingSoon.title': 'Drīzumā',
@@ -96,23 +96,23 @@ export default {
   'littleThings.title': 'Sīkumi, kas ir svarīgi',
   'littleThings.subtitle': 'Detaļas, kas padara izdevumu sadalīšanu patiešām patīkamu.',
 
-  'littleThings.dates.title': 'Ātrie datumi',
-  'littleThings.dates.desc': '"Šodien", "Vakar" un "Vakar vakarā" pogas. Jo neviens nevēlas izmantot datuma izvēli vakariņām.',
+  'littleThings.dates.title': 'Dziļās saites un maršrutēšana',
+  'littleThings.dates.desc': 'Tiešās URL atver modāļus (izdevumu detaļas, pievienot izdevumu, nokārtojumi), Escape atjauno vēsturi, un hash enkuri automātiski izpauž sadaļas, nesabojājot atpakaļ pogu.',
 
-  'littleThings.amounts.title': 'Nesenās summas',
-  'littleThings.amounts.desc': 'Jūsu bieži izmantotās summas parādās ātrai atlasei. Īre vienmēr ir viena un tā pati? Viens pieskāriens.',
+  'littleThings.amounts.title': 'Pievienošanās + reģistrācijas uzlabojumi',
+  'littleThings.amounts.desc': 'Atgriešanās URL saglabājas caur pieteikšanās/reģistrācijas/atiestatīšanas plūsmām, politikas izvēles rūtiņas bloķē iesniegšanu, atkārtoti nosūtīt verifikāciju ir baneros, un autentifikācijas novirzīšana tur ārā brīvpieejas meklētājus.',
 
-  'littleThings.names.title': 'Esi, kas vēlies',
-  'littleThings.names.desc': 'Dažādi displeja nosaukumi katrai grupai. "Mamma" ģimenē, "Sāra" darbā, "Ballīšu zvērs" ar draugiem.',
+  'littleThings.names.title': 'Pieejamība iebūvēta',
+  'littleThings.names.desc': 'Fokusa slazdi, automātiskās fokusa mērķi, atjaunots fokuss aizvēršanas brīdī, ekrāna lasītāja izlaišanas saites, rīku padomi deaktivētām darbībām un RTL-apzinīgi izkārtojumi valodām kā arābu.',
 
-  'littleThings.archive.title': 'Arhivēt vecas grupas',
-  'littleThings.archive.desc': 'Ceļojums beidzies? Arhivējiet to. Grupa paliek droša, bet nav ceļā. Atjaunojiet to jebkurā laikā.',
+  'littleThings.archive.title': 'Dzīves cikla vadīklas',
+  'littleThings.archive.desc': 'Arhivēt/atarhivēt no paneļa ātrām darbībām, grupas pamešanas plūsmas, kas brīdina par atvērtiem atlikumiem, un bloķētas grupas baneri, kas deaktivē riskantās pogas.',
 
-  'littleThings.celebrations.title': 'Svinības',
-  'littleThings.celebrations.desc': 'Kad visi ir nokārtojuši, jūs saņemat konfeti. Tie ir sīkumi.',
+  'littleThings.celebrations.title': 'Signāli, kas ir svarīgi',
+  'littleThings.celebrations.desc': 'E-pasta verifikācijas baneri, brīdinājuma joslas, paziņojumu apstiprinājumi, stāvokli saglabājoši dialogi un paziņojumu nolaižamās izvēlnes visus tur informētus.',
 
-  'littleThings.everywhere.title': 'Strādā visur',
-  'littleThings.everywhere.desc': 'Dators, planšetdators, tālrunis. Nav jālejupielādē lietotne. Vienkārši strādā jūsu pārlūkprogrammā.',
+  'littleThings.everywhere.title': 'Adaptīva lapošana',
+  'littleThings.everywhere.desc': 'Paneļa lapošana, komentāru/izdevumu "ielādēt vairāk" pogas, mobilajām ierīcēm optimizētas vadīklas un tūlītēja atsvaidzināšana, kad dati mainās fonā.',
 
   // Why free section
   'whyFree.title': 'Kāpēc tas ir bez maksas?',
@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': '47,23 $ vakariņu rēķina sadalīšana ir pietiekami kaitinoša bez reklāmām par maltīšu komplekta abonementiem.',
 
   'whyFree.badgers.title': 'Tikai āpši',
-  'whyFree.badgers.desc': 'Side Badger ir bezmaksas, uz privātumu vērsta izdevumu sadalīšanas lietotne. Nekādas slēptas darbakārtības. Tikai noskaņas un āpši.',
+  'whyFree.badgers.desc': 'Side Badger ir bezmaksas, uz privātumu vērsta izdevumu sadalīšanas lietotne. Nekādas slēptas darbakārtības. Tikai labas vibrācijas un āpši.',
 
   // CTA section
   'cta.title': 'Gatavs sadalīt dažus rēķinus?',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Jautājumi, kas jums var rasties',
   'pricing.faq.q1.question': 'Vai tas tiešām ir bez maksas?',
-  'pricing.faq.q1.answer': 'Jā, pašlaik tas ir pilnīgi bez maksas. Mēs neslēpjam funkcijas aiz maksas sienas. Mēs to paturam bez maksas, jo ikviens ir pelnījis bezstresa rēķinu sadalīšanu, kamēr izlaižam jaunas lietas.',
+  'pricing.faq.q1.answer': 'Jā, pašlaik tas ir pilnīgi bez maksas. Mēs neslēpjam funkcijas aiz maksas sienas. Mēs to paturam bez maksas, jo ikviens ir pelnījis bezstresa rēķinu sadalīšanu, kamēr mēs izlaižam jaunas lietas.',
   'pricing.faq.q2.question': 'Kur ir āķis?',
-  'pricing.faq.q2.answer': 'Nekāda āķa. Side Badger pastāv, lai izdevumu sadalīšanu padarītu vienkāršu, privātu un jautru. Tas arī viss.',
+  'pricing.faq.q2.answer': 'Nav āķa. Side Badger pastāv, lai izdevumu sadalīšanu padarītu vienkāršu, privātu un jautru. Tas arī viss.',
   'pricing.faq.q3.question': 'Vai jūs pārdosiet manus datus?',
   'pricing.faq.q3.answer': 'Absolūti nē. Mēs nevācam personas datus, kas nav nepieciešami lietotnes darbībai. Mums ir nulle izsekošanas, nulle analītikas pikseļu un nulle interese par jūsu iepirkšanās paradumiem.',
   'pricing.faq.q4.question': 'Kāpēc āpsis?',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'Vai es to varu izmantot savam biznesam?',
   'pricing.faq.q5.answer': 'Protams! Ja vēlaties izsekot kopīgiem izdevumiem savam mazajam uzņēmumam vai komandai, dariet to. Tas ir bez maksas. Mēs jūs nenosodīsim.',
   'pricing.faq.q6.question': 'Ko darīt, ja atrodu kļūdu?',
-  'pricing.faq.q6.answer': 'Pirmkārt, kā jūs uzdrošināties apgalvot, ka mūsu kodā ir kļūdas. Otrkārt, jā, iespējams, ir kļūdas. Mēs piegādājam ātri, tāpēc esiet pret mums saudzīgi.',
+  'pricing.faq.q6.answer': 'Pirmkārt, kā jūs uzdrošināties netieši apgalvot, ka mūsu kodā ir kļūdas. Otrkārt, jā, iespējams, ir kļūdas. Mēs izlaižam ātri, tāpēc esiet pret mums saudzīgi.',
 
   // Policy pages
   'policy.privacy.title': 'Privātuma politika',

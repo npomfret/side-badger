@@ -45,6 +45,16 @@ const url = t('app.url');
 
 `src/i18n/index.ts` is the **single source of truth**. See the checklist at the top of that file. Pages use `getLocalePaths()` and `astro.config.mjs` imports `locales` from there, so you only update one file.
 
+### Translation Management Tool
+
+CLI tool for managing translations. English (`en.ts`) is the master file.
+
+```bash
+npm run i18n help    # Show all commands and usage
+npm run i18n stats   # Quick overview of translation status
+npm run i18n audit   # Check for missing/extra keys
+```
+
 ## Components
 
 - `BaseLayout.astro` - HTML wrapper, header/footer, background effects

@@ -10,7 +10,12 @@
     "docker:start": "docker compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.watch.yml up --build -d && docker compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.watch.yml watch",
     "docker:stop": "docker compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.watch.yml down",
     "docker:restart": "npm run docker:stop && npm run docker:start",
-    "docker:logs": "docker logs -f side-badger-website"
+    "docker:logs": "docker logs -f side-badger-website",
+    "i18n": "node scripts/i18n-manager.mjs",
+    "i18n:list": "node scripts/i18n-manager.mjs list",
+    "i18n:audit": "node scripts/i18n-manager.mjs audit",
+    "i18n:stats": "node scripts/i18n-manager.mjs stats",
+    "i18n:sync": "node scripts/i18n-manager.mjs sync"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",

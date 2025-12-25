@@ -29,49 +29,49 @@ export default {
   'hero.title': 'Dela utgifter som en',
   'hero.titleHighlight': 'side badger',
   'hero.titleDisclaimer': '',
-  'hero.subtitle': 'Den helt gratis, spårningsfria, reklamfria utgiftsdelaren som är misstänkt bra. Vi vill inte ha dina data. Vi vill inte ha dina pengar. Vi vill bara att du ska dela räkningar med dina vänner utan att gråta.',
+  'hero.subtitle': 'Instrumentpanel i realtid, emoji-drivna reaktioner, inbjudningslänkar som förnyas på begäran och ett förvånansvärt smart utgiftsformulär. Allt appen faktiskt gör, presenterat för människor.',
   'hero.cta': '...sidebadger mig',
 
   // Features section
-  'features.title': 'Allt du behöver',
-  'features.subtitle': 'Alla funktioner. Ingen spårning. Ingen doktorsexamen krävs.',
+  'features.title': 'Inuti Side Badger',
+  'features.subtitle': 'En utvald lista över de riktiga, leveransfärdiga funktionerna som väntar i instrumentpanelen.',
 
   // Feature cards
-  'features.groups.title': 'Grupper för allt',
-  'features.groups.desc': 'Rumskamrater, resor, evenemang, D&D-fester. Skapa så många grupper du behöver och håll ordning på utgifterna.',
+  'features.groups.title': 'Instrumentpanel i realtid',
+  'features.groups.desc': 'Rikt aktivitetsflöde med "Du"-texter, arkiverade/aktiva flikar, polerade gruppkort vid hovring, skelettladdare, paginering, tomma tillstånd och felhantering på dator och mobil.',
 
-  'features.invites.title': 'Enkla inbjudningar',
-  'features.invites.desc': 'Dela en länk, vänner går med. Ingen appnedladdning krävs. Kräv eventuellt godkännande innan nya medlemmar kan gå med.',
+  'features.invites.title': 'Delningslänkar + QR-inbjudningar',
+  'features.invites.desc': 'Varje gruppkort har en delningsmodal med korta URL:er, QR-koder, förnya tokens, urklippsåterkoppling, språkmedvetna länkar och en landningssida som hanterar godkännanden och väntande medlemmar smidigt.',
 
-  'features.roles.title': 'Konfigurerbara behörigheter',
-  'features.roles.desc': 'Kontrollera vem som kan lägga till utgifter, göra upp eller bara titta från sidlinjen. Din grupp, dina regler.',
+  'features.roles.title': 'Låsningsvänliga behörigheter',
+  'features.roles.desc': 'Förinställda vs anpassade säkerhetsregler, rullgardinsmenyer för medlemsroller, moderering av väntande inbjudningar, låsväxlare, "inkludera borttagna"-filter och admin-exklusiva inställningar så att kaoset hålls under kontroll.',
 
-  'features.splits.title': 'Tre sätt att dela',
-  'features.splits.desc': 'Lika (dela jämnt), Exakt (specifika belopp) eller Procent. Välj det som fungerar för din grupp. Vem gillar inte en trekant?',
+  'features.splits.title': 'Löjligt smart utgiftsformulär',
+  'features.splits.desc': 'Lika/exakt/anpassade delningar med hantering av osparade ändringar, multivalutaväljare, Google Maps-länktolkning, etikettchips, kvittouppladdare, genvägar för senaste belopp och skydd för låsta utgifter.',
 
-  'features.participants.title': 'Välj vilka som är med',
-  'features.participants.desc': `Inte alla delar på allt. Välj exakt vilka som är inblandade i varje utgift. "Jag hade bara en sallad" är nu ett alternativ.`,
+  'features.participants.title': 'Trådar, filer och reaktioner',
+  'features.participants.desc': 'Utgifts- och gruppkommentarer stöder bilagor, emoji-växlare, paginering och realtidsuppdateringar, så att planering av nästa resa sker precis bredvid siffrorna.',
 
-  'features.currency.title': 'Alla valutor',
-  'features.currency.desc': 'USD, EUR, JPY, GBP, vad som helst. Fullt stöd för alla valutor med korrekt decimalhantering. Snabbval från de senaste.',
+  'features.currency.title': 'Valutaskyddsräcken',
+  'features.currency.desc': 'Administratörer kan låsa grupper till godkända valutor, välja standardvärden, bevara äldre för gamla utgifter och fortfarande låta multivalutakvitton flöda när det behövs.',
 
-  'features.balances.title': 'Förenklade saldon',
-  'features.balances.desc': 'Smart skuldförenkling minimerar antalet betalningar som behövs. Istället för att alla betalar alla, räknar vi ut den kortaste vägen till uppgörelse.',
+  'features.balances.title': 'Saldon du kan lita på',
+  'features.balances.desc': 'Alltid synliga saldopaneler visar optimerade skulder, "allt uppgjort"-bekräftelser och filter för att visa indirekta skulder så att ingen behöver bråka om vem som är skyldig vem.',
 
-  'features.settle.title': 'Uppgörelse med ett klick',
-  'features.settle.desc': 'Ser du en skuld? Tryck på "Snabb uppgörelse" och markera den som betald. Klart. Konfetti är valfritt men rekommenderas starkt.',
+  'features.settle.title': 'Snabbuppgörelse + historik',
+  'features.settle.desc': 'Uppgörelseknappar med ett tryck öppnar förifyllda formulär med validering för över-/underbetalningar, historikrutor visar redigeringar, lås tvingar skrivskyddat läge och reaktioner håller återbetalningar lekfulla.',
 
-  'features.activity.title': 'Aktivitetsflöde',
-  'features.activity.desc': `Se allt som händer: nya utgifter, uppgörelser, medlemmar som går med. Håll dig synkroniserad med din grupp utan att fråga "vänta, vad hände?"`,
+  'features.activity.title': 'Djuplänka allt',
+  'features.activity.desc': 'URL:er som /groups/:id/add-expense öppnar modaler automatiskt, Escape rensar historiken, instrumentpanelens bakåtstaplar förblir intakta och notiser/rullgardinsmenyer speglar flödet.',
 
-  'features.comments.title': 'Chatt & kommentarer',
-  'features.comments.desc': 'Gruppchatt för allmän diskussion, plus kommentarer på enskilda utgifter. "Vem beställde extra nachos?" Håll konversationen där den hör hemma.',
+  'features.comments.title': 'Emojis överallt',
+  'features.comments.desc': 'Utgifter, kommentarer och uppgörelser delar samma emojivalare, aggregerade räkningar, markeringstillstånd och växlings-UX eftersom ansvarsskyldighet fortfarande kan vara kul.',
 
-  'features.edit.title': 'Rätta till misstag',
-  'features.edit.desc': 'Angav du fel belopp? Redigera utgifter efter att de har skapats. Ändra delningen, korrigera datumet, uppdatera beskrivningar. Ingen stress.',
+  'features.edit.title': 'Inställningar som faktiskt levereras',
+  'features.edit.desc': 'Identitetsalias per grupp, allmänna inställningar med byt namn/beskriv/ta bort + bekräftelser, säkerhetsförinställningar, medlemsrollredigerare och låsväxlare skyddade bakom admin-exklusiva flikar.',
 
-  'features.noTracking.title': 'Ingen spårning',
-  'features.noTracking.desc': 'Ingen analys. Inga spårningspixlar. Ingen dataskörd. Vi vet inte vad du spenderar pengar på, och vi gillar det så.',
+  'features.noTracking.title': 'Inga spårare. Full respekt.',
+  'features.noTracking.desc': 'Policyacceptansmodaler, cookie-/villkors-/integritetshämtningar, varningsbanners och noll annonser eller spårare. Vi lagrar bara det som håller grävlingarna vänliga.',
 
   // Coming soon section
   'comingSoon.title': 'Kommer snart',
@@ -96,23 +96,23 @@ export default {
   'littleThings.title': 'Små saker som spelar roll',
   'littleThings.subtitle': 'Detaljerna som gör utgiftsdelning faktiskt trevlig.',
 
-  'littleThings.dates.title': 'Snabba datum',
-  'littleThings.dates.desc': '"Idag", "Igår" och "Igår kväll"-knappar. För ingen vill använda en datumväljare till middagen.',
+  'littleThings.dates.title': 'Djuplänkar och routing',
+  'littleThings.dates.desc': 'Direkta URL:er öppnar modaler (utgiftsdetaljer, lägg till utgift, uppgörelser), Escape återställer historiken och hash-ankare expanderar sektioner automatiskt utan att förstöra bakåtknappen.',
 
-  'littleThings.amounts.title': 'Senaste belopp',
-  'littleThings.amounts.desc': 'Dina ofta använda belopp visas för snabbt val. Är hyran alltid densamma? Ett tryck.',
+  'littleThings.amounts.title': 'Gå med + registreringspolering',
+  'littleThings.amounts.desc': 'Retur-URL:er överlever inloggning/registrering/återställningsflöden, policykryssrutor blockerar inskickningar, skicka om verifiering finns i banners och autentiseringsomdirigering håller fripassagerare ute.',
 
-  'littleThings.names.title': 'Var den du vill vara',
-  'littleThings.names.desc': 'Olika visningsnamn per grupp. "Mamma" i familjen, "Sarah" på jobbet, "Festprisse" med vänner.',
+  'littleThings.names.title': 'Inbyggd tillgänglighet',
+  'littleThings.names.desc': 'Fokusfällor, automatiska fokusmål, återställt fokus vid stängning, hoppa över-länkar för skärmläsare, verktygstips på inaktiverade åtgärder och RTL-medvetna layouter för språk som arabiska.',
 
-  'littleThings.archive.title': 'Arkivera gamla grupper',
-  'littleThings.archive.desc': 'Resan över? Arkivera den. Gruppen förblir säker men ur vägen. Ta tillbaka den när som helst.',
+  'littleThings.archive.title': 'Livscykelkontroller',
+  'littleThings.archive.desc': 'Arkivera/återställ från instrumentpanelens snabbåtgärder, lämna-grupp-flöden som varnar om öppna saldon och låst-grupp-banners som inaktiverar riskfyllda knappar.',
 
-  'littleThings.celebrations.title': 'Firanden',
-  'littleThings.celebrations.desc': 'När alla har gjort upp får du konfetti. Det är de små sakerna.',
+  'littleThings.celebrations.title': 'Signaler som betyder något',
+  'littleThings.celebrations.desc': 'E-postverifieringsbanners, varningsfält, toast-bekräftelser, tillståndsbevarande dialoger och notis-rullgardinsmenyer håller alla informerade.',
 
-  'littleThings.everywhere.title': 'Fungerar överallt',
-  'littleThings.everywhere.desc': 'Dator, surfplatta, telefon. Ingen app att ladda ner. Bara fungerar i din webbläsare.',
+  'littleThings.everywhere.title': 'Responsiv paginering',
+  'littleThings.everywhere.desc': 'Instrumentpanelspaginering, "ladda mer"-knappar för kommentarer/utgifter, mobiloptimerade kontroller och omedelbara uppdateringar när data ändras i bakgrunden.',
 
   // Why free section
   'whyFree.title': 'Varför är det gratis?',
@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': 'Att dela en middagsräkning på 47,23 dollar är tillräckligt irriterande utan annonser för måltidskitprenumerationer.',
 
   'whyFree.badgers.title': 'Bara grävlingar',
-  'whyFree.badgers.desc': 'Side Badger är en gratis, integritetsförst app för att dela utgifter. Ingen dold agenda. Bara vibbar och grävlingar.',
+  'whyFree.badgers.desc': 'Side Badger är en gratis, integritetsfokuserad app för utgiftsdelning. Ingen dold agenda. Bara vibbar och grävlingar.',
 
   // CTA section
   'cta.title': 'Redo att dela några räkningar?',
@@ -176,11 +176,11 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Frågor du kanske har',
   'pricing.faq.q1.question': 'Är det verkligen gratis?',
-  'pricing.faq.q1.answer': 'Ja, just nu är det helt gratis. Vi gömmer inga funktioner bakom en betalvägg. Vi låter det vara gratis eftersom alla förtjänar stressfri utgiftsdelning medan vi lanserar nya saker.',
+  'pricing.faq.q1.answer': 'Ja, just nu är det helt gratis. Vi gömmer inga funktioner bakom en betalvägg. Vi håller det gratis eftersom alla förtjänar stressfri utgiftsdelning medan vi lanserar nya saker.',
   'pricing.faq.q2.question': 'Vad är haken?',
   'pricing.faq.q2.answer': 'Ingen hake. Side Badger finns för att göra utgiftsdelning enkel, privat och rolig. Det är hela historien.',
   'pricing.faq.q3.question': 'Kommer ni att sälja mina data?',
-  'pricing.faq.q3.answer': 'Absolut inte. Vi samlar inte in personuppgifter utöver vad som är nödvändigt för att köra appen. Vi har noll spårare, noll analyspixlar och noll intresse av dina shoppingvanor.',
+  'pricing.faq.q3.answer': 'Absolut inte. Vi samlar inte in personuppgifter utöver vad som behövs för att köra appen. Vi har noll spårare, noll analyspixlar och noll intresse av dina shoppingvanor.',
   'pricing.faq.q4.question': 'Varför en grävling?',
   'pricing.faq.q4.answer': 'Varför INTE en grävling? Grävlingar är beslutsamma, påhittiga och fungerar bra i grupp. Precis som du när du försöker lista ut vem som är skyldig vad för den där Airbnb.',
   'pricing.faq.q5.question': 'Kan jag använda detta för mitt företag?',

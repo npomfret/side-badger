@@ -29,49 +29,49 @@ export default {
   'hero.title': 'Ausgaben teilen wie ein',
   'hero.titleHighlight': 'Neben-Dachs',
   'hero.titleDisclaimer': '',
-  'hero.subtitle': "Der völlig kostenlose Ausgaben-Splitter ohne Tracking und ohne Werbung, der verdächtig gut ist. Wir wollen Ihre Daten nicht. Wir wollen Ihr Geld nicht. Wir wollen nur, dass Sie Rechnungen mit Ihren Freunden teilen, ohne zu weinen.",
+  'hero.subtitle': 'Echtzeit-Dashboard, Emoji-Reaktionen, Einladungslinks die sich auf Abruf regenerieren, und ein überraschend smartes Ausgabenformular. Alles was die App wirklich kann, verständlich dargestellt.',
   'hero.cta': '...sidebadger mich',
 
   // Features section
-  'features.title': 'Alles, was Sie brauchen',
-  'features.subtitle': 'Alle Funktionen. Kein Tracking. Kein Doktortitel erforderlich.',
+  'features.title': 'In Side Badger',
+  'features.subtitle': 'Eine kuratierte Liste der echten, auslieferbaren Funktionen im Dashboard.',
 
   // Feature cards
-  'features.groups.title': 'Gruppen für alles',
-  'features.groups.desc': 'Mitbewohner, Reisen, Veranstaltungen, D&D-Partys. Erstellen Sie so viele Gruppen, wie Sie benötigen, und halten Sie die Ausgaben organisiert.',
+  'features.groups.title': 'Echtzeit-Dashboard',
+  'features.groups.desc': 'Reichhaltiger Aktivitäts-Feed mit "Du"-Texten, Archiviert/Aktiv-Tabs, polierte Gruppenkarten mit Hover-Effekten, Skelett-Loader, Paginierung, Leerzustände und Fehlerbehandlung auf Desktop & Mobil.',
 
-  'features.invites.title': 'Einfache Einladungen',
-  'features.invites.desc': 'Teilen Sie einen Link, Freunde treten bei. Kein App-Download erforderlich. Optional: Genehmigung für neue Mitglieder aktivieren.',
+  'features.invites.title': 'Teilen-Links + QR-Einladungen',
+  'features.invites.desc': 'Jede Gruppenkarte hat einen Teilen-Dialog mit Kurz-URLs, QR-Codes, Token-Regenerierung, Zwischenablage-Feedback, sprachabhängige Links und eine Landingpage, die Genehmigungen und ausstehende Mitglieder elegant handhabt.',
 
-  'features.roles.title': 'Konfigurierbare Berechtigungen',
-  'features.roles.desc': 'Kontrollieren Sie, wer Ausgaben hinzufügen, abrechnen oder nur zusehen kann. Ihre Gruppe, Ihre Regeln.',
+  'features.roles.title': 'Lockdown-freundliche Berechtigungen',
+  'features.roles.desc': 'Voreingestellte vs. benutzerdefinierte Sicherheitsregeln, Mitglieder-Rollen-Dropdowns, ausstehende Einladungsmoderation, Sperr-Toggles, "Gelöschte einbeziehen"-Filter und Admin-Only-Einstellungen, damit das Chaos kontrolliert bleibt.',
 
-  'features.splits.title': 'Drei Arten der Aufteilung',
-  'features.splits.desc': 'Gleichmäßig (zu gleichen Teilen), Genau (bestimmte Beträge) oder Prozentual. Wählen Sie, was für Ihre Gruppe funktioniert. Wer mag keinen Dreier?',
+  'features.splits.title': 'Überraschend smartes Ausgabenformular',
+  'features.splits.desc': 'Gleich/Exakt/Benutzerdefinierte Aufteilungen mit Handhabung ungespeicherter Änderungen, Multi-Währungs-Auswahl, Google Maps Link-Parsing, Label-Chips, Beleg-Uploader, kürzliche Beträge als Shortcuts und Schutz für gesperrte Ausgaben.',
 
-  'features.participants.title': "Wählen Sie, wer dabei ist",
-  'features.participants.desc': `Nicht jeder teilt alles. Wählen Sie genau aus, wer an jeder Ausgabe beteiligt ist. "Ich hatte nur einen Salat" ist jetzt eine Option.`,
+  'features.participants.title': 'Threads, Dateien & Reaktionen',
+  'features.participants.desc': 'Ausgaben- und Gruppenkommentare unterstützen Anhänge, Emoji-Toggles, Paginierung und Echtzeit-Updates, damit die nächste Reiseplanung direkt neben den Zahlen passiert.',
 
-  'features.currency.title': 'Jede Währung',
-  'features.currency.desc': 'USD, EUR, JPY, GBP, was auch immer. Volle Unterstützung für alle Währungen mit korrekter Dezimalbehandlung. Schnellauswahl aus kürzlich verwendeten.',
+  'features.currency.title': 'Währungs-Leitplanken',
+  'features.currency.desc': 'Admins können Gruppen auf genehmigte Währungen beschränken, Standards festlegen, Legacy-Währungen für alte Ausgaben bewahren und trotzdem Multi-Währungs-Belege zulassen, wenn nötig.',
 
-  'features.balances.title': 'Vereinfachte Salden',
-  'features.balances.desc': "Intelligente Schuldenvereinfachung minimiert die Anzahl der erforderlichen Zahlungen. Anstatt dass jeder jeden bezahlt, finden wir den kürzesten Weg zur Begleichung.",
+  'features.balances.title': 'Salden denen Sie vertrauen können',
+  'features.balances.desc': 'Immer sichtbare Saldo-Panels zeigen optimierte Schulden, "Alles beglichen"-Bestätigungen und Filter zur Anzeige indirekter Schulden, damit niemand darüber streitet, wer wem was schuldet.',
 
-  'features.settle.title': 'Ein-Klick-Abrechnung',
-  'features.settle.desc': 'Eine Schuld sehen? Tippen Sie auf "Schnell abrechnen" und markieren Sie sie als bezahlt. Erledigt. Konfetti optional, aber sehr zu empfehlen.',
+  'features.settle.title': 'Schnell-Begleichung + Verlauf',
+  'features.settle.desc': 'Ein-Klick-Begleichungsbuttons öffnen vorausgefüllte Formulare mit Validierung für Über-/Unterzahlung, Verlaufs-Kacheln zeigen Bearbeitungen, Sperren erzwingen Nur-Lesen, und Reaktionen halten Rückzahlungen spielerisch.',
 
-  'features.activity.title': 'Aktivitäts-Feed',
-  'features.activity.desc': `Sehen Sie alles, was passiert: neue Ausgaben, Abrechnungen, neue Mitglieder. Bleiben Sie mit Ihrer Gruppe auf dem Laufenden, ohne zu fragen "Moment, was ist passiert?"`,
+  'features.activity.title': 'Deep-Links für alles',
+  'features.activity.desc': 'URLs wie /groups/:id/add-expense öffnen Modals automatisch, Escape bereinigt den Verlauf, Dashboard-Back-Stacks bleiben intakt, und Benachrichtigungen/Dropdowns spiegeln den Feed.',
 
-  'features.comments.title': 'Chat & Kommentare',
-  'features.comments.desc': 'Gruppenchat für allgemeine Diskussionen sowie Kommentare zu einzelnen Ausgaben. "Wer hat die zusätzlichen Nachos bestellt?" Halten Sie die Konversation dort, wo sie hingehört.',
+  'features.comments.title': 'Emojis überall',
+  'features.comments.desc': 'Ausgaben, Kommentare und Begleichungen teilen den gleichen Emoji-Picker, aggregierte Zähler, Highlight-Zustände und Toggle-UX—weil Rechenschaftspflicht auch Spaß machen kann.',
 
-  'features.edit.title': 'Fehler beheben',
-  'features.edit.desc': 'Falschen Betrag eingegeben? Bearbeiten Sie Ausgaben nach der Erstellung. Ändern Sie die Aufteilung, korrigieren Sie das Datum, aktualisieren Sie Beschreibungen. Kein Stress.',
+  'features.edit.title': 'Einstellungen die wirklich funktionieren',
+  'features.edit.desc': 'Identitäts-Aliase pro Gruppe, allgemeine Einstellungen mit Umbenennen/Beschreiben/Löschen + Bestätigungen, Sicherheits-Presets, Mitglieder-Rollen-Editoren und Sperr-Toggles hinter Admin-Only-Tabs geschützt.',
 
-  'features.noTracking.title': 'Kein Tracking',
-  'features.noTracking.desc': "Keine Analysen. Keine Tracking-Pixel. Keine Daten-Ernte. Wir wissen nicht, wofür Sie Geld ausgeben, und das gefällt uns.",
+  'features.noTracking.title': 'Keine Tracker. Voller Respekt.',
+  'features.noTracking.desc': 'Richtlinien-Akzeptanz-Modals, Cookie/AGB/Datenschutz-Abrufe, Warnbanner und null Werbung oder Tracker. Wir speichern nur, was die Dachse freundlich hält.',
 
   // Coming soon section
   'comingSoon.title': 'Demnächst verfügbar',
@@ -96,23 +96,23 @@ export default {
   'littleThings.title': 'Kleine Dinge, die wichtig sind',
   'littleThings.subtitle': 'Die Details, die das Teilen von Ausgaben wirklich angenehm machen.',
 
-  'littleThings.dates.title': 'Schnelle Datumsauswahl',
-  'littleThings.dates.desc': '"Heute", "Gestern" und "Letzte Nacht" Schaltflächen. Weil niemand einen Datumswähler für das Abendessen verwenden möchte.',
+  'littleThings.dates.title': 'Deep-Links & Routing',
+  'littleThings.dates.desc': 'Direkte URLs öffnen Modals (Ausgabendetails, Ausgabe hinzufügen, Begleichungen), Escape stellt den Verlauf wieder her, und Hash-Anker erweitern Abschnitte automatisch ohne den Zurück-Button zu brechen.',
 
-  'littleThings.amounts.title': 'Letzte Beträge',
-  'littleThings.amounts.desc': 'Ihre häufig verwendeten Beträge werden zur Schnellauswahl angezeigt. Die Miete ist immer gleich? Ein Fingertipp.',
+  'littleThings.amounts.title': 'Beitritt & Registrierung poliert',
+  'littleThings.amounts.desc': 'Rückkehr-URLs überleben Login/Registrierung/Reset-Flows, Richtlinien-Checkboxen blockieren Absendung, Verifizierung-erneut-senden in Bannern, und Auth-Redirects halten Schmarotzer draußen.',
 
-  'littleThings.names.title': 'Seien Sie, wer Sie sein wollen',
-  'littleThings.names.desc': 'Unterschiedlicher Anzeigename pro Gruppe. "Mama" in der Familie, "Sarah" bei der Arbeit, "Partytier" mit Freunden.',
+  'littleThings.names.title': 'Barrierefreiheit eingebaut',
+  'littleThings.names.desc': 'Fokus-Traps, Auto-Fokus-Ziele, Fokus-Wiederherstellung beim Schließen, Screenreader-Sprunglinks, Tooltips bei deaktivierten Aktionen und RTL-fähige Layouts für Sprachen wie Arabisch.',
 
-  'littleThings.archive.title': 'Alte Gruppen archivieren',
-  'littleThings.archive.desc': 'Reise vorbei? Archivieren Sie sie. Die Gruppe bleibt sicher, aber aus dem Weg. Holen Sie sie jederzeit zurück.',
+  'littleThings.archive.title': 'Lifecycle-Kontrollen',
+  'littleThings.archive.desc': 'Archivieren/Dearchivieren über Dashboard-Schnellaktionen, Gruppe-verlassen-Flows die vor offenen Salden warnen, und gesperrte-Gruppe-Banner die riskante Buttons deaktivieren.',
 
-  'littleThings.celebrations.title': 'Feierlichkeiten',
-  'littleThings.celebrations.desc': "Wenn alle abgerechnet haben, gibt es Konfetti. Es sind die kleinen Dinge.",
+  'littleThings.celebrations.title': 'Signale die zählen',
+  'littleThings.celebrations.desc': 'E-Mail-Verifizierungs-Banner, Warnleisten, Toast-Bestätigungen, zustandserhaltende Dialoge und Benachrichtigungs-Dropdowns halten alle auf dem Laufenden.',
 
-  'littleThings.everywhere.title': 'Funktioniert überall',
-  'littleThings.everywhere.desc': 'Desktop, Tablet, Telefon. Keine App zum Herunterladen. Funktioniert einfach in Ihrem Browser.',
+  'littleThings.everywhere.title': 'Responsive Paginierung',
+  'littleThings.everywhere.desc': 'Dashboard-Paging, "Mehr laden"-Buttons für Kommentare/Ausgaben, mobil-optimierte Steuerelemente und sofortige Aktualisierungen wenn sich Daten im Hintergrund ändern.',
 
   // Why free section
   'whyFree.title': 'Warum ist es kostenlos?',

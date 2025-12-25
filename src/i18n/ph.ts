@@ -29,49 +29,49 @@ export default {
   'hero.title': 'Hatiin ang mga gastos tulad ng isang',
   'hero.titleHighlight': 'side badger',
   'hero.titleDisclaimer': '',
-  'hero.subtitle': "Ang ganap na libre, walang pagsubaybay, walang ad na expense splitter na kahina-hinalang maganda. Hindi namin gusto ang iyong data. Hindi namin gusto ang iyong pera. Gusto lang namin na hatiin mo ang mga bills sa iyong mga kaibigan nang hindi umiiyak.",
+  'hero.subtitle': "Realtime na dashboard insight, emoji-powered na reactions, invite links na nag-re-regenerate on demand, at nakakagulat na smart na expense form. Lahat ng talagang ginagawa ng app, nakalatag para sa mga tao.",
   'hero.cta': '...sidebadger ako',
 
   // Features section
-  'features.title': 'Lahat ng Kailangan Mo',
-  'features.subtitle': 'Lahat ng feature. Walang pagsubaybay. Walang kinakailangang PhD.',
+  'features.title': 'Sa Loob ng Side Badger',
+  'features.subtitle': 'Isang curated na listahan ng tunay na shippable na mga kakayahan na naghihintay sa dashboard.',
 
   // Feature cards
-  'features.groups.title': 'Mga Grupo para sa Lahat',
-  'features.groups.desc': 'Mga kasama sa bahay, mga biyahe, mga kaganapan, mga party ng D&D. Gumawa ng maraming grupo hangga\'t kailangan mo at panatilihing organisado ang mga gastos.',
+  'features.groups.title': 'Realtime na dashboard',
+  'features.groups.desc': 'Mayamang activity feed na may "Ikaw" na kopya, archived/active na tabs, hover-polished na group cards, skeleton loaders, pagination, empty states, at error recovery sa desktop at mobile.',
 
-  'features.invites.title': 'Madaling Imbitasyon',
-  'features.invites.desc': 'Magbahagi ng link, sasali ang mga kaibigan. Walang kinakailangang pag-download ng app. Opsyonal na nangangailangan ng pag-apruba bago makasali ang mga bagong miyembro.',
+  'features.invites.title': 'Mga link ng pagbabahagi + QR imbitasyon',
+  'features.invites.desc': 'Bawat group card ay may share modal na may short URLs, QR codes, regenerate tokens, clipboard feedback, language-aware na links, at landing page na gracefully na humahawak ng approvals/pending members.',
 
-  'features.roles.title': 'Nako-configure na mga Pahintulot',
-  'features.roles.desc': 'Kontrolin kung sino ang maaaring magdagdag ng mga gastos, mag-ayos, o manood lang mula sa sideline. Ang iyong grupo, ang iyong mga patakaran.',
+  'features.roles.title': 'Lockdown-friendly na permissions',
+  'features.roles.desc': 'Preset vs custom na security rules, member role dropdowns, pending invite moderation, lock toggles, "include deleted" filters, at admin-only na settings para kontrolado ang kaguluhan.',
 
-  'features.splits.title': 'Tatlong Paraan para Hatiin',
-  'features.splits.desc': 'Pare-pareho (hatiin nang pantay-pantay), Eksakto (mga tiyak na halaga), o Porsyento. Piliin kung ano ang gumagana para sa iyong grupo. Sino ang hindi gusto ng 3-way?',
+  'features.splits.title': 'Nakakagulat na smart na expense form',
+  'features.splits.desc': 'Equal/exact/custom splits na may unsaved-change handling, multi-currency selector, Google Maps link parsing, label chips, receipt uploader, recent-amount shortcuts, at locked-expense safeguards.',
 
-  'features.participants.title': 'Piliin Kung Sino ang Kasama',
-  'features.participants.desc': "Hindi lahat ay naghahati ng lahat. Piliin kung sino mismo ang kasama sa bawat gastos. Ang \"Salad lang ang kinain ko\" ay isang opsyon na ngayon.",
+  'features.participants.title': 'Threads, files at reactions',
+  'features.participants.desc': 'Ang expense at group comments ay sumusuporta sa attachments, emoji toggles, pagination, at real-time updates, para mangyari ang planning ng susunod na trip sa tabi mismo ng mga numero.',
 
-  'features.currency.title': 'Anumang Pera',
-  'features.currency.desc': 'USD, EUR, JPY, GBP, kahit ano. Buong suporta para sa lahat ng pera na may tamang paghawak sa decimal. Mabilis na pumili mula sa mga kamakailang ginamit.',
+  'features.currency.title': 'Mga proteksyon sa pera',
+  'features.currency.desc': 'Maaaring i-lock ng mga admin ang groups sa approved currencies, pumili ng defaults, i-preserve ang legacy ones para sa lumang expenses, at hayaan pa rin ang multi-currency receipts kapag kailangan.',
 
-  'features.balances.title': 'Pinapayak na Balanse',
-  'features.balances.desc': 'Binabawasan ng smart na pagpapasimple ng utang ang bilang ng mga bayad na kailangan. Sa halip na magbayaran ang bawat isa, aalamin namin ang pinakamaikling ruta para sa pag-ayos.',
+  'features.balances.title': 'Mga balanseng mapagkakatiwalaan',
+  'features.balances.desc': 'Palaging naka-on na balance panes na nagpapakita ng optimized debts, "all settled up" confirmations, at filters para ipakita ang indirect debts para walang magtalo kung sino ang may utang kanino.',
 
-  'features.settle.title': 'One-Click Settle',
-  'features.settle.desc': 'Nakakita ng utang? I-tap ang "Mabilisang Pag-ayos" at markahan itong bayad. Tapos na. Opsyonal ang confetti ngunit lubos na inirerekomenda.',
+  'features.settle.title': 'Mabilis na pag-aayos + kasaysayan',
+  'features.settle.desc': 'One-tap settlement buttons na nagbubukas ng pre-filled forms na may validation para sa over/under payments, history tiles na nagpapakita ng edits, locks na nag-e-enforce ng read-only, at reactions na nagpapanatiling masaya sa repayments.',
 
-  'features.activity.title': 'Activity Feed',
-  'features.activity.desc': `Tingnan ang lahat ng nangyayari: bagong mga gastos, mga pag-aayos, mga miyembrong sumali. Manatiling naka-sync sa iyong grupo nang hindi nagtatanong ng "teka, ano'ng nangyari?"`,
+  'features.activity.title': 'Deep-link lahat',
+  'features.activity.desc': 'Ang URLs tulad ng /groups/:id/add-expense ay auto-open ng modals, nililinis ng Escape ang history, nananatiling buo ang dashboard back-stacks, at ang notifications/dropdowns ay mino-mirror ang feed.',
 
-  'features.comments.title': 'Chat & Komento',
-  'features.comments.desc': 'Group chat para sa pangkalahatang diskusyon, at mga komento sa bawat gastos. "Sino ang nag-order ng karagdagang nachos?" Panatilihing nasa tamang lugar ang usapan.',
+  'features.comments.title': 'Emoji kahit saan',
+  'features.comments.desc': 'Ang expenses, comments, at settlements ay nagsha-share ng parehong emoji picker, aggregated counts, highlight states, at toggle UX dahil ang accountability ay pwede pa ring maging masaya.',
 
-  'features.edit.title': 'Ayusin ang mga Mali',
-  'features.edit.desc': 'Maling halaga ang inilagay? I-edit ang mga gastos pagkatapos gawin. Baguhin ang hati, ayusin ang petsa, i-update ang mga deskripsyon. Walang stress.',
+  'features.edit.title': 'Mga settings na talagang gumagana',
+  'features.edit.desc': 'Identity aliases per group, general settings na may rename/describe/delete + confirmations, security presets, member role editors, at lock toggles na guarded sa likod ng admin-only tabs.',
 
-  'features.noTracking.title': 'Walang Pagsubaybay',
-  'features.noTracking.desc': "Walang analytics. Walang tracking pixels. Walang pag-harvest ng data. Hindi namin alam kung saan ka gumagastos ng pera, at gusto namin iyon.",
+  'features.noTracking.title': 'Walang trackers. Buong respeto.',
+  'features.noTracking.desc': 'Policy acceptance modals, cookie/terms/privacy fetches, warning banners, at zero ads o trackers. Ang data lang na nagpapanatiling friendly sa mga badgers ang sine-save namin.',
 
   // Coming soon section
   'comingSoon.title': 'Malapit Na',
@@ -96,23 +96,23 @@ export default {
   'littleThings.title': 'Maliliit na Bagay na Mahalaga',
   'littleThings.subtitle': 'Ang mga detalye na nagpapaganda sa paghahati ng gastos.',
 
-  'littleThings.dates.title': 'Mabilis na Petsa',
-  'littleThings.dates.desc': 'Mga pindutan ng "Ngayon", "Kahapon", at "Kagabi". Dahil walang gustong gumamit ng date picker para sa hapunan.',
+  'littleThings.dates.title': 'Deep links at routing',
+  'littleThings.dates.desc': 'Ang direct URLs ay nagbubukas ng modals (expense detail, add expense, settlements), inire-restore ng Escape ang history, at ang hash anchors ay auto-expand ng sections nang hindi sinisira ang back button.',
 
-  'littleThings.amounts.title': 'Kamakailang Halaga',
-  'littleThings.amounts.desc': 'Ang iyong madalas na ginagamit na halaga ay lumalabas para sa mabilis na pagpili. Ang upa ay laging pareho? Isang tapikin.',
+  'littleThings.amounts.title': 'Pagpapaganda ng pagsali at pagrehistro',
+  'littleThings.amounts.desc': 'Ang return URLs ay nabubuhay sa login/register/reset flows, ang policy checkboxes ay nagga-gate ng submissions, ang resend verification ay nasa banners, at ang auth redirects ay nagpapanatiling labas ng freeloaders.',
 
-  'littleThings.names.title': 'Maging Kung Sino ang Gusto Mo',
-  'littleThings.names.desc': 'Iba\'t ibang pangalan ng display kada grupo. "Nanay" sa pamilya, "Sarah" sa trabaho, "Party Animal" sa mga kaibigan.',
+  'littleThings.names.title': 'Accessibility na built-in',
+  'littleThings.names.desc': 'Focus traps, auto-focus targets, restored focus on close, screen-reader skip links, tooltips sa disabled actions, at RTL-aware layouts para sa mga wika tulad ng Arabic.',
 
-  'littleThings.archive.title': 'I-archive ang mga Lumang Grupo',
-  'littleThings.archive.desc': 'Tapos na ang biyahe? I-archive ito. Mananatiling ligtas ang grupo ngunit hindi nakaharang. Ibalik ito anumang oras.',
+  'littleThings.archive.title': 'Mga kontrol sa lifecycle',
+  'littleThings.archive.desc': 'Archive/unarchive mula sa dashboard quick actions, leave-group flows na nagba-babala tungkol sa open balances, at locked-group banners na nagdi-disable ng risky buttons.',
 
-  'littleThings.celebrations.title': 'Mga Pagdiriwang',
-  'littleThings.celebrations.desc': "Kapag naayos na ang lahat, makakakuha ka ng confetti. Iyan ang maliliit na bagay.",
+  'littleThings.celebrations.title': 'Mga signal na mahalaga',
+  'littleThings.celebrations.desc': 'Email verification banners, warning bars, toast confirmations, state-preserving dialogs, at notification dropdowns na nagpapanatiling updated sa lahat.',
 
-  'littleThings.everywhere.title': 'Gumagana Kahit Saan',
-  'littleThings.everywhere.desc': 'Desktop, tablet, telepono. Walang app na ida-download. Gumagana lang sa iyong browser.',
+  'littleThings.everywhere.title': 'Tumutugon na pahina',
+  'littleThings.everywhere.desc': 'Dashboard paging, comments/expenses na "load more" buttons, mobile-optimized controls, at instant refreshes kapag nagbabago ang data sa background.',
 
   // Why free section
   'whyFree.title': 'Bakit libre ito?',
@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': 'Ang paghahati ng $47.23 na bill sa hapunan ay sapat na nakakainis nang walang ad para sa mga subscription sa meal kit.',
 
   'whyFree.badgers.title': 'Mga Badger Lang',
-  'whyFree.badgers.desc': 'Ang Side Badger ay isang libreng expense splitting app na inuuna ang privacy. Walang nakatagong agenda. Vibes lang at mga badger.',
+  'whyFree.badgers.desc': 'Ang Side Badger ay isang libre, privacy-first na expense splitting app. Walang nakatagong agenda. Vibes lang at mga badger.',
 
   // CTA section
   'cta.title': 'Handa nang hatiin ang ilang bills?',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Mga Tanong na Maaaring Mayroon Ka',
   'pricing.faq.q1.question': 'Totoo ba na libre ito?',
-  'pricing.faq.q1.answer': 'Oo, sa ngayon ay ganap itong libre. Hindi namin itinatago ang mga tampok sa likod ng isang paywall. Pinananatili naming libre dahil karapatan ng lahat ang walang-stress na paghahati ng gastos habang naglalabas kami ng mga bagong bagay.',
+  'pricing.faq.q1.answer': 'Oo, sa ngayon ay ganap itong libre. Hindi namin itinatago ang mga feature sa likod ng paywall. Pinapanatili naming libre dahil lahat ay karapat-dapat sa stress-free na bill splitting habang nagshi-ship kami ng mga bagong bagay.',
   'pricing.faq.q2.question': 'Ano ang catch?',
-  'pricing.faq.q2.answer': 'Walang catch. Umiiral ang Side Badger para gawing simple, pribado, at masaya ang paghahati ng gastos. \'Yun lang.',
+  'pricing.faq.q2.answer': 'Walang catch. Umiiral ang Side Badger para gawing simple, pribado, at masaya ang expense splitting. Iyon lang ang buong story.',
   'pricing.faq.q3.question': 'Ibebenta n\'yo ba ang data ko?',
   'pricing.faq.q3.answer': 'Talagang hindi. Hindi kami nangongolekta ng personal na data maliban sa kinakailangan upang patakbuhin ang app. Mayroon kaming zero tracker, zero analytics pixels, at zero interes sa iyong mga gawi sa pamimili.',
   'pricing.faq.q4.question': 'Bakit isang badger?',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'Maaari ko bang gamitin ito para sa aking negosyo?',
   'pricing.faq.q5.answer': 'Oo naman! Kung gusto mong subaybayan ang mga ibinahaging gastos para sa iyong maliit na negosyo o koponan, gawin mo. Ito ay libre. Hindi ka namin huhusgahan.',
   'pricing.faq.q6.question': 'Paano kung makakita ako ng bug?',
-  'pricing.faq.q6.answer': 'Una sa lahat, nakakabastos namang sabihing may bug ang code namin. Pangalawa, oo, marahil may mga bug. Mabilis kaming naglalabas, kaya maging banayad sa amin.',
+  'pricing.faq.q6.answer': 'Una sa lahat, paano ka naman nag-imply na may bugs ang code namin. Pangalawa, oo, malamang may mga bugs. Mabilis kaming nagshi-ship, kaya maging malumanay sa amin.',
 
   // Policy pages
   'policy.privacy.title': 'Patakaran sa Privacy',

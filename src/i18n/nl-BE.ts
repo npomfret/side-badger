@@ -29,49 +29,49 @@ export default {
   'hero.title': 'Splits uitgaven als een',
   'hero.titleHighlight': 'side badger',
   'hero.titleDisclaimer': '',
-  'hero.subtitle': 'De volledig gratis, geen-tracking, geen-advertenties uitgavensplitser die verdacht goed is. We willen je gegevens niet. We willen je geld niet. We willen alleen dat je rekeningen kunt splitsen met je vrienden zonder te huilen.',
+  'hero.subtitle': 'Realtime dashboard-inzicht, emoji-reacties, uitnodigingslinks die je op aanvraag kunt vernieuwen en een verrassend slim uitgavenformulier. Alles wat de app echt doet, helder uitgelegd voor mensen.',
   'hero.cta': '...sidebadger mij',
 
   // Features section
-  'features.title': 'Alles Wat Je Nodig Hebt',
-  'features.subtitle': 'Alle functies. Geen tracking. Geen doctoraat vereist.',
+  'features.title': 'Binnenin Side Badger',
+  'features.subtitle': 'Een zorgvuldig samengestelde lijst van de echte, werkende functies die in het dashboard op je wachten.',
 
   // Feature cards
-  'features.groups.title': 'Groepen voor Alles',
-  'features.groups.desc': 'Huisgenoten, reizen, evenementen, D&D-avonden. Maak zoveel groepen aan als je nodig hebt en houd uitgaven georganiseerd.',
+  'features.groups.title': 'Realtime dashboard',
+  'features.groups.desc': 'Rijke activiteitenfeed met "Jij"-teksten, gearchiveerde/actieve tabbladen, verzorgde groepskaarten met hover-effecten, skeleton loaders, paginering, lege staten en foutherstel op desktop en mobiel.',
 
-  'features.invites.title': 'Makkelijke Uitnodigingen',
-  'features.invites.desc': 'Deel een link, vrienden doen mee. Geen app download nodig. Je kunt optioneel goedkeuring vereisen voordat nieuwe leden kunnen toetreden.',
+  'features.invites.title': 'Deellinks + QR-uitnodigingen',
+  'features.invites.desc': 'Elke groepskaart heeft een deelmodal met korte URLs, QR-codes, vernieuwbare tokens, klembord-feedback, taalbewuste links en een landingspagina die goedkeuringen en wachtende leden netjes afhandelt.',
 
-  'features.roles.title': 'Configureerbare Rechten',
-  'features.roles.desc': 'Bepaal wie uitgaven kan toevoegen, kan afrekenen of gewoon kan meekijken. Jouw groep, jouw regels.',
+  'features.roles.title': 'Lockdown-vriendelijke rechten',
+  'features.roles.desc': 'Vooraf ingestelde vs aangepaste beveiligingsregels, dropdown voor ledenrollen, moderatie van wachtende uitnodigingen, vergrendelingstoggles, "inclusief verwijderd" filters en alleen-admin instellingen zodat chaos onder controle blijft.',
 
-  'features.splits.title': 'Drie Manieren om te Splitsen',
-  'features.splits.desc': 'Gelijk (eerlijk verdelen), Exact (specifieke bedragen) of Percentage. Kies wat werkt voor jouw groep. Wie houdt er niet van een triootje?',
+  'features.splits.title': 'Belachelijk slim uitgavenformulier',
+  'features.splits.desc': 'Gelijk/exact/aangepaste splitsingen met niet-opgeslagen wijzigingswaarschuwingen, multi-valuta selector, Google Maps link-parsing, label-chips, bonnetjes-uploader, recente-bedrag snelkoppelingen en vergrendelde-uitgave beveiligingen.',
 
-  'features.participants.title': 'Kies Wie Meedoet',
-  'features.participants.desc': 'Niet iedereen deelt alles. Selecteer precies wie betrokken is bij elke uitgave. "Ik had alleen een salade" is nu een optie.',
+  'features.participants.title': 'Threads, bestanden & reacties',
+  'features.participants.desc': 'Opmerkingen bij uitgaven en groepen ondersteunen bijlagen, emoji-toggles, paginering en realtime updates, zodat het plannen van de volgende reis naast de cijfers gebeurt.',
 
-  'features.currency.title': 'Elke Valuta',
-  'features.currency.desc': 'USD, EUR, JPY, GBP, wat dan ook. Volledige ondersteuning voor alle valuta\'s met correcte decimalen. Snel kiezen uit recente valuta\'s.',
+  'features.currency.title': 'Valuta-vangrails',
+  'features.currency.desc': 'Admins kunnen groepen vergrendelen tot goedgekeurde valuta\'s, standaardwaarden kiezen, oude valuta\'s behouden voor bestaande uitgaven en toch multi-valuta bonnetjes toestaan wanneer nodig.',
 
-  'features.balances.title': 'Vereenvoudigde Saldi',
-  'features.balances.desc': 'Slimme schuldvereenvoudiging minimaliseert het aantal betalingen. In plaats van dat iedereen iedereen betaalt, berekenen wij de kortste weg om af te rekenen.',
+  'features.balances.title': 'Saldi waar je op kunt vertrouwen',
+  'features.balances.desc': 'Altijd-zichtbare saldopanelen tonen geoptimaliseerde schulden, "alles afgerekend" bevestigingen en filters om indirecte schulden te onthullen zodat niemand ruzie maakt over wie wat verschuldigd is.',
 
-  'features.settle.title': 'Afrekenen met 1 Klik',
-  'features.settle.desc': 'Zie je een schuld? Tik op "Snel Afrekenen" en markeer het als betaald. Klaar. Confetti optioneel maar sterk aanbevolen.',
+  'features.settle.title': 'Snel afrekenen + geschiedenis',
+  'features.settle.desc': 'Eén-tik afrekeningsknoppen openen vooraf ingevulde formulieren met validatie voor te veel/te weinig betalingen, geschiedenistegels tonen bewerkingen, vergrendelingen dwingen alleen-lezen af en reacties houden terugbetalingen speels.',
 
-  'features.activity.title': 'Activiteitenfeed',
-  'features.activity.desc': 'Zie alles wat er gebeurt: nieuwe uitgaven, afrekeningen, leden die toetreden. Blijf gesynchroniseerd met je groep zonder te vragen "wacht, wat is er gebeurd?"',
+  'features.activity.title': 'Deep-link alles',
+  'features.activity.desc': 'URLs zoals /groups/:id/add-expense openen automatisch modals, Escape wist geschiedenis, dashboard-backstacks blijven intact en notificaties/dropdowns spiegelen de feed.',
 
-  'features.comments.title': 'Chat & Reageren',
-  'features.comments.desc': 'Groepschat voor algemene discussie, plus reacties op individuele uitgaven. "Wie bestelde de extra nacho\'s?" Houd het gesprek waar het thuishoort.',
+  'features.comments.title': 'Emoji overal',
+  'features.comments.desc': 'Uitgaven, opmerkingen en afrekeningen delen dezelfde emoji-picker, geaggregeerde tellingen, highlight-staten en toggle-UX—want verantwoording kan ook leuk zijn.',
 
-  'features.edit.title': 'Fouten Herstellen',
-  'features.edit.desc': 'Verkeerd bedrag ingevoerd? Bewerk uitgaven na aanmaak. Wijzig de splitsing, corrigeer de datum, pas beschrijvingen aan. Geen stress.',
+  'features.edit.title': 'Instellingen die echt werken',
+  'features.edit.desc': 'Identiteitsaliassen per groep, algemene instellingen met hernoemen/beschrijven/verwijderen + bevestigingen, beveiligingspresets, ledenrol-editors en vergrendelingstoggles achter alleen-admin tabbladen.',
 
-  'features.noTracking.title': 'Geen Tracking',
-  'features.noTracking.desc': 'Geen analytics. Geen tracking pixels. Geen data harvesting. Wij weten niet waar je je geld aan uitgeeft, en dat vinden we prima.',
+  'features.noTracking.title': 'Geen trackers. Vol respect.',
+  'features.noTracking.desc': 'Beleidsacceptatie-modals, cookie/voorwaarden/privacy-ophaling, waarschuwingsbanners en nul advertenties of trackers. We slaan alleen op wat de dassen vriendelijk houdt.',
 
   // Coming soon section
   'comingSoon.title': 'Binnenkort',
@@ -96,23 +96,23 @@ export default {
   'littleThings.title': 'Kleine Dingen Die Ertoe Doen',
   'littleThings.subtitle': 'De details die uitgaven splitsen echt aangenaam maken.',
 
-  'littleThings.dates.title': 'Snelle Datums',
-  'littleThings.dates.desc': '"Vandaag", "Gisteren" en "Gisteravond" knoppen. Omdat niemand een datumkiezer wil gebruiken voor het avondeten.',
+  'littleThings.dates.title': 'Deep links & routing',
+  'littleThings.dates.desc': 'Directe URLs openen modals (uitgavedetails, uitgave toevoegen, afrekeningen), Escape herstelt geschiedenis en hash-ankers vouwen secties automatisch uit zonder de terugknop te breken.',
 
-  'littleThings.amounts.title': 'Recente Bedragen',
-  'littleThings.amounts.desc': 'Je veelgebruikte bedragen verschijnen voor snelle selectie. Huur is altijd hetzelfde? Eén tik.',
+  'littleThings.amounts.title': 'Join + registratie-afwerking',
+  'littleThings.amounts.desc': 'Return-URLs overleven login/registreer/reset-flows, beleidscheckboxen blokkeren inzendingen, verificatie opnieuw versturen zit in banners en auth-redirects houden profiteurs buiten.',
 
-  'littleThings.names.title': 'Wees Wie Je Wilt',
-  'littleThings.names.desc': 'Andere weergavenaam per groep. "Mama" bij familie, "Sarah" op het werk, "Feestvarken" bij vrienden.',
+  'littleThings.names.title': 'Toegankelijkheid ingebakken',
+  'littleThings.names.desc': 'Focus traps, auto-focus doelen, herstelde focus bij sluiten, screen-reader skip-links, tooltips bij uitgeschakelde acties en RTL-bewuste layouts voor talen zoals Arabisch.',
 
-  'littleThings.archive.title': 'Archiveer Oude Groepen',
-  'littleThings.archive.desc': 'Reis voorbij? Archiveer de groep. De groep blijft veilig maar uit de weg. Haal hem terug wanneer je wilt.',
+  'littleThings.archive.title': 'Levenscyclusbeheer',
+  'littleThings.archive.desc': 'Archiveren/dearchiveren via dashboard snelacties, groep-verlaten-flows die waarschuwen voor openstaande saldi en vergrendelde-groep banners die risicovolle knoppen uitschakelen.',
 
-  'littleThings.celebrations.title': 'Vieringen',
-  'littleThings.celebrations.desc': 'Als iedereen heeft afgerekend, krijg je confetti. Het zijn de kleine dingen.',
+  'littleThings.celebrations.title': 'Signalen die ertoe doen',
+  'littleThings.celebrations.desc': 'E-mailverificatie-banners, waarschuwingsbalken, toast-bevestigingen, staat-behoudende dialogen en notificatie-dropdowns houden iedereen op de hoogte.',
 
-  'littleThings.everywhere.title': 'Werkt Overal',
-  'littleThings.everywhere.desc': 'Desktop, tablet, telefoon. Geen app om te downloaden. Werkt gewoon in je browser.',
+  'littleThings.everywhere.title': 'Responsieve paginering',
+  'littleThings.everywhere.desc': 'Dashboard-paginering, "laad meer" knoppen voor opmerkingen/uitgaven, mobiel-geoptimaliseerde besturing en directe verversingen wanneer data achter de schermen verandert.',
 
   // Why free section
   'whyFree.title': 'Waarom is het gratis?',
@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': 'Een rekening van 47,23 euro splitsen is al vervelend genoeg zonder advertenties voor maaltijdboxen.',
 
   'whyFree.badgers.title': 'Gewoon Dassen',
-  'whyFree.badgers.desc': 'Side Badger is een gratis, privacy-first app om uitgaven te splitsen. Geen verborgen agenda. Gewoon vibes en dassen.',
+  'whyFree.badgers.desc': 'Side Badger is een gratis, privacy-first app om uitgaven te splitsen. Geen verborgen agenda. Gewoon goede vibes en dassen.',
 
   // CTA section
   'cta.title': 'Klaar om wat rekeningen te splitsen?',
@@ -144,7 +144,7 @@ export default {
   // Full Badger Plan
   'pricing.plan.badge': 'Huidig Plan',
   'pricing.plan.name': 'Full Badger',
-  'pricing.plan.currency': '',
+  'pricing.plan.currency': '€',
   'pricing.plan.amount': '0',
   'pricing.plan.period': '/maand',
   'pricing.plan.description': 'Alles. Het hele pakket. Geen limieten zolang het duurt.',
@@ -176,7 +176,7 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Vragen Die Je Misschien Hebt',
   'pricing.faq.q1.question': 'Is het echt gratis?',
-  'pricing.faq.q1.answer': 'Ja, op dit moment is het volledig gratis. We verbergen geen functies achter een betaalmuur. We houden het gratis omdat iedereen stressvrij rekeningen moet kunnen splitsen terwijl wij nieuwe dingen blijven bouwen.',
+  'pricing.faq.q1.answer': 'Ja, op dit moment is het volledig gratis. We verbergen geen functies achter een betaalmuur. We houden het gratis omdat iedereen stressvrij rekeningen verdient te kunnen splitsen terwijl wij nieuwe dingen blijven bouwen.',
   'pricing.faq.q2.question': 'Wat is het addertje?',
   'pricing.faq.q2.answer': 'Geen addertje. Side Badger bestaat om het splitsen van uitgaven simpel, privé en leuk te maken. Dat is het hele verhaal.',
   'pricing.faq.q3.question': 'Gaan jullie mijn gegevens verkopen?',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'Kan ik dit gebruiken voor mijn bedrijf?',
   'pricing.faq.q5.answer': 'Tuurlijk! Als je gedeelde uitgaven wilt bijhouden voor je kleine bedrijf of team, ga je gang. Het is gratis. We oordelen niet.',
   'pricing.faq.q6.question': 'Wat als ik een bug vind?',
-  'pricing.faq.q6.answer': 'Ten eerste, hoe durf je te suggereren dat onze code bugs heeft. Ten tweede, ja er zijn waarschijnlijk bugs. We shippen snel, dus wees lief voor ons.',
+  'pricing.faq.q6.answer': 'Ten eerste, hoe durf je te suggereren dat onze code bugs heeft. Ten tweede, ja er zijn waarschijnlijk wel bugs. We shippen snel, dus wees lief voor ons.',
 
   // Policy pages
   'policy.privacy.title': 'Privacybeleid',

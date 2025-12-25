@@ -1,6 +1,5 @@
 export default {
   // App
-  'app.url': 'https://demo.sidebadger.com/dashboard',
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
@@ -28,7 +27,7 @@ export default {
   'hero.disclaimer': "* Offensichtlich gibt es einige Einschränkungen. Fair-Use-Richtlinien und viele andere Einschränkungen gelten. Es ist kostenlos, bis es das nicht mehr ist.",
   'hero.title': 'Ausgaben teilen wie ein',
   'hero.titleHighlight': 'Neben-Dachs',
-  'hero.titleDisclaimer': '',
+  'hero.titleDisclaimer': '‌',
   'hero.subtitle': 'Echtzeit-Dashboard, Emoji-Reaktionen, Einladungslinks die sich auf Abruf regenerieren, und ein überraschend smartes Ausgabenformular. Alles was die App wirklich kann, verständlich dargestellt.',
   'hero.cta': '...sidebadger mich',
 
@@ -216,10 +215,7 @@ export default {
   'a11y.searchLanguages': 'Sprachen suchen',
   'a11y.mainNavigation': 'Hauptnavigation',
   'a11y.footerNavigation': 'Fußzeilennavigation',
-  'a11y.openInNewTab': 'Öffnet in neuem Tab',
   'a11y.externalLink': 'Externer Link',
-  'a11y.currentPage': 'Aktuelle Seite',
-  'a11y.loading': 'Wird geladen',
   'a11y.homeLink': 'Zur Startseite',
 
   // Coming Soon badge
@@ -229,7 +225,6 @@ export default {
   'policy.loading': 'Richtlinie wird geladen...',
   'policy.error.generic': 'Richtlinie konnte nicht geladen werden.',
   'policy.error.config': 'Konfigurationsfehler.',
-  'policy.error.status': 'Richtlinie konnte nicht geladen werden (Fehler {status}).',
   'policy.error.unavailable': 'Richtlinie nicht verfügbar.',
   'policy.error.empty': 'Richtlinieninhalt ist leer.',
   'policy.error.tryAgain': 'Bitte versuchen Sie es später erneut oder kontaktieren Sie den Support.',

@@ -1,6 +1,5 @@
 export default {
   // App
-  'app.url': 'https://demo.sidebadger.com/dashboard',
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
@@ -28,7 +27,7 @@ export default {
   'hero.disclaimer': "* Yn amlwg mae rhai cyfyngiadau. Mae defnydd teg, a llawer o gyfyngiadau eraill yn berthnasol. Mae am ddim nes nad yw.",
   'hero.title': 'Rhannwch gostau fel',
   'hero.titleHighlight': 'mochyn daear ochr',
-  'hero.titleDisclaimer': '',
+  'hero.titleDisclaimer': '‌',
   'hero.subtitle': "Mewnwelediad dangosfwrdd amser real, adweithiau wedi'u pweru gan emoji, dolenni gwahodd sy'n adfywio ar alw, a ffurflen gostau syfrdanol o glyfar. Popeth mae'r ap yn ei wneud mewn gwirionedd, wedi'i osod allan i bobl.",
   'hero.cta': '...gwnewch fi\'n fochyn daear ochr',
 
@@ -216,10 +215,7 @@ export default {
   'a11y.searchLanguages': 'Chwilio ieithoedd',
   'a11y.mainNavigation': 'Prif lywio',
   'a11y.footerNavigation': 'Llywio troedyn',
-  'a11y.openInNewTab': 'Yn agor mewn tab newydd',
   'a11y.externalLink': 'Dolen allanol',
-  'a11y.currentPage': 'Tudalen bresennol',
-  'a11y.loading': 'Yn llwytho',
   'a11y.homeLink': 'Ewch i\'r dudalen gartref',
 
   // Coming Soon badge
@@ -229,7 +225,6 @@ export default {
   'policy.loading': 'Yn llwytho polisi...',
   'policy.error.generic': 'Methu llwytho polisi.',
   'policy.error.config': 'Gwall ffurfweddu.',
-  'policy.error.status': 'Methu llwytho polisi (gwall {status}).',
   'policy.error.unavailable': 'Polisi ddim ar gael.',
   'policy.error.empty': 'Mae cynnwys y polisi yn wag.',
   'policy.error.tryAgain': 'Ceisiwch eto yn nes ymlaen neu cysylltwch â chymorth.',

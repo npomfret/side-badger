@@ -1,6 +1,5 @@
 export default {
   // App
-  'app.url': 'https://demo.sidebadger.com/dashboard',
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
@@ -216,10 +215,7 @@ export default {
   'a11y.searchLanguages': '언어 검색',
   'a11y.mainNavigation': '메인 내비게이션',
   'a11y.footerNavigation': '푸터 내비게이션',
-  'a11y.openInNewTab': '새 탭에서 열림',
   'a11y.externalLink': '외부 링크',
-  'a11y.currentPage': '현재 페이지',
-  'a11y.loading': '로딩 중',
   'a11y.homeLink': '홈페이지로 이동',
 
   // Coming Soon badge
@@ -229,7 +225,6 @@ export default {
   'policy.loading': '정책을 불러오는 중...',
   'policy.error.generic': '정책을 불러올 수 없습니다.',
   'policy.error.config': '구성 오류.',
-  'policy.error.status': '정책을 불러올 수 없습니다 (오류 {status}).',
   'policy.error.unavailable': '정책을 사용할 수 없습니다.',
   'policy.error.empty': '정책 내용이 비어 있습니다.',
   'policy.error.tryAgain': '나중에 다시 시도하거나 지원팀에 문의하세요.',

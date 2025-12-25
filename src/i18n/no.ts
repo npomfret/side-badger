@@ -1,6 +1,5 @@
 export default {
   // App
-  'app.url': 'https://demo.sidebadger.com/dashboard',
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
@@ -28,7 +27,7 @@ export default {
   'hero.disclaimer': "* Det er åpenbart noen begrensninger. Rimelig bruk og mange andre begrensninger gjelder. Det er gratis til det ikke er det.",
   'hero.title': 'Del utgifter som en',
   'hero.titleHighlight': 'side badger',
-  'hero.titleDisclaimer': '',
+  'hero.titleDisclaimer': '‌',
   'hero.subtitle': 'Dashbord med sanntidsinnsikt, emoji-drevne reaksjoner, invitasjonslenker som regenereres på forespørsel, og et overraskende smart utgiftsskjema. Alt appen faktisk gjør, presentert for mennesker.',
   'hero.cta': '...sidebadger meg',
 
@@ -216,10 +215,7 @@ export default {
   'a11y.searchLanguages': 'Søk språk',
   'a11y.mainNavigation': 'Hovednavigasjon',
   'a11y.footerNavigation': 'Bunntekstnavigasjon',
-  'a11y.openInNewTab': 'Åpnes i ny fane',
   'a11y.externalLink': 'Ekstern lenke',
-  'a11y.currentPage': 'Gjeldende side',
-  'a11y.loading': 'Laster',
   'a11y.homeLink': 'Gå til forsiden',
 
   // Coming Soon badge
@@ -229,7 +225,6 @@ export default {
   'policy.loading': 'Laster retningslinjer...',
   'policy.error.generic': 'Kunne ikke laste retningslinjer.',
   'policy.error.config': 'Konfigurasjonsfeil.',
-  'policy.error.status': 'Kunne ikke laste retningslinjer (feil {status}).',
   'policy.error.unavailable': 'Retningslinjer ikke tilgjengelig.',
   'policy.error.empty': 'Retningslinjer er tomme.',
   'policy.error.tryAgain': 'Prøv igjen senere eller kontakt support.',

@@ -1,6 +1,5 @@
 export default {
   // App
-  'app.url': 'https://demo.sidebadger.com/dashboard',
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
@@ -28,7 +27,7 @@ export default {
   'hero.disclaimer': '* Er zijn natuurlijk wel enkele beperkingen. Fair use en vele andere beperkingen zijn van toepassing. Het is gratis totdat het dat niet meer is.',
   'hero.title': 'Splits uitgaven als een',
   'hero.titleHighlight': 'side badger',
-  'hero.titleDisclaimer': '',
+  'hero.titleDisclaimer': '‌',
   'hero.subtitle': 'Realtime dashboard-inzicht, emoji-reacties, uitnodigingslinks die je op aanvraag kunt vernieuwen en een verrassend slim uitgavenformulier. Alles wat de app echt doet, helder uitgelegd voor mensen.',
   'hero.cta': '...sidebadger mij',
 
@@ -216,10 +215,7 @@ export default {
   'a11y.searchLanguages': 'Zoek talen',
   'a11y.mainNavigation': 'Hoofdnavigatie',
   'a11y.footerNavigation': 'Voettekstnavigatie',
-  'a11y.openInNewTab': 'Opent in nieuw tabblad',
   'a11y.externalLink': 'Externe link',
-  'a11y.currentPage': 'Huidige pagina',
-  'a11y.loading': 'Laden',
   'a11y.homeLink': 'Ga naar startpagina',
 
   // Coming Soon badge
@@ -229,7 +225,6 @@ export default {
   'policy.loading': 'Beleid laden...',
   'policy.error.generic': 'Kan beleid niet laden.',
   'policy.error.config': 'Configuratiefout.',
-  'policy.error.status': 'Kan beleid niet laden (fout {status}).',
   'policy.error.unavailable': 'Beleid niet beschikbaar.',
   'policy.error.empty': 'Beleidsinhoud is leeg.',
   'policy.error.tryAgain': 'Probeer het later opnieuw of neem contact op met support.',

@@ -1,6 +1,5 @@
 export default {
   // App
-  'app.url': 'https://demo.sidebadger.com/dashboard',
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
@@ -28,7 +27,7 @@ export default {
   'hero.disclaimer': '* من الواضح أن هناك بعض القيود. الاستخدام العادل وقيود أخرى كثيرة تنطبق. مجاني... حتى إشعار آخر.',
   'hero.title': 'قسّم المصروفات مثل',
   'hero.titleHighlight': 'سايد بادجر',
-  'hero.titleDisclaimer': '',
+  'hero.titleDisclaimer': '‌',
   'hero.subtitle': 'لوحة تحكم فورية، تفاعلات بالإيموجي، روابط دعوة تتجدد عند الطلب، ونموذج مصاريف ذكي بشكل مذهل. كل ما يفعله التطبيق فعلاً، مُعروض للبشر.',
   'hero.cta': '...بادجرني',
 
@@ -216,10 +215,7 @@ export default {
   'a11y.searchLanguages': 'البحث عن اللغات',
   'a11y.mainNavigation': 'التنقل الرئيسي',
   'a11y.footerNavigation': 'تنقل التذييل',
-  'a11y.openInNewTab': 'يفتح في علامة تبويب جديدة',
   'a11y.externalLink': 'رابط خارجي',
-  'a11y.currentPage': 'الصفحة الحالية',
-  'a11y.loading': 'جاري التحميل',
   'a11y.homeLink': 'انتقل إلى الصفحة الرئيسية',
 
   // Coming Soon badge
@@ -229,7 +225,6 @@ export default {
   'policy.loading': 'جاري تحميل السياسة...',
   'policy.error.generic': 'تعذر تحميل السياسة.',
   'policy.error.config': 'خطأ في الإعداد.',
-  'policy.error.status': 'تعذر تحميل السياسة (خطأ {status}).',
   'policy.error.unavailable': 'السياسة غير متاحة.',
   'policy.error.empty': 'محتوى السياسة فارغ.',
   'policy.error.tryAgain': 'يرجى المحاولة مرة أخرى لاحقاً أو الاتصال بالدعم.',

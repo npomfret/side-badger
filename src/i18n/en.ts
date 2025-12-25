@@ -1,6 +1,5 @@
 export default {
   // App
-  'app.url': 'https://demo.sidebadger.com/dashboard',
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
@@ -28,7 +27,7 @@ export default {
   'hero.disclaimer': "* Obviously there are some limitations. Fair usage, and many other limitations apply. It's free until it isn't.",
   'hero.title': 'Split expenses like a',
   'hero.titleHighlight': 'side badger',
-  'hero.titleDisclaimer': '',
+  'hero.titleDisclaimer': '‌',
   'hero.subtitle': 'Realtime dashboard insight, emoji-fueled reactions, invite links that regenerate on demand, and a shockingly smart expense form. Everything the app actually does, laid out for humans.',
   'hero.cta': '...sidebadger me',
 
@@ -216,10 +215,7 @@ export default {
   'a11y.searchLanguages': 'Search languages',
   'a11y.mainNavigation': 'Main navigation',
   'a11y.footerNavigation': 'Footer navigation',
-  'a11y.openInNewTab': 'Opens in new tab',
   'a11y.externalLink': 'External link',
-  'a11y.currentPage': 'Current page',
-  'a11y.loading': 'Loading',
   'a11y.homeLink': 'Go to home page',
 
   // Coming Soon badge
@@ -229,7 +225,6 @@ export default {
   'policy.loading': 'Loading policy...',
   'policy.error.generic': 'Unable to load policy.',
   'policy.error.config': 'Configuration error.',
-  'policy.error.status': 'Unable to load policy (error {status}).',
   'policy.error.unavailable': 'Policy not available.',
   'policy.error.empty': 'Policy content is empty.',
   'policy.error.tryAgain': 'Please try again later or contact support.',

@@ -1,6 +1,5 @@
 export default {
   // App
-  'app.url': 'https://demo.sidebadger.com/dashboard',
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
@@ -28,7 +27,7 @@ export default {
   'hero.disclaimer': "* Ovviamente ci sono alcune limitazioni. Si applicano l'uso equo e molte altre limitazioni. È gratuito finché non lo è più.",
   'hero.title': 'Dividi le spese come un',
   'hero.titleHighlight': 'side badger',
-  'hero.titleDisclaimer': '',
+  'hero.titleDisclaimer': '‌',
   'hero.subtitle': "Dashboard in tempo reale, reazioni con emoji, link di invito che si rigenerano su richiesta e un modulo spese incredibilmente intelligente. Tutto ciò che l'app fa davvero, spiegato per esseri umani.",
   'hero.cta': '...sidebadger me',
 
@@ -216,10 +215,7 @@ export default {
   'a11y.searchLanguages': 'Cerca lingue',
   'a11y.mainNavigation': 'Navigazione principale',
   'a11y.footerNavigation': 'Navigazione footer',
-  'a11y.openInNewTab': 'Si apre in una nuova scheda',
   'a11y.externalLink': 'Link esterno',
-  'a11y.currentPage': 'Pagina corrente',
-  'a11y.loading': 'Caricamento',
   'a11y.homeLink': 'Vai alla home page',
 
   // Coming Soon badge
@@ -229,7 +225,6 @@ export default {
   'policy.loading': 'Caricamento policy...',
   'policy.error.generic': 'Impossibile caricare la policy.',
   'policy.error.config': 'Errore di configurazione.',
-  'policy.error.status': 'Impossibile caricare la policy (errore {status}).',
   'policy.error.unavailable': 'Policy non disponibile.',
   'policy.error.empty': 'Il contenuto della policy è vuoto.',
   'policy.error.tryAgain': 'Riprova più tardi o contatta il supporto.',

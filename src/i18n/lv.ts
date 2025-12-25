@@ -1,6 +1,5 @@
 export default {
   // App
-  'app.url': 'https://demo.sidebadger.com/dashboard',
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
@@ -28,7 +27,7 @@ export default {
   'hero.disclaimer': '* Protams, ir daži ierobežojumi. Tiek piemērota godīga lietošana un daudzi citi ierobežojumi. Tas ir bez maksas, kamēr tas tā nav.',
   'hero.title': 'Sadaliet izdevumus kā',
   'hero.titleHighlight': 'side badger',
-  'hero.titleDisclaimer': '',
+  'hero.titleDisclaimer': '‌',
   'hero.subtitle': 'Reāllaika paneļa ieskats, emocijzīmju reakcijas, ielūgumu saites, kas atjaunojas pēc pieprasījuma, un pārsteidzoši gudra izdevumu veidlapa. Viss, ko lietotne patiešām dara, izklāstīts cilvēkiem.',
   'hero.cta': '...sidebadger mani',
 
@@ -216,10 +215,7 @@ export default {
   'a11y.searchLanguages': 'Meklēt valodas',
   'a11y.mainNavigation': 'Galvenā navigācija',
   'a11y.footerNavigation': 'Kājenes navigācija',
-  'a11y.openInNewTab': 'Atveras jaunā cilnē',
   'a11y.externalLink': 'Ārējā saite',
-  'a11y.currentPage': 'Pašreizējā lapa',
-  'a11y.loading': 'Ielādē',
   'a11y.homeLink': 'Doties uz sākumlapu',
 
   // Coming Soon badge
@@ -229,7 +225,6 @@ export default {
   'policy.loading': 'Ielādē politiku...',
   'policy.error.generic': 'Nevar ielādēt politiku.',
   'policy.error.config': 'Konfigurācijas kļūda.',
-  'policy.error.status': 'Nevar ielādēt politiku (kļūda {status}).',
   'policy.error.unavailable': 'Politika nav pieejama.',
   'policy.error.empty': 'Politikas saturs ir tukšs.',
   'policy.error.tryAgain': 'Lūdzu, mēģiniet vēlāk vai sazinieties ar atbalstu.',

@@ -66,11 +66,6 @@ const TECHNICAL_KEY_PATTERNS = [
   /\.url$/,
 ];
 
-// Keys that are intentionally empty (optional content)
-const ALLOWED_EMPTY_KEYS = new Set([
-  'hero.titleDisclaimer', // Optional disclaimer, empty by default
-]);
-
 function isAllowedIdentical(key: string): boolean {
   if (ALLOWED_IDENTICAL_KEYS.has(key)) return true;
   return TECHNICAL_KEY_PATTERNS.some(pattern => pattern.test(key));
@@ -206,19 +201,11 @@ describe('Translation Files Integrity', () => {
     it('All English translation keys are used somewhere in the codebase', () => {
       const unusedKeys = englishKeys.filter(key => !usedKeys.has(key));
 
-      // Filter out keys that might be dynamically generated or used in special ways
-      const suspiciousUnusedKeys = unusedKeys.filter(key => {
-        // These patterns are often used dynamically or indirectly
-        if (key.startsWith('a11y.')) return false; // Accessibility labels
-        if (key.startsWith('policy.')) return false; // Policy pages
-        if (key.startsWith('app.')) return false; // App config (used via getAppUrl, etc.)
-        if (key.startsWith('api.')) return false; // API config
-        return true;
-      });
-
+      // No filtering! All keys must be used.
+      // If a key exists, it should be referenced in code.
       expect(
-        suspiciousUnusedKeys,
-        `Found ${suspiciousUnusedKeys.length} translation keys not used in code (may be false positives if dynamically used):\n  ${suspiciousUnusedKeys.slice(0, 30).join('\n  ')}${suspiciousUnusedKeys.length > 30 ? `\n  ... and ${suspiciousUnusedKeys.length - 30} more` : ''}`
+        unusedKeys,
+        `Found ${unusedKeys.length} unused translation keys that should be removed:\n  ${unusedKeys.join('\n  ')}`
       ).toEqual([]);
     });
   });
@@ -245,9 +232,8 @@ describe('Translation Files Integrity', () => {
       }
     });
 
-    it('No empty translation values in English (except allowed)', () => {
+    it('No empty translation values in English', () => {
       const emptyKeys = englishKeys.filter(key => {
-        if (ALLOWED_EMPTY_KEYS.has(key)) return false;
         const value = englishTranslations[key];
         return !value || value.trim() === '';
       });
@@ -258,15 +244,12 @@ describe('Translation Files Integrity', () => {
       ).toEqual([]);
     });
 
-    it('No empty translation values in any locale (except allowed)', () => {
+    it('No empty translation values in any locale', () => {
       const emptyByLocale: Record<string, string[]> = {};
 
       for (const [locale, translation] of Object.entries(translations)) {
         const emptyKeys = Object.entries(translation)
-          .filter(([key, value]) => {
-            if (ALLOWED_EMPTY_KEYS.has(key)) return false;
-            return !value || value.trim() === '';
-          })
+          .filter(([key, value]) => !value || value.trim() === '')
           .map(([key]) => key);
 
         if (emptyKeys.length > 0) {
@@ -275,9 +258,15 @@ describe('Translation Files Integrity', () => {
       }
 
       const localesWithEmpty = Object.keys(emptyByLocale);
+
+      // Build detailed error message showing each locale and its empty keys
+      const errorDetails = localesWithEmpty
+        .map(locale => `  ${locale}: ${emptyByLocale[locale].join(', ')}`)
+        .join('\n');
+
       expect(
         localesWithEmpty,
-        `Locales with empty values: ${localesWithEmpty.map(l => `${l} (${emptyByLocale[l].length} empty)`).join(', ')}`
+        `Found empty translation values in ${localesWithEmpty.length} locales:\n${errorDetails}`
       ).toEqual([]);
     });
   });

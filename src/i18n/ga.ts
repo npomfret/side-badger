@@ -1,6 +1,5 @@
 export default {
   // App
-  'app.url': 'https://demo.sidebadger.com/dashboard',
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
@@ -28,7 +27,7 @@ export default {
   'hero.disclaimer': "* Is léir go bhfuil roinnt teorainneacha ann. Baineann úsáid chothrom, agus go leor teorainneacha eile. Tá sé saor in aisce go dtí nach bhfuil.",
   'hero.title': 'Roinn costais cosúil le',
   'hero.titleHighlight': 'broc taobh',
-  'hero.titleDisclaimer': '',
+  'hero.titleDisclaimer': '‌',
   'hero.subtitle': 'Léargas fíor-ama ar an deais, imoibriúcháin lán de emoji, naisc chuiridh a athghintear ar éileamh, agus foirm costais atá cliste go suntasach. Gach rud a dhéanann an aip i ndáiríre, leagtha amach do dhaoine.',
   'hero.cta': '...déan broc taobh díom',
 
@@ -216,10 +215,7 @@ export default {
   'a11y.searchLanguages': 'Cuardaigh teangacha',
   'a11y.mainNavigation': 'Príomhloingseoireacht',
   'a11y.footerNavigation': 'Loingseoireacht buntásc',
-  'a11y.openInNewTab': 'Osclaíonn i gcluaisín nua',
   'a11y.externalLink': 'Nasc seachtrach',
-  'a11y.currentPage': 'Leathanach reatha',
-  'a11y.loading': 'Ag lódáil',
   'a11y.homeLink': 'Téigh go dtí an leathanach baile',
 
   // Coming Soon badge
@@ -229,7 +225,6 @@ export default {
   'policy.loading': 'Ag lódáil polasaí...',
   'policy.error.generic': 'Ní féidir polasaí a lódáil.',
   'policy.error.config': 'Earráid chumraíochta.',
-  'policy.error.status': 'Ní féidir polasaí a lódáil (earráid {status}).',
   'policy.error.unavailable': 'Níl polasaí ar fáil.',
   'policy.error.empty': 'Tá ábhar an pholasaí folamh.',
   'policy.error.tryAgain': 'Bain triail eile as níos déanaí nó déan teagmháil le tacaíocht.',

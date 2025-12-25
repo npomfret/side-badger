@@ -1,6 +1,5 @@
 export default {
   // App
-  'app.url': 'https://demo.sidebadger.com/dashboard',
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
@@ -28,7 +27,7 @@ export default {
   'hero.disclaimer': "* Malinaw na mayroong ilang limitasyon. Nalalapat ang patas na paggamit, at marami pang ibang limitasyon. Libre ito hanggang sa hindi na.",
   'hero.title': 'Hatiin ang mga gastos tulad ng isang',
   'hero.titleHighlight': 'side badger',
-  'hero.titleDisclaimer': '',
+  'hero.titleDisclaimer': '‌',
   'hero.subtitle': "Realtime na dashboard insight, emoji-powered na reactions, invite links na nag-re-regenerate on demand, at nakakagulat na smart na expense form. Lahat ng talagang ginagawa ng app, nakalatag para sa mga tao.",
   'hero.cta': '...sidebadger ako',
 
@@ -216,10 +215,7 @@ export default {
   'a11y.searchLanguages': 'Maghanap ng wika',
   'a11y.mainNavigation': 'Pangunahing nabigasyon',
   'a11y.footerNavigation': 'Nabigasyon sa footer',
-  'a11y.openInNewTab': 'Bubukas sa bagong tab',
   'a11y.externalLink': 'Panlabas na link',
-  'a11y.currentPage': 'Kasalukuyang pahina',
-  'a11y.loading': 'Naglo-load',
   'a11y.homeLink': 'Pumunta sa home page',
 
   // Coming Soon badge
@@ -229,7 +225,6 @@ export default {
   'policy.loading': 'Naglo-load ng patakaran...',
   'policy.error.generic': 'Hindi ma-load ang patakaran.',
   'policy.error.config': 'Error sa pagsasaayos.',
-  'policy.error.status': 'Hindi ma-load ang patakaran (error {status}).',
   'policy.error.unavailable': 'Hindi available ang patakaran.',
   'policy.error.empty': 'Walang laman ang patakaran.',
   'policy.error.tryAgain': 'Subukan muli mamaya o makipag-ugnayan sa suporta.',

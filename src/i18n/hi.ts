@@ -1,6 +1,5 @@
 export default {
   // App
-  'app.url': 'https://demo.sidebadger.com/dashboard',
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
@@ -28,7 +27,7 @@ export default {
   'hero.disclaimer': '* जाहिर है कुछ सीमाएं हैं। उचित उपयोग और कई अन्य सीमाएं लागू होती हैं। यह तब तक मुफ्त है जब तक है।',
   'hero.title': 'खर्च बांटें',
   'hero.titleHighlight': 'बिज्जू की तरह',
-  'hero.titleDisclaimer': '',
+  'hero.titleDisclaimer': '‌',
   'hero.subtitle': 'रियलटाइम डैशबोर्ड इनसाइट, इमोजी-संचालित रिएक्शन, मांग पर रीजेनरेट होने वाले इनवाइट लिंक, और एक हैरान करने वाला स्मार्ट खर्च फॉर्म। ऐप जो भी करता है, सब कुछ इंसानों के लिए सरल भाषा में।',
   'hero.cta': '...मुझे बिज्जू बना दो',
 
@@ -216,10 +215,7 @@ export default {
   'a11y.searchLanguages': 'भाषाएं खोजें',
   'a11y.mainNavigation': 'मुख्य नेविगेशन',
   'a11y.footerNavigation': 'फुटर नेविगेशन',
-  'a11y.openInNewTab': 'नए टैब में खुलता है',
   'a11y.externalLink': 'बाहरी लिंक',
-  'a11y.currentPage': 'वर्तमान पेज',
-  'a11y.loading': 'लोड हो रहा है',
   'a11y.homeLink': 'होम पेज पर जाएं',
 
   // Coming Soon badge
@@ -229,7 +225,6 @@ export default {
   'policy.loading': 'नीति लोड हो रही है...',
   'policy.error.generic': 'नीति लोड नहीं हो सकी।',
   'policy.error.config': 'कॉन्फिगरेशन त्रुटि।',
-  'policy.error.status': 'नीति लोड नहीं हो सकी ({status} त्रुटि)।',
   'policy.error.unavailable': 'नीति उपलब्ध नहीं है।',
   'policy.error.empty': 'नीति की सामग्री खाली है।',
   'policy.error.tryAgain': 'कृपया बाद में फिर से कोशिश करें या सहायता से संपर्क करें।',

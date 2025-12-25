@@ -1,6 +1,5 @@
 export default {
   // App
-  'app.url': 'https://demo.sidebadger.com/dashboard',
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
@@ -216,10 +215,7 @@ export default {
   'a11y.searchLanguages': '言語を検索',
   'a11y.mainNavigation': 'メインナビゲーション',
   'a11y.footerNavigation': 'フッターナビゲーション',
-  'a11y.openInNewTab': '新しいタブで開く',
   'a11y.externalLink': '外部リンク',
-  'a11y.currentPage': '現在のページ',
-  'a11y.loading': '読み込み中',
   'a11y.homeLink': 'ホームページへ移動',
 
   // Coming Soon badge
@@ -229,7 +225,6 @@ export default {
   'policy.loading': 'ポリシーを読み込んでいます...',
   'policy.error.generic': 'ポリシーを読み込めませんでした。',
   'policy.error.config': '設定エラー。',
-  'policy.error.status': 'ポリシーを読み込めませんでした（エラー {status}）。',
   'policy.error.unavailable': 'ポリシーは利用できません。',
   'policy.error.empty': 'ポリシーの内容が空です。',
   'policy.error.tryAgain': '後でもう一度お試しいただくか、サポートにお問い合わせください。',

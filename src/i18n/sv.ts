@@ -1,6 +1,5 @@
 export default {
   // App
-  'app.url': 'https://demo.sidebadger.com/dashboard',
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
@@ -28,7 +27,7 @@ export default {
   'hero.disclaimer': '* Självklart finns det vissa begränsningar. Rättvis användning och många andra begränsningar gäller. Det är gratis tills det inte är det.',
   'hero.title': 'Dela utgifter som en',
   'hero.titleHighlight': 'side badger',
-  'hero.titleDisclaimer': '',
+  'hero.titleDisclaimer': '‌',
   'hero.subtitle': 'Instrumentpanel i realtid, emoji-drivna reaktioner, inbjudningslänkar som förnyas på begäran och ett förvånansvärt smart utgiftsformulär. Allt appen faktiskt gör, presenterat för människor.',
   'hero.cta': '...sidebadger mig',
 
@@ -216,10 +215,7 @@ export default {
   'a11y.searchLanguages': 'Sök språk',
   'a11y.mainNavigation': 'Huvudnavigering',
   'a11y.footerNavigation': 'Sidfotsnavigering',
-  'a11y.openInNewTab': 'Öppnas i ny flik',
   'a11y.externalLink': 'Extern länk',
-  'a11y.currentPage': 'Nuvarande sida',
-  'a11y.loading': 'Laddar',
   'a11y.homeLink': 'Gå till startsidan',
 
   // Coming Soon badge
@@ -229,7 +225,6 @@ export default {
   'policy.loading': 'Laddar policy...',
   'policy.error.generic': 'Kunde inte ladda policy.',
   'policy.error.config': 'Konfigurationsfel.',
-  'policy.error.status': 'Kunde inte ladda policy (fel {status}).',
   'policy.error.unavailable': 'Policy inte tillgänglig.',
   'policy.error.empty': 'Policyinnehåll är tomt.',
   'policy.error.tryAgain': 'Försök igen senare eller kontakta support.',

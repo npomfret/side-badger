@@ -1,6 +1,5 @@
 export default {
   // App
-  'app.url': 'https://demo.sidebadger.com/dashboard',
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
@@ -28,7 +27,7 @@ export default {
   'hero.disclaimer': '* Jakina, muga batzuk daude. Erabilera zuzena eta beste muga asko aplikatzen dira. Doakoa da ez den arte.',
   'hero.title': 'Banatu gastuak',
   'hero.titleHighlight': 'azkonarra bezala',
-  'hero.titleDisclaimer': '',
+  'hero.titleDisclaimer': '‌',
   'hero.subtitle': 'Denbora errealeko aginte-panelaren ikuspegia, emoji bidezko erreakzioak, eskaeran birsortzen diren gonbidapen estekak, eta harrigarriro adimentsu den gastu formularioa. Aplikazioak benetan egiten duen guztia, gizakientzat azalduta.',
   'hero.cta': '...azkonarratu nazazu',
 
@@ -216,10 +215,7 @@ export default {
   'a11y.searchLanguages': 'Bilatu hizkuntzak',
   'a11y.mainNavigation': 'Nabigazio nagusia',
   'a11y.footerNavigation': 'Oinarako nabigazioa',
-  'a11y.openInNewTab': 'Fitxa berri batean irekitzen da',
   'a11y.externalLink': 'Kanpo esteka',
-  'a11y.currentPage': 'Uneko orria',
-  'a11y.loading': 'Kargatzen',
   'a11y.homeLink': 'Joan hasiera orrira',
 
   // Coming Soon badge
@@ -229,7 +225,6 @@ export default {
   'policy.loading': 'Politika kargatzen...',
   'policy.error.generic': 'Ezin izan da politika kargatu.',
   'policy.error.config': 'Konfigurazio errorea.',
-  'policy.error.status': 'Ezin izan da politika kargatu ({status} errorea).',
   'policy.error.unavailable': 'Politika ez dago eskuragarri.',
   'policy.error.empty': 'Politikaren edukia hutsik dago.',
   'policy.error.tryAgain': 'Mesedez, saiatu berriro geroago edo jarri laguntza zerbitzuarekin harremanetan.',

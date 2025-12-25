@@ -1,7 +1,6 @@
 // Ukrainian translations
 export default {
   // App
-  'app.url': 'https://demo.sidebadger.com/dashboard',
   'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
@@ -29,7 +28,7 @@ export default {
   'hero.disclaimer': "* Очевидно, є деякі обмеження. Застосовуються правила добросовісного використання та багато інших обмежень. Це безкоштовно, поки це не так.",
   'hero.title': 'Розділяйте витрати як',
   'hero.titleHighlight': 'справжній борсук',
-  'hero.titleDisclaimer': '',
+  'hero.titleDisclaimer': '‌',
   'hero.subtitle': 'Аналітика панелі керування в реальному часі, реакції з емодзі, посилання-запрошення з автоматичним оновленням та неймовірно розумна форма витрат. Усе, що додаток насправді вміє, викладено зрозуміло для людей.',
   'hero.cta': '...sidebadger мене',
 
@@ -217,10 +216,7 @@ export default {
   'a11y.searchLanguages': 'Пошук мов',
   'a11y.mainNavigation': 'Головна навігація',
   'a11y.footerNavigation': 'Навігація в підвалі',
-  'a11y.openInNewTab': 'Відкривається в новій вкладці',
   'a11y.externalLink': 'Зовнішнє посилання',
-  'a11y.currentPage': 'Поточна сторінка',
-  'a11y.loading': 'Завантаження',
   'a11y.homeLink': 'Перейти на головну сторінку',
 
   // Coming Soon badge
@@ -230,7 +226,6 @@ export default {
   'policy.loading': 'Завантаження політики...',
   'policy.error.generic': 'Не вдалося завантажити політику.',
   'policy.error.config': 'Помилка конфігурації.',
-  'policy.error.status': 'Не вдалося завантажити політику (помилка {status}).',
   'policy.error.unavailable': 'Політика недоступна.',
   'policy.error.empty': 'Вміст політики порожній.',
   'policy.error.tryAgain': 'Будь ласка, спробуйте пізніше або зверніться до підтримки.',

@@ -65,17 +65,17 @@ export default {
   'features.activity.desc': 'URL come /groups/:id/add-expense aprono modali automaticamente, Escape pulisce la cronologia, gli stack di navigazione dashboard restano intatti, e notifiche/dropdown rispecchiano il feed.',
 
   'features.comments.title': 'Emoji ovunque',
-  'features.comments.desc': 'Spese, commenti e saldi condividono lo stesso picker emoji, conteggi aggregati, stati evidenziati e UX toggle, perche la responsabilita puo comunque essere divertente.',
+  'features.comments.desc': 'Spese, commenti e saldi condividono lo stesso picker emoji, conteggi aggregati, stati evidenziati e UX toggle, perché la responsabilità può comunque essere divertente.',
 
   'features.edit.title': 'Impostazioni che funzionano davvero',
   'features.edit.desc': 'Alias identita per gruppo, impostazioni generali con rinomina/descrivi/elimina + conferme, preset sicurezza, editor ruoli membri e toggle blocco protetti dietro schede solo admin.',
 
   'features.noTracking.title': 'Nessun tracker. Pieno rispetto.',
-  'features.noTracking.desc': 'Modali di accettazione policy, recupero cookie/termini/privacy, banner di avviso e zero pubblicita o tracker. Memorizziamo solo cio che mantiene i tassi amichevoli.',
+  'features.noTracking.desc': 'Modali di accettazione policy, recupero cookie/termini/privacy, banner di avviso e zero pubblicità o tracker. Memorizziamo solo ciò che mantiene i tassi amichevoli.',
 
   // Coming soon section
   'comingSoon.title': 'Prossimamente',
-  'comingSoon.subtitle': "Stiamo solo iniziando. Ecco cosa c\'è in arrivo.",
+  'comingSoon.subtitle': "Stiamo solo iniziando. Ecco cosa c'è in arrivo.",
 
   'comingSoon.conversion.title': 'Conversioni di valuta',
   'comingSoon.conversion.desc': 'Conversione automatica tra valute. Dividi in euro, salda in dollari.',
@@ -102,7 +102,7 @@ export default {
   'littleThings.amounts.title': 'Join e registrazione curati',
   'littleThings.amounts.desc': 'Gli URL di ritorno sopravvivono ai flussi login/registra/reset, le checkbox policy bloccano l\'invio, la riverifica vive nei banner, e i redirect auth tengono fuori gli scrocconi.',
 
-  'littleThings.names.title': 'Accessibilita integrata',
+  'littleThings.names.title': 'Accessibilità integrata',
   'littleThings.names.desc': 'Trappole di focus, target auto-focus, ripristino focus alla chiusura, skip link per screen reader, tooltip su azioni disabilitate e layout RTL-aware per lingue come l\'arabo.',
 
   'littleThings.archive.title': 'Controlli del ciclo di vita',
@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': 'Dividere un conto della cena da 47,23 dollari è già abbastanza fastidioso senza pubblicità per abbonamenti a kit di pasti.',
 
   'whyFree.badgers.title': 'Solo tassi',
-  'whyFree.badgers.desc': 'Side Badger e un\'app gratuita per dividere le spese che mette la privacy al primo posto. Nessuna agenda nascosta. Solo vibrazioni e tassi.',
+  'whyFree.badgers.desc': 'Side Badger è un\'app gratuita per dividere le spese che mette la privacy al primo posto. Nessuna agenda nascosta. Solo vibrazioni e tassi.',
 
   // CTA section
   'cta.title': 'Pronto a dividere qualche conto?',
@@ -176,7 +176,7 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Domande che potresti avere',
   'pricing.faq.q1.question': 'È davvero gratuito?',
-  'pricing.faq.q1.answer': 'Si, al momento e completamente gratuito. Non nascondiamo funzionalita dietro un paywall. Lo teniamo gratuito perche tutti meritano di dividere le spese senza stress mentre continuiamo a rilasciare novita.',
+  'pricing.faq.q1.answer': 'Sì, al momento è completamente gratuito. Non nascondiamo funzionalità dietro un paywall. Lo teniamo gratuito perché tutti meritano di dividere le spese senza stress mentre continuiamo a rilasciare novità.',
   'pricing.faq.q2.question': 'Qual è la fregatura?',
   'pricing.faq.q2.answer': 'Nessuna fregatura. Side Badger esiste per rendere la divisione delle spese semplice, privata e divertente. Tutto qui.',
   'pricing.faq.q3.question': 'Venderete i miei dati?',

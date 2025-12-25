@@ -143,38 +143,7 @@ a:hover {
   border-color: var(--glass-border-hover);
 }
 
-/* Multi-layer glass system - Z-depth variants */
-.glass-layer-1 {
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.glass-layer-2 {
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.glass-layer-3 {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.03);
-}
-
-/* Edge luminance borders */
-.glass-luminance {
-  border: 2px solid transparent;
-  border-image: linear-gradient(
-    135deg,
-    rgba(126, 199, 134, 0.5) 0%,
-    rgba(95, 176, 196, 0.3) 50%,
-    rgba(240, 192, 92, 0.4) 100%
-  ) 1;
-  background-clip: padding-box;
-}
-
-/* Alternative: glow border effect */
+/* Glow border effect */
 .glass-glow {
   box-shadow:
     0 0 0 1px var(--glass-border),
@@ -191,42 +160,9 @@ a:hover {
     var(--shadow-card);
 }
 
-/* Breathing animation for surfaces */
-.glass-breathe {
-  animation: breathe var(--transition-breathing) infinite ease-in-out;
-}
-
-@keyframes breathe {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.01);
-    opacity: 0.98;
-  }
-}
-
-/* Staggered breathing delays */
-.glass-breathe:nth-child(2) { animation-delay: 1s; }
-.glass-breathe:nth-child(3) { animation-delay: 2s; }
-.glass-breathe:nth-child(4) { animation-delay: 3s; }
-.glass-breathe:nth-child(5) { animation-delay: 4s; }
-.glass-breathe:nth-child(6) { animation-delay: 5s; }
-
-/* Disable breathing for reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .glass-breathe {
-    animation: none;
-  }
-}
-
 /* Fallback for browsers without backdrop-filter */
 @supports not (backdrop-filter: blur(1px)) {
-  .glass,
-  .glass-layer-1,
-  .glass-layer-2,
-  .glass-layer-3 {
+  .glass {
     background: rgba(19, 47, 34, 0.95);
   }
 }
@@ -234,12 +170,6 @@ a:hover {
 /* ===== LAYOUT UTILITIES ===== */
 .container {
   width: min(1200px, 100%);
-  margin: 0 auto;
-  padding-inline: var(--space-lg);
-}
-
-.container-wide {
-  width: min(1400px, 100%);
   margin: 0 auto;
   padding-inline: var(--space-lg);
 }
@@ -262,14 +192,10 @@ a:hover {
 .flex-col { flex-direction: column; }
 .flex-wrap { flex-wrap: wrap; }
 .items-center { align-items: center; }
-.items-start { align-items: flex-start; }
-.justify-center { justify-content: center; }
 .justify-between { justify-content: space-between; }
-.gap-xs { gap: var(--space-xs); }
 .gap-sm { gap: var(--space-sm); }
 .gap-md { gap: var(--space-md); }
 .gap-lg { gap: var(--space-lg); }
-.gap-xl { gap: var(--space-xl); }
 
 /* Text utilities */
 .text-center { text-align: center; }
@@ -322,16 +248,6 @@ a:hover {
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: var(--glass-border-hover);
-}
-
-.btn-ghost {
-  background: transparent;
-  color: var(--text-secondary);
-}
-
-.btn-ghost:hover {
-  color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.05);
 }
 
 .btn-lg {

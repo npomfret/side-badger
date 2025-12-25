@@ -15,11 +15,6 @@
   --glass-border: rgba(255, 255, 255, 0.15);
   --glass-border-hover: rgba(255, 255, 255, 0.3);
 
-  /* Aurora/Caustic colors - forest mist for ripple effect */
-  --aurora-green: rgba(126, 199, 134, 0.5);
-  --aurora-teal: rgba(95, 176, 196, 0.45);
-  --aurora-amber: rgba(240, 192, 92, 0.35);
-
   /* Accent colors - brand colors (green/teal/amber) */
   --accent-primary: #7ec786;
   --accent-secondary: #5fb0c4;
@@ -30,8 +25,6 @@
   --text-primary: #f8fafc;
   --text-secondary: rgba(248, 250, 252, 0.85);
   --text-muted: rgba(248, 250, 252, 0.6);
-  /* Gradient text */
-  --gradient-text: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary), var(--accent-tertiary));
 
   /* ===== SPACING SYSTEM ===== */
   /* Fixed spacing */
@@ -87,7 +80,6 @@
   /* Transition presets */
   --transition-fast: var(--duration-fast) var(--ease-smooth);
   --transition-base: var(--duration-base) var(--ease-smooth);
-  --transition-slow: var(--duration-slow) var(--ease-float);
 
   /* ===== Z-INDEX SCALE ===== */
   --z-background: -1;
@@ -106,7 +98,6 @@
     --duration-ambient: 0ms;
     --transition-fast: 0ms;
     --transition-base: 0ms;
-    --transition-slow: 0ms;
   }
 }
 

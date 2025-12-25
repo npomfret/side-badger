@@ -105,6 +105,11 @@
   animation: breathe var(--duration-ambient) var(--ease-float) infinite;
 }
 
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.02); opacity: 0.98; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-badger {
     animation: none;

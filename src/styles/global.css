@@ -143,23 +143,6 @@ a:hover {
   border-color: var(--glass-border-hover);
 }
 
-/* Glow border effect */
-.glass-glow {
-  box-shadow:
-    0 0 0 1px var(--glass-border),
-    0 0 20px rgba(126, 199, 134, 0.15),
-    0 0 40px rgba(95, 176, 196, 0.1),
-    var(--shadow-card);
-}
-
-.glass-glow:hover {
-  box-shadow:
-    0 0 0 1px var(--glass-border-hover),
-    0 0 30px rgba(126, 199, 134, 0.25),
-    0 0 60px rgba(95, 176, 196, 0.15),
-    var(--shadow-card);
-}
-
 /* Fallback for browsers without backdrop-filter */
 @supports not (backdrop-filter: blur(1px)) {
   .glass {
@@ -189,11 +172,9 @@ a:hover {
 
 /* Flex utilities */
 .flex { display: flex; }
-.flex-col { flex-direction: column; }
 .flex-wrap { flex-wrap: wrap; }
 .items-center { align-items: center; }
 .justify-between { justify-content: space-between; }
-.gap-sm { gap: var(--space-sm); }
 .gap-md { gap: var(--space-md); }
 .gap-lg { gap: var(--space-lg); }
 
@@ -201,7 +182,6 @@ a:hover {
 .text-center { text-align: center; }
 .text-muted { color: var(--text-muted); }
 .text-sm { font-size: var(--text-sm); }
-.text-lg { font-size: var(--text-lg); }
 
 /* ===== BUTTONS ===== */
 .btn {

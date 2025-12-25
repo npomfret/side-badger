@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': 'Mae rhannu bil swper £47.23 yn ddigon annifyr heb hysbysebion ar gyfer tanysgrifiadau pecynnau bwyd.',
 
   'whyFree.badgers.title': 'Dim ond Moch Daear',
-  'whyFree.badgers.desc': 'Demo o rannu costau label gwyn yw Side Badger. Dim agenda gudd. Dim ond vibes a moch daear.',
+  'whyFree.badgers.desc': 'Ap rhannu costau am ddim yw Side Badger sy\'n rhoi preifatrwydd yn gyntaf. Dim agenda gudd. Dim ond vibes a moch daear.',
 
   // CTA section
   'cta.title': 'Yn barod i rannu biliau?',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Cwestiynau y Gallech Fod Gennych',
   'pricing.faq.q1.question': 'Ydy e wir am ddim?',
-  'pricing.faq.q1.answer': "Ydy, ar hyn o bryd mae\'n gwbl am ddim. Dydyn ni ddim yn cuddio nodweddion y tu ôl i wal dalu. Demo o\'n technoleg rhannu costau label gwyn yw e, felly rydyn ni\'n ei gynnig am ddim tra\'n adeiladu\'r platfform.",
+  'pricing.faq.q1.answer': "Ie, ar hyn o bryd mae\'n hollol rhad ac am ddim. Dydyn ni ddim yn cuddio nodweddion y tu ôl i wal dalu. Rydyn ni\'n ei gadw\'n rhad ac am ddim oherwydd mae pawb yn haeddu rhannu biliau heb straen tra rydyn ni\'n parhau i lansio pethau newydd.",
   'pricing.faq.q2.question': "Beth yw\'r trap?",
-  'pricing.faq.q2.answer': "Dim trap. Arddangosiad o sut all ap rhannu costau label gwyn edrych yw Side Badger. Fe\'i hadeiladwyd i arddangos y dechnoleg, ac fe feddylion ni pam lai ei wneud yn ddefnyddiol mewn gwirionedd tra\'n bod ni wrthi?",
+  'pricing.faq.q2.answer': "Dim tric. Mae Side Badger yn bodoli i wneud rhannu costau yn syml, yn breifat ac yn hwyl. Dyna'r stori gyfan.",
   'pricing.faq.q3.question': 'A fyddwch chi\'n gwerthu fy nata?',
   'pricing.faq.q3.answer': "Yn bendant ddim. Dydyn ni ddim yn casglu data personol y tu hwnt i\'r hyn sy\'n angenrheidiol i redeg yr ap. Mae gennym ni ddim olrheinwyr, dim picseli dadansoddeg, a dim diddordeb yn eich arferion siopa.",
   'pricing.faq.q4.question': 'Pam mochyn daear?',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'Alla i ddefnyddio hwn ar gyfer fy musnes?',
   'pricing.faq.q5.answer': "Wrth gwrs! Os ydych chi eisiau olrhain costau a rennir ar gyfer eich busnes bach neu dîm, ewch amdani. Mae am ddim. Fyddwn ni ddim yn barnu.",
   'pricing.faq.q6.question': 'Beth os bydda i\'n dod o hyd i fyg?',
-  'pricing.faq.q6.answer': "Yn gyntaf oll, sut feiddiwch chi awgrymu bod bygiau yn ein cod. Yn ail, ie mae\'n debyg bod bygiau. Demo yw hwn. Byddwch yn garedig wrthon ni.",
+  'pricing.faq.q6.answer': "Yn gyntaf oll, sut wyt ti\'n meiddio awgrymu bod gan ein cod chwilod. Yn ail, ie mae\'n debyg bod rhai. Rydyn ni\'n cludo\'n gyflym, felly bydd yn dyner gyda ni.",
 
   // Policy pages
   'policy.privacy.title': 'Polisi Preifatrwydd',

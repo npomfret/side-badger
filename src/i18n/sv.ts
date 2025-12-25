@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': 'Att dela en middagsräkning på 47,23 dollar är tillräckligt irriterande utan annonser för måltidskitprenumerationer.',
 
   'whyFree.badgers.title': 'Bara grävlingar',
-  'whyFree.badgers.desc': 'Side Badger är en demo av white-label utgiftsdelning. Ingen dold agenda. Bara vibbar och grävlingar.',
+  'whyFree.badgers.desc': 'Side Badger är en gratis, integritetsförst app för att dela utgifter. Ingen dold agenda. Bara vibbar och grävlingar.',
 
   // CTA section
   'cta.title': 'Redo att dela några räkningar?',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Frågor du kanske har',
   'pricing.faq.q1.question': 'Är det verkligen gratis?',
-  'pricing.faq.q1.answer': 'Ja, just nu är det helt gratis. Vi gömmer inga funktioner bakom en betalvägg. Det är en demo av vår white-label-teknik för utgiftsdelning, så vi erbjuder den utan kostnad medan vi bygger ut plattformen.',
+  'pricing.faq.q1.answer': 'Ja, just nu är det helt gratis. Vi gömmer inga funktioner bakom en betalvägg. Vi låter det vara gratis eftersom alla förtjänar stressfri utgiftsdelning medan vi lanserar nya saker.',
   'pricing.faq.q2.question': 'Vad är haken?',
-  'pricing.faq.q2.answer': 'Ingen hake. Side Badger är en demonstration av hur en white-label-app för utgiftsdelning kan se ut. Vi byggde den för att visa upp tekniken, och vi tänkte varför inte göra den faktiskt användbar när vi ändå håller på?',
+  'pricing.faq.q2.answer': 'Ingen hake. Side Badger finns för att göra utgiftsdelning enkel, privat och rolig. Det är hela historien.',
   'pricing.faq.q3.question': 'Kommer ni att sälja mina data?',
   'pricing.faq.q3.answer': 'Absolut inte. Vi samlar inte in personuppgifter utöver vad som är nödvändigt för att köra appen. Vi har noll spårare, noll analyspixlar och noll intresse av dina shoppingvanor.',
   'pricing.faq.q4.question': 'Varför en grävling?',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'Kan jag använda detta för mitt företag?',
   'pricing.faq.q5.answer': 'Visst! Om du vill spåra delade utgifter för ditt lilla företag eller team, kör på. Det är gratis. Vi kommer inte att döma.',
   'pricing.faq.q6.question': 'Vad händer om jag hittar en bugg?',
-  'pricing.faq.q6.answer': 'Först och främst, hur vågar du antyda att vår kod har buggar. För det andra, ja förmodligen finns det buggar. Detta är en demo. Var snäll mot oss.',
+  'pricing.faq.q6.answer': 'Först och främst, hur vågar du antyda att vår kod har buggar. För det andra, ja förmodligen finns det buggar. Vi släpper saker snabbt, så var snäll mot oss.',
 
   // Policy pages
   'policy.privacy.title': 'Integritetspolicy',

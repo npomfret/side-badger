@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': '5,000円の夕食代を割り勘するだけでも十分面倒なのに、ミールキットの広告は不要です。',
 
   'whyFree.badgers.title': 'ただのアナグマ',
-  'whyFree.badgers.desc': 'サイドバジャーはホワイトラベル割り勘のデモです。隠れた意図なし。ただの雰囲気とアナグマ。',
+  'whyFree.badgers.desc': 'Side Badgerは無料でプライバシー第一の割り勘アプリです。隠しごとはありません。ただの雰囲気とアナグマです。',
 
   // CTA section
   'cta.title': '割り勘する準備はできた？',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'よくある質問',
   'pricing.faq.q1.question': '本当に無料ですか？',
-  'pricing.faq.q1.answer': 'はい、現在は完全に無料です。機能を有料化していません。これはホワイトラベル割り勘技術のデモなので、プラットフォームを構築中は無料で提供しています。',
+  'pricing.faq.q1.answer': 'はい、現在は完全に無料です。機能を有料化していません。みんながストレスなく割り勘できるよう、新機能を届けながら無料のままにしています。',
   'pricing.faq.q2.question': '何か裏がありますか？',
-  'pricing.faq.q2.answer': '裏はありません。サイドバジャーはホワイトラベル割り勘アプリがどのようなものかを示すデモンストレーションです。技術を披露するために作りましたが、せっかくなので実際に役立つものにしました。',
+  'pricing.faq.q2.answer': '裏はありません。Side Badgerは割り勘をシンプルでプライベートで楽しいものにするために存在します。それだけです。',
   'pricing.faq.q3.question': '私のデータを売りますか？',
   'pricing.faq.q3.answer': '絶対に売りません。アプリの運用に必要なもの以上の個人データは収集しません。トラッカーゼロ、アナリティクスピクセルゼロ、あなたの買い物習慣への興味ゼロです。',
   'pricing.faq.q4.question': 'なぜアナグマ？',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'ビジネスに使えますか？',
   'pricing.faq.q5.answer': 'もちろん！小規模ビジネスやチームの共有費用を追跡したいなら、どうぞ。無料です。気にしませんよ。',
   'pricing.faq.q6.question': 'バグを見つけたら？',
-  'pricing.faq.q6.answer': 'まず、私たちのコードにバグがあるなんて失礼な！次に、はい、おそらくバグはあります。これはデモです。優しくしてください。',
+  'pricing.faq.q6.answer': 'まず、私たちのコードにバグがあるなんてよく言えましたね。次に、ええ、たぶんあります。猛スピードでリリースしているので、やさしくしてください。',
 
   // Policy pages
   'policy.privacy.title': 'プライバシーポリシー',

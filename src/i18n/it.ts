@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': 'Dividere un conto della cena da 47,23 dollari è già abbastanza fastidioso senza pubblicità per abbonamenti a kit di pasti.',
 
   'whyFree.badgers.title': 'Solo tassi',
-  'whyFree.badgers.desc': 'Side Badger è una demo della divisione delle spese white-label. Nessuna agenda nascosta. Solo vibrazioni e tassi.',
+  'whyFree.badgers.desc': 'Side Badger è un’app gratuita per dividere le spese che mette la privacy al primo posto. Nessuna agenda nascosta. Solo vibrazioni e tassi.',
 
   // CTA section
   'cta.title': 'Pronto a dividere qualche conto?',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Domande che potresti avere',
   'pricing.faq.q1.question': 'È davvero gratuito?',
-  'pricing.faq.q1.answer': 'Sì, al momento è completamente gratuito. Non nascondiamo funzionalità dietro un paywall. È una demo della nostra tecnologia di divisione delle spese white-label, quindi la offriamo gratuitamente mentre costruiamo la piattaforma.',
+  'pricing.faq.q1.answer': 'Sì, al momento è completamente gratuito. Non nascondiamo funzionalità dietro un paywall. Lo teniamo gratuito perché tutti meritano di dividere le spese senza stress mentre continuiamo a rilasciare novità.',
   'pricing.faq.q2.question': 'Qual è la fregatura?',
-  'pricing.faq.q2.answer': 'Nessuna fregatura. Side Badger è una dimostrazione di come può apparire un\'app di divisione delle spese white-label. L\'abbiamo costruita per mostrare la tecnologia, e abbiamo pensato: perché non renderla effettivamente utile mentre ci siamo?',
+  'pricing.faq.q2.answer': 'Nessuna fregatura. Side Badger esiste per rendere la divisione delle spese semplice, privata e divertente. Tutto qui.',
   'pricing.faq.q3.question': 'Venderete i miei dati?',
   'pricing.faq.q3.answer': 'Assolutamente no. Non raccogliamo dati personali oltre a quanto necessario per far funzionare l\'app. Abbiamo zero tracker, zero pixel di analisi e zero interesse nelle tue abitudini di acquisto.',
   'pricing.faq.q4.question': 'Perché un tasso?',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'Posso usarlo per la mia attività?',
   'pricing.faq.q5.answer': 'Certo! Se vuoi tenere traccia delle spese condivise per la tua piccola attività o team, fallo. È gratuito. Non ti giudicheremo.',
   'pricing.faq.q6.question': 'E se trovo un bug?',
-  'pricing.faq.q6.answer': 'Prima di tutto, come osi insinuare che il nostro codice abbia dei bug. Secondo, sì, probabilmente ci sono bug. Questa è una demo. Sii gentile con noi.',
+  'pricing.faq.q6.answer': 'Prima di tutto, come osi insinuare che il nostro codice abbia dei bug. Secondo, sì, probabilmente ce ne sono. Stiamo spedendo in fretta, quindi sii gentile con noi.',
 
   // Policy pages
   'policy.privacy.title': 'Informativa sulla privacy',

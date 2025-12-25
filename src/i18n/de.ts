@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': 'Das Teilen einer Rechnung über 47,23 $ ist schon nervig genug ohne Werbung für Essens-Abos.',
 
   'whyFree.badgers.title': 'Nur Dachse',
-  'whyFree.badgers.desc': 'Side Badger ist eine Demo für White-Label-Ausgabenaufteilung. Keine versteckte Agenda. Nur Vibes und Dachse.',
+  'whyFree.badgers.desc': 'Side Badger ist eine kostenlose, datenschutzfreundliche App zum Teilen von Ausgaben. Keine versteckte Agenda. Nur Vibes und Dachse.',
 
   // CTA section
   'cta.title': 'Bereit, ein paar Rechnungen zu teilen?',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Fragen, die Sie vielleicht haben',
   'pricing.faq.q1.question': 'Ist es wirklich kostenlos?',
-  'pricing.faq.q1.answer': "Ja, im Moment ist es völlig kostenlos. Wir verstecken keine Funktionen hinter einer Paywall. Es ist eine Demo unserer White-Label-Technologie zur Ausgabenaufteilung, daher bieten wir es kostenlos an, während wir die Plattform ausbauen.",
+  'pricing.faq.q1.answer': "Ja, im Moment ist es völlig kostenlos. Wir verstecken keine Funktionen hinter einer Paywall. Wir lassen es gratis, weil jeder stressfreies Rechnungsteilen verdient, während wir neue Dinge veröffentlichen.",
   'pricing.faq.q2.question': "Wo ist der Haken?",
-  'pricing.faq.q2.answer': "Kein Haken. Side Badger ist eine Demonstration, wie eine White-Label-App zur Ausgabenaufteilung aussehen kann. Wir haben sie entwickelt, um die Technologie zu präsentieren, und dachten uns, warum machen wir sie nicht gleich nützlich?",
+  'pricing.faq.q2.answer': "Kein Haken. Side Badger existiert, um das Teilen von Ausgaben einfach, privat und spaßig zu machen. Das ist die ganze Geschichte.",
   'pricing.faq.q3.question': 'Werden Sie meine Daten verkaufen?',
   'pricing.faq.q3.answer': "Absolut nicht. Wir sammeln keine personenbezogenen Daten über das hinaus, was zum Betrieb der App erforderlich ist. Wir haben null Tracker, null Analyse-Pixel und null Interesse an Ihren Einkaufsgewohnheiten.",
   'pricing.faq.q4.question': 'Warum ein Dachs?',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'Kann ich das für mein Unternehmen nutzen?',
   'pricing.faq.q5.answer': "Sicher! Wenn Sie gemeinsame Ausgaben für Ihr kleines Unternehmen oder Team verfolgen möchten, nur zu. Es ist kostenlos. Wir urteilen nicht.",
   'pricing.faq.q6.question': 'Was ist, wenn ich einen Fehler finde?',
-  'pricing.faq.q6.answer': "Zunächst einmal, wie können Sie es wagen zu implizieren, dass unser Code Fehler hat. Zweitens, ja, wahrscheinlich gibt es Fehler. Dies ist eine Demo. Seien Sie sanft mit uns.",
+  'pricing.faq.q6.answer': "Zunächst einmal, wie können Sie es wagen zu implizieren, dass unser Code Fehler hat. Zweitens, ja, wahrscheinlich gibt es welche. Wir shippen schnell, also seien Sie bitte lieb zu uns.",
 
   // Policy pages
   'policy.privacy.title': 'Datenschutzrichtlinie',

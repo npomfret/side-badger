@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': 'Een rekening van 47,23 euro splitsen is al vervelend genoeg zonder advertenties voor maaltijdboxen.',
 
   'whyFree.badgers.title': 'Gewoon Dassen',
-  'whyFree.badgers.desc': 'Side Badger is een demo van white-label uitgaven splitsen. Geen verborgen agenda. Gewoon vibes en dassen.',
+  'whyFree.badgers.desc': 'Side Badger is een gratis, privacy-first app om uitgaven te splitsen. Geen verborgen agenda. Gewoon vibes en dassen.',
 
   // CTA section
   'cta.title': 'Klaar om wat rekeningen te splitsen?',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Vragen Die Je Misschien Hebt',
   'pricing.faq.q1.question': 'Is het echt gratis?',
-  'pricing.faq.q1.answer': 'Ja, op dit moment is het volledig gratis. We verbergen geen functies achter een betaalmuur. Het is een demo van onze white-label uitgavensplittechnologie, dus we bieden het gratis aan terwijl we het platform verder bouwen.',
+  'pricing.faq.q1.answer': 'Ja, op dit moment is het volledig gratis. We verbergen geen functies achter een betaalmuur. We houden het gratis omdat iedereen stressvrij rekeningen moet kunnen splitsen terwijl wij nieuwe dingen blijven bouwen.',
   'pricing.faq.q2.question': 'Wat is het addertje?',
-  'pricing.faq.q2.answer': 'Geen addertje. Side Badger is een demonstratie van hoe een white-label uitgavensplit-app eruit kan zien. We hebben het gebouwd om de technologie te tonen, en we dachten: waarom het niet ook nuttig maken terwijl we toch bezig zijn?',
+  'pricing.faq.q2.answer': 'Geen addertje. Side Badger bestaat om het splitsen van uitgaven simpel, privé en leuk te maken. Dat is het hele verhaal.',
   'pricing.faq.q3.question': 'Gaan jullie mijn gegevens verkopen?',
   'pricing.faq.q3.answer': 'Absoluut niet. We verzamelen geen persoonlijke gegevens behalve wat nodig is om de app te laten werken. We hebben nul trackers, nul analytics pixels en nul interesse in je koopgewoonten.',
   'pricing.faq.q4.question': 'Waarom een das?',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'Kan ik dit gebruiken voor mijn bedrijf?',
   'pricing.faq.q5.answer': 'Tuurlijk! Als je gedeelde uitgaven wilt bijhouden voor je kleine bedrijf of team, ga je gang. Het is gratis. We oordelen niet.',
   'pricing.faq.q6.question': 'Wat als ik een bug vind?',
-  'pricing.faq.q6.answer': 'Ten eerste, hoe durf je te suggereren dat onze code bugs heeft. Ten tweede, ja er zijn waarschijnlijk bugs. Dit is een demo. Wees lief voor ons.',
+  'pricing.faq.q6.answer': 'Ten eerste, hoe durf je te suggereren dat onze code bugs heeft. Ten tweede, ja er zijn waarschijnlijk bugs. We shippen snel, dus wees lief voor ons.',
 
   // Policy pages
   'policy.privacy.title': 'Privacybeleid',

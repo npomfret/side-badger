@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': 'Ang paghahati ng $47.23 na bill sa hapunan ay sapat na nakakainis nang walang ad para sa mga subscription sa meal kit.',
 
   'whyFree.badgers.title': 'Mga Badger Lang',
-  'whyFree.badgers.desc': 'Ang Side Badger ay isang demo ng white-label expense splitting. Walang nakatagong agenda. Vibes lang at mga badger.',
+  'whyFree.badgers.desc': 'Ang Side Badger ay isang libreng expense splitting app na inuuna ang privacy. Walang nakatagong agenda. Vibes lang at mga badger.',
 
   // CTA section
   'cta.title': 'Handa nang hatiin ang ilang bills?',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Mga Tanong na Maaaring Mayroon Ka',
   'pricing.faq.q1.question': 'Totoo ba na libre ito?',
-  'pricing.faq.q1.answer': 'Oo, sa ngayon ay ganap itong libre. Hindi namin itinatago ang mga tampok sa likod ng isang paywall. Ito ay isang demo ng aming white-label na teknolohiya sa paghahati ng gastos, kaya inaalok namin ito nang walang bayad habang binubuo namin ang platform.',
+  'pricing.faq.q1.answer': 'Oo, sa ngayon ay ganap itong libre. Hindi namin itinatago ang mga tampok sa likod ng isang paywall. Pinananatili naming libre dahil karapatan ng lahat ang walang-stress na paghahati ng gastos habang naglalabas kami ng mga bagong bagay.',
   'pricing.faq.q2.question': 'Ano ang catch?',
-  'pricing.faq.q2.answer': 'Walang catch. Ang Side Badger ay isang demonstrasyon kung ano ang maaaring maging hitsura ng isang white-label na app sa paghahati ng gastos. Binuo namin ito upang ipakita ang teknolohiya, at naisip namin kung bakit hindi ito gawing kapaki-pakinabang habang ginagawa namin ito?',
+  'pricing.faq.q2.answer': 'Walang catch. Umiiral ang Side Badger para gawing simple, pribado, at masaya ang paghahati ng gastos. \'Yun lang.',
   'pricing.faq.q3.question': 'Ibebenta n\'yo ba ang data ko?',
   'pricing.faq.q3.answer': 'Talagang hindi. Hindi kami nangongolekta ng personal na data maliban sa kinakailangan upang patakbuhin ang app. Mayroon kaming zero tracker, zero analytics pixels, at zero interes sa iyong mga gawi sa pamimili.',
   'pricing.faq.q4.question': 'Bakit isang badger?',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'Maaari ko bang gamitin ito para sa aking negosyo?',
   'pricing.faq.q5.answer': 'Oo naman! Kung gusto mong subaybayan ang mga ibinahaging gastos para sa iyong maliit na negosyo o koponan, gawin mo. Ito ay libre. Hindi ka namin huhusgahan.',
   'pricing.faq.q6.question': 'Paano kung makakita ako ng bug?',
-  'pricing.faq.q6.answer': 'Una sa lahat, nakakabastos namang sabihing may bug ang code namin. Pangalawa, oo, marahil may mga bug. Ito ay isang demo. Maging banayad sa amin.',
+  'pricing.faq.q6.answer': 'Una sa lahat, nakakabastos namang sabihing may bug ang code namin. Pangalawa, oo, marahil may mga bug. Mabilis kaming naglalabas, kaya maging banayad sa amin.',
 
   // Policy pages
   'policy.privacy.title': 'Patakaran sa Privacy',

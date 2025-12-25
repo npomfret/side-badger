@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': 'Splitting a $47.23 dinner bill is annoying enough without ads for meal kit subscriptions.',
 
   'whyFree.badgers.title': 'Just Badgers',
-  'whyFree.badgers.desc': 'Side Badger is a demo of white-label expense splitting. No hidden agenda. Just vibes and badgers.',
+  'whyFree.badgers.desc': 'Side Badger is a free, privacy-first expense splitting app. No hidden agenda. Just vibes and badgers.',
 
   // CTA section
   'cta.title': 'Ready to split some bills?',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Questions You Might Have',
   'pricing.faq.q1.question': 'Is it really free?',
-  'pricing.faq.q1.answer': "Yes, right now it's completely free. We're not hiding features behind a paywall. It's a demo of our white-label expense splitting technology, so we're offering it at no cost while we build out the platform.",
+  'pricing.faq.q1.answer': "Yes, right now it's completely free. We're not hiding features behind a paywall. We keep it free because everyone deserves stress-free bill splitting while we ship new things.",
   'pricing.faq.q2.question': "What's the catch?",
-  'pricing.faq.q2.answer': "No catch. Side Badger is a demonstration of what a white-label expense splitting app can look like. We built it to show off the technology, and we figured why not make it actually useful while we're at it?",
+  'pricing.faq.q2.answer': "No catch. Side Badger exists to make expense splitting simple, private, and fun. That's the whole story.",
   'pricing.faq.q3.question': 'Will you sell my data?',
   'pricing.faq.q3.answer': "Absolutely not. We don't collect personal data beyond what's necessary to run the app. We have zero trackers, zero analytics pixels, and zero interest in your shopping habits.",
   'pricing.faq.q4.question': 'Why a badger?',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'Can I use this for my business?',
   'pricing.faq.q5.answer': "Sure! If you want to track shared expenses for your small business or team, go for it. It's free. We won't judge.",
   'pricing.faq.q6.question': 'What if I find a bug?',
-  'pricing.faq.q6.answer': "First of all, how dare you imply our code has bugs. Second, yeah probably there are bugs. This is a demo. Be gentle with us.",
+  'pricing.faq.q6.answer': "First of all, how dare you imply our code has bugs. Second, yeah probably there are bugs. We're shipping fast, so be gentle with us.",
 
   // Policy pages
   'policy.privacy.title': 'Privacy Policy',

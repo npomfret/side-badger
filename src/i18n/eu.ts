@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': '47,23 €-ko afari faktura bat banatzea nahikoa gogaikarria da janari-kit harpidetzetarako iragarkirik behar gabe.',
 
   'whyFree.badgers.title': 'Azkonarrak Bakarrik',
-  'whyFree.badgers.desc': 'Side Badger marka zuriko gastu banaketa demo bat da. Ezkutuko agendarik gabe. Bibrazio eta azkonarrak bakarrik.',
+  'whyFree.badgers.desc': 'Side Badger doako gastu-banaketa aplikazioa da, pribatutasuna lehenesten duena. Ezkutuko agendarik gabe. Bibrazio eta azkonarrak bakarrik.',
 
   // CTA section
   'cta.title': 'Faktura batzuk banatzeko prest?',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Izan Ditzakezun Galderak',
   'pricing.faq.q1.question': 'Benetan doakoa da?',
-  'pricing.faq.q1.answer': 'Bai, une honetan guztiz doakoa da. Ez ditugu ezaugarriak ordainketa hormaren atzean ezkutatzen. Gure marka zuriko gastu banaketa teknologiaren demo bat da, beraz doako eskaintzen dugu plataforma garatzen dugun bitartean.',
+  'pricing.faq.q1.answer': 'Bai, une honetan guztiz doakoa da. Ez ditugu ezaugarriak ordainketa-horma baten atzean ezkutatzen. Doan mantentzen dugu, edonork estresik gabe gastuak banatu ahal izan ditzan, guk gauza berriak argitaratzen ditugun bitartean.',
   'pricing.faq.q2.question': 'Zein da tranpa?',
-  'pricing.faq.q2.answer': 'Tranparik gabe. Side Badger marka zuriko gastu banaketa aplikazio batek nolakoa izan daitekeen erakustaldi bat da. Teknologia erakusteko eraiki genuen, eta pentsatu genuen zergatik ez egin benetan erabilgarria bitartean?',
+  'pricing.faq.q2.answer': 'Ez dago tranparik. Side Badger existitzen da gastu-banaketa erraza, pribatua eta dibertigarria izan dadin. Hori da istorio osoa.',
   'pricing.faq.q3.question': 'Nire datuak salduko dituzu?',
   'pricing.faq.q3.answer': 'Inola ere ez. Ez dugu aplikazioa martxan jartzeko beharrezkoa dena baino datu pertsonalik biltzen. Zero jarraipen, zero analitika pixel eta zero interes zure eroste ohituretan.',
   'pricing.faq.q4.question': 'Zergatik azkonarra?',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'Nire negozioan erabil dezaket?',
   'pricing.faq.q5.answer': 'Jakina! Zure negozio txiki edo talderako partekatutako gastuak jarraitu nahi badituzu, aurrera. Doakoa da. Ez dugu epaitzen.',
   'pricing.faq.q6.question': 'Zer gertatzen da akatsa aurkitzen badut?',
-  'pricing.faq.q6.answer': 'Lehenik eta behin, nola ausartzen zara gure kodeak akatsak dituela iradokitzen? Bigarrenik, bai, ziurrenik akatsak daude. Demo bat da hau. Izan leun gurekin.',
+  'pricing.faq.q6.answer': 'Lehenik eta behin, nola ausartzen zara gure kodeak akatsak dituela iradokitzen? Bigarrenik, bai, ziurrenik akatsak daude. Azkar bidaltzen ari gara, beraz izan goxo gurekin.',
 
   // Policy pages
   'policy.privacy.title': 'Pribatutasun Politika',

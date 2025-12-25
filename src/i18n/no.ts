@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': 'Å dele en middagsregning på 47,23 dollar er irriterende nok uten annonser for matkasseabonnementer.',
 
   'whyFree.badgers.title': 'Bare grevlinger',
-  'whyFree.badgers.desc': 'Side Badger er en demo av hvitmerket utgiftsdeling. Ingen skjult agenda. Bare stemning og grevlinger.',
+  'whyFree.badgers.desc': 'Side Badger er en gratis app for utgiftsdeling som setter personvern først. Ingen skjult agenda. Bare stemning og grevlinger.',
 
   // CTA section
   'cta.title': 'Klar til å dele noen regninger?',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Spørsmål du kanskje har',
   'pricing.faq.q1.question': 'Er det virkelig gratis?',
-  'pricing.faq.q1.answer': 'Ja, akkurat nå er det helt gratis. Vi skjuler ingen funksjoner bak en betalingsmur. Det er en demo av vår hvitmerket teknologi for utgiftsdeling, så vi tilbyr det gratis mens vi bygger ut plattformen.',
+  'pricing.faq.q1.answer': 'Ja, akkurat nå er det helt gratis. Vi skjuler ingen funksjoner bak en betalingsmur. Vi holder det gratis fordi alle fortjener stressfri utgiftsdeling mens vi lanserer nye ting.',
   'pricing.faq.q2.question': 'Hva er haken?',
-  'pricing.faq.q2.answer': 'Ingen hake. Side Badger er en demonstrasjon av hvordan en hvitmerket utgiftsdelingsapp kan se ut. Vi bygde den for å vise frem teknologien, og vi tenkte hvorfor ikke gjøre den faktisk nyttig mens vi er i gang?',
+  'pricing.faq.q2.answer': 'Ingen hake. Side Badger finnes for å gjøre utgiftsdeling enkel, privat og gøy. Det er hele historien.',
   'pricing.faq.q3.question': 'Vil dere selge dataene mine?',
   'pricing.faq.q3.answer': 'Absolutt ikke. Vi samler ikke inn personlige data utover det som er nødvendig for å kjøre appen. Vi har null sporere, null analysepiksler, og null interesse i dine shoppingvaner.',
   'pricing.faq.q4.question': 'Hvorfor en grevling?',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'Kan jeg bruke dette for min bedrift?',
   'pricing.faq.q5.answer': 'Klart det! Hvis du vil spore delte utgifter for din lille bedrift eller team, kjør på. Det er gratis. Vi vil ikke dømme.',
   'pricing.faq.q6.question': 'Hva om jeg finner en feil?',
-  'pricing.faq.q6.answer': 'Først og fremst, hvordan våger du å antyde at koden vår har feil. For det andre, ja, sannsynligvis er det feil. Dette er en demo. Vær snill med oss.',
+  'pricing.faq.q6.answer': 'Først og fremst, hvordan våger du å antyde at koden vår har feil. For det andre, ja, sannsynligvis er det feil. Vi shipper ting raskt, så vær snill med oss.',
 
   // Policy pages
   'policy.privacy.title': 'Personvernregler',

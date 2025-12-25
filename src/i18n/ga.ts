@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': 'Tá bille dinnéir €47.23 a roinnt crosta go leor gan fógraí do shíntiúis paca béile.',
 
   'whyFree.badgers.title': 'Díreach Brocacha',
-  'whyFree.badgers.desc': 'Is taispeántas de roinnt costais lipéad bán é Side Badger. Gan clár oibre folaithe. Díreach vibes agus brocacha.',
+  'whyFree.badgers.desc': 'Is aip roinnte costais saor in aisce é Side Badger a chuireann príobháideachas ar dtús. Gan clár oibre folaithe. Díreach vibes agus brocacha.',
 
   // CTA section
   'cta.title': 'Réidh le roinnt billí a dhéanamh?',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Ceisteanna a D\'fhéadfadh a Bheith Agat',
   'pricing.faq.q1.question': 'An bhfuil sé saor in aisce i ndáiríre?',
-  'pricing.faq.q1.answer': "Sea, faoi láthair tá sé saor in aisce go hiomlán. Níl gnéithe i bhfolach againn taobh thiar de bhalla íocaíochta. Is taispeántas é de theicneolaíocht roinnte costais lipéad bán, mar sin táimid á thairiscint gan costas fad a thógaimid an t-ardán.",
+  'pricing.faq.q1.answer': "Sea, faoi láthair tá sé saor in aisce go hiomlán. Ní cheilimíd gnéithe taobh thiar de bhalla íocaíochta. Coinnímid saor é mar go bhfuil gach duine i dteideal billí a roinnt gan strus agus muid ag seoladh rudaí nua.",
   'pricing.faq.q2.question': "Cad é an gaiste?",
-  'pricing.faq.q2.answer': "Gan gaiste. Is taispeántas é Side Badger de cad is féidir le haip roinnte costais lipéad bán a bheith cosúil leis. Thógamar é chun an teicneolaíocht a thaispeáint, agus cheap muid cén fáth nach ndéanfaimis úsáideach i ndáiríre é fad atáimid ann?",
+  'pricing.faq.q2.answer': "Gan aon gaiste. Tá Side Badger ann chun roinnt costais a dhéanamh simplí, príobháideach agus spraíúil. Sin é an scéal ar fad.",
   'pricing.faq.q3.question': 'An ndíolfaidh sibh mo shonraí?',
   'pricing.faq.q3.answer': "Cinnte nach ndíolfaidh. Ní bhailímid sonraí pearsanta lasmuigh de cad atá riachtanach chun an aip a rith. Tá náid rianairí againn, náid picteilíní anailísíochta, agus náid spéis i do nósanna siopadóireachta.",
   'pricing.faq.q4.question': 'Cén fáth broc?',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'An féidir liom é seo a úsáid do mo ghnó?',
   'pricing.faq.q5.answer': "Cinnte! Más mian leat costais chomhroinnte a rianú do do ghnó beag nó foireann, lean ar aghaidh. Tá sé saor in aisce. Ní bheidh breithiúnas againn.",
   'pricing.faq.q6.question': 'Cad má fhaighim fabht?',
-  'pricing.faq.q6.answer': "Ar an gcéad dul síos, conas a d'fhéadfá a rá go bhfuil fabhtanna inár gcód. Ar an dara dul síos, sea is dócha go bhfuil fabhtanna ann. Is taispeántas é seo. Bí séimh linn.",
+  'pricing.faq.q6.answer': "Ar an gcéad dul síos, conas a d'fhéadfá a rá go bhfuil fabhtanna inár gcód. Ar an dara dul síos, sea is dócha go bhfuil cúpla ceann ann. Táimid ag seoladh go tapa, mar sin bí séimh linn.",
 
   // Policy pages
   'policy.privacy.title': 'Polasaí Príobháideachta',

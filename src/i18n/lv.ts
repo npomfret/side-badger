@@ -125,7 +125,7 @@ export default {
   'whyFree.ads.desc': '47,23 $ vakariņu rēķina sadalīšana ir pietiekami kaitinoša bez reklāmām par maltīšu komplekta abonementiem.',
 
   'whyFree.badgers.title': 'Tikai āpši',
-  'whyFree.badgers.desc': 'Side Badger ir privātā zīmola izdevumu sadalīšanas demonstrācija. Nekādas slēptas darbakārtības. Tikai noskaņas un āpši.',
+  'whyFree.badgers.desc': 'Side Badger ir bezmaksas, uz privātumu vērsta izdevumu sadalīšanas lietotne. Nekādas slēptas darbakārtības. Tikai noskaņas un āpši.',
 
   // CTA section
   'cta.title': 'Gatavs sadalīt dažus rēķinus?',
@@ -176,9 +176,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Jautājumi, kas jums var rasties',
   'pricing.faq.q1.question': 'Vai tas tiešām ir bez maksas?',
-  'pricing.faq.q1.answer': 'Jā, pašlaik tas ir pilnīgi bez maksas. Mēs neslēpjam funkcijas aiz maksas sienas. Tā ir mūsu privātā zīmola izdevumu sadalīšanas tehnoloģijas demonstrācija, tāpēc mēs to piedāvājam bez maksas, kamēr veidojam platformu.',
+  'pricing.faq.q1.answer': 'Jā, pašlaik tas ir pilnīgi bez maksas. Mēs neslēpjam funkcijas aiz maksas sienas. Mēs to paturam bez maksas, jo ikviens ir pelnījis bezstresa rēķinu sadalīšanu, kamēr izlaižam jaunas lietas.',
   'pricing.faq.q2.question': 'Kur ir āķis?',
-  'pricing.faq.q2.answer': 'Nekāda āķa. Side Badger ir demonstrācija tam, kā var izskatīties privātā zīmola izdevumu sadalīšanas lietotne. Mēs to uzbūvējām, lai parādītu tehnoloģiju, un mēs domājām, kāpēc gan to nepadarīt patiešām noderīgu, kamēr mēs to darām?',
+  'pricing.faq.q2.answer': 'Nekāda āķa. Side Badger pastāv, lai izdevumu sadalīšanu padarītu vienkāršu, privātu un jautru. Tas arī viss.',
   'pricing.faq.q3.question': 'Vai jūs pārdosiet manus datus?',
   'pricing.faq.q3.answer': 'Absolūti nē. Mēs nevācam personas datus, kas nav nepieciešami lietotnes darbībai. Mums ir nulle izsekošanas, nulle analītikas pikseļu un nulle interese par jūsu iepirkšanās paradumiem.',
   'pricing.faq.q4.question': 'Kāpēc āpsis?',
@@ -186,7 +186,7 @@ export default {
   'pricing.faq.q5.question': 'Vai es to varu izmantot savam biznesam?',
   'pricing.faq.q5.answer': 'Protams! Ja vēlaties izsekot kopīgiem izdevumiem savam mazajam uzņēmumam vai komandai, dariet to. Tas ir bez maksas. Mēs jūs nenosodīsim.',
   'pricing.faq.q6.question': 'Ko darīt, ja atrodu kļūdu?',
-  'pricing.faq.q6.answer': 'Pirmkārt, kā jūs uzdrošināties apgalvot, ka mūsu kodā ir kļūdas. Otrkārt, jā, iespējams, ir kļūdas. Šī ir demonstrācija. Esiet pret mums maigi.',
+  'pricing.faq.q6.answer': 'Pirmkārt, kā jūs uzdrošināties apgalvot, ka mūsu kodā ir kļūdas. Otrkārt, jā, iespējams, ir kļūdas. Mēs piegādājam ātri, tāpēc esiet pret mums saudzīgi.',
 
   // Policy pages
   'policy.privacy.title': 'Privātuma politika',

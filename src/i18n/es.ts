@@ -126,7 +126,7 @@ export default {
   'whyFree.ads.desc': 'Dividir una cuenta de $47.23 ya es suficientemente molesto sin anuncios de suscripciones de comida.',
 
   'whyFree.badgers.title': 'Solo tejones',
-  'whyFree.badgers.desc': 'Side Badger es una demo de división de gastos de marca blanca. Sin agenda oculta. Solo buenas vibras y tejones.',
+  'whyFree.badgers.desc': 'Side Badger es una app gratuita para dividir gastos con enfoque en la privacidad. Sin agenda oculta. Solo buenas vibras y tejones.',
 
   // CTA section
   'cta.title': '¿Listo para dividir algunas cuentas?',
@@ -177,9 +177,9 @@ export default {
   // FAQ Section
   'pricing.faq.title': 'Preguntas que podrías tener',
   'pricing.faq.q1.question': '¿Es realmente gratis?',
-  'pricing.faq.q1.answer': "Sí, ahora mismo es completamente gratis. No escondemos funciones detrás de un muro de pago. Es una demo de nuestra tecnología de división de gastos de marca blanca, así que lo ofrecemos sin costo mientras desarrollamos la plataforma.",
+  'pricing.faq.q1.answer': "Sí, ahora mismo es completamente gratis. No escondemos funciones detrás de un muro de pago. Lo mantenemos gratis porque todos merecen dividir cuentas sin estrés mientras seguimos lanzando cosas nuevas.",
   'pricing.faq.q2.question': "¿Cuál es la trampa?",
-  'pricing.faq.q2.answer': "Ninguna trampa. Side Badger es una demostración de cómo puede verse una app de división de gastos de marca blanca. Lo construimos para mostrar la tecnología, y pensamos: ¿por qué no hacerlo realmente útil mientras tanto?",
+  'pricing.faq.q2.answer': "Ninguna trampa. Side Badger existe para que dividir gastos sea simple, privado y divertido. Eso es todo.",
   'pricing.faq.q3.question': '¿Venderán mis datos?',
   'pricing.faq.q3.answer': "Absolutamente no. No recolectamos datos personales más allá de lo necesario para que funcione la app. Tenemos cero rastreadores, cero píxeles de analítica, y cero interés en tus hábitos de compra.",
   'pricing.faq.q4.question': '¿Por qué un tejón?',
@@ -187,7 +187,7 @@ export default {
   'pricing.faq.q5.question': '¿Puedo usar esto para mi negocio?',
   'pricing.faq.q5.answer': "¡Claro! Si quieres seguir gastos compartidos para tu pequeño negocio o equipo, adelante. Es gratis. No te juzgaremos.",
   'pricing.faq.q6.question': '¿Qué pasa si encuentro un bug?',
-  'pricing.faq.q6.answer': "Primero que nada, ¿cómo te atreves a insinuar que nuestro código tiene bugs? Segundo, sí, probablemente hay bugs. Esto es una demo. Sé amable con nosotros.",
+  'pricing.faq.q6.answer': "Primero que nada, ¿cómo te atreves a insinuar que nuestro código tiene bugs? Segundo, sí, probablemente hay bugs. Estamos lanzando rápido, así que sé amable con nosotros.",
 
   // Policy pages
   'policy.privacy.title': 'Política de Privacidad',

@@ -34,7 +34,7 @@ import hi from './hi';
 /**
  * Main locale configuration. Each locale needs:
  * - name: Display name in the locale's own language
- * - flag: Emoji flag for the dropdown
+ * - flagCode: circle-flags code (https://hatscripts.github.io/circle-flags/)
  * - intlCode: BCP 47 code for Intl.DateTimeFormat
  * - translations: The imported translation object
  * - inDropdown: Whether to show in language picker (false for 'en' since aliases cover it)
@@ -44,7 +44,7 @@ import hi from './hi';
 const localeConfig = {
   en: {
     name: 'English',
-    flag: '🇺🇸',
+    flagCode: 'us',
     intlCode: 'en-US',
     translations: en,
     inDropdown: false,
@@ -53,7 +53,7 @@ const localeConfig = {
   },
   ar: {
     name: 'العربية',
-    flag: '🇸🇦',
+    flagCode: 'sa',
     intlCode: 'ar-EG',
     translations: ar,
     inDropdown: true,
@@ -62,7 +62,7 @@ const localeConfig = {
   },
   eu: {
     name: 'Euskara',
-    flag: '🟩',
+    flagCode: 'es-pv', // Basque Country regional flag
     intlCode: 'eu-ES',
     translations: eu,
     inDropdown: true,
@@ -71,7 +71,7 @@ const localeConfig = {
   },
   cy: {
     name: 'Cymraeg',
-    flag: '🏴󠁧󠁢󠁷󠁬󠁳󠁿',
+    flagCode: 'gb-wls', // Wales regional flag
     intlCode: 'cy-GB',
     translations: cy,
     inDropdown: true,
@@ -80,7 +80,7 @@ const localeConfig = {
   },
   'nl-BE': {
     name: 'Nederlands (België)',
-    flag: '🇧🇪',
+    flagCode: 'be',
     intlCode: 'nl-BE',
     translations: nlBE,
     inDropdown: true,
@@ -89,7 +89,7 @@ const localeConfig = {
   },
   de: {
     name: 'Deutsch',
-    flag: '🇩🇪',
+    flagCode: 'de',
     intlCode: 'de-DE',
     translations: de,
     inDropdown: true,
@@ -98,7 +98,7 @@ const localeConfig = {
   },
   hi: {
     name: 'हिन्दी',
-    flag: '🇮🇳',
+    flagCode: 'in',
     intlCode: 'hi-IN',
     translations: hi,
     inDropdown: true,
@@ -107,7 +107,7 @@ const localeConfig = {
   },
   ga: {
     name: 'Gaeilge',
-    flag: '🇮🇪',
+    flagCode: 'ie',
     intlCode: 'ga-IE',
     translations: ga,
     inDropdown: true,
@@ -116,7 +116,7 @@ const localeConfig = {
   },
   it: {
     name: 'Italiano',
-    flag: '🇮🇹',
+    flagCode: 'it',
     intlCode: 'it-IT',
     translations: it,
     inDropdown: true,
@@ -125,7 +125,7 @@ const localeConfig = {
   },
   ja: {
     name: '日本語',
-    flag: '🇯🇵',
+    flagCode: 'jp',
     intlCode: 'ja-JP',
     translations: ja,
     inDropdown: true,
@@ -134,7 +134,7 @@ const localeConfig = {
   },
   ko: {
     name: '한국어',
-    flag: '🇰🇷',
+    flagCode: 'kr',
     intlCode: 'ko-KR',
     translations: ko,
     inDropdown: true,
@@ -143,7 +143,7 @@ const localeConfig = {
   },
   lv: {
     name: 'Latviešu',
-    flag: '🇱🇻',
+    flagCode: 'lv',
     intlCode: 'lv-LV',
     translations: lv,
     inDropdown: true,
@@ -152,7 +152,7 @@ const localeConfig = {
   },
   no: {
     name: 'Norsk',
-    flag: '🇳🇴',
+    flagCode: 'no',
     intlCode: 'nb-NO',
     translations: no,
     inDropdown: true,
@@ -161,7 +161,7 @@ const localeConfig = {
   },
   es: {
     name: 'Español',
-    flag: '🇪🇸',
+    flagCode: 'es',
     intlCode: 'es-ES',
     translations: es,
     inDropdown: true,
@@ -170,7 +170,7 @@ const localeConfig = {
   },
   sv: {
     name: 'Svenska',
-    flag: '🇸🇪',
+    flagCode: 'se',
     intlCode: 'sv-SE',
     translations: sv,
     inDropdown: true,
@@ -179,7 +179,7 @@ const localeConfig = {
   },
   ph: {
     name: 'Tagalog',
-    flag: '🇵🇭',
+    flagCode: 'ph',
     intlCode: 'fil-PH',
     translations: ph,
     inDropdown: true,
@@ -188,7 +188,7 @@ const localeConfig = {
   },
   uk: {
     name: 'Українська',
-    flag: '🇺🇦',
+    flagCode: 'ua',
     intlCode: 'uk-UA',
     translations: uk,
     inDropdown: true,
@@ -199,48 +199,48 @@ const localeConfig = {
 
 /**
  * Alias configuration for regional variants that share translations.
- * Each alias points to a base locale but has its own name/flag in the dropdown.
+ * Each alias points to a base locale but has its own name/flagCode in the dropdown.
  */
 const aliasConfig = {
   'nl-NL': {
     name: 'Nederlands',
-    flag: '🇳🇱',
+    flagCode: 'nl',
     target: 'nl-BE' as const,
     dropdownOrder: 35, // Dutch (Netherlands) - after Dutch (Belgium)
   },
   'en-us': {
     name: 'English (American)',
-    flag: '🇺🇸',
+    flagCode: 'us',
     target: 'en' as const,
     dropdownOrder: 40, // English variants start here
   },
   'en-au': {
     name: 'English (Australian)',
-    flag: '🇦🇺',
+    flagCode: 'au',
     target: 'en' as const,
     dropdownOrder: 41,
   },
   'en-ca': {
     name: 'English (Canadian)',
-    flag: '🇨🇦',
+    flagCode: 'ca',
     target: 'en' as const,
     dropdownOrder: 42,
   },
   'en-ie': {
     name: 'English (Irish)',
-    flag: '🇮🇪',
+    flagCode: 'ie',
     target: 'en' as const,
     dropdownOrder: 43,
   },
   'en-sc': {
     name: 'English (Scotch)',
-    flag: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+    flagCode: 'gb-sct', // Scotland regional flag
     target: 'en' as const,
     dropdownOrder: 44,
   },
   'en-gb': {
     name: 'English (actual)',
-    flag: '🇬🇧',
+    flagCode: 'gb',
     target: 'en' as const,
     dropdownOrder: 45,
   },
@@ -307,17 +307,22 @@ export const localeNames: Record<DropdownLocale, string> = {
   ),
 } as Record<DropdownLocale, string>;
 
-// Flags for dropdown
-export const localeFlags: Record<DropdownLocale, string> = {
+// Flag codes for dropdown (circle-flags library codes)
+export const localeFlagCodes: Record<DropdownLocale, string> = {
   ...Object.fromEntries(
     Object.entries(localeConfig)
       .filter(([, config]) => config.inDropdown)
-      .map(([key, config]) => [key, config.flag])
+      .map(([key, config]) => [key, config.flagCode])
   ),
   ...Object.fromEntries(
-    Object.entries(aliasConfig).map(([key, config]) => [key, config.flag])
+    Object.entries(aliasConfig).map(([key, config]) => [key, config.flagCode])
   ),
 } as Record<DropdownLocale, string>;
+
+// Helper to get flag URL from circle-flags CDN
+export function getFlagUrl(flagCode: string): string {
+  return `https://hatscripts.github.io/circle-flags/flags/${flagCode}.svg`;
+}
 
 // =============================================================================
 // FUNCTIONS

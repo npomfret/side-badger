@@ -1,5 +1,5 @@
 ---
-import { allLocales, localeNames, localeFlags, getPathWithoutLocale, t, resolveLocale, localeAliases, type Locale, type LocaleOrAlias, type DropdownLocale } from '../i18n';
+import { allLocales, localeNames, localeFlagCodes, getFlagUrl, getPathWithoutLocale, t, resolveLocale, localeAliases, type Locale, type LocaleOrAlias, type DropdownLocale } from '../i18n';
 
 interface Props {
   currentLocale: Locale;
@@ -50,7 +50,7 @@ const localeData = allLocales.map(locale => {
     name: localeNames[locale],
     mainName: parsed.main,
     subtitle: parsed.subtitle,
-    flag: localeFlags[locale],
+    flagUrl: getFlagUrl(localeFlagCodes[locale]),
     href: `/${locale}${basePath === '/' ? '' : basePath}`,
     active: resolveLocale(locale) === currentLocale,
   };
@@ -66,7 +66,7 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
 <div class="language-switcher">
   <div class="language-backdrop"></div>
   <button class="language-switcher-btn" aria-label={changeLanguageLabel} aria-expanded="false" aria-haspopup="listbox">
-    <span class="current-flag">{localeFlags[displayLocale]}</span>
+    <img class="current-flag" src={getFlagUrl(localeFlagCodes[displayLocale])} alt="" loading="eager" />
     <span class="current-lang">
       {currentParsed.main}
       {currentParsed.subtitle && <span class="current-subtitle">{currentParsed.subtitle}</span>}
@@ -100,7 +100,7 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
           aria-selected={locale.active ? 'true' : 'false'}
           lang={locale.code.split('-')[0]}
         >
-          <span class="option-flag" aria-hidden="true">{locale.flag}</span>
+          <img class="option-flag" src={locale.flagUrl} alt="" loading="lazy" />
           <span class="option-name">
             {locale.mainName}
             {locale.subtitle && <span class="option-subtitle">{locale.subtitle}</span>}

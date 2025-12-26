@@ -227,7 +227,7 @@ a:hover {
 /* Fallback for browsers without backdrop-filter */
 @supports not (backdrop-filter: blur(1px)) {
   .glass {
-    background: rgba(19, 47, 34, 0.95);
+    background: rgba(255, 255, 255, 0.95);
   }
 }
 
@@ -266,6 +266,8 @@ a:hover {
 
 /* ===== BUTTONS ===== */
 .btn {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -318,11 +320,6 @@ a:hover {
 }
 
 /* Button ripple effect */
-.btn {
-  position: relative;
-  overflow: hidden;
-}
-
 .btn-ripple {
   position: absolute;
   border-radius: 50%;
@@ -412,11 +409,17 @@ section {
 }
 
 /* Staggered delays for fade-up */
+.fade-up[data-delay="50"] { transition-delay: 50ms; }
 .fade-up[data-delay="100"] { transition-delay: 100ms; }
+.fade-up[data-delay="150"] { transition-delay: 150ms; }
 .fade-up[data-delay="200"] { transition-delay: 200ms; }
+.fade-up[data-delay="250"] { transition-delay: 250ms; }
 .fade-up[data-delay="300"] { transition-delay: 300ms; }
+.fade-up[data-delay="350"] { transition-delay: 350ms; }
 .fade-up[data-delay="400"] { transition-delay: 400ms; }
+.fade-up[data-delay="450"] { transition-delay: 450ms; }
 .fade-up[data-delay="500"] { transition-delay: 500ms; }
+.fade-up[data-delay="550"] { transition-delay: 550ms; }
 .fade-up[data-delay="600"] { transition-delay: 600ms; }
 
 @media (prefers-reduced-motion: reduce) {

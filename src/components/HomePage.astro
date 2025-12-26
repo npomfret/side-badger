@@ -500,28 +500,13 @@ const { locale } = Astro.props;
       }
     }
 
-    // ===== STAGGERED CARD REVEALS =====
-    const staggerObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          const el = entry.target as HTMLElement;
-          const delay = parseInt(el.dataset.delay || '0');
-
-          setTimeout(() => {
-            el.classList.add('visible');
-          }, delay);
-
-          staggerObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
+    // ===== AUTO-ASSIGN STAGGER DELAYS =====
+    // Assigns delays to fade-up elements without explicit data-delay
+    // The actual animation is handled by BaseLayout's IntersectionObserver
     document.querySelectorAll('.fade-up').forEach((el, index) => {
-      // Auto-assign stagger delays if not set
       if (!(el as HTMLElement).dataset.delay) {
         (el as HTMLElement).dataset.delay = String((index % 6) * 100);
       }
-      staggerObserver.observe(el);
     });
 
     // ===== BUTTON RIPPLE EFFECT =====

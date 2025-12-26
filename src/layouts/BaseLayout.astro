@@ -1,5 +1,5 @@
 ---
-import CausticRipples from '../components/CausticRipples.astro';
+import CanopyBloom from '../components/CanopyBloom.astro';
 import EasterEggs from '../components/EasterEggs.astro';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import LanguageDetection from '../components/LanguageDetection.astro';
@@ -35,7 +35,7 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#0c1f16" />
+    <meta name="theme-color" content="#F0FDF4" />
 
     <!-- hreflang tags for SEO -->
     {locales.map((loc) => (
@@ -90,7 +90,7 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
   </head>
   <body>
     <a href="#main-content" class="skip-link">{t('a11y.skipToContent', locale)}</a>
-    <CausticRipples />
+    <CanopyBloom />
     <EasterEggs />
     <LanguageDetection currentLocale={locale} />
     <div id="cursor-glow" aria-hidden="true"></div>

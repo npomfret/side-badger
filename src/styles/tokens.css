@@ -7,24 +7,25 @@
   /* ===== COLOR SYSTEM ===== */
 
   /* Base backgrounds - lighter forest (lifted from deep darkness) */
-  --bg-void: #0c1f16;
-  --bg-deep: #132f22;
+  --bg-void: #f0fdf4;
+  --bg-deep: #dcfce7;
 
   /* Glass surfaces - mint-tinted for liquid crystal feel */
-  --glass-bg: rgba(30, 90, 60, 0.35);
-  --glass-border: rgba(255, 255, 255, 0.15);
-  --glass-border-hover: rgba(255, 255, 255, 0.3);
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(22, 163, 74, 0.2);
+  --glass-border-hover: rgba(22, 163, 74, 0.4);
 
   /* Accent colors - brand colors (green/teal/amber) */
-  --accent-primary: #7ec786;
-  --accent-secondary: #5fb0c4;
-  --accent-tertiary: #f0c05c;
-  --accent-success: #4eeab5;
+  --accent-primary: #22c55e;
+  --accent-secondary: #16a34a;
+  --accent-tertiary: #86efac;
+  --accent-success: #4ade80;
 
   /* Text colors */
-  --text-primary: #f8fafc;
-  --text-secondary: rgba(248, 250, 252, 0.85);
-  --text-muted: rgba(248, 250, 252, 0.6);
+  --text-primary: #1b3a27;
+  --text-secondary: rgba(20, 83, 45, 0.85);
+  --text-muted: rgba(20, 83, 45, 0.6);
+  --text-heading: #0c1f16;
 
   /* ===== SPACING SYSTEM ===== */
   /* Fixed spacing */
@@ -45,9 +46,9 @@
   --radius-full: 9999px;
 
   /* ===== SHADOW SYSTEM ===== */
-  --shadow-glow-sm: 0 0 25px rgba(126, 199, 134, 0.45);
-  --shadow-glow-md: 0 0 50px rgba(126, 199, 134, 0.55);
-  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-glow-sm: 0 20px 35px rgba(34, 197, 94, 0.2);
+  --shadow-glow-md: 0 35px 65px rgba(34, 197, 94, 0.28);
+  --shadow-card: 0 18px 40px rgba(15, 75, 50, 0.15);
 
   /* ===== TYPOGRAPHY ===== */
   --font-sans: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;

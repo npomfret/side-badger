@@ -10,6 +10,7 @@
 .pricing-hero h1 {
   margin-bottom: var(--space-md);
   font-size: var(--text-3xl);
+  color: var(--text-heading, var(--text-primary));
 }
 
 .strikethrough {
@@ -116,6 +117,7 @@
 .plan-header h2 {
   font-size: var(--text-2xl);
   margin-bottom: var(--space-md);
+  color: var(--text-heading, var(--text-primary));
 }
 
 .plan-price {

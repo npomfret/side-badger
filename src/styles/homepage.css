@@ -46,6 +46,7 @@
 }
 
 .hero h1 {
+  color: var(--text-heading, var(--text-primary));
   margin-bottom: var(--space-xs);
 }
 
@@ -369,4 +370,3 @@
     margin-bottom: var(--space-xl);
   }
 }
-

@@ -64,7 +64,6 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
 ---
 
 <div class="language-switcher">
-  <div class="language-backdrop"></div>
   <button class="language-switcher-btn" aria-label={changeLanguageLabel} aria-expanded="false" aria-haspopup="listbox">
     <img class="current-flag" src={getFlagUrl(localeFlagCodes[displayLocale])} alt="" loading="eager" />
     <span class="current-lang">
@@ -171,8 +170,6 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
     const options = switcher.querySelectorAll('.language-option');
     const noResults = switcher.querySelector('.no-results');
 
-    const backdrop = switcher.querySelector('.language-backdrop');
-
     const openDropdown = () => {
       btn?.setAttribute('aria-expanded', 'true');
       switcher.classList.add('open');
@@ -197,11 +194,6 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
       } else {
         openDropdown();
       }
-    });
-
-    // Close on backdrop click
-    backdrop?.addEventListener('click', () => {
-      closeDropdown();
     });
 
     // Filter languages as user types

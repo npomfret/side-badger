@@ -438,12 +438,6 @@ section {
   }
 }
 
-/* ===== RTL UTILITIES ===== */
-/* Flip directional icons in RTL mode */
-[dir="rtl"] .rtl-flip {
-  transform: scaleX(-1);
-}
-
 /* ===== LANGUAGE-SPECIFIC FONT STYLES ===== */
 body:lang(ja) {
   font-family: 'Noto Sans JP', var(--font-sans);

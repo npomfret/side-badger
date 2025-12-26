@@ -6,10 +6,6 @@
   position: relative;
 }
 
-.language-backdrop {
-  display: none;
-}
-
 .language-switcher-btn {
   display: flex;
   align-items: center;
@@ -25,7 +21,7 @@
 }
 
 .language-switcher-btn:hover {
-  background: var(--glass-bg-hover, rgba(255, 255, 255, 0.1));
+  background: rgba(255, 255, 255, 0.1);
   color: var(--text-primary);
 }
 
@@ -134,7 +130,7 @@
 }
 
 .language-option:hover {
-  background: var(--glass-bg-hover, rgba(255, 255, 255, 0.1));
+  background: rgba(255, 255, 255, 0.1);
   color: var(--text-primary);
 }
 
@@ -178,10 +174,6 @@
 
 @media (max-width: 768px) {
   .current-lang {
-    display: none;
-  }
-
-  .language-backdrop {
     display: none;
   }
 

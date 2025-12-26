@@ -1,5 +1,6 @@
 ---
 import CanopyBloom from '../components/CanopyBloom.astro';
+import FloatingParticles from '../components/FloatingParticles.astro';
 import EasterEggs from '../components/EasterEggs.astro';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import LanguageDetection from '../components/LanguageDetection.astro';
@@ -91,6 +92,7 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
   <body>
     <a href="#main-content" class="skip-link">{t('a11y.skipToContent', locale)}</a>
     <CanopyBloom />
+    <FloatingParticles />
     <EasterEggs />
     <LanguageDetection currentLocale={locale} />
     <div id="cursor-glow" aria-hidden="true"></div>
@@ -171,6 +173,15 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
       };
       handleMotionPreference(motionQuery);
       motionQuery.addEventListener('change', handleMotionPreference);
+
+      // Scroll progress for background effects
+      const updateScrollProgress = () => {
+        const scrollHeight = document.body.scrollHeight - window.innerHeight;
+        const progress = scrollHeight > 0 ? window.scrollY / scrollHeight : 0;
+        document.documentElement.style.setProperty('--scroll-progress', String(Math.min(1, Math.max(0, progress))));
+      };
+      updateScrollProgress();
+      window.addEventListener('scroll', updateScrollProgress, { passive: true });
 
       // Scroll-triggered fade-up animations
       const observer = new IntersectionObserver((entries) => {

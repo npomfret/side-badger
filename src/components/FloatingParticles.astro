@@ -1,0 +1,86 @@
+---
+// Floating particles using tsparticles - falling leaves/petals effect
+---
+
+<div id="floating-particles" aria-hidden="true"></div>
+
+<script>
+  import { tsParticles } from "@tsparticles/engine";
+  import { loadSlim } from "@tsparticles/slim";
+
+  // Check for reduced motion preference
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!prefersReducedMotion) {
+    // Load the slim bundle
+    await loadSlim(tsParticles);
+
+    tsParticles.load({
+      id: "floating-particles",
+      options: {
+        fullScreen: {
+          enable: true,
+          zIndex: -1
+        },
+        particles: {
+          number: {
+            value: 8
+          },
+          color: {
+            value: ["#34d399", "#22c55e", "#86efac", "#bbf7d0", "#a7f3d0"]
+          },
+          shape: {
+            type: "emoji",
+            options: {
+              emoji: {
+                value: ["🍃", "🌿", "☘️", "🍀", "🌱"]
+              }
+            }
+          },
+          opacity: {
+            value: { min: 0.15, max: 0.35 }
+          },
+          size: {
+            value: { min: 24, max: 40 }
+          },
+          move: {
+            enable: true,
+            speed: { min: 0.2, max: 0.5 },
+            direction: "bottom",
+            straight: true,
+            outModes: {
+              default: "out",
+              top: "out",
+              bottom: "out"
+            }
+          },
+          rotate: {
+            value: { min: 0, max: 360 },
+            direction: "random",
+            animation: {
+              enable: true,
+              speed: { min: 1, max: 3 }
+            }
+          }
+        },
+        detectRetina: true,
+        fpsLimit: 60
+      }
+    });
+  }
+</script>
+
+<style>
+  #floating-particles {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #floating-particles {
+      display: none;
+    }
+  }
+</style>

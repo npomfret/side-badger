@@ -90,11 +90,17 @@ const petals: PetalSpec[] = [
       radial-gradient(circle at 50% 80%, rgba(220, 252, 231, 0.45), transparent 60%),
       linear-gradient(180deg, #f7fefb 0%, #e3f8ea 50%, #d0f1df 100%);
     filter: blur(4px);
+    /* Subtle vertical shift on scroll */
+    transform: translateY(calc(var(--scroll-progress, 0) * -30px));
+    transition: transform 0.1s linear;
   }
 
   .sun-beams {
     position: absolute;
     inset: 0;
+    /* Slower parallax for beams container */
+    transform: translateY(calc(var(--scroll-progress, 0) * -50px));
+    transition: transform 0.15s linear;
   }
 
   .sun-beam {
@@ -122,6 +128,9 @@ const petals: PetalSpec[] = [
   .floating-petals {
     position: absolute;
     inset: 0;
+    /* Petals drift with scroll - slightly faster than beams */
+    transform: translateY(calc(var(--scroll-progress, 0) * -70px));
+    transition: transform 0.2s linear;
   }
 
   .petal {
@@ -206,6 +215,12 @@ const petals: PetalSpec[] = [
     .petal,
     .grain {
       animation: none !important;
+    }
+    .gradient-base,
+    .sun-beams,
+    .floating-petals {
+      transform: none !important;
+      transition: none !important;
     }
   }
 </style>

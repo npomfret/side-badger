@@ -41,6 +41,8 @@
   font-size: var(--text-xl);
   color: var(--text-secondary);
   margin-top: var(--space-md);
+  margin-inline: auto;
+  text-align: center;
 }
 
 /* Plans Grid */
@@ -58,9 +60,12 @@
 
 .plan-card {
   padding: var(--space-xl);
+  padding-top: calc(var(--space-xl) + var(--space-sm));
+  margin-top: var(--space-md);
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: visible;
   transition:
     transform var(--duration-fast) var(--ease-smooth),
     box-shadow var(--duration-fast) var(--ease-smooth),

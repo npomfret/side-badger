@@ -139,12 +139,6 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
             <h4 id="footer-product-heading">{t('footer.product', locale)}</h4>
             <ul aria-labelledby="footer-product-heading" role="list">
               <li><a href={getLocalizedPath('/pricing', locale)}>{t('footer.pricing', locale)}</a></li>
-              <li>
-                <a href={getAppUrl(locale)}>
-                  {t('footer.launchApp', locale)}
-                  <span class="sr-only">{t('a11y.externalLink', locale)}</span>
-                </a>
-              </li>
             </ul>
           </div>
 

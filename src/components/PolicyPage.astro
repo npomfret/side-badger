@@ -1,5 +1,5 @@
 ---
-import { t, type Locale } from '../i18n';
+import { t, getApiBaseUrl, type Locale } from '../i18n';
 
 interface Props {
   title: string;
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { title, endpoint, locale } = Astro.props;
-const apiBaseUrl = t('api.baseUrl');
+const apiBaseUrl = getApiBaseUrl();
 
 // Translations for client-side error handling
 const translations = {

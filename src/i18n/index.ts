@@ -375,12 +375,20 @@ const RTL_LANGUAGES = ['ar', 'he', 'fa', 'ur'];
 export const isRTL = (locale: string): boolean =>
   RTL_LANGUAGES.includes(locale.split('-')[0]);
 
+// Domain configuration from environment variables
+// Set PUBLIC_DOMAIN at build time (e.g., "sidebadger.me" or "sidebadger.com")
+const domain = import.meta.env.PUBLIC_DOMAIN || 'sidebadger.me';
+
 export function getAppUrl(locale: Locale = 'en'): string {
-  const baseUrl = translations.en['app.url'];
+  const baseUrl = `https://demo.${domain}/dashboard`;
   if (locale === 'en') {
     return baseUrl;
   }
   return `${baseUrl}?lang=${locale}`;
+}
+
+export function getApiBaseUrl(): string {
+  return `https://demo.${domain}`;
 }
 
 export function getFormattedDate(locale: Locale): string {

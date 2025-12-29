@@ -1,6 +1,4 @@
 export default {
-  // App
-  'api.baseUrl': 'https://demo.sidebadger.com',
 
   // Meta
   'meta.title': 'Side Badger - Free bill splitting, expense sharing and side-badgers',

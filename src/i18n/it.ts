@@ -1,145 +1,124 @@
 export default {
-  // App
-  'api.baseUrl': 'https://demo.sidebadger.com',
-
-  // Meta
-  'meta.title': 'Side Badger - Divisione gratuita dei conti, condivisione delle spese e side-badgers',
-  'meta.description': 'Side Badger è il divisore di conti totalmente gratuito, senza tracciamento e senza pubblicità che rende facile dividere le spese con gli amici. Crea gruppi, aggiungi spese e salda con facilità. Nessun dramma, solo una semplice divisione dei conti.',
-
-  // Header
-  'header.logoText': 'Side Badger',
-  'header.launchApp': 'Avvia app',
-
-  // Footer
-  'footer.tagline': 'Totalmente gratuito. Nessun tracciamento. Nessuna pubblicità.<br />Solo tassi che dividono i conti.',
-  'footer.product': 'Prodotto',
-  'footer.pricing': 'Prezzi',
-  'footer.legal': 'Legale',
-  'footer.privacy': 'Informativa sulla privacy',
-  'footer.terms': 'Termini di servizio',
+  'a11y.changeLanguage': 'Cambia lingua',
+  'a11y.externalLink': 'Link esterno',
+  'a11y.footerNavigation': 'Navigazione footer',
+  'a11y.homeLink': 'Vai alla home page',
+  'a11y.mainNavigation': 'Navigazione principale',
+  'a11y.searchLanguages': 'Cerca lingue',
+  'a11y.skipToContent': 'Vai al contenuto principale',
+  'comingSoon.ai.desc': 'Scatta una foto, lascia che l\'AI estragga i dettagli. Creazione di spese più veloce con meno digitazione.',
+  'comingSoon.ai.title': 'Scansione ricevute AI',
+  'comingSoon.badge': 'Prossimamente',
+  'comingSoon.conversion.desc': 'Conversione automatica tra valute. Dividi in euro, salda in dollari.',
+  'comingSoon.conversion.title': 'Conversioni di valuta',
+  'comingSoon.export.desc': 'Scarica le tue spese come Excel, CSV o PDF. I tuoi dati, il tuo formato, a modo tuo.',
+  'comingSoon.export.title': 'Esporta i tuoi dati',
+  'comingSoon.mobile.desc': 'App iOS e Android per il tracciamento delle spese in movimento. Aggiungi le spese subito dopo aver pagato.',
+  'comingSoon.mobile.title': 'App mobili native',
+  'comingSoon.receipts.desc': 'Allega foto delle ricevute a qualsiasi spesa. Non perdere mai traccia di ciò che hai speso.',
+  'comingSoon.receipts.title': 'Caricamento ricevute',
+  'comingSoon.subtitle': 'Stiamo solo iniziando. Ecco cosa c\'è in arrivo.',
+  'comingSoon.title': 'Prossimamente',
+  'cta.button': 'Avvia Side Badger',
+  'cta.subtitle': 'Unisciti alla rivoluzione dei tassi. È gratuito, è privato ed è leggermente caotico nel migliore dei modi.',
+  'cta.title': 'Pronto a dividere qualche conto?',
+  'features.activity.desc': 'URL come /groups/:id/add-expense aprono modali automaticamente, Escape pulisce la cronologia, gli stack di navigazione dashboard restano intatti, e notifiche/dropdown rispecchiano il feed.',
+  'features.activity.title': 'Deep-link ovunque',
+  'features.balances.desc': 'Pannelli saldo sempre visibili mostrano debiti ottimizzati, conferme "tutto saldato" e filtri per rivelare debiti indiretti così nessuno discute su chi deve cosa a chi.',
+  'features.balances.title': 'Saldi di cui ti puoi fidare',
+  'features.comments.desc': 'Spese, commenti e saldi condividono lo stesso picker emoji, conteggi aggregati, stati evidenziati e UX toggle, perché la responsabilità può comunque essere divertente.',
+  'features.comments.title': 'Emoji ovunque',
+  'features.currency.desc': 'Gli admin possono bloccare i gruppi su valute approvate, scegliere quelle predefinite, preservare quelle legacy per vecchie spese, e comunque permettere ricevute multi-valuta quando serve.',
+  'features.currency.title': 'Guardrail valutari',
+  'features.edit.desc': 'Alias identita per gruppo, impostazioni generali con rinomina/descrivi/elimina + conferme, preset sicurezza, editor ruoli membri e toggle blocco protetti dietro schede solo admin.',
+  'features.edit.title': 'Impostazioni che funzionano davvero',
+  'features.groups.desc': 'Feed attività ricco con testi personalizzati, schede archiviate/attive, card gruppo rifinite al passaggio del mouse, skeleton loader, paginazione, stati vuoti e recupero errori su desktop e mobile.',
+  'features.groups.title': 'Dashboard in tempo reale',
+  'features.invites.desc': 'Ogni card gruppo ha un modale di condivisione con URL brevi, codici QR, rigenerazione token, feedback clipboard, link multilingua e una landing page che gestisce approvazioni/membri in attesa con eleganza.',
+  'features.invites.title': 'Link di condivisione + inviti QR',
+  'features.noTracking.desc': 'Modali di accettazione policy, recupero cookie/termini/privacy, banner di avviso e zero pubblicità o tracker. Memorizziamo solo ciò che mantiene i tassi amichevoli.',
+  'features.noTracking.title': 'Nessun tracker. Pieno rispetto.',
+  'features.participants.desc': 'I commenti su spese e gruppi supportano allegati, toggle emoji, paginazione e aggiornamenti in tempo reale, così la pianificazione del prossimo viaggio avviene proprio accanto ai numeri.',
+  'features.participants.title': 'Thread, file e reazioni',
+  'features.roles.desc': 'Regole di sicurezza predefinite vs personalizzate, dropdown ruoli membri, moderazione inviti in sospeso, toggle di blocco, filtri "includi eliminati" e impostazioni solo admin per tenere il caos sotto controllo.',
+  'features.roles.title': 'Permessi a prova di lockdown',
+  'features.settle.desc': 'Pulsanti di saldo con un tocco aprono moduli precompilati con validazione per pagamenti in eccesso/difetto, tile cronologia mostrano modifiche, i blocchi impongono sola lettura, e le reazioni mantengono i rimborsi giocosi.',
+  'features.settle.title': 'Saldo rapido + cronologia',
+  'features.splits.desc': 'Divisioni uguali/esatte/personalizzate con gestione modifiche non salvate, selettore multi-valuta, parsing link Google Maps, chip etichette, uploader ricevute, scorciatoie importi recenti e protezioni spese bloccate.',
+  'features.splits.title': 'Modulo spese incredibilmente intelligente',
+  'features.subtitle': 'Una lista curata delle vere funzionalità pronte nella dashboard.',
+  'features.title': 'Dentro Side Badger',
   'footer.cookies': 'Informativa sui cookie',
   'footer.copyright': 'Side Badger. Tutti i diritti riservati (ma non proprio, è gratuito).',
+  'footer.legal': 'Legale',
   'footer.madeWith': 'Fatto con caos e caffè',
-
-  // Hero
+  'footer.pricing': 'Prezzi',
+  'footer.privacy': 'Informativa sulla privacy',
+  'footer.product': 'Prodotto',
+  'footer.tagline': 'Totalmente gratuito. Nessun tracciamento. Nessuna pubblicità.<br />Solo tassi che dividono i conti.',
+  'footer.terms': 'Termini di servizio',
+  'header.launchApp': 'Avvia app',
+  'header.logoText': 'Side Badger',
   'hero.badge': '100% gratuito e illimitato',
-  'hero.disclaimer': "* Ovviamente ci sono alcune limitazioni. Si applicano l'uso equo e molte altre limitazioni. È gratuito finché non lo è più.",
-  'hero.title': 'Dividi le spese come un',
-  'hero.titleHighlight': 'side badger',
-  'hero.titleDisclaimer': '‌',
-  'hero.subtitle': 'Dividi i conti con gli amici, tieni traccia delle spese condivise e salda facilmente. Gratuito per sempre, senza pubblicità, e progettato con la tua privacy in mente.',
   'hero.cta': '...sidebadger me',
-
-  // Features section
-  'features.title': 'Dentro Side Badger',
-  'features.subtitle': 'Una lista curata delle vere funzionalità pronte nella dashboard.',
-
-  // Feature cards
-  'features.groups.title': 'Dashboard in tempo reale',
-  'features.groups.desc': 'Feed attività ricco con testi personalizzati, schede archiviate/attive, card gruppo rifinite al passaggio del mouse, skeleton loader, paginazione, stati vuoti e recupero errori su desktop e mobile.',
-
-  'features.invites.title': 'Link di condivisione + inviti QR',
-  'features.invites.desc': 'Ogni card gruppo ha un modale di condivisione con URL brevi, codici QR, rigenerazione token, feedback clipboard, link multilingua e una landing page che gestisce approvazioni/membri in attesa con eleganza.',
-
-  'features.roles.title': 'Permessi a prova di lockdown',
-  'features.roles.desc': 'Regole di sicurezza predefinite vs personalizzate, dropdown ruoli membri, moderazione inviti in sospeso, toggle di blocco, filtri "includi eliminati" e impostazioni solo admin per tenere il caos sotto controllo.',
-
-  'features.splits.title': 'Modulo spese incredibilmente intelligente',
-  'features.splits.desc': 'Divisioni uguali/esatte/personalizzate con gestione modifiche non salvate, selettore multi-valuta, parsing link Google Maps, chip etichette, uploader ricevute, scorciatoie importi recenti e protezioni spese bloccate.',
-
-  'features.participants.title': 'Thread, file e reazioni',
-  'features.participants.desc': 'I commenti su spese e gruppi supportano allegati, toggle emoji, paginazione e aggiornamenti in tempo reale, così la pianificazione del prossimo viaggio avviene proprio accanto ai numeri.',
-
-  'features.currency.title': 'Guardrail valutari',
-  'features.currency.desc': 'Gli admin possono bloccare i gruppi su valute approvate, scegliere quelle predefinite, preservare quelle legacy per vecchie spese, e comunque permettere ricevute multi-valuta quando serve.',
-
-  'features.balances.title': 'Saldi di cui ti puoi fidare',
-  'features.balances.desc': 'Pannelli saldo sempre visibili mostrano debiti ottimizzati, conferme "tutto saldato" e filtri per rivelare debiti indiretti così nessuno discute su chi deve cosa a chi.',
-
-  'features.settle.title': 'Saldo rapido + cronologia',
-  'features.settle.desc': 'Pulsanti di saldo con un tocco aprono moduli precompilati con validazione per pagamenti in eccesso/difetto, tile cronologia mostrano modifiche, i blocchi impongono sola lettura, e le reazioni mantengono i rimborsi giocosi.',
-
-  'features.activity.title': 'Deep-link ovunque',
-  'features.activity.desc': 'URL come /groups/:id/add-expense aprono modali automaticamente, Escape pulisce la cronologia, gli stack di navigazione dashboard restano intatti, e notifiche/dropdown rispecchiano il feed.',
-
-  'features.comments.title': 'Emoji ovunque',
-  'features.comments.desc': 'Spese, commenti e saldi condividono lo stesso picker emoji, conteggi aggregati, stati evidenziati e UX toggle, perché la responsabilità può comunque essere divertente.',
-
-  'features.edit.title': 'Impostazioni che funzionano davvero',
-  'features.edit.desc': 'Alias identita per gruppo, impostazioni generali con rinomina/descrivi/elimina + conferme, preset sicurezza, editor ruoli membri e toggle blocco protetti dietro schede solo admin.',
-
-  'features.noTracking.title': 'Nessun tracker. Pieno rispetto.',
-  'features.noTracking.desc': 'Modali di accettazione policy, recupero cookie/termini/privacy, banner di avviso e zero pubblicità o tracker. Memorizziamo solo ciò che mantiene i tassi amichevoli.',
-
-  // Coming soon section
-  'comingSoon.title': 'Prossimamente',
-  'comingSoon.subtitle': "Stiamo solo iniziando. Ecco cosa c'è in arrivo.",
-
-  'comingSoon.conversion.title': 'Conversioni di valuta',
-  'comingSoon.conversion.desc': 'Conversione automatica tra valute. Dividi in euro, salda in dollari.',
-
-  'comingSoon.receipts.title': 'Caricamento ricevute',
-  'comingSoon.receipts.desc': 'Allega foto delle ricevute a qualsiasi spesa. Non perdere mai traccia di ciò che hai speso.',
-
-  'comingSoon.ai.title': 'Scansione ricevute AI',
-  'comingSoon.ai.desc': 'Scatta una foto, lascia che l\'AI estragga i dettagli. Creazione di spese più veloce con meno digitazione.',
-
-  'comingSoon.export.title': 'Esporta i tuoi dati',
-  'comingSoon.export.desc': 'Scarica le tue spese come Excel, CSV o PDF. I tuoi dati, il tuo formato, a modo tuo.',
-
-  'comingSoon.mobile.title': 'App mobili native',
-  'comingSoon.mobile.desc': 'App iOS e Android per il tracciamento delle spese in movimento. Aggiungi le spese subito dopo aver pagato.',
-
-  // Little things section
-  'littleThings.title': 'Piccole cose che contano',
-  'littleThings.subtitle': 'I dettagli che rendono la divisione delle spese davvero piacevole.',
-
-  'littleThings.dates.title': 'Deep link e routing',
-  'littleThings.dates.desc': 'URL diretti aprono modali (dettaglio spesa, aggiungi spesa, saldi), Escape ripristina la cronologia, e gli ancoraggi hash espandono automaticamente le sezioni senza rompere il pulsante indietro.',
-
-  'littleThings.amounts.title': 'Join e registrazione curati',
+  'hero.disclaimer': '* Ovviamente ci sono alcune limitazioni. Si applicano l\'uso equo e molte altre limitazioni. È gratuito finché non lo è più.',
+  'hero.subtitle': 'Dividi i conti con gli amici, tieni traccia delle spese condivise e salda facilmente. Gratuito per sempre, senza pubblicità, e progettato con la tua privacy in mente.',
+  'hero.title': 'Dividi le spese come un',
+  'hero.titleDisclaimer': '‌',
+  'hero.titleHighlight': 'side badger',
+  'languageSwitcher.noResults': 'Nessuna lingua trovata',
+  'languageSwitcher.search': 'Cerca...',
   'littleThings.amounts.desc': 'Gli URL di ritorno sopravvivono ai flussi login/registra/reset, le checkbox policy bloccano l\'invio, la riverifica vive nei banner, e i redirect auth tengono fuori gli scrocconi.',
-
-  'littleThings.names.title': 'Accessibilità integrata',
-  'littleThings.names.desc': 'Trappole di focus, target auto-focus, ripristino focus alla chiusura, skip link per screen reader, tooltip su azioni disabilitate e layout RTL-aware per lingue come l\'arabo.',
-
-  'littleThings.archive.title': 'Controlli del ciclo di vita',
+  'littleThings.amounts.title': 'Join e registrazione curati',
   'littleThings.archive.desc': 'Archivia/disarchivia dalle azioni rapide dashboard, flussi abbandona-gruppo che avvisano sui saldi aperti, e banner gruppo-bloccato che disabilitano i pulsanti rischiosi.',
-
-  'littleThings.celebrations.title': 'Segnali che contano',
+  'littleThings.archive.title': 'Controlli del ciclo di vita',
   'littleThings.celebrations.desc': 'Banner verifica email, barre di avviso, conferme toast, dialog che preservano lo stato e dropdown notifiche tengono tutti informati.',
-
-  'littleThings.everywhere.title': 'Paginazione responsive',
+  'littleThings.celebrations.title': 'Segnali che contano',
+  'littleThings.dates.desc': 'URL diretti aprono modali (dettaglio spesa, aggiungi spesa, saldi), Escape ripristina la cronologia, e gli ancoraggi hash espandono automaticamente le sezioni senza rompere il pulsante indietro.',
+  'littleThings.dates.title': 'Deep link e routing',
   'littleThings.everywhere.desc': 'Paginazione dashboard, pulsanti "carica altro" per commenti/spese, controlli ottimizzati per mobile, e refresh istantanei quando i dati cambiano dietro le quinte.',
-
-  // Why free section
-  'whyFree.title': 'Perché è gratuito?',
-  'whyFree.subtitle': 'Perché dividere i conti non dovrebbe costare denaro. È semplicemente sciocco.',
-
-  'whyFree.trackers.title': 'Zero tracker',
-  'whyFree.trackers.desc': "Nessuna analisi. Nessun pixel di tracciamento. Nessun \"potremmo condividere con i partner\". I tuoi dati sulle spese rimangono tuoi.",
-
-  'whyFree.ads.title': 'Nessuna pubblicità',
-  'whyFree.ads.desc': 'Dividere un conto della cena da 47,23 dollari è già abbastanza fastidioso senza pubblicità per abbonamenti a kit di pasti.',
-
-  'whyFree.badgers.title': 'Solo tassi',
-  'whyFree.badgers.desc': 'Side Badger è un\'app gratuita per dividere le spese che mette la privacy al primo posto. Nessuna agenda nascosta. Solo vibrazioni e tassi.',
-
-  // CTA section
-  'cta.title': 'Pronto a dividere qualche conto?',
-  'cta.subtitle': 'Unisciti alla rivoluzione dei tassi. È gratuito, è privato ed è leggermente caotico nel migliore dei modi.',
-  'cta.button': 'Avvia Side Badger',
-
-  // Pricing page
-  'pricing.meta.title': 'Prezzi - Side Badger | Gratuito per sempre',
-  'pricing.meta.description': 'Side Badger è completamente gratuito senza costi nascosti, senza pubblicità e senza tracciamento. Funzionalità Pro in arrivo.',
-  'pricing.hero.title': 'È gratuito',
-  'pricing.hero.subtitle': 'Nessuna carta di credito. Nessun costo nascosto. Solo gratuito.',
-
-  // Free Plan
+  'littleThings.everywhere.title': 'Paginazione responsive',
+  'littleThings.names.desc': 'Trappole di focus, target auto-focus, ripristino focus alla chiusura, skip link per screen reader, tooltip su azioni disabilitate e layout RTL-aware per lingue come l\'arabo.',
+  'littleThings.names.title': 'Accessibilità integrata',
+  'littleThings.subtitle': 'I dettagli che rendono la divisione delle spese davvero piacevole.',
+  'littleThings.title': 'Piccole cose che contano',
+  'meta.description': 'Side Badger è il divisore di conti totalmente gratuito, senza tracciamento e senza pubblicità che rende facile dividere le spese con gli amici. Crea gruppi, aggiungi spese e salda con facilità. Nessun dramma, solo una semplice divisione dei conti.',
+  'meta.title': 'Side Badger - Divisione gratuita dei conti, condivisione delle spese e side-badgers',
+  'notFound.backHome': 'Torna alla home',
+  'notFound.description': 'Sembra che questo tasso si sia allontanato dal sentiero. La pagina che cerchi non esiste.',
+  'notFound.meta.description': 'Ops! Questa pagina non esiste. Il tasso si è perso.',
+  'notFound.meta.title': 'Pagina non trovata - Side Badger',
+  'notFound.title': 'Pagina non trovata',
+  'policy.cookies.meta.description': 'La nostra informativa sui cookie spiega quali cookie utilizza Side Badger. Spoiler: non utilizziamo cookie di tracciamento, solo le basi per far funzionare l\'app.',
+  'policy.cookies.meta.title': 'Informativa sui cookie - Side Badger',
+  'policy.cookies.title': 'Informativa sui cookie',
+  'policy.error.config': 'Errore di configurazione.',
+  'policy.error.empty': 'Il contenuto della policy è vuoto.',
+  'policy.error.generic': 'Impossibile caricare la policy.',
+  'policy.error.tryAgain': 'Riprova più tardi o contatta il supporto.',
+  'policy.error.unavailable': 'Policy non disponibile.',
+  'policy.loading': 'Caricamento policy...',
+  'policy.privacy.meta.description': 'La nostra informativa sulla privacy spiega come Side Badger gestisce i tuoi dati. Spoiler: non ti tracciamo, non vendiamo i tuoi dati e non mostriamo pubblicità.',
+  'policy.privacy.meta.title': 'Informativa sulla privacy - Side Badger',
+  'policy.privacy.title': 'Informativa sulla privacy',
+  'policy.terms.meta.description': 'I nostri termini di servizio delineano come puoi usare Side Badger. TL;DR: sii tranquillo, non fare cose illegali e goditi il viaggio gratuito.',
+  'policy.terms.meta.title': 'Termini di servizio - Side Badger',
+  'policy.terms.title': 'Termini di servizio',
+  'pricing.faq.q1.answer': 'Sì, completamente gratuito. Nessun costo nascosto, nessuna funzionalità premium bloccata dietro un paywall. Crediamo che tutti meritino di dividere le spese senza stress.',
+  'pricing.faq.q1.question': 'È davvero gratuito?',
+  'pricing.faq.q2.answer': 'Nessuna fregatura. Side Badger esiste per rendere la divisione delle spese semplice, privata e divertente. Tutto qui.',
+  'pricing.faq.q2.question': 'Qual è la fregatura?',
+  'pricing.faq.q3.answer': 'Assolutamente no. Non raccogliamo dati personali oltre a quanto necessario per far funzionare l\'app. Zero tracker, zero pixel di analisi, zero interesse nelle tue abitudini.',
+  'pricing.faq.q3.question': 'Venderete i miei dati?',
+  'pricing.faq.q4.answer': 'Perché NON un tasso? I tassi sono determinati, intraprendenti e lavorano bene in gruppo. Proprio come te quando cerchi di capire chi deve cosa.',
+  'pricing.faq.q4.question': 'Perché un tasso?',
+  'pricing.faq.q5.answer': 'Stiamo lavorando su funzionalità aggiuntive per utenti esperti. Il piano gratuito rimarrà sempre gratuito con tutte le funzionalità attuali. Pro aggiungerà extra.',
+  'pricing.faq.q5.question': 'E il piano Pro?',
+  'pricing.faq.q6.answer': 'Faccelo sapere! Miglioriamo costantemente Side Badger e apprezziamo il tuo feedback.',
+  'pricing.faq.q6.question': 'E se trovo un bug?',
+  'pricing.faq.title': 'Domande che potresti avere',
   'pricing.free.badge': 'Piano attuale',
-  'pricing.free.name': 'Gratuito',
-  'pricing.free.price': 'Gratuito per sempre',
+  'pricing.free.cta': 'Inizia ora',
   'pricing.free.description': 'Tutto ciò di cui hai bisogno per dividere le spese con gli amici.',
   'pricing.free.feature1': 'Crea gruppi',
   'pricing.free.feature2': 'Traccia spese',
@@ -147,72 +126,26 @@ export default {
   'pricing.free.feature4': 'Nessun tracciamento',
   'pricing.free.feature5': 'Nessuna pubblicità',
   'pricing.free.feature6': 'Privacy prima di tutto',
-  'pricing.free.cta': 'Inizia ora',
-
-  // Pro Plan (Coming Soon)
+  'pricing.free.name': 'Gratuito',
+  'pricing.free.price': 'Gratuito per sempre',
+  'pricing.hero.subtitle': 'Nessuna carta di credito. Nessun costo nascosto. Solo gratuito.',
+  'pricing.hero.title': 'È gratuito',
+  'pricing.meta.description': 'Side Badger è completamente gratuito senza costi nascosti, senza pubblicità e senza tracciamento. Funzionalità Pro in arrivo.',
+  'pricing.meta.title': 'Prezzi - Side Badger | Gratuito per sempre',
   'pricing.pro.badge': 'Prossimamente',
-  'pricing.pro.name': 'Pro',
-  'pricing.pro.price': 'Prossimamente',
+  'pricing.pro.cta': 'Prossimamente',
   'pricing.pro.description': 'Stiamo lavorando su funzionalità extra per utenti esperti.',
   'pricing.pro.feature1': 'Tutto nel piano Gratuito',
   'pricing.pro.feature2': 'Più altre funzionalità',
   'pricing.pro.feature3': 'Resta sintonizzato...',
-  'pricing.pro.cta': 'Prossimamente',
-
-  // FAQ Section
-  'pricing.faq.title': 'Domande che potresti avere',
-  'pricing.faq.q1.question': 'È davvero gratuito?',
-  'pricing.faq.q1.answer': 'Sì, completamente gratuito. Nessun costo nascosto, nessuna funzionalità premium bloccata dietro un paywall. Crediamo che tutti meritino di dividere le spese senza stress.',
-  'pricing.faq.q2.question': 'Qual è la fregatura?',
-  'pricing.faq.q2.answer': 'Nessuna fregatura. Side Badger esiste per rendere la divisione delle spese semplice, privata e divertente. Tutto qui.',
-  'pricing.faq.q3.question': 'Venderete i miei dati?',
-  'pricing.faq.q3.answer': 'Assolutamente no. Non raccogliamo dati personali oltre a quanto necessario per far funzionare l\'app. Zero tracker, zero pixel di analisi, zero interesse nelle tue abitudini.',
-  'pricing.faq.q4.question': 'Perché un tasso?',
-  'pricing.faq.q4.answer': 'Perché NON un tasso? I tassi sono determinati, intraprendenti e lavorano bene in gruppo. Proprio come te quando cerchi di capire chi deve cosa.',
-  'pricing.faq.q5.question': 'E il piano Pro?',
-  'pricing.faq.q5.answer': 'Stiamo lavorando su funzionalità aggiuntive per utenti esperti. Il piano gratuito rimarrà sempre gratuito con tutte le funzionalità attuali. Pro aggiungerà extra.',
-  'pricing.faq.q6.question': 'E se trovo un bug?',
-  'pricing.faq.q6.answer': 'Faccelo sapere! Miglioriamo costantemente Side Badger e apprezziamo il tuo feedback.',
-
-  // Policy pages
-  'policy.privacy.title': 'Informativa sulla privacy',
-  'policy.privacy.meta.title': 'Informativa sulla privacy - Side Badger',
-  'policy.privacy.meta.description': 'La nostra informativa sulla privacy spiega come Side Badger gestisce i tuoi dati. Spoiler: non ti tracciamo, non vendiamo i tuoi dati e non mostriamo pubblicità.',
-  'policy.terms.title': 'Termini di servizio',
-  'policy.terms.meta.title': 'Termini di servizio - Side Badger',
-  'policy.terms.meta.description': 'I nostri termini di servizio delineano come puoi usare Side Badger. TL;DR: sii tranquillo, non fare cose illegali e goditi il viaggio gratuito.',
-  'policy.cookies.title': 'Informativa sui cookie',
-  'policy.cookies.meta.title': 'Informativa sui cookie - Side Badger',
-  'policy.cookies.meta.description': 'La nostra informativa sui cookie spiega quali cookie utilizza Side Badger. Spoiler: non utilizziamo cookie di tracciamento, solo le basi per far funzionare l\'app.',
-
-  // Language switcher
-  'languageSwitcher.search': 'Cerca...',
-  'languageSwitcher.noResults': 'Nessuna lingua trovata',
-
-  // 404 page
-  'notFound.meta.title': 'Pagina non trovata - Side Badger',
-  'notFound.meta.description': 'Ops! Questa pagina non esiste. Il tasso si è perso.',
-  'notFound.title': 'Pagina non trovata',
-  'notFound.description': 'Sembra che questo tasso si sia allontanato dal sentiero. La pagina che cerchi non esiste.',
-  'notFound.backHome': 'Torna alla home',
-
-  // Accessibility
-  'a11y.skipToContent': 'Vai al contenuto principale',
-  'a11y.changeLanguage': 'Cambia lingua',
-  'a11y.searchLanguages': 'Cerca lingue',
-  'a11y.mainNavigation': 'Navigazione principale',
-  'a11y.footerNavigation': 'Navigazione footer',
-  'a11y.externalLink': 'Link esterno',
-  'a11y.homeLink': 'Vai alla home page',
-
-  // Coming Soon badge
-  'comingSoon.badge': 'Prossimamente',
-
-  // Policy page
-  'policy.loading': 'Caricamento policy...',
-  'policy.error.generic': 'Impossibile caricare la policy.',
-  'policy.error.config': 'Errore di configurazione.',
-  'policy.error.unavailable': 'Policy non disponibile.',
-  'policy.error.empty': 'Il contenuto della policy è vuoto.',
-  'policy.error.tryAgain': 'Riprova più tardi o contatta il supporto.',
+  'pricing.pro.name': 'Pro',
+  'pricing.pro.price': 'Prossimamente',
+  'whyFree.ads.desc': 'Dividere un conto della cena da 47,23 dollari è già abbastanza fastidioso senza pubblicità per abbonamenti a kit di pasti.',
+  'whyFree.ads.title': 'Nessuna pubblicità',
+  'whyFree.badgers.desc': 'Side Badger è un\'app gratuita per dividere le spese che mette la privacy al primo posto. Nessuna agenda nascosta. Solo vibrazioni e tassi.',
+  'whyFree.badgers.title': 'Solo tassi',
+  'whyFree.subtitle': 'Perché dividere i conti non dovrebbe costare denaro. È semplicemente sciocco.',
+  'whyFree.title': 'Perché è gratuito?',
+  'whyFree.trackers.desc': 'Nessuna analisi. Nessun pixel di tracciamento. Nessun "potremmo condividere con i partner". I tuoi dati sulle spese rimangono tuoi.',
+  'whyFree.trackers.title': 'Zero tracker',
 } as const;

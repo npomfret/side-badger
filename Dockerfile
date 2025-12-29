@@ -22,7 +22,11 @@ CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
 # Build stage
 FROM base AS builder
 
-# Build the site
+# Accept domain as build arg (default: sidebadger.me)
+ARG PUBLIC_DOMAIN=sidebadger.me
+ENV PUBLIC_DOMAIN=${PUBLIC_DOMAIN}
+
+# Build the site with the specified domain
 RUN npm run build
 
 # Production stage

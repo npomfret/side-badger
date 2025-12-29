@@ -45,8 +45,6 @@ const englishTranslations = en as Record<string, string>;
 
 // Keys that are expected to be the same across all languages (brand names, URLs, etc.)
 const ALLOWED_IDENTICAL_KEYS = new Set([
-  'app.url',
-  'api.baseUrl',
   'header.logoText', // Brand name - some locales keep it, some translate
   'footer.company',
   'footer.product', // Product name
@@ -83,13 +81,17 @@ function findUsedTranslationKeys(): Set<string> {
       const fullPath = path.join(dir, entry.name);
 
       if (entry.isDirectory()) {
-        // Skip node_modules, dist, and i18n directory (translation files themselves)
-        if (!['node_modules', 'dist', '.git', 'i18n'].includes(entry.name)) {
+        // Skip node_modules, dist, and i18n locale files (but scan i18n/index.ts)
+        if (!['node_modules', 'dist', '.git'].includes(entry.name)) {
           scanDirectory(fullPath);
         }
       } else if (entry.isFile() && /\.(ts|tsx|astro|js|mjs)$/.test(entry.name)) {
-        // Skip test files and the i18n manager script
+        // Skip test files, i18n manager script, and locale files (but not index.ts)
         if (entry.name.includes('.test.') || entry.name === 'i18n-manager.mjs') {
+          continue;
+        }
+        // Skip locale translation files (e.g., en.ts, ar.ts) but scan index.ts
+        if (dir.endsWith('/i18n') && entry.name !== 'index.ts') {
           continue;
         }
 

@@ -1,12 +1,36 @@
 services:
-  website:
-    image: ghcr.io/npomfret/side-badger:latest
-    container_name: side-badger-website
+  website-me:
+    image: ghcr.io/npomfret/side-badger:latest-me
+    container_name: side-badger-website-me
     restart: unless-stopped
     expose:
       - "80"
     networks:
       - snowmonkey-proxy-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.sidebadger-me.rule=Host(`sidebadger.me`) || Host(`www.sidebadger.me`)"
+      - "traefik.http.routers.sidebadger-me.entrypoints=websecure"
+      - "traefik.http.routers.sidebadger-me.tls.certresolver=letsencrypt"
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+
+  website-com:
+    image: ghcr.io/npomfret/side-badger:latest-com
+    container_name: side-badger-website-com
+    restart: unless-stopped
+    expose:
+      - "80"
+    networks:
+      - snowmonkey-proxy-network
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.sidebadger-com.rule=Host(`sidebadger.com`) || Host(`www.sidebadger.com`)"
+      - "traefik.http.routers.sidebadger-com.entrypoints=websecure"
+      - "traefik.http.routers.sidebadger-com.tls.certresolver=letsencrypt"
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/health"]
       interval: 30s

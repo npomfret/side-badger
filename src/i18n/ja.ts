@@ -1,145 +1,124 @@
 export default {
-  // App
-  'api.baseUrl': 'https://demo.sidebadger.com',
-
-  // Meta
-  'meta.title': 'サイドバジャー - 無料の割り勘、経費分担、サイドバジャー仲間',
-  'meta.description': 'サイドバジャーは完全無料、トラッキングなし、広告なしの割り勘アプリです。グループを作成し、費用を追加し、簡単に精算できます。ドラマなし、シンプルな割り勘だけ。',
-
-  // Header
-  'header.logoText': 'サイドバジャー',
-  'header.launchApp': 'アプリを起動',
-
-  // Footer
-  'footer.tagline': '完全無料。トラッキングなし。広告なし。<br />ただアナグマが割り勘するだけ。',
-  'footer.product': 'プロダクト',
-  'footer.pricing': '料金',
-  'footer.legal': '法的情報',
-  'footer.privacy': 'プライバシーポリシー',
-  'footer.terms': '利用規約',
+  'a11y.changeLanguage': '言語を変更',
+  'a11y.externalLink': '外部リンク',
+  'a11y.footerNavigation': 'フッターナビゲーション',
+  'a11y.homeLink': 'ホームページへ移動',
+  'a11y.mainNavigation': 'メインナビゲーション',
+  'a11y.searchLanguages': '言語を検索',
+  'a11y.skipToContent': 'メインコンテンツへスキップ',
+  'comingSoon.ai.desc': '写真を撮るだけでAIが詳細を抽出。タイピング少なめで費用作成がより速く。',
+  'comingSoon.ai.title': 'AIレシートスキャン',
+  'comingSoon.badge': '近日公開',
+  'comingSoon.conversion.desc': '通貨間の自動変換。ユーロで分割、ドルで精算。',
+  'comingSoon.conversion.title': '通貨変換',
+  'comingSoon.export.desc': '費用をExcel、CSV、またはPDFでダウンロード。あなたのデータ、あなたのフォーマット、あなたの方法で。',
+  'comingSoon.export.title': 'データエクスポート',
+  'comingSoon.mobile.desc': '外出先での費用追跡用にiOSとAndroidアプリ。支払った直後に費用を追加。',
+  'comingSoon.mobile.title': 'ネイティブモバイルアプリ',
+  'comingSoon.receipts.desc': 'あらゆる費用にレシートの写真を添付。何に使ったか見失うことがなくなります。',
+  'comingSoon.receipts.title': 'レシートアップロード',
+  'comingSoon.subtitle': 'まだ始まったばかり。今後の予定はこちら。',
+  'comingSoon.title': '近日公開',
+  'cta.button': 'サイドバジャーを起動',
+  'cta.subtitle': 'アナグマ革命に参加しよう。無料で、プライベートで、最高の意味でちょっとカオス。',
+  'cta.title': '割り勘する準備はできた？',
+  'features.activity.desc': '/groups/:id/add-expense のようなURLでモーダルが自動オープン。Escapeキーで履歴をクリーン、ダッシュボードのバックスタックは維持、通知やドロップダウンはフィードと連動。',
+  'features.activity.title': 'あらゆるものへのディープリンク',
+  'features.balances.desc': '常時表示の残高ペインで最適化された債務を確認。「全員精算済み」の確認表示と、間接的な債務を明らかにするフィルターで、誰が誰にいくら払うかの議論に終止符。',
+  'features.balances.title': '信頼できる残高',
+  'features.comments.desc': '費用、コメント、精算で同じ絵文字ピッカー、集計カウント、ハイライト状態、トグルUXを共有。責任追及だって楽しくできます。',
+  'features.comments.title': 'どこでも絵文字',
+  'features.currency.desc': '管理者はグループを承認済み通貨にロックし、デフォルトを設定し、過去の費用用にレガシー通貨を保持しながら、必要に応じて複数通貨のレシートも処理可能。',
+  'features.currency.title': '通貨のガードレール',
+  'features.edit.desc': 'グループごとのIDエイリアス、名前変更/説明/削除＋確認付きの一般設定、セキュリティプリセット、メンバー権限エディター、管理者専用タブで保護されたロックトグル。',
+  'features.edit.title': '実際にリリースされる設定',
+  'features.groups.desc': '「あなた」表示のリッチなアクティビティフィード、アーカイブ/アクティブタブ、ホバー対応のグループカード、スケルトンローダー、ページネーション、空状態、エラーリカバリー。デスクトップ＆モバイル両対応。',
+  'features.groups.title': 'リアルタイムダッシュボード',
+  'features.invites.desc': 'すべてのグループカードに共有モーダル。短縮URL、QRコード、トークン再生成、クリップボードフィードバック、言語対応リンク、承認・保留メンバーをスマートに処理するランディングページ。',
+  'features.invites.title': '共有リンク + QR招待',
+  'features.noTracking.desc': 'ポリシー同意モーダル、Cookie/規約/プライバシーの取得、警告バナー、広告やトラッカーは一切なし。アナグマたちをフレンドリーに保つために必要なものだけを保存します。',
+  'features.noTracking.title': 'トラッカーなし。完全なリスペクト。',
+  'features.participants.desc': '費用とグループのコメントは添付ファイル、絵文字トグル、ページネーション、リアルタイム更新に対応。次の旅行の計画が、数字のすぐ隣でできます。',
+  'features.participants.title': 'スレッド、ファイル＆リアクション',
+  'features.roles.desc': 'プリセット＆カスタムセキュリティルール、メンバー権限ドロップダウン、保留中の招待モデレーション、ロックトグル、「削除済みを含む」フィルター、管理者専用設定でカオスを封じ込め。',
+  'features.roles.title': 'ロックダウン対応の権限',
+  'features.settle.desc': 'ワンタップ精算ボタンで過払い/不足のバリデーション付きフォームを起動。履歴タイルで編集確認、ロックで読み取り専用を強制、リアクションで返済も楽しく。',
+  'features.settle.title': 'クイック精算 + 履歴',
+  'features.splits.desc': '均等/金額指定/カスタム分割、未保存変更の処理、複数通貨セレクター、Googleマップリンク解析、ラベルチップ、レシートアップローダー、最近の金額ショートカット、ロック済み費用の保護機能。',
+  'features.splits.title': '驚くほどスマートな費用フォーム',
+  'features.subtitle': 'ダッシュボードに搭載された、実際に使える機能の厳選リスト。',
+  'features.title': 'Side Badgerの中身',
   'footer.cookies': 'Cookieポリシー',
   'footer.copyright': 'サイドバジャー. 全著作権所有（まあ、そこまで厳しくないけど）。',
+  'footer.legal': '法的情報',
   'footer.madeWith': '混沌とコーヒーで作りました',
-
-  // Hero
+  'footer.pricing': '料金',
+  'footer.privacy': 'プライバシーポリシー',
+  'footer.product': 'プロダクト',
+  'footer.tagline': '完全無料。トラッキングなし。広告なし。<br />ただアナグマが割り勘するだけ。',
+  'footer.terms': '利用規約',
+  'header.launchApp': 'アプリを起動',
+  'header.logoText': 'サイドバジャー',
   'hero.badge': '100%無料・無制限',
-  'hero.disclaimer': '* 当然ながらいくつかの制限があります。公正な使用、その他多くの制限が適用されます。無料です...今のところは。',
-  'hero.title': '割り勘を',
-  'hero.titleHighlight': 'サイドバジャー',
-  'hero.titleDisclaimer': 'のように',
-  'hero.subtitle': '友達と割り勘、共有費用を追跡、簡単に精算。永久無料、広告なし、プライバシーを大切にした設計です。',
   'hero.cta': '...サイドバジャーする',
-
-  // Features section
-  'features.title': 'Side Badgerの中身',
-  'features.subtitle': 'ダッシュボードに搭載された、実際に使える機能の厳選リスト。',
-
-  // Feature cards
-  'features.groups.title': 'リアルタイムダッシュボード',
-  'features.groups.desc': '「あなた」表示のリッチなアクティビティフィード、アーカイブ/アクティブタブ、ホバー対応のグループカード、スケルトンローダー、ページネーション、空状態、エラーリカバリー。デスクトップ＆モバイル両対応。',
-
-  'features.invites.title': '共有リンク + QR招待',
-  'features.invites.desc': 'すべてのグループカードに共有モーダル。短縮URL、QRコード、トークン再生成、クリップボードフィードバック、言語対応リンク、承認・保留メンバーをスマートに処理するランディングページ。',
-
-  'features.roles.title': 'ロックダウン対応の権限',
-  'features.roles.desc': 'プリセット＆カスタムセキュリティルール、メンバー権限ドロップダウン、保留中の招待モデレーション、ロックトグル、「削除済みを含む」フィルター、管理者専用設定でカオスを封じ込め。',
-
-  'features.splits.title': '驚くほどスマートな費用フォーム',
-  'features.splits.desc': '均等/金額指定/カスタム分割、未保存変更の処理、複数通貨セレクター、Googleマップリンク解析、ラベルチップ、レシートアップローダー、最近の金額ショートカット、ロック済み費用の保護機能。',
-
-  'features.participants.title': 'スレッド、ファイル＆リアクション',
-  'features.participants.desc': '費用とグループのコメントは添付ファイル、絵文字トグル、ページネーション、リアルタイム更新に対応。次の旅行の計画が、数字のすぐ隣でできます。',
-
-  'features.currency.title': '通貨のガードレール',
-  'features.currency.desc': '管理者はグループを承認済み通貨にロックし、デフォルトを設定し、過去の費用用にレガシー通貨を保持しながら、必要に応じて複数通貨のレシートも処理可能。',
-
-  'features.balances.title': '信頼できる残高',
-  'features.balances.desc': '常時表示の残高ペインで最適化された債務を確認。「全員精算済み」の確認表示と、間接的な債務を明らかにするフィルターで、誰が誰にいくら払うかの議論に終止符。',
-
-  'features.settle.title': 'クイック精算 + 履歴',
-  'features.settle.desc': 'ワンタップ精算ボタンで過払い/不足のバリデーション付きフォームを起動。履歴タイルで編集確認、ロックで読み取り専用を強制、リアクションで返済も楽しく。',
-
-  'features.activity.title': 'あらゆるものへのディープリンク',
-  'features.activity.desc': '/groups/:id/add-expense のようなURLでモーダルが自動オープン。Escapeキーで履歴をクリーン、ダッシュボードのバックスタックは維持、通知やドロップダウンはフィードと連動。',
-
-  'features.comments.title': 'どこでも絵文字',
-  'features.comments.desc': '費用、コメント、精算で同じ絵文字ピッカー、集計カウント、ハイライト状態、トグルUXを共有。責任追及だって楽しくできます。',
-
-  'features.edit.title': '実際にリリースされる設定',
-  'features.edit.desc': 'グループごとのIDエイリアス、名前変更/説明/削除＋確認付きの一般設定、セキュリティプリセット、メンバー権限エディター、管理者専用タブで保護されたロックトグル。',
-
-  'features.noTracking.title': 'トラッカーなし。完全なリスペクト。',
-  'features.noTracking.desc': 'ポリシー同意モーダル、Cookie/規約/プライバシーの取得、警告バナー、広告やトラッカーは一切なし。アナグマたちをフレンドリーに保つために必要なものだけを保存します。',
-
-  // Coming soon section
-  'comingSoon.title': '近日公開',
-  'comingSoon.subtitle': 'まだ始まったばかり。今後の予定はこちら。',
-
-  'comingSoon.conversion.title': '通貨変換',
-  'comingSoon.conversion.desc': '通貨間の自動変換。ユーロで分割、ドルで精算。',
-
-  'comingSoon.receipts.title': 'レシートアップロード',
-  'comingSoon.receipts.desc': 'あらゆる費用にレシートの写真を添付。何に使ったか見失うことがなくなります。',
-
-  'comingSoon.ai.title': 'AIレシートスキャン',
-  'comingSoon.ai.desc': '写真を撮るだけでAIが詳細を抽出。タイピング少なめで費用作成がより速く。',
-
-  'comingSoon.export.title': 'データエクスポート',
-  'comingSoon.export.desc': '費用をExcel、CSV、またはPDFでダウンロード。あなたのデータ、あなたのフォーマット、あなたの方法で。',
-
-  'comingSoon.mobile.title': 'ネイティブモバイルアプリ',
-  'comingSoon.mobile.desc': '外出先での費用追跡用にiOSとAndroidアプリ。支払った直後に費用を追加。',
-
-  // Little things section
-  'littleThings.title': '大切な小さなこと',
-  'littleThings.subtitle': '割り勘を実際に快適にする細部へのこだわり。',
-
-  'littleThings.dates.title': 'ディープリンク＆ルーティング',
-  'littleThings.dates.desc': '直接URLでモーダルを開く（費用詳細、費用追加、精算）。Escapeで履歴を復元、ハッシュアンカーで戻るボタンを壊さずにセクションを自動展開。',
-
-  'littleThings.amounts.title': '参加＆登録の磨き込み',
+  'hero.disclaimer': '* 当然ながらいくつかの制限があります。公正な使用、その他多くの制限が適用されます。無料です...今のところは。',
+  'hero.subtitle': '友達と割り勘、共有費用を追跡、簡単に精算。永久無料、広告なし、プライバシーを大切にした設計です。',
+  'hero.title': '割り勘を',
+  'hero.titleDisclaimer': 'のように',
+  'hero.titleHighlight': 'サイドバジャー',
+  'languageSwitcher.noResults': '言語が見つかりません',
+  'languageSwitcher.search': '検索...',
   'littleThings.amounts.desc': 'ログイン/登録/リセットフローで戻りURLを保持、ポリシーチェックボックスで送信をゲート、バナーで再認証メール送信、認証リダイレクトでフリーローダーをブロック。',
-
-  'littleThings.names.title': 'アクセシビリティを標準装備',
-  'littleThings.names.desc': 'フォーカストラップ、自動フォーカスターゲット、閉じた時のフォーカス復元、スクリーンリーダー用スキップリンク、無効アクション時のツールチップ、アラビア語などのRTL対応レイアウト。',
-
-  'littleThings.archive.title': 'ライフサイクル管理',
+  'littleThings.amounts.title': '参加＆登録の磨き込み',
   'littleThings.archive.desc': 'ダッシュボードのクイックアクションからアーカイブ/解除、未精算残高を警告するグループ退出フロー、危険なボタンを無効化するロック済みグループバナー。',
-
-  'littleThings.celebrations.title': '大切なシグナル',
+  'littleThings.archive.title': 'ライフサイクル管理',
   'littleThings.celebrations.desc': 'メール認証バナー、警告バー、トースト確認、状態を保持するダイアログ、通知ドロップダウンで全員が最新情報を把握。',
-
-  'littleThings.everywhere.title': 'レスポンシブページネーション',
+  'littleThings.celebrations.title': '大切なシグナル',
+  'littleThings.dates.desc': '直接URLでモーダルを開く（費用詳細、費用追加、精算）。Escapeで履歴を復元、ハッシュアンカーで戻るボタンを壊さずにセクションを自動展開。',
+  'littleThings.dates.title': 'ディープリンク＆ルーティング',
   'littleThings.everywhere.desc': 'ダッシュボードのページング、コメント/費用の「もっと読み込む」ボタン、モバイル最適化コントロール、データが裏で変わった時の即時リフレッシュ。',
-
-  // Why free section
-  'whyFree.title': 'なぜ無料？',
-  'whyFree.subtitle': '割り勘にお金がかかるべきじゃないから。それはおかしい。',
-
-  'whyFree.trackers.title': 'トラッカーゼロ',
-  'whyFree.trackers.desc': 'アナリティクスなし。トラッキングピクセルなし。「パートナーと共有する場合があります」なし。あなたの費用データはあなたのもの。',
-
-  'whyFree.ads.title': '広告なし',
-  'whyFree.ads.desc': '5,000円の夕食代を割り勘するだけでも十分面倒なのに、ミールキットの広告は不要です。',
-
-  'whyFree.badgers.title': 'ただのアナグマ',
-  'whyFree.badgers.desc': 'Side Badgerは無料でプライバシー第一の割り勘アプリです。裏の意図はありません。ただの雰囲気とアナグマです。',
-
-  // CTA section
-  'cta.title': '割り勘する準備はできた？',
-  'cta.subtitle': 'アナグマ革命に参加しよう。無料で、プライベートで、最高の意味でちょっとカオス。',
-  'cta.button': 'サイドバジャーを起動',
-
-  // Pricing page
-  'pricing.meta.title': '料金 - サイドバジャー | ずっと無料',
-  'pricing.meta.description': 'サイドバジャーは完全無料で、隠れた料金なし、広告なし、トラッキングなし。Proプランも近日登場予定。',
-  'pricing.hero.title': '無料です',
-  'pricing.hero.subtitle': 'クレジットカード不要。隠れた料金なし。ただ無料。',
-
-  // Free Plan
+  'littleThings.everywhere.title': 'レスポンシブページネーション',
+  'littleThings.names.desc': 'フォーカストラップ、自動フォーカスターゲット、閉じた時のフォーカス復元、スクリーンリーダー用スキップリンク、無効アクション時のツールチップ、アラビア語などのRTL対応レイアウト。',
+  'littleThings.names.title': 'アクセシビリティを標準装備',
+  'littleThings.subtitle': '割り勘を実際に快適にする細部へのこだわり。',
+  'littleThings.title': '大切な小さなこと',
+  'meta.description': 'サイドバジャーは完全無料、トラッキングなし、広告なしの割り勘アプリです。グループを作成し、費用を追加し、簡単に精算できます。ドラマなし、シンプルな割り勘だけ。',
+  'meta.title': 'サイドバジャー - 無料の割り勘、経費分担、サイドバジャー仲間',
+  'notFound.backHome': 'ホームに戻る',
+  'notFound.description': 'このアナグマは道に迷ったようです。お探しのページは存在しません。',
+  'notFound.meta.description': 'おっと！このページは存在しません。アナグマが迷子になりました。',
+  'notFound.meta.title': 'ページが見つかりません - サイドバジャー',
+  'notFound.title': 'ページが見つかりません',
+  'policy.cookies.meta.description': '当社のCookieポリシーでは、サイドバジャーが使用するCookieを説明します。ネタバレ：トラッキングCookieは使用せず、アプリを動作させるための基本的なものだけです。',
+  'policy.cookies.meta.title': 'Cookieポリシー - サイドバジャー',
+  'policy.cookies.title': 'Cookieポリシー',
+  'policy.error.config': '設定エラー。',
+  'policy.error.empty': 'ポリシーの内容が空です。',
+  'policy.error.generic': 'ポリシーを読み込めませんでした。',
+  'policy.error.tryAgain': '後でもう一度お試しいただくか、サポートにお問い合わせください。',
+  'policy.error.unavailable': 'ポリシーは利用できません。',
+  'policy.loading': 'ポリシーを読み込んでいます...',
+  'policy.privacy.meta.description': '当社のプライバシーポリシーでは、サイドバジャーがデータをどのように扱うかを説明します。ネタバレ：トラッキングなし、データ販売なし、広告なし。',
+  'policy.privacy.meta.title': 'プライバシーポリシー - サイドバジャー',
+  'policy.privacy.title': 'プライバシーポリシー',
+  'policy.terms.meta.description': '利用規約では、サイドバジャーの使用方法を説明します。要約：マナーを守り、違法なことをせず、無料を楽しんでください。',
+  'policy.terms.meta.title': '利用規約 - サイドバジャー',
+  'policy.terms.title': '利用規約',
+  'pricing.faq.q1.answer': 'はい、完全に無料です。隠れた料金も、有料の壁の後ろに隠れた機能もありません。誰もがストレスなく割り勘できるべきだと信じています。',
+  'pricing.faq.q1.question': '本当に無料ですか？',
+  'pricing.faq.q2.answer': '裏はありません。Side Badgerは割り勘をシンプルでプライベートで楽しくするために存在します。それだけです。',
+  'pricing.faq.q2.question': '何か裏がありますか？',
+  'pricing.faq.q3.answer': '絶対に売りません。アプリの運用に必要なもの以上の個人データは収集しません。トラッカーゼロ、アナリティクスピクセルゼロ、あなたの習慣への興味ゼロです。',
+  'pricing.faq.q3.question': 'データを売りますか？',
+  'pricing.faq.q4.answer': 'なぜアナグマじゃダメなんですか？アナグマは決意があり、機知に富み、グループでうまく働きます。誰がいくら払うか計算しようとしているあなたのように。',
+  'pricing.faq.q4.question': 'なぜアナグマ？',
+  'pricing.faq.q5.answer': 'パワーユーザー向けの追加機能を準備中です。無料プランは現在のすべての機能を含めて常に無料のままです。Proはその上に追加機能を提供します。',
+  'pricing.faq.q5.question': 'Proプランについては？',
+  'pricing.faq.q6.answer': '教えてください！Side Badgerを常に改善しており、フィードバックを歓迎しています。',
+  'pricing.faq.q6.question': 'バグを見つけたら？',
+  'pricing.faq.title': 'よくある質問',
   'pricing.free.badge': '現在のプラン',
-  'pricing.free.name': '無料',
-  'pricing.free.price': 'ずっと無料',
+  'pricing.free.cta': '始める',
   'pricing.free.description': '友達と割り勘するために必要なすべてが揃っています。',
   'pricing.free.feature1': 'グループを作成',
   'pricing.free.feature2': '支出を記録',
@@ -147,72 +126,26 @@ export default {
   'pricing.free.feature4': 'トラッキングなし',
   'pricing.free.feature5': '広告なし',
   'pricing.free.feature6': 'プライバシー優先',
-  'pricing.free.cta': '始める',
-
-  // Pro Plan (Coming Soon)
+  'pricing.free.name': '無料',
+  'pricing.free.price': 'ずっと無料',
+  'pricing.hero.subtitle': 'クレジットカード不要。隠れた料金なし。ただ無料。',
+  'pricing.hero.title': '無料です',
+  'pricing.meta.description': 'サイドバジャーは完全無料で、隠れた料金なし、広告なし、トラッキングなし。Proプランも近日登場予定。',
+  'pricing.meta.title': '料金 - サイドバジャー | ずっと無料',
   'pricing.pro.badge': '近日公開',
-  'pricing.pro.name': 'Pro',
-  'pricing.pro.price': '近日公開',
+  'pricing.pro.cta': '近日公開',
   'pricing.pro.description': 'パワーユーザー向けの追加機能を準備中です。',
   'pricing.pro.feature1': '無料プランのすべて',
   'pricing.pro.feature2': 'さらに多くの機能',
   'pricing.pro.feature3': 'お楽しみに...',
-  'pricing.pro.cta': '近日公開',
-
-  // FAQ Section
-  'pricing.faq.title': 'よくある質問',
-  'pricing.faq.q1.question': '本当に無料ですか？',
-  'pricing.faq.q1.answer': 'はい、完全に無料です。隠れた料金も、有料の壁の後ろに隠れた機能もありません。誰もがストレスなく割り勘できるべきだと信じています。',
-  'pricing.faq.q2.question': '何か裏がありますか？',
-  'pricing.faq.q2.answer': '裏はありません。Side Badgerは割り勘をシンプルでプライベートで楽しくするために存在します。それだけです。',
-  'pricing.faq.q3.question': 'データを売りますか？',
-  'pricing.faq.q3.answer': '絶対に売りません。アプリの運用に必要なもの以上の個人データは収集しません。トラッカーゼロ、アナリティクスピクセルゼロ、あなたの習慣への興味ゼロです。',
-  'pricing.faq.q4.question': 'なぜアナグマ？',
-  'pricing.faq.q4.answer': 'なぜアナグマじゃダメなんですか？アナグマは決意があり、機知に富み、グループでうまく働きます。誰がいくら払うか計算しようとしているあなたのように。',
-  'pricing.faq.q5.question': 'Proプランについては？',
-  'pricing.faq.q5.answer': 'パワーユーザー向けの追加機能を準備中です。無料プランは現在のすべての機能を含めて常に無料のままです。Proはその上に追加機能を提供します。',
-  'pricing.faq.q6.question': 'バグを見つけたら？',
-  'pricing.faq.q6.answer': '教えてください！Side Badgerを常に改善しており、フィードバックを歓迎しています。',
-
-  // Policy pages
-  'policy.privacy.title': 'プライバシーポリシー',
-  'policy.privacy.meta.title': 'プライバシーポリシー - サイドバジャー',
-  'policy.privacy.meta.description': '当社のプライバシーポリシーでは、サイドバジャーがデータをどのように扱うかを説明します。ネタバレ：トラッキングなし、データ販売なし、広告なし。',
-  'policy.terms.title': '利用規約',
-  'policy.terms.meta.title': '利用規約 - サイドバジャー',
-  'policy.terms.meta.description': '利用規約では、サイドバジャーの使用方法を説明します。要約：マナーを守り、違法なことをせず、無料を楽しんでください。',
-  'policy.cookies.title': 'Cookieポリシー',
-  'policy.cookies.meta.title': 'Cookieポリシー - サイドバジャー',
-  'policy.cookies.meta.description': '当社のCookieポリシーでは、サイドバジャーが使用するCookieを説明します。ネタバレ：トラッキングCookieは使用せず、アプリを動作させるための基本的なものだけです。',
-
-  // Language switcher
-  'languageSwitcher.search': '検索...',
-  'languageSwitcher.noResults': '言語が見つかりません',
-
-  // 404 page
-  'notFound.meta.title': 'ページが見つかりません - サイドバジャー',
-  'notFound.meta.description': 'おっと！このページは存在しません。アナグマが迷子になりました。',
-  'notFound.title': 'ページが見つかりません',
-  'notFound.description': 'このアナグマは道に迷ったようです。お探しのページは存在しません。',
-  'notFound.backHome': 'ホームに戻る',
-
-  // Accessibility
-  'a11y.skipToContent': 'メインコンテンツへスキップ',
-  'a11y.changeLanguage': '言語を変更',
-  'a11y.searchLanguages': '言語を検索',
-  'a11y.mainNavigation': 'メインナビゲーション',
-  'a11y.footerNavigation': 'フッターナビゲーション',
-  'a11y.externalLink': '外部リンク',
-  'a11y.homeLink': 'ホームページへ移動',
-
-  // Coming Soon badge
-  'comingSoon.badge': '近日公開',
-
-  // Policy page
-  'policy.loading': 'ポリシーを読み込んでいます...',
-  'policy.error.generic': 'ポリシーを読み込めませんでした。',
-  'policy.error.config': '設定エラー。',
-  'policy.error.unavailable': 'ポリシーは利用できません。',
-  'policy.error.empty': 'ポリシーの内容が空です。',
-  'policy.error.tryAgain': '後でもう一度お試しいただくか、サポートにお問い合わせください。',
+  'pricing.pro.name': 'Pro',
+  'pricing.pro.price': '近日公開',
+  'whyFree.ads.desc': '5,000円の夕食代を割り勘するだけでも十分面倒なのに、ミールキットの広告は不要です。',
+  'whyFree.ads.title': '広告なし',
+  'whyFree.badgers.desc': 'Side Badgerは無料でプライバシー第一の割り勘アプリです。裏の意図はありません。ただの雰囲気とアナグマです。',
+  'whyFree.badgers.title': 'ただのアナグマ',
+  'whyFree.subtitle': '割り勘にお金がかかるべきじゃないから。それはおかしい。',
+  'whyFree.title': 'なぜ無料？',
+  'whyFree.trackers.desc': 'アナリティクスなし。トラッキングピクセルなし。「パートナーと共有する場合があります」なし。あなたの費用データはあなたのもの。',
+  'whyFree.trackers.title': 'トラッカーゼロ',
 } as const;

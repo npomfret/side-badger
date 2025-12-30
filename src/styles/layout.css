@@ -96,6 +96,10 @@
   padding: var(--space-sm) var(--space-lg) !important;
 }
 
+.btn-launch-icon {
+  display: none;
+}
+
 /* ===== MAIN CONTENT ===== */
 main {
   padding-top: 100px;
@@ -203,8 +207,18 @@ main {
   }
 
   .btn-launch {
-    padding: var(--space-xs) var(--space-md) !important;
-    font-size: var(--text-sm);
+    padding: var(--space-sm) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-launch-text {
+    display: none;
+  }
+
+  .btn-launch-icon {
+    display: block;
   }
 
   main {

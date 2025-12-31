@@ -26,7 +26,7 @@ const translations = {
     <div class="legal-content glass fade-up">
       <h1 id="policy-title" class="sr-only">{title}</h1>
       <div
-        class="policy-content markdown-content"
+        class="policy-content markdown-body"
         data-api-base={apiBaseUrl}
         data-endpoint={endpoint}
         data-translations={JSON.stringify(translations)}
@@ -44,6 +44,12 @@ const translations = {
 
 <script>
   import { marked } from 'marked';
+  import { markedSmartypants } from 'marked-smartypants';
+  import DOMPurify from 'dompurify';
+  import 'github-markdown-css/github-markdown-light.css';
+
+  // Configure marked with smart typography
+  marked.use(markedSmartypants());
 
   interface Translations {
     loading: string;
@@ -118,7 +124,8 @@ const translations = {
         }
 
         container.setAttribute('aria-busy', 'false');
-        container.innerHTML = marked.parse(markdown) as string;
+        const html = marked.parse(markdown) as string;
+        container.innerHTML = DOMPurify.sanitize(html);
       } catch (err) {
         showError(container, translations.errorGeneric, translations.errorTryAgain);
       }

@@ -30,7 +30,7 @@ export default {
 
   // Features section
   'features.title': 'Inside Side Badger',
-  'features.subtitle': 'A curated list of the real, shippable powers waiting in the dashboard.',
+  'features.subtitle': "What's in the box...",
 
   // Feature cards
   'features.groups.title': 'Realtime dashboard',
@@ -69,15 +69,15 @@ export default {
   'features.noTracking.title': 'No trackers. Full respect.',
   'features.noTracking.desc': 'Policy acceptance modals, cookie/terms/privacy fetches, warning banners, and zero ads or trackers. We only store what keeps the badgers friendly.',
 
+  'features.receipts.title': 'Receipt Uploading',
+  'features.receipts.desc': 'Attach photos of receipts to any expense. Never lose track of what you spent.',
+
   // Coming soon section
   'comingSoon.title': 'Coming Soon',
   'comingSoon.subtitle': "We're just getting started. Here's what's on the way.",
 
   'comingSoon.conversion.title': 'Currency Conversions',
   'comingSoon.conversion.desc': 'Automatic conversion between currencies. Split in euros, settle in dollars.',
-
-  'comingSoon.receipts.title': 'Receipt Uploading',
-  'comingSoon.receipts.desc': 'Attach photos of receipts to any expense. Never lose track of what you spent.',
 
   'comingSoon.ai.title': 'AI Receipt Scanning',
   'comingSoon.ai.desc': 'Snap a photo, let AI extract the details. Faster expense creation with less typing.',

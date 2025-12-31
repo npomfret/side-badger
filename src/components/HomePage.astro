@@ -221,6 +221,20 @@ const { locale } = Astro.props;
           <h3>{t('features.noTracking.title', locale)}</h3>
           <p>{t('features.noTracking.desc', locale)}</p>
         </div>
+
+        <!-- Receipt Uploading -->
+        <div class="feature-card glass fade-up" data-delay="650">
+          <div class="feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/>
+              <path d="M14 8H8"/>
+              <path d="M16 12H8"/>
+              <path d="M13 16H8"/>
+            </svg>
+          </div>
+          <h3>{t('features.receipts.title', locale)}</h3>
+          <p>{t('features.receipts.desc', locale)}</p>
+        </div>
       </div>
     </div>
   </section>
@@ -333,22 +347,8 @@ const { locale } = Astro.props;
           <p>{t('comingSoon.conversion.desc', locale)}</p>
         </div>
 
-        <!-- Receipt Uploading -->
-        <div class="feature-card glass fade-up coming-soon-card" data-delay="100">
-          <div class="coming-soon-badge">{t('comingSoon.badge', locale)}</div>
-          <div class="feature-icon feature-icon-small" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-              <polyline points="17 8 12 3 7 8"/>
-              <line x1="12" x2="12" y1="3" y2="15"/>
-            </svg>
-          </div>
-          <h3>{t('comingSoon.receipts.title', locale)}</h3>
-          <p>{t('comingSoon.receipts.desc', locale)}</p>
-        </div>
-
         <!-- AI Receipt Scanning -->
-        <div class="feature-card glass fade-up coming-soon-card" data-delay="200">
+        <div class="feature-card glass fade-up coming-soon-card" data-delay="100">
           <div class="coming-soon-badge">{t('comingSoon.badge', locale)}</div>
           <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -360,7 +360,7 @@ const { locale } = Astro.props;
         </div>
 
         <!-- Export Data -->
-        <div class="feature-card glass fade-up coming-soon-card" data-delay="300">
+        <div class="feature-card glass fade-up coming-soon-card" data-delay="200">
           <div class="coming-soon-badge">{t('comingSoon.badge', locale)}</div>
           <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -374,7 +374,7 @@ const { locale } = Astro.props;
         </div>
 
         <!-- Native Mobile Apps -->
-        <div class="feature-card glass fade-up coming-soon-card" data-delay="400">
+        <div class="feature-card glass fade-up coming-soon-card" data-delay="300">
           <div class="coming-soon-badge">{t('comingSoon.badge', locale)}</div>
           <div class="feature-icon feature-icon-small" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

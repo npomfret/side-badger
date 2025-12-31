@@ -22,7 +22,7 @@
  *   add-key       Add a new key to all language files
  *   rename-key    Rename a key across all language files
  *   find-unused   Find potentially unused translation keys
- *   sync          Sync missing keys from English to other languages
+ *   sync          Sync locale files with English (adds missing, removes extra)
  */
 
 import fs from 'fs';
@@ -287,12 +287,16 @@ function cmdSet(args) {
   }
 
   const oldValue = translations[locale][key];
+  const isNewKey = oldValue === undefined;
   translations[locale][key] = value;
 
-  writeTranslationFile(locale, translations[locale], key);
+  // Use surgical update for existing keys, full rewrite for new keys
+  writeTranslationFile(locale, translations[locale], isNewKey ? null : key);
 
-  console.log(c.success(`\nUpdated ${c.key(key)} in ${c.locale(locale)}:`));
-  if (oldValue !== undefined) {
+  if (isNewKey) {
+    console.log(c.success(`\nAdded ${c.key(key)} to ${c.locale(locale)}:`));
+  } else {
+    console.log(c.success(`\nUpdated ${c.key(key)} in ${c.locale(locale)}:`));
     console.log(c.dim(`  Old: ${oldValue}`));
   }
   console.log(`  New: ${value}`);
@@ -875,22 +879,24 @@ function cmdFindUnused(args) {
 }
 
 /**
- * Sync missing keys from English to other languages
+ * Sync locale files with English master (adds missing keys, removes extra keys)
  */
 function cmdSync(args) {
-  const targetLocale = args[0];
+  const targetLocale = args.find(a => !a.startsWith('--'));
   const dryRun = args.includes('--dry-run');
+  const addOnly = args.includes('--add-only');
 
   const translations = loadAllTranslations();
-  const englishKeys = Object.keys(translations.en);
+  const englishKeys = new Set(Object.keys(translations.en));
 
   const locales = targetLocale
     ? [targetLocale]
     : Object.keys(translations).filter(l => l !== 'en');
 
-  console.log(c.bright('\nSyncing missing keys from English...\n'));
+  console.log(c.bright('\nSyncing with English master...\n'));
 
-  let totalSynced = 0;
+  let totalAdded = 0;
+  let totalRemoved = 0;
 
   for (const locale of locales) {
     if (!translations[locale]) {
@@ -899,41 +905,69 @@ function cmdSync(args) {
     }
 
     const localeKeys = new Set(Object.keys(translations[locale]));
-    const missing = englishKeys.filter(k => !localeKeys.has(k));
 
-    if (missing.length === 0) {
+    // Keys to add (exist in English, missing from locale)
+    const missing = [...englishKeys].filter(k => !localeKeys.has(k));
+
+    // Keys to remove (exist in locale, missing from English)
+    const extra = addOnly ? [] : [...localeKeys].filter(k => !englishKeys.has(k));
+
+    if (missing.length === 0 && extra.length === 0) {
       console.log(`${c.success('✓')} ${c.locale(locale)} - already in sync`);
       continue;
     }
 
-    console.log(`${c.warning('!')} ${c.locale(locale)} - ${missing.length} keys to sync`);
-
-    for (const key of missing.slice(0, 5)) {
-      console.log(`  ${c.dim('+')} ${key}`);
+    // Report additions
+    if (missing.length > 0) {
+      console.log(`${c.success('+')} ${c.locale(locale)} - ${missing.length} keys to add`);
+      for (const key of missing.slice(0, 3)) {
+        console.log(`    ${c.dim('+')} ${key}`);
+      }
+      if (missing.length > 3) {
+        console.log(`    ${c.dim('...')} and ${missing.length - 3} more`);
+      }
     }
-    if (missing.length > 5) {
-      console.log(c.dim(`  ... and ${missing.length - 5} more`));
+
+    // Report removals
+    if (extra.length > 0) {
+      console.log(`${c.error('-')} ${c.locale(locale)} - ${extra.length} keys to remove`);
+      for (const key of extra.slice(0, 3)) {
+        console.log(`    ${c.dim('-')} ${key}`);
+      }
+      if (extra.length > 3) {
+        console.log(`    ${c.dim('...')} and ${extra.length - 3} more`);
+      }
     }
 
     if (!dryRun) {
+      // Add missing keys
       for (const key of missing) {
         translations[locale][key] = translations.en[key];
+      }
+      // Remove extra keys
+      for (const key of extra) {
+        delete translations[locale][key];
       }
       writeTranslationFile(locale, translations[locale]);
     }
 
-    totalSynced += missing.length;
+    totalAdded += missing.length;
+    totalRemoved += extra.length;
   }
 
   console.log();
   if (dryRun) {
-    console.log(c.warning(`Would sync ${totalSynced} keys (dry run)`));
+    console.log(c.warning(`Would add ${totalAdded} keys, remove ${totalRemoved} keys (dry run)`));
   } else {
-    console.log(c.success(`Synced ${totalSynced} keys`));
+    if (totalAdded > 0 || totalRemoved > 0) {
+      console.log(c.success(`Added ${totalAdded} keys, removed ${totalRemoved} keys`));
+    } else {
+      console.log(c.success('All locales already in sync!'));
+    }
   }
 
-  if (totalSynced > 0) {
-    console.log(c.warning('\nNote: Synced keys contain English text and need translation.'));
+  if (totalAdded > 0) {
+    console.log(c.warning('\nNote: Added keys contain English text and need translation.'));
   }
 }
 
@@ -955,8 +989,8 @@ ${c.info('Commands:')}
     search <term>               Search translations by content
 
   ${c.bright('Modifying:')}
-    set <key> <locale> <value>  Set a translation value
-    add-key <key> <en-value>    Add a new key to all languages
+    set <key> <locale> <value>  Set/add a translation for a specific locale
+    add-key <key> <en-value>    Add a new key to ALL locales at once
     rename-key <old> <new>      Rename a key across all languages
     delete <key> [--force]      Delete a key from all languages
 
@@ -967,7 +1001,7 @@ ${c.info('Commands:')}
     find-unused                 Find potentially unused keys
 
   ${c.bright('Bulk Operations:')}
-    sync [locale] [--dry-run]   Copy missing keys from English
+    sync [locale] [--dry-run] [--add-only]  Sync with English (adds missing, removes extra)
     export [json|csv] [file]    Export translations
     import <file> [locale]      Import translations from JSON
 

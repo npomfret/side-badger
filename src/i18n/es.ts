@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Control de divisas',
   'features.edit.desc': 'Alias de identidad por grupo, ajustes generales con renombrar/describir/eliminar + confirmaciones, presets de seguridad, editores de roles de miembros e interruptores de bloqueo protegidos en pestañas solo para admins.',
   'features.edit.title': 'Ajustes que realmente funcionan',
+  'features.fxConversion.desc': 'Convierte automáticamente las liquidaciones a cualquier moneda con tasas de cambio en tiempo real. Divide en euros, liquida en dólares.',
+  'features.fxConversion.title': 'Tasas de cambio en tiempo real',
   'features.groups.desc': 'Feed de actividad enriquecido con texto personalizado, pestañas de archivados/activos, tarjetas de grupo con hover pulido, esqueletos de carga, paginación, estados vacíos y recuperación de errores en escritorio y móvil.',
   'features.groups.title': 'Panel en tiempo real',
   'features.invites.desc': 'Cada tarjeta de grupo tiene un modal para compartir con URLs cortas, códigos QR, regeneración de tokens, feedback del portapapeles, enlaces adaptados al idioma y una página de destino que gestiona aprobaciones y miembros pendientes con elegancia.',

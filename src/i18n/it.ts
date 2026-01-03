@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Guardrail valutari',
   'features.edit.desc': 'Alias identita per gruppo, impostazioni generali con rinomina/descrivi/elimina + conferme, preset sicurezza, editor ruoli membri e toggle blocco protetti dietro schede solo admin.',
   'features.edit.title': 'Impostazioni che funzionano davvero',
+  'features.fxConversion.desc': 'Converti automaticamente i saldi in qualsiasi valuta con tassi di cambio in tempo reale. Dividi in euro, salda in dollari.',
+  'features.fxConversion.title': 'Tassi di cambio in tempo reale',
   'features.groups.desc': 'Feed attività ricco con testi personalizzati, schede archiviate/attive, card gruppo rifinite al passaggio del mouse, skeleton loader, paginazione, stati vuoti e recupero errori su desktop e mobile.',
   'features.groups.title': 'Dashboard in tempo reale',
   'features.invites.desc': 'Ogni card gruppo ha un modale di condivisione con URL brevi, codici QR, rigenerazione token, feedback clipboard, link multilingua e una landing page che gestisce approvazioni/membri in attesa con eleganza.',

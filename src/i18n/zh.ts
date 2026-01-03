@@ -30,6 +30,8 @@ export default {
   'features.currency.title': '货币护栏',
   'features.edit.desc': '每个群组的身份别名，带有重命名/描述/删除+确认的常规设置，安全预设，成员角色编辑器，以及仅限管理员标签页后面的锁定切换。',
   'features.edit.title': '真正有效的设置',
+  'features.fxConversion.desc': '自动将结算转换为任何货币，使用实时汇率。用欧元分账，用美元结算。',
+  'features.fxConversion.title': '实时汇率',
   'features.groups.desc': '丰富的活动信息流，带有“您”文案，存档/活动标签页，悬停优化的群组卡片，骨架加载器，分页，空状态，以及跨桌面和移动设备的错误恢复。',
   'features.groups.title': '实时仪表板',
   'features.invites.desc': '每个群组卡片都有一个共享模态框，带有短 URL、二维码、重新生成令牌、剪贴板反馈、语言感知链接，以及一个能够优雅处理批准/待处理成员的落地页。',

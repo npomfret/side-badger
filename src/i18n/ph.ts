@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Mga proteksyon sa pera',
   'features.edit.desc': 'Identity aliases per group, general settings na may rename/describe/delete + confirmations, security presets, member role editors, at lock toggles na guarded sa likod ng admin-only tabs.',
   'features.edit.title': 'Mga settings na talagang gumagana',
+  'features.fxConversion.desc': 'Awtomatikong i-convert ang mga settlement sa anumang currency gamit ang real-time exchange rates. Hatiin sa euros, bayaran sa dollars.',
+  'features.fxConversion.title': 'Real-time FX Rates',
   'features.groups.desc': 'Mayamang activity feed na may "Ikaw" na kopya, archived/active na tabs, hover-polished na group cards, skeleton loaders, pagination, empty states, at error recovery sa desktop at mobile.',
   'features.groups.title': 'Realtime na dashboard',
   'features.invites.desc': 'Bawat group card ay may share modal na may short URLs, QR codes, regenerate tokens, clipboard feedback, language-aware na links, at landing page na gracefully na humahawak ng approvals/pending members.',

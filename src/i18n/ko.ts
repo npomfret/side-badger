@@ -30,6 +30,8 @@ export default {
   'features.currency.title': '통화 가드레일',
   'features.edit.desc': '그룹별 신원 별칭, 이름변경/설명/삭제 + 확인이 있는 일반 설정, 보안 프리셋, 회원 역할 편집기, 관리자 전용 탭 뒤의 잠금 토글.',
   'features.edit.title': '실제로 작동하는 설정',
+  'features.fxConversion.desc': '실시간 환율로 자동으로 모든 통화로 정산을 변환합니다. 유로로 나누고, 달러로 정산하세요.',
+  'features.fxConversion.title': '실시간 환율',
   'features.groups.desc': '"나" 표시가 포함된 풍부한 활동 피드, 보관/활성 탭, 호버 시 세련된 그룹 카드, 스켈레톤 로더, 페이지네이션, 빈 상태, 오류 복구까지 데스크톱과 모바일에서 완벽하게 지원.',
   'features.groups.title': '실시간 대시보드',
   'features.invites.desc': '모든 그룹 카드에 공유 모달이 있습니다. 짧은 URL, QR 코드, 토큰 재생성, 클립보드 피드백, 언어별 링크, 그리고 승인/대기 중인 회원을 우아하게 처리하는 랜딩 페이지까지.',

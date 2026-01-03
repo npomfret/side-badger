@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Ograniczniki walutowe',
   'features.edit.desc': 'Alias tożsamości na grupę, ogólne ustawienia z zmianą nazwy/opisem/usuwaniem + potwierdzenia, presety bezpieczeństwa, edytory ról członków i przełączniki blokady ukryte za kartami tylko dla adminów.',
   'features.edit.title': 'Ustawienia, które naprawdę działają',
+  'features.fxConversion.desc': 'Automatycznie przeliczaj rozliczenia na dowolną walutę z kursami w czasie rzeczywistym. Dziel w euro, rozliczaj w dolarach.',
+  'features.fxConversion.title': 'Kursy walut w czasie rzeczywistym',
   'features.groups.desc': 'Bogaty feed aktywności z tekstem „Ty”, zakładki archiwalne/aktywne, wypolerowane karty grup po najechaniu, szkielety ładowania, paginacja, stany puste i odzyskiwanie błędów na desktopie i mobile.',
   'features.groups.title': 'Panel w czasie rzeczywistym',
   'features.invites.desc': 'Każda karta grupy ma modal udostępniania z krótkimi URL-ami, kodami QR, regeneracją tokenów, feedbackiem schowka, linkami zależnymi od języka i landing page’em, który z klasą obsługuje akceptacje/oczekujących członków.',

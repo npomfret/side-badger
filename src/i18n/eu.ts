@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Moneta babesak',
   'features.edit.desc': 'Nortasun-ezizenak taldeko, ezarpen orokorrak berrizendatzeko/deskribatzeko/ezabatzeko + baieztapenak, segurtasun-aurreezarpenak, kideen rol-editoreak eta blokeo-aldagailuak administratzaile-soilik fitxen atzean babestuta.',
   'features.edit.title': 'Benetan bidaltzen diren ezarpenak',
+  'features.fxConversion.desc': 'Automatikoki bihurtu likidazioak edozein monetara denbora errealeko truke-tasen bidez. Zatitu eurotan, likidatu dolarretan.',
+  'features.fxConversion.title': 'Denbora errealeko truke-tasak',
   'features.groups.desc': 'Jarduera-jario aberatsa "Zu" kopiarekin, artxibatutako/aktiboen fitxak, pasatzerakoan leundutako talde-txartelak, eskeletoko kargatzaileak, orrikatze-sistema, egoera hutsak eta erroreen berreskurapena mahaigainean eta mugikorrean.',
   'features.groups.title': 'Denbora errealeko aginte-panela',
   'features.invites.desc': 'Talde-txartel bakoitzak partekatzeko modal bat du URL laburrekin, QR kodeekin, token birsorkuntza, arbelaren feedbacka, hizkuntzaren araberako estekak eta onespenak/kide zain daudenak dotore kudeatzen dituen lur-orria.',

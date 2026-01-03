@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Pagar pengaman mata uang',
   'features.edit.desc': 'Alias identitas per grup, pengaturan umum dengan ganti nama/deskripsikan/hapus + konfirmasi, prasetel keamanan, editor peran anggota, dan sakelar kunci yang dijaga di belakang tab khusus admin.',
   'features.edit.title': 'Pengaturan yang benar-benar jadi',
+  'features.fxConversion.desc': 'Konversi penyelesaian secara otomatis ke mata uang apa pun dengan kurs real-time. Bagi dalam euro, selesaikan dalam dolar.',
+  'features.fxConversion.title': 'Kurs FX Real-time',
   'features.groups.desc': 'Umpan aktivitas yang kaya dengan teks "Anda", tab yang diarsipkan/aktif, kartu grup yang dipoles saat di-hover, skeleton loader, penomoran halaman, status kosong, dan pemulihan kesalahan di desktop & seluler.',
   'features.groups.title': 'Dasbor waktu nyata',
   'features.invites.desc': 'Setiap kartu grup memiliki modal berbagi dengan URL pendek, kode QR, token regenerasi, umpan balik clipboard, tautan sadar bahasa, dan halaman arahan yang menangani persetujuan/anggota yang tertunda dengan anggun.',

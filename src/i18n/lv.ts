@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Valūtu aizsardzība',
   'features.edit.desc': 'Identitātes pseidonīmi katrai grupai, vispārīgi iestatījumi ar pārdēvēšanu/aprakstīšanu/dzēšanu + apstiprinājumi, drošības iepriekšējie iestatījumi, dalībnieku lomu redaktori un bloķēšanas slēdži, kas aizsargāti aiz tikai administratoriem pieejamām cilnēm.',
   'features.edit.title': 'Iestatījumi, kas patiešām darbojas',
+  'features.fxConversion.desc': 'Automātiski konvertējiet norēķinus jebkurā valūtā ar reāllaika valūtas kursiem. Daliet eiro, norēķinieties dolāros.',
+  'features.fxConversion.title': 'Reāllaika valūtas kursi',
   'features.groups.desc': 'Bagātīga aktivitāšu plūsma ar "Jūs" kopiju, arhivētas/aktīvas cilnes, uzlabotās grupas kartītes ar hover efektiem, skeleta ielādētāji, lapošana, tukšie stāvokļi un kļūdu atkopšana datorā un mobilajā.',
   'features.groups.title': 'Reāllaika panelis',
   'features.invites.desc': 'Katrai grupas kartītei ir dalīšanās modālis ar īsām saitēm, QR kodiem, tokenu atjaunošanu, starpliktuves atsauksmi, valodai atbilstošām saitēm un mērķlapu, kas graciozi apstrādā apstiprinājumus/gaidošos dalībniekus.',

@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Valuta-vangrails',
   'features.edit.desc': 'Identiteitsaliassen per groep, algemene instellingen met hernoemen/beschrijven/verwijderen + bevestigingen, beveiligingspresets, ledenrol-editors en vergrendelingstoggles achter alleen-admin tabbladen.',
   'features.edit.title': 'Instellingen die echt werken',
+  'features.fxConversion.desc': 'Zet afrekeningen automatisch om naar elke valuta met realtime wisselkoersen. Deel in euro\'s, verreken in dollars.',
+  'features.fxConversion.title': 'Realtime wisselkoersen',
   'features.groups.desc': 'Rijke activiteitenfeed met "Jij"-teksten, gearchiveerde/actieve tabbladen, verzorgde groepskaarten met hover-effecten, skeleton loaders, paginering, lege staten en foutherstel op desktop en mobiel.',
   'features.groups.title': 'Realtime dashboard',
   'features.invites.desc': 'Elke groepskaart heeft een deelmodal met korte URLs, QR-codes, vernieuwbare tokens, klembord-feedback, taalbewuste links en een landingspagina die goedkeuringen en wachtende leden netjes afhandelt.',

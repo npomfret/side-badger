@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Currency guardrails',
   'features.edit.desc': 'Identity aliases per group, general settings with rename/describe/delete + confirmations, security presets, member role editors, and lock toggles guarded behind admin-only tabs.',
   'features.edit.title': 'Settings wey actually ship',
+  'features.fxConversion.desc': 'Change settlements to any currency wey you want with real-time exchange rates. Split for euros, settle for dollars.',
+  'features.fxConversion.title': 'Real-time FX Rates',
   'features.groups.desc': 'Rich activity feed with “You” text, archived/active tabs, group cards wey polish when you hover, skeleton loaders, pagination, empty states, and error recovery across desktop & mobile.',
   'features.groups.title': 'Realtime dashboard',
   'features.invites.desc': 'Every group card get share modal with short URLs, QR codes, regenerate tokens, clipboard feedback, language-aware links, and a landing page wey handle approvals/pending members gracefully.',

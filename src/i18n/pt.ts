@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Proteções de moeda',
   'features.edit.desc': 'Apelidos de identidade por grupo, configurações gerais com renomear/descrever/excluir + confirmações, predefinições de segurança, editores de função de membro e alternâncias de bloqueio protegidas por guias exclusivas para administradores.',
   'features.edit.title': 'Configurações que realmente funcionam',
+  'features.fxConversion.desc': 'Converta automaticamente liquidações para qualquer moeda com taxas de câmbio em tempo real. Divida em euros, liquide em dólares.',
+  'features.fxConversion.title': 'Taxas de câmbio em tempo real',
   'features.groups.desc': 'Feed de atividades rico com o texto "Você", guias arquivadas/ativas, cartões de grupo aprimorados ao passar o mouse, placeholders esqueleto, paginação, estados vazios e recuperação de erros em desktop e dispositivos móveis.',
   'features.groups.title': 'Painel em tempo real',
   'features.invites.desc': 'Cada cartão de grupo possui um modal de compartilhamento com URLs curtas, códigos QR, regeneração de tokens, feedback da área de transferência, links com reconhecimento de idioma e uma página de destino que lida com aprovações/membros pendentes de forma elegante.',

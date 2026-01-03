@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Währungs-Leitplanken',
   'features.edit.desc': 'Identitäts-Aliase pro Gruppe, allgemeine Einstellungen mit Umbenennen/Beschreiben/Löschen + Bestätigungen, Sicherheits-Presets, Mitglieder-Rollen-Editoren und Sperr-Toggles hinter Admin-Only-Tabs geschützt.',
   'features.edit.title': 'Einstellungen die wirklich funktionieren',
+  'features.fxConversion.desc': 'Abrechnungen automatisch in jede Währung mit Echtzeit-Wechselkursen umrechnen. In Euro aufteilen, in Dollar begleichen.',
+  'features.fxConversion.title': 'Echtzeit-Wechselkurse',
   'features.groups.desc': 'Reichhaltiger Aktivitäts-Feed mit "Du"-Texten, Archiviert/Aktiv-Tabs, polierte Gruppenkarten mit Hover-Effekten, Skelett-Loader, Paginierung, Leerzustände und Fehlerbehandlung auf Desktop & Mobil.',
   'features.groups.title': 'Echtzeit-Dashboard',
   'features.invites.desc': 'Jede Gruppenkarte hat einen Teilen-Dialog mit Kurz-URLs, QR-Codes, Token-Regenerierung, Zwischenablage-Feedback, sprachabhängige Links und eine Landingpage, die Genehmigungen und ausstehende Mitglieder elegant handhabt.',

@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Ghidaje de valută',
   'features.edit.desc': 'Aliasuri de identitate pe grup, setări generale cu redenumire/descriere/ștergere + confirmări, preseturi de securitate, editori de roluri pentru membri și comutatoare de blocare protejate în taburi doar pentru admini.',
   'features.edit.title': 'Setări care chiar funcționează',
+  'features.fxConversion.desc': 'Convertiți automat decontările în orice monedă cu cursuri valutare în timp real. Împărțiți în euro, decontați în dolari.',
+  'features.fxConversion.title': 'Cursuri valutare în timp real',
   'features.groups.desc': 'Feed de activitate bogat cu text „Tu”, taburi arhivate/active, carduri de grup finisate la hover, încărcătoare skeleton, paginare, stări goale și recuperare de erori pe desktop și mobil.',
   'features.groups.title': 'Dashboard în timp real',
   'features.invites.desc': 'Fiecare card de grup are un modal de partajare cu URL-uri scurte, coduri QR, regenerare de tokenuri, feedback de clipboard, linkuri conștiente de limbă și o pagină de destinație care gestionează elegant aprobările/membrii în așteptare.',

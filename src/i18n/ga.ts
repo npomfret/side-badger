@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Cosaintí airgeadra',
   'features.edit.desc': 'Ailiasnna aitheantais in aghaidh an ghrúpa, socruithe ginearálta le hathainmniú/cur síos/scriosadh + deimhnithe, réamhshocruithe slándála, eagarthóirí róil ball, agus scoráin ghlais faoi chosaint ag cluaisíní riarthóra-amháin.',
   'features.edit.title': 'Socruithe a sheoltar i ndáiríre',
+  'features.fxConversion.desc': 'Tiontaigh socraíochtaí go huathoibríoch go haon airgeadra le rátaí malairte fíor-ama. Roinn in euro, socraigh i ndollair.',
+  'features.fxConversion.title': 'Rátaí Malairte Fíor-Ama',
   'features.groups.desc': 'Fotha gníomhaíochta saibhir le cóip "Tusa", cluaisíní cartlainne/gníomhacha, cártaí grúpa snasta le hover, lódálaithe cnámharlaigh, leathanaigh, staideanna folmha, agus téarnamh earráide ar fud deisce agus móibíleach.',
   'features.groups.title': 'Deais fíor-ama',
   'features.invites.desc': 'Tá móid comhroinnte ag gach cárta grúpa le URLanna gearra, cóid QR, comharthaí athghinte, aiseolas ghearrthaisce, naisc atá feasach ar theanga, agus leathanach tuirlingthe a láimhseálann ceaduithe/baill ar feitheamh go séimh.',

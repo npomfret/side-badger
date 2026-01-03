@@ -72,6 +72,9 @@ export default {
   'features.receipts.title': 'Receipt Uploading',
   'features.receipts.desc': 'Attach photos of receipts to any expense. Never lose track of what you spent.',
 
+  'features.fxConversion.title': 'Real-time FX Rates',
+  'features.fxConversion.desc': 'Automatically convert settlements into any currency with real-time exchange rates. Split in euros, settle in dollars.',
+
   // Coming soon section
   'comingSoon.title': 'Coming Soon',
   'comingSoon.subtitle': "We're just getting started. Here's what's on the way.",

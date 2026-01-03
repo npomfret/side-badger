@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Valutasikring',
   'features.edit.desc': 'Identitetsaliaser per gruppe, generelle innstillinger med endre navn/beskriv/slett + bekreftelser, sikkerhetsforhåndsinnstillinger, medlemsrolleeditorer og låsebrytre beskyttet bak kun-admin-faner.',
   'features.edit.title': 'Innstillinger som faktisk leveres',
+  'features.fxConversion.desc': 'Konverter oppgjør automatisk til hvilken som helst valuta med sanntids valutakurser. Del i euro, gjør opp i dollar.',
+  'features.fxConversion.title': 'Sanntids valutakurser',
   'features.groups.desc': 'Rik aktivitetsfeed med "Du"-tekst, arkiverte/aktive faner, hover-polerte gruppekort, skjelettlastere, paginering, tomme tilstander, og feilgjenoppretting på tvers av desktop og mobil.',
   'features.groups.title': 'Sanntids dashbord',
   'features.invites.desc': 'Hvert gruppekort har en delemodul med korte URL-er, QR-koder, regenererbare tokens, utklippstavle-tilbakemelding, språktilpassede lenker, og en landingsside som håndterer godkjenninger/ventende medlemmer elegant.',

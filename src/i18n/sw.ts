@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Vizui vya sarafu',
   'features.edit.desc': 'Majina ya utambulisho kwa kila kundi, mipangilio ya jumla yenye kubadili jina/kuandika maelezo/kufuta + uthibitisho, mipangilio ya usalama, vihariri vya majukumu ya wanachama, na vigeuzi vya kufunga vilivyofichwa nyuma ya vichupo vya wasimamizi pekee.',
   'features.edit.title': 'Mipangilio inayotekelezwa kweli',
+  'features.fxConversion.desc': 'Badilisha malipo moja kwa moja kuwa sarafu yoyote kwa viwango vya kubadilisha pesa vya papo hapo. Gawanya kwa euro, lipa kwa dola.',
+  'features.fxConversion.title': 'Viwango vya Kubadilisha Pesa Papo Hapo',
   'features.groups.desc': 'Mtiririko wa shughuli wenye maelezo ya “Wewe”, vichupo vya kuhifadhiwa/ vya kazi, kadi za kundi zilizopolishwa wakati wa kuelea, vipakiaji vya skeleton, upaginishaji, hali tupu, na urejeshaji wa makosa kwenye desktop na simu.',
   'features.groups.title': 'Dashibodi ya wakati halisi',
   'features.invites.desc': 'Kila kadi ya kundi ina modali ya kushiriki yenye URL fupi, misimbo ya QR, tokeni za kuzalisha upya, mrejesho wa clipboard, viungo vinavyotambua lugha, na ukurasa wa kutua unaoshughulikia idhini/wanachama wanaosubiri kwa upole.',

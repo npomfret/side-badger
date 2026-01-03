@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Rhwystrau arian cyfred',
   'features.edit.desc': 'Aliasau hunaniaeth fesul grŵp, gosodiadau cyffredinol gydag ailenwi/disgrifio/dileu + cadarnhadau, rhagosodiadau diogelwch, golygyddion rôl aelodau, a thoglau cloi wedi\'u gwarchod y tu ôl i dabiau i weinyddwyr yn unig.',
   'features.edit.title': 'Gosodiadau sy\'n cludo mewn gwirionedd',
+  'features.fxConversion.desc': 'Trosi setliadau\'n awtomatig i unrhyw arian cyfred gyda chyfraddau cyfnewid amser real. Rhannwch mewn ewros, setlwch mewn doleri.',
+  'features.fxConversion.title': 'Cyfraddau Cyfnewid Amser Real',
   'features.groups.desc': 'Ffrwd weithgaredd gyfoethog gyda chopi "Chi", tabiau wedi\'u harchifo/gweithredol, cardiau grŵp wedi\'u caboli ar hofran, llwythwyr sgerbwd, tudalennu, cyflyrau gwag, ac adfer gwallau ar draws bwrdd gwaith a symudol.',
   'features.groups.title': 'Dangosfwrdd amser real',
   'features.invites.desc': 'Mae gan bob cerdyn grŵp fodal rhannu gydag URLs byr, codau QR, tocynnau adfywio, adborth clipfwrdd, dolenni ymwybodol o iaith, a thudalen lanio sy\'n trin cymeradwyaethau/aelodau ar y gweill yn raslon.',

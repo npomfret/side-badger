@@ -30,6 +30,8 @@ export default {
   'features.currency.title': 'Valutaskyddsräcken',
   'features.edit.desc': 'Identitetsalias per grupp, allmänna inställningar med byt namn/beskriv/ta bort + bekräftelser, säkerhetsförinställningar, medlemsrollredigerare och låsväxlare skyddade bakom admin-exklusiva flikar.',
   'features.edit.title': 'Inställningar som faktiskt levereras',
+  'features.fxConversion.desc': 'Konvertera avräkningar automatiskt till vilken valuta som helst med valutakurser i realtid. Dela i euro, gör upp i dollar.',
+  'features.fxConversion.title': 'Valutakurser i realtid',
   'features.groups.desc': 'Rikt aktivitetsflöde med "Du"-texter, arkiverade/aktiva flikar, polerade gruppkort vid hovring, skelettladdare, paginering, tomma tillstånd och felhantering på dator och mobil.',
   'features.groups.title': 'Instrumentpanel i realtid',
   'features.invites.desc': 'Varje gruppkort har en delningsmodal med korta URL:er, QR-koder, förnya tokens, urklippsåterkoppling, språkmedvetna länkar och en landningssida som hanterar godkännanden och väntande medlemmar smidigt.',

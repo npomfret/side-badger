@@ -26,6 +26,7 @@ import ga from './ga';
 import cy from './cy';
 import eu from './eu';
 import hi from './hi';
+import zh from './zh';
 
 // =============================================================================
 // CENTRAL CONFIGURATION - Single source of truth for all locales
@@ -67,6 +68,15 @@ const localeConfig = {
     translations: eu,
     inDropdown: true,
     dropdownOrder: 20, // Basque
+    hasLogo: false,
+  },
+  zh: {
+    name: '中文',
+    flagCode: 'cn',
+    intlCode: 'zh-CN',
+    translations: zh,
+    inDropdown: true,
+    dropdownOrder: 25, // Chinese
     hasLogo: false,
   },
   cy: {

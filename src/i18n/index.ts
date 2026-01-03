@@ -30,10 +30,13 @@ import zh from './zh';
 import fr from './fr';
 import bn from './bn';
 import pt from './pt';
+import pl from './pl';
+import ro from './ro';
 import id from './id';
 import pcm from './pcm';
 import sw from './sw';
 import te from './te';
+import ur from './ur';
 
 // =============================================================================
 // CENTRAL CONFIGURATION - Single source of truth for all locales
@@ -219,6 +222,24 @@ const localeConfig = {
     translations: pt,
     inDropdown: true,
     dropdownOrder: 140, // Portuguese
+    hasLogo: false,
+  },
+  pl: {
+    name: 'Polski',
+    flagCode: 'pl',
+    intlCode: 'pl-PL',
+    translations: pl,
+    inDropdown: true,
+    dropdownOrder: 150, // Polish
+    hasLogo: false,
+  },
+  ro: {
+    name: 'Română',
+    flagCode: 'ro',
+    intlCode: 'ro-RO',
+    translations: ro,
+    inDropdown: true,
+    dropdownOrder: 155, // Romanian
     hasLogo: false,
   },
   es: {

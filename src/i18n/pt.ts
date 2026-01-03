@@ -136,7 +136,7 @@ export default {
   'pricing.pro.cta': 'Em breve',
   'pricing.pro.description': 'Estamos trabalhando em recursos extras para usuários avançados.',
   'pricing.pro.feature1': 'Tudo do plano Grátis',
-  'pricing.pro.feature2': 'Mais recursos',
+  'pricing.pro.feature2': 'E mais recursos',
   'pricing.pro.feature3': 'Fique ligado...',
   'pricing.pro.name': 'Pro',
   'pricing.pro.price': 'Em breve',

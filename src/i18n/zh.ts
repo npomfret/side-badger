@@ -140,7 +140,7 @@ export default {
   'pricing.pro.feature3': '敬请期待...',
   'pricing.pro.name': 'Pro',
   'pricing.pro.price': '即将推出',
-  'whyFree.ads.desc': '分摊 47.23 美元的晚餐账单已经够烦人的了，更不用说还有餐包订阅的广告了。',
+  'whyFree.ads.desc': '分摊 47.23 美元的晚餐账单本身就够烦人了，不需要再加上餐包订阅的广告。',
   'whyFree.ads.title': '无广告',
   'whyFree.badgers.desc': 'Side Badger 是一款免费、注重隐私的费用分摊应用程序。没有隐藏的议程。只有氛围和獾。',
   'whyFree.badgers.title': '只有獾',

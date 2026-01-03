@@ -136,7 +136,7 @@ export default {
   'pricing.pro.cta': 'جلد آرہا ہے',
   'pricing.pro.description': 'ہم پاور صارفین کے لیے اضافی خصوصیات پر کام کر رہے ہیں۔',
   'pricing.pro.feature1': 'مفت میں سب کچھ',
-  'pricing.pro.feature2': 'مزید خصوصیات',
+  'pricing.pro.feature2': 'نیز مزید خصوصیات',
   'pricing.pro.feature3': 'دیکھتے رہنا...',
   'pricing.pro.name': 'پرو',
   'pricing.pro.price': 'جلد آرہا ہے',

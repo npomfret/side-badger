@@ -142,7 +142,7 @@ export default {
   'pricing.pro.price': 'Bientôt disponible',
   'whyFree.ads.desc': 'Partager une facture de 47,23 $ est déjà assez ennuyeux sans les publicités pour les abonnements à des kits de repas.',
   'whyFree.ads.title': 'Pas de publicité',
-  'whyFree.badgers.desc': 'Side Badger est une application gratuite de partage de dépenses axée sur la confidentialité. Pas d\'agenda caché. Juste des ondes et des blaireaux.',
+  'whyFree.badgers.desc': 'Side Badger est une application gratuite de partage de dépenses axée sur la confidentialité. Pas d\'agenda caché. Juste des bonnes vibes et des blaireaux.',
   'whyFree.badgers.title': 'Juste des blaireaux',
   'whyFree.subtitle': 'Parce que partager les factures ne devrait pas coûter d\'argent. C\'est juste idiot.',
   'whyFree.title': 'Pourquoi est-ce gratuit ?',

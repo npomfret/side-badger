@@ -27,6 +27,13 @@ import cy from './cy';
 import eu from './eu';
 import hi from './hi';
 import zh from './zh';
+import fr from './fr';
+import bn from './bn';
+import pt from './pt';
+import id from './id';
+import pcm from './pcm';
+import sw from './sw';
+import te from './te';
 
 // =============================================================================
 // CENTRAL CONFIGURATION - Single source of truth for all locales
@@ -60,6 +67,15 @@ const localeConfig = {
     inDropdown: true,
     dropdownOrder: 10, // Arabic
     hasLogo: true,
+  },
+  bn: {
+    name: 'বাংলা',
+    flagCode: 'bd',
+    intlCode: 'bn-BD',
+    translations: bn,
+    inDropdown: true,
+    dropdownOrder: 15, // Bengali
+    hasLogo: false,
   },
   eu: {
     name: 'Euskara',
@@ -97,6 +113,15 @@ const localeConfig = {
     dropdownOrder: 30, // Dutch (Belgium)
     hasLogo: false,
   },
+  fr: {
+    name: 'Français',
+    flagCode: 'fr',
+    intlCode: 'fr-FR',
+    translations: fr,
+    inDropdown: true,
+    dropdownOrder: 60, // French
+    hasLogo: false,
+  },
   de: {
     name: 'Deutsch',
     flagCode: 'de',
@@ -124,6 +149,15 @@ const localeConfig = {
     dropdownOrder: 80, // Irish
     hasLogo: false,
   },
+  id: {
+    name: 'Bahasa Indonesia',
+    flagCode: 'id',
+    intlCode: 'id-ID',
+    translations: id,
+    inDropdown: true,
+    dropdownOrder: 85, // Indonesian
+    hasLogo: false,
+  },
   it: {
     name: 'Italiano',
     flagCode: 'it',
@@ -149,7 +183,7 @@ const localeConfig = {
     translations: ko,
     inDropdown: true,
     dropdownOrder: 110, // Korean
-    hasLogo: true,
+    hasLogo: false,
   },
   lv: {
     name: 'Latviešu',
@@ -167,6 +201,24 @@ const localeConfig = {
     translations: no,
     inDropdown: true,
     dropdownOrder: 130, // Norwegian
+    hasLogo: false,
+  },
+  pcm: {
+    name: 'Naijá',
+    flagCode: 'ng',
+    intlCode: 'en-NG',
+    translations: pcm,
+    inDropdown: true,
+    dropdownOrder: 135, // Nigerian Pidgin
+    hasLogo: false,
+  },
+  pt: {
+    name: 'Português',
+    flagCode: 'pt',
+    intlCode: 'pt-PT',
+    translations: pt,
+    inDropdown: true,
+    dropdownOrder: 140, // Portuguese
     hasLogo: false,
   },
   es: {
@@ -187,6 +239,15 @@ const localeConfig = {
     dropdownOrder: 170, // Swedish
     hasLogo: false,
   },
+  sw: {
+    name: 'Kiswahili',
+    flagCode: 'tz',
+    intlCode: 'sw-TZ',
+    translations: sw,
+    inDropdown: true,
+    dropdownOrder: 175, // Swahili
+    hasLogo: false,
+  },
   ph: {
     name: 'Tagalog',
     flagCode: 'ph',
@@ -194,6 +255,15 @@ const localeConfig = {
     translations: ph,
     inDropdown: true,
     dropdownOrder: 180, // Tagalog
+    hasLogo: false,
+  },
+  te: {
+    name: 'తెలుగు',
+    flagCode: 'in',
+    intlCode: 'te-IN',
+    translations: te,
+    inDropdown: true,
+    dropdownOrder: 185, // Telugu
     hasLogo: false,
   },
   uk: {
@@ -204,6 +274,15 @@ const localeConfig = {
     inDropdown: true,
     dropdownOrder: 190, // Ukrainian
     hasLogo: true,
+  },
+  ur: {
+    name: 'اردو',
+    flagCode: 'pk',
+    intlCode: 'ur-PK',
+    translations: ur,
+    inDropdown: true,
+    dropdownOrder: 192, // Urdu
+    hasLogo: false,
   },
 } as const;
 

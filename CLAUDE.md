@@ -5,7 +5,7 @@ Marketing website for a white-label bill splitting app. The actual app is Fireba
 ## Architecture
 
 - **Framework**: Astro 5 (static site generation)
-- **Deployment**: Docker → Nginx on `sidebadger.com`
+- **Deployment**: Docker container on `sidebadger.com` (behind shared nginx proxy)
 - **CI/CD**: GitHub Actions auto-deploys on push to `main`
 
 ## Key Files
@@ -15,7 +15,6 @@ Marketing website for a white-label bill splitting app. The actual app is Fireba
 | `src/i18n/en.ts` | All user-facing text, URLs, copy |
 | `src/styles/tokens.css` | Design tokens (colors, spacing, typography) |
 | `astro.config.mjs` | Site URL, i18n config |
-| `nginx.conf` | Server config, caching, health checks |
 
 ## Code Patterns
 
@@ -79,10 +78,8 @@ npm run docker:logs
 ```
 
 Multi-stage Dockerfile:
-1. `base` - Node 22, install deps
-2. `dev` - Dev server
-3. `builder` - Build static files
-4. `production` - Nginx serving `dist/`
+1. `builder` - Node 22, install deps, build static files
+2. `production` - Node 22 with `serve` for static files
 
 ## External Dependencies
 

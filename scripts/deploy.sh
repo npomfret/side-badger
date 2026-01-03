@@ -13,7 +13,6 @@ ssh $SERVER "mkdir -p $REMOTE_DIR"
 # Copy deployment files
 echo "📦 Copying files..."
 scp Dockerfile $SERVER:$REMOTE_DIR/
-scp nginx.conf $SERVER:$REMOTE_DIR/
 scp docker-compose.yml $SERVER:$REMOTE_DIR/
 scp package.json $SERVER:$REMOTE_DIR/
 scp package-lock.json $SERVER:$REMOTE_DIR/ 2>/dev/null || true

@@ -227,12 +227,21 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
 
     // Store preference when selecting a language
     options.forEach(option => {
-      option.addEventListener('click', () => {
+      option.addEventListener('click', (e) => {
         const locale = option.getAttribute('data-locale');
         if (locale) {
           localStorage.setItem(LOCALE_KEY, locale);
         }
-        // Allow the link to navigate normally - don't prevent default
+
+        // On mobile, force a full page reload to ensure content updates
+        if ('ontouchstart' in window) {
+          e.preventDefault();
+          const href = option.getAttribute('href');
+          if (href) {
+            window.location.href = href;
+          }
+        }
+        // On desktop, allow the link to navigate normally
       });
     });
 

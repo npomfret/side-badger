@@ -160,13 +160,7 @@ a:hover {
   transition: border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
-.glass::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-  pointer-events: none;
-}
+/* Removed ::before overlay for simpler glass effect */
 
 .glass:hover {
   border-color: var(--glass-border-hover);

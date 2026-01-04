@@ -138,33 +138,54 @@
 
 .feature-card {
   padding: var(--space-xl);
-  background: radial-gradient(
-    ellipse at 50% 0%,
-    rgba(126, 199, 134, 0.08) 0%,
-    var(--glass-bg) 60%
-  );
+  background: transparent;
+  border: 1px solid rgba(126, 199, 134, 0.2);
+  border-radius: var(--radius-xl);
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 0 20px rgba(126, 199, 134, 0.1),
+    inset 0 0 40px rgba(126, 199, 134, 0.05);
   transition:
     transform 0.15s ease-out,
     box-shadow var(--duration-fast) var(--ease-smooth),
-    border-color var(--duration-fast) var(--ease-smooth),
-    background var(--duration-fast) var(--ease-smooth);
-  transform-style: preserve-3d;
-  will-change: transform;
+    border-color var(--duration-fast) var(--ease-smooth);
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    45deg,
+    rgba(126, 199, 134, 0.3),
+    rgba(95, 176, 196, 0.3),
+    rgba(240, 192, 92, 0.3),
+    rgba(126, 199, 134, 0.3)
+  );
+  background-size: 300% 300%;
+  border-radius: var(--radius-xl);
+  opacity: 0.15;
+  animation: shimmer-border 8s ease infinite;
+  z-index: -1;
+}
+
+@keyframes shimmer-border {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 .feature-card:hover {
   transform: translateY(-4px) scale(1.02);
-  border-color: rgba(126, 199, 134, 0.5);
-  background: radial-gradient(
-    ellipse at 50% 0%,
-    rgba(126, 199, 134, 0.15) 0%,
-    var(--glass-bg) 60%
-  );
+  border-color: rgba(126, 199, 134, 0.4);
   box-shadow:
-    0 0 0 1px rgba(126, 199, 134, 0.4),
-    0 0 40px rgba(126, 199, 134, 0.3),
-    0 0 80px rgba(95, 176, 196, 0.2),
-    var(--shadow-card);
+    0 0 40px rgba(126, 199, 134, 0.25),
+    0 0 80px rgba(95, 176, 196, 0.15),
+    inset 0 0 60px rgba(126, 199, 134, 0.1);
+}
+
+.feature-card:hover::before {
+  opacity: 0.3;
 }
 
 .feature-icon {
@@ -209,6 +230,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .feature-card::before {
+    animation: none !important;
+  }
+
   .feature-card:hover .feature-icon {
     animation: none;
     transform: scale(1.05);

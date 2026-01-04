@@ -174,8 +174,8 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
       btn?.setAttribute('aria-expanded', 'true');
       switcher.classList.add('open');
 
-      // Focus search input when opening
-      if (searchInput) {
+      // Focus search input when opening (but not on touch devices to avoid keyboard popup)
+      if (searchInput && !('ontouchstart' in window)) {
         setTimeout(() => searchInput.focus(), 100);
       }
     };

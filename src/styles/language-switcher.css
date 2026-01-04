@@ -18,6 +18,8 @@
   font-size: var(--text-sm);
   cursor: pointer;
   transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .language-switcher-btn:hover {
@@ -131,6 +133,8 @@
   text-decoration: none;
   font-size: var(--text-sm);
   transition: all 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .language-option:hover {

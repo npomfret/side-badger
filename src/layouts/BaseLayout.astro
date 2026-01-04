@@ -38,6 +38,12 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
     <meta name="description" content={description} />
     <meta name="theme-color" content="#F0FDF4" />
 
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/images/logo-face-only-large.png" />
+
     <!-- hreflang tags for SEO -->
     {locales.map((loc) => (
       <link
@@ -104,7 +110,7 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
             <div class="logo-glow-wrapper">
               <div class="logo-glow-spacer"></div>
               <div class="logo-glow"></div>
-              <img src={smallLogoPath} alt={t('header.logoText', locale)} height="100" />
+              <img src={smallLogoPath} alt={t('header.logoText', locale) + ' logo'} height="100" />
             </div>
           </a>
 
@@ -135,7 +141,7 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
         <nav class="footer-grid" aria-label={t('a11y.footerNavigation', locale)}>
           <div class="footer-brand">
             <a href={getLocalizedPath('/', locale)} class="logo" aria-label={t('a11y.homeLink', locale)}>
-              <img src={smallLogoPath} alt={t('header.logoText', locale)} height="28" />
+              <img src={smallLogoPath} alt={t('header.logoText', locale) + ' logo'} height="28" />
             </a>
             <p class="text-muted text-sm" set:html={t('footer.tagline', locale)} />
           </div>

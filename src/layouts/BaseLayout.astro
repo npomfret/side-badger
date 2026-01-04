@@ -23,8 +23,8 @@ const description = descriptionProp ?? t('meta.description', locale);
 // Use locale's logo if available, otherwise fall back to English
 const logoLocale = logoLocales.includes(locale) ? locale : 'en';
 const smallLogoPath = `/images/${logoLocale}/logo-transparent-small.png`;
-const largeLogoPath = `/images/${logoLocale}/logo-large-transparent.png`;
-const socialImagePath = `/images/${logoLocale}/logo-large-transparent-1200x628.png`;
+const largeLogoPath = `/images/${logoLocale}/logo-transparent.png`;
+const socialImagePath = `/images/${logoLocale}/logo-transparent.png`;
 
 const currentPath = Astro.url.pathname;
 const siteUrl = Astro.site?.origin || 'https://sidebadger.com';

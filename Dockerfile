@@ -1,3 +1,17 @@
+# Dev stage
+FROM node:22-alpine AS dev
+
+WORKDIR /app
+COPY package.json package-lock.json* ./
+RUN npm ci
+COPY . .
+
+ARG PUBLIC_DOMAIN=sidebadger.me
+ENV PUBLIC_DOMAIN=${PUBLIC_DOMAIN}
+
+EXPOSE 4321
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+
 # Build stage
 FROM node:22-alpine AS builder
 

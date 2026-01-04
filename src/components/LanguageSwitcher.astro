@@ -216,9 +216,13 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
       }
     });
 
-    // Prevent dropdown from closing when clicking inside
+    // Prevent dropdown from closing when clicking inside (but allow language links to navigate)
     dropdown?.addEventListener('click', (e) => {
-      e.stopPropagation();
+      // Don't stop propagation for language option links - let them navigate
+      const target = e.target as HTMLElement;
+      if (!target.closest('.language-option')) {
+        e.stopPropagation();
+      }
     });
 
     // Store preference when selecting a language
@@ -228,6 +232,7 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
         if (locale) {
           localStorage.setItem(LOCALE_KEY, locale);
         }
+        // Allow the link to navigate normally - don't prevent default
       });
     });
 

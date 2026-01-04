@@ -216,21 +216,16 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
       }
     });
 
-    // Store preference and force navigation on language change
+    // Store preference and allow native navigation for reliability on mobile
     options.forEach(option => {
-      option.addEventListener('click', (e) => {
-        e.preventDefault(); // Prevent default link navigation
-
+      option.addEventListener('click', () => {
         const locale = option.getAttribute('data-locale');
-        const href = option.getAttribute('href');
+        if (!locale) return;
 
-        if (locale) {
+        try {
           localStorage.setItem(LOCALE_KEY, locale);
-        }
-
-        // Force full page reload to bypass any caching
-        if (href) {
-          window.location.href = href;
+        } catch {
+          // If storage is unavailable (e.g., private mode), still allow navigation.
         }
       });
     });

@@ -216,32 +216,19 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
       }
     });
 
-    // Prevent dropdown from closing when clicking inside (but allow language links to navigate)
-    dropdown?.addEventListener('click', (e) => {
-      // Don't stop propagation for language option links - let them navigate
-      const target = e.target as HTMLElement;
-      if (!target.closest('.language-option')) {
-        e.stopPropagation();
-      }
+    // Just close the dropdown when clicking inside it
+    dropdown?.addEventListener('click', () => {
+      closeDropdown();
     });
 
-    // Store preference when selecting a language
+    // Store preference when selecting a language - that's it
     options.forEach(option => {
-      option.addEventListener('click', (e) => {
+      option.addEventListener('click', () => {
         const locale = option.getAttribute('data-locale');
         if (locale) {
           localStorage.setItem(LOCALE_KEY, locale);
         }
-
-        // On mobile, force a full page reload to ensure content updates
-        if ('ontouchstart' in window) {
-          e.preventDefault();
-          const href = option.getAttribute('href');
-          if (href) {
-            window.location.href = href;
-          }
-        }
-        // On desktop, allow the link to navigate normally
+        // Let the browser handle the navigation naturally
       });
     });
 

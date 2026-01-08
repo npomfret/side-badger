@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Ta et bilde, la AI trekke ut detaljene. Raskere utgiftsopprettelse med mindre skriving.',
   'comingSoon.ai.title': 'AI-kvitteringsskanning',
   'comingSoon.badge': 'Kommer snart',
-  'comingSoon.conversion.desc': 'Automatisk konvertering mellom valutaer. Del i euro, gjør opp i dollar.',
-  'comingSoon.conversion.title': 'Valutakonverteringer',
   'comingSoon.export.desc': 'Last ned utgiftene dine som Excel, CSV eller PDF. Dine data, ditt format, din måte.',
   'comingSoon.export.title': 'Eksporter dataene dine',
   'comingSoon.mobile.desc': 'iOS- og Android-apper for utgiftssporing på farten. Legg til utgifter rett etter at du har betalt.',

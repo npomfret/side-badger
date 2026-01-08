@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Snap one photo, make AI pull out de details. Create expense faster wit less typing.',
   'comingSoon.ai.title': 'AI Receipt Scanning',
   'comingSoon.badge': 'Dey Come Soon',
-  'comingSoon.conversion.desc': 'Automatic conversion between currencies. Split in euros, settle in dollars.',
-  'comingSoon.conversion.title': 'Currency Conversions',
   'comingSoon.export.desc': 'Download your expenses as Excel, CSV, or PDF. Your data, your format, your way.',
   'comingSoon.export.title': 'Export Your Data',
   'comingSoon.mobile.desc': 'iOS and Android apps for on-the-go expense tracking. Add expenses right after you pay.',

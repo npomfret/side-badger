@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Nofotografējiet, ļaujiet AI izvilkt detaļas. Ātrāka izdevumu izveide ar mazāku rakstīšanu.',
   'comingSoon.ai.title': 'AI kvīšu skenēšana',
   'comingSoon.badge': 'Drīzumā',
-  'comingSoon.conversion.desc': 'Automātiska konvertācija starp valūtām. Sadaliet eiro, nokārtojiet dolāros.',
-  'comingSoon.conversion.title': 'Valūtas konvertācijas',
   'comingSoon.export.desc': 'Lejupielādējiet savus izdevumus kā Excel, CSV vai PDF. Jūsu dati, jūsu formāts, kā vēlaties.',
   'comingSoon.export.title': 'Eksportēt savus datus',
   'comingSoon.mobile.desc': 'iOS un Android lietotnes izdevumu izsekošanai kustībā. Pievienojiet izdevumus tūlīt pēc apmaksas.',

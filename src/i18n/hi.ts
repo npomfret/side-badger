@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'फोटो खींचें, AI को विवरण निकालने दें। कम टाइपिंग के साथ तेज खर्च बनाना।',
   'comingSoon.ai.title': 'AI रसीद स्कैनिंग',
   'comingSoon.badge': 'जल्द आ रहा है',
-  'comingSoon.conversion.desc': 'मुद्राओं के बीच स्वचालित रूपांतरण। यूरो में बांटें, डॉलर में हिसाब करें।',
-  'comingSoon.conversion.title': 'मुद्रा रूपांतरण',
   'comingSoon.export.desc': 'अपने खर्च Excel, CSV, या PDF में डाउनलोड करें। आपका डेटा, आपका फॉर्मेट, आपके तरीके से।',
   'comingSoon.export.title': 'अपना डेटा एक्सपोर्ट करें',
   'comingSoon.mobile.desc': 'चलते-फिरते खर्च ट्रैक करने के लिए iOS और Android ऐप्स। भुगतान के तुरंत बाद खर्च जोड़ें।',

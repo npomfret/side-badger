@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Scatta una foto, lascia che l\'AI estragga i dettagli. Creazione di spese più veloce con meno digitazione.',
   'comingSoon.ai.title': 'Scansione ricevute AI',
   'comingSoon.badge': 'Prossimamente',
-  'comingSoon.conversion.desc': 'Conversione automatica tra valute. Dividi in euro, salda in dollari.',
-  'comingSoon.conversion.title': 'Conversioni di valuta',
   'comingSoon.export.desc': 'Scarica le tue spese come Excel, CSV o PDF. I tuoi dati, il tuo formato, a modo tuo.',
   'comingSoon.export.title': 'Esporta i tuoi dati',
   'comingSoon.mobile.desc': 'App iOS e Android per il tracciamento delle spese in movimento. Aggiungi le spese subito dopo aver pagato.',

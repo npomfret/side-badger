@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Tynnwch lun, gadewch i Ddeallusrwydd Artiffisial echdynnu\'r manylion. Creu costau\'n gyflymach gyda llai o deipio.',
   'comingSoon.ai.title': 'Sganio Derbynebau gyda DA',
   'comingSoon.badge': 'Yn Dod yn Fuan',
-  'comingSoon.conversion.desc': 'Trosi awtomatig rhwng arian cyfred. Rhannwch mewn ewros, setlwch mewn doleri.',
-  'comingSoon.conversion.title': 'Trosi Arian Cyfred',
   'comingSoon.export.desc': 'Lawrlwythwch eich costau fel Excel, CSV, neu PDF. Eich data, eich fformat, eich ffordd.',
   'comingSoon.export.title': 'Allforio Eich Data',
   'comingSoon.mobile.desc': 'Apiau iOS ac Android ar gyfer olrhain costau ar fynd. Ychwanegwch gostau yn syth ar ôl talu.',

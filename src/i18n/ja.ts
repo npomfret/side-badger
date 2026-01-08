@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': '写真を撮るだけでAIが詳細を抽出。タイピング少なめで費用作成がより速く。',
   'comingSoon.ai.title': 'AIレシートスキャン',
   'comingSoon.badge': '近日公開',
-  'comingSoon.conversion.desc': '通貨間の自動変換。ユーロで分割、ドルで精算。',
-  'comingSoon.conversion.title': '通貨変換',
   'comingSoon.export.desc': '費用をExcel、CSV、またはPDFでダウンロード。あなたのデータ、あなたのフォーマット、あなたの方法で。',
   'comingSoon.export.title': 'データエクスポート',
   'comingSoon.mobile.desc': '外出先での費用追跡用にiOSとAndroidアプリ。支払った直後に費用を追加。',

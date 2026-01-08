@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': '拍张照片，让 AI 提取详细信息。减少输入，更快地创建费用记录。',
   'comingSoon.ai.title': 'AI 收据扫描',
   'comingSoon.badge': '即将推出',
-  'comingSoon.conversion.desc': '货币之间自动转换。以欧元分摊，以美元结算。',
-  'comingSoon.conversion.title': '货币转换',
   'comingSoon.export.desc': '将您的费用下载为 Excel、CSV 或 PDF 格式。您的数据，您的格式，您的方式。',
   'comingSoon.export.title': '导出您的数据',
   'comingSoon.mobile.desc': 'iOS 和 Android 应用程序，用于随时随地跟踪费用。支付后立即添加费用。',

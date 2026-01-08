@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Зробіть фото, і нехай ШІ витягне деталі. Швидше створення витрат — менше друкувати.',
   'comingSoon.ai.title': 'Сканування чеків за допомогою ШІ',
   'comingSoon.badge': 'Скоро',
-  'comingSoon.conversion.desc': 'Автоматична конвертація між валютами. Розділяйте в євро, розраховуйтесь в доларах.',
-  'comingSoon.conversion.title': 'Конвертація валют',
   'comingSoon.export.desc': 'Завантажуйте свої витрати у форматах Excel, CSV або PDF. Ваші дані, ваш формат, як вам зручно.',
   'comingSoon.export.title': 'Експорт ваших даних',
   'comingSoon.mobile.desc': 'Додатки для iOS та Android для відстеження витрат на ходу. Додавайте витрати одразу після оплати.',

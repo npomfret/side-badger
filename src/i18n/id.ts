@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Ambil foto, biarkan AI mengekstrak detailnya. Pembuatan pengeluaran lebih cepat dengan lebih sedikit pengetikan.',
   'comingSoon.ai.title': 'Pemindaian struk dengan AI',
   'comingSoon.badge': 'Segera hadir',
-  'comingSoon.conversion.desc': 'Konversi otomatis antar mata uang. Bagi dalam euro, selesaikan dalam dolar.',
-  'comingSoon.conversion.title': 'Konversi mata uang',
   'comingSoon.export.desc': 'Unduh pengeluaran Anda sebagai Excel, CSV, atau PDF. Data Anda, format Anda, cara Anda.',
   'comingSoon.export.title': 'Ekspor data Anda',
   'comingSoon.mobile.desc': 'Aplikasi iOS dan Android untuk pelacakan pengeluaran saat bepergian. Tambahkan pengeluaran tepat setelah Anda membayar.',

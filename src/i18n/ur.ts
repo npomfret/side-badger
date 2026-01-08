@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'ایک تصویر کھینچیں، AI کو تفصیلات نکالنے دیں۔ کم ٹائپنگ کے ساتھ تیزی سے خرچ کی تخلیق۔',
   'comingSoon.ai.title': 'AI رسید اسکیننگ',
   'comingSoon.badge': 'جلد آرہا ہے',
-  'comingSoon.conversion.desc': 'کرنسیوں کے درمیان خودکار تبدیلی۔ یورو میں تقسیم کریں، ڈالر میں طے کریں۔',
-  'comingSoon.conversion.title': 'کرنسی کی تبدیلیاں',
   'comingSoon.export.desc': 'اپنے اخراجات کو ایکسل، سی ایس وی، یا پی ڈی ایف کے طور پر ڈاؤن لوڈ کریں۔ آپ کا ڈیٹا، آپ کا فارمیٹ، آپ کا طریقہ۔',
   'comingSoon.export.title': 'اپنا ڈیٹا برآمد کریں',
   'comingSoon.mobile.desc': 'چلتے پھرتے اخراجات سے باخبر رہنے کے لیے iOS اور Android ایپس۔ ادائیگی کے فوراً بعد اخراجات شامل کریں۔',

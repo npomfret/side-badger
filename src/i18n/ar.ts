@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'التقط صورة، دع الذكاء الاصطناعي يستخرج التفاصيل. إنشاء مصروفات أسرع مع كتابة أقل.',
   'comingSoon.ai.title': 'مسح الإيصالات بالذكاء الاصطناعي',
   'comingSoon.badge': 'قريباً',
-  'comingSoon.conversion.desc': 'تحويل تلقائي بين العملات. قسّم باليورو، سوّي بالدولار.',
-  'comingSoon.conversion.title': 'تحويل العملات',
   'comingSoon.export.desc': 'حمّل مصروفاتك كملف Excel أو CSV أو PDF. بياناتك، بتنسيقك، بطريقتك.',
   'comingSoon.export.title': 'تصدير بياناتك',
   'comingSoon.mobile.desc': 'تطبيقات iOS و Android لتتبع المصروفات أثناء التنقل. أضف المصروفات فور الدفع.',

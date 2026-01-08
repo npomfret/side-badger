@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Machen Sie ein Foto, lassen Sie die KI die Details extrahieren. Schnellere Ausgabenerstellung mit weniger Tippen.',
   'comingSoon.ai.title': 'KI-Beleg-Scan',
   'comingSoon.badge': 'Demnächst',
-  'comingSoon.conversion.desc': 'Automatische Umrechnung zwischen Währungen. In Euro aufteilen, in Dollar abrechnen.',
-  'comingSoon.conversion.title': 'Währungsumrechnungen',
   'comingSoon.export.desc': 'Laden Sie Ihre Ausgaben als Excel, CSV oder PDF herunter. Ihre Daten, Ihr Format, Ihr Weg.',
   'comingSoon.export.title': 'Daten exportieren',
   'comingSoon.mobile.desc': 'iOS- und Android-Apps zur Ausgabenverfolgung von unterwegs. Fügen Sie Ausgaben direkt nach der Zahlung hinzu.',

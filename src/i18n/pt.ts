@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Tire uma foto, deixe a IA extrair os detalhes. Criação de despesas mais rápida com menos digitação.',
   'comingSoon.ai.title': 'Digitalização de recibos por IA',
   'comingSoon.badge': 'Em breve',
-  'comingSoon.conversion.desc': 'Conversão automática entre moedas. Divida em euros, pague em dólares.',
-  'comingSoon.conversion.title': 'Conversões de moeda',
   'comingSoon.export.desc': 'Baixe suas despesas como Excel, CSV ou PDF. Seus dados, seu formato, do seu jeito.',
   'comingSoon.export.title': 'Exporte seus dados',
   'comingSoon.mobile.desc': 'Aplicativos para iOS e Android para rastreamento de despesas em trânsito. Adicione despesas logo após pagar.',

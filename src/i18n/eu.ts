@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Atera argazki bat, utzi AAri xehetasunak ateratzen. Gastu sorrera azkarragoa idazketa gutxiagorekin.',
   'comingSoon.ai.title': 'AA Tiket Eskaneatzea',
   'comingSoon.badge': 'Laster Etorriko Da',
-  'comingSoon.conversion.desc': 'Moneten arteko bihurketa automatikoa. Banatu eurotan, konpondu dolarretan.',
-  'comingSoon.conversion.title': 'Moneta Bihurketak',
   'comingSoon.export.desc': 'Deskargatu zure gastuak Excel, CSV edo PDF formatuan. Zure datuak, zure formatua, zure modura.',
   'comingSoon.export.title': 'Esportatu Zure Datuak',
   'comingSoon.mobile.desc': 'iOS eta Android aplikazioak bidean gastuen jarraipena egiteko. Gehitu gastuak ordaindu bezain laster.',

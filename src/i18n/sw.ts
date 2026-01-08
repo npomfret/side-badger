@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Piga picha, acha AI ichambue maelezo. Tengeneza gharama haraka kwa kuandika kidogo.',
   'comingSoon.ai.title': 'Uchanganuzi wa risiti kwa AI',
   'comingSoon.badge': 'Inakuja hivi karibuni',
-  'comingSoon.conversion.desc': 'Ubadilishaji wa kiotomatiki kati ya sarafu. Gawanya kwa euro, lipa kwa dola.',
-  'comingSoon.conversion.title': 'Ubadilishaji wa sarafu',
   'comingSoon.export.desc': 'Pakua gharama zako kama Excel, CSV, au PDF. Data yako, fomati yako, njia yako.',
   'comingSoon.export.title': 'Hamisha data yako',
   'comingSoon.mobile.desc': 'Programu za iOS na Android kwa ufuatiliaji wa gharama ukiwa safarini. Ongeza gharama mara tu baada ya kulipa.',

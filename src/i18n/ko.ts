@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': '사진을 찍으면 AI가 세부 정보를 추출합니다. 타이핑을 줄여 더 빠른 비용 생성.',
   'comingSoon.ai.title': 'AI 영수증 스캔',
   'comingSoon.badge': '곧 출시',
-  'comingSoon.conversion.desc': '통화 간 자동 변환. 유로로 분할하고 달러로 정산하세요.',
-  'comingSoon.conversion.title': '통화 변환',
   'comingSoon.export.desc': '비용을 Excel, CSV 또는 PDF로 다운로드하세요. 당신의 데이터, 당신의 형식, 당신의 방식대로.',
   'comingSoon.export.title': '데이터 내보내기',
   'comingSoon.mobile.desc': '이동 중 비용 추적을 위한 iOS 및 Android 앱. 결제 직후 비용을 추가하세요.',

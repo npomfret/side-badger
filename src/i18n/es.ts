@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Toma una foto y deja que la IA extraiga los detalles. Creación de gastos más rápida escribiendo menos.',
   'comingSoon.ai.title': 'Escaneo de recibos con IA',
   'comingSoon.badge': 'Próximamente',
-  'comingSoon.conversion.desc': 'Conversión automática entre monedas. Divide en euros, salda en dólares.',
-  'comingSoon.conversion.title': 'Conversión de monedas',
   'comingSoon.export.desc': 'Descarga tus gastos como Excel, CSV o PDF. Tus datos, tu formato, a tu manera.',
   'comingSoon.export.title': 'Exporta tus datos',
   'comingSoon.mobile.desc': 'Apps para iOS y Android para seguimiento de gastos sobre la marcha. Añade gastos justo después de pagar.',

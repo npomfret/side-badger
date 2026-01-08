@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Tóg grianghraf, lig don Intleacht Shaorga na sonraí a bhaint amach. Cruthú costais níos tapúla le níos lú clóscríofa.',
   'comingSoon.ai.title': 'Scanadh Admhálacha le IS',
   'comingSoon.badge': 'Ag teacht go luath',
-  'comingSoon.conversion.desc': 'Tiontú uathoibríoch idir airgeadraí. Roinn in euro, socraigh i ndollair.',
-  'comingSoon.conversion.title': 'Tiontuithe Airgeadra',
   'comingSoon.export.desc': 'Íoslódáil do chostais mar Excel, CSV, nó PDF. Do shonraí, d\'fhormáid, do bhealach.',
   'comingSoon.export.title': 'Easpórtáil Do Shonraí',
   'comingSoon.mobile.desc': 'Aipeanna iOS agus Android le costais a rianú ar an mbóthar. Cuir costais leis díreach tar éis duit íoc.',

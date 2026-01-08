@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'ఫోటో తీయండి, వివరాలను AI తీసుకురాగలదు. తక్కువ టైపింగ్‌తో వేగంగా ఖర్చు నమోదు.',
   'comingSoon.ai.title': 'AI రసీదు స్కానింగ్',
   'comingSoon.badge': 'త్వరలో వస్తుంది',
-  'comingSoon.conversion.desc': 'కరెన్సీల మధ్య స్వయంచాలక మార్పిడి. యూరోలలో పంచండి, డాలర్లలో సెటిల్ చేయండి.',
-  'comingSoon.conversion.title': 'కరెన్సీ మార్పిడులు',
   'comingSoon.export.desc': 'మీ ఖర్చులను Excel, CSV లేదా PDFగా డౌన్‌లోడ్ చేసుకోండి. మీ డేటా, మీ ఫార్మాట్, మీ విధానం.',
   'comingSoon.export.title': 'మీ డేటాను ఎగుమతి చేయండి',
   'comingSoon.mobile.desc': 'ప్రయాణంలో ఖర్చులను ట్రాక్ చేయడానికి iOS మరియు Android యాప్‌లు. చెల్లించిన వెంటనే ఖర్చులను జోడించండి.',

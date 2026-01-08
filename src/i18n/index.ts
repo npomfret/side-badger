@@ -37,6 +37,7 @@ import pcm from './pcm';
 import sw from './sw';
 import te from './te';
 import ur from './ur';
+import fa from './fa';
 
 // =============================================================================
 // CENTRAL CONFIGURATION - Single source of truth for all locales
@@ -87,6 +88,15 @@ const localeConfig = {
     translations: eu,
     inDropdown: true,
     dropdownOrder: 20, // Basque
+    hasLogo: false,
+  },
+  fa: {
+    name: 'فارسی',
+    flagCode: 'ir',
+    intlCode: 'fa-IR',
+    translations: fa,
+    inDropdown: true,
+    dropdownOrder: 50,
     hasLogo: false,
   },
   zh: {
@@ -380,7 +390,7 @@ export const locales = Object.keys(localeConfig) as Locale[];
 export const localeAliases = Object.keys(aliasConfig) as LocaleAlias[];
 
 // Translations record
-const translations: Record<Locale, typeof en> = Object.fromEntries(
+export const translations: Record<Locale, typeof en> = Object.fromEntries(
   Object.entries(localeConfig).map(([key, config]) => [key, config.translations])
 ) as Record<Locale, typeof en>;
 

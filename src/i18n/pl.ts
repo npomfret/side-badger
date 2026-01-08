@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Zrób zdjęcie, a AI wyciągnie szczegóły. Szybsze tworzenie wydatków przy mniejszym pisaniu.',
   'comingSoon.ai.title': 'Skanowanie paragonów przez AI',
   'comingSoon.badge': 'Wkrótce',
-  'comingSoon.conversion.desc': 'Automatyczna konwersja walut. Dziel w euro, rozliczaj w dolarach.',
-  'comingSoon.conversion.title': 'Konwersje walut',
   'comingSoon.export.desc': 'Pobierz swoje wydatki jako Excel, CSV lub PDF. Twoje dane, twój format, po twojemu.',
   'comingSoon.export.title': 'Eksportuj dane',
   'comingSoon.mobile.desc': 'Aplikacje iOS i Android do śledzenia wydatków w ruchu. Dodawaj wydatki zaraz po płatności.',

@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Fă o poză, lasă AI să extragă detaliile. Creare de cheltuieli mai rapidă cu mai puțin tastat.',
   'comingSoon.ai.title': 'Scanare de chitanțe cu AI',
   'comingSoon.badge': 'În curând',
-  'comingSoon.conversion.desc': 'Conversie automată între valute. Împarte în euro, decontează în dolari.',
-  'comingSoon.conversion.title': 'Conversii valutare',
   'comingSoon.export.desc': 'Descarcă cheltuielile tale ca Excel, CSV sau PDF. Datele tale, formatul tău, în felul tău.',
   'comingSoon.export.title': 'Exportă-ți datele',
   'comingSoon.mobile.desc': 'Aplicații iOS și Android pentru urmărirea cheltuielilor din mers. Adaugă cheltuieli imediat după ce plătești.',

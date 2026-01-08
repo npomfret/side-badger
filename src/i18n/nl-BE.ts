@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Maak een foto, laat AI de details eruit halen. Sneller uitgaven aanmaken met minder typen.',
   'comingSoon.ai.title': 'AI Bonnetjes Scannen',
   'comingSoon.badge': 'Binnenkort',
-  'comingSoon.conversion.desc': 'Automatische conversie tussen valuta\'s. Split in euro\'s, reken af in dollars.',
-  'comingSoon.conversion.title': 'Valutaconversies',
   'comingSoon.export.desc': 'Download je uitgaven als Excel, CSV of PDF. Jouw gegevens, jouw formaat, jouw manier.',
   'comingSoon.export.title': 'Exporteer Je Gegevens',
   'comingSoon.mobile.desc': 'iOS en Android apps om onderweg uitgaven bij te houden. Voeg uitgaven toe direct nadat je betaalt.',

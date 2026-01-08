@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Kunan ng larawan, hayaan ang AI na kunin ang mga detalye. Mas mabilis na paggawa ng gastos na may mas kaunting pag-type.',
   'comingSoon.ai.title': 'AI Receipt Scanning',
   'comingSoon.badge': 'Paparating na',
-  'comingSoon.conversion.desc': 'Awtomatikong pagbabago sa pagitan ng mga pera. Hatiin sa euro, ayusin sa dolyar.',
-  'comingSoon.conversion.title': 'Pagpapalit ng Pera',
   'comingSoon.export.desc': 'I-download ang iyong mga gastos bilang Excel, CSV, o PDF. Ang iyong data, ang iyong format, ang iyong paraan.',
   'comingSoon.export.title': 'I-export ang Iyong Data',
   'comingSoon.mobile.desc': 'Mga iOS at Android app para sa on-the-go na pagsubaybay sa gastos. Magdagdag ng mga gastos pagkatapos mong magbayad.',

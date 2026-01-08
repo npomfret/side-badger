@@ -9,8 +9,6 @@ export default {
   'comingSoon.ai.desc': 'Prenez une photo, laissez l\'IA extraire les détails. Création de dépenses plus rapide avec moins de saisie.',
   'comingSoon.ai.title': 'Scan de reçus par IA',
   'comingSoon.badge': 'Bientôt disponible',
-  'comingSoon.conversion.desc': 'Conversion automatique entre les devises. Partagez en euros, réglez en dollars.',
-  'comingSoon.conversion.title': 'Conversions de devises',
   'comingSoon.export.desc': 'Téléchargez vos dépenses au format Excel, CSV ou PDF. Vos données, votre format, à votre façon.',
   'comingSoon.export.title': 'Exporter vos données',
   'comingSoon.mobile.desc': 'Applications iOS et Android pour le suivi des dépenses en déplacement. Ajoutez des dépenses juste après avoir payé.',

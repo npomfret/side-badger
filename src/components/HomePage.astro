@@ -66,6 +66,80 @@ const { locale } = Astro.props;
     </div>
   </section>
 
+  <!-- What's It For Section -->
+  <section class="whats-it-for" aria-labelledby="whats-it-for-title">
+    <div class="container">
+      <div class="section-header text-center fade-up">
+        <h2 id="whats-it-for-title">{t('whatsItFor.title', locale)}</h2>
+        <p>{t('whatsItFor.subtitle', locale)}</p>
+      </div>
+
+      <div class="bento-grid-lg">
+        <!-- Bill Splitting -->
+        <div class="feature-card fade-up">
+          <div class="feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/>
+              <path d="M14 8H8"/>
+              <path d="M16 12H8"/>
+              <path d="M13 16H8"/>
+            </svg>
+          </div>
+          <h3>{t('whatsItFor.billSplitting.title', locale)}</h3>
+          <p>{t('whatsItFor.billSplitting.desc', locale)}</p>
+        </div>
+
+        <!-- Expense Sharing -->
+        <div class="feature-card fade-up" data-delay="50">
+          <div class="feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <h3>{t('whatsItFor.expenseSharing.title', locale)}</h3>
+          <p>{t('whatsItFor.expenseSharing.desc', locale)}</p>
+        </div>
+
+        <!-- Budget Tracking -->
+        <div class="feature-card fade-up" data-delay="100">
+          <div class="feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/>
+              <path d="M22 12A10 10 0 0 0 12 2v10z"/>
+            </svg>
+          </div>
+          <h3>{t('whatsItFor.budgetTracking.title', locale)}</h3>
+          <p>{t('whatsItFor.budgetTracking.desc', locale)}</p>
+        </div>
+
+        <!-- Reduce Transactions -->
+        <div class="feature-card fade-up" data-delay="150">
+          <div class="feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </div>
+          <h3>{t('whatsItFor.reduceTransactions.title', locale)}</h3>
+          <p>{t('whatsItFor.reduceTransactions.desc', locale)}</p>
+        </div>
+
+        <!-- Travel -->
+        <div class="feature-card fade-up" data-delay="200">
+          <div class="feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+              <path d="M2 12h20"/>
+            </svg>
+          </div>
+          <h3>{t('whatsItFor.travel.title', locale)}</h3>
+          <p>{t('whatsItFor.travel.desc', locale)}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Features Section -->
   <section class="features" aria-labelledby="features-title">
     <div class="container">

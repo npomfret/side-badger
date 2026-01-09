@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': '어디에 쓰나요?',
   'whatsItFor.travel.desc': '여행, 휴가, 로드트립. 커피, 택시, 호텔까지 모든 비용을 기록하고, 여행 후 정산 스트레스는 없앱니다.',
   'whatsItFor.travel.title': '휴가 및 여행',
+  'whatsItFor.events.desc': '생일, 서프라이즈, 단체 선물. 파티 비용과 티켓, 계산서를 어색함 없이 나눠요.',
+  'whatsItFor.events.title': '파티와 생일',
 } as const;

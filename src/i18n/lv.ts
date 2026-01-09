@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'Kam tas paredzēts?',
   'whatsItFor.travel.desc': 'Ceļojumi, atvaļinājumi, auto piedzīvojumi. Sekojiet līdzi katrai kafijasai, taksim un viesnīcai bez galvassāpēm pēc tam.',
   'whatsItFor.travel.title': 'Brīvdienas un ceļojumi',
+  'whatsItFor.events.desc': 'Dzimšanas dienas, pārsteigumi un kopīgas dāvanas. Sadaliet ballīšu izmaksas, biļetes un rēķinus bez neērtas atgādināšanas.',
+  'whatsItFor.events.title': 'Ballītes un dzimšanas dienas',
 } as const;

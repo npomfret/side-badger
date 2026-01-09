@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'Cad chuige é?',
   'whatsItFor.travel.desc': 'Turais, saoire, eachtraí bóthair. Lean gach caife, tacsaí, agus óstán gan an tinneas cinn tar éis an turais.',
   'whatsItFor.travel.title': 'Laethanta saoire agus taisteal',
+  'whatsItFor.events.desc': 'Breithlaethanta, iontais agus bronntanais ghrúpa. Roinn costais na cóisire, ticéid agus billí gan an rith i ndiaidh daoine.',
+  'whatsItFor.events.title': 'Cóisir & breithlaethanta',
 } as const;

@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'Vad är det till för?',
   'whatsItFor.travel.desc': 'Resor, semestrar, biläventyr. Spåra varje kaffe, taxi och hotell utan huvudvärk efteråt.',
   'whatsItFor.travel.title': 'Semester och resor',
+  'whatsItFor.events.desc': 'Födelsedagar, överraskningar och gruppgåvor. Dela festkostnader, biljetter och notan utan att jaga folk.',
+  'whatsItFor.events.title': 'Fester och födelsedagar',
 } as const;

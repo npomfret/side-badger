@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'Ar gyfer beth mae e?',
   'whatsItFor.travel.desc': 'Tripiau, gwyliau, anturiaethau ffordd. Traciwch bob coffi, tacsi, a gwesty heb y cur pen ar ôl y daith.',
   'whatsItFor.travel.title': 'Gwyliau a theithio',
+  'whatsItFor.events.desc': 'Penblwyddi, syrpreisiau, ac anrhegion grŵp. Rhannwch gostau’r parti, tocynnau a biliau heb y sgwrs annifyr.',
+  'whatsItFor.events.title': 'Partïon a phenblwyddi',
 } as const;

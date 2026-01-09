@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'Waar is het voor?',
   'whatsItFor.travel.desc': 'Uitstapjes, vakanties, roadtrips. Houd elke koffie, taxi en hotel bij zonder gedoe achteraf.',
   'whatsItFor.travel.title': 'Vakanties en reizen',
+  'whatsItFor.events.desc': 'Verjaardagen, verrassingen en groepscadeaus. Verdeel feestkosten, tickets en rekeningen zonder achter iemand aan te moeten.',
+  'whatsItFor.events.title': 'Feestjes & verjaardagen',
 } as const;

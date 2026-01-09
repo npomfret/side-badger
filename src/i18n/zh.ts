@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': '用来做什么？',
   'whatsItFor.travel.desc': '短途旅行、度假、自驾游。记录每一杯咖啡、每趟出租车、每晚酒店，旅行结束后不再头疼。',
   'whatsItFor.travel.title': '假期与旅行',
+  'whatsItFor.events.desc': '生日、惊喜和团体礼物。分摊派对花费、门票和账单，不用尴尬催账。',
+  'whatsItFor.events.title': '派对与生日',
 } as const;

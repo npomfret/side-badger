@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'لماذا Side Badger؟',
   'whatsItFor.travel.desc': 'الرحلات، الإجازات، المغامرات على الطريق. تتبع كل قهوة وتاكسي وفندق دون صداع ما بعد الرحلة.',
   'whatsItFor.travel.title': 'العطلات والسفر',
+  'whatsItFor.events.desc': 'أعياد الميلاد والمفاجآت والهدايا الجماعية. قسّم تكاليف الحفلة والتذاكر والفواتير دون المطاردة المحرجة.',
+  'whatsItFor.events.title': 'الحفلات وأعياد الميلاد',
 } as const;

@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'یہ کس لیے ہے؟',
   'whatsItFor.travel.desc': 'ٹرپس، چھٹیاں، روڈ ایڈونچرز۔ ہر کافی، ٹیکسی اور ہوٹل کا حساب رکھیں سفر کے بعد کی پریشانی کے بغیر۔',
   'whatsItFor.travel.title': 'چھٹیاں اور سفر',
+  'whatsItFor.events.desc': 'سالگرہ، سرپرائز اور گروپ تحائف۔ پارٹی کے اخراجات، ٹکٹ اور بل بغیر جھجک کے تقسیم کریں۔',
+  'whatsItFor.events.title': 'پارٹیاں اور سالگرہیں',
 } as const;

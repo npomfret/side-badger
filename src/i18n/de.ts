@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'Wofür ist es gedacht?',
   'whatsItFor.travel.desc': 'Ausflüge, Urlaube, Roadtrips. Erfasse jeden Kaffee, jedes Taxi und jedes Hotel ohne Kopfzerbrechen danach.',
   'whatsItFor.travel.title': 'Urlaub & Reisen',
+  'whatsItFor.events.desc': 'Geburtstage, Überraschungen und Gruppengeschenke. Teilt Party-Kosten, Tickets und Rechnungen ohne unangenehmes Hinterherlaufen.',
+  'whatsItFor.events.title': 'Partys & Geburtstage',
 } as const;

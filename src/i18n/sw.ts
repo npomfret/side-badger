@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'Inatumikaje?',
   'whatsItFor.travel.desc': 'Safari, likizo, matembezi ya barabara. Fuatilia kila kahawa, teksi na hoteli bila maumivu ya kichwa baada ya safari.',
   'whatsItFor.travel.title': 'Likizo na usafiri',
+  'whatsItFor.events.desc': 'Siku za kuzaliwa, mshangao, na zawadi za pamoja. Gawanya gharama za sherehe, tiketi, na bili bila kuwakimbiza watu.',
+  'whatsItFor.events.title': 'Sherehe na siku za kuzaliwa',
 } as const;

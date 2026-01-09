@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'Hva brukes det til?',
   'whatsItFor.travel.desc': 'Turer, ferier, bilturer. Spor hver kaffe, taxi og hotell uten hodepine etterpå.',
   'whatsItFor.travel.title': 'Ferier og reiser',
+  'whatsItFor.events.desc': 'Bursdager, overraskelser og gruppe-gaver. Del festkostnader, billetter og regninger uten mas.',
+  'whatsItFor.events.title': 'Fester og bursdager',
 } as const;

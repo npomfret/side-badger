@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'Untuk apa ini?',
   'whatsItFor.travel.desc': 'Perjalanan, liburan, petualangan jalan. Lacak setiap kopi, taksi, dan hotel tanpa pusing setelah perjalanan.',
   'whatsItFor.travel.title': 'Liburan dan perjalanan',
+  'whatsItFor.events.desc': 'Ulang tahun, kejutan, dan hadiah bareng. Bagi biaya pesta, tiket, dan tagihan tanpa harus nagih-nagih.',
+  'whatsItFor.events.title': 'Pesta & ulang tahun',
 } as const;

@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'A cosa serve?',
   'whatsItFor.travel.desc': 'Gite, vacanze, avventure on the road. Registra ogni caffè, taxi e hotel senza mal di testa al ritorno.',
   'whatsItFor.travel.title': 'Vacanze e viaggi',
+  'whatsItFor.events.desc': 'Compleanni, sorprese e regali di gruppo. Dividi spese di festa, biglietti e conti senza inseguire nessuno.',
+  'whatsItFor.events.title': 'Feste e compleanni',
 } as const;

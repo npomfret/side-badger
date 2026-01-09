@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'برای چه کاری است؟',
   'whatsItFor.travel.desc': 'سفرها، تعطیلات، ماجراجویی‌های جاده‌ای. هر قهوه، تاکسی و هتل را بدون سردرد بعد از سفر پیگیری کنید.',
   'whatsItFor.travel.title': 'تعطیلات و سفر',
+  'whatsItFor.events.desc': 'تولدها، سورپرایزها و هدیه‌های گروهی. هزینه‌های جشن، بلیت‌ها و صورتحساب‌ها را بدون رودربایستی تقسیم کنید.',
+  'whatsItFor.events.title': 'جشن‌ها و تولدها',
 } as const;

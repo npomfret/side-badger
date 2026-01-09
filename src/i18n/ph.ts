@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'Para saan ito?',
   'whatsItFor.travel.desc': 'Mga biyahe, bakasyon, road trip. Subaybayan ang bawat kape, taxi, at hotel nang walang sakit ng ulo pagkatapos.',
   'whatsItFor.travel.title': 'Bakasyon at paglalakbay',
+  'whatsItFor.events.desc': 'Kaarawan, sorpresa, at group gifts. Hatiin ang gastos sa party, tickets, at bill nang walang awkward na singilan.',
+  'whatsItFor.events.title': 'Mga party at kaarawan',
 } as const;

@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': '何に使えるの？',
   'whatsItFor.travel.desc': '旅行、バケーション、ドライブ旅行。コーヒー、タクシー、ホテル代まで、旅行後の頭痛なしに記録できます。',
   'whatsItFor.travel.title': '旅行・休暇',
+  'whatsItFor.events.desc': '誕生日、サプライズ、グループギフト。パーティー費用やチケット、会計を気まずさなく割り勘に。',
+  'whatsItFor.events.title': 'パーティー・誕生日',
 } as const;

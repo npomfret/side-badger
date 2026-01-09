@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'Zertarako da?',
   'whatsItFor.travel.desc': 'Txangoak, oporrak, errepide-abenturak. Jarraitu kafe, taxi eta hotel guztiak bidaia osteko buruhausterik gabe.',
   'whatsItFor.travel.title': 'Oporrak eta bidaiak',
+  'whatsItFor.events.desc': 'Urtebetetzeak, sorpresak eta talde-opariak. Banatu festa-gastuak, sarrerak eta kontuak deseroso ibili gabe.',
+  'whatsItFor.events.title': 'Festa eta urtebetetzeak',
 } as const;

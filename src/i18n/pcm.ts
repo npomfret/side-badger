@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'Wetin e dey do?',
   'whatsItFor.travel.desc': 'Trip, vacation, road adventure. Track every coffee, taxi, and hotel without headache after the trip.',
   'whatsItFor.travel.title': 'Holiday and travel',
+  'whatsItFor.events.desc': 'Birthday, surprise, and group gift. Share party cost, ticket, and bill without wahala chase.',
+  'whatsItFor.events.title': 'Party & birthday',
 } as const;

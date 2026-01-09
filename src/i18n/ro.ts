@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'Pentru ce este?',
   'whatsItFor.travel.desc': 'Excursii, vacanțe, aventuri rutiere. Urmăriți fiecare cafea, taxi și hotel fără dureri de cap după.',
   'whatsItFor.travel.title': 'Vacanțe și călătorii',
+  'whatsItFor.events.desc': 'Zile de naștere, surprize și cadouri de grup. Împarte costurile petrecerii, biletele și notele fără să alergi după nimeni.',
+  'whatsItFor.events.title': 'Petreceri și zile de naștere',
 } as const;

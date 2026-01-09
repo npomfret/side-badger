@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'यह किसके लिए है?',
   'whatsItFor.travel.desc': 'ट्रिप्स, वेकेशन, रोड एडवेंचर्स। हर कॉफी, टैक्सी और होटल का हिसाब रखें बिना ट्रिप के बाद के सिरदर्द के।',
   'whatsItFor.travel.title': 'छुट्टियां और यात्रा',
+  'whatsItFor.events.desc': 'जन्मदिन, सरप्राइज़ और ग्रुप गिफ्ट्स। पार्टी खर्च, टिकट और बिल बिना झिझक के बांटें।',
+  'whatsItFor.events.title': 'पार्टियां और जन्मदिन',
 } as const;

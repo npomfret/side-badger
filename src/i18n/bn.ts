@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'এটি কিসের জন্য?',
   'whatsItFor.travel.desc': 'ট্রিপ, ছুটি, রোড অ্যাডভেঞ্চার। ট্রিপের পরে মাথাব্যথা ছাড়াই প্রতিটি কফি, ট্যাক্সি এবং হোটেল ট্র্যাক করুন।',
   'whatsItFor.travel.title': 'ছুটি ও ভ্রমণ',
+  'whatsItFor.events.desc': 'জন্মদিন, চমক, আর দলগত উপহার। পার্টির খরচ, টিকিট, আর বিলগুলো ঝামেলা ছাড়া ভাগ করুন।',
+  'whatsItFor.events.title': 'পার্টি ও জন্মদিন',
 } as const;

@@ -160,4 +160,6 @@ export default {
   'whatsItFor.title': 'Do czego służy?',
   'whatsItFor.travel.desc': 'Wycieczki, wakacje, przygody samochodowe. Śledź każdą kawę, taksówkę i hotel bez bólu głowy po powrocie.',
   'whatsItFor.travel.title': 'Wakacje i podróże',
+  'whatsItFor.events.desc': 'Urodziny, niespodzianki i prezenty grupowe. Podziel koszty imprezy, bilety i rachunki bez gonienia znajomych.',
+  'whatsItFor.events.title': 'Imprezy i urodziny',
 } as const;

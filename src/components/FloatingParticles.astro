@@ -7,6 +7,7 @@
 <script>
   import { tsParticles } from "@tsparticles/engine";
   import { loadSlim } from "@tsparticles/slim";
+  import confetti from 'canvas-confetti';
 
   // Check for reduced motion preference
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -15,7 +16,7 @@
     // Load the slim bundle
     await loadSlim(tsParticles);
 
-    tsParticles.load({
+    const container = await tsParticles.load({
       id: "floating-particles",
       options: {
         fullScreen: {
@@ -104,6 +105,62 @@
         smooth: true
       }
     });
+
+    // Manual click-to-pop handler
+    if (container) {
+      window.addEventListener('click', (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        
+        // Handle Retina/High-DPI screens
+        // tsParticles internal coordinates are usually in device pixels when detectRetina is true
+        const pixelRatio = container.retina.pixelRatio ?? window.devicePixelRatio ?? 1;
+
+        // v3: container.particles might not be an array directly
+        // Use filter to get all particles
+        const particles = container.particles.filter(() => true);
+        
+        // Check backwards to pop top particles first
+        for (let i = particles.length - 1; i >= 0; i--) {
+          const p = particles[i];
+          const pos = p.getPosition();
+          
+          // Convert particle position to logical CSS pixels
+          const px = pos.x / pixelRatio;
+          const py = pos.y / pixelRatio;
+          
+          // Calculate distance in CSS pixels
+          const dist = Math.sqrt(Math.pow(x - px, 2) + Math.pow(y - py, 2));
+          
+          // Hitbox: 30px radius (precise)
+          if (dist < 30) {
+            // Pop!
+            container.particles.remove(p);
+            
+            // Visual feedback
+            const normalizeX = x / window.innerWidth;
+            const normalizeY = y / window.innerHeight;
+            
+            // Safe color palette
+            const colors = ["#4ade80", "#2dd4bf", "#facc15", "#86efac", "#059669"];
+            
+            confetti({
+              particleCount: 15,
+              spread: 40,
+              origin: { x: normalizeX, y: normalizeY },
+              colors: colors,
+              disableForReducedMotion: true,
+              startVelocity: 15,
+              gravity: 0.8,
+              ticks: 100,
+              shapes: ['circle']
+            });
+            
+            break; 
+          }
+        }
+      });
+    }
   }
 </script>
 

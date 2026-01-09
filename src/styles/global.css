@@ -106,16 +106,18 @@ a:hover {
   background: linear-gradient(
     90deg,
     var(--accent-primary) 0%,
-    var(--accent-secondary) 25%,
-    var(--accent-tertiary) 50%,
-    var(--accent-secondary) 75%,
+    var(--accent-secondary) 20%,
+    #fbbf24 40%, /* Amber-400 for a golden glint */
+    var(--accent-tertiary) 60%,
+    var(--accent-secondary) 80%,
     var(--accent-primary) 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: shimmer-text 3s linear infinite;
+  animation: shimmer-text 4s linear infinite;
+  filter: drop-shadow(0 0 2px rgba(251, 191, 36, 0.3));
 }
 
 /* Hero title animation */

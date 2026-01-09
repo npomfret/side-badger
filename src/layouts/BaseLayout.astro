@@ -1,6 +1,7 @@
 ---
 import CanopyBloom from '../components/CanopyBloom.astro';
 import FloatingParticles from '../components/FloatingParticles.astro';
+import MagicalCursor from '../components/MagicalCursor.astro';
 import EasterEggs from '../components/EasterEggs.astro';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import LanguageDetection from '../components/LanguageDetection.astro';
@@ -99,9 +100,9 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
     <a href="#main-content" class="skip-link">{t('a11y.skipToContent', locale)}</a>
     <CanopyBloom />
     <FloatingParticles />
+    <MagicalCursor />
     <EasterEggs />
     <LanguageDetection currentLocale={locale} />
-    <div id="cursor-glow" aria-hidden="true"></div>
 
     <slot name="header">
       <header class="site-header" role="banner">
@@ -199,33 +200,6 @@ const siteUrl = Astro.site?.origin || 'https://sidebadger.com';
       }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
       document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
-
-      // Cursor glow effect (cursor aurora)
-      const cursorGlow = document.getElementById('cursor-glow');
-      let mouseX = 0, mouseY = 0;
-      let glowX = 0, glowY = 0;
-
-      document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-      });
-
-      function animateCursor() {
-        // Smooth interpolation (0.08 factor for dreamy lag)
-        glowX += (mouseX - glowX) * 0.08;
-        glowY += (mouseY - glowY) * 0.08;
-
-        if (cursorGlow) {
-          cursorGlow.style.transform = `translate(${glowX - 300}px, ${glowY - 300}px)`;
-        }
-
-        requestAnimationFrame(animateCursor);
-      }
-
-      // Only enable cursor glow on non-touch devices
-      if (window.matchMedia('(pointer: fine)').matches) {
-        animateCursor();
-      }
     </script>
   </body>
 </html>

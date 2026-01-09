@@ -1,0 +1,172 @@
+---
+// A magical cursor trail and glow effect
+---
+
+<div id="magical-cursor-container" aria-hidden="true">
+  <div id="cursor-glow"></div>
+  <canvas id="cursor-trail"></canvas>
+</div>
+
+<script>
+  // Check for reduced motion preference
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+
+  if (!prefersReducedMotion && !isTouchDevice) {
+    const container = document.getElementById('magical-cursor-container');
+    const glow = document.getElementById('cursor-glow');
+    const canvas = document.getElementById('cursor-trail') as HTMLCanvasElement;
+    const ctx = canvas.getContext('2d');
+
+    let mouseX = -100;
+    let mouseY = -100;
+    let glowX = -100;
+    let glowY = -100;
+
+    // Canvas setup
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+
+    const resize = () => {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+    };
+    window.addEventListener('resize', resize);
+    resize();
+
+    // Mouse tracking
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    // Particle system for the trail
+    class Particle {
+      x: number;
+      y: number;
+      size: number;
+      speedX: number;
+      speedY: number;
+      life: number;
+      maxLife: number;
+      color: string;
+
+      constructor(x: number, y: number) {
+        this.x = x;
+        this.y = y;
+        this.size = Math.random() * 3 + 1;
+        this.speedX = Math.random() * 2 - 1;
+        this.speedY = Math.random() * 2 - 1;
+        this.life = 0;
+        this.maxLife = Math.random() * 20 + 10;
+        
+        // Random forest/magic colors
+        const colors = ['#4ade80', '#2dd4bf', '#facc15', '#ffffff'];
+        this.color = colors[Math.floor(Math.random() * colors.length)];
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.size *= 0.95; // Shrink
+        this.life++;
+      }
+
+      draw(context: CanvasRenderingContext2D) {
+        context.fillStyle = this.color;
+        context.globalAlpha = 1 - this.life / this.maxLife;
+        context.beginPath();
+        context.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        context.fill();
+        context.globalAlpha = 1;
+      }
+    }
+
+    const particles: Particle[] = [];
+
+    // Animation loop
+    const animate = () => {
+      // 1. Update Glow (Smooth follow)
+      glowX += (mouseX - glowX) * 0.12;
+      glowY += (mouseY - glowY) * 0.12;
+      
+      if (glow) {
+        glow.style.transform = `translate(${glowX}px, ${glowY}px)`;
+      }
+
+      // 2. Update Trail
+      if (ctx) {
+        ctx.clearRect(0, 0, width, height);
+
+        // Add new particles if mouse is moving
+        // We can add a few particles per frame near the mouse
+        if (Math.abs(mouseX - glowX) > 1 || Math.abs(mouseY - glowY) > 1) {
+            for (let i = 0; i < 2; i++) {
+                particles.push(new Particle(mouseX, mouseY));
+            }
+        }
+
+        // Update and draw particles
+        for (let i = 0; i < particles.length; i++) {
+          particles[i].update();
+          particles[i].draw(ctx);
+
+          if (particles[i].life >= particles[i].maxLife || particles[i].size < 0.2) {
+            particles.splice(i, 1);
+            i--;
+          }
+        }
+      }
+
+      requestAnimationFrame(animate);
+    };
+
+    animate();
+  }
+</script>
+
+<style>
+  #magical-cursor-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: var(--z-cursor, 9999);
+    overflow: hidden;
+  }
+
+  #cursor-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    margin-left: -300px; /* Center the glow on the coordinates */
+    margin-top: -300px;
+    background: radial-gradient(
+      circle,
+      rgba(74, 222, 128, 0.15) 0%,
+      rgba(45, 212, 191, 0.1) 25%,
+      rgba(250, 204, 21, 0.05) 45%,
+      transparent 65%
+    );
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    will-change: transform;
+    filter: blur(20px);
+  }
+
+  #cursor-trail {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce), (pointer: coarse) {
+    #magical-cursor-container {
+      display: none;
+    }
+  }
+</style>

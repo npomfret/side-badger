@@ -1,5 +1,5 @@
 ---
-// Floating particles using tsparticles - falling leaves/petals effect
+// Floating particles using tsparticles - magical rising spores
 ---
 
 <div id="floating-particles" aria-hidden="true"></div>
@@ -19,52 +19,89 @@
       id: "floating-particles",
       options: {
         fullScreen: {
-          enable: true,
-          zIndex: -1
+          enable: false,
+          zIndex: 0
         },
         particles: {
           number: {
-            value: 8
-          },
-          color: {
-            value: ["#34d399", "#22c55e", "#86efac", "#bbf7d0", "#a7f3d0"]
-          },
-          shape: {
-            type: "emoji",
-            options: {
-              emoji: {
-                value: ["🍃", "🌿", "☘️", "🍀", "🌱"]
-              }
+            value: 30,
+            density: {
+              enable: true,
+              height: 800,
+              width: 800
             }
           },
+          color: {
+            value: ["#4ade80", "#2dd4bf", "#facc15", "#86efac", "#059669", "#0d9488"]
+          },
+          shape: {
+            type: "circle"
+          },
           opacity: {
-            value: { min: 0.15, max: 0.35 }
+            value: { min: 0.4, max: 0.7 },
+            animation: {
+              enable: true,
+              speed: 0.5,
+              sync: false,
+              mode: "auto"
+            }
           },
           size: {
-            value: { min: 24, max: 40 }
+            value: { min: 3, max: 6 },
+            animation: {
+              enable: true,
+              speed: 2,
+              sync: false,
+              mode: "auto"
+            }
           },
           move: {
             enable: true,
-            speed: { min: 0.2, max: 0.5 },
-            direction: "bottom",
-            straight: true,
+            speed: { min: 0.5, max: 1.5 },
+            direction: "top",
+            straight: false,
+            random: true,
             outModes: {
-              default: "out",
-              top: "out",
-              bottom: "out"
+              default: "out"
+            },
+            path: {
+              enable: true,
+              delay: {
+                value: 0
+              },
+              options: {
+                freq: 0.05,
+                amp: 10
+              }
             }
           },
-          rotate: {
-            value: { min: 0, max: 360 },
-            direction: "random",
-            animation: {
+          wobble: {
+            enable: true,
+            distance: 5,
+            speed: 5
+          }
+        },
+        interactivity: {
+          detectsOn: "window",
+          events: {
+            onHover: {
               enable: true,
-              speed: { min: 1, max: 3 }
+              mode: "bubble"
+            }
+          },
+          modes: {
+            bubble: {
+              distance: 200,
+              size: 10,
+              duration: 2,
+              opacity: 0.8,
+              color: "#ffffff"
             }
           }
         },
         detectRetina: true,
-        fpsLimit: 60
+        fpsLimit: 60,
+        smooth: true
       }
     });
   }

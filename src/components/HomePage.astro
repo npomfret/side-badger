@@ -704,6 +704,32 @@ const { locale } = Astro.props;
       });
     }
 
+    // ===== HERO BADGER PARALLAX =====
+    const heroVisual = document.querySelector('.hero-visual') as HTMLElement;
+    const heroImageContainer = document.querySelector('.hero-image-container') as HTMLElement;
+
+    if (heroVisual && heroImageContainer && !prefersReducedMotion) {
+      heroVisual.addEventListener('mousemove', (e) => {
+        const rect = heroVisual.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        // Tilt calculations
+        const rotateX = ((y - centerY) / centerY) * -10; // Max 10deg
+        const rotateY = ((x - centerX) / centerX) * 10;
+        
+        heroImageContainer.style.transform = 
+          `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+      });
+
+      heroVisual.addEventListener('mouseleave', () => {
+        heroImageContainer.style.transform = 
+          'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
+      });
+    }
+
     // ===== HERO TITLE REVEAL =====
     const heroTitle = document.querySelector('#hero-title') as HTMLElement | null;
     if (heroTitle) {

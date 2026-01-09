@@ -76,7 +76,7 @@ const { locale } = Astro.props;
 
       <div class="bento-grid-lg">
         <!-- Bill Splitting -->
-        <div class="feature-card fade-up">
+        <div class="feature-card fade-up" data-whats-it-for="billSplitting">
           <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/>
@@ -90,7 +90,7 @@ const { locale } = Astro.props;
         </div>
 
         <!-- Expense Sharing -->
-        <div class="feature-card fade-up" data-delay="50">
+        <div class="feature-card fade-up" data-whats-it-for="expenseSharing" data-delay="50">
           <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
@@ -102,7 +102,7 @@ const { locale } = Astro.props;
         </div>
 
         <!-- Budget Tracking -->
-        <div class="feature-card fade-up" data-delay="100">
+        <div class="feature-card fade-up" data-whats-it-for="budgetTracking" data-delay="100">
           <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/>
@@ -114,7 +114,7 @@ const { locale } = Astro.props;
         </div>
 
         <!-- Reduce Transactions -->
-        <div class="feature-card fade-up" data-delay="150">
+        <div class="feature-card fade-up" data-whats-it-for="reduceTransactions" data-delay="150">
           <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
@@ -125,7 +125,7 @@ const { locale } = Astro.props;
         </div>
 
         <!-- Travel -->
-        <div class="feature-card fade-up" data-delay="200">
+        <div class="feature-card fade-up" data-whats-it-for="travel" data-delay="200">
           <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"/>
@@ -137,8 +137,8 @@ const { locale } = Astro.props;
           <p>{t('whatsItFor.travel.desc', locale)}</p>
         </div>
 
-        <!-- Parties & Birthdays -->
-        <div class="feature-card fade-up" data-delay="250">
+        <!-- Gifting & Holidays -->
+        <div class="feature-card fade-up" data-whats-it-for="gifting" data-delay="250">
           <div class="feature-icon" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 12v10H4V12"/>
@@ -148,8 +148,19 @@ const { locale } = Astro.props;
               <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C10 2 12 7 12 7z"/>
             </svg>
           </div>
-          <h3>{t('whatsItFor.events.title', locale)}</h3>
-          <p>{t('whatsItFor.events.desc', locale)}</p>
+          <h3>{t('whatsItFor.gifting.title', locale)}</h3>
+          <p>{t('whatsItFor.gifting.desc', locale)}</p>
+        </div>
+
+        <!-- Events & Celebrations -->
+        <div class="feature-card fade-up" data-whats-it-for="celebrations" data-delay="300">
+          <div class="feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15 8.5 22 9.3 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9.3 9 8.5 12 2"/>
+            </svg>
+          </div>
+          <h3>{t('whatsItFor.celebrations.title', locale)}</h3>
+          <p>{t('whatsItFor.celebrations.desc', locale)}</p>
         </div>
       </div>
     </div>
@@ -558,6 +569,33 @@ const { locale } = Astro.props;
 
     // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ===== WHAT'S IT FOR CARD ROTATION =====
+    // Show 6 of 7 cards, rotating daily based on UTC day
+    const whatsItForKeys = [
+      'billSplitting',
+      'expenseSharing',
+      'budgetTracking',
+      'reduceTransactions',
+      'travel',
+      'gifting',
+      'celebrations',
+    ];
+    const visibleCount = 6;
+    const daySeed = new Date().getUTCDay();
+    const startIndex = daySeed % whatsItForKeys.length;
+    const visibleKeys = new Set<string>();
+
+    for (let i = 0; i < Math.min(visibleCount, whatsItForKeys.length); i += 1) {
+      visibleKeys.add(whatsItForKeys[(startIndex + i) % whatsItForKeys.length]);
+    }
+
+    document.querySelectorAll<HTMLElement>('[data-whats-it-for]').forEach((card) => {
+      const key = card.dataset.whatsItFor;
+      if (key && !visibleKeys.has(key)) {
+        card.classList.add('is-hidden');
+      }
+    });
 
     // ===== 3D CARD TILT =====
     if (!prefersReducedMotion) {

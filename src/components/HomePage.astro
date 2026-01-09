@@ -162,6 +162,84 @@ const { locale } = Astro.props;
           <h3>{t('whatsItFor.celebrations.title', locale)}</h3>
           <p>{t('whatsItFor.celebrations.desc', locale)}</p>
         </div>
+
+        <!-- Weddings & Big Moments -->
+        <div class="feature-card fade-up" data-whats-it-for="weddings" data-delay="350">
+          <div class="feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="12" r="4"/>
+              <circle cx="15" cy="12" r="4"/>
+              <path d="M7.5 12h-3"/>
+              <path d="M19.5 12h-3"/>
+            </svg>
+          </div>
+          <h3>{t('whatsItFor.weddings.title', locale)}</h3>
+          <p>{t('whatsItFor.weddings.desc', locale)}</p>
+        </div>
+
+        <!-- Sports & Leagues -->
+        <div class="feature-card fade-up" data-whats-it-for="sports" data-delay="400">
+          <div class="feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 21h8"/>
+              <path d="M12 17v4"/>
+              <path d="M7 4h10v5a5 5 0 0 1-10 0z"/>
+            </svg>
+          </div>
+          <h3>{t('whatsItFor.sports.title', locale)}</h3>
+          <p>{t('whatsItFor.sports.desc', locale)}</p>
+        </div>
+
+        <!-- Work Outings -->
+        <div class="feature-card fade-up" data-whats-it-for="work" data-delay="450">
+          <div class="feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="14" x="2" y="7" rx="2"/>
+              <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+              <path d="M2 13h20"/>
+            </svg>
+          </div>
+          <h3>{t('whatsItFor.work.title', locale)}</h3>
+          <p>{t('whatsItFor.work.desc', locale)}</p>
+        </div>
+
+        <!-- School & Clubs -->
+        <div class="feature-card fade-up" data-whats-it-for="school" data-delay="500">
+          <div class="feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 5h12a3 3 0 0 1 3 3v11H7a3 3 0 0 0-3 3z"/>
+              <path d="M16 2H7a3 3 0 0 0-3 3v16"/>
+            </svg>
+          </div>
+          <h3>{t('whatsItFor.school.title', locale)}</h3>
+          <p>{t('whatsItFor.school.desc', locale)}</p>
+        </div>
+
+        <!-- Renovations & Projects -->
+        <div class="feature-card fade-up" data-whats-it-for="renovations" data-delay="550">
+          <div class="feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 7 7 14l3 3 7-7"/>
+              <path d="M15 6 18 3l3 3-3 3"/>
+              <path d="M2 22h12"/>
+            </svg>
+          </div>
+          <h3>{t('whatsItFor.renovations.title', locale)}</h3>
+          <p>{t('whatsItFor.renovations.desc', locale)}</p>
+        </div>
+
+        <!-- Subscriptions & Shared Services -->
+        <div class="feature-card fade-up" data-whats-it-for="subscriptions" data-delay="600">
+          <div class="feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="14" x="2" y="5" rx="2"/>
+              <path d="M2 10h20"/>
+              <path d="M6 15h4"/>
+            </svg>
+          </div>
+          <h3>{t('whatsItFor.subscriptions.title', locale)}</h3>
+          <p>{t('whatsItFor.subscriptions.desc', locale)}</p>
+        </div>
       </div>
     </div>
   </section>
@@ -580,6 +658,12 @@ const { locale } = Astro.props;
       'travel',
       'gifting',
       'celebrations',
+      'weddings',
+      'sports',
+      'work',
+      'school',
+      'renovations',
+      'subscriptions',
     ];
     const visibleCount = 6;
     const daySeed = new Date().getUTCDay();

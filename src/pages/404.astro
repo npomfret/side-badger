@@ -37,6 +37,11 @@ for (const alias of Object.keys(localeAliasMap)) {
   locale={locale}
 >
   <section class="not-found" aria-labelledby="not-found-heading">
+    <div class="deep-woods-overlay"></div>
+    <div class="will-o-wisps">
+      <span></span><span></span><span></span>
+    </div>
+    
     <div class="badger-background">
       <img src="/images/logo-face-only-large.png" alt="" aria-hidden="true" />
     </div>
@@ -59,10 +64,21 @@ for (const alias of Object.keys(localeAliasMap)) {
 
   <script define:vars={{ translations, localePaths }}>
     const LOCALE_KEY = 'preferred-locale';
-    const storedLocale = localStorage.getItem(LOCALE_KEY);
+    let targetLocale = localStorage.getItem(LOCALE_KEY);
 
-    if (storedLocale && translations[storedLocale]) {
-      const t = translations[storedLocale];
+    // If no stored preference, try to detect from URL path
+    if (!targetLocale) {
+      const pathSegments = window.location.pathname.split('/').filter(Boolean);
+      if (pathSegments.length > 0) {
+        const urlLocale = pathSegments[0];
+        if (translations[urlLocale]) {
+          targetLocale = urlLocale;
+        }
+      }
+    }
+
+    if (targetLocale && translations[targetLocale]) {
+      const t = translations[targetLocale];
 
       // Update text content (both visible and sr-only versions)
       document.querySelectorAll('[data-i18n="title"]').forEach(el => {
@@ -73,12 +89,12 @@ for (const alias of Object.keys(localeAliasMap)) {
 
       // Update home link to localized path
       const homeLink = document.querySelector('[data-i18n-href="home"]');
-      if (homeLink && localePaths[storedLocale]) {
-        homeLink.href = localePaths[storedLocale];
+      if (homeLink && localePaths[targetLocale]) {
+        homeLink.href = localePaths[targetLocale];
       }
 
       // Update html lang attribute
-      document.documentElement.lang = storedLocale;
+      document.documentElement.lang = targetLocale;
     }
   </script>
 </BaseLayout>
@@ -91,6 +107,17 @@ for (const alias of Object.keys(localeAliasMap)) {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    /* Darker mysterious background for 404 */
+    background: radial-gradient(circle at center, #1a4d2e 0%, #052e16 100%);
+  }
+
+  .deep-woods-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    z-index: 0;
   }
 
   .badger-background {
@@ -100,35 +127,47 @@ for (const alias of Object.keys(localeAliasMap)) {
     align-items: center;
     justify-content: center;
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
   }
 
   .badger-background img {
-    width: min(70vw, 500px);
+    width: min(80vw, 600px);
     height: auto;
-    opacity: 0.15;
-    filter: grayscale(30%);
-    animation: float 6s ease-in-out infinite;
+    opacity: 0.1;
+    filter: grayscale(50%) blur(1px);
+    animation: float 8s ease-in-out infinite;
+    mask-image: radial-gradient(circle, black 40%, transparent 80%);
   }
 
   @keyframes float {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-20px) scale(1.02); }
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .badger-background img {
-      animation: none;
-    }
+  .will-o-wisps span {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #4ade80;
+    border-radius: 50%;
+    filter: blur(8px);
+    opacity: 0.6;
+    animation: wisp-float 10s infinite;
+    z-index: 2;
+  }
+  
+  .will-o-wisps span:nth-child(1) { top: 30%; left: 20%; animation-delay: 0s; background: #60a5fa; }
+  .will-o-wisps span:nth-child(2) { top: 60%; left: 70%; animation-delay: -3s; background: #facc15; }
+  .will-o-wisps span:nth-child(3) { top: 40%; left: 80%; animation-delay: -6s; }
+
+  @keyframes wisp-float {
+    0%, 100% { transform: translate(0, 0); opacity: 0.4; }
+    50% { transform: translate(30px, -30px); opacity: 0.8; }
   }
 
   .not-found-content {
     position: relative;
-    z-index: 1;
+    z-index: 5;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -140,25 +179,29 @@ for (const alias of Object.keys(localeAliasMap)) {
     font-size: clamp(6rem, 20vw, 12rem);
     font-weight: 900;
     line-height: 1;
-    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+    background: linear-gradient(135deg, #86efac 0%, #22c55e 50%, #15803d 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin: 0;
+    text-shadow: 0 0 40px rgba(34, 197, 94, 0.3);
+    letter-spacing: -0.05em;
   }
 
   .not-found-subtitle {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: 700;
-    color: var(--text-primary);
+    color: #f0fdf4;
     margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   }
 
   .not-found-description {
     font-size: clamp(1rem, 2vw, 1.25rem);
-    color: var(--text-muted);
+    color: #bbf7d0;
     max-width: 40ch;
     margin: 0;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
   }
 
   .btn {
@@ -166,5 +209,12 @@ for (const alias of Object.keys(localeAliasMap)) {
     display: inline-flex;
     align-items: center;
     gap: var(--space-sm);
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .badger-background img, .will-o-wisps span {
+      animation: none;
+    }
   }
 </style>

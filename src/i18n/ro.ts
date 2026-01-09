@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'Cheltuieli de grup',
   'whatsItFor.expenseSharing.desc': 'Colegi de cameră, cupluri, familii. Urmăriți costurile comune fără conversații stânjenitoare.',
   'whatsItFor.expenseSharing.title': 'Gospodării comune',
-  'whatsItFor.reduceTransactions.desc': 'Nu mai trimiteți cinci plăți când una e suficientă. Achitați o dată și gata.',
+  'whatsItFor.reduceTransactions.desc': 'Acumulează cheltuielile, achită mai târziu. Optimizăm cine plătește cui, astfel încât toți să facă mai puține transferuri.',
   'whatsItFor.reduceTransactions.title': 'Mai puține transferuri',
   'whatsItFor.subtitle': 'Side Badger simplifică finanțele de grup.',
   'whatsItFor.title': 'Pentru ce este?',

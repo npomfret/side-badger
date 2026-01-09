@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'グループの支出管理',
   'whatsItFor.expenseSharing.desc': 'ルームメイト、カップル、家族。気まずい会話なしで共有費用を管理できます。',
   'whatsItFor.expenseSharing.title': 'シェアハウス・同居生活',
-  'whatsItFor.reduceTransactions.desc': '5回の送金を1回で済ませましょう。まとめて精算すれば完了です。',
+  'whatsItFor.reduceTransactions.desc': '出費を記録して、あとでまとめて精算。誰が誰に払うかを最適化し、送金回数を最小限に。',
   'whatsItFor.reduceTransactions.title': '送金回数を減らす',
   'whatsItFor.subtitle': 'Side Badgerでグループの支払いをシンプルに。',
   'whatsItFor.title': '何に使えるの？',

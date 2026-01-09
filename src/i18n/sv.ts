@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'Gruppens utgifter',
   'whatsItFor.expenseSharing.desc': 'Rumskamrater, par, familjer. Håll koll på gemensamma kostnader utan pinsamma samtal.',
   'whatsItFor.expenseSharing.title': 'Gemensamt hushåll',
-  'whatsItFor.reduceTransactions.desc': 'Sluta skicka fem betalningar när en räcker. Gör upp en gång och var klar.',
+  'whatsItFor.reduceTransactions.desc': 'Samla utgifter, gör upp senare. Vi optimerar vem som betalar vem så att alla gör färre överföringar.',
   'whatsItFor.reduceTransactions.title': 'Färre banköverföringar',
   'whatsItFor.subtitle': 'Side Badger gör gruppens ekonomi enkel.',
   'whatsItFor.title': 'Vad är det till för?',

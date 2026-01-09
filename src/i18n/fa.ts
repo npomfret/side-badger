@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'هزینه‌های گروهی',
   'whatsItFor.expenseSharing.desc': 'هم‌اتاقی‌ها، زوج‌ها، خانواده‌ها. هزینه‌های مشترک را بدون گفتگوهای ناخوشایند پیگیری کنید.',
   'whatsItFor.expenseSharing.title': 'خانه‌های مشترک',
-  'whatsItFor.reduceTransactions.desc': 'به جای پنج پرداخت، یک بار تسویه کنید و تمام.',
+  'whatsItFor.reduceTransactions.desc': 'هزینه‌ها را جمع کنید، بعداً تسویه کنید. ما بهینه می‌کنیم که چه کسی به چه کسی پرداخت کند تا همه کمتر پول جابجا کنند.',
   'whatsItFor.reduceTransactions.title': 'انتقال‌های بانکی کمتر',
   'whatsItFor.subtitle': 'Side Badger مدیریت هزینه‌های گروهی را ساده می‌کند.',
   'whatsItFor.title': 'برای چه کاری است؟',

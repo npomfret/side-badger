@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'Групові витрати',
   'whatsItFor.expenseSharing.desc': 'Сусіди по кімнаті, пари, родини. Відстежуйте спільні витрати без незручних розмов.',
   'whatsItFor.expenseSharing.title': 'Спільне господарство',
-  'whatsItFor.reduceTransactions.desc': 'Не надсилайте п\'ять платежів, коли достатньо одного. Розрахуйтеся один раз і забудьте.',
+  'whatsItFor.reduceTransactions.desc': 'Накопичуйте витрати, розраховуйтесь пізніше. Ми оптимізуємо, хто кому платить, щоб усі робили менше переказів.',
   'whatsItFor.reduceTransactions.title': 'Менше переказів',
   'whatsItFor.subtitle': 'Side Badger спрощує групові фінанси.',
   'whatsItFor.title': 'Для чого це?',

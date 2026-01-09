@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'Dépenses de groupe',
   'whatsItFor.expenseSharing.desc': 'Colocataires, couples, familles. Suivez les dépenses communes sans conversations gênantes.',
   'whatsItFor.expenseSharing.title': 'Vie en colocation',
-  'whatsItFor.reduceTransactions.desc': 'Arrêtez d\'envoyer cinq paiements quand un seul suffit. Réglez une fois et c\'est terminé.',
+  'whatsItFor.reduceTransactions.desc': 'Accumulez les dépenses, réglez plus tard. Nous optimisons qui paie qui pour réduire le nombre de virements.',
   'whatsItFor.reduceTransactions.title': 'Moins de virements',
   'whatsItFor.subtitle': 'Side Badger simplifie les finances de groupe.',
   'whatsItFor.title': 'À quoi ça sert ?',

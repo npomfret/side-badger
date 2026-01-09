@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'Caiteachas grúpa',
   'whatsItFor.expenseSharing.desc': 'Comhchónaitheoir, lánúineacha, teaghlaigh. Coinnigh súil ar chostais chomhroinnte gan na comhráite míshuaimhneacha.',
   'whatsItFor.expenseSharing.title': 'Teaghlaigh chomhroinnte',
-  'whatsItFor.reduceTransactions.desc': 'Stad d\'íocaíochtaí cúig a sheoladh nuair a dhéanfaidh ceann amháin. Socraigh uair amháin agus bí críochnaithe.',
+  'whatsItFor.reduceTransactions.desc': 'Bailigh costais, socraigh níos déanaí. Déanaimid optamú ar cé a íocann cé ionas go ndéanann gach duine níos lú aistrithe.',
   'whatsItFor.reduceTransactions.title': 'Níos lú aistrithe bainc',
   'whatsItFor.subtitle': 'Déanann Side Badger airgeadas grúpa simplí.',
   'whatsItFor.title': 'Cad chuige é?',

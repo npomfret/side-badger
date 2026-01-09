@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'Grupas izdevumi',
   'whatsItFor.expenseSharing.desc': 'Istabas biedri, pāri, ģimenes. Sekojiet līdzi kopīgajiem izdevumiem bez neērtām sarunām.',
   'whatsItFor.expenseSharing.title': 'Kopīga mājsaimniecība',
-  'whatsItFor.reduceTransactions.desc': 'Beidziet sūtīt piecus maksājumus, kad pietiek ar vienu. Norēķinieties vienreiz un esat brīvi.',
+  'whatsItFor.reduceTransactions.desc': 'Uzkrāj izdevumus, norēķinies vēlāk. Mēs optimizējam, kurš maksā kuram, lai visiem būtu mazāk pārskaitījumu.',
   'whatsItFor.reduceTransactions.title': 'Mazāk bankas pārskaitījumu',
   'whatsItFor.subtitle': 'Side Badger padara grupas finanses vienkāršas.',
   'whatsItFor.title': 'Kam tas paredzēts?',

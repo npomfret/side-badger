@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'Matumizi ya kikundi',
   'whatsItFor.expenseSharing.desc': 'Wakaazi wenza, wanandoa, familia. Fuatilia gharama za pamoja bila mazungumzo magumu.',
   'whatsItFor.expenseSharing.title': 'Nyumba za pamoja',
-  'whatsItFor.reduceTransactions.desc': 'Acha kutuma malipo matano wakati moja inatosha. Lipa mara moja na uwe umemaliza.',
+  'whatsItFor.reduceTransactions.desc': 'Kusanya gharama, lipa baadaye. Tunapanga nani amlipe nani ili kila mtu afanye uhamisho mchache zaidi.',
   'whatsItFor.reduceTransactions.title': 'Uhamishaji fedha mdogo',
   'whatsItFor.subtitle': 'Side Badger inafanya fedha za kikundi kuwa rahisi.',
   'whatsItFor.title': 'Inatumikaje?',

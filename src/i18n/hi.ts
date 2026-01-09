@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'समूह खर्च',
   'whatsItFor.expenseSharing.desc': 'रूममेट्स, कपल्स, परिवार। अजीब बातचीत के बिना साझा खर्चों का हिसाब रखें।',
   'whatsItFor.expenseSharing.title': 'साझा घर',
-  'whatsItFor.reduceTransactions.desc': 'पांच पेमेंट भेजना बंद करें जब एक काम कर सकता है। एक बार में हिसाब करें और खत्म।',
+  'whatsItFor.reduceTransactions.desc': 'खर्चे जमा करें, बाद में हिसाब करें। हम यह तय करते हैं कि कौन किसे पैसे दे ताकि सबको कम ट्रांसफर करने पड़ें।',
   'whatsItFor.reduceTransactions.title': 'कम बैंक ट्रांसफर',
   'whatsItFor.subtitle': 'Side Badger समूह खर्चों को सरल बनाता है।',
   'whatsItFor.title': 'यह किसके लिए है?',

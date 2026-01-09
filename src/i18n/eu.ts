@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'Talde-gastua',
   'whatsItFor.expenseSharing.desc': 'Pisu-kideak, bikoteak, familiak. Partekatutako kostuen jarraipena egin deseroso izan daitezkeen elkarrizketak gabe.',
   'whatsItFor.expenseSharing.title': 'Partekatutako etxeak',
-  'whatsItFor.reduceTransactions.desc': 'Utzi bost ordainketa bidaltzeari bat nahikoa denean. Kitatu behin eta listo.',
+  'whatsItFor.reduceTransactions.desc': 'Bildu gastuak, gero konpondu. Nork nori ordaintzen dion optimizatzen dugu, guztiek transferentzia gutxiago egin ditzaten.',
   'whatsItFor.reduceTransactions.title': 'Banku-transferentzia gutxiago',
   'whatsItFor.subtitle': 'Side Badger-ek talde-finantzak errazten ditu.',
   'whatsItFor.title': 'Zertarako da?',

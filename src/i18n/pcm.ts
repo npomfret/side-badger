@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'Group spending',
   'whatsItFor.expenseSharing.desc': 'Roommate, couples, family. Keep eye on money wey una share without wahala talk.',
   'whatsItFor.expenseSharing.title': 'House wey una dey share',
-  'whatsItFor.reduceTransactions.desc': 'Stop to dey send five payment when one go do. Pay once, finish.',
+  'whatsItFor.reduceTransactions.desc': 'Stack di expenses, settle am later. We go arrange who go pay who so everybody go do less transfer.',
   'whatsItFor.reduceTransactions.title': 'Less bank transfer',
   'whatsItFor.subtitle': 'Side Badger dey make group money matter easy.',
   'whatsItFor.title': 'Wetin e dey do?',

@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'Gwariant grŵp',
   'whatsItFor.expenseSharing.desc': 'Cyd-letywyr, cyplau, teuluoedd. Cadwch drac o gostau ar y cyd heb y sgyrsiau lletchwith.',
   'whatsItFor.expenseSharing.title': 'Cartrefi ar y cyd',
-  'whatsItFor.reduceTransactions.desc': 'Stopiwch anfon pum taliad pan fydd un yn gwneud y tro. Setlwch unwaith a gorffen.',
+  'whatsItFor.reduceTransactions.desc': 'Casglwch dreuliau, setlwch yn nes ymlaen. Rydyn ni\'n optimeiddio pwy sy\'n talu pwy fel bod pawb yn gwneud llai o drosglwyddiadau.',
   'whatsItFor.reduceTransactions.title': 'Llai o drosglwyddiadau banc',
   'whatsItFor.subtitle': 'Mae Side Badger yn gwneud cyllid grŵp yn syml.',
   'whatsItFor.title': 'Ar gyfer beth mae e?',

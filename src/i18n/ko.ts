@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': '그룹 지출 관리',
   'whatsItFor.expenseSharing.desc': '룸메이트, 커플, 가족. 어색한 대화 없이 공동 비용을 관리하세요.',
   'whatsItFor.expenseSharing.title': '공동 생활',
-  'whatsItFor.reduceTransactions.desc': '다섯 번 보낼 것을 한 번에. 한 번에 정산하고 깔끔하게 마무리하세요.',
+  'whatsItFor.reduceTransactions.desc': '지출을 모아두고 나중에 정산하세요. 누가 누구에게 얼마를 보낼지 최적화해서 송금 횟수를 줄여드립니다.',
   'whatsItFor.reduceTransactions.title': '송금 횟수 줄이기',
   'whatsItFor.subtitle': 'Side Badger로 그룹 정산을 간단하게.',
   'whatsItFor.title': '어디에 쓰나요?',

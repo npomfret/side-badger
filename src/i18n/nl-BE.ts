@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'Groepsuitgaven',
   'whatsItFor.expenseSharing.desc': 'Huisgenoten, koppels, gezinnen. Houd gedeelde kosten bij zonder ongemakkelijke gesprekken.',
   'whatsItFor.expenseSharing.title': 'Gedeelde huishoudens',
-  'whatsItFor.reduceTransactions.desc': 'Stop met vijf betalingen versturen als één voldoende is. Regel het in één keer en klaar.',
+  'whatsItFor.reduceTransactions.desc': 'Verzamel uitgaven, reken later af. Wij optimaliseren wie aan wie betaalt, zodat iedereen minder overschrijvingen doet.',
   'whatsItFor.reduceTransactions.title': 'Minder overschrijvingen',
   'whatsItFor.subtitle': 'Side Badger maakt groepsfinanciën eenvoudig.',
   'whatsItFor.title': 'Waar is het voor?',

@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'Gastos do grupo',
   'whatsItFor.expenseSharing.desc': 'Colegas de casa, casais, famílias. Acompanha os custos partilhados sem conversas constrangedoras.',
   'whatsItFor.expenseSharing.title': 'Casa partilhada',
-  'whatsItFor.reduceTransactions.desc': 'Para de fazer cinco pagamentos quando basta um. Acerta contas uma vez e pronto.',
+  'whatsItFor.reduceTransactions.desc': 'Acumule despesas, acerte depois. Otimizamos quem paga a quem para que todos façam menos transferências.',
   'whatsItFor.reduceTransactions.title': 'Menos transferências',
   'whatsItFor.subtitle': 'Side Badger simplifica as finanças em grupo.',
   'whatsItFor.title': 'Para que serve?',

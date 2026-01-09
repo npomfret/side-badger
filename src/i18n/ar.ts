@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'الإنفاق الجماعي',
   'whatsItFor.expenseSharing.desc': 'شركاء السكن، الأزواج، العائلات. تتبع التكاليف المشتركة دون محادثات محرجة.',
   'whatsItFor.expenseSharing.title': 'المنازل المشتركة',
-  'whatsItFor.reduceTransactions.desc': 'توقف عن إرسال خمس دفعات حين تكفي واحدة. سوِّ الحساب مرة واحدة وانتهِ.',
+  'whatsItFor.reduceTransactions.desc': 'اجمع المصاريف وسوِّها لاحقاً. نحسّن طريقة الدفع بين الجميع لتقليل عدد التحويلات.',
   'whatsItFor.reduceTransactions.title': 'تحويلات بنكية أقل',
   'whatsItFor.subtitle': 'Side Badger يجعل إدارة المصاريف الجماعية بسيطة.',
   'whatsItFor.title': 'لماذا Side Badger؟',

@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'Pengeluaran kelompok',
   'whatsItFor.expenseSharing.desc': 'Teman sekamar, pasangan, keluarga. Lacak biaya bersama tanpa percakapan yang canggung.',
   'whatsItFor.expenseSharing.title': 'Rumah bersama',
-  'whatsItFor.reduceTransactions.desc': 'Berhenti mengirim lima pembayaran ketika satu sudah cukup. Lunasi sekali dan selesai.',
+  'whatsItFor.reduceTransactions.desc': 'Kumpulkan pengeluaran, selesaikan nanti. Kami mengatur siapa bayar siapa agar semua orang melakukan lebih sedikit transfer.',
   'whatsItFor.reduceTransactions.title': 'Lebih sedikit transfer bank',
   'whatsItFor.subtitle': 'Side Badger membuat keuangan kelompok menjadi mudah.',
   'whatsItFor.title': 'Untuk apa ini?',

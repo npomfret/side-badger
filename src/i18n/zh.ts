@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': '团体支出管理',
   'whatsItFor.expenseSharing.desc': '室友、情侣、家人。轻松追踪共同开支，不再尴尬。',
   'whatsItFor.expenseSharing.title': '合租生活',
-  'whatsItFor.reduceTransactions.desc': '不用转五次账，一次搞定。统一结算，轻松完成。',
+  'whatsItFor.reduceTransactions.desc': '先记账，后结算。我们优化谁付给谁，让每个人都少转几次账。',
   'whatsItFor.reduceTransactions.title': '减少转账次数',
   'whatsItFor.subtitle': 'Side Badger让团体财务变得简单。',
   'whatsItFor.title': '用来做什么？',

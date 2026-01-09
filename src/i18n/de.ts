@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'Gruppenausgaben',
   'whatsItFor.expenseSharing.desc': 'Mitbewohner, Paare, Familien. Behalte den Überblick über gemeinsame Kosten ohne peinliche Gespräche.',
   'whatsItFor.expenseSharing.title': 'Gemeinsamer Haushalt',
-  'whatsItFor.reduceTransactions.desc': 'Schluss mit fünf Überweisungen, wenn eine reicht. Einmal abrechnen und fertig.',
+  'whatsItFor.reduceTransactions.desc': 'Ausgaben sammeln, später abrechnen. Wir optimieren, wer wem zahlt – so braucht jeder weniger Überweisungen.',
   'whatsItFor.reduceTransactions.title': 'Weniger Überweisungen',
   'whatsItFor.subtitle': 'Side Badger macht Gruppenfinanzen einfach.',
   'whatsItFor.title': 'Wofür ist es gedacht?',

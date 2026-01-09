@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'గ్రూప్ ఖర్చులు',
   'whatsItFor.expenseSharing.desc': 'రూమ్‌మేట్‌లు, జంటలు, కుటుంబాలు. ఇబ్బందికరమైన సంభాషణలు లేకుండా షేర్డ్ ఖర్చులను ట్రాక్ చేయండి.',
   'whatsItFor.expenseSharing.title': 'షేర్డ్ ఇళ్ళు',
-  'whatsItFor.reduceTransactions.desc': 'ఒకటి చాలు అనేటప్పుడు ఐదు చెల్లింపులు పంపడం ఆపండి. ఒకసారి సెటిల్ చేసి ముగించండి.',
+  'whatsItFor.reduceTransactions.desc': 'ఖర్చులు పోగు చేయండి, తర్వాత సెటిల్ చేయండి. ఎవరు ఎవరికి చెల్లించాలో మేము ఆప్టిమైజ్ చేస్తాము, అందరికీ తక్కువ బదిలీలు అవసరం.',
   'whatsItFor.reduceTransactions.title': 'తక్కువ బ్యాంక్ ట్రాన్స్‌ఫర్‌లు',
   'whatsItFor.subtitle': 'Side Badger గ్రూప్ ఖర్చులను సులభం చేస్తుంది.',
   'whatsItFor.title': 'ఇది దేనికి?',

@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'Gastos ng grupo',
   'whatsItFor.expenseSharing.desc': 'Mga kasama sa bahay, mag-asawa, pamilya. Subaybayan ang mga pinagsama-samang gastos nang walang awkward na usapan.',
   'whatsItFor.expenseSharing.title': 'Mga magkakasama sa bahay',
-  'whatsItFor.reduceTransactions.desc': 'Tigilan na ang pagpapadala ng limang bayad kung isa lang ang kailangan. Mag-settle ng isang beses at tapos na.',
+  'whatsItFor.reduceTransactions.desc': 'Tipunin ang mga gastos, bayaran mamaya. Inaayos namin kung sino ang magbabayad kanino para mas kaunti ang kailangang i-transfer ng lahat.',
   'whatsItFor.reduceTransactions.title': 'Mas kaunting bank transfer',
   'whatsItFor.subtitle': 'Pinapadali ng Side Badger ang pinansya ng grupo.',
   'whatsItFor.title': 'Para saan ito?',

@@ -154,7 +154,7 @@ export default {
   'whatsItFor.budgetTracking.title': 'Group spending',
   'whatsItFor.expenseSharing.desc': 'Roommates, couples, families. Keep track of shared costs without the awkward conversations.',
   'whatsItFor.expenseSharing.title': 'Shared households',
-  'whatsItFor.reduceTransactions.desc': 'Stop sending five payments when one will do. Settle up once and be done.',
+  'whatsItFor.reduceTransactions.desc': 'Accumulate expenses, settle later. We optimize who pays whom so everyone makes fewer transfers.',
   'whatsItFor.reduceTransactions.title': 'Fewer bank transfers',
   'whatsItFor.subtitle': 'Side Badger makes group finances simple.',
   'whatsItFor.title': 'What\'s it for?',

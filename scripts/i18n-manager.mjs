@@ -23,11 +23,13 @@
  *   rename-key    Rename a key across all language files
  *   find-unused   Find potentially unused translation keys
  *   sync          Sync locale files with English (adds missing, removes extra)
+ *   diff          Show uncommitted changes to translation files
  */
 
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -972,6 +974,378 @@ function cmdSync(args) {
 }
 
 /**
+ * Show uncommitted changes to translation files
+ * Two modes:
+ *   1. Summary mode (default): List unique keys that changed across all locales
+ *   2. Detail mode (with --key): Show changes for a specific key across all locales
+ */
+function cmdDiff(args) {
+  const showStaged = args.includes('--staged');
+  const showUnstaged = args.includes('--unstaged');
+  const keyIndex = args.indexOf('--key');
+  const keyFilter = keyIndex !== -1 ? args[keyIndex + 1] : null;
+
+  // Default to showing both if neither specified
+  const showBoth = !showStaged && !showUnstaged;
+
+  // Get git diff output
+  const diffOutput = getGitDiff(showBoth, showStaged, showUnstaged);
+
+  if (!diffOutput.trim()) {
+    console.log(c.success('\nNo uncommitted changes to translation files.'));
+    return;
+  }
+
+  // Parse the diff output
+  const changes = parseDiffOutput(diffOutput);
+
+  if (keyFilter) {
+    // Detail mode: show changes for a specific key across all locales
+    showKeyDetail(keyFilter, changes);
+  } else {
+    // Summary mode: show aggregated list of changed keys
+    showKeysSummary(changes);
+  }
+}
+
+/**
+ * Get git diff output for i18n files
+ */
+function getGitDiff(showBoth, showStaged, showUnstaged) {
+  let diffOutput = '';
+  try {
+    if (showBoth || showUnstaged) {
+      const unstaged = execSync(`git diff -- "src/i18n/*.ts"`, {
+        cwd: path.join(__dirname, '..'),
+        encoding: 'utf-8',
+        maxBuffer: 10 * 1024 * 1024
+      });
+      if (unstaged) diffOutput += unstaged;
+    }
+    if (showBoth || showStaged) {
+      const staged = execSync(`git diff --cached -- "src/i18n/*.ts"`, {
+        cwd: path.join(__dirname, '..'),
+        encoding: 'utf-8',
+        maxBuffer: 10 * 1024 * 1024
+      });
+      if (staged) diffOutput += staged;
+    }
+  } catch (error) {
+    if (error.status === 128) {
+      console.error(c.error('Error: Not a git repository'));
+      process.exit(1);
+    }
+    console.error(c.error(`Git error: ${error.message}`));
+    process.exit(1);
+  }
+  return diffOutput;
+}
+
+/**
+ * Show aggregated summary of all changed keys
+ */
+function showKeysSummary(changes) {
+  console.log(c.bright('\nUncommitted Translation Changes\n'));
+
+  // Aggregate keys across all locales
+  const addedKeys = new Map();    // key -> { locales: [], englishValue: string }
+  const modifiedKeys = new Map(); // key -> { locales: [], englishOld: string, englishNew: string }
+  const removedKeys = new Map();  // key -> { locales: [], englishValue: string }
+
+  for (const [locale, localeChanges] of Object.entries(changes)) {
+    for (const { key, newValue } of localeChanges.added) {
+      if (!addedKeys.has(key)) {
+        addedKeys.set(key, { locales: [], englishValue: null });
+      }
+      addedKeys.get(key).locales.push(locale);
+      if (locale === 'en') {
+        addedKeys.get(key).englishValue = newValue;
+      }
+    }
+
+    for (const { key, oldValue, newValue } of localeChanges.modified) {
+      if (!modifiedKeys.has(key)) {
+        modifiedKeys.set(key, { locales: [], englishOld: null, englishNew: null });
+      }
+      modifiedKeys.get(key).locales.push(locale);
+      if (locale === 'en') {
+        modifiedKeys.get(key).englishOld = oldValue;
+        modifiedKeys.get(key).englishNew = newValue;
+      }
+    }
+
+    for (const { key, oldValue } of localeChanges.removed) {
+      if (!removedKeys.has(key)) {
+        removedKeys.set(key, { locales: [], englishValue: null });
+      }
+      removedKeys.get(key).locales.push(locale);
+      if (locale === 'en') {
+        removedKeys.get(key).englishValue = oldValue;
+      }
+    }
+  }
+
+  const totalKeys = addedKeys.size + modifiedKeys.size + removedKeys.size;
+  const totalLocales = Object.keys(changes).length;
+
+  console.log(c.info('Summary:'));
+  console.log(`  ${c.success(`+${addedKeys.size}`)} keys added, ${c.warning(`~${modifiedKeys.size}`)} keys modified, ${c.error(`-${removedKeys.size}`)} keys removed`);
+  console.log(`  ${totalLocales} locale(s) with changes\n`);
+
+  // Show added keys
+  if (addedKeys.size > 0) {
+    console.log(c.success('Added Keys:'));
+    for (const [key, data] of [...addedKeys.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
+      const localeCount = data.locales.length;
+      const inEnglish = data.locales.includes('en');
+      const statusBadge = inEnglish ? '' : c.warning(' (not in en)');
+      console.log(`  ${c.success('+')} ${c.key(key)} ${c.dim(`[${localeCount} locale${localeCount !== 1 ? 's' : ''}]`)}${statusBadge}`);
+      if (data.englishValue) {
+        const preview = data.englishValue.length > 70 ? data.englishValue.substring(0, 70) + '...' : data.englishValue;
+        console.log(`      ${c.dim('en: ' + preview)}`);
+      }
+    }
+    console.log();
+  }
+
+  // Show modified keys
+  if (modifiedKeys.size > 0) {
+    console.log(c.warning('Modified Keys:'));
+    for (const [key, data] of [...modifiedKeys.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
+      const localeCount = data.locales.length;
+      console.log(`  ${c.warning('~')} ${c.key(key)} ${c.dim(`[${localeCount} locale${localeCount !== 1 ? 's' : ''}]`)}`);
+      if (data.englishOld && data.englishNew) {
+        const oldPreview = data.englishOld.length > 60 ? data.englishOld.substring(0, 60) + '...' : data.englishOld;
+        const newPreview = data.englishNew.length > 60 ? data.englishNew.substring(0, 60) + '...' : data.englishNew;
+        console.log(`      ${c.dim('was: ' + oldPreview)}`);
+        console.log(`      ${c.dim('now: ' + newPreview)}`);
+      }
+    }
+    console.log();
+  }
+
+  // Show removed keys
+  if (removedKeys.size > 0) {
+    console.log(c.error('Removed Keys:'));
+    for (const [key, data] of [...removedKeys.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
+      const localeCount = data.locales.length;
+      console.log(`  ${c.error('-')} ${c.key(key)} ${c.dim(`[${localeCount} locale${localeCount !== 1 ? 's' : ''}]`)}`);
+      if (data.englishValue) {
+        const preview = data.englishValue.length > 70 ? data.englishValue.substring(0, 70) + '...' : data.englishValue;
+        console.log(`      ${c.dim('en: ' + preview)}`);
+      }
+    }
+    console.log();
+  }
+
+  console.log(c.dim(`Tip: Use ${c.info('npm run i18n diff -- --key <key>')} to see detailed changes for a specific key`));
+}
+
+/**
+ * Show detailed changes for a specific key across all locales
+ */
+function showKeyDetail(keyFilter, changes) {
+  console.log(c.bright(`\nChanges for key: ${c.key(keyFilter)}\n`));
+
+  // Load current translations for reference
+  const currentTranslations = loadAllTranslations();
+  const englishCurrent = currentTranslations.en?.[keyFilter];
+
+  // Collect changes for this key
+  const keyChanges = {
+    added: [],    // { locale, newValue }
+    modified: [], // { locale, oldValue, newValue }
+    removed: []   // { locale, oldValue }
+  };
+
+  for (const [locale, localeChanges] of Object.entries(changes)) {
+    for (const change of localeChanges.added) {
+      if (change.key === keyFilter) {
+        keyChanges.added.push({ locale, newValue: change.newValue });
+      }
+    }
+    for (const change of localeChanges.modified) {
+      if (change.key === keyFilter) {
+        keyChanges.modified.push({ locale, oldValue: change.oldValue, newValue: change.newValue });
+      }
+    }
+    for (const change of localeChanges.removed) {
+      if (change.key === keyFilter) {
+        keyChanges.removed.push({ locale, oldValue: change.oldValue });
+      }
+    }
+  }
+
+  const totalChanges = keyChanges.added.length + keyChanges.modified.length + keyChanges.removed.length;
+
+  if (totalChanges === 0) {
+    console.log(c.warning(`No uncommitted changes found for key "${keyFilter}"`));
+    return;
+  }
+
+  // Show current English value as reference
+  if (englishCurrent) {
+    console.log(c.info('Current English (reference):'));
+    console.log(`  ${englishCurrent}\n`);
+  }
+
+  // Sort helper - en first, then alphabetically
+  const sortLocales = (a, b) => {
+    if (a.locale === 'en') return -1;
+    if (b.locale === 'en') return 1;
+    return a.locale.localeCompare(b.locale);
+  };
+
+  // Show added
+  if (keyChanges.added.length > 0) {
+    console.log(c.success(`Added in ${keyChanges.added.length} locale(s):`));
+    for (const { locale, newValue } of keyChanges.added.sort(sortLocales)) {
+      console.log(`  ${c.locale(locale.padEnd(8))} ${newValue}`);
+    }
+    console.log();
+  }
+
+  // Show modified
+  if (keyChanges.modified.length > 0) {
+    console.log(c.warning(`Modified in ${keyChanges.modified.length} locale(s):`));
+    for (const { locale, oldValue, newValue } of keyChanges.modified.sort(sortLocales)) {
+      console.log(`  ${c.locale(locale)}`);
+      console.log(`    ${c.error('- ' + oldValue)}`);
+      console.log(`    ${c.success('+ ' + newValue)}`);
+    }
+    console.log();
+  }
+
+  // Show removed
+  if (keyChanges.removed.length > 0) {
+    console.log(c.error(`Removed from ${keyChanges.removed.length} locale(s):`));
+    for (const { locale, oldValue } of keyChanges.removed.sort(sortLocales)) {
+      console.log(`  ${c.locale(locale.padEnd(8))} ${c.dim(oldValue)}`);
+    }
+    console.log();
+  }
+}
+
+/**
+ * Parse git diff output into structured changes
+ */
+function parseDiffOutput(diffOutput) {
+  const changes = {};
+  const lines = diffOutput.split('\n');
+
+  let currentLocale = null;
+  let i = 0;
+
+  while (i < lines.length) {
+    const line = lines[i];
+
+    // Detect file being diffed
+    if (line.startsWith('diff --git')) {
+      const match = line.match(/b\/src\/i18n\/([^.]+)\.ts/);
+      if (match) {
+        currentLocale = match[1];
+        if (currentLocale !== 'index') {
+          if (!changes[currentLocale]) {
+            changes[currentLocale] = { added: [], modified: [], removed: [] };
+          }
+        } else {
+          currentLocale = null;
+        }
+      }
+      i++;
+      continue;
+    }
+
+    // Skip non-change lines
+    if (!currentLocale || !line.startsWith('-') && !line.startsWith('+')) {
+      i++;
+      continue;
+    }
+
+    // Skip diff headers
+    if (line.startsWith('---') || line.startsWith('+++')) {
+      i++;
+      continue;
+    }
+
+    // Parse removed line
+    if (line.startsWith('-')) {
+      const removed = parseTranslationLine(line.substring(1));
+      if (removed) {
+        // Look ahead for a matching addition (modification)
+        let foundMatch = false;
+        for (let j = i + 1; j < Math.min(i + 5, lines.length); j++) {
+          if (lines[j].startsWith('+')) {
+            const added = parseTranslationLine(lines[j].substring(1));
+            if (added && added.key === removed.key) {
+              // This is a modification
+              changes[currentLocale].modified.push({
+                key: removed.key,
+                oldValue: removed.value,
+                newValue: added.value
+              });
+              // Mark this line as processed by skipping ahead
+              lines[j] = '  ' + lines[j].substring(1); // Neutralize the + line
+              foundMatch = true;
+              break;
+            }
+          } else if (!lines[j].startsWith('-') && lines[j].trim()) {
+            break; // Stop looking if we hit a context line
+          }
+        }
+        if (!foundMatch) {
+          changes[currentLocale].removed.push({
+            key: removed.key,
+            oldValue: removed.value
+          });
+        }
+      }
+    }
+    // Parse added line
+    else if (line.startsWith('+')) {
+      const added = parseTranslationLine(line.substring(1));
+      if (added) {
+        // Check if this was already processed as a modification
+        const alreadyModified = changes[currentLocale].modified.some(m => m.key === added.key);
+        if (!alreadyModified) {
+          changes[currentLocale].added.push({
+            key: added.key,
+            newValue: added.value
+          });
+        }
+      }
+    }
+
+    i++;
+  }
+
+  return changes;
+}
+
+/**
+ * Parse a single translation line from a diff
+ */
+function parseTranslationLine(line) {
+  // Match: 'key': 'value' or 'key': "value"
+  const singleQuoteMatch = line.match(/^\s*'([^']+)':\s*'((?:[^'\\]|\\.)*)'/);
+  const doubleQuoteMatch = line.match(/^\s*'([^']+)':\s*"((?:[^"\\]|\\.)*)"/);
+
+  if (singleQuoteMatch) {
+    return {
+      key: singleQuoteMatch[1],
+      value: singleQuoteMatch[2].replace(/\\'/g, "'")
+    };
+  }
+  if (doubleQuoteMatch) {
+    return {
+      key: doubleQuoteMatch[1],
+      value: doubleQuoteMatch[2].replace(/\\"/g, '"')
+    };
+  }
+  return null;
+}
+
+/**
  * Show help
  */
 function cmdHelp() {
@@ -1005,6 +1379,10 @@ ${c.info('Commands:')}
     export [json|csv] [file]    Export translations
     import <file> [locale]      Import translations from JSON
 
+  ${c.bright('Git Integration:')}
+    diff [--staged] [--unstaged]            List all changed keys (aggregated)
+    diff --key <key>                         Show changes for a specific key across locales
+
 ${c.info('Examples:')}
     npm run i18n list "pricing.*"
     npm run i18n get header.logoText
@@ -1014,6 +1392,8 @@ ${c.info('Examples:')}
     npm run i18n compare en ja "features.*"
     npm run i18n sync -- --dry-run
     npm run i18n export json translations.json
+    npm run i18n diff
+    npm run i18n diff -- --key hero.title
 `);
 }
 
@@ -1039,6 +1419,7 @@ const commands = {
   'rename-key': cmdRenameKey,
   'find-unused': cmdFindUnused,
   sync: cmdSync,
+  diff: cmdDiff,
   help: cmdHelp,
   '--help': cmdHelp,
   '-h': cmdHelp,

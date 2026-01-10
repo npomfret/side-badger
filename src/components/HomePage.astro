@@ -29,22 +29,25 @@ const { locale } = Astro.props;
       }
     </script>
   </Fragment>
+
   <!-- Hero Section -->
   <section class="hero" aria-labelledby="hero-title">
     <div class="container">
-      <div class="hero-stamp">
-        {t('hero.badge', locale)}<a href="#disclaimer" class="disclaimer-link"><sup>*</sup></a>
-      </div>
-
       <div class="hero-content fade-up">
+        <div class="hero-stamp">
+          {t('hero.badge', locale)}<a href="#disclaimer" class="disclaimer-link"><sup>*</sup></a>
+        </div>
+
         <h1 id="hero-title">
           {t('hero.title', locale)}
           <span class="gradient-text">{t('hero.titleHighlight', locale)}</span>
         </h1>
-        <p class="hero-title-disclaimer">{t('hero.titleDisclaimer', locale)}</p>
-
+        
         <p class="hero-subtitle">
-          {t('hero.subtitle', locale)}
+          <span class="typewriter-wrapper">
+            <span id="typewriter-text"></span><span class="cursor">&nbsp;</span>
+          </span>
+          {t('hero.subtitleStatic', locale)}
         </p>
 
         <div class="hero-actions flex gap-md flex-wrap">
@@ -56,6 +59,8 @@ const { locale } = Astro.props;
             </svg>
           </a>
         </div>
+        
+        <p class="hero-title-disclaimer">{t('hero.titleDisclaimer', locale)}</p>
       </div>
 
       <div class="hero-visual fade-up" data-delay="200">
@@ -66,370 +71,268 @@ const { locale } = Astro.props;
     </div>
   </section>
 
-  <!-- What's It For Section -->
-  <section class="whats-it-for" aria-labelledby="whats-it-for-title">
+  <!-- Use Cases Section (Reimagined) -->
+  <section class="use-cases" aria-labelledby="use-cases-title">
     <div class="container">
       <div class="section-header text-center fade-up">
-        <h2 id="whats-it-for-title">{t('whatsItFor.title', locale)}</h2>
+        <h2 id="use-cases-title">{t('whatsItFor.title', locale)}</h2>
         <p>{t('whatsItFor.subtitle', locale)}</p>
       </div>
 
-      <div class="bento-grid-lg">
-        <!-- Bill Splitting -->
-        <div class="feature-card fade-up" data-whats-it-for="billSplitting">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/>
-              <path d="M14 8H8"/>
-              <path d="M16 12H8"/>
-              <path d="M13 16H8"/>
-            </svg>
-          </div>
-          <h3>{t('whatsItFor.billSplitting.title', locale)}</h3>
-          <p>{t('whatsItFor.billSplitting.desc', locale)}</p>
-        </div>
+      <div class="filter-pills fade-up" data-delay="100">
+        <button class="filter-pill active" data-filter="daily">{t('filters.daily', locale)}</button>
+        <button class="filter-pill" data-filter="travel">{t('filters.travel', locale)}</button>
+        <button class="filter-pill" data-filter="community">{t('filters.community', locale)}</button>
+        <button class="filter-pill" data-filter="all">{t('filters.all', locale)}</button>
+      </div>
 
-        <!-- Expense Sharing -->
-        <div class="feature-card fade-up" data-whats-it-for="expenseSharing" data-delay="50">
+      <div class="use-case-grid">
+        <!-- Daily Life -->
+        <div class="feature-card fade-up" data-category="daily">
           <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-              <polyline points="9 22 9 12 15 12 15 22"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           </div>
           <h3>{t('whatsItFor.expenseSharing.title', locale)}</h3>
           <p>{t('whatsItFor.expenseSharing.desc', locale)}</p>
         </div>
 
-        <!-- Budget Tracking -->
-        <div class="feature-card fade-up" data-whats-it-for="budgetTracking" data-delay="100">
+        <div class="feature-card fade-up" data-category="daily" data-delay="50">
           <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21.21 15.89A10 10 0 1 1 8 2.83"/>
-              <path d="M22 12A10 10 0 0 0 12 2v10z"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
           </div>
           <h3>{t('whatsItFor.budgetTracking.title', locale)}</h3>
           <p>{t('whatsItFor.budgetTracking.desc', locale)}</p>
         </div>
 
-        <!-- Reduce Transactions -->
-        <div class="feature-card fade-up" data-whats-it-for="reduceTransactions" data-delay="150">
+        <div class="feature-card fade-up" data-category="daily" data-delay="100">
           <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>
+          </div>
+          <h3>{t('whatsItFor.subscriptions.title', locale)}</h3>
+          <p>{t('whatsItFor.subscriptions.desc', locale)}</p>
+        </div>
+
+        <div class="feature-card fade-up" data-category="daily" data-delay="150">
+          <div class="feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7 7 14l3 3 7-7"/><path d="M15 6 18 3l3 3-3 3"/><path d="M2 22h12"/></svg>
+          </div>
+          <h3>{t('whatsItFor.renovations.title', locale)}</h3>
+          <p>{t('whatsItFor.renovations.desc', locale)}</p>
+        </div>
+        
+        <div class="feature-card fade-up" data-category="daily" data-delay="200">
+             <div class="feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
           </div>
           <h3>{t('whatsItFor.reduceTransactions.title', locale)}</h3>
           <p>{t('whatsItFor.reduceTransactions.desc', locale)}</p>
         </div>
 
-        <!-- Travel -->
-        <div class="feature-card fade-up" data-whats-it-for="travel" data-delay="200">
+
+        <!-- Fun & Travel -->
+        <div class="feature-card fade-up" data-category="travel" data-delay="100" style="display: none;">
           <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
-              <path d="M2 12h20"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
           </div>
           <h3>{t('whatsItFor.travel.title', locale)}</h3>
           <p>{t('whatsItFor.travel.desc', locale)}</p>
         </div>
 
-        <!-- Gifting & Holidays -->
-        <div class="feature-card fade-up" data-whats-it-for="gifting" data-delay="250">
+        <div class="feature-card fade-up" data-category="travel" data-delay="150" style="display: none;">
           <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 12v10H4V12"/>
-              <path d="M2 7h20v5H2z"/>
-              <path d="M12 22V7"/>
-              <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C14 2 12 7 12 7z"/>
-              <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C10 2 12 7 12 7z"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M13 16H8"/></svg>
           </div>
-          <h3>{t('whatsItFor.gifting.title', locale)}</h3>
-          <p>{t('whatsItFor.gifting.desc', locale)}</p>
+          <h3>{t('whatsItFor.billSplitting.title', locale)}</h3>
+          <p>{t('whatsItFor.billSplitting.desc', locale)}</p>
         </div>
 
-        <!-- Events & Celebrations -->
-        <div class="feature-card fade-up" data-whats-it-for="celebrations" data-delay="300">
+        <div class="feature-card fade-up" data-category="travel" data-delay="200" style="display: none;">
           <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 15 8.5 22 9.3 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9.3 9 8.5 12 2"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8.5 22 9.3 17 14 18.5 21 12 17.5 5.5 21 7 14 2 9.3 9 8.5 12 2"/></svg>
           </div>
           <h3>{t('whatsItFor.celebrations.title', locale)}</h3>
           <p>{t('whatsItFor.celebrations.desc', locale)}</p>
         </div>
 
-        <!-- Weddings & Big Moments -->
-        <div class="feature-card fade-up" data-whats-it-for="weddings" data-delay="350">
+        <div class="feature-card fade-up" data-category="travel" data-delay="250" style="display: none;">
           <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="9" cy="12" r="4"/>
-              <circle cx="15" cy="12" r="4"/>
-              <path d="M7.5 12h-3"/>
-              <path d="M19.5 12h-3"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="4"/><circle cx="15" cy="12" r="4"/><path d="M7.5 12h-3"/><path d="M19.5 12h-3"/></svg>
           </div>
           <h3>{t('whatsItFor.weddings.title', locale)}</h3>
           <p>{t('whatsItFor.weddings.desc', locale)}</p>
         </div>
 
-        <!-- Sports & Leagues -->
-        <div class="feature-card fade-up" data-whats-it-for="sports" data-delay="400">
+        <div class="feature-card fade-up" data-category="travel" data-delay="300" style="display: none;">
           <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M8 21h8"/>
-              <path d="M12 17v4"/>
-              <path d="M7 4h10v5a5 5 0 0 1-10 0z"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C14 2 12 7 12 7z"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C10 2 12 7 12 7z"/></svg>
+          </div>
+          <h3>{t('whatsItFor.gifting.title', locale)}</h3>
+          <p>{t('whatsItFor.gifting.desc', locale)}</p>
+        </div>
+
+        <!-- Community -->
+        <div class="feature-card fade-up" data-category="community" data-delay="100" style="display: none;">
+          <div class="feature-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0z"/></svg>
           </div>
           <h3>{t('whatsItFor.sports.title', locale)}</h3>
           <p>{t('whatsItFor.sports.desc', locale)}</p>
         </div>
 
-        <!-- Work Outings -->
-        <div class="feature-card fade-up" data-whats-it-for="work" data-delay="450">
+        <div class="feature-card fade-up" data-category="community" data-delay="150" style="display: none;">
           <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="20" height="14" x="2" y="7" rx="2"/>
-              <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
-              <path d="M2 13h20"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M2 13h20"/></svg>
           </div>
           <h3>{t('whatsItFor.work.title', locale)}</h3>
           <p>{t('whatsItFor.work.desc', locale)}</p>
         </div>
 
-        <!-- School & Clubs -->
-        <div class="feature-card fade-up" data-whats-it-for="school" data-delay="500">
+        <div class="feature-card fade-up" data-category="community" data-delay="200" style="display: none;">
           <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 5h12a3 3 0 0 1 3 3v11H7a3 3 0 0 0-3 3z"/>
-              <path d="M16 2H7a3 3 0 0 0-3 3v16"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h12a3 3 0 0 1 3 3v11H7a3 3 0 0 0-3 3z"/><path d="M16 2H7a3 3 0 0 0-3 3v16"/></svg>
           </div>
           <h3>{t('whatsItFor.school.title', locale)}</h3>
           <p>{t('whatsItFor.school.desc', locale)}</p>
-        </div>
-
-        <!-- Renovations & Projects -->
-        <div class="feature-card fade-up" data-whats-it-for="renovations" data-delay="550">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 7 7 14l3 3 7-7"/>
-              <path d="M15 6 18 3l3 3-3 3"/>
-              <path d="M2 22h12"/>
-            </svg>
-          </div>
-          <h3>{t('whatsItFor.renovations.title', locale)}</h3>
-          <p>{t('whatsItFor.renovations.desc', locale)}</p>
-        </div>
-
-        <!-- Subscriptions & Shared Services -->
-        <div class="feature-card fade-up" data-whats-it-for="subscriptions" data-delay="600">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="20" height="14" x="2" y="5" rx="2"/>
-              <path d="M2 10h20"/>
-              <path d="M6 15h4"/>
-            </svg>
-          </div>
-          <h3>{t('whatsItFor.subscriptions.title', locale)}</h3>
-          <p>{t('whatsItFor.subscriptions.desc', locale)}</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section class="features" aria-labelledby="features-title">
+  <!-- Narrative Features Section -->
+  <section class="narrative-features" aria-labelledby="features-title">
     <div class="container">
       <div class="section-header text-center fade-up">
         <h2 id="features-title">{t('features.title', locale)}</h2>
         <p>{t('features.subtitle', locale)}</p>
       </div>
 
-      <div class="bento-grid-lg">
-        <!-- Groups -->
-        <div class="feature-card fade-up">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
+      <!-- Step 1: Organize -->
+      <div class="narrative-step">
+        <div class="step-header fade-up">
+          <div class="step-number">01</div>
+          <div class="step-title">
+            <h3>{t('narrative.step1.title', locale)}</h3>
+            <p>{t('narrative.step1.desc', locale)}</p>
           </div>
-          <h3>{t('features.groups.title', locale)}</h3>
-          <p>{t('features.groups.desc', locale)}</p>
         </div>
-
-        <!-- Invites -->
-        <div class="feature-card fade-up" data-delay="50">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-            </svg>
+        <div class="bento-grid-lg">
+          <div class="feature-card fade-up">
+            <div class="feature-icon" aria-hidden="true">
+               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>{t('features.groups.title', locale)}</h3>
+            <p>{t('features.groups.desc', locale)}</p>
           </div>
-          <h3>{t('features.invites.title', locale)}</h3>
-          <p>{t('features.invites.desc', locale)}</p>
+          <div class="feature-card fade-up" data-delay="100">
+             <div class="feature-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </div>
+            <h3>{t('features.invites.title', locale)}</h3>
+            <p>{t('features.invites.desc', locale)}</p>
+          </div>
+          <div class="feature-card fade-up" data-delay="200">
+            <div class="feature-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+            </div>
+            <h3>{t('features.roles.title', locale)}</h3>
+            <p>{t('features.roles.desc', locale)}</p>
+          </div>
+          <div class="feature-card fade-up" data-delay="300">
+            <div class="feature-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>
+            </div>
+            <h3>{t('features.edit.title', locale)}</h3>
+            <p>{t('features.edit.desc', locale)}</p>
+          </div>
         </div>
+      </div>
 
-        <!-- Roles -->
-        <div class="feature-card fade-up" data-delay="100">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
-            </svg>
+      <!-- Step 2: Track -->
+      <div class="narrative-step">
+        <div class="step-header fade-up">
+          <div class="step-number">02</div>
+          <div class="step-title">
+            <h3>{t('narrative.step2.title', locale)}</h3>
+            <p>{t('narrative.step2.desc', locale)}</p>
           </div>
-          <h3>{t('features.roles.title', locale)}</h3>
-          <p>{t('features.roles.desc', locale)}</p>
         </div>
-
-        <!-- Splits -->
-        <div class="feature-card fade-up" data-delay="150">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="12" x2="12" y1="2" y2="22"/>
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-            </svg>
+        <div class="bento-grid-lg">
+          <div class="feature-card fade-up">
+             <div class="feature-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>{t('features.splits.title', locale)}</h3>
+            <p>{t('features.splits.desc', locale)}</p>
           </div>
-          <h3>{t('features.splits.title', locale)}</h3>
-          <p>{t('features.splits.desc', locale)}</p>
+          <div class="feature-card fade-up" data-delay="100">
+             <div class="feature-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M13 16H8"/></svg>
+            </div>
+            <h3>{t('features.receipts.title', locale)}</h3>
+            <p>{t('features.receipts.desc', locale)}</p>
+          </div>
+          <div class="feature-card fade-up" data-delay="200">
+             <div class="feature-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>{t('features.participants.title', locale)}</h3>
+            <p>{t('features.participants.desc', locale)}</p>
+          </div>
+           <div class="feature-card fade-up" data-delay="300">
+             <div class="feature-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/></svg>
+            </div>
+            <h3>{t('features.currency.title', locale)}</h3>
+            <p>{t('features.currency.desc', locale)}</p>
+          </div>
+          <div class="feature-card fade-up" data-delay="400">
+            <div class="feature-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M21 3l-7 7"/><path d="M3 3l7 7"/><path d="M16 21h5v-5"/><path d="M8 21H3v-5"/><path d="M21 21l-7-7"/><path d="M3 21l7-7"/></svg>
+            </div>
+            <h3>{t('features.fxConversion.title', locale)}</h3>
+            <p>{t('features.fxConversion.desc', locale)}</p>
+          </div>
         </div>
+      </div>
 
-        <!-- Participants -->
-        <div class="feature-card fade-up" data-delay="200">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
+      <!-- Step 3: Settle -->
+      <div class="narrative-step">
+        <div class="step-header fade-up">
+          <div class="step-number">03</div>
+          <div class="step-title">
+            <h3>{t('narrative.step3.title', locale)}</h3>
+            <p>{t('narrative.step3.desc', locale)}</p>
           </div>
-          <h3>{t('features.participants.title', locale)}</h3>
-          <p>{t('features.participants.desc', locale)}</p>
         </div>
-
-        <!-- Currency -->
-        <div class="feature-card fade-up" data-delay="250">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 2v20M2 12h20"/>
-            </svg>
+        <div class="bento-grid-lg">
+          <div class="feature-card fade-up">
+             <div class="feature-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            </div>
+            <h3>{t('features.balances.title', locale)}</h3>
+            <p>{t('features.balances.desc', locale)}</p>
           </div>
-          <h3>{t('features.currency.title', locale)}</h3>
-          <p>{t('features.currency.desc', locale)}</p>
-        </div>
-
-        <!-- FX Conversions -->
-        <div class="feature-card fade-up" data-delay="275">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 3h5v5"/>
-              <path d="M8 3H3v5"/>
-              <path d="M21 3l-7 7"/>
-              <path d="M3 3l7 7"/>
-              <path d="M16 21h5v-5"/>
-              <path d="M8 21H3v-5"/>
-              <path d="M21 21l-7-7"/>
-              <path d="M3 21l7-7"/>
-            </svg>
+          <div class="feature-card fade-up" data-delay="100">
+             <div class="feature-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+            </div>
+            <h3>{t('features.settle.title', locale)}</h3>
+            <p>{t('features.settle.desc', locale)}</p>
           </div>
-          <h3>{t('features.fxConversion.title', locale)}</h3>
-          <p>{t('features.fxConversion.desc', locale)}</p>
-        </div>
-
-        <!-- Balances -->
-        <div class="feature-card fade-up" data-delay="300">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 3v18h18"/>
-              <path d="m19 9-5 5-4-4-3 3"/>
-            </svg>
+          <div class="feature-card fade-up" data-delay="200">
+            <div class="feature-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            </div>
+            <h3>{t('features.activity.title', locale)}</h3>
+            <p>{t('features.activity.desc', locale)}</p>
           </div>
-          <h3>{t('features.balances.title', locale)}</h3>
-          <p>{t('features.balances.desc', locale)}</p>
-        </div>
-
-        <!-- Settle -->
-        <div class="feature-card fade-up" data-delay="350">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-              <polyline points="22,4 12,14.01 9,11.01"/>
-            </svg>
+          <div class="feature-card fade-up" data-delay="300">
+             <div class="feature-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/><line x1="2" y1="2" x2="22" y2="22"/></svg>
+            </div>
+            <h3>{t('features.noTracking.title', locale)}</h3>
+            <p>{t('features.noTracking.desc', locale)}</p>
           </div>
-          <h3>{t('features.settle.title', locale)}</h3>
-          <p>{t('features.settle.desc', locale)}</p>
-        </div>
-
-        <!-- Activity -->
-        <div class="feature-card fade-up" data-delay="400">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 20h9"/>
-              <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/>
-            </svg>
-          </div>
-          <h3>{t('features.activity.title', locale)}</h3>
-          <p>{t('features.activity.desc', locale)}</p>
-        </div>
-
-        <!-- Comments -->
-        <div class="feature-card fade-up" data-delay="450">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-            </svg>
-          </div>
-          <h3>{t('features.comments.title', locale)}</h3>
-          <p>{t('features.comments.desc', locale)}</p>
-        </div>
-
-        <!-- Edit -->
-        <div class="feature-card fade-up" data-delay="500">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/>
-              <path d="m15 5 4 4"/>
-            </svg>
-          </div>
-          <h3>{t('features.edit.title', locale)}</h3>
-          <p>{t('features.edit.desc', locale)}</p>
-        </div>
-
-        <!-- No Tracking -->
-        <div class="feature-card fade-up" data-delay="600">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/>
-              <circle cx="12" cy="12" r="3"/>
-              <line x1="2" y1="2" x2="22" y2="22"/>
-            </svg>
-          </div>
-          <h3>{t('features.noTracking.title', locale)}</h3>
-          <p>{t('features.noTracking.desc', locale)}</p>
-        </div>
-
-        <!-- Receipt Uploading -->
-        <div class="feature-card fade-up" data-delay="650">
-          <div class="feature-icon" aria-hidden="true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/>
-              <path d="M14 8H8"/>
-              <path d="M16 12H8"/>
-              <path d="M13 16H8"/>
-            </svg>
-          </div>
-          <h3>{t('features.receipts.title', locale)}</h3>
-          <p>{t('features.receipts.desc', locale)}</p>
         </div>
       </div>
     </div>
@@ -444,6 +347,7 @@ const { locale } = Astro.props;
       </div>
 
       <div class="bento-grid">
+        <!-- Keep existing content -->
         <!-- Dates -->
         <div class="feature-card fade-up">
           <div class="feature-icon feature-icon-small" aria-hidden="true">
@@ -568,6 +472,30 @@ const { locale } = Astro.props;
           <h3>{t('comingSoon.mobile.title', locale)}</h3>
           <p>{t('comingSoon.mobile.desc', locale)}</p>
         </div>
+
+        <!-- Shared Lists -->
+        <div class="feature-card fade-up coming-soon-card" data-delay="300">
+          <div class="coming-soon-badge">{t('comingSoon.badge', locale)}</div>
+          <div class="feature-icon feature-icon-small" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/>
+            </svg>
+          </div>
+          <h3>{t('comingSoon.lists.title', locale)}</h3>
+          <p>{t('comingSoon.lists.desc', locale)}</p>
+        </div>
+
+        <!-- Group Polls -->
+        <div class="feature-card fade-up coming-soon-card" data-delay="400">
+          <div class="coming-soon-badge">{t('comingSoon.badge', locale)}</div>
+          <div class="feature-icon feature-icon-small" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>
+            </svg>
+          </div>
+          <h3>{t('comingSoon.polls.title', locale)}</h3>
+          <p>{t('comingSoon.polls.desc', locale)}</p>
+        </div>
       </div>
     </div>
   </section>
@@ -648,38 +576,86 @@ const { locale } = Astro.props;
     // Check for reduced motion preference
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // ===== WHAT'S IT FOR CARD ROTATION =====
-    // Show 6 of 7 cards, rotating daily based on UTC day
-    const whatsItForKeys = [
-      'billSplitting',
-      'expenseSharing',
-      'budgetTracking',
-      'reduceTransactions',
-      'travel',
-      'gifting',
-      'celebrations',
-      'weddings',
-      'sports',
-      'work',
-      'school',
-      'renovations',
-      'subscriptions',
+    // ===== TYPEWRITER EFFECT =====
+    const words = [
+      "Split dinner bills.",
+      "Share household expenses.",
+      "Manage holiday costs.",
+      "Organize group gifts.",
+      "Settle party tabs.",
+      "Track wedding costs.",
+      "Collect team dues.",
+      "Split work lunches.",
+      "Share renovation costs.",
+      "Split subscriptions."
     ];
-    const visibleCount = 6;
-    const daySeed = new Date().getUTCDay();
-    const startIndex = daySeed % whatsItForKeys.length;
-    const visibleKeys = new Set<string>();
+    const textElement = document.getElementById('typewriter-text');
+    
+    if (textElement) {
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 80;
 
-    for (let i = 0; i < Math.min(visibleCount, whatsItForKeys.length); i += 1) {
-      visibleKeys.add(whatsItForKeys[(startIndex + i) % whatsItForKeys.length]);
+        const type = () => {
+            const currentWord = words[wordIndex];
+            
+            if (isDeleting) {
+                textElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 30;
+            } else {
+                textElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 80;
+            }
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                isDeleting = true;
+                typeSpeed = 1200; // Pause at end
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                typeSpeed = 300;
+            }
+
+            setTimeout(type, typeSpeed);
+        };
+
+        // Start typing
+        setTimeout(type, 1000);
     }
 
-    document.querySelectorAll<HTMLElement>('[data-whats-it-for]').forEach((card) => {
-      const key = card.dataset.whatsItFor;
-      if (key && !visibleKeys.has(key)) {
-        card.classList.add('is-hidden');
-      }
+
+    // ===== USE CASES FILTER =====
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const useCaseCards = document.querySelectorAll('.feature-card[data-category]');
+
+    filterPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            // Update active pill
+            filterPills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
+
+            const filter = (pill as HTMLElement).dataset.filter;
+
+            // Filter cards
+            useCaseCards.forEach(card => {
+                const cardEl = card as HTMLElement;
+                const category = cardEl.dataset.category;
+                
+                if (filter === 'all' || filter === category) {
+                   cardEl.style.display = 'block';
+                   // Reset animation
+                   cardEl.classList.remove('is-visible');
+                   setTimeout(() => cardEl.classList.add('is-visible'), 50);
+                } else {
+                   cardEl.style.display = 'none';
+                }
+            });
+        });
     });
+
 
     // ===== 3D CARD TILT =====
     if (!prefersReducedMotion) {
@@ -730,21 +706,7 @@ const { locale } = Astro.props;
       });
     }
 
-    // ===== HERO TITLE REVEAL =====
-    const heroTitle = document.querySelector('#hero-title') as HTMLElement | null;
-    if (heroTitle) {
-      if (prefersReducedMotion) {
-        heroTitle.classList.add('hero-title-visible');
-      } else {
-        requestAnimationFrame(() => {
-          heroTitle.classList.add('hero-title-animate');
-        });
-      }
-    }
-
     // ===== AUTO-ASSIGN STAGGER DELAYS =====
-    // Assigns delays to fade-up elements without explicit data-delay
-    // The actual animation is handled by BaseLayout's IntersectionObserver
     document.querySelectorAll('.fade-up').forEach((el, index) => {
       if (!(el as HTMLElement).dataset.delay) {
         (el as HTMLElement).dataset.delay = String((index % 6) * 100);
@@ -770,9 +732,8 @@ const { locale } = Astro.props;
       });
     });
 
-    // ===== SATISFYING CONFETTI BURST =====
+    // ===== CONFETTI =====
     const fireConfetti = (x: number, y: number) => {
-      // First burst - main explosion
       confetti({
         particleCount: 80,
         spread: 60,
@@ -784,7 +745,6 @@ const { locale } = Astro.props;
         scalar: 1.2
       });
 
-      // Second burst - delayed sparkle
       setTimeout(() => {
         confetti({
           particleCount: 40,
@@ -798,26 +758,6 @@ const { locale } = Astro.props;
           shapes: ['circle']
         });
       }, 150);
-
-      // Third burst - side cannons
-      setTimeout(() => {
-        confetti({
-          particleCount: 30,
-          angle: 60,
-          spread: 40,
-          origin: { x: x - 0.1, y },
-          colors: ['#7ec786', '#f0c05c'],
-          disableForReducedMotion: true
-        });
-        confetti({
-          particleCount: 30,
-          angle: 120,
-          spread: 40,
-          origin: { x: x + 0.1, y },
-          colors: ['#5fb0c4', '#4eeab5'],
-          disableForReducedMotion: true
-        });
-      }, 100);
     };
 
     document.querySelectorAll('.btn-confetti').forEach(btn => {
@@ -828,13 +768,6 @@ const { locale } = Astro.props;
         fireConfetti(x, y);
       });
     });
-
-    // Random celebration (5% chance)
-    if (Math.random() < 0.05 && !prefersReducedMotion) {
-      setTimeout(() => {
-        fireConfetti(0.5, 0.6);
-      }, 2000);
-    }
   </script>
 </BaseLayout>
 

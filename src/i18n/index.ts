@@ -38,6 +38,7 @@ import sw from './sw';
 import te from './te';
 import ur from './ur';
 import fa from './fa';
+import tr from './tr';
 
 // =============================================================================
 // CENTRAL CONFIGURATION - Single source of truth for all locales
@@ -295,6 +296,15 @@ const localeConfig = {
     translations: te,
     inDropdown: true,
     dropdownOrder: 185, // Telugu
+    hasLogo: false,
+  },
+  tr: {
+    name: 'Türkçe',
+    flagCode: 'tr',
+    intlCode: 'tr-TR',
+    translations: tr,
+    inDropdown: true,
+    dropdownOrder: 187, // Turkish
     hasLogo: false,
   },
   uk: {

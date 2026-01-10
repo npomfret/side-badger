@@ -29,11 +29,13 @@ import eu from './eu';
 import hi from './hi';
 import zh from './zh';
 import fr from './fr';
+import fi from './fi';
 import bn from './bn';
 import pt from './pt';
 import pl from './pl';
 import ro from './ro';
 import id from './id';
+import is from './is';
 import pcm from './pcm';
 import sw from './sw';
 import te from './te';
@@ -99,6 +101,15 @@ const localeConfig = {
     translations: fa,
     inDropdown: true,
     dropdownOrder: 50,
+    hasLogo: false,
+  },
+  fi: {
+    name: 'Suomi',
+    flagCode: 'fi',
+    intlCode: 'fi-FI',
+    translations: fi,
+    inDropdown: true,
+    dropdownOrder: 55, // Finnish
     hasLogo: false,
   },
   zh: {
@@ -171,6 +182,15 @@ const localeConfig = {
     translations: ga,
     inDropdown: true,
     dropdownOrder: 80, // Irish
+    hasLogo: false,
+  },
+  is: {
+    name: 'Íslenska',
+    flagCode: 'is',
+    intlCode: 'is-IS',
+    translations: is,
+    inDropdown: true,
+    dropdownOrder: 82, // Icelandic
     hasLogo: false,
   },
   id: {

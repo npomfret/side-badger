@@ -26,8 +26,10 @@ import ph from './ph';
 import nlBE from './nl-BE';
 import ga from './ga';
 import cy from './cy';
+import cs from './cs';
 import eu from './eu';
 import hi from './hi';
+import hu from './hu';
 import zh from './zh';
 import fr from './fr';
 import fi from './fi';
@@ -122,6 +124,15 @@ const localeConfig = {
     dropdownOrder: 25, // Chinese
     hasLogo: false,
   },
+  cs: {
+    name: 'Čeština',
+    flagCode: 'cz',
+    intlCode: 'cs-CZ',
+    translations: cs,
+    inDropdown: true,
+    dropdownOrder: 28, // Czech
+    hasLogo: false,
+  },
   cy: {
     name: 'Cymraeg',
     flagCode: 'gb-wls', // Wales regional flag
@@ -184,6 +195,15 @@ const localeConfig = {
     inDropdown: true,
     dropdownOrder: 75, // Hindi
     hasLogo: true,
+  },
+  hu: {
+    name: 'Magyar',
+    flagCode: 'hu',
+    intlCode: 'hu-HU',
+    translations: hu,
+    inDropdown: true,
+    dropdownOrder: 78, // Hungarian
+    hasLogo: false,
   },
   ga: {
     name: 'Gaeilge',

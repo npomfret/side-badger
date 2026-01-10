@@ -30,6 +30,9 @@ import cs from './cs';
 import eu from './eu';
 import hi from './hi';
 import hu from './hu';
+import hr from './hr';
+import sl from './sl';
+import sr from './sr';
 import zh from './zh';
 import fr from './fr';
 import fi from './fi';
@@ -122,6 +125,15 @@ const localeConfig = {
     translations: zh,
     inDropdown: true,
     dropdownOrder: 25, // Chinese
+    hasLogo: false,
+  },
+  hr: {
+    name: 'Hrvatski',
+    flagCode: 'hr',
+    intlCode: 'hr-HR',
+    translations: hr,
+    inDropdown: true,
+    dropdownOrder: 26, // Croatian
     hasLogo: false,
   },
   cs: {
@@ -311,6 +323,24 @@ const localeConfig = {
     translations: ro,
     inDropdown: true,
     dropdownOrder: 155, // Romanian
+    hasLogo: false,
+  },
+  sr: {
+    name: 'Српски',
+    flagCode: 'rs',
+    intlCode: 'sr-RS',
+    translations: sr,
+    inDropdown: true,
+    dropdownOrder: 158, // Serbian
+    hasLogo: false,
+  },
+  sl: {
+    name: 'Slovenščina',
+    flagCode: 'si',
+    intlCode: 'sl-SI',
+    translations: sl,
+    inDropdown: true,
+    dropdownOrder: 159, // Slovenian
     hasLogo: false,
   },
   es: {

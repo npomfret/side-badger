@@ -15,6 +15,7 @@ import es from './es';
 import ja from './ja';
 import ar from './ar';
 import de from './de';
+import da from './da';
 import ko from './ko';
 import sv from './sv';
 import it from './it';
@@ -143,6 +144,15 @@ const localeConfig = {
     translations: de,
     inDropdown: true,
     dropdownOrder: 70, // German
+    hasLogo: false,
+  },
+  da: {
+    name: 'Dansk',
+    flagCode: 'dk',
+    intlCode: 'da-DK',
+    translations: da,
+    inDropdown: true,
+    dropdownOrder: 65, // Danish
     hasLogo: false,
   },
   hi: {

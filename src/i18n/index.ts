@@ -15,6 +15,7 @@ import es from './es';
 import ja from './ja';
 import ar from './ar';
 import de from './de';
+import el from './el';
 import da from './da';
 import ko from './ko';
 import sv from './sv';
@@ -155,6 +156,15 @@ const localeConfig = {
     translations: de,
     inDropdown: true,
     dropdownOrder: 70, // German
+    hasLogo: false,
+  },
+  el: {
+    name: 'Ελληνικά',
+    flagCode: 'gr',
+    intlCode: 'el-GR',
+    translations: el,
+    inDropdown: true,
+    dropdownOrder: 72, // Greek
     hasLogo: false,
   },
   da: {

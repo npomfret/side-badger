@@ -539,9 +539,9 @@ export const localeFlagCodes: Record<DropdownLocale, string> = {
   ),
 } as Record<DropdownLocale, string>;
 
-// Helper to get flag URL from circle-flags CDN
+// Helper to get flag URL from circle-flags CDN (jsDelivr)
 export function getFlagUrl(flagCode: string): string {
-  return `https://hatscripts.github.io/circle-flags/flags/${flagCode}.svg`;
+  return `https://cdn.jsdelivr.net/npm/circle-flags@1.0.1/flags/${flagCode}.svg`;
 }
 
 // =============================================================================

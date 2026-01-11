@@ -89,7 +89,7 @@ const localeConfig = {
     intlCode: 'bn-BD',
     translations: bn,
     inDropdown: true,
-    dropdownOrder: 15, // Bengali
+    dropdownOrder: 30, // Bengali
     hasLogo: false,
   },
   eu: {
@@ -108,7 +108,7 @@ const localeConfig = {
     intlCode: 'fa-IR',
     translations: fa,
     inDropdown: true,
-    dropdownOrder: 50,
+    dropdownOrder: 250, // Persian
     hasLogo: false,
   },
   fi: {
@@ -117,7 +117,7 @@ const localeConfig = {
     intlCode: 'fi-FI',
     translations: fi,
     inDropdown: true,
-    dropdownOrder: 55, // Finnish
+    dropdownOrder: 100, // Finnish
     hasLogo: false,
   },
   zh: {
@@ -126,7 +126,7 @@ const localeConfig = {
     intlCode: 'zh-CN',
     translations: zh,
     inDropdown: true,
-    dropdownOrder: 25, // Chinese
+    dropdownOrder: 40, // Chinese
     hasLogo: false,
   },
   hr: {
@@ -135,7 +135,7 @@ const localeConfig = {
     intlCode: 'hr-HR',
     translations: hr,
     inDropdown: true,
-    dropdownOrder: 26, // Croatian
+    dropdownOrder: 50, // Croatian
     hasLogo: false,
   },
   cs: {
@@ -144,7 +144,7 @@ const localeConfig = {
     intlCode: 'cs-CZ',
     translations: cs,
     inDropdown: true,
-    dropdownOrder: 28, // Czech
+    dropdownOrder: 60, // Czech
     hasLogo: false,
   },
   cy: {
@@ -153,7 +153,7 @@ const localeConfig = {
     intlCode: 'cy-GB',
     translations: cy,
     inDropdown: true,
-    dropdownOrder: 195, // Welsh
+    dropdownOrder: 390, // Welsh
     hasLogo: false,
   },
   'nl-BE': {
@@ -163,7 +163,7 @@ const localeConfig = {
     intlCode: 'nl-BE',
     translations: nlBE,
     inDropdown: true,
-    dropdownOrder: 30, // Dutch (Belgium)
+    dropdownOrder: 80, // Dutch (Belgium)
     hasLogo: false,
   },
   fr: {
@@ -172,7 +172,7 @@ const localeConfig = {
     intlCode: 'fr-FR',
     translations: fr,
     inDropdown: true,
-    dropdownOrder: 60, // French
+    dropdownOrder: 110, // French
     hasLogo: false,
   },
   de: {
@@ -181,7 +181,7 @@ const localeConfig = {
     intlCode: 'de-DE',
     translations: de,
     inDropdown: true,
-    dropdownOrder: 70, // German
+    dropdownOrder: 120, // German
     hasLogo: false,
   },
   el: {
@@ -190,7 +190,7 @@ const localeConfig = {
     intlCode: 'el-GR',
     translations: el,
     inDropdown: true,
-    dropdownOrder: 72, // Greek
+    dropdownOrder: 130, // Greek
     hasLogo: false,
   },
   da: {
@@ -199,7 +199,7 @@ const localeConfig = {
     intlCode: 'da-DK',
     translations: da,
     inDropdown: true,
-    dropdownOrder: 65, // Danish
+    dropdownOrder: 70, // Danish
     hasLogo: false,
   },
   hi: {
@@ -208,7 +208,7 @@ const localeConfig = {
     intlCode: 'hi-IN',
     translations: hi,
     inDropdown: true,
-    dropdownOrder: 75, // Hindi
+    dropdownOrder: 140, // Hindi
     hasLogo: true,
   },
   hu: {
@@ -217,7 +217,7 @@ const localeConfig = {
     intlCode: 'hu-HU',
     translations: hu,
     inDropdown: true,
-    dropdownOrder: 78, // Hungarian
+    dropdownOrder: 150, // Hungarian
     hasLogo: false,
   },
   ga: {
@@ -226,7 +226,7 @@ const localeConfig = {
     intlCode: 'ga-IE',
     translations: ga,
     inDropdown: true,
-    dropdownOrder: 80, // Irish
+    dropdownOrder: 180, // Irish (Gaelic)
     hasLogo: false,
   },
   is: {
@@ -235,7 +235,7 @@ const localeConfig = {
     intlCode: 'is-IS',
     translations: is,
     inDropdown: true,
-    dropdownOrder: 82, // Icelandic
+    dropdownOrder: 160, // Icelandic
     hasLogo: false,
   },
   id: {
@@ -244,7 +244,7 @@ const localeConfig = {
     intlCode: 'id-ID',
     translations: id,
     inDropdown: true,
-    dropdownOrder: 85, // Indonesian
+    dropdownOrder: 170, // Indonesian
     hasLogo: false,
   },
   it: {
@@ -253,7 +253,7 @@ const localeConfig = {
     intlCode: 'it-IT',
     translations: it,
     inDropdown: true,
-    dropdownOrder: 90, // Italian
+    dropdownOrder: 190, // Italian
     hasLogo: false,
   },
   ja: {
@@ -262,7 +262,7 @@ const localeConfig = {
     intlCode: 'ja-JP',
     translations: ja,
     inDropdown: true,
-    dropdownOrder: 100, // Japanese
+    dropdownOrder: 200, // Japanese
     hasLogo: true,
   },
   ko: {
@@ -271,7 +271,7 @@ const localeConfig = {
     intlCode: 'ko-KR',
     translations: ko,
     inDropdown: true,
-    dropdownOrder: 110, // Korean
+    dropdownOrder: 210, // Korean
     hasLogo: false,
   },
   lv: {
@@ -280,7 +280,7 @@ const localeConfig = {
     intlCode: 'lv-LV',
     translations: lv,
     inDropdown: true,
-    dropdownOrder: 120, // Latvian
+    dropdownOrder: 220, // Latvian
     hasLogo: false,
   },
   no: {
@@ -289,7 +289,7 @@ const localeConfig = {
     intlCode: 'nb-NO',
     translations: no,
     inDropdown: true,
-    dropdownOrder: 130, // Norwegian
+    dropdownOrder: 240, // Norwegian
     hasLogo: false,
   },
   pcm: {
@@ -298,7 +298,7 @@ const localeConfig = {
     intlCode: 'en-NG',
     translations: pcm,
     inDropdown: true,
-    dropdownOrder: 135, // Nigerian Pidgin
+    dropdownOrder: 230, // Nigerian Pidgin
     hasLogo: false,
   },
   pt: {
@@ -307,7 +307,7 @@ const localeConfig = {
     intlCode: 'pt-PT',
     translations: pt,
     inDropdown: true,
-    dropdownOrder: 140, // Portuguese
+    dropdownOrder: 270, // Portuguese
     hasLogo: false,
   },
   pl: {
@@ -316,7 +316,7 @@ const localeConfig = {
     intlCode: 'pl-PL',
     translations: pl,
     inDropdown: true,
-    dropdownOrder: 150, // Polish
+    dropdownOrder: 260, // Polish
     hasLogo: false,
   },
   ro: {
@@ -325,7 +325,7 @@ const localeConfig = {
     intlCode: 'ro-RO',
     translations: ro,
     inDropdown: true,
-    dropdownOrder: 155, // Romanian
+    dropdownOrder: 280, // Romanian
     hasLogo: false,
   },
   sr: {
@@ -334,7 +334,7 @@ const localeConfig = {
     intlCode: 'sr-RS',
     translations: sr,
     inDropdown: true,
-    dropdownOrder: 158, // Serbian
+    dropdownOrder: 290, // Serbian
     hasLogo: false,
   },
   sl: {
@@ -343,7 +343,7 @@ const localeConfig = {
     intlCode: 'sl-SI',
     translations: sl,
     inDropdown: true,
-    dropdownOrder: 159, // Slovenian
+    dropdownOrder: 300, // Slovenian
     hasLogo: false,
   },
   es: {
@@ -352,7 +352,7 @@ const localeConfig = {
     intlCode: 'es-ES',
     translations: es,
     inDropdown: true,
-    dropdownOrder: 160, // Spanish
+    dropdownOrder: 310, // Spanish
     hasLogo: false,
   },
   sv: {
@@ -361,7 +361,7 @@ const localeConfig = {
     intlCode: 'sv-SE',
     translations: sv,
     inDropdown: true,
-    dropdownOrder: 170, // Swedish
+    dropdownOrder: 330, // Swedish
     hasLogo: false,
   },
   sw: {
@@ -370,7 +370,7 @@ const localeConfig = {
     intlCode: 'sw-TZ',
     translations: sw,
     inDropdown: true,
-    dropdownOrder: 175, // Swahili
+    dropdownOrder: 320, // Swahili
     hasLogo: false,
   },
   ph: {
@@ -379,7 +379,7 @@ const localeConfig = {
     intlCode: 'fil-PH',
     translations: ph,
     inDropdown: true,
-    dropdownOrder: 180, // Tagalog
+    dropdownOrder: 340, // Tagalog
     hasLogo: false,
   },
   te: {
@@ -388,7 +388,7 @@ const localeConfig = {
     intlCode: 'te-IN',
     translations: te,
     inDropdown: true,
-    dropdownOrder: 185, // Telugu
+    dropdownOrder: 350, // Telugu
     hasLogo: false,
   },
   tr: {
@@ -397,7 +397,7 @@ const localeConfig = {
     intlCode: 'tr-TR',
     translations: tr,
     inDropdown: true,
-    dropdownOrder: 187, // Turkish
+    dropdownOrder: 360, // Turkish
     hasLogo: false,
   },
   uk: {
@@ -406,7 +406,7 @@ const localeConfig = {
     intlCode: 'uk-UA',
     translations: uk,
     inDropdown: true,
-    dropdownOrder: 190, // Ukrainian
+    dropdownOrder: 370, // Ukrainian
     hasLogo: true,
   },
   ur: {
@@ -415,7 +415,7 @@ const localeConfig = {
     intlCode: 'ur-PK',
     translations: ur,
     inDropdown: true,
-    dropdownOrder: 192, // Urdu
+    dropdownOrder: 380, // Urdu
     hasLogo: false,
   },
 } as const;
@@ -429,49 +429,49 @@ const aliasConfig = {
     name: 'Nederlands',
     flagCode: 'nl',
     target: 'nl-BE' as const,
-    dropdownOrder: 35, // Dutch (Netherlands) - after Dutch (Belgium)
+    dropdownOrder: 81, // Dutch (Netherlands)
   },
   'en-us': {
     name: 'English',
     subtitle: 'American',
     flagCode: 'us',
     target: 'en' as const,
-    dropdownOrder: 40, // English variants start here
+    dropdownOrder: 90, // English (American)
   },
   'en-au': {
     name: 'English',
     subtitle: 'Australian',
     flagCode: 'au',
     target: 'en' as const,
-    dropdownOrder: 41,
-  },
-  'en-ca': {
-    name: 'English',
-    subtitle: 'Canadian',
-    flagCode: 'ca',
-    target: 'en' as const,
-    dropdownOrder: 42,
-  },
-  'en-ie': {
-    name: 'English',
-    subtitle: 'Irish',
-    flagCode: 'ie',
-    target: 'en' as const,
-    dropdownOrder: 43,
-  },
-  'en-sc': {
-    name: 'English',
-    subtitle: 'Scotch',
-    flagCode: 'gb-sct', // Scotland regional flag
-    target: 'en' as const,
-    dropdownOrder: 44,
+    dropdownOrder: 91, // English (Australian)
   },
   'en-gb': {
     name: 'English',
     subtitle: '(actual)',
     flagCode: 'gb',
     target: 'en' as const,
-    dropdownOrder: 45,
+    dropdownOrder: 92, // English (British)
+  },
+  'en-ca': {
+    name: 'English',
+    subtitle: 'Canadian',
+    flagCode: 'ca',
+    target: 'en' as const,
+    dropdownOrder: 93, // English (Canadian)
+  },
+  'en-ie': {
+    name: 'English',
+    subtitle: 'Irish',
+    flagCode: 'ie',
+    target: 'en' as const,
+    dropdownOrder: 94, // English (Irish)
+  },
+  'en-sc': {
+    name: 'English',
+    subtitle: 'Scotch',
+    flagCode: 'gb-sct', // Scotland regional flag
+    target: 'en' as const,
+    dropdownOrder: 95, // English (Scotch)
   },
 } as const;
 

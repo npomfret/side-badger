@@ -585,35 +585,35 @@ const { locale } = Astro.props;
         let wordIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
-        let typeSpeed = 80;
+        let typeSpeed = 50;
 
         const type = () => {
             const currentWord = words[wordIndex];
-            
+
             if (isDeleting) {
                 textElement.textContent = currentWord.substring(0, charIndex - 1);
                 charIndex--;
-                typeSpeed = 30;
+                typeSpeed = 20;
             } else {
                 textElement.textContent = currentWord.substring(0, charIndex + 1);
                 charIndex++;
-                typeSpeed = 80;
+                typeSpeed = 50;
             }
 
             if (!isDeleting && charIndex === currentWord.length) {
                 isDeleting = true;
-                typeSpeed = 1200; // Pause at end
+                typeSpeed = 800; // Pause at end
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 wordIndex = (wordIndex + 1) % words.length;
-                typeSpeed = 300;
+                typeSpeed = 200;
             }
 
             setTimeout(type, typeSpeed);
         };
 
         // Start typing
-        setTimeout(type, 1000);
+        setTimeout(type, 500);
     }
 
 

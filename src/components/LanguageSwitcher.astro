@@ -1,5 +1,5 @@
 ---
-import { allLocales, localeNames, localeFlagCodes, getFlagUrl, getPathWithoutLocale, t, resolveLocale, localeAliases, type Locale, type LocaleOrAlias, type DropdownLocale } from '../i18n';
+import { allLocales, localeNames, localeSubtitles, localeFlagCodes, getFlagUrl, getPathWithoutLocale, t, resolveLocale, localeAliases, type Locale, type LocaleOrAlias, type DropdownLocale } from '../i18n';
 
 interface Props {
   currentLocale: Locale;
@@ -33,23 +33,13 @@ const displayLocale = getDisplayLocaleFromPath(currentPath);
 // Get the path without any locale prefix
 const basePath = getPathWithoutLocale(currentPath);
 
-// Parse locale name into main part and parenthetical subtitle
-function parseLocaleName(name: string): { main: string; subtitle?: string } {
-  const match = name.match(/^(.+?)\s*\((.+)\)$/);
-  if (match) {
-    return { main: match[1], subtitle: match[2] };
-  }
-  return { main: name };
-}
-
 // Prepare locale data for the template (includes comedy aliases)
 const localeData = allLocales.map(locale => {
-  const parsed = parseLocaleName(localeNames[locale]);
   return {
     code: locale,
     name: localeNames[locale],
-    mainName: parsed.main,
-    subtitle: parsed.subtitle,
+    mainName: localeNames[locale],
+    subtitle: localeSubtitles[locale],
     flagUrl: getFlagUrl(localeFlagCodes[locale], locale),
     href: `/${locale}${basePath === '/' ? '' : basePath}`,
     active: resolveLocale(locale) === currentLocale,
@@ -59,16 +49,17 @@ const localeData = allLocales.map(locale => {
 const searchPlaceholder = t('languageSwitcher.search', currentLocale);
 const noResultsText = t('languageSwitcher.noResults', currentLocale);
 
-// Parse the current display locale name for the button
-const currentParsed = parseLocaleName(localeNames[displayLocale]);
+// Get the current display locale name and subtitle for the button
+const currentName = localeNames[displayLocale];
+const currentSubtitle = localeSubtitles[displayLocale];
 ---
 
 <div class="language-switcher">
   <button class="language-switcher-btn" aria-label={changeLanguageLabel} aria-expanded="false" aria-haspopup="listbox">
     <img class="current-flag" src={getFlagUrl(localeFlagCodes[displayLocale], displayLocale)} alt="" loading="eager" />
     <span class="current-lang">
-      {currentParsed.main}
-      {currentParsed.subtitle && <span class="current-subtitle">{currentParsed.subtitle}</span>}
+      {currentName}
+      {currentSubtitle && <span class="current-subtitle">{currentSubtitle}</span>}
     </span>
     <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="m6 9 6 6 6-6"/>

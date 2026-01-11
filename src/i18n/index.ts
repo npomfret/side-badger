@@ -157,7 +157,8 @@ const localeConfig = {
     hasLogo: false,
   },
   'nl-BE': {
-    name: 'Nederlands (België)',
+    name: 'Nederlands',
+    subtitle: 'België',
     flagCode: 'be',
     intlCode: 'nl-BE',
     translations: nlBE,
@@ -431,37 +432,43 @@ const aliasConfig = {
     dropdownOrder: 35, // Dutch (Netherlands) - after Dutch (Belgium)
   },
   'en-us': {
-    name: 'English (American)',
+    name: 'English',
+    subtitle: 'American',
     flagCode: 'us',
     target: 'en' as const,
     dropdownOrder: 40, // English variants start here
   },
   'en-au': {
-    name: 'English (Australian)',
+    name: 'English',
+    subtitle: 'Australian',
     flagCode: 'au',
     target: 'en' as const,
     dropdownOrder: 41,
   },
   'en-ca': {
-    name: 'English (Canadian)',
+    name: 'English',
+    subtitle: 'Canadian',
     flagCode: 'ca',
     target: 'en' as const,
     dropdownOrder: 42,
   },
   'en-ie': {
-    name: 'English (Irish)',
+    name: 'English',
+    subtitle: 'Irish',
     flagCode: 'ie',
     target: 'en' as const,
     dropdownOrder: 43,
   },
   'en-sc': {
-    name: 'English (Scotch)',
+    name: 'English',
+    subtitle: 'Scotch',
     flagCode: 'gb-sct', // Scotland regional flag
     target: 'en' as const,
     dropdownOrder: 44,
   },
   'en-gb': {
-    name: 'English (actual)',
+    name: 'English',
+    subtitle: '(actual)',
     flagCode: 'gb',
     target: 'en' as const,
     dropdownOrder: 45,
@@ -540,6 +547,20 @@ export const localeFlagCodes: Record<DropdownLocale, string> = {
     Object.entries(aliasConfig).map(([key, config]) => [key, config.flagCode])
   ),
 } as Record<DropdownLocale, string>;
+
+// Explicit subtitles for dropdown (used as-is, no parsing)
+export const localeSubtitles: Partial<Record<DropdownLocale, string>> = {
+  ...Object.fromEntries(
+    Object.entries(localeConfig)
+      .filter(([, config]) => config.inDropdown && 'subtitle' in config)
+      .map(([key, config]) => [key, (config as unknown as { subtitle: string }).subtitle])
+  ),
+  ...Object.fromEntries(
+    Object.entries(aliasConfig)
+      .filter(([, config]) => 'subtitle' in config)
+      .map(([key, config]) => [key, (config as unknown as { subtitle: string }).subtitle])
+  ),
+} as Partial<Record<DropdownLocale, string>>;
 
 // Custom flag URLs that override the CDN (for locales with flagUrl defined)
 export const localeFlagUrls: Partial<Record<DropdownLocale, string>> = {

@@ -5,7 +5,7 @@ Marketing website for a white-label bill splitting app. The actual app is Fireba
 ## Architecture
 
 - **Framework**: Astro 5 (static site generation)
-- **Deployment**: Docker container on `sidebadger.com` (behind shared nginx proxy)
+- **Deployment**: Docker container on `sidebadger.me` (behind shared nginx proxy)
 - **CI/CD**: GitHub Actions auto-deploys on push to `main`
 
 ## Key Files

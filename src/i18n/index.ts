@@ -596,7 +596,7 @@ export const isRTL = (locale: string): boolean =>
   RTL_LANGUAGES.includes(locale.split('-')[0]);
 
 // Domain configuration from environment variables
-// Set PUBLIC_DOMAIN at build time (e.g., "sidebadger.me" or "sidebadger.com")
+// Set PUBLIC_DOMAIN at build time (e.g., "sidebadger.me")
 const domain = import.meta.env.PUBLIC_DOMAIN || 'sidebadger.me';
 
 export function getAppUrl(locale: Locale = 'en'): string {

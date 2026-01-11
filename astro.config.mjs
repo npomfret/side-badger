@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 import { locales } from './src/i18n/index.ts';
 
 export default defineConfig({
-  site: 'https://sidebadger.com',
+  site: 'https://sidebadger.me',
   output: 'static',
   devToolbar: { enabled: false },
   integrations: [sitemap()],

@@ -18,7 +18,7 @@ jobs:
 
     strategy:
       matrix:
-        domain: [sidebadger.me, sidebadger.com]
+        domain: [sidebadger.me]
 
     steps:
       - name: Checkout repository
@@ -67,7 +67,7 @@ jobs:
       - name: Copy docker-compose to server
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: sidebadger.com
+          host: sidebadger.me
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "docker-compose.prod.yml"
@@ -76,12 +76,11 @@ jobs:
       - name: Deploy to server
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: sidebadger.com
+          host: sidebadger.me
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /opt/side-badger-website
             mv docker-compose.prod.yml docker-compose.yml
             docker pull ghcr.io/${{ github.repository }}:latest-me
-            docker pull ghcr.io/${{ github.repository }}:latest-com
             docker compose up -d --remove-orphans

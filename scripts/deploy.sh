@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-SERVER="root@sidebadger.com"
+SERVER="root@sidebadger.me"
 REMOTE_DIR="/opt/side-badger-website"
 
 echo "🦡 Deploying Side Badger Website..."

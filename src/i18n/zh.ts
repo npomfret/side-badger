@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* 显然存在一些限制。适用合理使用和许多其他限制。在收费之前是免费的。',
   'hero.subtitleStatic': ' 永久免费，无广告，专为保护您的隐私而设计。',
   'hero.title': '像 Side Badger 一样',
+  'hero.typewriterWords': '["分摊晚餐账单。", "分担家庭开支。", "管理假期费用。", "组织团购礼物。", "结清派对账单。", "追踪婚礼费用。", "收取团队费用。", "分摊工作午餐。", "分担装修费用。", "分摊订阅费用。"]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': '分摊费用',
   'languageSwitcher.noResults': '未找到语言',

@@ -76,6 +76,7 @@ export default {
   'hero.disclaimer': '* Der er naturligvis nogle begrænsninger. Rimelig brug og mange andre begrænsninger gælder. Det er gratis, indtil det ikke er det.',
   'hero.subtitleStatic': ' Gratis for evigt, ingen reklamer, og bygget med dit privatliv i tankerne.',
   'hero.title': 'Del udgifter som en',
+  'hero.typewriterWords': '["Del middagsregninger.", "Del husholdningsudgifter.", "Håndter ferieudgifter.", "Organiser gruppegaver.", "Afregn festregninger.", "Spor bryllupsudgifter.", "Indsaml holdgebyrer.", "Del arbejdsfrokoster.", "Del renoveringsudgifter.", "Del abonnementer."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Ingen sprog fundet',

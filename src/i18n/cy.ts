@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* Yn amlwg mae rhai cyfyngiadau. Mae defnydd teg, a llawer o gyfyngiadau eraill yn berthnasol. Mae am ddim nes nad yw.',
   'hero.subtitleStatic': ' Am ddim am byth, dim hysbysebion, ac wedi\'i adeiladu gyda\'ch preifatrwydd mewn golwg.',
   'hero.title': 'Rhannwch gostau fel',
+  'hero.typewriterWords': '["Rhannwch filiau cinio.", "Rhannwch gostau cartref.", "Rheolwch gostau gwyliau.", "Trefnwch anrhegion grŵp.", "Setlwch filiau parti.", "Traciwch gostau priodas.", "Casglwch ffioedd tîm.", "Rhannwch giniawau gwaith.", "Rhannwch gostau adnewyddu.", "Rhannwch danysgrifiadau."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'mochyn daear ochr',
   'languageSwitcher.noResults': 'Dim ieithoedd wedi\'u canfod',

@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* Evident, există unele limitări. Se aplică utilizarea corectă și multe alte limitări. E gratuit până nu mai e.',
   'hero.subtitleStatic': ' Gratuit pentru totdeauna, fără reclame și construit cu confidențialitatea ta în minte.',
   'hero.title': 'Împarte cheltuielile ca un',
+  'hero.typewriterWords': '["Împarte nota de plată la cină.", "Împarte cheltuielile casei.", "Gestionează costurile vacanței.", "Organizează cadourile de grup.", "Achită notele de la petreceri.", "Urmărește costurile nunții.", "Colectează cotizațiile echipei.", "Împarte prânzurile de lucru.", "Împarte costurile renovării.", "Împarte abonamentele."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Nu s-au găsit limbi',

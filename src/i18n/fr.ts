@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* Évidemment, il y a quelques limitations. Une utilisation équitable et de nombreuses autres limitations s\'appliquent. C\'est gratuit jusqu\'à ce que ça ne le soit plus.',
   'hero.subtitleStatic': ' Gratuit pour toujours, sans publicité et conçu dans le respect de votre vie privée.',
   'hero.title': 'Partagez les dépenses comme un',
+  'hero.typewriterWords': '["Partagez l\'addition du dîner.", "Partagez les dépenses du ménage.", "Gérez les frais de vacances.", "Organisez les cadeaux de groupe.", "Réglez les notes de soirée.", "Suivez les frais de mariage.", "Collectez les cotisations d\'équipe.", "Partagez les repas de travail.", "Partagez les frais de rénovation.", "Partagez les abonnements."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Aucune langue trouvée',

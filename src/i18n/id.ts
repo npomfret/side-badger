@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* Jelas ada beberapa batasan. Penggunaan wajar, dan banyak batasan lain berlaku. Gratis sampai tidak lagi.',
   'hero.subtitleStatic': ' Gratis selamanya, tanpa iklan, dan dibuat dengan privasi Anda sebagai prioritas.',
   'hero.title': 'Bagi pengeluaran seperti',
+  'hero.typewriterWords': '["Bagi tagihan makan malam.", "Bagikan pengeluaran rumah.", "Kelola biaya liburan.", "Atur hadiah kelompok.", "Selesaikan tagihan pesta.", "Lacak biaya pernikahan.", "Kumpulkan iuran tim.", "Bagi makan siang kerja.", "Bagikan biaya renovasi.", "Bagi langganan."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Tidak ada bahasa yang ditemukan',

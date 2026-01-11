@@ -76,6 +76,7 @@ export default {
   'hero.disclaimer': '* Persze vannak korlátok. A méltányos használat és sok más korlátozás érvényes. Ingyenes, amíg nem az.',
   'hero.subtitleStatic': ' Örökre ingyenes, hirdetések nélkül, és az adatvédelem az első.',
   'hero.title': 'Oszd meg a költségeket mint egy',
+  'hero.typewriterWords': '["Oszd szét a vacsoraszámlát.", "Oszd meg a háztartási költségeket.", "Kezeld a nyaralási költségeket.", "Szervezd a csoportos ajándékokat.", "Rendezd a bulik számláit.", "Kövesd az esküvői költségeket.", "Gyűjtsd be a csapatdíjakat.", "Oszd szét a munkaebédeket.", "Oszd meg a felújítási költségeket.", "Oszd szét az előfizetéseket."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Nincs találat',

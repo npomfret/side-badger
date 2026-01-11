@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* Offensichtlich gibt es einige Einschränkungen. Fair-Use-Richtlinien und viele andere Einschränkungen gelten. Es ist kostenlos, bis es das nicht mehr ist.',
   'hero.subtitleStatic': ' Für immer kostenlos, keine Werbung und mit deiner Privatsphäre im Blick entwickelt.',
   'hero.title': 'Ausgaben teilen wie ein',
+  'hero.typewriterWords': '["Restaurantrechnungen teilen.", "Haushaltskosten teilen.", "Urlaubskosten verwalten.", "Gruppengeschenke organisieren.", "Partyrechnungen begleichen.", "Hochzeitskosten verfolgen.", "Teamgebühren sammeln.", "Arbeitsessen teilen.", "Renovierungskosten teilen.", "Abos aufteilen."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'Neben-Dachs',
   'languageSwitcher.noResults': 'Keine Sprachen gefunden',

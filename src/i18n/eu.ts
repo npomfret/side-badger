@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* Jakina, muga batzuk daude. Erabilera zuzena eta beste muga asko aplikatzen dira. Doakoa da ez den arte.',
   'hero.subtitleStatic': ' Betirako doakoa, iragarkirik gabe, eta zure pribatutasuna kontuan hartuta eraikia.',
   'hero.title': 'Banatu gastuak',
+  'hero.typewriterWords': '["Banatu afari-fakturak.", "Partekatu etxeko gastuak.", "Kudeatu opor-kostuak.", "Antolatu talde-opariak.", "Konpondu festa-fakturak.", "Jarraitu ezkontza-gastuak.", "Bildu talde-kuotak.", "Banatu lan-bazkiak.", "Partekatu berritze-kostuak.", "Banatu harpidetzak."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'azkonarra bezala',
   'languageSwitcher.noResults': 'Ez da hizkuntzarik aurkitu',

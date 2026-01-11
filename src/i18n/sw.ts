@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* Bila shaka kuna vikwazo. Matumizi ya haki, na vikwazo vingine vingi vinatumika. Ni bure hadi isiwe.',
   'hero.subtitleStatic': ' Bure milele, hakuna matangazo, na imejengwa kwa kuzingatia faragha yako.',
   'hero.title': 'Gawanya gharama kama',
+  'hero.typewriterWords': '["Gawanya bili za chakula cha jioni.", "Shiriki gharama za nyumba.", "Simamia gharama za likizo.", "Pangilia zawadi za kikundi.", "Maliza bili za sherehe.", "Fuatilia gharama za harusi.", "Kusanya ada za timu.", "Gawanya chakula cha mchana cha kazi.", "Shiriki gharama za ukarabati.", "Gawanya usajili."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Hakuna lugha zilizopatikana',

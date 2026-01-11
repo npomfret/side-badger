@@ -45,7 +45,7 @@ const { locale } = Astro.props;
         
         <p class="hero-subtitle">
           <span class="typewriter-wrapper">
-            <span id="typewriter-text"></span><span class="cursor">&nbsp;</span>
+            <span id="typewriter-text" data-words={t('hero.typewriterWords', locale)}></span><span class="cursor">&nbsp;</span>
           </span>
           {t('hero.subtitleStatic', locale)}
         </p>
@@ -577,21 +577,11 @@ const { locale } = Astro.props;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     // ===== TYPEWRITER EFFECT =====
-    const words = [
-      "Split dinner bills.",
-      "Share household expenses.",
-      "Manage holiday costs.",
-      "Organize group gifts.",
-      "Settle party tabs.",
-      "Track wedding costs.",
-      "Collect team dues.",
-      "Split work lunches.",
-      "Share renovation costs.",
-      "Split subscriptions."
-    ];
     const textElement = document.getElementById('typewriter-text');
-    
-    if (textElement) {
+    const wordsData = textElement?.getAttribute('data-words');
+    const words: string[] = wordsData ? JSON.parse(wordsData) : [];
+
+    if (textElement && words.length > 0) {
         let wordIndex = 0;
         let charIndex = 0;
         let isDeleting = false;

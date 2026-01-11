@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* Obviamente hay algunas limitaciones. Se aplican reglas de uso justo y muchas otras limitaciones. Es gratis hasta que deje de serlo.',
   'hero.subtitleStatic': ' Gratis para siempre, sin anuncios y diseñado pensando en tu privacidad.',
   'hero.title': 'Divide gastos como un',
+  'hero.typewriterWords': '["Divide cuentas de cena.", "Comparte gastos del hogar.", "Gestiona costes de vacaciones.", "Organiza regalos grupales.", "Salda cuentas de fiestas.", "Sigue gastos de boda.", "Recauda cuotas del equipo.", "Divide almuerzos de trabajo.", "Comparte costes de renovación.", "Divide suscripciones."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'No se encontraron idiomas',

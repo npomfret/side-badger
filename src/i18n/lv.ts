@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* Protams, ir daži ierobežojumi. Tiek piemērota godīga lietošana un daudzi citi ierobežojumi. Tas ir bez maksas, kamēr tas tā nav.',
   'hero.subtitleStatic': ' Bez maksas mūžīgi, bez reklāmām un veidots ar jūsu privātumu prātā.',
   'hero.title': 'Sadaliet izdevumus kā',
+  'hero.typewriterWords': '["Sadaliet vakariņu rēķinus.", "Daliet mājsaimniecības izdevumus.", "Pārvaldiet brīvdienu izmaksas.", "Organizējiet grupas dāvanas.", "Nokārtojiet ballīšu rēķinus.", "Sekojiet kāzu izmaksām.", "Iekasējiet komandas maksas.", "Sadaliet darba pusdienas.", "Daliet renovācijas izmaksas.", "Sadaliet abonementus."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Nav atrasta neviena valoda',

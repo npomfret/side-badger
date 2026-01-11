@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* 当然ながらいくつかの制限があります。公正な使用、その他多くの制限が適用されます。無料です...今のところは。',
   'hero.subtitleStatic': ' 永久無料、広告なし、プライバシーを最優先に設計。',
   'hero.title': '割り勘を',
+  'hero.typewriterWords': '["食事代を割り勘。", "家計を分担。", "旅費を管理。", "グループギフトを整理。", "パーティー代を精算。", "結婚式費用を追跡。", "チーム会費を徴収。", "仕事のランチを割り勘。", "リフォーム費用を分担。", "サブスク代を割り勘。"]',
   'hero.titleDisclaimer': 'のように',
   'hero.titleHighlight': 'サイドバジャー',
   'languageSwitcher.noResults': '言語が見つかりません',

@@ -76,6 +76,7 @@ export default {
   'hero.disclaimer': '* Obviously there are some limitations. Fair usage, and many other limitations apply. It\'s free until it isn\'t.',
   'hero.subtitleStatic': ' Free forever, no ads, and built with your privacy in mind.',
   'hero.title': 'Split expenses like a',
+  'hero.typewriterWords': '["Split dinner bills.", "Share household expenses.", "Manage holiday costs.", "Organize group gifts.", "Settle party tabs.", "Track wedding costs.", "Collect team dues.", "Split work lunches.", "Share renovation costs.", "Split subscriptions."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'No languages found',

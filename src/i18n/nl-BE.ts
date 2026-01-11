@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* Er zijn natuurlijk wel enkele beperkingen. Fair use en vele andere beperkingen zijn van toepassing. Het is gratis totdat het dat niet meer is.',
   'hero.subtitleStatic': ' Voor altijd gratis, zonder advertenties en gebouwd met jouw privacy in gedachten.',
   'hero.title': 'Splits uitgaven als een',
+  'hero.typewriterWords': '["Splits etentjesrekeningen.", "Deel huishoudelijke kosten.", "Beheer vakantiekosten.", "Organiseer groepscadeaus.", "Verreken feestavondrekeningen.", "Volg trouwkosten.", "Verzamel teambijdragen.", "Splits werklunches.", "Deel renovatiekosten.", "Splits abonnementen."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Geen talen gevonden',

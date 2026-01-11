@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* 물론 몇 가지 제한이 있습니다. 공정한 사용 및 기타 많은 제한이 적용됩니다. 무료가 아닐 때까지 무료입니다.',
   'hero.subtitleStatic': ' 영원히 무료, 광고 없음, 프라이버시를 최우선으로 설계.',
   'hero.title': '비용을',
+  'hero.typewriterWords': '["저녁 값 나누기.", "생활비 나누기.", "휴가 비용 관리.", "단체 선물 정리.", "파티 비용 정산.", "결혼 비용 추적.", "팀 회비 징수.", "업무 점심 나누기.", "리모델링 비용 나누기.", "구독료 나누기."]',
   'hero.titleDisclaimer': '처럼 나누세요',
   'hero.titleHighlight': '사이드 배저',
   'languageSwitcher.noResults': '언어를 찾을 수 없습니다',

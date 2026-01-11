@@ -76,6 +76,7 @@ export default {
   'hero.disclaimer': '* Očitno obstajajo nekatere omejitve. Velja poštena uporaba in številne druge omejitve. Je brezplačno, dokler ni.',
   'hero.subtitleStatic': ' Za vedno brezplačno, brez oglasov in z zasebnostjo na prvem mestu.',
   'hero.title': 'Razdeli stroške kot',
+  'hero.typewriterWords': '["Razdeli račune za večerjo.", "Deli stroške gospodinjstva.", "Upravljaj stroške dopusta.", "Organiziraj skupinska darila.", "Poravnaj račune zabave.", "Sledi stroškom poroke.", "Zberi ekipne prispevke.", "Razdeli delovna kosila.", "Deli stroške prenove.", "Razdeli naročnine."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Jeziki niso najdeni',

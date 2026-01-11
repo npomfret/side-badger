@@ -76,6 +76,7 @@ export default {
   'hero.disclaimer': '* Tietenkin on joitain rajoituksia. Kohtuullinen käyttö ja monet muut rajoitukset pätevät. Se on ilmainen, kunnes se ei ole.',
   'hero.subtitleStatic': ' Ilmainen ikuisesti, ei mainoksia, ja rakennettu yksityisyytesi huomioiden.',
   'hero.title': 'Jaa kulut kuin',
+  'hero.typewriterWords': '["Jaa illallislaskut.", "Jaa kotitalouskulut.", "Hallitse lomakuluja.", "Järjestä ryhmälahjat.", "Selvitä juhlatilaukset.", "Seuraa hääkuluja.", "Kerää joukkuemaksut.", "Jaa työlounaat.", "Jaa remonttikulut.", "Jaa tilaukset."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Kieliä ei löytynyt',

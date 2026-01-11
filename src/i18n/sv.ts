@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* Självklart finns det vissa begränsningar. Rättvis användning och många andra begränsningar gäller. Det är gratis tills det inte är det.',
   'hero.subtitleStatic': ' Gratis för alltid, inga annonser och byggt med din integritet i åtanke.',
   'hero.title': 'Dela utgifter som en',
+  'hero.typewriterWords': '["Dela middagsnotan.", "Dela hushållskostnader.", "Hantera semesterkostnader.", "Organisera gruppresenter.", "Gör upp festräkningar.", "Spåra bröllopskostnader.", "Samla in lagavgifter.", "Dela arbetsluncher.", "Dela renoveringskostnader.", "Dela prenumerationer."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Inga språk hittades',

@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* Malinaw na mayroong ilang limitasyon. Nalalapat ang patas na paggamit, at marami pang ibang limitasyon. Libre ito hanggang sa hindi na.',
   'hero.subtitleStatic': ' Libre magpakailanman, walang ad, at ginawa na may pagsasaalang-alang sa iyong privacy.',
   'hero.title': 'Hatiin ang mga gastos tulad ng isang',
+  'hero.typewriterWords': '["Hatiin ang dinner bill.", "Ibahagi ang gastos sa bahay.", "I-manage ang holiday cost.", "Ayusin ang group gifts.", "I-settle ang party bill.", "I-track ang wedding cost.", "Kolektahin ang team dues.", "Hatiin ang work lunch.", "Ibahagi ang renovation cost.", "Hatiin ang subscriptions."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Walang nakitang wika',

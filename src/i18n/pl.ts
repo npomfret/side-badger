@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* Oczywiście są pewne ograniczenia. Obowiązuje uczciwe użycie i wiele innych limitów. Jest darmo, dopóki nie jest.',
   'hero.subtitleStatic': ' Darmowe na zawsze, bez reklam i stworzone z myślą o Twojej prywatności.',
   'hero.title': 'Dziel wydatki jak',
+  'hero.typewriterWords': '["Podziel rachunek za kolację.", "Dziel koszty domowe.", "Zarządzaj kosztami wakacji.", "Organizuj grupowe prezenty.", "Rozliczaj rachunki z imprez.", "Śledź koszty ślubu.", "Zbieraj składki zespołowe.", "Dziel służbowe lunche.", "Dziel koszty remontu.", "Dziel subskrypcje."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Nie znaleziono języków',

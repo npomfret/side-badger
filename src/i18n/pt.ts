@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* Obviamente, existem algumas limitações. Aplica-se o uso justo e muitas outras limitações. É grátis até não ser mais.',
   'hero.subtitleStatic': ' Grátis para sempre, sem anúncios e construído com a sua privacidade em mente.',
   'hero.title': 'Divida despesas como um',
+  'hero.typewriterWords': '["Divida a conta do jantar.", "Compartilhe despesas da casa.", "Gerencie custos de férias.", "Organize presentes em grupo.", "Acerte contas de festas.", "Acompanhe custos do casamento.", "Colete taxas da equipe.", "Divida almoços de trabalho.", "Compartilhe custos de reforma.", "Divida assinaturas."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Nenhum idioma encontrado',

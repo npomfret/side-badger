@@ -76,6 +76,7 @@ export default {
   'hero.disclaimer': '* Očito postoje neka ograničenja. Vrijedi pravedna uporaba i mnoga druga ograničenja. Besplatno je dok nije.',
   'hero.subtitleStatic': ' Zauvijek besplatno, bez oglasa i s tvojom privatnošću na prvom mjestu.',
   'hero.title': 'Podijeli troškove kao',
+  'hero.typewriterWords': '["Podijeli račune za večeru.", "Podijeli kućne troškove.", "Upravljaj troškovima odmora.", "Organiziraj grupne darove.", "Podmiri račune s tuluma.", "Prati troškove vjenčanja.", "Prikupi timske članarine.", "Podijeli poslovne ručkove.", "Podijeli troškove renoviranja.", "Podijeli pretplate."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Nisu pronađeni jezici',

@@ -193,7 +193,7 @@ describe('Translation Files Integrity', () => {
       // Get all .ts files in i18n directory except index.ts
       const i18nDir = path.join(__dirname, '..', 'i18n');
       const files = fs.readdirSync(i18nDir)
-        .filter(f => f.endsWith('.ts') && f !== 'index.ts')
+        .filter(f => f.endsWith('.ts') && f !== 'index.ts' && !f.endsWith('.test.ts'))
         .map(f => f.replace('.ts', ''));
 
       const loadedLocales = Object.keys(translations);

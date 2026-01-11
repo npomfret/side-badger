@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* Ovviamente ci sono alcune limitazioni. Si applicano l\'uso equo e molte altre limitazioni. È gratuito finché non lo è più.',
   'hero.subtitleStatic': ' Gratuito per sempre, senza pubblicità e progettato pensando alla tua privacy.',
   'hero.title': 'Dividi le spese come un',
+  'hero.typewriterWords': '["Dividi il conto della cena.", "Condividi le spese di casa.", "Gestisci i costi delle vacanze.", "Organizza i regali di gruppo.", "Salda i conti delle feste.", "Tieni traccia delle spese di matrimonio.", "Raccogli le quote del team.", "Dividi i pranzi di lavoro.", "Condividi i costi di ristrutturazione.", "Dividi gli abbonamenti."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Nessuna lingua trovata',

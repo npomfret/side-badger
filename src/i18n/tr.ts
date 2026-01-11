@@ -76,6 +76,7 @@ export default {
   'hero.disclaimer': '* Tabii ki bazı sınırlamalar var. Adil kullanım ve diğer birçok sınırlama geçerlidir. Ücretli olana kadar ücretsizdir.',
   'hero.subtitleStatic': ' Sonsuza dek ücretsiz, reklam yok ve gizliliğiniz düşünülerek tasarlandı.',
   'hero.title': 'Masrafları bir',
+  'hero.typewriterWords': '["Akşam yemeği hesabını böl.", "Ev masraflarını paylaş.", "Tatil masraflarını yönet.", "Grup hediyelerini organize et.", "Parti hesaplarını kapat.", "Düğün masraflarını takip et.", "Takım aidatlarını topla.", "İş öğle yemeklerini böl.", "Tadilat masraflarını paylaş.", "Abonelikleri böl."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger gibi böl',
   'languageSwitcher.noResults': 'Dil bulunamadı',

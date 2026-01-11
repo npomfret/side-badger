@@ -70,6 +70,7 @@ export default {
   'hero.disclaimer': '* Is léir go bhfuil roinnt teorainneacha ann. Baineann úsáid chothrom, agus go leor teorainneacha eile. Tá sé saor in aisce go dtí nach bhfuil.',
   'hero.subtitleStatic': ' Saor in aisce go deo, gan fógraí, agus tógtha le do phríobháideachas i gcuimhne.',
   'hero.title': 'Roinn costais cosúil le',
+  'hero.typewriterWords': '["Roinn billí dinnéir.", "Roinn costais tí.", "Bainistigh costais laethanta saoire.", "Eagraigh bronntanais ghrúpa.", "Socraigh billí cóisire.", "Lean costais bainise.", "Bailigh táillí foirne.", "Roinn lóin oibre.", "Roinn costais athchóirithe.", "Roinn síntiúis."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'broc taobh',
   'languageSwitcher.noResults': 'Níor aimsíodh teangacha',

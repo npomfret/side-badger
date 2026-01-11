@@ -76,6 +76,7 @@ export default {
   'hero.disclaimer': '* Það eru auðvitað takmarkanir. Sanngjörn notkun og ýmislegt annað gildir. Það er ókeypis þar til það er það ekki.',
   'hero.subtitleStatic': ' Ókeypis að eilífu, engar auglýsingar — og friðhelgin þín í fremsta sæti.',
   'hero.title': 'Skiptu útgjöldum eins og',
+  'hero.typewriterWords': '["Skiptu kvöldmatarreikningum.", "Deildu heimiliskostnaði.", "Stjórnaðu orlofskostnaði.", "Skipulagðu hópgjafir.", "Gerðu upp partýreikninga.", "Fylgstu með brúðkaupskostnaði.", "Safnaðu liðsgjöldum.", "Skiptu vinnuhádegisverði.", "Deildu endurbótakostnaði.", "Skiptu áskriftum."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Engin tungumál fundust',

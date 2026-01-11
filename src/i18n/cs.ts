@@ -76,6 +76,7 @@ export default {
   'hero.disclaimer': '* Jasně, existují určitá omezení. Platí zásady férového užívání a mnoho dalších omezení. Je to zdarma, dokud to není.',
   'hero.subtitleStatic': ' Zdarma navždy, žádné reklamy a soukromí na prvním místě.',
   'hero.title': 'Rozdělte výdaje jako',
+  'hero.typewriterWords': '["Rozdělte účet za večeři.", "Sdílejte náklady na domácnost.", "Spravujte náklady na dovolenou.", "Organizujte skupinové dárky.", "Vyrovnejte účty z párty.", "Sledujte svatební náklady.", "Vybírejte týmové poplatky.", "Rozdělte pracovní obědy.", "Sdílejte náklady na rekonstrukci.", "Rozdělte předplatné."]',
   'hero.titleDisclaimer': '‌',
   'hero.titleHighlight': 'side badger',
   'languageSwitcher.noResults': 'Nebyly nalezeny žádné jazyky',

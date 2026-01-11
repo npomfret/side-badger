@@ -50,7 +50,7 @@ const localeData = allLocales.map(locale => {
     name: localeNames[locale],
     mainName: parsed.main,
     subtitle: parsed.subtitle,
-    flagUrl: getFlagUrl(localeFlagCodes[locale]),
+    flagUrl: getFlagUrl(localeFlagCodes[locale], locale),
     href: `/${locale}${basePath === '/' ? '' : basePath}`,
     active: resolveLocale(locale) === currentLocale,
   };
@@ -65,7 +65,7 @@ const currentParsed = parseLocaleName(localeNames[displayLocale]);
 
 <div class="language-switcher">
   <button class="language-switcher-btn" aria-label={changeLanguageLabel} aria-expanded="false" aria-haspopup="listbox">
-    <img class="current-flag" src={getFlagUrl(localeFlagCodes[displayLocale])} alt="" loading="eager" />
+    <img class="current-flag" src={getFlagUrl(localeFlagCodes[displayLocale], displayLocale)} alt="" loading="eager" />
     <span class="current-lang">
       {currentParsed.main}
       {currentParsed.subtitle && <span class="current-subtitle">{currentParsed.subtitle}</span>}

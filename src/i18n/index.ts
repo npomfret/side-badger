@@ -57,6 +57,7 @@ import tr from './tr';
  * Main locale configuration. Each locale needs:
  * - name: Display name in the locale's own language
  * - flagCode: circle-flags code (https://hatscripts.github.io/circle-flags/)
+ * - flagUrl: (optional) Custom flag URL to override the circle-flags CDN
  * - intlCode: BCP 47 code for Intl.DateTimeFormat
  * - translations: The imported translation object
  * - inDropdown: Whether to show in language picker (false for 'en' since aliases cover it)
@@ -103,6 +104,7 @@ const localeConfig = {
   fa: {
     name: 'فارسی',
     flagCode: 'ir',
+    flagUrl: '/flags/iran.png', // Lion and Sun flag
     intlCode: 'fa-IR',
     translations: fa,
     inDropdown: true,
@@ -539,8 +541,22 @@ export const localeFlagCodes: Record<DropdownLocale, string> = {
   ),
 } as Record<DropdownLocale, string>;
 
-// Helper to get flag URL from circle-flags CDN (jsDelivr)
-export function getFlagUrl(flagCode: string): string {
+// Custom flag URLs that override the CDN (for locales with flagUrl defined)
+export const localeFlagUrls: Partial<Record<DropdownLocale, string>> = {
+  ...Object.fromEntries(
+    Object.entries(localeConfig)
+      .filter(([, config]) => config.inDropdown && 'flagUrl' in config)
+      .map(([key, config]) => [key, (config as { flagUrl: string }).flagUrl])
+  ),
+} as Partial<Record<DropdownLocale, string>>;
+
+// Helper to get flag URL - checks for custom URL first, then falls back to CDN
+export function getFlagUrl(flagCode: string, locale?: DropdownLocale): string {
+  // If locale provided and has custom flag URL, use that
+  if (locale && localeFlagUrls[locale]) {
+    return localeFlagUrls[locale]!;
+  }
+  // Otherwise use circle-flags CDN
   return `https://cdn.jsdelivr.net/npm/circle-flags@1.0.1/flags/${flagCode}.svg`;
 }
 

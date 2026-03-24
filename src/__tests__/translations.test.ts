@@ -4,17 +4,16 @@ import path from 'path';
 
 // Import everything from i18n index
 import en from '../i18n/en';
-import { translations, locales } from '../i18n/index';
+import { translations, locales, localeAliases, localeAliasMap, isRTL, allLocales } from '../i18n/index';
 
 const englishKeys = Object.keys(en);
 const englishTranslations = en as Record<string, string>;
 
 // Keys that are expected to be the same across all languages (brand names, URLs, etc.)
 const ALLOWED_IDENTICAL_KEYS = new Set([
-  'header.logoText', // Brand name - some locales keep it, some translate
+  'header.logoText', // Brand name
   'footer.company',
   'footer.product', // Product name
-  'footer.legal', // "Legal" is sometimes kept in English
   'hero.titleHighlight', // "Badger" - brand mascot name
   'pricing.plan.name', // "Free" - often kept in English for branding
   'pricing.enterprise.badge', // "Enterprise" - industry term
@@ -155,6 +154,188 @@ describe('Translation Files Integrity', () => {
     }
   });
 
+  describe('Cross-locale untranslated detection', () => {
+    it('No key is identical to English in more than 10 locales', () => {
+      const localesToTest = Object.keys(translations).filter(l => l !== 'en' && l !== 'pcm');
+      const identicalCounts: Record<string, string[]> = {};
+
+      for (const key of englishKeys) {
+        if (isAllowedIdentical(key)) continue;
+        if (englishTranslations[key] && englishTranslations[key].length <= 3) continue;
+
+        const identicalLocales: string[] = [];
+        for (const locale of localesToTest) {
+          const translation = translations[locale as keyof typeof translations];
+          if (translation[key] && englishTranslations[key] === translation[key]) {
+            identicalLocales.push(locale);
+          }
+        }
+
+        if (identicalLocales.length > 10) {
+          identicalCounts[key] = identicalLocales;
+        }
+      }
+
+      const flaggedKeys = Object.keys(identicalCounts);
+      expect(
+        flaggedKeys,
+        `${flaggedKeys.length} keys are identical to English in >10 locales (likely untranslated):\n${flaggedKeys.map(k => `  ${k} (${identicalCounts[k].length} locales): ${identicalCounts[k].slice(0, 5).join(', ')}...`).join('\n')}`
+      ).toEqual([]);
+    });
+  });
+
+  describe('hero.typewriterWords JSON validation', () => {
+    const allLocales = Object.keys(translations);
+    for (const locale of allLocales) {
+      it(`${locale} has valid hero.typewriterWords JSON`, () => {
+        const translation = translations[locale as keyof typeof translations];
+        const value = translation['hero.typewriterWords' as keyof typeof translation];
+
+        expect(value, `${locale} is missing hero.typewriterWords`).toBeDefined();
+
+        let parsed: unknown;
+        expect(() => {
+          parsed = JSON.parse(value as string);
+        }, `${locale} has invalid JSON in hero.typewriterWords: ${value}`).not.toThrow();
+
+        expect(
+          Array.isArray(parsed),
+          `${locale} hero.typewriterWords is not an array`
+        ).toBe(true);
+
+        const arr = parsed as unknown[];
+        expect(
+          arr.length,
+          `${locale} hero.typewriterWords is empty`
+        ).toBeGreaterThan(0);
+
+        for (let i = 0; i < arr.length; i++) {
+          expect(
+            typeof arr[i] === 'string' && (arr[i] as string).trim().length > 0,
+            `${locale} hero.typewriterWords[${i}] is not a non-empty string: ${JSON.stringify(arr[i])}`
+          ).toBe(true);
+        }
+      });
+    }
+  });
+
+  describe('HTML tag preservation', () => {
+    // Find English keys that contain HTML tags
+    const htmlTagRegex = /<[^>]+>/g;
+    const keysWithHtml = englishKeys.filter(key => htmlTagRegex.test(englishTranslations[key]));
+
+    if (keysWithHtml.length > 0) {
+      const localesToTest = Object.keys(translations).filter(l => l !== 'en');
+
+      for (const key of keysWithHtml) {
+        const englishTags = [...englishTranslations[key].matchAll(/<[^>]+>/g)].map(m => m[0]).sort();
+
+        for (const locale of localesToTest) {
+          it(`${locale} preserves HTML tags in ${key}`, () => {
+            const translation = translations[locale as keyof typeof translations];
+            const value = translation[key];
+            if (!value) return; // Missing key caught by completeness test
+
+            const translatedTags = [...(value as string).matchAll(/<[^>]+>/g)].map(m => m[0]).sort();
+            expect(
+              translatedTags,
+              `${locale} ${key} has different HTML tags.\n  Expected: ${englishTags.join(', ')}\n  Got: ${translatedTags.join(', ')}`
+            ).toEqual(englishTags);
+          });
+        }
+      }
+    }
+  });
+
+  describe('Whitespace quality', () => {
+    // hero.subtitleStatic intentionally has a leading space
+    const LEADING_SPACE_ALLOWED = new Set(['hero.subtitleStatic']);
+
+    const allLocales = Object.keys(translations);
+    for (const locale of allLocales) {
+      it(`${locale} has no whitespace issues`, () => {
+        const translation = translations[locale as keyof typeof translations];
+        const issues: string[] = [];
+
+        for (const key of Object.keys(translation)) {
+          const value = translation[key] as string;
+          if (!value) continue;
+
+          // Check leading/trailing whitespace (except allowed keys)
+          if (!LEADING_SPACE_ALLOWED.has(key)) {
+            if (value !== value.trim()) {
+              issues.push(`${key}: has leading/trailing whitespace: ${JSON.stringify(value.slice(0, 40))}`);
+            }
+          } else {
+            // For allowed leading-space keys, still check trailing whitespace
+            if (value !== value.trimEnd()) {
+              issues.push(`${key}: has trailing whitespace`);
+            }
+          }
+
+          // Check double spaces
+          if (value.includes('  ')) {
+            issues.push(`${key}: contains double spaces`);
+          }
+        }
+
+        expect(
+          issues,
+          `${locale} has ${issues.length} whitespace issues:\n  ${issues.join('\n  ')}`
+        ).toEqual([]);
+      });
+    }
+  });
+
+  describe('Key ordering consistency', () => {
+    const localesToTest = Object.keys(translations).filter(l => l !== 'en');
+    for (const locale of localesToTest) {
+      it(`${locale} has keys in the same order as English`, () => {
+        const translation = translations[locale as keyof typeof translations];
+        const translationKeys = Object.keys(translation);
+        const englishKeySet = new Set(englishKeys);
+
+        // Only compare keys that exist in both (missing/extra keys caught elsewhere)
+        const localeKeysInEnglish = translationKeys.filter(k => englishKeySet.has(k));
+        const englishKeysInLocale = englishKeys.filter(k => translationKeys.includes(k));
+
+        expect(
+          localeKeysInEnglish,
+          `${locale} has keys in a different order than English`
+        ).toEqual(englishKeysInLocale);
+      });
+    }
+  });
+
+  describe('Alias config validation', () => {
+    it('All alias targets point to existing locales', () => {
+      const localeSet = new Set(locales);
+      const invalidAliases: string[] = [];
+
+      for (const alias of localeAliases) {
+        const target = localeAliasMap[alias];
+        if (!localeSet.has(target)) {
+          invalidAliases.push(`${alias} -> ${target}`);
+        }
+      }
+
+      expect(
+        invalidAliases,
+        `Found aliases pointing to non-existent locales:\n  ${invalidAliases.join('\n  ')}`
+      ).toEqual([]);
+    });
+
+    it('All aliases resolve to locales with translations', () => {
+      for (const alias of localeAliases) {
+        const target = localeAliasMap[alias];
+        expect(
+          translations[target],
+          `Alias ${alias} targets ${target} which has no translations`
+        ).toBeDefined();
+      }
+    });
+  });
+
   describe('Code Coverage - All used translation keys exist', () => {
     const usedKeys = findUsedTranslationKeys();
 
@@ -193,7 +374,7 @@ describe('Translation Files Integrity', () => {
       // Get all .ts files in i18n directory except index.ts
       const i18nDir = path.join(__dirname, '..', 'i18n');
       const files = fs.readdirSync(i18nDir)
-        .filter(f => f.endsWith('.ts') && f !== 'index.ts' && !f.endsWith('.test.ts'))
+        .filter(f => f.endsWith('.ts') && f !== 'index.ts' && !f.endsWith('.test.ts') && f !== 'translations-template.ts')
         .map(f => f.replace('.ts', ''));
 
       const loadedLocales = Object.keys(translations);

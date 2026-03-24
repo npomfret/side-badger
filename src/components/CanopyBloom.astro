@@ -19,17 +19,14 @@ interface PetalSpec {
 
 const beams: BeamSpec[] = [
   { left: '8%', width: '18%', rotation: '-5deg', duration: 32, delay: 0, opacity: 0.35 },
-  { left: '38%', width: '12%', rotation: '3deg', duration: 40, delay: -10, opacity: 0.28 },
-  { left: '62%', width: '16%', rotation: '-2deg', duration: 36, delay: -4, opacity: 0.3 },
+  { left: '50%', width: '14%', rotation: '3deg', duration: 38, delay: -10, opacity: 0.28 },
   { left: '80%', width: '10%', rotation: '6deg', duration: 28, delay: -6, opacity: 0.2 },
 ];
 
 const petals: PetalSpec[] = [
   { size: 120, left: '12%', top: '18%', duration: 28, delay: 0, hue: '135deg' },
-  { size: 180, left: '45%', top: '10%', duration: 34, delay: -6, hue: '165deg' },
-  { size: 140, left: '70%', top: '22%', duration: 30, delay: -12, hue: '195deg' },
-  { size: 90, left: '82%', top: '45%', duration: 24, delay: -8, hue: '155deg' },
-  { size: 160, left: '28%', top: '60%', duration: 32, delay: -4, hue: '175deg' },
+  { size: 180, left: '50%', top: '12%', duration: 34, delay: -6, hue: '165deg' },
+  { size: 140, left: '75%', top: '50%', duration: 30, delay: -12, hue: '195deg' },
 ];
 ---
 
@@ -89,10 +86,10 @@ const petals: PetalSpec[] = [
       radial-gradient(circle at 80% 0%, rgba(134, 239, 172, 0.3), transparent 50%),
       radial-gradient(circle at 50% 80%, rgba(220, 252, 231, 0.45), transparent 60%),
       linear-gradient(180deg, #f7fefb 0%, #e3f8ea 50%, #d0f1df 100%);
-    filter: blur(4px);
     /* Subtle vertical shift on scroll */
     transform: translateY(calc(var(--scroll-progress, 0) * -30px));
     transition: transform 0.1s linear;
+    will-change: transform;
   }
 
   .sun-beams {
@@ -116,13 +113,12 @@ const petals: PetalSpec[] = [
       rgba(254, 250, 237, 0.45) 70%,
       rgba(255, 255, 255, 0) 100%
     );
-    mix-blend-mode: screen;
     opacity: var(--beam-opacity);
     transform: rotate(var(--beam-rotate));
     transform-origin: top;
-    filter: blur(12px);
     animation: beamPulse var(--beam-duration) ease-in-out infinite alternate;
     animation-delay: var(--beam-delay);
+    will-change: transform, opacity;
   }
 
   .floating-petals {
@@ -146,28 +142,17 @@ const petals: PetalSpec[] = [
       rgba(34, 197, 94, 0)
     );
     border-radius: 45% 55% 50% 50%;
-    filter: blur(8px);
     opacity: 0.4;
     transform-origin: center;
     animation: petalFloat var(--petal-duration) var(--ease-float, cubic-bezier(0.4, 0, 0.2, 1)) infinite alternate;
     animation-delay: var(--petal-delay);
-  }
-
-  .petal::after {
-    content: '';
-    position: absolute;
-    inset: 10%;
-    border-radius: inherit;
-    background: linear-gradient(var(--petal-hue), rgba(34, 197, 94, 0.35), rgba(255, 255, 255, 0.1));
-    mix-blend-mode: screen;
-    opacity: 0.7;
+    will-change: transform, opacity;
   }
 
   .mist-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.05));
-    mix-blend-mode: soft-light;
   }
 
   .grain {
@@ -175,7 +160,6 @@ const petals: PetalSpec[] = [
     inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Ccircle cx='3' cy='3' r='1' fill='rgba(20,83,45,0.08)'/%3E%3C/svg%3E");
     opacity: 0.25;
-    mix-blend-mode: multiply;
     animation: grainDrift 18s linear infinite;
   }
 
@@ -208,6 +192,25 @@ const petals: PetalSpec[] = [
   @keyframes grainDrift {
     0% { transform: translate3d(0, 0, 0); }
     100% { transform: translate3d(160px, 160px, 0); }
+  }
+
+  /* Mobile: disable scroll parallax, simplify animations */
+  @media (max-width: 768px) {
+    .gradient-base,
+    .sun-beams,
+    .floating-petals {
+      transform: none !important;
+      transition: none !important;
+    }
+    .grain {
+      animation: none;
+    }
+    .sun-beam {
+      animation-duration: 60s;
+    }
+    .petal {
+      animation-duration: 50s;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {

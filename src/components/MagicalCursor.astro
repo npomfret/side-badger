@@ -100,12 +100,9 @@
       if (ctx) {
         ctx.clearRect(0, 0, width, height);
 
-        // Add new particles if mouse is moving
-        // We can add a few particles per frame near the mouse
-        if (Math.abs(mouseX - glowX) > 1 || Math.abs(mouseY - glowY) > 1) {
-            for (let i = 0; i < 2; i++) {
-                particles.push(new Particle(mouseX, mouseY));
-            }
+        // Add new particle if mouse is moving
+        if (Math.abs(mouseX - glowX) > 2 || Math.abs(mouseY - glowY) > 2) {
+            particles.push(new Particle(mouseX, mouseY));
         }
 
         // Update and draw particles
@@ -140,21 +137,18 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 600px;
-    height: 600px;
-    margin-left: -300px; /* Center the glow on the coordinates */
-    margin-top: -300px;
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    margin-top: -200px;
     background: radial-gradient(
       circle,
-      rgba(74, 222, 128, 0.15) 0%,
-      rgba(45, 212, 191, 0.1) 25%,
-      rgba(250, 204, 21, 0.05) 45%,
-      transparent 65%
+      rgba(74, 222, 128, 0.12) 0%,
+      rgba(45, 212, 191, 0.08) 30%,
+      transparent 60%
     );
     border-radius: 50%;
-    mix-blend-mode: screen;
     will-change: transform;
-    filter: blur(20px);
   }
 
   #cursor-trail {

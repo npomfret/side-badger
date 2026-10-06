@@ -40,7 +40,7 @@ export default {
   'features.participants.title': 'Kommentare & Anhänge',
   'features.polls.desc': 'Unentschlossen beim Abendessen oder Reiseziel? Erstelle eine Umfrage und lass die Gruppe abstimmen. Entscheidungsfindung ohne Drama.',
   'features.polls.title': 'Gruppen-Umfragen',
-  'features.receipts.desc': 'Attach photos of receipts to any expense. Never lose track of what you spent.',
+  'features.receipts.desc': 'Hänge Fotos von Belegen an jede Ausgabe an. So behältst du immer den Überblick über deine Ausgaben.',
   'features.receipts.title': 'Beleg-Anhänge',
   'features.roles.desc': 'Nutze vordefinierte Berechtigungen oder erstelle eigene Regeln für deine Gruppe. Kontrolliere, wer Ausgaben hinzufügen, Einstellungen bearbeiten oder Mitglieder einladen darf.',
   'features.roles.title': 'Flexible Berechtigungen',

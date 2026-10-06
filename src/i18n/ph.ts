@@ -40,7 +40,7 @@ export default {
   'features.participants.title': 'Mga komento at attachment',
   'features.polls.desc': 'Hindi makapag-decide sa dinner o destinasyon? Gumawa ng poll at hayaang bumoto ang grupo. Desisyong walang drama.',
   'features.polls.title': 'Group Polls',
-  'features.receipts.desc': 'Attach photos of receipts to any expense. Never lose track of what you spent.',
+  'features.receipts.desc': 'Maglakip ng mga larawan ng resibo sa anumang gastusin. Huwag mawalan ng tala kung saan napunta ang pera mo.',
   'features.receipts.title': 'Mga resibo na attachment',
   'features.roles.desc': 'Gumamit ng permission presets o gumawa ng custom rules para sa iyong grupo. Kontrolin kung sino ang pwedeng magdagdag ng gastos, mag-edit ng settings, o mag-invite ng mga miyembro.',
   'features.roles.title': 'Flexible na permission',

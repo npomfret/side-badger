@@ -40,7 +40,7 @@ export default {
   'features.participants.title': 'Commenti e allegati',
   'features.polls.desc': 'Indecisi sulla cena o sulla destinazione? Crea un sondaggio e lascia votare il gruppo. Decisioni senza drammi.',
   'features.polls.title': 'Sondaggi di gruppo',
-  'features.receipts.desc': 'Attach photos of receipts to any expense. Never lose track of what you spent.',
+  'features.receipts.desc': 'Allega le foto degli scontrini a qualsiasi spesa. Tieni sempre traccia di ciò che hai speso.',
   'features.receipts.title': 'Allegati ricevute',
   'features.roles.desc': 'Usa i preset dei permessi o crea regole personalizzate per il tuo gruppo. Controlla chi può aggiungere spese, modificare le impostazioni o invitare membri.',
   'features.roles.title': 'Permessi flessibili',

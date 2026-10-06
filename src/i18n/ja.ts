@@ -40,7 +40,7 @@ export default {
   'features.participants.title': 'コメントと添付ファイル',
   'features.polls.desc': '夕食や行き先が決まらない？投票を作成して、みんなで決めましょう。揉め事なしで意思決定。',
   'features.polls.title': 'グループ投票',
-  'features.receipts.desc': 'Attach photos of receipts to any expense. Never lose track of what you spent.',
+  'features.receipts.desc': 'どの支出にもレシートの写真を添付できます。何にいくら使ったかを見失いません。',
   'features.receipts.title': 'レシート添付',
   'features.roles.desc': '権限プリセットの使用や、グループ独自のルール作成が可能。支出の追加、設定変更、メンバー招待の権限をコントロールできます。',
   'features.roles.title': '柔軟な権限設定',

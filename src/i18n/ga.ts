@@ -40,7 +40,7 @@ export default {
   'features.participants.title': 'Tráchtanna agus ceangaltáin',
   'features.polls.desc': 'Ní féidir cinneadh a dhéanamh faoi dhinnéar nó ceann scríbe? Cruthaigh vóta agus lig don ghrúpa vótáil. Cinnteoireacht gan stró.',
   'features.polls.title': 'Vótaí Grúpa',
-  'features.receipts.desc': 'Attach photos of receipts to any expense. Never lose track of what you spent.',
+  'features.receipts.desc': 'Ceangail grianghraif d\'admhálacha le haon chostas. Ná caill súil ar an méid a chaith tú riamh.',
   'features.receipts.title': 'Ceangaltáin admhála',
   'features.roles.desc': 'Úsáid réamhshocruithe ceada nó cruthaigh rialacha saincheaptha do do ghrúpa. Rialaigh cé atá in ann costais a chur leis, socruithe a chur in eagar, nó baill a thabhairt isteach.',
   'features.roles.title': 'Ceadanna solúbtha',

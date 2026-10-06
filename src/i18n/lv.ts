@@ -40,7 +40,7 @@ export default {
   'features.participants.title': 'Komentāri un pielikumi',
   'features.polls.desc': 'Nevarat izlemt par vakariņām vai galamērķi? Izveidojiet aptauju un ļaujiet grupai balsot. Lēmumu pieņemšana bez drāmas.',
   'features.polls.title': 'Grupas aptaujas',
-  'features.receipts.desc': 'Attach photos of receipts to any expense. Never lose track of what you spent.',
+  'features.receipts.desc': 'Pievieno čeku fotoattēlus jebkuriem izdevumiem. Vienmēr saglabā pārskatu par iztērēto.',
   'features.receipts.title': 'Čeku pielikumi',
   'features.roles.desc': 'Izmantojiet atļauju priekšiestatījumus vai izveidojiet pielāgotus noteikumus savai grupai. Kontrolējiet, kurš var pievienot izdevumus, rediģēt iestatījumus vai uzaicināt dalībniekus.',
   'features.roles.title': 'Elastīgas atļaujas',

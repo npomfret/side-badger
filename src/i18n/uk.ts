@@ -40,7 +40,7 @@ export default {
   'features.participants.title': 'Коментарі та вкладення',
   'features.polls.desc': 'Не можете визначитися з вечерею чи напрямком? Створіть опитування і дозвольте групі проголосувати. Прийняття рішень без драми.',
   'features.polls.title': 'Групові опитування',
-  'features.receipts.desc': 'Attach photos of receipts to any expense. Never lose track of what you spent.',
+  'features.receipts.desc': 'Додавайте фотографії чеків до будь-яких витрат. Завжди пам’ятайте, на що ви витратили гроші.',
   'features.receipts.title': 'Прикріплення чеків',
   'features.roles.desc': 'Використовуйте готові налаштування дозволів або створюйте власні правила для вашої групи. Контролюйте, хто може додавати витрати, редагувати налаштування або запрошувати учасників.',
   'features.roles.title': 'Гнучкі дозволи',

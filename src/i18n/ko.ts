@@ -40,7 +40,7 @@ export default {
   'features.participants.title': '댓글 및 첨부파일',
   'features.polls.desc': '메뉴나 목적지를 정하기 어려우신가요? 투표를 만들어 그룹원들의 의견을 모으세요. 고민 없이 빠르게 결정할 수 있습니다.',
   'features.polls.title': '그룹 투표',
-  'features.receipts.desc': 'Attach photos of receipts to any expense. Never lose track of what you spent.',
+  'features.receipts.desc': '어떤 지출에도 영수증 사진을 첨부하세요. 무엇에 얼마를 썼는지 놓치지 마세요.',
   'features.receipts.title': '영수증 첨부',
   'features.roles.desc': '권한 프리셋을 사용하거나 그룹에 맞는 맞춤형 규칙을 만드세요. 지출 추가, 설정 변경, 멤버 초대 권한을 세밀하게 제어할 수 있습니다.',
   'features.roles.title': '유연한 권한 설정',

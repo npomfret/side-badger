@@ -40,7 +40,7 @@ export default {
   'features.participants.title': 'التعليقات والمرفقات',
   'features.polls.desc': 'لا تستطيع اتخاذ قرار بشأن العشاء أو الوجهة؟ أنشئ استطلاعاً ودع المجموعة تصوّت. اتخاذ قرار بدون دراما.',
   'features.polls.title': 'استطلاعات الرأي الجماعية',
-  'features.receipts.desc': 'Attach photos of receipts to any expense. Never lose track of what you spent.',
+  'features.receipts.desc': 'أرفق صور الإيصالات بأي مصروف. ولا تفقد أبداً تفاصيل ما أنفقته.',
   'features.receipts.title': 'مرفقات الإيصالات',
   'features.roles.desc': 'استخدم إعدادات الأذونات المسبقة أو أنشئ قواعد مخصصة لمجموعتك. تحكم في من يمكنه إضافة المصاريف، تعديل الإعدادات، أو دعوة الأعضاء.',
   'features.roles.title': 'صلاحيات مرنة',

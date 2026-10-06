@@ -40,7 +40,7 @@ export default {
   'features.participants.title': 'Kommentarer och bilagor',
   'features.polls.desc': 'Kan ni inte bestämma er för middag eller destination? Skapa en omröstning och låt gruppen rösta. Beslutsfattande utan drama.',
   'features.polls.title': 'Gruppomröstningar',
-  'features.receipts.desc': 'Attach photos of receipts to any expense. Never lose track of what you spent.',
+  'features.receipts.desc': 'Bifoga bilder på kvitton till valfri utgift. Tappa aldrig bort vad du har spenderat.',
   'features.receipts.title': 'Bifogade kvitton',
   'features.roles.desc': 'Använd förinställningar för behörigheter eller skapa anpassade regler för din grupp. Kontrollera vem som kan lägga till utgifter, ändra inställningar eller bjuda in medlemmar.',
   'features.roles.title': 'Flexibla behörigheter',

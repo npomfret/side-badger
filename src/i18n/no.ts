@@ -40,7 +40,7 @@ export default {
   'features.participants.title': 'Kommentarer og vedlegg',
   'features.polls.desc': 'Klarer dere ikke å bestemme middag eller destinasjon? Lag en avstemning og la gruppen stemme. Dramafri beslutningstaking.',
   'features.polls.title': 'Gruppeavstemninger',
-  'features.receipts.desc': 'Attach photos of receipts to any expense. Never lose track of what you spent.',
+  'features.receipts.desc': 'Legg ved bilder av kvitteringer på enhver utgift. Mist aldri oversikten over hva du har brukt.',
   'features.receipts.title': 'Kvitteringsvedlegg',
   'features.roles.desc': 'Bruk forhåndsinnstillinger for tillatelser eller lag egne regler for gruppen din. Kontroller hvem som kan legge til utgifter, redigere innstillinger eller invitere medlemmer.',
   'features.roles.title': 'Fleksible tillatelser',

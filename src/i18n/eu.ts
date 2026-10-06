@@ -40,7 +40,7 @@ export default {
   'features.participants.title': 'Iruzkinak eta eranskinak',
   'features.polls.desc': 'Ezin duzue afaria edo helmuga erabaki? Sortu inkesta bat eta utzi taldeari bozkatzen. Erabakiak hartzea dramarik gabe.',
   'features.polls.title': 'Talde-inkestak',
-  'features.receipts.desc': 'Attach photos of receipts to any expense. Never lose track of what you spent.',
+  'features.receipts.desc': 'Erantsi ordainagirien argazkiak edozein gasturi. Ez galdu inoiz gastatu duzunaren arrastoa.',
   'features.receipts.title': 'Tiketen eranskinak',
   'features.roles.desc': 'Erabili baimen-aurreikuspenak edo sortu arau pertsonalizatuak zure taldearentzat. Kontrolatu nork gehitu ditzakeen gastuak, editatu ezarpenak edo gonbidatu kideak.',
   'features.roles.title': 'Baimen malguak',

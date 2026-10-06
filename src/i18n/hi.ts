@@ -40,7 +40,7 @@ export default {
   'features.participants.title': 'कमेंट्स और अटैचमेंट्स',
   'features.polls.desc': 'डिनर या डेस्टिनेशन तय नहीं कर पा रहे? एक पोल बनाएं और ग्रुप को वोट करने दें। बिना किसी ड्रामा के निर्णय लेना।',
   'features.polls.title': 'ग्रुप पोल',
-  'features.receipts.desc': 'Attach photos of receipts to any expense. Never lose track of what you spent.',
+  'features.receipts.desc': 'किसी भी खर्च के साथ रसीदों की फ़ोटो जोड़ें। आपने कितना खर्च किया, इसका हिसाब कभी न खोएँ।',
   'features.receipts.title': 'रसीद अटैचमेंट्स',
   'features.roles.desc': 'अपने ग्रुप के लिए परमिशन प्रीसेट्स का उपयोग करें या कस्टम रूल्स बनाएं। कंट्रोल करें कि कौन खर्च जोड़ सकता है, सेटिंग्स एडिट कर सकता है या मेंबर्स को इनवाइट कर सकता है।',
   'features.roles.title': 'फ्लेक्सिबल परमिशन्स',

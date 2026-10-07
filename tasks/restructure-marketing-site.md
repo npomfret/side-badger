@@ -19,7 +19,7 @@ The finished site should:
 
 ## Source plan
 
-Use [the site review and expansion plan](../docs/seo-site-expansion-plan.md) as the design and sequencing reference.
+Use [the site review and expansion plan](./seo-site-expansion-plan.md) as the design and sequencing reference.
 
 ## Inputs
 

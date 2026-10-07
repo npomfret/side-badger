@@ -1,5 +1,7 @@
 # Side Badger marketing site expansion plan
 
+This document holds the review findings and design rules. The sequenced work, checklists, translation gate, and acceptance criteria are in [the restructure task](./restructure-marketing-site.md). The homepage rebuild is in [the homepage scroll experience task](./homepage-scroll-experience.md).
+
 ## Goal
 
 Turn the current marketing site into a focused static product site that:
@@ -101,7 +103,7 @@ Do not create a page for every small feature. Closely related features should re
 
 #### Homepage
 
-Answer four questions quickly: what Side Badger is, who it helps, why it is different, and what to do next. Show three to five strongest benefits, a short “how it works,” representative use cases, product proof, pricing summary, and links into deeper pages.
+Answer four questions quickly: what Side Badger is, who it helps, why it is different, and what to do next. Show three to five strongest benefits, a short “how it works,” representative use cases, product proof, pricing summary, and links into deeper pages. The homepage is built as a scroll-driven story. See [the homepage scroll experience task](./homepage-scroll-experience.md).
 
 #### How it works
 
@@ -167,93 +169,9 @@ Each feature record should contain:
 
 Keep short interface labels in `src/i18n/*.ts`. Store long page copy in a typed Astro content collection or an equivalent TypeScript-backed content layer, organized by locale. This will be easier to review than adding hundreds of long strings to each translation file.
 
-## Delivery plan
+## Delivery
 
-### Phase 0 — establish a baseline
-
-1. Connect Google Search Console and submit the sitemap if this has not already been done.
-2. Record indexed pages, impressions, queries, clicks, click-through rate, branded traffic, and launch-app clicks.
-3. Run Lighthouse and production Core Web Vitals checks on the homepage and pricing page.
-4. Record the current conversion event path from landing page to the external app.
-
-**Done when:** there is a dated baseline and launch-app clicks can be measured without adding invasive tracking. If the zero-tracking promise rules out analytics, use privacy-preserving server logs or outbound redirect counts and document that choice.
-
-### Phase 1 — repair the technical foundation
-
-1. Add canonical URLs, `og:url`, absolute social images, and a real layout head slot.
-2. Emit page-specific JSON-LD only where it matches visible page content.
-3. Correct locale metadata and either canonicalize, redirect, or exclude regional aliases that have identical content.
-4. Align sitemap entries, `hreflang`, locale routes, and trailing-slash behaviour.
-5. Decide whether policy pages should be pre-rendered at build time or deliberately excluded from search. Prefer pre-rendering if the API is reliable during builds.
-6. Add automated checks for titles, descriptions, canonicals, one `h1`, valid internal links, sitemap membership, and locale alternates.
-
-**Done when:** a production build passes the SEO checks and each indexable URL has one self-consistent canonical identity.
-
-### Phase 2 — finalize positioning and page briefs
-
-1. Normalize the supplied feature list into the content registry.
-2. Confirm the primary audience and strongest differentiators.
-3. Research actual search language, competitors, and result-page intent for the proposed clusters.
-4. Merge or remove page ideas that would be thin, repetitive, or unsupported.
-5. Write a brief for every approved page: target reader, question answered, primary query family, proof needed, CTA, internal links, title, description, and outline.
-
-**Done when:** every planned URL has a distinct purpose and enough evidence for useful original content.
-
-### Phase 3 — build the core site
-
-1. Add reusable layouts for feature and use-case pages.
-2. Expand the header and footer navigation.
-3. Rewrite the homepage as a concise route into deeper content.
-4. Publish `how-it-works`, the feature overview, the strongest three feature pages, and the strongest three use-case pages.
-5. Add real product screenshots or short demonstrations with descriptive alt text and optimized image sizes.
-6. Add breadcrumbs and contextual links between related feature and use-case pages.
-7. Update pricing copy so the promise and limitations agree.
-8. Complete every supported translation before merging the content change.
-
-**Done when:** a new visitor can understand the product, see it working, follow a relevant scenario, and launch the app from every marketing page.
-
-### Phase 4 — expand while preserving translation parity
-
-1. Publish each remaining validated page in every supported locale.
-2. Translate metadata, examples, image alt text, structured data, and internal links in the same change.
-3. Extend the translation integrity unit test if long-form content moves outside `src/i18n/*.ts`.
-4. Require exact content-field parity and reject empty or source-language placeholder values.
-5. Have humour and financial wording reviewed by a fluent speaker before indexing.
-
-**Done when:** every indexed localized page is complete, useful in its own right, and linked to its true alternates.
-
-### Phase 5 — publish supporting content selectively
-
-Create articles only when search data or repeated user questions reveal a real need. Good candidates may include practical guides to splitting holiday costs, handling expenses in several currencies, or choosing a fair split method. Avoid a high-volume generic blog.
-
-**Done when:** each article answers a documented question, links to relevant product pages, and has an owner for updates.
-
-## Suggested first release
-
-The first useful release should contain:
-
-1. the technical SEO repairs;
-2. revised global navigation;
-3. a shorter homepage;
-4. `/how-it-works/`;
-5. `/features/` plus three evidence-rich feature pages;
-6. three distinct use-case pages;
-7. corrected pricing promises;
-8. screenshots or demonstrations for the main workflow;
-9. Complete translations for every supported locale, enforced by the translation integrity unit test.
-
-This release is large enough to establish a coherent site and small enough to learn from real search and conversion data before multiplying pages across every locale.
-
-## Information needed later
-
-The supplied feature list should identify what is live, planned, limited, or tenant-dependent. The following decisions will also affect the final briefs:
-
-- primary audience to win first;
-- countries or languages to prioritize;
-- the defensible free-tier promise and fair-use limits;
-- whether “white label” is part of the public Side Badger offer or only repository history;
-- available screenshots, demos, and customer evidence;
-- privacy-preserving measurement options already in use.
+The phased work plan, first-release boundary, and open inputs are tracked in [the restructure task](./restructure-marketing-site.md).
 
 ## Success measures
 

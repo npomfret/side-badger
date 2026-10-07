@@ -17,9 +17,12 @@ The finished site should:
 - lead relevant visitors into the external app;
 - preserve accessible, localized static output.
 
-## Source plan
+## Related documents
 
-Use [the site review and expansion plan](./seo-site-expansion-plan.md) as the design and sequencing reference.
+- [Site review and expansion plan](./seo-site-expansion-plan.md): review findings, proposed information architecture, page responsibilities, voice and editorial rules, content model, and success measures. It is the design reference for this task.
+- [Homepage scroll experience](./homepage-scroll-experience.md): the homepage rebuild from step 6.
+
+This task owns the sequence, checklists, translation gate, and acceptance criteria.
 
 ## Inputs
 
@@ -38,6 +41,8 @@ Use [the site review and expansion plan](./seo-site-expansion-plan.md) as the de
 - Primary audience and priority markets.
 - Approved pricing and fair-use promise.
 - Available screenshots, demonstrations, and customer evidence.
+- Whether “white label” is part of the public Side Badger offer or only repository history.
+- Privacy-preserving measurement options already in use.
 
 Missing feature details do not block the technical SEO repairs, content model, navigation shell, or page templates.
 
@@ -54,38 +59,18 @@ Create a separate task for a defect when it:
 
 Record the separate task before continuing so the defect is not lost. Security, data-loss, accessibility-blocking, and deployment-blocking defects take priority over the planned sequence.
 
-## Proposed information architecture
+## Information architecture
 
-```text
-/
-├── how-it-works/
-├── features/
-│   ├── split-expenses/
-│   ├── groups-and-permissions/
-│   ├── multiple-currencies/
-│   ├── receipts-and-scanning/
-│   └── lists-polls-and-comments/
-├── use-cases/
-│   ├── housemates/
-│   ├── couples-and-families/
-│   ├── holidays-and-group-travel/
-│   ├── parties-weddings-and-gifts/
-│   └── clubs-teams-and-work/
-├── pricing/
-├── privacy/
-├── terms/
-└── cookies/
-```
-
-This is a starting structure. Validate each proposed page against the feature list, available proof, and search intent. Merge or remove pages that would be repetitive or thin.
+Use the structure proposed in [the site plan](./seo-site-expansion-plan.md#recommended-site-structure) as a starting point. Validate each page against the feature list, available proof, and search intent. Merge or remove pages that would be repetitive or thin.
 
 ## Work plan
 
 ### 1. Establish measurement and constraints
 
+- [ ] Connect Google Search Console and submit the sitemap if this has not already been done.
 - [ ] Record current Search Console coverage, queries, impressions, and clicks.
 - [ ] Record current app-launch conversion measurement.
-- [ ] Establish the permitted privacy-preserving measurement approach.
+- [ ] Establish the permitted privacy-preserving measurement approach. If the zero-tracking promise rules out analytics, use server logs or outbound redirect counts and document that choice.
 - [ ] Capture Lighthouse and Core Web Vitals baselines for homepage and pricing.
 - [ ] Confirm the canonical URL and trailing-slash policy.
 
@@ -130,7 +115,7 @@ This is a starting structure. Validate each proposed page against the feature li
 
 ### 6. Build the first release
 
-- [ ] Rewrite the homepage as a concise overview and route into deeper content.
+- [ ] Rebuild the homepage as a concise, scroll-driven overview that routes into deeper content. See [the homepage scroll experience task](./homepage-scroll-experience.md).
 - [ ] Publish `/how-it-works/` with an end-to-end workflow.
 - [ ] Publish `/features/` and the three strongest feature pages.
 - [ ] Publish the three strongest use-case pages.
@@ -148,6 +133,11 @@ This is a starting structure. Validate each proposed page against the feature li
 - [ ] Translate complete pages, including metadata, examples, alt text, and humour.
 - [ ] Keep translation parity as a merge requirement for every later content change.
 - [ ] Require fluent review before indexing financial claims and jokes.
+
+### 8. Publish supporting content selectively
+
+- [ ] Write an article only when search data or repeated user questions show a real need, such as splitting holiday costs or choosing a fair split method.
+- [ ] Link each article to relevant product pages and assign an owner for updates.
 
 ## Translation and locale requirements
 
@@ -182,17 +172,7 @@ A content change cannot merge until every supported locale is complete. The exis
 
 ## Editorial direction
 
-- Write like a capable friend who has survived a disastrous group holiday spreadsheet.
-- Use specific situations and occasional dry asides.
-- Keep pricing, privacy, security, and product limitations unambiguous.
-- Explain customer outcomes instead of implementation details.
-- Use the badger motif sparingly.
-- Do not make the person who owes money the joke.
-- Translate the intent of humour rather than translating it literally.
-
-Example direction:
-
-> Track the villa, the taxi, and the one cocktail round nobody remembers volunteering to buy.
+Follow the voice and guardrails in [the site plan](./seo-site-expansion-plan.md#voice-and-editorial-rules).
 
 ## Out of scope
 

@@ -2,7 +2,7 @@
 
 ## Status
 
-Planned
+In progress: steps 1 and 2 are done and verified locally. Steps 3 to 5 (deploy, edge switch, live checks) remain.
 
 ## Objective
 
@@ -44,7 +44,7 @@ Measured through the edge on 2026-10-08:
 
 ## Related, separate stack
 
-This is the marketing site for the bill splitter, `wl-bill-splitter`. The app will be served at `app.sidebadger.me` and `staging.sidebadger.me` by its own stack, with its own front container and alias (`wl-bill-splitter` or `wl-bill-splitter-<env>`, never `side-badger` or `website-me`). This nginx does not route to it, and the app's headers are not this repo's concern. `demo.sidebadger.me` stays on Firebase Hosting.
+This is the marketing site for the bill splitter, `wl-bill-splitter`. The app will be served at `app.sidebadger.me` and `staging.sidebadger.me` by its own stack, with its own front container and alias (`wl-bill-splitter` or `wl-bill-splitter-<env>`, never `side-badger` or `website-me`). This nginx does not route to it, and the app's headers are not this repo's concern. `demo.sidebadger.me` no longer resolves; the site's app links and policy API now point at `staging.sidebadger.me`.
 
 ## Decision: replace `serve` with nginx in the production image
 
@@ -128,28 +128,28 @@ HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
 EXPOSE 80
 ```
 
-`public/health` already builds to `dist/health`, so the existing healthchecks keep working. nginx logs to stdout, so `docker logs` and the edge box's Loki pick up the real client addresses.
+`public/health` already builds to `dist/health`. The healthchecks must use `127.0.0.1`, not `localhost`: in the Alpine image busybox `wget` resolves `localhost` to `::1`, nginx listens on IPv4 only, and the check fails with "connection refused". The Dockerfile and both compose files use `127.0.0.1`. nginx logs to stdout, so `docker logs` and the edge box's Loki pick up the real client addresses.
 
 ## Work plan
 
 ### 1. Serve the site with nginx
 
-- [ ] Add `nginx/default.conf` as above.
-- [ ] Replace the `serve` production stage in the `Dockerfile` with the nginx stage. Leave the `dev` and `builder` stages alone.
-- [ ] Build and run it locally: `docker build -t side-badger-nginx . && docker run --rm -p 8080:80 side-badger-nginx`.
-- [ ] Check `/`, `/pricing`, `/pricing/`, `/fr/`, `/nope`, `/health` and a file under `/_astro/` on `localhost:8080` against the "measured" table. The one intended difference is `/pricing/index.html`, which now returns 200 instead of 301.
-- [ ] Fix `src/pages/robots.txt.ts` to build the sitemap URL from `import.meta.env.SITE`, not from a `__NGINX_HOST__` placeholder, and drop the comment about `sub_filter`. A placeholder that has to be rewritten on the way out is HTTP config this task is removing, and the replacement never existed.
-- [ ] Update the README's deployment line and `AGENTS.md`'s Docker section, which describe `serve`.
+- [x] Add `nginx/default.conf` as above.
+- [x] Replace the `serve` production stage in the `Dockerfile` with the nginx stage. Leave the `dev` and `builder` stages alone.
+- [x] Build and run it locally: `docker build -t side-badger-nginx . && docker run --rm -p 8080:80 side-badger-nginx`.
+- [x] Check `/`, `/pricing`, `/pricing/`, `/fr/`, `/nope`, `/health` and a file under `/_astro/` on `localhost:8080` against the "measured" table. The one intended difference is `/pricing/index.html`, which now returns 200 instead of 301.
+- [x] Fix `src/pages/robots.txt.ts` to build the sitemap URL from `import.meta.env.SITE`, not from a `__NGINX_HOST__` placeholder, and drop the comment about `sub_filter`. A placeholder that has to be rewritten on the way out is HTTP config this task is removing, and the replacement never existed.
+- [x] Update the README's deployment line and `AGENTS.md`'s Docker section, which describe `serve`.
 
 ### 2. Compose
 
 In `docker-compose.prod.yml`:
 
-- [ ] Rename the service `website-me` to `side-badger`. The service name is its alias on `snowmonkey-proxy-network`, and the contract wants it project-prefixed.
-- [ ] Keep `container_name: side-badger-website-me`. The proxy repo's `docker-recover.sh` lists that name, and the edge reaches the site by it until step 4.
-- [ ] Keep `expose: "80"` and add no `ports:`. Docker's DNAT for a published port runs before UFW, so a published port would be public whatever UFW says. The edge reaches the container over the shared network.
-- [ ] Remove the `traefik.*` labels. Nothing on the box runs Traefik.
-- [ ] The first deploy after the rename recreates the container. The CI job's `--remove-orphans` should remove the old `website-me` container first. If `up` fails because the name `side-badger-website-me` is already in use, run `docker rm -f side-badger-website-me` on the box and re-run the workflow. The site is down for seconds either way.
+- [x] Rename the service `website-me` to `side-badger`. The service name is its alias on `snowmonkey-proxy-network`, and the contract wants it project-prefixed.
+- [x] Keep `container_name: side-badger-website-me`. The proxy repo's `docker-recover.sh` lists that name, and the edge reaches the site by it until step 4.
+- [x] Keep `expose: "80"` and add no `ports:`. Docker's DNAT for a published port runs before UFW, so a published port would be public whatever UFW says. The edge reaches the container over the shared network.
+- [x] Remove the `traefik.*` labels. Nothing on the box runs Traefik.
+- [x] The first deploy after the rename recreates the container. The CI job's `--remove-orphans` should remove the old `website-me` container first. If `up` fails because the name `side-badger-website-me` is already in use, run `docker rm -f side-badger-website-me` on the box and re-run the workflow. The site is down for seconds either way.
 
 ### 3. Ship and verify against the current edge
 
@@ -193,6 +193,6 @@ The redirect-only hostnames (`sidebadger.com`, `sidebadgerme.com`, `demo.sidebad
 
 ## Not in this task
 
-- A stricter Content-Security-Policy. The site loads Google Fonts, flag SVGs from `cdn.jsdelivr.net`, fetches policies from `demo.sidebadger.me`, and uses inline scripts. Tightening it is its own change. This task moves the current policy here unchanged.
+- A stricter Content-Security-Policy. The site loads Google Fonts, flag SVGs from `cdn.jsdelivr.net`, fetches policies from `staging.sidebadger.me`, and uses inline scripts. Tightening it is its own change. This task moves the current policy here unchanged.
 - The trailing-slash and canonical URL policy, which belongs to `tasks/restructure-marketing-site.md`. This task keeps today's behaviour.
 - The local `docker-compose.yml` still declares `snowmonkey-proxy-network` as external, so local dev needs that network to exist. Production doesn't use that file.

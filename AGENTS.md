@@ -1,6 +1,6 @@
 # Side Badger - Developer & AI Context
 
-Marketing website for a white-label bill splitting app. The actual app is Firebase-hosted externally; this repo is just the marketing site.
+Marketing website for a white-label bill splitting app. The actual app is hosted externally at `staging.sidebadger.me`; this repo is just the marketing site.
 
 ## Architecture
 
@@ -79,14 +79,16 @@ npm run docker:logs
 
 Multi-stage Dockerfile:
 1. `builder` - Node 22, install deps, build static files
-2. `production` - Node 22 with `serve` for static files
+2. `production` - `nginx:1.27-alpine` serving `dist/` with `nginx/default.conf`
+
+`nginx/default.conf` owns every response header except HSTS, plus caching, compression and the body limit. The shared Snowmonkey proxy only terminates TLS and forwards to the `side-badger` alias.
 
 ## External Dependencies
 
 Policy pages fetch markdown from:
 - `{api.baseUrl}/api/policies/{policy-type}/text`
 
-The app URL (`app.url`) points to the external Firebase-hosted app.
+The app URL (`getAppUrl()` in `src/i18n/index.ts`) and the policy API base (`getApiBaseUrl()`) both point to the external app at `staging.sidebadger.me`.
 
 ## Styling Notes
 

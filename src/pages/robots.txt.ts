@@ -1,11 +1,11 @@
 import type { APIRoute } from 'astro';
 
-// __NGINX_HOST__ is replaced by Nginx sub_filter with the actual $host
 export const GET: APIRoute = () => {
+  const sitemapUrl = new URL('/sitemap-index.xml', import.meta.env.SITE);
   const robotsTxt = `# See https://www.robotstxt.org/robotstxt.html for documentation
 User-agent: *
 
-Sitemap: https://__NGINX_HOST__/sitemap-index.xml
+Sitemap: ${sitemapUrl}
 `;
 
   return new Response(robotsTxt, {

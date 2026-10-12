@@ -64,5 +64,5 @@ Expected response: Markdown text.
 
 - **Astro 5** - Static site generation
 - **TypeScript** - Type safety
-- **Docker + Nginx** - Production deployment
+- **Docker + nginx** - Production image; nginx serves the static build behind the shared Snowmonkey proxy
 - **GitHub Actions** - CI/CD

@@ -1,5 +1,7 @@
 services:
-  website-me:
+  # The service name is this container's alias on snowmonkey-proxy-network,
+  # which the edge proxies to, so it must not collide with another project's
+  side-badger:
     image: ghcr.io/npomfret/side-badger:latest-me
     container_name: side-badger-website-me
     restart: unless-stopped
@@ -7,13 +9,8 @@ services:
       - "80"
     networks:
       - snowmonkey-proxy-network
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.sidebadger-me.rule=Host(`sidebadger.me`) || Host(`www.sidebadger.me`)"
-      - "traefik.http.routers.sidebadger-me.entrypoints=websecure"
-      - "traefik.http.routers.sidebadger-me.tls.certresolver=letsencrypt"
     healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/health"]
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://127.0.0.1/health"]
       interval: 30s
       timeout: 3s
       retries: 3

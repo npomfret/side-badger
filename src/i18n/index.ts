@@ -636,8 +636,11 @@ export const isRTL = (locale: string): boolean =>
 // Set PUBLIC_DOMAIN at build time (e.g., "sidebadger.me")
 const domain = import.meta.env.PUBLIC_DOMAIN || 'sidebadger.me';
 
+// The external app, which also serves the policy API
+const appOrigin = `https://staging.${domain}`;
+
 export function getAppUrl(locale: Locale = 'en'): string {
-  const baseUrl = `https://demo.${domain}/dashboard`;
+  const baseUrl = `${appOrigin}/dashboard`;
   if (locale === 'en') {
     return baseUrl;
   }
@@ -645,7 +648,7 @@ export function getAppUrl(locale: Locale = 'en'): string {
 }
 
 export function getApiBaseUrl(): string {
-  return `https://demo.${domain}`;
+  return appOrigin;
 }
 
 export function getFormattedDate(locale: Locale): string {

@@ -2,7 +2,7 @@
 
 ## Status
 
-In progress: steps 1 and 2 are done and verified locally. Steps 3 to 5 (deploy, edge switch, live checks) remain.
+Done on 2026-10-12. The site serves its own HTTP config, and the edge (`snowmonkey-proxy-common` `aec2884`) proxies to the `side-badger` alias through `app-edge.inc`.
 
 ## Objective
 
@@ -155,9 +155,9 @@ In `docker-compose.prod.yml`:
 
 The new image works behind the current edge, which already sends `X-Real-IP`. Push to `main` and let the workflow deploy it. Until step 4, the edge also adds its own copy of every header, so each one appears twice. That is expected for a short time, but don't leave it: browsers ignore a duplicated `Cross-Origin-Opener-Policy` or `Cross-Origin-Resource-Policy`, so both policies are off while the duplication lasts. Do step 4 the same day.
 
-- [ ] The container is healthy: `docker ps --filter name=side-badger-website-me`.
-- [ ] `docker logs --since 2m side-badger-website-me` shows your own public IP for a request you just made, not a `172.x` address.
-- [ ] `head -c 100000 /dev/zero | curl -s -o /dev/null -w '%{http_code}\n' --data-binary @- https://sidebadger.me/` returns 413. Only this container can produce it: the edge allows 10M now and 100m after step 4.
+- [x] The container is healthy: `docker ps --filter name=side-badger-website-me`.
+- [x] `docker logs --since 2m side-badger-website-me` shows your own public IP for a request you just made, not a `172.x` address.
+- [x] `head -c 100000 /dev/zero | curl -s -o /dev/null -w '%{http_code}\n' --data-binary @- https://sidebadger.me/` returns 413. Only this container can produce it: the edge allows 10M now and 100m after step 4.
 
 ### 4. Switch the edge (in `snowmonkey-proxy-common`)
 
@@ -165,12 +165,17 @@ See "Coordination" below. This is a change in that repo, deployed with its `./sc
 
 ### 5. Verify through the switched edge
 
-- [ ] `curl -sD - -o /dev/null https://sidebadger.me/` shows each of the seven headers exactly once, `Strict-Transport-Security` exactly once (from the edge), and `Cache-Control: no-cache`.
-- [ ] A file under `/_astro/` returns `Cache-Control: public, max-age=31536000, immutable` and is compressed.
-- [ ] `/nope` returns 404 with the site's own 404 page and the same seven headers.
-- [ ] `/robots.txt` names `https://sidebadger.me/sitemap-index.xml`.
-- [ ] The step 3 real-IP and 413 checks still pass.
-- [ ] The `sidebadger.me` probe stays green on the Snowmonkey Sites dashboard.
+- [x] `curl -sD - -o /dev/null https://sidebadger.me/` shows each of the seven headers exactly once, `Strict-Transport-Security` exactly once (from the edge), and `Cache-Control: no-cache`.
+- [x] A file under `/_astro/` returns `Cache-Control: public, max-age=31536000, immutable` and is compressed.
+- [x] `/nope` returns 404 with the site's own 404 page and the same seven headers.
+- [x] `/robots.txt` names `https://sidebadger.me/sitemap-index.xml`.
+- [x] The step 3 real-IP and 413 checks still pass.
+- [x] The `sidebadger.me` probe stays green on the Snowmonkey Sites dashboard.
+
+## Outcome notes
+
+- The first deploy hit the container-name conflict described in step 2. Compose stopped the old container, then could not create the new one, so the site returned 502 until `docker rm -f side-badger-website-me` and `docker compose up -d --remove-orphans` were run on the box.
+- Compression now comes from this container (gzip). The edge passes an already-encoded response through, so browsers get gzip rather than the edge's brotli. A request without `Accept-Encoding` carries `Vary: Accept-Encoding` twice, once from each nginx. Both are harmless. Dropping `gzip` here would hand compression back to the edge and give brotli, at the cost of this repo no longer owning it.
 
 ## Coordination with snowmonkey-proxy-common
 

@@ -175,7 +175,7 @@ See "Coordination" below. This is a change in that repo, deployed with its `./sc
 ## Outcome notes
 
 - The first deploy hit the container-name conflict described in step 2. Compose stopped the old container, then could not create the new one, so the site returned 502 until `docker rm -f side-badger-website-me` and `docker compose up -d --remove-orphans` were run on the box.
-- Compression now comes from this container (gzip). The edge passes an already-encoded response through, so browsers get gzip rather than the edge's brotli. A request without `Accept-Encoding` carries `Vary: Accept-Encoding` twice, once from each nginx. Both are harmless. Dropping `gzip` here would hand compression back to the edge and give brotli, at the cost of this repo no longer owning it.
+- Compression first came from this container (gzip). The edge passes an already-encoded response through, so browsers got gzip rather than the edge's brotli, and a request without `Accept-Encoding` carried `Vary: Accept-Encoding` twice. `gzip` was then dropped from `nginx/default.conf`, so the edge compresses: brotli for browsers that accept it, gzip otherwise. Compression is the one item in the objective this repo leaves to the edge.
 
 ## Coordination with snowmonkey-proxy-common
 

@@ -81,7 +81,7 @@ Multi-stage Dockerfile:
 1. `builder` - Node 22, install deps, build static files
 2. `production` - `nginx:1.27-alpine` serving `dist/` with `nginx/default.conf`
 
-`nginx/default.conf` owns every response header except HSTS, plus caching, compression and the body limit. The shared Snowmonkey proxy only terminates TLS and forwards to the `side-badger` alias.
+`nginx/default.conf` owns every response header except HSTS, plus caching and the body limit. The shared Snowmonkey proxy terminates TLS, compresses responses (brotli or gzip) and forwards to the `side-badger` alias.
 
 ## External Dependencies
 

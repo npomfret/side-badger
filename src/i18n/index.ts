@@ -637,7 +637,7 @@ export const isRTL = (locale: string): boolean =>
 const domain = import.meta.env.PUBLIC_DOMAIN || 'sidebadger.me';
 
 // The external app, which also serves the policy API
-const appOrigin = `https://staging.${domain}`;
+const appOrigin = `https://app.${domain}`;
 
 export function getAppUrl(locale: Locale = 'en'): string {
   const baseUrl = `${appOrigin}/dashboard`;

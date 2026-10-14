@@ -44,7 +44,7 @@ Measured through the edge on 2026-10-08:
 
 ## Related, separate stack
 
-This is the marketing site for the bill splitter, `wl-bill-splitter`. The app will be served at `app.sidebadger.me` and `staging.sidebadger.me` by its own stack, with its own front container and alias (`wl-bill-splitter` or `wl-bill-splitter-<env>`, never `side-badger` or `website-me`). This nginx does not route to it, and the app's headers are not this repo's concern. `demo.sidebadger.me` no longer resolves; the site's app links and policy API now point at `staging.sidebadger.me`.
+This is the marketing site for the bill splitter, `wl-bill-splitter`. The app will be served at `app.sidebadger.me` and `staging.sidebadger.me` by its own stack, with its own front container and alias (`wl-bill-splitter` or `wl-bill-splitter-<env>`, never `side-badger` or `website-me`). This nginx does not route to it, and the app's headers are not this repo's concern. `demo.sidebadger.me` no longer resolves; the site's app links and policy API point at the production app, `app.sidebadger.me`.
 
 ## Decision: replace `serve` with nginx in the production image
 
@@ -198,6 +198,6 @@ The redirect-only hostnames (`sidebadger.com`, `sidebadgerme.com`, `demo.sidebad
 
 ## Not in this task
 
-- A stricter Content-Security-Policy. The site loads Google Fonts, flag SVGs from `cdn.jsdelivr.net`, fetches policies from `staging.sidebadger.me`, and uses inline scripts. Tightening it is its own change. This task moves the current policy here unchanged.
+- A stricter Content-Security-Policy. The site loads Google Fonts, flag SVGs from `cdn.jsdelivr.net`, fetches policies from `app.sidebadger.me`, and uses inline scripts. Tightening it is its own change. This task moves the current policy here unchanged.
 - The trailing-slash and canonical URL policy, which belongs to `tasks/restructure-marketing-site.md`. This task keeps today's behaviour.
 - The local `docker-compose.yml` still declares `snowmonkey-proxy-network` as external, so local dev needs that network to exist. Production doesn't use that file.

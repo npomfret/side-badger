@@ -1,6 +1,6 @@
 # Side Badger - Developer & AI Context
 
-Marketing website for a white-label bill splitting app. The actual app is hosted externally at `staging.sidebadger.me`; this repo is just the marketing site.
+Marketing website for a white-label bill splitting app. The actual app is hosted externally at `app.sidebadger.me` (staging at `staging.sidebadger.me`); this repo is just the marketing site.
 
 ## Architecture
 
@@ -88,7 +88,7 @@ Multi-stage Dockerfile:
 Policy pages fetch markdown from:
 - `{api.baseUrl}/api/policies/{policy-type}/text`
 
-The app URL (`getAppUrl()` in `src/i18n/index.ts`) and the policy API base (`getApiBaseUrl()`) both point to the external app at `staging.sidebadger.me`.
+The app URL (`getAppUrl()` in `src/i18n/index.ts`) and the policy API base (`getApiBaseUrl()`) both point to the production app at `app.sidebadger.me`.
 
 ## Styling Notes
 

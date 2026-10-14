@@ -8,11 +8,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.8);
-  background: var(--glass-bg);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  /* Near-opaque light panel with dark ink: 16:1 on the light page (it was white on 25% white) */
+  background: rgba(240, 253, 244, 0.96);
   border: 1px solid var(--glass-border-hover);
-  color: white;
+  color: var(--text-heading);
   padding: var(--space-lg) var(--space-2xl);
   border-radius: var(--radius-xl);
   font-family: var(--font-display);

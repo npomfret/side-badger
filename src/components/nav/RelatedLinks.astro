@@ -1,0 +1,32 @@
+---
+/**
+ * Related pages (restructure 5.4): the registry's `related` list and feature and use-case
+ * cross-links, published pages only. Renders nothing when there are none.
+ */
+import { t, type Locale } from '../../i18n';
+import { localizedPath } from '../../seo/urls';
+import { pageLabel, relatedPages, type PageLabels } from './navigation';
+
+interface Props {
+  pageId: string;
+  locale: Locale;
+  /** Link text for content pages, keyed by page id (their titles live in content entries) */
+  labels?: PageLabels;
+}
+
+const { pageId, locale, labels = {} } = Astro.props;
+const related = relatedPages(pageId, locale).map(page => ({
+  id: page.id,
+  href: localizedPath(page.id, locale),
+  label: pageLabel(page, locale, labels),
+}));
+---
+
+{related.length > 0 && (
+  <section class="related-links" aria-labelledby="related-links-heading">
+    <h2 id="related-links-heading">{t('related.heading', locale)}</h2>
+    <ul role="list">
+      {related.map(link => <li><a href={link.href}>{link.label}</a></li>)}
+    </ul>
+  </section>
+)}

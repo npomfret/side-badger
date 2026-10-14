@@ -62,9 +62,8 @@ describe('rule 13: no English text left on translated pages', () => {
     it('resolves each approved key to its English text', () => {
       const lock = { keys: {}, identicalApproved: ['footer.tagline', 'cta.title'], pages: {} };
       expect([...approvedFromLock(lock, 'xx.json')].sort()).toEqual([
-        'Just badgers splitting bills.',
+        'Free. No ads. No daily limits.',
         'Ready to split some bills?',
-        'Totally free. No tracking. No ads.',
       ]);
     });
 
@@ -98,9 +97,8 @@ describe('rule 13: no English text left on translated pages', () => {
       });
     });
 
-    it('reads the real pcm lock, which approves the footer tagline', () => {
+    it('reads the real pcm lock, which approves the brand name', () => {
       const approved = approvedFromLocks('pcm');
-      expect(approved.has('Just badgers splitting bills.')).toBe(true);
       expect(approved.has('Side Badger')).toBe(true);
     });
   });

@@ -1,0 +1,279 @@
+/*
+ * Navigation: header links, the mobile Popover menu, breadcrumbs and related links.
+ * Logical properties only; directional shapes flip under :dir(rtl).
+ */
+
+/* ===== HEADER LINKS (desktop) ===== */
+/*
+ * The links show from 80rem up. With all four pages published, a header of 1200px holds the
+ * `xx-long` labels only with this compact padding and no wrapping (measured: 1192px needed), and
+ * English needs about 990px, so below 80rem the links move into the menu.
+ */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+}
+
+.nav-links a {
+  white-space: nowrap;
+}
+
+.nav-links a,
+.mobile-menu a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 2.75rem;
+  padding-inline: 0.625rem;
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.nav-links a:hover,
+.mobile-menu a:hover {
+  background: rgba(47, 107, 46, 0.1);
+  color: var(--accent-ink-hover);
+}
+
+.nav-links a:focus-visible,
+.mobile-menu a:focus-visible,
+.menu-button:focus-visible,
+.menu-close:focus-visible {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 2px;
+}
+
+/* The current page, and its section */
+.nav-links a[aria-current],
+.mobile-menu a[aria-current] {
+  color: var(--accent-ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.35em;
+}
+
+/* ===== MOBILE MENU (Popover API) ===== */
+.mobile-nav {
+  display: none;
+}
+
+.menu-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  min-block-size: 2.75rem;
+  min-inline-size: 2.75rem;
+  justify-content: center;
+  padding-inline: var(--space-sm);
+  background: transparent;
+  border: 1px solid var(--glass-border-hover);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background: rgba(47, 107, 46, 0.1);
+}
+
+/* Icon only on small phones; the name stays for screen readers */
+.menu-button__text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+@media (min-width: 30rem) {
+  .menu-button {
+    padding-inline: var(--space-md);
+  }
+
+  .menu-button__text {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: auto;
+  inset-block-start: var(--header-h);
+  inset-inline-start: auto;
+  inset-inline-end: var(--space-md);
+  margin: 0;
+  margin-block-start: var(--space-sm);
+  inline-size: min(24rem, calc(100% - var(--space-md) * 2));
+  max-block-size: calc(100dvh - var(--header-h) - var(--space-lg));
+  overflow-y: auto;
+  padding: var(--space-md);
+  background: #fffdf8;
+  color: var(--text-primary);
+  border: 1px solid var(--glass-border-hover);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 40px rgba(29, 43, 36, 0.25);
+}
+
+.mobile-menu::backdrop {
+  background: rgba(29, 43, 36, 0.25);
+}
+
+.mobile-menu ul {
+  display: grid;
+  gap: var(--space-xs);
+  list-style: none;
+}
+
+.mobile-menu a {
+  display: flex;
+  inline-size: 100%;
+  font-size: var(--text-lg);
+}
+
+.menu-close {
+  margin-block-start: var(--space-md);
+  inline-size: 100%;
+  min-block-size: 2.75rem;
+  background: transparent;
+  border: 1px solid var(--glass-border-hover);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.menu-close:hover {
+  background: rgba(47, 107, 46, 0.1);
+}
+
+@media (max-width: 79.99rem) {
+  .header-nav {
+    display: none;
+  }
+
+  .header-nav + .header-actions {
+    margin-inline-start: auto;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+}
+
+/* Past the breakpoint the menu is never shown, even if it was left open while resizing */
+@media (min-width: 80rem) {
+  .mobile-menu:popover-open {
+    display: none;
+  }
+}
+
+/* Without popover support the panel is a plain list under the header, and the button is useless */
+@supports not selector(:popover-open) {
+  .menu-button,
+  .menu-close {
+    display: none;
+  }
+
+  .mobile-menu {
+    position: static;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+    background: none;
+  }
+
+  .mobile-nav {
+    position: absolute;
+    inset-block-start: 100%;
+    inset-inline: 0;
+    margin-block-start: var(--space-sm);
+    background: #fffdf8;
+    border: 1px solid var(--glass-border-hover);
+    border-radius: var(--radius-lg);
+    padding: var(--space-sm);
+  }
+}
+
+/* ===== BREADCRUMBS ===== */
+.breadcrumbs {
+  padding-block: var(--space-md) 0;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs) var(--space-sm);
+  list-style: none;
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* The separator is a CSS chevron, not text, so the item's text is only its name */
+.breadcrumbs li + li::before {
+  content: '';
+  inline-size: 0.45em;
+  block-size: 0.45em;
+  border-block-start: 2px solid var(--text-muted);
+  border-inline-end: 2px solid var(--text-muted);
+  transform: rotate(45deg);
+}
+
+:dir(rtl) .breadcrumbs li + li::before {
+  transform: rotate(-135deg);
+}
+
+.breadcrumbs a {
+  color: var(--accent-ink);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.breadcrumbs [aria-current='page'] {
+  font-weight: 600;
+}
+
+/* ===== RELATED LINKS ===== */
+.related-links {
+  margin-block: var(--space-2xl);
+}
+
+.related-links h2 {
+  font-size: var(--text-xl);
+  margin-block-end: var(--space-md);
+}
+
+.related-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-lg);
+  list-style: none;
+}
+
+.related-links a {
+  color: var(--accent-ink);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}

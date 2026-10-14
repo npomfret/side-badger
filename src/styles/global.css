@@ -315,15 +315,13 @@ a:hover {
   transition-duration: var(--duration-instant);
 }
 
-.btn-primary,
-.btn.btn-primary {
+.btn-primary {
   background: var(--accent-ink);
   color: #fff;
   box-shadow: var(--shadow-glow-sm);
 }
 
-.btn-primary:hover,
-.btn.btn-primary:hover {
+.btn-primary:hover {
   background: var(--accent-ink-hover);
   color: #fff;
   transform: translateY(-2px) scale(1.01);

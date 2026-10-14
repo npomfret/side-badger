@@ -5,15 +5,20 @@ import { SITE_ORIGIN, canonicalLinks, squash, visibleText, type Site, type SiteP
 
 type Node = Record<string, any>;
 
-/** Node types required by page type (D7). The 404 page needs none. */
+/**
+ * Node types required by page type (D7). The 404 page needs none. BreadcrumbList is required
+ * only on page types two or more levels below Home, because D22 shows the visible breadcrumb
+ * only there and every BreadcrumbList must match a visible one: hubs and how-it-works (depth
+ * one) have neither.
+ */
 const BASE = ['WebSite', 'Organization', 'WebPage'];
 export const requiredTypes: Record<PageType, string[]> = {
   home: [...BASE, 'SoftwareApplication'],
   pricing: [...BASE, 'FAQPage'],
-  hub: ['WebSite', 'Organization', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
+  hub: ['WebSite', 'Organization', 'CollectionPage', 'ItemList'],
   feature: [...BASE, 'BreadcrumbList'],
   'use-case': [...BASE, 'BreadcrumbList'],
-  'how-it-works': [...BASE, 'BreadcrumbList'],
+  'how-it-works': BASE,
   comparison: [...BASE, 'BreadcrumbList'],
   legal: BASE,
   article: [...BASE, 'Article', 'BreadcrumbList'],

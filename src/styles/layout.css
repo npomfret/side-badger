@@ -1,77 +1,79 @@
 /*
- * Layout styles - Header, Footer, Main
+ * Layout styles - Header, Footer, Main. Logical properties only (RTL mirrors without overrides).
  */
 
 /* ===== HEADER ===== */
+/*
+ * --header-h is the header's real bottom edge: its top offset plus its fixed height (restructure
+ * 5.10). The homepage's pinned scenes and `scroll-padding-top` read it, so both parts are set
+ * here, per breakpoint, in static CSS with no script. Below 64rem the bar is the compact phone
+ * and tablet one; the links move into the menu below 80rem (nav.css).
+ */
+:root {
+  --header-top: var(--space-md);
+  --header-bar: 4.5rem;
+  --header-h: calc(var(--header-top) + var(--header-bar));
+}
+
+@media (max-width: 63.99rem) {
+  :root {
+    --header-top: var(--space-sm);
+    --header-bar: 4rem;
+  }
+}
+
 .site-header {
   position: fixed;
-  top: var(--space-md);
-  left: 50%;
-  transform: translateX(-50%);
+  inset-block-start: var(--header-top);
+  inset-inline: 0;
+  margin-inline: auto;
   width: min(1200px, calc(100% - var(--space-lg) * 2));
+  height: var(--header-bar);
   z-index: var(--z-sticky);
-  background: rgba(12, 31, 22, 0.6);
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(40px);
+  background: rgba(255, 253, 248, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-xl);
   overflow: visible;
-  box-shadow:
-    0 0 0 1px var(--glass-border),
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    0 0 60px rgba(126, 199, 134, 0.1);
+  box-shadow: 0 1px 2px rgba(29, 43, 36, 0.08), 0 8px 24px rgba(29, 43, 36, 0.12);
 }
 
-.site-header .container {
-  padding-top: var(--space-sm);
-  padding-bottom: var(--space-sm);
-  overflow: visible;
-}
-
-/* Header navigation layout */
-.header-nav {
+.header-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: var(--space-md);
+  height: 100%;
   overflow: visible;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-inline-start: auto;
+}
+
+.header-nav {
+  margin-inline-start: auto;
+}
+
+.header-nav + .header-actions {
+  margin-inline-start: 0;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  flex-shrink: 0;
   font-family: var(--font-display);
   font-weight: 700;
   font-size: var(--text-lg);
   color: var(--text-primary);
-  overflow: visible;
 }
 
-.logo-glow-wrapper {
-  position: relative;
-  display: flex;
-}
-
-.logo-glow-spacer {
-  width: 40px;
-  flex-shrink: 0;
-  order: 2;
-}
-
-.logo-glow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: -40px;
-  bottom: 0;
-  background: radial-gradient(ellipse at 50% 50%, rgba(90, 180, 125, 1) 0%, rgba(70, 140, 95, 0.85) 32%, rgba(40, 80, 55, 0) 62%);
-  z-index: 0;
-}
-
-.logo-glow-wrapper img {
-  position: relative;
-  z-index: 1;
-  height: 100px;
+.site-header .logo img {
+  height: 3rem;
   width: auto;
 }
 
@@ -80,64 +82,63 @@
   width: auto;
 }
 
-.nav-links {
-  list-style: none;
-  overflow: visible;
+.btn-launch.btn {
+  padding: var(--space-sm) var(--space-lg);
+  white-space: nowrap;
 }
 
-.nav-links a {
-  color: var(--text-secondary);
-  font-weight: 500;
-  transition: color var(--transition-fast);
-}
-
-.nav-links a:hover {
-  color: var(--text-primary);
-}
-
-.btn-launch {
-  padding: var(--space-sm) var(--space-lg) !important;
-}
-
-.btn-launch-icon {
+.launch-cta__icon {
   display: none;
 }
 
+/* Directional icons mirror in right-to-left scripts */
+:dir(rtl) .launch-cta__icon {
+  transform: scaleX(-1);
+}
+
 /* ===== MAIN CONTENT ===== */
+/* The fixed header's bottom edge is --header-h, so main starts exactly there */
 main {
-  padding-top: 100px;
-  min-height: calc(100vh - 100px);
+  padding-block-start: var(--header-h);
+  min-height: calc(100vh - var(--header-h));
 }
 
 /* ===== FOOTER ===== */
 .site-footer {
   position: relative;
   padding: var(--space-3xl) 0 var(--space-xl);
-  margin-top: var(--space-4xl);
+  margin-block-start: var(--space-4xl);
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(22, 163, 74, 0.2);
+  border-block-start: 1px solid rgba(22, 163, 74, 0.2);
   box-shadow: 0 -20px 40px rgba(20, 83, 45, 0.1);
 }
 
+/* The brand column, then one column per registry group */
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
   gap: var(--space-2xl);
-  margin-bottom: var(--space-2xl);
+  margin-block-end: var(--space-2xl);
 }
 
 .footer-brand p {
-  margin-top: var(--space-md);
+  margin-block-start: var(--space-md);
 }
 
-.footer-links h4 {
+/* Group headings are h2 for the outline and small for the eye */
+.footer-links h2 {
+  font-family: var(--font-sans);
   font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 1.4;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text-muted);
-  margin-bottom: var(--space-md);
+  margin-block-end: var(--space-md);
 }
 
 .footer-links ul {
@@ -145,7 +146,7 @@ main {
 }
 
 .footer-links li {
-  margin-bottom: var(--space-sm);
+  margin-block-end: var(--space-sm);
 }
 
 .footer-links a {
@@ -154,8 +155,8 @@ main {
 }
 
 .footer-bottom {
-  padding-top: var(--space-xl);
-  border-top: 1px solid var(--glass-border);
+  padding-block-start: var(--space-xl);
+  border-block-start: 1px solid var(--glass-border);
 }
 
 /* ===== CURSOR AURORA ===== */
@@ -179,59 +180,66 @@ main {
 }
 
 /* ===== MOBILE LAYOUT ===== */
-@media (max-width: 768px) {
+@media (max-width: 63.99rem) {
   .site-header {
-    top: var(--space-sm);
     width: calc(100% - var(--space-md) * 2);
     border-radius: var(--radius-lg);
   }
 
-  .header-nav {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  .site-header .container {
+    padding-inline: var(--space-md);
+  }
+
+  .header-bar,
+  .header-actions {
     gap: var(--space-sm);
   }
 
-  .site-header .logo img,
-  .site-header .logo-glow-wrapper img {
-    height: 60px;
+  .site-header .logo img {
+    height: 2.5rem;
   }
 
-  .logo-glow-spacer {
-    width: 20px;
-  }
-
-  .logo-glow {
-    right: -20px;
-  }
-
-  .site-header .nav-links {
-    gap: var(--space-sm);
-  }
-
-  .btn-launch {
-    padding: var(--space-sm) !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .btn-launch-text {
+  #cursor-glow {
     display: none;
   }
+}
 
-  .btn-launch-icon {
+/* Phones: the launch link keeps its icon; the text stays available to screen readers */
+@media (max-width: 39.99rem) {
+  .btn-launch.btn {
+    padding: var(--space-sm);
+  }
+
+  .btn-launch .launch-cta__text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .launch-cta__icon {
     display: block;
   }
+}
 
-  main {
-    padding-top: 100px;
+/* The narrowest phones (320px): a smaller logo and gutter keep the Menu button inside the bar */
+@media (max-width: 22.49rem) {
+  .site-header .container {
+    padding-inline: var(--space-sm);
   }
 
-  /* Footer */
+  .site-header .logo img {
+    height: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
+    grid-auto-flow: row;
     gap: var(--space-xl);
   }
 
@@ -239,9 +247,5 @@ main {
     flex-direction: column;
     gap: var(--space-sm);
     text-align: center;
-  }
-
-  #cursor-glow {
-    display: none;
   }
 }

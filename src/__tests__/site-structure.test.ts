@@ -14,6 +14,7 @@ import {
   pseudoLocales,
   t,
   tf,
+  translations,
   type Locale,
 } from '@/i18n';
 import { pseudoText } from '@/i18n/pseudo';
@@ -26,6 +27,7 @@ afterEach(() => {
   vi.unstubAllEnvs();
   vi.resetModules();
   vi.doUnmock('@/i18n/pending/keys.json');
+  vi.doUnmock('@/i18n/pending/pages.json');
   vi.doUnmock('@/site/preview-pages');
 });
 
@@ -314,6 +316,25 @@ describe('route generation', () => {
     expect(i18n.getBuildLocales()).toHaveLength(39);
   });
 
+  it('English-first skips exactly the locales missing a pending key that English has', async () => {
+    const key = 'zz.scratch' as keyof typeof en;
+    const english = en as Record<string, string>;
+    const french = translations.fr as Record<string, string>;
+    english[key] = 'Scratch';
+    french[key] = 'Brouillon';
+    try {
+      vi.stubEnv('I18N_MODE', 'english-first');
+      expect(getBuildLocales()).toEqual(['en', 'fr']);
+      expect(pathsFor('pricing').map(p => p.params.locale ?? 'en')).toEqual(['en', 'fr']);
+      // strict mode builds every locale: the translation tests are what fail there
+      vi.stubEnv('I18N_MODE', 'strict');
+      expect(getBuildLocales()).toHaveLength(39);
+    } finally {
+      delete english[key];
+      delete french[key];
+    }
+  });
+
   it('skips a page/locale pair that lacks its content entry in English-first mode only', async () => {
     const preview = {
       id: 'feature/scratch',
@@ -327,6 +348,7 @@ describe('route generation', () => {
     vi.stubEnv('PREVIEW_UNPUBLISHED', '1');
     vi.resetModules();
     vi.doMock('@/site/preview-pages', () => ({ previewPages: [preview] }));
+    vi.doMock('@/i18n/pending/pages.json', () => ({ default: { added: ['feature/scratch'] } }));
     const routes = await import('@/site/routes');
 
     vi.stubEnv('I18N_MODE', 'english-first');
@@ -336,6 +358,24 @@ describe('route generation', () => {
 
     vi.stubEnv('I18N_MODE', 'strict');
     expect(() => routes.pathsFor('feature/scratch')).toThrow(/no content entry/);
+  });
+
+  it('fails in English-first mode when a missing entry is not listed in pending/pages.json', async () => {
+    const preview = {
+      id: 'feature/unlisted',
+      type: 'feature',
+      path: '/features/unlisted/',
+      published: true,
+      locales: 'all',
+      content: { collection: 'featurePages', slug: 'unlisted-no-such-slug' },
+      indexing: 'per-locale-review',
+    };
+    vi.stubEnv('I18N_MODE', 'english-first');
+    vi.stubEnv('PREVIEW_UNPUBLISHED', '1');
+    vi.resetModules();
+    vi.doMock('@/site/preview-pages', () => ({ previewPages: [preview] }));
+    const routes = await import('@/site/routes');
+    expect(() => routes.pathsFor('feature/unlisted')).toThrow(/pending\/pages\.json/);
   });
 
   it('does not build an unpublished page unless PREVIEW_UNPUBLISHED=1', async () => {
@@ -369,6 +409,9 @@ describe('route generation', () => {
     expect(pageForPath('/nl-NL/')).toBeUndefined();
     expect(pageForPath('/en/pricing/')).toBeUndefined();
     expect(pageForPath('/nope/')).toBeUndefined();
+    // inherited object keys are not locale prefixes
+    expect(pageForPath('/constructor/')).toBeUndefined();
+    expect(pageForPath('/toString/pricing/')).toBeUndefined();
   });
 });
 

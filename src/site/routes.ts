@@ -12,6 +12,7 @@ import {
   getI18nMode,
   isPseudoLocale,
   localeConfig,
+  pendingPageIds,
   type Locale,
 } from '../i18n';
 import { allPages, builtPages, getPage, requirePage, type PageDef, type PageType } from './pages';
@@ -52,7 +53,13 @@ export function hasContentEntry(page: PageDef, locale: Locale): boolean {
         'Strict mode needs every locale; use I18N_MODE=english-first while translation is pending.'
     );
   }
-  // English-first: the entry is still to be written (pending/pages.json lists such pages)
+  // English-first: an entry may be missing only for a page pending/pages.json lists (D38)
+  if (!pendingPageIds().includes(page.id)) {
+    throw new Error(
+      `Page "${page.id}" has no content entry for "${locale}" (${file}) and is not listed in ` +
+        'src/i18n/pending/pages.json.'
+    );
+  }
   return false;
 }
 
@@ -116,7 +123,7 @@ export function pageForPath(input: string): PageMatch | undefined {
   let rest = path;
   // English has no prefix, so `/en/…` is not a page
   if (first === 'en') return undefined;
-  if (first && first in localeConfig) {
+  if (first && Object.hasOwn(localeConfig, first)) {
     locale = first as Locale;
     rest = path.slice(first.length + 1) || '/';
   }

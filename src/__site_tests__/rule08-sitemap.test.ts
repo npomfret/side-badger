@@ -45,6 +45,11 @@ describe('rule 8: the sitemap equals the indexable canonical URLs', () => {
       expect(mentions(checkSitemap(build(goodUrls.slice(0, 2))), 'missing indexable URL', '/privacy/')).toBe(true);
     });
 
+    it('takes indexability from D8, not from the page: a wrongly noindexed page is still required', () => {
+      const site = build(goodUrls.slice(0, 1).concat(goodUrls.slice(2)), ROBOTS, { 'fr/index.html': fx('good/noindex.html') });
+      expect(mentions(checkSitemap(site), 'missing indexable URL', '/fr/')).toBe(true);
+    });
+
     it('fails a noindex URL in the sitemap', () => {
       const problems = checkSitemap(build([...goodUrls, `${S}/fr/privacy/`]));
       expect(mentions(problems, '/fr/privacy/', 'not an indexable canonical URL')).toBe(true);

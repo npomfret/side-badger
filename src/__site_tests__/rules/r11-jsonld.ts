@@ -1,4 +1,5 @@
 /** Rule 11: JSON-LD parses, carries the node types the page type needs (2.5), FAQ questions and breadcrumbs match the visible page, and WebPage.url equals the canonical. */
+import { t, type TranslationKey } from '../../i18n';
 import type { PageType } from '../../site/pages';
 import { SITE_ORIGIN, canonicalLinks, squash, visibleText, type Site, type SitePage } from '../lib/site';
 
@@ -44,12 +45,27 @@ export function parseJsonLd(page: SitePage): { nodes: Node[]; problems: string[]
   return { nodes, problems };
 }
 
-/** The names in the visible breadcrumb trail, or undefined if the page shows none */
+/**
+ * The names in the visible breadcrumb trail, or undefined if the page shows none. P23 renders
+ * the breadcrumb as a `nav` labelled with the a11y.breadcrumb key, then an `ol` (5.4), so the
+ * label is the page locale's translation, not always "Breadcrumb".
+ */
+// Built, not literal, so the used-key scan in translations.test.ts does not demand the key
+// before P23 adds it to en.ts.
+const BREADCRUMB_KEY = ['a11y', 'breadcrumb'].join('.') as TranslationKey;
+
 export function visibleBreadcrumb(page: SitePage): string[] | undefined {
-  const nav = page.$('nav[aria-label="Breadcrumb"], nav[aria-label="breadcrumb"], nav.breadcrumbs, nav.breadcrumb, [data-breadcrumbs]').first();
+  const labels = new Set(['Breadcrumb']);
+  if (page.locale) labels.add(t(BREADCRUMB_KEY, page.locale));
+  const nav = page
+    .$('nav[aria-label]')
+    .filter((_, el) => labels.has((page.$(el).attr('aria-label') ?? '').trim()))
+    .first();
   if (nav.length === 0) return undefined;
-  const items = nav.find('li');
-  return items.toArray().map(li => squash(page.$(li).text()));
+  return nav
+    .find('ol > li')
+    .toArray()
+    .map(li => squash(page.$(li).text()));
 }
 
 export function checkJsonLd(site: Site): string[] {

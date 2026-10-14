@@ -14,7 +14,7 @@ describe('rule 2: indexable pages have one absolute, slash-form canonical equal 
     });
 
     it('ignores non-indexable pages', () => {
-      expect(checkCanonical(one('good/noindex.html'))).toEqual([]);
+      expect(checkCanonical(one('good/noindex.html', 'fr/privacy/index.html'))).toEqual([]);
     });
 
     it.each([

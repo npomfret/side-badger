@@ -1,10 +1,14 @@
-/** Rule 3: non-indexable pages carry noindex, no canonical and no alternates. Pseudo-locale, 404, unpublished and localized legal pages must be non-indexable. */
+/**
+ * Rule 3: non-indexable pages carry noindex, no canonical and no alternates. Which pages are
+ * non-indexable comes from D8 (registry, review status, legal, 404, pseudo-locales), not from the
+ * page, so an indexable page wrongly marked noindex fails too.
+ */
 import {
   alternateLinks,
   canonicalLinks,
-  isIndexable,
+  declaresNoindex,
+  indexability,
   metaContent,
-  mustBeNoindex,
   type Site,
 } from '../lib/site';
 
@@ -12,11 +16,14 @@ export function checkNoindex(site: Site): string[] {
   const problems: string[] = [];
   for (const page of site.pages) {
     const at = page.urlPath;
-    const reason = mustBeNoindex(page);
-    if (reason && isIndexable(page)) {
-      problems.push(`${at}: ${reason} must be noindex but is indexable`);
+    const expected = indexability(page);
+    const noindex = declaresNoindex(page);
+    if (expected?.indexable && noindex) {
+      problems.push(`${at}: indexable under D8 (${expected.reason}) but carries noindex`);
+      continue;
     }
-    if (isIndexable(page)) continue;
+    if (expected ? expected.indexable : !noindex) continue;
+    if (expected && !noindex) problems.push(`${at}: ${expected.reason} must be noindex but is indexable`);
     const robots = metaContent(page.$, 'name', 'robots');
     if (robots.length !== 1 || !/(^|,)\s*noindex\s*(,|$)/i.test(robots[0])) {
       problems.push(`${at}: non-indexable page needs one <meta name="robots" content="noindex">`);

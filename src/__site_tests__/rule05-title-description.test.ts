@@ -38,7 +38,7 @@ describe('rule 5: title and description present, and unique among indexable page
     });
 
     it('ignores non-indexable duplicates', () => {
-      const site = sites({ 'index.html': fx('good/home.html'), 'terms/index.html': fx('good/noindex.html'), 'privacy/index.html': fx('good/noindex.html') });
+      const site = sites({ 'index.html': fx('good/home.html'), 'fr/terms/index.html': fx('good/noindex.html'), 'fr/privacy/index.html': fx('good/noindex.html') });
       // identical title and description on two noindex pages is allowed
       expect(checkTitleDescription(site).filter(problem => problem.startsWith('duplicate'))).toEqual([]);
     });

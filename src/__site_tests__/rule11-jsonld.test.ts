@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { checkJsonLd } from './rules/r11-jsonld';
 import { dist } from './lib/site';
-import { mentions, one } from './lib/fixtures';
+import { fx, mentions, one, sites } from './lib/fixtures';
 
 describe('rule 11: JSON-LD parses, has the required nodes and matches the visible page', () => {
   it('dist: every page', () => {
@@ -52,6 +52,13 @@ describe('rule 11: JSON-LD parses, has the required nodes and matches the visibl
 
     it('fails a BreadcrumbList that differs from the visible breadcrumb', () => {
       expect(mentions(checkJsonLd(one('r11/breadcrumb-differs.html')), 'differs from the visible breadcrumb')).toBe(true);
+    });
+
+    it('reads only the nav labelled as the breadcrumb, not other navs', () => {
+      const site = sites({
+        'index.html': fx('r11/breadcrumb-ok.html').replace('aria-label="Breadcrumb"', 'aria-label="Main navigation"'),
+      });
+      expect(mentions(checkJsonLd(site), 'no visible breadcrumb')).toBe(true);
     });
 
     it('fails a BreadcrumbList with no visible breadcrumb', () => {

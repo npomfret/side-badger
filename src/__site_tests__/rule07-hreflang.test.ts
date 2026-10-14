@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { checkHreflang } from './rules/r07-hreflang';
-import { dist } from './lib/site';
+import { dist, overrideLockPages } from './lib/site';
 import { fx, mentions, sites } from './lib/fixtures';
 
 const cluster = (frFixture = 'good/fr-home.html', homeFixture = 'good/home.html') =>
@@ -34,9 +34,14 @@ describe('rule 7: hreflang clusters are symmetric, complete and valid', () => {
       expect(mentions(problems, 'https://sidebadger.me/de/', 'does not exist')).toBe(true);
     });
 
-    it('fails an alternate pointing at a non-indexable page', () => {
-      const site = sites({ 'index.html': fx('good/home.html'), 'fr/index.html': fx('good/noindex.html') });
-      expect(mentions(checkHreflang(site), 'https://sidebadger.me/fr/', 'not indexable')).toBe(true);
+    it('fails an alternate pointing at a page D8 makes non-indexable', () => {
+      overrideLockPages('fr', { home: 'machine', pricing: 'legacy' });
+      try {
+        const site = sites({ 'index.html': fx('good/home.html'), 'fr/index.html': fx('good/noindex.html') });
+        expect(mentions(checkHreflang(site), 'https://sidebadger.me/fr/', 'not indexable')).toBe(true);
+      } finally {
+        overrideLockPages('fr', undefined);
+      }
     });
 
     it('fails a tag that differs from the configured hreflang', () => {

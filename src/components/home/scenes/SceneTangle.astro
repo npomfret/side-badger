@@ -15,7 +15,10 @@
  *     keyframes on `animation-timeline: --scene`. Keep data-at in 1..5; reduced
  *     motion rests at staticStage.
  *   - Below 1024 px the tangle uses its portrait board; on phones the lede sits in normal flow
- *     before the pinned stage. tangle/layout.ts and its test are H8's.
+ *     before the pinned stage: put it in ScrollScene's `lead` slot (outside the runway and its
+ *     timeline), rendered once. tangle/layout.ts and its test are H8's.
+ *   - Bespoke keyframes and stage rules use the hooks documented at the top of scenes.css, with
+ *     :global() around html[...] and .scene[data-stage] in this component's scoped <style>.
  */
 import ScrollScene from '../ScrollScene.astro';
 import SceneLink from '../props/SceneLink.astro';

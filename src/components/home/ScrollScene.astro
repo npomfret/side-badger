@@ -7,7 +7,13 @@
  * fallback and reduced motion; `scene-controller.ts` owns the fallback stage regions.
  *
  * Slots: `copy` (heading, body), `visual` (the illustrated stage), `link` (scene links), and the
- * default slot (anything else inside the stage).
+ * default slot (anything else inside the stage). `lead` renders before the runway, in normal flow
+ * and outside the view timeline: the tangle's phone lede ("Prototype findings"). It is not pinned
+ * and must not use data-anim. A scene that shows it only on some widths hides the duplicate with
+ * CSS, never by rendering the text twice.
+ *
+ * Structure: section.scene (data attributes, data-stage) > [.scene__lead] + .scene__runway (the
+ * height, the view timeline `--scene` and the fallback stage regions) > .scene__stage (sticky).
  *
  * Stages: `stages` lists the boundaries in percent of the pinned range. N boundaries make N + 1
  * stages numbered from 0: `[10, 30, 50, 68, 90]` is 0 to 10 %, 10 to 30 %, … 90 to 100 %. An
@@ -79,10 +85,13 @@ const style = [
   data-confetti-at={confettiAt}
   style={style || undefined}
 >
-  <div class="scene__stage">
-    {Astro.slots.has('copy') && <div class="scene__copy"><slot name="copy" /></div>}
-    {Astro.slots.has('visual') && <div class="scene__visual"><slot name="visual" /></div>}
-    {Astro.slots.has('link') && <div class="scene__link"><slot name="link" /></div>}
-    <slot />
+  {Astro.slots.has('lead') && <div class="scene__lead"><slot name="lead" /></div>}
+  <div class="scene__runway">
+    <div class="scene__stage">
+      {Astro.slots.has('copy') && <div class="scene__copy"><slot name="copy" /></div>}
+      {Astro.slots.has('visual') && <div class="scene__visual"><slot name="visual" /></div>}
+      {Astro.slots.has('link') && <div class="scene__link"><slot name="link" /></div>}
+      <slot />
+    </div>
   </div>
 </section>

@@ -2,18 +2,33 @@
  * The scroll-scene primitive's styles (homepage plan: "The scroll-scene primitive", "Animation
  * technology" and "Prototype findings"). Logical properties only: no physical left/right.
  *
- * One scene = one <section class="scene"> with a sticky .scene__stage. Every animated element
- * is driven one of two ways, never by a shared custom property that changes with scroll:
+ * One scene = <section class="scene"> > [.scene__lead] + .scene__runway > sticky .scene__stage.
+ * The runway carries the height and the view timeline. html[data-scene-engine] is set before
+ * first paint (HomePage.astro) and kept current by scene-controller.ts:
  *
- *   native    per-element @keyframes on the scene's view timeline (animation-timeline: --scene),
+ *   native    per-element @keyframes on the runway's view timeline (animation-timeline: --scene),
  *             each with its own animation-range: contain <from>% contain <to>%
- *   stages    the controller sets data-stage on the scene; each element has an end-state rule
+ *   stages    the controller sets data-stage on the section; each element has an end-state rule
  *             per stage and transitions to it (opacity, translate, scale, stroke-dashoffset)
+ *   static    reduced motion or a viewport under 560 px: nothing pinned, nothing animated, and
+ *             data-stage fixed at the scene's staticStage
+ *
+ * Never drive a scene from a shared custom property that changes with scroll (no @property --t).
  *
  * Generic elements opt in with data-anim="rise|fade|pop|slide|stamp|draw|dim", a stage
  * data-at="1..7" (the stage at which the element reaches its resting state) and optionally
- * --from / --to (native range, in % of the pinned range) and --i (stagger index). A scene
- * that needs a bespoke motion writes its own @keyframes and leaves data-anim off.
+ * --from / --to (native range, in % of the pinned range) and --i (stagger index).
+ *
+ * Bespoke motion (multi-phase elements such as the tangle's threads) leaves data-anim off and
+ * uses the same three hooks. In a scene's scoped <style>, wrap the outside parts in :global():
+ *
+ *   native   :global(html[data-scene-engine='native']) .x {
+ *              animation: a linear both, b linear both; animation-timeline: --scene, --scene;
+ *              animation-range: contain 10% contain 29.5%, contain 30% contain 36%; }
+ *   stages   :global(html:is([data-scene-engine='stages'], [data-scene-engine='static'])
+ *              .scene[data-stage='2']) .x { opacity: 0.02; }
+ *   transition (stages engine only, after the first stage is assigned):
+ *            :global(html[data-scene-engine='stages'][data-scene-ready]) .x { transition: … }
  *
  * Rest state: with no animation and no stage the element shows its end state. That is what
  * no-JS visitors, crawlers and print see. data-anim elements compute their start state from
@@ -43,7 +58,21 @@
   --stage-pad: clamp(3rem, 8vw, 6rem);
   --stage-overflow: visible;
   position: relative;
+  /* The site's section padding would offset the sticky stage from the view timeline and the stage
+     regions, so the stage would pin late and unpin early. Spacing lives on .scene__stage. */
+  padding-block: 0;
+}
+/* The runway: the scrolled distance, the view timeline's subject and the stage regions' box */
+.scene__runway {
+  position: relative;
   height: var(--runway);
+}
+/* Normal-flow content before the runway (the tangle's phone lede). Never pinned or animated. */
+.scene__lead {
+  inline-size: min(1200px, 100%);
+  margin-inline: auto;
+  padding-inline: var(--scene-gutter);
+  padding-block-start: var(--scene-gap);
 }
 .scene[data-tone] {
   background: var(--surface);
@@ -117,9 +146,10 @@
 .scene__copy h2 {
   font-size: clamp(1.75rem, 3vw + 0.5rem, 2.75rem);
 }
-/* The first scene starts under the fixed header, with its call to action inside the first viewport */
-.home > .scene:first-child > .scene__stage {
-  padding-block-start: calc(var(--header-h, 88px) + 1.5rem);
+/* The first scene: <main> already clears the fixed header, so keep its call to action inside the
+   first viewport */
+.home > .scene:first-child .scene__stage {
+  padding-block-start: clamp(1rem, 3vw, 2rem);
   padding-block-end: 2rem;
 }
 .scene__copy p {
@@ -227,25 +257,14 @@
   --e: linear;
 }
 
-/* ===== Stage fallback: --p = 1 while the scene's stage is before the element's data-at ===== */
-@media (prefers-reduced-motion: reduce), (max-height: 559px) {
-  .scene[data-stage='0'] :is([data-at='1'],[data-at='2'],[data-at='3'],[data-at='4'],[data-at='5'],[data-at='6'],[data-at='7']),
-  .scene[data-stage='1'] :is([data-at='2'],[data-at='3'],[data-at='4'],[data-at='5'],[data-at='6'],[data-at='7']),
-  .scene[data-stage='2'] :is([data-at='3'],[data-at='4'],[data-at='5'],[data-at='6'],[data-at='7']),
-  .scene[data-stage='3'] :is([data-at='4'],[data-at='5'],[data-at='6'],[data-at='7']),
-  .scene[data-stage='4'] :is([data-at='5'],[data-at='6'],[data-at='7']),
-  .scene[data-stage='5'] :is([data-at='6'],[data-at='7']),
-  .scene[data-stage='6'] [data-at='7'] {
-    --p: 1;
-  }
-}
-html[data-scene-engine='stages'] .scene[data-stage='0'] :is([data-at='1'],[data-at='2'],[data-at='3'],[data-at='4'],[data-at='5'],[data-at='6'],[data-at='7']),
-html[data-scene-engine='stages'] .scene[data-stage='1'] :is([data-at='2'],[data-at='3'],[data-at='4'],[data-at='5'],[data-at='6'],[data-at='7']),
-html[data-scene-engine='stages'] .scene[data-stage='2'] :is([data-at='3'],[data-at='4'],[data-at='5'],[data-at='6'],[data-at='7']),
-html[data-scene-engine='stages'] .scene[data-stage='3'] :is([data-at='4'],[data-at='5'],[data-at='6'],[data-at='7']),
-html[data-scene-engine='stages'] .scene[data-stage='4'] :is([data-at='5'],[data-at='6'],[data-at='7']),
-html[data-scene-engine='stages'] .scene[data-stage='5'] :is([data-at='6'],[data-at='7']),
-html[data-scene-engine='stages'] .scene[data-stage='6'] [data-at='7'] {
+/* ===== Stage rules (stages and static engines): --p = 1 while the stage is before data-at ===== */
+html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='0'] :is([data-at='1'],[data-at='2'],[data-at='3'],[data-at='4'],[data-at='5'],[data-at='6'],[data-at='7']),
+html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='1'] :is([data-at='2'],[data-at='3'],[data-at='4'],[data-at='5'],[data-at='6'],[data-at='7']),
+html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='2'] :is([data-at='3'],[data-at='4'],[data-at='5'],[data-at='6'],[data-at='7']),
+html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='3'] :is([data-at='4'],[data-at='5'],[data-at='6'],[data-at='7']),
+html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='4'] :is([data-at='5'],[data-at='6'],[data-at='7']),
+html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='5'] :is([data-at='6'],[data-at='7']),
+html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='6'] [data-at='7'] {
   --p: 1;
 }
 /* Transitions start only after the first stage has been assigned, so a reload mid-page does not replay */
@@ -283,43 +302,43 @@ html[data-scene-engine='stages'][data-scene-ready] .scene [data-anim] {
 
 @supports (animation-timeline: view()) and (animation-range: contain 0% contain 100%) {
   @media (prefers-reduced-motion: no-preference) and (min-height: 560px) {
-    html:not([data-scene-engine='stages']) .scene {
+    html:not([data-scene-engine='stages']) .scene > .scene__runway {
       view-timeline: --scene block;
       view-timeline-inset: 0;
     }
-    html:not([data-scene-engine='stages']) .scene[data-pin='pinned'] {
+    html:not([data-scene-engine='stages']) .scene[data-pin='pinned'] > .scene__runway {
       view-timeline-inset: var(--header-h, 88px) 0;
     }
-    html:not([data-scene-engine='stages']) .scene [data-anim] {
+    html:not([data-scene-engine='stages']) .scene__runway [data-anim] {
       animation-timeline: --scene;
       animation-fill-mode: both;
       animation-timing-function: var(--e, linear);
     }
-    html:not([data-scene-engine='stages']) .scene [data-anim='rise'] { animation-name: scene-rise; }
-    html:not([data-scene-engine='stages']) .scene [data-anim='fade'] { animation-name: scene-fade; }
-    html:not([data-scene-engine='stages']) .scene [data-anim='pop'] { animation-name: scene-pop; }
-    html:not([data-scene-engine='stages']) .scene [data-anim='slide'] { animation-name: scene-slide; }
-    html:not([data-scene-engine='stages']) .scene [data-anim='stamp'] { animation-name: scene-stamp; }
-    html:not([data-scene-engine='stages']) .scene [data-anim='draw'] { animation-name: scene-draw; }
-    html:not([data-scene-engine='stages']) .scene [data-anim='dim'] { animation-name: scene-dim; }
-    html:not([data-scene-engine='stages']) .scene[data-pin='pinned'] [data-anim] {
+    html:not([data-scene-engine='stages']) .scene__runway [data-anim='rise'] { animation-name: scene-rise; }
+    html:not([data-scene-engine='stages']) .scene__runway [data-anim='fade'] { animation-name: scene-fade; }
+    html:not([data-scene-engine='stages']) .scene__runway [data-anim='pop'] { animation-name: scene-pop; }
+    html:not([data-scene-engine='stages']) .scene__runway [data-anim='slide'] { animation-name: scene-slide; }
+    html:not([data-scene-engine='stages']) .scene__runway [data-anim='stamp'] { animation-name: scene-stamp; }
+    html:not([data-scene-engine='stages']) .scene__runway [data-anim='draw'] { animation-name: scene-draw; }
+    html:not([data-scene-engine='stages']) .scene__runway [data-anim='dim'] { animation-name: scene-dim; }
+    html:not([data-scene-engine='stages']) .scene[data-pin='pinned'] > .scene__runway [data-anim] {
       animation-range: contain calc(var(--from, 0) * 1%) contain calc(var(--to, 100) * 1%);
     }
-    html:not([data-scene-engine='stages']) .scene[data-pin='entry'] [data-anim] {
+    html:not([data-scene-engine='stages']) .scene[data-pin='entry'] > .scene__runway [data-anim] {
       animation-range: var(--range, entry 10% cover 40%);
     }
   }
   @media (prefers-reduced-motion: no-preference) and (min-height: 560px) and (max-width: 599px) {
-    html:not([data-scene-engine='stages']) .scene[data-pin-phone='pinned'] {
+    html:not([data-scene-engine='stages']) .scene[data-pin-phone='pinned'] > .scene__runway {
       view-timeline-inset: var(--header-h, 88px) 0;
     }
-    html:not([data-scene-engine='stages']) .scene[data-pin-phone='entry'] {
+    html:not([data-scene-engine='stages']) .scene[data-pin-phone='entry'] > .scene__runway {
       view-timeline-inset: 0;
     }
-    html:not([data-scene-engine='stages']) .scene[data-pin-phone='pinned'] [data-anim] {
+    html:not([data-scene-engine='stages']) .scene[data-pin-phone='pinned'] > .scene__runway [data-anim] {
       animation-range: contain calc(var(--from, 0) * 1%) contain calc(var(--to, 100) * 1%);
     }
-    html:not([data-scene-engine='stages']) .scene[data-pin-phone='entry'] [data-anim] {
+    html:not([data-scene-engine='stages']) .scene[data-pin-phone='entry'] > .scene__runway [data-anim] {
       animation-range: var(--range, entry 10% cover 40%);
     }
   }
@@ -339,16 +358,20 @@ html[data-hidden] .scene [data-ambient] {
   will-change: translate, scale, opacity;
 }
 
-/* ===== content-visibility: only on pinned scenes after the second, whose height is explicit ===== */
-.home > .scene[data-pin='pinned']:nth-child(n + 3) {
-  content-visibility: auto;
-  contain-intrinsic-block-size: auto var(--runway-desktop);
+/* ===== content-visibility: only on pinned scenes after the second, whose height is explicit =====
+   Never under reduced motion or on short viewports: runways collapse there, so the runway would be
+   a guessed intrinsic size and the page would shift as each scene renders. */
+@media (prefers-reduced-motion: no-preference) and (min-height: 560px) {
+  .home > .scene[data-pin='pinned']:nth-child(n + 3) > .scene__runway {
+    content-visibility: auto;
+    contain-intrinsic-block-size: auto var(--runway-desktop);
+  }
 }
-@media (max-width: 599px) {
-  .home > .scene[data-pin='pinned']:nth-child(n + 3):not([data-pin-phone='pinned']) {
+@media (prefers-reduced-motion: no-preference) and (min-height: 560px) and (max-width: 599px) {
+  .home > .scene[data-pin='pinned']:nth-child(n + 3):not([data-pin-phone='pinned']) > .scene__runway {
     content-visibility: visible;
   }
-  .home > .scene[data-pin-phone='pinned']:nth-child(n + 3) {
+  .home > .scene[data-pin-phone='pinned']:nth-child(n + 3) > .scene__runway {
     content-visibility: auto;
     contain-intrinsic-block-size: auto var(--runway-phone);
   }
@@ -408,11 +431,10 @@ html[data-hidden] .scene [data-ambient] {
 
 /* ===== Reduced motion, and viewports too short to pin: every scene is its static frame ===== */
 @media (prefers-reduced-motion: reduce), (max-height: 559px) {
-  .home .scene[data-scene] {
+  .home .scene[data-scene] > .scene__runway {
     height: auto;
-    content-visibility: visible;
   }
-  .home .scene[data-scene] > .scene__stage {
+  .home .scene[data-scene] > .scene__runway > .scene__stage {
     position: static;
     block-size: auto;
     overflow: visible;

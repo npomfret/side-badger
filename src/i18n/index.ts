@@ -709,14 +709,15 @@ export const localeFlagUrls: Partial<Record<DropdownLocale, string>> = {
   ),
 } as Partial<Record<DropdownLocale, string>>;
 
-// Helper to get flag URL - checks for custom URL first, then falls back to CDN
-export function getFlagUrl(flagCode: string, locale?: DropdownLocale): string {
-  // If locale provided and has custom flag URL, use that
-  if (locale && localeFlagUrls[locale]) {
-    return localeFlagUrls[locale]!;
-  }
-  // Otherwise use circle-flags CDN
-  return `https://cdn.jsdelivr.net/npm/circle-flags@1.0.1/flags/${flagCode}.svg`;
+/**
+ * Flags are served from `public/flags/` (D24, B34), never from a CDN. Every flag is an SVG
+ * under 2 KB except Iran's Lion and Sun, which is a 48px PNG derived from the old artwork.
+ * `locale` is accepted for compatibility; the file is chosen by flag code alone.
+ */
+const rasterFlags: ReadonlySet<string> = new Set(['ir']);
+
+export function getFlagUrl(flagCode: string, _locale?: DropdownLocale): string {
+  return `/flags/${flagCode}.${rasterFlags.has(flagCode) ? 'png' : 'svg'}`;
 }
 
 // =============================================================================

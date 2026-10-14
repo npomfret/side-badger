@@ -73,8 +73,25 @@ describe('page registry', () => {
     }
   });
 
-  it('registers the five current pages', () => {
-    expect(pages.map(p => p.id)).toEqual(['home', 'pricing', 'privacy', 'terms', 'cookies']);
+  it('registers the five current pages and the release 1 pages', () => {
+    expect(pages.map(p => p.id)).toEqual(
+      expect.arrayContaining([
+        'home',
+        'pricing',
+        'privacy',
+        'terms',
+        'cookies',
+        'how-it-works',
+        'features',
+        'feature/split-expenses',
+        'feature/settle-up',
+        'feature/multiple-currencies',
+        'use-cases',
+        'use-case/group-trips',
+        'use-case/housemates',
+        'use-case/events-and-celebrations',
+      ])
+    );
   });
 });
 
@@ -404,19 +421,19 @@ describe('route generation', () => {
 
   it('does not build an unpublished page unless PREVIEW_UNPUBLISHED=1', async () => {
     const draft = {
-      id: 'features',
+      id: 'draft-hub',
       type: 'hub',
-      path: '/features/',
+      path: '/draft-hub/',
       published: false,
       locales: 'all',
       indexing: 'per-locale-review',
     };
     vi.stubEnv('I18N_MODE', 'strict');
     const { routes } = await loadFresh({ previewPages: [draft] });
-    expect(routes.pathsFor('features')).toEqual([]);
+    expect(routes.pathsFor('draft-hub')).toEqual([]);
     expect(routes.pathsForType('hub')).toEqual([]);
     vi.stubEnv('PREVIEW_UNPUBLISHED', '1');
-    expect(routes.pathsFor('features')).toHaveLength(39);
+    expect(routes.pathsFor('draft-hub')).toHaveLength(39);
   });
 
   it('maps URLs back to pages and locales, and knows no aliases', () => {

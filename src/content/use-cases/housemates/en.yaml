@@ -1,7 +1,7 @@
 # P34b: English housemates use-case page (brief: tasks/seo-site-expansion-plan.md, "Housemates").
 review:
   status: checked
-  checker: P34b-draft
+  checker: P34b-review
   date: 2026-10-15
 claims:
   - groups.group-per-house-trip-event
@@ -37,9 +37,9 @@ scenario:
   body: Make a group for the house, choose the name you want people to see in it, and invite everyone with a link or QR code. The group can be open, where everyone adds and edits, or managed, where new members need an admin's approval and only creators and admins can change expenses, which suits the housemate who keeps the books. Anyone who just wants to watch the numbers can be a viewer, who sees everything and changes nothing. Everyone sees a new expense straight away, so "I'll add it later" has fewer places to hide.
 sections:
   - heading: Rent and bills
-    body: "Rent rarely divides by four, because bedrooms don't. Split it by percentage, so the big room pays more and the cupboard with a window pays less. Percentages have to add up to 100. Bills everyone uses get an equal split, and a housemate who had no part in an expense can be left out of it. When an equal split leaves an odd penny, it goes to one person at random. There are no recurring bills, so each month you copy last month's rent, change the date and carry on. The example below is one month in a house of four: Jo pays £2,000 rent, split 30%, 25%, 25% and 20% by room size, then Kwame pays £120 for energy, Lena £40 for internet and Matt £80 for groceries, each split equally. Jo ends up owed £1,340, and Side Badger suggests three payments, all to Jo."
+    body: "Rent rarely divides by four, because bedrooms don't. Split it by percentage, so the big room pays more and the cupboard with a window pays less. Percentages have to add up to 100. Bills everyone uses get an equal split, and a housemate who had no part in an expense can be left out of it. When an equal split leaves an odd penny, it goes to one person at random. There are no recurring bills, so each month you copy last month's rent, change the date and carry on."
   - heading: The shared shop
-    body: Keep the shared shopping list in the same group as the shopping bills, and tick items off as they reach the trolley. Whoever does the shop adds the receipt total as an expense and splits it equally, or between only the people who will eat the thing. Who keeps buying the oat milk nobody else drinks remains a matter for the house, but at least the expense list will be accurate. The group's permissions decide who can create and edit lists.
+    body: "Keep the shared shopping list in the same group as the shopping bills, and tick items off as they reach the trolley. Whoever does the shop adds the receipt total as an expense and splits it equally, or between only the people who will eat the thing. Who keeps buying the oat milk nobody else drinks remains a matter for the house, but at least the expense list will be accurate. The group's permissions decide who can create and edit lists. Put the rent, the bills and the shop together and you get a month like the one below, in a house of four: Jo pays £2,000 rent, split 30%, 25%, 25% and 20% by room size, then Kwame pays £120 for energy, Lena £40 for internet and Matt £80 for groceries, each split equally. Jo ends up owed £1,340, and Side Badger suggests three payments, all to Jo."
   - heading: Fair ways to split household costs
     items:
       - "**Equally** suits what everyone uses about the same, such as internet, cleaning supplies and the communal shop. It is quick, and nobody needs to argue about the maths."

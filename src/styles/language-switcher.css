@@ -134,7 +134,9 @@
   color: var(--dropdown-text);
   text-decoration: none;
   font-size: var(--text-sm);
-  transition: all 0.15s ease;
+  /* Never `all`: a transition on the inherited `visibility` keeps the options hidden for a
+     frame after the dropdown opens, and a hidden link cannot take focus */
+  transition: background-color 0.15s ease, color 0.15s ease;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }

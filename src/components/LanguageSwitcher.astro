@@ -8,9 +8,11 @@ import {
 interface Props {
   currentLocale: Locale;
   currentPath: string;
+  /** Id of the dropdown; give each instance its own when a page renders more than one */
+  id?: string;
 }
 
-const { currentLocale, currentPath } = Astro.props;
+const { currentLocale, currentPath, id = 'language-dropdown' } = Astro.props;
 const changeLanguageLabel = t('a11y.changeLanguage', currentLocale);
 const searchLanguagesLabel = t('a11y.searchLanguages', currentLocale);
 
@@ -76,7 +78,9 @@ const noResultsText = t('languageSwitcher.noResults', currentLocale);
 ---
 
 <div class="language-switcher" data-current-locale={currentLocale}>
-  <button class="language-switcher-btn" aria-label={changeLanguageLabel} aria-expanded="false" aria-controls="language-dropdown">
+  <!-- No aria-label: the name must include the visible language name (WCAG 2.5.3) -->
+  <button class="language-switcher-btn" aria-expanded="false" aria-controls={id}>
+    <span class="sr-only">{changeLanguageLabel}: </span>
     <img class="current-flag" src={currentFlagUrl} width="20" height="20" alt="" />
     <span class="current-lang">
       <span class="current-name">{currentName}</span>
@@ -86,7 +90,7 @@ const noResultsText = t('languageSwitcher.noResults', currentLocale);
       <path d="m6 9 6 6 6-6"/>
     </svg>
   </button>
-  <div class="language-dropdown" id="language-dropdown">
+  <div class="language-dropdown" id={id}>
     <div class="language-search-wrapper">
       <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <circle cx="11" cy="11" r="8"/>
@@ -140,9 +144,12 @@ const noResultsText = t('languageSwitcher.noResults', currentLocale);
       String(tag || '').toLowerCase()
     );
 
+    // Earlier browser languages rank first; within one, an exact regional match (en-gb) beats a
+    // primary-language match (en)
     const rank = (option: HTMLElement): number => {
       const known = (option.dataset.browserLanguages || '').split(' ');
-      return tags.findIndex(tag => known.includes(tag) || known.includes(tag.split('-')[0]));
+      const index = tags.findIndex(tag => known.includes(tag) || known.includes(tag.split('-')[0]));
+      return index === -1 ? -1 : index * 2 + (known.includes(tags[index]) ? 0 : 1);
     };
 
     const prioritized: { option: HTMLElement; index: number }[] = [];
@@ -213,20 +220,12 @@ const noResultsText = t('languageSwitcher.noResults', currentLocale);
       btn?.setAttribute('aria-expanded', 'true');
       switcher.classList.add('open');
       if (enterList) {
-        // The browser only accepts focus once the opened dropdown is rendered: retry briefly
-        let tries = 0;
-        const enter = () => {
-          const first = visibleOptions()[0];
-          first?.focus();
-          if (first && document.activeElement !== first && isOpen() && ++tries < 15) setTimeout(enter, 30);
-        };
-        enter();
+        // `visibility` flips without a transition on open, so the first option takes focus at once
+        visibleOptions()[0]?.focus();
         return;
       }
       // Focus the search box (but not on touch devices, to avoid the on-screen keyboard)
-      if (searchInput && !('ontouchstart' in window)) {
-        setTimeout(() => searchInput.focus(), 100);
-      }
+      if (searchInput && !('ontouchstart' in window)) searchInput.focus();
     };
 
     const closeDropdown = (returnFocus = false) => {

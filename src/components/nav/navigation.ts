@@ -3,7 +3,10 @@
  * footer, the breadcrumbs and their BreadcrumbList JSON-LD all read the functions here, so the
  * visible links and the structured data cannot drift apart.
  */
-import { t, type Locale, type TranslationKey } from '../../i18n';
+import { load } from 'js-yaml';
+import { features } from '../../data/features';
+import { isPseudoLocale, t, type Locale, type TranslationKey } from '../../i18n';
+import { pseudoize } from '../../i18n/pseudo';
 import { allPages, getPage, type PageDef } from '../../site/pages';
 import { pathsFor } from '../../site/routes';
 import { canonicalFor, localizedPath } from '../../seo/urls';
@@ -34,7 +37,57 @@ export function pageLabel(page: PageDef, locale: Locale, labels: PageLabels = {}
   );
 }
 
+/** The content files by path. Lazy, so only the files a label needs are read, once per build. */
+const contentFiles = import.meta.glob('/src/content/{features,use-cases,pages}/*/*.yaml', {
+  query: '?raw',
+  import: 'default',
+}) as Record<string, () => Promise<string>>;
+
+const CONTENT_DIRS = { featurePages: 'features', useCasePages: 'use-cases', sitePages: 'pages' } as const;
+
+/** The `h1` of a page's content entry in a locale (a pseudo-locale derives it from English), if the entry exists. */
+export async function contentTitle(page: PageDef, locale: Locale): Promise<string | undefined> {
+  if (!page.content) return undefined;
+  const { collection, slug } = page.content;
+  const file = `/src/content/${CONTENT_DIRS[collection]}/${slug}/${isPseudoLocale(locale) ? 'en' : locale}.yaml`;
+  const read = contentFiles[file];
+  if (!read) return undefined;
+  const h1 = (load(await read()) as { h1?: unknown } | null)?.h1;
+  if (typeof h1 !== 'string' || !h1) return undefined;
+  return isPseudoLocale(locale) ? pseudoize(h1, locale) : h1;
+}
+
+const labelCache = new Map<string, Promise<PageLabels>>();
+
+/**
+ * Link text for the pages whose name is their content title (feature and use-case pages, which
+ * have no `nav`): the entry's `h1`. Only pages that are published and built in `locale` get a
+ * label. Cached per locale, so the footer on every page costs one lookup. `readTitle` is a seam
+ * for tests.
+ */
+export function pageLabels(locale: Locale, readTitle = contentTitle): Promise<PageLabels> {
+  const cached = readTitle === contentTitle ? labelCache.get(locale) : undefined;
+  if (cached) return cached;
+  const result = (async () => {
+    const labels: Record<string, string> = {};
+    for (const page of allPages()) {
+      if (!page.content || page.nav || !isLinkable(page, locale)) continue;
+      const title = await readTitle(page, locale);
+      if (title) labels[page.id] = title;
+    }
+    return labels;
+  })();
+  if (readTitle === contentTitle) labelCache.set(locale, result);
+  return result;
+}
+
 const builtLocales = new Map<string, ReadonlySet<Locale>>();
+
+/** Forget what was looked up about routes and labels (tests that change what is built). */
+export function clearNavigationCache(): void {
+  builtLocales.clear();
+  labelCache.clear();
+}
 
 /** Whether the page is published and has a route in this locale (English-first builds skip some). */
 export function isLinkable(page: PageDef, locale: Locale): boolean {
@@ -154,21 +207,31 @@ export function breadcrumbJsonLd(crumbs: readonly Crumb[]): JsonLdNode[] {
   return crumbs.length ? [breadcrumbListNode(crumbs)] : [];
 }
 
+/** The page that is the home of a registry feature id (`src/data/features.ts`), if it has one. */
+function homePageOf(featureId: string): string | undefined {
+  return features.find(feature => feature.id === featureId)?.homePage ?? undefined;
+}
+
 /**
  * Pages related to this one, published only: its registry `related` list, plus the feature pages
- * a use case depicts and the use cases that depict a feature (matched on the `feature/<slug>` id).
+ * a use case depicts and the use cases that depict a feature. Feature ids are not page slugs, so
+ * the match goes through each feature's `homePage`.
  */
 export function relatedPages(pageId: string, locale: Locale): PageDef[] {
   const page = getPage(pageId);
   if (!page) return [];
   const ids = new Set<string>(page.related ?? []);
   if (page.type === 'use-case') {
-    for (const feature of page.features ?? []) ids.add(`feature/${feature}`);
+    for (const feature of page.features ?? []) {
+      const home = homePageOf(feature);
+      if (home) ids.add(home);
+    }
   }
   if (page.type === 'feature') {
-    const slug = page.id.replace(/^feature\//, '');
     for (const other of allPages()) {
-      if (other.type === 'use-case' && other.features?.includes(slug)) ids.add(other.id);
+      if (other.type === 'use-case' && other.features?.some(feature => homePageOf(feature) === page.id)) {
+        ids.add(other.id);
+      }
     }
   }
   ids.delete(page.id);

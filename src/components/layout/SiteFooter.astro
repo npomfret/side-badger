@@ -4,7 +4,7 @@
  * heading is an h2, styled small.
  */
 import { logoFor } from '../nav/logo';
-import { footerGroups } from '../nav/navigation';
+import { footerGroups, pageLabels } from '../nav/navigation';
 import { t, tf, getLocalizedPath, type Locale } from '../../i18n';
 
 interface Props {
@@ -13,7 +13,7 @@ interface Props {
 
 const { locale = 'en' } = Astro.props;
 const logo = logoFor(locale);
-const groups = footerGroups(locale);
+const groups = footerGroups(locale, await pageLabels(locale));
 ---
 
 <footer class="site-footer" role="contentinfo">

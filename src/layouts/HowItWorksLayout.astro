@@ -60,9 +60,18 @@ const others = await relatedCards(pageId, locale);
       </ul>
     </ContentSection>
 
-    {data.example && <WorkedExample example={data.example} locale={locale} />}
-
-    <ExtraSections sections={data.sections} locale={locale} />
+    {data.example && data.exampleAfter ? (
+      <>
+        <ExtraSections sections={data.sections} locale={locale} to={data.exampleAfter} />
+        <WorkedExample example={data.example} locale={locale} />
+        <ExtraSections sections={data.sections} locale={locale} from={data.exampleAfter} />
+      </>
+    ) : (
+      <>
+        {data.example && <WorkedExample example={data.example} locale={locale} />}
+        <ExtraSections sections={data.sections} locale={locale} />
+      </>
+    )}
 
     {data.faq && <FaqList faq={data.faq} locale={locale} />}
 

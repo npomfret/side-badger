@@ -131,6 +131,16 @@ const base = z.object({
   cta,
 });
 
+/**
+ * Where a worked example sits among `sections[]`: the number of sections rendered before it.
+ * Structural, so identical in every locale (content.test.ts). Absent means the layout default.
+ */
+const exampleAfter = z.number().int().min(0).optional();
+/** `exampleAfter` may not exceed the number of sections. */
+const exampleAfterFits = (e: { exampleAfter?: number; sections?: readonly unknown[] }) =>
+  e.exampleAfter === undefined || e.exampleAfter <= (e.sections?.length ?? 0);
+const EXAMPLE_AFTER_MESSAGE = 'exampleAfter cannot exceed the number of sections';
+
 const entry = <T extends z.ZodRawShape>(shape: T) => base.extend(shape).strict();
 
 const headedBody = z.object({ heading: text, body: richText }).strict();
@@ -219,9 +229,11 @@ export const featurePage = entry({
   /** The brief's worked example (split expenses, settle up, multiple currencies) */
   example: workedExample.optional(),
   sections: sections.optional(),
+  /** With an example: sections shown before it. Absent: after `options`, before the sections. */
+  exampleAfter,
   faq,
   useCasesHeading: text,
-});
+}).refine(exampleAfterFits, { message: EXAMPLE_AFTER_MESSAGE, path: ['exampleAfter'] });
 
 /** `useCasePages`: `src/content/use-cases/<slug>/<locale>.yaml` */
 export const useCasePage = entry({
@@ -229,9 +241,11 @@ export const useCasePage = entry({
   /** The rest of the brief's outline, such as "Set up the house" and "When someone moves out" */
   sections: sections.optional(),
   example: workedExample,
+  /** Sections shown before the example. Absent: the example comes straight after the scenario. */
+  exampleAfter,
   featuresHeading: text,
   faq: faq.optional(),
-});
+}).refine(exampleAfterFits, { message: EXAMPLE_AFTER_MESSAGE, path: ['exampleAfter'] });
 
 /** A hub (features index, use-cases index); cards come from the registry's child pages */
 export const hubPage = entry({ intro: richText, cardsHeading: text, sections: sections.optional(), faq: faq.optional() });
@@ -243,8 +257,10 @@ export const howItWorksPage = entry({
   requirements: z.object({ heading: text, items: z.array(richText).min(1) }).strict(),
   example: workedExample.optional(),
   sections: sections.optional(),
+  /** With an example: sections shown before it. Absent: after the requirements. */
+  exampleAfter,
   faq: faq.optional(),
-});
+}).refine(exampleAfterFits, { message: EXAMPLE_AFTER_MESSAGE, path: ['exampleAfter'] });
 
 /**
  * `sitePages`: `src/content/pages/<pageId>/<locale>.yaml` (how it works, the hubs). The page's

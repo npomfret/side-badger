@@ -81,9 +81,17 @@ const others = await relatedCards(pageId, locale, other => other.type !== 'use-c
       </ContentSection>
     )}
 
-    {data.example && <WorkedExample example={data.example} locale={locale} />}
+    {data.example && data.exampleAfter === undefined && <WorkedExample example={data.example} locale={locale} />}
 
-    <ExtraSections sections={data.sections} locale={locale} />
+    {data.example && data.exampleAfter !== undefined ? (
+      <>
+        <ExtraSections sections={data.sections} locale={locale} to={data.exampleAfter} />
+        <WorkedExample example={data.example} locale={locale} />
+        <ExtraSections sections={data.sections} locale={locale} from={data.exampleAfter} />
+      </>
+    ) : (
+      <ExtraSections sections={data.sections} locale={locale} />
+    )}
 
     <LimitsList limits={data.limits} locale={locale} />
 

@@ -49,6 +49,7 @@ export interface Fixture {
   requirements?: { heading: string };
   example?: WorkedExampleData;
   sections?: Section[];
+  exampleAfter?: number;
   faq?: { heading: string; items: { q: string; a: string }[] };
 }
 

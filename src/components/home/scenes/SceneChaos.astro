@@ -9,7 +9,8 @@
  *
  * Visual: three receipts, a spreadsheet with an unfinished total, a sticky note and a phone with
  * the group chat. Each prop sits in a `.chaos__item` wrapper that carries the tidy motion
- * (translate and rotate from the mess to nothing, mirrored through `--dir`); the spreadsheet also
+ * (from the mess, it straightens and slides `--cx` percent of the visual's width towards the
+ * centre line, mirrored through `--dir`, so the props end as a loose stack); the spreadsheet also
  * folds away. Inside, `.chaos__breathe` carries the gentle ambient scale, which the controller
  * stops after 5 s. Rest state (no engine, no JS) is the tidy layout.
  *
@@ -116,6 +117,8 @@ const sheetRows = [
     gap: 0.875rem;
     align-items: start;
     padding-block: 0.75rem;
+    /* cqi units in the tidy slide are percent of this box's width */
+    container-type: inline-size;
   }
   .chaos__item {
     display: grid;
@@ -123,12 +126,13 @@ const sheetRows = [
     translate: 0 0;
     rotate: 0deg;
   }
-  .chaos__item--taxi { grid-area: taxi; }
-  .chaos__item--sheet { grid-area: sheet; transform-origin: 50% 0; }
-  .chaos__item--phone { grid-area: phone; }
+  /* --cx / --cy: where each prop slides as the hero tidies (cqi, towards the centre line) */
+  .chaos__item--taxi { grid-area: taxi; --cx: 18; --cy: 2rem; }
+  .chaos__item--sheet { grid-area: sheet; transform-origin: 50% 0; --cx: -8; }
+  .chaos__item--phone { grid-area: phone; --cx: 18; }
   .chaos__item--sticky { grid-area: sticky; align-self: center; }
   .chaos__item--groceries { grid-area: groceries; }
-  .chaos__item--villa { grid-area: villa; }
+  .chaos__item--villa { grid-area: villa; --cx: -18; }
   .chaos__breathe {
     display: grid;
     min-inline-size: 0;
@@ -161,6 +165,10 @@ const sheetRows = [
     .chaos__item {
       --k: 0.45;
     }
+    /* Two columns: the phone and the receipts slide towards each other */
+    .chaos__item--phone { --cx: 12; }
+    .chaos__item--taxi,
+    .chaos__item--groceries { --cx: -12; --cy: 0px; }
     .chaos__item--sheet,
     .chaos__item--villa {
       display: none;
@@ -171,9 +179,18 @@ const sheetRows = [
     }
   }
 
-  /* The fixed header is taller than --header-h assumes (shell issue, P23), so clear it here */
+  /* Land the copy a --space-lg gap below the fixed header. <main> is already offset by 100px
+     (layout.css), so the stage adds the rest of --header-h. The floors cover the shell until P23
+     makes --header-h the real header bottom (134px desktop, 86px at <= 768px); from then on the
+     calc wins on desktop and the result is the same. If P23 changes main's 100px offset, change
+     it here too. */
   :global(#top .scene__stage) {
-    padding-block-start: 3.5rem;
+    padding-block-start: max(1rem, calc(var(--header-h) + var(--space-lg) - 100px));
+  }
+  @media (min-width: 769px) {
+    :global(#top .scene__stage) {
+      padding-block-start: max(3.5rem, calc(var(--header-h) + var(--space-lg) - 100px));
+    }
   }
 
   /* ===== CJK headings: one glyph is a full em wide, so the global heading size wraps to 6+ lines
@@ -200,6 +217,9 @@ const sheetRows = [
     translate: calc(var(--mx) * var(--k, 1) * var(--dir, 1)) calc(var(--my) * var(--k, 1));
     rotate: var(--mr);
   }
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='1']) .chaos__item {
+    translate: calc(var(--cx, 0) * 1cqi * var(--dir, 1)) var(--cy, 0px);
+  }
   :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='1']) .chaos__item--sheet {
     scale: 1 0.04;
   }
@@ -217,7 +237,7 @@ const sheetRows = [
       rotate: var(--mr);
     }
     to {
-      translate: 0 0;
+      translate: calc(var(--cx, 0) * 1cqi * var(--dir, 1)) var(--cy, 0px);
       rotate: 0deg;
     }
   }

@@ -2,11 +2,11 @@
 /**
  * The app's invite screen, Link tab (`InviteModal` / `ViaLinkContent`): the group name, the invite
  * link with "Copy", and a QR code with "Or scan this code". Illustration built from the app's
- * labels and tokens. The link text is a placeholder address, not a real invite.
+ * labels and tokens. The link has the app's real format with the token elided, so it is no invite.
  */
 import AppFrame from '../../AppFrame.astro';
 import QrCode from './QrCode.astro';
-import { t, type Locale } from '@/i18n';
+import { getAppUrl, t, type Locale } from '@/i18n';
 
 interface Props {
   locale: Locale;
@@ -14,13 +14,16 @@ interface Props {
 }
 
 const { locale, class: className } = Astro.props;
+// The app's real invite link is `{app origin}/join?shareToken=<16 chars>&lang=<locale>`
+// (GroupShareService + InviteModal). Show its shape with the token elided.
+const inviteUrl = `${new URL(getAppUrl()).host}/join?shareToken=…`;
 ---
 
 <AppFrame variant="phone" class={className}>
   <p class="app-title">{t('home.group.name', locale)}</p>
   <div class="app-field">
     <span>{t('home.group.inviteLink', locale)}</span>
-    <bdi class="invite__url" dir="ltr">sidebadger.me/…/7k2x</bdi>
+    <bdi class="invite__url" dir="ltr">{inviteUrl}</bdi>
   </div>
   <div class="invite__copy"><span class="app-button">{t('home.group.copy', locale)}</span></div>
   <div class="invite__qr">

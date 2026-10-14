@@ -1,6 +1,6 @@
 review:
   status: checked
-  checker: P33a-draft
+  checker: P33a-review
   date: 2026-10-15
 claims:
   - expense-splitting.equal-exact-percentage
@@ -46,7 +46,7 @@ options:
   heading: Three ways to split
   items:
     - title: Equally
-      body: The default for dinners, taxis and anything everyone shared evenly. If the total doesn't divide cleanly, the odd penny goes to one person at random, not always the same one.
+      body: The default for dinners, taxis and anything everyone shared evenly. If the total doesn't divide cleanly, the odd penny goes to one person at random, not always the same one. In the taxi below, it's Ana.
     - title: By exact amounts
       body: Type what each person owes. Good for the gift where everyone chose a different price, or the shop where one person's trolley held more than the shared groceries. The amounts must add up to the total.
     - title: By percentage
@@ -101,7 +101,7 @@ sections:
       - Add a **note** for the story behind the number, with some formatting if the story needs it.
       - Use the **comments** to keep the conversation next to the expense it's about, rather than in a chat thread nobody scrolls back through.
   - heading: Copy, edit, and see what changed
-    body: Copy last month's rent instead of typing it again, then change what's different. If a number was wrong, edit the expense; an edit keeps the earlier version, so everyone can see what changed rather than wondering. What anyone is allowed to edit depends on the group's permissions.
+    body: Copy last month's rent instead of typing it again, then change what's different. If a number was wrong, edit the expense. The earlier version is kept and the edit shows in the group's activity, so nobody changes a number quietly. What anyone is allowed to edit depends on the group's permissions.
   - heading: When something looks wrong
     body: A group can turn on expense questions. Anyone included in an expense can raise a question and say why, and the expense stays out of the balances until the person who asked, or an admin, closes it. It is off by default and an admin turns it on for the group. It suits [events and celebrations](page:use-case/events-and-celebrations), where the deposit nobody remembers is suddenly everyone's business.
 limits:
@@ -127,6 +127,6 @@ faq:
     - q: Can bills repeat every month?
       a: No. Copy last month's expense instead, which takes a few seconds.
     - q: Who can edit an expense?
-      a: Whoever the group's permissions allow. An edit keeps the earlier version, so changes are never silent.
+      a: Whoever the group's permissions allow. Every edit shows in the group's activity, so changes are never silent.
     - q: What happens to the balances afterwards?
       a: They update as expenses arrive, and [settle up](page:feature/settle-up) turns them into a short list of payments. If an expense is in another currency, see [multiple currencies](page:feature/multiple-currencies).

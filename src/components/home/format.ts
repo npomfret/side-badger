@@ -35,8 +35,8 @@ export function formatMoney(
   { signed = false, whole = false }: MoneyOptions = {}
 ): string {
   const code = intlCodeFor(locale);
-  const digits = new Intl.NumberFormat(code, { style: 'currency', currency }).resolvedOptions()
-    .maximumFractionDigits;
+  const digits =
+    new Intl.NumberFormat(code, { style: 'currency', currency }).resolvedOptions().maximumFractionDigits ?? 2;
   const fractionDigits = whole ? 0 : digits;
   const value = minor / 10 ** digits;
   return new Intl.NumberFormat(code, {

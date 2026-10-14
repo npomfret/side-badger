@@ -172,11 +172,12 @@ function setUpConfettiTriggers() {
   }
 }
 
-let confettiModule: Promise<typeof import('canvas-confetti')> | undefined;
+const importConfetti = () => import('canvas-confetti').then(module => module.default);
+let confettiPromise: ReturnType<typeof importConfetti> | undefined;
 function fireConfetti(x = 0.5, y = 0.6) {
   if (flatQuery.matches) return;
-  confettiModule ??= import('canvas-confetti');
-  void confettiModule.then(({ default: confetti }) =>
+  confettiPromise ??= importConfetti();
+  void confettiPromise.then(confetti =>
     confetti({ particleCount: 90, spread: 70, origin: { x, y }, disableForReducedMotion: true })
   );
 }

@@ -10,6 +10,7 @@
 import { describe, expect, it } from 'vitest';
 import { load } from 'js-yaml';
 import en from '@/i18n/en';
+import { getI18nMode } from '@/i18n';
 import { allPages, type PageDef } from '@/site/pages';
 import { contentDirs } from '@/content/schemas';
 import type { FeatureRecord, Screenshot, Substitution, UseCaseRecord } from '@/data/types';
@@ -182,6 +183,53 @@ export function registryProblems(r: Registry): string[] {
 // The real registry
 // ---------------------------------------------------------------------------
 
+/**
+ * Legacy English strings that still use a phrase from the substitutions table, keyed by i18n key,
+ * with the phrases each key may keep. Only the old homepage (`HomePage.astro`) and the current
+ * pricing page (`PricingPage.astro`) render them. H11 deletes the homepage keys (`comingSoon.*`,
+ * `features.*.desc`, `hero.*`, `narrative.*`, `whyFree.*`) and P31 rewrites `pricing.*`; each
+ * removes its entries here. The list only shrinks: a stale entry fails, and strict mode (the W4b
+ * gate, D38) applies no exemption and fails while the list is non-empty.
+ */
+const LEGACY_SUBSTITUTION_EXEMPTIONS: Readonly<Record<string, readonly string[]>> = {
+  // H11 (old homepage)
+  'comingSoon.badge': ['coming soon'],
+  'comingSoon.title': ['coming soon'],
+  'features.currency.desc': ['any currency'],
+  'features.fxConversion.desc': ['real-time rates'],
+  'features.groups.desc': ['instant notifications'],
+  'features.invites.desc': ['join instantly'],
+  'features.noTracking.desc': ['no tracking'],
+  'hero.badge': ['100% free and unlimited'],
+  'hero.subtitleStatic': ['free forever'],
+  'narrative.step2.desc': ['any currency'],
+  'narrative.step3.desc': ['pay back'],
+  'whyFree.trackers.desc': ['no tracking'],
+  // P31 (pricing)
+  'pricing.free.feature3': ['add friends'],
+  'pricing.free.feature4': ['no tracking'],
+  'pricing.free.feature6': ['privacy first'],
+  'pricing.free.price': ['free forever'],
+  'pricing.meta.description': ['no tracking', 'coming soon'],
+  'pricing.meta.title': ['free forever'],
+  'pricing.pro.badge': ['coming soon'],
+  'pricing.pro.cta': ['coming soon'],
+  'pricing.pro.price': ['coming soon'],
+};
+
+const STRICT = getI18nMode() === 'strict';
+const enStrings = en as Record<string, string>;
+
+const escapeRegExp = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+/** English interface strings, with each exempt phrase cut from its key's text (none in strict mode). */
+function englishInterfaceStrings(): string[] {
+  return Object.entries(enStrings).map(([key, text]) => {
+    const exempt = STRICT ? [] : (LEGACY_SUBSTITUTION_EXEMPTIONS[key] ?? []);
+    return exempt.reduce((rest, phrase) => rest.split(new RegExp(escapeRegExp(phrase), 'i')).join(' … '), text);
+  });
+}
+
 const pages = allPages();
 const real: Registry = {
   features: arrayExport<FeatureRecord>('features', 'features'),
@@ -190,13 +238,30 @@ const real: Registry = {
   screenshots: arrayExport<Screenshot>('screenshots', 'screenshots', 'shots'),
   substitutions: arrayExport<Substitution>('substitutions', 'substitutions'),
   entries: loadContent(pages),
-  englishStrings: Object.values(en) as string[],
+  englishStrings: englishInterfaceStrings(),
   hasBetaLabel: 'feature.betaLabel' in en,
 };
 
 describe(`registry (${real.features.length} features, ${real.useCases.length} use cases, ${real.pages.length} pages, ${real.entries.length} content entries)`, () => {
   it('has no problems', () => {
     expect(registryProblems(real)).toEqual([]);
+  });
+
+  it('exempts only legacy strings that still use their phrase', () => {
+    const banned = real.substitutions.flatMap(phrases);
+    const stale = Object.entries(LEGACY_SUBSTITUTION_EXEMPTIONS).flatMap(([key, list]) =>
+      list.flatMap(phrase => {
+        if (!(key in enStrings)) return [`${key}: no longer in en.ts`];
+        if (!banned.includes(phrase)) return [`${key}: "${phrase}" is not a phrase to avoid`];
+        if (!enStrings[key].toLowerCase().includes(phrase)) return [`${key}: no longer contains "${phrase}"`];
+        return [];
+      })
+    );
+    expect(stale, 'remove these entries from LEGACY_SUBSTITUTION_EXEMPTIONS').toEqual([]);
+  });
+
+  it.runIf(STRICT)('has no legacy substitution exemptions left in strict mode (D38)', () => {
+    expect(Object.keys(LEGACY_SUBSTITUTION_EXEMPTIONS), 'H11 and P31 rewrite these strings').toEqual([]);
   });
 
   it('gives every registered page a well-formed path and a real parent chain', () => {

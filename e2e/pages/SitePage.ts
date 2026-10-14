@@ -257,7 +257,7 @@ export class SitePage {
 
   async expectFooterLegal(): Promise<void> {
     // The tagline carries a <br />; its first line is what the page shows as text
-    await expect(this.footer, 'the tagline').toContainText(this.string('footer.tagline').split('<br />')[0]);
+    await expect(this.footer, 'the tagline').toContainText(this.string('footer.tagline'));
     await expect(this.footer.getByText(/^©/), 'the copyright line').toContainText(this.string('footer.copyright'));
   }
 

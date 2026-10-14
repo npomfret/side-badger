@@ -5,7 +5,7 @@
  */
 import { logoFor } from '../nav/logo';
 import { footerGroups } from '../nav/navigation';
-import { t, getLocalizedPath, getFormattedDate, type Locale } from '../../i18n';
+import { t, tf, getLocalizedPath, type Locale } from '../../i18n';
 
 interface Props {
   locale?: Locale;
@@ -23,7 +23,7 @@ const groups = footerGroups(locale);
         <a href={getLocalizedPath('/', locale)} class="logo" aria-label={t('a11y.homeLink', locale)}>
           <img src={logo.src} alt={t('a11y.logoAlt', locale)} width={logo.width} height={logo.height} />
         </a>
-        <p class="text-muted text-sm" set:html={t('footer.tagline', locale)} />
+        <p class="text-muted text-sm">{t('footer.tagline', locale)}</p>
       </div>
 
       {groups.map(group => (
@@ -37,7 +37,7 @@ const groups = footerGroups(locale);
     </nav>
 
     <div class="footer-bottom flex items-center justify-between">
-      <p class="text-muted text-sm">&copy; {getFormattedDate(locale)} {t('footer.copyright', locale)}</p>
+      <p class="text-muted text-sm">{tf('footer.copyright', { year: new Date().getFullYear() }, locale)}</p>
       <p class="text-muted text-sm">{t('footer.madeWith', locale)}</p>
     </div>
   </div>

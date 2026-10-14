@@ -681,13 +681,17 @@ describe('i18n content commands', () => {
   it('ignores the test-only path overrides outside Vitest', () => {
     withTree((dir, i18n) => {
       void i18n;
-      const run = spawnSync('node', [script, 'content-hash', 'features/split-expenses'], {
+      // Only the override tree has this entry; the real tree never will
+      const slugDir = path.join(dir, 'features', 'no-such-page-test-only');
+      fs.mkdirSync(slugDir, { recursive: true });
+      fs.writeFileSync(path.join(slugDir, 'en.yaml'), dump(english));
+      const run = spawnSync('node', [script, 'content-hash', 'features/no-such-page-test-only'], {
         encoding: 'utf-8',
         env: { ...process.env, VITEST: '', I18N_CONTENT_DIR: dir },
       });
       // The real tree has no such entry, so the override was not used
       expect(run.status).toBe(1);
-      expect(run.stderr + run.stdout).toMatch(/No English entry at .*src\/content\/features\/split-expenses\/en\.yaml/);
+      expect(run.stderr + run.stdout).toMatch(/No English entry at .*src\/content\/features\/no-such-page-test-only\/en\.yaml/);
     });
   });
 });

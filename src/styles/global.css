@@ -1,10 +1,83 @@
+@import './tokens.css';
+
 /*
  * Side Badger Global Styles
- * Forest theme with misty aurora backgrounds and glassmorphism
+ * Fonts are self-hosted (restructure D24): no third-party requests. Latin, Cyrillic and Greek
+ * faces live here and download by unicode-range. The extra-range faces have their own family
+ * names and tokens.css lists them only for locales that need them, so the language switcher's
+ * native names on an English page do not pull in Greek, Cyrillic or Latin Extended files. Arabic-script and Indic faces are separate
+ * stylesheets in public/fonts/, linked by BaseLayout on their own locales only. CJK locales
+ * use system stacks.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+Arabic:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-@import './tokens.css';
+/* ===== FONTS ===== */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('/fonts/inter-latin-wght-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Inter Latin Ext';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('/fonts/inter-latin-ext-wght-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Inter Cyrillic';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('/fonts/inter-cyrillic-wght-normal.woff2') format('woff2');
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+@font-face {
+  font-family: 'Inter Greek';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('/fonts/inter-greek-wght-normal.woff2') format('woff2');
+  unicode-range: U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url('/fonts/space-grotesk-latin-600-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: 'Space Grotesk Ext';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url('/fonts/space-grotesk-latin-ext-600-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+/* Metric-adjusted fallbacks so the swap to the webfont does not shift layout */
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  size-adjust: 107.4%;
+  ascent-override: 90.2%;
+  descent-override: 22.5%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Space Grotesk Fallback';
+  src: local('Arial');
+  size-adjust: 104%;
+  ascent-override: 94.6%;
+  descent-override: 28%;
+  line-gap-override: 0%;
+}
+
 
 /* ===== RESET & BASE ===== */
 *, *::before, *::after {
@@ -20,8 +93,8 @@
   left: 50%;
   transform: translateX(-50%);
   padding: var(--space-sm) var(--space-md);
-  background: var(--accent-primary);
-  color: var(--bg-void);
+  background: var(--accent-ink);
+  color: #fff;
   font-weight: 600;
   text-decoration: none;
   border-radius: var(--radius-md);
@@ -50,7 +123,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
+  scroll-padding-top: calc(var(--header-h) + var(--space-md));
 }
 
 body {
@@ -64,17 +138,17 @@ body {
     radial-gradient(circle at 50% 90%, rgba(220, 252, 231, 0.6), transparent 65%),
     linear-gradient(180deg, #f7fef9 0%, #e6f9ed 55%, #d4f2e3 100%);
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* ===== BACKGROUND ===== */
-/* Dynamic canopy handled by CanopyBloom component */
+/* Ambient effects were retired (D25) */
 
 /* ===== TYPOGRAPHY ===== */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 1.1;
+  font-weight: 600;
+  line-height: var(--heading-line-height, 1.1);
   letter-spacing: -0.02em;
   color: var(--text-heading, var(--text-primary));
 }
@@ -98,7 +172,7 @@ a {
 }
 
 a:hover {
-  color: var(--accent-primary);
+  color: var(--accent-ink-hover);
 }
 
 /* ===== GRADIENT TEXT UTILITY ===== */
@@ -123,7 +197,7 @@ a:hover {
 /* Hero title animation */
 #hero-title {
   position: relative;
-  line-height: 1.05;
+  line-height: var(--heading-line-height, 1.05);
   color: var(--text-heading, var(--text-primary));
 }
 
@@ -234,13 +308,17 @@ a:hover {
   transition-duration: var(--duration-instant);
 }
 
-.btn-primary {
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
-  color: white;
+.btn-primary,
+.btn.btn-primary {
+  background: var(--accent-ink);
+  color: #fff;
   box-shadow: var(--shadow-glow-sm);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn.btn-primary:hover {
+  background: var(--accent-ink-hover);
+  color: #fff;
   transform: translateY(-2px) scale(1.01);
   box-shadow: var(--shadow-glow-md);
 }
@@ -287,7 +365,7 @@ section {
 
 /* ===== SELECTION ===== */
 ::selection {
-  background: var(--accent-primary);
+  background: var(--accent-ink);
   color: white;
 }
 
@@ -381,11 +459,8 @@ section {
   }
 }
 
-/* ===== LANGUAGE-SPECIFIC FONT STYLES ===== */
-body:lang(ja) {
-  font-family: 'Noto Sans JP', var(--font-sans);
-}
-
-body:lang(ar) {
-  font-family: 'Noto Sans Arabic', var(--font-sans);
+/* ===== LANGUAGE-SPECIFIC TYPOGRAPHY ===== */
+/* Font families come from html[data-font-script] in tokens.css. */
+:lang(ja) {
+  word-break: auto-phrase;
 }

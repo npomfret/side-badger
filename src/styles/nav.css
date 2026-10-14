@@ -4,11 +4,20 @@
  */
 
 /* ===== HEADER LINKS (desktop) ===== */
+/*
+ * The links show from 80rem up. With all four pages published, a header of 1200px holds the
+ * `xx-long` labels only with this compact padding and no wrapping (measured: 1192px needed), and
+ * English needs about 990px, so below 80rem the links move into the menu.
+ */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: var(--space-xs);
+  gap: 0;
   list-style: none;
+}
+
+.nav-links a {
+  white-space: nowrap;
 }
 
 .nav-links a,
@@ -16,7 +25,7 @@
   display: inline-flex;
   align-items: center;
   min-block-size: 2.75rem;
-  padding-inline: var(--space-md);
+  padding-inline: 0.625rem;
   border-radius: var(--radius-md);
   color: var(--text-primary);
   font-weight: 500;
@@ -104,10 +113,11 @@
   position: fixed;
   inset: auto;
   inset-block-start: var(--header-h);
-  inset-inline: var(--space-md);
+  inset-inline-start: auto;
+  inset-inline-end: var(--space-md);
   margin: 0;
   margin-block-start: var(--space-sm);
-  inline-size: auto;
+  inline-size: min(24rem, calc(100% - var(--space-md) * 2));
   max-block-size: calc(100dvh - var(--header-h) - var(--space-lg));
   overflow-y: auto;
   padding: var(--space-md);
@@ -151,7 +161,7 @@
   background: rgba(47, 107, 46, 0.1);
 }
 
-@media (max-width: 63.99rem) {
+@media (max-width: 79.99rem) {
   .header-nav {
     display: none;
   }
@@ -166,7 +176,7 @@
 }
 
 /* Past the breakpoint the menu is never shown, even if it was left open while resizing */
-@media (min-width: 64rem) {
+@media (min-width: 80rem) {
   .mobile-menu:popover-open {
     display: none;
   }

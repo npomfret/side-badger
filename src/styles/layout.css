@@ -6,7 +6,8 @@
 /*
  * --header-h is the header's real bottom edge: its top offset plus its fixed height (restructure
  * 5.10). The homepage's pinned scenes and `scroll-padding-top` read it, so both parts are set
- * here, per breakpoint, in static CSS with no script. Below 64rem the links move into the menu.
+ * here, per breakpoint, in static CSS with no script. Below 64rem the bar is the compact phone
+ * and tablet one; the links move into the menu below 80rem (nav.css).
  */
 :root {
   --header-top: var(--space-md);
@@ -41,7 +42,7 @@
 .header-bar {
   display: flex;
   align-items: center;
-  gap: var(--space-lg);
+  gap: var(--space-md);
   height: 100%;
   overflow: visible;
 }
@@ -72,7 +73,7 @@
 }
 
 .site-header .logo img {
-  height: 3.25rem;
+  height: 3rem;
   width: auto;
 }
 
@@ -198,7 +199,13 @@ main {
     height: 2.5rem;
   }
 
-  /* The launch link keeps its icon; the text stays available to screen readers */
+  #cursor-glow {
+    display: none;
+  }
+}
+
+/* Phones: the launch link keeps its icon; the text stays available to screen readers */
+@media (max-width: 39.99rem) {
   .btn-launch.btn {
     padding: var(--space-sm);
   }
@@ -216,9 +223,16 @@ main {
   .launch-cta__icon {
     display: block;
   }
+}
 
-  #cursor-glow {
-    display: none;
+/* The narrowest phones (320px): a smaller logo and gutter keep the Menu button inside the bar */
+@media (max-width: 22.49rem) {
+  .site-header .container {
+    padding-inline: var(--space-sm);
+  }
+
+  .site-header .logo img {
+    height: 2rem;
   }
 }
 

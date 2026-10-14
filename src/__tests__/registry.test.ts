@@ -109,7 +109,10 @@ export function registryProblems(r: Registry): string[] {
     for (const id of f.useCases) if (!useCaseIds.has(id)) problems.push(`feature "${f.id}": use case "${id}" is unknown`);
     for (const proof of f.proof) {
       if (proof.kind === 'screenshot' && !shotIds.has(proof.ref)) problems.push(`feature "${f.id}": screenshot "${proof.ref}" is not in screenshots.ts`);
-      if (proof.kind === 'worked-example' && !useCaseIds.has(proof.ref)) problems.push(`feature "${f.id}": worked example "${proof.ref}" is not a use case`);
+      // Worked examples live on use-case pages and on some feature pages and how it works (site plan briefs)
+      if (proof.kind === 'worked-example' && !useCaseIds.has(proof.ref) && !pageIds.has(proof.ref)) {
+        problems.push(`feature "${f.id}": worked example "${proof.ref}" is neither a use case nor a page`);
+      }
     }
   }
   for (const u of r.useCases) {
@@ -310,6 +313,11 @@ describe('registry rules (fixtures)', () => {
     ['a phrase to avoid in an approved claim', { features: [{ ...split, claims: [{ id: 'split.equal', text: 'Zero tracking.' }] }] }, /claim "split.equal"/],
   ])('reports %s', (_name, patch, message) => {
     expect(registryProblems({ ...good, ...patch }).join('\n')).toMatch(message);
+  });
+
+  it('accepts a worked example on a page as well as on a use case', () => {
+    const proof = [{ kind: 'worked-example' as const, ref: splitPage.id }, { kind: 'worked-example' as const, ref: trip.id }];
+    expect(registryProblems({ ...good, features: [{ ...split, proof }] })).toEqual([]);
   });
 
   it('allows a beta feature that has an available sibling and a label', () => {

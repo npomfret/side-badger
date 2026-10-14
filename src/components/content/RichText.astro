@@ -3,9 +3,13 @@
  * Renders a content `richText` field (restructure 3.3, D11, D12): inline Markdown only, so no
  * block elements ever appear inside a heading, a button label or a card.
  *
- * `[text](page:<pageId>)` resolves to the page's localized path through `localizedPath`. A page
- * id that is not registered, or not built (unpublished), throws, which fails the build, so a
- * link can never dangle. `[text](https://app.sidebadger.me/…)` is the only external form.
+ * The text is validated first with the same marked lexer and options (`richTextProblem`), so only
+ * text, bold, italic, escapes and `[text](page:<pageId>)` links reach the renderer; marked escapes
+ * the text. A page link resolves to the page's path in this locale through `localizedPath`. A page
+ * id that is not registered, not built, or not built in this locale (English-first mode skips
+ * untranslated pages) throws, which fails the build, so a link can never dangle.
+ *
+ * App links are not rich text: use `LaunchAppCta`, which goes through the launch counter (D28).
  *
  * Usage: <RichText text={entry.data.lead} locale={locale} />
  * Pass `as="p"` to wrap the result in a paragraph; the default is a bare `<span>`.
@@ -13,8 +17,9 @@
 import { Marked, type Tokens } from 'marked';
 import type { Locale } from '../../i18n';
 import { localizedPath } from '../../seo/urls';
-import { builtPages, getPage } from '../../site/pages';
-import { PAGE_LINK_PREFIX, richTextProblem } from '../../content/schemas';
+import { getPage } from '../../site/pages';
+import { pathsFor } from '../../site/routes';
+import { PAGE_LINK_PREFIX, RICH_TEXT_MARKED_OPTIONS, richTextProblem } from '../../content/schemas';
 
 interface Props {
   text: string;
@@ -29,19 +34,18 @@ const problem = richTextProblem(text);
 if (problem) throw new Error(`RichText: the text ${problem}: "${text.slice(0, 80)}"`);
 
 const marked = new Marked({
-  gfm: false,
+  ...RICH_TEXT_MARKED_OPTIONS,
   renderer: {
     link({ href, tokens }: Tokens.Link) {
       const label = this.parser.parseInline(tokens);
-      if (href.startsWith(PAGE_LINK_PREFIX)) {
-        const id = href.slice(PAGE_LINK_PREFIX.length);
-        if (!getPage(id)) throw new Error(`RichText: unknown page id "${id}" in link "${href}"`);
-        if (!builtPages().some(page => page.id === id)) {
-          throw new Error(`RichText: page "${id}" is not published, so "${href}" would dangle`);
-        }
-        return `<a href="${localizedPath(id, locale)}">${label}</a>`;
+      // richTextProblem allows no other link form; this guards against the two drifting apart
+      if (!href.startsWith(PAGE_LINK_PREFIX)) throw new Error(`RichText: link "${href}" is not a page link`);
+      const id = href.slice(PAGE_LINK_PREFIX.length);
+      if (!getPage(id)) throw new Error(`RichText: unknown page id "${id}" in link "${href}"`);
+      if (!pathsFor(id).some(path => path.props.locale === locale)) {
+        throw new Error(`RichText: page "${id}" is not built in "${locale}", so "${href}" would dangle`);
       }
-      return `<a href="${href}" rel="noopener">${label}</a>`;
+      return `<a href="${localizedPath(id, locale)}">${label}</a>`;
     },
   },
 });

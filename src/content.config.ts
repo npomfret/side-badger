@@ -19,10 +19,12 @@ const policies = defineCollection({
 // Long-form localized copy (D11): one YAML file per page per locale. Entry ids are
 // `<slug>/<locale>`, e.g. `split-expenses/fr`. The schemas live in ./content/schemas so the
 // Vitest content tests validate exactly what the build does.
+// The id keeps the locale's case (`split-expenses/nl-BE`); the default id would lowercase it.
 // A directory that has no entries yet is skipped quietly instead of warning on every build.
+const entryId = ({ entry }: { entry: string }) => entry.replace(/\.yaml$/, '');
 const yaml = (dir: string) =>
   existsSync(`./src/content/${dir}`)
-    ? glob({ pattern: '*/*.yaml', base: `./src/content/${dir}` })
+    ? glob({ pattern: '*/*.yaml', base: `./src/content/${dir}`, generateId: entryId })
     : glob({ pattern: 'no-entries-yet/*.yaml', base: './src/content' });
 
 const featurePages = defineCollection({ loader: yaml('features'), schema: contentSchemas.featurePages });

@@ -23,9 +23,10 @@ import {
   featurePage,
   richTextPageIds,
   richTextProblem,
+  sitePageByType,
   type ContentCollection,
 } from '@/content/schemas';
-import { computeExample } from '@/lib/settle';
+import { computeExample, exampleCurrencies, type ExampleData, type ExampleResult } from '@/lib/settle';
 
 const ROOT = path.join(__dirname, '..', '..');
 const CONTENT_DIR = path.join(ROOT, 'src', 'content');
@@ -124,9 +125,18 @@ export function pageLinks(entry: Record<string, unknown>): { path: string; id: s
 export function exampleProblems(english: Record<string, unknown>, other: Record<string, unknown>): string[] {
   if (!english.example || !other.example) return [];
   try {
-    const a = computeExample(english.example as never);
-    const b = computeExample(other.example as never);
-    return a.transfers.length === b.transfers.length ? [] : [`${a.transfers.length} transfers in English, ${b.transfers.length} here`];
+    const en = english.example as ExampleData;
+    const ot = other.example as ExampleData;
+    const a = computeExample(en);
+    const b = computeExample(ot);
+    const problems: string[] = [];
+    // Examples about conversion keep their currencies (and illustrative rates) in every locale
+    if (en.conversion && canonicalJson([exampleCurrencies(en), en.conversion]) !== canonicalJson([exampleCurrencies(ot), ot.conversion])) {
+      problems.push('a conversion example must keep the English currencies and rates');
+    }
+    const counts = (r: ExampleResult) => [r.transfers.length, ...r.separate.map(l => l.transfers.length)].join('/');
+    if (counts(a) !== counts(b)) problems.push(`${counts(a)} transfers in English, ${counts(b)} here`);
+    return problems;
   } catch (error) {
     return [(error as Error).message];
   }
@@ -190,6 +200,17 @@ describe(`content entries (${getI18nMode()} mode, ${entries.length} entries, ${a
     const failures = allEntries.flatMap(e => {
       const result = contentSchemas[e.collection].safeParse(e.data);
       return result.success ? [] : [`${e.file}: ${result.error.issues.map(i => `${i.path.join('.')} ${i.message}`).join('; ')}`];
+    });
+    expect(failures).toEqual([]);
+  });
+
+  it('gives each site page the shape of its registry type (hub or how it works)', () => {
+    const failures = entries.flatMap(e => {
+      if (e.collection !== 'sitePages') return [];
+      const page = contentPages.find(p => p.content!.collection === 'sitePages' && p.content!.slug === e.slug);
+      const schema = page && sitePageByType[page.type as keyof typeof sitePageByType];
+      if (!schema) return [`${e.file}: page type "${page?.type}" has no site page shape`];
+      return schema.safeParse(e.data).success ? [] : [`${e.file}: is not a ${page!.type} entry`];
     });
     expect(failures).toEqual([]);
   });
@@ -317,7 +338,7 @@ describe(`content entries (${getI18nMode()} mode, ${entries.length} entries, ${a
 // The rules themselves, against fixtures (these also run with no content)
 // ---------------------------------------------------------------------------
 
-const cta = { heading: 'Ready?', body: 'Open the [app](https://app.sidebadger.me/).', button: 'Open the app' };
+const cta = { heading: 'Ready?', body: 'It is free, and *always* will be.', button: 'Create a free account' };
 const english = {
   review: { status: 'reviewed', reviewer: 'nick', date: '2026-10-01' },
   claims: ['balances.fewer-payments'],
@@ -348,7 +369,7 @@ const french = {
   meta: { title: 'Partager les dépenses', description: 'Partagez toute dépense.' },
   h1: 'Partager les dépenses',
   lead: 'Partagez une **note** et voyez les [tarifs](page:pricing).',
-  cta: { heading: 'Prêt ?', body: "Ouvrez l'[appli](https://app.sidebadger.me/).", button: "Ouvrir l'appli" },
+  cta: { heading: 'Prêt ?', body: "C'est gratuit, et *toujours*.", button: 'Créer un compte gratuit' },
   problem: { heading: 'Le problème', body: 'Les notes pèsent.' },
   workflow: {
     heading: 'Comment ça marche',
@@ -391,11 +412,35 @@ describe('content rules (fixtures)', () => {
     expect(featurePage.safeParse(entry).success).toBe(false);
   });
 
-  it('allows page links and app links in rich text', () => {
-    expect(richTextProblem('See [pricing](page:pricing) and [the app](https://app.sidebadger.me/register).')).toBeUndefined();
+  it('allows bold, italic, escapes and page links in rich text', () => {
+    expect(richTextProblem('See **[pricing](page:pricing)** and _more_ \\* 5 < 6 & "quotes".')).toBeUndefined();
     expect(richTextProblem('Nested [page](page:feature/split-expenses) link.')).toBeUndefined();
-    expect(richTextProblem('A [bad](page:Not Valid) link.')).toMatch(/malformed page link/);
-    expect(richTextProblem('A [bad](http://app.sidebadger.me/) link.')).toMatch(/only page:/);
+    expect(richTextProblem('One line\nwrapped onto two.')).toBeUndefined();
+    expect(richTextPageIds('[a](page:pricing) and **[b](page:feature/settle-up)**')).toEqual(['pricing', 'feature/settle-up']);
+  });
+
+  it.each([
+    ['an app link (app links go through LaunchAppCta and /go/, D28)', '[the app](https://app.sidebadger.me/register)', /LaunchAppCta/],
+    ['an attribute break-out', '[x](https://app.sidebadger.me/"onclick="alert(1))', /only \[text\]\(page:/],
+    ['a javascript: link', '[x](javascript:alert(1))', /only \[text\]\(page:/],
+    ['a javascript: link in angle brackets', '[x](<javascript:alert(1)>)', /HTML|only \[text\]/],
+    ['an autolink', 'see <https://example.com>', /HTML/],
+    ['a data: link', '[x](data:text/html,hi)', /only \[text\]\(page:/],
+    ['a protocol-relative link', '[x](//evil.example)', /only \[text\]\(page:/],
+    ['a page link with a title', '[x](page:pricing "t")', /link title/],
+    ['a malformed page id', 'A [bad](page:Not Valid) link.', /malformed/],
+    ['an upper-case page id', 'A [bad](page:Pricing) link.', /malformed page link/],
+    ['a page link with a query', '[x](page:pricing?x=1)', /malformed page link/],
+    ['a processing instruction', 'x <?php echo 1 ?> y', /HTML/],
+    ['an HTML comment', 'x <!-- y --> z', /HTML/],
+    ['an escaped tag', 'a \\<script> b', /HTML/],
+    ['inline code', 'run `rm -rf`', /code/],
+    ['a hard line break', 'one  \ntwo', /line break/],
+    ['an image', '![alt](page:pricing)', /image/],
+    ['a bare URL', 'go to https://example.com now', /bare URL/],
+    ['a reference link', '[x][ref]\n\n[ref]: javascript:alert(1)', /paragraph|malformed|block/],
+  ])('rejects %s in rich text', (_name, text, reason) => {
+    expect(richTextProblem(text)).toMatch(reason);
   });
 
   it('hashes the English entry without review and translatedFrom', () => {
@@ -445,6 +490,30 @@ describe('content rules (fixtures)', () => {
     });
     expect(exampleProblems({ example: example([90, 45, 15]) }, { example: example([900, 450, 150], 'JPY') })).toEqual([]);
     expect(exampleProblems({ example: example([90, 45, 15]) }, { example: example([30, 30, 30]) })[0]).toMatch(/transfers/);
+  });
+
+  it('keeps the currencies and rates of a conversion example, and its payment counts in both views', () => {
+    const trip = (rate: number, villa = 900, currency = 'EUR', flights = 480) => ({
+      currency: 'GBP',
+      conversion: { rates: { [currency]: rate } },
+      people: [{ id: 'a', name: 'A' }, { id: 'b', name: 'B' }, { id: 'c', name: 'C' }],
+      expenses: [
+        { label: 'Flights', payer: 'a', amount: flights, split: { method: 'equal' as const } },
+        { label: 'Villa', payer: 'b', amount: villa, currency, split: { method: 'equal' as const } },
+      ],
+    });
+    expect(exampleProblems({ example: trip(0.85) }, { example: trip(0.85) })).toEqual([]);
+    expect(exampleProblems({ example: trip(0.85) }, { example: trip(0.9) }).join()).toMatch(/currencies and rates/);
+    expect(exampleProblems({ example: trip(0.85) }, { example: trip(0.85, 900, 'USD') }).join()).toMatch(/currencies and rates/);
+    // Flights £510 and villa €1,200 leave A square once converted: one payment instead of two
+    expect(exampleProblems({ example: trip(0.85) }, { example: trip(0.85, 1200, 'EUR', 510) }).join()).toMatch(/2\/2\/2 transfers in English, 1\/2\/2/);
+  });
+
+  it('checks a site page against the shape its registry type needs', () => {
+    const hub = { ...english, intro: 'All the features.', cardsHeading: 'Features' };
+    for (const key of ['problem', 'workflow', 'options', 'limits', 'faq', 'useCasesHeading']) delete (hub as Record<string, unknown>)[key];
+    expect(sitePageByType.hub.safeParse(hub).success).toBe(true);
+    expect(sitePageByType['how-it-works'].safeParse(hub).success).toBe(false);
   });
 });
 
@@ -566,6 +635,54 @@ describe('i18n content commands', () => {
   it('backcheck --pass refuses without a checker id', () => {
     withTree((_dir, i18n) => {
       expect(i18n('backcheck', 'fr', 'features/split-expenses', '--pass').status).toBe(1);
+    });
+  });
+
+  it('refuses locales and entries that are not real, so nothing outside the content tree is written', () => {
+    withTree((dir, i18n) => {
+      // A file the commands must never touch, one level above the content tree
+      const outside = path.join(dir, '..', `${path.basename(dir)}-victim.yaml`);
+      fs.writeFileSync(outside, 'translatedFrom: "00000000"\n');
+      try {
+        const relative = `../../../${path.basename(outside, '.yaml')}`;
+        const attempts = [
+          ['content-lock', relative, 'features/split-expenses'],
+          ['content-lock', 'xx', 'features/split-expenses'],
+          ['content-lock', 'fr', 'features/..'],
+          ['content-lock', 'fr', 'features/../../x'],
+          ['content-hash', 'features/..'],
+          ['backcheck', relative, 'features/split-expenses', '--pass', '--checker', 'a'],
+          ['backcheck', 'fr', '../features/split-expenses', '--pass', '--checker', 'a'],
+        ];
+        for (const args of attempts) expect(i18n(...args).status, args.join(' ')).toBe(1);
+        expect(fs.readFileSync(outside, 'utf-8')).toBe('translatedFrom: "00000000"\n');
+      } finally {
+        fs.rmSync(outside, { force: true });
+      }
+    });
+  });
+
+  it('writes the backcheck packet to the system temp directory by default, not the repository', () => {
+    withTree((_dir, i18n) => {
+      const run = i18n('backcheck', 'fr', 'features/split-expenses');
+      expect(run.status, run.stderr).toBe(0);
+      const packet = path.join(os.tmpdir(), 'side-badger-backcheck', 'fr-features-split-expenses.md');
+      expect(fs.existsSync(packet)).toBe(true);
+      expect(fs.existsSync(path.join(ROOT, 'tmp', 'backcheck'))).toBe(false);
+      fs.rmSync(packet, { force: true });
+    });
+  });
+
+  it('ignores the test-only path overrides outside Vitest', () => {
+    withTree((dir, i18n) => {
+      void i18n;
+      const run = spawnSync('node', [script, 'content-hash', 'features/split-expenses'], {
+        encoding: 'utf-8',
+        env: { ...process.env, VITEST: '', I18N_CONTENT_DIR: dir },
+      });
+      // The real tree has no such entry, so the override was not used
+      expect(run.status).toBe(1);
+      expect(run.stderr + run.stdout).toMatch(/No English entry at .*src\/content\/features\/split-expenses\/en\.yaml/);
     });
   });
 });

@@ -42,6 +42,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
 import crypto from 'crypto';
+import os from 'os';
 import { load as loadYaml } from 'js-yaml';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -171,7 +172,10 @@ function writeTranslationFile(locale, translations, modifiedKey = null) {
 // ============================================================================
 
 const LOCKS_DIR = path.join(I18N_DIR, 'locks');
-const PENDING_DIR = process.env.I18N_PENDING_DIR || path.join(I18N_DIR, 'pending');
+// Scratch trees for the Vitest content tests only: outside Vitest these variables are ignored, so a
+// stray environment variable can never point the real gate at other files
+const TEST_ENV = process.env.VITEST ? process.env : {};
+const PENDING_DIR = TEST_ENV.I18N_PENDING_DIR || path.join(I18N_DIR, 'pending');
 const PAGE_STATUSES = ['machine', 'checked', 'reviewed', 'legacy'];
 
 function getMode() {
@@ -1560,9 +1564,10 @@ function parseTranslationLine(line) {
 // Long-form content (src/content/<dir>/<slug>/<locale>.yaml) - restructure 3.6, 3.7, D14, D31
 // ============================================================================
 
-// The directory and page registry can be redirected for tests
-const CONTENT_DIR = process.env.I18N_CONTENT_DIR || path.join(SRC_DIR, 'content');
-const PAGES_FILE = process.env.I18N_PAGES_FILE || path.join(SRC_DIR, 'site', 'pages.ts');
+// The directory and page registry can be redirected for the Vitest content tests (TEST_ENV)
+const CONTENT_DIR = path.resolve(TEST_ENV.I18N_CONTENT_DIR || path.join(SRC_DIR, 'content'));
+const PAGES_FILE = TEST_ENV.I18N_PAGES_FILE || path.join(SRC_DIR, 'site', 'pages.ts');
+const SLUG = /^[a-z0-9][a-z0-9-]*$/;
 const CONTENT_DIRS = {
   features: 'featurePages',
   'use-cases': 'useCasePages',
@@ -1593,8 +1598,17 @@ function contentHash(english) {
   return hashValue(canonicalJson(rest));
 }
 
+/**
+ * The YAML file of an entry. Every part is checked, so no argument can reach outside
+ * src/content/<dir>/<slug>/ (no `..`, no separators, only real locales).
+ */
 function contentFile(dir, slug, locale) {
-  return path.join(CONTENT_DIR, dir, slug, `${locale}.yaml`);
+  if (!(dir in CONTENT_DIRS)) throw new Error(`Unknown content directory "${dir}"`);
+  if (!SLUG.test(slug) && slug !== '__preview__') throw new Error(`Invalid slug "${slug}"`);
+  if (!getLocaleFiles().some(f => f.locale === locale)) throw new Error(`Unknown locale "${locale}"`);
+  const file = path.resolve(CONTENT_DIR, dir, slug, `${locale}.yaml`);
+  if (!file.startsWith(CONTENT_DIR + path.sep)) throw new Error(`Refusing a path outside ${CONTENT_DIR}: ${file}`);
+  return file;
 }
 
 function readContent(dir, slug, locale) {
@@ -1609,7 +1623,7 @@ function listContentSlugs() {
     const base = path.join(CONTENT_DIR, dir);
     if (!fs.existsSync(base)) continue;
     for (const slug of fs.readdirSync(base).sort()) {
-      if (slug === '__preview__' || !fs.statSync(path.join(base, slug)).isDirectory()) continue;
+      if (slug === '__preview__' || !SLUG.test(slug) || !fs.statSync(path.join(base, slug)).isDirectory()) continue;
       const entryLocales = fs.readdirSync(path.join(base, slug))
         .filter(f => f.endsWith('.yaml'))
         .map(f => f.replace(/\.yaml$/, ''))
@@ -1622,7 +1636,7 @@ function listContentSlugs() {
 
 /** Parse `<dir>/<slug>` and check English exists. */
 function parseEntryArg(arg) {
-  const match = /^([a-z-]+)\/([^/]+)$/.exec(arg || '');
+  const match = /^([a-z-]+)\/([a-z0-9][a-z0-9-]*)$/.exec(arg || '');
   if (!match || !(match[1] in CONTENT_DIRS)) {
     throw new Error(`Give an entry as <dir>/<slug>, with dir one of ${Object.keys(CONTENT_DIRS).join(', ')} (got "${arg}")`);
   }
@@ -1687,7 +1701,7 @@ function contentProblems(mode, pending, targetLocale) {
         rows.push({ locale, kind: 'extra', entry });
         continue;
       }
-      const data = readContent(dir, slug, locale) ?? {};
+      const data = loadYaml(fs.readFileSync(path.join(CONTENT_DIR, dir, slug, `${locale}.yaml`), 'utf-8')) ?? {};
       if (!data.translatedFrom) rows.push({ locale, kind: 'unconfirmed', entry });
       else if (String(data.translatedFrom) !== contentHash(english)) rows.push({ locale, kind: 'stale', entry });
       if (data.review?.status === 'machine') rows.push({ locale, kind: 'machine', entry });
@@ -1729,7 +1743,7 @@ function cmdContentHash(args) {
  */
 function cmdContentLock(args) {
   const [locale, entryArg] = args.filter(a => !a.startsWith('--'));
-  if (!locale || locale === 'en' || !entryArg) {
+  if (!locale || locale === 'en' || !entryArg || !getLocaleFiles().some(f => f.locale === locale)) {
     console.error(c.error('Error: give a non-English locale and an entry'));
     console.log('Usage: i18n-manager content-lock <locale> <dir>/<slug>   e.g. content-lock fr features/split-expenses');
     process.exit(1);
@@ -1777,7 +1791,8 @@ function contentLeaves(value, prefix = '', key = '') {
 
 /** Match a backcheck <page> argument to a content entry, a content page id, or a key-based page. */
 function resolveBackcheckTarget(arg) {
-  if (/^[a-z-]+\/[^/]+$/.test(arg) && arg.split('/')[0] in CONTENT_DIRS && fs.existsSync(contentFile(...arg.split('/'), 'en'))) {
+  const [dir, slug] = arg.split('/');
+  if (/^[a-z-]+\/[a-z0-9][a-z0-9-]*$/.test(arg) && dir in CONTENT_DIRS && fs.existsSync(contentFile(dir, slug, 'en'))) {
     return { kind: 'content', ...parseEntryArg(arg), label: arg };
   }
   const page = loadRegistryPages().find(p => p.id === arg);
@@ -1803,6 +1818,7 @@ function cmdBackcheck(args) {
     console.log('Usage: i18n-manager backcheck <locale> <page> [--out <dir>]\n       i18n-manager backcheck <locale> <page> --pass --checker <id> [--date YYYY-MM-DD]');
     process.exit(1);
   }
+  if (!getLocaleFiles().some(f => f.locale === locale)) throw new Error(`Unknown locale "${locale}"`);
   const target = resolveBackcheckTarget(page);
   const pass = args.includes('--pass');
 
@@ -1853,7 +1869,8 @@ function cmdBackcheck(args) {
     source = keys.map(k => ({ path: k, value: translations.en[k] }));
   }
 
-  const outDir = opt('--out') || path.join(__dirname, '..', 'tmp', 'backcheck');
+  // Packets are scratch files for the checking agent: they go to the system temp directory, never into the repo
+  const outDir = path.resolve(opt('--out') || path.join(os.tmpdir(), 'side-badger-backcheck'));
   fs.mkdirSync(outDir, { recursive: true });
   const file = path.join(outDir, `${locale}-${target.label.replace(/\//g, '-')}.md`);
   const lines = (leaves) => leaves.map(l => `- \`${l.path}\`: ${l.value}`).join('\n');
@@ -1919,7 +1936,8 @@ ${c.info('Commands:')}
     content-stale [locale]      Stale/unconfirmed content entries; exits 1 on any
     content-audit [locale]      Missing, extra, stale, unconfirmed and machine content entries; exits 1 on any
     backcheck <locale> <page> [--out <dir>]
-                                Write the back-translation packet (translation, blank back-translation, English)
+                                Write the back-translation packet (translation, blank back-translation,
+                                English) to <dir>, default: the system temp directory
     backcheck <locale> <page> --pass --checker <id> [--date YYYY-MM-DD]
                                 Record a pass: status checked, checker, date and source hash
     compare <locale1> <locale2> Compare two languages side by side

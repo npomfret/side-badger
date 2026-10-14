@@ -12,7 +12,8 @@
  * - `layoutPaths` is `pathsForType` for a route file, minus the unpublished pages that do not
  *   have their English entry yet (their content package has not landed): a build of every
  *   unpublished page therefore works while the content is still being written. A published
- *   page without its entry is an error.
+ *   page without its entry is an error. Hub cards and related links leave out the same pages,
+ *   so a page whose entry exists can be previewed before the pages it links to are written.
  */
 import { getEntry } from 'astro:content';
 import { isPseudoLocale, type Locale } from '../../i18n';
@@ -51,14 +52,20 @@ export async function loadPageContent<T>(pageId: string, locale: Locale): Promis
   return (isPseudoLocale(locale) ? pseudoizeContent(entry.data, locale) : entry.data) as T;
 }
 
+/**
+ * Whether a built page gets its routes: always when published (a missing entry then throws in
+ * `loadPageContent`), and for an unpublished page only once its English entry exists.
+ */
+async function routed(page: PageDef): Promise<boolean> {
+  return page.published || !page.content || !!(await readEntry(page, 'en'));
+}
+
 /** Route paths for a type, limited to the pages `keep` accepts. See the module comment. */
 export async function layoutPaths(type: PageType, keep: (pageId: string) => boolean = () => true): Promise<StaticPath[]> {
   const paths = pathsForType(type).filter(path => keep(path.props.pageId));
   const result: StaticPath[] = [];
   for (const path of paths) {
-    const page = requirePage(path.props.pageId);
-    if (!page.published && !(await readEntry(page, 'en'))) continue;
-    result.push(path);
+    if (await routed(requirePage(path.props.pageId))) result.push(path);
   }
   return result;
 }
@@ -94,14 +101,29 @@ async function cardFor(page: PageDef, locale: Locale): Promise<PageCard> {
   return { ...base, title: data.h1, description: data.meta.description };
 }
 
-/** Built pages in `locale`: published ones, or every registered one under PREVIEW_UNPUBLISHED=1. */
-function builtIn(page: PageDef, locale: Locale): boolean {
-  return builtPages().includes(page) && pathsFor(page.id).some(path => path.props.locale === locale);
+/**
+ * Whether `page` exists in `locale`, so it can be linked: published pages, or under
+ * PREVIEW_UNPUBLISHED=1 every registered page that has its routes (see `routed`).
+ */
+async function builtIn(page: PageDef, locale: Locale): Promise<boolean> {
+  return (
+    builtPages().includes(page) &&
+    pathsFor(page.id).some(path => path.props.locale === locale) &&
+    (await routed(page))
+  );
+}
+
+async function filterAsync<T>(items: readonly T[], keep: (item: T) => Promise<boolean>): Promise<T[]> {
+  const kept = await Promise.all(items.map(keep));
+  return items.filter((_item, index) => kept[index]);
 }
 
 /** The hub's cards: its child pages (`parent`), in registry order, with their descriptions. */
 export async function childCards(hubId: string, locale: Locale): Promise<PageCard[]> {
-  const children = allPages().filter(page => page.parent === hubId && builtIn(page, locale));
+  const children = await filterAsync(
+    allPages().filter(page => page.parent === hubId),
+    page => builtIn(page, locale)
+  );
   return Promise.all(children.map(page => cardFor(page, locale)));
 }
 
@@ -126,8 +148,9 @@ export async function relatedCards(
     }
   }
   ids.delete(page.id);
-  const pages = [...ids]
+  const candidates = [...ids]
     .map(id => getPage(id))
-    .filter((other): other is PageDef => !!other && filter(other) && builtIn(other, locale));
+    .filter((other): other is PageDef => !!other && filter(other));
+  const pages = await filterAsync(candidates, other => builtIn(other, locale));
   return Promise.all(pages.map(other => cardFor(other, locale)));
 }

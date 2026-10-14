@@ -4,12 +4,15 @@
  *
  * Stages: 0 receipt and empty form, 1 scanning (camera frame, "Analysing receipt..."), 2 the
  * receipt's description, amount and date strips have landed in the form and are ticked off,
- * 3 three expense cards in the ledger. Pinned on phones too. Reduced motion rests at stage 3:
- * the receipt beside the filled form, all three cards showing.
+ * 3 three expense cards in the ledger. Pinned on desktop and tablets. On phones it plays on entry:
+ * the pinned stage cannot fit a 360×640 viewport (the visual alone is 520 to 750 px tall), so the
+ * scan plays as the form scrolls into full view and each card drops in as it enters. Reduced
+ * motion rests at stage 3: the receipt beside the filled form, all three cards showing.
  *
  * Motion: strips, ticks and cards use the generic data-anim hooks (see the props). The scanning
  * line and the camera frame use `.exp-win`, which is visible only during stage 1 (bespoke, below).
- * The Google disclosure stays visible in every stage and path.
+ * The Google disclosure sits under the receipt, so it is on screen whenever the receipt is, in
+ * every stage and path.
  */
 import ScrollScene from '../ScrollScene.astro';
 import SceneLink from '../props/SceneLink.astro';
@@ -38,33 +41,37 @@ const drops = [
 <ScrollScene
   id="expenses"
   titleId="expenses-title"
-  runway={{ desktop: 200, phone: 160 }}
+  runway={{ desktop: 200, phone: 'entry' }}
   stages={[20, 50, 75]}
   staticStage={3}
 >
   <Fragment slot="copy">
     <h2 id="expenses-title">{t('home.expenses.title', locale)}</h2>
     <p>{t('home.expenses.body', locale)}</p>
-    <small class="exp-note" data-hook="expenses-scan-note">{t('home.expenses.scanNote', locale)}</small>
   </Fragment>
   <div slot="visual" class="exp" data-hook="expenses-visual">
     <div class="exp__grid">
-      <div class="exp__receipt">
-        <Receipt
-          title={expenseTitle(dinner, locale)}
-          rotate={-4}
-          lines={[{ label: t('home.expenses.fieldDate', locale), amount: receiptDate(locale) }]}
-          total={{
-            label: t('home.expenses.fieldAmount', locale),
-            amount: formatMoney(dinner.original.minor, dinner.original.currency, locale),
-          }}
-        />
-        <svg class="exp__camera exp-win" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-          <path d="M0 22V0H22M78 0H100V22M100 78V100H78M22 100H0V78" vector-effect="non-scaling-stroke"></path>
-        </svg>
-      </div>
-      <div class="exp__phone">
-        <AddExpenseForm locale={locale} />
+      <div class="exp__scan">
+        <div class="exp__side">
+          <div class="exp__receipt">
+            <Receipt
+              title={expenseTitle(dinner, locale)}
+              rotate={-4}
+              lines={[{ label: t('home.expenses.fieldDate', locale), amount: receiptDate(locale) }]}
+              total={{
+                label: t('home.expenses.fieldAmount', locale),
+                amount: formatMoney(dinner.original.minor, dinner.original.currency, locale),
+              }}
+            />
+            <svg class="exp__camera exp-win" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+              <path d="M0 22V0H22M78 0H100V22M100 78V100H78M22 100H0V78" vector-effect="non-scaling-stroke"></path>
+            </svg>
+          </div>
+          <small class="exp-note" data-hook="expenses-scan-note">{t('home.expenses.scanNote', locale)}</small>
+        </div>
+        <div class="exp__phone">
+          <AddExpenseForm locale={locale} />
+        </div>
       </div>
       <ol class="exp__ledger">
         {ledger.map((expense, i) => <LedgerCard expense={expense} locale={locale} index={i} {...drops[i]} />)}
@@ -81,36 +88,41 @@ const drops = [
   .exp__grid {
     display: grid;
     gap: 1rem;
+  }
+  /* The receipt (with the disclosure under it) beside the form: one box, so the phone's entry
+     timeline can follow both */
+  .exp__scan {
+    display: grid;
+    gap: 1rem;
     grid-template-columns: minmax(9.5rem, 0.9fr) minmax(0, 1.1fr);
-    grid-template-areas: 'receipt phone' 'ledger ledger';
     align-items: start;
   }
+  .exp__side {
+    display: grid;
+    gap: 0.75rem;
+  }
   .exp__receipt {
-    grid-area: receipt;
     position: relative;
     padding: 0.75rem;
   }
-  .exp__phone {
-    grid-area: phone;
-  }
   @container (min-width: 34rem) {
-    .exp__grid {
+    .exp__scan {
       grid-template-columns: minmax(0, 15rem) minmax(0, 17.5rem);
       justify-content: center;
       column-gap: 2rem;
     }
   }
   .exp__ledger {
-    grid-area: ledger;
     display: grid;
     gap: 0.5rem;
     margin: 0;
     padding: 0;
     list-style: none;
   }
-  .exp__receipt :global(:is(.receipt__lines li, .receipt__total) > span) {
+  /* Amounts and the date never break inside; a long label wraps instead */
+  .exp__receipt :global(:is(.receipt__lines li, .receipt__total) > bdi) {
     flex: none;
-    overflow-wrap: normal;
+    white-space: nowrap;
   }
   .exp__camera {
     position: absolute;
@@ -124,7 +136,11 @@ const drops = [
     pointer-events: none;
   }
   @media (max-width: 599px) {
-    .exp__grid {
+    .exp__grid,
+    .exp__scan {
+      gap: 0.5rem;
+    }
+    .exp__side {
       gap: 0.5rem;
     }
     .exp__receipt {
@@ -136,22 +152,35 @@ const drops = [
   }
   .exp-note {
     color: var(--ink-muted);
+    padding-inline: 0.75rem;
   }
 </style>
 
 <style is:global>
-  /* Phones pin this scene too. Its stage is compact, and a longer language never clips it: the stage
-     grows past the viewport instead (sticky then ends sooner) and its link stays reachable. */
-  @media (max-width: 599px) {
-    .scene[data-scene='expenses'] .scene__stage {
-      gap: 0.5rem;
-      block-size: auto;
-      min-block-size: var(--stage-h);
-      overflow-x: clip;
-      overflow-y: visible;
-    }
-    .scene[data-scene='expenses'] .scene__copy {
-      gap: 0.5rem;
+  /* Phones play this scene on entry (see the header). With native scroll-driven animation the scan
+     follows the receipt-and-form box: the camera frame and "Analysing receipt..." show as it comes
+     fully into view, then the strips land and are ticked before it reaches the header. The pinned
+     ranges (percent of the desktop runway, 8 to 50 for these) are rescaled onto that box's contain
+     range. Each ledger card drops in as it enters, as in scene 4. The stages engine shows the
+     finished form on entry. */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) and (min-height: 560px) and (max-width: 599px) {
+      html[data-scene-engine='native'] .scene[data-scene='expenses'][data-pin-phone='entry'] .exp__scan {
+        view-timeline: --exp-scan block;
+        view-timeline-inset: var(--header-h, 88px) 0;
+      }
+      html[data-scene-engine='native'] .scene[data-scene='expenses'][data-pin-phone='entry'] .exp__scan [data-anim] {
+        animation-timeline: --exp-scan;
+        animation-range: contain calc((var(--from, 8) - 8) * 100% / 42) contain calc((var(--to, 50) - 8) * 100% / 42);
+      }
+      html[data-scene-engine='native'] .scene[data-scene='expenses'][data-pin-phone='entry'] .exp-win {
+        animation-timeline: --exp-scan;
+        animation-range: contain 0% contain 72%;
+      }
+      html[data-scene-engine='native'] .scene[data-scene='expenses'][data-pin-phone='entry'] .exp__ledger [data-anim] {
+        animation-timeline: view();
+        animation-range: entry 20% entry 100%;
+      }
     }
   }
   /* Visible only while the receipt is being read (stage 1). Rest state, and every other stage, hides it. */

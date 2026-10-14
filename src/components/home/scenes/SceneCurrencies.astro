@@ -7,6 +7,7 @@
  * the group total. Pinned on desktop; on phones it plays once on entry, each card stamped as it
  * scrolls into view. Reduced motion rests at stage 2: every card shows the original and the
  * converted amount side by side. Amounts come from example-group.ts; the original always stays.
+ * A "Convert to EUR" picker above the tape shows the conversion is chosen, as in the app's form.
  */
 import ScrollScene from '../ScrollScene.astro';
 import SceneLink from '../props/SceneLink.astro';
@@ -39,6 +40,10 @@ const stamps = EXPENSES.map((_, i) => ({ from: 36 + i * 7, to: 46 + i * 7 }));
     <small class="cur-note" data-hook="currencies-example-note">{t('home.currency.exampleRates', locale)}</small>
   </Fragment>
   <div slot="visual" class="cur" data-hook="currencies-visual">
+    <p class="cur__to">
+      {t('home.currency.convertTo', locale)}
+      <span class="app-chip"><bdi>{GROUP.currency}</bdi><span aria-hidden="true"> ▾</span></span>
+    </p>
     <div class="cur__tape" aria-hidden="true" data-anim="slide" data-at="1" style="--dx:-200px;--from:4;--to:35">
       <span class="cur__head"></span>
       <span class="cur__glyphs">¥ $ € ¥ $ € ¥ $ € ¥ $ €</span>
@@ -59,6 +64,17 @@ const stamps = EXPENSES.map((_, i) => ({ from: 36 + i * 7, to: 46 + i * 7 }));
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     gap: 0.5rem;
+  }
+  /* The "Convert to" currency picker from the app's expense form (ExpenseConversionSection): the
+     conversion is chosen, which matches the copy's "can convert" */
+  .cur__to {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 600;
   }
   .cur__list {
     display: grid;

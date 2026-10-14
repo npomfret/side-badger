@@ -33,11 +33,12 @@ export function memberColor(id: MemberId): string {
 }
 
 /**
- * The date on the sample receipt: an illustrative day inside the story, formatted for the locale.
- * It is not in the example group's data, which carries no dates.
+ * The date on the sample receipt: an illustrative day and month, formatted for the locale. It has
+ * no year, so it never reads as a dated record and never goes stale. The example group's data
+ * carries no dates.
  */
 export function receiptDate(locale: Locale): string {
-  return new Intl.DateTimeFormat(intlCodeFor(locale), { dateStyle: 'medium', timeZone: 'UTC' }).format(
-    new Date(Date.UTC(2026, 3, 12))
+  return new Intl.DateTimeFormat(intlCodeFor(locale), { day: 'numeric', month: 'short', timeZone: 'UTC' }).format(
+    new Date(Date.UTC(2001, 3, 12))
   );
 }

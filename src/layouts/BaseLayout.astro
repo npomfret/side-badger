@@ -1,11 +1,11 @@
 ---
-import CanopyBloom from '../components/CanopyBloom.astro';
-import FloatingParticles from '../components/FloatingParticles.astro';
-import MagicalCursor from '../components/MagicalCursor.astro';
 import EasterEggs from '../components/EasterEggs.astro';
-import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import BackgroundEffects from '../components/layout/BackgroundEffects.astro';
+import SiteHeader from '../components/layout/SiteHeader.astro';
 import LanguageDetection from '../components/LanguageDetection.astro';
-import { t, locales, logoLocales, getLocalizedPath, isRTL, getAppUrl, getFormattedDate, type Locale } from '../i18n';
+import SeoHead from '../components/layout/SeoHead.astro';
+import SiteFooter from '../components/layout/SiteFooter.astro';
+import { t, isRTL, type Locale } from '../i18n';
 
 interface Props {
   title: string;
@@ -15,161 +15,33 @@ interface Props {
 
 const {
   title,
-  description: descriptionProp,
+  description,
   locale = 'en',
 } = Astro.props;
 
-const description = descriptionProp ?? t('meta.description', locale);
-
-// Use locale's logo if available, otherwise fall back to English
-const logoLocale = logoLocales.includes(locale) ? locale : 'en';
-const smallLogoPath = `/images/${logoLocale}/logo-transparent-small.png`;
-const largeLogoPath = `/images/${logoLocale}/logo-transparent.png`;
-const socialImagePath = `/images/${logoLocale}/logo-transparent.png`;
-
 const currentPath = Astro.url.pathname;
-const siteUrl = Astro.site?.origin || 'https://sidebadger.me';
 ---
 
 <!DOCTYPE html>
 <html lang={locale} dir={isRTL(locale) ? 'rtl' : 'ltr'}>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <meta name="theme-color" content="#F0FDF4" />
-
-    <!-- Web App Manifest -->
-    <link rel="manifest" href="/manifest.json" />
-
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" href="/images/logo-face-only-large.png" />
-
-    <!-- hreflang tags for SEO -->
-    {locales.map((loc) => (
-      <link
-        rel="alternate"
-        hreflang={loc}
-        href={`${siteUrl}${getLocalizedPath(currentPath, loc)}`}
-      />
-    ))}
-    <link rel="alternate" hreflang="x-default" href={`${siteUrl}${getLocalizedPath(currentPath, 'en')}`} />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Side Badger" />
-    <meta property="og:locale" content={{
-      en: 'en_US',
-      uk: 'uk_UA',
-      es: 'es_ES',
-      ja: 'ja_JP',
-      ar: 'ar_AE'
-    }[locale] || 'en_US'} />
-
-    <meta property="og:image" content={socialImagePath} />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={socialImagePath} />
-
-    <link rel="icon" type="image/png" href="/images/logo-face-only-large.png" />
-    <title>{title}</title>
-
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Side Badger",
-      "url": "https://sidebadger.me",
-      "logo": `https://sidebadger.me${largeLogoPath}`,
-      "sameAs": []
-    })} />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Side Badger",
-        "url": "https://sidebadger.me"
-      }
-    </script>
+    <SeoHead title={title} description={description} locale={locale} />
   </head>
   <body>
     <a href="#main-content" class="skip-link">{t('a11y.skipToContent', locale)}</a>
-    <CanopyBloom />
-    <FloatingParticles />
-    <MagicalCursor />
+    <BackgroundEffects />
     <EasterEggs />
     <LanguageDetection currentLocale={locale} />
 
     <slot name="header">
-      <header class="site-header" role="banner">
-        <nav class="header-nav container" aria-label={t('a11y.mainNavigation', locale)}>
-          <a href={getLocalizedPath('/', locale)} class="logo" aria-label={t('a11y.homeLink', locale)}>
-            <div class="logo-glow-wrapper">
-              <div class="logo-glow-spacer"></div>
-              <div class="logo-glow"></div>
-              <img src={smallLogoPath} alt={t('header.logoText', locale) + ' logo'} height="100" />
-            </div>
-          </a>
-
-          <ul class="nav-links flex items-center gap-lg" role="list">
-            <li>
-              <LanguageSwitcher currentLocale={locale} currentPath={currentPath} />
-            </li>
-            <li><a href={getAppUrl(locale)} class="btn btn-primary btn-launch">
-              <span class="btn-launch-text">{t('header.launchApp', locale)}</span>
-              <svg class="btn-launch-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                <polyline points="15 3 21 3 21 9"/>
-                <line x1="10" y1="14" x2="21" y2="3"/>
-              </svg>
-              <span class="sr-only">{t('a11y.externalLink', locale)}</span>
-            </a></li>
-          </ul>
-        </nav>
-      </header>
+      <SiteHeader locale={locale} currentPath={currentPath} />
     </slot>
 
     <main id="main-content">
       <slot />
     </main>
 
-    <footer class="site-footer" role="contentinfo">
-      <div class="container">
-        <nav class="footer-grid" aria-label={t('a11y.footerNavigation', locale)}>
-          <div class="footer-brand">
-            <a href={getLocalizedPath('/', locale)} class="logo" aria-label={t('a11y.homeLink', locale)}>
-              <img src={smallLogoPath} alt={t('header.logoText', locale) + ' logo'} height="28" />
-            </a>
-            <p class="text-muted text-sm" set:html={t('footer.tagline', locale)} />
-          </div>
-
-          <div class="footer-links">
-            <h4 id="footer-product-heading">{t('footer.product', locale)}</h4>
-            <ul aria-labelledby="footer-product-heading" role="list">
-              <li><a href={getLocalizedPath('/pricing', locale)}>{t('footer.pricing', locale)}</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-links">
-            <h4 id="footer-legal-heading">{t('footer.legal', locale)}</h4>
-            <ul aria-labelledby="footer-legal-heading" role="list">
-              <li><a href={getLocalizedPath('/privacy', locale)}>{t('footer.privacy', locale)}</a></li>
-              <li><a href={getLocalizedPath('/terms', locale)}>{t('footer.terms', locale)}</a></li>
-              <li><a href={getLocalizedPath('/cookies', locale)}>{t('footer.cookies', locale)}</a></li>
-            </ul>
-          </div>
-        </nav>
-
-        <div class="footer-bottom flex items-center justify-between">
-          <p class="text-muted text-sm">&copy; {getFormattedDate(locale)} {t('footer.copyright', locale)}</p>
-          <p class="text-muted text-sm">{t('footer.madeWith', locale)}</p>
-        </div>
-      </div>
-    </footer>
+    <SiteFooter locale={locale} />
 
     <script>
       // Runtime motion preference listener

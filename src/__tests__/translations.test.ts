@@ -105,6 +105,9 @@ function findUsedTranslationKeys(): Set<string> {
   return usedKeys;
 }
 
+/** Keys whose translation may legitimately equal the English: the example group's first names. */
+const IDENTICAL_ALLOWED = [/^home\.cast\./];
+
 describe('Translation Files Integrity', () => {
   describe(`Pending manifests (mode: ${MODE})`, () => {
     if (ENGLISH_FIRST) {
@@ -160,7 +163,11 @@ describe('Translation Files Integrity', () => {
         const translation = translations[locale as keyof typeof translations] as Record<string, string>;
         const approved = new Set(loadLock(locale).identicalApproved);
         const identicalKeys = englishKeys.filter(
-          key => key in translation && translation[key] === englishTranslations[key] && !approved.has(key)
+          key =>
+            key in translation &&
+            translation[key] === englishTranslations[key] &&
+            !approved.has(key) &&
+            !IDENTICAL_ALLOWED.some(pattern => pattern.test(key))
         );
 
         expect(
@@ -270,41 +277,6 @@ describe('Translation Files Integrity', () => {
     }
   });
 
-  describe('hero.typewriterWords JSON validation', () => {
-    const allLocales = Object.keys(translations);
-    for (const locale of allLocales) {
-      it(`${locale} has valid hero.typewriterWords JSON`, () => {
-        const translation = translations[locale as keyof typeof translations];
-        const value = translation['hero.typewriterWords' as keyof typeof translation];
-
-        expect(value, `${locale} is missing hero.typewriterWords`).toBeDefined();
-
-        let parsed: unknown;
-        expect(() => {
-          parsed = JSON.parse(value as string);
-        }, `${locale} has invalid JSON in hero.typewriterWords: ${value}`).not.toThrow();
-
-        expect(
-          Array.isArray(parsed),
-          `${locale} hero.typewriterWords is not an array`
-        ).toBe(true);
-
-        const arr = parsed as unknown[];
-        expect(
-          arr.length,
-          `${locale} hero.typewriterWords is empty`
-        ).toBeGreaterThan(0);
-
-        for (let i = 0; i < arr.length; i++) {
-          expect(
-            typeof arr[i] === 'string' && (arr[i] as string).trim().length > 0,
-            `${locale} hero.typewriterWords[${i}] is not a non-empty string: ${JSON.stringify(arr[i])}`
-          ).toBe(true);
-        }
-      });
-    }
-  });
-
   describe('HTML tag preservation', () => {
     // English keys that contain HTML tags; their translations must carry the same tags.
     // One test per locale, so the suite still has tests when no English key uses HTML.
@@ -331,8 +303,7 @@ describe('Translation Files Integrity', () => {
   });
 
   describe('Whitespace quality', () => {
-    // hero.subtitleStatic intentionally has a leading space
-    const LEADING_SPACE_ALLOWED = new Set(['hero.subtitleStatic']);
+    const LEADING_SPACE_ALLOWED = new Set<string>();
 
     const allLocales = Object.keys(translations);
     for (const locale of allLocales) {
@@ -343,6 +314,7 @@ describe('Translation Files Integrity', () => {
         for (const key of Object.keys(translation)) {
           const value = (translation as Record<string, string>)[key];
           if (!value) continue;
+          if (pendingRemoved.has(key)) continue; // English-first: retired, still in locales until T1-T6
 
           // Check leading/trailing whitespace (except allowed keys)
           if (!LEADING_SPACE_ALLOWED.has(key)) {

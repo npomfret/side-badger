@@ -192,19 +192,6 @@ export function registryProblems(r: Registry): string[] {
  * gate, D38) applies no exemption and fails while the list is non-empty.
  */
 const LEGACY_SUBSTITUTION_EXEMPTIONS: Readonly<Record<string, readonly string[]>> = {
-  // H11 (old homepage)
-  'comingSoon.badge': ['coming soon'],
-  'comingSoon.title': ['coming soon'],
-  'features.currency.desc': ['any currency'],
-  'features.fxConversion.desc': ['real-time rates'],
-  'features.groups.desc': ['instant notifications'],
-  'features.invites.desc': ['join instantly'],
-  'features.noTracking.desc': ['no tracking'],
-  'hero.badge': ['100% free and unlimited'],
-  'hero.subtitleStatic': ['free forever'],
-  'narrative.step2.desc': ['any currency'],
-  'narrative.step3.desc': ['pay back'],
-  'whyFree.trackers.desc': ['no tracking'],
   // P31 (pricing)
   'pricing.free.feature3': ['add friends'],
   'pricing.free.feature4': ['no tracking'],

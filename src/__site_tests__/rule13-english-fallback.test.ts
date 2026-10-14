@@ -60,32 +60,32 @@ describe('rule 13: no English text left on translated pages', () => {
     });
 
     it('resolves each approved key to its English text', () => {
-      const lock = { keys: {}, identicalApproved: ['footer.tagline', 'cta.title'], pages: {} };
+      const lock = { keys: {}, identicalApproved: ['footer.tagline', 'a11y.breadcrumb'], pages: {} };
       expect([...approvedFromLock(lock, 'xx.json')].sort()).toEqual([
+        'Breadcrumb',
         'Free. No ads. No daily limits.',
-        'Ready to split some bills?',
       ]);
     });
 
     it('approves nothing that is not listed, and ignores the hashes in keys', () => {
-      const lock = { keys: { 'cta.title': '00000000' }, identicalApproved: [], pages: {} };
+      const lock = { keys: { 'a11y.breadcrumb': '00000000' }, identicalApproved: [], pages: {} };
       expect(approvedFromLock(lock, 'xx.json').size).toBe(0);
     });
 
     it('rejects a key that en.ts does not have, and a malformed list', () => {
       const stale = { keys: {}, identicalApproved: ['no.such.key'], pages: {} };
       expect(() => approvedFromLock(stale, 'xx.json')).toThrow(/no\.such\.key/);
-      const malformed = { keys: {}, identicalApproved: { 'cta.title': true }, pages: {} } as never;
+      const malformed = { keys: {}, identicalApproved: { 'a11y.breadcrumb': true }, pages: {} } as never;
       expect(() => approvedFromLock(malformed, 'xx.json')).toThrow(/must be an array/);
     });
 
     describe('keys removed from en.ts (D38)', () => {
-      const lock = { keys: {}, identicalApproved: ['cta.title', 'policy.gone'], pages: {} };
+      const lock = { keys: {}, identicalApproved: ['a11y.breadcrumb', 'policy.gone'], pages: {} };
       const run = (mode: 'strict' | 'english-first', removed: string[]) =>
         approvedFromLock(lock, 'xx.json', { mode, removed });
 
       it('skips an approved key that is listed under removed in english-first mode', () => {
-        expect([...run('english-first', ['policy.gone'])]).toEqual(['Ready to split some bills?']);
+        expect([...run('english-first', ['policy.gone'])]).toEqual(['Breadcrumb']);
       });
 
       it('throws in strict mode even when the key is listed under removed', () => {

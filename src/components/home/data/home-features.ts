@@ -5,8 +5,8 @@
  *
  * Interim: the feature registry (`src/data/features.ts`, P22) does not exist yet, so ids are
  * plain strings and the localized title of each comes from the existing `features.*.title` keys.
- * A feature with no matching title key is depicted but not listed (`groups`, `accounts`,
- * `reactions`). When the registry lands, replace `FEATURE_TITLE_KEYS` with its titles.
+ * A feature with no matching title key is depicted but not listed (`groups`, `accounts`).
+ * When the registry lands, replace `FEATURE_TITLE_KEYS` with its titles.
  */
 import { t, type Locale, type TranslationKey } from '@/i18n';
 import type { SceneId, WorldId } from './links';
@@ -72,6 +72,7 @@ export const FEATURE_TITLE_KEYS: Partial<Record<FeatureId, TranslationKey>> = {
   lists: 'features.lists.title',
   polls: 'features.polls.title',
   comments: 'features.participants.title',
+  reactions: 'features.reactions.title',
   'privacy-posture': 'features.noTracking.title',
 };
 

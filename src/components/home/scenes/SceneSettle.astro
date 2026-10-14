@@ -35,7 +35,7 @@ const featured = payments.find(p => p.from === 'sam') ?? payments[0];
 const member = (id: MemberId) => MEMBERS.find(m => m.id === id)!;
 const name = (id: MemberId) => t(member(id).nameKey, locale);
 const money = (cents: number) => formatMoney(cents, GROUP.currency, locale, { whole: true });
-const sentence = (key: 'home.tangle.owes' | 'home.tangle.pays', from: MemberId, to: MemberId, cents: number) =>
+const sentence = (key: 'home.tangle.owes' | 'home.tangle.pays' | 'home.settle.paid', from: MemberId, to: MemberId, cents: number) =>
   tf(key, { from: name(from), to: name(to), amount: money(cents) }, locale);
 
 /**
@@ -68,6 +68,10 @@ const reactions: [string, number][][] = [[['👍', 2], ['❤️', 1], ['🎉', 3
             <bdi class="app-title">{sentence('home.tangle.owes', featured.from, featured.to, featured.cents)}</bdi>
             <span class="app-chip settle__chip" aria-hidden="true">{money(featured.cents)}</span>
           </div>
+          <div class="app-row settle__quick">
+            <span>{t('home.settle.quickSettle', locale)}</span>
+            <span class="app-chip">{money(featured.cents)}</span>
+          </div>
           <div class="app-field">
             <span>{t('home.settle.whoPaid', locale)}</span>
             <span class="settle__value" data-anim="fade" data-at="1" style="--from:8;--to:13;--i:0">
@@ -81,11 +85,13 @@ const reactions: [string, number][][] = [[['👍', 2], ['❤️', 1], ['🎉', 3
             </span>
           </div>
           <div class="app-field">
+            <span>{t('home.settle.amount', locale)}</span>
             <span class="settle__value" data-anim="fade" data-at="1" style="--from:16;--to:21;--i:2">
               <Money minor={featured.cents} currency={GROUP.currency} locale={locale} whole />
             </span>
           </div>
           <div class="app-field">
+            <span>{t('home.settle.note', locale)}</span>
             <span class="settle__value" data-anim="fade" data-at="1" style="--from:20;--to:25;--i:3">
               {t('home.settle.noteExample', locale)}
             </span>
@@ -108,7 +114,7 @@ const reactions: [string, number][][] = [[['👍', 2], ['❤️', 1], ['🎉', 3
               <li data-anim="pop" data-at="3" style={`--from:${70 + i * 2};--to:${74 + i * 2};--i:${i};--s:0.92`}>
                 <Avatar name={name(payment.from)} color={member(payment.from).color.light} size="1.75rem" />
                 <span class="settle__what">
-                  <bdi>{sentence('home.tangle.pays', payment.from, payment.to, payment.cents)}</bdi>
+                  <bdi>{sentence('home.settle.paid', payment.from, payment.to, payment.cents)}</bdi>
                   {i === 0 && <small>{t('home.settle.noteExample', locale)}</small>}
                 </span>
                 <span class="settle__reactions">
@@ -298,15 +304,12 @@ const reactions: [string, number][][] = [[['👍', 2], ['❤️', 1], ['🎉', 3
     pointer-events: none;
   }
 
+  /* Phones: the phone drops its fixed 9:17 shape and is as tall as its tallest layer (the form with
+     its labels), so "Record Settlement" is never clipped; the pinned stage must still hold the
+     copy, the phone and the link on short screens (360×640) */
   @media (max-width: 599px) {
     .settle :global(.settle__phone) {
       inline-size: min(100%, 12.5rem);
-    }
-  }
-  /* Short phones (360×640): the pinned stage must hold the copy, the phone and the link, so the
-     phone drops its empty lower screen and is as tall as its tallest layer */
-  @media (max-width: 599px) and (max-height: 740px) {
-    .settle :global(.settle__phone) {
       aspect-ratio: auto;
     }
     .settle :global(.settle__phone .frame__screen) {

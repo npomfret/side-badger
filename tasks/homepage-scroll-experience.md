@@ -116,7 +116,7 @@ A local lab run is not the baseline, but it shows where the risks are. In Chromi
 
 These affect the new homepage. The packages named below fix them.
 
-1. `html` and `body` both set `overflow-x: hidden`, which makes `body` a scroll container. That breaks `position: sticky` and makes `body`, which never scrolls, the nearest scroller for view timelines. Replace it with `overflow-x: clip`. H1 confirms the behaviour and H4 fixes it.
+1. `html` and `body` both set `overflow-x: hidden`, which makes `body` a scroll container. That breaks `position: sticky` and makes `body`, which never scrolls, the nearest scroller for view timelines. Replace it with `overflow-x: clip`. H1 confirmed it: with `overflow-x: hidden` on `html` and `body` the stage scrolls away and the timeline freezes, while `clip` behaves like `visible`. H4 fixes it.
 2. `homepage.css` uses undefined tokens (`--space-6xl`, `--text-6xl`, `--accent-dark`, `--border-subtle`, `--radius-2xl`), so those declarations are silently dropped. The file is retired.
 3. White text on the primary button gradient (`#22c55e` to `#86efac`) has a contrast of 2.3:1 down to 1.4:1. Links in `#16a34a` on `#f0fdf4` reach 3.15:1. Both fail WCAG AA for normal text.
 4. The `h1` line height of 1.05 clips Devanagari, Bengali, and Telugu marks. Only `ja` and `ar` get script fonts; `fa`, `ur`, `hi`, `bn`, `te`, `zh`, and `ko` fall back to system fonts. Space Grotesk has no Cyrillic or Greek, so `uk`, `sr`, and `el` headings fall back too.
@@ -283,7 +283,7 @@ Each world gets its own table:
 | 2 Group forms | 150vh / entry | A place card reading “Japan trip” on an empty table, with five empty place settings | A phone slides in with the invite screen: “Invite link”, “Copy”, and a QR code with “Or scan this code”. Link cards fly to each place, and each opens a sign-up screen with an email field before its avatar sits down. | Avatars for Ava, Ben, Dev, Mei, and Sam pop into their places one by one, each with a “{name} joined” toast. The card reads “5 members”. | Copy, then the phone, then a row of avatars that fill in on entry | Five avatars seated; the phone shows the link and QR code | Places fill from the inline-start side; the phone sits at inline-end |
 | 3 Expenses land | 200vh / 160vh pinned | A crumpled receipt for “Izakaya dinner ¥24,000” and a phone showing an empty “Add expense” form | A camera frame closes on the receipt and “Reading receipt…” appears. Description, amount, and date lift off the receipt as paper strips and fly into the form fields, and a pencil ticks each one: the visitor checks the result rather than trusting it. A small line reads “Receipt images are read by Google's AI service.” | Three expense cards drop into a ledger column, each tagged with its split type: “Kyoto apartment · Equally”, “Izakaya dinner · Exact amounts”, “Karaoke room · Percentage”. Asides read “Ava and Ben had the sake.” and “Dev went to bed.” | Pinned with a shorter runway. The form sits above the cards. | The receipt beside the filled form, with all three cards showing | Strips fly towards inline-end. Amounts are wrapped in `<bdi>`. |
 | 4 Currencies | 150vh / entry | Expense cards carrying ¥96,000, ¥24,000, ¥16,000, $132, and €400, each with a note or coin | A paper tape runs through a stamp. Each card gets stamped “≈ €600 · Rate 1 EUR = 160 JPY” with a small pencil “Edit rate” chip. | Every card shows euros, the ledger shows “Group total €1,370”, and the caption reads “Example rates for illustration.” | Cards stacked, each stamped as it enters | Each card shows the original amount and the converted amount side by side | The tape runs from inline-start to inline-end |
-| 5 The tangle | 280vh / 220vh pinned | A corkboard with five polaroids in a pentagon and the expense cards pinned beside their payers | Nineteen red IOU threads draw, then merge into ten debt threads with amount tags (“€2” earns a sticky note: “the €2 nobody was ever going to chase”). Then the threads go slack and each polaroid shows its balance. | Three taut green threads: Sam → Ava €160, Mei → Ava €140, Dev → Ben €100. The list of payments is visible. | Pinned, with a portrait layout (separate viewBox) and captions below the board | Before and after side by side on desktop, stacked on a phone | Geometry is mirrored when the page is built; arrows follow the mirrored paths |
+| 5 The tangle | 280vh / 240vh pinned | A corkboard with five polaroids in a pentagon and the expense cards pinned beside their payers | Nineteen red IOU threads draw, then merge into ten debt threads with amount tags (“€2” earns a sticky note: “the €2 nobody was ever going to chase”). Then the threads go slack and each polaroid shows its balance. | Three taut green threads: Sam → Ava €160, Mei → Ava €140, Dev → Ben €100. The list of payments is visible. | Pinned, with a portrait layout (separate viewBox) and captions below the board | Before and after side by side on desktop, stacked on a phone | Geometry is mirrored when the page is built; arrows follow the mirrored paths |
 | 6 Settle up | 150vh / 120vh pinned | The phone shows “Sam owes €160 to Ava” with its record button. Beside it lie Sam's polaroid and a bank-transfer slip. | A quick-settle button fills in the form (“Who paid? Sam”, “Who received the payment? Ava”, €160, note “Bank transfer”), then “Record settlement” is pressed | Debt rows strike through, the phone shows “All settled up!”, the payment history fills with 🎉 👍 ❤️ reactions, and confetti fires once, outside the phone | Pinned with a short runway | “All settled up!” with the history and reactions; no confetti | The layout mirrors; emoji are unchanged |
 | 7 Worlds | 320vh horizontal / native swipe | The kitchen table from scene 6, restyled as the housemates world | Page scroll slides four tables sideways: housemates, couples, trips, celebrations. In each, a small mechanic plays: a list ticks “4 of 7”, a split slider sits at 60/40, poll votes fill, a comment collects a 🎉. | The celebrations table, then the table clears | A native horizontal carousel with scroll snap: 85vw cards that peek, previous and next buttons, and “2 of 4” | A vertical stack of four static worlds | Travel runs right to left. The carousel mirrors natively. |
 | 8 Trust | Entry | A clean card | Three stamps land: “No ads”, “No third-party trackers”, “We don't sell your personal data” | All three stamped, with a small paw-print seal | Stacked | Already stamped | Mirrored |
@@ -459,15 +459,14 @@ What remains open does not reopen the direction. Prototype findings may adjust r
 
 **How it works.**
 
-1. Each scene `<section>` declares `view-timeline: --scene block`. Its descendants animate with `animation-timeline: --scene` and `animation-range: contain a% contain b%`.
+1. Each scene `<section>` declares `view-timeline: --scene block` and `view-timeline-inset: var(--header-h, 88px) 0`, so the `contain` range starts as the stage pins under the header. Its descendants animate with `animation-timeline: --scene` and `animation-range: contain a% contain b%`.
    - The `contain` range is exactly the stretch during which the pinned stage fills the viewport.
    - Named timelines are visible to descendants, so `timeline-scope` is not needed.
-2. Large moving elements animate `transform` and `opacity` directly, so the browser can run them off the main thread. Small details read a registered custom property, `--t` (from 0 to 1), animated on the same timeline.
-   - Registering `--t` with `@property` lets it transition in every current engine, including Firefox 128+.
+2. Every animated element has its own keyframes and `animation-range` on the scene timeline. Large moving elements animate `transform` and `opacity`, so the browser can run them off the main thread; threads animate `stroke-dashoffset`, which is main-thread but cheap. No scene drives its content from a shared `--t` property: H1 measured that at 3.4–4× the main-thread cost (see [Prototype findings](#prototype-findings)).
 3. Feature detection uses CSS `@supports (animation-timeline: view()) and (animation-range: contain 0% contain 100%)` and JS `CSS.supports('animation-timeline: view()')`.
 4. **Fallback** covers Firefox release, Safari 18 and older, and Chromium before 115:
-   - The controller places invisible sentinels at each stage boundary. An IntersectionObserver (`rootMargin: '-50% 0px -50% 0px'`) sets `data-stage` on the scene.
-   - CSS then transitions between stage end states over 700 ms, so the visitor gets the same frames as steps rather than a scrub.
+   - The controller adds invisible stage regions spanning each stage. An IntersectionObserver (`rootMargin: '-50% 0px -50% 0px'`) sets `data-stage` on the scene from the highest intersecting region; with none, from whether the scene's top is above the viewport.
+   - CSS then transitions each element's `opacity`, `transform` and `stroke-dashoffset` to its stage end state over 700 ms, so the visitor gets the same frames as steps rather than a scrub.
    - The worlds strip becomes the native scroll-snap carousel at every width.
    - Content and links are identical in every path.
 5. **The controller** (`scene-controller.ts`, about 3 KB gzipped estimated) also:
@@ -559,7 +558,7 @@ These positions are computed when the site is built by `src/components/home/tang
 
 **Right to left:** x becomes 800 − x (or 360 − x), so Ben and Sam swap sides.
 
-Edges are quadratic curves bowed by 24 units, so that overlapping threads stay distinguishable. IOU threads alternate their bow by direction. Every edge is shortened by the node radius of 34, so arrowheads stop at the polaroid's edge.
+Edges are quadratic curves, so that overlapping threads stay distinguishable. IOU threads bow 8 + 6 × the expense number (14 to 38 units), on opposite sides for opposite directions; debts bow 14 and payments 18. Every edge is shortened by the node radius of 34, so arrowheads stop at the polaroid's edge.
 
 ### SVG and HTML structure
 
@@ -573,10 +572,10 @@ Edges are quadratic curves bowed by 24 units, so that overlapping threads stay d
     </div>
     <div class="tangle__visual" role="img" aria-label="{home.tangle.figureLabel}">
       <svg viewBox="0 0 800 520" aria-hidden="true" focusable="false">
-        <defs>arrow markers (red, green) with orient="auto"; small cork pattern</defs>
-        <g class="tangle__ious">19 × path.thread--iou pathLength="1" style="--i:n"</g>
-        <g class="tangle__pairs">10 × path.thread--pair marker-end, style="--i:n"</g>
-        <g class="tangle__payments">3 × path.thread--payment marker-end, style="--i:n"</g>
+        <defs>small cork pattern</defs>
+        <g class="tangle__ious">19 × path.thread--iou style="--i:n; --L:length"</g>
+        <g class="tangle__pairs">10 × path.thread--pair with a per-path dash pattern, style="--i:n; --L:length", each followed by a separate arrowhead path</g>
+        <g class="tangle__payments">3 × path.thread--payment style="--i:n; --L:length", each followed by a separate arrowhead path</g>
         <g class="tangle__pins">5 × circle</g>
       </svg>
       <ul class="tangle__people">5 × li, placed by --x and --y as percentages:
@@ -593,7 +592,7 @@ Edges are quadratic curves bowed by 24 units, so that overlapping threads stay d
     </details>
     <a href="…">{link}</a>
   </div>
-  <!-- the fallback stage sentinels are added by the controller -->
+  <!-- the fallback stage regions are added by the controller -->
 </section>
 ```
 
@@ -601,18 +600,18 @@ Names, amounts, and captions are HTML laid over the SVG, not SVG `<text>`. That 
 
 ### Animation stages
 
-The ranges below are percentages of the section's `contain` range. The desktop runway is 280vh, so the stage is pinned for about 180vh of scrolling.
+The ranges below are percentages of the section's `contain` range. The runway is 280vh on desktop and 240vh on phones, so the stage is pinned for about 180vh and 140vh of scrolling. Both layouts share these ranges.
 
 | Range | Stage | What happens | Caption |
 |-------|-------|--------------|---------|
 | 0–10% | 0 Board | Polaroids pin in (scale 1.1 → 1, pins drop) and the expense cards fade back | — |
-| 10–30% | 1 IOUs | The 19 IOU threads draw (`stroke-dashoffset` 1 → 0), staggered by `--i` | “Every expense creates IOUs: 19 of them.” |
+| 10–30% | 1 IOUs | The 19 IOU threads draw (`stroke-dashoffset` from the path's length to 0), staggered by `--i` | “Every expense creates IOUs: 19 of them.” |
 | 30–50% | 2 Pairs | IOU threads fade as the 10 debt threads draw. Amount tags appear, and the €2 sticky note lands at 45%. | “Debts between the same two people cancel out: 10 left.” |
 | 50–68% | 3 Balances | Debt threads drop to 15% opacity. Balance tags pop onto the polaroids: green `+`, red `−`. | “Add it all up: each person is up or down overall.” |
 | 68–90% | 4 Payments | Green threads draw in greedy order: Sam → Ava (68–75), Mei → Ava (75–82), Dev → Ben (82–89). Each balance turns to a tick at zero once its payment lands. | “Match the biggest debts to the biggest credits: 3 payments.” |
 | 90–100% | Rest | Debt threads disappear, a “3, not 10” stamp lands, and the payments list is emphasised | — |
 
-The fallback uses five sentinels, at 10%, 30%, 50%, 68%, and 90%. Each stage transitions over 700 ms, with thread draws staggered by `calc(var(--i) * 40ms)`.
+The fallback uses six stage regions, at 0–10%, 10–30%, 30–50%, 50–68%, 68–90% and 90–100%. Each stage transitions over 700 ms, with thread draws staggered by `calc(var(--i) * 40ms)`.
 
 ### Accessibility
 
@@ -625,7 +624,7 @@ A screen reader hears, in order:
 5. a “Show all 10 debts” disclosure holding the ten debts and five balances;
 6. the link.
 
-Nothing that matters exists only inside the SVG. Amounts are formatted with `Intl.NumberFormat` for the locale and wrapped in `<bdi>`.
+Nothing that matters exists only inside the SVG. Amounts are formatted with `Intl.NumberFormat` for the locale, with no fraction digits and, for balances, `signDisplay: 'exceptZero'`, and wrapped in `<bdi>`. Inactive captions and dimmed props use a muted colour that meets 4.5:1, never reduced opacity.
 
 Colour is never the only signal. Debts are red and dashed; payments are green and solid with a tick. In forced-colours mode, threads use `CanvasText` and `Highlight`.
 
@@ -673,8 +672,8 @@ src/__tests__/
 | `id` | Section id |
 | `titleId` | Id of the heading that labels the section |
 | `runway` | `{ desktop, phone }` in vh, or `'entry'` for no pinning |
-| `stages` | Stage boundaries as percentages, also used for the fallback sentinels |
-| `staticStage` | The stage shown under reduced motion |
+| `stages` | Stage boundaries as percentages, also used for the fallback stage regions |
+| `staticStage` | The stage shown under reduced motion (the tangle shows a before and an after board) |
 | `tone` | Selects a world or section palette |
 
 It renders:
@@ -683,7 +682,7 @@ It renders:
 - a sticky `.scene__stage` (`top: var(--header-h, 88px)`, `height: calc(100svh - var(--header-h))`);
 - slots for copy, visual, and link.
 
-`scenes.css` owns the `view-timeline` declaration, the `@supports` blocks, the `--t` registration, the stage-fallback transitions, and the reduced-motion flattening.
+`scenes.css` owns the `view-timeline` and `view-timeline-inset` declarations, the `@supports` blocks, the stage-fallback transitions, and the reduced-motion flattening.
 
 Runways are not pinned:
 
@@ -788,7 +787,7 @@ Techniques:
   - `visibilitychange` pauses everything.
   - Each ambient loop stops after 5 s per activation, which also satisfies WCAG 2.2.2 (Pause, Stop, Hide) without a pause button.
 - **No continuous work.** No scroll listeners and no permanent `requestAnimationFrame` loops; confetti runs its own short loop.
-- **Rendering cost.** Use `content-visibility: auto` with `contain-intrinsic-size` on scenes after the second. H1 checks that it does not break view timelines. Avoid `filter: blur()` on animated layers, and keep `backdrop-filter` to the header and small interface panels.
+- **Rendering cost.** Use `content-visibility: auto` on scenes after the second whose height is explicit, or with `contain-intrinsic-size: auto <measured height>`, never a guess. H1 found that it does not break view timelines, but a wrong intrinsic size caused a 0.08 layout shift. Avoid `filter: blur()` on animated layers, and keep `backdrop-filter` to the header and small interface panels.
 - **Fonts.** H4 implements restructure D24. No third-party font requests and no CSS `@import`:
   - Latin, Cyrillic and Greek locales use self-hosted Fontsource WOFF2 in `public/fonts/`: Inter variable, and Space Grotesk 600 for Latin headings, with exactly two preloads and fallback faces using `size-adjust` and ascent overrides to stop the swap from shifting layout;
   - Arabic-script (`ar`, `fa`, `ur`) and Indic (`hi`, `bn`, `te`) locales get one self-hosted Noto Sans variable subset each, loaded only on their own locale with no preload;
@@ -803,12 +802,12 @@ Techniques:
 `@media (prefers-reduced-motion: reduce)` turns every scene into its static frame:
 
 - Runways collapse to their natural height and stages stop being sticky.
-- `--t` and `data-stage` are fixed at each scene's `staticStage`.
+- Animations are removed, so elements rest at their end state; `data-stage` is fixed at each scene's `staticStage`.
 - Ambient animations are removed and `scroll-behavior` returns to `auto`.
 
 The frames are chosen to be attractive and complete: see the storyboard column. The tangle shows before and after side by side. The worlds become a vertical stack.
 
-The controller registers no stage sentinels and fires no confetti. It listens for the preference changing and sets itself up or tears itself down. Content, headings, and links are identical to the animated page.
+The controller adds no stage regions and fires no confetti. It listens for the preference changing and sets itself up or tears itself down. Content, headings, and links are identical to the animated page.
 
 ### Right to left and scripts
 
@@ -847,7 +846,7 @@ The font choices follow restructure D24.
 
 ### Mobile layout
 
-Breakpoints are ≤ 599 px for phones, 600 to 1023 px for tablets, and ≥ 1024 px for desktops. Prop layouts inside a stage use container queries.
+Breakpoints are ≤ 599 px for phones, 600 to 1023 px for tablets, and ≥ 1024 px for desktops. Prop layouts inside a stage use container queries. Below 1024 px the tangle uses its portrait board, with the lede before the pinned stage and one crossfading caption below the board.
 
 On phones:
 
@@ -1134,7 +1133,93 @@ Each `AppFrame` panel is an illustration built from the app's tokens and labels,
 
 ## Prototype findings
 
-Recorded by the coordinator from H1's handover. Empty until H1 reports.
+Recorded from H1's handover and its review, 14 October 2026. The prototype is a standalone build of scene 5 (direction A), published as a [private Artifact](https://claude.ai/artifact/EQWafzFB6S8wqogkTA6m6k). It was measured with Playwright 1.64 in Chromium 1248, with a WebKit 27.2 check, at 1440×900 and 390×844, left to right and right to left. Firefox was not tested. These findings are settled, and H5 to H10 build from them.
+
+**Measurement method.** Main-thread time is the change in CDP `Performance.getMetrics` `TaskDuration` over a whole runway, scrolled by wheel 30 px every 16 ms, at 4× CPU throttle. Each cell was run twice. Long tasks and long animation frames were observed throughout.
+
+**Drive: per-element keyframes, no shared `--t`.**
+
+| Drive | Desktop, 4× (task / style ms) | Phone, 4× | Long tasks |
+|---|---|---|---|
+| Per-element keyframes on the view timeline | 267–297 / 24–30 | 129–141 / 11–13 | 0 |
+| One `@property --t` on the stage, every element derived with `calc()` | 1014–1094 / 800–830 | 456–484 / 341–342 | 0 (one 53 ms animation frame) |
+| Fallback driven by `--t` transitions | 1947–2384 / 1698–2103 | 1331–1339 / 1144–1147 | 0 |
+
+- Every animated element has its own `@keyframes`, with `animation-timeline: --scene` and its own `animation-range: contain a% contain b%`. Multi-phase elements (in, dim, out) list several animations on the same timeline.
+- No scene registers or animates `--t`. It costs 3.4–4× the main-thread time, almost all of it style recalculation.
+- Thread draws animate `stroke-dashoffset`. That runs on the main thread but is cheap: 24–30 ms of style time over the whole desktop run at 4×.
+
+**Timeline alignment.**
+- The scene declares `view-timeline-inset: var(--header-h, 88px) 0`. The `contain` range then runs exactly while the stage is pinned under the header, and progress equals scroll position to three decimal places. Without the inset, everything starts about 3% late.
+- Under the iOS dynamic toolbar, the stage (`100svh`) unpins up to (lvh − svh) px before `contain 100%`. That falls inside the 90–100% rest stage. H13 checks it on a device.
+
+**Runways and stages.**
+- The runway is 280vh on desktop (pinned for 1676 px at 900 px tall) and 240vh on phones (1238 px at 844 px tall).
+- The stage ranges stay as planned, and both layouts share them:
+
+| Range | What happens | Timing |
+|---|---|---|
+| 3–10% | Expense cards dim to 35% | |
+| 10–29.5% | IOUs draw | 6% each, staggered 0.75% |
+| 30–36% | IOUs fade to 2% | |
+| 30–47.8% | Debts draw | 7% each, staggered 1.2% |
+| 44–47% | Sticky note lands | |
+| 50–54% | Debts dim to 15% | |
+| 52–63% | Balances pop | |
+| 68–75%, 75–82%, 82–89% | One payment draws in each range, then its tag and a tick | |
+| 90–94% | Debts and sticky note leave | |
+| 93–96% | Stamp lands | |
+
+**Easing.** The motion tokens are kept: the thread ease on draws, the paper ease on polaroids, the snap ease on pins, tags, the sticky note and the stamp, and linear on opacity fades.
+
+**Threads and arrowheads.**
+- Paths use their real length. It is computed at build time and passed as `--L`. There is no `pathLength="1"`.
+- Solid threads use `stroke-dasharray: L L`.
+- Dashed debt threads use a per-path pattern: `7 4` dashes whose run totals no more than L (`floor(L / 11)` pairs), then a gap of at least L. A longer run leaves dash stubs visible before the draw. The prototype had this bug.
+- Arrowheads are separate small paths. Each is placed at build time at the end of its thread and rotated to the thread's tangent. It fades in over the last 1.2% of its thread's draw. `marker-end` is not used, because markers render before the dash draw reaches them.
+- Bows: IOUs bow 8 + 6 × the expense number (14 to 38), on opposite sides for opposite directions. Debts bow 14 and payments 18. Edges are shortened by 34 at each end.
+
+**Fallback.**
+- The controller appends six hidden, absolutely positioned stage regions to the scene. They span 0–10, 10–30, 30–50, 50–68, 68–90 and 90–100% of the pinned range, offset by `50svh − var(--header-h)`.
+- One IntersectionObserver with `rootMargin: '-50% 0px -50% 0px'` sets `data-stage` from the highest intersecting region. When none intersects, it sets 5 if the scene's top is above the viewport and 0 otherwise. Regions, unlike 1 px sentinels, give the right stage on load and after fast flicks.
+- Each element has an end-state rule per `[data-stage]`. It transitions `opacity`, `transform` and `stroke-dashoffset` over 700 ms, with its own ease and `transition-delay: calc(var(--i) * 40ms)`.
+- The fallback does not transition a shared `--t`. That measured 7–10× the keyframe drive's cost and double-eased.
+- The forced fallback plays every stage in Chromium and WebKit.
+
+**Phone and tablet layout.**
+- Below 1024 px the tangle uses the portrait board (viewBox `0 0 360 440`), sized `min(100%, (100svh − var(--header-h) − 215px) × 360 / 440)`.
+- The heading sits above the board. The four captions share one grid cell below it and crossfade, each opaque only during its own stage. The payments list replaces them from 90%.
+- On phones the lede sits in normal flow before the pinned stage. It is never visually hidden.
+- `.tangle__visual` has `container-type: inline-size`, so it needs a definite width; it cannot size from its content.
+
+**Right to left.**
+- SVG paths and arrowheads are mirrored with `mirrorX()` at build time.
+- HTML overlays (polaroids, tags, cards, sticky note, stamp) keep their left-to-right percentages in `inset-inline-start`, with `translate: calc(-50% * var(--dir)) -50%`. No second set of coordinates is needed.
+- Signed balances are formatted with `Intl.NumberFormat(intlCode, { style: 'currency', currency: 'EUR', minimumFractionDigits: 0, maximumFractionDigits: 0, signDisplay: 'exceptZero' })`, so the sign stays with the number, and the whole result is wrapped in `<bdi>`. Every tangle amount is a whole euro with no decimals.
+- Step numbers use the locale's digits.
+
+**Captions and contrast.**
+- On desktop all four captions stay visible, and the current one is emphasised.
+- Inactive captions, the payments list before 90%, and dimmed expense cards use a muted colour that meets 4.5:1, not reduced opacity. The prototype's 0.45 opacity measured about 2.6:1.
+
+**Reduced motion.**
+- Runways collapse and stages are static.
+- The tangle renders two boards with visible captions:
+  - "Before: 10 debts", the end of stage 2, with ten debts, tags and the sticky note;
+  - "After: 3 payments", the rest state, with payments, ticks and the stamp.
+- The boards sit side by side above 700 px of available width (`repeat(auto-fit, minmax(min(100%, 340px), 1fr))`) and stack below it.
+- Both boards sit inside the one `role="img"` element with the plan's label, so the accessibility tree is identical to the animated page.
+- The before board is in the HTML for every visitor but is hidden except under reduced motion. It adds about 15 KB raw.
+- Under reduced motion, `animation: none` leaves every element at its end state. The before board gets its stage-2 state from an `.is-before` class.
+
+**`content-visibility`.**
+- On the pinned scene itself it does not affect the view timeline.
+- On neighbouring sections with a wrong `contain-intrinsic-size`, it caused a 0.0835 layout shift.
+- Use it only on scenes after the second whose height is explicit (pinned runways), or with `contain-intrinsic-size: auto <measured height>` per scene. Never use a guessed size.
+
+**`overflow-x`.** With `overflow-x: hidden` on `html` and `body`, the stage scrolls away and the timeline freezes, with progress stuck at 0.669. With `overflow-x: clip`, behaviour is identical to `visible`. This confirms defect 1; H4 fixes it.
+
+**Not yet verified (H13).** Firefox release (the fallback path), tablet widths (600–1023 px), viewports shorter than 560 px (the no-pin rule), and the iOS dynamic toolbar.
 
 ## Translator notes
 
@@ -1147,7 +1232,7 @@ Recorded by the coordinator from H2's handover, before W4a starts. They cover th
 - [x] Propose two or three distinct creative directions. For each, describe the visual metaphor, motion language, palette, and how each scene turns into the next, with a scene-by-scene storyboard and a rough build and performance cost.
 - [x] Recommend one direction.
 - [x] Record the chosen direction in this file. The owner asked for the choice to be made in the plan rather than at a stop.
-- [ ] Build a throwaway prototype of the debt-simplification scene to check the feel, and record the findings (H1). It may adjust details, not the direction.
+- [x] Build a throwaway prototype of the debt-simplification scene to check the feel, and record the findings (H1). It may adjust details, not the direction.
 
 ### 2. Build
 

@@ -87,8 +87,18 @@ body_file="$tmp_dir/body"
 [ -n "$log" ] || log="$tmp_dir/check-nginx.log"
 
 cleanup() {
+  local status=$?
   if [ -n "$container" ] && [ "$keep" -eq 0 ]; then
     docker rm -f "$container" >/dev/null 2>&1 || true
+  fi
+  # The default log lives in the temp dir, so keep a copy when anything failed
+  if [ "$status" -ne 0 ] && [ -f "$log" ] && [ "${log#"$tmp_dir"}" != "$log" ]; then
+    if [ $((pass + fail)) -eq 0 ]; then
+      echo "last lines of the log:" >&2
+      tail -n 30 "$log" >&2 || true
+    fi
+    cp "$log" "${TMPDIR:-/tmp}/check-nginx-last.log"
+    echo "log copied to ${TMPDIR:-/tmp}/check-nginx-last.log" >&2
   fi
   rm -rf "$tmp_dir"
 }
@@ -313,12 +323,8 @@ main() {
     echo "failed groups: $failed_groups"
     echo "failures:"
     grep '^FAIL' "$log" | head -20 || true
+    # cleanup keeps a copy of the default log, which lives in the temp dir
     echo "full detail: $log"
-    # The temp dir (and default log) is removed on exit; keep the log
-    if [ "${log#"$tmp_dir"}" != "$log" ]; then
-      cp "$log" "${TMPDIR:-/tmp}/check-nginx-last.log"
-      echo "log copied to ${TMPDIR:-/tmp}/check-nginx-last.log"
-    fi
     exit 1
   fi
 }

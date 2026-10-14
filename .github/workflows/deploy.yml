@@ -5,6 +5,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+# No token scope by default; each job asks for what it needs.
+permissions: {}
+
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
@@ -33,9 +36,6 @@ jobs:
 
       - name: Verify
         run: npm run verify
-
-      - name: Nginx smoke test
-        run: scripts/check-nginx.sh --tag sb-nginx-check --port 18200
 
   build-and-push:
     needs: verify
@@ -75,7 +75,26 @@ jobs:
             type=sha,prefix=,suffix=-${{ steps.domain.outputs.suffix }}
             type=raw,value=latest-${{ steps.domain.outputs.suffix }}
 
-      - name: Build and push Docker image
+      # Build into the local engine, smoke-test that image, then push it (plan 2.9). The smoke
+      # test lives here rather than in verify because it needs a strict build, and redesign
+      # runs English-first.
+      - name: Build Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          load: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            PUBLIC_DOMAIN=${{ matrix.domain }}
+
+      - name: Nginx smoke test
+        run: scripts/check-nginx.sh --image "$IMAGE" --port 18200
+        env:
+          IMAGE: ${{ fromJSON(steps.meta.outputs.json).tags[0] }}
+
+      # Same inputs as the build above, so every layer comes from its cache
+      - name: Push Docker image
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -89,6 +108,8 @@ jobs:
     needs: [verify, build-and-push]
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout repository

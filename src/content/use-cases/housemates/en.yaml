@@ -1,0 +1,103 @@
+# P34b: English housemates use-case page (brief: tasks/seo-site-expansion-plan.md, "Housemates").
+review:
+  status: checked
+  checker: P34b-draft
+  date: 2026-10-15
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+meta:
+  title: Split household bills with housemates
+  description: Split rent by room size, share energy and groceries equally, and see who owes whom each month. A free way for housemates, flatmates and roommates to keep the count.
+h1: Split household bills with housemates
+navLabel: Housemates
+lead: For the housemate who buys the toilet roll, and the housemates who never see it happen. Side Badger keeps one running count of the rent, the bills and the shop for **housemates, flatmates and roommates**, so nobody has to chase anybody and the fridge can go back to being just a fridge.
+cta:
+  heading: Start with your own house
+  body: Create an account, make a group for the house and send everyone the invite link. This month's bills can go in tonight.
+  button: Create a free account
+scenario:
+  heading: Set up the house
+  body: Make a group for the house, choose the name you want people to see in it, and invite everyone with a link or QR code. The group can be open, where everyone adds and edits, or managed, where new members need an admin's approval and only creators and admins can change expenses, which suits the housemate who keeps the books. Anyone who just wants to watch the numbers can be a viewer, who sees everything and changes nothing. Everyone sees a new expense straight away, so "I'll add it later" has fewer places to hide.
+sections:
+  - heading: Rent and bills
+    body: "Rent rarely divides by four, because bedrooms don't. Split it by percentage, so the big room pays more and the cupboard with a window pays less. Percentages have to add up to 100. Bills everyone uses get an equal split, and a housemate who had no part in an expense can be left out of it. When an equal split leaves an odd penny, it goes to one person at random. There are no recurring bills, so each month you copy last month's rent, change the date and carry on. The example below is one month in a house of four: Jo pays £2,000 rent, split 30%, 25%, 25% and 20% by room size, then Kwame pays £120 for energy, Lena £40 for internet and Matt £80 for groceries, each split equally. Jo ends up owed £1,340, and Side Badger suggests three payments, all to Jo."
+  - heading: The shared shop
+    body: Keep the shared shopping list in the same group as the shopping bills, and tick items off as they reach the trolley. Whoever does the shop adds the receipt total as an expense and splits it equally, or between only the people who will eat the thing. Who keeps buying the oat milk nobody else drinks remains a matter for the house, but at least the expense list will be accurate. The group's permissions decide who can create and edit lists.
+  - heading: Fair ways to split household costs
+    items:
+      - "**Equally** suits what everyone uses about the same, such as internet, cleaning supplies and the communal shop. It is quick, and nobody needs to argue about the maths."
+      - "**By room size** suits rent, because rooms differ and so does what people are willing to pay for them. Agree the percentages once, when someone moves in, and reuse them every month."
+      - "**By use** suits bills where one person clearly uses more, such as a home-office heating bill or a streaming account only two people watch. Leave out the people who had no part in it, or enter exact amounts for each person."
+      - "Whichever you choose, agree it before the first bill rather than after the first argument, and write the rule down somewhere the whole house can see."
+  - heading: When someone moves out
+    body: They settle first. Nobody can leave a group while they owe or are owed money, so the leaver pays or is paid, you record it, and then they go. Keep the group going for the housemates who remain and invite the new person with a link. When the house itself is finished, an admin can lock the group so the numbers stay put, or close it for good, which makes it inaccessible to everyone, so only do that once nobody needs the history.
+exampleAfter: 2
+example:
+  heading: Who owes whom this month
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: Rent
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: Energy
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: Internet
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: Groceries
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: The features a house uses
+faq:
+  heading: Questions
+  items:
+    - q: Can rent repeat automatically?
+      a: No, there are no recurring bills. Copy last month's rent in a couple of taps, change the date and you are done.
+    - q: Can we split by room size?
+      a: Yes, by percentage. Give each housemate a share that reflects their room, as long as the shares add up to 100. [Split expenses](page:feature/split-expenses) covers the other ways to split.
+    - q: What if a housemate moves out owing money?
+      a: They can't leave the group until they have settled, because nobody can leave while they owe or are owed money. The numbers stay honest until everyone is square.
+    - q: Does Side Badger pay the bills?
+      a: No. It keeps the count and suggests a short list of payments. You pay each other however you like, then record it, as [settle up](page:feature/settle-up) explains.
+    - q: Can one housemate keep the books?
+      a: Yes. Make them an admin and use a managed group, where new members need approval and only creators and admins can change expenses.

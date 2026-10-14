@@ -7,6 +7,7 @@
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
+import { OG_RENDER_VERSION, type OgCardId } from '../../pages/og/[card].png';
 import { t, logoLocales, localeConfig, type Locale } from '../../i18n';
 import type { PageId } from '../../site/pages';
 import { absoluteUrl, canonicalFor } from '../../seo/urls';
@@ -19,7 +20,7 @@ interface Props {
   locale: Locale;
   title: string;
   description: string;
-  ogCard?: 'default';
+  ogCard?: OgCardId;
   jsonLd?: JsonLdNode[];
 }
 
@@ -30,12 +31,13 @@ const canonical = page === 'not-found' ? undefined : canonicalFor(page, locale);
 const alternates = alternatesFor(page, locale);
 
 // Social card: language-neutral artwork with the locale's wordmark. The version is the first
-// 8 hex characters of a hash of both inputs (src/pages/og/[card].png.ts), so a change to either
+// 8 hex characters of a hash of both inputs plus the route's render version, so a change to any
 // is fetched under a new URL (D27).
 const logoLocale = logoLocales.includes(locale) ? locale : 'en';
 const cardHash = createHash('sha256')
   .update(readFileSync(resolve('src/assets/og', `${ogCard}.png`)))
   .update(readFileSync(resolve('public/images', logoLocale, 'logo-transparent.png')))
+  .update(OG_RENDER_VERSION)
   .digest('hex')
   .slice(0, 8);
 const ogImage = absoluteUrl(`/og/${ogCard}-${logoLocale}.png?v=${cardHash}`);
@@ -87,8 +89,8 @@ const graph = buildGraph({
 
 <meta name="theme-color" content="#F0FDF4" />
 <link rel="manifest" href="/manifest.json" />
-<link rel="apple-touch-icon" href="/images/logo-face-only-large.png" />
-<link rel="icon" type="image/png" href="/images/logo-face-only-large.png" />
+<link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/images/icons/icon-192.png" />
 
 {graph.length > 0 && <script type="application/ld+json" set:html={serializeJsonLd(graph)} />}
 

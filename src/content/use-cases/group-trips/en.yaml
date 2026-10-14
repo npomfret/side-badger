@@ -1,6 +1,6 @@
 review:
   status: checked
-  checker: P34a-draft
+  checker: P34a-review
   date: 2026-10-15
 claims:
   - expense-splitting.equal-exact-percentage
@@ -23,7 +23,7 @@ meta:
   description: Track who paid what on a group trip, enter costs in the local currency, convert them or not, and settle once at the end. Free, in your browser.
 h1: Split group trip costs, in 140 currencies
 navLabel: Group trips
-lead: Track the villa, the taxi, and the one cocktail round nobody remembers volunteering to buy. Side Badger keeps the running count while you're away, [handles pounds, euros and whatever else turns up](page:feature/multiple-currencies), and gives you a [short list of payments](page:feature/settle-up) when you get home.
+lead: Track the villa, the taxi, and the one cocktail round nobody remembers volunteering to buy. Side Badger keeps the running count while you're away, [handles pounds, euros and 138 other currencies](page:feature/multiple-currencies), and gives you a [short list of payments](page:feature/settle-up) when you get home.
 cta:
   heading: Holiday maths, done before the tan fades
   body: Create a group, send the invite link to the people on the trip, and add costs as they happen.
@@ -37,9 +37,9 @@ sections:
   - heading: While you're away
     body: Add each cost as it happens, in the currency you paid it in. Snap the receipt and Side Badger fills in the total, date and place for you to check; receipt images are read by Google's AI service. Convert the amount at a current exchange rate, which you can change to the rate you actually got, and the original amount stays on the expense. Or leave the euros as euros and decide later. A group can also pick one currency, and new expenses convert into it automatically.
   - heading: Not everyone did everything
-    body: Some people skipped the dinner, some sat out the boat. Leave them out of the costs they weren't part of, and split the rest equally, by exact amounts or by percentage. Nobody pays for the part of the trip they spent asleep.
+    body: Some people skipped the dinner, some sat out the boat. Leave them out of the costs they weren't part of, and split the rest [equally, by exact amounts or by percentage](page:feature/split-expenses). Nobody pays for the part of the trip they spent asleep.
   - heading: Settle once you're home
-    body: Side Badger suggests a short list of payments that settles everyone. Pay each other however you like, then record it. With mixed currencies you choose how it looks, and the Lisbon example below shows both.
+    body: Side Badger suggests a short list of payments that settles everyone. Pay each other however you like, then record it. With mixed currencies, keep each one separate or convert as you go; the Lisbon example below shows both.
   - heading: Stag and hen weekends
     body: A weekend away with a guest of honour needs a little more admin. Make it a managed group, where admins approve new members and only creators and admins can change expenses. Use exact amounts for the guest of honour's share, limit the group to the currencies you're actually using, and lock the group when it's over so the numbers stay put.
 exampleAfter: 4

@@ -1,139 +1,48 @@
 ---
-import { t, getApiBaseUrl, type Locale } from '../i18n';
+import { getEntry, render } from 'astro:content';
+import 'github-markdown-css/github-markdown-light.css';
+import { localeConfig, t, tf, type Locale } from '../i18n';
 
 interface Props {
   title: string;
-  endpoint: string;
+  /** Snapshot id in the `policies` collection, e.g. `privacy-policy`. */
+  policyId: 'privacy-policy' | 'terms-of-service' | 'cookie-policy';
   locale: Locale;
 }
 
-const { title, endpoint, locale } = Astro.props;
-const apiBaseUrl = getApiBaseUrl();
+const { title, policyId, locale } = Astro.props;
 
-// Translations for client-side error handling
-const translations = {
-  loading: t('policy.loading', locale),
-  errorGeneric: t('policy.error.generic', locale),
-  errorConfig: t('policy.error.config', locale),
-  errorUnavailable: t('policy.error.unavailable', locale),
-  errorEmpty: t('policy.error.empty', locale),
-  errorTryAgain: t('policy.error.tryAgain', locale),
-};
+const entry = await getEntry('policies', policyId);
+if (!entry) {
+  throw new Error(`Policy snapshot "${policyId}" is missing. Run "npm run policies:sync".`);
+}
+const { Content } = await render(entry);
+
+const isEnglish = locale === 'en';
+let updated: string;
+try {
+  updated = new Intl.DateTimeFormat(localeConfig[locale].intlCode, { dateStyle: 'long', timeZone: 'UTC' }).format(
+    entry.data.publishedAt
+  );
+} catch {
+  updated = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' }).format(entry.data.publishedAt);
+}
 ---
 
 <section class="legal-page" aria-labelledby="policy-title">
   <div class="container">
     <div class="legal-content glass fade-up">
-      <h1 id="policy-title" class="sr-only">{title}</h1>
-      <div
-        class="policy-content markdown-body"
-        data-api-base={apiBaseUrl}
-        data-endpoint={endpoint}
-        data-translations={JSON.stringify(translations)}
-        aria-live="polite"
-        aria-busy="true"
-      >
-        <div class="loading-state" role="status">
-          <div class="spinner" aria-hidden="true"></div>
-          <p>{translations.loading}</p>
-        </div>
+      <h1 id="policy-title" class="policy-title">{title}</h1>
+      <p class="policy-updated">
+        <time datetime={entry.data.publishedAt.toISOString()}>{tf('policy.lastUpdated', { date: updated }, locale)}</time>
+      </p>
+      {!isEnglish && <p class="policy-notice" role="note">{t('policy.englishOnly', locale)}</p>}
+      <div class="policy-content markdown-body" lang="en" dir="ltr">
+        <Content />
       </div>
     </div>
   </div>
 </section>
-
-<script>
-  import { marked } from 'marked';
-  import { markedSmartypants } from 'marked-smartypants';
-  import DOMPurify from 'dompurify';
-  import 'github-markdown-css/github-markdown-light.css';
-
-  // Configure marked with smart typography
-  marked.use(markedSmartypants());
-
-  interface Translations {
-    loading: string;
-    errorGeneric: string;
-    errorConfig: string;
-    errorUnavailable: string;
-    errorEmpty: string;
-    errorTryAgain: string;
-  }
-
-  function showError(container: Element, message: string, tryAgainText: string) {
-    container.setAttribute('aria-busy', 'false');
-    container.innerHTML = `
-      <div class="error-state" role="alert">
-        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="10"/>
-          <line x1="12" y1="8" x2="12" y2="12"/>
-          <line x1="12" y1="16" x2="12.01" y2="16"/>
-        </svg>
-        <p>${message}</p>
-        <p class="text-muted">${tryAgainText}</p>
-      </div>
-    `;
-  }
-
-  function initPolicyLoaders() {
-    const containers = document.querySelectorAll('.policy-content[data-api-base]');
-
-    containers.forEach(async (container) => {
-      const apiBase = container.getAttribute('data-api-base');
-      const endpoint = container.getAttribute('data-endpoint');
-      const translationsStr = container.getAttribute('data-translations');
-
-      let translations: Translations;
-      try {
-        translations = JSON.parse(translationsStr || '{}');
-      } catch {
-        translations = {
-          loading: 'Loading...',
-          errorGeneric: 'Unable to load policy.',
-          errorConfig: 'Configuration error.',
-          errorUnavailable: 'Policy not available.',
-          errorEmpty: 'Policy content is empty.',
-          errorTryAgain: 'Please try again later or contact support.',
-        };
-      }
-
-      if (!apiBase || !endpoint) {
-        showError(container, translations.errorConfig, translations.errorTryAgain);
-        return;
-      }
-
-      try {
-        const res = await fetch(`${apiBase}${endpoint}`);
-
-        if (!res.ok) {
-          showError(container, `${translations.errorGeneric} (${res.status})`, translations.errorTryAgain);
-          return;
-        }
-
-        const contentType = res.headers.get('content-type') || '';
-        if (contentType.includes('application/json')) {
-          showError(container, translations.errorUnavailable, translations.errorTryAgain);
-          return;
-        }
-
-        const markdown = await res.text();
-
-        if (!markdown || markdown.trim().length === 0) {
-          showError(container, translations.errorEmpty, translations.errorTryAgain);
-          return;
-        }
-
-        container.setAttribute('aria-busy', 'false');
-        const html = marked.parse(markdown) as string;
-        container.innerHTML = DOMPurify.sanitize(html);
-      } catch (err) {
-        showError(container, translations.errorGeneric, translations.errorTryAgain);
-      }
-    });
-  }
-
-  initPolicyLoaders();
-</script>
 
 <style>
   @import '../styles/policy.css';

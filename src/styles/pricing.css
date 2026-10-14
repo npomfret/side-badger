@@ -73,7 +73,7 @@
 
 .plan-features {
   list-style: none;
-  margin: 0 0 var(--space-xl);
+  margin: 0 0 var(--space-md);
   padding: 0;
 }
 
@@ -104,6 +104,14 @@
 .plan-card :global(.btn-full) {
   inline-size: 100%;
   justify-content: center;
+}
+
+/* The receipt-scanning disclosure (site plan D10), under the feature list */
+.plan-note {
+  margin: 0 0 var(--space-xl);
+  max-inline-size: none;
+  font-size: var(--text-sm);
+  color: var(--text-primary);
 }
 
 /* Limits table */
@@ -161,6 +169,15 @@
 @media (max-width: 768px) {
   .pricing-hero {
     padding-block-start: var(--space-3xl);
+  }
+
+  /* A narrower frame and button padding leave the features and the button text room on a phone */
+  .plan-card {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .plan-card :global(.btn-full) {
+    padding-inline: var(--space-lg);
   }
 
   .limits-table th,

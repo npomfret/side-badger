@@ -113,7 +113,7 @@ export class PricingPage {
     ]);
   }
 
-  /** One free offer with its six features and no Pro card. */
+  /** One free offer with its six features, the receipt-scanning disclosure (D10) and no Pro card. */
   async expectOffer(): Promise<void> {
     const offer = this.section('pricing.get.title');
     await expect(offer.getByText(this.string('pricing.free.price'), { exact: true })).toBeVisible();
@@ -126,7 +126,8 @@ export class PricingPage {
       this.string('pricing.free.feature5'),
       this.string('pricing.free.feature6'),
     ]);
-    await expect(this.main.locator('button'), 'no disabled "Pro" button').toHaveCount(0);
+    await expect(offer.getByText(this.string('pricing.free.scanNote'), { exact: true }), 'the receipt-scanning disclosure').toBeVisible();
+    await expect(this.main.getByRole('button'), 'no disabled "Pro" button').toHaveCount(0);
   }
 
   /** The limits table lists every limit, with the 999,999.99 cap, in the brief's order. */
@@ -153,15 +154,32 @@ export class PricingPage {
     await expect(this.termsLink).toHaveAttribute('href', pathFor(this.locale, 'terms'));
   }
 
-  /** "Will it always be free?" quotes the terms' notice commitment, word for word. */
+  private get faqQuestions(): Locator {
+    return this.faqSection.getByRole('heading', { level: 3 });
+  }
+
+  /** The FAQ's answers: the only paragraphs in its section, one per question, in order */
+  private get faqAnswers(): Locator {
+    return this.faqSection.getByRole('paragraph');
+  }
+
+  /** "Will it always be free?" (the second question) quotes the terms' notice commitment, word for word. */
   async expectNoticeCommitmentQuoted(): Promise<void> {
-    const answer = this.faqSection.locator('.faq-entry', {
-      has: this.page.getByRole('heading', { level: 3, name: this.string('pricing.faq.q2.question'), exact: true }),
-    });
-    await expect(answer).toContainText(
+    const quote =
       'We reserve the right to introduce fees, subscriptions, or different service models in the future. ' +
-        'If we do, we will provide you with reasonable notice of any changes.'
+      'If we do, we will provide you with reasonable notice of any changes.';
+    await expect(this.faqQuestions, 'FAQ questions').toHaveText(
+      [1, 2, 3, 4, 5, 6].map(n => this.string(`pricing.faq.q${n}.question` as StringKey))
     );
+    const escaped = quote.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    await expect(this.faqAnswers, 'the second answer quotes the terms').toHaveText([
+      /.+/,
+      new RegExp(escaped),
+      /.+/,
+      /.+/,
+      /.+/,
+      /.+/,
+    ]);
   }
 
   async expectNoBannedClaims(): Promise<void> {
@@ -173,13 +191,16 @@ export class PricingPage {
 
   /** The Pricing nav label is the page's own, and the old hard-coded aria-label is gone. */
   async expectNoHardCodedEnglishLabels(): Promise<void> {
-    await expect(this.page.locator('[aria-label="Pricing plans"]'), 'the old English aria-label').toHaveCount(0);
+    await expect(this.page.getByLabel('Pricing plans', { exact: true }), 'the old English aria-label').toHaveCount(0);
   }
 
   // ----- calls to action -----
 
   /** One register link in the page body, through the launch counter, labelled `plan-free`. */
   async expectOneRegisterLink(): Promise<void> {
+    // Departs from rule 2 (no attribute selectors): "a launch link" is defined by its target, which
+    // a person cannot see, and each launch link has its own text. A registry of launch-link names
+    // would let this count links by name instead.
     await expect(this.main.locator('a[href^="/go/"]'), 'launch links in the page body').toHaveCount(1);
     await expect(this.registerLink).toHaveAttribute('href', '/go/register/?from=pricing&cta=plan-free');
     await expect(this.registerLink).toHaveAttribute('rel', 'nofollow');
@@ -193,8 +214,11 @@ export class PricingPage {
 
   /** The page loaded without the confetti chunk. */
   async expectNoConfettiLoaded(): Promise<void> {
-    // Give the page's own scripts time to run, then look at what was asked for
-    await this.page.waitForLoadState('networkidle');
+    // The page's module scripts have run once the document is complete
+    await expect
+      .poll(() => this.page.evaluate(() => document.readyState), { message: 'the page finished loading', timeout: NAVIGATION_TIMEOUT })
+      .toBe('complete');
+    await expect(this.registerLink, 'the call to action').toBeVisible();
     expect(this.confettiRequests, 'confetti requests before any click').toEqual([]);
   }
 
@@ -210,17 +234,13 @@ export class PricingPage {
 
   async expectFaq(): Promise<void> {
     const questions = [1, 2, 3, 4, 5, 6].map(n => this.string(`pricing.faq.q${n}.question` as StringKey));
-    await expect(this.faqSection.getByRole('heading', { level: 3 }), 'FAQ questions').toHaveText(questions);
+    await expect(this.faqQuestions, 'FAQ questions').toHaveText(questions);
+    await expect(this.faqAnswers, 'one answer per question').toHaveCount(questions.length);
   }
 
-  /** The `FAQPage` JSON-LD holds exactly the visible questions and answers. */
+  /** The `FAQPage` JSON-LD holds exactly the visible questions and answers, in order. */
   async expectFaqJsonLdMatchesVisibleFaq(): Promise<void> {
-    const visible = await this.faqSection.locator('.faq-entry').evaluateAll(entries =>
-      entries.map(entry => ({
-        q: entry.querySelector('h3')!.textContent!.trim(),
-        a: entry.querySelector('p')!.textContent!.trim(),
-      }))
-    );
+    // The JSON-LD is static markup, written once by the build: one read is the data
     const faqPages = await this.page.evaluate(() =>
       Array.from(document.querySelectorAll('script[type="application/ld+json"]')).flatMap(script => {
         const data = JSON.parse(script.textContent ?? '{}');
@@ -230,26 +250,29 @@ export class PricingPage {
     );
     expect(faqPages, 'exactly one FAQPage node').toHaveLength(1);
     const entities = faqPages[0].mainEntity as Array<{ name: string; acceptedAnswer: { text: string } }>;
-    expect(
-      entities.map(entity => ({ q: entity.name, a: entity.acceptedAnswer.text })),
-      'FAQPage JSON-LD against the visible FAQ'
-    ).toEqual(visible);
+    expect(entities, 'FAQPage questions').toHaveLength(6);
+    await expect(this.faqQuestions, 'visible questions against the JSON-LD').toHaveText(entities.map(entity => entity.name));
+    await expect(this.faqAnswers, 'visible answers against the JSON-LD').toHaveText(entities.map(entity => entity.acceptedAnswer.text));
   }
 
   // ----- keyboard -----
 
-  /** From the top of the page, Tab reaches the register link, then the privacy and terms links, in order. */
+  /**
+   * From the heading, Tab reaches the register link, then the privacy and terms links, with no
+   * stop in between. Clicking the heading moves the focus starting point there, past the header.
+   */
   async expectKeyboardReachesBodyLinks(): Promise<void> {
-    const order: Locator[] = [this.registerLink, this.privacyLink, this.termsLink];
-    let stops = 0;
-    for (const [index, target] of order.entries()) {
-      // The header's controls come first; step until the target has focus
-      for (; stops < 40; stops++) {
-        await this.page.keyboard.press('Tab');
-        if (await target.evaluate(el => el === document.activeElement)) break;
-      }
-      await expect(target, `body link ${index + 1} of ${order.length} reachable by Tab`).toBeFocused();
-      await expect(target, 'focused link is on screen').toBeInViewport();
+    await expect(this.h1, 'the page heading').toBeVisible();
+    await this.h1.click();
+    const order: Array<[Locator, string]> = [
+      [this.registerLink, 'the register link'],
+      [this.privacyLink, 'the privacy link'],
+      [this.termsLink, 'the terms link'],
+    ];
+    for (const [target, name] of order) {
+      await this.page.keyboard.press('Tab');
+      await expect(target, `Tab moves to ${name}`).toBeFocused();
+      await expect(target, `${name} is on screen once focused`).toBeInViewport();
     }
   }
 

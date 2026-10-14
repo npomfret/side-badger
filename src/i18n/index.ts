@@ -286,7 +286,7 @@ const baseLocaleConfig = {
     translations: ko,
     inDropdown: true,
     dropdownOrder: 210, // Korean
-    hasLogo: false,
+    hasLogo: true,
   },
   lv: {
     name: 'Latviešu',

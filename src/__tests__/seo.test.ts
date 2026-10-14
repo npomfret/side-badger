@@ -197,3 +197,24 @@ describe('locale metadata used by the head', () => {
     expect(localeConfig.zh.htmlLang).toBe('zh-Hans');
   });
 });
+
+describe('social cards and logo locales (P26f)', () => {
+  it('OG_CARD_IDS matches the artwork files', async () => {
+    const { readdirSync } = await import('node:fs');
+    const { OG_CARD_IDS } = await import('../pages/og/[card].png');
+    const files = readdirSync('src/assets/og')
+      .filter(f => f.endsWith('.png'))
+      .map(f => f.replace(/\.png$/, ''))
+      .sort();
+    expect([...OG_CARD_IDS].sort()).toEqual(files);
+  });
+
+  it('every locale with a logo has its logo files, and ko is one of them', async () => {
+    const { existsSync } = await import('node:fs');
+    const { logoLocales } = await import('../i18n');
+    expect(logoLocales).toContain('ko');
+    for (const l of logoLocales) {
+      expect(existsSync(`public/images/${l}/logo-transparent.png`), l).toBe(true);
+    }
+  });
+});

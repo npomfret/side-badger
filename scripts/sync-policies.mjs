@@ -24,11 +24,15 @@ Options:
   --out DIR      snapshot directory (default: src/content/policies)
   --dry-run      fetch and validate everything, write nothing
   --log FILE     log file for per-request detail (default: a temp file)
+  --selftest     run the built-in checks of the parsing and validation helpers
   --help         show this message
+
+Example: npm run policies:sync -- --dry-run
 
 Each policy needs <origin>/api/policies/<id>/current (version hash, createdAt) and
 <origin>/api/policies/<id>/text (Markdown). Any failure exits 1 and leaves every
-snapshot untouched. An unchanged policy keeps its file, so fetchedAt only moves
+snapshot untouched. Raw HTML and javascript:, vbscript: or data: links are
+rejected, because Astro's Markdown pipeline passes them through unsanitized. An unchanged policy keeps its file, so fetchedAt only moves
 when the text or version changes.
 
 Exit codes: 0 success (changed or not), 1 fetch or validation failure, 2 bad usage.
@@ -41,7 +45,7 @@ function fail(code, message) {
 }
 
 function parseArgs(argv) {
-  const opts = { origin: DEFAULT_ORIGIN, out: DEFAULT_OUT, dryRun: false, log: undefined };
+  const opts = { origin: DEFAULT_ORIGIN, out: DEFAULT_OUT, dryRun: false, log: undefined, selftest: false };
   for (let i = 0; i < argv.length; i++) {
     const arg = argv[i];
     const value = () => {
@@ -53,6 +57,7 @@ function parseArgs(argv) {
       process.stdout.write(USAGE);
       process.exit(0);
     } else if (arg === '--dry-run') opts.dryRun = true;
+    else if (arg === '--selftest') opts.selftest = true;
     else if (arg === '--origin') opts.origin = value();
     else if (arg === '--out') opts.out = path.resolve(value());
     else if (arg === '--log') opts.log = path.resolve(value());
@@ -85,6 +90,26 @@ async function get(url, log) {
 /** The leading level-1 heading goes, because the page renders its own h1. Other headings stay. */
 export function stripLeadingHeading(text) {
   return text.replace(/^\s*#[ \t]+[^\n]*\n+/, '');
+}
+
+const UNSAFE_MARKDOWN = [
+  // A raw HTML tag or comment. Autolinks such as <https://…> and <a@b.c> do not match.
+  { re: /<!--|<\/?[A-Za-z][A-Za-z0-9-]*(?:\s[^>]*)?\/?>/, what: 'raw HTML' },
+  // An inline link, reference definition or autolink with a script-capable scheme
+  { re: /(?:\]\(\s*<?|^\s*\[[^\]]+\]:\s*<?|<)\s*(?:javascript|vbscript|data):/im, what: 'an unsafe link scheme' },
+];
+
+/**
+ * Astro renders snapshots with raw HTML allowed and no URL sanitizing, and the page ships no
+ * DOMPurify, so the sync refuses anything that would reach the HTML unescaped.
+ * Returns a description of the first problem, or undefined when the Markdown is safe.
+ */
+export function findUnsafeMarkdown(markdown) {
+  for (const { re, what } of UNSAFE_MARKDOWN) {
+    const match = markdown.match(re);
+    if (match) return `${what} at "${match[0].trim().slice(0, 40)}"`;
+  }
+  return undefined;
 }
 
 export function renderSnapshot({ policyId, sourceUrl, versionHash, publishedAt, fetchedAt }, body) {
@@ -126,11 +151,13 @@ async function fetchPolicy(origin, policyId, log) {
   if (!body) throw new Error(`${base}/text: body is empty`);
   // The app's text has no level-1 heading today, only `##` sections, so any heading will do
   if (!/^#{1,6}[ \t]/m.test(body)) throw new Error(`${base}/text: no Markdown headings, so it is not a policy`);
+  const unsafe = findUnsafeMarkdown(body);
+  if (unsafe) throw new Error(`${base}/text: contains ${unsafe}`);
 
   return { policyId, sourceUrl: `${base}/text`, versionHash, publishedAt: published.toISOString(), body };
 }
 
-function readExisting(file) {
+export function readExisting(file) {
   try {
     const raw = readFileSync(file, 'utf8');
     const match = raw.match(/^---\n([\s\S]*?)\n---\n\n([\s\S]*)$/);
@@ -142,8 +169,37 @@ function readExisting(file) {
   }
 }
 
+function selftest() {
+  const cases = [
+    ['strips a leading h1', stripLeadingHeading('# Privacy\n\n## One\n') === '## One\n'],
+    ['keeps a leading h2', stripLeadingHeading('## One\ntext') === '## One\ntext'],
+    ['accepts plain policy Markdown', findUnsafeMarkdown('## A\n\n**B** [c](https://x.y/z) <https://x.y> <a@b.c> 5 < 6') === undefined],
+    ['rejects a script tag', findUnsafeMarkdown('## A\n<script>alert(1)</script>') !== undefined],
+    ['rejects an img tag', findUnsafeMarkdown('## A\n<img src=x onerror=alert(1)>') !== undefined],
+    ['rejects an HTML comment', findUnsafeMarkdown('## A\n<!-- x -->') !== undefined],
+    ['rejects a javascript: link', findUnsafeMarkdown('## A\n[x]( javascript:alert(1))') !== undefined],
+    ['rejects a data: reference', findUnsafeMarkdown('## A\n\n[x]: <data:text/html,x>') !== undefined],
+    ['rejects a vbscript: autolink', findUnsafeMarkdown('## A\n<vbscript:x>') !== undefined],
+  ];
+  const dir = mkdtempSync(path.join(tmpdir(), 'sync-policies-selftest-'));
+  try {
+    const meta = { policyId: 'cookie-policy', sourceUrl: 'https://x.y/t', versionHash: 'h', publishedAt: 'p', fetchedAt: 'f' };
+    writeFileSync(path.join(dir, 'a.md'), renderSnapshot(meta, '## A\n\nb\n'));
+    const back = readExisting(path.join(dir, 'a.md'));
+    cases.push(['reads back its own snapshot', back?.fetchedAt === 'f' && back?.body === '## A\n\nb']);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+  const failed = cases.filter(([, ok]) => !ok);
+  for (const [name] of failed) process.stderr.write(`FAIL ${name}\n`);
+  process.stdout.write(`Selftest: ${cases.length - failed.length} of ${cases.length} passed.\n`);
+  process.exit(failed.length ? 1 : 0);
+}
+
 async function main() {
   const opts = parseArgs(process.argv.slice(2));
+  if (opts.selftest) selftest();
+  const started = Date.now();
   const logFile = opts.log ?? path.join(mkdtempSync(path.join(tmpdir(), 'sync-policies-')), 'sync.log');
   mkdirSync(path.dirname(logFile), { recursive: true });
   const log = line => appendFileSync(logFile, `${new Date().toISOString()} ${line}\n`);
@@ -159,6 +215,7 @@ async function main() {
       const existing = readExisting(file);
       const unchanged =
         existing !== undefined &&
+        existing.fetchedAt !== undefined &&
         existing.body === policy.body &&
         existing.raw.includes(`versionHash: "${policy.versionHash}"`) &&
         existing.raw.includes(`publishedAt: "${policy.publishedAt}"`);
@@ -185,10 +242,11 @@ async function main() {
   }
 
   for (const p of planned) process.stdout.write(`  ${p.policyId}: ${p.status}\n`);
+  const took = `${((Date.now() - started) / 1000).toFixed(1)}s`;
   process.stdout.write(
     opts.dryRun
-      ? `Dry run: ${changed.length} of ${planned.length} would change, nothing written.\n`
-      : `Done: ${changed.length} of ${planned.length} written.\n`
+      ? `Dry run: ${changed.length} of ${planned.length} would change, nothing written (${took}). Log: ${logFile}\n`
+      : `Done: ${changed.length} of ${planned.length} written (${took}). Log: ${logFile}\n`
   );
 }
 

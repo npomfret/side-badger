@@ -1,0 +1,31 @@
+---
+/**
+ * The "Beta" label beside a feature page's heading, or beside a card or link that points to one
+ * (where it goes is decided in beta.ts). Plain text, so it is part of the heading's or link
+ * list item's text for screen readers.
+ */
+import { t, type Locale } from '../../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<span class="beta-label">{t('feature.betaLabel', locale)}</span>
+
+<style>
+  .beta-label {
+    display: inline-block;
+    margin-inline-start: var(--space-sm);
+    padding: 0.15em 0.6em;
+    border: 1px solid var(--accent-ink);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    line-height: 1.4;
+    vertical-align: middle;
+    color: var(--accent-ink);
+  }
+</style>

@@ -1,0 +1,112 @@
+---
+/**
+ * The top of a content page (restructure 5.6): the one `h1`, the lead, the first call to action
+ * and, when the page has one, its first product shot. The call to action is a register link
+ * through the launch counter; its text is the shared "Create a free account" string.
+ */
+import LaunchAppCta from '../cta/LaunchAppCta.astro';
+import { t, type Locale } from '../../i18n';
+import BetaLabel from './BetaLabel.astro';
+import RichText from './RichText.astro';
+import Screenshot from './Screenshot.astro';
+
+interface Props {
+  h1: string;
+  lead: string;
+  pageId: string;
+  locale: Locale;
+  /** A shot id and its alt text; loads eagerly because it is the first image */
+  shot?: { id: string; alt: string };
+  /** Show the Beta label: the page is about a beta feature (beta.ts) */
+  beta?: boolean;
+  /** Extra intro paragraph (hubs) */
+  intro?: string;
+}
+
+const { h1, lead, pageId, locale, shot, beta = false, intro } = Astro.props;
+---
+
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container page-hero__grid">
+    <div class="page-hero__text">
+      <h1 id="page-title" class="page-title">
+        {h1}
+        {beta && <BetaLabel locale={locale} />}
+      </h1>
+      <RichText as="p" class="page-hero__lead" text={lead} locale={locale} />
+      {intro && <RichText as="p" class="page-hero__intro" text={intro} locale={locale} />}
+      <div class="page-hero__cta">
+        <LaunchAppCta target="register" cta="hero" pageId={pageId} locale={locale} confetti>
+          {t('home.hero.ctaPrimary', locale)}
+        </LaunchAppCta>
+      </div>
+    </div>
+    {shot && (
+      <div class="page-hero__shot">
+        <Screenshot id={shot.id} locale={locale} alt={shot.alt} eager />
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .page-hero {
+    padding-block: var(--space-xl) var(--space-2xl);
+  }
+
+  .page-hero__grid {
+    display: grid;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  .page-hero__grid:has(.page-hero__shot :global(img)) {
+    grid-template-columns: repeat(auto-fit, minmax(min(24rem, 100%), 1fr));
+  }
+
+  .page-title {
+    margin: 0 0 var(--space-md);
+    font-size: var(--text-4xl);
+    line-height: var(--heading-line-height);
+    color: var(--text-heading);
+    overflow-wrap: anywhere;
+  }
+
+  .page-hero__text :global(.page-hero__lead) {
+    margin: 0 0 var(--space-md);
+    max-inline-size: 60ch;
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+  }
+
+  .page-hero__text :global(.page-hero__intro) {
+    margin: 0 0 var(--space-md);
+    max-inline-size: 60ch;
+  }
+
+  .page-hero__cta {
+    margin-block-start: var(--space-lg);
+  }
+
+  .page-hero__shot :global(img) {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+  }
+</style>
+
+<style is:global>
+  /*
+   * Links in running text on content pages (rich-text links, related-page links). The site's
+   * link colour is too close to its body text to tell them apart by colour alone (WCAG 1.4.1), so
+   * they are underlined. Every content layout renders PageHero, so the rule lives here.
+   */
+  .content-page :is(p, li) a:not(.btn) {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    font-weight: 600;
+  }
+</style>

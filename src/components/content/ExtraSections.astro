@@ -1,0 +1,37 @@
+---
+/**
+ * The optional `sections[]` of an entry: further H2 sections from a brief's outline, each a
+ * paragraph, a list, or both.
+ */
+import type { Locale } from '../../i18n';
+import ContentSection from './ContentSection.astro';
+import RichText from './RichText.astro';
+
+interface Props {
+  sections?: readonly { heading: string; body?: string; items?: readonly string[] }[];
+  locale: Locale;
+}
+
+const { sections = [], locale } = Astro.props;
+---
+
+{sections.map((section, index) => (
+  <ContentSection heading={section.heading} id={`section-${index + 1}`}>
+    {section.body && <RichText as="p" text={section.body} locale={locale} />}
+    {section.items && (
+      <ul class="extra-list">
+        {section.items.map(item => <li><RichText text={item} locale={locale} /></li>)}
+      </ul>
+    )}
+  </ContentSection>
+))}
+
+<style>
+  .extra-list {
+    margin: 0;
+    padding-inline-start: var(--space-lg);
+    display: grid;
+    gap: var(--space-sm);
+    max-inline-size: 70ch;
+  }
+</style>

@@ -1,0 +1,74 @@
+---
+/**
+ * A grid of link cards: a hub's child pages, a feature's use cases, a use case's features. The
+ * card title (an `h3` under the section's `h2`) is the link; the description is the page's
+ * `meta.description`. A card whose page covers a beta feature carries the beta label.
+ */
+import type { Locale } from '../../i18n';
+import BetaLabel from './BetaLabel.astro';
+
+interface Card {
+  href: string;
+  title: string;
+  description?: string;
+  /** The card's page covers a beta feature (beta.ts) */
+  beta?: boolean;
+}
+
+interface Props {
+  cards: readonly Card[];
+  locale: Locale;
+}
+
+const { cards, locale } = Astro.props;
+---
+
+{cards.length > 0 && (
+  <ul class="card-grid" role="list">
+    {cards.map(card => (
+      <li class="card glass">
+        <h3 class="card__title">
+          <a href={card.href}>{card.title}</a>
+          {card.beta && <BetaLabel locale={locale} />}
+        </h3>
+        {card.description && <p class="card__description">{card.description}</p>}
+      </li>
+    ))}
+  </ul>
+)}
+
+<style>
+  .card-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+    gap: var(--space-lg);
+  }
+
+  .card {
+    position: relative;
+    padding: var(--space-lg);
+  }
+
+  .card__title {
+    margin: 0 0 var(--space-sm);
+    font-size: var(--text-xl);
+    line-height: var(--heading-line-height);
+    overflow-wrap: anywhere;
+  }
+
+  /* The whole card is the link target */
+  .card__title a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  .card__description {
+    margin: 0;
+    color: var(--text-secondary);
+    overflow-wrap: anywhere;
+  }
+</style>

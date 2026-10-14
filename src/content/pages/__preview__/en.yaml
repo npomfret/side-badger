@@ -1,0 +1,33 @@
+# Layout fixture for HubLayout (P24). Built only under PREVIEW_UNPUBLISHED=1; the page is
+# registered in src/site/preview-pages.ts. The hub's cards come from its child pages in the
+# registry: the feature and use-case previews. The how-it-works fixture is how-it-works.yaml.
+review:
+  status: reviewed
+  reviewer: Layout fixture
+  date: 2026-01-01
+claims: []
+meta:
+  title: Preview hub page, every block of the layout
+  description: A fixture page that fills every block of the hub layout, with cards for its child pages.
+h1: A hub page that lists its children
+lead: Every card below is a page the hub's registry entry names as its child. This is a layout fixture.
+intro: Hubs add an introduction, so the **first screen** says what the section is for before the cards start.
+cta:
+  heading: Not sure where to start?
+  body: Create an account and try it with a small group first.
+  button: Create a free account
+cardsHeading: Everything in this section
+sections:
+  - heading: What this section leaves out
+    items:
+      - Paying through the app. Side Badger keeps the count and you pay however you like.
+      - Splitting by item.
+faq:
+  heading: Questions
+  items:
+    - q: Can I pay through Side Badger?
+      a: No. Pay however you like, then record the payment.
+    - q: Is there a mobile app?
+      a: It runs in the browser. Add it to your home screen.
+    - q: Does it work offline?
+      a: No, it needs a connection.

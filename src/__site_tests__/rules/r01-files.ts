@@ -1,7 +1,7 @@
 /** Rule 1: every HTML file maps to a registry page and locale (or is 404.html), every built page and locale has a file, and no alias directories exist. */
 import { localeAliasMap, type Locale } from '../../i18n';
-import { builtPages } from '../../site/pages';
-import { pathsFor } from '../../site/routes';
+import { builtPages, type PageDef } from '../../site/pages';
+import { contentFileFor, pathsFor } from '../../site/routes';
 import { localizedPath } from '../../seo/urls';
 import type { Site } from '../lib/site';
 
@@ -10,13 +10,29 @@ export interface BuiltPair {
   locale: Locale;
 }
 
+// Only the file names matter, so the modules are never loaded
+const englishEntries = import.meta.glob('/src/content/**/en.yaml', { query: '?url' });
+
+/**
+ * Whether the build makes routes for a page at all. Under PREVIEW_UNPUBLISHED=1 an unpublished
+ * page whose English entry has not been written yet gets none: the content route files skip it
+ * (`layoutPaths` in src/components/content/page-content.ts), so a preview build works while the
+ * content packages are still writing. A published page without its entry fails the build itself.
+ */
+function routed(page: PageDef): boolean {
+  if (page.published || !page.content) return true;
+  return contentFileFor(page, 'en')! in englishEntries;
+}
+
 /**
  * Every page/locale pair the build should produce, from the registry. `pathsFor` already leaves
  * out the pairs English-first mode (D38) excludes, the unpublished pages, and the pseudo-locales
  * unless PREVIEW_PSEUDO=1, so those are neither expected nor required.
  */
 export function builtPairs(): BuiltPair[] {
-  return builtPages().flatMap(page => pathsFor(page.id).map(path => path.props));
+  return builtPages()
+    .filter(routed)
+    .flatMap(page => pathsFor(page.id).map(path => path.props));
 }
 
 export function fileFor(pageId: string, locale: Locale): string {

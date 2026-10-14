@@ -1,0 +1,17 @@
+---
+// How it works (restructure 6.1). The content entry is `pages/how-it-works/<locale>.yaml`.
+import HowItWorksLayout from '../../layouts/HowItWorksLayout.astro';
+import { layoutPaths, loadPageContent } from '../../components/content/page-content';
+import type { SitePageData } from '../../content/schemas';
+import type { Locale } from '../../i18n';
+
+export async function getStaticPaths() {
+  return layoutPaths('how-it-works', id => id === 'how-it-works');
+}
+
+const { pageId, locale } = Astro.props as { pageId: string; locale: Locale };
+// Never falls back to English: a missing entry throws
+const data = await loadPageContent<Extract<SitePageData, { requirements: unknown }>>(pageId, locale);
+---
+
+<HowItWorksLayout data={data} pageId={pageId} locale={locale} />

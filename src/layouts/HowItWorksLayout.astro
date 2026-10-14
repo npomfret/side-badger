@@ -1,0 +1,87 @@
+---
+/**
+ * How it works (restructure 5.6, D23): the hero, the ordered steps with their screenshots (each
+ * step an H2, as the brief's outline has it), what you need, an optional worked example, further
+ * sections, an optional FAQ, and the closing call to action.
+ *
+ * JSON-LD (2.5): WebPage about the app, plus FAQPage when the page shows a FAQ. The page is one
+ * level below Home, so there is no breadcrumb (D22).
+ */
+import BaseLayout from './BaseLayout.astro';
+import ContentSection from '../components/content/ContentSection.astro';
+import CtaBand from '../components/content/CtaBand.astro';
+import ExtraSections from '../components/content/ExtraSections.astro';
+import FaqList from '../components/content/FaqList.astro';
+import PageHero from '../components/content/PageHero.astro';
+import RelatedPages from '../components/content/RelatedPages.astro';
+import RichText from '../components/content/RichText.astro';
+import WorkedExample from '../components/content/WorkedExample.astro';
+import WorkflowSteps from '../components/content/WorkflowSteps.astro';
+import { faqNode, webPageNode } from '../components/content/layout-jsonld';
+import { relatedCards } from '../components/content/page-content';
+import type { SitePageData } from '../content/schemas';
+import type { Locale } from '../i18n';
+import { requirePage, type PageId } from '../site/pages';
+
+type HowItWorksData = Extract<SitePageData, { requirements: unknown }>;
+
+interface Props {
+  data: HowItWorksData;
+  pageId: string;
+  locale: Locale;
+}
+
+const { data, pageId, locale } = Astro.props;
+const page = requirePage(pageId);
+const others = await relatedCards(pageId, locale);
+---
+
+<BaseLayout
+  page={pageId as PageId}
+  title={data.meta.title}
+  description={data.meta.description}
+  locale={locale}
+  ogCard="how-it-works"
+  jsonLd={[webPageNode(pageId, locale), ...faqNode(data.faq)]}
+>
+  <article class="content-page" data-page-type="how-it-works" data-unpublished={page.published ? undefined : ''}>
+    <PageHero h1={data.h1} lead={data.lead} pageId={pageId} locale={locale} />
+
+    {/* Each step is its own h2, so the list needs no landmark (an h1-named region would repeat the hero) */}
+    <div class="hiw-steps" data-section="steps">
+      <div class="container">
+        <WorkflowSteps steps={data.steps} locale={locale} titleLevel="h2" />
+      </div>
+    </div>
+
+    <ContentSection heading={data.requirements.heading} id="requirements">
+      <ul class="requirements">
+        {data.requirements.items.map(item => <li><RichText text={item} locale={locale} /></li>)}
+      </ul>
+    </ContentSection>
+
+    {data.example && <WorkedExample example={data.example} locale={locale} />}
+
+    <ExtraSections sections={data.sections} locale={locale} />
+
+    {data.faq && <FaqList faq={data.faq} locale={locale} />}
+
+    <RelatedPages links={others} locale={locale} />
+
+    <CtaBand cta={data.cta} pageId={pageId} locale={locale} />
+  </article>
+</BaseLayout>
+
+<style>
+  .hiw-steps {
+    padding-block: var(--space-xl);
+  }
+
+  .requirements {
+    margin: 0;
+    padding-inline-start: var(--space-lg);
+    display: grid;
+    gap: var(--space-sm);
+    max-inline-size: 70ch;
+  }
+</style>

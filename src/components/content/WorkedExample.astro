@@ -1,0 +1,380 @@
+---
+/**
+ * A worked example (restructure 3.4, D23). Every number on it is computed here, at build time,
+ * from the example data in the content entry with `computeExample` (`src/lib/settle.ts`), so the
+ * balances and payments in 39 languages cannot drift from the arithmetic.
+ *
+ * - One currency: the expenses (with each person's share), the net balances, the payments Side
+ *   Badger suggests, and, when that is a shorter list, the payments it replaces (paying each
+ *   person back directly: the "before" of the settle-up diagram).
+ * - Conversion (`conversion.rates`): both views the briefs call for. The currencies kept separate
+ *   (one ledger each, never netted against each other) and the converted ledger, with each
+ *   illustrative rate labelled as such.
+ */
+import { computeExample, type Ledger } from '../../lib/settle';
+import type { WorkedExampleData } from '../../content/schemas';
+import { localeConfig, t, tf, type Locale, type TranslationKey } from '../../i18n';
+import { moneyFormatter } from './money';
+
+interface Props {
+  example: WorkedExampleData;
+  locale: Locale;
+  /** Unique on the page */
+  id?: string;
+}
+
+const { example, locale, id = 'worked-example' } = Astro.props;
+const { heading, ...data } = example;
+
+const result = computeExample(data);
+const money = moneyFormatter(localeConfig[locale].intlCode);
+const fill = (key: TranslationKey, params: Record<string, string | number>) => tf(key, params, locale);
+const names = Object.fromEntries(example.people.map(person => [person.id, person.name]));
+const converted = example.conversion !== undefined;
+
+const splitWord = {
+  equal: t('example.splitEqual', locale),
+  exact: t('example.splitExact', locale),
+  percent: t('example.splitPercent', locale),
+} as const;
+
+const currencyName = (code: string) => {
+  try {
+    return new Intl.DisplayNames(localeConfig[locale].intlCode, { type: 'currency' }).of(code) ?? code;
+  } catch {
+    return code;
+  }
+};
+
+const expenses = example.expenses.map((expense, index) => {
+  const currency = expense.currency ?? example.currency;
+  const participants = Object.entries(result.shares[index]).filter(([, minor]) => minor > 0);
+  return {
+    paid: fill('example.paid', {
+      payer: names[expense.payer],
+      amount: money.major(expense.amount, currency),
+      item: expense.label,
+    }),
+    split: fill('example.split', {
+      method: splitWord[expense.split.method],
+      count: participants.length,
+    }),
+    // Shares are in the main ledger's currency, so a conversion example leaves them to the views
+    shares: converted
+      ? []
+      : participants.map(([person, minor]) => ({
+          name: names[person],
+          amount: money.minor(minor, example.currency),
+        })),
+  };
+});
+
+const rates = Object.entries(example.conversion?.rates ?? {}).map(([from, rate]) => ({
+  text: fill('example.illustrativeRate', {
+    from: money.major(1, from),
+    to: money.major(rate, example.currency),
+  }),
+}));
+
+function view(ledger: Ledger) {
+  return {
+    currency: ledger.currency,
+    balances: Object.entries(ledger.balances).map(([person, minor]) => ({
+      name: names[person],
+      amount: money.minor(minor, ledger.currency, { signed: true }),
+    })),
+    transfers: ledger.transfers.map(transfer =>
+      fill('example.transfer', {
+        from: names[transfer.from],
+        to: names[transfer.to],
+        amount: money.minor(transfer.minor, ledger.currency),
+      })
+    ),
+    // The "before": only worth showing when the short list really is shorter
+    pairwise:
+      ledger.pairwise.length > ledger.transfers.length
+        ? ledger.pairwise.map(transfer =>
+            fill('example.transfer', {
+              from: names[transfer.from],
+              to: names[transfer.to],
+              amount: money.minor(transfer.minor, ledger.currency),
+            })
+          )
+        : [],
+  };
+}
+
+const views = converted
+  ? [
+      {
+        key: 'separate',
+        title: t('example.separate', locale),
+        ledgers: result.separate.map(view),
+      },
+      {
+        key: 'converted',
+        title: fill('example.converted', { currency: example.currency }),
+        ledgers: [view(result)],
+      },
+    ]
+  : [{ key: 'single', title: undefined, ledgers: [view(result)] }];
+const showCurrencyNames = converted;
+const headingId = `${id}-heading`;
+---
+
+<section class="worked-example" aria-labelledby={headingId} data-example-transfers={result.transfers.length}>
+  <div class="container">
+    {heading
+      ? <h2 id={headingId}>{heading}</h2>
+      : <h2 id={headingId} class="sr-only">{t('example.expenses', locale)}</h2>}
+    <div class="we-card glass">
+      <h3>{t('example.expenses', locale)}</h3>
+      <ul class="we-expenses" role="list">
+        {expenses.map(expense => (
+          <li>
+            <p class="we-paid">{expense.paid}</p>
+            <p class="we-split">{expense.split}</p>
+            {expense.shares.length > 0 && (
+              <ul class="we-shares" role="list">
+                {expense.shares.map(share => (
+                  <li><span class="we-person">{share.name}</span> <span class="we-amount">{share.amount}</span></li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+
+      {rates.length > 0 && (
+        <ul class="we-rates" role="list">
+          {rates.map(rate => <li>{rate.text}</li>)}
+        </ul>
+      )}
+
+      {views.map(v => (
+        <div class="we-view" data-view={v.key}>
+          {v.title && <h3 class="we-view-title" id={`${id}-${v.key}`}>{v.title}</h3>}
+          {v.ledgers.map(ledger => {
+            // A separate ledger is headed by its currency, so its column headings sit one level lower
+            const named = showCurrencyNames && v.key === 'separate';
+            const Sub = named ? 'h5' : 'h4';
+            const prefix = [v.title ? `${id}-${v.key}` : '', named ? `${id}-${v.key}-${ledger.currency}` : ''].filter(Boolean).join(' ');
+            const labelled = (own: string) => [prefix, `${id}-${v.key}-${ledger.currency}-${own}`].filter(Boolean).join(' ');
+            return (
+            <div class="we-ledger">
+              {named && <h4 class="we-currency" id={`${id}-${v.key}-${ledger.currency}`}>{currencyName(ledger.currency)}</h4>}
+              <div class="we-columns">
+                <div>
+                  <Sub id={`${id}-${v.key}-${ledger.currency}-balances`}>{t('example.balances', locale)}</Sub>
+                  <dl class="we-balances">
+                    {ledger.balances.map(balance => (
+                      <div>
+                        <dt>{balance.name}</dt>
+                        <dd>{balance.amount}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+                {ledger.pairwise.length > 0 && (
+                  <div class="we-before">
+                    <Sub id={`${id}-${v.key}-${ledger.currency}-pairwise`}>{t('example.pairwise', locale)}</Sub>
+                    <ol aria-labelledby={labelled('pairwise')}>{ledger.pairwise.map(line => <li>{line}</li>)}</ol>
+                  </div>
+                )}
+                <div class="we-after">
+                  <Sub id={`${id}-${v.key}-${ledger.currency}-transfers`}>{t('example.transfers', locale)}</Sub>
+                  {ledger.transfers.length > 0
+                    ? <ol aria-labelledby={labelled('transfers')}>{ledger.transfers.map(line => <li>{line}</li>)}</ol>
+                    : null}
+                </div>
+              </div>
+            </div>
+            );
+          })}
+        </div>
+      ))}
+
+      <p class="we-hint">{t('example.balanceHint', locale)}</p>
+      <p class="we-note">{t('example.note', locale)}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .worked-example {
+    padding-block: var(--space-2xl);
+  }
+
+  /* Same size and spacing as every other section heading (ContentSection) */
+  .worked-example h2 {
+    margin-block: 0 var(--space-lg);
+    font-size: var(--text-3xl);
+    line-height: var(--heading-line-height);
+    overflow-wrap: anywhere;
+  }
+
+  .we-card {
+    padding: var(--space-xl);
+    container-type: inline-size;
+  }
+
+  .we-card h3 {
+    font-size: var(--text-xl);
+    margin-block: 0 var(--space-md);
+  }
+
+  .we-card h4,
+  .we-card h5 {
+    font-size: var(--text-base);
+    margin-block: 0 var(--space-sm);
+    color: var(--text-heading);
+  }
+
+  ul[role='list'],
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .we-expenses {
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .we-expenses > li {
+    padding-block-end: var(--space-md);
+    border-block-end: 1px solid var(--glass-border);
+  }
+
+  .we-paid {
+    margin: 0;
+    font-weight: 600;
+    color: var(--text-heading);
+    overflow-wrap: anywhere;
+  }
+
+  .we-split {
+    margin: var(--space-xs) 0 0;
+    color: var(--text-secondary);
+    overflow-wrap: anywhere;
+  }
+
+  .we-shares {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs) var(--space-md);
+    margin-block-start: var(--space-sm);
+    font-size: var(--text-sm);
+  }
+
+  .we-person {
+    color: var(--text-secondary);
+  }
+
+  .we-amount {
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+  }
+
+  .we-rates {
+    margin-block-start: var(--space-md);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--accent-ink);
+  }
+
+  .we-view {
+    margin-block-start: var(--space-xl);
+  }
+
+  .we-view-title {
+    padding-block-start: var(--space-md);
+    border-block-start: 1px solid var(--glass-border);
+  }
+
+  .we-ledger + .we-ledger {
+    margin-block-start: var(--space-lg);
+  }
+
+  /*
+   * Balances, then the direct payments (when shown), then the suggested ones. On a wide card the
+   * three keep fixed columns, so the ledgers of a conversion example line up with each other
+   * whether or not a ledger has a "before" list.
+   */
+  .we-columns {
+    display: grid;
+    gap: var(--space-lg);
+  }
+
+  @container (min-width: 40rem) {
+    .we-columns {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .we-after {
+      grid-column: 3;
+    }
+  }
+
+  .we-card .we-currency {
+    font-size: var(--text-lg);
+    margin-block-end: var(--space-md);
+  }
+
+  .we-balances {
+    margin: 0;
+    display: grid;
+    gap: var(--space-xs);
+  }
+
+  .we-balances > div {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-md);
+  }
+
+  .we-balances dt {
+    overflow-wrap: anywhere;
+  }
+
+  .we-balances dd {
+    margin: 0;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .we-before ol,
+  .we-after ol {
+    display: grid;
+    gap: var(--space-xs);
+    counter-reset: payment;
+  }
+
+  .we-before li,
+  .we-after li {
+    overflow-wrap: anywhere;
+    counter-increment: payment;
+  }
+
+  .we-after li {
+    font-weight: 600;
+    color: var(--accent-ink);
+  }
+
+  .we-hint,
+  .we-note {
+    margin: var(--space-lg) 0 0;
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+  }
+
+  .we-hint {
+    color: var(--text-secondary);
+  }
+
+  .we-note {
+    margin-block-start: var(--space-xs);
+  }
+</style>

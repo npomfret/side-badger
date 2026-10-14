@@ -1,0 +1,49 @@
+---
+/**
+ * The page's FAQ (site plan "Rules for every brief"): visible on the page, in full, and mirrored
+ * in the `FAQPage` JSON-LD with identical text. Layouts build the JSON-LD with `faqNode()` from
+ * the same `faq` data and pass it to BaseLayout's `jsonLd`. Questions are `h3` under an `h2`.
+ */
+import type { Locale } from '../../i18n';
+import ContentSection from './ContentSection.astro';
+import RichText from './RichText.astro';
+
+interface Props {
+  faq: { heading: string; items: readonly { q: string; a: string }[] };
+  locale: Locale;
+}
+
+const { faq, locale } = Astro.props;
+---
+
+<ContentSection heading={faq.heading} id="faq">
+  <div class="faq-list">
+    {faq.items.map(item => (
+      <div class="faq-entry glass">
+        <h3>{item.q}</h3>
+        <RichText as="p" text={item.a} locale={locale} />
+      </div>
+    ))}
+  </div>
+</ContentSection>
+
+<style>
+  .faq-list {
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .faq-entry {
+    padding: var(--space-lg);
+  }
+
+  .faq-entry h3 {
+    margin: 0 0 var(--space-sm);
+    font-size: var(--text-xl);
+    overflow-wrap: anywhere;
+  }
+
+  .faq-entry :global(p) {
+    margin: 0;
+  }
+</style>

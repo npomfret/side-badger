@@ -1,0 +1,73 @@
+# Layout fixture for HowItWorksLayout (P24). Built only under PREVIEW_UNPUBLISHED=1; the page is
+# registered in src/site/preview-pages.ts. It shares a directory with the hub fixture (en.yaml)
+# because a directory holds one en.yaml and the sitePages collection has two shapes.
+review:
+  status: reviewed
+  reviewer: Layout fixture
+  date: 2026-01-01
+claims: []
+meta:
+  title: Preview how-it-works page, every block of the layout
+  description: A fixture page that fills every block of the how-it-works layout, with four steps and a worked example.
+h1: How it works, as a layout fixture
+lead: Four steps from "I'll get this one" to "we're square". This is a layout fixture.
+cta:
+  heading: Four steps. No spreadsheet.
+  body: Create an account and start a group. The first expense takes about a minute.
+  button: Create a free account
+steps:
+  - title: Create a group
+    body: Name it, pick a currency, and decide who can add expenses.
+    shot: S02
+    shotAlt: The create-group dialog with currency restrictions open
+  - title: Invite your people
+    body: Send a link or show a QR code. They join once they have an account.
+    shot: S03
+    shotAlt: The invite dialog showing a QR code
+  - title: Add expenses as they happen
+    body: Record who paid and how it splits. Everyone sees it straight away.
+    shot: S05
+    shotAlt: The expense form with a percentage split
+  - title: Settle up
+    body: Pay however you like, outside the app, and record it inside. See [the preview feature](page:feature/preview) for the detail.
+    shot: S11
+    shotAlt: The payment form with quick-settle buttons
+requirements:
+  heading: What you need
+  items:
+    - A free account with a verified email.
+    - To be 18 or over.
+    - A modern browser on a phone or computer.
+example:
+  heading: Three friends after a night out
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: dinner
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: the taxi
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: 39 languages, and built for more people
+    body: The interface is available in 39 languages, including right-to-left scripts.
+faq:
+  heading: Questions
+  items:
+    - q: Does everyone need an account?
+      a: Yes, a free one. Verify your email before adding anything.
+    - q: Does Side Badger move money?
+      a: No. It keeps the count.
+    - q: How many people can join a group?
+      a: Up to 50.

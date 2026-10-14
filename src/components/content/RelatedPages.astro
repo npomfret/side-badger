@@ -1,0 +1,48 @@
+---
+/**
+ * Links to other pages: the registry's `related` list and the feature and use-case cross-links
+ * (restructure 5.4). Pass the cards from `relatedCards()`. Renders nothing when there are none.
+ * With a `heading` it is its own section; with none, the shared "Related pages" heading.
+ */
+import { t, type Locale } from '../../i18n';
+import BetaLabel from './BetaLabel.astro';
+import ContentSection from './ContentSection.astro';
+
+interface Props {
+  links: readonly { href: string; title: string; beta?: boolean }[];
+  locale: Locale;
+  heading?: string;
+  id?: string;
+}
+
+const { links, locale, heading = t('related.heading', locale), id = 'related' } = Astro.props;
+---
+
+{links.length > 0 && (
+  <ContentSection heading={heading} id={id}>
+    <ul class="related-pages">
+      {links.map(link => (
+        <li>
+          <a href={link.href}>{link.title}</a>
+          {link.beta && <BetaLabel locale={locale} />}
+        </li>
+      ))}
+    </ul>
+  </ContentSection>
+)}
+
+<style>
+  .related-pages {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-lg);
+  }
+
+  .related-pages a {
+    overflow-wrap: anywhere;
+    color: var(--accent-ink);
+  }
+</style>

@@ -1,0 +1,60 @@
+# Layout fixture for UseCasePageLayout (P24). Built only under PREVIEW_UNPUBLISHED=1; the page is
+# registered in src/site/preview-pages.ts. Filler copy that exercises every block of the layout.
+review:
+  status: reviewed
+  reviewer: Layout fixture
+  date: 2026-01-01
+claims: []
+meta:
+  title: Preview use-case page, every block of the layout
+  description: A fixture page that fills every block of the use-case layout, with a worked example that turns six payments into two.
+h1: A use-case page with a worked example
+lead: Four housemates, one month of bills, and a **short list** of payments. This is a layout fixture.
+cta:
+  heading: Start with your own house
+  body: Create an account, add the housemates and send the invite link.
+  button: Create a free account
+scenario:
+  heading: Four people, three bills
+  body: One person pays the electricity, another the internet, a third the groceries. By the end of the month everybody owes somebody something, and nobody remembers what.
+example:
+  heading: One month of bills
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: electricity
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: internet
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: groceries
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+sections:
+  - heading: When someone moves out
+    body: They settle first, then leave. Lock or close the group when the house is done.
+featuresHeading: The features this uses
+faq:
+  heading: Questions
+  items:
+    - q: Can rent repeat automatically?
+      a: No. Copy last month's expense in a couple of taps.
+    - q: Can we split by room size?
+      a: Yes, by percentage.
+    - q: Does Side Badger pay the bills?
+      a: No. It keeps the count, and you pay however you like.

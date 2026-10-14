@@ -34,6 +34,9 @@ jobs:
       - name: Verify
         run: npm run verify
 
+      - name: Nginx smoke test
+        run: scripts/check-nginx.sh --tag sb-nginx-check --port 18200
+
   build-and-push:
     needs: verify
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'

@@ -71,6 +71,13 @@
 .logo-glow-wrapper img {
   position: relative;
   z-index: 1;
+  height: 100px;
+  width: auto;
+}
+
+.site-footer .logo img {
+  height: 28px;
+  width: auto;
 }
 
 .nav-links {
@@ -186,7 +193,8 @@ main {
     gap: var(--space-sm);
   }
 
-  .site-header .logo img {
+  .site-header .logo img,
+  .site-header .logo-glow-wrapper img {
     height: 60px;
   }
 

@@ -24,7 +24,7 @@ const smallLogoPath = `/images/${logoLocale}/logo-transparent-small.png`;
         <div class="logo-glow-wrapper">
           <div class="logo-glow-spacer"></div>
           <div class="logo-glow"></div>
-          <img src={smallLogoPath} alt={t('header.logoText', locale) + ' logo'} height="100" />
+          <img src={smallLogoPath} alt={t('header.logoText', locale) + ' logo'} width="400" height={logoLocale === 'en' ? 126 : 125} />
         </div>
       </a>
 

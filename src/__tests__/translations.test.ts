@@ -298,7 +298,7 @@ describe('Translation Files Integrity', () => {
         for (const locale of localesToTest) {
           it(`${locale} preserves HTML tags in ${key}`, () => {
             const translation = translations[locale as keyof typeof translations];
-            const value = translation[key];
+            const value = (translation as Record<string, string>)[key];
             if (!value) return; // Missing key caught by completeness test
 
             const translatedTags = [...(value as string).matchAll(/<[^>]+>/g)].map(m => m[0]).sort();
@@ -323,7 +323,7 @@ describe('Translation Files Integrity', () => {
         const issues: string[] = [];
 
         for (const key of Object.keys(translation)) {
-          const value = translation[key] as string;
+          const value = (translation as Record<string, string>)[key];
           if (!value) continue;
 
           // Check leading/trailing whitespace (except allowed keys)

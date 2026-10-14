@@ -26,6 +26,7 @@ scp package.json $SERVER:$REMOTE_DIR/
 scp package-lock.json $SERVER:$REMOTE_DIR/ 2>/dev/null || true
 scp astro.config.mjs $SERVER:$REMOTE_DIR/
 scp tsconfig.json $SERVER:$REMOTE_DIR/
+scp vitest.site.config.ts $SERVER:$REMOTE_DIR/
 
 # Copy source directories
 echo "📦 Copying source files..."

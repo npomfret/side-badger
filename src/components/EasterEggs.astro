@@ -5,7 +5,8 @@
 
 <script>
   // canvas-confetti is imported on first use, so pages that never trigger an egg never load it
-  type Confetti = typeof import('canvas-confetti').default;
+  type Confetti = Awaited<ReturnType<typeof loadConfettiModule>>;
+  const loadConfettiModule = () => import('canvas-confetti').then((m) => m.default);
   let confettiPromise: Promise<Confetti> | null = null;
   const loadConfetti = () => (confettiPromise ??= import('canvas-confetti').then((m) => m.default));
 

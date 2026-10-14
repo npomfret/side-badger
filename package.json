@@ -21,7 +21,7 @@
     "check:nginx": "scripts/check-nginx.sh",
     "policies:sync": "node scripts/sync-policies.mjs",
     "test:e2e": "playwright test",
-    "verify": "npm test -- --run && npm run i18n:audit && npm run build"
+    "verify": "npm test -- --run && npm run i18n:audit && astro check && npm run build && npm run check:site"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",

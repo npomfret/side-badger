@@ -9,7 +9,8 @@ import { t, type Locale } from '../../i18n';
 import { launchHref, type LaunchTarget } from '../../seo/urls';
 
 interface Props {
-  target?: LaunchTarget;
+  /** `app` (header, "Open the app") or `register` (page bodies, which pass their own text) */
+  target: LaunchTarget;
   /** The link's position on the page: `hero`, `header`, `footer-cta`, ... */
   cta: string;
   /** Registry page id, or `not-found` */
@@ -20,7 +21,11 @@ interface Props {
   class?: string;
 }
 
-const { target = 'app', cta, pageId, locale, variant = 'primary', confetti = false, class: className } = Astro.props;
+const { target, cta, pageId, locale, variant = 'primary', confetti = false, class: className } = Astro.props;
+// The default text is the header's "Open the app"; a register link labelled that way would mislead
+if (target === 'register' && !Astro.slots.has('default')) {
+  throw new Error(`LaunchAppCta target="register" (cta="${cta}") needs its link text in the slot`);
+}
 ---
 
 <a

@@ -191,16 +191,6 @@ export function registryProblems(r: Registry): string[] {
  * D38) applies no exemption and fails while the list is non-empty.
  */
 const LEGACY_SUBSTITUTION_EXEMPTIONS: Readonly<Record<string, readonly string[]>> = {
-  // P31 (pricing)
-  'pricing.free.feature3': ['add friends'],
-  'pricing.free.feature4': ['no tracking'],
-  'pricing.free.feature6': ['privacy first'],
-  'pricing.free.price': ['free forever'],
-  'pricing.meta.description': ['no tracking', 'coming soon'],
-  'pricing.meta.title': ['free forever'],
-  'pricing.pro.badge': ['coming soon'],
-  'pricing.pro.cta': ['coming soon'],
-  'pricing.pro.price': ['coming soon'],
 };
 
 const STRICT = getI18nMode() === 'strict';

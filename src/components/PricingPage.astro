@@ -1,8 +1,16 @@
 ---
+/**
+ * The pricing page (restructure 6.4, site plan D2/D3/D19): one free offer, the real limits as a
+ * table, the trust stamp, the terms' notice commitment and the FAQ. One call to action, through
+ * the launch counter. Confetti loads on the first click, never at page load (D25).
+ */
 import BaseLayout from '../layouts/BaseLayout.astro';
+import LaunchAppCta from './cta/LaunchAppCta.astro';
+import ContentSection from './content/ContentSection.astro';
+import FaqList from './content/FaqList.astro';
+import { faqNode, webPageNode } from './content/layout-jsonld';
 import { t, type Locale } from '../i18n';
-import { launchHref } from '../seo/urls';
-import { faqPageNode, softwareApplicationId, webPageId, type JsonLdNode } from '../seo/jsonld';
+import { localizedPath } from '../seo/urls';
 
 interface Props {
   locale: Locale;
@@ -11,21 +19,43 @@ interface Props {
 const { locale } = Astro.props;
 
 const checkIcon = `<svg class="check" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
-const clockIcon = `<svg class="clock" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>`;
 
-const faqItems = [
-  { question: t('pricing.faq.q1.question', locale), answer: t('pricing.faq.q1.answer', locale) },
-  { question: t('pricing.faq.q2.question', locale), answer: t('pricing.faq.q2.answer', locale) },
-  { question: t('pricing.faq.q3.question', locale), answer: t('pricing.faq.q3.answer', locale) },
-  { question: t('pricing.faq.q4.question', locale), answer: t('pricing.faq.q4.answer', locale) },
-  { question: t('pricing.faq.q5.question', locale), answer: t('pricing.faq.q5.answer', locale) },
-  { question: t('pricing.faq.q6.question', locale), answer: t('pricing.faq.q6.answer', locale) },
+const features = [
+  t('pricing.free.feature1', locale),
+  t('pricing.free.feature2', locale),
+  t('pricing.free.feature3', locale),
+  t('pricing.free.feature4', locale),
+  t('pricing.free.feature5', locale),
+  t('pricing.free.feature6', locale),
 ];
-const jsonLd: JsonLdNode[] = [
-  // Merged into the base WebPage node: the pricing page is about the app
-  { '@type': 'WebPage', '@id': webPageId('pricing', locale), about: { '@id': softwareApplicationId(locale) } },
-  faqPageNode(faqItems),
+
+const limitRows = [
+  { label: t('pricing.limits.people.label', locale), value: t('pricing.limits.people.value', locale) },
+  { label: t('pricing.limits.records.label', locale), value: t('pricing.limits.records.value', locale) },
+  { label: t('pricing.limits.amount.label', locale), value: t('pricing.limits.amount.value', locale) },
+  { label: t('pricing.limits.currencies.label', locale), value: t('pricing.limits.currencies.value', locale) },
+  { label: t('pricing.limits.receipts.label', locale), value: t('pricing.limits.receipts.value', locale) },
+  { label: t('pricing.limits.attachments.label', locale), value: t('pricing.limits.attachments.value', locale) },
+  { label: t('pricing.limits.lists.label', locale), value: t('pricing.limits.lists.value', locale) },
+  { label: t('pricing.limits.polls.label', locale), value: t('pricing.limits.polls.value', locale) },
+  { label: t('pricing.limits.scans.label', locale), value: t('pricing.limits.scans.value', locale) },
+  { label: t('pricing.limits.protection.label', locale), value: t('pricing.limits.protection.value', locale) },
 ];
+
+const faq = {
+  heading: t('pricing.faq.title', locale),
+  items: [
+    { q: t('pricing.faq.q1.question', locale), a: t('pricing.faq.q1.answer', locale) },
+    { q: t('pricing.faq.q2.question', locale), a: t('pricing.faq.q2.answer', locale) },
+    { q: t('pricing.faq.q3.question', locale), a: t('pricing.faq.q3.answer', locale) },
+    { q: t('pricing.faq.q4.question', locale), a: t('pricing.faq.q4.answer', locale) },
+    { q: t('pricing.faq.q5.question', locale), a: t('pricing.faq.q5.answer', locale) },
+    { q: t('pricing.faq.q6.question', locale), a: t('pricing.faq.q6.answer', locale) },
+  ],
+};
+
+// The JSON-LD is built from the same items the page shows
+const jsonLd = [webPageNode('pricing', locale), ...faqNode(faq)];
 ---
 
 <BaseLayout
@@ -37,153 +67,90 @@ const jsonLd: JsonLdNode[] = [
 >
   <section class="pricing-hero" aria-labelledby="pricing-title">
     <div class="container text-center">
-      <div class="fade-up">
-        <h1 id="pricing-title" class="gradient-text">{t('pricing.hero.title', locale)}</h1>
-        <p class="price-subtitle">{t('pricing.hero.subtitle', locale)}</p>
-      </div>
+      <h1 id="pricing-title">{t('pricing.hero.title', locale)}</h1>
+      <p class="price-subtitle">{t('pricing.hero.subtitle', locale)}</p>
+      <p class="price-aside">{t('pricing.hero.aside', locale)}</p>
     </div>
   </section>
 
-  <section class="pricing-table" aria-label="Pricing plans">
-    <div class="container">
-      <div class="plans-grid" role="list">
-        <!-- Free Plan -->
-        <article class="plan-card glass fade-up featured" role="listitem">
-          <div class="plan-badge">{t('pricing.free.badge', locale)}</div>
-          <div class="plan-header">
-            <h2>{t('pricing.free.name', locale)}</h2>
-            <div class="plan-price">
-              <span class="amount">{t('pricing.free.price', locale)}</span>
-            </div>
-            <p class="plan-description">{t('pricing.free.description', locale)}</p>
-          </div>
-
-          <ul class="plan-features">
-            <li><Fragment set:html={checkIcon} />{t('pricing.free.feature1', locale)}</li>
-            <li><Fragment set:html={checkIcon} />{t('pricing.free.feature2', locale)}</li>
-            <li><Fragment set:html={checkIcon} />{t('pricing.free.feature3', locale)}</li>
-            <li><Fragment set:html={checkIcon} />{t('pricing.free.feature4', locale)}</li>
-            <li><Fragment set:html={checkIcon} />{t('pricing.free.feature5', locale)}</li>
-            <li><Fragment set:html={checkIcon} />{t('pricing.free.feature6', locale)}</li>
-          </ul>
-
-          <a href={launchHref('pricing', locale, { cta: 'plan-free' })} rel="nofollow" class="btn btn-primary btn-lg btn-confetti btn-full">
-            {t('pricing.free.cta', locale)}
-          </a>
-        </article>
-
-        <!-- Pro Plan (Coming Soon) -->
-        <article class="plan-card glass fade-up pro-coming-soon" role="listitem" data-delay="150">
-          <div class="plan-badge pro-badge">{t('pricing.pro.badge', locale)}</div>
-          <div class="plan-header">
-            <h2>{t('pricing.pro.name', locale)}</h2>
-            <div class="plan-price">
-              <span class="amount coming-soon-text">{t('pricing.pro.price', locale)}</span>
-            </div>
-            <p class="plan-description">{t('pricing.pro.description', locale)}</p>
-          </div>
-
-          <ul class="plan-features coming-soon-features">
-            <li><Fragment set:html={clockIcon} />{t('pricing.pro.feature1', locale)}</li>
-            <li><Fragment set:html={clockIcon} />{t('pricing.pro.feature2', locale)}</li>
-            <li><Fragment set:html={clockIcon} />{t('pricing.pro.feature3', locale)}</li>
-          </ul>
-
-          <button class="btn btn-secondary btn-lg btn-full" disabled>
-            {t('pricing.pro.cta', locale)}
-          </button>
-        </article>
+  <ContentSection heading={t('pricing.get.title', locale)} id="get" class="pricing-get">
+    <article class="plan-card glass">
+      <div class="plan-header">
+        <p class="plan-price"><span class="amount">{t('pricing.free.price', locale)}</span></p>
+        <p class="plan-description">{t('pricing.free.description', locale)}</p>
       </div>
+
+      <ul class="plan-features" role="list">
+        {features.map(feature => <li><Fragment set:html={checkIcon} /><span>{feature}</span></li>)}
+      </ul>
+
+      <LaunchAppCta target="register" cta="plan-free" pageId="pricing" locale={locale} class="btn-lg btn-full" confetti>
+        {t('pricing.free.cta', locale)}
+      </LaunchAppCta>
+    </article>
+  </ContentSection>
+
+  <ContentSection heading={t('pricing.limits.title', locale)} id="limits" class="pricing-limits">
+    <p class="section-lede">{t('pricing.limits.lede', locale)}</p>
+    <div class="limits-scroll">
+      <table class="limits-table glass">
+        <caption class="sr-only">{t('pricing.limits.caption', locale)}</caption>
+        <thead>
+          <tr>
+            <th scope="col">{t('pricing.limits.head.limit', locale)}</th>
+            <th scope="col">{t('pricing.limits.head.value', locale)}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {limitRows.map(row => (
+            <tr>
+              <th scope="row">{row.label}</th>
+              <td>{row.value}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
-  </section>
+  </ContentSection>
 
-  <!-- FAQ Section -->
-  <section class="faq-section" aria-labelledby="faq-title">
-    <div class="container">
-      <h2 id="faq-title" class="text-center fade-up">{t('pricing.faq.title', locale)}</h2>
+  <ContentSection heading={t('pricing.trust.title', locale)} id="trust" class="pricing-prose">
+    <p>{t('pricing.trust.body', locale)}</p>
+    <p><a href={localizedPath('privacy', locale)}>{t('home.trust.privacyLink', locale)}</a></p>
+  </ContentSection>
 
-      <div class="faq-grid">
-        <div class="faq-item glass fade-up">
-          <h3>{t('pricing.faq.q1.question', locale)}</h3>
-          <p>{t('pricing.faq.q1.answer', locale)}</p>
-        </div>
+  <ContentSection heading={t('pricing.stay.title', locale)} id="stay" class="pricing-prose">
+    <p>{t('pricing.stay.body', locale)}</p>
+    <p><a href={localizedPath('terms', locale)}>{t('pricing.stay.link', locale)}</a></p>
+  </ContentSection>
 
-        <div class="faq-item glass fade-up" data-delay="100">
-          <h3>{t('pricing.faq.q2.question', locale)}</h3>
-          <p>{t('pricing.faq.q2.answer', locale)}</p>
-        </div>
-
-        <div class="faq-item glass fade-up" data-delay="200">
-          <h3>{t('pricing.faq.q3.question', locale)}</h3>
-          <p>{t('pricing.faq.q3.answer', locale)}</p>
-        </div>
-
-        <div class="faq-item glass fade-up" data-delay="300">
-          <h3>{t('pricing.faq.q4.question', locale)}</h3>
-          <p>{t('pricing.faq.q4.answer', locale)}</p>
-        </div>
-
-        <div class="faq-item glass fade-up" data-delay="400">
-          <h3>{t('pricing.faq.q5.question', locale)}</h3>
-          <p>{t('pricing.faq.q5.answer', locale)}</p>
-        </div>
-
-        <div class="faq-item glass fade-up" data-delay="500">
-          <h3>{t('pricing.faq.q6.question', locale)}</h3>
-          <p>{t('pricing.faq.q6.answer', locale)}</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <FaqList faq={faq} locale={locale} />
 
   <script>
-    import confetti from 'canvas-confetti';
-
-    // Confetti on main CTA
-    document.querySelectorAll('.btn-confetti').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const rect = (e.target as HTMLElement).getBoundingClientRect();
-        const x = (rect.left + rect.width / 2) / window.innerWidth;
-        const y = (rect.top + rect.height / 2) / window.innerHeight;
-
-        confetti({
-          particleCount: 150,
-          spread: 100,
-          origin: { x, y },
-          colors: ['#7ec786', '#5fb0c4', '#f0c05c', '#4eeab5'],
-          disableForReducedMotion: true
-        });
-      });
+    // Confetti is a separate chunk that loads on the first click, not with the page (D25)
+    document.querySelectorAll<HTMLElement>('.btn-confetti').forEach(link => {
+      link.addEventListener(
+        'click',
+        async () => {
+          if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          const { default: confetti } = await import('canvas-confetti');
+          const rect = link.getBoundingClientRect();
+          confetti({
+            particleCount: 150,
+            spread: 100,
+            origin: {
+              x: (rect.left + rect.width / 2) / window.innerWidth,
+              y: (rect.top + rect.height / 2) / window.innerHeight,
+            },
+            colors: ['#7ec786', '#5fb0c4', '#f0c05c', '#4eeab5'],
+            disableForReducedMotion: true,
+          });
+        },
+        { once: true }
+      );
     });
   </script>
 </BaseLayout>
 
 <style>
   @import '../styles/pricing.css';
-
-  .coming-soon-text {
-    font-size: var(--text-2xl);
-  }
-
-  .pro-coming-soon {
-    opacity: 0.85;
-    background: linear-gradient(
-      160deg,
-      rgba(95, 176, 196, 0.15) 0%,
-      rgba(147, 197, 253, 0.03) 40%,
-      rgba(129, 140, 248, 0.12) 100%
-    );
-  }
-
-  .pro-badge {
-    background: linear-gradient(135deg, var(--accent-secondary), var(--accent-tertiary));
-  }
-
-  .coming-soon-features .clock {
-    color: var(--accent-secondary);
-  }
-
-  .coming-soon-features li {
-    opacity: 0.7;
-  }
 </style>

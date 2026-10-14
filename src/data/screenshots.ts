@@ -38,7 +38,10 @@ const shot = (
 ): Shot => ({ id, screen, localized, status: 'missing', ...size });
 
 export const screenshots: readonly Shot[] = [
-  shot('S01', 'Dashboard: three groups with per-currency owed amounts, one pending invitation'),
+  shot(
+    'S01',
+    'Dashboard: three groups with per-currency You owe and You are owed, one pending invitation, quick actions open'
+  ),
   shot('S02', 'Create group with currency restrictions open'),
   shot('S03', 'Invite dialog, link tab: QR code and expiry choice'),
   shot('S04', 'Join preview, signed in'),

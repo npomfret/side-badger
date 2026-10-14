@@ -5,6 +5,7 @@
  * - A localized shot whose locale file is missing fails the build; there is no English fallback.
  * Alt text comes from page content and describes what the image proves.
  * `eager` is for the first shot on a page; every other shot lazy-loads.
+ * Output is AVIF with a WebP `<img>` fallback (site plan, "Formats and sizes"), so no PNG copies.
  */
 import { Picture } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
@@ -45,7 +46,8 @@ const sizes = `(min-width: ${shot.width}px) ${shot.width}px, 100vw`;
     <Picture
       src={image}
       alt={alt}
-      formats={['avif', 'webp']}
+      formats={['avif']}
+      fallbackFormat="webp"
       widths={widths}
       sizes={sizes}
       width={shot.width}

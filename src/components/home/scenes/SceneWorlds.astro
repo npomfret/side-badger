@@ -121,8 +121,10 @@ const TABLES = {
     }
   }
 
-  /* ===== Stages engine: the runway collapses to the carousel ===== */
-  html[data-scene-engine='stages'] .scene--worlds[data-pin='pinned'] {
+  /* ===== Stages engine: the runway collapses to the carousel. No JS: it collapses to the stack,
+     which is taller than a pinned stage and would be clipped by it ===== */
+  html[data-scene-engine='stages'] .scene--worlds[data-pin='pinned'],
+  html:not([data-scene-engine]) .scene--worlds[data-pin='pinned'] {
     --runway: auto;
     --stage-pos: static;
     --stage-height: auto;
@@ -130,7 +132,7 @@ const TABLES = {
     --stage-overflow: visible;
   }
   @media (prefers-reduced-motion: no-preference) and (min-height: 560px) {
-    html[data-scene-engine='stages'] .home > .scene.scene--worlds[data-pin='pinned']:nth-child(n + 3) > .scene__runway {
+    html:is([data-scene-engine='stages'], :not([data-scene-engine])) .home > .scene.scene--worlds[data-pin='pinned']:nth-child(n + 3) > .scene__runway {
       content-visibility: visible;
     }
   }
@@ -213,7 +215,8 @@ const TABLES = {
     line-height: 1.3;
     overflow-wrap: anywhere;
   }
-  /* Links take the world's ink: the site's green ink fails 4.5:1 on some palettes */
+  /* Links take the world's ink so each table reads as one palette. They stay underlined (from
+     .scene-link) and keep a 3px focus ring; every tone ink is at least 5.6:1 on its surface. */
   .worlds .world .scene-link {
     color: var(--tone-ink);
   }
@@ -415,9 +418,10 @@ const TABLES = {
       inline-size: 50%;
     }
   }
+  /* From the even split: 10 % of the slider (its cqi) towards inline-start */
   @keyframes worlds-thumb {
     from {
-      inset-inline-start: 50%;
+      translate: calc(var(--dir, 1) * (-50% - 10cqi)) 0;
     }
   }
   @keyframes worlds-bar {

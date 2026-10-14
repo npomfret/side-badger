@@ -15,8 +15,7 @@ const { one, two } = Astro.props;
   <div class="card" data-prop="paper">
     <p class="label">{one}</p>
     <div class="slider" aria-hidden="true">
-      <span class="share share--a" data-mech="split"></span>
-      <span class="share share--b"></span>
+      <span class="share" data-mech="split"></span>
       <span class="thumb" data-mech="thumb"></span>
     </div>
   </div>
@@ -46,22 +45,21 @@ const { one, two } = Astro.props;
     font-weight: 600;
     line-height: 1.3;
   }
+  /* The other 40 % is the track itself, so animating the 60 % share moves no box's start edge
+     (no layout shift); the thumb moves with translate, measured in the slider's cqi. */
   .slider {
     position: relative;
     display: flex;
     block-size: 1rem;
+    container-type: inline-size;
+    background: #d9b4cb;
+    border-radius: 999px;
   }
-  .share--a {
+  .share {
     inline-size: 60%;
     background: #7a3e66;
     border-start-start-radius: 999px;
     border-end-start-radius: 999px;
-  }
-  .share--b {
-    flex: 1;
-    background: #d9b4cb;
-    border-start-end-radius: 999px;
-    border-end-end-radius: 999px;
   }
   .thumb {
     position: absolute;

@@ -1,0 +1,84 @@
+review:
+  status: reviewed
+  reviewer: nick
+  date: 2026-10-15
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+meta:
+  title: Split the costs of parties, weddings and group gifts
+  description: Share the costs of a party, wedding or group gift when people chip in different amounts. Vote on the plan, split by exact amounts and see who owes whom.
+h1: Split the costs of parties, weddings and group gifts
+navLabel: Events and celebrations
+lead: Split deposits, decorations and emergency umbrellas. Leave the seating plan to someone braver. Side Badger keeps **who chipped in what** in one place, so the organiser can enjoy the party too.
+cta:
+  heading: Start with the next celebration
+  body: Create an account, make a group for the event and send the invite link. Side Badger is free, with no ads and no daily limits.
+  button: Create a free account
+scenario:
+  heading: Everyone chips in, not always the same amount
+  body: Somebody pays the venue deposit, somebody else buys the cake, and a third person puts the group gift on their own card. Some guests come to everything and some come to dinner only. Keeping a fair count of that in a chat thread is a job nobody applied for. A Side Badger group holds the lot, whatever the mix of amounts, and shows each person what they owe or are owed. See [how it works](page:how-it-works) for the basics, or read on for an event.
+sections:
+  - heading: Decide together
+    body: Before any money moves, put the choice to a **poll**. Add up to 10 options, such as two venues or three gift ideas, and let everyone vote. You can hide who voted for what, so every option gets a fair hearing, and the winner shows once the poll is closed. Nobody has to scroll back through forty messages to find out what was decided.
+  - heading: Who's in for what
+    body: Not everyone pays the same, and not everyone is part of every cost. Split an expense equally, by percentage or by **exact amounts**, so each person's share is the figure you agreed. Leave out anyone who wasn't involved, such as the guests who skipped the dinner or the friends who didn't join the gift. Each expense has one payer, and the rest of the group owes its shares to them. The details are on the [split expenses](page:feature/split-expenses) page.
+  - heading: Keep the paperwork
+    body: Attach up to three files to an expense, and add notes such as what the cost covered. Comments stay **next to the expense** they are about, so the question "was the cake £45 or £54?" and its answer live in the same place. Comments run to 500 characters and should stay about the group's money, which suits most questions about a deposit.
+  - heading: Organiser controls
+    body: Open collaboration lets any member add and edit expenses, which is fine for a small gift. For a wedding or a larger party, choose the **Managed group** preset. Admins approve each new member, and only creators and admins can change expenses. Invite people with a link or QR code, and turn on approval so an admin lets each person in. When the event is over, lock the group so the numbers stay put.
+  - heading: Settle after the party
+    body: Once the last invoice is in, the balances show **who owes whom**, and Side Badger suggests a short list of payments that settles everyone. Pay each other however you like, then record the payment in the group. Side Badger never moves money, so the group keeps the count while the transfers happen in your own banking apps. The [settle up](page:feature/settle-up) page shows how a tangle becomes a short list.
+exampleAfter: 5
+example:
+  heading: 'A group gift: six votes, one purchase'
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: Group gift
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: The features this uses
+faq:
+  heading: Questions
+  items:
+    - q: Can guests see the group without joining?
+      a: No. People join with a link or QR code and a free account, so they can see the group once they are in.
+    - q: Can Side Badger collect the money?
+      a: No. Side Badger keeps the count and never moves money. Pay each other however you like, then record the payment. It is free, with no ads and no daily limits; see [pricing](page:pricing).
+    - q: Can votes be anonymous?
+      a: Yes. When you create a poll you can hide who voted for what. The settings can only change before the first vote.
+    - q: Can people chip in different amounts?
+      a: Yes. Split an expense by exact amounts, so each person's share is the figure you agreed, or leave out the people who weren't involved.
+    - q: Can an organiser keep the books?
+      a: Yes. Use the managed group preset, so only creators and admins change expenses and admins approve new members.

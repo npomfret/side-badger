@@ -1,0 +1,83 @@
+---
+/**
+ * The couples table: rent split 60/40 on a slider, and a takeaway note. The slider is decoration
+ * (aria-hidden); the label carries the words. `data-mech="split"` is the 60 % share the scene
+ * animates from an even split on the native engine.
+ */
+interface Props {
+  one: string;
+  two: string;
+}
+const { one, two } = Astro.props;
+---
+
+<div class="mech">
+  <div class="card" data-prop="paper">
+    <p class="label">{one}</p>
+    <div class="slider" aria-hidden="true">
+      <span class="share" data-mech="split"></span>
+      <span class="thumb" data-mech="thumb"></span>
+    </div>
+  </div>
+  <div class="note" data-prop="sticky">{two}</div>
+</div>
+
+<style>
+  .mech {
+    display: grid;
+    gap: 1rem;
+    min-inline-size: 0;
+  }
+  .card {
+    background: var(--paper);
+    color: var(--ink);
+    border-radius: 3px;
+    box-shadow: var(--paper-shadow);
+    padding: 0.875rem 1rem 1.125rem;
+    display: grid;
+    gap: 0.875rem;
+    rotate: 1deg;
+  }
+  .label,
+  .note {
+    margin: 0;
+    color: var(--ink);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  /* The other 40 % is the track itself, so animating the 60 % share moves no box's start edge
+     (no layout shift); the thumb moves with translate, measured in the slider's cqi. */
+  .slider {
+    position: relative;
+    display: flex;
+    block-size: 1rem;
+    container-type: inline-size;
+    background: #d9b4cb;
+    border-radius: 999px;
+  }
+  .share {
+    inline-size: 60%;
+    background: #7a3e66;
+    border-start-start-radius: 999px;
+    border-end-start-radius: 999px;
+  }
+  .thumb {
+    position: absolute;
+    inset-block: -0.25rem;
+    inset-inline-start: 60%;
+    inline-size: 0.5rem;
+    translate: calc(-50% * var(--dir, 1)) 0;
+    border-radius: 999px;
+    background: var(--paper);
+    box-shadow: 0 0 0 2px #7a3e66;
+  }
+  .note {
+    background: var(--sticky-pink);
+    box-shadow: var(--paper-shadow);
+    padding: 1rem 1rem 1.125rem;
+    rotate: -1.5deg;
+    max-inline-size: 22rem;
+    justify-self: end;
+    border-end-end-radius: 14px 4px;
+  }
+</style>

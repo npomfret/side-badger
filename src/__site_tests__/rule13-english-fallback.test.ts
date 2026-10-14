@@ -80,6 +80,24 @@ describe('rule 13: no English text left on translated pages', () => {
       expect(() => approvedFromLock(malformed, 'xx.json')).toThrow(/must be an array/);
     });
 
+    describe('keys removed from en.ts (D38)', () => {
+      const lock = { keys: {}, identicalApproved: ['cta.title', 'policy.gone'], pages: {} };
+      const run = (mode: 'strict' | 'english-first', removed: string[]) =>
+        approvedFromLock(lock, 'xx.json', { mode, removed });
+
+      it('skips an approved key that is listed under removed in english-first mode', () => {
+        expect([...run('english-first', ['policy.gone'])]).toEqual(['Ready to split some bills?']);
+      });
+
+      it('throws in strict mode even when the key is listed under removed', () => {
+        expect(() => run('strict', ['policy.gone'])).toThrow(/policy\.gone/);
+      });
+
+      it('throws in english-first mode when the key is not listed under removed', () => {
+        expect(() => run('english-first', [])).toThrow(/policy\.gone/);
+      });
+    });
+
     it('reads the real pcm lock, which approves the footer tagline', () => {
       const approved = approvedFromLocks('pcm');
       expect(approved.has('Just badgers splitting bills.')).toBe(true);

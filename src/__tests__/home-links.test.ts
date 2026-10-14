@@ -1,12 +1,15 @@
 import { describe, expect, it } from 'vitest';
 import {
   LINK_PAGES,
+  PAGE_LABELS,
   SCENE_ORDER,
   registerHref,
   resolveHowItWorks,
   resolveLink,
   type LinkRegistry,
 } from '@/components/home/data/links';
+import { getPage } from '@/site/pages';
+import en from '@/i18n/en';
 import { SCENE_FEATURES, WORLD_FEATURES, depictedFeatureIds, featureList } from '@/components/home/data/home-features';
 
 const PATHS: Record<string, string> = {
@@ -53,6 +56,22 @@ describe('home links', () => {
     expect(resolveLink('world:couples', 'en', registry([])).href).toBe('/go/app/?from=home&cta=scene-worlds');
     expect(LINK_PAGES['world:couples']).toBe('use-case/couples');
     expect(LINK_PAGES['world:housemates']).toBe('use-case/housemates');
+  });
+
+  it('every linked release 1 page is registered and labelled; couples (release 2) is neither', () => {
+    const release2 = new Set(['use-case/couples']);
+    const ids = new Set(Object.values(LINK_PAGES).filter((id): id is string => id !== null));
+    for (const id of ids) {
+      if (release2.has(id)) {
+        expect(getPage(id), id).toBeUndefined();
+        expect(PAGE_LABELS[id], id).toBeUndefined();
+        continue;
+      }
+      expect(getPage(id), id).toBeDefined();
+      const key = PAGE_LABELS[id];
+      expect(key, id).toBeDefined();
+      expect((en as Record<string, string>)[key as string], id).toBeTruthy();
+    }
   });
 
   it('builds sign-up links through /go/register/', () => {

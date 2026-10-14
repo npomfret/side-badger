@@ -467,6 +467,7 @@ export const features: readonly FeatureRecord[] = [
     problem: '',
     audiences: { primary: [], secondary: [] },
     status: 'available',
+    // Mocked browser tests only; no end-to-end coverage
     confidence: 'medium',
     evidence: [
       'server/src/validation/asset-validation.ts',
@@ -474,7 +475,7 @@ export const features: readonly FeatureRecord[] = [
       'packages/shared/src/constants.ts (MAX_ATTACHMENTS_PER_ITEM, MAX_RECEIPT_SIZE_BYTES)',
     ],
     verifiedAt: APP_COMMIT,
-    limits: ['JPEG, PNG, WebP, HEIC or PDF, up to 10 MB each.', 'Mocked browser tests only; no end-to-end coverage.'],
+    limits: ['JPEG, PNG, WebP, HEIC or PDF, up to 10 MB each.'],
     prerequisites: [],
     proof: [{ kind: 'screenshot', ref: 'S08' }],
     relatedFeatures: [],
@@ -573,6 +574,7 @@ export const features: readonly FeatureRecord[] = [
     problem: '',
     audiences: { primary: [], secondary: [] },
     status: 'available',
+    // The tests are mocked
     confidence: 'medium',
     evidence: [
       'webapp-v2/src/__tests__/integration/playwright/comment-reactions.test.ts',
@@ -580,7 +582,7 @@ export const features: readonly FeatureRecord[] = [
       'server/src/routes/route-config.ts (/reactions routes)',
     ],
     verifiedAt: APP_COMMIT,
-    limits: ['Mocked browser tests only.'],
+    limits: [],
     prerequisites: [],
     proof: [{ kind: 'screenshot', ref: 'S12' }],
     relatedFeatures: [],
@@ -737,6 +739,7 @@ export const features: readonly FeatureRecord[] = [
     problem: '',
     audiences: { primary: [], secondary: [] },
     status: 'available',
+    // High in code; the tests are mocked
     confidence: 'high',
     evidence: [
       'webapp-v2/src/locales/',
@@ -747,7 +750,7 @@ export const features: readonly FeatureRecord[] = [
       'webapp-v2/src/__tests__/integration/playwright/language-switching.test.ts',
     ],
     verifiedAt: APP_COMMIT,
-    limits: ['High confidence in code; the tests are mocked.'],
+    limits: [],
     prerequisites: [],
     proof: [{ kind: 'screenshot', ref: 'S21' }],
     relatedFeatures: [],

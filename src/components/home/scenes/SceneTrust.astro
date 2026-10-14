@@ -1,40 +1,125 @@
 ---
 /**
- * Scene 8, trust (`trust`). PLACEHOLDER from H5, replaced by H9.
+ * Scene 8, trust (`trust`). An entry scene: nothing is pinned. Stage 0 is a clean card, stage 1
+ * has all three stamps landed with the paw-print seal.
  *
- * Hooks for H9:
- *   - <ScrollScene id="trust" titleId="trust-title" runway="entry" staticStage={1}>: an entry
- *     scene; stage 1 = all three stamps landed.
- *   - Slot `copy`: h2 (#trust-title) and the three h3 items, which are the only site plan D3
- *     claims: No ads, No third-party trackers, We don't sell your personal data. Each item is
- *     `[data-hook="trust-item"]`; put props/Stamp.astro in them with data-anim="stamp" data-at="1".
- *   - Slot `link`: the privacy policy link, resolved by data/links.ts (`/privacy/` is published).
+ * The three claims are the only site plan D3 claims: No ads, No third-party trackers, We don't
+ * sell your personal data. Each is an h3 whose text sits in a stamp; its line of detail follows.
+ * The stamps are real text, so they stay in the accessibility tree at every stage. The seal is
+ * decoration. Reduced motion rests at stage 1.
  */
 import ScrollScene from '../ScrollScene.astro';
 import SceneLink from '../props/SceneLink.astro';
+import Paper from '../props/Paper.astro';
+import Stamp from '../props/Stamp.astro';
 import { t, type Locale } from '@/i18n';
 
 interface Props {
   locale: Locale;
 }
 const { locale } = Astro.props;
+
+const items = [
+  { title: 'home.trust.adsTitle', body: 'home.trust.adsBody', tone: 'red', rotate: -3 },
+  { title: 'home.trust.trackersTitle', body: 'home.trust.trackersBody', tone: 'green', rotate: 2 },
+  { title: 'home.trust.sellingTitle', body: 'home.trust.sellingBody', tone: 'ink', rotate: -2 },
+] as const;
 ---
 
 <ScrollScene id="trust" titleId="trust-title" runway="entry" staticStage={1}>
   <Fragment slot="copy">
     <h2 id="trust-title">{t('home.trust.title', locale)}</h2>
-    <div data-hook="trust-item">
-      <h3>{t('home.trust.adsTitle', locale)}</h3>
-      <p>{t('home.trust.adsBody', locale)}</p>
-    </div>
-    <div data-hook="trust-item">
-      <h3>{t('home.trust.trackersTitle', locale)}</h3>
-      <p>{t('home.trust.trackersBody', locale)}</p>
-    </div>
-    <div data-hook="trust-item">
-      <h3>{t('home.trust.sellingTitle', locale)}</h3>
-      <p>{t('home.trust.sellingBody', locale)}</p>
-    </div>
+    <Paper class="trust__card" lift>
+      <div class="trust__items">
+        {items.map((item, i) => (
+          <div class="trust__item" data-hook="trust-item">
+            <h3>
+              <Stamp
+                tone={item.tone}
+                rotate={item.rotate}
+                class="trust__stamp"
+                data-anim="stamp"
+                data-at="1"
+                style={`--i:${i};--range:entry ${i * 12}% entry ${55 + i * 12}%`}
+              >
+                {t(item.title, locale)}
+              </Stamp>
+            </h3>
+            <p>{t(item.body, locale)}</p>
+          </div>
+        ))}
+      </div>
+      <span
+        class="trust__seal"
+        aria-hidden="true"
+        data-anim="stamp"
+        data-at="1"
+        style="--i:3;--s:1.4;--range:entry 36% entry 91%"
+      >
+        <svg viewBox="0 0 48 48" width="100%" height="100%" focusable="false">
+          <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="3 2" />
+          <ellipse cx="24" cy="31" rx="8" ry="6.5" fill="currentColor" />
+          <ellipse cx="13" cy="22" rx="3.2" ry="4.2" fill="currentColor" />
+          <ellipse cx="20" cy="15" rx="3.2" ry="4.4" fill="currentColor" />
+          <ellipse cx="28" cy="15" rx="3.2" ry="4.4" fill="currentColor" />
+          <ellipse cx="35" cy="22" rx="3.2" ry="4.2" fill="currentColor" />
+        </svg>
+      </span>
+    </Paper>
   </Fragment>
   <Fragment slot="link"><SceneLink to="trust" locale={locale} /></Fragment>
 </ScrollScene>
+
+<style>
+  /* Workaround until H13 fixes scenes.css: a scene with no visual slot still gets
+     `grid-area: copy / link` at 900 px and up, which adds a stray empty column. Name the areas so it
+     is one column. `:where()` keeps this at one class of specificity, so any shared rule H13 adds
+     for visual-less stages wins and this can then be deleted. */
+  @media (min-width: 900px) {
+    :global(:where(#trust) .scene__stage) {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas: 'copy' 'link';
+    }
+  }
+  .trust__card {
+    position: relative;
+    inline-size: 100%;
+    padding: clamp(1.25rem, 3vw, 2.25rem);
+    padding-block-end: clamp(3.5rem, 6vw, 4.5rem);
+  }
+  .trust__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+    gap: clamp(1.25rem, 3vw, 2rem);
+  }
+  .trust__item {
+    display: grid;
+    gap: 0.75rem;
+    align-content: start;
+    justify-items: start;
+    min-inline-size: 0;
+  }
+  .trust__item h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  .trust__item p {
+    margin: 0;
+    color: var(--ink-muted);
+  }
+  /* Stamp text is real text in every script: no capitals or letter-spacing (it breaks Arabic joins) */
+  .trust__stamp {
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 1.125rem;
+  }
+  .trust__seal {
+    position: absolute;
+    inset-block-end: 0.75rem;
+    inset-inline-end: 1rem;
+    inline-size: 3rem;
+    block-size: 3rem;
+    color: var(--green-ink);
+    rotate: -8deg;
+  }
+</style>

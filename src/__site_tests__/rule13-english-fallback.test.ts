@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { approvedFromLocks, checkEnglishFallback } from './rules/r13-english-fallback';
+import { approvedFromLock, approvedFromLocks, checkEnglishFallback, renderedTexts } from './rules/r13-english-fallback';
 import { dist } from './lib/site';
 import { fx, mentions, sites } from './lib/fixtures';
 
@@ -47,6 +47,43 @@ describe('rule 13: no English text left on translated pages', () => {
 
     it('never approves anything for a locale without a lock file', () => {
       expect(approvedFromLocks('zz-none').size).toBe(0);
+    });
+  });
+
+  describe('approved list from the lock files (identicalApproved, 3.6)', () => {
+    it('splits an English value with inline HTML into the text nodes it renders as', () => {
+      expect(renderedTexts('Totally free. No tracking. No ads.<br />Just badgers splitting bills.')).toEqual([
+        'Totally free. No tracking. No ads.',
+        'Just badgers splitting bills.',
+      ]);
+      expect(renderedTexts('Fish &amp; chips')).toEqual(['Fish & chips']);
+    });
+
+    it('resolves each approved key to its English text', () => {
+      const lock = { keys: {}, identicalApproved: ['footer.tagline', 'cta.title'], pages: {} };
+      expect([...approvedFromLock(lock, 'xx.json')].sort()).toEqual([
+        'Just badgers splitting bills.',
+        'Ready to split some bills?',
+        'Totally free. No tracking. No ads.',
+      ]);
+    });
+
+    it('approves nothing that is not listed, and ignores the hashes in keys', () => {
+      const lock = { keys: { 'cta.title': '00000000' }, identicalApproved: [], pages: {} };
+      expect(approvedFromLock(lock, 'xx.json').size).toBe(0);
+    });
+
+    it('rejects a key that en.ts does not have, and a malformed list', () => {
+      const stale = { keys: {}, identicalApproved: ['no.such.key'], pages: {} };
+      expect(() => approvedFromLock(stale, 'xx.json')).toThrow(/no\.such\.key/);
+      const malformed = { keys: {}, identicalApproved: { 'cta.title': true }, pages: {} } as never;
+      expect(() => approvedFromLock(malformed, 'xx.json')).toThrow(/must be an array/);
+    });
+
+    it('reads the real pcm lock, which approves the footer tagline', () => {
+      const approved = approvedFromLocks('pcm');
+      expect(approved.has('Just badgers splitting bills.')).toBe(true);
+      expect(approved.has('Side Badger')).toBe(true);
     });
   });
 });

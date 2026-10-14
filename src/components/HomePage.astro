@@ -53,7 +53,7 @@ const { locale } = Astro.props;
 
       <div class="hero-visual fade-up" data-delay="200">
         <div class="hero-image-container glass">
-          <img src="/images/logo-face-only-large.png" alt="Side Badger logo" class="hero-badger" />
+          <img src="/images/logo-face-only-large.png" alt="Side Badger logo" class="hero-badger" width="644" height="561" />
         </div>
       </div>
     </div>
@@ -705,7 +705,8 @@ const { locale } = Astro.props;
 
     // ===== BUTTON RIPPLE EFFECT =====
     document.querySelectorAll('.btn').forEach(btn => {
-      btn.addEventListener('click', function(e: MouseEvent) {
+      btn.addEventListener('click', function(ev: Event) {
+        const e = ev as MouseEvent;
         const button = e.currentTarget as HTMLElement;
         const rect = button.getBoundingClientRect();
         const x = e.clientX - rect.left;

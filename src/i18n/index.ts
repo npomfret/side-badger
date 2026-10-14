@@ -73,7 +73,6 @@ import tr from './tr';
  * Main locale configuration. Each locale needs:
  * - name: Display name in the locale's own language
  * - flagCode: circle-flags code (https://hatscripts.github.io/circle-flags/)
- * - flagUrl: (optional) Custom flag URL to override the circle-flags CDN
  * - intlCode: BCP 47 code for Intl.DateTimeFormat
  * - translations: The imported translation object
  * - inDropdown: Whether to show in language picker (false for 'en' since aliases cover it)
@@ -120,7 +119,6 @@ const baseLocaleConfig = {
   fa: {
     name: 'فارسی',
     flagCode: 'ir',
-    flagUrl: '/flags/iran.png', // Lion and Sun flag
     intlCode: 'fa-IR',
     translations: fa,
     inDropdown: true,
@@ -700,15 +698,6 @@ export const localeSubtitles: Partial<Record<DropdownLocale, string>> = {
   ),
 } as Partial<Record<DropdownLocale, string>>;
 
-// Custom flag URLs that override the CDN (for locales with flagUrl defined)
-export const localeFlagUrls: Partial<Record<DropdownLocale, string>> = {
-  ...Object.fromEntries(
-    Object.entries(realLocaleConfig)
-      .filter(([, config]) => config.inDropdown && 'flagUrl' in config)
-      .map(([key, config]) => [key, (config as { flagUrl: string }).flagUrl])
-  ),
-} as Partial<Record<DropdownLocale, string>>;
-
 /**
  * Flags are served from `public/flags/` (D24, B34), never from a CDN. Every flag is an SVG
  * under 2 KB except Iran's Lion and Sun, which is a 48px PNG derived from the old artwork.
@@ -840,10 +829,6 @@ export function getAppUrl(locale: Locale = 'en'): string {
     return baseUrl;
   }
   return `${baseUrl}?lang=${locale}`;
-}
-
-export function getApiBaseUrl(): string {
-  return appOrigin;
 }
 
 export function getFormattedDate(locale: Locale): string {

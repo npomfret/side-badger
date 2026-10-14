@@ -23,7 +23,10 @@ COPY . .
 
 ARG PUBLIC_DOMAIN=sidebadger.me
 ENV PUBLIC_DOMAIN=${PUBLIC_DOMAIN}
-RUN npm run build
+# Dev dependencies stay installed here: the output checks need vitest, cheerio and sharp.
+# Never set I18N_MODE, PREVIEW_PSEUDO or PREVIEW_UNPUBLISHED here; the manual deploy is strict.
+# A failing check stops the image build, so a manual deploy is gated like CI.
+RUN npm run build && npm run check:site
 
 # Production stage - nginx serves the static files and owns their HTTP headers
 FROM nginx:1.27-alpine

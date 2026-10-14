@@ -174,6 +174,7 @@ describe('Translation Files Integrity', () => {
         const bad = loadLock(locale).identicalApproved.filter(
           key =>
             !pendingRemoved.has(key) &&
+            !pendingAdded.has(key) && // English-first: the English changed and awaits retranslation
             (!(key in englishTranslations) || translation[key] !== englishTranslations[key])
         );
         expect(bad, `${locale} identicalApproved has entries that are translated or not in en.ts:\n  ${bad.join('\n  ')}`).toEqual([]);
@@ -257,6 +258,7 @@ describe('Translation Files Integrity', () => {
         for (const key of englishKeys) {
           const value = translation[key];
           if (value === undefined) continue; // missing keys are caught by completeness
+          if (pendingAdded.has(key)) continue; // English-first: the English changed and awaits retranslation
           const expected = placeholders(englishTranslations[key]);
           const actual = placeholders(value);
           if (expected.join(',') !== actual.join(',')) {
@@ -304,30 +306,27 @@ describe('Translation Files Integrity', () => {
   });
 
   describe('HTML tag preservation', () => {
-    // Find English keys that contain HTML tags
-    const htmlTagRegex = /<[^>]+>/g;
-    const keysWithHtml = englishKeys.filter(key => htmlTagRegex.test(englishTranslations[key]));
+    // English keys that contain HTML tags; their translations must carry the same tags.
+    // One test per locale, so the suite still has tests when no English key uses HTML.
+    const tagsOf = (value: string) => [...value.matchAll(/<[^>]+>/g)].map(m => m[0]).sort();
+    const keysWithHtml = englishKeys.filter(key => tagsOf(englishTranslations[key]).length > 0);
 
-    if (keysWithHtml.length > 0) {
-      const localesToTest = Object.keys(translations).filter(l => l !== 'en');
-
-      for (const key of keysWithHtml) {
-        const englishTags = [...englishTranslations[key].matchAll(/<[^>]+>/g)].map(m => m[0]).sort();
-
-        for (const locale of localesToTest) {
-          it(`${locale} preserves HTML tags in ${key}`, () => {
-            const translation = translations[locale as keyof typeof translations];
-            const value = (translation as Record<string, string>)[key];
-            if (!value) return; // Missing key caught by completeness test
-
-            const translatedTags = [...(value as string).matchAll(/<[^>]+>/g)].map(m => m[0]).sort();
-            expect(
-              translatedTags,
-              `${locale} ${key} has different HTML tags.\n  Expected: ${englishTags.join(', ')}\n  Got: ${translatedTags.join(', ')}`
-            ).toEqual(englishTags);
-          });
+    for (const locale of nonEnglishLocales) {
+      it(`${locale} preserves the HTML tags of ${keysWithHtml.length} English keys`, () => {
+        const translation = translations[locale as keyof typeof translations] as Record<string, string>;
+        const mismatched: string[] = [];
+        for (const key of keysWithHtml) {
+          const value = translation[key];
+          if (value === undefined) continue; // missing keys are caught by completeness
+          if (pendingAdded.has(key)) continue; // English-first: awaiting retranslation
+          const expected = tagsOf(englishTranslations[key]);
+          const actual = tagsOf(value);
+          if (expected.join(',') !== actual.join(',')) {
+            mismatched.push(`${key}: expected ${expected.join(', ')} got ${actual.join(', ')}`);
+          }
         }
-      }
+        expect(mismatched, `${locale} HTML tag mismatches:\n  ${mismatched.join('\n  ')}`).toEqual([]);
+      });
     }
   });
 

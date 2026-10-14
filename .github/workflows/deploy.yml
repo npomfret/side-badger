@@ -2,7 +2,7 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [main]
+  pull_request:
   workflow_dispatch:
 
 env:
@@ -10,7 +10,33 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      # English-first mode (D38) only on the redesign branch and pull requests into it.
+      I18N_MODE: ${{ (github.ref_name == 'redesign' || github.base_ref == 'redesign') && 'english-first' || 'strict' }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify
+        run: npm run verify
+
   build-and-push:
+    needs: verify
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -35,7 +61,7 @@ jobs:
         id: domain
         run: |
           SUFFIX=$(echo "${{ matrix.domain }}" | sed 's/sidebadger\.//')
-          echo "suffix=$SUFFIX" >> $GITHUB_OUTPUT
+          echo "suffix=$SUFFIX" >> "$GITHUB_OUTPUT"
 
       - name: Extract metadata for Docker
         id: meta
@@ -57,7 +83,8 @@ jobs:
             PUBLIC_DOMAIN=${{ matrix.domain }}
 
   deploy:
-    needs: build-and-push
+    needs: [verify, build-and-push]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     steps:

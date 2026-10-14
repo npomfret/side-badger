@@ -10,6 +10,10 @@ REMOTE_DIR="/opt/side-badger-website"
 
 echo "🦡 Deploying Side Badger Website..."
 
+# Gate the deploy: abort (set -e) if tests, audit or build fail.
+echo "🔎 Verifying..."
+npm run verify
+
 # Create remote directory
 echo "📁 Creating remote directory..."
 ssh $SERVER "mkdir -p $REMOTE_DIR"

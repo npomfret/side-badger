@@ -9,6 +9,7 @@ import Breadcrumbs from '../components/nav/Breadcrumbs.astro';
 import { breadcrumbJsonLd, breadcrumbsFor } from '../components/nav/navigation';
 import type { PageId } from '../site/pages';
 import type { JsonLdNode } from '../seo/jsonld';
+import type { OgCardId } from '../pages/og/[card].png';
 
 interface Props {
   /** Registry page id, or 'not-found'. Every route passes its own. */
@@ -18,7 +19,8 @@ interface Props {
   title: string;
   description?: string;
   locale?: Locale;
-  ogCard?: 'default';
+  /** Social card id (src/assets/og/*.png); defaults to `default` in SeoHead */
+  ogCard?: OgCardId;
   /** Page-specific JSON-LD nodes; SeoHead adds the base nodes and merges by @id */
   jsonLd?: JsonLdNode[];
 }

@@ -36,7 +36,12 @@ describe('browser language to locale (D5)', () => {
 
 // Run the real inline script from LanguageDetection.astro against a fake browser.
 const source = readFileSync(resolve(__dirname, '../components/LanguageDetection.astro'), 'utf8');
-const scriptBody = source.slice(source.indexOf('(function () {'), source.lastIndexOf('</script>'));
+const scriptStart = source.indexOf('(function () {');
+const scriptEnd = source.lastIndexOf('</script>');
+if (scriptStart === -1 || scriptEnd < scriptStart) {
+  throw new Error('LanguageDetection.astro: could not find the inline detection script to test');
+}
+const scriptBody = source.slice(scriptStart, scriptEnd);
 
 function detect(opts: {
   currentLocale?: string;

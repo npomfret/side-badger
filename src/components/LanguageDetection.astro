@@ -28,6 +28,7 @@ const hreflangs: Record<string, string> = {};
 for (const locale of built) hreflangs[locale] = localeConfig[locale as keyof typeof localeConfig].hreflang;
 ---
 
+{currentLocale === 'en' && (
 <script is:inline define:vars={{ currentLocale, tagTable, hreflangs }}>
   (function () {
     var LOCALE_KEY = 'preferred-locale';
@@ -81,3 +82,4 @@ for (const locale of built) hreflangs[locale] = localeConfig[locale as keyof typ
     }
   })();
 </script>
+)}

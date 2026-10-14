@@ -1,0 +1,83 @@
+---
+import { t, locales, logoLocales, getLocalizedPath, type Locale } from '../../i18n';
+
+interface Props {
+  title: string;
+  description?: string;
+  locale?: Locale;
+}
+
+const { title, description: descriptionProp, locale = 'en' } = Astro.props;
+
+const description = descriptionProp ?? t('meta.description', locale);
+
+// Use locale's logo if available, otherwise fall back to English
+const logoLocale = logoLocales.includes(locale) ? locale : 'en';
+const largeLogoPath = `/images/${logoLocale}/logo-transparent.png`;
+const socialImagePath = `/images/${logoLocale}/logo-transparent.png`;
+
+const currentPath = Astro.url.pathname;
+const siteUrl = Astro.site?.origin || 'https://sidebadger.me';
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content={description} />
+<meta name="theme-color" content="#F0FDF4" />
+
+<!-- Web App Manifest -->
+<link rel="manifest" href="/manifest.json" />
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" href="/images/logo-face-only-large.png" />
+
+<!-- hreflang tags for SEO -->
+{locales.map((loc) => (
+  <link
+    rel="alternate"
+    hreflang={loc}
+    href={`${siteUrl}${getLocalizedPath(currentPath, loc)}`}
+  />
+))}
+<link rel="alternate" hreflang="x-default" href={`${siteUrl}${getLocalizedPath(currentPath, 'en')}`} />
+
+<!-- Open Graph -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Side Badger" />
+<meta property="og:locale" content={{
+  en: 'en_US',
+  uk: 'uk_UA',
+  es: 'es_ES',
+  ja: 'ja_JP',
+  ar: 'ar_AE'
+}[locale] || 'en_US'} />
+
+<meta property="og:image" content={socialImagePath} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={socialImagePath} />
+
+<link rel="icon" type="image/png" href="/images/logo-face-only-large.png" />
+<title>{title}</title>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Side Badger",
+  "url": "https://sidebadger.me",
+  "logo": `https://sidebadger.me${largeLogoPath}`,
+  "sameAs": []
+})} />
+<script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Side Badger",
+        "url": "https://sidebadger.me"
+      }
+    </script>

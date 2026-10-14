@@ -3,6 +3,8 @@ import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import * as cheerio from 'cheerio';
 import en from '../../i18n/en';
+import { getI18nMode, type I18nMode } from '../../i18n';
+import pendingKeys from '../../i18n/pending/keys.json';
 import { isPseudoPage, squash, visibleTextNodes, type Site } from '../lib/site';
 import { fileFor } from './r01-files';
 
@@ -34,8 +36,18 @@ export const approvedFromLocks: ApprovedIdentical = locale => {
   return approvedFromLock(JSON.parse(readFileSync(file, 'utf8')) as LockFile, file);
 };
 
+/** The i18n mode and the keys `pending/keys.json` lists under `removed`. */
+export interface LockContext {
+  mode: I18nMode;
+  removed: readonly string[];
+}
+
 /** The approved texts of one parsed lock file */
-export function approvedFromLock(lock: LockFile, file: string): Set<string> {
+export function approvedFromLock(
+  lock: LockFile,
+  file: string,
+  context: LockContext = { mode: getI18nMode(), removed: pendingKeys.removed as string[] },
+): Set<string> {
   if (!Array.isArray(lock.identicalApproved)) {
     throw new Error(`${file}: identicalApproved must be an array of i18n keys`);
   }
@@ -43,6 +55,8 @@ export function approvedFromLock(lock: LockFile, file: string): Set<string> {
   const approved = new Set<string>();
   for (const key of lock.identicalApproved) {
     if (!Object.prototype.hasOwnProperty.call(english, key)) {
+      // English-first: a key P13 removed from en.ts may stay in a lock until its translation group runs (D38)
+      if (context.mode === 'english-first' && context.removed.includes(key)) continue;
       throw new Error(`${file}: identicalApproved lists "${key}", which is not a key in en.ts`);
     }
     for (const text of renderedTexts(english[key])) approved.add(text);

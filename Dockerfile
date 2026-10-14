@@ -26,7 +26,11 @@ RUN npm run build
 
 # Production stage - nginx serves the static files and owns their HTTP headers
 FROM nginx:1.27-alpine
-COPY nginx/default.conf /etc/nginx/conf.d/default.conf
+# conf.d/*.conf is auto-included as server-level config, so only default.conf goes there.
+# Any other nginx/*.conf (for example locale-redirects.conf) lands in /etc/nginx/side-badger/
+# and is pulled in by an explicit include, so it can never become a second server block.
+COPY nginx/*.conf /etc/nginx/side-badger/
+RUN mv /etc/nginx/side-badger/default.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/dist /usr/share/nginx/html
 
 # 127.0.0.1, not localhost: busybox wget tries ::1 first, and nginx listens on IPv4 only

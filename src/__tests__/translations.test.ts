@@ -419,10 +419,16 @@ describe('Translation Files Integrity', () => {
     const usedKeys = findUsedTranslationKeys();
 
     it('All English translation keys are used somewhere in the codebase', () => {
-      const unusedKeys = englishKeys.filter(key => !usedKeys.has(key));
+      // English-first (D38) lets a key listed under pending/keys.json `added` wait for the later
+      // wave whose code uses it (rules for every package). They are printed so the coordinator
+      // can check the list. Strict mode needs that manifest empty, so it still catches them all.
+      const waiting = englishKeys.filter(key => !usedKeys.has(key) && pendingAdded.has(key));
+      if (waiting.length > 0) {
+        console.warn(`English-first: ${waiting.length} pending keys not used in code yet:\n  ${waiting.join('\n  ')}`);
+      }
+      const unusedKeys = englishKeys.filter(key => !usedKeys.has(key) && !pendingAdded.has(key));
 
-      // No filtering! All keys must be used.
-      // If a key exists, it should be referenced in code.
+      // Every other key must be referenced in code.
       expect(
         unusedKeys,
         `Found ${unusedKeys.length} unused translation keys that should be removed:\n  ${unusedKeys.join('\n  ')}`

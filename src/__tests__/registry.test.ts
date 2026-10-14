@@ -184,14 +184,13 @@ export function registryProblems(r: Registry): string[] {
 // ---------------------------------------------------------------------------
 
 /**
- * Legacy English strings that still use a phrase from the substitutions table, keyed by i18n key,
- * with the phrases each key may keep. Only the current pricing page (`PricingPage.astro`) renders
- * them; H11 has already deleted the old homepage keys, and P31 rewrites `pricing.*` and removes
- * the entries below. The list only shrinks: a stale entry fails, and strict mode (the W4b gate,
- * D38) applies no exemption and fails while the list is non-empty.
+ * English strings allowed to keep a phrase from the "Instead of" column of the substitutions
+ * table, keyed by i18n key, with the phrases each key may keep. It held the legacy pricing strings
+ * until P31 rewrote them, and it must stay empty: fix the copy instead of adding an entry. A stale
+ * entry fails, and strict mode (the W4b gate, D38) applies no exemption and fails while it is
+ * non-empty.
  */
-const LEGACY_SUBSTITUTION_EXEMPTIONS: Readonly<Record<string, readonly string[]>> = {
-};
+const LEGACY_SUBSTITUTION_EXEMPTIONS: Readonly<Record<string, readonly string[]>> = {};
 
 const STRICT = getI18nMode() === 'strict';
 const enStrings = en as Record<string, string>;

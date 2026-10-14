@@ -1,0 +1,62 @@
+---
+/**
+ * Renders a content `richText` field (restructure 3.3, D11, D12): inline Markdown only, so no
+ * block elements ever appear inside a heading, a button label or a card.
+ *
+ * The text is validated first with the same marked lexer and options (`richTextProblem`), so only
+ * text, bold, italic, escapes and `[text](page:<pageId>)` links reach the renderer; marked escapes
+ * the text. A page link resolves to the page's path in this locale through `localizedPath`. A page
+ * id that is not registered, not built, or not built in this locale (English-first mode skips
+ * untranslated pages) throws, which fails the build, so a link can never dangle.
+ *
+ * App links are not rich text: use `LaunchAppCta`, which goes through the launch counter (D28).
+ *
+ * Usage: <RichText text={entry.data.lead} locale={locale} />
+ * Pass `as="p"` to wrap the result in a paragraph; the default is a bare `<span>`.
+ */
+import { Marked, type Tokens } from 'marked';
+import type { Locale } from '../../i18n';
+import { localizedPath } from '../../seo/urls';
+import { getPage } from '../../site/pages';
+import { pathsFor } from '../../site/routes';
+import { PAGE_LINK_PREFIX, RICH_TEXT_MARKED_OPTIONS, richTextPageIds, richTextProblem } from '../../content/schemas';
+
+interface Props {
+  text: string;
+  locale: Locale;
+  as?: 'span' | 'p';
+  class?: string;
+}
+
+const { text, locale, as: tag = 'span', class: className } = Astro.props;
+
+const problem = richTextProblem(text);
+if (problem) throw new Error(`RichText: the text ${problem}: "${text.slice(0, 80)}"`);
+
+// Resolve every link before rendering, so a bad one fails with a clear message
+const hrefs = new Map<string, string>();
+for (const id of richTextPageIds(text)) {
+  if (!getPage(id)) throw new Error(`RichText: unknown page id "${id}" in "${text.slice(0, 80)}"`);
+  if (!pathsFor(id).some(path => path.props.locale === locale)) {
+    throw new Error(`RichText: page "${id}" is not built in "${locale}", so the link would dangle`);
+  }
+  hrefs.set(`${PAGE_LINK_PREFIX}${id}`, localizedPath(id, locale));
+}
+
+const marked = new Marked({
+  ...RICH_TEXT_MARKED_OPTIONS,
+  renderer: {
+    link({ href, tokens }: Tokens.Link) {
+      const resolved = hrefs.get(href);
+      // richTextProblem allows no other link form; this guards against the two drifting apart
+      if (!resolved) throw new Error(`RichText: link "${href}" is not a resolved page link`);
+      return `<a href="${resolved}">${this.parser.parseInline(tokens)}</a>`;
+    },
+  },
+});
+
+const html = marked.parseInline(text) as string;
+const Tag = tag;
+---
+
+<Tag class={className} set:html={html} />

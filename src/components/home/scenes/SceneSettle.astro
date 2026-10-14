@@ -1,28 +1,45 @@
 ---
 /**
- * Scene 6, settle up (`settle`). PLACEHOLDER from H5, replaced by H9.
+ * Scene 6, settle up (`settle`). Pinned on desktop and phone.
  *
- * Hooks for H9:
- *   - <ScrollScene id="settle" titleId="settle-title" runway={{ desktop: 150, phone: 120 }}
- *     stages={[25, 55, 80]} staticStage={3}>
- *     Stages: 0 owes row, 1 quick-settle fills the form, 2 record pressed, 3 all settled up.
- *   - Slot `copy`: the h2 (#settle-title) and body.
- *   - Slot `visual`: the illustrated stage; `div[data-hook="settle-visual"]` marks where it goes.
- *   - Slot `link`: <SceneLink to="settle" locale={locale} />, which resolves through data/links.ts.
- *   - Motion: generic data-anim / data-at on elements (scenes.css), or your own per-element
- *     keyframes on `animation-timeline: --scene`. Keep data-at in 1..3; reduced
- *     motion rests at staticStage.
- *   - Confetti: pass confettiAt={N} to ScrollScene (fires once at N % of the range, outside
- *     the device frame) or dispatch the document event `home:confetti`. Never under reduced motion.
+ * Stages (boundaries 25 / 55 / 80 % of the pinned range):
+ *   0  the phone shows "Sam owes Ava", with the empty settlement form below it
+ *   1  the quick-settle button fills the form (who paid, who received, amount, note)
+ *   2  "Record Settlement" is pressed
+ *   3  all settled up: the debt rows strike through, the history fills with reactions, and
+ *      confetti fires once, outside the phone (`confettiAt`; never under reduced motion)
+ * Reduced motion and short viewports rest at stage 3. The phone is an illustration built from the
+ * app's tokens and labels (App frames table); the payments come from example-group.ts, and
+ * recording a payment moves no money, so the copy never says it does.
+ *
+ * Motion is generic (`data-anim` / `data-at`), with `--from` / `--to` giving the native range.
  */
 import ScrollScene from '../ScrollScene.astro';
 import SceneLink from '../props/SceneLink.astro';
-import { t, type Locale } from '@/i18n';
+import AppFrame from '../AppFrame.astro';
+import Avatar from '../props/Avatar.astro';
+import Money from '../props/Money.astro';
+import Paper from '../props/Paper.astro';
+import Polaroid from '../props/Polaroid.astro';
+import { t, tf, type Locale } from '@/i18n';
+import { MEMBERS, GROUP, deriveGreedyPayments, type MemberId } from '../data/example-group';
+import { formatMoney } from '../format';
 
 interface Props {
   locale: Locale;
 }
 const { locale } = Astro.props;
+
+const payments = deriveGreedyPayments();
+const featured = payments.find(p => p.from === 'sam') ?? payments[0];
+const member = (id: MemberId) => MEMBERS.find(m => m.id === id)!;
+const name = (id: MemberId) => t(member(id).nameKey, locale);
+const money = (cents: number) => formatMoney(cents, GROUP.currency, locale, { whole: true });
+const sentence = (key: 'home.tangle.owes' | 'home.tangle.pays', from: MemberId, to: MemberId, cents: number) =>
+  tf(key, { from: name(from), to: name(to), amount: money(cents) }, locale);
+
+/** Reactions on each history row: the first payment gets the full set, as in the storyboard. */
+const reactions = [['🎉', '👍', '❤️'], ['👍'], ['🎉']];
 ---
 
 <ScrollScene
@@ -31,11 +48,256 @@ const { locale } = Astro.props;
   runway={{ desktop: 150, phone: 120 }}
   stages={[25, 55, 80]}
   staticStage={3}
+  confettiAt={85}
 >
   <Fragment slot="copy">
     <h2 id="settle-title">{t('home.settle.title', locale)}</h2>
     <p>{t('home.settle.body', locale)}</p>
   </Fragment>
-  <div slot="visual" class="scene-placeholder" data-hook="settle-visual" aria-hidden="true"></div>
+
+  <div slot="visual" class="settle" data-hook="settle-visual">
+   <div class="settle__inner">
+    <AppFrame variant="phone" class="settle__phone">
+      <div class="settle__app">
+        <!-- Layer A: the owes row and the settlement form -->
+        <div class="settle__form">
+          <div class="app-row settle__owes">
+            <bdi class="app-title">{sentence('home.tangle.owes', featured.from, featured.to, featured.cents)}</bdi>
+            <span class="app-chip settle__chip" aria-hidden="true">{money(featured.cents)}</span>
+          </div>
+          <div class="app-field">
+            <span>{t('home.settle.whoPaid', locale)}</span>
+            <span class="settle__value" data-anim="fade" data-at="1" style="--from:8;--to:13;--i:0">
+              {name(featured.from)}
+            </span>
+          </div>
+          <div class="app-field">
+            <span>{t('home.settle.whoReceived', locale)}</span>
+            <span class="settle__value" data-anim="fade" data-at="1" style="--from:12;--to:17;--i:1">
+              {name(featured.to)}
+            </span>
+          </div>
+          <div class="app-field">
+            <span class="settle__value" data-anim="fade" data-at="1" style="--from:16;--to:21;--i:2">
+              <Money minor={featured.cents} currency={GROUP.currency} locale={locale} whole />
+            </span>
+          </div>
+          <div class="app-field">
+            <span class="settle__value" data-anim="fade" data-at="1" style="--from:20;--to:25;--i:3">
+              {t('home.settle.noteExample', locale)}
+            </span>
+          </div>
+          <div class="settle__press">
+            <span class="app-button">{t('home.settle.recordSettlement', locale)}</span>
+            <span class="settle__ripple" aria-hidden="true" data-anim="pop" data-at="2" style="--from:45;--to:55;--s:0.2"></span>
+          </div>
+        </div>
+
+        <!-- Layer B: all settled up, with the payment history -->
+        <div class="settle__done" data-anim="fade" data-at="3" style="--from:68;--to:76">
+          <p class="app-title settle__all">
+            <span aria-hidden="true">✓</span>
+            {t('home.settle.allSettled', locale)}
+          </p>
+          <p class="settle__history-title">{t('home.settle.history', locale)}</p>
+          <ul class="settle__history">
+            {payments.map((payment, i) => (
+              <li data-anim="pop" data-at="3" style={`--from:${70 + i * 2};--to:${74 + i * 2};--i:${i};--s:0.92`}>
+                <Avatar name={name(payment.from)} color={member(payment.from).color.light} size="1.75rem" />
+                <span class="settle__what">
+                  <bdi>{sentence('home.tangle.pays', payment.from, payment.to, payment.cents)}</bdi>
+                  {i === 0 && <small>{t('home.settle.noteExample', locale)}</small>}
+                </span>
+                <span class="settle__reactions">
+                  {reactions[i]?.map((emoji, j) => (
+                    <span
+                      class="app-chip"
+                      data-anim="pop"
+                      data-at="3"
+                      style={`--from:${76 + j};--to:80;--i:${i + j + 3};--s:0.4`}
+                    >
+                      {emoji}
+                    </span>
+                  ))}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </AppFrame>
+
+    <!-- On the table beside the phone: Sam, the bank-transfer slip and the three payments -->
+    <div class="settle__table">
+      <div class="settle__props">
+        <Polaroid name={name(featured.from)} color={member(featured.from).color.light} rotate={-4} />
+        <Paper tone="kraft" rotate={3} decorative class="settle__slip">
+          <span>{t('home.settle.noteExample', locale)}</span>
+          <strong><Money minor={featured.cents} currency={GROUP.currency} locale={locale} whole /></strong>
+        </Paper>
+      </div>
+      <Paper class="settle__ledger" rotate={-1}>
+        <ul>
+          {payments.map((payment, i) => (
+            <li data-anim="dim" data-at="3" style={`--from:${70 + i * 3};--to:${78 + i * 2};--i:${i}`}>
+              <bdi>{sentence('home.tangle.pays', payment.from, payment.to, payment.cents)}</bdi>
+              <i
+                class="settle__strike"
+                aria-hidden="true"
+                data-anim="fade"
+                data-at="3"
+                style={`--from:${70 + i * 3};--to:${78 + i * 2};--i:${i}`}></i>
+            </li>
+          ))}
+        </ul>
+      </Paper>
+    </div>
+   </div>
+  </div>
+
   <Fragment slot="link"><SceneLink to="settle" locale={locale} /></Fragment>
 </ScrollScene>
+
+<style>
+  .settle {
+    container-type: inline-size;
+  }
+  .settle__inner {
+    display: grid;
+    gap: var(--scene-gap);
+    align-items: center;
+    justify-items: center;
+  }
+  .settle :global(.settle__phone) {
+    inline-size: min(100%, 17.5rem);
+  }
+  .settle__app {
+    display: grid;
+  }
+  .settle__form,
+  .settle__done {
+    grid-area: 1 / 1;
+    display: grid;
+    gap: 0.5rem;
+    align-content: start;
+    min-inline-size: 0;
+  }
+  .settle__done {
+    position: relative;
+    z-index: 1;
+    background: var(--app-surface);
+  }
+  .settle__owes {
+    align-items: start;
+  }
+  .settle__chip {
+    flex: none;
+    white-space: nowrap;
+  }
+  .settle__value {
+    min-block-size: 1.2em;
+    font-weight: 600;
+  }
+  .settle__press {
+    position: relative;
+    display: grid;
+    justify-items: stretch;
+  }
+  .settle__press .app-button {
+    text-align: center;
+  }
+  .settle__ripple {
+    position: absolute;
+    inset: 0;
+    border-radius: 6px;
+    box-shadow: inset 0 0 0 3px rgb(21 128 61 / 0.45);
+    pointer-events: none;
+  }
+  .settle__all {
+    color: var(--app-primary-dark);
+  }
+  .settle__history-title {
+    margin: 0;
+    font-size: 0.6875rem;
+    color: #4b5563;
+  }
+  .settle__history {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .settle__history li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.25rem 0.5rem;
+    align-items: center;
+  }
+  .settle__what {
+    display: grid;
+    min-inline-size: 0;
+  }
+  .settle__what small {
+    color: #4b5563;
+  }
+  .settle__reactions {
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  /* Beside the phone: only where there is room (not on a phone) */
+  .settle__table {
+    display: none;
+  }
+  @container (min-width: 34rem) {
+    .settle__inner {
+      grid-template-columns: 17.5rem minmax(0, 1fr);
+      justify-items: stretch;
+    }
+    .settle__table {
+      display: grid;
+      gap: 1.5rem;
+      align-content: center;
+      min-inline-size: 0;
+    }
+  }
+  .settle__props {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+  .settle__slip {
+    display: grid;
+    gap: 0.25rem;
+    font-family: var(--font-mono, monospace);
+    font-size: 0.875rem;
+  }
+  .settle__ledger ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .settle__ledger li {
+    position: relative;
+    padding-block: 0.25rem;
+  }
+  .settle__strike {
+    position: absolute;
+    inset-inline: 0;
+    inset-block-start: 50%;
+    border-block-start: 2px solid var(--ink-muted);
+    pointer-events: none;
+  }
+
+  @media (max-width: 599px) {
+    .settle :global(.settle__phone) {
+      inline-size: min(100%, 12.5rem);
+    }
+  }
+</style>

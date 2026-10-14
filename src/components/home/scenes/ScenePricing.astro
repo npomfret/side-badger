@@ -1,40 +1,147 @@
 ---
 /**
- * Scene 9, pricing and call to action (`start`). PLACEHOLDER from H5, replaced by H9.
+ * Scene 9, pricing and call to action (`start`). An entry scene: nothing is pinned. Stage 0 is
+ * before it enters; stage 1 has the receipt printed and the two logo halves joined.
  *
- * Hooks for H9:
- *   - <ScrollScene id="start" titleId="start-title" runway="entry" staticStage={1}>: an entry
- *     scene; stage 1 = receipt printed, logo halves joined.
- *   - Two h2s in the `copy` slot: pricing (#start-title) and the call to action (#cta-title).
- *     The pricing body is exactly "Free. No ads. No daily limits." (site plan D2), linked to
- *     /pricing/ with pricingHref(). Receipt rows: home.cta.receiptAds / receiptTrackers /
- *     receiptDrama, with no price line.
- *   - The sign-up button: registerHref('final', locale), rel="nofollow". Add `data-confetti` to
- *     fire canvas-confetti on click (the controller loads it lazily; not under reduced motion).
- *   - `[data-hook="start-visual"]` marks the receipt and joined-logo area.
+ * Two h2s in reading order: pricing (#start-title), then the call to action (#cta-title). The
+ * pricing body is exactly the site plan D2 promise and the "See pricing" link goes to /pricing/.
+ * The receipt has no price line, so the joke makes no pricing claim. The sign-up button is
+ * `registerHref('final')` with `data-confetti`: the controller loads canvas-confetti on click and
+ * never under reduced motion. Reduced motion rests at stage 1 (joined face, printed receipt).
  */
 import ScrollScene from '../ScrollScene.astro';
+import Receipt from '../props/Receipt.astro';
 import { t, type Locale } from '@/i18n';
 import { pricingHref, registerHref } from '../data/links';
+import { intlCodeFor } from '../format';
 
 interface Props {
   locale: Locale;
 }
 const { locale } = Astro.props;
+
+const zero = new Intl.NumberFormat(intlCodeFor(locale)).format(0);
+const lines = [
+  { label: t('home.cta.receiptAds', locale), amount: zero },
+  { label: t('home.cta.receiptTrackers', locale), amount: zero },
+  { label: t('home.cta.receiptDrama', locale), amount: zero },
+];
+const logo = '/images/logo-face-only-large.png';
 ---
 
 <ScrollScene id="start" titleId="start-title" runway="entry" staticStage={1}>
   <Fragment slot="copy">
-    <h2 id="start-title">{t('home.pricing.title', locale)}</h2>
-    <p>{t('home.pricing.body', locale)}</p>
-    <a class="scene-link" href={pricingHref(locale)}>{t('home.pricing.link', locale)}</a>
-    <h2 id="cta-title">{t('home.cta.title', locale)}</h2>
-    <p>{t('home.cta.body', locale)}</p>
+    <div class="start__block">
+      <h2 id="start-title">{t('home.pricing.title', locale)}</h2>
+      <p class="start__promise">{t('home.pricing.body', locale)}</p>
+      <a class="scene-link" href={pricingHref(locale)}>{t('home.pricing.link', locale)}</a>
+    </div>
+    <div class="start__block">
+      <h2 id="cta-title">{t('home.cta.title', locale)}</h2>
+      <p>{t('home.cta.body', locale)}</p>
+    </div>
   </Fragment>
-  <div slot="visual" class="scene-placeholder" data-hook="start-visual" aria-hidden="true"></div>
+
+  <div slot="visual" class="start__visual" data-hook="start-visual">
+    <Receipt
+      title={t('header.logoText', locale)}
+      lines={lines}
+      rotate={2}
+      decorative
+      class="start__receipt"
+      data-anim="rise"
+      data-at="1"
+      style="--dy:-48px;--range:entry 0% entry 60%"
+    />
+    <!-- The page's text direction mirrors the pair, so the green half is always at the start -->
+    <div class="start__logo-wrap" aria-hidden="true">
+      <div class="start__logo">
+        <img
+          class="start__half start__half--green"
+          src={logo}
+          alt=""
+          width="644"
+          height="561"
+          loading="lazy"
+          decoding="async"
+          data-anim="slide"
+          data-at="1"
+          style="--dx:-80px;--range:entry 30% cover 40%"
+        />
+        <img
+          class="start__half start__half--teal"
+          src={logo}
+          alt=""
+          width="644"
+          height="561"
+          loading="lazy"
+          decoding="async"
+          data-anim="slide"
+          data-at="1"
+          style="--dx:80px;--range:entry 30% cover 40%"
+        />
+      </div>
+    </div>
+  </div>
+
   <Fragment slot="link">
-    <a class="btn btn-primary btn-lg" href={registerHref('final', locale)} rel="nofollow" data-confetti>
+    <a class="btn btn-primary btn-lg start__cta" href={registerHref('final', locale)} rel="nofollow" data-confetti>
       {t('home.hero.ctaPrimary', locale)}
     </a>
   </Fragment>
 </ScrollScene>
+
+<style>
+  .start__block {
+    display: grid;
+    gap: var(--space-md, 1rem);
+    justify-items: start;
+  }
+  .start__block + .start__block {
+    margin-block-start: clamp(1.5rem, 4vw, 3rem);
+  }
+  .start__block > * {
+    margin: 0;
+  }
+  .start__promise {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .start__visual {
+    display: grid;
+    gap: var(--scene-gap);
+    justify-items: center;
+    align-content: center;
+  }
+  .start__visual :global(.start__receipt) {
+    inline-size: min(100%, 15rem);
+  }
+  /* The wrapper mirrors the face on RTL pages; the halves inside use --dir: 1 so that their slide
+     is not mirrored twice */
+  .start__logo-wrap {
+    scale: var(--dir, 1) 1;
+  }
+  .start__logo {
+    --dir: 1;
+    display: grid;
+    inline-size: clamp(8rem, 18vw, 11rem);
+    aspect-ratio: 644 / 561;
+  }
+  .start__half {
+    grid-area: 1 / 1;
+    inline-size: 100%;
+    block-size: auto;
+  }
+  .start__half--green {
+    clip-path: inset(0 50% 0 0);
+  }
+  .start__half--teal {
+    clip-path: inset(0 0 0 50%);
+  }
+  @media (max-width: 599px) {
+    .start__cta {
+      inline-size: 100%;
+      justify-content: center;
+    }
+  }
+</style>

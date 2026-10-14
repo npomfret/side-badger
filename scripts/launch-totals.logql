@@ -1,0 +1,23 @@
+# Weekly launch-click totals (D28), for the owner's sheet.
+#
+# The nginx container logs one JSON line per /go/ click (see log_format
+# side_badger_launch in nginx/default.conf). Run this in Grafana Explore on the
+# edge box's Loki, as an instant query over the last day, once per day (or set
+# the range to 7d and the step to 1d for a weekly view). Bots are excluded.
+# Loki keeps these lines for 30 days.
+#
+# Adjust the stream selector to the label the edge box gives the container
+# (container, compose_service or similar); the filter after it is what matters.
+#
+# One row per target, from (page), cta (position) and lang.
+
+sum by (target, from, cta, lang) (
+  count_over_time(
+    {container=~".*side-badger.*"}
+      |= "\"type\":\"launch\""
+      | json
+      | type = "launch"
+      | bot = "0"
+      [1d]
+  )
+)

@@ -1,6 +1,6 @@
 review:
-  status: reviewed
-  reviewer: nick
+  status: checked
+  checker: P33c-review
   date: 2026-10-15
 claims:
   - multi-currency.140-currencies
@@ -23,7 +23,7 @@ cta:
   button: Create a free account
 problem:
   heading: Enter it as you paid it
-  body: A trip is never paid for in one currency. The hotel was booked at home, dinner was in cash, and the taxi took cards only. Converting everything by hand before you can even type it in is how spreadsheets get abandoned. In Side Badger you enter each expense in the currency on the receipt, and every amount follows its currency's rules, so yen have no decimals and dinars have three. Your recently used currencies come first in the list.
+  body: A trip is rarely paid for in one currency. The hotel was booked at home in pounds, dinner was paid in yen, and the airport coffee was in whatever the layover used. Converting everything by hand before you can even type it in is how spreadsheets get abandoned. In Side Badger you enter each expense in the currency on the receipt, and every amount follows its currency's rules, so yen have no decimals and dinars have three. Your recently used currencies come first in the list.
 workflow:
   heading: Keep currencies separate, or convert as you go
   steps:
@@ -89,13 +89,11 @@ example:
       JPY: 0.005
 sections:
   - heading: One currency for the whole group
-    body: If your group would rather not think about it, pick a group currency and new expenses convert into it automatically. This applies to new and copied expenses only. Edits and existing expenses are left as they are, so nothing already recorded changes under you.
+    body: If your group would rather not think about it, pick a group currency and the form converts each new expense into it, at a rate you can still see and change. This applies to new and copied expenses only. Edits and existing expenses are left as they are, so nothing already recorded changes under you.
   - heading: Owe euros, pay in pounds
-    body: Paid in yen, settling in pounds? Fine. When you record a payment you can convert it into another currency too, so the person who owes euros can pay in pounds and the balance still comes out right. Pay each other however you like, then record it.
+    body: Paid in yen, settling in pounds? Fine. When you record a payment you can convert it too, so whoever owes euros can pay in pounds and the euro balance still comes out right. Pay each other however you like, then record it.
   - heading: Rules for the group
-    body: Limit a group to the currencies you are actually using, and set a default so the form opens on the right one. A holiday in Portugal does not need 139 other options next to the dinner bill.
-  - heading: See also
-    body: Planning a party? [Events and celebrations](page:use-case/events-and-celebrations) covers deposits, decorations and the guest who paid in another currency.
+    body: Limit a group to the currencies you are actually using, and set a default so the form opens on the right one. A holiday in Portugal does not need 139 other options next to the dinner bill, and a [wedding abroad](page:use-case/events-and-celebrations) probably needs two.
 limits:
   heading: Limits
   items:
@@ -104,13 +102,13 @@ limits:
     - Group auto-convert applies to new and copied expenses only, not to edits or existing expenses.
     - Each expense is capped at 999,999.99 in its own currency.
     - There are 140 currencies. Cryptocurrencies and metals are not among them.
-    - Side Badger records payments. It never moves money or converts it for you.
+    - Side Badger records payments. It never moves money or exchanges it.
 useCasesHeading: Where this helps
 faq:
   heading: Questions
   items:
     - q: Which exchange rate do you use?
-      a: A current rate, fetched when you enter the expense. You can change it to the rate you actually got, and the converted amount updates.
+      a: A current exchange rate, fetched when you enter the expense where one is available. You can change it to the rate you actually got, and the converted amount updates.
     - q: Do old expenses get revalued?
       a: No. The rate is fixed when the expense is saved, so a balance does not drift because the market did.
     - q: Do you support crypto?

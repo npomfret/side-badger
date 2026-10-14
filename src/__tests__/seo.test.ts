@@ -11,6 +11,7 @@ import {
   type JsonLdNode,
 } from '../seo/jsonld';
 import { localeConfig, pseudoLocales } from '../i18n';
+import { pathsFor } from '../site/routes';
 
 type Loose = Record<string, unknown>;
 const byType = (graph: JsonLdNode[], type: string) =>
@@ -73,19 +74,35 @@ describe('isIndexable (D8)', () => {
 });
 
 describe('alternatesFor', () => {
+  // Works in strict and English-first mode (D38): the cluster is whatever was built
+  const built = pathsFor('home').map(path => path.props.locale);
+
   it('lists every built indexable locale with configured tags, and x-default', () => {
-    const alternates = alternatesFor('home', 'fr');
-    const tags = alternates.map(a => a.hreflang);
-    expect(tags).toContain('x-default');
-    expect(tags).toContain('tl'); // ph
-    expect(tags).not.toContain('ph');
+    const alternates = alternatesFor('home', 'en');
+    const expected = built.filter(loc => isIndexable('home', loc)).map(loc => localeConfig[loc].hreflang);
+    expect(alternates.map(a => a.hreflang)).toEqual([...expected, 'x-default']);
     expect(alternates.find(a => a.hreflang === 'x-default')?.href).toBe('https://sidebadger.me/');
-    expect(alternates.find(a => a.hreflang === 'tl')?.href).toBe('https://sidebadger.me/ph/');
-    expect(alternates.find(a => a.hreflang === 'fr')?.href).toBe('https://sidebadger.me/fr/');
+    expect(alternates.map(a => a.hreflang)).not.toContain('ph');
+    if (built.includes('ph')) {
+      expect(alternates.find(a => a.hreflang === 'tl')?.href).toBe('https://sidebadger.me/ph/');
+    }
+    if (built.includes('fr')) {
+      expect(alternates.find(a => a.hreflang === 'fr')?.href).toBe('https://sidebadger.me/fr/');
+    }
   });
 
   it('is the same set from every member of the cluster', () => {
-    expect(alternatesFor('home', 'fr')).toEqual(alternatesFor('home', 'en'));
+    const fromEnglish = alternatesFor('home', 'en');
+    for (const loc of built.filter(l => isIndexable('home', l))) {
+      expect(alternatesFor('home', loc)).toEqual(fromEnglish);
+    }
+  });
+
+  it('lists no locale that was not built', () => {
+    const tags = alternatesFor('home', 'en').map(a => a.hreflang);
+    for (const loc of Object.keys(localeConfig) as (keyof typeof localeConfig)[]) {
+      if (!built.includes(loc) && !(pseudoLocales as readonly string[]).includes(loc)) expect(tags).not.toContain(localeConfig[loc].hreflang);
+    }
   });
 
   it('drops a locale that is not indexable from every cluster', () => {

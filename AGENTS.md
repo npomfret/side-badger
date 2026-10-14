@@ -48,7 +48,9 @@ const alt = t('header.logoText', locale);
 - `src/i18n/locks/<locale>.json` records the English hash each translation was made against, so `npm run i18n audit` can flag stale or unconfirmed translations.
 - In english-first mode, routes (`src/site/routes.ts`) are not generated for a locale that lacks a key or page, so no English fallback is built at a localized URL.
 - CI picks the mode: `english-first` on `redesign` and pull requests into it, `strict` everywhere else including `main`. Local runs default to strict; set `I18N_MODE=english-first` to match `redesign`.
-- `PREVIEW_PSEUDO=1` (pseudo-locales `xx-*`) and `PREVIEW_UNPUBLISHED=1` (unpublished pages) are local review switches. Never set them in CI or Docker; output checks fail if they leak.
+- `PREVIEW_UNPUBLISHED=1` builds the registry pages that have `published: false` plus the preview-only pages in `src/site/preview-pages.ts` (`/preview/<slug>/`, content under `src/content/*/__preview__/`). They are `noindex`, carry `data-unpublished`, and stay out of navigation and the sitemap.
+- `PREVIEW_PSEUDO=1` adds the pseudo-locales `xx-long`, `xx-ar`, `xx-ja` and `xx-hi` for layout review (long text, RTL, CJK, Devanagari). Their content is the English entry run through `pseudoize` (`src/components/content/pseudo-content.ts`); there is no YAML for them.
+- Both are local only: never set them in CI or Docker. Output checks fail if they leak (rule 12 fails by design on a pseudo build, so run `check:site` on a normal build). `playwright.config.ts` builds with both set.
 
 ### Adding a New Language
 
@@ -75,25 +77,64 @@ npm run i18n audit   # Check for missing/extra keys
 
 ## Site structure
 
-- `src/site/pages.ts`: the page registry (id, type, English path, parent, `published`). Routes, navigation, breadcrumbs, the sitemap and the output checks all read it. `preview-pages.ts` holds preview-only pages.
+- `src/site/pages.ts`: the page registry (id, type, English path, parent, `published`, `related`, `content`). Routes, navigation, breadcrumbs, the sitemap and the output checks all read it. New pages are registered with `published: false` and flipped at release; `preview-pages.ts` holds preview-only pages.
 - `src/site/routes.ts`: `pathsFor(pageId)` / `pathsForType(type)` for `getStaticPaths()`. Route files live in `src/pages/[...locale]/`.
+- `src/site/cross-links.ts`: the page ids a page links to automatically (its `related` list, the features a use case depicts, the use cases that depict a feature). Callers filter by publication.
 - `src/seo/`: `urls.ts` (paths, canonicals, launch links), `alternates.ts` (hreflang), `indexability.ts` (noindex rules), `jsonld.ts` (typed JSON-LD graph).
-- `src/components/layout/`: `SeoHead`, `SiteHeader`, `SiteFooter`. `BaseLayout.astro` composes them.
+- `src/components/layout/`: `SeoHead`, `SiteHeader`, `MobileNav`, `SiteFooter`. `BaseLayout.astro` composes them with `src/components/nav/Breadcrumbs.astro` and `RelatedLinks.astro`.
+
+### Shell
+
+- `SiteHeader` is sticky; `--header-h` (`tokens.css`) is its height and drives `scroll-padding-top` and the pinned homepage scenes. Use it instead of a literal.
+- `MobileNav` is a native Popover API menu (`popovertarget`, `popover`): Escape, light dismiss and focus return come from the browser, so add no JS for them.
+- `src/components/cta/LaunchAppCta.astro` is the only way to link to the app (it goes through `launchHref()`; rule 15). Rich text and YAML never contain app links.
+- Breadcrumbs come from the registry `parent` chain and match the BreadcrumbList JSON-LD.
+
+### Registries and content
+
+- `src/data/features.ts`, `use-cases.ts`, `substitutions.ts` and `screenshots.ts` (types in `types.ts`) are the English, internal registry: feature ids and statuses, claims, proof, approved wording. Pages reference ids and never print registry strings. `substitutions.ts` lists phrases banned from English copy and what to write instead. `src/__tests__/registry.test.ts` checks every reference.
+- Content is YAML, one file per page per locale: `src/content/{features,use-cases,pages}/<slug>/<locale>.yaml`. `src/content/schemas.ts` (zod) defines every shape; `content.test.ts` checks structural parity between locales (same keys as English).
+- `richText` fields are inline Markdown only. The one link form is `[text](page:<pageId>)`, resolved per locale by `RichText.astro`; an unknown or unbuilt page id fails the build. No app links in rich text.
+- A worked example is data, not prose: `computeExample` (`src/lib/settle.ts`) computes the settlement, `content/money.ts` formats it and `WorkedExample` shows it. Locales may change names, labels and amounts, but people, payers, split methods and payment count must match English. `exampleAfter` places the example after N sections; `navLabel` (max 32 characters) is the short label used in navigation.
+- Every entry has a `review` block. `machine` is the default; `checked` is set by an agent that back-checked the text (needs `checker` and `date`); `reviewed` only for a named fluent human (needs `reviewer` and `date`). Agents never write `reviewed`.
+- Policies: `src/content/policies/*.md` are committed snapshots (see External Dependencies).
+
+### Layouts and content blocks
+
+- `src/layouts/`: `FeaturePageLayout`, `UseCasePageLayout`, `HubLayout` (the features and use-cases indexes), `HowItWorksLayout`, plus `BaseLayout`. The route files in `src/pages/[...locale]/` load the collection entry and pass it in.
+- `src/components/content/` holds the building blocks: `PageHero`, `ContentSection`, `ExtraSections`, `CardGrid`, `WorkflowSteps`, `WorkedExample`, `Screenshot`, `FaqList`, `LimitsList`, `RelatedPages`, `CtaBand`, `BetaLabel`, `RichText`. Compose these rather than writing page-specific markup.
 
 ## Components
 
-- `BaseLayout.astro` (`src/layouts`) - HTML wrapper, SEO head, header/footer
-- `HomePage.astro`, `PricingPage.astro` - page bodies
+- `PricingPage.astro` - pricing body
 - `PolicyPage.astro` - Renders a legal page from the committed snapshot in `src/content/policies` (English text; non-English locales show a notice)
 - `LanguageSwitcher.astro`, `LanguageDetection.astro` - language picker and first-visit detection
 - `EasterEggs.astro` - Konami code, disco mode, hidden interactions
 
+### Homepage (`src/components/home/`)
+
+A scroll-driven set of scenes. Styles are in `src/styles/home/` (`tokens.css`, `scenes.css`).
+- `HomePage.astro` composes the scenes; `ScrollScene.astro` is the scene wrapper (its `data-*` contract is documented in `scene-controller.ts`); `AppFrame.astro` frames app-like content.
+- `scenes/` has one component per scene (`SceneChaos`, `SceneTangle`, `SceneGroup`, `SceneExpenses`, `SceneCurrencies`, `SceneSettle`, `SceneWorlds`, `ScenePricing`, `SceneTrust`).
+- `props/` is the illustration kit (`Paper`, `Receipt`, `Polaroid`, `StickyNote`, `Stamp`, `Doodle`, `Avatar`, `ChatBubble`, `Money`, `SceneLink`) with `chaos/`, `expenses/` and `worlds/` sub-kits.
+- `tangle/layout.ts` lays out the debt tangle; `data/` holds the scene data (`example-group.ts`, `home-features.ts`, `links.ts`, `worlds.ts`); `format.ts` formats money.
+- `scene-controller.ts` is the only homepage script: no scroll listeners and no permanent animation loop. It picks the engine: `native` (CSS view timelines), `stages` (fallback for browsers without them; sets `data-stage` from hidden regions) or `static` (reduced motion or a viewport under 560 px high: nothing pinned, scenes rest at `data-static-stage`). `?scenes=stages` forces the fallback for testing. Ambient loops stop 5 s after a scene activates.
+- Confetti is lazy: `canvas-confetti` is dynamically imported on first use (`[data-confetti]`, the `home:confetti` event, easter eggs, pricing) and never under reduced motion.
+- Homepage text is `home.*` keys in `en.ts`; app links go through `LaunchAppCta`.
+- Retired: the canvas background, floating particles, cursor-follow, glass-layer and aurora effects, and the old single-file homepage are gone. Do not reintroduce ambient background effects; motion belongs to scenes and respects `prefers-reduced-motion`.
+
 ## Pages
 
 All in `src/pages/` (file-based routing); most are under `[...locale]/` so one file serves every locale:
-- `index.astro`, `pricing.astro` - Homepage and the free tier explanation with FAQ schema
+- `index.astro` (homepage), `pricing.astro` (free tier with FAQ schema)
+- `features/index.astro`, `features/[slug].astro`, `use-cases/index.astro`, `use-cases/[slug].astro`, `how-it-works.astro` - content pages built from the collections
 - `privacy.astro`, `terms.astro`, `cookies.astro` - Policy pages (pre-rendered from snapshots at build time)
+- `preview/[slug].astro` - layout review pages, only under `PREVIEW_UNPUBLISHED=1`
 - Outside `[...locale]/`: `404.astro`, `robots.txt.ts` and `og/[card].png.ts` (social cards)
+
+## End-to-end tests
+
+`e2e/` is Playwright (`npm run test:e2e`; specs `layouts`, `shell`, `pricing`; page objects in `e2e/pages/`). `playwright.config.ts` builds the site with both preview flags and serves it on `E2E_PORT` (default 18520); it defaults to `I18N_MODE=english-first`. Tests go through page objects only.
 
 ## Verify gate
 
@@ -131,6 +172,5 @@ Caveat: a PR opened with the default `GITHUB_TOKEN` does not trigger the `verify
 ## Styling Notes
 
 - Fluid typography and spacing using `clamp()`
-- Breathing animations on hero elements
-- Confetti via `canvas-confetti` on CTA clicks and easter eggs (loaded on first use)
+- Confetti via `canvas-confetti` on CTA clicks, scenes and easter eggs (loaded on first use)
 - All animations respect `prefers-reduced-motion`

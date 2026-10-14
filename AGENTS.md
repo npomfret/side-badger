@@ -19,10 +19,10 @@ Marketing website for a white-label bill splitting app. The actual app is hosted
 
 ## Code Patterns
 
-**Translations**: Use `t('key')` from `@/i18n`:
+**Translations**: Use `t(key, locale)` from `@/i18n`:
 ```typescript
 import { t } from '@/i18n';
-const url = t('app.url');
+const alt = t('header.logoText', locale);
 ```
 
 **Path aliases**:
@@ -36,9 +36,9 @@ const url = t('app.url');
 ## Internationalization (i18n)
 
 - **Text & Routing**: All text is handled via `src/i18n/*.ts`. Astro's dynamic routes provide locale-based URLs (e.g., `/ja/pricing`).
-- **RTL**: `ar`, `fa` and `ur` are RTL (`rtlLocales` in `src/i18n/index.ts`). `BaseLayout.astro` sets `<html dir>` and `lang`; styles use `[dir="rtl"]` in `layout.css` and logical properties where possible. Check any layout change in `/ar/`.
-- **Fonts**: Loads and applies locale-specific fonts (`Noto Sans JP`, `Noto Sans Arabic`) via `:lang()` styles in `global.css`.
-- **SEO**: `BaseLayout.astro` generates `hreflang` tags and a correct `og:locale` meta tag for social sharing.
+- **RTL**: `ar`, `fa` and `ur` are RTL (`rtlLocales` in `src/i18n/index.ts`). `BaseLayout.astro` sets `<html dir>` and `lang`. Write new CSS with logical properties only (some older rules are still physical); `tokens.css` sets `--dir: -1` under `[dir="rtl"]` for transforms. Check any layout change in `/ar/`.
+- **Fonts**: `BaseLayout.astro` sets `data-font-script` from the locale's `fontScript`; `tokens.css` picks the font stack for each script. Arabic, Devanagari, Bengali and Telugu pages also load that script's Noto Sans stylesheet from `public/fonts/`.
+- **SEO**: `SeoHead.astro` writes the title, description, canonical, `hreflang` alternates (`src/seo/alternates.ts`), `og:locale` and JSON-LD.
 - **Formatting**: The `src/i18n/index.ts` file includes helpers like `getFormattedDate` for locale-aware date formatting.
 
 ### English-first mode and `redesign`
@@ -93,13 +93,15 @@ npm run i18n audit   # Check for missing/extra keys
 All in `src/pages/` (file-based routing); most are under `[...locale]/` so one file serves every locale:
 - `index.astro`, `pricing.astro` - Homepage and the free tier explanation with FAQ schema
 - `privacy.astro`, `terms.astro`, `cookies.astro` - Policy pages (pre-rendered from snapshots at build time)
+- Outside `[...locale]/`: `404.astro`, `robots.txt.ts` and `og/[card].png.ts` (social cards)
 
 ## Verify gate
 
 `npm run verify` is the full gate: unit tests, `i18n:audit`, `astro check` (0 errors), `build`, then `check:site`.
 - `check:site` (`vitest.site.config.ts`, rules in `src/__site_tests__/`) reads `dist/` and enforces 15 output rules: files, canonicals, noindex, h1, title/description, lang/dir, hreflang, sitemap, links, social image, JSON-LD, leaks, English fallback, image dimensions and alt, launch links. Run `npm run build` first; `SITE_DIST` points it at another directory.
-- `scripts/check-nginx.sh` (`npm run check:nginx`) builds the image, runs it and checks redirects, 404s, `/go/`, headers. It needs Docker.
-- CI (`.github/workflows/deploy.yml`): the `verify` job runs `npm run verify` then the nginx smoke test. `build-and-push` and `deploy` need `verify` and run only on pushes to `main`.
+- `scripts/check-nginx.sh` (`npm run check:nginx`) builds the image (or takes `--image`), runs it and checks redirects, 404s, `/go/`, headers. It needs Docker and a strict build, so on `redesign` it passes only once every locale is complete.
+- CI (`.github/workflows/deploy.yml`): the `verify` job runs `npm run verify` on every push and pull request. `build-and-push` and `deploy` need `verify` and run only on pushes to `main`; `build-and-push` builds the image, runs the nginx smoke test against it, then pushes it.
+- In English-first mode the unused-key test lets keys listed under `pending/keys.json` `added` stay unused (their code lands in a later wave) and prints them; strict mode fails on any unused key.
 - The Dockerfile `builder` stage runs `check:site` after the build, so a manual `scripts/deploy.sh` build is gated too.
 
 ## Docker

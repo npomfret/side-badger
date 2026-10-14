@@ -1,0 +1,38 @@
+---
+/**
+ * One H2 section of a content page: a labelled `<section>` in the site container. Every layout
+ * section uses it, so heading levels, spacing and the accessible name are the same everywhere.
+ */
+interface Props {
+  heading: string;
+  /** Unique on the page; the heading gets `<id>-heading` */
+  id: string;
+  class?: string;
+}
+
+const { heading, id, class: className } = Astro.props;
+---
+
+<section class:list={['content-section', className]} aria-labelledby={`${id}-heading`} data-section={id}>
+  <div class="container">
+    <h2 id={`${id}-heading`}>{heading}</h2>
+    <slot />
+  </div>
+</section>
+
+<style>
+  .content-section {
+    padding-block: var(--space-2xl);
+  }
+
+  .content-section h2 {
+    margin-block: 0 var(--space-lg);
+    font-size: var(--text-3xl);
+    line-height: var(--heading-line-height);
+    overflow-wrap: anywhere;
+  }
+
+  .content-section :global(p) {
+    max-inline-size: 70ch;
+  }
+</style>

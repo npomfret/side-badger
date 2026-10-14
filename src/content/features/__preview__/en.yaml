@@ -1,0 +1,101 @@
+# Layout fixture for FeaturePageLayout (P24). Built only under PREVIEW_UNPUBLISHED=1; the page is
+# registered in src/site/preview-pages.ts. The copy is plausible filler written to exercise every
+# block of the layout, not site copy: it is never published and no real page links to it.
+review:
+  status: reviewed
+  reviewer: Layout fixture
+  date: 2026-01-01
+claims: []
+meta:
+  title: Preview feature page, every block of the layout
+  description: A fixture page that fills every block of the feature layout, including a worked example in two currencies.
+h1: A feature page that uses every block of its layout
+lead: This is a layout fixture. It has a **bold phrase**, an *italic one*, and a link to [the pricing page](page:pricing) so link resolution is covered.
+cta:
+  heading: Ready when your group is
+  body: Create an account, start a group and send the link. See [how it works](page:preview/how-it-works) first if you like.
+  button: Create a free account
+problem:
+  heading: The problem, in one paragraph
+  body: Somebody paid for the villa, somebody else paid for the taxis, and nobody can say who owes whom without opening a spreadsheet. That is the whole problem, and it gets worse with every extra person and currency.
+workflow:
+  heading: How it works in three steps
+  steps:
+    - title: Add the expense
+      body: Say who paid, how much, and who shared it. Splits can be equal, exact or by percentage.
+      shot: S05
+      shotAlt: The expense form with a percentage split filled in
+    - title: Watch the balances
+      body: Balances update as expenses arrive, one per currency, so you always know where the group stands.
+      shot: S10
+      shotAlt: The balances screen with simplified debts in two currencies
+    - title: Record the payment
+      body: Pay however you like, then record it so the balance drops. Part payments are fine.
+options:
+  heading: Ways to adjust it
+  items:
+    - title: Choose who shares
+      body: Leave out the people who were not there. Only the people you pick share the cost.
+    - title: Pick the split
+      body: Equal, exact amounts or percentages, per expense. The last penny goes to somebody, and the total always adds up.
+    - title: Change it later
+      body: Edit an expense and everyone sees what changed.
+example:
+  heading: The villa weekend, in pounds and euros
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: the villa
+      payer: ana
+      amount: 450
+      split:
+        method: equal
+    - label: taxis
+      payer: ben
+      amount: 60
+      currency: EUR
+      split:
+        method: equal
+    - label: tapas
+      payer: cara
+      amount: 90
+      currency: EUR
+      split:
+        method: percent
+        shares:
+          ana: 40
+          ben: 30
+          cara: 30
+  conversion:
+    rates:
+      EUR: 0.85
+sections:
+  - heading: The details that save arguments later
+    body: Add a date, a label, a note or a receipt. Future you will be grateful, and so will everyone who asks what the 62 pounds was for.
+  - heading: What you can attach
+    items:
+      - A receipt photo or a PDF, up to three attachments per expense.
+      - A **place** from a map link.
+      - A note, for the story behind the number.
+limits:
+  heading: Limits
+  items:
+    - One person pays for each expense. If two people paid, record two expenses.
+    - There is no split by item or by shares.
+    - An expense can be up to 999,999.99 in its currency.
+useCasesHeading: Where this helps
+faq:
+  heading: Questions
+  items:
+    - q: Can two people pay for one expense?
+      a: Not in one expense. Record two, one for each payer, and the balances come out the same.
+    - q: Can I split a receipt by item?
+      a: No. Scanning fills in the total, and you choose how to split it.
+    - q: Does it work without an account?
+      a: Everyone in the group needs a free account. See [pricing](page:pricing) for what free covers.

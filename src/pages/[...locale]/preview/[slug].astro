@@ -1,0 +1,24 @@
+---
+// Layout review pages for the hub and how-it-works layouts (src/site/preview-pages.ts). The real
+// hubs and how it works have routes of their own; these exist only under PREVIEW_UNPUBLISHED=1,
+// so a normal build generates no page here. Feature and use-case previews go through the real
+// feature and use-case routes.
+import HowItWorksLayout from '../../../layouts/HowItWorksLayout.astro';
+import HubLayout from '../../../layouts/HubLayout.astro';
+import { layoutPaths, loadPageContent } from '../../../components/content/page-content';
+import type { SitePageData } from '../../../content/schemas';
+import { requirePage } from '../../../site/pages';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  const previews = (id: string) => id.startsWith('preview/');
+  return [...(await layoutPaths('hub', previews)), ...(await layoutPaths('how-it-works', previews))];
+}
+
+const { pageId, locale } = Astro.props as { pageId: string; locale: Locale };
+const type = requirePage(pageId).type;
+const data = await loadPageContent<SitePageData>(pageId, locale);
+---
+
+{type === 'hub' && <HubLayout data={data as Extract<SitePageData, { cardsHeading: string }>} pageId={pageId} locale={locale} />}
+{type === 'how-it-works' && <HowItWorksLayout data={data as Extract<SitePageData, { requirements: unknown }>} pageId={pageId} locale={locale} />}

@@ -1,0 +1,108 @@
+---
+/**
+ * Numbered steps with an optional product shot each (feature workflow, how it works). The step
+ * title is an `h3` in a feature page's workflow and an `h2` on how it works (`titleLevel`), as the
+ * briefs outline each how-it-works step as an H2. A step's shot is skipped when the hero already
+ * shows it (`skipShot`), so no image loads twice.
+ */
+import type { Locale } from '../../i18n';
+import RichText from './RichText.astro';
+import Screenshot from './Screenshot.astro';
+
+interface Step {
+  title: string;
+  body: string;
+  shot?: string;
+  shotAlt?: string;
+}
+
+interface Props {
+  steps: readonly Step[];
+  locale: Locale;
+  titleLevel?: 'h2' | 'h3';
+  skipShot?: string;
+}
+
+const { steps, locale, titleLevel = 'h3', skipShot } = Astro.props;
+const Heading = titleLevel;
+---
+
+<ol class="workflow-steps">
+  {steps.map(step => (
+    <li class="workflow-step">
+      <div class="workflow-step__text">
+        <Heading class="workflow-step__title">{step.title}</Heading>
+        <RichText as="p" text={step.body} locale={locale} />
+      </div>
+      {step.shot && step.shot !== skipShot && (
+        <div class="workflow-step__shot">
+          <Screenshot id={step.shot} locale={locale} alt={step.shotAlt ?? ''} />
+        </div>
+      )}
+    </li>
+  ))}
+</ol>
+
+<style>
+  .workflow-steps {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-xl);
+    counter-reset: step;
+  }
+
+  .workflow-step {
+    display: grid;
+    gap: var(--space-lg);
+    align-items: center;
+    counter-increment: step;
+    padding: var(--space-lg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    background: var(--glass-bg);
+  }
+
+  .workflow-step:has(.workflow-step__shot :global(img)) {
+    grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr));
+  }
+
+  .workflow-step :global(.workflow-step__title) {
+    display: flex;
+    gap: var(--space-md);
+    align-items: baseline;
+    margin: 0 0 var(--space-sm);
+    font-size: var(--text-2xl);
+    line-height: var(--heading-line-height);
+    color: var(--text-heading);
+    overflow-wrap: anywhere;
+  }
+
+  .workflow-step :global(.workflow-step__title)::before {
+    content: counter(step);
+    flex: none;
+    inline-size: 2rem;
+    block-size: 2rem;
+    display: inline-grid;
+    place-items: center;
+    border-radius: var(--radius-full);
+    background: var(--accent-ink);
+    color: #fff;
+    font-size: var(--text-base);
+    font-weight: 700;
+  }
+
+  .workflow-step__text :global(p) {
+    margin: 0;
+    max-inline-size: 60ch;
+  }
+
+  .workflow-step__shot :global(img) {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+  }
+</style>

@@ -1,0 +1,101 @@
+review:
+  status: checked
+  checker: claude-p32
+  date: 2026-10-15
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+meta:
+  title: How Side Badger works | Split group expenses in four steps
+  description: Create a group, invite people, add expenses and settle up. See what happens between "someone paid" and "we're square", with a worked example.
+h1: How Side Badger works
+navLabel: How it works
+lead: What happens between "someone paid" and "we're square"? Four steps, no spreadsheet, and one badger who is mostly decorative. Here is the whole trip, from the first group to the last recorded payment. For the detail on any step, see [split expenses](page:feature/split-expenses) and [settle up](page:feature/settle-up).
+cta:
+  heading: From "I'll get this one" to "we're square"
+  body: Create a free account, start a group and add the first expense. It takes about a minute, and the badger will not judge the receipt.
+  button: Create a free account
+steps:
+  - title: Create a group
+    body: Make one group for each house, trip or event, so the rent never ends up in the same list as the wedding present. Give it a name, choose its currency, and pick the name people will see you as. Your dashboard then shows every group, and where you stand in each, on one screen.
+    shot: S02
+    shotAlt: The create-group dialog with the currency restrictions section open
+  - title: Invite your people
+    body: Share a join link or show a QR code, and set how long it lasts, from 15 minutes up to 5 days. Everyone who joins needs a free account and a verified email, and a group holds up to 50 people. If you want to vet who comes in, turn on approval and an admin lets each person through.
+    shot: S03
+    shotAlt: The invite dialog on the link tab, showing a QR code and the expiry choices
+  - title: Add expenses as they happen
+    body: Say who paid, how much, and who it was for. Split it equally, by exact amounts or by percentage, and leave out anyone who was not part of it. Add the expense and everyone sees it straight away, along with what changed and who changed it.
+    shot: S05
+    shotAlt: The expense form with a percentage split, dividing the rent by room size
+  - title: Watch the balances
+    body: Side Badger keeps a running balance for each currency, so you can see who owes whom at a glance. Rather than leaving everyone to untangle a web of small debts, it suggests a short list of payments that settles the group.
+    shot: S10
+    shotAlt: The balances screen showing simplified debts in two currencies, with Show all switched on
+  - title: Settle up outside the app, record it inside
+    body: Side Badger never moves money. Pay each other however you like, then record the payment so the balances catch up, and everyone's screen updates without a refresh. "Settle" simply means the balances read zero. Nobody can leave a group while they still owe or are owed money, so anyone heading for the exit settles first.
+    shot: S11
+    shotAlt: The payment form with quick-settle buttons and the part-payment notice
+requirements:
+  heading: What you need
+  items:
+    - A free account. All you need is an email address and a password, and you verify the email before you can add anything.
+    - To be 18 or over.
+    - A modern browser on a phone or a computer, and a connection. Side Badger is not an app-store app and does not work offline.
+    - Optionally, a spot on your home screen. No app store needed, because you can add Side Badger to your home screen or dock and it opens like an app.
+example:
+  heading: Three friends after a night out
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: Dinner
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: Taxi
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: 39 languages, and built for more people
+    body: Use Side Badger in 39 languages, including right-to-left Arabic, Persian and Urdu. Everyone in the group can pick their own, so the group page can be in Arabic for one person and English for the next. It is also built with keyboard and screen-reader users in mind, and member colours come with patterns, so you do not have to tell green from red.
+faq:
+  heading: Questions
+  items:
+    - q: Does everyone need an account?
+      a: Yes, a free one. Each person verifies their email before adding anything.
+    - q: Is there an app?
+      a: It runs in the browser, and you can add it to your home screen or dock so it opens like an app. There is no app-store version and no offline mode.
+    - q: Does Side Badger move money?
+      a: No. It keeps the count and suggests payments, and you pay each other however you like. You then record the payment. See [settle up](page:feature/settle-up).
+    - q: Can someone leave owing money?
+      a: No. Nobody can leave a group while they still owe or are owed money, so they settle first.
+    - q: How many people can join a group?
+      a: Up to 50.
+    - q: What about trips with more than one currency?
+      a: Balances are kept separately for each currency. See [multiple currencies](page:feature/multiple-currencies).

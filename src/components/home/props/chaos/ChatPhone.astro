@@ -1,0 +1,32 @@
+---
+/**
+ * A phone showing the group chat: three bubbles of the usual confusion. Bubble sides are logical,
+ * so the pair mirrors in right-to-left locales. The text is the scene's joke and is content.
+ */
+import AppFrame from '../../AppFrame.astro';
+import ChatBubble from '../ChatBubble.astro';
+import { t, type Locale } from '@/i18n';
+
+interface Props {
+  locale: Locale;
+  class?: string;
+}
+
+const { locale, class: className } = Astro.props;
+---
+
+<AppFrame variant="phone" class={className}>
+  <div class="chat">
+    <ChatBubble side="start">{t('home.chaos.chatTaxi', locale)}</ChatBubble>
+    <ChatBubble side="start">{t('home.chaos.chatDeposit', locale)}</ChatBubble>
+    <ChatBubble side="end">{t('home.chaos.chatPromise', locale)}</ChatBubble>
+  </div>
+</AppFrame>
+
+<style>
+  .chat {
+    display: grid;
+    gap: 0.5rem;
+    align-content: start;
+  }
+</style>

@@ -1,0 +1,14 @@
+# Build context: only what the image builds from. The image runs its own npm ci.
+.git
+.claude
+.astro
+.github
+node_modules
+dist
+tmp
+logs
+test-results
+playwright-report
+*.log
+.env*
+tasks

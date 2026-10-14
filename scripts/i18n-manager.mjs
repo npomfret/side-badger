@@ -94,7 +94,7 @@ function parseTranslationFile(filePath) {
  */
 function getLocaleFiles() {
   const files = fs.readdirSync(I18N_DIR)
-    .filter(f => f.endsWith('.ts') && f !== 'index.ts')
+    .filter(f => f.endsWith('.ts') && f !== 'index.ts' && f !== 'pseudo.ts')
     .map(f => ({
       locale: f.replace('.ts', ''),
       path: path.join(I18N_DIR, f),

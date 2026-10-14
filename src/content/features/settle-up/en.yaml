@@ -1,0 +1,105 @@
+review:
+  status: checked
+  checker: P33b-review
+  date: 2026-10-15
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: Settle up with fewer payments | Side Badger
+  description: See who owes whom in your group, get a short list of payments that settles everyone, and record each payment as it happens. Free to use.
+h1: Settle up with fewer payments
+navLabel: Settle up
+lead: Side Badger keeps a running balance for everyone in the group and suggests a short list of payments that settles it. You pay each other however you like, then record it. If you want to see how the numbers get split first, start with [split expenses](page:feature/split-expenses).
+cta:
+  heading: Ready to untangle who owes whom?
+  body: Create an account, start a group and add the first expense. The balances will take it from there.
+  button: Create a free account
+problem:
+  heading: Balances that update as you go
+  body: Every expense changes who owes whom, so Side Badger keeps the balances current as expenses and payments are added. Everyone in the group sees a change straight away, and sees what changed and who changed it. Balances are kept per currency, so euros and pounds stay in their own columns unless an expense was converted when it was entered. By default you see the debts that involve you; **Show all** lists the whole group.
+workflow:
+  heading: Three steps to square
+  steps:
+    - title: See who owes whom
+      body: Open the group's balances to see what you owe, what you are owed, and a short list of payments that settles everyone, worked out per currency. Questioned expenses stay out of the sums until they are sorted. In the housemates example below, six payments become two.
+      shot: S10
+      shotAlt: The balances screen showing simplified debts in two currencies, with Show all switched on
+    - title: Pay however you like, then record it
+      body: Bank transfer, cash, a favour owed from the last holiday. Side Badger does not move the money. Once it has changed hands, record the payment and the balance updates for everyone.
+      shot: S11
+      shotAlt: The payment form with quick-settle buttons and the notice shown for a part payment
+    - title: Check it landed
+      body: The payment goes into the group history, where everyone in the group can see it and react with an emoji. Celebrate a payment when it lands.
+      shot: S12
+      shotAlt: The payment history with emoji reactions on a payment
+options:
+  heading: Options
+  items: []
+example:
+  heading: From a tangle to a short list
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: Electricity
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: Internet
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: Groceries
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: Record a payment
+    body: When someone pays, record it against the right person. The quick-settle buttons fill in the amount from your suggested payments, and you can add a note such as "bank transfer" (up to 500 characters). Pay only part of what you owe and the rest stays on the balance. If you enter too little or too much, Side Badger warns you before you save. Recording a payment needs permission to edit expenses, and the date cannot be in the future.
+  - heading: Paid in a different currency?
+    body: Balances stay in the currency they were paid in, so a euro debt stays a euro debt. Owe euros, pay in pounds? Convert the payment as you enter it, at a current exchange rate or at the rate you actually got. The rate is fixed when the payment is saved. [Multiple currencies](page:feature/multiple-currencies) covers how conversion works, and [group trips](page:use-case/group-trips) shows it in use.
+  - heading: History you can check
+    body: Every recorded payment stays in the group history with its date, amount and note. Only the person who recorded a payment can edit it, and they or a group admin can delete it. A payment involving someone who has left the group is locked. For a worked housemate scenario, see [housemates](page:use-case/housemates).
+limits:
+  heading: What Side Badger doesn't do
+  items:
+    - Side Badger does not move money, send payment links or send payment requests. A payment in the app is a record of a payment made elsewhere.
+    - The suggested payments come from a simple matching method, applied per currency. It always suggests fewer payments than there are people with a balance in that currency (four people, three payments at most), but it does not always find the smallest possible number.
+    - You cannot switch the suggestions off. **Show all** lists every suggested payment in the group, not just yours.
+    - Currencies are never netted against each other unless the expenses were converted when they were entered.
+    - There are no reminders, so chasing a payment is still up to you.
+useCasesHeading: Where settling up matters
+faq:
+  heading: Questions
+  items:
+    - q: Does Side Badger send the money?
+      a: No. Pay each other however you like, then record the payment in Side Badger so the balance updates.
+    - q: Can I turn the suggested payments off?
+      a: No. Simplification stays on, and **Show all** lists every suggested payment in the group, not just the ones that involve you.
+    - q: Why are euros and pounds kept separate?
+      a: Balances stay in the currency you paid in unless you convert when you enter an expense or payment. Debts in different currencies are never netted against each other.
+    - q: What if someone pays only part of what they owe?
+      a: Record the part they paid. The rest stays on the balance until it is paid.
+    - q: Is this always the smallest possible number of payments?
+      a: Not guaranteed. It always suggests fewer payments than there are people with a balance in that currency, so for four people it never suggests more than three. In the housemates example, that is two payments, where paying each person back directly took six.

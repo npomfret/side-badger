@@ -9,46 +9,28 @@
 
 .legal-content {
   max-width: 800px;
-  margin: 0 auto;
+  margin-inline: auto;
   padding: var(--space-2xl);
 }
 
-.loading-state {
-  text-align: center;
-  padding: var(--space-3xl);
+.policy-title {
+  margin-block-end: var(--space-sm);
 }
 
-.loading-state p {
-  margin-top: var(--space-lg);
+.policy-updated {
+  margin-block-end: var(--space-lg);
   color: var(--text-muted);
+  font-size: var(--text-sm);
 }
 
-.spinner {
-  width: 40px;
-  height: 40px;
-  margin: 0 auto;
-  border: 3px solid var(--glass-border);
-  border-top-color: var(--accent-primary);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-.error-state {
-  text-align: center;
-  padding: var(--space-2xl);
-}
-
-.error-state svg {
-  color: var(--accent-tertiary);
-  margin-bottom: var(--space-lg);
-}
-
-.error-state p {
-  margin-bottom: var(--space-sm);
+/* Shown on localized pages: the policy text itself stays English */
+.policy-notice {
+  margin-block-end: var(--space-xl);
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid var(--glass-border);
+  border-inline-start: 4px solid var(--accent-primary);
+  border-radius: var(--radius-md, 8px);
+  background: var(--glass-bg);
 }
 
 /* Override github-markdown-css for site theme */

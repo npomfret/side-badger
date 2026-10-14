@@ -1,0 +1,51 @@
+name: Sync legal policies
+
+# Refresh src/content/policies/ from the app and open a PR when the text changed.
+# The PR is reviewed like any legal change; nothing deploys from here.
+on:
+  schedule:
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+
+# No token scope by default; the one job asks for what it needs.
+permissions: {}
+
+concurrency:
+  group: policy-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # The script needs no dependencies, so there is no npm install
+      - name: Fetch policy snapshots
+        run: node scripts/sync-policies.mjs
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: policy-sync
+          base: ${{ github.event.repository.default_branch }}
+          add-paths: src/content/policies/*.md
+          commit-message: Update legal policy snapshots
+          title: Update legal policy snapshots
+          body: |
+            The app's legal policies changed. This PR refreshes the committed snapshots in
+            `src/content/policies/` from `https://app.sidebadger.me`. Review the text diff
+            before merging, because merging to `main` deploys it.
+
+            Opened by the `Sync legal policies` workflow.
+          delete-branch: true

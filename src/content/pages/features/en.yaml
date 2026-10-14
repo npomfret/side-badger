@@ -1,13 +1,12 @@
 review:
-  status: reviewed
-  reviewer: nick
+  status: checked
+  checker: P33h-review
   date: 2026-10-15
 claims:
   - groups.group-per-house-trip-event
   - groups.up-to-50-people
   - invites.link-or-qr-code
   - permissions.viewer-sees-everything
-  - receipt-attachments.keep-the-receipt
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.read-by-googles-ai
   - lists.shared-shopping-list
@@ -26,12 +25,12 @@ lead: Everything in the box, and what isn't.
 intro: Here's the full kit. We left out the spreadsheet on purpose. Start with the three jobs Side Badger does every day, then check the rest of the list and the short list of things it doesn't do.
 cta:
   heading: Does it do what your group needs?
-  body: Create a free account and try it with a small group first. The first expense takes about a minute.
+  body: Create a free account and try it with a small group first.
   button: Create a free account
 cardsHeading: The three jobs, in detail
 sections:
   - heading: Receipt scanning
-    body: Keep the receipt with the expense, as photos or PDFs, up to three per expense. Or snap the receipt and Side Badger fills in the total, date and place for you to check. Scanning is free, with no scan credits. Receipt images are read by Google's AI service.
+    body: Snap the receipt and Side Badger fills in the total, date and place for you to check. Receipt images are read by Google's AI service.
   - heading: Groups and permissions
     body: Make a group for each house, trip or event, with up to 50 people in it. Invite people with a link or a QR code. In a bigger group, make someone a viewer, who sees everything and changes nothing.
   - heading: Lists and polls

@@ -1,7 +1,9 @@
 #!/bin/bash
 set -e
 
-SERVER="root@sidebadger.me"
+# The box by address, not the site's hostname, so a deploy during a DNS change cannot land on
+# the old box. sidebadger.me moved to the footy-betty box (77.68.112.97) on 2026-10-14.
+SERVER="root@77.68.112.97"
 REMOTE_DIR="/opt/side-badger-website"
 
 echo "🦡 Deploying Side Badger Website..."

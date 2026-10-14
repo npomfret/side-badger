@@ -8,6 +8,7 @@
  * `logoLocales`).
  */
 import { readdirSync, readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
 import type { APIRoute, GetStaticPaths } from 'astro';
 import sharp from 'sharp';
@@ -25,6 +26,19 @@ const WORDMARK_CUT_X = 432;
 // Palette PNG: the cards are flat colour, so 256 dithered colours look the same as truecolour at
 // about half the size, which keeps every card under the site plan's 200 KB budget
 const PNG_OPTIONS = { palette: true, colours: 256, quality: 100, dither: 1, effort: 10 } as const;
+
+/** Every card with artwork in `src/assets/og/`; a test checks this list against the directory */
+export const OG_CARD_IDS = ['default', 'features', 'use-cases', 'how-it-works', 'pricing'] as const;
+export type OgCardId = (typeof OG_CARD_IDS)[number];
+
+/**
+ * Render version of the cards: a hash of this file's source, so any change to the crop, size or
+ * encoding changes every card URL (`?v=` in SeoHead.astro).
+ */
+export const OG_RENDER_VERSION = createHash('sha256')
+  .update(readFileSync(resolve('src/pages/og/[card].png.ts')))
+  .digest('hex')
+  .slice(0, 8);
 
 // Read the directory rather than import.meta.glob, so Vite does not emit the 2400×1260 sources
 const ARTWORK_DIR = resolve('src/assets/og');

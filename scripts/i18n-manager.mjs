@@ -237,7 +237,7 @@ function checkLocale(locale, translations, lock, pending, mode) {
     }
     if (loc[key] === en[key] && !lock.identicalApproved.includes(key)) identical.push(key);
   }
-  const badApproved = lock.identicalApproved.filter(k => !(k in en) || loc[k] !== en[k]);
+  const badApproved = lock.identicalApproved.filter(k => !removed.has(k) && (!(k in en) || loc[k] !== en[k]));
   const badPages = Object.entries(lock.pages).filter(([, st]) => !PAGE_STATUSES.includes(st)).map(([pg]) => pg);
   const machinePages = Object.entries(lock.pages).filter(([, st]) => st === 'machine').map(([pg]) => pg);
   return { missing, extra, stale, unconfirmed, identical, badApproved, badPages, machinePages };

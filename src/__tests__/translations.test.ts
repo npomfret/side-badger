@@ -33,6 +33,12 @@ const pendingPages = readJson(path.join(I18N_DIR, 'pending', 'pages.json'), { ad
 const pendingAdded = new Set(ENGLISH_FIRST ? pendingKeys.added : []);
 const pendingRemoved = new Set(ENGLISH_FIRST ? pendingKeys.removed : []);
 
+// Lock entries (keys or identicalApproved) for keys outside en.ts are orphans, except that in
+// English-first mode a key listed under `removed` may keep its entry until the translation group prunes it.
+function findOrphans(entries: string[], englishKeySet: Set<string>, removed: Set<string>): string[] {
+  return entries.filter(k => !englishKeySet.has(k) && !removed.has(k));
+}
+
 function loadLock(locale: string): Lock {
   return readJson<Lock>(path.join(I18N_DIR, 'locks', `${locale}.json`), { keys: {}, identicalApproved: [], pages: {} });
 }
@@ -166,7 +172,9 @@ describe('Translation Files Integrity', () => {
       it(`${locale} identicalApproved lists only keys that are still identical`, () => {
         const translation = translations[locale as keyof typeof translations] as Record<string, string>;
         const bad = loadLock(locale).identicalApproved.filter(
-          key => !(key in englishTranslations) || translation[key] !== englishTranslations[key]
+          key =>
+            !pendingRemoved.has(key) &&
+            (!(key in englishTranslations) || translation[key] !== englishTranslations[key])
         );
         expect(bad, `${locale} identicalApproved has entries that are translated or not in en.ts:\n  ${bad.join('\n  ')}`).toEqual([]);
       });
@@ -197,10 +205,21 @@ describe('Translation Files Integrity', () => {
 
       it(`${locale} lock has no entries for keys outside en.ts`, () => {
         const englishKeySet = new Set(englishKeys);
-        const orphans = Object.keys(loadLock(locale).keys).filter(k => !englishKeySet.has(k));
+        const orphans = findOrphans(Object.keys(loadLock(locale).keys), englishKeySet, pendingRemoved);
         expect(orphans).toEqual([]);
       });
     }
+
+    it('orphan lock entries are allowed only for keys listed under removed in English-first mode', () => {
+      const en = new Set(['a', 'b']);
+      const lockKeys = ['a', 'b', 'gone'];
+      // English-first, listed under removed: allowed
+      expect(findOrphans(lockKeys, en, new Set(['gone']))).toEqual([]);
+      // English-first, not listed: fails
+      expect(findOrphans(lockKeys, en, new Set(['other']))).toEqual(['gone']);
+      // Strict mode: the removed set is always empty, so the orphan fails
+      expect(findOrphans(lockKeys, en, new Set())).toEqual(['gone']);
+    });
 
     it('every non-English locale has a lock file', () => {
       const missing = nonEnglishLocales.filter(l => !fs.existsSync(path.join(I18N_DIR, 'locks', `${l}.json`)));

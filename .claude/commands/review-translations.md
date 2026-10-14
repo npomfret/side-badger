@@ -9,6 +9,7 @@
    - If a key looks off, immediately open a side-by-side diff with `npm run i18n compare -- --locales en,ja --key hero.cta` so you can adjust it in context.
    - When you need an offline checklist, `npm run i18n export -- --format csv --locales en,ja` and tick through each row while verifying translations manually.
    - Use `npm run i18n search -- --text "split bill"` anytime you suspect repeated copy needs alignment across keys.
-4. After translators finish, run `npm run i18n sync` to pull any new English keys into every locale, then `npm run i18n find-unused` to surface dead strings before you open the PR.
+4. Check for missing, stale and untranslated entries with `npm run i18n audit` (exit 1 on any) and `npm run i18n stale`. Do NOT run `npm run i18n sync` to fix gaps: it only reports, and English text must never be copied into a locale file as a placeholder. Translate missing keys by hand, then record the English hash with `npm run i18n lock <locale> --keys a,b` (see `src/i18n/locks/<locale>.json`). A value that is legitimately identical to English (a brand name) goes in that lock's `identicalApproved`. Run `npm run i18n find-unused` to surface dead strings before you open the PR.
+   - `I18N_MODE=english-first` (the `redesign` branch) lets keys listed in `src/i18n/pending/keys.json` be missing or extra; the default `strict` mode needs both pending manifests empty.
 5. QA in the browser: `npm run dev`, walk `/[locale]/` routes (including RTL like `/ar/`) to confirm copy, layout, hreflang tags, and locale-specific assets.
-6. Keep it enforced. Add `npm run i18n audit` (and optionally `stats`) to CI so translation PRs can only merge when the audit passes.
+6. Keep it enforced. Add `npm run i18n audit` (in strict mode) to CI so translation PRs can only merge when the audit passes.

@@ -14,7 +14,9 @@
  *   set           Set a translation value for a specific key and language
  *   delete        Delete a translation key from all languages
  *   search        Search translations by value (content search)
- *   audit         Audit translations for missing/extra keys
+ *   audit         Audit translations: missing, extra, stale and untranslated keys (exit 1 on any)
+ *   lock          Record English hashes in src/i18n/locks/<locale>.json after translating
+ *   stale         List stale and unconfirmed translations (exit 1 on any)
  *   compare       Compare two languages side by side
  *   export        Export translations to JSON/CSV
  *   import        Import translations from JSON
@@ -22,14 +24,19 @@
  *   add-key       Add a new key to all language files
  *   rename-key    Rename a key across all language files
  *   find-unused   Find potentially unused translation keys
- *   sync          Sync locale files with English (adds missing, removes extra)
+ *   sync          Report locale drift from English (never writes English values)
  *   diff          Show uncommitted changes to translation files
+ *
+ * I18N_MODE=strict (default) | english-first. In english-first mode a key may be
+ * missing from, or extra in, a locale only when src/i18n/pending/keys.json lists it
+ * under `added` or `removed`. Strict mode requires both pending manifests to be empty.
  */
 
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
+import crypto from 'crypto';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -70,28 +77,13 @@ function parseTranslationFile(filePath) {
   const content = fs.readFileSync(filePath, 'utf-8');
   const translations = {};
 
-  // Match key-value pairs with single-quoted keys and either single or double-quoted values
-  // Pattern 1: 'key': 'value' (with escaped single quotes)
-  // Pattern 2: 'key': "value" (with escaped double quotes)
-  const singleQuoteRegex = /'([^']+)':\s*'((?:[^'\\]|\\.)*)'/g;
-  const doubleQuoteRegex = /'([^']+)':\s*"((?:[^"\\]|\\.)*)"/g;
+  // 'key': 'value' or 'key': "value", read in file order so key order is preserved
+  const pairRegex = /'([^']+)':\s*(?:'((?:[^'\\]|\\.)*)'|"((?:[^"\\]|\\.)*)")/g;
+  const unescape = (v) => v.replace(/\\(.)/g, (_, ch) => (ch === 'n' ? '\n' : ch));
 
   let match;
-
-  // Parse single-quoted values
-  while ((match = singleQuoteRegex.exec(content)) !== null) {
-    const key = match[1];
-    // Unescape \' to '
-    const value = match[2].replace(/\\'/g, "'");
-    translations[key] = value;
-  }
-
-  // Parse double-quoted values
-  while ((match = doubleQuoteRegex.exec(content)) !== null) {
-    const key = match[1];
-    // Unescape \" to "
-    const value = match[2].replace(/\\"/g, '"');
-    translations[key] = value;
+  while ((match = pairRegex.exec(content)) !== null) {
+    translations[match[1]] = unescape(match[2] !== undefined ? match[2] : match[3]);
   }
 
   return translations;
@@ -139,29 +131,130 @@ function writeTranslationFile(locale, translations, modifiedKey = null) {
   const filePath = path.join(I18N_DIR, `${locale}.ts`);
   const content = fs.readFileSync(filePath, 'utf-8');
 
+  const escape = (v) => v.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n');
+
   if (modifiedKey) {
     // Update only the specific key while preserving file structure
-    const escapedValue = translations[modifiedKey].replace(/'/g, "\\'");
     const keyRegex = new RegExp(`('${modifiedKey.replace(/\./g, '\\.')}': )'(?:[^'\\\\]|\\\\.)*'`, 'g');
-
-    const newContent = content.replace(keyRegex, `$1'${escapedValue}'`);
+    const newContent = content.replace(keyRegex, (_, head) => `${head}'${escape(translations[modifiedKey])}'`);
     fs.writeFileSync(filePath, newContent);
   } else {
-    // Full rewrite - sort keys for consistent output
-    const sortedKeys = Object.keys(translations).sort();
+    // Full rewrite in English key order (extra keys follow, in their own order)
+    const keys = Object.keys(translations);
+    let ordered = keys;
+    if (locale !== 'en') {
+      const enOrder = Object.keys(parseTranslationFile(path.join(I18N_DIR, 'en.ts')));
+      const present = new Set(keys);
+      const enSet = new Set(enOrder);
+      ordered = [...enOrder.filter(k => present.has(k)), ...keys.filter(k => !enSet.has(k))];
+    }
 
     const lines = ['export default {'];
-    for (const key of sortedKeys) {
-      const value = translations[key];
-      // Escape single quotes with backslash
-      const escapedValue = value.replace(/'/g, "\\'");
-      lines.push(`  '${key}': '${escapedValue}',`);
+    for (const key of ordered) {
+      lines.push(`  '${key}': '${escape(translations[key])}',`);
     }
     lines.push('} as const;');
     lines.push('');
 
     fs.writeFileSync(filePath, lines.join('\n'));
   }
+}
+
+// ============================================================================
+// Locks, pending manifests and mode (D14, D15, D38)
+// ============================================================================
+
+const LOCKS_DIR = path.join(I18N_DIR, 'locks');
+const PENDING_DIR = path.join(I18N_DIR, 'pending');
+const PAGE_STATUSES = ['machine', 'checked', 'reviewed', 'legacy'];
+
+function getMode() {
+  const mode = process.env.I18N_MODE || 'strict';
+  if (mode !== 'strict' && mode !== 'english-first') {
+    throw new Error(`I18N_MODE must be "strict" or "english-first" (got "${mode}")`);
+  }
+  return mode;
+}
+
+function hashValue(value) {
+  return crypto.createHash('sha256').update(value).digest('hex').slice(0, 8);
+}
+
+function lockPath(locale) {
+  return path.join(LOCKS_DIR, `${locale}.json`);
+}
+
+function loadLock(locale) {
+  const file = lockPath(locale);
+  const empty = { keys: {}, identicalApproved: [], pages: {} };
+  if (!fs.existsSync(file)) return empty;
+  return { ...empty, ...JSON.parse(fs.readFileSync(file, 'utf-8')) };
+}
+
+function saveLock(locale, lock, enOrder) {
+  const order = new Map(enOrder.map((k, i) => [k, i]));
+  const byOrder = (a, b) => (order.get(a) ?? 1e9) - (order.get(b) ?? 1e9) || a.localeCompare(b);
+  const out = {
+    keys: Object.fromEntries(Object.keys(lock.keys).sort(byOrder).map(k => [k, lock.keys[k]])),
+    identicalApproved: [...lock.identicalApproved].sort(byOrder),
+    pages: Object.fromEntries(Object.entries(lock.pages).sort(([a], [b]) => a.localeCompare(b))),
+  };
+  fs.mkdirSync(LOCKS_DIR, { recursive: true });
+  fs.writeFileSync(lockPath(locale), JSON.stringify(out, null, 2) + '\n');
+}
+
+function loadPending() {
+  const read = (name, fallback) => {
+    const file = path.join(PENDING_DIR, name);
+    return fs.existsSync(file) ? { ...fallback, ...JSON.parse(fs.readFileSync(file, 'utf-8')) } : fallback;
+  };
+  return {
+    keys: read('keys.json', { added: [], removed: [] }),
+    pages: read('pages.json', { added: [] }),
+  };
+}
+
+/**
+ * Everything the gate checks for one locale. Mirrors src/__tests__/translations.test.ts.
+ */
+function checkLocale(locale, translations, lock, pending, mode) {
+  const en = translations.en;
+  const loc = translations[locale];
+  const englishFirst = mode === 'english-first';
+  const added = new Set(englishFirst ? pending.keys.added : []);
+  const removed = new Set(englishFirst ? pending.keys.removed : []);
+
+  const missing = Object.keys(en).filter(k => !(k in loc) && !added.has(k));
+  const extra = Object.keys(loc).filter(k => !(k in en) && !removed.has(k));
+  const stale = [];
+  const unconfirmed = [];
+  const identical = [];
+  for (const key of Object.keys(en)) {
+    if (!(key in loc)) continue;
+    if (!added.has(key)) {
+      if (!(key in lock.keys)) unconfirmed.push(key);
+      else if (lock.keys[key] !== hashValue(en[key])) stale.push(key);
+    }
+    if (loc[key] === en[key] && !lock.identicalApproved.includes(key)) identical.push(key);
+  }
+  const badApproved = lock.identicalApproved.filter(k => !(k in en) || loc[k] !== en[k]);
+  const badPages = Object.entries(lock.pages).filter(([, st]) => !PAGE_STATUSES.includes(st)).map(([pg]) => pg);
+  const machinePages = Object.entries(lock.pages).filter(([, st]) => st === 'machine').map(([pg]) => pg);
+  return { missing, extra, stale, unconfirmed, identical, badApproved, badPages, machinePages };
+}
+
+/** Problems with the pending manifests themselves (mode-dependent). */
+function checkPending(translations, pending, mode) {
+  const problems = [];
+  const { added, removed } = pending.keys;
+  if (mode === 'strict') {
+    if (added.length || removed.length) problems.push(`pending/keys.json is not empty (${added.length} added, ${removed.length} removed)`);
+    if (pending.pages.added.length) problems.push(`pending/pages.json is not empty (${pending.pages.added.length} pages)`);
+  } else {
+    for (const k of added) if (!(k in translations.en)) problems.push(`pending/keys.json lists added key "${k}" that is not in en.ts`);
+    for (const k of removed) if (k in translations.en) problems.push(`pending/keys.json lists removed key "${k}" that is still in en.ts`);
+  }
+  return problems;
 }
 
 /**
@@ -349,6 +442,12 @@ function cmdDelete(args) {
       writeTranslationFile(locale, translations[locale]);
       deletedCount++;
     }
+    if (locale !== 'en' && fs.existsSync(lockPath(locale))) {
+      const lock = loadLock(locale);
+      delete lock.keys[key];
+      lock.identicalApproved = lock.identicalApproved.filter(k => k !== key);
+      saveLock(locale, lock, Object.keys(translations.en));
+    }
   }
 
   console.log(c.success(`\nDeleted "${key}" from ${deletedCount} locale files.`));
@@ -406,11 +505,14 @@ function cmdSearch(args) {
 }
 
 /**
- * Audit translations for missing/extra keys
+ * Audit translations: missing, extra, stale, unconfirmed and untranslated entries.
+ * Exits 1 when anything is wrong. I18N_MODE selects strict (default) or english-first.
  */
 function cmdAudit(args) {
-  const targetLocale = args[0];
+  const targetLocale = args.find(a => !a.startsWith('--'));
+  const mode = getMode();
   const translations = loadAllTranslations();
+  const pending = loadPending();
   const englishKeys = new Set(Object.keys(translations.en));
 
   const locales = targetLocale
@@ -418,62 +520,186 @@ function cmdAudit(args) {
     : Object.keys(translations).filter(l => l !== 'en');
 
   console.log(c.bright('\nTranslation Audit Report'));
-  console.log(c.dim(`Master: en (${englishKeys.size} keys)\n`));
+  console.log(c.dim(`Master: en (${englishKeys.size} keys), mode: ${mode}\n`));
 
-  let totalMissing = 0;
-  let totalExtra = 0;
+  const totals = { missing: 0, extra: 0, stale: 0, unconfirmed: 0, identical: 0, other: 0 };
+  const show = (label, keys, mark) => {
+    if (keys.length === 0) return;
+    console.log(c.dim(`  ${label}:`));
+    for (const key of keys.slice(0, 10)) console.log(`    ${mark} ${key}`);
+    if (keys.length > 10) console.log(c.dim(`    ... and ${keys.length - 10} more`));
+  };
 
   for (const locale of locales) {
     if (!translations[locale]) {
       console.error(c.error(`Locale "${locale}" not found`));
+      totals.other++;
       continue;
     }
 
-    const localeKeys = new Set(Object.keys(translations[locale]));
+    const r = checkLocale(locale, translations, loadLock(locale), pending, mode);
+    const other = r.badApproved.length + r.badPages.length + r.machinePages.length;
+    const bad = r.missing.length + r.extra.length + r.stale.length + r.unconfirmed.length + r.identical.length + other;
 
-    const missing = [...englishKeys].filter(k => !localeKeys.has(k));
-    const extra = [...localeKeys].filter(k => !englishKeys.has(k));
+    console.log(`${bad === 0 ? c.success('✓') : c.warning('!')} ${c.locale(locale.padEnd(8))} ` +
+      `${r.missing.length} missing, ${r.extra.length} extra, ${r.stale.length} stale, ` +
+      `${r.unconfirmed.length} unconfirmed, ${r.identical.length} untranslated`);
+    show('Missing keys', r.missing, c.error('-'));
+    show('Extra keys (not in English)', r.extra, c.warning('+'));
+    show('Stale (English changed since the lock)', r.stale, c.warning('~'));
+    show('Unconfirmed (no lock entry)', r.unconfirmed, c.warning('?'));
+    show('Identical to English and not in identicalApproved', r.identical, c.warning('='));
+    show('identicalApproved entries that are no longer identical', r.badApproved, c.warning('x'));
+    show('Invalid page review statuses', r.badPages, c.error('x'));
+    show('Pages still marked machine', r.machinePages, c.error('x'));
+    if (bad > 0) console.log();
 
-    const statusIcon = missing.length === 0 && extra.length === 0
-      ? c.success('✓')
-      : c.warning('!');
-
-    console.log(`${statusIcon} ${c.locale(locale.padEnd(8))} ` +
-      `${missing.length > 0 ? c.error(`${missing.length} missing`) : c.success('0 missing')}, ` +
-      `${extra.length > 0 ? c.warning(`${extra.length} extra`) : c.success('0 extra')}`);
-
-    if (missing.length > 0) {
-      console.log(c.dim('  Missing keys:'));
-      for (const key of missing.slice(0, 10)) {
-        console.log(`    ${c.error('-')} ${key}`);
-      }
-      if (missing.length > 10) {
-        console.log(c.dim(`    ... and ${missing.length - 10} more`));
-      }
-    }
-
-    if (extra.length > 0) {
-      console.log(c.dim('  Extra keys (not in English):'));
-      for (const key of extra.slice(0, 5)) {
-        console.log(`    ${c.warning('+')} ${key}`);
-      }
-      if (extra.length > 5) {
-        console.log(c.dim(`    ... and ${extra.length - 5} more`));
-      }
-    }
-
-    totalMissing += missing.length;
-    totalExtra += extra.length;
-    console.log();
+    totals.missing += r.missing.length;
+    totals.extra += r.extra.length;
+    totals.stale += r.stale.length;
+    totals.unconfirmed += r.unconfirmed.length;
+    totals.identical += r.identical.length;
+    totals.other += other;
   }
 
-  console.log(c.bright('Summary:'));
-  console.log(`  Total missing: ${totalMissing > 0 ? c.error(totalMissing) : c.success(0)}`);
-  console.log(`  Total extra: ${totalExtra > 0 ? c.warning(totalExtra) : c.success(0)}`);
+  const pendingProblems = checkPending(translations, pending, mode);
+  for (const problem of pendingProblems) console.log(c.error(`! ${problem}`));
 
-  if (totalMissing === 0 && totalExtra === 0) {
-    console.log(c.success('\nAll translations are in sync!'));
+  console.log(c.bright('\nSummary:'));
+  console.log(`  Total missing: ${totals.missing}`);
+  console.log(`  Total extra: ${totals.extra}`);
+  console.log(`  Total stale: ${totals.stale}`);
+  console.log(`  Total unconfirmed: ${totals.unconfirmed}`);
+  console.log(`  Total untranslated: ${totals.identical}`);
+  console.log(`  Other problems: ${totals.other + pendingProblems.length}`);
+
+  const failed = Object.values(totals).some(n => n > 0) || pendingProblems.length > 0;
+  if (failed) {
+    console.log(c.error('\nAudit failed.'));
+    process.exit(1);
   }
+  console.log(c.success('\nAll translations are in sync!'));
+}
+
+/**
+ * Record the current English hash for translated keys (after translating).
+ *   lock <locale|--all> [--keys a,b] [--identical]
+ * --identical rewrites identicalApproved from the locale's current English-identical values.
+ */
+function cmdLock(args) {
+  const keysIdx = args.indexOf('--keys');
+  const only = keysIdx >= 0 ? (args[keysIdx + 1] || '').split(',').filter(Boolean) : null;
+  const identical = args.includes('--identical');
+  const all = args.includes('--all');
+  const target = args.find((a, i) => !a.startsWith('--') && args[i - 1] !== '--keys');
+
+  const translations = loadAllTranslations();
+  const locales = all
+    ? Object.keys(translations).filter(l => l !== 'en')
+    : target ? [target] : [];
+  if (locales.length === 0 || locales.some(l => l === 'en' || !translations[l])) {
+    console.error(c.error('Error: give a non-English locale (or --all)'));
+    console.log('Usage: i18n-manager lock <locale|--all> [--keys a,b] [--identical]');
+    process.exit(1);
+  }
+  const enOrder = Object.keys(translations.en);
+
+  for (const locale of locales) {
+    const lock = loadLock(locale);
+    const keys = only || enOrder;
+    for (const key of keys) {
+      if (!(key in translations.en)) throw new Error(`Key "${key}" is not in en.ts`);
+      if (key in translations[locale]) lock.keys[key] = hashValue(translations.en[key]);
+    }
+    for (const key of Object.keys(lock.keys)) {
+      if (!(key in translations.en) || !(key in translations[locale])) delete lock.keys[key];
+    }
+    if (identical) {
+      lock.identicalApproved = enOrder.filter(k => k in translations[locale] && translations[locale][k] === translations.en[k]);
+    }
+    saveLock(locale, lock, enOrder);
+    console.log(`${c.success('✓')} ${c.locale(locale.padEnd(8))} ${Object.keys(lock.keys).length} keys locked, ${lock.identicalApproved.length} identical approved`);
+  }
+}
+
+/**
+ * List stale (English changed) and unconfirmed (no lock entry) translations. Exit 1 when any.
+ */
+function cmdStale(args) {
+  const mode = getMode();
+  const translations = loadAllTranslations();
+  const pending = loadPending();
+  const targetLocale = args.find(a => !a.startsWith('--'));
+  const locales = targetLocale ? [targetLocale] : Object.keys(translations).filter(l => l !== 'en');
+  let total = 0;
+  for (const locale of locales) {
+    const r = checkLocale(locale, translations, loadLock(locale), pending, mode);
+    for (const key of r.stale) console.log(`${locale}\tstale\t${key}`);
+    for (const key of r.unconfirmed) console.log(`${locale}\tunconfirmed\t${key}`);
+    total += r.stale.length + r.unconfirmed.length;
+  }
+  if (total > 0) process.exit(1);
+}
+
+/**
+ * Drift report: English lines committed after the locale's line for the same key
+ * (file history). Prints one block per stale key; --write <file> also saves it.
+ */
+function cmdDrift(args) {
+  const writeIdx = args.indexOf('--write');
+  const outFile = writeIdx >= 0 ? args[writeIdx + 1] : null;
+
+  // Time each key's value last actually changed, from file history. Reorders and
+  // reformats (same key, same value) do not count, which plain git blame would.
+  const changeTimes = (locale) => {
+    const file = path.join(I18N_DIR, `${locale}.ts`);
+    const out = execSync(`git log --reverse --no-renames -p --format=COMMIT%ct -- "${file}"`, { encoding: 'utf-8', maxBuffer: 256 * 1024 * 1024 });
+    const times = {};
+    const values = {};
+    let time = 0;
+    for (const line of out.split('\n')) {
+      if (line.startsWith('COMMIT')) { time = Number(line.slice(6)); continue; }
+      const m = line.match(/^\+\s*'([^']+)':\s*(.*)$/);
+      if (!m) continue;
+      if (values[m[1]] !== m[2]) {
+        values[m[1]] = m[2];
+        times[m[1]] = time;
+      }
+    }
+    return times;
+  };
+
+  const translations = loadAllTranslations();
+  const enTimes = changeTimes('en');
+  const locales = Object.keys(translations).filter(l => l !== 'en');
+  const byKey = {};
+  for (const locale of locales) {
+    const times = changeTimes(locale);
+    for (const key of Object.keys(translations.en)) {
+      if (key in times && key in enTimes && enTimes[key] > times[key]) {
+        (byKey[key] = byKey[key] || []).push(locale);
+      }
+    }
+  }
+
+  const keys = Object.keys(byKey);
+  const lines = [
+    '# Translation drift report (English value last changed after the locale value, from git history).',
+    '# Generated by: npm run i18n drift -- --write tasks/baselines/translation-drift.txt',
+    '# These keys are locked at today\'s English hash but their translations describe older copy.',
+    '# T1-T6 retranslate them in W4a and re-lock.',
+    '',
+    `Stale keys: ${keys.length}`,
+    '',
+  ];
+  for (const key of keys) {
+    const when = new Date(enTimes[key] * 1000).toISOString().slice(0, 10);
+    lines.push(`${key}\t(English last changed ${when})\t${byKey[key].length} locales: ${byKey[key].join(', ')}`);
+  }
+  lines.push('');
+  const text = lines.join('\n');
+  if (outFile) fs.writeFileSync(outFile, text);
+  console.log(text);
 }
 
 /**
@@ -746,26 +972,22 @@ function cmdAddKey(args) {
   const translations = loadAllTranslations();
 
   // Check if key already exists
-  if (translations.en[key]) {
+  if (key in translations.en) {
     console.error(c.error(`Error: Key "${key}" already exists`));
     console.log(`Current value: ${translations.en[key]}`);
     process.exit(1);
   }
 
-  // Add to English first
-  translations.en[key] = englishValue;
-  writeTranslationFile('en', translations.en);
+  // English only: append to en.ts. Locales are translated later; list the key in
+  // src/i18n/pending/keys.json (added) while English-first work is in progress.
+  const enFile = path.join(I18N_DIR, 'en.ts');
+  const escaped = englishValue.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n');
+  const content = fs.readFileSync(enFile, 'utf-8');
+  const closing = content.lastIndexOf('} as const;');
+  if (closing < 0) throw new Error('Could not find the closing "} as const;" in en.ts');
+  fs.writeFileSync(enFile, `${content.slice(0, closing)}  '${key}': '${escaped}',\n${content.slice(closing)}`);
   console.log(c.success(`Added "${key}" to en: ${englishValue}`));
-
-  // Add placeholder to other locales
-  const otherLocales = Object.keys(translations).filter(l => l !== 'en');
-  console.log(c.dim(`\nAdded to ${otherLocales.length} other locales with English value as placeholder.`));
-  console.log(c.warning('These will need to be translated.'));
-
-  for (const locale of otherLocales) {
-    translations[locale][key] = englishValue;
-    writeTranslationFile(locale, translations[locale]);
-  }
+  console.log(c.warning('Locale files were not touched. Translate the key, then run `lock`; until then list it in src/i18n/pending/keys.json (added).'));
 }
 
 /**
@@ -807,6 +1029,15 @@ function cmdRenameKey(args) {
       delete translations[locale][oldKey];
       writeTranslationFile(locale, translations[locale]);
       renamedCount++;
+    }
+    if (locale !== 'en' && fs.existsSync(lockPath(locale))) {
+      const lock = loadLock(locale);
+      if (oldKey in lock.keys) {
+        lock.keys[newKey] = lock.keys[oldKey];
+        delete lock.keys[oldKey];
+      }
+      lock.identicalApproved = lock.identicalApproved.map(k => (k === oldKey ? newKey : k));
+      saveLock(locale, lock, Object.keys(translations.en));
     }
   }
 
@@ -881,96 +1112,56 @@ function cmdFindUnused(args) {
 }
 
 /**
- * Sync locale files with English master (adds missing keys, removes extra keys)
+ * Report how locale files differ from the English master. Never writes English values
+ * into locale files. --prune removes keys that English no longer has.
  */
 function cmdSync(args) {
   const targetLocale = args.find(a => !a.startsWith('--'));
-  const dryRun = args.includes('--dry-run');
-  const addOnly = args.includes('--add-only');
+  const prune = args.includes('--prune');
 
   const translations = loadAllTranslations();
   const englishKeys = new Set(Object.keys(translations.en));
-
   const locales = targetLocale
     ? [targetLocale]
     : Object.keys(translations).filter(l => l !== 'en');
 
-  console.log(c.bright('\nSyncing with English master...\n'));
+  console.log(c.bright('\nComparing with English master...\n'));
 
-  let totalAdded = 0;
-  let totalRemoved = 0;
-
+  let totalMissing = 0;
+  let totalExtra = 0;
   for (const locale of locales) {
     if (!translations[locale]) {
       console.error(c.error(`Locale "${locale}" not found`));
       continue;
     }
-
     const localeKeys = new Set(Object.keys(translations[locale]));
-
-    // Keys to add (exist in English, missing from locale)
     const missing = [...englishKeys].filter(k => !localeKeys.has(k));
-
-    // Keys to remove (exist in locale, missing from English)
-    const extra = addOnly ? [] : [...localeKeys].filter(k => !englishKeys.has(k));
+    const extra = [...localeKeys].filter(k => !englishKeys.has(k));
 
     if (missing.length === 0 && extra.length === 0) {
-      console.log(`${c.success('✓')} ${c.locale(locale)} - already in sync`);
+      console.log(`${c.success('✓')} ${c.locale(locale)} - in sync`);
       continue;
     }
-
-    // Report additions
     if (missing.length > 0) {
-      console.log(`${c.success('+')} ${c.locale(locale)} - ${missing.length} keys to add`);
-      for (const key of missing.slice(0, 3)) {
-        console.log(`    ${c.dim('+')} ${key}`);
-      }
-      if (missing.length > 3) {
-        console.log(`    ${c.dim('...')} and ${missing.length - 3} more`);
-      }
+      console.log(`${c.error('-')} ${c.locale(locale)} - ${missing.length} keys need translating`);
+      for (const key of missing.slice(0, 3)) console.log(`    ${c.dim('-')} ${key}`);
+      if (missing.length > 3) console.log(`    ${c.dim('...')} and ${missing.length - 3} more`);
     }
-
-    // Report removals
     if (extra.length > 0) {
-      console.log(`${c.error('-')} ${c.locale(locale)} - ${extra.length} keys to remove`);
-      for (const key of extra.slice(0, 3)) {
-        console.log(`    ${c.dim('-')} ${key}`);
-      }
-      if (extra.length > 3) {
-        console.log(`    ${c.dim('...')} and ${extra.length - 3} more`);
+      console.log(`${c.warning('+')} ${c.locale(locale)} - ${extra.length} keys not in English${prune ? ' (removing)' : ''}`);
+      for (const key of extra.slice(0, 3)) console.log(`    ${c.dim('+')} ${key}`);
+      if (extra.length > 3) console.log(`    ${c.dim('...')} and ${extra.length - 3} more`);
+      if (prune) {
+        for (const key of extra) delete translations[locale][key];
+        writeTranslationFile(locale, translations[locale]);
       }
     }
-
-    if (!dryRun) {
-      // Add missing keys
-      for (const key of missing) {
-        translations[locale][key] = translations.en[key];
-      }
-      // Remove extra keys
-      for (const key of extra) {
-        delete translations[locale][key];
-      }
-      writeTranslationFile(locale, translations[locale]);
-    }
-
-    totalAdded += missing.length;
-    totalRemoved += extra.length;
+    totalMissing += missing.length;
+    totalExtra += extra.length;
   }
 
   console.log();
-  if (dryRun) {
-    console.log(c.warning(`Would add ${totalAdded} keys, remove ${totalRemoved} keys (dry run)`));
-  } else {
-    if (totalAdded > 0 || totalRemoved > 0) {
-      console.log(c.success(`Added ${totalAdded} keys, removed ${totalRemoved} keys`));
-    } else {
-      console.log(c.success('All locales already in sync!'));
-    }
-  }
-
-  if (totalAdded > 0) {
-    console.log(c.warning('\nNote: Added keys contain English text and need translation.'));
-  }
+  console.log(`${totalMissing} missing, ${totalExtra} extra. Missing keys must be translated by hand; sync never copies English into locale files.`);
 }
 
 /**
@@ -1364,24 +1555,31 @@ ${c.info('Commands:')}
 
   ${c.bright('Modifying:')}
     set <key> <locale> <value>  Set/add a translation for a specific locale
-    add-key <key> <en-value>    Add a new key to ALL locales at once
+    add-key <key> <en-value>    Add a new key to en.ts only
     rename-key <old> <new>      Rename a key across all languages
     delete <key> [--force]      Delete a key from all languages
 
   ${c.bright('Analysis:')}
-    audit [locale]              Check for missing/extra keys
+    audit [locale]              Missing, extra, stale and untranslated keys; exits 1 on any
+    stale [locale]              List stale/unconfirmed translations; exits 1 on any
+    drift [--write <file>]      Keys whose English changed after the locale's line (file history)
+    lock <locale|--all> [--keys a,b] [--identical]
+                                Record English hashes after translating
     compare <locale1> <locale2> Compare two languages side by side
     stats                       Show translation statistics
     find-unused                 Find potentially unused keys
 
   ${c.bright('Bulk Operations:')}
-    sync [locale] [--dry-run] [--add-only]  Sync with English (adds missing, removes extra)
+    sync [locale] [--prune]     Report drift from English (--prune drops extra keys; never copies English)
     export [json|csv] [file]    Export translations
     import <file> [locale]      Import translations from JSON
 
   ${c.bright('Git Integration:')}
     diff [--staged] [--unstaged]            List all changed keys (aggregated)
     diff --key <key>                         Show changes for a specific key across locales
+
+${c.info('Environment:')}
+    I18N_MODE=strict|english-first   strict (default) requires empty pending manifests
 
 ${c.info('Examples:')}
     npm run i18n list "pricing.*"
@@ -1411,6 +1609,9 @@ const commands = {
   delete: cmdDelete,
   search: cmdSearch,
   audit: cmdAudit,
+  lock: cmdLock,
+  stale: cmdStale,
+  drift: cmdDrift,
   compare: cmdCompare,
   export: cmdExport,
   import: cmdImport,

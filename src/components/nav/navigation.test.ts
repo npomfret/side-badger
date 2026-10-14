@@ -47,7 +47,7 @@ vi.mock('../../site/preview-pages', () => ({
   ],
 }));
 
-const { breadcrumbJsonLd, clearNavigationCache, breadcrumbsFor, footerGroups, navLinks, pageLabel, pageLabels, relatedPages } = await import(
+const { breadcrumbJsonLd, clearNavigationCache, breadcrumbsFor, footerGroups, navLinks, pageLabel, linkTextOf, pageLabels, relatedPages } = await import(
   './navigation'
 );
 const { getPage } = await import('../../site/pages');
@@ -134,6 +134,13 @@ describe('navigation from the registry', () => {
       extraBuilt.clear();
       clearNavigationCache();
     }
+  });
+
+  it('prefers the short navLabel and falls back to the h1', () => {
+    expect(linkTextOf({ navLabel: 'Settle up', h1: 'Settle up with fewer payments' })).toBe('Settle up');
+    expect(linkTextOf({ h1: 'Settle up with fewer payments' })).toBe('Settle up with fewer payments');
+    expect(linkTextOf({ navLabel: '', h1: 'Heading' })).toBe('Heading');
+    expect(linkTextOf(null)).toBeUndefined();
   });
 
   it('orders the product footer group How it works, Features, the feature pages, then Pricing', () => {

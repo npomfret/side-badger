@@ -18,6 +18,7 @@
 import { getEntry } from 'astro:content';
 import { isPseudoLocale, type Locale } from '../../i18n';
 import { canonicalFor, localizedPath } from '../../seo/urls';
+import { crossLinkedIds } from '../../site/cross-links';
 import { allPages, builtPages, getPage, requirePage, type PageDef, type PageType } from '../../site/pages';
 import { pathsFor, pathsForType, type StaticPath } from '../../site/routes';
 import { pageLabel } from '../nav/navigation';
@@ -139,16 +140,7 @@ export async function relatedCards(
   filter: (page: PageDef) => boolean = () => true
 ): Promise<PageCard[]> {
   const page = requirePage(pageId);
-  const ids = new Set<string>(page.related ?? []);
-  if (page.type === 'use-case') for (const feature of page.features ?? []) ids.add(`feature/${feature}`);
-  if (page.type === 'feature') {
-    const slug = page.id.replace(/^feature\//, '');
-    for (const other of allPages()) {
-      if (other.type === 'use-case' && other.features?.includes(slug)) ids.add(other.id);
-    }
-  }
-  ids.delete(page.id);
-  const candidates = [...ids]
+  const candidates = crossLinkedIds(page)
     .map(id => getPage(id))
     .filter((other): other is PageDef => !!other && filter(other));
   const pages = await filterAsync(candidates, other => builtIn(other, locale));

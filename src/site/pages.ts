@@ -55,7 +55,7 @@ export const pages = [
     published: true,
     locales: 'all',
     nav: { order: 4, labelKey: 'nav.pricing' },
-    footer: { group: 'product', order: 1 },
+    footer: { group: 'product', order: 6 },
     indexing: 'per-locale-review',
   },
   {
@@ -92,7 +92,7 @@ export const pages = [
     published: false,
     locales: 'all',
     nav: { order: 3, labelKey: 'nav.howItWorks' },
-    footer: { group: 'product', order: 2 },
+    footer: { group: 'product', order: 1 },
     related: ['feature/split-expenses', 'feature/settle-up', 'feature/multiple-currencies', 'use-cases', 'pricing'],
     features: [
       'groups',
@@ -117,7 +117,7 @@ export const pages = [
     published: false,
     locales: 'all',
     nav: { order: 1, labelKey: 'nav.features' },
-    footer: { group: 'product', order: 3 },
+    footer: { group: 'product', order: 2 },
     related: ['feature/split-expenses', 'feature/settle-up', 'feature/multiple-currencies', 'how-it-works'],
     content: { collection: 'sitePages', slug: 'features' },
     indexing: 'per-locale-review',
@@ -129,7 +129,7 @@ export const pages = [
     parent: 'features',
     published: false,
     locales: 'all',
-    footer: { group: 'product', order: 4 },
+    footer: { group: 'product', order: 3 },
     related: ['feature/settle-up', 'feature/multiple-currencies', 'use-case/housemates', 'use-case/events-and-celebrations'],
     features: [
       'expense-splitting',
@@ -148,7 +148,7 @@ export const pages = [
     parent: 'features',
     published: false,
     locales: 'all',
-    footer: { group: 'product', order: 5 },
+    footer: { group: 'product', order: 4 },
     related: ['feature/split-expenses', 'feature/multiple-currencies', 'use-case/housemates', 'use-case/group-trips'],
     features: [
       'balances',
@@ -167,7 +167,7 @@ export const pages = [
     parent: 'features',
     published: false,
     locales: 'all',
-    footer: { group: 'product', order: 6 },
+    footer: { group: 'product', order: 5 },
     related: ['use-case/group-trips', 'feature/settle-up', 'feature/split-expenses'],
     features: [
       'multi-currency',

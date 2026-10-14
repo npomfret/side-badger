@@ -20,12 +20,13 @@ const policies = defineCollection({
 // `<slug>/<locale>`, e.g. `split-expenses/fr`. The schemas live in ./content/schemas so the
 // Vitest content tests validate exactly what the build does.
 // The id keeps the locale's case (`split-expenses/nl-BE`); the default id would lowercase it.
-// A directory that has no entries yet is skipped quietly instead of warning on every build.
+// A directory that has no entries yet gets an empty loader instead of a glob warning on every build.
 const entryId = ({ entry }: { entry: string }) => entry.replace(/\.yaml$/, '');
+const noEntries = { name: 'no-entries-yet', load: async () => {} };
 const yaml = (dir: string) =>
   existsSync(`./src/content/${dir}`)
     ? glob({ pattern: '*/*.yaml', base: `./src/content/${dir}`, generateId: entryId })
-    : glob({ pattern: 'no-entries-yet/*.yaml', base: './src/content' });
+    : noEntries;
 
 const featurePages = defineCollection({ loader: yaml('features'), schema: contentSchemas.featurePages });
 const useCasePages = defineCollection({ loader: yaml('use-cases'), schema: contentSchemas.useCasePages });

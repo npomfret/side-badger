@@ -19,7 +19,7 @@ import type { Locale } from '../../i18n';
 import { localizedPath } from '../../seo/urls';
 import { getPage } from '../../site/pages';
 import { pathsFor } from '../../site/routes';
-import { PAGE_LINK_PREFIX, RICH_TEXT_MARKED_OPTIONS, richTextProblem } from '../../content/schemas';
+import { PAGE_LINK_PREFIX, RICH_TEXT_MARKED_OPTIONS, richTextPageIds, richTextProblem } from '../../content/schemas';
 
 interface Props {
   text: string;
@@ -33,19 +33,24 @@ const { text, locale, as: tag = 'span', class: className } = Astro.props;
 const problem = richTextProblem(text);
 if (problem) throw new Error(`RichText: the text ${problem}: "${text.slice(0, 80)}"`);
 
+// Resolve every link before rendering, so a bad one fails with a clear message
+const hrefs = new Map<string, string>();
+for (const id of richTextPageIds(text)) {
+  if (!getPage(id)) throw new Error(`RichText: unknown page id "${id}" in "${text.slice(0, 80)}"`);
+  if (!pathsFor(id).some(path => path.props.locale === locale)) {
+    throw new Error(`RichText: page "${id}" is not built in "${locale}", so the link would dangle`);
+  }
+  hrefs.set(`${PAGE_LINK_PREFIX}${id}`, localizedPath(id, locale));
+}
+
 const marked = new Marked({
   ...RICH_TEXT_MARKED_OPTIONS,
   renderer: {
     link({ href, tokens }: Tokens.Link) {
-      const label = this.parser.parseInline(tokens);
+      const resolved = hrefs.get(href);
       // richTextProblem allows no other link form; this guards against the two drifting apart
-      if (!href.startsWith(PAGE_LINK_PREFIX)) throw new Error(`RichText: link "${href}" is not a page link`);
-      const id = href.slice(PAGE_LINK_PREFIX.length);
-      if (!getPage(id)) throw new Error(`RichText: unknown page id "${id}" in link "${href}"`);
-      if (!pathsFor(id).some(path => path.props.locale === locale)) {
-        throw new Error(`RichText: page "${id}" is not built in "${locale}", so "${href}" would dangle`);
-      }
-      return `<a href="${localizedPath(id, locale)}">${label}</a>`;
+      if (!resolved) throw new Error(`RichText: link "${href}" is not a resolved page link`);
+      return `<a href="${resolved}">${this.parser.parseInline(tokens)}</a>`;
     },
   },
 });

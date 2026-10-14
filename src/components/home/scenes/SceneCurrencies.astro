@@ -1,0 +1,42 @@
+---
+/**
+ * Scene 4, currencies (`currencies`). PLACEHOLDER from H5, replaced by H7.
+ *
+ * Hooks for H7:
+ *   - <ScrollScene id="currencies" titleId="currencies-title" runway={{ desktop: 150, phone: 'entry' }}
+ *     stages={[35, 75]} staticStage={2}>
+ *     Stages: 0 cards in their own currencies, 1 the stamp tape, 2 converted ledger.
+ *   - Slot `copy`: the h2 (#currencies-title) and body, plus the example-rates note.
+ *   - Slot `visual`: the illustrated stage; `div[data-hook="currencies-visual"]` marks where it goes.
+ *   - Slot `link`: <SceneLink to="currencies" locale={locale} />, which resolves through data/links.ts.
+ *   - Motion: generic data-anim / data-at on elements (scenes.css), or your own per-element
+ *     keyframes on `animation-timeline: --scene`. Keep data-at in 1..2; reduced
+ *     motion rests at staticStage.
+ *   - The example-rates line (home.currency.exampleRates) is rendered below as <small
+ *     data-hook="currencies-example-note">; keep it visible. Rates: EXAMPLE_RATES.
+ */
+import ScrollScene from '../ScrollScene.astro';
+import SceneLink from '../props/SceneLink.astro';
+import { t, type Locale } from '@/i18n';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+---
+
+<ScrollScene
+  id="currencies"
+  titleId="currencies-title"
+  runway={{ desktop: 150, phone: 'entry' }}
+  stages={[35, 75]}
+  staticStage={2}
+>
+  <Fragment slot="copy">
+    <h2 id="currencies-title">{t('home.currency.title', locale)}</h2>
+    <p>{t('home.currency.body', locale)}</p>
+    <small data-hook="currencies-example-note">{t('home.currency.exampleRates', locale)}</small>
+  </Fragment>
+  <div slot="visual" class="scene-placeholder" data-hook="currencies-visual" aria-hidden="true"></div>
+  <Fragment slot="link"><SceneLink to="currencies" locale={locale} /></Fragment>
+</ScrollScene>

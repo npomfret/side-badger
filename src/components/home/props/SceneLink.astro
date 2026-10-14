@@ -1,0 +1,19 @@
+---
+/**
+ * A scene's link: its page once that page is published and labelled, otherwise `/go/app/` with
+ * "Try it in Side Badger". Resolution lives in `data/links.ts`. Launch links carry rel="nofollow".
+ */
+import { t, type Locale } from '@/i18n';
+import { resolveLink, type LinkKey } from '../data/links';
+
+interface Props {
+  to: LinkKey;
+  locale: Locale;
+  class?: string;
+}
+
+const { to, locale, class: className } = Astro.props;
+const link = resolveLink(to, locale);
+---
+
+<a class:list={['scene-link', className]} href={link.href} rel={link.rel} data-link={link.kind}>{t(link.labelKey, locale)}</a>

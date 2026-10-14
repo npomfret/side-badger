@@ -1,0 +1,54 @@
+---
+/**
+ * A sheet of paper, kraft card or corkboard. The base of most props. Extra attributes pass
+ * through to the element, so a scene can add `data-anim`, `data-at`, `--i` or its own class.
+ * `rotate` uses the CSS `rotate` property, leaving `transform` free for the scene.
+ */
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'div'> {
+  tone?: 'paper' | 'kraft' | 'cork';
+  /** Degrees; the resting tilt */
+  rotate?: number;
+  /** Raised, with a larger shadow */
+  lift?: boolean;
+  /** Decoration only: hidden from assistive technology (default false) */
+  decorative?: boolean;
+}
+
+const { tone = 'paper', rotate = 0, lift = false, decorative = false, class: className, style, ...rest } = Astro.props;
+const tilt = rotate ? `--rot:${rotate}deg` : '';
+---
+
+<div
+  {...rest}
+  class:list={['paper', `paper--${tone}`, { 'paper--lift': lift }, className]}
+  data-prop="paper"
+  aria-hidden={decorative ? 'true' : undefined}
+  style={[tilt, style].filter(Boolean).join(';') || undefined}
+>
+  <slot />
+</div>
+
+<style>
+  .paper {
+    background: var(--paper, #fffdf8);
+    color: var(--ink, #1d2b24);
+    border-radius: 3px;
+    box-shadow: var(--paper-shadow);
+    padding: 0.75rem 1rem;
+    rotate: var(--rot, 0deg);
+    min-inline-size: 0;
+  }
+  .paper--kraft {
+    background: var(--kraft, #e9dcc3);
+  }
+  .paper--cork {
+    background: #d9b98a;
+    background-image: radial-gradient(rgb(0 0 0 / 0.08) 1px, transparent 1.5px);
+    background-size: 7px 7px;
+  }
+  .paper--lift {
+    box-shadow: var(--paper-shadow-lift);
+  }
+</style>

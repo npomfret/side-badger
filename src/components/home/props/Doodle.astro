@@ -1,0 +1,77 @@
+---
+/**
+ * A hand-drawn mark drawn around ordinary HTML text: underline, circle or arrow. The paths are
+ * decoration (aria-hidden) and have no <text>. With `draw`, the stroke draws on: it carries
+ * `data-anim="draw"` and an over-estimated `--L`, so it starts fully hidden (scenes.css).
+ * The arrow mirrors with `--dir` in right-to-left locales.
+ */
+import type { HTMLAttributes } from 'astro/types';
+
+type Kind = 'underline' | 'circle' | 'arrow';
+
+interface Props extends HTMLAttributes<'svg'> {
+  kind: Kind;
+  tone?: 'red' | 'green' | 'ink';
+  /** Draw on with the stage engine or the view timeline; needs `at` */
+  draw?: boolean;
+  at?: number;
+}
+
+const { kind, tone = 'red', draw = false, at, class: className, style, ...rest } = Astro.props;
+
+// Over-estimated stroke lengths, so the dash pattern hides the whole path at offset L
+const shapes: Record<Kind, { viewBox: string; d: string; length: number }> = {
+  underline: { viewBox: '0 0 100 12', d: 'M2 8 C 22 2, 40 12, 62 6 S 90 4, 98 7', length: 125 },
+  circle: {
+    viewBox: '0 0 100 60',
+    d: 'M50 4 C 20 2, 3 18, 6 33 C 9 50, 35 57, 58 55 C 85 53, 98 38, 94 22 C 91 10, 72 3, 48 6',
+    length: 320,
+  },
+  arrow: { viewBox: '0 0 60 40', d: 'M3 32 C 18 6, 38 4, 54 14 M54 14 L 43 11 M54 14 L 52 25', length: 135 },
+};
+const { viewBox, d, length } = shapes[kind];
+---
+
+<svg
+  {...rest}
+  class:list={['doodle', `doodle--${kind}`, `doodle--${tone}`, className]}
+  data-prop="doodle"
+  viewBox={viewBox}
+  fill="none"
+  aria-hidden="true"
+  focusable="false"
+  style={style}
+>
+  <path
+    d={d}
+    data-anim={draw ? 'draw' : undefined}
+    data-at={draw ? at : undefined}
+    style={draw ? `--L:${length}` : undefined}
+  ></path>
+</svg>
+
+<style>
+  .doodle {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+    overflow: visible;
+    stroke: currentColor;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .doodle--red {
+    color: var(--thread-red, #c8433a);
+  }
+  .doodle--green {
+    color: var(--green-ink, #2f6b2e);
+  }
+  .doodle--ink {
+    color: var(--ink, #1d2b24);
+  }
+  .doodle--arrow {
+    scale: var(--dir, 1) 1;
+    inline-size: 4rem;
+  }
+</style>

@@ -1,0 +1,43 @@
+---
+/**
+ * Scene 5, the tangle (`tangle`). PLACEHOLDER from H5, replaced by H8.
+ *
+ * Hooks for H8:
+ *   - <ScrollScene id="tangle" titleId="tangle-title" runway={{ desktop: 280, phone: 240 }}
+ *     stages={[10, 30, 50, 68, 90]} staticStage={5}>
+ *     Stages follow "Prototype findings": 0-10, 10-30, 30-50, 50-68, 68-90, 90-100 %.
+ *     staticStage 5 is the rest frame; H8 renders the before board for
+ *     html[data-scene-engine="static"] and the reduced-motion / short-viewport media query.
+ *   - Slot `copy`: the h2 (#tangle-title) and body.
+ *   - Slot `visual`: the illustrated stage; `div[data-hook="tangle-visual"]` marks where it goes.
+ *   - Slot `link`: <SceneLink to="tangle" locale={locale} />, which resolves through data/links.ts.
+ *   - Motion: generic data-anim / data-at on elements (scenes.css), or your own per-element
+ *     keyframes on `animation-timeline: --scene`. Keep data-at in 1..5; reduced
+ *     motion rests at staticStage.
+ *   - Below 1024 px the tangle uses its portrait board; on phones the lede sits in normal flow
+ *     before the pinned stage. tangle/layout.ts and its test are H8's.
+ */
+import ScrollScene from '../ScrollScene.astro';
+import SceneLink from '../props/SceneLink.astro';
+import { t, type Locale } from '@/i18n';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+---
+
+<ScrollScene
+  id="tangle"
+  titleId="tangle-title"
+  runway={{ desktop: 280, phone: 240 }}
+  stages={[10, 30, 50, 68, 90]}
+  staticStage={5}
+>
+  <Fragment slot="copy">
+    <h2 id="tangle-title">{t('home.tangle.title', locale)}</h2>
+    <p>{t('home.tangle.body', locale)}</p>
+  </Fragment>
+  <div slot="visual" class="scene-placeholder" data-hook="tangle-visual" aria-hidden="true"></div>
+  <Fragment slot="link"><SceneLink to="tangle" locale={locale} /></Fragment>
+</ScrollScene>

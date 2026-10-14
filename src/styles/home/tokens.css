@@ -1,0 +1,71 @@
+/*
+ * Homepage tokens (direction A, "everything on the table"). Light only: the site has no dark mode.
+ * `--dir` (1, or -1 under dir="rtl") and `--header-h` come from the site tokens.
+ */
+.home {
+  /* Palette */
+  --table: #f4eee2;
+  --paper: #fffdf8;
+  --kraft: #e9dcc3;
+  --ink: #1d2b24;
+  --ink-muted: #4e5a52; /* 6.3:1 on --table. Dim with this, never with opacity. */
+  --green-ink: #2f6b2e;
+  --teal-ink: #2b6670;
+  --brand-green: #6aa864;
+  --brand-teal: #508c96;
+  --thread-red: #c8433a; /* graphics */
+  --thread-red-text: #b3362e; /* text, 5.2:1 */
+  --sticky-yellow: #ffe58a;
+  --sticky-pink: #f9c6cf;
+  --paper-shadow: 0 1px 1px rgb(29 43 36 / 0.12), 0 6px 14px -4px rgb(29 43 36 / 0.22);
+  --paper-shadow-lift: 0 2px 3px rgb(29 43 36 / 0.14), 0 16px 28px -8px rgb(29 43 36 / 0.3);
+
+  /* App interface inside AppFrame: the real app's tokens, unchanged */
+  --app-primary: #16a34a;
+  --app-primary-dark: #15803d;
+  --app-ink: #1f2937;
+  --app-surface: #ffffff;
+  --app-tint: #f0fdf4;
+  --app-danger: #dc2626;
+
+  /* Motion */
+  --ease-paper: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-snap: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-thread: cubic-bezier(0.65, 0, 0.35, 1);
+  --stage-ms: 700ms;
+  --stamp-ms: 250ms;
+
+  /* Layout */
+  --stage-h: calc(100svh - var(--header-h, 88px));
+  --scene-gutter: clamp(1rem, 4vw, 3rem);
+  --scene-gap: clamp(1rem, 3vw, 2.5rem);
+
+  background: var(--table);
+  color: var(--ink);
+}
+
+/* Tones: a section or world palette. ScrollScene sets data-tone. */
+[data-tone='housemates'] {
+  --surface: #ead9b5;
+  --magnet: #d6553f;
+  --tone-ink: #1d2b24;
+}
+[data-tone='couples'] {
+  --surface: #f3e6e0;
+  --tone-ink: #7a3e66; /* plum */
+}
+[data-tone='trips'] {
+  --surface: #f6e3b4; /* sand, with coral stripes */
+  --stripe: #f28c6b;
+  --tone-ink: #1d5f78; /* sea */
+}
+[data-tone='celebrations'] {
+  --surface: #faf8f5;
+  --gold: #c9a227;
+  --blush: #f4c7cf;
+  --tone-ink: #1d2b24;
+}
+[data-tone='table'] {
+  --surface: var(--table);
+  --tone-ink: var(--ink);
+}

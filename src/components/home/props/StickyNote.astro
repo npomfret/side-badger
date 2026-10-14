@@ -1,0 +1,45 @@
+---
+/**
+ * A sticky note. Jokes live on these, so it is decoration by default (aria-hidden): the same
+ * information must also be in the page's real text. Set `decorative={false}` where the note is
+ * the content.
+ */
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'div'> {
+  color?: 'yellow' | 'pink';
+  rotate?: number;
+  decorative?: boolean;
+}
+
+const { color = 'yellow', rotate = -2, decorative = true, class: className, style, ...rest } = Astro.props;
+const tilt = rotate ? `--rot:${rotate}deg` : '';
+---
+
+<div
+  {...rest}
+  class:list={['sticky', `sticky--${color}`, className]}
+  data-prop="sticky"
+  aria-hidden={decorative ? 'true' : undefined}
+  style={[tilt, style].filter(Boolean).join(';') || undefined}
+>
+  <slot />
+</div>
+
+<style>
+  .sticky {
+    background: var(--sticky-yellow, #ffe58a);
+    color: var(--ink, #1d2b24);
+    padding: 0.75rem 0.875rem 1rem;
+    font-size: 0.9375rem;
+    line-height: 1.3;
+    font-weight: 500;
+    box-shadow: var(--paper-shadow);
+    border-end-end-radius: 14px 4px;
+    rotate: var(--rot, 0deg);
+    min-inline-size: 0;
+  }
+  .sticky--pink {
+    background: var(--sticky-pink, #f9c6cf);
+  }
+</style>

@@ -1,0 +1,40 @@
+---
+/**
+ * Scene 8, trust (`trust`). PLACEHOLDER from H5, replaced by H9.
+ *
+ * Hooks for H9:
+ *   - <ScrollScene id="trust" titleId="trust-title" runway="entry" staticStage={1}>: an entry
+ *     scene; stage 1 = all three stamps landed.
+ *   - Slot `copy`: h2 (#trust-title) and the three h3 items, which are the only site plan D3
+ *     claims: No ads, No third-party trackers, We don't sell your personal data. Each item is
+ *     `[data-hook="trust-item"]`; put props/Stamp.astro in them with data-anim="stamp" data-at="1".
+ *   - Slot `link`: the privacy policy link, resolved by data/links.ts (`/privacy/` is published).
+ */
+import ScrollScene from '../ScrollScene.astro';
+import SceneLink from '../props/SceneLink.astro';
+import { t, type Locale } from '@/i18n';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+---
+
+<ScrollScene id="trust" titleId="trust-title" runway="entry" staticStage={1}>
+  <Fragment slot="copy">
+    <h2 id="trust-title">{t('home.trust.title', locale)}</h2>
+    <div data-hook="trust-item">
+      <h3>{t('home.trust.adsTitle', locale)}</h3>
+      <p>{t('home.trust.adsBody', locale)}</p>
+    </div>
+    <div data-hook="trust-item">
+      <h3>{t('home.trust.trackersTitle', locale)}</h3>
+      <p>{t('home.trust.trackersBody', locale)}</p>
+    </div>
+    <div data-hook="trust-item">
+      <h3>{t('home.trust.sellingTitle', locale)}</h3>
+      <p>{t('home.trust.sellingBody', locale)}</p>
+    </div>
+  </Fragment>
+  <Fragment slot="link"><SceneLink to="trust" locale={locale} /></Fragment>
+</ScrollScene>

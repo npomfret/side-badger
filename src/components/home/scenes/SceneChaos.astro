@@ -1,0 +1,43 @@
+---
+/**
+ * Scene 1, chaos (`top`). PLACEHOLDER from H5, replaced by H6.
+ *
+ * Hooks for H6:
+ *   - <ScrollScene id="top" titleId="top-title" runway="entry" stageOn="exit" staticStage={0}>:
+ *     an entry scene that tidies as it scrolls OUT (stage 1 = tidy), and rests at stage 0 (the
+ *     messy start) under reduced motion. Native range defaults to `exit 0% exit 70%`.
+ *   - Slot `copy`: the ONLY h1 on the page (#top-title), lede, audience, primary and secondary
+ *     calls to action, and the pricing line. Keep them out of any animated opacity.
+ *   - Slot `visual`: the messy-table props. Use props/ (Receipt, StickyNote, ChatBubble,
+ *     AppFrame) with data-anim / data-at, or your own keyframes.
+ *   - Links: registerHref('hero', locale) for the button, resolveHowItWorks(locale) for the
+ *     secondary button, pricingHref(locale) for the pricing line (all from data/links.ts).
+ */
+import ScrollScene from '../ScrollScene.astro';
+import { t, type Locale } from '@/i18n';
+import { pricingHref, registerHref, resolveHowItWorks } from '../data/links';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const howItWorks = resolveHowItWorks(locale);
+---
+
+<ScrollScene id="top" titleId="top-title" runway="entry" stageOn="exit" staticStage={0}>
+  <Fragment slot="copy">
+    <h1 id="top-title">{t('home.hero.title', locale)}</h1>
+    <p>{t('home.hero.lede', locale)}</p>
+    <p>{t('home.hero.audience', locale)}</p>
+    <div class="scene__link">
+      <a
+        class="btn btn-primary btn-lg"
+        href={registerHref('hero', locale)}
+        rel="nofollow"
+      >{t('home.hero.ctaPrimary', locale)}</a>
+      <a class="scene-link" href={howItWorks.href}>{t(howItWorks.labelKey, locale)}</a>
+    </div>
+    <p><a class="scene-link" href={pricingHref(locale)}>{t('home.hero.trust', locale)}</a></p>
+  </Fragment>
+  <div slot="visual" class="scene-placeholder" data-hook="top-visual" aria-hidden="true"></div>
+</ScrollScene>

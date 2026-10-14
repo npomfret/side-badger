@@ -1,0 +1,41 @@
+---
+/**
+ * Scene 2, group forms (`group`). PLACEHOLDER from H5, replaced by H6.
+ *
+ * Hooks for H6:
+ *   - <ScrollScene id="group" titleId="group-title" runway={{ desktop: 150, phone: 'entry' }}
+ *     stages={[25, 60, 85]} staticStage={3}>
+ *     Stages: 0 place card, 1 phone with the invite screen, 2 link cards and sign-up, 3 avatars seated.
+ *   - Slot `copy`: the h2 (#group-title) and body.
+ *   - Slot `visual`: the illustrated stage; `div[data-hook="group-visual"]` marks where it goes.
+ *   - Slot `link`: <SceneLink to="group" locale={locale} />, which resolves through data/links.ts.
+ *   - Motion: generic data-anim / data-at on elements (scenes.css), or your own per-element
+ *     keyframes on `animation-timeline: --scene`. Keep data-at in 1..3; reduced
+ *     motion rests at staticStage.
+ *   - Strings ready: home.group.* (name, inviteLink, copy, scanCode, joined, memberCount) and
+ *     home.cast.*; members come from data/example-group.ts. On phones this is an entry scene.
+ */
+import ScrollScene from '../ScrollScene.astro';
+import SceneLink from '../props/SceneLink.astro';
+import { t, type Locale } from '@/i18n';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+---
+
+<ScrollScene
+  id="group"
+  titleId="group-title"
+  runway={{ desktop: 150, phone: 'entry' }}
+  stages={[25, 60, 85]}
+  staticStage={3}
+>
+  <Fragment slot="copy">
+    <h2 id="group-title">{t('home.group.title', locale)}</h2>
+    <p>{t('home.group.body', locale)}</p>
+  </Fragment>
+  <div slot="visual" class="scene-placeholder" data-hook="group-visual" aria-hidden="true"></div>
+  <Fragment slot="link"><SceneLink to="group" locale={locale} /></Fragment>
+</ScrollScene>

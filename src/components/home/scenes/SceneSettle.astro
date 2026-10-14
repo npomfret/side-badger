@@ -1,0 +1,41 @@
+---
+/**
+ * Scene 6, settle up (`settle`). PLACEHOLDER from H5, replaced by H9.
+ *
+ * Hooks for H9:
+ *   - <ScrollScene id="settle" titleId="settle-title" runway={{ desktop: 150, phone: 120 }}
+ *     stages={[25, 55, 80]} staticStage={3}>
+ *     Stages: 0 owes row, 1 quick-settle fills the form, 2 record pressed, 3 all settled up.
+ *   - Slot `copy`: the h2 (#settle-title) and body.
+ *   - Slot `visual`: the illustrated stage; `div[data-hook="settle-visual"]` marks where it goes.
+ *   - Slot `link`: <SceneLink to="settle" locale={locale} />, which resolves through data/links.ts.
+ *   - Motion: generic data-anim / data-at on elements (scenes.css), or your own per-element
+ *     keyframes on `animation-timeline: --scene`. Keep data-at in 1..3; reduced
+ *     motion rests at staticStage.
+ *   - Confetti: pass confettiAt={N} to ScrollScene (fires once at N % of the range, outside
+ *     the device frame) or dispatch the document event `home:confetti`. Never under reduced motion.
+ */
+import ScrollScene from '../ScrollScene.astro';
+import SceneLink from '../props/SceneLink.astro';
+import { t, type Locale } from '@/i18n';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+---
+
+<ScrollScene
+  id="settle"
+  titleId="settle-title"
+  runway={{ desktop: 150, phone: 120 }}
+  stages={[25, 55, 80]}
+  staticStage={3}
+>
+  <Fragment slot="copy">
+    <h2 id="settle-title">{t('home.settle.title', locale)}</h2>
+    <p>{t('home.settle.body', locale)}</p>
+  </Fragment>
+  <div slot="visual" class="scene-placeholder" data-hook="settle-visual" aria-hidden="true"></div>
+  <Fragment slot="link"><SceneLink to="settle" locale={locale} /></Fragment>
+</ScrollScene>

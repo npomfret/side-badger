@@ -58,7 +58,7 @@ npm run i18n audit   # Check for missing/extra keys
 
 - `BaseLayout.astro` - HTML wrapper, header/footer, background effects
 - `HomePage.astro` - Landing page with features, CTA sections
-- `PolicyPage.astro` - Fetches markdown from API, renders legal pages
+- `PolicyPage.astro` - Renders a legal page from the committed snapshot in `src/content/policies` (English text; non-English locales show a notice)
 - `CausticRipples.astro` - Canvas-based caustic light background (respects reduced motion)
 - `EasterEggs.astro` - Konami code, disco mode, hidden interactions
 
@@ -67,7 +67,7 @@ npm run i18n audit   # Check for missing/extra keys
 All in `src/pages/` (file-based routing):
 - `index.astro` - Homepage
 - `pricing.astro` - Free tier explanation with FAQ schema
-- `privacy.astro`, `terms.astro`, `cookies.astro` - Policy pages (fetch from API)
+- `privacy.astro`, `terms.astro`, `cookies.astro` - Policy pages (pre-rendered from snapshots at build time)
 
 ## Docker
 
@@ -86,10 +86,9 @@ Multi-stage Dockerfile:
 
 ## External Dependencies
 
-Policy pages fetch markdown from:
-- `{api.baseUrl}/api/policies/{policy-type}/text`
+Policy pages are built from Markdown snapshots in `src/content/policies/`. `scripts/sync-policies.mjs` (`npm run policies:sync`) refreshes them from `https://app.sidebadger.me/api/policies/{policy-type}/current` and `/text`; the `policy-sync.yml` workflow runs it daily. The build never calls the API.
 
-The app URL (`getAppUrl()` in `src/i18n/index.ts`) and the policy API base (`getApiBaseUrl()`) both point to the production app at `app.sidebadger.me`.
+The app URL (`getAppUrl()` in `src/i18n/index.ts`) points to the production app at `app.sidebadger.me`.
 
 ## Styling Notes
 

@@ -390,9 +390,9 @@ JSON-LD by page type (D7):
 | every page except not-found | `WebSite` (`https://sidebadger.me/#website`), `Organization` (`#organization`, absolute logo), `WebPage` (`<canonical>#webpage`, `url`, `name`, `description`, `inLanguage` = `htmlLang`, `isPartOf` the website) |
 | home | adds `SoftwareApplication`, exactly as the homepage task's "Structured data" section specifies (`@id` `{canonical}#app`, `featureList` from the depicted features, `publisher` = `#organization`, `offers` with price 0 and `priceCurrency` `GBP`, because site plan D2 says free). The homepage passes it through the `jsonLd` prop rather than the slot, so it joins the `@graph`. |
 | pricing | adds `FAQPage` built from the visible FAQ. `WebPage.about` = the same locale's home `{canonical}#app`. |
-| hub | `WebPage` becomes `CollectionPage`, plus an `ItemList` of child pages and a `BreadcrumbList` |
+| hub | `WebPage` becomes `CollectionPage`, plus an `ItemList` of child pages. No `BreadcrumbList`: hubs sit at depth one and show no visible breadcrumb (D22, 5.4), and rule 11 requires the two to match. |
 | feature, use case | adds `BreadcrumbList`, and `FAQPage` when the page shows a FAQ. `WebPage.about` = the same locale's home `#app`. |
-| how it works | adds `BreadcrumbList` |
+| how it works | no extra nodes: depth one, so no breadcrumb and no `BreadcrumbList` |
 | legal (English) | `WebPage` with `dateModified` from the snapshot's `publishedAt` |
 | legal (localized, `noindex`) | base nodes only |
 | guide | adds `Article` (`headline`, `datePublished`, `dateModified`, `inLanguage`, `author` = organization) and `BreadcrumbList` |

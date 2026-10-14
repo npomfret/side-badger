@@ -5,13 +5,16 @@ import LanguageDetection from '../components/LanguageDetection.astro';
 import SeoHead from '../components/layout/SeoHead.astro';
 import SiteFooter from '../components/layout/SiteFooter.astro';
 import { t, isPseudoLocale, localeConfig, type Locale } from '../i18n';
-import { pageForPath } from '../site/routes';
+import Breadcrumbs from '../components/nav/Breadcrumbs.astro';
+import { breadcrumbJsonLd, breadcrumbsFor } from '../components/nav/navigation';
 import type { PageId } from '../site/pages';
 import type { JsonLdNode } from '../seo/jsonld';
 
 interface Props {
-  /** Registry page id, or 'not-found'. Taken from the URL when a route does not pass it. */
-  page?: PageId | 'not-found';
+  /** Registry page id, or 'not-found'. Every route passes its own. */
+  page: PageId | 'not-found';
+  /** The page's own name in the breadcrumb (default: the title). Ancestors come from the registry. */
+  breadcrumbName?: string;
   title: string;
   description?: string;
   locale?: Locale;
@@ -21,7 +24,8 @@ interface Props {
 }
 
 const {
-  page: pageProp,
+  page,
+  breadcrumbName,
   title,
   description: descriptionProp,
   locale = 'en',
@@ -30,10 +34,9 @@ const {
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
-const page = pageProp ?? (pageForPath(currentPath)?.page.id as PageId | undefined);
-if (!page) {
-  throw new Error(`BaseLayout: no page id for ${currentPath}. Pass the "page" prop.`);
-}
+// One trail feeds the visible breadcrumb and the BreadcrumbList JSON-LD (restructure D22)
+const crumbs = page === 'not-found' ? [] : breadcrumbsFor(page, locale, breadcrumbName ?? title);
+const pageJsonLd = [...(jsonLd ?? []), ...breadcrumbJsonLd(crumbs)];
 const description = descriptionProp ?? t('meta.description', locale);
 const { htmlLang, dir } = localeConfig[locale];
 // Preview pseudo-locales are built only under PREVIEW_PSEUDO=1 and must never ship
@@ -57,7 +60,7 @@ const preloadLatin = fontScript === 'latin';
 <!DOCTYPE html>
 <html lang={htmlLang} dir={dir} data-font-script={fontScript} data-pseudo={pseudo ? '' : undefined}>
   <head>
-    <SeoHead page={page} title={title} description={description} locale={locale} ogCard={ogCard} jsonLd={jsonLd}>
+    <SeoHead page={page} title={title} description={description} locale={locale} ogCard={ogCard} jsonLd={pageJsonLd}>
       <slot name="head" slot="head" />
     </SeoHead>
     {preloadLatin && (
@@ -78,6 +81,7 @@ const preloadLatin = fontScript === 'latin';
     </slot>
 
     <main id="main-content">
+      <Breadcrumbs crumbs={crumbs} locale={locale} />
       <slot />
     </main>
 
@@ -110,4 +114,5 @@ const preloadLatin = fontScript === 'latin';
 <style is:global>
   @import '../styles/global.css';
   @import '../styles/layout.css';
+  @import '../styles/nav.css';
 </style>

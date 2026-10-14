@@ -1,0 +1,39 @@
+---
+/**
+ * The mobile menu (restructure 5.2, D21): a Menu button and a Popover API panel, no script.
+ * Escape, light dismiss, the top layer and returning focus come from the browser. Where popover
+ * is unsupported, nav.css shows the panel as a plain list and hides the button.
+ */
+import { t, type Locale } from '../../i18n';
+import type { NavLink } from '../nav/navigation';
+
+interface Props {
+  links: readonly NavLink[];
+  locale: Locale;
+}
+
+const { links, locale } = Astro.props;
+---
+
+{links.length > 0 && (
+  <div class="mobile-nav">
+    <button type="button" class="menu-button" popovertarget="site-menu" aria-controls="site-menu">
+      <svg class="menu-button__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </svg>
+      <span class="menu-button__text">{t('nav.menu', locale)}</span>
+    </button>
+    <div id="site-menu" class="mobile-menu" popover>
+      <nav aria-label={t('a11y.mainNavigation', locale)}>
+        <ul role="list">
+          {links.map(link => (
+            <li><a href={link.href} aria-current={link.current}>{link.label}</a></li>
+          ))}
+        </ul>
+      </nav>
+      <button type="button" class="menu-close" popovertarget="site-menu" popovertargetaction="hide">
+        {t('nav.closeMenu', locale)}
+      </button>
+    </div>
+  </div>
+)}

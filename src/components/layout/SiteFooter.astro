@@ -1,14 +1,19 @@
 ---
-import { t, logoLocales, getLocalizedPath, getFormattedDate, type Locale } from '../../i18n';
+/**
+ * The footer (restructure 5.3, D22). Link groups come from the page registry; each group's
+ * heading is an h2, styled small.
+ */
+import { logoFor } from '../nav/logo';
+import { footerGroups } from '../nav/navigation';
+import { t, getLocalizedPath, getFormattedDate, type Locale } from '../../i18n';
 
 interface Props {
   locale?: Locale;
 }
 
 const { locale = 'en' } = Astro.props;
-
-const logoLocale = logoLocales.includes(locale) ? locale : 'en';
-const smallLogoPath = `/images/${logoLocale}/logo-transparent-small.png`;
+const logo = logoFor(locale);
+const groups = footerGroups(locale);
 ---
 
 <footer class="site-footer" role="contentinfo">
@@ -16,26 +21,19 @@ const smallLogoPath = `/images/${logoLocale}/logo-transparent-small.png`;
     <nav class="footer-grid" aria-label={t('a11y.footerNavigation', locale)}>
       <div class="footer-brand">
         <a href={getLocalizedPath('/', locale)} class="logo" aria-label={t('a11y.homeLink', locale)}>
-          <img src={smallLogoPath} alt={t('header.logoText', locale) + ' logo'} width="400" height={logoLocale === 'en' ? 126 : 125} />
+          <img src={logo.src} alt={t('a11y.logoAlt', locale)} width={logo.width} height={logo.height} />
         </a>
         <p class="text-muted text-sm" set:html={t('footer.tagline', locale)} />
       </div>
 
-      <div class="footer-links">
-        <h4 id="footer-product-heading">{t('footer.product', locale)}</h4>
-        <ul aria-labelledby="footer-product-heading" role="list">
-          <li><a href={getLocalizedPath('/pricing', locale)}>{t('footer.pricing', locale)}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h4 id="footer-legal-heading">{t('footer.legal', locale)}</h4>
-        <ul aria-labelledby="footer-legal-heading" role="list">
-          <li><a href={getLocalizedPath('/privacy', locale)}>{t('footer.privacy', locale)}</a></li>
-          <li><a href={getLocalizedPath('/terms', locale)}>{t('footer.terms', locale)}</a></li>
-          <li><a href={getLocalizedPath('/cookies', locale)}>{t('footer.cookies', locale)}</a></li>
-        </ul>
-      </div>
+      {groups.map(group => (
+        <div class="footer-links">
+          <h2 id={`footer-${group.id}-heading`}>{group.heading}</h2>
+          <ul aria-labelledby={`footer-${group.id}-heading`} role="list">
+            {group.links.map(link => <li><a href={link.href}>{link.label}</a></li>)}
+          </ul>
+        </div>
+      ))}
     </nav>
 
     <div class="footer-bottom flex items-center justify-between">

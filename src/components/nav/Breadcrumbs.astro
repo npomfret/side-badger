@@ -1,0 +1,30 @@
+---
+/**
+ * The visible breadcrumb (restructure 5.4, D22). It renders the trail `breadcrumbsFor()` builds,
+ * the same list BaseLayout turns into the BreadcrumbList JSON-LD. Each item's text is the name in
+ * the JSON-LD; the separators are drawn by CSS.
+ */
+import { t, type Locale } from '../../i18n';
+import type { Crumb } from './navigation';
+
+interface Props {
+  crumbs: readonly Crumb[];
+  locale: Locale;
+}
+
+const { crumbs, locale } = Astro.props;
+---
+
+{crumbs.length > 0 && (
+  <nav class="breadcrumbs container" aria-label={t('a11y.breadcrumb', locale)}>
+    <ol>
+      {crumbs.map((crumb, index) => (
+        <li>
+          {index === crumbs.length - 1
+            ? <span aria-current="page">{crumb.name}</span>
+            : <a href={crumb.href}>{crumb.name}</a>}
+        </li>
+      ))}
+    </ol>
+  </nav>
+)}

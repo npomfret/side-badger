@@ -1,0 +1,38 @@
+---
+/**
+ * The only way to link to the app (restructure 5.5, D28). The href is the first-party launch
+ * counter (`/go/register/` or `/go/app/`, built by `launchHref`), so every click is counted with
+ * its page and position and the destination changes in one place. Confetti stays opt-in: pass
+ * `confetti` to add `btn-confetti`.
+ */
+import { t, type Locale } from '../../i18n';
+import { launchHref, type LaunchTarget } from '../../seo/urls';
+
+interface Props {
+  target?: LaunchTarget;
+  /** The link's position on the page: `hero`, `header`, `footer-cta`, ... */
+  cta: string;
+  /** Registry page id, or `not-found` */
+  pageId: string;
+  locale: Locale;
+  variant?: 'primary' | 'secondary';
+  confetti?: boolean;
+  class?: string;
+}
+
+const { target = 'app', cta, pageId, locale, variant = 'primary', confetti = false, class: className } = Astro.props;
+---
+
+<a
+  href={launchHref(pageId, locale, { target, cta })}
+  rel="nofollow"
+  class:list={['btn', `btn-${variant}`, 'launch-cta', { 'btn-confetti': confetti }, className]}
+>
+  <span class="launch-cta__text"><slot>{t('header.launchApp', locale)}</slot></span>
+  <svg class="launch-cta__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+    <polyline points="15 3 21 3 21 9" />
+    <line x1="10" y1="14" x2="21" y2="3" />
+  </svg>
+  <span class="sr-only">{t('a11y.externalLink', locale)}</span>
+</a>

@@ -36,6 +36,8 @@ export function checkLeaks(site: Site): string[] {
 
     for (const node of visibleTextNodes($)) report('text', node.text);
     report('<title>', $('head title').text());
+    // noscript content is what visitors without JavaScript see; only script and style are exempt
+    for (const el of $('noscript').toArray()) report('<noscript>', $(el).text());
 
     // Attribute values and names on every element. Script and style bodies are not read, because
     // bundled code legitimately says `undefined`.

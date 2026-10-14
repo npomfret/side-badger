@@ -17,6 +17,12 @@ describe('rule 12: no placeholder text, debug attributes or staging host', () =>
       expect(checkLeaks(one('r12/script-only.html'))).toEqual([]);
     });
 
+    it('checks noscript content, which visitors without JavaScript see', () => {
+      const site = one('good/home.html');
+      site.pages[0].$('body').append('<noscript><p>Total: undefined</p></noscript>');
+      expect(mentions(checkLeaks(site), '<noscript> contains undefined')).toBe(true);
+    });
+
     it.each([
       ['r12/text-undefined.html', 'text contains undefined'],
       ['r12/text-nan.html', 'text contains NaN'],

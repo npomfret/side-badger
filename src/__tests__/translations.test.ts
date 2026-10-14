@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import fs from 'fs';
 import path from 'path';
+import crypto from 'crypto';
 
 // Import everything from i18n index
 import en from '../i18n/en';
@@ -9,30 +10,43 @@ import { translations, locales, localeAliases, localeAliasMap, isRTL, allLocales
 const englishKeys = Object.keys(en);
 const englishTranslations = en as Record<string, string>;
 
-// Keys that are expected to be the same across all languages (brand names, URLs, etc.)
-const ALLOWED_IDENTICAL_KEYS = new Set([
-  'header.logoText', // Brand name
-  'footer.company',
-  'footer.product', // Product name
-  'hero.titleHighlight', // "Badger" - brand mascot name
-  'pricing.plan.name', // "Free" - often kept in English for branding
-  'pricing.enterprise.badge', // "Enterprise" - industry term
-  'pricing.enterprise.name', // "Enterprise" - industry term
-  'pricing.enterprise.period', // Formatting often identical
-  'comingSoon.ai.title', // "AI" is universal
-]);
-
-// Keys that contain technical content that may legitimately be identical
-const TECHNICAL_KEY_PATTERNS = [
-  /^app\./,
-  /^api\./,
-  /\.url$/,
-];
-
-function isAllowedIdentical(key: string): boolean {
-  if (ALLOWED_IDENTICAL_KEYS.has(key)) return true;
-  return TECHNICAL_KEY_PATTERNS.some(pattern => pattern.test(key));
+// I18N_MODE: "strict" (default) or "english-first" (D38). In english-first mode a key may be
+// missing from, or extra in, a non-English locale only when src/i18n/pending/keys.json lists it
+// under `added` or `removed`. In strict mode both pending manifests must be empty.
+const MODE = process.env.I18N_MODE || 'strict';
+if (MODE !== 'strict' && MODE !== 'english-first') {
+  throw new Error(`I18N_MODE must be "strict" or "english-first" (got "${MODE}")`);
 }
+const ENGLISH_FIRST = MODE === 'english-first';
+
+const I18N_DIR = path.join(__dirname, '..', 'i18n');
+const PAGE_STATUSES = ['machine', 'checked', 'reviewed', 'legacy'];
+
+type Lock = { keys: Record<string, string>; identicalApproved: string[]; pages: Record<string, string> };
+
+function readJson<T>(file: string, fallback: T): T {
+  return fs.existsSync(file) ? { ...fallback, ...JSON.parse(fs.readFileSync(file, 'utf-8')) } : fallback;
+}
+
+const pendingKeys = readJson(path.join(I18N_DIR, 'pending', 'keys.json'), { added: [] as string[], removed: [] as string[] });
+const pendingPages = readJson(path.join(I18N_DIR, 'pending', 'pages.json'), { added: [] as string[] });
+const pendingAdded = new Set(ENGLISH_FIRST ? pendingKeys.added : []);
+const pendingRemoved = new Set(ENGLISH_FIRST ? pendingKeys.removed : []);
+
+function loadLock(locale: string): Lock {
+  return readJson<Lock>(path.join(I18N_DIR, 'locks', `${locale}.json`), { keys: {}, identicalApproved: [], pages: {} });
+}
+
+// First 8 hex digits of the SHA-256 of the English value (see scripts/i18n-manager.mjs)
+function hashValue(value: string): string {
+  return crypto.createHash('sha256').update(value).digest('hex').slice(0, 8);
+}
+
+function placeholders(value: string): string[] {
+  return [...value.matchAll(/\{([A-Za-z_][A-Za-z0-9_]*)\}/g)].map(m => m[1]).sort();
+}
+
+const nonEnglishLocales = Object.keys(translations).filter(l => l !== 'en');
 
 // Scan source files for translation key usage
 function findUsedTranslationKeys(): Set<string> {
@@ -86,13 +100,30 @@ function findUsedTranslationKeys(): Set<string> {
 }
 
 describe('Translation Files Integrity', () => {
+  describe(`Pending manifests (mode: ${MODE})`, () => {
+    if (ENGLISH_FIRST) {
+      it('pending keys are consistent with en.ts', () => {
+        const englishKeySet = new Set(englishKeys);
+        expect(pendingKeys.added.filter(k => !englishKeySet.has(k)), 'added keys must exist in en.ts').toEqual([]);
+        expect(pendingKeys.removed.filter(k => englishKeySet.has(k)), 'removed keys must not exist in en.ts').toEqual([]);
+      });
+    } else {
+      it('pending/keys.json is empty in strict mode', () => {
+        expect(pendingKeys.added, 'pending/keys.json "added" must be empty in strict mode').toEqual([]);
+        expect(pendingKeys.removed, 'pending/keys.json "removed" must be empty in strict mode').toEqual([]);
+      });
+      it('pending/pages.json is empty in strict mode', () => {
+        expect(pendingPages.added, 'pending/pages.json "added" must be empty in strict mode').toEqual([]);
+      });
+    }
+  });
+
   describe('Completeness - All locales have all English keys', () => {
-    const localesToTest = Object.keys(translations).filter(l => l !== 'en');
-    for (const locale of localesToTest) {
+    for (const locale of nonEnglishLocales) {
       it(`${locale} has all ${englishKeys.length} English keys`, () => {
         const translation = translations[locale as keyof typeof translations];
         const translationKeys = new Set(Object.keys(translation));
-        const missingKeys = englishKeys.filter(key => !translationKeys.has(key));
+        const missingKeys = englishKeys.filter(key => !translationKeys.has(key) && !pendingAdded.has(key));
 
         expect(
           missingKeys,
@@ -103,13 +134,11 @@ describe('Translation Files Integrity', () => {
   });
 
   describe('No Extraneous Keys - No locale has keys not in English', () => {
-    const localesToTest = Object.keys(translations).filter(l => l !== 'en');
-    for (const locale of localesToTest) {
+    for (const locale of nonEnglishLocales) {
       it(`${locale} has no extraneous keys`, () => {
         const translation = translations[locale as keyof typeof translations];
         const englishKeySet = new Set(englishKeys);
-        const translationKeys = Object.keys(translation);
-        const extraneousKeys = translationKeys.filter(key => !englishKeySet.has(key));
+        const extraneousKeys = Object.keys(translation).filter(key => !englishKeySet.has(key) && !pendingRemoved.has(key));
 
         expect(
           extraneousKeys,
@@ -119,69 +148,105 @@ describe('Translation Files Integrity', () => {
     }
   });
 
-  describe('No English Placeholders - Translations should not be identical to English', () => {
-    const localesToTest = Object.keys(translations).filter(l => l !== 'en');
-    for (const locale of localesToTest) {
-      it(`${locale} has no untranslated English placeholders`, () => {
-        const translation = translations[locale as keyof typeof translations];
-        const identicalKeys: string[] = [];
-
-        for (const key of englishKeys) {
-          const englishValue = englishTranslations[key];
-          const translatedValue = translation[key];
-
-          // Skip if this key is allowed to be identical
-          if (isAllowedIdentical(key)) continue;
-
-          // Skip very short values (like "OK", "No", etc.)
-          if (englishValue && englishValue.length <= 3) continue;
-
-          // Check if values are identical
-          if (englishValue && translatedValue && englishValue === translatedValue) {
-            identicalKeys.push(key);
-          }
-        }
-
-        // Allow some identical keys (reasonable threshold for coincidental matches)
-        // but flag if there are many. Nigerian Pidgin (pcm) is a special case.
-        const MAX_ALLOWED_IDENTICAL = locale === 'pcm' ? 100 : 5;
+  describe('No English Placeholders - identical values must be approved in the locale lock', () => {
+    for (const locale of nonEnglishLocales) {
+      it(`${locale} has no unapproved English-identical values`, () => {
+        const translation = translations[locale as keyof typeof translations] as Record<string, string>;
+        const approved = new Set(loadLock(locale).identicalApproved);
+        const identicalKeys = englishKeys.filter(
+          key => key in translation && translation[key] === englishTranslations[key] && !approved.has(key)
+        );
 
         expect(
-          identicalKeys.length,
-          `${locale} has ${identicalKeys.length} keys identical to English (possible untranslated placeholders):\n  ${identicalKeys.slice(0, 20).join('\n  ')}${identicalKeys.length > 20 ? `\n  ... and ${identicalKeys.length - 20} more` : ''}`
-        ).toBeLessThanOrEqual(MAX_ALLOWED_IDENTICAL);
+          identicalKeys,
+          `${locale} has ${identicalKeys.length} keys identical to English and not in src/i18n/locks/${locale}.json identicalApproved:\n  ${identicalKeys.join('\n  ')}`
+        ).toEqual([]);
+      });
+
+      it(`${locale} identicalApproved lists only keys that are still identical`, () => {
+        const translation = translations[locale as keyof typeof translations] as Record<string, string>;
+        const bad = loadLock(locale).identicalApproved.filter(
+          key => !(key in englishTranslations) || translation[key] !== englishTranslations[key]
+        );
+        expect(bad, `${locale} identicalApproved has entries that are translated or not in en.ts:\n  ${bad.join('\n  ')}`).toEqual([]);
       });
     }
   });
 
-  describe('Cross-locale untranslated detection', () => {
-    it('No key is identical to English in more than 10 locales', () => {
-      const localesToTest = Object.keys(translations).filter(l => l !== 'en' && l !== 'pcm');
-      const identicalCounts: Record<string, string[]> = {};
+  describe('Lock staleness - translations were made from the current English', () => {
+    for (const locale of nonEnglishLocales) {
+      it(`${locale} has a lock entry matching the current English for every key`, () => {
+        const translation = translations[locale as keyof typeof translations] as Record<string, string>;
+        const lock = loadLock(locale);
+        const stale: string[] = [];
+        const unconfirmed: string[] = [];
 
-      for (const key of englishKeys) {
-        if (isAllowedIdentical(key)) continue;
-        if (englishTranslations[key] && englishTranslations[key].length <= 3) continue;
+        for (const key of englishKeys) {
+          if (!(key in translation)) continue; // missing keys are caught by completeness
+          if (pendingAdded.has(key)) continue; // English-first: awaiting (re)translation
+          if (!(key in lock.keys)) unconfirmed.push(key);
+          else if (lock.keys[key] !== hashValue(englishTranslations[key])) stale.push(key);
+        }
 
-        const identicalLocales: string[] = [];
-        for (const locale of localesToTest) {
-          const translation = translations[locale as keyof typeof translations];
-          if (translation[key] && englishTranslations[key] === translation[key]) {
-            identicalLocales.push(locale);
+        expect(
+          { stale, unconfirmed },
+          `${locale}: ${stale.length} stale (English changed since locked), ${unconfirmed.length} unconfirmed (no lock entry).\n` +
+          `  Retranslate, then run: npm run i18n lock ${locale} --keys <key,...>`
+        ).toEqual({ stale: [], unconfirmed: [] });
+      });
+
+      it(`${locale} lock has no entries for keys outside en.ts`, () => {
+        const englishKeySet = new Set(englishKeys);
+        const orphans = Object.keys(loadLock(locale).keys).filter(k => !englishKeySet.has(k));
+        expect(orphans).toEqual([]);
+      });
+    }
+
+    it('every non-English locale has a lock file', () => {
+      const missing = nonEnglishLocales.filter(l => !fs.existsSync(path.join(I18N_DIR, 'locks', `${l}.json`)));
+      expect(missing, `Missing lock files: ${missing.join(', ')}`).toEqual([]);
+    });
+  });
+
+  describe('Page review statuses in locks', () => {
+    for (const locale of nonEnglishLocales) {
+      it(`${locale} has valid page review statuses and none still "machine"`, () => {
+        const pages = loadLock(locale).pages;
+        const invalid = Object.entries(pages).filter(([, st]) => !PAGE_STATUSES.includes(st)).map(([pg, st]) => `${pg}: ${st}`);
+        expect(invalid, `Invalid statuses (allowed: ${PAGE_STATUSES.join(', ')})`).toEqual([]);
+        const machine = Object.entries(pages).filter(([, st]) => st === 'machine').map(([pg]) => pg);
+        expect(machine, `Pages not yet checked by an independent back-translation: ${machine.join(', ')}`).toEqual([]);
+      });
+    }
+  });
+
+  describe('Placeholder parity - {name} placeholders match English exactly', () => {
+    const keysWithPlaceholders = englishKeys.filter(key => placeholders(englishTranslations[key]).length > 0);
+
+    it('English placeholders are well-formed (no stray braces)', () => {
+      const stray = englishKeys.filter(key => {
+        const stripped = englishTranslations[key].replace(/\{[A-Za-z_][A-Za-z0-9_]*\}/g, '');
+        return /[{}]/.test(stripped);
+      });
+      expect(stray, `Keys with stray braces:\n  ${stray.join('\n  ')}`).toEqual([]);
+    });
+
+    for (const locale of nonEnglishLocales) {
+      it(`${locale} uses the same placeholders as English`, () => {
+        const translation = translations[locale as keyof typeof translations] as Record<string, string>;
+        const mismatched: string[] = [];
+        for (const key of englishKeys) {
+          const value = translation[key];
+          if (value === undefined) continue; // missing keys are caught by completeness
+          const expected = placeholders(englishTranslations[key]);
+          const actual = placeholders(value);
+          if (expected.join(',') !== actual.join(',')) {
+            mismatched.push(`${key}: expected {${expected.join('}, {')}} got {${actual.join('}, {')}}`);
           }
         }
-
-        if (identicalLocales.length > 10) {
-          identicalCounts[key] = identicalLocales;
-        }
-      }
-
-      const flaggedKeys = Object.keys(identicalCounts);
-      expect(
-        flaggedKeys,
-        `${flaggedKeys.length} keys are identical to English in >10 locales (likely untranslated):\n${flaggedKeys.map(k => `  ${k} (${identicalCounts[k].length} locales): ${identicalCounts[k].slice(0, 5).join(', ')}...`).join('\n')}`
-      ).toEqual([]);
-    });
+        expect(mismatched, `${locale} placeholder mismatches (${keysWithPlaceholders.length} English keys use placeholders):\n  ${mismatched.join('\n  ')}`).toEqual([]);
+      });
+    }
   });
 
   describe('hero.typewriterWords JSON validation', () => {

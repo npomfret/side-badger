@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-set -euo pipefail
-# The remote paths are meant to expand locally before ssh sends them.
+# The remote paths are meant to expand locally before ssh sends them. The directive sits
+# before the first command so it covers the whole file.
 # shellcheck disable=SC2029
+set -euo pipefail
 
 # The box by address, not the site's hostname, so a deploy during a DNS change cannot land on
 # the old box. sidebadger.me moved to the footy-betty box (77.68.112.97) on 2026-10-14.
@@ -26,6 +27,7 @@ scp package.json $SERVER:$REMOTE_DIR/
 scp package-lock.json $SERVER:$REMOTE_DIR/ 2>/dev/null || true
 scp astro.config.mjs $SERVER:$REMOTE_DIR/
 scp tsconfig.json $SERVER:$REMOTE_DIR/
+scp vitest.site.config.ts $SERVER:$REMOTE_DIR/
 
 # Copy source directories
 echo "📦 Copying source files..."

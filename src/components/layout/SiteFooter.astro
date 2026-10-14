@@ -16,7 +16,7 @@ const smallLogoPath = `/images/${logoLocale}/logo-transparent-small.png`;
     <nav class="footer-grid" aria-label={t('a11y.footerNavigation', locale)}>
       <div class="footer-brand">
         <a href={getLocalizedPath('/', locale)} class="logo" aria-label={t('a11y.homeLink', locale)}>
-          <img src={smallLogoPath} alt={t('header.logoText', locale) + ' logo'} height="28" />
+          <img src={smallLogoPath} alt={t('header.logoText', locale) + ' logo'} width="400" height={logoLocale === 'en' ? 126 : 125} />
         </a>
         <p class="text-muted text-sm" set:html={t('footer.tagline', locale)} />
       </div>

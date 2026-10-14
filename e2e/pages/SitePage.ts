@@ -60,10 +60,6 @@ export class SitePage {
     return this.banner.getByRole('button', { name: this.string('nav.menu'), exact: true });
   }
 
-  private get closeMenuButton(): Locator {
-    return this.page.getByRole('button', { name: this.string('nav.closeMenu'), exact: true });
-  }
-
   private get breadcrumb(): Locator {
     return this.page.getByRole('navigation', { name: this.string('a11y.breadcrumb'), exact: true });
   }

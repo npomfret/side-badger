@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { t, getAppUrl, type Locale } from '../i18n';
+import { t, type Locale } from '../i18n';
+import { launchHref } from '../seo/urls';
+import { softwareApplicationNode } from '../seo/jsonld';
 
 interface Props {
   locale: Locale;
@@ -10,26 +12,12 @@ const { locale } = Astro.props;
 ---
 
 <BaseLayout
+  page="home"
   title={t('meta.title', locale)}
   description={t('meta.description', locale)}
   locale={locale}
+  jsonLd={[softwareApplicationNode(locale)]}
 >
-  <Fragment slot="head">
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Side Badger",
-        "applicationCategory": "FinanceApplication",
-        "operatingSystem": "Web",
-        "offers": {
-          "@type": "Offer",
-          "price": "0"
-        }
-      }
-    </script>
-  </Fragment>
-
   <!-- Hero Section -->
   <section class="hero" aria-labelledby="hero-title">
     <div class="container">
@@ -51,7 +39,7 @@ const { locale } = Astro.props;
         </p>
 
         <div class="hero-actions flex gap-md flex-wrap">
-          <a href={getAppUrl(locale)} class="btn btn-primary btn-lg btn-confetti">
+          <a href={launchHref('home', locale, { cta: 'hero' })} rel="nofollow" class="btn btn-primary btn-lg btn-confetti">
             {t('hero.cta', locale)}
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14"></path>
@@ -564,7 +552,7 @@ const { locale } = Astro.props;
       <div class="cta-card glass fade-up">
         <h2 id="cta-title">{t('cta.title', locale)}</h2>
         <p>{t('cta.subtitle', locale)}</p>
-        <a href={getAppUrl(locale)} class="btn btn-primary btn-lg btn-confetti">
+        <a href={launchHref('home', locale, { cta: 'footer-cta' })} rel="nofollow" class="btn btn-primary btn-lg btn-confetti">
           {t('cta.button', locale)}
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M5 12h14"></path>

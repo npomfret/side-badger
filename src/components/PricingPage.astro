@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { t, getAppUrl, type Locale } from '../i18n';
+import { t, type Locale } from '../i18n';
+import { launchHref } from '../seo/urls';
+import { faqPageNode, softwareApplicationId, webPageId, type JsonLdNode } from '../seo/jsonld';
 
 interface Props {
   locale: Locale;
@@ -10,70 +12,29 @@ const { locale } = Astro.props;
 
 const checkIcon = `<svg class="check" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
 const clockIcon = `<svg class="clock" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>`;
+
+const faqItems = [
+  { question: t('pricing.faq.q1.question', locale), answer: t('pricing.faq.q1.answer', locale) },
+  { question: t('pricing.faq.q2.question', locale), answer: t('pricing.faq.q2.answer', locale) },
+  { question: t('pricing.faq.q3.question', locale), answer: t('pricing.faq.q3.answer', locale) },
+  { question: t('pricing.faq.q4.question', locale), answer: t('pricing.faq.q4.answer', locale) },
+  { question: t('pricing.faq.q5.question', locale), answer: t('pricing.faq.q5.answer', locale) },
+  { question: t('pricing.faq.q6.question', locale), answer: t('pricing.faq.q6.answer', locale) },
+];
+const jsonLd: JsonLdNode[] = [
+  // Merged into the base WebPage node: the pricing page is about the app
+  { '@type': 'WebPage', '@id': webPageId('pricing', locale), about: { '@id': softwareApplicationId(locale) } },
+  faqPageNode(faqItems),
+];
 ---
 
 <BaseLayout
+  page="pricing"
   title={t('pricing.meta.title', locale)}
   description={t('pricing.meta.description', locale)}
   locale={locale}
+  jsonLd={jsonLd}
 >
-  <Fragment slot="head">
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": t('pricing.faq.q1.question', locale),
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": t('pricing.faq.q1.answer', locale)
-          }
-        },
-        {
-          "@type": "Question",
-          "name": t('pricing.faq.q2.question', locale),
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": t('pricing.faq.q2.answer', locale)
-          }
-        },
-        {
-          "@type": "Question",
-          "name": t('pricing.faq.q3.question', locale),
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": t('pricing.faq.q3.answer', locale)
-          }
-        },
-        {
-          "@type": "Question",
-          "name": t('pricing.faq.q4.question', locale),
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": t('pricing.faq.q4.answer', locale)
-          }
-        },
-        {
-          "@type": "Question",
-          "name": t('pricing.faq.q5.question', locale),
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": t('pricing.faq.q5.answer', locale)
-          }
-        },
-        {
-          "@type": "Question",
-          "name": t('pricing.faq.q6.question', locale),
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": t('pricing.faq.q6.answer', locale)
-          }
-        }
-      ]
-    })} />
-  </Fragment>
-
   <section class="pricing-hero" aria-labelledby="pricing-title">
     <div class="container text-center">
       <div class="fade-up">
@@ -106,7 +67,7 @@ const clockIcon = `<svg class="clock" xmlns="http://www.w3.org/2000/svg" width="
             <li><Fragment set:html={checkIcon} />{t('pricing.free.feature6', locale)}</li>
           </ul>
 
-          <a href={getAppUrl(locale)} class="btn btn-primary btn-lg btn-confetti btn-full">
+          <a href={launchHref('pricing', locale, { cta: 'plan-free' })} rel="nofollow" class="btn btn-primary btn-lg btn-confetti btn-full">
             {t('pricing.free.cta', locale)}
           </a>
         </article>

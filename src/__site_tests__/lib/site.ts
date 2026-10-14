@@ -7,10 +7,12 @@
 import * as cheerio from 'cheerio';
 import type { CheerioAPI } from 'cheerio';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
-import { dirname, join, relative, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { join, relative, resolve } from 'node:path';
 import { localeConfig, type Locale } from '../../i18n';
 import { pageForPath } from '../../site/routes';
+import { isIndexable as isIndexableByRegistry, reviewStatus } from '../../seo/indexability';
+
+export { overrideLockPages } from '../../seo/indexability';
 import type { PageDef } from '../../site/pages';
 
 export const SITE_ORIGIN = 'https://sidebadger.me';
@@ -116,49 +118,23 @@ export function isPseudoPage(page: SitePage): boolean {
   return !!page.locale && (localeConfig[page.locale] as { pseudo?: true }).pseudo === true;
 }
 
-const INDEXABLE_STATUSES = new Set(['reviewed', 'legacy']);
-const locksDir = resolve(dirname(fileURLToPath(import.meta.url)), '../../i18n/locks');
-const lockPages = new Map<string, Record<string, string>>();
-
-/** `pages` from `src/i18n/locks/<locale>.json`: the review status of key-built pages (3.6) */
-function reviewStatus(pageId: string, locale: string): string | undefined {
-  if (!lockPages.has(locale)) {
-    const file = join(locksDir, `${locale}.json`);
-    const lock = existsSync(file) ? (JSON.parse(readFileSync(file, 'utf8')) as { pages?: Record<string, string> }) : {};
-    lockPages.set(locale, lock.pages ?? {});
-  }
-  return lockPages.get(locale)![pageId];
-}
-
 /**
- * Whether D8 (2.6) makes this page indexable, decided from the registry and the locks, never
- * from what the page itself says, so a build that wrongly marks pages `noindex` cannot pass.
- * `undefined` means the file maps to no registry page (rule 1 reports those).
- *
- * This mirrors `isIndexable(pageId, locale)` in `src/seo/indexability.ts` until P12 adds that
- * module; then this function should call it instead.
+ * Whether D8 (2.6) makes this page indexable, decided by `isIndexable(pageId, locale)` from
+ * `src/seo/indexability.ts` (the module that also drives canonical, robots, the sitemap and
+ * hreflang), never from what the page itself says, so a build that wrongly marks pages
+ * `noindex` cannot pass. `undefined` means the file maps to no registry page (rule 1 reports it).
  */
 export function indexability(page: SitePage): { indexable: boolean; reason: string } | undefined {
   if (page.is404) return { indexable: false, reason: 'the 404 page' };
   if (!page.page || !page.locale) return undefined;
   if (isPseudoPage(page)) return { indexable: false, reason: 'a pseudo-locale page' };
-  if (!page.page.published) return { indexable: false, reason: 'an unpublished page' };
   if (page.$('[data-unpublished]').length > 0) return { indexable: false, reason: 'a page marked data-unpublished' };
+  const indexable = isIndexableByRegistry(page.page.id, page.locale);
   if (page.page.indexing === 'english-only' && page.locale !== 'en') {
-    return { indexable: false, reason: 'a localized legal page' };
-  }
-  if (page.locale === 'en') return { indexable: true, reason: 'English (always reviewed)' };
-  if (page.page.content) {
-    // Collection pages take review.status from their content entry, which only P12's
-    // indexability module reads. Fail loudly rather than guess.
-    throw new Error(
-      `${page.urlPath}: review status of content-collection pages needs src/seo/indexability.ts (P12)`
-    );
+    return { indexable, reason: 'a localized legal page' };
   }
   const status = reviewStatus(page.page.id, page.locale);
-  return INDEXABLE_STATUSES.has(status ?? '')
-    ? { indexable: true, reason: `review status "${status}"` }
-    : { indexable: false, reason: `review status "${status ?? 'none'}"` };
+  return { indexable, reason: page.locale === 'en' ? 'English (always reviewed)' : `review status "${status ?? 'none'}"` };
 }
 
 /** Indexable under D8. A file outside the registry falls back to what it declares. */
@@ -203,10 +179,4 @@ export function visibleTextNodes($: CheerioAPI): { text: string; inEnglish: bool
 
 export function visibleText($: CheerioAPI): string {
   return visibleTextNodes($).map(node => node.text).join(' ');
-}
-
-/** Fixture tests only: replace a locale's lock `pages` (pass undefined to reload from disk) */
-export function overrideLockPages(locale: string, pages: Record<string, string> | undefined): void {
-  if (pages) lockPages.set(locale, pages);
-  else lockPages.delete(locale);
 }

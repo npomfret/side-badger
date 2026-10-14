@@ -8,7 +8,6 @@ import { t, isPseudoLocale, localeConfig, type Locale } from '../i18n';
 import { pageForPath } from '../site/routes';
 import type { PageId } from '../site/pages';
 import type { JsonLdNode } from '../seo/jsonld';
-import type { OgCardId } from '../components/layout/SeoHead.astro';
 
 interface Props {
   /** Registry page id, or 'not-found'. Taken from the URL when a route does not pass it. */
@@ -16,7 +15,7 @@ interface Props {
   title: string;
   description?: string;
   locale?: Locale;
-  ogCard?: OgCardId;
+  ogCard?: 'default';
   /** Page-specific JSON-LD nodes; SeoHead adds the base nodes and merges by @id */
   jsonLd?: JsonLdNode[];
 }
@@ -75,7 +74,7 @@ const preloadLatin = fontScript === 'latin';
     {page !== 'not-found' && <LanguageDetection currentLocale={locale} />}
 
     <slot name="header">
-      <SiteHeader locale={locale} currentPath={currentPath} pageId={page} />
+      <SiteHeader locale={locale} currentPath={page === 'not-found' ? '/' : currentPath} pageId={page} />
     </slot>
 
     <main id="main-content">

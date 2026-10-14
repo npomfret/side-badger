@@ -179,6 +179,6 @@ export function articleNode(options: {
 export function serializeJsonLd(nodes: readonly JsonLdNode[]): string {
   return JSON.stringify({ '@context': 'https://schema.org', '@graph': nodes })
     .replace(/</g, '\\u003c')
-    .replace(/ /g, '\\u2028')
-    .replace(/ /g, '\\u2029');
+    .replace(/\u2028/g, '\\u2028')
+    .replace(/\u2029/g, '\\u2029');
 }

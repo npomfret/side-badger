@@ -14,14 +14,12 @@ import { isIndexable } from '../../seo/indexability';
 import { alternatesFor } from '../../seo/alternates';
 import { buildGraph, serializeJsonLd, type JsonLdNode } from '../../seo/jsonld';
 
-export type OgCardId = 'default';
-
 interface Props {
   page: PageId | 'not-found';
   locale: Locale;
   title: string;
   description: string;
-  ogCard?: OgCardId;
+  ogCard?: 'default';
   jsonLd?: JsonLdNode[];
 }
 

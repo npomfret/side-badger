@@ -39,7 +39,18 @@ const locksByLocale: Record<string, Record<string, ReviewStatus>> = Object.fromE
  */
 export function reviewStatus(pageId: string, locale: Locale): ReviewStatus | undefined {
   if (locale === 'en') return 'reviewed';
-  return locksByLocale[locale]?.[pageId];
+  return (overrides.get(locale) ?? locksByLocale[locale])?.[pageId];
+}
+
+const overrides = new Map<string, Record<string, ReviewStatus>>();
+
+/** Fixture tests only: replace a locale's lock `pages` (pass undefined to restore the real ones). */
+export function overrideLockPages(
+  locale: string,
+  pages: Record<string, ReviewStatus> | undefined
+): void {
+  if (pages) overrides.set(locale, pages);
+  else overrides.delete(locale);
 }
 
 export function isIndexable(pageId: string, locale: Locale): boolean {

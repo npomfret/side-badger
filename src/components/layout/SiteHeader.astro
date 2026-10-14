@@ -1,13 +1,18 @@
 ---
 import LanguageSwitcher from '../LanguageSwitcher.astro';
-import { t, logoLocales, getLocalizedPath, getAppUrl, type Locale } from '../../i18n';
+import { t, logoLocales, getLocalizedPath, type Locale } from '../../i18n';
+import { launchHref } from '../../seo/urls';
+import { pageForPath } from '../../site/routes';
 
 interface Props {
   locale?: Locale;
   currentPath: string;
+  /** The page the header is on, for the launch counter. Taken from the path when omitted. */
+  pageId?: string;
 }
 
-const { locale = 'en', currentPath } = Astro.props;
+const { locale = 'en', currentPath, pageId: pageIdProp } = Astro.props;
+const pageId = pageIdProp ?? pageForPath(currentPath)?.page.id ?? 'not-found';
 
 const logoLocale = logoLocales.includes(locale) ? locale : 'en';
 const smallLogoPath = `/images/${logoLocale}/logo-transparent-small.png`;
@@ -27,7 +32,7 @@ const smallLogoPath = `/images/${logoLocale}/logo-transparent-small.png`;
         <li>
           <LanguageSwitcher currentLocale={locale} currentPath={currentPath} />
         </li>
-        <li><a href={getAppUrl(locale)} class="btn btn-primary btn-launch">
+        <li><a href={launchHref(pageId, locale, { cta: 'header' })} rel="nofollow" class="btn btn-primary btn-launch">
           <span class="btn-launch-text">{t('header.launchApp', locale)}</span>
           <svg class="btn-launch-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { t, locales, localeAliasMap, type Locale } from '../i18n';
+import { t, locales, localeAliasMap, localeConfig } from '../i18n';
 
 const locale = 'en';
 
@@ -18,6 +18,11 @@ for (const [alias, baseLoc] of Object.entries(localeAliasMap)) {
   translations[alias] = translations[baseLoc];
 }
 
+// Valid language tags for <html lang> (ph is fil, zh is zh-Hans)
+const htmlLangs: Record<string, string> = {};
+for (const loc of locales) htmlLangs[loc] = localeConfig[loc].htmlLang;
+for (const [alias, target] of Object.entries(localeAliasMap)) htmlLangs[alias] = htmlLangs[target];
+
 // Generate locale paths
 const localePaths: Record<string, string> = { en: '/' };
 for (const loc of locales) {
@@ -25,13 +30,14 @@ for (const loc of locales) {
     localePaths[loc] = `/${loc}/`;
   }
 }
-// Add aliases
-for (const alias of Object.keys(localeAliasMap)) {
-  localePaths[alias] = `/${alias}/`;
+// Aliases are not pages (D3): they link to their target locale's slash-form path
+for (const [alias, target] of Object.entries(localeAliasMap)) {
+  localePaths[alias] = localePaths[target];
 }
 ---
 
 <BaseLayout
+  page="not-found"
   title={t('notFound.meta.title', locale)}
   description={t('notFound.meta.description', locale)}
   locale={locale}
@@ -62,7 +68,7 @@ for (const alias of Object.keys(localeAliasMap)) {
     </div>
   </section>
 
-  <script define:vars={{ translations, localePaths }}>
+  <script define:vars={{ translations, localePaths, htmlLangs }}>
     const LOCALE_KEY = 'preferred-locale';
     let targetLocale = localStorage.getItem(LOCALE_KEY);
 
@@ -94,7 +100,7 @@ for (const alias of Object.keys(localeAliasMap)) {
       }
 
       // Update html lang attribute
-      document.documentElement.lang = targetLocale;
+      document.documentElement.lang = htmlLangs[targetLocale] || targetLocale;
     }
   </script>
 </BaseLayout>

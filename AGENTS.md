@@ -72,7 +72,8 @@ All in `src/pages/` (file-based routing):
 ## Docker
 
 ```bash
-npm run docker:start   # Dev with hot-reload (port 4321)
+npm run dev            # Restart the dev container, hot-reload (port 4321)
+npm run dev:host       # Plain `astro dev` on the host, no Docker
 npm run docker:stop
 npm run docker:logs
 ```

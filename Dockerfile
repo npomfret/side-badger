@@ -10,7 +10,8 @@ ARG PUBLIC_DOMAIN=sidebadger.me
 ENV PUBLIC_DOMAIN=${PUBLIC_DOMAIN}
 
 EXPOSE 4321
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+# dev:host, not dev: `npm run dev` restarts this container from the host
+CMD ["npm", "run", "dev:host", "--", "--host", "0.0.0.0"]
 
 # Build stage
 FROM node:22-alpine AS builder

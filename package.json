@@ -3,7 +3,8 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "npm run docker:restart",
+    "dev:host": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "test": "vitest",

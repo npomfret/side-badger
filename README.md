@@ -6,7 +6,7 @@ A customizable marketing website for white-label expense splitting applications.
 
 ```bash
 # Requires Docker
-npm run docker:start    # Start dev server at http://localhost:4321
+npm run dev             # (Re)start the dev container at http://localhost:4321, hot-reloading
 npm run docker:stop     # Stop
 npm run docker:logs     # View logs
 ```

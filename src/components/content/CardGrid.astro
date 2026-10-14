@@ -1,28 +1,36 @@
 ---
 /**
  * A grid of link cards: a hub's child pages, a feature's use cases, a use case's features. The
- * card title is the link; the description is the page's `meta.description`. `titleLevel` is
- * `h3` under an `h2` section.
+ * card title (an `h3` under the section's `h2`) is the link; the description is the page's
+ * `meta.description`. A card whose page covers a beta feature carries the beta label.
  */
+import type { Locale } from '../../i18n';
+import BetaLabel from './BetaLabel.astro';
+
 interface Card {
   href: string;
   title: string;
   description?: string;
+  /** The card's page covers a beta feature (beta.ts) */
+  beta?: boolean;
 }
 
 interface Props {
   cards: readonly Card[];
-  titleLevel?: 'h3';
+  locale: Locale;
 }
 
-const { cards } = Astro.props;
+const { cards, locale } = Astro.props;
 ---
 
 {cards.length > 0 && (
   <ul class="card-grid" role="list">
     {cards.map(card => (
       <li class="card glass">
-        <h3 class="card__title"><a href={card.href}>{card.title}</a></h3>
+        <h3 class="card__title">
+          <a href={card.href}>{card.title}</a>
+          {card.beta && <BetaLabel locale={locale} />}
+        </h3>
         {card.description && <p class="card__description">{card.description}</p>}
       </li>
     ))}

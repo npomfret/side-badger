@@ -3,11 +3,9 @@ import path from 'node:path';
 import { load } from 'js-yaml';
 import { pseudoizeContent } from '../../src/components/content/pseudo-content';
 import { moneyFormatter } from '../../src/components/content/money';
-import { PENDING_STRINGS, type PendingStringKey as PendingKey } from '../../src/components/content/pending-strings';
 import type { WorkedExampleData } from '../../src/content/schemas';
 import { computeExample, type Ledger } from '../../src/lib/settle';
-import en from '../../src/i18n/en';
-import { pseudoText, type PseudoLocale } from '../../src/i18n/pseudo';
+import type { PseudoLocale } from '../../src/i18n/pseudo';
 import { text, type ShellLocale, type StringKey } from './strings';
 
 /** The four layouts, each shown by one preview page (src/site/preview-pages.ts). */
@@ -59,11 +57,9 @@ export function fixtureFor(kind: LayoutKind, locale: ShellLocale): Fixture {
   return locale === 'en' ? raw : pseudoizeContent(raw, locale as PseudoLocale);
 }
 
-/** A UI string in a locale: from en.ts, or the English fallback P24 ships until it is added there. */
-export function uiText(locale: ShellLocale, key: StringKey | PendingKey, params: Record<string, string> = {}): string {
-  const english = key in en ? text(locale, key as StringKey) : PENDING_STRINGS[key as PendingKey];
-  const localized = key in en || locale === 'en' ? english : pseudoText(english, locale as PseudoLocale);
-  return localized.replace(/\{(\w+)\}/g, (_m, name: string) => params[name]);
+/** A UI string in a locale with its `{placeholders}` filled. */
+export function uiText(locale: ShellLocale, key: StringKey, params: Record<string, string> = {}): string {
+  return text(locale, key).replace(/\{(\w+)\}/g, (_m, name: string) => params[name]);
 }
 
 export const INTL: Record<ShellLocale, string> = {

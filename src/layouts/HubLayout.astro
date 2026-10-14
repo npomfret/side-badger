@@ -52,7 +52,7 @@ const others = await relatedCards(pageId, locale, other => other.parent !== page
 
     {cards.length > 0 && (
       <ContentSection heading={data.cardsHeading} id="cards">
-        <CardGrid cards={cards} />
+        <CardGrid cards={cards} locale={locale} />
       </ContentSection>
     )}
 

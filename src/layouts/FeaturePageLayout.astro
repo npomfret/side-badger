@@ -21,7 +21,7 @@ import RelatedPages from '../components/content/RelatedPages.astro';
 import RichText from '../components/content/RichText.astro';
 import WorkedExample from '../components/content/WorkedExample.astro';
 import WorkflowSteps from '../components/content/WorkflowSteps.astro';
-import { dependsOnBeta } from '../components/content/beta';
+import { isBetaPage } from '../components/content/beta';
 import { faqNode, webPageNode } from '../components/content/layout-jsonld';
 import { relatedCards } from '../components/content/page-content';
 import type { FeaturePageData } from '../content/schemas';
@@ -56,7 +56,7 @@ const others = await relatedCards(pageId, locale, other => other.type !== 'use-c
       lead={data.lead}
       pageId={pageId}
       locale={locale}
-      beta={dependsOnBeta(pageId)}
+      beta={isBetaPage(pageId)}
       shot={heroShot?.shot ? { id: heroShot.shot, alt: heroShot.shotAlt ?? '' } : undefined}
     />
 
@@ -89,7 +89,7 @@ const others = await relatedCards(pageId, locale, other => other.type !== 'use-c
 
     {useCases.length > 0 && (
       <ContentSection heading={data.useCasesHeading} id="use-cases">
-        <CardGrid cards={useCases} />
+        <CardGrid cards={useCases} locale={locale} />
       </ContentSection>
     )}
 

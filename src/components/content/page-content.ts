@@ -20,6 +20,7 @@ import { canonicalFor, localizedPath } from '../../seo/urls';
 import { allPages, builtPages, getPage, requirePage, type PageDef, type PageType } from '../../site/pages';
 import { pathsFor, pathsForType, type StaticPath } from '../../site/routes';
 import { pageLabel } from '../nav/navigation';
+import { isBetaPage } from './beta';
 import { pseudoizeContent } from './pseudo-content';
 
 export const PREVIEW_SLUG = '__preview__';
@@ -77,10 +78,17 @@ export interface PageCard {
   url: string;
   title: string;
   description?: string;
+  /** The page covers a beta feature: the link shows the beta label (see beta.ts) */
+  beta: boolean;
 }
 
 async function cardFor(page: PageDef, locale: Locale): Promise<PageCard> {
-  const base = { id: page.id, href: localizedPath(page.id, locale), url: canonicalFor(page.id, locale) };
+  const base = {
+    id: page.id,
+    href: localizedPath(page.id, locale),
+    url: canonicalFor(page.id, locale),
+    beta: isBetaPage(page.id),
+  };
   if (!page.content) return { ...base, title: await pageTitle(page, locale) };
   const data = await loadPageContent<{ h1: string; meta: { description: string } }>(page.id, locale);
   return { ...base, title: data.h1, description: data.meta.description };

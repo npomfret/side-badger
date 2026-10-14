@@ -1,21 +1,30 @@
 /**
- * Whether a page depicts a feature that is in beta (the registry's `status`), so its layout shows
- * the `feature.betaLabel` label (restructure 3.7: "a beta feature renders a beta label").
- * The registry module (`src/data/features.ts`, P22) is read through a glob, so this works before
- * that file exists: with no registry nothing is in beta.
+ * Where the `feature.betaLabel` label goes (restructure 3.7: "a beta feature renders a beta
+ * label"; site plan: beta means "works but is labelled as unfinished in the app").
+ *
+ * The label must not overstate. A page lists many features it mentions (`PageDef.features`), and
+ * one beta feature among them does not make the page beta. The registry ties each feature to the
+ * one page that covers it (`FeatureRecord.homePage`). When that page is a feature page, the page
+ * is about the feature, so the label goes:
+ *
+ * - beside the feature page's `h1`;
+ * - beside every card or related link that points to that feature page, so a use case or hub
+ *   that shows the feature carries the label next to it, not on itself.
+ *
+ * A beta feature homed on a page that covers many features (how it works, pricing) gets no
+ * page-level label: content entries do not tie a step or an option to a feature id, so labelling
+ * one step needs a schema field first.
  */
+import { features as registry } from '../../data/features';
 import type { FeatureRecord } from '../../data/types';
-import { requirePage } from '../../site/pages';
+import { getPage } from '../../site/pages';
 
-const registry = import.meta.glob<Record<string, unknown>>('/src/data/features.ts', { eager: true });
-
-function features(): readonly FeatureRecord[] {
-  const mod = Object.values(registry)[0];
-  const list = mod && (mod.features ?? Object.values(mod).find(Array.isArray));
-  return Array.isArray(list) ? (list as FeatureRecord[]) : [];
+/** The beta features whose home is `pageId`. */
+export function betaFeaturesOf(pageId: string, features: readonly FeatureRecord[] = registry): FeatureRecord[] {
+  return features.filter(feature => feature.homePage === pageId && feature.status === 'beta');
 }
 
-export function dependsOnBeta(pageId: string): boolean {
-  const ids = new Set(requirePage(pageId).features ?? []);
-  return features().some(feature => ids.has(feature.id) && feature.status === 'beta');
+/** Whether `pageId` is a feature page about a beta feature, so it and the links to it carry the label. */
+export function isBetaPage(pageId: string, features: readonly FeatureRecord[] = registry): boolean {
+  return getPage(pageId)?.type === 'feature' && betaFeaturesOf(pageId, features).length > 0;
 }

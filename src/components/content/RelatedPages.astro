@@ -5,10 +5,11 @@
  * With a `heading` it is its own section; with none, the shared "Related pages" heading.
  */
 import { t, type Locale } from '../../i18n';
+import BetaLabel from './BetaLabel.astro';
 import ContentSection from './ContentSection.astro';
 
 interface Props {
-  links: readonly { href: string; title: string }[];
+  links: readonly { href: string; title: string; beta?: boolean }[];
   locale: Locale;
   heading?: string;
   id?: string;
@@ -20,7 +21,12 @@ const { links, locale, heading = t('related.heading', locale), id = 'related' } 
 {links.length > 0 && (
   <ContentSection heading={heading} id={id}>
     <ul class="related-pages">
-      {links.map(link => <li><a href={link.href}>{link.title}</a></li>)}
+      {links.map(link => (
+        <li>
+          <a href={link.href}>{link.title}</a>
+          {link.beta && <BetaLabel locale={locale} />}
+        </li>
+      ))}
     </ul>
   </ContentSection>
 )}
@@ -37,5 +43,6 @@ const { links, locale, heading = t('related.heading', locale), id = 'related' } 
 
   .related-pages a {
     overflow-wrap: anywhere;
+    color: var(--accent-ink);
   }
 </style>

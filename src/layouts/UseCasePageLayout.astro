@@ -14,7 +14,6 @@ import PageHero from '../components/content/PageHero.astro';
 import RelatedPages from '../components/content/RelatedPages.astro';
 import RichText from '../components/content/RichText.astro';
 import WorkedExample from '../components/content/WorkedExample.astro';
-import { dependsOnBeta } from '../components/content/beta';
 import { faqNode, webPageNode } from '../components/content/layout-jsonld';
 import { relatedCards } from '../components/content/page-content';
 import type { UseCasePageData } from '../content/schemas';
@@ -43,7 +42,7 @@ const others = await relatedCards(pageId, locale, other => other.type !== 'featu
   jsonLd={[webPageNode(pageId, locale), ...faqNode(data.faq)]}
 >
   <article class="content-page" data-page-type="use-case" data-unpublished={page.published ? undefined : ''}>
-    <PageHero h1={data.h1} lead={data.lead} pageId={pageId} locale={locale} beta={dependsOnBeta(pageId)} />
+    <PageHero h1={data.h1} lead={data.lead} pageId={pageId} locale={locale} />
 
     <ContentSection heading={data.scenario.heading} id="scenario">
       <RichText as="p" text={data.scenario.body} locale={locale} />
@@ -55,7 +54,7 @@ const others = await relatedCards(pageId, locale, other => other.type !== 'featu
 
     {features.length > 0 && (
       <ContentSection heading={data.featuresHeading} id="features">
-        <CardGrid cards={features} />
+        <CardGrid cards={features} locale={locale} />
       </ContentSection>
     )}
 

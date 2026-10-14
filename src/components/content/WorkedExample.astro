@@ -13,9 +13,8 @@
  */
 import { computeExample, type Ledger } from '../../lib/settle';
 import type { WorkedExampleData } from '../../content/schemas';
-import { localeConfig, t, type Locale } from '../../i18n';
+import { localeConfig, t, tf, type Locale, type TranslationKey } from '../../i18n';
 import { moneyFormatter } from './money';
-import { uiString } from './ui-strings';
 
 interface Props {
   example: WorkedExampleData;
@@ -29,6 +28,7 @@ const { heading, ...data } = example;
 
 const result = computeExample(data);
 const money = moneyFormatter(localeConfig[locale].intlCode);
+const fill = (key: TranslationKey, params: Record<string, string | number>) => tf(key, params, locale);
 const names = Object.fromEntries(example.people.map(person => [person.id, person.name]));
 const converted = example.conversion !== undefined;
 
@@ -50,12 +50,12 @@ const expenses = example.expenses.map((expense, index) => {
   const currency = expense.currency ?? example.currency;
   const participants = Object.entries(result.shares[index]).filter(([, minor]) => minor > 0);
   return {
-    paid: uiString('example.paid', locale, {
+    paid: fill('example.paid', {
       payer: names[expense.payer],
       amount: money.major(expense.amount, currency),
       item: expense.label,
     }),
-    split: uiString('example.split', locale, {
+    split: fill('example.split', {
       method: splitWord[expense.split.method],
       count: participants.length,
     }),
@@ -70,7 +70,7 @@ const expenses = example.expenses.map((expense, index) => {
 });
 
 const rates = Object.entries(example.conversion?.rates ?? {}).map(([from, rate]) => ({
-  text: uiString('example.illustrativeRate', locale, {
+  text: fill('example.illustrativeRate', {
     from: money.major(1, from),
     to: money.major(rate, example.currency),
   }),
@@ -84,7 +84,7 @@ function view(ledger: Ledger) {
       amount: money.minor(minor, ledger.currency, { signed: true }),
     })),
     transfers: ledger.transfers.map(transfer =>
-      uiString('example.transfer', locale, {
+      fill('example.transfer', {
         from: names[transfer.from],
         to: names[transfer.to],
         amount: money.minor(transfer.minor, ledger.currency),
@@ -94,7 +94,7 @@ function view(ledger: Ledger) {
     pairwise:
       ledger.pairwise.length > ledger.transfers.length
         ? ledger.pairwise.map(transfer =>
-            uiString('example.transfer', locale, {
+            fill('example.transfer', {
               from: names[transfer.from],
               to: names[transfer.to],
               amount: money.minor(transfer.minor, ledger.currency),
@@ -108,12 +108,12 @@ const views = converted
   ? [
       {
         key: 'separate',
-        title: uiString('example.separate', locale),
+        title: t('example.separate', locale),
         ledgers: result.separate.map(view),
       },
       {
         key: 'converted',
-        title: uiString('example.converted', locale, { currency: example.currency }),
+        title: fill('example.converted', { currency: example.currency }),
         ledgers: [view(result)],
       },
     ]
@@ -126,9 +126,9 @@ const headingId = `${id}-heading`;
   <div class="container">
     {heading
       ? <h2 id={headingId}>{heading}</h2>
-      : <h2 id={headingId} class="sr-only">{uiString('example.expenses', locale)}</h2>}
+      : <h2 id={headingId} class="sr-only">{t('example.expenses', locale)}</h2>}
     <div class="we-card glass">
-      <h3>{uiString('example.expenses', locale)}</h3>
+      <h3>{t('example.expenses', locale)}</h3>
       <ul class="we-expenses" role="list">
         {expenses.map(expense => (
           <li>
@@ -155,14 +155,17 @@ const headingId = `${id}-heading`;
         <div class="we-view" data-view={v.key}>
           {v.title && <h3 class="we-view-title" id={`${id}-${v.key}`}>{v.title}</h3>}
           {v.ledgers.map(ledger => {
-            const prefix = [v.title ? `${id}-${v.key}` : '', showCurrencyNames && v.key === 'separate' ? `${id}-${v.key}-${ledger.currency}` : ''].filter(Boolean).join(' ');
+            // A separate ledger is headed by its currency, so its column headings sit one level lower
+            const named = showCurrencyNames && v.key === 'separate';
+            const Sub = named ? 'h5' : 'h4';
+            const prefix = [v.title ? `${id}-${v.key}` : '', named ? `${id}-${v.key}-${ledger.currency}` : ''].filter(Boolean).join(' ');
             const labelled = (own: string) => [prefix, `${id}-${v.key}-${ledger.currency}-${own}`].filter(Boolean).join(' ');
             return (
             <div class="we-ledger">
-              {showCurrencyNames && v.key === 'separate' && <h4 class="we-currency" id={`${id}-${v.key}-${ledger.currency}`}>{currencyName(ledger.currency)}</h4>}
+              {named && <h4 class="we-currency" id={`${id}-${v.key}-${ledger.currency}`}>{currencyName(ledger.currency)}</h4>}
               <div class="we-columns">
                 <div>
-                  <h4 id={`${id}-${v.key}-${ledger.currency}-balances`}>{uiString('example.balances', locale)}</h4>
+                  <Sub id={`${id}-${v.key}-${ledger.currency}-balances`}>{t('example.balances', locale)}</Sub>
                   <dl class="we-balances">
                     {ledger.balances.map(balance => (
                       <div>
@@ -174,12 +177,12 @@ const headingId = `${id}-heading`;
                 </div>
                 {ledger.pairwise.length > 0 && (
                   <div class="we-before">
-                    <h4 id={`${id}-${v.key}-${ledger.currency}-pairwise`}>{uiString('example.pairwise', locale)}</h4>
+                    <Sub id={`${id}-${v.key}-${ledger.currency}-pairwise`}>{t('example.pairwise', locale)}</Sub>
                     <ol aria-labelledby={labelled('pairwise')}>{ledger.pairwise.map(line => <li>{line}</li>)}</ol>
                   </div>
                 )}
                 <div class="we-after">
-                  <h4 id={`${id}-${v.key}-${ledger.currency}-transfers`}>{t('example.transfers', locale)}</h4>
+                  <Sub id={`${id}-${v.key}-${ledger.currency}-transfers`}>{t('example.transfers', locale)}</Sub>
                   {ledger.transfers.length > 0
                     ? <ol aria-labelledby={labelled('transfers')}>{ledger.transfers.map(line => <li>{line}</li>)}</ol>
                     : null}
@@ -191,7 +194,7 @@ const headingId = `${id}-heading`;
         </div>
       ))}
 
-      <p class="we-hint">{uiString('example.balanceHint', locale)}</p>
+      <p class="we-hint">{t('example.balanceHint', locale)}</p>
       <p class="we-note">{t('example.note', locale)}</p>
     </div>
   </div>
@@ -202,12 +205,17 @@ const headingId = `${id}-heading`;
     padding-block: var(--space-2xl);
   }
 
+  /* Same size and spacing as every other section heading (ContentSection) */
   .worked-example h2 {
-    margin-block-end: var(--space-lg);
+    margin-block: 0 var(--space-lg);
+    font-size: var(--text-3xl);
+    line-height: var(--heading-line-height);
+    overflow-wrap: anywhere;
   }
 
   .we-card {
     padding: var(--space-xl);
+    container-type: inline-size;
   }
 
   .we-card h3 {
@@ -215,7 +223,8 @@ const headingId = `${id}-heading`;
     margin-block: 0 var(--space-md);
   }
 
-  .we-card h4 {
+  .we-card h4,
+  .we-card h5 {
     font-size: var(--text-base);
     margin-block: 0 var(--space-sm);
     color: var(--text-heading);
@@ -288,10 +297,29 @@ const headingId = `${id}-heading`;
     margin-block-start: var(--space-lg);
   }
 
+  /*
+   * Balances, then the direct payments (when shown), then the suggested ones. On a wide card the
+   * three keep fixed columns, so the ledgers of a conversion example line up with each other
+   * whether or not a ledger has a "before" list.
+   */
   .we-columns {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
     gap: var(--space-lg);
+  }
+
+  @container (min-width: 40rem) {
+    .we-columns {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .we-after {
+      grid-column: 3;
+    }
+  }
+
+  .we-card .we-currency {
+    font-size: var(--text-lg);
+    margin-block-end: var(--space-md);
   }
 
   .we-balances {

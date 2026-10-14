@@ -72,13 +72,18 @@ describe('rule 1: every HTML file maps to a registry page and locale', () => {
   });
 
   describe('English-first mode', () => {
-    const saved = process.env.I18N_MODE;
+    const saved = { mode: process.env.I18N_MODE, preview: process.env.PREVIEW_UNPUBLISHED };
     afterEach(() => {
-      if (saved === undefined) delete process.env.I18N_MODE;
-      else process.env.I18N_MODE = saved;
+      if (saved.mode === undefined) delete process.env.I18N_MODE;
+      else process.env.I18N_MODE = saved.mode;
+      if (saved.preview === undefined) delete process.env.PREVIEW_UNPUBLISHED;
+      else process.env.PREVIEW_UNPUBLISHED = saved.preview;
     });
 
     it('expects a subset of what strict mode expects', () => {
+      // Over the publishable registry: strict mode refuses (throws on) an unpublished page that
+      // has English but not every translation, so a preview build is English-first only
+      delete process.env.PREVIEW_UNPUBLISHED;
       process.env.I18N_MODE = 'strict';
       const strict = expectedHtmlFiles();
       process.env.I18N_MODE = 'english-first';

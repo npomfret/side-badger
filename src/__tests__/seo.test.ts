@@ -51,7 +51,7 @@ describe('isIndexable (D8)', () => {
     expect(isIndexable('nope', 'en')).toBe(false);
   });
 
-  it('refuses to guess the status of a published content-collection page outside English', async () => {
+  it('reads a published content-collection page\'s status from its entry, not the lock file', async () => {
     vi.resetModules();
     vi.doMock('../site/pages', async importOriginal => {
       const actual = await importOriginal<typeof import('../site/pages')>();
@@ -67,7 +67,21 @@ describe('isIndexable (D8)', () => {
     });
     const fresh = await import('../seo/indexability');
     expect(fresh.isIndexable('feature/x', 'en')).toBe(true);
-    expect(() => fresh.isIndexable('feature/x', 'fr')).toThrow(/review\.status/);
+    // No entry for the locale: not indexable
+    expect(fresh.isIndexable('feature/x', 'fr')).toBe(false);
+    for (const [status, indexable] of [
+      ['reviewed', true],
+      ['legacy', true],
+      ['machine', false],
+      ['checked', false],
+    ] as const) {
+      fresh.overrideEntryReview('feature/x', 'fr', status);
+      expect(fresh.isIndexable('feature/x', 'fr'), status).toBe(indexable);
+    }
+    // The lock file's `pages` is ignored for content pages
+    fresh.overrideEntryReview('feature/x', 'fr', 'machine');
+    fresh.overrideLockPages('fr', { 'feature/x': 'reviewed' });
+    expect(fresh.isIndexable('feature/x', 'fr')).toBe(false);
     vi.doUnmock('../site/pages');
     vi.resetModules();
   });

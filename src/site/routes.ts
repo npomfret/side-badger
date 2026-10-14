@@ -29,7 +29,7 @@ const CONTENT_DIRS: Record<NonNullable<PageDef['content']>['collection'], string
 };
 
 // Only the file names matter, so the modules are never loaded
-const contentFiles = import.meta.glob('/src/content/**/*.yaml');
+const contentFiles = import.meta.glob('/src/content/**/*.yaml', { query: '?url' });
 
 /** The content file a page needs in a locale, or undefined for a page with no content entry. */
 export function contentFileFor(page: PageDef, locale: Locale): string | undefined {

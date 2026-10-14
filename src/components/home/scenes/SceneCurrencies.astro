@@ -1,28 +1,29 @@
 ---
 /**
- * Scene 4, currencies (`currencies`). PLACEHOLDER from H5, replaced by H7.
+ * Scene 4, currencies (`currencies`).
  *
- * Hooks for H7:
- *   - <ScrollScene id="currencies" titleId="currencies-title" runway={{ desktop: 150, phone: 'entry' }}
- *     stages={[35, 75]} staticStage={2}>
- *     Stages: 0 cards in their own currencies, 1 the stamp tape, 2 converted ledger.
- *   - Slot `copy`: the h2 (#currencies-title) and body, plus the example-rates note.
- *   - Slot `visual`: the illustrated stage; `div[data-hook="currencies-visual"]` marks where it goes.
- *   - Slot `link`: <SceneLink to="currencies" locale={locale} />, which resolves through data/links.ts.
- *   - Motion: generic data-anim / data-at on elements (scenes.css), or your own per-element
- *     keyframes on `animation-timeline: --scene`. Keep data-at in 1..2; reduced
- *     motion rests at staticStage.
- *   - The example-rates line (home.currency.exampleRates) is rendered below as <small
- *     data-hook="currencies-example-note">; keep it visible. Rates: EXAMPLE_RATES.
+ * Stages: 0 five expense cards in the currencies they were paid in, 1 the paper tape runs in,
+ * 2 each card is stamped with its converted amount and the example rate, and the ledger shows
+ * the group total. Pinned on desktop; on phones it plays once on entry, each card stamped as it
+ * scrolls into view. Reduced motion rests at stage 2: every card shows the original and the
+ * converted amount side by side. Amounts come from example-group.ts; the original always stays.
  */
 import ScrollScene from '../ScrollScene.astro';
 import SceneLink from '../props/SceneLink.astro';
+import ConvertedCard from '../props/expenses/ConvertedCard.astro';
+import { EXPENSES, GROUP } from '../data/example-group';
+import { formatMoney } from '../format';
 import { t, type Locale } from '@/i18n';
 
 interface Props {
   locale: Locale;
 }
 const { locale } = Astro.props;
+
+const total = EXPENSES.reduce((sum, expense) => sum + expense.eurCents, 0);
+// Native ranges on the pinned desktop scene, as percent of the pinned range. The tape rests at the
+// stage-1 boundary (35); stamps and the total rest at the stage-2 boundary (75).
+const stamps = EXPENSES.map((_, i) => ({ from: 36 + i * 7, to: 46 + i * 7 }));
 ---
 
 <ScrollScene
@@ -35,8 +36,85 @@ const { locale } = Astro.props;
   <Fragment slot="copy">
     <h2 id="currencies-title">{t('home.currency.title', locale)}</h2>
     <p>{t('home.currency.body', locale)}</p>
-    <small data-hook="currencies-example-note">{t('home.currency.exampleRates', locale)}</small>
+    <small class="cur-note" data-hook="currencies-example-note">{t('home.currency.exampleRates', locale)}</small>
   </Fragment>
-  <div slot="visual" class="scene-placeholder" data-hook="currencies-visual" aria-hidden="true"></div>
+  <div slot="visual" class="cur" data-hook="currencies-visual">
+    <div class="cur__tape" aria-hidden="true" data-anim="slide" data-at="1" style="--dx:-200px;--from:4;--to:35">
+      <span class="cur__head"></span>
+      <span class="cur__glyphs">¥ $ € ¥ $ € ¥ $ € ¥ $ €</span>
+    </div>
+    <ol class="cur__list">
+      {EXPENSES.map((expense, i) => <ConvertedCard expense={expense} locale={locale} index={i} {...stamps[i]} />)}
+    </ol>
+    <p class="cur__total" data-anim="rise" data-at="2" style="--from:62;--to:75;--i:5">
+      <span>{t('home.currency.groupTotal', locale)}</span>
+      <bdi>{formatMoney(total, GROUP.currency, locale, { whole: true })}</bdi>
+    </p>
+  </div>
   <Fragment slot="link"><SceneLink to="currencies" locale={locale} /></Fragment>
 </ScrollScene>
+
+<style>
+  .cur {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+  .cur__list {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .cur__tape {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-block-size: 1.75rem;
+    background: var(--kraft);
+    border-block: 2px dashed color-mix(in srgb, var(--ink-muted) 45%, transparent);
+    overflow: clip;
+    font-weight: 700;
+    letter-spacing: 0.4em;
+    color: var(--ink-muted);
+    white-space: nowrap;
+  }
+  .cur__glyphs {
+    padding-inline: 1rem;
+  }
+  .cur__head {
+    position: absolute;
+    inset-block: -2px;
+    inset-inline-start: 50%;
+    inline-size: 1rem;
+    translate: calc(-50% * var(--dir, 1)) 0;
+    background: var(--ink);
+    border-radius: 2px;
+  }
+  .cur__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin: 0;
+    padding: 0.5rem 0.75rem;
+    border-block-start: 3px double var(--ink);
+    font-size: 1.125rem;
+    font-weight: 800;
+  }
+  .cur-note {
+    color: var(--ink-muted);
+  }
+</style>
+
+<style is:global>
+  /* Phones play this scene once on entry: each card is stamped as it scrolls into view. */
+  @media (max-width: 599px) {
+    html[data-scene-engine='native'] .scene[data-scene='currencies'] > .scene__runway .cc [data-anim] {
+      animation-timeline: view();
+      animation-range: entry 20% entry 100%;
+    }
+  }
+</style>

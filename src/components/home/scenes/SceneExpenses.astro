@@ -1,29 +1,38 @@
 ---
 /**
- * Scene 3, expenses land (`expenses`). PLACEHOLDER from H5, replaced by H7.
+ * Scene 3, expenses land (`expenses`).
  *
- * Hooks for H7:
- *   - <ScrollScene id="expenses" titleId="expenses-title" runway={{ desktop: 200, phone: 160 }}
- *     stages={[20, 50, 75]} staticStage={3}>
- *     Stages: 0 receipt and empty form, 1 scanning, 2 fields ticked, 3 ledger cards. Pinned on phones too.
- *   - Slot `copy`: the h2 (#expenses-title) and body, plus the scan note.
- *   - Slot `visual`: the illustrated stage; `div[data-hook="expenses-visual"]` marks where it goes.
- *   - Slot `link`: <SceneLink to="expenses" locale={locale} />, which resolves through data/links.ts.
- *   - Motion: generic data-anim / data-at on elements (scenes.css), or your own per-element
- *     keyframes on `animation-timeline: --scene`. Keep data-at in 1..3; reduced
- *     motion rests at staticStage.
- *   - The Google disclosure (home.expenses.scanNote) is rendered below as <small
- *     data-hook="expenses-scan-note">; keep it visible in every stage and path.
- *   - Amounts come from data/example-group.ts through format.ts (formatMoney, props/Money.astro).
+ * Stages: 0 receipt and empty form, 1 scanning (camera frame, "Analysing receipt..."), 2 the
+ * receipt's description, amount and date strips have landed in the form and are ticked off,
+ * 3 three expense cards in the ledger. Pinned on phones too. Reduced motion rests at stage 3:
+ * the receipt beside the filled form, all three cards showing.
+ *
+ * Motion: strips, ticks and cards use the generic data-anim hooks (see the props). The scanning
+ * line and the camera frame use `.exp-win`, which is visible only during stage 1 (bespoke, below).
+ * The Google disclosure stays visible in every stage and path.
  */
 import ScrollScene from '../ScrollScene.astro';
 import SceneLink from '../props/SceneLink.astro';
+import Receipt from '../props/Receipt.astro';
+import AddExpenseForm from '../props/expenses/AddExpenseForm.astro';
+import LedgerCard from '../props/expenses/LedgerCard.astro';
+import { expenseById, expenseTitle, receiptDate } from '../props/expenses/helpers';
+import { formatMoney } from '../format';
 import { t, type Locale } from '@/i18n';
 
 interface Props {
   locale: Locale;
 }
 const { locale } = Astro.props;
+
+const dinner = expenseById(4);
+const ledger = [1, 4, 5].map((id) => expenseById(id));
+// Native ranges (percent of the pinned range); the cards rest at the stage-3 boundary (75)
+const drops = [
+  { from: 54, to: 66 },
+  { from: 60, to: 70 },
+  { from: 66, to: 75 },
+];
 ---
 
 <ScrollScene
@@ -36,8 +45,142 @@ const { locale } = Astro.props;
   <Fragment slot="copy">
     <h2 id="expenses-title">{t('home.expenses.title', locale)}</h2>
     <p>{t('home.expenses.body', locale)}</p>
-    <small data-hook="expenses-scan-note">{t('home.expenses.scanNote', locale)}</small>
+    <small class="exp-note" data-hook="expenses-scan-note">{t('home.expenses.scanNote', locale)}</small>
   </Fragment>
-  <div slot="visual" class="scene-placeholder" data-hook="expenses-visual" aria-hidden="true"></div>
+  <div slot="visual" class="exp" data-hook="expenses-visual">
+    <div class="exp__grid">
+      <div class="exp__receipt">
+        <Receipt
+          title={expenseTitle(dinner, locale)}
+          rotate={-4}
+          lines={[{ label: t('home.expenses.fieldDate', locale), amount: receiptDate(locale) }]}
+          total={{
+            label: t('home.expenses.fieldAmount', locale),
+            amount: formatMoney(dinner.original.minor, dinner.original.currency, locale),
+          }}
+        />
+        <svg class="exp__camera exp-win" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M0 22V0H22M78 0H100V22M100 78V100H78M22 100H0V78" vector-effect="non-scaling-stroke"></path>
+        </svg>
+      </div>
+      <div class="exp__phone">
+        <AddExpenseForm locale={locale} />
+      </div>
+      <ol class="exp__ledger">
+        {ledger.map((expense, i) => <LedgerCard expense={expense} locale={locale} index={i} {...drops[i]} />)}
+      </ol>
+    </div>
+  </div>
   <Fragment slot="link"><SceneLink to="expenses" locale={locale} /></Fragment>
 </ScrollScene>
+
+<style>
+  .exp {
+    container-type: inline-size;
+  }
+  .exp__grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(9.5rem, 0.9fr) minmax(0, 1.1fr);
+    grid-template-areas: 'receipt phone' 'ledger ledger';
+    align-items: start;
+  }
+  .exp__receipt {
+    grid-area: receipt;
+    position: relative;
+    padding: 0.75rem;
+  }
+  .exp__phone {
+    grid-area: phone;
+  }
+  @container (min-width: 34rem) {
+    .exp__grid {
+      grid-template-columns: minmax(0, 15rem) minmax(0, 17.5rem);
+      justify-content: center;
+      column-gap: 2rem;
+    }
+  }
+  .exp__ledger {
+    grid-area: ledger;
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .exp__receipt :global(:is(.receipt__lines li, .receipt__total) > span) {
+    flex: none;
+    overflow-wrap: normal;
+  }
+  .exp__camera {
+    position: absolute;
+    inset: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 3;
+    stroke-linecap: square;
+    pointer-events: none;
+  }
+  @media (max-width: 599px) {
+    .exp__grid {
+      gap: 0.5rem;
+    }
+    .exp__receipt {
+      padding: 0.5rem;
+    }
+    .exp__ledger {
+      gap: 0.375rem;
+    }
+  }
+  .exp-note {
+    color: var(--ink-muted);
+  }
+</style>
+
+<style is:global>
+  /* Phones pin this scene too. Its stage is compact, and a longer language never clips it: the stage
+     grows past the viewport instead (sticky then ends sooner) and its link stays reachable. */
+  @media (max-width: 599px) {
+    .scene[data-scene='expenses'] .scene__stage {
+      gap: 0.5rem;
+      block-size: auto;
+      min-block-size: var(--stage-h);
+      overflow-x: clip;
+      overflow-y: visible;
+    }
+    .scene[data-scene='expenses'] .scene__copy {
+      gap: 0.5rem;
+    }
+  }
+  /* Visible only while the receipt is being read (stage 1). Rest state, and every other stage, hides it. */
+  .exp-win {
+    opacity: 0;
+  }
+  @keyframes exp-win {
+    0% {
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    87% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  html[data-scene-engine='native'] .exp-win {
+    animation: exp-win linear both;
+    animation-timeline: --scene;
+    animation-range: contain 8% contain 38%;
+  }
+  html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='1'] .exp-win {
+    opacity: 1;
+  }
+  html[data-scene-engine='stages'][data-scene-ready] .exp-win {
+    transition: opacity var(--stage-ms) linear;
+  }
+</style>

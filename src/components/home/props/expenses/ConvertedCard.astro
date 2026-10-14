@@ -1,0 +1,125 @@
+---
+/**
+ * One expense card in scene 4: the amount as it was paid (always kept), then the same amount in
+ * the group's currency under a stamp that names the example rate. A card already in euros just
+ * shows its amount. `from`/`to` are the stamp's native range on the pinned desktop scene.
+ */
+import { t, type Locale } from '@/i18n';
+import Stamp from '../Stamp.astro';
+import { EXAMPLE_RATES, GROUP, type Expense } from '../../data/example-group';
+import { formatMoney, formatNumber, formatRate } from '../../format';
+import { expenseTitle } from './helpers';
+
+interface Props {
+  expense: Expense;
+  locale: Locale;
+  from: number;
+  to: number;
+  index: number;
+}
+const { expense, locale, from, to, index } = Astro.props;
+const { currency, minor } = expense.original;
+const converted = currency !== GROUP.currency;
+const rate = converted ? EXAMPLE_RATES[currency as keyof typeof EXAMPLE_RATES] : undefined;
+const range = `--from:${from};--to:${to};--i:${index}`;
+const eur = formatMoney(expense.eurCents, GROUP.currency, locale, { whole: true });
+---
+
+<li class="cc">
+<div class="cc__in">
+  <div class="cc__orig">
+    <p class="cc__title">{expenseTitle(expense, locale)}</p>
+    <p class="cc__amount"><bdi>{formatMoney(minor, currency, locale)}</bdi></p>
+  </div>
+  <svg class="cc__arrow" viewBox="0 0 24 12" aria-hidden="true" focusable="false">
+    <path d="M1 6h20M16 1.5L21.5 6 16 10.5"></path>
+  </svg>
+  <div class="cc__conv">
+    {
+      converted ? (
+        <>
+          <Stamp tone="green" rotate={-2} class="cc__stamp" data-anim="stamp" data-at="2" style={range}>
+            ≈ <bdi>{eur}</bdi> · {t('home.currency.rate', locale)}{' '}
+            <bdi>
+              {formatNumber(1, locale)} {GROUP.currency} = {formatRate(rate as number, locale)} {currency}
+            </bdi>
+          </Stamp>
+          <span class="app-chip cc__chip" aria-hidden="true">
+            ✎ {t('home.currency.editRate', locale)}
+          </span>
+        </>
+      ) : (
+        <p class="cc__amount" data-anim="stamp" data-at="2" style={range}>
+          <bdi>{eur}</bdi>
+        </p>
+      )
+    }
+  </div>
+</div>
+</li>
+
+<style>
+  .cc {
+    container-type: inline-size;
+    list-style: none;
+  }
+  .cc__in {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.5fr);
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--paper, #fffdf8);
+    border-radius: 6px;
+    box-shadow: var(--paper-shadow);
+    color: var(--ink, #1d2b24);
+  }
+  .cc__orig,
+  .cc__conv {
+    min-inline-size: 0;
+  }
+  .cc__title {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: var(--ink-muted, #4e5a52);
+    line-height: 1.3;
+  }
+  .cc__amount {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.0625rem;
+  }
+  .cc__arrow {
+    inline-size: 1.25rem;
+    fill: none;
+    stroke: var(--ink-muted, #4e5a52);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    scale: var(--dir, 1) 1;
+  }
+  .cc__conv {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.375rem 0.5rem;
+  }
+  .cc :global(.cc__stamp) {
+    font-size: 0.75rem;
+    padding: 0.125rem 0.5rem;
+    text-transform: none;
+    letter-spacing: 0;
+    background: var(--paper, #fffdf8);
+  }
+  .cc__chip {
+    font-size: 0.6875rem;
+  }
+  @container (max-width: 25rem) {
+    .cc__in {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .cc__arrow {
+      display: none;
+    }
+  }
+</style>

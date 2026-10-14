@@ -17,6 +17,11 @@
  *   audit         Audit translations: missing, extra, stale and untranslated keys (exit 1 on any)
  *   lock          Record English hashes in src/i18n/locks/<locale>.json after translating
  *   stale         List stale and unconfirmed translations (exit 1 on any)
+ *   content-hash  Print the hash of an English content entry (src/content/<dir>/<slug>/en.yaml)
+ *   content-lock  Record translatedFrom in a content entry after translating it
+ *   content-stale List stale and unconfirmed content entries (exit 1 on any)
+ *   content-audit Missing, extra, stale, unconfirmed and machine content entries (exit 1 on any)
+ *   backcheck     Write a back-translation packet for a page, or record a pass with --pass
  *   compare       Compare two languages side by side
  *   export        Export translations to JSON/CSV
  *   import        Import translations from JSON
@@ -37,6 +42,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
 import crypto from 'crypto';
+import { load as loadYaml } from 'js-yaml';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -165,7 +171,7 @@ function writeTranslationFile(locale, translations, modifiedKey = null) {
 // ============================================================================
 
 const LOCKS_DIR = path.join(I18N_DIR, 'locks');
-const PENDING_DIR = path.join(I18N_DIR, 'pending');
+const PENDING_DIR = process.env.I18N_PENDING_DIR || path.join(I18N_DIR, 'pending');
 const PAGE_STATUSES = ['machine', 'checked', 'reviewed', 'legacy'];
 
 function getMode() {
@@ -565,15 +571,24 @@ function cmdAudit(args) {
   const pendingProblems = checkPending(translations, pending, mode);
   for (const problem of pendingProblems) console.log(c.error(`! ${problem}`));
 
+  // Long-form content entries (3.6): missing, extra, stale, unconfirmed and machine
+  const contentRows = contentProblems(mode, pending, targetLocale);
+  if (contentRows.length > 0) {
+    console.log(c.bright('\nContent entries:'));
+    for (const r of contentRows.slice(0, 20)) console.log(`  ${c.warning('!')} ${r.locale.padEnd(8)} ${r.kind.padEnd(12)} ${r.entry}`);
+    if (contentRows.length > 20) console.log(c.dim(`  ... and ${contentRows.length - 20} more (npm run i18n content-audit)`));
+  }
+
   console.log(c.bright('\nSummary:'));
   console.log(`  Total missing: ${totals.missing}`);
   console.log(`  Total extra: ${totals.extra}`);
   console.log(`  Total stale: ${totals.stale}`);
   console.log(`  Total unconfirmed: ${totals.unconfirmed}`);
   console.log(`  Total untranslated: ${totals.identical}`);
+  console.log(`  Content entry problems: ${contentRows.length}`);
   console.log(`  Other problems: ${totals.other + pendingProblems.length}`);
 
-  const failed = Object.values(totals).some(n => n > 0) || pendingProblems.length > 0;
+  const failed = Object.values(totals).some(n => n > 0) || pendingProblems.length > 0 || contentRows.length > 0;
   if (failed) {
     console.log(c.error('\nAudit failed.'));
     process.exit(1);
@@ -638,6 +653,8 @@ function cmdStale(args) {
     for (const key of r.unconfirmed) console.log(`${locale}\tunconfirmed\t${key}`);
     total += r.stale.length + r.unconfirmed.length;
   }
+  const contentRows = contentProblems(mode, pending, targetLocale).filter(r => r.kind === 'stale' || r.kind === 'unconfirmed');
+  total += printContentRows(contentRows);
   if (total > 0) process.exit(1);
 }
 
@@ -1539,6 +1556,337 @@ function parseTranslationLine(line) {
 /**
  * Show help
  */
+// ============================================================================
+// Long-form content (src/content/<dir>/<slug>/<locale>.yaml) - restructure 3.6, 3.7, D14, D31
+// ============================================================================
+
+// The directory and page registry can be redirected for tests
+const CONTENT_DIR = process.env.I18N_CONTENT_DIR || path.join(SRC_DIR, 'content');
+const PAGES_FILE = process.env.I18N_PAGES_FILE || path.join(SRC_DIR, 'site', 'pages.ts');
+const CONTENT_DIRS = {
+  features: 'featurePages',
+  'use-cases': 'useCasePages',
+  pages: 'sitePages',
+  compare: 'comparePages',
+  guides: 'guides',
+};
+// Fields that are bookkeeping, never translated and never part of the English hash
+const CONTENT_BOOKKEEPING = ['review', 'translatedFrom', 'identicalApproved', 'claims'];
+// Leaves that stay identical in every locale
+const CONTENT_STRUCTURAL = new Set(['shot', 'payer', 'method', 'id', 'currency']);
+
+/** Canonical JSON: sorted keys, no whitespace. Must match src/__tests__/content.test.ts. */
+function canonicalJson(value) {
+  if (Array.isArray(value)) return `[${value.map(canonicalJson).join(',')}]`;
+  if (value && typeof value === 'object' && !(value instanceof Date)) {
+    const entries = Object.entries(value)
+      .filter(([, v]) => v !== undefined)
+      .sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0));
+    return `{${entries.map(([k, v]) => `${JSON.stringify(k)}:${canonicalJson(v)}`).join(',')}}`;
+  }
+  return JSON.stringify(value instanceof Date ? value.toISOString() : value);
+}
+
+/** D14: first 8 hex digits of SHA-256 over the English entry without `review` and `translatedFrom`. */
+function contentHash(english) {
+  const { review: _review, translatedFrom: _from, ...rest } = english;
+  return hashValue(canonicalJson(rest));
+}
+
+function contentFile(dir, slug, locale) {
+  return path.join(CONTENT_DIR, dir, slug, `${locale}.yaml`);
+}
+
+function readContent(dir, slug, locale) {
+  const file = contentFile(dir, slug, locale);
+  return fs.existsSync(file) ? loadYaml(fs.readFileSync(file, 'utf-8')) : undefined;
+}
+
+/** Every `<dir>/<slug>` that has an entry, preview fixtures excluded, with its locales. */
+function listContentSlugs() {
+  const found = [];
+  for (const dir of Object.keys(CONTENT_DIRS)) {
+    const base = path.join(CONTENT_DIR, dir);
+    if (!fs.existsSync(base)) continue;
+    for (const slug of fs.readdirSync(base).sort()) {
+      if (slug === '__preview__' || !fs.statSync(path.join(base, slug)).isDirectory()) continue;
+      const entryLocales = fs.readdirSync(path.join(base, slug))
+        .filter(f => f.endsWith('.yaml'))
+        .map(f => f.replace(/\.yaml$/, ''))
+        .sort();
+      found.push({ dir, slug, entry: `${dir}/${slug}`, locales: entryLocales });
+    }
+  }
+  return found;
+}
+
+/** Parse `<dir>/<slug>` and check English exists. */
+function parseEntryArg(arg) {
+  const match = /^([a-z-]+)\/([^/]+)$/.exec(arg || '');
+  if (!match || !(match[1] in CONTENT_DIRS)) {
+    throw new Error(`Give an entry as <dir>/<slug>, with dir one of ${Object.keys(CONTENT_DIRS).join(', ')} (got "${arg}")`);
+  }
+  const [, dir, slug] = match;
+  if (!fs.existsSync(contentFile(dir, slug, 'en'))) throw new Error(`No English entry at ${contentFile(dir, slug, 'en')}`);
+  return { dir, slug, entry: arg };
+}
+
+/**
+ * Pages from src/site/pages.ts that have a content entry. Read with a tolerant text scan (the file
+ * is TypeScript and imports the whole site), so keep each page's `id`, `published`, `locales` and
+ * `content` in the usual literal form.
+ */
+function loadRegistryPages() {
+  if (!fs.existsSync(PAGES_FILE)) return [];
+  const text = fs.readFileSync(PAGES_FILE, 'utf-8').replace(/\/\*[\s\S]*?\*\/|\/\/.*$/gm, '');
+  const starts = [...text.matchAll(/\bid:\s*'([^']+)'/g)];
+  return starts.map((m, i) => {
+    const chunk = text.slice(m.index, i + 1 < starts.length ? starts[i + 1].index : undefined);
+    const content = /collection:\s*'(\w+)'\s*,\s*slug:\s*'([^']+)'/.exec(chunk);
+    const locales = /locales:\s*(?:'all'|\[([^\]]*)\])/.exec(chunk);
+    const dir = content && Object.entries(CONTENT_DIRS).find(([, collection]) => collection === content[1])?.[0];
+    return {
+      id: m[1],
+      published: /published:\s*true/.test(chunk),
+      locales: locales && locales[1] !== undefined ? [...locales[1].matchAll(/'([^']+)'/g)].map(x => x[1]) : 'all',
+      entry: content && dir ? `${dir}/${content[2]}` : undefined,
+    };
+  });
+}
+
+/**
+ * Content problems as { locale, kind, entry } rows: `missing` (a published page lacks a locale's
+ * entry, unless english-first lists the page in pending/pages.json), `extra` (an entry for an
+ * unknown locale or with no English), `stale`, `unconfirmed`, and `machine` (D31).
+ */
+function contentProblems(mode, pending, targetLocale) {
+  const realLocales = getLocaleFiles().map(f => f.locale).filter(l => l !== 'en');
+  const rows = [];
+  const pendingPages = new Set(mode === 'english-first' ? pending.pages.added : []);
+  const pages = loadRegistryPages().filter(p => p.entry);
+  const slugs = listContentSlugs();
+
+  for (const page of pages.filter(p => p.published)) {
+    if (pendingPages.has(page.id)) continue;
+    const wanted = (page.locales === 'all' ? realLocales : page.locales.filter(l => l !== 'en'));
+    const present = slugs.find(s => s.entry === page.entry)?.locales ?? [];
+    if (!present.includes('en')) rows.push({ locale: 'en', kind: 'missing', entry: page.entry });
+    for (const locale of wanted) {
+      if (!present.includes(locale)) rows.push({ locale, kind: 'missing', entry: page.entry });
+    }
+  }
+
+  for (const { dir, slug, entry, locales: present } of slugs) {
+    const english = readContent(dir, slug, 'en');
+    if (!english) {
+      for (const locale of present) rows.push({ locale, kind: 'extra', entry });
+      continue;
+    }
+    for (const locale of present.filter(l => l !== 'en')) {
+      if (!realLocales.includes(locale)) {
+        rows.push({ locale, kind: 'extra', entry });
+        continue;
+      }
+      const data = readContent(dir, slug, locale) ?? {};
+      if (!data.translatedFrom) rows.push({ locale, kind: 'unconfirmed', entry });
+      else if (String(data.translatedFrom) !== contentHash(english)) rows.push({ locale, kind: 'stale', entry });
+      if (data.review?.status === 'machine') rows.push({ locale, kind: 'machine', entry });
+    }
+  }
+  return rows.filter(r => !targetLocale || r.locale === targetLocale);
+}
+
+/** Print rows as `locale<TAB>kind<TAB>entry` and return how many. */
+function printContentRows(rows) {
+  for (const r of rows) console.log(`${r.locale}\t${r.kind}\t${r.entry}`);
+  return rows.length;
+}
+
+/** Replace or insert a top-level scalar line, keeping the rest of the file byte for byte. */
+function setTopLevelScalar(text, key, value) {
+  const line = `${key}: "${value}"`;
+  const existing = new RegExp(`^${key}:.*$`, 'm');
+  if (existing.test(text)) return text.replace(existing, line);
+  const review = /^review:/m.exec(text);
+  return review ? `${text.slice(0, review.index)}${line}\n${text.slice(review.index)}` : `${line}\n${text}`;
+}
+
+/** Replace the top-level `review:` block (indented lines under it) or insert one. */
+function setReviewBlock(text, { status, checker, date }) {
+  const block = `review:\n  status: ${status}\n  checker: ${JSON.stringify(checker)}\n  date: ${JSON.stringify(date)}\n`;
+  const existing = /^review:[^\n]*\n(?:[ \t]+[^\n]*\n|[ \t]*\n)*/m;
+  return existing.test(text) ? text.replace(existing, block) : `${block}${text}`;
+}
+
+/** content-hash <dir>/<slug>: print the hash of the current English entry. */
+function cmdContentHash(args) {
+  const { dir, slug } = parseEntryArg(args.find(a => !a.startsWith('--')));
+  console.log(contentHash(readContent(dir, slug, 'en')));
+}
+
+/**
+ * content-lock <locale> <dir>/<slug>: record translatedFrom after translating or re-translating.
+ */
+function cmdContentLock(args) {
+  const [locale, entryArg] = args.filter(a => !a.startsWith('--'));
+  if (!locale || locale === 'en' || !entryArg) {
+    console.error(c.error('Error: give a non-English locale and an entry'));
+    console.log('Usage: i18n-manager content-lock <locale> <dir>/<slug>   e.g. content-lock fr features/split-expenses');
+    process.exit(1);
+  }
+  const { dir, slug, entry } = parseEntryArg(entryArg);
+  const file = contentFile(dir, slug, locale);
+  if (!fs.existsSync(file)) throw new Error(`No ${locale} entry at ${file}`);
+  const hash = contentHash(readContent(dir, slug, 'en'));
+  fs.writeFileSync(file, setTopLevelScalar(fs.readFileSync(file, 'utf-8'), 'translatedFrom', hash));
+  console.log(`${c.success('✓')} ${c.locale(locale.padEnd(8))} ${entry} locked to ${hash}`);
+}
+
+/** content-stale [locale]: stale and unconfirmed content entries; exit 1 on any. */
+function cmdContentStale(args) {
+  const target = args.find(a => !a.startsWith('--'));
+  const rows = contentProblems(getMode(), loadPending(), target).filter(r => r.kind === 'stale' || r.kind === 'unconfirmed');
+  if (printContentRows(rows) > 0) process.exit(1);
+}
+
+/** content-audit [locale]: missing, extra, stale, unconfirmed and machine entries; exit 1 on any. */
+function cmdContentAudit(args) {
+  const target = args.find(a => !a.startsWith('--'));
+  const rows = contentProblems(getMode(), loadPending(), target);
+  if (printContentRows(rows) > 0) process.exit(1);
+}
+
+const BACKCHECK_FAILS = [
+  'a changed number, amount, limit or date',
+  'a claim stronger or weaker than its claim id',
+  'a missing qualification',
+  'an "insteadOf" phrase (src/data/substitutions.ts) in the back-translation',
+  'a joke whose intent is lost or offensive',
+  'text in the wrong script',
+];
+
+/** String leaves { path, value } of an entry, skipping bookkeeping and structural fields. */
+function contentLeaves(value, prefix = '', key = '') {
+  if (Array.isArray(value)) return value.flatMap((v, i) => contentLeaves(v, prefix ? `${prefix}.${i}` : `${i}`, key));
+  if (value && typeof value === 'object' && !(value instanceof Date)) {
+    return Object.entries(value).flatMap(([k, v]) =>
+      !prefix && CONTENT_BOOKKEEPING.includes(k) ? [] : contentLeaves(v, prefix ? `${prefix}.${k}` : k, k));
+  }
+  return typeof value === 'string' && !CONTENT_STRUCTURAL.has(key) ? [{ path: prefix, value }] : [];
+}
+
+/** Match a backcheck <page> argument to a content entry, a content page id, or a key-based page. */
+function resolveBackcheckTarget(arg) {
+  if (/^[a-z-]+\/[^/]+$/.test(arg) && arg.split('/')[0] in CONTENT_DIRS && fs.existsSync(contentFile(...arg.split('/'), 'en'))) {
+    return { kind: 'content', ...parseEntryArg(arg), label: arg };
+  }
+  const page = loadRegistryPages().find(p => p.id === arg);
+  if (page?.entry) return { kind: 'content', ...parseEntryArg(page.entry), label: arg };
+  if (page || ['home', 'pricing'].includes(arg)) return { kind: 'keys', page: arg, label: arg };
+  throw new Error(`"${arg}" is neither a content entry (<dir>/<slug>) nor a registered page id`);
+}
+
+/**
+ * backcheck <locale> <page> [--out <dir>] [--keys a.*,b.*]
+ *   Writes the back-translation packet: the translation, a blank back-translation, then the
+ *   English source (D31). The checker back-translates before opening the source section.
+ * backcheck <locale> <page> --pass --checker <id> [--date YYYY-MM-DD]
+ *   Records `checked` with checker, date and the English hash: in the entry's `review` block and
+ *   `translatedFrom`, or in the locale lock's `pages` for a key-based page.
+ */
+function cmdBackcheck(args) {
+  const opt = (name) => { const i = args.indexOf(name); return i >= 0 ? args[i + 1] : undefined; };
+  const valueFlags = ['--out', '--keys', '--checker', '--date'];
+  const [locale, page] = args.filter((a, i) => !a.startsWith('--') && !valueFlags.includes(args[i - 1]));
+  if (!locale || locale === 'en' || !page) {
+    console.error(c.error('Error: give a non-English locale and a page'));
+    console.log('Usage: i18n-manager backcheck <locale> <page> [--out <dir>]\n       i18n-manager backcheck <locale> <page> --pass --checker <id> [--date YYYY-MM-DD]');
+    process.exit(1);
+  }
+  const target = resolveBackcheckTarget(page);
+  const pass = args.includes('--pass');
+
+  if (pass) {
+    const checker = opt('--checker');
+    if (!checker) throw new Error('--pass needs --checker <id> (who ran the back-translation check)');
+    const date = opt('--date') || new Date().toISOString().slice(0, 10);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw new Error(`--date must be YYYY-MM-DD (got "${date}")`);
+    if (target.kind === 'content') {
+      const file = contentFile(target.dir, target.slug, locale);
+      if (!fs.existsSync(file)) throw new Error(`No ${locale} entry at ${file}`);
+      let text = fs.readFileSync(file, 'utf-8');
+      const current = loadYaml(text);
+      if (current.review?.status === 'reviewed') throw new Error(`${target.label} (${locale}) is already reviewed by a human; not downgrading it`);
+      text = setTopLevelScalar(text, 'translatedFrom', contentHash(readContent(target.dir, target.slug, 'en')));
+      text = setReviewBlock(text, { status: 'checked', checker, date });
+      fs.writeFileSync(file, text);
+    } else {
+      const lock = loadLock(locale);
+      if (lock.pages[target.page] === 'reviewed') throw new Error(`${target.page} (${locale}) is already reviewed by a human; not downgrading it`);
+      lock.pages[target.page] = 'checked';
+      saveLock(locale, lock, Object.keys(loadAllTranslations().en));
+    }
+    console.log(`${c.success('✓')} ${c.locale(locale.padEnd(8))} ${target.label} recorded as checked by ${checker} on ${date}`);
+    return;
+  }
+
+  let translated;
+  let source;
+  let claims = [];
+  if (target.kind === 'content') {
+    const tr = readContent(target.dir, target.slug, locale);
+    if (!tr) throw new Error(`No ${locale} entry at ${contentFile(target.dir, target.slug, locale)}`);
+    const en = readContent(target.dir, target.slug, 'en');
+    translated = contentLeaves(tr);
+    source = contentLeaves(en);
+    claims = en.claims ?? [];
+    if (!tr.translatedFrom || String(tr.translatedFrom) !== contentHash(en)) {
+      console.log(c.warning(`Note: ${locale} ${target.label} is ${tr.translatedFrom ? 'stale' : 'unconfirmed'}; check the current translation against current English.`));
+    }
+  } else {
+    const translations = loadAllTranslations();
+    if (!translations[locale]) throw new Error(`Locale "${locale}" not found`);
+    const patterns = (opt('--keys') || `${target.page}.*`).split(',');
+    const keys = Object.keys(translations.en).filter(k => patterns.some(p => new RegExp(`^${p.replace(/[.+^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*')}$`).test(k)));
+    if (keys.length === 0) throw new Error(`No keys match ${patterns.join(', ')}; pass --keys`);
+    translated = keys.filter(k => k in translations[locale]).map(k => ({ path: k, value: translations[locale][k] }));
+    source = keys.map(k => ({ path: k, value: translations.en[k] }));
+  }
+
+  const outDir = opt('--out') || path.join(__dirname, '..', 'tmp', 'backcheck');
+  fs.mkdirSync(outDir, { recursive: true });
+  const file = path.join(outDir, `${locale}-${target.label.replace(/\//g, '-')}.md`);
+  const lines = (leaves) => leaves.map(l => `- \`${l.path}\`: ${l.value}`).join('\n');
+  const packet = [
+    `# Back-translation check: ${locale} / ${target.label}`,
+    '',
+    'You are an agent that did not translate this locale. Work in this order:',
+    '',
+    `1. Read the TRANSLATION (${locale}) below. Do not open the English source yet.`,
+    '2. Write your own English back-translation for each path under BACK-TRANSLATION.',
+    '3. Only then read the ENGLISH SOURCE and compare. Fail the page on any of:',
+    ...BACKCHECK_FAILS.map(f => `   - ${f}`),
+    '4. On a pass, record it: `npm run i18n backcheck ' + `${locale} ${page}` + ' --pass --checker <your id>`.',
+    '   On a fail, list each problem and send the page back for retranslation.',
+    '',
+    `## TRANSLATION (${locale})`,
+    '',
+    lines(translated),
+    '',
+    '## BACK-TRANSLATION (write English here, without opening the source below)',
+    '',
+    translated.map(l => `- \`${l.path}\`: `).join('\n'),
+    '',
+    '## ENGLISH SOURCE (open only after back-translating)',
+    '',
+    lines(source),
+    '',
+    ...(claims.length ? ['## CLAIM IDS (each claim must be no stronger or weaker than its wording in src/data/features.ts)', '', claims.map(id => `- ${id}`).join('\n'), ''] : []),
+  ].join('\n');
+  fs.writeFileSync(file, packet);
+  console.log(`${c.success('✓')} Packet written to ${path.relative(process.cwd(), file) || file}`);
+}
+
 function cmdHelp() {
   console.log(`
 ${c.bright('Translation Management Tool')}
@@ -1565,6 +1913,15 @@ ${c.info('Commands:')}
     drift [--write <file>]      Keys whose English changed after the locale's line (file history)
     lock <locale|--all> [--keys a,b] [--identical]
                                 Record English hashes after translating
+    content-hash <dir>/<slug>   Hash of the English content entry (e.g. features/split-expenses)
+    content-lock <locale> <dir>/<slug>
+                                Record translatedFrom in a content entry after translating it
+    content-stale [locale]      Stale/unconfirmed content entries; exits 1 on any
+    content-audit [locale]      Missing, extra, stale, unconfirmed and machine content entries; exits 1 on any
+    backcheck <locale> <page> [--out <dir>]
+                                Write the back-translation packet (translation, blank back-translation, English)
+    backcheck <locale> <page> --pass --checker <id> [--date YYYY-MM-DD]
+                                Record a pass: status checked, checker, date and source hash
     compare <locale1> <locale2> Compare two languages side by side
     stats                       Show translation statistics
     find-unused                 Find potentially unused keys
@@ -1611,6 +1968,11 @@ const commands = {
   audit: cmdAudit,
   lock: cmdLock,
   stale: cmdStale,
+  'content-hash': cmdContentHash,
+  'content-lock': cmdContentLock,
+  'content-stale': cmdContentStale,
+  'content-audit': cmdContentAudit,
+  backcheck: cmdBackcheck,
   drift: cmdDrift,
   compare: cmdCompare,
   export: cmdExport,

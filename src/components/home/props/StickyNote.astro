@@ -1,8 +1,8 @@
 ---
 /**
- * A sticky note. Jokes live on these, so it is decoration by default (aria-hidden): the same
- * information must also be in the page's real text. Set `decorative={false}` where the note is
- * the content.
+ * A sticky note. Its text is real, translated content (the jokes carry the voice), so it stays in
+ * the accessibility tree like every other text prop. Set `decorative` only for a note whose words
+ * repeat text that is already on the page, or that sits inside a role="img" figure.
  */
 import type { HTMLAttributes } from 'astro/types';
 
@@ -12,7 +12,7 @@ interface Props extends HTMLAttributes<'div'> {
   decorative?: boolean;
 }
 
-const { color = 'yellow', rotate = -2, decorative = true, class: className, style, ...rest } = Astro.props;
+const { color = 'yellow', rotate = -2, decorative = false, class: className, style, ...rest } = Astro.props;
 const tilt = rotate ? `--rot:${rotate}deg` : '';
 ---
 

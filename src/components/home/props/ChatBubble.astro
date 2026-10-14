@@ -1,7 +1,8 @@
 ---
 /**
  * A group-chat bubble. `side` is logical: `start` sits at the inline-start edge and `end` at the
- * inline-end edge, so the pair mirrors in right-to-left locales. Decoration by default.
+ * inline-end edge, so the pair mirrors in right-to-left locales. Its text is content, like the
+ * other text props; set `decorative` only when the words repeat text already on the page.
  */
 import type { HTMLAttributes } from 'astro/types';
 
@@ -10,7 +11,7 @@ interface Props extends HTMLAttributes<'div'> {
   decorative?: boolean;
 }
 
-const { side = 'start', decorative = true, class: className, ...rest } = Astro.props;
+const { side = 'start', decorative = false, class: className, ...rest } = Astro.props;
 ---
 
 <div

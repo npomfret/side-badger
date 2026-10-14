@@ -127,6 +127,8 @@ const base = z.object({
   identicalApproved: z.array(z.string().min(1)).optional(),
   meta: z.object({ title: text, description: text }).strict(),
   h1: text,
+  /** Short link label for the footer and nav (at most 32 characters); the `h1` is used without it. Translatable. */
+  navLabel: z.string().min(1).max(32).optional(),
   lead: richText,
   cta,
 });

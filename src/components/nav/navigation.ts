@@ -4,9 +4,9 @@
  * visible links and the structured data cannot drift apart.
  */
 import { load } from 'js-yaml';
-import { features } from '../../data/features';
 import { isPseudoLocale, t, type Locale, type TranslationKey } from '../../i18n';
 import { pseudoize } from '../../i18n/pseudo';
+import { crossLinkedIds } from '../../site/cross-links';
 import { allPages, getPage, type PageDef } from '../../site/pages';
 import { pathsFor } from '../../site/routes';
 import { canonicalFor, localizedPath } from '../../seo/urls';
@@ -45,23 +45,29 @@ const contentFiles = import.meta.glob('/src/content/{features,use-cases,pages}/*
 
 const CONTENT_DIRS = { featurePages: 'features', useCasePages: 'use-cases', sitePages: 'pages' } as const;
 
-/** The `h1` of a page's content entry in a locale (a pseudo-locale derives it from English), if the entry exists. */
+/** The link text in a content entry: its short `navLabel` if it has one, else its `h1`. */
+export function linkTextOf(data: { navLabel?: unknown; h1?: unknown } | null | undefined): string | undefined {
+  for (const value of [data?.navLabel, data?.h1]) if (typeof value === 'string' && value) return value;
+  return undefined;
+}
+
+/** The link text (`navLabel`, else `h1`) of a page's content entry in a locale (a pseudo-locale derives it from English), if the entry exists. */
 export async function contentTitle(page: PageDef, locale: Locale): Promise<string | undefined> {
   if (!page.content) return undefined;
   const { collection, slug } = page.content;
   const file = `/src/content/${CONTENT_DIRS[collection]}/${slug}/${isPseudoLocale(locale) ? 'en' : locale}.yaml`;
   const read = contentFiles[file];
   if (!read) return undefined;
-  const h1 = (load(await read()) as { h1?: unknown } | null)?.h1;
-  if (typeof h1 !== 'string' || !h1) return undefined;
-  return isPseudoLocale(locale) ? pseudoize(h1, locale) : h1;
+  const text = linkTextOf(load(await read()) as { navLabel?: unknown; h1?: unknown } | null);
+  if (!text) return undefined;
+  return isPseudoLocale(locale) ? pseudoize(text, locale) : text;
 }
 
 const labelCache = new Map<string, Promise<PageLabels>>();
 
 /**
  * Link text for the pages whose name is their content title (feature and use-case pages, which
- * have no `nav`): the entry's `h1`. Only pages that are published and built in `locale` get a
+ * have no `nav`): the entry's `navLabel`, else its `h1`. Only pages that are published and built in `locale` get a
  * label. Cached per locale, so the footer on every page costs one lookup. `readTitle` is a seam
  * for tests.
  */
@@ -207,35 +213,13 @@ export function breadcrumbJsonLd(crumbs: readonly Crumb[]): JsonLdNode[] {
   return crumbs.length ? [breadcrumbListNode(crumbs)] : [];
 }
 
-/** The page that is the home of a registry feature id (`src/data/features.ts`), if it has one. */
-function homePageOf(featureId: string): string | undefined {
-  return features.find(feature => feature.id === featureId)?.homePage ?? undefined;
-}
-
 /**
- * Pages related to this one, published only: its registry `related` list, plus the feature pages
- * a use case depicts and the use cases that depict a feature. Feature ids are not page slugs, so
- * the match goes through each feature's `homePage`.
+ * Pages related to this one, published only (see `crossLinkedIds`).
  */
 export function relatedPages(pageId: string, locale: Locale): PageDef[] {
   const page = getPage(pageId);
   if (!page) return [];
-  const ids = new Set<string>(page.related ?? []);
-  if (page.type === 'use-case') {
-    for (const feature of page.features ?? []) {
-      const home = homePageOf(feature);
-      if (home) ids.add(home);
-    }
-  }
-  if (page.type === 'feature') {
-    for (const other of allPages()) {
-      if (other.type === 'use-case' && other.features?.some(feature => homePageOf(feature) === page.id)) {
-        ids.add(other.id);
-      }
-    }
-  }
-  ids.delete(page.id);
-  return [...ids]
+  return crossLinkedIds(page)
     .map(id => getPage(id))
     .filter((other): other is PageDef => !!other && isLinkable(other, locale));
 }

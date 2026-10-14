@@ -71,11 +71,15 @@ const items = [
 </ScrollScene>
 
 <style>
-  /* A scene with no visual slot still gets `grid-area: copy / link` from scenes.css at 900 px and
-     up, which adds a stray empty column; name the areas so it is one column */
-  :global(#trust .scene__stage) {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: 'copy' 'link';
+  /* Workaround until H13 fixes scenes.css: a scene with no visual slot still gets
+     `grid-area: copy / link` at 900 px and up, which adds a stray empty column. Name the areas so it
+     is one column. `:where()` keeps this at one class of specificity, so any shared rule H13 adds
+     for visual-less stages wins and this can then be deleted. */
+  @media (min-width: 900px) {
+    :global(:where(#trust) .scene__stage) {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas: 'copy' 'link';
+    }
   }
   .trust__card {
     position: relative;

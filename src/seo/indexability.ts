@@ -34,8 +34,8 @@ const locksByLocale: Record<string, Record<string, ReviewStatus>> = Object.fromE
 /**
  * The review status of a page in a locale, or undefined when no lock records one (which D8
  * treats as not indexable). Pages built from i18n keys (home, pricing) are recorded in the
- * locale's lock file. Content-collection pages record theirs in the entry's `review.status`;
- * until those pages exist, a lock entry (if any) is the only source.
+ * locale's lock file. Content-collection pages record theirs in the entry's `review.status`,
+ * which `isIndexable` does not read yet: it throws for them outside English.
  */
 export function reviewStatus(pageId: string, locale: Locale): ReviewStatus | undefined {
   if (locale === 'en') return 'reviewed';
@@ -59,6 +59,14 @@ export function isIndexable(pageId: string, locale: Locale): boolean {
   const page = getPage(pageId);
   if (!page || !page.published) return false;
   if (page.type === 'legal' || page.indexing === 'english-only') return locale === 'en';
+  if (page.content && locale !== 'en') {
+    // Collection pages take their status from the content entry's `review.status` (2.6), which
+    // this module does not read yet. Fail loudly rather than fall back to the lock file.
+    throw new Error(
+      `isIndexable: ${pageId} (${locale}) is a content-collection page; read its review.status ` +
+        'from the content entry before publishing it in a locale other than English'
+    );
+  }
   const status = reviewStatus(pageId, locale);
   return status !== undefined && INDEXABLE_STATUSES.includes(status);
 }

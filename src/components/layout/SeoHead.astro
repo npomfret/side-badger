@@ -30,10 +30,12 @@ const canonical = page === 'not-found' ? undefined : canonicalFor(page, locale);
 const alternates = alternatesFor(page, locale);
 
 // Social card: language-neutral artwork with the locale's wordmark. The version is the first
-// 8 hex characters of the artwork's hash, so a new card is fetched under a new URL (D27).
+// 8 hex characters of a hash of both inputs (src/pages/og/[card].png.ts), so a change to either
+// is fetched under a new URL (D27).
 const logoLocale = logoLocales.includes(locale) ? locale : 'en';
 const cardHash = createHash('sha256')
   .update(readFileSync(resolve('src/assets/og', `${ogCard}.png`)))
+  .update(readFileSync(resolve('public/images', logoLocale, 'logo-transparent.png')))
   .digest('hex')
   .slice(0, 8);
 const ogImage = absoluteUrl(`/og/${ogCard}-${logoLocale}.png?v=${cardHash}`);
@@ -45,7 +47,8 @@ const graph = buildGraph({
   name: title,
   description,
   nodes: jsonLd,
-  logoUrl: absoluteUrl(`/images/${logoLocale}/logo-transparent.png`),
+  // One Organization (one @id) site-wide, so one logo: the English wordmark
+  logoUrl: absoluteUrl('/images/en/logo-transparent.png'),
 });
 ---
 

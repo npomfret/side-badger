@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { isIndexable, overrideLockPages } from '../seo/indexability';
 import { alternatesFor } from '../seo/alternates';
 import {
@@ -48,6 +48,27 @@ describe('isIndexable (D8)', () => {
 
   it('does not index an unknown page', () => {
     expect(isIndexable('nope', 'en')).toBe(false);
+  });
+
+  it('refuses to guess the status of a published content-collection page outside English', async () => {
+    vi.resetModules();
+    vi.doMock('../site/pages', async importOriginal => {
+      const actual = await importOriginal<typeof import('../site/pages')>();
+      const page = {
+        id: 'feature/x',
+        type: 'feature',
+        path: '/features/x/',
+        published: true,
+        indexing: 'per-locale-review',
+        content: { collection: 'featurePages', slug: 'x' },
+      };
+      return { ...actual, getPage: (id: string) => (id === page.id ? page : actual.getPage(id)) };
+    });
+    const fresh = await import('../seo/indexability');
+    expect(fresh.isIndexable('feature/x', 'en')).toBe(true);
+    expect(() => fresh.isIndexable('feature/x', 'fr')).toThrow(/review\.status/);
+    vi.doUnmock('../site/pages');
+    vi.resetModules();
   });
 });
 

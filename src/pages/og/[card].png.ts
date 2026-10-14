@@ -14,7 +14,9 @@ import { logoLocales } from '../../i18n';
 
 const WIDTH = 1200;
 const HEIGHT = 630;
-const WORDMARK_WIDTH = 540;
+// The artwork's mascot ends at x≈645 (1200 scale); the wordmark sits clear of it
+const WORDMARK_WIDTH = 470;
+const WORDMARK_MARGIN = 60;
 
 // Only the file names matter here; the artwork is read from disk below
 const artwork = import.meta.glob('/src/assets/og/*.png', { query: '?url', import: 'default' });
@@ -43,7 +45,7 @@ export const GET: APIRoute = async ({ props }) => {
     .composite([
       {
         input: wordmark,
-        left: WIDTH - WORDMARK_WIDTH - 70,
+        left: WIDTH - WORDMARK_WIDTH - WORDMARK_MARGIN,
         top: Math.round((HEIGHT - (height ?? 0)) / 2),
       },
     ])

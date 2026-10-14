@@ -30,7 +30,9 @@ const scriptFontCss: Partial<Record<string, string>> = {
   telugu: '/fonts/noto-sans-telugu.css',
 };
 const scriptFontLink = scriptFontCss[fontScript];
-const preloadLatin = fontScript === 'latin' || fontScript === 'cyrillic-greek';
+// D24: the two preloads are for Latin-script locales only. Cyrillic and Greek headings use Inter,
+// so a Space Grotesk preload there would be fetched and never used.
+const preloadLatin = fontScript === 'latin';
 ---
 
 <!DOCTYPE html>

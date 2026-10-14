@@ -107,8 +107,12 @@
  * Cyrillic and Greek headings use Inter, because Space Grotesk has neither.
  */
 html[data-font-script="cyrillic-greek"] {
-  --font-sans: 'Inter', 'Inter Cyrillic', 'Inter Greek', 'Inter Fallback', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'Inter', 'Inter Cyrillic', 'Inter Fallback', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-display: var(--font-sans);
+}
+/* Greek only on el, so the switcher's "Ελληνικά" does not fetch the Greek file on uk and sr (and vice versa) */
+html[data-font-script="cyrillic-greek"]:lang(el) {
+  --font-sans: 'Inter', 'Inter Greek', 'Inter Fallback', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 /* Latin Extended: only the locales whose alphabets need it */
 html:is(:lang(cs), :lang(cy), :lang(hr), :lang(hu), :lang(lv), :lang(pl), :lang(ro), :lang(sl), :lang(tr)) {

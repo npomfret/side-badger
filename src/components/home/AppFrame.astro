@@ -1,0 +1,87 @@
+---
+/**
+ * A device or app-card frame for the illustrated app interface (homepage plan, "App frames and
+ * their app sources"). The interface inside is HTML built by the scene from the real app's tokens
+ * and labels, using the example group's data: it is illustration, not a screenshot, and all of
+ * its text is translated HTML. The frame does not celebrate: confetti happens outside it.
+ *
+ * Variants: `phone` (bezel, notch, portrait screen) and `card` (a modal or panel with a title
+ * bar). The default slot is the screen. The named slot `screenshot` is the later slot for a real
+ * capture; recorded decision 4 keeps the homepage free of screenshots, so scenes leave it empty.
+ *
+ * The screen is an inline-size container, so scenes size its contents with `cqi` units.
+ */
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'div'> {
+  variant?: 'phone' | 'card';
+  /** Title bar text for the `card` variant (translated by the caller) */
+  title?: string;
+  rotate?: number;
+}
+
+const { variant = 'phone', title, rotate = 0, class: className, style, ...rest } = Astro.props;
+const tilt = rotate ? `--rot:${rotate}deg` : '';
+---
+
+<div
+  {...rest}
+  class:list={['frame', `frame--${variant}`, className]}
+  data-prop="app-frame"
+  style={[tilt, style].filter(Boolean).join(';') || undefined}
+>
+  {variant === 'card' && title && <div class="frame__bar">{title}</div>}
+  <div class="frame__screen app-ui">
+    {Astro.slots.has('screenshot') ? <slot name="screenshot" /> : <slot />}
+  </div>
+</div>
+
+<style>
+  .frame {
+    --frame-radius: 14px;
+    position: relative;
+    box-shadow: var(--paper-shadow-lift);
+    rotate: var(--rot, 0deg);
+    min-inline-size: 0;
+  }
+  .frame__screen {
+    container-type: inline-size;
+    overflow: clip;
+  }
+  .frame--phone {
+    inline-size: min(100%, 17.5rem);
+    margin-inline: auto;
+    padding: 0.625rem;
+    border-radius: 2rem;
+    background: #111827;
+    aspect-ratio: 9 / 17;
+  }
+  .frame--phone::before {
+    content: '';
+    position: absolute;
+    inset-block-start: 0.875rem;
+    inset-inline: 38%;
+    block-size: 0.3125rem;
+    border-radius: 999px;
+    background: #374151;
+    z-index: 1;
+  }
+  .frame--phone .frame__screen {
+    block-size: 100%;
+    border-radius: 1.5rem;
+    padding-block-start: 1.75rem;
+    align-content: start;
+  }
+  .frame--card {
+    border-radius: var(--frame-radius);
+    background: var(--app-surface, #fff);
+    overflow: clip;
+  }
+  .frame__bar {
+    padding: 0.5rem 0.75rem;
+    background: var(--app-primary-dark, #15803d);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+</style>

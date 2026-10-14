@@ -1,0 +1,20 @@
+---
+/**
+ * A formatted amount in <bdi>, so a sign and digits stay together inside right-to-left text.
+ * `minor` is in minor units (cents; yen for JPY). Formatting happens at build time per locale.
+ */
+import type { Locale } from '@/i18n';
+import { formatMoney } from '../format';
+
+interface Props {
+  minor: number;
+  currency: string;
+  locale: Locale;
+  signed?: boolean;
+  whole?: boolean;
+}
+
+const { minor, currency, locale, signed, whole } = Astro.props;
+---
+
+<bdi>{formatMoney(minor, currency, locale, { signed, whole })}</bdi>

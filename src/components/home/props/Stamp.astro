@@ -1,0 +1,50 @@
+---
+/**
+ * A rubber stamp. The text is real, translated text. To land it on a stage, give it
+ * `data-anim="stamp"` and a `data-at` (see scenes.css). Decorative stamps (a seal) set
+ * `decorative`.
+ */
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'span'> {
+  tone?: 'red' | 'green' | 'ink';
+  rotate?: number;
+  decorative?: boolean;
+}
+
+const { tone = 'red', rotate = -6, decorative = false, class: className, style, ...rest } = Astro.props;
+const tilt = rotate ? `--rot:${rotate}deg` : '';
+---
+
+<span
+  {...rest}
+  class:list={['stamp', `stamp--${tone}`, className]}
+  data-prop="stamp"
+  aria-hidden={decorative ? 'true' : undefined}
+  style={[tilt, style].filter(Boolean).join(';') || undefined}><slot /></span
+>
+
+<style>
+  .stamp {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border: 3px double currentColor;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.2;
+    rotate: var(--rot, -6deg);
+    min-inline-size: 0;
+  }
+  .stamp--red {
+    color: var(--thread-red-text, #b3362e);
+  }
+  .stamp--green {
+    color: var(--green-ink, #2f6b2e);
+  }
+  .stamp--ink {
+    color: var(--ink, #1d2b24);
+  }
+</style>

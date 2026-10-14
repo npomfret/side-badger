@@ -1,0 +1,66 @@
+---
+/**
+ * The homepage shell: nine scenes in order, the page's JSON-LD and the scene controller.
+ * Replaces the old src/components/HomePage.astro (deleted by H11). Each scene is a placeholder
+ * from H5 until H6 to H10 replace its file; see the hooks at the top of each scene.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { t, type Locale } from '@/i18n';
+import { softwareApplicationNode, softwareApplicationId, webPageId, type JsonLdNode } from '@/seo/jsonld';
+import { featureList } from './data/home-features';
+import SceneChaos from './scenes/SceneChaos.astro';
+import SceneGroup from './scenes/SceneGroup.astro';
+import SceneExpenses from './scenes/SceneExpenses.astro';
+import SceneCurrencies from './scenes/SceneCurrencies.astro';
+import SceneTangle from './scenes/SceneTangle.astro';
+import SceneSettle from './scenes/SceneSettle.astro';
+import SceneWorlds from './scenes/SceneWorlds.astro';
+import SceneTrust from './scenes/SceneTrust.astro';
+import ScenePricing from './scenes/ScenePricing.astro';
+import '@/styles/home/tokens.css';
+import '@/styles/home/scenes.css';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+// One SoftwareApplication (price 0, GBP) in the page's @graph; the WebPage node says it is about it
+const jsonLd = [
+  softwareApplicationNode(locale, { featureList: featureList(locale) }),
+  { '@id': webPageId('home', locale), about: { '@id': softwareApplicationId(locale) } } as unknown as JsonLdNode,
+];
+---
+
+<BaseLayout page="home" title={t('meta.title', locale)} description={t('meta.description', locale)} locale={locale} jsonLd={jsonLd}>
+  <!-- Picks the motion engine before first paint: native, stages (fallback) or static. ?scenes=stages forces the fallback. -->
+  <script is:inline slot="head">
+    (function () {
+      var d = document.documentElement;
+      var flat = matchMedia('(prefers-reduced-motion: reduce), (max-height: 559px)').matches;
+      var native =
+        CSS.supports('animation-timeline: view()') &&
+        CSS.supports('animation-range: contain 0% contain 100%') &&
+        !/[?&]scenes=stages(&|$)/.test(location.search);
+      d.dataset.sceneEngine = flat ? 'static' : native ? 'native' : 'stages';
+    })();
+  </script>
+
+  <div class="home">
+    <SceneChaos locale={locale} />
+    <SceneGroup locale={locale} />
+    <SceneExpenses locale={locale} />
+    <SceneCurrencies locale={locale} />
+    <SceneTangle locale={locale} />
+    <SceneSettle locale={locale} />
+    <SceneWorlds locale={locale} />
+    <SceneTrust locale={locale} />
+    <ScenePricing locale={locale} />
+  </div>
+
+  <script>
+    import { initScenes } from './scene-controller';
+    initScenes();
+  </script>
+</BaseLayout>

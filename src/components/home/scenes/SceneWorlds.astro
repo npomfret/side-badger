@@ -1,0 +1,90 @@
+---
+/**
+ * Scene 7, worlds strip (`worlds`). PLACEHOLDER from H5, replaced by H10.
+ *
+ * Hooks for H10:
+ *   - <ScrollScene id="worlds" titleId="worlds-title" runway={{ desktop: 320, phone: 'entry' }}
+ *     stages={[25, 50, 75]} staticStage={3}>: one stage per world (0 housemates ... 3
+ *     celebrations). On phones and on the stages engine the strip is the native scroll-snap
+ *     carousel; reduced motion stacks the four worlds vertically.
+ *   - Slot `copy`: h2 (#worlds-title) and body. Slot `visual`: the track.
+ *   - Track: `[data-scene-track]` with `data-track-range="a,b"` (percent of the pinned range the
+ *     horizontal travel covers, here the default 0,100) containing one `[data-panel]` per
+ *     world. The controller scrolls the page to a panel's point of the range when focus lands
+ *     inside it (native engine, pinned only). Travel: translate: calc(var(--dir) * -1 * var(--travel)).
+ *   - Each panel is `article[data-panel][data-world="<id>"][data-tone="<id>"]` with an h3. Tone
+ *     palettes (--surface, --tone-ink, ...) are in styles/home/tokens.css.
+ *   - Links: <SceneLink to="world:<id>" /> per world (couples stays /go/app/ until its page is
+ *     published). Feature chips: WORLD_FEATURES and FEATURE_TITLE_KEYS in data/home-features.ts.
+ *   - data/worlds.ts and props/worlds/ are H10's to create.
+ */
+import ScrollScene from '../ScrollScene.astro';
+import SceneLink from '../props/SceneLink.astro';
+import { t, type Locale } from '@/i18n';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+---
+
+<ScrollScene
+  id="worlds"
+  titleId="worlds-title"
+  runway={{ desktop: 320, phone: 'entry' }}
+  stages={[25, 50, 75]}
+  staticStage={3}
+>
+  <Fragment slot="copy">
+    <h2 id="worlds-title">{t('home.worlds.title', locale)}</h2>
+    <p>{t('home.worlds.body', locale)}</p>
+  </Fragment>
+  <div slot="visual" data-scene-track data-track-range="0,100" data-hook="worlds-track">
+    <article data-panel data-world="housemates" data-tone="housemates">
+      <h3>{t('home.worlds.housemates.title', locale)}</h3>
+      <p>{t('home.worlds.housemates.body', locale)}</p>
+      <SceneLink to="world:housemates" locale={locale} />
+    </article>
+    <article data-panel data-world="couples" data-tone="couples">
+      <h3>{t('home.worlds.couples.title', locale)}</h3>
+      <p>{t('home.worlds.couples.body', locale)}</p>
+      <SceneLink to="world:couples" locale={locale} />
+    </article>
+    <article data-panel data-world="trips" data-tone="trips">
+      <h3>{t('home.worlds.trips.title', locale)}</h3>
+      <p>{t('home.worlds.trips.body', locale)}</p>
+      <SceneLink to="world:trips" locale={locale} />
+    </article>
+    <article data-panel data-world="celebrations" data-tone="celebrations">
+      <h3>{t('home.worlds.celebrations.title', locale)}</h3>
+      <p>{t('home.worlds.celebrations.body', locale)}</p>
+      <SceneLink to="world:celebrations" locale={locale} />
+    </article>
+  </div>
+</ScrollScene>
+
+<style>
+  [data-scene-track] {
+    display: grid;
+    gap: var(--scene-gap);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  }
+  [data-panel] {
+    background: var(--surface);
+    color: var(--tone-ink);
+    padding: 1rem;
+    border-radius: var(--radius-md, 12px);
+    box-shadow: var(--paper-shadow);
+    display: grid;
+    gap: 0.5rem;
+    align-content: start;
+  }
+  [data-panel] h3,
+  [data-panel] p {
+    margin: 0;
+    color: inherit;
+  }
+  [data-panel] h3 {
+    font-size: var(--text-xl, 1.25rem);
+  }
+</style>

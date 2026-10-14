@@ -1,0 +1,43 @@
+---
+/**
+ * Scene 3, expenses land (`expenses`). PLACEHOLDER from H5, replaced by H7.
+ *
+ * Hooks for H7:
+ *   - <ScrollScene id="expenses" titleId="expenses-title" runway={{ desktop: 200, phone: 160 }}
+ *     stages={[20, 50, 75]} staticStage={3}>
+ *     Stages: 0 receipt and empty form, 1 scanning, 2 fields ticked, 3 ledger cards. Pinned on phones too.
+ *   - Slot `copy`: the h2 (#expenses-title) and body, plus the scan note.
+ *   - Slot `visual`: the illustrated stage; `div[data-hook="expenses-visual"]` marks where it goes.
+ *   - Slot `link`: <SceneLink to="expenses" locale={locale} />, which resolves through data/links.ts.
+ *   - Motion: generic data-anim / data-at on elements (scenes.css), or your own per-element
+ *     keyframes on `animation-timeline: --scene`. Keep data-at in 1..3; reduced
+ *     motion rests at staticStage.
+ *   - The Google disclosure (home.expenses.scanNote) is rendered below as <small
+ *     data-hook="expenses-scan-note">; keep it visible in every stage and path.
+ *   - Amounts come from data/example-group.ts through format.ts (formatMoney, props/Money.astro).
+ */
+import ScrollScene from '../ScrollScene.astro';
+import SceneLink from '../props/SceneLink.astro';
+import { t, type Locale } from '@/i18n';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+---
+
+<ScrollScene
+  id="expenses"
+  titleId="expenses-title"
+  runway={{ desktop: 200, phone: 160 }}
+  stages={[20, 50, 75]}
+  staticStage={3}
+>
+  <Fragment slot="copy">
+    <h2 id="expenses-title">{t('home.expenses.title', locale)}</h2>
+    <p>{t('home.expenses.body', locale)}</p>
+    <small data-hook="expenses-scan-note">{t('home.expenses.scanNote', locale)}</small>
+  </Fragment>
+  <div slot="visual" class="scene-placeholder" data-hook="expenses-visual" aria-hidden="true"></div>
+  <Fragment slot="link"><SceneLink to="expenses" locale={locale} /></Fragment>
+</ScrollScene>

@@ -1,0 +1,97 @@
+---
+/**
+ * The shared scroll-scene primitive (homepage plan, "The scroll-scene primitive").
+ *
+ * Renders `<section class="scene">` with a sticky `.scene__stage` and slots for copy, visual and
+ * link. `src/styles/home/scenes.css` owns the view timeline, the @supports blocks, the stage
+ * fallback and reduced motion; `scene-controller.ts` owns the fallback stage regions.
+ *
+ * Slots: `copy` (heading, body), `visual` (the illustrated stage), `link` (scene links), and the
+ * default slot (anything else inside the stage). `lead` renders before the runway, in normal flow
+ * and outside the view timeline: the tangle's phone lede ("Prototype findings"). It is not pinned
+ * and must not use data-anim. A scene that shows it only on some widths hides the duplicate with
+ * CSS, never by rendering the text twice.
+ *
+ * Structure: section.scene (data attributes, data-stage) > [.scene__lead] + .scene__runway (the
+ * height, the view timeline `--scene` and the fallback stage regions) > .scene__stage (sticky).
+ *
+ * Stages: `stages` lists the boundaries in percent of the pinned range. N boundaries make N + 1
+ * stages numbered from 0: `[10, 30, 50, 68, 90]` is 0 to 10 %, 10 to 30 %, … 90 to 100 %. An
+ * entry scene has none and uses stage 0 (before it enters) and stage 1 (entered); an entry scene
+ * on a phone that is pinned on desktop jumps to its last stage when it enters. `staticStage` is
+ * the stage the reduced-motion and no-pin frame rests at; it is rendered as `data-stage`.
+ */
+type Runway = number | 'entry';
+
+interface Props {
+  /** Section id and the scene's name in `launchHref` positions (`scene-<id>`) */
+  id: string;
+  /** Id of the heading that labels the section */
+  titleId: string;
+  /** `{ desktop, phone }` in vh, either may be 'entry'; or just 'entry' for no pinning at all */
+  runway: { desktop: Runway; phone: Runway } | 'entry';
+  /** Stage boundaries in percent of the pinned range; omit for an entry scene */
+  stages?: number[];
+  /** The stage shown under reduced motion. Defaults to the last stage (1 for an entry scene). */
+  staticStage?: number;
+  /** Section or world palette: `table`, `housemates`, `couples`, `trips` or `celebrations` */
+  tone?: 'table' | 'housemates' | 'couples' | 'trips' | 'celebrations';
+  /**
+   * Entry scenes only. `enter` (default): the last stage arrives as the scene scrolls into view.
+   * `exit`: the scene rests at stage 0 and reaches its last stage as it scrolls out (the hero).
+   */
+  stageOn?: 'enter' | 'exit';
+  /** Fire confetti once when the pinned range passes this percent (entry scenes: when entered) */
+  confettiAt?: number;
+  class?: string;
+}
+
+const {
+  id,
+  titleId,
+  runway,
+  stages = [],
+  staticStage = stages.length || 1,
+  tone = 'table',
+  stageOn = 'enter',
+  confettiAt,
+  class: className,
+} = Astro.props;
+
+const desktop = runway === 'entry' ? 'entry' : runway.desktop;
+const phone = runway === 'entry' ? 'entry' : runway.phone;
+const pin = (value: Runway) => (value === 'entry' ? 'entry' : 'pinned');
+
+const style = [
+  typeof desktop === 'number' ? `--runway-desktop:${desktop}vh` : '',
+  typeof phone === 'number' ? `--runway-phone:${phone}vh` : '',
+]
+  .filter(Boolean)
+  .join(';');
+---
+
+<section
+  id={id}
+  class:list={['scene', className]}
+  aria-labelledby={titleId}
+  data-scene={id}
+  data-tone={tone}
+  data-pin={pin(desktop)}
+  data-pin-phone={pin(phone)}
+  data-stages={stages.join(',')}
+  data-static-stage={staticStage}
+  data-stage={staticStage}
+  data-stage-on={stageOn}
+  data-confetti-at={confettiAt}
+  style={style || undefined}
+>
+  {Astro.slots.has('lead') && <div class="scene__lead"><slot name="lead" /></div>}
+  <div class="scene__runway">
+    <div class="scene__stage">
+      {Astro.slots.has('copy') && <div class="scene__copy"><slot name="copy" /></div>}
+      {Astro.slots.has('visual') && <div class="scene__visual"><slot name="visual" /></div>}
+      {Astro.slots.has('link') && <div class="scene__link"><slot name="link" /></div>}
+      <slot />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,82 @@
+---
+/**
+ * A till receipt with a torn edge. Amounts arrive already formatted (`formatMoney()`), so this
+ * wraps them in <bdi> and never builds a number itself. Dot leaders follow the text direction.
+ */
+import type { HTMLAttributes } from 'astro/types';
+
+interface Line {
+  label: string;
+  amount?: string;
+}
+
+interface Props extends HTMLAttributes<'div'> {
+  title: string;
+  lines?: Line[];
+  total?: Line;
+  rotate?: number;
+  decorative?: boolean;
+}
+
+const { title, lines = [], total, rotate = 0, decorative = false, class: className, style, ...rest } = Astro.props;
+const tilt = rotate ? `--rot:${rotate}deg` : '';
+---
+
+<div
+  {...rest}
+  class:list={['receipt', className]}
+  data-prop="receipt"
+  aria-hidden={decorative ? 'true' : undefined}
+  style={[tilt, style].filter(Boolean).join(';') || undefined}
+>
+  <p class="receipt__title">{title}</p>
+  {lines.length > 0 && (
+    <ul class="receipt__lines">
+      {lines.map(line => (
+        <li><span>{line.label}</span>{line.amount && <bdi>{line.amount}</bdi>}</li>
+      ))}
+    </ul>
+  )}
+  {total && (
+    <p class="receipt__total"><span>{total.label}</span>{total.amount && <bdi>{total.amount}</bdi>}</p>
+  )}
+  <slot />
+</div>
+
+<style>
+  .receipt {
+    background: var(--paper, #fffdf8);
+    color: var(--ink, #1d2b24);
+    box-shadow: var(--paper-shadow);
+    padding: 0.75rem 0.875rem 1.25rem;
+    font-family: var(--font-mono, monospace);
+    font-size: 0.8125rem;
+    line-height: 1.35;
+    rotate: var(--rot, 0deg);
+    min-inline-size: 0;
+    /* Torn bottom edge */
+    mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 12px 100%;
+  }
+  .receipt__title {
+    margin: 0 0 0.5rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  .receipt__lines {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .receipt__lines li,
+  .receipt__total {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .receipt__total {
+    margin: 0.5rem 0 0;
+    padding-block-start: 0.375rem;
+    border-block-start: 1px dashed var(--ink-muted, #4e5a52);
+    font-weight: 700;
+  }
+</style>

@@ -1,0 +1,40 @@
+---
+/**
+ * Scene 9, pricing and call to action (`start`). PLACEHOLDER from H5, replaced by H9.
+ *
+ * Hooks for H9:
+ *   - <ScrollScene id="start" titleId="start-title" runway="entry" staticStage={1}>: an entry
+ *     scene; stage 1 = receipt printed, logo halves joined.
+ *   - Two h2s in the `copy` slot: pricing (#start-title) and the call to action (#cta-title).
+ *     The pricing body is exactly "Free. No ads. No daily limits." (site plan D2), linked to
+ *     /pricing/ with pricingHref(). Receipt rows: home.cta.receiptAds / receiptTrackers /
+ *     receiptDrama, with no price line.
+ *   - The sign-up button: registerHref('final', locale), rel="nofollow". Add `data-confetti` to
+ *     fire canvas-confetti on click (the controller loads it lazily; not under reduced motion).
+ *   - `[data-hook="start-visual"]` marks the receipt and joined-logo area.
+ */
+import ScrollScene from '../ScrollScene.astro';
+import { t, type Locale } from '@/i18n';
+import { pricingHref, registerHref } from '../data/links';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+---
+
+<ScrollScene id="start" titleId="start-title" runway="entry" staticStage={1}>
+  <Fragment slot="copy">
+    <h2 id="start-title">{t('home.pricing.title', locale)}</h2>
+    <p>{t('home.pricing.body', locale)}</p>
+    <a class="scene-link" href={pricingHref(locale)}>{t('home.pricing.link', locale)}</a>
+    <h2 id="cta-title">{t('home.cta.title', locale)}</h2>
+    <p>{t('home.cta.body', locale)}</p>
+  </Fragment>
+  <div slot="visual" class="scene-placeholder" data-hook="start-visual" aria-hidden="true"></div>
+  <Fragment slot="link">
+    <a class="btn btn-primary btn-lg" href={registerHref('final', locale)} rel="nofollow" data-confetti>
+      {t('home.hero.ctaPrimary', locale)}
+    </a>
+  </Fragment>
+</ScrollScene>

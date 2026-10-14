@@ -1,0 +1,41 @@
+---
+/**
+ * A member avatar: a coloured disc with the first letter of the (translated) name. `color` is a
+ * hex from the example group's `MEMBERS[].color.light`; white text meets 4.5:1 on those.
+ */
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'span'> {
+  name: string;
+  color: string;
+  /** Diameter in CSS length, default 2.5rem */
+  size?: string;
+}
+
+const { name, color, size = '2.5rem', class: className, style, ...rest } = Astro.props;
+const initial = Array.from(name.trim())[0] ?? '';
+---
+
+<span
+  {...rest}
+  class:list={['avatar', className]}
+  data-prop="avatar"
+  aria-hidden="true"
+  style={[`--avatar:${color}`, `--size:${size}`, style].filter(Boolean).join(';')}>{initial}</span
+>
+
+<style>
+  .avatar {
+    display: inline-grid;
+    place-items: center;
+    inline-size: var(--size, 2.5rem);
+    block-size: var(--size, 2.5rem);
+    flex: none;
+    border-radius: 50%;
+    background: var(--avatar);
+    color: #fff;
+    font-weight: 700;
+    font-size: calc(var(--size, 2.5rem) * 0.45);
+    line-height: 1;
+  }
+</style>

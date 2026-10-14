@@ -162,6 +162,16 @@ describe('dashed debt threads', () => {
         }
     });
 
+    it('needs a gap of L + 11, because a gap of exactly L leaves a stub unless L is a multiple of 11', () => {
+        // The findings ask for "a gap of at least L". With the run at 11n < L, the next period's
+        // first dash starts at 11n + gap, inside the undrawn window L..2L when gap is only L.
+        const length = 100.5;
+        const pairs = Math.floor(length / 11);
+        const tooShort = `${'7 4 '.repeat(pairs)}0 ${length}`;
+        expect(visible(tooShort, length, 2 * length)).toBeGreaterThan(0);
+        expect(visible(dashedDasharray(length).value, length, 2 * length)).toBe(0);
+    });
+
     it('rounds the pair count down for awkward lengths', () => {
         expect(dashedDasharray(110).pairs).toBe(10);
         expect(dashedDasharray(109.99).pairs).toBe(9);

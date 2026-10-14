@@ -1,20 +1,31 @@
 ---
 /**
- * Scene 1, chaos (`top`). PLACEHOLDER from H5, replaced by H6.
+ * Scene 1, chaos (`top`): the messy table. An entry scene that tidies as it scrolls OUT (stage 1
+ * = tidy) and rests at stage 0, the mess, under reduced motion ("because chaos is the point").
  *
- * Hooks for H6:
- *   - <ScrollScene id="top" titleId="top-title" runway="entry" stageOn="exit" staticStage={0}>:
- *     an entry scene that tidies as it scrolls OUT (stage 1 = tidy), and rests at stage 0 (the
- *     messy start) under reduced motion. Native range defaults to `exit 0% exit 70%`.
- *   - Slot `copy`: the ONLY h1 on the page (#top-title), lede, audience, primary and secondary
- *     calls to action, and the pricing line. Keep them out of any animated opacity.
- *   - Slot `visual`: the messy-table props. Use props/ (Receipt, StickyNote, ChatBubble,
- *     AppFrame) with data-anim / data-at, or your own keyframes.
- *   - Links: registerHref('hero', locale) for the button, resolveHowItWorks(locale) for the
- *     secondary button, pricingHref(locale) for the pricing line (all from data/links.ts).
+ * Copy: the page's only h1, the lede, the audience line, the `/go/register/` button
+ * (`registerHref('hero')`), the "See how it works" link and the pricing line
+ * ("Free. No ads. No daily limits." linking to /pricing/). None of it animates.
+ *
+ * Visual: three receipts, a spreadsheet with an unfinished total, a sticky note and a phone with
+ * the group chat. Each prop sits in a `.chaos__item` wrapper that carries the tidy motion
+ * (translate and rotate from the mess to nothing, mirrored through `--dir`); the spreadsheet also
+ * folds away. Inside, `.chaos__breathe` carries the gentle ambient scale, which the controller
+ * stops after 5 s. Rest state (no engine, no JS) is the tidy layout.
+ *
+ * Native: `animation-timeline: --scene` over the scene's exit range. Stages engine: `data-stage`
+ * 0 (mess) to 1 (tidy), with transitions after `data-scene-ready`.
+ *
+ * Phones: copy first, then a compact cluster (phone, two receipts, the sticky note). The
+ * spreadsheet and the third receipt are not shown below 600px.
  */
 import ScrollScene from '../ScrollScene.astro';
+import Receipt from '../props/Receipt.astro';
+import StickyNote from '../props/StickyNote.astro';
+import Spreadsheet from '../props/chaos/Spreadsheet.astro';
+import ChatPhone from '../props/chaos/ChatPhone.astro';
 import { t, type Locale } from '@/i18n';
+import { formatMoney } from '../format';
 import { pricingHref, registerHref, resolveHowItWorks } from '../data/links';
 
 interface Props {
@@ -22,6 +33,16 @@ interface Props {
 }
 const { locale } = Astro.props;
 const howItWorks = resolveHowItWorks(locale);
+
+// Illustrative amounts for the messy props, formatted for the locale
+const taxi = formatMoney(4200, 'JPY', locale);
+const groceries = formatMoney(3850, 'EUR', locale);
+const villa = formatMoney(25000, 'EUR', locale);
+const sheetRows = [
+  { label: t('home.chaos.receiptTaxi', locale), amount: taxi },
+  { label: t('home.chaos.receiptGroceries', locale), amount: groceries },
+  { label: t('home.chaos.receiptVilla', locale), amount: villa },
+];
 ---
 
 <ScrollScene id="top" titleId="top-title" runway="entry" stageOn="exit" staticStage={0}>
@@ -39,5 +60,188 @@ const howItWorks = resolveHowItWorks(locale);
     </div>
     <p><a class="scene-link" href={pricingHref(locale)}>{t('home.hero.trust', locale)}</a></p>
   </Fragment>
-  <div slot="visual" class="scene-placeholder" data-hook="top-visual" aria-hidden="true"></div>
+
+  <div slot="visual" class="chaos">
+    <div class="chaos__item chaos__item--taxi" style="--mx:-14px;--my:-18px;--mr:-7deg">
+      <div class="chaos__breathe" data-ambient>
+        <Receipt
+          title={t('home.chaos.receiptTaxi', locale)}
+          total={{ label: '', amount: taxi }}
+        />
+      </div>
+    </div>
+    <div class="chaos__item chaos__item--sheet" style="--mx:12px;--my:-14px;--mr:3deg">
+      <div class="chaos__breathe" data-ambient>
+        <Spreadsheet rows={sheetRows} total={t('home.chaos.sheetError', locale)} />
+      </div>
+    </div>
+    <div class="chaos__item chaos__item--phone" style="--mx:-10px;--my:14px;--mr:-5deg">
+      <div class="chaos__breathe" data-ambient>
+        <ChatPhone locale={locale} class="chaos__phone" />
+      </div>
+    </div>
+    <div class="chaos__item chaos__item--sticky" style="--mx:16px;--my:10px;--mr:8deg">
+      <div class="chaos__breathe" data-ambient>
+        <StickyNote>{t('home.chaos.sticky', locale)}</StickyNote>
+      </div>
+    </div>
+    <div class="chaos__item chaos__item--groceries" style="--mx:8px;--my:18px;--mr:5deg">
+      <div class="chaos__breathe" data-ambient>
+        <Receipt
+          title={t('home.chaos.receiptGroceries', locale)}
+          total={{ label: '', amount: groceries }}
+        />
+      </div>
+    </div>
+    <div class="chaos__item chaos__item--villa" style="--mx:18px;--my:-8px;--mr:-6deg">
+      <div class="chaos__breathe" data-ambient>
+        <Receipt
+          title={t('home.chaos.receiptVilla', locale)}
+          total={{ label: '', amount: villa }}
+        />
+      </div>
+    </div>
+  </div>
 </ScrollScene>
+
+<style>
+  /* ===== Layout: a grid so props grow with their text and never clip ===== */
+  .chaos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+      'taxi sheet sheet'
+      'phone sticky villa'
+      'phone groceries villa';
+    gap: 0.875rem;
+    align-items: start;
+    padding-block: 0.75rem;
+  }
+  .chaos__item {
+    display: grid;
+    min-inline-size: 0;
+    translate: 0 0;
+    rotate: 0deg;
+  }
+  .chaos__item--taxi { grid-area: taxi; }
+  .chaos__item--sheet { grid-area: sheet; transform-origin: 50% 0; }
+  .chaos__item--phone { grid-area: phone; }
+  .chaos__item--sticky { grid-area: sticky; align-self: center; }
+  .chaos__item--groceries { grid-area: groceries; }
+  .chaos__item--villa { grid-area: villa; }
+  .chaos__breathe {
+    display: grid;
+    min-inline-size: 0;
+    animation: chaos-breathe 2.6s ease-in-out infinite alternate;
+  }
+  .chaos :global(.chaos__phone) {
+    aspect-ratio: auto;
+    min-block-size: 15rem;
+    inline-size: 100%;
+  }
+  .chaos :global(.chaos__phone .frame__screen) {
+    padding-block-end: 1rem;
+  }
+  @keyframes chaos-breathe {
+    to { scale: 1.015; }
+  }
+
+  /* Phones: the compact cluster (phone, two receipts, a sticky note) below the copy */
+  @media (max-width: 599px) {
+    .chaos {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-areas:
+        'phone taxi'
+        'phone groceries'
+        'sticky sticky';
+    }
+    .chaos {
+      padding-inline: 0.75rem;
+    }
+    .chaos__item {
+      --k: 0.45;
+    }
+    .chaos__item--sheet,
+    .chaos__item--villa {
+      display: none;
+    }
+    .chaos__item--sticky {
+      justify-self: center;
+      inline-size: min(100%, 15rem);
+    }
+  }
+
+  /* The fixed header is taller than --header-h assumes (shell issue, P23), so clear it here */
+  :global(#top .scene__stage) {
+    padding-block-start: 3.5rem;
+  }
+
+  /* ===== CJK headings: one glyph is a full em wide, so the global heading size wraps to 6+ lines
+     and pushes the call to action below the fold. Smaller type and a tighter stack keep it in the
+     first viewport (1280x800, 390x844, 360x640). ===== */
+  #top-title:lang(ja),
+  #top-title:lang(zh),
+  #top-title:lang(ko) {
+    font-size: clamp(1.625rem, 1.2vw + 1.25rem, 2.375rem);
+    line-height: 1.25;
+  }
+  :global(.scene[data-scene='top'] .scene__copy:lang(ja)),
+  :global(.scene[data-scene='top'] .scene__copy:lang(zh)),
+  :global(.scene[data-scene='top'] .scene__copy:lang(ko)) {
+    gap: 0.625rem;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  /* ===== Motion. Rest state (no engine): the tidy layout. ===== */
+
+  /* Stages and static engines: stage 0 is the mess, stage 1 is tidy */
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='0']) .chaos__item {
+    translate: calc(var(--mx) * var(--k, 1) * var(--dir, 1)) calc(var(--my) * var(--k, 1));
+    rotate: var(--mr);
+  }
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='1']) .chaos__item--sheet {
+    scale: 1 0.04;
+  }
+  :global(html[data-scene-engine='stages'][data-scene-ready]) .chaos__item {
+    transition:
+      translate var(--stage-ms) var(--ease-paper),
+      rotate var(--stage-ms) var(--ease-paper),
+      scale var(--stage-ms) var(--ease-paper);
+  }
+
+  /* Native: per-element keyframes on the scene's view timeline, over the exit range */
+  @keyframes chaos-tidy {
+    from {
+      translate: calc(var(--mx) * var(--k, 1) * var(--dir, 1)) calc(var(--my) * var(--k, 1));
+      rotate: var(--mr);
+    }
+    to {
+      translate: 0 0;
+      rotate: 0deg;
+    }
+  }
+  @keyframes chaos-fold {
+    to { scale: 1 0.04; }
+  }
+  @supports (animation-timeline: view()) and (animation-range: exit 0% exit 70%) {
+    @media (prefers-reduced-motion: no-preference) and (min-height: 560px) {
+      :global(html[data-scene-engine='native']) .chaos__item {
+        animation: chaos-tidy linear both;
+        animation-timeline: --scene;
+        animation-range: var(--range, exit 0% exit 70%);
+        animation-timing-function: var(--ease-paper);
+      }
+      :global(html[data-scene-engine='native']) .chaos__item--sheet {
+        animation:
+          chaos-tidy linear both,
+          chaos-fold linear both;
+        animation-timeline: --scene, --scene;
+        animation-range:
+          exit 0% exit 70%,
+          exit 30% exit 70%;
+        animation-timing-function: var(--ease-paper), var(--ease-paper);
+      }
+    }
+  }
+</style>

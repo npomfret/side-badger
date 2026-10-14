@@ -1,0 +1,58 @@
+---
+/**
+ * The app's invite screen, Link tab (`InviteModal` / `ViaLinkContent`): the group name, the invite
+ * link with "Copy", and a QR code with "Or scan this code". Illustration built from the app's
+ * labels and tokens. The link text is a placeholder address, not a real invite.
+ */
+import AppFrame from '../../AppFrame.astro';
+import QrCode from './QrCode.astro';
+import { t, type Locale } from '@/i18n';
+
+interface Props {
+  locale: Locale;
+  class?: string;
+}
+
+const { locale, class: className } = Astro.props;
+---
+
+<AppFrame variant="phone" class={className}>
+  <p class="app-title">{t('home.group.name', locale)}</p>
+  <div class="app-field">
+    <span>{t('home.group.inviteLink', locale)}</span>
+    <bdi class="invite__url" dir="ltr">sidebadger.me/…/7k2x</bdi>
+  </div>
+  <div class="invite__copy"><span class="app-button">{t('home.group.copy', locale)}</span></div>
+  <div class="invite__qr">
+    <QrCode />
+    <p>{t('home.group.scanCode', locale)}</p>
+  </div>
+</AppFrame>
+
+<style>
+  .invite__url {
+    font-size: 0.75rem;
+    overflow-wrap: anywhere;
+  }
+  .invite__copy {
+    display: grid;
+  }
+  .invite__copy .app-button {
+    font-size: 0.8125rem;
+  }
+  .invite__qr {
+    display: grid;
+    justify-items: center;
+    gap: 0.25rem;
+    margin-block-start: 0.25rem;
+  }
+  .invite__qr :global(.qr) {
+    inline-size: min(55%, 6rem);
+  }
+  .invite__qr p {
+    margin: 0;
+    font-size: 0.75rem;
+    text-align: center;
+    color: #4b5563;
+  }
+</style>

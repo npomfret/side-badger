@@ -1,0 +1,62 @@
+---
+/**
+ * A QR-code-like square for the invite screen. It is an illustration, not a real code: the cells
+ * come from a fixed pattern (three finder squares plus pseudo-random modules), so it never changes
+ * between builds and encodes nothing. Hidden from assistive technology; the caption beside it
+ * carries the meaning.
+ */
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+
+const N = 21;
+const finder = (x: number, y: number) => {
+  const inBox = (ox: number, oy: number) => x >= ox && x < ox + 7 && y >= oy && y < oy + 7;
+  const spot = (ox: number, oy: number) => {
+    const dx = x - ox;
+    const dy = y - oy;
+    const ring = dx === 0 || dx === 6 || dy === 0 || dy === 6;
+    const core = dx >= 2 && dx <= 4 && dy >= 2 && dy <= 4;
+    return ring || core;
+  };
+  if (inBox(0, 0)) return spot(0, 0);
+  if (inBox(N - 7, 0)) return spot(N - 7, 0);
+  if (inBox(0, N - 7)) return spot(0, N - 7);
+  return null;
+};
+// Quiet zone around each finder square, then a fixed LCG for the data modules
+let seed = 7;
+const next = () => (seed = (seed * 1103515245 + 12345) & 0x7fffffff) / 0x7fffffff;
+let d = '';
+for (let y = 0; y < N; y++) {
+  for (let x = 0; x < N; x++) {
+    const f = finder(x, y);
+    const nearFinder = (x < 8 && y < 8) || (x >= N - 8 && y < 8) || (x < 8 && y >= N - 8);
+    const on = f !== null ? f : nearFinder ? false : next() > 0.52;
+    if (on) d += `M${x} ${y}h1v1h-1z`;
+  }
+}
+---
+
+<svg
+  class:list={['qr', className]}
+  data-prop="qr"
+  viewBox={`-1 -1 ${N + 2} ${N + 2}`}
+  aria-hidden="true"
+  focusable="false"
+  shape-rendering="crispEdges"
+>
+  <rect x="-1" y="-1" width={N + 2} height={N + 2} fill="#fff"></rect>
+  <path d={d} fill="#111827"></path>
+</svg>
+
+<style>
+  .qr {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 1;
+  }
+</style>

@@ -30,7 +30,7 @@ export default {
   'features.fxConversion.title': 'Current exchange rates',
   'features.invites.title': 'Easy group invites',
   'features.lists.title': 'Shared Lists',
-  'features.noTracking.title': 'No third-party trackers',
+  'features.noTracking.title': 'No ad or analytics trackers',
   'features.participants.title': 'Comments & attachments',
   'features.polls.title': 'Group Polls',
   'features.reactions.title': 'Emoji reactions',

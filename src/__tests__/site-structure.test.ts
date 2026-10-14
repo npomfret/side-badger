@@ -3,9 +3,7 @@ import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import {
   ensureTrailingSlash,
-  getBuildLocales,
   getLocalizedPath,
-  getLocalePaths,
   isRTL,
   localeAliases,
   localeConfig,
@@ -20,7 +18,7 @@ import {
 import { pseudoText } from '@/i18n/pseudo';
 import en from '@/i18n/en';
 import { pages, allPages } from '@/site/pages';
-import { pageForPath, pathsFor, pathsForType } from '@/site/routes';
+import { pageForPath } from '@/site/routes';
 import { absoluteUrl, canonicalFor, launchHref, localizedPath } from '@/seo/urls';
 
 afterEach(() => {
@@ -28,6 +26,7 @@ afterEach(() => {
   vi.resetModules();
   vi.doUnmock('@/i18n/pending/keys.json');
   vi.doUnmock('@/i18n/pending/pages.json');
+  vi.doUnmock('@/i18n/en');
   vi.doUnmock('@/site/preview-pages');
 });
 
@@ -259,51 +258,78 @@ describe('tf (D13)', () => {
   });
 });
 
+// Route generation must not depend on the repo's current manifests or on English keys that no
+// locale has yet (the redesign branch's English-first state, D38). Each test loads fresh copies of
+// the modules with the manifests mocked and English cut to the keys every locale has.
+type Manifests = { keys?: string[]; pages?: string[]; previewPages?: unknown[]; en?: Record<string, string> };
+
+async function loadFresh({ keys = [], pages: pendingPages = [], previewPages, en: enOverride }: Manifests = {}) {
+  const english = en as Record<string, string>;
+  const common = Object.keys(english).filter(key =>
+    Object.values(translations).every(table => key in (table as Record<string, string>))
+  );
+  vi.resetModules();
+  vi.doMock('@/i18n/pending/keys.json', () => ({ default: { added: keys, removed: [] } }));
+  vi.doMock('@/i18n/pending/pages.json', () => ({ default: { added: pendingPages } }));
+  vi.doMock('@/i18n/en', () => ({
+    default: enOverride ?? Object.fromEntries(common.map(key => [key, english[key]])),
+  }));
+  if (previewPages) vi.doMock('@/site/preview-pages', () => ({ previewPages }));
+  const i18n = await import('@/i18n');
+  const routes = await import('@/site/routes');
+  const registry = await import('@/site/pages');
+  return { i18n, routes, registry };
+}
+
 describe('route generation', () => {
-  const localeParams = (paths: ReturnType<typeof pathsFor>) =>
+  const localeParams = (paths: { params: { locale: string | undefined } }[]) =>
     paths.map(p => p.params.locale ?? 'en');
 
-  it('builds every real locale in strict mode, and no alias', () => {
-    const paths = pathsFor('home');
+  it('builds every real locale in strict mode, and no alias', async () => {
+    vi.stubEnv('I18N_MODE', 'strict');
+    const { i18n, routes } = await loadFresh();
+    const paths = routes.pathsFor('home');
     expect(paths).toHaveLength(39);
     expect(localeParams(paths).sort()).toEqual([...locales].sort());
     for (const alias of localeAliases) expect(localeParams(paths)).not.toContain(alias);
     expect(paths.find(p => p.props.locale === 'en')!.params.locale).toBeUndefined();
-    expect(getLocalePaths()).toHaveLength(39);
+    expect(i18n.getLocalePaths()).toHaveLength(39);
   });
 
-  it('builds 39 × 5 pages in strict mode', () => {
-    const total = pages.reduce((sum, page) => sum + pathsFor(page.id).length, 0);
+  it('builds 39 × 5 pages in strict mode', async () => {
+    vi.stubEnv('I18N_MODE', 'strict');
+    const { routes, registry } = await loadFresh();
+    const total = registry.pages.reduce((sum, page) => sum + routes.pathsFor(page.id).length, 0);
     expect(total).toBe(39 * 5);
-    expect(pathsForType('legal')).toHaveLength(39 * 3);
-    expect(pathsForType('home')).toHaveLength(39);
-    expect(pathsForType('pricing')).toHaveLength(39);
+    expect(routes.pathsForType('legal')).toHaveLength(39 * 3);
+    expect(routes.pathsForType('home')).toHaveLength(39);
+    expect(routes.pathsForType('pricing')).toHaveLength(39);
   });
 
-  it('adds the four pseudo prefixes under PREVIEW_PSEUDO=1', () => {
+  it('adds the four pseudo prefixes under PREVIEW_PSEUDO=1', async () => {
     vi.stubEnv('PREVIEW_PSEUDO', '1');
-    const built = localeParams(pathsFor('pricing'));
+    const { i18n, routes } = await loadFresh();
+    const built = localeParams(routes.pathsFor('pricing'));
     expect(built).toHaveLength(43);
     for (const code of pseudoLocales) expect(built).toContain(code);
-    expect(getBuildLocales()).toHaveLength(43);
+    expect(i18n.getBuildLocales()).toHaveLength(43);
   });
 
-  it('rejects an invalid I18N_MODE', () => {
+  it('rejects an invalid I18N_MODE', async () => {
     vi.stubEnv('I18N_MODE', 'loose');
-    expect(() => getBuildLocales()).toThrow(/I18N_MODE/);
+    const { i18n } = await loadFresh();
+    expect(() => i18n.getBuildLocales()).toThrow(/I18N_MODE/);
   });
 
-  it('English-first with nothing pending still builds every complete locale', () => {
+  it('English-first with nothing pending still builds every complete locale', async () => {
     vi.stubEnv('I18N_MODE', 'english-first');
-    expect(getBuildLocales()).toHaveLength(39);
+    const { i18n } = await loadFresh();
+    expect(i18n.getBuildLocales()).toHaveLength(39);
   });
 
   it('English-first builds English only when a pending key is missing from every locale', async () => {
     vi.stubEnv('I18N_MODE', 'english-first');
-    vi.resetModules();
-    vi.doMock('@/i18n/pending/keys.json', () => ({ default: { added: ['scratch.new.key'], removed: [] } }));
-    const i18n = await import('@/i18n');
-    const routes = await import('@/site/routes');
+    const { i18n, routes } = await loadFresh({ keys: ['scratch.new.key'] });
     expect(i18n.getBuildLocales()).toEqual(['en']);
     for (const id of ['home', 'pricing', 'privacy', 'terms', 'cookies']) {
       const paths = routes.pathsFor(id);
@@ -317,20 +343,23 @@ describe('route generation', () => {
   });
 
   it('English-first skips exactly the locales missing a pending key that English has', async () => {
-    const key = 'zz.scratch' as keyof typeof en;
+    const key = 'zz.scratch';
     const english = en as Record<string, string>;
-    const french = translations.fr as Record<string, string>;
-    english[key] = 'Scratch';
+    const common = Object.keys(english).filter(k =>
+      Object.values(translations).every(table => k in (table as Record<string, string>))
+    );
+    const scratchEn = { ...Object.fromEntries(common.map(k => [k, english[k]])), [key]: 'Scratch' };
+    const { i18n, routes } = await loadFresh({ en: scratchEn });
+    const french = i18n.translations.fr as Record<string, string>;
     french[key] = 'Brouillon';
     try {
       vi.stubEnv('I18N_MODE', 'english-first');
-      expect(getBuildLocales()).toEqual(['en', 'fr']);
-      expect(pathsFor('pricing').map(p => p.params.locale ?? 'en')).toEqual(['en', 'fr']);
+      expect(i18n.getBuildLocales()).toEqual(['en', 'fr']);
+      expect(routes.pathsFor('pricing').map(p => p.params.locale ?? 'en')).toEqual(['en', 'fr']);
       // strict mode builds every locale: the translation tests are what fail there
       vi.stubEnv('I18N_MODE', 'strict');
-      expect(getBuildLocales()).toHaveLength(39);
+      expect(i18n.getBuildLocales()).toHaveLength(39);
     } finally {
-      delete english[key];
       delete french[key];
     }
   });
@@ -346,10 +375,7 @@ describe('route generation', () => {
       indexing: 'per-locale-review',
     };
     vi.stubEnv('PREVIEW_UNPUBLISHED', '1');
-    vi.resetModules();
-    vi.doMock('@/site/preview-pages', () => ({ previewPages: [preview] }));
-    vi.doMock('@/i18n/pending/pages.json', () => ({ default: { added: ['feature/scratch'] } }));
-    const routes = await import('@/site/routes');
+    const { routes } = await loadFresh({ previewPages: [preview], pages: ['feature/scratch'] });
 
     vi.stubEnv('I18N_MODE', 'english-first');
     const paths = routes.pathsFor('feature/scratch');
@@ -372,9 +398,7 @@ describe('route generation', () => {
     };
     vi.stubEnv('I18N_MODE', 'english-first');
     vi.stubEnv('PREVIEW_UNPUBLISHED', '1');
-    vi.resetModules();
-    vi.doMock('@/site/preview-pages', () => ({ previewPages: [preview] }));
-    const routes = await import('@/site/routes');
+    const { routes } = await loadFresh({ previewPages: [preview] });
     expect(() => routes.pathsFor('feature/unlisted')).toThrow(/pending\/pages\.json/);
   });
 
@@ -387,9 +411,8 @@ describe('route generation', () => {
       locales: 'all',
       indexing: 'per-locale-review',
     };
-    vi.resetModules();
-    vi.doMock('@/site/preview-pages', () => ({ previewPages: [draft] }));
-    const routes = await import('@/site/routes');
+    vi.stubEnv('I18N_MODE', 'strict');
+    const { routes } = await loadFresh({ previewPages: [draft] });
     expect(routes.pathsFor('features')).toEqual([]);
     expect(routes.pathsForType('hub')).toEqual([]);
     vi.stubEnv('PREVIEW_UNPUBLISHED', '1');

@@ -1,71 +1,96 @@
 ---
-import { allLocales, localeNames, localeSubtitles, localeFlagCodes, getFlagUrl, getPathWithoutLocale, t, resolveLocale, localeAliases, type Locale, type LocaleOrAlias, type DropdownLocale } from '../i18n';
+import {
+  allLocales, localeNames, localeSubtitles, localeFlagCodes, localeConfig, localeAliasMap,
+  getBuildLocales, getFlagUrl, getLocalizedPath, isPseudoLocale, t,
+  type Locale, type DropdownLocale,
+} from '../i18n';
 
 interface Props {
   currentLocale: Locale;
   currentPath: string;
+  /** Id of the dropdown; give each instance its own when a page renders more than one */
+  id?: string;
 }
 
-const { currentLocale, currentPath } = Astro.props;
+const { currentLocale, currentPath, id = 'language-dropdown' } = Astro.props;
 const changeLanguageLabel = t('a11y.changeLanguage', currentLocale);
 const searchLanguagesLabel = t('a11y.searchLanguages', currentLocale);
 
-// Extract the actual locale/alias from the URL path to display the correct variant
-function getDisplayLocaleFromPath(path: string): DropdownLocale {
-  // Check if the path starts with any locale alias (e.g., /en-us/, /en-gb/)
-  for (const alias of localeAliases) {
-    if (path.startsWith(`/${alias}/`) || path === `/${alias}`) {
-      return alias;
-    }
-  }
-  // For non-English locales, check the dropdown locales
-  for (const loc of allLocales) {
-    if (path.startsWith(`/${loc}/`) || path === `/${loc}`) {
-      return loc;
-    }
-  }
-  // Default: if no locale prefix (root path), default to en-gb
-  return 'en-gb';
+// Only locales that are actually built are offered (English-first builds leave some out).
+// Pseudo-locales appear only when built (PREVIEW_PSEUDO=1).
+const built = new Set<Locale>(getBuildLocales());
+
+type Choice = {
+  code: string;
+  target: Locale;
+  name: string;
+  subtitle?: string;
+  flagCode: string;
+  htmlLang: string;
+  browserLanguages: readonly string[];
+};
+
+const choices: Choice[] = [];
+for (const code of allLocales as DropdownLocale[]) {
+  // An alias is a display choice that links to its target locale's URL (D3)
+  const target = (localeAliasMap as Record<string, Locale>)[code] ?? (code as Locale);
+  if (!built.has(target)) continue;
+  choices.push({
+    code,
+    target,
+    name: localeNames[code],
+    subtitle: localeSubtitles[code],
+    flagCode: localeFlagCodes[code],
+    htmlLang: localeConfig[target].htmlLang,
+    browserLanguages: localeConfig[target].browserLanguages,
+  });
+}
+for (const locale of getBuildLocales().filter(isPseudoLocale)) {
+  choices.push({
+    code: locale,
+    target: locale,
+    name: localeConfig[locale].name,
+    flagCode: 'xx',
+    htmlLang: localeConfig[locale].htmlLang,
+    browserLanguages: [],
+  });
 }
 
-const displayLocale = getDisplayLocaleFromPath(currentPath);
+// English pages show the "English (actual)" choice; the script swaps in a stored variant
+const displayCode: string = currentLocale === 'en' ? 'en-gb' : currentLocale;
 
-// Get the path without any locale prefix
-const basePath = getPathWithoutLocale(currentPath);
+const localeData = choices.map(choice => ({
+  ...choice,
+  flagUrl: getFlagUrl(choice.flagCode),
+  // Always the slash form of the target locale's page, never an alias prefix
+  href: getLocalizedPath(currentPath, choice.target),
+  active: choice.code === displayCode,
+}));
 
-// Prepare locale data for the template (includes comedy aliases)
-const localeData = allLocales.map(locale => {
-  return {
-    code: locale,
-    name: localeNames[locale],
-    mainName: localeNames[locale],
-    subtitle: localeSubtitles[locale],
-    flagUrl: getFlagUrl(localeFlagCodes[locale], locale),
-    href: `/${locale}${basePath === '/' ? '' : basePath}`,
-    active: resolveLocale(locale) === currentLocale,
-  };
-});
+const current =
+  localeData.find(choice => choice.active) ?? localeData.find(choice => choice.target === currentLocale);
+const currentName = current?.name ?? currentLocale;
+const currentSubtitle = current?.subtitle;
+const currentFlagUrl = current?.flagUrl ?? getFlagUrl('xx');
 
 const searchPlaceholder = t('languageSwitcher.search', currentLocale);
 const noResultsText = t('languageSwitcher.noResults', currentLocale);
-
-// Get the current display locale name and subtitle for the button
-const currentName = localeNames[displayLocale];
-const currentSubtitle = localeSubtitles[displayLocale];
 ---
 
-<div class="language-switcher">
-  <button class="language-switcher-btn" aria-label={changeLanguageLabel} aria-expanded="false" aria-haspopup="listbox">
-    <img class="current-flag" src={getFlagUrl(localeFlagCodes[displayLocale], displayLocale)} alt="" loading="eager" />
+<div class="language-switcher" data-current-locale={currentLocale}>
+  <!-- No aria-label: the name must include the visible language name (WCAG 2.5.3) -->
+  <button class="language-switcher-btn" aria-expanded="false" aria-controls={id}>
+    <span class="sr-only">{changeLanguageLabel}: </span>
+    <img class="current-flag" src={currentFlagUrl} width="20" height="20" alt="" />
     <span class="current-lang">
-      {currentName}
+      <span class="current-name">{currentName}</span>
       {currentSubtitle && <span class="current-subtitle">{currentSubtitle}</span>}
     </span>
     <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="m6 9 6 6 6-6"/>
     </svg>
   </button>
-  <div class="language-dropdown">
+  <div class="language-dropdown" id={id}>
     <div class="language-search-wrapper">
       <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <circle cx="11" cy="11" r="8"/>
@@ -79,20 +104,25 @@ const currentSubtitle = localeSubtitles[displayLocale];
         aria-label={searchLanguagesLabel}
       />
     </div>
-    <div class="language-options" role="listbox" aria-label={changeLanguageLabel}>
+    <div class="language-options" role="group" aria-label={changeLanguageLabel}>
       {localeData.map((locale) => (
         <a
           href={locale.href}
           class:list={['language-option', { active: locale.active }]}
           data-locale={locale.code}
+          data-target={locale.target}
+          data-locale-switch
           data-name={locale.name.toLowerCase()}
-          role="option"
-          aria-selected={locale.active ? 'true' : 'false'}
-          lang={locale.code.split('-')[0]}
+          data-subtitle={(locale.subtitle ?? '').toLowerCase()}
+          data-title={locale.name}
+          data-subtitle-text={locale.subtitle ?? ''}
+          data-browser-languages={[locale.code.toLowerCase(), ...locale.browserLanguages].join(' ')}
+          aria-current={locale.active ? 'true' : undefined}
+          lang={locale.htmlLang}
         >
-          <img class="option-flag" src={locale.flagUrl} alt="" loading="lazy" />
+          <img class="option-flag" data-src={locale.flagUrl} width="24" height="24" alt="" />
           <span class="option-name">
-            {locale.mainName}
+            {locale.name}
             {locale.subtitle && <span class="option-subtitle">{locale.subtitle}</span>}
           </span>
         </a>
@@ -107,146 +137,200 @@ const currentSubtitle = localeSubtitles[displayLocale];
 <script>
   const LOCALE_KEY = 'preferred-locale';
 
-  // Reorder options based on browser language preferences
+  // Reorder options so the visitor's browser languages come first
   function prioritizeUserLanguages(optionsContainer: Element) {
-    const options = Array.from(optionsContainer.querySelectorAll('.language-option')) as HTMLElement[];
-    const browserLangs = navigator.languages || [navigator.language];
+    const options = Array.from(optionsContainer.querySelectorAll<HTMLElement>('.language-option'));
+    const tags = (navigator.languages?.length ? navigator.languages : [navigator.language]).map(tag =>
+      String(tag || '').toLowerCase()
+    );
 
-    // Normalize browser languages (e.g., 'en-US' -> 'en-us', 'de' -> 'de')
-    const normalizedBrowserLangs = browserLangs.map(lang => lang.toLowerCase());
+    // Earlier browser languages rank first; within one, an exact regional match (en-gb) beats a
+    // primary-language match (en)
+    const rank = (option: HTMLElement): number => {
+      const known = (option.dataset.browserLanguages || '').split(' ');
+      const index = tags.findIndex(tag => known.includes(tag) || known.includes(tag.split('-')[0]));
+      return index === -1 ? -1 : index * 2 + (known.includes(tags[index]) ? 0 : 1);
+    };
 
-    // Sort: matching languages first (in browser preference order), then rest alphabetically
-    const prioritized: HTMLElement[] = [];
+    const prioritized: { option: HTMLElement; index: number }[] = [];
     const rest: HTMLElement[] = [];
-
-    options.forEach(option => {
-      const locale = option.getAttribute('data-locale') || '';
-      const langBase = locale.split('-')[0]; // 'en-us' -> 'en', 'de' -> 'de'
-
-      // Check if this locale matches any browser language
-      const matchIndex = normalizedBrowserLangs.findIndex(browserLang =>
-        browserLang === locale ||
-        browserLang.startsWith(locale + '-') ||
-        browserLang === langBase ||
-        locale.startsWith(browserLang + '-')
-      );
-
-      if (matchIndex !== -1) {
-        // Store with priority index for sorting
-        (option as any)._priority = matchIndex;
-        prioritized.push(option);
-      } else {
-        rest.push(option);
-      }
-    });
-
-    // Sort prioritized by browser preference order
-    prioritized.sort((a, b) => (a as any)._priority - (b as any)._priority);
-
-    // Reorder DOM
-    [...prioritized, ...rest].forEach(option => {
-      optionsContainer.appendChild(option);
-    });
+    for (const option of options) {
+      const index = rank(option);
+      if (index === -1) rest.push(option);
+      else prioritized.push({ option, index });
+    }
+    prioritized.sort((a, b) => a.index - b.index);
+    [...prioritized.map(item => item.option), ...rest].forEach(option => optionsContainer.appendChild(option));
   }
 
-  document.querySelectorAll('.language-switcher').forEach(switcher => {
-    // Prioritize languages based on browser settings
+  document.querySelectorAll<HTMLElement>('.language-switcher').forEach(switcher => {
     const optionsContainer = switcher.querySelector('.language-options');
-    if (optionsContainer) {
-      prioritizeUserLanguages(optionsContainer);
-    }
-    const btn = switcher.querySelector('.language-switcher-btn');
-    const dropdown = switcher.querySelector('.language-dropdown');
-    const searchInput = switcher.querySelector('.language-search') as HTMLInputElement;
-    const options = switcher.querySelectorAll('.language-option');
-    const noResults = switcher.querySelector('.no-results');
+    if (optionsContainer) prioritizeUserLanguages(optionsContainer);
 
-    const openDropdown = () => {
+    const btn = switcher.querySelector<HTMLButtonElement>('.language-switcher-btn');
+    const searchInput = switcher.querySelector<HTMLInputElement>('.language-search');
+    const options = Array.from(switcher.querySelectorAll<HTMLAnchorElement>('.language-option'));
+    const noResults = switcher.querySelector<HTMLElement>('.no-results');
+    const currentLocale = switcher.dataset.currentLocale || '';
+
+    // Show a stored regional variant (en-us, nl-NL, ...) when it points at this page's locale
+    try {
+      const stored = localStorage.getItem(LOCALE_KEY);
+      const chosen = stored && options.find(o => o.dataset.locale === stored && o.dataset.target === currentLocale);
+      if (chosen && !chosen.classList.contains('active')) {
+        options.forEach(o => {
+          const on = o === chosen;
+          o.classList.toggle('active', on);
+          if (on) o.setAttribute('aria-current', 'true');
+          else o.removeAttribute('aria-current');
+        });
+        const flag = chosen.querySelector<HTMLImageElement>('.option-flag');
+        const currentFlag = switcher.querySelector<HTMLImageElement>('.current-flag');
+        if (flag?.dataset.src && currentFlag) currentFlag.src = flag.dataset.src;
+        const name = switcher.querySelector('.current-name');
+        if (name) name.textContent = chosen.dataset.title || '';
+        switcher.querySelector('.current-subtitle')?.remove();
+        if (chosen.dataset.subtitleText) {
+          const sub = document.createElement('span');
+          sub.className = 'current-subtitle';
+          sub.textContent = chosen.dataset.subtitleText;
+          switcher.querySelector('.current-lang')?.appendChild(sub);
+        }
+      }
+    } catch {
+      // Storage unavailable: keep the server-rendered choice
+    }
+
+    const visibleOptions = () => options.filter(o => o.style.display !== 'none');
+
+    // Flags load from /flags/ the first time the dropdown opens (B34)
+    let flagsLoaded = false;
+    const loadFlags = () => {
+      if (flagsLoaded) return;
+      flagsLoaded = true;
+      switcher.querySelectorAll<HTMLImageElement>('img.option-flag[data-src]').forEach(img => {
+        img.src = img.dataset.src!;
+      });
+    };
+
+    const isOpen = () => switcher.classList.contains('open');
+
+    const openDropdown = (enterList = false) => {
+      loadFlags();
       btn?.setAttribute('aria-expanded', 'true');
       switcher.classList.add('open');
-
-      // Focus search input when opening (but not on touch devices to avoid keyboard popup)
-      if (searchInput && !('ontouchstart' in window)) {
-        setTimeout(() => searchInput.focus(), 100);
+      if (enterList) {
+        // `visibility` flips without a transition on open, so the first option takes focus at once
+        visibleOptions()[0]?.focus();
+        return;
       }
+      // Focus the search box (but not on touch devices, to avoid the on-screen keyboard)
+      if (searchInput && !('ontouchstart' in window)) searchInput.focus();
     };
 
-    const closeDropdown = () => {
+    const closeDropdown = (returnFocus = false) => {
       btn?.setAttribute('aria-expanded', 'false');
       switcher.classList.remove('open');
+      if (returnFocus) btn?.focus();
     };
 
-    // Toggle dropdown
-    btn?.addEventListener('click', (e) => {
+    btn?.addEventListener('click', e => {
       e.stopPropagation();
-      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-      if (isExpanded) {
-        closeDropdown();
-      } else {
-        openDropdown();
+      if (isOpen()) closeDropdown();
+      else openDropdown();
+    });
+
+    // Keyboard: ArrowDown on the button opens and enters the list
+    btn?.addEventListener('keydown', e => {
+      if (e.key === 'ArrowDown' && !isOpen()) {
+        e.preventDefault();
+        e.stopPropagation();
+        openDropdown(true);
       }
     });
 
-    // Filter languages as user types
-    searchInput?.addEventListener('input', (e) => {
+    // Escape closes from anywhere inside the switcher and returns focus to the button
+    switcher.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && isOpen()) {
+        e.preventDefault();
+        e.stopPropagation();
+        closeDropdown(true);
+        return;
+      }
+      if (!isOpen()) return;
+
+      const items = visibleOptions();
+      const active = document.activeElement as HTMLElement | null;
+      const index = active ? items.indexOf(active as HTMLAnchorElement) : -1;
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (active === searchInput || index === -1) items[0]?.focus();
+        else items[Math.min(index + 1, items.length - 1)]?.focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (index > 0) items[index - 1].focus();
+        else if (index === 0) searchInput?.focus();
+      } else if (e.key === 'Home' && index !== -1) {
+        e.preventDefault();
+        items[0].focus();
+      } else if (e.key === 'End' && index !== -1) {
+        e.preventDefault();
+        items[items.length - 1]?.focus();
+      }
+    });
+
+    // Tabbing out of the switcher closes it
+    switcher.addEventListener('focusout', e => {
+      const next = e.relatedTarget as Node | null;
+      if (next && !switcher.contains(next)) closeDropdown();
+    });
+
+    // Filter languages as the visitor types
+    searchInput?.addEventListener('input', e => {
       const query = (e.target as HTMLInputElement).value.toLowerCase().trim();
       let visibleCount = 0;
-
       options.forEach(option => {
-        const name = option.getAttribute('data-name') || '';
-        const locale = option.getAttribute('data-locale') || '';
-        const matches = name.includes(query) || locale.includes(query);
-
-        (option as HTMLElement).style.display = matches ? '' : 'none';
+        const haystack = `${option.dataset.name || ''} ${option.dataset.subtitle || ''} ${option.dataset.locale || ''}`;
+        const matches = haystack.includes(query);
+        option.style.display = matches ? '' : 'none';
         if (matches) visibleCount++;
       });
-
-      // Show/hide no results message
-      if (noResults) {
-        (noResults as HTMLElement).style.display = visibleCount === 0 ? 'block' : 'none';
-      }
+      if (noResults) noResults.style.display = visibleCount === 0 ? 'block' : 'none';
     });
 
-    // Store preference and allow native navigation for reliability on mobile
+    // Store the choice and let the link navigate natively (reliable on mobile)
     options.forEach(option => {
       option.addEventListener('click', () => {
-        const locale = option.getAttribute('data-locale');
+        const locale = option.dataset.locale;
         if (!locale) return;
-
         try {
           localStorage.setItem(LOCALE_KEY, locale);
         } catch {
-          // If storage is unavailable (e.g., private mode), still allow navigation.
+          // Private mode: still navigate
         }
       });
     });
 
-    // Clear search when dropdown closes
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.attributeName === 'class') {
-          if (!switcher.classList.contains('open') && searchInput) {
-            searchInput.value = '';
-            options.forEach(option => {
-              (option as HTMLElement).style.display = '';
-            });
-            if (noResults) {
-              (noResults as HTMLElement).style.display = 'none';
-            }
-          }
-        }
-      });
-    });
-    observer.observe(switcher, { attributes: true });
+    // Reset the search when the dropdown closes
+    new MutationObserver(() => {
+      if (!isOpen() && searchInput) {
+        searchInput.value = '';
+        options.forEach(option => {
+          option.style.display = '';
+        });
+        if (noResults) noResults.style.display = 'none';
+      }
+    }).observe(switcher, { attributes: true, attributeFilter: ['class'] });
   });
 
-  // Close dropdown when clicking outside
-  document.addEventListener('click', () => {
-    document.querySelectorAll('.language-switcher').forEach(switcher => {
+  // Close any open dropdown when clicking outside it
+  document.addEventListener('click', event => {
+    document.querySelectorAll<HTMLElement>('.language-switcher').forEach(switcher => {
+      if (switcher.contains(event.target as Node) && (event.target as HTMLElement).closest('.language-dropdown')) return;
       switcher.classList.remove('open');
       switcher.querySelector('button')?.setAttribute('aria-expanded', 'false');
     });
-    document.body.style.overflow = '';
   });
 </script>
 

@@ -67,7 +67,8 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(-8px);
-  transition: all 0.2s ease;
+  /* Visibility flips at once on open (so focus can enter) and after the fade on close */
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
   z-index: 1000;
   overflow: hidden;
   /* Light text for dark dropdown background */
@@ -77,6 +78,7 @@
 }
 
 .language-switcher.open .language-dropdown {
+  transition-delay: 0s;
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -132,7 +134,9 @@
   color: var(--dropdown-text);
   text-decoration: none;
   font-size: var(--text-sm);
-  transition: all 0.15s ease;
+  /* Never `all`: a transition on the inherited `visibility` keeps the options hidden for a
+     frame after the dropdown opens, and a hidden link cannot take focus */
+  transition: background-color 0.15s ease, color 0.15s ease;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
@@ -140,6 +144,18 @@
 .language-option:hover {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
+}
+
+.language-option:focus-visible {
+  outline: 2px solid var(--dropdown-text-accent);
+  outline-offset: -2px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.language-switcher-btn:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
 }
 
 .language-option.active {
@@ -150,6 +166,8 @@
 .option-flag {
   width: 24px;
   height: 24px;
+  /* Flags load on first open; keep their space and a neutral disc until then */
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;

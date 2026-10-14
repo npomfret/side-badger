@@ -1,11 +1,10 @@
 ---
 import EasterEggs from '../components/EasterEggs.astro';
-import BackgroundEffects from '../components/layout/BackgroundEffects.astro';
 import SiteHeader from '../components/layout/SiteHeader.astro';
 import LanguageDetection from '../components/LanguageDetection.astro';
 import SeoHead from '../components/layout/SeoHead.astro';
 import SiteFooter from '../components/layout/SiteFooter.astro';
-import { t, isRTL, type Locale } from '../i18n';
+import { t, isRTL, localeConfig, type Locale } from '../i18n';
 
 interface Props {
   title: string;
@@ -20,16 +19,36 @@ const {
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
+
+// Fonts (restructure D24). Latin, Cyrillic and Greek faces are in global.css; Arabic-script and
+// Indic locales link their own subset stylesheet; CJK uses system stacks.
+const fontScript = localeConfig[locale]?.fontScript ?? 'latin';
+const scriptFontCss: Partial<Record<string, string>> = {
+  arabic: '/fonts/noto-sans-arabic.css',
+  devanagari: '/fonts/noto-sans-devanagari.css',
+  bengali: '/fonts/noto-sans-bengali.css',
+  telugu: '/fonts/noto-sans-telugu.css',
+};
+const scriptFontLink = scriptFontCss[fontScript];
+// D24: the two preloads are for Latin-script locales only. Cyrillic and Greek headings use Inter,
+// so a Space Grotesk preload there would be fetched and never used.
+const preloadLatin = fontScript === 'latin';
 ---
 
 <!DOCTYPE html>
-<html lang={locale} dir={isRTL(locale) ? 'rtl' : 'ltr'}>
+<html lang={locale} dir={isRTL(locale) ? 'rtl' : 'ltr'} data-font-script={fontScript}>
   <head>
     <SeoHead title={title} description={description} locale={locale} />
+    {preloadLatin && (
+      <>
+        <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="/fonts/space-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
+      </>
+    )}
+    {scriptFontLink && <link rel="stylesheet" href={scriptFontLink} />}
   </head>
   <body>
     <a href="#main-content" class="skip-link">{t('a11y.skipToContent', locale)}</a>
-    <BackgroundEffects />
     <EasterEggs />
     <LanguageDetection currentLocale={locale} />
 
@@ -51,15 +70,6 @@ const currentPath = Astro.url.pathname;
       };
       handleMotionPreference(motionQuery);
       motionQuery.addEventListener('change', handleMotionPreference);
-
-      // Scroll progress for background effects
-      const updateScrollProgress = () => {
-        const scrollHeight = document.body.scrollHeight - window.innerHeight;
-        const progress = scrollHeight > 0 ? window.scrollY / scrollHeight : 0;
-        document.documentElement.style.setProperty('--scroll-progress', String(Math.min(1, Math.max(0, progress))));
-      };
-      updateScrollProgress();
-      window.addEventListener('scroll', updateScrollProgress, { passive: true });
 
       // Scroll-triggered fade-up animations
       const observer = new IntersectionObserver((entries) => {

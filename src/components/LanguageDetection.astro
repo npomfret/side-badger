@@ -1,64 +1,85 @@
 ---
-// Client-side language detection for static sites
-// Runs on first visit to detect browser language and redirect if needed
-import { locales, type Locale } from '../i18n';
+// Client-side language detection for a static site (D5).
+// On a first visit to an English page it picks the first browser language that maps to a
+// locale built for this deployment, and moves to that locale's version of the same page.
+// It never redirects to an alias URL, a pseudo-locale or a locale that was not built.
+import { getBuildLocales, isPseudoLocale, localeConfig, localeForBrowserLanguage, locales, type Locale } from '../i18n';
 
 interface Props {
   currentLocale: Locale;
 }
 
 const { currentLocale } = Astro.props;
-const supportedLocales = locales;
+
+const built = new Set<string>(getBuildLocales().filter(locale => !isPseudoLocale(locale)));
+
+// Every browser language tag any locale claims, resolved by the shared rule and kept only
+// when the target was built.
+const tagTable: Record<string, string> = {};
+for (const locale of locales) {
+  for (const tag of localeConfig[locale].browserLanguages) {
+    const target = localeForBrowserLanguage(tag);
+    if (target && built.has(target)) tagTable[tag] = target;
+  }
+}
+
+// hreflang value of each built locale, to find its alternate link on the page
+const hreflangs: Record<string, string> = {};
+for (const locale of built) hreflangs[locale] = localeConfig[locale as keyof typeof localeConfig].hreflang;
 ---
 
-<script define:vars={{ currentLocale, supportedLocales }}>
-  // Only run detection on first visit (no stored preference)
-  const LOCALE_KEY = 'preferred-locale';
+{currentLocale === 'en' && (
+<script is:inline define:vars={{ currentLocale, tagTable, hreflangs }}>
+  (function () {
+    var LOCALE_KEY = 'preferred-locale';
 
-  function detectAndRedirect() {
-    // Skip if already have a preference stored
-    const storedLocale = localStorage.getItem(LOCALE_KEY);
-    if (storedLocale) {
+    // Detection only moves visitors off an English page. A localized page is where they chose to be.
+    if (currentLocale !== 'en') return;
+
+    try {
+      // Skip when a preference is already stored (the switcher stores one on every choice)
+      if (localStorage.getItem(LOCALE_KEY)) return;
+    } catch (e) {
       return;
     }
 
-    // Get browser's preferred languages
-    const browserLocales = navigator.languages || [navigator.language];
-
-    // Find first matching supported locale
-    let preferredLocale = null;
-    for (const browserLocale of browserLocales) {
-      // Check exact match first (e.g., 'uk' or 'en')
-      const langCode = browserLocale.split('-')[0].toLowerCase();
-      if (supportedLocales.includes(langCode)) {
-        preferredLocale = langCode;
+    var tags = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
+    var preferred = 'en';
+    for (var i = 0; i < tags.length; i++) {
+      var tag = String(tags[i] || '').toLowerCase();
+      var match = tagTable[tag] || tagTable[tag.split('-')[0]];
+      if (match) {
+        preferred = match;
         break;
       }
     }
 
-    // Default to English if no match
-    if (!preferredLocale) {
-      preferredLocale = 'en';
+    try {
+      localStorage.setItem(LOCALE_KEY, preferred);
+    } catch (e) {
+      // Without storage the choice could not stick, so do not redirect on every visit
+      return;
     }
 
-    // Store the preference
-    localStorage.setItem(LOCALE_KEY, preferredLocale);
+    if (preferred === 'en') return;
 
-    // Redirect if needed (user is on wrong locale page)
-    if (preferredLocale !== currentLocale && preferredLocale !== 'en') {
-      // Only redirect from root English pages to other locales
-      // Don't redirect if user manually navigated to a specific locale
-      const currentPath = window.location.pathname;
-      const isOnEnglishPage = !supportedLocales.some(l => l !== 'en' && currentPath.startsWith(`/${l}`));
-
-      if (isOnEnglishPage) {
-        // Build the new URL with the preferred locale
-        let newPath = `/${preferredLocale}${currentPath === '/' ? '' : currentPath}`;
-        window.location.href = newPath;
+    // Go only where the page itself declares a version in that locale
+    var links = document.querySelectorAll('link[rel="alternate"][hreflang]');
+    var wanted = [String(hreflangs[preferred]).toLowerCase(), preferred.toLowerCase()];
+    for (var j = 0; j < links.length; j++) {
+      var lang = (links[j].getAttribute('hreflang') || '').toLowerCase();
+      if (wanted.indexOf(lang) === -1) continue;
+      var url;
+      try {
+        url = new URL(links[j].href, location.href);
+      } catch (e) {
+        continue;
       }
+      // Alternates carry the production origin; keep the visitor on the current host
+      if (url.pathname === location.pathname) return;
+      location.replace(url.pathname + location.search + location.hash);
+      return;
     }
-  }
-
-  // Run detection
-  detectAndRedirect();
+  })();
 </script>
+)}

@@ -4,7 +4,10 @@
 ---
 
 <script>
-  import confetti from 'canvas-confetti';
+  // canvas-confetti is imported on first use, so pages that never trigger an egg never load it
+  type Confetti = typeof import('canvas-confetti').default;
+  let confettiPromise: Promise<Confetti> | null = null;
+  const loadConfetti = () => (confettiPromise ??= import('canvas-confetti').then((m) => m.default));
 
   // === KONAMI CODE ===
   // Up, Up, Down, Down, Left, Right, Left, Right, B, A
@@ -33,28 +36,30 @@
 
     const colors = ['#7ec786', '#5fb0c4', '#f0c05c', '#4eeab5'];
 
-    (function frame() {
-      confetti({
-        particleCount: 4,
-        angle: 60,
-        spread: 55,
-        origin: { x: 0, y: 0.6 },
-        colors: colors,
-        disableForReducedMotion: true
-      });
-      confetti({
-        particleCount: 4,
-        angle: 120,
-        spread: 55,
-        origin: { x: 1, y: 0.6 },
-        colors: colors,
-        disableForReducedMotion: true
-      });
+    loadConfetti().then((confetti) => {
+      (function frame() {
+        confetti({
+          particleCount: 4,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0, y: 0.6 },
+          colors: colors,
+          disableForReducedMotion: true
+        });
+        confetti({
+          particleCount: 4,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1, y: 0.6 },
+          colors: colors,
+          disableForReducedMotion: true
+        });
 
-      if (Date.now() < end) {
-        requestAnimationFrame(frame);
-      }
-    })();
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      })();
+    });
 
     // Change the page title temporarily
     const originalTitle = document.title;
@@ -98,13 +103,13 @@
     }, 3000);
 
     // Confetti burst
-    confetti({
+    loadConfetti().then((confetti) => confetti({
       particleCount: 200,
       spread: 180,
       origin: { y: 0.5 },
       colors: ['#7ec786', '#5fb0c4', '#f0c05c', '#4eeab5'],
       disableForReducedMotion: true
-    });
+    }));
   }
 
   // === SECRET MESSAGE DISPLAY ===
@@ -160,13 +165,13 @@
       footerClickCount++;
       if (footerClickCount === 5) {
         showSecretMessage("Thanks for clicking! You're awesome! 💚");
-        confetti({
+        loadConfetti().then((confetti) => confetti({
           particleCount: 50,
           spread: 60,
           origin: { y: 0.8 },
           colors: ['#7ec786', '#5fb0c4'],
           disableForReducedMotion: true
-        });
+        }));
         footerClickCount = 0;
       }
     }

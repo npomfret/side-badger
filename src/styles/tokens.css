@@ -17,7 +17,10 @@
 
   /* Accent colors - brand colors (green/teal/amber) */
   --accent-primary: #22c55e;
-  --accent-secondary: #16a34a;
+  /* Green ink (direction A): text and solid button backgrounds. White on it is 6.4:1 (hover 9.8:1), it on --bg-void is 6.2:1 */
+  --accent-ink: #2F6B2E;
+  --accent-ink-hover: #214d20;
+  --accent-secondary: var(--accent-ink);
   --accent-tertiary: #86efac;
   --accent-success: #4ade80;
 
@@ -51,8 +54,9 @@
   --shadow-card: 0 18px 40px rgba(15, 75, 50, 0.15);
 
   /* ===== TYPOGRAPHY ===== */
-  --font-sans: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-display: 'Space Grotesk', var(--font-sans);
+  --font-sans: 'Inter', 'Inter Fallback', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', 'Space Grotesk Fallback', var(--font-sans);
+  --heading-line-height: 1.1;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
   /* Fluid type scale */
@@ -82,11 +86,70 @@
   --transition-fast: var(--duration-fast) var(--ease-smooth);
   --transition-base: var(--duration-base) var(--ease-smooth);
 
+  /* ===== LAYOUT ===== */
+  /* Fallback only: the site header (P23) sets the measured value */
+  --header-h: 4.5rem;
+  --dir: 1;
+
   /* ===== Z-INDEX SCALE ===== */
   --z-background: -1;
   --z-sticky: 100;
   --z-modal: 1000;
   --z-cursor: 9999;
+}
+
+[dir="rtl"] {
+  --dir: -1;
+}
+
+/*
+ * Fonts by script (restructure D24). BaseLayout sets data-font-script from localeConfig.
+ * Cyrillic and Greek headings use Inter, because Space Grotesk has neither.
+ */
+html[data-font-script="cyrillic-greek"] {
+  --font-sans: 'Inter', 'Inter Cyrillic', 'Inter Fallback', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: var(--font-sans);
+}
+/* Greek only on el, so the switcher's "Ελληνικά" does not fetch the Greek file on uk and sr (and vice versa) */
+html[data-font-script="cyrillic-greek"]:lang(el) {
+  --font-sans: 'Inter', 'Inter Greek', 'Inter Fallback', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+/* Latin Extended: only the locales whose alphabets need it */
+html:is(:lang(cs), :lang(cy), :lang(hr), :lang(hu), :lang(lv), :lang(pl), :lang(ro), :lang(sl), :lang(tr)) {
+  --font-sans: 'Inter', 'Inter Latin Ext', 'Inter Fallback', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', 'Space Grotesk Ext', 'Space Grotesk Fallback', var(--font-sans);
+}
+html[data-font-script="arabic"] {
+  --font-sans: 'Noto Sans Arabic', 'Segoe UI', Tahoma, 'Geeza Pro', sans-serif;
+  --font-display: var(--font-sans);
+  --heading-line-height: 1.25;
+}
+html[data-font-script="devanagari"] {
+  --font-sans: 'Noto Sans Devanagari', 'Kohinoor Devanagari', 'Nirmala UI', sans-serif;
+  --font-display: var(--font-sans);
+  --heading-line-height: 1.35;
+}
+html[data-font-script="bengali"] {
+  --font-sans: 'Noto Sans Bengali', 'Kohinoor Bangla', 'Nirmala UI', sans-serif;
+  --font-display: var(--font-sans);
+  --heading-line-height: 1.35;
+}
+html[data-font-script="telugu"] {
+  --font-sans: 'Noto Sans Telugu', 'Kohinoor Telugu', 'Nirmala UI', sans-serif;
+  --font-display: var(--font-sans);
+  --heading-line-height: 1.35;
+}
+/* CJK: system stacks, no webfont; lang selects the glyphs */
+html[data-font-script="cjk"] {
+  --font-sans: 'Hiragino Sans', 'Yu Gothic UI', 'Noto Sans CJK JP', 'Noto Sans JP', sans-serif;
+  --font-display: var(--font-sans);
+  --heading-line-height: 1.25;
+}
+html[data-font-script="cjk"]:lang(zh) {
+  --font-sans: 'PingFang SC', 'Microsoft YaHei UI', 'Noto Sans CJK SC', 'Noto Sans SC', sans-serif;
+}
+html[data-font-script="cjk"]:lang(ko) {
+  --font-sans: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans CJK KR', 'Noto Sans KR', sans-serif;
 }
 
 /* Reduced motion preferences */

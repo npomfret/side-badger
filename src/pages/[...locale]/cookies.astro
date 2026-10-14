@@ -1,22 +1,37 @@
 ---
+import { getEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PolicyPage from '../../components/PolicyPage.astro';
-import { t, resolveLocale, getLocalePaths, type LocaleOrAlias } from '../../i18n';
+import { t, type Locale } from '../../i18n';
+import { canonicalFor } from '../../seo/urls';
+import { pathsFor } from '../../site/routes';
 
-export const getStaticPaths = getLocalePaths;
+export function getStaticPaths() {
+  return pathsFor('cookies');
+}
 
-const localeParam = (Astro.params.locale || 'en') as LocaleOrAlias;
-const locale = resolveLocale(localeParam);
+const { locale } = Astro.props as { locale: Locale };
+const entry = await getEntry('policies', 'cookie-policy');
+
+// English legal pages say when the text last changed (plan 2.5). Localized ones add nothing.
+const jsonLd =
+  locale === 'en' && entry
+    ? [
+        {
+          '@type': 'WebPage',
+          '@id': `${canonicalFor('cookies', locale)}#webpage`,
+          dateModified: entry.data.publishedAt.toISOString(),
+        },
+      ]
+    : [];
 ---
 
 <BaseLayout
+  page="cookies"
+  locale={locale}
   title={t('policy.cookies.meta.title', locale)}
   description={t('policy.cookies.meta.description', locale)}
-  locale={locale}
+  jsonLd={jsonLd}
 >
-  <PolicyPage
-    title={t('policy.cookies.title', locale)}
-    endpoint="/api/policies/cookie-policy/text"
-    locale={locale}
-  />
+  <PolicyPage title={t('policy.cookies.title', locale)} policyId="cookie-policy" locale={locale} />
 </BaseLayout>

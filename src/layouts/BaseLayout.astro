@@ -4,21 +4,40 @@ import SiteHeader from '../components/layout/SiteHeader.astro';
 import LanguageDetection from '../components/LanguageDetection.astro';
 import SeoHead from '../components/layout/SeoHead.astro';
 import SiteFooter from '../components/layout/SiteFooter.astro';
-import { t, isRTL, localeConfig, type Locale } from '../i18n';
+import { t, isPseudoLocale, localeConfig, type Locale } from '../i18n';
+import { pageForPath } from '../site/routes';
+import type { PageId } from '../site/pages';
+import type { JsonLdNode } from '../seo/jsonld';
 
 interface Props {
+  /** Registry page id, or 'not-found'. Taken from the URL when a route does not pass it. */
+  page?: PageId | 'not-found';
   title: string;
   description?: string;
   locale?: Locale;
+  ogCard?: 'default';
+  /** Page-specific JSON-LD nodes; SeoHead adds the base nodes and merges by @id */
+  jsonLd?: JsonLdNode[];
 }
 
 const {
+  page: pageProp,
   title,
-  description,
+  description: descriptionProp,
   locale = 'en',
+  ogCard,
+  jsonLd,
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
+const page = pageProp ?? (pageForPath(currentPath)?.page.id as PageId | undefined);
+if (!page) {
+  throw new Error(`BaseLayout: no page id for ${currentPath}. Pass the "page" prop.`);
+}
+const description = descriptionProp ?? t('meta.description', locale);
+const { htmlLang, dir } = localeConfig[locale];
+// Preview pseudo-locales are built only under PREVIEW_PSEUDO=1 and must never ship
+const pseudo = isPseudoLocale(locale);
 
 // Fonts (restructure D24). Latin, Cyrillic and Greek faces are in global.css; Arabic-script and
 // Indic locales link their own subset stylesheet; CJK uses system stacks.
@@ -36,9 +55,11 @@ const preloadLatin = fontScript === 'latin';
 ---
 
 <!DOCTYPE html>
-<html lang={locale} dir={isRTL(locale) ? 'rtl' : 'ltr'} data-font-script={fontScript}>
+<html lang={htmlLang} dir={dir} data-font-script={fontScript} data-pseudo={pseudo ? '' : undefined}>
   <head>
-    <SeoHead title={title} description={description} locale={locale} />
+    <SeoHead page={page} title={title} description={description} locale={locale} ogCard={ogCard} jsonLd={jsonLd}>
+      <slot name="head" slot="head" />
+    </SeoHead>
     {preloadLatin && (
       <>
         <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
@@ -50,10 +71,10 @@ const preloadLatin = fontScript === 'latin';
   <body>
     <a href="#main-content" class="skip-link">{t('a11y.skipToContent', locale)}</a>
     <EasterEggs />
-    <LanguageDetection currentLocale={locale} />
+    {page !== 'not-found' && <LanguageDetection currentLocale={locale} />}
 
     <slot name="header">
-      <SiteHeader locale={locale} currentPath={currentPath} />
+      <SiteHeader locale={locale} currentPath={page === 'not-found' ? '/' : currentPath} pageId={page} />
     </slot>
 
     <main id="main-content">

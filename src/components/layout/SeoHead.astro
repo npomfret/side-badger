@@ -1,83 +1,95 @@
 ---
-import { t, locales, logoLocales, getLocalizedPath, type Locale } from '../../i18n';
+/**
+ * The whole SEO head (restructure 2.5, D6): title, description, robots, canonical, hreflang,
+ * Open Graph, Twitter and one JSON-LD @graph, in that order. Everything comes from the page id
+ * and locale: indexability from `isIndexable`, tags from `localeConfig`, URLs from `src/seo/urls`.
+ */
+import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { resolve } from 'node:path';
+import { t, logoLocales, localeConfig, type Locale } from '../../i18n';
+import type { PageId } from '../../site/pages';
+import { absoluteUrl, canonicalFor } from '../../seo/urls';
+import { isIndexable } from '../../seo/indexability';
+import { alternatesFor } from '../../seo/alternates';
+import { buildGraph, serializeJsonLd, type JsonLdNode } from '../../seo/jsonld';
 
 interface Props {
+  page: PageId | 'not-found';
+  locale: Locale;
   title: string;
-  description?: string;
-  locale?: Locale;
+  description: string;
+  ogCard?: 'default';
+  jsonLd?: JsonLdNode[];
 }
 
-const { title, description: descriptionProp, locale = 'en' } = Astro.props;
+const { page, locale, title, description, ogCard = 'default', jsonLd = [] } = Astro.props;
 
-const description = descriptionProp ?? t('meta.description', locale);
+const indexable = isIndexable(page, locale);
+const canonical = page === 'not-found' ? undefined : canonicalFor(page, locale);
+const alternates = alternatesFor(page, locale);
 
-// Use locale's logo if available, otherwise fall back to English
+// Social card: language-neutral artwork with the locale's wordmark. The version is the first
+// 8 hex characters of a hash of both inputs (src/pages/og/[card].png.ts), so a change to either
+// is fetched under a new URL (D27).
 const logoLocale = logoLocales.includes(locale) ? locale : 'en';
-const largeLogoPath = `/images/${logoLocale}/logo-transparent.png`;
-const socialImagePath = `/images/${logoLocale}/logo-transparent.png`;
+const cardHash = createHash('sha256')
+  .update(readFileSync(resolve('src/assets/og', `${ogCard}.png`)))
+  .update(readFileSync(resolve('public/images', logoLocale, 'logo-transparent.png')))
+  .digest('hex')
+  .slice(0, 8);
+const ogImage = absoluteUrl(`/og/${ogCard}-${logoLocale}.png?v=${cardHash}`);
+const ogImageAlt = t('header.logoText', locale);
 
-const currentPath = Astro.url.pathname;
-const siteUrl = Astro.site?.origin || 'https://sidebadger.me';
+const graph = buildGraph({
+  pageId: page,
+  locale,
+  name: title,
+  description,
+  nodes: jsonLd,
+  // One Organization (one @id) site-wide, so one logo: the English wordmark
+  logoUrl: absoluteUrl('/images/en/logo-transparent.png'),
+});
 ---
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{title}</title>
 <meta name="description" content={description} />
-<meta name="theme-color" content="#F0FDF4" />
-
-<!-- Web App Manifest -->
-<link rel="manifest" href="/manifest.json" />
-
-<!-- Apple Touch Icon -->
-<link rel="apple-touch-icon" href="/images/logo-face-only-large.png" />
-
-<!-- hreflang tags for SEO -->
-{locales.map((loc) => (
-  <link
-    rel="alternate"
-    hreflang={loc}
-    href={`${siteUrl}${getLocalizedPath(currentPath, loc)}`}
-  />
+{!indexable && <meta name="robots" content="noindex" />}
+{indexable && canonical && (
+  <>
+    <link rel="canonical" href={canonical} />
+    <meta property="og:url" content={canonical} />
+  </>
+)}
+{alternates.map((alternate) => (
+  <link rel="alternate" hreflang={alternate.hreflang} href={alternate.href} />
 ))}
-<link rel="alternate" hreflang="x-default" href={`${siteUrl}${getLocalizedPath(currentPath, 'en')}`} />
 
 <!-- Open Graph -->
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Side Badger" />
-<meta property="og:locale" content={{
-  en: 'en_US',
-  uk: 'uk_UA',
-  es: 'es_ES',
-  ja: 'ja_JP',
-  ar: 'ar_AE'
-}[locale] || 'en_US'} />
-
-<meta property="og:image" content={socialImagePath} />
+<meta property="og:locale" content={localeConfig[locale].ogLocale} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={ogImageAlt} />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={socialImagePath} />
+<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content={ogImageAlt} />
 
+<meta name="theme-color" content="#F0FDF4" />
+<link rel="manifest" href="/manifest.json" />
+<link rel="apple-touch-icon" href="/images/logo-face-only-large.png" />
 <link rel="icon" type="image/png" href="/images/logo-face-only-large.png" />
-<title>{title}</title>
 
-<script type="application/ld+json" set:html={JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Side Badger",
-  "url": "https://sidebadger.me",
-  "logo": `https://sidebadger.me${largeLogoPath}`,
-  "sameAs": []
-})} />
-<script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Side Badger",
-        "url": "https://sidebadger.me"
-      }
-    </script>
+{graph.length > 0 && <script type="application/ld+json" set:html={serializeJsonLd(graph)} />}
+
+<slot name="head" />

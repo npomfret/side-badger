@@ -1,0 +1,46 @@
+# Use cases hub (P34h). The cards come from each child page's h1 and meta.description;
+# the sections below add a scenario and a one-line result for each use case.
+review:
+  status: checked
+  checker: P34h-review
+  date: 2026-10-15
+claims:
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - currency-conversion.group-auto-convert
+  - privacy-posture.no-ads
+meta:
+  title: Side Badger for housemates, trips and parties
+  description: Split costs with housemates, on group trips, and for parties, weddings and group gifts. See what Side Badger does for each kind of group.
+h1: Side Badger for your kind of group
+navLabel: Use cases
+lead: Housemates, holidays, hen dos. Pick your chaos, then see how a group like yours keeps count.
+intro: Every group splits costs a little differently. These pages follow a **realistic scenario** from the first expense to the last recorded payment, with the sums shown, so you can see what your own group would end up with.
+cta:
+  heading: Found your kind of group?
+  body: Create an account, start a group and add the first expense. It takes a couple of minutes.
+  button: Create a free account
+cardsHeading: Pick the situation closest to yours
+sections:
+  - heading: Group trips
+    body: Flights in pounds, a villa in euros and a dinner only three people ate. Set the group to convert to pounds and four friends in Lisbon finish with three payments, instead of six when the currencies are kept separate. [Split group trip costs](page:use-case/group-trips).
+  - heading: Housemates
+    body: One person pays the landlord, another remembers the energy bill, and nobody agrees who bought the toilet roll. With rent split by room size and the other bills split equally, four housemates end the month with three payments, all to the one who paid the rent. [Split household bills with housemates](page:use-case/housemates).
+  - heading: Parties, weddings and group gifts
+    body: Six people vote on the gift, one buys it, and not everyone chips in the same amount. A £150 gift split by exact amounts leaves five payments to the person who bought it, £120 in all. [Split the costs of an event](page:use-case/events-and-celebrations).
+  - heading: Couples
+    body: Share the boring costs without turning date night into a quarterly finance review. Rent split 60/40 and groceries split equally net down to one payment between the two of you.
+  - heading: See how it works first
+    body: Every example above uses the same steps, from creating a group to recording the payments. [How it works](page:how-it-works) walks through them, and [pricing](page:pricing) says what it costs, which is nothing, with no ads and no daily limits.
+faq:
+  heading: Questions
+  items:
+    - q: Does everyone in the group need an account?
+      a: Yes. People join with a link or QR code and a free account.
+    - q: Can Side Badger collect the money?
+      a: No. You pay however you like, then record the payment so the balances stay right.
+    - q: Do I have to pick one kind of group?
+      a: No. The use cases are examples, not settings. Every group has the same features, so use whichever combination fits.

@@ -48,9 +48,11 @@ const others = await relatedCards(pageId, locale, other => other.type !== 'featu
       <RichText as="p" text={data.scenario.body} locale={locale} />
     </ContentSection>
 
+    <ExtraSections sections={data.sections} locale={locale} to={data.exampleAfter ?? 0} />
+
     <WorkedExample example={data.example} locale={locale} />
 
-    <ExtraSections sections={data.sections} locale={locale} />
+    <ExtraSections sections={data.sections} locale={locale} from={data.exampleAfter ?? 0} />
 
     {features.length > 0 && (
       <ContentSection heading={data.featuresHeading} id="features">

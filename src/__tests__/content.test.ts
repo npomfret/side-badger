@@ -56,7 +56,7 @@ export function sourceHash(english: Record<string, unknown>): string {
 }
 
 /** Leaves that must be identical in every locale (ids, shot ids, split structure). */
-const STRUCTURAL_LEAVES = new Set(['shot', 'payer', 'method', 'id']);
+const STRUCTURAL_LEAVES = new Set(['shot', 'payer', 'method', 'id', 'exampleAfter']);
 /** Top-level fields that are bookkeeping and never compared with English. */
 const BOOKKEEPING = new Set(['review', 'translatedFrom', 'identicalApproved']);
 
@@ -392,6 +392,8 @@ describe('content rules (fixtures)', () => {
 
   it.each([
     ['an unknown field', { ...english, surprise: 1 }],
+    ['exampleAfter beyond the sections', { ...english, sections: [{ heading: 'S', body: 'B' }], exampleAfter: 2 }],
+    ['a negative exampleAfter', { ...english, exampleAfter: -1 }],
     ['a missing claims list', { ...english, claims: undefined }],
     ['two FAQ items', { ...english, faq: { heading: 'F', items: english.faq.items.slice(0, 2) } }],
     ['seven FAQ items', { ...english, faq: { heading: 'F', items: [...english.faq.items, ...english.faq.items, english.faq.items[0]] } }],
@@ -463,6 +465,9 @@ describe('content rules (fixtures)', () => {
     expect(parityProblems(english, reshot).join()).toMatch(/workflow.steps.0.shot must equal English/);
     expect(parityProblems(english, { ...french, claims: ['other.claim'] }).join()).toMatch(/claims.0 must equal English/);
     expect(parityProblems(english, { ...french, bonus: 'x' }).join()).toMatch(/extra bonus/);
+    const placed = { ...english, exampleAfter: 1 };
+    expect(parityProblems(placed, { ...french, exampleAfter: 1 })).toEqual([]);
+    expect(parityProblems(placed, { ...french, exampleAfter: 0 }).join()).toMatch(/exampleAfter must equal English/);
   });
 
   it('finds untranslated values, unless approved', () => {

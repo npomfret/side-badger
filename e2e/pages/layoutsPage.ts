@@ -80,6 +80,10 @@ export class ContentPage {
   private expectedSections(): string[] {
     const f = this.fixture;
     const extra = (f.sections ?? []).map(s => s.heading);
+    // The example sits after `exampleAfter` sections when set, else at the layout's default place
+    const split = f.exampleAfter ?? 0;
+    const example = f.example ? [f.example.heading!] : [];
+    const around = [...extra.slice(0, split), ...example, ...extra.slice(split)];
     const related = text(this.locale, 'related.heading');
     switch (this.kind) {
       case 'feature':
@@ -87,8 +91,7 @@ export class ContentPage {
           f.problem!.heading,
           f.workflow!.heading,
           f.options!.heading,
-          f.example!.heading!,
-          ...extra,
+          ...(f.exampleAfter === undefined ? [...example, ...extra] : around),
           f.limits!.heading,
           f.useCasesHeading!,
           f.faq!.heading,
@@ -96,15 +99,14 @@ export class ContentPage {
           f.cta.heading,
         ];
       case 'use-case':
-        return [f.scenario!.heading, f.example!.heading!, ...extra, f.featuresHeading!, f.faq!.heading, related, f.cta.heading];
+        return [f.scenario!.heading, ...around, f.featuresHeading!, f.faq!.heading, related, f.cta.heading];
       case 'hub':
         return [f.cardsHeading!, ...extra, f.faq!.heading, related, f.cta.heading];
       case 'how-it-works':
         return [
           ...f.steps!.map(s => s.title),
           f.requirements!.heading,
-          f.example!.heading!,
-          ...extra,
+          ...around,
           f.faq!.heading,
           related,
           f.cta.heading,

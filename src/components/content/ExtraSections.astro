@@ -10,13 +10,16 @@ import RichText from './RichText.astro';
 interface Props {
   sections?: readonly { heading: string; body?: string; items?: readonly string[] }[];
   locale: Locale;
+  /** Render only sections[from..to); ids keep their position in the full list. */
+  from?: number;
+  to?: number;
 }
 
-const { sections = [], locale } = Astro.props;
+const { sections = [], locale, from = 0, to = sections.length } = Astro.props;
 ---
 
-{sections.map((section, index) => (
-  <ContentSection heading={section.heading} id={`section-${index + 1}`}>
+{sections.slice(from, to).map((section, offset) => (
+  <ContentSection heading={section.heading} id={`section-${from + offset + 1}`}>
     {section.body && <RichText as="p" text={section.body} locale={locale} />}
     {section.items && (
       <ul class="extra-list">

@@ -1,46 +1,1104 @@
 ---
 /**
- * Scene 5, the tangle (`tangle`). PLACEHOLDER from H5, replaced by H8.
+ * Scene 5, the tangle (`tangle`): a corkboard of five polaroids and red string. Nineteen IOU
+ * threads become ten debts, the debts settle into balances, and three green threads pay them off.
  *
- * Hooks for H8:
- *   - <ScrollScene id="tangle" titleId="tangle-title" runway={{ desktop: 280, phone: 240 }}
- *     stages={[10, 30, 50, 68, 90]} staticStage={5}>
- *     Stages follow "Prototype findings": 0-10, 10-30, 30-50, 50-68, 68-90, 90-100 %.
- *     staticStage 5 is the rest frame; H8 renders the before board for
- *     html[data-scene-engine="static"] and the reduced-motion / short-viewport media query.
- *   - Slot `copy`: the h2 (#tangle-title) and body.
- *   - Slot `visual`: the illustrated stage; `div[data-hook="tangle-visual"]` marks where it goes.
- *   - Slot `link`: <SceneLink to="tangle" locale={locale} />, which resolves through data/links.ts.
- *   - Motion: generic data-anim / data-at on elements (scenes.css), or your own per-element
- *     keyframes on `animation-timeline: --scene`. Keep data-at in 1..5; reduced
- *     motion rests at staticStage.
- *   - Below 1024 px the tangle uses its portrait board; on phones the lede sits in normal flow
- *     before the pinned stage: put it in ScrollScene's `lead` slot (outside the runway and its
- *     timeline), rendered once. tangle/layout.ts and its test are H8's.
- *   - Bespoke keyframes and stage rules use the hooks documented at the top of scenes.css, with
- *     :global() around html[...] and .scene[data-stage] in this component's scoped <style>.
+ * Plan: "The tangle in detail" and "Prototype findings". Geometry is computed at build time by
+ * `../tangle/layout.ts` (two boards: desktop `0 0 800 520`, phone and tablet `0 0 360 440`;
+ * mirrored for rtl). Names, amounts and captions are HTML laid over one SVG of threads.
+ *
+ * Motion. Every animated element has its own keyframes and its own `animation-range`, bound to the
+ * scene's view timeline (`--scene`). Nothing animates a shared custom property. The stages engine
+ * (`?scenes=stages`, or a browser without view timelines) gives each element an end-state rule per
+ * `[data-stage]` and transitions to it. The rest state (no animation, no stage) is the end state.
+ *
+ *   %      what happens                                     engine ranges (% of the pinned range)
+ *   0-10   polaroids pin in; expense cards dim (3-10)       stage 0
+ *   10-30  19 IOU threads draw (6% each, stagger 0.75%)     stage 1
+ *   30-50  IOUs fade to 2%; 10 debts draw (7% each, 1.2%); tags; sticky note lands 44-47
+ *   50-68  debts dim to 15% (50-54); balance bubbles pop 52-63
+ *   68-90  Sam > Ava 68-75, Mei > Ava 75-82, Dev > Ben 82-89; each balance ticks to 0 as it lands
+ *   90-100 debts and sticky leave 90-94; "3, not 10" stamp lands 93-96; payments list emphasised
+ *
+ * Accessibility. The visual is one role="img" holding every board; nothing that matters lives only
+ * in it. The payments list, the "show all debts" disclosure and the captions are real HTML. Muted
+ * ink (never opacity) marks inactive captions, the dimmed expense cards and the list before 90%.
+ *
+ * Reduced motion and short viewports: two boards, "before" (the end of stage 2) and "after" (the
+ * rest frame), side by side inside the same role="img". The before board is in the HTML for every
+ * visitor and hidden unless the static frame is showing.
  */
 import ScrollScene from '../ScrollScene.astro';
 import SceneLink from '../props/SceneLink.astro';
-import { t, type Locale } from '@/i18n';
+import { t, tf, isRTL, type Locale, type TranslationKey } from '@/i18n';
+import { formatMoney, formatNumber } from '../format';
+import {
+  EXPENSES,
+  MEMBERS,
+  deriveBalances,
+  deriveGreedyPayments,
+  deriveIous,
+  derivePairwiseDebts,
+  type MemberId,
+} from '../data/example-group';
+import { buildTangle, type BoardName } from '../tangle/layout';
 
 interface Props {
   locale: Locale;
 }
 const { locale } = Astro.props;
+const rtl = isRTL(locale);
+
+// ---- The example group, derived (never typed in) ----
+const debts = derivePairwiseDebts(deriveIous());
+const balances = deriveBalances(debts);
+const payments = deriveGreedyPayments(balances);
+
+const eur = (cents: number, signed = false) => formatMoney(cents, 'EUR', locale, { whole: true, signed });
+const nameOf = (id: MemberId) => t(MEMBERS.find((m) => m.id === id)!.nameKey, locale);
+const colorOf = (id: MemberId) => MEMBERS.find((m) => m.id === id)!.color.light;
+const initialOf = (id: MemberId) => Array.from(nameOf(id).trim())[0] ?? '';
+
+/** Fill a sentence and split it around the amount, so the amount can sit in a <bdi>. */
+const MARK = '\u0001';
+function around(key: TranslationKey, params: Record<string, string>): [string, string?, string?] {
+  const [before, after = ''] = tf(key, { ...params, amount: MARK }, locale).split(MARK);
+  return [before, params.amount, after];
+}
+const owes = (d: { from: MemberId; to: MemberId; cents: number }) =>
+  around('home.tangle.owes', { from: nameOf(d.from), to: nameOf(d.to), amount: eur(d.cents) });
+const pays = (p: { from: MemberId; to: MemberId; cents: number }) =>
+  around('home.tangle.pays', { from: nameOf(p.from), to: nameOf(p.to), amount: eur(p.cents) });
+const smallDebtCents = debts.find((d) => d.cents === 200)?.cents ?? 200;
+const sticky = around('home.tangle.smallDebt', { amount: eur(smallDebtCents) });
+
+// ---- Timing (percent of the pinned range) ----
+const PAY_START = [68, 75, 82]; // each payment draws over 7%
+const PAY_LEN = 7;
+const landing = payments.map((_, k) => PAY_START[k] + PAY_LEN);
+const STEP_BOUNDS = [
+  [10, 30],
+  [30, 50],
+  [50, 68],
+  [68, 90],
+];
+const STEP_KEYS: TranslationKey[] = [
+  'home.tangle.stepIous',
+  'home.tangle.stepPairs',
+  'home.tangle.stepBalances',
+  'home.tangle.stepPayments',
+];
+
+/** One balance label per state a polaroid passes through: its balance, the remainder after each payment, and 0 */
+function balanceSteps(id: MemberId, order: number) {
+  const steps: { cents: number; at: number; out?: number }[] = [{ cents: balances[id], at: 52 + 2 * order }];
+  let running = balances[id];
+  payments.forEach((p, k) => {
+    if (p.from !== id && p.to !== id) return;
+    running += p.from === id ? p.cents : -p.cents;
+    steps[steps.length - 1].out = landing[k];
+    steps.push({ cents: running, at: landing[k] });
+  });
+  return steps;
+}
+
+const cardFor = (id: MemberId) => EXPENSES.find((e) => e.paidBy === id)!;
+
+// ---- Geometry: both boards, mirrored for rtl ----
+const layouts: BoardName[] = ['desktop', 'phone'];
+const boards = layouts.flatMap((layout) => {
+  const geometry = buildTangle(layout, rtl);
+  return [
+    { layout, geometry, before: true },
+    { layout, geometry, before: false },
+  ];
+});
+const HEAD_DEBT = 'M0 0L-11 -4.6L-11 4.6Z';
+const HEAD_PAY = 'M0 0L-15 -6.5L-15 6.5Z';
 ---
 
 <ScrollScene
   id="tangle"
   titleId="tangle-title"
+  class="scene--tangle"
   runway={{ desktop: 280, phone: 240 }}
   stages={[10, 30, 50, 68, 90]}
   staticStage={5}
 >
+  {/* Phones and tablets: the lede sits in normal flow before the pinned stage. Rendered here once;
+      desktop shows the copy column's paragraph instead and display:none keeps the other out of
+      the accessibility tree. */}
+  <p slot="lead" class="tangle__lede">{t('home.tangle.body', locale)}</p>
+
   <Fragment slot="copy">
     <h2 id="tangle-title">{t('home.tangle.title', locale)}</h2>
-    <p>{t('home.tangle.body', locale)}</p>
+    <p class="tangle__body">{t('home.tangle.body', locale)}</p>
+    <ol class="tangle__steps" role="list">
+      {
+        STEP_KEYS.map((key, i) => (
+          <li class="tangle__step" style={`--lo:${STEP_BOUNDS[i][0]};--hi:${STEP_BOUNDS[i][1]}`}>
+            <span class="tangle__num" aria-hidden="true">
+              {formatNumber(i + 1, locale)}
+            </span>
+            <span>{t(key, locale)}</span>
+          </li>
+        ))
+      }
+    </ol>
   </Fragment>
-  <div slot="visual" class="scene-placeholder" data-hook="tangle-visual" aria-hidden="true"></div>
+
+  <Fragment slot="visual">
+    <div class="tangle__visual" role="img" aria-label={t('home.tangle.figureLabel', locale)}>
+      {
+        boards.map(({ layout, geometry: g, before }) => (
+          <figure
+            class:list={['tangle__board', before && 'is-before']}
+            data-layout={layout}
+            style={`--W:${g.board.width};--H:${g.board.height};--cw:${layout === 'phone' ? 100 : 150}`}
+          >
+            <div class="tangle__cork">
+              <svg
+                viewBox={`0 0 ${g.board.width} ${g.board.height}`}
+                aria-hidden="true"
+                focusable="false"
+              >
+                {!before && (
+                  <g class="tangle__ious">
+                    {g.ious.map((th, i) => (
+                      <path
+                        class="tangle__thread tangle__iou"
+                        d={th.d}
+                        style={`--i:${i};--L:${th.length};--dash:${th.dasharray}`}
+                      />
+                    ))}
+                  </g>
+                )}
+                <g class="tangle__pairs">
+                  {g.debts.map((th, j) => (
+                    <>
+                      <path
+                        class="tangle__thread tangle__debt"
+                        d={th.d}
+                        style={`--i:${j};--L:${th.length};--dash:${th.dasharray}`}
+                      />
+                      <path
+                        class="tangle__head tangle__head--debt"
+                        d={HEAD_DEBT}
+                        transform={th.head.transform}
+                        style={`--i:${j}`}
+                      />
+                    </>
+                  ))}
+                </g>
+                {!before && (
+                  <g class="tangle__payments">
+                    {g.payments.map((th, k) => (
+                      <>
+                        <path
+                          class="tangle__thread tangle__pay"
+                          d={th.d}
+                          style={`--i:${k};--s:${PAY_START[k]};--L:${th.length};--dash:${th.dasharray}`}
+                        />
+                        <path
+                          class="tangle__head tangle__head--pay"
+                          d={HEAD_PAY}
+                          transform={th.head.transform}
+                          style={`--i:${k};--s:${PAY_START[k]}`}
+                        />
+                      </>
+                    ))}
+                  </g>
+                )}
+              </svg>
+
+              <ul class="tangle__cards">
+                {MEMBERS.map((m) => {
+                  const e = cardFor(m.id);
+                  const at = g.cards[m.id];
+                  return (
+                    <li class="tangle__card tangle__at" style={`--x:${at.xPct};--y:${at.yPct}`}>
+                      <b>
+                        <bdi>{eur(e.eurCents)}</bdi>
+                      </b>
+                      <span>{t(e.titleKey as TranslationKey, locale)}</span>
+                    </li>
+                  );
+                })}
+              </ul>
+
+              <ul class="tangle__people">
+                {MEMBERS.map((m, i) => {
+                  const n = g.nodes[m.id];
+                  const steps = balanceSteps(m.id, i);
+                  return (
+                    <li
+                      class="tangle__pol tangle__at"
+                      style={`--x:${n.xPct};--y:${n.yPct};--i:${i};--c:${m.color.light}`}
+                    >
+                      <span class="tangle__pin" style={`--i:${i}`} />
+                      <span class="tangle__av" aria-hidden="true">
+                        {initialOf(m.id)}
+                      </span>
+                      <span class="tangle__nm">{nameOf(m.id)}</span>
+                      {!before && (
+                        <span class="tangle__bal" style={`--at:${52 + 2 * i}`}>
+                          {steps.map((step, s) => {
+                            const last = s === steps.length - 1;
+                            const kind = last ? 'zero' : s === 0 ? 'first' : 'mid';
+                            const tone = last ? 'zero' : step.cents > 0 ? 'plus' : 'minus';
+                            return (
+                              <span
+                                class={`tangle__bv tangle__bv--${kind} tangle__bv--${tone}`}
+                                style={`--at:${step.at}${step.out ? `;--out:${step.out}` : ''}`}
+                              >
+                                {last && <span aria-hidden="true">{'✓ '}</span>}
+                                <bdi>{eur(step.cents, !last)}</bdi>
+                              </span>
+                            );
+                          })}
+                        </span>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+
+              <ul class="tangle__tags">
+                {g.debts.map((th, j) => (
+                  <li
+                    class="tangle__tag tangle__tag--debt tangle__at"
+                    style={`--x:${th.xPct};--y:${th.yPct};--i:${j}`}
+                  >
+                    <bdi>{eur(th.cents)}</bdi>
+                  </li>
+                ))}
+                {!before &&
+                  g.payments.map((th, k) => (
+                    <li
+                      class="tangle__tag tangle__tag--pay tangle__at"
+                      style={`--x:${th.xPct};--y:${th.yPct};--i:${k};--s:${PAY_START[k]}`}
+                    >
+                      <bdi>{eur(th.cents)}</bdi>
+                    </li>
+                  ))}
+                <li
+                  class="tangle__sticky tangle__at"
+                  style={`--x:${g.sticky.xPct};--y:${g.sticky.yPct};--sw:${g.sticky.w}`}
+                >
+                  {sticky[0]}
+                  {sticky[1] && <bdi>{sticky[1]}</bdi>}
+                  {sticky[2]}
+                </li>
+              </ul>
+
+              {!before && (
+                <p class="tangle__stamp tangle__at" style={`--x:${g.stamp.xPct};--y:${g.stamp.yPct}`}>
+                  {t('home.tangle.stamp', locale)}
+                </p>
+              )}
+            </div>
+            <figcaption class="tangle__figcap">
+              {before ? t('home.tangle.beforeTitle', locale) : t('home.tangle.afterTitle', locale)}
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+
+    <div class="tangle__after">
+      <h3>{t('home.tangle.afterTitle', locale)}</h3>
+      <ul class="tangle__pay-list">
+        {
+          payments.map((p) => {
+            const [before, amount, after] = pays(p);
+            return (
+              <li>
+                {before}
+                <bdi>{amount}</bdi>
+                {after}
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+
+    <details class="tangle__details">
+      <summary>{t('home.tangle.showAll', locale)}</summary>
+      <div class="tangle__debts" role="region" aria-labelledby="tangle-before-title" tabindex="0">
+        <h3 id="tangle-before-title">{t('home.tangle.beforeTitle', locale)}</h3>
+        <ul class="tangle__owes">
+          {
+            debts.map((d) => {
+              const [before, amount, after] = owes(d);
+              return (
+                <li>
+                  {before}
+                  <bdi>{amount}</bdi>
+                  {after}
+                </li>
+              );
+            })
+          }
+        </ul>
+        <ul class="tangle__balances">
+          {
+            MEMBERS.map((m) => (
+              <li>
+                {nameOf(m.id)} <bdi>{eur(balances[m.id], true)}</bdi>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </details>
+  </Fragment>
+
   <Fragment slot="link"><SceneLink to="tangle" locale={locale} /></Fragment>
 </ScrollScene>
+
+<style>
+  /* ===== Copy ===== */
+  .tangle__lede,
+  .tangle__body {
+    margin: 0;
+    max-inline-size: 60ch;
+    color: var(--ink);
+  }
+  .tangle__steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.625rem;
+  }
+  .tangle__step {
+    display: grid;
+    grid-template-columns: 1.75rem minmax(0, 1fr);
+    gap: 0.625rem;
+    align-items: start;
+    line-height: 1.35;
+    /* Rest state: no caption is current, so every caption is muted ink (never reduced opacity) */
+    color: var(--ink-muted);
+  }
+  .tangle__num {
+    display: grid;
+    place-items: center;
+    inline-size: 1.625rem;
+    block-size: 1.625rem;
+    border-radius: 50%;
+    border: 1.5px solid var(--thread-red);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .tangle__step:nth-child(4) .tangle__num {
+    border-color: var(--green-ink);
+  }
+  .tangle__after h3 {
+    margin: 0 0 0.375rem;
+    font-size: 1.125rem;
+    color: inherit;
+  }
+  .tangle__after {
+    color: var(--ink);
+    margin-block-start: 0.75rem;
+  }
+  .tangle__pay-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.25rem;
+  }
+  .tangle__pay-list li::before {
+    content: '\2713\00a0';
+    color: var(--green-ink);
+    font-weight: 700;
+  }
+  .tangle__details {
+    margin-block-start: 0.25rem;
+  }
+  .tangle__details > summary {
+    cursor: pointer;
+    min-block-size: 44px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: var(--green-ink);
+  }
+  .tangle__debts {
+    max-block-size: 40svh;
+    overflow: auto;
+    padding-inline: 0.25rem;
+  }
+  .tangle__debts h3 {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+  }
+  .tangle__owes,
+  .tangle__balances {
+    margin: 0 0 0.5rem;
+    padding-inline-start: 1.1em;
+    columns: 2 14rem;
+    column-gap: 1.5rem;
+  }
+
+  /* ===== The board ===== */
+  .tangle__visual {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    inline-size: min(100%, calc((100svh - var(--header-h, 88px) - 215px) * 800 / 520));
+    margin-inline: auto;
+  }
+  .tangle__board {
+    container-type: inline-size;
+    inline-size: 100%;
+    min-inline-size: 0;
+    margin: 0;
+    display: none;
+  }
+  .tangle__figcap {
+    display: none;
+    margin-block: 0.375rem;
+    text-align: center;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .tangle__cork {
+    --u: calc(100cqw / var(--W));
+    position: relative;
+    inline-size: 100%;
+    aspect-ratio: var(--W) / var(--H);
+    background-color: var(--kraft);
+    background-image: radial-gradient(rgb(0 0 0 / 0.09) 1px, transparent 1.5px);
+    background-size: calc(9 * var(--u)) calc(9 * var(--u));
+    border-radius: calc(10 * var(--u));
+    box-shadow:
+      inset 0 0 0 calc(8 * var(--u)) #b58f5a,
+      var(--paper-shadow);
+  }
+  .tangle__cork svg {
+    position: absolute;
+    inset: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    overflow: visible;
+  }
+  .tangle__cork ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .tangle__at {
+    position: absolute;
+    inset-inline-start: calc(var(--x) * 1%);
+    inset-block-start: calc(var(--y) * 1%);
+    translate: calc(-50% * var(--dir, 1)) -50%;
+  }
+
+  /* Threads. The rest state is the end state: IOUs at 2%, debts gone, payments drawn. */
+  .tangle__thread {
+    fill: none;
+    stroke-dasharray: var(--dash);
+    stroke-dashoffset: 0;
+  }
+  .tangle__iou {
+    stroke: var(--thread-red);
+    stroke-width: 1.3;
+    stroke-opacity: 0.6;
+    opacity: 0.02;
+  }
+  .tangle__debt {
+    stroke: var(--thread-red);
+    stroke-width: 2.6;
+    opacity: 0;
+  }
+  .tangle__pay {
+    stroke: var(--green-ink);
+    stroke-width: 4.2;
+  }
+  .tangle__head--debt {
+    fill: var(--thread-red);
+    opacity: 0;
+  }
+  .tangle__head--pay {
+    fill: var(--green-ink);
+  }
+
+  /* Polaroids */
+  .tangle__pol {
+    inline-size: calc(68 * var(--u));
+    block-size: calc(76 * var(--u));
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    justify-items: center;
+    align-items: start;
+    gap: calc(2 * var(--u));
+    padding: calc(5 * var(--u)) calc(3 * var(--u));
+    background: var(--paper);
+    color: var(--ink);
+    box-shadow: var(--paper-shadow);
+    border-radius: calc(2 * var(--u));
+  }
+  .tangle__pin {
+    position: absolute;
+    inset-block-start: calc(-5 * var(--u));
+    inset-inline-start: 50%;
+    translate: calc(-50% * var(--dir, 1)) 0;
+    inline-size: calc(10 * var(--u));
+    block-size: calc(10 * var(--u));
+    border-radius: 50%;
+    background: var(--thread-red);
+    box-shadow:
+      0 1px 2px rgb(0 0 0 / 0.5),
+      inset 0 -2px 2px rgb(0 0 0 / 0.25);
+  }
+  .tangle__av {
+    inline-size: calc(30 * var(--u));
+    block-size: calc(30 * var(--u));
+    border-radius: 50%;
+    background: var(--c);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: max(10px, calc(14 * var(--u)));
+    line-height: 1;
+  }
+  .tangle__nm {
+    font-size: max(10px, calc(12 * var(--u)));
+    font-weight: 600;
+    line-height: 1.1;
+    max-inline-size: 100%;
+    overflow-wrap: anywhere;
+    text-align: center;
+  }
+  .tangle__bal {
+    display: grid;
+    align-self: end;
+    padding: calc(2.5 * var(--u)) calc(5 * var(--u));
+    border-radius: 99px;
+    background: rgb(0 0 0 / 0.06);
+    font-size: max(10px, calc(11 * var(--u)));
+    font-weight: 600;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .tangle__bv {
+    grid-area: 1 / 1;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .tangle__bv--plus,
+  .tangle__bv--zero {
+    color: var(--green-ink);
+  }
+  .tangle__bv--minus {
+    color: var(--thread-red-text);
+  }
+  /* Rest state: only the final tick shows */
+  .tangle__bv--first,
+  .tangle__bv--mid {
+    opacity: 0;
+  }
+
+  /* Expense cards, tags, sticky note, stamp */
+  .tangle__card {
+    display: grid;
+    justify-items: center;
+    inline-size: max-content;
+    max-inline-size: calc(var(--cw) * var(--u));
+    padding: calc(3 * var(--u)) calc(6 * var(--u));
+    background: var(--paper);
+    /* Rest and stages 0 onward: dimmed with muted ink, never reduced opacity */
+    color: var(--ink-muted);
+    box-shadow: var(--paper-shadow);
+    border-radius: calc(2 * var(--u));
+    text-align: center;
+    line-height: 1.15;
+    font-size: max(10px, calc(11 * var(--u)));
+    overflow-wrap: anywhere;
+  }
+  .tangle__card b {
+    font-size: max(10px, calc(12 * var(--u)));
+  }
+  .tangle__tag {
+    padding: calc(2.5 * var(--u)) calc(5 * var(--u));
+    border-radius: 99px;
+    background: var(--paper);
+    box-shadow: var(--paper-shadow);
+    font-size: max(10px, calc(13 * var(--u)));
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .tangle__tag--debt {
+    color: var(--thread-red-text);
+    border: 1px solid var(--thread-red);
+    opacity: 0;
+  }
+  .tangle__tag--pay {
+    color: var(--green-ink);
+    border: 1px solid var(--green-ink);
+    font-size: max(11px, calc(15 * var(--u)));
+  }
+  .tangle__sticky {
+    inline-size: calc(var(--sw) * var(--u));
+    padding: calc(5 * var(--u)) calc(7 * var(--u));
+    background: var(--sticky-yellow);
+    color: var(--ink);
+    box-shadow: var(--paper-shadow);
+    font-size: max(10px, calc(11.5 * var(--u)));
+    line-height: 1.2;
+    text-align: center;
+    text-wrap: balance;
+    rotate: -3deg;
+    opacity: 0;
+  }
+  .tangle__stamp {
+    margin: 0;
+    padding: calc(3 * var(--u)) calc(9 * var(--u));
+    border: calc(2.5 * var(--u)) solid var(--green-ink);
+    border-radius: calc(4 * var(--u));
+    color: var(--green-ink);
+    background: color-mix(in srgb, var(--kraft) 70%, transparent);
+    font-weight: 700;
+    font-size: max(13px, calc(21 * var(--u)));
+    letter-spacing: 0.02em;
+    line-height: 1;
+    white-space: nowrap;
+    rotate: -4deg;
+  }
+
+  /* The before board is the end of stage 2: debts, tags and the sticky note, drawn */
+  .is-before .tangle__debt,
+  .is-before .tangle__head--debt,
+  .is-before .tangle__tag--debt,
+  .is-before .tangle__sticky {
+    opacity: 1;
+  }
+
+  /* ===== Which board shows ===== */
+  @media (min-width: 1024px) {
+    .tangle__board[data-layout='desktop']:not(.is-before) {
+      display: block;
+    }
+    .tangle__lede,
+    :global(.scene--tangle .scene__lead) {
+      display: none;
+    }
+  }
+  @media (max-width: 1023px) {
+    .tangle__board[data-layout='phone']:not(.is-before) {
+      display: block;
+    }
+    .tangle__body {
+      display: none;
+    }
+    .tangle__visual {
+      /* The prototype reserved 215px for heading and captions; the disclosure and link need room too */
+      inline-size: min(100%, calc((100svh - var(--header-h, 88px) - 300px) * 360 / 440));
+    }
+
+    /* The portrait layout: heading, board, one caption at a time (the payments list replaces it) */
+    :global(.scene.scene--tangle > .scene__runway > .scene__stage) {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: auto minmax(0, 1fr) auto auto auto;
+      grid-template-areas: 'head' 'board' 'caps' 'more' 'link';
+      align-content: stretch;
+      align-items: start;
+      row-gap: 0.5rem;
+      padding-block: 0.5rem;
+    }
+    :global(.scene--tangle .scene__copy),
+    :global(.scene--tangle .scene__visual) {
+      display: contents;
+    }
+    :global(.scene--tangle .scene__copy > h2) {
+      grid-area: head;
+      font-size: clamp(1.25rem, 5.6vw, 1.7rem);
+    }
+    .tangle__steps {
+      grid-area: caps;
+    }
+    .tangle__visual {
+      grid-area: board;
+      align-self: center;
+    }
+    .tangle__after {
+      grid-area: caps;
+    }
+    .tangle__details {
+      grid-area: more;
+      margin-block-start: 0;
+    }
+    :global(.scene--tangle .scene__link) {
+      grid-area: link;
+    }
+  }
+  /* Phones: one caption at a time in a single grid cell. Only while the scene animates. */
+  @media (max-width: 1023px) {
+    :global(html:is([data-scene-engine='native'], [data-scene-engine='stages'])) .tangle__steps {
+      min-block-size: 3.2em;
+    }
+    :global(html:is([data-scene-engine='native'], [data-scene-engine='stages'])) .tangle__step {
+      grid-area: 1 / 1;
+      opacity: 0;
+      color: var(--ink);
+    }
+  }
+
+  /* ===== Reduced motion and short viewports: before and after, side by side ===== */
+  @media (prefers-reduced-motion: reduce), (max-height: 559px) {
+    :global(.scene.scene--tangle > .scene__runway > .scene__stage) {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .tangle__visual {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+      gap: 1.25rem;
+      align-items: start;
+      justify-items: stretch;
+      inline-size: 100%;
+    }
+    .tangle__figcap {
+      display: block;
+    }
+    .tangle__steps,
+    .tangle__after {
+      min-block-size: 0;
+    }
+  }
+  @media (min-width: 1024px) and (prefers-reduced-motion: reduce), (min-width: 1024px) and (max-height: 559px) {
+    .tangle__board[data-layout='desktop'].is-before {
+      display: block;
+    }
+  }
+  @media (max-width: 1023px) and (prefers-reduced-motion: reduce), (max-width: 1023px) and (max-height: 559px) {
+    .tangle__board[data-layout='phone'].is-before {
+      display: block;
+    }
+  }
+
+  @media (forced-colors: active) {
+    .tangle__iou,
+    .tangle__debt {
+      stroke: CanvasText;
+    }
+    .tangle__pay {
+      stroke: Highlight;
+    }
+    .tangle__head--debt {
+      fill: CanvasText;
+    }
+    .tangle__head--pay {
+      fill: Highlight;
+    }
+  }
+
+  /* ===== Native motion: per-element keyframes on the scene's view timeline ===== */
+  @keyframes tangle-pol {
+    from { opacity: 0; scale: 1.1; }
+  }
+  @keyframes tangle-pin {
+    from { opacity: 0; translate: calc(-50% * var(--dir, 1)) calc(-3 * var(--u)); }
+  }
+  @keyframes tangle-card-dim {
+    from { color: var(--ink); }
+  }
+  @keyframes tangle-draw {
+    from { stroke-dashoffset: calc(var(--L) * 1px); }
+  }
+  @keyframes tangle-iou-fade {
+    from { opacity: 1; }
+  }
+  @keyframes tangle-dim {
+    from { opacity: 1; }
+    to { opacity: 0.15; }
+  }
+  @keyframes tangle-leave {
+    from { opacity: 0.15; }
+    to { opacity: 0; }
+  }
+  @keyframes tangle-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes tangle-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  @keyframes tangle-pop {
+    from { opacity: 0; scale: 0.6; }
+    to { opacity: 1; scale: 1; }
+  }
+  @keyframes tangle-sticky {
+    from { opacity: 0; scale: 1.15; rotate: -9deg; }
+    to { opacity: 1; scale: 1; rotate: -3deg; }
+  }
+  @keyframes tangle-sticky-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  @keyframes tangle-stamp {
+    from { opacity: 0; scale: 1.15; rotate: -6deg; }
+  }
+  @keyframes tangle-cap-in {
+    from { color: var(--ink-muted); }
+    to { color: var(--ink); }
+  }
+  @keyframes tangle-cap-out {
+    from { color: var(--ink); }
+    to { color: var(--ink-muted); }
+  }
+  @keyframes tangle-ink-in {
+    from { color: var(--ink-muted); }
+  }
+
+  :global(html[data-scene-engine='native']) .tangle__pol {
+    animation: tangle-pol var(--ease-paper) both;
+    animation-timeline: --scene;
+    animation-range: contain calc(var(--i) * 1%) contain calc(var(--i) * 1% + 5%);
+  }
+  :global(html[data-scene-engine='native']) .tangle__pin {
+    animation: tangle-pin var(--ease-snap) both;
+    animation-timeline: --scene;
+    animation-range: contain calc(var(--i) * 1% + 2%) contain calc(var(--i) * 1% + 6%);
+  }
+  :global(html[data-scene-engine='native']) .tangle__card {
+    animation: tangle-card-dim linear both;
+    animation-timeline: --scene;
+    animation-range: contain 3% contain 10%;
+  }
+  /* IOUs: draw 10-29.5 (6% each, staggered 0.75%), fade to 2% over 30-36 */
+  :global(html[data-scene-engine='native']) .tangle__iou {
+    animation:
+      tangle-draw var(--ease-thread) both,
+      tangle-iou-fade linear both;
+    animation-timeline: --scene, --scene;
+    animation-range:
+      contain calc(10% + var(--i) * 0.75%) contain calc(16% + var(--i) * 0.75%),
+      contain 30% contain 36%;
+  }
+  /* Debts: draw 30-47.8 (7% each, staggered 1.2%), dim to 15% over 50-54, leave over 90-94 */
+  :global(html[data-scene-engine='native']) .tangle__debt {
+    animation:
+      tangle-draw var(--ease-thread) both,
+      tangle-dim linear both,
+      tangle-leave linear forwards;
+    animation-timeline: --scene, --scene, --scene;
+    animation-range:
+      contain calc(30% + var(--i) * 1.2%) contain calc(37% + var(--i) * 1.2%),
+      contain 50% contain 54%,
+      contain 90% contain 94%;
+  }
+  /* Arrowheads fade in over the last 1.2% of their thread's draw */
+  :global(html[data-scene-engine='native']) .tangle__head--debt {
+    animation:
+      tangle-in linear both,
+      tangle-dim linear forwards,
+      tangle-leave linear forwards;
+    animation-timeline: --scene, --scene, --scene;
+    animation-range:
+      contain calc(35.8% + var(--i) * 1.2%) contain calc(37% + var(--i) * 1.2%),
+      contain 50% contain 54%,
+      contain 90% contain 94%;
+  }
+  :global(html[data-scene-engine='native']) .tangle__tag--debt {
+    animation:
+      tangle-pop var(--ease-snap) both,
+      tangle-out linear forwards;
+    animation-timeline: --scene, --scene;
+    animation-range:
+      contain calc(34.2% + var(--i) * 1.2%) contain calc(37.2% + var(--i) * 1.2%),
+      contain 50% contain 53%;
+  }
+  :global(html[data-scene-engine='native']) .tangle__sticky {
+    animation:
+      tangle-sticky var(--ease-snap) both,
+      tangle-sticky-out linear forwards;
+    animation-timeline: --scene, --scene;
+    animation-range: contain 44% contain 47%, contain 90% contain 93%;
+  }
+  :global(html[data-scene-engine='native']) .tangle__bal {
+    animation: tangle-pop var(--ease-snap) both;
+    animation-timeline: --scene;
+    animation-range: contain calc(var(--at) * 1%) contain calc(var(--at) * 1% + 3%);
+  }
+  :global(html[data-scene-engine='native']) :is(.tangle__bv--first, .tangle__bv--mid) {
+    animation:
+      tangle-in linear both,
+      tangle-out linear forwards;
+    animation-timeline: --scene, --scene;
+    animation-range:
+      contain calc(var(--at) * 1%) contain calc(var(--at) * 1% + 1.5%),
+      contain calc(var(--out) * 1%) contain calc(var(--out) * 1% + 1.5%);
+  }
+  :global(html[data-scene-engine='native']) .tangle__bv--zero {
+    animation: tangle-in linear both;
+    animation-timeline: --scene;
+    animation-range: contain calc(var(--at) * 1%) contain calc(var(--at) * 1% + 1.5%);
+  }
+  /* Payments: Sam > Ava 68-75, Mei > Ava 75-82, Dev > Ben 82-89 */
+  :global(html[data-scene-engine='native']) .tangle__pay {
+    animation: tangle-draw var(--ease-thread) both;
+    animation-timeline: --scene;
+    animation-range: contain calc(var(--s) * 1%) contain calc(var(--s) * 1% + 7%);
+  }
+  :global(html[data-scene-engine='native']) .tangle__head--pay {
+    animation: tangle-in linear both;
+    animation-timeline: --scene;
+    animation-range: contain calc(var(--s) * 1% + 5.8%) contain calc(var(--s) * 1% + 7%);
+  }
+  :global(html[data-scene-engine='native']) .tangle__tag--pay {
+    animation: tangle-pop var(--ease-snap) both;
+    animation-timeline: --scene;
+    animation-range: contain calc(var(--s) * 1% + 4.9%) contain calc(var(--s) * 1% + 7.9%);
+  }
+  :global(html[data-scene-engine='native']) .tangle__stamp {
+    animation: tangle-stamp var(--ease-snap) both;
+    animation-timeline: --scene;
+    animation-range: contain 93% contain 96%;
+  }
+  /* Desktop: all four captions stay visible and the current one is emphasised in ink */
+  :global(html[data-scene-engine='native']) .tangle__step {
+    animation:
+      tangle-cap-in linear both,
+      tangle-cap-out linear forwards;
+    animation-timeline: --scene, --scene;
+    animation-range:
+      contain calc(var(--lo) * 1%) contain calc(var(--lo) * 1% + 2%),
+      contain calc(var(--hi) * 1%) contain calc(var(--hi) * 1% + 2%);
+  }
+  :global(html[data-scene-engine='native']) .tangle__after {
+    animation: tangle-ink-in linear both;
+    animation-timeline: --scene;
+    animation-range: contain 90% contain 94%;
+  }
+  @media (max-width: 1023px) {
+    /* Phones: captions crossfade in one cell; the payments list replaces them from 90%.
+       Only the names change: the timeline and ranges above stay. */
+    :global(html[data-scene-engine='native']) .tangle__step {
+      animation-name: tangle-in, tangle-out;
+    }
+    :global(html[data-scene-engine='native']) .tangle__after {
+      animation-name: tangle-in;
+    }
+  }
+
+  /* ===== Stages engine (and the static frame): one end-state rule per stage ===== */
+  /* IOUs: stage 0 undrawn; shown through stage 1; 2% afterwards (the rest value) */
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='0']) .tangle__iou {
+    stroke-dashoffset: calc(var(--L) * 1px);
+  }
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene:is([data-stage='0'], [data-stage='1'])) .tangle__iou {
+    opacity: 1;
+  }
+  /* Debts */
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene:is([data-stage='0'], [data-stage='1'])) .tangle__debt {
+    stroke-dashoffset: calc(var(--L) * 1px);
+  }
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='2']) :is(.tangle__debt, .tangle__head--debt, .tangle__tag--debt) {
+    opacity: 1;
+  }
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene:is([data-stage='3'], [data-stage='4'])) :is(.tangle__debt, .tangle__head--debt) {
+    opacity: 0.15;
+  }
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene:is([data-stage='0'], [data-stage='1'])) .tangle__tag--debt {
+    scale: 0.6;
+  }
+  /* Sticky note: lands in stage 2, leaves in the rest frame */
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene:is([data-stage='0'], [data-stage='1'])) .tangle__sticky {
+    scale: 1.15;
+    rotate: -9deg;
+  }
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene:is([data-stage='2'], [data-stage='3'], [data-stage='4'])) .tangle__sticky {
+    opacity: 1;
+  }
+  /* Balances */
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene:is([data-stage='0'], [data-stage='1'], [data-stage='2'])) .tangle__bal {
+    opacity: 0;
+    scale: 0.6;
+  }
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='3']) .tangle__bv--first {
+    opacity: 1;
+  }
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene:is([data-stage='0'], [data-stage='1'], [data-stage='2'], [data-stage='3'])) .tangle__bv--zero {
+    opacity: 0;
+  }
+  /* Payments */
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene:is([data-stage='0'], [data-stage='1'], [data-stage='2'], [data-stage='3'])) .tangle__pay {
+    stroke-dashoffset: calc(var(--L) * 1px);
+  }
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene:is([data-stage='0'], [data-stage='1'], [data-stage='2'], [data-stage='3'])) :is(.tangle__head--pay, .tangle__tag--pay) {
+    opacity: 0;
+  }
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene:is([data-stage='0'], [data-stage='1'], [data-stage='2'], [data-stage='3'])) .tangle__tag--pay {
+    scale: 0.6;
+  }
+  /* Stamp */
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene:is([data-stage='0'], [data-stage='1'], [data-stage='2'], [data-stage='3'], [data-stage='4'])) .tangle__stamp {
+    opacity: 0;
+    scale: 1.15;
+    rotate: -6deg;
+  }
+  /* Captions (desktop: ink for the current one) and the payments list (ink from the rest stage) */
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='1']) .tangle__step:nth-child(1),
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='2']) .tangle__step:nth-child(2),
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='3']) .tangle__step:nth-child(3),
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='4']) .tangle__step:nth-child(4) {
+    color: var(--ink);
+  }
+  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene:is([data-stage='0'], [data-stage='1'], [data-stage='2'], [data-stage='3'], [data-stage='4'])) .tangle__after {
+    color: var(--ink-muted);
+  }
+  @media (max-width: 1023px) {
+    :global(html[data-scene-engine='stages'] .scene[data-stage='1']) .tangle__step:nth-child(1),
+    :global(html[data-scene-engine='stages'] .scene[data-stage='2']) .tangle__step:nth-child(2),
+    :global(html[data-scene-engine='stages'] .scene[data-stage='3']) .tangle__step:nth-child(3),
+    :global(html[data-scene-engine='stages'] .scene[data-stage='4']) .tangle__step:nth-child(4) {
+      opacity: 1;
+    }
+    :global(html[data-scene-engine='stages'] .scene:is([data-stage='0'], [data-stage='1'], [data-stage='2'], [data-stage='3'], [data-stage='4'])) .tangle__after {
+      color: var(--ink);
+      opacity: 0;
+    }
+  }
+
+  /* Transitions: stages engine only, once the first stage has been assigned */
+  :global(html[data-scene-engine='stages'][data-scene-ready]) .tangle__thread {
+    transition:
+      stroke-dashoffset var(--stage-ms) var(--ease-thread) calc(var(--i, 0) * 40ms),
+      opacity var(--stage-ms) linear calc(var(--i, 0) * 40ms);
+  }
+  :global(html[data-scene-engine='stages'][data-scene-ready]) .tangle__head {
+    transition: opacity var(--stage-ms) linear calc(var(--i, 0) * 40ms + 500ms);
+  }
+  :global(html[data-scene-engine='stages'][data-scene-ready]) :is(.tangle__tag, .tangle__bal) {
+    transition:
+      opacity var(--stage-ms) linear calc(var(--i, 0) * 40ms),
+      scale var(--stage-ms) var(--ease-snap) calc(var(--i, 0) * 40ms);
+  }
+  :global(html[data-scene-engine='stages'][data-scene-ready]) .tangle__bv {
+    transition: opacity var(--stage-ms) linear;
+  }
+  :global(html[data-scene-engine='stages'][data-scene-ready]) :is(.tangle__sticky, .tangle__stamp) {
+    transition:
+      opacity var(--stage-ms) linear,
+      scale var(--stamp-ms) var(--ease-snap),
+      rotate var(--stamp-ms) var(--ease-snap);
+  }
+  :global(html[data-scene-engine='stages'][data-scene-ready]) :is(.tangle__step, .tangle__after) {
+    transition:
+      color var(--stage-ms) linear,
+      opacity var(--stage-ms) linear;
+  }
+</style>

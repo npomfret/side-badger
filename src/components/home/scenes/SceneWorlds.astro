@@ -1,36 +1,47 @@
 ---
 /**
- * Scene 7, worlds strip (`worlds`). PLACEHOLDER from H5, replaced by H10.
+ * Scene 7, worlds strip (`worlds`): housemates, couples, trips, celebrations.
  *
- * Hooks for H10:
- *   - <ScrollScene id="worlds" titleId="worlds-title" runway={{ desktop: 320, phone: 'entry' }}
- *     stages={[25, 50, 75]} staticStage={3}>: one stage per world (0 housemates ... 3
- *     celebrations). On phones and on the stages engine the strip is the native scroll-snap
- *     carousel; reduced motion stacks the four worlds vertically.
- *   - Slot `copy`: h2 (#worlds-title) and body. Slot `visual`: the track.
- *   - Track: `[data-scene-track]` with `data-track-range="a,b"` (percent of the pinned range the
- *     horizontal travel covers, here the default 0,100) containing one `[data-panel]` per
- *     world. The controller scrolls the page to a panel's point of the range when focus lands
- *     inside it (native engine, pinned only). Travel: translate: calc(var(--dir) * -1 * var(--travel)).
- *   - Each panel is `article[data-panel][data-world="<id>"][data-tone="<id>"]` with an h3. Tone
- *     palettes (--surface, --tone-ink, ...) are in styles/home/tokens.css.
- *   - Links: <SceneLink to="world:<id>" /> per world (couples stays /go/app/ until its page is
- *     published). Feature chips: WORLD_FEATURES and FEATURE_TITLE_KEYS in data/home-features.ts.
- *   - data/worlds.ts and props/worlds/ are H10's to create.
+ * One markup, three presentations (homepage plan, "Use-case worlds", "Mobile layout"):
+ *   - native engine, 600 px and wider: the stage is pinned and page scroll slides the track
+ *     sideways, one world per holding point (0, 33, 67 and 100 % of the range, which is where
+ *     scene-controller.ts scrolls to when focus lands in a panel). Travel is
+ *     `translate: calc(var(--dir) * -1 * var(--travel))`, so it mirrors under dir="rtl".
+ *   - carousel (native scroll-snap, previous and next buttons, "{current} of {total}"): phones, and
+ *     the stages and static engines. Under the stages engine the worlds runway collapses to the
+ *     carousel (no pin, no stage regions needed).
+ *   - stack: reduced motion, and no-JS or before the engine is known. Four worlds, one under the
+ *     other, with the same content and links.
+ * The mechanics (ticks, split, poll bars, comment) play on the native engine only; at rest every
+ * one shows its end state. All CSS is logical; the only physical thing is the 90deg plank gradient.
  */
 import ScrollScene from '../ScrollScene.astro';
 import SceneLink from '../props/SceneLink.astro';
+import HousematesTable from '../props/worlds/HousematesTable.astro';
+import CouplesTable from '../props/worlds/CouplesTable.astro';
+import TripsTable from '../props/worlds/TripsTable.astro';
+import CelebrationsTable from '../props/worlds/CelebrationsTable.astro';
 import { t, type Locale } from '@/i18n';
+import { intlCodeFor } from '../format';
+import { WORLDS, positionText, worldChips } from '../data/worlds';
 
 interface Props {
   locale: Locale;
 }
 const { locale } = Astro.props;
+
+const TABLES = {
+  housemates: HousematesTable,
+  couples: CouplesTable,
+  trips: TripsTable,
+  celebrations: CelebrationsTable,
+};
 ---
 
 <ScrollScene
   id="worlds"
   titleId="worlds-title"
+  class="scene--worlds"
   runway={{ desktop: 320, phone: 'entry' }}
   stages={[25, 50, 75]}
   staticStage={3}
@@ -39,52 +50,454 @@ const { locale } = Astro.props;
     <h2 id="worlds-title">{t('home.worlds.title', locale)}</h2>
     <p>{t('home.worlds.body', locale)}</p>
   </Fragment>
-  <div slot="visual" data-scene-track data-track-range="0,100" data-hook="worlds-track">
-    <article data-panel data-world="housemates" data-tone="housemates">
-      <h3>{t('home.worlds.housemates.title', locale)}</h3>
-      <p>{t('home.worlds.housemates.body', locale)}</p>
-      <SceneLink to="world:housemates" locale={locale} />
-    </article>
-    <article data-panel data-world="couples" data-tone="couples">
-      <h3>{t('home.worlds.couples.title', locale)}</h3>
-      <p>{t('home.worlds.couples.body', locale)}</p>
-      <SceneLink to="world:couples" locale={locale} />
-    </article>
-    <article data-panel data-world="trips" data-tone="trips">
-      <h3>{t('home.worlds.trips.title', locale)}</h3>
-      <p>{t('home.worlds.trips.body', locale)}</p>
-      <SceneLink to="world:trips" locale={locale} />
-    </article>
-    <article data-panel data-world="celebrations" data-tone="celebrations">
-      <h3>{t('home.worlds.celebrations.title', locale)}</h3>
-      <p>{t('home.worlds.celebrations.body', locale)}</p>
-      <SceneLink to="world:celebrations" locale={locale} />
-    </article>
+  <div
+    slot="visual"
+    class="worlds"
+    data-worlds
+    data-intl={intlCodeFor(locale)}
+    data-template={t('home.worlds.position', locale)}
+    style={`--n:${WORLDS.length}`}
+  >
+    <div class="worlds__viewport">
+      <div class="worlds__track" data-scene-track data-track-range="0,100" data-hook="worlds-track">
+        {
+          WORLDS.map(world => {
+            const Table = TABLES[world.id];
+            const chips = worldChips(world.id, locale);
+            return (
+              <article class="world" data-panel data-world={world.id} data-tone={world.id}>
+                <div class="world__body">
+                <div class="world__text">
+                  <h3>{t(world.titleKey, locale)}</h3>
+                  <p>{t(world.bodyKey, locale)}</p>
+                  {chips.length > 0 && (
+                    <ul class="world__chips">
+                      {chips.map(chip => (
+                        <li>{chip}</li>
+                      ))}
+                    </ul>
+                  )}
+                  <SceneLink to={`world:${world.id}`} locale={locale} />
+                </div>
+                <div class="world__table">
+                  <Table one={t(world.propOneKey, locale)} two={t(world.propTwoKey, locale)} />
+                </div>
+                </div>
+              </article>
+            );
+          })
+        }
+      </div>
+    </div>
+    <div class="worlds__controls">
+      <button type="button" class="worlds__btn" data-worlds-prev aria-disabled="true">
+        <svg class="worlds__icon" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" focusable="false">
+          <path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        {t('home.worlds.previous', locale)}
+      </button>
+      <p class="worlds__position" role="status" data-worlds-position>{positionText(1, locale)}</p>
+      <button type="button" class="worlds__btn" data-worlds-next>
+        {t('home.worlds.next', locale)}
+        <svg class="worlds__icon" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" focusable="false">
+          <path d="m7.5 4 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
   </div>
 </ScrollScene>
 
-<style>
-  [data-scene-track] {
-    display: grid;
-    gap: var(--scene-gap);
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+<style is:global>
+  /* ===== Stage: one column, copy above the strip ===== */
+  .scene--worlds .scene__stage:has(> .scene__visual) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'copy' 'visual' 'link';
   }
-  [data-panel] {
+  @media (min-width: 900px) {
+    .scene--worlds .scene__copy {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: end;
+      column-gap: var(--scene-gap);
+    }
+  }
+
+  /* ===== Stages engine: the runway collapses to the carousel ===== */
+  html[data-scene-engine='stages'] .scene--worlds[data-pin='pinned'] {
+    --runway: auto;
+    --stage-pos: static;
+    --stage-height: auto;
+    --stage-pad: clamp(3rem, 8vw, 6rem);
+    --stage-overflow: visible;
+  }
+  @media (prefers-reduced-motion: no-preference) and (min-height: 560px) {
+    html[data-scene-engine='stages'] .home > .scene.scene--worlds[data-pin='pinned']:nth-child(n + 3) > .scene__runway {
+      content-visibility: visible;
+    }
+  }
+
+  /* ===== Base presentation: stack (no JS, reduced motion) ===== */
+  .worlds {
+    display: grid;
+    gap: 1rem;
+    min-inline-size: 0;
+  }
+  .worlds__track {
+    display: grid;
+    gap: clamp(1rem, 3vw, 2rem);
+  }
+  .worlds__controls {
+    display: none;
+  }
+
+  /* ===== A world: its table ===== */
+  .worlds .world {
+    position: relative;
+    container-type: inline-size;
+    display: grid;
+    align-content: center;
     background: var(--surface);
     color: var(--tone-ink);
-    padding: 1rem;
     border-radius: var(--radius-md, 12px);
     box-shadow: var(--paper-shadow);
-    display: grid;
-    gap: 0.5rem;
-    align-content: start;
+    padding: clamp(1.25rem, 3vw, 2.25rem);
+    min-inline-size: 0;
+    scroll-snap-align: start;
   }
-  [data-panel] h3,
-  [data-panel] p {
+  .worlds .world h3,
+  .worlds .world p {
     margin: 0;
-    color: inherit;
+    color: var(--tone-ink);
   }
-  [data-panel] h3 {
-    font-size: var(--text-xl, 1.25rem);
+  .worlds .world h3 {
+    font-size: clamp(1.5rem, 1.2vw + 1.1rem, 2.125rem);
+    line-height: 1.2;
+  }
+  .worlds .world__text {
+    display: grid;
+    gap: 0.875rem;
+    align-content: center;
+    justify-items: start;
+    min-inline-size: 0;
+  }
+  .worlds .world__table {
+    min-inline-size: 0;
+  }
+  .worlds .world__body {
+    display: grid;
+    gap: 1.25rem;
+    align-content: center;
+    min-inline-size: 0;
+  }
+  @container (min-width: 34rem) {
+    .worlds .world__body {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      column-gap: clamp(1.5rem, 4cqi, 3rem);
+      align-items: center;
+    }
+  }
+  .worlds .world__chips {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .worlds .world__chips li {
+    background: var(--paper);
+    color: var(--ink);
+    border: 1px solid color-mix(in srgb, var(--tone-ink) 35%, transparent);
+    border-radius: 999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8125rem;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+  /* Links take the world's ink: the site's green ink fails 4.5:1 on some palettes */
+  .worlds .world .scene-link {
+    color: var(--tone-ink);
+  }
+  .worlds .world .scene-link:focus-visible {
+    outline-color: var(--tone-ink);
+  }
+
+  /* ===== The four palettes (tokens.css supplies --surface, --tone-ink and the accents) ===== */
+  /* Housemates: pine table, boards, magnets in --magnet */
+  .worlds .world[data-world='housemates'] {
+    background-image: repeating-linear-gradient(
+      90deg,
+      transparent 0 8rem,
+      rgb(29 43 36 / 0.1) 8rem calc(8rem + 2px)
+    );
+  }
+  /* Couples: linen weave */
+  .worlds .world[data-world='couples'] {
+    background-image:
+      repeating-linear-gradient(0deg, rgb(122 62 102 / 0.06) 0 1px, transparent 1px 6px),
+      repeating-linear-gradient(90deg, rgb(122 62 102 / 0.06) 0 1px, transparent 1px 6px);
+  }
+  /* Trips: beach towel, coral stripes along the block-end edge */
+  .worlds .world[data-world='trips'] {
+    padding-block-end: calc(clamp(1.25rem, 3vw, 2.25rem) + 1.5rem);
+  }
+  .worlds .world[data-world='trips']::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    inset-block-end: 0.75rem;
+    block-size: 1.25rem;
+    background:
+      linear-gradient(var(--stripe), var(--stripe)) 0 0 / 100% 0.4rem no-repeat,
+      linear-gradient(var(--stripe), var(--stripe)) 0 0.85rem / 100% 0.4rem no-repeat;
+    pointer-events: none;
+  }
+  /* Celebrations: tablecloth with a gold hem and a blush corner */
+  .worlds .world[data-world='celebrations'] {
+    outline: 2px solid var(--gold);
+    outline-offset: -0.625rem;
+    background-image: radial-gradient(circle at 100% 0, var(--blush) 0 3.5rem, transparent 3.5rem);
+  }
+  [dir='rtl'] .worlds .world[data-world='celebrations'] {
+    background-image: radial-gradient(circle at 0 0, var(--blush) 0 3.5rem, transparent 3.5rem);
+  }
+
+  /* ===== Previous and next ===== */
+  .worlds__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    min-block-size: 44px;
+    min-inline-size: 44px;
+    padding-inline: 1rem;
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .worlds__btn:focus-visible {
+    outline: 3px solid var(--green-ink);
+    outline-offset: 3px;
+  }
+  .worlds__btn[aria-disabled='true'] {
+    color: var(--ink-muted);
+    border-color: var(--ink-muted);
+    cursor: default;
+  }
+  .worlds__icon {
+    scale: var(--dir, 1) 1;
+  }
+  .worlds__position {
+    margin: 0;
+    color: var(--ink);
+    font-weight: 600;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ===== Carousel: native scroll-snap (any engine, motion allowed) ===== */
+  @media (prefers-reduced-motion: no-preference) {
+    html[data-scene-engine] .worlds__track {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: inline mandatory;
+      scrollbar-width: none;
+      padding-block: 0.5rem 1rem;
+    }
+    html[data-scene-engine] .worlds__track::-webkit-scrollbar {
+      display: none;
+    }
+    html[data-scene-engine] .worlds .world {
+      flex: 0 0 min(85%, 40rem);
+      align-content: start;
+    }
+    html[data-scene-engine] .worlds__controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+  }
+
+  /* ===== Native engine, 600 px and wider: pinned horizontal travel ===== */
+  @media (prefers-reduced-motion: no-preference) and (min-width: 600px) {
+    html[data-scene-engine='native'] .scene--worlds .worlds {
+      gap: 0;
+    }
+    html[data-scene-engine='native'] .worlds__controls {
+      display: none;
+    }
+    html[data-scene-engine='native'] .worlds__viewport {
+      overflow: clip;
+      border-radius: var(--radius-md, 12px);
+      box-shadow: var(--paper-shadow-lift);
+    }
+    html[data-scene-engine='native'] .worlds__track {
+      --travel: 75%;
+      display: flex;
+      gap: 0;
+      inline-size: calc(var(--n) * 100%);
+      overflow: visible;
+      scroll-snap-type: none;
+      padding-block: 0;
+      animation-name: worlds-travel;
+      animation-timeline: --scene;
+      animation-range: contain 0% contain 100%;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+    }
+    html[data-scene-engine='native'] .worlds .world {
+      flex: 0 0 calc(100% / var(--n));
+      align-content: center;
+      border-radius: 0;
+      box-shadow: none;
+      min-block-size: clamp(16rem, 52svh, 30rem);
+    }
+    html[data-scene-engine='native'] .worlds [data-mech] {
+      animation-timeline: --scene;
+      animation-fill-mode: both;
+      animation-timing-function: var(--ease-snap);
+    }
+    html[data-scene-engine='native'] .worlds [data-mech='tick'] {
+      animation-name: worlds-tick;
+      animation-range: contain calc(1% + var(--i) * 2.5%) contain calc(6% + var(--i) * 2.5%);
+    }
+    html[data-scene-engine='native'] .worlds [data-mech='split'] {
+      animation-name: worlds-split;
+      animation-range: contain 27% contain 38%;
+    }
+    html[data-scene-engine='native'] .worlds [data-mech='thumb'] {
+      animation-name: worlds-thumb;
+      animation-range: contain 27% contain 38%;
+    }
+    html[data-scene-engine='native'] .worlds [data-mech='bar'] {
+      animation-name: worlds-bar;
+      animation-timing-function: var(--ease-paper);
+      animation-range: contain calc(58% + var(--i) * 2%) contain calc(68% + var(--i) * 2%);
+    }
+    html[data-scene-engine='native'] .worlds [data-mech='comment'] {
+      animation-name: worlds-pop;
+      animation-range: contain 90% contain 98%;
+    }
+  }
+
+  /* Holding points at 0, 33.3, 66.7 and 100 % of the range: where keyboard focus lands */
+  @keyframes worlds-travel {
+    0%,
+    8.3% {
+      translate: 0 0;
+    }
+    25%,
+    41.7% {
+      translate: calc(var(--dir, 1) * -1 * var(--travel) / 3) 0;
+    }
+    58.3%,
+    75% {
+      translate: calc(var(--dir, 1) * -1 * var(--travel) * 2 / 3) 0;
+    }
+    91.7%,
+    100% {
+      translate: calc(var(--dir, 1) * -1 * var(--travel)) 0;
+    }
+  }
+  @keyframes worlds-tick {
+    from {
+      scale: 0;
+    }
+  }
+  @keyframes worlds-split {
+    from {
+      inline-size: 50%;
+    }
+  }
+  @keyframes worlds-thumb {
+    from {
+      inset-inline-start: 50%;
+    }
+  }
+  @keyframes worlds-bar {
+    from {
+      inline-size: 0;
+    }
+  }
+  @keyframes worlds-pop {
+    from {
+      opacity: 0;
+      scale: 0.85;
+    }
   }
 </style>
+
+<script>
+  // Previous and next, and the "{current} of {total}" readout, for the carousel.
+  for (const root of document.querySelectorAll<HTMLElement>('[data-worlds]')) {
+    const track = root.querySelector<HTMLElement>('[data-scene-track]')!;
+    const panels = [...track.querySelectorAll<HTMLElement>('[data-panel]')];
+    const prev = root.querySelector<HTMLElement>('[data-worlds-prev]')!;
+    const next = root.querySelector<HTMLElement>('[data-worlds-next]')!;
+    const status = root.querySelector<HTMLElement>('[data-worlds-position]')!;
+    const digits = new Intl.NumberFormat(root.dataset.intl);
+    const ratios = new Map<Element, number>();
+    let current = 0;
+
+    const show = (index: number) => {
+      current = index;
+      status.textContent = (root.dataset.template ?? '')
+        .replace('{current}', digits.format(index + 1))
+        .replace('{total}', digits.format(panels.length));
+      prev.setAttribute('aria-disabled', String(index === 0));
+      next.setAttribute('aria-disabled', String(index === panels.length - 1));
+    };
+
+    // While a button's smooth scroll runs, the readout shows its destination, not the cards passing by
+    let target = 0;
+    let busy = false;
+    let timer = 0;
+    const recompute = () => {
+      if (busy) return;
+      let best = current;
+      let top = -1;
+      panels.forEach((panel, i) => {
+        const ratio = ratios.get(panel) ?? 0;
+        if (ratio > top) {
+          top = ratio;
+          best = i;
+        }
+      });
+      if (best !== current) show(best);
+      target = current;
+    };
+    const settle = () => {
+      busy = false;
+      clearTimeout(timer);
+      recompute();
+    };
+    const io = new IntersectionObserver(
+      entries => {
+        for (const entry of entries) ratios.set(entry.target, entry.intersectionRatio);
+        recompute();
+      },
+      { root: track, threshold: [0, 0.25, 0.5, 0.75, 1] }
+    );
+    panels.forEach(panel => io.observe(panel));
+    track.addEventListener('scrollend', settle);
+
+    const go = (index: number) => {
+      if (index < 0 || index >= panels.length) return;
+      target = index;
+      show(index);
+      busy = true;
+      clearTimeout(timer);
+      timer = window.setTimeout(settle, 1000);
+      const smooth = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+      panels[index].scrollIntoView({ inline: 'start', block: 'nearest', behavior: smooth ? 'smooth' : 'auto' });
+    };
+    prev.addEventListener('click', () => go(target - 1));
+    next.addEventListener('click', () => go(target + 1));
+  }
+</script>

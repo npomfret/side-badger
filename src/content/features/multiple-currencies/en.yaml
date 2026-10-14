@@ -1,0 +1,123 @@
+review:
+  status: reviewed
+  reviewer: nick
+  date: 2026-10-15
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: Split costs in 140 currencies, converted or kept separate
+  description: Enter each expense in the currency you paid in, keep balances separate or convert at a rate you can see and change, then settle up with a short list of payments.
+h1: Split costs in 140 currencies
+navLabel: Multiple currencies
+lead: Euros, yen, and that one taxi in baht. Side Badger takes each expense in the currency you paid in, keeps the balances straight, and can convert when your group would rather settle once. It works in 140 currencies, and it is a natural fit for [group trips](page:use-case/group-trips).
+cta:
+  heading: Bring your euros, bring your yen
+  body: Create an account, start a group and add the first expense in whatever currency you happened to be holding.
+  button: Create a free account
+problem:
+  heading: Enter it as you paid it
+  body: A trip is never paid for in one currency. The hotel was booked at home, dinner was in cash, and the taxi took cards only. Converting everything by hand before you can even type it in is how spreadsheets get abandoned. In Side Badger you enter each expense in the currency on the receipt, and every amount follows its currency's rules, so yen have no decimals and dinars have three. Your recently used currencies come first in the list.
+workflow:
+  heading: Keep currencies separate, or convert as you go
+  steps:
+    - title: Add the expense in its own currency
+      body: Choose the currency, type the amount, say who paid and who shared it. Nothing else is needed. This is the default, and it keeps the original amount exactly as you entered it.
+      shot: S07
+      shotAlt: The expense form with a yen amount entered
+    - title: Watch a balance for each currency
+      body: Balances are kept separately per currency, and each one gets its own short list of suggested payments. Pounds are settled in pounds and yen in yen.
+      shot: S10
+      shotAlt: The balances screen with simplified debts in two currencies
+    - title: Or convert, when the group would rather settle once
+      body: Pick another currency as you enter the expense and Side Badger can convert it at a current exchange rate, which you can change to the rate you actually got. The converted amount joins the balance in that currency. Conversion is a choice the group makes, never something that happens behind your back.
+options:
+  heading: A rate you can see and change
+  items:
+    - title: The rate is shown
+      body: When you convert, the rate and the converted amount appear on the form, so nobody has to take a number on trust.
+    - title: Type your own
+      body: Got a better rate from a cash desk, or a worse one from an airport? Edit the rate to the one you actually got and the converted amount updates.
+    - title: The original stays
+      body: The original amount stays on the expense, next to the converted one, for anyone who asks what it was in yen.
+    - title: Free to convert
+      body: Converting costs nothing. There is no fee for entering an expense in another currency.
+example:
+  heading: Four friends in Japan, settled two ways
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: the hotel, booked at home
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: dinner in Japan
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: train tickets
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: temple entry
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: One currency for the whole group
+    body: If your group would rather not think about it, pick a group currency and new expenses convert into it automatically. This applies to new and copied expenses only. Edits and existing expenses are left as they are, so nothing already recorded changes under you.
+  - heading: Owe euros, pay in pounds
+    body: Paid in yen, settling in pounds? Fine. When you record a payment you can convert it into another currency too, so the person who owes euros can pay in pounds and the balance still comes out right. Pay each other however you like, then record it.
+  - heading: Rules for the group
+    body: Limit a group to the currencies you are actually using, and set a default so the form opens on the right one. A holiday in Portugal does not need 139 other options next to the dinner bill.
+  - heading: See also
+    body: Planning a party? [Events and celebrations](page:use-case/events-and-celebrations) covers deposits, decorations and the guest who paid in another currency.
+limits:
+  heading: Limits
+  items:
+    - The rate is fixed when the expense is saved. Old expenses are never revalued.
+    - Side Badger fetches a current rate where it can. Not every pair is guaranteed one, and you can always type the rate yourself.
+    - Group auto-convert applies to new and copied expenses only, not to edits or existing expenses.
+    - Each expense is capped at 999,999.99 in its own currency.
+    - There are 140 currencies. Cryptocurrencies and metals are not among them.
+    - Side Badger records payments. It never moves money or converts it for you.
+useCasesHeading: Where this helps
+faq:
+  heading: Questions
+  items:
+    - q: Which exchange rate do you use?
+      a: A current rate, fetched when you enter the expense. You can change it to the rate you actually got, and the converted amount updates.
+    - q: Do old expenses get revalued?
+      a: No. The rate is fixed when the expense is saved, so a balance does not drift because the market did.
+    - q: Do you support crypto?
+      a: No. There are 140 currencies, and cryptocurrencies are not among them.
+    - q: Why can't I enter 2,000,000 rupiah?
+      a: Each expense is capped at 999,999.99 in its own currency. Enter it in another currency and convert, or split it into two expenses.
+    - q: Does conversion cost anything?
+      a: No. Converting is free, like the rest of Side Badger. See [pricing](page:pricing).
+    - q: Do I have to convert?
+      a: No. Currencies stay separate unless you or your group choose to convert, and each currency gets its own short list of payments.

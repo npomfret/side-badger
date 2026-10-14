@@ -185,26 +185,12 @@ export function registryProblems(r: Registry): string[] {
 
 /**
  * Legacy English strings that still use a phrase from the substitutions table, keyed by i18n key,
- * with the phrases each key may keep. Only the old homepage (`HomePage.astro`) and the current
- * pricing page (`PricingPage.astro`) render them. H11 deletes the homepage keys (`comingSoon.*`,
- * `features.*.desc`, `hero.*`, `narrative.*`, `whyFree.*`) and P31 rewrites `pricing.*`; each
- * removes its entries here. The list only shrinks: a stale entry fails, and strict mode (the W4b
- * gate, D38) applies no exemption and fails while the list is non-empty.
+ * with the phrases each key may keep. Only the current pricing page (`PricingPage.astro`) renders
+ * them; H11 has already deleted the old homepage keys, and P31 rewrites `pricing.*` and removes
+ * the entries below. The list only shrinks: a stale entry fails, and strict mode (the W4b gate,
+ * D38) applies no exemption and fails while the list is non-empty.
  */
 const LEGACY_SUBSTITUTION_EXEMPTIONS: Readonly<Record<string, readonly string[]>> = {
-  // H11 (old homepage)
-  'comingSoon.badge': ['coming soon'],
-  'comingSoon.title': ['coming soon'],
-  'features.currency.desc': ['any currency'],
-  'features.fxConversion.desc': ['real-time rates'],
-  'features.groups.desc': ['instant notifications'],
-  'features.invites.desc': ['join instantly'],
-  'features.noTracking.desc': ['no tracking'],
-  'hero.badge': ['100% free and unlimited'],
-  'hero.subtitleStatic': ['free forever'],
-  'narrative.step2.desc': ['any currency'],
-  'narrative.step3.desc': ['pay back'],
-  'whyFree.trackers.desc': ['no tracking'],
   // P31 (pricing)
   'pricing.free.feature3': ['add friends'],
   'pricing.free.feature4': ['no tracking'],
@@ -261,7 +247,7 @@ describe(`registry (${real.features.length} features, ${real.useCases.length} us
   });
 
   it.runIf(STRICT)('has no legacy substitution exemptions left in strict mode (D38)', () => {
-    expect(Object.keys(LEGACY_SUBSTITUTION_EXEMPTIONS), 'H11 and P31 rewrite these strings').toEqual([]);
+    expect(Object.keys(LEGACY_SUBSTITUTION_EXEMPTIONS), 'P31 rewrites these strings').toEqual([]);
   });
 
   it('gives every registered page a well-formed path and a real parent chain', () => {

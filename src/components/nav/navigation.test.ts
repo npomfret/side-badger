@@ -1,6 +1,27 @@
 import { describe, expect, it, vi } from 'vitest';
 
-// A hub, a feature below it and a use case, as P21 and P24 will register them
+// Ids the fixture treats as having routes, besides the real registry's own
+const extraBuilt = vi.hoisted(() => new Set<string>());
+// The registry's own unpublished pages count as published once they are in `extraBuilt`
+vi.mock('../../site/pages', async importActual => {
+  const actual = await importActual<typeof import('../../site/pages')>();
+  const flip = (page: import('../../site/pages').PageDef) =>
+    extraBuilt.has(page.id) ? { ...page, published: true } : page;
+  const allPages = () => actual.allPages().map(flip);
+  return { ...actual, allPages, getPage: (id: string) => allPages().find(page => page.id === id) };
+});
+vi.mock('../../site/routes', async importActual => {
+  const actual = await importActual<typeof import('../../site/routes')>();
+  return {
+    ...actual,
+    pathsFor: (id: string) =>
+      extraBuilt.has(id)
+        ? (['en', 'fr'] as const).map(locale => ({ params: { locale }, props: { pageId: id, locale } }))
+        : actual.pathsFor(id),
+  };
+});
+
+// A hub and a use case, as P24 will register them; the feature pages come from the real registry
 vi.mock('../../site/preview-pages', () => ({
   previewPages: [
     {
@@ -13,30 +34,20 @@ vi.mock('../../site/preview-pages', () => ({
       indexing: 'per-locale-review',
     },
     {
-      id: 'feature/settle-up',
-      type: 'feature',
-      path: '/features/settle-up/',
-      parent: 'features',
-      published: true,
-      locales: 'all',
-      footer: { group: 'product', order: 2 },
-      related: ['use-case/trips'],
-      indexing: 'per-locale-review',
-    },
-    {
       id: 'use-case/trips',
       type: 'use-case',
       path: '/use-cases/trips/',
       parent: 'use-cases',
-      published: false,
+      published: true,
       locales: 'all',
-      features: ['settle-up'],
+      features: ['balances'],
+      content: { collection: 'useCasePages', slug: 'trips' },
       indexing: 'per-locale-review',
     },
   ],
 }));
 
-const { breadcrumbJsonLd, breadcrumbsFor, footerGroups, navLinks, pageLabel, relatedPages } = await import(
+const { breadcrumbJsonLd, clearNavigationCache, breadcrumbsFor, footerGroups, navLinks, pageLabel, pageLabels, relatedPages } = await import(
   './navigation'
 );
 const { getPage } = await import('../../site/pages');
@@ -89,7 +100,46 @@ describe('navigation from the registry', () => {
     expect(pageLabel(getPage('feature/settle-up')!, 'en', { 'feature/settle-up': 'Settle up' })).toBe('Settle up');
   });
 
-  it('lists related pages that are published only', () => {
+  it('lists related pages that are published and built only', () => {
     expect(relatedPages('feature/settle-up', 'en')).toEqual([]);
+    extraBuilt.add('use-case/trips');
+    extraBuilt.add('feature/settle-up');
+    clearNavigationCache();
+    try {
+      expect(relatedPages('feature/settle-up', 'en').map(page => page.id)).toEqual(['use-case/trips']);
+      // Feature ids are not page slugs: `balances` is homed on feature/settle-up
+      expect(relatedPages('use-case/trips', 'en').map(page => page.id)).toEqual(['feature/settle-up']);
+    } finally {
+      extraBuilt.clear();
+      clearNavigationCache();
+    }
+  });
+
+  it('labels content pages with their content title, only in the locales they are built in', async () => {
+    extraBuilt.add('feature/settle-up');
+    clearNavigationCache();
+    try {
+      const titles: Record<string, string> = { 'feature/settle-up:en': 'Settle up', 'feature/settle-up:fr': 'Régler' };
+      const read = async (page: { id: string }, locale: string) => titles[`${page.id}:${locale}`];
+      const labels = await pageLabels('en', read);
+      expect(labels).toEqual({ 'feature/settle-up': 'Settle up' });
+      expect(footerGroups('en', labels).find(group => group.id === 'product')!.links.map(link => link.label)).toEqual([
+        'Settle up',
+        'Pricing',
+      ]);
+      expect((await pageLabels('fr', read))['feature/settle-up']).toBe('Régler');
+      // Not built in German, so no label is loaded
+      expect(await pageLabels('de', read)).toEqual({});
+    } finally {
+      extraBuilt.clear();
+      clearNavigationCache();
+    }
+  });
+
+  it('orders the product footer group How it works, Features, the feature pages, then Pricing', () => {
+    const order = (id: string) => getPage(id)!.footer!.order;
+    const ids = ['how-it-works', 'features', 'feature/split-expenses', 'feature/settle-up', 'feature/multiple-currencies', 'pricing'];
+    expect(ids.map(order)).toEqual([...ids.map(order)].sort((a, b) => a - b));
+    expect(new Set(ids.map(order)).size).toBe(ids.length);
   });
 });

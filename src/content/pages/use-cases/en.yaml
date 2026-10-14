@@ -2,9 +2,16 @@
 # the sections below add a scenario and a one-line result for each use case.
 review:
   status: checked
-  checker: P34h-draft
+  checker: P34h-review
   date: 2026-10-15
-claims: []
+claims:
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - currency-conversion.group-auto-convert
+  - privacy-posture.no-ads
 meta:
   title: Side Badger for housemates, trips and parties
   description: Split costs with housemates, on group trips, and for parties, weddings and group gifts. See what Side Badger does for each kind of group.
@@ -23,7 +30,7 @@ sections:
   - heading: Group trips
     body: Flights in pounds, a villa in euros and a dinner only three people ate. Set the group to convert to pounds and four friends in Lisbon finish with three payments, instead of six when the currencies are kept separate. [Split group trip costs](page:use-case/group-trips).
   - heading: Parties, weddings and group gifts
-    body: Six people vote on the gift, one buys it, and everyone chips in a different amount. A £150 gift split by exact amounts leaves five payments to the person who bought it, £120 in all. [Split the costs of an event](page:use-case/events-and-celebrations).
+    body: Six people vote on the gift, one buys it, and not everyone chips in the same amount. A £150 gift split by exact amounts leaves five payments to the person who bought it, £120 in all. [Split the costs of an event](page:use-case/events-and-celebrations).
   - heading: Couples
     body: Share the boring costs without turning date night into a quarterly finance review. Rent split 60/40 and groceries split equally net down to one payment between the two of you.
   - heading: See how it works first

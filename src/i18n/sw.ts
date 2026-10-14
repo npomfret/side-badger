@@ -111,7 +111,7 @@ export default {
   'policy.cookies.meta.description': 'Sera yetu ya kuki inaeleza kuki gani Side Badger hutumia. Siri: hatutumii kuki za ufuatiliaji, bali misingi tu kufanya programu ifanye kazi.',
   'policy.cookies.meta.title': 'Sera ya kuki - Side Badger',
   'policy.cookies.title': 'Sera ya kuki',
-  'policy.englishOnly': 'Sera hii inapatikana kwa Kiingereza pekee. Maandishi yaliyo hapa chini ni asili ya Kiingereza.',
+  'policy.englishOnly': 'Sera hii inapatikana kwa Kiingereza pekee. Maandishi yaliyo hapa chini ni toleo asili la Kiingereza.',
   'policy.lastUpdated': 'Ilisasishwa mara ya mwisho {date}',
   'policy.privacy.meta.description': 'Sera yetu ya faragha inaeleza jinsi Side Badger inavyoshughulikia data yako. Siri: hatufuatili, hatuuzi data yako, wala hatuonyeshi matangazo.',
   'policy.privacy.meta.title': 'Sera ya faragha - Side Badger',

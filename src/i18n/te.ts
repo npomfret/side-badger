@@ -112,7 +112,7 @@ export default {
   'policy.cookies.meta.title': 'కుకీ పాలసీ - Side Badger',
   'policy.cookies.title': 'కుకీ పాలసీ',
   'policy.englishOnly': 'ఈ పాలసీ ఆంగ్లంలో మాత్రమే అందుబాటులో ఉంది. కింది పాఠ్యం ఆంగ్ల మూలం.',
-  'policy.lastUpdated': 'చివరిసారి నవీకరించినది {date}',
+  'policy.lastUpdated': 'చివరిగా అప్‌డేట్ చేయబడింది: {date}',
   'policy.privacy.meta.description': 'మా గోప్యతా పాలసీ Side Badger మీ డేటాను ఎలా నిర్వహిస్తుందో వివరిస్తుంది. స్పాయిలర్: మేము మిమ్మల్ని ట్రాక్ చేయము, మీ డేటాను అమ్మము, లేదా ప్రకటనలు చూపించము.',
   'policy.privacy.meta.title': 'గోప్యతా పాలసీ - Side Badger',
   'policy.privacy.title': 'గోప్యతా పాలసీ',

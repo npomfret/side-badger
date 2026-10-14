@@ -111,7 +111,7 @@ export default {
   'policy.cookies.meta.description': 'Evästekäytäntömme selittää mitä evästeitä Side Badger käyttää. Spoiler: emme käytä seurantaevästeitä, vain perusasiat jotta sovellus toimii.',
   'policy.cookies.meta.title': 'Evästekäytäntö - Side Badger',
   'policy.cookies.title': 'Evästekäytäntö',
-  'policy.englishOnly': 'Tämä käytäntö on saatavilla vain englanniksi. Alla oleva teksti on englanninkielinen alkuperäinen.',
+  'policy.englishOnly': 'Tämä käytäntö on saatavilla vain englanniksi. Alla oleva teksti on alkuperäinen englanninkielinen versio.',
   'policy.lastUpdated': 'Päivitetty viimeksi {date}',
   'policy.privacy.meta.description': 'Tietosuojakäytäntömme selittää miten Side Badger käsittelee tietojasi. Spoiler: emme seuraa sinua, myy tietojasi tai näytä mainoksia.',
   'policy.privacy.meta.title': 'Tietosuojakäytäntö - Side Badger',

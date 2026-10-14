@@ -1,5 +1,7 @@
-#!/bin/bash
-set -e
+#!/usr/bin/env bash
+set -euo pipefail
+# The remote paths are meant to expand locally before ssh sends them.
+# shellcheck disable=SC2029
 
 # The box by address, not the site's hostname, so a deploy during a DNS change cannot land on
 # the old box. sidebadger.me moved to the footy-betty box (77.68.112.97) on 2026-10-14.
@@ -23,9 +25,10 @@ scp tsconfig.json $SERVER:$REMOTE_DIR/
 
 # Copy source directories
 echo "📦 Copying source files..."
-ssh $SERVER "mkdir -p $REMOTE_DIR/src $REMOTE_DIR/public"
+ssh $SERVER "mkdir -p $REMOTE_DIR/src $REMOTE_DIR/public $REMOTE_DIR/nginx"
 scp -r src/* $SERVER:$REMOTE_DIR/src/
 scp -r public/* $SERVER:$REMOTE_DIR/public/
+scp -r nginx/* $SERVER:$REMOTE_DIR/nginx/
 
 # Build and deploy
 echo "🐳 Building and starting container..."

@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { approvedFromLock, approvedFromLocks, checkEnglishFallback, renderedTexts } from './rules/r13-english-fallback';
+import {
+  approvedFromContent,
+  approvedFromEntry,
+  approvedFromLock,
+  approvedFromLocks, checkEnglishFallback,
+  renderedTexts,
+} from './rules/r13-english-fallback';
 import { dist } from './lib/site';
 import { fx, mentions, sites } from './lib/fixtures';
 
@@ -104,6 +110,47 @@ describe('rule 13: no English text left on translated pages', () => {
     it('reads the real pcm lock, which approves the brand name', () => {
       const approved = approvedFromLocks('pcm');
       expect(approved.has('Side Badger')).toBe(true);
+    });
+  });
+
+  describe('approved list from content entries (identicalApproved paths)', () => {
+    const entry = {
+      lead: 'Split every bill fairly with your friends.',
+      note: 'Totally different words, translated here.',
+      rich: 'Keep **Split every bill** [fairly](page:pricing) always.',
+      example: { people: [{ name: 'Alex the Badger Treasurer' }] },
+      identicalApproved: ['lead', 'example.people.0.name', 'rich'],
+    };
+
+    it('approves the rendered text at each listed path, and nothing else', () => {
+      const approved = approvedFromEntry(entry, 'x.yaml');
+      expect(approved.has(SENTENCE)).toBe(true);
+      expect(approved.has('Alex the Badger Treasurer')).toBe(true);
+      expect(approved.has('Split every bill')).toBe(true);
+      expect(approved.has(entry.note)).toBe(false);
+    });
+
+    it('approves an entry without the list as nothing, and rejects a bad path or list', () => {
+      expect(approvedFromEntry({ lead: 'x' }, 'x.yaml').size).toBe(0);
+      expect(() => approvedFromEntry({ identicalApproved: ['nope'] }, 'x.yaml')).toThrow(/nope/);
+      expect(() => approvedFromEntry({ identicalApproved: 'lead' }, 'x.yaml')).toThrow(/must be an array/);
+    });
+
+    it('lets an approved content path pass on its page only', () => {
+      const approved = (locale: string) => approvedFromEntry(locale === 'fr' ? entry : {}, 'x.yaml');
+      expect(checkEnglishFallback(withFrench('r13/fr-home-english-paragraph.html'), approved)).toEqual([]);
+    });
+
+    it('still fails an identical sentence the entry does not approve', () => {
+      const approved = () => approvedFromEntry({ ...entry, identicalApproved: ['example.people.0.name'] }, 'x.yaml');
+      const problems = checkEnglishFallback(withFrench('r13/fr-home-english-paragraph.html'), approved);
+      expect(mentions(problems, '/fr/', 'untranslated', SENTENCE)).toBe(true);
+    });
+
+    it('reads the real entry through the page registry and gives nothing for other pages', () => {
+      expect(approvedFromContent('fr', 'feature/split-expenses').size).toBeGreaterThan(0);
+      expect(approvedFromContent('fr', 'pricing').size).toBe(0);
+      expect(approvedFromContent('fr').size).toBe(0);
     });
   });
 });

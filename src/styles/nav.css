@@ -16,8 +16,29 @@
   list-style: none;
 }
 
+/*
+ * The links never push the language switcher and the launch link out of the bar: the nav is the
+ * one part that shrinks, and a label wraps onto a second line only when its locale's labels are too
+ * long for the room (the CJK and `xx-long` pseudo-locales at 1280px). Wrapping keeps the whole
+ * label readable where truncating would hide it.
+ */
+.header-nav {
+  flex: 0 1 auto;
+  min-inline-size: 0;
+}
+
+.header-actions {
+  flex-shrink: 0;
+}
+
+.nav-links li {
+  min-inline-size: 0;
+}
+
 .nav-links a {
-  white-space: nowrap;
+  line-height: 1.2;
+  text-align: center;
+  overflow-wrap: anywhere;
 }
 
 .nav-links a,

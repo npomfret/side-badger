@@ -246,7 +246,7 @@ export default {
   'pricing.limits.receipts.label': '1件の支出のレシート',
   'pricing.limits.receipts.value': '3件、各10 MBまで（JPEG、PNG、WebP、HEIC、PDF）',
   'pricing.limits.records.label': 'グループ、支出、支払い',
-  'pricing.limits.records.value': '上限なし、1日の上限もなし',
+  'pricing.limits.records.value': '決まった上限なし、1日の上限もなし',
   'pricing.limits.scans.label': 'レシートスキャン',
   'pricing.limits.scans.value': '制限なし',
   'pricing.limits.title': '制限',

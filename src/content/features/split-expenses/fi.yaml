@@ -1,8 +1,6 @@
 translatedFrom: "56ee9b03"
 review:
-  status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -115,7 +113,7 @@ limits:
     - Yksi ihminen maksaa jokaisen kulun. Jos maksajia oli kaksi, kirjaa kaksi kulua.
     - Jakoa tuotteittain tai osuuksina ei ole. Tasan, tarkat summat ja prosentit ovat ainoat vaihtoehdot.
     - Prosenttien summan on oltava 100.
-    - Kulu voi olla enintään 999 999,99 omassa valuutassaan kyseisen valuutan tavallisilla desimaaleilla.
+    - Kulu voi olla enintään 999 999,99 omassa valuutassaan kyseisen valuutan tavallisilla desimaaleilla.
     - Kulut eivät toistu itsestään. Kopioi sen sijaan viime kuun kulu.
     - Päivämäärä ei voi olla tulevaisuudessa eikä yli 10 vuoden takana.
     - Kulu, jossa on mukana ryhmästä lähtenyt, muuttuu vain luettavaksi.

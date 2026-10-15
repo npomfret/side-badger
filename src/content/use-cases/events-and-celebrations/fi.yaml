@@ -1,8 +1,6 @@
 translatedFrom: "a1e36ce8"
 review:
-  status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - invites.link-or-qr-code
   - invites.admin-approval
@@ -41,14 +39,14 @@ sections:
   - heading: Kuka on mukana missäkin
     body: Kaikki eivät maksa samaa, eivätkä kaikki kuulu jokaiseen kuluun. Jaa kulu tasan, prosenteilla tai **tarkoilla summilla**, jolloin kunkin osuus on sovittu luku. Jätä pois ne, jotka eivät olleet mukana, kuten vieraat, jotka ohittivat illallisen, tai ystävät, jotka eivät osallistuneet lahjaan. Jokaisella kululla on yksi maksaja, ja kaikki muut jaossa ovat velkaa osuutensa hänelle. Yksityiskohdat löytyvät sivulta [kulujen jako](page:feature/split-expenses).
   - heading: Pidä paperit tallessa
-    body: Lisää kuluun muistiinpanoja, esimerkiksi mitä kulu kattoi. Kommentit pysyvät **kulun vieressä**, jota ne koskevat, joten kysymys ”oliko kakku £45 vai £54?” ja sen vastaus ovat samassa paikassa. Kommentit voivat olla 500 merkin mittaisia, mikä riittää hyvin etumaksua koskevaan kysymykseen.
+    body: Lisää kuluun muistiinpanoja, esimerkiksi mitä kulu kattoi. Kommentit pysyvät **kulun vieressä**, jota ne koskevat, joten kysymys ”oliko kakku 45 £ vai 54 £?” ja sen vastaus ovat samassa paikassa. Kommentit voivat olla 500 merkin mittaisia, mikä riittää hyvin etumaksua koskevaan kysymykseen.
   - heading: Järjestäjän hallinta
     body: Avoin yhteistyö antaa kenen tahansa jäsenen lisätä ja muokata kuluja, mikä sopii pienelle lahjalle. Häihin tai isompiin juhliin valitse **Hallittu ryhmä** -esiasetus. Ylläpitäjät hyväksyvät jokaisen uuden jäsenen, ja vain luojat ja ylläpitäjät voivat muuttaa kuluja. Kutsu ihmiset linkillä tai QR-koodilla; hyväksynnän ollessa päällä ylläpitäjä päästää jokaisen sisään, joten vieraslista pysyy vieraslistana. Kun tapahtuma on ohi, lukitse ryhmä, jotta luvut pysyvät paikoillaan.
   - heading: Tasaa juhlien jälkeen
     body: Kun viimeinenkin lasku on tullut, saldot näyttävät **kuka on velkaa kenelle**, ja Side Badger ehdottaa lyhyttä maksulistaa, joka tasaa kaikki. Maksakaa toisillenne miten haluatte ja kirjatkaa maksu ryhmässä. Side Badger ei koskaan siirrä rahaa, joten ryhmä pitää kirjaa, kun siirrot tehdään omissa pankkisovelluksissanne. Sivu [tilien tasaus](page:feature/settle-up) näyttää, miten vyyhti muuttuu lyhyeksi listaksi.
 exampleAfter: 5
 example:
-  heading: 'Ryhmälahja: kuusi ääntä puolesta, £150 jaettavaksi'
+  heading: 'Ryhmälahja: kuusi ääntä puolesta, 150 £ jaettavaksi'
   currency: GBP
   people:
     - id: priya

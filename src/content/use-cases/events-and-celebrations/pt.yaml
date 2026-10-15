@@ -1,0 +1,90 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+meta:
+  title: "Divide os custos de festas, casamentos e presentes de grupo"
+  description: "Partilha os custos de uma festa, casamento ou presente de grupo quando as pessoas contribuem com valores diferentes. Vota no plano, divide por valores exatos e vê quem deve a quem."
+h1: "Divide os custos de festas, casamentos e presentes de grupo"
+navLabel: "Eventos e celebrações"
+lead: "Divide sinais, decoração e guarda-chuvas de emergência. Deixa o plano de mesas para alguém mais corajoso. O Side Badger guarda **quem contribuiu com quê** num só sítio, para quem organiza também poder aproveitar a festa."
+cta:
+  heading: "Começa pela próxima celebração"
+  body: "Cria uma conta, faz um grupo para o evento e envia o link de convite. O Side Badger é grátis, sem anúncios e sem limites diários."
+  button: "Criar uma conta grátis"
+scenario:
+  heading: "Todos contribuem, nem sempre com o mesmo valor"
+  body: "Alguém paga o sinal do espaço, outra pessoa compra o bolo e uma terceira põe o presente de grupo no seu próprio cartão. Alguns convidados vão a tudo e outros só ao jantar. Manter uma conta justa disto numa conversa de chat é um trabalho a que ninguém se candidatou. Um grupo no Side Badger guarda tudo, seja qual for a mistura de valores, e mostra a cada pessoa o que deve ou tem a receber. Vê [como funciona](page:how-it-works) para o básico, ou continua a ler para um evento."
+sections:
+  - heading: "Decidam em conjunto"
+    body: "Antes de o dinheiro mexer, põe a escolha a uma **sondagem**. Adiciona até 10 opções, como dois espaços ou três ideias de presente, e deixa todos votar. Podes esconder quem votou em quê, para cada opção ter uma audição justa, e o vencedor aparece quando a sondagem for fechada. Ninguém tem de recuar quarenta mensagens para saber o que foi decidido."
+  - heading: "Quem participa em quê"
+    body: "Nem todos pagam o mesmo, e nem todos fazem parte de cada custo. Divide uma despesa em partes iguais, por percentagem ou por **valores exatos**, para a parte de cada pessoa ser o valor que combinaram. Deixa de fora quem não esteve envolvido, como os convidados que saltaram o jantar ou os amigos que não entraram no presente. Cada despesa tem um pagador, e todos os outros na divisão devem-lhe a sua parte. Os detalhes estão na página [dividir despesas](page:feature/split-expenses)."
+  - heading: "Guarda a papelada"
+    body: "Adiciona notas a uma despesa, como aquilo que o custo cobria. Os comentários ficam **junto da despesa** de que falam, por isso a pergunta “o bolo foi £45 ou £54?” e a sua resposta vivem no mesmo sítio. Os comentários podem ter 500 caracteres, que chega e sobra para uma pergunta sobre um sinal."
+  - heading: "Controlos para quem organiza"
+    body: "A colaboração aberta deixa qualquer membro adicionar e editar despesas, o que serve para um presente pequeno. Para um casamento ou uma festa maior, escolhe a predefinição **Grupo gerido**. Os administradores aprovam cada novo membro e só os criadores e administradores podem alterar despesas. Convida pessoas com um link ou código QR; com a aprovação ativa, um administrador deixa entrar cada pessoa, por isso a lista de convidados continua a ser a lista de convidados. Quando o evento acabar, bloqueia o grupo para os números ficarem como estão."
+  - heading: "Acertem as contas depois da festa"
+    body: "Depois de entrar a última fatura, os saldos mostram **quem deve a quem**, e o Side Badger sugere uma lista curta de pagamentos que acerta as contas de todos. Paguem-se como preferirem e depois registem o pagamento no grupo. O Side Badger nunca movimenta dinheiro, por isso o grupo mantém a conta enquanto as transferências acontecem nas vossas próprias apps bancárias. A página [acertar contas](page:feature/settle-up) mostra como um emaranhado passa a uma lista curta."
+exampleAfter: 5
+example:
+  heading: "Um presente de grupo: seis votos a favor, £150 para dividir"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Presente de grupo"
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: "As funcionalidades que isto usa"
+faq:
+  heading: "Perguntas"
+  items:
+    - q: "Os convidados podem ver o grupo sem entrar?"
+      a: "Não. As pessoas entram com um link ou código QR e uma conta grátis, por isso só veem o grupo depois de entrarem."
+    - q: "O Side Badger pode cobrar o dinheiro?"
+      a: "Não. O Side Badger mantém a conta e nunca movimenta dinheiro. Paguem-se como preferirem e depois registem o pagamento. É grátis, sem anúncios e sem limites diários; vê os [preços](page:pricing)."
+    - q: "Os votos podem ser anónimos?"
+      a: "Sim. Ao criares uma sondagem, podes esconder quem votou em quê. As definições só podem mudar antes do primeiro voto."
+    - q: "As pessoas podem contribuir com valores diferentes?"
+      a: "Sim. Divide uma despesa por valores exatos, para a parte de cada pessoa ser o valor que combinaram, ou deixa de fora quem não esteve envolvido."
+    - q: "Quem organiza pode tratar das contas?"
+      a: "Sim. Usa a predefinição de grupo gerido, para só os criadores e administradores alterarem despesas e os administradores aprovarem novos membros."

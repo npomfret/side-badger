@@ -1,0 +1,125 @@
+translatedFrom: "923c938f"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: "Divide custos em 140 moedas, convertidas ou em separado"
+  description: "Introduz cada despesa na moeda em que pagaste, mantém os saldos em separado ou converte a uma taxa que podes ver e alterar, e depois acerta tudo com uma lista curta de pagamentos."
+h1: "Divide custos em 140 moedas"
+navLabel: "Várias moedas"
+lead: "Euros, ienes e aquele táxi em bahts. O Side Badger aceita cada despesa na moeda em que pagaste, mantém os saldos em ordem e pode converter quando o teu grupo preferir acertar tudo de uma vez. Funciona em 140 moedas e encaixa que nem uma luva nas [viagens em grupo](page:use-case/group-trips)."
+cta:
+  heading: "Traz os teus euros, traz os teus ienes"
+  body: "Cria uma conta, começa um grupo e adiciona a primeira despesa na moeda que tinhas à mão."
+  button: "Criar uma conta grátis"
+problem:
+  heading: "Introduz como pagaste"
+  body: "Uma viagem raramente se paga numa só moeda. O hotel foi reservado em casa, em libras, o jantar foi pago em ienes e o café do aeroporto na moeda da escala. Converter tudo à mão antes de poderes sequer escrever é assim que as folhas de cálculo são abandonadas. No Side Badger introduzes cada despesa na moeda do recibo e cada valor segue as regras da sua moeda, por isso os ienes não têm decimais e os dinares têm três. As moedas que usaste recentemente aparecem primeiro na lista."
+workflow:
+  heading: "Mantém as moedas separadas ou converte à medida que avanças"
+  steps:
+    - title: "Adiciona a despesa na sua própria moeda"
+      body: "Escolhe a moeda, escreve o valor, diz quem pagou e quem partilhou. Não é preciso mais nada. Esta é a opção por defeito e mantém o valor original exatamente como o introduziste."
+      shot: S07
+      shotAlt: "O formulário de despesa com um valor em ienes introduzido"
+    - title: "Acompanha um saldo para cada moeda"
+      body: "Os saldos são mantidos em separado por moeda, e cada um tem a sua própria lista curta de pagamentos sugeridos. As libras acertam-se em libras e os ienes em ienes."
+      shot: S10
+      shotAlt: "O ecrã de saldos com dívidas simplificadas em duas moedas"
+    - title: "Ou converte, quando o grupo preferir acertar tudo de uma vez"
+      body: "Escolhe outra moeda ao introduzir a despesa e o Side Badger pode convertê-la a uma taxa de câmbio atual, que podes alterar para a taxa que realmente tiveste. O valor convertido junta-se ao saldo nessa moeda. A conversão é uma escolha do grupo, nunca algo que acontece nas tuas costas."
+options:
+  heading: "Uma taxa que podes ver e alterar"
+  items:
+    - title: "A taxa é mostrada"
+      body: "Quando converteres, a taxa e o valor convertido aparecem no formulário, por isso ninguém tem de acreditar num número sem o ver."
+    - title: "Escreve a tua"
+      body: "Tiveste uma taxa melhor numa casa de câmbio ou pior num aeroporto? Edita a taxa para a que realmente tiveste e o valor convertido atualiza-se."
+    - title: "O original fica"
+      body: "O valor original fica na despesa, ao lado do convertido, para quem perguntar quanto foi em ienes."
+    - title: "Converter é grátis"
+      body: "Converter não custa nada. Não há comissão por introduzir uma despesa noutra moeda."
+example:
+  heading: "Quatro amigos no Japão, acertados de duas maneiras"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "o hotel, reservado em casa"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "jantar no Japão"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "bilhetes de comboio"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "entrada no templo"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "Uma moeda para o grupo todo"
+    body: "Se o teu grupo preferir não pensar nisso, escolhe uma moeda do grupo e o formulário converte cada nova despesa para ela, a uma taxa que podes continuar a ver e alterar. Isto aplica-se apenas a despesas novas e copiadas. As edições e as despesas existentes ficam como estão, por isso nada do que já foi registado muda debaixo dos teus pés."
+  - heading: "Deves euros, pagas em libras"
+    body: "Pagaste em ienes e vais acertar em libras? Sem problema. Quando registas um pagamento também o podes converter, por isso quem deve euros pode pagar em libras e o saldo em euros continua a sair certo. Paguem-se como preferirem e depois registem."
+  - heading: "Regras para o grupo"
+    body: "Limita um grupo às moedas que realmente usas e define uma por defeito para o formulário abrir na certa. Umas férias em Portugal não precisam de outras 139 opções ao lado da conta do jantar, e um [casamento no estrangeiro](page:use-case/events-and-celebrations) provavelmente precisa de duas."
+limits:
+  heading: "Limites"
+  items:
+    - "A taxa fica fixa quando a despesa é guardada. As despesas antigas nunca são reavaliadas."
+    - "O Side Badger obtém uma taxa atual sempre que consegue. Nem todos os pares têm essa garantia, e podes sempre escrever a taxa tu mesmo."
+    - "A conversão automática do grupo aplica-se apenas a despesas novas e copiadas, não a edições nem a despesas existentes."
+    - "Cada despesa tem o máximo de 999,999.99 na sua própria moeda."
+    - "Existem 140 moedas. As criptomoedas e os metais não estão entre elas."
+    - "O Side Badger regista pagamentos. Nunca movimenta nem troca dinheiro."
+useCasesHeading: "Onde isto ajuda"
+faq:
+  heading: "Perguntas"
+  items:
+    - q: "Que taxa de câmbio usam?"
+      a: "Uma taxa de câmbio atual, obtida quando introduzes a despesa, sempre que houver uma disponível. Podes alterá-la para a taxa que realmente tiveste e o valor convertido atualiza-se."
+    - q: "As despesas antigas são reavaliadas?"
+      a: "Não. A taxa fica fixa quando a despesa é guardada, por isso um saldo não se desvia só porque o mercado se mexeu."
+    - q: "Suportam criptomoedas?"
+      a: "Não. Existem 140 moedas e as criptomoedas não estão entre elas."
+    - q: "Porque não consigo introduzir 2,000,000 rupias?"
+      a: "Cada despesa tem o máximo de 999,999.99 na sua própria moeda. Introduz noutra moeda e converte, ou divide em duas despesas."
+    - q: "A conversão custa alguma coisa?"
+      a: "Não. Converter é grátis, como o resto do Side Badger. Vê os [preços](page:pricing)."
+    - q: "Tenho de converter?"
+      a: "Não. As moedas ficam separadas, a menos que tu ou o teu grupo escolham converter, e cada moeda tem a sua própria lista curta de pagamentos."

@@ -1,0 +1,110 @@
+translatedFrom: "1b51f540"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: "Acerta as contas com menos pagamentos | Side Badger"
+  description: "Vê quem deve a quem no teu grupo, recebe uma lista curta de pagamentos que acerta as contas de todos e regista cada pagamento à medida que acontece. Grátis."
+h1: "Acerta as contas com menos pagamentos"
+navLabel: "Acertar contas"
+lead: "O Side Badger mantém um saldo corrente para cada pessoa do grupo e sugere uma lista curta de pagamentos que o acerta. Paguem-se como preferirem e depois registem. Se quiseres ver primeiro como os números são divididos, começa por [dividir despesas](page:feature/split-expenses)."
+cta:
+  heading: "Pronto para desembaraçar quem deve a quem?"
+  body: "Cria uma conta, começa um grupo e adiciona a primeira despesa. Os saldos tratam do resto."
+  button: "Criar uma conta grátis"
+problem:
+  heading: "Saldos que se atualizam à medida que avanças"
+  body: "Cada despesa muda quem deve a quem, por isso o Side Badger mantém os saldos atuais à medida que se adicionam despesas e pagamentos. Todas as pessoas do grupo veem uma alteração logo, e veem o que mudou e quem mudou. Os saldos são mantidos por moeda, por isso euros e libras ficam nas suas próprias colunas, a menos que uma despesa tenha sido convertida quando foi introduzida. Por defeito vês as dívidas que te envolvem; **Mostrar tudo** lista o grupo inteiro."
+workflow:
+  heading: "Três passos até ficarem quites"
+  steps:
+    - title: "Vê quem deve a quem"
+      body: "Abre os saldos do grupo para veres o que deves, o que tens a receber e uma lista curta de pagamentos que acerta as contas de todos, calculada por moeda. As despesas questionadas ficam fora das contas até serem resolvidas. No exemplo dos colegas de casa abaixo, seis pagamentos passam a dois."
+      shot: S10
+      shotAlt: "O ecrã de saldos com dívidas simplificadas em duas moedas, com Mostrar tudo ativado"
+    - title: "Paga como quiseres e depois regista"
+      body: "Transferência bancária, dinheiro, um favor que se deve desde as últimas férias. O Side Badger não movimenta o dinheiro. Depois de ele mudar de mãos, regista o pagamento e o saldo atualiza-se para todos."
+      shot: S11
+      shotAlt: "O formulário de pagamento com botões de liquidação rápida e o aviso mostrado para um pagamento parcial"
+    - title: "Confirma que chegou"
+      body: "O pagamento entra no histórico do grupo, onde todas as pessoas do grupo o podem ver e reagir com um emoji. Celebra um pagamento quando ele chega."
+      shot: S12
+      shotAlt: "O histórico de pagamentos com reações de emoji num pagamento"
+options:
+  heading: "Opções"
+  items: []
+example:
+  heading: "De um emaranhado a uma lista curta"
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: "Eletricidade"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: "Internet"
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "Compras"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "Regista um pagamento"
+    body: "Quando alguém paga, regista-o junto da pessoa certa. Os botões de liquidação rápida preenchem o valor a partir dos pagamentos sugeridos, e podes acrescentar uma nota como “transferência bancária” (até 500 caracteres). Se pagares só parte do que deves, o resto fica no saldo. Se introduzires de menos ou de mais, o Side Badger avisa-te antes de guardares. Registar um pagamento exige permissão para editar despesas, e a data não pode estar no futuro."
+  - heading: "Pagaste noutra moeda?"
+    body: "Os saldos ficam na moeda em que foram pagos, por isso uma dívida em euros continua a ser uma dívida em euros. Deves euros e pagas em libras? Converte o pagamento ao introduzi-lo, a uma taxa de câmbio atual ou à taxa que realmente tiveste. A taxa fica fixa quando o pagamento é guardado. [Várias moedas](page:feature/multiple-currencies) explica como funciona a conversão, e as [viagens em grupo](page:use-case/group-trips) mostram-na em uso."
+  - heading: "Um histórico que podes verificar"
+    body: "Cada pagamento registado fica no histórico do grupo com a sua data, valor e nota. Só quem registou um pagamento o pode editar, e essa pessoa ou um administrador do grupo pode apagá-lo. Um pagamento que envolva alguém que saiu do grupo fica bloqueado. Para um cenário concreto de colegas de casa, vê [colegas de casa](page:use-case/housemates)."
+limits:
+  heading: "O que o Side Badger não faz"
+  items:
+    - "O Side Badger não movimenta dinheiro, não envia links de pagamento nem pedidos de pagamento. Um pagamento na app é o registo de um pagamento feito noutro sítio."
+    - "Os pagamentos sugeridos vêm de um método de correspondência simples, aplicado por moeda. Sugere sempre menos pagamentos do que o número de pessoas com saldo nessa moeda (quatro pessoas, no máximo três pagamentos), mas nem sempre encontra o menor número possível."
+    - "Não podes desligar as sugestões. **Mostrar tudo** lista todos os pagamentos sugeridos no grupo, não só os teus."
+    - "As moedas nunca são compensadas umas com as outras, a menos que as despesas tenham sido convertidas quando foram introduzidas."
+    - "Não há lembretes, por isso andar atrás de um pagamento continua a ser contigo."
+useCasesHeading: "Onde acertar contas faz diferença"
+faq:
+  heading: "Perguntas"
+  items:
+    - q: "O Side Badger envia o dinheiro?"
+      a: "Não. Paguem-se como preferirem e depois registem o pagamento no Side Badger para o saldo se atualizar."
+    - q: "Posso desligar os pagamentos sugeridos?"
+      a: "Não. A simplificação fica sempre ativa, e **Mostrar tudo** lista todos os pagamentos sugeridos no grupo, não só os que te envolvem."
+    - q: "Porque são os euros e as libras mantidos em separado?"
+      a: "Os saldos ficam na moeda em que pagaste, a menos que converts ao introduzir uma despesa ou pagamento. As dívidas em moedas diferentes nunca são compensadas umas com as outras."
+    - q: "E se alguém pagar só parte do que deve?"
+      a: "Regista a parte que pagou. O resto fica no saldo até ser pago."
+    - q: "É sempre o menor número possível de pagamentos?"
+      a: "Não está garantido. Sugere sempre menos pagamentos do que o número de pessoas com saldo nessa moeda, por isso para quatro pessoas nunca sugere mais de três. No exemplo dos colegas de casa, são dois pagamentos, quando pagar diretamente a cada pessoa levava seis."

@@ -1,0 +1,107 @@
+translatedFrom: "e6b829e6"
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.2.label
+meta:
+  title: Hatiin ang bayarin sa bahay kasama ang housemates
+  description: Hatiin ang upa ayon sa laki ng kuwarto, pantay na ibahagi ang kuryente at grocery, at tingnan kung sino ang may utang kanino bawat buwan. Libreng paraan para sa housemates na magbilang.
+h1: Hatiin ang bayarin sa bahay kasama ang housemates
+navLabel: Mga housemate
+lead: Para sa housemate na bumibili ng toilet paper, at sa mga housemate na hindi pa yata nakikita kung paano ito nangyayari. Nagtatabi ang Side Badger ng iisang tumatakbong bilang ng upa, mga bayarin, at pamimili para sa **housemates, kasama sa bahay, at roommates**, kaya walang kailangang maningil at puwede nang maging ref na lang ulit ang ref.
+cta:
+  heading: Magsimula sa sarili mong bahay
+  body: Gumawa ng account, gumawa ng grupo para sa bahay, at ipadala sa lahat ang invite link. Puwede nang maipasok ngayong gabi ang mga bayarin ngayong buwan.
+  button: Gumawa ng libreng account
+scenario:
+  heading: I-set up ang bahay
+  body: Gumawa ng grupo para sa bahay, piliin ang pangalang gusto mong makita ng mga tao, at imbitahan ang lahat gamit ang link o QR code. Puwedeng bukas ang grupo, kung saan lahat ay nagdaragdag at nag-e-edit, o managed, kung saan kailangan ng pag-apruba ng admin ang mga bagong miyembro at tanging mga creator at admin lang ang makakapagbago ng mga gastos, na bagay sa housemate na nag-aasikaso ng pera. Ang gusto lang manood ng mga numero ay puwedeng maging viewer, na nakakakita ng lahat pero walang binabago. Agad na nakikita ng lahat ang bagong gastos, kaya mas kakaunti ang pagtataguan ng “idadagdag ko mamaya.”
+sections:
+  - heading: Upa at mga bayarin
+    body: "Bihirang mahati sa apat ang upa, dahil hindi pare-pareho ang mga kuwarto. Hatiin ito ayon sa porsyento, para mas malaki ang bayad ng malaking kuwarto at mas maliit ang sa kuwartong may bintana lang. Dapat umabot sa 100 ang kabuuan ng mga porsyento. Pantay ang hati ng mga bayaring ginagamit ng lahat, at puwedeng hindi isama ang housemate na walang kinalaman sa isang gastos. Kapag may sobrang sentimo sa pantay na hati, napupunta ito sa isang tao nang random. Walang umuulit na bayarin, kaya bawat buwan, kokopyahin mo ang upa noong nakaraang buwan, babaguhin ang petsa, at tuloy lang."
+  - heading: Ang shared na pamimili
+    body: "Ilagay ang shared na listahan ng bibilhin sa parehong grupo ng mga bayarin sa pamimili, at i-tick ang mga item kapag nasa cart na. Ang namimili ang magdaragdag ng kabuuan ng resibo bilang gastos at hahatiin ito nang pantay, o sa mga kakain lang nito. Usapin pa rin ng bahay kung sino ang laging bumibili ng oat milk na walang ibang umiinom, pero kahit paano magiging tama ang listahan ng mga gastos. Ang mga pahintulot ng grupo ang magpapasya kung sino ang makakagawa at makakapag-edit ng mga listahan. Pagsama-samahin ang upa, mga bayarin, at pamimili at makukuha mo ang isang buwang gaya ng nasa ibaba, sa bahay na may apat na tao: nagbabayad si Jo ng £2,000 na upa, hinati sa 30%, 25%, 25%, at 20% ayon sa laki ng kuwarto, saka nagbabayad si Kwame ng £120 para sa kuryente, si Lena ng £40 para sa internet, at si Matt ng £80 para sa grocery, bawat isa ay hinati nang pantay. May makukuhang £1,340 si Jo, at nagmumungkahi ang Side Badger ng tatlong bayad, lahat kay Jo."
+  - heading: Mga patas na paraan ng paghahati ng gastos sa bahay
+    items:
+      - "**Nang pantay** ang bagay sa halos pantay na ginagamit ng lahat, gaya ng internet, panlinis, at shared na pamimili. Mabilis ito, at walang kailangang makipagtalo tungkol sa kuwenta."
+      - "**Ayon sa laki ng kuwarto** ang bagay sa upa, dahil magkakaiba ang mga kuwarto at ang kahandaang magbayad para sa mga ito. Pagkasunduan nang isang beses ang mga porsyento kapag may lumipat, at gamitin muli bawat buwan."
+      - "**Ayon sa gamit** ang bagay sa mga bayaring may isang malinaw na mas malakas gumamit, gaya ng bayad sa init para sa home office o streaming account na dalawa lang ang nanonood. Huwag isama ang mga walang kinalaman dito, o maglagay ng eksaktong halaga para sa bawat tao."
+      - "Alinman ang piliin mo, pagkasunduan ito bago ang unang bayarin sa halip na pagkatapos ng unang away, at isulat ang patakaran sa lugar na nakikita ng buong bahay."
+  - heading: Kapag may lumipat
+    body: Mag-settle muna sila. Walang makakaalis sa grupo habang may utang o may sisingilin pa, kaya magbabayad o babayaran ang aalis, itatala ninyo, at saka siya aalis. Ituloy ang grupo para sa mga natitirang housemate at imbitahan ang bago gamit ang link. Kapag tapos na ang bahay mismo, puwedeng i-lock ng admin ang grupo para manatili ang mga numero, o isara ito nang tuluyan, na magiging hindi na ma-access ng sinuman, kaya gawin lang iyon kapag wala nang nangangailangan ng kasaysayan.
+exampleAfter: 2
+example:
+  heading: Sino ang may utang kanino ngayong buwan
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: Upa
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: Kuryente
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: Internet
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: Grocery
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: Ang mga feature na ginagamit ng isang bahay
+faq:
+  heading: Mga tanong
+  items:
+    - q: Puwede bang kusang umulit ang upa?
+      a: Hindi, walang umuulit na bayarin. Kopyahin ang upa noong nakaraang buwan sa ilang tap, baguhin ang petsa, at tapos na.
+    - q: Puwede ba kaming maghati ayon sa laki ng kuwarto?
+      a: Oo, ayon sa porsyento. Bigyan ang bawat housemate ng bahaging sumasalamin sa kuwarto niya, basta umabot sa 100 ang kabuuan. Tinatalakay ng [paghahati ng gastos](page:feature/split-expenses) ang iba pang paraan ng paghahati.
+    - q: Paano kung may housemate na lumipat na may utang?
+      a: Hindi siya makakaalis sa grupo hangga't hindi pa siya nakakapag-settle, dahil walang makakaalis habang may utang o may sisingilin pa. Nananatiling tapat ang mga numero hanggang quits na ang lahat.
+    - q: Binabayaran ba ng Side Badger ang mga bayarin?
+      a: Hindi. Nagbibilang lang ito at nagmumungkahi ng maikling listahan ng mga bayad. Magbayaran kayo sa paraang gusto ninyo, saka itala, gaya ng ipinaliliwanag ng [settle up](page:feature/settle-up).
+    - q: Puwede bang may isang housemate na mag-asikaso ng pera?
+      a: Oo. Gawin siyang admin at gumamit ng managed group, kung saan kailangan ng pag-apruba ang mga bagong miyembro at tanging mga creator at admin lang ang makakapagbago ng mga gastos.

@@ -1,0 +1,110 @@
+translatedFrom: "1b51f540"
+review:
+  status: machine
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+meta:
+  title: Mag-settle up nang mas kaunting bayad | Side Badger
+  description: Tingnan kung sino ang may utang kanino sa grupo mo, kumuha ng maikling listahan ng mga bayad na nagse-settle sa lahat, at itala ang bawat bayad habang nangyayari. Libreng gamitin.
+h1: Mag-settle up nang mas kaunting bayad
+navLabel: Mag-settle up
+lead: Nagtatabi ang Side Badger ng tumatakbong balanse para sa bawat isa sa grupo at nagmumungkahi ng maikling listahan ng mga bayad na nagse-settle nito. Magbayaran kayo sa paraang gusto ninyo, saka itala. Kung gusto mo munang makita kung paano hinahati ang mga numero, magsimula sa [paghahati ng gastos](page:feature/split-expenses).
+cta:
+  heading: Handa nang ayusin kung sino ang may utang kanino?
+  body: Gumawa ng account, magsimula ng grupo, at idagdag ang unang gastos. Ang mga balanse na ang bahala sa susunod.
+  button: Gumawa ng libreng account
+problem:
+  heading: Mga balanse na nag-a-update habang tumatakbo
+  body: Binabago ng bawat gastos kung sino ang may utang kanino, kaya pinananatiling napapanahon ng Side Badger ang mga balanse habang nadadagdagan ang mga gastos at bayad. Agad na nakikita ng lahat sa grupo ang pagbabago, pati kung ano ang nagbago at kung sino ang nagbago. Magkakahiwalay ang mga balanse sa bawat pera, kaya nananatili sa sarili nilang hanay ang euro at pounds maliban kung na-convert ang gastos nang ilagay ito. Bilang default, nakikita mo ang mga utang na kinasasangkutan mo; inilista ng **Show all** ang buong grupo.
+workflow:
+  heading: Tatlong hakbang hanggang quits
+  steps:
+    - title: Tingnan kung sino ang may utang kanino
+      body: Buksan ang mga balanse ng grupo para makita ang utang mo, ang dapat mong makuha, at maikling listahan ng mga bayad na nagse-settle sa lahat, na kinukuwenta sa bawat pera. Nananatili sa labas ng mga kuwenta ang mga gastos na may tanong hanggang maayos ang mga ito. Sa halimbawa ng housemates sa ibaba, nagiging dalawa ang anim na bayad.
+      shot: S10
+      shotAlt: Ang screen ng mga balanse na nagpapakita ng pinasimpleng mga utang sa dalawang pera, nakabukas ang Show all
+    - title: Magbayad sa paraang gusto mo, saka itala
+      body: Bank transfer, cash, o utang na loob mula sa nakaraang bakasyon. Hindi inililipat ng Side Badger ang pera. Kapag naipasa na ang pera, itala ang bayad at mag-a-update ang balanse para sa lahat.
+      shot: S11
+      shotAlt: Ang payment form na may mga quick-settle button at ang paunawang ipinapakita sa bahagyang bayad
+    - title: Tiyaking dumating
+      body: Napupunta ang bayad sa kasaysayan ng grupo, kung saan makikita ito ng lahat at puwedeng mag-react gamit ang emoji. Ipagdiwang ang bayad kapag dumating ito.
+      shot: S12
+      shotAlt: Ang kasaysayan ng bayad na may mga emoji reaction sa isang bayad
+options:
+  heading: Mga opsyon
+  items: []
+example:
+  heading: Mula sa gusot hanggang sa maikling listahan
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: Kuryente
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: Internet
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: Grocery
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: Magtala ng bayad
+    body: Kapag may nagbayad, itala ito sa tamang tao. Pinupunan ng mga quick-settle button ang halaga mula sa mga iminungkahing bayad mo, at puwede kang magdagdag ng tala gaya ng “bank transfer” (hanggang 500 character). Kung bahagi lang ng utang ang bayaran mo, mananatili ang natitira sa balanse. Kung sobra o kulang ang inilagay mo, bibigyan ka ng babala ng Side Badger bago mag-save. Kailangan ng pahintulot na mag-edit ng mga gastos para makapagtala ng bayad, at hindi puwedeng nasa hinaharap ang petsa.
+  - heading: Nagbayad sa ibang pera?
+    body: Nananatili ang mga balanse sa perang ginamit sa pagbayad, kaya nananatiling utang na euro ang utang na euro. May utang na euro, magbabayad sa pounds? Puwede. Kapag nagtatala ka ng bayad, puwede mo rin itong i-convert, sa kasalukuyang exchange rate o sa rate na aktuwal mong nakuha. Nakapirmi ang rate kapag na-save ang bayad. Ipinapaliwanag ng [maraming pera](page:feature/multiple-currencies) kung paano gumagana ang conversion, at ipinapakita ng [group trip](page:use-case/group-trips) ang paggamit nito.
+  - heading: Kasaysayang masusuri mo
+    body: Nananatili sa kasaysayan ng grupo ang bawat naitalang bayad kasama ang petsa, halaga, at tala. Ang taong nagtala lang ng bayad ang makakapag-edit nito, at siya o admin ng grupo ang makakapagbura. Naka-lock ang bayad na kinasasangkutan ng taong umalis na sa grupo. Para sa halimbawa ng housemates, tingnan ang [housemates](page:use-case/housemates).
+limits:
+  heading: Ang hindi ginagawa ng Side Badger
+  items:
+    - Hindi naglilipat ng pera ang Side Badger, at hindi ito nagpapadala ng payment link o payment request. Ang bayad sa app ay talâ ng bayad na ginawa sa ibang lugar.
+    - Galing ang mga iminungkahing bayad sa simpleng paraan ng pagtutugma, na ginagawa sa bawat pera. Palagi itong nagmumungkahi ng mas kaunting bayad kaysa sa bilang ng taong may balanse sa perang iyon (apat na tao, tatlong bayad ang pinakamarami), pero hindi nito laging nahahanap ang pinakamaliit na posibleng bilang.
+    - Hindi mo mapapatay ang mga mungkahi. Inilista ng **Show all** ang bawat iminungkahing bayad sa grupo, hindi lang sa iyo.
+    - Hindi kailanman pinagbabawas ang mga pera sa isa't isa maliban kung na-convert ang mga gastos nang ilagay ang mga ito.
+    - Walang mga paalala, kaya ikaw pa rin ang maniningil ng bayad.
+useCasesHeading: Saan mahalaga ang pag-settle up
+faq:
+  heading: Mga tanong
+  items:
+    - q: Ipinapadala ba ng Side Badger ang pera?
+      a: Hindi. Magbayaran kayo sa paraang gusto ninyo, saka itala ang bayad sa Side Badger para mag-update ang balanse.
+    - q: Puwede ko bang patayin ang mga iminungkahing bayad?
+      a: Hindi. Nananatiling naka-on ang pagpapasimple, at inilista ng **Show all** ang bawat iminungkahing bayad sa grupo, hindi lang ang kinasasangkutan mo.
+    - q: Bakit magkahiwalay ang euro at pounds?
+      a: Nananatili ang mga balanse sa perang ginamit mo sa pagbayad maliban kung nag-convert ka nang ilagay ang gastos o bayad. Hindi kailanman pinagbabawas ang mga utang sa magkakaibang pera.
+    - q: Paano kung bahagi lang ng utang ang bayaran ng isang tao?
+      a: Itala ang bahaging binayaran. Mananatili ang natitira sa balanse hanggang mabayaran ito.
+    - q: Ito ba palagi ang pinakamaliit na posibleng bilang ng bayad?
+      a: Hindi garantisado. Palagi itong nagmumungkahi ng mas kaunting bayad kaysa sa bilang ng taong may balanse sa perang iyon, kaya sa apat na tao, hindi ito hihigit sa tatlo. Sa halimbawa ng housemates, dalawang bayad iyon, samantalang anim ang kailangan kapag binayaran nang direkta ang bawat tao.

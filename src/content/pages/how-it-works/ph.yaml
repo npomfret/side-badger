@@ -1,0 +1,106 @@
+translatedFrom: "fd23c99b"
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.expenses.1.label
+meta:
+  title: Paano gumagana ang Side Badger | Hatiin ang gastos ng grupo sa limang hakbang
+  description: Gumawa ng grupo, mag-imbita ng mga tao, magdagdag ng mga gastos, at mag-settle up. Tingnan ang nangyayari sa pagitan ng “may nagbayad” at “quits na tayo,” kasama ang isang halimbawa.
+h1: Paano gumagana ang Side Badger
+navLabel: Paano ito gumagana
+lead: Ano ang nangyayari sa pagitan ng “may nagbayad” at “quits na tayo”? Limang hakbang, walang spreadsheet, at isang badger na halos pang-dekorasyon lang. Narito ang buong biyahe, mula sa unang grupo hanggang sa huling naitalang bayad. Para sa detalye ng bawat hakbang, tingnan ang [paghahati ng gastos](page:feature/split-expenses) at [settle up](page:feature/settle-up).
+cta:
+  heading: Mula sa “ako na dito” hanggang sa “quits na tayo”
+  body: Gumawa ng libreng account, magsimula ng grupo, at idagdag ang unang gastos. Hindi huhusgahan ng badger ang resibo.
+  button: Gumawa ng libreng account
+steps:
+  - title: Gumawa ng grupo
+    body: Gumawa ng isang grupo para sa bawat bahay, biyahe, o event, para hindi mapunta sa iisang listahan ang upa at ang regalo sa kasal. Bigyan ito ng pangalan, piliin ang pangalang makikita ng mga tao sa iyo, at kung gusto mo, limitahan ang mga pera na tinatanggap nito. Ipinapakita ng dashboard mo ang bawat grupo, at kung nasaan ka sa bawat isa, sa iisang screen.
+    shot: S02
+    shotAlt: Ang dialog sa paggawa ng grupo na bukas ang seksyon ng mga paghihigpit sa pera
+  - title: Imbitahan ang mga kasama mo
+    body: Magbahagi ng join link o magpakita ng QR code, at itakda kung gaano ito katagal tatagal, mula 15 minuto hanggang 5 araw. Kailangan ng libreng account at na-verify na email ng lahat ng sasali, at hanggang 50 tao ang kasya sa isang grupo. Kung gusto mong salain kung sino ang papasok, i-on ang approval at papapasukin ng isang admin ang bawat tao.
+    shot: S03
+    shotAlt: Ang invite dialog sa tab ng link, na may QR code at mga pagpipilian sa pag-expire
+  - title: Idagdag ang mga gastos habang nangyayari
+    body: Sabihin kung sino ang nagbayad, magkano, at para kanino. Hatiin nang pantay, ayon sa eksaktong halaga, o ayon sa porsyento, at huwag isama ang sinumang hindi kasali. Idagdag ang gastos at makikita ito agad ng lahat, kasama kung ano ang nagbago at kung sino ang nagbago.
+    shot: S05
+    shotAlt: Ang expense form na may paghahati ayon sa porsyento, na hinahati ang upa ayon sa laki ng kuwarto
+  - title: Bantayan ang mga balanse
+    body: Nagtatabi ang Side Badger ng tumatakbong balanse para sa bawat pera, kaya makikita mo agad kung sino ang may utang kanino. Sa halip na pabayaan ang lahat na magkalas ng gusot ng maliliit na utang, nagmumungkahi ito ng maikling listahan ng mga bayad na nagse-settle sa grupo.
+    shot: S10
+    shotAlt: Ang screen ng mga balanse na nagpapakita ng pinasimpleng mga utang sa dalawang pera, nakabukas ang Ipakita lahat
+  - title: Mag-settle sa labas ng app, itala sa loob
+    body: Hindi kailanman naglilipat ng pera ang Side Badger. Magbayaran kayo sa paraang gusto ninyo, saka itala ang bayad para humabol ang mga balanse, at mag-a-update ang screen ng lahat nang hindi nagre-refresh. Ang ibig sabihin lang ng “settle” ay zero na ang mga balanse. Walang makakaalis sa grupo habang may utang pa o may sisingilin pa, kaya ang papalabas ay magse-settle muna.
+    shot: S11
+    shotAlt: Ang payment form na may mga quick-settle button at ang paunawa sa bahagyang bayad
+requirements:
+  heading: Ano ang kailangan mo
+  items:
+    - Isang libreng account. Email address at password lang ang kailangan, at kailangan mong i-verify ang email bago ka makapagdagdag ng anuman.
+    - Edad 18 pataas.
+    - Makabagong browser sa telepono o computer, at koneksyon. Hindi app-store app ang Side Badger at hindi ito gumagana offline.
+    - Opsyonal, isang puwesto sa home screen mo. Hindi kailangan ng app store, dahil maidaragdag mo ang Side Badger sa home screen o dock at bubukas ito na parang app.
+example:
+  heading: Tatlong magkakaibigan pagkatapos ng gabi sa labas
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: Hapunan
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: Taxi
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: 39 wika, at ginawa para sa mas maraming tao
+    body: Gamitin ang Side Badger sa 39 wika, kasama ang right-to-left na Arabic, Persian, at Urdu. Makakapili ang bawat isa sa grupo ng sarili niyang wika, kaya puwedeng Arabic ang group page para sa isa at English para sa susunod. Ginawa rin ito para sa mga gumagamit ng keyboard at screen reader, at may kasamang pattern ang mga kulay ng miyembro, kaya hindi mo na kailangang ibukod ang berde sa pula.
+faq:
+  heading: Mga tanong
+  items:
+    - q: Kailangan ba ng account ng lahat?
+      a: Oo, libre ito. Bini-verify ng bawat tao ang email niya bago magdagdag ng anuman.
+    - q: May app ba?
+      a: Gumagana ito sa browser, at maidaragdag mo ito sa home screen o dock para bumukas na parang app. Walang bersyon sa app store at walang offline mode.
+    - q: Naglilipat ba ng pera ang Side Badger?
+      a: Hindi. Nagbibilang lang ito at nagmumungkahi ng mga bayad, at kayo ang bahalang magbayaran sa paraang gusto ninyo. Saka ninyo itatala ang bayad. Tingnan ang [settle up](page:feature/settle-up).
+    - q: Puwede bang umalis ang may utang?
+      a: Hindi. Walang makakaalis sa grupo habang may utang pa o may sisingilin pa, kaya mag-settle muna sila.
+    - q: Ilang tao ang puwedeng sumali sa isang grupo?
+      a: Hanggang 50 tao sa isang grupo. Imbitahan sila gamit ang link o QR code, at i-on ang approval kung gusto mong papasukin ng admin ang bawat tao.
+    - q: Paano ang mga biyaheng may higit sa isang pera?
+      a: Magkakahiwalay na iniingatan ang mga balanse sa bawat pera. Tingnan ang [maraming pera](page:feature/multiple-currencies).

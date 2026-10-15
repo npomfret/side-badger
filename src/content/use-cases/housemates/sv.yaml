@@ -1,0 +1,110 @@
+# P34b: svensk sida för rumskamrater (underlag: tasks/seo-site-expansion-plan.md, "Housemates").
+translatedFrom: "e6b829e6"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.2.label
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+meta:
+  title: Dela hushållsräkningarna med rumskamrater
+  description: Dela hyran efter rummens storlek, dela el och matinköp lika och se vem som är skyldig vem varje månad. Ett gratis sätt för rumskamrater och kollektiv att hålla räkningen.
+h1: Dela hushållsräkningarna med rumskamrater
+navLabel: Rumskamrater
+lead: För rumskamraten som köper toapappret, och rumskamraterna som aldrig ser det hända. Side Badger håller en löpande räkning på hyran, räkningarna och inköpen för **rumskamrater och kollektiv**, så att ingen behöver jaga någon och kylskåpet kan gå tillbaka till att bara vara ett kylskåp.
+cta:
+  heading: Börja med ditt eget hushåll
+  body: Skapa ett konto, gör en grupp för hushållet och skicka inbjudningslänken till alla. Den här månadens räkningar kan läggas in i kväll.
+  button: Skapa ett gratiskonto
+scenario:
+  heading: Ställ in hushållet
+  body: Gör en grupp för hushållet, välj det namn du vill att folk ska se dig under och bjud in alla med en länk eller QR-kod. Gruppen kan vara öppen, där alla lägger till och redigerar, eller hanterad, där nya medlemmar behöver en administratörs godkännande och bara skapare och administratörer kan ändra utgifter, vilket passar rumskamraten som sköter bokföringen. Den som bara vill följa siffrorna kan vara tittare, som ser allt och ändrar inget. Alla ser en ny utgift direkt, så "jag lägger in den senare" har färre ställen att gömma sig på.
+sections:
+  - heading: Hyra och räkningar
+    body: "Hyran går sällan jämnt att dela på fyra, eftersom sovrum inte är lika stora. Dela den i procent, så att det stora rummet betalar mer och garderoben med fönster betalar mindre. Procenten måste bli 100 tillsammans. Räkningar som alla använder får en lika delning, och en rumskamrat som inte var med på en utgift kan lämnas utanför den. När en lika delning lämnar ett udda öre hamnar det hos en person på slumpen. Det finns inga återkommande räkningar, så varje månad kopierar du förra månadens hyra, ändrar datumet och fortsätter."
+  - heading: Det gemensamma inköpet
+    body: "Ha den gemensamma inköpslistan i samma grupp som inköpsnotorna och bocka av saker när de hamnar i vagnen. Den som handlar lägger in kvittots summa som en utgift och delar den lika, eller bara mellan de som ska äta det. Vem som fortsätter köpa havremjölken som ingen annan dricker är fortfarande en fråga för hushållet, men åtminstone blir utgiftslistan korrekt. Gruppens behörigheter avgör vem som kan skapa och redigera listor. Lägg ihop hyran, räkningarna och inköpen så får du en månad som den nedan, i ett hushåll på fyra: Jo betalar £2,000 i hyra, delad 30 %, 25 %, 25 % och 20 % efter rummens storlek, sedan betalar Kwame £120 för el, Lena £40 för internet och Matt £80 för matinköp, alla delade lika. Jo har £1,340 att få, och Side Badger föreslår tre betalningar, alla till Jo."
+  - heading: Rättvisa sätt att dela hushållskostnader
+    items:
+      - "**Lika** passar det som alla använder ungefär lika mycket, till exempel internet, städmaterial och de gemensamma inköpen. Det går fort, och ingen behöver gräla om matten."
+      - "**Efter rummens storlek** passar hyran, eftersom rum skiljer sig åt och det gör också vad folk vill betala för dem. Kom överens om procenten en gång, när någon flyttar in, och återanvänd dem varje månad."
+      - "**Efter användning** passar räkningar där en person tydligt använder mer, till exempel uppvärmningen av ett hemmakontor eller ett streamingkonto som bara två personer tittar på. Lämna utanför de som inte var med, eller ange exakta belopp för varje person."
+      - "Vilket du än väljer, kom överens om det före den första räkningen snarare än efter det första gnabbet, och skriv ner regeln någonstans där hela hushållet ser den."
+  - heading: När någon flyttar ut
+    body: De gör upp först. Ingen kan lämna en grupp så länge hen är skyldig eller har pengar att få, så den som flyttar betalar eller får betalt, du registrerar det och sedan går hen. Låt gruppen leva vidare för de rumskamrater som blir kvar och bjud in den nya med en länk. När själva hushållet är slut kan en administratör låsa gruppen så att siffrorna ligger kvar, eller stänga den för gott, vilket gör den oåtkomlig för alla, så gör det först när ingen behöver historiken längre.
+exampleAfter: 2
+example:
+  heading: Vem som är skyldig vem den här månaden
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: Hyra
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: El
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: Internet
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: Matinköp
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: Funktionerna ett hushåll använder
+faq:
+  heading: Frågor
+  items:
+    - q: Kan hyran upprepas automatiskt?
+      a: Nej, det finns inga återkommande räkningar. Kopiera förra månadens hyra med ett par tryck, ändra datumet så är du klar.
+    - q: Kan vi dela efter rummens storlek?
+      a: Ja, i procent. Ge varje rumskamrat en andel som speglar rummet, så länge andelarna blir 100 tillsammans. [Dela utgifter](page:feature/split-expenses) tar upp de andra sätten att dela.
+    - q: Vad händer om en rumskamrat flyttar ut med en skuld?
+      a: Hen kan inte lämna gruppen förrän hen har gjort upp, eftersom ingen kan lämna så länge hen är skyldig eller har pengar att få. Siffrorna förblir ärliga tills alla är kvitt.
+    - q: Betalar Side Badger räkningarna?
+      a: Nej. Det håller räkningen och föreslår en kort lista med betalningar. Ni betalar varandra hur ni vill och registrerar det sedan, som [göra upp](page:feature/settle-up) förklarar.
+    - q: Kan en rumskamrat sköta bokföringen?
+      a: Ja. Gör hen till administratör och använd en hanterad grupp, där nya medlemmar behöver godkännande och bara skapare och administratörer kan ändra utgifter.

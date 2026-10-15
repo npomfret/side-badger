@@ -1,0 +1,111 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+meta:
+  title: "Verdeel de kosten van een groepsreis, in 140 valuta’s"
+  description: "Hou bij wie wat betaalde op een groepsreis, voer kosten in de lokale valuta in, reken om of niet, en reken één keer af op het einde. Gratis, in je browser."
+h1: "Verdeel de kosten van een groepsreis, in 140 valuta’s"
+navLabel: "Groepsreizen"
+lead: "Hou de villa, de taxi en die ene ronde cocktails bij waarvan niemand zich herinnert dat hij ze aanbood. Side Badger houdt de lopende rekening bij terwijl je weg bent, [kan overweg met ponden, euro’s en 138 andere valuta’s](page:feature/multiple-currencies) en geeft je een [korte lijst betalingen](page:feature/settle-up) wanneer je thuiskomt."
+cta:
+  heading: "Vakantiesommen, gemaakt voor de bruine kleur vervaagt"
+  body: "Maak een groep, stuur de uitnodigingslink naar de mensen op de reis en voeg kosten toe zodra ze gebeuren."
+  button: "Maak een gratis account"
+scenario:
+  heading: "Iedereen betaalde iets, in een of andere valuta"
+  body: "Iemand boekte de vluchten, iemand anders zette de villa op een kaart en een derde betaalde het diner cash. Tegen dag drie weet niemand nog wie voor staat. De vraag is eenvoudig, ook al staat het antwoord meestal in een spreadsheet die niemand wil openen. Wie betaalde wat, in welke valuta, en hoe rekent iedereen één keer af op het einde?"
+sections:
+  - heading: "Voor je vertrekt"
+    body: "Leg de shortlist van villa’s ter stemming voor, desgewenst anoniem, zodat de beslissing van de groep is en niet van wie het langst mokt. Hou dan de gedeelde boodschappenlijst naast de boodschappenrekeningen, zodat niemand drie tubes zonnecrème koopt en geen enkele stekkeradapter."
+  - heading: "Terwijl je weg bent"
+    body: "Voeg elke kost toe zodra hij gebeurt, in de valuta waarin je betaalde. Maak een foto van het bonnetje en Side Badger vult het totaal, de datum en de plaats in, zodat jij ze kunt nakijken; bonnetjes worden gelezen door de AI-dienst van Google. Reken het bedrag om tegen een actuele wisselkoers, die je kunt aanpassen naar de koers die je echt kreeg, en het oorspronkelijke bedrag blijft bij de uitgave staan. Of laat de euro’s euro’s en beslis later. Een groep kan ook één valuta kiezen, en nieuwe uitgaven worden er automatisch naar omgerekend."
+  - heading: "Niet iedereen deed alles"
+    body: "Sommigen sloegen het diner over, anderen bleven van de boot af. Laat hen weg uit de kosten waar ze geen deel van uitmaakten en verdeel de rest [gelijk, op exacte bedragen of op percentage](page:feature/split-expenses). Niemand betaalt voor het deel van de reis dat hij slapend doorbracht."
+  - heading: "Reken af zodra je thuis bent"
+    body: "Side Badger stelt een korte lijst betalingen voor die iedereen afrekent. Betaal elkaar zoals je wilt en registreer het dan. Bij gemengde valuta’s hou je elke valuta apart of reken je om terwijl je bezig bent; het voorbeeld uit Lissabon hieronder toont beide."
+  - heading: "Vrijgezellenweekends"
+    body: "Een weekend weg met een eregast vraagt wat meer administratie. Maak er een beheerde groep van, waar beheerders nieuwe leden goedkeuren en enkel makers en beheerders uitgaven kunnen wijzigen. Gebruik exacte bedragen voor het aandeel van de eregast, beperk de groep tot de valuta’s die je echt gebruikt en vergrendel de groep als het voorbij is, zodat de cijfers blijven staan."
+exampleAfter: 4
+example:
+  heading: "Vier vrienden in Lissabon"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Vluchten"
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: "Villa"
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: "Diner"
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Boottocht"
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: "Waar een reis op leunt"
+faq:
+  heading: "Vragen"
+  items:
+    - q: "Kunnen mensen die het diner oversloegen worden weggelaten?"
+      a: "Ja. Kies wie deel uitmaakte van elke uitgave en alleen zij worden ervoor aangerekend."
+    - q: "Werkt het zonder bereik?"
+      a: "Nee. Side Badger heeft een verbinding nodig, dus voeg de kosten toe zodra je weer op wifi zit."
+    - q: "Moet iedereen iets installeren?"
+      a: "Nee. Het draait in de browser. Stuur de uitnodigingslink en mensen doen mee vanaf hun telefoon."
+    - q: "Welke wisselkoers gebruikt het?"
+      a: "Een actuele wisselkoers wanneer je de uitgave invoert, of je eigen koers als je een andere kreeg. De koers ligt vast wanneer de uitgave wordt opgeslagen, dus oude uitgaven worden nooit herwaardeerd."
+    - q: "Kunnen we de groep na de reis bevriezen?"
+      a: "Ja. Een beheerder kan de groep vergrendelen zodat de cijfers blijven staan."
+    - q: "Is er een limiet op bedragen?"
+      a: "Ja. 999.999,99 per uitgave, in haar eigen valuta."

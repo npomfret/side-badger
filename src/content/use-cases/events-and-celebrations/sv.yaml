@@ -1,0 +1,92 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+meta:
+  title: Dela kostnaderna för fester, bröllop och gruppgåvor
+  description: Dela kostnaderna för en fest, ett bröllop eller en gruppgåva när folk bidrar med olika belopp. Rösta om planen, dela efter exakta belopp och se vem som är skyldig vem.
+h1: Dela kostnaderna för fester, bröllop och gruppgåvor
+navLabel: Event och firanden
+lead: Dela depositioner, dekorationer och nödparaplyer. Överlåt placeringen vid borden åt någon modigare. Side Badger håller **vem som bidragit med vad** på ett ställe, så att arrangören också kan njuta av festen.
+cta:
+  heading: Börja med nästa firande
+  body: Skapa ett konto, gör en grupp för eventet och skicka inbjudningslänken. Side Badger är gratis, utan annonser och utan dagliga gränser.
+  button: Skapa ett gratiskonto
+scenario:
+  heading: Alla bidrar, inte alltid med lika mycket
+  body: Någon betalar depositionen för lokalen, någon annan köper tårtan och en tredje lägger gruppgåvan på sitt eget kort. Vissa gäster kommer på allt och vissa bara på middagen. Att hålla en rättvis räkning på det i en chatt är ett jobb som ingen sökt. En Side Badger-grupp rymmer alltihop, oavsett blandningen av belopp, och visar var och en vad hen är skyldig eller har att få. Se [så fungerar det](page:how-it-works) för grunderna, eller läs vidare om ett event.
+sections:
+  - heading: Bestäm tillsammans
+    body: Innan några pengar rör sig lägger du valet i en **omröstning**. Lägg till upp till 10 alternativ, till exempel två lokaler eller tre presentidéer, och låt alla rösta. Du kan dölja vem som röstat på vad, så att varje alternativ får en rättvis chans, och vinnaren visas när omröstningen är stängd. Ingen behöver scrolla tillbaka genom fyrtio meddelanden för att se vad som bestämdes.
+  - heading: Vem som är med på vad
+    body: Alla betalar inte lika mycket, och alla är inte med på varje kostnad. Dela en utgift lika, i procent eller efter **exakta belopp**, så att var och ens andel är den siffra ni kommit överens om. Lämna utanför alla som inte var inblandade, till exempel gästerna som hoppade över middagen eller vännerna som inte var med på gåvan. Varje utgift har en betalare, och alla andra i delningen är skyldiga hen sin andel. Detaljerna finns på sidan [dela utgifter](page:feature/split-expenses).
+  - heading: Spara pappersarbetet
+    body: Lägg till anteckningar på en utgift, till exempel vad kostnaden omfattade. Kommentarerna ligger **bredvid utgiften** de handlar om, så att frågan "kostade tårtan £45 eller £54?" och dess svar finns på samma ställe. Kommentarer får vara 500 tecken, vilket är gott och väl för en fråga om en deposition.
+  - heading: Arrangörens kontroller
+    body: Öppet samarbete låter alla medlemmar lägga till och redigera utgifter, vilket går bra för en liten gåva. För ett bröllop eller en större fest väljer du förinställningen **Hanterad grupp**. Administratörer godkänner varje ny medlem, och bara skapare och administratörer kan ändra utgifter. Bjud in folk med en länk eller QR-kod; med godkännande påslaget släpper en administratör in varje person, så att gästlistan förblir gästlistan. När eventet är över låser du gruppen så att siffrorna ligger kvar.
+  - heading: Gör upp efter festen
+    body: När den sista fakturan är inne visar saldona **vem som är skyldig vem**, och Side Badger föreslår en kort lista med betalningar som gör upp för alla. Betala varandra hur ni vill och registrera sedan betalningen i gruppen. Side Badger flyttar aldrig pengar, så gruppen håller räkningen medan överföringarna sker i era egna bankappar. Sidan [göra upp](page:feature/settle-up) visar hur en härva blir en kort lista.
+exampleAfter: 5
+example:
+  heading: 'En gruppgåva: sex röster för den, £150 att dela'
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: Gruppgåva
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: Funktionerna det här använder
+faq:
+  heading: Frågor
+  items:
+    - q: Kan gäster se gruppen utan att gå med?
+      a: Nej. Folk går med via en länk eller QR-kod och ett gratiskonto, så de kan se gruppen när de är med.
+    - q: Kan Side Badger samla in pengarna?
+      a: Nej. Side Badger håller räkningen och flyttar aldrig pengar. Betala varandra hur ni vill och registrera sedan betalningen. Det är gratis, utan annonser och utan dagliga gränser; se [prissättning](page:pricing).
+    - q: Kan röster vara anonyma?
+      a: Ja. När du skapar en omröstning kan du dölja vem som röstat på vad. Inställningarna kan bara ändras före den första rösten.
+    - q: Kan folk bidra med olika belopp?
+      a: Ja. Dela en utgift efter exakta belopp, så att var och ens andel är den siffra ni kommit överens om, eller lämna utanför de som inte var inblandade.
+    - q: Kan en arrangör sköta bokföringen?
+      a: Ja. Använd förinställningen för hanterad grupp, så att bara skapare och administratörer ändrar utgifter och administratörer godkänner nya medlemmar.

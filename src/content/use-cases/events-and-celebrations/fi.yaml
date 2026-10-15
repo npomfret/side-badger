@@ -1,0 +1,92 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+meta:
+  title: Jaa juhlien, häiden ja ryhmälahjojen kulut
+  description: Jaa juhlan, häiden tai ryhmälahjan kulut, kun ihmiset osallistuvat eri summilla. Äänestä suunnitelmasta, jaa tarkoilla summilla ja katso, kuka on velkaa kenelle.
+h1: Jaa juhlien, häiden ja ryhmälahjojen kulut
+navLabel: Tapahtumat ja juhlat
+lead: Jaa etumaksut, koristeet ja hätäsateenvarjot. Istumajärjestys jää jollekulle rohkeammalle. Side Badger pitää **kuka osallistui millä summalla** yhdessä paikassa, jotta järjestäjäkin pääsee nauttimaan juhlista.
+cta:
+  heading: Aloita seuraavasta juhlasta
+  body: Luo tili, tee ryhmä tapahtumalle ja lähetä kutsulinkki. Side Badger on ilmainen, ilman mainoksia ja päivittäisiä rajoja.
+  button: Luo ilmainen tili
+scenario:
+  heading: Kaikki osallistuvat, eivät aina samalla summalla
+  body: Joku maksaa paikan etumaksun, toinen ostaa kakun ja kolmas laittaa ryhmälahjan omalle kortilleen. Osa vieraista tulee kaikkeen, osa vain illalliselle. Reilun kirjanpidon pitäminen tästä chat-ketjussa on työ, jota kukaan ei hakenut. Side Badger -ryhmä pitää kaiken, summien sekamelskasta riippumatta, ja näyttää jokaiselle, mitä hän on velkaa tai mitä hänelle ollaan velkaa. Perusasiat löydät sivulta [näin se toimii](page:how-it-works), tai lue eteenpäin tapahtumista.
+sections:
+  - heading: Päättäkää yhdessä
+    body: Ennen kuin raha liikkuu, laita valinta **kyselyyn**. Lisää enintään 10 vaihtoehtoa, kuten kaksi paikkaa tai kolme lahjaideaa, ja anna kaikkien äänestää. Voit piilottaa, kuka äänesti mitä, jotta jokainen vaihtoehto saa reilun kohtelun, ja voittaja näkyy, kun kysely on suljettu. Kenenkään ei tarvitse selata neljääkymmentä viestiä taaksepäin selvittääkseen, mitä päätettiin.
+  - heading: Kuka on mukana missäkin
+    body: Kaikki eivät maksa samaa, eivätkä kaikki kuulu jokaiseen kuluun. Jaa kulu tasan, prosenteilla tai **tarkoilla summilla**, jolloin kunkin osuus on sovittu luku. Jätä pois ne, jotka eivät olleet mukana, kuten vieraat, jotka ohittivat illallisen, tai ystävät, jotka eivät osallistuneet lahjaan. Jokaisella kululla on yksi maksaja, ja kaikki muut jaossa ovat velkaa osuutensa hänelle. Yksityiskohdat löytyvät sivulta [kulujen jako](page:feature/split-expenses).
+  - heading: Pidä paperit tallessa
+    body: Lisää kuluun muistiinpanoja, esimerkiksi mitä kulu kattoi. Kommentit pysyvät **kulun vieressä**, jota ne koskevat, joten kysymys ”oliko kakku £45 vai £54?” ja sen vastaus ovat samassa paikassa. Kommentit voivat olla 500 merkin mittaisia, mikä riittää hyvin etumaksua koskevaan kysymykseen.
+  - heading: Järjestäjän hallinta
+    body: Avoin yhteistyö antaa kenen tahansa jäsenen lisätä ja muokata kuluja, mikä sopii pienelle lahjalle. Häihin tai isompiin juhliin valitse **Hallittu ryhmä** -esiasetus. Ylläpitäjät hyväksyvät jokaisen uuden jäsenen, ja vain luojat ja ylläpitäjät voivat muuttaa kuluja. Kutsu ihmiset linkillä tai QR-koodilla; hyväksynnän ollessa päällä ylläpitäjä päästää jokaisen sisään, joten vieraslista pysyy vieraslistana. Kun tapahtuma on ohi, lukitse ryhmä, jotta luvut pysyvät paikoillaan.
+  - heading: Tasaa juhlien jälkeen
+    body: Kun viimeinenkin lasku on tullut, saldot näyttävät **kuka on velkaa kenelle**, ja Side Badger ehdottaa lyhyttä maksulistaa, joka tasaa kaikki. Maksakaa toisillenne miten haluatte ja kirjatkaa maksu ryhmässä. Side Badger ei koskaan siirrä rahaa, joten ryhmä pitää kirjaa, kun siirrot tehdään omissa pankkisovelluksissanne. Sivu [tilien tasaus](page:feature/settle-up) näyttää, miten vyyhti muuttuu lyhyeksi listaksi.
+exampleAfter: 5
+example:
+  heading: 'Ryhmälahja: kuusi ääntä puolesta, £150 jaettavaksi'
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: Ryhmälahja
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: Ominaisuudet, joita tämä käyttää
+faq:
+  heading: Kysymyksiä
+  items:
+    - q: Näkevätkö vieraat ryhmän liittymättä?
+      a: Ei. Ihmiset liittyvät linkillä tai QR-koodilla ja ilmaisella tilillä, joten he näkevät ryhmän vasta sisällä.
+    - q: Voiko Side Badger kerätä rahat?
+      a: Ei. Side Badger pitää kirjaa eikä koskaan siirrä rahaa. Maksakaa toisillenne miten haluatte ja kirjatkaa maksu. Se on ilmainen, ilman mainoksia ja päivittäisiä rajoja; katso [hinnoittelu](page:pricing).
+    - q: Voivatko äänet olla nimettömiä?
+      a: Kyllä. Kyselyä luodessasi voit piilottaa, kuka äänesti mitä. Asetuksia voi muuttaa vain ennen ensimmäistä ääntä.
+    - q: Voivatko ihmiset osallistua eri summilla?
+      a: Kyllä. Jaa kulu tarkoilla summilla, jolloin kunkin osuus on sovittu luku, tai jätä pois ne, jotka eivät olleet mukana.
+    - q: Voiko järjestäjä pitää kirjaa?
+      a: Kyllä. Käytä hallitun ryhmän esiasetusta, jolloin vain luojat ja ylläpitäjät muuttavat kuluja ja ylläpitäjät hyväksyvät uudet jäsenet.

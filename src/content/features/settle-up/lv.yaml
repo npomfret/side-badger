@@ -1,0 +1,111 @@
+translatedFrom: "1b51f540"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Norēķinieties ar mazāk maksājumiem | Side Badger"
+  description: "Skatiet, kurš kam ir parādā jūsu grupā, saņemiet īsu maksājumu sarakstu, kas nokārto visus, un reģistrējiet katru maksājumu, kad tas notiek. Lietošana bez maksas."
+h1: "Norēķinieties ar mazāk maksājumiem"
+navLabel: "Norēķināšanās"
+lead: "Side Badger uztur kārtējo atlikumu katram grupā un iesaka īsu maksājumu sarakstu, kas to nokārto. Jūs samaksājat viens otram, kā vēlaties, tad to reģistrējat. Ja vispirms vēlaties redzēt, kā skaitļi tiek sadalīti, sāciet ar [izdevumu sadali](page:feature/split-expenses)."
+cta:
+  heading: "Gatavi izmezglot, kurš kam ir parādā?"
+  body: "Izveidojiet kontu, sāciet grupu un pievienojiet pirmo izdevumu. Atlikumi parūpēsies par pārējo."
+  button: "Izveidot bezmaksas kontu"
+problem:
+  heading: "Atlikumi, kas atjaunojas līdzi"
+  body: "Katrs izdevums maina to, kurš kam ir parādā, tāpēc Side Badger uztur atlikumus aktuālus, kad tiek pievienoti izdevumi un maksājumi. Ikviens grupā izmaiņas redz uzreiz un redz, kas mainīts un kurš to mainīja. Atlikumi tiek uzturēti katrā valūtā, tāpēc eiro un mārciņas paliek savās kolonnās, ja vien izdevums netika konvertēts, kad tas tika ievadīts. Pēc noklusējuma redzat parādus, kas skar jūs; **Rādīt visu** parāda visu grupu."
+workflow:
+  heading: "Trīs soļi līdz kvitiem"
+  steps:
+    - title: "Skatiet, kurš kam ir parādā"
+      body: "Atveriet grupas atlikumus, lai redzētu, cik esat parādā, cik jums pienākas un īsu maksājumu sarakstu, kas nokārto visus, aprēķinātu katrā valūtā. Apšaubītie izdevumi paliek ārpus summām, kamēr tie nav nokārtoti. Tālāk redzamajā mājokļa biedru piemērā seši maksājumi kļūst par diviem."
+      shot: S10
+      shotAlt: "Atlikumu ekrāns ar vienkāršotiem parādiem divās valūtās, kad ieslēgts „Rādīt visu”"
+    - title: "Samaksājiet, kā vēlaties, tad reģistrējiet"
+      body: "Bankas pārskaitījums, skaidra nauda, pakalpojums, ko esat parādā kopš pagājušā atvaļinājuma. Side Badger naudu nepārvieto. Kad nauda ir mainījusi īpašnieku, reģistrējiet maksājumu, un atlikums visiem atjaunojas."
+      shot: S11
+      shotAlt: "Maksājuma veidlapa ar ātrā norēķina pogām un paziņojumu, kas parādās daļējam maksājumam"
+    - title: "Pārbaudiet, vai tas ir ienācis"
+      body: "Maksājums nonāk grupas vēsturē, kur ikviens grupā to redz un var reaģēt ar emocijzīmi. Nosvinēiet maksājumu, kad tas ir ienācis."
+      shot: S12
+      shotAlt: "Maksājumu vēsture ar emocijzīmju reakcijām uz maksājumu"
+options:
+  heading: "Iespējas"
+  items: []
+example:
+  heading: "No mezgla līdz īsam sarakstam"
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: "Elektrība"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: "Internets"
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "Pārtikas pirkumi"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "Reģistrējiet maksājumu"
+    body: "Kad kāds maksā, reģistrējiet to pie pareizā cilvēka. Ātrā norēķina pogas aizpilda summu no jūsu ieteiktajiem maksājumiem, un varat pievienot piezīmi, piemēram, „bankas pārskaitījums” (līdz 500 rakstzīmēm). Samaksājiet tikai daļu no parāda, un pārējais paliek atlikumā. Ja ievadāt pārāk maz vai pārāk daudz, Side Badger brīdina pirms saglabāšanas. Maksājuma reģistrēšanai vajadzīga atļauja labot izdevumus, un datums nevar būt nākotnē."
+  - heading: "Samaksāts citā valūtā?"
+    body: "Atlikumi paliek valūtā, kurā tika samaksāts, tāpēc parāds eiro paliek parāds eiro. Esat parādā eiro, bet maksājat mārciņās? Konvertējiet maksājumu, kad to ievadāt, pēc pašreizējā valūtas kursa vai pēc kursa, ko patiešām saņēmāt. Kurss tiek fiksēts, kad maksājums tiek saglabāts. [Vairākas valūtas](page:feature/multiple-currencies) izskaidro, kā darbojas konvertēšana, un [grupas ceļojumi](page:use-case/group-trips) parāda to darbībā."
+  - heading: "Vēsture, ko varat pārbaudīt"
+    body: "Katrs reģistrētais maksājums paliek grupas vēsturē ar savu datumu, summu un piezīmi. Maksājumu var labot tikai tas, kas to reģistrēja, un dzēst var viņš vai grupas administrators. Maksājums, kurā iesaistīts cilvēks, kas pametis grupu, ir bloķēts. Izstrādātu mājokļa biedru scenāriju skatiet sadaļā [mājokļa biedri](page:use-case/housemates)."
+limits:
+  heading: "Ko Side Badger nedara"
+  items:
+    - "Side Badger nepārvieto naudu, nesūta maksājumu saites un nesūta maksājumu pieprasījumus. Maksājums lietotnē ir ieraksts par maksājumu, kas veikts citur."
+    - "Ieteiktie maksājumi nāk no vienkāršas saskaņošanas metodes, ko piemēro katrā valūtā. Tā vienmēr iesaka mazāk maksājumu, nekā ir cilvēku ar atlikumu šajā valūtā (četri cilvēki, ne vairāk kā trīs maksājumi), bet ne vienmēr atrod mazāko iespējamo skaitu."
+    - "Ieteikumus nevar izslēgt. **Rādīt visu** parāda katru grupas ieteikto maksājumu, ne tikai jūsējos."
+    - "Valūtas nekad netiek savstarpēji ieskaitītas, ja vien izdevumi netika konvertēti, kad tie tika ievadīti."
+    - "Atgādinājumu nav, tāpēc maksājuma pakaļdzīšanās joprojām ir jūsu ziņā."
+useCasesHeading: "Kur norēķināšanās ir svarīga"
+faq:
+  heading: "Jautājumi"
+  items:
+    - q: "Vai Side Badger sūta naudu?"
+      a: "Nē. Samaksājiet viens otram, kā vēlaties, tad reģistrējiet maksājumu Side Badger, lai atlikums atjaunotos."
+    - q: "Vai varu izslēgt ieteiktos maksājumus?"
+      a: "Nē. Vienkāršošana paliek ieslēgta, un **Rādīt visu** parāda katru grupas ieteikto maksājumu, ne tikai tos, kas skar jūs."
+    - q: "Kāpēc eiro un mārciņas tiek turētas atsevišķi?"
+      a: "Atlikumi paliek valūtā, kurā maksājāt, ja vien nekonvertējat, ievadot izdevumu vai maksājumu. Parādi dažādās valūtās nekad netiek savstarpēji ieskaitīti."
+    - q: "Ko darīt, ja kāds samaksā tikai daļu no parāda?"
+      a: "Reģistrējiet daļu, ko viņš samaksāja. Pārējais paliek atlikumā, kamēr tas nav samaksāts."
+    - q: "Vai tas vienmēr ir mazākais iespējamais maksājumu skaits?"
+      a: "Nav garantēts. Tas vienmēr iesaka mazāk maksājumu, nekā ir cilvēku ar atlikumu šajā valūtā, tāpēc četriem cilvēkiem nekad vairāk par trim. Mājokļa biedru piemērā tie ir divi maksājumi, kur katra cilvēka atmaksāšana tieši prasīja sešus."

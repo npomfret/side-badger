@@ -1,0 +1,112 @@
+translatedFrom: "1b51f540"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: Gör upp med färre betalningar | Side Badger
+  description: Se vem som är skyldig vem i din grupp, få en kort lista med betalningar som gör upp för alla och registrera varje betalning när den sker. Gratis att använda.
+h1: Gör upp med färre betalningar
+navLabel: Göra upp
+lead: Side Badger håller ett löpande saldo för alla i gruppen och föreslår en kort lista med betalningar som gör upp det. Ni betalar varandra hur ni vill och registrerar det sedan. Vill du först se hur siffrorna delas, börja med [dela utgifter](page:feature/split-expenses).
+cta:
+  heading: Redo att reda ut vem som är skyldig vem?
+  body: Skapa ett konto, starta en grupp och lägg till den första utgiften. Saldona sköter resten.
+  button: Skapa ett gratiskonto
+problem:
+  heading: Saldon som uppdateras allt eftersom
+  body: Varje utgift ändrar vem som är skyldig vem, så Side Badger håller saldona aktuella när utgifter och betalningar läggs till. Alla i gruppen ser en ändring direkt, och ser vad som ändrades och vem som ändrade. Saldona hålls per valuta, så euro och pund stannar i sina egna kolumner om inte en utgift räknades om när den lades in. Som standard ser du de skulder som rör dig; **Visa alla** listar hela gruppen.
+workflow:
+  heading: Tre steg till kvitt
+  steps:
+    - title: Se vem som är skyldig vem
+      body: Öppna gruppens saldon för att se vad du är skyldig, vad du har att få och en kort lista med betalningar som gör upp för alla, uträknad per valuta. Ifrågasatta utgifter hålls utanför summorna tills de är utredda. I exemplet med rumskamrater nedan blir sex betalningar två.
+      shot: S10
+      shotAlt: Saldoskärmen med förenklade skulder i två valutor och Visa alla påslaget
+    - title: Betala hur du vill, registrera sedan
+      body: Banköverföring, kontanter, en tjänst man är skyldig sedan förra semestern. Side Badger flyttar inte pengarna. När pengarna har bytt ägare registrerar du betalningen, och saldot uppdateras för alla.
+      shot: S11
+      shotAlt: Betalningsformuläret med snabbavräkningsknappar och meddelandet som visas vid en delbetalning
+    - title: Kolla att den kom fram
+      body: Betalningen hamnar i gruppens historik, där alla i gruppen kan se den och reagera med en emoji. Fira en betalning när den har kommit fram.
+      shot: S12
+      shotAlt: Betalningshistoriken med emoji-reaktioner på en betalning
+options:
+  heading: Alternativ
+  items: []
+example:
+  heading: Från härva till kort lista
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: El
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: Internet
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: Matinköp
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: Registrera en betalning
+    body: När någon betalar registrerar du det på rätt person. Snabbregleringsknapparna fyller i beloppet från dina föreslagna betalningar, och du kan lägga till en anteckning som "banköverföring" (upp till 500 tecken). Betalar du bara en del av det du är skyldig ligger resten kvar på saldot. Anger du för lite eller för mycket varnar Side Badger dig innan du sparar. För att registrera en betalning krävs behörighet att redigera utgifter, och datumet får inte ligga i framtiden.
+  - heading: Betalat i en annan valuta?
+    body: Saldona stannar i den valuta de betalades i, så en skuld i euro förblir en skuld i euro. Är du skyldig euro men betalar i pund? Räkna om betalningen när du lägger in den, med en aktuell växelkurs eller med den kurs du faktiskt fick. Kursen fastställs när betalningen sparas. [Flera valutor](page:feature/multiple-currencies) förklarar hur omräkning fungerar, och [gruppresor](page:use-case/group-trips) visar den i bruk.
+  - heading: Historik du kan kontrollera
+    body: Varje registrerad betalning finns kvar i gruppens historik med datum, belopp och anteckning. Bara den som registrerade en betalning kan redigera den, och hen eller en gruppadministratör kan ta bort den. En betalning som rör någon som har lämnat gruppen är låst. Ett genomarbetat scenario med rumskamrater finns under [rumskamrater](page:use-case/housemates).
+limits:
+  heading: Vad Side Badger inte gör
+  items:
+    - Side Badger flyttar inte pengar, skickar inte betalningslänkar och skickar inte betalningsförfrågningar. En betalning i appen är en registrering av en betalning som gjorts någon annanstans.
+    - De föreslagna betalningarna kommer från en enkel matchningsmetod som tillämpas per valuta. Den föreslår alltid färre betalningar än det finns personer med saldo i den valutan (fyra personer, högst tre betalningar), men den hittar inte alltid det minsta möjliga antalet.
+    - Du kan inte stänga av förslagen. **Visa alla** listar varje föreslagen betalning i gruppen, inte bara dina.
+    - Valutor räknas aldrig mot varandra om inte utgifterna räknades om när de lades in.
+    - Det finns inga påminnelser, så det är fortfarande upp till dig att jaga en betalning.
+useCasesHeading: Där det betyder något att göra upp
+faq:
+  heading: Frågor
+  items:
+    - q: Skickar Side Badger pengarna?
+      a: Nej. Betala varandra hur ni vill och registrera sedan betalningen i Side Badger så att saldot uppdateras.
+    - q: Kan jag stänga av de föreslagna betalningarna?
+      a: Nej. Förenklingen är alltid på, och **Visa alla** listar varje föreslagen betalning i gruppen, inte bara de som rör dig.
+    - q: Varför hålls euro och pund separata?
+      a: Saldona stannar i den valuta du betalade i om du inte räknar om när du lägger in en utgift eller betalning. Skulder i olika valutor räknas aldrig mot varandra.
+    - q: Vad händer om någon bara betalar en del av det hen är skyldig?
+      a: Registrera den del som betalades. Resten ligger kvar på saldot tills den är betald.
+    - q: Är det alltid det minsta möjliga antalet betalningar?
+      a: Det garanteras inte. Det föreslår alltid färre betalningar än det finns personer med saldo i den valutan, så för fyra personer föreslås aldrig fler än tre. I exemplet med rumskamrater blir det två betalningar, där en direkt återbetalning till varje person krävde sex.

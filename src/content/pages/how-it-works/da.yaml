@@ -1,0 +1,107 @@
+translatedFrom: "fd23c99b"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: Sådan virker Side Badger | Del gruppeudgifter i fem trin
+  description: Opret en gruppe, inviter folk, tilføj udgifter og gør op. Se, hvad der sker mellem »nogen har betalt« og »nu står vi lige«, med et gennemregnet eksempel.
+h1: Sådan virker Side Badger
+navLabel: Sådan virker det
+lead: "Hvad sker der mellem »nogen har betalt« og »nu står vi lige«? Fem trin, intet regneark og én grævling, der mest er til pynt. Her er hele turen, fra den første gruppe til den sidste registrerede betaling. Du kan læse mere om de enkelte trin under [del udgifter](page:feature/split-expenses) og [gør op](page:feature/settle-up)."
+cta:
+  heading: Fra »jeg tager lige den her« til »nu står vi lige«
+  body: Opret en gratis konto, start en gruppe, og tilføj den første udgift. Grævlingen dømmer ikke kvitteringen.
+  button: Opret en gratis konto
+steps:
+  - title: Opret en gruppe
+    body: Lav én gruppe til hvert hus, hver tur og hver begivenhed, så huslejen aldrig havner på samme liste som bryllupsgaven. Giv den et navn, vælg det navn, folk skal se dig som, og begræns om ønsket, hvilke valutaer den tager imod. Dit overblik viser så alle dine grupper og din status i hver af dem på én skærm.
+    shot: S02
+    shotAlt: Dialogen til at oprette en gruppe med afsnittet om valutabegrænsninger åbent
+  - title: Inviter dine folk
+    body: Del et link, eller vis en QR-kode, og vælg, hvor længe den gælder, fra 15 minutter op til 5 dage. Alle, der tilmelder sig, skal have en gratis konto og en bekræftet e-mail, og en gruppe rummer op til 50 personer. Vil du kontrollere, hvem der kommer ind, så slå godkendelse til, så en administrator lukker hver person ind.
+    shot: S03
+    shotAlt: Invitationsdialogen på linkfanen med en QR-kode og valg af udløbstid
+  - title: Tilføj udgifter, mens de sker
+    body: Sig, hvem der betalte, hvor meget, og hvem det var til. Del det ligeligt, efter nøjagtige beløb eller i procent, og udelad dem, der ikke var med. Tilføj udgiften, og alle ser den med det samme, sammen med hvad der blev ændret, og hvem der ændrede det.
+    shot: S05
+    shotAlt: Udgiftsformularen med en procentdeling, der fordeler huslejen efter værelsernes størrelse
+  - title: Følg med i saldiene
+    body: Side Badger fører en løbende saldo for hver valuta, så du med et enkelt blik kan se, hvem der skylder hvem. I stedet for at lade alle rode et net af små gældsposter ud, foreslår den en kort liste over betalinger, der gør op for gruppen.
+    shot: S10
+    shotAlt: Saldoskærmen med forenklet gæld i to valutaer og Vis alle slået til
+  - title: Gør op uden for appen, registrer det i den
+    body: Side Badger flytter aldrig penge. Betal hinanden, som I vil, og registrer så betalingen, så saldiene følger med, og alles skærm opdateres uden at skulle genindlæses. »Gjort op« betyder blot, at saldiene viser nul. Ingen kan forlade en gruppe, mens vedkommende stadig skylder eller er til gode, så alle, der er på vej ud, gør først op.
+    shot: S11
+    shotAlt: Betalingsformularen med hurtigafregningsknapper og beskeden om delbetaling
+requirements:
+  heading: Hvad du skal bruge
+  items:
+    - En gratis konto. Du skal bare bruge en e-mailadresse og en adgangskode, og du bekræfter e-mailen, før du kan tilføje noget.
+    - At være fyldt 18 år.
+    - En moderne browser på en telefon eller en computer og en forbindelse. Side Badger er ikke en app fra en app store og virker ikke offline.
+    - Eventuelt en plads på din startskærm. Ingen app store nødvendig, for du kan føje Side Badger til din startskærm eller dock, og så åbner den som en app.
+example:
+  heading: Tre venner efter en aften i byen
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: Middag
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: Taxa
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: 39 sprog, og lavet til flere mennesker
+    body: Brug Side Badger på 39 sprog, herunder arabisk, persisk og urdu, der skrives fra højre mod venstre. Alle i gruppen kan vælge deres eget, så gruppesiden kan være på arabisk for én og på engelsk for den næste. Den er også lavet med tanke på brugere af tastatur og skærmlæser, og medlemsfarver kommer med mønstre, så du ikke skal kunne kende forskel på grøn og rød.
+faq:
+  heading: Spørgsmål
+  items:
+    - q: Skal alle have en konto?
+      a: Ja, en gratis en. Hver person bekræfter sin e-mail, før vedkommende kan tilføje noget.
+    - q: Findes der en app?
+      a: Den kører i browseren, og du kan føje den til din startskærm eller dock, så den åbner som en app. Der er ingen version i en app store og ingen offlinetilstand.
+    - q: Flytter Side Badger penge?
+      a: Nej. Den fører regnskabet og foreslår betalinger, og I betaler hinanden, som I vil. Derefter registrerer I betalingen. Se [gør op](page:feature/settle-up).
+    - q: Kan nogen forlade gruppen, mens de skylder penge?
+      a: Nej. Ingen kan forlade en gruppe, mens de stadig skylder eller er til gode, så de gør først op.
+    - q: Hvor mange kan være med i en gruppe?
+      a: Op til 50 personer i en gruppe. Inviter dem med et link eller en QR-kode, og slå godkendelse til, hvis du vil have en administrator til at lukke hver person ind.
+    - q: Hvad med ture med mere end én valuta?
+      a: Saldiene føres adskilt for hver valuta. Se [flere valutaer](page:feature/multiple-currencies).

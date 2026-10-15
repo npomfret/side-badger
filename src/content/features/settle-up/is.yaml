@@ -1,0 +1,112 @@
+translatedFrom: "1b51f540"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+meta:
+  title: "Gerðu upp með færri greiðslum | Side Badger"
+  description: "Sjáðu hver skuldar hverjum í hópnum þínum, fáðu stuttan lista yfir greiðslur sem gerir upp við alla og skráðu hverja greiðslu um leið og hún á sér stað. Ókeypis."
+h1: "Gerðu upp með færri greiðslum"
+navLabel: "Uppgjör"
+lead: "Side Badger heldur utan um stöðu allra í hópnum og leggur til stuttan lista yfir greiðslur sem gerir upp. Þið borgið hvert öðru eins og ykkur hentar og skráið það svo. Ef þú vilt sjá fyrst hvernig tölurnar skiptast skaltu byrja á [skiptingu útgjalda](page:feature/split-expenses)."
+cta:
+  heading: "Tilbúin að leysa úr flækjunni um hver skuldar hverjum?"
+  body: "Stofnaðu aðgang, byrjaðu hóp og bættu við fyrsta útgjaldinu. Staðan sér um restina."
+  button: "Stofna ókeypis aðgang"
+problem:
+  heading: "Staða sem uppfærist jafnóðum"
+  body: "Hvert útgjald breytir því hver skuldar hverjum, svo Side Badger heldur stöðunni nýrri eftir því sem útgjöldum og greiðslum er bætt við. Allir í hópnum sjá breytingu strax, og sjá hvað breyttist og hver breytti því. Staðan er haldin fyrir hvern gjaldmiðil, svo evrur og pund haldast í sínum dálkum nema útgjald hafi verið umreiknað þegar það var skráð. Sjálfgefið sérðu skuldirnar sem tengjast þér; **Sýna allt** birtir allan hópinn."
+workflow:
+  heading: "Þrjú skref að því að verða kvitt"
+  steps:
+    - title: "Sjáðu hver skuldar hverjum"
+      body: "Opnaðu stöðu hópsins til að sjá hvað þú skuldar, hvað þú átt inni og stuttan lista yfir greiðslur sem gerir upp við alla, reiknaðan fyrir hvern gjaldmiðil. Útgjöld sem eru dregin í efa eru utan útreikninganna þar til úr þeim er leyst. Í dæminu um meðleigjendur hér að neðan verða sex greiðslur að tveimur."
+      shot: S10
+      shotAlt: "Stöðuskjár með einfölduðum skuldum í tveimur gjaldmiðlum og kveikt á Sýna allt"
+    - title: "Borgaðu eins og þér hentar, skráðu það svo"
+      body: "Millifærsla, reiðufé, greiði sem þú skuldar frá síðasta fríi. Side Badger flytur ekki peningana. Þegar þeir hafa skipt um hendur skaltu skrá greiðsluna og staðan uppfærist hjá öllum."
+      shot: S11
+      shotAlt: "Greiðslueyðublað með hnöppum fyrir fljótlegt uppgjör og tilkynningunni sem birtist við hlutagreiðslu"
+    - title: "Athugaðu að hún hafi skilað sér"
+      body: "Greiðslan fer í sögu hópsins þar sem allir í hópnum geta séð hana og brugðist við með emoji. Fagnaðu greiðslu þegar hún skilar sér."
+      shot: S12
+      shotAlt: "Greiðslusagan með emoji-viðbrögðum við greiðslu"
+options:
+  heading: "Valkostir"
+  items: []
+example:
+  heading: "Úr flækju í stuttan lista"
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: "Rafmagn"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: "Internet"
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "Matvörur"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "Skráðu greiðslu"
+    body: "Þegar einhver borgar skaltu skrá það á réttan aðila. Hnapparnir fyrir fljótlegt uppgjör fylla út upphæðina úr greiðslunum sem lagt er til og þú getur bætt við athugasemd eins og „millifærsla“ (allt að 500 stafir). Borgaðu aðeins hluta þess sem þú skuldar og afgangurinn helst á stöðunni. Ef þú slærð inn of lítið eða of mikið varar Side Badger þig við áður en þú vistar. Til að skrá greiðslu þarf heimild til að breyta útgjöldum og dagsetningin má ekki vera í framtíðinni."
+  - heading: "Greitt í öðrum gjaldmiðli?"
+    body: "Staðan helst í gjaldmiðlinum sem var greitt í, svo evruskuld helst evruskuld. Skuldar þú evrur en borgar í pundum? Umreiknaðu greiðsluna um leið og þú skráir hana, á núverandi gengi eða á genginu sem þú fékkst í raun. Gengið festist þegar greiðslan er vistuð. [Margir gjaldmiðlar](page:feature/multiple-currencies) útskýrir hvernig umreikningur virkar og [hópferðir](page:use-case/group-trips) sýna hann í notkun."
+  - heading: "Saga sem þú getur skoðað"
+    body: "Hver skráð greiðsla helst í sögu hópsins með dagsetningu, upphæð og athugasemd. Aðeins sá sem skráði greiðslu getur breytt henni, og hann eða stjórnandi hópsins getur eytt henni. Greiðsla sem tengist einhverjum sem hefur yfirgefið hópinn er læst. Sjá [meðleigjendur](page:use-case/housemates) fyrir útreiknað dæmi um meðleigjendur."
+limits:
+  heading: "Það sem Side Badger gerir ekki"
+  items:
+    - "Side Badger flytur ekki peninga, sendir ekki greiðslutengla og sendir ekki greiðslubeiðnir. Greiðsla í appinu er skráning á greiðslu sem var gerð annars staðar."
+    - "Greiðslurnar sem lagðar eru til koma úr einfaldri pörunaraðferð sem er beitt fyrir hvern gjaldmiðil. Hún leggur alltaf til færri greiðslur en fjöldi þeirra sem eru með stöðu í þeim gjaldmiðli (fjórir menn, mest þrjár greiðslur), en hún finnur ekki alltaf minnsta mögulega fjölda."
+    - "Þú getur ekki slökkt á tillögunum. **Sýna allt** birtir allar greiðslurnar sem lagðar eru til í hópnum, ekki aðeins þínar."
+    - "Gjaldmiðlar eru aldrei jafnaðir hver á móti öðrum nema útgjöldin hafi verið umreiknuð þegar þau voru skráð."
+    - "Það eru engar áminningar, svo að elta greiðslu er enn á þinni könnu."
+useCasesHeading: "Hvar uppgjör skiptir máli"
+faq:
+  heading: "Spurningar"
+  items:
+    - q: "Sendir Side Badger peningana?"
+      a: "Nei. Borgið hvert öðru eins og ykkur hentar og skráið svo greiðsluna í Side Badger svo staðan uppfærist."
+    - q: "Get ég slökkt á greiðslunum sem lagðar eru til?"
+      a: "Nei. Einföldunin helst kveikt og **Sýna allt** birtir allar greiðslurnar sem lagðar eru til í hópnum, ekki aðeins þær sem tengjast þér."
+    - q: "Af hverju eru evrur og pund höfð í sundur?"
+      a: "Staðan helst í gjaldmiðlinum sem þú greiddir í nema þú umreiknir þegar þú skráir útgjald eða greiðslu. Skuldir í mismunandi gjaldmiðlum eru aldrei jafnaðar hver á móti annarri."
+    - q: "Hvað ef einhver borgar aðeins hluta þess sem hann skuldar?"
+      a: "Skráðu þann hluta sem hann greiddi. Afgangurinn helst á stöðunni þar til hann er greiddur."
+    - q: "Er þetta alltaf minnsti mögulegi fjöldi greiðslna?"
+      a: "Ekki tryggt. Það leggur alltaf til færri greiðslur en fjöldi þeirra sem eru með stöðu í þeim gjaldmiðli, svo fyrir fjóra leggur það aldrei til fleiri en þrjár. Í dæminu um meðleigjendur eru það tvær greiðslur, þar sem að borga hverjum og einum beint til baka tók sex."

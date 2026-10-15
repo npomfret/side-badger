@@ -1,0 +1,109 @@
+translatedFrom: "e6b829e6"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.2.label
+meta:
+  title: "Verdeel huishoudelijke kosten met huisgenoten"
+  description: "Verdeel de huur naar kamergrootte, deel energie en boodschappen gelijk en zie elke maand wie wie iets schuldig is. Een gratis manier voor huisgenoten om de rekening bij te houden."
+h1: "Verdeel huishoudelijke kosten met huisgenoten"
+navLabel: "Huisgenoten"
+lead: "Voor de huisgenoot die het toiletpapier koopt, en de huisgenoten die dat nooit zien gebeuren. Side Badger houdt één lopende rekening bij van de huur, de rekeningen en de boodschappen voor **huisgenoten en kamergenoten**, zodat niemand iemand hoeft achterna te zitten en de koelkast weer gewoon een koelkast kan zijn."
+cta:
+  heading: "Begin met je eigen huis"
+  body: "Maak een account aan, maak een groep voor het huis en stuur iedereen de uitnodigingslink. De rekeningen van deze maand kunnen vanavond al erin."
+  button: "Maak een gratis account"
+scenario:
+  heading: "Zet het huis op"
+  body: "Maak een groep voor het huis, kies de naam waaronder mensen jou erin zien en nodig iedereen uit met een link of QR-code. De groep kan open zijn, waar iedereen uitgaven toevoegt en bewerkt, of beheerd, waar nieuwe leden de goedkeuring van een beheerder nodig hebben en enkel makers en beheerders uitgaven kunnen wijzigen, wat past bij de huisgenoot die de boekhouding bijhoudt. Wie gewoon de cijfers wil volgen, kan kijker zijn en ziet alles maar verandert niets. Iedereen ziet een nieuwe uitgave meteen, dus “ik voeg ze straks toe” heeft minder plekken om zich te verstoppen."
+sections:
+  - heading: "Huur en rekeningen"
+    body: "De huur is zelden deelbaar door vier, want slaapkamers zijn dat ook niet. Verdeel ze op percentage, zodat de grote kamer meer betaalt en het kamertje met een raam minder. Percentages moeten samen 100 zijn. Rekeningen die iedereen gebruikt krijgen een gelijke verdeling, en een huisgenoot die geen deel had aan een uitgave kan eruit gelaten worden. Als een gelijke verdeling een overschietende cent overlaat, gaat die willekeurig naar één persoon. Er zijn geen terugkerende rekeningen, dus kopieer je elke maand de huur van vorige maand, wijzig je de datum en ga je verder."
+  - heading: "De gedeelde boodschappen"
+    body: "Hou de gedeelde boodschappenlijst in dezelfde groep als de boodschappenrekeningen en vink items af zodra ze in het karretje belanden. Wie de boodschappen doet, voegt het totaal van het bonnetje toe als uitgave en verdeelt het gelijk, of enkel tussen de mensen die het zullen eten. Wie blijft haverdrank kopen die niemand anders drinkt, blijft een zaak van het huis, maar de uitgavenlijst klopt tenminste. Zet de huur, de rekeningen en de boodschappen samen en je krijgt een maand als die hieronder, in een huis van vier: Jo betaalt £2,000 huur, verdeeld 30%, 25%, 25% en 20% naar kamergrootte, daarna betaalt Kwame £120 voor energie, Lena £40 voor internet en Matt £80 voor boodschappen, elk gelijk verdeeld. Jo heeft uiteindelijk £1,340 tegoed, en Side Badger stelt drie betalingen voor, allemaal aan Jo."
+  - heading: "Eerlijke manieren om huishoudelijke kosten te verdelen"
+    items:
+      - "**Gelijk** past bij wat iedereen ongeveer evenveel gebruikt, zoals internet, schoonmaakproducten en de gemeenschappelijke boodschappen. Het is snel en niemand hoeft over de rekensom te discussiëren."
+      - "**Naar kamergrootte** past bij de huur, want kamers verschillen en wat mensen ervoor willen betalen ook. Spreek de percentages één keer af, wanneer iemand intrekt, en gebruik ze elke maand opnieuw."
+      - "**Naar gebruik** past bij rekeningen waarbij één persoon duidelijk meer gebruikt, zoals de verwarming van een thuiskantoor of een streamingaccount waar maar twee mensen naar kijken. Laat de mensen weg die er geen deel aan hadden, of voer exacte bedragen in voor elke persoon."
+      - "Welke je ook kiest, spreek het af voor de eerste rekening in plaats van na de eerste ruzie, en schrijf de regel ergens op waar het hele huis hem kan zien."
+  - heading: "Wanneer iemand uitverhuist"
+    body: "Eerst afrekenen. Niemand kan een groep verlaten zolang die geld schuldig is of tegoed heeft, dus de vertrekker betaalt of wordt betaald, jij registreert het en dan gaat die persoon weg. Hou de groep draaiende voor de huisgenoten die blijven en nodig de nieuwe met een link uit. Als het huis zelf afgelopen is, kan een beheerder de groep vergrendelen zodat de cijfers blijven staan, of ze definitief sluiten, waardoor ze voor iedereen ontoegankelijk wordt, dus doe dat pas als niemand de geschiedenis nog nodig heeft."
+exampleAfter: 2
+example:
+  heading: "Wie wie deze maand iets schuldig is"
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: "Huur"
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: "Energie"
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: Internet
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: "Boodschappen"
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: "De functies die een huis gebruikt"
+faq:
+  heading: "Vragen"
+  items:
+    - q: "Kan de huur zich automatisch herhalen?"
+      a: "Nee, er zijn geen terugkerende rekeningen. Kopieer de huur van vorige maand in een paar tikken, wijzig de datum en je bent klaar."
+    - q: "Kunnen we verdelen naar kamergrootte?"
+      a: "Ja, op percentage. Geef elke huisgenoot een aandeel dat bij zijn of haar kamer past, zolang de aandelen samen 100 zijn. [Uitgaven verdelen](page:feature/split-expenses) behandelt de andere manieren om te verdelen."
+    - q: "Wat als een huisgenoot uitverhuist met een openstaande schuld?"
+      a: "Die kan de groep niet verlaten voor er is afgerekend, want niemand kan vertrekken zolang die geld schuldig is of tegoed heeft. De cijfers blijven eerlijk tot iedereen quitte staat."
+    - q: "Betaalt Side Badger de rekeningen?"
+      a: "Nee. Het houdt de rekening bij en stelt een korte lijst betalingen voor. Jullie betalen elkaar zoals jullie willen en registreren het dan, zoals [afrekenen](page:feature/settle-up) uitlegt."
+    - q: "Kan één huisgenoot de boekhouding bijhouden?"
+      a: "Ja. Maak die persoon beheerder en gebruik een beheerde groep, waar nieuwe leden goedkeuring nodig hebben en enkel makers en beheerders uitgaven kunnen wijzigen."

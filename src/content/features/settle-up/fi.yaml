@@ -1,0 +1,111 @@
+translatedFrom: "1b51f540"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: Tasaa tilit vähemmillä maksuilla | Side Badger
+  description: Katso, kuka on velkaa kenelle ryhmässäsi, saat lyhyen maksulistan, joka tasaa kaikki, ja kirjaa jokainen maksu sitä mukaa kuin se tapahtuu. Ilmainen.
+h1: Tasaa tilit vähemmillä maksuilla
+navLabel: Tilien tasaus
+lead: Side Badger pitää kaikille ryhmässä juoksevaa saldoa ja ehdottaa lyhyttä maksulistaa, joka tasaa tilit. Maksatte toisillenne miten haluatte ja kirjaatte sen sitten. Jos haluat ensin nähdä, miten luvut jaetaan, aloita sivulta [kulujen jako](page:feature/split-expenses).
+cta:
+  heading: Valmiina selvittämään, kuka on velkaa kenelle?
+  body: Luo tili, perusta ryhmä ja lisää ensimmäinen kulu. Saldot hoitavat lopun.
+  button: Luo ilmainen tili
+problem:
+  heading: Saldot, jotka päivittyvät matkan varrella
+  body: Jokainen kulu muuttaa sitä, kuka on velkaa kenelle, joten Side Badger pitää saldot ajan tasalla kulujen ja maksujen tullessa. Kaikki ryhmässä näkevät muutoksen heti sekä sen, mikä muuttui ja kuka muutti. Saldot pidetään valuuttakohtaisesti, joten eurot ja punnat pysyvät omissa sarakkeissaan, ellei kulua muunnettu sitä syötettäessä. Oletuksena näet sinua koskevat velat; **Näytä kaikki** listaa koko ryhmän.
+workflow:
+  heading: Kolme askelta tasoihin
+  steps:
+    - title: Katso, kuka on velkaa kenelle
+      body: Avaa ryhmän saldot nähdäksesi, mitä olet velkaa, mitä sinulle ollaan velkaa ja lyhyen maksulistan, joka tasaa kaikki, laskettuna valuutoittain. Kyseenalaistetut kulut pysyvät pois summista, kunnes ne on selvitetty. Alla olevassa kämppisesimerkissä kuusi maksua muuttuu kahdeksi.
+      shot: S10
+      shotAlt: Saldonäkymä, jossa yksinkertaistetut velat kahdessa valuutassa ja Näytä kaikki -valinta päällä
+    - title: Maksa miten haluat, kirjaa sitten
+      body: Pankkisiirto, käteinen, edellisen loman palvelus. Side Badger ei siirrä rahaa. Kun raha on vaihtanut omistajaa, kirjaa maksu, niin saldo päivittyy kaikille.
+      shot: S11
+      shotAlt: Maksulomake pikaselvityspainikkeineen ja osamaksusta näytettävine ilmoituksineen
+    - title: Tarkista, että se meni perille
+      body: Maksu tallentuu ryhmän historiaan, jossa kaikki ryhmässä näkevät sen ja voivat reagoida emojilla. Juhli maksua, kun se on perillä.
+      shot: S12
+      shotAlt: Maksuhistoria, jossa maksulla on emoji-reaktioita
+options:
+  heading: Vaihtoehdot
+  items: []
+example:
+  heading: Vyyhdistä lyhyeksi listaksi
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: Sähkö
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: Internet-yhteys
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: Ruokaostokset
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: Kirjaa maksu
+    body: Kun joku maksaa, kirjaa se oikean ihmisen kohdalle. Pikaselvityspainikkeet täyttävät summan ehdotetuista maksuistasi, ja voit lisätä muistiinpanon, kuten ”pankkisiirto” (enintään 500 merkkiä). Jos maksat vain osan velastasi, loput jää saldolle. Jos syötät liian vähän tai liikaa, Side Badger varoittaa ennen tallennusta. Maksun kirjaaminen vaatii oikeuden muokata kuluja, eikä päivämäärä voi olla tulevaisuudessa.
+  - heading: Maksettu toisessa valuutassa?
+    body: Saldot pysyvät siinä valuutassa, jolla maksettiin, joten euroina oleva velka pysyy euroina. Oletko velkaa euroja mutta maksat puntina? Muunna maksu syöttäessäsi nykyisellä valuuttakurssilla tai kurssilla, jonka todella sait. Kurssi lukitaan, kun maksu tallennetaan. [Useita valuuttoja](page:feature/multiple-currencies) kertoo, miten muunnos toimii, ja [ryhmämatkat](page:use-case/group-trips) näyttää sen käytössä.
+  - heading: Historia, jonka voit tarkistaa
+    body: Jokainen kirjattu maksu säilyy ryhmän historiassa päivämäärineen, summineen ja muistiinpanoineen. Vain maksun kirjannut voi muokata sitä, ja hän tai ryhmän ylläpitäjä voi poistaa sen. Maksu, jossa on mukana ryhmästä lähtenyt, on lukittu. Kämppisesimerkki löytyy sivulta [kämppikset](page:use-case/housemates).
+limits:
+  heading: Mitä Side Badger ei tee
+  items:
+    - Side Badger ei siirrä rahaa, lähetä maksulinkkejä eikä maksupyyntöjä. Maksu sovelluksessa on kirjaus muualla tehdystä maksusta.
+    - Ehdotetut maksut tulevat yksinkertaisesta täsmäytystavasta, jota sovelletaan valuutoittain. Se ehdottaa aina vähemmän maksuja kuin on ihmisiä, joilla on saldo kyseisessä valuutassa (neljä ihmistä, enintään kolme maksua), mutta se ei aina löydä pienintä mahdollista määrää.
+    - Ehdotuksia ei voi poistaa käytöstä. **Näytä kaikki** listaa kaikki ryhmän ehdotetut maksut, ei vain omiasi.
+    - Valuuttoja ei koskaan kuitata toisiaan vastaan, ellei kuluja muunnettu niitä syötettäessä.
+    - Muistutuksia ei ole, joten maksun perään kyseleminen on edelleen sinun vastuullasi.
+useCasesHeading: Missä tilien tasaus on tärkeää
+faq:
+  heading: Kysymyksiä
+  items:
+    - q: Lähettääkö Side Badger rahat?
+      a: Ei. Maksakaa toisillenne miten haluatte ja kirjaa sitten maksu Side Badgerissa, jotta saldo päivittyy.
+    - q: Voinko poistaa ehdotetut maksut käytöstä?
+      a: Ei. Yksinkertaistus pysyy päällä, ja **Näytä kaikki** listaa kaikki ryhmän ehdotetut maksut, ei vain sinua koskevia.
+    - q: Miksi eurot ja punnat pidetään erillään?
+      a: Saldot pysyvät siinä valuutassa, jolla maksoit, ellet muunna kulua tai maksua sitä syöttäessäsi. Eri valuuttojen velkoja ei koskaan kuitata toisiaan vastaan.
+    - q: Entä jos joku maksaa vain osan velastaan?
+      a: Kirjaa maksettu osa. Loput jää saldolle, kunnes se maksetaan.
+    - q: Onko tämä aina pienin mahdollinen määrä maksuja?
+      a: Ei taattu. Se ehdottaa aina vähemmän maksuja kuin on ihmisiä, joilla on saldo kyseisessä valuutassa, joten neljälle ihmiselle se ei koskaan ehdota yli kolmea. Kämppisesimerkissä se on kaksi maksua, kun jokaiselle takaisin maksaminen suoraan vaati kuusi.

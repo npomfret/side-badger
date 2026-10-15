@@ -1,0 +1,92 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+meta:
+  title: "Skiptu kostnaði við veislur, brúðkaup og hópgjafir"
+  description: "Deildu kostnaði við veislu, brúðkaup eða hópgjöf þegar fólk leggur til mismunandi upphæðir. Kjóstu um áætlunina, skiptu eftir nákvæmum upphæðum og sjáðu hver skuldar hverjum."
+h1: "Skiptu kostnaði við veislur, brúðkaup og hópgjafir"
+navLabel: "Viðburðir og veislur"
+lead: "Skiptu tryggingum, skreytingum og neyðarregnhlífum. Láttu sætaskipanina eftir einhverjum hugrakkari. Side Badger heldur utan um **hver lagði hvað til** á einum stað, svo skipuleggjandinn geti notið veislunnar líka."
+cta:
+  heading: "Byrjaðu á næsta fagnaði"
+  body: "Stofnaðu aðgang, búðu til hóp fyrir viðburðinn og sendu boðstengilinn. Side Badger er ókeypis, án auglýsinga og án daglegra takmarka."
+  button: "Stofna ókeypis aðgang"
+scenario:
+  heading: "Allir leggja til, ekki alltaf jafnmikið"
+  body: "Einhver borgar tryggingu fyrir salinn, annar kaupir kökuna og sá þriðji setur hópgjöfina á sitt eigið kort. Sumir gestir koma á allt en aðrir aðeins í kvöldverðinn. Að halda sanngjarnt utan um þetta í spjallþræði er verk sem enginn sótti um. Side Badger hópur heldur utan um allt saman, hvernig sem upphæðirnar blandast, og sýnir hverjum og einum hvað hann skuldar eða á inni. Sjá [hvernig þetta virkar](page:how-it-works) fyrir grunnatriðin, eða lestu áfram um viðburð."
+sections:
+  - heading: "Ákveðið saman"
+    body: "Áður en nokkur peningur hreyfist skaltu bera valið undir **könnun**. Bættu við allt að 10 valkostum, eins og tveimur sölum eða þremur gjafahugmyndum, og láttu alla kjósa. Þú getur falið hver kaus hvað, svo hver valkostur fái sanngjarna umfjöllun, og sigurvegarinn birtist þegar könnuninni er lokað. Enginn þarf að fletta aftur í gegnum fjörutíu skilaboð til að komast að því hvað var ákveðið."
+  - heading: "Hver er með í hverju"
+    body: "Ekki borga allir jafnt og ekki eru allir með í öllum kostnaði. Skiptu útgjaldi jafnt, í prósentum eða eftir **nákvæmum upphæðum**, svo hlutur hvers og eins sé talan sem þið sömduð um. Slepptu þeim sem komu ekki við sögu, eins og gestunum sem slepptu kvöldverðinum eða vinunum sem tóku ekki þátt í gjöfinni. Hvert útgjald hefur einn greiðanda og allir aðrir í skiptingunni skulda honum sinn hlut. Nánari upplýsingar eru á síðunni [skipting útgjalda](page:feature/split-expenses)."
+  - heading: "Geymdu pappírana"
+    body: "Bættu athugasemdum við útgjald, eins og hvað kostnaðurinn náði yfir. Athugasemdir haldast **við hlið útgjaldsins** sem þær snúast um, svo spurningin „var kakan £45 eða £54?“ og svarið við henni lifa á sama stað. Athugasemdir mega vera 500 stafir, sem er nóg fyrir spurningu um tryggingu."
+  - heading: "Stjórntæki skipuleggjandans"
+    body: "Opið samstarf leyfir hverjum meðlim að bæta við og breyta útgjöldum, sem er í lagi fyrir litla gjöf. Fyrir brúðkaup eða stærri veislu skaltu velja forstillinguna **Stýrður hópur**. Stjórnendur samþykkja hvern nýjan meðlim og aðeins höfundar og stjórnendur geta breytt útgjöldum. Bjóddu fólki með tengli eða QR-kóða; með samþykki á hleypir stjórnandi hverjum og einum inn, svo gestalistinn haldist gestalisti. Þegar viðburðinum er lokið skaltu læsa hópnum svo tölurnar haldist á sínum stað."
+  - heading: "Gerið upp eftir veisluna"
+    body: "Þegar síðasti reikningurinn er kominn inn sýnir staðan **hver skuldar hverjum**, og Side Badger leggur til stuttan lista yfir greiðslur sem gerir upp við alla. Borgið hvert öðru eins og ykkur hentar og skráið svo greiðsluna í hópnum. Side Badger flytur aldrei peninga, svo hópurinn heldur utan um stöðuna á meðan millifærslurnar fara fram í ykkar eigin bankaöppum. Síðan [uppgjör](page:feature/settle-up) sýnir hvernig flækja verður að stuttum lista."
+exampleAfter: 5
+example:
+  heading: "Hópgjöf: sex atkvæði með henni, £150 til að skipta"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Hópgjöf"
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: "Eiginleikarnir sem þetta notar"
+faq:
+  heading: "Spurningar"
+  items:
+    - q: "Geta gestir séð hópinn án þess að ganga í hann?"
+      a: "Nei. Fólk gengur í hópinn með tengli eða QR-kóða og ókeypis aðgangi, svo það sér hópinn þegar það er komið inn."
+    - q: "Getur Side Badger innheimt peningana?"
+      a: "Nei. Side Badger heldur utan um stöðuna og flytur aldrei peninga. Borgið hvert öðru eins og ykkur hentar og skráið svo greiðsluna. Það er ókeypis, án auglýsinga og án daglegra takmarka; sjá [verðskrá](page:pricing)."
+    - q: "Geta atkvæði verið nafnlaus?"
+      a: "Já. Þegar þú býrð til könnun geturðu falið hver kaus hvað. Stillingunum er aðeins hægt að breyta fyrir fyrsta atkvæðið."
+    - q: "Geta allir lagt til mismunandi upphæðir?"
+      a: "Já. Skiptu útgjaldi eftir nákvæmum upphæðum, svo hlutur hvers og eins sé talan sem þið sömduð um, eða slepptu þeim sem komu ekki við sögu."
+    - q: "Getur skipuleggjandi haldið bókhaldið?"
+      a: "Já. Notaðu forstillinguna fyrir stýrðan hóp, svo aðeins höfundar og stjórnendur breyti útgjöldum og stjórnendur samþykki nýja meðlimi."

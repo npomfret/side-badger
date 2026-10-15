@@ -1,0 +1,127 @@
+translatedFrom: "923c938f"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: Dela kostnader i 140 valutor, omräknade eller separata
+  description: Lägg in varje utgift i den valuta du betalade i, håll saldona separata eller räkna om med en kurs som du kan se och ändra, och gör sedan upp med en kort lista med betalningar.
+h1: Dela kostnader i 140 valutor
+navLabel: Flera valutor
+lead: Euro, yen och den där taxin i baht. Side Badger tar varje utgift i den valuta du betalade i, håller ordning på saldona och kan räkna om när gruppen hellre gör upp en gång. Det fungerar i 140 valutor och passar naturligt för [gruppresor](page:use-case/group-trips).
+cta:
+  heading: Ta med dina euro, ta med dina yen
+  body: Skapa ett konto, starta en grupp och lägg till den första utgiften i vilken valuta du än råkade ha i handen.
+  button: Skapa ett gratiskonto
+problem:
+  heading: Lägg in den som du betalade den
+  body: En resa betalas sällan i en enda valuta. Hotellet bokades hemma i pund, middagen betalades i yen och flygplatskaffet i vad mellanlandningen nu använde. Att räkna om allt för hand innan man ens kan skriva in det är hur kalkylblad överges. I Side Badger lägger du in varje utgift i valutan på kvittot, och varje belopp följer sin valutas regler, så yen har inga decimaler och dinarer har tre. Dina senast använda valutor kommer först i listan.
+workflow:
+  heading: Håll valutorna separata, eller räkna om allt eftersom
+  steps:
+    - title: Lägg till utgiften i dess egen valuta
+      body: Välj valuta, skriv beloppet, ange vem som betalade och vem som delade på den. Mer behövs inte. Det här är standardläget, och det behåller det ursprungliga beloppet precis som du skrev in det.
+      shot: S07
+      shotAlt: Utgiftsformuläret med ett belopp i yen ifyllt
+    - title: Följ ett saldo för varje valuta
+      body: Saldona hålls separata per valuta, och var och en får sin egen korta lista med föreslagna betalningar. Pund görs upp i pund och yen i yen.
+      shot: S10
+      shotAlt: Saldoskärmen med förenklade skulder i två valutor
+    - title: Eller räkna om, när gruppen hellre gör upp en gång
+      body: Välj en annan valuta när du lägger in utgiften så kan Side Badger räkna om den med en aktuell växelkurs, som du kan ändra till den kurs du faktiskt fick. Det omräknade beloppet läggs till saldot i den valutan. Omräkning är ett val som gruppen gör, aldrig något som sker bakom ryggen på dig.
+options:
+  heading: En kurs du kan se och ändra
+  items:
+    - title: Kursen visas
+      body: När du räknar om visas kursen och det omräknade beloppet i formuläret, så ingen behöver lita blint på en siffra.
+    - title: Skriv din egen
+      body: Fick du en bättre kurs på en växlingskiosk, eller en sämre på en flygplats? Ändra kursen till den du faktiskt fick så uppdateras det omräknade beloppet.
+    - title: Originalet finns kvar
+      body: Det ursprungliga beloppet finns kvar på utgiften, bredvid det omräknade, för den som undrar vad det var i yen.
+    - title: Gratis att räkna om
+      body: Omräkning kostar ingenting. Det finns ingen avgift för att lägga in en utgift i en annan valuta.
+example:
+  heading: Fyra vänner i Japan, uppgjort på två sätt
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: hotellet, bokat hemma
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: middag i Japan
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: tågbiljetter
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: inträde till templet
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: En valuta för hela gruppen
+    body: Om gruppen hellre slipper tänka på det väljer du en gruppvaluta, så räknar formuläret om varje ny utgift till den, med en kurs som du fortfarande kan se och ändra. Det gäller bara nya och kopierade utgifter. Redigeringar och befintliga utgifter lämnas som de är, så inget som redan är registrerat ändras under fötterna på dig.
+  - heading: Skyldig euro, betala i pund
+    body: Betalat i yen, men gör upp i pund? Inga problem. När du registrerar en betalning kan du räkna om även den, så att den som är skyldig euro kan betala i pund och eurosaldot ändå blir rätt. Betala varandra hur ni vill och registrera det sedan.
+  - heading: Regler för gruppen
+    body: Begränsa en grupp till de valutor ni faktiskt använder och ställ in en standard så att formuläret öppnas på rätt valuta. En semester i Portugal behöver inte 139 andra alternativ bredvid middagsnotan, och ett [bröllop utomlands](page:use-case/events-and-celebrations) behöver förmodligen två.
+limits:
+  heading: Gränser
+  items:
+    - Kursen fastställs när utgiften sparas. Gamla utgifter omvärderas aldrig.
+    - Side Badger hämtar en aktuell kurs där det går. Alla valutapar är inte garanterade en, och du kan alltid skriva in kursen själv.
+    - Gruppens automatiska omräkning gäller bara nya och kopierade utgifter, inte redigeringar eller befintliga utgifter.
+    - Varje utgift är begränsad till 999 999,99 i sin egen valuta.
+    - Det finns 140 valutor. Kryptovalutor och metaller ingår inte.
+    - Side Badger registrerar betalningar. Det flyttar eller växlar aldrig pengar.
+useCasesHeading: Där det här hjälper
+faq:
+  heading: Frågor
+  items:
+    - q: Vilken växelkurs använder ni?
+      a: En aktuell växelkurs, hämtad när du lägger in utgiften där en finns tillgänglig. Du kan ändra den till den kurs du faktiskt fick, så uppdateras det omräknade beloppet.
+    - q: Omvärderas gamla utgifter?
+      a: Nej. Kursen fastställs när utgiften sparas, så ett saldo driver inte iväg för att marknaden gjorde det.
+    - q: Stöder ni krypto?
+      a: Nej. Det finns 140 valutor, och kryptovalutor ingår inte.
+    - q: Varför kan jag inte skriva in 2 000 000 rupiah?
+      a: Varje utgift är begränsad till 999 999,99 i sin egen valuta. Lägg in den i en annan valuta och räkna om, eller dela upp den i två utgifter.
+    - q: Kostar omräkning något?
+      a: Nej. Omräkning är gratis, precis som resten av Side Badger. Se [prissättning](page:pricing).
+    - q: Måste jag räkna om?
+      a: Nej. Valutorna förblir separata om inte du eller din grupp väljer att räkna om, och varje valuta får sin egen korta lista med betalningar.

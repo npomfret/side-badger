@@ -1,0 +1,110 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+meta:
+  title: Kosten für Gruppenreisen teilen, in 140 Währungen
+  description: Halte fest, wer auf einer Gruppenreise was bezahlt hat, gib Kosten in der Landeswährung ein, rechne sie um oder nicht und rechne am Ende einmal ab. Kostenlos, im Browser.
+h1: Kosten für Gruppenreisen teilen, in 140 Währungen
+navLabel: Gruppenreisen
+lead: Erfasse die Villa, die Taxis und die eine Cocktailrunde, für die sich keiner erinnert, sich zum Bezahlen gemeldet zu haben. Side Badger führt die laufende Rechnung, solange ihr weg seid, [kommt mit Pfund, Euro und 138 weiteren Währungen klar](page:feature/multiple-currencies) und gibt dir daheim eine [kurze Liste von Zahlungen](page:feature/settle-up).
+cta:
+  heading: Urlaubsrechnerei, erledigt, bevor die Bräune verblasst
+  body: Erstelle eine Gruppe, schicke den Einladungslink an die Leute auf der Reise und füge Kosten hinzu, sobald sie anfallen.
+  button: Kostenloses Konto erstellen
+scenario:
+  heading: Alle haben für etwas bezahlt, in irgendeiner Währung
+  body: Jemand hat die Flüge gebucht, jemand anderes die Villa auf die Karte gesetzt, und eine dritte Person hat das Abendessen bar bezahlt. Am dritten Tag weiß keiner mehr, wer vorn liegt. Die Frage ist einfach, auch wenn die Antwort meist in einer Tabelle steckt, die keiner öffnen will. Wer hat was in welcher Währung bezahlt, und wie rechnen alle am Ende einmal ab?
+sections:
+  - heading: Vor der Abreise
+    body: Lass über die Villa-Auswahl abstimmen, auf Wunsch anonym, damit die Entscheidung der Gruppe gehört und nicht der Person, die am längsten schmollt. Führe dann die gemeinsame Einkaufsliste neben den Einkaufsrechnungen, damit niemand drei Tuben Sonnencreme kauft und keinen Reisestecker.
+  - heading: Unterwegs
+    body: Füge jede Ausgabe hinzu, sobald sie anfällt, in der Währung, in der du bezahlt hast. Fotografiere den Beleg, und Side Badger trägt Summe, Datum und Ort ein, damit du sie prüfen kannst; Belegbilder liest der KI-Dienst von Google. Rechne den Betrag zu einem aktuellen Wechselkurs um, den du auf den Kurs ändern kannst, den du tatsächlich bekommen hast, und der Originalbetrag bleibt an der Ausgabe. Oder lass die Euro Euro sein und entscheide später. Eine Gruppe kann auch eine Währung wählen, und neue Ausgaben werden automatisch in sie umgerechnet.
+  - heading: Nicht alle haben alles mitgemacht
+    body: Manche haben das Abendessen ausgelassen, manche die Bootsfahrt. Lass sie bei den Kosten weg, an denen sie nicht beteiligt waren, und teile den Rest [gleichmäßig, nach genauen Beträgen oder in Prozent](page:feature/split-expenses). Niemand zahlt für den Teil der Reise, den er verschlafen hat.
+  - heading: Rechnet ab, wenn ihr zu Hause seid
+    body: Side Badger schlägt eine kurze Liste von Zahlungen vor, die alle ausgleicht. Zahlt einander, wie ihr wollt, und erfasst es dann. Bei gemischten Währungen haltet ihr jede getrennt oder rechnet unterwegs um; das Lissabon-Beispiel unten zeigt beides.
+  - heading: Junggesellenabschiede
+    body: Ein Wochenende mit Ehrengast braucht etwas mehr Verwaltung. Mach daraus eine verwaltete Gruppe, in der Admins neue Mitglieder freigeben und nur Ersteller und Admins Ausgaben ändern dürfen. Nutze genaue Beträge für den Anteil des Ehrengasts, beschränke die Gruppe auf die Währungen, die ihr wirklich nutzt, und sperre die Gruppe, wenn alles vorbei ist, damit die Zahlen stehen bleiben.
+exampleAfter: 4
+example:
+  heading: Vier Freunde in Lissabon
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: Flüge
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: Ferienvilla
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: Abendessen
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: Bootsfahrt
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: Worauf sich eine Reise stützt
+faq:
+  heading: Fragen
+  items:
+    - q: Können Leute, die das Abendessen ausgelassen haben, weggelassen werden?
+      a: Ja. Wähle, wer an jeder Ausgabe beteiligt war, und nur sie werden dafür belastet.
+    - q: Funktioniert es ohne Empfang?
+      a: Nein. Side Badger braucht eine Verbindung, füge die Kosten also hinzu, sobald du wieder im WLAN bist.
+    - q: Muss jede Person etwas installieren?
+      a: Nein. Es läuft im Browser. Schick den Einladungslink, und die Leute treten vom Handy aus bei.
+    - q: Welchen Wechselkurs verwendet es?
+      a: Einen aktuellen Wechselkurs beim Erfassen der Ausgabe, oder deinen eigenen, wenn du einen anderen bekommen hast. Der Kurs wird beim Speichern der Ausgabe festgelegt, alte Ausgaben werden also nie neu bewertet.
+    - q: Können wir die Gruppe nach der Reise einfrieren?
+      a: Ja. Ein Admin kann die Gruppe sperren, damit die Zahlen stehen bleiben.
+    - q: Gibt es ein Limit für Beträge?
+      a: Ja. 999.999,99 pro Ausgabe, in der jeweiligen Währung.

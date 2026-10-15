@@ -1,0 +1,108 @@
+translatedFrom: "e6b829e6"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+meta:
+  title: Haushaltskosten mit Mitbewohnern teilen
+  description: Teile die Miete nach Zimmergröße, Energie und Lebensmittel zu gleichen Teilen und sieh jeden Monat, wer wem was schuldet. Ein kostenloser Weg für WGs, den Überblick zu behalten.
+h1: Haushaltskosten mit Mitbewohnern teilen
+navLabel: Mitbewohner
+lead: Für die Person, die das Klopapier kauft, und die, die nie mitbekommt, wie es ins Bad kommt. Side Badger führt eine laufende Rechnung für Miete, Rechnungen und Einkauf von **Mitbewohnern, WGs und Haushalten**, damit niemand jemandem hinterherrennen muss und der Kühlschrank wieder nur ein Kühlschrank sein darf.
+cta:
+  heading: Fang mit deinem eigenen Haus an
+  body: Erstelle ein Konto, mach eine Gruppe für das Haus und schick allen den Einladungslink. Die Rechnungen dieses Monats können heute Abend rein.
+  button: Kostenloses Konto erstellen
+scenario:
+  heading: Richte das Haus ein
+  body: Lege eine Gruppe für das Haus an, wähle den Namen, unter dem dich die anderen sehen, und lade alle per Link oder QR-Code ein. Die Gruppe kann offen sein, wo alle hinzufügen und bearbeiten, oder verwaltet, wo neue Mitglieder die Freigabe eines Admins brauchen und nur Ersteller und Admins Ausgaben ändern dürfen, was zur Person passt, die die Bücher führt. Wer nur die Zahlen beobachten will, kann Betrachter sein, sieht alles und ändert nichts. Alle sehen eine neue Ausgabe sofort, "Ich trag es später ein" hat also weniger Verstecke.
+sections:
+  - heading: Miete und Rechnungen
+    body: "Miete lässt sich selten durch vier teilen, weil Zimmer es nicht tun. Teile sie in Prozent, damit das große Zimmer mehr zahlt und die Kammer mit Fenster weniger. Die Prozentsätze müssen zusammen 100 ergeben. Rechnungen, die alle nutzen, bekommen eine gleichmäßige Aufteilung, und wer an einer Ausgabe keinen Anteil hatte, kann weggelassen werden. Wenn eine gleichmäßige Aufteilung einen übrigen Cent lässt, bekommt ihn eine Person zufällig. Es gibt keine wiederkehrenden Rechnungen, also kopierst du jeden Monat die Miete vom letzten, änderst das Datum und machst weiter."
+  - heading: Der gemeinsame Einkauf
+    body: "Führe die gemeinsame Einkaufsliste in derselben Gruppe wie die Einkaufsrechnungen und hake Dinge ab, wenn sie im Wagen landen. Wer den Einkauf macht, trägt die Belegsumme als Ausgabe ein und teilt sie gleichmäßig oder nur auf die, die das Zeug auch essen. Wer ständig die Hafermilch kauft, die sonst keiner trinkt, bleibt Sache des Hauses, aber wenigstens stimmt die Ausgabenliste. Setzt du Miete, Rechnungen und Einkauf zusammen, bekommst du einen Monat wie den unten, in einem Haus mit vier Personen: Jo zahlt £2,000 Miete, nach Zimmergröße geteilt in 30 %, 25 %, 25 % und 20 %, dann zahlt Kwame £120 für Energie, Lena £40 für Internet und Matt £80 für Lebensmittel, jeweils gleichmäßig geteilt. Jo bekommt am Ende £1,340, und Side Badger schlägt drei Zahlungen vor, alle an Jo."
+  - heading: Faire Arten, Haushaltskosten zu teilen
+    items:
+      - "**Gleichmäßig** passt zu dem, was alle ungefähr gleich nutzen, etwa Internet, Putzmittel und den gemeinsamen Einkauf. Es ist schnell, und niemand muss über die Rechnung streiten."
+      - "**Nach Zimmergröße** passt zur Miete, denn Zimmer sind verschieden, und das, was Leute dafür zu zahlen bereit sind, auch. Einigt euch einmal auf die Prozentsätze, wenn jemand einzieht, und nutzt sie jeden Monat wieder."
+      - "**Nach Nutzung** passt zu Rechnungen, bei denen eine Person deutlich mehr nutzt, etwa die Heizkosten fürs Homeoffice oder ein Streaming-Konto, das nur zwei schauen. Lass die weg, die keinen Anteil hatten, oder gib für jede Person genaue Beträge ein."
+      - "Wofür ihr euch auch entscheidet, einigt euch vor der ersten Rechnung statt nach dem ersten Streit und schreibt die Regel dorthin, wo das ganze Haus sie sieht."
+  - heading: Wenn jemand auszieht
+    body: Wer geht, rechnet zuerst ab. Niemand kann eine Gruppe verlassen, solange er Geld schuldet oder bekommt, also zahlt oder bekommt die gehende Person, du erfasst es, und dann geht sie. Führt die Gruppe für die Mitbewohner weiter, die bleiben, und lade die neue Person per Link ein. Ist das Haus selbst fertig, kann ein Admin die Gruppe sperren, damit die Zahlen stehen bleiben, oder endgültig schließen, was sie für alle unzugänglich macht, tu das also erst, wenn niemand den Verlauf mehr braucht.
+exampleAfter: 2
+example:
+  heading: Wer diesen Monat wem was schuldet
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: Miete
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: Energie
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: Internetanschluss
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: Lebensmittel
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: Die Funktionen, die ein Haus nutzt
+faq:
+  heading: Fragen
+  items:
+    - q: Kann sich die Miete automatisch wiederholen?
+      a: Nein, es gibt keine wiederkehrenden Rechnungen. Kopiere die Miete vom letzten Monat in ein paar Fingertipps, ändere das Datum, und du bist fertig.
+    - q: Können wir nach Zimmergröße teilen?
+      a: Ja, in Prozent. Gib jeder Person einen Anteil, der ihr Zimmer widerspiegelt, solange die Anteile zusammen 100 ergeben. [Ausgaben teilen](page:feature/split-expenses) behandelt die anderen Arten zu teilen.
+    - q: Was, wenn jemand auszieht und noch Schulden hat?
+      a: Er kann die Gruppe erst verlassen, wenn abgerechnet ist, denn niemand kann gehen, solange er Geld schuldet oder bekommt. Die Zahlen bleiben ehrlich, bis alle quitt sind.
+    - q: Bezahlt Side Badger die Rechnungen?
+      a: Nein. Es führt die Rechnung und schlägt eine kurze Liste von Zahlungen vor. Ihr zahlt einander, wie ihr wollt, und erfasst es dann, wie [Abrechnen](page:feature/settle-up) erklärt.
+    - q: Kann eine Person die Bücher führen?
+      a: Ja. Mach sie zum Admin und nutze eine verwaltete Gruppe, in der neue Mitglieder eine Freigabe brauchen und nur Ersteller und Admins Ausgaben ändern dürfen.

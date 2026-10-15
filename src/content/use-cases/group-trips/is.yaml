@@ -1,0 +1,110 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Skiptu kostnaði við hópferð, í 140 gjaldmiðlum"
+  description: "Haltu utan um hver greiddi hvað í hópferð, skráðu kostnað í gjaldmiðli staðarins, umreiknaðu hann eða ekki, og gerðu upp í einu lagi í lokin. Ókeypis, í vafranum þínum."
+h1: "Skiptu kostnaði við hópferð, í 140 gjaldmiðlum"
+navLabel: "Hópferðir"
+lead: "Haltu utan um orlofshúsið, leigubílinn og kokteilaumferðina sem enginn man eftir að hafa boðist til að kaupa. Side Badger heldur utan um stöðuna á meðan þú ert í burtu, [ræður við pund, evrur og 138 aðra gjaldmiðla](page:feature/multiple-currencies) og gefur þér [stuttan lista yfir greiðslur](page:feature/settle-up) þegar þú kemur heim."
+cta:
+  heading: "Fríreikningurinn gerður áður en sólbrúnkan dofnar"
+  body: "Stofnaðu hóp, sendu boðstengilinn til fólksins í ferðinni og bættu við kostnaði um leið og hann fellur til."
+  button: "Stofna ókeypis aðgang"
+scenario:
+  heading: "Allir greiddu eitthvað, í einhverjum gjaldmiðli"
+  body: "Einhver bókaði flugin, annar setti orlofshúsið á kort og sá þriðji borgaði kvöldverðinn með reiðufé. Á degi þrjú veit enginn hver er á undan. Spurningin er einföld, jafnvel þótt svarið búi venjulega í töflureikni sem enginn vill opna. Hver greiddi hvað, í hvaða gjaldmiðli, og hvernig gera allir upp í einu lagi í lokin?"
+sections:
+  - heading: "Áður en þið farið"
+    body: "Berðu orlofshúsaúrvalið undir atkvæði, nafnlaust ef þú vilt, svo ákvörðunin tilheyri hópnum en ekki þeim sem fýlir lengst. Hafðu svo sameiginlega innkaupalistann við hlið innkaupareikninganna, svo enginn kaupi þrjú sólarvarnarkrem og ekkert millistykki."
+  - heading: "Á meðan þið eruð í burtu"
+    body: "Bættu við hverjum kostnaði um leið og hann fellur til, í gjaldmiðlinum sem þú greiddir í. Taktu mynd af kvittuninni og Side Badger fyllir út heildarupphæð, dagsetningu og stað fyrir þig til að yfirfara; myndir af kvittunum eru lesnar af gervigreindarþjónustu Google. Umreiknaðu upphæðina á núverandi gengi, sem þú getur breytt í gengið sem þú fékkst í raun, og upphaflega upphæðin helst á útgjaldinu. Eða láttu evrurnar vera evrur og ákveddu síðar. Hópur getur líka valið einn gjaldmiðil og ný útgjöld umreiknast sjálfkrafa í hann."
+  - heading: "Ekki gerðu allir allt"
+    body: "Sumir slepptu kvöldverðinum, aðrir sátu hjá í bátsferðinni. Slepptu þeim úr kostnaðinum sem þeir tóku ekki þátt í og skiptu restinni [jafnt, eftir nákvæmum upphæðum eða í prósentum](page:feature/split-expenses). Enginn borgar fyrir þann hluta ferðarinnar sem hann svaf af sér."
+  - heading: "Gerið upp þegar þið komið heim"
+    body: "Side Badger leggur til stuttan lista yfir greiðslur sem gerir upp við alla. Borgið hvert öðru eins og ykkur hentar og skráið það svo. Með blönduðum gjaldmiðlum geturðu haft hvern aðskilinn eða umreiknað jafnóðum; Lissabon-dæmið hér að neðan sýnir bæði."
+  - heading: "Steggja- og gæsahelgar"
+    body: "Helgarferð með heiðursgesti krefst aðeins meiri umsýslu. Gerðu hana að stýrðum hópi, þar sem stjórnendur samþykkja nýja meðlimi og aðeins höfundar og stjórnendur geta breytt útgjöldum. Notaðu nákvæmar upphæðir fyrir hlut heiðursgestsins, takmarkaðu hópinn við gjaldmiðlana sem þú notar í raun og læstu hópnum þegar öllu er lokið svo tölurnar haldist á sínum stað."
+exampleAfter: 4
+example:
+  heading: "Fjórir vinir í Lissabon"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Flug"
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: "Orlofshús"
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: "Kvöldverður"
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Bátsferð"
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: "Það sem ferðalag reiðir sig á"
+faq:
+  heading: "Spurningar"
+  items:
+    - q: "Má sleppa þeim sem slepptu kvöldverðinum?"
+      a: "Já. Veldu hverjir voru með í hverju útgjaldi og aðeins þeir eru rukkaðir fyrir það."
+    - q: "Virkar þetta án netsambands?"
+      a: "Nei. Side Badger þarf nettengingu, svo bættu við kostnaðinum þegar þú ert aftur komin(n) á wifi."
+    - q: "Þurfa allir að setja upp eitthvað?"
+      a: "Nei. Það keyrir í vafranum. Sendu boðstengilinn og fólk kemur inn úr símanum sínum."
+    - q: "Hvaða gengi notar það?"
+      a: "Núverandi gengi þegar þú skráir útgjaldið, eða þitt eigið ef þú fékkst annað. Gengið festist þegar útgjaldið er vistað, svo gömul útgjöld eru aldrei endurmetin."
+    - q: "Getum við fryst hópinn eftir ferðina?"
+      a: "Já. Stjórnandi getur læst hópnum svo tölurnar haldist á sínum stað."
+    - q: "Eru takmörk á upphæðum?"
+      a: "Já. 999.999,99 á hvert útgjald, í eigin gjaldmiðli."

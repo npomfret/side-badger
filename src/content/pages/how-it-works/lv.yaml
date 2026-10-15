@@ -1,0 +1,107 @@
+translatedFrom: "fd23c99b"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Kā darbojas Side Badger | Grupas izdevumu sadale piecos soļos"
+  description: "Izveidojiet grupu, uzaiciniet cilvēkus, pievienojiet izdevumus un norēķinieties. Skatiet, kas notiek starp „kāds samaksāja” un „esam kvit”, ar izstrādātu piemēru."
+h1: "Kā darbojas Side Badger"
+navLabel: "Kā tas darbojas"
+lead: "Kas notiek starp „kāds samaksāja” un „esam kvit”? Pieci soļi, nekādu izklājlapu un viens āpsis, kas lielākoties ir dekoratīvs. Lūk, viss ceļš, no pirmās grupas līdz pēdējam reģistrētajam maksājumam. Detalizētāk par jebkuru soli lasiet sadaļās [izdevumu sadale](page:feature/split-expenses) un [norēķināšanās](page:feature/settle-up)."
+cta:
+  heading: "No „šoreiz es samaksāšu” līdz „esam kvit”"
+  body: "Izveidojiet bezmaksas kontu, sāciet grupu un pievienojiet pirmo izdevumu. Āpsis čeku nenosodīs."
+  button: "Izveidot bezmaksas kontu"
+steps:
+  - title: "Izveidojiet grupu"
+    body: "Veidojiet vienu grupu katrai mājai, ceļojumam vai pasākumam, lai īre nekad nenonāk tajā pašā sarakstā ar kāzu dāvanu. Nosauciet to, izvēlieties vārdu, ar kādu citi jūs redzēs, un, ja vēlaties, ierobežojiet, kādas valūtas tā pieņem. Jūsu panelī redzamas visas grupas un jūsu situācija katrā no tām, vienā ekrānā."
+    shot: S02
+    shotAlt: "Grupas izveides dialogs ar atvērtu valūtu ierobežojumu sadaļu"
+  - title: "Uzaiciniet savus cilvēkus"
+    body: "Kopīgojiet pievienošanās saiti vai parādiet QR kodu un iestatiet, cik ilgi tā derīga, no 15 minūtēm līdz 5 dienām. Ikvienam, kas pievienojas, vajadzīgs bezmaksas konts un apstiprināts e-pasts, un grupā var būt līdz 50 cilvēkiem. Ja vēlaties pārbaudīt, kas tiek iekšā, ieslēdziet apstiprināšanu, un administrators katru cilvēku ielaiž."
+    shot: S03
+    shotAlt: "Uzaicinājuma dialogs saites cilnē, kurā redzams QR kods un derīguma termiņa izvēles"
+  - title: "Pievienojiet izdevumus, kad tie rodas"
+    body: "Norādiet, kas maksāja, cik un par ko tas bija. Sadaliet vienādi, pēc precīzām summām vai procentuāli, un izlaidiet ikvienu, kas tajā nepiedalījās. Pievienojiet izdevumu, un visi to uzreiz redz, kopā ar to, kas mainīts un kurš to mainīja."
+    shot: S05
+    shotAlt: "Izdevuma veidlapa ar procentuālu sadali, kas sadala īri pēc istabas lieluma"
+  - title: "Sekojiet atlikumiem"
+    body: "Side Badger uztur kārtējo atlikumu katrā valūtā, tāpēc varat vienā skatienā redzēt, kurš kam ir parādā. Tā vietā, lai liktu visiem mezglot mazu parādu tīklu, tas iesaka īsu maksājumu sarakstu, kas nokārto grupu."
+    shot: S10
+    shotAlt: "Atlikumu ekrāns ar vienkāršotiem parādiem divās valūtās, kad ieslēgts „Rādīt visu”"
+  - title: "Norēķinieties ārpus lietotnes, reģistrējiet tajā"
+    body: "Side Badger nekad nepārvieto naudu. Samaksājiet viens otram, kā vēlaties, tad reģistrējiet maksājumu, lai atlikumi to atspoguļotu, un visu ekrāni atjaunojas bez pārlādēšanas. „Norēķināties” vienkārši nozīmē, ka atlikumi ir nulle. Neviens nevar pamest grupu, kamēr viņam kāds ir parādā vai viņš ir parādā, tāpēc ikviens, kas dodas prom, vispirms norēķinās."
+    shot: S11
+    shotAlt: "Maksājuma veidlapa ar ātrā norēķina pogām un paziņojumu par daļēju maksājumu"
+requirements:
+  heading: "Ko jums vajag"
+  items:
+    - "Bezmaksas konts. Pietiek ar e-pasta adresi un paroli, un e-pasts jāapstiprina, pirms varat kaut ko pievienot."
+    - "Vecums 18 gadi vai vairāk."
+    - "Mūsdienīga pārlūkprogramma tālrunī vai datorā un savienojums. Side Badger nav lietotņu veikala lietotne, un tas nedarbojas bezsaistē."
+    - "Pēc izvēles vieta jūsu sākuma ekrānā. Lietotņu veikals nav vajadzīgs, jo Side Badger var pievienot sākuma ekrānam vai dokam, un tas atveras kā lietotne."
+example:
+  heading: "Trīs draugi pēc vakara pilsētā"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: "Vakariņas"
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: "Taksi"
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: "39 valodas, un veidots vairāk cilvēkiem"
+    body: "Izmantojiet Side Badger 39 valodās, tostarp arābu, persiešu un urdu valodā ar rakstību no labās uz kreiso. Katrs grupas dalībnieks var izvēlēties savu valodu, tāpēc grupas lapa vienam cilvēkam var būt arābu, nākamajam angļu valodā. Tas veidots arī, domājot par tastatūras un ekrāna lasītāja lietotājiem, un dalībnieku krāsām ir raksti, lai nebūtu jāšķir zaļš no sarkana."
+faq:
+  heading: "Jautājumi"
+  items:
+    - q: "Vai ikvienam vajadzīgs konts?"
+      a: "Jā, bezmaksas konts. Katrs cilvēks apstiprina savu e-pastu, pirms ko pievieno."
+    - q: "Vai ir lietotne?"
+      a: "Tā darbojas pārlūkprogrammā, un varat to pievienot sākuma ekrānam vai dokam, lai tā atvērtos kā lietotne. Lietotņu veikala versijas un bezsaistes režīma nav."
+    - q: "Vai Side Badger pārvieto naudu?"
+      a: "Nē. Tas uztur uzskaiti un iesaka maksājumus, bet jūs samaksājat viens otram, kā vēlaties. Pēc tam maksājumu reģistrējat. Skatiet [norēķināšanās](page:feature/settle-up)."
+    - q: "Vai kāds var aiziet, būdams parādā?"
+      a: "Nē. Neviens nevar pamest grupu, kamēr viņam kāds ir parādā vai viņš ir parādā, tāpēc vispirms jānorēķinās."
+    - q: "Cik cilvēku var pievienoties grupai?"
+      a: "Līdz 50 cilvēkiem grupā. Uzaiciniet tos ar saiti vai QR kodu un ieslēdziet apstiprināšanu, ja vēlaties, lai administrators katru ielaiž."
+    - q: "Kā ar ceļojumiem, kuros ir vairāk nekā viena valūta?"
+      a: "Atlikumi tiek uzturēti atsevišķi katrai valūtai. Skatiet [vairākas valūtas](page:feature/multiple-currencies)."

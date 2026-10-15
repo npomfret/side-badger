@@ -1,0 +1,107 @@
+translatedFrom: "fd23c99b"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Hvernig Side Badger virkar | Skiptu hópkostnaði í fimm skrefum"
+  description: "Stofnaðu hóp, bjóddu fólki, bættu við útgjöldum og gerðu upp. Sjáðu hvað gerist á milli „einhver borgaði“ og „við erum kvitt“, með útreiknuðu dæmi."
+h1: "Hvernig Side Badger virkar"
+navLabel: "Hvernig þetta virkar"
+lead: "Hvað gerist á milli „einhver borgaði“ og „við erum kvitt“? Fimm skref, enginn töflureiknir og einn greifingi sem er að mestu til skrauts. Hér er öll leiðin, frá fyrsta hópnum til síðustu skráðu greiðslunnar. Nánari upplýsingar um hvert skref eru í [skiptingu útgjalda](page:feature/split-expenses) og [uppgjöri](page:feature/settle-up)."
+cta:
+  heading: "Frá „ég tek þennan“ til „við erum kvitt“"
+  body: "Stofnaðu ókeypis aðgang, byrjaðu hóp og bættu við fyrsta útgjaldinu. Greifinginn dæmir ekki kvittunina."
+  button: "Stofna ókeypis aðgang"
+steps:
+  - title: "Stofnaðu hóp"
+    body: "Búðu til einn hóp fyrir hvert heimili, hverja ferð og hvern viðburð, svo leigan endi aldrei á sama lista og brúðkaupsgjöfin. Gefðu hópnum nafn, veldu nafnið sem fólk sér þig undir og, ef þú vilt, takmarkaðu hvaða gjaldmiðla hann tekur við. Á stjórnborðinu sérðu síðan alla hópana, og hvar þú stendur í hverjum þeirra, á einum skjá."
+    shot: S02
+    shotAlt: "Gluggi til að stofna hóp með opnum hluta um takmörkun gjaldmiðla"
+  - title: "Bjóddu fólkinu þínu"
+    body: "Deildu boðstengli eða sýndu QR-kóða og veldu hve lengi hann gildir, frá 15 mínútum upp í 5 daga. Allir sem ganga í hópinn þurfa ókeypis aðgang og staðfest netfang, og í hópi geta verið allt að 50 manns. Ef þú vilt velja hverjir koma inn skaltu kveikja á samþykki og þá hleypir stjórnandi hverjum og einum inn."
+    shot: S03
+    shotAlt: "Boðsglugginn á tengilsflipanum með QR-kóða og valkostum fyrir gildistíma"
+  - title: "Bættu við útgjöldum um leið og þau verða til"
+    body: "Segðu hver greiddi, hversu mikið og fyrir hverja það var. Skiptu jafnt, eftir nákvæmum upphæðum eða í prósentum, og slepptu þeim sem voru ekki með. Bættu útgjaldinu við og allir sjá það strax, ásamt því hvað breyttist og hver breytti því."
+    shot: S05
+    shotAlt: "Útgjaldaeyðublað með prósentuskiptingu sem skiptir leigunni eftir stærð herbergja"
+  - title: "Fylgstu með stöðunni"
+    body: "Side Badger heldur utan um stöðuna í hverjum gjaldmiðli, svo þú sérð í fljótu bragði hver skuldar hverjum. Í stað þess að láta alla greiða úr flækju smáskulda leggur það til stuttan lista yfir greiðslur sem gerir upp við hópinn."
+    shot: S10
+    shotAlt: "Stöðuskjár með einfölduðum skuldum í tveimur gjaldmiðlum og kveikt á Sýna allt"
+  - title: "Gerðu upp utan appsins, skráðu það inni í því"
+    body: "Side Badger flytur aldrei peninga. Borgið hvert öðru eins og ykkur hentar og skráið svo greiðsluna svo staðan uppfærist, og skjár allra uppfærist án þess að endurhlaða. „Gert upp“ þýðir einfaldlega að staðan sé núll. Enginn getur yfirgefið hóp á meðan hann skuldar eða á inni pening, svo þeir sem stefna á dyrnar gera upp fyrst."
+    shot: S11
+    shotAlt: "Greiðslueyðublað með hnöppum fyrir fljótlegt uppgjör og tilkynningu um hlutagreiðslu"
+requirements:
+  heading: "Það sem þú þarft"
+  items:
+    - "Ókeypis aðgang. Allt sem þarf er netfang og lykilorð, og þú staðfestir netfangið áður en þú getur bætt einhverju við."
+    - "Að vera 18 ára eða eldri."
+    - "Nútímalegan vafra í síma eða tölvu og nettengingu. Side Badger er ekki app úr appverslun og virkar ekki án nettengingar."
+    - "Valfrjálst: stað á heimaskjánum. Engin appverslun nauðsynleg, því þú getur bætt Side Badger við heimaskjáinn eða Dock-ið og það opnast eins og app."
+example:
+  heading: "Þrír vinir eftir kvöld úti"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: "Kvöldverður"
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: "Leigubíll"
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: "39 tungumál, gert fyrir fleira fólk"
+    body: "Notaðu Side Badger á 39 tungumálum, þar á meðal arabísku, persnesku og úrdú sem eru skrifuð frá hægri til vinstri. Hver og einn í hópnum getur valið sitt eigið, svo hópsíðan getur verið á arabísku fyrir einn og ensku fyrir þann næsta. Það er líka hannað með lyklaborðs- og skjálesaranotendur í huga, og litir meðlima fylgja mynstur, svo þú þarft ekki að greina grænt frá rauðu."
+faq:
+  heading: "Spurningar"
+  items:
+    - q: "Þurfa allir aðgang?"
+      a: "Já, ókeypis aðgang. Hver og einn staðfestir netfangið sitt áður en hann bætir einhverju við."
+    - q: "Er til app?"
+      a: "Það keyrir í vafranum og þú getur bætt því við heimaskjáinn eða Dock-ið svo það opnist eins og app. Það er engin útgáfa í appverslun og engin ónettengd stilling."
+    - q: "Flytur Side Badger peninga?"
+      a: "Nei. Það heldur utan um stöðuna og leggur til greiðslur, og þið borgið hvert öðru eins og ykkur hentar. Svo skráið þið greiðsluna. Sjá [uppgjör](page:feature/settle-up)."
+    - q: "Getur einhver yfirgefið hóp með skuld?"
+      a: "Nei. Enginn getur yfirgefið hóp á meðan hann skuldar eða á inni pening, svo hann gerir upp fyrst."
+    - q: "Hve margir geta gengið í hóp?"
+      a: "Allt að 50 manns í hóp. Bjóddu þeim með tengli eða QR-kóða og kveiktu á samþykki ef þú vilt að stjórnandi hleypi hverjum og einum inn."
+    - q: "Hvað með ferðir með fleiri en einum gjaldmiðli?"
+      a: "Staðan er haldin sérstaklega fyrir hvern gjaldmiðil. Sjá [marga gjaldmiðla](page:feature/multiple-currencies)."

@@ -1,0 +1,107 @@
+translatedFrom: "fd23c99b"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: Näin Side Badger toimii | Jaa ryhmän kulut viidessä vaiheessa
+  description: Luo ryhmä, kutsu ihmiset, lisää kulut ja tasaa tilit. Katso, mitä tapahtuu kohtien ”joku maksoi” ja ”nyt ollaan tasoissa” välillä, laskuesimerkin kera.
+h1: Näin Side Badger toimii
+navLabel: Näin se toimii
+lead: Mitä tapahtuu kohtien ”joku maksoi” ja ”nyt ollaan tasoissa” välillä? Viisi vaihetta, ei taulukkolaskentaa ja yksi mäyrä, joka on enimmäkseen koriste. Tässä koko matka ensimmäisestä ryhmästä viimeiseen kirjattuun maksuun. Tarkemmat tiedot löydät sivuilta [kulujen jako](page:feature/split-expenses) ja [tilien tasaus](page:feature/settle-up).
+cta:
+  heading: Kohdasta ”maksan tämän” kohtaan ”ollaan tasoissa”
+  body: Luo ilmainen tili, perusta ryhmä ja lisää ensimmäinen kulu. Mäyrä ei arvostele kuittia.
+  button: Luo ilmainen tili
+steps:
+  - title: Luo ryhmä
+    body: Tee oma ryhmä jokaiselle kodille, matkalle tai tapahtumalle, ettei vuokra päädy samaan listaan häälahjan kanssa. Anna ryhmälle nimi, valitse nimi, jolla muut näkevät sinut, ja halutessasi rajaa, mitä valuuttoja ryhmä hyväksyy. Kojelaudalla näet kaikki ryhmäsi ja tilanteesi niissä yhdellä näytöllä.
+    shot: S02
+    shotAlt: Ryhmän luontidialogi, jossa valuuttarajoitusten osio on auki
+  - title: Kutsu porukka mukaan
+    body: Jaa liittymislinkki tai näytä QR-koodi ja valitse, kuinka kauan se on voimassa, 15 minuutista 5 päivään. Jokainen liittyvä tarvitsee ilmaisen tilin ja vahvistetun sähköpostiosoitteen, ja ryhmään mahtuu enintään 50 ihmistä. Jos haluat itse valita, ketkä pääsevät sisään, ota hyväksyntä käyttöön, jolloin ylläpitäjä päästää jokaisen erikseen.
+    shot: S03
+    shotAlt: Kutsudialogi linkkivälilehdellä, jossa näkyvät QR-koodi ja voimassaoloajan vaihtoehdot
+  - title: Lisää kulut sitä mukaa kuin ne syntyvät
+    body: Kerro, kuka maksoi, kuinka paljon ja keitä se koski. Jaa kulu tasan, tarkoilla summilla tai prosenteilla, ja jätä pois ne, jotka eivät olleet mukana. Kun lisäät kulun, kaikki näkevät sen heti sekä sen, mikä muuttui ja kuka muutti.
+    shot: S05
+    shotAlt: Kululomake prosenttijaolla, jossa vuokra jaetaan huoneen koon mukaan
+  - title: Seuraa saldoja
+    body: Side Badger pitää jokaiselle valuutalle omaa juoksevaa saldoa, joten näet yhdellä silmäyksellä, kuka on velkaa kenelle. Sen sijaan että jokaisen pitäisi selvittää pienten velkojen vyyhti, se ehdottaa lyhyttä maksulistaa, joka tasaa ryhmän tilit.
+    shot: S10
+    shotAlt: Saldonäkymä, jossa yksinkertaistetut velat kahdessa valuutassa ja Näytä kaikki -valinta päällä
+  - title: Maksa sovelluksen ulkopuolella, kirjaa sen sisällä
+    body: Side Badger ei koskaan siirrä rahaa. Maksakaa toisillenne miten haluatte ja kirjaa sitten maksu, jotta saldot päivittyvät ja kaikkien näyttö muuttuu ilman päivitystä. ”Tasattu” tarkoittaa yksinkertaisesti, että saldot ovat nollassa. Kukaan ei voi poistua ryhmästä, jos hän on vielä velkaa tai hänelle ollaan velkaa, joten ulko-ovelle menevä tasaa ensin.
+    shot: S11
+    shotAlt: Maksulomake pikaselvityspainikkeineen ja osamaksuilmoituksineen
+requirements:
+  heading: Mitä tarvitset
+  items:
+    - Ilmaisen tilin. Tarvitset vain sähköpostiosoitteen ja salasanan, ja vahvistat sähköpostin ennen kuin voit lisätä mitään.
+    - Olla 18-vuotias tai vanhempi.
+    - Modernin selaimen puhelimessa tai tietokoneella sekä yhteyden. Side Badger ei ole sovelluskaupan sovellus eikä toimi offline-tilassa.
+    - Halutessasi paikan aloitusnäytöllä. Sovelluskauppaa ei tarvita, sillä voit lisätä Side Badgerin aloitusnäytölle tai telakkaan, ja se avautuu kuin sovellus.
+example:
+  heading: Kolme ystävää illanvieton jälkeen
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: Illallinen
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: Taksi
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: 39 kieltä, tehty useammille
+    body: Käytä Side Badgeria 39 kielellä, myös oikealta vasemmalle kirjoitettavilla arabialla, persialla ja urdulla. Jokainen ryhmän jäsen voi valita oman kielensä, joten ryhmäsivu voi olla yhdelle arabiaksi ja seuraavalle englanniksi. Palvelu on tehty myös näppäimistön ja ruudunlukijan käyttäjät huomioiden, ja jäsenten väreissä on kuviot, joten vihreää ja punaista ei tarvitse erottaa pelkästä sävystä.
+faq:
+  heading: Kysymyksiä
+  items:
+    - q: Tarvitseeko jokainen tilin?
+      a: Kyllä, ilmaisen. Jokainen vahvistaa sähköpostinsa ennen kuin voi lisätä mitään.
+    - q: Onko olemassa sovellusta?
+      a: Se toimii selaimessa, ja voit lisätä sen aloitusnäytölle tai telakkaan, jolloin se avautuu kuin sovellus. Sovelluskauppaversiota ei ole, eikä offline-tilaa.
+    - q: Siirtääkö Side Badger rahaa?
+      a: Ei. Se pitää kirjaa ja ehdottaa maksuja, ja te maksatte toisillenne miten haluatte. Sen jälkeen kirjaat maksun. Katso [tilien tasaus](page:feature/settle-up).
+    - q: Voiko joku lähteä ryhmästä velkaa?
+      a: Ei. Kukaan ei voi poistua ryhmästä, jos hän on vielä velkaa tai hänelle ollaan velkaa, joten hän tasaa ensin.
+    - q: Kuinka monta ihmistä ryhmään voi liittyä?
+      a: Ryhmässä voi olla enintään 50 ihmistä. Kutsu heidät linkillä tai QR-koodilla, ja ota hyväksyntä käyttöön, jos haluat ylläpitäjän päästävän jokaisen sisään erikseen.
+    - q: Entä matkat, joilla on useampi kuin yksi valuutta?
+      a: Saldot pidetään erikseen jokaiselle valuutalle. Katso [useita valuuttoja](page:feature/multiple-currencies).

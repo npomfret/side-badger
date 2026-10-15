@@ -1,0 +1,127 @@
+translatedFrom: "923c938f"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: Kosten in 140 Währungen teilen, umgerechnet oder getrennt
+  description: Gib jede Ausgabe in der Währung ein, in der du bezahlt hast, führe die Salden getrennt oder rechne zu einem Kurs um, den du sehen und ändern kannst, und rechne dann mit einer kurzen Liste von Zahlungen ab.
+h1: Kosten in 140 Währungen teilen
+navLabel: Mehrere Währungen
+lead: Euro, Yen und dieses eine Taxi in Baht. Side Badger nimmt jede Ausgabe in der Währung, in der du bezahlt hast, hält die Salden sauber und kann umrechnen, wenn deine Gruppe lieber einmal abrechnet. Es funktioniert in 140 Währungen und passt bestens zu [Gruppenreisen](page:use-case/group-trips).
+cta:
+  heading: Bring deine Euro, bring deine Yen
+  body: Erstelle ein Konto, starte eine Gruppe und füge die erste Ausgabe in der Währung hinzu, die du gerade in der Hand hattest.
+  button: Kostenloses Konto erstellen
+problem:
+  heading: Gib es ein, wie du bezahlt hast
+  body: Eine Reise wird selten in nur einer Währung bezahlt. Das Hotel wurde zu Hause in Pfund gebucht, das Abendessen in Yen bezahlt, und der Kaffee am Flughafen in dem, was beim Zwischenstopp galt. Alles von Hand umzurechnen, bevor man es überhaupt eintippen kann, ist der Grund, warum Tabellen aufgegeben werden. In Side Badger gibst du jede Ausgabe in der Währung auf dem Beleg ein, und jeder Betrag folgt den Regeln seiner Währung, Yen haben also keine Dezimalstellen und Dinar drei. Deine zuletzt genutzten Währungen stehen zuerst in der Liste.
+workflow:
+  heading: Währungen getrennt halten oder unterwegs umrechnen
+  steps:
+    - title: Füge die Ausgabe in ihrer eigenen Währung hinzu
+      body: Wähle die Währung, gib den Betrag ein und sag, wer bezahlt hat und wer sich die Kosten teilt. Mehr braucht es nicht. Das ist die Voreinstellung, und sie behält den Originalbetrag genau so, wie du ihn eingegeben hast.
+      shot: S07
+      shotAlt: Das Ausgabenformular mit eingegebenem Yen-Betrag
+    - title: Behalte für jede Währung einen Saldo im Blick
+      body: Salden werden pro Währung getrennt geführt, und jeder bekommt seine eigene kurze Liste vorgeschlagener Zahlungen. Pfund werden in Pfund beglichen und Yen in Yen.
+      shot: S10
+      shotAlt: Der Salden-Bildschirm mit vereinfachten Schulden in zwei Währungen
+    - title: Oder rechne um, wenn die Gruppe lieber einmal abrechnet
+      body: Wähle bei der Eingabe der Ausgabe eine andere Währung, und Side Badger kann sie zu einem aktuellen Wechselkurs umrechnen, den du auf den Kurs ändern kannst, den du tatsächlich bekommen hast. Der umgerechnete Betrag geht in den Saldo dieser Währung ein. Umrechnen ist eine Entscheidung der Gruppe, nie etwas, das hinter deinem Rücken passiert.
+options:
+  heading: Ein Kurs, den du sehen und ändern kannst
+  items:
+    - title: Der Kurs wird angezeigt
+      body: Beim Umrechnen erscheinen der Kurs und der umgerechnete Betrag im Formular, niemand muss also eine Zahl auf Treu und Glauben nehmen.
+    - title: Gib deinen eigenen ein
+      body: Einen besseren Kurs an der Wechselstube bekommen oder einen schlechteren am Flughafen? Ändere den Kurs auf den, den du tatsächlich bekommen hast, und der umgerechnete Betrag aktualisiert sich.
+    - title: Das Original bleibt
+      body: Der Originalbetrag bleibt neben dem umgerechneten an der Ausgabe, für alle, die fragen, wie viel es in Yen war.
+    - title: Umrechnen kostet nichts
+      body: Das Umrechnen kostet nichts. Für die Eingabe einer Ausgabe in einer anderen Währung fällt keine Gebühr an.
+example:
+  heading: Vier Freunde in Japan, auf zwei Arten abgerechnet
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: das Hotel, zu Hause gebucht
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: Abendessen in Japan
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: Zugtickets
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: Tempeleintritt
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: Eine Währung für die ganze Gruppe
+    body: Wenn deine Gruppe lieber nicht darüber nachdenken will, wähle eine Gruppenwährung, und das Formular rechnet jede neue Ausgabe in sie um, zu einem Kurs, den du weiterhin sehen und ändern kannst. Das gilt nur für neue und kopierte Ausgaben. Bearbeitungen und bestehende Ausgaben bleiben, wie sie sind, nichts bereits Erfasstes ändert sich also unter dir.
+  - heading: Du schuldest Euro, zahlst in Pfund
+    body: In Yen bezahlt, in Pfund abgerechnet? Kein Problem. Beim Erfassen einer Zahlung kannst du sie ebenfalls umrechnen, sodass, wer Euro schuldet, in Pfund zahlen kann und der Euro-Saldo trotzdem stimmt. Zahlt einander, wie ihr wollt, und erfasst es dann.
+  - heading: Regeln für die Gruppe
+    body: Beschränke eine Gruppe auf die Währungen, die ihr wirklich nutzt, und lege eine Voreinstellung fest, damit das Formular mit der richtigen öffnet. Ein Urlaub in Portugal braucht neben der Abendessenrechnung keine 139 anderen Optionen, und eine [Hochzeit im Ausland](page:use-case/events-and-celebrations) braucht wohl zwei.
+limits:
+  heading: Grenzen
+  items:
+    - Der Kurs wird beim Speichern der Ausgabe festgelegt. Alte Ausgaben werden nie neu bewertet.
+    - Side Badger holt einen aktuellen Kurs, wo es geht. Nicht für jedes Paar ist einer garantiert, und du kannst den Kurs immer selbst eintippen.
+    - Die automatische Umrechnung der Gruppe gilt nur für neue und kopierte Ausgaben, nicht für Bearbeitungen oder bestehende Ausgaben.
+    - Jede Ausgabe ist auf 999.999,99 in der jeweiligen Währung begrenzt.
+    - Es gibt 140 Währungen. Kryptowährungen und Metalle gehören nicht dazu.
+    - Side Badger erfasst Zahlungen. Es bewegt oder tauscht nie Geld.
+useCasesHeading: Wo das hilft
+faq:
+  heading: Fragen
+  items:
+    - q: Welchen Wechselkurs verwendet ihr?
+      a: Einen aktuellen Wechselkurs, der beim Erfassen der Ausgabe abgerufen wird, wo einer verfügbar ist. Du kannst ihn auf den Kurs ändern, den du tatsächlich bekommen hast, und der umgerechnete Betrag aktualisiert sich.
+    - q: Werden alte Ausgaben neu bewertet?
+      a: Nein. Der Kurs wird beim Speichern der Ausgabe festgelegt, ein Saldo driftet also nicht, nur weil sich der Markt bewegt hat.
+    - q: Unterstützt ihr Krypto?
+      a: Nein. Es gibt 140 Währungen, und Kryptowährungen gehören nicht dazu.
+    - q: Warum kann ich keine 2.000.000 Rupiah eingeben?
+      a: Jede Ausgabe ist auf 999.999,99 in der jeweiligen Währung begrenzt. Gib sie in einer anderen Währung ein und rechne um, oder teile sie in zwei Ausgaben.
+    - q: Kostet das Umrechnen etwas?
+      a: Nein. Umrechnen ist kostenlos, wie der Rest von Side Badger. Siehe [Preise](page:pricing).
+    - q: Muss ich umrechnen?
+      a: Nein. Währungen bleiben getrennt, es sei denn, du oder deine Gruppe entscheidet sich fürs Umrechnen, und jede Währung bekommt ihre eigene kurze Liste von Zahlungen.

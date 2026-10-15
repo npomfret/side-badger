@@ -1,0 +1,127 @@
+translatedFrom: "923c938f"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Verdeel kosten in 140 valuta’s, omgerekend of apart gehouden"
+  description: "Voer elke uitgave in de valuta in waarin je betaalde, hou saldi apart of reken om tegen een koers die je kunt zien en aanpassen, en reken dan af met een korte lijst betalingen."
+h1: "Verdeel kosten in 140 valuta’s"
+navLabel: "Meerdere valuta’s"
+lead: "Euro’s, yen en dat ene taxiritje in baht. Side Badger neemt elke uitgave aan in de valuta waarin je betaalde, houdt de saldi netjes en kan omrekenen wanneer je groep liever één keer afrekent. Het werkt in 140 valuta’s en past vanzelf bij [groepsreizen](page:use-case/group-trips)."
+cta:
+  heading: "Neem je euro’s mee, neem je yen mee"
+  body: "Maak een account aan, start een groep en voeg de eerste uitgave toe in welke valuta je toevallig bij de hand had."
+  button: "Maak een gratis account"
+problem:
+  heading: "Voer het in zoals je betaalde"
+  body: "Een reis wordt zelden in één valuta betaald. Het hotel werd thuis in ponden geboekt, het diner werd in yen betaald en de koffie op de luchthaven in wat de tussenstop ook gebruikte. Alles met de hand omrekenen voor je het zelfs maar kunt invoeren, daar raken spreadsheets door verlaten. In Side Badger voer je elke uitgave in de valuta van het bonnetje in, en elk bedrag volgt de regels van zijn valuta, dus yen hebben geen decimalen en dinars drie. Je recent gebruikte valuta’s staan bovenaan de lijst."
+workflow:
+  heading: "Hou valuta’s apart, of reken om terwijl je bezig bent"
+  steps:
+    - title: "Voeg de uitgave toe in haar eigen valuta"
+      body: "Kies de valuta, typ het bedrag, zeg wie betaald heeft en wie de kost deelde. Meer is niet nodig. Dit is de standaard, en het houdt het oorspronkelijke bedrag precies zoals je het invoerde."
+      shot: S07
+      shotAlt: "Het uitgavenformulier met een bedrag in yen ingevuld"
+    - title: "Volg een saldo per valuta"
+      body: "Saldi worden per valuta apart bijgehouden, en elk krijgt zijn eigen korte lijst voorgestelde betalingen. Ponden worden in ponden afgerekend en yen in yen."
+      shot: S10
+      shotAlt: "Het saldoscherm met vereenvoudigde schulden in twee valuta’s"
+    - title: "Of reken om, wanneer de groep liever één keer afrekent"
+      body: "Kies een andere valuta terwijl je de uitgave invoert en Side Badger kan ze omrekenen tegen een actuele wisselkoers, die je kunt aanpassen naar de koers die je echt kreeg. Het omgerekende bedrag komt bij het saldo in die valuta. Omrekenen is een keuze van de groep, nooit iets wat achter je rug gebeurt."
+options:
+  heading: "Een koers die je kunt zien en aanpassen"
+  items:
+    - title: "De koers wordt getoond"
+      body: "Wanneer je omrekent, verschijnen de koers en het omgerekende bedrag op het formulier, zodat niemand een getal op goed vertrouwen hoeft aan te nemen."
+    - title: "Typ je eigen koers"
+      body: "Een betere koers gekregen aan een wisselkantoor, of een slechtere op een luchthaven? Pas de koers aan naar degene die je echt kreeg en het omgerekende bedrag wordt bijgewerkt."
+    - title: "Het origineel blijft"
+      body: "Het oorspronkelijke bedrag blijft bij de uitgave staan, naast het omgerekende, voor wie vraagt hoeveel het in yen was."
+    - title: "Gratis omrekenen"
+      body: "Omrekenen kost niets. Er is geen vergoeding om een uitgave in een andere valuta in te voeren."
+example:
+  heading: "Vier vrienden in Japan, op twee manieren afgerekend"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "het hotel, thuis geboekt"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "diner in Japan"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "treintickets"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "toegang tot de tempel"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "Eén valuta voor de hele groep"
+    body: "Als je groep er liever niet over nadenkt, kies dan een groepsvaluta en het formulier rekent elke nieuwe uitgave ernaar om, tegen een koers die je nog steeds kunt zien en aanpassen. Dit geldt enkel voor nieuwe en gekopieerde uitgaven. Wijzigingen en bestaande uitgaven blijven zoals ze zijn, zodat niets wat al geregistreerd is onder je handen verandert."
+  - heading: "Euro’s schuldig, in ponden betalen"
+    body: "In yen betaald, in ponden afrekenen? Geen probleem. Wanneer je een betaling registreert, kun je ze ook omrekenen, zodat wie euro’s schuldig is in ponden kan betalen en het saldo in euro toch klopt. Betaal elkaar zoals je wilt en registreer het dan."
+  - heading: "Regels voor de groep"
+    body: "Beperk een groep tot de valuta’s die je echt gebruikt en stel een standaard in, zodat het formulier op de juiste opent. Een vakantie in Portugal heeft naast de dinerrekening geen 139 andere opties nodig, en een [bruiloft in het buitenland](page:use-case/events-and-celebrations) waarschijnlijk twee."
+limits:
+  heading: "Beperkingen"
+  items:
+    - "De koers ligt vast wanneer de uitgave wordt opgeslagen. Oude uitgaven worden nooit herwaardeerd."
+    - "Side Badger haalt een actuele koers op waar het kan. Niet voor elk paar is er gegarandeerd een, en je kunt de koers altijd zelf typen."
+    - "Automatisch omrekenen voor de groep geldt enkel voor nieuwe en gekopieerde uitgaven, niet voor wijzigingen of bestaande uitgaven."
+    - "Elke uitgave is begrensd op 999.999,99 in haar eigen valuta."
+    - "Er zijn 140 valuta’s. Cryptovaluta en metalen horen daar niet bij."
+    - "Side Badger registreert betalingen. Het verplaatst of wisselt nooit geld."
+useCasesHeading: "Waar dit helpt"
+faq:
+  heading: "Vragen"
+  items:
+    - q: "Welke wisselkoers gebruiken jullie?"
+      a: "Een actuele wisselkoers, opgehaald wanneer je de uitgave invoert, waar er een beschikbaar is. Je kunt hem aanpassen naar de koers die je echt kreeg en het omgerekende bedrag wordt bijgewerkt."
+    - q: "Worden oude uitgaven herwaardeerd?"
+      a: "Nee. De koers ligt vast wanneer de uitgave wordt opgeslagen, dus een saldo verschuift niet omdat de markt dat deed."
+    - q: "Ondersteunen jullie crypto?"
+      a: "Nee. Er zijn 140 valuta’s en cryptovaluta horen daar niet bij."
+    - q: "Waarom kan ik geen 2.000.000 roepia invoeren?"
+      a: "Elke uitgave is begrensd op 999.999,99 in haar eigen valuta. Voer ze in een andere valuta in en reken om, of splits ze op in twee uitgaven."
+    - q: "Kost omrekenen iets?"
+      a: "Nee. Omrekenen is gratis, zoals de rest van Side Badger. Zie [prijzen](page:pricing)."
+    - q: "Moet ik omrekenen?"
+      a: "Nee. Valuta’s blijven apart, tenzij jij of je groep ervoor kiest om om te rekenen, en elke valuta krijgt zijn eigen korte lijst betalingen."

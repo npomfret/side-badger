@@ -1,0 +1,137 @@
+translatedFrom: "56ee9b03"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.map-link-fills-place
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: Del utgifter likt, nøyaktig eller etter prosent | Side Badger
+  description: Del en felles utgift likt, etter nøyaktige beløp eller etter prosent, og la dem som ikke var der stå utenfor. Gratis, uten annonser og uten daglige grenser.
+h1: Del utgifter likt, nøyaktig eller etter prosent
+navLabel: Dele utgifter
+lead: Ikke alt er 50/50. Side Badger klarer det. Si hvem som betalte, velg de som delte utgiften, og del den **likt, etter nøyaktige beløp eller etter prosent**. Nag selges separat.
+cta:
+  heading: Del den neste ordentlig
+  body: Opprett en gratis konto, start en gruppe og legg til utgiften du har tenkt å få ryddet opp i. Usikker på hva som skjer videre? Se [slik fungerer det](page:how-it-works), eller sjekk [hva gratis dekker](page:pricing).
+  button: Opprett en gratis konto
+problem:
+  heading: Ikke alt er 50/50
+  body: Husleien følger størrelsen på rommet. En gave følger hvem som lovet hva. En middag følger hvem som ble sittende til dessert. Å dele en regning på midten fungerer til den første regningen som ikke lar seg dele slik, og da åpner noen et regneark. Side Badger registrerer hvem som betalte, hvem som delte utgiften og hvordan den fordeles, så saldoene blir riktige uten at noen driver med lang divisjon ved bordet.
+workflow:
+  heading: Å legge til en utgift, fra start til slutt
+  steps:
+    - title: Si hvem som betalte og hva for
+      body: Skriv inn beløpet, en kort beskrivelse og personen som betalte. Én person betaler for hver utgift, noe som holder regnestykket ærlig.
+      shot: S05
+      shotAlt: Utgiftsskjemaet med husleien for en hytte delt etter prosent mellom tre personer
+    - title: Velg delingen
+      body: Velg likt, nøyaktige beløp eller prosent. Prosentene må summere seg til 100, og nøyaktige beløp må summere seg til totalen.
+      shot: S06
+      shotAlt: Utgiftsskjemaet med nøyaktige beløp lagt inn for hver person på en gave
+    - title: Legg til historien
+      body: Sett dato, legg til etiketter, et sted og et notat. Alle i gruppen ser de samme detaljene, og kan kommentere rett der.
+      shot: S08
+      shotAlt: En utgift med detaljer, en kommentartråd og det opprinnelige beløpet slik det ble lagt inn
+    - title: Ta opp et spørsmål hvis noe ser rart ut
+      body: Hvis gruppen har slått på utgiftsspørsmål, kan alle som er med i en utgift stille spørsmål ved den, og utgiftslisten kan vise bare de det er stilt spørsmål ved.
+      shot: S18
+      shotAlt: Utgiftslisten med merket «Stilt spørsmål ved» og filteret «Kun stilt spørsmål ved»
+options:
+  heading: Tre måter å dele på
+  items:
+    - title: Likt
+      body: Standarden for middager, taxier og alt alle delte jevnt. Hvis summen ikke går opp, går den odde øren til én person tilfeldig, ikke alltid den samme. I taxien nedenfor er det Ana.
+    - title: Etter nøyaktige beløp
+      body: Skriv inn hva hver person skylder. Bra for gaven der alle valgte en ulik pris, eller butikken der én persons handlevogn rommet mer enn de felles dagligvarene. Beløpene må summere seg til totalen.
+    - title: Etter prosent
+      body: Gi hver person en andel av totalen. Husleie etter romstørrelse er klassikeren, der det største rommet betaler den største andelen og ingen later som noe annet.
+example:
+  heading: En hyttehelg, fire utgifter, tre delinger
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: hytta, etter romstørrelse
+      payer: ana
+      amount: 600
+      split:
+        method: percent
+        shares:
+          ana: 50
+          ben: 30
+          cara: 20
+    - label: middag
+      payer: ben
+      amount: 84
+      split:
+        method: equal
+    - label: dagligvarer
+      payer: cara
+      amount: 64.5
+      split:
+        method: exact
+        shares:
+          ana: 25
+          ben: 21.5
+          cara: 18
+    - label: taxien hjem
+      payer: ana
+      amount: 100
+      split:
+        method: equal
+sections:
+  - heading: Bare de som var der
+    body: Del en kostnad mellom alle, eller bare mellom dem som delte den. La folk stå utenfor kostnader de ikke var med på, så gjenspeiler saldoene det. Romkameraten som var borte hele uken, skylder ikke for takeawayen, noe [romkamerater](page:use-case/housemates) vil kjenne igjen som grunnleggende rettferdighet.
+  - heading: Detaljene som sparer deg for krangler senere
+    items:
+      - Sett **dato** og eventuelt et klokkeslett. Snarveier som i dag, i går, i morges og i går kveld sparer deg for litt tasting.
+      - Legg til opptil tre **etiketter** for å gruppere utgifter, som dagligvarer eller reise.
+      - Legg til **stedet**. Lim inn en kartlenke, så fyller stedsnavnet seg selv ut.
+      - Legg til et **notat** for historien bak tallet, med litt formatering hvis historien trenger det.
+      - Bruk **kommentarene** til å ha samtalen ved siden av utgiften den handler om, i stedet for i en chattråd ingen blar tilbake i.
+  - heading: Kopier, rediger og se hva som endret seg
+    body: Kopier forrige måneds husleie i stedet for å skrive den inn på nytt, og endre det som er annerledes. Hvis et tall var feil, redigerer du utgiften. Den tidligere versjonen blir bevart og redigeringen vises i gruppens aktivitet, så ingen endrer et tall i det stille. Hva hver enkelt får lov til å redigere, avhenger av gruppens tillatelser.
+  - heading: Når noe ser feil ut
+    body: En gruppe kan slå på utgiftsspørsmål. Alle som er med i en utgift kan stille et spørsmål og si hvorfor, og utgiften holdes utenfor saldoene til den som spurte, eller en administrator, lukker det. Det er av som standard, og en administrator slår det på for gruppen. Det passer for [arrangementer og feiringer](page:use-case/events-and-celebrations), der depositumet ingen husker plutselig angår alle.
+limits:
+  heading: Grenser
+  items:
+    - Én person betaler for hver utgift. Hvis to personer betalte, registrerer du to utgifter.
+    - Det finnes ingen deling per vare og ingen deling etter andeler. Likt, nøyaktige beløp og prosent er det som finnes.
+    - Prosentene må summere seg til 100.
+    - En utgift kan være opptil 999 999,99 i sin egen valuta, med den valutaens vanlige antall desimaler.
+    - Utgifter kan ikke gjentas av seg selv. Kopier forrige måneds i stedet.
+    - Datoer kan ikke ligge i fremtiden eller mer enn 10 år tilbake.
+    - En utgift som involverer noen som har forlatt gruppen, blir skrivebeskyttet.
+useCasesHeading: Hvor denne typen deling hjelper
+faq:
+  heading: Spørsmål
+  items:
+    - q: Kan to personer betale for én utgift?
+      a: Ikke i én utgift. Registrer to, én for hver betaler, så blir saldoene de samme.
+    - q: Kan jeg dele en kvittering per vare?
+      a: Nei. En deling er lik, etter nøyaktige beløp eller etter prosent. For en regning med ulike varer legger du inn hva hver person skylder som nøyaktige beløp.
+    - q: Kan jeg sette en standarddeling?
+      a: Nei. Kopier en tidligere utgift for å bruke delingen på nytt, og endre det som er annerledes.
+    - q: Kan regninger gjentas hver måned?
+      a: Nei. Kopier forrige måneds utgift i stedet, det tar noen sekunder.
+    - q: Hvem kan redigere en utgift?
+      a: De gruppens tillatelser gir lov. Hver redigering vises i gruppens aktivitet, så endringer skjer aldri i det stille.
+    - q: Hva skjer med saldoene etterpå?
+      a: De oppdateres etter hvert som utgifter kommer inn, og [gjøre opp](page:feature/settle-up) gjør dem om til en kort liste over betalinger. Hvis en utgift er i en annen valuta, se [flere valutaer](page:feature/multiple-currencies).

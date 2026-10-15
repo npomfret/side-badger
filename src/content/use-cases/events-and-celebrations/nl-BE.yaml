@@ -1,0 +1,92 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: checked
+  checker: "T4-check"
+  date: "2026-10-15"
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+meta:
+  title: "Verdeel de kosten van feestjes, bruiloften en groepscadeaus"
+  description: "Deel de kosten van een feestje, bruiloft of groepscadeau wanneer mensen verschillende bedragen bijleggen. Stem over het plan, verdeel op exacte bedragen en zie wie wie iets schuldig is."
+h1: "Verdeel de kosten van feestjes, bruiloften en groepscadeaus"
+navLabel: "Evenementen en feestjes"
+lead: "Verdeel voorschotten, versiering en noodparaplu’s. Laat het tafelschikplan over aan iemand die dapperder is. Side Badger houdt **wie wat bijlegde** op één plek bij, zodat de organisator ook van het feest kan genieten."
+cta:
+  heading: "Begin met het volgende feest"
+  body: "Maak een account aan, maak een groep voor het evenement en stuur de uitnodigingslink. Side Badger is gratis, zonder advertenties en zonder dagelijkse limieten."
+  button: "Maak een gratis account"
+scenario:
+  heading: "Iedereen legt bij, niet altijd evenveel"
+  body: "Iemand betaalt het voorschot voor de zaal, iemand anders koopt de taart en een derde zet het groepscadeau op de eigen kaart. Sommige gasten komen overal bij en sommige enkel op het diner. Daar in een chatdraad een eerlijke rekening van bijhouden is een job waar niemand op gesolliciteerd heeft. Een Side Badger-groep houdt het allemaal bij, welke mix van bedragen het ook is, en toont elke persoon wat hij of zij schuldig is of tegoed heeft. Zie [zo werkt het](page:how-it-works) voor de basis, of lees verder voor een evenement."
+sections:
+  - heading: "Beslis samen"
+    body: "Leg de keuze, voor er geld verschuift, voor aan een **peiling**. Voeg tot 10 opties toe, zoals twee locaties of drie cadeau-ideeën, en laat iedereen stemmen. Je kunt verbergen wie waarvoor stemde, zodat elke optie een eerlijke kans krijgt, en de winnaar verschijnt zodra de peiling gesloten is. Niemand hoeft veertig berichten terug te scrollen om te weten wat er beslist werd."
+  - heading: "Wie doet waaraan mee"
+    body: "Niet iedereen betaalt evenveel, en niet iedereen maakt deel uit van elke kost. Verdeel een uitgave gelijk, op percentage of op **exacte bedragen**, zodat het aandeel van elke persoon het afgesproken bedrag is. Laat iedereen weg die er niet bij betrokken was, zoals de gasten die het diner oversloegen of de vrienden die niet meededen aan het cadeau. Elke uitgave heeft één betaler, en iedereen anders in de verdeling is hem of haar zijn aandeel schuldig. De details staan op de pagina [uitgaven verdelen](page:feature/split-expenses)."
+  - heading: "Hou de papieren bij"
+    body: "Voeg notities toe aan een uitgave, zoals waarvoor de kost diende. Opmerkingen blijven **naast de uitgave** staan waarover ze gaan, dus de vraag “was de taart £45 of £54?” en het antwoord staan op dezelfde plek. Opmerkingen mogen 500 tekens lang zijn, wat ruim volstaat voor een vraag over een voorschot."
+  - heading: "Controle voor de organisator"
+    body: "Open samenwerking laat elk lid uitgaven toevoegen en bewerken, wat prima is voor een klein cadeau. Kies voor een bruiloft of groter feest de preset **Beheerde groep**. Beheerders keuren elk nieuw lid goed en enkel makers en beheerders kunnen uitgaven wijzigen. Nodig mensen uit met een link of QR-code; met goedkeuring aan laat een beheerder elke persoon binnen, zodat de gastenlijst de gastenlijst blijft. Vergrendel de groep als het evenement voorbij is, zodat de cijfers blijven staan."
+  - heading: "Rekenen na het feest"
+    body: "Zodra de laatste factuur binnen is, tonen de saldi **wie wie iets schuldig is**, en Side Badger stelt een korte lijst betalingen voor die iedereen afrekent. Betaal elkaar zoals je wilt en registreer de betaling dan in de groep. Side Badger verplaatst nooit geld, dus de groep houdt de rekening bij terwijl de overschrijvingen in je eigen bankapps gebeuren. De pagina [afrekenen](page:feature/settle-up) toont hoe een kluwen een korte lijst wordt."
+exampleAfter: 5
+example:
+  heading: "Een groepscadeau: zes stemmen voor, £150 te verdelen"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Groepscadeau"
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: "De functies die dit gebruikt"
+faq:
+  heading: "Vragen"
+  items:
+    - q: "Kunnen gasten de groep zien zonder mee te doen?"
+      a: "Nee. Mensen doen mee met een link of QR-code en een gratis account, dus ze kunnen de groep zien zodra ze erin zitten."
+    - q: "Kan Side Badger het geld innen?"
+      a: "Nee. Side Badger houdt de rekening bij en verplaatst nooit geld. Betaal elkaar zoals je wilt en registreer dan de betaling. Het is gratis, zonder advertenties en zonder dagelijkse limieten; zie [prijzen](page:pricing)."
+    - q: "Kunnen stemmen anoniem zijn?"
+      a: "Ja. Wanneer je een peiling maakt, kun je verbergen wie waarvoor stemde. De instellingen kunnen enkel voor de eerste stem nog veranderen."
+    - q: "Kunnen mensen verschillende bedragen bijleggen?"
+      a: "Ja. Verdeel een uitgave op exacte bedragen, zodat het aandeel van elke persoon het afgesproken bedrag is, of laat de mensen weg die er niet bij betrokken waren."
+    - q: "Kan een organisator de boekhouding bijhouden?"
+      a: "Ja. Gebruik de preset voor een beheerde groep, zodat enkel makers en beheerders uitgaven wijzigen en beheerders nieuwe leden goedkeuren."

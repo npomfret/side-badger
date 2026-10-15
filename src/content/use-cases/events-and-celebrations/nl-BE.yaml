@@ -1,8 +1,6 @@
 translatedFrom: "a1e36ce8"
 review:
-  status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - invites.link-or-qr-code
   - invites.admin-approval
@@ -41,14 +39,14 @@ sections:
   - heading: "Wie doet waaraan mee"
     body: "Niet iedereen betaalt evenveel, en niet iedereen maakt deel uit van elke kost. Verdeel een uitgave gelijk, op percentage of op **exacte bedragen**, zodat het aandeel van elke persoon het afgesproken bedrag is. Laat iedereen weg die er niet bij betrokken was, zoals de gasten die het diner oversloegen of de vrienden die niet meededen aan het cadeau. Elke uitgave heeft één betaler, en iedereen anders in de verdeling is hem of haar zijn aandeel schuldig. De details staan op de pagina [uitgaven verdelen](page:feature/split-expenses)."
   - heading: "Hou de papieren bij"
-    body: "Voeg notities toe aan een uitgave, zoals waarvoor de kost diende. Opmerkingen blijven **naast de uitgave** staan waarover ze gaan, dus de vraag “was de taart £45 of £54?” en het antwoord staan op dezelfde plek. Opmerkingen mogen 500 tekens lang zijn, wat ruim volstaat voor een vraag over een voorschot."
+    body: "Voeg notities toe aan een uitgave, zoals waarvoor de kost diende. Opmerkingen blijven **naast de uitgave** staan waarover ze gaan, dus de vraag “was de taart £ 45 of £ 54?” en het antwoord staan op dezelfde plek. Opmerkingen mogen 500 tekens lang zijn, wat ruim volstaat voor een vraag over een voorschot."
   - heading: "Controle voor de organisator"
     body: "Open samenwerking laat elk lid uitgaven toevoegen en bewerken, wat prima is voor een klein cadeau. Kies voor een bruiloft of groter feest de preset **Beheerde groep**. Beheerders keuren elk nieuw lid goed en enkel makers en beheerders kunnen uitgaven wijzigen. Nodig mensen uit met een link of QR-code; met goedkeuring aan laat een beheerder elke persoon binnen, zodat de gastenlijst de gastenlijst blijft. Vergrendel de groep als het evenement voorbij is, zodat de cijfers blijven staan."
   - heading: "Rekenen na het feest"
     body: "Zodra de laatste factuur binnen is, tonen de saldi **wie wie iets schuldig is**, en Side Badger stelt een korte lijst betalingen voor die iedereen afrekent. Betaal elkaar zoals je wilt en registreer de betaling dan in de groep. Side Badger verplaatst nooit geld, dus de groep houdt de rekening bij terwijl de overschrijvingen in je eigen bankapps gebeuren. De pagina [afrekenen](page:feature/settle-up) toont hoe een kluwen een korte lijst wordt."
 exampleAfter: 5
 example:
-  heading: "Een groepscadeau: zes stemmen voor, £150 te verdelen"
+  heading: "Een groepscadeau: zes stemmen voor, £ 150 te verdelen"
   currency: GBP
   people:
     - id: priya

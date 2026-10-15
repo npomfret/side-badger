@@ -1,0 +1,90 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+meta:
+  title: "Rhannu costau partïon, priodasau ac anrhegion grŵp"
+  description: "Rhannwch gostau parti, priodas neu anrheg grŵp pan fydd pobl yn cyfrannu symiau gwahanol. Pleidleisiwch ar y cynllun, rhannwch yn ôl symiau union a gweld pwy sy'n ddyledus i bwy."
+h1: "Rhannu costau partïon, priodasau ac anrhegion grŵp"
+navLabel: "Digwyddiadau a dathliadau"
+lead: "Rhannwch flaendaliadau, addurniadau ac ymbarelau brys. Gadewch y cynllun eistedd i rywun dewrach. Mae Side Badger yn cadw **pwy gyfrannodd beth** mewn un lle, fel y gall y trefnydd fwynhau'r parti hefyd."
+cta:
+  heading: "Cychwyn gyda'r dathliad nesaf"
+  body: "Creu cyfrif, gwneud grŵp ar gyfer y digwyddiad ac anfon y ddolen wahodd. Mae Side Badger am ddim, heb hysbysebion a heb gyfyngiadau dyddiol."
+  button: "Creu cyfrif am ddim"
+scenario:
+  heading: "Mae pawb yn cyfrannu, ddim bob amser yr un swm"
+  body: "Mae rhywun yn talu blaendal y lleoliad, mae rhywun arall yn prynu'r gacen, ac mae trydydd person yn rhoi anrheg y grŵp ar eu cerdyn eu hunain. Mae rhai gwesteion yn dod i bopeth ac mae rhai yn dod i swper yn unig. Mae cadw cyfrif teg o hynny mewn sgwrs grŵp yn swydd nad oes neb wedi gwneud cais amdani. Mae grŵp Side Badger yn dal y cyfan, pa bynnag gymysgedd o symiau, ac yn dangos i bob person beth sy'n ddyledus ganddyn nhw neu iddyn nhw. Gweler [sut mae'n gweithio](page:how-it-works) am y pethau sylfaenol, neu darllenwch ymlaen am ddigwyddiad."
+sections:
+  - heading: "Penderfynu gyda'ch gilydd"
+    body: "Cyn i unrhyw arian symud, rhowch y dewis i **bôl**. Ychwanegwch hyd at 10 opsiwn, fel dau leoliad neu dri syniad anrheg, a gadewch i bawb bleidleisio. Gallwch guddio pwy bleidleisiodd dros beth, fel bod pob opsiwn yn cael gwrandawiad teg, ac mae'r enillydd yn ymddangos unwaith y bydd y pôl wedi cau. Does dim rhaid i neb sgrolio'n ôl drwy ddeugain neges i ddarganfod beth a benderfynwyd."
+  - heading: "Pwy sy'n rhan o beth"
+    body: "Nid yw pawb yn talu'r un fath, ac nid yw pawb yn rhan o bob cost. Rhannwch gost yn gyfartal, yn ôl canran neu yn ôl **symiau union**, fel mai cyfran pob person yw'r ffigur y cytunwyd arno. Gadewch allan unrhyw un nad oedd yn rhan ohoni, fel y gwesteion a hepgorodd y swper neu'r ffrindiau na ymunodd â'r anrheg. Mae gan bob cost un talwr, ac mae pawb arall yn y rhaniad yn talu eu cyfran iddo. Mae'r manylion ar y dudalen [rhannu treuliau](page:feature/split-expenses)."
+  - heading: "Cadw'r gwaith papur"
+    body: "Ychwanegwch nodiadau at gost, fel yr hyn yr oedd y gost yn ei gynnwys. Mae sylwadau'n aros **wrth ymyl y gost** y maent yn ymwneud â hi, felly mae'r cwestiwn “oedd y gacen yn £45 neu £54?” a'i ateb yn byw yn yr un lle. Mae sylwadau'n cyrraedd 500 nod, sy'n ddigon i gwestiwn am flaendal."
+  - heading: "Rheolaethau'r trefnydd"
+    body: "Mae cydweithio agored yn gadael i unrhyw aelod ychwanegu a golygu costau, sy'n iawn ar gyfer anrheg fach. Ar gyfer priodas neu barti mwy, dewiswch y rhagosodiad **Grŵp wedi'i reoli**. Mae gweinyddwyr yn cymeradwyo pob aelod newydd, a dim ond crewyr a gweinyddwyr all newid costau. Gwahoddwch bobl gyda dolen neu god QR; gyda chymeradwyaeth ymlaen, mae gweinyddwr yn gadael pob person i mewn, felly mae'r rhestr gwesteion yn aros yn rhestr gwesteion. Pan fydd y digwyddiad drosodd, clowch y grŵp fel bod y rhifau'n aros yn eu lle."
+  - heading: "Setlo ar ôl y parti"
+    body: "Unwaith y bydd yr anfoneb olaf i mewn, mae'r balansau'n dangos **pwy sy'n ddyledus i bwy**, ac mae Side Badger yn awgrymu rhestr fer o daliadau sy'n setlo pawb. Talwch eich gilydd sut bynnag y dymunwch, yna cofnodwch y taliad yn y grŵp. Dyw Side Badger byth yn symud arian, felly mae'r grŵp yn cadw'r cyfrif tra bod y trosglwyddiadau'n digwydd yn eich apiau bancio eich hun. Mae'r dudalen [setlo](page:feature/settle-up) yn dangos sut mae cybolfa yn dod yn rhestr fer."
+exampleAfter: 5
+example:
+  heading: "Anrheg grŵp: chwe phleidlais drosti, £150 i'w rhannu"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Anrheg grŵp"
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: "Y nodweddion y mae hyn yn eu defnyddio"
+faq:
+  heading: "Cwestiynau"
+  items:
+    - q: "Gall gwesteion weld y grŵp heb ymuno?"
+      a: "Na. Mae pobl yn ymuno gyda dolen neu god QR a chyfrif am ddim, felly gallant weld y grŵp unwaith y maent i mewn."
+    - q: "Gall Side Badger gasglu'r arian?"
+      a: "Na. Mae Side Badger yn cadw'r cyfrif ac nid yw byth yn symud arian. Talwch eich gilydd sut bynnag y dymunwch, yna cofnodwch y taliad. Mae am ddim, heb hysbysebion a heb gyfyngiadau dyddiol; gweler [prisiau](page:pricing)."
+    - q: "Gall pleidleisiau fod yn ddienw?"
+      a: "Gallant. Wrth greu pôl gallwch guddio pwy bleidleisiodd dros beth. Dim ond cyn y bleidlais gyntaf y gall y gosodiadau newid."
+    - q: "Gall pobl gyfrannu symiau gwahanol?"
+      a: "Gallant. Rhannwch gost yn ôl symiau union, fel mai cyfran pob person yw'r ffigur y cytunwyd arno, neu gadewch allan y bobl nad oeddent yn rhan ohoni."
+    - q: "Gall trefnydd gadw'r llyfrau?"
+      a: "Gall. Defnyddiwch y rhagosodiad grŵp wedi'i reoli, fel mai dim ond crewyr a gweinyddwyr sy'n newid costau a bod gweinyddwyr yn cymeradwyo aelodau newydd."

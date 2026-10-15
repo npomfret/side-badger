@@ -1,0 +1,126 @@
+translatedFrom: "923c938f"
+review:
+  status: machine
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: "Partager les frais dans 140 devises, converties ou séparées"
+  description: "Saisissez chaque dépense dans la devise où vous avez payé, gardez les soldes séparés ou convertissez à un taux que vous voyez et pouvez modifier, puis réglez avec une courte liste de paiements."
+h1: "Partager les frais dans 140 devises"
+navLabel: "Plusieurs devises"
+lead: "Des euros, des yens, et ce taxi en bahts. Side Badger prend chaque dépense dans la devise où vous avez payé, garde les soldes en ordre, et peut convertir quand votre groupe préfère régler en une fois. Il fonctionne dans 140 devises, et il convient naturellement aux [voyages en groupe](page:use-case/group-trips)."
+cta:
+  heading: "Apportez vos euros, apportez vos yens"
+  body: "Créez un compte, lancez un groupe et ajoutez la première dépense dans la devise que vous aviez en poche."
+  button: "Créer un compte gratuit"
+problem:
+  heading: "Saisissez-la comme vous l'avez payée"
+  body: "Un voyage se paie rarement dans une seule devise. L'hôtel a été réservé chez vous en livres, le dîner payé en yens, et le café de l'aéroport dans ce que l'escale utilisait. Tout convertir à la main avant même de pouvoir saisir, c'est ainsi que les tableurs sont abandonnés. Dans Side Badger, vous saisissez chaque dépense dans la devise du reçu, et chaque montant suit les règles de sa devise : les yens n'ont pas de décimales et les dinars en ont trois. Vos devises récemment utilisées arrivent en premier dans la liste."
+workflow:
+  heading: "Gardez les devises séparées, ou convertissez au fil de l'eau"
+  steps:
+    - title: "Ajoutez la dépense dans sa propre devise"
+      body: "Choisissez la devise, saisissez le montant, dites qui a payé et qui partage. Rien d'autre n'est nécessaire. C'est le réglage par défaut, et il garde le montant d'origine exactement tel que vous l'avez saisi."
+      shot: S07
+      shotAlt: "Le formulaire de dépense avec un montant en yens saisi"
+    - title: "Suivez un solde par devise"
+      body: "Les soldes sont tenus séparément par devise, et chacun a sa propre courte liste de paiements suggérés. Les livres se règlent en livres et les yens en yens."
+      shot: S10
+      shotAlt: "L'écran des soldes avec des dettes simplifiées dans deux devises"
+    - title: "Ou convertissez, quand le groupe préfère régler en une fois"
+      body: "Choisissez une autre devise en saisissant la dépense et Side Badger peut la convertir à un taux de change actuel, que vous pouvez changer pour le taux que vous avez réellement obtenu. Le montant converti rejoint le solde dans cette devise. La conversion est un choix que fait le groupe, jamais quelque chose qui se passe dans votre dos."
+options:
+  heading: "Un taux que vous voyez et pouvez modifier"
+  items:
+    - title: "Le taux est affiché"
+      body: "Quand vous convertissez, le taux et le montant converti apparaissent sur le formulaire, donc personne n'a à croire un chiffre sur parole."
+    - title: "Saisissez le vôtre"
+      body: "Un meilleur taux au bureau de change, ou un moins bon à l'aéroport ? Modifiez le taux pour celui que vous avez réellement obtenu et le montant converti se met à jour."
+    - title: "L'original reste"
+      body: "Le montant d'origine reste sur la dépense, à côté du montant converti, pour quiconque demande combien c'était en yens."
+    - title: "Convertir est gratuit"
+      body: "Convertir ne coûte rien. Il n'y a aucun frais pour saisir une dépense dans une autre devise."
+example:
+  heading: "Quatre amis au Japon, réglés de deux façons"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "l'hôtel, réservé de chez soi"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "dîner au Japon"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "billets de train"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "entrée du temple"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "Une seule devise pour tout le groupe"
+    body: "Si votre groupe préfère ne pas y penser, choisissez une devise de groupe et le formulaire convertit chaque nouvelle dépense dedans, à un taux que vous pouvez toujours voir et changer. Cela ne s'applique qu'aux dépenses nouvelles et copiées. Les modifications et les dépenses existantes restent telles quelles, donc rien de déjà enregistré ne change sous vos yeux."
+  - heading: "Vous devez des euros, vous payez en livres"
+    body: "Payé en yens, réglé en livres ? Pas de souci. Quand vous enregistrez un paiement, vous pouvez le convertir aussi, pour que celui qui doit des euros puisse payer en livres et que le solde en euros tombe tout de même juste. Remboursez-vous comme vous voulez, puis enregistrez."
+  - heading: "Des règles pour le groupe"
+    body: "Limitez un groupe aux devises que vous utilisez vraiment, et définissez une valeur par défaut pour que le formulaire s'ouvre sur la bonne. Des vacances au Portugal n'ont pas besoin de 139 autres options à côté de la note du dîner, et un [mariage à l'étranger](page:use-case/events-and-celebrations) en demande probablement deux."
+limits:
+  heading: Limites
+  items:
+    - "Le taux est fixé quand la dépense est enregistrée. Les anciennes dépenses ne sont jamais réévaluées."
+    - "Side Badger récupère un taux actuel quand il le peut. Il n'est pas garanti pour chaque paire, et vous pouvez toujours saisir le taux vous-même."
+    - "La conversion automatique du groupe ne s'applique qu'aux dépenses nouvelles et copiées, pas aux modifications ni aux dépenses existantes."
+    - "Chaque dépense est plafonnée à 999,999.99 dans sa propre devise."
+    - "Il y a 140 devises. Les cryptomonnaies et les métaux n'en font pas partie."
+    - "Side Badger enregistre les paiements. Il ne fait jamais circuler ni échanger l'argent."
+useCasesHeading: "Où cela aide"
+faq:
+  heading: Questions
+  items:
+    - q: "Quel taux de change utilisez-vous ?"
+      a: "Un taux de change actuel, récupéré quand vous saisissez la dépense là où il y en a un. Vous pouvez le changer pour le taux que vous avez réellement obtenu, et le montant converti se met à jour."
+    - q: "Les anciennes dépenses sont-elles réévaluées ?"
+      a: "Non. Le taux est fixé quand la dépense est enregistrée, donc un solde ne dérive pas parce que le marché a bougé."
+    - q: "Prenez-vous en charge les cryptomonnaies ?"
+      a: "Non. Il y a 140 devises, et les cryptomonnaies n'en font pas partie."
+    - q: "Pourquoi ne puis-je pas saisir 2,000,000 de roupies indonésiennes ?"
+      a: "Chaque dépense est plafonnée à 999,999.99 dans sa propre devise. Saisissez-la dans une autre devise et convertissez, ou scindez-la en deux dépenses."
+    - q: "La conversion coûte-t-elle quelque chose ?"
+      a: "Non. Convertir est gratuit, comme le reste de Side Badger. Voir les [tarifs](page:pricing)."
+    - q: "Dois-je convertir ?"
+      a: "Non. Les devises restent séparées sauf si vous ou votre groupe choisissez de convertir, et chaque devise a sa propre courte liste de paiements."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - faq.heading

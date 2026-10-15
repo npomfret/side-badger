@@ -1,0 +1,107 @@
+translatedFrom: "fd23c99b"
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+meta:
+  title: "Comment fonctionne Side Badger | Partager les dépenses d'un groupe en cinq étapes"
+  description: "Créez un groupe, invitez des personnes, ajoutez des dépenses et réglez vos comptes. Découvrez ce qui se passe entre « quelqu'un a payé » et « on est quittes », avec un exemple détaillé."
+h1: "Comment fonctionne Side Badger"
+navLabel: "Comment ça marche"
+lead: "Que se passe-t-il entre « quelqu'un a payé » et « on est quittes » ? Cinq étapes, aucun tableur, et un blaireau surtout décoratif. Voici tout le trajet, du premier groupe au dernier paiement enregistré. Pour le détail de chaque étape, voyez [partager les dépenses](page:feature/split-expenses) et [régler les comptes](page:feature/settle-up)."
+cta:
+  heading: "De « je prends celle-ci » à « on est quittes »"
+  body: "Créez un compte gratuit, lancez un groupe et ajoutez la première dépense. Le blaireau ne jugera pas le reçu."
+  button: "Créer un compte gratuit"
+steps:
+  - title: "Créez un groupe"
+    body: "Faites un groupe par maison, voyage ou événement, pour que le loyer ne se retrouve jamais dans la même liste que le cadeau de mariage. Donnez-lui un nom, choisissez le nom sous lequel les autres vous verront et, si vous le souhaitez, limitez les devises acceptées. Votre tableau de bord affiche ensuite tous vos groupes, et votre situation dans chacun, sur un seul écran."
+    shot: S02
+    shotAlt: "La boîte de dialogue de création de groupe avec la section des restrictions de devises ouverte"
+  - title: "Invitez vos proches"
+    body: "Partagez un lien d'invitation ou montrez un code QR, et choisissez sa durée de validité, de 15 minutes à 5 jours. Chaque personne qui rejoint a besoin d'un compte gratuit et d'un e-mail vérifié, et un groupe compte jusqu'à 50 personnes. Si vous voulez contrôler qui entre, activez l'approbation et un admin laisse entrer chaque personne."
+    shot: S03
+    shotAlt: "La boîte de dialogue d'invitation sur l'onglet du lien, avec un code QR et les choix de durée de validité"
+  - title: "Ajoutez les dépenses au fil de l'eau"
+    body: "Dites qui a payé, combien, et pour qui. Partagez à parts égales, par montants exacts ou par pourcentage, et laissez de côté les personnes qui n'étaient pas concernées. Ajoutez la dépense et tout le monde la voit tout de suite, avec ce qui a changé et qui l'a modifié."
+    shot: S05
+    shotAlt: "Le formulaire de dépense avec un partage par pourcentage, qui répartit le loyer selon la taille des chambres"
+  - title: "Surveillez les soldes"
+    body: "Side Badger tient un solde à jour pour chaque devise, pour voir d'un coup d'œil qui doit quoi à qui. Plutôt que de laisser chacun démêler un écheveau de petites dettes, il suggère une courte liste de paiements qui règle les comptes du groupe."
+    shot: S10
+    shotAlt: "L'écran des soldes affichant des dettes simplifiées dans deux devises, avec « Tout afficher » activé"
+  - title: "Réglez en dehors de l'appli, enregistrez dedans"
+    body: "Side Badger ne fait jamais circuler d'argent. Remboursez-vous comme vous voulez, puis enregistrez le paiement pour que les soldes se mettent à jour, et l'écran de chacun s'actualise sans rechargement. « Réglé » veut simplement dire que les soldes sont à zéro. Personne ne peut quitter un groupe tant qu'il doit de l'argent ou qu'on lui en doit, donc celui qui s'apprête à partir règle d'abord."
+    shot: S11
+    shotAlt: "Le formulaire de paiement avec les boutons de règlement rapide et l'avis de paiement partiel"
+requirements:
+  heading: "Ce qu'il vous faut"
+  items:
+    - "Un compte gratuit. Il suffit d'une adresse e-mail et d'un mot de passe, et vous vérifiez l'e-mail avant de pouvoir ajouter quoi que ce soit."
+    - "Avoir 18 ans ou plus."
+    - "Un navigateur récent sur un téléphone ou un ordinateur, et une connexion. Side Badger n'est pas une appli des boutiques d'applications et ne fonctionne pas hors connexion."
+    - "En option, une place sur votre écran d'accueil. Pas besoin de boutique d'applications : vous pouvez ajouter Side Badger à votre écran d'accueil ou à votre dock, et il s'ouvre comme une appli."
+example:
+  heading: "Trois amis après une soirée"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: "Dîner"
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: Taxi
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: "39 langues, et pensé pour plus de monde"
+    body: "Utilisez Side Badger en 39 langues, dont l'arabe, le persan et l'ourdou, qui s'écrivent de droite à gauche. Chaque membre du groupe peut choisir la sienne, donc la page du groupe peut être en arabe pour l'un et en anglais pour le suivant. Il est aussi conçu pour les utilisateurs de clavier et de lecteur d'écran, et les couleurs des membres s'accompagnent de motifs, pour que vous n'ayez pas à distinguer le vert du rouge."
+faq:
+  heading: Questions
+  items:
+    - q: "Faut-il un compte pour tout le monde ?"
+      a: "Oui, un compte gratuit. Chaque personne vérifie son e-mail avant d'ajouter quoi que ce soit."
+    - q: "Y a-t-il une appli ?"
+      a: "Elle fonctionne dans le navigateur, et vous pouvez l'ajouter à votre écran d'accueil ou à votre dock pour qu'elle s'ouvre comme une appli. Il n'y a pas de version dans les boutiques d'applications ni de mode hors connexion."
+    - q: "Side Badger fait-il circuler l'argent ?"
+      a: "Non. Il tient le compte et suggère des paiements, et vous vous remboursez comme vous voulez. Vous enregistrez ensuite le paiement. Voir [régler les comptes](page:feature/settle-up)."
+    - q: "Peut-on partir en devant de l'argent ?"
+      a: "Non. Personne ne peut quitter un groupe tant qu'il doit de l'argent ou qu'on lui en doit, donc il règle d'abord."
+    - q: "Combien de personnes peuvent rejoindre un groupe ?"
+      a: "Jusqu'à 50 personnes par groupe. Invitez-les avec un lien ou un code QR, et activez l'approbation si vous voulez qu'un admin laisse entrer chaque personne."
+    - q: "Et pour les voyages avec plus d'une devise ?"
+      a: "Les soldes sont tenus séparément pour chaque devise. Voir [plusieurs devises](page:feature/multiple-currencies)."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.expenses.1.label
+  - faq.heading

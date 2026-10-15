@@ -226,7 +226,7 @@ export default {
   'pricing.hero.subtitle': 'Bez maksas. Bez reklāmām. Bez dienas ierobežojumiem.',
   'pricing.hero.title': 'Side Badger ir bez maksas',
   'pricing.limits.amount.label': 'Summa vienā izdevumā vai maksājumā',
-  'pricing.limits.amount.value': 'Līdz 999,999.99 savā valūtā. Tas pats skaitlis attiecas uz katru valūtu neatkarīgi no tās vērtības.',
+  'pricing.limits.amount.value': 'Līdz 999 999,99 savā valūtā. Tas pats skaitlis attiecas uz katru valūtu neatkarīgi no tās vērtības.',
   'pricing.limits.attachments.label': 'Pielikumi komentāram',
   'pricing.limits.attachments.value': '3, katrs līdz 5 MB',
   'pricing.limits.caption': 'Side Badger ierobežojumi',

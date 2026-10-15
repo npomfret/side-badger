@@ -1,8 +1,6 @@
 translatedFrom: "56ee9b03"
 review:
-  status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -115,7 +113,7 @@ limits:
     - "Par katru izdevumu maksā viens cilvēks. Ja maksāja divi, reģistrējiet divus izdevumus."
     - "Nav sadales pa pozīcijām un nav sadales pa daļām. Ir vienādi, precīzas summas un procenti."
     - "Procentiem jāsakrīt ar 100."
-    - "Izdevums var būt līdz 999,999.99 savā valūtā, ar tās valūtas ierastajām decimālzīmēm."
+    - "Izdevums var būt līdz 999 999,99 savā valūtā, ar tās valūtas ierastajām decimālzīmēm."
     - "Izdevumi neatkārtojas paši. Tā vietā nokopējiet pagājušā mēneša."
     - "Datumi nevar būt nākotnē vai vairāk nekā 10 gadus senā pagātnē."
     - "Izdevums, kurā iesaistīts cilvēks, kas pametis grupu, kļūst tikai lasāms."

@@ -1,0 +1,90 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: machine
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+meta:
+  title: "Gawanya gharama za sherehe, harusi na zawadi za kikundi"
+  description: "Shiriki gharama za sherehe, harusi au zawadi ya kikundi watu wanapochangia kiasi tofauti. Piga kura kuhusu mpango, gawanya kwa kiasi halisi na uone nani anadaiwa na nani."
+h1: "Gawanya gharama za sherehe, harusi na zawadi za kikundi"
+navLabel: "Matukio na sherehe"
+lead: "Gawana amana, mapambo, na miavuli ya dharura. Mpangilio wa viti mwachie mtu jasiri zaidi. Side Badger huweka **nani alichangia nini** mahali pamoja, ili mwandaaji naye afurahie sherehe."
+cta:
+  heading: "Anza na sherehe inayofuata"
+  body: "Fungua akaunti, tengeneza kikundi cha tukio na utume kiungo cha mwaliko. Side Badger ni bure, bila matangazo na bila vikomo vya kila siku."
+  button: "Fungua akaunti ya bure"
+scenario:
+  heading: "Kila mtu anachangia, si kila mara kiasi kilekile"
+  body: "Mtu mmoja analipa amana ya ukumbi, mwingine ananunua keki, na wa tatu anaweka zawadi ya kikundi kwenye kadi yake. Baadhi ya wageni huja kwa kila kitu na wengine kwa chakula cha jioni tu. Kuweka hesabu ya haki ya hayo kwenye mjadala wa gumzo ni kazi ambayo hakuna aliyeiombea. Kikundi cha Side Badger kinabeba yote, mchanganyiko wa kiasi ukiwa wowote, na kinamwonyesha kila mtu anachodaiwa au anachodai. Tazama [inavyofanya kazi](page:how-it-works) kwa mambo ya msingi, au endelea kusoma kuhusu tukio."
+sections:
+  - heading: "Amueni pamoja"
+    body: "Kabla pesa hazijasogezwa, peleka chaguo kwenye **kura ya maoni**. Ongeza hadi chaguo 10, kama kumbi mbili au mawazo matatu ya zawadi, na wacha kila mtu apige kura. Unaweza kuficha nani alimpigia nani kura, ili kila chaguo lipate usikilizaji wa haki, na mshindi anaonekana kura ikifungwa. Hakuna anayelazimika kurudi nyuma kwenye jumbe arobaini kujua nini kiliamuliwa."
+  - heading: "Nani yuko kwenye nini"
+    body: "Si wote wanalipa sawa, na si wote wanahusika katika kila gharama. Gawanya gharama kwa usawa, kwa asilimia au kwa **kiasi halisi**, ili sehemu ya kila mtu iwe kiasi mlichokubaliana. Waache nje wasiohusika, kama wageni walioruka chakula cha jioni au marafiki ambao hawakujiunga na zawadi. Kila gharama ina mlipaji mmoja, na wengine wote kwenye mgawanyo wanadaiwa sehemu yao kwake. Maelezo yako kwenye ukurasa wa [kugawanya gharama](page:feature/split-expenses)."
+  - heading: "Hifadhi makaratasi"
+    body: "Ongeza maelezo kwenye gharama, kama ilichohusu. Maoni hubaki **karibu na gharama** yanayoihusu, kwa hivyo swali “keki ilikuwa £45 au £54?” na jibu lake vinaishi mahali pamoja. Maoni yanaruhusu herufi 500, ambazo ni nyingi kwa swali kuhusu amana."
+  - heading: "Udhibiti wa mwandaaji"
+    body: "Ushirikiano wazi unamruhusu mwanachama yeyote kuongeza na kuhariri gharama, jambo ambalo ni sawa kwa zawadi ndogo. Kwa harusi au sherehe kubwa, chagua mpangilio wa **kikundi kinachosimamiwa**. Wasimamizi huidhinisha kila mwanachama mpya, na ni waundaji na wasimamizi tu wanaoweza kubadilisha gharama. Alika watu kwa kiungo au msimbo wa QR; idhini ikiwa imewashwa, msimamizi anamruhusu kila mtu aingie, kwa hivyo orodha ya wageni inabaki orodha ya wageni. Tukio likiisha, funga kikundi ili nambari zibaki palepale."
+  - heading: "Maliza hesabu baada ya sherehe"
+    body: "Ankara ya mwisho ikishaingia, salio linaonyesha **nani anadaiwa na nani**, na Side Badger inapendekeza orodha fupi ya malipo inayomaliza hesabu za kila mtu. Lipaneni mtakavyo, kisha rekodi malipo kwenye kikundi. Side Badger haisogezi pesa kamwe, kwa hivyo kikundi kinaweka hesabu huku uhamisho ukifanyika kwenye programu zenu za benki. Ukurasa wa [kumaliza hesabu](page:feature/settle-up) unaonyesha jinsi mkanganyiko unavyokuwa orodha fupi."
+exampleAfter: 5
+example:
+  heading: "Zawadi ya kikundi: kura sita kuiunga mkono, £150 za kugawanya"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Zawadi ya kikundi"
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: "Vipengele vinavyotumika hapa"
+faq:
+  heading: "Maswali"
+  items:
+    - q: "Je, wageni wanaweza kuona kikundi bila kujiunga?"
+      a: "Hapana. Watu hujiunga kwa kiungo au msimbo wa QR na akaunti ya bure, kwa hivyo wanaweza kuona kikundi wakishaingia."
+    - q: "Je, Side Badger inaweza kukusanya pesa?"
+      a: "Hapana. Side Badger huweka hesabu na haisogezi pesa kamwe. Lipaneni mtakavyo, kisha rekodi malipo. Ni bure, bila matangazo na bila vikomo vya kila siku; tazama [bei](page:pricing)."
+    - q: "Je, kura zinaweza kuwa za siri?"
+      a: "Ndiyo. Unapounda kura ya maoni unaweza kuficha nani alimpigia nani kura. Mipangilio inaweza kubadilishwa kabla ya kura ya kwanza tu."
+    - q: "Je, watu wanaweza kuchangia kiasi tofauti?"
+      a: "Ndiyo. Gawanya gharama kwa kiasi halisi, ili sehemu ya kila mtu iwe kiasi mlichokubaliana, au waache nje wasiohusika."
+    - q: "Je, mwandaaji anaweza kuweka hesabu?"
+      a: "Ndiyo. Tumia mpangilio wa kikundi kinachosimamiwa, ili ni waundaji na wasimamizi tu wabadilishe gharama na wasimamizi waidhinishe wanachama wapya."

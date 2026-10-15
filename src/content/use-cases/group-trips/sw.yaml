@@ -1,0 +1,108 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: machine
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Gawanya gharama za safari ya kikundi, kwa sarafu 140"
+  description: "Fuatilia nani alilipa nini kwenye safari ya kikundi, weka gharama kwa sarafu ya hapo, zibadilishe au la, na maliza hesabu mara moja mwishoni. Bure, kwenye kivinjari chako."
+h1: "Gawanya gharama za safari ya kikundi, kwa sarafu 140"
+navLabel: "Safari za kikundi"
+lead: "Fuatilia villa, teksi, na raundi ile ya vinywaji ambayo hakuna anayekumbuka kujitolea kununua. Side Badger huweka hesabu inayoendelea ukiwa safarini, [hushughulikia pauni, euro na sarafu nyingine 138](page:feature/multiple-currencies), na kukupa [orodha fupi ya malipo](page:feature/settle-up) ukirudi nyumbani."
+cta:
+  heading: "Hesabu za likizo, zimekamilika kabla ngozi haijarudi rangi yake"
+  body: "Unda kikundi, tuma kiungo cha mwaliko kwa watu walio kwenye safari, na ongeza gharama zinapotokea."
+  button: "Fungua akaunti ya bure"
+scenario:
+  heading: "Kila mtu alilipia kitu, kwa sarafu fulani"
+  body: "Mtu mmoja alihifadhi tiketi za ndege, mwingine alilipia villa kwa kadi, na wa tatu alilipia chakula cha jioni kwa pesa taslimu. Kufikia siku ya tatu hakuna anayejua nani yuko mbele. Swali ni rahisi, ingawa jibu mara nyingi liko kwenye lahajedwali ambayo hakuna anayetaka kuifungua. Nani alilipa nini, kwa sarafu gani, na kila mtu anamaliza hesabu vipi mara moja mwishoni?"
+sections:
+  - heading: "Kabla ya kwenda"
+    body: "Peleka orodha fupi ya villa kwenye kura, bila kujulikana ukipenda, ili uamuzi uwe wa kikundi si wa yule anayenuna kwa muda mrefu zaidi. Kisha weka orodha ya ununuzi ya pamoja karibu na bili za ununuzi, ili hakuna anayenunua mirija mitatu ya mafuta ya jua na hakuna adapta ya plagi."
+  - heading: "Ukiwa safarini"
+    body: "Ongeza kila gharama inapotokea, kwa sarafu uliyolipia. Piga picha risiti na Side Badger itajaza jumla, tarehe na mahali ili uvihakiki; picha za risiti husomwa na huduma ya AI ya Google. Badilisha kiasi kwa kiwango cha sasa cha kubadilisha fedha, ambacho unaweza kukibadilisha kiwe kiwango ulichopata kwa kweli, na kiasi cha awali kinabaki kwenye gharama. Au acha euro zibaki euro na uamue baadaye. Kikundi pia kinaweza kuchagua sarafu moja, na gharama mpya hubadilishwa kuwa hiyo kiotomatiki."
+  - heading: "Si kila mtu alifanya kila kitu"
+    body: "Wengine waliruka chakula cha jioni, wengine hawakuenda kwenye safari ya boti. Waache nje ya gharama ambazo hawakuhusika nazo, na ugawanye zilizobaki [kwa usawa, kwa kiasi halisi au kwa asilimia](page:feature/split-expenses). Hakuna anayelipia sehemu ya safari aliyoitumia akiwa amelala."
+  - heading: "Maliza hesabu ukifika nyumbani"
+    body: "Side Badger hupendekeza orodha fupi ya malipo inayomaliza hesabu za kila mtu. Lipaneni mtakavyo, kisha rekodi. Kukiwa na sarafu mchanganyiko, ziweke kando au zibadilishe unavyoendelea; mfano wa Lisbon hapa chini unaonyesha zote mbili."
+  - heading: "Wikendi za kuaga ukapera"
+    body: "Wikendi ya mbali yenye mgeni wa heshima inahitaji usimamizi kidogo zaidi. Ifanye kikundi kinachosimamiwa, ambapo wasimamizi wanaidhinisha wanachama wapya na ni waundaji na wasimamizi tu wanaoweza kubadilisha gharama. Tumia kiasi halisi kwa sehemu ya mgeni wa heshima, punguza kikundi kwa sarafu mnazotumia kweli, na funga kikundi kikiisha ili nambari zibaki palepale."
+exampleAfter: 4
+example:
+  heading: "Marafiki wanne mjini Lisbon"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Tiketi za ndege"
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: "Villa ya likizo"
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: "Chakula cha jioni"
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Safari ya boti"
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: "Kile ambacho safari hutegemea"
+faq:
+  heading: "Maswali"
+  items:
+    - q: "Je, watu walioruka chakula cha jioni wanaweza kuachwa nje?"
+      a: "Ndiyo. Chagua nani alihusika katika kila gharama na ni wao tu wanaotozwa."
+    - q: "Je, inafanya kazi bila mawimbi?"
+      a: "Hapana. Side Badger inahitaji muunganisho, kwa hivyo ongeza gharama ukirudi kwenye wifi."
+    - q: "Je, kila mtu anahitaji kusakinisha kitu?"
+      a: "Hapana. Inafanya kazi kwenye kivinjari. Tuma kiungo cha mwaliko na watu wanajiunga kutoka kwenye simu zao."
+    - q: "Inatumia kiwango gani cha kubadilisha fedha?"
+      a: "Kiwango cha sasa cha kubadilisha fedha unapoweka gharama, au chako mwenyewe ukipata tofauti. Kiwango hurekebishwa gharama inapohifadhiwa, kwa hivyo gharama za zamani hazipimwi upya kamwe."
+    - q: "Je, tunaweza kugandisha kikundi baada ya safari?"
+      a: "Ndiyo. Msimamizi anaweza kufunga kikundi ili nambari zibaki palepale."
+    - q: "Je, kuna kikomo cha kiasi?"
+      a: "Ndiyo. 999,999.99 kwa kila gharama, katika sarafu yake yenyewe."

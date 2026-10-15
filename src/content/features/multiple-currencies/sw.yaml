@@ -1,0 +1,125 @@
+translatedFrom: "923c938f"
+review:
+  status: machine
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Gawanya gharama kwa sarafu 140, zilizobadilishwa au kutenganishwa"
+  description: "Weka kila gharama kwa sarafu uliyolipia, weka salio kando au ubadilishe kwa kiwango unachoweza kuona na kubadilisha, kisha maliza hesabu kwa orodha fupi ya malipo."
+h1: "Gawanya gharama kwa sarafu 140"
+navLabel: "Sarafu nyingi"
+lead: "Euro, yen, na ile teksi moja kwa baht. Side Badger inapokea kila gharama kwa sarafu uliyolipia, inaweka salio sawa, na inaweza kubadilisha kikundi chenu kikipendelea kumaliza mara moja. Inafanya kazi kwa sarafu 140, na inafaa asili kwa [safari za kikundi](page:use-case/group-trips)."
+cta:
+  heading: "Leta euro zako, leta yen zako"
+  body: "Fungua akaunti, anzisha kikundi na ongeza gharama ya kwanza kwa sarafu yoyote uliyokuwa nayo mkononi."
+  button: "Fungua akaunti ya bure"
+problem:
+  heading: "Iweke kama ulivyolipa"
+  body: "Safari hulipiwa kwa sarafu moja mara chache. Hoteli ilihifadhiwa nyumbani kwa pauni, chakula cha jioni kililipwa kwa yen, na kahawa ya uwanja wa ndege ilikuwa kwa sarafu yoyote iliyotumika mahali pa kusubiri ndege. Kubadilisha kila kitu kwa mkono kabla hata hujakiweka ndiko kunakofanya lahajedwali ziachwe. Katika Side Badger unaweka kila gharama kwa sarafu iliyo kwenye risiti, na kila kiasi hufuata kanuni za sarafu yake, kwa hivyo yen hazina desimali na dinari zina tatu. Sarafu ulizotumia hivi karibuni huja kwanza kwenye orodha."
+workflow:
+  heading: "Weka sarafu kando, au badilisha unavyoendelea"
+  steps:
+    - title: "Ongeza gharama kwa sarafu yake yenyewe"
+      body: "Chagua sarafu, andika kiasi, sema nani alilipa na nani alishiriki. Hakuna kingine kinachohitajika. Hili ndilo chaguo-msingi, na linahifadhi kiasi cha awali kama ulivyokiweka hasa."
+      shot: S07
+      shotAlt: "Fomu ya gharama yenye kiasi cha yen kilichowekwa"
+    - title: "Tazama salio kwa kila sarafu"
+      body: "Salio huwekwa kando kwa kila sarafu, na kila moja hupata orodha yake fupi ya malipo yanayopendekezwa. Pauni humalizwa kwa pauni na yen kwa yen."
+      shot: S10
+      shotAlt: "Skrini ya salio yenye madeni yaliyorahisishwa kwa sarafu mbili"
+    - title: "Au badilisha, kikundi kikipendelea kumaliza mara moja"
+      body: "Chagua sarafu nyingine unapoweka gharama na Side Badger inaweza kuibadilisha kwa kiwango cha sasa cha kubadilisha fedha, ambacho unaweza kukibadilisha kiwe kiwango ulichopata kwa kweli. Kiasi kilichobadilishwa kinaungana na salio katika sarafu hiyo. Ubadilishaji ni uchaguzi wa kikundi, si kitu kinachotokea nyuma ya mgongo wako."
+options:
+  heading: "Kiwango unachoweza kuona na kubadilisha"
+  items:
+    - title: "Kiwango kinaonyeshwa"
+      body: "Unapobadilisha, kiwango na kiasi kilichobadilishwa huonekana kwenye fomu, kwa hivyo hakuna anayelazimika kuamini nambari bila uthibitisho."
+    - title: "Andika chako mwenyewe"
+      body: "Umepata kiwango bora kwenye dawati la fedha, au kibaya uwanja wa ndege? Hariri kiwango kiwe ulichopata kwa kweli na kiasi kilichobadilishwa kinasasishwa."
+    - title: "Cha awali kinabaki"
+      body: "Kiasi cha awali kinabaki kwenye gharama, kando ya kilichobadilishwa, kwa yeyote atakayeuliza kilikuwa kiasi gani kwa yen."
+    - title: "Kubadilisha ni bure"
+      body: "Kubadilisha hakugharimu chochote. Hakuna ada ya kuweka gharama kwa sarafu nyingine."
+example:
+  heading: "Marafiki wanne nchini Japani, hesabu zimekamilika kwa njia mbili"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "hoteli, iliyohifadhiwa nyumbani"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "chakula cha jioni nchini Japani"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "tiketi za treni"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "kiingilio cha hekalu"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "Sarafu moja kwa kikundi kizima"
+    body: "Ikiwa kikundi chenu hakitaki kufikiria hili, chagua sarafu ya kikundi na fomu itabadilisha kila gharama mpya kuwa hiyo, kwa kiwango ambacho bado unaweza kuona na kubadilisha. Hii inatumika kwa gharama mpya na zilizonakiliwa tu. Uhariri na gharama zilizopo hubaki kama zilivyo, kwa hivyo hakuna kilichorekodiwa kinachobadilika bila wewe kujua."
+  - heading: "Unadaiwa euro, lipa kwa pauni"
+    body: "Ulilipa kwa yen, unamalizia kwa pauni? Sawa tu. Unaporekodi malipo unaweza kuyabadilisha pia, kwa hivyo anayedaiwa euro anaweza kulipa kwa pauni na salio la euro bado linatoka sawa. Lipaneni mtakavyo, kisha rekodi."
+  - heading: "Kanuni za kikundi"
+    body: "Punguza kikundi kwa sarafu mnazotumia kweli, na weka chaguo-msingi ili fomu ifunguke kwenye sarafu sahihi. Likizo nchini Ureno haihitaji chaguo nyingine 139 kando ya bili ya chakula cha jioni, na [harusi nje ya nchi](page:use-case/events-and-celebrations) huenda inahitaji mbili."
+limits:
+  heading: "Vikomo"
+  items:
+    - "Kiwango hurekebishwa gharama inapohifadhiwa. Gharama za zamani hazipimwi upya kamwe."
+    - "Side Badger huchukua kiwango cha sasa pale inapowezekana. Si kila jozi ina uhakika wa kupata kimoja, na unaweza kuandika kiwango mwenyewe wakati wowote."
+    - "Ubadilishaji wa kiotomatiki wa kikundi unatumika kwa gharama mpya na zilizonakiliwa tu, si kwa uhariri wala gharama zilizopo."
+    - "Kila gharama ina kikomo cha 999,999.99 katika sarafu yake yenyewe."
+    - "Kuna sarafu 140. Sarafu za kidijitali na metali hazimo."
+    - "Side Badger hurekodi malipo. Haisogezi wala kubadilisha pesa kamwe."
+useCasesHeading: "Mahali ambapo hii inasaidia"
+faq:
+  heading: "Maswali"
+  items:
+    - q: "Mnatumia kiwango gani cha kubadilisha fedha?"
+      a: "Kiwango cha sasa cha kubadilisha fedha, kinachochukuliwa unapoweka gharama pale kinapopatikana. Unaweza kukibadilisha kiwe kiwango ulichopata kwa kweli, na kiasi kilichobadilishwa kinasasishwa."
+    - q: "Je, gharama za zamani hupimwa upya?"
+      a: "Hapana. Kiwango hurekebishwa gharama inapohifadhiwa, kwa hivyo salio halihami kwa sababu soko lilihama."
+    - q: "Je, mnasaidia crypto?"
+      a: "Hapana. Kuna sarafu 140, na sarafu za kidijitali hazimo."
+    - q: "Kwa nini siwezi kuweka rupiah 2,000,000 za Indonesia?"
+      a: "Kila gharama ina kikomo cha 999,999.99 katika sarafu yake yenyewe. Iweke kwa sarafu nyingine na ubadilishe, au igawe kuwa gharama mbili."
+    - q: "Je, ubadilishaji una gharama yoyote?"
+      a: "Hapana. Kubadilisha ni bure, kama Side Badger yote. Tazama [bei](page:pricing)."
+    - q: "Je, lazima nibadilishe?"
+      a: "Hapana. Sarafu hubaki tofauti isipokuwa wewe au kikundi chako mchague kubadilisha, na kila sarafu hupata orodha yake fupi ya malipo."

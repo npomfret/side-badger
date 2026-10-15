@@ -206,7 +206,7 @@ export default {
   'pricing.faq.q3.question': 'An bhfuil teorainneacha laethúla ann?',
   'pricing.faq.q4.answer': 'Ní dhíolaimid do shonraí pearsanta, agus ní féidir ach le baill de ghrúpa an grúpa sin a fheiceáil. Níl aon fhógraí ag Side Badger, ná aon rianairí anailísíochta nó fógraí tríú páirtí.',
   'pricing.faq.q4.question': 'An ndíolann sibh mo shonraí?',
-  'pricing.faq.q5.answer': 'Cén fáth nach broc? Tá brocaigh diongbháilte, acmhainneach, agus oibríonn siad go maith i ngrúpaí. Díreach cosúil leatsa nuair atá tú ag iarraidh a fháil amach cé atá i bhfiacha cad.',
+  'pricing.faq.q5.answer': 'Cén fáth nach broc? Tá brocaigh diongbháilte, acmhainneach, agus oibríonn siad go maith i ngrúpaí. Díreach cosúil leatsa nuair atá tú ag iarraidh a fháil amach cé air a bhfuil cad dlite.',
   'pricing.faq.q5.question': 'Cén fáth broc?',
   'pricing.faq.q6.answer': 'Inis dúinn ón aip féin leis an bhfoirm aiseolais, agus is féidir leat ár bhfreagra a léamh ansin freisin.',
   'pricing.faq.q6.question': 'Cad má fhaighim fabht?',

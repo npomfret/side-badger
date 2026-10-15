@@ -1,9 +1,11 @@
-/* Noto Sans Bengali variable, bengali subset. Loaded by BaseLayout only on its own locales. */
+/* Noto Sans Bengali variable, cut to the Bengali block and weights 400-900, with every OpenType
+   layout feature kept so conjuncts and vowel signs shape as in the full font (F4: 105 KB to
+   70 KB). Loaded and preloaded by BaseLayout only on its own locales. */
 @font-face {
   font-family: 'Noto Sans Bengali';
   font-style: normal;
   font-display: swap;
-  font-weight: 100 900;
+  font-weight: 400 900;
   src: url(/fonts/noto-sans-bengali-bengali-wght-normal.woff2) format('woff2');
-  unicode-range: U+0951-0952,U+0964-0965,U+0980-09FE,U+1CD0,U+1CD2,U+1CD5-1CD6,U+1CD8,U+1CE1,U+1CEA,U+1CED,U+1CF2,U+1CF5-1CF7,U+200C-200D,U+20B9,U+25CC,U+A8F1;
+  unicode-range: U+0964-0965,U+0980-09FE,U+200C-200D,U+20B9,U+25CC;
 }

@@ -47,13 +47,15 @@ const pseudo = isPseudoLocale(locale);
 // Fonts (restructure D24). Latin, Cyrillic and Greek faces are in global.css; Arabic-script and
 // Indic locales link their own subset stylesheet; CJK uses system stacks.
 const fontScript = localeConfig[locale]?.fontScript ?? 'latin';
-const scriptFontCss: Partial<Record<string, string>> = {
-  arabic: '/fonts/noto-sans-arabic.css',
-  devanagari: '/fonts/noto-sans-devanagari.css',
-  bengali: '/fonts/noto-sans-bengali.css',
-  telugu: '/fonts/noto-sans-telugu.css',
+// Each script's stylesheet and its one webfont, preloaded (F4) so the download starts with the HTML
+// rather than after the stylesheet: every page in these locales sets its LCP text in that face.
+const scriptFonts: Partial<Record<string, { css: string; woff2: string }>> = {
+  arabic: { css: '/fonts/noto-sans-arabic.css', woff2: '/fonts/noto-sans-arabic-arabic-wght-normal.woff2' },
+  devanagari: { css: '/fonts/noto-sans-devanagari.css', woff2: '/fonts/noto-sans-devanagari-devanagari-wght-normal.woff2' },
+  bengali: { css: '/fonts/noto-sans-bengali.css', woff2: '/fonts/noto-sans-bengali-bengali-wght-normal.woff2' },
+  telugu: { css: '/fonts/noto-sans-telugu.css', woff2: '/fonts/noto-sans-telugu-telugu-wght-normal.woff2' },
 };
-const scriptFontLink = scriptFontCss[fontScript];
+const scriptFont = scriptFonts[fontScript];
 // D24: the two preloads are for Latin-script locales only. Cyrillic and Greek headings use Inter,
 // so a Space Grotesk preload there would be fetched and never used.
 const preloadLatin = fontScript === 'latin';
@@ -71,7 +73,12 @@ const preloadLatin = fontScript === 'latin';
         <link rel="preload" href="/fonts/space-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
       </>
     )}
-    {scriptFontLink && <link rel="stylesheet" href={scriptFontLink} />}
+    {scriptFont && (
+      <>
+        <link rel="preload" href={scriptFont.woff2} as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href={scriptFont.css} />
+      </>
+    )}
   </head>
   <body>
     <a href="#main-content" class="skip-link">{t('a11y.skipToContent', locale)}</a>

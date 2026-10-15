@@ -29,7 +29,8 @@ describe('isIndexable (D8)', () => {
   });
 
   it('indexes legacy and reviewed locales, not machine or checked ones', () => {
-    expect(isIndexable('home', 'fr')).toBe(true); // legacy in the lock file
+    overrideLockPages('fr', { home: 'legacy' });
+    expect(isIndexable('home', 'fr')).toBe(true);
     overrideLockPages('fr', { home: 'machine', pricing: 'checked' });
     expect(isIndexable('home', 'fr')).toBe(false);
     expect(isIndexable('pricing', 'fr')).toBe(false);

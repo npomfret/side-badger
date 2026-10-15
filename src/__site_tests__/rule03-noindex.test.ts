@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { checkNoindex } from './rules/r03-noindex';
 import { dist, overrideLockPages } from './lib/site';
 import { mentions, one } from './lib/fixtures';
@@ -9,6 +9,14 @@ describe('rule 3: non-indexable pages carry noindex and nothing that promotes th
   });
 
   describe('fixtures', () => {
+    // The fixtures' fr pages are legacy (indexable); don't depend on the repo's current review statuses
+    beforeEach(() => {
+      overrideLockPages('fr', { home: 'legacy', pricing: 'legacy' });
+    });
+    afterEach(() => {
+      overrideLockPages('fr', undefined);
+    });
+
     it('passes a clean noindex page', () => {
       expect(checkNoindex(one('good/noindex.html', 'fr/privacy/index.html'))).toEqual([]);
     });

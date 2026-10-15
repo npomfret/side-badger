@@ -51,6 +51,7 @@ const { breadcrumbJsonLd, clearNavigationCache, breadcrumbsFor, footerGroups, na
   './navigation'
 );
 const { getPage } = await import('../../site/pages');
+const { t } = await import('../../i18n');
 
 describe('navigation from the registry', () => {
   it('lists only published pages with a nav entry, in order, and marks the current page and its section', () => {
@@ -78,7 +79,12 @@ describe('navigation from the registry', () => {
 
   it('builds Home, hub, page for a page two levels down, and the JSON-LD names match the visible names', () => {
     const crumbs = breadcrumbsFor('feature/settle-up', 'fr', 'Régler les comptes');
-    expect(crumbs.map(crumb => crumb.name)).toEqual(['Home', 'Features', 'Régler les comptes']);
+    // Names come from the locale's strings, so the test holds before and after French is translated
+    expect(crumbs.map(crumb => crumb.name)).toEqual([
+      t('nav.home', 'fr'),
+      pageLabel(getPage('features')!, 'fr'),
+      'Régler les comptes',
+    ]);
     expect(crumbs.map(crumb => crumb.href)).toEqual(['/fr/', '/fr/features/', '/fr/features/settle-up/']);
 
     const [list] = breadcrumbJsonLd(crumbs) as unknown as {

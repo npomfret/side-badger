@@ -1,6 +1,6 @@
-import { describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { checkSitemap } from './rules/r08-sitemap';
-import { dist } from './lib/site';
+import { dist, overrideLockPages } from './lib/site';
 import { fx, mentions, sites } from './lib/fixtures';
 
 const S = 'https://sidebadger.me';
@@ -37,6 +37,14 @@ describe('rule 8: the sitemap equals the indexable canonical URLs', () => {
   });
 
   describe('fixtures', () => {
+    // The fixtures' fr pages are legacy (indexable); don't depend on the repo's current review statuses
+    beforeEach(() => {
+      overrideLockPages('fr', { home: 'legacy', pricing: 'legacy' });
+    });
+    afterEach(() => {
+      overrideLockPages('fr', undefined);
+    });
+
     it('passes when the sitemap lists exactly the indexable pages', () => {
       expect(checkSitemap(build(goodUrls))).toEqual([]);
     });

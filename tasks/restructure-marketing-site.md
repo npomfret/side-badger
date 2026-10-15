@@ -1067,6 +1067,14 @@ All translation happens in W4a, once, after the English site is complete (D38). 
 - **Verification:** `I18N_MODE=strict npx vitest --run -t "^(ar|fa|ur) "` (tests are named per locale) passes for the group's locales; a `PREVIEW_UNPUBLISHED=1` build contains the group's localized routes, with screenshots of them in the handover.
 - The coordinator merges all six, then P41 runs the full gate.
 
+**W4a outcome (2026-10-15).** All 38 locales are translated and back-checked: every content entry and every lock `pages` entry (`home`, `pricing`) is `checked`, so none is indexed until a fluent reviewer sets `reviewed` (D31). Back-checks ran in rounds; each failure went back to a translator and the changed page was checked again. Decisions made on the way, which translators and reviewers follow from now on:
+
+- **App-mirroring labels follow the app.** UI labels on the homepage mock-ups and UI names in page prose (the Viewer role, Quick settle, Questioned, Managed group, split types, Edit rate) use the app's own `webapp-v2/src/locales/<locale>/translation.json` wording. The exceptions are where the app's string is ungrammatical (fr `recordSettlement`, ga `scanning`) or over the label budget (id `fieldPaidBy`), and pt (below).
+- **pt is European Portuguese** (`intlCode` pt-PT). The app's `pt` is Brazilian, so app labels use European equivalents (Registar, A analisar, Ou leia este código, gerido). Revisit if the app adds pt-PT or the site adds pt-BR.
+- **Numbers typed in prose use the locale's format**, including £ amounts in worked examples, the 999,999.99 cap and 2,000,000 rupiah, because "£2,000" reads as about £2 to a decimal-comma reader. Symbol placement follows the locale (de "2.000 £", fr "2 000 £", nl-BE "£ 2.000", id "£2.000"); ga, cy and the locales that write numbers English-style keep "£2,000". Percent signs follow the locale too (eu "%30").
+- **Common back-check failures**, worth checking first in any future translation: a hedge dropped ("no set limit" → "no limit"); a limit or requirement changed ("older than 18" for "18 or over"); the pricing description claiming the terms guarantee it stays free (they promise notice); rupiah read as rupee; "weekend" as "week"; a paragraph moved to a different section from the English.
+- **Open for fluent reviewers:** whether `pricing.faq.q2.answer` quotes the English terms or a translation (locales differ); ar "Side Badger" in Latin vs older "سايد بادجر" strings; de du/Sie mix in older keys; sr "AI" left in Latin script; the style notes in each back-check commit body.
+
 ### Waves
 
 **W0. Start now, all in parallel.**

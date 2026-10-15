@@ -1,0 +1,106 @@
+translatedFrom: "fd23c99b"
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+meta:
+  title: Come funziona Side Badger | Dividi le spese di gruppo in cinque passaggi
+  description: Crea un gruppo, invita le persone, aggiungi le spese e salda i conti. Scopri cosa succede tra "qualcuno ha pagato" e "siamo pari", con un esempio svolto.
+h1: Come funziona Side Badger
+navLabel: Come funziona
+lead: Cosa succede tra "qualcuno ha pagato" e "siamo pari"? Cinque passaggi, nessun foglio di calcolo e un tasso che è per lo più decorativo. Ecco l'intero percorso, dal primo gruppo all'ultimo pagamento registrato. Per i dettagli di ogni passaggio, vedi [dividere le spese](page:feature/split-expenses) e [saldare i conti](page:feature/settle-up).
+cta:
+  heading: Da "offro io" a "siamo pari"
+  body: Crea un account gratuito, avvia un gruppo e aggiungi la prima spesa. Il tasso non giudicherà lo scontrino.
+  button: Crea un account gratuito
+steps:
+  - title: Crea un gruppo
+    body: Crea un gruppo per ogni casa, viaggio o evento, così l'affitto non finisce mai nella stessa lista del regalo di nozze. Dagli un nome, scegli il nome con cui vuoi essere visto e, se vuoi, limita le valute accettate. La tua dashboard mostra poi tutti i gruppi, e a che punto sei in ciascuno, in un'unica schermata.
+    shot: S02
+    shotAlt: La finestra di creazione del gruppo con la sezione delle restrizioni sulle valute aperta
+  - title: Invita le tue persone
+    body: Condividi un link di invito o mostra un codice QR, e decidi per quanto tempo vale, da 15 minuti fino a 5 giorni. Chi si unisce ha bisogno di un account gratuito e di un'email verificata, e un gruppo può contenere fino a 50 persone. Se vuoi scegliere chi entra, attiva l'approvazione e un admin farà entrare ogni persona.
+    shot: S03
+    shotAlt: La finestra di invito nella scheda del link, con un codice QR e le scelte di scadenza
+  - title: Aggiungi le spese man mano che succedono
+    body: Indica chi ha pagato, quanto e per chi. Dividi in parti uguali, per importi esatti o per percentuale, ed escludi chi non c'entrava. Aggiungi la spesa e tutti la vedono subito, insieme a cosa è cambiato e a chi l'ha cambiato.
+    shot: S05
+    shotAlt: Il modulo della spesa con una divisione percentuale, che ripartisce l'affitto in base alla dimensione delle stanze
+  - title: Tieni d'occhio i saldi
+    body: Side Badger tiene un saldo aggiornato per ogni valuta, così vedi a colpo d'occhio chi deve cosa a chi. Invece di lasciare che ognuno districhi una ragnatela di piccoli debiti, suggerisce una breve lista di pagamenti che salda il gruppo.
+    shot: S10
+    shotAlt: La schermata dei saldi con i debiti semplificati in due valute e l'opzione Mostra tutti attivata
+  - title: Salda fuori dall'app, registra dentro
+    body: Side Badger non sposta mai denaro. Pagatevi come vi fa più comodo, poi registrate il pagamento perché i saldi si aggiornino, e lo schermo di tutti si aggiorna senza ricaricare. "Saldare" significa semplicemente che i saldi sono a zero. Nessuno può lasciare un gruppo finché deve o deve ricevere denaro, quindi chi sta per andarsene salda prima.
+    shot: S11
+    shotAlt: Il modulo del pagamento con i pulsanti di saldo rapido e l'avviso per il pagamento parziale
+requirements:
+  heading: Cosa ti serve
+  items:
+    - Un account gratuito. Bastano un indirizzo email e una password, e devi verificare l'email prima di poter aggiungere qualsiasi cosa.
+    - Avere 18 anni o più.
+    - Un browser moderno su telefono o computer e una connessione. Side Badger non è un'app da store e non funziona offline.
+    - Facoltativamente, un posto nella schermata Home. Non serve nessuno store, perché puoi aggiungere Side Badger alla schermata Home o al dock e si apre come un'app.
+example:
+  heading: Tre amici dopo una serata fuori
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: Cena
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: Taxi
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: 39 lingue, e pensato per più persone
+    body: Usa Side Badger in 39 lingue, tra cui l'arabo, il persiano e l'urdu con scrittura da destra a sinistra. Ognuno nel gruppo può scegliere la propria, quindi la pagina del gruppo può essere in arabo per una persona e in inglese per la successiva. È pensato anche per chi usa la tastiera e gli screen reader, e i colori dei membri hanno anche dei motivi, così non devi distinguere il verde dal rosso.
+faq:
+  heading: Domande
+  items:
+    - q: Serve un account a tutti?
+      a: Sì, uno gratuito. Ogni persona verifica la propria email prima di aggiungere qualsiasi cosa.
+    - q: Esiste un'app?
+      a: Funziona nel browser, e puoi aggiungerla alla schermata Home o al dock così si apre come un'app. Non c'è una versione negli store e non c'è la modalità offline.
+    - q: Side Badger sposta denaro?
+      a: No. Tiene il conto e suggerisce i pagamenti, e voi vi pagate come vi fa più comodo. Poi registrate il pagamento. Vedi [saldare i conti](page:feature/settle-up).
+    - q: Qualcuno può andarsene con dei debiti?
+      a: No. Nessuno può lasciare un gruppo finché deve o deve ricevere denaro, quindi prima salda.
+    - q: Quante persone possono unirsi a un gruppo?
+      a: Fino a 50 persone in un gruppo. Invitale con un link o un codice QR e attiva l'approvazione se vuoi che un admin faccia entrare ogni persona.
+    - q: E i viaggi con più di una valuta?
+      a: I saldi sono tenuti separati per ogni valuta. Vedi [più valute](page:feature/multiple-currencies).
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.expenses.1.label

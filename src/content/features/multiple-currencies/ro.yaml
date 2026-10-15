@@ -1,8 +1,6 @@
 translatedFrom: "923c938f"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - multi-currency.140-currencies
   - multi-currency.currency-rules
@@ -101,7 +99,7 @@ limits:
     - "Cursul se fixează la salvarea cheltuielii. Cheltuielile vechi nu sunt niciodată reevaluate."
     - "Side Badger ia un curs actual acolo unde poate. Nu pentru orice pereche e garantat unul și îți poți scrie oricând singur cursul."
     - "Conversia automată a grupului se aplică doar cheltuielilor noi și celor copiate, nu editărilor sau cheltuielilor existente."
-    - "Fiecare cheltuială este limitată la 999,999.99 în propria valută."
+    - "Fiecare cheltuială este limitată la 999.999,99 în propria valută."
     - "Există 140 de valute. Criptomonedele și metalele nu se numără printre ele."
     - "Side Badger înregistrează plăți. Nu mută și nu schimbă niciodată bani."
 useCasesHeading: "Unde ajută asta"
@@ -114,8 +112,8 @@ faq:
       a: "Nu. Cursul se fixează la salvarea cheltuielii, așa că un sold nu se schimbă pentru că s-a schimbat piața."
     - q: "Acceptați criptomonede?"
       a: "Nu. Există 140 de valute, iar criptomonedele nu se numără printre ele."
-    - q: "De ce nu pot introduce 2,000,000 de rupiah?"
-      a: "Fiecare cheltuială este limitată la 999,999.99 în propria valută. Introdu-o în altă valută și convertește, sau împarte-o în două cheltuieli."
+    - q: "De ce nu pot introduce 2.000.000 de rupiah?"
+      a: "Fiecare cheltuială este limitată la 999.999,99 în propria valută. Introdu-o în altă valută și convertește, sau împarte-o în două cheltuieli."
     - q: "Costă ceva conversia?"
       a: "Nu. Conversia e gratuită, ca restul Side Badger. Vezi [prețurile](page:pricing)."
     - q: "Trebuie să convertesc?"

@@ -94,7 +94,7 @@ sections:
     body: "Împarte un cost între toți sau doar între cei care l-au împărțit. Exclude oamenii din costurile la care n-au participat, iar soldurile o reflectă. Colegul care a lipsit toată săptămâna nu datorează pentru mâncarea la pachet, lucru pe care [colegii de casă](page:use-case/housemates) îl vor recunoaște ca dreptate elementară."
   - heading: "Detaliile care evită certuri mai târziu"
     items:
-      - "Setează **data** și, opțional, ora. Scurtăturile precum azi, ieri, în această dimineață și aseară economisesc din scris."
+      - "Setează **data** și, opțional, ora. Scurtăturile precum azi, ieri, azi dimineață și aseară economisesc din scris."
       - "Adaugă până la trei **etichete** ca să grupezi cheltuielile, de exemplu alimente sau călătorii."
       - "Adaugă **locul**. Lipește un link de hartă și numele locului se completează singur."
       - "Adaugă o **notă** pentru povestea din spatele cifrei, cu puțină formatare dacă povestea o cere."
@@ -109,7 +109,7 @@ limits:
     - "O singură persoană plătește pentru fiecare cheltuială. Dacă au plătit două, înregistrează două cheltuieli."
     - "Nu există împărțire pe articole și nici împărțire pe părți. Egal, sume exacte și procente sunt tot ce există."
     - "Procentele trebuie să dea împreună 100."
-    - "O cheltuială poate fi de până la 999,999.99 în propria valută, cu zecimalele obișnuite ale acelei valute."
+    - "O cheltuială poate fi de până la 999.999,99 în propria valută, cu zecimalele obișnuite ale acelei valute."
     - "Cheltuielile nu se pot repeta singure. Copiază-o pe cea din luna trecută."
     - "Datele nu pot fi în viitor sau cu mai mult de 10 ani în urmă."
     - "O cheltuială la care participă cineva care a părăsit grupul devine doar pentru citire."
@@ -126,7 +126,7 @@ faq:
     - q: "Pot facturile să se repete în fiecare lună?"
       a: "Nu. Copiază în schimb cheltuiala lunii trecute, ceea ce durează câteva secunde."
     - q: "Cine poate edita o cheltuială?"
-      a: "Cine permit permisiunile grupului. Fiecare editare apare în activitatea grupului, deci schimbările nu sunt niciodată pe tăcute."
+      a: "Oricine are voie conform permisiunilor grupului. Fiecare editare apare în activitatea grupului, deci schimbările nu sunt niciodată pe tăcute."
     - q: "Ce se întâmplă cu soldurile după aceea?"
       a: "Se actualizează pe măsură ce sosesc cheltuielile, iar [decontarea](page:feature/settle-up) le transformă într-o listă scurtă de plăți. Dacă o cheltuială e în altă valută, vezi [mai multe valute](page:feature/multiple-currencies)."
 identicalApproved:

@@ -1,8 +1,6 @@
 translatedFrom: "8b6e5d83"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -42,7 +40,7 @@ sections:
   - heading: "Achită-te după ce ajungi acasă"
     body: "Side Badger sugerează o listă scurtă de plăți care îi achită pe toți. Plătiți-vă unii altora cum preferați, apoi înregistrați. Cu valute amestecate, ține-le separate sau convertește pe parcurs; exemplul de la Lisabona de mai jos le arată pe amândouă."
   - heading: "Petreceri de burlaci și burlăcițe"
-    body: "Un weekend în deplasare cu un invitat de onoare cere ceva mai multă organizare. Fă din el un grup administrat, în care administratorii aprobă membrii noi și doar creatorii și administratorii pot schimba cheltuielile. Folosește sume exacte pentru partea invitatului de onoare, limitează grupul la valutele pe care le folosești de fapt și blochează grupul când s-a terminat, ca cifrele să rămână pe loc."
+    body: "Un weekend în deplasare cu un invitat de onoare cere ceva mai multă organizare. Fă din el un grup gestionat, în care administratorii aprobă membrii noi și doar creatorii și administratorii pot schimba cheltuielile. Folosește sume exacte pentru partea invitatului de onoare, limitează grupul la valutele pe care le folosești de fapt și blochează grupul când s-a terminat, ca cifrele să rămână pe loc."
 exampleAfter: 4
 example:
   heading: "Patru prieteni la Lisabona"
@@ -102,7 +100,7 @@ faq:
     - q: "Putem îngheța grupul după excursie?"
       a: "Da. Un administrator poate bloca grupul, ca cifrele să rămână pe loc."
     - q: "Există o limită pentru sume?"
-      a: "Da. 999,999.99 pe cheltuială, în propria valută."
+      a: "Da. 999.999,99 pe cheltuială, în propria valută."
 identicalApproved:
   - example.people.0.name
   - example.people.1.name

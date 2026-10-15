@@ -25,14 +25,14 @@ cta:
   button: Crea un account gratuito
 problem:
   heading: Saldi che si aggiornano man mano
-  body: Ogni spesa cambia chi deve cosa a chi, quindi Side Badger tiene i saldi aggiornati man mano che si aggiungono spese e pagamenti. Tutti nel gruppo vedono subito una modifica, e vedono cosa è cambiato e chi l'ha cambiato. I saldi sono tenuti per valuta, quindi euro e sterline restano nelle loro colonne, a meno che una spesa sia stata convertita quando è stata inserita. Di default vedi i debiti che ti riguardano; **Mostra tutti** elenca l'intero gruppo.
+  body: Ogni spesa cambia chi deve cosa a chi, quindi Side Badger tiene i saldi aggiornati man mano che si aggiungono spese e pagamenti. Tutti nel gruppo vedono subito una modifica, e vedono cosa è cambiato e chi l'ha cambiato. I saldi sono tenuti per valuta, quindi euro e sterline restano nelle loro colonne, a meno che una spesa sia stata convertita quando è stata inserita. Di default vedi i debiti che ti riguardano; **Mostra tutto** elenca l'intero gruppo.
 workflow:
   heading: Tre passaggi per essere pari
   steps:
     - title: Guarda chi deve cosa a chi
       body: Apri i saldi del gruppo per vedere cosa devi, cosa ti spetta e una breve lista di pagamenti che salda tutti, calcolata per ogni valuta. Le spese contestate restano fuori dai conti finché non sono risolte. Nell'esempio dei coinquilini qui sotto, sei pagamenti diventano due.
       shot: S10
-      shotAlt: La schermata dei saldi con i debiti semplificati in due valute e l'opzione Mostra tutti attivata
+      shotAlt: La schermata dei saldi con i debiti semplificati in due valute e l'opzione Mostra tutto attivata
     - title: Paga come preferisci, poi registralo
       body: Bonifico, contanti, un favore che ti devono dall'ultima vacanza. Side Badger non sposta il denaro. Quando i soldi sono passati di mano, registra il pagamento e il saldo si aggiorna per tutti.
       shot: S11
@@ -85,7 +85,7 @@ limits:
   items:
     - Side Badger non sposta denaro, non invia link di pagamento né richieste di pagamento. Un pagamento nell'app è la registrazione di un pagamento fatto altrove.
     - I pagamenti suggeriti derivano da un semplice metodo di abbinamento, applicato per valuta. Suggerisce sempre meno pagamenti delle persone che hanno un saldo in quella valuta (quattro persone, al massimo tre pagamenti), ma non trova sempre il numero più piccolo possibile.
-    - Non puoi disattivare i suggerimenti. **Mostra tutti** elenca ogni pagamento suggerito nel gruppo, non solo i tuoi.
+    - Non puoi disattivare i suggerimenti. **Mostra tutto** elenca ogni pagamento suggerito nel gruppo, non solo i tuoi.
     - Le valute non vengono mai compensate tra loro, a meno che le spese siano state convertite quando sono state inserite.
     - Non ci sono promemoria, quindi sollecitare un pagamento resta compito tuo.
 useCasesHeading: Dove conta saldare i conti
@@ -95,7 +95,7 @@ faq:
     - q: Side Badger invia il denaro?
       a: No. Pagatevi come vi fa più comodo, poi registrate il pagamento in Side Badger perché il saldo si aggiorni.
     - q: Posso disattivare i pagamenti suggeriti?
-      a: No. La semplificazione resta attiva, e **Mostra tutti** elenca ogni pagamento suggerito nel gruppo, non solo quelli che ti riguardano.
+      a: No. La semplificazione resta attiva, e **Mostra tutto** elenca ogni pagamento suggerito nel gruppo, non solo quelli che ti riguardano.
     - q: Perché euro e sterline sono tenuti separati?
       a: I saldi restano nella valuta in cui hai pagato, a meno che tu converta quando inserisci una spesa o un pagamento. I debiti in valute diverse non vengono mai compensati tra loro.
     - q: E se qualcuno paga solo una parte di ciò che deve?

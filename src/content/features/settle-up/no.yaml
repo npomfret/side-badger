@@ -1,8 +1,6 @@
 translatedFrom: "1b51f540"
 review:
-  status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - balances.who-owes-whom
   - balances.short-list-of-payments
@@ -37,7 +35,7 @@ workflow:
   heading: Tre steg til kvitt
   steps:
     - title: Se hvem som skylder hvem
-      body: Åpne gruppens saldoer for å se hva du skylder, hva du har til gode, og en kort liste over betalinger som gjør opp for alle, regnet ut per valuta. Utgifter det er stilt spørsmål ved, holdes utenfor summene til de er avklart. I samboereksemplet nedenfor blir seks betalinger til to.
+      body: Åpne gruppens saldoer for å se hva du skylder, hva du har til gode, og en kort liste over betalinger som gjør opp for alle, regnet ut per valuta. Utgifter det er stilt spørsmål ved, holdes utenfor summene til de er avklart. I romkamerateksemplet nedenfor blir seks betalinger til to.
       shot: S10
       shotAlt: Saldoskjermen med forenklet gjeld i to valutaer og «Vis alle» slått på
     - title: Betal slik du vil, og registrer det
@@ -86,7 +84,7 @@ sections:
   - heading: Betalt i en annen valuta?
     body: Saldoer forblir i valutaen de ble betalt i, så en gjeld i euro forblir en gjeld i euro. Skylder du euro og betaler i pund? Konverter betalingen når du legger den inn, med en gjeldende valutakurs eller med kursen du faktisk fikk. Kursen låses når betalingen lagres. [Flere valutaer](page:feature/multiple-currencies) forklarer hvordan konvertering fungerer, og [gruppereiser](page:use-case/group-trips) viser det i bruk.
   - heading: Historikk du kan sjekke
-    body: Hver registrerte betaling blir stående i gruppehistorikken med dato, beløp og notat. Bare den som registrerte en betaling, kan redigere den, og vedkommende eller en gruppeadministrator kan slette den. En betaling som involverer noen som har forlatt gruppen, er låst. For et gjennomgått samboerscenario, se [samboere](page:use-case/housemates).
+    body: Hver registrerte betaling blir stående i gruppehistorikken med dato, beløp og notat. Bare den som registrerte en betaling, kan redigere den, og vedkommende eller en gruppeadministrator kan slette den. En betaling som involverer noen som har forlatt gruppen, er låst. For et gjennomgått romkameratscenario, se [romkamerater](page:use-case/housemates).
 limits:
   heading: Hva Side Badger ikke gjør
   items:
@@ -108,4 +106,4 @@ faq:
     - q: Hva om noen bare betaler en del av det de skylder?
       a: Registrer delen de betalte. Resten blir stående på saldoen til den er betalt.
     - q: Er dette alltid det minst mulige antallet betalinger?
-      a: Ikke garantert. Den foreslår alltid færre betalinger enn det er personer med saldo i den valutaen, så for fire personer foreslår den aldri mer enn tre. I samboereksemplet er det to betalinger, der det å betale hver enkelt tilbake direkte tok seks.
+      a: Ikke garantert. Den foreslår alltid færre betalinger enn det er personer med saldo i den valutaen, så for fire personer foreslår den aldri mer enn tre. I romkamerateksemplet er det to betalinger, der det å betale hver enkelt tilbake direkte tok seks.

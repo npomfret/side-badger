@@ -1,0 +1,106 @@
+translatedFrom: "e6b829e6"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+meta:
+  title: "Ev faturalarını ev arkadaşlarıyla bölüşün"
+  description: "Kirayı oda büyüklüğüne göre, enerjiyi ve marketi eşit bölüşün ve her ay kimin kime borçlu olduğunu görün. Ev arkadaşlarının hesabı tutması için ücretsiz bir yol."
+h1: "Ev faturalarını ev arkadaşlarıyla bölüşün"
+navLabel: "Ev arkadaşları"
+lead: "Tuvalet kağıdını alan ev arkadaşı ve bunun olduğunu bir türlü görmeyen ev arkadaşları için. Side Badger **ev arkadaşları** için kirayı, faturaları ve alışverişi tek bir güncel hesapta tutar; böylece kimsenin kimsenin peşine düşmesi gerekmez ve buzdolabı yeniden sadece bir buzdolabı olabilir."
+cta:
+  heading: "Kendi evinizle başlayın"
+  body: "Bir hesap oluşturun, ev için bir grup kurun ve herkese davet bağlantısını gönderin. Bu ayın faturaları bu akşam girilebilir."
+  button: "Ücretsiz hesap oluştur"
+scenario:
+  heading: "Evi kurun"
+  body: "Ev için bir grup kurun, içinde görünmek istediğiniz adı seçin ve herkesi bir bağlantı veya QR koduyla davet edin. Grup açık olabilir, yani herkes ekler ve düzenler; ya da yönetilen olabilir, yani yeni üyeler bir yönetici onayı ister ve harcamaları yalnızca oluşturanlar ve yöneticiler değiştirebilir; bu, defterleri tutan ev arkadaşına uyar. Sadece rakamları izlemek isteyen biri, her şeyi gören ama hiçbir şeyi değiştirmeyen izleyici olabilir. Herkes yeni bir harcamayı hemen görür, bu yüzden “sonra eklerim”in saklanacak yeri azalır."
+sections:
+  - heading: "Kira ve faturalar"
+    body: "Kira nadiren dörde bölünür, çünkü yatak odaları eşit değildir. Yüzdelerle bölüştürün; büyük oda daha çok, pencereli dolap daha az ödesin. Yüzdelerin toplamı 100 olmalıdır. Herkesin kullandığı faturalar eşit bölüşüm alır ve bir harcamada payı olmayan ev arkadaşı onun dışında bırakılabilir. Eşit bölüşümde artan bir kuruş kalırsa rastgele bir kişiye gider. Yinelenen fatura yok, bu yüzden her ay geçen ayın kirasını kopyalar, tarihi değiştirir ve devam edersiniz. Kirayı, faturaları ve alışverişi bir araya getirin, aşağıdaki gibi bir ay elde edersiniz; dört kişilik bir evde: Jo oda büyüklüğüne göre %30, %25, %25 ve %20 bölünen £2,000 kira öder, sonra Kwame enerji için £120, Lena internet için £40 ve Matt market için £80 öder; hepsi eşit bölünür. Jo'nun alacağı £1,340 olur ve Side Badger hepsi Jo'ya giden üç ödeme önerir."
+  - heading: "Ortak alışveriş"
+    body: "Ortak alışveriş listesini alışveriş faturalarıyla aynı grupta tutun ve ürünleri sepete girdikçe işaretleyin. Alışverişi yapan, makbuz toplamını harcama olarak ekler ve onu eşit ya da yalnızca onu yiyecek kişiler arasında bölüştürür. Kimin hâlâ kimsenin içmediği yulaf sütünü aldığı evin meselesi olarak kalır, ama en azından harcama listesi doğru olur. Grubun izinleri listeleri kimin oluşturup düzenleyebileceğini belirler."
+  - heading: "Ev masraflarını bölüşmenin adil yolları"
+    items:
+      - "**Eşit** internet, temizlik malzemeleri ve ortak alışveriş gibi herkesin yaklaşık aynı ölçüde kullandığı şeylere uyar. Hızlıdır ve kimsenin matematik için tartışması gerekmez."
+      - "**Oda büyüklüğüne göre** kiraya uyar, çünkü odalar farklıdır ve insanların onlar için ödemeye razı olduğu tutar da farklıdır. Yüzdeleri biri taşındığında bir kez kararlaştırın ve her ay kullanın."
+      - "**Kullanıma göre** bir kişinin açıkça daha çok kullandığı faturalara uyar; ev ofisinin ısıtma faturası ya da yalnızca iki kişinin izlediği bir yayın hesabı gibi. Payı olmayanları dışarıda bırakın ya da her kişi için tam tutarlar girin."
+      - "Hangisini seçerseniz seçin, ilk faturadan önce kararlaştırın, ilk kavgadan sonra değil ve kuralı bütün evin göreceği bir yere yazın."
+  - heading: "Biri taşındığında"
+    body: "Önce ödeşir. Kimse borçluyken veya alacaklıyken bir gruptan ayrılamaz; yani taşınan öder ya da alır, siz bunu kaydedersiniz ve sonra gider. Grubu kalan ev arkadaşları için sürdürün ve yeni kişiyi bir bağlantıyla davet edin. Ev bittiğinde bir yönetici rakamlar yerinde kalsın diye grubu kilitleyebilir ya da herkes için erişilemez hale getiren kalıcı olarak kapatabilir; bunu yalnızca kimsenin geçmişe ihtiyacı kalmadığında yapın."
+exampleAfter: 2
+example:
+  heading: "Bu ay kim kime borçlu"
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: "Kira"
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: "Enerji"
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: "İnternet"
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: "Market"
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: "Bir evin kullandığı özellikler"
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Kira otomatik olarak tekrarlanabilir mi?"
+      a: "Hayır, yinelenen fatura yok. Geçen ayın kirasını birkaç dokunuşla kopyalayın, tarihi değiştirin, bitti."
+    - q: "Oda büyüklüğüne göre bölüşebilir miyiz?"
+      a: "Evet, yüzdelerle. Her ev arkadaşına odasını yansıtan bir pay verin; paylar toplamda 100 etsin. Diğer bölüşüm yolları için [harcamaları bölüşme](page:feature/split-expenses) sayfasına bakın."
+    - q: "Bir ev arkadaşı borçluyken taşınırsa ne olur?"
+      a: "Ödeşene kadar gruptan ayrılamaz, çünkü kimse borçluyken veya alacaklıyken ayrılamaz. Herkes başabaş olana kadar rakamlar dürüst kalır."
+    - q: "Side Badger faturaları öder mi?"
+      a: "Hayır. Hesabı tutar ve kısa bir ödeme listesi önerir. [Hesaplaşma](page:feature/settle-up) sayfasında açıklandığı gibi, birbirinize istediğiniz yolla ödersiniz, sonra kaydedersiniz."
+    - q: "Bir ev arkadaşı defterleri tutabilir mi?"
+      a: "Evet. Onu yönetici yapın ve yeni üyelerin onay gerektirdiği, harcamaları yalnızca oluşturanların ve yöneticilerin değiştirebildiği yönetilen bir grup kullanın."

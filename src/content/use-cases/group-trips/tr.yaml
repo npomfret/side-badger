@@ -1,0 +1,109 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+meta:
+  title: "Grup gezisi masraflarını 140 para biriminde bölüşün"
+  description: "Bir grup gezisinde kimin neyi ödediğini takip edin, masrafları yerel para biriminde girin, çevirin ya da çevirmeyin ve sonunda bir kerede ödeşin. Ücretsiz, tarayıcıda."
+h1: "Grup gezisi masraflarını 140 para biriminde bölüşün"
+navLabel: "Grup gezileri"
+lead: "Villayı, taksileri ve kimsenin ödemeyi üstlendiğini hatırlamadığı o bir tur kokteyli takip edin. Side Badger siz yokken hesabı tutar, [sterlin, euro ve 138 başka para birimini](page:feature/multiple-currencies) idare eder ve eve dönünce size [kısa bir ödeme listesi](page:feature/settle-up) verir."
+cta:
+  heading: "Bronzluk solmadan bitmiş tatil matematiği"
+  body: "Bir grup kurun, davet bağlantısını gezideki kişilere gönderin ve masrafları oluştukça ekleyin."
+  button: "Ücretsiz hesap oluştur"
+scenario:
+  heading: "Herkes bir şey ödedi, bir para biriminde"
+  body: "Biri uçuşları ayırttı, bir başkası villayı kartına yazdırdı, üçüncüsü akşam yemeğini nakit kapattı. Üçüncü güne gelindiğinde kimin önde olduğunu kimse bilmiyor. Soru basit, cevap genellikle kimsenin açmak istemediği bir tabloda yaşasa da: kim neyi hangi para biriminde ödedi ve herkes sonunda bir kerede nasıl ödeşiyor?"
+sections:
+  - heading: "Gitmeden önce"
+    body: "Villa kısa listesini oylamaya sunun, isterseniz anonim olarak; karar, en uzun küsen kişiye değil gruba ait olsun. Sonra ortak alışveriş listesini alışveriş faturalarının yanında tutun ki kimse üç tüp güneş kremi alıp priz adaptörü almamış olmasın."
+  - heading: "Siz yokken"
+    body: "Her masrafı oluştuğunda, ödendiği para biriminde ekleyin. Makbuzun fotoğrafını çekin, Side Badger toplamı, tarihi ve yeri sizin kontrol etmeniz için doldursun; makbuz görselleri Google'ın yapay zeka hizmeti tarafından okunur. Tutarı gerçekte uygulanan kura değiştirebileceğiniz güncel bir döviz kuruyla çevirin; orijinal tutar harcamada kalır. Ya da eurolar euro kalsın, sonra karar verin. Grup tek bir para birimi de seçebilir ve yeni harcamalar otomatik olarak ona çevrilir."
+  - heading: "Herkes her şeyi yapmadı"
+    body: "Bazıları yemeği kaçırdı, bazıları tekneye binmedi. Onları katılmadıkları masraflardan çıkarın ve gerisini [eşit, tam tutarlarla veya yüzdelerle](page:feature/split-expenses) bölüşün. Kimse gezinin uyuyarak geçirdiği kısmı için ödemez."
+  - heading: "Eve dönünce ödeşin"
+    body: "Side Badger herkesi ödeştiren kısa bir ödeme listesi önerir. Birbirinize istediğiniz yolla ödeyin, sonra kaydedin. Karışık para birimlerinde her birini ayrı tutun ya da giderken çevirin; aşağıdaki Lizbon örneği ikisini de gösterir."
+  - heading: "Bekarlığa veda hafta sonları"
+    body: "Onur konuğu olan bir hafta sonu biraz daha yönetim ister. Yöneticilerin yeni üyeleri onayladığı ve harcamaları yalnızca oluşturanların ve yöneticilerin değiştirebildiği yönetilen bir grup yapın. Onur konuğunun payı için tam tutarlar kullanın, grubu gerçekten kullandığınız para birimleriyle sınırlayın ve bittiğinde rakamlar yerinde kalsın diye grubu kilitleyin."
+exampleAfter: 4
+example:
+  heading: "Lizbon'da dört arkadaş"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Uçuşlar"
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: "Villa"
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: "Akşam yemeği"
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Tekne turu"
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: "Bir gezinin dayandığı şeyler"
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Akşam yemeğini kaçıranlar dışarıda bırakılabilir mi?"
+      a: "Evet. Her harcamaya kimin katıldığını seçin, yalnızca onlardan ücret alınır."
+    - q: "Sinyal olmadan çalışır mı?"
+      a: "Hayır. Side Badger bağlantı gerektirir, bu yüzden masrafları wifi'ye döndüğünüzde ekleyin."
+    - q: "Herkesin bir şey yüklemesi gerekir mi?"
+      a: "Hayır. Tarayıcıda çalışır. Davet bağlantısını gönderin, insanlar telefonlarından katılır."
+    - q: "Hangi döviz kurunu kullanır?"
+      a: "Harcamayı girerken güncel bir döviz kuru ya da farklı bir kur aldıysanız sizin kurunuz. Kur, harcama kaydedildiğinde sabitlenir; yani eski harcamalar asla yeniden değerlenmez."
+    - q: "Gezi sonrasında grubu dondurabilir miyiz?"
+      a: "Evet. Bir yönetici rakamlar yerinde kalsın diye grubu kilitleyebilir."
+    - q: "Tutarlarda bir sınır var mı?"
+      a: "Evet. Harcama başına, kendi para biriminde 999.999,99."

@@ -1,0 +1,109 @@
+translatedFrom: "1b51f540"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: "Daha az ödemeyle ödeşin | Side Badger"
+  description: "Grubunuzda kimin kime borçlu olduğunu görün, herkesi ödeştiren kısa bir ödeme listesi alın ve her ödemeyi olduğu anda kaydedin. Kullanması ücretsiz."
+h1: "Daha az ödemeyle ödeşin"
+navLabel: "Hesaplaşma"
+lead: "Side Badger gruptaki herkes için güncel bir bakiye tutar ve onu ödeştiren kısa bir ödeme listesi önerir. Birbirinize istediğiniz yolla ödersiniz, sonra kaydedersiniz. Önce tutarların nasıl bölündüğünü görmek istiyorsanız [harcamaları bölüşme](page:feature/split-expenses) ile başlayın."
+cta:
+  heading: "Kimin kime borçlu olduğunu çözmeye hazır mısınız?"
+  body: "Bir hesap oluşturun, bir grup kurun ve ilk harcamayı ekleyin. Bakiyeler gerisini halleder."
+  button: "Ücretsiz hesap oluştur"
+problem:
+  heading: "İlerledikçe güncellenen bakiyeler"
+  body: "Her harcama kimin kime borçlu olduğunu değiştirir; bu yüzden Side Badger harcamalar ve ödemeler eklendikçe bakiyeleri güncel tutar. Gruptaki herkes bir değişikliği hemen görür; neyin değiştiğini ve kimin değiştirdiğini de. Bakiyeler para birimi başına tutulur, yani euro ve sterlin, girişte çevrilmediyse kendi sütunlarında kalır. Varsayılan olarak sizi ilgilendiren borçları görürsünüz; **Tümünü göster** bütün grubu listeler."
+workflow:
+  heading: "Başabaş olmak için üç adım"
+  steps:
+    - title: "Kimin kime borçlu olduğunu görün"
+      body: "Neyi borçlu olduğunuzu, neyi alacaklı olduğunuzu ve herkesi ödeştiren, her para birimi için hesaplanmış kısa bir ödeme listesini görmek için grubun bakiyelerini açın. Sorgulanan harcamalar çözülene kadar toplamların dışında kalır. Aşağıdaki ev arkadaşları örneğinde altı ödeme ikiye iner."
+      shot: S10
+      shotAlt: "İki para biriminde sadeleştirilmiş borçları gösteren ve Tümünü göster açık olan bakiye ekranı"
+    - title: "İstediğiniz yolla ödeyin, sonra kaydedin"
+      body: "Banka havalesi, nakit, geçen tatilden kalma bir iyilik. Side Badger parayı taşımaz. Para el değiştirdikten sonra ödemeyi kaydedin, bakiye herkes için güncellenir."
+      shot: S11
+      shotAlt: "Hızlı ödeşme düğmeleri ve kısmi ödemede gösterilen bildirimle ödeme formu"
+    - title: "Ulaştığını kontrol edin"
+      body: "Ödeme, gruptaki herkesin görebileceği ve emojiyle tepki verebileceği grup geçmişine girer. Bir ödeme ulaştığında kutlayın."
+      shot: S12
+      shotAlt: "Bir ödemede emoji tepkileriyle ödeme geçmişi"
+options:
+  heading: "Seçenekler"
+  items: []
+example:
+  heading: "Karışıklıktan kısa bir listeye"
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: "Elektrik"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: "İnternet"
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "Market"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "Bir ödemeyi kaydedin"
+    body: "Biri ödediğinde, bunu doğru kişinin karşısına kaydedin. Hızlı ödeşme düğmeleri tutarı önerilen ödemelerinizden doldurur ve “banka havalesi” gibi bir not ekleyebilirsiniz (en fazla 500 karakter). Borcunuzun yalnızca bir kısmını öderseniz geri kalanı bakiyede kalır. Çok az veya çok fazla girerseniz Side Badger kaydetmeden önce sizi uyarır. Ödeme kaydetmek harcamaları düzenleme izni gerektirir ve tarih gelecekte olamaz."
+  - heading: "Farklı bir para biriminde mi ödendi?"
+    body: "Bakiyeler ödenen para biriminde kalır; yani euro borcu euro borcu olarak kalır. Euro borçlusunuz ama sterlinle mi ödüyorsunuz? Ödemeyi girerken güncel bir döviz kuruyla veya gerçekte uygulanan kurla çevirin. Kur, ödeme kaydedildiğinde sabitlenir. [Birden fazla para birimi](page:feature/multiple-currencies) çevirmenin nasıl çalıştığını anlatır, [grup gezileri](page:use-case/group-trips) ise kullanımda gösterir."
+  - heading: "Kontrol edebileceğiniz geçmiş"
+    body: "Kaydedilen her ödeme tarihi, tutarı ve notuyla grup geçmişinde kalır. Bir ödemeyi yalnızca onu kaydeden kişi düzenleyebilir, onu kaydeden veya bir grup yöneticisi silebilir. Gruptan ayrılmış biri dahil olan bir ödeme kilitlidir. Örnek bir ev arkadaşı senaryosu için [ev arkadaşları](page:use-case/housemates) sayfasına bakın."
+limits:
+  heading: "Side Badger'ın yapmadıkları"
+  items:
+    - "Side Badger para taşımaz, ödeme bağlantısı veya ödeme isteği göndermez. Uygulamadaki bir ödeme, başka bir yerde yapılmış bir ödemenin kaydıdır."
+    - "Önerilen ödemeler, her para birimi için ayrı uygulanan basit bir eşleştirme yönteminden gelir. Her zaman, o para biriminde bakiyesi olan kişi sayısından daha az ödeme önerir (dört kişide en fazla üç), ama her zaman mümkün olan en küçük sayıyı bulmaz."
+    - "Önerileri kapatamazsınız. **Tümünü göster** yalnızca sizinkileri değil, gruptaki her önerilen ödemeyi listeler."
+    - "Harcamalar girişte çevrilmediyse para birimleri hiçbir zaman birbirinden mahsup edilmez."
+    - "Hatırlatma yok, bu yüzden ödemenin peşine düşmek hâlâ size kalır."
+useCasesHeading: "Hesaplaşmanın önemli olduğu yerler"
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Side Badger parayı gönderir mi?"
+      a: "Hayır. Birbirinize istediğiniz yolla ödeyin, sonra bakiye güncellensin diye ödemeyi Side Badger'da kaydedin."
+    - q: "Önerilen ödemeleri kapatabilir miyim?"
+      a: "Hayır. Sadeleştirme açık kalır ve **Tümünü göster** yalnızca sizi ilgilendirenleri değil, gruptaki her önerilen ödemeyi listeler."
+    - q: "Euro ve sterlin neden ayrı tutuluyor?"
+      a: "Bir harcama veya ödemeyi girerken çevirmediğiniz sürece bakiyeler ödediğiniz para biriminde kalır. Farklı para birimlerindeki borçlar hiçbir zaman birbirinden mahsup edilmez."
+    - q: "Biri borcunun yalnızca bir kısmını öderse ne olur?"
+      a: "Ödediği kısmı kaydedin. Geri kalanı ödenene kadar bakiyede kalır."
+    - q: "Bu her zaman mümkün olan en az ödeme sayısı mı?"
+      a: "Garanti edilmez. Her zaman o para biriminde bakiyesi olan kişi sayısından daha az ödeme önerir; dört kişide asla üçten fazla önermez. Ev arkadaşları örneğinde bu iki ödemedir; herkese doğrudan geri ödeme altı ödeme gerektiriyordu."

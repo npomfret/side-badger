@@ -1,0 +1,105 @@
+translatedFrom: "fd23c99b"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+meta:
+  title: "Side Badger nasıl çalışır | Grup masraflarını beş adımda bölüşün"
+  description: "Bir grup oluşturun, insanları davet edin, harcamaları ekleyin ve ödeşin. “Biri ödedi” ile “başabaşız” arasında ne olduğunu adım adım bir örnekle görün."
+h1: "Side Badger nasıl çalışır"
+navLabel: "Nasıl çalışır"
+lead: "“Biri ödedi” ile “başabaşız” arasında ne olur? Beş adım, sıfır tablo ve çoğunlukla süs olan bir porsuk. İşte ilk gruptan son kaydedilen ödemeye kadar bütün yol. Herhangi bir adımın ayrıntısı için [harcamaları bölüşme](page:feature/split-expenses) ve [hesaplaşma](page:feature/settle-up) sayfalarına bakın."
+cta:
+  heading: "“Bunu ben veririm”den “başabaşız”a"
+  body: "Ücretsiz bir hesap oluşturun, bir grup kurun ve ilk harcamayı ekleyin. Porsuk makbuzu yargılamaz."
+  button: "Ücretsiz hesap oluştur"
+steps:
+  - title: "Bir grup oluşturun"
+    body: "Her ev, gezi veya etkinlik için ayrı bir grup kurun; böylece kira hiçbir zaman düğün hediyesiyle aynı listeye düşmez. Ona bir ad verin, insanların sizi göreceği adı seçin ve isterseniz kabul ettiği para birimlerini sınırlayın. Panonuz bundan sonra bütün grupları ve her birindeki durumunuzu tek ekranda gösterir."
+    shot: S02
+    shotAlt: "Para birimi kısıtlamaları bölümü açık olan grup oluşturma penceresi"
+  - title: "İnsanlarınızı davet edin"
+    body: "Bir katılım bağlantısı paylaşın ya da bir QR kodu gösterin ve ne kadar süreyle geçerli olacağını 15 dakikadan 5 güne kadar ayarlayın. Katılan herkesin ücretsiz bir hesaba ve doğrulanmış bir e-postaya ihtiyacı var; bir grup en fazla 50 kişi alır. Kimin girdiğini denetlemek isterseniz onayı açın, bir yönetici her kişiyi içeri alsın."
+    shot: S03
+    shotAlt: "Bağlantı sekmesinde, QR kodu ve geçerlilik seçenekleriyle davet penceresi"
+  - title: "Harcamaları oluştukça ekleyin"
+    body: "Kimin ödediğini, ne kadar olduğunu ve kimler için olduğunu söyleyin. Eşit, tam tutarlarla veya yüzdelerle bölüştürün ve katılmayanı dışarıda bırakın. Harcamayı ekleyin, herkes onu hemen görür; neyin değiştiğini ve kimin değiştirdiğini de."
+    shot: S05
+    shotAlt: "Kirayı oda büyüklüğüne göre bölen, yüzde bölüşümlü harcama formu"
+  - title: "Bakiyeleri izleyin"
+    body: "Side Badger her para birimi için güncel bir bakiye tutar; böylece kimin kime borçlu olduğunu tek bakışta görürsünüz. Herkesi küçük borçlardan oluşan bir ağı çözmekle baş başa bırakmak yerine, grubu ödeştiren kısa bir ödeme listesi önerir."
+    shot: S10
+    shotAlt: "İki para biriminde sadeleştirilmiş borçları gösteren ve Tümünü göster açık olan bakiye ekranı"
+  - title: "Uygulamanın dışında ödeşin, içinde kaydedin"
+    body: "Side Badger hiçbir zaman para taşımaz. Birbirinize istediğiniz yolla ödeyin, sonra ödemeyi kaydedin; bakiyeler yetişir ve herkesin ekranı yenilemeden güncellenir. “Ödeşti” yalnızca bakiyelerin sıfır olduğu anlamına gelir. Kimse borçluyken veya alacaklıyken bir gruptan ayrılamaz, bu yüzden çıkışa yönelen önce ödeşir."
+    shot: S11
+    shotAlt: "Hızlı ödeşme düğmeleri ve kısmi ödeme bildirimiyle ödeme formu"
+requirements:
+  heading: "Neye ihtiyacınız var"
+  items:
+    - "Ücretsiz bir hesap. Tek gereken bir e-posta adresi ve parola; bir şey ekleyebilmek için e-postanızı doğrularsınız."
+    - "18 yaşında veya daha büyük olmak."
+    - "Telefonda veya bilgisayarda modern bir tarayıcı ve bir bağlantı. Side Badger bir uygulama mağazası uygulaması değildir ve çevrimdışı çalışmaz."
+    - "İsteğe bağlı olarak ana ekranınızda bir yer. Uygulama mağazası gerekmez; Side Badger'ı ana ekranınıza veya dock'unuza ekleyebilirsiniz ve bir uygulama gibi açılır."
+example:
+  heading: "Bir gece dışarı çıkmış üç arkadaş"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: "Akşam yemeği"
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: "Taksi"
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: "39 dil ve daha fazla insan için yapıldı"
+    body: "Side Badger'ı, sağdan sola yazılan Arapça, Farsça ve Urduca dahil 39 dilde kullanın. Gruptaki herkes kendi dilini seçebilir; böylece grup sayfası bir kişi için Arapça, bir sonraki için İngilizce olabilir. Klavye ve ekran okuyucu kullananlar düşünülerek de yapılmıştır; üye renklerinin desenleri vardır, yani yeşille kırmızıyı ayırt etmeniz gerekmez."
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Herkesin hesabı olması gerekir mi?"
+      a: "Evet, ücretsiz bir hesap. Her kişi bir şey eklemeden önce e-postasını doğrular."
+    - q: "Uygulama var mı?"
+      a: "Tarayıcıda çalışır; ana ekranınıza veya dock'unuza ekleyerek bir uygulama gibi açılmasını sağlayabilirsiniz. Uygulama mağazası sürümü ve çevrimdışı mod yoktur."
+    - q: "Side Badger para taşır mı?"
+      a: "Hayır. Hesabı tutar ve ödemeler önerir; siz birbirinize istediğiniz yolla ödersiniz. Sonra ödemeyi kaydedersiniz. [Hesaplaşma](page:feature/settle-up) sayfasına bakın."
+    - q: "Biri borçluyken ayrılabilir mi?"
+      a: "Hayır. Kimse borçluyken veya alacaklıyken bir gruptan ayrılamaz, bu yüzden önce ödeşir."
+    - q: "Bir gruba kaç kişi katılabilir?"
+      a: "Bir grupta en fazla 50 kişi. Onları bağlantı veya QR koduyla davet edin; bir yöneticinin her kişiyi içeri almasını istiyorsanız onayı açın."
+    - q: "Birden fazla para birimli gezilere ne olur?"
+      a: "Bakiyeler her para birimi için ayrı tutulur. [Birden fazla para birimi](page:feature/multiple-currencies) sayfasına bakın."

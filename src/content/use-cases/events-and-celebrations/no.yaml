@@ -1,7 +1,7 @@
 translatedFrom: "a1e36ce8"
 review:
   status: checked
-  checker: "T4-check"
+  checker: "T-amounts-check"
   date: "2026-10-15"
 claims:
   - invites.link-or-qr-code
@@ -41,14 +41,14 @@ sections:
   - heading: Hvem som er med på hva
     body: Ikke alle betaler like mye, og ikke alle er med på alle kostnader. Del en utgift likt, etter prosent eller etter **nøyaktige beløp**, så hver persons andel er tallet dere ble enige om. La dem som ikke var involvert stå utenfor, som gjestene som hoppet over middagen eller vennene som ikke ble med på gaven. Hver utgift har én betaler, og alle andre i delingen skylder sin andel til vedkommende. Detaljene står på siden [dele utgifter](page:feature/split-expenses).
   - heading: Ta vare på papirarbeidet
-    body: Legg notater til en utgift, for eksempel hva kostnaden dekket. Kommentarer blir stående **ved siden av utgiften** de handler om, så spørsmålet «var kaken £45 eller £54?» og svaret på det finnes på samme sted. Kommentarer kan være opptil 500 tegn, som er mer enn nok til et spørsmål om et depositum.
+    body: Legg notater til en utgift, for eksempel hva kostnaden dekket. Kommentarer blir stående **ved siden av utgiften** de handler om, så spørsmålet «var kaken 45 £ eller 54 £?» og svaret på det finnes på samme sted. Kommentarer kan være opptil 500 tegn, som er mer enn nok til et spørsmål om et depositum.
   - heading: Kontroll for arrangøren
     body: Åpent samarbeid lar ethvert medlem legge til og redigere utgifter, noe som går fint for en liten gave. For et bryllup eller en større fest velger du forhåndsinnstillingen **Administrert gruppe**. Administratorer godkjenner hvert nye medlem, og bare opprettere og administratorer kan endre utgifter. Inviter folk med en lenke eller QR-kode; med godkjenning på slipper en administrator inn hver enkelt, så gjestelisten forblir gjestelisten. Når arrangementet er over, låser du gruppen så tallene blir stående.
   - heading: Gjør opp etter festen
     body: Når den siste fakturaen er inne, viser saldoene **hvem som skylder hvem**, og Side Badger foreslår en kort liste over betalinger som gjør opp for alle. Betal hverandre slik dere vil, og registrer så betalingen i gruppen. Side Badger flytter aldri penger, så gruppen fører regnskapet mens overføringene skjer i deres egne nettbanker. Siden [gjøre opp](page:feature/settle-up) viser hvordan et virvar blir til en kort liste.
 exampleAfter: 5
 example:
-  heading: 'En felles gave: seks stemmer for den, £150 å dele'
+  heading: 'En felles gave: seks stemmer for den, 150 £ å dele'
   currency: GBP
   people:
     - id: priya

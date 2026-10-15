@@ -1,7 +1,7 @@
 translatedFrom: "923c938f"
 review:
   status: checked
-  checker: "T4-check"
+  checker: "T-amounts-check"
   date: "2026-10-15"
 claims:
   - multi-currency.140-currencies
@@ -106,7 +106,7 @@ limits:
     - Kurssi lukitaan, kun kulu tallennetaan. Vanhoja kuluja ei koskaan arvosteta uudelleen.
     - Side Badger hakee nykyisen kurssin, kun mahdollista. Kaikille valuuttapareille ei ole varmuutta kurssista, ja voit aina kirjoittaa kurssin itse.
     - Ryhmän automaattinen muunnos koskee vain uusia ja kopioituja kuluja, ei muokkauksia eikä olemassa olevia kuluja.
-    - Jokainen kulu on enintään 999 999,99 omassa valuutassaan.
+    - Jokainen kulu on enintään 999 999,99 omassa valuutassaan.
     - Valuuttoja on 140. Kryptovaluutat ja metallit eivät kuulu joukkoon.
     - Side Badger kirjaa maksuja. Se ei koskaan siirrä rahaa eikä vaihda sitä.
 useCasesHeading: Missä tästä on hyötyä
@@ -119,8 +119,8 @@ faq:
       a: Ei. Kurssi lukitaan, kun kulu tallennetaan, joten saldo ei ajelehdi markkinoiden mukana.
     - q: Tuetteko kryptoa?
       a: Ei. Valuuttoja on 140, eivätkä kryptovaluutat kuulu niihin.
-    - q: Miksi en voi syöttää 2 000 000 rupiaa?
-      a: Jokainen kulu on enintään 999 999,99 omassa valuutassaan. Syötä se toisessa valuutassa ja muunna tai jaa kahdeksi kuluksi.
+    - q: Miksi en voi syöttää 2 000 000 rupiaa?
+      a: Jokainen kulu on enintään 999 999,99 omassa valuutassaan. Syötä se toisessa valuutassa ja muunna tai jaa kahdeksi kuluksi.
     - q: Maksaako muuntaminen mitään?
       a: Ei. Muuntaminen on ilmaista kuten muukin Side Badgerissa. Katso [hinnoittelu](page:pricing).
     - q: Onko minun pakko muuntaa?

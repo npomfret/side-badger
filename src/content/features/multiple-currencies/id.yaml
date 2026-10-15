@@ -1,7 +1,7 @@
 translatedFrom: "923c938f"
 review:
   status: checked
-  checker: "T1-check"
+  checker: "T-amounts-check"
   date: "2026-10-15"
 claims:
   - multi-currency.140-currencies
@@ -101,7 +101,7 @@ limits:
     - "Kurs ditetapkan saat pengeluaran disimpan. Pengeluaran lama tidak pernah dinilai ulang."
     - "Side Badger mengambil kurs terkini jika bisa. Tidak semua pasangan mata uang dijamin mendapatkannya, dan Anda selalu bisa mengetik kursnya sendiri."
     - "Konversi otomatis grup hanya berlaku untuk pengeluaran baru dan salinan, bukan untuk perubahan atau pengeluaran yang sudah ada."
-    - "Setiap pengeluaran dibatasi 999,999.99 dalam mata uangnya sendiri."
+    - "Setiap pengeluaran dibatasi 999.999,99 dalam mata uangnya sendiri."
     - "Ada 140 mata uang. Mata uang kripto dan logam tidak termasuk."
     - "Side Badger mencatat pembayaran. Ia tidak pernah memindahkan atau menukar uang."
 useCasesHeading: "Di mana ini membantu"
@@ -114,8 +114,8 @@ faq:
       a: "Tidak. Kurs ditetapkan saat pengeluaran disimpan, jadi saldo tidak bergeser hanya karena pasar bergerak."
     - q: "Apakah mendukung kripto?"
       a: "Tidak. Ada 140 mata uang, dan mata uang kripto tidak termasuk."
-    - q: "Mengapa saya tidak bisa memasukkan 2,000,000 rupiah?"
-      a: "Setiap pengeluaran dibatasi 999,999.99 dalam mata uangnya sendiri. Masukkan dalam mata uang lain lalu konversi, atau pecah menjadi dua pengeluaran."
+    - q: "Mengapa saya tidak bisa memasukkan 2.000.000 rupiah?"
+      a: "Setiap pengeluaran dibatasi 999.999,99 dalam mata uangnya sendiri. Masukkan dalam mata uang lain lalu konversi, atau pecah menjadi dua pengeluaran."
     - q: "Apakah konversi dikenai biaya?"
       a: "Tidak. Mengonversi gratis, seperti bagian Side Badger lainnya. Lihat [harga](page:pricing)."
     - q: "Apakah saya harus mengonversi?"

@@ -226,7 +226,7 @@ export default {
   'pricing.hero.subtitle': 'Ilmainen. Ei mainoksia. Ei päivittäisiä rajoja.',
   'pricing.hero.title': 'Side Badger on ilmainen',
   'pricing.limits.amount.label': 'Summa yhdessä kulussa tai maksussa',
-  'pricing.limits.amount.value': 'Enintään 999 999,99 omassa valuutassaan. Sama luku pätee kaikkiin valuuttoihin, olipa niiden arvo mikä tahansa.',
+  'pricing.limits.amount.value': 'Enintään 999 999,99 omassa valuutassaan. Sama luku pätee kaikkiin valuuttoihin, olipa niiden arvo mikä tahansa.',
   'pricing.limits.attachments.label': 'Kommentin liitteet',
   'pricing.limits.attachments.value': '3, kukin enintään 5 Mt',
   'pricing.limits.caption': 'Side Badgerin rajat',

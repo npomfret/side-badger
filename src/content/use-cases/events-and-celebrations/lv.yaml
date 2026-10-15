@@ -1,7 +1,7 @@
 translatedFrom: "a1e36ce8"
 review:
   status: checked
-  checker: "T4-check"
+  checker: "T-amounts-check"
   date: "2026-10-15"
 claims:
   - invites.link-or-qr-code
@@ -41,14 +41,14 @@ sections:
   - heading: "Kurš par ko iemaksā"
     body: "Ne visi maksā vienādi, un ne visi piedalās katrās izmaksās. Sadaliet izdevumu vienādi, procentuāli vai **pēc precīzām summām**, lai katra daļa ir skaitlis, par ko vienojāties. Izlaidiet ikvienu, kurš nebija iesaistīts, piemēram, viesus, kas izlaida vakariņas, vai draugus, kas nepievienojās dāvanai. Katram izdevumam ir viens maksātājs, un visi pārējie sadalē viņam ir parādā savu daļu. Detaļas ir lapā [izdevumu sadale](page:feature/split-expenses)."
   - heading: "Saglabājiet dokumentus"
-    body: "Pievienojiet izdevumam piezīmes, piemēram, ko izmaksas sedza. Komentāri paliek **blakus izdevumam**, par kuru tie ir, tāpēc jautājums „vai kūka bija £45 vai £54?” un tā atbilde atrodas vienā vietā. Komentāri var būt līdz 500 rakstzīmēm, kas ir daudz jautājumam par depozītu."
+    body: "Pievienojiet izdevumam piezīmes, piemēram, ko izmaksas sedza. Komentāri paliek **blakus izdevumam**, par kuru tie ir, tāpēc jautājums „vai kūka bija 45 £ vai 54 £?” un tā atbilde atrodas vienā vietā. Komentāri var būt līdz 500 rakstzīmēm, kas ir daudz jautājumam par depozītu."
   - heading: "Organizatora vadīklas"
     body: "Atvērta sadarbība ļauj jebkuram dalībniekam pievienot un labot izdevumus, kas der nelielai dāvanai. Kāzām vai lielākai ballītei izvēlieties **pārvaldītas grupas** sagatavi. Administratori apstiprina katru jauno dalībnieku, un izdevumus var mainīt tikai veidotāji un administratori. Uzaiciniet cilvēkus ar saiti vai QR kodu; ar ieslēgtu apstiprināšanu administrators katru ielaiž, tāpēc viesu saraksts paliek viesu saraksts. Kad pasākums beidzies, bloķējiet grupu, lai skaitļi paliktu nemainīgi."
   - heading: "Norēķinieties pēc ballītes"
     body: "Kad pēdējais rēķins ir iekšā, atlikumi parāda, **kurš kam ir parādā**, un Side Badger iesaka īsu maksājumu sarakstu, kas nokārto visus. Samaksājiet viens otram, kā vēlaties, tad reģistrējiet maksājumu grupā. Side Badger nekad nepārvieto naudu, tāpēc grupa uztur uzskaiti, kamēr pārskaitījumi notiek jūsu pašu bankas lietotnēs. Lapa [norēķināšanās](page:feature/settle-up) parāda, kā mezgls kļūst par īsu sarakstu."
 exampleAfter: 5
 example:
-  heading: "Kopīga dāvana: seši balsojumi par, £150 sadalāmi"
+  heading: "Kopīga dāvana: seši balsojumi par, 150 £ sadalāmi"
   currency: GBP
   people:
     - id: priya

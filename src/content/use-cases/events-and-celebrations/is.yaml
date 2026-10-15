@@ -1,7 +1,7 @@
 translatedFrom: "a1e36ce8"
 review:
   status: checked
-  checker: "T4-check"
+  checker: "T-amounts-check"
   date: "2026-10-15"
 claims:
   - invites.link-or-qr-code
@@ -41,14 +41,14 @@ sections:
   - heading: "Hver er með í hverju"
     body: "Ekki borga allir jafnt og ekki eru allir með í öllum kostnaði. Skiptu útgjaldi jafnt, í prósentum eða eftir **nákvæmum upphæðum**, svo hlutur hvers og eins sé talan sem þið sömduð um. Slepptu þeim sem komu ekki við sögu, eins og gestunum sem slepptu kvöldverðinum eða vinunum sem tóku ekki þátt í gjöfinni. Hvert útgjald hefur einn greiðanda og allir aðrir í skiptingunni skulda honum sinn hlut. Nánari upplýsingar eru á síðunni [skipting útgjalda](page:feature/split-expenses)."
   - heading: "Geymdu pappírana"
-    body: "Bættu athugasemdum við útgjald, eins og hvað kostnaðurinn náði yfir. Athugasemdir haldast **við hlið útgjaldsins** sem þær snúast um, svo spurningin „var kakan £45 eða £54?“ og svarið við henni lifa á sama stað. Athugasemdir mega vera 500 stafir, sem er nóg fyrir spurningu um tryggingu."
+    body: "Bættu athugasemdum við útgjald, eins og hvað kostnaðurinn náði yfir. Athugasemdir haldast **við hlið útgjaldsins** sem þær snúast um, svo spurningin „var kakan 45 £ eða 54 £?“ og svarið við henni lifa á sama stað. Athugasemdir mega vera 500 stafir, sem er nóg fyrir spurningu um tryggingu."
   - heading: "Stjórntæki skipuleggjandans"
     body: "Opið samstarf leyfir hverjum meðlim að bæta við og breyta útgjöldum, sem er í lagi fyrir litla gjöf. Fyrir brúðkaup eða stærri veislu skaltu velja forstillinguna **Stýrður hópur**. Stjórnendur samþykkja hvern nýjan meðlim og aðeins höfundar og stjórnendur geta breytt útgjöldum. Bjóddu fólki með tengli eða QR-kóða; með samþykki á hleypir stjórnandi hverjum og einum inn, svo gestalistinn haldist gestalisti. Þegar viðburðinum er lokið skaltu læsa hópnum svo tölurnar haldist á sínum stað."
   - heading: "Gerið upp eftir veisluna"
     body: "Þegar síðasti reikningurinn er kominn inn sýnir staðan **hver skuldar hverjum**, og Side Badger leggur til stuttan lista yfir greiðslur sem gerir upp við alla. Borgið hvert öðru eins og ykkur hentar og skráið svo greiðsluna í hópnum. Side Badger flytur aldrei peninga, svo hópurinn heldur utan um stöðuna á meðan millifærslurnar fara fram í ykkar eigin bankaöppum. Síðan [uppgjör](page:feature/settle-up) sýnir hvernig flækja verður að stuttum lista."
 exampleAfter: 5
 example:
-  heading: "Hópgjöf: sex atkvæði með henni, £150 til að skipta"
+  heading: "Hópgjöf: sex atkvæði með henni, 150 £ til að skipta"
   currency: GBP
   people:
     - id: priya

@@ -1,0 +1,110 @@
+translatedFrom: "1b51f540"
+review:
+  status: machine
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+meta:
+  title: Gør op med færre betalinger | Side Badger
+  description: Se, hvem der skylder hvem i din gruppe, få en kort liste over betalinger, der gør op for alle, og registrer hver betaling, når den sker. Gratis at bruge.
+h1: Gør op med færre betalinger
+navLabel: Gør op
+lead: Side Badger fører en løbende saldo for alle i gruppen og foreslår en kort liste over betalinger, der gør op. I betaler hinanden, som I vil, og registrerer det bagefter. Hvis du først vil se, hvordan beløbene deles, så start med [del udgifter](page:feature/split-expenses).
+cta:
+  heading: Klar til at rede trådene ud, så man kan se, hvem der skylder hvem?
+  body: Opret en konto, start en gruppe, og tilføj den første udgift. Saldiene klarer resten.
+  button: Opret en gratis konto
+problem:
+  heading: Saldi, der opdateres undervejs
+  body: Hver udgift ændrer, hvem der skylder hvem, så Side Badger holder saldiene opdaterede, efterhånden som udgifter og betalinger tilføjes. Alle i gruppen ser en ændring med det samme og ser, hvad der blev ændret, og hvem der ændrede det. Saldi føres pr. valuta, så euro og pund bliver i hver sin kolonne, medmindre en udgift blev omregnet, da den blev indtastet. Som standard ser du den gæld, der involverer dig, mens **Vis alle** viser hele gruppen.
+workflow:
+  heading: Tre trin til at stå lige
+  steps:
+    - title: Se, hvem der skylder hvem
+      body: Åbn gruppens saldi for at se, hvad du skylder, hvad du har til gode, og en kort liste over betalinger, der gør op for alle, udregnet pr. valuta. Udgifter med spørgsmål holdes uden for beregningerne, til det er afklaret. I bofælle-eksemplet nedenfor bliver seks betalinger til to.
+      shot: S10
+      shotAlt: Saldoskærmen med forenklet gæld i to valutaer og Vis alle slået til
+    - title: Betal, som du vil, og registrer det så
+      body: Bankoverførsel, kontanter, en tjeneste, man skylder fra sidste ferie. Side Badger flytter ikke pengene. Når de har skiftet hænder, registrerer du betalingen, og saldoen opdateres for alle.
+      shot: S11
+      shotAlt: Betalingsformularen med hurtigafregningsknapper og beskeden, der vises ved en delbetaling
+    - title: Tjek, at den er landet
+      body: Betalingen kommer i gruppens historik, hvor alle i gruppen kan se den og reagere med en emoji. Fejr en betaling, når den er landet.
+      shot: S12
+      shotAlt: Betalingshistorikken med emoji-reaktioner på en betaling
+options:
+  heading: Muligheder
+  items: []
+example:
+  heading: Fra et virvar til en kort liste
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: Elektricitet
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: Internet
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: Dagligvarer
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: Registrer en betaling
+    body: Når nogen betaler, registrer det på den rigtige person. Hurtigafregningsknapperne udfylder beløbet ud fra dine foreslåede betalinger, og du kan tilføje en note som »bankoverførsel« (op til 500 tegn). Betaler du kun en del af det, du skylder, bliver resten stående på saldoen. Indtaster du for lidt eller for meget, advarer Side Badger dig, før du gemmer. For at registrere en betaling skal du have tilladelse til at redigere udgifter, og datoen må ikke ligge i fremtiden.
+  - heading: Betalt i en anden valuta?
+    body: Saldi bliver i den valuta, de blev betalt i, så en gæld i euro forbliver en gæld i euro. Skylder du euro, men betaler i pund? Omregn betalingen, mens du indtaster den, med en aktuel valutakurs eller med den kurs, du faktisk fik. Kursen fastlåses, når betalingen gemmes. [Flere valutaer](page:feature/multiple-currencies) forklarer, hvordan omregning virker, og [gruppeture](page:use-case/group-trips) viser det i brug.
+  - heading: Historik, du kan tjekke
+    body: Hver registreret betaling bliver i gruppens historik med dato, beløb og note. Kun den, der registrerede en betaling, kan redigere den, og vedkommende eller en gruppeadministrator kan slette den. En betaling, der involverer en person, som har forladt gruppen, er låst. Et gennemregnet scenarie med bofæller finder du under [bofæller](page:use-case/housemates).
+limits:
+  heading: Hvad Side Badger ikke gør
+  items:
+    - Side Badger flytter ikke penge, sender ikke betalingslinks og sender ikke betalingsanmodninger. En betaling i appen er en registrering af en betaling, der er foretaget andetsteds.
+    - De foreslåede betalinger kommer fra en enkel afstemningsmetode, anvendt pr. valuta. Den foreslår altid færre betalinger, end der er personer med en saldo i den valuta (fire personer, højst tre betalinger), men den finder ikke altid det mindst mulige antal.
+    - Du kan ikke slå forslagene fra. **Vis alle** viser alle foreslåede betalinger i gruppen, ikke kun dine.
+    - Valutaer modregnes aldrig mod hinanden, medmindre udgifterne blev omregnet, da de blev indtastet.
+    - Der er ingen påmindelser, så det er stadig op til dig at rykke for en betaling.
+useCasesHeading: Hvor det betyder noget at gøre op
+faq:
+  heading: Spørgsmål
+  items:
+    - q: Sender Side Badger pengene?
+      a: Nej. Betal hinanden, som I vil, og registrer så betalingen i Side Badger, så saldoen opdateres.
+    - q: Kan jeg slå de foreslåede betalinger fra?
+      a: Nej. Forenkling er altid slået til, og **Vis alle** viser alle foreslåede betalinger i gruppen, ikke kun dem, der involverer dig.
+    - q: Hvorfor holdes euro og pund adskilt?
+      a: Saldi bliver i den valuta, du betalte i, medmindre du omregner, når du indtaster en udgift eller betaling. Gæld i forskellige valutaer modregnes aldrig mod hinanden.
+    - q: Hvad hvis nogen kun betaler en del af det, de skylder?
+      a: Registrer den del, de betalte. Resten bliver stående på saldoen, indtil den er betalt.
+    - q: Er det altid det mindst mulige antal betalinger?
+      a: Det er ikke garanteret. Den foreslår altid færre betalinger, end der er personer med en saldo i den valuta, så for fire personer foreslår den aldrig mere end tre. I bofælle-eksemplet er det to betalinger, hvor det tog seks at betale hver person direkte tilbage.

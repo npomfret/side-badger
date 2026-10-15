@@ -1,0 +1,90 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: machine
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+meta:
+  title: Del udgifterne til fester, bryllupper og fælles gaver
+  description: Del udgifterne til en fest, et bryllup eller en fælles gave, når folk bidrager med forskellige beløb. Stem om planen, del efter nøjagtige beløb, og se, hvem der skylder hvem.
+h1: Del udgifterne til fester, bryllupper og fælles gaver
+navLabel: Begivenheder og fester
+lead: Del depositum, pynt og nødparaplyer. Overlad bordplanen til en, der er modigere. Side Badger samler **hvem der bidrog med hvad** ét sted, så arrangøren også kan nyde festen.
+cta:
+  heading: Start med den næste fest
+  body: Opret en konto, lav en gruppe til begivenheden, og send invitationslinket. Side Badger er gratis, uden reklamer og uden daglige grænser.
+  button: Opret en gratis konto
+scenario:
+  heading: Alle bidrager, ikke altid med det samme beløb
+  body: Nogen betaler depositum for lokalet, en anden køber kagen, og en tredje lægger den fælles gave på sit eget kort. Nogle gæster kommer til det hele, og nogle kommer kun til middagen. At føre et retfærdigt regnskab over det i en chattråd er et job, ingen har søgt. En Side Badger-gruppe holder styr på det hele, uanset blandingen af beløb, og viser hver person, hvad vedkommende skylder eller er til gode. Se [sådan virker det](page:how-it-works) for det grundlæggende, eller læs videre om en begivenhed.
+sections:
+  - heading: Beslut sammen
+    body: Før der flyttes penge, så sæt valget til en **afstemning**. Tilføj op til 10 valgmuligheder, som to lokaler eller tre gaveidéer, og lad alle stemme. Du kan skjule, hvem der stemte på hvad, så hver mulighed får en fair behandling, og vinderen vises, når afstemningen er lukket. Ingen behøver scrolle tilbage gennem fyrre beskeder for at finde ud af, hvad der blev besluttet.
+  - heading: Hvem er med i hvad
+    body: Ikke alle betaler det samme, og ikke alle er med i hver udgift. Del en udgift ligeligt, i procent eller efter **nøjagtige beløb**, så hver persons andel er det tal, I aftalte. Udelad dem, der ikke var med, som gæster, der sprang middagen over, eller venner, der ikke var med i gaven. Hver udgift har én betaler, og alle andre i delingen skylder vedkommende deres andel. Detaljerne finder du på siden [del udgifter](page:feature/split-expenses).
+  - heading: Gem papirerne
+    body: Tilføj noter til en udgift, for eksempel hvad udgiften dækkede. Kommentarer står **ved siden af den udgift**, de handler om, så spørgsmålet »var kagen £45 eller £54?« og svaret på det findes samme sted. Kommentarer kan være på 500 tegn, hvilket er rigeligt til et spørgsmål om et depositum.
+  - heading: Arrangørens kontrol
+    body: Åbent samarbejde lader ethvert medlem tilføje og redigere udgifter, hvilket er fint til en lille gave. Til et bryllup eller en større fest skal du vælge forudindstillingen **Administreret gruppe**. Administratorer godkender hvert nyt medlem, og kun oprettere og administratorer kan ændre udgifter. Inviter folk med et link eller en QR-kode; med godkendelse slået til lukker en administrator hver person ind, så gæstelisten forbliver gæstelisten. Når begivenheden er slut, så lås gruppen, så tallene bliver stående.
+  - heading: Gør op efter festen
+    body: Når den sidste faktura er kommet ind, viser saldiene **hvem der skylder hvem**, og Side Badger foreslår en kort liste over betalinger, der gør op for alle. Betal hinanden, som I vil, og registrer så betalingen i gruppen. Side Badger flytter aldrig penge, så gruppen fører regnskabet, mens overførslerne sker i jeres egne bankapps. Siden [gør op](page:feature/settle-up) viser, hvordan et virvar bliver til en kort liste.
+exampleAfter: 5
+example:
+  heading: 'En fælles gave: seks stemmer for den, £150 at dele'
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: Fælles gave
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: De funktioner, dette bruger
+faq:
+  heading: Spørgsmål
+  items:
+    - q: Kan gæster se gruppen uden at være med?
+      a: Nej. Folk tilmelder sig med et link eller en QR-kode og en gratis konto, så de kan se gruppen, når de er kommet ind.
+    - q: Kan Side Badger opkræve pengene?
+      a: Nej. Side Badger fører regnskabet og flytter aldrig penge. Betal hinanden, som I vil, og registrer så betalingen. Den er gratis, uden reklamer og uden daglige grænser; se [priser](page:pricing).
+    - q: Kan afstemninger være anonyme?
+      a: Ja. Når du opretter en afstemning, kan du skjule, hvem der stemte på hvad. Indstillingerne kan kun ændres før den første stemme.
+    - q: Kan folk bidrage med forskellige beløb?
+      a: Ja. Del en udgift efter nøjagtige beløb, så hver persons andel er det tal, I aftalte, eller udelad dem, der ikke var med.
+    - q: Kan en arrangør føre regnskabet?
+      a: Ja. Brug forudindstillingen for administreret gruppe, så kun oprettere og administratorer ændrer udgifter, og administratorer godkender nye medlemmer.

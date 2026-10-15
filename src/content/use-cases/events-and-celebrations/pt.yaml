@@ -1,8 +1,6 @@
 translatedFrom: "a1e36ce8"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -41,14 +39,14 @@ sections:
   - heading: "Quem participa em quê"
     body: "Nem todos pagam o mesmo, e nem todos fazem parte de cada custo. Divide uma despesa em partes iguais, por percentagem ou por **valores exatos**, para a parte de cada pessoa ser o valor que combinaram. Deixa de fora quem não esteve envolvido, como os convidados que saltaram o jantar ou os amigos que não entraram no presente. Cada despesa tem um pagador, e todos os outros na divisão devem-lhe a sua parte. Os detalhes estão na página [dividir despesas](page:feature/split-expenses)."
   - heading: "Guarda a papelada"
-    body: "Adiciona notas a uma despesa, como aquilo que o custo cobria. Os comentários ficam **junto da despesa** de que falam, por isso a pergunta “o bolo foi £45 ou £54?” e a sua resposta vivem no mesmo sítio. Os comentários podem ter 500 caracteres, que chega e sobra para uma pergunta sobre um sinal."
+    body: "Adiciona notas a uma despesa, como aquilo que o custo cobria. Os comentários ficam **junto da despesa** de que falam, por isso a pergunta “o bolo foi 45 £ ou 54 £?” e a sua resposta vivem no mesmo sítio. Os comentários podem ter 500 caracteres, que chega e sobra para uma pergunta sobre um sinal."
   - heading: "Controlos para quem organiza"
     body: "A colaboração aberta deixa qualquer membro adicionar e editar despesas, o que serve para um presente pequeno. Para um casamento ou uma festa maior, escolhe a predefinição **Grupo gerido**. Os administradores aprovam cada novo membro e só os criadores e administradores podem alterar despesas. Convida pessoas com um link ou código QR; com a aprovação ativa, um administrador deixa entrar cada pessoa, por isso a lista de convidados continua a ser a lista de convidados. Quando o evento acabar, bloqueia o grupo para os números ficarem como estão."
   - heading: "Acertem as contas depois da festa"
     body: "Depois de entrar a última fatura, os saldos mostram **quem deve a quem**, e o Side Badger sugere uma lista curta de pagamentos que acerta as contas de todos. Paguem-se como preferirem e depois registem o pagamento no grupo. O Side Badger nunca movimenta dinheiro, por isso o grupo mantém a conta enquanto as transferências acontecem nas vossas próprias apps bancárias. A página [acertar contas](page:feature/settle-up) mostra como um emaranhado passa a uma lista curta."
 exampleAfter: 5
 example:
-  heading: "Um presente de grupo: seis votos a favor, £150 para dividir"
+  heading: "Um presente de grupo: seis votos a favor, 150 £ para dividir"
   currency: GBP
   people:
     - id: priya

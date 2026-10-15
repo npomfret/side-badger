@@ -1,0 +1,109 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+meta:
+  title: Dela kostnaderna för gruppresan, i 140 valutor
+  description: Håll koll på vem som betalat vad på en gruppresa, lägg in kostnader i lokal valuta, räkna om dem eller inte, och gör upp en gång i slutet. Gratis, i webbläsaren.
+h1: Dela kostnaderna för gruppresan, i 140 valutor
+navLabel: Gruppresor
+lead: Håll koll på villan, taxiresorna och den där drinkrundan som ingen minns att de lovade att bjuda på. Side Badger håller den löpande räkningen medan ni är borta, [hanterar pund, euro och 138 andra valutor](page:feature/multiple-currencies) och ger er en [kort lista med betalningar](page:feature/settle-up) när ni kommer hem.
+cta:
+  heading: Semesterräkningen klar innan solbrännan bleknat
+  body: Skapa en grupp, skicka inbjudningslänken till de som är med på resan och lägg till kostnader när de uppstår.
+  button: Skapa ett gratiskonto
+scenario:
+  heading: Alla betalade för något, i någon valuta
+  body: Någon bokade flygen, någon annan satte villan på sitt kort och en tredje la ut för middagen i kontanter. Redan dag tre vet ingen vem som ligger back. Frågan är enkel, även om svaret oftast bor i ett kalkylblad som ingen vill öppna. Vem betalade vad, i vilken valuta, och hur gör alla upp en gång i slutet?
+sections:
+  - heading: Innan ni åker
+    body: Låt gruppen rösta om villorna på kortlistan, anonymt om du vill, så att beslutet tillhör gruppen och inte den som surar längst. Ha sedan den gemensamma inköpslistan bredvid inköpsnotorna, så att ingen köper tre tuber solkräm och inga adaptrar.
+  - heading: Medan ni är borta
+    body: Lägg till varje kostnad när den uppstår, i den valuta du betalade den i. Ta en bild på kvittot så fyller Side Badger i summa, datum och plats så att du kan kontrollera dem; kvittobilder läses av Googles AI-tjänst. Räkna om beloppet med en aktuell växelkurs, som du kan ändra till den kurs du faktiskt fick, så finns det ursprungliga beloppet kvar på utgiften. Eller låt euron vara euro och bestäm senare. En grupp kan också välja en valuta, och nya utgifter räknas då om till den automatiskt.
+  - heading: Alla gjorde inte allt
+    body: Några hoppade över middagen, några satt över båtturen. Lämna dem utanför de kostnader de inte var med på, och dela resten [lika, efter exakta belopp eller i procent](page:feature/split-expenses). Ingen betalar för den del av resan de sov igenom.
+  - heading: Gör upp när ni är hemma
+    body: Side Badger föreslår en kort lista med betalningar som gör upp för alla. Betala varandra hur ni vill och registrera det sedan. Med blandade valutor kan ni hålla var och en separat eller räkna om allt eftersom; Lissabon-exemplet nedan visar båda.
+  - heading: Svensexor och möhippor
+    body: En helg bort med en hedersgäst kräver lite mer administration. Gör den till en hanterad grupp, där administratörer godkänner nya medlemmar och bara skaparen och administratörer kan ändra utgifter. Använd exakta belopp för hedersgästens andel, begränsa gruppen till de valutor ni faktiskt använder och lås gruppen när det är över så att siffrorna ligger kvar.
+exampleAfter: 4
+example:
+  heading: Fyra vänner i Lissabon
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: Flyg
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: Villa
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: Middag
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: Båttur
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: Det en resa lutar sig mot
+faq:
+  heading: Frågor
+  items:
+    - q: Kan de som hoppade över middagen lämnas utanför?
+      a: Ja. Välj vilka som var med på varje utgift så debiteras bara de för den.
+    - q: Fungerar det utan täckning?
+      a: Nej. Side Badger behöver en uppkoppling, så lägg till kostnaderna när ni är på wifi igen.
+    - q: Behöver alla installera något?
+      a: Nej. Det körs i webbläsaren. Skicka inbjudningslänken så går folk med från sina mobiler.
+    - q: Vilken växelkurs använder det?
+      a: En aktuell växelkurs när du lägger in utgiften, eller din egen om du fick en annan. Kursen fastställs när utgiften sparas, så gamla utgifter omvärderas aldrig.
+    - q: Kan vi frysa gruppen efter resan?
+      a: Ja. En administratör kan låsa gruppen så att siffrorna ligger kvar.
+    - q: Finns det en gräns för belopp?
+      a: Ja. 999 999,99 per utgift, i dess egen valuta.

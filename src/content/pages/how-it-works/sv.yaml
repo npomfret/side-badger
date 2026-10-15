@@ -1,0 +1,106 @@
+translatedFrom: "fd23c99b"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.expenses.1.label
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+meta:
+  title: Så fungerar Side Badger | Dela gruppens utgifter i fem steg
+  description: Skapa en grupp, bjud in folk, lägg till utgifter och gör upp. Se vad som händer mellan "någon betalade" och "vi är kvitt", med ett räkneexempel.
+h1: Så fungerar Side Badger
+navLabel: Så fungerar det
+lead: Vad händer mellan "någon betalade" och "vi är kvitt"? Fem steg, inget kalkylblad och en grävling som mest är dekoration. Här är hela resan, från den första gruppen till den sista registrerade betalningen. För mer om varje steg, se [dela utgifter](page:feature/split-expenses) och [göra upp](page:feature/settle-up).
+cta:
+  heading: Från "jag tar den här" till "vi är kvitt"
+  body: Skapa ett gratiskonto, starta en grupp och lägg till den första utgiften. Grävlingen dömer inte kvittot.
+  button: Skapa ett gratiskonto
+steps:
+  - title: Skapa en grupp
+    body: Gör en grupp för varje hushåll, resa eller event, så att hyran aldrig hamnar i samma lista som bröllopspresenten. Ge gruppen ett namn, välj det namn folk ska se dig under och begränsa, om du vill, vilka valutor den tar emot. Din översikt visar sedan varje grupp, och hur du ligger till i var och en, på en och samma skärm.
+    shot: S02
+    shotAlt: Dialogen för att skapa en grupp med avsnittet om valutabegränsningar öppet
+  - title: Bjud in dina människor
+    body: Dela en länk eller visa en QR-kod, och bestäm hur länge den gäller, från 15 minuter upp till 5 dagar. Alla som går med behöver ett gratiskonto och en verifierad e-postadress, och en grupp rymmer upp till 50 personer. Vill du granska vilka som kommer in slår du på godkännande, så släpper en administratör in varje person.
+    shot: S03
+    shotAlt: Inbjudningsdialogen på länkfliken, med en QR-kod och val för hur länge länken gäller
+  - title: Lägg till utgifter när de sker
+    body: Ange vem som betalade, hur mycket och vem det gällde. Dela lika, efter exakta belopp eller i procent, och lämna utanför den som inte var med. Lägg till utgiften så ser alla den direkt, tillsammans med vad som ändrats och vem som ändrade.
+    shot: S05
+    shotAlt: Utgiftsformuläret med en procentuell delning där hyran delas efter rummens storlek
+  - title: Håll koll på saldona
+    body: Side Badger håller ett löpande saldo för varje valuta, så att du med en blick ser vem som är skyldig vem. I stället för att låta alla reda ut ett nät av små skulder föreslår appen en kort lista med betalningar som gör upp för gruppen.
+    shot: S10
+    shotAlt: Saldoskärmen med förenklade skulder i två valutor och Visa alla påslaget
+  - title: Gör upp utanför appen, registrera i den
+    body: Side Badger flyttar aldrig pengar. Betala varandra hur ni vill och registrera sedan betalningen så att saldona hänger med, och allas skärm uppdateras utan att du laddar om. "Uppgjort" betyder helt enkelt att saldona visar noll. Ingen kan lämna en grupp så länge hen är skyldig eller har pengar att få, så den som är på väg ut gör upp först.
+    shot: S11
+    shotAlt: Betalningsformuläret med snabbavräkningsknappar och meddelandet om delbetalning
+requirements:
+  heading: Det här behöver du
+  items:
+    - Ett gratiskonto. Allt som behövs är en e-postadress och ett lösenord, och du verifierar e-postadressen innan du kan lägga till något.
+    - Att vara 18 år eller äldre.
+    - En modern webbläsare på en mobil eller en dator, och en uppkoppling. Side Badger är ingen app från en appbutik och fungerar inte offline.
+    - Om du vill, en plats på hemskärmen. Ingen appbutik behövs, för du kan lägga till Side Badger på hemskärmen eller i dockan så öppnas det som en app.
+example:
+  heading: Tre vänner efter en kväll ute
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: Middag
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: Taxi
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: 39 språk, och byggt för fler människor
+    body: Använd Side Badger på 39 språk, bland annat arabiska, persiska och urdu som skrivs från höger till vänster. Alla i gruppen kan välja sitt eget, så gruppsidan kan vara på arabiska för en person och på engelska för nästa. Det är också byggt med tanke på användare av tangentbord och skärmläsare, och medlemsfärgerna kommer med mönster, så du behöver inte skilja grönt från rött.
+faq:
+  heading: Frågor
+  items:
+    - q: Behöver alla ha ett konto?
+      a: Ja, ett gratiskonto. Alla verifierar sin e-postadress innan de lägger till något.
+    - q: Finns det en app?
+      a: Den körs i webbläsaren, och du kan lägga till den på hemskärmen eller i dockan så öppnas den som en app. Det finns ingen version i appbutik och inget offlineläge.
+    - q: Flyttar Side Badger pengar?
+      a: Nej. Den håller räkningen och föreslår betalningar, och ni betalar varandra hur ni vill. Sedan registrerar ni betalningen. Se [göra upp](page:feature/settle-up).
+    - q: Kan någon lämna gruppen med en skuld?
+      a: Nej. Ingen kan lämna en grupp så länge hen är skyldig eller har pengar att få, så hen gör upp först.
+    - q: Hur många kan gå med i en grupp?
+      a: Upp till 50 personer i en grupp. Bjud in dem med en länk eller en QR-kod, och slå på godkännande om du vill att en administratör ska släppa in varje person.
+    - q: Hur är det med resor med mer än en valuta?
+      a: Saldona hålls separata för varje valuta. Se [flera valutor](page:feature/multiple-currencies).

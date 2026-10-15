@@ -250,7 +250,7 @@ export default {
   'pricing.limits.scans.label': 'Skeniranja računa',
   'pricing.limits.scans.value': 'Bez ograničenja',
   'pricing.limits.title': 'Ograničenja',
-  'pricing.meta.description': 'Side Badger je besplatan, bez oglasa i bez dnevnih ograničenja. Pogledaj stvarna ograničenja i što naši uvjeti obećavaju da će tako i ostati.',
+  'pricing.meta.description': 'Side Badger je besplatan, bez oglasa i bez dnevnih ograničenja. Pogledaj stvarna ograničenja i što naši uvjeti kažu o tome hoće li tako i ostati.',
   'pricing.meta.title': 'Cjenik | Side Badger: besplatno, bez oglasa, bez dnevnih ograničenja',
   'pricing.stay.body': 'Sve u Side Badgeru danas je besplatno i nema plaćene razine. Ako se to ikad promijeni, prvo ćemo te obavijestiti.',
   'pricing.stay.link': 'Pročitaj uvjete korištenja',

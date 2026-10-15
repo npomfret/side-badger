@@ -1,8 +1,6 @@
 translatedFrom: "a1e36ce8"
 review:
-  status: checked
-  checker: "T5-check"
-  date: "2026-10-15"
+  status: machine
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -41,14 +39,14 @@ sections:
   - heading: "Tko je u čemu"
     body: "Ne plaćaju svi isto i ne sudjeluju svi u svakom trošku. Podijeli trošak jednako, po postocima ili po **točnim iznosima**, pa je udio svake osobe iznos o kojem ste se dogovorili. Izostavi svakoga tko nije sudjelovao, primjerice goste koji su preskočili večeru ili prijatelje koji se nisu pridružili daru. Svaki trošak ima jednog platitelja, a svi ostali u podjeli duguju mu svoj udio. Pojedinosti su na stranici [podjela troškova](page:feature/split-expenses)."
   - heading: "Sačuvaj papirologiju"
-    body: "Dodaj bilješke troškovima, primjerice što je trošak pokrivao. Komentari ostaju **uz trošak** na koji se odnose, pa pitanje „je li torta bila £45 ili £54?“ i odgovor na njega žive na istom mjestu. Komentari mogu imati do 500 znakova, što je više nego dovoljno za pitanje o pologu."
+    body: "Dodaj bilješke troškovima, primjerice što je trošak pokrivao. Komentari ostaju **uz trošak** na koji se odnose, pa pitanje „je li torta bila 45 £ ili 54 £?“ i odgovor na njega žive na istom mjestu. Komentari mogu imati do 500 znakova, što je više nego dovoljno za pitanje o pologu."
   - heading: "Kontrole za organizatora"
     body: "Otvorena suradnja dopušta svakom članu da dodaje i uređuje troškove, što je u redu za mali dar. Za vjenčanje ili veću zabavu odaberi predložak **Upravljana grupa**. Administratori odobravaju svakog novog člana, a troškove mogu mijenjati samo osnivači i administratori. Pozovi ljude poveznicom ili QR kodom; uz uključeno odobravanje administrator pušta svaku osobu unutra, pa popis gostiju ostaje popis gostiju. Kad je događaj gotov, zaključaj grupu da brojevi ostanu."
   - heading: "Poravnajte se nakon zabave"
     body: "Kad stigne posljednji račun, stanja pokazuju **tko kome duguje**, a Side Badger predlaže kratak popis uplata koji poravnava sve. Platite si kako god želite, a zatim zabilježite uplatu u grupi. Side Badger nikad ne premješta novac, pa grupa vodi evidenciju dok se prijenosi odvijaju u vašim bankovnim aplikacijama. Stranica [poravnanje](page:feature/settle-up) pokazuje kako se klupko pretvara u kratak popis."
 exampleAfter: 5
 example:
-  heading: "Zajednički dar: šest glasova za, £150 za podjelu"
+  heading: "Zajednički dar: šest glasova za, 150 £ za podjelu"
   currency: GBP
   people:
     - id: priya

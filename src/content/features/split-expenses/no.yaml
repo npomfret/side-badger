@@ -1,8 +1,6 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
-  status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -11,6 +9,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -104,6 +103,7 @@ sections:
       - Legg til opptil tre **etiketter** for å gruppere utgifter, som dagligvarer eller reise.
       - Legg til **stedet**. Lim inn en kartlenke, så fyller stedsnavnet seg selv ut.
       - Legg til et **notat** for historien bak tallet, med litt formatering hvis historien trenger det.
+      - "Legg ved opptil tre **kvitteringer** som bilder eller PDF-er, så beviset blir med utgiften."
       - Bruk **kommentarene** til å ha samtalen ved siden av utgiften den handler om, i stedet for i en chattråd ingen blar tilbake i.
   - heading: Kopier, rediger og se hva som endret seg
     body: Kopier forrige måneds husleie i stedet for å skrive den inn på nytt, og endre det som er annerledes. Hvis et tall var feil, redigerer du utgiften. Den tidligere versjonen blir bevart og redigeringen vises i gruppens aktivitet, så ingen endrer et tall i det stille. Hva hver enkelt får lov til å redigere, avhenger av gruppens tillatelser.

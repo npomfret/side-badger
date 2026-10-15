@@ -1,8 +1,6 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
-  status: checked
-  checker: "T1-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -11,6 +9,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -104,6 +103,7 @@ sections:
       - Magdagdag ng hanggang tatlong **label** para pagsama-samahin ang mga gastos, gaya ng grocery o biyahe.
       - Idagdag ang **lugar**. I-paste ang map link at kusang mapupunan ang pangalan ng lugar.
       - Magdagdag ng **tala** para sa kuwento sa likod ng numero, na may kaunting formatting kung kailangan.
+      - "Mag-attach ng hanggang tatlong **resibo**, bilang larawan o PDF, para manatili ang patunay sa gastos."
       - Gamitin ang **mga komento** para manatili ang usapan sa tabi ng gastos na pinag-uusapan, sa halip na sa chat thread na walang nag-i-scroll pabalik.
   - heading: Kopyahin, i-edit, at tingnan kung ano ang nagbago
     body: Kopyahin ang upa noong nakaraang buwan sa halip na i-type muli, saka baguhin ang kaibahan. Kung mali ang numero, i-edit ang gastos. Napapanatili ang naunang bersyon at lumalabas ang pag-edit sa activity ng grupo, kaya walang tahimik na nagbabago ng numero. Nakadepende sa mga pahintulot ng grupo kung ano ang puwedeng i-edit ng sinuman.

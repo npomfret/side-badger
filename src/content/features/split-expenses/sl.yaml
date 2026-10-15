@@ -1,8 +1,6 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
-  status: checked
-  checker: "T5-check"
-  date: "2026-10-15"
+  status: machine
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -15,6 +13,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: "Deli stroške enako, točno ali po odstotkih | Side Badger"
   description: "Skupni strošek razdeli enako, po točnih zneskih ali po odstotkih in izpusti vsakogar, ki ga ni bilo zraven. Brezplačno, brez oglasov in brez dnevnih omejitev."
@@ -104,6 +103,7 @@ sections:
       - "Dodaj do tri **oznake** za združevanje stroškov, na primer živila ali potovanje."
       - "Dodaj **kraj**. Prilepi povezavo do zemljevida in ime kraja se izpolni samo."
       - "Dodaj **opombo** z zgodbo za številko, z nekaj oblikovanja, če zgodba to zahteva."
+      - "Priloži do tri **račune** kot fotografije ali PDF, da dokaz ostane pri stroških."
       - "Uporabljaj **komentarje**, da pogovor ostane ob strošku, o katerem govori, ne pa v klepetu, v katerega se nihče ne vrača."
   - heading: "Kopiraj, uredi in poglej, kaj se je spremenilo"
     body: "Kopiraj najemnino prejšnjega meseca, namesto da bi jo znova vpisoval, in spremeni, kar je drugače. Če je bila številka napačna, uredi strošek. Prejšnja različica se ohrani, urejanje pa se pokaže v dejavnosti skupine, zato nihče ne spremeni številke tiho. Kaj lahko kdo ureja, je odvisno od dovoljenj skupine."

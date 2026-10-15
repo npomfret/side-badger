@@ -1,8 +1,6 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -11,6 +9,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: "Împarte cheltuielile egal, exact sau procentual | Side Badger"
   description: "Împarte un cost comun egal, pe sume exacte sau procentual și exclude pe cine nu a fost de față. Gratuit, fără reclame și fără limite zilnice."
@@ -100,6 +99,7 @@ sections:
       - "Adaugă până la trei **etichete** ca să grupezi cheltuielile, de exemplu alimente sau călătorii."
       - "Adaugă **locul**. Lipește un link de hartă și numele locului se completează singur."
       - "Adaugă o **notă** pentru povestea din spatele cifrei, cu puțină formatare dacă povestea o cere."
+      - "Atașează până la trei **chitanțe**, ca fotografii sau PDF-uri, ca dovada să rămână alături de cheltuială."
       - "Folosește **comentariile** ca să ții conversația lângă cheltuiala despre care e vorba, nu într-un fir de chat prin care nu mai derulează nimeni."
   - heading: "Copiază, editează și vezi ce s-a schimbat"
     body: "Copiază chiria lunii trecute în loc să o scrii din nou, apoi schimbă ce e diferit. Dacă o cifră a fost greșită, editează cheltuiala. Versiunea anterioară se păstrează, iar editarea apare în activitatea grupului, așa că nimeni nu schimbă o cifră pe tăcute. Ce are voie să editeze fiecare depinde de permisiunile grupului."

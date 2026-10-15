@@ -18,10 +18,12 @@ interface Props {
   locale: Locale;
   variant?: 'primary' | 'secondary';
   confetti?: boolean;
+  /** Show the external-link icon on phones, where the header collapses the text to the icon alone */
+  icon?: boolean;
   class?: string;
 }
 
-const { target, cta, pageId, locale, variant = 'primary', confetti = false, class: className } = Astro.props;
+const { target, cta, pageId, locale, variant = 'primary', confetti = false, icon = false, class: className } = Astro.props;
 // The default text is the header's "Open the app"; a register link labelled that way would mislead
 if (target === 'register' && !Astro.slots.has('default')) {
   throw new Error(`LaunchAppCta target="register" (cta="${cta}") needs its link text in the slot`);
@@ -34,10 +36,10 @@ if (target === 'register' && !Astro.slots.has('default')) {
   class:list={['btn', `btn-${variant}`, 'launch-cta', { 'btn-confetti': confetti }, className]}
 >
   <span class="launch-cta__text"><slot>{t('header.launchApp', locale)}</slot></span>
-  <svg class="launch-cta__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  {icon && <svg class="launch-cta__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
     <polyline points="15 3 21 3 21 9" />
     <line x1="10" y1="14" x2="21" y2="3" />
-  </svg>
+  </svg>}
   <span class="sr-only">{t('a11y.externalLink', locale)}</span>
 </a>

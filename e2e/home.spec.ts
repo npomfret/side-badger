@@ -65,11 +65,10 @@ for (const locale of SHELL_LOCALES) {
           await home.expectEverySceneReadable();
           await home.expectLinksStayOnTheSite();
           await home.expectNoHorizontalOverflow();
-          // axe runs at the top of the page. Once the page is scrolled on desktop, the header's
-          // language-switcher `.current-subtitle` fails color-contrast (LanguageSwitcher, not this
-          // package); move axe after the keyboard walk when that is fixed.
-          await home.expectNoSeriousAccessibilityViolations();
           await home.expectKeyboardReachesEveryLink();
+          // axe runs after the keyboard walk, with the page scrolled, so the fixed header is
+          // checked over content scrolled beneath it
+          await home.expectNoSeriousAccessibilityViolations();
           await home.expectNoConfettiAtLoad();
         });
       });

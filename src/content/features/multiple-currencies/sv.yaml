@@ -1,8 +1,6 @@
 translatedFrom: "923c938f"
 review:
-  status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  status: machine
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -106,7 +104,7 @@ limits:
     - Kursen fastställs när utgiften sparas. Gamla utgifter omvärderas aldrig.
     - Side Badger hämtar en aktuell kurs där det går. Alla valutapar är inte garanterade en, och du kan alltid skriva in kursen själv.
     - Gruppens automatiska omräkning gäller bara nya och kopierade utgifter, inte redigeringar eller befintliga utgifter.
-    - Varje utgift är begränsad till 999 999,99 i sin egen valuta.
+    - Varje utgift är begränsad till 999 999,99 i sin egen valuta.
     - Det finns 140 valutor. Kryptovalutor och metaller ingår inte.
     - Side Badger registrerar betalningar. Det flyttar eller växlar aldrig pengar.
 useCasesHeading: Där det här hjälper
@@ -119,8 +117,8 @@ faq:
       a: Nej. Kursen fastställs när utgiften sparas, så ett saldo driver inte iväg för att marknaden gjorde det.
     - q: Stöder ni krypto?
       a: Nej. Det finns 140 valutor, och kryptovalutor ingår inte.
-    - q: Varför kan jag inte skriva in 2 000 000 rupiah?
-      a: Varje utgift är begränsad till 999 999,99 i sin egen valuta. Lägg in den i en annan valuta och räkna om, eller dela upp den i två utgifter.
+    - q: Varför kan jag inte skriva in 2 000 000 rupiah?
+      a: Varje utgift är begränsad till 999 999,99 i sin egen valuta. Lägg in den i en annan valuta och räkna om, eller dela upp den i två utgifter.
     - q: Kostar omräkning något?
       a: Nej. Omräkning är gratis, precis som resten av Side Badger. Se [prissättning](page:pricing).
     - q: Måste jag räkna om?

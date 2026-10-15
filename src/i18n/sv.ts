@@ -226,7 +226,7 @@ export default {
   'pricing.hero.subtitle': 'Gratis. Inga annonser. Inga dagliga gränser.',
   'pricing.hero.title': 'Side Badger är gratis',
   'pricing.limits.amount.label': 'Belopp i en utgift eller betalning',
-  'pricing.limits.amount.value': 'Upp till 999 999,99 i sin egen valuta. Samma tal gäller för varje valuta, oavsett vad den är värd.',
+  'pricing.limits.amount.value': 'Upp till 999 999,99 i sin egen valuta. Samma tal gäller för varje valuta, oavsett vad den är värd.',
   'pricing.limits.attachments.label': 'Bilagor på en kommentar',
   'pricing.limits.attachments.value': '3, var och en upp till 5 MB',
   'pricing.limits.caption': 'Gränser i Side Badger',

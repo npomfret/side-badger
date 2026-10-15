@@ -1,8 +1,6 @@
 translatedFrom: "56ee9b03"
 review:
-  status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  status: machine
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -115,7 +113,7 @@ limits:
     - En person betalar för varje utgift. Om två personer betalade registrerar du två utgifter.
     - Det finns ingen delning per artikel och ingen delning efter andelar. Lika, exakta belopp och procent är vad som finns.
     - Procenten måste bli 100 tillsammans.
-    - En utgift kan vara upp till 999 999,99 i sin egen valuta, med den valutans vanliga antal decimaler.
+    - En utgift kan vara upp till 999 999,99 i sin egen valuta, med den valutans vanliga antal decimaler.
     - Utgifter kan inte upprepas av sig själva. Kopiera förra månadens i stället.
     - Datum får inte ligga i framtiden eller mer än 10 år tillbaka.
     - En utgift som rör någon som har lämnat gruppen blir skrivskyddad.

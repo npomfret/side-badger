@@ -1,8 +1,6 @@
 translatedFrom: "a1e36ce8"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - invites.link-or-qr-code
   - invites.admin-approval
@@ -41,14 +39,14 @@ sections:
   - heading: Nor sartzen den zertan
     body: Ez denek ordaintzen dute berdin, eta ez denak dira kostu guztien parte. Banatu gastu bat berdin, ehunekoen arabera edo **zenbateko zehatzen arabera**, pertsona bakoitzaren zatia adostu duzuen zifra izan dadin. Utzi kanpoan parte ez zuten pertsonak, adibidez afaria saltatu zuten gonbidatuak edo oparian sartu ez ziren lagunak. Gastu bakoitzak ordaintzaile bakarra du, eta banaketako gainerako guztiek bere zatia zor diote. Xehetasunak [gastuak banatzea](page:feature/split-expenses) orrian daude.
   - heading: Gorde paperak
-    body: Gehitu oharrak gastu bati, hala nola kostuak zer estaltzen zuen. Iruzkinak dagokien **gastuaren ondoan** geratzen dira, beraz “pastela £45 zen ala £54?” galdera eta bere erantzuna toki berean bizi dira. Iruzkinek 500 karaktere dituzte gehienez, fidantza bati buruzko galdera egiteko nahikoa.
+    body: Gehitu oharrak gastu bati, hala nola kostuak zer estaltzen zuen. Iruzkinak dagokien **gastuaren ondoan** geratzen dira, beraz “pastela 45 £ zen ala 54 £?” galdera eta bere erantzuna toki berean bizi dira. Iruzkinek 500 karaktere dituzte gehienez, fidantza bati buruzko galdera egiteko nahikoa.
   - heading: Antolatzailearen kontrolak
     body: Lankidetza irekiak edozein kideri uzten dio gastuak gehitzen eta editatzen, opari txiki baterako ondo dagoena. Ezkontza edo festa handiago baterako, aukeratu **Kudeatutako taldea** aurrezarpena. Administratzaileek kide berri bakoitza onartzen dute, eta sortzaileek eta administratzaileek bakarrik alda ditzakete gastuak. Gonbidatu jendea esteka edo QR kode batekin; onarpena aktibatuta, administratzaile batek pertsona bakoitza sartzen uzten du, beraz gonbidatuen zerrendak gonbidatuen zerrenda izaten jarraitzen du. Ekitaldia amaitzen denean, blokeatu taldea zenbakiak lekuan geratzeko.
   - heading: Kitatu festaren ondoren
     body: Azken faktura sartu denean, saldoek **nork nori zor dion** erakusten dute, eta Side Badger-ek denak kitatzen dituen ordainketa-zerrenda labur bat proposatzen du. Ordaindu elkarri nahi duzuen moduan, eta gero erregistratu ordainketa taldean. Side Badger-ek ez du inoiz dirurik mugitzen, beraz taldeak kontua eramaten du transferentziak zuen banku-aplikazioetan egiten diren bitartean. [Kitatzea](page:feature/settle-up) orriak erakusten du nola bihurtzen den korapilo bat zerrenda labur.
 exampleAfter: 5
 example:
-  heading: "Talde-opari bat: sei botoz alde, £150 banatzeko"
+  heading: "Talde-opari bat: sei botoz alde, 150 £ banatzeko"
   currency: GBP
   people:
     - id: priya

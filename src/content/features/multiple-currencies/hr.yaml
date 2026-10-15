@@ -1,0 +1,125 @@
+translatedFrom: "923c938f"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: "Dijeli troškove u 140 valuta, pretvorene ili zasebno"
+  description: "Unesi svaki trošak u valuti u kojoj si platio, vodi stanja zasebno ili pretvaraj po tečaju koji vidiš i možeš promijeniti, a zatim se poravnaj kratkim popisom uplata."
+h1: "Dijeli troškove u 140 valuta"
+navLabel: "Više valuta"
+lead: "Eura, jeni i onaj jedan taksi u bahtima. Side Badger prima svaki trošak u valuti u kojoj si platio, drži stanja u redu i može pretvarati kad se grupa radije poravna jednom. Radi u 140 valuta i prirodno pristaje [grupnim putovanjima](page:use-case/group-trips)."
+cta:
+  heading: "Donesi svoja eura, donesi svoje jene"
+  body: "Napravi korisnički račun, osnuj grupu i dodaj prvi trošak u bilo kojoj valuti koju si slučajno imao u ruci."
+  button: "Napravi besplatan račun"
+problem:
+  heading: "Unesi kako je plaćeno"
+  body: "Putovanje se rijetko plaća u jednoj valuti. Hotel je rezerviran kod kuće u funtama, večera plaćena u jenima, a kava na aerodromu u onome što se koristilo na presjedanju. Ručno pretvarati sve prije nego što to uopće upišeš način je na koji se tablice napuštaju. U Side Badgeru svaki trošak unosiš u valuti s računa, a svaki iznos slijedi pravila svoje valute, pa jeni nemaju decimale, a dinari imaju tri. Nedavno korištene valute su prve na popisu."
+workflow:
+  heading: "Drži valute zasebno ili pretvaraj usput"
+  steps:
+    - title: "Dodaj trošak u njegovoj valuti"
+      body: "Odaberi valutu, upiši iznos, reci tko je platio i tko je dijelio. Ništa drugo nije potrebno. To je zadano i čuva izvorni iznos točno onako kako si ga unio."
+      shot: S07
+      shotAlt: "Obrazac troška s unesenim iznosom u jenima"
+    - title: "Prati stanje za svaku valutu"
+      body: "Stanja se vode zasebno po valuti, a svako ima vlastiti kratak popis predloženih uplata. Funte se poravnavaju u funtama, a jeni u jenima."
+      shot: S10
+      shotAlt: "Zaslon stanja s pojednostavljenim dugovima u dvije valute"
+    - title: "Ili pretvori kad se grupa radije poravna jednom"
+      body: "Odaberi drugu valutu pri unosu troška i Side Badger ga može pretvoriti po aktualnom tečaju, koji možeš promijeniti u onaj koji je vrijedio pri zamjeni. Pretvoreni iznos pridružuje se stanju u toj valuti. Pretvorba je izbor koji grupa donosi, nikad nešto što se događa iza tvojih leđa."
+options:
+  heading: "Tečaj koji vidiš i možeš promijeniti"
+  items:
+    - title: "Tečaj je prikazan"
+      body: "Kad pretvaraš, tečaj i pretvoreni iznos pojavljuju se u obrascu, pa nitko ne mora vjerovati broju na riječ."
+    - title: "Upiši svoj"
+      body: "Dobio si bolji tečaj u mjenjačnici ili gori na aerodromu? Uredi tečaj u onaj koji je vrijedio i pretvoreni iznos se ažurira."
+    - title: "Izvornik ostaje"
+      body: "Izvorni iznos ostaje uz trošak, pokraj pretvorenog, za svakoga tko pita koliko je bilo u jenima."
+    - title: "Pretvorba je besplatna"
+      body: "Pretvaranje ne košta ništa. Nema naknade za unos troška u drugoj valuti."
+example:
+  heading: "Četvero prijatelja u Japanu, poravnano na dva načina"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "hotel, rezerviran kod kuće"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "večera u Japanu"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "vlakovne karte"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "ulaz u hram"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "Jedna valuta za cijelu grupu"
+    body: "Ako grupa o tome radije ne misli, odaberi valutu grupe i obrazac u nju pretvara svaki novi trošak, po tečaju koji i dalje vidiš i možeš promijeniti. To vrijedi samo za nove i kopirane troškove. Uređivanja i postojeći troškovi ostaju kakvi jesu, pa se ništa već zabilježeno ne mijenja ispod tebe."
+  - heading: "Duguješ eure, plaćaš u funtama"
+    body: "Plaćeno u jenima, a poravnavaš u funtama? U redu. Kad bilježiš uplatu, možeš je također pretvoriti, pa tko duguje eure može platiti u funtama, a stanje u eurima i dalje izlazi točno. Platite si kako god želite, a zatim zabilježite."
+  - heading: "Pravila za grupu"
+    body: "Ograniči grupu na valute koje stvarno koristite i postavi zadanu da se obrazac otvara na pravoj. Odmor u Portugalu ne treba 139 drugih opcija uz račun za večeru, a [vjenčanje u inozemstvu](page:use-case/events-and-celebrations) vjerojatno treba dvije."
+limits:
+  heading: "Ograničenja"
+  items:
+    - "Tečaj se utvrđuje kad se trošak spremi. Stari troškovi se nikad ne revaloriziraju."
+    - "Side Badger dohvaća aktualni tečaj gdje može. Nije svaki par zajamčen, a tečaj uvijek možeš upisati sam."
+    - "Automatska pretvorba u grupi vrijedi samo za nove i kopirane troškove, ne za uređivanja ni postojeće troškove."
+    - "Svaki trošak ograničen je na 999.999,99 u svojoj valuti."
+    - "Postoji 140 valuta. Kriptovalute i metali nisu među njima."
+    - "Side Badger bilježi uplate. Nikad ne premješta ni ne mijenja novac."
+useCasesHeading: "Gdje ovo pomaže"
+faq:
+  heading: "Pitanja"
+  items:
+    - q: "Koji tečaj koristite?"
+      a: "Aktualni tečaj, dohvaćen pri unosu troška gdje je dostupan. Možeš ga promijeniti u onaj koji je vrijedio pri zamjeni i pretvoreni iznos se ažurira."
+    - q: "Revaloriziraju li se stari troškovi?"
+      a: "Ne. Tečaj se utvrđuje kad se trošak spremi, pa stanje ne odlazi samo zato što se tržište pomaknulo."
+    - q: "Podržavate li kripto?"
+      a: "Ne. Postoji 140 valuta, a kriptovalute nisu među njima."
+    - q: "Zašto ne mogu unijeti 2.000.000 rupija?"
+      a: "Svaki trošak ograničen je na 999.999,99 u svojoj valuti. Unesi ga u drugoj valuti i pretvori ili ga podijeli na dva troška."
+    - q: "Košta li pretvorba išta?"
+      a: "Ne. Pretvorba je besplatna, kao i ostatak Side Badgera. Vidi [cjenik](page:pricing)."
+    - q: "Moram li pretvarati?"
+      a: "Ne. Valute ostaju zasebne osim ako ti ili tvoja grupa odlučite pretvarati, a svaka valuta ima vlastiti kratak popis uplata."

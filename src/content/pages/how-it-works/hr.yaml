@@ -1,0 +1,105 @@
+translatedFrom: "fd23c99b"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+meta:
+  title: "Kako radi Side Badger | Podjela troškova grupe u pet koraka"
+  description: "Osnuj grupu, pozovi ljude, dodaj troškove i poravnajte se. Pogledaj što se događa između „netko je platio“ i „kvit smo“, uz primjer korak po korak."
+h1: "Kako radi Side Badger"
+navLabel: "Kako radi"
+lead: "Što se događa između „netko je platio“ i „kvit smo“? Pet koraka, nikakve tablice i jedan jazavac koji je uglavnom za ukras. Evo cijelog puta, od prve grupe do posljednje zabilježene uplate. Pojedinosti o bilo kojem koraku potraži u dijelovima [podjela troškova](page:feature/split-expenses) i [poravnanje](page:feature/settle-up)."
+cta:
+  heading: "Od „ja ću platiti“ do „kvit smo“"
+  body: "Napravi besplatan korisnički račun, osnuj grupu i dodaj prvi trošak. Jazavac neće osuđivati račun."
+  button: "Napravi besplatan račun"
+steps:
+  - title: "Osnuj grupu"
+    body: "Napravi po jednu grupu za svaku kuću, putovanje ili događaj, da najamnina nikad ne završi na istom popisu kao vjenčani dar. Daj joj ime, odaberi ime pod kojim će te ljudi vidjeti i, ako želiš, ograniči valute koje prima. Tvoja nadzorna ploča zatim na jednom zaslonu prikazuje sve grupe i gdje stojiš u svakoj."
+    shot: S02
+    shotAlt: "Dijaloški okvir za stvaranje grupe s otvorenim odjeljkom ograničenja valuta"
+  - title: "Pozovi svoje ljude"
+    body: "Podijeli poveznicu za pridruživanje ili pokaži QR kod i postavi koliko dugo vrijedi, od 15 minuta do 5 dana. Svatko tko se pridruži treba besplatan korisnički račun i potvrđenu e-adresu, a u grupi može biti do 50 osoba. Ako želiš birati tko ulazi, uključi odobravanje i administrator će svaku osobu pustiti unutra."
+    shot: S03
+    shotAlt: "Dijaloški okvir poziva na kartici s poveznicom, s QR kodom i izborom roka valjanosti"
+  - title: "Dodaj troškove kako nastaju"
+    body: "Reci tko je platio, koliko i za koga. Podijeli jednako, po točnim iznosima ili po postocima i izostavi svakoga tko nije sudjelovao. Dodaj trošak i svi ga odmah vide, zajedno s time što se promijenilo i tko je to promijenio."
+    shot: S05
+    shotAlt: "Obrazac troška s postotnom podjelom najamnine prema veličini sobe"
+  - title: "Prati stanja"
+    body: "Side Badger vodi tekuće stanje za svaku valutu, pa na prvi pogled vidiš tko kome duguje. Umjesto da sve prepusti razmrsivanju mreže sitnih dugova, predlaže kratak popis uplata koji poravnava grupu."
+    shot: S10
+    shotAlt: "Zaslon stanja s pojednostavljenim dugovima u dvije valute i uključenom opcijom Prikaži sve"
+  - title: "Poravnaj se izvan aplikacije, zabilježi u njoj"
+    body: "Side Badger nikad ne premješta novac. Platite si kako god želite, a zatim zabilježite uplatu da se stanja ažuriraju, a zaslon svakoga osvježi bez ponovnog učitavanja. „Poravnano“ jednostavno znači da su stanja nula. Nitko ne može napustiti grupu dok duguje ili mu se duguje novac, pa se onaj koji ide prema izlazu prvo poravnava."
+    shot: S11
+    shotAlt: "Obrazac uplate s gumbima za brzo poravnanje i obavijesti o djelomičnoj uplati"
+requirements:
+  heading: "Što ti treba"
+  items:
+    - "Besplatan korisnički račun. Dovoljna je e-adresa i lozinka, a e-adresu potvrđuješ prije nego što možeš dodati bilo što."
+    - "Biti star 18 godina ili više."
+    - "Moderan preglednik na telefonu ili računalu i vezu. Side Badger nije aplikacija iz trgovine i ne radi izvan mreže."
+    - "Po želji mjesto na početnom zaslonu. Trgovina aplikacijama nije potrebna jer Side Badger možeš dodati na početni zaslon ili u dock, a otvara se kao aplikacija."
+example:
+  heading: "Troje prijatelja nakon večeri u gradu"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: "Večera"
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: "Taksi"
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: "39 jezika, napravljeno za više ljudi"
+    body: "Koristi Side Badger na 39 jezika, uključujući arapski, perzijski i urdu, koji se pišu zdesna nalijevo. Svatko u grupi može odabrati svoj, pa stranica grupe može biti na arapskom za jednu osobu, a na engleskom za sljedeću. Napravljen je i s mišlju na korisnike tipkovnice i čitača zaslona, a boje članova imaju uzorke, pa ne moraš razlikovati zeleno od crvenog."
+faq:
+  heading: "Pitanja"
+  items:
+    - q: "Treba li svatko korisnički račun?"
+      a: "Da, besplatan. Svaka osoba potvrđuje svoju e-adresu prije nego što išta doda."
+    - q: "Postoji li aplikacija?"
+      a: "Radi u pregledniku, a možeš je dodati na početni zaslon ili u dock da se otvara kao aplikacija. Nema verzije iz trgovine aplikacijama ni načina rada izvan mreže."
+    - q: "Premješta li Side Badger novac?"
+      a: "Ne. Vodi evidenciju i predlaže uplate, a vi si plaćate kako god želite. Zatim zabilježiš uplatu. Vidi [poravnanje](page:feature/settle-up)."
+    - q: "Može li netko otići dok duguje novac?"
+      a: "Ne. Nitko ne može napustiti grupu dok duguje ili mu se duguje novac, pa se prvo poravna."
+    - q: "Koliko se ljudi može pridružiti grupi?"
+      a: "Do 50 osoba u grupi. Pozovi ih poveznicom ili QR kodom i uključi odobravanje ako želiš da administrator pušta svaku osobu unutra."
+    - q: "A putovanja s više od jedne valute?"
+      a: "Stanja se vode zasebno za svaku valutu. Vidi [više valuta](page:feature/multiple-currencies)."

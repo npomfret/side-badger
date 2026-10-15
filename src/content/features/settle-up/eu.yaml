@@ -1,0 +1,109 @@
+translatedFrom: "1b51f540"
+review:
+  status: machine
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Kitatu ordainketa gutxiagorekin | Side Badger"
+  description: "Ikusi zure taldean nork nori zor dion, lortu denak kitatzen dituen ordainketa-zerrenda labur bat eta erregistratu ordainketa bakoitza gertatu ahala. Erabiltzeko doakoa."
+h1: Kitatu ordainketa gutxiagorekin
+navLabel: Kitatu
+lead: Side Badger-ek taldekide guztien saldo korrontea gordetzen du eta dena kitatzen duen ordainketa-zerrenda labur bat proposatzen du. Zuek ordaintzen duzue nahi duzuen moduan, eta gero erregistratzen duzue. Zenbakiak nola banatzen diren aurretik ikusi nahi baduzu, hasi [gastuak banatzearekin](page:feature/split-expenses).
+cta:
+  heading: Nork nori zor dion askatzeko prest?
+  body: Sortu kontu bat, hasi talde bat eta gehitu lehen gastua. Saldoek hortik aurrera jarraituko dute.
+  button: Sortu doako kontu bat
+problem:
+  heading: Joan ahala eguneratzen diren saldoak
+  body: Gastu bakoitzak aldatzen du nork nori zor dion, beraz Side Badger-ek saldoak egunean mantentzen ditu gastuak eta ordainketak gehitu ahala. Taldeko guztiek aldaketa berehala ikusten dute, eta zer aldatu den eta nork aldatu duen ere bai. Saldoak moneta bakoitzeko gordetzen dira, beraz euroak eta libera esterlinak beren zutabeetan geratzen dira, gastu bat sartzean bihurtu ez bada. Lehenespenez zuri dagozkizun zorrak ikusten dituzu; **Erakutsi guztiak** aukerak talde osoa zerrendatzen du.
+workflow:
+  heading: Hiru urrats kitatzeko
+  steps:
+    - title: Ikusi nork nori zor dion
+      body: Ireki taldearen saldoak zuk zenbat zor duzun, zenbat zor zaizun eta denak kitatzen dituen ordainketa-zerrenda labur bat ikusteko, moneta bakoitzeko kalkulatuta. Zalantzan jarritako gastuak kalkuluetatik kanpo geratzen dira konpondu arte. Beheko etxekideen adibidean, sei ordainketa bi bihurtzen dira.
+      shot: S10
+      shotAlt: Saldoen pantaila, bi monetatako zor sinplifikatuekin eta “Erakutsi guztiak” aktibatuta
+    - title: Ordaindu nahi duzun moduan, gero erregistratu
+      body: Banku-transferentzia, eskudirua, joan den oporraldiko zor bat. Side Badger-ek ez du dirua mugitzen. Dirua eskuz aldatu denean, erregistratu ordainketa eta saldoa denentzat eguneratzen da.
+      shot: S11
+      shotAlt: Ordainketa-formularioa, kitapen azkarreko botoiekin eta ordainketa partzial baterako erakusten den oharrarekin
+    - title: Egiaztatu iritsi dela
+      body: Ordainketa taldearen historian sartzen da, non taldeko guztiek ikus dezaketen eta emoji batekin erreakzionatu. Ospatu ordainketa bat iristen denean.
+      shot: S12
+      shotAlt: Ordainketen historia, ordainketa bati emoji erreakzioekin
+options:
+  heading: Aukerak
+  items: []
+example:
+  heading: Korapilo batetik zerrenda labur batera
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: Elektrizitatea
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: Interneteko konexioa
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: Erosketak
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: Erregistratu ordainketa bat
+    body: Norbaitek ordaintzen duenean, erregistratu dagokion pertsonaren aurka. Kitapen azkarreko botoiek zenbatekoa betetzen dute proposatutako ordainketetatik, eta ohar bat gehi dezakezu, adibidez “banku-transferentzia” (gehienez 500 karaktere). Zor duzunaren zati bat bakarrik ordaintzen baduzu, gainerakoa saldoan geratzen da. Gutxiegi edo gehiegi sartzen baduzu, Side Badger-ek abisatzen dizu gorde aurretik. Ordainketa bat erregistratzeko gastuak editatzeko baimena behar da, eta data ezin da etorkizunekoa izan.
+  - heading: Beste moneta batean ordaindu duzu?
+    body: Saldoak ordaindu ziren monetan geratzen dira, beraz euro-zorra euro-zor izaten jarraitzen du. Euroak zor dituzu eta libera esterlinetan ordaindu nahi duzu? Bihurtu ordainketa sartzean, egungo kanbio-tasa batekin edo benetan lortu zenuen tasarekin. Tasa ordainketa gordetzen denean finkatzen da. [Moneta anitz](page:feature/multiple-currencies) orrian bihurketak nola funtzionatzen duen azaltzen da, eta [taldeko bidaiak](page:use-case/group-trips) orrian erabileran ikusten da.
+  - heading: Egiazta dezakezun historia
+    body: Erregistratutako ordainketa bakoitza taldearen historian geratzen da bere data, zenbateko eta oharrarekin. Ordainketa erregistratu zuenak bakarrik edita dezake, eta hark edo taldeko administratzaile batek ezaba dezake. Taldea utzi duen norbait sartuta dagoen ordainketa blokeatuta dago. Etxekideen adibide landu baterako, ikusi [etxekideak](page:use-case/housemates).
+limits:
+  heading: Side Badger-ek egiten ez duena
+  items:
+    - Side Badger-ek ez du dirurik mugitzen, ez ordainketa-estekarik eta ez ordainketa-eskaerarik bidaltzen. Aplikazioko ordainketa bat beste nonbait egindako ordainketa baten erregistroa da.
+    - Proposatutako ordainketak parekatze-metodo sinple batetik datoz, moneta bakoitzeko aplikatuta. Moneta horretan saldoa duten pertsonak baino ordainketa gutxiago proposatzen ditu beti (lau pertsona, gehienez hiru ordainketa), baina ez du beti aurkitzen ordainketa kopuru txikiena posiblea.
+    - Ezin dituzu proposamenak desaktibatu. **Erakutsi guztiak** aukerak taldeko proposatutako ordainketa guztiak zerrendatzen ditu, ez zureak bakarrik.
+    - Monetak ez dira inoiz elkarren artean konpentsatzen, gastuak sartzean bihurtu ez badira.
+    - Ez dago gogorarazpenik, beraz ordainketa bat jarraitzea zure esku geratzen da.
+useCasesHeading: Kitatzeak non axola duen
+faq:
+  heading: Galderak
+  items:
+    - q: Side Badger-ek dirua bidaltzen al du?
+      a: Ez. Ordaindu elkarri nahi duzuen moduan, eta gero erregistratu ordainketa Side Badger-en saldoa eguneratzeko.
+    - q: Proposatutako ordainketak desaktiba ditzaket?
+      a: Ez. Sinplifikazioa aktibatuta geratzen da, eta **Erakutsi guztiak** aukerak taldeko proposatutako ordainketa guztiak zerrendatzen ditu, ez zuri dagozkionak bakarrik.
+    - q: Zergatik gordetzen dira euroak eta libera esterlinak bereizita?
+      a: Saldoak ordaindu zenuen monetan geratzen dira, gastu edo ordainketa bat sartzean bihurtzen ez baduzu. Moneta desberdinetako zorrak ez dira inoiz elkarren artean konpentsatzen.
+    - q: Zer gertatzen da norbaitek zor duenaren zati bat bakarrik ordaintzen badu?
+      a: Erregistratu ordaindu duen zatia. Gainerakoa saldoan geratzen da ordaindu arte.
+    - q: Ordainketa kopuru txikiena posiblea al da beti?
+      a: Ez dago bermatuta. Moneta horretan saldoa duten pertsonak baino ordainketa gutxiago proposatzen ditu beti, beraz lau pertsonarentzat ez du inoiz hiru baino gehiago proposatzen. Etxekideen adibidean, bi ordainketa dira, pertsona bakoitzari zuzenean itzultzeak sei behar zituen lekuan.

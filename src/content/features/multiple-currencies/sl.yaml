@@ -1,0 +1,125 @@
+translatedFrom: "923c938f"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: "Deli stroške v 140 valutah, pretvorjene ali ločeno"
+  description: "Vsak strošek vnesi v valuti, v kateri si plačal, stanja vodi ločeno ali pretvarjaj po tečaju, ki ga vidiš in lahko spremeniš, nato se poravnaj s kratkim seznamom plačil."
+h1: "Deli stroške v 140 valutah"
+navLabel: "Več valut"
+lead: "Evri, jeni in tisti en taksi v bahtih. Side Badger sprejme vsak strošek v valuti, v kateri je bil plačan, ohranja stanja urejena in lahko pretvarja, ko se skupina raje poravna enkrat. Deluje v 140 valutah in se naravno prilega [skupinskim potovanjem](page:use-case/group-trips)."
+cta:
+  heading: "Prinesi svoje evre, prinesi svoje jene"
+  body: "Ustvari uporabniški račun, ustanovi skupino in dodaj prvi strošek v kateri koli valuti, ki jo imaš pri roki."
+  button: "Ustvari brezplačen račun"
+problem:
+  heading: "Vnesi, kot je bilo plačano"
+  body: "Potovanje redko plačaš v eni valuti. Hotel je bil rezerviran doma v funtih, večerja plačana v jenih, kava na letališču pa v kakršni koli valuti, ki jo je uporabljal vmesni pristanek. Vse ročno pretvarjati, preden sploh vneseš, je način, kako se preglednice opustijo. V Side Badger vsak strošek vneseš v valuti z računa in vsak znesek sledi pravilom svoje valute, zato jeni nimajo decimalk, dinarji pa imajo tri. Nedavno uporabljene valute so na seznamu prve."
+workflow:
+  heading: "Valute vodi ločeno ali pretvarjaj sproti"
+  steps:
+    - title: "Dodaj strošek v njegovi valuti"
+      body: "Izberi valuto, vpiši znesek, povej, kdo je plačal in kdo je strošek delil. Nič drugega ni potrebno. To je privzeto in ohrani izvirni znesek natanko tako, kot si ga vnesel."
+      shot: S07
+      shotAlt: "Obrazec za strošek z vnesenim zneskom v jenih"
+    - title: "Spremljaj stanje za vsako valuto"
+      body: "Stanja se vodijo ločeno za vsako valuto, vsako pa ima svoj kratek seznam predlaganih plačil. Funti se poravnajo v funtih, jeni v jenih."
+      shot: S10
+      shotAlt: "Zaslon stanj s poenostavljenimi dolgovi v dveh valutah"
+    - title: "Ali pretvori, ko se skupina raje poravna enkrat"
+      body: "Ob vnosu stroška izberi drugo valuto in Side Badger ga lahko pretvori po trenutnem menjalnem tečaju, ki ga lahko spremeniš v tistega, ki je veljal ob menjavi. Pretvorjeni znesek se pridruži stanju v tej valuti. Pretvorba je izbira skupine, nikoli nekaj, kar se zgodi za tvojim hrbtom."
+options:
+  heading: "Tečaj, ki ga vidiš in lahko spremeniš"
+  items:
+    - title: "Tečaj je viden"
+      body: "Ko pretvarjaš, se tečaj in pretvorjeni znesek pokažeta v obrazcu, zato nihče ne rabi številki verjeti na besedo."
+    - title: "Vnesi svojega"
+      body: "Si dobil boljši tečaj v menjalnici ali slabšega na letališču? Uredi tečaj v tistega, ki je veljal, in pretvorjeni znesek se posodobi."
+    - title: "Izvirnik ostane"
+      body: "Izvirni znesek ostane pri strošku, ob pretvorjenem, za vsakogar, ki vpraša, koliko je bilo v jenih."
+    - title: "Pretvorba je brezplačna"
+      body: "Pretvorba ne stane nič. Za vnos stroška v drugi valuti ni pristojbine."
+example:
+  heading: "Štirje prijatelji na Japonskem, poravnani na dva načina"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "hotel, rezerviran doma"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "večerja na Japonskem"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "vlakovne vozovnice"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "vstop v tempelj"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "Ena valuta za vso skupino"
+    body: "Če skupina o tem raje ne razmišlja, izberi valuto skupine in obrazec vanjo pretvori vsak nov strošek, po tečaju, ki ga še vedno vidiš in lahko spremeniš. To velja samo za nove in kopirane stroške. Urejanja in obstoječi stroški ostanejo, kakršni so, zato se nič že zabeleženega ne spremeni pod tabo."
+  - heading: "Dolguješ evre, plačaš v funtih"
+    body: "Plačano v jenih, poravnavaš v funtih? V redu. Ko beležiš plačilo, ga lahko prav tako pretvoriš, zato lahko tisti, ki dolguje evre, plača v funtih, evrsko stanje pa še vedno izide pravilno. Plačajte si, kakor želite, nato zabeležite."
+  - heading: "Pravila za skupino"
+    body: "Skupino omeji na valute, ki jih res uporabljate, in nastavi privzeto, da se obrazec odpre na pravi. Počitnice na Portugalskem ne potrebujejo 139 drugih možnosti ob računu za večerjo, [poroka v tujini](page:use-case/events-and-celebrations) pa verjetno potrebuje dve."
+limits:
+  heading: "Omejitve"
+  items:
+    - "Tečaj se določi ob shranitvi stroška. Stari stroški se nikoli ne revalorizirajo."
+    - "Side Badger pridobi trenutni tečaj, kjer more. Vsak par ga nima zagotovljenega, tečaj pa lahko vedno vneseš sam."
+    - "Samodejna pretvorba v skupini velja samo za nove in kopirane stroške, ne za urejanja ali obstoječe stroške."
+    - "Vsak strošek je omejen na 999.999,99 v svoji valuti."
+    - "Valut je 140. Kriptovalut in kovin med njimi ni."
+    - "Side Badger beleži plačila. Denarja nikoli ne premika ali menja."
+useCasesHeading: "Kje to pomaga"
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Kateri menjalni tečaj uporabljate?"
+      a: "Trenutni menjalni tečaj, pridobljen ob vnosu stroška, kjer je na voljo. Spremeniš ga lahko v tistega, ki je veljal ob menjavi, pretvorjeni znesek pa se posodobi."
+    - q: "Ali se stari stroški revalorizirajo?"
+      a: "Ne. Tečaj se določi ob shranitvi stroška, zato stanje ne zdrsne samo zato, ker se je premaknil trg."
+    - q: "Ali podpirate kripto?"
+      a: "Ne. Valut je 140, kriptovalut med njimi ni."
+    - q: "Zakaj ne morem vnesti 2.000.000 rupij?"
+      a: "Vsak strošek je omejen na 999.999,99 v svoji valuti. Vnesi ga v drugi valuti in pretvori ali ga razdeli na dva stroška."
+    - q: "Ali pretvorba kaj stane?"
+      a: "Ne. Pretvorba je brezplačna, kakor vse v Side Badger. Glej [cenik](page:pricing)."
+    - q: "Ali moram pretvarjati?"
+      a: "Ne. Valute ostanejo ločene, razen če se ti ali tvoja skupina odločite za pretvorbo, vsaka valuta pa ima svoj kratek seznam plačil."

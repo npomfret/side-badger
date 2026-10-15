@@ -1,0 +1,107 @@
+translatedFrom: "e6b829e6"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.2.label
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+meta:
+  title: "Deli gospodinjske račune s sostanovalci"
+  description: "Najemnino deli po velikosti sobe, energijo in živila enako ter vsak mesec poglej, kdo komu dolguje. Brezplačen način, da sostanovalci vodijo štetje."
+h1: "Deli gospodinjske račune s sostanovalci"
+navLabel: "Sostanovalci"
+lead: "Za sostanovalca, ki kupuje toaletni papir, in sostanovalce, ki nikoli ne opazijo, da se to zgodi. Side Badger vodi eno tekoče štetje najemnine, računov in nakupov za **sostanovalce**, zato ni treba nikogar loviti in lahko hladilnik spet postane le hladilnik."
+cta:
+  heading: "Začni pri svoji hiši"
+  body: "Ustvari uporabniški račun, ustanovi skupino za hišo in vsem pošlji povezavo za povabilo. Računi tega meseca lahko gredo noter že nocoj."
+  button: "Ustvari brezplačen račun"
+scenario:
+  heading: "Uredi hišo"
+  body: "Ustanovi skupino za hišo, izberi ime, pod katerim želiš biti viden v njej, in vse povabi s povezavo ali kodo QR. Skupina je lahko odprta, kjer vsak dodaja in ureja, ali upravljana, kjer nove člane potrdi skrbnik, stroške pa lahko spreminjajo samo ustanovitelji in skrbniki, kar ustreza sostanovalcu, ki vodi knjige. Kdor želi samo spremljati številke, je lahko opazovalec, ki vidi vse in ničesar ne spreminja. Vsak nov strošek vidijo takoj, zato ima „dodal bom pozneje“ manj skrivališč."
+sections:
+  - heading: "Najemnina in računi"
+    body: "Najemnina se redko deli s štirimi, ker spalnice niso enake. Razdeli jo po odstotkih, da velika soba plača več in omara z oknom manj. Odstotki morajo skupaj dati 100. Računi, ki jih uporabljajo vsi, dobijo enako delitev, sostanovalec, ki pri strošku ni sodeloval, pa je lahko iz njega izpuščen. Ko enaka delitev pusti preostali cent, ta naključno pripade eni osebi. Ponavljajočih se računov ni, zato vsak mesec kopiraš najemnino prejšnjega meseca, spremeniš datum in nadaljuješ. Daj najemnino, račune in nakup skupaj in dobiš mesec, kot je spodnji, v hiši štirih: Jo plača £2,000 najemnine, razdeljene 30 %, 25 %, 25 % in 20 % po velikosti sobe, nato Kwame plača £120 za energijo, Lena £40 za internet in Matt £80 za živila, vse razdeljeno enako. Jo na koncu dobi £1,340, Side Badger pa predlaga tri plačila, vsa Jo."
+  - heading: "Skupni nakup"
+    body: "Skupni nakupovalni seznam imej v isti skupini kot račune za nakupe in odkljukaj postavke, ko pristanejo v košarici. Kdor opravi nakup, doda znesek z računa kot strošek in ga razdeli enako ali samo med osebe, ki bodo stvar pojedle. Kdo vedno kupuje ovseno mleko, ki ga nihče drug ne pije, ostaja stvar hiše, a vsaj seznam stroškov bo točen. Dovoljenja skupine določajo, kdo lahko ustvarja in ureja sezname."
+  - heading: "Pošteni načini delitve gospodinjskih stroškov"
+    items:
+      - "**Enako** ustreza temu, kar vsi uporabljajo približno enako, kot so internet, čistila in skupni nakup. Je hitro in nihče se ne prepira o matematiki."
+      - "**Po velikosti sobe** ustreza najemnini, ker se sobe razlikujejo in tudi to, koliko so ljudje zanje pripravljeni plačati. Odstotke se dogovorite enkrat, ko se kdo vseli, in jih uporabljajte vsak mesec."
+      - "**Po uporabi** ustreza računom, kjer ena oseba očitno porabi več, na primer račun za ogrevanje domače pisarne ali račun za pretočno storitev, ki ga gledata dva. Izpusti ljudi, ki pri tem niso sodelovali, ali vnesi točne zneske za vsakega."
+      - "Karkoli izbereš, se dogovorite pred prvim računom, ne po prvem prepiru, in pravilo zapišite nekam, kjer ga vidi vsa hiša."
+  - heading: "Ko se kdo izseli"
+    body: "Najprej se poravna. Nihče ne more zapustiti skupine, dokler komu dolguje ali mu je kdo dolžan denar, zato izseljenec plača ali prejme, ti to zabeležiš in šele nato odide. Skupino vodi naprej za preostale sostanovalce in novo osebo povabi s povezavo. Ko je hiše konec, lahko skrbnik skupino zakleni, da številke ostanejo, ali jo zapre za vedno, zaradi česar postane nedostopna vsem, zato to stori šele, ko nihče več ne potrebuje zgodovine."
+exampleAfter: 2
+example:
+  heading: "Kdo komu dolguje ta mesec"
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: "Najemnina"
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: "Energija"
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: "Internet"
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: "Živila"
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: "Funkcije, ki jih hiša uporablja"
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Ali se lahko najemnina ponavlja samodejno?"
+      a: "Ne, ponavljajočih se računov ni. Najemnino prejšnjega meseca kopiraj z nekaj dotiki, spremeni datum in končano je."
+    - q: "Ali lahko delimo po velikosti sobe?"
+      a: "Da, po odstotkih. Vsakemu sostanovalcu daj delež, ki ustreza njegovi sobi, če le deleži skupaj dajo 100. O drugih načinih delitve pišemo pri [delitvi stroškov](page:feature/split-expenses)."
+    - q: "Kaj, če se sostanovalec izseli in dolguje denar?"
+      a: "Skupine ne more zapustiti, dokler se ne poravna, ker je nihče ne more zapustiti, dokler komu dolguje ali mu je kdo dolžan denar. Številke ostanejo poštene, dokler niso vsi kvit."
+    - q: "Ali Side Badger plačuje račune?"
+      a: "Ne. Vodi štetje in predlaga kratek seznam plačil. Plačajte si, kakor želite, nato zabeležite, kot pojasnjuje [poravnava](page:feature/settle-up)."
+    - q: "Ali lahko en sostanovalec vodi knjige?"
+      a: "Da. Naredi ga za skrbnika in uporabi upravljano skupino, kjer nove člane potrdi skrbnik, stroške pa lahko spreminjajo samo ustanovitelji in skrbniki."

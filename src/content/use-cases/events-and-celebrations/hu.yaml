@@ -1,8 +1,6 @@
 translatedFrom: "a1e36ce8"
 review:
-  status: checked
-  checker: "T5-check"
-  date: "2026-10-15"
+  status: machine
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -41,14 +39,14 @@ sections:
   - heading: "Ki miben vesz részt"
     body: "Nem mindenki fizet ugyanannyit, és nem mindenki osztozik minden költségen. Oszd fel a költséget egyenlően, százalékosan vagy **pontos összegek** szerint, hogy mindenki része az az összeg legyen, amiben megegyeztetek. Hagyd ki azt, aki nem vett részt, például a vendégeket, akik kihagyták a vacsorát, vagy a barátokat, akik nem szálltak be az ajándékba. Minden költségnek egy fizetője van, a felosztásban szereplő többiek pedig neki tartoznak a részükkel. A részleteket a [költségek felosztása](page:feature/split-expenses) oldalon találod."
   - heading: "Őrizd meg az iratokat"
-    body: "Adj megjegyzéseket egy költséghez, például hogy mit fedezett. A kommentek a **költség mellett** maradnak, amelyről szólnak, így a „a torta £45 volt vagy £54?” kérdés és a válasza ugyanazon a helyen él. A kommentek legfeljebb 500 karakteresek lehetnek, ami bőven elég egy foglalóról szóló kérdéshez."
+    body: "Adj megjegyzéseket egy költséghez, például hogy mit fedezett. A kommentek a **költség mellett** maradnak, amelyről szólnak, így a „a torta 45 £ volt vagy 54 £?” kérdés és a válasza ugyanazon a helyen él. A kommentek legfeljebb 500 karakteresek lehetnek, ami bőven elég egy foglalóról szóló kérdéshez."
   - heading: "Vezérlők a szervezőnek"
     body: "A nyitott együttműködés lehetővé teszi, hogy bármely tag hozzáadjon és szerkesszen költségeket, ami egy kis ajándéknál rendben van. Esküvőhöz vagy nagyobb bulihoz válaszd a **Felügyelt csoport** előbeállítást. Az adminisztrátorok jóváhagyják az új tagokat, és a költségeket csak a létrehozók és az adminisztrátorok változtathatják. Hívj meg embereket linkkel vagy QR-kóddal; bekapcsolt jóváhagyásnál egy adminisztrátor beengedi az egyes embereket, így a vendéglista vendéglista marad. Ha vége az eseménynek, zárold a csoportot, hogy a számok a helyükön maradjanak."
   - heading: "Számoljatok el a buli után"
     body: "Amint megérkezik az utolsó számla, az egyenlegek megmutatják, **ki kinek tartozik**, a Side Badger pedig egy rövid kifizetéslistát javasol, amely mindenkit elszámoltat. Fizessetek egymásnak, ahogy akartok, aztán rögzítsd a kifizetést a csoportban. A Side Badger sosem mozgat pénzt, így a csoport vezeti a számolást, miközben az átutalások a ti saját banki alkalmazásaitokban zajlanak. Az [elszámolás](page:feature/settle-up) oldal megmutatja, hogyan lesz a gubancból rövid lista."
 exampleAfter: 5
 example:
-  heading: "Egy közös ajándék: hat szavazat mellette, £150 elosztandó"
+  heading: "Egy közös ajándék: hat szavazat mellette, 150 £ elosztandó"
   currency: GBP
   people:
     - id: priya

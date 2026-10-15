@@ -91,7 +91,7 @@ export default {
   'home.expenses.splitEqual': 'Egyenlően',
   'home.expenses.splitExact': 'Pontos összegek',
   'home.expenses.splitPercent': 'Százalék',
-  'home.expenses.title': 'Adj hozzá egy költséget. Told fel a saját módodon.',
+  'home.expenses.title': 'Adj hozzá egy költséget. Oszd fel a saját módodon.',
   'home.group.body': 'Hívj meg embereket linkkel vagy QR-kóddal. Elég hozzá egy e-mail-cím.',
   'home.group.copy': 'Másolás',
   'home.group.inviteLink': 'Meghívó link',

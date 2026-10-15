@@ -97,10 +97,10 @@ describe('alternatesFor', () => {
     expect(alternates.map(a => a.hreflang)).toEqual([...expected, 'x-default']);
     expect(alternates.find(a => a.hreflang === 'x-default')?.href).toBe('https://sidebadger.me/');
     expect(alternates.map(a => a.hreflang)).not.toContain('ph');
-    if (built.includes('ph')) {
+    if (built.includes('ph') && isIndexable('home', 'ph')) {
       expect(alternates.find(a => a.hreflang === 'tl')?.href).toBe('https://sidebadger.me/ph/');
     }
-    if (built.includes('fr')) {
+    if (built.includes('fr') && isIndexable('home', 'fr')) {
       expect(alternates.find(a => a.hreflang === 'fr')?.href).toBe('https://sidebadger.me/fr/');
     }
   });

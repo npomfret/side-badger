@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import { checkHreflang } from './rules/r07-hreflang';
 import { dist, overrideLockPages } from './lib/site';
 import { fx, mentions, sites } from './lib/fixtures';
@@ -12,6 +12,16 @@ describe('rule 7: hreflang clusters are symmetric, complete and valid', () => {
   });
 
   describe('fixtures', () => {
+    // The fixtures' fr and ph pages are indexable; don't depend on the repo's current review statuses
+    beforeEach(() => {
+      overrideLockPages('fr', { home: 'reviewed', pricing: 'reviewed' });
+      overrideLockPages('ph', { home: 'reviewed', pricing: 'reviewed' });
+    });
+    afterEach(() => {
+      overrideLockPages('fr', undefined);
+      overrideLockPages('ph', undefined);
+    });
+
     it('passes a symmetric en and fr cluster', () => {
       expect(checkHreflang(cluster())).toEqual([]);
     });

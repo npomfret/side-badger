@@ -1,0 +1,90 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: machine
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+meta:
+  title: "파티, 결혼식, 단체 선물 비용 나누기"
+  description: "사람마다 내는 금액이 다를 때 파티, 결혼식, 단체 선물 비용을 나누세요. 계획에 투표하고, 정확한 금액으로 나누고, 누가 누구에게 빚졌는지 확인하세요."
+h1: "파티, 결혼식, 단체 선물 비용 나누기"
+navLabel: "행사와 기념 모임"
+lead: "보증금, 장식, 비상용 우산 비용을 나누세요. 좌석 배치는 더 용감한 사람에게 맡기고요. 사이드 배저가 **누가 얼마를 냈는지**를 한곳에 모아 두므로, 주최자도 파티를 즐길 수 있어요."
+cta:
+  heading: "다음 기념 모임부터 시작하세요"
+  body: "계정을 만들고, 행사 그룹을 만들고, 초대 링크를 보내세요. 사이드 배저는 무료이며 광고도 일일 한도도 없습니다."
+  button: "무료 계정 만들기"
+scenario:
+  heading: "모두가 돈을 보태지만, 항상 같은 금액은 아니에요"
+  body: "누군가는 장소 보증금을 내고, 다른 누군가는 케이크를 사고, 세 번째 사람은 단체 선물을 자기 카드로 결제합니다. 어떤 손님은 모든 행사에 오고, 어떤 손님은 저녁에만 와요. 이걸 채팅 스레드에서 공정하게 계산하는 건 아무도 지원하지 않은 일입니다. 사이드 배저 그룹은 금액이 어떻게 섞여 있든 전부 담아, 각자 줄 돈이나 받을 돈을 보여 줍니다. 기본은 [사용 방법](page:how-it-works)에서 보고, 행사 이야기는 계속 읽어 보세요."
+sections:
+  - heading: "함께 결정하기"
+    body: "돈이 오가기 전에 선택을 **투표**에 부치세요. 장소 두 곳이나 선물 아이디어 세 가지처럼 선택지를 최대 10개까지 추가하고 모두가 투표하게 하세요. 누가 무엇에 투표했는지 숨길 수 있어서 모든 선택지가 공평하게 평가받고, 투표가 닫히면 결과가 나타납니다. 무엇이 정해졌는지 알아보려고 마흔 개의 메시지를 거슬러 올라갈 필요가 없어요."
+  - heading: "누가 무엇에 참여하나"
+    body: "모두가 같은 금액을 내는 건 아니고, 모든 비용에 모두가 참여하는 것도 아닙니다. 지출을 똑같이, 비율로, 또는 **정확한 금액으로** 나누면 각자의 몫이 합의한 금액 그대로가 됩니다. 저녁을 건너뛴 손님이나 선물에 참여하지 않은 친구처럼, 관여하지 않은 사람은 뺄 수 있어요. 지출마다 결제자는 한 명이고, 분할에 포함된 나머지 사람은 자기 몫을 그 사람에게 빚집니다. 자세한 내용은 [지출 나누기](page:feature/split-expenses) 페이지에 있어요."
+  - heading: "증빙 챙기기"
+    body: "지출에 그 비용이 무엇을 위한 것이었는지 메모를 추가하세요. 댓글은 해당 **지출 옆**에 남으므로 “케이크가 £45였나 £54였나?”라는 질문과 그 답이 같은 곳에 있습니다. 댓글은 500자까지 쓸 수 있어서 보증금 관련 질문에는 충분합니다."
+  - heading: "주최자 설정"
+    body: "열린 협업 방식은 모든 멤버가 지출을 추가하고 수정할 수 있어서 작은 선물에는 괜찮습니다. 결혼식이나 큰 파티에는 **관리형 그룹** 프리셋을 고르세요. 관리자가 새 멤버를 한 명씩 승인하고, 만든 사람과 관리자만 지출을 바꿀 수 있습니다. 링크나 QR 코드로 초대하고, 승인을 켜면 관리자가 한 명씩 허용하므로 초대 명단은 초대 명단 그대로 유지돼요. 행사가 끝나면 그룹을 잠가서 숫자가 그대로 유지되게 하세요."
+  - heading: "파티가 끝나고 정산하기"
+    body: "마지막 청구서까지 들어오면 잔액에 **누가 누구에게 빚졌는지**가 나타나고, 사이드 배저가 모두를 정산해 주는 짧은 결제 목록을 제안합니다. 원하는 방법으로 서로 지불한 다음 그룹에 결제를 기록하세요. 사이드 배저는 돈을 옮기지 않으므로, 이체는 각자의 은행 앱에서 이뤄지는 동안 그룹이 계산을 이어 갑니다. [정산하기](page:feature/settle-up) 페이지에서 얽힌 빚이 짧은 목록이 되는 과정을 볼 수 있어요."
+exampleAfter: 5
+example:
+  heading: "단체 선물: 여섯 표를 받은 £150를 나누기"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "단체 선물"
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: "이럴 때 쓰는 기능"
+faq:
+  heading: "자주 묻는 질문"
+  items:
+    - q: "손님이 참여하지 않고 그룹을 볼 수 있나요?"
+      a: "아니요. 링크나 QR 코드와 무료 계정으로 참여하므로, 들어온 뒤에야 그룹을 볼 수 있습니다."
+    - q: "사이드 배저가 돈을 걷어 주나요?"
+      a: "아니요. 사이드 배저는 계산을 기록할 뿐 돈을 옮기지 않습니다. 원하는 방법으로 서로 지불한 다음 결제를 기록하세요. 무료이며 광고도 일일 한도도 없습니다. [가격](page:pricing)을 참고하세요."
+    - q: "투표를 익명으로 할 수 있나요?"
+      a: "네. 투표를 만들 때 누가 무엇에 투표했는지 숨길 수 있습니다. 설정은 첫 투표 전에만 바꿀 수 있어요."
+    - q: "사람마다 다른 금액을 낼 수 있나요?"
+      a: "네. 지출을 정확한 금액으로 나누면 각자의 몫이 합의한 금액 그대로가 되고, 관여하지 않은 사람은 뺄 수 있습니다."
+    - q: "주최자가 장부를 맡을 수 있나요?"
+      a: "네. 관리형 그룹 프리셋을 쓰면 만든 사람과 관리자만 지출을 바꾸고, 관리자가 새 멤버를 승인합니다."

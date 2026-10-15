@@ -1,0 +1,109 @@
+translatedFrom: "1b51f540"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: Mit weniger Zahlungen abrechnen | Side Badger
+  description: Sieh, wer in deiner Gruppe wem was schuldet, erhalte eine kurze Liste von Zahlungen, die alle ausgleicht, und erfasse jede Zahlung, wenn sie passiert. Kostenlos nutzbar.
+h1: Mit weniger Zahlungen abrechnen
+navLabel: Abrechnen
+lead: Side Badger führt für alle in der Gruppe einen laufenden Saldo und schlägt eine kurze Liste von Zahlungen vor, die ihn ausgleicht. Ihr zahlt einander, wie ihr wollt, und erfasst es dann. Wenn du zuerst sehen willst, wie die Zahlen aufgeteilt werden, fang mit [Ausgaben teilen](page:feature/split-expenses) an.
+cta:
+  heading: Bereit zu entwirren, wer wem was schuldet?
+  body: Erstelle ein Konto, starte eine Gruppe und füge die erste Ausgabe hinzu. Die Salden erledigen den Rest.
+  button: Kostenloses Konto erstellen
+problem:
+  heading: Salden, die sich laufend aktualisieren
+  body: Jede Ausgabe ändert, wer wem was schuldet, deshalb hält Side Badger die Salden aktuell, wenn Ausgaben und Zahlungen hinzukommen. Alle in der Gruppe sehen eine Änderung sofort und sehen, was sich geändert hat und wer es geändert hat. Salden werden pro Währung geführt, Euro und Pfund bleiben also in ihren eigenen Spalten, es sei denn, eine Ausgabe wurde bei der Eingabe umgerechnet. Standardmäßig siehst du die Schulden, die dich betreffen; **Alle anzeigen** listet die ganze Gruppe.
+workflow:
+  heading: Drei Schritte zu quitt
+  steps:
+    - title: Sieh, wer wem was schuldet
+      body: Öffne die Salden der Gruppe, um zu sehen, was du schuldest, was du bekommst und eine kurze Liste von Zahlungen, die alle ausgleicht, pro Währung berechnet. Hinterfragte Ausgaben bleiben aus den Summen, bis sie geklärt sind. Im Mitbewohner-Beispiel unten werden aus sechs Zahlungen zwei.
+      shot: S10
+      shotAlt: Der Salden-Bildschirm mit vereinfachten Schulden in zwei Währungen und eingeschaltetem "Alle anzeigen"
+    - title: Zahle, wie du willst, und erfasse es dann
+      body: Banküberweisung, Bargeld, ein Gefallen aus dem letzten Urlaub. Side Badger bewegt das Geld nicht. Sobald es den Besitzer gewechselt hat, erfasse die Zahlung, und der Saldo aktualisiert sich für alle.
+      shot: S11
+      shotAlt: Das Zahlungsformular mit Schnellausgleich-Schaltflächen und dem Hinweis bei einer Teilzahlung
+    - title: Prüfe, ob es angekommen ist
+      body: Die Zahlung landet im Gruppenverlauf, wo alle in der Gruppe sie sehen und mit einem Emoji reagieren können. Feiere eine Zahlung, wenn sie ankommt.
+      shot: S12
+      shotAlt: Der Zahlungsverlauf mit Emoji-Reaktionen auf eine Zahlung
+options:
+  heading: Optionen
+  items: []
+example:
+  heading: Vom Knäuel zur kurzen Liste
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: Strom
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: Internetanschluss
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: Lebensmittel
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: Eine Zahlung erfassen
+    body: Wenn jemand zahlt, erfasse es bei der richtigen Person. Die Schnellausgleich-Schaltflächen tragen den Betrag aus deinen vorgeschlagenen Zahlungen ein, und du kannst eine Notiz wie "Banküberweisung" hinzufügen (bis zu 500 Zeichen). Zahlst du nur einen Teil dessen, was du schuldest, bleibt der Rest auf dem Saldo. Wenn du zu wenig oder zu viel eingibst, warnt dich Side Badger vor dem Speichern. Zum Erfassen einer Zahlung brauchst du die Berechtigung, Ausgaben zu bearbeiten, und das Datum darf nicht in der Zukunft liegen.
+  - heading: In einer anderen Währung bezahlt?
+    body: Salden bleiben in der Währung, in der sie bezahlt wurden, eine Euro-Schuld bleibt also eine Euro-Schuld. Du schuldest Euro und zahlst in Pfund? Rechne die Zahlung bei der Eingabe um, zu einem aktuellen Wechselkurs oder zu dem Kurs, den du tatsächlich bekommen hast. Der Kurs wird beim Speichern der Zahlung festgelegt. [Mehrere Währungen](page:feature/multiple-currencies) erklärt, wie die Umrechnung funktioniert, und [Gruppenreisen](page:use-case/group-trips) zeigt sie im Einsatz.
+  - heading: Ein Verlauf, den du prüfen kannst
+    body: Jede erfasste Zahlung bleibt mit Datum, Betrag und Notiz im Gruppenverlauf. Nur die Person, die eine Zahlung erfasst hat, kann sie bearbeiten, und sie oder ein Gruppen-Admin kann sie löschen. Eine Zahlung, an der jemand beteiligt ist, der die Gruppe verlassen hat, ist gesperrt. Ein durchgerechnetes Mitbewohner-Szenario findest du unter [Mitbewohner](page:use-case/housemates).
+limits:
+  heading: Was Side Badger nicht kann
+  items:
+    - Side Badger bewegt kein Geld, sendet keine Zahlungslinks und keine Zahlungsanfragen. Eine Zahlung in der App ist die Aufzeichnung einer Zahlung, die anderswo erfolgt ist.
+    - Die vorgeschlagenen Zahlungen stammen aus einem einfachen Zuordnungsverfahren, pro Währung angewendet. Es schlägt immer weniger Zahlungen vor, als es Personen mit einem Saldo in dieser Währung gibt (bei vier Personen höchstens drei Zahlungen), findet aber nicht immer die kleinstmögliche Zahl.
+    - Du kannst die Vorschläge nicht ausschalten. **Alle anzeigen** listet jede vorgeschlagene Zahlung der Gruppe, nicht nur deine.
+    - Währungen werden nie gegeneinander verrechnet, es sei denn, die Ausgaben wurden bei der Eingabe umgerechnet.
+    - Es gibt keine Erinnerungen, das Hinterherlaufen bleibt also deine Sache.
+useCasesHeading: Wo Abrechnen zählt
+faq:
+  heading: Fragen
+  items:
+    - q: Schickt Side Badger das Geld?
+      a: Nein. Zahlt einander, wie ihr wollt, und erfasse die Zahlung dann in Side Badger, damit sich der Saldo aktualisiert.
+    - q: Kann ich die vorgeschlagenen Zahlungen ausschalten?
+      a: Nein. Die Vereinfachung bleibt an, und **Alle anzeigen** listet jede vorgeschlagene Zahlung der Gruppe, nicht nur die, die dich betreffen.
+    - q: Warum werden Euro und Pfund getrennt geführt?
+      a: Salden bleiben in der Währung, in der du bezahlt hast, es sei denn, du rechnest bei der Eingabe einer Ausgabe oder Zahlung um. Schulden in verschiedenen Währungen werden nie gegeneinander verrechnet.
+    - q: Was, wenn jemand nur einen Teil seiner Schulden zahlt?
+      a: Erfasse den gezahlten Teil. Der Rest bleibt auf dem Saldo, bis er bezahlt ist.
+    - q: Ist das immer die kleinstmögliche Zahl von Zahlungen?
+      a: Nicht garantiert. Es schlägt immer weniger Zahlungen vor, als es Personen mit einem Saldo in dieser Währung gibt, bei vier Personen also nie mehr als drei. Im Mitbewohner-Beispiel sind das zwei Zahlungen, wo es beim direkten Zurückzahlen an jede Person sechs waren.

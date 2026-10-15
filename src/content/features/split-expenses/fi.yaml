@@ -1,8 +1,6 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
-  status: checked
-  checker: "T-amounts-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -11,6 +9,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -104,6 +103,7 @@ sections:
       - Lisää enintään kolme **tunnistetta** kulujen ryhmittelyyn, kuten ruokaostokset tai matkustus.
       - Lisää **paikka**. Liitä karttalinkki, niin paikan nimi täyttyy itsestään.
       - Lisää **muistiinpano** luvun takana olevalle tarinalle, tarvittaessa hieman muotoiltuna.
+      - "Liitä enintään kolme **kuittia** kuvina tai PDF-tiedostoina, jotta todiste pysyy kulun mukana."
       - Käytä **kommentteja**, jotta keskustelu pysyy sen kulun vieressä, jota se koskee, eikä chat-ketjussa, jota kukaan ei selaa taaksepäin.
   - heading: Kopioi, muokkaa ja katso, mikä muuttui
     body: Kopioi viime kuun vuokra sen sijaan, että kirjoittaisit sen uudelleen, ja muuta se, mikä on erilaista. Jos luku oli väärin, muokkaa kulua. Aiempi versio säilyy ja muokkaus näkyy ryhmän toiminnassa, joten kukaan ei muuta lukua hiljaa. Se, mitä kukin saa muokata, riippuu ryhmän oikeuksista.

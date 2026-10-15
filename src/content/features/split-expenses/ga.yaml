@@ -1,8 +1,6 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -11,6 +9,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: "Roinn costais go cothrom, de réir suimeanna cruinne nó de réir céatadáin | Side Badger"
   description: "Roinn costas comhroinnte go cothrom, de réir suimeanna cruinne nó de réir céatadáin, agus fág amach duine ar bith nach raibh ann. Saor in aisce, gan fógraí agus gan teorainneacha laethúla."
@@ -100,6 +99,7 @@ sections:
       - "Cuir suas le trí **lipéad** leis chun costais a ghrúpáil, amhail earraí grósaera nó taisteal."
       - "Cuir an **áit** leis. Greamaigh nasc léarscáile agus líonann ainm na háite isteach é féin."
       - "Cuir **nóta** leis don scéal taobh thiar den uimhir, le roinnt formáidithe más gá don scéal é."
+      - "Ceangail suas le trí **admháil**, mar ghrianghraif nó mar chomhaid PDF, ionas go bhfanfaidh an cruthúnas leis an gcostas."
       - "Úsáid na **tráchtanna** chun an comhrá a choinneáil in aice leis an gcostas a bhfuil sé faoi, in ionad snáithe comhrá nach dtéann aon duine ar ais tríd."
   - heading: "Cóipeáil, cuir in eagar, agus féach cad a athraigh"
     body: "Cóipeáil cíos na míosa seo caite in ionad é a chlóscríobh arís, ansin athraigh an méid atá difriúil. Má bhí uimhir mícheart, cuir an costas in eagar. Coinnítear an leagan níos luaithe agus taispeántar an eagarthóireacht i ngníomhaíocht an ghrúpa, mar sin ní athraíonn aon duine uimhir go ciúin. Braitheann an méid atá cead ag duine a chur in eagar ar cheadanna an ghrúpa."

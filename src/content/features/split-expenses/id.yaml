@@ -1,8 +1,6 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
-  status: checked
-  checker: "T-amounts-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -11,6 +9,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: "Bagi pengeluaran secara merata, pasti, atau persentase | Side Badger"
   description: "Bagi biaya bersama secara merata, berdasarkan jumlah pasti, atau persentase, dan keluarkan siapa pun yang tidak hadir. Gratis, tanpa iklan dan tanpa batas harian."
@@ -100,6 +99,7 @@ sections:
       - "Tambahkan hingga tiga **label** untuk mengelompokkan pengeluaran, seperti belanjaan atau perjalanan."
       - "Tambahkan **tempat**. Tempelkan tautan peta dan nama tempat terisi sendiri."
       - "Tambahkan **catatan** untuk cerita di balik angkanya, dengan sedikit pemformatan jika ceritanya memerlukan."
+      - "Lampirkan hingga tiga **struk** sebagai foto atau PDF, supaya buktinya tetap menyatu dengan pengeluaran."
       - "Gunakan **komentar** untuk menjaga percakapan di samping pengeluaran yang dibicarakan, bukan di utas obrolan yang tak pernah digulir kembali."
   - heading: "Salin, ubah, dan lihat apa yang berubah"
     body: "Salin sewa bulan lalu daripada mengetiknya lagi, lalu ubah yang berbeda. Jika sebuah angka salah, ubah pengeluarannya. Versi sebelumnya disimpan dan perubahan muncul di aktivitas grup, jadi tak ada yang mengubah angka diam-diam. Apa yang boleh diubah seseorang bergantung pada izin grup."

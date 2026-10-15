@@ -1,8 +1,6 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -11,6 +9,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: "Partager les dépenses à parts égales, par montants exacts ou par pourcentage | Side Badger"
   description: "Partagez un coût commun à parts égales, par montants exacts ou par pourcentage, en laissant de côté ceux qui n'étaient pas là. Gratuit, sans publicité et sans limite quotidienne."
@@ -100,6 +99,7 @@ sections:
       - "Ajoutez jusqu'à trois **étiquettes** pour regrouper les dépenses, comme courses ou voyage."
       - "Ajoutez le **lieu**. Collez un lien de carte et le nom du lieu se remplit tout seul."
       - "Ajoutez une **note** pour l'histoire derrière le chiffre, avec un peu de mise en forme si l'histoire l'exige."
+      - "Joignez jusqu'à trois **reçus**, en photo ou en PDF, pour que la preuve reste avec la dépense."
       - "Utilisez les **commentaires** pour garder la conversation à côté de la dépense concernée, plutôt que dans un fil de discussion que personne ne remonte."
   - heading: "Copier, modifier, et voir ce qui a changé"
     body: "Copiez le loyer du mois dernier au lieu de le ressaisir, puis changez ce qui diffère. Si un chiffre était faux, modifiez la dépense. La version précédente est conservée et la modification apparaît dans l'activité du groupe, donc personne ne change un chiffre en douce. Ce que chacun a le droit de modifier dépend des permissions du groupe."

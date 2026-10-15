@@ -1,8 +1,6 @@
 translatedFrom: "a1e36ce8"
 review:
-  status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  status: machine
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -43,7 +41,7 @@ sections:
   - heading: Spara pappersarbetet
     body: Lägg till anteckningar på en utgift, till exempel vad kostnaden omfattade. Kommentarerna ligger **bredvid utgiften** de handlar om, så att frågan "kostade tårtan £45 eller £54?" och dess svar finns på samma ställe. Kommentarer får vara 500 tecken, vilket är gott och väl för en fråga om en deposition.
   - heading: Arrangörens kontroller
-    body: Öppet samarbete låter alla medlemmar lägga till och redigera utgifter, vilket går bra för en liten gåva. För ett bröllop eller en större fest väljer du förinställningen **Hanterad grupp**. Administratörer godkänner varje ny medlem, och bara skaparen och administratörer kan ändra utgifter. Bjud in folk med en länk eller QR-kod; med godkännande påslaget släpper en administratör in varje person, så att gästlistan förblir gästlistan. När eventet är över låser du gruppen så att siffrorna ligger kvar.
+    body: Öppet samarbete låter alla medlemmar lägga till och redigera utgifter, vilket går bra för en liten gåva. För ett bröllop eller en större fest väljer du förinställningen **Hanterad grupp**. Administratörer godkänner varje ny medlem, och bara skapare och administratörer kan ändra utgifter. Bjud in folk med en länk eller QR-kod; med godkännande påslaget släpper en administratör in varje person, så att gästlistan förblir gästlistan. När eventet är över låser du gruppen så att siffrorna ligger kvar.
   - heading: Gör upp efter festen
     body: När den sista fakturan är inne visar saldona **vem som är skyldig vem**, och Side Badger föreslår en kort lista med betalningar som gör upp för alla. Betala varandra hur ni vill och registrera sedan betalningen i gruppen. Side Badger flyttar aldrig pengar, så gruppen håller räkningen medan överföringarna sker i era egna bankappar. Sidan [göra upp](page:feature/settle-up) visar hur en härva blir en kort lista.
 exampleAfter: 5
@@ -89,4 +87,4 @@ faq:
     - q: Kan folk bidra med olika belopp?
       a: Ja. Dela en utgift efter exakta belopp, så att var och ens andel är den siffra ni kommit överens om, eller lämna utanför de som inte var inblandade.
     - q: Kan en arrangör sköta bokföringen?
-      a: Ja. Använd förinställningen för hanterad grupp, så att bara skaparen och administratörer ändrar utgifter och administratörer godkänner nya medlemmar.
+      a: Ja. Använd förinställningen för hanterad grupp, så att bara skapare och administratörer ändrar utgifter och administratörer godkänner nya medlemmar.

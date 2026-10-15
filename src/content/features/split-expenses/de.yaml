@@ -1,8 +1,6 @@
 translatedFrom: "56ee9b03"
 review:
-  status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  status: machine
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -40,7 +38,7 @@ workflow:
       shot: S06
       shotAlt: Das Ausgabenformular mit genauen Beträgen für jede Person bei einem Geschenk
     - title: Füge die Geschichte dazu
-      body: Lege das Datum fest und füge Labels, einen Ort und eine Notiz hinzu. Alle in der Gruppe sehen dieselben Details und können direkt dort kommentieren.
+      body: Lege das Datum fest und füge Etiketten, einen Ort und eine Notiz hinzu. Alle in der Gruppe sehen dieselben Details und können direkt dort kommentieren.
       shot: S08
       shotAlt: Eine Ausgabe mit ihren Details, einem Kommentarverlauf und dem ursprünglich eingegebenen Betrag
     - title: Stell eine Frage, wenn etwas nicht stimmt
@@ -101,7 +99,7 @@ sections:
   - heading: Die Details, die späteren Streit sparen
     items:
       - Lege das **Datum** und optional eine Uhrzeit fest. Kürzel wie heute, gestern, heute Morgen und gestern Abend sparen etwas Tipparbeit.
-      - Füge bis zu drei **Labels** hinzu, um Ausgaben zu gruppieren, etwa Lebensmittel oder Reisen.
+      - Füge bis zu drei **Etiketten** hinzu, um Ausgaben zu gruppieren, etwa Lebensmittel oder Reisen.
       - Füge den **Ort** hinzu. Füge einen Kartenlink ein, und der Ortsname trägt sich selbst ein.
       - Füge eine **Notiz** für die Geschichte hinter der Zahl hinzu, auf Wunsch mit etwas Formatierung.
       - Nutze die **Kommentare**, um das Gespräch bei der Ausgabe zu halten, um die es geht, statt in einem Chat, den niemand zurückscrollt.

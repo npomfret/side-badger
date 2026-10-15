@@ -1,8 +1,6 @@
 translatedFrom: "a1e36ce8"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - invites.link-or-qr-code
   - invites.admin-approval
@@ -34,14 +32,14 @@ sections:
   - heading: "Qui participe à quoi"
     body: "Tout le monde ne paie pas pareil, et tout le monde ne participe pas à chaque coût. Partagez une dépense à parts égales, par pourcentage ou par **montants exacts**, pour que la part de chacun soit le chiffre convenu. Laissez de côté ceux qui n'étaient pas concernés, comme les invités qui ont sauté le dîner ou les amis qui ne se sont pas joints au cadeau. Chaque dépense a un seul payeur, et tous les autres du partage lui doivent leur part. Les détails sont sur la page [partager les dépenses](page:feature/split-expenses)."
   - heading: "Gardez les justificatifs"
-    body: "Ajoutez des notes à une dépense, comme ce que couvrait le coût. Les commentaires restent **à côté de la dépense** concernée, donc la question « le gâteau, c'était £45 ou £54 ? » et sa réponse vivent au même endroit. Les commentaires vont jusqu'à 500 caractères, ce qui est largement suffisant pour une question sur un acompte."
+    body: "Ajoutez des notes à une dépense, comme ce que couvrait le coût. Les commentaires restent **à côté de la dépense** concernée, donc la question « le gâteau, c'était 45 £ ou 54 £ ? » et sa réponse vivent au même endroit. Les commentaires vont jusqu'à 500 caractères, ce qui est largement suffisant pour une question sur un acompte."
   - heading: "Les contrôles de l'organisateur"
     body: "La collaboration ouverte permet à tout membre d'ajouter et de modifier des dépenses, ce qui convient pour un petit cadeau. Pour un mariage ou une plus grande fête, choisissez le préréglage **Groupe géré**. Les admins approuvent chaque nouveau membre, et seuls les créateurs et les admins peuvent modifier les dépenses. Invitez avec un lien ou un code QR ; avec l'approbation activée, un admin laisse entrer chaque personne, donc la liste d'invités reste la liste d'invités. Quand l'événement est terminé, verrouillez le groupe pour que les chiffres ne bougent plus."
   - heading: "Réglez après la fête"
     body: "Une fois la dernière facture arrivée, les soldes montrent **qui doit quoi à qui**, et Side Badger suggère une courte liste de paiements qui règle les comptes de tout le monde. Remboursez-vous comme vous voulez, puis enregistrez le paiement dans le groupe. Side Badger ne fait jamais circuler l'argent, donc le groupe tient le compte pendant que les virements se font dans vos propres applis bancaires. La page [régler les comptes](page:feature/settle-up) montre comment un écheveau devient une courte liste."
 exampleAfter: 5
 example:
-  heading: "Un cadeau collectif : six votes pour, £150 à partager"
+  heading: "Un cadeau collectif : six votes pour, 150 £ à partager"
   currency: GBP
   people:
     - id: priya

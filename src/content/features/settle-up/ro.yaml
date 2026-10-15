@@ -1,0 +1,110 @@
+translatedFrom: "1b51f540"
+review:
+  status: machine
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: "Achită-te cu mai puține plăți | Side Badger"
+  description: "Vezi cine cui datorează în grupul tău, primește o listă scurtă de plăți care îi achită pe toți și înregistrează fiecare plată pe măsură ce are loc. Gratuit."
+h1: "Achită-te cu mai puține plăți"
+navLabel: "Decontare"
+lead: "Side Badger ține un sold curent pentru fiecare din grup și sugerează o listă scurtă de plăți care îl achită. Vă plătiți unii altora cum preferați, apoi înregistrați. Dacă vrei să vezi mai întâi cum se împart sumele, începe cu [împărțirea cheltuielilor](page:feature/split-expenses)."
+cta:
+  heading: "Gata să descâlcești cine cui datorează?"
+  body: "Creează un cont, începe un grup și adaugă prima cheltuială. Soldurile se ocupă de restul."
+  button: "Creează un cont gratuit"
+problem:
+  heading: "Solduri care se actualizează pe parcurs"
+  body: "Fiecare cheltuială schimbă cine cui datorează, așa că Side Badger ține soldurile la zi pe măsură ce se adaugă cheltuieli și plăți. Toți din grup văd o schimbare imediat și văd ce s-a schimbat și cine a schimbat. Soldurile se țin pe valute, așa că euro și lirele rămân în coloanele lor, dacă o cheltuială nu a fost convertită la introducere. Implicit vezi datoriile care te privesc; **Arată tot** listează tot grupul."
+workflow:
+  heading: "Trei pași până la chit"
+  steps:
+    - title: "Vezi cine cui datorează"
+      body: "Deschide soldurile grupului ca să vezi ce datorezi, ce ți se datorează și o listă scurtă de plăți care îi achită pe toți, calculată pe valute. Cheltuielile puse sub semnul întrebării rămân în afara socotelilor până se lămuresc. În exemplul cu colegii de casă de mai jos, șase plăți devin două."
+      shot: S10
+      shotAlt: "Ecranul de solduri cu datorii simplificate în două valute, cu Arată tot activat"
+    - title: "Plătește cum preferi, apoi înregistrează"
+      body: "Transfer bancar, numerar, o favoare datorată din ultima vacanță. Side Badger nu mută banii. După ce banii au schimbat mâna, înregistrează plata, iar soldul se actualizează pentru toți."
+      shot: S11
+      shotAlt: "Formularul de plată cu butoanele de decontare rapidă și mesajul afișat pentru o plată parțială"
+    - title: "Verifică dacă a ajuns"
+      body: "Plata intră în istoricul grupului, unde toți din grup o pot vedea și pot reacționa cu un emoji. Sărbătorește o plată când ajunge."
+      shot: S12
+      shotAlt: "Istoricul plăților cu reacții emoji la o plată"
+options:
+  heading: "Opțiuni"
+  items: []
+example:
+  heading: "De la încurcătură la o listă scurtă"
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: "Electricitate"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: "Internet"
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "Alimente"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "Înregistrează o plată"
+    body: "Când cineva plătește, înregistrează plata pe persoana potrivită. Butoanele de decontare rapidă completează suma din plățile sugerate și poți adăuga o notă, de exemplu „transfer bancar” (până la 500 de caractere). Dacă plătești doar o parte din ce datorezi, restul rămâne în sold. Dacă introduci prea puțin sau prea mult, Side Badger te avertizează înainte de salvare. Pentru a înregistra o plată ai nevoie de permisiunea de a edita cheltuieli, iar data nu poate fi în viitor."
+  - heading: "Ai plătit în altă valută?"
+    body: "Soldurile rămân în valuta în care s-au plătit, așa că o datorie în euro rămâne o datorie în euro. Datorezi euro, dar plătești în lire? Convertește plata la introducere, la un curs de schimb actual sau la cursul pe care l-ai primit de fapt. Cursul se fixează la salvarea plății. [Mai multe valute](page:feature/multiple-currencies) explică cum funcționează conversia, iar [excursiile de grup](page:use-case/group-trips) o arată în practică."
+  - heading: "Un istoric pe care îl poți verifica"
+    body: "Fiecare plată înregistrată rămâne în istoricul grupului, cu data, suma și nota ei. Doar persoana care a înregistrat o plată o poate edita, iar ea sau un administrator al grupului o poate șterge. O plată la care participă cineva care a părăsit grupul este blocată. Pentru un scenariu detaliat cu colegi de casă, vezi [colegi de casă](page:use-case/housemates)."
+limits:
+  heading: "Ce nu face Side Badger"
+  items:
+    - "Side Badger nu mută bani, nu trimite linkuri de plată și nu trimite cereri de plată. O plată din aplicație este o înregistrare a unei plăți făcute în altă parte."
+    - "Plățile sugerate vin dintr-o metodă simplă de potrivire, aplicată pe valute. Sugerează mereu mai puține plăți decât numărul de persoane cu sold în acea valută (patru persoane, cel mult trei plăți), dar nu găsește mereu cel mai mic număr posibil."
+    - "Nu poți opri sugestiile. **Arată tot** listează fiecare plată sugerată din grup, nu doar pe ale tale."
+    - "Valutele nu se compensează niciodată între ele, decât dacă cheltuielile au fost convertite la introducere."
+    - "Nu există mementouri, așa că urmărirea unei plăți rămâne treaba ta."
+useCasesHeading: "Unde contează decontarea"
+faq:
+  heading: "Întrebări"
+  items:
+    - q: "Trimite Side Badger banii?"
+      a: "Nu. Plătiți-vă unii altora cum preferați, apoi înregistrați plata în Side Badger, ca soldul să se actualizeze."
+    - q: "Pot opri plățile sugerate?"
+      a: "Nu. Simplificarea rămâne activă, iar **Arată tot** listează fiecare plată sugerată din grup, nu doar pe cele care te privesc."
+    - q: "De ce sunt euro și lirele ținute separat?"
+      a: "Soldurile rămân în valuta în care ai plătit, dacă nu convertești la introducerea unei cheltuieli sau a unei plăți. Datoriile în valute diferite nu se compensează niciodată între ele."
+    - q: "Ce se întâmplă dacă cineva plătește doar o parte din ce datorează?"
+      a: "Înregistrează partea plătită. Restul rămâne în sold până e plătit."
+    - q: "Este mereu cel mai mic număr posibil de plăți?"
+      a: "Nu e garantat. Sugerează mereu mai puține plăți decât numărul de persoane cu sold în acea valută, deci pentru patru persoane nu sugerează niciodată mai mult de trei. În exemplul cu colegii de casă, asta înseamnă două plăți, acolo unde plata directă către fiecare persoană a cerut șase."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label

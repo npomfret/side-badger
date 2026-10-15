@@ -82,7 +82,9 @@
 }
 
 .language-switcher.open .language-dropdown {
-  transition-delay: 0s;
+  /* Opens at once (no fade-in): a half-transparent panel has no stable text contrast, and
+     focus can enter immediately. Only closing fades. */
+  transition: none;
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -119,6 +121,7 @@
 
 .language-search::placeholder {
   color: var(--dropdown-text-muted);
+  opacity: 1;
 }
 
 .language-search:focus {

@@ -79,7 +79,7 @@ export default {
   'home.expenses.fieldDate': 'Dato',
   'home.expenses.fieldDescription': 'Beskrivelse',
   'home.expenses.fieldPaidBy': 'Hvem betalte?',
-  'home.expenses.fieldSplit': 'Hvordan dele',
+  'home.expenses.fieldSplit': 'Hvordan fordele',
   'home.expenses.itemApartment': 'Leilighet i Kyoto',
   'home.expenses.itemDinner': 'Izakaya-middag',
   'home.expenses.itemKaraoke': 'Karaokerom',

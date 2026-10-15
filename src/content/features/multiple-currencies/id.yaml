@@ -1,0 +1,125 @@
+translatedFrom: "923c938f"
+review:
+  status: machine
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: "Bagi biaya dalam 140 mata uang, dikonversi atau dipisahkan"
+  description: "Catat setiap pengeluaran dalam mata uang yang Anda pakai untuk membayar, pisahkan saldo atau konversi dengan kurs yang bisa Anda lihat dan ubah, lalu lunasi dengan daftar pembayaran singkat."
+h1: "Bagi biaya dalam 140 mata uang"
+navLabel: "Beberapa mata uang"
+lead: "Euro, yen, dan satu taksi dalam baht itu. Side Badger menerima setiap pengeluaran dalam mata uang yang Anda pakai untuk membayar, menjaga saldo tetap rapi, dan bisa mengonversi saat grup Anda lebih suka melunasi sekali saja. Berfungsi dalam 140 mata uang, dan sangat cocok untuk [perjalanan grup](page:use-case/group-trips)."
+cta:
+  heading: "Bawa euro Anda, bawa yen Anda"
+  body: "Buat akun, mulai grup, dan tambahkan pengeluaran pertama dalam mata uang apa pun yang kebetulan Anda pegang."
+  button: "Buat akun gratis"
+problem:
+  heading: "Catat seperti saat Anda membayar"
+  body: "Perjalanan jarang dibayar dalam satu mata uang. Hotel dipesan dari rumah dalam pound, makan malam dibayar dalam yen, dan kopi bandara dalam mata uang apa pun tempat transit. Mengonversi semuanya secara manual sebelum bisa mengetiknya adalah cara spreadsheet ditinggalkan. Di Side Badger Anda mencatat tiap pengeluaran dalam mata uang yang tertera di struk, dan setiap jumlah mengikuti aturan mata uangnya, jadi yen tanpa desimal dan dinar punya tiga. Mata uang yang baru Anda pakai muncul lebih dulu di daftar."
+workflow:
+  heading: "Pisahkan mata uang, atau konversi seiring berjalan"
+  steps:
+    - title: "Tambahkan pengeluaran dalam mata uangnya sendiri"
+      body: "Pilih mata uang, ketik jumlah, sebutkan siapa yang membayar dan siapa yang ikut. Tidak perlu yang lain. Ini bawaannya, dan jumlah aslinya tersimpan persis seperti yang Anda masukkan."
+      shot: S07
+      shotAlt: "Formulir pengeluaran dengan jumlah dalam yen yang dimasukkan"
+    - title: "Pantau saldo untuk setiap mata uang"
+      body: "Saldo disimpan terpisah per mata uang, dan masing-masing mendapat daftar pembayaran yang disarankan sendiri. Pound dilunasi dalam pound dan yen dalam yen."
+      shot: S10
+      shotAlt: "Layar saldo dengan utang yang disederhanakan dalam dua mata uang"
+    - title: "Atau konversi, saat grup lebih suka melunasi sekali saja"
+      body: "Pilih mata uang lain saat memasukkan pengeluaran dan Side Badger dapat mengonversinya dengan kurs terkini, yang bisa Anda ubah ke kurs yang benar-benar Anda dapatkan. Jumlah yang dikonversi bergabung ke saldo dalam mata uang itu. Konversi adalah pilihan yang dibuat grup, tidak pernah sesuatu yang terjadi di belakang Anda."
+options:
+  heading: "Kurs yang bisa Anda lihat dan ubah"
+  items:
+    - title: "Kurs ditampilkan"
+      body: "Saat Anda mengonversi, kurs dan jumlah yang dikonversi muncul di formulir, jadi tak ada yang perlu percaya begitu saja pada sebuah angka."
+    - title: "Ketik sendiri"
+      body: "Dapat kurs lebih baik dari tempat penukaran, atau lebih buruk dari bandara? Ubah kurs ke yang benar-benar Anda dapatkan dan jumlah yang dikonversi diperbarui."
+    - title: "Aslinya tetap ada"
+      body: "Jumlah asli tetap ada di pengeluaran, di samping yang dikonversi, bagi siapa pun yang bertanya berapa itu dalam yen."
+    - title: "Konversi gratis"
+      body: "Mengonversi tidak dipungut biaya. Tidak ada biaya untuk memasukkan pengeluaran dalam mata uang lain."
+example:
+  heading: "Empat teman di Jepang, dilunasi dengan dua cara"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "hotel, dipesan dari rumah"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "makan malam di Jepang"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "tiket kereta"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "tiket masuk kuil"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "Satu mata uang untuk seluruh grup"
+    body: "Jika grup Anda tidak mau repot memikirkannya, pilih mata uang grup dan formulir akan mengonversi tiap pengeluaran baru ke dalamnya, dengan kurs yang tetap bisa Anda lihat dan ubah. Ini hanya berlaku untuk pengeluaran baru dan salinan. Perubahan dan pengeluaran yang sudah ada dibiarkan apa adanya, jadi tak ada yang sudah tercatat berubah di bawah Anda."
+  - heading: "Berutang euro, membayar dalam pound"
+    body: "Membayar dalam yen, melunasi dalam pound? Tidak masalah. Saat mencatat pembayaran Anda juga bisa mengonversinya, jadi yang berutang euro bisa membayar dalam pound dan saldo euro tetap keluar dengan benar. Bayar satu sama lain dengan cara apa pun yang Anda suka, lalu catat."
+  - heading: "Aturan untuk grup"
+    body: "Batasi grup pada mata uang yang benar-benar Anda pakai, dan tetapkan bawaan agar formulir terbuka pada yang tepat. Liburan di Portugal tidak memerlukan 139 pilihan lain di samping tagihan makan malam, dan [pernikahan di luar negeri](page:use-case/events-and-celebrations) mungkin memerlukan dua."
+limits:
+  heading: "Batas"
+  items:
+    - "Kurs ditetapkan saat pengeluaran disimpan. Pengeluaran lama tidak pernah dinilai ulang."
+    - "Side Badger mengambil kurs terkini jika bisa. Tidak semua pasangan mata uang dijamin mendapatkannya, dan Anda selalu bisa mengetik kursnya sendiri."
+    - "Konversi otomatis grup hanya berlaku untuk pengeluaran baru dan salinan, bukan untuk perubahan atau pengeluaran yang sudah ada."
+    - "Setiap pengeluaran dibatasi 999,999.99 dalam mata uangnya sendiri."
+    - "Ada 140 mata uang. Mata uang kripto dan logam tidak termasuk."
+    - "Side Badger mencatat pembayaran. Ia tidak pernah memindahkan atau menukar uang."
+useCasesHeading: "Di mana ini membantu"
+faq:
+  heading: "Pertanyaan"
+  items:
+    - q: "Kurs apa yang Anda pakai?"
+      a: "Kurs terkini, diambil saat Anda memasukkan pengeluaran jika tersedia. Anda bisa mengubahnya ke kurs yang benar-benar Anda dapatkan, dan jumlah yang dikonversi diperbarui."
+    - q: "Apakah pengeluaran lama dinilai ulang?"
+      a: "Tidak. Kurs ditetapkan saat pengeluaran disimpan, jadi saldo tidak bergeser hanya karena pasar bergerak."
+    - q: "Apakah mendukung kripto?"
+      a: "Tidak. Ada 140 mata uang, dan mata uang kripto tidak termasuk."
+    - q: "Mengapa saya tidak bisa memasukkan 2,000,000 rupiah?"
+      a: "Setiap pengeluaran dibatasi 999,999.99 dalam mata uangnya sendiri. Masukkan dalam mata uang lain lalu konversi, atau pecah menjadi dua pengeluaran."
+    - q: "Apakah konversi dikenai biaya?"
+      a: "Tidak. Mengonversi gratis, seperti bagian Side Badger lainnya. Lihat [harga](page:pricing)."
+    - q: "Apakah saya harus mengonversi?"
+      a: "Tidak. Mata uang tetap terpisah kecuali Anda atau grup memilih untuk mengonversi, dan setiap mata uang mendapat daftar pembayaran singkatnya sendiri."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

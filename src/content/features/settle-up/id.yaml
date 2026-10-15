@@ -1,0 +1,110 @@
+translatedFrom: "1b51f540"
+review:
+  status: machine
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: "Lunasi dengan lebih sedikit pembayaran | Side Badger"
+  description: "Lihat siapa berutang kepada siapa di grup Anda, dapatkan daftar pembayaran singkat yang melunasi semua orang, dan catat setiap pembayaran saat terjadi. Gratis digunakan."
+h1: "Lunasi dengan lebih sedikit pembayaran"
+navLabel: "Pelunasan"
+lead: "Side Badger menyimpan saldo berjalan untuk semua orang di grup dan menyarankan daftar pembayaran singkat yang melunasinya. Anda membayar satu sama lain dengan cara apa pun yang disuka, lalu mencatatnya. Jika ingin melihat dulu bagaimana angkanya dibagi, mulai dengan [bagi pengeluaran](page:feature/split-expenses)."
+cta:
+  heading: "Siap mengurai siapa berutang kepada siapa?"
+  body: "Buat akun, mulai grup, dan tambahkan pengeluaran pertama. Saldo akan mengurus sisanya."
+  button: "Buat akun gratis"
+problem:
+  heading: "Saldo yang diperbarui seiring berjalan"
+  body: "Setiap pengeluaran mengubah siapa berutang kepada siapa, jadi Side Badger menjaga saldo tetap terkini saat pengeluaran dan pembayaran ditambahkan. Semua orang di grup langsung melihat perubahan, dan melihat apa yang berubah serta siapa yang mengubahnya. Saldo disimpan per mata uang, jadi euro dan pound tetap di kolomnya masing-masing kecuali sebuah pengeluaran dikonversi saat dimasukkan. Secara bawaan Anda melihat utang yang melibatkan Anda; **Tampilkan semua** mencantumkan seluruh grup."
+workflow:
+  heading: "Tiga langkah menuju impas"
+  steps:
+    - title: "Lihat siapa berutang kepada siapa"
+      body: "Buka saldo grup untuk melihat apa yang Anda utang, apa yang dihutangi kepada Anda, dan daftar pembayaran singkat yang melunasi semua orang, dihitung per mata uang. Pengeluaran yang dipertanyakan tetap di luar hitungan sampai beres. Pada contoh teman serumah di bawah, enam pembayaran menjadi dua."
+      shot: S10
+      shotAlt: "Layar saldo yang menampilkan utang yang disederhanakan dalam dua mata uang, dengan Tampilkan semua diaktifkan"
+    - title: "Bayar dengan cara apa pun, lalu catat"
+      body: "Transfer bank, tunai, atau utang budi dari liburan lalu. Side Badger tidak memindahkan uangnya. Setelah uang berpindah tangan, catat pembayarannya dan saldo diperbarui untuk semua orang."
+      shot: S11
+      shotAlt: "Formulir pembayaran dengan tombol lunasi cepat dan pemberitahuan yang ditampilkan untuk pembayaran sebagian"
+    - title: "Pastikan sudah sampai"
+      body: "Pembayaran masuk ke riwayat grup, tempat semua orang di grup dapat melihatnya dan memberi reaksi emoji. Rayakan pembayaran saat sudah sampai."
+      shot: S12
+      shotAlt: "Riwayat pembayaran dengan reaksi emoji pada sebuah pembayaran"
+options:
+  heading: "Opsi"
+  items: []
+example:
+  heading: "Dari kusut menjadi daftar singkat"
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: "Listrik"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: "Internet"
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "Belanjaan"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "Catat pembayaran"
+    body: "Saat seseorang membayar, catat untuk orang yang tepat. Tombol lunasi cepat mengisi jumlah dari pembayaran yang disarankan, dan Anda bisa menambahkan catatan seperti \"transfer bank\" (hingga 500 karakter). Bayar hanya sebagian dari utang Anda dan sisanya tetap di saldo. Jika Anda memasukkan terlalu sedikit atau terlalu banyak, Side Badger memperingatkan sebelum Anda menyimpan. Mencatat pembayaran memerlukan izin untuk mengubah pengeluaran, dan tanggalnya tidak boleh di masa depan."
+  - heading: "Dibayar dalam mata uang lain?"
+    body: "Saldo tetap dalam mata uang saat dibayarkan, jadi utang euro tetap utang euro. Berutang euro, membayar dalam pound? Konversikan pembayarannya saat memasukkan, dengan kurs terkini atau kurs yang benar-benar Anda dapatkan. Kurs ditetapkan saat pembayaran disimpan. [Beberapa mata uang](page:feature/multiple-currencies) menjelaskan cara kerja konversi, dan [perjalanan grup](page:use-case/group-trips) menunjukkan penggunaannya."
+  - heading: "Riwayat yang bisa Anda periksa"
+    body: "Setiap pembayaran yang dicatat tetap ada di riwayat grup dengan tanggal, jumlah, dan catatannya. Hanya orang yang mencatat pembayaran yang bisa mengubahnya, dan mereka atau admin grup bisa menghapusnya. Pembayaran yang melibatkan orang yang sudah keluar dari grup dikunci. Untuk skenario teman serumah yang lengkap, lihat [teman serumah](page:use-case/housemates)."
+limits:
+  heading: "Yang tidak dilakukan Side Badger"
+  items:
+    - "Side Badger tidak memindahkan uang, mengirim tautan pembayaran, atau mengirim permintaan pembayaran. Pembayaran di aplikasi adalah catatan pembayaran yang dilakukan di tempat lain."
+    - "Pembayaran yang disarankan berasal dari metode pencocokan sederhana, yang diterapkan per mata uang. Selalu disarankan lebih sedikit pembayaran daripada jumlah orang yang memiliki saldo dalam mata uang itu (empat orang, paling banyak tiga pembayaran), tetapi tidak selalu menemukan jumlah yang paling kecil."
+    - "Anda tidak bisa mematikan saran. **Tampilkan semua** mencantumkan setiap pembayaran yang disarankan di grup, bukan hanya milik Anda."
+    - "Mata uang tidak pernah dikurangkan satu sama lain kecuali pengeluarannya dikonversi saat dimasukkan."
+    - "Tidak ada pengingat, jadi menagih pembayaran tetap urusan Anda."
+useCasesHeading: "Di mana pelunasan penting"
+faq:
+  heading: "Pertanyaan"
+  items:
+    - q: "Apakah Side Badger mengirim uangnya?"
+      a: "Tidak. Bayar satu sama lain dengan cara apa pun yang Anda suka, lalu catat pembayarannya di Side Badger agar saldo diperbarui."
+    - q: "Bisakah saya mematikan pembayaran yang disarankan?"
+      a: "Tidak. Penyederhanaan tetap aktif, dan **Tampilkan semua** mencantumkan setiap pembayaran yang disarankan di grup, bukan hanya yang melibatkan Anda."
+    - q: "Mengapa euro dan pound dipisahkan?"
+      a: "Saldo tetap dalam mata uang yang Anda gunakan untuk membayar kecuali Anda mengonversi saat memasukkan pengeluaran atau pembayaran. Utang dalam mata uang berbeda tidak pernah dikurangkan satu sama lain."
+    - q: "Bagaimana jika seseorang hanya membayar sebagian dari utangnya?"
+      a: "Catat bagian yang dibayarkan. Sisanya tetap di saldo sampai dibayar."
+    - q: "Apakah ini selalu jumlah pembayaran paling sedikit yang mungkin?"
+      a: "Tidak dijamin. Selalu disarankan lebih sedikit pembayaran daripada jumlah orang yang memiliki saldo dalam mata uang itu, jadi untuk empat orang tidak pernah lebih dari tiga. Pada contoh teman serumah, itu dua pembayaran, sedangkan membayar kembali tiap orang secara langsung memerlukan enam."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label

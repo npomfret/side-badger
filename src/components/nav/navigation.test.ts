@@ -2,11 +2,26 @@ import { describe, expect, it, vi } from 'vitest';
 
 // Ids the fixture treats as having routes, besides the real registry's own
 const extraBuilt = vi.hoisted(() => new Set<string>());
-// The registry's own unpublished pages count as published once they are in `extraBuilt`
+const release1 = vi.hoisted(
+  () =>
+    new Set([
+      'how-it-works',
+      'features',
+      'feature/split-expenses',
+      'feature/settle-up',
+      'feature/multiple-currencies',
+      'use-cases',
+      'use-case/group-trips',
+      'use-case/housemates',
+      'use-case/events-and-celebrations',
+    ])
+);
+// Release 1 is published for real now, but this fixture models a registry where those pages are
+// still unpublished: they count as published and built only once they are in `extraBuilt`
 vi.mock('../../site/pages', async importActual => {
   const actual = await importActual<typeof import('../../site/pages')>();
   const flip = (page: import('../../site/pages').PageDef) =>
-    extraBuilt.has(page.id) ? { ...page, published: true } : page;
+    extraBuilt.has(page.id) ? { ...page, published: true } : page.published && release1.has(page.id) ? { ...page, published: false } : page;
   const allPages = () => actual.allPages().map(flip);
   return { ...actual, allPages, getPage: (id: string) => allPages().find(page => page.id === id) };
 });
@@ -17,7 +32,9 @@ vi.mock('../../site/routes', async importActual => {
     pathsFor: (id: string) =>
       extraBuilt.has(id)
         ? (['en', 'fr'] as const).map(locale => ({ params: { locale }, props: { pageId: id, locale } }))
-        : actual.pathsFor(id),
+        : release1.has(id)
+          ? []
+          : actual.pathsFor(id),
   };
 });
 

@@ -1,8 +1,6 @@
 translatedFrom: "a1e36ce8"
 review:
-  status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  status: machine
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -41,14 +39,14 @@ sections:
   - heading: Wer wofür dabei ist
     body: Nicht alle zahlen gleich viel, und nicht alle sind an jeder Ausgabe beteiligt. Teile eine Ausgabe gleichmäßig, in Prozent oder nach **genauen Beträgen**, damit der Anteil jeder Person die Zahl ist, auf die ihr euch geeinigt habt. Lass alle weg, die nicht beteiligt waren, etwa die Gäste, die das Essen ausgelassen haben, oder die Freunde, die beim Geschenk nicht mitgemacht haben. Jede Ausgabe hat eine zahlende Person, und alle anderen in der Aufteilung schulden ihr ihren Anteil. Die Details stehen auf der Seite [Ausgaben teilen](page:feature/split-expenses).
   - heading: Die Unterlagen behalten
-    body: Füge einer Ausgabe Notizen hinzu, etwa wofür die Kosten waren. Kommentare bleiben **bei der Ausgabe**, um die es geht, die Frage "War der Kuchen £45 oder £54?" und ihre Antwort stehen also am selben Ort. Kommentare dürfen 500 Zeichen lang sein, was für eine Frage zu einer Anzahlung reichlich ist.
+    body: Füge einer Ausgabe Notizen hinzu, etwa wofür die Kosten waren. Kommentare bleiben **bei der Ausgabe**, um die es geht, die Frage "War der Kuchen 45 £ oder 54 £?" und ihre Antwort stehen also am selben Ort. Kommentare dürfen 500 Zeichen lang sein, was für eine Frage zu einer Anzahlung reichlich ist.
   - heading: Steuerung für die Organisation
     body: Offene Zusammenarbeit lässt jedes Mitglied Ausgaben hinzufügen und bearbeiten, was für ein kleines Geschenk in Ordnung ist. Für eine Hochzeit oder eine größere Party wähle die Voreinstellung **Verwaltete Gruppe**. Admins geben jedes neue Mitglied frei, und nur Ersteller und Admins können Ausgaben ändern. Lade Leute per Link oder QR-Code ein; bei eingeschalteter Freigabe lässt ein Admin jede Person herein, die Gästeliste bleibt also die Gästeliste. Wenn das Event vorbei ist, sperre die Gruppe, damit die Zahlen stehen bleiben.
   - heading: Nach der Party abrechnen
     body: Sobald die letzte Rechnung drin ist, zeigen die Salden, **wer wem was schuldet**, und Side Badger schlägt eine kurze Liste von Zahlungen vor, die alle ausgleicht. Zahlt einander, wie ihr wollt, und erfasst die Zahlung dann in der Gruppe. Side Badger bewegt nie Geld, die Gruppe führt also die Rechnung, während die Überweisungen in euren eigenen Banking-Apps laufen. Die Seite [Abrechnen](page:feature/settle-up) zeigt, wie aus einem Knäuel eine kurze Liste wird.
 exampleAfter: 5
 example:
-  heading: 'Ein Gruppengeschenk: sechs Stimmen dafür, £150 zu teilen'
+  heading: 'Ein Gruppengeschenk: sechs Stimmen dafür, 150 £ zu teilen'
   currency: GBP
   people:
     - id: priya

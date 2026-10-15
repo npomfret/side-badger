@@ -1,7 +1,7 @@
 import { expect, type Locator, type Page } from '@playwright/test';
-import { pseudoMeta } from '../../src/i18n/pseudo';
+import { isPseudoLocale, pseudoMeta, type PseudoLocale } from '../../src/i18n/pseudo';
 import { ELEMENT_TIMEOUT } from './timeouts';
-import { text, type ShellLocale } from './strings';
+import { LOCALE_NAMES, text, type ShellLocale } from './strings';
 
 function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -125,7 +125,7 @@ export class LanguageSwitcher {
   }
 
   /** Types in the search box, then checks that the named pseudo-locale stays and another goes. */
-  async filterTo(query: string, kept: Exclude<ShellLocale, 'en'>, dropped: Exclude<ShellLocale, 'en'>): Promise<void> {
+  async filterTo(query: string, kept: PseudoLocale, dropped: PseudoLocale): Promise<void> {
     await expect(this.search).toHaveValue('');
     await this.search.fill(query);
     await expect(this.search).toHaveValue(query);
@@ -145,7 +145,12 @@ export class LanguageSwitcher {
   async expectCurrentOption(): Promise<void> {
     await expect(this.button).toHaveAttribute('aria-expanded', 'true');
     // English pages show "English (actual)" as the current choice, among the regional variants
-    const name = this.locale === 'en' ? 'English (actual)' : pseudoMeta[this.locale].name;
+    const name =
+      this.locale === 'en'
+        ? 'English (actual)'
+        : isPseudoLocale(this.locale)
+          ? pseudoMeta[this.locale].name
+          : LOCALE_NAMES[this.locale];
     await expect(this.options.and(this.page.getByRole('link', { name, exact: true }))).toHaveAttribute(
       'aria-current',
       'true'

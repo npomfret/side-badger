@@ -69,6 +69,15 @@ export const INTL: Record<ShellLocale, string> = {
   'xx-ar': 'ar-EG',
   'xx-ja': 'ja-JP',
   'xx-hi': 'hi-IN',
+  ar: 'ar-EG',
+  de: 'de-DE',
+  fr: 'fr-FR',
+  hi: 'hi-IN',
+  ja: 'ja-JP',
+  pcm: 'en-NG',
+  pl: 'pl-PL',
+  ur: 'ur-PK',
+  zh: 'zh-CN',
 };
 
 /** The example's results as the page words them: net balances and payment lines per ledger. */

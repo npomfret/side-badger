@@ -1,8 +1,6 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
-  status: checked
-  checker: "T2-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -11,6 +9,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -104,6 +103,7 @@ sections:
       - "Ongeza hadi **lebo** tatu za kupanga gharama, kama mboga au safari."
       - "Ongeza **mahali**. Bandika kiungo cha ramani na jina la mahali hujijaza lenyewe."
       - "Ongeza **maelezo** ya hadithi iliyo nyuma ya nambari, kwa muundo kidogo ikihitajika."
+      - "Ambatisha hadi **risiti** tatu, kama picha au PDF, ili ushahidi ubaki pamoja na gharama."
       - "Tumia **maoni** kuweka mazungumzo karibu na gharama inayohusika, badala ya mjadala wa gumzo ambao hakuna anayerudi kuusoma."
   - heading: "Nakili, hariri, na uone kilichobadilika"
     body: "Nakili kodi ya mwezi uliopita badala ya kuiandika tena, kisha ubadilishe kilicho tofauti. Nambari ikiwa si sahihi, hariri gharama. Toleo la awali linahifadhiwa na uhariri unaonekana kwenye shughuli za kikundi, kwa hivyo hakuna anayebadilisha nambari kimya kimya. Nani anaweza kuhariri nini hutegemea ruhusa za kikundi."

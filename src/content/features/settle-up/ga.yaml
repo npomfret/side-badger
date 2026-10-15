@@ -1,0 +1,104 @@
+translatedFrom: "1b51f540"
+review:
+  status: machine
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: "Socraigh suas le níos lú íocaíochtaí | Side Badger"
+  description: "Féach cé atá i bhfiacha le cé i do ghrúpa, faigh liosta gearr íocaíochtaí a shocraíonn gach duine, agus taifead gach íocaíocht de réir mar a tharlaíonn sí. Saor in aisce le húsáid."
+h1: "Socraigh suas le níos lú íocaíochtaí"
+navLabel: "Socraigh suas"
+lead: "Coinníonn Side Badger iarmhéid reatha do gach duine sa ghrúpa agus molann sé liosta gearr íocaíochtaí a shocraíonn é. Íocann sibh a chéile ar an gcaoi is fearr libh, ansin taifeadann tú é. Más mian leat a fheiceáil conas a roinntear na huimhreacha ar dtús, tosaigh le [roinn costais](page:feature/split-expenses)."
+cta:
+  heading: "Réidh le scaoileadh cé atá i bhfiacha le cé?"
+  body: "Cruthaigh cuntas, tosaigh grúpa agus cuir an chéad chostas leis. Tabharfaidh na hiarmhéideanna aire don chuid eile."
+  button: "Cruthaigh cuntas saor in aisce"
+problem:
+  heading: "Iarmhéideanna a nuashonraítear de réir a chéile"
+  body: "Athraíonn gach costas cé atá i bhfiacha le cé, mar sin coinníonn Side Badger na hiarmhéideanna reatha de réir mar a chuirtear costais agus íocaíochtaí leis. Feiceann gach duine sa ghrúpa athrú gan mhoill, agus feiceann siad cad a athraigh agus cé a rinne an t-athrú. Coinnítear iarmhéideanna in aghaidh an airgeadra, mar sin fanann euro agus punt ina gcolúin féin mura ndearnadh costas a thiontú nuair a cuireadh isteach é. De réir réamhshocraithe feiceann tú na fiacha a bhaineann leatsa; taispeánann **Taispeáin gach ceann** an grúpa ar fad."
+workflow:
+  heading: "Trí chéim go cothrom"
+  steps:
+    - title: "Féach cé atá i bhfiacha le cé"
+      body: "Oscail iarmhéideanna an ghrúpa chun a fheiceáil cad atá dlite agat, cad atá dlite duit, agus liosta gearr íocaíochtaí a shocraíonn gach duine, oibrithe amach in aghaidh an airgeadra. Fanann costais cheistithe as na suimeanna go dtí go socraítear iad. Sa sampla comhchónaitheoirí thíos, ní fhágtar ach dhá íocaíocht as sé cinn."
+      shot: S10
+      shotAlt: "An scáileán iarmhéideanna ag taispeáint fiacha simplithe i dhá airgeadra, agus “Taispeáin gach ceann” casta ar siúl"
+    - title: "Íoc mar is mian leat, ansin taifead é"
+      body: "Aistriú bainc, airgead tirim, fabhar atá dlite ón saoire dheireanach. Ní bhogann Side Badger an t-airgead. Nuair a athraíonn sé lámha, taifead an íocaíocht agus nuashonraítear an t-iarmhéid do gach duine."
+      shot: S11
+      shotAlt: "An fhoirm íocaíochta le cnaipí socraithe tapa agus an fógra a thaispeántar d'íocaíocht pháirteach"
+    - title: "Seiceáil gur taifeadadh í"
+      body: "Téann an íocaíocht isteach i stair an ghrúpa, áit a bhfeiceann gach duine sa ghrúpa í agus is féidir leo imoibriú le emoji. Ceiliúir íocaíocht nuair a thagann sí."
+      shot: S12
+      shotAlt: "Stair na n-íocaíochtaí le himoibrithe emoji ar íocaíocht"
+options:
+  heading: "Roghanna"
+  items: []
+example:
+  heading: "Ó phraiseach go liosta gearr"
+  currency: GBP
+  people:
+    - id: amira
+      name: Aoife
+    - id: ben
+      name: Brian
+    - id: carlos
+      name: Cathal
+    - id: dana
+      name: Deirdre
+  expenses:
+    - label: "Leictreachas"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: "Idirlíon"
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "Earraí grósaera"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "Taifead íocaíocht"
+    body: "Nuair a íocann duine, taifead í in aghaidh an duine cheart. Líonann na cnaipí socraithe tapa an tsuim ó do chuid íocaíochtaí molta, agus is féidir leat nóta a chur leis mar “aistriú bainc” (suas le 500 carachtar). Má íocann tú cuid den mhéid atá dlite agat amháin, fanann an chuid eile ar an iarmhéid. Má chuireann tú isteach méid ró-bheag nó ró-mhór, tugann Side Badger rabhadh duit sula sábhálann tú. Teastaíonn cead costais a chur in eagar chun íocaíocht a thaifeadadh, agus ní féidir leis an dáta a bheith sa todhchaí."
+  - heading: "Íoctha in airgeadra eile?"
+    body: "Fanann iarmhéideanna san airgeadra inar íocadh iad, mar sin fanann fiach in euro ina fhiach in euro. An bhfuil euro dlite agat, ach tú ag íoc i bpunt? Tiontaigh an íocaíocht agus tú á cur isteach, ar ráta malairte reatha nó ar an ráta a fuair tú i ndáiríre. Socraítear an ráta nuair a shábhálaítear an íocaíocht. Clúdaíonn [ilairgeadraí](page:feature/multiple-currencies) conas a oibríonn tiontú, agus taispeánann [turais ghrúpa](page:use-case/group-trips) in úsáid é."
+  - heading: "Stair is féidir a sheiceáil"
+    body: "Fanann gach íocaíocht a taifeadadh i stair an ghrúpa lena dáta, a suim agus a nóta. Ní féidir ach leis an duine a thaifead íocaíocht í a chur in eagar, agus is féidir leis an duine sin nó le riarthóir grúpa í a scriosadh. Glasáiltear íocaíocht a bhaineann le duine a d'fhág an grúpa. I gcás cás oibrithe comhchónaitheoirí, féach [comhchónaitheoirí](page:use-case/housemates)."
+limits:
+  heading: "Cad nach ndéanann Side Badger"
+  items:
+    - "Ní bhogann Side Badger airgead, ní sheolann sé naisc íocaíochta ná iarratais ar íocaíocht. Is taifead d'íocaíocht a rinneadh in áit eile é íocaíocht san aip."
+    - "Tagann na híocaíochtaí molta ó mhodh meaitseála simplí, a chuirtear i bhfeidhm in aghaidh an airgeadra. Molann sé i gcónaí níos lú íocaíochtaí ná mar atá daoine le hiarmhéid san airgeadra sin (ceathrar, trí íocaíocht ar a mhéad), ach ní aimsíonn sé i gcónaí an líon is lú is féidir."
+    - "Ní féidir leat na moltaí a mhúchadh. Liostaíonn **Taispeáin gach ceann** gach íocaíocht mholta sa ghrúpa, ní hamháin na cinn atá agatsa."
+    - "Ní chealaítear airgeadraí in aghaidh a chéile mura ndearnadh na costais a thiontú nuair a cuireadh isteach iad."
+    - "Níl aon mheabhrúcháin ann, mar sin is ortsa atá sé fós duine a spreagadh chun íoc."
+useCasesHeading: "Cá bhfuil tábhacht le socrú suas"
+faq:
+  heading: "Ceisteanna"
+  items:
+    - q: "An seolann Side Badger an t-airgead?"
+      a: "Ní sheolann. Íocaigí a chéile ar an gcaoi is fearr libh, ansin taifead an íocaíocht i Side Badger ionas go nuashonrófar an t-iarmhéid."
+    - q: "An féidir liom na híocaíochtaí molta a mhúchadh?"
+      a: "Ní féidir. Fanann an simpliú ar siúl, agus liostaíonn **Taispeáin gach ceann** gach íocaíocht mholta sa ghrúpa, ní hamháin na cinn a bhaineann leatsa."
+    - q: "Cén fáth a gcoinnítear euro agus punt ar leith?"
+      a: "Fanann iarmhéideanna san airgeadra inar íoc tú mura dtiontaíonn tú nuair a chuireann tú costas nó íocaíocht isteach. Ní chealaítear fiacha in airgeadraí éagsúla in aghaidh a chéile choíche."
+    - q: "Cad má íocann duine cuid den mhéid atá dlite amháin?"
+      a: "Taifead an chuid a íocadh. Fanann an chuid eile ar an iarmhéid go n-íoctar é."
+    - q: "An é seo an líon íocaíochtaí is lú is féidir i gcónaí?"
+      a: "Níl sé cinnte. Molann sé i gcónaí níos lú íocaíochtaí ná mar atá daoine le hiarmhéid san airgeadra sin, mar sin do cheathrar ní mholann sé níos mó ná trí cinn riamh. Sa sampla comhchónaitheoirí, is dhá íocaíocht é sin, i gcás ina raibh sé cinn de dhíth chun gach duine a aisíoc go díreach."

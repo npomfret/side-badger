@@ -1,0 +1,103 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: machine
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+meta:
+  title: "Roinn costais turais ghrúpa, i 140 airgeadra"
+  description: "Rianaigh cé a d'íoc as cad ar thuras grúpa, cuir costais isteach san airgeadra áitiúil, tiontaigh iad nó ná déan, agus socraigh uair amháin ag an deireadh. Saor in aisce, i do bhrabhsálaí."
+h1: "Roinn costais turais ghrúpa, i 140 airgeadra"
+navLabel: "Turais ghrúpa"
+lead: "Rianaigh an teach saoire, an tacsaí, agus an babhta cocktail amháin nach cuimhin le héinne gur thairg sé é a cheannach. Coinníonn Side Badger an chuntas reatha agus tú ar shiúl, [láimhseálann sé punt, euro agus 138 airgeadra eile](page:feature/multiple-currencies), agus tugann sé [liosta gearr íocaíochtaí](page:feature/settle-up) duit nuair a thagann tú abhaile."
+cta:
+  heading: "Matamaitic na saoire, déanta sula n-imíonn an donnú"
+  body: "Cruthaigh grúpa, seol an nasc cuiridh chuig na daoine ar an turas, agus cuir costais leis de réir mar a tharlaíonn siad."
+  button: "Cruthaigh cuntas saor in aisce"
+scenario:
+  heading: "D'íoc gach duine as rud éigin, in airgeadra éigin"
+  body: "Chuir duine éigin na heitiltí in áirithe, chuir duine eile an teach saoire ar chárta, agus chlúdaigh tríú duine an dinnéar in airgead tirim. Faoin tríú lá níl a fhios ag aon duine cé atá chun cinn. Tá an cheist simplí, cé go mbíonn an freagra de ghnáth i scarbhileog nach dteastaíonn ó aon duine a oscailt. Cé a d'íoc as cad, i gcén airgeadra, agus conas a shocraíonn gach duine uair amháin ag an deireadh?"
+sections:
+  - heading: "Sula dtéann tú"
+    body: "Cuir liosta gearr na dtithe saoire chun vótála, gan ainm más maith leat, ionas gur leis an ngrúpa an cinneadh agus ní leis an té is faide a bhíonn crosta. Ansin coinnigh an liosta siopadóireachta comhroinnte in aice leis na billí siopadóireachta, ionas nach gceannóidh aon duine trí phíopa ola gréine agus gan adaptóir pluga."
+  - heading: "Agus tú ar shiúl"
+    body: "Cuir gach costas leis de réir mar a tharlaíonn sé, san airgeadra inar íoc tú é. Tóg grianghraf den admháil agus líonann Side Badger isteach an t-iomlán, an dáta agus an áit duit le seiceáil; léann seirbhís AI Google íomhánna admhálacha. Tiontaigh an tsuim ar ráta malairte reatha, rud is féidir leat a athrú go dtí an ráta a fuair tú i ndáiríre, agus fanann an tsuim bhunaidh ar an gcostas. Nó fág na euro mar euro agus socraigh níos déanaí. Is féidir le grúpa airgeadra amháin a roghnú freisin, agus tiontaítear costais nua isteach ann go huathoibríoch."
+  - heading: "Ní dhearna gach duine gach rud"
+    body: "Scipeáil roinnt daoine an dinnéar, shuigh roinnt eile an bád amach. Fág amach iad ó na costais nach raibh siad páirteach iontu, agus roinn an chuid eile [go cothrom, de réir suimeanna cruinne nó de réir céatadáin](page:feature/split-expenses). Ní íocann aon duine as an gcuid den turas a chaith siad ina gcodladh."
+  - heading: "Socraigh nuair a bhíonn tú sa bhaile"
+    body: "Molann Side Badger liosta gearr íocaíochtaí a shocraíonn gach duine. Íocaigí a chéile ar an gcaoi is fearr libh, ansin taifead é. Le hairgeadraí measctha, coinnigh gach ceann ar leith nó tiontaigh de réir a chéile; taispeánann sampla Liospóin thíos an dá cheann."
+  - heading: "Deireadh seachtaine stag agus hen"
+    body: "Teastaíonn beagán níos mó riaracháin ó dheireadh seachtaine ar shiúl le haoi onóra. Déan grúpa bainistithe de, áit a gceadaíonn riarthóirí baill nua agus nach féidir ach le cruthaitheoirí agus riarthóirí costais a athrú. Úsáid suimeanna cruinne do sciar an aoi onóra, cuir teorainn leis an ngrúpa leis na hairgeadraí atá á n-úsáid agat i ndáiríre, agus glasáil an grúpa nuair a bhíonn sé thart ionas go bhfanann na huimhreacha mar atá."
+exampleAfter: 4
+example:
+  heading: "Ceathrar cairde i Liospóin"
+  currency: GBP
+  people:
+    - id: ana
+      name: Áine
+    - id: ben
+      name: Eoin
+    - id: chloe
+      name: Clíona
+    - id: dev
+      name: Dónal
+  expenses:
+    - label: "Eitiltí"
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: "Teach saoire"
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: "Dinnéar"
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Turas báid"
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: "An rud a bhraitheann turas air"
+faq:
+  heading: "Ceisteanna"
+  items:
+    - q: "An féidir na daoine a scipeáil an dinnéar a fhágáil amach?"
+      a: "Is féidir. Roghnaigh cé a bhí páirteach i ngach costas agus ní ghearrtar air ach iad sin."
+    - q: "An n-oibríonn sé gan comhartha?"
+      a: "Ní oibríonn. Teastaíonn nasc ó Side Badger, mar sin cuir na costais leis nuair a bhíonn tú ar ais ar an wifi."
+    - q: "An gcaithfidh gach duine rud éigin a shuiteáil?"
+      a: "Ní chaithfidh. Ritheann sé sa bhrabhsálaí. Seol an nasc cuiridh agus téann daoine isteach óna bhfóin."
+    - q: "Cén ráta malairte a úsáideann sé?"
+      a: "Ráta malairte reatha nuair a chuireann tú an costas isteach, nó do cheann féin má fuair tú ceann difriúil. Socraítear an ráta nuair a shábhálaítear an costas, mar sin ní athluacháiltear seanchostais choíche."
+    - q: "An féidir linn an grúpa a reo tar éis an turais?"
+      a: "Is féidir. Is féidir le riarthóir an grúpa a ghlasáil ionas go bhfanann na huimhreacha mar atá."
+    - q: "An bhfuil teorainn ar shuimeanna?"
+      a: "Tá. 999,999.99 in aghaidh an chostais, ina airgeadra féin."

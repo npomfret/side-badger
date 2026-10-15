@@ -1,0 +1,108 @@
+# P34b: página de casos de uso para compañeros de piso (guion: tasks/seo-site-expansion-plan.md, «Housemates»).
+translatedFrom: "e6b829e6"
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.2.label
+meta:
+  title: Divide las facturas de casa con tus compañeros de piso
+  description: Divide el alquiler según el tamaño de cada habitación, comparte la luz y la compra a partes iguales y mira quién debe a quién cada mes. Una forma gratuita para que compañeros de piso lleven la cuenta.
+h1: Divide las facturas de casa con tus compañeros de piso
+navLabel: Compañeros de piso
+lead: Para el compañero que compra el papel higiénico y para los que nunca lo ven pasar. Side Badger lleva una sola cuenta del alquiler, las facturas y la compra de **compañeros de piso**, así que nadie tiene que perseguir a nadie y la nevera puede volver a ser solo una nevera.
+cta:
+  heading: Empieza con tu propia casa
+  body: Crea una cuenta, haz un grupo para la casa y envía a todo el mundo el enlace de invitación. Las facturas de este mes pueden entrar esta misma noche.
+  button: Crear una cuenta gratis
+scenario:
+  heading: Monta la casa
+  body: Haz un grupo para la casa, elige el nombre con el que quieres que te vean y invita a todo el mundo con un enlace o un código QR. El grupo puede ser abierto, donde todos añaden y editan, o gestionado, donde los nuevos miembros necesitan la aprobación de un administrador y solo quienes lo crearon y los administradores pueden cambiar gastos, lo que viene bien al compañero que lleva las cuentas. Quien solo quiera mirar los números puede ser espectador, que lo ve todo y no cambia nada. Todo el mundo ve un gasto nuevo enseguida, así que «ya lo añado luego» tiene menos sitios donde esconderse.
+sections:
+  - heading: Alquiler y facturas
+    body: "El alquiler rara vez se divide entre cuatro, porque las habitaciones no son iguales. Divídelo por porcentaje, para que la habitación grande pague más y el cuartucho con ventana pague menos. Los porcentajes tienen que sumar 100. Las facturas que usa todo el mundo se dividen a partes iguales, y un compañero que no participó en un gasto puede quedar fuera. Cuando una división a partes iguales deja un céntimo sobrante, va a una persona al azar. No hay facturas recurrentes, así que cada mes copias el alquiler del mes pasado, cambias la fecha y sigues."
+  - heading: La compra compartida
+    body: "Ten la lista de la compra compartida en el mismo grupo que las facturas de la compra y ve tachando artículos según llegan al carrito. Quien hace la compra añade el total del recibo como un gasto y lo divide a partes iguales, o solo entre las personas que van a comerse lo comprado. Quién sigue comprando la leche de avena que nadie más bebe sigue siendo asunto de la casa, pero al menos la lista de gastos será exacta. Los permisos del grupo deciden quién puede crear y editar listas. Junta el alquiler, las facturas y la compra y sale un mes como el de abajo, en una casa de cuatro: Jo paga £2,000 de alquiler, divididos 30 %, 25 %, 25 % y 20 % según el tamaño de la habitación, y después Kwame paga £120 de luz, Lena £40 de internet y Matt £80 de compra, cada uno dividido a partes iguales. A Jo le deben £1,340, y Side Badger sugiere tres pagos, todos para Jo."
+  - heading: Formas justas de dividir los gastos de casa
+    items:
+      - "**A partes iguales** va bien para lo que todos usan más o menos igual, como internet, los productos de limpieza y la compra común. Es rápido y nadie tiene que discutir las cuentas."
+      - "**Según el tamaño de la habitación** va bien para el alquiler, porque las habitaciones son distintas y también lo que la gente está dispuesta a pagar por ellas. Acordad los porcentajes una vez, cuando alguien se muda, y reutilizadlos cada mes."
+      - "**Según el uso** va bien para facturas en las que una persona usa claramente más, como la calefacción de un despacho en casa o una cuenta de streaming que solo ven dos. Deja fuera a quien no participó, o introduce importes exactos para cada persona."
+      - "Elijáis lo que elijáis, acordadlo antes de la primera factura y no después de la primera discusión, y apuntad la regla en algún sitio que vea toda la casa."
+  - heading: Cuando alguien se muda
+    body: Primero salda cuentas. Nadie puede salir de un grupo mientras deba o le deban dinero, así que quien se va paga o cobra, lo registráis y entonces se marcha. Mantened el grupo para los compañeros que se quedan e invitad a la persona nueva con un enlace. Cuando la casa en sí se acaba, un administrador puede bloquear el grupo para que los números no se muevan, o cerrarlo para siempre, lo que lo deja inaccesible para todos, así que hazlo solo cuando nadie necesite el historial.
+exampleAfter: 2
+example:
+  heading: Quién debe a quién este mes
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: Alquiler
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: Electricidad
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: Internet
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: Compra
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: Las funciones que usa una casa
+faq:
+  heading: Preguntas
+  items:
+    - q: ¿Puede repetirse el alquiler automáticamente?
+      a: No, no hay facturas recurrentes. Copia el alquiler del mes pasado en un par de toques, cambia la fecha y listo.
+    - q: ¿Podemos dividir según el tamaño de la habitación?
+      a: Sí, por porcentaje. Da a cada compañero una parte que refleje su habitación, siempre que las partes sumen 100. [Dividir gastos](page:feature/split-expenses) explica las otras formas de dividir.
+    - q: ¿Y si un compañero se muda debiendo dinero?
+      a: No puede salir del grupo hasta que haya saldado, porque nadie puede salir mientras deba o le deban dinero. Los números siguen siendo honestos hasta que todos estéis en paz.
+    - q: ¿Paga Side Badger las facturas?
+      a: No. Lleva la cuenta y sugiere una lista corta de pagos. Pagaos como queráis y después registradlo, como explica [saldar cuentas](page:feature/settle-up).
+    - q: ¿Puede un compañero llevar las cuentas?
+      a: Sí. Hazlo administrador y usa un grupo gestionado, donde los nuevos miembros necesitan aprobación y solo quienes lo crearon y los administradores pueden cambiar gastos.

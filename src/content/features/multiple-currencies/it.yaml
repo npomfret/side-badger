@@ -1,0 +1,125 @@
+translatedFrom: "923c938f"
+review:
+  status: machine
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: Dividi le spese in 140 valute, convertite o tenute separate
+  description: Inserisci ogni spesa nella valuta in cui hai pagato, tieni i saldi separati o converti a un tasso che puoi vedere e modificare, poi salda con una breve lista di pagamenti.
+h1: Dividi le spese in 140 valute
+navLabel: Più valute
+lead: Euro, yen e quel taxi in baht. Side Badger registra ogni spesa nella valuta in cui hai pagato, tiene i saldi in ordine e può convertire quando il gruppo preferisce saldare una volta sola. Funziona in 140 valute ed è perfetto per i [viaggi di gruppo](page:use-case/group-trips).
+cta:
+  heading: Porta i tuoi euro, porta i tuoi yen
+  body: Crea un account, avvia un gruppo e aggiungi la prima spesa nella valuta che avevi in tasca.
+  button: Crea un account gratuito
+problem:
+  heading: Inseriscila come l'hai pagata
+  body: Un viaggio si paga di rado in una sola valuta. L'hotel è stato prenotato da casa in sterline, la cena è stata pagata in yen e il caffè in aeroporto in qualunque valuta usasse lo scalo. Convertire tutto a mano prima ancora di poterlo inserire è il modo in cui i fogli di calcolo vengono abbandonati. In Side Badger inserisci ogni spesa nella valuta dello scontrino, e ogni importo segue le regole della sua valuta, quindi gli yen non hanno decimali e i dinari ne hanno tre. Le valute usate di recente compaiono per prime nell'elenco.
+workflow:
+  heading: Tieni le valute separate, o converti man mano
+  steps:
+    - title: Aggiungi la spesa nella sua valuta
+      body: Scegli la valuta, scrivi l'importo, indica chi ha pagato e chi ha condiviso. Non serve altro. È l'impostazione predefinita e conserva l'importo originale esattamente come l'hai inserito.
+      shot: S07
+      shotAlt: Il modulo della spesa con un importo in yen inserito
+    - title: Guarda un saldo per ogni valuta
+      body: I saldi sono tenuti separati per valuta, e ognuno ha la sua breve lista di pagamenti suggeriti. Le sterline si saldano in sterline e gli yen in yen.
+      shot: S10
+      shotAlt: La schermata dei saldi con i debiti semplificati in due valute
+    - title: Oppure converti, quando il gruppo preferisce saldare una volta sola
+      body: Scegli un'altra valuta mentre inserisci la spesa e Side Badger può convertirla a un tasso di cambio attuale, che puoi cambiare con quello che hai davvero ottenuto. L'importo convertito si somma al saldo in quella valuta. La conversione è una scelta del gruppo, mai qualcosa che succede alle tue spalle.
+options:
+  heading: Un tasso che puoi vedere e modificare
+  items:
+    - title: Il tasso è visibile
+      body: Quando converti, il tasso e l'importo convertito compaiono nel modulo, così nessuno deve fidarsi di un numero sulla parola.
+    - title: Scrivi il tuo
+      body: Hai ottenuto un tasso migliore da uno sportello di cambio, o peggiore in aeroporto? Modifica il tasso con quello che hai davvero ottenuto e l'importo convertito si aggiorna.
+    - title: L'originale resta
+      body: L'importo originale resta sulla spesa, accanto a quello convertito, per chi chiede quanto fosse in yen.
+    - title: Convertire non costa
+      body: Convertire non costa nulla. Non c'è nessuna commissione per inserire una spesa in un'altra valuta.
+example:
+  heading: Quattro amici in Giappone, saldati in due modi
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: l'hotel, prenotato da casa
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: cena in Giappone
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: biglietti del treno
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: ingresso al tempio
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: Una sola valuta per tutto il gruppo
+    body: Se il gruppo preferisce non pensarci, scegli una valuta del gruppo e il modulo converte ogni nuova spesa in quella, a un tasso che puoi comunque vedere e modificare. Vale solo per le spese nuove e copiate. Le modifiche e le spese esistenti restano come sono, così nulla di già registrato cambia sotto i tuoi occhi.
+  - heading: Devi euro, paghi in sterline
+    body: Hai pagato in yen e saldi in sterline? Va bene. Quando registri un pagamento puoi convertire anche quello, così chi deve euro può pagare in sterline e il saldo in euro torna comunque giusto. Pagatevi come vi fa più comodo, poi registratelo.
+  - heading: Regole per il gruppo
+    body: Limita un gruppo alle valute che usi davvero e imposta un valore predefinito perché il modulo si apra su quella giusta. Una vacanza in Portogallo non ha bisogno di altre 139 opzioni accanto al conto della cena, e un [matrimonio all'estero](page:use-case/events-and-celebrations) probabilmente ne richiede due.
+limits:
+  heading: Limiti
+  items:
+    - Il tasso viene fissato quando la spesa è salvata. Le vecchie spese non vengono mai rivalutate.
+    - Side Badger recupera un tasso attuale dove può. Non è garantito per ogni coppia di valute, e puoi sempre scrivere tu il tasso.
+    - La conversione automatica del gruppo vale solo per le spese nuove e copiate, non per le modifiche né per le spese esistenti.
+    - Ogni spesa è limitata a 999.999,99 nella sua valuta.
+    - Le valute sono 140. Criptovalute e metalli non ne fanno parte.
+    - Side Badger registra i pagamenti. Non sposta né cambia mai denaro.
+useCasesHeading: Dove aiuta
+faq:
+  heading: Domande
+  items:
+    - q: Quale tasso di cambio usate?
+      a: Un tasso di cambio attuale, recuperato quando inserisci la spesa dove ce n'è uno disponibile. Puoi cambiarlo con quello che hai davvero ottenuto, e l'importo convertito si aggiorna.
+    - q: Le vecchie spese vengono rivalutate?
+      a: No. Il tasso viene fissato quando la spesa è salvata, quindi un saldo non va alla deriva perché è cambiato il mercato.
+    - q: Supportate le criptovalute?
+      a: No. Le valute sono 140 e le criptovalute non ne fanno parte.
+    - q: Perché non posso inserire 2.000.000 di rupie indonesiane?
+      a: Ogni spesa è limitata a 999.999,99 nella sua valuta. Inseriscila in un'altra valuta e converti, oppure dividila in due spese.
+    - q: La conversione costa qualcosa?
+      a: No. Convertire è gratuito, come il resto di Side Badger. Vedi i [prezzi](page:pricing).
+    - q: Devo convertire?
+      a: No. Le valute restano separate a meno che tu o il tuo gruppo scegliate di convertire, e ogni valuta ha la sua breve lista di pagamenti.
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

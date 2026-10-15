@@ -1,0 +1,106 @@
+translatedFrom: "e6b829e6"
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Banatu etxeko fakturak etxekideekin"
+  description: "Banatu alokairua gelen tamainaren arabera, partekatu energia eta erosketak berdin, eta ikusi hilero nork nori zor dion. Etxekideentzat, pisukideentzat eta logelakideentzat kontua eramateko modu doakoa."
+h1: Banatu etxeko fakturak etxekideekin
+navLabel: Etxekideak
+lead: Komuneko papera erosten duen etxekidearentzat, eta hori gertatzen inoiz ikusten ez duten etxekideentzat. Side Badger-ek alokairuaren, fakturen eta erosketaren kontu bakarra eramaten du **etxekide, pisukide eta logelakideentzat**, inork inor jazarri behar ez izateko eta hozkailua hozkailu soil izatera itzul dadin.
+cta:
+  heading: Hasi zure etxearekin
+  body: Sortu kontu bat, egin talde bat etxerako eta bidali gonbidapen-esteka denei. Hilabete honetako fakturak gaur gauean sar daitezke.
+  button: Sortu doako kontu bat
+scenario:
+  heading: Prestatu etxea
+  body: Egin talde bat etxerako, aukeratu jendeak ikusiko duen izena eta gonbidatu denak esteka edo QR kode batekin. Taldea irekia izan daiteke, non denek gehitu eta editatzen duten, edo kudeatua, non kide berriek administratzailearen onarpena behar duten eta sortzaileek eta administratzaileek bakarrik alda ditzaketen gastuak, kontuak daramatzan etxekidearentzat egokia dena. Zenbakiak ikusi besterik nahi ez duena ikusle izan daiteke, dena ikusten duena eta ezer aldatzen ez duena. Denek gastu berri bat berehala ikusten dute, beraz “gero gehituko dut”-ek ezkutatzeko toki gutxiago ditu.
+sections:
+  - heading: Alokairua eta fakturak
+    body: "Alokairua gutxitan zatitzen da laurekin, logelak ez direlako berdinak. Banatu ehunekoen arabera, gela handiak gehiago ordain dezan eta leihoa duen armairuak gutxiago. Ehunekoek 100 batu behar dute. Denek erabiltzen dituzten fakturak berdin banatzen dira, eta gastu batean parte hartu ez duen etxekidea kanpoan utz daiteke. Banaketa berdinak hondar zentimo bat uzten duenean, pertsona bati ematen zaio zoriz. Ez dago faktura errepikaririk, beraz hilero joan den hilabeteko alokairua kopiatzen duzu, data aldatu eta aurrera."
+  - heading: Erosketa partekatua
+    body: "Eduki erosketa-zerrenda partekatua erosketa-fakturen talde berean, eta markatu elementuak saskira iristen diren heinean. Erosketa egiten duenak tiketaren guztizkoa gastu gisa gehitzen du eta berdin banatzen du, edo gauza jango duten pertsonen artean bakarrik. Inork edaten ez duen olo-esnea erosten jarraitzen duenaren kontua etxearen gaia izaten jarraitzen du, baina gutxienez gastu-zerrenda zehatza izango da. Taldearen baimenek erabakitzen dute nork sor eta edita ditzakeen zerrendak. Jarri alokairua, fakturak eta erosketa batera eta honako hilabete hau lortuko duzu, lau laguneko etxe batean: Jok £2,000 ordaintzen ditu alokairuan, gelen tamainaren arabera 30%, 25%, 25% eta 20% banatuta, gero Kwamek £120 ordaintzen ditu energian, Lenak £40 internetengatik eta Mattek £80 erosketengatik, bakoitza berdin banatuta. Jok £1,340 jaso behar ditu, eta Side Badger-ek hiru ordainketa proposatzen ditu, denak Jorentzat."
+  - heading: Etxeko kostuak banatzeko modu bidezkoak
+    items:
+      - "**Berdin** denek gutxi gorabehera berdin erabiltzen dutenarentzat egokia da, hala nola internet, garbiketa-produktuak eta erosketa komuna. Azkarra da, eta inork ez du zenbakiez eztabaidatu behar."
+      - "**Gelen tamainaren arabera** alokairuarentzat egokia da, gelak desberdinak direlako eta jendeak horiengatik ordaintzeko prest dagoena ere. Adostu ehunekoak behin, norbait sartzen denean, eta berrerabili hilero."
+      - "**Erabileraren arabera** pertsona bat nabarmen gehiago erabiltzen den fakturetarako egokia da, hala nola etxeko bulegoko berogailu-faktura bat edo bi pertsonak bakarrik ikusten duten streaming kontu bat. Utzi kanpoan parte hartu ez zuten pertsonak, edo sartu zenbateko zehatz bat pertsona bakoitzarentzat."
+      - "Zein aukeratu, adostu lehen fakturaren aurretik eta ez lehen eztabaidaren ondoren, eta idatzi araua etxe osoak ikus dezakeen toki batean."
+  - heading: Norbait kanpora doanean
+    body: Lehenengo kitatu behar du. Inork ezin du talde bat utzi zor duen edo zor zaion bitartean, beraz alde egiten duenak ordaintzen du edo ordaintzen diote, zuek erregistratzen duzue, eta gero doa. Eduki taldea martxan geratzen diren etxekideentzat eta gonbidatu pertsona berria esteka batekin. Etxea bera amaitu denean, administratzaile batek taldea blokea dezake zenbakiak lekuan geratzeko, edo betiko itxi, denentzat sartezina bihurtzen duena, beraz egin hori inork historia behar ez duenean bakarrik.
+exampleAfter: 2
+example:
+  heading: Hilabete honetan nork nori zor dion
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: Alokairua
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: Energia
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: Interneta
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: Erosketak
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: Etxe batek erabiltzen dituen ezaugarriak
+faq:
+  heading: Galderak
+  items:
+    - q: Alokairua automatikoki errepika al daiteke?
+      a: Ez, ez dago faktura errepikaririk. Kopiatu joan den hilabeteko alokairua ukitu pare batean, aldatu data eta kitto.
+    - q: Gelen tamainaren arabera banatu dezakegu?
+      a: Bai, ehunekoen arabera. Eman etxekide bakoitzari bere gelari dagokion zatia, zatiek 100 batzen duten bitartean. [Gastuak banatzea](page:feature/split-expenses) orriak beste banatzeko moduak azaltzen ditu.
+    - q: Zer gertatzen da etxekide bat zorrarekin kanpora joaten bada?
+      a: Ezin du taldea utzi kitatu arte, inork ezin duelako taldea utzi zor duen edo zor zaion bitartean. Zenbakiak zintzo geratzen dira denak kitatuta egon arte.
+    - q: Side Badger-ek fakturak ordaintzen al ditu?
+      a: Ez. Kontua eramaten du eta ordainketa-zerrenda labur bat proposatzen du. Zuek ordaintzen duzue nahi duzuen moduan, eta gero erregistratu, [kitatzeak](page:feature/settle-up) azaltzen duen bezala.
+    - q: Etxekide batek kontuak eraman al ditzake?
+      a: Bai. Egin administratzaile eta erabili talde kudeatu bat, non kide berriek onarpena behar duten eta sortzaileek eta administratzaileek bakarrik alda ditzaketen gastuak.

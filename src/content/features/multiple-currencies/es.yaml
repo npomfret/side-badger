@@ -1,0 +1,125 @@
+translatedFrom: "923c938f"
+review:
+  status: machine
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: Divide gastos en 140 monedas, convertidas o por separado
+  description: Introduce cada gasto en la moneda en la que pagaste, mantén los saldos por separado o conviértelos a un tipo que puedes ver y cambiar, y salda cuentas con una lista corta de pagos.
+h1: Divide gastos en 140 monedas
+navLabel: Varias monedas
+lead: Euros, yenes y ese taxi en bahts. Side Badger toma cada gasto en la moneda en la que pagaste, mantiene los saldos en orden y puede convertir cuando tu grupo prefiera saldar de una vez. Funciona en 140 monedas y encaja de forma natural con los [viajes en grupo](page:use-case/group-trips).
+cta:
+  heading: Trae tus euros, trae tus yenes
+  body: Crea una cuenta, empieza un grupo y añade el primer gasto en la moneda que tuvieras a mano.
+  button: Crear una cuenta gratis
+problem:
+  heading: Introdúcelo como lo pagaste
+  body: Un viaje rara vez se paga en una sola moneda. El hotel se reservó en casa en libras, la cena se pagó en yenes y el café del aeropuerto fue en lo que usara la escala. Convertirlo todo a mano antes de poder siquiera introducirlo es como se abandonan las hojas de cálculo. En Side Badger introduces cada gasto en la moneda del recibo, y cada importe sigue las reglas de su moneda, así que los yenes no tienen decimales y los dinares tienen tres. Las monedas que has usado hace poco salen primero en la lista.
+workflow:
+  heading: Mantén las monedas por separado o convierte sobre la marcha
+  steps:
+    - title: Añade el gasto en su propia moneda
+      body: Elige la moneda, escribe el importe e indica quién pagó y quién lo compartió. No hace falta nada más. Es lo predeterminado, y conserva el importe original exactamente como lo introdujiste.
+      shot: S07
+      shotAlt: El formulario de gasto con un importe en yenes
+    - title: Vigila un saldo para cada moneda
+      body: Los saldos se llevan por separado para cada moneda, y cada uno tiene su propia lista corta de pagos sugeridos. Las libras se saldan en libras y los yenes en yenes.
+      shot: S10
+      shotAlt: La pantalla de saldos con las deudas simplificadas en dos monedas
+    - title: O convierte, cuando el grupo prefiera saldar de una vez
+      body: Elige otra moneda al introducir el gasto y Side Badger puede convertirlo con un tipo de cambio actual, que puedes cambiar por el tipo que te aplicaron de verdad. El importe convertido se suma al saldo en esa moneda. La conversión es una decisión del grupo, nunca algo que ocurra a tus espaldas.
+options:
+  heading: Un tipo que puedes ver y cambiar
+  items:
+    - title: Se muestra el tipo
+      body: Cuando conviertes, el tipo y el importe convertido aparecen en el formulario, así que nadie tiene que fiarse de un número sin más.
+    - title: Escribe el tuyo
+      body: ¿Conseguiste un tipo mejor en una casa de cambio, o uno peor en un aeropuerto? Edita el tipo por el que te aplicaron de verdad y el importe convertido se actualiza.
+    - title: El original se queda
+      body: El importe original se queda en el gasto, junto al convertido, para quien pregunte cuánto fue en yenes.
+    - title: Convertir es gratis
+      body: Convertir no cuesta nada. No hay comisión por introducir un gasto en otra moneda.
+example:
+  heading: Cuatro amigos en Japón, saldados de dos maneras
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: el hotel, reservado en casa
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: cena en Japón
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: billetes de tren
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: entrada al templo
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: Una sola moneda para todo el grupo
+    body: Si tu grupo prefiere no pensar en ello, elige una moneda de grupo y el formulario convierte cada gasto nuevo a ella, con un tipo que sigues pudiendo ver y cambiar. Esto se aplica solo a gastos nuevos y copiados. Las ediciones y los gastos existentes se dejan como están, así que nada de lo ya registrado cambia por sorpresa.
+  - heading: Debes euros, pagas en libras
+    body: ¿Pagaste en yenes y saldas en libras? Sin problema. Al registrar un pago también puedes convertirlo, así que quien deba euros puede pagar en libras y el saldo en euros sigue saliendo bien. Pagaos como queráis y después registradlo.
+  - heading: Reglas para el grupo
+    body: Limita un grupo a las monedas que realmente usas y fija una por defecto para que el formulario se abra en la correcta. Unas vacaciones en Portugal no necesitan otras 139 opciones junto a la cuenta de la cena, y una [boda en el extranjero](page:use-case/events-and-celebrations) probablemente necesita dos.
+limits:
+  heading: Límites
+  items:
+    - El tipo queda fijado al guardar el gasto. Los gastos antiguos nunca se revalorizan.
+    - Side Badger obtiene un tipo actual cuando puede. No se garantiza uno para cada par, y siempre puedes escribir el tipo tú.
+    - La conversión automática del grupo se aplica solo a gastos nuevos y copiados, no a ediciones ni a gastos existentes.
+    - Cada gasto tiene un tope de 999,999.99 en su propia moneda.
+    - Hay 140 monedas. Las criptomonedas y los metales no están entre ellas.
+    - Side Badger registra pagos. Nunca mueve ni cambia dinero.
+useCasesHeading: Dónde ayuda
+faq:
+  heading: Preguntas
+  items:
+    - q: ¿Qué tipo de cambio se usa?
+      a: Un tipo de cambio actual, obtenido al introducir el gasto cuando hay uno disponible. Puedes cambiarlo por el tipo que te aplicaron de verdad, y el importe convertido se actualiza.
+    - q: ¿Se revalorizan los gastos antiguos?
+      a: No. El tipo queda fijado al guardar el gasto, así que un saldo no se desvía porque se mueva el mercado.
+    - q: ¿Se admiten criptomonedas?
+      a: No. Hay 140 monedas, y las criptomonedas no están entre ellas.
+    - q: ¿Por qué no puedo introducir 2,000,000 de rupias indonesias?
+      a: Cada gasto tiene un tope de 999,999.99 en su propia moneda. Introdúcelo en otra moneda y conviértelo, o divídelo en dos gastos.
+    - q: ¿Cuesta algo convertir?
+      a: No. Convertir es gratis, como el resto de Side Badger. Consulta [precios](page:pricing).
+    - q: ¿Tengo que convertir?
+      a: No. Las monedas se quedan por separado salvo que tú o tu grupo decidáis convertir, y cada moneda tiene su propia lista corta de pagos.

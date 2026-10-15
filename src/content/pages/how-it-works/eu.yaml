@@ -1,0 +1,105 @@
+translatedFrom: "fd23c99b"
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Side Badger nola funtzionatzen duen | Banatu taldeko gastuak bost urratsetan"
+  description: "Sortu talde bat, gonbidatu jendea, gehitu gastuak eta kitatu. Ikusi zer gertatzen den “norbaitek ordaindu du” eta “kitatuta gaude” artean, adibide landu batekin."
+h1: Side Badger nola funtzionatzen duen
+navLabel: Nola funtzionatzen duen
+lead: "Zer gertatzen da “norbaitek ordaindu du” eta “kitatuta gaude” artean? Bost urrats, kalkulu-orririk gabe, eta azkonar bat, gehienbat apaingarri. Hona bidaia osoa, lehen taldetik azken ordainketa erregistratzera arte. Urrats batean xehetasun gehiago nahi baduzu, ikusi [gastuak banatzea](page:feature/split-expenses) eta [kitatzea](page:feature/settle-up)."
+cta:
+  heading: "“Hau nik ordaintzen dut” esatetik “kitatuta gaude” esatera"
+  body: Sortu doako kontu bat, hasi talde bat eta gehitu lehen gastua. Azkonarrak ez du tiketa epaituko.
+  button: Sortu doako kontu bat
+steps:
+  - title: Sortu talde bat
+    body: Egin talde bat etxe, bidaia edo ekitaldi bakoitzerako, alokairua eta ezkontza-oparia zerrenda berean amaitu ez daitezen. Jarri izena, aukeratu jendeak zuri ikusiko zaituzten izena eta, nahi baduzu, mugatu zer monetak onartzen dituen. Zure aginte-panelak talde guztiak erakusten ditu, eta bakoitzean non zauden, pantaila bakarrean.
+    shot: S02
+    shotAlt: Talde-sortzeko leihoa, moneta-murrizketen atala irekita
+  - title: Gonbidatu zure jendea
+    body: Partekatu sartzeko esteka bat edo erakutsi QR kode bat, eta ezarri zenbat irauten duen, 15 minututik 5 egunera. Sartzen den guztiak doako kontu bat eta egiaztatutako posta elektronikoa behar ditu, eta talde batek gehienez 50 pertsona har ditzake. Nor sartzen den kontrolatu nahi baduzu, aktibatu onarpena eta administratzaile batek sartzen utziko dio pertsona bakoitzari.
+    shot: S03
+    shotAlt: Gonbidapen-leihoa esteka fitxan, QR kode bat eta iraungitze-aukerak erakusten dituela
+  - title: Gehitu gastuak gertatu ahala
+    body: Esan nork ordaindu duen, zenbat eta nori dagokion. Banatu berdin, zenbateko zehatzen arabera edo ehunekoen arabera, eta utzi kanpoan gastuaren parte izan ez zen edonor. Gehitu gastua eta denek berehala ikusiko dute, zer aldatu den eta nork aldatu duen barne.
+    shot: S05
+    shotAlt: Gastu-formularioa ehuneko-banaketarekin, alokairua gelen tamainaren arabera banatzen
+  - title: Jarraitu saldoei
+    body: Side Badger-ek moneta bakoitzaren saldo korrontea gordetzen du, nork nori zor dion begirada batean ikus dezazun. Zor txikien sare bat askatzea denen esku utzi beharrean, taldea kitatzen duen ordainketa-zerrenda labur bat proposatzen du.
+    shot: S10
+    shotAlt: Saldoen pantaila, bi monetatako zor sinplifikatuekin eta “Erakutsi guztiak” aktibatuta
+  - title: Kitatu aplikaziotik kanpo, erregistratu barruan
+    body: Side Badger-ek ez du inoiz dirurik mugitzen. Ordaindu elkarri nahi duzuen moduan, eta gero erregistratu ordainketa, saldoak eguneratu daitezen; denen pantaila freskatu gabe eguneratzen da. “Kitatu” saldoak zero direla esan nahi du, besterik ez. Inork ezin du talde bat utzi oraindik zor duen edo zor zaion bitartean, beraz, irteerara doanak lehenago kitatzen du.
+    shot: S11
+    shotAlt: Ordainketa-formularioa kitapen azkarreko botoiekin eta ordainketa partzialaren oharrarekin
+requirements:
+  heading: Zer behar duzun
+  items:
+    - Doako kontu bat. Posta elektroniko bat eta pasahitz bat besterik ez dituzu behar, eta posta egiaztatu behar duzu ezer gehitu aurretik.
+    - 18 urte edo gehiago izatea.
+    - Nabigatzaile modernoa telefonoan edo ordenagailuan, eta konexioa. Side Badger ez da aplikazio-denda bateko aplikazioa eta ez du konexiorik gabe funtzionatzen.
+    - Aukeran, toki bat zure hasierako pantailan. Ez da aplikazio-dendarik behar, Side Badger hasierako pantailara edo mahaigainera gehi baitezakezu, eta aplikazio bat bezala irekitzen da.
+example:
+  heading: Hiru lagun gau-irteera baten ostean
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: Afaria
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: Taxia
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: 39 hizkuntza, eta jende gehiagorentzat egina
+    body: Erabili Side Badger 39 hizkuntzatan, eskuinetik ezkerrera idazten diren arabiera, persiera eta urdua barne. Taldeko bakoitzak berea aukera dezake, beraz taldearen orria arabieraz egon daiteke batentzat eta ingelesez hurrengoarentzat. Teklatua eta pantaila-irakurgailua erabiltzen dituztenak ere kontuan hartuta eraiki da, eta kideen koloreek ereduak dituzte, berdea gorritik bereizi beharrik izan ez dezazun.
+faq:
+  heading: Galderak
+  items:
+    - q: Denek behar dute kontu bat?
+      a: Bai, doako bat. Pertsona bakoitzak bere posta egiaztatzen du ezer gehitu aurretik.
+    - q: Aplikaziorik ba al dago?
+      a: Nabigatzailean funtzionatzen du, eta hasierako pantailara edo mahaigainera gehi dezakezu aplikazio bat bezala ireki dadin. Ez dago aplikazio-dendako bertsiorik eta ez dago konexiorik gabeko moduurik.
+    - q: Side Badger-ek dirua mugitzen al du?
+      a: Ez. Kontua eramaten du eta ordainketak proposatzen ditu, eta zuek ordaintzen duzue nahi duzuen moduan. Gero ordainketa erregistratzen duzue. Ikusi [kitatzea](page:feature/settle-up).
+    - q: Norbaitek zorrarekin utzi dezake taldea?
+      a: Ez. Inork ezin du taldea utzi zor duen edo zor zaion bitartean, beraz lehenago kitatzen du.
+    - q: Zenbat lagun sar daitezke talde batean?
+      a: Gehienez 50 lagun talde batean. Gonbidatu esteka edo QR kode batekin, eta aktibatu onarpena administratzaile batek bakoitza sartzen utz dezan nahi baduzu.
+    - q: Eta moneta batean baino gehiagoko bidaiak?
+      a: Saldoak moneta bakoitzeko bereizita gordetzen dira. Ikusi [moneta anitz](page:feature/multiple-currencies).

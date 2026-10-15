@@ -1,0 +1,107 @@
+translatedFrom: "e6b829e6"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.2.label
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+meta:
+  title: "Divide as contas da casa com colegas"
+  description: "Divide a renda pelo tamanho dos quartos, partilha a luz e as compras em partes iguais e vê quem deve a quem todos os meses. Uma forma grátis de colegas de casa manterem a conta."
+h1: "Divide as contas da casa com colegas"
+navLabel: "Colegas de casa"
+lead: "Para o colega que compra o papel higiénico e para os colegas que nunca veem isso acontecer. O Side Badger mantém uma só conta corrente da renda, das contas e das compras para **colegas de casa**, para ninguém ter de andar atrás de ninguém e o frigorífico voltar a ser só um frigorífico."
+cta:
+  heading: "Começa pela tua própria casa"
+  body: "Cria uma conta, faz um grupo para a casa e envia a todos o link de convite. As contas deste mês podem entrar já esta noite."
+  button: "Criar uma conta grátis"
+scenario:
+  heading: "Prepara a casa"
+  body: "Cria um grupo para a casa, escolhe o nome com que queres que te vejam nele e convida toda a gente com um link ou código QR. O grupo pode ser aberto, onde todos adicionam e editam, ou gerido, onde os novos membros precisam da aprovação de um administrador e só os criadores e administradores podem alterar despesas, o que convém ao colega que trata das contas. Quem só quiser ver os números pode ser espectador, que vê tudo e não altera nada. Todos veem uma nova despesa logo, por isso o “depois adiciono” tem menos sítios onde se esconder."
+sections:
+  - heading: "Renda e contas"
+    body: "A renda raramente se divide por quatro, porque os quartos não são iguais. Divide-a por percentagem, para o quarto grande pagar mais e o armário com janela pagar menos. As percentagens têm de somar 100. As contas que todos usam levam uma divisão em partes iguais, e um colega que não teve parte numa despesa pode ficar de fora. Quando uma divisão em partes iguais deixa um cêntimo a sobrar, ele vai para uma pessoa ao acaso. Não há contas recorrentes, por isso todos os meses copias a renda do mês passado, mudas a data e segues em frente."
+  - heading: "As compras partilhadas"
+    body: "Mantém a lista de compras partilhada no mesmo grupo das contas das compras e vai riscando os itens à medida que chegam ao carrinho. Quem faz as compras adiciona o total do recibo como despesa e divide-o em partes iguais, ou só pelas pessoas que vão comer a coisa. Quem continua a comprar o leite de aveia que mais ninguém bebe continua a ser assunto da casa, mas pelo menos a lista de despesas estará certa. As permissões do grupo decidem quem pode criar e editar listas. Junta a renda, as contas e as compras e tens um mês como o de abaixo, numa casa de quatro: a Jo paga £2,000 de renda, dividida 30%, 25%, 25% e 20% pelo tamanho dos quartos, depois o Kwame paga £120 de luz, a Lena £40 de internet e o Matt £80 de compras, cada um dividido em partes iguais. A Jo fica com £1,340 a receber, e o Side Badger sugere três pagamentos, todos para a Jo."
+  - heading: "Formas justas de dividir os custos da casa"
+    items:
+      - "**Em partes iguais** serve para o que todos usam mais ou menos por igual, como a internet, os produtos de limpeza e as compras comuns. É rápido e ninguém precisa de discutir as contas."
+      - "**Pelo tamanho do quarto** serve para a renda, porque os quartos são diferentes e o que as pessoas aceitam pagar por eles também. Combinem as percentagens uma só vez, quando alguém se muda para a casa, e reutilizem-nas todos os meses."
+      - "**Por utilização** serve para as contas em que uma pessoa claramente usa mais, como o aquecimento de um escritório em casa ou uma conta de streaming que só duas pessoas veem. Deixa de fora quem não teve parte, ou introduz valores exatos para cada pessoa."
+      - "Seja qual for a escolha, combinem-na antes da primeira conta e não depois da primeira discussão, e escrevam a regra num sítio que a casa toda veja."
+  - heading: "Quando alguém se muda"
+    body: "Acerta as contas primeiro. Ninguém pode sair de um grupo enquanto deve ou tem dinheiro a receber, por isso quem sai paga ou recebe, vocês registam e só depois essa pessoa se vai embora. Mantém o grupo para os colegas que ficam e convida a pessoa nova com um link. Quando a casa em si acabar, um administrador pode bloquear o grupo para os números ficarem como estão, ou fechá-lo de vez, o que o torna inacessível para todos, por isso só o faças quando ninguém precisar do histórico."
+exampleAfter: 2
+example:
+  heading: "Quem deve a quem este mês"
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: "Renda"
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: "Luz"
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: "Internet"
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: "Compras"
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: "As funcionalidades que uma casa usa"
+faq:
+  heading: "Perguntas"
+  items:
+    - q: "A renda pode repetir-se automaticamente?"
+      a: "Não, não há contas recorrentes. Copia a renda do mês passado em dois toques, muda a data e está feito."
+    - q: "Podemos dividir pelo tamanho do quarto?"
+      a: "Sim, por percentagem. Dá a cada colega uma parte que reflita o seu quarto, desde que as partes somem 100. [Dividir despesas](page:feature/split-expenses) explica as outras formas de dividir."
+    - q: "E se um colega se mudar a dever dinheiro?"
+      a: "Não pode sair do grupo até acertar as contas, porque ninguém pode sair enquanto deve ou tem dinheiro a receber. Os números mantêm-se honestos até todos estarem quites."
+    - q: "O Side Badger paga as contas?"
+      a: "Não. Mantém a conta e sugere uma lista curta de pagamentos. Paguem-se como preferirem e depois registem, como explica [acertar contas](page:feature/settle-up)."
+    - q: "Um colega pode tratar das contas?"
+      a: "Sim. Torna-o administrador e usa um grupo gerido, onde os novos membros precisam de aprovação e só os criadores e administradores podem alterar despesas."

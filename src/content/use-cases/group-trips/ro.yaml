@@ -1,0 +1,108 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: machine
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+meta:
+  title: "Împarte costurile unei excursii de grup, în 140 de valute"
+  description: "Urmărește cine a plătit ce într-o excursie de grup, introdu costurile în valuta locală, convertește-le sau nu și achită-te o singură dată, la final. Gratuit, în browser."
+h1: "Împarte costurile unei excursii de grup, în 140 de valute"
+navLabel: "Excursii de grup"
+lead: "Ține evidența vilei, a taxiurilor și a singurei runde de cocktailuri pe care nimeni nu-și mai amintește să se fi oferit s-o plătească. Side Badger ține socoteala cât ești plecat, [se descurcă cu lire, euro și alte 138 de valute](page:feature/multiple-currencies) și îți dă o [listă scurtă de plăți](page:feature/settle-up) când te întorci acasă."
+cta:
+  heading: "Socoteli de vacanță, rezolvate înainte să-ți treacă bronzul"
+  body: "Creează un grup, trimite linkul de invitație oamenilor din excursie și adaugă costurile pe măsură ce apar."
+  button: "Creează un cont gratuit"
+scenario:
+  heading: "Fiecare a plătit ceva, în vreo valută"
+  body: "Cineva a rezervat zborurile, altcineva a pus vila pe card, iar un al treilea a plătit cina în numerar. Până în ziua a treia nimeni nu mai știe cine e în avantaj. Întrebarea e simplă, chiar dacă răspunsul trăiește de obicei într-o foaie de calcul pe care nu vrea nimeni s-o deschidă. Cine a plătit ce, în ce valută, și cum se achită toți o singură dată, la final?"
+sections:
+  - heading: "Înainte să pleci"
+    body: "Pune lista scurtă de vile la vot, anonim dacă vrei, ca decizia să aparțină grupului, nu celui care se supără cel mai mult. Apoi ține lista de cumpărături comune lângă notele de plată, ca nimeni să nu cumpere trei tuburi de cremă de soare și niciun adaptor de priză."
+  - heading: "Cât ești plecat"
+    body: "Adaugă fiecare cost când apare, în valuta în care l-ai plătit. Fotografiază chitanța, iar Side Badger completează totalul, data și locul, ca să le verifici; imaginile chitanțelor sunt citite de serviciul AI al Google. Convertește suma la un curs de schimb actual, pe care îl poți schimba cu cursul pe care l-ai primit de fapt, iar suma inițială rămâne pe cheltuială. Sau lasă euro ca euro și hotărăște mai târziu. Un grup poate alege și o singură valută, iar cheltuielile noi se convertesc automat în ea."
+  - heading: "Nu toți au făcut totul"
+    body: "Unii au sărit peste cină, alții au stat pe margine la barcă. Exclude-i din costurile la care n-au participat și împarte restul [egal, pe sume exacte sau procentual](page:feature/split-expenses). Nimeni nu plătește pentru partea din excursie pe care a petrecut-o dormind."
+  - heading: "Achită-te după ce ajungi acasă"
+    body: "Side Badger sugerează o listă scurtă de plăți care îi achită pe toți. Plătiți-vă unii altora cum preferați, apoi înregistrați. Cu valute amestecate, ține-le separate sau convertește pe parcurs; exemplul de la Lisabona de mai jos le arată pe amândouă."
+  - heading: "Petreceri de burlaci și burlăcițe"
+    body: "Un weekend în deplasare cu un invitat de onoare cere ceva mai multă organizare. Fă din el un grup administrat, în care administratorii aprobă membrii noi și doar creatorii și administratorii pot schimba cheltuielile. Folosește sume exacte pentru partea invitatului de onoare, limitează grupul la valutele pe care le folosești de fapt și blochează grupul când s-a terminat, ca cifrele să rămână pe loc."
+exampleAfter: 4
+example:
+  heading: "Patru prieteni la Lisabona"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Zboruri"
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: "Vila"
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: "Cina"
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Plimbare cu barca"
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: "Pe ce se sprijină o excursie"
+faq:
+  heading: "Întrebări"
+  items:
+    - q: "Pot fi excluși cei care au sărit peste cină?"
+      a: "Da. Alege cine a participat la fiecare cheltuială și doar ei sunt taxați pentru ea."
+    - q: "Funcționează fără semnal?"
+      a: "Nu. Side Badger are nevoie de o conexiune, așa că adaugă costurile când ai din nou wifi."
+    - q: "Trebuie să instaleze toți ceva?"
+      a: "Nu. Rulează în browser. Trimite linkul de invitație și oamenii se alătură de pe telefon."
+    - q: "Ce curs de schimb folosește?"
+      a: "Un curs de schimb actual când introduci cheltuiala, sau al tău, dacă ai primit altul. Cursul se fixează la salvarea cheltuielii, deci cheltuielile vechi nu sunt niciodată reevaluate."
+    - q: "Putem îngheța grupul după excursie?"
+      a: "Da. Un administrator poate bloca grupul, ca cifrele să rămână pe loc."
+    - q: "Există o limită pentru sume?"
+      a: "Da. 999,999.99 pe cheltuială, în propria valută."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

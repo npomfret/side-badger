@@ -1,0 +1,90 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: machine
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+meta:
+  title: "Împarte costurile petrecerilor, nunților și cadourilor comune"
+  description: "Împarte costurile unei petreceri, nunți sau cadou comun când oamenii contribuie cu sume diferite. Votați planul, împarte pe sume exacte și vezi cine cui datorează."
+h1: "Împarte costurile petrecerilor, nunților și cadourilor comune"
+navLabel: "Evenimente și sărbători"
+lead: "Împarte avansurile, decorurile și umbrelele de urgență. Lasă planul de așezare pe seama cuiva mai curajos. Side Badger ține **cine a contribuit cu ce** într-un singur loc, ca organizatorul să se bucure și el de petrecere."
+cta:
+  heading: "Începe cu următoarea sărbătoare"
+  body: "Creează un cont, fă un grup pentru eveniment și trimite linkul de invitație. Side Badger este gratuit, fără reclame și fără limite zilnice."
+  button: "Creează un cont gratuit"
+scenario:
+  heading: "Toți contribuie, nu mereu cu aceeași sumă"
+  body: "Cineva plătește avansul pentru locație, altcineva cumpără tortul, iar un al treilea pune cadoul comun pe cardul propriu. Unii invitați vin la tot, alții vin doar la cină. Să ții o evidență corectă a asta într-un fir de chat e o muncă pentru care nu s-a oferit nimeni. Un grup Side Badger le ține pe toate, oricare ar fi amestecul de sume, și arată fiecărei persoane ce datorează sau ce i se datorează. Vezi [cum funcționează](page:how-it-works) pentru noțiunile de bază sau citește mai departe pentru un eveniment."
+sections:
+  - heading: "Hotărâți împreună"
+    body: "Înainte să se miște vreun ban, pune alegerea la un **sondaj**. Adaugă până la 10 opțiuni, de exemplu două locații sau trei idei de cadou, și lasă pe toți să voteze. Poți ascunde cine a votat ce, ca fiecare opțiune să primească o șansă corectă, iar câștigătoarea apare după închiderea sondajului. Nimeni nu trebuie să deruleze prin patruzeci de mesaje ca să afle ce s-a hotărât."
+  - heading: "Cine intră cu ce"
+    body: "Nu toți plătesc la fel și nu toți participă la fiecare cost. Împarte o cheltuială egal, procentual sau pe **sume exacte**, ca partea fiecăruia să fie cifra la care ați convenit. Exclude pe oricine nu a fost implicat, de exemplu invitații care au sărit peste cină sau prietenii care nu s-au alăturat cadoului. Fiecare cheltuială are un singur plătitor, iar toți ceilalți din împărțire îi datorează partea lor. Detaliile sunt pe pagina [împărțirea cheltuielilor](page:feature/split-expenses)."
+  - heading: "Păstrează actele"
+    body: "Adaugă note la o cheltuială, de exemplu ce a acoperit costul. Comentariile rămân **lângă cheltuiala** despre care e vorba, așa că întrebarea „tortul a fost £45 sau £54?” și răspunsul ei stau în același loc. Comentariile pot avea 500 de caractere, ceea ce e destul pentru o întrebare despre un avans."
+  - heading: "Controalele organizatorului"
+    body: "Colaborarea deschisă lasă orice membru să adauge și să editeze cheltuieli, ceea ce e în regulă pentru un cadou mic. Pentru o nuntă sau o petrecere mai mare, alege presetarea **Grup administrat**. Administratorii aprobă fiecare membru nou, iar doar creatorii și administratorii pot schimba cheltuielile. Invită oamenii cu un link sau un cod QR; cu aprobarea activată, un administrator lasă fiecare persoană să intre, așa că lista de invitați rămâne lista de invitați. Când evenimentul s-a terminat, blochează grupul, ca cifrele să rămână pe loc."
+  - heading: "Achită-te după petrecere"
+    body: "După ce a sosit ultima factură, soldurile arată **cine cui datorează**, iar Side Badger sugerează o listă scurtă de plăți care îi achită pe toți. Plătiți-vă unii altora cum preferați, apoi înregistrați plata în grup. Side Badger nu mută niciodată bani, așa că grupul ține evidența, în timp ce transferurile se fac în aplicațiile voastre bancare. Pagina [decontarea](page:feature/settle-up) arată cum o încurcătură devine o listă scurtă."
+exampleAfter: 5
+example:
+  heading: "Un cadou comun: șase voturi pentru, £150 de împărțit"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Cadou comun"
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: "Funcțiile pe care le folosește asta"
+faq:
+  heading: "Întrebări"
+  items:
+    - q: "Pot invitații să vadă grupul fără să se alăture?"
+      a: "Nu. Oamenii se alătură cu un link sau un cod QR și un cont gratuit, așa că pot vedea grupul abia după ce au intrat."
+    - q: "Poate Side Badger să strângă banii?"
+      a: "Nu. Side Badger ține evidența și nu mută niciodată bani. Plătiți-vă unii altora cum preferați, apoi înregistrați plata. Este gratuit, fără reclame și fără limite zilnice; vezi [prețurile](page:pricing)."
+    - q: "Pot fi voturile anonime?"
+      a: "Da. Când creezi un sondaj poți ascunde cine a votat ce. Setările se pot schimba doar înainte de primul vot."
+    - q: "Pot oamenii să contribuie cu sume diferite?"
+      a: "Da. Împarte o cheltuială pe sume exacte, ca partea fiecăruia să fie cifra la care ați convenit, sau exclude oamenii care n-au fost implicați."
+    - q: "Poate un organizator să țină contabilitatea?"
+      a: "Da. Folosește presetarea grupului administrat, ca doar creatorii și administratorii să schimbe cheltuielile, iar administratorii să aprobe membrii noi."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name

@@ -1,0 +1,83 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: machine
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+meta:
+  title: "Roinn costais cóisirí, póstaí agus bronntanas grúpa"
+  description: "Roinn costais cóisire, bainise nó bronntanais ghrúpa nuair a chuireann daoine méideanna difriúla isteach. Vótáil ar an bplean, roinn de réir suimeanna cruinne agus féach cé atá i bhfiacha le cé."
+h1: "Roinn costais cóisirí, póstaí agus bronntanas grúpa"
+navLabel: "Imeachtaí agus ceiliúradh"
+lead: "Roinn éarlaisí, maisiúcháin agus scátha báistí éigeandála. Fág an plean suí ag duine éigin níos cróga. Coinníonn Side Badger **cé a chuir cad isteach** in aon áit amháin, ionas gur féidir leis an eagraí taitneamh a bhaint as an gcóisir freisin."
+cta:
+  heading: "Tosaigh leis an gcéad cheiliúradh eile"
+  body: "Cruthaigh cuntas, déan grúpa don imeacht agus seol an nasc cuiridh. Tá Side Badger saor in aisce, gan fógraí agus gan teorainneacha laethúla."
+  button: "Cruthaigh cuntas saor in aisce"
+scenario:
+  heading: "Cuireann gach duine isteach, ní i gcónaí an méid céanna"
+  body: "Íocann duine amháin an éarlais ar an ionad, ceannaíonn duine eile an císte, agus cuireann tríú duine bronntanas an ghrúpa ar a gcárta féin. Tagann roinnt aíonna chuig gach rud agus tagann roinnt chuig an dinnéar amháin. Is jab nár chuir aon duine isteach air é cuntas cothrom a choinneáil de sin i snáithe comhrá. Coinníonn grúpa Side Badger an lot, pé meascán méideanna atá ann, agus taispeánann sé do gach duine cad atá dlite acu nó dlite dóibh. Féach [conas a oibríonn sé](page:how-it-works) le haghaidh na mbunrudaí, nó léigh ar aghaidh le haghaidh imeachta."
+sections:
+  - heading: "Déanaigí cinneadh le chéile"
+    body: "Sula mbogann aon airgead, cuir an rogha chun **vótála**. Cuir suas le 10 rogha leis, mar dhá ionad nó trí smaoineamh bronntanais, agus lig do gach duine vótáil. Is féidir leat a cheilt cé a vótáil ar cad, ionas go bhfaigheann gach rogha éisteacht chothrom, agus taispeántar an buaiteoir nuair a dúntar an vóta. Ní gá d'aon duine scrollú ar ais trí daichead teachtaireacht chun a fháil amach cad a socraíodh."
+  - heading: "Cé atá istigh do cad"
+    body: "Ní íocann gach duine mar a chéile, agus ní bhíonn gach duine páirteach i ngach costas. Roinn costas go cothrom, de réir céatadáin nó de réir **suimeanna cruinne**, ionas gurb é sciar gach duine an figiúr a d'aontaigh sibh. Fág amach aon duine nach raibh páirteach, mar na haíonna a scipeáil an dinnéar nó na cairde nár chuaigh isteach sa bhronntanas. Tá duine amháin ag íoc as gach costas, agus tá a sciar dlite ag gach duine eile sa roinnt don duine sin. Tá na sonraí ar an leathanach [roinn costais](page:feature/split-expenses)."
+  - heading: "Coinnigh an páipéarachas"
+    body: "Cuir nótaí le costas, mar cad a chlúdaigh an costas. Fanann tráchtanna **in aice leis an gcostas** a bhfuil siad faoi, mar sin tá an cheist “an raibh an císte £45 nó £54?” agus a freagra san áit chéanna. Is féidir le tráchtanna a bheith 500 carachtar ar fad, rud atá go leor do cheist faoi éarlais."
+  - heading: "Rialuithe don eagraí"
+    body: "Ligeann comhoibriú oscailte d'aon bhall costais a chur leis agus a chur in eagar, rud atá ceart go leor do bhronntanas beag. Do bhainis nó do chóisir níos mó, roghnaigh an réamhshocrú **Grúpa bainistithe**. Ceadaíonn riarthóirí gach ball nua, agus ní féidir ach le cruthaitheoirí agus riarthóirí costais a athrú. Tabhair cuireadh do dhaoine le nasc nó cód QR; le ceadú ar siúl, ligeann riarthóir gach duine isteach, mar sin fanann liosta na n-aíonna ina liosta na n-aíonna. Nuair a bhíonn an t-imeacht thart, glasáil an grúpa ionas go bhfanann na huimhreacha mar atá."
+  - heading: "Socraigh tar éis na cóisire"
+    body: "Nuair a bhíonn an sonrasc deireanach isteach, taispeánann na hiarmhéideanna **cé atá i bhfiacha le cé**, agus molann Side Badger liosta gearr íocaíochtaí a shocraíonn gach duine. Íocaigí a chéile ar an gcaoi is fearr libh, ansin taifead an íocaíocht sa ghrúpa. Ní bhogann Side Badger airgead riamh, mar sin coinníonn an grúpa an cuntas agus tarlaíonn na haistrithe i d'aipeanna baincéireachta féin. Taispeánann an leathanach [socraigh suas](page:feature/settle-up) conas a éiríonn praiseach ina liosta gearr."
+exampleAfter: 5
+example:
+  heading: "Bronntanas grúpa: sé vóta air, £150 le roinnt"
+  currency: GBP
+  people:
+    - id: priya
+      name: Gráinne
+    - id: tom
+      name: Tomás
+    - id: jess
+      name: Sinéad
+    - id: mo
+      name: Mícheál
+    - id: lee
+      name: Liam
+    - id: kat
+      name: Caoimhe
+  expenses:
+    - label: "Bronntanas grúpa"
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: "Na gnéithe a úsáideann sé seo"
+faq:
+  heading: "Ceisteanna"
+  items:
+    - q: "An bhfeiceann aíonna an grúpa gan dul isteach?"
+      a: "Ní fheiceann. Téann daoine isteach le nasc nó cód QR agus cuntas saor in aisce, mar sin feiceann siad an grúpa nuair a bhíonn siad istigh."
+    - q: "An féidir le Side Badger an t-airgead a bhailiú?"
+      a: "Ní féidir. Coinníonn Side Badger an cuntas agus ní bhogann sé airgead riamh. Íocaigí a chéile ar an gcaoi is fearr libh, ansin taifead an íocaíocht. Tá sé saor in aisce, gan fógraí agus gan teorainneacha laethúla; féach [praghsáil](page:pricing)."
+    - q: "An féidir vótaí a bheith gan ainm?"
+      a: "Is féidir. Nuair a chruthaíonn tú vóta is féidir leat a cheilt cé a vótáil ar cad. Ní féidir na socruithe a athrú ach roimh an gcéad vóta."
+    - q: "An féidir le daoine méideanna éagsúla a chur isteach?"
+      a: "Is féidir. Roinn costas de réir suimeanna cruinne, ionas gurb é sciar gach duine an figiúr a d'aontaigh sibh, nó fág amach na daoine nach raibh páirteach."
+    - q: "An féidir le heagraí na leabhair a choinneáil?"
+      a: "Is féidir. Úsáid an réamhshocrú grúpa bainistithe, ionas nach n-athraíonn costais ach cruthaitheoirí agus riarthóirí agus go gceadaíonn riarthóirí baill nua."

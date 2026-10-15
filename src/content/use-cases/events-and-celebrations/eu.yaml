@@ -1,0 +1,90 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: machine
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+meta:
+  title: "Banatu festen, ezkontzen eta talde-opariaren kostuak"
+  description: "Partekatu festa, ezkontza edo talde-opari baten kostuak jendeak zenbateko desberdinak jartzen dituenean. Bozkatu plana, banatu zenbateko zehatzen arabera eta ikusi nork nori zor dion."
+h1: Banatu festen, ezkontzen eta talde-opariaren kostuak
+navLabel: Ekitaldiak eta ospakizunak
+lead: Banatu fidantzak, apaingarriak eta larrialdiko aterkiak. Eserleku-plana ausartagoren baten esku utzi. Side Badger-ek **nork zer jarri duen** leku bakarrean gordetzen du, antolatzaileak ere festaz goza dezan.
+cta:
+  heading: Hasi hurrengo ospakizunarekin
+  body: Sortu kontu bat, egin talde bat ekitaldirako eta bidali gonbidapen-esteka. Side Badger doakoa da, iragarkirik gabe eta eguneko mugarik gabe.
+  button: Sortu doako kontu bat
+scenario:
+  heading: Denek jartzen dute, ez beti zenbateko bera
+  body: Norbaitek aretoaren fidantza ordaintzen du, beste norbaitek pastela erosten du, eta hirugarren batek taldearen oparia bere txartelean jartzen du. Gonbidatu batzuk dena egitera etortzen dira eta beste batzuk afarira bakarrik. Txat-hari batean horren kontu zuzena eramatea inork eskatu ez duen lana da. Side Badger-eko talde batek dena hartzen du, zenbatekoen nahasketa dena delakoa izanda, eta pertsona bakoitzari erakusten dio zenbat zor duen edo zenbat zor zaion. Ikusi [nola funtzionatzen duen](page:how-it-works) oinarriak ikusteko, edo jarraitu irakurtzen ekitaldi baterako.
+sections:
+  - heading: Erabaki elkarrekin
+    body: Dirurik mugitu aurretik, jarri aukera **inkesta** batera. Gehitu gehienez 10 aukera, adibidez bi areto edo hiru opari-ideia, eta utzi denei bozkatzen. Nork zer bozkatu duen ezkuta dezakezu, aukera bakoitzak entzute bidezkoa izan dezan, eta irabazlea inkesta itxi ondoren agertzen da. Inork ez du berrogei mezutan atzera egin behar zer erabaki zen jakiteko.
+  - heading: Nor sartzen den zertan
+    body: Ez denek ordaintzen dute berdin, eta ez denak dira kostu guztien parte. Banatu gastu bat berdin, ehunekoen arabera edo **zenbateko zehatzen arabera**, pertsona bakoitzaren zatia adostu duzuen zifra izan dadin. Utzi kanpoan parte ez zuten pertsonak, adibidez afaria saltatu zuten gonbidatuak edo oparian sartu ez ziren lagunak. Gastu bakoitzak ordaintzaile bakarra du, eta banaketako gainerako guztiek bere zatia zor diote. Xehetasunak [gastuak banatzea](page:feature/split-expenses) orrian daude.
+  - heading: Gorde paperak
+    body: Gehitu oharrak gastu bati, hala nola kostuak zer estaltzen zuen. Iruzkinak dagokien **gastuaren ondoan** geratzen dira, beraz “pastela £45 zen ala £54?” galdera eta bere erantzuna toki berean bizi dira. Iruzkinek 500 karaktere dituzte gehienez, fidantza bati buruzko galdera egiteko nahikoa.
+  - heading: Antolatzailearen kontrolak
+    body: Lankidetza irekiak edozein kideri uzten dio gastuak gehitzen eta editatzen, opari txiki baterako ondo dagoena. Ezkontza edo festa handiago baterako, aukeratu **Talde kudeatua** aurrezarpena. Administratzaileek kide berri bakoitza onartzen dute, eta sortzaileek eta administratzaileek bakarrik alda ditzakete gastuak. Gonbidatu jendea esteka edo QR kode batekin; onarpena aktibatuta, administratzaile batek pertsona bakoitza sartzen uzten du, beraz gonbidatuen zerrenda gonbidatuen zerrenda izaten jarraitzen du. Ekitaldia amaitzen denean, blokeatu taldea zenbakiak lekuan geratzeko.
+  - heading: Kitatu festaren ondoren
+    body: Azken faktura sartu denean, saldoek **nork nori zor dion** erakusten dute, eta Side Badger-ek denak kitatzen dituen ordainketa-zerrenda labur bat proposatzen du. Ordaindu elkarri nahi duzuen moduan, eta gero erregistratu ordainketa taldean. Side Badger-ek ez du inoiz dirurik mugitzen, beraz taldeak kontua eramaten du transferentziak zuen banku-aplikazioetan egiten diren bitartean. [Kitatzea](page:feature/settle-up) orriak korapilo bat zerrenda labur bihurtzen dena erakusten du.
+exampleAfter: 5
+example:
+  heading: "Talde-opari bat: sei botoz alde, £150 banatzeko"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: Talde-oparia
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: Zertan oinarritzen den
+faq:
+  heading: Galderak
+  items:
+    - q: Gonbidatuek taldea ikus dezakete sartu gabe?
+      a: Ez. Jendea esteka edo QR kode batekin eta doako kontu batekin sartzen da, beraz sartu ondoren ikus dezakete taldea.
+    - q: Side Badger-ek dirua bil dezake?
+      a: Ez. Side Badger-ek kontua eramaten du eta ez du inoiz dirurik mugitzen. Ordaindu elkarri nahi duzuen moduan, eta gero erregistratu ordainketa. Doakoa da, iragarkirik gabe eta eguneko mugarik gabe; ikusi [prezioak](page:pricing).
+    - q: Botoak anonimoak izan daitezke?
+      a: Bai. Inkesta sortzen duzunean, nork zer bozkatu duen ezkuta dezakezu. Ezarpenak lehen botoaren aurretik bakarrik alda daitezke.
+    - q: Jendeak zenbateko desberdinak jar ditzake?
+      a: Bai. Banatu gastu bat zenbateko zehatzen arabera, pertsona bakoitzaren zatia adostu duzuen zifra izan dadin, edo utzi kanpoan parte ez zuten pertsonak.
+    - q: Antolatzaile batek kontuak eraman ditzake?
+      a: Bai. Erabili talde kudeatuaren aurrezarpena, sortzaileek eta administratzaileek bakarrik alda ditzaten gastuak eta administratzaileek kide berriak onar ditzaten.

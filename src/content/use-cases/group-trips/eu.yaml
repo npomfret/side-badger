@@ -1,0 +1,108 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: machine
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Banatu taldeko bidaiaren kostuak, 140 monetatan"
+  description: "Jarraitu bidaia batean nork zer ordaindu duen, sartu kostuak tokiko monetan, bihurtu ala ez, eta kitatu behin amaieran. Doakoa, zure nabigatzailean."
+h1: Banatu taldeko bidaiaren kostuak, 140 monetatan
+navLabel: Taldeko bidaiak
+lead: Jarraitu villa, taxiak eta inork ordaintzera eskaini zela gogoratzen ez duen koktel-txanda hura. Side Badger-ek kontua eramaten du zu kanpoan zaudela, [libera esterlinak, euroak eta beste 138 moneta kudeatzen ditu](page:feature/multiple-currencies), eta etxera itzultzean [ordainketa-zerrenda labur bat](page:feature/settle-up) ematen dizu.
+cta:
+  heading: Oporretako kontuak, azal beltzarana joan baino lehen eginda
+  body: Sortu talde bat, bidali gonbidapen-esteka bidaiako jendeari eta gehitu kostuak gertatu ahala.
+  button: Sortu doako kontu bat
+scenario:
+  heading: Denek zerbait ordaindu dute, moneta batean edo bestean
+  body: Norbaitek hegaldiak erreserbatu zituen, beste norbaitek villa txartelean jarri zuen, eta hirugarren batek afaria eskudirutan ordaindu zuen. Hirugarren egunerako inork ez daki nor dagoen aurretik. Galdera sinplea da, erantzuna inork ireki nahi ez duen kalkulu-orri batean egon ohi bada ere. Nork zer ordaindu du, zer monetatan, eta nola kitatzen dute denek behin amaieran?
+sections:
+  - heading: Joan aurretik
+    body: Jarri villa-zerrenda bozketara, anonimoki nahi baduzu, erabakia taldearena izan dadin eta ez gehien amorratzen denarena. Gero eduki erosketa-zerrenda partekatua erosketa-fakturen ondoan, inork hiru eguzki-krema erosi ez ditzan eta adaptadorerik ez.
+  - heading: Kanpoan zaudela
+    body: Gehitu kostu bakoitza gertatu ahala, ordaindu zenuen monetan. Atera argazki bat tiketari eta Side Badger-ek guztizkoa, data eta lekua beteko ditu zuk egiazta ditzazun; tiketen irudiak Googleren adimen artifizialeko zerbitzuak irakurtzen ditu. Bihurtu zenbatekoa egungo kanbio-tasa batean, benetan lortu zenuen tasara alda dezakezuna, eta jatorrizko zenbatekoa gastuan geratzen da. Edo utzi euroak euro eta erabaki geroago. Talde batek moneta bakarra ere aukera dezake, eta gastu berriak automatikoki bihurtzen dira horretara.
+  - heading: Denek ez zuten dena egin
+    body: Batzuek afaria saltatu zuten, beste batzuk itsasontzia utzi zuten. Utzi kanpoan parte ez ziren kostuetatik, eta banatu gainerakoa [berdin, zenbateko zehatzen arabera edo ehunekoen arabera](page:feature/split-expenses). Inork ez du ordaintzen bere bidaiaren lotan emandako zatia.
+  - heading: Kitatu etxera iristean
+    body: Side Badger-ek denak kitatzen dituen ordainketa-zerrenda labur bat proposatzen du. Ordaindu elkarri nahi duzuen moduan, eta gero erregistratu. Monetak nahastuta daudenean, mantendu bakoitza bereizita edo bihurtu joan ahala; beheko Lisboako adibideak biak erakusten ditu.
+  - heading: Agur-festako asteburuak
+    body: Ohorezko gonbidatu batekin asteburu batek administrazio apur bat gehiago behar du. Egin talde kudeatua, non administratzaileek kide berriak onartzen dituzten eta sortzaileek eta administratzaileek bakarrik alda ditzaketen gastuak. Erabili zenbateko zehatzak ohorezko gonbidatuaren zatirako, mugatu taldea benetan erabiltzen ari zareten monetetara, eta blokeatu taldea amaitzean zenbakiak lekuan geratzeko.
+exampleAfter: 4
+example:
+  heading: Lau lagun Lisboan
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: Hegaldiak
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: Villaren alokairua
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: Afaria
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: Itsasontzi-bidaia
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: Bidaia batek zertan egiten duen
+faq:
+  heading: Galderak
+  items:
+    - q: Afaria saltatu zuten pertsonak kanpoan utz daitezke?
+      a: Bai. Aukeratu nor izan den gastu bakoitzaren parte, eta horiei bakarrik kobratzen zaie.
+    - q: Seinalerik gabe funtzionatzen al du?
+      a: Ez. Side Badger-ek konexioa behar du, beraz gehitu kostuak wifira itzultzen zarenean.
+    - q: Denek zerbait instalatu behar al dute?
+      a: Ez. Nabigatzailean funtzionatzen du. Bidali gonbidapen-esteka eta jendea telefonotik sartzen da.
+    - q: Zer kanbio-tasa erabiltzen du?
+      a: Egungo kanbio-tasa bat gastua sartzen duzunean, edo zurea beste bat lortu baduzu. Tasa gastua gordetzen denean finkatzen da, beraz gastu zaharrak ez dira inoiz berriro baloratzen.
+    - q: Bidaiaren ondoren taldea izoztu al dezakegu?
+      a: Bai. Administratzaile batek taldea blokea dezake zenbakiak lekuan geratzeko.
+    - q: Zenbatekoen mugarik ba al dago?
+      a: Bai. 999,999.99 gastu bakoitzeko, bere monetan.

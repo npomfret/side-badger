@@ -24,35 +24,31 @@ claims:
   - live-updates.everyone-sees-it-straight-away
 identicalApproved:
   - navLabel
-  - cta.heading
-  - sections.0.heading
   - example.expenses.0.label
   - example.expenses.2.label
-  - example.expenses.3.label
-  - faq.heading
   - example.people.0.name
   - example.people.1.name
   - example.people.2.name
   - example.people.3.name
 meta:
   title: "Share household bills with housemates"
-  description: "Share rent by room size, share light and groceries equal-equal, and see who owe who every month. Free way for housemates, flatmates and roommates to keep count."
+  description: "Share rent by room size, share light and groceries equal-equal, and see who owe who every month. Free way for housemates, flatmates and people wey share room to keep count."
 h1: "Share household bills with housemates"
 navLabel: "Housemates"
-lead: "For di housemate wey dey buy toilet roll, and di housemates wey never see am happen. Side Badger dey keep one running count of di rent, di bills and di shop for **housemates, flatmates and roommates**, so nobody go chase anybody and di fridge fit go back to be just fridge."
+lead: "For di housemate wey dey buy toilet roll, and di housemates wey never see am happen. Side Badger dey keep one running count of di rent, di bills and di shop for **housemates, flatmates and people wey share room**, so nobody go chase anybody and di fridge fit go back to be just fridge."
 cta:
-  heading: "Start with your own house"
+  heading: "Start from your own house"
   body: "Create account, make group for di house and send everybody di invite link. Dis month bills fit enter tonight."
   button: "Create free account"
 scenario:
   heading: "Set up di house"
   body: "Make group for di house, choose di name wey you want people to see for am, and invite everybody with link or QR code. Di group fit dey open, where everybody dey add and edit, or managed, where new members need admin approval and only creators and admins fit change expenses, wey suit di housemate wey dey keep di books. Anybody wey just wan watch di numbers fit be viewer, wey go see everything and change nothing. Everybody dey see new expense sharp sharp, so “I go add am later” get fewer places to hide."
 sections:
-  - heading: "Rent and bills"
+  - heading: "Rent and bill dem"
     body: "Rent hardly divide by four, because bedrooms no equal. Share am by percentage, so di big room go pay more and di cupboard with window go pay less. Percentages must add up to 100. Bills wey everybody use get equal split, and housemate wey no dey part of expense fit dey left out. When equal split leave odd penny, e go to one person at random. No recurring bills dey, so every month you go copy last month rent, change di date and carry on."
   - heading: "Di shared shop"
     body: "Keep di shared shopping list for di same group as di shopping bills, and tick items off as dem reach di trolley. Whoever do di shop go add di receipt total as expense and share am equal-equal, or between only di people wey go chop di thing. Who keep buying di oat milk wey nobody else dey drink still be matter for di house, but at least di expense list go correct. Di group permissions decide who fit create and edit lists. Put di rent, di bills and di shop together and you go get month like di one below, for house of four: Jo pay £2,000 rent, wey dem share 30%, 25%, 25% and 20% by room size, then Kwame pay £120 for energy, Lena £40 for internet and Matt £80 for groceries, each one shared equal-equal. Jo end up owed £1,340, and Side Badger suggest three payments, all to Jo."
-  - heading: "Fair ways to share household costs"
+  - heading: "Fair ways to share house money"
     items:
       - "**Equal-equal** suit wetin everybody use about the same, like internet, cleaning supplies and di communal shop. E quick, and nobody need argue about di maths."
       - "**By room size** suit rent, because rooms different and so too wetin people dey ready to pay for dem. Agree di percentages once, when somebody move in, and reuse dem every month."
@@ -94,14 +90,14 @@ example:
       amount: 40
       split:
         method: equal
-    - label: "Groceries"
+    - label: "Chop shopping"
       payer: matt
       amount: 80
       split:
         method: equal
 featuresHeading: "Di features wey house dey use"
 faq:
-  heading: "Questions"
+  heading: "Question dem"
   items:
     - q: "Rent fit repeat automatically?"
       a: "No, no recurring bills dey. Copy last month rent with couple of taps, change di date and you don finish."

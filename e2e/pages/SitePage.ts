@@ -251,6 +251,16 @@ export class SitePage {
     );
   }
 
+  /** The links under a footer group go to exactly these routes, in order (content pages carry localized titles). */
+  async expectFooterLinkTargets(groupKey: StringKey, routes: readonly string[]): Promise<void> {
+    const group = this.footer.getByRole('list', { name: this.string(groupKey), exact: true });
+    await expect
+      .poll(() => group.getByRole('link').evaluateAll(links => links.map(a => a.getAttribute('href'))), {
+        message: `footer link targets under "${this.string(groupKey)}"`,
+      })
+      .toEqual(routes.map(route => pathFor(this.locale, route)));
+  }
+
   async expectFooterLegal(): Promise<void> {
     await expect(this.footer, 'the tagline').toContainText(this.string('footer.tagline'));
     // The year is filled in at build time; the test runs against a fresh build

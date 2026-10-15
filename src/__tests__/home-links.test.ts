@@ -46,10 +46,10 @@ describe('home links', () => {
     expect(resolveLink('expenses', 'en', registry(['feature/split-expenses'])).kind).toBe('launch');
   });
 
-  it('uses the real registry: pricing and privacy are published, release 1 pages are not yet', () => {
+  it('uses the real registry: pricing and privacy are published, release 1 pages are published too', () => {
     expect(resolveLink('trust', 'en')).toMatchObject({ kind: 'page', href: '/privacy/' });
     expect(resolveLink('start', 'en')).toMatchObject({ kind: 'page', href: '/pricing/' });
-    expect(resolveLink('tangle', 'en').kind).toBe('launch');
+    expect(resolveLink('tangle', 'en').kind).toBe('page');
   });
 
   it('worlds report as scene-worlds and couples waits for its page', () => {

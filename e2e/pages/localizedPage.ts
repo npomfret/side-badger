@@ -40,9 +40,13 @@ function escapeRegExp(value: string): string {
 /** The shell labels a visitor reads on every page */
 const SHELL_KEYS: readonly StringKey[] = [
   'header.launchApp',
+  'nav.features',
+  'nav.useCases',
+  'nav.howItWorks',
   'nav.pricing',
   'nav.menu',
   'footer.product',
+  'footer.useCases',
   'footer.legal',
   'footer.privacy',
   'footer.terms',
@@ -153,7 +157,12 @@ export class LocalizedPage {
       await this.menuButton.click();
       await expect(this.closeMenuButton, 'the menu opened').toBeVisible({ timeout: MODAL_TIMEOUT });
     }
-    await expect(this.mainNav.getByRole('link'), 'header navigation').toHaveText([this.string('nav.pricing')]);
+    await expect(this.mainNav.getByRole('link'), 'header navigation').toHaveText([
+      this.string('nav.features'),
+      this.string('nav.useCases'),
+      this.string('nav.howItWorks'),
+      this.string('nav.pricing'),
+    ]);
     if (phone) {
       await this.page.keyboard.press('Escape');
       await expect(this.closeMenuButton, 'Escape closes the menu').toBeHidden({ timeout: MODAL_TIMEOUT });
@@ -161,13 +170,29 @@ export class LocalizedPage {
 
     await expect(this.footer.getByRole('heading', { level: 2 }), 'footer headings').toHaveText([
       this.string('footer.product'),
+      this.string('footer.useCases'),
       this.string('footer.legal'),
     ]);
-    // Pricing has a nav entry, so the footer uses its nav label too (navigation.ts pageLabel)
-    await expect(
-      this.footer.getByRole('list', { name: this.string('footer.product'), exact: true }).getByRole('link'),
-      'footer product links'
-    ).toHaveText([this.string('nav.pricing')]);
+    // Content pages are labelled by their own localized title, so the footer lists are checked by target
+    const hrefs = (group: StringKey) =>
+      this.footer
+        .getByRole('list', { name: this.string(group), exact: true })
+        .getByRole('link')
+        .evaluateAll(links => links.map(a => a.getAttribute('href')));
+    await expect
+      .poll(() => hrefs('footer.product'), { message: 'footer product links', timeout: ELEMENT_TIMEOUT })
+      .toEqual(
+        ['how-it-works', 'features', 'features/split-expenses', 'features/settle-up', 'features/multiple-currencies', 'pricing'].map(
+          route => pathFor(this.locale, route)
+        )
+      );
+    await expect
+      .poll(() => hrefs('footer.useCases'), { message: 'footer use-case links', timeout: ELEMENT_TIMEOUT })
+      .toEqual(
+        ['use-cases', 'use-cases/group-trips', 'use-cases/housemates', 'use-cases/events-and-celebrations'].map(route =>
+          pathFor(this.locale, route)
+        )
+      );
     await expect(
       this.footer.getByRole('list', { name: this.string('footer.legal'), exact: true }).getByRole('link'),
       'footer legal links'

@@ -17,12 +17,8 @@ for (const locale of SHELL_LOCALES) {
     test('header shows the published links, the launch link and an accurate --header-h', async ({ page }) => {
       const site = await SitePage.navigateTo(page, locale, 'pricing');
       await site.expectDesktopHeader();
-      await site.expectHeaderLinks(['nav.pricing']);
+      await site.expectHeaderLinks(['nav.features', 'nav.useCases', 'nav.howItWorks', 'nav.pricing']);
       await site.expectCurrentHeaderLink('nav.pricing');
-      // Pages that are not published have no link
-      await site.expectNoHeaderLink('nav.features');
-      await site.expectNoHeaderLink('nav.useCases');
-      await site.expectNoHeaderLink('nav.howItWorks');
       await site.expectLaunchLink();
       await site.expectHeaderHeightToken();
       await site.expectContentClearsHeader();
@@ -31,7 +27,7 @@ for (const locale of SHELL_LOCALES) {
 
     test('every header control is reachable by keyboard in order', async ({ page }) => {
       const site = await SitePage.navigateTo(page, locale, 'pricing');
-      await site.verifyDesktopKeyboardOrder(['nav.pricing']);
+      await site.verifyDesktopKeyboardOrder(['nav.features', 'nav.useCases', 'nav.howItWorks', 'nav.pricing']);
     });
 
     test('the language switcher opens and moves with the arrow keys and closes on Escape', async ({ page }) => {
@@ -46,8 +42,21 @@ for (const locale of SHELL_LOCALES) {
 
     test('the footer groups come from the registry under h2 headings', async ({ page }) => {
       const site = await SitePage.navigateTo(page, locale, 'pricing');
-      await site.expectFooterGroups(['footer.product', 'footer.legal']);
-      await site.expectFooterLinks('footer.product', ['footer.pricing']);
+      await site.expectFooterGroups(['footer.product', 'footer.useCases', 'footer.legal']);
+      await site.expectFooterLinkTargets('footer.product', [
+        'how-it-works',
+        'features',
+        'features/split-expenses',
+        'features/settle-up',
+        'features/multiple-currencies',
+        'pricing',
+      ]);
+      await site.expectFooterLinkTargets('footer.useCases', [
+        'use-cases',
+        'use-cases/group-trips',
+        'use-cases/housemates',
+        'use-cases/events-and-celebrations',
+      ]);
       await site.expectFooterLinks('footer.legal', ['footer.privacy', 'footer.terms', 'footer.cookies']);
       await site.expectFooterLegal();
       await site.saveScreenshot(`${SHOTS}/${locale}-1280-footer.png`, 'footer');
@@ -95,7 +104,7 @@ for (const locale of SHELL_LOCALES) {
       const site = await SitePage.navigateTo(page, locale, 'pricing');
 
       let menu = await site.openMenu();
-      await menu.expectLinks(['nav.pricing']);
+      await menu.expectLinks(['nav.features', 'nav.useCases', 'nav.howItWorks', 'nav.pricing']);
       await menu.expectCurrentLink('nav.pricing');
       await menu.saveScreenshot(`${SHOTS}/${locale}-375-menu.png`);
       const afterEscape = await menu.closeWithEscape();
@@ -115,7 +124,7 @@ for (const locale of SHELL_LOCALES) {
 
     test('the footer stacks and nothing overflows', async ({ page }) => {
       const site = await SitePage.navigateTo(page, locale, 'pricing');
-      await site.expectFooterGroups(['footer.product', 'footer.legal']);
+      await site.expectFooterGroups(['footer.product', 'footer.useCases', 'footer.legal']);
       await site.expectNoHorizontalOverflow();
       await site.saveScreenshot(`${SHOTS}/${locale}-375-footer.png`, 'footer');
     });

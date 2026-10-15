@@ -16,23 +16,16 @@ claims:
   - live-updates.everyone-sees-it-straight-away
   - live-updates.what-changed-and-who
 identicalApproved:
-  - meta.title
-  - h1
-  - navLabel
-  - workflow.heading
-  - options.heading
   - example.expenses.1.label
-  - example.expenses.2.label
-  - faq.heading
   - example.people.0.name
   - example.people.1.name
   - example.people.2.name
   - example.people.3.name
 meta:
-  title: "Settle up with fewer payments | Side Badger"
+  title: "Clear di account with fewer payments | Side Badger"
   description: "See who owe who for your group, get short list of payments wey go settle everybody, and record each payment as e happen. Free to use."
-h1: "Settle up with fewer payments"
-navLabel: "Settle up"
+h1: "Clear di account with fewer payments"
+navLabel: "Clear di account"
 lead: "Side Badger dey keep running balance for everybody for di group and suggest short list of payments wey go settle am. You go pay each other anyhow you like, then record am. If you wan see first how di numbers dey split, start with [share expenses](page:feature/split-expenses)."
 cta:
   heading: "You ready to untangle who owe who?"
@@ -42,7 +35,7 @@ problem:
   heading: "Balances wey dey update as you dey go"
   body: "Every expense dey change who owe who, so Side Badger dey keep di balances current as expenses and payments dey enter. Everybody for di group go see change sharp sharp, and see wetin change and who change am. Balances dey kept per currency, so euros and pounds go stay for dem own columns unless dem convert expense when dem enter am. By default you go see di debts wey involve you; **Sho all** go list di whole group."
 workflow:
-  heading: "Three steps to square"
+  heading: "Three steps to clear am"
   steps:
     - title: "See who owe who"
       body: "Open di group balances to see wetin you owe, wetin dem owe you, and short list of payments wey go settle everybody, worked out per currency. Questioned expenses go stay out of di sums until dem sort am. For di housemates example below, six payments become two."
@@ -57,7 +50,7 @@ workflow:
       shot: S12
       shotAlt: "Di payment history with emoji reactions on one payment"
 options:
-  heading: "Options"
+  heading: "Opshons"
   items: []
 example:
   heading: "From tangle to short list"
@@ -82,7 +75,7 @@ example:
       amount: 40
       split:
         method: equal
-    - label: "Groceries"
+    - label: "Chop shopping"
       payer: carlos
       amount: 80
       split:
@@ -105,7 +98,7 @@ limits:
     - "No reminders dey, so to chase payment still be your own work."
 useCasesHeading: "Where settling up matter"
 faq:
-  heading: "Questions"
+  heading: "Question dem"
   items:
     - q: "Side Badger dey send di money?"
       a: "No. Pay each other anyhow you like, then record di payment for Side Badger so di balance go update."

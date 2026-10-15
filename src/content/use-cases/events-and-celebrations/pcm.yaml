@@ -1,0 +1,95 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: machine
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+identicalApproved:
+  - navLabel
+  - sections.0.heading
+  - sections.3.heading
+  - example.expenses.0.label
+  - faq.heading
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+meta:
+  title: "Share di costs of parties, weddings and group gifts"
+  description: "Share di costs of party, wedding or group gift when people put different amounts. Vote on di plan, share by exact amounts and see who owe who."
+h1: "Share di costs of parties, weddings and group gifts"
+navLabel: "Events and celebrations"
+lead: "Share deposits, decorations and emergency umbrellas. Leave di seating plan for somebody wey get more mind. Side Badger dey keep **who put wetin** for one place, so di organiser fit enjoy di party too."
+cta:
+  heading: "Start with di next celebration"
+  body: "Create account, make group for di event and send di invite link. Side Badger free, with no ads and no daily limits."
+  button: "Create free account"
+scenario:
+  heading: "Everybody put money, no always di same amount"
+  body: "Somebody pay di venue deposit, another person buy di cake, and third person put di group gift on im own card. Some guests dey come for everything and some dey come for dinner only. To keep fair count of dat one for chat thread na job wey nobody apply for. Side Badger group hold di whole thing, whatever di mix of amounts be, and show each person wetin e owe or wetin dem owe am. See [how e dey work](page:how-it-works) for di basics, or read on for event."
+sections:
+  - heading: "Decide together"
+    body: "Before any money move, put di choice to **poll**. Add up to 10 options, like two venues or three gift ideas, and let everybody vote. You fit hide who vote for wetin, so every option go get fair hearing, and di winner go show once dem close di poll. Nobody go need scroll back through forty messages to find out wetin dem decide."
+  - heading: "Who dey inside for wetin"
+    body: "Not everybody dey pay di same, and not everybody dey part of every cost. Share expense equal-equal, by percentage or by **exact amounts**, so each person share go be di figure wey una agree. Leave out anybody wey no dey involved, like di guests wey skip di dinner or di friends wey no join di gift. Each expense get one payer, and everybody else for di split owe dem share to am. Di details dey for di [share expenses](page:feature/split-expenses) page."
+  - heading: "Keep di paperwork"
+    body: "Add notes to expense, like wetin di cost cover. Comments dey stay **next to di expense** wey dem dey about, so di question “di cake na £45 or £54?” and im answer go live for the same place. Comments fit reach 500 characters, wey plenty for question about deposit."
+  - heading: "Organiser controls"
+    body: "Open collaboration let any member add and edit expenses, wey fine for small gift. For wedding or bigger party, choose di **Managed group** preset. Admins dey approve each new member, and only creators and admins fit change expenses. Invite people with link or QR code; with approval on, admin go let each person in, so di guest list go stay di guest list. When di event finish, lock di group so di numbers go stay put."
+  - heading: "Settle after di party"
+    body: "Once di last invoice enter, di balances go show **who owe who**, and Side Badger go suggest short list of payments wey go settle everybody. Pay each other anyhow you like, then record di payment for di group. Side Badger no dey ever move money, so di group dey keep di count while di transfers dey happen for your own banking apps. Di [settle up](page:feature/settle-up) page show how tangle become short list."
+exampleAfter: 5
+example:
+  heading: "One group gift: six votes for am, £150 to share"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Group gift"
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: "Di features wey dis one dey use"
+faq:
+  heading: "Questions"
+  items:
+    - q: "Guests fit see di group without joining?"
+      a: "No. People dey join with link or QR code and free account, so dem fit see di group once dem don enter."
+    - q: "Side Badger fit collect di money?"
+      a: "No. Side Badger dey keep di count and no dey ever move money. Pay each other anyhow you like, then record di payment. E free, with no ads and no daily limits; see [pricing](page:pricing)."
+    - q: "Votes fit be anonymous?"
+      a: "Yes. When you create poll you fit hide who vote for wetin. Di settings fit only change before di first vote."
+    - q: "People fit put different amounts?"
+      a: "Yes. Share expense by exact amounts, so each person share go be di figure wey una agree, or leave out di people wey no dey involved."
+    - q: "Organiser fit keep di books?"
+      a: "Yes. Use di managed group preset, so only creators and admins go change expenses and admins go approve new members."

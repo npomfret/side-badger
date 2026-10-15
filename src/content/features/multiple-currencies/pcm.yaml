@@ -1,0 +1,134 @@
+translatedFrom: "923c938f"
+review:
+  status: machine
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+identicalApproved:
+  - navLabel
+  - cta.heading
+  - workflow.heading
+  - options.items.1.title
+  - options.items.3.title
+  - example.expenses.2.label
+  - example.expenses.3.label
+  - limits.heading
+  - faq.heading
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Share costs for 140 currencies, converted or kept separate"
+  description: "Enter each expense for di currency wey you pay am, keep balances separate or convert for rate wey you fit see and change, then settle up with short list of payments."
+h1: "Share costs for 140 currencies"
+navLabel: "Multiple currencies"
+lead: "Euros, yen, and dat one taxi for baht. Side Badger dey take each expense for di currency wey you pay am, keep di balances straight, and fit convert when your group prefer to settle once. E dey work for 140 currencies, and e fit [group trips](page:use-case/group-trips) well well."
+cta:
+  heading: "Bring your euros, bring your yen"
+  body: "Create account, start group and add di first expense for whatever currency you happen to dey hold."
+  button: "Create free account"
+problem:
+  heading: "Enter am as you pay am"
+  body: "Dem hardly pay for trip with one currency. Dem book di hotel for house for pounds, dem pay dinner for yen, and di airport coffee na whatever di layover use. To convert everything by hand before you even fit type am in na how dem dey abandon spreadsheets. For Side Badger you go enter each expense for di currency wey dey di receipt, and every amount dey follow im currency rules, so yen get no decimals and dinars get three. Di currencies wey you use recently go come first for di list."
+workflow:
+  heading: "Keep currencies separate, or convert as you go"
+  steps:
+    - title: "Add di expense for im own currency"
+      body: "Choose di currency, type di amount, talk who pay and who share am. Nothing else dey needed. Dis na di default, and e dey keep di original amount exactly as you enter am."
+      shot: S07
+      shotAlt: "Di expense form with yen amount wey dem enter"
+    - title: "Watch balance for each currency"
+      body: "Balances dey kept separately per currency, and each one get im own short list of suggested payments. Dem settle pounds for pounds and yen for yen."
+      shot: S10
+      shotAlt: "Di balances screen with simplified debts for two currencies"
+    - title: "Or convert, when di group prefer to settle once"
+      body: "Pick another currency as you dey enter di expense and Side Badger fit convert am for current exchange rate, wey you fit change to di rate wey you really get. Di converted amount go join di balance for dat currency. Conversion na choice wey di group dey make, e no dey happen behind your back."
+options:
+  heading: "Rate wey you fit see and change"
+  items:
+    - title: "Dem show di rate"
+      body: "When you convert, di rate and di converted amount go show for di form, so nobody go need take number on trust."
+    - title: "Type your own"
+      body: "You get better rate from cash desk, or worse one from airport? Edit di rate to di one wey you really get and di converted amount go update."
+    - title: "Di original stay"
+      body: "Di original amount stay on di expense, next to di converted one, for anybody wey ask wetin e be for yen."
+    - title: "Free to convert"
+      body: "To convert no cost anything. No fee dey for to enter expense for another currency."
+example:
+  heading: "Four friends for Japan, settled two ways"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "di hotel, wey dem book from house"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "dinner for Japan"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "train tickets"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "temple entry"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "One currency for di whole group"
+    body: "If your group no wan think about am, pick group currency and di form go convert each new expense into am, for rate wey you fit still see and change. Dis one apply to new and copied expenses only. Edits and existing expenses stay as dem be, so nothing wey dem don record go change under you."
+  - heading: "Owe euros, pay for pounds"
+    body: "You pay for yen, you wan settle for pounds? E fine. When you record payment you fit convert am too, so whoever owe euros fit pay for pounds and di euro balance still come out right. Pay each other anyhow you like, then record am."
+  - heading: "Rules for di group"
+    body: "Limit group to di currencies wey you really dey use, and set default so di form go open for di right one. Holiday for Portugal no need 139 other options next to di dinner bill, and [wedding abroad](page:use-case/events-and-celebrations) probably need two."
+limits:
+  heading: "Limits"
+  items:
+    - "Di rate dey fixed when dem save di expense. Dem no dey ever revalue old expenses."
+    - "Side Badger dey fetch current rate where e fit. Not every pair get guarantee, and you fit always type di rate yourself."
+    - "Group auto-convert apply to new and copied expenses only, no be to edits or existing expenses."
+    - "Each expense dey capped at 999,999.99 for im own currency."
+    - "140 currencies dey. Cryptocurrencies and metals no dey among dem."
+    - "Side Badger dey record payments. E no dey ever move money or exchange am."
+useCasesHeading: "Where dis one help"
+faq:
+  heading: "Questions"
+  items:
+    - q: "Which exchange rate una dey use?"
+      a: "Current exchange rate, wey dem fetch when you enter di expense where one dey available. You fit change am to di rate wey you really get, and di converted amount go update."
+    - q: "Dem dey revalue old expenses?"
+      a: "No. Di rate dey fixed when dem save di expense, so balance no dey drift because di market drift."
+    - q: "Una support crypto?"
+      a: "No. 140 currencies dey, and cryptocurrencies no dey among dem."
+    - q: "Why I no fit enter 2,000,000 rupiah?"
+      a: "Each expense dey capped at 999,999.99 for im own currency. Enter am for another currency and convert, or split am into two expenses."
+    - q: "Conversion cost anything?"
+      a: "No. To convert free, like di rest of Side Badger. See [pricing](page:pricing)."
+    - q: "I must convert?"
+      a: "No. Currencies dey stay separate unless you or your group choose to convert, and each currency get im own short list of payments."

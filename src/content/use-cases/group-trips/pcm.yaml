@@ -1,0 +1,116 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: machine
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+identicalApproved:
+  - navLabel
+  - sections.0.heading
+  - sections.4.heading
+  - example.expenses.0.label
+  - example.expenses.1.label
+  - example.expenses.2.label
+  - example.expenses.3.label
+  - faq.heading
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Share group trip costs, for 140 currencies"
+  description: "Track who pay wetin for group trip, enter costs for local currency, convert dem or not, and settle once for di end. Free, for your browser."
+h1: "Share group trip costs, for 140 currencies"
+navLabel: "Group trips"
+lead: "Track di villa, di taxi, and di one cocktail round wey nobody remember say dem agree to buy. Side Badger dey keep di running count while you dey away, [handle pounds, euros and 138 other currencies](page:feature/multiple-currencies), and give you [short list of payments](page:feature/settle-up) when you reach house."
+cta:
+  heading: "Holiday maths, finish before di tan fade"
+  body: "Create group, send di invite link to di people wey dey di trip, and add costs as dem dey happen."
+  button: "Create free account"
+scenario:
+  heading: "Everybody pay for something, for some currency"
+  body: "Somebody book di flights, another person put di villa on card, and third person cover dinner for cash. By day three nobody know who dey ahead. Di question simple, even if di answer usually dey inside spreadsheet wey nobody wan open. Who pay wetin, for which currency, and how everybody go settle once for di end?"
+sections:
+  - heading: "Before you go"
+    body: "Put di villa shortlist to vote, anonymously if you like, so di decision go belong to di group and no be to whoever sulk pass. Then keep di shared shopping list next to di shopping bills, so nobody go buy three tubes of sun cream and no plug adaptor."
+  - heading: "While you dey away"
+    body: "Add each cost as e dey happen, for di currency wey you pay am. Snap di receipt and Side Badger go fill di total, date and place make you check am; Google AI service dey read receipt images. Convert di amount for current exchange rate, wey you fit change to di rate wey you really get, and di original amount go stay on di expense. Or leave di euros as euros and decide later. Group fit also pick one currency, and new expenses go convert into am automatically."
+  - heading: "Not everybody do everything"
+    body: "Some people skip di dinner, some sit out di boat. Leave dem out of di costs wey dem no dey part of, and share di rest [equal-equal, by exact amounts or by percentage](page:feature/split-expenses). Nobody dey pay for di part of di trip wey e spend am asleep."
+  - heading: "Settle once you reach house"
+    body: "Side Badger go suggest short list of payments wey go settle everybody. Pay each other anyhow you like, then record am. With mixed currencies, keep each one separate or convert as you go; di Lisbon example below show both."
+  - heading: "Stag and hen weekends"
+    body: "Weekend away with guest of honour need small more admin. Make am managed group, where admins approve new members and only creators and admins fit change expenses. Use exact amounts for di guest of honour share, limit di group to di currencies wey you really dey use, and lock di group when e finish so di numbers go stay put."
+exampleAfter: 4
+example:
+  heading: "Four friends for Lisbon"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Flights"
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: "Villa"
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: "Dinner"
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Boat trip"
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: "Wetin trip dey depend on"
+faq:
+  heading: "Questions"
+  items:
+    - q: "People wey skip dinner fit dey left out?"
+      a: "Yes. Pick who dey part of each expense and na only dem go pay for am."
+    - q: "E dey work without signal?"
+      a: "No. Side Badger need connection, so add di costs once you dey back on wifi."
+    - q: "Everybody need install something?"
+      a: "No. E dey run for browser. Send di invite link and people go join from dem phone."
+    - q: "Which exchange rate e dey use?"
+      a: "Current exchange rate when you enter di expense, or your own if you get different one. Di rate dey fixed when dem save di expense, so dem no dey ever revalue old expenses."
+    - q: "We fit freeze di group after di trip?"
+      a: "Yes. Admin fit lock di group so di numbers go stay put."
+    - q: "Limit dey for amounts?"
+      a: "Yes. 999,999.99 per expense, for im own currency."

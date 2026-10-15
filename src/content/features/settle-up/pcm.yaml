@@ -1,0 +1,117 @@
+translatedFrom: "1b51f540"
+review:
+  status: machine
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+identicalApproved:
+  - meta.title
+  - h1
+  - navLabel
+  - workflow.heading
+  - options.heading
+  - example.expenses.1.label
+  - example.expenses.2.label
+  - faq.heading
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Settle up with fewer payments | Side Badger"
+  description: "See who owe who for your group, get short list of payments wey go settle everybody, and record each payment as e happen. Free to use."
+h1: "Settle up with fewer payments"
+navLabel: "Settle up"
+lead: "Side Badger dey keep running balance for everybody for di group and suggest short list of payments wey go settle am. You go pay each other anyhow you like, then record am. If you wan see first how di numbers dey split, start with [share expenses](page:feature/split-expenses)."
+cta:
+  heading: "You ready to untangle who owe who?"
+  body: "Create account, start group and add di first expense. Di balances go take am from there."
+  button: "Create free account"
+problem:
+  heading: "Balances wey dey update as you dey go"
+  body: "Every expense dey change who owe who, so Side Badger dey keep di balances current as expenses and payments dey enter. Everybody for di group go see change sharp sharp, and see wetin change and who change am. Balances dey kept per currency, so euros and pounds go stay for dem own columns unless dem convert expense when dem enter am. By default you go see di debts wey involve you; **Sho all** go list di whole group."
+workflow:
+  heading: "Three steps to square"
+  steps:
+    - title: "See who owe who"
+      body: "Open di group balances to see wetin you owe, wetin dem owe you, and short list of payments wey go settle everybody, worked out per currency. Questioned expenses go stay out of di sums until dem sort am. For di housemates example below, six payments become two."
+      shot: S10
+      shotAlt: "Di balances screen showing simplified debts for two currencies, with Sho all switched on"
+    - title: "Pay anyhow you like, then record am"
+      body: "Bank transfer, cash, favour wey you owe from last holiday. Side Badger no dey move di money. Once e don change hand, record di payment and di balance go update for everybody."
+      shot: S11
+      shotAlt: "Di payment form with Kwik settul buttons and di notice wey show for part payment"
+    - title: "Check say e land"
+      body: "Di payment go enter di group history, where everybody for di group fit see am and react with emoji. Celebrate payment when e land."
+      shot: S12
+      shotAlt: "Di payment history with emoji reactions on one payment"
+options:
+  heading: "Options"
+  items: []
+example:
+  heading: "From tangle to short list"
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: "Light bill"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: "Internet"
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "Groceries"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "Record payment"
+    body: "When somebody pay, record am against di right person. Di Kwik settul buttons dey fill di amount from your suggested payments, and you fit add note like “bank transfer” (up to 500 characters). Pay only part of wetin you owe and di rest go stay on di balance. If you enter too little or too much, Side Badger go warn you before you save. To record payment, you need permission to edit expenses, and di date no fit dey for future."
+  - heading: "You pay for different currency?"
+    body: "Balances dey stay for di currency dem pay am, so euro debt go stay euro debt. You owe euros, pay for pounds? Convert di payment as you dey enter am, for current exchange rate or for di rate wey you really get. Di rate dey fixed when dem save di payment. [Multiple currencies](page:feature/multiple-currencies) explain how conversion dey work, and [group trips](page:use-case/group-trips) show am for use."
+  - heading: "History wey you fit check"
+    body: "Every payment wey dem record dey stay for di group history with im date, amount and note. Only di person wey record payment fit edit am, and di person or group admin fit delete am. Payment wey involve person wey don leave di group dey locked. For worked housemate scenario, see [housemates](page:use-case/housemates)."
+limits:
+  heading: "Wetin Side Badger no dey do"
+  items:
+    - "Side Badger no dey move money, send payment links or send payment requests. Payment for di app na record of payment wey dem make somewhere else."
+    - "Di suggested payments dey come from simple matching method, wey dem apply per currency. E always suggest fewer payments than di number of people wey get balance for dat currency (four people, three payments at most), but e no always find di smallest possible number."
+    - "You no fit switch di suggestions off. **Sho all** list every suggested payment for di group, no be only yours."
+    - "Currencies no dey net against each other unless dem convert di expenses when dem enter am."
+    - "No reminders dey, so to chase payment still be your own work."
+useCasesHeading: "Where settling up matter"
+faq:
+  heading: "Questions"
+  items:
+    - q: "Side Badger dey send di money?"
+      a: "No. Pay each other anyhow you like, then record di payment for Side Badger so di balance go update."
+    - q: "I fit turn di suggested payments off?"
+      a: "No. Simplification dey stay on, and **Sho all** list every suggested payment for di group, no be only di ones wey involve you."
+    - q: "Why euros and pounds dey separate?"
+      a: "Balances dey stay for di currency wey you pay unless you convert when you enter expense or payment. Debts for different currencies no dey net against each other."
+    - q: "Wetin if somebody pay only part of wetin e owe?"
+      a: "Record di part wey e pay. Di rest go stay on di balance until dem pay am."
+    - q: "Na always di smallest possible number of payments?"
+      a: "No guarantee. E always suggest fewer payments than di number of people wey get balance for dat currency, so for four people e no go ever suggest more than three. For di housemates example, na two payments, where to pay each person back direct take six."

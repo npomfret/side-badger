@@ -1,0 +1,110 @@
+translatedFrom: "fd23c99b"
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+identicalApproved:
+  - steps.1.title
+  - requirements.items.1
+  - example.expenses.0.label
+  - example.expenses.1.label
+  - faq.heading
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "How Side Badger dey work | Share group expenses in five steps"
+  description: "Create group, invite people, add expenses and settle up. See wetin dey happen between “somebody don pay” and “we don clear”, with one full example."
+h1: "How Side Badger dey work"
+navLabel: "How e dey work"
+lead: "Wetin dey happen between “somebody don pay” and “we don clear”? Five steps, no spreadsheet, and one badger wey mostly dey for decoration. Na di whole journey be dis, from di first group to di last payment wey dem record. For more details on any step, see [how to share expenses](page:feature/split-expenses) and [how to settle up](page:feature/settle-up)."
+cta:
+  heading: "From “I go pay dis one” to “we don clear”"
+  body: "Create free account, start group and add di first expense. Di badger no go judge your receipt."
+  button: "Create free account"
+steps:
+  - title: "Create group"
+    body: "Make one group for each house, trip or event, so di rent no go ever land for di same list as di wedding gift. Give am name, pick di name wey people go see for you and, if you like, limit which currencies e go take. Your dashboard go then show every group, and where you stand for each one, for one screen."
+    shot: S02
+    shotAlt: "Di create-group dialog with di currency restrictions section open"
+  - title: "Invite your people"
+    body: "Share join link or show QR code, and set how long e go last, from 15 minutes up to 5 days. Everybody wey join need free account and verified email, and one group fit hold up to 50 people. If you wan check who dey enter, turn on approval and admin go let each person in."
+    shot: S03
+    shotAlt: "Di invite dialog for di link tab, showing QR code and di expiry choices"
+  - title: "Add expenses as dem dey happen"
+    body: "Talk who pay, how much, and who e be for. Share am equal-equal, by exact amount or by percentage, and leave out anybody wey no dey inside. Add di expense and everybody go see am sharp sharp, together with wetin change and who change am."
+    shot: S05
+    shotAlt: "Di expense form with percentage split, dey share di rent by room size"
+  - title: "Watch di balances"
+    body: "Side Badger dey keep running balance for each currency, so you fit see who owe who for one look. Instead of make everybody dey untangle plenty small debts, e go suggest short list of payments wey go settle di group."
+    shot: S10
+    shotAlt: "Di balances screen showing simplified debts for two currencies, with Sho all switched on"
+  - title: "Settle up outside di app, record am inside"
+    body: "Side Badger no dey ever move money. Pay each other anyhow you like, then record di payment so di balances go catch up, and everybody screen go update without refresh. “Settle” just mean say di balances read zero. Nobody fit leave group while e still owe or dem still owe am money, so anybody wey wan commot go settle first."
+    shot: S11
+    shotAlt: "Di payment form with Kwik settul buttons and di part-payment notice"
+requirements:
+  heading: "Wetin you need"
+  items:
+    - "Free account. Na only email address and password you need, and you go verify di email before you fit add anything."
+    - "To be 18 or over."
+    - "Modern browser for phone or computer, and connection. Side Badger no be app-store app and e no dey work offline."
+    - "Optional: place for your home screen. You no need app store, because you fit add Side Badger to your home screen or dock and e go open like an app."
+example:
+  heading: "Three friends after night out"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: "Dinner"
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: "Taxi"
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: "39 languages, and build for more people"
+    body: "Use Side Badger for 39 languages, including right-to-left Arabic, Persian and Urdu. Everybody for di group fit pick im own, so di group page fit dey Arabic for one person and English for di next. We also build am with keyboard and screen-reader users for mind, and member colours come with patterns, so you no go need tell green from red."
+faq:
+  heading: "Questions"
+  items:
+    - q: "Everybody need account?"
+      a: "Yes, free one. Each person go verify im email before e add anything."
+    - q: "App dey?"
+      a: "E dey run for browser, and you fit add am to your home screen or dock so e go open like an app. App-store version no dey and offline mode no dey."
+    - q: "Side Badger dey move money?"
+      a: "No. E dey keep di count and suggest payments, and una go pay each other anyhow una like. Then una go record di payment. See [how to settle up](page:feature/settle-up)."
+    - q: "Person fit leave while e owe money?"
+      a: "No. Nobody fit leave group while e still owe or dem still owe am money, so dem go settle first."
+    - q: "How many people fit join one group?"
+      a: "Up to 50 people for one group. Invite dem with link or QR code, and turn on approval if you want make admin let each person in."
+    - q: "Wetin about trips with more than one currency?"
+      a: "Balances dey separate for each currency. See [multiple currencies](page:feature/multiple-currencies)."

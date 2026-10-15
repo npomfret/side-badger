@@ -250,7 +250,7 @@ export default {
   'pricing.limits.scans.label': 'Scans de reçus',
   'pricing.limits.scans.value': 'Pas de limite',
   'pricing.limits.title': 'Limites',
-  'pricing.meta.description': 'Side Badger est gratuit, sans publicité et sans limite quotidienne. Découvrez les vraies limites, et ce que nos conditions promettent pour que cela dure.',
+  'pricing.meta.description': 'Side Badger est gratuit, sans publicité et sans limite quotidienne. Découvrez les vraies limites, et ce que nos conditions prévoient à ce sujet.',
   'pricing.meta.title': 'Tarifs | Side Badger : gratuit, sans publicité, sans limite quotidienne',
   'pricing.stay.body': 'Tout dans Side Badger est gratuit aujourd\'hui, et il n\'y a pas d\'offre payante. Si cela change un jour, nous vous préviendrons d\'abord.',
   'pricing.stay.link': 'Lire les conditions d\'utilisation',

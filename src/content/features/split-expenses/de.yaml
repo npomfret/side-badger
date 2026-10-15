@@ -115,7 +115,7 @@ limits:
     - Prozentsätze müssen zusammen 100 ergeben.
     - Eine Ausgabe kann bis zu 999.999,99 in der jeweiligen Währung betragen, mit den üblichen Dezimalstellen dieser Währung.
     - Ausgaben wiederholen sich nicht von selbst. Kopiere stattdessen die vom letzten Monat.
-    - Daten dürfen nicht in der Zukunft oder mehr als 10 Jahre zurückliegen.
+    - Daten dürfen nicht in der Zukunft liegen oder mehr als 10 Jahre zurückliegen.
     - Eine Ausgabe, an der jemand beteiligt ist, der die Gruppe verlassen hat, wird schreibgeschützt.
 useCasesHeading: Wo solches Teilen hilft
 faq:
@@ -130,6 +130,6 @@ faq:
     - q: Können sich Rechnungen jeden Monat wiederholen?
       a: Nein. Kopiere stattdessen die Ausgabe vom letzten Monat, das dauert ein paar Sekunden.
     - q: Wer kann eine Ausgabe bearbeiten?
-      a: Wen die Berechtigungen der Gruppe erlauben. Jede Änderung erscheint in der Aktivität der Gruppe, Änderungen geschehen also nie unbemerkt.
+      a: Wer laut den Berechtigungen der Gruppe darf. Jede Änderung erscheint in der Aktivität der Gruppe, Änderungen geschehen also nie unbemerkt.
     - q: Was passiert danach mit den Salden?
       a: Sie aktualisieren sich, sobald Ausgaben eintreffen, und [Abrechnen](page:feature/settle-up) macht daraus eine kurze Liste von Zahlungen. Wenn eine Ausgabe in einer anderen Währung ist, siehe [Mehrere Währungen](page:feature/multiple-currencies).

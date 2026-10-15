@@ -1,8 +1,6 @@
 translatedFrom: "923c938f"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -106,7 +104,7 @@ limits:
     - "A taxa fica fixa quando a despesa é guardada. As despesas antigas nunca são reavaliadas."
     - "O Side Badger obtém uma taxa atual sempre que consegue. Nem todos os pares têm essa garantia, e podes sempre escrever a taxa tu mesmo."
     - "A conversão automática do grupo aplica-se apenas a despesas novas e copiadas, não a edições nem a despesas existentes."
-    - "Cada despesa tem o máximo de 999,999.99 na sua própria moeda."
+    - "Cada despesa tem o máximo de 999 999,99 na sua própria moeda."
     - "Existem 140 moedas. As criptomoedas e os metais não estão entre elas."
     - "O Side Badger regista pagamentos. Nunca movimenta nem troca dinheiro."
 useCasesHeading: "Onde isto ajuda"
@@ -119,8 +117,8 @@ faq:
       a: "Não. A taxa fica fixa quando a despesa é guardada, por isso um saldo não se desvia só porque o mercado se mexeu."
     - q: "Suportam criptomoedas?"
       a: "Não. Existem 140 moedas e as criptomoedas não estão entre elas."
-    - q: "Porque não consigo introduzir 2,000,000 rupias?"
-      a: "Cada despesa tem o máximo de 999,999.99 na sua própria moeda. Introduz noutra moeda e converte, ou divide em duas despesas."
+    - q: "Porque não consigo introduzir 2 000 000 rupias?"
+      a: "Cada despesa tem o máximo de 999 999,99 na sua própria moeda. Introduz noutra moeda e converte, ou divide em duas despesas."
     - q: "A conversão custa alguma coisa?"
       a: "Não. Converter é grátis, como o resto do Side Badger. Vê os [preços](page:pricing)."
     - q: "Tenho de converter?"

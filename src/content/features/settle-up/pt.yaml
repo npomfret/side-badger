@@ -42,7 +42,7 @@ workflow:
     - title: "Paga como quiseres e depois regista"
       body: "Transferência bancária, dinheiro, um favor que se deve desde as últimas férias. O Side Badger não movimenta o dinheiro. Depois de ele mudar de mãos, regista o pagamento e o saldo atualiza-se para todos."
       shot: S11
-      shotAlt: "O formulário de pagamento com botões de liquidação rápida e o aviso mostrado para um pagamento parcial"
+      shotAlt: "O formulário de pagamento com botões de acerto rápido e o aviso mostrado para um pagamento parcial"
     - title: "Confirma que chegou"
       body: "O pagamento entra no histórico do grupo, onde todas as pessoas do grupo o podem ver e reagir com um emoji. Celebra um pagamento quando ele chega."
       shot: S12
@@ -81,7 +81,7 @@ example:
 exampleAfter: 0
 sections:
   - heading: "Regista um pagamento"
-    body: "Quando alguém paga, regista-o junto da pessoa certa. Os botões de liquidação rápida preenchem o valor a partir dos pagamentos sugeridos, e podes acrescentar uma nota como “transferência bancária” (até 500 caracteres). Se pagares só parte do que deves, o resto fica no saldo. Se introduzires de menos ou de mais, o Side Badger avisa-te antes de guardares. Registar um pagamento exige permissão para editar despesas, e a data não pode estar no futuro."
+    body: "Quando alguém paga, regista-o junto da pessoa certa. Os botões de acerto rápido preenchem o valor a partir dos pagamentos sugeridos, e podes acrescentar uma nota como “transferência bancária” (até 500 caracteres). Se pagares só parte do que deves, o resto fica no saldo. Se introduzires de menos ou de mais, o Side Badger avisa-te antes de guardares. Registar um pagamento exige permissão para editar despesas, e a data não pode estar no futuro."
   - heading: "Pagaste noutra moeda?"
     body: "Os saldos ficam na moeda em que foram pagos, por isso uma dívida em euros continua a ser uma dívida em euros. Deves euros e pagas em libras? Converte o pagamento ao introduzi-lo, a uma taxa de câmbio atual ou à taxa que realmente tiveste. A taxa fica fixa quando o pagamento é guardado. [Várias moedas](page:feature/multiple-currencies) explica como funciona a conversão, e as [viagens em grupo](page:use-case/group-trips) mostram-na em uso."
   - heading: "Um histórico que podes verificar"
@@ -103,7 +103,7 @@ faq:
     - q: "Posso desligar os pagamentos sugeridos?"
       a: "Não. A simplificação fica sempre ativa, e **Mostrar tudo** lista todos os pagamentos sugeridos no grupo, não só os que te envolvem."
     - q: "Porque são os euros e as libras mantidos em separado?"
-      a: "Os saldos ficam na moeda em que pagaste, a menos que converts ao introduzir uma despesa ou pagamento. As dívidas em moedas diferentes nunca são compensadas umas com as outras."
+      a: "Os saldos ficam na moeda em que pagaste, a menos que convertas ao introduzir uma despesa ou pagamento. As dívidas em moedas diferentes nunca são compensadas umas com as outras."
     - q: "E se alguém pagar só parte do que deve?"
       a: "Regista a parte que pagou. O resto fica no saldo até ser pago."
     - q: "É sempre o menor número possível de pagamentos?"

@@ -1,8 +1,6 @@
 translatedFrom: "923c938f"
 review:
-  status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - multi-currency.140-currencies
   - multi-currency.currency-rules
@@ -106,7 +104,7 @@ limits:
     - "De koers ligt vast wanneer de uitgave wordt opgeslagen. Oude uitgaven worden nooit herwaardeerd."
     - "Side Badger haalt een actuele koers op waar het kan. Niet voor elk paar is er gegarandeerd een, en je kunt de koers altijd zelf typen."
     - "Automatisch omrekenen voor de groep geldt enkel voor nieuwe en gekopieerde uitgaven, niet voor wijzigingen of bestaande uitgaven."
-    - "Elke uitgave is begrensd op 999,999.99 in haar eigen valuta."
+    - "Elke uitgave is begrensd op 999.999,99 in haar eigen valuta."
     - "Er zijn 140 valuta’s. Cryptovaluta en metalen horen daar niet bij."
     - "Side Badger registreert betalingen. Het verplaatst of wisselt nooit geld."
 useCasesHeading: "Waar dit helpt"
@@ -120,7 +118,7 @@ faq:
     - q: "Ondersteunen jullie crypto?"
       a: "Nee. Er zijn 140 valuta’s en cryptovaluta horen daar niet bij."
     - q: "Waarom kan ik geen 2,000,000 roepia invoeren?"
-      a: "Elke uitgave is begrensd op 999,999.99 in haar eigen valuta. Voer ze in een andere valuta in en reken om, of splits ze op in twee uitgaven."
+      a: "Elke uitgave is begrensd op 999.999,99 in haar eigen valuta. Voer ze in een andere valuta in en reken om, of splits ze op in twee uitgaven."
     - q: "Kost omrekenen iets?"
       a: "Nee. Omrekenen is gratis, zoals de rest van Side Badger. Zie [prijzen](page:pricing)."
     - q: "Moet ik omrekenen?"

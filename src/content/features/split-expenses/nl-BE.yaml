@@ -1,8 +1,6 @@
 translatedFrom: "56ee9b03"
 review:
-  status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -115,7 +113,7 @@ limits:
     - "Eén persoon betaalt per uitgave. Als twee mensen betaalden, registreer je twee uitgaven."
     - "Er is geen verdeling per item en geen verdeling per aandelen. Gelijk, exacte bedragen en percentages is wat er is."
     - "Percentages moeten samen 100 zijn."
-    - "Een uitgave kan tot 999,999.99 bedragen in haar eigen valuta, met het gebruikelijke aantal decimalen van die valuta."
+    - "Een uitgave kan tot 999.999,99 bedragen in haar eigen valuta, met het gebruikelijke aantal decimalen van die valuta."
     - "Uitgaven kunnen zich niet vanzelf herhalen. Kopieer in plaats daarvan die van vorige maand."
     - "Datums kunnen niet in de toekomst liggen of meer dan 10 jaar geleden zijn."
     - "Een uitgave met iemand die de groep verlaten heeft, wordt alleen-lezen."

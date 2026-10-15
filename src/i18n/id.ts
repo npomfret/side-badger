@@ -250,7 +250,7 @@ export default {
   'pricing.limits.scans.label': 'Pemindaian struk',
   'pricing.limits.scans.value': 'Tanpa batas',
   'pricing.limits.title': 'Batas',
-  'pricing.meta.description': 'Side Badger gratis, tanpa iklan dan tanpa batas harian. Lihat batas sebenarnya, dan apa yang dijanjikan ketentuan kami agar tetap begitu.',
+  'pricing.meta.description': 'Side Badger gratis, tanpa iklan dan tanpa batas harian. Lihat batas sebenarnya, dan apa yang dijanjikan ketentuan kami tentang hal itu ke depannya.',
   'pricing.meta.title': 'Harga | Side Badger: gratis, tanpa iklan, tanpa batas harian',
   'pricing.stay.body': 'Semua yang ada di Side Badger gratis saat ini, dan tidak ada paket berbayar. Jika hal itu berubah, kami akan memberi tahu Anda lebih dulu.',
   'pricing.stay.link': 'Baca ketentuan layanan',

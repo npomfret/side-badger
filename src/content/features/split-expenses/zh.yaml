@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T1-check"
+  checker: "C2b-check"
   date: "2026-10-15"
 claims:
   - expense-splitting.equal-exact-percentage
@@ -11,6 +11,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: 平均、按确切金额或按比例分摊支出 | Side Badger
   description: 平均、按确切金额或按比例分摊共同开销，没到场的人可以排除在外。免费，无广告，无每日限制。
@@ -100,6 +101,7 @@ sections:
       - 最多添加三个**标签**来给支出分组，比如杂货或旅行。
       - 添加**地点**。粘贴地图链接，地点名称会自动填好。
       - 添加**备注**，写下数字背后的故事，需要的话还能加点格式。
+      - "最多附上三张**收据**，照片或PDF都行，让凭证跟着这笔支出走。"
       - 用**评论**把对话留在对应的支出旁边，而不是淹没在没人会往回翻的聊天记录里。
   - heading: 复制、编辑，并看到改了什么
     body: 不用重新输入，直接复制上个月的房租，再改动不同的地方。如果数字错了，就编辑这笔支出。旧版本会被保留，编辑记录会出现在群组动态中，所以没人能悄悄改数字。谁可以编辑什么，取决于群组的权限设置。

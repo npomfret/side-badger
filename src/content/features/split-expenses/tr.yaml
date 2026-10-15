@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T5-check"
+  checker: "C2b-check"
   date: "2026-10-15"
 identicalApproved:
   - example.people.0.name
@@ -15,6 +15,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: "Harcamaları eşit, tam tutarlarla veya yüzdelerle bölüşün | Side Badger"
   description: "Ortak bir masrafı eşit, tam tutarlarla veya yüzdelerle bölüşün ve orada olmayanı dışarıda bırakın. Ücretsiz, reklamsız ve günlük sınırsız."
@@ -104,6 +105,7 @@ sections:
       - "Harcamaları gruplamak için market veya seyahat gibi en fazla üç **etiket** ekleyin."
       - "**Yeri** ekleyin. Bir harita bağlantısı yapıştırın, yerin adı kendiliğinden dolar."
       - "Rakamın arkasındaki hikâye için bir **not** ekleyin; hikâye gerektiriyorsa biraz biçimlendirmeyle."
+      - "En fazla üç **fiş** ekleyin; fotoğraf ya da PDF olabilir, böylece kanıt harcamayla birlikte kalır."
       - "**Yorumları** kullanın; sohbet kimsenin dönüp bakmadığı bir mesaj dizisinde değil, ilgili olduğu harcamanın yanında kalsın."
   - heading: "Kopyalayın, düzenleyin ve neyin değiştiğini görün"
     body: "Geçen ayın kirasını yeniden yazmak yerine kopyalayın, sonra farklı olanı değiştirin. Bir rakam yanlışsa harcamayı düzenleyin. Önceki sürüm saklanır ve düzenleme grubun etkinliğinde görünür; yani kimse bir rakamı sessizce değiştirmez. Herkesin neyi düzenleyebileceği grubun izinlerine bağlıdır."

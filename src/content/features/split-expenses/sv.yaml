@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T-amounts-check"
+  checker: "C2b-check"
   date: "2026-10-15"
 identicalApproved:
   - example.people.0.name
@@ -15,6 +15,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: Dela utgifter lika, exakt eller i procent | Side Badger
   description: Dela en gemensam kostnad lika, efter exakta belopp eller i procent, och lämna utanför den som inte var med. Gratis, utan annonser och utan dagliga gränser.
@@ -104,6 +105,7 @@ sections:
       - Lägg till upp till tre **etiketter** för att gruppera utgifter, till exempel matinköp eller resa.
       - Lägg till **platsen**. Klistra in en kartlänk så fylls platsnamnet i av sig självt.
       - Lägg till en **anteckning** med historien bakom siffran, med lite formatering om historien kräver det.
+      - "Bifoga upp till tre **kvitton** som bilder eller PDF, så att beviset stannar kvar vid utgiften."
       - Använd **kommentarerna** för att hålla samtalet bredvid den utgift det gäller, i stället för i en chatt som ingen scrollar tillbaka i.
   - heading: Kopiera, redigera och se vad som ändrats
     body: Kopiera förra månadens hyra i stället för att skriva in den igen, och ändra det som skiljer sig. Om en siffra var fel redigerar du utgiften. Den tidigare versionen sparas och ändringen syns i gruppens aktivitet, så ingen ändrar en siffra i smyg. Vad var och en får redigera beror på gruppens behörigheter.

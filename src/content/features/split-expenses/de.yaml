@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T4-check"
+  checker: "C2a-check"
   date: "2026-10-15"
 identicalApproved:
   - example.people.0.name
@@ -15,6 +15,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: Ausgaben gleichmäßig, genau oder in Prozent teilen | Side Badger
   description: Teile gemeinsame Kosten gleichmäßig, nach genauen Beträgen oder in Prozent und lass alle weg, die nicht dabei waren. Kostenlos, ohne Werbung und ohne Tageslimits.
@@ -104,6 +105,7 @@ sections:
       - Füge bis zu drei **Etiketten** hinzu, um Ausgaben zu gruppieren, etwa Lebensmittel oder Reisen.
       - Füge den **Ort** hinzu. Füge einen Kartenlink ein, und der Ortsname trägt sich selbst ein.
       - Füge eine **Notiz** für die Geschichte hinter der Zahl hinzu, auf Wunsch mit etwas Formatierung.
+      - "Hänge bis zu drei **Belege** als Fotos oder PDFs an, damit der Nachweis bei der Ausgabe bleibt."
       - Nutze die **Kommentare**, um das Gespräch bei der Ausgabe zu halten, um die es geht, statt in einem Chat, den niemand zurückscrollt.
   - heading: Kopieren, bearbeiten und sehen, was sich geändert hat
     body: Kopiere die Miete vom letzten Monat, statt sie neu einzutippen, und ändere, was anders ist. Wenn eine Zahl falsch war, bearbeite die Ausgabe. Die frühere Version bleibt erhalten, und die Änderung erscheint in der Aktivität der Gruppe, sodass niemand eine Zahl heimlich ändert. Was jemand bearbeiten darf, hängt von den Berechtigungen der Gruppe ab.

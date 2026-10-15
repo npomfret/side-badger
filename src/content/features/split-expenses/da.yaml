@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T4-check"
+  checker: "C2a-check"
   date: "2026-10-15"
 claims:
   - expense-splitting.equal-exact-percentage
@@ -11,6 +11,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -104,6 +105,7 @@ sections:
       - Tilføj op til tre **etiketter** for at gruppere udgifter, som dagligvarer eller rejse.
       - Tilføj **stedet**. Indsæt et kortlink, så udfyldes stedets navn af sig selv.
       - Tilføj en **note** til historien bag tallet, med lidt formatering, hvis historien kræver det.
+      - "Vedhæft op til tre **kvitteringer** som billeder eller PDF'er, så beviset bliver hos udgiften."
       - Brug **kommentarerne** til at holde samtalen ved siden af den udgift, den handler om, frem for i en chattråd, ingen scroller tilbage i.
   - heading: Kopiér, rediger, og se, hvad der er ændret
     body: Kopiér sidste måneds husleje i stedet for at skrive den igen, og ret så det, der er anderledes. Var et tal forkert, så rediger udgiften. Den tidligere version gemmes, og redigeringen vises i gruppens aktivitet, så ingen ændrer et tal i det stille. Hvad man må redigere, afhænger af gruppens rettigheder.

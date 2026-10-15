@@ -488,8 +488,8 @@ export const features: readonly FeatureRecord[] = [
       },
     ],
     notApproved: [],
-    release: 2,
-    gate: 'receipt quality evidence',
+    // Attaching a file involves no extraction, so D10's quality gate applies to scanning only
+    release: 1,
   },
   {
     id: 'receipt-scanning',

@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T4-check"
+  checker: "C2a-check"
   date: "2026-10-15"
 claims:
   - expense-splitting.equal-exact-percentage
@@ -11,6 +11,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -104,6 +105,7 @@ sections:
       - "Bættu við allt að þremur **merkjum** til að flokka útgjöld, eins og matvörur eða ferðalög."
       - "Bættu við **stað**. Límdu inn kortatengil og nafn staðarins fyllist sjálfkrafa út."
       - "Bættu við **athugasemd** um söguna á bak við töluna, með smá sniði ef sagan þarf á því að halda."
+      - "Hengdu við allt að þrjár **kvittanir**, sem myndir eða PDF-skjöl, svo sönnunin fylgi útgjaldinu."
       - "Notaðu **athugasemdir** til að hafa samtalið við hlið útgjaldsins sem það snýst um, frekar en í spjallþræði sem enginn flettir aftur í."
   - heading: "Afrita, breyta og sjá hvað breyttist"
     body: "Afritaðu leigu síðasta mánaðar í stað þess að slá hana aftur inn og breyttu því sem er öðruvísi. Ef tala var röng skaltu breyta útgjaldinu. Fyrri útgáfan er geymd og breytingin birtist í virkni hópsins, svo enginn breytir tölu í kyrrþey. Hvað hver má breyta fer eftir heimildum hópsins."

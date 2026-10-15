@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T5-check"
+  checker: "C2a-check"
   date: "2026-10-15"
 identicalApproved:
   - example.people.0.name
@@ -15,6 +15,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: "Dijeli troškove jednako, točno ili po postocima | Side Badger"
   description: "Podijeli zajednički trošak jednako, po točnim iznosima ili po postocima i izostavi svakoga tko nije bio tamo. Besplatno, bez oglasa i bez dnevnih ograničenja."
@@ -104,6 +105,7 @@ sections:
       - "Dodaj do tri **oznake** za grupiranje troškova, primjerice namirnice ili putovanja."
       - "Dodaj **mjesto**. Zalijepi poveznicu s karte i naziv mjesta ispuni se sam."
       - "Dodaj **bilješku** s pričom iza broja, uz malo oblikovanja ako priča to traži."
+      - "Priloži do tri **računa** kao fotografije ili PDF-ove da dokaz ostane uz trošak."
       - "Koristi **komentare** da razgovor ostane uz trošak na koji se odnosi, a ne u nizu poruka kojem se nitko ne vraća."
   - heading: "Kopiraj, uredi i vidi što se promijenilo"
     body: "Kopiraj prošlomjesečnu najamninu umjesto da je ponovno upisuješ, pa promijeni ono što je drukčije. Ako je broj bio pogrešan, uredi trošak. Ranija verzija se čuva, a uređivanje se prikazuje u aktivnosti grupe, pa nitko ne mijenja broj neprimjetno. Što tko smije uređivati ovisi o dopuštenjima grupe."

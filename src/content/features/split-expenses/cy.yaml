@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T3-check"
+  checker: "C2a-check"
   date: "2026-10-15"
 identicalApproved:
   - example.people.0.name
@@ -15,6 +15,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: "Rhannu treuliau yn gyfartal, yn union neu yn ôl canran | Side Badger"
   description: "Rhannwch gost a rennir yn gyfartal, yn ôl symiau union neu yn ôl canran, a gadewch allan unrhyw un nad oedd yno. Am ddim, heb hysbysebion a heb gyfyngiadau dyddiol."
@@ -104,6 +105,7 @@ sections:
       - "Ychwanegwch hyd at dri **label** i grwpio costau, fel nwyddau bwyd neu deithio."
       - "Ychwanegwch y **lle**. Gludwch ddolen map ac mae enw'r lle yn llenwi ei hun."
       - "Ychwanegwch **nodyn** am y stori y tu ôl i'r rhif, gydag ychydig o fformatio os oes ei angen ar y stori."
+      - "Atodwch hyd at dair **derbynneb**, fel lluniau neu ffeiliau PDF, fel bod y prawf yn aros gyda'r gost."
       - "Defnyddiwch y **sylwadau** i gadw'r sgwrs wrth ymyl y gost y mae'n ymwneud â hi, yn hytrach nag mewn sgwrs nad oes neb yn sgrolio'n ôl drwyddi."
   - heading: "Copïo, golygu, a gweld beth newidiodd"
     body: "Copïwch rent y mis diwethaf yn lle ei deipio eto, yna newidiwch beth sy'n wahanol. Os oedd rhif yn anghywir, golygwch y gost. Cedwir y fersiwn gynharach ac mae'r golygiad yn ymddangos yng ngweithgaredd y grŵp, felly does neb yn newid rhif yn dawel. Mae'r hyn y caniateir i unrhyw un ei olygu yn dibynnu ar ganiatâd y grŵp."

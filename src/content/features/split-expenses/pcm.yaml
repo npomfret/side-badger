@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T2-check"
+  checker: "C2b-check"
   date: "2026-10-15"
 claims:
   - expense-splitting.equal-exact-percentage
@@ -11,6 +11,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 identicalApproved:
   - example.expenses.1.label
   - example.people.0.name
@@ -105,6 +106,7 @@ sections:
       - "Add up to three **labels** to group expenses, like chop shopping or travel."
       - "Add di **place**. Paste map link and di place name go fill by itself."
       - "Add **note** for di story behind di number, with some formatting if di story need am."
+      - "Attach up to three **risit-dem**, as photo or PDF, so di proof go stay with di expense."
       - "Use di **comments** to keep di conversation next to di expense wey e dey about, no be for chat thread wey nobody dey scroll back to."
   - heading: "Copy, edit, and see wetin change"
     body: "Copy last month rent instead of to type am again, then change wetin different. If number wrong, edit di expense. Di earlier version dey kept and di edit show for di group activity, so nobody dey change number quietly. Wetin anybody fit edit depend on di group permissions."

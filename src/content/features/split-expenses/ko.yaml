@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T1-check"
+  checker: "C2b-check"
   date: "2026-10-15"
 claims:
   - expense-splitting.equal-exact-percentage
@@ -11,6 +11,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -104,6 +105,7 @@ sections:
       - "지출을 묶을 수 있는 **라벨**을 최대 세 개까지 추가하세요. 예를 들어 장보기나 여행이 있어요."
       - "**장소**를 추가하세요. 지도 링크를 붙여 넣으면 장소 이름이 저절로 채워집니다."
       - "숫자 뒤의 사연은 **메모**로 남기세요. 사연이 필요하다면 서식도 쓸 수 있어요."
+      - "**영수증**을 사진이나 PDF로 최대 세 개까지 첨부하면 증빙이 지출과 함께 남아요."
       - "**댓글**로 대화를 아무도 거슬러 올라가 보지 않는 채팅 스레드가 아니라 해당 지출 옆에 두세요."
   - heading: "복사하고, 수정하고, 바뀐 점 확인하기"
     body: "지난달 월세를 다시 입력하는 대신 복사한 다음, 달라진 부분만 바꾸세요. 숫자가 틀렸다면 지출을 수정하면 됩니다. 이전 버전은 보관되고 수정 내용은 그룹의 활동에 표시되므로 아무도 몰래 숫자를 바꿀 수 없어요. 누가 무엇을 수정할 수 있는지는 그룹의 권한에 따라 달라집니다."

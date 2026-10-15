@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T3-check"
+  checker: "C2b-check"
   date: "2026-10-15"
 identicalApproved:
   - example.people.0.name
@@ -15,6 +15,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: "Divide despesas em partes iguais, por valores exatos ou por percentagem | Side Badger"
   description: "Divide um custo partilhado em partes iguais, por valores exatos ou por percentagem, e deixa de fora quem não estava lá. Grátis, sem anúncios e sem limites diários."
@@ -104,6 +105,7 @@ sections:
       - "Adiciona até três **etiquetas** para agrupar despesas, como mercearia ou viagens."
       - "Adiciona o **local**. Cola um link de mapa e o nome do local preenche-se sozinho."
       - "Adiciona uma **nota** com a história por trás do número, com alguma formatação se a história precisar."
+      - "Anexa até três **recibos**, como fotografias ou PDF, para que a prova fique com a despesa."
       - "Usa os **comentários** para manter a conversa junto da despesa de que fala, em vez de numa conversa de chat que ninguém volta a ler."
   - heading: "Copiar, editar e ver o que mudou"
     body: "Copia a renda do mês passado em vez de a escreveres outra vez e altera o que for diferente. Se um número estava errado, edita a despesa. A versão anterior fica guardada e a edição aparece na atividade do grupo, por isso ninguém muda um número em silêncio. O que cada pessoa pode editar depende das permissões do grupo."

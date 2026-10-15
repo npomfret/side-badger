@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T5-check"
+  checker: "C2a-check"
   date: "2026-10-15"
 identicalApproved:
   - example.people.0.name
@@ -15,6 +15,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: "Oszd fel a költségeket egyenlően, pontosan vagy százalékosan | Side Badger"
   description: "Oszd fel a közös költséget egyenlően, pontos összegek szerint vagy százalékosan, és hagyd ki azt, aki nem volt ott. Ingyenes, hirdetések és napi korlátok nélkül."
@@ -104,6 +105,7 @@ sections:
       - "Adj hozzá legfeljebb három **címkét** a költségek csoportosításához, például bevásárlás vagy utazás."
       - "Add meg a **helyet**. Illessz be egy térképlinket, és a hely neve magától kitöltődik."
       - "Írj egy **megjegyzést** a szám mögötti történetről, némi formázással, ha a történet megkívánja."
+      - "Csatolj legfeljebb három **nyugtát** fényképként vagy PDF-ként, hogy a bizonyíték a költségnél maradjon."
       - "Használd a **kommenteket**, hogy a beszélgetés a költség mellett maradjon, amelyről szól, és ne egy csevegőszálban, amelyhez senki nem görget vissza."
   - heading: "Másolj, szerkessz, és nézd meg, mi változott"
     body: "Másold le a múlt havi lakbért ahelyett, hogy újra begépelnéd, és változtasd meg, ami más. Ha egy szám rossz volt, szerkeszd a költséget. A korábbi változat megmarad, a szerkesztés pedig megjelenik a csoport tevékenységében, így senki nem változtat meg egy számot csendben. Hogy ki mit szerkeszthet, a csoport jogosultságaitól függ."

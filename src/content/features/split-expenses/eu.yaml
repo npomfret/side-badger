@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T3-check"
+  checker: "C2a-check"
   date: "2026-10-15"
 claims:
   - expense-splitting.equal-exact-percentage
@@ -11,6 +11,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -104,6 +105,7 @@ sections:
       - Gehitu gehienez hiru **etiketa** gastuak taldekatzeko, hala nola erosketak edo bidaiak.
       - Gehitu **lekua**. Itsatsi mapa-esteka bat eta lekuaren izena bere kabuz betetzen da.
       - Gehitu **ohar** bat zenbakiaren atzeko istorioarentzat, formatu apur batekin istorioak behar badu.
+      - "Erantsi gehienez hiru **ordainagiri**, argazki edo PDF gisa, froga gastuarekin geratu dadin."
       - Erabili **iruzkinak** elkarrizketa dagokion gastuaren ondoan edukitzeko, inork atzera begiratzen ez duen txat-hari batean utzi beharrean.
   - heading: Kopiatu, editatu eta ikusi zer aldatu den
     body: Kopiatu joan den hilabeteko alokairua berriro idatzi beharrean, eta aldatu desberdina dena. Zenbaki bat gaizki bazegoen, editatu gastua. Aurreko bertsioa gordetzen da eta aldaketa taldearen jardueran ageri da, beraz inork ez du zenbaki bat isilean aldatzen. Zer editatu dezakeen bakoitzak taldearen baimenen araberakoa da.

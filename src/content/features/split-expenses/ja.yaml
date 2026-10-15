@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T1-check"
+  checker: "C2b-check"
   date: "2026-10-15"
 identicalApproved:
   - example.people.0.name
@@ -15,6 +15,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: 均等・金額指定・割合指定で割り勘 | Side Badger
   description: 共有の費用を均等、金額指定、割合指定で分け、いなかった人は外せます。無料で、広告も1日の制限もありません。
@@ -104,6 +105,7 @@ sections:
       - 支出をまとめる**ラベル**を最大3つまで付けられます。食料品や旅行などです。
       - "**場所**を追加します。地図のリンクを貼ると、場所の名前が自動で入力されます。"
       - 数字の裏にある経緯を**メモ**に書き残せます。必要なら書式も使えます。
+      - "**レシート**を写真またはPDFで最大3つまで添付でき、証拠が支出と一緒に残ります。"
       - "**コメント**を使えば、会話を誰もさかのぼらないチャットではなく、その支出のすぐそばに残せます。"
   - heading: コピー、編集、変更点の確認
     body: 先月の家賃は、入力し直さずにコピーして、違う部分だけ変更します。数字が間違っていたら、支出を編集します。以前のバージョンは保存され、編集内容はグループのアクティビティに表示されるので、誰かがこっそり数字を変えることはありません。誰が何を編集できるかは、グループの権限によります。

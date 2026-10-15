@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T3-check"
+  checker: "C2a-check"
   date: "2026-10-15"
 claims:
   - expense-splitting.equal-exact-percentage
@@ -11,6 +11,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -104,6 +105,7 @@ sections:
       - Añade hasta tres **etiquetas** para agrupar gastos, como compra o viajes.
       - Añade el **lugar**. Pega un enlace de mapa y el nombre del lugar se rellena solo.
       - Añade una **nota** con la historia que hay detrás del número, con algo de formato si la historia lo necesita.
+      - "Adjunta hasta tres **recibos**, como fotos o PDF, para que la prueba se quede con el gasto."
       - Usa los **comentarios** para mantener la conversación junto al gasto del que trata, en lugar de en un chat al que nadie vuelve a hacer scroll.
   - heading: Copia, edita y mira qué cambió
     body: Copia el alquiler del mes pasado en lugar de escribirlo otra vez y cambia lo que sea distinto. Si un número estaba mal, edita el gasto. La versión anterior se conserva y la edición aparece en la actividad del grupo, así que nadie cambia un número a escondidas. Lo que cada persona puede editar depende de los permisos del grupo.

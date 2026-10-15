@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T4-check"
+  checker: "C2b-check"
   date: "2026-10-15"
 claims:
   - expense-splitting.equal-exact-percentage
@@ -11,6 +11,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -104,6 +105,7 @@ sections:
       - "Voeg tot drie **labels** toe om uitgaven te groeperen, zoals boodschappen of reizen."
       - "Voeg de **plaats** toe. Plak een kaartlink en de naam van de plaats vult zichzelf in."
       - "Voeg een **notitie** toe voor het verhaal achter het getal, met wat opmaak als het verhaal dat vraagt."
+      - "Voeg maximaal drie **bonnetjes** toe, als foto of pdf, zodat het bewijs bij de uitgave blijft."
       - "Gebruik de **opmerkingen** om het gesprek naast de uitgave te houden waarover het gaat, in plaats van in een chatdraad waar niemand in terugscrolt."
   - heading: "Kopiëren, bewerken en zien wat er veranderde"
     body: "Kopieer de huur van vorige maand in plaats van ze opnieuw in te typen en wijzig wat anders is. Als een bedrag fout was, bewerk je de uitgave. De eerdere versie blijft bewaard en de wijziging verschijnt in de groepsactiviteit, dus niemand past stilletjes een bedrag aan. Wat iedereen mag bewerken, hangt af van de machtigingen van de groep."

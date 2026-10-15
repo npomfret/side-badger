@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T5-check"
+  checker: "C2a-check"
   date: "2026-10-15"
 identicalApproved:
   - example.people.0.name
@@ -15,6 +15,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: "Dělte výdaje rovnoměrně, přesně nebo procentuálně | Side Badger"
   description: "Rozdělte společný náklad rovnoměrně, podle přesných částek nebo procentuálně a vynechte každého, kdo u toho nebyl. Zdarma, bez reklam a bez denních limitů."
@@ -104,6 +105,7 @@ sections:
       - "Přidejte až tři **štítky** pro seskupení výdajů, například nákupy nebo cestování."
       - "Přidejte **místo**. Vložte odkaz na mapu a název místa se doplní sám."
       - "Přidejte **poznámku** k příběhu za číslem, s trochou formátování, pokud to příběh vyžaduje."
+      - "Připojte až tři **účtenky** jako fotky nebo PDF, aby doklad zůstal u výdaje."
       - "Používejte **komentáře**, aby rozhovor byl vedle výdaje, o který jde, a ne ve vlákně chatu, do kterého se nikdo nevrací."
   - heading: "Kopírujte, upravujte a sledujte, co se změnilo"
     body: "Zkopírujte nájem z minulého měsíce, místo abyste ho psali znovu, a změňte to, co je jiné. Pokud bylo číslo špatně, upravte výdaj. Dřívější verze se uchová a úprava se zobrazí v aktivitě skupiny, takže nikdo nemění číslo potichu. Co kdo smí upravovat, závisí na oprávněních skupiny."

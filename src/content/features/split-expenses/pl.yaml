@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T5-check"
+  checker: "C2b-check"
   date: "2026-10-15"
 identicalApproved:
   - example.people.0.name
@@ -15,6 +15,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: "Dziel wydatki po równo, dokładnie lub procentowo | Side Badger"
   description: "Podziel wspólny koszt po równo, według dokładnych kwot albo procentowo i pomiń każdego, kogo nie było. Za darmo, bez reklam i bez dziennych limitów."
@@ -104,6 +105,7 @@ sections:
       - "Dodaj do trzech **etykiet**, żeby grupować wydatki, na przykład zakupy albo podróże."
       - "Dodaj **miejsce**. Wklej link do mapy, a nazwa miejsca uzupełni się sama."
       - "Dodaj **notatkę** z historią stojącą za kwotą, z odrobiną formatowania, jeśli historia tego wymaga."
+      - "Załącz maksymalnie trzy **paragony** jako zdjęcia lub pliki PDF, żeby dowód został przy wydatku."
       - "Używaj **komentarzy**, żeby rozmowa była obok wydatku, którego dotyczy, a nie w wątku czatu, do którego nikt nie wraca."
   - heading: "Kopiuj, edytuj i zobacz, co się zmieniło"
     body: "Skopiuj zeszłomiesięczny czynsz zamiast wpisywać go od nowa, a potem zmień to, co się różni. Jeśli kwota była zła, edytuj wydatek. Wcześniejsza wersja jest zachowana, a edycja widoczna w aktywności grupy, więc nikt nie zmienia kwoty po cichu. To, co każdy może edytować, zależy od uprawnień grupy."

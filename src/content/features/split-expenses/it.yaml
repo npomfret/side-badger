@@ -1,7 +1,7 @@
-translatedFrom: "56ee9b03"
+translatedFrom: "878ecb93"
 review:
   status: checked
-  checker: "T3-check"
+  checker: "C2a-check"
   date: "2026-10-15"
 claims:
   - expense-splitting.equal-exact-percentage
@@ -11,6 +11,7 @@ claims:
   - expense-splitting.odd-penny-at-random
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
+  - receipt-attachments.keep-the-receipt
 meta:
   title: Dividi le spese in parti uguali, per importi esatti o per percentuale | Side Badger
   description: Dividi una spesa condivisa in parti uguali, per importi esatti o per percentuale, ed escludi chi non c'era. Gratis, senza pubblicità e senza limiti giornalieri.
@@ -100,6 +101,7 @@ sections:
       - Aggiungi fino a tre **etichette** per raggruppare le spese, come spesa o viaggi.
       - Aggiungi il **luogo**. Incolla un link di una mappa e il nome del luogo si compila da solo.
       - Aggiungi una **nota** per la storia dietro il numero, con un po' di formattazione se la storia lo richiede.
+      - "Allega fino a tre **ricevute**, come foto o PDF, così la prova resta con la spesa."
       - Usa i **commenti** per tenere la conversazione accanto alla spesa di cui parla, invece che in una chat che nessuno rilegge.
   - heading: Copia, modifica e guarda cosa è cambiato
     body: Copia l'affitto del mese scorso invece di riscriverlo, poi cambia ciò che è diverso. Se un numero era sbagliato, modifica la spesa. La versione precedente viene conservata e la modifica compare nell'attività del gruppo, così nessuno cambia un numero di nascosto. Cosa può modificare ciascuno dipende dai permessi del gruppo.

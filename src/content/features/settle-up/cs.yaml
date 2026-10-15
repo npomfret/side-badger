@@ -1,0 +1,110 @@
+translatedFrom: "1b51f540"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: "Vyrovnejte se menším počtem plateb | Side Badger"
+  description: "Podívejte se, kdo ve vaší skupině komu dluží, získejte krátký seznam plateb, který vyrovná všechny, a zaznamenávejte každou platbu, jak se stane. Zdarma."
+h1: "Vyrovnejte se menším počtem plateb"
+navLabel: "Vyrovnání"
+lead: "Side Badger vede průběžný zůstatek každého ve skupině a navrhuje krátký seznam plateb, který ho vyrovná. Platíte si, jak chcete, a pak to zaznamenáte. Pokud chcete nejdřív vidět, jak se částky dělí, začněte [děleními výdajů](page:feature/split-expenses)."
+cta:
+  heading: "Připraveni rozplést, kdo komu dluží?"
+  body: "Vytvořte účet, založte skupinu a přidejte první výdaj. Zůstatky se postarají o zbytek."
+  button: "Vytvořit účet zdarma"
+problem:
+  heading: "Zůstatky, které se aktualizují průběžně"
+  body: "Každý výdaj mění to, kdo komu dluží, takže Side Badger udržuje zůstatky aktuální, jak přibývají výdaje a platby. Všichni ve skupině změnu hned vidí, stejně jako to, co se změnilo a kdo to změnil. Zůstatky se vedou podle měn, takže eura a libry zůstávají ve svých sloupcích, pokud nebyl výdaj při zadání převeden. Ve výchozím stavu vidíte dluhy, které se týkají vás; **Zobrazit vše** vypíše celou skupinu."
+workflow:
+  heading: "Tři kroky ke kvitu"
+  steps:
+    - title: "Podívejte se, kdo komu dluží"
+      body: "Otevřete zůstatky skupiny a uvidíte, co dlužíte, co se dluží vám a krátký seznam plateb, který vyrovná všechny, spočítaný zvlášť pro každou měnu. Zpochybněné výdaje zůstávají mimo součty, dokud se nevyřeší. V příkladu se spolubydlícími níže se šest plateb změní na dvě."
+      shot: S10
+      shotAlt: "Obrazovka zůstatků se zjednodušenými dluhy ve dvou měnách a zapnutou volbou Zobrazit vše"
+    - title: "Zaplaťte, jak chcete, a zaznamenejte to"
+      body: "Bankovní převod, hotovost, laskavost z minulé dovolené. Side Badger peníze nepřesouvá. Jakmile peníze změní majitele, platbu zaznamenejte a zůstatek se aktualizuje pro všechny."
+      shot: S11
+      shotAlt: "Formulář platby s tlačítky rychlého vyrovnání a upozorněním zobrazeným při částečné platbě"
+    - title: "Ověřte, že platba dorazila"
+      body: "Platba se zapíše do historie skupiny, kde ji uvidí každý ve skupině a může na ni reagovat emoji. Oslavte platbu, jakmile dorazí."
+      shot: S12
+      shotAlt: "Historie plateb s emoji reakcemi u platby"
+options:
+  heading: "Možnosti"
+  items: []
+example:
+  heading: "Od změti ke krátkému seznamu"
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: "Elektřina"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: "Internet"
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "Nákupy"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "Zaznamenejte platbu"
+    body: "Když někdo zaplatí, zaznamenejte to u správné osoby. Tlačítka rychlého vyrovnání doplní částku z vašich navržených plateb a můžete přidat poznámku, například „bankovní převod“ (až 500 znaků). Zaplatíte-li jen část toho, co dlužíte, zbytek zůstane na zůstatku. Pokud zadáte příliš málo nebo příliš mnoho, Side Badger vás před uložením upozorní. Zaznamenání platby vyžaduje oprávnění upravovat výdaje a datum nesmí být v budoucnosti."
+  - heading: "Platba v jiné měně?"
+    body: "Zůstatky zůstávají v měně, ve které se platilo, takže dluh v eurech zůstane dluhem v eurech. Dlužíte eura, ale platíte v librách? Platbu při zadávání převeďte, podle aktuálního směnného kurzu nebo kurzu, který platil při výměně. Kurz se zafixuje při uložení platby. Jak funguje převod, popisuje stránka [více měn](page:feature/multiple-currencies) a [skupinové výlety](page:use-case/group-trips) ho ukazují v praxi."
+  - heading: "Historie, kterou si můžete ověřit"
+    body: "Každá zaznamenaná platba zůstává v historii skupiny s datem, částkou a poznámkou. Platbu může upravit jen ten, kdo ji zaznamenal, a smazat ji může on nebo správce skupiny. Platba, které se týká někdo, kdo opustil skupinu, je zamčená. Ukázkový scénář se spolubydlícími najdete u [spolubydlících](page:use-case/housemates)."
+limits:
+  heading: "Co Side Badger nedělá"
+  items:
+    - "Side Badger nepřesouvá peníze, neposílá odkazy na platbu ani žádosti o platbu. Platba v aplikaci je záznam platby provedené jinde."
+    - "Navržené platby vycházejí z jednoduché metody párování, použité zvlášť pro každou měnu. Vždy navrhne méně plateb, než je lidí se zůstatkem v dané měně (u čtyř lidí nejvýš tři), ale nenajde vždy nejmenší možný počet."
+    - "Návrhy nelze vypnout. **Zobrazit vše** vypíše každou navrženou platbu ve skupině, nejen vaše."
+    - "Měny se nikdy navzájem nezapočítávají, pokud nebyly výdaje při zadání převedeny."
+    - "Neexistují žádné připomínky, takže vymáhání platby je stále na vás."
+useCasesHeading: "Kde na vyrovnání záleží"
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Posílá Side Badger peníze?"
+      a: "Ne. Platíte si, jak chcete, a pak platbu zaznamenáte v Side Badger, aby se zůstatek aktualizoval."
+    - q: "Mohu navržené platby vypnout?"
+      a: "Ne. Zjednodušení zůstává zapnuté a **Zobrazit vše** vypíše každou navrženou platbu ve skupině, nejen ty, které se týkají vás."
+    - q: "Proč jsou eura a libry vedeny zvlášť?"
+      a: "Zůstatky zůstávají v měně, ve které jste platili, pokud nepřevedete při zadání výdaje nebo platby. Dluhy v různých měnách se nikdy navzájem nezapočítávají."
+    - q: "Co když někdo zaplatí jen část toho, co dluží?"
+      a: "Zaznamenejte zaplacenou část. Zbytek zůstane na zůstatku, dokud nebude zaplacen."
+    - q: "Je to vždy nejmenší možný počet plateb?"
+      a: "Není to zaručeno. Vždy navrhne méně plateb, než je lidí se zůstatkem v dané měně, takže u čtyř lidí nikdy více než tři. V příkladu se spolubydlícími jsou to dvě platby tam, kde přímé vracení každému zvlášť vyžadovalo šest."

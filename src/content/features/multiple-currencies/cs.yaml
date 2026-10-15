@@ -1,0 +1,125 @@
+translatedFrom: "923c938f"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: "Dělte náklady ve 140 měnách, převedené nebo zvlášť"
+  description: "Zadávejte každý výdaj v měně, ve které jste platili, vedte zůstatky zvlášť nebo převádějte podle kurzu, který vidíte a můžete změnit, a pak se vyrovnejte krátkým seznamem plateb."
+h1: "Dělte náklady ve 140 měnách"
+navLabel: "Více měn"
+lead: "Eura, jeny a ten jeden taxík v bahtech. Side Badger přijme každý výdaj v měně, ve které jste platili, udrží zůstatky v pořádku a umí převádět, když se skupina raději vyrovná jednou. Funguje ve 140 měnách a přirozeně se hodí na [skupinové výlety](page:use-case/group-trips)."
+cta:
+  heading: "Přineste svá eura, přineste své jeny"
+  body: "Vytvořte účet, založte skupinu a přidejte první výdaj v jakékoli měně, kterou jste zrovna měli v ruce."
+  button: "Vytvořit účet zdarma"
+problem:
+  heading: "Zadejte to tak, jak se platilo"
+  body: "Výlet se málokdy platí v jedné měně. Hotel se rezervoval doma v librách, večeře se platila v jenech a káva na letišti v čemkoli, co se na mezipřistání používalo. Přepočítávat všechno ručně, než to vůbec zadáte, je způsob, jak se tabulky opouštějí. V Side Badger zadáváte každý výdaj v měně z účtenky a každá částka se řídí pravidly své měny, takže jeny nemají desetinná místa a dináry mají tři. Naposledy používané měny jsou v seznamu první."
+workflow:
+  heading: "Vedte měny zvlášť, nebo převádějte průběžně"
+  steps:
+    - title: "Přidejte výdaj v jeho vlastní měně"
+      body: "Vyberte měnu, napište částku, řekněte, kdo platil a kdo se podílel. Nic dalšího není třeba. Je to výchozí volba a uchová původní částku přesně tak, jak jste ji zadali."
+      shot: S07
+      shotAlt: "Formulář výdaje se zadanou částkou v jenech"
+    - title: "Sledujte zůstatek pro každou měnu"
+      body: "Zůstatky se vedou zvlášť pro každou měnu a každý má vlastní krátký seznam navržených plateb. Libry se vyrovnávají v librách a jeny v jenech."
+      shot: S10
+      shotAlt: "Obrazovka zůstatků se zjednodušenými dluhy ve dvou měnách"
+    - title: "Nebo převádějte, když se skupina raději vyrovná jednou"
+      body: "Při zadávání výdaje vyberte jinou měnu a Side Badger ho může převést podle aktuálního směnného kurzu, který můžete změnit na ten, který platil při výměně. Převedená částka se přidá k zůstatku v této měně. Převod je volba, kterou skupina dělá, nikdy ne něco, co se děje za vašimi zády."
+options:
+  heading: "Kurz, který vidíte a můžete změnit"
+  items:
+    - title: "Kurz je vidět"
+      body: "Když převádíte, kurz a převedená částka se objeví ve formuláři, takže nikdo nemusí věřit číslu na slovo."
+    - title: "Napište vlastní"
+      body: "Dostali jste lepší kurz na přepážce nebo horší na letišti? Upravte kurz na ten, který platil, a převedená částka se aktualizuje."
+    - title: "Originál zůstává"
+      body: "Původní částka zůstává u výdaje vedle převedené, pro každého, kdo se zeptá, kolik to bylo v jenech."
+    - title: "Převod zdarma"
+      body: "Převod nic nestojí. Za zadání výdaje v jiné měně se neplatí žádný poplatek."
+example:
+  heading: "Čtyři přátelé v Japonsku, vyrovnaní dvěma způsoby"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "hotel, rezervovaný doma"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "večeře v Japonsku"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "jízdenky na vlak"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "vstup do chrámu"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "Jedna měna pro celou skupinu"
+    body: "Pokud na to skupina nechce myslet, vyberte měnu skupiny a formulář do ní převede každý nový výdaj, podle kurzu, který stále vidíte a můžete změnit. Týká se to jen nových a zkopírovaných výdajů. Úpravy a stávající výdaje zůstávají, jak jsou, takže se nic už zaznamenaného nemění pod rukama."
+  - heading: "Dlužíte eura, platíte v librách"
+    body: "Platilo se v jenech a vyrovnáváte v librách? V pořádku. Když zaznamenáváte platbu, můžete ji také převést, takže ten, kdo dluží eura, může zaplatit v librách a zůstatek v eurech stále vyjde správně. Platíte si, jak chcete, a pak to zaznamenáte."
+  - heading: "Pravidla pro skupinu"
+    body: "Omezte skupinu na měny, které opravdu používáte, a nastavte výchozí, aby se formulář otevíral na té správné. Dovolená v Portugalsku nepotřebuje vedle účtu za večeři 139 dalších možností a [svatba v zahraničí](page:use-case/events-and-celebrations) pravděpodobně potřebuje dvě."
+limits:
+  heading: "Limity"
+  items:
+    - "Kurz se zafixuje při uložení výdaje. Staré výdaje se nikdy nepřeceňují."
+    - "Side Badger stáhne aktuální kurz, kde to jde. Ne každá dvojice ho má zaručený a kurz můžete vždy zadat sami."
+    - "Automatický převod ve skupině platí jen pro nové a zkopírované výdaje, ne pro úpravy ani stávající výdaje."
+    - "Každý výdaj je omezen na 999 999,99 ve své měně."
+    - "Existuje 140 měn. Kryptoměny a kovy mezi nimi nejsou."
+    - "Side Badger zaznamenává platby. Nikdy peníze nepřesouvá ani nevyměňuje."
+useCasesHeading: "Kde to pomáhá"
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Jaký směnný kurz používáte?"
+      a: "Aktuální směnný kurz, stažený při zadání výdaje tam, kde je k dispozici. Můžete ho změnit na ten, který platil při výměně, a převedená částka se aktualizuje."
+    - q: "Přeceňují se staré výdaje?"
+      a: "Ne. Kurz se zafixuje při uložení výdaje, takže se zůstatek nehýbe jen proto, že se pohnul trh."
+    - q: "Podporujete kryptoměny?"
+      a: "Ne. Existuje 140 měn a kryptoměny mezi nimi nejsou."
+    - q: "Proč nemohu zadat 2 000 000 rupií?"
+      a: "Každý výdaj je omezen na 999 999,99 ve své měně. Zadejte ho v jiné měně a převeďte, nebo ho rozdělte na dva výdaje."
+    - q: "Stojí převod něco?"
+      a: "Ne. Převod je zdarma, stejně jako zbytek Side Badger. Viz [ceník](page:pricing)."
+    - q: "Musím převádět?"
+      a: "Ne. Měny zůstávají zvlášť, pokud se vy nebo vaše skupina nerozhodnete převádět, a každá měna má vlastní krátký seznam plateb."

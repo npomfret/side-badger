@@ -1,0 +1,108 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+meta:
+  title: "Dělte náklady skupinového výletu ve 140 měnách"
+  description: "Sledujte, kdo co na skupinovém výletu zaplatil, zadávejte náklady v místní měně, převádějte je, nebo ne, a vyrovnejte se jednou na konci. Zdarma, v prohlížeči."
+h1: "Dělte náklady skupinového výletu ve 140 měnách"
+navLabel: "Skupinové výlety"
+lead: "Sledujte vilu, taxíky a to jedno kolo koktejlů, o kterém nikdo neví, že se přihlásil zaplatit. Side Badger vede průběžný přehled, když jste pryč, [zvládá libry, eura a 138 dalších měn](page:feature/multiple-currencies) a po návratu domů vám dá [krátký seznam plateb](page:feature/settle-up)."
+cta:
+  heading: "Dovolenková matematika hotová, než zbledne opálení"
+  body: "Založte skupinu, pošlete odkaz s pozvánkou lidem z výletu a přidávejte náklady, jak vznikají."
+  button: "Vytvořit účet zdarma"
+scenario:
+  heading: "Každý za něco zaplatil, v nějaké měně"
+  body: "Někdo zarezervoval letenky, někdo jiný dal vilu na kartu a třetí pokryl večeři hotovostí. Ke třetímu dni nikdo neví, kdo je v plusu. Otázka je jednoduchá, i když odpověď obvykle žije v tabulce, kterou nikdo nechce otevřít. Kdo co zaplatil, v jaké měně a jak se všichni na konci vyrovnají jednou?"
+sections:
+  - heading: "Než odjedete"
+    body: "Nechte hlasovat o užším výběru vil, na přání anonymně, aby rozhodnutí patřilo skupině, a ne tomu, kdo se nejdéle durdí. Pak veďte společný nákupní seznam vedle účtů za nákupy, aby nikdo nekoupil tři tuby opalovacího krému a žádné redukce do zásuvky."
+  - heading: "Když jste pryč"
+    body: "Přidávejte každý náklad, jak vzniká, v měně, ve které jste ho zaplatili. Vyfoťte účtenku a Side Badger doplní celkovou částku, datum a místo ke kontrole; obrázky účtenek čte AI služba společnosti Google. Převeďte částku podle aktuálního směnného kurzu, který můžete změnit na ten, který platil při výměně, a původní částka u výdaje zůstane. Nebo nechte eura jako eura a rozhodněte později. Skupina může také vybrat jednu měnu a nové výdaje se do ní převedou automaticky."
+  - heading: "Ne každý dělal všechno"
+    body: "Někteří vynechali večeři, jiní se nevezli lodí. Vynechte je z nákladů, na kterých se nepodíleli, a zbytek rozdělte [rovnoměrně, podle přesných částek nebo procentuálně](page:feature/split-expenses). Nikdo neplatí za tu část výletu, kterou prospal."
+  - heading: "Vyrovnejte se doma"
+    body: "Side Badger navrhne krátký seznam plateb, který vyrovná všechny. Platíte si, jak chcete, a pak to zaznamenáte. U smíšených měn vedte každou zvlášť, nebo převádějte průběžně; lisabonský příklad níže ukazuje obojí."
+  - heading: "Rozlučky se svobodou"
+    body: "Víkend s oslavencem vyžaduje o něco víc vyřizování. Udělejte z toho spravovanou skupinu, kde správci schvalují nové členy a výdaje mohou měnit jen zakladatelé a správci. Pro podíl oslavence použijte přesné částky, omezte skupinu na měny, které opravdu používáte, a skupinu po skončení zamkněte, aby čísla zůstala."
+exampleAfter: 4
+example:
+  heading: "Čtyři přátelé v Lisabonu"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Letenky"
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: "Vila"
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: "Večeře"
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Výlet lodí"
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: "Na čem výlet stojí"
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Lze vynechat lidi, kteří vynechali večeři?"
+      a: "Ano. Vyberte, kdo se na každém výdaji podílel, a jen těm se účtuje."
+    - q: "Funguje to bez signálu?"
+      a: "Ne. Side Badger potřebuje připojení, takže náklady přidejte, až budete zpátky na wifi."
+    - q: "Musí si každý něco instalovat?"
+      a: "Ne. Běží v prohlížeči. Pošlete odkaz s pozvánkou a lidé se připojí z telefonů."
+    - q: "Jaký směnný kurz používá?"
+      a: "Aktuální směnný kurz při zadání výdaje, nebo váš vlastní, pokud jste měli jiný. Kurz se zafixuje při uložení výdaje, takže staré výdaje se nikdy nepřeceňují."
+    - q: "Můžeme skupinu po výletu zmrazit?"
+      a: "Ano. Správce může skupinu zamknout, aby čísla zůstala."
+    - q: "Existuje limit částek?"
+      a: "Ano. 999 999,99 na výdaj, ve své měně."

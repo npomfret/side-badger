@@ -1,0 +1,107 @@
+translatedFrom: "e6b829e6"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.2.label
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+meta:
+  title: "Dělte domácí účty se spolubydlícími"
+  description: "Dělte nájem podle velikosti pokoje, energie a nákupy rovným dílem a sledujte, kdo komu každý měsíc dluží. Bezplatný způsob, jak si spolubydlící vedou přehled."
+h1: "Dělte domácí účty se spolubydlícími"
+navLabel: "Spolubydlící"
+lead: "Pro spolubydlícího, který kupuje toaletní papír, a spolubydlící, kteří to nikdy nevidí. Side Badger vede jeden průběžný přehled nájmu, účtů a nákupů pro **spolubydlící**, takže nikdo nemusí nikoho štvát a lednice může být zase jen lednice."
+cta:
+  heading: "Začněte u vlastního domu"
+  body: "Vytvořte účet, založte skupinu pro dům a pošlete všem odkaz s pozvánkou. Účty za tento měsíc mohou být zadané ještě dnes večer."
+  button: "Vytvořit účet zdarma"
+scenario:
+  heading: "Zařiďte dům"
+  body: "Založte skupinu pro dům, vyberte jméno, pod kterým chcete být ve skupině vidět, a pozvěte všechny odkazem nebo QR kódem. Skupina může být otevřená, kde každý přidává a upravuje, nebo spravovaná, kde nové členy schvaluje správce a výdaje mohou měnit jen zakladatelé a správci, což se hodí pro spolubydlícího, který vede účetnictví. Kdo chce jen sledovat čísla, může být divákem, který vidí všechno a nic nemění. Každý nový výdaj vidí hned, takže „přidám to později“ má méně úkrytů."
+sections:
+  - heading: "Nájem a účty"
+    body: "Nájem se zřídka dělí čtyřmi, protože ložnice nejsou stejné. Rozdělte ho procentuálně, aby velký pokoj platil víc a komora s oknem míň. Procenta musí dávat dohromady 100. Účty, které využívají všichni, dostanou rovnoměrné rozdělení a spolubydlící, který na výdaji neměl podíl, z něj může být vynechán. Když rovnoměrné dělení zanechá zbylý halíř, připadne jedné osobě náhodně. Opakované účty neexistují, takže každý měsíc zkopírujete nájem z minulého měsíce, změníte datum a pokračujete. Dejte nájem, účty a nákup dohromady a dostanete měsíc jako ten níže, v domě o čtyřech lidech: Jo platí £2,000 nájmu, děleného 30 %, 25 %, 25 % a 20 % podle velikosti pokoje, pak Kwame platí £120 za energie, Lena £40 za internet a Matt £80 za nákupy, každé děleno rovným dílem. Jo skončí s pohledávkou £1,340 a Side Badger navrhne tři platby, všechny pro Jo."
+  - heading: "Společný nákup"
+    body: "Veďte společný nákupní seznam ve stejné skupině jako účty za nákupy a odškrtávejte položky, jak se dostanou do vozíku. Kdo nákup dělá, přidá celkovou částku z účtenky jako výdaj a rozdělí ji rovným dílem nebo jen mezi lidi, kteří to sní. Kdo pořád kupuje ovesné mléko, které nikdo jiný nepije, zůstává věcí domu, ale seznam výdajů bude alespoň přesný. Oprávnění skupiny určují, kdo může seznamy vytvářet a upravovat."
+  - heading: "Spravedlivé způsoby dělení domácích nákladů"
+    items:
+      - "**Rovnoměrně** se hodí na to, co všichni využívají zhruba stejně, jako internet, čisticí prostředky a společný nákup. Je to rychlé a nikdo se nemusí hádat o matematiku."
+      - "**Podle velikosti pokoje** se hodí na nájem, protože pokoje se liší a liší se i to, kolik za ně lidé chtějí platit. Dohodněte procenta jednou, když se někdo nastěhuje, a používejte je každý měsíc."
+      - "**Podle využití** se hodí na účty, kde jeden člověk zjevně využívá víc, například účet za vytápění domácí kanceláře nebo streamovací účet, na který se dívají dva lidé. Vynechte lidi, kteří na tom neměli podíl, nebo zadejte přesné částky pro každého."
+      - "Ať zvolíte cokoli, domluvte to před prvním účtem, ne po první hádce, a pravidlo si zapište někam, kde ho vidí celý dům."
+  - heading: "Když se někdo odstěhuje"
+    body: "Nejdřív se vyrovná. Nikdo nemůže skupinu opustit, dokud dluží nebo se mu dluží peníze, takže odcházející zaplatí nebo dostane, vy to zaznamenáte a pak odejde. Veďte skupinu dál pro zbývající spolubydlící a nového člověka pozvěte odkazem. Až dům skončí, správce může skupinu zamknout, aby čísla zůstala, nebo ji uzavřít nadobro, čímž se stane nepřístupnou všem, takže to udělejte, až nikdo nebude potřebovat historii."
+exampleAfter: 2
+example:
+  heading: "Kdo komu tento měsíc dluží"
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: "Nájem"
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: "Energie"
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: "Internet"
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: "Nákupy"
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: "Funkce, které dům využívá"
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Může se nájem opakovat automaticky?"
+      a: "Ne, opakované účty neexistují. Zkopírujte nájem z minulého měsíce několika klepnutími, změňte datum a máte hotovo."
+    - q: "Můžeme dělit podle velikosti pokoje?"
+      a: "Ano, procentuálně. Dejte každému spolubydlícímu podíl odpovídající jeho pokoji, pokud podíly dávají dohromady 100. O dalších způsobech dělení se dočtete v části [dělení výdajů](page:feature/split-expenses)."
+    - q: "Co když se spolubydlící odstěhuje a dluží peníze?"
+      a: "Nemůže skupinu opustit, dokud se nevyrovná, protože nikdo nemůže odejít, dokud dluží nebo se mu dluží peníze. Čísla zůstávají poctivá, dokud si nejsou všichni kvit."
+    - q: "Platí Side Badger účty?"
+      a: "Ne. Vede přehled a navrhuje krátký seznam plateb. Platíte si, jak chcete, a pak to zaznamenáte, jak vysvětluje [vyrovnání](page:feature/settle-up)."
+    - q: "Může jeden spolubydlící vést účetnictví?"
+      a: "Ano. Nastavte ho jako správce a použijte spravovanou skupinu, kde nové členy schvaluje správce a výdaje mohou měnit jen zakladatelé a správci."

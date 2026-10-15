@@ -1,8 +1,6 @@
 translatedFrom: "923c938f"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - multi-currency.140-currencies
   - multi-currency.currency-rules
@@ -106,7 +104,7 @@ limits:
     - Tasa gastua gordetzen denean finkatzen da. Gastu zaharrak ez dira inoiz berriro baloratzen.
     - Side Badger-ek egungo tasa bat lortzen saiatzen da ahal duen lekuan. Ez dago bermatuta moneta-pare guztiek tasa bat izango dutenik, eta tasa zeuk idatz dezakezu beti.
     - Taldearen bihurketa automatikoa gastu berriei eta kopiatuei bakarrik aplikatzen zaie, ez edizioei edo lehendik dauden gastuei.
-    - Gastu bakoitzak gehienez 999,999.99 du bere monetan.
+    - Gastu bakoitzak gehienez 999.999,99 du bere monetan.
     - 140 moneta daude. Kriptomonetak eta metalak ez daude haien artean.
     - Side Badger-ek ordainketak erregistratzen ditu. Ez du inoiz dirua mugitzen ez trukatzen.
 useCasesHeading: Hau non laguntzen duen
@@ -119,8 +117,8 @@ faq:
       a: Ez. Tasa gastua gordetzen denean finkatzen da, beraz saldo bat ez da mugitzen merkatua mugitu delako.
     - q: Kriptomonetak onartzen al dituzue?
       a: Ez. 140 moneta daude, eta kriptomonetak ez daude haien artean.
-    - q: Zergatik ezin dut 2,000,000 rupia sartu?
-      a: Gastu bakoitzak gehienez 999,999.99 du bere monetan. Sartu beste moneta batean eta bihurtu, edo zatitu bi gastutan.
+    - q: Zergatik ezin dut 2.000.000 rupia sartu?
+      a: Gastu bakoitzak gehienez 999.999,99 du bere monetan. Sartu beste moneta batean eta bihurtu, edo zatitu bi gastutan.
     - q: Bihurtzeak ezer kostatzen al du?
       a: Ez. Bihurtzea doakoa da, Side Badger-en gainerakoa bezala. Ikusi [prezioak](page:pricing).
     - q: Bihurtu behar al dut?

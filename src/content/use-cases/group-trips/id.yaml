@@ -1,0 +1,110 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: checked
+  checker: "T1-check"
+  date: "2026-10-15"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+meta:
+  title: "Bagi biaya perjalanan grup, dalam 140 mata uang"
+  description: "Catat siapa membayar apa dalam perjalanan grup, masukkan biaya dalam mata uang setempat, konversi atau tidak, dan lunasi sekali di akhir. Gratis, di peramban Anda."
+h1: "Bagi biaya perjalanan grup, dalam 140 mata uang"
+navLabel: "Perjalanan grup"
+lead: "Catat vila, taksi, dan satu putaran koktail yang tak ada yang ingat pernah menawarkan diri untuk membayar. Side Badger menjaga hitungan selagi Anda pergi, [menangani pound, euro, dan 138 mata uang lainnya](page:feature/multiple-currencies), dan memberi Anda [daftar pembayaran singkat](page:feature/settle-up) saat Anda pulang."
+cta:
+  heading: "Hitungan liburan, beres sebelum kulit kembali pucat"
+  body: "Buat grup, kirim tautan undangan ke orang-orang dalam perjalanan, dan tambahkan biaya saat terjadi."
+  button: "Buat akun gratis"
+scenario:
+  heading: "Semua orang membayar sesuatu, dalam mata uang tertentu"
+  body: "Seseorang memesan tiket pesawat, orang lain membayar vila dengan kartu, dan orang ketiga menanggung makan malam secara tunai. Pada hari ketiga tak ada yang tahu siapa yang unggul. Pertanyaannya sederhana, meski jawabannya biasanya ada di spreadsheet yang tak ingin dibuka siapa pun. Siapa membayar apa, dalam mata uang apa, dan bagaimana semua orang melunasi sekali di akhir?"
+sections:
+  - heading: "Sebelum berangkat"
+    body: "Ajukan daftar pilihan vila untuk divoting, secara anonim jika Anda mau, supaya keputusan menjadi milik grup dan bukan milik siapa yang paling lama merajuk. Lalu simpan daftar belanja bersama di samping tagihan belanja, supaya tak ada yang membeli tiga tabung tabir surya tanpa adaptor colokan."
+  - heading: "Selama bepergian"
+    body: "Tambahkan tiap biaya saat terjadi, dalam mata uang yang Anda pakai untuk membayar. Foto struknya dan Side Badger mengisi total, tanggal, dan tempat untuk Anda periksa; gambar struk dibaca oleh layanan AI Google. Konversi jumlahnya dengan kurs terkini, yang bisa Anda ubah ke kurs yang benar-benar Anda dapatkan, dan jumlah asli tetap ada di pengeluaran. Atau biarkan euro tetap euro dan putuskan nanti. Grup juga bisa memilih satu mata uang, dan pengeluaran baru dikonversi ke dalamnya secara otomatis."
+  - heading: "Tidak semua orang ikut semuanya"
+    body: "Sebagian orang melewatkan makan malam, sebagian tidak ikut naik perahu. Keluarkan mereka dari biaya yang bukan bagian mereka, dan bagi sisanya [secara merata, berdasarkan jumlah pasti, atau persentase](page:feature/split-expenses). Tak ada yang membayar bagian perjalanan yang mereka habiskan dengan tertidur."
+  - heading: "Lunasi setelah pulang"
+    body: "Side Badger menyarankan daftar pembayaran singkat yang melunasi semua orang. Bayar satu sama lain dengan cara apa pun yang Anda suka, lalu catat. Dengan mata uang campuran, pisahkan masing-masing atau konversi seiring berjalan; contoh Lisbon di bawah menunjukkan keduanya."
+  - heading: "Akhir pekan pesta lajang"
+    body: "Akhir pekan bersama tamu kehormatan memerlukan sedikit lebih banyak administrasi. Jadikan grup terkelola, tempat admin menyetujui anggota baru dan hanya pembuat serta admin yang bisa mengubah pengeluaran. Gunakan jumlah pasti untuk bagian tamu kehormatan, batasi grup pada mata uang yang benar-benar Anda pakai, dan kunci grup setelah selesai agar angkanya tetap."
+exampleAfter: 4
+example:
+  heading: "Empat teman di Lisbon"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Tiket pesawat"
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: "Vila"
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: "Makan malam"
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Wisata perahu"
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: "Yang diandalkan sebuah perjalanan"
+faq:
+  heading: "Pertanyaan"
+  items:
+    - q: "Bisakah orang yang melewatkan makan malam dikeluarkan?"
+      a: "Ya. Pilih siapa yang ikut dalam tiap pengeluaran dan hanya mereka yang ditagih."
+    - q: "Apakah berfungsi tanpa sinyal?"
+      a: "Tidak. Side Badger memerlukan koneksi, jadi tambahkan biayanya setelah Anda kembali terhubung wifi."
+    - q: "Apakah semua orang perlu memasang sesuatu?"
+      a: "Tidak. Berjalan di peramban. Kirim tautan undangan dan orang bergabung dari ponsel mereka."
+    - q: "Kurs apa yang dipakai?"
+      a: "Kurs terkini saat Anda memasukkan pengeluaran, atau kurs Anda sendiri jika mendapat yang berbeda. Kurs ditetapkan saat pengeluaran disimpan, jadi pengeluaran lama tidak pernah dinilai ulang."
+    - q: "Bisakah kami membekukan grup setelah perjalanan?"
+      a: "Ya. Admin bisa mengunci grup agar angkanya tetap."
+    - q: "Apakah ada batas jumlah?"
+      a: "Ya. 999,999.99 per pengeluaran, dalam mata uangnya sendiri."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

@@ -1,0 +1,109 @@
+translatedFrom: "e6b829e6"
+review:
+  status: checked
+  checker: "T1-check"
+  date: "2026-10-15"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+meta:
+  title: "Bagi tagihan rumah tangga dengan teman serumah"
+  description: "Bagi sewa menurut ukuran kamar, bagi rata listrik dan belanjaan, dan lihat siapa berutang kepada siapa tiap bulan. Cara gratis bagi teman serumah dan teman sekos untuk menjaga hitungan."
+h1: "Bagi tagihan rumah tangga dengan teman serumah"
+navLabel: "Teman serumah"
+lead: "Untuk teman serumah yang membeli tisu toilet, dan teman serumah yang tak pernah melihatnya terjadi. Side Badger menyimpan satu hitungan berjalan untuk sewa, tagihan, dan belanjaan bagi **teman serumah, teman sekos, dan teman sekamar**, sehingga tak ada yang perlu menagih siapa pun dan kulkas bisa kembali menjadi sekadar kulkas."
+cta:
+  heading: "Mulai dari rumah Anda sendiri"
+  body: "Buat akun, buat grup untuk rumah, dan kirim tautan undangan ke semua orang. Tagihan bulan ini bisa masuk malam ini."
+  button: "Buat akun gratis"
+scenario:
+  heading: "Siapkan rumahnya"
+  body: "Buat grup untuk rumah, pilih nama yang ingin dilihat orang di dalamnya, dan undang semua orang dengan tautan atau kode QR. Grup bisa terbuka, tempat semua orang menambah dan mengubah, atau terkelola, tempat anggota baru perlu persetujuan admin dan hanya pembuat serta admin yang bisa mengubah pengeluaran, cocok untuk teman serumah yang memegang pembukuan. Siapa pun yang hanya ingin memantau angka bisa menjadi pemirsa, yang melihat semuanya dan tidak mengubah apa pun. Semua orang langsung melihat pengeluaran baru, jadi \"nanti aku tambahkan\" punya lebih sedikit tempat bersembunyi."
+sections:
+  - heading: "Sewa dan tagihan"
+    body: "Sewa jarang habis dibagi empat, karena kamar tidur tidak sama. Bagi berdasarkan persentase, sehingga kamar besar membayar lebih dan kamar sempit berjendela membayar lebih sedikit. Persentase harus berjumlah 100. Tagihan yang dipakai semua orang dibagi rata, dan teman serumah yang tidak ikut dalam sebuah pengeluaran bisa dikeluarkan darinya. Jika pembagian rata menyisakan sisa sen, sisa itu diberikan kepada satu orang secara acak. Tidak ada tagihan berulang, jadi tiap bulan Anda menyalin sewa bulan lalu, mengganti tanggal, dan lanjut."
+  - heading: "Belanjaan bersama"
+    body: "Simpan daftar belanja bersama di grup yang sama dengan tagihan belanja, dan centang item saat masuk troli. Siapa pun yang berbelanja menambahkan total struk sebagai pengeluaran dan membaginya rata, atau hanya di antara orang yang akan memakannya. Siapa yang terus membeli susu oat yang tak diminum orang lain tetap urusan rumah, tetapi setidaknya daftar pengeluarannya akurat. Izin grup menentukan siapa yang bisa membuat dan mengubah daftar. Gabungkan sewa, tagihan, dan belanjaan dan Anda mendapat bulan seperti di bawah ini, di rumah berisi empat orang: Jo membayar sewa £2,000, dibagi 30%, 25%, 25%, dan 20% menurut ukuran kamar, lalu Kwame membayar £120 untuk listrik, Lena £40 untuk internet, dan Matt £80 untuk belanjaan, masing-masing dibagi rata. Jo akhirnya dihutangi £1,340, dan Side Badger menyarankan tiga pembayaran, semuanya kepada Jo."
+  - heading: "Cara adil membagi biaya rumah tangga"
+    items:
+      - "**Merata** cocok untuk apa yang dipakai semua orang kurang lebih sama, seperti internet, perlengkapan kebersihan, dan belanjaan bersama. Cepat, dan tak ada yang perlu berdebat soal hitungan."
+      - "**Menurut ukuran kamar** cocok untuk sewa, karena kamar berbeda dan begitu juga yang bersedia dibayar orang untuknya. Sepakati persentasenya sekali, saat seseorang pindah masuk, dan pakai lagi tiap bulan."
+      - "**Menurut pemakaian** cocok untuk tagihan yang jelas lebih banyak dipakai satu orang, seperti tagihan pemanas ruang kerja di rumah atau akun streaming yang hanya ditonton dua orang. Keluarkan orang yang tidak ikut, atau masukkan jumlah pasti untuk tiap orang."
+      - "Apa pun yang Anda pilih, sepakati sebelum tagihan pertama, bukan setelah pertengkaran pertama, dan tulis aturannya di tempat yang bisa dilihat seisi rumah."
+  - heading: "Saat seseorang pindah"
+    body: "Mereka melunasi dulu. Tidak ada yang bisa keluar dari grup selagi berutang atau dihutangi, jadi yang pergi membayar atau dibayar, Anda mencatatnya, lalu mereka pergi. Lanjutkan grup untuk teman serumah yang tersisa dan undang orang baru dengan tautan. Saat rumahnya sendiri selesai, admin bisa mengunci grup agar angkanya tetap, atau menutupnya selamanya, yang membuatnya tidak dapat diakses siapa pun, jadi lakukan itu hanya setelah tak ada yang memerlukan riwayatnya."
+exampleAfter: 2
+example:
+  heading: "Siapa berutang kepada siapa bulan ini"
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: "Sewa"
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: "Listrik"
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: "Internet"
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: "Belanjaan"
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: "Fitur yang dipakai sebuah rumah"
+faq:
+  heading: "Pertanyaan"
+  items:
+    - q: "Bisakah sewa berulang otomatis?"
+      a: "Tidak, tidak ada tagihan berulang. Salin sewa bulan lalu dalam beberapa ketukan, ganti tanggalnya, dan selesai."
+    - q: "Bisakah kami membagi menurut ukuran kamar?"
+      a: "Ya, berdasarkan persentase. Beri tiap teman serumah bagian yang mencerminkan kamarnya, asalkan bagiannya berjumlah 100. [Bagi pengeluaran](page:feature/split-expenses) membahas cara membagi lainnya."
+    - q: "Bagaimana jika teman serumah pindah dengan masih berutang?"
+      a: "Mereka tidak bisa keluar dari grup sampai melunasi, karena tidak ada yang bisa keluar selagi berutang atau dihutangi. Angkanya tetap jujur sampai semua orang impas."
+    - q: "Apakah Side Badger membayar tagihan?"
+      a: "Tidak. Side Badger menyimpan hitungan dan menyarankan daftar pembayaran singkat. Anda membayar satu sama lain dengan cara apa pun yang disuka, lalu mencatatnya, seperti dijelaskan [pelunasan](page:feature/settle-up)."
+    - q: "Bisakah satu teman serumah memegang pembukuan?"
+      a: "Ya. Jadikan mereka admin dan pakai grup terkelola, tempat anggota baru perlu persetujuan dan hanya pembuat serta admin yang bisa mengubah pengeluaran."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.2.label

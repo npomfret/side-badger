@@ -1,0 +1,107 @@
+translatedFrom: "fd23c99b"
+review:
+  status: checked
+  checker: "T1-check"
+  date: "2026-10-15"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+meta:
+  title: "Cara kerja Side Badger | Bagi pengeluaran grup dalam lima langkah"
+  description: "Buat grup, undang orang, tambahkan pengeluaran, lalu lunasi. Lihat apa yang terjadi antara \"seseorang sudah bayar\" dan \"kita impas\", lengkap dengan contoh hitungan."
+h1: "Cara kerja Side Badger"
+navLabel: "Cara kerja"
+lead: "Apa yang terjadi antara \"seseorang sudah bayar\" dan \"kita impas\"? Lima langkah, tanpa spreadsheet, dan satu badger yang sebagian besar hanya hiasan. Ini seluruh perjalanannya, dari grup pertama sampai pembayaran terakhir yang dicatat. Untuk rincian tiap langkah, lihat [bagi pengeluaran](page:feature/split-expenses) dan [pelunasan](page:feature/settle-up)."
+cta:
+  heading: "Dari \"biar aku yang bayar\" ke \"kita impas\""
+  body: "Buat akun gratis, mulai grup, dan tambahkan pengeluaran pertama. Badger tidak akan menghakimi strukmu."
+  button: "Buat akun gratis"
+steps:
+  - title: "Buat grup"
+    body: "Buat satu grup untuk tiap rumah, perjalanan, atau acara, supaya uang sewa tidak pernah bercampur dengan daftar kado pernikahan. Beri nama, pilih nama yang akan dilihat orang untuk Anda, dan jika mau, batasi mata uang yang diterima. Dasbor Anda lalu menampilkan semua grup, dan posisi Anda di masing-masing, dalam satu layar."
+    shot: S02
+    shotAlt: "Dialog buat grup dengan bagian pembatasan mata uang terbuka"
+  - title: "Undang orang-orang Anda"
+    body: "Bagikan tautan bergabung atau tampilkan kode QR, dan atur berapa lama berlakunya, dari 15 menit hingga 5 hari. Setiap orang yang bergabung perlu akun gratis dan email terverifikasi, dan satu grup bisa berisi hingga 50 orang. Jika ingin menyeleksi siapa yang masuk, aktifkan persetujuan dan admin akan meloloskan tiap orang."
+    shot: S03
+    shotAlt: "Dialog undangan pada tab tautan, menampilkan kode QR dan pilihan masa berlaku"
+  - title: "Tambahkan pengeluaran saat terjadi"
+    body: "Catat siapa yang membayar, berapa, dan untuk siapa. Bagi rata, berdasarkan jumlah pasti, atau persentase, dan keluarkan siapa pun yang tidak ikut. Tambahkan pengeluarannya dan semua orang langsung melihatnya, beserta apa yang berubah dan siapa yang mengubahnya."
+    shot: S05
+    shotAlt: "Formulir pengeluaran dengan pembagian persentase, membagi uang sewa menurut ukuran kamar"
+  - title: "Pantau saldo"
+    body: "Side Badger menyimpan saldo berjalan untuk setiap mata uang, jadi Anda bisa melihat siapa berutang kepada siapa sekilas. Daripada membiarkan semua orang mengurai jaring utang kecil, Side Badger menyarankan daftar pembayaran singkat yang melunasi grup."
+    shot: S10
+    shotAlt: "Layar saldo yang menampilkan utang yang disederhanakan dalam dua mata uang, dengan Tampilkan semua diaktifkan"
+  - title: "Lunasi di luar aplikasi, catat di dalamnya"
+    body: "Side Badger tidak pernah memindahkan uang. Bayar satu sama lain dengan cara apa pun yang Anda suka, lalu catat pembayarannya agar saldo menyesuaikan, dan layar semua orang diperbarui tanpa perlu menyegarkan. \"Lunas\" berarti saldo menunjukkan nol. Tidak ada yang bisa keluar dari grup selagi masih berutang atau dihutangi, jadi siapa pun yang hendak pergi melunasi dulu."
+    shot: S11
+    shotAlt: "Formulir pembayaran dengan tombol lunasi cepat dan pemberitahuan pembayaran sebagian"
+requirements:
+  heading: "Yang Anda perlukan"
+  items:
+    - "Akun gratis. Yang Anda perlukan hanya alamat email dan kata sandi, dan Anda memverifikasi email sebelum bisa menambahkan apa pun."
+    - "Berusia 18 tahun atau lebih."
+    - "Peramban modern di ponsel atau komputer, dan koneksi internet. Side Badger bukan aplikasi toko aplikasi dan tidak berfungsi secara offline."
+    - "Opsional, tempat di layar utama Anda. Tidak perlu toko aplikasi, karena Anda bisa menambahkan Side Badger ke layar utama atau dock dan ia terbuka seperti aplikasi."
+example:
+  heading: "Tiga teman setelah makan malam"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: "Makan malam"
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: "Taksi"
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: "39 bahasa, dan dibuat untuk lebih banyak orang"
+    body: "Gunakan Side Badger dalam 39 bahasa, termasuk bahasa Arab, Persia, dan Urdu yang ditulis dari kanan ke kiri. Setiap orang dalam grup bisa memilih bahasanya sendiri, jadi halaman grup bisa berbahasa Arab bagi satu orang dan berbahasa Inggris bagi orang berikutnya. Side Badger juga dibuat dengan mempertimbangkan pengguna keyboard dan pembaca layar, dan warna anggota disertai pola, sehingga Anda tidak perlu membedakan hijau dari merah."
+faq:
+  heading: "Pertanyaan"
+  items:
+    - q: "Apakah semua orang perlu akun?"
+      a: "Ya, akun gratis. Setiap orang memverifikasi emailnya sebelum menambahkan apa pun."
+    - q: "Apakah ada aplikasinya?"
+      a: "Side Badger berjalan di peramban, dan Anda bisa menambahkannya ke layar utama atau dock agar terbuka seperti aplikasi. Tidak ada versi toko aplikasi dan tidak ada mode offline."
+    - q: "Apakah Side Badger memindahkan uang?"
+      a: "Tidak. Side Badger mencatat hitungan dan menyarankan pembayaran, dan Anda membayar satu sama lain dengan cara apa pun yang Anda suka. Setelah itu Anda mencatat pembayarannya. Lihat [pelunasan](page:feature/settle-up)."
+    - q: "Bisakah seseorang keluar dengan utang?"
+      a: "Tidak. Tidak ada yang bisa keluar dari grup selagi masih berutang atau dihutangi, jadi mereka melunasi dulu."
+    - q: "Berapa banyak orang yang bisa bergabung dalam satu grup?"
+      a: "Hingga 50 orang dalam satu grup. Undang mereka dengan tautan atau kode QR, dan aktifkan persetujuan jika Anda ingin admin meloloskan tiap orang."
+    - q: "Bagaimana dengan perjalanan yang memakai lebih dari satu mata uang?"
+      a: "Saldo disimpan terpisah untuk setiap mata uang. Lihat [beberapa mata uang](page:feature/multiple-currencies)."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name

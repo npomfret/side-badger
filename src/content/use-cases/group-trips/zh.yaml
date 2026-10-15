@@ -1,0 +1,110 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: checked
+  checker: "T1-check"
+  date: "2026-10-15"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+meta:
+  title: 分摊团体旅行的费用，支持 140 种货币
+  description: 记录团体旅行中谁付了什么，用当地货币录入费用，换算与否随你，最后一次结清。免费，在浏览器中使用。
+h1: 分摊团体旅行的费用，支持 140 种货币
+navLabel: 团体旅行
+lead: 记下别墅、出租车，还有那轮没人记得自己答应请的鸡尾酒。你在外面玩的时候，Side Badger 帮你持续记账，[支持英镑、欧元和另外 138 种货币](page:feature/multiple-currencies)，回家后给你一份[简短的付款清单](page:feature/settle-up)。
+cta:
+  heading: 在晒痕褪去之前，把假期的账算清
+  body: 创建一个群组，把邀请链接发给同行的人，费用发生时就随手添加。
+  button: 创建免费账户
+scenario:
+  heading: 每个人都付过款，用的还是各种货币
+  body: 有人订了机票，有人用信用卡付了别墅，还有第三个人用现金付了晚餐。到了第三天，谁也说不清谁在前、谁在后。问题其实很简单，只是答案通常藏在没人愿意打开的电子表格里：谁付了什么，用的是什么货币，最后大家怎么结清？
+sections:
+  - heading: 出发之前
+    body: 把别墅候选拿出来投票，想匿名也可以，这样决定属于整个群组，而不是谁生闷气最久谁说了算。再把共享购物清单放在购物账单旁边，免得没人买转换插头，却买了三支防晒霜。
+  - heading: 旅途之中
+    body: 每笔费用发生时就添加，用你付款时的货币。拍下收据，Side Badger 会填好总额、日期和地点，供你核对；收据图片由 Google 的 AI 服务读取。可以按当前汇率换算金额，也可以改成你实际换到的汇率，原始金额会保留在这笔支出上。或者让欧元就是欧元，以后再决定。群组也可以选定一种货币，新的支出会自动换算成它。
+  - heading: 不是每个人什么都参加了
+    body: 有的人没去吃晚餐，有的人没上船。把他们从没参与的费用里排除，其余的[平均、按确切金额或按比例](page:feature/split-expenses)分摊。没人要为自己睡过去的那部分旅程买单。
+  - heading: 回家后一次结清
+    body: Side Badger 会建议一份让所有人结清的简短付款清单。你们想怎么付就怎么付，然后记录下来。遇到多种货币时，可以让每种货币分开记，也可以边记边换算；下面的里斯本示例两种都展示了。
+  - heading: 单身派对周末
+    body: 为主角准备的周末出游，需要多一点行政工作。把它设成受管群组，由管理员批准新成员，只有创建者和管理员可以更改支出。主角的那一份用确切金额，把群组限制在你们实际使用的货币上，结束后锁定群组，让数字不再变动。
+exampleAfter: 4
+example:
+  heading: 里斯本的四位朋友
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: 机票
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: 别墅
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: 晚餐
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: 乘船游
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: 旅行要用到的功能
+faq:
+  heading: 常见问题
+  items:
+    - q: 没去吃晚餐的人可以排除吗？
+      a: 可以。选出每笔支出中参与的人，只向他们收取这笔费用。
+    - q: 没有信号也能用吗？
+      a: 不能。Side Badger 需要联网，所以等回到有 Wi-Fi 的地方再添加费用吧。
+    - q: 每个人都需要安装什么吗？
+      a: 不需要。它在浏览器中运行。发出邀请链接，大家用手机就能加入。
+    - q: 它使用哪个汇率？
+      a: 录入支出时的当前汇率，如果你换到的汇率不同，也可以用你自己的。汇率在保存支出时固定，所以旧的支出永远不会重新估值。
+    - q: 旅行结束后可以冻结群组吗？
+      a: 可以。管理员可以锁定群组，让数字不再变动。
+    - q: 金额有上限吗？
+      a: 有。每笔支出以其自身货币计，最高 999,999.99。
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

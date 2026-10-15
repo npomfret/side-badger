@@ -1,0 +1,111 @@
+translatedFrom: "1b51f540"
+review:
+  status: checked
+  checker: "T1-check"
+  date: "2026-10-15"
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "더 적은 결제로 정산하기 | 사이드 배저"
+  description: "그룹에서 누가 누구에게 빚졌는지 확인하고, 모두를 정산해 주는 짧은 결제 목록을 받아 보세요. 결제는 일어나는 대로 기록하면 됩니다. 무료로 사용할 수 있어요."
+h1: "더 적은 결제로 정산하기"
+navLabel: "정산하기"
+lead: "사이드 배저는 그룹 모두의 잔액을 계속 기록하고, 이를 정산해 주는 짧은 결제 목록을 제안합니다. 지불은 원하는 방법으로 서로 하고, 그다음 기록하세요. 숫자가 어떻게 나뉘는지 먼저 보고 싶다면 [지출 나누기](page:feature/split-expenses)부터 시작하세요."
+cta:
+  heading: "누가 누구에게 빚졌는지 풀 준비가 되셨나요?"
+  body: "계정을 만들고, 그룹을 시작하고, 첫 지출을 추가하세요. 그다음은 잔액이 알아서 이어 갑니다."
+  button: "무료 계정 만들기"
+problem:
+  heading: "진행하는 대로 업데이트되는 잔액"
+  body: "지출이 생길 때마다 누가 누구에게 빚졌는지가 바뀌므로, 사이드 배저는 지출과 결제가 추가될 때마다 잔액을 최신으로 유지합니다. 그룹의 모든 사람이 변경 사항을 바로 확인하고, 무엇이 바뀌었는지와 누가 바꿨는지도 볼 수 있어요. 잔액은 통화별로 관리되므로, 입력할 때 환산한 지출이 아니라면 유로와 파운드는 각자의 열에 따로 남습니다. 기본적으로 나와 관련된 빚이 보이고, **모두 보기**를 누르면 그룹 전체가 나옵니다."
+workflow:
+  heading: "정산까지 세 단계"
+  steps:
+    - title: "누가 누구에게 빚졌는지 보기"
+      body: "그룹의 잔액을 열어 내가 줄 돈과 받을 돈, 그리고 통화별로 계산된, 모두를 정산해 주는 짧은 결제 목록을 확인하세요. 질문이 제기된 지출은 해결될 때까지 계산에서 제외됩니다. 아래 룸메이트 예시에서는 결제 6건이 2건으로 줄어듭니다."
+      shot: S10
+      shotAlt: "두 가지 통화로 간소화된 빚이 표시되고 ‘모두 보기’가 켜진 잔액 화면"
+    - title: "원하는 방법으로 지불하고, 기록하기"
+      body: "계좌 이체, 현금, 지난 휴가에서 진 신세. 사이드 배저는 돈을 옮기지 않습니다. 돈이 오가면 결제를 기록하세요. 그러면 모두의 잔액이 업데이트됩니다."
+      shot: S11
+      shotAlt: "빠른 정산 버튼과 일부 결제 안내가 보이는 결제 양식"
+    - title: "제대로 반영됐는지 확인하기"
+      body: "결제는 그룹 내역에 남아 그룹의 모든 사람이 볼 수 있고 이모지로 반응할 수 있어요. 결제가 도착하면 함께 축하하세요."
+      shot: S12
+      shotAlt: "결제에 이모지 반응이 달린 결제 내역"
+options:
+  heading: "옵션"
+  items: []
+example:
+  heading: "뒤엉킨 빚에서 짧은 목록으로"
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: "전기 요금"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: "인터넷"
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "장보기"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "결제 기록하기"
+    body: "누군가 지불하면 알맞은 사람 앞으로 기록하세요. 빠른 정산 버튼은 제안된 결제에서 금액을 채워 주고, “계좌 이체” 같은 메모(최대 500자)를 남길 수도 있어요. 줄 돈의 일부만 지불하면 나머지는 잔액에 남습니다. 너무 적거나 많은 금액을 입력하면 저장하기 전에 사이드 배저가 알려 드려요. 결제를 기록하려면 지출 수정 권한이 필요하고, 날짜는 미래일 수 없습니다."
+  - heading: "다른 통화로 지불했다면?"
+    body: "잔액은 결제한 통화로 유지되므로 유로 빚은 유로 빚으로 남습니다. 유로를 줘야 하는데 파운드로 지불하나요? 결제를 입력할 때 환산하세요. 현재 환율이나 실제로 적용받은 환율 중에서 고를 수 있어요. 환율은 결제를 저장할 때 고정됩니다. 환산이 어떻게 작동하는지는 [여러 통화](page:feature/multiple-currencies)에서, 실제 사용 모습은 [그룹 여행](page:use-case/group-trips)에서 확인할 수 있어요."
+  - heading: "확인할 수 있는 내역"
+    body: "기록된 모든 결제는 날짜, 금액, 메모와 함께 그룹 내역에 남습니다. 결제를 수정할 수 있는 사람은 기록한 사람뿐이고, 삭제는 기록한 사람이나 그룹 관리자가 할 수 있습니다. 그룹을 나간 사람이 포함된 결제는 잠깁니다. 룸메이트 시나리오 예시는 [룸메이트](page:use-case/housemates)를 참고하세요."
+limits:
+  heading: "사이드 배저가 하지 않는 일"
+  items:
+    - "사이드 배저는 돈을 옮기거나, 결제 링크를 보내거나, 결제 요청을 보내지 않습니다. 앱에서의 결제는 다른 곳에서 이뤄진 결제의 기록입니다."
+    - "제안되는 결제는 통화별로 적용되는 간단한 매칭 방식으로 계산됩니다. 해당 통화에 잔액이 있는 사람 수보다 항상 적은 결제를 제안하지만(네 명이면 최대 세 건), 가능한 최소 횟수를 항상 찾아내지는 않습니다."
+    - "제안 기능은 끌 수 없습니다. **모두 보기**를 누르면 내 결제뿐 아니라 그룹의 모든 제안된 결제가 표시됩니다."
+    - "지출을 입력할 때 환산하지 않았다면 통화끼리 서로 상쇄되지 않습니다."
+    - "알림 기능이 없으므로 결제를 독촉하는 일은 여전히 여러분 몫입니다."
+useCasesHeading: "정산이 중요한 곳"
+faq:
+  heading: "자주 묻는 질문"
+  items:
+    - q: "사이드 배저가 돈을 보내 주나요?"
+      a: "아니요. 원하는 방법으로 서로 지불한 다음, 잔액이 업데이트되도록 사이드 배저에 결제를 기록하세요."
+    - q: "제안된 결제를 끌 수 있나요?"
+      a: "아니요. 간소화는 항상 켜져 있고, **모두 보기**를 누르면 나와 관련된 결제뿐 아니라 그룹의 모든 제안된 결제가 표시됩니다."
+    - q: "유로와 파운드는 왜 따로 관리되나요?"
+      a: "지출이나 결제를 입력할 때 환산하지 않는 한 잔액은 결제한 통화로 유지됩니다. 서로 다른 통화의 빚은 절대 상쇄되지 않습니다."
+    - q: "일부만 지불하면 어떻게 되나요?"
+      a: "지불한 부분을 기록하세요. 나머지는 지불될 때까지 잔액에 남습니다."
+    - q: "항상 가능한 가장 적은 결제 횟수인가요?"
+      a: "보장되지는 않습니다. 해당 통화에 잔액이 있는 사람 수보다 항상 적은 결제를 제안하므로, 네 명이라면 세 건을 넘지 않아요. 룸메이트 예시에서는 한 사람씩 직접 갚으면 6건이던 것이 2건이 됩니다."

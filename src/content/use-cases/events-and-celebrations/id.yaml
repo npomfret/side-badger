@@ -1,0 +1,92 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: checked
+  checker: "T1-check"
+  date: "2026-10-15"
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+meta:
+  title: "Bagi biaya pesta, pernikahan, dan kado bersama"
+  description: "Bagi biaya pesta, pernikahan, atau kado bersama saat orang urunan dengan jumlah berbeda. Voting untuk rencana, bagi berdasarkan jumlah pasti, dan lihat siapa berutang kepada siapa."
+h1: "Bagi biaya pesta, pernikahan, dan kado bersama"
+navLabel: "Acara dan perayaan"
+lead: "Bagi deposit, dekorasi, dan payung darurat. Serahkan denah tempat duduk kepada orang yang lebih berani. Side Badger menyimpan **siapa urunan berapa** di satu tempat, sehingga penyelenggara juga bisa menikmati pestanya."
+cta:
+  heading: "Mulai dengan perayaan berikutnya"
+  body: "Buat akun, buat grup untuk acara, dan kirim tautan undangan. Side Badger gratis, tanpa iklan dan tanpa batas harian."
+  button: "Buat akun gratis"
+scenario:
+  heading: "Semua orang urunan, tidak selalu dengan jumlah sama"
+  body: "Seseorang membayar deposit tempat, orang lain membeli kue, dan orang ketiga membayar kado bersama dengan kartunya sendiri. Sebagian tamu datang ke semuanya dan sebagian hanya makan malam. Menjaga hitungan yang adil dari semua itu di utas obrolan adalah pekerjaan yang tak dilamar siapa pun. Grup Side Badger menampung semuanya, apa pun campuran jumlahnya, dan menunjukkan kepada tiap orang apa yang harus dibayar atau diterimanya. Lihat [cara kerja](page:how-it-works) untuk dasar-dasarnya, atau lanjut membaca untuk sebuah acara."
+sections:
+  - heading: "Putuskan bersama"
+    body: "Sebelum ada uang yang bergerak, ajukan pilihan lewat **polling**. Tambahkan hingga 10 opsi, seperti dua tempat atau tiga ide kado, dan biarkan semua orang memilih. Anda bisa menyembunyikan siapa memilih apa, sehingga setiap opsi mendapat pertimbangan yang adil, dan pemenangnya muncul setelah polling ditutup. Tak ada yang perlu menggulir kembali empat puluh pesan untuk tahu apa yang diputuskan."
+  - heading: "Siapa ikut apa"
+    body: "Tidak semua orang membayar sama, dan tidak semua orang ikut dalam setiap biaya. Bagi pengeluaran secara merata, persentase, atau **jumlah pasti**, sehingga bagian tiap orang adalah angka yang disepakati. Keluarkan siapa pun yang tidak terlibat, seperti tamu yang melewatkan makan malam atau teman yang tidak ikut kado. Setiap pengeluaran punya satu pembayar, dan semua orang lain dalam pembagian berutang bagiannya kepada mereka. Detailnya ada di halaman [bagi pengeluaran](page:feature/split-expenses)."
+  - heading: "Simpan dokumennya"
+    body: "Tambahkan catatan ke pengeluaran, seperti apa yang dicakup biayanya. Komentar tetap **di samping pengeluaran** yang dibicarakan, jadi pertanyaan \"kuenya £45 atau £54?\" dan jawabannya ada di tempat yang sama. Komentar bisa sampai 500 karakter, cukup untuk pertanyaan soal deposit."
+  - heading: "Kendali penyelenggara"
+    body: "Kolaborasi terbuka memungkinkan anggota mana pun menambah dan mengubah pengeluaran, yang cukup untuk kado kecil. Untuk pernikahan atau pesta yang lebih besar, pilih preset **Grup terkelola**. Admin menyetujui tiap anggota baru, dan hanya pembuat serta admin yang bisa mengubah pengeluaran. Undang orang dengan tautan atau kode QR; dengan persetujuan aktif, admin meloloskan tiap orang, sehingga daftar tamu tetap daftar tamu. Setelah acara selesai, kunci grup agar angkanya tetap."
+  - heading: "Lunasi setelah pesta"
+    body: "Setelah faktur terakhir masuk, saldo menunjukkan **siapa berutang kepada siapa**, dan Side Badger menyarankan daftar pembayaran singkat yang melunasi semua orang. Bayar satu sama lain dengan cara apa pun yang Anda suka, lalu catat pembayarannya di grup. Side Badger tidak pernah memindahkan uang, jadi grup menjaga hitungan sementara transfer terjadi di aplikasi perbankan Anda sendiri. Halaman [pelunasan](page:feature/settle-up) menunjukkan bagaimana kekusutan menjadi daftar singkat."
+exampleAfter: 5
+example:
+  heading: "Kado bersama: enam suara setuju, £150 untuk dibagi"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Kado bersama"
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: "Fitur yang dipakai di sini"
+faq:
+  heading: "Pertanyaan"
+  items:
+    - q: "Bisakah tamu melihat grup tanpa bergabung?"
+      a: "Tidak. Orang bergabung dengan tautan atau kode QR dan akun gratis, jadi mereka bisa melihat grup setelah masuk."
+    - q: "Bisakah Side Badger menagih uangnya?"
+      a: "Tidak. Side Badger menyimpan hitungan dan tidak pernah memindahkan uang. Bayar satu sama lain dengan cara apa pun yang Anda suka, lalu catat pembayarannya. Gratis, tanpa iklan dan tanpa batas harian; lihat [harga](page:pricing)."
+    - q: "Bisakah suara dibuat anonim?"
+      a: "Ya. Saat membuat polling Anda bisa menyembunyikan siapa memilih apa. Pengaturannya hanya bisa diubah sebelum suara pertama."
+    - q: "Bisakah orang urunan dengan jumlah berbeda?"
+      a: "Ya. Bagi pengeluaran berdasarkan jumlah pasti, sehingga bagian tiap orang adalah angka yang disepakati, atau keluarkan orang yang tidak terlibat."
+    - q: "Bisakah penyelenggara memegang pembukuan?"
+      a: "Ya. Pakai preset grup terkelola, sehingga hanya pembuat dan admin yang mengubah pengeluaran dan admin menyetujui anggota baru."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name

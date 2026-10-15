@@ -1,0 +1,107 @@
+translatedFrom: "fd23c99b"
+review:
+  status: checked
+  checker: "T1-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+meta:
+  title: Side Badgerの使い方 | 5つのステップでグループの費用を割り勘
+  description: グループを作り、メンバーを招待し、支出を追加して精算します。「誰かが払った」から「これでおあいこ」までの流れを、実例つきで紹介します。
+h1: Side Badgerの使い方
+navLabel: 使い方
+lead: 「誰かが払った」から「これでおあいこ」までに何が起きるのでしょう。5つのステップ、表計算シートなし、そしてほぼ飾りのアナグマが1匹。最初のグループから最後に記録する支払いまで、全体の流れをご紹介します。各ステップの詳細は、[割り勘の仕方](page:feature/split-expenses)と[精算](page:feature/settle-up)をご覧ください。
+cta:
+  heading: 「ここは私が払うよ」から「これでおあいこ」まで
+  body: 無料アカウントを作成し、グループを始めて、最初の支出を追加しましょう。アナグマはレシートを批評しません。
+  button: 無料アカウントを作成
+steps:
+  - title: グループを作る
+    body: 家、旅行、イベントごとに1つずつグループを作れば、家賃が結婚祝いと同じリストに紛れ込むこともありません。名前を付け、メンバーに表示される自分の名前を選び、必要なら使える通貨を制限します。ダッシュボードには、すべてのグループと、それぞれでの自分の立場が1画面に表示されます。
+    shot: S02
+    shotAlt: 通貨の制限セクションを開いたグループ作成ダイアログ
+  - title: メンバーを招待する
+    body: 参加リンクを共有するかQRコードを見せ、有効期間を15分から最大5日まで設定します。参加する人は全員、無料アカウントと確認済みのメールアドレスが必要で、1つのグループには最大50人が入れます。入る人を確認したい場合は承認をオンにすると、管理者が一人ずつ許可します。
+    shot: S03
+    shotAlt: リンクタブの招待ダイアログ。QRコードと有効期間の選択肢が表示されている
+  - title: 支出をその場で追加する
+    body: 誰が、いくら支払い、誰のためだったかを入力します。均等、金額指定、割合指定のどれかで分割し、関係のなかった人は外せます。支出を追加すると、全員にすぐ表示され、何が変わったか、誰が変えたかもわかります。
+    shot: S05
+    shotAlt: 家賃を部屋の広さに応じて割合で分割している支出フォーム
+  - title: 残高を確認する
+    body: Side Badgerは通貨ごとに現在の残高を記録するので、誰が誰に借りているかがひと目でわかります。小さな貸し借りが絡み合ったままにせず、グループを精算できる短い支払いリストを提案します。
+    shot: S10
+    shotAlt: 2つの通貨で簡略化された債務を表示し、「すべて表示」をオンにした残高画面
+  - title: アプリの外で精算し、アプリの中で記録する
+    body: Side Badgerがお金を動かすことはありません。支払いは好きな方法で行い、そのあと支払いを記録すれば残高に反映され、全員の画面が更新なしで切り替わります。「精算済み」とは、残高がゼロになった状態のことです。債務や債権が残っている間はグループを退出できないので、抜ける人は先に精算します。
+    shot: S11
+    shotAlt: クイック精算ボタンと一部支払いの通知が表示された支払いフォーム
+requirements:
+  heading: 必要なもの
+  items:
+    - 無料アカウント。必要なのはメールアドレスとパスワードだけで、何かを追加する前にメールアドレスの確認が必要です。
+    - 18歳以上であること。
+    - スマートフォンまたはパソコンの最新ブラウザと、インターネット接続。Side Badgerはアプリストアのアプリではなく、オフラインでは動作しません。
+    - 必要に応じて、ホーム画面の置き場所。アプリストアは不要で、Side Badgerをホーム画面やドックに追加すればアプリのように開きます。
+example:
+  heading: 飲み会のあとの3人
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: 夕食
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: タクシー
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: 39の言語に対応し、より多くの人のために
+    body: Side Badgerは、右から左に書くアラビア語、ペルシア語、ウルドゥー語を含む39の言語で使えます。グループの全員が自分の言語を選べるので、グループページが、ある人にはアラビア語、次の人には英語で表示されることもあります。キーボードやスクリーンリーダーを使う人にも配慮して作られており、メンバーの色にはパターンが付くので、緑と赤を見分ける必要もありません。
+faq:
+  heading: よくある質問
+  items:
+    - q: 全員にアカウントが必要ですか？
+      a: はい、無料のものが必要です。各自が、何かを追加する前にメールアドレスを確認します。
+    - q: アプリはありますか？
+      a: ブラウザで動作し、ホーム画面やドックに追加すればアプリのように開きます。アプリストア版はなく、オフラインモードもありません。
+    - q: Side Badgerはお金を動かしますか？
+      a: いいえ。残高を管理して支払いを提案するだけで、支払いは好きな方法で行います。そのあと支払いを記録します。[精算](page:feature/settle-up)をご覧ください。
+    - q: お金を借りたまま抜けることはできますか？
+      a: いいえ。債務や債権が残っている間はグループを退出できないので、先に精算します。
+    - q: 1つのグループに何人まで参加できますか？
+      a: 1つのグループに最大50人です。リンクまたはQRコードで招待でき、管理者に一人ずつ許可してほしい場合は承認をオンにします。
+    - q: 通貨が複数ある旅行はどうなりますか？
+      a: 残高は通貨ごとに別々に管理されます。[複数の通貨](page:feature/multiple-currencies)をご覧ください。

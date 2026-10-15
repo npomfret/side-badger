@@ -1,0 +1,110 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: checked
+  checker: "T1-check"
+  date: "2026-10-15"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "그룹 여행 비용을 140개 통화로 나누기"
+  description: "그룹 여행에서 누가 무엇을 결제했는지 기록하고, 현지 통화로 비용을 입력하고, 환산하거나 하지 않고, 마지막에 한 번에 정산하세요. 무료이며 브라우저에서 작동합니다."
+h1: "그룹 여행 비용을 140개 통화로 나누기"
+navLabel: "그룹 여행"
+lead: "빌라, 택시, 그리고 아무도 사겠다고 한 기억이 없는 칵테일 한 라운드를 기록하세요. 사이드 배저는 여행하는 동안 계속 계산을 이어 가고, [파운드, 유로, 그 밖의 138개 통화](page:feature/multiple-currencies)를 다루며, 집에 돌아오면 [짧은 결제 목록](page:feature/settle-up)을 줍니다."
+cta:
+  heading: "햇볕에 탄 피부가 가라앉기 전에 끝내는 휴가 계산"
+  body: "그룹을 만들고, 여행 멤버에게 초대 링크를 보내고, 비용이 생기는 대로 추가하세요."
+  button: "무료 계정 만들기"
+scenario:
+  heading: "모두가 무언가를 결제했는데, 통화는 제각각"
+  body: "누군가는 항공권을 예약했고, 다른 누군가는 빌라를 카드로 결제했고, 세 번째 사람은 저녁을 현금으로 냈습니다. 사흘째가 되면 누가 앞서 있는지 아무도 모릅니다. 질문은 간단한데, 답은 대개 아무도 열기 싫어하는 스프레드시트에 있어요. 누가 어떤 통화로 무엇을 결제했고, 마지막에 모두 어떻게 정산할까요?"
+sections:
+  - heading: "떠나기 전에"
+    body: "빌라 후보를 투표에 부치세요. 원하면 익명으로 해서, 결정이 가장 오래 토라진 사람이 아니라 그룹의 것이 되게 하세요. 그런 다음 공유 장보기 목록을 장보기 비용 옆에 두면 선크림을 세 통 사고 플러그 어댑터는 하나도 못 사는 일이 없습니다."
+  - heading: "여행하는 동안"
+    body: "비용이 생길 때마다 결제한 통화로 추가하세요. 영수증을 찍으면 사이드 배저가 합계, 날짜, 장소를 채워 주니 확인만 하면 되고, 영수증 이미지는 Google의 AI 서비스가 읽습니다. 현재 환율로 금액을 환산할 수 있고, 실제로 적용받은 환율로 바꿀 수도 있으며, 원래 금액은 지출에 그대로 남습니다. 아니면 유로는 유로 그대로 두고 나중에 정해도 됩니다. 그룹이 통화 하나를 정해 두면 새 지출이 자동으로 그 통화로 환산됩니다."
+  - heading: "모두가 모든 걸 한 건 아니니까"
+    body: "누구는 저녁을 건너뛰었고, 누구는 보트 투어를 빠졌죠. 참여하지 않은 비용에서는 그 사람들을 빼고, 나머지는 [똑같이, 정확한 금액으로, 또는 비율로](page:feature/split-expenses) 나누세요. 여행 중 잠으로 보낸 부분의 비용을 내는 사람은 없습니다."
+  - heading: "집에 돌아와서 한 번에 정산하기"
+    body: "사이드 배저는 모두를 정산해 주는 짧은 결제 목록을 제안합니다. 원하는 방법으로 서로 지불한 다음 기록하세요. 통화가 섞여 있다면 통화마다 따로 두거나 하면서 환산할 수 있고, 아래 리스본 예시에서 두 방식을 모두 볼 수 있습니다."
+  - heading: "총각·처녀 파티 주말"
+    body: "주인공이 있는 주말 여행에는 관리가 조금 더 필요합니다. 관리자가 새 멤버를 승인하고 만든 사람과 관리자만 지출을 바꿀 수 있는 관리 그룹으로 만드세요. 주인공의 몫에는 정확한 금액을 쓰고, 실제로 쓰는 통화로 그룹을 제한하고, 끝나면 그룹을 잠가서 숫자가 그대로 유지되게 하세요."
+exampleAfter: 4
+example:
+  heading: "리스본의 네 친구"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "항공권"
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: "빌라"
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: "저녁 식사"
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "보트 투어"
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: "여행이 기대는 기능"
+faq:
+  heading: "자주 묻는 질문"
+  items:
+    - q: "저녁을 건너뛴 사람은 뺄 수 있나요?"
+      a: "네. 각 지출에 참여한 사람을 고르면 그 사람들만 비용을 부담합니다."
+    - q: "신호가 없어도 작동하나요?"
+      a: "아니요. 사이드 배저는 인터넷 연결이 필요하므로, 와이파이가 되는 곳에 돌아오면 비용을 추가하세요."
+    - q: "모두 뭔가를 설치해야 하나요?"
+      a: "아니요. 브라우저에서 실행됩니다. 초대 링크를 보내면 휴대폰으로 바로 참여할 수 있어요."
+    - q: "어떤 환율을 사용하나요?"
+      a: "지출을 입력할 때의 현재 환율, 또는 다른 환율을 적용받았다면 직접 입력한 환율입니다. 환율은 지출을 저장할 때 고정되므로 이전 지출은 절대 재평가되지 않습니다."
+    - q: "여행이 끝나면 그룹을 고정할 수 있나요?"
+      a: "네. 관리자가 그룹을 잠가서 숫자가 그대로 유지되게 할 수 있습니다."
+    - q: "금액에 한도가 있나요?"
+      a: "네. 지출 한 건당 해당 통화로 999,999.99입니다."

@@ -1,0 +1,92 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: checked
+  checker: "T1-check"
+  date: "2026-10-15"
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+meta:
+  title: Hatiin ang gastos sa handaan, kasal, at regalo ng grupo
+  description: Pagsaluhan ang gastos sa handaan, kasal, o regalo ng grupo kapag magkakaiba ang ambag ng bawat isa. Magbotohan sa plano, maghati ayon sa eksaktong halaga, at tingnan kung sino ang may utang kanino.
+h1: Hatiin ang gastos sa handaan, kasal, at regalo ng grupo
+navLabel: Mga event at selebrasyon
+lead: Hatiin ang deposit, dekorasyon, at pang-emergency na payong. Ipaubaya ang seating plan sa mas matapang. Pinapanatili ng Side Badger sa iisang lugar ang **kung sino ang nag-ambag ng magkano**, para ma-enjoy din ng organizer ang handaan.
+cta:
+  heading: Magsimula sa susunod na selebrasyon
+  body: Gumawa ng account, gumawa ng grupo para sa event, at ipadala ang invite link. Libre ang Side Badger, walang ad at walang pang-araw-araw na limitasyon.
+  button: Gumawa ng libreng account
+scenario:
+  heading: Lahat ay nag-aambag, hindi laging pare-pareho ang halaga
+  body: May nagbabayad ng deposit sa venue, may bumibili ng cake, at may ikatlong naglalagay ng regalo ng grupo sa sarili niyang card. May mga bisitang pumupunta sa lahat at may mga sa hapunan lang. Walang nag-apply sa trabahong panatilihin ang patas na bilang niyan sa chat thread. Hawak ng grupo sa Side Badger ang lahat, anuman ang pinaghalong halaga, at ipinapakita nito sa bawat tao kung ano ang utang o dapat niyang makuha. Tingnan ang [paano ito gumagana](page:how-it-works) para sa mga batayan, o magbasa pa para sa isang event.
+sections:
+  - heading: Magdesisyon nang sama-sama
+    body: Bago gumalaw ang anumang pera, ipaboto ang pagpili sa isang **poll**. Magdagdag ng hanggang 10 opsyon, gaya ng dalawang venue o tatlong ideya ng regalo, at hayaang bumoto ang lahat. Puwede mong itago kung sino ang bumoto sa ano, para mabigyan ng patas na pagkakataon ang bawat opsyon, at lalabas ang panalo kapag sarado na ang poll. Walang kailangang mag-scroll pabalik sa apatnapung mensahe para malaman kung ano ang napagpasyahan.
+  - heading: Sino ang kasali sa ano
+    body: Hindi pare-pareho ang bayad ng lahat, at hindi kasali ang lahat sa bawat gastos. Hatiin ang isang gastos nang pantay, ayon sa porsyento, o ayon sa **eksaktong halaga**, para ang bahagi ng bawat tao ay ang halagang napagkasunduan. Huwag isama ang mga hindi kasali, gaya ng mga bisitang lumaktaw sa hapunan o mga kaibigang hindi sumali sa regalo. Isang nagbabayad ang bawat gastos, at utang sa kanya ng lahat ng iba pa sa hati ang bahagi nila. Nasa pahina ng [paghahati ng gastos](page:feature/split-expenses) ang mga detalye.
+  - heading: Itago ang mga papeles
+    body: Magdagdag ng mga tala sa isang gastos, gaya ng kung ano ang sakop ng bayad. Nananatili ang mga komento **katabi ng gastos** na pinag-uusapan, kaya nasa iisang lugar ang tanong na “£45 ba o £54 ang cake?” at ang sagot nito. Hanggang 500 character ang mga komento, na sapat na sa tanong tungkol sa deposit.
+  - heading: Mga kontrol ng organizer
+    body: Hinahayaan ng bukas na pagtutulungan ang sinumang miyembro na magdagdag at mag-edit ng mga gastos, na ayos para sa maliit na regalo. Para sa kasal o mas malaking handaan, piliin ang preset na **Pinamamahalaang grupo**. Inaaprubahan ng mga admin ang bawat bagong miyembro, at tanging mga creator at admin lang ang makakapagbago ng mga gastos. Mag-imbita gamit ang link o QR code; kapag naka-on ang approval, papapasukin ng admin ang bawat tao, kaya nananatiling guest list ang guest list. Kapag tapos na ang event, i-lock ang grupo para manatili ang mga numero.
+  - heading: Mag-settle pagkatapos ng handaan
+    body: Kapag pumasok na ang huling invoice, ipinapakita ng mga balanse **kung sino ang may utang kanino**, at nagmumungkahi ang Side Badger ng maikling listahan ng mga bayad na nagse-settle sa lahat. Magbayaran kayo sa paraang gusto ninyo, saka itala ang bayad sa grupo. Hindi kailanman naglilipat ng pera ang Side Badger, kaya hawak ng grupo ang bilang habang nangyayari ang mga transfer sa sarili ninyong banking app. Ipinapakita ng pahina ng [settle up](page:feature/settle-up) kung paano nagiging maikling listahan ang gusot.
+exampleAfter: 5
+example:
+  heading: 'Regalo ng grupo: anim na boto para rito, £150 ang hahatiin'
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: Regalo ng grupo
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: Ang mga feature na ginagamit dito
+faq:
+  heading: Mga tanong
+  items:
+    - q: Makikita ba ng mga bisita ang grupo nang hindi sumasali?
+      a: Hindi. Sumasali ang mga tao gamit ang link o QR code at isang libreng account, kaya makikita nila ang grupo kapag nasa loob na sila.
+    - q: Puwede bang mangolekta ng pera ang Side Badger?
+      a: Hindi. Nagbibilang lang ang Side Badger at hindi ito naglilipat ng pera. Magbayaran kayo sa paraang gusto ninyo, saka itala ang bayad. Libre ito, walang ad at walang pang-araw-araw na limitasyon; tingnan ang [presyo](page:pricing).
+    - q: Puwede bang anonymous ang mga boto?
+      a: Oo. Kapag gumawa ka ng poll, puwede mong itago kung sino ang bumoto sa ano. Maaari lang baguhin ang mga setting bago ang unang boto.
+    - q: Puwede bang magkakaiba ang ambag ng mga tao?
+      a: Oo. Hatiin ang gastos ayon sa eksaktong halaga, para ang bahagi ng bawat tao ay ang halagang napagkasunduan, o huwag isama ang mga hindi kasali.
+    - q: Puwede bang mag-asikaso ng pera ang isang organizer?
+      a: Oo. Gamitin ang preset na Pinamamahalaang grupo, para tanging mga creator at admin lang ang magbabago ng mga gastos at aprubahan ng mga admin ang mga bagong miyembro.

@@ -1,0 +1,111 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: checked
+  checker: "T1-check"
+  date: "2026-10-15"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+meta:
+  title: Hatiin ang gastos sa group trip, sa 140 pera
+  description: Subaybayan kung sino ang nagbayad ng ano sa group trip, ilagay ang gastos sa lokal na pera, i-convert o hindi, at mag-settle nang isang beses sa dulo. Libre, sa browser mo.
+h1: Hatiin ang gastos sa group trip, sa 140 pera
+navLabel: Mga group trip
+lead: Subaybayan ang villa, ang taxi, at ang isang round ng cocktail na walang naaalalang nag-volunteer bumili. Nagtatabi ang Side Badger ng tumatakbong bilang habang wala ka, [kayang hawakan ang pounds, euro, at 138 pang pera](page:feature/multiple-currencies), at ibibigay ang [maikling listahan ng mga bayad](page:feature/settle-up) pag-uwi ninyo.
+cta:
+  heading: Kuwenta ng bakasyon, tapos bago pa kumupas ang tan
+  body: Gumawa ng grupo, ipadala ang invite link sa mga kasama sa biyahe, at idagdag ang mga gastos habang nangyayari.
+  button: Gumawa ng libreng account
+scenario:
+  heading: Lahat ay nagbayad ng kung ano, sa kung anong pera
+  body: May nag-book ng mga flight, may isa pang naglagay ng villa sa card, at may ikatlong nagbayad ng hapunan nang cash. Pagdating ng ikatlong araw, walang nakakaalam kung sino ang nauuna. Simple ang tanong, kahit madalas nasa spreadsheet na ayaw buksan ng sinuman ang sagot. Sino ang nagbayad ng ano, sa anong pera, at paano mag-settle ang lahat nang isang beses sa dulo?
+sections:
+  - heading: Bago kayo umalis
+    body: Ipaboto ang shortlist ng villa, nang anonymous kung gusto, para sa grupo ang desisyon at hindi sa pinakamatagal magtampo. Saka ilagay ang shared na listahan ng bibilhin sa tabi ng mga bayarin sa pamimili, para walang bibili ng tatlong sunscreen at walang plug adaptor.
+  - heading: Habang wala kayo
+    body: Idagdag ang bawat gastos habang nangyayari, sa perang ginamit mo sa pagbayad. Kunan ng litrato ang resibo at pupunan ng Side Badger ang kabuuan, petsa, at lugar para suriin mo; binabasa ng AI service ng Google ang mga larawan ng resibo. I-convert ang halaga sa kasalukuyang exchange rate, na mababago mo sa rate na aktuwal mong nakuha, at mananatili sa gastos ang orihinal na halaga. O hayaang euro ang euro at magpasya mamaya. Puwede ring pumili ng isang pera ang grupo, at kusang iko-convert dito ang mga bagong gastos.
+  - heading: Hindi lahat ay sumali sa lahat
+    body: May nilaktawan ang hapunan, may hindi sumama sa bangka. Huwag silang isama sa mga gastos na hindi nila kasali, at hatiin ang natitira [nang pantay, ayon sa eksaktong halaga, o ayon sa porsyento](page:feature/split-expenses). Walang magbabayad para sa bahagi ng biyaheng ginugol nila sa pagtulog.
+  - heading: Mag-settle pag-uwi
+    body: Nagmumungkahi ang Side Badger ng maikling listahan ng mga bayad na nagse-settle sa lahat. Magbayaran kayo sa paraang gusto ninyo, saka itala. Kung magkakaiba ang pera, panatilihing magkahiwalay ang bawat isa o mag-convert habang tumatakbo; ipinapakita ng halimbawa sa Lisbon sa ibaba ang dalawa.
+  - heading: Bachelor at bachelorette weekend
+    body: Mas maraming asikaso ang weekend na may bida. Gawin itong pinamamahalaang grupo, kung saan inaaprubahan ng mga admin ang mga bagong miyembro at tanging mga creator at admin lang ang makakapagbago ng mga gastos. Gumamit ng eksaktong halaga para sa bahagi ng bida, limitahan ang grupo sa mga perang talagang ginagamit ninyo, at i-lock ang grupo kapag tapos na para manatili ang mga numero.
+exampleAfter: 4
+example:
+  heading: Apat na magkakaibigan sa Lisbon
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: Mga flight
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: Villa
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: Hapunan
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: Biyahe sa bangka
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: Ang sinasandalan ng isang biyahe
+faq:
+  heading: Mga tanong
+  items:
+    - q: Puwede bang hindi isama ang mga nilaktawan ang hapunan?
+      a: Oo. Piliin kung sino ang kasali sa bawat gastos at sila lang ang sisingilin dito.
+    - q: Gumagana ba ito kapag walang signal?
+      a: Hindi. Kailangan ng Side Badger ng koneksyon, kaya idagdag ang mga gastos pagbalik ninyo sa wifi.
+    - q: Kailangan bang mag-install ng kahit ano ang lahat?
+      a: Hindi. Gumagana ito sa browser. Ipadala ang invite link at sasali ang mga tao mula sa telepono nila.
+    - q: Anong exchange rate ang ginagamit nito?
+      a: Kasalukuyang exchange rate kapag inilagay mo ang gastos, o sarili mong rate kung iba ang nakuha mo. Nakapirmi ang rate kapag na-save ang gastos, kaya hindi kailanman muling binabalyuhan ang mga lumang gastos.
+    - q: Puwede ba naming i-freeze ang grupo pagkatapos ng biyahe?
+      a: Oo. Maaaring i-lock ng admin ang grupo para manatili ang mga numero.
+    - q: May limitasyon ba sa halaga?
+      a: Mayroon. 999,999.99 bawat gastos, sa sarili nitong pera.

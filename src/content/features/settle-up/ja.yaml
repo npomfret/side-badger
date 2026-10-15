@@ -1,0 +1,111 @@
+translatedFrom: "1b51f540"
+review:
+  status: checked
+  checker: "T1-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: 少ない支払い回数で精算 | Side Badger
+  description: グループの誰が誰に借りているかを確認し、全員を精算できる短い支払いリストを受け取り、支払いはその都度記録できます。無料でご利用いただけます。
+h1: 少ない支払い回数で精算
+navLabel: 精算
+lead: Side Badgerはグループ全員の現在の残高を記録し、それを精算できる短い支払いリストを提案します。支払いは好きな方法で行い、そのあと記録します。まず数字の分け方を知りたい場合は、[割り勘の仕方](page:feature/split-expenses)から始めてください。
+cta:
+  heading: 誰が誰に借りているか、すっきりさせませんか？
+  body: アカウントを作成し、グループを始めて、最初の支出を追加しましょう。あとは残高が引き継ぎます。
+  button: 無料アカウントを作成
+problem:
+  heading: 追加するたびに更新される残高
+  body: 支出が増えるたびに誰が誰に借りているかが変わるので、Side Badgerは支出と支払いが追加されるたびに残高を最新に保ちます。グループの全員に変更がすぐ表示され、何が変わったか、誰が変えたかもわかります。残高は通貨ごとに管理され、入力時に換算した場合を除き、ユーロとポンドはそれぞれ別の列に表示されます。初期設定では自分に関係する債務が表示され、**すべて表示**を押すとグループ全体が一覧できます。
+workflow:
+  heading: 3ステップでおあいこ
+  steps:
+    - title: 誰が誰に借りているかを見る
+      body: グループの残高を開くと、自分が支払う金額、受け取る金額、そして全員を精算できる短い支払いリストが通貨ごとに表示されます。質問中の支出は、解決するまで計算に含まれません。下のルームメイトの例では、6回の支払いが2回になります。
+      shot: S10
+      shotAlt: 2つの通貨で簡略化された債務を表示し、「すべて表示」をオンにした残高画面
+    - title: 好きな方法で支払い、そのあと記録する
+      body: 銀行振込、現金、前回の旅行で貸したままの恩返し。Side Badgerがお金を動かすことはありません。お金が渡ったら支払いを記録すると、全員の残高が更新されます。
+      shot: S11
+      shotAlt: クイック精算ボタンと、一部支払いの場合の通知が表示された支払いフォーム
+    - title: 反映されたか確認する
+      body: 支払いはグループの履歴に残り、グループの全員が見られて、絵文字でリアクションできます。支払いが届いたら、お祝いしましょう。
+      shot: S12
+      shotAlt: 支払いに絵文字リアクションが付いた支払い履歴
+options:
+  heading: オプション
+  items: []
+example:
+  heading: 絡み合った貸し借りから、短いリストへ
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: 電気代
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: インターネット
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: 食料品
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: 支払いを記録する
+    body: 誰かが支払ったら、正しい相手に対して記録します。クイック精算ボタンは、提案された支払いから金額を入力してくれ、「銀行振込」などのメモ（500文字まで）も追加できます。支払う金額の一部だけを支払った場合、残りは残高に残ります。金額が少なすぎたり多すぎたりすると、保存の前にSide Badgerが警告します。支払いの記録には支出を編集する権限が必要で、日付を未来にすることはできません。
+  - heading: 別の通貨で支払った場合は？
+    body: 残高は支払われた通貨のままなので、ユーロの債務はユーロのままです。ユーロを借りていて、ポンドで支払いますか？入力時に支払いを換算できます。現在の為替レートでも、実際に適用されたレートでも構いません。レートは支払いを保存した時点で固定されます。換算の仕組みは[複数の通貨](page:feature/multiple-currencies)で、実際の使い方は[グループ旅行](page:use-case/group-trips)で紹介しています。
+  - heading: 確認できる履歴
+    body: 記録された支払いはすべて、日付、金額、メモとともにグループの履歴に残ります。支払いを編集できるのは記録した本人だけで、削除できるのは本人かグループの管理者です。グループを退出した人が関わる支払いはロックされます。ルームメイトの具体例は、[ルームメイト](page:use-case/housemates)をご覧ください。
+limits:
+  heading: Side Badgerにできないこと
+  items:
+    - Side Badgerは、お金を動かしたり、支払いリンクや支払いリクエストを送ったりしません。アプリ内の支払いは、別の場所で行った支払いの記録です。
+    - 提案される支払いは、通貨ごとに適用される単純なマッチング方法で求められます。その通貨で残高のある人数より常に少ない回数を提案しますが（4人なら最大3回）、可能な最小の回数が見つかるとは限りません。
+    - 提案をオフにすることはできません。**すべて表示**は、自分に関するものだけでなく、グループ内で提案されたすべての支払いを一覧にします。
+    - 入力時に換算された支出を除き、異なる通貨同士が相殺されることはありません。
+    - リマインダーはないので、支払いの催促は引き続きご自身で行ってください。
+useCasesHeading: 精算が役立つ場面
+faq:
+  heading: よくある質問
+  items:
+    - q: Side Badgerがお金を送りますか？
+      a: いいえ。支払いは好きな方法で行い、そのあとSide Badgerに支払いを記録すると残高が更新されます。
+    - q: 提案される支払いをオフにできますか？
+      a: いいえ。簡略化は常にオンで、**すべて表示**は、自分に関係するものだけでなく、グループ内で提案されたすべての支払いを一覧にします。
+    - q: なぜユーロとポンドは別々なのですか？
+      a: 支出や支払いの入力時に換算しない限り、残高は支払った通貨のままです。異なる通貨の債務が互いに相殺されることはありません。
+    - q: 誰かが借りている金額の一部だけを支払った場合は？
+      a: 支払った分を記録してください。残りは、支払われるまで残高に残ります。
+    - q: これは常に最小の支払い回数ですか？
+      a: 保証はされません。その通貨で残高のある人数より常に少ない回数を提案するので、4人なら3回を超えることはありません。ルームメイトの例では、一人ひとりに直接返すと6回かかるところが、2回になります。

@@ -1,0 +1,111 @@
+translatedFrom: "1b51f540"
+review:
+  status: checked
+  checker: "T1-check"
+  date: "2026-10-15"
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: 用更少的付款笔数结清 | Side Badger
+  description: 看看群组里谁欠谁，得到一份让所有人结清的简短付款清单，并随时记录每一笔付款。免费使用。
+h1: 用更少的付款笔数结清
+navLabel: 结算
+lead: Side Badger 为群组里的每个人保持一份持续更新的余额，并建议一份简短的付款清单来结清。你们想怎么付就怎么付，然后记录下来。如果想先看看数字是怎么分的，请从[分摊支出](page:feature/split-expenses)开始。
+cta:
+  heading: 准备好理清谁欠谁了吗？
+  body: 创建账户，建一个群组，添加第一笔支出。余额会接手后面的事。
+  button: 创建免费账户
+problem:
+  heading: 随时更新的余额
+  body: 每笔支出都会改变谁欠谁，所以每当有支出和付款加入，Side Badger 都会让余额保持最新。群组里每个人都能立即看到变化，以及改了什么、是谁改的。余额按货币分别记录，所以欧元和英镑各在各的栏里，除非某笔支出在录入时做了换算。默认情况下你只看到与你相关的债务；**显示全部**会列出整个群组。
+workflow:
+  heading: 三步两清
+  steps:
+    - title: 看看谁欠谁
+      body: 打开群组余额，查看你欠多少、别人欠你多少，以及一份让所有人结清的简短付款清单，按货币分别算出。被质疑的支出在问题解决之前不计入。在下面的室友示例中，六笔付款变成了两笔。
+      shot: S10
+      shotAlt: 余额界面，显示两种货币的简化债务，并已开启“显示全部”
+    - title: 想怎么付就怎么付，然后记录下来
+      body: 银行转账、现金，或是上次假期欠下的人情。Side Badger 不转移资金。钱到手之后，记录这笔付款，所有人的余额都会更新。
+      shot: S11
+      shotAlt: 付款表单，带有快速结算按钮和部分付款时显示的提示
+    - title: 确认已经到账
+      body: 付款会进入群组历史，群组里每个人都能看到，还能用表情回应。付款到账时，不妨庆祝一下。
+      shot: S12
+      shotAlt: 付款历史，一笔付款上带有表情回应
+options:
+  heading: 选项
+  items: []
+example:
+  heading: 从一团乱麻到一份简短清单
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: 电费
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: 网费
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: 杂货
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: 记录一笔付款
+    body: 有人付款时，把它记在正确的人名下。快速结算按钮会根据你得到的建议付款填好金额，你还可以添加备注，比如“银行转账”（最多 500 个字符）。只付了所欠的一部分，剩下的仍留在余额上。如果输入的金额过少或过多，Side Badger 会在保存前提醒你。记录付款需要编辑支出的权限，日期也不能在未来。
+  - heading: 用另一种货币付款？
+    body: 余额保持付款时所用的货币，所以欧元的债务仍是欧元的债务。欠的是欧元，付的是英镑？没问题。录入付款时也可以换算，按当前汇率或你实际换到的汇率。汇率在保存付款时固定下来。[多种货币](page:feature/multiple-currencies)介绍换算的工作方式，[团体旅行](page:use-case/group-trips)展示了实际用法。
+  - heading: 可以查证的历史
+    body: 每笔已记录的付款都会连同日期、金额和备注留在群组历史中。只有记录这笔付款的人可以编辑，他们或群组管理员可以删除。涉及已退出群组之人的付款会被锁定。想看一个完整的室友场景，请看[室友](page:use-case/housemates)。
+limits:
+  heading: Side Badger 不做什么
+  items:
+    - Side Badger 不转移资金，不发送付款链接，也不发送付款请求。应用里的一笔付款，只是对在别处完成的付款的记录。
+    - 建议的付款来自一种简单的匹配方法，按货币分别应用。它给出的付款笔数总是少于在该货币中有余额的人数（四个人，最多三笔付款），但并不总能找到最少的笔数。
+    - 你不能关闭这些建议。**显示全部**列出群组里每一笔建议的付款，而不只是你的。
+    - 除非支出在录入时做了换算，否则不同货币之间永远不会互相抵消。
+    - 没有提醒功能，所以追着别人付款仍然得靠你自己。
+useCasesHeading: 结算很重要的场合
+faq:
+  heading: 常见问题
+  items:
+    - q: Side Badger 会转钱吗？
+      a: 不会。你们想怎么付就怎么付，然后在 Side Badger 里记录这笔付款，余额随之更新。
+    - q: 能关闭建议的付款吗？
+      a: 不能。简化始终开启，**显示全部**会列出群组里每一笔建议的付款，而不只是与你相关的。
+    - q: 为什么欧元和英镑分开记？
+      a: 余额保持你付款时所用的货币，除非你在录入支出或付款时做了换算。不同货币的债务永远不会互相抵消。
+    - q: 如果有人只付了所欠的一部分呢？
+      a: 记录他们付的那部分。剩下的会留在余额上，直到付清。
+    - q: 这一定是最少的付款笔数吗？
+      a: 不保证。它给出的付款笔数总是少于在该货币中有余额的人数，所以四个人时最多建议三笔。在室友示例中是两笔付款，而直接逐个还款需要六笔。
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

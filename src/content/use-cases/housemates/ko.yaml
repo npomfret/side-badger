@@ -1,0 +1,108 @@
+translatedFrom: "e6b829e6"
+review:
+  status: checked
+  checker: "T1-check"
+  date: "2026-10-15"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "룸메이트와 생활비 나누기"
+  description: "월세는 방 크기에 따라, 전기와 장보기는 똑같이 나누고, 매달 누가 누구에게 빚졌는지 확인하세요. 룸메이트와 하우스메이트가 계산을 이어 가는 무료 방법입니다."
+h1: "룸메이트와 생활비 나누기"
+navLabel: "룸메이트"
+lead: "화장지를 사 오는 룸메이트와, 그 장면을 한 번도 못 본 룸메이트들을 위해. 사이드 배저는 **룸메이트와 하우스메이트**의 월세, 공과금, 장보기를 하나의 계산으로 기록하므로 아무도 누군가를 쫓아다닐 필요가 없고, 냉장고는 다시 그냥 냉장고가 될 수 있습니다."
+cta:
+  heading: "우리 집부터 시작하세요"
+  body: "계정을 만들고, 집 그룹을 만들고, 모두에게 초대 링크를 보내세요. 이번 달 청구서는 오늘 밤 바로 넣을 수 있어요."
+  button: "무료 계정 만들기"
+scenario:
+  heading: "집 설정하기"
+  body: "집 그룹을 만들고, 그룹에서 사람들에게 보일 이름을 고르고, 링크나 QR 코드로 모두를 초대하세요. 그룹은 모두가 추가하고 수정할 수 있는 열린 방식이나, 새 멤버에게 관리자의 승인이 필요하고 만든 사람과 관리자만 지출을 바꿀 수 있는 관리형으로 만들 수 있어요. 장부를 맡은 룸메이트에게 잘 맞습니다. 숫자만 지켜보고 싶은 사람은 모든 것을 보되 아무것도 바꿀 수 없는 보기 전용 멤버가 될 수 있고요. 새 지출은 모두에게 바로 보이므로 “나중에 추가할게”가 숨을 곳이 줄어듭니다."
+sections:
+  - heading: "월세와 공과금"
+    body: "월세는 네 명으로 딱 나누어떨어지는 경우가 드뭅니다. 방이 다 같지 않으니까요. 비율로 나누면 큰 방은 더 내고, 창문 달린 수납장은 덜 냅니다. 비율의 합은 100이 되어야 해요. 모두가 쓰는 공과금은 똑같이 나누고, 그 비용에 관여하지 않은 룸메이트는 뺄 수 있습니다. 똑같이 나눌 때 한 푼이 남으면 무작위로 한 사람에게 갑니다. 반복 청구서는 없으므로 매달 지난달 월세를 복사하고, 날짜를 바꾸고, 이어 가면 됩니다."
+  - heading: "공용 장보기"
+    body: "공유 장보기 목록을 장보기 비용과 같은 그룹에 두고, 카트에 담긴 항목을 체크하세요. 장을 본 사람은 영수증 합계를 지출로 추가해 똑같이 나누거나, 그걸 먹을 사람끼리만 나누면 됩니다. 아무도 안 마시는 귀리 우유를 계속 사 오는 사람 문제는 여전히 집안 일이지만, 적어도 지출 목록은 정확하겠죠. 그룹의 권한이 누가 목록을 만들고 수정할 수 있는지를 정합니다. 월세, 공과금, 장보기를 합치면 아래와 같은 한 달이 됩니다. 네 명이 사는 집에서 Jo가 월세 £2,000를 내고 방 크기에 따라 30%, 25%, 25%, 20%로 나누고, Kwame가 전기 요금 £120, Lena가 인터넷 £40, Matt가 장보기 £80을 내며 각각 똑같이 나눕니다. Jo는 £1,340를 받을 돈이 생기고, 사이드 배저는 모두 Jo에게 가는 결제 3건을 제안합니다."
+  - heading: "집안 비용을 공정하게 나누는 방법"
+    items:
+      - "**똑같이**는 인터넷, 청소용품, 공용 장보기처럼 모두가 비슷하게 쓰는 것에 알맞습니다. 빠르고, 아무도 계산을 두고 다툴 필요가 없습니다."
+      - "**방 크기별**은 월세에 알맞습니다. 방이 다르고 사람들이 그 방에 기꺼이 내려는 금액도 다르니까요. 누군가 이사 올 때 비율을 한 번 정해 두고 매달 다시 쓰세요."
+      - "**사용량별**은 재택근무 공간의 난방비나 두 사람만 보는 스트리밍 계정처럼 한 사람이 분명히 더 쓰는 청구서에 알맞습니다. 관여하지 않은 사람을 빼거나 사람마다 정확한 금액을 입력하세요."
+      - "어떤 방식을 고르든, 첫 다툼 뒤가 아니라 첫 청구서 전에 합의하고, 집 모두가 볼 수 있는 곳에 규칙을 적어 두세요."
+  - heading: "누군가 이사 나갈 때"
+    body: "먼저 정산해야 합니다. 줄 돈이나 받을 돈이 있으면 그룹을 나갈 수 없으므로, 나가는 사람이 지불하거나 지불받고, 그것을 기록한 뒤에 떠납니다. 남은 룸메이트들은 그룹을 계속 쓰고, 새로 온 사람은 링크로 초대하세요. 집 자체가 끝나면 관리자가 그룹을 잠가서 숫자를 그대로 유지하거나 완전히 닫을 수 있습니다. 닫으면 모두가 접근할 수 없게 되므로, 아무도 내역이 필요하지 않을 때만 하세요."
+exampleAfter: 2
+example:
+  heading: "이번 달 누가 누구에게 빚졌을까"
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: "월세"
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: "전기 요금"
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: "인터넷"
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: "장보기"
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: "집에서 쓰는 기능"
+faq:
+  heading: "자주 묻는 질문"
+  items:
+    - q: "월세가 자동으로 반복될 수 있나요?"
+      a: "아니요, 반복 청구서는 없습니다. 몇 번 탭해서 지난달 월세를 복사하고, 날짜를 바꾸면 끝입니다."
+    - q: "방 크기별로 나눌 수 있나요?"
+      a: "네, 비율로 나눕니다. 합이 100이 되는 한 룸메이트마다 방에 맞는 몫을 정하세요. 다른 분할 방식은 [지출 나누기](page:feature/split-expenses)에서 확인하세요."
+    - q: "룸메이트가 빚을 지고 이사 나가면요?"
+      a: "정산하기 전에는 그룹을 나갈 수 없습니다. 줄 돈이나 받을 돈이 있으면 아무도 나갈 수 없기 때문이에요. 모두가 깔끔하게 정산될 때까지 숫자는 정직하게 유지됩니다."
+    - q: "사이드 배저가 공과금을 내 주나요?"
+      a: "아니요. 계산을 기록하고 짧은 결제 목록을 제안합니다. 원하는 방법으로 서로 지불한 다음 기록하세요. [정산하기](page:feature/settle-up)에서 설명합니다."
+    - q: "한 룸메이트가 장부를 맡을 수 있나요?"
+      a: "네. 그 사람을 관리자로 지정하고 관리 그룹을 사용하세요. 새 멤버는 승인이 필요하고 만든 사람과 관리자만 지출을 바꿀 수 있습니다."

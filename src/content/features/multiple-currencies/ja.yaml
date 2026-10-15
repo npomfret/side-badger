@@ -1,0 +1,127 @@
+translatedFrom: "923c938f"
+review:
+  status: checked
+  checker: "T1-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: 140の通貨で割り勘。換算も、別々の管理も
+  description: 各支出を支払った通貨で入力し、残高を別々に保つか、確認も変更もできるレートで換算して、短い支払いリストで精算できます。
+h1: 140の通貨で割り勘
+navLabel: 複数の通貨
+lead: ユーロに円、そしてバーツで払ったあのタクシー。Side Badgerは各支出を支払った通貨のまま受け取って残高を整理し、グループが一度で精算したいときは換算もできます。140の通貨に対応し、[グループ旅行](page:use-case/group-trips)にぴったりです。
+cta:
+  heading: ユーロも円も、そのままどうぞ
+  body: アカウントを作成し、グループを始めて、たまたま手元にあった通貨で最初の支出を追加しましょう。
+  button: 無料アカウントを作成
+problem:
+  heading: 支払ったとおりに入力
+  body: 旅行の支払いが1つの通貨で済むことはまずありません。ホテルは自宅でポンドで予約し、夕食は円で払い、空港のコーヒーは乗り継ぎ先の通貨でした。入力する前にすべて手作業で換算するのは、表計算シートが放置される原因です。Side Badgerでは、レシートに書かれた通貨で各支出を入力でき、どの金額もその通貨のルールに従うので、円には小数がなく、ディナールは3桁です。最近使った通貨はリストの先頭に表示されます。
+workflow:
+  heading: 通貨を別々に保つか、入力しながら換算するか
+  steps:
+    - title: その通貨のまま支出を追加
+      body: 通貨を選び、金額を入力し、誰が支払い、誰が分け合ったかを指定します。必要なのはそれだけです。これが初期設定で、入力した元の金額がそのまま保たれます。
+      shot: S07
+      shotAlt: 円の金額を入力した支出フォーム
+    - title: 通貨ごとの残高を見る
+      body: 残高は通貨ごとに別々に管理され、それぞれに提案される短い支払いリストがあります。ポンドはポンドで、円は円で精算します。
+      shot: S10
+      shotAlt: 2つの通貨で簡略化された債務を表示した残高画面
+    - title: または、グループが一度で精算したいときは換算
+      body: 支出の入力時に別の通貨を選ぶと、Side Badgerは現在の為替レートで換算でき、レートは実際に適用されたものに変更できます。換算後の金額は、その通貨の残高に加わります。換算はグループが選ぶもので、知らないうちに行われることはありません。
+options:
+  heading: 確認も変更もできるレート
+  items:
+    - title: レートが表示される
+      body: 換算するとレートと換算後の金額がフォームに表示されるので、誰も数字を鵜呑みにする必要がありません。
+    - title: 自分で入力する
+      body: 両替所でもっと良いレートだった、あるいは空港でもっと悪かった。実際に適用されたレートに編集すれば、換算後の金額も更新されます。
+    - title: 元の金額は残る
+      body: 元の金額は、換算後の金額の隣で支出にそのまま残るので、円でいくらだったかと聞かれても答えられます。
+    - title: 換算は無料
+      body: 換算は無料です。別の通貨で支出を入力しても、手数料はかかりません。
+example:
+  heading: 日本にいる4人の友だち、2通りの精算
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: ホテル（自宅で予約）
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: 日本での夕食
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: 電車のチケット
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: 寺の入場料
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: グループ全体で1つの通貨に
+    body: 通貨のことを考えたくないグループは、グループの通貨を1つ選ぶと、フォームが新しい支出を自動でその通貨に換算します。レートは引き続き確認も変更もできます。これが適用されるのは新規とコピーした支出のみで、編集や既存の支出はそのままなので、記録済みのものが知らないうちに変わることはありません。
+  - heading: ユーロを借りて、ポンドで支払う
+    body: 円で支払い、ポンドで精算したい？大丈夫です。支払いを記録するときに換算もできるので、ユーロを借りている人がポンドで支払っても、ユーロの残高はきちんと合います。支払いは好きな方法で行い、そのあと記録してください。
+  - heading: グループのルール
+    body: グループで実際に使っている通貨に絞り、フォームが正しい通貨で開くように初期設定を決めましょう。ポルトガルでの休暇に、夕食代の隣に他の139通貨の選択肢は要りませんし、[海外での結婚式](page:use-case/events-and-celebrations)でもおそらく2通貨あれば十分です。
+limits:
+  heading: 制限
+  items:
+    - レートは支出を保存した時点で固定されます。過去の支出が再評価されることはありません。
+    - Side Badgerは可能な場合に現在のレートを取得します。すべての通貨の組み合わせで取得できる保証はなく、レートは常に自分で入力できます。
+    - グループの自動換算が適用されるのは新規とコピーした支出のみで、編集や既存の支出には適用されません。
+    - 各支出は、その通貨で999,999.99が上限です。
+    - 通貨は140種類です。暗号資産や貴金属は含まれません。
+    - Side Badgerは支払いを記録します。お金を動かしたり、両替したりすることはありません。
+useCasesHeading: 役立つ場面
+faq:
+  heading: よくある質問
+  items:
+    - q: どの為替レートを使いますか？
+      a: 支出を入力したときに取得できる場合は、現在の為替レートです。実際に適用されたレートに変更でき、換算後の金額も更新されます。
+    - q: 過去の支出は再評価されますか？
+      a: いいえ。レートは支出を保存した時点で固定されるので、相場が動いても残高がずれることはありません。
+    - q: 暗号資産には対応していますか？
+      a: いいえ。通貨は140種類で、暗号資産は含まれません。
+    - q: 2,000,000ルピアを入力できないのはなぜですか？
+      a: 各支出は、その通貨で999,999.99が上限です。別の通貨で入力して換算するか、2つの支出に分けてください。
+    - q: 換算に費用はかかりますか？
+      a: いいえ。Side Badgerの他の機能と同じく、換算は無料です。[料金](page:pricing)をご覧ください。
+    - q: 必ず換算しなければなりませんか？
+      a: いいえ。ご自身かグループが換算を選ばない限り、通貨は別々のままで、それぞれの通貨に短い支払いリストが用意されます。

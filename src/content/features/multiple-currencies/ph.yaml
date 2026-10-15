@@ -1,0 +1,127 @@
+translatedFrom: "923c938f"
+review:
+  status: checked
+  checker: "T1-check"
+  date: "2026-10-15"
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: Hatiin ang gastos sa 140 pera, na-convert o magkahiwalay
+  description: Ilagay ang bawat gastos sa perang ginamit mo sa pagbayad, panatilihing magkahiwalay ang mga balanse o mag-convert sa rate na nakikita at mababago mo, saka mag-settle up sa maikling listahan ng mga bayad.
+h1: Hatiin ang gastos sa 140 pera
+navLabel: Maraming pera
+lead: Euro, yen, at ang isang taxi na baht ang bayad. Tinatanggap ng Side Badger ang bawat gastos sa perang ginamit mo sa pagbayad, pinananatiling tama ang mga balanse, at puwedeng mag-convert kapag mas gusto ng grupo mong mag-settle nang isang beses. Gumagana ito sa 140 pera, at bagay na bagay ito sa mga [group trip](page:use-case/group-trips).
+cta:
+  heading: Dalhin ang euro mo, dalhin ang yen mo
+  body: Gumawa ng account, magsimula ng grupo, at idagdag ang unang gastos sa anumang perang nasa kamay mo.
+  button: Gumawa ng libreng account
+problem:
+  heading: Ilagay ito ayon sa pagkabayad mo
+  body: Bihirang iisang pera lang ang ginagamit sa isang biyahe. Na-book ang hotel sa pounds mula sa bahay, yen ang bayad sa hapunan, at kung anong pera ng layover ang ginamit sa kape sa airport. Ang pag-convert ng lahat nang mano-mano bago pa man ito mai-type ang dahilan kung bakit naiiwan ang mga spreadsheet. Sa Side Badger, inilalagay mo ang bawat gastos sa perang nasa resibo, at sinusunod ng bawat halaga ang mga patakaran ng perang iyon, kaya walang decimal ang yen at tatlo ang sa dinar. Nasa unahan ng listahan ang mga perang kamakailan mong ginamit.
+workflow:
+  heading: Panatilihing magkahiwalay ang mga pera, o mag-convert habang tumatakbo
+  steps:
+    - title: Idagdag ang gastos sa sarili nitong pera
+      body: Piliin ang pera, i-type ang halaga, sabihin kung sino ang nagbayad at sino ang nagsalo. Wala nang ibang kailangan. Ito ang default, at pinananatili nito ang orihinal na halaga nang eksakto sa inilagay mo.
+      shot: S07
+      shotAlt: Ang expense form na may halagang yen
+    - title: Bantayan ang balanse ng bawat pera
+      body: Magkakahiwalay na iniingatan ang mga balanse sa bawat pera, at may sarili itong maikling listahan ng mga iminungkahing bayad. Sa pounds nagse-settle ang pounds at sa yen ang yen.
+      shot: S10
+      shotAlt: Ang screen ng mga balanse na may pinasimpleng mga utang sa dalawang pera
+    - title: O mag-convert, kapag mas gusto ng grupo na mag-settle nang isang beses
+      body: Pumili ng ibang pera habang inilalagay ang gastos at puwede itong i-convert ng Side Badger sa kasalukuyang exchange rate, na mababago mo sa rate na aktuwal mong nakuha. Sumasama sa balanse sa perang iyon ang na-convert na halaga. Desisyon ng grupo ang conversion, hindi isang bagay na nangyayari nang hindi mo alam.
+options:
+  heading: Rate na nakikita at mababago mo
+  items:
+    - title: Ipinapakita ang rate
+      body: Kapag nag-convert ka, lumalabas sa form ang rate at ang na-convert na halaga, kaya walang kailangang basta maniwala sa numero.
+    - title: I-type ang sarili mo
+      body: May mas magandang rate ka sa cash desk, o mas pangit sa airport? Baguhin ang rate sa aktuwal mong nakuha at mag-a-update ang na-convert na halaga.
+    - title: Nananatili ang orihinal
+      body: Nananatili ang orihinal na halaga sa gastos, katabi ng na-convert, para sa sinumang magtatanong kung magkano iyon sa yen.
+    - title: Libreng mag-convert
+      body: Walang bayad ang pag-convert. Walang singil sa paglalagay ng gastos sa ibang pera.
+example:
+  heading: Apat na magkakaibigan sa Japan, na-settle sa dalawang paraan
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: ang hotel, na-book mula sa bahay
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: hapunan sa Japan
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: tiket sa tren
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: pasok sa templo
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: Isang pera para sa buong grupo
+    body: Kung ayaw ng grupo mong mag-isip pa rito, pumili ng pera ng grupo at kusang iko-convert ng form ang bawat bagong gastos dito, sa rate na nakikita at mababago mo pa rin. Para lang ito sa mga bago at kinopyang gastos. Hindi ginagalaw ang mga edit at kasalukuyang gastos, kaya walang nagbabago sa mga naitala na.
+  - heading: May utang na euro, magbabayad sa pounds
+    body: Yen ang bayad, pounds ang settle? Walang problema. Kapag nagtatala ka ng bayad, puwede mo rin itong i-convert, kaya ang may utang na euro ay makakabayad sa pounds at tama pa rin ang balanse sa euro. Magbayaran kayo sa paraang gusto ninyo, saka itala.
+  - heading: Mga patakaran para sa grupo
+    body: Limitahan ang grupo sa mga perang talagang ginagamit ninyo, at magtakda ng default para bumukas ang form sa tamang pera. Hindi kailangan ng bakasyon sa Portugal ang 139 pang opsyon sa tabi ng bayarin sa hapunan, at malamang dalawa lang ang kailangan ng [kasal sa ibang bansa](page:use-case/events-and-celebrations).
+limits:
+  heading: Mga limitasyon
+  items:
+    - Nakapirmi ang rate kapag na-save ang gastos. Hindi kailanman muling binabalyuhan ang mga lumang gastos.
+    - Kumukuha ang Side Badger ng kasalukuyang rate kung kaya. Hindi garantisado ang bawat pares, at puwede mong i-type palagi ang rate.
+    - Para lang ang group auto-convert sa mga bago at kinopyang gastos, hindi sa mga edit o kasalukuyang gastos.
+    - May hangganang 999,999.99 ang bawat gastos sa sarili nitong pera.
+    - May 140 pera. Hindi kasama ang mga cryptocurrency at metal.
+    - Nagtatala ng bayad ang Side Badger. Hindi ito naglilipat o nagpapalit ng pera.
+useCasesHeading: Saan ito nakakatulong
+faq:
+  heading: Mga tanong
+  items:
+    - q: Anong exchange rate ang ginagamit ninyo?
+      a: Kasalukuyang exchange rate, na kinukuha kapag inilagay mo ang gastos kung may available. Mababago mo ito sa rate na aktuwal mong nakuha, at mag-a-update ang na-convert na halaga.
+    - q: Muli bang binabalyuhan ang mga lumang gastos?
+      a: Hindi. Nakapirmi ang rate kapag na-save ang gastos, kaya hindi nag-iiba ang balanse dahil gumalaw ang merkado.
+    - q: Sinusuportahan ba ninyo ang crypto?
+      a: Hindi. May 140 pera, at hindi kasama ang mga cryptocurrency.
+    - q: Bakit hindi ako makapaglagay ng 2,000,000 rupiah?
+      a: May hangganang 999,999.99 ang bawat gastos sa sarili nitong pera. Ilagay ito sa ibang pera at i-convert, o hatiin sa dalawang gastos.
+    - q: May bayad ba ang conversion?
+      a: Wala. Libre ang pag-convert, tulad ng iba pa sa Side Badger. Tingnan ang [presyo](page:pricing).
+    - q: Kailangan ko bang mag-convert?
+      a: Hindi. Nananatiling magkahiwalay ang mga pera maliban kung pinili mo o ng grupo mong mag-convert, at may sariling maikling listahan ng mga bayad ang bawat pera.

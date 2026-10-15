@@ -1,0 +1,110 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: checked
+  checker: "T1-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+meta:
+  title: グループ旅行の費用を140の通貨で割り勘
+  description: グループ旅行で誰が何を支払ったかを記録し、現地の通貨で入力し、換算するかどうかを選んで、最後に一度で精算します。無料で、ブラウザで使えます。
+h1: グループ旅行の費用を140の通貨で割り勘
+navLabel: グループ旅行
+lead: ヴィラ代、タクシー代、そして誰も払うと言った覚えのないカクテルの一杯を記録します。Side Badgerは旅行中の収支を記録し続け、[ポンド、ユーロ、ほか138の通貨に対応](page:feature/multiple-currencies)し、帰宅したら[短い支払いリスト](page:feature/settle-up)を提示します。
+cta:
+  heading: 日焼けが消える前に、休暇の計算を終わらせよう
+  body: グループを作り、旅行のメンバーに招待リンクを送り、費用はその都度追加しましょう。
+  button: 無料アカウントを作成
+scenario:
+  heading: 全員が何かを、何かの通貨で支払った
+  body: 誰かが航空券を予約し、別の誰かがヴィラをカードで払い、3人目が夕食を現金で支払いました。3日目には、誰が立て替えているのか誰にもわかりません。問いはシンプルでも、答えは誰も開きたがらない表計算シートの中にありがちです。誰が、何を、どの通貨で支払い、最後に全員でどう精算するのでしょう。
+sections:
+  - heading: 出発の前に
+    body: ヴィラの候補を、希望すれば匿名で投票にかけましょう。いちばん長く拗ねた人ではなく、グループで決められます。それから共有の買い物リストを買い物の請求書のそばに置けば、日焼け止めを3本買って変換プラグは1つもない、という事態を避けられます。
+  - heading: 旅行中に
+    body: 費用は、支払った通貨でその都度追加します。レシートを撮ると、Side Badgerが合計・日付・場所を入力するので、確認してください。レシート画像はGoogleのAIサービスが読み取ります。金額は現在の為替レートで換算でき、実際に適用されたレートに変更できて、元の金額は支出に残ります。あるいはユーロはユーロのままにして、あとで決めても構いません。グループで1つの通貨を選べば、新しい支出は自動でその通貨に換算されます。
+  - heading: 全員が全部に参加したわけではない
+    body: 夕食を欠席した人も、ボートに乗らなかった人もいます。参加しなかった費用からは外し、残りを[均等、金額指定、割合指定](page:feature/split-expenses)で分けましょう。旅行中に寝ていた時間の分を、誰も負担しません。
+  - heading: 帰宅したら精算
+    body: Side Badgerは全員を精算できる短い支払いリストを提案します。支払いは好きな方法で行い、そのあと記録します。通貨が混在する場合は、通貨を別々にするか、入力しながら換算するかを選べます。下のリスボンの例では両方を示しています。
+  - heading: 男性・女性の独身さよならパーティー
+    body: 主役のいる週末旅行は、少しだけ管理が増えます。管理者が新しいメンバーを承認し、支出を変更できるのは作成者と管理者だけという管理グループにしましょう。主役の分担は金額指定にし、グループを実際に使う通貨に絞り、終わったらグループをロックして数字が動かないようにします。
+exampleAfter: 4
+example:
+  heading: リスボンの4人の友だち
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: 航空券
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: ヴィラ
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: 夕食
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: ボートツアー
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: 旅行が頼りにする機能
+faq:
+  heading: よくある質問
+  items:
+    - q: 夕食を欠席した人を外せますか？
+      a: はい。各支出に参加した人を選べば、その人たちだけに請求されます。
+    - q: 電波がなくても使えますか？
+      a: いいえ。Side Badgerは接続が必要なので、Wi-Fiに戻ってから費用を追加してください。
+    - q: 全員が何かをインストールする必要がありますか？
+      a: いいえ。ブラウザで動作します。招待リンクを送れば、スマートフォンから参加できます。
+    - q: どの為替レートを使いますか？
+      a: 支出を入力した時点の現在の為替レートです。異なるレートが適用された場合は、そのレートを入力できます。レートは支出を保存した時点で固定されるので、過去の支出が再評価されることはありません。
+    - q: 旅行のあと、グループを固定できますか？
+      a: はい。管理者がグループをロックすれば、数字は動きません。
+    - q: 金額に上限はありますか？
+      a: はい。1件の支出につき、その通貨で999,999.99までです。

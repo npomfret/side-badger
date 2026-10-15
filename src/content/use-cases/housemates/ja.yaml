@@ -1,0 +1,106 @@
+translatedFrom: "e6b829e6"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+meta:
+  title: ルームメイトと生活費を割り勘
+  description: 家賃は部屋の広さで、光熱費と食料品は均等に分けて、毎月誰が誰に借りているかを確認できます。ルームメイトやシェアメイトのための無料の記録方法です。
+h1: ルームメイトと生活費を割り勘
+navLabel: ルームメイト
+lead: トイレットペーパーを買う人と、それが買われる場面をなぜか一度も見ない人のために。Side Badgerは、**ルームメイト、フラットメイト、シェアメイト**の家賃、光熱費、買い物を1つの記録にまとめるので、誰も誰かを追いかける必要がなく、冷蔵庫はただの冷蔵庫に戻れます。
+cta:
+  heading: まずは自分の家から
+  body: アカウントを作成し、家のグループを作って、全員に招待リンクを送りましょう。今月の請求は、今夜から入力できます。
+  button: 無料アカウントを作成
+scenario:
+  heading: 家をセットアップする
+  body: 家のグループを作り、メンバーに表示したい名前を選んで、リンクまたはQRコードで全員を招待します。グループは、全員が追加も編集もできる公開型にも、新しいメンバーに管理者の承認が必要で、支出を変更できるのが作成者と管理者だけという管理型にもできます。管理型は、家計簿をつけている人に向いています。数字を見守りたいだけの人は、すべてを見られるけれど何も変更できない「閲覧者」にできます。新しい支出は全員にすぐ表示されるので、「あとで入れておく」の隠れ場所は減ります。
+sections:
+  - heading: 家賃と光熱費
+    body: "家賃が4で割り切れることはまずありません。寝室の広さが違うからです。割合で分ければ、広い部屋は多く、窓のある納戸は少なく負担できます。割合は合計が100になる必要があります。全員が使う請求は均等に分け、その費用に関わらなかったルームメイトは外せます。均等に分けて端数の1ペニーが出たら、ランダムに1人へ回ります。定期的な請求はないので、毎月、先月の家賃をコピーし、日付を変えて、そのまま進めます。"
+  - heading: 共同の買い物
+    body: "共有の買い物リストは、買い物の請求書と同じグループに置き、カゴに入れたら項目にチェックを入れます。買い物をした人はレシートの合計を支出として追加し、均等に、またはそれを食べる人だけで分けます。誰も飲まないオーツミルクを買い続けているのは誰かは、家の内輪の問題のままですが、少なくとも支出リストは正確になります。家賃、光熱費、買い物をまとめると、4人の家では次のような1か月になります。Joが家賃£2,000を部屋の広さに応じて30%、25%、25%、20%で分け、Kwameがエネルギー代£120、Lenaがインターネット£40、Mattが食料品£80を支払い、それぞれ均等に分けます。Joは£1,340を受け取る側になり、Side Badgerは3回の支払いを提案します。すべてJo宛てです。リストを作成・編集できる人は、グループの権限で決まります。"
+  - heading: 家庭の費用を公平に分ける方法
+    items:
+      - "**均等**は、インターネット、掃除用品、共同の買い物など、みんなが同じくらい使うものに向いています。手早く済み、計算で揉める人もいません。"
+      - "**部屋の広さ**は、部屋ごとに違いがあり、人が払ってもいいと思う金額も違うので、家賃に向いています。誰かが入居するときに割合を一度決めれば、毎月使い回せます。"
+      - "**使用量**は、在宅勤務の暖房費や、2人しか見ない動画配信アカウントなど、明らかに多く使う人がいる請求に向いています。関わらなかった人を外すか、各自の金額を指定します。"
+      - どれを選ぶにしても、最初の揉め事のあとではなく、最初の請求の前に決めて、家の全員が見える場所にルールを書いておきましょう。
+  - heading: 誰かが引っ越すとき
+    body: 先に精算します。債務や債権が残っている間はグループを退出できないので、抜ける人が支払うか受け取るかして、それを記録してから退出します。残るルームメイトのためにグループを続け、新しい人はリンクで招待します。家そのものが終わるときは、管理者がグループをロックして数字を動かさないようにするか、完全に閉じられます。閉じると全員がアクセスできなくなるので、履歴がもう必要ないときだけにしてください。
+exampleAfter: 2
+example:
+  heading: 今月、誰が誰に借りているか
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: 家賃
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: エネルギー代
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: インターネット
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: 食料品
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: 家で使う機能
+faq:
+  heading: よくある質問
+  items:
+    - q: 家賃を自動で繰り返せますか？
+      a: いいえ、定期的な請求はありません。先月の家賃を数タップでコピーし、日付を変えれば完了です。
+    - q: 部屋の広さで分けられますか？
+      a: はい、割合指定で分けられます。部屋に見合った割合を各ルームメイトに割り当ててください。割合の合計は100になる必要があります。ほかの分け方は[割り勘の仕方](page:feature/split-expenses)をご覧ください。
+    - q: ルームメイトが借りたまま引っ越す場合は？
+      a: 精算するまでグループを退出できません。債務や債権が残っている間は誰も退出できないからです。全員がおあいこになるまで、数字は正直なままです。
+    - q: Side Badgerは請求を支払ってくれますか？
+      a: いいえ。残高を記録して短い支払いリストを提案するだけです。[精算](page:feature/settle-up)で説明しているように、支払いは好きな方法で行い、そのあと記録します。
+    - q: 一人が家計簿を管理できますか？
+      a: はい。その人を管理者にして管理型グループを使うと、新しいメンバーには承認が必要で、支出を変更できるのは作成者と管理者だけになります。

@@ -1,0 +1,90 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+meta:
+  title: パーティー、結婚式、みんなでの贈り物の費用を割り勘
+  description: 出す金額がそれぞれ違うパーティー、結婚式、みんなでの贈り物の費用を分け合います。計画は投票で決め、金額指定で分けて、誰が誰に借りているかを確認できます。
+h1: パーティー、結婚式、みんなでの贈り物の費用を割り勘
+navLabel: イベント・お祝い
+lead: 手付金、飾りつけ、急な雨の傘代を分けましょう。席順は、もっと勇敢な誰かにお任せ。Side Badgerは**誰がいくら出したか**を1か所にまとめるので、幹事もパーティーを楽しめます。
+cta:
+  heading: 次のお祝いから始めよう
+  body: アカウントを作成し、イベントのグループを作って、招待リンクを送りましょう。Side Badgerは無料で、広告も1日の制限もありません。
+  button: 無料アカウントを作成
+scenario:
+  heading: 全員が出し合う。金額は同じとは限らない
+  body: 誰かが会場の手付金を払い、別の誰かがケーキを買い、3人目がみんなでの贈り物を自分のカードで支払います。全部に参加するゲストもいれば、夕食だけのゲストもいます。それを公平に数えるのは、チャットのやり取りでは誰も志願していない仕事です。Side Badgerのグループなら、どんな金額の組み合わせでも全部まとめて管理でき、各自が支払う金額や受け取る金額が表示されます。基本は[使い方](page:how-it-works)をご覧ください。イベントの場合は、このまま読み進めてください。
+sections:
+  - heading: 一緒に決める
+    body: お金が動く前に、選択を**投票**にかけましょう。会場2つ、贈り物のアイデア3つなど、最大10個の選択肢を追加して、全員に投票してもらいます。誰が何に投票したかは非表示にできるので、どの選択肢も公平に検討され、投票を締め切ると結果が表示されます。何が決まったかを知るために、40件のメッセージをさかのぼる必要はありません。
+  - heading: 誰が何に参加するか
+    body: 全員が同じ金額を払うわけではなく、全員がすべての費用に関わるわけでもありません。支出は均等、割合、**金額指定**のいずれかで分けられるので、各自の負担額は合意した数字になります。夕食を欠席したゲストや、贈り物に参加しなかった友だちなど、関わらなかった人は外せます。各支出の支払う人は1人で、分割に含まれるほかの全員が、その人に自分の負担分を借りることになります。詳しくは[割り勘の仕方](page:feature/split-expenses)をご覧ください。
+  - heading: 記録を残す
+    body: 支出には、その費用の内容などのメモを追加できます。コメントは、その**支出のすぐそば**に残るので、「ケーキは£45だった？それとも£54？」という質問とその答えが、同じ場所に残ります。コメントは500文字までで、手付金の質問には十分です。
+  - heading: 幹事のためのコントロール
+    body: 公開型のグループでは、どのメンバーも支出を追加・編集できるので、小さな贈り物なら問題ありません。結婚式や大きめのパーティーなら、**管理型グループ**のプリセットを選びましょう。管理者が新しいメンバーを一人ずつ承認し、支出を変更できるのは作成者と管理者だけになります。リンクまたはQRコードで招待し、承認をオンにすれば管理者が一人ずつ許可するので、招待客リストは招待客リストのままです。イベントが終わったら、グループをロックして数字が動かないようにします。
+  - heading: パーティーのあとに精算
+    body: 最後の請求書が出そろったら、残高に**誰が誰に借りているか**が表示され、Side Badgerが全員を精算できる短い支払いリストを提案します。支払いは好きな方法で行い、そのあとグループに支払いを記録します。Side Badgerがお金を動かすことはなく、振込はご自身の銀行アプリで行い、グループは記録を管理します。絡み合った貸し借りが短いリストになる流れは、[精算](page:feature/settle-up)のページでご覧ください。
+exampleAfter: 5
+example:
+  heading: 'みんなでの贈り物：6人が賛成、分け合うのは£150'
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: みんなでの贈り物
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: 使う機能
+faq:
+  heading: よくある質問
+  items:
+    - q: 参加しなくてもゲストはグループを見られますか？
+      a: いいえ。リンクまたはQRコードと無料アカウントで参加するので、グループを見られるのは参加したあとです。
+    - q: Side Badgerでお金を集められますか？
+      a: いいえ。Side Badgerは残高を記録するだけで、お金を動かすことはありません。支払いは好きな方法で行い、そのあと支払いを記録してください。無料で、広告も1日の制限もありません。[料金](page:pricing)をご覧ください。
+    - q: 投票は匿名にできますか？
+      a: はい。投票を作成するときに、誰が何に投票したかを非表示にできます。設定を変更できるのは、最初の投票の前までです。
+    - q: 人によって出す金額を変えられますか？
+      a: はい。支出を金額指定で分ければ、各自の負担額は合意した数字になります。関わらなかった人を外すこともできます。
+    - q: 幹事が家計簿を管理できますか？
+      a: はい。管理型グループのプリセットを使うと、支出を変更できるのは作成者と管理者だけになり、新しいメンバーは管理者が承認します。

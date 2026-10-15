@@ -18,6 +18,24 @@ if (!entry) {
 }
 const { Content } = await render(entry);
 
+/**
+ * Wide tables scroll sideways on a phone. A scrollable region must be reachable by keyboard and have a
+ * name, so each table is wrapped (at build time) in a focusable region labelled by the nearest preceding
+ * heading, or by the page title when none has an id. The snapshots are plain Markdown, so the wrapping
+ * works on the rendered HTML.
+ */
+function wrapTables(html: string): string {
+  let label = 'policy-title';
+  return html.replace(/<h[1-6][^>]*\sid="([^"]+)"|<table[\s\S]*?<\/table>/g, (match, headingId?: string) => {
+    if (headingId) {
+      label = headingId;
+      return match;
+    }
+    return `<div class="policy-table-scroll" role="region" aria-labelledby="${label}" tabindex="0">${match}</div>`;
+  });
+}
+const contentHtml = entry.rendered?.html ? wrapTables(entry.rendered.html) : undefined;
+
 const isEnglish = locale === 'en';
 let updated: string;
 try {
@@ -38,7 +56,7 @@ try {
       </p>
       {!isEnglish && <p class="policy-notice" role="note">{t('policy.englishOnly', locale)}</p>}
       <div class="policy-content markdown-body" lang="en" dir="ltr">
-        <Content />
+        {contentHtml !== undefined ? <Fragment set:html={contentHtml} /> : <Content />}
       </div>
     </div>
   </div>

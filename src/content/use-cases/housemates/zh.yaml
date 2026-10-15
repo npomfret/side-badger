@@ -1,0 +1,106 @@
+translatedFrom: "e6b829e6"
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+meta:
+  title: 与室友分摊家庭账单
+  description: 房租按房间大小分，能源和杂货平均分，每个月看清谁欠谁。适合合租室友的免费记账方式。
+h1: 与室友分摊家庭账单
+navLabel: 室友
+lead: 写给买卫生纸的室友，也写给总是没看见这件事发生的那几位。Side Badger 为**合租室友**持续记下房租、账单和采购，这样谁也不必追着谁要钱，冰箱也能重新做回一台普通的冰箱。
+cta:
+  heading: 从你自己的家开始
+  body: 创建账户，为这个家建一个群组，把邀请链接发给所有人。今晚就能把这个月的账单记进去。
+  button: 创建免费账户
+scenario:
+  heading: 把家设置好
+  body: 为这个家建一个群组，选择你希望别人在其中看到的名字，用链接或二维码邀请所有人。群组可以是开放式的，人人都能添加和编辑；也可以是受管式的，新成员需要管理员批准，只有创建者和管理员可以更改支出，这适合负责记账的那位室友。只想看看数字的人可以当查看者，能看到一切，但什么也改不了。每笔新支出所有人都会立即看到，所以“我晚点再记”能躲的地方就少了。
+sections:
+  - heading: 房租和账单
+    body: 房租很少能被四整除，因为卧室大小不一。按比例分摊吧，大房间多付，带窗户的小隔间少付。比例加起来必须是 100。大家都用的账单平均分摊，没参与某笔支出的室友可以排除在外。平均分摊除不尽、多出零头时，零头会随机落在某一个人身上。没有定期账单，所以每个月复制上个月的房租，改一下日期，接着往下走就行。
+  - heading: 共同采购
+    body: 把共享购物清单和购物账单放在同一个群组里，东西进了购物车就勾掉。谁去采购，谁就把收据总额记为一笔支出，平均分摊，或只在会吃那样东西的人之间分摊。总是谁在买别人都不喝的燕麦奶，仍然是这个家自己的事，但至少支出列表是准确的。群组权限决定谁可以创建和编辑清单。把房租、账单和采购放在一起，就得到像下面这样的一个月，四人之家：Jo 付 £2,000 房租，按房间大小分成 30%、25%、25% 和 20%，然后 Kwame 付 £120 的能源费，Lena 付 £40 的网费，Matt 付 £80 的杂货，各自平均分摊。Jo 最终可收 £1,340，Side Badger 建议三笔付款，全部付给 Jo。
+  - heading: 公平分摊家庭开销的几种方式
+    items:
+      - "**平均分**适合大家用得差不多的东西，比如网费、清洁用品和共同采购。它很快，也没人需要为算术争论。"
+      - "**按房间大小**适合房租，因为房间有差别，人们愿意为它们付的钱也不同。有人搬进来时一次定好比例，之后每个月沿用。"
+      - "**按使用量**适合有人明显用得更多的账单，比如居家办公的取暖费，或只有两个人看的流媒体账号。把没参与的人排除，或者为每个人输入确切金额。"
+      - 无论选哪种，都要在第一张账单之前定好，而不是等到第一次争吵之后，并把规则写在全家都看得到的地方。
+  - heading: 有人搬走时
+    body: 先结清。只要还欠钱或还有钱没收回，谁都不能退出群组，所以搬走的人要么付钱、要么收钱，你把它记录下来，然后他们就可以走了。群组为留下的室友继续使用，用链接邀请新来的人。等这个家彻底告一段落，管理员可以锁定群组让数字不再变动，也可以永久关闭，这样所有人都无法再访问，所以只在没人再需要历史记录时才这样做。
+exampleAfter: 2
+example:
+  heading: 这个月谁欠谁
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: 房租
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: 能源费
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: 网费
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: 杂货
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: 一个家会用到的功能
+faq:
+  heading: 常见问题
+  items:
+    - q: 房租可以自动重复吗？
+      a: 不能，没有定期账单。点几下复制上个月的房租，改一下日期就行。
+    - q: 可以按房间大小分摊吗？
+      a: 可以，按比例。给每位室友一个能反映其房间的份额，只要份额加起来是 100。其他分摊方式见[分摊支出](page:feature/split-expenses)。
+    - q: 如果有室友欠着钱搬走了呢？
+      a: 结清之前他们不能退出群组，因为只要还欠钱或还有钱没收回，谁都不能退出。在大家两清之前，数字始终是诚实的。
+    - q: Side Badger 会代付账单吗？
+      a: 不会。它负责记账并建议一份简短的付款清单。你们想怎么付就怎么付，然后记录下来，详见[结算](page:feature/settle-up)。
+    - q: 可以让一位室友来管账吗？
+      a: 可以。让他成为管理员，并使用受管群组，新成员需要批准，只有创建者和管理员可以更改支出。
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

@@ -1,0 +1,125 @@
+translatedFrom: "923c938f"
+review:
+  status: machine
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: 用 140 种货币分摊费用，可换算也可分开记
+  description: 每笔支出用你实际支付的货币来记，余额可以分开记，也可以按你能看到并能修改的汇率换算，然后用一份简短的付款清单结清。
+h1: 用 140 种货币分摊费用
+navLabel: 多种货币
+lead: 欧元、日元，还有那趟用泰铢付的出租车。Side Badger 按你实际支付的货币记录每笔支出，把余额算清楚，并在群组想一次结清时进行换算。它支持 140 种货币，与[团体旅行](page:use-case/group-trips)天生一对。
+cta:
+  heading: 带上你的欧元，带上你的日元
+  body: 创建账户，建一个群组，用手头恰好有的任何货币添加第一笔支出。
+  button: 创建免费账户
+problem:
+  heading: 怎么付的就怎么录
+  body: 旅行很少只用一种货币付款。酒店是在家用英镑订的，晚餐用日元付，机场的咖啡则用转机地的货币。连输入之前都得先手动全部换算，电子表格就是这样被弃用的。在 Side Badger 里，每笔支出都用收据上的货币录入，每个金额都遵循其货币的规则，所以日元没有小数位，第纳尔有三位。你最近用过的货币会排在列表最前面。
+workflow:
+  heading: 货币分开记，或边记边换算
+  steps:
+    - title: 用支出自己的货币来添加
+      body: 选择货币，输入金额，说明谁付的钱、谁分担。不需要其他任何操作。这是默认方式，并会把原始金额原样保留。
+      shot: S07
+      shotAlt: 输入了日元金额的支出表单
+    - title: 每种货币看一份余额
+      body: 余额按货币分别记录，每一种都有自己的一份简短的建议付款清单。英镑用英镑结清，日元用日元结清。
+      shot: S10
+      shotAlt: 余额界面，显示两种货币的简化债务
+    - title: 或者在群组想一次结清时换算
+      body: 录入支出时选择另一种货币，Side Badger 可以按当前汇率换算，你也可以改成你实际换到的汇率。换算后的金额会计入该货币的余额。换算是群组做出的选择，绝不会在你背后悄悄发生。
+options:
+  heading: 看得见、改得了的汇率
+  items:
+    - title: 汇率一目了然
+      body: 换算时，汇率和换算后的金额会显示在表单上，所以没人需要凭空相信一个数字。
+    - title: 输入你自己的汇率
+      body: 在兑换处换到了更好的汇率，或在机场吃了亏？把汇率改成你实际换到的，换算后的金额会随之更新。
+    - title: 原始金额保留
+      body: 原始金额会留在支出上，紧挨着换算后的金额，方便有人问起它用日元是多少。
+    - title: 换算免费
+      body: 换算不花钱。用另一种货币录入支出，没有任何费用。
+example:
+  heading: 日本的四位朋友，两种结清方式
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: 酒店，在家订的
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: 日本的晚餐
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: 火车票
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: 寺庙门票
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: 整个群组用一种货币
+    body: 如果你的群组不想为此费心，可以选一种群组货币，表单会按你仍能看到并能修改的汇率，把每笔新支出换算成它。这只适用于新建和复制的支出。编辑和已有的支出保持原样，所以已经记录的内容不会在你不知情时改变。
+  - heading: 欠的是欧元，付的是英镑
+    body: 用日元付的款，却想用英镑结算？没问题。记录付款时同样可以换算，所以欠欧元的人可以用英镑付款，欧元余额仍然算得对。你们想怎么付就怎么付，然后记录下来。
+  - heading: 群组的规则
+    body: 把群组限制在你们实际使用的货币上，再设一个默认货币，让表单打开就是正确的那个。去葡萄牙度假，晚餐账单旁边用不着另外 139 个选项，而[海外婚礼](page:use-case/events-and-celebrations)大概需要两个。
+limits:
+  heading: 限制
+  items:
+    - 汇率在保存支出时固定。旧的支出永远不会重新估值。
+    - Side Badger 会尽可能获取当前汇率。并非每一对货币都保证有汇率，你随时可以自己输入汇率。
+    - 群组自动换算只适用于新建和复制的支出，不适用于编辑或已有的支出。
+    - 每笔支出以其自身货币计，上限为 999,999.99。
+    - 共有 140 种货币。加密货币和金属不在其中。
+    - Side Badger 只记录付款，从不转移或兑换资金。
+useCasesHeading: 它在哪些场合有帮助
+faq:
+  heading: 常见问题
+  items:
+    - q: 你们用哪个汇率？
+      a: 录入支出时获取的当前汇率（有汇率可用的情况下）。你可以把它改成你实际换到的汇率，换算后的金额会随之更新。
+    - q: 旧的支出会重新估值吗？
+      a: 不会。汇率在保存支出时固定，所以余额不会因为市场变动而漂移。
+    - q: 支持加密货币吗？
+      a: 不支持。共有 140 种货币，加密货币不在其中。
+    - q: 为什么我不能输入 2,000,000 印尼盾？
+      a: 每笔支出以其自身货币计，上限为 999,999.99。可以改用另一种货币录入再换算，或者拆成两笔支出。
+    - q: 换算要花钱吗？
+      a: 不要。换算和 Side Badger 的其他部分一样免费。参见[定价](page:pricing)。
+    - q: 我必须换算吗？
+      a: 不必。除非你或你的群组选择换算，否则各货币保持分开，每种货币都有自己的一份简短付款清单。
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

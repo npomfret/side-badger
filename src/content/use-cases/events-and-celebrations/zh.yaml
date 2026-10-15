@@ -1,0 +1,90 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: machine
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+meta:
+  title: 分摊派对、婚礼和集体礼物的费用
+  description: 当大家出的钱不一样时，分摊派对、婚礼或集体礼物的费用。就方案投票，按确切金额分摊，并看清谁欠谁。
+h1: 分摊派对、婚礼和集体礼物的费用
+navLabel: 活动与庆祝
+lead: 分摊订金、装饰和应急雨伞，座位表就留给更勇敢的人吧。Side Badger 把**谁出了多少**集中记在一处，让组织者也能享受派对。
+cta:
+  heading: 从下一场庆祝开始
+  body: 创建账户，为这场活动建一个群组，发出邀请链接。Side Badger 免费，无广告，无每日限制。
+  button: 创建免费账户
+scenario:
+  heading: 人人都出一份，但不一定一样多
+  body: 有人付场地订金，有人买蛋糕，还有第三个人把集体礼物刷在了自己的卡上。有些宾客每项都参加，有些只来吃晚餐。在聊天记录里把这些算得公平，是一份没人应聘过的差事。Side Badger 的一个群组就能容纳全部，不管金额怎么搭配，并向每个人显示他们欠多少或可收多少。基础知识请看[使用方式](page:how-it-works)，或者继续往下读活动场景。
+sections:
+  - heading: 一起做决定
+    body: 在任何钱动起来之前，先把选择交给**投票**。最多添加 10 个选项，比如两个场地或三个礼物点子，让大家投票。你可以隐藏谁投了什么，让每个选项都得到公平的对待，投票关闭后会显示获胜者。没人需要翻回四十条消息才能知道决定了什么。
+  - heading: 谁参与了什么
+    body: 不是每个人付的都一样，也不是每个人都参与了每笔费用。可以平均、按比例或按**确切金额**分摊支出，这样每个人的份额就是你们商定的数字。把没参与的人排除在外，比如没去吃晚餐的宾客，或没加入集体礼物的朋友。每笔支出有一位付款人，分摊中的其他人都向他支付自己的份额。详情见[分摊支出](page:feature/split-expenses)页面。
+  - heading: 把账目留好
+    body: 给支出添加备注，比如这笔费用包括什么。评论会留在它所针对的**支出旁边**，所以“蛋糕是 £45 还是 £54？”这个问题和它的答案就在同一个地方。评论最多 500 个字符，问问订金的事绰绰有余。
+  - heading: 组织者的控制权
+    body: 开放协作让任何成员都能添加和编辑支出，对小小的礼物来说没问题。对于婚礼或更大的派对，请选择**受管群组**预设。管理员批准每位新成员，只有创建者和管理员可以更改支出。用链接或二维码邀请大家；开启审批后，由管理员逐个放行，宾客名单就始终是那份宾客名单。活动结束后，锁定群组，让数字不再变动。
+  - heading: 派对之后结清
+    body: 最后一张发票录入后，余额会显示**谁欠谁**，Side Badger 会建议一份让所有人结清的简短付款清单。你们想怎么付就怎么付，然后在群组里记录这笔付款。Side Badger 从不转移资金，所以群组负责记账，转账则在你们自己的银行应用里完成。[结算](page:feature/settle-up)页面展示了一团乱麻是如何变成一份简短清单的。
+exampleAfter: 5
+example:
+  heading: 一份集体礼物：六票赞成，£150 待分摊
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: 集体礼物
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: 这里用到的功能
+faq:
+  heading: 常见问题
+  items:
+    - q: 宾客不加入群组也能看到吗？
+      a: 不能。大家通过链接或二维码并使用免费账户加入，进入之后才能看到群组。
+    - q: Side Badger 能代收款项吗？
+      a: 不能。Side Badger 只负责记账，从不转移资金。你们想怎么付就怎么付，然后记录这笔付款。它免费，无广告，无每日限制；参见[定价](page:pricing)。
+    - q: 投票可以匿名吗？
+      a: 可以。创建投票时你可以隐藏谁投了什么。这些设置只能在第一票之前更改。
+    - q: 大家可以出不一样的金额吗？
+      a: 可以。按确切金额分摊支出，这样每个人的份额就是你们商定的数字，或者把没参与的人排除在外。
+    - q: 可以让组织者来管账吗？
+      a: 可以。使用受管群组预设，只有创建者和管理员可以更改支出，由管理员批准新成员。
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name

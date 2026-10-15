@@ -1,0 +1,105 @@
+translatedFrom: "fd23c99b"
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+meta:
+  title: Side Badger 的使用方式 | 五步分摊群组支出
+  description: 创建群组、邀请成员、添加支出、结算。看看从“有人付了钱”到“大家两清”之间会发生什么，附一个完整示例。
+h1: Side Badger 的使用方式
+navLabel: 使用方式
+lead: 从“有人付了钱”到“大家两清”，中间发生了什么？五个步骤，没有电子表格，外加一只基本只负责装饰的獾。下面是从第一个群组到最后一笔已记录付款的完整旅程。想了解某一步的细节，请看[分摊支出](page:feature/split-expenses)和[结算](page:feature/settle-up)。
+cta:
+  heading: 从“这顿我来”到“大家两清”
+  body: 创建免费账户，建一个群组，添加第一笔支出。獾不会对收据评头论足。
+  button: 创建免费账户
+steps:
+  - title: 创建群组
+    body: 每个住处、每次旅行或每场活动各建一个群组，这样房租就不会和婚礼礼物混在同一份清单里。给群组起个名字，选一个别人看到你时显示的名字，如果愿意，还可以限制它接受的货币。之后你的仪表板会在一个屏幕上显示所有群组，以及你在每个群组里的情况。
+    shot: S02
+    shotAlt: 创建群组对话框，已展开货币限制部分
+  - title: 邀请你的人
+    body: 分享加入链接或出示二维码，并设置有效时长，从 15 分钟到 5 天不等。每位加入者都需要一个免费账户和已验证的电子邮箱，一个群组最多容纳 50 人。如果想把关谁能进来，可以开启审批，由管理员逐个放行。
+    shot: S03
+    shotAlt: 邀请对话框的链接标签页，显示二维码和有效期选项
+  - title: 随时添加支出
+    body: 写明谁付的钱、付了多少、是为谁付的。可以平均分摊、按确切金额或按比例分摊，没参与的人可以排除在外。添加支出后，所有人会立即看到，包括改了什么、是谁改的。
+    shot: S05
+    shotAlt: 按比例分摊的支出表单，按房间大小分摊房租
+  - title: 留意余额
+    body: Side Badger 为每种货币保持一份持续更新的余额，谁欠谁一眼就能看清。它不会让大家自己去理一团乱麻似的小额债务，而是建议一份简短的付款清单，让整个群组结清。
+    shot: S10
+    shotAlt: 余额界面，显示两种货币的简化债务，并已开启“显示全部”
+  - title: 在应用外付款，在应用内记录
+    body: Side Badger 从不经手资金。大家想怎么付就怎么付，付完再记录这笔付款，余额随之更新，每个人的屏幕无需刷新就会同步。“结清”只是指余额归零。只要还欠钱或还有钱没收回，谁都不能退出群组，所以准备离开的人要先结清。
+    shot: S11
+    shotAlt: 付款表单，带有快速结算按钮和部分付款提示
+requirements:
+  heading: 你需要准备什么
+  items:
+    - 一个免费账户。只需要一个电子邮箱地址和密码，并且要先验证邮箱才能添加任何内容。
+    - 年满 18 岁。
+    - 手机或电脑上的现代浏览器，以及网络连接。Side Badger 不是应用商店里的应用，也不能离线使用。
+    - 可选：在主屏幕上放一个入口。无需应用商店，你可以把 Side Badger 添加到主屏幕或程序坞，它会像应用一样打开。
+example:
+  heading: 三位朋友聚会后的账
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: 晚餐
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: 出租车
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: 39 种语言，为更多人而建
+    body: Side Badger 支持 39 种语言，包括从右到左书写的阿拉伯语、波斯语和乌尔都语。群组里每个人都可以选自己的语言，所以同一个群组页面，对一个人可以是阿拉伯语，对下一个人可以是英语。它也考虑了键盘和屏幕阅读器用户，成员颜色还配有图案，所以不必靠区分绿色和红色来辨认。
+faq:
+  heading: 常见问题
+  items:
+    - q: 每个人都需要账户吗？
+      a: 是的，免费账户。每个人在添加任何内容之前都要验证邮箱。
+    - q: 有应用吗？
+      a: 它在浏览器中运行，你可以把它添加到主屏幕或程序坞，让它像应用一样打开。没有应用商店版本，也没有离线模式。
+    - q: Side Badger 会转移资金吗？
+      a: 不会。它负责记账并建议付款，你们想怎么付就怎么付，之后再记录这笔付款。参见[结算](page:feature/settle-up)。
+    - q: 欠着钱的人能退出群组吗？
+      a: 不能。只要还欠钱或还有钱没收回，谁都不能退出群组，所以要先结清。
+    - q: 一个群组能加入多少人？
+      a: 一个群组最多 50 人。可通过链接或二维码邀请，如果希望由管理员逐个放行，可以开启审批。
+    - q: 涉及多种货币的旅行怎么办？
+      a: 每种货币的余额分开记录。参见[多种货币](page:feature/multiple-currencies)。
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name

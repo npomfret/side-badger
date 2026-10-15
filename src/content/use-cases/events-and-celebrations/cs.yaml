@@ -1,8 +1,6 @@
 translatedFrom: "a1e36ce8"
 review:
-  status: checked
-  checker: "T5-check"
-  date: "2026-10-15"
+  status: machine
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -41,14 +39,14 @@ sections:
   - heading: "Kdo je v čem"
     body: "Ne každý platí stejně a ne každý se podílí na každém nákladu. Rozdělte výdaj rovnoměrně, procentuálně nebo podle **přesných částek**, aby podíl každé osoby byl číslem, na kterém jste se dohodli. Vynechte každého, kdo se nezúčastnil, například hosty, kteří vynechali večeři, nebo přátele, kteří se na dárek nesložili. Každý výdaj má jednoho plátce a všichni ostatní v rozdělení mu dluží svůj podíl. Podrobnosti jsou na stránce [dělení výdajů](page:feature/split-expenses)."
   - heading: "Uchovejte papírování"
-    body: "Přidávejte k výdaji poznámky, například co náklad pokrýval. Komentáře zůstávají **vedle výdaje**, kterého se týkají, takže otázka „byl dort za £45, nebo za £54?“ a její odpověď jsou na stejném místě. Komentáře mohou mít až 500 znaků, což na otázku o záloze bohatě stačí."
+    body: "Přidávejte k výdaji poznámky, například co náklad pokrýval. Komentáře zůstávají **vedle výdaje**, kterého se týkají, takže otázka „byl dort za 45 £, nebo za 54 £?“ a její odpověď jsou na stejném místě. Komentáře mohou mít až 500 znaků, což na otázku o záloze bohatě stačí."
   - heading: "Ovládání pro pořadatele"
     body: "Otevřená spolupráce umožňuje každému členovi přidávat a upravovat výdaje, což u malého dárku stačí. Pro svatbu nebo větší oslavu zvolte předvolbu **Spravovaná skupina**. Správci schvalují každého nového člena a výdaje mohou měnit jen zakladatelé a správci. Zvěte lidi odkazem nebo QR kódem; při zapnutém schvalování správce každou osobu pustí dovnitř, takže seznam hostů zůstane seznamem hostů. Po skončení akce skupinu zamkněte, aby čísla zůstala."
   - heading: "Vyrovnejte se po oslavě"
     body: "Jakmile přijde poslední faktura, zůstatky ukážou, **kdo komu dluží**, a Side Badger navrhne krátký seznam plateb, který vyrovná všechny. Platíte si, jak chcete, a pak platbu zaznamenáte ve skupině. Side Badger nikdy nepřesouvá peníze, takže skupina vede přehled, zatímco převody probíhají ve vašich vlastních bankovních aplikacích. Stránka [vyrovnání](page:feature/settle-up) ukazuje, jak se změť změní na krátký seznam."
 exampleAfter: 5
 example:
-  heading: "Společný dárek: šest hlasů pro, £150 k rozdělení"
+  heading: "Společný dárek: šest hlasů pro, 150 £ k rozdělení"
   currency: GBP
   people:
     - id: priya

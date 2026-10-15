@@ -96,7 +96,7 @@ export default {
   'home.group.copy': 'Copy',
   'home.group.inviteLink': 'Invite link',
   'home.group.joined': '{name} don join',
-  'home.group.memberCount': '5 members',
+  'home.group.memberCount': '5 membas',
   'home.group.name': 'Japan trip',
   'home.group.scanCode': 'Or scan dis code',
   'home.group.title': 'Start group. Share link.',

@@ -35,13 +35,6 @@ for (const locale of SHELL_LOCALES) {
         });
 
         test('axe finds nothing serious once the page is scrolled', async ({ page }) => {
-          // The language switcher's `.current-subtitle` fails color-contrast on a wide screen once
-          // the homepage has scrolled (P15 owns the switcher, P41 re-checks). Measured on every other
-          // page in `en` and it passes there. Documented, not hidden: remove this line when fixed.
-          test.fixme(
-            !viewport.phone && def.id === 'home',
-            'LanguageSwitcher .current-subtitle color-contrast at 1440 after scrolling (P15/P41)'
-          );
           const site = await SiteAudit.navigateTo(page, locale, def);
           await site.scrollToFoot();
           await site.expectNoSeriousAccessibilityViolations();

@@ -23,7 +23,7 @@
 }
 
 .language-switcher-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(34, 197, 94, 0.12);
   color: var(--text-primary);
 }
 
@@ -43,7 +43,9 @@
 
 .current-subtitle {
   font-size: 0.8em;
-  color: var(--text-muted);
+  /* --text-muted is 60% alpha: over the translucent header and whatever scrolls beneath it, it
+     drops under 4.5:1. The secondary ink holds the ratio over any content. */
+  color: var(--text-secondary);
   font-weight: 400;
 }
 
@@ -60,8 +62,8 @@
   top: calc(100% + var(--space-xs));
   inset-inline-end: 0;
   min-width: 220px;
-  background: rgba(10, 20, 15, 0.95);
-  backdrop-filter: blur(20px);
+  background: var(--dropdown-bg);
+  box-shadow: 0 1px 2px rgba(29, 43, 36, 0.08), 0 8px 24px rgba(29, 43, 36, 0.12);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-md);
   opacity: 0;
@@ -71,14 +73,18 @@
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
   z-index: 1000;
   overflow: hidden;
-  /* Light text for dark dropdown background */
-  --dropdown-text: rgba(255, 255, 255, 0.9);
-  --dropdown-text-muted: rgba(255, 255, 255, 0.6);
-  --dropdown-text-accent: #4ade80;
+  /* Opaque light surface matching the header; ink colours from the tokens */
+  --dropdown-bg: #fffdf8;
+  --dropdown-text: var(--text-primary);
+  --dropdown-text-muted: var(--text-secondary);
+  --dropdown-text-accent: var(--accent-ink);
+  --dropdown-hover: rgba(34, 197, 94, 0.12);
 }
 
 .language-switcher.open .language-dropdown {
-  transition-delay: 0s;
+  /* Opens at once (no fade-in): a half-transparent panel has no stable text contrast, and
+     focus can enter immediately. Only closing fades. */
+  transition: none;
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -104,7 +110,7 @@
   padding-block: var(--space-xs);
   padding-inline-start: calc(var(--space-sm) + 20px);
   padding-inline-end: var(--space-sm);
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--bg-void);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-sm);
   color: var(--dropdown-text);
@@ -115,6 +121,7 @@
 
 .language-search::placeholder {
   color: var(--dropdown-text-muted);
+  opacity: 1;
 }
 
 .language-search:focus {
@@ -142,15 +149,15 @@
 }
 
 .language-option:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: var(--dropdown-hover);
+  color: var(--text-heading);
 }
 
 .language-option:focus-visible {
   outline: 2px solid var(--dropdown-text-accent);
   outline-offset: -2px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: var(--dropdown-hover);
+  color: var(--text-heading);
 }
 
 .language-switcher-btn:focus-visible {
@@ -167,7 +174,7 @@
   width: 24px;
   height: 24px;
   /* Flags load on first open; keep their space and a neutral disc until then */
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--bg-deep);
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -188,7 +195,6 @@
 
 .language-option.active .option-subtitle {
   color: var(--dropdown-text-accent);
-  opacity: 0.7;
 }
 
 .no-results {
@@ -210,5 +216,22 @@
 
   .language-options {
     max-height: calc(50vh - 60px);
+  }
+}
+
+@media (forced-colors: active) {
+  .language-dropdown {
+    background: Canvas;
+    border-color: CanvasText;
+  }
+
+  .language-option:hover,
+  .language-option:focus-visible {
+    background: Highlight;
+    color: HighlightText;
+  }
+
+  .language-option.active {
+    border-inline-start: 3px solid Highlight;
   }
 }

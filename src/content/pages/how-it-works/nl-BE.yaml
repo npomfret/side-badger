@@ -1,0 +1,106 @@
+translatedFrom: "fd23c99b"
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.expenses.1.label
+meta:
+  title: "Zo werkt Side Badger | Groepsuitgaven verdelen in vijf stappen"
+  description: "Maak een groep, nodig mensen uit, voeg uitgaven toe en reken af. Zie wat er gebeurt tussen “iemand heeft betaald” en “we staan quitte”, met een uitgewerkt voorbeeld."
+h1: "Zo werkt Side Badger"
+navLabel: "Zo werkt het"
+lead: "Wat gebeurt er tussen “iemand heeft betaald” en “we staan quitte”? Vijf stappen, geen spreadsheet en één das die vooral decoratief is. Hier is de hele reis, van de eerste groep tot de laatst geregistreerde betaling. Voor meer details over een stap, zie [uitgaven verdelen](page:feature/split-expenses) en [afrekenen](page:feature/settle-up)."
+cta:
+  heading: "Van “ik betaal deze wel” tot “we staan quitte”"
+  body: "Maak een gratis account aan, start een groep en voeg de eerste uitgave toe. De das oordeelt niet over het bonnetje."
+  button: "Maak een gratis account"
+steps:
+  - title: "Maak een groep"
+    body: "Maak één groep per huis, reis of evenement, zodat de huur nooit in dezelfde lijst belandt als het huwelijksgeschenk. Geef de groep een naam, kies de naam waaronder mensen jou zien en beperk, als je wilt, welke valuta’s de groep accepteert. Je dashboard toont dan alle groepen, en hoe je er in elk voor staat, op één scherm."
+    shot: S02
+    shotAlt: "Het dialoogvenster om een groep te maken, met het onderdeel valutabeperkingen geopend"
+  - title: "Nodig je mensen uit"
+    body: "Deel een deelnamelink of toon een QR-code, en bepaal hoe lang die geldig blijft, van 15 minuten tot 5 dagen. Iedereen die meedoet heeft een gratis account en een geverifieerd e-mailadres nodig, en een groep telt tot 50 personen. Wil je controleren wie erin komt, zet dan goedkeuring aan en een beheerder laat elke persoon binnen."
+    shot: S03
+    shotAlt: "Het uitnodigingsvenster op het tabblad Link, met een QR-code en de keuzes voor de geldigheidsduur"
+  - title: "Voeg uitgaven toe zodra ze gebeuren"
+    body: "Zeg wie betaald heeft, hoeveel en voor wie het was. Verdeel gelijk, op exacte bedragen of op percentage, en laat iedereen weg die er niet bij was. Voeg de uitgave toe en iedereen ziet ze meteen, samen met wat er veranderd is en wie dat deed."
+    shot: S05
+    shotAlt: "Het uitgavenformulier met een verdeling op percentage, waarbij de huur wordt verdeeld naar grootte van de kamer"
+  - title: "Hou de saldi in de gaten"
+    body: "Side Badger houdt per valuta een lopend saldo bij, zodat je in één oogopslag ziet wie wie iets schuldig is. In plaats van iedereen een web van kleine schulden te laten ontwarren, stelt het een korte lijst betalingen voor die de groep afrekent."
+    shot: S10
+    shotAlt: "Het saldoscherm met vereenvoudigde schulden in twee valuta’s, met Alles tonen ingeschakeld"
+  - title: "Reken af buiten de app, registreer binnen de app"
+    body: "Side Badger verplaatst nooit geld. Betaal elkaar zoals je wilt en registreer dan de betaling, zodat de saldi bijgewerkt worden en het scherm van iedereen zich ververst zonder opnieuw te laden. “Afrekenen” betekent gewoon dat de saldi op nul staan. Niemand kan een groep verlaten zolang die nog geld schuldig is of tegoed heeft, dus wie op vertrekken staat, rekent eerst af."
+    shot: S11
+    shotAlt: "Het betalingsformulier met knoppen voor snel afrekenen en de melding bij een gedeeltelijke betaling"
+requirements:
+  heading: "Wat je nodig hebt"
+  items:
+    - "Een gratis account. Een e-mailadres en een wachtwoord is alles wat je nodig hebt, en je bevestigt het e-mailadres voordat je iets kunt toevoegen."
+    - "Minstens 18 jaar zijn."
+    - "Een moderne browser op een telefoon of computer, en een verbinding. Side Badger is geen app uit een appstore en werkt niet offline."
+    - "Eventueel een plekje op je startscherm. Je hebt geen appstore nodig, want je kunt Side Badger aan je startscherm of dock toevoegen en dan opent het als een app."
+example:
+  heading: "Drie vrienden na een avondje uit"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: "Diner"
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: Taxi
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: "39 talen, en gebouwd voor meer mensen"
+    body: "Gebruik Side Badger in 39 talen, waaronder het van rechts naar links geschreven Arabisch, Perzisch en Urdu. Iedereen in de groep kan zijn eigen taal kiezen, dus de groepspagina kan voor de ene persoon in het Arabisch zijn en voor de volgende in het Engels. Het is ook gebouwd met toetsenbord- en schermlezergebruikers in gedachten, en ledenkleuren komen met patronen, zodat je groen en rood niet uit elkaar hoeft te houden."
+faq:
+  heading: "Vragen"
+  items:
+    - q: "Heeft iedereen een account nodig?"
+      a: "Ja, een gratis. Elke persoon bevestigt het e-mailadres voordat ze iets toevoegen."
+    - q: "Is er een app?"
+      a: "Het draait in de browser en je kunt het aan je startscherm of dock toevoegen zodat het opent als een app. Er is geen versie voor de appstore en geen offlinemodus."
+    - q: "Verplaatst Side Badger geld?"
+      a: "Nee. Het houdt de rekening bij en stelt betalingen voor, en jullie betalen elkaar zoals jullie willen. Daarna registreer je de betaling. Zie [afrekenen](page:feature/settle-up)."
+    - q: "Kan iemand vertrekken met een openstaande schuld?"
+      a: "Nee. Niemand kan een groep verlaten zolang die nog geld schuldig is of tegoed heeft, dus eerst afrekenen."
+    - q: "Hoeveel mensen kunnen meedoen aan een groep?"
+      a: "Tot 50 personen in een groep. Nodig ze uit met een link of een QR-code, en zet goedkeuring aan als je wilt dat een beheerder elke persoon binnenlaat."
+    - q: "Wat met reizen met meer dan één valuta?"
+      a: "Saldi worden per valuta apart bijgehouden. Zie [meerdere valuta’s](page:feature/multiple-currencies)."

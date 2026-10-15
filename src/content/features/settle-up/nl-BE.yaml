@@ -1,0 +1,110 @@
+translatedFrom: "1b51f540"
+review:
+  status: machine
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+meta:
+  title: "Reken af met minder betalingen | Side Badger"
+  description: "Zie wie wie iets schuldig is in je groep, krijg een korte lijst betalingen die iedereen afrekent en registreer elke betaling zodra ze gebeurt. Gratis te gebruiken."
+h1: "Reken af met minder betalingen"
+navLabel: "Afrekenen"
+lead: "Side Badger houdt een lopend saldo bij voor iedereen in de groep en stelt een korte lijst betalingen voor die het regelt. Jullie betalen elkaar zoals jullie willen en registreren het dan. Wil je eerst zien hoe de bedragen verdeeld worden, begin dan met [uitgaven verdelen](page:feature/split-expenses)."
+cta:
+  heading: "Klaar om te ontwarren wie wie iets schuldig is?"
+  body: "Maak een account aan, start een groep en voeg de eerste uitgave toe. De saldi nemen het vanaf daar over."
+  button: "Maak een gratis account"
+problem:
+  heading: "Saldi die meteen bijgewerkt worden"
+  body: "Elke uitgave verandert wie wie iets schuldig is, dus Side Badger houdt de saldi actueel naarmate er uitgaven en betalingen bijkomen. Iedereen in de groep ziet een wijziging meteen, en ziet wat er veranderd is en wie dat deed. Saldi worden per valuta bijgehouden, dus euro’s en ponden blijven in hun eigen kolom, tenzij een uitgave bij het invoeren omgerekend werd. Standaard zie je de schulden waarbij jij betrokken bent; **Alles tonen** toont de hele groep."
+workflow:
+  heading: "Drie stappen naar quitte"
+  steps:
+    - title: "Zie wie wie iets schuldig is"
+      body: "Open de saldi van de groep om te zien wat je schuldig bent, wat je tegoed hebt en een korte lijst betalingen die iedereen afrekent, per valuta berekend. Betwiste uitgaven blijven buiten de sommen tot ze geregeld zijn. In het voorbeeld met huisgenoten hieronder worden zes betalingen twee."
+      shot: S10
+      shotAlt: "Het saldoscherm met vereenvoudigde schulden in twee valuta’s, met Alles tonen ingeschakeld"
+    - title: "Betaal zoals je wilt en registreer het dan"
+      body: "Bankoverschrijving, cash, een gunst die nog openstaat van de vorige vakantie. Side Badger verplaatst het geld niet. Zodra het van hand gewisseld is, registreer je de betaling en het saldo wordt voor iedereen bijgewerkt."
+      shot: S11
+      shotAlt: "Het betalingsformulier met knoppen voor snel afrekenen en de melding bij een gedeeltelijke betaling"
+    - title: "Controleer of het aangekomen is"
+      body: "De betaling komt in de groepsgeschiedenis, waar iedereen in de groep ze kan zien en er met een emoji op kan reageren. Vier een betaling wanneer ze binnen is."
+      shot: S12
+      shotAlt: "De betalingsgeschiedenis met emoji-reacties op een betaling"
+options:
+  heading: "Opties"
+  items: []
+example:
+  heading: "Van een kluwen tot een korte lijst"
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: "Elektriciteit"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: "Internet"
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "Boodschappen"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "Een betaling registreren"
+    body: "Wanneer iemand betaalt, registreer je het bij de juiste persoon. De knoppen voor snel afrekenen vullen het bedrag in uit je voorgestelde betalingen, en je kunt een notitie toevoegen zoals “bankoverschrijving” (tot 500 tekens). Betaal je maar een deel van wat je schuldig bent, dan blijft de rest op het saldo staan. Voer je te weinig of te veel in, dan waarschuwt Side Badger je voor je opslaat. Een betaling registreren vraagt toestemming om uitgaven te bewerken, en de datum kan niet in de toekomst liggen."
+  - heading: "In een andere valuta betaald?"
+    body: "Saldi blijven in de valuta waarin ze betaald werden, dus een schuld in euro blijft een schuld in euro. Euro’s schuldig, maar betalen in pond? Reken de betaling om terwijl je ze invoert, tegen een actuele wisselkoers of tegen de koers die je echt kreeg. De koers ligt vast op het moment dat de betaling wordt opgeslagen. [Meerdere valuta’s](page:feature/multiple-currencies) legt uit hoe omrekenen werkt, en [groepsreizen](page:use-case/group-trips) toont het in gebruik."
+  - heading: "Een geschiedenis die je kunt controleren"
+    body: "Elke geregistreerde betaling blijft in de groepsgeschiedenis staan met haar datum, bedrag en notitie. Alleen de persoon die een betaling registreerde kan ze bewerken, en die persoon of een groepsbeheerder kan ze verwijderen. Een betaling met iemand die de groep verlaten heeft, is vergrendeld. Voor een uitgewerkt scenario met huisgenoten, zie [huisgenoten](page:use-case/housemates)."
+limits:
+  heading: "Wat Side Badger niet doet"
+  items:
+    - "Side Badger verplaatst geen geld, stuurt geen betaallinks en stuurt geen betalingsverzoeken. Een betaling in de app is een registratie van een betaling die elders gebeurd is."
+    - "De voorgestelde betalingen komen uit een eenvoudige matchingmethode, per valuta toegepast. Die stelt altijd minder betalingen voor dan er mensen met een saldo in die valuta zijn (vier mensen, hoogstens drie betalingen), maar vindt niet altijd het kleinst mogelijke aantal."
+    - "Je kunt de suggesties niet uitschakelen. **Alles tonen** toont elke voorgestelde betaling in de groep, niet alleen die van jou."
+    - "Valuta’s worden nooit tegen elkaar verrekend, tenzij de uitgaven bij het invoeren omgerekend werden."
+    - "Er zijn geen herinneringen, dus een betaling opvolgen blijft aan jou."
+useCasesHeading: "Waar afrekenen telt"
+faq:
+  heading: "Vragen"
+  items:
+    - q: "Stuurt Side Badger het geld?"
+      a: "Nee. Betaal elkaar zoals je wilt en registreer de betaling dan in Side Badger, zodat het saldo bijgewerkt wordt."
+    - q: "Kan ik de voorgestelde betalingen uitschakelen?"
+      a: "Nee. Vereenvoudiging blijft aan, en **Alles tonen** toont elke voorgestelde betaling in de groep, niet enkel die waarbij jij betrokken bent."
+    - q: "Waarom worden euro’s en ponden apart gehouden?"
+      a: "Saldi blijven in de valuta waarin je betaalde, tenzij je omrekent bij het invoeren van een uitgave of betaling. Schulden in verschillende valuta’s worden nooit tegen elkaar verrekend."
+    - q: "Wat als iemand maar een deel betaalt van wat hij of zij schuldig is?"
+      a: "Registreer het deel dat betaald werd. De rest blijft op het saldo staan tot het betaald is."
+    - q: "Is dit altijd het kleinst mogelijke aantal betalingen?"
+      a: "Niet gegarandeerd. Het stelt altijd minder betalingen voor dan er mensen met een saldo in die valuta zijn, dus voor vier mensen nooit meer dan drie. In het voorbeeld met huisgenoten zijn dat twee betalingen, waar iedereen rechtstreeks terugbetalen er zes vroeg."

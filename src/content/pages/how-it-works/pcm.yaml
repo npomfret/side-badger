@@ -1,8 +1,6 @@
 translatedFrom: "fd23c99b"
 review:
-  status: checked
-  checker: "T2-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -25,10 +23,8 @@ claims:
   - accessibility.keyboard-and-screen-reader
   - accessibility.member-colours-with-patterns
 identicalApproved:
-  - steps.1.title
   - example.expenses.0.label
   - example.expenses.1.label
-  - faq.heading
   - example.people.0.name
   - example.people.1.name
   - example.people.2.name
@@ -47,7 +43,7 @@ steps:
     body: "Make one group for each house, trip or event, so di rent no go ever land for di same list as di wedding gift. Give am name, pick di name wey people go see for you and, if you like, limit which currencies e go take. Your dashboard go then show every group, and where you stand for each one, for one screen."
     shot: S02
     shotAlt: "Di create-group dialog with di currency restrictions section open"
-  - title: "Invite your people"
+  - title: "Call your people make dem join"
     body: "Share join link or show QR code, and set how long e go last, from 15 minutes up to 5 days. Everybody wey join need free account and verified email, and one group fit hold up to 50 people. If you wan check who dey enter, turn on approval and admin go let each person in."
     shot: S03
     shotAlt: "Di invite dialog for di link tab, showing QR code and di expiry choices"
@@ -95,7 +91,7 @@ sections:
   - heading: "39 languages, and build for more people"
     body: "Use Side Badger for 39 languages, including right-to-left Arabic, Persian and Urdu. Everybody for di group fit pick im own, so di group page fit dey Arabic for one person and English for di next. We also build am with keyboard and screen-reader users for mind, and member colours come with patterns, so you no go need tell green from red."
 faq:
-  heading: "Questions"
+  heading: "Question dem"
   items:
     - q: "Everybody need account?"
       a: "Yes, free one. Each person go verify im email before e add anything."

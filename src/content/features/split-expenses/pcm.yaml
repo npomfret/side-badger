@@ -1,8 +1,6 @@
 translatedFrom: "56ee9b03"
 review:
-  status: checked
-  checker: "T2-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -12,13 +10,7 @@ claims:
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
 identicalApproved:
-  - options.items.1.title
-  - options.items.2.title
   - example.expenses.1.label
-  - example.expenses.2.label
-  - limits.heading
-  - limits.items.2
-  - faq.heading
   - example.people.0.name
   - example.people.1.name
   - example.people.2.name
@@ -59,9 +51,9 @@ options:
   items:
     - title: "Equal-equal"
       body: "Di default for dinners, taxis and anything wey everybody share evenly. If di total no divide clean, di odd penny go to one person at random, no be di same person every time. For di taxi below, na Ana."
-    - title: "By exact amounts"
+    - title: "By exact amaunts"
       body: "Type wetin each person owe. E good for di gift wey everybody choose different price, or di shop wey one person trolley carry more than di shared groceries. Di amounts must add up to di total."
-    - title: "By percentage"
+    - title: "By pasentej"
       body: "Give each person share of di total. Rent by room size na di classic, with di biggest room paying di biggest share and nobody dey pretend say e no be so."
 example:
   heading: "One cottage weekend, four expenses, three splits"
@@ -88,7 +80,7 @@ example:
       amount: 84
       split:
         method: equal
-    - label: "groceries"
+    - label: "chop shopping"
       payer: cara
       amount: 64.5
       split:
@@ -117,18 +109,18 @@ sections:
   - heading: "When something look wrong"
     body: "Group fit turn on expense questions. Anybody wey dey inside one expense fit raise question and talk why, and di expense go stay out of di balances until di person wey ask, or admin, close am. E dey off by default and admin go turn am on for di group. E fit [events and celebrations](page:use-case/events-and-celebrations), where di deposit wey nobody remember suddenly become everybody business."
 limits:
-  heading: "Limits"
+  heading: "Di limits"
   items:
     - "One person dey pay for each expense. If two people pay, record two expenses."
     - "No split by item and no split by shares. Equal, exact amounts and percentages na wetin dey."
-    - "Percentages must add up to 100."
+    - "Di percentages must add up to 100."
     - "One expense fit reach 999,999.99 for im own currency, with dat currency usual decimal places."
     - "Expenses no fit repeat by themselves. Copy last month own instead."
     - "Dates no fit dey for future or more than 10 years ago."
     - "Expense wey involve person wey don leave di group go become read-only."
 useCasesHeading: "Where to share like dis help"
 faq:
-  heading: "Questions"
+  heading: "Question dem"
   items:
     - q: "Two people fit pay for one expense?"
       a: "No for one expense. Record two, one for each payer, and di balances go come out di same."

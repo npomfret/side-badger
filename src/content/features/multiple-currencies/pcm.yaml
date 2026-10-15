@@ -1,8 +1,6 @@
 translatedFrom: "923c938f"
 review:
-  status: checked
-  checker: "T2-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - multi-currency.140-currencies
   - multi-currency.currency-rules
@@ -13,15 +11,6 @@ claims:
   - currency-conversion.owe-euros-pay-pounds
   - settlements.pay-however-then-record
 identicalApproved:
-  - navLabel
-  - cta.heading
-  - workflow.heading
-  - options.items.1.title
-  - options.items.3.title
-  - example.expenses.2.label
-  - example.expenses.3.label
-  - limits.heading
-  - faq.heading
   - example.people.0.name
   - example.people.1.name
   - example.people.2.name
@@ -30,17 +19,17 @@ meta:
   title: "Share costs for 140 currencies, converted or kept separate"
   description: "Enter each expense for di currency wey you pay am, keep balances separate or convert for rate wey you fit see and change, then settle up with short list of payments."
 h1: "Share costs for 140 currencies"
-navLabel: "Multiple currencies"
+navLabel: "Plenty currencies"
 lead: "Euros, yen, and dat one taxi for baht. Side Badger dey take each expense for di currency wey you pay am, keep di balances straight, and fit convert when your group prefer to settle once. E dey work for 140 currencies, and e fit [group trips](page:use-case/group-trips) well well."
 cta:
-  heading: "Bring your euros, bring your yen"
+  heading: "Come with your euros, come with your yen"
   body: "Create account, start group and add di first expense for whatever currency you happen to dey hold."
   button: "Create free account"
 problem:
   heading: "Enter am as you pay am"
   body: "Dem hardly pay for trip with one currency. Dem book di hotel for house for pounds, dem pay dinner for yen, and di airport coffee na whatever di layover use. To convert everything by hand before you even fit type am in na how dem dey abandon spreadsheets. For Side Badger you go enter each expense for di currency wey dey di receipt, and every amount dey follow im currency rules, so yen get no decimals and dinars get three. Di currencies wey you use recently go come first for di list."
 workflow:
-  heading: "Keep currencies separate, or convert as you go"
+  heading: "Keep currencies separate, or convert as you dey go"
   steps:
     - title: "Add di expense for im own currency"
       body: "Choose di currency, type di amount, talk who pay and who share am. Nothing else dey needed. Dis na di default, and e dey keep di original amount exactly as you enter am."
@@ -57,11 +46,11 @@ options:
   items:
     - title: "Dem show di rate"
       body: "When you convert, di rate and di converted amount go show for di form, so nobody go need take number on trust."
-    - title: "Type your own"
+    - title: "Type your own one"
       body: "You get better rate from cash desk, or worse one from airport? Edit di rate to di one wey you really get and di converted amount go update."
     - title: "Di original stay"
       body: "Di original amount stay on di expense, next to di converted one, for anybody wey ask wetin e be for yen."
-    - title: "Free to convert"
+    - title: "E free to convert"
       body: "To convert no cost anything. No fee dey for to enter expense for another currency."
 example:
   heading: "Four friends for Japan, settled two ways"
@@ -87,13 +76,13 @@ example:
       currency: JPY
       split:
         method: equal
-    - label: "train tickets"
+    - label: "train ticket dem"
       payer: chloe
       amount: 24000
       currency: JPY
       split:
         method: equal
-    - label: "temple entry"
+    - label: "temple entrance"
       payer: dev
       amount: 4000
       currency: JPY
@@ -110,7 +99,7 @@ sections:
   - heading: "Rules for di group"
     body: "Limit group to di currencies wey you really dey use, and set default so di form go open for di right one. Holiday for Portugal no need 139 other options next to di dinner bill, and [wedding abroad](page:use-case/events-and-celebrations) probably need two."
 limits:
-  heading: "Limits"
+  heading: "Di limits"
   items:
     - "Di rate dey fixed when dem save di expense. Dem no dey ever revalue old expenses."
     - "Side Badger dey fetch current rate where e fit. Not every pair get guarantee, and you fit always type di rate yourself."
@@ -120,7 +109,7 @@ limits:
     - "Side Badger dey record payments. E no dey ever move money or exchange am."
 useCasesHeading: "Where dis one help"
 faq:
-  heading: "Questions"
+  heading: "Question dem"
   items:
     - q: "Which exchange rate una dey use?"
       a: "Current exchange rate, wey dem fetch when you enter di expense where one dey available. You fit change am to di rate wey you really get, and di converted amount go update."

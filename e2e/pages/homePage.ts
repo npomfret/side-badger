@@ -121,6 +121,16 @@ export class HomePage {
       'data-scene-engine',
       this.engine
     );
+    // Departs from rule 2 (an attribute, not something a person sees): the stages engine marks the
+    // page ready once every scene has its first stage, and only then may stage changes transition.
+    // Checks that run before it (axe, overflow) would otherwise race the first stage assignment.
+    // A visible "scenes ready" cue does not exist and should not, so this stays.
+    if (this.engine === 'stages') {
+      await expect(this.page.locator('html'), 'the stages engine has assigned the first stages').toHaveAttribute(
+        'data-scene-ready',
+        ''
+      );
+    }
   }
 
   // ----- structure -----
@@ -138,24 +148,36 @@ export class HomePage {
       await expect(this.region(key), `the "${this.string(key)}" scene`).toHaveCount(1);
     }
     // evaluateAll reads the regions in document order; the names are checked whole, not by position
-    const names = await this.main.getByRole('region').evaluateAll(regions =>
-      regions.map(region => document.getElementById(region.getAttribute('aria-labelledby') ?? '')?.textContent?.trim())
-    );
-    expect(names, 'region names in page order').toEqual(REGION_TITLE_KEYS.map(key => this.string(key)));
+    await expect
+      .poll(
+        () =>
+          this.main.getByRole('region').evaluateAll(regions =>
+            regions.map(region => document.getElementById(region.getAttribute('aria-labelledby') ?? '')?.textContent?.trim())
+          ),
+        { message: 'region names in page order', timeout: ELEMENT_TIMEOUT }
+      )
+      .toEqual(REGION_TITLE_KEYS.map(key => this.string(key)));
   }
 
   async expectJsonLdApplication(): Promise<void> {
-    const types = await this.page
-      .locator('script[type="application/ld+json"]')
-      .evaluateAll(scripts => scripts.map(script => script.textContent ?? ''));
-    expect(types.join('\n'), 'the homepage carries a SoftwareApplication block').toContain('SoftwareApplication');
+    // Departs from rule 2: JSON-LD is for search engines, so nothing a person sees leads to it
+    await expect
+      .poll(
+        () =>
+          this.page
+            .locator('script[type="application/ld+json"]')
+            .evaluateAll(scripts => scripts.map(script => script.textContent ?? '').join('\n')),
+        { message: 'the homepage carries a SoftwareApplication block', timeout: ELEMENT_TIMEOUT }
+      )
+      .toContain('SoftwareApplication');
   }
 
   async expectNoBannedPhrases(): Promise<void> {
-    const body = (await this.page.locator('body').innerText()).toLowerCase();
     // Pseudo-locale text is accented, so only the English page can show these; check every page the same way
     for (const phrase of BANNED_PHRASES) {
-      expect(body, `the page never says "${phrase}"`).not.toContain(phrase);
+      await expect(this.page.locator('body'), `the page never says "${phrase}"`).not.toContainText(phrase, {
+        ignoreCase: true,
+      });
     }
   }
 
@@ -164,32 +186,33 @@ export class HomePage {
   /** Every link in the page body goes somewhere on this site; launch links count a click and say nofollow */
   async expectLinksStayOnTheSite(): Promise<void> {
     await expect(this.registerLinks, 'the hero and the final sign-up button').toHaveCount(2);
-    const links = await this.mainLinks.evaluateAll(anchors =>
-      anchors.map(anchor => ({
-        href: anchor.getAttribute('href') ?? '',
-        rel: anchor.getAttribute('rel') ?? '',
-        name: (anchor.textContent ?? '').trim(),
-      }))
-    );
-    expect(links.length, 'the page has links in its body').toBeGreaterThan(8);
-    const offenders = links.filter(link => !(link.href.startsWith('/') || link.href.startsWith('#')));
-    expect(offenders, 'links that leave the site (the app is reached through /go/)').toEqual([]);
-    const launch = links.filter(link => link.href.startsWith('/go/'));
-    expect(
-      launch.filter(link => !link.rel.includes('nofollow')),
-      'launch links without nofollow'
-    ).toEqual([]);
-    expect(
-      launch.map(link => new URL(link.href, 'http://x').searchParams.get('from')),
-      'every launch link names its page'
-    ).not.toContain(null);
-    const positions = launch.map(link => new URL(link.href, 'http://x').searchParams.get('cta'));
-    expect(positions, 'the hero button counts its own position').toContain('hero');
-    expect(positions, 'the final button counts its own position').toContain('final');
-    expect(
-      launch.filter(link => link.href.startsWith('/go/register/')).map(link => new URL(link.href, 'http://x').searchParams.get('cta')),
-      'sign-up buttons are exactly the hero and the final one'
-    ).toEqual(['hero', 'final']);
+    const summary = async () => {
+      const links = await this.mainLinks.evaluateAll(anchors =>
+        anchors.map(anchor => ({ href: anchor.getAttribute('href') ?? '', rel: anchor.getAttribute('rel') ?? '' }))
+      );
+      const launch = links.filter(link => link.href.startsWith('/go/'));
+      const param = (href: string, name: string) => new URL(href, 'http://x').searchParams.get(name);
+      return {
+        'the page has more than 8 body links': links.length > 8,
+        'links that leave the site (the app is reached through /go/)': links
+          .filter(link => !(link.href.startsWith('/') || link.href.startsWith('#')))
+          .map(link => link.href),
+        'launch links without nofollow': launch.filter(link => !link.rel.includes('nofollow')).map(link => link.href),
+        'launch links that do not name their page': launch.filter(link => param(link.href, 'from') === null).map(link => link.href),
+        'positions of the sign-up buttons': launch
+          .filter(link => link.href.startsWith('/go/register/'))
+          .map(link => param(link.href, 'cta')),
+      };
+    };
+    await expect
+      .poll(summary, { message: 'body links stay on the site; sign-up is exactly the hero and the final button', timeout: ELEMENT_TIMEOUT })
+      .toEqual({
+        'the page has more than 8 body links': true,
+        'links that leave the site (the app is reached through /go/)': [],
+        'launch links without nofollow': [],
+        'launch links that do not name their page': [],
+        'positions of the sign-up buttons': ['hero', 'final'],
+      });
   }
 
   /**
@@ -240,13 +263,17 @@ export class HomePage {
         timeout: ELEMENT_TIMEOUT,
       })
       .toEqual(expected);
-    const log = await this.page.evaluate(
-      () => (window as unknown as { __focusLog: Array<{ href: string; ring: boolean }> }).__focusLog
-    );
-    expect(
-      log.filter(entry => !entry.ring).map(entry => entry.href),
-      'links focused without a visible focus ring'
-    ).toEqual([]);
+    await expect
+      .poll(
+        () =>
+          this.page.evaluate(() =>
+            (window as unknown as { __focusLog: Array<{ href: string; ring: boolean }> }).__focusLog
+              .filter(entry => !entry.ring)
+              .map(entry => entry.href)
+          ),
+        { message: 'links focused without a visible focus ring', timeout: ELEMENT_TIMEOUT }
+      )
+      .toEqual([]);
   }
 
   // ----- motion -----

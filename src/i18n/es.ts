@@ -226,7 +226,7 @@ export default {
   'pricing.hero.subtitle': 'Gratis. Sin anuncios. Sin límites diarios.',
   'pricing.hero.title': 'Side Badger es gratis',
   'pricing.limits.amount.label': 'Importe de un gasto o de un pago',
-  'pricing.limits.amount.value': 'Hasta 999,999.99 en su propia moneda. El mismo número se aplica a todas las monedas, valga lo que valga.',
+  'pricing.limits.amount.value': 'Hasta 999.999,99 en su propia moneda. El mismo número se aplica a todas las monedas, valga lo que valga.',
   'pricing.limits.attachments.label': 'Archivos adjuntos en un comentario',
   'pricing.limits.attachments.value': '3, de hasta 5 MB cada uno',
   'pricing.limits.caption': 'Límites de Side Badger',

@@ -1,8 +1,6 @@
 translatedFrom: "923c938f"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - multi-currency.140-currencies
   - multi-currency.currency-rules
@@ -106,7 +104,7 @@ limits:
     - El tipo queda fijado al guardar el gasto. Los gastos antiguos nunca se revalorizan.
     - Side Badger obtiene un tipo actual cuando puede. No se garantiza uno para cada par, y siempre puedes escribir el tipo tú.
     - La conversión automática del grupo se aplica solo a gastos nuevos y copiados, no a ediciones ni a gastos existentes.
-    - Cada gasto tiene un tope de 999,999.99 en su propia moneda.
+    - Cada gasto tiene un tope de 999.999,99 en su propia moneda.
     - Hay 140 monedas. Las criptomonedas y los metales no están entre ellas.
     - Side Badger registra pagos. Nunca mueve ni cambia dinero.
 useCasesHeading: Dónde ayuda
@@ -119,8 +117,8 @@ faq:
       a: No. El tipo queda fijado al guardar el gasto, así que un saldo no se desvía porque se mueva el mercado.
     - q: ¿Se admiten criptomonedas?
       a: No. Hay 140 monedas, y las criptomonedas no están entre ellas.
-    - q: ¿Por qué no puedo introducir 2,000,000 de rupias indonesias?
-      a: Cada gasto tiene un tope de 999,999.99 en su propia moneda. Introdúcelo en otra moneda y conviértelo, o divídelo en dos gastos.
+    - q: ¿Por qué no puedo introducir 2.000.000 de rupias indonesias?
+      a: Cada gasto tiene un tope de 999.999,99 en su propia moneda. Introdúcelo en otra moneda y conviértelo, o divídelo en dos gastos.
     - q: ¿Cuesta algo convertir?
       a: No. Convertir es gratis, como el resto de Side Badger. Consulta [precios](page:pricing).
     - q: ¿Tengo que convertir?

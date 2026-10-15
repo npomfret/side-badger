@@ -1,9 +1,7 @@
 # P34b: página de casos de uso para compañeros de piso (guion: tasks/seo-site-expansion-plan.md, «Housemates»).
 translatedFrom: "e6b829e6"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -41,7 +39,7 @@ cta:
   button: Crear una cuenta gratis
 scenario:
   heading: Monta la casa
-  body: Haz un grupo para la casa, elige el nombre con el que quieres que te vean y invita a todo el mundo con un enlace o un código QR. El grupo puede ser abierto, donde todos añaden y editan, o gestionado, donde los nuevos miembros necesitan la aprobación de un administrador y solo quienes lo crearon y los administradores pueden cambiar gastos, lo que viene bien al compañero que lleva las cuentas. Quien solo quiera mirar los números puede ser espectador, que lo ve todo y no cambia nada. Todo el mundo ve un gasto nuevo enseguida, así que «ya lo añado luego» tiene menos sitios donde esconderse.
+  body: Haz un grupo para la casa, elige el nombre con el que quieres que te vean y invita a todo el mundo con un enlace o un código QR. El grupo puede ser abierto, donde todos añaden y editan, o administrado, donde los nuevos miembros necesitan la aprobación de un administrador y solo quienes lo crearon y los administradores pueden cambiar gastos, lo que viene bien al compañero que lleva las cuentas. Quien solo quiera mirar los números puede ser espectador, que lo ve todo y no cambia nada. Todo el mundo ve un gasto nuevo enseguida, así que «ya lo añado luego» tiene menos sitios donde esconderse.
 sections:
   - heading: Alquiler y facturas
     body: "El alquiler rara vez se divide entre cuatro, porque las habitaciones no son iguales. Divídelo por porcentaje, para que la habitación grande pague más y el cuartucho con ventana pague menos. Los porcentajes tienen que sumar 100. Las facturas que usa todo el mundo se dividen a partes iguales, y un compañero que no participó en un gasto puede quedar fuera. Cuando una división a partes iguales deja un céntimo sobrante, va a una persona al azar. No hay facturas recurrentes, así que cada mes copias el alquiler del mes pasado, cambias la fecha y sigues."
@@ -107,4 +105,4 @@ faq:
     - q: ¿Paga Side Badger las facturas?
       a: No. Lleva la cuenta y sugiere una lista corta de pagos. Pagaos como queráis y después registradlo, como explica [saldar cuentas](page:feature/settle-up).
     - q: ¿Puede un compañero llevar las cuentas?
-      a: Sí. Hazlo administrador y usa un grupo gestionado, donde los nuevos miembros necesitan aprobación y solo quienes lo crearon y los administradores pueden cambiar gastos.
+      a: Sí. Hazlo administrador y usa un grupo administrado, donde los nuevos miembros necesitan aprobación y solo quienes lo crearon y los administradores pueden cambiar gastos.

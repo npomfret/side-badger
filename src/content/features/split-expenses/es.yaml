@@ -44,7 +44,7 @@ workflow:
     - title: Plantea una duda si algo no cuadra
       body: Si el grupo ha activado las dudas sobre gastos, cualquier persona incluida en un gasto puede ponerlo en duda, y la lista de gastos puede mostrar solo los que tienen dudas.
       shot: S18
-      shotAlt: La lista de gastos con una etiqueta de En duda y el filtro de solo en duda
+      shotAlt: La lista de gastos con una etiqueta de Cuestionado y el filtro Solo cuestionado
 options:
   heading: Tres formas de dividir
   items:
@@ -113,7 +113,7 @@ limits:
     - Una persona paga cada gasto. Si pagaron dos personas, registra dos gastos.
     - No hay división por artículo ni por partes. Partes iguales, importes exactos y porcentajes es lo que hay.
     - Los porcentajes tienen que sumar 100.
-    - Un gasto puede llegar a 999,999.99 en su propia moneda, con los decimales habituales de esa moneda.
+    - Un gasto puede llegar a 999.999,99 en su propia moneda, con los decimales habituales de esa moneda.
     - Los gastos no pueden repetirse solos. Copia el del mes pasado.
     - Las fechas no pueden ser futuras ni de hace más de 10 años.
     - Un gasto en el que participa alguien que ha salido del grupo pasa a ser de solo lectura.

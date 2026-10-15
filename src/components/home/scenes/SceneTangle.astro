@@ -731,7 +731,7 @@ const HEAD_PAY = 'M0 0L-15 -6.5L-15 6.5Z';
     .scene--tangle .tangle__board {
       --W: var(--pW);
       --H: var(--pH);
-      --cw: 100;
+      --cw: 118;
       --sw: var(--psw);
     }
     .scene--tangle .tangle__at {
@@ -801,7 +801,7 @@ const HEAD_PAY = 'M0 0L-15 -6.5L-15 6.5Z';
   }
 
   /* ===== Reduced motion and short viewports: before and after, side by side ===== */
-  @media (prefers-reduced-motion: reduce), (max-height: 559px) {
+  @media (prefers-reduced-motion: reduce), (max-height: 559px), (min-width: 600px) and (max-width: 899px) and (max-height: 859px) {
     .scene.scene--tangle > .scene__runway > .scene__stage {
       display: flex;
       flex-direction: column;

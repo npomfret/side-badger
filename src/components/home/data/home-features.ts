@@ -3,12 +3,13 @@
  * Only `available` features appear. The JSON-LD `featureList` and the worlds' feature chips come
  * from here, so the schema never lists a feature no scene shows.
  *
- * Interim: the feature registry (`src/data/features.ts`, P22) does not exist yet, so ids are
- * plain strings and the localized title of each comes from the existing `features.*.title` keys.
- * A feature with no matching title key is depicted but not listed (`groups`, `accounts`).
- * When the registry lands, replace `FEATURE_TITLE_KEYS` with its titles.
+ * Ids are the registry's (`src/data/features.ts`); `src/__tests__/home-features.test.ts` checks that
+ * every depicted id exists there with status `available`. The localized title of each comes from
+ * the existing `features.*.title` keys, because the registry is English and internal. A feature
+ * with no matching title key is depicted but not listed (`groups`, `accounts`).
  */
 import { t, type Locale, type TranslationKey } from '@/i18n';
+import { features } from '@/data/features';
 import type { SceneId, WorldId } from './links';
 
 export type FeatureId =
@@ -76,11 +77,16 @@ export const FEATURE_TITLE_KEYS: Partial<Record<FeatureId, TranslationKey>> = {
   'privacy-posture': 'features.noTracking.title',
 };
 
+/** Whether the registry has the feature with status `available` */
+export function isAvailable(id: string): boolean {
+  return features.some(feature => feature.id === id && feature.status === 'available');
+}
+
 /** Every depicted feature id once, in first-appearance order across the scenes. */
 export function depictedFeatureIds(): FeatureId[] {
   const seen = new Set<FeatureId>();
-  for (const features of Object.values(SCENE_FEATURES)) {
-    for (const id of features) seen.add(id);
+  for (const ids of Object.values(SCENE_FEATURES)) {
+    for (const id of ids) seen.add(id);
   }
   return [...seen];
 }
@@ -88,6 +94,7 @@ export function depictedFeatureIds(): FeatureId[] {
 /** Localized titles of the depicted features that have one: the JSON-LD `featureList`. */
 export function featureList(locale: Locale): string[] {
   return depictedFeatureIds()
+    .filter(isAvailable)
     .map(id => FEATURE_TITLE_KEYS[id])
     .filter((key): key is TranslationKey => key !== undefined)
     .map(key => t(key, locale));

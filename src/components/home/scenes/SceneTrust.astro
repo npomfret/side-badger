@@ -3,7 +3,7 @@
  * Scene 8, trust (`trust`). An entry scene: nothing is pinned. Stage 0 is a clean card, stage 1
  * has all three stamps landed with the paw-print seal.
  *
- * The three claims are the only site plan D3 claims: No ads, No third-party trackers, We don't
+ * The three claims are the only site plan D3 claims: No ads, No ad or analytics trackers, We don't
  * sell your personal data. Each is an h3 whose text sits in a stamp; its line of detail follows.
  * The stamps are real text, so they stay in the accessibility tree at every stage. The seal is
  * decoration. Reduced motion rests at stage 1.
@@ -71,16 +71,6 @@ const items = [
 </ScrollScene>
 
 <style>
-  /* Workaround until H13 fixes scenes.css: a scene with no visual slot still gets
-     `grid-area: copy / link` at 900 px and up, which adds a stray empty column. Name the areas so it
-     is one column. `:where()` keeps this at one class of specificity, so any shared rule H13 adds
-     for visual-less stages wins and this can then be deleted. */
-  @media (min-width: 900px) {
-    :global(:where(#trust) .scene__stage) {
-      grid-template-columns: minmax(0, 1fr);
-      grid-template-areas: 'copy' 'link';
-    }
-  }
   .trust__card {
     position: relative;
     inline-size: 100%;

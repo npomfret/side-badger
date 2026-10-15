@@ -24,12 +24,15 @@
  *   [data-scene-track][data-track-range="a,b"] > [data-panel]   the pinned horizontal track
  *   [data-confetti]                                              fires confetti when clicked
  *   [data-confetti-at="N"] on a scene                            fires once at N % of its range
+ *   [data-confetti-x="0..1"] on a scene                          inline origin of that confetti (default 0.5)
  *   document event `home:confetti` ({ detail: { x, y } } in 0..1)  fires from a scene's own code
  */
 type Engine = 'native' | 'stages' | 'static';
 
 const root = document.documentElement;
-const flatQuery = matchMedia('(prefers-reduced-motion: reduce), (max-height: 559px)');
+const flatQuery = matchMedia(
+  '(prefers-reduced-motion: reduce), (max-height: 559px), (min-width: 600px) and (max-width: 899px) and (max-height: 859px)'
+);
 const phoneQuery = matchMedia('(max-width: 599px)');
 
 const supportsTimelines = () =>
@@ -164,20 +167,42 @@ function setUpActivity() {
   cleanups.push(() => timers.forEach(timer => clearTimeout(timer)));
 }
 
-/** Scenes with data-confetti-at fire once when that point of their range is mid-viewport. */
+/**
+ * Scenes with data-confetti-at fire once when that point of their range has been reached while
+ * the scene is still on screen. The observed region runs from that point to the end of the pinned
+ * range, and the observer's root reaches 10000 px above the viewport and stops at its middle, so
+ * the region counts as reached from the moment its top crosses the middle until it is far above.
+ * A fast flick that jumps over a short region (30 to 36 px on a phone) between two frames still
+ * flips it from "not reached" to "reached". A page that loads already past the point does not
+ * celebrate. `data-confetti-x` (0..1, along the inline axis; mirrored in right-to-left) moves the
+ * origin, for scenes whose centre is a device frame the confetti must start outside of.
+ */
 function setUpConfettiTriggers() {
-  const fireOnce = observe({ rootMargin: '-50% 0px -50% 0px' }, entries => {
+  let initial = true;
+  const fireOnce = observe({ rootMargin: '10000px 0px -50% 0px' }, entries => {
+    const loading = initial;
+    initial = false;
     for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
+      if (!entry.isIntersecting || loading) continue;
       fireOnce.unobserve(entry.target);
-      const box = entry.boundingClientRect;
-      fireConfetti(0.5, Math.min(0.9, Math.max(0.1, (box.top + box.height / 2) / innerHeight)));
+      const scene = sceneOf(entry.target);
+      const scenebox = scene.getBoundingClientRect();
+      // Flung clear past the scene: nothing to celebrate on screen
+      if (scenebox.bottom <= 0 || scenebox.top >= innerHeight) continue;
+      const inline = scene.dataset.confettiX === undefined ? 0.5 : Number(scene.dataset.confettiX);
+      const x = getComputedStyle(root).direction === 'rtl' ? 1 - inline : inline;
+      const centre = (scenebox.top + scenebox.height / 2) / innerHeight;
+      fireConfetti(x, centre > 0.1 && centre < 0.9 && !isPinned(scene) ? centre : 0.5);
     }
   });
   for (const scene of scenes()) {
     const at = Number(scene.dataset.confettiAt);
     if (!scene.dataset.confettiAt || Number.isNaN(at)) continue;
-    fireOnce.observe(isPinned(scene) ? region(scene, at, 100) : scene);
+    if (isPinned(scene)) {
+      fireOnce.observe(region(scene, at, 100));
+    } else {
+      fireOnce.observe(scene);
+    }
   }
 }
 

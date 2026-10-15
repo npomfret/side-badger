@@ -240,8 +240,9 @@
   transform: rotate(45deg);
 }
 
+/* border-inline-end already mirrors to the left edge, so RTL turns the corner the other way to point left */
 :dir(rtl) .breadcrumbs li + li::before {
-  transform: rotate(-135deg);
+  transform: rotate(-45deg);
 }
 
 .breadcrumbs a {

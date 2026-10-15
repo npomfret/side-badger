@@ -469,3 +469,12 @@ section {
 :lang(ja) {
   word-break: auto-phrase;
 }
+
+/* Long compound words (de "Haushaltskosten", "Missbrauchsschutz") in narrow headings and table
+   cells: hyphenate them at a real syllable instead of breaking mid-word. Only words of 10+
+   characters are split. English was laid out without it; scripts with no hyphenation dictionary
+   (CJK, Arabic, Indic) are unaffected. */
+:root:not(:lang(en)) :is(h1, h2, h3, h4, th, td) {
+  hyphens: auto;
+  hyphenate-limit-chars: 10 4 4;
+}

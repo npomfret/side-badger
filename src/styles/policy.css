@@ -47,3 +47,19 @@
 .markdown-body a:hover {
   color: var(--accent-success);
 }
+
+/*
+ * Tables scroll inside their own focusable region (wrapTables in PolicyPage.astro), not the table itself, so the
+ * keyboard can reach the overflow. The region shows the global focus ring.
+ */
+:global(.policy-table-scroll) {
+  max-inline-size: 100%;
+  margin-block: 0 var(--space-md);
+  overflow-x: auto;
+}
+
+:global(.policy-table-scroll) > :global(table) {
+  display: table;
+  margin-block: 0;
+  overflow: visible;
+}

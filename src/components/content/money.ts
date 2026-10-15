@@ -21,6 +21,8 @@ export function moneyFormatter(intl: string): Money {
       formatter = new Intl.NumberFormat(intl, {
         style: 'currency',
         currency,
+        // Western digits in every locale, matching the translated prose
+        numberingSystem: 'latn',
         ...(signed ? { signDisplay: 'exceptZero' as const } : {}),
         ...(fractionDigits === undefined ? {} : { minimumFractionDigits: fractionDigits }),
       });

@@ -1,7 +1,8 @@
 ---
+import { offeredLocales } from './languageSwitcherLocales';
 import {
   allLocales, localeNames, localeSubtitles, localeFlagCodes, localeConfig, localeAliasMap,
-  getBuildLocales, getFlagUrl, getLocalizedPath, isPseudoLocale, t,
+  getFlagUrl, getLocalizedPath, isPseudoLocale, t,
   type Locale, type DropdownLocale,
 } from '../i18n';
 
@@ -16,9 +17,9 @@ const { currentLocale, currentPath, id = 'language-dropdown' } = Astro.props;
 const changeLanguageLabel = t('a11y.changeLanguage', currentLocale);
 const searchLanguagesLabel = t('a11y.searchLanguages', currentLocale);
 
-// Only locales that are actually built are offered (English-first builds leave some out).
-// Pseudo-locales appear only when built (PREVIEW_PSEUDO=1).
-const built = new Set<Locale>(getBuildLocales());
+// Only locales this page is actually built for are offered (a page may be restricted to some
+// locales, and English-first builds leave some out). Pseudo-locales appear only when built.
+const built = offeredLocales(currentPath);
 
 type Choice = {
   code: string;
@@ -45,7 +46,7 @@ for (const code of allLocales as DropdownLocale[]) {
     browserLanguages: localeConfig[target].browserLanguages,
   });
 }
-for (const locale of getBuildLocales().filter(isPseudoLocale)) {
+for (const locale of [...built].filter(isPseudoLocale)) {
   choices.push({
     code: locale,
     target: locale,

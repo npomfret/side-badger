@@ -1,0 +1,125 @@
+translatedFrom: "923c938f"
+review:
+  status: machine
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Skiptu kostnaði í 140 gjaldmiðlum, umreiknuðum eða aðskildum"
+  description: "Skráðu hvert útgjald í gjaldmiðlinum sem þú greiddir í, haltu stöðunni aðskilinni eða umreiknaðu á gengi sem þú sérð og getur breytt, og gerðu svo upp með stuttum lista yfir greiðslur."
+h1: "Skiptu kostnaði í 140 gjaldmiðlum"
+navLabel: "Margir gjaldmiðlar"
+lead: "Evrur, jen og þessi eini leigubíll í bahtum. Side Badger tekur við hverju útgjaldi í gjaldmiðlinum sem þú greiddir í, heldur stöðunni réttri og getur umreiknað þegar hópurinn vill frekar gera upp í einu lagi. Það virkar í 140 gjaldmiðlum og á vel við [hópferðir](page:use-case/group-trips)."
+cta:
+  heading: "Komdu með evrurnar þínar, komdu með jenin þín"
+  body: "Stofnaðu aðgang, byrjaðu hóp og bættu við fyrsta útgjaldinu í hvaða gjaldmiðli sem þú varst með í höndunum."
+  button: "Stofna ókeypis aðgang"
+problem:
+  heading: "Skráðu það eins og þú greiddir það"
+  body: "Sjaldan er allt greitt í einum gjaldmiðli á ferðalagi. Hótelið var bókað heima í pundum, kvöldverðurinn var greiddur í jenum og flugvallarkaffið í því sem millilendingin notaði. Að umreikna allt í höndunum áður en þú getur slegið það inn er ástæðan fyrir því að töflureiknum er hent. Í Side Badger skráirðu hvert útgjald í gjaldmiðlinum á kvittuninni og hver upphæð fylgir reglum síns gjaldmiðils, svo jen hafa enga aukastafi og dínarar hafa þrjá. Gjaldmiðlarnir sem þú notaðir nýlega koma fyrst á listanum."
+workflow:
+  heading: "Hafðu gjaldmiðla aðskilda, eða umreiknaðu jafnóðum"
+  steps:
+    - title: "Bættu útgjaldinu við í eigin gjaldmiðli"
+      body: "Veldu gjaldmiðilinn, sláðu inn upphæðina og segðu hver greiddi og hverjir deildu því. Ekkert annað þarf. Þetta er sjálfgefið og það heldur upphaflegu upphæðinni nákvæmlega eins og þú slóst hana inn."
+      shot: S07
+      shotAlt: "Útgjaldaeyðublað með upphæð í jenum"
+    - title: "Fylgstu með stöðu í hverjum gjaldmiðli"
+      body: "Staðan er haldin sérstaklega fyrir hvern gjaldmiðil og hver fær sinn eigin stutta lista yfir greiðslur sem lagðar eru til. Pund eru gerð upp í pundum og jen í jenum."
+      shot: S10
+      shotAlt: "Stöðuskjár með einfölduðum skuldum í tveimur gjaldmiðlum"
+    - title: "Eða umreiknaðu þegar hópurinn vill frekar gera upp í einu lagi"
+      body: "Veldu annan gjaldmiðil um leið og þú skráir útgjaldið og Side Badger getur umreiknað það á núverandi gengi, sem þú getur breytt í gengið sem þú fékkst í raun. Umreiknaða upphæðin bætist við stöðuna í þeim gjaldmiðli. Umreikningur er val sem hópurinn tekur, aldrei eitthvað sem gerist á bak við þig."
+options:
+  heading: "Gengi sem þú sérð og getur breytt"
+  items:
+    - title: "Gengið er sýnt"
+      body: "Þegar þú umreiknar birtast gengið og umreiknaða upphæðin á eyðublaðinu, svo enginn þarf að taka tölu trúanlega."
+    - title: "Sláðu inn þitt eigið"
+      body: "Fékkstu betra gengi hjá gjaldeyrisafgreiðslu, eða verra á flugvelli? Breyttu genginu í það sem þú fékkst í raun og umreiknaða upphæðin uppfærist."
+    - title: "Upphaflega upphæðin helst"
+      body: "Upphaflega upphæðin helst á útgjaldinu, við hlið þeirrar umreiknuðu, fyrir þá sem spyrja hvað hún var í jenum."
+    - title: "Ókeypis að umreikna"
+      body: "Umreikningur kostar ekkert. Það er ekkert gjald fyrir að skrá útgjald í öðrum gjaldmiðli."
+example:
+  heading: "Fjórir vinir í Japan, gert upp á tvo vegu"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "hótelið, bókað heima"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "kvöldverður í Japan"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "lestarmiðar"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "aðgangur að hofi"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "Einn gjaldmiðill fyrir allan hópinn"
+    body: "Ef hópurinn vill helst ekki hugsa um þetta skaltu velja gjaldmiðil hópsins og eyðublaðið umreiknar hvert nýtt útgjald í hann, á gengi sem þú getur samt séð og breytt. Þetta gildir aðeins um ný og afrituð útgjöld. Breytingar og núverandi útgjöld haldast eins og þau eru, svo ekkert sem þegar er skráð breytist undir þér."
+  - heading: "Skuldar evrur, borgar í pundum"
+    body: "Greiddir í jenum, gerir upp í pundum? Ekkert mál. Þegar þú skráir greiðslu geturðu umreiknað hana líka, svo sá sem skuldar evrur getur borgað í pundum og evrustaðan kemur samt rétt út. Borgið hvert öðru eins og ykkur hentar og skráið það svo."
+  - heading: "Reglur fyrir hópinn"
+    body: "Takmarkaðu hóp við gjaldmiðlana sem þú notar í raun og stilltu sjálfgefinn svo eyðublaðið opnist á þeim rétta. Frí í Portúgal þarf ekki 139 aðra valkosti við hliðina á kvöldverðarreikningnum, og [brúðkaup erlendis](page:use-case/events-and-celebrations) þarf líklega tvo."
+limits:
+  heading: "Takmörk"
+  items:
+    - "Gengið festist þegar útgjaldið er vistað. Gömul útgjöld eru aldrei endurmetin."
+    - "Side Badger sækir núverandi gengi þar sem það getur. Ekki er tryggt að öll pör hafi gengi og þú getur alltaf slegið gengið inn sjálf(ur)."
+    - "Sjálfvirkur umreikningur hópsins gildir aðeins um ný og afrituð útgjöld, ekki breytingar eða núverandi útgjöld."
+    - "Hvert útgjald er takmarkað við 999.999,99 í eigin gjaldmiðli."
+    - "Gjaldmiðlarnir eru 140. Rafmyntir og málmar eru ekki þar á meðal."
+    - "Side Badger skráir greiðslur. Það flytur aldrei peninga eða skiptir þeim."
+useCasesHeading: "Hvar þetta hjálpar"
+faq:
+  heading: "Spurningar"
+  items:
+    - q: "Hvaða gengi notið þið?"
+      a: "Núverandi gengi, sótt þegar þú skráir útgjaldið þar sem það er í boði. Þú getur breytt því í gengið sem þú fékkst í raun og umreiknaða upphæðin uppfærist."
+    - q: "Eru gömul útgjöld endurmetin?"
+      a: "Nei. Gengið festist þegar útgjaldið er vistað, svo staða rekur ekki af leið þótt markaðurinn geri það."
+    - q: "Styðjið þið rafmyntir?"
+      a: "Nei. Gjaldmiðlarnir eru 140 og rafmyntir eru ekki þar á meðal."
+    - q: "Af hverju get ég ekki skráð 2.000.000 rúpíur?"
+      a: "Hvert útgjald er takmarkað við 999.999,99 í eigin gjaldmiðli. Skráðu það í öðrum gjaldmiðli og umreiknaðu, eða skiptu því í tvö útgjöld."
+    - q: "Kostar umreikningur eitthvað?"
+      a: "Nei. Umreikningur er ókeypis, eins og allt annað í Side Badger. Sjá [verðskrá](page:pricing)."
+    - q: "Þarf ég að umreikna?"
+      a: "Nei. Gjaldmiðlar haldast aðskildir nema þú eða hópurinn þinn veljið að umreikna, og hver gjaldmiðill fær sinn eigin stutta lista yfir greiðslur."

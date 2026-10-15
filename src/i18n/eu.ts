@@ -202,7 +202,7 @@ export default {
   'pricing.faq.q1.question': 'Benetan doakoa al da?',
   'pricing.faq.q2.answer': 'Side Badger-en dena doakoa da gaur egun, eta ez dago ordainpeko mailarik. Hori aldatuz gero, aurretik jakinaraziko dizugu. Gure baldintzen hitzetan: "Etorkizunean tarifak, harpidetzak edo beste zerbitzu-eredu batzuk ezartzeko eskubidea dugu. Hala egiten badugu, aldaketen berri emango dizugu behar bezalako aurrerapenez."',
   'pricing.faq.q2.question': 'Beti izango al da doakoa?',
-  'pricing.faq.q3.answer': 'Ez. Ez dago eguneko mugarik taldeetan, gastuetan, ordainketetan edo tiketen eskaneatzeetan. Goiko mugek gauzak zenbateraino hazten diren neurtzen dute, adibidez talde bat edo fitxategi bat. Zer azkar joan zaitezkeen mugatzen duen gauza bakarra abusuen aurkako babesa da, eguneroko erabilerak inoiz iristen ez dena.',
+  'pricing.faq.q3.answer': 'Ez. Ez dago eguneko mugarik taldeetan, gastuetan, ordainketetan edo tiketen eskaneatzeetan. Goiko mugek gauzak zenbateraino hazten diren neurtzen dute, adibidez talde bat edo fitxategi bat. Zer azkar joan zaitezkeen mugatzen duen gauza bakarra abusuen aurkako babesa da, eguneroko erabilerak inoiz iristen ez duena.',
   'pricing.faq.q3.question': 'Eguneko mugarik ba al dago?',
   'pricing.faq.q4.answer': 'Ez. Ez ditugu saltzen zure datu pertsonalak, eta taldeko kideek bakarrik ikus dezakete taldea. Side Badger-ek ez du iragarkirik, ez hirugarrenen analitika- edo iragarki-jarraipen-tresnarik.',
   'pricing.faq.q4.question': 'Nire datuak saltzen al dituzue?',

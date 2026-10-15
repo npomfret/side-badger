@@ -1,0 +1,135 @@
+translatedFrom: "56ee9b03"
+review:
+  status: machine
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.map-link-fills-place
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Sadaliet izdevumus vienādi, precīzi vai procentuāli | Side Badger"
+  description: "Sadaliet kopīgas izmaksas vienādi, pēc precīzām summām vai procentuāli un izlaidiet tos, kas tur nebija. Bez maksas, bez reklāmām un bez dienas ierobežojumiem."
+h1: "Sadaliet izdevumus vienādi, precīzi vai procentuāli"
+navLabel: "Izdevumu sadale"
+lead: "Ne viss ir 50/50. Side Badger tiek galā. Norādiet, kas maksāja, izvēlieties cilvēkus, kas dalījās izmaksās, un sadaliet **vienādi, pēc precīzām summām vai procentuāli**. Aizvainojumi tiek pārdoti atsevišķi."
+cta:
+  heading: "Sadaliet nākamo kārtīgi"
+  body: "Izveidojiet bezmaksas kontu, sāciet grupu un pievienojiet izdevumu, ko jau sen gribējāt nokārtot. Neesat pārliecināti, kas notiks tālāk? Skatiet [kā tas darbojas](page:how-it-works) vai [ko sedz bezmaksas versija](page:pricing)."
+  button: "Izveidot bezmaksas kontu"
+problem:
+  heading: "Ne viss ir 50/50"
+  body: "Īre seko istabas lielumam. Dāvana seko tam, kurš ko apsolīja. Vakariņas seko tam, kurš palika uz desertu. Rēķina dalīšana uz pusēm der līdz pirmajam rēķinam, kas tāds nav, un tad kāds atver izklājlapu. Side Badger reģistrē, kas maksāja, kas dalījās izmaksās un kā tās dalās, lai atlikumi sanāk pareizi un neviens pie galda nedara garo dalīšanu."
+workflow:
+  heading: "Izdevuma pievienošana no sākuma līdz beigām"
+  steps:
+    - title: "Norādiet, kas maksāja un par ko"
+      body: "Ievadiet summu, īsu aprakstu un personu, kas maksāja. Par katru izdevumu maksā viens cilvēks, un tas uztur aritmētiku godīgu."
+      shot: S05
+      shotAlt: "Izdevuma veidlapa ar lauku mājas īri, procentuāli sadalītu starp trim cilvēkiem"
+    - title: "Izvēlieties sadali"
+      body: "Izvēlieties vienādi, precīzas summas vai procentus. Procentiem jāsakrīt ar 100, un precīzām summām jāsakrīt ar kopsummu."
+      shot: S06
+      shotAlt: "Izdevuma veidlapa ar precīzām summām, ievadītām katram cilvēkam par dāvanu"
+    - title: "Pievienojiet stāstu"
+      body: "Iestatiet datumu, pievienojiet birkas, vietu un piezīmi. Visi grupā redz tās pašas detaļas un var komentēt tur pat."
+      shot: S08
+      shotAlt: "Izdevums ar detaļām, komentāru pavedienu un sākotnējo summu, kādā tas ievadīts"
+    - title: "Uzdodiet jautājumu, ja kaut kas šķiet nepareizs"
+      body: "Ja grupa ir ieslēgusi izdevumu jautājumus, ikviens, kas iekļauts izdevumā, var to apšaubīt, un izdevumu sarakstā var rādīt tikai apšaubītos."
+      shot: S18
+      shotAlt: "Izdevumu saraksts ar zīmi „Apšaubīts” un filtru „Tikai apšaubīti”"
+options:
+  heading: "Trīs sadales veidi"
+  items:
+    - title: "Vienādi"
+      body: "Noklusējums vakariņām, taksometriem un visam, ko visi dalīja vienādi. Ja kopsumma nedalās bez atlikuma, atlikušais santīms nonāk pie viena cilvēka nejauši, ne vienmēr pie viena un tā paša. Tālāk redzamajā taksi tā ir Ana."
+    - title: "Pēc precīzām summām"
+      body: "Ierakstiet, cik katrs ir parādā. Der dāvanai, kurā katrs izvēlējās citu cenu, vai veikalam, kur viena cilvēka ratos bija vairāk nekā kopīgie pārtikas pirkumi. Summām jāsakrīt ar kopsummu."
+    - title: "Procentuāli"
+      body: "Dodiet katram cilvēkam daļu no kopsummas. Īre pēc istabas lieluma ir klasika, kur lielākā istaba maksā lielāko daļu un neviens neizliekas citādi."
+example:
+  heading: "Lauku mājas nedēļas nogale, četri izdevumi, trīs sadales"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: "lauku māja, pēc istabas lieluma"
+      payer: ana
+      amount: 600
+      split:
+        method: percent
+        shares:
+          ana: 50
+          ben: 30
+          cara: 20
+    - label: "vakariņas"
+      payer: ben
+      amount: 84
+      split:
+        method: equal
+    - label: "pārtikas pirkumi"
+      payer: cara
+      amount: 64.5
+      split:
+        method: exact
+        shares:
+          ana: 25
+          ben: 21.5
+          cara: 18
+    - label: "taksi mājup"
+      payer: ana
+      amount: 100
+      split:
+        method: equal
+sections:
+  - heading: "Tikai tie, kas tur bija"
+    body: "Sadaliet izmaksas starp visiem vai tikai tiem, kas tajās dalījās. Izlaidiet cilvēkus no izmaksām, kurās viņi nepiedalījās, un atlikumi to atspoguļos. Mājokļa biedrs, kurš visu nedēļu bija prom, nav parādā par līdzņemamo ēdienu, ko [mājokļa biedri](page:use-case/housemates) atpazīs kā elementāru taisnīgumu."
+  - heading: "Detaļas, kas vēlāk ietaupa strīdus"
+    items:
+      - "Iestatiet **datumu** un neobligātu laiku. Īsceļi, piemēram, šodien, vakar, šorīt un pagājušajā vakarā, ietaupa rakstīšanu."
+      - "Pievienojiet līdz trim **birkām**, lai grupētu izdevumus, piemēram, pārtikas pirkumi vai ceļošana."
+      - "Pievienojiet **vietu**. Ielīmējiet kartes saiti, un vietas nosaukums aizpildās pats."
+      - "Pievienojiet **piezīmi** par stāstu aiz skaitļa, ar nelielu formatējumu, ja stāstam vajag."
+      - "Izmantojiet **komentārus**, lai sarunu turētu blakus izdevumam, par kuru tā ir, nevis tērzēšanas pavedienā, kurā neviens neritina atpakaļ."
+  - heading: "Kopējiet, labojiet un redziet, kas mainījies"
+    body: "Nokopējiet pagājušā mēneša īri, nevis rakstiet to no jauna, un nomainiet to, kas atšķiras. Ja skaitlis bija nepareizs, labojiet izdevumu. Iepriekšējā versija tiek saglabāta, un labojums redzams grupas aktivitātēs, tāpēc neviens skaitli nemaina neziņojot. Ko kurš drīkst labot, atkarīgs no grupas atļaujām."
+  - heading: "Kad kaut kas šķiet nepareizi"
+    body: "Grupa var ieslēgt izdevumu jautājumus. Ikviens, kas iekļauts izdevumā, var uzdot jautājumu un pateikt, kāpēc, un izdevums paliek ārpus atlikumiem, kamēr to neaizver tas, kas jautāja, vai administrators. Pēc noklusējuma tas ir izslēgts, un administrators to ieslēdz grupai. Tas der [pasākumiem un svinībām](page:use-case/events-and-celebrations), kur depozīts, ko neviens neatceras, pēkšņi kļūst par visu darīšanu."
+limits:
+  heading: "Ierobežojumi"
+  items:
+    - "Par katru izdevumu maksā viens cilvēks. Ja maksāja divi, reģistrējiet divus izdevumus."
+    - "Nav sadales pa pozīcijām un nav sadales pa daļām. Ir vienādi, precīzas summas un procenti."
+    - "Procentiem jāsakrīt ar 100."
+    - "Izdevums var būt līdz 999,999.99 savā valūtā, ar tās valūtas ierastajām decimālzīmēm."
+    - "Izdevumi neatkārtojas paši. Tā vietā nokopējiet pagājušā mēneša."
+    - "Datumi nevar būt nākotnē vai vairāk nekā 10 gadus senā pagātnē."
+    - "Izdevums, kurā iesaistīts cilvēks, kas pametis grupu, kļūst tikai lasāms."
+useCasesHeading: "Kur tāda sadale palīdz"
+faq:
+  heading: "Jautājumi"
+  items:
+    - q: "Vai divi cilvēki var maksāt par vienu izdevumu?"
+      a: "Ne vienā izdevumā. Reģistrējiet divus, vienu katram maksātājam, un atlikumi sanāk tādi paši."
+    - q: "Vai varu sadalīt čeku pa pozīcijām?"
+      a: "Nē. Sadale ir vienāda, pēc precīzām summām vai procentuāla. Rēķinam ar dažādām pozīcijām ievadiet, cik katrs ir parādā, kā precīzas summas."
+    - q: "Vai varu iestatīt noklusējuma sadali?"
+      a: "Nē. Nokopējiet iepriekšēju izdevumu, lai atkārtoti izmantotu tā sadali, un nomainiet to, kas atšķiras."
+    - q: "Vai rēķini var atkārtoties katru mēnesi?"
+      a: "Nē. Tā vietā nokopējiet pagājušā mēneša izdevumu, kas aizņem dažas sekundes."
+    - q: "Kurš var labot izdevumu?"
+      a: "Tas, kam ļauj grupas atļaujas. Katrs labojums redzams grupas aktivitātēs, tāpēc izmaiņas nekad nav klusas."
+    - q: "Kas notiek ar atlikumiem pēc tam?"
+      a: "Tie atjaunojas, kad parādās izdevumi, un [norēķināšanās](page:feature/settle-up) tos pārvērš īsā maksājumu sarakstā. Ja izdevums ir citā valūtā, skatiet [vairākas valūtas](page:feature/multiple-currencies)."

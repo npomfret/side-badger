@@ -1,0 +1,125 @@
+translatedFrom: "923c938f"
+review:
+  status: machine
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Sadaliet izmaksas 140 valūtās, konvertētas vai atsevišķi"
+  description: "Ievadiet katru izdevumu valūtā, kurā maksājāt, turiet atlikumus atsevišķi vai konvertējiet pēc kursa, ko redzat un varat mainīt, tad norēķinieties ar īsu maksājumu sarakstu."
+h1: "Sadaliet izmaksas 140 valūtās"
+navLabel: "Vairākas valūtas"
+lead: "Eiro, jenas un tas viens taksometrs bahtos. Side Badger pieņem katru izdevumu valūtā, kurā maksājāt, uztur atlikumus kārtībā un var konvertēt, kad jūsu grupa labāk vēlas norēķināties vienreiz. Tas darbojas 140 valūtās un ir dabiska izvēle [grupas ceļojumiem](page:use-case/group-trips)."
+cta:
+  heading: "Nesiet savus eiro, nesiet savas jenas"
+  body: "Izveidojiet kontu, sāciet grupu un pievienojiet pirmo izdevumu jebkurā valūtā, kāda jums gadījās rokās."
+  button: "Izveidot bezmaksas kontu"
+problem:
+  heading: "Ievadiet to tā, kā samaksājāt"
+  body: "Par ceļojumu reti maksā vienā valūtā. Viesnīca tika rezervēta mājās mārciņās, vakariņas apmaksātas jenās, un lidostas kafija bija tajā valūtā, kāda bija pārsēšanās vietā. Visu konvertēt ar rokām, pirms to vispār var ievadīt, ir tas, kā izklājlapas tiek pamestas. Side Badger katru izdevumu ievadiet valūtā, kas norādīta čekā, un katra summa seko savas valūtas noteikumiem, tāpēc jenām nav decimāldaļu, bet dīnāriem ir trīs. Nesen izmantotās valūtas sarakstā ir pirmās."
+workflow:
+  heading: "Turiet valūtas atsevišķi vai konvertējiet līdzi"
+  steps:
+    - title: "Pievienojiet izdevumu tā valūtā, kurā maksājāt"
+      body: "Izvēlieties valūtu, ierakstiet summu, norādiet, kas maksāja un kas dalījās. Nekas cits nav vajadzīgs. Tas ir noklusējums, un tas saglabā sākotnējo summu tieši tādu, kādu ievadījāt."
+      shot: S07
+      shotAlt: "Izdevuma veidlapa ar ievadītu summu jenās"
+    - title: "Sekojiet atlikumam katrā valūtā"
+      body: "Atlikumi tiek uzturēti atsevišķi katrā valūtā, un katram ir savs īss ieteikto maksājumu saraksts. Mārciņas tiek nokārtotas mārciņās, jenas jenās."
+      shot: S10
+      shotAlt: "Atlikumu ekrāns ar vienkāršotiem parādiem divās valūtās"
+    - title: "Vai konvertējiet, kad grupa labāk vēlas norēķināties vienreiz"
+      body: "Izvēlieties citu valūtu, ievadot izdevumu, un Side Badger var to konvertēt pēc pašreizējā valūtas kursa, ko varat nomainīt uz kursu, ko patiešām saņēmāt. Konvertētā summa pievienojas atlikumam šajā valūtā. Konvertēšana ir izvēle, ko pieņem grupa, nevis kas notiek aiz jūsu muguras."
+options:
+  heading: "Kurss, ko redzat un varat mainīt"
+  items:
+    - title: "Kurss ir redzams"
+      body: "Kad konvertējat, kurss un konvertētā summa parādās veidlapā, tāpēc nevienam nav jātic skaitlim uz vārda."
+    - title: "Ierakstiet savu"
+      body: "Dabūjāt labāku kursu kasē vai sliktāku lidostā? Nomainiet kursu uz to, ko patiešām saņēmāt, un konvertētā summa atjaunojas."
+    - title: "Oriģināls paliek"
+      body: "Sākotnējā summa paliek pie izdevuma blakus konvertētajai, tiem, kas jautā, cik tas bija jenās."
+    - title: "Konvertēt var bez maksas"
+      body: "Konvertēšana nemaksā neko. Par izdevuma ievadīšanu citā valūtā nav nodevas."
+example:
+  heading: "Četri draugi Japānā, nokārtoti divos veidos"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "viesnīca, rezervēta mājās"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "vakariņas Japānā"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "vilciena biļetes"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "ieeja templī"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "Viena valūta visai grupai"
+    body: "Ja jūsu grupa labāk par to nedomātu, izvēlieties grupas valūtu, un veidlapa konvertē katru jaunu izdevumu tajā, pēc kursa, ko joprojām redzat un varat mainīt. Tas attiecas tikai uz jauniem un nokopētiem izdevumiem. Labojumi un esošie izdevumi paliek, kā bijuši, tāpēc nekas jau reģistrētais nemainās zem jums."
+  - heading: "Esat parādā eiro, maksājat mārciņās"
+    body: "Samaksāts jenās, bet norēķināties mārciņās? Labi. Kad reģistrējat maksājumu, varat to konvertēt arī, tāpēc tas, kurš ir parādā eiro, var maksāt mārciņās, un eiro atlikums tāpat sanāk pareizs. Samaksājiet viens otram, kā vēlaties, tad reģistrējiet to."
+  - heading: "Noteikumi grupai"
+    body: "Ierobežojiet grupu ar valūtām, ko patiešām izmantojat, un iestatiet noklusējumu, lai veidlapa atveras pareizajā. Atvaļinājumam Portugālē blakus vakariņu rēķinam nevajag 139 citas iespējas, un [kāzām ārzemēs](page:use-case/events-and-celebrations) droši vien vajag divas."
+limits:
+  heading: "Ierobežojumi"
+  items:
+    - "Kurss tiek fiksēts, kad izdevums tiek saglabāts. Vecie izdevumi nekad netiek pārvērtēti."
+    - "Side Badger iegūst pašreizējo kursu, kur vien var. Ne katram pārim kurss ir garantēts, un kursu vienmēr varat ierakstīt pats."
+    - "Grupas automātiskā konvertēšana attiecas tikai uz jauniem un nokopētiem izdevumiem, ne uz labojumiem vai esošiem izdevumiem."
+    - "Katram izdevumam ir ierobežojums 999,999.99 savā valūtā."
+    - "Ir 140 valūtas. Kriptovalūtas un metāli to vidū nav."
+    - "Side Badger reģistrē maksājumus. Tas nekad nepārvieto naudu un to neapmaina."
+useCasesHeading: "Kur tas palīdz"
+faq:
+  heading: "Jautājumi"
+  items:
+    - q: "Kādu valūtas kursu jūs izmantojat?"
+      a: "Pašreizējo valūtas kursu, kas tiek iegūts, ievadot izdevumu, ja tāds ir pieejams. Varat to nomainīt uz kursu, ko patiešām saņēmāt, un konvertētā summa atjaunojas."
+    - q: "Vai vecie izdevumi tiek pārvērtēti?"
+      a: "Nē. Kurss tiek fiksēts, kad izdevums tiek saglabāts, tāpēc atlikums nenovirzās tāpēc, ka mainījies tirgus."
+    - q: "Vai atbalstāt kripto?"
+      a: "Nē. Ir 140 valūtas, un kriptovalūtas to vidū nav."
+    - q: "Kāpēc nevaru ievadīt 2 000 000 rūpiju?"
+      a: "Katram izdevumam ir ierobežojums 999,999.99 savā valūtā. Ievadiet to citā valūtā un konvertējiet vai sadaliet divos izdevumos."
+    - q: "Vai konvertēšana kaut ko maksā?"
+      a: "Nē. Konvertēšana ir bez maksas, tāpat kā pārējais Side Badger. Skatiet [cenas](page:pricing)."
+    - q: "Vai man jākonvertē?"
+      a: "Nē. Valūtas paliek atsevišķas, ja vien jūs vai jūsu grupa nevēlas konvertēt, un katrai valūtai ir savs īss maksājumu saraksts."

@@ -1,0 +1,107 @@
+# P34b: mājokļa biedru pielietojuma lapa (uzdevums: tasks/seo-site-expansion-plan.md, "Housemates").
+translatedFrom: "e6b829e6"
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Sadaliet mājsaimniecības rēķinus ar mājokļa biedriem"
+  description: "Sadaliet īri pēc istabas lieluma, dalieties enerģijas un pārtikas izmaksās vienādi un skatiet, kurš kam ir parādā katru mēnesi. Bez maksas mājokļa biedriem, kopīrniekiem un istabas biedriem."
+h1: "Sadaliet mājsaimniecības rēķinus ar mājokļa biedriem"
+navLabel: "Mājokļa biedri"
+lead: "Mājokļa biedram, kurš nopērk tualetes papīru, un mājokļa biedriem, kuri nekad nepamana, ka tas noticis. Side Badger uztur vienu kopīgu uzskaiti par īri, rēķiniem un iepirkumiem **mājokļa biedriem, kopīrniekiem un istabas biedriem**, lai nevienam nav jādzenas pakaļ otram un ledusskapis var atkal būt tikai ledusskapis."
+cta:
+  heading: "Sāciet ar savu mājokli"
+  body: "Izveidojiet kontu, izveidojiet grupu mājoklim un nosūtiet visiem uzaicinājuma saiti. Šā mēneša rēķinus var ievadīt jau šovakar."
+  button: "Izveidot bezmaksas kontu"
+scenario:
+  heading: "Iekārtojiet mājokli"
+  body: "Izveidojiet grupu mājoklim, izvēlieties vārdu, ar kādu vēlaties, lai jūs tajā redz, un uzaiciniet visus ar saiti vai QR kodu. Grupa var būt atvērta, kur visi pievieno un labo, vai pārvaldīta, kur jaunajiem dalībniekiem vajag administratora apstiprinājumu un izdevumus var mainīt tikai veidotāji un administratori, kas der mājokļa biedram, kurš tur grāmatvedību. Ikviens, kurš vienkārši grib vērot skaitļus, var būt skatītājs, kas visu redz un neko nemaina. Visi jaunu izdevumu redz uzreiz, tāpēc frāzei „pievienošu vēlāk” ir mazāk slēpņu."
+sections:
+  - heading: "Īre un rēķini"
+    body: "Īre reti dalās ar četri, jo guļamistabas nav vienādas. Sadaliet to procentuāli, lai lielā istaba maksā vairāk un skapis ar logu maksā mazāk. Procentiem jāsakrīt ar 100. Rēķiniem, ko izmanto visi, der vienāda sadale, un mājokļa biedru, kurš izdevumā nepiedalījās, var no tā izlaist. Ja vienāda sadale atstāj lieku santīmu, tas nonāk pie viena cilvēka nejauši. Atkārtotu rēķinu nav, tāpēc katru mēnesi nokopējiet pagājušā mēneša īri, nomainiet datumu un turpiniet."
+  - heading: "Kopīgie iepirkumi"
+    body: "Turiet kopīgo iepirkumu sarakstu tajā pašā grupā ar iepirkumu rēķiniem un atķeksējiet pozīcijas, kad tās nonāk ratos. Kurš iepērkas, pievieno čeka kopsummu kā izdevumu un sadala to vienādi vai tikai starp cilvēkiem, kas to ēdīs. Kurš pērk auzu pienu, ko neviens cits nedzer, joprojām ir mājas ziņā, bet vismaz izdevumu saraksts būs precīzs. Grupas atļaujas nosaka, kurš var veidot un labot sarakstus. Saliekot kopā īri, rēķinus un iepirkumus, sanāk tāds mēnesis kā tālāk, mājā ar četriem: Jo maksā £2,000 īri, sadalītu 30%, 25%, 25% un 20% pēc istabas lieluma, tad Kwame maksā £120 par enerģiju, Lena £40 par internetu un Matt £80 par pārtikas pirkumiem, katru sadalītu vienādi. Jo beigās pienākas £1,340, un Side Badger iesaka trīs maksājumus, visus Jo."
+  - heading: "Godīgi veidi, kā sadalīt mājsaimniecības izmaksas"
+    items:
+      - "**Vienādi** der tam, ko visi izmanto aptuveni vienādi, piemēram, internetam, tīrīšanas līdzekļiem un kopīgajiem iepirkumiem. Tas ir ātri, un nevienam nav jāstrīdas par matemātiku."
+      - "**Pēc istabas lieluma** der īrei, jo istabas atšķiras un atšķiras arī tas, cik cilvēki par tām gatavi maksāt. Vienojieties par procentiem vienreiz, kad kāds ievācas, un izmantojiet tos katru mēnesi."
+      - "**Pēc lietojuma** der rēķiniem, kur viens cilvēks acīmredzami izmanto vairāk, piemēram, mājas biroja apkure vai straumēšanas konts, ko skatās tikai divi. Izlaidiet tos, kas tajā nepiedalījās, vai ievadiet precīzas summas katram."
+      - "Kuru variantu izvēlaties, vienojieties par to pirms pirmā rēķina, nevis pēc pirmā strīda, un pierakstiet noteikumu kaut kur, kur to redz visa māja."
+  - heading: "Kad kāds izvācas"
+    body: "Viņš vispirms norēķinās. Neviens nevar pamest grupu, kamēr viņam kāds ir parādā vai viņš ir parādā, tāpēc aizejošais maksā vai saņem maksājumu, jūs to reģistrējat, un tad viņš dodas. Turpiniet grupu pārējiem mājokļa biedriem un uzaiciniet jauno cilvēku ar saiti. Kad pati māja ir beigusies, administrators var bloķēt grupu, lai skaitļi paliktu nemainīgi, vai to slēgt uz visiem laikiem, kas to padara nepieejamu visiem, tāpēc dariet to tikai tad, kad nevienam vairs nevajag vēsturi."
+exampleAfter: 2
+example:
+  heading: "Kurš šomēnes kam ir parādā"
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: "Īre"
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: "Enerģija"
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: "Internets"
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: "Pārtikas pirkumi"
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: "Funkcijas, ko izmanto māja"
+faq:
+  heading: "Jautājumi"
+  items:
+    - q: "Vai īre var atkārtoties automātiski?"
+      a: "Nē, atkārtotu rēķinu nav. Nokopējiet pagājušā mēneša īri pāris pieskārienos, nomainiet datumu, un viss."
+    - q: "Vai varam sadalīt pēc istabas lieluma?"
+      a: "Jā, procentuāli. Dodiet katram mājokļa biedram daļu, kas atspoguļo viņa istabu, ja vien daļas kopā dod 100. [Izdevumu sadale](page:feature/split-expenses) apraksta citus sadales veidus."
+    - q: "Ko darīt, ja mājokļa biedrs izvācas, būdams parādā?"
+      a: "Viņš nevar pamest grupu, kamēr nav norēķinājies, jo neviens nevar aiziet, kamēr viņam kāds ir parādā vai viņš ir parādā. Skaitļi paliek godīgi, līdz visi ir kvit."
+    - q: "Vai Side Badger maksā rēķinus?"
+      a: "Nē. Tas uztur uzskaiti un iesaka īsu maksājumu sarakstu. Jūs samaksājat viens otram, kā vēlaties, tad to reģistrējat, kā skaidro [norēķināšanās](page:feature/settle-up)."
+    - q: "Vai viens mājokļa biedrs var turēt grāmatvedību?"
+      a: "Jā. Padariet viņu par administratoru un izmantojiet pārvaldītu grupu, kur jaunajiem dalībniekiem vajag apstiprinājumu un izdevumus var mainīt tikai veidotāji un administratori."

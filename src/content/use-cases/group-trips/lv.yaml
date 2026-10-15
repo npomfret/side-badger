@@ -1,0 +1,109 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: machine
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+meta:
+  title: "Sadaliet grupas ceļojuma izmaksas 140 valūtās"
+  description: "Sekojiet, kurš par ko maksāja grupas ceļojumā, ievadiet izmaksas vietējā valūtā, konvertējiet tās vai ne un norēķinieties vienreiz beigās. Bez maksas, jūsu pārlūkprogrammā."
+h1: "Sadaliet grupas ceļojuma izmaksas 140 valūtās"
+navLabel: "Grupu ceļojumi"
+lead: "Sekojiet villai, taksometriem un tai kokteiļu kārtai, ko neviens neatceras brīvprātīgi apņēmies pirkt. Side Badger uztur kārtējo uzskaiti, kamēr esat prom, [apstrādā mārciņas, eiro un 138 citas valūtas](page:feature/multiple-currencies) un, kad atgriezīsieties mājās, iedod [īsu maksājumu sarakstu](page:feature/settle-up)."
+cta:
+  heading: "Atvaļinājuma aprēķini, pirms nodziest iedegums"
+  body: "Izveidojiet grupu, nosūtiet uzaicinājuma saiti ceļojuma dalībniekiem un pievienojiet izmaksas, kad tās rodas."
+  button: "Izveidot bezmaksas kontu"
+scenario:
+  heading: "Visi par kaut ko samaksāja, kādā valūtā"
+  body: "Kāds rezervēja lidojumus, cits villu apmaksāja ar karti, un trešais vakariņas segta skaidrā naudā. Līdz trešajai dienai neviens nezina, kurš ir uz plus. Jautājums ir vienkāršs, kaut arī atbilde parasti mājo izklājlapā, ko neviens negrib atvērt. Kurš par ko maksāja, kādā valūtā un kā visi norēķinās vienreiz beigās?"
+sections:
+  - heading: "Pirms došanās"
+    body: "Ļaujiet balsot par villu izvēli, ja vēlaties, anonīmi, lai lēmums pieder grupai, nevis tam, kurš ilgāk saceras. Tad turiet kopīgo iepirkumu sarakstu blakus iepirkumu rēķiniem, lai neviens nenopērk trīs saules krēma tūbiņas un nevienu kontaktdakšu adapteri."
+  - heading: "Kamēr esat prom"
+    body: "Pievienojiet katras izmaksas, kad tās rodas, valūtā, kurā maksājāt. Nofotografējiet čeku, un Side Badger aizpilda kopsummu, datumu un vietu, lai jūs tos pārbaudītu; čeku attēlus nolasa Google AI pakalpojums. Konvertējiet summu pēc pašreizējā valūtas kursa, ko varat nomainīt uz kursu, ko patiešām saņēmāt, un sākotnējā summa paliek pie izdevuma. Vai arī atstājiet eiro kā eiro un izlemiet vēlāk. Grupa var izvēlēties arī vienu valūtu, un jaunie izdevumi tajā konvertējas automātiski."
+  - heading: "Ne visi darīja visu"
+    body: "Daži izlaida vakariņas, daži palika malā no laivas. Izlaidiet tos no izmaksām, kurās viņi nepiedalījās, un pārējo sadaliet [vienādi, pēc precīzām summām vai procentuāli](page:feature/split-expenses). Neviens nemaksā par to ceļojuma daļu, ko pagulēja."
+  - heading: "Norēķinieties, kad esat mājās"
+    body: "Side Badger iesaka īsu maksājumu sarakstu, kas nokārto visus. Samaksājiet viens otram, kā vēlaties, tad to reģistrējiet. Ar jauktām valūtām turiet katru atsevišķi vai konvertējiet līdzi; Lisabonas piemērs tālāk parāda abus."
+  - heading: "Vecpuišu un vecmeitu nedēļas nogales"
+    body: "Nedēļas nogalei ar goda viesi vajag mazliet vairāk administrēšanas. Padariet to par pārvaldītu grupu, kur administratori apstiprina jaunus dalībniekus un izdevumus var mainīt tikai veidotāji un administratori. Izmantojiet precīzas summas goda viesa daļai, ierobežojiet grupu ar valūtām, ko patiešām izmantojat, un bloķējiet grupu, kad viss beidzies, lai skaitļi paliktu nemainīgi."
+exampleAfter: 4
+example:
+  heading: "Četri draugi Lisabonā"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Lidojumi"
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: "Villa"
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: "Vakariņas"
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Izbraukums ar laivu"
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: "Uz ko balstās ceļojums"
+faq:
+  heading: "Jautājumi"
+  items:
+    - q: "Vai cilvēkus, kas izlaida vakariņas, var izlaist?"
+      a: "Jā. Izvēlieties, kas piedalījās katrā izdevumā, un tikai viņiem par to tiek rēķināts."
+    - q: "Vai tas darbojas bez signāla?"
+      a: "Nē. Side Badger vajadzīgs savienojums, tāpēc pievienojiet izmaksas, kad atkal esat pie wifi."
+    - q: "Vai ikvienam kaut kas jāinstalē?"
+      a: "Nē. Tas darbojas pārlūkprogrammā. Nosūtiet uzaicinājuma saiti, un cilvēki pievienojas no saviem tālruņiem."
+    - q: "Kādu valūtas kursu tas izmanto?"
+      a: "Pašreizējo valūtas kursu, ievadot izdevumu, vai jūsu pašu, ja dabūjāt citādu. Kurss tiek fiksēts, kad izdevums tiek saglabāts, tāpēc vecie izdevumi nekad netiek pārvērtēti."
+    - q: "Vai grupu pēc ceļojuma var iesaldēt?"
+      a: "Jā. Administrators var bloķēt grupu, lai skaitļi paliktu nemainīgi."
+    - q: "Vai ir summu ierobežojums?"
+      a: "Jā. 999,999.99 par izdevumu, savā valūtā."

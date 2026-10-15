@@ -1,0 +1,108 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: machine
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: Jaa ryhmämatkan kulut 140 valuutassa
+  description: Seuraa, kuka maksoi mitä ryhmämatkalla, syötä kulut paikallisessa valuutassa, muunna ne tai älä, ja tasaa kerralla lopuksi. Ilmainen, selaimessa.
+h1: Jaa ryhmämatkan kulut 140 valuutassa
+navLabel: Ryhmämatkat
+lead: Seuraa huvilaa, takseja ja sitä yhtä cocktail-kierrosta, jonka tarjoamiseen kukaan ei muista ilmoittautuneensa. Side Badger pitää kirjaa matkan ajan, [hoitaa punnat, eurot ja 138 muuta valuuttaa](page:feature/multiple-currencies) ja antaa kotiin tultua [lyhyen maksulistan](page:feature/settle-up).
+cta:
+  heading: Lomalaskut hoidettu, ennen kuin rusketus haalenee
+  body: Perusta ryhmä, lähetä kutsulinkki matkalaisille ja lisää kulut sitä mukaa kuin ne syntyvät.
+  button: Luo ilmainen tili
+scenario:
+  heading: Jokainen maksoi jotain, jollain valuutalla
+  body: Joku varasi lennot, toinen laittoi huvilan kortille ja kolmas maksoi illallisen käteisellä. Kolmanteen päivään mennessä kukaan ei tiedä, kuka on plussalla. Kysymys on yksinkertainen, vaikka vastaus on yleensä taulukossa, jota kukaan ei halua avata. Kuka maksoi mitä, millä valuutalla, ja miten kaikki tasaavat tilit kerralla lopuksi?
+sections:
+  - heading: Ennen lähtöä
+    body: Laita huvilakandidaatit äänestykseen, halutessasi nimettömänä, jotta päätös kuuluu ryhmälle eikä sille, joka mököttää pisimpään. Pidä sitten yhteinen ostoslista ostoslaskujen vieressä, ettei kukaan osta kolmea aurinkovoidetta eikä yhtään pistokesovitinta.
+  - heading: Matkan aikana
+    body: Lisää jokainen kulu sitä mukaa kuin se syntyy, valuutalla, jolla maksoit. Ota kuva kuitista, niin Side Badger täyttää summan, päivämäärän ja paikan tarkistettavaksesi; Googlen tekoälypalvelu lukee kuittikuvat. Muunna summa nykyisellä valuuttakurssilla, jonka voit vaihtaa kurssiin, jonka todella sait, ja alkuperäinen summa säilyy kulussa. Tai jätä eurot euroiksi ja päätä myöhemmin. Ryhmä voi myös valita yhden valuutan, ja uudet kulut muunnetaan siihen automaattisesti.
+  - heading: Kaikki eivät tehneet kaikkea
+    body: Jotkut ohittivat illallisen, jotkut jättivät veneen väliin. Jätä heidät pois kuluista, joihin he eivät osallistuneet, ja jaa loput [tasan, tarkoilla summilla tai prosenteilla](page:feature/split-expenses). Kukaan ei maksa matkan osasta, jonka nukkui.
+  - heading: Tasaa kerralla kotona
+    body: Side Badger ehdottaa lyhyttä maksulistaa, joka tasaa kaikki. Maksakaa toisillenne miten haluatte ja kirjatkaa se sitten. Sekavaluuttaisessa matkassa voit pitää jokaisen valuutan erillään tai muuntaa matkan varrella; alla oleva Lissabon-esimerkki näyttää molemmat.
+  - heading: Polttariviikonloput
+    body: Viikonloppu kunniavieraan kanssa vaatii hieman enemmän järjestelyä. Tee siitä hallittu ryhmä, jossa ylläpitäjät hyväksyvät uudet jäsenet ja vain luojat ja ylläpitäjät voivat muuttaa kuluja. Käytä tarkkoja summia kunniavieraan osuudelle, rajaa ryhmä valuuttoihin, joita oikeasti käytät, ja lukitse ryhmä, kun se on ohi, jotta luvut pysyvät paikoillaan.
+exampleAfter: 4
+example:
+  heading: Neljä ystävää Lissabonissa
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: Lennot
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: Huvila
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: Illallinen
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: Venematka
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: Mihin matka nojaa
+faq:
+  heading: Kysymyksiä
+  items:
+    - q: Voiko illallisen ohittaneet jättää pois?
+      a: Kyllä. Valitse, ketkä kuuluivat kuhunkin kuluun, ja vain heiltä peritään se.
+    - q: Toimiiko se ilman kenttää?
+      a: Ei. Side Badger tarvitsee yhteyden, joten lisää kulut, kun olet taas wifin ääressä.
+    - q: Tarvitseeko jokaisen asentaa jotain?
+      a: Ei. Se toimii selaimessa. Lähetä kutsulinkki, niin ihmiset liittyvät puhelimillaan.
+    - q: Mitä valuuttakurssia se käyttää?
+      a: Nykyistä valuuttakurssia, kun syötät kulun, tai omaasi, jos sait eri kurssin. Kurssi lukitaan, kun kulu tallennetaan, joten vanhoja kuluja ei koskaan arvosteta uudelleen.
+    - q: Voimmeko jäädyttää ryhmän matkan jälkeen?
+      a: Kyllä. Ylläpitäjä voi lukita ryhmän, jotta luvut pysyvät paikoillaan.
+    - q: Onko summilla rajaa?
+      a: Kyllä. 999 999,99 kulua kohden omassa valuutassaan.

@@ -1,0 +1,125 @@
+translatedFrom: "923c938f"
+review:
+  status: machine
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: Jaa kulut 140 valuutassa, muunnettuna tai erillään
+  description: Syötä jokainen kulu valuutalla, jolla maksoit, pidä saldot erillään tai muunna kurssilla, jonka näet ja voit muuttaa, ja tasaa sitten tilit lyhyellä maksulistalla.
+h1: Jaa kulut 140 valuutassa
+navLabel: Useita valuuttoja
+lead: Euroja, jenejä ja se yksi taksi bahteina. Side Badger ottaa jokaisen kulun siinä valuutassa, jolla maksoit, pitää saldot järjestyksessä ja voi muuntaa, kun ryhmä haluaa tasata kerralla. Se toimii 140 valuutassa ja sopii luontevasti [ryhmämatkoille](page:use-case/group-trips).
+cta:
+  heading: Tuo eurosi, tuo jenisi
+  body: Luo tili, perusta ryhmä ja lisää ensimmäinen kulu missä valuutassa tahansa, joka sattui olemaan kädessä.
+  button: Luo ilmainen tili
+problem:
+  heading: Syötä se niin kuin maksoit
+  body: Matka maksetaan harvoin yhdellä valuutalla. Hotelli varattiin kotoa punnilla, illallinen maksettiin jeneillä ja lentokentän kahvi millä tahansa, mitä välilaskussa käytettiin. Kaiken muuntaminen käsin ennen kuin voit edes syöttää sitä on se, mihin taulukot kuolevat. Side Badgerissa syötät jokaisen kulun kuitin valuutalla, ja jokainen summa noudattaa valuuttansa sääntöjä, joten jeneillä ei ole desimaaleja ja dinaareilla on kolme. Viimeksi käyttämäsi valuutat tulevat listassa ensin.
+workflow:
+  heading: Pidä valuutat erillään tai muunna matkan varrella
+  steps:
+    - title: Lisää kulu sen omassa valuutassa
+      body: Valitse valuutta, kirjoita summa, kerro kuka maksoi ja ketkä jakoivat. Muuta ei tarvita. Tämä on oletus, ja se säilyttää alkuperäisen summan täsmälleen sellaisena kuin syötit sen.
+      shot: S07
+      shotAlt: Kululomake, johon on syötetty summa jeneinä
+    - title: Seuraa saldoa jokaiselle valuutalle
+      body: Saldot pidetään erikseen valuutoittain, ja jokaisella on oma lyhyt maksulistansa. Punnat tasataan punnilla ja jenit jeneillä.
+      shot: S10
+      shotAlt: Saldonäkymä, jossa yksinkertaistetut velat kahdessa valuutassa
+    - title: Tai muunna, kun ryhmä haluaa tasata kerralla
+      body: Valitse toinen valuutta kulua syöttäessäsi, niin Side Badger voi muuntaa sen nykyisellä valuuttakurssilla, jonka voit vaihtaa kurssiin, jonka todella sait. Muunnettu summa liittyy kyseisen valuutan saldoon. Muunnos on ryhmän valinta, ei koskaan mitään, mikä tapahtuu selkäsi takana.
+options:
+  heading: Kurssi, jonka näet ja voit muuttaa
+  items:
+    - title: Kurssi näytetään
+      body: Kun muunnat, kurssi ja muunnettu summa näkyvät lomakkeella, joten kenenkään ei tarvitse luottaa lukuun sokeasti.
+    - title: Kirjoita oma
+      body: Saitko vaihtopisteessä paremman kurssin tai lentokentällä huonomman? Muokkaa kurssi sellaiseksi kuin sait, niin muunnettu summa päivittyy.
+    - title: Alkuperäinen säilyy
+      body: Alkuperäinen summa säilyy kulussa muunnetun vieressä sille, joka kysyy, mitä se oli jeneinä.
+    - title: Muunnos on ilmainen
+      body: Muuntaminen ei maksa mitään. Kulun syöttämisestä toisessa valuutassa ei peritä maksua.
+example:
+  heading: Neljä ystävää Japanissa, tasattu kahdella tavalla
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: hotelli, varattu kotoa
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: illallinen Japanissa
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: junaliput
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: temppelin pääsymaksu
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: Yksi valuutta koko ryhmälle
+    body: Jos ryhmäsi ei halua miettiä asiaa, valitse ryhmän valuutta, niin lomake muuntaa jokaisen uuden kulun siihen kurssilla, jonka näet ja voit yhä muuttaa. Tämä koskee vain uusia ja kopioituja kuluja. Muokkauksia ja olemassa olevia kuluja ei muuteta, joten mikään jo kirjattu ei muutu altasi.
+  - heading: Velkaa euroja, maksu puntina
+    body: Maksoit jeneillä mutta tasaat puntina? Ei ongelmaa. Kun kirjaat maksun, voit muuntaa senkin, joten euroja velkaa oleva voi maksaa puntina ja euro-saldo silti menee oikein. Maksakaa toisillenne miten haluatte ja kirjaa se sitten.
+  - heading: Säännöt ryhmälle
+    body: Rajaa ryhmä valuuttoihin, joita oikeasti käytät, ja aseta oletus, jotta lomake aukeaa oikeaan. Portugalin lomalla ei tarvita 139 muuta vaihtoehtoa illallislaskun vieressä, ja [ulkomaiset häät](page:use-case/events-and-celebrations) tarvitsevat luultavasti kaksi.
+limits:
+  heading: Rajat
+  items:
+    - Kurssi lukitaan, kun kulu tallennetaan. Vanhoja kuluja ei koskaan arvosteta uudelleen.
+    - Side Badger hakee nykyisen kurssin, kun mahdollista. Kaikille valuuttapareille ei ole varmuutta kurssista, ja voit aina kirjoittaa kurssin itse.
+    - Ryhmän automaattinen muunnos koskee vain uusia ja kopioituja kuluja, ei muokkauksia eikä olemassa olevia kuluja.
+    - Jokainen kulu on enintään 999 999,99 omassa valuutassaan.
+    - Valuuttoja on 140. Kryptovaluutat ja metallit eivät kuulu joukkoon.
+    - Side Badger kirjaa maksuja. Se ei koskaan siirrä rahaa eikä vaihda sitä.
+useCasesHeading: Missä tästä on hyötyä
+faq:
+  heading: Kysymyksiä
+  items:
+    - q: Mitä valuuttakurssia käytätte?
+      a: Nykyistä valuuttakurssia, joka haetaan kulua syötettäessä, kun sellainen on saatavilla. Voit vaihtaa sen kurssiin, jonka todella sait, ja muunnettu summa päivittyy.
+    - q: Arvostetaanko vanhat kulut uudelleen?
+      a: Ei. Kurssi lukitaan, kun kulu tallennetaan, joten saldo ei ajelehdi markkinoiden mukana.
+    - q: Tuetteko kryptoa?
+      a: Ei. Valuuttoja on 140, eivätkä kryptovaluutat kuulu niihin.
+    - q: Miksi en voi syöttää 2 000 000 rupiaa?
+      a: Jokainen kulu on enintään 999 999,99 omassa valuutassaan. Syötä se toisessa valuutassa ja muunna tai jaa kahdeksi kuluksi.
+    - q: Maksaako muuntaminen mitään?
+      a: Ei. Muuntaminen on ilmaista kuten muukin Side Badgerissa. Katso [hinnoittelu](page:pricing).
+    - q: Onko minun pakko muuntaa?
+      a: Ei. Valuutat pysyvät erillään, ellet sinä tai ryhmäsi valitse muuntamista, ja jokaisella valuutalla on oma lyhyt maksulistansa.

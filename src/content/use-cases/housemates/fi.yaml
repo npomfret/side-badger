@@ -1,0 +1,106 @@
+translatedFrom: "e6b829e6"
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: Jaa kotitalouden laskut kämppisten kesken
+  description: Jaa vuokra huoneen koon mukaan, sähkö ja ruokaostokset tasan ja katso joka kuukausi, kuka on velkaa kenelle. Ilmainen tapa pitää kirjaa kämppiksille ja asuinkumppaneille.
+h1: Jaa kotitalouden laskut kämppisten kesken
+navLabel: Kämppikset
+lead: Kämppikselle, joka ostaa vessapaperin, ja kämppiksille, jotka eivät koskaan näe sen tapahtuvan. Side Badger pitää yhtä juoksevaa kirjaa vuokrasta, laskuista ja ruokaostoksista **kämppisten ja asuinkumppanien** kesken, joten kenenkään ei tarvitse jahdata ketään ja jääkaappi saa taas olla pelkkä jääkaappi.
+cta:
+  heading: Aloita omasta kodistasi
+  body: Luo tili, tee ryhmä kodille ja lähetä kaikille kutsulinkki. Tämän kuun laskut voi syöttää jo tänä iltana.
+  button: Luo ilmainen tili
+scenario:
+  heading: Perusta koti
+  body: Tee ryhmä kodille, valitse nimi, jolla haluat muiden näkevän sinut, ja kutsu kaikki linkillä tai QR-koodilla. Ryhmä voi olla avoin, jolloin kaikki lisäävät ja muokkaavat, tai hallittu, jolloin uudet jäsenet tarvitsevat ylläpitäjän hyväksynnän ja vain luojat ja ylläpitäjät voivat muuttaa kuluja, mikä sopii kämppikselle, joka pitää kirjaa. Kuka tahansa, joka haluaa vain seurata lukuja, voi olla katsoja, joka näkee kaiken mutta ei muuta mitään. Kaikki näkevät uuden kulun heti, joten ”lisään sen myöhemmin” on vähemmän piilopaikkoja.
+sections:
+  - heading: Vuokra ja laskut
+    body: "Vuokra jakautuu harvoin neljällä, koska makuuhuoneet eivät ole samankokoisia. Jaa se prosenteilla, jolloin iso huone maksaa enemmän ja ikkunallinen komero vähemmän. Prosenttien summan on oltava 100. Laskut, joita kaikki käyttävät, jaetaan tasan, ja kämppis, joka ei ollut mukana kulussa, voidaan jättää siitä pois. Kun tasajako jättää ylimääräisen pennin, se menee satunnaiselle henkilölle. Toistuvia laskuja ei ole, joten joka kuukausi kopioit viime kuun vuokran, vaihdat päivämäärän ja jatkat."
+  - heading: Yhteiset ruokaostokset
+    body: "Pidä yhteinen ostoslista samassa ryhmässä ostoslaskujen kanssa ja rastita tuotteet, kun ne päätyvät koriin. Se, joka tekee ostokset, lisää kuitin loppusumman kuluksi ja jakaa sen tasan tai vain niiden kesken, jotka syövät tuotteen. Se, kuka ostaa jatkuvasti kauramaitoa, jota kukaan muu ei juo, jää talon sisäiseksi asiaksi, mutta ainakin kululista on tarkka. Ryhmän oikeudet ratkaisevat, kuka voi luoda ja muokata listoja. Kun vuokra, laskut ja ostokset yhdistää, saa kuukauden kuten alla neljän hengen talossa: Jo maksaa £2,000 vuokran, joka jaetaan 30 %, 25 %, 25 % ja 20 % huoneen koon mukaan, sitten Kwame maksaa £120 sähköstä, Lena £40 internetistä ja Matt £80 ruokaostoksista, kukin jaettuna tasan. Jon saatavaa on £1,340, ja Side Badger ehdottaa kolmea maksua, kaikki Jon hyväksi."
+  - heading: Reiluja tapoja jakaa kotitalouden kulut
+    items:
+      - "**Tasan** sopii siihen, mitä kaikki käyttävät suunnilleen yhtä paljon, kuten internet, siivousvälineet ja yhteiset ostokset. Se on nopea, eikä kenenkään tarvitse kiistellä laskuista."
+      - "**Huoneen koon mukaan** sopii vuokralle, koska huoneet ovat erilaisia ja niin on se, mitä ihmiset niistä ovat valmiita maksamaan. Sovi prosentit kerran, kun joku muuttaa sisään, ja käytä niitä uudelleen joka kuukausi."
+      - "**Käytön mukaan** sopii laskuihin, joissa yksi käyttää selvästi enemmän, kuten kotitoimiston lämmityslasku tai suoratoistotili, jota katsoo vain kaksi. Jätä pois ne, jotka eivät olleet mukana, tai syötä kullekin tarkka summa."
+      - "Minkä tahansa valitset, sovi se ennen ensimmäistä laskua eikä vasta ensimmäisen riidan jälkeen, ja kirjoita sääntö paikkaan, jonka koko talo näkee."
+  - heading: Kun joku muuttaa pois
+    body: He tasaavat ensin. Kukaan ei voi poistua ryhmästä, jos hän on velkaa tai hänelle ollaan velkaa, joten lähtijä maksaa tai saa maksun, te kirjaatte sen ja sitten hän lähtee. Jatkakaa ryhmää jäljelle jääville kämppiksille ja kutsukaa uusi ihminen linkillä. Kun itse talo on valmis, ylläpitäjä voi lukita ryhmän, jotta luvut pysyvät paikoillaan, tai sulkea sen lopullisesti, mikä tekee siitä kaikille käyttökelvottoman, joten tee se vasta, kun kukaan ei tarvitse historiaa.
+exampleAfter: 2
+example:
+  heading: Kuka on velkaa kenelle tässä kuussa
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: Vuokra
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: Sähkö
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: Internet-yhteys
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: Ruokaostokset
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: Ominaisuudet, joita koti käyttää
+faq:
+  heading: Kysymyksiä
+  items:
+    - q: Voiko vuokra toistua automaattisesti?
+      a: Ei, toistuvia laskuja ei ole. Kopioi viime kuun vuokra parilla napautuksella, vaihda päivämäärä ja homma on valmis.
+    - q: Voimmeko jakaa huoneen koon mukaan?
+      a: Kyllä, prosenteilla. Anna jokaiselle kämppikselle huonettaan vastaava osuus, kunhan osuuksien summa on 100. [Kulujen jako](page:feature/split-expenses) kertoo muista tavoista jakaa.
+    - q: Entä jos kämppis muuttaa pois velkaa?
+      a: Hän ei voi poistua ryhmästä, ennen kuin on tasannut, sillä kukaan ei voi lähteä, jos on velkaa tai hänelle ollaan velkaa. Luvut pysyvät rehellisinä, kunnes kaikki ovat tasoissa.
+    - q: Maksaako Side Badger laskut?
+      a: Ei. Se pitää kirjaa ja ehdottaa lyhyttä maksulistaa. Maksatte toisillenne miten haluatte ja kirjaatte sen sitten, kuten [tilien tasaus](page:feature/settle-up) selittää.
+    - q: Voiko yksi kämppis pitää kirjaa?
+      a: Kyllä. Tee hänestä ylläpitäjä ja käytä hallittua ryhmää, jossa uudet jäsenet tarvitsevat hyväksynnän ja vain luojat ja ylläpitäjät voivat muuttaa kuluja.

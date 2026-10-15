@@ -132,6 +132,7 @@ export class SiteAudit {
 
   /** axe reports no serious or critical violations on the page as it now stands */
   async expectNoSeriousAccessibilityViolations(): Promise<void> {
+    await this.waitForMotionToSettle();
     const results = await new AxeBuilder({ page: this.page }).analyze();
     const serious = results.violations
       .filter(violation => violation.impact === 'serious' || violation.impact === 'critical')
@@ -144,13 +145,46 @@ export class SiteAudit {
     expect(serious, 'serious or critical accessibility violations').toEqual([]);
   }
 
+  /**
+   * Fade-ins (`.fade-up`, the hero title) blend text with the background while they run, so axe's
+   * color-contrast result depends on when it samples. Wait until every finite animation and
+   * transition on the document timeline has finished. Infinite ones (the shimmer) never settle, and
+   * scroll-driven ones (the homepage scenes) follow the scroll position, so both are left out.
+   */
+  private async waitForMotionToSettle(): Promise<void> {
+    await expect
+      .poll(
+        () =>
+          this.page.evaluate(() =>
+            document
+              .getAnimations()
+              .filter(
+                a =>
+                  a.playState === 'running' &&
+                  a.timeline instanceof DocumentTimeline &&
+                  a.effect?.getComputedTiming().endTime !== Infinity
+              )
+              .map(a => `${(a as CSSAnimation).animationName ?? (a as CSSTransition).transitionProperty ?? 'animation'}`)
+          ),
+        { message: 'finite animations still running', timeout: ELEMENT_TIMEOUT }
+      )
+      .toEqual([]);
+  }
+
   /** Scroll to the foot of the page; the header's state changes once the page has scrolled */
   async scrollToFoot(): Promise<void> {
     await this.footer.scrollIntoViewIfNeeded();
     await expect(this.footer, 'the footer is on screen').toBeInViewport();
+    // A page that fits the viewport has nothing to scroll
     await expect
-      .poll(() => this.page.evaluate(() => window.scrollY), { message: 'the page has scrolled' })
-      .toBeGreaterThan(0);
+      .poll(
+        () =>
+          this.page.evaluate(
+            () => window.scrollY > 0 || document.documentElement.scrollHeight <= window.innerHeight
+          ),
+        { message: 'the page has scrolled' }
+      )
+      .toBe(true);
   }
 
   // ----- keyboard -----
@@ -160,6 +194,7 @@ export class SiteAudit {
    * and shows a ring, and the page body is reached.
    */
   async expectKeyboardReachesEverything(): Promise<void> {
+    // Each control gets an audit number, so two links with the same text and href are told apart
     const expected = await this.page.evaluate(() => {
       const selector =
         'a[href], button:not([disabled]), summary, input:not([type="hidden"]):not([disabled]), select, textarea, [tabindex]:not([tabindex="-1"])';
@@ -167,7 +202,10 @@ export class SiteAudit {
         `${el.tagName.toLowerCase()} ${(el.getAttribute('href') ?? el.getAttribute('aria-label') ?? el.textContent ?? '').trim().replace(/\s+/g, ' ').slice(0, 40)}`;
       return Array.from(document.querySelectorAll<HTMLElement>(selector))
         .filter(el => el.checkVisibility({ checkVisibilityCSS: true }) && el.tabIndex >= 0 && !el.closest('[inert]'))
-        .map(label);
+        .map((el, index) => {
+          el.dataset.siteAudit = String(index);
+          return `#${index} ${label(el)}`;
+        });
     });
     expect(expected.length, 'the page has focusable controls').toBeGreaterThan(3);
     const bodyControls = await this.page.evaluate(
@@ -183,7 +221,7 @@ export class SiteAudit {
         const outline = style.outlineStyle !== 'none' && parseFloat(style.outlineWidth) > 0;
         const shadow = style.boxShadow !== 'none';
         w.__log.push({
-          label: `${el.tagName.toLowerCase()} ${(el.getAttribute('href') ?? el.getAttribute('aria-label') ?? el.textContent ?? '').trim().replace(/\s+/g, ' ').slice(0, 40)}`,
+          label: `#${el.dataset.siteAudit ?? '?'} ${el.tagName.toLowerCase()} ${(el.getAttribute('href') ?? el.getAttribute('aria-label') ?? el.textContent ?? '').trim().replace(/\s+/g, ' ').slice(0, 40)}`,
           inMain: !!el.closest('main'),
           ring: el.matches(':focus-visible') && (outline || shadow),
         });
@@ -246,7 +284,16 @@ export class SiteAudit {
     }
     expect(broken, 'internal links that do not return 200').toEqual([]);
 
-    const hashes = [...new Set(hrefs.map(href => href.slice(href.indexOf('#'))).filter(hash => hash.length > 1 && hash.startsWith('#')))];
+    // Only a fragment of this page can be looked up here; another page's fragment is not on it
+    const here = this.localized(this.def);
+    const hashes = [
+      ...new Set(
+        hrefs
+          .filter(href => href.includes('#') && (href.startsWith('#') || href.split('#')[0] === here))
+          .map(href => href.slice(href.indexOf('#')))
+          .filter(hash => hash.length > 1)
+      ),
+    ];
     const missing = await this.page.evaluate(
       list => list.filter(hash => !document.getElementById(decodeURIComponent(hash.slice(1)))),
       hashes
@@ -322,17 +369,29 @@ export class SiteAudit {
     }
   }
 
-  /** A page with a parent shows a breadcrumb that links to it; a top-level page has none */
+  /**
+   * A page below a top-level page shows the trail Home > ancestors > this page: every crumb but the
+   * last links to its page, and the last is the current page. A top-level page has none.
+   */
   async expectBreadcrumbMatchesRegistry(): Promise<void> {
-    const parent = this.def.parent ? allPages().find(page => page.id === this.def.parent) : undefined;
-    if (!parent) {
+    const ancestors: PageDef[] = [];
+    for (let id = this.def.parent; id && id !== 'home'; ) {
+      const parent = allPages().find(page => page.id === id);
+      if (!parent) throw new Error(`${this.def.id}: parent "${id}" is not in the registry`);
+      ancestors.unshift(parent);
+      id = parent.parent;
+    }
+    if (ancestors.length === 0) {
       await expect(this.breadcrumb, 'no breadcrumb on a top-level page').toHaveCount(0);
       return;
     }
+    const home = allPages().find(page => page.id === 'home')!;
     await expect(this.breadcrumb, 'the breadcrumb').toBeVisible();
-    await expect(
-      this.breadcrumb.locator(`a[href="${this.localized(parent)}"]`),
-      'the breadcrumb links to the parent page'
-    ).toHaveCount(1);
+    await expect
+      .poll(() => this.breadcrumb.getByRole('link').evaluateAll(links => links.map(a => a.getAttribute('href'))), {
+        message: 'breadcrumb links are Home and the ancestors, in order',
+        timeout: ELEMENT_TIMEOUT,
+      })
+      .toEqual([home, ...ancestors].map(page => this.localized(page)));
   }
 }

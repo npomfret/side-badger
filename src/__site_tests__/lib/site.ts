@@ -158,7 +158,11 @@ export function squash(text: string): string {
   return text.replace(/\s+/g, ' ').trim();
 }
 
-/** Text nodes a visitor can see: script, style, noscript, template and the head are excluded */
+/**
+ * Text nodes a visitor can see: script, style, noscript, template and the head are excluded.
+ * `inEnglish` marks text inside `[lang="en"]` or `[translate="no"]` (URLs, codes): text that is
+ * meant to stay as it is on every locale's page.
+ */
 export function visibleTextNodes($: CheerioAPI): { text: string; inEnglish: boolean }[] {
   const out: { text: string; inEnglish: boolean }[] = [];
   const skip = new Set(['script', 'style', 'noscript', 'template', 'head']);
@@ -170,7 +174,9 @@ export function visibleTextNodes($: CheerioAPI): { text: string; inEnglish: bool
     }
     if (node.type !== 'tag' && node.type !== 'root') return;
     if (node.type === 'tag' && skip.has(node.name)) return;
-    const english = inEnglish || (node.type === 'tag' && /^en(-|$)/i.test(node.attribs?.lang ?? ''));
+    const english =
+      inEnglish ||
+      (node.type === 'tag' && (/^en(-|$)/i.test(node.attribs?.lang ?? '') || node.attribs?.translate === 'no'));
     for (const child of node.children ?? []) visit(child, english);
   };
   visit($.root().get(0), false);

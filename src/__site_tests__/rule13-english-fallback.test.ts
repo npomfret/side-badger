@@ -36,6 +36,10 @@ describe('rule 13: no English text left on translated pages', () => {
       expect(checkEnglishFallback(withFrench('r13/fr-home-english-legal.html'), () => new Set())).toEqual([]);
     });
 
+    it('exempts content inside [translate="no"]', () => {
+      expect(checkEnglishFallback(withFrench('r13/fr-home-no-translate.html'), () => new Set())).toEqual([]);
+    });
+
     it('allows identical text shorter than 25 characters', () => {
       expect(checkEnglishFallback(withFrench('r13/fr-home-short-identical.html'), () => new Set())).toEqual([]);
     });

@@ -1,4 +1,4 @@
-/** Rule 13: on a non-English page, visible text of 25+ characters identical to the English page's text must be on the locale's approved-identical list. [lang="en"] content is exempt. */
+/** Rule 13: on a non-English page, visible text of 25+ characters identical to the English page's text must be on the locale's approved-identical list. [lang="en"] and [translate="no"] content is exempt. */
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import * as cheerio from 'cheerio';

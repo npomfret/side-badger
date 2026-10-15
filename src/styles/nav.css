@@ -182,30 +182,14 @@
   }
 }
 
-/* Without popover support the panel is a plain list under the header, and the button is useless */
+/* Without popover support (Safari < 17, Firefox < 125) the menu cannot open as a layer, and as a
+   plain list it hung over the page under the fixed header. Hide it there: the footer carries the
+   same links on every page. */
 @supports not selector(:popover-open) {
   .menu-button,
-  .menu-close {
-    display: none;
-  }
-
-  .mobile-menu {
-    position: static;
-    padding: 0;
-    border: 0;
-    box-shadow: none;
-    background: none;
-  }
-
+  .menu-close,
   .mobile-nav {
-    position: absolute;
-    inset-block-start: 100%;
-    inset-inline: 0;
-    margin-block-start: var(--space-sm);
-    background: #fffdf8;
-    border: 1px solid var(--glass-border-hover);
-    border-radius: var(--radius-lg);
-    padding: var(--space-sm);
+    display: none;
   }
 }
 
@@ -240,8 +224,9 @@
   transform: rotate(45deg);
 }
 
+/* border-inline-end already mirrors to the left edge, so RTL turns the corner the other way to point left */
 :dir(rtl) .breadcrumbs li + li::before {
-  transform: rotate(-135deg);
+  transform: rotate(-45deg);
 }
 
 .breadcrumbs a {

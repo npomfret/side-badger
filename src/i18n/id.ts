@@ -226,7 +226,7 @@ export default {
   'pricing.hero.subtitle': 'Gratis. Tanpa iklan. Tanpa batas harian.',
   'pricing.hero.title': 'Side Badger gratis',
   'pricing.limits.amount.label': 'Jumlah dalam satu pengeluaran atau pembayaran',
-  'pricing.limits.amount.value': 'Hingga 999,999.99 dalam mata uangnya sendiri. Angka yang sama berlaku untuk setiap mata uang, berapa pun nilainya.',
+  'pricing.limits.amount.value': 'Hingga 999.999,99 dalam mata uangnya sendiri. Angka yang sama berlaku untuk setiap mata uang, berapa pun nilainya.',
   'pricing.limits.attachments.label': 'Lampiran pada komentar',
   'pricing.limits.attachments.value': '3, masing-masing hingga 5 MB',
   'pricing.limits.caption': 'Batas Side Badger',

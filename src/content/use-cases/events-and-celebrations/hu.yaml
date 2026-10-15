@@ -1,0 +1,90 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+meta:
+  title: "Oszd meg a bulik, esküvők és közös ajándékok költségeit"
+  description: "Oszd meg egy buli, esküvő vagy közös ajándék költségeit, amikor az emberek különböző összegekkel járulnak hozzá. Szavazzatok a tervről, oszd fel pontos összegek szerint, és nézd meg, ki kinek tartozik."
+h1: "Oszd meg a bulik, esküvők és közös ajándékok költségeit"
+navLabel: "Rendezvények és ünnepek"
+lead: "Osszátok el a foglalókat, a díszeket és a vészhelyzeti esernyőket. Az ültetési rendet bízd valaki bátrabbra. A Side Badger egy helyen tartja, **ki mennyivel járult hozzá**, hogy a szervező is élvezhesse a bulit."
+cta:
+  heading: "Kezdd a következő ünneppel"
+  body: "Hozz létre fiókot, csinálj csoportot az eseménynek, és küldd el a meghívó linket. A Side Badger ingyenes, hirdetések és napi korlátok nélkül."
+  button: "Ingyenes fiók létrehozása"
+scenario:
+  heading: "Mindenki hozzájárul, nem mindig ugyanannyival"
+  body: "Valaki kifizeti a terem foglalóját, valaki más megveszi a tortát, egy harmadik pedig a saját kártyájával fizeti a közös ajándékot. Néhány vendég mindenre eljön, néhány csak a vacsorára. Ennek igazságos nyilvántartása egy csevegőszálban olyan munka, amelyre senki nem jelentkezett. A Side Badger egyik csoportja mindezt tartja, bármilyen is az összegek keveréke, és megmutat mindenkinek, mivel tartozik, vagy mivel tartoznak neki. Az alapokat lásd a [hogyan működik](page:how-it-works) oldalon, vagy olvass tovább egy eseményről."
+sections:
+  - heading: "Döntsetek együtt"
+    body: "Mielőtt bármi pénz mozdulna, tedd a választást egy **szavazásra**. Adj hozzá legfeljebb 10 lehetőséget, például két termet vagy három ajándékötletet, és hagyd, hogy mindenki szavazzon. Elrejtheted, ki mire szavazott, hogy minden lehetőség tisztességes meghallgatást kapjon, a nyertes pedig a szavazás lezárása után jelenik meg. Senkinek nem kell negyven üzenetet visszagörgetnie, hogy megtudja, mit döntöttek."
+  - heading: "Ki miben vesz részt"
+    body: "Nem mindenki fizet ugyanannyit, és nem mindenki osztozik minden költségen. Oszd fel a költséget egyenlően, százalékosan vagy **pontos összegek** szerint, hogy mindenki része az az összeg legyen, amiben megegyeztetek. Hagyd ki azt, aki nem vett részt, például a vendégeket, akik kihagyták a vacsorát, vagy a barátokat, akik nem szálltak be az ajándékba. Minden költségnek egy fizetője van, a felosztásban szereplő többiek pedig neki tartoznak a részükkel. A részleteket a [költségek felosztása](page:feature/split-expenses) oldalon találod."
+  - heading: "Őrizd meg az iratokat"
+    body: "Adj megjegyzéseket egy költséghez, például hogy mit fedezett. A kommentek a **költség mellett** maradnak, amelyről szólnak, így a „a torta £45 volt vagy £54?” kérdés és a válasza ugyanazon a helyen él. A kommentek legfeljebb 500 karakteresek lehetnek, ami bőven elég egy foglalóról szóló kérdéshez."
+  - heading: "Vezérlők a szervezőnek"
+    body: "A nyitott együttműködés lehetővé teszi, hogy bármely tag hozzáadjon és szerkesszen költségeket, ami egy kis ajándéknál rendben van. Esküvőhöz vagy nagyobb bulihoz válaszd a **Felügyelt csoport** előbeállítást. Az adminisztrátorok jóváhagyják az új tagokat, és a költségeket csak a létrehozók és az adminisztrátorok változtathatják. Hívj meg embereket linkkel vagy QR-kóddal; bekapcsolt jóváhagyásnál egy adminisztrátor beengedi az egyes embereket, így a vendéglista vendéglista marad. Ha vége az eseménynek, zárold a csoportot, hogy a számok a helyükön maradjanak."
+  - heading: "Számoljatok el a buli után"
+    body: "Amint megérkezik az utolsó számla, az egyenlegek megmutatják, **ki kinek tartozik**, a Side Badger pedig egy rövid kifizetéslistát javasol, amely mindenkit elszámoltat. Fizessetek egymásnak, ahogy akartok, aztán rögzítsd a kifizetést a csoportban. A Side Badger sosem mozgat pénzt, így a csoport vezeti a számolást, miközben az átutalások a ti saját banki alkalmazásaitokban zajlanak. Az [elszámolás](page:feature/settle-up) oldal megmutatja, hogyan lesz a gubancból rövid lista."
+exampleAfter: 5
+example:
+  heading: "Egy közös ajándék: hat szavazat mellette, £150 elosztandó"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Közös ajándék"
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: "A funkciók, amelyeket ez használ"
+faq:
+  heading: "Kérdések"
+  items:
+    - q: "Láthatják a vendégek a csoportot csatlakozás nélkül?"
+      a: "Nem. Az emberek linkkel vagy QR-kóddal és ingyenes fiókkal csatlakoznak, így a csoportot akkor látják, ha már bent vannak."
+    - q: "Beszedheti a Side Badger a pénzt?"
+      a: "Nem. A Side Badger vezeti a számolást, és sosem mozgat pénzt. Fizessetek egymásnak, ahogy akartok, aztán rögzítsd a kifizetést. Ingyenes, hirdetések és napi korlátok nélkül; lásd az [árakat](page:pricing)."
+    - q: "Lehetnek névtelenek a szavazatok?"
+      a: "Igen. Szavazás létrehozásakor elrejtheted, ki mire szavazott. A beállítások csak az első szavazat előtt módosíthatók."
+    - q: "Járulhatnak hozzá az emberek különböző összegekkel?"
+      a: "Igen. Oszd fel a költséget pontos összegek szerint, hogy mindenki része az az összeg legyen, amiben megegyeztetek, vagy hagyd ki azokat, akik nem vettek részt."
+    - q: "Vezetheti a szervező a könyvelést?"
+      a: "Igen. Használd a felügyelt csoport előbeállítást, hogy a költségeket csak a létrehozók és az adminisztrátorok változtassák, az adminisztrátorok pedig jóváhagyják az új tagokat."

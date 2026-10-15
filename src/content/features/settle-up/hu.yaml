@@ -1,0 +1,110 @@
+translatedFrom: "1b51f540"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: "Számoljatok el kevesebb kifizetéssel | Side Badger"
+  description: "Nézd meg, ki kinek tartozik a csoportodban, kapj egy rövid kifizetéslistát, amely mindenkit elszámoltat, és rögzítsd az egyes kifizetéseket, ahogy megtörténnek. Ingyenes."
+h1: "Számoljatok el kevesebb kifizetéssel"
+navLabel: "Elszámolás"
+lead: "A Side Badger folyamatos egyenleget vezet a csoport mindenkijének, és egy rövid kifizetéslistát javasol, amely rendezi. Fizettek egymásnak, ahogy akartok, aztán rögzítitek. Ha előbb azt szeretnéd látni, hogyan oszlanak meg az összegek, kezdd a [költségek felosztásával](page:feature/split-expenses)."
+cta:
+  heading: "Készen állsz kibogozni, ki kinek tartozik?"
+  body: "Hozz létre fiókot, indíts csoportot, és add hozzá az első költséget. Az egyenlegek elintézik a többit."
+  button: "Ingyenes fiók létrehozása"
+problem:
+  heading: "Egyenlegek, amelyek menet közben frissülnek"
+  body: "Minden költség megváltoztatja, ki kinek tartozik, ezért a Side Badger naprakészen tartja az egyenlegeket, ahogy a költségek és kifizetések érkeznek. A csoport minden tagja azonnal látja a változást, és azt is, hogy mi változott, és ki változtatta. Az egyenlegeket pénznemenként vezetjük, így az euró és a font a saját oszlopában marad, hacsak egy költséget nem váltottak át bevitelkor. Alapértelmezés szerint a téged érintő tartozásokat látod; az **Összes megjelenítése** az egész csoportot kilistázza."
+workflow:
+  heading: "Három lépés a kvittségig"
+  steps:
+    - title: "Nézd meg, ki kinek tartozik"
+      body: "Nyisd meg a csoport egyenlegeit, hogy lásd, mivel tartozol, mivel tartoznak neked, és egy rövid kifizetéslistát, amely mindenkit elszámoltat, pénznemenként kiszámolva. A kérdőre vont költségek kimaradnak az összegekből, amíg nem rendeződnek. Az alábbi lakótársas példában hat kifizetésből kettő lesz."
+      shot: S10
+      shotAlt: "Az egyenlegek képernyője egyszerűsített tartozásokkal két pénznemben, az Összes megjelenítése bekapcsolva"
+    - title: "Fizess, ahogy akarsz, aztán rögzítsd"
+      body: "Banki átutalás, készpénz, egy szívesség a múlt nyaralásról. A Side Badger nem mozgatja a pénzt. Amint gazdát cserélt, rögzítsd a kifizetést, és az egyenleg mindenkinél frissül."
+      shot: S11
+      shotAlt: "A kifizetési űrlap gyors rendezés gombokkal és a részleges kifizetésnél megjelenő értesítéssel"
+    - title: "Ellenőrizd, hogy megérkezett"
+      body: "A kifizetés bekerül a csoport előzményeibe, ahol a csoport bármely tagja láthatja, és emojival reagálhat rá. Ünnepeld meg a kifizetést, amikor megérkezik."
+      shot: S12
+      shotAlt: "A kifizetési előzmények emoji reakciókkal egy kifizetésen"
+options:
+  heading: "Lehetőségek"
+  items: []
+example:
+  heading: "A gubancból egy rövid lista"
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: "Áram"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: Internet
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "Bevásárlás"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "Rögzíts egy kifizetést"
+    body: "Amikor valaki fizet, rögzítsd a megfelelő embernél. A gyors rendezés gombok kitöltik az összeget a javasolt kifizetéseidből, és hozzáadhatsz egy megjegyzést, például „banki átutalás” (legfeljebb 500 karakter). Ha csak a tartozásod egy részét fizeted ki, a többi az egyenlegen marad. Ha túl keveset vagy túl sokat írsz be, a Side Badger figyelmeztet, mielőtt mentenél. A kifizetés rögzítéséhez a költségek szerkesztésére van szükség, a dátum pedig nem lehet a jövőben."
+  - heading: "Más pénznemben fizettél?"
+    body: "Az egyenlegek abban a pénznemben maradnak, amelyben fizettek, így az eurós tartozás eurós tartozás marad. Eurót tartozol, de fonttal fizetsz? Váltsd át a kifizetést bevitelkor, egy aktuális árfolyamon vagy azon, amelyet ténylegesen kaptál. Az árfolyam a kifizetés mentésekor rögzül. A [több pénznem](page:feature/multiple-currencies) elmagyarázza, hogyan működik az átváltás, a [csoportos utazások](page:use-case/group-trips) pedig működés közben mutatják."
+  - heading: "Előzmények, amelyeket ellenőrizhetsz"
+    body: "Minden rögzített kifizetés a csoport előzményeiben marad a dátumával, összegével és megjegyzésével. Egy kifizetést csak az szerkeszthet, aki rögzítette, törölni pedig ő vagy a csoport adminisztrátora tudja. Az a kifizetés, amelyben olyasvalaki érintett, aki elhagyta a csoportot, zárolt. Egy lakótársas forgatókönyvért lásd a [lakótársakat](page:use-case/housemates)."
+limits:
+  heading: "Amit a Side Badger nem csinál"
+  items:
+    - "A Side Badger nem mozgat pénzt, nem küld fizetési linkeket és nem küld fizetési kéréseket. Az alkalmazásbeli kifizetés egy máshol megtörtént kifizetés feljegyzése."
+    - "A javasolt kifizetések egy egyszerű párosítási módszerből származnak, pénznemenként alkalmazva. Mindig kevesebb kifizetést javasol, mint ahány embernek van egyenlege az adott pénznemben (négy embernél legfeljebb hármat), de nem mindig találja meg a lehető legkisebb számot."
+    - "A javaslatokat nem kapcsolhatod ki. Az **Összes megjelenítése** a csoport minden javasolt kifizetését kilistázza, nem csak a tieidet."
+    - "A pénznemeket sosem számoljuk egymással szembe, hacsak a költségeket nem váltották át bevitelkor."
+    - "Emlékeztetők nincsenek, így a kifizetés követelése továbbra is rád marad."
+useCasesHeading: "Hol számít az elszámolás"
+faq:
+  heading: "Kérdések"
+  items:
+    - q: "Elküldi a pénzt a Side Badger?"
+      a: "Nem. Fizessetek egymásnak, ahogy akartok, aztán rögzítsd a kifizetést a Side Badgerben, hogy az egyenleg frissüljön."
+    - q: "Kikapcsolhatom a javasolt kifizetéseket?"
+      a: "Nem. Az egyszerűsítés bekapcsolva marad, az **Összes megjelenítése** pedig a csoport minden javasolt kifizetését kilistázza, nem csak azokat, amelyek téged érintenek."
+    - q: "Miért vannak külön az euró és a font?"
+      a: "Az egyenlegek abban a pénznemben maradnak, amelyben fizettél, hacsak nem váltasz át egy költség vagy kifizetés bevitelekor. A különböző pénznemű tartozásokat sosem számoljuk egymással szembe."
+    - q: "Mi van, ha valaki csak a tartozása egy részét fizeti?"
+      a: "Rögzítsd a kifizetett részt. A többi az egyenlegen marad, amíg ki nem fizetik."
+    - q: "Ez mindig a lehető legkevesebb kifizetés?"
+      a: "Nem garantált. Mindig kevesebb kifizetést javasol, mint ahány embernek van egyenlege az adott pénznemben, így négy embernél sosem többet háromnál. A lakótársas példában ez két kifizetés, ahol az egyenkénti visszaadás hatot igényelt."

@@ -1,0 +1,107 @@
+translatedFrom: "fd23c99b"
+review:
+  status: checked
+  checker: "T2-check"
+  date: "2026-10-15"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Jinsi Side Badger inavyofanya kazi | Gawanya gharama za kikundi kwa hatua tano"
+  description: "Unda kikundi, alika watu, ongeza gharama na maliza hesabu. Tazama kinachotokea kati ya “mtu amelipa” na “hesabu zimekaa sawa”, kwa mfano kamili."
+h1: "Jinsi Side Badger inavyofanya kazi"
+navLabel: "Inavyofanya kazi"
+lead: "Nini hutokea kati ya “mtu amelipa” na “hesabu zimekaa sawa”? Hatua tano, hakuna lahajedwali, na badger mmoja ambaye mara nyingi ni pambo tu. Hii hapa safari nzima, kuanzia kikundi cha kwanza hadi malipo ya mwisho yaliyorekodiwa. Kwa undani wa hatua yoyote, tazama [kugawanya gharama](page:feature/split-expenses) na [kumaliza hesabu](page:feature/settle-up)."
+cta:
+  heading: "Kutoka “nitalipa hii” hadi “hesabu zimekaa sawa”"
+  body: "Fungua akaunti ya bure, anzisha kikundi na ongeza gharama ya kwanza. Badger hatahukumu risiti."
+  button: "Fungua akaunti ya bure"
+steps:
+  - title: "Unda kikundi"
+    body: "Tengeneza kikundi kimoja kwa kila nyumba, safari au tukio, ili kodi isiishie kwenye orodha moja na zawadi ya harusi. Kipe jina, chagua jina ambalo watu wataliona kama lako na, ukipenda, punguza sarafu ambazo kikundi kinakubali. Kisha dashibodi yako inaonyesha kila kikundi, na nafasi yako katika kila kimoja, kwenye skrini moja."
+    shot: S02
+    shotAlt: "Kisanduku cha kuunda kikundi chenye sehemu ya vikwazo vya sarafu ikiwa wazi"
+  - title: "Alika watu wako"
+    body: "Shiriki kiungo cha kujiunga au onyesha msimbo wa QR, na weka kitadumu kwa muda gani, kuanzia dakika 15 hadi siku 5. Kila anayejiunga anahitaji akaunti ya bure na barua pepe iliyothibitishwa, na kikundi kinaweza kuwa na hadi watu 50. Ukitaka kuchuja nani anaingia, washa idhini na msimamizi atamruhusu kila mtu."
+    shot: S03
+    shotAlt: "Kisanduku cha mwaliko kwenye kichupo cha kiungo, kikionyesha msimbo wa QR na chaguo za muda wa kuisha"
+  - title: "Ongeza gharama zinapotokea"
+    body: "Sema nani alilipa, kiasi gani, na kwa ajili ya nani. Gawanya kwa usawa, kwa kiasi halisi au kwa asilimia, na mwache nje yeyote ambaye hakuhusika. Ukiongeza gharama, kila mtu anaiona mara moja, pamoja na kilichobadilika na nani alibadilisha."
+    shot: S05
+    shotAlt: "Fomu ya gharama yenye mgawanyo wa asilimia, ikigawanya kodi kulingana na ukubwa wa chumba"
+  - title: "Fuatilia salio"
+    body: "Side Badger huweka salio linaloendelea kwa kila sarafu, ili uone kwa mtazamo mmoja nani anadaiwa na nani. Badala ya kumwachia kila mtu kutatua mtandao wa madeni madogo, hupendekeza orodha fupi ya malipo inayomaliza hesabu za kikundi."
+    shot: S10
+    shotAlt: "Skrini ya salio ikionyesha madeni yaliyorahisishwa kwa sarafu mbili, na Onyesha yote imewashwa"
+  - title: "Maliza hesabu nje ya programu, rekodi ndani"
+    body: "Side Badger haisogezi pesa kamwe. Lipaneni mtakavyo, kisha rekodi malipo ili salio lisasishwe, na skrini ya kila mtu inabadilika bila kuonyesha upya. “Kumaliza hesabu” kunamaanisha tu kwamba salio linaonyesha sifuri. Hakuna anayeweza kuondoka kwenye kikundi akiwa bado anadaiwa au anadai pesa, kwa hivyo anayeelekea mlangoni hukamilisha hesabu kwanza."
+    shot: S11
+    shotAlt: "Fomu ya malipo yenye vitufe vya Lipa haraka na arifa ya malipo ya sehemu"
+requirements:
+  heading: "Unachohitaji"
+  items:
+    - "Akaunti ya bure. Unachohitaji ni anwani ya barua pepe na nenosiri, na unathibitisha barua pepe kabla ya kuongeza chochote."
+    - "Kuwa na umri wa miaka 18 au zaidi."
+    - "Kivinjari cha kisasa kwenye simu au kompyuta, na muunganisho wa intaneti. Side Badger si programu ya duka la programu na haifanyi kazi nje ya mtandao."
+    - "Hiari, nafasi kwenye skrini yako ya mwanzo. Hakuna haja ya duka la programu, kwa sababu unaweza kuongeza Side Badger kwenye skrini yako ya mwanzo au dock na inafunguka kama programu."
+example:
+  heading: "Marafiki watatu baada ya usiku wa kutoka"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: "Chakula cha jioni"
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: "Teksi"
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: "Lugha 39, na imejengwa kwa watu zaidi"
+    body: "Tumia Side Badger kwa lugha 39, zikiwemo Kiarabu, Kiajemi na Kiurdu zinazoandikwa kutoka kulia kwenda kushoto. Kila mtu kwenye kikundi anaweza kuchagua lugha yake, kwa hivyo ukurasa wa kikundi unaweza kuwa kwa Kiarabu kwa mtu mmoja na kwa Kiingereza kwa mwingine. Pia imejengwa ikiwafikiria watumiaji wa kibodi na visoma-skrini, na rangi za wanachama huja na michoro, ili usilazimike kutofautisha kijani na nyekundu."
+faq:
+  heading: "Maswali"
+  items:
+    - q: "Je, kila mtu anahitaji akaunti?"
+      a: "Ndiyo, ya bure. Kila mtu anathibitisha barua pepe yake kabla ya kuongeza chochote."
+    - q: "Je, kuna programu?"
+      a: "Inafanya kazi kwenye kivinjari, na unaweza kuiongeza kwenye skrini yako ya mwanzo au dock ili ifunguke kama programu. Hakuna toleo la duka la programu wala hali ya nje ya mtandao."
+    - q: "Je, Side Badger inasogeza pesa?"
+      a: "Hapana. Inaweka hesabu na kupendekeza malipo, nanyi mnalipana mtakavyo. Kisha mnarekodi malipo. Tazama [kumaliza hesabu](page:feature/settle-up)."
+    - q: "Je, mtu anaweza kuondoka akiwa na deni?"
+      a: "Hapana. Hakuna anayeweza kuondoka kwenye kikundi akiwa bado anadaiwa au anadai pesa, kwa hivyo hukamilisha hesabu kwanza."
+    - q: "Watu wangapi wanaweza kujiunga na kikundi?"
+      a: "Hadi watu 50 kwenye kikundi. Waalike kwa kiungo au msimbo wa QR, na washa idhini ukitaka msimamizi amruhusu kila mtu aingie."
+    - q: "Vipi kuhusu safari zenye sarafu zaidi ya moja?"
+      a: "Salio huwekwa kando kwa kila sarafu. Tazama [sarafu nyingi](page:feature/multiple-currencies)."

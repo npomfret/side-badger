@@ -1,0 +1,115 @@
+translatedFrom: "e6b829e6"
+review:
+  status: checked
+  checker: "T2-check"
+  date: "2026-10-15"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+identicalApproved:
+  - navLabel
+  - cta.heading
+  - sections.0.heading
+  - example.expenses.0.label
+  - example.expenses.2.label
+  - example.expenses.3.label
+  - faq.heading
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Share household bills with housemates"
+  description: "Share rent by room size, share light and groceries equal-equal, and see who owe who every month. Free way for housemates, flatmates and roommates to keep count."
+h1: "Share household bills with housemates"
+navLabel: "Housemates"
+lead: "For di housemate wey dey buy toilet roll, and di housemates wey never see am happen. Side Badger dey keep one running count of di rent, di bills and di shop for **housemates, flatmates and roommates**, so nobody go chase anybody and di fridge fit go back to be just fridge."
+cta:
+  heading: "Start with your own house"
+  body: "Create account, make group for di house and send everybody di invite link. Dis month bills fit enter tonight."
+  button: "Create free account"
+scenario:
+  heading: "Set up di house"
+  body: "Make group for di house, choose di name wey you want people to see for am, and invite everybody with link or QR code. Di group fit dey open, where everybody dey add and edit, or managed, where new members need admin approval and only creators and admins fit change expenses, wey suit di housemate wey dey keep di books. Anybody wey just wan watch di numbers fit be viewer, wey go see everything and change nothing. Everybody dey see new expense sharp sharp, so “I go add am later” get fewer places to hide."
+sections:
+  - heading: "Rent and bills"
+    body: "Rent hardly divide by four, because bedrooms no equal. Share am by percentage, so di big room go pay more and di cupboard with window go pay less. Percentages must add up to 100. Bills wey everybody use get equal split, and housemate wey no dey part of expense fit dey left out. When equal split leave odd penny, e go to one person at random. No recurring bills dey, so every month you go copy last month rent, change di date and carry on."
+  - heading: "Di shared shop"
+    body: "Keep di shared shopping list for di same group as di shopping bills, and tick items off as dem reach di trolley. Whoever do di shop go add di receipt total as expense and share am equal-equal, or between only di people wey go chop di thing. Who keep buying di oat milk wey nobody else dey drink still be matter for di house, but at least di expense list go correct. Di group permissions decide who fit create and edit lists. Put di rent, di bills and di shop together and you go get month like di one below, for house of four: Jo pay £2,000 rent, wey dem share 30%, 25%, 25% and 20% by room size, then Kwame pay £120 for energy, Lena £40 for internet and Matt £80 for groceries, each one shared equal-equal. Jo end up owed £1,340, and Side Badger suggest three payments, all to Jo."
+  - heading: "Fair ways to share household costs"
+    items:
+      - "**Equal-equal** suit wetin everybody use about the same, like internet, cleaning supplies and di communal shop. E quick, and nobody need argue about di maths."
+      - "**By room size** suit rent, because rooms different and so too wetin people dey ready to pay for dem. Agree di percentages once, when somebody move in, and reuse dem every month."
+      - "**By use** suit bills where one person clearly use more, like home-office heating bill or streaming account wey only two people dey watch. Leave out di people wey no dey part of am, or enter exact amounts for each person."
+      - "Whichever one you choose, agree am before di first bill instead of after di first argument, and write di rule down somewhere wey di whole house fit see."
+  - heading: "When somebody move out"
+    body: "Dem go settle first. Nobody fit leave group while dem owe or dem owe dem money, so di person wey dey leave go pay or dem go pay am, you record am, and then e go. Keep di group going for di housemates wey remain and invite di new person with link. When di house itself finish, admin fit lock di group so di numbers go stay put, or close am for good, wey make am inaccessible to everybody, so do dat one only when nobody need di history."
+exampleAfter: 2
+example:
+  heading: "Who owe who dis month"
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: "Rent"
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: "Light bill"
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: "Internet"
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: "Groceries"
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: "Di features wey house dey use"
+faq:
+  heading: "Questions"
+  items:
+    - q: "Rent fit repeat automatically?"
+      a: "No, no recurring bills dey. Copy last month rent with couple of taps, change di date and you don finish."
+    - q: "We fit share by room size?"
+      a: "Yes, by percentage. Give each housemate share wey reflect im room, as long as di shares add up to 100. [Share expenses](page:feature/split-expenses) cover di other ways to split."
+    - q: "Wetin if housemate move out owing money?"
+      a: "Dem no fit leave di group until dem don settle, because nobody fit leave while dem owe or dem owe dem money. Di numbers go stay honest until everybody clear."
+    - q: "Side Badger dey pay di bills?"
+      a: "No. E dey keep di count and suggest short list of payments. You go pay each other anyhow you like, then record am, as [settle up](page:feature/settle-up) explain."
+    - q: "One housemate fit keep di books?"
+      a: "Yes. Make am admin and use managed group, where new members need approval and only creators and admins fit change expenses."

@@ -1,8 +1,6 @@
 translatedFrom: "a1e36ce8"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - invites.link-or-qr-code
   - invites.admin-approval
@@ -34,14 +32,14 @@ sections:
   - heading: "Cine intră cu ce"
     body: "Nu toți plătesc la fel și nu toți participă la fiecare cost. Împarte o cheltuială egal, procentual sau pe **sume exacte**, ca partea fiecăruia să fie cifra la care ați convenit. Exclude pe oricine nu a fost implicat, de exemplu invitații care au sărit peste cină sau prietenii care nu s-au alăturat cadoului. Fiecare cheltuială are un singur plătitor, iar toți ceilalți din împărțire îi datorează partea lor. Detaliile sunt pe pagina [împărțirea cheltuielilor](page:feature/split-expenses)."
   - heading: "Păstrează actele"
-    body: "Adaugă note la o cheltuială, de exemplu ce a acoperit costul. Comentariile rămân **lângă cheltuiala** despre care e vorba, așa că întrebarea „tortul a fost £45 sau £54?” și răspunsul ei stau în același loc. Comentariile pot avea 500 de caractere, ceea ce e destul pentru o întrebare despre un avans."
+    body: "Adaugă note la o cheltuială, de exemplu ce a acoperit costul. Comentariile rămân **lângă cheltuiala** despre care e vorba, așa că întrebarea „tortul a fost 45 £ sau 54 £?” și răspunsul ei stau în același loc. Comentariile pot avea 500 de caractere, ceea ce e destul pentru o întrebare despre un avans."
   - heading: "Controalele organizatorului"
     body: "Colaborarea deschisă lasă orice membru să adauge și să editeze cheltuieli, ceea ce e în regulă pentru un cadou mic. Pentru o nuntă sau o petrecere mai mare, alege presetarea **Grup gestionat**. Administratorii aprobă fiecare membru nou, iar doar creatorii și administratorii pot schimba cheltuielile. Invită oamenii cu un link sau un cod QR; cu aprobarea activată, un administrator lasă fiecare persoană să intre, așa că lista de invitați rămâne lista de invitați. Când evenimentul s-a terminat, blochează grupul, ca cifrele să rămână pe loc."
   - heading: "Achită-te după petrecere"
     body: "După ce a sosit ultima factură, soldurile arată **cine cui datorează**, iar Side Badger sugerează o listă scurtă de plăți care îi achită pe toți. Plătiți-vă unii altora cum preferați, apoi înregistrați plata în grup. Side Badger nu mută niciodată bani, așa că grupul ține evidența, în timp ce transferurile se fac în aplicațiile voastre bancare. Pagina [decontarea](page:feature/settle-up) arată cum o încurcătură devine o listă scurtă."
 exampleAfter: 5
 example:
-  heading: "Un cadou comun: șase voturi pentru, £150 de împărțit"
+  heading: "Un cadou comun: șase voturi pentru, 150 £ de împărțit"
   currency: GBP
   people:
     - id: priya

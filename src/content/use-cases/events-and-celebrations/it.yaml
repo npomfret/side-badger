@@ -1,8 +1,6 @@
 translatedFrom: "a1e36ce8"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - invites.link-or-qr-code
   - invites.admin-approval
@@ -34,14 +32,14 @@ sections:
   - heading: Chi c'è per cosa
     body: Non tutti pagano lo stesso, e non tutti fanno parte di ogni costo. Dividi una spesa in parti uguali, per percentuale o per **importi esatti**, così la quota di ciascuno è la cifra concordata. Escludi chi non era coinvolto, come gli invitati che hanno saltato la cena o gli amici che non si sono uniti al regalo. Ogni spesa ha un solo pagatore, e tutti gli altri nella divisione devono a lui la propria quota. I dettagli sono nella pagina [dividere le spese](page:feature/split-expenses).
   - heading: Conserva le carte
-    body: Aggiungi note a una spesa, per esempio cosa copriva il costo. I commenti restano **accanto alla spesa** di cui parlano, quindi la domanda "la torta costava £45 o £54?" e la sua risposta stanno nello stesso posto. I commenti arrivano a 500 caratteri, più che sufficienti per una domanda su una caparra.
+    body: Aggiungi note a una spesa, per esempio cosa copriva il costo. I commenti restano **accanto alla spesa** di cui parlano, quindi la domanda "la torta costava 45 £ o 54 £?" e la sua risposta stanno nello stesso posto. I commenti arrivano a 500 caratteri, più che sufficienti per una domanda su una caparra.
   - heading: Controlli per chi organizza
     body: La collaborazione aperta permette a qualsiasi membro di aggiungere e modificare spese, il che va bene per un piccolo regalo. Per un matrimonio o una festa più grande, scegli il preset **Gruppo gestito**. Gli admin approvano ogni nuovo membro e solo i creatori e gli admin possono modificare le spese. Invita le persone con un link o un codice QR; con l'approvazione attiva, un admin fa entrare ogni persona, così la lista degli invitati resta la lista degli invitati. Quando l'evento è finito, blocca il gruppo così i numeri restano fermi.
   - heading: Salda dopo la festa
     body: Quando è arrivata l'ultima fattura, i saldi mostrano **chi deve cosa a chi**, e Side Badger suggerisce una breve lista di pagamenti che salda tutti. Pagatevi come vi fa più comodo, poi registrate il pagamento nel gruppo. Side Badger non sposta mai denaro, quindi il gruppo tiene il conto mentre i trasferimenti avvengono nelle vostre app bancarie. La pagina [saldare i conti](page:feature/settle-up) mostra come un groviglio diventa una breve lista.
 exampleAfter: 5
 example:
-  heading: 'Un regalo collettivo: sei voti a favore, £150 da dividere'
+  heading: 'Un regalo collettivo: sei voti a favore, 150 £ da dividere'
   currency: GBP
   people:
     - id: priya

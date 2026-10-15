@@ -1,8 +1,6 @@
 translatedFrom: "923c938f"
 review:
-  status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - multi-currency.140-currencies
   - multi-currency.currency-rules
@@ -106,7 +104,7 @@ limits:
     - Kursen låses når utgiften lagres. Gamle utgifter revurderes aldri.
     - Side Badger henter en gjeldende kurs der det er mulig. Ikke alle valutapar er garantert å få en, og du kan alltid skrive inn kursen selv.
     - Automatisk konvertering for gruppen gjelder bare nye og kopierte utgifter, ikke redigeringer eller eksisterende utgifter.
-    - Hver utgift er begrenset til 999,999.99 i sin egen valuta.
+    - Hver utgift er begrenset til 999 999,99 i sin egen valuta.
     - Det finnes 140 valutaer. Kryptovalutaer og metaller er ikke blant dem.
     - Side Badger registrerer betalinger. Den flytter eller veksler aldri penger.
 useCasesHeading: Hvor dette hjelper
@@ -119,8 +117,8 @@ faq:
       a: Nei. Kursen låses når utgiften lagres, så en saldo driver ikke bare fordi markedet gjorde det.
     - q: Støtter dere krypto?
       a: Nei. Det finnes 140 valutaer, og kryptovalutaer er ikke blant dem.
-    - q: Hvorfor kan jeg ikke legge inn 2,000,000 rupiah?
-      a: Hver utgift er begrenset til 999,999.99 i sin egen valuta. Legg den inn i en annen valuta og konverter, eller del den i to utgifter.
+    - q: Hvorfor kan jeg ikke legge inn 2 000 000 rupiah?
+      a: Hver utgift er begrenset til 999 999,99 i sin egen valuta. Legg den inn i en annen valuta og konverter, eller del den i to utgifter.
     - q: Koster konvertering noe?
       a: Nei. Konvertering er gratis, som resten av Side Badger. Se [priser](page:pricing).
     - q: Må jeg konvertere?

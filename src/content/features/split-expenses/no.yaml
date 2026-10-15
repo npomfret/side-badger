@@ -53,7 +53,7 @@ options:
     - title: Etter nøyaktige beløp
       body: Skriv inn hva hver person skylder. Bra for gaven der alle valgte en ulik pris, eller butikken der én persons handlevogn rommet mer enn de felles dagligvarene. Beløpene må summere seg til totalen.
     - title: Etter prosent
-      body: Gi hver person en andel av totalen. Husleie etter romstørrelse er klassikeren, der det største rommet betaler den største andelen og ingen som later som noe annet.
+      body: Gi hver person en andel av totalen. Husleie etter romstørrelse er klassikeren, der det største rommet betaler den største andelen og ingen later som noe annet.
 example:
   heading: En hyttehelg, fire utgifter, tre delinger
   currency: GBP
@@ -113,7 +113,7 @@ limits:
     - Én person betaler for hver utgift. Hvis to personer betalte, registrerer du to utgifter.
     - Det finnes ingen deling per vare og ingen deling etter andeler. Likt, nøyaktige beløp og prosent er det som finnes.
     - Prosentene må summere seg til 100.
-    - En utgift kan være opptil 999,999.99 i sin egen valuta, med den valutaens vanlige antall desimaler.
+    - En utgift kan være opptil 999 999,99 i sin egen valuta, med den valutaens vanlige antall desimaler.
     - Utgifter kan ikke gjentas av seg selv. Kopier forrige måneds i stedet.
     - Datoer kan ikke ligge i fremtiden eller mer enn 10 år tilbake.
     - En utgift som involverer noen som har forlatt gruppen, blir skrivebeskyttet.

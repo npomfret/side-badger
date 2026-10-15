@@ -1,8 +1,6 @@
 translatedFrom: "1b51f540"
 review:
-  status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - balances.who-owes-whom
   - balances.short-list-of-payments
@@ -91,7 +89,7 @@ limits:
   heading: Hva Side Badger ikke gjør
   items:
     - Side Badger flytter ikke penger, sender ikke betalingslenker og sender ikke betalingsforespørsler. En betaling i appen er en registrering av en betaling som ble gjort et annet sted.
-    - De foreslåtte betalingene kommer fra en enkel sammenligningsmetode, brukt per valuta. Den foreslår alltid færre betalinger enn det er personer med saldo i den valutaen (fire personer, høyst tre betalinger), men den finner ikke alltid det minst mulige antallet.
+    - De foreslåtte betalingene kommer fra en enkel matchingsmetode, brukt per valuta. Den foreslår alltid færre betalinger enn det er personer med saldo i den valutaen (fire personer, høyst tre betalinger), men den finner ikke alltid det minst mulige antallet.
     - Du kan ikke slå av forslagene. **Vis alle** lister alle foreslåtte betalinger i gruppen, ikke bare dine.
     - Valutaer utlignes aldri mot hverandre med mindre utgiftene ble konvertert da de ble lagt inn.
     - Det finnes ingen påminnelser, så det er fortsatt opp til deg å purre på en betaling.

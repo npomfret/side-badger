@@ -1,0 +1,111 @@
+translatedFrom: "1b51f540"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: "Setlo gyda llai o daliadau | Side Badger"
+  description: "Gweld pwy sy'n ddyledus i bwy yn eich grŵp, cael rhestr fer o daliadau sy'n setlo pawb, a chofnodi pob taliad wrth iddo ddigwydd. Am ddim i'w ddefnyddio."
+h1: "Setlo gyda llai o daliadau"
+navLabel: "Setlo"
+lead: "Mae Side Badger yn cadw balans cyfredol i bawb yn y grŵp ac yn awgrymu rhestr fer o daliadau sy'n ei setlo. Rydych chi'n talu eich gilydd sut bynnag y dymunwch, yna'n ei gofnodi. Os ydych am weld sut mae'r rhifau'n cael eu rhannu yn gyntaf, dechreuwch â [rhannu treuliau](page:feature/split-expenses)."
+cta:
+  heading: "Yn barod i ddatglymu pwy sy'n ddyledus i bwy?"
+  body: "Creu cyfrif, cychwyn grŵp ac ychwanegu'r gost gyntaf. Bydd y balansau'n gwneud y gweddill."
+  button: "Creu cyfrif am ddim"
+problem:
+  heading: "Balansau sy'n diweddaru wrth fynd"
+  body: "Mae pob cost yn newid pwy sy'n ddyledus i bwy, felly mae Side Badger yn cadw'r balansau'n gyfredol wrth i gostau a thaliadau gael eu hychwanegu. Mae pawb yn y grŵp yn gweld newid ar unwaith, ac yn gweld beth newidiodd a phwy a'i newidiodd. Cedwir balansau fesul arian cyfred, felly mae ewros a phunnoedd yn aros yn eu colofnau eu hunain oni bai bod cost wedi'i throsi pan gafodd ei rhoi. Yn ddiofyn, rydych yn gweld y dyledion sy'n eich cynnwys chi; mae **Dangos y cyfan** yn rhestru'r grŵp cyfan."
+workflow:
+  heading: "Tri cham i sgwâr"
+  steps:
+    - title: "Gweld pwy sy'n ddyledus i bwy"
+      body: "Agorwch falansau'r grŵp i weld beth sy'n ddyledus gennych, beth sy'n ddyledus i chi, a rhestr fer o daliadau sy'n setlo pawb, wedi'i gweithio fesul arian cyfred. Mae costau a holwyd yn aros allan o'r symiau nes eu datrys. Yn enghraifft y cyd-letywyr isod, mae chwe thaliad yn dod yn ddau."
+      shot: S10
+      shotAlt: "Sgrin y balansau yn dangos dyledion wedi'u symleiddio mewn dau arian cyfred, gyda Dangos y cyfan wedi'i droi ymlaen"
+    - title: "Talu sut bynnag y dymunwch, yna ei gofnodi"
+      body: "Trosglwyddiad banc, arian parod, ffafr sy'n ddyledus o'r gwyliau diwethaf. Dyw Side Badger ddim yn symud yr arian. Unwaith y bydd wedi newid dwylo, cofnodwch y taliad ac mae'r balans yn diweddaru i bawb."
+      shot: S11
+      shotAlt: "Y ffurflen daliad gyda botymau setlo cyflym a'r hysbysiad a ddangosir ar gyfer taliad rhannol"
+    - title: "Gwirio ei fod wedi cyrraedd"
+      body: "Mae'r taliad yn mynd i hanes y grŵp, lle gall pawb yn y grŵp ei weld ac ymateb gydag emoji. Dathlwch daliad pan fydd yn cyrraedd."
+      shot: S12
+      shotAlt: "Hanes y taliadau gydag ymatebion emoji ar daliad"
+options:
+  heading: "Opsiynau"
+  items: []
+example:
+  heading: "O gybolfa i restr fer"
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: "Trydan"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: "Rhyngrwyd"
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "Nwyddau bwyd"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "Cofnodi taliad"
+    body: "Pan fydd rhywun yn talu, cofnodwch ef yn erbyn y person iawn. Mae'r botymau setlo cyflym yn llenwi'r swm o'ch taliadau a awgrymir, a gallwch ychwanegu nodyn fel “trosglwyddiad banc” (hyd at 500 nod). Talwch ran yn unig o'r hyn sy'n ddyledus gennych ac mae'r gweddill yn aros ar y balans. Os ydych yn rhoi rhy ychydig neu ormod, mae Side Badger yn eich rhybuddio cyn i chi gadw. Mae cofnodi taliad angen caniatâd i olygu costau, ac ni all y dyddiad fod yn y dyfodol."
+  - heading: "Talu mewn arian cyfred gwahanol?"
+    body: "Mae balansau'n aros yn yr arian cyfred y'u talwyd ynddo, felly mae dyled ewro yn aros yn ddyled ewro. Yn ddyledus mewn ewros, ond am dalu mewn punnoedd? Dim problem. Gallwch drosi'r taliad wrth ei roi, ar gyfradd gyfnewid gyfredol neu ar y gyfradd a gawsoch mewn gwirionedd. Mae'r gyfradd yn sefydlog pan gaiff y taliad ei gadw. Mae [arian cyfred lluosog](page:feature/multiple-currencies) yn trafod sut mae trosi'n gweithio, ac mae [teithiau grŵp](page:use-case/group-trips) yn ei ddangos ar waith."
+  - heading: "Hanes y gallwch ei wirio"
+    body: "Mae pob taliad a gofnodir yn aros yn hanes y grŵp gyda'i ddyddiad, ei swm a'i nodyn. Dim ond y person a gofnododd daliad all ei olygu, a gall y person hwnnw neu weinyddwr y grŵp ei ddileu. Mae taliad sy'n cynnwys rhywun sydd wedi gadael y grŵp wedi'i gloi. Am senario cyd-letywyr wedi'i gweithio, gweler [cyd-letywyr](page:use-case/housemates)."
+limits:
+  heading: "Beth nad yw Side Badger yn ei wneud"
+  items:
+    - "Dyw Side Badger ddim yn symud arian, yn anfon dolenni talu nac yn anfon ceisiadau am daliad. Cofnod o daliad a wnaed mewn man arall yw taliad yn yr ap."
+    - "Daw'r taliadau a awgrymir o ddull paru syml, a gymhwysir fesul arian cyfred. Mae bob amser yn awgrymu llai o daliadau na'r nifer o bobl sydd â balans yn yr arian cyfred hwnnw (pedwar person, tri thaliad ar y mwyaf), ond nid yw bob amser yn dod o hyd i'r nifer lleiaf posibl."
+    - "Ni allwch ddiffodd yr awgrymiadau. Mae **Dangos y cyfan** yn rhestru pob taliad a awgrymir yn y grŵp, nid dim ond eich rhai chi."
+    - "Ni chaiff arian cyfred byth eu netio yn erbyn ei gilydd oni bai bod y costau wedi'u trosi pan gawsant eu rhoi."
+    - "Does dim nodiadau atgoffa, felly mae mynd ar ôl taliad yn dal i fod yn fater i chi."
+useCasesHeading: "Lle mae setlo'n bwysig"
+faq:
+  heading: "Cwestiynau"
+  items:
+    - q: "Ydy Side Badger yn anfon yr arian?"
+      a: "Nac ydy. Talwch eich gilydd sut bynnag y dymunwch, yna cofnodwch y taliad yn Side Badger fel bod y balans yn diweddaru."
+    - q: "Alla i ddiffodd y taliadau a awgrymir?"
+      a: "Na. Mae symleiddio'n aros ymlaen, ac mae **Dangos y cyfan** yn rhestru pob taliad a awgrymir yn y grŵp, nid dim ond y rhai sy'n eich cynnwys chi."
+    - q: "Pam mae ewros a phunnoedd yn cael eu cadw ar wahân?"
+      a: "Mae balansau'n aros yn yr arian cyfred y gwnaethoch dalu ynddo oni bai eich bod yn trosi pan fyddwch yn rhoi cost neu daliad. Ni chaiff dyledion mewn gwahanol arian cyfred byth eu netio yn erbyn ei gilydd."
+    - q: "Beth os yw rhywun yn talu rhan yn unig o'r hyn sy'n ddyledus ganddo?"
+      a: "Cofnodwch y rhan a dalodd. Mae'r gweddill yn aros ar y balans nes ei dalu."
+    - q: "Ai hwn yw'r nifer lleiaf posibl o daliadau bob amser?"
+      a: "Nid yw wedi'i warantu. Mae bob amser yn awgrymu llai o daliadau na'r nifer o bobl sydd â balans yn yr arian cyfred hwnnw, felly ar gyfer pedwar person nid yw byth yn awgrymu mwy na thri. Yn enghraifft y cyd-letywyr, dau daliad yw hynny, lle roedd talu pob person yn ôl yn uniongyrchol yn cymryd chwech."

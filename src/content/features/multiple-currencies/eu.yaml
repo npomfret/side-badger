@@ -1,0 +1,127 @@
+translatedFrom: "923c938f"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Banatu kostuak 140 monetatan, bihurtuta edo bereizita"
+  description: "Sartu gastu bakoitza ordaindu zenuen monetan, mantendu saldoak bereizita edo bihurtu ikus eta alda dezakezun tasa batean, eta gero kitatu ordainketa-zerrenda labur batekin."
+h1: Banatu kostuak 140 monetatan
+navLabel: Moneta anitz
+lead: Euroak, yenak, eta baht-etan ordaindutako taxi hura. Side Badger-ek gastu bakoitza ordaindu zenuen monetan hartzen du, saldoak ordenatuta mantentzen ditu, eta bihur dezake zure taldeak behingoz kitatu nahiago duenean. 140 monetatan funtzionatzen du, eta [taldeko bidaietarako](page:use-case/group-trips) oso egokia da.
+cta:
+  heading: Ekarri zure euroak, ekarri zure yenak
+  body: Sortu kontu bat, hasi talde bat eta gehitu lehen gastua eskuan zenuen monetan.
+  button: Sortu doako kontu bat
+problem:
+  heading: Sartu ordaindu zenuen bezala
+  body: Bidaia bat gutxitan ordaintzen da moneta bakarrean. Hotela etxetik erreserbatu zen libera esterlinetan, afaria yenetan ordaindu zen, eta aireportuko kafea geldialdiak erabiltzen zuen monetan. Dena eskuz bihurtzea sartu ahal izan aurretik da kalkulu-orriak abandonatzen diren modua. Side Badger-en gastu bakoitza tiketan dagoen monetan sartzen duzu, eta zenbateko bakoitzak bere monetaren arauak jarraitzen ditu, beraz yenek ez dute hamartarrik eta dinarrek hiru dituzte. Azkenaldian erabilitako monetak zerrendan lehenengo agertzen dira.
+workflow:
+  heading: Mantendu monetak bereizita, edo bihurtu joan ahala
+  steps:
+    - title: Gehitu gastua bere monetan
+      body: Aukeratu monetak, idatzi zenbatekoa, esan nork ordaindu duen eta nork partekatu duen. Ez da besterik behar. Hau da lehenetsia, eta jatorrizko zenbatekoa sartu zenuen bezala gordetzen du.
+      shot: S07
+      shotAlt: Yen-zenbateko bat sartuta duen gastu-formularioa
+    - title: Ikusi saldo bat moneta bakoitzeko
+      body: Saldoak moneta bakoitzeko bereizita gordetzen dira, eta bakoitzak proposatutako ordainketen zerrenda labur propioa du. Libera esterlinak libera esterlinetan kitatzen dira eta yenak yenetan.
+      shot: S10
+      shotAlt: Bi monetatako zor sinplifikatuak dituen saldoen pantaila
+    - title: Edo bihurtu, taldeak behingoz kitatu nahiago duenean
+      body: Aukeratu beste moneta bat gastua sartzean eta Side Badger-ek egungo kanbio-tasa batean bihur dezake, eta benetan lortu zenuen tasara alda dezakezu. Bihurtutako zenbatekoa moneta horretako saldoan sartzen da. Bihurketa taldeak hartzen duen erabaki bat da, ez zure bizkar atzean gertatzen den zerbait.
+options:
+  heading: Ikus eta alda dezakezun tasa
+  items:
+    - title: Tasa ikusten da
+      body: Bihurtzen duzunean, tasa eta bihurtutako zenbatekoa formularioan agertzen dira, beraz inork ez du zenbaki bat fedez onartu behar.
+    - title: Idatzi zurea
+      body: Kanbio-bulego batean tasa hobea lortu duzu, edo aireportuan txarragoa? Editatu tasa benetan lortu zenuenera eta bihurtutako zenbatekoa eguneratzen da.
+    - title: Jatorrizkoa geratzen da
+      body: Jatorrizko zenbatekoa gastuan geratzen da, bihurtutakoaren ondoan, yenetan zenbat zen galdetzen duenarentzat.
+    - title: Bihurtzea doakoa da
+      body: Bihurtzeak ez du ezer kostatzen. Ez dago komisiorik gastu bat beste moneta batean sartzeagatik.
+example:
+  heading: Lau lagun Japonian, bi modutara kitatuta
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: hotela, etxetik erreserbatua
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: afaria Japonian
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: tren-txartelak
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: tenpluko sarrera
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: Moneta bat talde osorako
+    body: Zure taldeak horretan pentsatu nahi ez badu, aukeratu taldearen moneta bat eta formularioak gastu berri bakoitza horretara bihurtuko du, ikusi eta alda dezakezun tasa batean. Gastu berriei eta kopiatuei bakarrik aplikatzen zaie. Edizioak eta lehendik dauden gastuak dauden bezala uzten dira, beraz jada erregistratuta dagoen ezer ez da aldatzen zure azpian.
+  - heading: Euroak zor, libera esterlinetan ordaindu
+    body: Yenetan ordaindu, libera esterlinetan kitatu? Ondo. Ordainketa bat erregistratzean hori ere bihur dezakezu, beraz euroak zor dituenak libera esterlinetan ordain dezake eta euro-saldoak ondo ateratzen jarraitzen du. Ordaindu elkarri nahi duzuen moduan, eta gero erregistratu.
+  - heading: Taldearentzako arauak
+    body: Mugatu talde bat benetan erabiltzen ari zareten monetetara, eta ezarri lehenetsi bat formularioa moneta egokian ireki dadin. Portugalen oporraldi batek ez ditu beste 139 aukerak behar afari-fakturaren ondoan, eta [atzerriko ezkontza batek](page:use-case/events-and-celebrations) seguruenik bi behar ditu.
+limits:
+  heading: Mugak
+  items:
+    - Tasa gastua gordetzen denean finkatzen da. Gastu zaharrak ez dira inoiz berriro baloratzen.
+    - Side Badger egungo tasa bat lortzen saiatzen da ahal duen lekuan. Ez dago bermatuta moneta-pare guztiek tasa bat izango dutenik, eta tasa zeuk idatz dezakezu beti.
+    - Taldearen bihurketa automatikoa gastu berriei eta kopiatuei bakarrik aplikatzen zaie, ez edizioei edo lehendik dauden gastuei.
+    - Gastu bakoitzak gehienez 999.999,99 du bere monetan.
+    - 140 moneta daude. Kriptomonetak eta metalak ez daude haien artean.
+    - Side Badger-ek ordainketak erregistratzen ditu. Ez du inoiz dirua mugitzen ez trukatzen.
+useCasesHeading: Hau non laguntzen duen
+faq:
+  heading: Galderak
+  items:
+    - q: Zer kanbio-tasa erabiltzen duzue?
+      a: Egungo kanbio-tasa bat, gastua sartzen duzunean lortua, eskuragarri dagoen lekuan. Benetan lortu zenuen tasara alda dezakezu, eta bihurtutako zenbatekoa eguneratzen da.
+    - q: Gastu zaharrak berriro baloratzen al dira?
+      a: Ez. Tasa gastua gordetzen denean finkatzen da, beraz saldo bat ez da mugitzen merkatua mugitu delako.
+    - q: Kriptomonetak onartzen al dituzue?
+      a: Ez. 140 moneta daude, eta kriptomonetak ez daude haien artean.
+    - q: Zergatik ezin dut 2.000.000 rupia sartu?
+      a: Gastu bakoitzak gehienez 999.999,99 du bere monetan. Sartu beste moneta batean eta bihurtu, edo zatitu bi gastutan.
+    - q: Bihurtzeak ezer kostatzen al du?
+      a: Ez. Bihurtzea doakoa da, Side Badger-en gainerakoa bezala. Ikusi [prezioak](page:pricing).
+    - q: Bihurtu behar al dut?
+      a: Ez. Monetak bereizita geratzen dira zuk edo zure taldeak bihurtzea aukeratzen ez baduzue, eta moneta bakoitzak ordainketen zerrenda labur propioa du.

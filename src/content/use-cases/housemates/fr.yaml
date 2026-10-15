@@ -1,0 +1,110 @@
+translatedFrom: "e6b829e6"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+meta:
+  title: "Partager les factures du foyer entre colocataires"
+  description: "Répartissez le loyer selon la taille des chambres, partagez l'énergie et les courses à parts égales, et voyez qui doit quoi à qui chaque mois. Une façon gratuite pour les colocataires de tenir le compte."
+h1: "Partager les factures du foyer entre colocataires"
+navLabel: Colocataires
+lead: "Pour le colocataire qui achète le papier toilette, et ceux qui ne voient jamais comment il arrive. Side Badger tient un seul compte courant du loyer, des factures et des courses pour les **colocataires**, pour que personne n'ait à relancer personne et que le frigo redevienne un simple frigo."
+cta:
+  heading: "Commencez par votre propre logement"
+  body: "Créez un compte, faites un groupe pour le logement et envoyez à tout le monde le lien d'invitation. Les factures de ce mois peuvent y entrer dès ce soir."
+  button: "Créer un compte gratuit"
+scenario:
+  heading: "Installez le logement"
+  body: "Faites un groupe pour le logement, choisissez le nom sous lequel vous voulez qu'on vous voie, et invitez tout le monde avec un lien ou un code QR. Le groupe peut être ouvert, où chacun ajoute et modifie, ou géré, où les nouveaux membres ont besoin de l'approbation d'un admin et où seuls les créateurs et les admins peuvent modifier les dépenses, ce qui convient au colocataire qui tient les comptes. Celui qui veut juste regarder les chiffres peut être spectateur : il voit tout et ne change rien. Chacun voit une nouvelle dépense tout de suite, donc « je l'ajouterai plus tard » a moins de cachettes."
+sections:
+  - heading: "Le loyer et les factures"
+    body: "Le loyer se divise rarement par quatre, parce que les chambres ne sont pas pareilles. Partagez-le par pourcentage, pour que la grande chambre paie plus et le cagibi avec fenêtre moins. Les pourcentages doivent faire 100 au total. Les factures que tout le monde utilise se partagent à parts égales, et un colocataire qui n'a pas pris part à une dépense peut en être laissé de côté. Quand un partage à parts égales laisse un centime en trop, il va à une personne au hasard. Il n'y a pas de factures récurrentes, donc chaque mois vous copiez le loyer du mois dernier, changez la date et continuez."
+  - heading: "Les courses communes"
+    body: "Gardez la liste de courses partagée dans le même groupe que les factures de courses, et cochez les articles à mesure qu'ils arrivent dans le caddie. Celui qui fait les courses ajoute le total du reçu comme dépense et le partage à parts égales, ou seulement entre ceux qui mangeront la chose. Qui continue d'acheter le lait d'avoine que personne d'autre ne boit reste une affaire du foyer, mais au moins la liste des dépenses sera exacte. Les permissions du groupe décident qui peut créer et modifier les listes. Mettez ensemble le loyer, les factures et les courses et vous obtenez un mois comme celui ci-dessous, dans un logement de quatre : Jo paie 2 000 £ de loyer, réparti 30 %, 25 %, 25 % et 20 % selon la taille des chambres, puis Kwame paie 120 £ d'énergie, Lena 40 £ d'internet et Matt 80 £ de courses, chacun partagé à parts égales. Jo se retrouve avec 1 340 £ à recevoir, et Side Badger suggère trois paiements, tous pour Jo."
+  - heading: "Des façons équitables de partager les coûts du foyer"
+    items:
+      - "**À parts égales** convient à ce que tout le monde utilise à peu près autant, comme internet, les produits d'entretien et les courses communes. C'est rapide, et personne n'a à se disputer sur les calculs."
+      - "**Selon la taille de la chambre** convient au loyer, parce que les chambres diffèrent et que ce que chacun veut payer pour elles aussi. Convenez des pourcentages une fois, à l'arrivée de quelqu'un, et réutilisez-les chaque mois."
+      - "**Selon l'usage** convient aux factures où une personne utilise clairement plus, comme le chauffage d'un bureau à domicile ou un compte de streaming que deux personnes regardent. Laissez de côté ceux qui n'y ont pas pris part, ou saisissez des montants exacts pour chacun."
+      - "Quel que soit votre choix, convenez-en avant la première facture plutôt qu'après la première dispute, et écrivez la règle quelque part où tout le logement peut la voir."
+  - heading: "Quand quelqu'un déménage"
+    body: "Il règle d'abord. Personne ne peut quitter un groupe tant qu'il doit de l'argent ou qu'on lui en doit, donc celui qui part paie ou est payé, vous l'enregistrez, puis il s'en va. Continuez le groupe pour les colocataires qui restent et invitez la nouvelle personne avec un lien. Quand le logement lui-même est terminé, un admin peut verrouiller le groupe pour que les chiffres ne bougent plus, ou le fermer pour de bon, ce qui le rend inaccessible à tous : ne le faites donc que quand plus personne n'a besoin de l'historique."
+exampleAfter: 2
+example:
+  heading: "Qui doit quoi à qui ce mois-ci"
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: Loyer
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: "Énergie"
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: Internet
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: Courses
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: "Les fonctionnalités qu'un logement utilise"
+faq:
+  heading: Questions
+  items:
+    - q: "Le loyer peut-il se répéter automatiquement ?"
+      a: "Non, il n'y a pas de factures récurrentes. Copiez le loyer du mois dernier en quelques touches, changez la date et c'est fait."
+    - q: "Peut-on partager selon la taille des chambres ?"
+      a: "Oui, par pourcentage. Donnez à chaque colocataire une part qui reflète sa chambre, tant que les parts font 100 au total. [Partager les dépenses](page:feature/split-expenses) présente les autres façons de partager."
+    - q: "Et si un colocataire déménage en devant de l'argent ?"
+      a: "Il ne peut pas quitter le groupe avant d'avoir réglé, car personne ne peut partir tant qu'il doit de l'argent ou qu'on lui en doit. Les chiffres restent honnêtes jusqu'à ce que tout le monde soit quitte."
+    - q: "Side Badger paie-t-il les factures ?"
+      a: "Non. Il tient le compte et suggère une courte liste de paiements. Vous vous remboursez comme vous voulez, puis vous l'enregistrez, comme l'explique [régler les comptes](page:feature/settle-up)."
+    - q: "Un colocataire peut-il tenir les comptes ?"
+      a: "Oui. Faites de lui un admin et utilisez un groupe géré, où les nouveaux membres ont besoin d'une approbation et où seuls les créateurs et les admins peuvent modifier les dépenses."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.2.label
+  - faq.heading

@@ -1,0 +1,108 @@
+translatedFrom: "fd23c99b"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.expenses.1.label
+meta:
+  title: Cómo funciona Side Badger | Divide gastos de grupo en cinco pasos
+  description: Crea un grupo, invita a la gente, añade gastos y salda cuentas. Descubre qué pasa entre «alguien pagó» y «estamos en paz», con un ejemplo práctico.
+h1: Cómo funciona Side Badger
+navLabel: Cómo funciona
+lead: ¿Qué pasa entre «alguien pagó» y «estamos en paz»? Cinco pasos, ninguna hoja de cálculo y un tejón que es sobre todo decorativo. Este es el recorrido completo, desde el primer grupo hasta el último pago registrado. Para ver cada paso al detalle, consulta [dividir gastos](page:feature/split-expenses) y [saldar cuentas](page:feature/settle-up).
+cta:
+  heading: De «ya invito yo» a «estamos en paz»
+  body: Crea una cuenta gratis, empieza un grupo y añade el primer gasto. El tejón no juzgará el recibo.
+  button: Crear una cuenta gratis
+steps:
+  - title: Crea un grupo
+    body: Haz un grupo para cada casa, viaje o evento, para que el alquiler nunca acabe en la misma lista que el regalo de boda. Ponle nombre, elige el nombre con el que te verá la gente y, si quieres, limita las monedas que acepta. Tu panel muestra todos los grupos, y cómo estás en cada uno, en una sola pantalla.
+    shot: S02
+    shotAlt: El cuadro de diálogo de crear grupo con la sección de restricciones de moneda abierta
+  - title: Invita a tu gente
+    body: Comparte un enlace para unirse o muestra un código QR, y define cuánto dura, desde 15 minutos hasta 5 días. Cada persona que se une necesita una cuenta gratis y un correo verificado, y un grupo admite hasta 50 personas. Si quieres controlar quién entra, activa la aprobación y un administrador deja pasar a cada persona.
+    shot: S03
+    shotAlt: El cuadro de diálogo de invitación en la pestaña del enlace, con un código QR y las opciones de caducidad
+  - title: Añade gastos según ocurren
+    body: Indica quién pagó, cuánto y para quién. Divídelo a partes iguales, por importes exactos o por porcentaje, y deja fuera a quien no participó. Añade el gasto y todo el mundo lo ve enseguida, junto con lo que cambió y quién lo cambió.
+    shot: S05
+    shotAlt: El formulario de gasto con una división por porcentaje, repartiendo el alquiler según el tamaño de cada habitación
+  - title: Vigila los saldos
+    body: Side Badger lleva un saldo al día para cada moneda, así que puedes ver de un vistazo quién debe a quién. En lugar de dejar que cada uno desenrede una maraña de deudas pequeñas, sugiere una lista corta de pagos que deja saldado al grupo.
+    shot: S10
+    shotAlt: La pantalla de saldos con las deudas simplificadas en dos monedas y la opción «Mostrar todo» activada
+  - title: Salda cuentas fuera de la app y regístralo dentro
+    body: Side Badger nunca mueve dinero. Pagaos como queráis y después registra el pago para que los saldos se pongan al día; la pantalla de todos se actualiza sin recargar. «Saldar» solo significa que los saldos llegan a cero. Nadie puede salir de un grupo mientras deba o le deban dinero, así que quien quiera irse salda primero.
+    shot: S11
+    shotAlt: El formulario de pago con botones de liquidación rápida y el aviso de pago parcial
+requirements:
+  heading: Lo que necesitas
+  items:
+    - Una cuenta gratis. Solo hace falta una dirección de correo electrónico y una contraseña, y verificas el correo antes de poder añadir nada.
+    - Tener 18 años o más.
+    - Un navegador moderno en un móvil o un ordenador, y conexión. Side Badger no es una app de tienda de aplicaciones y no funciona sin conexión.
+    - Opcionalmente, un hueco en tu pantalla de inicio. No hace falta tienda de aplicaciones, porque puedes añadir Side Badger a tu pantalla de inicio o a tu dock y se abre como una app.
+example:
+  heading: Tres amigos después de una noche de fiesta
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: Cena
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: Taxi
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: 39 idiomas, y pensado para más gente
+    body: Usa Side Badger en 39 idiomas, incluidos el árabe, el persa y el urdu, que se escriben de derecha a izquierda. Cada persona del grupo puede elegir el suyo, así que la página del grupo puede estar en árabe para una persona y en español para la siguiente. También está pensado para quienes usan teclado y lector de pantalla, y los colores de los miembros llevan patrones, para que no tengas que distinguir el verde del rojo.
+faq:
+  heading: Preguntas
+  items:
+    - q: ¿Necesita cuenta todo el mundo?
+      a: Sí, una gratis. Cada persona verifica su correo antes de añadir nada.
+    - q: ¿Hay una app?
+      a: Funciona en el navegador, y puedes añadirla a tu pantalla de inicio o a tu dock para que se abra como una app. No hay versión de tienda de aplicaciones ni modo sin conexión.
+    - q: ¿Side Badger mueve dinero?
+      a: No. Lleva la cuenta y sugiere pagos, y vosotros os pagáis como queráis. Después registras el pago. Consulta [saldar cuentas](page:feature/settle-up).
+    - q: ¿Puede alguien irse debiendo dinero?
+      a: No. Nadie puede salir de un grupo mientras deba o le deban dinero, así que primero se salda.
+    - q: ¿Cuántas personas pueden unirse a un grupo?
+      a: Hasta 50 personas por grupo. Invítalas con un enlace o un código QR, y activa la aprobación si quieres que un administrador deje entrar a cada persona.
+    - q: ¿Y los viajes con más de una moneda?
+      a: Los saldos se llevan por separado para cada moneda. Consulta [varias monedas](page:feature/multiple-currencies).

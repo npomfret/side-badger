@@ -1,0 +1,127 @@
+translatedFrom: "923c938f"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: "Împarte costurile în 140 de valute, convertite sau ținute separat"
+  description: "Introdu fiecare cheltuială în valuta în care ai plătit-o, ține soldurile separate sau convertește la un curs pe care îl vezi și îl poți schimba, apoi achită-te cu o listă scurtă de plăți."
+h1: "Împarte costurile în 140 de valute"
+navLabel: "Mai multe valute"
+lead: "Euro, yeni și acel taxi în baht. Side Badger preia fiecare cheltuială în valuta în care ai plătit-o, ține soldurile în ordine și poate converti când grupul preferă să se achite o singură dată. Funcționează în 140 de valute și se potrivește firesc cu [excursiile de grup](page:use-case/group-trips)."
+cta:
+  heading: "Adu-ți euro, adu-ți yenii"
+  body: "Creează un cont, începe un grup și adaugă prima cheltuială în orice valută ai avut la îndemână."
+  button: "Creează un cont gratuit"
+problem:
+  heading: "Introdu-o așa cum ai plătit-o"
+  body: "O excursie e rareori plătită într-o singură valută. Hotelul a fost rezervat acasă în lire, cina s-a plătit în yeni, iar cafeaua din aeroport în ce se folosea la escală. Să convertești totul de mână înainte să poți măcar să-l introduci e felul în care foile de calcul sunt abandonate. În Side Badger introduci fiecare cheltuială în valuta de pe chitanță, iar fiecare sumă respectă regulile valutei ei, așa că yenii nu au zecimale, iar dinarii au trei. Valutele folosite recent apar primele în listă."
+workflow:
+  heading: "Ține valutele separate sau convertește pe parcurs"
+  steps:
+    - title: "Adaugă cheltuiala în propria valută"
+      body: "Alege valuta, scrie suma, spune cine a plătit și cine a împărțit. Nimic altceva nu e necesar. Aceasta e varianta implicită și păstrează suma inițială exact așa cum ai introdus-o."
+      shot: S07
+      shotAlt: "Formularul de cheltuială cu o sumă în yeni introdusă"
+    - title: "Urmărește un sold pentru fiecare valută"
+      body: "Soldurile se țin separat pe valute, iar fiecare primește propria listă scurtă de plăți sugerate. Lirele se achită în lire, iar yenii în yeni."
+      shot: S10
+      shotAlt: "Ecranul de solduri cu datorii simplificate în două valute"
+    - title: "Sau convertește, când grupul preferă să se achite o singură dată"
+      body: "Alege altă valută la introducerea cheltuielii, iar Side Badger o poate converti la un curs de schimb actual, pe care îl poți schimba cu cursul pe care l-ai primit de fapt. Suma convertită intră în soldul din acea valută. Conversia este o alegere a grupului, nu ceva ce se întâmplă pe la spatele tău."
+options:
+  heading: "Un curs pe care îl vezi și îl poți schimba"
+  items:
+    - title: "Cursul este afișat"
+      body: "Când convertești, cursul și suma convertită apar în formular, așa că nimeni nu trebuie să ia o cifră pe încredere."
+    - title: "Scrie-l pe al tău"
+      body: "Ai primit un curs mai bun la o casă de schimb sau unul mai prost la aeroport? Editează cursul cu cel pe care l-ai primit de fapt, iar suma convertită se actualizează."
+    - title: "Originalul rămâne"
+      body: "Suma inițială rămâne pe cheltuială, lângă cea convertită, pentru oricine întreabă cât a fost în yeni."
+    - title: "Conversia e gratuită"
+      body: "Conversia nu costă nimic. Nu există taxă pentru introducerea unei cheltuieli în altă valută."
+example:
+  heading: "Patru prieteni în Japonia, achitați în două feluri"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "hotelul, rezervat acasă"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "cina în Japonia"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "biletele de tren"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "intrarea la templu"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "O singură valută pentru tot grupul"
+    body: "Dacă grupul preferă să nu se gândească la asta, alege o valută a grupului, iar formularul convertește fiecare cheltuială nouă în ea, la un curs pe care îl poți vedea și schimba în continuare. Se aplică doar cheltuielilor noi și celor copiate. Editările și cheltuielile existente rămân cum sunt, așa că nimic deja înregistrat nu se schimbă sub ochii tăi."
+  - heading: "Datorezi euro, plătești în lire"
+    body: "Ai plătit în yeni, dar te achiți în lire? Nicio problemă. Când înregistrezi o plată o poți converti și pe ea, așa că cine datorează euro poate plăti în lire, iar soldul în euro tot iese corect. Plătiți-vă unii altora cum preferați, apoi înregistrați."
+  - heading: "Reguli pentru grup"
+    body: "Limitează un grup la valutele pe care le folosești de fapt și setează una implicită, ca formularul să se deschidă pe cea potrivită. O vacanță în Portugalia nu are nevoie de alte 139 de opțiuni lângă nota de la cină, iar o [nuntă în străinătate](page:use-case/events-and-celebrations) probabil are nevoie de două."
+limits:
+  heading: "Limite"
+  items:
+    - "Cursul se fixează la salvarea cheltuielii. Cheltuielile vechi nu sunt niciodată reevaluate."
+    - "Side Badger ia un curs actual acolo unde poate. Nu pentru orice pereche e garantat unul și îți poți scrie oricând singur cursul."
+    - "Conversia automată a grupului se aplică doar cheltuielilor noi și celor copiate, nu editărilor sau cheltuielilor existente."
+    - "Fiecare cheltuială este limitată la 999.999,99 în propria valută."
+    - "Există 140 de valute. Criptomonedele și metalele nu se numără printre ele."
+    - "Side Badger înregistrează plăți. Nu mută și nu schimbă niciodată bani."
+useCasesHeading: "Unde ajută asta"
+faq:
+  heading: "Întrebări"
+  items:
+    - q: "Ce curs de schimb folosiți?"
+      a: "Un curs de schimb actual, luat când introduci cheltuiala, acolo unde există unul. Îl poți schimba cu cursul pe care l-ai primit de fapt, iar suma convertită se actualizează."
+    - q: "Se reevaluează cheltuielile vechi?"
+      a: "Nu. Cursul se fixează la salvarea cheltuielii, așa că un sold nu se schimbă pentru că s-a schimbat piața."
+    - q: "Acceptați criptomonede?"
+      a: "Nu. Există 140 de valute, iar criptomonedele nu se numără printre ele."
+    - q: "De ce nu pot introduce 2.000.000 de rupiah?"
+      a: "Fiecare cheltuială este limitată la 999.999,99 în propria valută. Introdu-o în altă valută și convertește, sau împarte-o în două cheltuieli."
+    - q: "Costă ceva conversia?"
+      a: "Nu. Conversia e gratuită, ca restul Side Badger. Vezi [prețurile](page:pricing)."
+    - q: "Trebuie să convertesc?"
+      a: "Nu. Valutele rămân separate, dacă tu sau grupul nu alegeți să convertiți, iar fiecare valută primește propria listă scurtă de plăți."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

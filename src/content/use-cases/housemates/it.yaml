@@ -1,0 +1,109 @@
+translatedFrom: "e6b829e6"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+meta:
+  title: Dividi le spese di casa con i coinquilini
+  description: Dividi l'affitto in base alla dimensione delle stanze, condividi energia e spesa in parti uguali e guarda chi deve cosa a chi ogni mese. Un modo gratuito per i coinquilini di tenere il conto.
+h1: Dividi le spese di casa con i coinquilini
+navLabel: Coinquilini
+lead: Per il coinquilino che compra la carta igienica, e per quelli che non lo vedono mai succedere. Side Badger tiene un unico conto corrente di affitto, bollette e spesa per **coinquilini e persone che condividono casa**, così nessuno deve inseguire nessuno e il frigo può tornare a essere solo un frigo.
+cta:
+  heading: Parti dalla tua casa
+  body: Crea un account, crea un gruppo per la casa e manda a tutti il link di invito. I conti di questo mese possono entrare già stasera.
+  button: Crea un account gratuito
+scenario:
+  heading: Organizza la casa
+  body: Crea un gruppo per la casa, scegli il nome con cui vuoi essere visto e invita tutti con un link o un codice QR. Il gruppo può essere aperto, dove tutti aggiungono e modificano, oppure gestito, dove i nuovi membri hanno bisogno dell'approvazione di un admin e solo i creatori e gli admin possono modificare le spese, il che va bene per il coinquilino che tiene i conti. Chi vuole solo guardare i numeri può essere un visitatore, che vede tutto e non cambia nulla. Tutti vedono subito una nuova spesa, quindi "la aggiungo dopo" ha meno posti dove nascondersi.
+sections:
+  - heading: Affitto e bollette
+    body: "L'affitto raramente si divide per quattro, perché le camere non sono uguali. Dividilo per percentuale, così la camera grande paga di più e lo sgabuzzino con la finestra paga meno. Le percentuali devono sommare a 100. Le bollette che usano tutti si dividono in parti uguali, e un coinquilino che non c'entrava con una spesa può essere escluso. Quando una divisione in parti uguali lascia un centesimo di troppo, va a una persona a caso. Non ci sono conti ricorrenti, quindi ogni mese copi l'affitto del mese scorso, cambi la data e vai avanti."
+  - heading: La spesa condivisa
+    body: "Tieni la lista della spesa condivisa nello stesso gruppo dei conti della spesa e spunta le voci man mano che finiscono nel carrello. Chi fa la spesa aggiunge il totale dello scontrino come spesa e lo divide in parti uguali, o solo tra le persone che mangeranno quella roba. Chi continua a comprare il latte d'avena che non beve nessun altro resta una questione della casa, ma almeno l'elenco delle spese sarà preciso. I permessi del gruppo decidono chi può creare e modificare le liste. Metti insieme affitto, bollette e spesa e ottieni un mese come quello qui sotto, in una casa di quattro: Jo paga 2.000 £ di affitto, diviso 30%, 25%, 25% e 20% in base alle stanze, poi Kwame paga 120 £ di energia, Lena 40 £ di internet e Matt 80 £ di spesa, ciascuna divisa in parti uguali. Jo finisce con 1.340 £ da ricevere, e Side Badger suggerisce tre pagamenti, tutti a Jo."
+  - heading: Modi equi di dividere i costi di casa
+    items:
+      - "**In parti uguali** va bene per ciò che tutti usano più o meno allo stesso modo, come internet, i prodotti per le pulizie e la spesa comune. È veloce e nessuno deve discutere di matematica."
+      - "**In base alla stanza** va bene per l'affitto, perché le stanze sono diverse e lo è anche quanto le persone sono disposte a pagarle. Concorda le percentuali una volta, quando qualcuno arriva, e riusale ogni mese."
+      - "**In base all'uso** va bene per le bollette in cui una persona usa chiaramente di più, come il riscaldamento di uno studio in casa o un abbonamento di streaming che guardano in due. Escludi chi non c'entrava, oppure inserisci importi esatti per ogni persona."
+      - "Qualunque scelta facciate, concordatela prima della prima bolletta e non dopo la prima discussione, e scrivete la regola da qualche parte dove tutta la casa possa vederla."
+  - heading: Quando qualcuno se ne va
+    body: Salda prima. Nessuno può lasciare un gruppo finché deve o deve ricevere denaro, quindi chi se ne va paga o viene pagato, voi registrate il pagamento e poi può andare. Continua il gruppo per i coinquilini che restano e invita la persona nuova con un link. Quando la casa è finita, un admin può bloccare il gruppo così i numeri restano fermi, oppure chiuderlo per sempre, il che lo rende inaccessibile a tutti, quindi fallo solo quando nessuno ha più bisogno dello storico.
+exampleAfter: 2
+example:
+  heading: Chi deve cosa a chi questo mese
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: Affitto
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: Energia
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: Internet
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: Spesa alimentare
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: Le funzionalità che usa una casa
+faq:
+  heading: Domande
+  items:
+    - q: L'affitto può ripetersi in automatico?
+      a: No, non ci sono conti ricorrenti. Copia l'affitto del mese scorso in un paio di tocchi, cambia la data e hai finito.
+    - q: Possiamo dividere in base alla dimensione delle stanze?
+      a: Sì, per percentuale. Dai a ogni coinquilino una quota che rifletta la sua stanza, purché le quote sommino a 100. [Dividere le spese](page:feature/split-expenses) spiega gli altri modi di dividere.
+    - q: E se un coinquilino se ne va con dei debiti?
+      a: Non può lasciare il gruppo finché non ha saldato, perché nessuno può andarsene finché deve o deve ricevere denaro. I numeri restano onesti finché tutti non sono pari.
+    - q: Side Badger paga le bollette?
+      a: No. Tiene il conto e suggerisce una breve lista di pagamenti. Vi pagate come vi fa più comodo, poi lo registrate, come spiega [saldare i conti](page:feature/settle-up).
+    - q: Un coinquilino può tenere i conti?
+      a: Sì. Rendilo admin e usa un gruppo gestito, dove i nuovi membri hanno bisogno di approvazione e solo i creatori e gli admin possono modificare le spese.
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.2.label

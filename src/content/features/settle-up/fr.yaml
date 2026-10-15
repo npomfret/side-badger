@@ -1,0 +1,114 @@
+translatedFrom: "1b51f540"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: "Réglez vos comptes en moins de paiements | Side Badger"
+  description: "Voyez qui doit quoi à qui dans votre groupe, obtenez une courte liste de paiements qui règle les comptes de tout le monde, et enregistrez chaque paiement au fur et à mesure. Gratuit."
+h1: "Réglez vos comptes en moins de paiements"
+navLabel: "Régler les comptes"
+lead: "Side Badger tient un solde à jour pour chaque membre du groupe et suggère une courte liste de paiements qui le règle. Vous vous remboursez comme vous voulez, puis vous l'enregistrez. Si vous voulez d'abord voir comment les montants se partagent, commencez par [partager les dépenses](page:feature/split-expenses)."
+cta:
+  heading: "Prêt à démêler qui doit quoi à qui ?"
+  body: "Créez un compte, lancez un groupe et ajoutez la première dépense. Les soldes feront le reste."
+  button: "Créer un compte gratuit"
+problem:
+  heading: "Des soldes qui se mettent à jour au fil de l'eau"
+  body: "Chaque dépense change qui doit quoi à qui, donc Side Badger garde les soldes à jour à mesure que dépenses et paiements s'ajoutent. Tout le groupe voit un changement tout de suite, avec ce qui a changé et qui l'a modifié. Les soldes sont tenus par devise, donc euros et livres restent dans leurs propres colonnes, sauf si une dépense a été convertie à la saisie. Par défaut, vous voyez les dettes qui vous concernent ; **Tout afficher** liste tout le groupe."
+workflow:
+  heading: "Trois étapes pour être quittes"
+  steps:
+    - title: "Voyez qui doit quoi à qui"
+      body: "Ouvrez les soldes du groupe pour voir ce que vous devez, ce qu'on vous doit, et une courte liste de paiements qui règle les comptes de tout le monde, calculée par devise. Les dépenses contestées restent hors des calculs tant qu'elles ne sont pas réglées. Dans l'exemple des colocataires ci-dessous, six paiements deviennent deux."
+      shot: S10
+      shotAlt: "L'écran des soldes affichant des dettes simplifiées dans deux devises, avec « Tout afficher » activé"
+    - title: "Payez comme vous voulez, puis enregistrez"
+      body: "Virement bancaire, espèces, un service rendu depuis les dernières vacances. Side Badger ne fait pas circuler l'argent. Une fois qu'il a changé de mains, enregistrez le paiement et le solde se met à jour pour tout le monde."
+      shot: S11
+      shotAlt: "Le formulaire de paiement avec les boutons de règlement rapide et l'avis affiché pour un paiement partiel"
+    - title: "Vérifiez que c'est bien passé"
+      body: "Le paiement entre dans l'historique du groupe, où tous les membres peuvent le voir et réagir avec un emoji. Célébrez un paiement quand il arrive."
+      shot: S12
+      shotAlt: "L'historique des paiements avec des réactions emoji sur un paiement"
+options:
+  heading: Options
+  items: []
+example:
+  heading: "D'un écheveau à une courte liste"
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: "Électricité"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: Internet
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "Courses"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "Enregistrer un paiement"
+    body: "Quand quelqu'un paie, enregistrez-le pour la bonne personne. Les boutons de règlement rapide remplissent le montant à partir de vos paiements suggérés, et vous pouvez ajouter une note comme « virement bancaire » (jusqu'à 500 caractères). Si vous ne payez qu'une partie de ce que vous devez, le reste demeure dans le solde. Si vous saisissez trop peu ou trop, Side Badger vous prévient avant d'enregistrer. Enregistrer un paiement demande la permission de modifier les dépenses, et la date ne peut pas être dans le futur."
+  - heading: "Payé dans une autre devise ?"
+    body: "Les soldes restent dans la devise où ils ont été payés, donc une dette en euros reste une dette en euros. Vous devez des euros mais payez en livres ? Convertissez le paiement à la saisie, à un taux de change actuel ou au taux que vous avez réellement obtenu. Le taux est fixé quand le paiement est enregistré. [Plusieurs devises](page:feature/multiple-currencies) explique comment fonctionne la conversion, et les [voyages en groupe](page:use-case/group-trips) la montrent à l'œuvre."
+  - heading: "Un historique que vous pouvez vérifier"
+    body: "Chaque paiement enregistré reste dans l'historique du groupe avec sa date, son montant et sa note. Seule la personne qui a enregistré un paiement peut le modifier, et elle ou un admin du groupe peut le supprimer. Un paiement qui concerne quelqu'un qui a quitté le groupe est verrouillé. Pour un scénario détaillé entre colocataires, voir [colocataires](page:use-case/housemates)."
+limits:
+  heading: "Ce que Side Badger ne fait pas"
+  items:
+    - "Side Badger ne fait pas circuler l'argent, n'envoie pas de liens de paiement et n'envoie pas de demandes de paiement. Un paiement dans l'appli est l'enregistrement d'un paiement fait ailleurs."
+    - "Les paiements suggérés viennent d'une méthode d'appariement simple, appliquée par devise. Elle suggère toujours moins de paiements qu'il n'y a de personnes avec un solde dans cette devise (quatre personnes, trois paiements au plus), mais elle ne trouve pas toujours le plus petit nombre possible."
+    - "Vous ne pouvez pas désactiver les suggestions. **Tout afficher** liste tous les paiements suggérés du groupe, pas seulement les vôtres."
+    - "Les devises ne sont jamais compensées entre elles, sauf si les dépenses ont été converties à la saisie."
+    - "Il n'y a pas de rappels, donc relancer un paiement reste à votre charge."
+useCasesHeading: "Là où régler les comptes compte"
+faq:
+  heading: Questions
+  items:
+    - q: "Side Badger envoie-t-il l'argent ?"
+      a: "Non. Remboursez-vous comme vous voulez, puis enregistrez le paiement dans Side Badger pour que le solde se mette à jour."
+    - q: "Puis-je désactiver les paiements suggérés ?"
+      a: "Non. La simplification reste activée, et **Tout afficher** liste tous les paiements suggérés du groupe, pas seulement ceux qui vous concernent."
+    - q: "Pourquoi les euros et les livres sont-ils séparés ?"
+      a: "Les soldes restent dans la devise où vous avez payé, sauf si vous convertissez en saisissant une dépense ou un paiement. Les dettes dans des devises différentes ne sont jamais compensées entre elles."
+    - q: "Et si quelqu'un ne paie qu'une partie de ce qu'il doit ?"
+      a: "Enregistrez la partie payée. Le reste demeure dans le solde jusqu'à ce qu'il soit payé."
+    - q: "Est-ce toujours le plus petit nombre de paiements possible ?"
+      a: "Ce n'est pas garanti. Il suggère toujours moins de paiements qu'il n'y a de personnes avec un solde dans cette devise, donc pour quatre personnes jamais plus de trois. Dans l'exemple des colocataires, cela fait deux paiements, là où rembourser chaque personne directement en demandait six."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+  - faq.heading
+  - options.heading

@@ -1,0 +1,112 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+meta:
+  title: "Partager les frais d'un voyage en groupe, dans 140 devises"
+  description: "Suivez qui a payé quoi pendant un voyage en groupe, saisissez les frais dans la devise locale, convertissez-les ou non, et réglez une seule fois à la fin. Gratuit, dans votre navigateur."
+h1: "Partager les frais d'un voyage en groupe, dans 140 devises"
+navLabel: "Voyages en groupe"
+lead: "Suivez la villa, le taxi, et la tournée de cocktails que personne ne se souvient d'avoir proposé de payer. Side Badger tient le compte pendant que vous êtes loin, [gère les livres, les euros et 138 autres devises](page:feature/multiple-currencies), et vous donne une [courte liste de paiements](page:feature/settle-up) à votre retour."
+cta:
+  heading: "Les comptes des vacances, faits avant que le bronzage ne passe"
+  body: "Créez un groupe, envoyez le lien d'invitation aux personnes du voyage, et ajoutez les frais au fur et à mesure."
+  button: "Créer un compte gratuit"
+scenario:
+  heading: "Tout le monde a payé quelque chose, dans une devise ou une autre"
+  body: "Quelqu'un a réservé les vols, quelqu'un d'autre a mis la villa sur sa carte, et une troisième personne a réglé le dîner en espèces. Au troisième jour, personne ne sait qui est en avance. La question est simple, même si la réponse vit d'habitude dans un tableur que personne n'a envie d'ouvrir. Qui a payé quoi, dans quelle devise, et comment tout le monde règle-t-il une seule fois à la fin ?"
+sections:
+  - heading: "Avant de partir"
+    body: "Soumettez la sélection de villas à un vote, anonymement si vous le souhaitez, pour que la décision appartienne au groupe et pas à celui qui boude le plus longtemps. Gardez ensuite la liste de courses partagée à côté des factures de courses, pour que personne n'achète trois tubes de crème solaire et aucun adaptateur de prise."
+  - heading: "Pendant que vous êtes loin"
+    body: "Ajoutez chaque frais au moment où il se produit, dans la devise où vous avez payé. Photographiez le reçu et Side Badger remplit le total, la date et le lieu pour que vous les vérifiiez ; les images de reçus sont lues par le service d'IA de Google. Convertissez le montant à un taux de change actuel, que vous pouvez changer pour le taux que vous avez réellement obtenu, et le montant d'origine reste sur la dépense. Ou laissez les euros en euros et décidez plus tard. Un groupe peut aussi choisir une devise, et les nouvelles dépenses s'y convertissent automatiquement."
+  - heading: "Tout le monde n'a pas tout fait"
+    body: "Certains ont sauté le dîner, d'autres ont séché la sortie en bateau. Laissez-les de côté pour les frais auxquels ils n'ont pas pris part, et partagez le reste [à parts égales, par montants exacts ou par pourcentage](page:feature/split-expenses). Personne ne paie la partie du voyage qu'il a passée à dormir."
+  - heading: "Réglez une fois rentrés"
+    body: "Side Badger suggère une courte liste de paiements qui règle les comptes de tout le monde. Remboursez-vous comme vous voulez, puis enregistrez-le. Avec plusieurs devises, gardez-les séparées ou convertissez au fil de l'eau ; l'exemple de Lisbonne ci-dessous montre les deux."
+  - heading: "Enterrements de vie de garçon et de jeune fille"
+    body: "Un week-end avec un invité d'honneur demande un peu plus d'administration. Faites-en un groupe géré, où les admins approuvent les nouveaux membres et où seuls les créateurs et les admins peuvent modifier les dépenses. Utilisez des montants exacts pour la part de l'invité d'honneur, limitez le groupe aux devises que vous utilisez vraiment, et verrouillez le groupe à la fin pour que les chiffres ne bougent plus."
+exampleAfter: 4
+example:
+  heading: "Quatre amis à Lisbonne"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Vols"
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: Villa
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: "Dîner"
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Sortie en bateau"
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: "Ce sur quoi un voyage s'appuie"
+faq:
+  heading: Questions
+  items:
+    - q: "Peut-on laisser de côté ceux qui ont sauté le dîner ?"
+      a: "Oui. Choisissez qui a pris part à chaque dépense et seuls ceux-là la paient."
+    - q: "Est-ce que ça marche sans réseau ?"
+      a: "Non. Side Badger a besoin d'une connexion, donc ajoutez les frais une fois que vous avez retrouvé le wifi."
+    - q: "Chacun doit-il installer quelque chose ?"
+      a: "Non. Il fonctionne dans le navigateur. Envoyez le lien d'invitation et chacun rejoint depuis son téléphone."
+    - q: "Quel taux de change utilise-t-il ?"
+      a: "Un taux de change actuel quand vous saisissez la dépense, ou le vôtre si vous en avez obtenu un autre. Le taux est fixé quand la dépense est enregistrée, donc les anciennes dépenses ne sont jamais réévaluées."
+    - q: "Peut-on figer le groupe après le voyage ?"
+      a: "Oui. Un admin peut verrouiller le groupe pour que les chiffres ne bougent plus."
+    - q: "Y a-t-il une limite sur les montants ?"
+      a: "Oui. 999 999,99 par dépense, dans sa propre devise."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+  - faq.heading

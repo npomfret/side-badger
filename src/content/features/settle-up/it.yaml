@@ -1,0 +1,112 @@
+translatedFrom: "1b51f540"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: Salda i conti con meno pagamenti | Side Badger
+  description: Scopri chi deve cosa a chi nel tuo gruppo, ottieni una breve lista di pagamenti che salda tutti e registra ogni pagamento man mano. Gratis.
+h1: Salda i conti con meno pagamenti
+navLabel: Saldare i conti
+lead: Side Badger tiene un saldo aggiornato per tutti nel gruppo e suggerisce una breve lista di pagamenti che lo salda. Vi pagate come vi fa più comodo, poi registrate il pagamento. Se vuoi prima vedere come si dividono i numeri, parti da [dividere le spese](page:feature/split-expenses).
+cta:
+  heading: Pronto a sbrogliare chi deve cosa a chi?
+  body: Crea un account, avvia un gruppo e aggiungi la prima spesa. Ai saldi pensiamo noi.
+  button: Crea un account gratuito
+problem:
+  heading: Saldi che si aggiornano man mano
+  body: Ogni spesa cambia chi deve cosa a chi, quindi Side Badger tiene i saldi aggiornati man mano che si aggiungono spese e pagamenti. Tutti nel gruppo vedono subito una modifica, e vedono cosa è cambiato e chi l'ha cambiato. I saldi sono tenuti per valuta, quindi euro e sterline restano nelle loro colonne, a meno che una spesa sia stata convertita quando è stata inserita. Di default vedi i debiti che ti riguardano; **Mostra tutto** elenca l'intero gruppo.
+workflow:
+  heading: Tre passaggi per essere pari
+  steps:
+    - title: Guarda chi deve cosa a chi
+      body: Apri i saldi del gruppo per vedere cosa devi, cosa ti spetta e una breve lista di pagamenti che salda tutti, calcolata per ogni valuta. Le spese contestate restano fuori dai conti finché non sono risolte. Nell'esempio dei coinquilini qui sotto, sei pagamenti diventano due.
+      shot: S10
+      shotAlt: La schermata dei saldi con i debiti semplificati in due valute e l'opzione Mostra tutto attivata
+    - title: Paga come preferisci, poi registralo
+      body: Bonifico, contanti, un favore che ti devono dall'ultima vacanza. Side Badger non sposta il denaro. Quando i soldi sono passati di mano, registra il pagamento e il saldo si aggiorna per tutti.
+      shot: S11
+      shotAlt: Il modulo del pagamento con i pulsanti di saldo rapido e l'avviso mostrato per un pagamento parziale
+    - title: Controlla che sia arrivato
+      body: Il pagamento entra nello storico del gruppo, dove tutti nel gruppo possono vederlo e reagire con un'emoji. Festeggia un pagamento quando arriva.
+      shot: S12
+      shotAlt: Lo storico dei pagamenti con reazioni emoji su un pagamento
+options:
+  heading: Opzioni
+  items: []
+example:
+  heading: Da un groviglio a una breve lista
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: Elettricità
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: Internet
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: Spesa alimentare
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: Registrare un pagamento
+    body: Quando qualcuno paga, registralo alla persona giusta. I pulsanti di saldo rapido compilano l'importo dai pagamenti suggeriti, e puoi aggiungere una nota come "bonifico bancario" (fino a 500 caratteri). Se paghi solo una parte di ciò che devi, il resto resta nel saldo. Se inserisci troppo poco o troppo, Side Badger ti avvisa prima di salvare. Registrare un pagamento richiede il permesso di modificare le spese, e la data non può essere nel futuro.
+  - heading: Pagato in un'altra valuta?
+    body: I saldi restano nella valuta in cui sono stati pagati, quindi un debito in euro resta un debito in euro. Devi euro e paghi in sterline? Converti il pagamento mentre lo inserisci, a un tasso di cambio attuale o al tasso che hai davvero ottenuto. Il tasso viene fissato quando il pagamento è salvato. [Più valute](page:feature/multiple-currencies) spiega come funziona la conversione, e i [viaggi di gruppo](page:use-case/group-trips) la mostrano in uso.
+  - heading: Uno storico che puoi controllare
+    body: Ogni pagamento registrato resta nello storico del gruppo con data, importo e nota. Solo la persona che ha registrato un pagamento può modificarlo, e lei o un admin del gruppo possono eliminarlo. Un pagamento che coinvolge qualcuno che ha lasciato il gruppo è bloccato. Per uno scenario di coinquilini svolto, vedi [coinquilini](page:use-case/housemates).
+limits:
+  heading: Cosa Side Badger non fa
+  items:
+    - Side Badger non sposta denaro, non invia link di pagamento né richieste di pagamento. Un pagamento nell'app è la registrazione di un pagamento fatto altrove.
+    - I pagamenti suggeriti derivano da un semplice metodo di abbinamento, applicato per valuta. Suggerisce sempre meno pagamenti delle persone che hanno un saldo in quella valuta (quattro persone, al massimo tre pagamenti), ma non trova sempre il numero più piccolo possibile.
+    - Non puoi disattivare i suggerimenti. **Mostra tutto** elenca ogni pagamento suggerito nel gruppo, non solo i tuoi.
+    - Le valute non vengono mai compensate tra loro, a meno che le spese siano state convertite quando sono state inserite.
+    - Non ci sono promemoria, quindi sollecitare un pagamento resta compito tuo.
+useCasesHeading: Dove conta saldare i conti
+faq:
+  heading: Domande
+  items:
+    - q: Side Badger invia il denaro?
+      a: No. Pagatevi come vi fa più comodo, poi registrate il pagamento in Side Badger perché il saldo si aggiorni.
+    - q: Posso disattivare i pagamenti suggeriti?
+      a: No. La semplificazione resta attiva, e **Mostra tutto** elenca ogni pagamento suggerito nel gruppo, non solo quelli che ti riguardano.
+    - q: Perché euro e sterline sono tenuti separati?
+      a: I saldi restano nella valuta in cui hai pagato, a meno che tu converta quando inserisci una spesa o un pagamento. I debiti in valute diverse non vengono mai compensati tra loro.
+    - q: E se qualcuno paga solo una parte di ciò che deve?
+      a: Registra la parte che ha pagato. Il resto resta nel saldo finché non viene pagato.
+    - q: È sempre il numero minimo possibile di pagamenti?
+      a: Non è garantito. Suggerisce sempre meno pagamenti delle persone che hanno un saldo in quella valuta, quindi per quattro persone non ne suggerisce mai più di tre. Nell'esempio dei coinquilini sono due pagamenti, dove rimborsare direttamente ogni persona ne richiedeva sei.
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label

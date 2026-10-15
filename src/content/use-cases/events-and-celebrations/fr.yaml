@@ -1,0 +1,93 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+meta:
+  title: "Partager les frais des fêtes, des mariages et des cadeaux collectifs"
+  description: "Partagez les frais d'une fête, d'un mariage ou d'un cadeau collectif quand chacun participe d'un montant différent. Votez pour le plan, partagez par montants exacts et voyez qui doit quoi à qui."
+h1: "Partager les frais des fêtes, des mariages et des cadeaux collectifs"
+navLabel: "Événements et fêtes"
+lead: "Partagez les acomptes, la déco et les parapluies d'urgence. Laissez le plan de table à quelqu'un de plus courageux. Side Badger garde **qui a participé de combien** au même endroit, pour que l'organisateur profite de la fête aussi."
+cta:
+  heading: "Commencez par la prochaine fête"
+  body: "Créez un compte, faites un groupe pour l'événement et envoyez le lien d'invitation. Side Badger est gratuit, sans publicité et sans limite quotidienne."
+  button: "Créer un compte gratuit"
+scenario:
+  heading: "Tout le monde participe, pas toujours du même montant"
+  body: "Quelqu'un paie l'acompte de la salle, quelqu'un d'autre achète le gâteau, et une troisième personne met le cadeau collectif sur sa propre carte. Certains invités viennent à tout et d'autres seulement au dîner. Tenir un compte juste de tout cela dans un fil de discussion est un travail pour lequel personne n'a postulé. Un groupe Side Badger contient le tout, quel que soit le mélange de montants, et montre à chacun ce qu'il doit ou ce qu'on lui doit. Voir [comment ça marche](page:how-it-works) pour les bases, ou lisez la suite pour un événement."
+sections:
+  - heading: "Décidez ensemble"
+    body: "Avant que l'argent ne bouge, soumettez le choix à un **sondage**. Ajoutez jusqu'à 10 options, comme deux salles ou trois idées de cadeau, et laissez chacun voter. Vous pouvez masquer qui a voté pour quoi, pour que chaque option soit entendue équitablement, et le gagnant s'affiche une fois le sondage clos. Personne n'a à remonter quarante messages pour savoir ce qui a été décidé."
+  - heading: "Qui participe à quoi"
+    body: "Tout le monde ne paie pas pareil, et tout le monde ne participe pas à chaque coût. Partagez une dépense à parts égales, par pourcentage ou par **montants exacts**, pour que la part de chacun soit le chiffre convenu. Laissez de côté ceux qui n'étaient pas concernés, comme les invités qui ont sauté le dîner ou les amis qui ne se sont pas joints au cadeau. Chaque dépense a un seul payeur, et tous les autres du partage lui doivent leur part. Les détails sont sur la page [partager les dépenses](page:feature/split-expenses)."
+  - heading: "Gardez les justificatifs"
+    body: "Ajoutez des notes à une dépense, comme ce que couvrait le coût. Les commentaires restent **à côté de la dépense** concernée, donc la question « le gâteau, c'était 45 £ ou 54 £ ? » et sa réponse vivent au même endroit. Les commentaires vont jusqu'à 500 caractères, ce qui est largement suffisant pour une question sur un acompte."
+  - heading: "Les contrôles de l'organisateur"
+    body: "La collaboration ouverte permet à tout membre d'ajouter et de modifier des dépenses, ce qui convient pour un petit cadeau. Pour un mariage ou une plus grande fête, choisissez le préréglage **Groupe géré**. Les admins approuvent chaque nouveau membre, et seuls les créateurs et les admins peuvent modifier les dépenses. Invitez avec un lien ou un code QR ; avec l'approbation activée, un admin laisse entrer chaque personne, donc la liste d'invités reste la liste d'invités. Quand l'événement est terminé, verrouillez le groupe pour que les chiffres ne bougent plus."
+  - heading: "Réglez après la fête"
+    body: "Une fois la dernière facture arrivée, les soldes montrent **qui doit quoi à qui**, et Side Badger suggère une courte liste de paiements qui règle les comptes de tout le monde. Remboursez-vous comme vous voulez, puis enregistrez le paiement dans le groupe. Side Badger ne fait jamais circuler l'argent, donc le groupe tient le compte pendant que les virements se font dans vos propres applis bancaires. La page [régler les comptes](page:feature/settle-up) montre comment un écheveau devient une courte liste."
+exampleAfter: 5
+example:
+  heading: "Un cadeau collectif : six votes pour, 150 £ à partager"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Cadeau collectif"
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: "Les fonctionnalités utilisées ici"
+faq:
+  heading: Questions
+  items:
+    - q: "Les invités peuvent-ils voir le groupe sans le rejoindre ?"
+      a: "Non. On rejoint avec un lien ou un code QR et un compte gratuit, et on voit le groupe une fois dedans."
+    - q: "Side Badger peut-il collecter l'argent ?"
+      a: "Non. Side Badger tient le compte et ne fait jamais circuler l'argent. Remboursez-vous comme vous voulez, puis enregistrez le paiement. Il est gratuit, sans publicité et sans limite quotidienne ; voir les [tarifs](page:pricing)."
+    - q: "Les votes peuvent-ils être anonymes ?"
+      a: "Oui. En créant un sondage, vous pouvez masquer qui a voté pour quoi. Les réglages ne peuvent changer qu'avant le premier vote."
+    - q: "Chacun peut-il participer d'un montant différent ?"
+      a: "Oui. Partagez une dépense par montants exacts, pour que la part de chacun soit le chiffre convenu, ou laissez de côté ceux qui n'étaient pas concernés."
+    - q: "Un organisateur peut-il tenir les comptes ?"
+      a: "Oui. Utilisez le préréglage de groupe géré, pour que seuls les créateurs et les admins modifient les dépenses et que les admins approuvent les nouveaux membres."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+  - faq.heading

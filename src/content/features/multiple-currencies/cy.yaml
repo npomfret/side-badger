@@ -1,0 +1,127 @@
+translatedFrom: "923c938f"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: "Rhannu costau mewn 140 o arian cyfred, wedi'u trosi neu ar wahân"
+  description: "Rhowch bob cost yn yr arian cyfred y talwyd ynddo, cadwch y balansau ar wahân neu drosi ar gyfradd y gallwch ei gweld a'i newid, yna setlwch gyda rhestr fer o daliadau."
+h1: "Rhannu costau mewn 140 o arian cyfred"
+navLabel: "Arian cyfred lluosog"
+lead: "Ewros, yen, a'r un tacsi hwnnw mewn baht. Mae Side Badger yn cymryd pob cost yn yr arian cyfred y talwyd ynddo, yn cadw'r balansau'n gywir, a gall drosi pan fyddai'n well gan eich grŵp setlo unwaith. Mae'n gweithio mewn 140 o arian cyfred, ac mae'n gweddu'n naturiol i [deithiau grŵp](page:use-case/group-trips)."
+cta:
+  heading: "Dewch â'ch ewros, dewch â'ch yen"
+  body: "Creu cyfrif, cychwyn grŵp ac ychwanegu'r gost gyntaf mewn pa bynnag arian cyfred oedd gennych yn eich llaw."
+  button: "Creu cyfrif am ddim"
+problem:
+  heading: "Rhowch hi fel y talwyd"
+  body: "Anaml y telir am daith mewn un arian cyfred. Archebwyd y gwesty gartref mewn punnoedd, talwyd am swper mewn yen, a thalwyd am goffi'r maes awyr mewn beth bynnag oedd y lleoliad yn ei ddefnyddio. Trosi popeth â llaw cyn y gallwch hyd yn oed ei deipio yw sut mae taenlenni'n cael eu gadael. Yn Side Badger rydych yn rhoi pob cost yn yr arian cyfred sydd ar y dderbynneb, ac mae pob swm yn dilyn rheolau ei arian cyfred, felly nid oes gan yen leoedd degol ac mae gan ddinarau dri. Daw'r arian cyfred a ddefnyddiwyd yn ddiweddar gyntaf yn y rhestr."
+workflow:
+  heading: "Cadw arian cyfred ar wahân, neu drosi wrth fynd"
+  steps:
+    - title: "Ychwanegu'r gost yn ei harian cyfred ei hun"
+      body: "Dewiswch yr arian cyfred, teipiwch y swm, dywedwch pwy dalodd a phwy a'i rhannodd. Does dim angen dim byd arall. Dyma'r rhagosodiad, ac mae'n cadw'r swm gwreiddiol yn union fel y'i rhoesoch."
+      shot: S07
+      shotAlt: "Y ffurflen gost gyda swm mewn yen wedi'i roi"
+    - title: "Gwylio balans ar gyfer pob arian cyfred"
+      body: "Cedwir balansau ar wahân fesul arian cyfred, ac mae pob un yn cael ei restr fer ei hun o daliadau a awgrymir. Setlir punnoedd mewn punnoedd ac yen mewn yen."
+      shot: S10
+      shotAlt: "Sgrin y balansau gyda dyledion wedi'u symleiddio mewn dau arian cyfred"
+    - title: "Neu drosi, pan fyddai'n well gan y grŵp setlo unwaith"
+      body: "Dewiswch arian cyfred arall wrth roi'r gost a gall Side Badger ei drosi ar gyfradd gyfnewid gyfredol, y gallwch ei newid i'r gyfradd a gawsoch mewn gwirionedd. Mae'r swm wedi'i drosi yn ymuno â'r balans yn yr arian cyfred hwnnw. Dewis y mae'r grŵp yn ei wneud yw trosi, byth rhywbeth sy'n digwydd y tu ôl i'ch cefn."
+options:
+  heading: "Cyfradd y gallwch ei gweld a'i newid"
+  items:
+    - title: "Dangosir y gyfradd"
+      body: "Pan fyddwch yn trosi, mae'r gyfradd a'r swm wedi'i drosi yn ymddangos ar y ffurflen, fel nad oes rhaid i neb gymryd rhif ar ei ffydd."
+    - title: "Teipiwch eich un eich hun"
+      body: "Cawsoch gyfradd well gan ddesg arian parod, neu un waeth gan faes awyr? Golygwch y gyfradd i'r un a gawsoch mewn gwirionedd ac mae'r swm wedi'i drosi yn diweddaru."
+    - title: "Mae'r gwreiddiol yn aros"
+      body: "Mae'r swm gwreiddiol yn aros ar y gost, wrth ymyl yr un wedi'i drosi, i unrhyw un sy'n gofyn faint oedd mewn yen."
+    - title: "Am ddim i drosi"
+      body: "Mae trosi yn costio dim. Does dim ffi am roi cost mewn arian cyfred arall."
+example:
+  heading: "Pedwar ffrind yn Japan, wedi setlo mewn dwy ffordd"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "y gwesty, wedi'i archebu gartref"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "swper yn Japan"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "tocynnau trên"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "mynediad i'r deml"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "Un arian cyfred i'r grŵp cyfan"
+    body: "Os byddai'n well gan eich grŵp beidio â meddwl am y peth, dewiswch arian cyfred grŵp ac mae'r ffurflen yn trosi pob cost newydd iddo, ar gyfradd y gallwch ei gweld a'i newid o hyd. Mae hyn yn berthnasol i gostau newydd a rhai a gopïwyd yn unig. Gadewir golygiadau a chostau presennol fel y maent, felly nid oes dim sydd eisoes wedi'i gofnodi yn newid oddi tanoch."
+  - heading: "Yn ddyledus mewn ewros, talu mewn punnoedd"
+    body: "Wedi talu mewn yen, yn setlo mewn punnoedd? Iawn. Pan fyddwch yn cofnodi taliad gallwch ei drosi hefyd, fel y gall pwy bynnag sy'n ddyledus mewn ewros dalu mewn punnoedd ac mae'r balans ewro yn dal i ddod allan yn iawn. Talwch eich gilydd sut bynnag y dymunwch, yna cofnodwch ef."
+  - heading: "Rheolau i'r grŵp"
+    body: "Cyfyngwch grŵp i'r arian cyfred rydych chi'n ei ddefnyddio mewn gwirionedd, a gosodwch ragosodiad fel bod y ffurflen yn agor ar yr un iawn. Does dim angen 139 o ddewisiadau eraill wrth ymyl y bil swper ar wyliau ym Mhortiwgal, ac mae [priodas dramor](page:use-case/events-and-celebrations) yn debygol o fod angen dau."
+limits:
+  heading: "Cyfyngiadau"
+  items:
+    - "Mae'r gyfradd yn sefydlog pan gaiff y gost ei chadw. Ni chaiff hen gostau byth eu hailbrisio."
+    - "Mae Side Badger yn nôl cyfradd gyfredol lle bo modd. Nid oes sicrwydd o un ar gyfer pob pâr, a gallwch bob amser deipio'r gyfradd eich hun."
+    - "Mae trosi awtomatig y grŵp yn berthnasol i gostau newydd a rhai a gopïwyd yn unig, nid i olygiadau na chostau presennol."
+    - "Mae pob cost wedi'i chyfyngu i 999,999.99 yn ei harian cyfred ei hun."
+    - "Mae 140 o arian cyfred. Nid yw arian crypto a metelau yn eu plith."
+    - "Mae Side Badger yn cofnodi taliadau. Nid yw byth yn symud nac yn cyfnewid arian."
+useCasesHeading: "Lle mae hyn yn helpu"
+faq:
+  heading: "Cwestiynau"
+  items:
+    - q: "Pa gyfradd gyfnewid ydych chi'n ei defnyddio?"
+      a: "Cyfradd gyfnewid gyfredol, wedi'i nôl pan fyddwch yn rhoi'r gost lle bo un ar gael. Gallwch ei newid i'r gyfradd a gawsoch mewn gwirionedd, ac mae'r swm wedi'i drosi yn diweddaru."
+    - q: "Ydy hen gostau'n cael eu hailbrisio?"
+      a: "Nac ydyn. Mae'r gyfradd yn sefydlog pan gaiff y gost ei chadw, felly nid yw balans yn symud am fod y farchnad wedi symud."
+    - q: "Ydych chi'n cefnogi crypto?"
+      a: "Nac ydym. Mae 140 o arian cyfred, ac nid yw arian crypto yn eu plith."
+    - q: "Pam na allaf roi 2,000,000 rwpia?"
+      a: "Mae pob cost wedi'i chyfyngu i 999,999.99 yn ei harian cyfred ei hun. Rhowch hi mewn arian cyfred arall a throsi, neu ei rhannu'n ddwy gost."
+    - q: "Ydy trosi yn costio unrhyw beth?"
+      a: "Nac ydy. Mae trosi am ddim, fel gweddill Side Badger. Gweler [prisiau](page:pricing)."
+    - q: "Oes rhaid i mi drosi?"
+      a: "Nac oes. Mae arian cyfred yn aros ar wahân oni bai eich bod chi neu eich grŵp yn dewis trosi, ac mae pob arian cyfred yn cael ei restr fer ei hun o daliadau."

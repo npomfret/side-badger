@@ -1,0 +1,107 @@
+translatedFrom: "fd23c99b"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+meta:
+  title: "Sut mae Side Badger yn gweithio | Rhannu treuliau grŵp mewn pum cam"
+  description: "Creu grŵp, gwahodd pobl, ychwanegu treuliau a setlo. Gweld beth sy'n digwydd rhwng “mae rhywun wedi talu” a “rydyn ni'n sgwâr”, gydag enghraifft wedi'i gweithio."
+h1: "Sut mae Side Badger yn gweithio"
+navLabel: "Sut mae'n gweithio"
+lead: "Beth sy'n digwydd rhwng “mae rhywun wedi talu” a “rydyn ni'n sgwâr”? Pum cam, dim taenlen, ac un mochyn daear sydd gan amlaf yn addurniadol. Dyma'r daith gyfan, o'r grŵp cyntaf i'r taliad olaf a gofnodwyd. I gael y manylion am unrhyw gam, gweler [rhannu treuliau](page:feature/split-expenses) a [setlo](page:feature/settle-up)."
+cta:
+  heading: "O “fe dalaf i am hwn” i “rydyn ni'n sgwâr”"
+  body: "Creu cyfrif am ddim, cychwyn grŵp ac ychwanegu'r gost gyntaf. Fydd y mochyn daear ddim yn barnu'r dderbynneb."
+  button: "Creu cyfrif am ddim"
+steps:
+  - title: "Creu grŵp"
+    body: "Gwnewch un grŵp ar gyfer pob tŷ, taith neu ddigwyddiad, fel nad yw'r rhent byth yn mynd yn yr un rhestr â'r anrheg briodas. Rhowch enw iddo, dewiswch yr enw rydych chi am i bobl ei weld ac, os dymunwch, cyfyngwch ar yr arian cyfred y mae'n ei dderbyn. Yna mae eich dangosfwrdd yn dangos pob grŵp, a ble rydych chi'n sefyll ym mhob un, ar un sgrin."
+    shot: S02
+    shotAlt: "Y deialog creu grŵp gyda'r adran cyfyngiadau arian cyfred ar agor"
+  - title: "Gwahodd eich pobl"
+    body: "Rhannwch ddolen ymuno neu dangoswch god QR, a gosodwch am ba hyd y mae'n para, o 15 munud hyd at 5 diwrnod. Mae angen cyfrif am ddim ac e-bost wedi'i wirio ar bawb sy'n ymuno, ac mae grŵp yn dal hyd at 50 o bobl. Os ydych am reoli pwy sy'n dod i mewn, trowch gymeradwyaeth ymlaen ac mae gweinyddwr yn gadael pob person i mewn."
+    shot: S03
+    shotAlt: "Y deialog gwahodd ar y tab dolen, yn dangos cod QR a'r dewisiadau terfyn amser"
+  - title: "Ychwanegu treuliau wrth iddynt ddigwydd"
+    body: "Dywedwch pwy dalodd, faint, ac ar gyfer pwy yr oedd. Rhannwch yn gyfartal, yn ôl symiau union neu yn ôl canran, a gadewch allan unrhyw un nad oedd yn rhan ohoni. Ychwanegwch y gost ac mae pawb yn ei gweld ar unwaith, ynghyd â beth a newidiodd a phwy a'i newidiodd."
+    shot: S05
+    shotAlt: "Y ffurflen gost gyda rhaniad yn ôl canran, yn rhannu'r rhent yn ôl maint ystafell"
+  - title: "Gwylio'r balansau"
+    body: "Mae Side Badger yn cadw balans cyfredol ar gyfer pob arian cyfred, fel y gallwch weld pwy sy'n ddyledus i bwy ar un olwg. Yn hytrach na gadael i bawb ddatrys gwe o ddyledion bach, mae'n awgrymu rhestr fer o daliadau sy'n setlo'r grŵp."
+    shot: S10
+    shotAlt: "Sgrin y balansau yn dangos dyledion wedi'u symleiddio mewn dau arian cyfred, gyda Dangos y cyfan wedi'i droi ymlaen"
+  - title: "Setlo y tu allan i'r ap, cofnodi y tu mewn iddo"
+    body: "Dyw Side Badger byth yn symud arian. Talwch eich gilydd sut bynnag y dymunwch, yna cofnodwch y taliad fel bod y balansau'n dal i fyny, ac mae sgrin pawb yn diweddaru heb adnewyddu. Ystyr “setlo” yn syml yw bod y balansau'n dangos sero. All neb adael grŵp tra byddan nhw mewn dyled neu fod arian yn ddyledus iddyn nhw, felly mae unrhyw un sy'n anelu am y drws yn setlo gyntaf."
+    shot: S11
+    shotAlt: "Y ffurflen daliad gyda botymau setlo cyflym a'r hysbysiad taliad rhannol"
+requirements:
+  heading: "Beth sydd ei angen arnoch"
+  items:
+    - "Cyfrif am ddim. Cyfeiriad e-bost a chyfrinair yw'r cyfan sydd ei angen, ac rydych yn gwirio'r e-bost cyn y gallwch ychwanegu unrhyw beth."
+    - "Bod yn 18 oed neu'n hŷn."
+    - "Porwr modern ar ffôn neu gyfrifiadur, a chysylltiad. Nid ap o siop apiau yw Side Badger ac nid yw'n gweithio all-lein."
+    - "Os dymunwch, lle ar eich sgrin gartref. Does dim angen siop apiau, oherwydd gallwch ychwanegu Side Badger at eich sgrin gartref neu ddoc ac mae'n agor fel ap."
+example:
+  heading: "Tri ffrind ar ôl noson allan"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: "Swper"
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: "Tacsi"
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: "39 iaith, ac wedi'i adeiladu i fwy o bobl"
+    body: "Defnyddiwch Side Badger mewn 39 iaith, gan gynnwys Arabeg, Perseg ac Wrdw, sy'n cael eu hysgrifennu o'r dde i'r chwith. Gall pawb yn y grŵp ddewis eu hiaith eu hunain, felly gall tudalen y grŵp fod yn Arabeg i un person ac yn Saesneg i'r nesaf. Mae hefyd wedi'i adeiladu gyda defnyddwyr bysellfwrdd a darllenwyr sgrin mewn golwg, ac mae lliwiau aelodau yn dod â phatrymau, fel nad oes rhaid i chi wahaniaethu gwyrdd oddi wrth goch."
+faq:
+  heading: "Cwestiynau"
+  items:
+    - q: "Oes angen cyfrif ar bawb?"
+      a: "Oes, un am ddim. Mae pob person yn gwirio ei e-bost cyn ychwanegu unrhyw beth."
+    - q: "Oes ap?"
+      a: "Mae'n rhedeg yn y porwr, a gallwch ei ychwanegu at eich sgrin gartref neu ddoc fel ei fod yn agor fel ap. Does dim fersiwn siop apiau a dim modd all-lein."
+    - q: "Ydy Side Badger yn symud arian?"
+      a: "Nac ydy. Mae'n cadw'r cyfrif ac yn awgrymu taliadau, ac rydych chi'n talu eich gilydd sut bynnag y dymunwch. Yna rydych yn cofnodi'r taliad. Gweler [setlo](page:feature/settle-up)."
+    - q: "A all rhywun adael tra mae mewn dyled?"
+      a: "Na. All neb adael grŵp tra byddan nhw mewn dyled neu fod arian yn ddyledus iddyn nhw, felly maen nhw'n setlo gyntaf."
+    - q: "Faint o bobl all ymuno â grŵp?"
+      a: "Hyd at 50 o bobl mewn grŵp. Gwahoddwch nhw gyda dolen neu god QR, a throwch gymeradwyaeth ymlaen os ydych am i weinyddwr adael pob person i mewn."
+    - q: "Beth am deithiau gyda mwy nag un arian cyfred?"
+      a: "Cedwir balansau ar wahân ar gyfer pob arian cyfred. Gweler [arian cyfred lluosog](page:feature/multiple-currencies)."

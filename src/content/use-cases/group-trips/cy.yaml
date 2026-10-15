@@ -1,0 +1,110 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+meta:
+  title: "Rhannu costau taith grŵp, mewn 140 o arian cyfred"
+  description: "Cadwch olwg ar bwy dalodd beth ar daith grŵp, rhowch gostau yn yr arian lleol, troswch nhw neu beidio, a setlwch unwaith ar y diwedd. Am ddim, yn eich porwr."
+h1: "Rhannu costau taith grŵp, mewn 140 o arian cyfred"
+navLabel: "Teithiau grŵp"
+lead: "Cadwch olwg ar y fila, y tacsis, a'r un rownd o goctels nad oes neb yn cofio gwirfoddoli i'w phrynu. Mae Side Badger yn cadw'r cyfrif tra byddwch i ffwrdd, yn [trin punnoedd, ewros a 138 o arian cyfred eraill](page:feature/multiple-currencies), ac yn rhoi [rhestr fer o daliadau](page:feature/settle-up) i chi pan gyrhaeddwch adref."
+cta:
+  heading: "Mathemateg gwyliau, wedi'i wneud cyn i'r lliw haul bylu"
+  body: "Creu grŵp, anfon y ddolen wahodd at y bobl ar y daith, ac ychwanegu costau wrth iddynt ddigwydd."
+  button: "Creu cyfrif am ddim"
+scenario:
+  heading: "Mae pawb wedi talu am rywbeth, mewn rhyw arian cyfred"
+  body: "Archebodd rhywun yr hediadau, rhoddodd rhywun arall y fila ar gerdyn, a thalodd trydydd person am swper mewn arian parod. Erbyn diwrnod tri, does neb yn gwybod pwy sydd ar y blaen. Mae'r cwestiwn yn syml, hyd yn oed os yw'r ateb fel arfer yn byw mewn taenlen nad oes neb eisiau ei hagor. Pwy dalodd beth, mewn pa arian cyfred, a sut mae pawb yn setlo unwaith ar y diwedd?"
+sections:
+  - heading: "Cyn i chi fynd"
+    body: "Rhowch restr fer y fila i bleidlais, yn ddienw os dymunwch, fel bod y penderfyniad yn perthyn i'r grŵp ac nid i bwy bynnag sy'n pwdu hiraf. Yna cadwch y rhestr siopa a rennir wrth ymyl y biliau siopa, fel nad oes neb yn prynu tri thiwb o eli haul a dim addaswyr plwg."
+  - heading: "Tra byddwch i ffwrdd"
+    body: "Ychwanegwch bob cost wrth iddi ddigwydd, yn yr arian cyfred y talwyd ynddo. Tynnwch lun o'r dderbynneb ac mae Side Badger yn llenwi'r cyfanswm, y dyddiad a'r lle i chi eu gwirio; mae delweddau derbynebau yn cael eu darllen gan wasanaeth AI Google. Gallwch drosi'r swm ar gyfradd gyfnewid gyfredol, a newid y gyfradd i'r un a gawsoch mewn gwirionedd; mae'r swm gwreiddiol yn aros ar y gost. Neu gadewch yr ewros fel ewros a phenderfynu yn nes ymlaen. Gall grŵp hefyd ddewis un arian cyfred, ac mae costau newydd yn trosi iddo'n awtomatig."
+  - heading: "Heb i bawb wneud popeth"
+    body: "Hepgorodd rhai y swper, eisteddodd rhai allan o'r cwch. Gadewch nhw allan o'r costau nad oeddent yn rhan ohonynt, a rhannwch y gweddill [yn gyfartal, yn ôl symiau union neu yn ôl canran](page:feature/split-expenses). Does neb yn talu am y rhan o'r daith a dreuliodd yn cysgu."
+  - heading: "Setlo unwaith y byddwch adref"
+    body: "Mae Side Badger yn awgrymu rhestr fer o daliadau sy'n setlo pawb. Talwch eich gilydd sut bynnag y dymunwch, yna cofnodwch ef. Gydag arian cyfred cymysg, cadwch bob un ar wahân neu drosi wrth fynd; mae'r enghraifft o Lisbon isod yn dangos y ddau."
+  - heading: "Penwythnosau stag a phlu"
+    body: "Mae angen ychydig mwy o waith gweinyddol ar benwythnos i ffwrdd gyda gwestai anrhydeddus. Gwnewch ef yn grŵp rheoledig, lle mae gweinyddwyr yn cymeradwyo aelodau newydd a dim ond crewyr a gweinyddwyr all newid costau. Defnyddiwch symiau union ar gyfer cyfran y gwestai anrhydeddus, cyfyngwch y grŵp i'r arian cyfred rydych chi'n ei ddefnyddio mewn gwirionedd, a chlowch y grŵp pan fydd drosodd fel bod y rhifau'n aros yn eu lle."
+exampleAfter: 4
+example:
+  heading: "Pedwar ffrind yn Lisbon"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Hediadau"
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: "Fila"
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: "Swper"
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Taith cwch"
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: "Beth mae taith yn dibynnu arno"
+faq:
+  heading: "Cwestiynau"
+  items:
+    - q: "Alla i adael allan pobl a hepgorodd swper?"
+      a: "Gallwch. Dewiswch bwy oedd yn rhan o bob cost a dim ond nhw sy'n talu amdani."
+    - q: "Ydy e'n gweithio heb signal?"
+      a: "Nac ydy. Mae Side Badger angen cysylltiad, felly ychwanegwch y costau unwaith y byddwch yn ôl ar wifi."
+    - q: "Oes angen i bawb osod rhywbeth?"
+      a: "Nac oes. Mae'n rhedeg yn y porwr. Anfonwch y ddolen wahodd ac mae pobl yn ymuno o'u ffonau."
+    - q: "Pa gyfradd gyfnewid mae'n ei defnyddio?"
+      a: "Cyfradd gyfnewid gyfredol pan fyddwch yn rhoi'r gost, neu eich un chi os cawsoch un wahanol. Mae'r gyfradd yn sefydlog pan gaiff y gost ei chadw, felly nid yw hen gostau byth yn cael eu hailbrisio."
+    - q: "Allwn ni rewi'r grŵp ar ôl y daith?"
+      a: "Gallwch. Gall gweinyddwr gloi'r grŵp fel bod y rhifau'n aros yn eu lle."
+    - q: "Oes terfyn ar symiau?"
+      a: "Oes. 999,999.99 fesul cost, yn ei harian cyfred ei hun."

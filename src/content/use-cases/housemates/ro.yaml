@@ -1,0 +1,110 @@
+# P34b: pagina în română pentru cazul colegilor de casă (brief: tasks/seo-site-expansion-plan.md, "Housemates").
+translatedFrom: "e6b829e6"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+meta:
+  title: "Împarte facturile casei cu colegii de casă"
+  description: "Împarte chiria după mărimea camerei, împarte energia și alimentele egal și vezi cine cui datorează în fiecare lună. Un mod gratuit prin care colegii de casă țin evidența."
+h1: "Împarte facturile casei cu colegii de casă"
+navLabel: "Colegi de casă"
+lead: "Pentru colegul care cumpără hârtia igienică și pentru colegii care nu văd niciodată asta întâmplându-se. Side Badger ține o singură evidență a chiriei, a facturilor și a cumpărăturilor pentru **colegi de casă, de apartament și de cameră**, așa că nimeni nu trebuie să alerge după nimeni, iar frigiderul poate redeveni doar un frigider."
+cta:
+  heading: "Începe cu propria ta casă"
+  body: "Creează un cont, fă un grup pentru casă și trimite tuturor linkul de invitație. Facturile din această lună pot intra diseară."
+  button: "Creează un cont gratuit"
+scenario:
+  heading: "Pune casa la punct"
+  body: "Fă un grup pentru casă, alege numele sub care vrei să te vadă ceilalți și invită pe toată lumea cu un link sau un cod QR. Grupul poate fi deschis, unde toți adaugă și editează, sau administrat, unde membrii noi au nevoie de aprobarea unui administrator și doar creatorii și administratorii pot schimba cheltuielile, ceea ce se potrivește colegului care ține contabilitatea. Cine vrea doar să urmărească cifrele poate fi vizualizator, care vede tot și nu schimbă nimic. Toți văd o cheltuială nouă imediat, așa că „o adaug mai târziu” are mai puține locuri unde să se ascundă."
+sections:
+  - heading: "Chiria și facturile"
+    body: "Chiria rareori se împarte la patru, pentru că dormitoarele nu sunt egale. Împarte-o procentual, ca încăperea mare să plătească mai mult, iar debaraua cu fereastră mai puțin. Procentele trebuie să dea împreună 100. Facturile pe care le folosește toată lumea primesc o împărțire egală, iar un coleg care n-a avut nicio legătură cu o cheltuială poate fi exclus din ea. Când o împărțire egală lasă un ban în plus, acesta ajunge la o persoană aleasă la întâmplare. Nu există facturi recurente, așa că în fiecare lună copiezi chiria lunii trecute, schimbi data și mergi mai departe."
+  - heading: "Cumpărăturile comune"
+    body: "Ține lista de cumpărături comune în același grup cu notele de plată pentru cumpărături și bifează articolele pe măsură ce ajung în coș. Cine face cumpărăturile adaugă totalul chitanței ca o cheltuială și o împarte egal, sau doar între oamenii care vor mânca acel lucru. Cine tot cumpără laptele de ovăz pe care nu-l bea nimeni altcineva rămâne treaba casei, dar măcar lista de cheltuieli va fi corectă. Permisiunile grupului hotărăsc cine poate crea și edita liste. Pune laolaltă chiria, facturile și cumpărăturile și obții o lună ca cea de mai jos, într-o casă de patru: Jo plătește 2.000 £ chirie, împărțită 30%, 25%, 25% și 20% după mărimea camerei, apoi Kwame plătește 120 £ pentru energie, Lena 40 £ pentru internet și Matt 80 £ pentru alimente, fiecare împărțit egal. Lui Jo i se datorează în final 1.340 £, iar Side Badger sugerează trei plăți, toate către Jo."
+  - heading: "Moduri corecte de a împărți costurile casei"
+    items:
+      - "**Egal** se potrivește la ce folosește toată lumea cam la fel, precum internetul, produsele de curățenie și cumpărăturile comune. E rapid și nimeni nu trebuie să se certe pe socoteli."
+      - "**După mărimea camerei** se potrivește la chirie, pentru că și camerele, și ce sunt oamenii dispuși să plătească pentru ele diferă. Stabiliți procentele o dată, când se mută cineva, și refolosiți-le în fiecare lună."
+      - "**După folosire** se potrivește la facturile la care cineva folosește clar mai mult, cum ar fi încălzirea unui birou de acasă sau un cont de streaming pe care îl văd doar doi oameni. Exclude oamenii care n-au avut nicio legătură cu el sau introdu sume exacte pentru fiecare persoană."
+      - "Oricare ai alege, stabilește-o înainte de prima factură, nu după prima ceartă, și scrie regula undeva unde o vede toată casa."
+  - heading: "Când cineva se mută"
+    body: "Se achită mai întâi. Nimeni nu poate părăsi un grup cât timp datorează sau i se datorează bani, așa că cel care pleacă plătește sau e plătit, voi înregistrați, apoi el pleacă. Păstrează grupul pentru colegii care rămân și invită-l pe cel nou cu un link. Când casa însăși s-a terminat, un administrator poate bloca grupul, ca cifrele să rămână pe loc, sau îl poate închide definitiv, ceea ce îl face inaccesibil pentru toți, așa că fă asta doar când nimeni nu mai are nevoie de istoric."
+exampleAfter: 2
+example:
+  heading: "Cine cui datorează luna aceasta"
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: "Chirie"
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: "Energie"
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: "Internet"
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: "Alimente"
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: "Funcțiile pe care le folosește o casă"
+faq:
+  heading: "Întrebări"
+  items:
+    - q: "Se poate repeta chiria automat?"
+      a: "Nu, nu există facturi recurente. Copiază chiria lunii trecute în câteva atingeri, schimbă data și gata."
+    - q: "Putem împărți după mărimea camerei?"
+      a: "Da, procentual. Dă fiecărui coleg o parte care reflectă camera lui, atâta timp cât părțile dau împreună 100. [Împărțirea cheltuielilor](page:feature/split-expenses) explică celelalte moduri de a împărți."
+    - q: "Ce se întâmplă dacă un coleg se mută datorând bani?"
+      a: "Nu poate părăsi grupul până nu s-a achitat, pentru că nimeni nu poate pleca cât timp datorează sau i se datorează bani. Cifrele rămân corecte până când toți sunt chit."
+    - q: "Plătește Side Badger facturile?"
+      a: "Nu. Ține evidența și sugerează o listă scurtă de plăți. Vă plătiți unii altora cum preferați, apoi înregistrați, așa cum explică [decontarea](page:feature/settle-up)."
+    - q: "Poate un coleg să țină contabilitatea?"
+      a: "Da. Fă-l administrator și folosește un grup gestionat, în care membrii noi au nevoie de aprobare și doar creatorii și administratorii pot schimba cheltuielile."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.2.label

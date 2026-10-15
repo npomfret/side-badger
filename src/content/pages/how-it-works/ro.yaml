@@ -1,0 +1,108 @@
+translatedFrom: "fd23c99b"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+meta:
+  title: "Cum funcționează Side Badger | Împarte cheltuielile de grup în cinci pași"
+  description: "Creează un grup, invită oameni, adaugă cheltuieli și achită-te. Vezi ce se întâmplă între „cineva a plătit” și „suntem chit”, cu un exemplu calculat."
+h1: "Cum funcționează Side Badger"
+navLabel: "Cum funcționează"
+lead: "Ce se întâmplă între „cineva a plătit” și „suntem chit”? Cinci pași, fără foaie de calcul și cu un bursuc care e mai mult decorativ. Iată tot drumul, de la primul grup până la ultima plată înregistrată. Pentru detalii despre oricare pas, vezi [împărțirea cheltuielilor](page:feature/split-expenses) și [decontarea](page:feature/settle-up)."
+cta:
+  heading: "De la „plătesc eu asta” la „suntem chit”"
+  body: "Creează un cont gratuit, începe un grup și adaugă prima cheltuială. Bursucul nu judecă chitanța."
+  button: "Creează un cont gratuit"
+steps:
+  - title: "Creează un grup"
+    body: "Fă câte un grup pentru fiecare casă, excursie sau eveniment, ca chiria să nu ajungă în aceeași listă cu darul de nuntă. Dă-i un nume, alege numele sub care te văd ceilalți și, dacă vrei, limitează valutele pe care le acceptă. Panoul tău arată apoi toate grupurile, și unde stai în fiecare, pe un singur ecran."
+    shot: S02
+    shotAlt: "Dialogul de creare a grupului, cu secțiunea de restricții de valută deschisă"
+  - title: "Invită-ți oamenii"
+    body: "Trimite un link de alăturare sau arată un cod QR și stabilește cât timp e valabil, de la 15 minute până la 5 zile. Fiecare om care se alătură are nevoie de un cont gratuit și de un e-mail verificat, iar un grup poate avea până la 50 de persoane. Dacă vrei să alegi cine intră, activează aprobarea și un administrator lasă fiecare persoană să intre."
+    shot: S03
+    shotAlt: "Dialogul de invitație, la fila de link, cu un cod QR și opțiunile de expirare"
+  - title: "Adaugă cheltuielile pe măsură ce apar"
+    body: "Spune cine a plătit, cât și pentru cine. Împarte egal, pe sume exacte sau procentual și exclude orice persoană care nu a fost implicată. Adaugi cheltuiala și toți o văd imediat, împreună cu ce s-a schimbat și cine a schimbat."
+    shot: S05
+    shotAlt: "Formularul de cheltuială cu o împărțire procentuală, care împarte chiria după mărimea camerei"
+  - title: "Urmărește soldurile"
+    body: "Side Badger ține un sold curent pentru fiecare valută, așa că vezi dintr-o privire cine cui datorează. În loc să lase pe toată lumea să descurce o rețea de datorii mici, sugerează o listă scurtă de plăți care achită grupul."
+    shot: S10
+    shotAlt: "Ecranul de solduri cu datorii simplificate în două valute, cu Arată tot activat"
+  - title: "Achită-te în afara aplicației, înregistrează în interior"
+    body: "Side Badger nu mută niciodată bani. Plătiți-vă unii altora cum preferați, apoi înregistrați plata, ca soldurile să se actualizeze, iar ecranul fiecăruia se schimbă fără reîmprospătare. „A achita” înseamnă pur și simplu că soldurile arată zero. Nimeni nu poate părăsi un grup cât timp datorează sau i se datorează bani, așa că cine se îndreaptă spre ieșire se achită mai întâi."
+    shot: S11
+    shotAlt: "Formularul de plată cu butoanele de decontare rapidă și mesajul pentru plata parțială"
+requirements:
+  heading: "Ce îți trebuie"
+  items:
+    - "Un cont gratuit. Ai nevoie doar de o adresă de e-mail și o parolă, iar e-mailul îl verifici înainte de a putea adăuga ceva."
+    - "Să ai 18 ani sau mai mult."
+    - "Un browser modern pe telefon sau pe computer și o conexiune. Side Badger nu e o aplicație din magazin de aplicații și nu funcționează offline."
+    - "Opțional, un loc pe ecranul de pornire. Nu ai nevoie de magazinul de aplicații, pentru că poți adăuga Side Badger pe ecranul de pornire sau în dock și se deschide ca o aplicație."
+example:
+  heading: "Trei prieteni după o seară în oraș"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: Cină
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: Taxi
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: "39 de limbi și construit pentru mai mulți oameni"
+    body: "Folosește Side Badger în 39 de limbi, inclusiv araba, persana și urdu, scrise de la dreapta la stânga. Fiecare om din grup își poate alege limba, așa că pagina grupului poate fi în arabă pentru unul și în engleză pentru următorul. E construit și cu gândul la cei care folosesc tastatura sau cititorul de ecran, iar culorile membrilor vin cu modele, așa că nu trebuie să deosebești verdele de roșu."
+faq:
+  heading: "Întrebări"
+  items:
+    - q: "Are fiecare nevoie de un cont?"
+      a: "Da, unul gratuit. Fiecare persoană își verifică e-mailul înainte de a adăuga ceva."
+    - q: "Există o aplicație?"
+      a: "Rulează în browser și o poți adăuga pe ecranul de pornire sau în dock, ca să se deschidă ca o aplicație. Nu există o versiune din magazinul de aplicații și nici mod offline."
+    - q: "Mută Side Badger bani?"
+      a: "Nu. Ține evidența și sugerează plăți, iar voi vă plătiți cum preferați. Apoi înregistrați plata. Vezi [decontarea](page:feature/settle-up)."
+    - q: "Poate cineva să plece datorând bani?"
+      a: "Nu. Nimeni nu poate părăsi un grup cât timp datorează sau i se datorează bani, așa că se achită mai întâi."
+    - q: "Câți oameni pot intra într-un grup?"
+      a: "Până la 50 de persoane într-un grup. Invită-i cu un link sau cu un cod QR și activează aprobarea dacă vrei ca un administrator să lase fiecare persoană să intre."
+    - q: "Dar excursiile cu mai multe valute?"
+      a: "Soldurile se țin separat pentru fiecare valută. Vezi [mai multe valute](page:feature/multiple-currencies)."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.expenses.1.label

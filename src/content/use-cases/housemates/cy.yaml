@@ -1,0 +1,108 @@
+translatedFrom: "e6b829e6"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+meta:
+  title: "Rhannu biliau'r cartref gyda chyd-letywyr"
+  description: "Rhannwch y rhent yn ôl maint ystafell, rhannwch ynni a nwyddau bwyd yn gyfartal, a gweld pwy sy'n ddyledus i bwy bob mis. Ffordd am ddim i gyd-letywyr gadw'r cyfrif."
+h1: "Rhannu biliau'r cartref gyda chyd-letywyr"
+navLabel: "Cyd-letywyr"
+lead: "I'r cyd-letywr sy'n prynu'r papur toiled, a'r cyd-letywyr sydd byth yn gweld hynny'n digwydd. Mae Side Badger yn cadw un cyfrif parhaus o'r rhent, y biliau a'r siopa ar gyfer **cyd-letywyr a chyd-denantiaid**, fel nad oes rhaid i neb fynd ar ôl neb a gall yr oergell fynd yn ôl i fod yn oergell yn unig."
+cta:
+  heading: "Cychwyn gyda'ch tŷ eich hun"
+  body: "Creu cyfrif, gwneud grŵp ar gyfer y tŷ ac anfon y ddolen wahodd at bawb. Gall biliau'r mis hwn fynd i mewn heno."
+  button: "Creu cyfrif am ddim"
+scenario:
+  heading: "Sefydlu'r tŷ"
+  body: "Gwnewch grŵp ar gyfer y tŷ, dewiswch yr enw rydych am i bobl ei weld ynddo, a gwahoddwch bawb gyda dolen neu god QR. Gall y grŵp fod yn agored, lle mae pawb yn ychwanegu ac yn golygu, neu'n rheoledig, lle mae angen cymeradwyaeth gweinyddwr ar aelodau newydd a dim ond crewyr a gweinyddwyr all newid costau, sy'n addas i'r cyd-letywr sy'n cadw'r llyfrau. Gall unrhyw un sydd eisiau gwylio'r rhifau yn unig fod yn wyliwr, sy'n gweld popeth ac nad yw'n newid dim. Mae pawb yn gweld cost newydd ar unwaith, felly mae gan “fe'i hychwanegaf yn nes ymlaen” lai o lefydd i guddio."
+sections:
+  - heading: "Rhent a biliau"
+    body: "Anaml y mae rhent yn rhannu â phedwar, oherwydd nid yw ystafelloedd gwely felly. Rhannwch ef yn ôl canran, fel bod yr ystafell fawr yn talu mwy a'r cwpwrdd â ffenestr yn talu llai. Rhaid i ganrannau adio i 100. Mae biliau y mae pawb yn eu defnyddio yn cael rhaniad cyfartal, a gellir gadael allan gyd-letywr nad oedd yn rhan o gost. Pan fydd rhaniad cyfartal yn gadael ceiniog weddilliol, mae'n mynd i un person ar hap. Does dim biliau cylchol, felly bob mis rydych yn copïo rhent y mis diwethaf, yn newid y dyddiad ac yn bwrw ymlaen."
+  - heading: "Y siopa a rennir"
+    body: "Cadwch y rhestr siopa a rennir yn yr un grŵp â'r biliau siopa, a thiciwch eitemau wrth iddynt gyrraedd y troli. Mae pwy bynnag sy'n gwneud y siopa yn ychwanegu cyfanswm y dderbynneb fel cost ac yn ei rhannu'n gyfartal, neu rhwng y bobl a fydd yn bwyta'r peth yn unig. Pwy sy'n dal i brynu'r llaeth ceirch nad oes neb arall yn ei yfed sy'n dal yn fater i'r tŷ, ond o leiaf bydd rhestr y costau'n gywir. Mae caniatâd y grŵp yn penderfynu pwy all greu a golygu rhestrau. Rhowch y rhent, y biliau a'r siopa at ei gilydd ac fe gewch fis fel yr un isod, mewn tŷ o bedwar: mae Jo yn talu £2,000 o rent, wedi'i rannu 30%, 25%, 25% a 20% yn ôl maint ystafell, yna mae Kwame yn talu £120 am ynni, Lena £40 am y rhyngrwyd a Matt £80 am nwyddau bwyd, pob un wedi'i rannu'n gyfartal. Mae £1,340 yn ddyledus i Jo, ac mae Side Badger yn awgrymu tri thaliad, i gyd i Jo."
+  - heading: "Ffyrdd teg o rannu costau'r cartref"
+    items:
+      - "**Yn gyfartal** sy'n addas i'r hyn mae pawb yn ei ddefnyddio tua'r un faint, fel y rhyngrwyd, nwyddau glanhau a'r siopa cyffredin. Mae'n gyflym, a does dim angen i neb ddadlau am y mathemateg."
+      - "**Yn ôl maint ystafell** sy'n addas i'r rhent, oherwydd mae ystafelloedd yn wahanol, ac felly hefyd yr hyn y mae pobl yn fodlon ei dalu amdanynt. Cytunwch ar y canrannau unwaith, pan fydd rhywun yn symud i mewn, a'u hailddefnyddio bob mis."
+      - "**Yn ôl defnydd** sy'n addas i filiau lle mae un person yn amlwg yn defnyddio mwy, fel bil gwresogi swyddfa gartref neu gyfrif ffrydio dim ond dau berson sy'n ei wylio. Gadewch allan y bobl nad oeddent yn rhan ohono, neu rhowch symiau union ar gyfer pob person."
+      - "Pa un bynnag a ddewiswch, cytunwch arno cyn y bil cyntaf yn hytrach nag ar ôl y ddadl gyntaf, ac ysgrifennwch y rheol i lawr yn rhywle y gall y tŷ cyfan ei gweld."
+  - heading: "Pan fydd rhywun yn symud allan"
+    body: "Maen nhw'n setlo yn gyntaf. All neb adael grŵp tra bo arian yn ddyledus ganddyn nhw neu iddyn nhw, felly mae'r sawl sy'n gadael yn talu neu'n cael ei dalu, rydych yn ei gofnodi, ac yna mae'n mynd. Cadwch y grŵp i fynd ar gyfer y cyd-letywyr sy'n weddill a gwahoddwch y person newydd gyda dolen. Pan fydd y tŷ ei hun wedi gorffen, gall gweinyddwr gloi'r grŵp fel bod y rhifau'n aros yn eu lle, neu ei gau am byth, sy'n ei wneud yn anhygyrch i bawb, felly gwnewch hynny dim ond pan nad oes angen yr hanes ar neb."
+exampleAfter: 2
+example:
+  heading: "Pwy sy'n ddyledus i bwy y mis hwn"
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: "Rhent"
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: "Ynni"
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: "Rhyngrwyd"
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: "Nwyddau bwyd"
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: "Y nodweddion y mae tŷ yn eu defnyddio"
+faq:
+  heading: "Cwestiynau"
+  items:
+    - q: "All rhent ailadrodd yn awtomatig?"
+      a: "Na, does dim biliau cylchol. Copïwch rent y mis diwethaf mewn cwpl o dapiau, newidiwch y dyddiad ac rydych wedi gorffen."
+    - q: "Allwn ni rannu yn ôl maint ystafell?"
+      a: "Gallwch, yn ôl canran. Rhowch gyfran i bob cyd-letywr sy'n adlewyrchu ei ystafell, cyn belled â bod y cyfrannau'n adio i 100. Mae [rhannu treuliau](page:feature/split-expenses) yn trafod y ffyrdd eraill o rannu."
+    - q: "Beth os yw cyd-letywr yn symud allan a dyled arno?"
+      a: "Ni all adael y grŵp nes ei fod wedi setlo, oherwydd all neb adael tra bo arian yn ddyledus ganddo neu iddo. Mae'r rhifau'n aros yn onest nes bod pawb yn sgwâr."
+    - q: "Ydy Side Badger yn talu'r biliau?"
+      a: "Nac ydy. Mae'n cadw'r cyfrif ac yn awgrymu rhestr fer o daliadau. Rydych chi'n talu eich gilydd sut bynnag y dymunwch, yna'n ei gofnodi, fel mae [setlo](page:feature/settle-up) yn esbonio."
+    - q: "All un cyd-letywr gadw'r llyfrau?"
+      a: "Gall. Gwnewch ef yn weinyddwr a defnyddiwch grŵp rheoledig, lle mae angen cymeradwyaeth ar aelodau newydd a dim ond crewyr a gweinyddwyr all newid costau."

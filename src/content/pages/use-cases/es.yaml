@@ -1,0 +1,47 @@
+# Hub de casos de uso (P34h). Las tarjetas salen del h1 y de meta.description de cada página hija;
+# las secciones de abajo añaden un escenario y un resultado de una línea para cada caso de uso.
+translatedFrom: "0532f0d2"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+claims:
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - currency-conversion.group-auto-convert
+  - privacy-posture.no-ads
+meta:
+  title: Side Badger para compañeros de piso, viajes y fiestas
+  description: Divide gastos con compañeros de piso, en viajes en grupo y para fiestas, bodas y regalos colectivos. Mira qué hace Side Badger por cada tipo de grupo.
+h1: Side Badger para tu tipo de grupo
+navLabel: Casos de uso
+lead: Compañeros de piso, vacaciones, despedidas. Elige tu caos y mira cómo lleva la cuenta un grupo como el tuyo.
+intro: Cada grupo divide los gastos un poco distinto. Estas páginas siguen un **escenario realista** desde el primer gasto hasta el último pago registrado, con las cuentas a la vista, para que veas en qué acabaría tu propio grupo.
+cta:
+  heading: ¿Has encontrado tu tipo de grupo?
+  body: Crea una cuenta, empieza un grupo y añade el primer gasto. Lleva un par de minutos.
+  button: Crear una cuenta gratis
+cardsHeading: Elige la situación más parecida a la tuya
+sections:
+  - heading: Viajes en grupo
+    body: Vuelos en libras, una villa en euros y una cena a la que solo fueron tres personas. Configura el grupo para convertir a libras y cuatro amigos en Lisboa acaban con tres pagos, en lugar de seis cuando las monedas se llevan por separado. [Dividir los gastos de un viaje en grupo](page:use-case/group-trips).
+  - heading: Compañeros de piso
+    body: Una persona paga al casero, otra se acuerda de la factura de la luz y nadie se pone de acuerdo sobre quién compró el papel higiénico. Con el alquiler dividido según el tamaño de cada habitación y el resto de facturas a partes iguales, cuatro compañeros de piso acaban el mes con tres pagos, todos para quien pagó el alquiler. [Dividir las facturas de casa entre compañeros de piso](page:use-case/housemates).
+  - heading: Fiestas, bodas y regalos colectivos
+    body: Seis personas votan el regalo, una lo compra y no todo el mundo aporta lo mismo. Un regalo de 150 £ dividido por importes exactos deja cinco pagos para quien lo compró, 120 £ en total. [Dividir los gastos de un evento](page:use-case/events-and-celebrations).
+  - heading: Parejas
+    body: Comparte los gastos aburridos sin convertir la noche de cita en una auditoría trimestral de finanzas. Con el alquiler dividido a 60/40 y la compra a partes iguales, todo se reduce a un solo pago entre los dos.
+  - heading: Mira primero cómo funciona
+    body: Todos los ejemplos de arriba usan los mismos pasos, desde crear un grupo hasta registrar los pagos. [Cómo funciona](page:how-it-works) los recorre, y [precios](page:pricing) dice lo que cuesta, que es nada, sin anuncios y sin límites diarios.
+faq:
+  heading: Preguntas
+  items:
+    - q: ¿Necesita cuenta todo el mundo en el grupo?
+      a: Sí. La gente se une con un enlace o un código QR y una cuenta gratis.
+    - q: ¿Puede Side Badger recoger el dinero?
+      a: No. Pagas como quieras y después registras el pago para que los saldos sigan bien.
+    - q: ¿Tengo que elegir un solo tipo de grupo?
+      a: No. Los casos de uso son ejemplos, no ajustes. Todos los grupos tienen las mismas funciones, así que usa la combinación que mejor te encaje.

@@ -1,0 +1,122 @@
+translatedFrom: "923c938f"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: "Roinn costais i 140 airgeadra, tiontaithe nó coinnithe ar leith"
+  description: "Cuir isteach gach costas san airgeadra inar íoc tú, coinnigh na hiarmhéideanna ar leith nó tiontaigh ar ráta a fheiceann tú agus is féidir leat a athrú, ansin socraigh suas le liosta gearr íocaíochtaí."
+h1: "Roinn costais i 140 airgeadra"
+navLabel: "Ilairgeadraí"
+lead: "Euro, yen, agus an tacsaí sin amháin i mbaht. Glacann Side Badger le gach costas san airgeadra inar íoc tú, coinníonn sé na hiarmhéideanna ceart, agus is féidir leis tiontú nuair is fearr le do ghrúpa socrú uair amháin. Oibríonn sé i 140 airgeadra, agus oireann sé go nádúrtha do [thurais ghrúpa](page:use-case/group-trips)."
+cta:
+  heading: "Tabhair leat do euro, tabhair leat do yen"
+  body: "Cruthaigh cuntas, tosaigh grúpa agus cuir an chéad chostas leis in aon airgeadra a tharla a bheith agat."
+  button: "Cruthaigh cuntas saor in aisce"
+problem:
+  heading: "Cuir isteach é mar a d'íoc tú é"
+  body: "Is annamh a íoctar as turas in aon airgeadra amháin. Cuireadh an t-óstán in áirithe sa bhaile i bpunt, íocadh as an dinnéar i yen, agus bhí caife an aerfoirt in aon airgeadra a d'úsáid an stad idir eitiltí. Is amhlaidh a thréigtear scarbhileoga nuair a chaithfidh tú gach rud a thiontú de láimh sula bhfuil tú in ann é a chlóscríobh isteach. I Side Badger cuireann tú isteach gach costas san airgeadra atá ar an admháil, agus leanann gach suim rialacha a hairgeadra, mar sin níl aon deachúlacha ag an yen agus tá trí cinn ag an dinar. Tagann na hairgeadraí a d'úsáid tú le déanaí ar dtús sa liosta."
+workflow:
+  heading: "Coinnigh airgeadraí ar leith, nó tiontaigh de réir a chéile"
+  steps:
+    - title: "Cuir an costas leis ina airgeadra féin"
+      body: "Roghnaigh an t-airgeadra, clóscríobh an tsuim, abair cé a d'íoc agus cé a roinn é. Níl aon rud eile de dhíth. Is é seo an réamhshocrú, agus coinníonn sé an tsuim bhunaidh díreach mar a chuir tú isteach í."
+      shot: S07
+      shotAlt: "An fhoirm costais le suim yen curtha isteach"
+    - title: "Féach ar iarmhéid do gach airgeadra"
+      body: "Coinnítear iarmhéideanna ar leith in aghaidh an airgeadra, agus faigheann gach ceann a liosta gearr féin d'íocaíochtaí molta. Socraítear punt i bpunt agus yen i yen."
+      shot: S10
+      shotAlt: "An scáileán iarmhéideanna le fiacha simplithe i dhá airgeadra"
+    - title: "Nó tiontaigh, nuair is fearr leis an ngrúpa socrú uair amháin"
+      body: "Roghnaigh airgeadra eile agus tú ag cur an chostais isteach agus is féidir le Side Badger é a thiontú ar ráta malairte reatha, rud is féidir leat a athrú go dtí an ráta a fuair tú i ndáiríre. Téann an tsuim thiontaithe isteach san iarmhéid san airgeadra sin. Is rogha é tiontú a dhéanann an grúpa, ní rud a tharlaíonn taobh thiar de do dhroim."
+options:
+  heading: "Ráta is féidir leat a fheiceáil agus a athrú"
+  items:
+    - title: "Taispeántar an ráta"
+      body: "Nuair a thiontaíonn tú, taispeántar an ráta agus an tsuim thiontaithe ar an bhfoirm, mar sin ní gá d'aon duine uimhir a ghlacadh ar iontaoibh."
+    - title: "Clóscríobh do cheann féin"
+      body: "An bhfuair tú ráta níos fearr ó dheasc airgid thirim, nó ceann níos measa ó aerfort? Cuir an ráta in eagar go dtí an ceann a fuair tú i ndáiríre agus nuashonraítear an tsuim thiontaithe."
+    - title: "Fanann an bunleagan"
+      body: "Fanann an tsuim bhunaidh ar an gcostas, in aice leis an gceann tiontaithe, do dhuine ar bith a fhiafraíonn cad a bhí ann i yen."
+    - title: "Saor in aisce le tiontú"
+      body: "Ní chosnaíonn tiontú tada. Níl aon táille ann as costas a chur isteach in airgeadra eile."
+example:
+  heading: "Ceathrar cairde sa tSeapáin, socraithe ar dhá bhealach"
+  currency: GBP
+  people:
+    - id: ana
+      name: Áine
+    - id: ben
+      name: Eoin
+    - id: chloe
+      name: Clíona
+    - id: dev
+      name: Dónal
+  expenses:
+    - label: "an t-óstán, in áirithe sa bhaile"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "dinnéar sa tSeapáin"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "ticéid traenach"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "iontráil teampaill"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "Airgeadra amháin don ghrúpa ar fad"
+    body: "Más fearr le do ghrúpa gan smaoineamh air, roghnaigh airgeadra grúpa agus tiontaíonn an fhoirm gach costas nua isteach ann, ar ráta is féidir leat a fheiceáil agus a athrú fós. Ní bhaineann sé seo ach le costais nua agus cóipeáilte. Fágtar eagarthóireachtaí agus costais atá ann cheana mar atá siad, mar sin ní athraíonn aon rud atá taifeadta cheana."
+  - heading: "Euro dlite agat, ag íoc i bpunt"
+    body: "Íoctha i yen, ag socrú i bpunt? Ceart go leor. Nuair a thaifeadann tú íocaíocht is féidir leat í a thiontú freisin, ionas gur féidir leis an té atá i bhfiacha in euro íoc i bpunt agus go dtagann an t-iarmhéid euro amach i gceart fós. Íocaigí a chéile ar an gcaoi is fearr libh, ansin taifead é."
+  - heading: "Rialacha don ghrúpa"
+    body: "Cuir teorainn le grúpa leis na hairgeadraí atá á n-úsáid agat i ndáiríre, agus socraigh réamhshocrú ionas go n-osclaíonn an fhoirm ar an gceann ceart. Ní theastaíonn 139 rogha eile in aice leis an mbille dinnéir ó shaoire sa Phortaingéil, agus is dócha go dteastaíonn dhá cheann ó [bhainis thar lear](page:use-case/events-and-celebrations)."
+limits:
+  heading: "Teorainneacha"
+  items:
+    - "Socraítear an ráta nuair a shábhálaítear an costas. Ní athluacháiltear seanchostais choíche."
+    - "Faigheann Side Badger ráta reatha nuair is féidir leis. Ní chinntítear ceann do gach péire, agus is féidir leat an ráta a chlóscríobh tú féin i gcónaí."
+    - "Ní bhaineann tiontú uathoibríoch an ghrúpa ach le costais nua agus cóipeáilte, ní le heagarthóireachtaí ná le costais atá ann cheana."
+    - "Tá uasteorainn 999,999.99 ar gach costas ina airgeadra féin."
+    - "Tá 140 airgeadra ann. Níl airgeadraí cripte ná miotail ina measc."
+    - "Taifeadann Side Badger íocaíochtaí. Ní bhogann sé airgead ná ní mhalartaíonn sé é."
+useCasesHeading: "Cá gcabhraíonn sé seo"
+faq:
+  heading: "Ceisteanna"
+  items:
+    - q: "Cén ráta malairte a úsáideann sibh?"
+      a: "Ráta malairte reatha, a fhaightear nuair a chuireann tú an costas isteach nuair atá ceann ar fáil. Is féidir leat é a athrú go dtí an ráta a fuair tú i ndáiríre, agus nuashonraítear an tsuim thiontaithe."
+    - q: "An n-athluacháiltear seanchostais?"
+      a: "Ní athluacháiltear. Socraítear an ráta nuair a shábhálaítear an costas, mar sin ní imíonn iarmhéid ar strae toisc gur athraigh an margadh."
+    - q: "An dtacaíonn sibh le crypto?"
+      a: "Ní thacaímid. Tá 140 airgeadra ann, agus níl airgeadraí cripte ina measc."
+    - q: "Cén fáth nach féidir liom 2,000,000 rupiah a chur isteach?"
+      a: "Tá uasteorainn 999,999.99 ar gach costas ina airgeadra féin. Cuir isteach in airgeadra eile é agus tiontaigh, nó roinn ina dhá chostas é."
+    - q: "An gcosnaíonn tiontú rud ar bith?"
+      a: "Ní chosnaíonn. Tá tiontú saor in aisce, cosúil le gach rud eile i Side Badger. Féach [praghsáil](page:pricing)."
+    - q: "An gcaithfidh mé tiontú?"
+      a: "Ní chaithfidh. Fanann airgeadraí ar leith mura roghnaíonn tusa nó do ghrúpa tiontú, agus faigheann gach airgeadra a liosta gearr féin d'íocaíochtaí."

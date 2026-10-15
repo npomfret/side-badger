@@ -1,0 +1,111 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: checked
+  checker: "T3-check"
+  date: "2026-10-15"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+meta:
+  title: Divide los gastos de un viaje en grupo, en 140 monedas
+  description: Lleva la cuenta de quién pagó qué en un viaje en grupo, introduce los gastos en la moneda local, conviértelos o no, y salda cuentas una sola vez al final. Gratis, en tu navegador.
+h1: Divide los gastos de un viaje en grupo, en 140 monedas
+navLabel: Viajes en grupo
+lead: Apunta la villa, los taxis y esa ronda de cócteles que nadie recuerda haberse ofrecido a pagar. Side Badger lleva la cuenta mientras estáis fuera, [maneja libras, euros y otras 138 monedas](page:feature/multiple-currencies) y te da una [lista corta de pagos](page:feature/settle-up) cuando volváis a casa.
+cta:
+  heading: Cuentas de vacaciones, hechas antes de que se vaya el moreno
+  body: Crea un grupo, envía el enlace de invitación a la gente del viaje y añade los gastos según ocurren.
+  button: Crear una cuenta gratis
+scenario:
+  heading: Todo el mundo pagó algo, en alguna moneda
+  body: Alguien reservó los vuelos, otra persona puso la villa en una tarjeta y una tercera pagó la cena en efectivo. Al tercer día nadie sabe quién va por delante. La pregunta es sencilla, aunque la respuesta suele vivir en una hoja de cálculo que nadie quiere abrir. ¿Quién pagó qué, en qué moneda, y cómo se salda todo el mundo de una vez al final?
+sections:
+  - heading: Antes de ir
+    body: Pon la lista corta de villas a votación, de forma anónima si quieres, para que la decisión sea del grupo y no de quien se enfurruñe más tiempo. Después ten la lista de la compra compartida junto a las facturas de la compra, para que nadie compre tres tubos de crema solar y ningún adaptador de enchufe.
+  - heading: Mientras estáis fuera
+    body: Añade cada gasto según ocurre, en la moneda en la que lo pagaste. Haz una foto del recibo y Side Badger rellena el total, la fecha y el lugar para que lo revises; el servicio de IA de Google lee las imágenes de los recibos. Convierte el importe con un tipo de cambio actual, que puedes cambiar por el tipo que te aplicaron de verdad, y el importe original se queda en el gasto. O deja los euros como euros y decide después. Un grupo también puede elegir una moneda, y los gastos nuevos se convierten a ella automáticamente.
+  - heading: No todo el mundo hizo de todo
+    body: Algunas personas se saltaron la cena, otras no subieron al barco. Déjalas fuera de los gastos en los que no participaron y divide el resto [a partes iguales, por importes exactos o por porcentaje](page:feature/split-expenses). Nadie paga la parte del viaje que pasó durmiendo.
+  - heading: Salda cuentas al volver a casa
+    body: Side Badger sugiere una lista corta de pagos que deja saldado a todo el mundo. Pagaos como queráis y después registradlo. Con varias monedas, mantén cada una por separado o convierte sobre la marcha; el ejemplo de Lisboa de abajo muestra ambas.
+  - heading: Despedidas de soltero y soltera
+    body: Un fin de semana fuera con un invitado de honor necesita un poco más de gestión. Haz un grupo administrado, en el que los administradores aprueban a los nuevos miembros y solo quien creó cada gasto y los administradores pueden cambiar gastos. Usa importes exactos para la parte del invitado de honor, limita el grupo a las monedas que realmente usáis y bloquea el grupo cuando termine para que los números no se muevan.
+exampleAfter: 4
+example:
+  heading: Cuatro amigos en Lisboa
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: Vuelos
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: Villa
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: Cena
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: Paseo en barco
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: En qué se apoya un viaje
+faq:
+  heading: Preguntas
+  items:
+    - q: ¿Se puede dejar fuera a quien se saltó la cena?
+      a: Sí. Elige quién participó en cada gasto y solo esas personas lo pagan.
+    - q: ¿Funciona sin cobertura?
+      a: No. Side Badger necesita conexión, así que añade los gastos cuando vuelvas a tener wifi.
+    - q: ¿Tiene que instalar algo todo el mundo?
+      a: No. Funciona en el navegador. Envía el enlace de invitación y la gente se une desde el móvil.
+    - q: ¿Qué tipo de cambio usa?
+      a: Un tipo de cambio actual al introducir el gasto, o el tuyo si te aplicaron otro. El tipo queda fijado al guardar el gasto, así que los gastos antiguos nunca se revalorizan.
+    - q: ¿Podemos congelar el grupo después del viaje?
+      a: Sí. Un administrador puede bloquear el grupo para que los números no se muevan.
+    - q: ¿Hay un límite en los importes?
+      a: Sí. 999.999,99 por gasto, en su propia moneda.

@@ -28,17 +28,17 @@ meta:
   description: "Haltu utan um hver greiddi hvað í hópferð, skráðu kostnað í gjaldmiðli staðarins, umreiknaðu hann eða ekki, og gerðu upp í einu lagi í lokin. Ókeypis, í vafranum þínum."
 h1: "Skiptu kostnaði við hópferð, í 140 gjaldmiðlum"
 navLabel: "Hópferðir"
-lead: "Haltu utan um villuna, leigubílinn og kokteilaumferðina sem enginn man eftir að hafa boðist til að kaupa. Side Badger heldur utan um stöðuna á meðan þú ert í burtu, [ræður við pund, evrur og 138 aðra gjaldmiðla](page:feature/multiple-currencies) og gefur þér [stuttan lista yfir greiðslur](page:feature/settle-up) þegar þú kemur heim."
+lead: "Haltu utan um orlofshúsið, leigubílinn og kokteilaumferðina sem enginn man eftir að hafa boðist til að kaupa. Side Badger heldur utan um stöðuna á meðan þú ert í burtu, [ræður við pund, evrur og 138 aðra gjaldmiðla](page:feature/multiple-currencies) og gefur þér [stuttan lista yfir greiðslur](page:feature/settle-up) þegar þú kemur heim."
 cta:
   heading: "Fríreikningurinn gerður áður en sólbrúnkan dofnar"
   body: "Stofnaðu hóp, sendu boðstengilinn til fólksins í ferðinni og bættu við kostnaði um leið og hann fellur til."
   button: "Stofna ókeypis aðgang"
 scenario:
   heading: "Allir greiddu eitthvað, í einhverjum gjaldmiðli"
-  body: "Einhver bókaði flugin, annar setti villuna á kort og sá þriðji borgaði kvöldverðinn með reiðufé. Á degi þrjú veit enginn hver er á undan. Spurningin er einföld, jafnvel þótt svarið búi venjulega í töflureikni sem enginn vill opna. Hver greiddi hvað, í hvaða gjaldmiðli, og hvernig gera allir upp í einu lagi í lokin?"
+  body: "Einhver bókaði flugin, annar setti orlofshúsið á kort og sá þriðji borgaði kvöldverðinn með reiðufé. Á degi þrjú veit enginn hver er á undan. Spurningin er einföld, jafnvel þótt svarið búi venjulega í töflureikni sem enginn vill opna. Hver greiddi hvað, í hvaða gjaldmiðli, og hvernig gera allir upp í einu lagi í lokin?"
 sections:
   - heading: "Áður en þið farið"
-    body: "Berðu villuúrvalið undir atkvæði, nafnlaust ef þú vilt, svo ákvörðunin tilheyri hópnum en ekki þeim sem fýlir lengst. Hafðu svo sameiginlega innkaupalistann við hlið innkaupareikninganna, svo enginn kaupi þrjú sólarvarnarkrem og engan millistykki."
+    body: "Berðu orlofshúsaúrvalið undir atkvæði, nafnlaust ef þú vilt, svo ákvörðunin tilheyri hópnum en ekki þeim sem fýlir lengst. Hafðu svo sameiginlega innkaupalistann við hlið innkaupareikninganna, svo enginn kaupi þrjú sólarvarnarkrem og ekkert millistykki."
   - heading: "Á meðan þið eruð í burtu"
     body: "Bættu við hverjum kostnaði um leið og hann fellur til, í gjaldmiðlinum sem þú greiddir í. Taktu mynd af kvittuninni og Side Badger fyllir út heildarupphæð, dagsetningu og stað fyrir þig til að yfirfara; myndir af kvittunum eru lesnar af gervigreindarþjónustu Google. Umreiknaðu upphæðina á núverandi gengi, sem þú getur breytt í gengið sem þú fékkst í raun, og upphaflega upphæðin helst á útgjaldinu. Eða láttu evrurnar vera evrur og ákveddu síðar. Hópur getur líka valið einn gjaldmiðil og ný útgjöld umreiknast sjálfkrafa í hann."
   - heading: "Ekki gerðu allir allt"
@@ -66,7 +66,7 @@ example:
       amount: 480
       split:
         method: equal
-    - label: "Villa"
+    - label: "Orlofshús"
       payer: ben
       amount: 900
       currency: EUR

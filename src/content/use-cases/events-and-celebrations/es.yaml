@@ -1,0 +1,90 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: machine
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+meta:
+  title: Divide los gastos de fiestas, bodas y regalos colectivos
+  description: Comparte los gastos de una fiesta, una boda o un regalo colectivo cuando cada persona aporta una cantidad distinta. Vota el plan, divide por importes exactos y mira quién debe a quién.
+h1: Divide los gastos de fiestas, bodas y regalos colectivos
+navLabel: Eventos y celebraciones
+lead: Divide señales, decoración y paraguas de emergencia. El plan de mesas, mejor para alguien más valiente. Side Badger guarda en un solo sitio **quién aportó qué**, para que la persona que organiza también pueda disfrutar de la fiesta.
+cta:
+  heading: Empieza con la próxima celebración
+  body: Crea una cuenta, haz un grupo para el evento y envía el enlace de invitación. Side Badger es gratis, sin anuncios y sin límites diarios.
+  button: Crear una cuenta gratis
+scenario:
+  heading: Todo el mundo aporta, no siempre lo mismo
+  body: Alguien paga la señal del local, otra persona compra la tarta y una tercera pone el regalo colectivo en su propia tarjeta. Algunos invitados van a todo y otros solo a la cena. Llevar una cuenta justa de eso en un chat es un trabajo que nadie ha pedido. Un grupo de Side Badger lo guarda todo, sea cual sea la mezcla de importes, y muestra a cada persona lo que debe o lo que le deben. Consulta [cómo funciona](page:how-it-works) para lo básico, o sigue leyendo para ver un evento.
+sections:
+  - heading: Decidid juntos
+    body: Antes de mover dinero, somete la decisión a una **encuesta**. Añade hasta 10 opciones, como dos locales o tres ideas de regalo, y deja que todos voten. Puedes ocultar quién votó qué, para que cada opción tenga una oportunidad justa, y el ganador aparece cuando se cierra la encuesta. Nadie tiene que subir cuarenta mensajes para averiguar qué se decidió.
+  - heading: Quién entra en qué
+    body: No todo el mundo paga lo mismo, ni participa en todos los gastos. Divide un gasto a partes iguales, por porcentaje o por **importes exactos**, para que la parte de cada persona sea la cifra que acordasteis. Deja fuera a quien no participó, como los invitados que se saltaron la cena o los amigos que no se unieron al regalo. Cada gasto tiene un solo pagador, y todos los demás de la división le deben su parte. Los detalles están en la página de [dividir gastos](page:feature/split-expenses).
+  - heading: Guarda los papeles
+    body: Añade notas a un gasto, como lo que cubría. Los comentarios se quedan **junto al gasto** del que tratan, así que la pregunta «¿la tarta fueron £45 o £54?» y su respuesta viven en el mismo sitio. Los comentarios admiten 500 caracteres, de sobra para una pregunta sobre una señal.
+  - heading: Controles para quien organiza
+    body: La colaboración abierta deja que cualquier miembro añada y edite gastos, lo que está bien para un regalo pequeño. Para una boda o una fiesta más grande, elige el ajuste preestablecido de **grupo gestionado**. Los administradores aprueban a cada miembro nuevo y solo quienes lo crearon y los administradores pueden cambiar gastos. Invita a la gente con un enlace o un código QR; con la aprobación activada, un administrador deja entrar a cada persona, así que la lista de invitados sigue siendo la lista de invitados. Cuando termina el evento, bloquea el grupo para que los números no se muevan.
+  - heading: Salda cuentas después de la fiesta
+    body: Cuando llega la última factura, los saldos muestran **quién debe a quién**, y Side Badger sugiere una lista corta de pagos que deja saldado a todo el mundo. Pagaos como queráis y después registra el pago en el grupo. Side Badger nunca mueve dinero, así que el grupo lleva la cuenta mientras las transferencias se hacen en vuestras propias apps del banco. La página de [saldar cuentas](page:feature/settle-up) muestra cómo una maraña se convierte en una lista corta.
+exampleAfter: 5
+example:
+  heading: 'Un regalo colectivo: seis votos a favor, £150 por repartir'
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: Regalo colectivo
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: Las funciones que usa esto
+faq:
+  heading: Preguntas
+  items:
+    - q: ¿Pueden los invitados ver el grupo sin unirse?
+      a: No. La gente se une con un enlace o un código QR y una cuenta gratis, así que puede ver el grupo una vez dentro.
+    - q: ¿Puede Side Badger recoger el dinero?
+      a: No. Side Badger lleva la cuenta y nunca mueve dinero. Pagaos como queráis y después registrad el pago. Es gratis, sin anuncios y sin límites diarios; consulta [precios](page:pricing).
+    - q: ¿Pueden ser anónimos los votos?
+      a: Sí. Al crear una encuesta puedes ocultar quién votó qué. Los ajustes solo se pueden cambiar antes del primer voto.
+    - q: ¿Puede cada persona aportar una cantidad distinta?
+      a: Sí. Divide un gasto por importes exactos, para que la parte de cada persona sea la cifra que acordasteis, o deja fuera a quien no participó.
+    - q: ¿Puede quien organiza llevar las cuentas?
+      a: Sí. Usa el ajuste preestablecido de grupo gestionado, para que solo quienes lo crearon y los administradores cambien gastos y los administradores aprueben a los miembros nuevos.

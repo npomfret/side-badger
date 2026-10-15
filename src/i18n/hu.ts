@@ -147,7 +147,7 @@ export default {
   'home.trust.privacyLink': 'Olvasd el az adatvédelmi szabályzatot',
   'home.trust.sellingBody': 'Nem adjuk el, nem adjuk bérbe és nem is cseréljük őket, és egy csoportot csak a tagjai láthatnak.',
   'home.trust.sellingTitle': 'Nem adjuk el a személyes adataidat',
-  'home.trust.title': 'A magánszféráddal a fejünkben építve',
+  'home.trust.title': 'A magánszférád szem előtt tartásával készült',
   'home.trust.trackersBody': 'Nincsenek harmadik féltől származó elemző vagy hirdetési nyomkövetők, csak a bejelentkezve maradáshoz szükséges sütik.',
   'home.trust.trackersTitle': 'Nincsenek hirdetési és elemző nyomkövetők',
   'home.worlds.body': 'Lakótársak, párok, utazások és ünnepek. A listák, a szavazások és a hozzászólások a pénz mellett vannak, a számolás pedig mindegyiknél ugyanúgy működik.',

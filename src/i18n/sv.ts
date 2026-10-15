@@ -145,7 +145,7 @@ export default {
   'home.trust.adsBody': 'Inget att stänga ner, inget att scrolla förbi.',
   'home.trust.adsTitle': 'Inga annonser',
   'home.trust.privacyLink': 'Läs integritetspolicyn',
-  'home.trust.sellingBody': 'Vi säljer, hyr ut eller byter inte bort dem, och bara medlemmar i en grupp kan se den gruppen.',
+  'home.trust.sellingBody': 'Vi varken säljer, hyr ut eller byter bort dem, och bara medlemmar i en grupp kan se den gruppen.',
   'home.trust.sellingTitle': 'Vi säljer inte dina personuppgifter',
   'home.trust.title': 'Byggt med din integritet i åtanke',
   'home.trust.trackersBody': 'Inga analys- eller annonsspårare från tredje part, och bara de cookies som behövs för att hålla dig inloggad.',

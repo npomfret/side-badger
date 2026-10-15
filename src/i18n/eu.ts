@@ -150,7 +150,7 @@ export default {
   'home.trust.title': 'Zure pribatutasuna kontuan hartuta eraikia',
   'home.trust.trackersBody': 'Hirugarrenen analitika- edo iragarki-jarraipen-tresnarik ez, eta saioa irekita mantentzeko behar diren cookie-ak bakarrik.',
   'home.trust.trackersTitle': 'Iragarkien edo analitiken jarraipen-tresnarik ez',
-  'home.worlds.body': 'Etxekideak, bikoteak, bidaiak eta ospakizunak. Zerrendak, inkestak eta iruzkinak dirua ondoan daude, eta kontuek berdin funtzionatzen dute guztientzat.',
+  'home.worlds.body': 'Etxekideak, bikoteak, bidaiak eta ospakizunak. Zerrendak, inkestak eta iruzkinak diruaren ondoan daude, eta kontuek berdin funtzionatzen dute guztientzat.',
   'home.worlds.celebrations.body': 'Banatu fidantzak, apaingarriak eta larrialdiko aterkiak. Eserleku-plana ausartagoren baten esku utzi.',
   'home.worlds.celebrations.propOne': 'Aretoaren fidantza',
   'home.worlds.celebrations.propTwo': 'Iruzkin bat, eta 🎉',

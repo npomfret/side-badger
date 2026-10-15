@@ -150,7 +150,7 @@ export default {
   'home.trust.title': 'Zbudowane z myślą o twojej prywatności',
   'home.trust.trackersBody': 'Bez zewnętrznych trackerów analitycznych i reklamowych, tylko pliki cookie potrzebne do utrzymania logowania.',
   'home.trust.trackersTitle': 'Bez trackerów reklamowych i analitycznych',
-  'home.worlds.body': 'Współlokatorzy, pary, wyjazdy i święta. Listy, ankiety i komentarze są obok pieniędzy, a rachunki działają dla wszystkich tak samo.',
+  'home.worlds.body': 'Współlokatorzy, pary, wyjazdy i uroczystości. Listy, ankiety i komentarze są obok pieniędzy, a rachunki działają dla wszystkich tak samo.',
   'home.worlds.celebrations.body': 'Podziel zaliczki, dekoracje i awaryjne parasole. Plan rozsadzenia gości zostaw komuś odważniejszemu.',
   'home.worlds.celebrations.propOne': 'Zaliczka za lokal',
   'home.worlds.celebrations.propTwo': 'Komentarz i 🎉',

@@ -145,7 +145,7 @@ export default {
   'home.trust.adsBody': 'Nav ko aizvērt, nav ko ritināt garām.',
   'home.trust.adsTitle': 'Bez reklāmām',
   'home.trust.privacyLink': 'Lasīt privātuma politiku',
-  'home.trust.sellingBody': 'Mēs tos nepārdodam, neiznomājam un nemainām, un grupu var redzēt tikai tās dalībnieki.',
+  'home.trust.sellingBody': 'Mēs tos nepārdodam, neiznomājam un netirgojamies ar tiem, un grupu var redzēt tikai tās dalībnieki.',
   'home.trust.sellingTitle': 'Mēs nepārdodam jūsu personas datus',
   'home.trust.title': 'Veidots, domājot par jūsu privātumu',
   'home.trust.trackersBody': 'Nekādu trešo pušu analītikas vai reklāmu izsekotāju, un tikai tās sīkdatnes, kas vajadzīgas, lai jūs paliktu pierakstījies.',

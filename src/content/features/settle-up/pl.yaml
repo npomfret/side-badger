@@ -1,0 +1,110 @@
+translatedFrom: "1b51f540"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: "Rozliczaj się w mniejszej liczbie płatności | Side Badger"
+  description: "Zobacz, kto komu jest winien w twojej grupie, dostań krótką listę płatności, która rozlicza wszystkich, i rejestruj każdą płatność na bieżąco. Za darmo."
+h1: "Rozliczaj się w mniejszej liczbie płatności"
+navLabel: "Rozliczanie"
+lead: "Side Badger prowadzi bieżące saldo każdego w grupie i podpowiada krótką listę płatności, która je rozlicza. Płacicie sobie, jak chcecie, a potem rejestrujecie to. Jeśli chcesz najpierw zobaczyć, jak dzielą się kwoty, zacznij od [dzielenia wydatków](page:feature/split-expenses)."
+cta:
+  heading: "Gotowi rozplątać, kto komu jest winien?"
+  body: "Załóż konto, utwórz grupę i dodaj pierwszy wydatek. Resztą zajmą się salda."
+  button: "Załóż darmowe konto"
+problem:
+  heading: "Salda, które aktualizują się na bieżąco"
+  body: "Każdy wydatek zmienia to, kto komu jest winien, więc Side Badger utrzymuje salda aktualne w miarę dodawania wydatków i płatności. Każdy w grupie widzi zmianę od razu oraz to, co się zmieniło i kto to zmienił. Salda są prowadzone osobno dla każdej waluty, więc euro i funty zostają w swoich kolumnach, chyba że wydatek przeliczono przy wpisywaniu. Domyślnie widzisz długi, które cię dotyczą; **Pokaż wszystko** wyświetla całą grupę."
+workflow:
+  heading: "Trzy kroki do kwita"
+  steps:
+    - title: "Zobacz, kto komu jest winien"
+      body: "Otwórz salda grupy, żeby zobaczyć, ile jesteś winien, ile ci się należy i krótką listę płatności, która rozlicza wszystkich, policzoną osobno dla każdej waluty. Zakwestionowane wydatki zostają poza sumami, dopóki nie zostaną wyjaśnione. W przykładzie ze współlokatorami poniżej sześć płatności zamienia się w dwie."
+      shot: S10
+      shotAlt: "Ekran sald z uproszczonymi długami w dwóch walutach i włączonym przyciskiem Pokaż wszystko"
+    - title: "Zapłać, jak chcesz, i zarejestruj to"
+      body: "Przelew, gotówka, przysługa z ostatnich wakacji. Side Badger nie przesyła pieniędzy. Gdy pieniądze zmienią właściciela, zarejestruj płatność, a saldo zaktualizuje się dla wszystkich."
+      shot: S11
+      shotAlt: "Formularz płatności z przyciskami szybkiego rozliczenia i komunikatem pokazywanym przy płatności częściowej"
+    - title: "Sprawdź, czy dotarło"
+      body: "Płatność trafia do historii grupy, gdzie każdy w grupie może ją zobaczyć i zareagować emoji. Uczcij płatność, gdy dotrze."
+      shot: S12
+      shotAlt: "Historia płatności z reakcjami emoji przy płatności"
+options:
+  heading: "Opcje"
+  items: []
+example:
+  heading: "Od plątaniny do krótkiej listy"
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: "Prąd"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: Internet
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "Zakupy spożywcze"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "Zarejestruj płatność"
+    body: "Gdy ktoś płaci, zarejestruj to przy właściwej osobie. Przyciski szybkiego rozliczenia uzupełniają kwotę z podpowiedzianych płatności, a możesz dodać notatkę, na przykład „przelew bankowy” (do 500 znaków). Zapłać tylko część tego, co jesteś winien, a reszta zostaje na saldzie. Jeśli wpiszesz za mało albo za dużo, Side Badger ostrzeże cię przed zapisem. Rejestrowanie płatności wymaga uprawnienia do edycji wydatków, a data nie może być w przyszłości."
+  - heading: "Zapłacone w innej walucie?"
+    body: "Salda zostają w walucie, w której zapłacono, więc dług w euro pozostaje długiem w euro. Jesteś winien euro, a płacisz w funtach? Przelicz płatność przy wpisywaniu, po aktualnym kursie albo po kursie, który faktycznie obowiązywał. Kurs jest ustalany w chwili zapisu płatności. [Wiele walut](page:feature/multiple-currencies) opisuje, jak działa przeliczanie, a [wyjazdy grupowe](page:use-case/group-trips) pokazują je w użyciu."
+  - heading: "Historia, którą możesz sprawdzić"
+    body: "Każda zarejestrowana płatność zostaje w historii grupy z datą, kwotą i notatką. Tylko osoba, która zarejestrowała płatność, może ją edytować, a ona lub administrator grupy może ją usunąć. Płatność z udziałem osoby, która opuściła grupę, jest zablokowana. Przykładowy scenariusz ze współlokatorami znajdziesz u [współlokatorów](page:use-case/housemates)."
+limits:
+  heading: "Czego Side Badger nie robi"
+  items:
+    - "Side Badger nie przesyła pieniędzy, nie wysyła linków do płatności ani próśb o płatność. Płatność w aplikacji to zapis płatności dokonanej gdzie indziej."
+    - "Podpowiadane płatności pochodzą z prostej metody dopasowywania, stosowanej osobno dla każdej waluty. Zawsze podpowiada mniej płatności, niż jest osób z saldem w tej walucie (przy czterech osobach najwyżej trzy), ale nie zawsze znajduje najmniejszą możliwą liczbę."
+    - "Nie możesz wyłączyć podpowiedzi. **Pokaż wszystko** wyświetla każdą podpowiedzianą płatność w grupie, nie tylko twoje."
+    - "Waluty nigdy nie są wzajemnie kompensowane, chyba że wydatki przeliczono przy wpisywaniu."
+    - "Nie ma przypomnień, więc ponaglanie z płatnością nadal zależy od ciebie."
+useCasesHeading: "Gdzie rozliczanie ma znaczenie"
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Czy Side Badger wysyła pieniądze?"
+      a: "Nie. Płaćcie sobie, jak chcecie, a potem zarejestruj płatność w Side Badger, żeby saldo się zaktualizowało."
+    - q: "Czy mogę wyłączyć podpowiadane płatności?"
+      a: "Nie. Uproszczenie zostaje włączone, a **Pokaż wszystko** wyświetla każdą podpowiedzianą płatność w grupie, nie tylko te, które cię dotyczą."
+    - q: "Dlaczego euro i funty są osobno?"
+      a: "Salda zostają w walucie, w której zapłacono, chyba że przeliczysz przy wpisywaniu wydatku albo płatności. Długi w różnych walutach nigdy nie są wzajemnie kompensowane."
+    - q: "Co, jeśli ktoś płaci tylko część tego, co jest winien?"
+      a: "Zarejestruj zapłaconą część. Reszta zostaje na saldzie, dopóki nie zostanie zapłacona."
+    - q: "Czy to zawsze najmniejsza możliwa liczba płatności?"
+      a: "Nie jest to gwarantowane. Zawsze podpowiada mniej płatności, niż jest osób z saldem w tej walucie, więc przy czterech osobach nigdy nie więcej niż trzy. W przykładzie ze współlokatorami to dwie płatności, tam gdzie oddawanie pieniędzy każdej osobie z osobna wymagało sześciu."

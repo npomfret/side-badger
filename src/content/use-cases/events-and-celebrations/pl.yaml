@@ -1,0 +1,90 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: machine
+identicalApproved:
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+  - example.people.0.name
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+meta:
+  title: "Dziel koszty imprez, wesel i wspólnych prezentów"
+  description: "Dziel koszty imprezy, wesela albo wspólnego prezentu, gdy ludzie dokładają różne kwoty. Głosujcie nad planem, dziel według dokładnych kwot i sprawdzaj, kto komu jest winien."
+h1: "Dziel koszty imprez, wesel i wspólnych prezentów"
+navLabel: "Wydarzenia i uroczystości"
+lead: "Podziel zaliczki, dekoracje i awaryjne parasole. Plan rozsadzenia gości zostaw komuś odważniejszemu. Side Badger trzyma w jednym miejscu **kto ile dołożył**, żeby organizator też mógł się bawić."
+cta:
+  heading: "Zacznij od następnej uroczystości"
+  body: "Załóż konto, utwórz grupę dla wydarzenia i wyślij link z zaproszeniem. Side Badger jest darmowy, bez reklam i bez dziennych limitów."
+  button: "Załóż darmowe konto"
+scenario:
+  heading: "Każdy dokłada, nie zawsze tyle samo"
+  body: "Ktoś płaci zaliczkę za lokal, ktoś inny kupuje tort, a trzecia osoba płaci za wspólny prezent własną kartą. Niektórzy goście przychodzą na wszystko, a niektórzy tylko na kolację. Prowadzenie uczciwego rachunku tego wszystkiego w wątku na czacie to praca, o którą nikt się nie ubiegał. Grupa w Side Badger trzyma to wszystko, niezależnie od mieszanki kwot, i pokazuje każdemu, ile jest winien lub ile mu się należy. Podstawy znajdziesz w [jak to działa](page:how-it-works), a dalej czytaj o wydarzeniu."
+sections:
+  - heading: "Decydujcie razem"
+    body: "Zanim ruszą jakiekolwiek pieniądze, poddaj wybór pod **ankietę**. Dodaj do 10 opcji, na przykład dwa lokale albo trzy pomysły na prezent, i niech wszyscy zagłosują. Możesz ukryć, kto na co głosował, żeby każda opcja miała uczciwą szansę, a zwycięzca pojawia się po zamknięciu ankiety. Nikt nie musi przewijać czterdziestu wiadomości, żeby dowiedzieć się, co postanowiono."
+  - heading: "Kto w czym uczestniczy"
+    body: "Nie wszyscy płacą tyle samo i nie wszyscy dzielą każdy koszt. Podziel wydatek po równo, procentowo albo według **dokładnych kwot**, żeby udział każdej osoby był kwotą, na którą się umówiono. Pomiń każdego, kto nie brał udziału, na przykład gości, którzy opuścili kolację, albo znajomych, którzy nie dołożyli się do prezentu. Każdy wydatek ma jednego płatnika, a wszyscy pozostali w podziale są mu winni swój udział. Szczegóły są na stronie [dzielenie wydatków](page:feature/split-expenses)."
+  - heading: "Zachowaj dokumentację"
+    body: "Dodawaj do wydatku notatki, na przykład co obejmował koszt. Komentarze zostają **obok wydatku**, którego dotyczą, więc pytanie „czy tort kosztował £45, czy £54?” i odpowiedź na nie są w tym samym miejscu. Komentarze mogą mieć do 500 znaków, co w zupełności wystarcza na pytanie o zaliczkę."
+  - heading: "Narzędzia organizatora"
+    body: "Otwarta współpraca pozwala każdemu członkowi dodawać i edytować wydatki, co jest w porządku przy małym prezencie. Na wesele albo większą imprezę wybierz ustawienie **Grupa zarządzana**. Administratorzy zatwierdzają każdego nowego członka, a wydatki mogą zmieniać tylko twórcy i administratorzy. Zapraszaj ludzi linkiem lub kodem QR; przy włączonym zatwierdzaniu administrator wpuszcza każdą osobę, więc lista gości pozostaje listą gości. Gdy wydarzenie się skończy, zablokuj grupę, żeby liczby zostały na miejscu."
+  - heading: "Rozlicz się po imprezie"
+    body: "Gdy wpłynie ostatnia faktura, salda pokazują, **kto komu jest winien**, a Side Badger podpowiada krótką listę płatności, która rozlicza wszystkich. Płaćcie sobie, jak chcecie, a potem zarejestrujcie płatność w grupie. Side Badger nigdy nie przesyła pieniędzy, więc grupa prowadzi rachunek, a przelewy odbywają się w waszych własnych aplikacjach bankowych. Strona [rozliczanie](page:feature/settle-up) pokazuje, jak plątanina zamienia się w krótką listę."
+exampleAfter: 5
+example:
+  heading: "Wspólny prezent: sześć głosów za, £150 do podziału"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Wspólny prezent"
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: "Funkcje, z których to korzysta"
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Czy goście mogą zobaczyć grupę bez dołączania?"
+      a: "Nie. Ludzie dołączają przez link lub kod QR i darmowe konto, więc grupę widzą dopiero po wejściu."
+    - q: "Czy Side Badger może zbierać pieniądze?"
+      a: "Nie. Side Badger prowadzi rachunek i nigdy nie przesyła pieniędzy. Płaćcie sobie, jak chcecie, a potem zarejestrujcie płatność. Jest darmowy, bez reklam i bez dziennych limitów; zobacz [cennik](page:pricing)."
+    - q: "Czy głosy mogą być anonimowe?"
+      a: "Tak. Tworząc ankietę, możesz ukryć, kto na co głosował. Ustawienia można zmienić tylko przed pierwszym głosem."
+    - q: "Czy ludzie mogą dokładać różne kwoty?"
+      a: "Tak. Podziel wydatek według dokładnych kwot, żeby udział każdej osoby był kwotą, na którą się umówiono, albo pomiń osoby, które nie brały udziału."
+    - q: "Czy organizator może prowadzić księgi?"
+      a: "Tak. Użyj ustawienia grupy zarządzanej, żeby wydatki zmieniali tylko twórcy i administratorzy, a administratorzy zatwierdzali nowych członków."

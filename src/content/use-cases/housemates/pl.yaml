@@ -1,0 +1,107 @@
+translatedFrom: "e6b829e6"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.2.label
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+meta:
+  title: "Dziel rachunki domowe ze współlokatorami"
+  description: "Dziel czynsz według wielkości pokoju, energię i zakupy po równo i sprawdzaj co miesiąc, kto komu jest winien. Darmowy sposób dla współlokatorów na prowadzenie rachunku."
+h1: "Dziel rachunki domowe ze współlokatorami"
+navLabel: "Współlokatorzy"
+lead: "Dla współlokatora, który kupuje papier toaletowy, i współlokatorów, którzy nigdy tego nie widzą. Side Badger prowadzi jeden bieżący rachunek czynszu, opłat i zakupów dla **współlokatorów**, więc nikt nie musi nikogo ścigać, a lodówka może znów być tylko lodówką."
+cta:
+  heading: "Zacznij od własnego domu"
+  body: "Załóż konto, utwórz grupę dla domu i wyślij wszystkim link z zaproszeniem. Rachunki z tego miesiąca mogą wejść jeszcze dziś wieczorem."
+  button: "Załóż darmowe konto"
+scenario:
+  heading: "Urządź dom"
+  body: "Utwórz grupę dla domu, wybierz imię, pod którym chcesz być widoczny, i zaproś wszystkich linkiem lub kodem QR. Grupa może być otwarta, gdzie każdy dodaje i edytuje, albo zarządzana, gdzie nowi członkowie wymagają zatwierdzenia administratora, a wydatki mogą zmieniać tylko twórcy i administratorzy, co pasuje do współlokatora prowadzącego księgi. Każdy, kto chce tylko patrzeć na liczby, może być obserwatorem, który widzi wszystko i niczego nie zmienia. Każdy widzi nowy wydatek od razu, więc „dodam to później” ma mniej kryjówek."
+sections:
+  - heading: "Czynsz i rachunki"
+    body: "Czynsz rzadko dzieli się przez cztery, bo pokoje nie są takie same. Podziel go procentowo, żeby duży pokój płacił więcej, a schowek z oknem mniej. Procenty muszą dawać w sumie 100. Rachunki, z których wszyscy korzystają, dostają równy podział, a współlokator, który nie brał udziału w wydatku, może zostać z niego pominięty. Gdy równy podział zostawia ostatni grosz, trafia on do jednej losowej osoby. Nie ma rachunków cyklicznych, więc co miesiąc kopiujesz zeszłomiesięczny czynsz, zmieniasz datę i jedziesz dalej. Złóż czynsz, rachunki i zakupy razem, a dostaniesz miesiąc taki jak poniżej, w domu czworga: Jo płaci £2,000 czynszu, dzielonego 30%, 25%, 25% i 20% według wielkości pokoju, potem Kwame płaci £120 za energię, Lena £40 za internet, a Matt £80 za zakupy, każde dzielone po równo. Jo kończy z saldem £1,340 do odzyskania, a Side Badger podpowiada trzy płatności, wszystkie do Jo."
+  - heading: "Wspólne zakupy"
+    body: "Trzymaj wspólną listę zakupów w tej samej grupie co rachunki za zakupy i odhaczaj pozycje, gdy trafią do wózka. Kto robi zakupy, dodaje sumę z paragonu jako wydatek i dzieli ją po równo albo tylko między osoby, które to zjedzą. Kto wciąż kupuje mleko owsiane, którego nikt inny nie pije, pozostaje sprawą domu, ale przynajmniej lista wydatków będzie dokładna. Uprawnienia grupy decydują, kto może tworzyć i edytować listy."
+  - heading: "Uczciwe sposoby dzielenia kosztów domowych"
+    items:
+      - "**Po równo** pasuje do tego, z czego wszyscy korzystają mniej więcej tak samo, jak internet, środki czystości i wspólne zakupy. Jest szybkie i nikt nie musi się kłócić o matematykę."
+      - "**Według wielkości pokoju** pasuje do czynszu, bo pokoje się różnią, a także to, ile ludzie chcą za nie płacić. Ustal procenty raz, gdy ktoś się wprowadza, i używaj ich co miesiąc."
+      - "**Według użycia** pasuje do rachunków, gdzie jedna osoba wyraźnie używa więcej, jak rachunek za ogrzewanie domowego biura albo konto streamingowe oglądane przez dwie osoby. Pomiń osoby, które nie brały w tym udziału, albo wpisz dokładne kwoty dla każdej."
+      - "Jakkolwiek zdecydujesz, ustal to przed pierwszym rachunkiem, a nie po pierwszej kłótni, i zapisz zasadę w miejscu, które widzi cały dom."
+  - heading: "Gdy ktoś się wyprowadza"
+    body: "Najpierw się rozlicza. Nikt nie może opuścić grupy, dopóki jest komuś winien pieniądze albo ktoś jest winien jemu, więc wyprowadzający się płaci albo dostaje, ty to rejestrujesz i dopiero wtedy odchodzi. Prowadź grupę dalej dla pozostałych współlokatorów i zaproś nową osobę linkiem. Gdy sam dom się skończy, administrator może zablokować grupę, żeby liczby zostały na miejscu, albo zamknąć ją na dobre, co czyni ją niedostępną dla wszystkich, więc rób to dopiero, gdy nikt nie potrzebuje historii."
+exampleAfter: 2
+example:
+  heading: "Kto komu jest winien w tym miesiącu"
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: "Czynsz"
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: "Energia"
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: Internet
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: "Zakupy spożywcze"
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: "Funkcje, z których korzysta dom"
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Czy czynsz może powtarzać się automatycznie?"
+      a: "Nie, nie ma rachunków cyklicznych. Skopiuj zeszłomiesięczny czynsz w kilka dotknięć, zmień datę i gotowe."
+    - q: "Czy możemy dzielić według wielkości pokoju?"
+      a: "Tak, procentowo. Daj każdemu współlokatorowi udział odpowiadający jego pokojowi, byle udziały dawały w sumie 100. O innych sposobach dzielenia przeczytasz w [dzieleniu wydatków](page:feature/split-expenses)."
+    - q: "Co, jeśli współlokator wyprowadza się, będąc komuś winien pieniądze?"
+      a: "Nie może opuścić grupy, dopóki się nie rozliczy, bo nikt nie może jej opuścić, dopóki jest komuś winien pieniądze albo ktoś jest winien jemu. Liczby pozostają uczciwe, dopóki wszyscy nie są kwita."
+    - q: "Czy Side Badger płaci rachunki?"
+      a: "Nie. Prowadzi rachunek i podpowiada krótką listę płatności. Płacicie sobie, jak chcecie, a potem rejestrujecie to, jak wyjaśnia [rozliczanie](page:feature/settle-up)."
+    - q: "Czy jeden współlokator może prowadzić księgi?"
+      a: "Tak. Ustaw go jako administratora i użyj grupy zarządzanej, w której nowi członkowie wymagają zatwierdzenia, a wydatki mogą zmieniać tylko twórcy i administratorzy."

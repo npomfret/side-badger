@@ -1,0 +1,105 @@
+translatedFrom: "fd23c99b"
+review:
+  status: machine
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+meta:
+  title: "Jak działa Side Badger | Dziel wydatki grupy w pięciu krokach"
+  description: "Załóż grupę, zaproś ludzi, dodawaj wydatki i rozlicz się. Zobacz, co dzieje się między „ktoś zapłacił” a „jesteśmy kwita”, na przykładzie krok po kroku."
+h1: "Jak działa Side Badger"
+navLabel: "Jak to działa"
+lead: "Co dzieje się między „ktoś zapłacił” a „jesteśmy kwita”? Pięć kroków, żadnego arkusza i jeden borsuk, który jest głównie ozdobą. Oto cała droga, od pierwszej grupy do ostatniej zarejestrowanej płatności. Szczegóły każdego kroku znajdziesz w [dzieleniu wydatków](page:feature/split-expenses) i [rozliczaniu](page:feature/settle-up)."
+cta:
+  heading: "Od „ja zapłacę” do „jesteśmy kwita”"
+  body: "Załóż darmowe konto, utwórz grupę i dodaj pierwszy wydatek. Borsuk nie oceni paragonu."
+  button: "Załóż darmowe konto"
+steps:
+  - title: "Utwórz grupę"
+    body: "Zrób osobną grupę dla każdego domu, wyjazdu i wydarzenia, żeby czynsz nie wylądował na tej samej liście co prezent ślubny. Nadaj jej nazwę, wybierz imię, pod którym ludzie będą cię widzieć, i jeśli chcesz, ogranicz waluty, które przyjmuje. Twój pulpit pokazuje potem wszystkie grupy i twoją sytuację w każdej, na jednym ekranie."
+    shot: S02
+    shotAlt: "Okno tworzenia grupy z otwartą sekcją ograniczeń walutowych"
+  - title: "Zaproś swoich ludzi"
+    body: "Udostępnij link do dołączenia albo pokaż kod QR i ustaw, jak długo działa: od 15 minut do 5 dni. Każdy, kto dołącza, potrzebuje darmowego konta i zweryfikowanego adresu e-mail, a w grupie może być do 50 osób. Jeśli chcesz decydować, kto wchodzi, włącz zatwierdzanie, a administrator wpuści każdą osobę."
+    shot: S03
+    shotAlt: "Okno zaproszenia na karcie z linkiem, z kodem QR i wyborem czasu ważności"
+  - title: "Dodawaj wydatki na bieżąco"
+    body: "Wpisz, kto zapłacił, ile i za kogo. Podziel po równo, według dokładnych kwot albo procentowo i pomiń każdego, kto w tym nie uczestniczył. Dodaj wydatek, a wszyscy zobaczą go od razu, razem z informacją, co się zmieniło i kto to zmienił."
+    shot: S05
+    shotAlt: "Formularz wydatku z podziałem procentowym czynszu według wielkości pokoju"
+  - title: "Patrz na salda"
+    body: "Side Badger prowadzi bieżące saldo osobno dla każdej waluty, więc od razu widać, kto komu jest winien. Zamiast zostawiać wszystkich z plątaniną drobnych długów, podpowiada krótką listę płatności, która rozlicza grupę."
+    shot: S10
+    shotAlt: "Ekran sald z uproszczonymi długami w dwóch walutach i włączonym przyciskiem Pokaż wszystko"
+  - title: "Rozlicz się poza aplikacją, zapisz to w aplikacji"
+    body: "Side Badger nigdy nie przesyła pieniędzy. Płaćcie sobie, jak chcecie, a potem zarejestruj płatność, żeby salda się zaktualizowały, a ekran każdego odświeżył się bez przeładowania. „Rozliczone” oznacza po prostu, że salda wynoszą zero. Nikt nie może opuścić grupy, dopóki jest komuś winien pieniądze albo ktoś jest winien jemu, więc kto zmierza do wyjścia, najpierw się rozlicza."
+    shot: S11
+    shotAlt: "Formularz płatności z przyciskami szybkiego rozliczenia i komunikatem o częściowej płatności"
+requirements:
+  heading: "Czego potrzebujesz"
+  items:
+    - "Darmowego konta. Wystarczy adres e-mail i hasło, a przed dodaniem czegokolwiek weryfikujesz e-mail."
+    - "Ukończonych 18 lat."
+    - "Nowoczesnej przeglądarki w telefonie albo komputerze i połączenia z internetem. Side Badger nie jest aplikacją ze sklepu i nie działa offline."
+    - "Opcjonalnie miejsca na ekranie głównym. Sklep z aplikacjami nie jest potrzebny, bo możesz dodać Side Badger do ekranu głównego albo docka, a otwiera się jak aplikacja."
+example:
+  heading: "Troje znajomych po wieczorze na mieście"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: "Kolacja"
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: "Taksówka"
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: "39 języków i dla jeszcze większej liczby osób"
+    body: "Korzystaj z Side Badger w 39 językach, w tym w arabskim, perskim i urdu, pisanych od prawej do lewej. Każdy w grupie może wybrać własny, więc strona grupy może być po arabsku dla jednej osoby i po angielsku dla następnej. Aplikację zbudowano też z myślą o osobach korzystających z klawiatury i czytników ekranu, a kolory członków mają wzory, więc nie trzeba odróżniać zieleni od czerwieni."
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Czy każdy potrzebuje konta?"
+      a: "Tak, darmowego. Każda osoba weryfikuje swój e-mail, zanim cokolwiek doda."
+    - q: "Czy jest aplikacja?"
+      a: "Działa w przeglądarce i możesz dodać ją do ekranu głównego albo docka, żeby otwierała się jak aplikacja. Nie ma wersji ze sklepu z aplikacjami ani trybu offline."
+    - q: "Czy Side Badger przesyła pieniądze?"
+      a: "Nie. Prowadzi rachunek i podpowiada płatności, a wy płacicie sobie, jak chcecie. Potem rejestrujesz płatność. Zobacz [rozliczanie](page:feature/settle-up)."
+    - q: "Czy ktoś może wyjść, będąc komuś winien pieniądze?"
+      a: "Nie. Nikt nie może opuścić grupy, dopóki jest komuś winien pieniądze albo ktoś jest winien jemu, więc najpierw się rozlicza."
+    - q: "Ile osób może dołączyć do grupy?"
+      a: "Do 50 osób w grupie. Zaproś je linkiem albo kodem QR i włącz zatwierdzanie, jeśli chcesz, żeby administrator wpuszczał każdą osobę."
+    - q: "A wyjazdy z więcej niż jedną walutą?"
+      a: "Salda są prowadzone osobno dla każdej waluty. Zobacz [wiele walut](page:feature/multiple-currencies)."

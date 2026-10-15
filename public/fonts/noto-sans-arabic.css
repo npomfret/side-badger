@@ -1,4 +1,14 @@
 /* Noto Sans Arabic variable, arabic subset. Loaded by BaseLayout only on its own locales. */
+
+/* Tahoma (on macOS and Windows) scaled to Noto Sans Arabic's advance widths, for Arabic text only,
+   so lines wrap the same before and after the swap and the page does not shift (CLS). Measured
+   over a page of Arabic text: Noto is 93.6% of Tahoma's width. */
+@font-face {
+  font-family: 'Noto Sans Arabic Fallback';
+  src: local('Tahoma');
+  size-adjust: 93.6%;
+  unicode-range: U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC;
+}
 @font-face {
   font-family: 'Noto Sans Arabic';
   font-style: normal;

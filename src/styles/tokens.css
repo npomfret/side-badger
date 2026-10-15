@@ -120,7 +120,7 @@ html:is(:lang(cs), :lang(cy), :lang(hr), :lang(hu), :lang(lv), :lang(pl), :lang(
   --font-display: 'Space Grotesk', 'Space Grotesk Ext', 'Space Grotesk Fallback', var(--font-sans);
 }
 html[data-font-script="arabic"] {
-  --font-sans: 'Noto Sans Arabic', 'Segoe UI', Tahoma, 'Geeza Pro', sans-serif;
+  --font-sans: 'Noto Sans Arabic', 'Noto Sans Arabic Fallback', 'Segoe UI', Tahoma, 'Geeza Pro', sans-serif;
   --font-display: var(--font-sans);
   --heading-line-height: 1.25;
 }

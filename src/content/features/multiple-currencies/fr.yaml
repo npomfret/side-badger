@@ -1,8 +1,6 @@
 translatedFrom: "923c938f"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - multi-currency.140-currencies
   - multi-currency.currency-rules
@@ -101,7 +99,7 @@ limits:
     - "Le taux est fixé quand la dépense est enregistrée. Les anciennes dépenses ne sont jamais réévaluées."
     - "Side Badger récupère un taux actuel quand il le peut. Il n'est pas garanti pour chaque paire, et vous pouvez toujours saisir le taux vous-même."
     - "La conversion automatique du groupe ne s'applique qu'aux dépenses nouvelles et copiées, pas aux modifications ni aux dépenses existantes."
-    - "Chaque dépense est plafonnée à 999,999.99 dans sa propre devise."
+    - "Chaque dépense est plafonnée à 999 999,99 dans sa propre devise."
     - "Il y a 140 devises. Les cryptomonnaies et les métaux n'en font pas partie."
     - "Side Badger enregistre les paiements. Il ne fait jamais circuler ni échanger l'argent."
 useCasesHeading: "Où cela aide"
@@ -114,8 +112,8 @@ faq:
       a: "Non. Le taux est fixé quand la dépense est enregistrée, donc un solde ne dérive pas parce que le marché a bougé."
     - q: "Prenez-vous en charge les cryptomonnaies ?"
       a: "Non. Il y a 140 devises, et les cryptomonnaies n'en font pas partie."
-    - q: "Pourquoi ne puis-je pas saisir 2,000,000 de roupies indonésiennes ?"
-      a: "Chaque dépense est plafonnée à 999,999.99 dans sa propre devise. Saisissez-la dans une autre devise et convertissez, ou scindez-la en deux dépenses."
+    - q: "Pourquoi ne puis-je pas saisir 2 000 000 de roupies indonésiennes ?"
+      a: "Chaque dépense est plafonnée à 999 999,99 dans sa propre devise. Saisissez-la dans une autre devise et convertissez, ou scindez-la en deux dépenses."
     - q: "La conversion coûte-t-elle quelque chose ?"
       a: "Non. Convertir est gratuit, comme le reste de Side Badger. Voir les [tarifs](page:pricing)."
     - q: "Dois-je convertir ?"

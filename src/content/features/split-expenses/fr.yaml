@@ -1,8 +1,6 @@
 translatedFrom: "56ee9b03"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -111,7 +109,7 @@ limits:
     - "Une seule personne paie chaque dépense. Si deux personnes ont payé, enregistrez deux dépenses."
     - "Il n'y a pas de partage par article ni par parts. À parts égales, par montants exacts et par pourcentages, c'est tout ce qu'il y a."
     - "Les pourcentages doivent faire 100 au total."
-    - "Une dépense peut aller jusqu'à 999,999.99 dans sa propre devise, avec les décimales habituelles de cette devise."
+    - "Une dépense peut aller jusqu'à 999 999,99 dans sa propre devise, avec les décimales habituelles de cette devise."
     - "Les dépenses ne peuvent pas se répéter toutes seules. Copiez plutôt celle du mois dernier."
     - "Les dates ne peuvent pas être dans le futur ni remonter à plus de 10 ans."
     - "Une dépense qui concerne quelqu'un qui a quitté le groupe passe en lecture seule."

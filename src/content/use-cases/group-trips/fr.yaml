@@ -1,8 +1,6 @@
 translatedFrom: "8b6e5d83"
 review:
-  status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -102,7 +100,7 @@ faq:
     - q: "Peut-on figer le groupe après le voyage ?"
       a: "Oui. Un admin peut verrouiller le groupe pour que les chiffres ne bougent plus."
     - q: "Y a-t-il une limite sur les montants ?"
-      a: "Oui. 999,999.99 par dépense, dans sa propre devise."
+      a: "Oui. 999 999,99 par dépense, dans sa propre devise."
 identicalApproved:
   - example.people.0.name
   - example.people.1.name

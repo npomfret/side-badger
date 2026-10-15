@@ -57,7 +57,7 @@ export const BOARDS: Record<BoardName, BoardSpec> = {
         cx: 180,
         cy: 230,
         radius: 130,
-        cards: { ava: [180, 34], ben: [300, 128], sam: [60, 128], dev: [300, 402], mei: [60, 402] },
+        cards: { ava: [180, 30], ben: [296, 108], sam: [64, 108], dev: [296, 404], mei: [64, 404] },
         sticky: { x: 180, y: 404, w: 104 },
         stamp: [180, 404],
     },

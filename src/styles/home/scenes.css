@@ -10,7 +10,8 @@
  *             each with its own animation-range: contain <from>% contain <to>%
  *   stages    the controller sets data-stage on the section; each element has an end-state rule
  *             per stage and transitions to it (opacity, translate, scale, stroke-dashoffset)
- *   static    reduced motion or a viewport under 560 px: nothing pinned, nothing animated, and
+ *   static    reduced motion, a viewport under 560 px tall, or a 600 to 899 px wide one under 860 px tall (the
+ *             stacked layout does not fit a pinned stage there): nothing pinned, nothing animated, and
  *             data-stage fixed at the scene's staticStage
  *
  * Never drive a scene from a shared custom property that changes with scroll (no @property --t).
@@ -122,13 +123,14 @@
     align-items: center;
     column-gap: calc(var(--scene-gap) * 1.5);
   }
-  .scene__stage > .scene__copy {
+  /* Named areas only where the stage has a visual; otherwise they would add a stray empty column */
+  .scene__stage:has(> .scene__visual) > .scene__copy {
     grid-area: copy;
   }
-  .scene__stage > .scene__visual {
+  .scene__stage:has(> .scene__visual) > .scene__visual {
     grid-area: visual;
   }
-  .scene__stage > .scene__link {
+  .scene__stage:has(> .scene__visual) > .scene__link {
     grid-area: link;
   }
 }
@@ -155,6 +157,41 @@
 .scene__copy p {
   margin: 0;
   max-inline-size: 60ch;
+}
+/* Pinned stages on short viewports: tighter copy so long translations still fit the stage
+   (360x640 phones, 1280x720 and smaller laptops). Short desktop windows rank by height, not width. */
+@media (max-width: 599px) and (max-height: 700px) {
+  .scene[data-pin-phone='pinned'] .scene__stage {
+    gap: 0.75rem;
+  }
+  .scene[data-pin-phone='pinned'] .scene__copy {
+    gap: 0.5rem;
+  }
+  .scene[data-pin-phone='pinned'] .scene__copy h2 {
+    font-size: 1.5rem;
+    line-height: 1.15;
+  }
+  .scene[data-pin-phone='pinned'] .scene__copy p {
+    font-size: 0.9375rem;
+    line-height: 1.3;
+  }
+}
+@media (min-width: 900px) and (max-height: 820px) {
+  .scene[data-pin='pinned'] .scene__stage {
+    gap: 0.75rem;
+  }
+  .scene[data-pin='pinned'] .scene__copy {
+    gap: 0.625rem;
+  }
+  .scene[data-pin='pinned'] .scene__copy h2 {
+    font-size: clamp(1.5rem, 2.4vw, 2.25rem);
+    line-height: 1.15;
+  }
+  .scene[data-pin='pinned'] .scene__copy p,
+  .scene[data-pin='pinned'] .scene__copy li {
+    font-size: 0.9375rem;
+    line-height: 1.35;
+  }
 }
 .scene__visual {
   position: relative;
@@ -301,7 +338,7 @@ html[data-scene-engine='stages'][data-scene-ready] .scene [data-anim] {
 }
 
 @supports (animation-timeline: view()) and (animation-range: contain 0% contain 100%) {
-  @media (prefers-reduced-motion: no-preference) and (min-height: 560px) {
+  @media (prefers-reduced-motion: no-preference) and (min-height: 560px) and (not ((min-width: 600px) and (max-width: 899px) and (max-height: 859px))) {
     html:not([data-scene-engine='stages']) .scene > .scene__runway {
       view-timeline: --scene block;
       view-timeline-inset: 0;
@@ -361,7 +398,7 @@ html[data-hidden] .scene [data-ambient] {
 /* ===== content-visibility: only on pinned scenes after the second, whose height is explicit =====
    Never under reduced motion or on short viewports: runways collapse there, so the runway would be
    a guessed intrinsic size and the page would shift as each scene renders. */
-@media (prefers-reduced-motion: no-preference) and (min-height: 560px) {
+@media (prefers-reduced-motion: no-preference) and (min-height: 560px) and (not ((min-width: 600px) and (max-width: 899px) and (max-height: 859px))) {
   .home > .scene[data-pin='pinned']:nth-child(n + 3) > .scene__runway {
     content-visibility: auto;
     contain-intrinsic-block-size: auto var(--runway-desktop);
@@ -430,7 +467,7 @@ html[data-hidden] .scene [data-ambient] {
 }
 
 /* ===== Reduced motion, and viewports too short to pin: every scene is its static frame ===== */
-@media (prefers-reduced-motion: reduce), (max-height: 559px) {
+@media (prefers-reduced-motion: reduce), (max-height: 559px), (min-width: 600px) and (max-width: 899px) and (max-height: 859px) {
   .home .scene[data-scene] > .scene__runway {
     height: auto;
   }
@@ -451,5 +488,12 @@ html[data-hidden] .scene [data-ambient] {
   }
   html {
     scroll-behavior: auto;
+  }
+}
+
+/* Forced colours drop backgrounds: give the sign-up and launch buttons the border that says "button" */
+@media (forced-colors: active) {
+  .home .btn {
+    border: 2px solid ButtonText;
   }
 }

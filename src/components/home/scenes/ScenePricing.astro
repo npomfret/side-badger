@@ -6,13 +6,14 @@
  * Two h2s in reading order: pricing (#start-title), then the call to action (#cta-title). The
  * pricing body is exactly the site plan D2 promise and the "See pricing" link goes to /pricing/.
  * The receipt has no price line, so the joke makes no pricing claim. The sign-up button is
- * `registerHref('final')` with `data-confetti`: the controller loads canvas-confetti on click and
+ * `LaunchAppCta` (cta `final`) in a span with `data-confetti`: the controller loads canvas-confetti on click and
  * never under reduced motion. Reduced motion rests at stage 1 (joined face, printed receipt).
  */
 import ScrollScene from '../ScrollScene.astro';
 import Receipt from '../props/Receipt.astro';
 import { t, type Locale } from '@/i18n';
-import { pricingHref, registerHref } from '../data/links';
+import LaunchAppCta from '@/components/cta/LaunchAppCta.astro';
+import { pricingHref } from '../data/links';
 import { intlCodeFor } from '../format';
 
 interface Props {
@@ -85,13 +86,16 @@ const logo = '/images/logo-face-only-large.png';
   </div>
 
   <Fragment slot="link">
-    <a class="btn btn-primary btn-lg start__cta" href={registerHref('final', locale)} rel="nofollow" data-confetti>
-      {t('home.hero.ctaPrimary', locale)}
-    </a>
+    <span class="start__cta" data-confetti>
+      <LaunchAppCta target="register" cta="final" pageId="home" locale={locale} class="btn-lg">{t('home.hero.ctaPrimary', locale)}</LaunchAppCta>
+    </span>
   </Fragment>
 </ScrollScene>
 
 <style>
+  .start__cta {
+    display: inline-block;
+  }
   .start__block {
     display: grid;
     gap: var(--space-md, 1rem);
@@ -140,6 +144,9 @@ const logo = '/images/logo-face-only-large.png';
   }
   @media (max-width: 599px) {
     .start__cta {
+      display: block;
+    }
+    .start__cta :global(.btn) {
       inline-size: 100%;
       justify-content: center;
     }

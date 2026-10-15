@@ -52,6 +52,7 @@ const reactions: [string, number][][] = [[['👍', 2], ['❤️', 1], ['🎉', 3
   stages={[25, 55, 80]}
   staticStage={3}
   confettiAt={85}
+  confettiX={0.9}
 >
   <Fragment slot="copy">
     <h2 id="settle-title">{t('home.settle.title', locale)}</h2>
@@ -321,6 +322,11 @@ const reactions: [string, number][][] = [[['👍', 2], ['❤️', 1], ['🎉', 3
     .settle :global(.settle__phone .frame__screen) {
       padding-block-end: 0.75rem;
     }
+    /* The pinned stage must hold the copy, the phone and the link with long translations too; the
+       phone is an illustration, so it scales down rather than clipping the copy */
+    .settle :global(.settle__phone) {
+      zoom: 0.9;
+    }
   }
   /* Short phones (360×640): the amount and note fields share a row (the amount as narrow as it
      can be) and the fields are tighter, so the labelled form is about as tall as the unlabelled
@@ -339,6 +345,9 @@ const reactions: [string, number][][] = [[['👍', 2], ['❤️', 1], ['🎉', 3
     /* The quick-settle chip below shows the same amount */
     .settle__owes .settle__chip {
       display: none;
+    }
+    .settle :global(.settle__phone) {
+      zoom: 0.8;
     }
   }
 </style>

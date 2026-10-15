@@ -4,7 +4,7 @@
  * = tidy) and rests at stage 0, the mess, under reduced motion ("because chaos is the point").
  *
  * Copy: the page's only h1, the lede, the audience line, the `/go/register/` button
- * (`registerHref('hero')`), the "See how it works" link and the pricing line
+ * (`LaunchAppCta`, cta `hero`), the "See how it works" link and the pricing line
  * ("Free. No ads. No daily limits." linking to /pricing/). None of it animates.
  *
  * Visual: three receipts, a spreadsheet with an unfinished total, a sticky note and a phone with
@@ -27,7 +27,8 @@ import Spreadsheet from '../props/chaos/Spreadsheet.astro';
 import ChatPhone from '../props/chaos/ChatPhone.astro';
 import { t, type Locale } from '@/i18n';
 import { formatMoney } from '../format';
-import { pricingHref, registerHref, resolveHowItWorks } from '../data/links';
+import LaunchAppCta from '@/components/cta/LaunchAppCta.astro';
+import { pricingHref, resolveHowItWorks } from '../data/links';
 
 interface Props {
   locale: Locale;
@@ -52,11 +53,7 @@ const sheetRows = [
     <p>{t('home.hero.lede', locale)}</p>
     <p>{t('home.hero.audience', locale)}</p>
     <div class="scene__link">
-      <a
-        class="btn btn-primary btn-lg"
-        href={registerHref('hero', locale)}
-        rel="nofollow"
-      >{t('home.hero.ctaPrimary', locale)}</a>
+      <LaunchAppCta target="register" cta="hero" pageId="home" locale={locale} class="btn-lg">{t('home.hero.ctaPrimary', locale)}</LaunchAppCta>
       <a class="scene-link" href={howItWorks.href}>{t(howItWorks.labelKey, locale)}</a>
     </div>
     <p><a class="scene-link" href={pricingHref(locale)}>{t('home.hero.trust', locale)}</a></p>
@@ -179,18 +176,9 @@ const sheetRows = [
     }
   }
 
-  /* Land the copy a --space-lg gap below the fixed header. <main> is already offset by 100px
-     (layout.css), so the stage adds the rest of --header-h. The floors cover the shell until P23
-     makes --header-h the real header bottom (134px desktop, 86px at <= 768px); from then on the
-     calc wins on desktop and the result is the same. If P23 changes main's 100px offset, change
-     it here too. */
+  /* Land the copy a --space-lg gap below the fixed header: <main> starts at --header-h (layout.css) */
   :global(#top .scene__stage) {
-    padding-block-start: max(1rem, calc(var(--header-h) + var(--space-lg) - 100px));
-  }
-  @media (min-width: 769px) {
-    :global(#top .scene__stage) {
-      padding-block-start: max(3.5rem, calc(var(--header-h) + var(--space-lg) - 100px));
-    }
+    padding-block-start: var(--space-lg);
   }
 
   /* ===== CJK headings: one glyph is a full em wide, so the global heading size wraps to 6+ lines

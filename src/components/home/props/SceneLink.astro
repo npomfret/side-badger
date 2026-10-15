@@ -4,7 +4,8 @@
  * "Try it in Side Badger". Resolution lives in `data/links.ts`. Launch links carry rel="nofollow".
  */
 import { t, type Locale } from '@/i18n';
-import { resolveLink, type LinkKey } from '../data/links';
+import LaunchAppCta from '@/components/cta/LaunchAppCta.astro';
+import { resolveLink, sceneOf, type LinkKey } from '../data/links';
 
 interface Props {
   to: LinkKey;
@@ -16,4 +17,10 @@ const { to, locale, class: className } = Astro.props;
 const link = resolveLink(to, locale);
 ---
 
-<a class:list={['scene-link', className]} href={link.href} rel={link.rel} data-link={link.kind}>{t(link.labelKey, locale)}</a>
+{link.kind === 'launch' ? (
+  <LaunchAppCta target="app" cta={`scene-${sceneOf(to)}`} pageId="home" locale={locale} variant="secondary" class={className}>
+    {t(link.labelKey, locale)}
+  </LaunchAppCta>
+) : (
+  <a class:list={['scene-link', className]} href={link.href} rel={link.rel} data-link={link.kind}>{t(link.labelKey, locale)}</a>
+)}

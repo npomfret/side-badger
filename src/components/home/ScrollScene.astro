@@ -43,6 +43,8 @@ interface Props {
   stageOn?: 'enter' | 'exit';
   /** Fire confetti once when the pinned range passes this percent (entry scenes: when entered) */
   confettiAt?: number;
+  /** Inline origin of that confetti, 0 to 1 (mirrored in right-to-left). Default 0.5, the centre. */
+  confettiX?: number;
   class?: string;
 }
 
@@ -55,6 +57,7 @@ const {
   tone = 'table',
   stageOn = 'enter',
   confettiAt,
+  confettiX,
   class: className,
 } = Astro.props;
 
@@ -83,6 +86,7 @@ const style = [
   data-stage={staticStage}
   data-stage-on={stageOn}
   data-confetti-at={confettiAt}
+  data-confetti-x={confettiX}
   style={style || undefined}
 >
   {Astro.slots.has('lead') && <div class="scene__lead"><slot name="lead" /></div>}

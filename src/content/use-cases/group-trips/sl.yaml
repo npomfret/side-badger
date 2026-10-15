@@ -1,0 +1,110 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: checked
+  checker: "T5-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+meta:
+  title: "Deli stroške skupinskega potovanja v 140 valutah"
+  description: "Spremljaj, kdo je kaj plačal na skupinskem potovanju, vnašaj stroške v lokalni valuti, jih pretvarjaj ali ne in se poravnaj enkrat na koncu. Brezplačno, v brskalniku."
+h1: "Deli stroške skupinskega potovanja v 140 valutah"
+navLabel: "Skupinska potovanja"
+lead: "Spremljaj vilo, taksije in tisti en krog koktajlov, za katerega se nihče ne spomni, da bi se ponudil. Side Badger vodi tekoče štetje, medtem ko te ni, [obvlada funte, evre in 138 drugih valut](page:feature/multiple-currencies) in ti ob vrnitvi domov da [kratek seznam plačil](page:feature/settle-up)."
+cta:
+  heading: "Počitniška matematika, opravljena, preden obledi porjavelost"
+  body: "Ustanovi skupino, pošlji povezavo za povabilo ljudem s potovanja in dodajaj stroške, ko nastanejo."
+  button: "Ustvari brezplačen račun"
+scenario:
+  heading: "Vsak je za nekaj plačal, v neki valuti"
+  body: "Nekdo je rezerviral lete, nekdo drug je vilo dal na kartico, tretji pa je večerjo pokril z gotovino. Do tretjega dne nihče ne ve, kdo je v plusu. Vprašanje je preprosto, čeprav odgovor običajno živi v preglednici, ki je nihče noče odpreti. Kdo je kaj plačal, v kateri valuti in kako se vsi poravnajo enkrat na koncu?"
+sections:
+  - heading: "Preden greste"
+    body: "O ožjem izboru vil pusti glasovati, po želji anonimno, da odločitev pripada skupini in ne temu, kdo se najdlje duri. Nato imej skupni nakupovalni seznam ob računih za nakupe, da nihče ne kupi treh tub kreme za sončenje in nobenega adapterja za vtičnico."
+  - heading: "Medtem ko te ni"
+    body: "Vsak strošek dodaj, ko nastane, v valuti, v kateri je bil plačan. Slikaj račun in Side Badger izpolni skupni znesek, datum in kraj, da jih preveriš; slike računov bere Googlova storitev umetne inteligence. Znesek pretvori po trenutnem menjalnem tečaju, ki ga lahko spremeniš v tistega, ki je veljal ob menjavi, izvirni znesek pa ostane pri strošku. Ali pusti evre kot evre in se odloči pozneje. Skupina lahko izbere tudi eno valuto in novi stroški se vanjo pretvorijo samodejno."
+  - heading: "Vsi niso počeli vsega"
+    body: "Nekateri so izpustili večerjo, drugi se niso peljali z ladjo. Izpusti jih iz stroškov, pri katerih niso sodelovali, preostanek pa razdeli [enako, po točnih zneskih ali po odstotkih](page:feature/split-expenses). Nihče ne plača dela potovanja, ki ga je prespal."
+  - heading: "Poravnajte se, ko ste doma"
+    body: "Side Badger predlaga kratek seznam plačil, ki poravna vse. Plačajte si, kakor želite, nato zabeležite. Pri mešanih valutah vsako vodi ločeno ali pretvarjaj sproti; spodnji lizbonski primer kaže oboje."
+  - heading: "Samski in dekliški vikendi"
+    body: "Vikend s častnim gostom zahteva nekaj več administracije. Naredi upravljano skupino, kjer skrbniki potrjujejo nove člane, stroške pa lahko spreminjajo samo ustanovitelji in skrbniki. Za delež častnega gosta uporabi točne zneske, skupino omeji na valute, ki jih res uporabljate, in jo ob koncu zakleni, da številke ostanejo."
+exampleAfter: 4
+example:
+  heading: "Štirje prijatelji v Lizboni"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Leti"
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: "Vila"
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: "Večerja"
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Izlet z ladjo"
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: "Na kaj se potovanje opira"
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Ali lahko izpustim ljudi, ki so izpustili večerjo?"
+      a: "Da. Izberi, kdo je sodeloval pri posameznem strošku, in samo njim se zaračuna."
+    - q: "Ali deluje brez signala?"
+      a: "Ne. Side Badger potrebuje povezavo, zato stroške dodaj, ko se vrneš na wifi."
+    - q: "Ali mora vsak kaj namestiti?"
+      a: "Ne. Deluje v brskalniku. Pošlji povezavo za povabilo in ljudje se pridružijo s telefonov."
+    - q: "Kateri menjalni tečaj uporablja?"
+      a: "Trenutni menjalni tečaj ob vnosu stroška ali tvojega, če si dobil drugačnega. Tečaj se določi ob shranitvi stroška, zato se stari stroški nikoli ne revalorizirajo."
+    - q: "Ali lahko skupino po potovanju zamrznemo?"
+      a: "Da. Skrbnik lahko skupino zaklene, da številke ostanejo."
+    - q: "Ali obstaja omejitev zneskov?"
+      a: "Da. 999.999,99 na strošek, v njegovi valuti."

@@ -1,0 +1,108 @@
+translatedFrom: "fd23c99b"
+review:
+  status: checked
+  checker: "T5-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.expenses.1.label
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+meta:
+  title: "Jak funguje Side Badger | Dělení výdajů skupiny v pěti krocích"
+  description: "Vytvořte skupinu, pozvěte lidi, přidávejte výdaje a vyrovnejte se. Podívejte se, co se děje mezi „někdo zaplatil“ a „jsme si kvit“, na názorném příkladu."
+h1: "Jak funguje Side Badger"
+navLabel: "Jak to funguje"
+lead: "Co se děje mezi „někdo zaplatil“ a „jsme si kvit“? Pět kroků, žádná tabulka a jeden jezevec, který je většinou na ozdobu. Tady je celá cesta, od první skupiny po poslední zaznamenanou platbu. Podrobnosti o kterémkoli kroku najdete v části [dělení výdajů](page:feature/split-expenses) a [vyrovnání](page:feature/settle-up)."
+cta:
+  heading: "Od „platím já“ po „jsme si kvit“"
+  body: "Vytvořte si účet zdarma, založte skupinu a přidejte první výdaj. Jezevec účtenku nesoudí."
+  button: "Vytvořit účet zdarma"
+steps:
+  - title: "Vytvořte skupinu"
+    body: "Založte jednu skupinu pro každý dům, výlet nebo akci, aby se nájem nikdy nedostal do stejného seznamu jako svatební dar. Dejte jí název, vyberte jméno, pod kterým vás lidé uvidí, a pokud chcete, omezte měny, které přijímá. Váš přehled pak na jedné obrazovce ukazuje všechny skupiny a to, jak v každé stojíte."
+    shot: S02
+    shotAlt: "Dialog pro vytvoření skupiny s otevřenou částí omezení měn"
+  - title: "Pozvěte své lidi"
+    body: "Sdílejte odkaz k připojení nebo ukažte QR kód a nastavte, jak dlouho platí, od 15 minut až po 5 dní. Každý, kdo se připojí, potřebuje bezplatný účet a ověřený e-mail a skupina pojme až 50 lidí. Pokud chcete mít přehled, kdo vstoupí, zapněte schvalování a správce každou osobu pustí dovnitř."
+    shot: S03
+    shotAlt: "Dialog pozvánky na záložce s odkazem, s QR kódem a možnostmi platnosti"
+  - title: "Přidávejte výdaje, jak vznikají"
+    body: "Řekněte, kdo platil, kolik a za koho. Rozdělte rovnoměrně, podle přesných částek nebo procentuálně a vynechte každého, kdo u toho nebyl. Přidejte výdaj a všichni ho hned uvidí, spolu s tím, co se změnilo a kdo to změnil."
+    shot: S05
+    shotAlt: "Formulář výdaje s procentuálním rozdělením nájmu podle velikosti pokoje"
+  - title: "Sledujte zůstatky"
+    body: "Side Badger vede průběžný zůstatek pro každou měnu, takže na první pohled vidíte, kdo komu dluží. Místo aby nechal všechny rozplétat změť drobných dluhů, navrhne krátký seznam plateb, který skupinu vyrovná."
+    shot: S10
+    shotAlt: "Obrazovka zůstatků se zjednodušenými dluhy ve dvou měnách a zapnutou volbou Zobrazit vše"
+  - title: "Vyrovnejte se mimo aplikaci, zaznamenejte to v ní"
+    body: "Side Badger nikdy nepřesouvá peníze. Zaplaťte si, jak chcete, a pak platbu zaznamenejte, aby zůstatky držely krok, a obrazovka každého se aktualizuje bez obnovení. „Vyrovnáno“ znamená jednoduše to, že zůstatky jsou nula. Nikdo nemůže skupinu opustit, dokud dluží nebo se mu dluží peníze, takže kdo míří ke dveřím, nejdřív se vyrovná."
+    shot: S11
+    shotAlt: "Formulář platby s tlačítky rychlého vyrovnání a upozorněním na částečnou platbu"
+requirements:
+  heading: "Co potřebujete"
+  items:
+    - "Bezplatný účet. Stačí e-mailová adresa a heslo a před přidáním čehokoli e-mail ověříte."
+    - "Mít alespoň 18 let."
+    - "Moderní prohlížeč v telefonu nebo počítači a připojení. Side Badger není aplikace z obchodu a nefunguje offline."
+    - "Volitelně místo na domovské obrazovce. Obchod s aplikacemi není potřeba, protože Side Badger můžete přidat na domovskou obrazovku nebo do docku a otevírá se jako aplikace."
+example:
+  heading: "Tři přátelé po večeru ve městě"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: "Večeře"
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: "Taxi"
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: "39 jazyků a postaveno pro víc lidí"
+    body: "Používejte Side Badger ve 39 jazycích, včetně arabštiny, perštiny a urdštiny psaných zprava doleva. Každý ve skupině si může vybrat vlastní, takže stránka skupiny může být pro jednoho člověka v arabštině a pro dalšího v angličtině. Je také vytvořen s ohledem na uživatele klávesnice a čtečky obrazovky a barvy členů mají vzory, takže nemusíte rozeznávat zelenou od červené."
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Potřebuje účet každý?"
+      a: "Ano, bezplatný. Každý ověří svůj e-mail, než cokoli přidá."
+    - q: "Existuje aplikace?"
+      a: "Běží v prohlížeči a můžete ji přidat na domovskou obrazovku nebo do docku, aby se otevírala jako aplikace. Neexistuje verze z obchodu s aplikacemi ani režim offline."
+    - q: "Přesouvá Side Badger peníze?"
+      a: "Ne. Vede přehled a navrhuje platby a vy si platíte, jak chcete. Pak platbu zaznamenáte. Viz [vyrovnání](page:feature/settle-up)."
+    - q: "Může někdo odejít, když dluží peníze?"
+      a: "Ne. Nikdo nemůže skupinu opustit, dokud dluží nebo se mu dluží peníze, takže se nejdřív vyrovná."
+    - q: "Kolik lidí se může připojit ke skupině?"
+      a: "Až 50 lidí ve skupině. Pozvěte je odkazem nebo QR kódem a zapněte schvalování, pokud chcete, aby správce každou osobu pustil dovnitř."
+    - q: "A co výlety s více než jednou měnou?"
+      a: "Zůstatky se vedou zvlášť pro každou měnu. Viz [více měn](page:feature/multiple-currencies)."

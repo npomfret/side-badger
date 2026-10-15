@@ -1,0 +1,127 @@
+translatedFrom: "923c938f"
+review:
+  status: checked
+  checker: "T5-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: "Masrafları 140 para biriminde bölüşün, çevirerek veya ayrı tutarak"
+  description: "Her harcamayı ödediğiniz para biriminde girin, bakiyeleri ayrı tutun veya görebildiğiniz ve değiştirebildiğiniz bir kurla çevirin, sonra kısa bir ödeme listesiyle ödeşin."
+h1: "Masrafları 140 para biriminde bölüşün"
+navLabel: "Birden fazla para birimi"
+lead: "Euro, yen ve baht ile ödenen o tek taksi. Side Badger her harcamayı ödediğiniz para biriminde alır, bakiyeleri düzenli tutar ve grubunuz bir kerede ödeşmeyi tercih ettiğinde çevirebilir. 140 para biriminde çalışır ve [grup gezilerine](page:use-case/group-trips) doğal olarak uyar."
+cta:
+  heading: "Euronuzu getirin, yeninizi getirin"
+  body: "Bir hesap oluşturun, bir grup kurun ve ilk harcamayı elinizde ne para birimi varsa onunla ekleyin."
+  button: "Ücretsiz hesap oluştur"
+problem:
+  heading: "Ödendiği gibi girin"
+  body: "Bir gezi nadiren tek para biriminde ödenir. Otel evde sterlinle ayrılmıştır, akşam yemeği yenle ödenmiştir ve havalimanındaki kahve aktarmada ne kullanılıyorsa onunladır. Girmeden önce her şeyi elle çevirmek, tabloların terk edilme biçimidir. Side Badger'da her harcamayı makbuzdaki para biriminde girersiniz ve her tutar kendi para biriminin kurallarını izler; yenin ondalığı yoktur, dinarın üç ondalığı vardır. Son kullandığınız para birimleri listenin başında gelir."
+workflow:
+  heading: "Para birimlerini ayrı tutun ya da giderken çevirin"
+  steps:
+    - title: "Harcamayı kendi para biriminde ekleyin"
+      body: "Para birimini seçin, tutarı yazın, kimin ödediğini ve kimin paylaştığını söyleyin. Başka bir şey gerekmez. Bu varsayılandır ve orijinal tutarı tam girdiğiniz gibi korur."
+      shot: S07
+      shotAlt: "Yen cinsinden bir tutar girilmiş harcama formu"
+    - title: "Her para birimi için bir bakiye izleyin"
+      body: "Bakiyeler para birimi başına ayrı tutulur ve her birinin önerilen ödemelerden oluşan kendi kısa listesi vardır. Sterlin sterlinle, yen yenle ödeşilir."
+      shot: S10
+      shotAlt: "İki para biriminde sadeleştirilmiş borçlarla bakiye ekranı"
+    - title: "Ya da grup bir kerede ödeşmeyi tercih ettiğinde çevirin"
+      body: "Harcamayı girerken başka bir para birimi seçin; Side Badger onu güncel bir döviz kuruyla çevirebilir, siz de kuru gerçekte uygulanan kura değiştirebilirsiniz. Çevrilen tutar o para birimindeki bakiyeye eklenir. Çevirme grubun yaptığı bir seçimdir, asla arkanızdan olan bir şey değil."
+options:
+  heading: "Görebileceğiniz ve değiştirebileceğiniz bir kur"
+  items:
+    - title: "Kur gösterilir"
+      body: "Çevirirken kur ve çevrilen tutar formda görünür; kimsenin bir sayıya körü körüne güvenmesi gerekmez."
+    - title: "Kendi kurunuzu yazın"
+      body: "Bir döviz bürosundan daha iyi, havalimanından daha kötü bir kur mu aldınız? Kuru uygulananla değiştirin, çevrilen tutar güncellenir."
+    - title: "Orijinal kalır"
+      body: "Orijinal tutar, çevrilenin yanında harcamada kalır; yen cinsinden ne kadar olduğunu soran herkes için."
+    - title: "Çevirmek ücretsizdir"
+      body: "Çevirmenin maliyeti yoktur. Bir harcamayı başka bir para biriminde girmek için ücret alınmaz."
+example:
+  heading: "Japonya'da dört arkadaş, iki şekilde ödeşilmiş"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "otel, evden ayrılmış"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "Japonya'da akşam yemeği"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "tren biletleri"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "tapınak girişi"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "Bütün grup için tek para birimi"
+    body: "Grup bunu düşünmek istemiyorsa bir grup para birimi seçin; form her yeni harcamayı hâlâ görebildiğiniz ve değiştirebildiğiniz bir kurla ona çevirir. Bu yalnızca yeni ve kopyalanan harcamalar için geçerlidir. Düzenlemeler ve mevcut harcamalar olduğu gibi kalır; yani önceden kaydedilmiş hiçbir şey sizin altınızdan değişmez."
+  - heading: "Euro borçlusunuz, sterlinle ödüyorsunuz"
+    body: "Yenle ödendi, sterlinle mi ödeşiyorsunuz? Sorun değil. Bir ödemeyi kaydederken onu da çevirebilirsiniz; böylece euro borçlusu sterlinle ödeyebilir ve euro bakiyesi yine doğru çıkar. Birbirinize istediğiniz yolla ödeyin, sonra kaydedin."
+  - heading: "Grup için kurallar"
+    body: "Bir grubu gerçekten kullandığınız para birimleriyle sınırlayın ve formun doğru olanda açılması için bir varsayılan belirleyin. Portekiz tatilinin akşam yemeği faturasının yanında 139 başka seçeneğe ihtiyacı yoktur; [yurt dışında bir düğün](page:use-case/events-and-celebrations) ise muhtemelen ikisine ihtiyaç duyar."
+limits:
+  heading: "Sınırlar"
+  items:
+    - "Kur, harcama kaydedildiğinde sabitlenir. Eski harcamalar asla yeniden değerlenmez."
+    - "Side Badger mümkün olan yerde güncel bir kur getirir. Her çift için garanti edilmez ve kuru her zaman kendiniz yazabilirsiniz."
+    - "Grubun otomatik çevirmesi yalnızca yeni ve kopyalanan harcamalar için geçerlidir; düzenlemeler veya mevcut harcamalar için değil."
+    - "Her harcama kendi para biriminde 999.999,99 ile sınırlıdır."
+    - "140 para birimi var. Kripto paralar ve madenler bunların arasında değil."
+    - "Side Badger ödemeleri kaydeder. Para taşımaz veya bozdurmaz."
+useCasesHeading: "Bunun yardımcı olduğu yerler"
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Hangi döviz kurunu kullanıyorsunuz?"
+      a: "Harcamayı girerken, mevcut olduğunda getirilen güncel bir döviz kuru. Onu gerçekte uygulanan kura değiştirebilirsiniz ve çevrilen tutar güncellenir."
+    - q: "Eski harcamalar yeniden değerlenir mi?"
+      a: "Hayır. Kur, harcama kaydedildiğinde sabitlenir; yani piyasa oynadığı için bir bakiye kaymaz."
+    - q: "Kriptoyu destekliyor musunuz?"
+      a: "Hayır. 140 para birimi var ve kripto paralar bunların arasında değil."
+    - q: "Neden 2.000.000 Endonezya rupisi giremiyorum?"
+      a: "Her harcama kendi para biriminde 999.999,99 ile sınırlıdır. Başka bir para biriminde girip çevirin ya da iki harcamaya bölün."
+    - q: "Çevirmenin bir maliyeti var mı?"
+      a: "Hayır. Çevirmek, Side Badger'ın geri kalanı gibi ücretsizdir. [Fiyatlandırma](page:pricing) sayfasına bakın."
+    - q: "Çevirmek zorunda mıyım?"
+      a: "Hayır. Siz veya grubunuz çevirmeyi seçmedikçe para birimleri ayrı kalır ve her para biriminin kendi kısa ödeme listesi vardır."

@@ -1,0 +1,112 @@
+translatedFrom: "1b51f540"
+review:
+  status: checked
+  checker: "T5-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: "Poravnaj se s manje uplata | Side Badger"
+  description: "Pogledaj tko u tvojoj grupi kome duguje, dobij kratak popis uplata koji poravnava sve i bilježi svaku uplatu kad se dogodi. Besplatno."
+h1: "Poravnaj se s manje uplata"
+navLabel: "Poravnanje"
+lead: "Side Badger vodi tekuće stanje za svakoga u grupi i predlaže kratak popis uplata koji ga poravnava. Platite si kako god želite, a zatim to zabilježite. Ako prvo želiš vidjeti kako se iznosi dijele, počni s [podjelom troškova](page:feature/split-expenses)."
+cta:
+  heading: "Spremni razmrsiti tko kome duguje?"
+  body: "Napravi korisnički račun, osnuj grupu i dodaj prvi trošak. Stanja će preuzeti ostalo."
+  button: "Napravi besplatan račun"
+problem:
+  heading: "Stanja koja se ažuriraju usput"
+  body: "Svaki trošak mijenja tko kome duguje, pa Side Badger održava stanja aktualnima kako se dodaju troškovi i uplate. Svi u grupi vide promjenu odmah, kao i što se promijenilo i tko je to promijenio. Stanja se vode po valutama, pa eura i funte ostaju u svojim stupcima, osim ako je trošak pretvoren pri unosu. Prema zadanim postavkama vidiš dugove koji se tiču tebe; **Prikaži sve** ispisuje cijelu grupu."
+workflow:
+  heading: "Tri koraka do kvita"
+  steps:
+    - title: "Pogledaj tko kome duguje"
+      body: "Otvori stanja grupe da vidiš što duguješ, što ti duguju i kratak popis uplata koji poravnava sve, izračunan zasebno za svaku valutu. Troškovi dovedeni u pitanje ostaju izvan zbrojeva dok se ne riješe. U primjeru s cimerima ispod šest uplata postaje dvije."
+      shot: S10
+      shotAlt: "Zaslon stanja s pojednostavljenim dugovima u dvije valute i uključenom opcijom Prikaži sve"
+    - title: "Plati kako god želiš, a zatim zabilježi"
+      body: "Bankovni prijenos, gotovina, usluga iz prošlog odmora. Side Badger ne premješta novac. Kad novac promijeni vlasnika, zabilježi uplatu i stanje se ažurira za sve."
+      shot: S11
+      shotAlt: "Obrazac uplate s gumbima za brzo poravnanje i obavijesti prikazanom za djelomičnu uplatu"
+    - title: "Provjeri je li stiglo"
+      body: "Uplata ide u povijest grupe, gdje je može vidjeti svatko u grupi i reagirati emojijem. Proslavi uplatu kad stigne."
+      shot: S12
+      shotAlt: "Povijest uplata s reakcijama emojijima na uplatu"
+options:
+  heading: "Opcije"
+  items: []
+example:
+  heading: "Od klupka do kratkog popisa"
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: "Struja"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: "Internet"
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "Namirnice"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "Zabilježi uplatu"
+    body: "Kad netko plati, zabilježi to uz pravu osobu. Gumbi za brzo poravnanje ispunjavaju iznos iz tvojih predloženih uplata, a možeš dodati bilješku, primjerice „bankovni prijenos“ (do 500 znakova). Ako platiš samo dio onoga što duguješ, ostatak ostaje na stanju. Ako uneseš premalo ili previše, Side Badger te upozori prije spremanja. Bilježenje uplate zahtijeva dopuštenje za uređivanje troškova, a datum ne smije biti u budućnosti."
+  - heading: "Plaćeno u drugoj valuti?"
+    body: "Stanja ostaju u valuti u kojoj je plaćeno, pa dug u eurima ostaje dug u eurima. Duguješ eure, a plaćaš u funtama? Pretvori uplatu pri unosu, po aktualnom tečaju ili po tečaju koji je vrijedio pri zamjeni. Tečaj se utvrđuje kad se uplata spremi. [Više valuta](page:feature/multiple-currencies) objašnjava kako radi pretvorba, a [grupna putovanja](page:use-case/group-trips) pokazuju je u uporabi."
+  - heading: "Povijest koju možeš provjeriti"
+    body: "Svaka zabilježena uplata ostaje u povijesti grupe s datumom, iznosom i bilješkom. Uplatu može urediti samo osoba koja ju je zabilježila, a izbrisati je može ona ili administrator grupe. Uplata u kojoj sudjeluje netko tko je napustio grupu je zaključana. Za primjer s cimerima vidi [cimere](page:use-case/housemates)."
+limits:
+  heading: "Što Side Badger ne radi"
+  items:
+    - "Side Badger ne premješta novac, ne šalje poveznice za plaćanje ni zahtjeve za uplatu. Uplata u aplikaciji je zapis uplate izvršene negdje drugdje."
+    - "Predložene uplate dolaze iz jednostavne metode uparivanja, primijenjene zasebno za svaku valutu. Uvijek predlaže manje uplata nego što ima osoba sa stanjem u toj valuti (za četiri osobe najviše tri), ali ne nalazi uvijek najmanji mogući broj."
+    - "Prijedloge ne možeš isključiti. **Prikaži sve** ispisuje svaku predloženu uplatu u grupi, ne samo tvoje."
+    - "Valute se nikad ne prebijaju jedna s drugom, osim ako su troškovi pretvoreni pri unosu."
+    - "Nema podsjetnika, pa je potjerivanje uplate i dalje na tebi."
+useCasesHeading: "Gdje je poravnanje važno"
+faq:
+  heading: "Pitanja"
+  items:
+    - q: "Šalje li Side Badger novac?"
+      a: "Ne. Platite si kako god želite, a zatim zabilježi uplatu u Side Badgeru da se stanje ažurira."
+    - q: "Mogu li isključiti predložene uplate?"
+      a: "Ne. Pojednostavljenje ostaje uključeno, a **Prikaži sve** ispisuje svaku predloženu uplatu u grupi, ne samo one koje se tiču tebe."
+    - q: "Zašto su eura i funte odvojeni?"
+      a: "Stanja ostaju u valuti u kojoj si platio osim ako pretvoriš pri unosu troška ili uplate. Dugovi u različitim valutama nikad se ne prebijaju jedan s drugim."
+    - q: "Što ako netko plati samo dio onoga što duguje?"
+      a: "Zabilježi plaćeni dio. Ostatak ostaje na stanju dok se ne plati."
+    - q: "Je li to uvijek najmanji mogući broj uplata?"
+      a: "Nije zajamčeno. Uvijek predlaže manje uplata nego što ima osoba sa stanjem u toj valuti, pa za četiri osobe nikad više od tri. U primjeru s cimerima to su dvije uplate, gdje je izravno vraćanje svakoj osobi zahtijevalo šest."

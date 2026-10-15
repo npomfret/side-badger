@@ -1,0 +1,127 @@
+translatedFrom: "923c938f"
+review:
+  status: checked
+  checker: "T5-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: "Dziel koszty w 140 walutach, przeliczone lub osobno"
+  description: "Wpisuj każdy wydatek w walucie, w której zapłacono, trzymaj salda osobno albo przeliczaj po kursie, który widzisz i możesz zmienić, a potem rozlicz się krótką listą płatności."
+h1: "Dziel koszty w 140 walutach"
+navLabel: "Wiele walut"
+lead: "Euro, jeny i ta jedna taksówka w bahtach. Side Badger przyjmuje każdy wydatek w walucie, w której zapłacono, pilnuje sald i może przeliczać, gdy grupa woli rozliczyć się raz. Działa w 140 walutach i świetnie pasuje do [wyjazdów grupowych](page:use-case/group-trips)."
+cta:
+  heading: "Przynieś swoje euro, przynieś swoje jeny"
+  body: "Załóż konto, utwórz grupę i dodaj pierwszy wydatek w jakiejkolwiek walucie, która akurat była pod ręką."
+  button: "Załóż darmowe konto"
+problem:
+  heading: "Wpisz tak, jak zapłacono"
+  body: "Wyjazd rzadko jest opłacony w jednej walucie. Hotel zarezerwowano w domu w funtach, kolację zapłacono w jenach, a kawa na lotnisku była w tej walucie, w której akurat była przesiadka. Przeliczanie wszystkiego ręcznie, zanim w ogóle to wpiszesz, to sposób, w jaki porzuca się arkusze. W Side Badger wpisujesz każdy wydatek w walucie z paragonu, a każda kwota trzyma się zasad swojej waluty, więc jeny nie mają miejsc po przecinku, a dinary mają trzy. Ostatnio używane waluty są na początku listy."
+workflow:
+  heading: "Trzymaj waluty osobno albo przeliczaj na bieżąco"
+  steps:
+    - title: "Dodaj wydatek w jego własnej walucie"
+      body: "Wybierz walutę, wpisz kwotę, powiedz, kto zapłacił i kto dzielił koszt. Nic więcej nie trzeba. To ustawienie domyślne i zachowuje oryginalną kwotę dokładnie tak, jak ją wpisano."
+      shot: S07
+      shotAlt: "Formularz wydatku z wpisaną kwotą w jenach"
+    - title: "Patrz na saldo w każdej walucie"
+      body: "Salda są prowadzone osobno dla każdej waluty, a każde ma własną krótką listę podpowiadanych płatności. Funty rozlicza się w funtach, a jeny w jenach."
+      shot: S10
+      shotAlt: "Ekran sald z uproszczonymi długami w dwóch walutach"
+    - title: "Albo przelicz, gdy grupa woli rozliczyć się raz"
+      body: "Wybierz inną walutę przy wpisywaniu wydatku, a Side Badger może przeliczyć go po aktualnym kursie, który możesz zmienić na ten, który faktycznie obowiązywał. Przeliczona kwota dołącza do salda w tej walucie. Przeliczanie to wybór grupy, nigdy coś, co dzieje się za twoimi plecami."
+options:
+  heading: "Kurs, który widzisz i możesz zmienić"
+  items:
+    - title: "Kurs jest widoczny"
+      body: "Gdy przeliczasz, kurs i przeliczona kwota pojawiają się w formularzu, więc nikt nie musi wierzyć liczbie na słowo."
+    - title: "Wpisz własny"
+      body: "Trafił ci się lepszy kurs w kantorze albo gorszy na lotnisku? Zmień kurs na ten, który faktycznie obowiązywał, a przeliczona kwota się zaktualizuje."
+    - title: "Oryginał zostaje"
+      body: "Oryginalna kwota zostaje przy wydatku, obok przeliczonej, dla każdego, kto zapyta, ile to było w jenach."
+    - title: "Przeliczanie za darmo"
+      body: "Przeliczanie nic nie kosztuje. Nie ma opłaty za wpisanie wydatku w innej walucie."
+example:
+  heading: "Czworo znajomych w Japonii, rozliczonych na dwa sposoby"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "hotel, zarezerwowany w domu"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "kolacja w Japonii"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "bilety na pociąg"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "wstęp do świątyni"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "Jedna waluta dla całej grupy"
+    body: "Jeśli grupa wolałaby o tym nie myśleć, wybierz walutę grupy, a formularz przeliczy na nią każdy nowy wydatek, po kursie, który nadal widzisz i możesz zmienić. Dotyczy to tylko nowych i skopiowanych wydatków. Edycje i istniejące wydatki zostają bez zmian, więc nic już zapisanego nie zmienia się pod tobą."
+  - heading: "Jesteś winien euro, płacisz w funtach"
+    body: "Zapłacone w jenach, a rozliczasz w funtach? W porządku. Gdy rejestrujesz płatność, możesz przeliczyć także ją, więc kto jest winien euro, może zapłacić w funtach, a saldo w euro nadal wyjdzie dobrze. Płaćcie sobie, jak chcecie, a potem zarejestruj to."
+  - heading: "Zasady dla grupy"
+    body: "Ogranicz grupę do walut, których naprawdę używacie, i ustaw domyślną, żeby formularz otwierał się na właściwej. Wakacje w Portugalii nie potrzebują 139 innych opcji obok rachunku za kolację, a [wesele za granicą](page:use-case/events-and-celebrations) prawdopodobnie potrzebuje dwóch."
+limits:
+  heading: "Limity"
+  items:
+    - "Kurs jest ustalany w chwili zapisu wydatku. Stare wydatki nigdy nie są przeszacowywane."
+    - "Side Badger pobiera aktualny kurs, gdy może. Nie każda para ma go zagwarantowanego, a kurs zawsze możesz wpisać sam."
+    - "Automatyczne przeliczanie w grupie dotyczy tylko nowych i skopiowanych wydatków, a nie edycji ani istniejących wydatków."
+    - "Każdy wydatek ma limit 999 999,99 w swojej walucie."
+    - "Jest 140 walut. Kryptowalut ani metali wśród nich nie ma."
+    - "Side Badger rejestruje płatności. Nigdy nie przesyła pieniędzy ani ich nie wymienia."
+useCasesHeading: "Gdzie to pomaga"
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Jakiego kursu wymiany używacie?"
+      a: "Aktualnego kursu wymiany, pobieranego przy wpisywaniu wydatku, gdy jest dostępny. Możesz zmienić go na ten, który faktycznie obowiązywał, a przeliczona kwota się zaktualizuje."
+    - q: "Czy stare wydatki są przeszacowywane?"
+      a: "Nie. Kurs jest ustalany w chwili zapisu wydatku, więc saldo nie dryfuje dlatego, że ruszył się rynek."
+    - q: "Czy obsługujecie kryptowaluty?"
+      a: "Nie. Jest 140 walut, a kryptowalut wśród nich nie ma."
+    - q: "Dlaczego nie mogę wpisać 2 000 000 rupii indonezyjskich?"
+      a: "Każdy wydatek ma limit 999 999,99 w swojej walucie. Wpisz go w innej walucie i przelicz albo podziel na dwa wydatki."
+    - q: "Czy przeliczanie coś kosztuje?"
+      a: "Nie. Przeliczanie jest darmowe, tak jak reszta Side Badger. Zobacz [cennik](page:pricing)."
+    - q: "Czy muszę przeliczać?"
+      a: "Nie. Waluty zostają osobno, chyba że ty lub twoja grupa zdecydujecie się przeliczać, a każda waluta ma własną krótką listę płatności."

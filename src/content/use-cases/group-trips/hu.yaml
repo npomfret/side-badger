@@ -1,0 +1,111 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: checked
+  checker: "T5-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+meta:
+  title: "Oszd meg egy csoportos utazás költségeit, 140 pénznemben"
+  description: "Kövesd, ki mit fizetett egy csoportos utazáson, add meg a költségeket helyi pénznemben, válts át, vagy ne, és számoljatok el egyszer a végén. Ingyenes, a böngészőben."
+h1: "Oszd meg egy csoportos utazás költségeit, 140 pénznemben"
+navLabel: "Csoportos utazások"
+lead: "Kövesd a villát, a taxikat és azt az egy kör koktélt, amelynek kifizetésére senki nem emlékszik, hogy jelentkezett volna. A Side Badger vezeti a számolást, amíg távol vagy, [kezeli a fontot, az eurót és 138 másik pénznemet](page:feature/multiple-currencies), és hazaérkezéskor ad egy [rövid kifizetéslistát](page:feature/settle-up)."
+cta:
+  heading: "Nyaralási matek, mielőtt elhalványul a barnaság"
+  body: "Hozz létre egy csoportot, küldd el a meghívó linket az utazás résztvevőinek, és add hozzá a költségeket, ahogy felmerülnek."
+  button: "Ingyenes fiók létrehozása"
+scenario:
+  heading: "Mindenki fizetett valamit, valamilyen pénznemben"
+  body: "Valaki lefoglalta a repjegyeket, valaki más kártyával fizette a villát, egy harmadik pedig készpénzzel állta a vacsorát. A harmadik napra senki nem tudja, ki áll nyerésre. A kérdés egyszerű, még ha a válasz általában egy olyan táblázatban él is, amelyet senki nem akar megnyitni. Ki mit fizetett, milyen pénznemben, és hogyan számolnak el végül egyszer?"
+sections:
+  - heading: "Indulás előtt"
+    body: "Bocsásd szavazásra a villák szűkített listáját, ha szeretnéd, névtelenül, hogy a döntés a csoporté legyen, és ne azé, aki a legtovább duzzog. Aztán tartsd a közös bevásárlólistát a bevásárlási számlák mellett, hogy senki ne vegyen három tubus napkrémet, de egyetlen konnektoradaptert se."
+  - heading: "Amíg távol vagy"
+    body: "Add hozzá az egyes költségeket, ahogy felmerülnek, abban a pénznemben, amelyben fizették. Fotózd le a nyugtát, és a Side Badger kitölti az összeget, a dátumot és a helyet, hogy ellenőrizhesd; a nyugták képeit a Google AI-szolgáltatása olvassa. Váltsd át az összeget egy aktuális árfolyamon, amelyet átírhatsz arra, amelyet ténylegesen kaptál, és az eredeti összeg a költségnél marad. Vagy hagyd az eurót euróként, és döntsd el később. A csoport választhat egyetlen pénznemet is, és az új költségek automatikusan arra váltódnak."
+  - heading: "Nem mindenki csinált mindent"
+    body: "Néhányan kihagyták a vacsorát, mások nem mentek hajózni. Hagyd ki őket azokból a költségekből, amelyekben nem vettek részt, a többit pedig oszd fel [egyenlően, pontos összegek szerint vagy százalékosan](page:feature/split-expenses). Senki nem fizet az utazás azon részéért, amelyet átaludt."
+  - heading: "Számoljatok el, amikor hazaértetek"
+    body: "A Side Badger egy rövid kifizetéslistát javasol, amely mindenkit elszámoltat. Fizessetek egymásnak, ahogy akartok, aztán rögzítsétek. Vegyes pénznemeknél vezessétek mindegyiket külön, vagy váltsatok át menet közben; az alábbi lisszaboni példa mindkettőt megmutatja."
+  - heading: "Legény- és leánybúcsúk"
+    body: "Egy ünnepelttel töltött hétvége kicsit több adminisztrációt igényel. Csinálj belőle felügyelt csoportot, ahol az adminisztrátorok jóváhagyják az új tagokat, és a költségeket csak a létrehozók és az adminisztrátorok változtathatják. Az ünnepelt részéhez használj pontos összegeket, korlátozd a csoportot azokra a pénznemekre, amelyeket tényleg használtok, és zárold a csoportot, ha vége, hogy a számok a helyükön maradjanak."
+exampleAfter: 4
+example:
+  heading: "Négy barát Lisszabonban"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Repjegyek"
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: Villa
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: "Vacsora"
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Hajókirándulás"
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: "Amire egy utazás támaszkodik"
+faq:
+  heading: "Kérdések"
+  items:
+    - q: "Ki lehet hagyni azokat, akik kihagyták a vacsorát?"
+      a: "Igen. Válaszd ki, ki vett részt az egyes költségekben, és csak őket terheli."
+    - q: "Működik térerő nélkül?"
+      a: "Nem. A Side Badgernek kapcsolat kell, így add hozzá a költségeket, ha visszatértél a wifire."
+    - q: "Kell mindenkinek telepítenie valamit?"
+      a: "Nem. A böngészőben fut. Küldd el a meghívó linket, és az emberek a telefonjukról csatlakoznak."
+    - q: "Melyik árfolyamot használja?"
+      a: "Egy aktuális árfolyamot a költség megadásakor, vagy a sajátodat, ha mást kaptál. Az árfolyam a költség mentésekor rögzül, így a régi költségeket sosem értékeljük újra."
+    - q: "Befagyaszthatjuk a csoportot az utazás után?"
+      a: "Igen. Egy adminisztrátor zárolhatja a csoportot, hogy a számok a helyükön maradjanak."
+    - q: "Van korlátja az összegeknek?"
+      a: "Igen. 999 999,99 költségenként, a saját pénznemében."

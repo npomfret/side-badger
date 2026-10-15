@@ -1,0 +1,112 @@
+translatedFrom: "1b51f540"
+review:
+  status: checked
+  checker: "T5-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.1.label
+claims:
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - balances.six-payments-become-two
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.owe-euros-pay-pounds
+  - reactions.celebrate-a-payment
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+meta:
+  title: "Poravnaj se z manj plačili | Side Badger"
+  description: "Poglej, kdo v tvoji skupini komu dolguje, dobi kratek seznam plačil, ki poravna vse, in beleži vsako plačilo sproti. Brezplačno."
+h1: "Poravnaj se z manj plačili"
+navLabel: "Poravnava"
+lead: "Side Badger vodi tekoče stanje za vsakogar v skupini in predlaga kratek seznam plačil, ki ga poravna. Plačajte si, kakor želite, nato plačilo zabeležite. Če najprej želiš videti, kako se zneski delijo, začni z [delitvijo stroškov](page:feature/split-expenses)."
+cta:
+  heading: "Pripravljen razvozlati, kdo komu dolguje?"
+  body: "Ustvari uporabniški račun, ustanovi skupino in dodaj prvi strošek. Stanja bodo naredila ostalo."
+  button: "Ustvari brezplačen račun"
+problem:
+  heading: "Stanja, ki se posodabljajo sproti"
+  body: "Vsak strošek spremeni, kdo komu dolguje, zato Side Badger ohranja stanja posodobljena, ko se dodajajo stroški in plačila. Vsak v skupini spremembo vidi takoj, skupaj s tem, kaj se je spremenilo in kdo jo je naredil. Stanja se vodijo po valutah, zato evri in funti ostanejo v svojih stolpcih, razen če je bil strošek ob vnosu pretvorjen. Privzeto vidiš dolgove, ki te zadevajo; **Prikaži vse** našteje vso skupino."
+workflow:
+  heading: "Trije koraki do kvita"
+  steps:
+    - title: "Poglej, kdo komu dolguje"
+      body: "Odpri stanja skupine, da vidiš, koliko dolguješ, koliko ti dolgujejo in kratek seznam plačil, ki poravna vse, izračunan za vsako valuto posebej. Stroški, ki so pod vprašajem, ostanejo zunaj vsot, dokler se ne razrešijo. V spodnjem primeru s sostanovalci se šest plačil spremeni v dve."
+      shot: S10
+      shotAlt: "Zaslon stanj s poenostavljenimi dolgovi v dveh valutah in vklopljeno možnostjo Prikaži vse"
+    - title: "Plačaj, kakor želiš, nato zabeleži"
+      body: "Bančno nakazilo, gotovina, usluga iz zadnjih počitnic. Side Badger denarja ne premika. Ko je denar zamenjal lastnika, plačilo zabeleži in stanje se posodobi za vse."
+      shot: S11
+      shotAlt: "Obrazec za plačilo z gumbi za hitro poravnavo in obvestilom, prikazanim pri delnem plačilu"
+    - title: "Preveri, ali je prispelo"
+      body: "Plačilo gre v zgodovino skupine, kjer ga lahko vidi vsak v skupini in se nanj odzove z emojijem. Plačilo proslavi, ko prispe."
+      shot: S12
+      shotAlt: "Zgodovina plačil z reakcijami z emojiji pri plačilu"
+options:
+  heading: "Možnosti"
+  items: []
+example:
+  heading: "Od zmešnjave do kratkega seznama"
+  currency: GBP
+  people:
+    - id: amira
+      name: Amira
+    - id: ben
+      name: Ben
+    - id: carlos
+      name: Carlos
+    - id: dana
+      name: Dana
+  expenses:
+    - label: "Elektrika"
+      payer: amira
+      amount: 120
+      split:
+        method: equal
+    - label: "Internet"
+      payer: ben
+      amount: 40
+      split:
+        method: equal
+    - label: "Živila"
+      payer: carlos
+      amount: 80
+      split:
+        method: equal
+exampleAfter: 0
+sections:
+  - heading: "Zabeleži plačilo"
+    body: "Ko nekdo plača, to zabeleži pri pravi osebi. Gumbi za hitro poravnavo izpolnijo znesek iz tvojih predlaganih plačil, dodaš pa lahko opombo, na primer „bančno nakazilo“ (do 500 znakov). Če plačaš samo del tega, kar dolguješ, preostanek ostane na stanju. Če vneseš premalo ali preveč, te Side Badger opozori, preden shraniš. Beleženje plačila zahteva dovoljenje za urejanje stroškov, datum pa ne sme biti v prihodnosti."
+  - heading: "Plačano v drugi valuti?"
+    body: "Stanja ostanejo v valuti, v kateri so bila plačana, zato evrski dolg ostane evrski dolg. Dolguješ evre, plačaš pa v funtih? V redu. Plačilo ob vnosu pretvori po trenutnem menjalnem tečaju ali po tečaju, ki je veljal ob menjavi. Tečaj se določi ob shranitvi plačila. [Več valut](page:feature/multiple-currencies) pojasni, kako deluje pretvorba, [skupinska potovanja](page:use-case/group-trips) pa jo kažejo v uporabi."
+  - heading: "Zgodovina, ki jo lahko preveriš"
+    body: "Vsako zabeleženo plačilo ostane v zgodovini skupine z datumom, zneskom in opombo. Plačilo lahko ureja samo oseba, ki ga je zabeležila, izbriše pa ga lahko ona ali skrbnik skupine. Plačilo, v katerem je oseba, ki je zapustila skupino, je zaklenjeno. Za primer s sostanovalci glej [sostanovalce](page:use-case/housemates)."
+limits:
+  heading: "Česa Side Badger ne počne"
+  items:
+    - "Side Badger ne premika denarja, ne pošilja povezav za plačilo in ne pošilja zahtevkov za plačilo. Plačilo v aplikaciji je zapis plačila, opravljenega drugje."
+    - "Predlagana plačila izhajajo iz preproste metode ujemanja, uporabljene za vsako valuto posebej. Vedno predlaga manj plačil, kot je oseb s stanjem v tej valuti (pri štirih osebah največ tri), vendar ne najde vedno najmanjšega možnega števila."
+    - "Predlogov ne moreš izklopiti. **Prikaži vse** našteje vsako predlagano plačilo v skupini, ne samo tvojih."
+    - "Valute se nikoli ne pobotajo med seboj, razen če so bili stroški ob vnosu pretvorjeni."
+    - "Opomnikov ni, zato je terjanje plačila še vedno tvoja stvar."
+useCasesHeading: "Kje je poravnava pomembna"
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Ali Side Badger pošlje denar?"
+      a: "Ne. Plačajte si, kakor želite, nato plačilo zabeleži v Side Badger, da se stanje posodobi."
+    - q: "Ali lahko izklopim predlagana plačila?"
+      a: "Ne. Poenostavitev ostane vklopljena, **Prikaži vse** pa našteje vsako predlagano plačilo v skupini, ne samo tistih, ki te zadevajo."
+    - q: "Zakaj so evri in funti ločeni?"
+      a: "Stanja ostanejo v valuti, v kateri si plačal, razen če pretvoriš ob vnosu stroška ali plačila. Dolgovi v različnih valutah se nikoli ne pobotajo med seboj."
+    - q: "Kaj, če nekdo plača samo del tega, kar dolguje?"
+      a: "Zabeleži plačani del. Preostanek ostane na stanju, dokler ni plačan."
+    - q: "Ali je to vedno najmanjše možno število plačil?"
+      a: "Ni zagotovljeno. Vedno predlaga manj plačil, kot je oseb s stanjem v tej valuti, zato pri štirih osebah nikoli več kot tri. V primeru s sostanovalci sta to dve plačili, kjer je neposredno vračilo vsaki osebi zahtevalo šest."

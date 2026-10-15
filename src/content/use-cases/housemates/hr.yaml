@@ -1,0 +1,109 @@
+translatedFrom: "e6b829e6"
+review:
+  status: checked
+  checker: "T5-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.2.label
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - lists.shared-shopping-list
+  - live-updates.everyone-sees-it-straight-away
+meta:
+  title: "Dijeli kućanske račune s cimerima"
+  description: "Dijeli najamninu po veličini sobe, energiju i namirnice jednako i svaki mjesec vidi tko kome duguje. Besplatan način da cimeri vode evidenciju."
+h1: "Dijeli kućanske račune s cimerima"
+navLabel: "Cimeri"
+lead: "Za cimera koji kupuje toaletni papir i cimere koji nikad ne vide da se to događa. Side Badger vodi jednu tekuću evidenciju najamnine, računa i kupnje za **cimere**, pa nitko nikoga ne mora potjerivati, a hladnjak opet može biti samo hladnjak."
+cta:
+  heading: "Počni sa svojom kućom"
+  body: "Napravi korisnički račun, osnuj grupu za kuću i svima pošalji poveznicu za poziv. Računi ovog mjeseca mogu ući već večeras."
+  button: "Napravi besplatan račun"
+scenario:
+  heading: "Uredi kuću"
+  body: "Osnuj grupu za kuću, odaberi ime pod kojim želiš biti vidljiv u njoj i pozovi sve poveznicom ili QR kodom. Grupa može biti otvorena, gdje svatko dodaje i uređuje, ili upravljana, gdje nove članove odobrava administrator, a troškove mogu mijenjati samo osnivači i administratori, što odgovara cimeru koji vodi knjige. Tko samo želi gledati brojeve može biti promatrač, koji vidi sve i ništa ne mijenja. Svi novi trošak vide odmah, pa „dodat ću poslije“ ima manje skrovišta."
+sections:
+  - heading: "Najamnina i računi"
+    body: "Najamnina se rijetko dijeli sa četiri jer sobe nisu iste. Podijeli je po postocima, pa velika soba plaća više, a ormar s prozorom manje. Postoci moraju zajedno davati 100. Računi koje svi koriste dobivaju jednaku podjelu, a cimer koji nije sudjelovao u trošku može biti izostavljen. Kad jednaka podjela ostavi preostali cent, on ide jednoj osobi nasumično. Nema ponavljajućih računa, pa svaki mjesec kopiraš prošlomjesečnu najamninu, promijeniš datum i nastaviš."
+  - heading: "Zajednička kupnja"
+    body: "Zajednički popis za kupnju drži u istoj grupi kao i račune za kupnju i kvačicom označavaj stavke kad stignu u košaricu. Tko obavi kupnju, dodaje ukupni iznos s računa kao trošak i dijeli ga jednako ili samo među osobe koje će to pojesti. Tko stalno kupuje zobeno mlijeko koje nitko drugi ne pije ostaje stvar kuće, ali će popis troškova barem biti točan. Dopuštenja grupe određuju tko može stvarati i uređivati popise. Stavi najamninu, račune i kupnju zajedno i dobivaš mjesec poput onog ispod, u kući od četvero: Jo plaća 2.000 £ najamnine, podijeljene 30 %, 25 %, 25 % i 20 % prema veličini sobe, zatim Kwame plaća 120 £ za energiju, Lena 40 £ za internet, a Matt 80 £ za namirnice, sve podijeljeno jednako. Jo na kraju potražuje 1.340 £, a Side Badger predlaže tri uplate, sve Jou."
+  - heading: "Pošteni načini dijeljenja kućanskih troškova"
+    items:
+      - "**Jednako** odgovara onome što svi koriste otprilike jednako, kao internet, sredstva za čišćenje i zajednička kupnja. Brzo je i nitko se ne mora svađati oko matematike."
+      - "**Prema veličini sobe** odgovara najamnini, jer se sobe razlikuju i koliko su ljudi voljni platiti za njih. Dogovorite postotke jednom, kad se netko useli, i koristite ih svaki mjesec."
+      - "**Prema korištenju** odgovara računima gdje jedna osoba očito troši više, kao račun za grijanje kućnog ureda ili streaming račun koji gledaju dvije osobe. Izostavi osobe koje nisu sudjelovale ili unesi točne iznose za svaku."
+      - "Što god odabereš, dogovorite se prije prvog računa, a ne poslije prve svađe, i zapišite pravilo negdje gdje ga vidi cijela kuća."
+  - heading: "Kad se netko iseli"
+    body: "Prvo se poravnava. Nitko ne može napustiti grupu dok duguje ili mu se duguje novac, pa onaj koji se seli plati ili primi, ti to zabilježiš, a tek tada odlazi. Nastavi grupu za preostale cimere i pozovi novu osobu poveznicom. Kad kuće više nema, administrator može zaključati grupu da brojevi ostanu ili je zauvijek zatvoriti, čime postaje nedostupna svima, pa to učini tek kad nikome ne treba povijest."
+exampleAfter: 2
+example:
+  heading: "Tko kome duguje ovaj mjesec"
+  currency: GBP
+  people:
+    - id: jo
+      name: Jo
+    - id: kwame
+      name: Kwame
+    - id: lena
+      name: Lena
+    - id: matt
+      name: Matt
+  expenses:
+    - label: "Najamnina"
+      payer: jo
+      amount: 2000
+      split:
+        method: percent
+        shares:
+          jo: 30
+          kwame: 25
+          lena: 25
+          matt: 20
+    - label: "Energija"
+      payer: kwame
+      amount: 120
+      split:
+        method: equal
+    - label: "Internet"
+      payer: lena
+      amount: 40
+      split:
+        method: equal
+    - label: "Namirnice"
+      payer: matt
+      amount: 80
+      split:
+        method: equal
+featuresHeading: "Značajke koje kuća koristi"
+faq:
+  heading: "Pitanja"
+  items:
+    - q: "Može li se najamnina ponavljati automatski?"
+      a: "Ne, nema ponavljajućih računa. Kopiraj prošlomjesečnu najamninu u par dodira, promijeni datum i gotovo."
+    - q: "Možemo li dijeliti prema veličini sobe?"
+      a: "Da, po postocima. Daj svakom cimeru udio koji odražava njegovu sobu, sve dok udjeli zajedno daju 100. O drugim načinima dijeljenja pročitaj u [podjeli troškova](page:feature/split-expenses)."
+    - q: "Što ako se cimer iseli dok duguje novac?"
+      a: "Ne može napustiti grupu dok se ne poravna, jer nitko ne može otići dok duguje ili mu se duguje novac. Brojevi ostaju pošteni dok svi nisu kvit."
+    - q: "Plaća li Side Badger račune?"
+      a: "Ne. Vodi evidenciju i predlaže kratak popis uplata. Platite si kako god želite, a zatim zabilježite, kako objašnjava [poravnanje](page:feature/settle-up)."
+    - q: "Može li jedan cimer voditi knjige?"
+      a: "Da. Postavi ga za administratora i koristi upravljanu grupu, gdje nove članove odobrava administrator, a troškove mogu mijenjati samo osnivači i administratori."

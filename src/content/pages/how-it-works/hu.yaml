@@ -1,0 +1,108 @@
+translatedFrom: "fd23c99b"
+review:
+  status: checked
+  checker: "T5-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.expenses.1.label
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+meta:
+  title: "Hogyan működik a Side Badger | Csoportos költségek felosztása öt lépésben"
+  description: "Hozz létre csoportot, hívj meg embereket, add hozzá a költségeket, és számoljatok el. Nézd meg, mi történik a „valaki fizetett” és a „kvittek vagyunk” között, egy végigvezetett példával."
+h1: "Hogyan működik a Side Badger"
+navLabel: "Hogyan működik"
+lead: "Mi történik a „valaki fizetett” és a „kvittek vagyunk” között? Öt lépés, nulla táblázat, és egy borz, aki többnyire dísz. Itt az egész út, az első csoporttól az utolsó rögzített kifizetésig. Az egyes lépések részleteit a [költségek felosztása](page:feature/split-expenses) és az [elszámolás](page:feature/settle-up) oldalon találod."
+cta:
+  heading: "Az „én állom”-tól a „kvittek vagyunk”-ig"
+  body: "Hozz létre ingyenes fiókot, indíts csoportot, és add hozzá az első költséget. A borz nem ítéli meg a nyugtát."
+  button: "Ingyenes fiók létrehozása"
+steps:
+  - title: "Hozz létre egy csoportot"
+    body: "Csinálj egy csoportot minden házhoz, utazáshoz vagy eseményhez, hogy a lakbér sose kerüljön ugyanarra a listára, mint az esküvői ajándék. Adj neki nevet, válaszd ki a nevet, amelyen az emberek látnak, és ha szeretnéd, korlátozd, mely pénznemeket fogadja. A műszerfalad ezután egyetlen képernyőn mutatja az összes csoportot, és hogy melyikben hogy állsz."
+    shot: S02
+    shotAlt: "A csoportlétrehozó ablak megnyitott pénznemkorlátozási résszel"
+  - title: "Hívd meg az embereidet"
+    body: "Oszd meg a csatlakozási linket, vagy mutass egy QR-kódot, és állítsd be, meddig él, 15 perctől 5 napig. Mindenkinek, aki csatlakozik, ingyenes fiók és megerősített e-mail-cím kell, és egy csoportba legfeljebb 50 ember fér. Ha szeretnéd válogatni, ki jön be, kapcsold be a jóváhagyást, és egy adminisztrátor beengedi az egyes embereket."
+    shot: S03
+    shotAlt: "A meghívó ablak a link lapon, QR-kóddal és a lejárati lehetőségekkel"
+  - title: "Add hozzá a költségeket, ahogy felmerülnek"
+    body: "Mondd meg, ki fizetett, mennyit és kikért. Oszd fel egyenlően, pontos összegek szerint vagy százalékosan, és hagyd ki azt, aki nem vett részt benne. Add hozzá a költséget, és mindenki azonnal látja, azzal együtt, hogy mi változott, és ki változtatta."
+    shot: S05
+    shotAlt: "A költségűrlap százalékos felosztással, a lakbért a szobák mérete szerint elosztva"
+  - title: "Figyeld az egyenlegeket"
+    body: "A Side Badger pénznemenként folyamatos egyenleget vezet, így első pillantásra látod, ki kinek tartozik. Ahelyett, hogy mindenkire hagyná a kis tartozások hálójának kibogozását, egy rövid kifizetéslistát javasol, amely elszámoltatja a csoportot."
+    shot: S10
+    shotAlt: "Az egyenlegek képernyője egyszerűsített tartozásokkal két pénznemben, az Összes megjelenítése bekapcsolva"
+  - title: "Számoljatok el az alkalmazáson kívül, rögzítsd benne"
+    body: "A Side Badger sosem mozgat pénzt. Fizessetek egymásnak, ahogy akartok, aztán rögzítsd a kifizetést, hogy az egyenlegek felzárkózzanak, és mindenki képernyője frissüljön újratöltés nélkül. Az „elszámolt” egyszerűen azt jelenti, hogy az egyenlegek nullák. Senki nem hagyhat el egy csoportot, amíg tartozik, vagy neki tartoznak, ezért aki a kijárat felé tart, előbb elszámol."
+    shot: S11
+    shotAlt: "A kifizetési űrlap gyors rendezés gombokkal és a részleges kifizetés értesítésével"
+requirements:
+  heading: "Mire van szükséged"
+  items:
+    - "Egy ingyenes fiókra. Elég egy e-mail-cím és egy jelszó, az e-mailt pedig megerősíted, mielőtt bármit hozzáadhatnál."
+    - "18 éves vagy idősebb kor."
+    - "Egy modern böngészőre telefonon vagy számítógépen, és kapcsolatra. A Side Badger nem alkalmazásbolti app, és nem működik offline."
+    - "Opcionálisan egy helyre a kezdőképernyőn. Nem kell alkalmazásbolt, mert a Side Badgert hozzáadhatod a kezdőképernyődhöz vagy a dokkodhoz, és úgy nyílik meg, mint egy alkalmazás."
+example:
+  heading: "Három barát egy esti kimozdulás után"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: "Vacsora"
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: Taxi
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: "39 nyelv, több embernek építve"
+    body: "Használd a Side Badgert 39 nyelven, köztük jobbról balra írt arabul, perzsául és urduul. A csoport minden tagja kiválaszthatja a sajátját, így a csoport oldala az egyik embernek lehet arab, a másiknak angol. Billentyűzetet és képernyőolvasót használókra is gondolva készült, a tagok színei pedig mintázattal párosulnak, így nem kell megkülönböztetned a zöldet a pirostól."
+faq:
+  heading: "Kérdések"
+  items:
+    - q: "Mindenkinek kell fiók?"
+      a: "Igen, ingyenes. Mindenki megerősíti az e-mail-címét, mielőtt bármit hozzáadna."
+    - q: "Van alkalmazás?"
+      a: "Böngészőben fut, és hozzáadhatod a kezdőképernyődhöz vagy a dokkodhoz, hogy úgy nyíljon meg, mint egy alkalmazás. Alkalmazásboltos verzió és offline mód nincs."
+    - q: "Mozgat pénzt a Side Badger?"
+      a: "Nem. Vezeti a számolást és kifizetéseket javasol, ti pedig fizettek egymásnak, ahogy akartok. Utána rögzíted a kifizetést. Lásd az [elszámolást](page:feature/settle-up)."
+    - q: "Elmehet valaki úgy, hogy tartozik?"
+      a: "Nem. Senki nem hagyhat el egy csoportot, amíg tartozik, vagy neki tartoznak, ezért előbb elszámol."
+    - q: "Hány ember csatlakozhat egy csoporthoz?"
+      a: "Legfeljebb 50 ember egy csoportban. Hívd meg őket linkkel vagy QR-kóddal, és kapcsold be a jóváhagyást, ha azt szeretnéd, hogy egy adminisztrátor beengedje az egyes embereket."
+    - q: "Mi a helyzet az egynél több pénznemes utazásokkal?"
+      a: "Az egyenlegeket pénznemenként külön vezetjük. Lásd a [több pénznemet](page:feature/multiple-currencies)."

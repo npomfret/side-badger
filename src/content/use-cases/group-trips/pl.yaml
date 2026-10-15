@@ -1,0 +1,110 @@
+translatedFrom: "8b6e5d83"
+review:
+  status: checked
+  checker: "T5-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - multi-currency.140-currencies
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - permissions.managed-group
+  - permissions.lock-the-group
+meta:
+  title: "Dziel koszty wyjazdu grupowego, w 140 walutach"
+  description: "Śledź, kto za co zapłacił na wyjeździe grupowym, wpisuj koszty w lokalnej walucie, przeliczaj je albo nie i rozlicz się raz na końcu. Za darmo, w przeglądarce."
+h1: "Dziel koszty wyjazdu grupowego, w 140 walutach"
+navLabel: "Wyjazdy grupowe"
+lead: "Śledź willę, taksówki i tę jedną kolejkę koktajli, którą nikt nie pamięta, żeby się wyrywał stawiać. Side Badger prowadzi bieżący rachunek w czasie wyjazdu, [obsługuje funty, euro i 138 innych walut](page:feature/multiple-currencies) i po powrocie daje [krótką listę płatności](page:feature/settle-up)."
+cta:
+  heading: "Wakacyjna matematyka, zanim zblednie opalenizna"
+  body: "Utwórz grupę, wyślij link z zaproszeniem osobom z wyjazdu i dodawaj koszty na bieżąco."
+  button: "Załóż darmowe konto"
+scenario:
+  heading: "Każdy za coś zapłacił, w jakiejś walucie"
+  body: "Ktoś zarezerwował loty, ktoś inny wziął willę na kartę, a trzecia osoba pokryła kolację gotówką. Do trzeciego dnia nikt nie wie, kto jest na plusie. Pytanie jest proste, nawet jeśli odpowiedź zwykle mieszka w arkuszu, którego nikt nie chce otwierać. Kto za co zapłacił, w jakiej walucie i jak wszyscy rozliczą się raz na końcu?"
+sections:
+  - heading: "Zanim wyjedziecie"
+    body: "Poddajcie pod głosowanie krótką listę willi, jeśli chcecie, anonimowo, żeby decyzja należała do grupy, a nie do tego, kto dłużej się boczy. Potem trzymajcie wspólną listę zakupów obok rachunków za zakupy, żeby nikt nie kupił trzech tubek kremu z filtrem i żadnego adaptera do gniazdka."
+  - heading: "Podczas wyjazdu"
+    body: "Dodawaj każdy koszt na bieżąco, w walucie, w której zapłacono. Zrób zdjęcie paragonu, a Side Badger uzupełni sumę, datę i miejsce do sprawdzenia; obrazy paragonów są odczytywane przez usługę AI Google. Przelicz kwotę po aktualnym kursie, który możesz zmienić na ten, który faktycznie obowiązywał, a oryginalna kwota zostaje przy wydatku. Albo zostaw euro jako euro i zdecyduj później. Grupa może też wybrać jedną walutę, a nowe wydatki przeliczą się na nią automatycznie."
+  - heading: "Nie każdy robił wszystko"
+    body: "Niektórzy opuścili kolację, inni nie płynęli łodzią. Pomiń ich w kosztach, w których nie uczestniczyli, a resztę podziel [po równo, według dokładnych kwot albo procentowo](page:feature/split-expenses). Nikt nie płaci za tę część wyjazdu, którą przespał."
+  - heading: "Rozlicz się po powrocie do domu"
+    body: "Side Badger podpowiada krótką listę płatności, która rozlicza wszystkich. Płaćcie sobie, jak chcecie, a potem zarejestrujcie to. Przy mieszanych walutach trzymajcie każdą osobno albo przeliczajcie na bieżąco; przykład z Lizbony poniżej pokazuje oba warianty."
+  - heading: "Wieczory kawalerskie i panieńskie"
+    body: "Weekend z gościem honorowym wymaga trochę więcej papierkowej roboty. Zrób grupę zarządzaną, w której administratorzy zatwierdzają nowych członków, a wydatki mogą zmieniać tylko twórcy i administratorzy. Użyj dokładnych kwot dla udziału gościa honorowego, ogranicz grupę do walut, których naprawdę używacie, i zablokuj grupę, gdy będzie po wszystkim, żeby liczby zostały na miejscu."
+exampleAfter: 4
+example:
+  heading: "Czworo znajomych w Lizbonie"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Loty"
+      payer: ana
+      amount: 480
+      split:
+        method: equal
+    - label: "Willa"
+      payer: ben
+      amount: 900
+      currency: EUR
+      split:
+        method: equal
+    - label: "Kolacja"
+      payer: chloe
+      amount: 120
+      currency: EUR
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Rejs łodzią"
+      payer: dev
+      amount: 160
+      currency: EUR
+      split:
+        method: equal
+  conversion:
+    rates:
+      EUR: 0.85
+featuresHeading: "Na czym opiera się wyjazd"
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Czy można pominąć osoby, które opuściły kolację?"
+      a: "Tak. Wybierz, kto uczestniczył w każdym wydatku, a tylko te osoby zostaną nim obciążone."
+    - q: "Czy działa bez zasięgu?"
+      a: "Nie. Side Badger potrzebuje połączenia, więc dodaj koszty, gdy wrócisz do wifi."
+    - q: "Czy każdy musi coś instalować?"
+      a: "Nie. Działa w przeglądarce. Wyślij link z zaproszeniem, a ludzie dołączą z telefonów."
+    - q: "Jakiego kursu wymiany używa?"
+      a: "Aktualnego kursu wymiany przy wpisywaniu wydatku albo własnego, jeśli obowiązywał inny. Kurs jest ustalany w chwili zapisu wydatku, więc stare wydatki nigdy nie są przeszacowywane."
+    - q: "Czy możemy zamrozić grupę po wyjeździe?"
+      a: "Tak. Administrator może zablokować grupę, żeby liczby zostały na miejscu."
+    - q: "Czy jest limit kwot?"
+      a: "Tak. 999 999,99 na wydatek, w jego własnej walucie."

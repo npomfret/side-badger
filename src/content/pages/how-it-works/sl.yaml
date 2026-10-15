@@ -1,0 +1,107 @@
+translatedFrom: "fd23c99b"
+review:
+  status: checked
+  checker: "T5-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - dashboard.every-group-on-one-screen
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - accounts.all-you-need-is-an-email
+  - accessibility.keyboard-and-screen-reader
+  - accessibility.member-colours-with-patterns
+meta:
+  title: "Kako deluje Side Badger | Delitev skupinskih stroškov v petih korakih"
+  description: "Ustanovi skupino, povabi ljudi, dodajaj stroške in se poravnaj. Poglej, kaj se zgodi med „nekdo je plačal“ in „sva si kvit“, s primerom po korakih."
+h1: "Kako deluje Side Badger"
+navLabel: "Kako deluje"
+lead: "Kaj se zgodi med „nekdo je plačal“ in „smo si kvit“? Pet korakov, nobene preglednice in en jazbec, ki je večinoma za okras. Tukaj je cela pot, od prve skupine do zadnjega zabeleženega plačila. Podrobnosti o posameznem koraku najdeš pri [delitvi stroškov](page:feature/split-expenses) in [poravnavi](page:feature/settle-up)."
+cta:
+  heading: "Od „jaz bom plačal“ do „smo si kvit“"
+  body: "Ustvari brezplačen uporabniški račun, ustanovi skupino in dodaj prvi strošek. Jazbec računa ne bo obsojal."
+  button: "Ustvari brezplačen račun"
+steps:
+  - title: "Ustanovi skupino"
+    body: "Ustanovi eno skupino za vsako hišo, potovanje ali dogodek, da najemnina nikoli ne konča na istem seznamu kot poročno darilo. Daj ji ime, izberi ime, pod katerim te bodo ljudje videli, in po želji omeji valute, ki jih sprejema. Tvoja nadzorna plošča nato na enem zaslonu prikazuje vse skupine in kje si v vsaki."
+    shot: S02
+    shotAlt: "Pogovorno okno za ustvarjanje skupine z odprtim razdelkom omejitev valut"
+  - title: "Povabi svoje ljudi"
+    body: "Deli povezavo za pridružitev ali pokaži kodo QR in nastavi, kako dolgo velja, od 15 minut do 5 dni. Vsak, ki se pridruži, potrebuje brezplačen uporabniški račun in potrjen e-poštni naslov, v skupini pa je lahko do 50 oseb. Če želiš pregledati, kdo vstopa, vklopi potrjevanje in skrbnik vsako osebo spusti noter."
+    shot: S03
+    shotAlt: "Pogovorno okno povabila na zavihku s povezavo, s kodo QR in izbirami veljavnosti"
+  - title: "Dodajaj stroške sproti"
+    body: "Povej, kdo je plačal, koliko in za koga. Razdeli enako, po točnih zneskih ali po odstotkih in izpusti vsakogar, ki ni sodeloval. Dodaj strošek in vsi ga takoj vidijo, skupaj s tem, kaj se je spremenilo in kdo je to spremenil."
+    shot: S05
+    shotAlt: "Obrazec za strošek s procentualno delitvijo najemnine po velikosti sobe"
+  - title: "Spremljaj stanja"
+    body: "Side Badger vodi tekoče stanje za vsako valuto, tako da na prvi pogled vidiš, kdo komu dolguje. Namesto da bi vse pustil razvozlavati mrežo majhnih dolgov, predlaga kratek seznam plačil, ki skupino poravna."
+    shot: S10
+    shotAlt: "Zaslon stanj s poenostavljenimi dolgovi v dveh valutah in vklopljeno možnostjo Prikaži vse"
+  - title: "Poravnaj se zunaj aplikacije, zabeleži znotraj nje"
+    body: "Side Badger nikoli ne premika denarja. Plačajte si, kakor želite, nato plačilo zabeležite, da se stanja posodobijo in se zaslon vsakogar osveži brez ponovnega nalaganja. „Poravnano“ preprosto pomeni, da so stanja nič. Nihče ne more zapustiti skupine, dokler komu dolguje ali mu je kdo dolžan denar, zato se tisti, ki se odpravlja k izhodu, najprej poravna."
+    shot: S11
+    shotAlt: "Obrazec za plačilo z gumbi za hitro poravnavo in obvestilom o delnem plačilu"
+requirements:
+  heading: "Kaj potrebuješ"
+  items:
+    - "Brezplačen uporabniški račun. Potreben je le e-poštni naslov in geslo, e-pošto pa potrdiš, preden lahko karkoli dodaš."
+    - "Biti star 18 let ali več."
+    - "Sodoben brskalnik v telefonu ali računalniku in povezavo. Side Badger ni aplikacija iz trgovine in ne deluje brez povezave."
+    - "Po želji mesto na začetnem zaslonu. Trgovina z aplikacijami ni potrebna, saj lahko Side Badger dodaš na začetni zaslon ali v dock in se odpre kot aplikacija."
+example:
+  heading: "Trije prijatelji po večeru v mestu"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: "Večerja"
+      payer: ana
+      amount: 90
+      split:
+        method: equal
+    - label: "Taksi"
+      payer: ben
+      amount: 30
+      split:
+        method: equal
+sections:
+  - heading: "39 jezikov, narejeno za več ljudi"
+    body: "Side Badger uporabljaj v 39 jezikih, vključno z arabščino, perzijščino in urdujščino, ki se pišejo od desne proti levi. Vsak v skupini lahko izbere svojega, tako da je stran skupine za eno osebo lahko v arabščini, za naslednjo pa v angleščini. Narejen je tudi z mislijo na uporabnike tipkovnice in bralnikov zaslona, barve članov pa imajo vzorce, zato ti ni treba ločevati zelene od rdeče."
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Ali vsak potrebuje uporabniški račun?"
+      a: "Da, brezplačen. Vsaka oseba potrdi svoj e-poštni naslov, preden karkoli doda."
+    - q: "Ali obstaja aplikacija?"
+      a: "Deluje v brskalniku, dodaš pa jo lahko na začetni zaslon ali v dock, da se odpre kot aplikacija. Različice iz trgovine z aplikacijami ni in načina brez povezave tudi ne."
+    - q: "Ali Side Badger premika denar?"
+      a: "Ne. Vodi štetje in predlaga plačila, vi pa si plačate, kakor želite. Nato plačilo zabeležite. Glej [poravnavo](page:feature/settle-up)."
+    - q: "Ali lahko nekdo odide, medtem ko dolguje denar?"
+      a: "Ne. Nihče ne more zapustiti skupine, dokler komu dolguje ali mu je kdo dolžan denar, zato se najprej poravna."
+    - q: "Koliko ljudi se lahko pridruži skupini?"
+      a: "Do 50 oseb v skupini. Povabi jih s povezavo ali kodo QR in vklopi potrjevanje, če želiš, da skrbnik vsako osebo spusti noter."
+    - q: "Kaj pa potovanja z več kot eno valuto?"
+      a: "Stanja se vodijo ločeno za vsako valuto. Glej [več valut](page:feature/multiple-currencies)."

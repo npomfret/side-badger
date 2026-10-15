@@ -1,0 +1,127 @@
+translatedFrom: "923c938f"
+review:
+  status: checked
+  checker: "T5-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - settlements.pay-however-then-record
+meta:
+  title: "Oszd meg a költségeket 140 pénznemben, átváltva vagy külön"
+  description: "Add meg minden költséget abban a pénznemben, amelyben fizettél, vezesd külön az egyenlegeket, vagy válts át egy általad látott és módosítható árfolyamon, aztán számoljatok el egy rövid kifizetéslistával."
+h1: "Oszd meg a költségeket 140 pénznemben"
+navLabel: "Több pénznem"
+lead: "Euró, jen és az az egy taxi báthban. A Side Badger minden költséget abban a pénznemben fogad el, amelyben fizettél, rendben tartja az egyenlegeket, és át tud váltani, ha a csoport inkább egyszer számolna el. 140 pénznemben működik, és természetesen illik a [csoportos utazásokhoz](page:use-case/group-trips)."
+cta:
+  heading: "Hozd az eurókat, hozd a jeneket"
+  body: "Hozz létre fiókot, indíts csoportot, és add hozzá az első költséget bármilyen pénznemben, amely éppen a kezedben volt."
+  button: "Ingyenes fiók létrehozása"
+problem:
+  heading: "Add meg úgy, ahogy fizették"
+  body: "Egy utazást ritkán fizetnek egyetlen pénznemben. A szállást otthon foglalták fontban, a vacsorát jenben fizették, a reptéri kávét pedig abban, amit az átszálláskor használtak. Mindent kézzel átváltani, mielőtt egyáltalán beírnád, így hagyják el az emberek a táblázatokat. A Side Badgerben minden költséget a nyugtán szereplő pénznemben adsz meg, és minden összeg a pénzneme szabályait követi, így a jennek nincs tizedesjegye, a dinárnak három. A nemrég használt pénznemek a lista elején állnak."
+workflow:
+  heading: "Vezesd külön a pénznemeket, vagy válts át menet közben"
+  steps:
+    - title: "Add hozzá a költséget a saját pénznemében"
+      body: "Válaszd ki a pénznemet, írd be az összeget, mondd meg, ki fizetett, és ki osztozott. Mást nem kell. Ez az alapértelmezés, és az eredeti összeget pontosan úgy őrzi meg, ahogy beírtad."
+      shot: S07
+      shotAlt: "A költségűrlap jenben beírt összeggel"
+    - title: "Figyelj minden pénznem egyenlegére"
+      body: "Az egyenlegeket pénznemenként külön vezetjük, és mindegyiknek megvan a maga rövid javasolt kifizetéslistája. A fontot fontban, a jent jenben rendezik."
+      shot: S10
+      shotAlt: "Az egyenlegek képernyője egyszerűsített tartozásokkal két pénznemben"
+    - title: "Vagy válts át, ha a csoport inkább egyszer számolna el"
+      body: "Válassz másik pénznemet a költség megadásakor, és a Side Badger át tudja váltani egy aktuális árfolyamon, amelyet átírhatsz arra, amelyet ténylegesen kaptál. Az átváltott összeg hozzáadódik az adott pénznem egyenlegéhez. Az átváltás a csoport döntése, sosem olyasmi, ami a háta mögött történik."
+options:
+  heading: "Egy árfolyam, amelyet látsz és módosíthatsz"
+  items:
+    - title: "Az árfolyam látszik"
+      body: "Amikor átváltasz, az árfolyam és az átváltott összeg megjelenik az űrlapon, így senkinek nem kell szó nélkül elhinnie egy számot."
+    - title: "Írd be a sajátodat"
+      body: "Jobb árfolyamot kaptál a pénzváltóban vagy rosszabbat a reptéren? Szerkeszd az árfolyamot arra, amelyet ténylegesen kaptál, és az átváltott összeg frissül."
+    - title: "Az eredeti marad"
+      body: "Az eredeti összeg a költségnél marad, az átváltott mellett, annak, aki megkérdezi, mennyi volt jenben."
+    - title: "Az átváltás ingyenes"
+      body: "Az átváltás nem kerül semmibe. Nincs díj azért, ha egy költséget másik pénznemben adsz meg."
+example:
+  heading: "Négy barát Japánban, kétféleképpen elszámolva"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloé
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "a szálloda, otthon lefoglalva"
+      payer: ana
+      amount: 1200
+      split:
+        method: equal
+    - label: "vacsora Japánban"
+      payer: ben
+      amount: 40000
+      currency: JPY
+      split:
+        method: equal
+    - label: "vonatjegyek"
+      payer: chloe
+      amount: 24000
+      currency: JPY
+      split:
+        method: equal
+    - label: "belépő a templomba"
+      payer: dev
+      amount: 4000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+sections:
+  - heading: "Egy pénznem az egész csoportnak"
+    body: "Ha a csoport inkább nem gondolkodna rajta, válassz csoportpénznemet, és az űrlap minden új költséget arra vált át, egy olyan árfolyamon, amelyet továbbra is látsz és módosíthatsz. Ez csak az új és a másolt költségekre vonatkozik. A szerkesztések és a meglévő költségek úgy maradnak, ahogy vannak, így semmi már rögzített nem változik meg alattad."
+  - heading: "Eurót tartozol, fonttal fizetsz"
+    body: "Jenben fizettek, fontban számoltok el? Semmi gond. Amikor kifizetést rögzítesz, azt is átválthatod, így aki eurót tartozik, fonttal fizethet, és az eurós egyenleg így is helyesen jön ki. Fizessetek egymásnak, ahogy akartok, aztán rögzítsd."
+  - heading: "Szabályok a csoportnak"
+    body: "Korlátozd a csoportot azokra a pénznemekre, amelyeket tényleg használtok, és állíts be alapértelmezettet, hogy az űrlap a megfelelőn nyíljon meg. Egy portugáliai nyaralásnak nincs szüksége 139 másik lehetőségre a vacsoraszámla mellett, egy [külföldi esküvőnek](page:use-case/events-and-celebrations) pedig valószínűleg kettőre."
+limits:
+  heading: "Korlátok"
+  items:
+    - "Az árfolyam a költség mentésekor rögzül. A régi költségeket sosem értékeljük újra."
+    - "A Side Badger lehetőség szerint aktuális árfolyamot kér le. Nem minden párosra garantált, és az árfolyamot mindig beírhatod te magad."
+    - "A csoport automatikus átváltása csak az új és a másolt költségekre vonatkozik, a szerkesztésekre és a meglévő költségekre nem."
+    - "Minden költség legfeljebb 999 999,99 lehet a saját pénznemében."
+    - "140 pénznem van. A kriptovaluták és a fémek nincsenek köztük."
+    - "A Side Badger kifizetéseket rögzít. Sosem mozgat és nem is vált pénzt."
+useCasesHeading: "Hol segít ez"
+faq:
+  heading: "Kérdések"
+  items:
+    - q: "Melyik árfolyamot használjátok?"
+      a: "Egy aktuális árfolyamot, amelyet a költség megadásakor kérünk le, ha elérhető. Átírhatod arra, amelyet ténylegesen kaptál, és az átváltott összeg frissül."
+    - q: "Újraértékelődnek a régi költségek?"
+      a: "Nem. Az árfolyam a költség mentésekor rögzül, így egy egyenleg nem sodródik el attól, hogy a piac elmozdult."
+    - q: "Támogattok kriptót?"
+      a: "Nem. 140 pénznem van, és a kriptovaluták nincsenek köztük."
+    - q: "Miért nem tudok beírni 2 000 000 indonéz rúpiát?"
+      a: "Minden költség legfeljebb 999 999,99 lehet a saját pénznemében. Add meg egy másik pénznemben és válts át, vagy oszd két költségre."
+    - q: "Kerül valamibe az átváltás?"
+      a: "Nem. Az átváltás ingyenes, mint a Side Badger többi része. Lásd az [árakat](page:pricing)."
+    - q: "Kötelező átváltanom?"
+      a: "Nem. A pénznemek külön maradnak, hacsak te vagy a csoportod nem dönt az átváltás mellett, és minden pénznemnek megvan a saját rövid kifizetéslistája."

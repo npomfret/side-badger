@@ -1,0 +1,92 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: checked
+  checker: "T5-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+meta:
+  title: "Deli stroške zabav, porok in skupnih daril"
+  description: "Deli stroške zabave, poroke ali skupnega darila, ko ljudje prispevajo različne zneske. Glasujte o načrtu, deli po točnih zneskih in poglej, kdo komu dolguje."
+h1: "Deli stroške zabav, porok in skupnih daril"
+navLabel: "Dogodki in praznovanja"
+lead: "Razdeli polog, okraske in zasilne dežnike. Razporeditev sedežev prepusti kateremu pogumnejšemu. Side Badger na enem mestu hrani, **kdo je koliko prispeval**, da se lahko zabava tudi organizator."
+cta:
+  heading: "Začni z naslednjim praznovanjem"
+  body: "Ustvari uporabniški račun, ustanovi skupino za dogodek in pošlji povezavo za povabilo. Side Badger je brezplačen, brez oglasov in brez dnevnih omejitev."
+  button: "Ustvari brezplačen račun"
+scenario:
+  heading: "Vsak prispeva, ne vedno enako"
+  body: "Nekdo plača polog za prostor, nekdo drug kupi torto, tretji pa skupno darilo plača z lastno kartico. Nekateri gostje pridejo na vse, nekateri le na večerjo. Pošteno štetje tega v klepetu je delo, za katero se nihče ni prijavil. Skupina v Side Badger drži vse, ne glede na mešanico zneskov, in vsakomur pokaže, koliko dolguje ali koliko mu dolgujejo. Osnove najdeš pri [kako deluje](page:how-it-works), ali pa beri naprej o dogodku."
+sections:
+  - heading: "Odločajte skupaj"
+    body: "Preden se premakne kakršen koli denar, izbiro daj v **anketo**. Dodaj do 10 možnosti, na primer dva prostora ali tri ideje za darilo, in vsi naj glasujejo. Skriješ lahko, kdo je za kaj glasoval, da vsaka možnost dobi pošteno priložnost, zmagovalec pa se pokaže, ko je anketa zaprta. Nihče ne rabi listati čez štirideset sporočil, da izve, kaj je bilo odločeno."
+  - heading: "Kdo je pri čem"
+    body: "Vsi ne plačajo enako in vsi ne sodelujejo pri vsakem strošku. Strošek razdeli enako, po odstotkih ali po **točnih zneskih**, da je delež vsake osebe znesek, o katerem ste se dogovorili. Izpusti vsakogar, ki ni sodeloval, na primer goste, ki so izpustili večerjo, ali prijatelje, ki se niso pridružili darilu. Vsak strošek ima enega plačnika, vsi ostali v delitvi pa mu dolgujejo svoj delež. Podrobnosti so na strani [delitev stroškov](page:feature/split-expenses)."
+  - heading: "Ohrani papirologijo"
+    body: "K stroškom dodajaj opombe, na primer kaj je strošek pokril. Komentarji ostanejo **ob strošku**, na katerega se nanašajo, zato sta vprašanje „je bila torta 45 £ ali 54 £?“ in njen odgovor na istem mestu. Komentarji so lahko dolgi do 500 znakov, kar za vprašanje o pologu povsem zadošča."
+  - heading: "Nadzor za organizatorja"
+    body: "Odprto sodelovanje omogoča vsakemu članu dodajanje in urejanje stroškov, kar je za majhno darilo v redu. Za poroko ali večjo zabavo izberi prednastavitev **Upravljano**. Skrbniki potrdijo vsakega novega člana, stroške pa lahko spreminjajo samo ustanovitelji in skrbniki. Ljudi povabi s povezavo ali kodo QR; ob vklopljenem potrjevanju skrbnik vsako osebo spusti noter, zato seznam gostov ostane seznam gostov. Ko je dogodek mimo, skupino zakleni, da številke ostanejo."
+  - heading: "Poravnajte se po zabavi"
+    body: "Ko prispe zadnji račun, stanja pokažejo, **kdo komu dolguje**, Side Badger pa predlaga kratek seznam plačil, ki poravna vse. Plačajte si, kakor želite, nato plačilo zabeležite v skupini. Side Badger nikoli ne premika denarja, zato skupina vodi štetje, nakazila pa potekajo v vaših bančnih aplikacijah. Stran [poravnava](page:feature/settle-up) pokaže, kako se zmešnjava spremeni v kratek seznam."
+exampleAfter: 5
+example:
+  heading: "Skupno darilo: šest glasov za, 150 £ za razdelitev"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Skupno darilo"
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: "Funkcije, ki jih to uporablja"
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Ali gostje vidijo skupino, ne da bi se ji pridružili?"
+      a: "Ne. Ljudje se pridružijo s povezavo ali kodo QR in brezplačnim uporabniškim računom, zato skupino vidijo, ko so noter."
+    - q: "Ali lahko Side Badger zbira denar?"
+      a: "Ne. Side Badger vodi štetje in nikoli ne premika denarja. Plačajte si, kakor želite, nato plačilo zabeležite. Je brezplačen, brez oglasov in brez dnevnih omejitev; glej [cenik](page:pricing)."
+    - q: "Ali so glasovi lahko anonimni?"
+      a: "Da. Ko ustvariš anketo, lahko skriješ, kdo je za kaj glasoval. Nastavitve je mogoče spremeniti samo pred prvim glasom."
+    - q: "Ali lahko ljudje prispevajo različne zneske?"
+      a: "Da. Strošek razdeli po točnih zneskih, da je delež vsake osebe znesek, o katerem ste se dogovorili, ali izpusti ljudi, ki niso sodelovali."
+    - q: "Ali lahko organizator vodi knjige?"
+      a: "Da. Uporabi prednastavitev upravljane skupine, da stroške spreminjajo samo ustanovitelji in skrbniki, skrbniki pa potrjujejo nove člane."

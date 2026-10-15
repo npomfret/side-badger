@@ -1,0 +1,92 @@
+translatedFrom: "a1e36ce8"
+review:
+  status: checked
+  checker: "T5-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.people.5.name
+claims:
+  - invites.link-or-qr-code
+  - invites.admin-approval
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - comments.next-to-the-expense
+  - polls.villa-shortlist-vote
+meta:
+  title: "Parti, düğün ve ortak hediye masraflarını bölüşün"
+  description: "İnsanlar farklı tutarlarda katkıda bulunduğunda bir partinin, düğünün veya ortak hediyenin masraflarını bölüşün. Plan için oy verin, tam tutarlarla bölün ve kimin kime borçlu olduğunu görün."
+h1: "Parti, düğün ve ortak hediye masraflarını bölüşün"
+navLabel: "Etkinlikler ve kutlamalar"
+lead: "Depozitoları, süsleri ve acil durum şemsiyelerini bölüşün. Oturma planını daha cesur birine bırakın. Side Badger **kimin ne kadar katkıda bulunduğunu** tek yerde tutar; böylece organizatör de partinin tadını çıkarabilir."
+cta:
+  heading: "Bir sonraki kutlamayla başlayın"
+  body: "Bir hesap oluşturun, etkinlik için bir grup kurun ve davet bağlantısını gönderin. Side Badger ücretsiz, reklamsız ve günlük sınırsızdır."
+  button: "Ücretsiz hesap oluştur"
+scenario:
+  heading: "Herkes katkıda bulunur, hep aynı tutarda değil"
+  body: "Biri mekân depozitosunu öder, bir başkası pastayı alır, üçüncüsü ortak hediyeyi kendi kartıyla öder. Bazı konuklar her şeye gelir, bazıları yalnızca akşam yemeğine. Bunun adil hesabını bir mesaj dizisinde tutmak, kimsenin başvurmadığı bir iştir. Side Badger'daki bir grup, tutarların karışımı ne olursa olsun hepsini tutar ve herkese ne borçlu olduğunu veya ne alacağı olduğunu gösterir. Temeller için [nasıl çalışır](page:how-it-works) sayfasına bakın ya da bir etkinlik için okumaya devam edin."
+sections:
+  - heading: "Birlikte karar verin"
+    body: "Para hareket etmeden önce seçimi bir **ankete** koyun. İki mekân veya üç hediye fikri gibi en fazla 10 seçenek ekleyin ve herkesin oy vermesine izin verin. Kimin neye oy verdiğini gizleyebilirsiniz; böylece her seçenek adil bir değerlendirme alır ve kazanan anket kapandığında görünür. Neyin kararlaştırıldığını öğrenmek için kimsenin kırk mesajı geriye kaydırması gerekmez."
+  - heading: "Kim neye dahil"
+    body: "Herkes aynı tutarı ödemez ve herkes her masrafa katılmaz. Bir harcamayı eşit, yüzdelerle veya **tam tutarlarla** bölüştürün; böylece her kişinin payı üzerinde anlaştığınız rakam olur. Katılmayan herkesi, örneğin akşam yemeğini kaçıran konukları veya hediyeye katılmayan arkadaşları dışarıda bırakın. Her harcamanın bir ödeyeni vardır ve bölüşümdeki diğer herkes ona payını borçludur. Ayrıntılar [harcamaları bölüşme](page:feature/split-expenses) sayfasındadır."
+  - heading: "Belgeleri saklayın"
+    body: "Bir harcamaya, masrafın neyi kapsadığı gibi notlar ekleyin. Yorumlar ilgili oldukları **harcamanın yanında** kalır; bu yüzden “pasta 45 £ miydi 54 £ mü?” sorusu ve cevabı aynı yerde yaşar. Yorumlar 500 karaktere kadar olabilir; bu, depozito hakkında bir soru için fazlasıyla yeter."
+  - heading: "Organizatör kontrolleri"
+    body: "Açık iş birliği her üyenin harcama eklemesine ve düzenlemesine izin verir; küçük bir hediye için bu uygundur. Bir düğün veya daha büyük bir parti için **Yönetilen** ön ayarını seçin. Yöneticiler her yeni üyeyi onaylar ve harcamaları yalnızca oluşturanlar ve yöneticiler değiştirebilir. İnsanları bağlantı veya QR koduyla davet edin; onay açıkken bir yönetici her kişiyi içeri alır, böylece konuk listesi konuk listesi olarak kalır. Etkinlik bittiğinde rakamlar yerinde kalsın diye grubu kilitleyin."
+  - heading: "Partiden sonra ödeşin"
+    body: "Son fatura geldiğinde bakiyeler **kimin kime borçlu olduğunu** gösterir ve Side Badger herkesi ödeştiren kısa bir ödeme listesi önerir. Birbirinize istediğiniz yolla ödeyin, sonra ödemeyi grupta kaydedin. Side Badger hiçbir zaman para taşımaz; yani transferler kendi bankacılık uygulamalarınızda olurken grup hesabı tutar. [Hesaplaşma](page:feature/settle-up) sayfası bir karışıklığın nasıl kısa bir listeye dönüştüğünü gösterir."
+exampleAfter: 5
+example:
+  heading: "Ortak bir hediye: altı oy lehine, bölüşülecek 150 £"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: jess
+      name: Jess
+    - id: mo
+      name: Mo
+    - id: lee
+      name: Lee
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Ortak hediye"
+      payer: priya
+      amount: 150
+      split:
+        method: exact
+        shares:
+          priya: 30
+          tom: 30
+          jess: 30
+          mo: 20
+          lee: 20
+          kat: 20
+featuresHeading: "Bunun kullandığı özellikler"
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Konuklar katılmadan grubu görebilir mi?"
+      a: "Hayır. İnsanlar bir bağlantı veya QR kodu ve ücretsiz bir hesapla katılır, yani grubu içeri girdikten sonra görürler."
+    - q: "Side Badger parayı toplayabilir mi?"
+      a: "Hayır. Side Badger hesabı tutar ve hiçbir zaman para taşımaz. Birbirinize istediğiniz yolla ödeyin, sonra ödemeyi kaydedin. Ücretsizdir, reklamsızdır ve günlük sınırı yoktur; [fiyatlandırma](page:pricing) sayfasına bakın."
+    - q: "Oylar anonim olabilir mi?"
+      a: "Evet. Bir anket oluştururken kimin neye oy verdiğini gizleyebilirsiniz. Ayarlar yalnızca ilk oydan önce değiştirilebilir."
+    - q: "İnsanlar farklı tutarlarda katkıda bulunabilir mi?"
+      a: "Evet. Bir harcamayı tam tutarlarla bölüştürün; böylece her kişinin payı üzerinde anlaştığınız rakam olur. Ya da dahil olmayanları dışarıda bırakın."
+    - q: "Bir organizatör defterleri tutabilir mi?"
+      a: "Evet. Yönetilen grup ön ayarını kullanın; böylece harcamaları yalnızca oluşturanlar ve yöneticiler değiştirir, yeni üyeleri yöneticiler onaylar."

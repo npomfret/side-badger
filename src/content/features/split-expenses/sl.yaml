@@ -1,0 +1,137 @@
+translatedFrom: "56ee9b03"
+review:
+  status: checked
+  checker: "T5-check"
+  date: "2026-10-15"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - expense-splitting.map-link-fills-place
+  - expense-splitting.odd-penny-at-random
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+meta:
+  title: "Deli stroške enako, točno ali po odstotkih | Side Badger"
+  description: "Skupni strošek razdeli enako, po točnih zneskih ali po odstotkih in izpusti vsakogar, ki ga ni bilo zraven. Brezplačno, brez oglasov in brez dnevnih omejitev."
+h1: "Deli stroške enako, točno ali po odstotkih"
+navLabel: "Delitev stroškov"
+lead: "Vsega ne moreš deliti 50/50. Side Badger se znajde. Povej, kdo je plačal, izberi osebe, ki so strošek delile, in ga razdeli **enako, po točnih zneskih ali po odstotkih**. Zamere se prodajajo posebej."
+cta:
+  heading: "Razdeli naslednjega kot se spodobi"
+  body: "Ustvari brezplačen uporabniški račun, ustanovi skupino in dodaj strošek, ki ga že dolgo nameravaš urediti. Ne veš, kaj sledi? Poglej, [kako deluje](page:how-it-works), ali preveri, [kaj vključuje brezplačna različica](page:pricing)."
+  button: "Ustvari brezplačen račun"
+problem:
+  heading: "Vsega ne moreš deliti 50/50"
+  body: "Najemnina sledi velikosti sobe. Darilo sledi temu, kdo je kaj obljubil. Večerja sledi temu, kdo je ostal na sladico. Delitev računa na pol deluje do prvega računa, ki ni tak, in takrat nekdo odpre preglednico. Side Badger beleži, kdo je plačal, kdo je strošek delil in kako se deli, zato stanja pridejo prav in nikomur ni treba pri mizi pisno deliti."
+workflow:
+  heading: "Dodajanje stroška od začetka do konca"
+  steps:
+    - title: "Povej, kdo je plačal in za kaj"
+      body: "Vnesi znesek, kratek opis in osebo, ki je plačala. Za vsak strošek plača ena oseba, kar ohranja račune poštene."
+      shot: S05
+      shotAlt: "Obrazec za strošek z najemnino za kočo, procentualno razdeljeno med tri osebe"
+    - title: "Izberi delitev"
+      body: "Izberi enako, točne zneske ali odstotke. Odstotki morajo skupaj dati 100, točni zneski pa skupni znesek."
+      shot: S06
+      shotAlt: "Obrazec za strošek s točnimi zneski, vnesenimi za vsako osebo pri darilu"
+    - title: "Dodaj zgodbo"
+      body: "Nastavi datum, dodaj oznake, kraj in opombo. Vsi v skupini vidijo enake podrobnosti in lahko tam takoj komentirajo."
+      shot: S08
+      shotAlt: "Strošek s podrobnostmi, nitjo komentarjev in izvirnim zneskom, v katerem je bil vnesen"
+    - title: "Postavi vprašanje, če se kaj ne zdi prav"
+      body: "Če je skupina vklopila vprašanja o stroških, lahko vsak, ki je zajet v strošku, nanj postavi vprašanje, seznam stroškov pa lahko prikaže samo tiste, ki so pod vprašajem."
+      shot: S18
+      shotAlt: "Seznam stroškov z oznako Postavljeno pod vprašaj in filtrom Samo postavljeno pod vprašaj"
+options:
+  heading: "Trije načini delitve"
+  items:
+    - title: "Enako"
+      body: "Privzeto za večerje, taksije in vse, kar so vsi delili enakomerno. Če se znesek ne deli brez ostanka, preostali cent pripade eni osebi naključno, ne vedno isti. V spodnjem taksiju je to Ana."
+    - title: "Po točnih zneskih"
+      body: "Vpiši, koliko komu dolguje. Dobro za darilo, kjer je vsak izbral drugo ceno, ali nakup, kjer je imel v košarici nekdo več kot skupna živila. Zneski morajo skupaj dati skupni znesek."
+    - title: "Po odstotkih"
+      body: "Vsakemu daj delež celote. Najemnina po velikosti sobe je klasika: največja soba plača največji delež in nihče se ne pretvarja drugače."
+example:
+  heading: "Vikend v koči, štirje stroški, tri delitve"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+  expenses:
+    - label: "koča, po velikosti sobe"
+      payer: ana
+      amount: 600
+      split:
+        method: percent
+        shares:
+          ana: 50
+          ben: 30
+          cara: 20
+    - label: "večerja"
+      payer: ben
+      amount: 84
+      split:
+        method: equal
+    - label: "živila"
+      payer: cara
+      amount: 64.5
+      split:
+        method: exact
+        shares:
+          ana: 25
+          ben: 21.5
+          cara: 18
+    - label: "taksi domov"
+      payer: ana
+      amount: 100
+      split:
+        method: equal
+sections:
+  - heading: "Samo ljudje, ki so bili zraven"
+    body: "Strošek razdeli med vse ali samo med osebe, ki so ga delile. Ljudi izpusti iz stroškov, pri katerih niso sodelovali, in stanja bodo to upoštevala. Sostanovalec, ki ga ves teden ni bilo, ne dolguje za hrano s seboj, kar bodo [sostanovalci](page:use-case/housemates) prepoznali kot osnovno pravičnost."
+  - heading: "Podrobnosti, ki pozneje prihranijo prepire"
+    items:
+      - "Nastavi **datum** in po želji uro. Bližnjice, kot so danes, včeraj, zjutraj in sinoči, prihranijo nekaj tipkanja."
+      - "Dodaj do tri **oznake** za združevanje stroškov, na primer živila ali potovanje."
+      - "Dodaj **kraj**. Prilepi povezavo do zemljevida in ime kraja se izpolni samo."
+      - "Dodaj **opombo** z zgodbo za številko, z nekaj oblikovanja, če zgodba to zahteva."
+      - "Uporabljaj **komentarje**, da pogovor ostane ob strošku, o katerem govori, ne pa v klepetu, v katerega se nihče ne vrača."
+  - heading: "Kopiraj, uredi in poglej, kaj se je spremenilo"
+    body: "Kopiraj najemnino prejšnjega meseca, namesto da bi jo znova vpisoval, in spremeni, kar je drugače. Če je bila številka napačna, uredi strošek. Prejšnja različica se ohrani, urejanje pa se pokaže v dejavnosti skupine, zato nihče ne spremeni številke tiho. Kaj lahko kdo ureja, je odvisno od dovoljenj skupine."
+  - heading: "Ko se kaj ne zdi prav"
+    body: "Skupina lahko vklopi vprašanja o stroških. Vsak, ki je zajet v strošku, lahko postavi vprašanje in pove zakaj, strošek pa ostane zunaj stanj, dokler ga oseba, ki je vprašala, ali skrbnik ne zapre. Privzeto je izklopljeno, skrbnik pa ga vklopi za skupino. Primerno je za [dogodke in praznovanja](page:use-case/events-and-celebrations), kjer postane polog, ki se ga nihče ne spomni, nenadoma stvar vseh."
+limits:
+  heading: "Omejitve"
+  items:
+    - "Za vsak strošek plača ena oseba. Če sta plačali dve, zabeleži dva stroška."
+    - "Delitve po postavkah ali po deležih ni. Na voljo so enako, točni zneski in odstotki."
+    - "Odstotki morajo skupaj dati 100."
+    - "Strošek je lahko do 999.999,99 v svoji valuti, z običajnim številom decimalnih mest te valute."
+    - "Stroški se ne ponavljajo sami. Namesto tega kopiraj strošek prejšnjega meseca."
+    - "Datumi ne smejo biti v prihodnosti ali starejši od 10 let."
+    - "Strošek, v katerem je oseba, ki je zapustila skupino, postane samo za branje."
+useCasesHeading: "Kje takšna delitev pomaga"
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Ali lahko dve osebi plačata en strošek?"
+      a: "Ne v enem strošku. Zabeleži dva, po enega za vsakega plačnika, in stanja bodo enaka."
+    - q: "Ali lahko razdelim račun po postavkah?"
+      a: "Ne. Delitev je enaka, po točnih zneskih ali po odstotkih. Pri računu z različnimi postavkami vpiši, koliko dolguje vsaka oseba, kot točne zneske."
+    - q: "Ali lahko nastavim privzeto delitev?"
+      a: "Ne. Kopiraj prejšnji strošek, da uporabiš njegovo delitev, in spremeni, kar je drugače."
+    - q: "Ali se računi lahko ponavljajo vsak mesec?"
+      a: "Ne. Namesto tega kopiraj strošek prejšnjega meseca, kar vzame nekaj sekund."
+    - q: "Kdo lahko ureja strošek?"
+      a: "Tisti, ki mu to dovoljujejo dovoljenja skupine. Vsako urejanje se pokaže v dejavnosti skupine, zato spremembe nikoli niso tihe."
+    - q: "Kaj se potem zgodi s stanji?"
+      a: "Posodabljajo se, ko prihajajo stroški, [poravnava](page:feature/settle-up) pa jih spremeni v kratek seznam plačil. Če je strošek v drugi valuti, glej [več valut](page:feature/multiple-currencies)."

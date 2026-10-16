@@ -18,8 +18,8 @@ jobs:
     permissions:
       contents: read
     env:
-      # English-first mode (D38) only on the redesign branch and pull requests into it.
-      I18N_MODE: ${{ (github.ref_name == 'redesign' || github.base_ref == 'redesign') && 'english-first' || 'strict' }}
+      # CI always runs strict; English-first mode (D38) is for local work only.
+      I18N_MODE: strict
 
     steps:
       - name: Checkout repository
@@ -76,8 +76,7 @@ jobs:
             type=raw,value=latest-${{ steps.domain.outputs.suffix }}
 
       # Build into the local engine, smoke-test that image, then push it (plan 2.9). The smoke
-      # test lives here rather than in verify because it needs a strict build, and redesign
-      # runs English-first.
+      # test lives here rather than in verify so it runs only before a deploy.
       - name: Build Docker image
         uses: docker/build-push-action@v5
         with:

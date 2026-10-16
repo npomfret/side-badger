@@ -7,7 +7,7 @@ Marketing website for a white-label bill splitting app. The actual app is hosted
 - **Framework**: Astro 5 (static site generation)
 - **Deployment**: Docker container on `sidebadger.me` (behind shared nginx proxy)
 - **CI/CD**: GitHub Actions. Every push and pull request runs the `verify` job; a push to `main` deploys only if it passes (see Verify gate)
-- **Branches**: `main` is production. `redesign` is the long-running branch for the site redesign; it runs English-first (see below) and merges to `main` only when its locales are complete
+- **Branches**: `main` is production; work happens on short-lived branches merged into it
 
 ## Key Files
 
@@ -41,13 +41,13 @@ const alt = t('header.logoText', locale);
 - **SEO**: `SeoHead.astro` writes the title, description, canonical, `hreflang` alternates (`src/seo/alternates.ts`), `og:locale` and JSON-LD.
 - **Formatting**: The `src/i18n/index.ts` file includes helpers like `getFormattedDate` for locale-aware date formatting.
 
-### English-first mode and `redesign`
+### English-first mode
 
 `I18N_MODE=strict` (default) means every locale has every English key and page. `I18N_MODE=english-first` lets new English content ship before its translations:
 - `src/i18n/pending/keys.json` lists keys added or removed in English that locales have not caught up with; `pending/pages.json` does the same for content pages. Strict mode requires both to be empty.
 - `src/i18n/locks/<locale>.json` records the English hash each translation was made against, so `npm run i18n audit` can flag stale or unconfirmed translations.
 - In english-first mode, routes (`src/site/routes.ts`) are not generated for a locale that lacks a key or page, so no English fallback is built at a localized URL.
-- CI picks the mode: `english-first` on `redesign` and pull requests into it, `strict` everywhere else including `main`. Local runs default to strict; set `I18N_MODE=english-first` to match `redesign`.
+- CI always runs `strict`. Local runs default to strict; set `I18N_MODE=english-first` to build new English content before its translations exist (it cannot reach `main` until the locales catch up).
 - `PREVIEW_UNPUBLISHED=1` builds the registry pages that have `published: false` plus the preview-only pages in `src/site/preview-pages.ts` (`/preview/<slug>/`, content under `src/content/*/__preview__/`). They are `noindex`, carry `data-unpublished`, and stay out of navigation and the sitemap.
 - `PREVIEW_PSEUDO=1` adds the pseudo-locales `xx-long`, `xx-ar`, `xx-ja` and `xx-hi` for layout review (long text, RTL, CJK, Devanagari). Their content is the English entry run through `pseudoize` (`src/components/content/pseudo-content.ts`); there is no YAML for them.
 - Both are local only: never set them in CI or Docker. Output checks fail if they leak (rule 12 fails by design on a pseudo build, so run `check:site` on a normal build). `playwright.config.ts` builds with both set.
@@ -140,7 +140,7 @@ All in `src/pages/` (file-based routing); most are under `[...locale]/` so one f
 
 `npm run verify` is the full gate: unit tests, `i18n:audit`, `astro check` (0 errors), `build`, then `check:site`.
 - `check:site` (`vitest.site.config.ts`, rules in `src/__site_tests__/`) reads `dist/` and enforces 15 output rules: files, canonicals, noindex, h1, title/description, lang/dir, hreflang, sitemap, links, social image, JSON-LD, leaks, English fallback, image dimensions and alt, launch links. Run `npm run build` first; `SITE_DIST` points it at another directory.
-- `scripts/check-nginx.sh` (`npm run check:nginx`) builds the image (or takes `--image`), runs it and checks redirects, 404s, `/go/`, headers. It needs Docker and a strict build, so on `redesign` it passes only once every locale is complete.
+- `scripts/check-nginx.sh` (`npm run check:nginx`) builds the image (or takes `--image`), runs it and checks redirects, 404s, `/go/`, headers. It needs Docker and a strict build.
 - CI (`.github/workflows/deploy.yml`): the `verify` job runs `npm run verify` on every push and pull request. `build-and-push` and `deploy` need `verify` and run only on pushes to `main`; `build-and-push` builds the image, runs the nginx smoke test against it, then pushes it.
 - In English-first mode the unused-key test lets keys listed under `pending/keys.json` `added` stay unused (their code lands in a later wave) and prints them; strict mode fails on any unused key.
 - The Dockerfile `builder` stage runs `check:site` after the build, so a manual `scripts/deploy.sh` build is gated too.

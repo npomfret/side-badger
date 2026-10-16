@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'कानूनी',
   'footer.madeWith': 'अराजकता और कॉफी के साथ बनाया गया',
-  'footer.pricing': 'मूल्य',
   'footer.privacy': 'गोपनीयता नीति',
   'footer.product': 'प्रोडक्ट',
   'footer.tagline': 'मुफ्त। कोई विज्ञापन नहीं। रोज़ाना की कोई सीमा नहीं।',

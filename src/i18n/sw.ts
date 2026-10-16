@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Kisheria',
   'footer.madeWith': 'Imetengenezwa kwa vurugu na kahawa',
-  'footer.pricing': 'Bei',
   'footer.privacy': 'Sera ya faragha',
   'footer.product': 'Bidhaa',
   'footer.tagline': 'Bure. Hakuna matangazo. Hakuna vikomo vya kila siku.',

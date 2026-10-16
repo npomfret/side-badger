@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Pravno',
   'footer.madeWith': 'Napravljeno s kaosom i kavom',
-  'footer.pricing': 'Cijene',
   'footer.privacy': 'Politika privatnosti',
   'footer.product': 'Proizvod',
   'footer.tagline': 'Besplatno. Bez oglasa. Bez dnevnih ograničenja.',

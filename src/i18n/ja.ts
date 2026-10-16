@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': '法的情報',
   'footer.madeWith': '混沌とコーヒーで作りました',
-  'footer.pricing': '料金',
   'footer.privacy': 'プライバシーポリシー',
   'footer.product': 'プロダクト',
   'footer.tagline': '無料。広告なし。1日の制限なし。',

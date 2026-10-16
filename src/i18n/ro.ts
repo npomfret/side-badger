@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Legal',
   'footer.madeWith': 'Făcut cu haos și cafea',
-  'footer.pricing': 'Prețuri',
   'footer.privacy': 'Politica de confidențialitate',
   'footer.product': 'Produs',
   'footer.tagline': 'Gratuit. Fără reclame. Fără limite zilnice.',

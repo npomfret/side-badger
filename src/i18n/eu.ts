@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Legala',
   'footer.madeWith': 'Kaosarekin eta kafearekin egina',
-  'footer.pricing': 'Prezioak',
   'footer.privacy': 'Pribatutasun Politika',
   'footer.product': 'Produktua',
   'footer.tagline': 'Doakoa. Iragarkirik gabe. Eguneko mugarik gabe.',

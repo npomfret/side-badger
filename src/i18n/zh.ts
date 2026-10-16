@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': '法律',
   'footer.madeWith': '用混乱和咖啡制成',
-  'footer.pricing': '定价',
   'footer.privacy': '隐私政策',
   'footer.product': '产品',
   'footer.tagline': '免费。无广告。无每日限制。',

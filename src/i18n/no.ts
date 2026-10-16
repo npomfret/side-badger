@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Juridisk',
   'footer.madeWith': 'Laget med kaos og kaffe',
-  'footer.pricing': 'Priser',
   'footer.privacy': 'Personvernregler',
   'footer.product': 'Produkt',
   'footer.tagline': 'Gratis. Ingen annonser. Ingen daglige grenser.',

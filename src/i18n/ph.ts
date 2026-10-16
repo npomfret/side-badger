@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Legal',
   'footer.madeWith': 'Ginawa nang may kaguluhan at kape',
-  'footer.pricing': 'Pagpepresyo',
   'footer.privacy': 'Patakaran sa Privacy',
   'footer.product': 'Produkto',
   'footer.tagline': 'Libre. Walang ad. Walang pang-araw-araw na limitasyon.',

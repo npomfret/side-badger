@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} 사이드 배저',
   'footer.legal': '법률',
   'footer.madeWith': '혼돈과 커피로 만들어졌습니다',
-  'footer.pricing': '가격',
   'footer.privacy': '개인정보 보호정책',
   'footer.product': '제품',
   'footer.tagline': '무료. 광고 없음. 일일 한도 없음.',

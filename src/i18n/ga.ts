@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Dlíthiúil',
   'footer.madeWith': 'Déanta le hanord agus caife',
-  'footer.pricing': 'Praghsáil',
   'footer.privacy': 'Polasaí Príobháideachta',
   'footer.product': 'Táirge',
   'footer.tagline': 'Saor in aisce. Gan fógraí. Gan teorainneacha laethúla.',

@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Lagalegt',
   'footer.madeWith': 'Búið til með ringulreið og kaffi',
-  'footer.pricing': 'Verðskrá',
   'footer.privacy': 'Persónuverndarstefna',
   'footer.product': 'Vara',
   'footer.tagline': 'Ókeypis. Engar auglýsingar. Engin dagleg takmörk.',

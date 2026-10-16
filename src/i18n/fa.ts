@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'حقوقی',
   'footer.madeWith': 'ساخته شده با آشوب و قهوه',
-  'footer.pricing': 'قیمت‌گذاری',
   'footer.privacy': 'سیاست حریم خصوصی',
   'footer.product': 'محصول',
   'footer.tagline': 'رایگان. بدون تبلیغات. بدون محدودیت روزانه.',

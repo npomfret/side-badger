@@ -16,7 +16,6 @@ export type PageLabels = Readonly<Record<string, string>>;
 
 /** Link text for registry pages that have no `nav` entry. Literal keys, so the unused-key test sees them. */
 const FOOTER_LABEL_KEYS: Readonly<Record<string, TranslationKey>> = {
-  pricing: 'footer.pricing',
   privacy: 'footer.privacy',
   terms: 'footer.terms',
   cookies: 'footer.cookies',

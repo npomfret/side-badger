@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Juridisk',
   'footer.madeWith': 'Lavet med kaos og kaffe',
-  'footer.pricing': 'Priser',
   'footer.privacy': 'Privatlivspolitik',
   'footer.product': 'Produkt',
   'footer.tagline': 'Gratis. Ingen reklamer. Ingen daglige grænser.',

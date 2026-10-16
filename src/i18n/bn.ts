@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'আইনি',
   'footer.madeWith': 'বিশৃঙ্খলা এবং কফি দিয়ে তৈরি',
-  'footer.pricing': 'মূল্য নির্ধারণ',
   'footer.privacy': 'গোপনীয়তা নীতি',
   'footer.product': 'পণ্য',
   'footer.tagline': 'বিনামূল্যে। কোনো বিজ্ঞাপন নেই। দৈনিক কোনো সীমা নেই।',

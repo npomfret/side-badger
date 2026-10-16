@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Oikeudelliset',
   'footer.madeWith': 'Tehty kaaoksella ja kahvilla',
-  'footer.pricing': 'Hinnoittelu',
   'footer.privacy': 'Tietosuojakäytäntö',
   'footer.product': 'Tuote',
   'footer.tagline': 'Ilmainen. Ei mainoksia. Ei päivittäisiä rajoja.',

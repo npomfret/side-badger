@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Νομικά',
   'footer.madeWith': 'Φτιαγμένο με χάος και καφέ',
-  'footer.pricing': 'Τιμολόγηση',
   'footer.privacy': 'Πολιτική Απορρήτου',
   'footer.product': 'Προϊόν',
   'footer.tagline': 'Δωρεάν. Χωρίς διαφημίσεις. Χωρίς ημερήσια όρια.',

@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Jogi',
   'footer.madeWith': 'Káosszal és kávéval készült',
-  'footer.pricing': 'Árazás',
   'footer.privacy': 'Adatvédelmi szabályzat',
   'footer.product': 'Termék',
   'footer.tagline': 'Ingyenes. Hirdetések nélkül. Napi korlátok nélkül.',

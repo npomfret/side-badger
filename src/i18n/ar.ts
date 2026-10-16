@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'قانوني',
   'footer.madeWith': 'صُنع بالفوضى والقهوة',
-  'footer.pricing': 'الأسعار',
   'footer.privacy': 'سياسة الخصوصية',
   'footer.product': 'المنتج',
   'footer.tagline': 'مجاني. بلا إعلانات. بلا حدود يومية.',

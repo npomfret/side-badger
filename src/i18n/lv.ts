@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Juridiskā informācija',
   'footer.madeWith': 'Izgatavots ar haosu un kafiju',
-  'footer.pricing': 'Cenas',
   'footer.privacy': 'Privātuma politika',
   'footer.product': 'Produkts',
   'footer.tagline': 'Bez maksas. Bez reklāmām. Bez dienas ierobežojumiem.',

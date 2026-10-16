@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Cyfreithiol',
   'footer.madeWith': 'Wedi\'i wneud gydag anhrefn a choffi',
-  'footer.pricing': 'Prisiau',
   'footer.privacy': 'Polisi Preifatrwydd',
   'footer.product': 'Cynnyrch',
   'footer.tagline': 'Am ddim. Dim hysbysebion. Dim cyfyngiadau dyddiol.',

@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Hukum',
   'footer.madeWith': 'Dibuat dengan kekacauan dan kopi',
-  'footer.pricing': 'Harga',
   'footer.privacy': 'Kebijakan Privasi',
   'footer.product': 'Produk',
   'footer.tagline': 'Gratis. Tanpa iklan. Tanpa batas harian.',

@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Právní informace',
   'footer.madeWith': 'Vyrobeno s chaosem a kávou',
-  'footer.pricing': 'Ceník',
   'footer.privacy': 'Zásady ochrany osobních údajů',
   'footer.product': 'Produkt',
   'footer.tagline': 'Zdarma. Bez reklam. Bez denních limitů.',

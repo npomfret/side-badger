@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Legal',
   'footer.madeWith': 'Feito com caos e café',
-  'footer.pricing': 'Preços',
   'footer.privacy': 'Política de Privacidade',
   'footer.product': 'Produto',
   'footer.tagline': 'Grátis. Sem anúncios. Sem limites diários.',

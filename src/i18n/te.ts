@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'చట్టపరమైన',
   'footer.madeWith': 'అల్లకల్లోలం మరియు కాఫీతో తయారు చేయబడింది',
-  'footer.pricing': 'ధరలు',
   'footer.privacy': 'గోప్యతా పాలసీ',
   'footer.product': 'ఉత్పత్తి',
   'footer.tagline': 'ఉచితం. ప్రకటనలు లేవు. రోజువారీ పరిమితులు లేవు.',

@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'قانونی',
   'footer.madeWith': 'افراتفری اور کافی سے بنا ہے',
-  'footer.pricing': 'قیمتوں کا تعین',
   'footer.privacy': 'رازداری کی پالیسی',
   'footer.product': 'پروڈکٹ',
   'footer.tagline': 'مفت۔ کوئی اشتہار نہیں۔ کوئی یومیہ حد نہیں۔',

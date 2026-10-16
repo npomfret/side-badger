@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Yasal',
   'footer.madeWith': 'Kaos ve kahve ile yapıldı',
-  'footer.pricing': 'Fiyatlandırma',
   'footer.privacy': 'Gizlilik Politikası',
   'footer.product': 'Ürün',
   'footer.tagline': 'Ücretsiz. Reklam yok. Günlük sınır yok.',

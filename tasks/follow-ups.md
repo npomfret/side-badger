@@ -9,7 +9,6 @@ The site redesign (restructure task, homepage task and release 1 of [the site pl
 - **Search reviews** at 4, 8 and 12 weeks after release (site plan success measures, `/go/app/` counts by `from`), once Search Console and Loki access exist.
 - **Guides** (`/guides/<slug>/`, D20) only when search data or repeated user questions show a need. Each links to at least two product pages and has an owner and a `reviewBy` date.
 - **Real-device checks** of the homepage: the iOS toolbar behaviour, and a VoiceOver pass.
-- **Dead key:** `footer.pricing` is unused (the footer uses `nav.pricing`).
 
 ## Owner actions
 

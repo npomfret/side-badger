@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Juridiskt',
   'footer.madeWith': 'Gjord med kaos och kaffe',
-  'footer.pricing': 'Prissättning',
   'footer.privacy': 'Integritetspolicy',
   'footer.product': 'Produkt',
   'footer.tagline': 'Gratis. Inga annonser. Inga dagliga gränser.',

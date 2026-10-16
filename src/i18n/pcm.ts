@@ -40,7 +40,6 @@ export default {
   'footer.copyright': '© {year} Side Badger',
   'footer.legal': 'Legal',
   'footer.madeWith': 'Dem make am with wahala and coffee',
-  'footer.pricing': 'Pricing',
   'footer.privacy': 'Privacy Policy',
   'footer.product': 'Product',
   'footer.tagline': 'Free. No ads. No daily limits.',

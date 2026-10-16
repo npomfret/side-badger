@@ -1,10 +1,10 @@
 # Side Badger marketing site expansion plan
 
-This document is the design reference for the marketing site restructure. It holds the review findings, the product evidence, the decisions taken, the feature registry, the page briefs and the editorial rules. The sequenced work, checklists, translation gate and acceptance criteria are in [the restructure task](./restructure-marketing-site.md). The homepage rebuild is in [the homepage scroll experience task](./homepage-scroll-experience.md).
+This document is the design reference for the marketing site restructure. It holds the review findings, the product evidence, the decisions taken, the feature registry, the page briefs and the editorial rules. The sequenced work, checklists, translation gate and acceptance criteria are in [the restructure task](./follow-ups.md). The homepage rebuild is in [the homepage scroll experience task](./follow-ups.md). Both of those tasks are complete and deleted; [follow-ups](./follow-ups.md) keeps their open items and the restructure decisions cited here, and git history keeps the full text.
 
 ## Status and evidence base
 
-Settled plan, updated 14 October 2026. Every decision is recorded in [Decisions](#decisions) with its evidence, the alternatives considered, and what would reopen it. Decision numbers here are this plan's own; the other task files cite them as “site plan Dn”, and this file cites the restructure task's as “restructure Dn”. “Release 1” (the first release) and “release 2” are content releases; the execution waves W0 to W4 are in [the restructure task](./restructure-marketing-site.md#agent-execution-plan).
+Settled plan, updated 14 October 2026. Every decision is recorded in [Decisions](#decisions) with its evidence, the alternatives considered, and what would reopen it. Decision numbers here are this plan's own; the other task files cite them as “site plan Dn”, and this file cites the restructure task's as “restructure Dn”. “Release 1” (the first release) and “release 2” are content releases; the execution waves W0 to W4 are in [the restructure task](./follow-ups.md).
 
 - **App evidence:** the app repository (local clone `wl-bill-splitter_1`) at commit `d2911d837`, 14 October 2026. App paths in this document are relative to that repository's root, for example `webapp-v2/src/pages/DashboardPage.tsx`.
 - **Marketing site evidence:** this repository at commit `bc01126`. Paths in this repository are marked "(site)", for example (site) `src/i18n/en.ts`.
@@ -236,7 +236,7 @@ Google Fonts and jsDelivr receive a request from every visitor, which sits badly
 
 ## Product feature registry
 
-This is the registry that the typed content registry in step 3 of [the restructure task](./restructure-marketing-site.md) is transcribed from (`src/data/features.ts`, restructure D16; package P22). Page copy may use only the approved claims. Statuses:
+This is the registry that the typed content registry in step 3 of [the restructure task](./follow-ups.md) is transcribed from (`src/data/features.ts`, restructure D16; package P22). Page copy may use only the approved claims. Statuses:
 
 - **available:** works in production today.
 - **beta:** works but is labelled as unfinished in the app. No feature is beta today.
@@ -765,7 +765,7 @@ Every claim in (site) `src/i18n/en.ts`, (site) `src/components/HomePage.astro` a
 
 ### Homepage task story lines
 
-| Scene | Claim | Verdict | Direction for [the homepage task](./homepage-scroll-experience.md) |
+| Scene | Claim | Verdict | Direction for [the homepage task](./follow-ups.md) |
 |---|---|---|---|
 | A group forms | Invite link or QR code; people drop in | supported | Joiners need an account; don't show instant joining by strangers |
 | Expenses land | Equal, exact, percentage; receipt details lift out of the image | supported | Show the fields being checked, not trusted blindly ([D10](#d10-receipt-scanning-is-shown-disclosed-and-gets-its-own-page-later)) |
@@ -826,7 +826,7 @@ Validated against the registry, the search evidence and the policies. A page exi
 
 ### Page responsibilities
 
-- **Homepage:** answer what Side Badger is, who it helps, why it is different and what to do next, then route to deeper pages. Built as a scroll-driven story; see [the homepage scroll experience task](./homepage-scroll-experience.md) and the [homepage brief](#homepage).
+- **Homepage:** answer what Side Badger is, who it helps, why it is different and what to do next, then route to deeper pages. Built as a scroll-driven story; see [the homepage scroll experience task](./follow-ups.md) and the [homepage brief](#homepage).
 - **How it works:** one end-to-end story from group to settlement, including requirements and what "settle" means.
 - **Feature pages:** answer capability-led searches with the problem, workflow, options, limits, product evidence, related use cases, a short FAQ and a launch call to action.
 - **Use-case pages:** answer situation-led searches in the reader's words with a concrete scenario, a worked example, practical guidance and links to the feature pages.
@@ -849,7 +849,7 @@ Validated against the registry, the search evidence and the policies. A page exi
 
 ### Homepage
 
-[The homepage plan](./homepage-scroll-experience.md) owns the scenes, copy deck, worked example, motion and layout, and it is authoritative where this brief and it differ. This brief fixes intent, claims and links.
+[The homepage plan](./follow-ups.md) owns the scenes, copy deck, worked example, motion and layout, and it is authoritative where this brief and it differ. This brief fixes intent, claims and links.
 
 - **Target visitor and intent:** people searching the brand or the category, and people arriving from a friend's invite link who want to know what this is.
 - **Primary query hypotheses:** "bill splitting app", "split expenses with friends".
@@ -1569,7 +1569,7 @@ Keep short interface labels in `src/i18n/*.ts`. Long page copy lives in Astro co
 
 ## Follow-ups outside this repository
 
-These belong to the app repository or the owner. This task cannot change them. Each needs its own task there, per the bug-handling rules in [the restructure task](./restructure-marketing-site.md#bug-handling).
+These belong to the app repository or the owner. This task cannot change them. Each needs its own task there, per the bug-handling rules in [the restructure task](./follow-ups.md).
 
 1. **Privacy policy processors:** the policy names only "Google Firebase: Cloud hosting, authentication, and database services". It should name Firebase Authentication, Vertex AI (receipt images), Cloudflare Turnstile, Postmark, Google Fonts and the exchange-rate service, and drop "hosting and database" (`config/policies/privacy-policy.md` section 4.2). It also never names the company that controls the data.
 2. **Terms section 7.1:** it forbids non-financial communication, while the app ships lists and polls for group planning. Amend it to allow group planning ([D11](#d11-lists-and-polls-are-framed-around-shared-spending)).
@@ -1587,7 +1587,7 @@ This repository's own follow-up, `AGENTS.md` still naming staging as the app hos
 
 ## Delivery
 
-The phased work plan, first-release boundary and external dependencies are tracked in [the restructure task](./restructure-marketing-site.md). The English site is built and verified first, and every locale is translated once at the end (restructure D38). The first-release page set is fixed by [D7](#d7-page-set-and-release-order). Release-2 pages follow the 8-week review, each subject to its gate.
+The phased work plan, first-release boundary and external dependencies are tracked in [the restructure task](./follow-ups.md). The English site is built and verified first, and every locale is translated once at the end (restructure D38). The first-release page set is fixed by [D7](#d7-page-set-and-release-order). Release-2 pages follow the 8-week review, each subject to its gate.
 
 ## Success measures
 

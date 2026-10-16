@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Refresh the committed legal policy snapshots in src/content/policies/ from the app.
-// Plan: tasks/restructure-marketing-site.md section 2.7 (D10).
+// Plan: restructure D10 (tasks/follow-ups.md).
 import { appendFileSync, mkdirSync, mkdtempSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';

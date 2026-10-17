@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Nó scan an cód seo',
   'home.group.title': 'Tosaigh grúpa. Roinn nasc.',
   'home.hero.audience': 'Do chomhchónaitheoirí, lánúineacha, turais agus ceiliúradh.',
-  'home.hero.ctaPrimary': 'Cruthaigh cuntas saor in aisce',
+  'home.hero.ctaPrimary': 'Tosaigh grúpa',
   'home.hero.ctaSecondary': 'Féach conas a oibríonn sé',
   'home.hero.haveAccount': 'An bhfuil cuntas agat cheana?',
   'home.hero.lede': 'Rianaíonn Side Badger cé a d\'íoc as cad, i 140 airgeadra, agus molann sé cé a íocfaidh cé, ionas go socróidh do ghrúpa suas i níos lú íocaíochtaí.',

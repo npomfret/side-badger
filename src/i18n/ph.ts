@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'O i-scan ang code na ito',
   'home.group.title': 'Magsimula ng grupo. Magbahagi ng link.',
   'home.hero.audience': 'Para sa housemates, magkapareha, biyahe, at selebrasyon.',
-  'home.hero.ctaPrimary': 'Gumawa ng libreng account',
+  'home.hero.ctaPrimary': 'Magsimula ng grupo',
   'home.hero.ctaSecondary': 'Tingnan kung paano ito gumagana',
   'home.hero.haveAccount': 'May account ka na ba?',
   'home.hero.lede': 'Sinusubaybayan ng Side Badger kung sino ang nagbayad ng ano, sa 140 pera, at nagmumungkahi kung sino ang magbabayad kanino, kaya mas kaunting bayad na lang ang kailangan para makapag-settle ang grupo mo.',

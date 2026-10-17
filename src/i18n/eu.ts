@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Edo eskaneatu kode hau',
   'home.group.title': 'Hasi talde bat. Partekatu esteka.',
   'home.hero.audience': 'Etxekideentzat, bikoteentzat, bidaietarako eta ospakizunetarako.',
-  'home.hero.ctaPrimary': 'Sortu doako kontu bat',
+  'home.hero.ctaPrimary': 'Hasi talde bat',
   'home.hero.ctaSecondary': 'Ikusi nola funtzionatzen duen',
   'home.hero.haveAccount': 'Baduzu kontu bat dagoeneko?',
   'home.hero.lede': 'Side Badger-ek nork zer ordaindu duen jarraitzen du, 140 monetatan, eta nork nori ordaindu behar dion proposatzen du, zure taldeak ordainketa gutxiagorekin kitatu dezan.',

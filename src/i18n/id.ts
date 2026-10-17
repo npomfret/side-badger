@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Atau pindai kode ini',
   'home.group.title': 'Mulai grup. Bagikan tautan.',
   'home.hero.audience': 'Untuk teman serumah, pasangan, perjalanan, dan perayaan.',
-  'home.hero.ctaPrimary': 'Buat akun gratis',
+  'home.hero.ctaPrimary': 'Mulai grup',
   'home.hero.ctaSecondary': 'Lihat cara kerjanya',
   'home.hero.haveAccount': 'Sudah punya akun?',
   'home.hero.lede': 'Side Badger mencatat siapa membayar apa, dalam 140 mata uang, dan menyarankan siapa membayar siapa, sehingga grup Anda melunasi utang dengan lebih sedikit pembayaran.',

@@ -15,6 +15,9 @@ The site redesign (restructure task, homepage task and release 1 of [the site pl
   installation itself after sign-in (Android `beforeinstallprompt`, an iOS "Share, Add to Home Screen"
   hint) and fix its manifest icons (one `.jpg` labelled `image/png`, no 192px size). Watch `/go/app/`
   counts for `cta=hero-sign-in` and `cta=menu` to see how returning phone users sign in.
+  The main button now says "Start a group" (to `/go/register/`), which existing users may tap too:
+  the app should send a signed-in visitor on `/register` to the dashboard, and its sign-up page
+  should show a clear "Already have an account? Sign in" link.
 
 ## Owner actions
 

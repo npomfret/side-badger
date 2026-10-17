@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'أو امسح هذا الرمز',
   'home.group.title': 'ابدأ مجموعة. وشارك رابطاً.',
   'home.hero.audience': 'لزملاء السكن والأزواج والرحلات والاحتفالات.',
-  'home.hero.ctaPrimary': 'أنشئ حساباً مجانياً',
+  'home.hero.ctaPrimary': 'ابدأ مجموعة',
   'home.hero.ctaSecondary': 'شاهد كيف يعمل',
   'home.hero.haveAccount': 'لديك حساب بالفعل؟',
   'home.hero.lede': 'يتتبّع Side Badger من دفع مقابل ماذا، بـ 140 عملة، ويقترح من يدفع لمن، لتسوّي مجموعتك حساباتها بعدد أقل من الدفعات.',

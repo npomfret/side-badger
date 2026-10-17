@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Vagy szkenneld be ezt a kódot',
   'home.group.title': 'Indíts csoportot. Oszd meg a linket.',
   'home.hero.audience': 'Lakótársaknak, pároknak, utazásoknak és ünnepeknek.',
-  'home.hero.ctaPrimary': 'Ingyenes fiók létrehozása',
+  'home.hero.ctaPrimary': 'Indíts csoportot',
   'home.hero.ctaSecondary': 'Nézd meg, hogyan működik',
   'home.hero.haveAccount': 'Már van fiókod?',
   'home.hero.lede': 'A Side Badger követi, ki mit fizetett, 140 pénznemben, és javasolja, ki kinek fizessen, hogy a csoportod kevesebb kifizetéssel elszámoljon.',

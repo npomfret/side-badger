@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Nebo naskenujte tento kód',
   'home.group.title': 'Založte skupinu. Sdílejte odkaz.',
   'home.hero.audience': 'Pro spolubydlící, páry, výlety a oslavy.',
-  'home.hero.ctaPrimary': 'Vytvořit účet zdarma',
+  'home.hero.ctaPrimary': 'Založte skupinu',
   'home.hero.ctaSecondary': 'Podívejte se, jak to funguje',
   'home.hero.haveAccount': 'Už máte účet?',
   'home.hero.lede': 'Side Badger sleduje, kdo co zaplatil, ve 140 měnách, a navrhuje, kdo komu zaplatí, aby se vaše skupina vyrovnala menším počtem plateb.',

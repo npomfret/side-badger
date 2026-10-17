@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Or scan this code',
   'home.group.title': 'Start a group. Share a link.',
   'home.hero.audience': 'For housemates, couples, trips, and celebrations.',
-  'home.hero.ctaPrimary': 'Create a free account',
+  'home.hero.ctaPrimary': 'Start a group',
   'home.hero.ctaSecondary': 'See how it works',
   'home.hero.haveAccount': 'Already have an account?',
   'home.hero.lede': 'Side Badger tracks who paid for what, in 140 currencies, and suggests who pays whom, so your group settles up in fewer payments.',

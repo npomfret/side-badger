@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Neu sganiwch y cod hwn',
   'home.group.title': 'Cychwyn grŵp. Rhannu dolen.',
   'home.hero.audience': 'Ar gyfer cyd-letywyr, cyplau, teithiau a dathliadau.',
-  'home.hero.ctaPrimary': 'Creu cyfrif am ddim',
+  'home.hero.ctaPrimary': 'Cychwyn grŵp',
   'home.hero.ctaSecondary': 'Gweld sut mae\'n gweithio',
   'home.hero.haveAccount': 'Oes gennych chi gyfrif yn barod?',
   'home.hero.lede': 'Mae Side Badger yn cadw trac o bwy dalodd am beth, mewn 140 o arian cyfred, ac yn awgrymu pwy sy\'n talu pwy, fel bod eich grŵp yn setlo gyda llai o daliadau.',

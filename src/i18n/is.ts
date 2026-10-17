@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Eða skannaðu þennan kóða',
   'home.group.title': 'Stofnaðu hóp. Deildu tengli.',
   'home.hero.audience': 'Fyrir meðleigjendur, pör, ferðalög og veislur.',
-  'home.hero.ctaPrimary': 'Stofna ókeypis aðgang',
+  'home.hero.ctaPrimary': 'Stofnaðu hóp',
   'home.hero.ctaSecondary': 'Sjáðu hvernig þetta virkar',
   'home.hero.haveAccount': 'Ertu þegar með aðgang?',
   'home.hero.lede': 'Side Badger heldur utan um hver borgaði hvað, í 140 gjaldmiðlum, og leggur til hver borgar hverjum, svo hópurinn gerir upp með færri greiðslum.',

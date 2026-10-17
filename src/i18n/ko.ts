@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': '또는 이 코드를 스캔하세요',
   'home.group.title': '그룹을 만들고 링크를 공유하세요.',
   'home.hero.audience': '룸메이트, 커플, 여행, 기념 모임을 위해.',
-  'home.hero.ctaPrimary': '무료 계정 만들기',
+  'home.hero.ctaPrimary': '그룹 만들기',
   'home.hero.ctaSecondary': '사용 방법 보기',
   'home.hero.haveAccount': '이미 계정이 있으신가요?',
   'home.hero.lede': '사이드 배저는 누가 무엇을 결제했는지 140개 통화로 기록하고 누가 누구에게 낼지 제안해, 그룹이 더 적은 횟수의 결제로 정산하도록 도와줍니다.',

@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': '或扫描此二维码',
   'home.group.title': '建一个群组，分享一个链接。',
   'home.hero.audience': '适合室友、情侣、旅行和庆祝活动。',
-  'home.hero.ctaPrimary': '创建免费账户',
+  'home.hero.ctaPrimary': '创建群组',
   'home.hero.ctaSecondary': '了解使用方式',
   'home.hero.haveAccount': '已有账户？',
   'home.hero.lede': 'Side Badger 用 140 种货币记录谁为什么付了钱，并建议谁该付给谁，让你们的群组用更少的付款笔数结清。',

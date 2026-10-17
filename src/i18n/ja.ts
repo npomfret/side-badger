@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'またはこのコードをスキャン',
   'home.group.title': 'グループを作って、リンクを共有。',
   'home.hero.audience': 'ルームメイト、カップル、旅行、お祝いごとに。',
-  'home.hero.ctaPrimary': '無料アカウントを作成',
+  'home.hero.ctaPrimary': 'グループを作る',
   'home.hero.ctaSecondary': '使い方を見る',
   'home.hero.haveAccount': 'アカウントをお持ちの方は',
   'home.hero.lede': 'Side Badgerは、誰が何にいくら支払ったかを140の通貨で記録し、誰が誰に払うかを提案します。グループはより少ない支払い回数で精算できます。',

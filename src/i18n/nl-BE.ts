@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Of scan deze code',
   'home.group.title': 'Start een groep. Deel een link.',
   'home.hero.audience': 'Voor huisgenoten, koppels, reizen en feestjes.',
-  'home.hero.ctaPrimary': 'Maak een gratis account',
+  'home.hero.ctaPrimary': 'Start een groep',
   'home.hero.ctaSecondary': 'Zo werkt het',
   'home.hero.haveAccount': 'Heb je al een account?',
   'home.hero.lede': 'Side Badger houdt bij wie wat betaald heeft, in 140 valuta\'s, en stelt voor wie wie betaalt, zodat je groep afrekent met minder betalingen.',

@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'یا این کد را اسکن کنید',
   'home.group.title': 'یک گروه بسازید. یک لینک بفرستید.',
   'home.hero.audience': 'برای هم‌خانه‌ها، زوج‌ها، سفرها و جشن‌ها.',
-  'home.hero.ctaPrimary': 'ساخت حساب رایگان',
+  'home.hero.ctaPrimary': 'یک گروه بسازید',
   'home.hero.ctaSecondary': 'ببینید چطور کار می‌کند',
   'home.hero.haveAccount': 'از قبل حساب دارید؟',
   'home.hero.lede': 'Side Badger ثبت می‌کند چه کسی برای چه چیزی پول داده، با 140 ارز، و پیشنهاد می‌دهد چه کسی به چه کسی بپردازد، تا گروه شما با پرداخت‌های کمتر تسویه کند.',

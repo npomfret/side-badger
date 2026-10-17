@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Au skana msimbo huu',
   'home.group.title': 'Anzisha kikundi. Shiriki kiungo.',
   'home.hero.audience': 'Kwa wapangaji wenza, wapenzi, safari, na sherehe.',
-  'home.hero.ctaPrimary': 'Fungua akaunti ya bure',
+  'home.hero.ctaPrimary': 'Anzisha kikundi',
   'home.hero.ctaSecondary': 'Tazama inavyofanya kazi',
   'home.hero.haveAccount': 'Tayari una akaunti?',
   'home.hero.lede': 'Side Badger hufuatilia nani alilipa nini, kwa sarafu 140, na hupendekeza nani amlipe nani, ili kikundi chako kimalize hesabu kwa malipo machache zaidi.',

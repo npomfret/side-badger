@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Ili skenirajte ovaj kod',
   'home.group.title': 'Osnuj grupu. Podijeli poveznicu.',
   'home.hero.audience': 'Za cimere, parove, putovanja i proslave.',
-  'home.hero.ctaPrimary': 'Napravi besplatan račun',
+  'home.hero.ctaPrimary': 'Osnuj grupu',
   'home.hero.ctaSecondary': 'Pogledaj kako radi',
   'home.hero.haveAccount': 'Već imate račun?',
   'home.hero.lede': 'Side Badger bilježi tko je što platio, u 140 valuta, i predlaže tko kome plaća, pa se vaša grupa poravnava s manje uplata.',

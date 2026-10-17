@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'অথবা এই কোডটি স্ক্যান করুন',
   'home.group.title': 'গ্রুপ শুরু করুন। লিঙ্ক শেয়ার করুন।',
   'home.hero.audience': 'রুমমেট, দম্পতি, ট্রিপ আর উদযাপনের জন্য।',
-  'home.hero.ctaPrimary': 'বিনামূল্যে অ্যাকাউন্ট খুলুন',
+  'home.hero.ctaPrimary': 'গ্রুপ শুরু করুন',
   'home.hero.ctaSecondary': 'কীভাবে কাজ করে দেখুন',
   'home.hero.haveAccount': 'আগে থেকেই অ্যাকাউন্ট আছে?',
   'home.hero.lede': 'Side Badger হিসাব রাখে কে কীসের জন্য কত দিয়েছে, 140টি মুদ্রায়, আর বলে দেয় কে কাকে দেবে, যাতে আপনার গ্রুপ কম পেমেন্টে হিসাব মিটিয়ে নিতে পারে।',

@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Veya bu kodu taratın',
   'home.group.title': 'Bir grup kurun. Bir bağlantı paylaşın.',
   'home.hero.audience': 'Ev arkadaşları, çiftler, geziler ve kutlamalar için.',
-  'home.hero.ctaPrimary': 'Ücretsiz hesap oluştur',
+  'home.hero.ctaPrimary': 'Bir grup kurun',
   'home.hero.ctaSecondary': 'Nasıl çalıştığını gör',
   'home.hero.haveAccount': 'Zaten hesabınız var mı?',
   'home.hero.lede': 'Side Badger kimin neyi ödediğini 140 para biriminde takip eder ve kimin kime ödeyeceğini önerir; böylece grubunuz daha az ödemeyle hesaplaşır.',

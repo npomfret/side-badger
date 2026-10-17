@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Tai skannaa tämä koodi',
   'home.group.title': 'Perusta ryhmä. Jaa linkki.',
   'home.hero.audience': 'Kämppiksille, pareille, matkoille ja juhliin.',
-  'home.hero.ctaPrimary': 'Luo ilmainen tili',
+  'home.hero.ctaPrimary': 'Perusta ryhmä',
   'home.hero.ctaSecondary': 'Katso, miten se toimii',
   'home.hero.haveAccount': 'Onko sinulla jo tili?',
   'home.hero.lede': 'Side Badger seuraa, kuka maksoi mitä, 140 valuutassa, ja ehdottaa, kuka maksaa kenelle, jotta ryhmäsi tasaa tilit vähemmillä maksuilla.',

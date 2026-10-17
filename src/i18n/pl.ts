@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Lub zeskanuj ten kod QR',
   'home.group.title': 'Załóż grupę. Udostępnij link.',
   'home.hero.audience': 'Dla współlokatorów, par, wyjazdów i uroczystości.',
-  'home.hero.ctaPrimary': 'Załóż darmowe konto',
+  'home.hero.ctaPrimary': 'Załóż grupę',
   'home.hero.ctaSecondary': 'Zobacz, jak to działa',
   'home.hero.haveAccount': 'Masz już konto?',
   'home.hero.lede': 'Side Badger zapisuje, kto za co zapłacił, w 140 walutach, i podpowiada, kto komu ma zapłacić, żeby twoja grupa rozliczyła się w mniejszej liczbie płatności.',

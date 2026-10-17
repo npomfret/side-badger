@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Sau scanează acest cod QR',
   'home.group.title': 'Începe un grup. Trimite un link.',
   'home.hero.audience': 'Pentru colegi de casă, cupluri, excursii și sărbători.',
-  'home.hero.ctaPrimary': 'Creează un cont gratuit',
+  'home.hero.ctaPrimary': 'Începe un grup',
   'home.hero.ctaSecondary': 'Vezi cum funcționează',
   'home.hero.haveAccount': 'Ai deja un cont?',
   'home.hero.lede': 'Side Badger ține evidența cine a plătit ce, în 140 de valute, și sugerează cine plătește cui, ca grupul tău să se achite în mai puține plăți.',

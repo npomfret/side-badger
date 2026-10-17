@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Or scan dis code',
   'home.group.title': 'Start group. Share link.',
   'home.hero.audience': 'For housemate dem, couples, trips, and celebrations.',
-  'home.hero.ctaPrimary': 'Create free account',
+  'home.hero.ctaPrimary': 'Start group',
   'home.hero.ctaSecondary': 'See how e dey work',
   'home.hero.haveAccount': 'You don get account before?',
   'home.hero.lede': 'Side Badger dey track who pay for wetin, for 140 currencies, and e dey suggest who go pay who, so your group fit settle up with fewer payments.',

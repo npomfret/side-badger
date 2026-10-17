@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Vai skenējiet šo kodu',
   'home.group.title': 'Sāciet grupu. Kopīgojiet saiti.',
   'home.hero.audience': 'Mājokļa biedriem, pāriem, ceļojumiem un svinībām.',
-  'home.hero.ctaPrimary': 'Izveidot bezmaksas kontu',
+  'home.hero.ctaPrimary': 'Sāciet grupu',
   'home.hero.ctaSecondary': 'Skatīt, kā tas darbojas',
   'home.hero.haveAccount': 'Jums jau ir konts?',
   'home.hero.lede': 'Side Badger seko, kurš par ko maksāja, 140 valūtās, un iesaka, kurš kam maksā, lai jūsu grupa norēķinātos ar mazāk maksājumiem.',

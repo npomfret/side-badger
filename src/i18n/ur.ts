@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'یا یہ کوڈ اسکین کریں',
   'home.group.title': 'گروپ شروع کریں۔ لنک شیئر کریں۔',
   'home.hero.audience': 'ساتھ رہنے والوں، جوڑوں، سفروں اور تقریبات کے لیے۔',
-  'home.hero.ctaPrimary': 'مفت اکاؤنٹ بنائیں',
+  'home.hero.ctaPrimary': 'گروپ شروع کریں',
   'home.hero.ctaSecondary': 'دیکھیں یہ کیسے کام کرتا ہے',
   'home.hero.haveAccount': 'کیا آپ کا پہلے سے اکاؤنٹ ہے؟',
   'home.hero.lede': 'Side Badger 140 کرنسیوں میں ریکارڈ رکھتا ہے کہ کس نے کس چیز کے لیے ادا کیا، اور تجویز دیتا ہے کہ کون کس کو ادا کرے، تاکہ آپ کا گروپ کم ادائیگیوں میں حساب برابر کر لے۔',

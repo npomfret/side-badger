@@ -100,7 +100,7 @@ export default {
   'home.group.scanCode': 'Eller scan denne kode',
   'home.group.title': 'Start en gruppe. Del et link.',
   'home.hero.audience': 'Til bofæller, par, rejser og fester.',
-  'home.hero.ctaPrimary': 'Opret en gratis konto',
+  'home.hero.ctaPrimary': 'Start en gruppe',
   'home.hero.ctaSecondary': 'Se, hvordan det virker',
   'home.hero.haveAccount': 'Har du allerede en konto?',
   'home.hero.lede': 'Side Badger holder styr på, hvem der har betalt for hvad, i 140 valutaer, og foreslår, hvem der betaler hvem, så jeres gruppe gør op med færre betalinger.',

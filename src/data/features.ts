@@ -787,7 +787,7 @@ export const features: readonly FeatureRecord[] = [
     claims: [
       {
         id: 'home-screen.opens-like-an-app',
-        text: 'No app store needed: add Side Badger to your home screen and it opens like an app.',
+        text: 'No app store needed: sign in, then add Side Badger to your home screen and it opens like an app.',
       },
     ],
     notApproved: ['native app', 'works offline', 'push notifications'],
@@ -952,7 +952,7 @@ export const features: readonly FeatureRecord[] = [
     status: 'not-offered',
     capability: 'iOS and Android apps.',
     evidence: [],
-    copy: 'Works in your browser; add it to your home screen.',
+    copy: 'Works in your browser; sign in, then add it to your home screen.',
   }),
   notOffered({
     id: 'offline',

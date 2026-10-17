@@ -49,7 +49,7 @@ export class SitePage {
   }
 
   private get launchLink(): Locator {
-    return this.banner.getByRole('link', { name: this.string('header.launchApp') });
+    return this.banner.getByRole('link', { name: this.string('header.signIn') });
   }
 
   private get skipLink(): Locator {

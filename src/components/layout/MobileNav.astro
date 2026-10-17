@@ -2,17 +2,21 @@
 /**
  * The mobile menu (restructure 5.2, D21): a Menu button and a Popover API panel, no script.
  * Escape, light dismiss, the top layer and returning focus come from the browser. Where popover
- * is unsupported, nav.css shows the panel as a plain list and hides the button.
+ * is unsupported, nav.css shows the panel as a plain list and hides the button. The panel opens
+ * with a labelled Sign in link, since the header shows only its icon on phones.
  */
+import LaunchAppCta from '../cta/LaunchAppCta.astro';
 import { t, type Locale } from '../../i18n';
 import type { NavLink } from '../nav/navigation';
 
 interface Props {
   links: readonly NavLink[];
   locale: Locale;
+  /** The registry page the menu is on, for the launch counter */
+  pageId: string;
 }
 
-const { links, locale } = Astro.props;
+const { links, locale, pageId } = Astro.props;
 ---
 
 {links.length > 0 && (
@@ -24,6 +28,7 @@ const { links, locale } = Astro.props;
       <span class="menu-button__text">{t('nav.menu', locale)}</span>
     </button>
     <div id="site-menu" class="mobile-menu" popover>
+      <LaunchAppCta target="app" cta="menu" pageId={pageId} locale={locale} class="mobile-menu__sign-in" />
       <nav aria-label={t('a11y.mainNavigation', locale)}>
         <ul role="list">
           {links.map(link => (

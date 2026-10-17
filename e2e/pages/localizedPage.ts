@@ -39,7 +39,7 @@ function escapeRegExp(value: string): string {
 
 /** The shell labels a visitor reads on every page */
 const SHELL_KEYS: readonly StringKey[] = [
-  'header.launchApp',
+  'header.signIn',
   'nav.features',
   'nav.useCases',
   'nav.howItWorks',
@@ -148,7 +148,7 @@ export class LocalizedPage {
     const fallback = SHELL_KEYS.filter(key => this.string(key) === en[key] && !approved.has(key));
     expect(fallback, `${this.locale} shell labels that are still English`).toEqual([]);
 
-    await expect(this.banner.getByRole('link', { name: this.string('header.launchApp') }), 'the launch link').toBeVisible();
+    await expect(this.banner.getByRole('link', { name: this.string('header.signIn') }), 'the launch link').toBeVisible();
     await expect(this.banner.getByRole('link', { name: this.string('a11y.homeLink') }), 'the logo link').toBeVisible();
     await expect(this.switcherButton, 'the language switcher').toBeVisible();
 

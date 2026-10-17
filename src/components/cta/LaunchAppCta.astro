@@ -3,28 +3,28 @@
  * The only way to link to the app (restructure 5.5, D28). The href is the first-party launch
  * counter (`/go/register/` or `/go/app/`, built by `launchHref`), so every click is counted with
  * its page and position and the destination changes in one place. Confetti stays opt-in: pass
- * `confetti` to add `btn-confetti`.
+ * `confetti` to add `btn-confetti`. `variant="link"` drops the button classes for an inline text link.
  */
 import { t, type Locale } from '../../i18n';
 import { launchHref, type LaunchTarget } from '../../seo/urls';
 
 interface Props {
-  /** `app` (header, "Open the app") or `register` (page bodies, which pass their own text) */
+  /** `app` (header, "Sign in") or `register` (page bodies, which pass their own text) */
   target: LaunchTarget;
   /** The link's position on the page: `hero`, `header`, `footer-cta`, ... */
   cta: string;
   /** Registry page id, or `not-found` */
   pageId: string;
   locale: Locale;
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'link';
   confetti?: boolean;
-  /** Show the external-link icon on phones, where the header collapses the text to the icon alone */
+  /** Show the log-in icon on phones, where the header collapses the text to the icon alone */
   icon?: boolean;
   class?: string;
 }
 
 const { target, cta, pageId, locale, variant = 'primary', confetti = false, icon = false, class: className } = Astro.props;
-// The default text is the header's "Open the app"; a register link labelled that way would mislead
+// The default text is the header's "Sign in"; a register link labelled that way would mislead
 if (target === 'register' && !Astro.slots.has('default')) {
   throw new Error(`LaunchAppCta target="register" (cta="${cta}") needs its link text in the slot`);
 }
@@ -33,13 +33,13 @@ if (target === 'register' && !Astro.slots.has('default')) {
 <a
   href={launchHref(pageId, locale, { target, cta })}
   rel="nofollow"
-  class:list={['btn', `btn-${variant}`, 'launch-cta', { 'btn-confetti': confetti }, className]}
+  class:list={[variant !== 'link' && ['btn', `btn-${variant}`], 'launch-cta', { 'btn-confetti': confetti }, className]}
 >
-  <span class="launch-cta__text"><slot>{t('header.launchApp', locale)}</slot></span>
+  <span class="launch-cta__text"><slot>{t('header.signIn', locale)}</slot></span>
   {icon && <svg class="launch-cta__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-    <polyline points="15 3 21 3 21 9" />
-    <line x1="10" y1="14" x2="21" y2="3" />
+    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+    <polyline points="10 17 15 12 10 7" />
+    <line x1="15" y1="12" x2="3" y2="12" />
   </svg>}
   <span class="sr-only">{t('a11y.externalLink', locale)}</span>
 </a>

@@ -42,7 +42,7 @@ const logo = logoFor(locale);
     <div class="header-actions">
       <LanguageSwitcher currentLocale={locale} currentPath={currentPath} />
       <LaunchAppCta target="app" cta="header" pageId={pageId} locale={locale} class="btn-launch" icon />
-      <MobileNav links={links} locale={locale} />
+      <MobileNav links={links} locale={locale} pageId={pageId} />
     </div>
   </div>
 </header>

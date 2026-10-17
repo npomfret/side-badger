@@ -165,6 +165,19 @@
   font-size: var(--text-lg);
 }
 
+/* The labelled Sign in link opens the panel; it keeps its button look over the plain menu links */
+.mobile-menu a.mobile-menu__sign-in {
+  justify-content: center;
+  margin-block-end: var(--space-md);
+  color: #fff;
+  font-weight: 600;
+}
+
+.mobile-menu a.mobile-menu__sign-in:hover {
+  background: var(--accent-ink-hover);
+  color: #fff;
+}
+
 .menu-close {
   margin-block-start: var(--space-md);
   inline-size: 100%;

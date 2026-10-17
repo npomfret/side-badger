@@ -204,7 +204,8 @@ main {
   }
 }
 
-/* Phones: the launch link keeps its icon; the text stays available to screen readers */
+/* Phones: the Sign in link keeps its log-in icon (the labelled one is in the Menu); the text stays
+   available to screen readers */
 @media (max-width: 39.99rem) {
   .btn-launch.btn {
     padding: var(--space-sm);

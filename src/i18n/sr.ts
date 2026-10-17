@@ -102,7 +102,7 @@ export default {
   'home.hero.audience': 'За цимере, парове, путовања и прославе.',
   'home.hero.ctaPrimary': 'Направи бесплатан налог',
   'home.hero.ctaSecondary': 'Погледај како ради',
-  'home.hero.haveAccount': 'Већ имате налог?',
+  'home.hero.haveAccount': 'Већ имаш налог?',
   'home.hero.lede': 'Side Badger бележи ко је шта платио, у 140 валута, и предлаже ко коме плаћа, па се ваша група поравнава са мање уплата.',
   'home.hero.title': 'Дели трошкове групе без драме.',
   'home.hero.trust': 'Бесплатно. Без огласа. Без дневних ограничења.',

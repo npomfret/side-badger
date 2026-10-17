@@ -46,7 +46,7 @@ export default {
   'footer.terms': 'Käyttöehdot',
   'footer.useCases': 'Käyttötilanteet',
   'header.logoText': 'Side Badger',
-  'header.signIn': 'Kirjaudu',
+  'header.signIn': 'Kirjaudu sisään',
   'home.cast.ava': 'Ava',
   'home.cast.ben': 'Ben',
   'home.cast.dev': 'Dev',

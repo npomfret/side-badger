@@ -102,7 +102,7 @@ export default {
   'home.hero.audience': 'Para colegas de casa, casais, viagens e celebrações.',
   'home.hero.ctaPrimary': 'Criar uma conta grátis',
   'home.hero.ctaSecondary': 'Ver como funciona',
-  'home.hero.haveAccount': 'Já tem uma conta?',
+  'home.hero.haveAccount': 'Já tens uma conta?',
   'home.hero.lede': 'O Side Badger regista quem pagou o quê, em 140 moedas, e sugere quem paga a quem, para o teu grupo acertar as contas com menos pagamentos.',
   'home.hero.title': 'Divide as despesas do grupo sem dramas.',
   'home.hero.trust': 'Grátis. Sem anúncios. Sem limites diários.',

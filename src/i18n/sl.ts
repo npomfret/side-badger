@@ -102,7 +102,7 @@ export default {
   'home.hero.audience': 'Za sostanovalce, pare, potovanja in praznovanja.',
   'home.hero.ctaPrimary': 'Ustvari brezplačen račun',
   'home.hero.ctaSecondary': 'Poglej, kako deluje',
-  'home.hero.haveAccount': 'Že imate račun?',
+  'home.hero.haveAccount': 'Že imaš račun?',
   'home.hero.lede': 'Side Badger beleži, kdo je kaj plačal, v 140 valutah, in predlaga, kdo komu plača, da se vaša skupina poravna z manj plačili.',
   'home.hero.title': 'Deli stroške skupine brez drame.',
   'home.hero.trust': 'Brezplačno. Brez oglasov. Brez dnevnih omejitev.',

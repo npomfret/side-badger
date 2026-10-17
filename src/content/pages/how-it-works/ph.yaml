@@ -1,8 +1,6 @@
-translatedFrom: "fd23c99b"
+translatedFrom: "578d5a0c"
 review:
-  status: checked
-  checker: "T1-check"
-  date: "2026-10-15"
+  status: machine
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -66,7 +64,7 @@ requirements:
     - Isang libreng account. Email address at password lang ang kailangan, at kailangan mong i-verify ang email bago ka makapagdagdag ng anuman.
     - Edad 18 pataas.
     - Makabagong browser sa telepono o computer, at koneksyon. Hindi app-store app ang Side Badger at hindi ito gumagana offline.
-    - Opsyonal, isang puwesto sa home screen mo. Hindi kailangan ng app store, dahil maidaragdag mo ang Side Badger sa home screen o dock at bubukas ito na parang app.
+    - Opsyonal, isang puwesto sa home screen mo. Hindi kailangan ng app store, dahil pagkatapos mag-sign in, maidaragdag mo ang Side Badger sa home screen o dock at bubukas ito na parang app. Ipinapakita ng Settings sa app kung paano.
 example:
   heading: Tatlong magkakaibigan pagkatapos ng gabi sa labas
   currency: GBP
@@ -97,7 +95,7 @@ faq:
     - q: Kailangan ba ng account ng lahat?
       a: Oo, libre ito. Bini-verify ng bawat tao ang email niya bago magdagdag ng anuman.
     - q: May app ba?
-      a: Gumagana ito sa browser, at maidaragdag mo ito sa home screen o dock para bumukas na parang app. Walang bersyon sa app store at walang offline mode.
+      a: Gumagana ito sa browser. Mag-sign in, saka idagdag ito sa home screen o dock para bumukas na parang app. Ipinapakita ng Settings sa app kung paano. Walang bersyon sa app store at walang offline mode.
     - q: Naglilipat ba ng pera ang Side Badger?
       a: Hindi. Nagbibilang lang ito at nagmumungkahi ng mga bayad, at kayo ang bahalang magbayaran sa paraang gusto ninyo. Saka ninyo itatala ang bayad. Tingnan ang [settle up](page:feature/settle-up).
     - q: Puwede bang umalis ang may utang?

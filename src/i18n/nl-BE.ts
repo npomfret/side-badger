@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Advertenties',
   'home.cta.receiptDrama': 'Drama',
   'home.cta.receiptTrackers': 'Trackers van derden',
-  'home.cta.title': 'Klaar zodra jouw groep het is.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Voeg elke uitgave toe in de valuta waarin je betaalde. Side Badger kan ze omrekenen naar de valuta van de groep tegen een actuele wisselkoers, en je kunt de koers aanpassen naar wat je echt kreeg. Het oorspronkelijke bedrag blijft bij de uitgave staan.',
   'home.currency.convertTo': 'Converteren naar',
   'home.currency.editRate': 'Koers bewerken',

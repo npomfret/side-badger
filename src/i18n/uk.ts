@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Реклама',
   'home.cta.receiptDrama': 'Драма',
   'home.cta.receiptTrackers': 'Сторонні трекери',
-  'home.cta.title': 'Готові, щойно буде готова ваша група.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Додавайте кожну витрату у валюті, в якій її оплачено. Side Badger може конвертувати її у валюту групи за актуальним курсом обміну, а курс можна змінити на той, що діяв під час обміну. Початкова сума залишається біля витрати.',
   'home.currency.convertTo': 'Конвертувати в',
   'home.currency.editRate': 'Редагувати курс',

@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Iragarkiak',
   'home.cta.receiptDrama': 'Drama',
   'home.cta.receiptTrackers': 'Hirugarrenen jarraipen-tresnak',
-  'home.cta.title': 'Prest, zure taldea prest dagoenean.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Gehitu gastu bakoitza ordaindu zenuen monetan. Side Badger-ek taldearen monetara bihur dezake egungo kanbio-tasa batekin, eta tasa aldatu dezakezu benetan lortu zenuenera. Jatorrizko zenbatekoa gastuan geratzen da.',
   'home.currency.convertTo': 'Bihurtu hona',
   'home.currency.editRate': 'Editatu tasa',

@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Reclame',
   'home.cta.receiptDrama': 'Dramă',
   'home.cta.receiptTrackers': 'Trackere terțe',
-  'home.cta.title': 'Gata când e și grupul tău.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Adaugă fiecare cheltuială în moneda în care ai plătit-o. Side Badger o poate converti în moneda grupului la un curs de schimb actual, iar tu poți schimba cursul cu cel pe care l-ai primit de fapt. Suma inițială rămâne pe cheltuială.',
   'home.currency.convertTo': 'Convertește în',
   'home.currency.editRate': 'Editează cursul',

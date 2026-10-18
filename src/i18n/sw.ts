@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Matangazo',
   'home.cta.receiptDrama': 'Drama',
   'home.cta.receiptTrackers': 'Vifuatiliaji vya watu wengine',
-  'home.cta.title': 'Tuko tayari kikundi chako kikiwa tayari.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Ongeza kila gharama kwa sarafu uliyolipia. Side Badger inaweza kuibadilisha kuwa sarafu ya kikundi kwa kiwango cha sasa cha kubadilisha fedha, na unaweza kubadilisha kiwango hicho kiwe ulichopata kwa kweli. Kiasi cha awali kinabaki kwenye gharama.',
   'home.currency.convertTo': 'Badilisha kuwa',
   'home.currency.editRate': 'Hariri kiwango',

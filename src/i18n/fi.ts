@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Mainokset',
   'home.cta.receiptDrama': 'Draama',
   'home.cta.receiptTrackers': 'Kolmannen osapuolen seuraimet',
-  'home.cta.title': 'Valmiina, kun ryhmäsikin on.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Lisää jokainen kulu valuutalla, jolla maksoit. Side Badger voi muuntaa sen ryhmän valuuttaan nykyisellä valuuttakurssilla, ja voit vaihtaa kurssin siihen, jonka todella sait. Alkuperäinen summa säilyy kulussa.',
   'home.currency.convertTo': 'Muunna',
   'home.currency.editRate': 'Muokkaa kurssia',

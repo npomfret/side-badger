@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Oglasi',
   'home.cta.receiptDrama': 'Drama',
   'home.cta.receiptTrackers': 'Trackeri trećih strana',
-  'home.cta.title': 'Spremni, čim bude spremna tvoja grupa.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Svaki trošak dodaj u valuti u kojoj je plaćen. Side Badger ga može pretvoriti u valutu grupe po aktualnom tečaju, a tečaj možeš promijeniti u onaj koji je vrijedio pri zamjeni. Izvorni iznos ostaje uz trošak.',
   'home.currency.convertTo': 'Pretvori u',
   'home.currency.editRate': 'Uredi tečaj',

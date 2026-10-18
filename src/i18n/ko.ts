@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': '광고',
   'home.cta.receiptDrama': '감정싸움',
   'home.cta.receiptTrackers': '타사 추적기',
-  'home.cta.title': '그룹이 준비되면 바로 시작하세요.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': '결제한 통화로 각 지출을 추가하세요. 사이드 배저는 현재 환율로 그룹 통화로 환산해 줄 수 있고, 실제로 적용받은 환율로 직접 바꿀 수도 있어요. 원래 금액은 지출에 그대로 남습니다.',
   'home.currency.convertTo': '변환',
   'home.currency.editRate': '환율 편집',

@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Auglýsingar',
   'home.cta.receiptDrama': 'Drama',
   'home.cta.receiptTrackers': 'Rekjarar þriðju aðila',
-  'home.cta.title': 'Við erum klár þegar hópurinn er það.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Skráðu hvert útgjald í þeim gjaldmiðli sem þú greiddir í. Side Badger getur umreiknað það í gjaldmiðil hópsins á núverandi gengi og þú getur breytt genginu í það sem þú fékkst í raun. Upphaflega upphæðin helst á útgjaldinu.',
   'home.currency.convertTo': 'Breyta í',
   'home.currency.editRate': 'Breyta gengi',

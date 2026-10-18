@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Fógraí',
   'home.cta.receiptDrama': 'Drámaíocht',
   'home.cta.receiptTrackers': 'Rianairí tríú páirtí',
-  'home.cta.title': 'Réidh nuair a bheidh do ghrúpa.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Cuir gach costas leis san airgeadra inar íoc tú. Is féidir le Side Badger é a thiontú go hairgeadra an ghrúpa ar ráta malairte reatha, agus is féidir leat an ráta a athrú go dtí an ceann a fuair tú i ndáiríre. Fanann an tsuim bhunaidh ar an gcostas.',
   'home.currency.convertTo': 'Tiontaigh go',
   'home.currency.editRate': 'Cuir an ráta in eagar',

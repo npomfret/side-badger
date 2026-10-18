@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Reklamy',
   'home.cta.receiptDrama': 'Dramaty',
   'home.cta.receiptTrackers': 'Trackery podmiotów trzecich',
-  'home.cta.title': 'Gotowi, gdy twoja grupa jest gotowa.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Dodawaj każdy wydatek w walucie, w której został opłacony. Side Badger może przeliczyć go na walutę grupy po aktualnym kursie, a kurs możesz zmienić na ten, który faktycznie obowiązywał przy wymianie. Oryginalna kwota zostaje przy wydatku.',
   'home.currency.convertTo': 'Przelicz na',
   'home.currency.editRate': 'Edytuj kurs',

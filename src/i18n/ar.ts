@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'إعلانات',
   'home.cta.receiptDrama': 'دراما',
   'home.cta.receiptTrackers': 'متتبّعات الجهات الخارجية',
-  'home.cta.title': 'جاهزون متى كانت مجموعتك جاهزة.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'أضف كل مصروف بالعملة التي دفعت بها. يمكن لـ Side Badger تحويله إلى عملة المجموعة بسعر صرف حالي، ويمكنك تغيير السعر إلى السعر الذي حصلت عليه فعلاً. ويبقى المبلغ الأصلي مع المصروف.',
   'home.currency.convertTo': 'تحويل إلى',
   'home.currency.editRate': 'تعديل السعر',

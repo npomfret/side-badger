@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Annonser',
   'home.cta.receiptDrama': 'Drama',
   'home.cta.receiptTrackers': 'Tredjepartssporere',
-  'home.cta.title': 'Klar når gruppen din er det.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Legg inn hver utgift i valutaen du betalte i. Side Badger kan konvertere den til gruppens valuta med en gjeldende valutakurs, og du kan endre kursen til den du faktisk fikk. Det opprinnelige beløpet blir stående på utgiften.',
   'home.currency.convertTo': 'Konverter til',
   'home.currency.editRate': 'Rediger kurs',

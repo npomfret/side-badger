@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Διαφημίσεις',
   'home.cta.receiptDrama': 'Δράμα',
   'home.cta.receiptTrackers': 'Trackers τρίτων',
-  'home.cta.title': 'Έτοιμοι όταν είναι έτοιμη η ομάδα σας.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Προσθέστε κάθε έξοδο στο νόμισμα στο οποίο πληρώθηκε. Το Side Badger μπορεί να το μετατρέψει στο νόμισμα της ομάδας με μια τρέχουσα συναλλαγματική ισοτιμία και μπορείτε να αλλάξετε την ισοτιμία σε αυτήν που ίσχυσε στην πραγματικότητα. Το αρχικό ποσό μένει στο έξοδο.',
   'home.currency.convertTo': 'Μετατροπή σε',
   'home.currency.editRate': 'Επεξεργασία ισοτιμίας',

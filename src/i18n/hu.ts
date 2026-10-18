@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Hirdetések',
   'home.cta.receiptDrama': 'Dráma',
   'home.cta.receiptTrackers': 'Harmadik féltől származó nyomkövetők',
-  'home.cta.title': 'Készen állunk, ha a csoportod is.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Add hozzá a költséget abban a pénznemben, amelyben fizettek. A Side Badger át tudja váltani a csoport pénznemére egy aktuális árfolyamon, és az árfolyamot átírhatod arra, amelyet ténylegesen kaptál. Az eredeti összeg a költségnél marad.',
   'home.currency.convertTo': 'Átváltás erre:',
   'home.currency.editRate': 'Árfolyam szerkesztése',

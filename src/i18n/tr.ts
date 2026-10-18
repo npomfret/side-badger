@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Reklamlar',
   'home.cta.receiptDrama': 'Drama',
   'home.cta.receiptTrackers': 'Üçüncü taraf tracker\'lar',
-  'home.cta.title': 'Grubunuz hazır olunca biz de hazırız.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Her harcamayı ödediğiniz para biriminde ekleyin. Side Badger onu güncel bir döviz kuruyla grubun para birimine çevirebilir, siz de kuru gerçekte uygulanan kura değiştirebilirsiniz. Orijinal tutar harcamada kalır.',
   'home.currency.convertTo': 'Şuna çevir',
   'home.currency.editRate': 'Kuru düzenle',

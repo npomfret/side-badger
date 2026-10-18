@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'تبلیغات',
   'home.cta.receiptDrama': 'دعوا و دردسر',
   'home.cta.receiptTrackers': 'ردیاب‌های شخص ثالث',
-  'home.cta.title': 'هر وقت گروه شما آماده باشد، ما هم آماده‌ایم.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'هر هزینه را با همان ارزی که پرداخت کرده‌اید وارد کنید. Side Badger می‌تواند آن را با نرخ تبدیل روز به ارز گروه تبدیل کند و شما می‌توانید نرخ را به نرخی که واقعاً گرفته‌اید تغییر دهید. مبلغ اصلی روی هزینه می‌ماند.',
   'home.currency.convertTo': 'تبدیل به',
   'home.currency.editRate': 'ویرایش نرخ',

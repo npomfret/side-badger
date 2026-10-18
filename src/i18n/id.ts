@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Iklan',
   'home.cta.receiptDrama': 'Drama',
   'home.cta.receiptTrackers': 'Pelacak pihak ketiga',
-  'home.cta.title': 'Siap kapan pun grup Anda siap.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Catat setiap pengeluaran dalam mata uang yang Anda pakai untuk membayar. Side Badger dapat mengonversinya ke mata uang grup dengan kurs terkini, dan Anda bisa mengubah kurs sesuai yang benar-benar Anda dapatkan. Jumlah aslinya tetap tersimpan di pengeluaran.',
   'home.currency.convertTo': 'Konversi ke',
   'home.currency.editRate': 'Edit kurs',

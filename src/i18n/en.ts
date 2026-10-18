@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Ads',
   'home.cta.receiptDrama': 'Drama',
   'home.cta.receiptTrackers': 'Third-party trackers',
-  'home.cta.title': 'Ready when your group is.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Add each expense in the currency you paid in. Side Badger can convert it into the group\'s currency at a current exchange rate, and you can change the rate to the one you actually got. The original amount stays on the expense.',
   'home.currency.convertTo': 'Convert to',
   'home.currency.editRate': 'Edit rate',

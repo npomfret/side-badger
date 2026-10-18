@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'ప్రకటనలు',
   'home.cta.receiptDrama': 'డ్రామా',
   'home.cta.receiptTrackers': 'థర్డ్-పార్టీ ట్రాకర్లు',
-  'home.cta.title': 'మీ గ్రూప్ సిద్ధమైతే మేమూ సిద్ధం.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'ప్రతి ఖర్చును మీరు చెల్లించిన కరెన్సీలోనే జోడించండి. Side Badger దాన్ని ప్రస్తుత ఎక్స్ఛేంజ్ రేటుతో గ్రూప్ కరెన్సీలోకి మార్చగలదు, మీకు నిజంగా వచ్చిన రేటుకు మీరు రేటును మార్చుకోవచ్చు. అసలు మొత్తం ఖర్చుతోనే ఉంటుంది.',
   'home.currency.convertTo': 'దీనికి మార్చు',
   'home.currency.editRate': 'రేటు మార్చండి',

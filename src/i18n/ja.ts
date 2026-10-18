@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': '広告',
   'home.cta.receiptDrama': 'もめごと',
   'home.cta.receiptTrackers': '第三者のトラッカー',
-  'home.cta.title': 'グループの準備ができたら、いつでも。',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': '各支出は支払った通貨で追加できます。Side Badgerはグループの通貨に現在の為替レートで換算でき、レートは実際に適用されたものに変更できます。元の金額は支出にそのまま残ります。',
   'home.currency.convertTo': '変換先',
   'home.currency.editRate': 'レートを編集',

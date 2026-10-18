@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Reklamy',
   'home.cta.receiptDrama': 'Drama',
   'home.cta.receiptTrackers': 'Trackery třetích stran',
-  'home.cta.title': 'Připraveno, jakmile bude vaše skupina.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Zadávejte každý výdaj v měně, ve které byl zaplacen. Side Badger ho může převést do měny skupiny podle aktuálního směnného kurzu a kurz můžete změnit na ten, který platil při výměně. Původní částka u výdaje zůstává.',
   'home.currency.convertTo': 'Převést na',
   'home.currency.editRate': 'Upravit kurz',

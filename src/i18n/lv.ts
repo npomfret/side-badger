@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Reklāmas',
   'home.cta.receiptDrama': 'Drāma',
   'home.cta.receiptTrackers': 'Trešo pušu izsekotāji',
-  'home.cta.title': 'Gatavi, kad gatava jūsu grupa.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Pievienojiet katru izdevumu valūtā, kurā maksājāt. Side Badger var to konvertēt grupas valūtā pēc pašreizējā valūtas kursa, un kursu varat nomainīt uz to, ko patiešām saņēmāt. Sākotnējā summa paliek pie izdevuma.',
   'home.currency.convertTo': 'Konvertēt uz',
   'home.currency.editRate': 'Rediģēt kursu',

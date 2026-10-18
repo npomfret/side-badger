@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': '广告',
   'home.cta.receiptDrama': '狗血剧情',
   'home.cta.receiptTrackers': '第三方追踪器',
-  'home.cta.title': '你的群组准备好了，我们随时就绪。',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': '每笔支出用你实际支付的货币来记。Side Badger 可以按当前汇率把它换算成群组的货币，你也可以把汇率改成你实际换到的那一个。原始金额会一直保留在这笔支出上。',
   'home.currency.convertTo': '转换为',
   'home.currency.editRate': '编辑汇率',

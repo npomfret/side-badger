@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'اشتہارات',
   'home.cta.receiptDrama': 'ڈراما',
   'home.cta.receiptTrackers': 'تیسرے فریق کے ٹریکرز',
-  'home.cta.title': 'جب آپ کا گروپ تیار ہو، ہم تیار ہیں۔',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'ہر خرچہ اسی کرنسی میں شامل کریں جس میں آپ نے ادا کیا۔ Side Badger اسے موجودہ ایکسچینج ریٹ پر گروپ کی کرنسی میں تبدیل کر سکتا ہے، اور آپ ریٹ کو اس ریٹ پر بدل سکتے ہیں جو آپ کو واقعی ملا۔ اصل رقم خرچے پر برقرار رہتی ہے۔',
   'home.currency.convertTo': 'میں تبدیل کریں',
   'home.currency.editRate': 'شرح میں ترمیم کریں',

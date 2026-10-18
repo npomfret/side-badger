@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'বিজ্ঞাপন',
   'home.cta.receiptDrama': 'নাটক',
   'home.cta.receiptTrackers': 'থার্ড-পার্টি ট্র্যাকার',
-  'home.cta.title': 'আপনার গ্রুপ তৈরি হলেই আমরা তৈরি।',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'প্রতিটি খরচ যে মুদ্রায় দিয়েছেন সেই মুদ্রায় যোগ করুন। Side Badger সেটিকে বর্তমান এক্সচেঞ্জ রেটে গ্রুপের মুদ্রায় রূপান্তর করতে পারে, আর আপনি রেটটা বদলে আসলে যে রেট পেয়েছেন সেটা বসাতে পারেন। মূল পরিমাণ খরচের সঙ্গেই থাকে।',
   'home.currency.convertTo': 'রূপান্তর করুন',
   'home.currency.editRate': 'রেট বদলান',

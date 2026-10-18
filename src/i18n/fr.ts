@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Publicités',
   'home.cta.receiptDrama': 'Drame',
   'home.cta.receiptTrackers': 'Traqueurs tiers',
-  'home.cta.title': 'Prêt quand votre groupe l\'est.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Ajoutez chaque dépense dans la devise avec laquelle vous avez payé. Side Badger peut la convertir dans la devise du groupe à un taux de change actuel, et vous pouvez modifier le taux pour mettre celui que vous avez réellement obtenu. Le montant d\'origine reste sur la dépense.',
   'home.currency.convertTo': 'Convertir en',
   'home.currency.editRate': 'Modifier le taux',

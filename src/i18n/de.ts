@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Werbung',
   'home.cta.receiptDrama': 'Drama',
   'home.cta.receiptTrackers': 'Tracker von Drittanbietern',
-  'home.cta.title': 'Bereit, wenn deine Gruppe es ist.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Gib jede Ausgabe in der Währung ein, in der du bezahlt hast. Side Badger kann sie zu einem aktuellen Wechselkurs in die Gruppenwährung umrechnen, und du kannst den Kurs auf den ändern, den du wirklich bekommen hast. Der Originalbetrag bleibt an der Ausgabe.',
   'home.currency.convertTo': 'Umrechnen in',
   'home.currency.editRate': 'Kurs bearbeiten',

@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Ads',
   'home.cta.receiptDrama': 'Drama',
   'home.cta.receiptTrackers': 'Third-party trackers',
-  'home.cta.title': 'We dey ready when your group ready.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Add each expense for di currency wey you pay am. Side Badger fit change am to di group currency for current exchange rate, and you fit change di rate to wetin you really get. Di original amount go still dey for di expense.',
   'home.currency.convertTo': 'Change to',
   'home.currency.editRate': 'Change gengi',

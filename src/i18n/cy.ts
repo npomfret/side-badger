@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Hysbysebion',
   'home.cta.receiptDrama': 'Drama',
   'home.cta.receiptTrackers': 'Olrheinwyr trydydd parti',
-  'home.cta.title': 'Yn barod pan fydd eich grŵp yn barod.',
+  'home.cta.title': 'Sidebadger me!',
   'home.currency.body': 'Ychwanegwch bob cost yn yr arian cyfred y talwyd ynddo. Gall Side Badger ei drosi i arian cyfred y grŵp ar gyfradd gyfnewid gyfredol, a gallwch newid y gyfradd i\'r un a gawsoch mewn gwirionedd. Mae\'r swm gwreiddiol yn aros ar y gost.',
   'home.currency.convertTo': 'Trosi i',
   'home.currency.editRate': 'Golygu cyfradd',

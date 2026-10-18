@@ -64,7 +64,7 @@ export default {
   'home.cta.receiptAds': 'Ad',
   'home.cta.receiptDrama': 'Drama',
   'home.cta.receiptTrackers': 'Third-party tracker',
-  'home.cta.title': 'Sidebadger me!',
+  'home.cta.title': 'I-Sidebadger mo ako!',
   'home.currency.body': 'Idagdag ang bawat gastos sa perang ginamit mo sa pagbabayad. Maaari itong i-convert ng Side Badger sa pera ng grupo sa kasalukuyang exchange rate, at puwede mong baguhin ang rate sa aktuwal mong nakuha. Nananatili sa gastos ang orihinal na halaga.',
   'home.currency.convertTo': 'I-convert sa',
   'home.currency.editRate': 'I-edit ang rate',

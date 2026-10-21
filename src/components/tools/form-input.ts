@@ -21,6 +21,12 @@ export function parseNumber(text: string): number | undefined {
   return Number.isFinite(value) ? value : undefined;
 }
 
+/** Decimal places typed in a number, ignoring trailing zeros: "1.50" has one, "1.500" has one */
+export function decimalPlaces(text: string): number {
+  const match = /[.,](\d*)$/.exec(text.trim());
+  return match ? match[1].replace(/0+$/, '').length : 0;
+}
+
 /** Names are the same person when they differ only by case or by spaces round them */
 export const nameKey = (name: string) => name.trim().toLocaleLowerCase();
 

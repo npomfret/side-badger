@@ -65,7 +65,7 @@ function expenseFrom(wire: unknown, people: number): ExpenseState | null {
   const [label, payer, amount, code, shares] = wire as unknown[];
   if (!isText(label, MAX_LABEL_LENGTH) || !isText(amount, MAX_NUMBER_LENGTH)) return null;
   if (!Number.isInteger(payer) || (payer as number) < -1 || (payer as number) >= people) return null;
-  const method = typeof code === 'string' ? CODE_METHOD[code] : undefined;
+  const method = typeof code === 'string' && Object.hasOwn(CODE_METHOD, code) ? CODE_METHOD[code] : undefined;
   if (!method || !Array.isArray(shares) || shares.length > people) return null;
 
   const include = Array.from({ length: people }, () => false);

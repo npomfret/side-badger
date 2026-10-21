@@ -27,13 +27,13 @@
   display: none;
 }
 
-.split-calc .sc-privacy,
-.split-calc .sc-noscript {
+.split-calc .sc-privacy {
   margin: 0;
   color: var(--text-secondary);
 }
 
-.split-calc .sc-noscript {
+.sc-noscript {
+  margin: 0 0 var(--space-lg);
   padding: var(--space-md);
   border: 1px solid var(--glass-border-hover);
   border-radius: var(--radius-md);

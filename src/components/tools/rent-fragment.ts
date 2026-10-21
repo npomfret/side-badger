@@ -80,7 +80,7 @@ export function decodeRent(payload: string, currencies: readonly string[]): Rent
     people: [],
   };
   if (room) {
-    const unit = typeof data.u === 'string' ? CODE_UNIT[data.u] : undefined;
+    const unit = typeof data.u === 'string' && Object.hasOwn(CODE_UNIT, data.u) ? CODE_UNIT[data.u] : undefined;
     if (!isText(data.s, MAX_NUMBER_LENGTH) || !unit) return null;
     state.shared = data.s;
     state.unit = unit;

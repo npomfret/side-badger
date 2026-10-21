@@ -395,3 +395,21 @@ describe('names for new rows', () => {
     expect(splitList('')).toEqual([]);
   });
 });
+
+describe('amounts too small for the currency', () => {
+  const problemCodes = (amount: string, currency = 'GBP') =>
+    codes(state({ currency, expenses: [expense({ amount })] }));
+
+  it('refuses digits past the currency, read from the text', () => {
+    expect(problemCodes('0.000000001')).toEqual(['amountDecimals']);
+    expect(problemCodes('10.001')).toEqual(['amountDecimals']);
+    expect(problemCodes('10.50')).toEqual([]);
+    expect(problemCodes('10.500')).toEqual([]);
+    expect(problemCodes('5.5', 'JPY')).toEqual(['amountDecimals']);
+  });
+
+  it('refuses tiny exact shares', () => {
+    const exact = expense({ amount: '10', method: 'exact', include: [true, true, false], values: ['0.000000001', '10', ''] });
+    expect(codes(state({ expenses: [exact] }))).toContain('shareDecimals');
+  });
+});

@@ -404,3 +404,15 @@ describe('the amounts', () => {
     expect(result?.people.map(p => p.rentMinor)).toEqual(apportion(123457, result!.people.map(p => p.whole)));
   });
 });
+
+describe('amounts too small for the currency', () => {
+  it('refuses a rent with digits past the currency', () => {
+    expect(codes(flat({ rent: '0.000000001' }))).toEqual(['amountDecimals:{"kind":"rent"}']);
+    expect(codes(flat({ rent: '1950.001' }))).toEqual(['amountDecimals:{"kind":"rent"}']);
+    expect(codes(flat({ rent: '1950.50' }))).toEqual([]);
+  });
+
+  it('refuses tiny bills too', () => {
+    expect(codes(couple({ bills: '0.000000001' }))).toEqual(['amountDecimals:{"kind":"bills"}']);
+  });
+});

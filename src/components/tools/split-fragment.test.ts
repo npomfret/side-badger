@@ -232,3 +232,9 @@ describe('the share link', () => {
     });
   });
 });
+
+describe('method codes are an explicit set', () => {
+  it.each(['constructor', 'toString', '__proto__', 'hasOwnProperty'])('refuses %s', code => {
+    expect(decode(wire({ e: [['Dinner', 0, '100', code, [[0, '10'], [1, '90']]]] }))).toBeNull();
+  });
+});

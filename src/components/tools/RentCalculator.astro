@@ -69,6 +69,7 @@ const messages = {
 const messagesJson = JSON.stringify(messages).replace(/</g, '\\u003c');
 ---
 
+<noscript><p class="sc-noscript">{t('tools.split.noscript', locale)}</p></noscript>
 <div
   class="split-calc rent-calc"
   data-rent-calc
@@ -77,7 +78,6 @@ const messagesJson = JSON.stringify(messages).replace(/</g, '\\u003c');
   data-mode="room"
   inert
 >
-  <noscript><p class="sc-noscript">{t('tools.split.noscript', locale)}</p></noscript>
   <p class="sc-privacy">{t('tools.split.privacy', locale)}</p>
 
   <div class="sc-layout">

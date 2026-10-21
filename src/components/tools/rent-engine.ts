@@ -17,7 +17,7 @@
  * typed in. The area's unit is a label only: the shares do not depend on it.
  */
 import { MAX_EXPENSE_AMOUNT, apportion, isWholeMinor, minorExponent, toMinor } from '../../lib/minor-units';
-import { nameKey, parseNumber } from './form-input';
+import { decimalPlaces, nameKey, parseNumber } from './form-input';
 import { valueOf, type Mode, type RentState } from './rent-state';
 
 // The form's state and limits, which the page script needs at load (`rent-state.ts`)
@@ -163,7 +163,9 @@ export function checkState(state: RentState): RentProblem[] {
     if (amount === undefined) problems.push({ code: 'amountInvalid', target });
     else if (!optional && !(amount > 0)) problems.push({ code: 'amountPositive', target });
     else if (amount > MAX_EXPENSE_AMOUNT) problems.push({ code: 'amountMax', target });
-    else if (!isWholeMinor(amount, currency)) problems.push({ code: 'amountDecimals', target, places });
+    else if (decimalPlaces(raw) > places || !isWholeMinor(amount, currency)) {
+      problems.push({ code: 'amountDecimals', target, places });
+    } else if (!optional && toMinor(amount, currency) === 0) problems.push({ code: 'amountPositive', target });
   };
 
   checkAmount(state.rent, { kind: 'rent' }, false);

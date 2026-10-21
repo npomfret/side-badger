@@ -268,3 +268,9 @@ describe('the rent share link', () => {
     });
   });
 });
+
+describe('unit codes are an explicit set', () => {
+  it.each(['constructor', 'toString', '__proto__', 'hasOwnProperty'])('refuses %s', code => {
+    expect(decode(room({ u: code }))).toBeNull();
+  });
+});

@@ -20,7 +20,7 @@ import {
   type ExampleData,
   type ExampleExpense,
 } from '../../lib/settle';
-import { nameKey, parseNumber, pickName, splitList } from './form-input';
+import { decimalPlaces, nameKey, parseNumber, pickName, splitList } from './form-input';
 import type { CalcState } from './split-state';
 
 // Reading a field and naming people are shared with the rent calculator (`form-input.ts`)
@@ -121,7 +121,9 @@ export function checkState(state: CalcState): Problem[] {
     else if (amount === undefined) problems.push({ code: 'amountInvalid', target: at('amount') });
     else if (!(amount > 0)) problems.push({ code: 'amountPositive', target: at('amount') });
     else if (amount > MAX_EXPENSE_AMOUNT) problems.push({ code: 'amountMax', target: at('amount') });
-    else if (!isWholeMinor(amount, currency)) problems.push({ code: 'amountDecimals', target: at('amount'), places });
+    else if (decimalPlaces(expense.amount) > places || !isWholeMinor(amount, currency)) {
+      problems.push({ code: 'amountDecimals', target: at('amount'), places });
+    } else if (toMinor(amount, currency) === 0) problems.push({ code: 'amountPositive', target: at('amount') });
     else amountOk = true;
 
     const chosen = people.map((_name, person) => person).filter(person => expense.include[person]);
@@ -145,7 +147,7 @@ export function checkState(state: CalcState): Problem[] {
       } else if (!(value > 0)) {
         problems.push({ code: 'sharePositive', target, name });
         sharesOk = false;
-      } else if (expense.method === 'exact' && !isWholeMinor(value, currency)) {
+      } else if (expense.method === 'exact' && (decimalPlaces(raw) > places || !isWholeMinor(value, currency))) {
         problems.push({ code: 'shareDecimals', target, name, places });
         sharesOk = false;
       } else {

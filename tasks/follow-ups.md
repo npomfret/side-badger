@@ -5,19 +5,14 @@ The site redesign (restructure task, homepage task and release 1 of [the site pl
 ## Open work
 
 - **P35 app screenshots.** Waits for the capture script and demo scenario in `wl-bill-splitter` (site plan follow-up 9 and D14). This repo owns the shot list (site plan "Shot list", `src/data/screenshots.ts`), optimization and placement. Until then English pages may use `placeholder-en` shots, and localized pages show none.
-- **Release 2 pages** from the site plan, each behind its gate: a "plan together" feature page (comments, reactions, lists, polls, live updates) and receipt scanning (gated on extraction-quality evidence).
+- **Release 2** is planned in [release-2-plan.md](./release-2-plan.md): calculators, guides, four feature pages, couples, page art, the Splitwise comparison and a help page, in three waves.
 - **Search reviews** at 4, 8 and 12 weeks after release (site plan success measures, `/go/app/` counts by `from`), once Search Console and Loki access exist.
-- **Guides** (`/guides/<slug>/`, D20) only when search data or repeated user questions show a need. Each links to at least two product pages and has an owner and a `reviewBy` date.
 - **Real-device checks** of the homepage: the iOS toolbar behaviour, and a VoiceOver pass.
-- **Install happens in the app (`wl-bill-splitter`).** Since 17 October 2026 this site has no web
-  manifest (it let phones "install" the brochure as if it were the app), and its copy says: sign in,
-  then add Side Badger to the home screen; Settings in the app shows how. The app should offer
-  installation itself after sign-in (Android `beforeinstallprompt`, an iOS "Share, Add to Home Screen"
-  hint) and fix its manifest icons (one `.jpg` labelled `image/png`, no 192px size). Watch `/go/app/`
-  counts for `cta=hero-sign-in` and `cta=menu` to see how returning phone users sign in.
-  The main button now says "Start a group" (to `/go/register/`), which existing users may tap too:
-  the app should send a signed-in visitor on `/register` to the dashboard, and its sign-up page
-  should show a clear "Already have an account? Sign in" link.
+- **Install happens in the app.** Since 17 October 2026 this site has no web manifest; its copy says
+  sign in, then add Side Badger to the home screen. The app now offers installation itself and its
+  manifest passes Chrome's installability check (app commits `276634759`, `683b85b1b`), and its
+  sign-up page sends signed-in visitors to the dashboard. Still open: watch `/go/app/` counts for
+  `cta=hero-sign-in` and `cta=menu` to see how returning phone users sign in.
 
 ## Owner actions
 
@@ -63,7 +58,7 @@ Numbered as in the deleted restructure task; the site plan cites them as "restru
 | D10 | Legal policies are committed Markdown snapshots in `src/content/policies/`, refreshed by `npm run policies:sync` and a daily workflow that opens a PR. Localized policy URLs show a translated "English only" notice and the English text marked `lang="en"`, and carry `noindex`. |
 | D11 | Long-form localized copy lives in YAML content collections, one file per page per locale, validated by Zod schemas in `src/content/schemas.ts`. Rich text is inline Markdown only. |
 | D16 | The feature registry is a typed TS module, `src/data/features.ts` (with `use-cases.ts` and `types.ts`), English and internal, transcribed from the site plan's registry. |
-| D20 | `/features/` and `/use-cases/` hubs; articles live under `/guides/<slug>/`. |
+| D20 | `/features/` and `/use-cases/` hubs; articles live under `/guides/<slug>/`. The wait for search data was lifted on 21 October 2026 (release-2-plan R4). |
 | D24 | No third-party font requests. Latin, Cyrillic and Greek locales use self-hosted Inter and Space Grotesk; Arabic-script and Indic locales add one self-hosted Noto Sans subset each; CJK locales use system fonts. |
 | D27 | Social cards are language-neutral 1200×630 PNGs built by `src/pages/og/[card].png.ts`; the localized title is in `og:title`. |
 | D28 | No client analytics. Launch clicks are counted by nginx at `/go/app/` and `/go/register/` (no IP, user agent or referrer). |

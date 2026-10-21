@@ -165,8 +165,8 @@ Every screenshot in `src/data/screenshots.ts` is still `missing` (restructure D3
 
 - **Decision:**
   - **Page art.** A new `src/components/content/PageArt.astro` composes 2 to 4 props from `src/components/home/props/`: `Receipt`, `StickyNote`, `Polaroid`, `Avatar`, `ChatBubble`, `Stamp`, `Paper`, `Doodle`, `Money`, and the `expenses/` cards. Each composition is a small fixed layout in the page hero, beside the H1 on wide screens and below the lead on phones.
-    - Each page's art is data in its content entry: an optional `art` block with a layout name and the props' short texts. It is translated with the page, at most six words per text.
-    - Amounts and names come from the page's worked example where one exists.
+    - Each page's art is data in `src/data/page-art.ts`, keyed by page id: a layout name and its props. It is not a field in the YAML entries: adding one to English would break locale parity until every translation existed.
+    - Prop texts come from the page's worked example (names, labels and amounts formatted for the locale), from existing translated keys, or from new `art.*` keys in `en.ts` of at most six words each, translated with the wave.
   - **Worked example.** `WorkedExample` keeps its table semantics but is styled as the app's ledger: expense rows as receipt slips, and the payments list as a "who pays whom" card, using the `LedgerCard` look.
   - **Workflow steps.** `WorkflowSteps` gets one `Doodle` per step.
   - **Every feature, use-case, tool and guide page** gets page art in its wave. The ten existing inner pages get it in wave 1.
@@ -282,9 +282,9 @@ Each package owns its files exclusively; agents build in a private copy, never t
 **P4. Page art** (R7)
 - Owns:
   - `src/components/content/PageArt.astro`
-  - the `art` schema field
+  - `src/data/page-art.ts` and the `art.*` keys in `en.ts`
+  - the art slot in `PageHero`
   - `WorkedExample` and `WorkflowSteps` styling
-  - `art` blocks in the ten existing English entries
 - **Done when:**
   - Desktop, phone and `/ar/` screenshots of all ten pages have been reviewed.
   - CLS is 0 and LCP is text.
@@ -292,7 +292,7 @@ Each package owns its files exclusively; agents build in a private copy, never t
   - The verify gate passes.
 
 **P5. Wave 1 translations and back-checks** (R11)
-- Covers everything P1, P3 and P4 added: keys, guide entries and `art` texts.
+- Covers everything P1, P3 and P4 added: keys, the tool page and guide entries, and `art.*` keys.
 - **Done when:** the strict audit and verify gate pass with every locale `checked`.
 
 Then flip `published: true`, merge, push to `main`, and check production.

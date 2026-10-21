@@ -165,6 +165,12 @@ const items = art.items.map((item, index) => ({
     list-style: none;
   }
 
+  /* An amount never breaks; a long label wraps instead (as on the homepage's receipts) */
+  .page-art .receipt :is(.receipt__lines li, .receipt__total) > bdi {
+    flex: none;
+    white-space: nowrap;
+  }
+
   /* The amount under a polaroid's name */
   .page-art__tag {
     display: block;
@@ -232,7 +238,8 @@ const items = art.items.map((item, index) => ({
     margin-block-start: 1.5rem;
   }
   .page-art--row > [data-kind='receipt'] {
-    flex-basis: 9.5rem;
+    flex-basis: 10rem;
+    min-inline-size: 8.5rem;
   }
   .page-art--row > [data-kind='receipt'] + [data-kind='receipt'] {
     margin-inline-start: 0.75rem;

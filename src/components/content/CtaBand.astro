@@ -1,14 +1,15 @@
 ---
 /**
  * The closing call to action of a content page (every brief ends with one): the entry's `cta`
- * heading and body, and a register link through the launch counter whose text is `cta.button`.
+ * heading and body, and a register link through the launch counter with the site's one main
+ * button label, `home.hero.ctaPrimary`.
  */
 import LaunchAppCta from '../cta/LaunchAppCta.astro';
-import type { Locale } from '../../i18n';
+import { t, type Locale } from '../../i18n';
 import RichText from './RichText.astro';
 
 interface Props {
-  cta: { heading: string; body: string; button: string };
+  cta: { heading: string; body: string };
   pageId: string;
   locale: Locale;
 }
@@ -22,7 +23,7 @@ const { cta, pageId, locale } = Astro.props;
       <h2 id="cta-heading">{cta.heading}</h2>
       <RichText as="p" text={cta.body} locale={locale} />
       <LaunchAppCta target="register" cta="footer-cta" pageId={pageId} locale={locale} confetti>
-        {cta.button}
+        {t('home.hero.ctaPrimary', locale)}
       </LaunchAppCta>
     </div>
   </div>

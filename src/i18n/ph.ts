@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Sabihin sa amin mula sa loob ng app gamit ang feedback form, at mababasa mo rin doon ang sagot namin.',
   'pricing.faq.q6.question': 'Paano kung may makita akong bug?',
   'pricing.faq.title': 'Mga tanong',
-  'pricing.free.cta': 'Gumawa ng libreng account',
   'pricing.free.description': 'Lahat ng feature, para sa bawat grupo, walang bayad na tier.',
   'pricing.free.feature1': 'Mga grupong hanggang 50 tao, sumasali gamit ang link o QR code',
   'pricing.free.feature2': 'Mga gastos na hinahati nang pantay, ayon sa eksaktong halaga, o ayon sa porsyento',

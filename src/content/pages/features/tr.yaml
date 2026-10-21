@@ -1,8 +1,8 @@
-translatedFrom: "25dba57f"
+translatedFrom: "daad8614"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "PN-check"
+  date: "2026-10-21"
 claims:
   - groups.group-per-house-trip-event
   - groups.up-to-50-people
@@ -13,6 +13,7 @@ claims:
   - lists.shared-shopping-list
   - polls.villa-shortlist-vote
   - live-updates.everyone-sees-it-straight-away
+  - live-updates.push-notifications
   - languages.39-languages
   - home-screen.opens-like-an-app
   - feedback.tell-us-from-the-app
@@ -27,7 +28,6 @@ intro: "İşte tüm donanım. Tabloyu bilerek dışarıda bıraktık. Side Badge
 cta:
   heading: "Grubunuzun ihtiyacını karşılıyor mu?"
   body: "Ücretsiz bir hesap oluşturun ve önce küçük bir grupla deneyin."
-  button: "Ücretsiz hesap oluştur"
 cardsHeading: "Üç iş, ayrıntılı"
 sections:
   - heading: "Makbuz tarama"
@@ -41,6 +41,7 @@ sections:
       - "**Canlı güncellemeler:** bir harcama ekleyin, herkes onu hemen görür."
       - "**Diller:** Side Badger'ı 39 dilde kullanın. Gruptaki herkes kendi dilini seçebilir."
       - "**Ana ekran:** uygulama mağazası gerekmez. Giriş yapın, ardından Side Badger'ı ana ekranınıza ekleyin; bir uygulama gibi açılır. Uygulamadaki Ayarlar nasıl yapılacağını gösterir."
+      - "**Bildirimler:** Ayarlar'dan anlık bildirimleri açın; gruplarınızda yeni bir etkinlik olduğunda bildirim alırsınız. iPhone ve iPad'de önce Side Badger'ı ana ekranınıza ekleyin."
       - "**Geri bildirim:** bir hata mı buldunuz? Uygulamanın içinden bize söyleyin ve yanıtımızı orada görün."
   - heading: "Side Badger'ın yapmadıkları"
     items:
@@ -49,7 +50,7 @@ sections:
       - "**Kaleme göre bölmez.** Harcama başına bir ödeyen var. Eşit, tam tutarlarla veya yüzdelerle bölüştürün."
       - "**Yerel uygulama sunmaz.** Tarayıcınızda çalışır. Giriş yapın, ardından ana ekranınıza ekleyin."
       - "**Çevrimdışı çalışmaz.** Bağlantı gerekir."
-      - "**E-posta veya SMS uyarısı göndermez.** Bildirimler uygulamada görünür. Anlık bildirimler planlanıyor."
+      - "**E-posta veya SMS uyarısı göndermez.** Yeni etkinlikler uygulamada görünür; anlık bildirimleri açarsanız bildirim olarak da gelir."
       - "**Grafik veya bütçe çizmez.** Kimin kime borçlu olduğunun hesabını tutar, bütün numara bu."
       - "**Google veya Apple ile giriş sunmaz.** E-postayla kaydolun. Google ve Apple ile giriş planlanıyor."
       - "**Hesapsız insanları içeri almaz.** Gruptaki herkesin ücretsiz bir hesabı olması gerekir."

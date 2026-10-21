@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Dywedwch wrthon ni o fewn yr ap gyda\'r ffurflen adborth, a gallwch ddarllen ein hateb yno hefyd.',
   'pricing.faq.q6.question': 'Beth os bydda i\'n dod o hyd i fyg?',
   'pricing.faq.title': 'Cwestiynau',
-  'pricing.free.cta': 'Creu cyfrif am ddim',
   'pricing.free.description': 'Pob nodwedd, i bob grŵp, heb haen daledig.',
   'pricing.free.feature1': 'Grwpiau o hyd at 50 o bobl, yn ymuno gyda dolen neu god QR',
   'pricing.free.feature2': 'Treuliau wedi\'u rhannu\'n gyfartal, yn ôl symiau union neu yn ôl canran',

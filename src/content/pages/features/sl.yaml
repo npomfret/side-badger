@@ -1,8 +1,8 @@
-translatedFrom: "25dba57f"
+translatedFrom: "daad8614"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "PN-check"
+  date: "2026-10-21"
 claims:
   - groups.group-per-house-trip-event
   - groups.up-to-50-people
@@ -13,6 +13,7 @@ claims:
   - lists.shared-shopping-list
   - polls.villa-shortlist-vote
   - live-updates.everyone-sees-it-straight-away
+  - live-updates.push-notifications
   - languages.39-languages
   - home-screen.opens-like-an-app
   - feedback.tell-us-from-the-app
@@ -27,7 +28,6 @@ intro: "Tu je celoten nabor. Preglednico smo namerno izpustili. Začni s tremi o
 cta:
   heading: "Ali naredi, kar tvoja skupina potrebuje?"
   body: "Ustvari brezplačen uporabniški račun in ga najprej preizkusi z majhno skupino."
-  button: "Ustvari brezplačen račun"
 cardsHeading: "Tri opravila podrobno"
 sections:
   - heading: "Skeniranje računov"
@@ -41,6 +41,7 @@ sections:
       - "**Posodobitve v živo:** dodaj strošek in vsi ga takoj vidijo."
       - "**Jeziki:** Side Badger uporabljaj v 39 jezikih. Vsak v skupini lahko izbere svojega."
       - "**Začetni zaslon:** trgovina z aplikacijami ni potrebna. Prijavi se, nato Side Badger dodaj na začetni zaslon in odpre se kot aplikacija. Kako, ti pokažejo nastavitve v aplikaciji."
+      - "**Obvestila:** v nastavitvah vklopi potisna obvestila o novi dejavnosti v svojih skupinah. Na iPhonu in iPadu najprej dodaj Side Badger na začetni zaslon."
       - "**Povratne informacije:** naletiš na napako? Sporoči nam iz aplikacije in tam preberi naš odgovor."
   - heading: "Česa Side Badger ne počne"
     items:
@@ -49,7 +50,7 @@ sections:
       - "**Ne deli po postavkah.** Za strošek plača ena oseba. Deli enako, točno ali po odstotkih."
       - "**Nima domače aplikacije.** Deluje v brskalniku. Prijavi se, nato ga dodaj na začetni zaslon."
       - "**Ne deluje brez povezave.** Potrebuje povezavo."
-      - "**Ne pošilja opozoril po e-pošti ali SMS.** Obvestila se prikažejo v aplikaciji. Potisna obvestila so v načrtu."
+      - "**Ne pošilja opozoril po e-pošti ali SMS.** Nova dejavnost se prikaže v aplikaciji, če jih vklopiš, pa tudi kot potisna obvestila."
       - "**Ne riše grafikonov ali proračunov.** Vodi štetje, kdo komu dolguje, in to je ves trik."
       - "**Ne omogoča prijave z Googlom ali Applom.** Registriraj se z e-pošto. Prijava z Googlom in Applom je v načrtu."
       - "**Ne spusti ljudi brez uporabniškega računa.** Vsak v skupini potrebuje brezplačen uporabniški račun."

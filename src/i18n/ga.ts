@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Inis dúinn ón aip féin leis an bhfoirm aiseolais, agus is féidir leat ár bhfreagra a léamh ansin freisin.',
   'pricing.faq.q6.question': 'Cad má fhaighim fabht?',
   'pricing.faq.title': 'Ceisteanna',
-  'pricing.free.cta': 'Cruthaigh cuntas saor in aisce',
   'pricing.free.description': 'Gach gné, do gach grúpa, gan leibhéal íoctha.',
   'pricing.free.feature1': 'Grúpaí suas le 50 duine, ar féidir dul isteach iontu le nasc nó le cód QR',
   'pricing.free.feature2': 'Costais roinnte go cothrom, de réir suimeanna cruinne nó de réir céatadáin',

@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Írj nekünk az alkalmazásból a visszajelzési űrlapon, és ott el is olvashatod a válaszunkat.',
   'pricing.faq.q6.question': 'Mi van, ha hibát találok?',
   'pricing.faq.title': 'Kérdések',
-  'pricing.free.cta': 'Ingyenes fiók létrehozása',
   'pricing.free.description': 'Minden funkció, minden csoportnak, fizetős szint nélkül.',
   'pricing.free.feature1': 'Legfeljebb 50 fős csoportok, csatlakozás linkkel vagy QR-kóddal',
   'pricing.free.feature2': 'Egyenlően, pontos összegek szerint vagy százalékosan felosztott költségek',

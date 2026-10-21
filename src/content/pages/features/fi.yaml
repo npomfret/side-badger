@@ -1,8 +1,8 @@
-translatedFrom: "25dba57f"
+translatedFrom: "daad8614"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "PN-check"
+  date: "2026-10-21"
 claims:
   - groups.group-per-house-trip-event
   - groups.up-to-50-people
@@ -13,6 +13,7 @@ claims:
   - lists.shared-shopping-list
   - polls.villa-shortlist-vote
   - live-updates.everyone-sees-it-straight-away
+  - live-updates.push-notifications
   - languages.39-languages
   - home-screen.opens-like-an-app
   - feedback.tell-us-from-the-app
@@ -27,7 +28,6 @@ intro: Tässä koko paletti. Taulukkolaskennan jätimme tarkoituksella pois. Alo
 cta:
   heading: Tekeekö se sen, mitä ryhmäsi tarvitsee?
   body: Luo ilmainen tili ja kokeile ensin pienellä ryhmällä.
-  button: Luo ilmainen tili
 cardsHeading: Kolme tehtävää tarkemmin
 sections:
   - heading: Kuittien skannaus
@@ -41,6 +41,7 @@ sections:
       - "**Päivitykset heti:** lisää kulu, niin kaikki näkevät sen heti."
       - "**Kielet:** käytä Side Badgeria 39 kielellä. Jokainen ryhmän jäsen voi valita oman kielensä."
       - "**Aloitusnäyttö:** sovelluskauppaa ei tarvita. Kirjaudu sisään ja lisää sitten Side Badger aloitusnäytölle, niin se avautuu kuin sovellus. Sovelluksen Asetukset näyttää, miten."
+      - "**Ilmoitukset:** ota push-ilmoitukset käyttöön Asetuksissa, niin saat ilmoituksen, kun ryhmissäsi on uutta toimintaa. Lisää iPhonessa ja iPadissa Side Badger ensin aloitusnäytölle."
       - "**Palaute:** löysitkö virheen? Kerro siitä sovelluksen sisällä ja näe vastauksemme siellä."
   - heading: Mitä Side Badger ei tee
     items:
@@ -49,7 +50,7 @@ sections:
       - "**Jakaa tuotteittain.** Yksi maksaja kulua kohden. Jaa tasan, tarkoilla summilla tai prosenteilla."
       - "**Toimittaa natiivisovellusta.** Se toimii selaimessa. Kirjaudu sisään ja lisää se sitten aloitusnäytölle."
       - "**Toimia offline-tilassa.** Se tarvitsee yhteyden."
-      - "**Lähettää hälytyksiä sähköpostilla tai tekstiviestillä.** Ilmoitukset näkyvät sovelluksessa. Push-ilmoitukset ovat suunnitteilla."
+      - "**Lähettää hälytyksiä sähköpostilla tai tekstiviestillä.** Uusi toiminta näkyy sovelluksessa ja push-ilmoituksina, jos otat ne käyttöön."
       - "**Piirtää kaavioita tai budjetteja.** Se pitää kirjaa siitä, kuka on velkaa kenelle, ja siinä koko temppu."
       - "**Kirjautua Googlella tai Applella.** Rekisteröidy sähköpostilla. Google- ja Apple-kirjautuminen ovat suunnitteilla."
       - "**Päästää sisään ilman tiliä.** Jokainen ryhmässä tarvitsee ilmaisen tilin."

@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Beri tahu kami dari dalam aplikasi lewat formulir umpan balik, dan Anda juga bisa membaca balasan kami di sana.',
   'pricing.faq.q6.question': 'Bagaimana jika saya menemukan bug?',
   'pricing.faq.title': 'Pertanyaan',
-  'pricing.free.cta': 'Buat akun gratis',
   'pricing.free.description': 'Setiap fitur, untuk setiap grup, tanpa paket berbayar.',
   'pricing.free.feature1': 'Grup hingga 50 orang, bergabung lewat tautan atau kode QR',
   'pricing.free.feature2': 'Pengeluaran dibagi rata, berdasarkan jumlah pasti, atau persentase',

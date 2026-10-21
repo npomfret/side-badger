@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': '앱 안의 피드백 양식으로 알려 주세요. 답변도 그곳에서 확인할 수 있습니다.',
   'pricing.faq.q6.question': '버그를 발견하면 어떻게 하나요?',
   'pricing.faq.title': '자주 묻는 질문',
-  'pricing.free.cta': '무료 계정 만들기',
   'pricing.free.description': '모든 그룹을 위한 모든 기능, 유료 요금제 없이.',
   'pricing.free.feature1': '링크나 QR 코드로 참여하는 최대 50명 그룹',
   'pricing.free.feature2': '똑같이, 정확한 금액으로, 또는 비율로 나누는 지출',

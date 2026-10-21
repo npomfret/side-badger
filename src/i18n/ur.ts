@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'ایپ کے اندر سے فیڈبیک فارم کے ذریعے ہمیں بتائیں، اور ہمارا جواب بھی آپ وہیں پڑھ سکتے ہیں۔',
   'pricing.faq.q6.question': 'اگر مجھے کوئی خرابی ملے تو؟',
   'pricing.faq.title': 'سوالات',
-  'pricing.free.cta': 'مفت اکاؤنٹ بنائیں',
   'pricing.free.description': 'ہر خصوصیت، ہر گروپ کے لیے، بغیر کسی ادائیگی والے پلان کے۔',
   'pricing.free.feature1': '50 افراد تک کے گروپس، لنک یا QR کوڈ سے شمولیت',
   'pricing.free.feature2': 'اخراجات برابر، عین رقم یا فیصد کے مطابق تقسیم',

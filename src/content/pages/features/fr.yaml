@@ -1,8 +1,8 @@
-translatedFrom: "25dba57f"
+translatedFrom: "daad8614"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "PN-check"
+  date: "2026-10-21"
 claims:
   - groups.group-per-house-trip-event
   - groups.up-to-50-people
@@ -13,6 +13,7 @@ claims:
   - lists.shared-shopping-list
   - polls.villa-shortlist-vote
   - live-updates.everyone-sees-it-straight-away
+  - live-updates.push-notifications
   - languages.39-languages
   - home-screen.opens-like-an-app
   - feedback.tell-us-from-the-app
@@ -27,7 +28,6 @@ intro: "Voici le kit complet. Nous avons volontairement laissé le tableur de c�
 cta:
   heading: "Est-ce que ça fait ce dont votre groupe a besoin ?"
   body: "Créez un compte gratuit et essayez d'abord avec un petit groupe."
-  button: "Créer un compte gratuit"
 cardsHeading: "Les trois tâches, en détail"
 sections:
   - heading: "Scan de reçus"
@@ -41,6 +41,7 @@ sections:
       - "**Mises à jour en direct :** ajoutez une dépense et tout le monde la voit tout de suite."
       - "**Langues :** utilisez Side Badger en 39 langues. Chaque membre du groupe peut choisir la sienne."
       - "**Écran d'accueil :** pas besoin de boutique d'applications. Connectez-vous, puis ajoutez Side Badger à votre écran d'accueil et il s'ouvre comme une appli. Les Paramètres de l'appli vous montrent comment."
+      - "**Notifications :** activez les notifications push dans les Paramètres pour recevoir une notification quand il y a de la nouvelle activité dans vos groupes. Sur iPhone et iPad, ajoutez d'abord Side Badger à votre écran d'accueil."
       - "**Retours :** vous avez trouvé un bug ? Dites-le-nous depuis l'appli et lisez notre réponse sur place."
   - heading: "Ce que Side Badger ne fait pas"
     items:
@@ -49,7 +50,7 @@ sections:
       - "**Partager par article.** Un seul payeur par dépense. Partagez à parts égales, par montants exacts ou par pourcentage."
       - "**Proposer une appli native.** Il fonctionne dans votre navigateur. Connectez-vous, puis ajoutez-le à votre écran d'accueil."
       - "**Fonctionner hors connexion.** Il faut une connexion."
-      - "**Envoyer des alertes par e-mail ou SMS.** Les notifications apparaissent dans l'appli. Les notifications push sont prévues."
+      - "**Envoyer des alertes par e-mail ou SMS.** La nouvelle activité apparaît dans l'appli, et sous forme de notifications push si vous les activez."
       - "**Dessiner des graphiques ou des budgets.** Il tient le compte de qui doit quoi à qui, et c'est tout le tour de magie."
       - "**Se connecter avec Google ou Apple.** Inscrivez-vous avec une adresse e-mail. La connexion Google et Apple est prévue."
       - "**Laisser entrer sans compte.** Chaque membre du groupe a besoin d'un compte gratuit."

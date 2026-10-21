@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'أخبرنا من داخل التطبيق عبر نموذج الملاحظات، ويمكنك قراءة ردّنا هناك أيضاً.',
   'pricing.faq.q6.question': 'ماذا لو وجدت خللاً؟',
   'pricing.faq.title': 'أسئلة',
-  'pricing.free.cta': 'أنشئ حساباً مجانياً',
   'pricing.free.description': 'كل الميزات، لكل مجموعة، بلا باقة مدفوعة.',
   'pricing.free.feature1': 'مجموعات تصل إلى 50 شخصاً، ينضمون برابط أو رمز QR',
   'pricing.free.feature2': 'مصروفات تُقسَّم بالتساوي أو بمبالغ محددة أو بنسبة مئوية',

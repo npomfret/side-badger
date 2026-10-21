@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'از داخل برنامه و با فرم بازخورد به ما بگویید، و پاسخ ما را هم همان‌جا می‌خوانید.',
   'pricing.faq.q6.question': 'اگر اشکالی پیدا کردم چه؟',
   'pricing.faq.title': 'پرسش‌ها',
-  'pricing.free.cta': 'ساخت حساب رایگان',
   'pricing.free.description': 'همه امکانات، برای همه گروه‌ها، بدون طرح پولی.',
   'pricing.free.feature1': 'گروه‌هایی تا 50 نفر، با لینک یا کد QR',
   'pricing.free.feature2': 'هزینه‌ها به‌صورت مساوی، با مبلغ دقیق یا با درصد تقسیم می‌شوند',

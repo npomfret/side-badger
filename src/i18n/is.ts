@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Segðu okkur frá því inni í appinu með endurgjafareyðublaðinu og þar getur þú líka lesið svarið okkar.',
   'pricing.faq.q6.question': 'Hvað ef ég finn villu?',
   'pricing.faq.title': 'Spurningar',
-  'pricing.free.cta': 'Stofna ókeypis aðgang',
   'pricing.free.description': 'Allir eiginleikar, fyrir alla hópa, án greidds þreps.',
   'pricing.free.feature1': 'Hópar með allt að 50 manns, sem fólk gengur í með tengli eða QR-kóða',
   'pricing.free.feature2': 'Útgjöldum skipt jafnt, eftir nákvæmum upphæðum eða í prósentum',

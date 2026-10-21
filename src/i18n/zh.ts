@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': '在应用内通过反馈表单告诉我们，你也可以在那里看到我们的回复。',
   'pricing.faq.q6.question': '发现 bug 怎么办？',
   'pricing.faq.title': '常见问题',
-  'pricing.free.cta': '创建免费账户',
   'pricing.free.description': '所有功能，每个群组都能用，没有付费档位。',
   'pricing.free.feature1': '群组最多 50 人，可通过链接或二维码加入',
   'pricing.free.feature2': '支出可平均分摊、按确切金额或按比例分摊',

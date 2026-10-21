@@ -49,7 +49,7 @@ export function richTextPageIds(text: string): string[] {
  *
  * The only link form is `[text](page:<pageId>)`. Links to the app are not rich text: every app
  * link goes through the launch counter with a page and a position (D28), so pages use the
- * `LaunchAppCta` component, which `cta.button` feeds.
+ * `LaunchAppCta` component (in `CtaBand` its label is the shared `home.hero.ctaPrimary`).
  */
 export function richTextProblem(text: string): string | undefined {
   if (text.trim() === '') return 'is empty';
@@ -109,7 +109,7 @@ export const review = z
   .refine(r => r.status !== 'reviewed' || (r.reviewer && r.date), 'reviewed needs reviewer and date')
   .refine(r => r.status !== 'checked' || (r.checker && r.date), 'checked needs checker and date');
 
-const cta = z.object({ heading: text, body: richText, button: text }).strict();
+const cta = z.object({ heading: text, body: richText }).strict();
 
 const base = z.object({
   /** First 8 hex digits of the SHA-256 of the English entry (D14). Required outside English. */

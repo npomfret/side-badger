@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Pastāstiet mums lietotnē, izmantojot atsauksmju veidlapu, un mūsu atbildi varēsiet izlasīt tur pat.',
   'pricing.faq.q6.question': 'Ko darīt, ja atrodu kļūdu?',
   'pricing.faq.title': 'Jautājumi',
-  'pricing.free.cta': 'Izveidot bezmaksas kontu',
   'pricing.free.description': 'Visas funkcijas visām grupām, bez maksas līmeņa.',
   'pricing.free.feature1': 'Grupas līdz 50 cilvēkiem, pievienošanās ar saiti vai QR kodu',
   'pricing.free.feature2': 'Izdevumi, sadalīti vienādi, pēc precīzām summām vai procentuāli',

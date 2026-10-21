@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Spune-ne din aplicație, prin formularul de feedback, și tot acolo poți citi răspunsul nostru.',
   'pricing.faq.q6.question': 'Ce fac dacă găsesc un bug?',
   'pricing.faq.title': 'Întrebări',
-  'pricing.free.cta': 'Creează un cont gratuit',
   'pricing.free.description': 'Toate funcțiile, pentru fiecare grup, fără nivel plătit.',
   'pricing.free.feature1': 'Grupuri de până la 50 de persoane, la care te alături cu un link sau un cod QR',
   'pricing.free.feature2': 'Cheltuieli împărțite egal, pe sume exacte sau procentual',

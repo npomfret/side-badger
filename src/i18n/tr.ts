@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Uygulamanın içinden geri bildirim formuyla bize söyleyin; yanıtımızı da orada okuyabilirsiniz.',
   'pricing.faq.q6.question': 'Bir hata bulursam ne olur?',
   'pricing.faq.title': 'Sorular',
-  'pricing.free.cta': 'Ücretsiz hesap oluştur',
   'pricing.free.description': 'Her özellik, her grup için, ücretli katman olmadan.',
   'pricing.free.feature1': 'En fazla 50 kişilik gruplar, bağlantı veya QR koduyla katılım',
   'pricing.free.feature2': 'Eşit, tam tutarlarla veya yüzdelerle bölüştürülen harcamalar',

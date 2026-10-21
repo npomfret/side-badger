@@ -664,10 +664,14 @@ export const features: readonly FeatureRecord[] = [
       'server/src/realtime/RealtimeBroker.ts',
       'webapp-v2/src/app/gateways/event-stream-connection.ts',
       'webapp-v2/src/components/layout/NotificationsDropdown.tsx',
+      'webapp-v2/src/components/settings/PushNotificationsSection.tsx',
+      'webapp-v2/src/serviceWorker.ts',
     ],
-    verifiedAt: APP_COMMIT,
+    // Push notifications shipped after APP_COMMIT; production serves /sw.js (checked 21 October 2026)
+    verifiedAt: '70e9de297',
     limits: [
-      'In-app only, with no email, text or push notifications.',
+      'No email or text alerts for activity.',
+      "Push notifications are opt-in per account and per device, and need a browser that supports them and the browser's permission. On iPhone and iPad they work only in the app added to the Home Screen. Delivery is not guaranteed.",
       'Activity is kept for 90 days (ACTIVITY_RETENTION_DAYS in server/src/repositories/IActivityRepository.ts).',
     ],
     prerequisites: [],
@@ -681,8 +685,12 @@ export const features: readonly FeatureRecord[] = [
     claims: [
       { id: 'live-updates.everyone-sees-it-straight-away', text: 'Add an expense and everyone sees it straight away.' },
       { id: 'live-updates.what-changed-and-who', text: 'See what changed, and who changed it.' },
+      {
+        id: 'live-updates.push-notifications',
+        text: 'Turn on push notifications to get a notification when there is new activity in your groups.',
+      },
     ],
-    notApproved: ['notifications on your phone', 'email alerts', 'payment reminders'],
+    notApproved: ['email alerts', 'payment reminders', 'you will never miss an update'],
     release: 1,
   },
   {
@@ -776,9 +784,7 @@ export const features: readonly FeatureRecord[] = [
     confidence: 'medium',
     evidence: ['server/src/manifest/ManifestHandlers.ts', 'webapp-v2/src/components/settings/InstallAppSection.tsx'],
     verifiedAt: APP_COMMIT,
-    limits: [
-      'No app-store app, no offline use and no push notifications (tasks/deferred/pwa-installation-and-push-notifications.md).',
-    ],
+    limits: ['No app-store app and no offline use.'],
     prerequisites: [],
     proof: [{ kind: 'screenshot', ref: 'S20' }],
     relatedFeatures: [],
@@ -790,7 +796,7 @@ export const features: readonly FeatureRecord[] = [
         text: 'No app store needed: sign in, then add Side Badger to your home screen and it opens like an app.',
       },
     ],
-    notApproved: ['native app', 'works offline', 'push notifications'],
+    notApproved: ['native app', 'works offline'],
     release: 1,
   },
   {
@@ -962,11 +968,11 @@ export const features: readonly FeatureRecord[] = [
     copy: 'Needs a connection.',
   }),
   notOffered({
-    id: 'push-email-alerts',
-    status: 'planned',
-    capability: 'Push, email or text notifications for activity (push only is planned).',
-    evidence: ['tasks/deferred/pwa-installation-and-push-notifications.md'],
-    copy: 'Notifications appear in the app.',
+    id: 'email-alerts',
+    status: 'not-offered',
+    capability: 'Email or text notifications for activity (push notifications are offered; see live-updates).',
+    evidence: ['webapp-v2/src/components/settings/ (email preferences cover marketing and invitations only)'],
+    copy: 'New activity shows in the app, and as push notifications if you turn them on.',
   }),
   notOffered({
     id: 'export',

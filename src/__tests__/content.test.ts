@@ -338,7 +338,7 @@ describe(`content entries (${getI18nMode()} mode, ${entries.length} entries, ${a
 // The rules themselves, against fixtures (these also run with no content)
 // ---------------------------------------------------------------------------
 
-const cta = { heading: 'Ready?', body: 'It is free, and *always* will be.', button: 'Create a free account' };
+const cta = { heading: 'Ready?', body: 'It is free, and *always* will be.' };
 const english = {
   review: { status: 'reviewed', reviewer: 'nick', date: '2026-10-01' },
   claims: ['balances.fewer-payments'],
@@ -369,7 +369,7 @@ const french = {
   meta: { title: 'Partager les dépenses', description: 'Partagez toute dépense.' },
   h1: 'Partager les dépenses',
   lead: 'Partagez une **note** et voyez les [tarifs](page:pricing).',
-  cta: { heading: 'Prêt ?', body: "C'est gratuit, et *toujours*.", button: 'Créer un compte gratuit' },
+  cta: { heading: 'Prêt ?', body: "C'est gratuit, et *toujours*." },
   problem: { heading: 'Le problème', body: 'Les notes pèsent.' },
   workflow: {
     heading: 'Comment ça marche',

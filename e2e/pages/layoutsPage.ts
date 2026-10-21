@@ -53,7 +53,7 @@ export class ContentPage {
 
   /** The register link in the hero or the closing band; its accessible name ends with "External link". */
   private launchLink(where: 'hero' | 'footer-cta'): Locator {
-    const label = where === 'hero' ? text(this.locale, 'home.hero.ctaPrimary') : this.fixture.cta.button;
+    const label = text(this.locale, 'home.hero.ctaPrimary');
     return (where === 'hero' ? this.hero : this.closing).getByRole('link', {
       name: new RegExp(`^${escapeRegExp(label)}`),
     });

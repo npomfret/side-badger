@@ -1,8 +1,8 @@
-translatedFrom: "25dba57f"
+translatedFrom: "daad8614"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "PN-check"
+  date: "2026-10-21"
 claims:
   - groups.group-per-house-trip-event
   - groups.up-to-50-people
@@ -13,6 +13,7 @@ claims:
   - lists.shared-shopping-list
   - polls.villa-shortlist-vote
   - live-updates.everyone-sees-it-straight-away
+  - live-updates.push-notifications
   - languages.39-languages
   - home-screen.opens-like-an-app
   - feedback.tell-us-from-the-app
@@ -27,7 +28,6 @@ intro: Her er hele pakken. Regnearket har vi udeladt med vilje. Start med de tre
 cta:
   heading: Kan den, hvad din gruppe har brug for?
   body: Opret en gratis konto, og prøv den først med en lille gruppe.
-  button: Opret en gratis konto
 cardsHeading: De tre opgaver i detaljer
 sections:
   - heading: Kvitteringsscanning
@@ -41,6 +41,7 @@ sections:
       - "**Live opdateringer:** tilføj en udgift, og alle ser den med det samme."
       - "**Sprog:** brug Side Badger på 39 sprog. Alle i gruppen kan vælge deres eget."
       - "**Startskærm:** ingen app store nødvendig. Log ind, og føj så Side Badger til din startskærm, så åbner den som en app. Indstillinger i appen viser dig hvordan."
+      - "**Notifikationer:** slå push-notifikationer til i Indstillinger, så får du en notifikation, når der er ny aktivitet i dine grupper. På iPhone og iPad skal du først føje Side Badger til din startskærm."
       - "**Feedback:** fundet en fejl? Fortæl os det inde fra appen, og se vores svar dér."
   - heading: Hvad Side Badger ikke gør
     items:
@@ -49,7 +50,7 @@ sections:
       - "**Dele pr. vare.** Én betaler pr. udgift. Del ligeligt, efter nøjagtige beløb eller i procent."
       - "**Leveres som native app.** Den virker i din browser. Log ind, og føj den så til din startskærm."
       - "**Virke offline.** Den kræver en forbindelse."
-      - "**Sende beskeder på e-mail eller sms.** Notifikationer vises i appen. Pushnotifikationer er planlagt."
+      - "**Sende beskeder på e-mail eller sms.** Ny aktivitet vises i appen og som push-notifikationer, hvis du slår dem til."
       - "**Tegne diagrammer eller budgetter.** Den holder regnskab med, hvem der skylder hvem, og det er hele tricket."
       - "**Logge ind med Google eller Apple.** Tilmeld dig med e-mail. Login med Google og Apple er planlagt."
       - "**Lukke folk ind uden en konto.** Alle i gruppen skal have en gratis konto."

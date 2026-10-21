@@ -1,8 +1,8 @@
-translatedFrom: "25dba57f"
+translatedFrom: "daad8614"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "PN-check"
+  date: "2026-10-21"
 claims:
   - groups.group-per-house-trip-event
   - groups.up-to-50-people
@@ -13,6 +13,7 @@ claims:
   - lists.shared-shopping-list
   - polls.villa-shortlist-vote
   - live-updates.everyone-sees-it-straight-away
+  - live-updates.push-notifications
   - languages.39-languages
   - home-screen.opens-like-an-app
   - feedback.tell-us-from-the-app
@@ -27,7 +28,6 @@ intro: 这就是全部家当。电子表格是我们特意没放进去的。先�
 cta:
   heading: 它能满足你们群组的需要吗？
   body: 创建免费账户，先拿一个小群组试试。
-  button: 创建免费账户
 cardsHeading: 三件事，细说
 sections:
   - heading: 收据扫描
@@ -41,6 +41,7 @@ sections:
       - "**实时更新**：添加一笔支出，所有人立即就能看到。"
       - "**语言**：Side Badger 支持 39 种语言，群组里每个人都可以选自己的语言。"
       - "**主屏幕**：无需应用商店。先登录，再把 Side Badger 添加到主屏幕，它会像应用一样打开。应用里的设置会告诉你怎么做。"
+      - "**通知**：在设置里开启推送通知，群组有新动态时你就会收到通知。在 iPhone 和 iPad 上，请先把 Side Badger 添加到主屏幕。"
       - "**反馈**：发现 bug？在应用内告诉我们，并在那里查看我们的回复。"
   - heading: Side Badger 不做什么
     items:
@@ -49,7 +50,7 @@ sections:
       - "**按物品分摊**。每笔支出只有一位付款人。可平均分摊、按确切金额或按比例分摊。"
       - "**提供原生应用**。它在浏览器里运行。先登录，再把它添加到主屏幕即可。"
       - "**离线使用**。需要联网。"
-      - "**通过邮件或短信发送提醒**。通知显示在应用内。推送通知在计划中。"
+      - "**通过邮件或短信发送提醒**。新动态显示在应用内；开启推送通知后，也会以通知形式送达。"
       - "**绘制图表或预算**。它只负责记下谁欠谁，整个把戏就这些。"
       - "**用 Google 或 Apple 登录**。用电子邮箱注册。Google 和 Apple 登录在计划中。"
       - "**让没有账户的人加入**。群组里的每个人都需要一个免费账户。"

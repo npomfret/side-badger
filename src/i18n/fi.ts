@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Kerro meille sovelluksen sisällä palautelomakkeella, ja voit lukea vastauksemme myös siellä.',
   'pricing.faq.q6.question': 'Mitä jos löydän virheen?',
   'pricing.faq.title': 'Kysymyksiä',
-  'pricing.free.cta': 'Luo ilmainen tili',
   'pricing.free.description': 'Kaikki ominaisuudet jokaiselle ryhmälle, ilman maksullista tasoa.',
   'pricing.free.feature1': 'Enintään 50 hengen ryhmät, liittyminen linkillä tai QR-koodilla',
   'pricing.free.feature2': 'Kulut tasan, tarkoilla summilla tai prosenteilla jaettuna',

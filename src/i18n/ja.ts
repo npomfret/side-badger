@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'アプリ内のフィードバックフォームから教えてください。返信もそこで読めます。',
   'pricing.faq.q6.question': 'バグを見つけたら？',
   'pricing.faq.title': 'よくある質問',
-  'pricing.free.cta': '無料アカウントを作成',
   'pricing.free.description': 'すべての機能を、すべてのグループに。有料プランはありません。',
   'pricing.free.feature1': '最大50人のグループ。リンクまたはQRコードで参加',
   'pricing.free.feature2': '均等、金額指定、割合指定で支出を分割',

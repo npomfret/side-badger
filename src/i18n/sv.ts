@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Berätta för oss inifrån appen med feedbackformuläret, så kan du läsa vårt svar där också.',
   'pricing.faq.q6.question': 'Vad gör jag om jag hittar en bugg?',
   'pricing.faq.title': 'Frågor',
-  'pricing.free.cta': 'Skapa ett gratiskonto',
   'pricing.free.description': 'Alla funktioner, för alla grupper, utan betalnivå.',
   'pricing.free.feature1': 'Grupper med upp till 50 personer, som går med via länk eller QR-kod',
   'pricing.free.feature2': 'Utgifter delade lika, efter exakta belopp eller i procent',

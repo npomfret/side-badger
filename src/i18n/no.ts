@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Si fra inne i appen med tilbakemeldingsskjemaet, så kan du lese svaret vårt der også.',
   'pricing.faq.q6.question': 'Hva om jeg finner en feil?',
   'pricing.faq.title': 'Spørsmål',
-  'pricing.free.cta': 'Opprett en gratis konto',
   'pricing.free.description': 'Alle funksjoner, for alle grupper, uten betalt nivå.',
   'pricing.free.feature1': 'Grupper på opptil 50 personer, med lenke eller QR-kode for å bli med',
   'pricing.free.feature2': 'Utgifter delt likt, etter nøyaktige beløp eller etter prosent',

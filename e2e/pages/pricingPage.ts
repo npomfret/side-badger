@@ -70,7 +70,7 @@ export class PricingPage {
   }
 
   private get registerLink(): Locator {
-    return this.main.getByRole('link', { name: this.string('pricing.free.cta') });
+    return this.main.getByRole('link', { name: this.string('home.hero.ctaPrimary') });
   }
 
   private get privacyLink(): Locator {

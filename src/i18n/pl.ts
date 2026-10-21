@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Napisz do nas z poziomu aplikacji, w formularzu opinii. Tam też przeczytasz naszą odpowiedź.',
   'pricing.faq.q6.question': 'Co, jeśli znajdę błąd?',
   'pricing.faq.title': 'Pytania',
-  'pricing.free.cta': 'Załóż darmowe konto',
   'pricing.free.description': 'Każda funkcja, dla każdej grupy, bez płatnego abonamentu.',
   'pricing.free.feature1': 'Grupy do 50 osób, z dołączaniem przez link lub kod QR',
   'pricing.free.feature2': 'Wydatki dzielone po równo, według dokładnych kwot lub procentowo',

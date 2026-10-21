@@ -1,8 +1,8 @@
-translatedFrom: "25dba57f"
+translatedFrom: "daad8614"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "PN-check"
+  date: "2026-10-21"
 claims:
   - groups.group-per-house-trip-event
   - groups.up-to-50-people
@@ -13,6 +13,7 @@ claims:
   - lists.shared-shopping-list
   - polls.villa-shortlist-vote
   - live-updates.everyone-sees-it-straight-away
+  - live-updates.push-notifications
   - languages.39-languages
   - home-screen.opens-like-an-app
   - feedback.tell-us-from-the-app
@@ -27,7 +28,6 @@ intro: これが全機能です。表計算シートは、あえて入れませ�
 cta:
   heading: あなたのグループに必要なことはできますか？
   body: 無料アカウントを作成して、まずは少人数のグループで試してみましょう。
-  button: 無料アカウントを作成
 cardsHeading: 3つの仕事を詳しく
 sections:
   - heading: レシートスキャン
@@ -41,6 +41,7 @@ sections:
       - "**ライブ更新：**支出を追加すると、全員にすぐ表示されます。"
       - "**言語：**Side Badgerは39の言語で使えます。グループの全員が自分の言語を選べます。"
       - "**ホーム画面：**アプリストアは不要です。ログインしてから、Side Badgerをホーム画面に追加すれば、アプリのように開きます。追加方法はアプリ内の設定で確認できます。"
+      - "**通知：**設定でプッシュ通知をオンにすると、グループに新しいアクティビティがあったときに通知が届きます。iPhoneとiPadでは、先にSide Badgerをホーム画面に追加してください。"
       - "**フィードバック：**不具合を見つけたら、アプリ内から教えてください。返信もそこで確認できます。"
   - heading: Side Badgerにできないこと
     items:
@@ -49,7 +50,7 @@ sections:
       - "**品目ごとの分割。**1つの支出につき支払う人は1人です。均等、金額指定、割合指定で分割します。"
       - "**ネイティブアプリの提供。**ブラウザで動作します。ログインしてから、ホーム画面に追加してください。"
       - "**オフラインでの動作。**接続が必要です。"
-      - "**メールやテキストでの通知。**通知はアプリ内に表示されます。プッシュ通知は計画中です。"
+      - "**メールやSMSでの通知。**新しいアクティビティはアプリ内に表示され、プッシュ通知をオンにすれば通知も届きます。"
       - "**グラフや予算の作成。**誰が誰に借りているかを記録するのがすべてです。"
       - "**GoogleやAppleでのサインイン。**メールで登録してください。GoogleとAppleでのサインインは計画中です。"
       - "**アカウントなしでの参加。**グループの全員に無料アカウントが必要です。"

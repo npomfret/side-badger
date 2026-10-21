@@ -1,8 +1,8 @@
-translatedFrom: "25dba57f"
+translatedFrom: "daad8614"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "PN-check"
+  date: "2026-10-21"
 claims:
   - groups.group-per-house-trip-event
   - groups.up-to-50-people
@@ -13,6 +13,7 @@ claims:
   - lists.shared-shopping-list
   - polls.villa-shortlist-vote
   - live-updates.everyone-sees-it-straight-away
+  - live-updates.push-notifications
   - languages.39-languages
   - home-screen.opens-like-an-app
   - feedback.tell-us-from-the-app
@@ -27,7 +28,6 @@ intro: "Tady je celá výbava. Tabulku jsme vynechali schválně. Začněte tře
 cta:
   heading: "Umí to, co vaše skupina potřebuje?"
   body: "Vytvořte si účet zdarma a nejdřív to vyzkoušejte s malou skupinou."
-  button: "Vytvořit účet zdarma"
 cardsHeading: "Tři úkoly podrobně"
 sections:
   - heading: "Skenování účtenek"
@@ -41,6 +41,7 @@ sections:
       - "**Živé aktualizace:** přidejte výdaj a všichni ho hned uvidí."
       - "**Jazyky:** používejte Side Badger ve 39 jazycích. Každý ve skupině si může vybrat vlastní."
       - "**Domovská obrazovka:** obchod s aplikacemi není potřeba. Přihlaste se, pak přidejte Side Badger na domovskou obrazovku a otevře se jako aplikace. Nastavení v aplikaci vám ukáže, jak na to."
+      - "**Oznámení:** zapněte v Nastavení push oznámení a dostanete oznámení, když bude ve vašich skupinách nová aktivita. Na iPhonu a iPadu nejdřív přidejte Side Badger na domovskou obrazovku."
       - "**Zpětná vazba:** narazili jste na chybu? Napište nám přímo z aplikace a odpověď si přečtěte tam."
   - heading: "Co Side Badger nedělá"
     items:
@@ -49,7 +50,7 @@ sections:
       - "**Nedělí podle položek.** Za výdaj platí jedna osoba. Dělte rovnoměrně, přesně nebo procentuálně."
       - "**Nemá nativní aplikaci.** Funguje v prohlížeči. Přihlaste se, pak ho přidejte na domovskou obrazovku."
       - "**Nefunguje offline.** Potřebuje připojení."
-      - "**Neposílá upozornění e-mailem ani SMS.** Oznámení se objevují v aplikaci. Push oznámení jsou v plánu."
+      - "**Neposílá upozornění e-mailem ani SMS.** Nová aktivita se zobrazuje v aplikaci, a pokud je zapnete, i jako push oznámení."
       - "**Nekreslí grafy ani rozpočty.** Vede přehled, kdo komu dluží, a to je celý trik."
       - "**Nepřihlašuje přes Google ani Apple.** Zaregistrujte se e-mailem. Přihlášení přes Google a Apple je v plánu."
       - "**Nepustí lidi bez účtu.** Každý ve skupině potřebuje bezplatný účet."

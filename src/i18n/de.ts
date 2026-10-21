@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Sag es uns in der App über das Feedback-Formular, und unsere Antwort kannst du dort ebenfalls lesen.',
   'pricing.faq.q6.question': 'Was, wenn ich einen Fehler finde?',
   'pricing.faq.title': 'Fragen',
-  'pricing.free.cta': 'Kostenloses Konto erstellen',
   'pricing.free.description': 'Alle Funktionen, für jede Gruppe, ohne Bezahlstufe.',
   'pricing.free.feature1': 'Gruppen mit bis zu 50 Personen, Beitritt per Link oder QR-Code',
   'pricing.free.feature2': 'Ausgaben gleichmäßig, nach genauen Beträgen oder in Prozent aufgeteilt',

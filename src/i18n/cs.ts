@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Napište nám přímo z aplikace přes formulář zpětné vazby a naši odpověď si tam také přečtete.',
   'pricing.faq.q6.question': 'Co když najdu chybu?',
   'pricing.faq.title': 'Otázky',
-  'pricing.free.cta': 'Vytvořit účet zdarma',
   'pricing.free.description': 'Každá funkce, pro každou skupinu, bez placené úrovně.',
   'pricing.free.feature1': 'Skupiny až o 50 lidech, připojení odkazem nebo QR kódem',
   'pricing.free.feature2': 'Výdaje dělené rovnoměrně, podle přesných částek nebo procentuálně',

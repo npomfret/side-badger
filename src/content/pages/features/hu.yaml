@@ -1,8 +1,8 @@
-translatedFrom: "25dba57f"
+translatedFrom: "daad8614"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "PN-check"
+  date: "2026-10-21"
 claims:
   - groups.group-per-house-trip-event
   - groups.up-to-50-people
@@ -13,6 +13,7 @@ claims:
   - lists.shared-shopping-list
   - polls.villa-shortlist-vote
   - live-updates.everyone-sees-it-straight-away
+  - live-updates.push-notifications
   - languages.39-languages
   - home-screen.opens-like-an-app
   - feedback.tell-us-from-the-app
@@ -27,7 +28,6 @@ intro: "Itt a teljes felszereltség. A táblázatot szándékosan kihagytuk. Kez
 cta:
   heading: "Azt tudja, amire a csoportodnak szüksége van?"
   body: "Hozz létre ingyenes fiókot, és először egy kis csoporttal próbáld ki."
-  button: "Ingyenes fiók létrehozása"
 cardsHeading: "A három feladat részletesen"
 sections:
   - heading: "Nyugtaszkennelés"
@@ -41,6 +41,7 @@ sections:
       - "**Élő frissítések:** adj hozzá egy költséget, és mindenki azonnal látja."
       - "**Nyelvek:** használd a Side Badgert 39 nyelven. A csoport minden tagja kiválaszthatja a sajátját."
       - "**Kezdőképernyő:** nem kell alkalmazásbolt. Jelentkezz be, aztán add hozzá a Side Badgert a kezdőképernyődhöz, és úgy nyílik meg, mint egy alkalmazás. Az alkalmazás Beállítások menüje megmutatja, hogyan."
+      - "**Értesítések:** kapcsold be a push-értesítéseket a Beállításokban, és értesítést kapsz, ha új tevékenység történik a csoportjaidban. iPhone-on és iPaden előbb add hozzá a Side Badgert a kezdőképernyődhöz."
       - "**Visszajelzés:** hibát találtál? Írj nekünk az alkalmazásból, és ott olvasd el a válaszunkat."
   - heading: "Amit a Side Badger nem csinál"
     items:
@@ -49,7 +50,7 @@ sections:
       - "**Nem oszt tételenként.** Egy költséget egy ember fizet. Oszd egyenlően, pontosan vagy százalékosan."
       - "**Nincs natív alkalmazása.** A böngészőben működik. Jelentkezz be, aztán add hozzá a kezdőképernyődhöz."
       - "**Nem működik offline.** Kapcsolat kell hozzá."
-      - "**Nem küld e-mailes vagy SMS-es riasztást.** Az értesítések az alkalmazásban jelennek meg. A push-értesítések tervben vannak."
+      - "**Nem küld e-mailes vagy SMS-es riasztást.** Az új tevékenység megjelenik az alkalmazásban, és ha bekapcsolod, push-értesítésként is."
       - "**Nem rajzol grafikonokat vagy költségvetést.** Vezeti a számolást, ki kinek tartozik, és ez az egész trükk."
       - "**Nem lehet vele Google- vagy Apple-fiókkal belépni.** Regisztrálj e-mail-címmel. A Google- és Apple-belépés tervben van."
       - "**Nem enged be embereket fiók nélkül.** A csoport minden tagjának kell egy ingyenes fiók."

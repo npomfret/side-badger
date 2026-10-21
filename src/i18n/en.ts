@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Tell us from inside the app with the feedback form, and you can read our reply there too.',
   'pricing.faq.q6.question': 'What if I find a bug?',
   'pricing.faq.title': 'Questions',
-  'pricing.free.cta': 'Create a free account',
   'pricing.free.description': 'Every feature, for every group, with no paid tier.',
   'pricing.free.feature1': 'Groups of up to 50 people, joined with a link or QR code',
   'pricing.free.feature2': 'Expenses split equally, by exact amounts or by percentage',

@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Tell us from inside di app with di feedback form, and you fit read our reply there too.',
   'pricing.faq.q6.question': 'Wetin if I see bug?',
   'pricing.faq.title': 'Questions',
-  'pricing.free.cta': 'Create free account',
   'pricing.free.description': 'Every feature, for every group, with no paid plan.',
   'pricing.free.feature1': 'Groups of up to 50 people, wey dem join with link or QR code',
   'pricing.free.feature2': 'Expenses wey you fit share equal-equal, by exact amount or by percentage',

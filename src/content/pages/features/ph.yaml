@@ -1,8 +1,8 @@
-translatedFrom: "25dba57f"
+translatedFrom: "daad8614"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "PN-check"
+  date: "2026-10-21"
 claims:
   - groups.group-per-house-trip-event
   - groups.up-to-50-people
@@ -13,6 +13,7 @@ claims:
   - lists.shared-shopping-list
   - polls.villa-shortlist-vote
   - live-updates.everyone-sees-it-straight-away
+  - live-updates.push-notifications
   - languages.39-languages
   - home-screen.opens-like-an-app
   - feedback.tell-us-from-the-app
@@ -27,7 +28,6 @@ intro: Narito ang buong gamit. Sadyang iniwan namin ang spreadsheet. Magsimula s
 cta:
   heading: Kaya ba nitong gawin ang kailangan ng grupo mo?
   body: Gumawa ng libreng account at subukan muna sa maliit na grupo.
-  button: Gumawa ng libreng account
 cardsHeading: Ang tatlong trabaho, nang detalyado
 sections:
   - heading: Pag-scan ng resibo
@@ -41,6 +41,7 @@ sections:
       - "**Live na update:** magdagdag ng gastos at makikita ito agad ng lahat."
       - "**Mga wika:** gamitin ang Side Badger sa 39 wika. Makakapili ang bawat isa sa grupo ng sarili niyang wika."
       - "**Home screen:** hindi kailangan ng app store. Mag-sign in, saka idagdag ang Side Badger sa home screen mo at bubukas ito na parang app. Ipinapakita ng Settings sa app kung paano."
+      - "**Notifications:** i-on ang push notifications sa Settings para makatanggap ng notification kapag may bagong aktibidad sa mga grupo mo. Sa iPhone at iPad, idagdag muna ang Side Badger sa home screen mo."
       - "**Feedback:** may nakitang bug? Sabihin sa amin mula sa loob ng app at mababasa mo roon ang sagot namin."
   - heading: Ang hindi ginagawa ng Side Badger
     items:
@@ -49,7 +50,7 @@ sections:
       - "**Maghati ayon sa item.** Isang nagbayad sa bawat gastos. Hatiin nang pantay, ayon sa eksaktong halaga, o ayon sa porsyento."
       - "**Magbigay ng native app.** Gumagana ito sa browser mo. Mag-sign in, saka idagdag ito sa home screen."
       - "**Gumana offline.** Kailangan nito ng koneksyon."
-      - "**Magpadala ng alerto sa email o text.** Lumalabas ang mga notification sa app. Nakaplano ang mga push notification."
+      - "**Magpadala ng alerto sa email o text.** Lumalabas sa app ang bagong aktibidad, at bilang push notification kung i-on mo ito."
       - "**Gumuhit ng tsart o budget.** Binibilang lang nito kung sino ang may utang kanino, at iyon na ang buong gimik."
       - "**Mag-sign in gamit ang Google o Apple.** Mag-sign up gamit ang email. Nakaplano ang pag-sign in gamit ang Google at Apple."
       - "**Magpapasok ng taong walang account.** Kailangan ng libreng account ng lahat sa grupo."

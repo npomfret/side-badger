@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'ऐप के अंदर से फीडबैक फॉर्म के ज़रिए हमें बताएं, और हमारा जवाब भी आप वहीं पढ़ सकते हैं।',
   'pricing.faq.q6.question': 'अगर मुझे कोई बग मिले तो?',
   'pricing.faq.title': 'सवाल',
-  'pricing.free.cta': 'मुफ्त अकाउंट बनाएं',
   'pricing.free.description': 'हर ग्रुप के लिए हर फीचर, कोई पेड प्लान नहीं।',
   'pricing.free.feature1': '50 लोगों तक के ग्रुप, लिंक या QR कोड से जुड़ें',
   'pricing.free.feature2': 'खर्च बराबर, सटीक राशि या प्रतिशत से बांटें',

@@ -1,8 +1,8 @@
-translatedFrom: "25dba57f"
+translatedFrom: "daad8614"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "PN-check"
+  date: "2026-10-21"
 claims:
   - groups.group-per-house-trip-event
   - groups.up-to-50-people
@@ -13,6 +13,7 @@ claims:
   - lists.shared-shopping-list
   - polls.villa-shortlist-vote
   - live-updates.everyone-sees-it-straight-away
+  - live-updates.push-notifications
   - languages.39-languages
   - home-screen.opens-like-an-app
   - feedback.tell-us-from-the-app
@@ -27,7 +28,6 @@ intro: "Iată setul complet. Foaia de calcul am lăsat-o deoparte intenționat. 
 cta:
   heading: "Face ce are nevoie grupul tău?"
   body: "Creează un cont gratuit și încearcă mai întâi cu un grup mic."
-  button: "Creează un cont gratuit"
 cardsHeading: "Cele trei treburi, în detaliu"
 sections:
   - heading: "Scanarea chitanțelor"
@@ -41,6 +41,7 @@ sections:
       - "**Actualizări în direct:** adaugi o cheltuială și toți o văd imediat."
       - "**Limbi:** folosește Side Badger în 39 de limbi. Fiecare om din grup și-o poate alege pe a lui."
       - "**Ecran de pornire:** fără magazin de aplicații. Conectează-te, apoi adaugă Side Badger pe ecranul de pornire și se deschide ca o aplicație. Setările din aplicație îți arată cum."
+      - "**Notificări:** activează notificările push din Setări ca să primești o notificare când există activitate nouă în grupurile tale. Pe iPhone și iPad, adaugă mai întâi Side Badger pe ecranul de pornire."
       - "**Feedback:** ai găsit un bug? Spune-ne din aplicație și vezi acolo răspunsul nostru."
   - heading: "Ce nu face Side Badger"
     items:
@@ -49,7 +50,7 @@ sections:
       - "**Nu împarte pe articole.** Un singur plătitor pe cheltuială. Împarte egal, exact sau procentual."
       - "**Nu are aplicație nativă.** Funcționează în browser. Conectează-te, apoi adaugă-l pe ecranul de pornire."
       - "**Nu funcționează offline.** Are nevoie de o conexiune."
-      - "**Nu trimite alerte prin e-mail sau SMS.** Notificările apar în aplicație. Notificările push sunt planificate."
+      - "**Nu trimite alerte prin e-mail sau SMS.** Activitatea nouă apare în aplicație și, dacă le activezi, ca notificări push."
       - "**Nu desenează grafice sau bugete.** Ține evidența cine cui datorează, și atâta tot."
       - "**Nu are autentificare cu Google sau Apple.** Te înscrii cu e-mail. Autentificarea cu Google și Apple este planificată."
       - "**Nu lasă oameni înăuntru fără cont.** Fiecare om din grup are nevoie de un cont gratuit."

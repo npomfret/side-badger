@@ -36,7 +36,7 @@ export interface Fixture {
   meta: { title: string; description: string };
   h1: string;
   lead: string;
-  cta: { heading: string; body: string; button: string };
+  cta: { heading: string; body: string };
   problem?: { heading: string };
   workflow?: { heading: string; steps: { title: string }[] };
   options?: { heading: string; items: unknown[] };

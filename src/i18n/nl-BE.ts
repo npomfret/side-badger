@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Laat het ons weten vanuit de app met het feedbackformulier, en je kunt ons antwoord daar ook lezen.',
   'pricing.faq.q6.question': 'Wat als ik een bug vind?',
   'pricing.faq.title': 'Vragen',
-  'pricing.free.cta': 'Maak een gratis account',
   'pricing.free.description': 'Alle functies, voor elke groep, zonder betaald abonnement.',
   'pricing.free.feature1': 'Groepen tot 50 personen, toegankelijk via een link of QR-code',
   'pricing.free.feature2': 'Uitgaven verdeeld gelijk, op exacte bedragen of op percentage',

@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Dites-le-nous depuis l\'application avec le formulaire de retour, et vous pourrez y lire notre réponse aussi.',
   'pricing.faq.q6.question': 'Et si je trouve un bug ?',
   'pricing.faq.title': 'Questions',
-  'pricing.free.cta': 'Créer un compte gratuit',
   'pricing.free.description': 'Toutes les fonctionnalités, pour tous les groupes, sans offre payante.',
   'pricing.free.feature1': 'Des groupes jusqu\'à 50 personnes, rejoints par lien ou code QR',
   'pricing.free.feature2': 'Des dépenses partagées à parts égales, par montants exacts ou par pourcentage',

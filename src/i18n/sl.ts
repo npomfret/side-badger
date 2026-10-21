@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Sporoči nam iz aplikacije z obrazcem za povratne informacije, tam pa lahko prebereš tudi naš odgovor.',
   'pricing.faq.q6.question': 'Kaj, če najdem napako?',
   'pricing.faq.title': 'Vprašanja',
-  'pricing.free.cta': 'Ustvari brezplačen račun',
   'pricing.free.description': 'Vsaka funkcija, za vsako skupino, brez plačljive stopnje.',
   'pricing.free.feature1': 'Skupine do 50 oseb, pridružitev s povezavo ali kodo QR',
   'pricing.free.feature2': 'Stroški, razdeljeni enako, po točnih zneskih ali po odstotkih',

@@ -1,8 +1,8 @@
-translatedFrom: "25dba57f"
+translatedFrom: "daad8614"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "PN-check"
+  date: "2026-10-21"
 claims:
   - groups.group-per-house-trip-event
   - groups.up-to-50-people
@@ -13,6 +13,7 @@ claims:
   - lists.shared-shopping-list
   - polls.villa-shortlist-vote
   - live-updates.everyone-sees-it-straight-away
+  - live-updates.push-notifications
   - languages.39-languages
   - home-screen.opens-like-an-app
   - feedback.tell-us-from-the-app
@@ -27,7 +28,6 @@ intro: Här är hela paketet. Kalkylbladet har vi medvetet lämnat utanför. Bö
 cta:
   heading: Gör den det din grupp behöver?
   body: Skapa ett gratiskonto och prova först med en liten grupp.
-  button: Skapa ett gratiskonto
 cardsHeading: De tre jobben, i detalj
 sections:
   - heading: Kvittoskanning
@@ -41,6 +41,7 @@ sections:
       - "**Liveuppdateringar:** lägg till en utgift så ser alla den direkt."
       - "**Språk:** använd Side Badger på 39 språk. Alla i gruppen kan välja sitt eget."
       - "**Hemskärm:** ingen appbutik behövs. Logga in och lägg sedan till Side Badger på hemskärmen så öppnas det som en app. Inställningar i appen visar hur."
+      - "**Aviseringar:** slå på pushaviseringar i Inställningar så får du en avisering när det finns ny aktivitet i dina grupper. På iPhone och iPad lägger du först till Side Badger på hemskärmen."
       - "**Feedback:** hittat en bugg? Berätta för oss inifrån appen och se vårt svar där."
   - heading: Vad Side Badger inte gör
     items:
@@ -49,7 +50,7 @@ sections:
       - "**Dela per artikel.** En betalare per utgift. Dela lika, exakt eller i procent."
       - "**Levereras som en inbyggd app.** Den fungerar i webbläsaren. Logga in och lägg sedan till den på hemskärmen."
       - "**Fungera offline.** Den behöver en uppkoppling."
-      - "**Skicka aviseringar med e-post eller sms.** Aviseringar visas i appen. Pushnotiser är planerade."
+      - "**Skicka aviseringar med e-post eller sms.** Ny aktivitet visas i appen, och som pushaviseringar om du slår på dem."
       - "**Rita diagram eller budgetar.** Den håller räkningen på vem som är skyldig vem, och det är hela tricket."
       - "**Logga in med Google eller Apple.** Registrera dig med e-post. Inloggning med Google och Apple är planerad."
       - "**Släppa in folk utan konto.** Alla i gruppen behöver ett gratiskonto."

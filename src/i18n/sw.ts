@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Tuambie ukiwa ndani ya programu kupitia fomu ya maoni, na unaweza kusoma jibu letu huko pia.',
   'pricing.faq.q6.question': 'Nikikuta hitilafu je?',
   'pricing.faq.title': 'Maswali',
-  'pricing.free.cta': 'Fungua akaunti ya bure',
   'pricing.free.description': 'Kila kipengele, kwa kila kikundi, bila mpango wa kulipia.',
   'pricing.free.feature1': 'Vikundi vya hadi watu 50, wanaojiunga kwa kiungo au msimbo wa QR',
   'pricing.free.feature2': 'Gharama zinazogawanywa kwa usawa, kwa kiasi halisi au kwa asilimia',

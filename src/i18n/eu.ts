@@ -211,7 +211,6 @@ export default {
   'pricing.faq.q6.answer': 'Esaiguzu aplikazioaren barruko iritzi-formularioaren bidez, eta hantxe irakur dezakezu gure erantzuna ere.',
   'pricing.faq.q6.question': 'Zer gertatzen da akats bat aurkitzen badut?',
   'pricing.faq.title': 'Galderak',
-  'pricing.free.cta': 'Sortu doako kontu bat',
   'pricing.free.description': 'Ezaugarri guztiak, talde guztientzat, ordainpeko mailarik gabe.',
   'pricing.free.feature1': 'Gehienez 50 laguneko taldeak, esteka edo QR kode batekin sartuta',
   'pricing.free.feature2': 'Gastuak berdin, zenbateko zehatzen arabera edo ehunekoen arabera banatuta',

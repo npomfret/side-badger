@@ -1,8 +1,8 @@
-translatedFrom: "25dba57f"
+translatedFrom: "daad8614"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "PN-check"
+  date: "2026-10-21"
 claims:
   - groups.group-per-house-trip-event
   - groups.up-to-50-people
@@ -13,6 +13,7 @@ claims:
   - lists.shared-shopping-list
   - polls.villa-shortlist-vote
   - live-updates.everyone-sees-it-straight-away
+  - live-updates.push-notifications
   - languages.39-languages
   - home-screen.opens-like-an-app
   - feedback.tell-us-from-the-app
@@ -27,7 +28,6 @@ intro: "Ini perangkat lengkapnya. Spreadsheet sengaja kami tinggalkan. Mulailah 
 cta:
   heading: "Apakah sudah cukup untuk kebutuhan grup Anda?"
   body: "Buat akun gratis dan coba dulu dengan grup kecil."
-  button: "Buat akun gratis"
 cardsHeading: "Tiga pekerjaan, secara rinci"
 sections:
   - heading: "Pemindaian struk"
@@ -41,6 +41,7 @@ sections:
       - "**Pembaruan langsung:** tambahkan pengeluaran dan semua orang langsung melihatnya."
       - "**Bahasa:** gunakan Side Badger dalam 39 bahasa. Setiap orang dalam grup bisa memilih bahasanya sendiri."
       - "**Layar utama:** tidak perlu toko aplikasi. Masuk, lalu tambahkan Side Badger ke layar utama dan ia terbuka seperti aplikasi. Pengaturan di dalam aplikasi menunjukkan caranya."
+      - "**Notifikasi:** aktifkan notifikasi push di Pengaturan untuk mendapat notifikasi saat ada aktivitas baru di grup Anda. Di iPhone dan iPad, tambahkan Side Badger ke layar utama terlebih dahulu."
       - "**Umpan balik:** menemukan bug? Beri tahu kami dari dalam aplikasi dan lihat balasan kami di sana."
   - heading: "Yang tidak dilakukan Side Badger"
     items:
@@ -49,7 +50,7 @@ sections:
       - "**Membagi per item.** Satu pembayar per pengeluaran. Bagi rata, berdasarkan jumlah pasti, atau persentase."
       - "**Menyediakan aplikasi native.** Berjalan di peramban Anda. Masuk, lalu tambahkan ke layar utama."
       - "**Bekerja offline.** Perlu koneksi."
-      - "**Mengirim peringatan lewat email atau pesan teks.** Notifikasi muncul di dalam aplikasi. Notifikasi push masih direncanakan."
+      - "**Mengirim peringatan lewat email atau pesan teks.** Aktivitas baru muncul di dalam aplikasi, dan sebagai notifikasi push jika Anda mengaktifkannya."
       - "**Menggambar grafik atau anggaran.** Side Badger menyimpan hitungan siapa berutang kepada siapa, dan hanya itu triknya."
       - "**Masuk dengan Google atau Apple.** Daftar dengan email. Masuk dengan Google dan Apple masih direncanakan."
       - "**Membiarkan orang masuk tanpa akun.** Setiap orang dalam grup perlu akun gratis."

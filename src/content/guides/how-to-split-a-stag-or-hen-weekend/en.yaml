@@ -1,0 +1,98 @@
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - privacy-posture.no-ads
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - polls.villa-shortlist-vote
+  - permissions.viewer-sees-everything
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: How to split the cost of a stag or hen weekend | Side Badger
+  description: Split a stag or hen weekend so the guest of honour pays nothing. Share costs equally, leave out what people skip, and settle with a short list of payments.
+h1: How to split the cost of a stag or hen weekend
+navLabel: Stag or hen weekend
+lead: The guest of honour pays nothing, so the rest of the group splits every cost [equally](page:feature/split-expenses) between them. Leave people out of the costs they skip, and keep the guest of honour out of the group so the surprise holds.
+cta:
+  heading: Keep the count, keep the surprise
+  body: Make a group, send the link to everyone but the guest of honour and add each cost as it happens. Side Badger is free, with no ads and no daily limits.
+sections:
+  - heading: Four friends and one surprise
+    body: Hannah, Isla, Jess and Kat are taking Grace away for her hen weekend. Grace is the guest of honour, so she pays for nothing. She also isn't in the group, so she can't see what her friends are spending on her. Hannah books the cottage, Isla pays for the spa day, Jess covers dinner and Kat takes the taxi. By Sunday everyone has paid for something, and nobody can say who is ahead. The sums are the same for a stag or hen weekend, whoever the guest of honour is.
+  - heading: Divide by the people paying, not the people there
+    body: The guest of honour's share doesn't vanish. It gets shared out. The cottage costs £720 and four friends pay for it, so it's £180 each, and Grace's place is already in that figure. Dinner is £260, so £65 each. The taxi is £44, so £11 each. Anything someone skips comes out of that expense only. Kat skips the spa, so its £360, which covers Grace's place too, is shared by Hannah, Isla and Jess at £120 each. Add it up and Hannah, Isla and Jess each owe £376 of the weekend, and Kat owes £256.
+  - heading: Set it up in Side Badger
+    items:
+      - Make a group for the weekend and give it a dull name, such as Cottage weekend. Grace isn't a member, and only members of a group can see it.
+      - >-
+        Choose **Invite Others** and send the link, or show the QR code, only where Grace won't see it. The link shows a preview of the group before anyone joins. Choose how long it lasts, from 15 minutes to 5 days. An old link keeps working until it expires, so don't leave it longer than you need.
+      - >-
+        For each cost, choose **Add Expense**, enter the amount and pick the payer under **Who paid?** Under **Split between**, tick the people paying, leaving out anyone who skipped it, such as Kat for the spa. Choose **Equally** under **How to split**.
+      - >-
+        When you're home, open the group's **Balances**. Side Badger shows who owes whom and suggests a short list of payments. Here it's three: Kat pays Hannah £212, Jess pays Hannah £116 and Isla pays Hannah £16. Pay each other however you like, then use **Settle Up** to record each payment.
+  - heading: Before you book, a budget and a deposit
+    body: Agree the budget before anyone books. Choose **Add Poll**, ask what the group will spend on the cottage and offer a few figures as options. Turn on **Anonymous voting** when you create it, to hide who voted for what, so nobody has to defend a smaller budget out loud. Close the poll once everyone has voted and the winner shows. Then comes the deposit. Whoever books pays it and adds it as an expense, split equally, and the balance goes in as a second expense when it's due. The others can send their share straight away and record the payment, or wait for the final count. The balances come out the same either way.
+  - heading: When someone joins for one night
+    body: A friend who turns up for Saturday only shouldn't pay for Friday. Leave them out of the costs they weren't part of. Where the cost depends on how long each person stays, such as a room, choose **Exact amounts** under **How to split** and type each person's share, which has to add up to the total. Work out a price per person per night first, then multiply by the nights each person stays. The [group trips](page:use-case/group-trips) page has more on costs that aren't the same for everyone.
+  - heading: What Side Badger doesn't do here
+    items:
+      - It never moves money. You pay each other by bank transfer, cash or whatever suits, then record the payment so the balances update for everyone.
+      - It sends no payment reminders. A friendly nudge in the group chat is still down to a human.
+      - Each expense has one payer, and Side Badger can't split a receipt line by line. If two cards paid for the cottage, enter it as two expenses. If some people ordered extras at dinner, enter the extras as their own expense.
+      - It keeps the money, not the itinerary. Polls and comments stay on the costs, so the plans for the weekend stay in your group chat.
+exampleAfter: 2
+example:
+  heading: Grace's hen weekend, split four ways
+  currency: GBP
+  people:
+    - id: hannah
+      name: Hannah
+    - id: isla
+      name: Isla
+    - id: jess
+      name: Jess
+    - id: kat
+      name: Kat
+  expenses:
+    - label: Cottage
+      payer: hannah
+      amount: 720
+      split:
+        method: equal
+    - label: Spa day
+      payer: isla
+      amount: 360
+      split:
+        method: equal
+        shares:
+          hannah: 1
+          isla: 1
+          jess: 1
+    - label: Dinner
+      payer: jess
+      amount: 260
+      split:
+        method: equal
+    - label: Taxi
+      payer: kat
+      amount: 44
+      split:
+        method: equal
+faq:
+  heading: Questions
+  items:
+    - q: Does the best man or maid of honour pay more?
+      a: Only if the group agrees. The app gives nobody a special role in the sums. If someone is covering more, choose **Exact amounts** or **Percentage** under **How to split** and enter the shares you agreed.
+    - q: What about drinks some people didn't have?
+      a: Add the drinks as their own expense and tick only the people who had them. If everyone had a different amount, choose **Exact amounts** and type each person's share. Nobody pays for what they didn't have.
+    - q: Can the guest of honour see the group later?
+      a: Yes, once the surprise is over. Invite them, then an admin can make them a **Viewer** under **Security & Permissions** in the group's settings. A viewer sees everything and changes nothing, so wait until nothing is a secret. They need a free account to join.

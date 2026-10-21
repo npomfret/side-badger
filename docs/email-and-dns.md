@@ -62,9 +62,9 @@ If the app ever needs to process incoming mail, use Postmark inbound on a separa
 
 - MX and both DKIM records are live.
 - SPF drift on ns1 (see the Easyspace quirks above): as of 2026-10-21, ns1 still serves the old SPF `v=spf1 include:_spf.google.com ~all`, while ns2 serves the current one. Both report the same SOA serial, 2026102105. Re-saving the record, and deleting then re-adding it, did not change ns1, and the panel edits did not change the serial either. Next step: raise an Easyspace support ticket.
-- Gmail activation in Workspace is pending. The first check failed, most likely because the "no MX" answer was still cached (1-hour negative TTL).
+- Gmail activation in Workspace is complete: the console shows "Gmail is activated!".
 - Google DKIM "Start authentication" has been clicked.
-- The inbound test email has not been sent yet.
+- The inbound test passed: an external email to `support@sidebadger.me` arrived in the `gsuite@snowmonkey.co.uk` inbox through the Support group.
 
 ### Follow-ups
 

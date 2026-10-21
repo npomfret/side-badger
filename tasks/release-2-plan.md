@@ -49,25 +49,25 @@ Every screenshot in `src/data/screenshots.ts` is still `missing` (restructure D3
 
 ## Decisions
 
-### R1. Order of work: tools, then guides, then feature pages
+### R1. Order of work: all English first, translate once, ship once
 
-- **Decision:** wave 1 has three parts:
-  - the split-bill calculator;
-  - the first three guides;
-  - illustrated page art on the existing pages.
-
-  Wave 2 has:
-  - four feature pages;
-  - the couples use case;
-  - five more guides;
-  - the rent calculator.
-
-  Wave 3 has the Splitwise comparison and the full support page. Every wave reaches `main` only when all 39 locales are complete and `checked` (restructure D31, D38).
-- **Evidence:** every new page costs 38 translations and 38 back-checks, so pages are ordered by expected search value per page. Calculators and question-shaped guides answer searches the current product pages cannot reach: people searching for a way to work out a split, rather than for an app. Page art improves ten existing pages without adding any.
-- **Alternatives considered:**
-  - Feature pages first. Rejected: they compete for "app" searches that the existing pages already target.
-  - Ship English pages before their translations. Rejected by restructure D38, which keeps `main` strict.
-- **Reopen if:** Search Console data at the 4-week review shows feature searches outperforming the guides.
+- **Decision:** the English for all three waves is built first, on local `main` in English-first mode. Then everything is translated and back-checked in one pass. Then every page is published, and `main` is pushed once the strict gate passes.
+  - **Wave 1:**
+    - the split-bill calculator;
+    - three guides;
+    - page art on the existing pages.
+  - **Wave 2:**
+    - four feature pages;
+    - couples;
+    - guides 4 to 8;
+    - the rent calculator.
+  - **Wave 3:**
+    - the Splitwise comparison;
+    - the help page.
+  - **Release step:** the translation pass (P5, P10 and P13 combined), then the publish flip and the registry `homePage` updates, then the push.
+- **Evidence:** the owner suggested it on 21 October 2026, after the first wave 1 translators had started: "i suggest leaving the translations until the end". English that changes during later waves (cross-links, art keys, copy tweaks) would otherwise be translated twice. The interface keys that 7 locales had already translated are kept in the scratch directory for reuse.
+- **Alternatives considered:** ship each wave when it is translated. Rejected: it needs a translation pass per wave, and pages edited in a later wave go stale.
+- **Reopen if:** a wave must go live before the others are written.
 
 ### R2. Calculators live at top-level URLs
 

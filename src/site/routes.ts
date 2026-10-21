@@ -27,6 +27,7 @@ const CONTENT_DIRS: Record<NonNullable<PageDef['content']>['collection'], string
   useCasePages: 'use-cases',
   sitePages: 'pages',
   guides: 'guides',
+  comparePages: 'compare',
 };
 
 // Only the file names matter, so the modules are never loaded

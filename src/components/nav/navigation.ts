@@ -44,7 +44,7 @@ const contentFiles = import.meta.glob('/src/content/{features,use-cases,pages,gu
   import: 'default',
 }) as Record<string, () => Promise<string>>;
 
-const CONTENT_DIRS = { featurePages: 'features', useCasePages: 'use-cases', sitePages: 'pages', guides: 'guides' } as const;
+const CONTENT_DIRS = { featurePages: 'features', useCasePages: 'use-cases', sitePages: 'pages', guides: 'guides', comparePages: 'compare' } as const;
 
 /** The link text in a content entry: its short `navLabel` if it has one, else its `h1`. */
 export function linkTextOf(data: { navLabel?: unknown; h1?: unknown } | null | undefined): string | undefined {

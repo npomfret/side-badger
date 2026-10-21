@@ -124,6 +124,7 @@ export default {
   'home.links.housemates': 'Splitting for housemates',
   'home.links.groupTrips': 'Splitting for group trips',
   'home.links.events': 'Splitting for events and celebrations',
+  'home.links.couples': 'Splitting for couples',
   'home.pricing.link': 'See pricing',
   'home.pricing.title': 'What it costs',
   'home.scene.tryInApp': 'Try it in Side Badger',

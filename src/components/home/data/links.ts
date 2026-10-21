@@ -64,9 +64,9 @@ export const LINK_PAGES: Record<LinkKey, string | null> = {
 };
 
 /**
- * Link labels per page id. Pages already live carry their own key; the other release 1 pages
- * use `home.links.*` (full literals, so the unused-key check sees them). Couples is release 2
- * and has no label yet.
+ * Link labels per page id. Pages already live carry their own key; the others use
+ * `home.links.*` (full literals, so the unused-key check sees them). A link goes to the app until
+ * its page is published.
  */
 export const PAGE_LABELS: Partial<Record<string, TranslationKey>> = {
   'feature/split-expenses': 'home.links.splitExpenses',
@@ -75,6 +75,7 @@ export const PAGE_LABELS: Partial<Record<string, TranslationKey>> = {
   'use-case/housemates': 'home.links.housemates',
   'use-case/group-trips': 'home.links.groupTrips',
   'use-case/events-and-celebrations': 'home.links.events',
+  'use-case/couples': 'home.links.couples',
   pricing: 'home.pricing.link',
   privacy: 'home.trust.privacyLink',
   'how-it-works': 'home.hero.ctaSecondary',

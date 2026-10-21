@@ -18,6 +18,7 @@ const DIRS: Record<NonNullable<PageDef['content']>['collection'], string> = {
   useCasePages: 'use-cases',
   sitePages: 'pages',
   guides: 'guides',
+  comparePages: 'compare',
 };
 const englishKeys = new Set(Object.keys(en));
 /** `PREVIEW_SLUG` of page-content.ts, which imports `astro:content` and so cannot load under Vitest */

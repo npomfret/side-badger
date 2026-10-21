@@ -58,15 +58,9 @@ describe('home links', () => {
     expect(LINK_PAGES['world:housemates']).toBe('use-case/housemates');
   });
 
-  it('every linked release 1 page is registered and labelled; couples (release 2) is neither', () => {
-    const release2 = new Set(['use-case/couples']);
+  it('every linked page is registered and labelled', () => {
     const ids = new Set(Object.values(LINK_PAGES).filter((id): id is string => id !== null));
     for (const id of ids) {
-      if (release2.has(id)) {
-        expect(getPage(id), id).toBeUndefined();
-        expect(PAGE_LABELS[id], id).toBeUndefined();
-        continue;
-      }
       expect(getPage(id), id).toBeDefined();
       const key = PAGE_LABELS[id];
       expect(key, id).toBeDefined();

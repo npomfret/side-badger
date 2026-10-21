@@ -38,6 +38,7 @@ const CONTENT_DIRS: Record<NonNullable<PageDef['content']>['collection'], string
   useCasePages: 'use-cases',
   sitePages: 'pages',
   guides: 'guides',
+  comparePages: 'compare',
 };
 
 // `astro.config.mjs` imports this module, so the entries are read here rather than through

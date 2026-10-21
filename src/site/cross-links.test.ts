@@ -33,7 +33,7 @@ describe('crossLinkedIds', () => {
   });
 
   it('leaves a product page that no guide names without guide links', () => {
-    const ids = crossLinkedIds(getPage('feature/multiple-currencies')!);
+    const ids = crossLinkedIds(getPage('feature/receipt-scanning')!);
     expect(ids.filter(id => getPage(id)?.type === 'article')).toEqual([]);
   });
 });

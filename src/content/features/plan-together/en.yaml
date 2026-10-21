@@ -1,0 +1,130 @@
+# P6: English plan-together feature page (brief: tasks/release-2-plan.md, "Wave 2 and 3 briefs", P6, which replaces the site
+# plan's "Lists and polls" brief and keeps its framing rule D11: examples stay on shared spending). The worked example is
+# guide 7's data, the state after the edit; every figure in the prose comes from it or from the arithmetic shown beside it.
+# Question wording follows the coordinator's correction: an edit carries an open question over only for people who still
+# have a share in the expense, so a questioner the edit leaves out has nothing left to close.
+review:
+  status: machine
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: Shared lists, polls and comments for group expenses | Side Badger
+  description: Comment on expenses, question the odd one, keep a shared shopping list and vote on the villa. Plan the spending together, then split it. Free, no ads.
+h1: Plan it together, split it after
+navLabel: Plan together
+lead: The shopping list and the shopping bill, finally on speaking terms. Side Badger gives your group somewhere to talk about the money before and after it's spent, with comments on every expense, a way to question the ones that look wrong, shared lists and polls for the big calls. Then you [split expenses](page:feature/split-expenses) as usual.
+cta:
+  heading: Plan it, then split it
+  body: Create a free account, start a group and put the first list, poll or question right next to the money. Not sure what happens next? See [how it works](page:how-it-works).
+problem:
+  heading: The chat is over here, the bill is over there
+  body: Group spending usually lives in two places. The numbers are in one, and the argument about the numbers is in a chat that scrolled away on Tuesday. The shopping list is a photo of a fridge. The villa was decided by a thumbs-up from most people, probably. Side Badger keeps the planning in the group, next to the expenses it's about, so there is a comment where the cost is, a list where the shop is, a poll for the big call, and a way to say "hang on, is this right?" without writing a paragraph. All of it stays about the group's money, which is what the group is for.
+workflow:
+  heading: From the villa vote to the shopping bill
+  steps:
+    - title: Put the big call to a vote
+      body: Add a poll for the decision that sets the bill, such as which villa. Pick two to ten options, say how many votes each person gets, then close it when everyone is in and the winner is marked.
+      shot: S17
+      shotAlt: A closed poll with the winning option marked and the number of votes beside each option
+    - title: Write the shopping list together
+      body: Start a shared list, add the items and tick them off as they reach the trolley. The shop goes in afterwards as an expense.
+      shot: S16
+      shotAlt: A shared shopping list with some items ticked off and a progress count
+    - title: Talk about the cost where it lives
+      body: Comment on the expense itself, attach the receipt and react with an emoji. The conversation stays next to the number it's about.
+      shot: S08
+      shotAlt: An expense with its details, a receipt thumbnail, a comment thread and emoji reactions
+    - title: Question the one that looks off
+      body: If the group has switched on expense questions, anyone included in an expense can choose **I have a question**. The expense stays out of the balances until the question is dealt with.
+      shot: S18
+      shotAlt: The expenses list with a Questioned badge and the Only questioned filter
+    - title: See what changed, and who changed it
+      body: The activity feed and the notifications bell show what's new across your groups. Push notifications are there if you want them.
+      shot: S19
+      shotAlt: The notifications dropdown with a list of recent activity
+options:
+  heading: Options
+  items: []
+example:
+  heading: Three housemates, one questioned wine bill
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: the big shop
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: the cleaner
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: the party wine
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: Comments and reactions, next to the numbers
+    body: Every expense has its own comment thread, and so do the group, each list and each poll. Ask why the taxi cost that much under the taxi, not in a chat nobody scrolls back through. Add a photo of the receipt or a PDF of the booking, then react with a thumbs up, heart, laugh, wow, sad or celebrate on expenses, payments and comments. Celebrate a payment when it lands. It is the closest Side Badger gets to a round of applause.
+  - heading: Question an expense without starting a row
+    body: When the group has expense questions switched on, anyone included in an expense can choose **I have a question** and say why. The question is posted as a comment on the expense, the expense gets a **Questioned** badge, and the whole expense drops out of everyone's balances until the question is dealt with.
+    items:
+      - "**Turning it on.** It is off by default. An admin switches on **Allow expense questions** in the group's settings, under **Features**."
+      - "**Closing it.** The person who asked, or an admin, chooses **Close question**. If several people questioned the same expense, it goes back into the balances when the last question is closed."
+      - "**Editing it.** When an expense is edited, an open question carries over to the new version for everyone who still has a share in it. Anyone the edit leaves out has their question end with the old version, so there is nothing left for them to close."
+      - "**Finding them.** The expenses list has an **Only questioned** filter. This is not an approval step: only the expenses somebody questions are held, and everything else counts as soon as it's added."
+  - heading: How a question plays out
+    body: Tom adds £45 of party wine, split between all three housemates. Aisha didn't drink, so she raises a question, and while it's open the wine counts for nobody. The house agrees the wine is Tom and Priya's, so Tom edits the split to the two of them. Aisha is no longer in the expense, so her question ends with the earlier version, which is kept, and the wine rejoins the balances straight away at £22.50 each instead of £15 each. Had Aisha stayed in the expense, her question would have carried over and waited for her or an admin to close it. Below, Aisha's £48 is £28 of the shop and £20 of the cleaner, and Priya's £10.50 is her £70.50 share (£28, £20 and £22.50) less the £60 she paid. A very [housemates](page:use-case/housemates) kind of argument. For how to word a question, see [what to do when someone disputes a shared expense](page:guide/what-to-do-when-someone-disputes-a-shared-expense).
+  - heading: Shared lists, for the shopping
+    body: Start a list in the group, name it something like Shopping List, add items and tick them off. Drag items into a better order, watch the progress count climb and comment on the list when someone buys the wrong oat milk. Archive a finished list to tidy it away (**Show archived** brings it back), or copy a list to reuse it. Keep the shared shopping list next to the shopping bills, so the list says what to buy and the expense says what it cost. Who can create and edit lists depends on the group's permissions, which [groups and permissions](page:feature/groups-and-permissions) explains.
+  - heading: Polls, anonymous if you like
+    body: Ask the group something that decides the bill, such as which villa, how much to spend on the gift or whether the boat trip is worth it. A poll has a question and two to ten options. You choose how many votes each person gets, from a single choice up to ten, and whether voting is anonymous. **Anonymous voting** hides who voted for what, and it can't be changed once the first vote is in. People can change or remove their vote until the poll closes, and you can reopen it if the group has second thoughts. Choosing the villa is exactly what [group trips](page:use-case/group-trips) are made of, and agreeing the gift budget is a classic for [events and celebrations](page:use-case/events-and-celebrations).
+  - heading: The activity feed, so nothing changes quietly
+    body: Every group has an activity history, and the notifications bell collects activity from all your groups in one place. Add an expense and everyone sees it straight away, without refreshing, and the feed shows what changed and who changed it. That covers expenses added, edited or deleted, questions raised and closed, comments, list and poll changes, and payments recorded.
+  - heading: Push notifications, if you want them
+    body: Push notifications are optional. Turn them on in your account **Settings**, under **Notifications**, and your device lets you know when there is new activity in your groups, such as a new expense or a comment. Each device is switched on separately, and your browser asks for permission first. On an iPhone or iPad they work only in the app added to the Home Screen, which the [web app](page:feature/web-app) page explains. Treat them as a convenience, not a promise, because delivery isn't guaranteed.
+limits:
+  heading: Limits
+  items:
+    - Comments, lists and polls are for the group's money. The [terms](page:terms) ask that everything posted relates to group finances, so this is a place to plan the spending, not a general chat or a to-do app.
+    - A comment can be up to 500 characters, with up to three attachments that are images or PDFs of up to 5 MB each. Only the author can delete a comment.
+    - Expense questions are off by default, and an admin turns them on for each group. Only people included in an expense can question it, turning the feature off clears every open question, and nobody can leave the group while an expense they're part of has an open question.
+    - A group can hold up to 100 lists, each with up to 200 items of up to 500 characters. Group permissions decide who can create, edit and delete lists, and a locked group allows no changes.
+    - A group can hold up to 50 polls, each with two to ten options and up to ten votes per person. Polls have no deadline and don't close on their own.
+    - The activity history is kept for 90 days.
+    - Push notifications are opt-in for each account and each device. They need a browser that supports them and your permission, they work on iPhone and iPad only from the app added to the Home Screen, and delivery isn't guaranteed. There are no email or text alerts for activity and no payment reminders, so chasing a payment is still up to you.
+useCasesHeading: Where planning together helps
+faq:
+  heading: Questions
+  items:
+    - q: Can votes be anonymous?
+      a: Yes. Switch on **Anonymous voting** when you create the poll and it hides who voted for what. Decide before the first vote, because it can't be changed afterwards.
+    - q: Can a poll close on its own?
+      a: No. A poll has no deadline, so the person who created it chooses **Close poll** once the group has decided. If the group has second thoughts, **Reopen poll** brings it back.
+    - q: How many items can a list hold?
+      a: Up to 200 items per list and up to 100 lists per group. Each item can be up to 500 characters, which is a lot of oat milk.
+    - q: Who can close a question, and what happens to the expense meanwhile?
+      a: The person who asked, or a group admin. While a question is open, the whole expense is out of everyone's balances. It goes back in when the last open question on it is closed, or when an edit takes the person who asked out of the expense.
+    - q: Can I use lists and comments as a to-do app or a group chat?
+      a: No. Comments, lists and polls are for the group's money, which is what the [terms](page:terms) ask. Think shopping lists, budget polls and "why is this £45?".
+    - q: Will Side Badger email me about activity?
+      a: No. There are no email or text alerts for activity. You can turn on push notifications on each device, and the notifications bell in the app shows what's new.

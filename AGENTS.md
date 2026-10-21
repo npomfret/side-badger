@@ -102,7 +102,8 @@ npm run i18n audit   # Check for missing/extra keys
 ### Layouts and content blocks
 
 - `src/layouts/`: `FeaturePageLayout`, `UseCasePageLayout`, `HubLayout` (the features and use-cases indexes), `HowItWorksLayout`, plus `BaseLayout`. The route files in `src/pages/[...locale]/` load the collection entry and pass it in.
-- `src/components/content/` holds the building blocks: `PageHero`, `ContentSection`, `ExtraSections`, `CardGrid`, `WorkflowSteps`, `WorkedExample`, `Screenshot`, `FaqList`, `LimitsList`, `RelatedPages`, `CtaBand`, `BetaLabel`, `RichText`. Compose these rather than writing page-specific markup.
+- `src/components/content/` holds the building blocks: `PageHero`, `PageArt`, `ContentSection`, `ExtraSections`, `CardGrid`, `WorkflowSteps`, `WorkedExample`, `Screenshot`, `FaqList`, `LimitsList`, `RelatedPages`, `CtaBand`, `BetaLabel`, `RichText`. Compose these rather than writing page-specific markup.
+- Page art: `PageHero` shows `PageArt` (two to four homepage props in one of five layouts: `cluster`, `stack`, `row`, `chat`, `flank`) beside the h1 on wide screens and as a strip under the call to action on phones. What goes in it is `src/data/page-art.ts`, keyed by registry page id; its words come only from the page's worked example, existing keys or short `art.<page>.<slot>` keys (at most six words), and `page-art.test.ts` checks every reference. It is `aria-hidden` and still. A product shot with an image takes the art's place in the hero. The props paint with `src/styles/props.css` (the paper palette), scoped to `.home`, `.page-art` and `.worked-example`. `WorkedExample` is styled like the app's ledger (till slips, a "who pays whom" card), and `WorkflowSteps` underlines each step title with a `Doodle`.
 
 ## Components
 

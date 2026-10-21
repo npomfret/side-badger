@@ -3,8 +3,10 @@
  * Numbered steps with an optional product shot each (feature workflow, how it works). The step
  * title is an `h3` in a feature page's workflow and an `h2` on how it works (`titleLevel`), as the
  * briefs outline each how-it-works step as an H2. A step's shot is skipped when the hero already
- * shows it (`skipShot`), so no image loads twice.
+ * shows it (`skipShot`), so no image loads twice. Each title is underlined with one hand-drawn
+ * `Doodle` (decoration, still: no `draw`).
  */
+import Doodle from '../home/props/Doodle.astro';
 import type { Locale } from '../../i18n';
 import RichText from './RichText.astro';
 import Screenshot from './Screenshot.astro';
@@ -31,7 +33,9 @@ const Heading = titleLevel;
   {steps.map(step => (
     <li class="workflow-step">
       <div class="workflow-step__text">
-        <Heading class="workflow-step__title">{step.title}</Heading>
+        <Heading class="workflow-step__title">
+          <span class="workflow-step__label">{step.title}<Doodle kind="underline" tone="green" class="workflow-step__doodle" /></span>
+        </Heading>
         <RichText as="p" text={step.body} locale={locale} />
       </div>
       {step.shot && step.shot !== skipShot && (
@@ -91,6 +95,20 @@ const Heading = titleLevel;
     color: #fff;
     font-size: var(--text-base);
     font-weight: 700;
+  }
+
+  /* The doodle sits under the title's text, at most a few words wide */
+  .workflow-step__label {
+    position: relative;
+    min-inline-size: 0;
+  }
+
+  .workflow-step__label :global(.workflow-step__doodle) {
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-end: -0.3em;
+    inline-size: min(100%, 10rem);
+    pointer-events: none;
   }
 
   .workflow-step__text :global(p) {

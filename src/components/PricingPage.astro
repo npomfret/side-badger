@@ -8,6 +8,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import LaunchAppCta from './cta/LaunchAppCta.astro';
 import ContentSection from './content/ContentSection.astro';
 import FaqList from './content/FaqList.astro';
+import PageArt from './content/PageArt.astro';
 import { faqNode, webPageNode } from './content/layout-jsonld';
 import { t, type Locale } from '../i18n';
 import { localizedPath } from '../seo/urls';
@@ -67,10 +68,15 @@ const jsonLd = [webPageNode('pricing', locale), ...faqNode(faq)];
   jsonLd={jsonLd}
 >
   <section class="pricing-hero" aria-labelledby="pricing-title">
-    <div class="container text-center">
-      <h1 id="pricing-title">{t('pricing.hero.title', locale)}</h1>
-      <p class="price-subtitle">{t('pricing.hero.subtitle', locale)}</p>
-      <p class="price-aside">{t('pricing.hero.aside', locale)}</p>
+    <div class="container text-center pricing-hero__inner">
+      <div class="pricing-hero__text">
+        <h1 id="pricing-title">{t('pricing.hero.title', locale)}</h1>
+        <p class="price-subtitle">{t('pricing.hero.subtitle', locale)}</p>
+        <p class="price-aside">{t('pricing.hero.aside', locale)}</p>
+      </div>
+      <div class="pricing-hero__art">
+        <PageArt pageId="pricing" locale={locale} />
+      </div>
     </div>
   </section>
 

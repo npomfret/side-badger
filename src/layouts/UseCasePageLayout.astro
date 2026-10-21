@@ -42,7 +42,7 @@ const others = await relatedCards(pageId, locale, other => other.type !== 'featu
   jsonLd={[webPageNode(pageId, locale), ...faqNode(data.faq)]}
 >
   <article class="content-page" data-page-type="use-case" data-unpublished={page.published ? undefined : ''}>
-    <PageHero h1={data.h1} lead={data.lead} pageId={pageId} locale={locale} />
+    <PageHero h1={data.h1} lead={data.lead} pageId={pageId} locale={locale} example={data.example} />
 
     <ContentSection heading={data.scenario.heading} id="scenario">
       <RichText as="p" text={data.scenario.body} locale={locale} />

@@ -10,6 +10,40 @@
   padding: var(--space-4xl) 0 var(--space-xl);
 }
 
+/*
+ * The hero art (R7): under the text on a phone or tablet. When the hero is wide it shares the
+ * text's grid cell and spreads to the two ends, so the receipt and the stamp flank the centred
+ * heading. The text stays above, and the art takes no clicks.
+ */
+.pricing-hero__inner {
+  container-type: inline-size;
+  display: grid;
+}
+
+.pricing-hero__art {
+  margin-block-start: var(--space-lg);
+}
+
+@container (min-width: 60rem) {
+  .pricing-hero__text {
+    grid-area: 1 / 1;
+    z-index: 1;
+  }
+
+  .pricing-hero__art {
+    grid-area: 1 / 1;
+    margin: 0;
+    align-self: center;
+  }
+
+  .pricing-hero__art :global(.page-art) {
+    inline-size: 100%;
+    max-inline-size: none;
+    justify-content: space-between;
+    padding-inline: 0;
+  }
+}
+
 .pricing-hero h1 {
   margin-bottom: var(--space-md);
   font-size: var(--text-3xl);

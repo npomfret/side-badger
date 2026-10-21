@@ -372,7 +372,7 @@ export const pages = [
     published: false,
     locales: 'all',
     related: ['how-it-works', 'pricing'],
-    features: ['home-screen', 'languages', 'accessibility', 'accounts'],
+    features: ['home-screen', 'live-updates', 'languages', 'accessibility', 'accounts', 'feedback'],
     content: { collection: 'featurePages', slug: 'web-app' },
     indexing: 'per-locale-review',
   },

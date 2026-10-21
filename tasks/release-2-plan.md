@@ -572,7 +572,7 @@ These are settled. They extend the site plan's briefs, which still apply where n
 **P11. Splitwise comparison.**
 - The site plan brief and D16.
 - Facts gathered on the day of writing from splitwise.com only, with the date on the page.
-- No logos. No claims about Splitwise's daily expense limit.
+- No logos. Splitwise's daily expense limit may be stated, because Splitwise's own help centre now publishes it ("free users can add up to 4 expenses each day", kb.splitwise.com/pro/what-is-splitwise-pro, read 21 October 2026). It is the first fact to recheck each quarter. Search is not mentioned (registry copy rule).
 
 **P12. Help page** (`/support/` rebuilt, type `support`, English indexable).
 - Short answers, each one to three sentences, grouped under:

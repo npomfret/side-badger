@@ -4,14 +4,14 @@ import type { LayoutKind } from './pages/layoutsFixtures';
 import { SHELL_LOCALES } from './pages/strings';
 
 /**
- * The five content layouts (restructure 5.6, and the guide layout of release 2), shown by their
+ * The six content layouts (restructure 5.6, and the guide and comparison layouts of release 2), shown by their
  * preview pages, in English and the four pseudo-locales (`xx-long`, `xx-ar`, `xx-ja`, `xx-hi`) at
  * 1280x800 and 375x812: sections, calls to action, breadcrumbs, FAQ, the computed worked examples,
  * the links between guides and product pages, overflow and axe.
  * Full-page screenshots go to test-results/layouts/ for review.
  */
 const SHOTS = 'test-results/layouts';
-const KINDS: readonly LayoutKind[] = ['feature', 'use-case', 'hub', 'how-it-works', 'guide'];
+const KINDS: readonly LayoutKind[] = ['feature', 'use-case', 'hub', 'how-it-works', 'guide', 'compare'];
 const PRODUCT_KINDS = ['feature', 'use-case', 'how-it-works'] as const;
 const VIEWPORTS = [
   { name: '1280', size: { width: 1280, height: 800 } },
@@ -58,6 +58,12 @@ for (const locale of SHELL_LOCALES) {
       test('guide layout: the worked example is computed from exact amounts', async ({ page }) => {
         const content = await ContentPage.navigateTo(page, locale, 'guide');
         await content.expectWorkedExample();
+      });
+
+      test('compare layout: the as-of date is on the page, and the table cites a source for every row', async ({ page }) => {
+        const content = await ContentPage.navigateTo(page, locale, 'compare');
+        await content.expectAsOfDate();
+        await content.expectComparisonTable();
       });
 
       test('guide layout: it links to the product pages that its registry entry names', async ({ page }) => {

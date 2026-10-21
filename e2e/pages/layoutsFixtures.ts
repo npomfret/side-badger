@@ -8,8 +8,8 @@ import { computeExample, type Ledger } from '../../src/lib/settle';
 import type { PseudoLocale } from '../../src/i18n/pseudo';
 import { text, type ShellLocale, type StringKey } from './strings';
 
-/** The five layouts, each shown by one preview page (src/site/preview-pages.ts). */
-export type LayoutKind = 'feature' | 'use-case' | 'hub' | 'how-it-works' | 'guide';
+/** The six layouts, each shown by one preview page (src/site/preview-pages.ts). */
+export type LayoutKind = 'feature' | 'use-case' | 'hub' | 'how-it-works' | 'guide' | 'compare';
 
 export const LAYOUT_ROUTES: Record<LayoutKind, string> = {
   feature: 'features/preview',
@@ -17,6 +17,7 @@ export const LAYOUT_ROUTES: Record<LayoutKind, string> = {
   hub: 'preview/hub',
   'how-it-works': 'preview/how-it-works',
   guide: 'guides/preview',
+  compare: 'compare/preview',
 };
 
 /** The registry id of each layout's preview page, as the launch counter's `from` names it. */
@@ -26,6 +27,7 @@ export const LAYOUT_PAGE_IDS: Record<LayoutKind, string> = {
   hub: 'preview/hub',
   'how-it-works': 'preview/how-it-works',
   guide: 'guide/preview',
+  compare: 'compare/preview',
 };
 
 const FIXTURE_FILES: Record<LayoutKind, string> = {
@@ -34,6 +36,7 @@ const FIXTURE_FILES: Record<LayoutKind, string> = {
   hub: 'src/content/pages/__preview__/en.yaml',
   'how-it-works': 'src/content/pages/__preview__/how-it-works.yaml',
   guide: 'src/content/guides/__preview__/en.yaml',
+  compare: 'src/content/compare/__preview__/en.yaml',
 };
 
 export interface Section {
@@ -61,6 +64,19 @@ export interface Fixture {
   example?: WorkedExampleData;
   sections?: Section[];
   exampleAfter?: number;
+  /** A comparison page: the day the other product's pages were read, the note and caption that show it, the table */
+  /** js-yaml loads an unquoted YAML date as a Date */
+  asOf?: string | Date;
+  asOfNote?: string;
+  tableAfter?: number;
+  sources?: { id: string; label: string; url: string }[];
+  table?: {
+    heading: string;
+    caption: string;
+    sourceLabel: string;
+    columns: { feature: string; other: string; sideBadger: string };
+    rows: { feature: string; other: string; sideBadger: string; source: string }[];
+  };
   faq?: { heading: string; items: { q: string; a: string }[] };
 }
 

@@ -1,0 +1,190 @@
+---
+/**
+ * The side-by-side table of a comparison page (site plan D16): one row per thing compared, the
+ * other product's side as its own pages state it (each row links to the page it was read from)
+ * and Side Badger's. A real HTML table with a caption, column headers and row headers.
+ *
+ * On a phone the rows stack: each row becomes a block, each cell is labelled with its column
+ * name, and the header row is kept for assistive technology only. Browsers that drop table
+ * semantics when a table is restyled to `display: block` get them back from the explicit roles.
+ */
+import { t, type Locale } from '../../i18n';
+import RichText from './RichText.astro';
+
+interface Props {
+  table: {
+    caption: string;
+    sourceLabel: string;
+    columns: { feature: string; other: string; sideBadger: string };
+    rows: readonly { feature: string; other: string; sideBadger: string; source: string }[];
+  };
+  sources: readonly { id: string; label: string; url: string }[];
+  locale: Locale;
+}
+
+const { table, sources, locale } = Astro.props;
+const sourceFor = (id: string) => {
+  const source = sources.find(candidate => candidate.id === id);
+  if (!source) throw new Error(`CompareTable: unknown source "${id}"`);
+  return source;
+};
+---
+
+<div class="compare-table glass">
+  <table role="table">
+    <caption>{table.caption}</caption>
+    <thead role="rowgroup">
+      <tr role="row">
+        <th scope="col" role="columnheader">{table.columns.feature}</th>
+        <th scope="col" role="columnheader">{table.columns.other}</th>
+        <th scope="col" role="columnheader">{table.columns.sideBadger}</th>
+      </tr>
+    </thead>
+    <tbody role="rowgroup">
+      {table.rows.map(row => {
+        const source = sourceFor(row.source);
+        return (
+          <tr role="row">
+            <th scope="row" role="rowheader">{row.feature}</th>
+            <td role="cell" data-label={table.columns.other}>
+              <RichText text={row.other} locale={locale} />
+              <span class="compare-source">
+                <span class="compare-source__label">{table.sourceLabel}</span>{' '}
+                <a href={source.url} rel="noopener">
+                  {source.label}
+                  <span class="sr-only"> {t('a11y.externalLink', locale)}</span>
+                </a>
+              </span>
+            </td>
+            <td role="cell" data-label={table.columns.sideBadger}>
+              <RichText text={row.sideBadger} locale={locale} />
+            </td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .compare-table {
+    padding: var(--space-md);
+  }
+
+  table {
+    inline-size: 100%;
+    border-collapse: collapse;
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+  }
+
+  caption {
+    caption-side: top;
+    padding: 0 0 var(--space-md);
+    text-align: start;
+    color: var(--text-secondary);
+    font-style: italic;
+  }
+
+  th,
+  td {
+    padding: var(--space-md);
+    text-align: start;
+    vertical-align: top;
+    border-bottom: 1px solid var(--glass-border);
+    overflow-wrap: anywhere;
+  }
+
+  thead th {
+    color: var(--text-heading, var(--text-primary));
+    font-weight: 700;
+  }
+
+  tbody th {
+    inline-size: 22%;
+    font-weight: 600;
+    color: var(--text-heading, var(--text-primary));
+  }
+
+  tbody tr:last-child th,
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .compare-source {
+    display: block;
+    margin-block-start: var(--space-xs);
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+  }
+
+  .compare-source__label {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .compare-source a {
+    color: var(--accent-ink);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  @media (max-width: 40rem) {
+    .compare-table {
+      padding: var(--space-sm) var(--space-md);
+    }
+
+    /* The header row stays in the accessibility tree, off screen: each cell names its column instead */
+    thead {
+      position: absolute;
+      inline-size: 1px;
+      block-size: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    table,
+    tbody,
+    tr,
+    th,
+    td,
+    caption {
+      display: block;
+    }
+
+    tbody th {
+      inline-size: auto;
+      padding: var(--space-md) 0 var(--space-xs);
+      border-bottom: none;
+      font-size: var(--text-base);
+    }
+
+    td {
+      padding: var(--space-xs) 0;
+      border-bottom: none;
+    }
+
+    td::before {
+      /* The second declaration hides the label from assistive technology, which has the column header already */
+      content: attr(data-label);
+      content: attr(data-label) / '';
+      display: block;
+      font-size: var(--text-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+
+    tbody tr {
+      padding-block-end: var(--space-sm);
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    tbody tr:last-child {
+      border-bottom: none;
+    }
+  }
+</style>

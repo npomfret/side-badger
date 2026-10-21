@@ -1,0 +1,76 @@
+# Layout fixture for ComparePageLayout (P11). Built only under PREVIEW_UNPUBLISHED=1; the page is
+# registered in src/site/preview-pages.ts. The copy is plausible filler written to exercise every
+# block of the layout, not site copy: it is never published and no real page links to it. The
+# table cells are plain text, so the layouts spec can state them literally.
+review:
+  status: machine
+claims: []
+meta:
+  title: Preview comparison, every block of the layout
+  description: A fixture comparison that fills every block of the comparison layout, including a dated side-by-side table with a source for every row.
+h1: Preview product vs Side Badger, compared
+navLabel: Comparison fixture
+lead: A layout fixture that compares an imaginary product with Side Badger, using only what the imaginary product says on its own pages. The facts are made up, and so is the product.
+cta:
+  heading: Ready to try the comparison for yourself?
+  body: Create an account, start a group and add one real expense. This is a layout fixture.
+asOf: 2026-10-21
+asOfNote: "The imaginary product's facts were read on {date}, from its own pages. Each row of the table links to its source."
+sources:
+  - id: home
+    label: The imaginary product's home page
+    url: https://example.com/
+  - id: help
+    label: "The imaginary product's help: plans and limits"
+    url: https://example.com/help/plans-and-limits
+tableAfter: 1
+sections:
+  - heading: What the imaginary product does well
+    body: It has apps for every phone, and it works without a connection. Its own pages list both.
+    items:
+      - "**Apps and offline use.** Native apps, and a mode that needs no connection."
+      - "**Recurring expenses.** Set the rent to repeat and forget about it."
+  - heading: Free here, paid there
+    body: The imaginary product's paid plan sells two things that cost nothing in Side Badger.
+    items:
+      - "**Receipt scanning.** The paid plan scans a photo of your receipt. Side Badger does it for free."
+      - "**No ads.** The imaginary product lists an ad-free experience as a paid feature. Side Badger has no ads."
+  - heading: What the imaginary product has that Side Badger doesn't
+    body: This isn't every feature, only the ones that tend to decide it.
+    items:
+      - "**Native apps.** Side Badger works in your browser."
+      - "**Recurring expenses.** Side Badger has none."
+table:
+  heading: Side by side
+  caption: "The imaginary product's details as of {date}, from its own pages."
+  sourceLabel: Source
+  columns:
+    feature: What
+    other: The imaginary product, per its own pages
+    sideBadger: Side Badger
+  rows:
+    - feature: What it costs
+      other: A monthly or yearly subscription unlocks the paid features.
+      sideBadger: Free. No ads. No daily limits.
+      source: help
+    - feature: Receipt scanning
+      other: A paid feature that scans a photo of a receipt.
+      sideBadger: Free, with no scan credits. It fills in the total, date and place for you to check.
+      source: home
+    - feature: Internationalisierungsmöglichkeiten
+      other: Supercalifragilisticexpialidocious-length words must wrap inside the cell instead of pushing the page sideways.
+      sideBadger: Wraps too.
+      source: help
+    - feature: Offline use
+      other: Lists an offline mode among its core features.
+      sideBadger: No. It needs a connection.
+      source: home
+faq:
+  heading: Questions
+  items:
+    - q: Is this a real comparison?
+      a: No. It is a layout fixture, written to fill every block of the comparison layout.
+    - q: Where do the details come from?
+      a: From the imaginary product's own pages, which is the rule for every comparison page.
+    - q: Will the table fit on a phone?
+      a: Each row stacks, and each cell names its column.

@@ -2,6 +2,7 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, type Locator, type Page } from '@playwright/test';
 import { ELEMENT_TIMEOUT, NAVIGATION_TIMEOUT } from './timeouts';
 import { isRtl, pathFor, text, type ShellLocale } from './strings';
+import { formatAsOf } from '../../src/components/content/as-of';
 import { moneyFormatter } from '../../src/components/content/money';
 import {
   exampleLines,
@@ -15,8 +16,8 @@ import {
 } from './layoutsFixtures';
 
 /**
- * One of the five content layouts (FeaturePageLayout, UseCasePageLayout, HubLayout,
- * HowItWorksLayout, GuidePageLayout), shown by its preview page. The expected text is the page's fixture
+ * One of the six content layouts (FeaturePageLayout, UseCasePageLayout, HubLayout,
+ * HowItWorksLayout, GuidePageLayout, ComparePageLayout), shown by its preview page. The expected text is the page's fixture
  * (`src/content/**\/__preview__`), pseudoized for the pseudo-locales, so every check names what
  * the visitor should read. `navigateTo` is the only way in.
  */
@@ -126,6 +127,11 @@ export class ContentPage {
         ];
       case 'guide':
         return [...around, f.faq!.heading, related, f.cta.heading];
+      case 'compare': {
+        // The table sits after `tableAfter` sections
+        const tableAfter = f.tableAfter ?? 0;
+        return [...extra.slice(0, tableAfter), f.table!.heading, ...extra.slice(tableAfter), f.faq!.heading, related, f.cta.heading];
+      }
     }
   }
 
@@ -162,7 +168,52 @@ export class ContentPage {
       ]);
       await expect(this.breadcrumb.getByRole('link', { name: this.fixture.h1 }), 'the page is not a link').toHaveCount(0);
     } else {
-      await expect(this.breadcrumb, 'hubs and how it works show no breadcrumb').toHaveCount(0);
+      await expect(this.breadcrumb, 'hubs, how it works and comparisons show no breadcrumb').toHaveCount(0);
+    }
+  }
+
+  // ----- comparison: the date and the table -----
+
+  /** The day the other product's pages were read, as the page words it in this locale. */
+  private get asOfDate(): string {
+    const { asOf } = this.fixture;
+    const day = asOf instanceof Date ? asOf.toISOString().slice(0, 10) : asOf!;
+    return formatAsOf(day, this.locale, INTL[this.locale]);
+  }
+
+  /** The note under the hero says in plain sight when the other product's pages were read. */
+  async expectAsOfDate(): Promise<void> {
+    const note = this.main.getByText(this.fixture.asOfNote!.replace('{date}', this.asOfDate), { exact: true });
+    await expect(note, 'the "as of" note under the hero').toBeVisible();
+    await expect(note.getByText(this.asOfDate, { exact: true }), 'the date inside the note').toBeVisible();
+  }
+
+  /**
+   * The side-by-side table is a real table named by its dated caption, with column headers, a row
+   * header for every row, both sides of every row and a link to the page that row was read from.
+   */
+  async expectComparisonTable(): Promise<void> {
+    const f = this.fixture;
+    const table = f.table!;
+    const caption = table.caption.replace('{date}', this.asOfDate);
+    const grid = this.region(table.heading).getByRole('table', { name: caption, exact: true });
+    await expect(grid, 'the side-by-side table, named by its dated caption').toBeVisible();
+    await expect(grid.getByRole('columnheader'), 'table column headers').toHaveText([
+      table.columns.feature,
+      table.columns.other,
+      table.columns.sideBadger,
+    ]);
+    await expect(grid.getByRole('rowheader'), 'table row headers, in order').toHaveText(table.rows.map(row => row.feature));
+    await expect(grid.getByRole('row'), 'the header row and one row for each thing compared').toHaveCount(table.rows.length + 1);
+    for (const row of table.rows) {
+      const source = f.sources!.find(candidate => candidate.id === row.source)!;
+      const line = grid.getByRole('row').filter({ has: this.page.getByRole('rowheader', { name: row.feature, exact: true }) });
+      await expect(line.getByRole('cell').filter({ hasText: row.other }), `"${row.feature}": the other product's side`).toBeVisible();
+      await expect(line.getByRole('cell').filter({ hasText: row.sideBadger }), `"${row.feature}": Side Badger's side`).toBeVisible();
+      await expect(line.getByText(table.sourceLabel, { exact: true }), `"${row.feature}": the word before the source`).toBeVisible();
+      const link = line.getByRole('link', { name: new RegExp(`^${escapeRegExp(source.label)}`) });
+      await expect(link, `"${row.feature}": its source`).toBeVisible();
+      await expect(link).toHaveAttribute('href', source.url);
     }
   }
 

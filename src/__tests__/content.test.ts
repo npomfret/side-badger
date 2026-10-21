@@ -58,7 +58,22 @@ export function sourceHash(english: Record<string, unknown>): string {
 }
 
 /** Leaves that must be identical in every locale (ids, shot ids, split structure). */
-const STRUCTURAL_LEAVES = new Set(['shot', 'payer', 'method', 'id', 'exampleAfter', 'owner', 'reviewBy', 'datePublished', 'dateModified']);
+const STRUCTURAL_LEAVES = new Set([
+  'shot',
+  'payer',
+  'method',
+  'id',
+  'exampleAfter',
+  'owner',
+  'reviewBy',
+  'datePublished',
+  'dateModified',
+  // A comparison page's dated sources: the day, each source's URL and which one a row cites, and where the table sits
+  'asOf',
+  'url',
+  'source',
+  'tableAfter',
+]);
 /** Top-level fields that are bookkeeping and never compared with English. */
 const BOOKKEEPING = new Set(['review', 'translatedFrom', 'identicalApproved']);
 

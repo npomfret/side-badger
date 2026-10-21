@@ -13,11 +13,12 @@ const PREVIEW_LOCALES = ['en', ...PSEUDO_LOCALES] as const;
  * fails any build that contains them. Their English text is the `__preview__` fixtures under
  * `src/content/**`; the pseudo-locales (PREVIEW_PSEUDO=1) derive theirs from it.
  *
- * Between them they exercise the five layouts:
+ * Between them they exercise the six layouts:
  * - `preview/hub`: HubLayout, with the two preview pages below as its cards
  * - `preview/how-it-works`: HowItWorksLayout
  * - `feature/preview`: FeaturePageLayout (worked example with a currency conversion)
  * - `use-case/preview`: UseCasePageLayout (worked example that settles six payments into two)
+ * - `compare/preview`: ComparePageLayout (the dated side-by-side table with a source for every row, a FAQ)
  * - `guide/preview`: GuidePageLayout (worked example, FAQ, three product pages in `related`); the
  *   three pages it names list it back, and it is filed under the real guides hub
  *
@@ -68,6 +69,17 @@ export const previewPages: readonly PageDef[] = [
     locales: PREVIEW_LOCALES,
     related: ['feature/preview', 'preview/how-it-works', 'pricing'],
     content: { collection: 'useCasePages', slug: '__preview__' },
+    indexing: 'per-locale-review',
+  },
+  {
+    id: 'compare/preview',
+    type: 'comparison',
+    path: '/compare/preview/',
+    parent: 'home',
+    published: false,
+    locales: PREVIEW_LOCALES,
+    related: ['pricing'],
+    content: { collection: 'comparePages', slug: '__preview__' },
     indexing: 'per-locale-review',
   },
   {

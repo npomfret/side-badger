@@ -1,0 +1,16 @@
+---
+// A comparison page (release 2, site plan D16). The content entry is `compare/<slug>/<locale>.yaml`.
+import ComparePageLayout from '../../../layouts/ComparePageLayout.astro';
+import { layoutPaths, loadPageContent } from '../../../components/content/page-content';
+import type { ComparePageData } from '../../../content/schemas';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return layoutPaths('comparison');
+}
+
+const { pageId, locale } = Astro.props as { pageId: string; locale: Locale };
+const data = await loadPageContent<ComparePageData>(pageId, locale);
+---
+
+<ComparePageLayout data={data} pageId={pageId} locale={locale} />

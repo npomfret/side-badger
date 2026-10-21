@@ -1,0 +1,147 @@
+review:
+  status: machine
+claims:
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.read-by-googles-ai
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - privacy-posture.no-ads
+  - multi-currency.140-currencies
+  - languages.39-languages
+  - home-screen.opens-like-an-app
+  - settlements.pay-however-then-record
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - invites.link-or-qr-code
+  - accounts.all-you-need-is-an-email
+meta:
+  title: "Side Badger vs Splitwise: the free bits, compared | Side Badger"
+  description: "A free Splitwise alternative, compared fairly. Receipt scanning, currency conversion and no ads cost nothing here, and we list what Splitwise does better."
+h1: "Side Badger vs Splitwise: the free bits, compared"
+navLabel: Side Badger vs Splitwise
+lead: "Someone in your group has probably said \"just use Splitwise\". Fair enough. Side Badger is a free web app with receipt scanning, currency conversion and no ads, and no subscription to unlock them. Which one suits your group depends on what it needs, so here is the comparison, with Splitwise's side taken only from Splitwise's own pages."
+cta:
+  heading: Try it on your next shared bill
+  body: "Create a free account, make a group and add one real expense. If it isn't for you, you've spent a few minutes, not a subscription."
+asOf: 2026-10-21
+asOfNote: "We read Splitwise's own pages on {date} so you don't have to, and everything here about Splitwise comes from them. Each row of the table links to its source. Plans change, so we check again every quarter, and if Splitwise's pages disagree with this one, believe them."
+sources:
+  - id: home
+    label: Splitwise home page
+    url: https://www.splitwise.com/
+  - id: pro
+    label: Splitwise Pro page
+    url: https://www.splitwise.com/pro
+  - id: pro-help
+    label: "Splitwise help: What is Splitwise Pro?"
+    url: https://kb.splitwise.com/pro/what-is-splitwise-pro
+  - id: currencies-help
+    label: "Splitwise help: multiple currencies"
+    url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-a-friendship-or-group-with-multiple-currencies
+  - id: split-help
+    label: "Splitwise help: ways to split"
+    url: https://kb.splitwise.com/balances-and-expenses/what-are-different-ways-i-can-split-an-expense
+  - id: recurring-help
+    label: "Splitwise help: recurring expenses"
+    url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-recurring-expenses
+  - id: payments-help
+    label: "Splitwise help: sending money"
+    url: https://kb.splitwise.com/payment-integrations/how-do-i-send-money-to-someone-on-splitwise
+tableAfter: 3
+sections:
+  - heading: What Splitwise does well
+    body: "If your group needs a native app, offline use or payments inside the app, Splitwise is the sensible choice, and we would rather you picked it than found out later. Its own pages list:"
+    items:
+      - "**Apps and offline use.** iPhone and Android apps as well as the web, and an offline mode."
+      - "**More ways to split.** Shares, adjustments and itemised splits, on top of equal, exact and percentage."
+      - "**Recurring expenses.** Set the rent to repeat and forget about it."
+      - "**Payments in the app.** In some countries it can move the money too, through Splitwise Pay, Venmo, PayPal or Pay by Bank."
+  - heading: Free here, paid there
+    body: "Splitwise Pro is Splitwise's paid plan, and its own Pro page sells four things that cost nothing in Side Badger."
+    items:
+      - "**Receipt scanning.** Splitwise Pro scans a photo of your receipt. Side Badger does it for free, with no scan credits: it fills in the total, date and place for you to check. Receipt images are read by Google's AI service."
+      - "**Currency conversion.** Splitwise Pro converts a group's expenses to your default currency when you tap Convert. Side Badger converts each expense as you enter it, at a current exchange rate or the one you actually got, and the original amount stays on the expense."
+      - "**No ads.** Splitwise lists a totally ad-free experience as a Pro feature. Side Badger has no ads."
+      - "**No daily limits.** Splitwise Pro sells unlimited expenses, and its help centre says free users can add up to 4 expenses each day. Side Badger has no daily limits."
+  - heading: What Splitwise has that Side Badger doesn't
+    body: "This isn't every Splitwise feature, only the ones that tend to decide it. Splitwise's own pages have the full list. Here is where Side Badger comes up short."
+    items:
+      - "**Native apps.** Side Badger works in your browser. Sign in, then add it to your home screen and it opens like an app."
+      - "**Offline mode.** Side Badger needs a connection."
+      - "**Payments in the app.** Side Badger never touches your money. Pay each other however you like, then record the payment."
+      - "**Recurring expenses.** Side Badger has none. Copy last month's rent instead of typing it again."
+      - "**Splitting by shares or by item.** Side Badger has one payer per expense, split equally, by exact amounts or by percentage. Its receipt scanning doesn't assign items to people."
+      - "**Charts and default splits.** Splitwise Pro has both. Side Badger keeps the count of who owes whom, and that's the whole trick."
+  - heading: Moving your group over
+    body: "There is no importer, so a move means a fresh start. Settle up in Splitwise first, then create a group in Side Badger and invite everyone with a link or a QR code. Everyone in the group needs a free account, and all it takes to sign up is an email address."
+table:
+  heading: Side by side
+  caption: "Splitwise details as of {date}, from Splitwise's own pages."
+  sourceLabel: Source
+  columns:
+    feature: What
+    other: Splitwise, per its own pages
+    sideBadger: Side Badger
+  rows:
+    - feature: What it costs
+      other: "Splitwise Pro is a monthly or yearly subscription. Yearly plans include a Trip Pass, which gives a trip group Pro features for 30 days."
+      sideBadger: "Free. No ads. No daily limits."
+      source: pro-help
+    - feature: Expenses per day
+      other: "Its help centre says free users can add up to 4 expenses each day. Pro has no daily limit."
+      sideBadger: "No daily limits."
+      source: pro-help
+    - feature: Ads
+      other: "Lists a totally ad-free experience as a Pro feature."
+      sideBadger: "No ads."
+      source: pro
+    - feature: Receipt scanning
+      other: "A Pro feature. Scans a photo of a receipt, and Pro's itemisation lets you assign the items to people."
+      sideBadger: "Free, with no scan credits. It fills in the total, date and place for you to check, and doesn't assign items to people."
+      source: pro
+    - feature: Currency conversion
+      other: "A Pro feature. Tap Convert and Splitwise converts a group's expenses to your default currency at that moment's exchange rate."
+      sideBadger: "Free. Convert each expense as you enter it, at a current exchange rate or the one you actually got. The original amount stays on the expense."
+      source: currencies-help
+    - feature: Where you use it
+      other: "Apps for iPhone and Android, and the web."
+      sideBadger: "In your browser. Sign in, then add it to your home screen and it opens like an app. No native app."
+      source: home
+    - feature: Currencies and languages
+      other: "100+ currencies and 7+ languages, as its home page puts it."
+      sideBadger: "140 currencies and 39 languages. Everyone in the group can pick their own language."
+      source: home
+    - feature: Ways to split
+      other: "Equally, by exact amounts, by percentage, by shares, by adjustment or itemised."
+      sideBadger: "Equally, by exact amounts or by percentage, with one payer per expense. Not by shares or by item."
+      source: split-help
+    - feature: Recurring expenses
+      other: "Yes: weekly, fortnightly, monthly or yearly."
+      sideBadger: "No. Copy last month's rent instead of typing it again."
+      source: recurring-help
+    - feature: Offline use
+      other: "Lists an offline mode among its core features."
+      sideBadger: "No. It needs a connection."
+      source: home
+    - feature: Payments
+      other: "In some places it can send money from inside the app: Splitwise Pay in the US, Venmo and PayPal for US dollar balances, and Pay by Bank in select European countries. Elsewhere you record a payment made outside."
+      sideBadger: "Never touches your money. Pay each other however you like, then record the payment."
+      source: payments-help
+    - feature: Charts and default splits
+      other: "Both are Pro features."
+      sideBadger: "Neither."
+      source: pro
+faq:
+  heading: Questions
+  items:
+    - q: Is Side Badger a free alternative to Splitwise?
+      a: "For splitting bills in a group, yes. Receipt scanning, currency conversion and no ads are free, with no daily limits. If you need a native app, offline use, recurring expenses or payments inside the app, Splitwise does those and Side Badger doesn't."
+    - q: Where do the Splitwise details come from?
+      a: "Splitwise's own pages: its home page, its Pro page and its help centre. Each row of the table links to the page it came from, and the date above the table says when we read them. We check them every quarter."
+    - q: Will Side Badger stay free?
+      a: "Everything in Side Badger is free today, and there is no paid tier. If that ever changes, we'll give you notice first. The [pricing page](page:pricing) has the details."
+    - q: Does everyone in my group have to switch?
+      a: "Yes. Everyone in a group needs a free Side Badger account, and they can join with a link or a QR code."
+    - q: Does Side Badger have a mobile app?
+      a: "Not in an app store. It runs in your browser: sign in on your phone, then add it to your home screen so it opens like an app. [How it works](page:how-it-works) shows how."

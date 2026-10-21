@@ -1,0 +1,96 @@
+---
+/**
+ * A comparison page (release 2, site plan D16, R8): the hero, a visible "as of" note, the sections
+ * of the brief's outline with the side-by-side table after `tableAfter` of them, the FAQ, related
+ * pages and the closing call to action.
+ *
+ * Every fact about the other product comes from its own pages, with the day they were read
+ * (`asOf`) shown under the hero and in the table caption, and each table row links to its source.
+ * No logos or other marks of the other product appear: it is named in text only.
+ *
+ * `data` is the page's content entry for the locale, already validated by `comparePage`; see
+ * FeaturePageLayout for how it is loaded. JSON-LD: WebPage (about the app, `dateModified` the
+ * day the facts were read) and FAQPage for the visible FAQ. The page is one level below Home in
+ * the registry, so there is no breadcrumb (D22).
+ */
+import BaseLayout from './BaseLayout.astro';
+import CompareTable from '../components/content/CompareTable.astro';
+import ContentSection from '../components/content/ContentSection.astro';
+import CtaBand from '../components/content/CtaBand.astro';
+import ExtraSections from '../components/content/ExtraSections.astro';
+import FaqList from '../components/content/FaqList.astro';
+import PageHero from '../components/content/PageHero.astro';
+import RelatedPages from '../components/content/RelatedPages.astro';
+import { faqNode, webPageNode } from '../components/content/layout-jsonld';
+import { relatedCards } from '../components/content/page-content';
+import { formatAsOf } from '../components/content/as-of';
+import type { ComparePageData } from '../content/schemas';
+import { localeConfig, type Locale } from '../i18n';
+import type { JsonLdNode } from '../seo/jsonld';
+import { requirePage, type PageId } from '../site/pages';
+
+interface Props {
+  data: ComparePageData;
+  pageId: string;
+  locale: Locale;
+}
+
+const { data, pageId, locale } = Astro.props;
+const page = requirePage(pageId);
+const related = await relatedCards(pageId, locale);
+
+const asOfText = formatAsOf(data.asOf, locale, localeConfig[locale].intlCode);
+const [noteBefore, noteAfter] = data.asOfNote.split('{date}');
+// The facts were last read on `asOf`, which is when the page was last substantively checked
+const webPage = Object.assign({}, webPageNode(pageId, locale), { dateModified: data.asOf }) as JsonLdNode;
+const withDate = (text: string) => text.replace('{date}', asOfText);
+---
+
+<BaseLayout
+  page={pageId as PageId}
+  title={data.meta.title}
+  description={data.meta.description}
+  locale={locale}
+  jsonLd={[webPage, ...faqNode(data.faq)]}
+>
+  <article class="content-page" data-page-type="comparison" data-unpublished={page.published ? undefined : ''}>
+    <PageHero h1={data.h1} lead={data.lead} pageId={pageId} locale={locale} />
+
+    <div class="container">
+      <p class="as-of" data-as-of={data.asOf}>{noteBefore}<time datetime={data.asOf}>{asOfText}</time>{noteAfter}</p>
+    </div>
+
+    <ExtraSections sections={data.sections} locale={locale} to={data.tableAfter} />
+
+    <ContentSection heading={data.table.heading} id="compare-table">
+      <CompareTable
+        table={{ ...data.table, caption: withDate(data.table.caption) }}
+        sources={data.sources}
+        locale={locale}
+      />
+    </ContentSection>
+
+    <ExtraSections sections={data.sections} locale={locale} from={data.tableAfter} />
+
+    {data.faq && <FaqList faq={data.faq} locale={locale} />}
+
+    <RelatedPages links={related} locale={locale} />
+
+    <CtaBand cta={data.cta} pageId={pageId} locale={locale} />
+  </article>
+</BaseLayout>
+
+<style>
+  .as-of {
+    margin: 0;
+    max-inline-size: 70ch;
+    padding-inline-start: var(--space-md);
+    border-inline-start: 4px solid var(--accent-ink);
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+  }
+
+  .as-of time {
+    font-weight: 700;
+  }
+</style>

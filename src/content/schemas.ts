@@ -284,8 +284,91 @@ export const toolPage = entry({
 export const sitePage = z.union([hubPage, howItWorksPage, toolPage]);
 export const sitePageByType = { hub: hubPage, 'how-it-works': howItWorksPage, tool: toolPage } as const;
 
-/** `comparePages` (release 2): `src/content/compare/<slug>/<locale>.yaml` */
-export const comparePage = entry({ sections, faq: faq.optional() });
+/** An id for a source or a table row's reference to it. Structural: identical in every locale. */
+const sourceId = z.string().regex(/^[a-z][a-z0-9-]*$/);
+
+/**
+ * A page of the other product's own site that a table row cites (site plan D16: a competitor's
+ * facts come only from its own pages). The label is the link text, so it is translated; the id
+ * and the URL are structural.
+ */
+const compareSource = z
+  .object({
+    id: sourceId,
+    label: text,
+    url: z.string().url().startsWith('https://', 'a source is an https URL'),
+  })
+  .strict();
+
+/** One row of the side-by-side table: what the other product's pages say, what Side Badger does. */
+const compareRow = z
+  .object({
+    feature: text,
+    other: richText,
+    sideBadger: richText,
+    /** The `sources[].id` the second column's facts were read from */
+    source: sourceId,
+  })
+  .strict();
+
+/** The accessible side-by-side table of a comparison page. */
+const compareTable = z
+  .object({
+    heading: text,
+    /** The visible caption. A `{date}` in it becomes the page's `asOf`, formatted for the locale. */
+    caption: text,
+    /** The word before each row's source link, such as "Source" */
+    sourceLabel: text,
+    columns: z.object({ feature: text, other: text, sideBadger: text }).strict(),
+    rows: z.array(compareRow).min(3),
+  })
+  .strict();
+
+/**
+ * `comparePages` (release 2, D16): `src/content/compare/<slug>/<locale>.yaml`. A comparison states
+ * the other product's facts only from its own pages, with the day they were read (`asOf`, shown
+ * on the page) and a link to each source. The table sits after `tableAfter` of the `sections`.
+ */
+export const comparePage = entry({
+  /** The day the other product's pages were read (YYYY-MM-DD). Structural: identical in every locale. */
+  asOf: isoDate,
+  /** Shown under the hero. It holds one `{date}`, which becomes `asOf` formatted for the locale. */
+  asOfNote: text.refine(note => note.split('{date}').length === 2, 'asOfNote needs exactly one {date}'),
+  sources: z.array(compareSource).min(1),
+  sections,
+  table: compareTable,
+  /** Sections shown before the table. Structural. */
+  tableAfter: z.number().int().min(0),
+  faq: faq.optional(),
+}).superRefine((page, ctx) => {
+  if (page.tableAfter > page.sections.length) {
+    ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'tableAfter cannot exceed the number of sections', path: ['tableAfter'] });
+  }
+  const ids = page.sources.map(source => source.id);
+  ids.forEach((id, index) => {
+    if (ids.indexOf(id) !== index) {
+      ctx.addIssue({ code: z.ZodIssueCode.custom, message: `duplicate source id "${id}"`, path: ['sources', index, 'id'] });
+    }
+  });
+  page.table.rows.forEach((row, index) => {
+    if (!ids.includes(row.source)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: `row cites the unknown source "${row.source}"`,
+        path: ['table', 'rows', index, 'source'],
+      });
+    }
+  });
+  for (const [index, source] of page.sources.entries()) {
+    if (!page.table.rows.some(row => row.source === source.id)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: `source "${source.id}" is cited by no row`,
+        path: ['sources', index, 'id'],
+      });
+    }
+  }
+});
 
 /**
  * `guides`: `src/content/guides/<slug>/<locale>.yaml`. A user story told through one fictional
@@ -329,6 +412,7 @@ export const contentDirs: Record<ContentCollection, string> = {
 export type FeaturePageData = z.infer<typeof featurePage>;
 export type UseCasePageData = z.infer<typeof useCasePage>;
 export type GuideData = z.infer<typeof guide>;
+export type ComparePageData = z.infer<typeof comparePage>;
 export type SitePageData = z.infer<typeof sitePage>;
 export type ToolPageData = z.infer<typeof toolPage>;
 export type WorkedExampleData = z.infer<typeof workedExample>;

@@ -14,8 +14,9 @@ const { locale } = Astro.props as { locale: Locale };
 <BaseLayout
   page="support"
   locale={locale}
-  title={t('support.title', locale)}
+  title={`${t('support.title', locale)} | Side Badger`}
   description={t('support.description', locale)}
+  breadcrumbName={t('support.title', locale)}
 >
   <article class="content-page" data-page-type="support">
     <PageHero

@@ -1,0 +1,104 @@
+review:
+  status: machine
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: Split a villa when people stay different nights | Side Badger
+  description: Work out each person's share of a holiday villa from the nights they stayed, then enter exact amounts. A worked example with four people.
+h1: How to split a holiday villa when people stay different nights
+navLabel: Split a villa by nights
+lead: Price the stay per person per night, multiply by each person's nights, and enter the villa as **one expense with exact amounts**. Side Badger keeps the count and suggests a short list of payments when it's time to settle.
+cta:
+  heading: Give the villa one tidy expense
+  body: Make a group, invite everyone with a link or QR code and enter the villa with exact amounts. Side Badger keeps the running count while you get on with the holiday.
+sections:
+  - heading: Six nights, four people, one credit card
+    body: A [group trip](page:use-case/group-trips) usually starts with one person's card. Here it's Ana's. She books a villa for six nights, €2,100, because somebody has to go first. Ana, Ben and Chloe stay all six nights. Dev can only join for the last three, and comes by train. Ben hires a car, which Dev never sits in. Dev does the big grocery shop. Splitting the villa four ways is the obvious move. It has Dev paying for three nights he spent at home, and that sort of thing resurfaces at Christmas. Splitting by nights avoids the argument, and the arithmetic takes a minute.
+  - heading: Price one person-night
+    body: A person-night is one person staying one night. The villa costs what it costs, so share the price across all the person-nights, then give each person the ones they used.
+    items:
+      - "**Count the person-nights.** Ana, Ben and Chloe stay six nights each and Dev stays three: 6 + 6 + 6 + 3 = 21."
+      - "**Price one.** €2,100 ÷ 21 = €100 per person-night."
+      - "**Multiply by each person's nights.** Ana, Ben and Chloe pay 6 × €100 = €600 each. Dev pays 3 × €100 = €300."
+      - "**Check the total.** €600 + €600 + €600 + €300 = €2,100. If your shares don't add up to the price, a night is missing or counted twice."
+  - heading: Enter it in Side Badger
+    body: Make a group, invite the other three with a link or QR code, then add the costs. Villa first.
+    items:
+      - Choose **Add Expense**. Describe it, enter 2,100 and set **Who paid?** to Ana.
+      - Under **Split between**, make sure all four people are in.
+      - Under **How to split**, choose **Exact amounts**. Type 600 for Ana, Ben and Chloe and 300 for Dev. The amounts must add up to the total.
+      - Choose **Save Expense**.
+      - Add the car hire the same way. Ben paid, the split is **Equally**, and Dev is left out, because he came by train. [Split expenses](page:feature/split-expenses) covers the other ways to divide a cost.
+      - Add the groceries. Dev paid, the split is **Equally**, and all four are in.
+  - heading: Read the result, then settle up
+    body: "Each person's bill is their villa share plus their share of the car and the shopping. Ana, Ben and Chloe come to €725 each, which is €600 + €80 + €45. Dev comes to €345, which is €300 + €45. Subtract what each person paid and the balances fall out. Ana paid €2,100, so she's owed €1,375. Ben paid €240 and owes €485. Dev paid €180 and owes €165. Chloe paid nothing and owes €725. Left alone, those debts would run six ways round the group. Side Badger suggests three payments instead, all to Ana. Pay her however you like, then choose **Settle Up** and use **Record Settlement** for each payment, so the balances catch up. Quick-settle buttons fill in the amount. There's more on [settling up](page:feature/settle-up)."
+  - heading: When the villa isn't one tidy price
+    items:
+      - "**The rooms differ.** If the suite is worth more than the box room, agree what each room costs first, then do the person-night sums one room at a time. Enter the villa as one expense with everyone's total, or one expense per room. Either way, the exact amounts on an expense must add up to its total."
+      - "**A deposit paid months earlier.** Whoever paid it gets their own expense, dated the day they paid. Split it by nights in the same proportions as the balance."
+      - "**The booking is in another currency.** Enter the villa in the currency you paid in. If the group converts as it goes, use a current exchange rate, or type the rate you actually got. The original amount stays on the expense. [Multiple currencies](page:feature/multiple-currencies) has the detail."
+      - "**Part nights.** Someone arrives at midnight, someone leaves before breakfast. Agree one rule for counting nights and use it for everyone."
+  - heading: What Side Badger doesn't do here
+    items:
+      - It doesn't count nights for you. There is no split by nights or by shares, so you work out each amount as above and enter **exact amounts**.
+      - It doesn't move money. Pay each other however you like, then record the payment.
+      - It allows one payer per expense. If two people paid for the villa, enter two expenses.
+      - It has no guest access. Everyone in the group, Dev included, needs a free account.
+exampleAfter: 2
+example:
+  heading: The villa, the car and the shopping
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: six nights in the villa
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: the car hire
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: groceries
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: Villa questions
+  items:
+    - q: What if someone cancels?
+      a: Take their nights out, redo the sums and edit the villa expense so the exact amounts add up to the price again. The earlier version is kept and the edit shows in the group's activity, so nobody changes a number quietly. Who may edit depends on the group's permissions.
+    - q: Should the person who booked pay less?
+      a: That's for the group to decide. Booking is a chore, and groups differ on whether it earns a discount. Whatever you agree, put it in the exact amounts and write it in a note on the expense, or in a comment next to it, so nobody has to remember the deal.
+    - q: Can we split cleaning fees differently?
+      a: Yes. Enter the fee as a separate expense and give it its own split. Equally suits a flat charge for the whole house. Exact amounts suit a group that wants the fee to follow the nights too.

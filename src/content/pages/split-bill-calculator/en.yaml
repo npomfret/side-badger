@@ -1,0 +1,86 @@
+review:
+  status: machine
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: Split bill calculator | Work out who pays whom
+  description: Add people and expenses, split equally, by exact amounts or by percentage, and get a short list of payments. Free, in your browser, nothing saved or sent.
+h1: Split bill calculator
+navLabel: Split bill calculator
+lead: Add the people, add what each of them paid, and see who owes whom. It runs in your browser, saves nothing and moves no money. If your group needs a count that survives closing the tab, [split expenses](page:feature/split-expenses) and [settle up](page:feature/settle-up) in Side Badger do the same sums and keep them.
+cta:
+  heading: Keep the count going in a group
+  body: This calculator forgets the sums when you close the tab. A Side Badger group keeps the expenses, updates everyone's balance and records the payments. It is free, with no ads and no daily limits.
+sections:
+  - heading: How the calculation works
+    body: For each expense, the calculator works out every person's share. You can split it equally, by exact amounts or by percentage, among the people you pick. Each person's balance is then what they paid minus what they owe. A plus sign means the group owes them, and a minus sign means they owe the group. The balances always add up to zero, because whatever one person is owed, other people owe.
+  - heading: Why the list of payments is short
+    body: Nobody needs to settle each receipt on its own. Once every balance is known, the calculator matches the person who owes the most with the person who is owed the most, settles as much as one payment can, and carries on down the list until everyone is on zero. It never needs more than one payment fewer than the number of people with a balance, and often needs fewer than settling bill by bill. It gives a short list of payments, and doesn't promise to be the shortest one possible.
+  - heading: What the calculator doesn't do
+    items:
+      - "**Handle more than one currency.** Pick one and use it for the whole calculation. The app keeps a separate balance for each currency, and can convert an expense at a current exchange rate, which you can change."
+      - "**Save anything.** Close the tab and the figures are gone. To keep them, copy the link. It holds your figures after the #, which your browser never sends to a server, and anyone you send it to can read them."
+      - "**Move money.** It tells you who should pay whom. You pay each other however you like, then record the payment in the app if your group keeps its count there."
+      - "**Pick the odd penny at random.** When a bill doesn't divide evenly, the leftover pennies go to the first people in the list, so the totals still add up. In the app, the odd penny goes to one person at random, so it isn't always the same one."
+      - "**Go past the limits.** The calculator takes 2 to 20 people, and one expense can be up to 999,999.99, as in the app."
+exampleAfter: 2
+example:
+  heading: A long weekend, four friends
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: the cottage
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: groceries
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: the taxi
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: the pub
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: Questions
+  items:
+    - q: Is the calculator free?
+      a: Yes. Free. No ads. No daily limits. You don't need an account either.
+    - q: Does it save what I type?
+      a: No. Nothing is saved or sent anywhere. To keep your figures, use Copy link and save the link somewhere.
+    - q: Who can see the link I copy?
+      a: "Anyone who has it. The figures live in the link itself, after the #, so share it only with the people who should see them."
+    - q: Does it move money?
+      a: No. It works out who should pay whom, and you pay each other however you like. Side Badger never touches your money either. See [settle up](page:feature/settle-up).
+    - q: Can I split a trip paid in two currencies?
+      a: Not here, because a calculation has one currency. In a group, each currency keeps its own balance. See [multiple currencies](page:feature/multiple-currencies).
+    - q: What if the amounts don't add up?
+      a: The calculator says so under the expense and shows no result until they do. Exact amounts must add up to the total, and percentages must make 100.

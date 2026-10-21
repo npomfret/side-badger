@@ -1,0 +1,19 @@
+---
+// The split-bill calculator (release 2, R3). The content entry is
+// `pages/split-bill-calculator/<locale>.yaml`; the calculator itself is in `components/tools/`.
+import ToolPageLayout from '../../layouts/ToolPageLayout.astro';
+import { loadPageContent } from '../../components/content/page-content';
+import type { ToolPageData } from '../../content/schemas';
+import type { Locale } from '../../i18n';
+import { pathsFor } from '../../site/routes';
+
+export function getStaticPaths() {
+  return pathsFor('split-bill-calculator');
+}
+
+const { pageId, locale } = Astro.props as { pageId: string; locale: Locale };
+// Never falls back to English: a missing entry throws
+const data = await loadPageContent<ToolPageData>(pageId, locale);
+---
+
+<ToolPageLayout data={data} pageId={pageId} locale={locale} />

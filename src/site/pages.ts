@@ -18,7 +18,8 @@ export type PageType =
   | 'pricing'
   | 'support'
   | 'legal'
-  | 'article';
+  | 'article'
+  | 'tool';
 
 export interface PageDef {
   /** 'home', 'pricing', 'features', 'feature/split-expenses', … */
@@ -264,6 +265,19 @@ export const pages = [
       'polls',
     ],
     content: { collection: 'useCasePages', slug: 'events-and-celebrations' },
+    indexing: 'per-locale-review',
+  },
+  {
+    id: 'split-bill-calculator',
+    type: 'tool',
+    path: '/split-bill-calculator/',
+    parent: 'home',
+    published: false,
+    locales: 'all',
+    footer: { group: 'product', order: 8 },
+    related: ['feature/split-expenses', 'feature/settle-up'],
+    features: ['expense-splitting', 'balances'],
+    content: { collection: 'sitePages', slug: 'split-bill-calculator' },
     indexing: 'per-locale-review',
   },
 ] as const satisfies readonly PageDef[];

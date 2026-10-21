@@ -1,0 +1,78 @@
+---
+/**
+ * A tool page (release 2, R2): the hero, the tool itself, the sections around it, the worked example
+ * computed at build time (so the page is useful without JavaScript), an optional FAQ, related pages
+ * and the closing call to action. The split-bill calculator is the first tool.
+ *
+ * JSON-LD: WebPage about the app, the `WebApplication` for the tool, and FAQPage when the page
+ * shows a FAQ. The page is one level below Home, so there is no breadcrumb (D22).
+ *
+ * The hero carries no launch link: the tool comes first, and the app is offered under its result
+ * and in the closing band.
+ */
+import BaseLayout from './BaseLayout.astro';
+import ContentSection from '../components/content/ContentSection.astro';
+import CtaBand from '../components/content/CtaBand.astro';
+import ExtraSections from '../components/content/ExtraSections.astro';
+import FaqList from '../components/content/FaqList.astro';
+import PageHero from '../components/content/PageHero.astro';
+import RelatedPages from '../components/content/RelatedPages.astro';
+import WorkedExample from '../components/content/WorkedExample.astro';
+import { faqNode, webApplicationNode, webPageNode } from '../components/content/layout-jsonld';
+import { relatedCards } from '../components/content/page-content';
+import SplitCalculator from '../components/tools/SplitCalculator.astro';
+import type { ToolPageData } from '../content/schemas';
+import { t, type Locale } from '../i18n';
+import { requirePage, type PageId } from '../site/pages';
+
+interface Props {
+  data: ToolPageData;
+  pageId: string;
+  locale: Locale;
+}
+
+const { data, pageId, locale } = Astro.props;
+const page = requirePage(pageId);
+const others = await relatedCards(pageId, locale);
+// The example goes after this many sections; with no setting, straight after the tool
+const exampleAfter = data.exampleAfter ?? 0;
+---
+
+<BaseLayout
+  page={pageId as PageId}
+  title={data.meta.title}
+  description={data.meta.description}
+  locale={locale}
+  jsonLd={[
+    webPageNode(pageId, locale),
+    webApplicationNode(pageId, locale, { name: data.h1, description: data.meta.description }),
+    ...faqNode(data.faq),
+  ]}
+>
+  <article class="content-page tool-page" data-page-type="tool" data-unpublished={page.published ? undefined : ''}>
+    <PageHero h1={data.h1} lead={data.lead} pageId={pageId} locale={locale}>
+      <Fragment slot="action" />
+    </PageHero>
+
+    <ContentSection heading={t('tools.split.heading', locale)} id="calculator">
+      <SplitCalculator pageId={pageId} locale={locale} />
+    </ContentSection>
+
+    <ExtraSections sections={data.sections} locale={locale} to={exampleAfter} />
+    <WorkedExample example={data.example} locale={locale} />
+    <ExtraSections sections={data.sections} locale={locale} from={exampleAfter} />
+
+    {data.faq && <FaqList faq={data.faq} locale={locale} />}
+
+    <RelatedPages links={others} locale={locale} />
+
+    <CtaBand cta={data.cta} pageId={pageId} locale={locale} />
+  </article>
+</BaseLayout>
+
+<style>
+  /* The hero's action slot is empty on a tool page, so its margin would leave a gap */
+  .tool-page :global(.page-hero__cta) {
+    display: none;
+  }
+</style>

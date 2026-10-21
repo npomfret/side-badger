@@ -23,6 +23,8 @@ export const requiredTypes: Record<PageType, string[]> = {
   comparison: [...BASE, 'BreadcrumbList'],
   legal: BASE,
   article: [...BASE, 'Article', 'BreadcrumbList'],
+  // One level below Home, like the hubs: the visible breadcrumb (D22) and its BreadcrumbList are absent
+  tool: [...BASE, 'WebApplication'],
 };
 
 function typesOf(node: Node): string[] {

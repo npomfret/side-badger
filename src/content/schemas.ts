@@ -265,11 +265,24 @@ export const howItWorksPage = entry({
 }).refine(exampleAfterFits, { message: EXAMPLE_AFTER_MESSAGE, path: ['exampleAfter'] });
 
 /**
- * `sitePages`: `src/content/pages/<pageId>/<locale>.yaml` (how it works, the hubs). The page's
- * registry type picks which of the two shapes applies (content.test.ts checks it).
+ * A tool page (release 2, R2): the copy around an in-browser tool such as the split-bill
+ * calculator. The tool's own labels are interface text (`tools.*` in the i18n files); the entry
+ * holds what the page says about it, a worked example computed at build time, and the FAQ.
  */
-export const sitePage = z.union([hubPage, howItWorksPage]);
-export const sitePageByType = { hub: hubPage, 'how-it-works': howItWorksPage } as const;
+export const toolPage = entry({
+  sections,
+  example: workedExample,
+  /** Sections shown before the example. Absent: the example comes straight after the tool. */
+  exampleAfter,
+  faq: faq.optional(),
+}).refine(exampleAfterFits, { message: EXAMPLE_AFTER_MESSAGE, path: ['exampleAfter'] });
+
+/**
+ * `sitePages`: `src/content/pages/<pageId>/<locale>.yaml` (how it works, the hubs, the tools). The
+ * page's registry type picks which of the shapes applies (content.test.ts checks it).
+ */
+export const sitePage = z.union([hubPage, howItWorksPage, toolPage]);
+export const sitePageByType = { hub: hubPage, 'how-it-works': howItWorksPage, tool: toolPage } as const;
 
 /** `comparePages` (release 2): `src/content/compare/<slug>/<locale>.yaml` */
 export const comparePage = entry({ sections, faq: faq.optional() });
@@ -299,4 +312,5 @@ export const contentDirs: Record<ContentCollection, string> = {
 export type FeaturePageData = z.infer<typeof featurePage>;
 export type UseCasePageData = z.infer<typeof useCasePage>;
 export type SitePageData = z.infer<typeof sitePage>;
+export type ToolPageData = z.infer<typeof toolPage>;
 export type WorkedExampleData = z.infer<typeof workedExample>;

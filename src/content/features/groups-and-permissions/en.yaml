@@ -1,0 +1,106 @@
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: Group admin and permissions for shared expenses | Side Badger
+  description: Invite people by link or QR code, approve who joins, make viewers, set permissions and lock the group when it's done. Your group, your rules, within reason.
+h1: "Group admin and permissions: your rules, within reason"
+navLabel: Groups and permissions
+lead: Some groups need a treasurer. Side Badger has a setting for that. Invite people with a link or QR code, decide who gets in, and choose who can change the numbers. A small group of friends can ignore all of it, because new groups start wide open.
+cta:
+  heading: Ready to run a tidy group?
+  body: Create an account, start a group and send the invite link. Leave it open, or tighten the rules when the group gets bigger or fussier.
+problem:
+  heading: Someone has to keep the numbers tidy
+  body: Four housemates can run on trust. Thirty guests at a wedding weekend probably can't. Make a group for each house, trip or event, with up to 50 people in it, and every group keeps its own members, its own roles and its own rules. Your dashboard lists them all, with where you stand in each, on one screen. Most groups never touch the settings. The ones that do usually have someone organised enough to want them.
+workflow:
+  heading: From empty group to locked group
+  steps:
+    - title: Invite with a link or QR code
+      body: Open **Invite Others**, choose how long the link should last (15 minutes, 1 hour, 1 day or 5 days), then copy the link or show the QR code for people to scan. You can also invite people you already share another group with, from inside the app.
+      shot: S03
+      shotAlt: The invite dialog with a group link, its QR code and the choice of how long the link lasts
+    - title: Let them look before they join
+      body: Anyone with the link signs in or creates an account, sees a preview of the group and picks the name they want to use in it. Then they press **Join Group**.
+      shot: S04
+      shotAlt: The join preview for a group, shown to a signed-in person before they join
+    - title: Approve who joins
+      body: Turn on approval and people who use the link wait as pending members until an admin lets them in. Admins find them under **Pending members** in **Security & Permissions**, and choose **Approve** or **Reject**. Until then, a pending person can't see anything in the group.
+      shot: S14
+      shotAlt: Pending members waiting for an admin to approve or reject them
+    - title: Choose who can change what
+      body: Pick **Open collaboration** or **Managed group**, or set the permissions one by one. Then give each person a role, admin, member or viewer. Only admins can change permissions and roles.
+      shot: S13
+      shotAlt: The group settings security tab with the two presets and the custom permissions
+    - title: Lock it when it's done
+      body: When the trip is over and the numbers have settled, an admin can switch on **Lock Group**. Nobody can add or change expenses, record payments or edit lists and polls, and a banner says so. Nobody can quietly add a late taxi. If one does turn up, an admin can unlock the group.
+      shot: S15
+      shotAlt: A group showing the banner that says it is locked
+options:
+  heading: Admins, members and viewers
+  items:
+    - title: Admin
+      body: Runs the group. Admins approve new members, change roles and permissions, lock and unlock the group, and close it. Whoever creates a group starts as its admin, and a group is never left without one, because the last admin can't be demoted.
+    - title: Member
+      body: Takes part. What a member can do depends on the group's permissions. In an Open collaboration group that is nearly everything. In a Managed group, members can change only the expenses and lists they created.
+    - title: Viewer
+      body: Sees everything and changes nothing. A viewer can't add or edit expenses or lists, invite people, change settings or touch the header image. Handy for the person who wants to watch the numbers and promises not to fiddle with them.
+sections:
+  - heading: Open, managed or your own rules
+    body: New groups start on **Open collaboration**, where everyone can invite people, change expenses and edit lists, and new members join automatically. **Managed group** is for when someone needs to be the grown-up. You can also set the seven permissions one at a time, and changing one by hand switches the group to custom. Whatever you choose, only admins can change the permissions themselves, and every change shows up in the activity feed. A flat of [housemates](page:use-case/housemates) can leave everything open. A big [event or celebration](page:use-case/events-and-celebrations) often wants Managed, so someone is in charge of who joins. New to all this? [How it works](page:how-it-works) walks through the whole journey, from first expense to settled up.
+    items:
+      - "**Who can edit expenses.** Open collaboration: any member. Managed group: creators and admins."
+      - "**Who can delete expenses.** Open collaboration: any member. Managed group: creators and admins."
+      - "**Who can edit lists.** Open collaboration: any member. Managed group: creators and admins."
+      - "**Who can invite members.** Open collaboration: any member. Managed group: admins only."
+      - "**New member approval.** Open collaboration: automatic. Managed group: admin approval required."
+      - "**Who can change settings.** Open collaboration: any member. Managed group: admins only."
+      - "**Who can change header image.** Open collaboration: any member. Managed group: admins only."
+  - heading: Your name, your photo, your header image
+    body: Each group has its own cast list. Choose the name people see in each group (2 to 50 characters, and unique within the group) and which of your profile photos you wear there. Be **Sam** in the house and **Sam (has the car)** on the trip. Anyone allowed to change settings can rename the group and edit its description. The header image, a JPEG, PNG, GIF or WebP up to 10 MB, has a permission of its own.
+  - heading: Archive, lock or close
+    body: Three ways to put a group away, from least to most serious.
+    items:
+      - "**Archive** hides the group from your own dashboard, and nobody else's. You can still open it and use it as before, and **Unarchive Group** brings it back."
+      - "**Lock** freezes changes until an admin unlocks it. Everyone can still read the group and its history."
+      - "**Close** is permanent, and for everyone. Only an admin can do it, by typing the group's name to confirm, and nobody can open the group again."
+  - heading: Leaving a group
+    body: Anyone can leave once they have settled up. You can't leave while you owe or are owed money in even one currency, while an open question about an expense involves you, or if you are the last admin or the only member. [Record the payment](page:feature/settle-up), sort out the [expense question](page:guide/what-to-do-when-someone-disputes-a-shared-expense), or make someone else an admin, then go. To come back, you will need a new invitation.
+limits:
+  heading: "Within reason: the small print"
+  items:
+    - A group holds up to 50 people.
+    - Only admins can change permissions and roles. The last admin can't be demoted.
+    - Setting expense editing to **Admins only** also means that only admins can add expenses.
+    - A lock stops changes to expenses, new payments, lists and polls. Everyone can still read the group and its history, and react to payments.
+    - Closing is permanent. The app has no way to reopen a closed group.
+    - Making a new invite link doesn't cancel the old ones. Each link lasts until its own expiry, so choose a short one when you are nervous about where it might end up.
+    - In-app invites list people from your 10 most recent active groups. Anyone else needs the link, and who may invite depends on the group's permissions.
+    - Joining needs an account, and people must verify their email before they can add anything.
+useCasesHeading: Where a bit of order helps
+faq:
+  heading: Questions
+  items:
+    - q: Can a viewer add expenses?
+      a: No. A viewer sees everything and changes nothing. They can't add or edit expenses or lists, invite people or change settings.
+    - q: Can someone leave while they owe money?
+      a: No. Nobody can leave a group while they owe or are owed money in even one currency. Settle up first, then go.
+    - q: What happens when a group is closed?
+      a: Nobody can open it again. Only an admin can close a group, they have to type the group's name to confirm, and the group becomes unavailable to everyone. If you only want to stop changes, lock it. If you only want it off your own dashboard, archive it.
+    - q: Can I undo a lock?
+      a: Yes. An admin can unlock the group, and changes work again.
+    - q: Do I have to approve people before they join?
+      a: Only if you want to. New groups start on Open collaboration, where people who use the link join automatically. Turn on admin approval, or pick Managed group, and each person waits until an admin lets them in.
+    - q: How many people can be in a group?
+      a: Up to 50.

@@ -1,0 +1,109 @@
+# Guide 5 of the wave 2 briefs (tasks/release-2-plan.md, P8). The worked example is the brief's data;
+# every number in the prose below comes from it or from the arithmetic shown. The rate is illustrative.
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: How to split a trip paid in several currencies | Side Badger
+  description: Pounds for the hotel, yen for the ramen. Settle each currency on its own or convert at a rate you can see. Both ways worked through, sums shown.
+h1: How to split a trip paid in several currencies
+navLabel: Trips in several currencies
+lead: Enter each expense in the currency you paid in, then pick a route. Keep the currencies separate and settle each one in its own money, or convert at a current exchange rate and settle once. The same Japan trip comes to four payments the first way and two the second.
+cta:
+  heading: Enter it in the money you paid in
+  body: Create a free account, start a group for the trip and add each expense in whatever currency was on the receipt. Want the detail first? See [multiple currencies](page:feature/multiple-currencies) or [what free covers](page:pricing).
+sections:
+  - heading: Three friends, one hotel, a great deal of yen
+    body: Zoe, Kenji and Lucy spend a week in Japan on a [group trip](page:use-case/group-trips), and every cost is split equally three ways. Zoe booked the hotel at home, in pounds, for £600. Lucy bought the rail passes in Tokyo for ¥90,000. Kenji paid for ramen night, ¥9,000, and has mentioned it daily since. Nobody wants to convert three receipts on a station platform. For the sums here, ¥1 is £0.005, a round rate made up for this guide. In the app you'd use a current exchange rate, or type the one you actually got.
+  - heading: Enter each one in the money on the receipt
+    body: Do this part whichever route you choose. Nothing needs converting yet.
+    items:
+      - "**Make the group.** On the dashboard choose **Create Group**, name it after the trip, then choose **Invite Others** and send the link or QR code."
+      - "**Add the hotel.** Choose **Add Expense** and enter 600, with pounds as the currency next to the amount. Under **Who paid?** pick Zoe. Keep all three under **Split between**, leave **How to split** on **Equally** and choose **Save Expense**."
+      - "**Add the yen.** Do the same for the rail passes (Lucy paid) and the ramen (Kenji paid), with yen as the currency. Yen have no decimals, so the form doesn't ask for any."
+  - heading: "Route one: keep the currencies separate"
+    body: Side Badger keeps a balance for each currency and doesn't net one against another. In pounds, the hotel is £200 each, so Kenji and Lucy each owe Zoe £200. In yen, the rail passes and ramen come to ¥99,000, which is ¥33,000 each. Lucy paid ¥90,000 and is owed ¥57,000. Zoe paid no yen and owes ¥33,000. Kenji paid ¥9,000, so he owes ¥24,000.
+    items:
+      - "**Pounds.** Kenji pays Zoe £200 and Lucy pays Zoe £200."
+      - "**Yen.** Zoe pays Lucy ¥33,000 and Kenji pays Lucy ¥24,000."
+      - "**Four payments in all.** Zoe and Lucy owe each other in two currencies that don't cancel out. No rate comes into it, so there's nothing to argue about."
+      - "**Owe yen, pay in pounds.** Someone with no yen can still pay in pounds. When you record the payment, open **Different currency?**, choose **Convert to** pounds and check the rate. Zoe's ¥33,000 is £165 at this guide's rate, and the yen balance still comes out right."
+      - "**Record each payment.** Pay each other however you like, then choose **Settle Up** and use **Record Settlement**. There's more on [settling up](page:feature/settle-up)."
+  - heading: "Route two: convert as you go"
+    body: If the group would rather see one number each, convert when you enter the expense.
+    items:
+      - "**Convert on the form.** On **Add Expense**, choose **Convert to** and pick pounds. Side Badger shows the rate and the converted amount, marked with an ≈. Edit the rate if you got a different one. The original yen amount stays on the expense."
+      - "**Read the pounds.** At ¥1 = £0.005, the rail passes become £450 and the ramen £45. With the £600 hotel, that is £600 + £450 + £45 = £1,095, or £365 each. Zoe paid £600, so she's owed £235. Lucy paid £450 and is owed £85. Kenji paid £45 and owes £320."
+      - "**Two payments.** Both from Kenji: £235 to Zoe and £85 to Lucy. Zoe and Lucy no longer pay each other at all."
+      - "**Or set a group currency.** To skip the extra step, open the group's **Settings**, find **Currency Settings** and choose **Auto-Convert Expenses To**. Each new expense then converts into that currency, still at a rate you can see and change."
+  - heading: Which route should you take?
+    items:
+      - "**Keep them separate** when people still have yen in their wallets, or when you'd rather not argue about a rate. The cost is more payments, in more than one currency."
+      - "**Convert** when the group lives in one currency and wants one number each and a shorter list, like Kenji's two transfers. The cost is that the group trusts a rate, and the rate is fixed on each expense when it's saved."
+      - "**Decide early.** A group currency only converts new and copied expenses. It won't go back and tidy what you've already entered."
+  - heading: The rate, and the cap
+    items:
+      - "**The rate is fixed when you save.** Old expenses are never revalued, so a balance doesn't drift because the market did. Expenses entered on different days can carry different rates, so if the group wants one rate for the whole trip, agree it and type it in each time."
+      - "**No rate? Type one.** Side Badger fetches a current exchange rate where it can, but not every pair is guaranteed one. If there isn't one, or a cash desk gave you a better deal, type your own."
+      - "**999,999.99 per expense, in its own currency.** One cap, whatever the money. In yen that is just under ¥1,000,000, about £5,000 at this guide's rate. In a currency with big numbers, such as Indonesian rupiah, a single bill can hit it sooner. Split the bill into two expenses, or enter it in another currency and convert."
+  - heading: What Side Badger doesn't do here
+    items:
+      - It never moves or exchanges money. You pay each other however you like, then record the payment.
+      - It has 140 currencies. Cryptocurrencies and metals aren't among them.
+exampleAfter: 2
+example:
+  heading: Japan, settled two ways
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: the hotel, booked at home
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: rail passes
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: ramen night
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: Questions
+  items:
+    - q: Which exchange rate does Side Badger use?
+      a: A current exchange rate, fetched when you enter the expense where one is available. You can change it to the rate you actually got.
+    - q: Can the group stick to pounds and yen?
+      a: Yes. In the group's **Settings**, turn on **Restrict currencies for this group** under **Currency Settings**, pick the **Permitted currencies** and set the **Default currency for new expenses**. Fewer options in the list, fewer wrong guesses at the till.
+    - q: Do we have to convert at all?
+      a: No. Currencies stay separate unless you or your group choose to convert, and each currency gets its own short list of payments.

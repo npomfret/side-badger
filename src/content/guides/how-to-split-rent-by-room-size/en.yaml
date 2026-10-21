@@ -1,0 +1,98 @@
+# Guide 1 of the wave 1 briefs (tasks/release-2-plan.md, "Wave 1 guide briefs"). The worked example
+# is the brief's data; every number in the prose below comes from it or from the arithmetic shown.
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: How to split rent by room size | Side Badger
+  description: Set aside a share of the rent for the shared rooms, split the rest by bedroom floor area, then enter the percentages once. Worked example for three housemates.
+h1: How to split rent by room size
+navLabel: Rent by room size
+lead: Decide how much of the rent pays for the shared rooms and split that part equally, then split the rest by each bedroom's floor area. Round to whole percentages, enter them on the rent in Side Badger once, and copy the expense every month.
+cta:
+  heading: Get the rent in once
+  body: Create a free account, start a group for the flat and enter the rent with the percentages you agreed. Next month is a copy. Want the tour first? See [how it works](page:how-it-works) or [what free covers](page:pricing).
+sections:
+  - heading: Three people, one flat, one argument
+    body: Priya, Tom and Aisha share a flat for £1,950 a month. For a year they split it three ways, because it was easy. Then Aisha measured her bedroom. Priya's room is 16 m², Tom's is 12 m² and Aisha's is 10 m², so Aisha was paying what Priya paid for a room more than a third smaller. Nobody had been unreasonable. Nobody had done the sum. Over a takeaway they agreed one rule first. Of the rent, 40% pays for the kitchen, bathroom and lounge, which all three use.
+  - heading: The method, with the sums shown
+    body: Four steps, one tape measure and a phone calculator.
+    items:
+      - "**Set aside the shared part.** The group agrees a share of the rent for the rooms everyone uses. For the flat it is 40%, which is 13.33% each between three people."
+      - "**Split the rest by floor area.** The other 60% goes by bedroom size. The bedrooms add up to 38 m² (16 + 12 + 10), so Priya's part is 60% × 16/38, which is 25.26%."
+      - "**Add the two parts.** Priya: 25.26% + 13.33% = 38.6%. Tom: 60% × 12/38 = 18.95%, plus 13.33% is 32.3%. Aisha: 60% × 10/38 = 15.79%, plus 13.33% is 29.1%."
+      - "**Round and check.** Whole percentages are easier to type and to argue about, so 38.6% becomes 39%, 32.3% becomes 32% and 29.1% becomes 29%. Check that 39 + 32 + 29 is 100. If your rounding lands on 99 or 101, the group agrees whose figure moves by a point."
+  - heading: Reading the flat's month
+    body: Rent at 39%, 32% and 29% comes to £760.50, £624.00 and £565.50. Priya paid the landlord, so across the month she is owed £1,142.50, while Tom owes £566.00 and Aisha owes £576.50. Side Badger suggests two payments, both to Priya.
+  - heading: Set it up in Side Badger
+    body: One evening, most of it spent discussing the 40%.
+    items:
+      - "**Make the group.** On the dashboard choose **Create Group** and name it after the flat. Choose **Invite Others** and send the link or QR code. Everyone signs in or creates a free account, and picks the name they want to be shown in this group."
+      - "**Add the rent.** Choose **Add Expense**. Enter the description and amount, and under **Who paid?** pick whoever paid the landlord. Keep all three people under **Split between**, then under **How to split** choose **Percentage** and type 39, 32 and 29. The form flags it if the percentages don't total 100. Choose **Save Expense**."
+      - "**Add the bills.** Energy and broadband are separate expenses with their own payers. Leave **How to split** on **Equally**."
+      - "**Copy it next month.** Open last month's rent and choose **Copy expense**. The copy keeps the payer, the amount and the split, and takes today's date. Change the amount if the rent changed, then choose **Create Copy**."
+      - "**Check who owes whom.** The **Balances** section shows it. Pay each other however you like, then record the payment under **Settle Up**."
+  - heading: En-suites, box rooms and people leaving
+    items:
+      - "**En-suites and box rooms.** Floor area is a starting point. A room with its own bathroom is worth more than the same area without one, and a box room that fits a bed and a hopeful chair is worth less. Adjust the percentages by agreement, check they still total 100 and write the final figures down where the whole flat can see them."
+      - "**Someone moves out mid-month.** Work out what each person owes for that month and enter that month's rent with **Exact amounts** instead of **Percentage**. The amounts must add up to the rent. Do it before they go. Nobody can leave a group while they owe or are owed money, and an expense involving someone who has left becomes read-only."
+      - "**Someone moves in.** Measure again, redo the sums with the new room sizes and use the new percentages from the next rent. Earlier months stay as they were."
+  - heading: What Side Badger doesn't do here
+    items:
+      - It doesn't measure your rooms or pick the percentages. The floor areas and the 40% are for the group to agree.
+      - It has no recurring bills, so you copy last month's rent each time.
+      - It never moves money and doesn't pay the landlord. You pay each other however you like and record it.
+      - It doesn't know what your tenancy agreement says. It keeps the count between the people in the group.
+exampleAfter: 2
+example:
+  heading: A month in the flat
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: the rent
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: the energy bill
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: the broadband
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: Questions
+  items:
+    - q: What if someone has a bigger room but less light?
+      a: Floor area is only the starting point, so the group can agree to adjust. Take a point or two off the dark room, give them to the others and check the percentages still total 100. Side Badger stores whatever you agree and doesn't judge it.
+    - q: Should bills be split by room size too?
+      a: Usually not. Energy and broadband are used by everyone, so an equal split is simpler, as in the example above. If one housemate is home all day, the group can agree something else, such as exact amounts. [Split expenses](page:feature/split-expenses) covers the options.
+    - q: Can we change the split later?
+      a: Yes, for new expenses. Change the percentages when you copy the rent and earlier months stay as they were. To correct a past expense, edit it if the group's permissions allow, and tell the house first, because the balances change. The earlier version is kept.

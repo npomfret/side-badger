@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'Без реклами, без рекламних і аналітичних трекерів',
   'related.heading': 'Пов\'язані сторінки',
   'support.title': 'Підтримка',
-  'support.description': 'Щоб отримати допомогу з додатком Side Badger, напишіть нам на електронну пошту.',
-  'support.email': 'support@sidebadger.me',
 } as const;

@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'ప్రకటనలు లేవు, యాడ్ లేదా అనలిటిక్స్ ట్రాకర్లు లేవు',
   'related.heading': 'సంబంధిత పేజీలు',
   'support.title': 'మద్దతు',
-  'support.description': 'Side Badger యాప్‌తో సహాయం కోసం మాకు ఇమెయిల్ చేయండి.',
-  'support.email': 'support@sidebadger.me',
 } as const;

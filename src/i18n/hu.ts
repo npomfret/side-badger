@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'Hirdetések nélkül, hirdetési és elemző nyomkövetők nélkül',
   'related.heading': 'Kapcsolódó oldalak',
   'support.title': 'Támogatás',
-  'support.description': 'Ha segítségre van szükséged a Side Badger alkalmazással kapcsolatban, írj nekünk e-mailt.',
-  'support.email': 'support@sidebadger.me',
 } as const;

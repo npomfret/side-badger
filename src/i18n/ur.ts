@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'کوئی اشتہار نہیں، کوئی اشتہاری یا تجزیاتی ٹریکر نہیں',
   'related.heading': 'متعلقہ صفحات',
   'support.title': 'معاونت',
-  'support.description': 'Side Badger ایپ سے مدد کے لیے ہمیں ای میل کریں۔',
-  'support.email': 'support@sidebadger.me',
 } as const;

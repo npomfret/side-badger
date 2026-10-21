@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'Iragarkirik ez, iragarki edo analitiken jarraipen-tresnarik ez',
   'related.heading': 'Erlazionatutako orriak',
   'support.title': 'Laguntza',
-  'support.description': 'Side Badger aplikazioarekin laguntza behar baduzu, bidali mezu elektroniko bat.',
-  'support.email': 'support@sidebadger.me',
 } as const;

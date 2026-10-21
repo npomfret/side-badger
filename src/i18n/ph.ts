@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'Walang ad, walang analytics o ad tracker',
   'related.heading': 'Mga kaugnay na pahina',
   'support.title': 'Suporta',
-  'support.description': 'Para sa tulong sa Side Badger app, mag-email sa amin.',
-  'support.email': 'support@sidebadger.me',
 } as const;

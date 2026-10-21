@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'بلا إعلانات، وبلا متتبّعات إعلانات أو تحليلات',
   'related.heading': 'صفحات ذات صلة',
   'support.title': 'الدعم',
-  'support.description': 'للحصول على مساعدة بشأن تطبيق Side Badger، راسلنا عبر البريد الإلكتروني.',
-  'support.email': 'support@sidebadger.me',
 } as const;

@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'Bez reklāmām, bez reklāmu vai analītikas izsekotājiem',
   'related.heading': 'Saistītās lapas',
   'support.title': 'Atbalsts',
-  'support.description': 'Ja nepieciešama palīdzība saistībā ar Side Badger lietotni, rakstiet mums e-pastā.',
-  'support.email': 'support@sidebadger.me',
 } as const;

@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': '広告なし、広告・分析トラッカーなし',
   'related.heading': '関連ページ',
   'support.title': 'サポート',
-  'support.description': 'Side Badgerアプリについてお困りの場合は、メールでお問い合わせください。',
-  'support.email': 'support@sidebadger.me',
 } as const;

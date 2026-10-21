@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'Tanpa iklan, tanpa pelacak iklan atau analitik',
   'related.heading': 'Halaman terkait',
   'support.title': 'Bantuan',
-  'support.description': 'Untuk bantuan terkait aplikasi Side Badger, kirim email kepada kami.',
-  'support.email': 'support@sidebadger.me',
 } as const;

@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'Без огласа, без огласних и аналитичких трекера',
   'related.heading': 'Повезане странице',
   'support.title': 'Podrška',
-  'support.description': 'Za pomoć sa aplikacijom Side Badger pošaljite nam imejl.',
-  'support.email': 'support@sidebadger.me',
 } as const;

@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'Χωρίς διαφημίσεις, χωρίς διαφημιστικά και αναλυτικά trackers',
   'related.heading': 'Σχετικές σελίδες',
   'support.title': 'Υποστήριξη',
-  'support.description': 'Για βοήθεια με την εφαρμογή Side Badger, στείλτε μας email.',
-  'support.email': 'support@sidebadger.me',
 } as const;

@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'Žádné reklamy, žádné reklamní ani analytické trackery',
   'related.heading': 'Související stránky',
   'support.title': 'Podpora',
-  'support.description': 'Potřebujete-li pomoc s aplikací Side Badger, napište nám e-mail.',
-  'support.email': 'support@sidebadger.me',
 } as const;

@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': '광고 없음, 광고·분석 추적기 없음',
   'related.heading': '관련 페이지',
   'support.title': '지원',
-  'support.description': 'Side Badger 앱에 대한 도움이 필요하면 이메일을 보내 주세요.',
-  'support.email': 'support@sidebadger.me',
 } as const;

@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'Bez reklam, bez trackerów reklamowych i analitycznych',
   'related.heading': 'Powiązane strony',
   'support.title': 'Pomoc',
-  'support.description': 'Jeśli potrzebujesz pomocy z aplikacją Side Badger, napisz do nas e-mail.',
-  'support.email': 'support@sidebadger.me',
 } as const;

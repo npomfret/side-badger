@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'Dim hysbysebion, dim olrheinwyr hysbysebion na dadansoddeg',
   'related.heading': 'Tudalennau cysylltiedig',
   'support.title': 'Cymorth',
-  'support.description': 'I gael help gyda\'r ap Side Badger, anfonwch e-bost atom.',
-  'support.email': 'support@sidebadger.me',
 } as const;

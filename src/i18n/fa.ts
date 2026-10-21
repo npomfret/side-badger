@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'بدون تبلیغات، بدون ردیاب تبلیغاتی یا تحلیلی',
   'related.heading': 'صفحه‌های مرتبط',
   'support.title': 'پشتیبانی',
-  'support.description': 'برای دریافت کمک درباره برنامه Side Badger، به ما ایمیل بزنید.',
-  'support.email': 'support@sidebadger.me',
 } as const;

@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'Gan fógraí, gan rianairí fógraí ná anailísíochta',
   'related.heading': 'Leathanaigh ghaolmhara',
   'support.title': 'Tacaíocht',
-  'support.description': 'Chun cabhair a fháil leis an aip Side Badger, seol ríomhphost chugainn.',
-  'support.email': 'support@sidebadger.me',
 } as const;

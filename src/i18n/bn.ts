@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'কোনো বিজ্ঞাপন নেই, কোনো বিজ্ঞাপন বা অ্যানালিটিক্স ট্র্যাকার নেই',
   'related.heading': 'সম্পর্কিত পৃষ্ঠা',
   'support.title': 'সহায়তা',
-  'support.description': 'Side Badger অ্যাপের সাহায্যের জন্য আমাদের ইমেল করুন।',
-  'support.email': 'support@sidebadger.me',
 } as const;

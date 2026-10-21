@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': '无广告，无广告或分析追踪器',
   'related.heading': '相关页面',
   'support.title': '支持',
-  'support.description': '如需 Side Badger 应用的帮助，请发送电子邮件联系我们。',
-  'support.email': 'support@sidebadger.me',
 } as const;

@@ -132,6 +132,45 @@ export const pageArt: Readonly<Record<string, PageArtDef>> = {
       { prop: 'stamp', text: { converted: 1 }, tone: 'green' },
     ],
   },
+  // Join approval, in one sticky and one stamp (no example: keys only)
+  'feature/groups-and-permissions': {
+    layout: 'row',
+    items: [
+      { prop: 'sticky', text: key('art.groupsAndPermissions.sticky'), color: 'pink' },
+      { prop: 'stamp', text: key('art.groupsAndPermissions.stamp'), tone: 'ink' },
+    ],
+  },
+  // The comments next to the numbers: Aisha questions the example's wine, Tom moves it
+  'feature/plan-together': {
+    layout: 'chat',
+    items: [
+      { prop: 'avatar', person: 2 },
+      { prop: 'bubble', side: 'start', text: key('art.planTogether.question') },
+      { prop: 'bubble', side: 'end', text: key('art.planTogether.reply') },
+      { prop: 'avatar', person: 0 },
+    ],
+  },
+  // The badger reads the receipt; you check its homework (no example: the homepage's karaoke receipt)
+  'feature/receipt-scanning': {
+    layout: 'cluster',
+    items: [
+      {
+        prop: 'receipt',
+        title: key('home.expenses.itemKaraoke'),
+        total: { label: key('home.expenses.fieldAmount'), amount: { home: 5 } },
+      },
+      { prop: 'sticky', text: key('home.expenses.scanning') },
+      { prop: 'stamp', text: key('art.receiptScanning.stamp'), tone: 'green' },
+    ],
+  },
+  // The phone's complaint, and the answer (no example: keys only)
+  'feature/web-app': {
+    layout: 'row',
+    items: [
+      { prop: 'sticky', text: key('art.webApp.sticky') },
+      { prop: 'stamp', text: key('art.webApp.stamp'), tone: 'green' },
+    ],
+  },
   'use-cases': {
     layout: 'row',
     items: [
@@ -175,6 +214,15 @@ export const pageArt: Readonly<Record<string, PageArtDef>> = {
       { prop: 'stamp', text: key('art.eventsAndCelebrations.stamp'), tone: 'ink' },
     ],
   },
+  // The couple's photos, what each paid, and how the relationship is holding up
+  'use-case/couples': {
+    layout: 'row',
+    items: [
+      { prop: 'polaroid', person: 0, tag: { amount: 0 } },
+      { prop: 'polaroid', person: 1, tag: { amount: 1 } },
+      { prop: 'stamp', text: key('art.couples.stamp'), tone: 'green' },
+    ],
+  },
   pricing: {
     layout: 'flank',
     items: [
@@ -187,13 +235,13 @@ export const pageArt: Readonly<Record<string, PageArtDef>> = {
     ],
   },
 
-  // The help page: the questions people arrive with, and the stamp they leave with (no example, no new keys)
+  // The help page: the questions people arrive with, and the stamp they leave with (no example: keys only)
   support: {
     layout: 'row',
     items: [
-      { prop: 'sticky', text: key('home.chaos.chatTaxi') },
-      { prop: 'sticky', text: key('home.chaos.sticky'), color: 'pink' },
-      { prop: 'stamp', text: key('home.settle.allSettled'), tone: 'green' },
+      { prop: 'sticky', text: key('art.support.sticky') },
+      { prop: 'sticky', text: key('home.chaos.chatTaxi'), color: 'pink' },
+      { prop: 'stamp', text: key('art.support.stamp'), tone: 'green' },
     ],
   },
 
@@ -265,6 +313,63 @@ export const pageArt: Readonly<Record<string, PageArtDef>> = {
       },
       { prop: 'sticky', text: key('art.howToSplitAStagOrHenWeekend.sticky'), color: 'pink' },
       { prop: 'stamp', text: key('art.howToSplitAStagOrHenWeekend.stamp'), tone: 'green' },
+    ],
+  },
+  // The rent by percentage, the takeaway split equally on purpose
+  'guide/how-to-split-bills-with-a-partner-who-earns-more': {
+    layout: 'stack',
+    items: [
+      { prop: 'ledger', expense: 0 },
+      { prop: 'ledger', expense: 2 },
+      { prop: 'stamp', text: key('art.howToSplitBillsWithAPartnerWhoEarnsMore.stamp'), tone: 'ink' },
+    ],
+  },
+  // Ramen in yen, the tourist's question, and the answer in pounds
+  'guide/how-to-split-a-trip-paid-in-several-currencies': {
+    layout: 'cluster',
+    items: [
+      {
+        prop: 'receipt',
+        title: { expense: 2 },
+        total: { label: { payer: 2 }, amount: { amount: 2 } },
+      },
+      { prop: 'sticky', text: key('art.howToSplitATripPaidInSeveralCurrencies.sticky') },
+      { prop: 'stamp', text: { converted: 2 }, tone: 'green' },
+    ],
+  },
+  // The present on the buyer's card, the budget poll, the chip-ins
+  'guide/how-to-collect-for-a-group-gift': {
+    layout: 'cluster',
+    items: [
+      {
+        prop: 'receipt',
+        title: { expense: 0 },
+        total: { label: { payer: 0 }, amount: { amount: 0 } },
+      },
+      { prop: 'sticky', text: key('art.howToCollectForAGroupGift.sticky'), color: 'pink' },
+      { prop: 'stamp', text: key('art.howToCollectForAGroupGift.stamp'), tone: 'green' },
+    ],
+  },
+  // The party wine, asked about politely, in the app's own word for it
+  'guide/what-to-do-when-someone-disputes-a-shared-expense': {
+    layout: 'cluster',
+    items: [
+      {
+        prop: 'receipt',
+        title: { expense: 2 },
+        total: { label: { payer: 2 }, amount: { amount: 2 } },
+      },
+      { prop: 'sticky', text: key('art.whatToDoWhenSomeoneDisputesASharedExpense.sticky'), color: 'pink' },
+      { prop: 'stamp', text: key('art.whatToDoWhenSomeoneDisputesASharedExpense.stamp'), tone: 'red' },
+    ],
+  },
+  // The two biggest of the four payments, all to Mo, before the flight
+  'guide/how-to-settle-up-after-a-group-trip': {
+    layout: 'stack',
+    items: [
+      { prop: 'ledger', payment: 0 },
+      { prop: 'ledger', payment: 1 },
+      { prop: 'stamp', text: key('art.howToSettleUpAfterAGroupTrip.stamp'), tone: 'green' },
     ],
   },
 

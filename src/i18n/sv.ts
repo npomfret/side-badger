@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'Inga annonser, inga annons- eller analysspårare',
   'related.heading': 'Relaterade sidor',
   'support.title': 'Support',
-  'support.description': 'Behöver du hjälp med Side Badger-appen? Mejla oss.',
-  'support.email': 'support@sidebadger.me',
 } as const;

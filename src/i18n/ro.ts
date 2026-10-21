@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'Fără reclame, fără trackere de reclame sau de analiză',
   'related.heading': 'Pagini conexe',
   'support.title': 'Asistență',
-  'support.description': 'Pentru ajutor cu aplicația Side Badger, trimiteți-ne un e-mail.',
-  'support.email': 'support@sidebadger.me',
 } as const;

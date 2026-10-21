@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'कोई विज्ञापन नहीं, कोई विज्ञापन या एनालिटिक्स ट्रैकर नहीं',
   'related.heading': 'संबंधित पेज',
   'support.title': 'सहायता',
-  'support.description': 'Side Badger ऐप से मदद के लिए हमें ईमेल करें।',
-  'support.email': 'support@sidebadger.me',
 } as const;

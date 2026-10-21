@@ -258,6 +258,4 @@ export default {
   'pricing.trust.title': 'Reklam yok, reklam ve analiz tracker\'ı yok',
   'related.heading': 'İlgili sayfalar',
   'support.title': 'Destek',
-  'support.description': 'Side Badger uygulamasıyla ilgili yardım için bize e-posta gönderin.',
-  'support.email': 'support@sidebadger.me',
 } as const;

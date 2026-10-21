@@ -1,0 +1,80 @@
+# P7: English couples use-case page (brief: tasks/seo-site-expansion-plan.md, "Couples"; tasks/release-2-plan.md, P7).
+# Adults sharing costs between two people. The worked example is the brief's data; every figure in
+# the prose below comes from it or from the arithmetic shown.
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+meta:
+  title: Split bills with your partner, 50/50 or by income | Side Badger
+  description: Share the boring costs without turning date night into a quarterly finance review. Split 50/50, by income or bill by bill, and see who owes whom. Free.
+h1: Share costs as a couple, fairly
+navLabel: Couples
+lead: Share the boring costs without turning date night into a quarterly finance review. Side Badger keeps one running count of the rent, the bills and the shop for **couples** who share a home, a sofa and a vague memory of who paid for the broadband. Split it 50/50, by income or bill by bill, and see who owes whom.
+cta:
+  heading: Start a group for two
+  body: Create an account, make a group and send your partner the invite link. Tonight's takeaway can be the first expense.
+scenario:
+  heading: Fair doesn't have to mean 50/50
+  body: Sam and Alex share a home. Sam earns more, so they agreed that Sam takes 60% of the rent and Alex 40%. Sam pays the landlord, Alex does the shop, and both are fairly sure it all evens out. Fairly sure is how a note on somebody's phone becomes a standing disagreement. So make a group for the two of you, choose the name you want your partner to see, and send them the invite link or QR code. Add each cost when it happens, say who paid and how it splits, and let the group keep the count. Make a separate group for each holiday (see [group trips](page:use-case/group-trips)), so the flights stay out of the groceries.
+sections:
+  - heading: 50/50, by income, or bill by bill
+    body: There is no universally fair split, only the one you both agree to, ideally before the first bill rather than after the first sigh. These are the usual three.
+    items:
+      - "**50/50.** Pick **Equally** and each of you owes half. It suits shared costs when your incomes are close, and it needs no arithmetic at all."
+      - "**By income.** If one of you earns more, split by each person's share of the money coming in. Agree what counts first (take-home pay is the common choice), add the two together and divide yours by the total. If one of you takes home three parts to the other's two, that is 3 ÷ (3 + 2) = 60%, so one of you covers 60% and the other 40%. Round to whole percentages and enter them under **Percentage**, where they have to add up to 100. There is nowhere to enter your pay, so you only ever type the percentages."
+      - "**Bill by bill.** Each expense has its own split, so you can mix: rent by income, the groceries 50/50, and a joint present by **Exact amounts** if you each chose what to put in."
+      - "**When pay changes,** use the new percentages from the next expense. Earlier expenses keep the split they were entered with. To see the sums done with real pay slips, read [how to split bills with a partner who earns more](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: The monthly round-up
+    body: Once a month, or whenever the numbers start to itch, open the group and check **Balances**. With two of you there is only ever one payment in each currency, from whoever owes to whoever is owed. Take Sam and Alex's month. Sam paid the £1,500 rent, and Alex's 40% of it is £600. Alex paid £90 for groceries, split equally, so Sam's half is £45. Side Badger sets one against the other, £600 less £45, and Alex pays Sam £555. Pay it however you like, by bank transfer, in cash or with a favour owed, then record it under **Settle Up** so the balance goes back to zero. There are no recurring bills, so copy last month's rent, change the date and carry on. Side Badger doesn't move the money or send reminders, so the nudge is still yours.
+  - heading: Just the two of you
+    body: A group of two has two members, and only members of a group can see it. Your partner joins with the invite link or QR code. A link can last anywhere from 15 minutes to 5 days, so choose the shortest that gives your partner time to use it. Making a new link doesn't cancel the old ones, so don't leave them in a chat that includes other people. Anyone who uses a live link can join, so if you'd like to be certain, turn on approval and an admin lets each person in. Your partner needs an account of their own, which is free.
+exampleAfter: 2
+example:
+  heading: Who owes whom this month
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: Rent
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: Groceries
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: The features a couple uses
+faq:
+  heading: Questions
+  items:
+    - q: Can we set 60/40 once for everything?
+      a: No. The split belongs to each expense. Set the percentages on the first one, then copy it next time and change what's different. [Split expenses](page:feature/split-expenses) covers all three ways to split.
+    - q: Does it link to our bank?
+      a: No. Side Badger never touches your money. You pay each other however you like, then record it, as [settle up](page:feature/settle-up) explains.
+    - q: Can anyone else see our group?
+      a: Only its members, and a couple's group has two. Anyone who uses a live invite link can join, so share it with one person and give it a short expiry.
+    - q: What if we each paid part of the same bill?
+      a: An expense has one payer. Record two expenses, one for each of you, and the balance comes out the same.
+    - q: Will it remind my partner to pay?
+      a: No. There are no reminders, so the nudge is still yours. At least you will both be looking at the same number.
+    - q: What happens when we stop sharing costs?
+      a: Settle the balance and record the payment, so nobody owes anything. Then an admin can lock the group, which keeps the numbers as they are, or close it for good, which makes it inaccessible to everyone. Close it only when neither of you needs the history.

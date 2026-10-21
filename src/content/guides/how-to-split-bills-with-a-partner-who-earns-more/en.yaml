@@ -1,0 +1,104 @@
+# Guide 4 of the wave 2 briefs (tasks/release-2-plan.md, P8). The worked example is the brief's data;
+# every number in the prose below comes from it or from the arithmetic shown.
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: How to split bills with a partner who earns more | Side Badger
+  description: 50/50 gets awkward when one of you earns far more. Split the shared bills by income instead, with the sums shown for two people and no spreadsheet.
+h1: How to split bills with a partner who earns more
+navLabel: Partner who earns more
+lead: Add up your take-home pay, work out each person's share of the total and round to whole percentages. Maya takes home £2,800 and Jon £1,700, so they split the shared bills 62/38. Enter those percentages on a shared expense in Side Badger, then copy it whenever the same bill comes round.
+cta:
+  heading: Do the sum once
+  body: Create a free account, make a group for the two of you and put the rent in with your percentages. Next month's rent is a copy. Want the tour first? See [how it works](page:how-it-works) or [what free covers](page:pricing).
+sections:
+  - heading: Two wages, one flat, one polite silence
+    body: Maya and Jon live together. Maya takes home £2,800 a month and Jon takes home £1,700. For two years they split everything 50/50, because it was simple and neither wanted to be the one to bring it up. Then Jon looked at the rent on its own. Half of £1,400 is £700, which is a quarter of Maya's take-home pay and 41% of his. Nobody had been unfair. Nobody had done the sum. Plenty of [couples](page:use-case/couples) get here eventually. Over a takeaway they agreed that the shared bills should take a similar bite out of each wage.
+  - heading: The method, with the sums shown
+    body: Four steps, one calculator and a conversation you were going to have anyway.
+    items:
+      - "**Agree what counts as pay.** Maya and Jon use take-home pay, the money that lands in the bank each month. Together that is £2,800 + £1,700 = £4,500."
+      - "**Work out each share.** Maya's is 2,800 ÷ 4,500, which is 62.2%. Jon's is 1,700 ÷ 4,500, which is 37.8%."
+      - "**Round to whole percentages.** 62.2% becomes 62 and 37.8% becomes 38. With two people, round one figure and take it away from 100 to get the other, and they always total 100."
+      - "**Check what it means.** On the £1,400 rent, Maya pays £868 (62%) and Jon pays £532 (38%). That is about 31% of each person's take-home pay. Half each would have taken 25% of Maya's and 41% of Jon's."
+  - heading: Reading the month
+    body: Maya paid the £1,400 rent and Jon paid the other £216. Maya's share of the month is £868.00 + £111.60 + £18.00 = £997.60, and she paid £1,400, so she is owed £402.40. Jon's share is £532.00 + £68.40 + £18.00 = £618.40, and he paid £216, so he owes £402.40. Side Badger suggests one payment, Jon to Maya, for £402.40, and [settle up](page:feature/settle-up) records it once it has been made. Split 50/50, the same month would have had Jon paying Maya £592.00.
+  - heading: Set it up in Side Badger
+    body: Ten minutes, most of it spent on the percentages.
+    items:
+      - "**Make the group.** On the dashboard choose **Create Group** and name it after the flat. Choose **Invite Others** and send Jon the link or QR code. He signs in or creates a free account, and picks the name he wants to be shown in this group. Only members can see a group, so this one is just the two of you."
+      - "**Add the rent.** Choose **Add Expense**. Enter the description and amount, and under **Who paid?** pick Maya. Keep both people under **Split between**, then under **How to split** choose **Percentage** and type 62 and 38. The form flags it if the percentages don't total 100. Choose **Save Expense**."
+      - "**Add the other bills.** Energy and broadband go in the same way, with Jon as the payer and the same 62 and 38. The takeaway is its own expense, with **How to split** left on **Equally**."
+      - "**Copy it next month.** Open last month's rent and choose **Copy expense**. The copy keeps the payer, the amount and the split, and takes today's date. Change the amount if the rent changed, then choose **Create Copy**. The energy bill works the same way."
+      - "**Check who owes whom.** The **Balances** section shows it and suggests a short list of payments. Pay each other however you like, then record the payment under **Settle Up**."
+  - heading: 50/50, by income, or bill by bill
+    body: There is no correct answer, only the one you both can live with. Three common ones.
+    items:
+      - "**Half each for everything.** The easiest to keep, and it suits couples whose pay is close."
+      - "**By income for everything shared.** What Maya and Jon do. One conversation, one pair of percentages."
+      - "**Bill by bill.** Rent and bills by income, holidays and treats 50/50 or whatever else you agree, and each bill gets the rule that suits it."
+  - heading: Agree what counts as shared
+    body: The arguments are usually about the list, not the percentages. Rent, energy, broadband, the weekly shop and the sofa count as shared in most homes. Maya's gym membership and Jon's football subscription may not. Agree the list once, write it down and put only the shared costs in the group.
+  - heading: The takeaway stays 50/50, on purpose
+    body: Treats are small and optional, and nobody should need a calculator to order dumplings. In Side Badger the takeaway is just another expense. Jon pays £36, **How to split** stays on **Equally** and each of them owes £18.
+  - heading: When someone's pay changes
+    body: A raise, a new job or time off work changes the sum. Work out the new percentages the same way and use them from the next expense. Earlier expenses stay as they were. Copy last month's rent, change the percentages, then choose **Create Copy**. To correct one that is already in, edit it if the group's permissions allow, and tell your partner first, because the balances change. The earlier version is kept. Agree when you will recalculate, such as once a year, and settle up before you switch so the old split closes with a clean count.
+  - heading: What Side Badger doesn't do here
+    items:
+      - It never asks what anyone earns and doesn't work out the percentages. You type the figures you agreed.
+      - It can't set a default split for the whole group. The percentages go on each expense, so copy one that already has them.
+      - It has no recurring bills, so you copy last month's rent each time.
+      - It never moves money. You pay each other however you like and record it.
+exampleAfter: 2
+example:
+  heading: A month in Maya and Jon's flat
+  currency: GBP
+  people:
+    - id: maya
+      name: Maya
+    - id: jon
+      name: Jon
+  expenses:
+    - label: the rent
+      payer: maya
+      amount: 1400
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: energy and broadband
+      payer: jon
+      amount: 180
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: the takeaway
+      payer: jon
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: Questions
+  items:
+    - q: Should we use gross or take-home pay?
+      a: The group decides. Take-home is common, because it is the money you actually have to spend. Gross pay ignores the fact that tax, pension contributions and loan repayments take different amounts out of different wages. Whichever you pick, use the same measure for both of you.
+    - q: Does Side Badger see our incomes?
+      a: No. You enter percentages only, never wages. The percentages are visible to the members of the group, and for a couple that is the two of you.
+    - q: Can we set 62/38 once for everything?
+      a: The split is set per expense, not per group. Copy an expense that already has 62 and 38, then change what differs. [Split expenses](page:feature/split-expenses) covers the other options.

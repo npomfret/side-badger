@@ -1,0 +1,112 @@
+# Guide 7 of the wave 2 briefs (tasks/release-2-plan.md, "Wave 2 and 3 briefs", P8). The worked example
+# is the brief's data (the state after Tom's edit); every number in the prose below comes from it or
+# from the arithmetic shown. Facts about expense questions: registry record `expense-questions`, the
+# app's user-features doc, and ExpenseService (an edit carries a question over only for people who
+# remain in the expense).
+review:
+  status: machine
+claims:
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: What to do when someone disputes a shared expense | Side Badger
+  description: Skip the pointed message. Question the expense instead and it leaves everyone's balances while you talk. Worked through with £45 of party wine.
+h1: What to do when someone disputes a shared expense
+navLabel: Disputed expenses
+lead: Raise a question on the expense instead of sending a pointed message. While the question is open, the whole expense stays out of everyone's balances. Talk it through in the comments, edit the split if the group agrees, and let the person who asked, or an admin, close the question.
+cta:
+  heading: Ask the awkward question politely
+  body: Create a free account, start a group for the flat and ask an admin to switch on expense questions, which are off until someone does. Want the tour first? See [how it works](page:how-it-works) or [what free covers](page:pricing).
+sections:
+  - heading: Three housemates and £45 of wine
+    body: After the party, Tom adds the wine to the flat's group. It's £45, paid by Tom, split equally between Tom, Priya and Aisha, which is £15 each. Aisha doesn't drink. Tom bought it for the party, and the party was for the [flat](page:use-case/housemates), so he hasn't done anything wrong. Aisha isn't wrong to ask, either. Nobody here is a villain. There's just £15 of wine in dispute and plenty of ways to make it awkward. A pointed message to the house is one. A question on the expense is a gentler one.
+  - heading: What a question does
+    body: Aisha opens the expense and raises a question. The whole expense drops out of everyone's balances, not just her share, and nothing else is affected. The big shop (£84) and the cleaner (£60) still count, which is £28 + £20 = £48 each. So while the wine is on hold, Aisha owes £48, Tom is owed £36 and Priya is owed £12. Whatever the flat decides about the wine, nobody's balance includes it meanwhile. Anyone else in the expense can raise a question of their own, too. The wine goes back into the balances only when the last open question on it is closed, and a question is closed by the person who asked or by an admin.
+  - heading: Talking it through, then fixing it
+    body: Aisha's question lands in the expense's comments, so the replies sit right underneath it. [Plan it together](page:feature/plan-together) has more on comments and questions. Tom and Priya read it and the flat has a chat. They decide the wine was Tom and Priya's, because they drank it. Another flat might keep the three-way split, or agree something in between, and that would be fine too. Side Badger stores what you agree and holds no opinion about wine. Tom edits the expense so it's split equally between himself and Priya, which is £22.50 each (£45 ÷ 2). Aisha is no longer in it, so her question goes with the old version and the wine rejoins the balances. The earlier version is kept.
+  - heading: Reading the result
+    body: With the wine back in, Tom is owed £58.50, Priya owes £10.50 and Aisha owes £48. Side Badger suggests two payments, both to Tom. Aisha's £48 is the figure she had while the wine was on hold, because she isn't in it. Priya has gone from being owed £12 to owing £10.50, which is her £22.50 half of the wine. Had the three-way split stood, Aisha would have owed £63 (£28 + £20 + £15). The whole disagreement was worth £15. Pay each other however you like, then record each payment under **Settle Up**. [Settle up](page:feature/settle-up) covers the rest.
+  - heading: Wording it so people keep talking to you
+    body: "Aisha's question: \"I didn't have any of the wine. Could we look at the split?\" It's short, it names the expense and it asks rather than accuses. A few habits help."
+    items:
+      - >-
+        **Ask about the expense, not the person.** "Could we check the split on the wine?" starts a conversation. "Why have I been charged for your wine?" starts the other kind.
+      - >-
+        **Say what you'd like to happen.** "Could it be just the people who drank it?" gives the group something to agree with or answer.
+      - >-
+        **Give a reason in a sentence or two.** The field is **Your question** and it can't be left empty.
+      - >-
+        **Keep the replies in one place.** Answers go in the expense's comments, next to the numbers they're about.
+  - heading: Set it up in Side Badger
+    items:
+      - >-
+        **Switch questions on.** They're off by default. An admin opens the group's **Settings**, turns on **Allow expense questions** under **Features** on the **General** tab and chooses **Save**. Turning it off later clears every open question.
+      - >-
+        **Raise one.** Open the expense and, next to your own name in the split, choose **I have a question**. Write your reason in **Your question** and choose **I have a question** again. Only people in the expense can do this. The expense now shows a **Questioned** badge.
+      - >-
+        **Find what's on hold.** In the expenses list, **Only questioned** shows the expenses with an open question.
+      - >-
+        **Fix it, if the group agrees.** Open the expense, choose **Edit**, change **Split between** and choose **Update Expense**. Who can edit is up to the group's permissions.
+      - >-
+        **Close it, if nothing needs fixing.** The person who asked can use the close button on their **Questioned** badge, labelled **Close question**, and so can an admin. The expense returns to the balances once its last question is closed.
+  - heading: When it isn't that tidy
+    items:
+      - >-
+        **The edit keeps the questioner in.** If the person who asked is still in the expense, their question carries over to the edited version and waits for them, or an admin, to close it. Fixing the amount isn't the same as agreeing it is fixed.
+      - >-
+        **You weren't in the expense.** Only people in an expense can question it. If something looks off to you, say so in its comments or ask whoever added it.
+      - >-
+        **Someone wants to leave the group.** An open question stops the people in that expense from leaving. Close the question, or edit the expense so they're no longer in it, and they can go.
+  - heading: What Side Badger doesn't do here
+    items:
+      - It doesn't decide who is right. It holds the expense out of the balances and keeps what you agree.
+      - It doesn't ask anyone to approve expenses before they count. Only a questioned expense is held.
+      - It can't hold back part of an expense. Question it and the whole of it leaves the balances.
+      - It doesn't move money. You pay each other however you like and record it.
+exampleAfter: 3
+example:
+  heading: The flat after the wine
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: the big shop
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: the cleaner
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: the party wine
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+faq:
+  heading: Questions
+  items:
+    - q: Can I question just my share?
+      a: No. A question holds out the whole expense, for everyone in it. If only the split is wrong, the fix is an edit to the split.
+    - q: Who can close a question?
+      a: The person who asked, or a group admin. If the person who added the expense isn't an admin, they can't close it on the questioner's behalf.
+    - q: Does editing an expense wipe out the original?
+      a: No. The earlier version is kept. Who can edit is decided by the group's permissions, so it is worth telling the house first, because the balances change.

@@ -521,7 +521,7 @@ These are settled. They extend the site plan's briefs, which still apply where n
    - Related: `feature/plan-together`, `use-case/housemates`, `feature/settle-up`.
    - Story: Tom adds £45 of party wine split between all three. Aisha didn't drink and questions it.
      - While the question is open, the wine is out of everyone's balances.
-     - They agree it is Tom and Priya's. Tom edits the split and Aisha closes the question.
+     - They agree it is Tom and Priya's. Tom edits the split so it's between Tom and Priya, and Aisha's question ends with the old version. An open question carries over to an edit only for people still in the expense (app `ExpenseService.updateExpense`).
    - Worked example (GBP), the state after the edit:
 
      | Expense | Paid by | Amount | Split |

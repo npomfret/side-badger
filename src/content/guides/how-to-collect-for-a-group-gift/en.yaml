@@ -1,0 +1,95 @@
+# Guide 6 under P8 (tasks/release-2-plan.md, "Wave 2 and 3 briefs"). The worked example is the
+# brief's data; every number in the prose below comes from it or from the arithmetic shown.
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: How to collect for a group gift | Side Badger
+  description: Everyone chips in a different amount and one person's card takes the hit. Run a budget poll, enter exact amounts and let Side Badger do the sums.
+h1: How to collect for a group gift
+navLabel: Collect for a group gift
+lead: Collecting for a group gift means one person fronts the money and everyone else owes them their chip-in. Agree a budget with a poll, let the buyer put the gift on their card, then enter it as one expense with [exact amounts](page:feature/split-expenses), a figure for each person. Side Badger shows who owes the buyer what, and everyone sends their share however they like.
+cta:
+  heading: Pass the hat without the hat
+  body: Make a group, leave the person who is getting the gift out of it and enter the present with exact amounts. Side Badger is free, with no ads and no daily limits. Want the tour first? See [how it works](page:how-it-works) or [what free covers](page:pricing).
+sections:
+  - heading: Four friends, one record player, four different sums
+    body: Bea is turning 30 and wants a record player. Priya, Omar, Lena and Sam are getting it for her. Priya finds one for £240 and buys it on her own card, because somebody has to go first. The four don't chip in equally. Priya and Omar put in £60 each, Lena £80 and Sam £40. Nobody explains their figure and nobody asks. Omar also buys a card and wrapping paper for £12. All four sign the card, so that one is split equally.
+  - heading: Agree the budget before anyone clicks Buy
+    body: A budget poll saves the argument about a £400 turntable. In the group, choose **Add Poll** and ask how much the present should cost. Make the options amounts, such as up to £150, up to £200 and up to £250. Turn on **Anonymous voting**, which hides who voted for what, so nobody has to defend a smaller number out loud. Settings can't change once the first vote is in, so check them first. A poll doesn't close itself. When everyone has voted, choose **Close poll** and the **Winner** shows. The poll agrees the total. It doesn't set anyone's share.
+  - heading: Reading the count
+    body: The gift splits £60, £60, £80 and £40, which adds up to the £240 on the receipt. The card and wrapping splits four ways at £3 each. Priya's bill is £60 + £3, so £63, and she paid £240, which leaves her owed £177. Omar's bill is also £63, but he paid £12, so he owes £51. Lena owes £80 + £3, which is £83, and Sam owes £40 + £3, which is £43. Those three add up to Priya's £177. Left alone, the debts would run five ways round the group. Side Badger suggests three payments instead, all to Priya. [Settle up](page:feature/settle-up) has the detail.
+  - heading: Put it in Side Badger
+    body: Priya's side takes about five minutes.
+    items:
+      - "**Make the group.** On the dashboard choose **Create Group**. Choose **Invite Others** and send the link or QR code to the people chipping in, and nobody else."
+      - "**Add the gift.** Choose **Add Expense**, describe it, enter 240 and under **Who paid?** pick Priya. Keep all four under **Split between**, then under **How to split** choose **Exact amounts** and type 60, 60, 80 and 40. The amounts have to add up to 240. Attach the order confirmation if you like. Choose **Save Expense**."
+      - "**Add the card.** Omar adds the £12 himself, picks himself under **Who paid?** and leaves **How to split** on **Equally**, with all four people ticked."
+      - "**Count, then pay.** Everyone checks **Balances**, which shows who owes whom, and sends Priya their share however they like. Then record it with **Settle Up** and **Record Settlement**. Quick settle fills in the amount."
+  - heading: Buy first, or collect first
+    body: "Side Badger doesn't hold the kitty, so \"collecting\" really means counting. Two orders work."
+    items:
+      - "**Buy first.** The buyer pays, adds the expense at the real price and everyone sees their share straight away. It's tidier, but the buyer carries the cost until people pay, so pick a buyer who can."
+      - "**Collect first.** People send their figure to the buyer before the purchase. Once you have the price, enter the gift, then record each payment with the date the money actually moved. Add the gift first, so every payment has a balance to land against."
+      - "**The price moves.** Delivery, a discount code, a late price rise. Edit the gift and change the exact amounts so they still add up. The earlier version is kept, but tell the group first, because their balances change."
+  - heading: Keep Bea out of it
+    body: Only members of a group can see it, so Bea can't see a group she isn't in. Invite the people chipping in and no one else. A link works until it expires, and you can choose anything from 15 minutes to 5 days, so pick a short one and send it where Bea won't see it. The link shows a preview of the group to whoever opens it, so name the group something dull, such as Saturday kitty, and keep Bea's name out of expense labels and poll options too.
+  - heading: What Side Badger doesn't do here
+    items:
+      - It doesn't hold or collect the money. Chip-ins go to the buyer by bank transfer, cash or whatever you use, and then someone records them.
+      - It sends no payment reminders. Nudging whoever hasn't paid is still a human job.
+      - It doesn't work out anyone's share. A poll agrees the budget and there is no "split what's left" option, so you type each amount.
+      - Each expense has one payer. If two people bought different parts of the gift, enter two expenses.
+      - Everyone in the split needs a free account and a place in the group.
+exampleAfter: 2
+example:
+  heading: Bea's record player, and the card
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: the gift
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: card and wrapping
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: Questions
+  items:
+    - q: What if we collect more than the gift costs?
+      a: The exact amounts have to add up to the price, so trim the shares until they do. Or put the extra on something real, such as flowers, and enter that as a second expense, like the card and wrapping in the example.
+    - q: Can someone chip in without joining the group?
+      a: Not if you want them in the count. Everyone in the split needs a free account and to be in the group. For someone who only has cash, Priya could take it and enter the gift for what the group still owes. For example, if Sam gave her £40 in cash, she would enter £200 and split it 60, 60 and 80 between herself, Omar and Lena.
+    - q: Can the poll decide how much each person puts in?
+      a: No. A poll agrees a figure for the whole group, such as the budget. Each person's share is yours to agree between you, then type it into the expense as **Exact amounts**.

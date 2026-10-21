@@ -270,6 +270,7 @@ export const features: readonly FeatureRecord[] = [
     ],
     verifiedAt: APP_COMMIT,
     limits: [
+      'Editing an expense carries open questions over only for people still in it: an edit that takes the questioner out ends their question.',
       'Available per group, off by default.',
       'Only participants of the expense can raise a question.',
       'Turning the feature off clears every open question.',

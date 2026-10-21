@@ -8,6 +8,7 @@ import {
   faqPageNode,
   serializeJsonLd,
   softwareApplicationNode,
+  webApplicationNode,
   webPageId,
   type JsonLdNode,
 } from '../seo/jsonld';
@@ -212,6 +213,22 @@ describe('JSON-LD graph', () => {
       author: { '@id': 'https://sidebadger.me/#organization' },
     });
     expect(serializeJsonLd(graph)).not.toMatch(/HowTo/);
+  });
+
+  it('describes a tool as a free WebApplication priced at zero in GBP, the main subject of its page', () => {
+    const node = webApplicationNode('split-bill-calculator', 'fr', { name: 'Calculateur', description: 'Partagez.' }) as Loose;
+    expect(node).toMatchObject({
+      '@type': 'WebApplication',
+      '@id': 'https://sidebadger.me/fr/split-bill-calculator/#webapp',
+      name: 'Calculateur',
+      url: 'https://sidebadger.me/fr/split-bill-calculator/',
+      applicationCategory: 'FinanceApplication',
+      isAccessibleForFree: true,
+      inLanguage: 'fr',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'GBP' },
+      mainEntityOfPage: { '@id': webPageId('split-bill-calculator', 'fr') },
+    });
+    expect(serializeJsonLd([node as JsonLdNode])).not.toMatch(/HowTo|aggregateRating|AggregateRating|Review/);
   });
 
   it('escapes < so no value can close the script element', () => {

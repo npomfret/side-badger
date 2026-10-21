@@ -1,0 +1,642 @@
+---
+/**
+ * The split-bill calculator (release 2, R3). Everything runs in the browser: this component
+ * renders the frame, the `<template>`s for the rows the script adds, and the interface text as
+ * JSON for the script. People, expenses and the result are built by `split-calculator.ts` from
+ * the templates, so every node carries this component's scoped styles.
+ *
+ * The frame is `inert` and dimmed until the script starts, so a visitor without JavaScript sees
+ * the noscript line and the page's worked example rather than a form that does nothing. All
+ * text comes from `tools.split.*`; amounts are formatted by the script with the locale's Intl
+ * code. The call to the app under the result goes through `LaunchAppCta` (cta `tool-result`).
+ */
+import LaunchAppCta from '../cta/LaunchAppCta.astro';
+import { localeConfig, t, tf, type Locale } from '../../i18n';
+import { currencyChoices, likelyCurrency } from './currencies';
+import {
+  MAX_LABEL_LENGTH,
+  MAX_NAME_LENGTH,
+  MAX_NUMBER_LENGTH,
+  MAX_PEOPLE,
+} from './split-engine';
+
+interface Props {
+  pageId: string;
+  locale: Locale;
+}
+
+const { pageId, locale } = Astro.props;
+const { intlCode } = localeConfig[locale];
+
+const likely = likelyCurrency(locale, intlCode);
+const currencies = currencyChoices(likely);
+const defaultCurrency = likely ?? 'GBP';
+const currencyNames = new Intl.DisplayNames(intlCode, { type: 'currency' });
+const currencyName = (code: string) => {
+  try {
+    return currencyNames.of(code) ?? code;
+  } catch {
+    return code;
+  }
+};
+
+// The text the script needs after load. Every key is written out, so the unused-key test sees it.
+const messages = {
+  personLabel: t('tools.split.personLabel', locale),
+  removePerson: t('tools.split.removePerson', locale),
+  expenseLegend: t('tools.split.expenseLegend', locale),
+  removeExpense: t('tools.split.removeExpense', locale),
+  defaultNames: t('tools.split.defaultNames', locale),
+  defaultExpenseNames: t('tools.split.defaultExpenseNames', locale),
+  shareAmount: t('tools.split.shareAmount', locale),
+  sharePercent: t('tools.split.sharePercent', locale),
+  copied: t('tools.split.copied', locale),
+  copyFailed: t('tools.split.copyFailed', locale),
+  linkTooLarge: t('tools.split.linkTooLarge', locale),
+  resultEmpty: t('tools.split.resultEmpty', locale),
+  resultWaiting: t('tools.split.resultWaiting', locale),
+  summary: t('tools.split.summary', locale),
+  summarySettled: t('tools.split.summarySettled', locale),
+  transfer: t('example.transfer', locale),
+  errors: {
+    nameMissing: t('tools.split.errorNameMissing', locale),
+    nameDuplicate: t('tools.split.errorNameDuplicate', locale),
+    payerMissing: t('tools.split.errorPayerMissing', locale),
+    amountMissing: t('tools.split.errorAmountMissing', locale),
+    amountInvalid: t('tools.split.errorAmountInvalid', locale),
+    amountPositive: t('tools.split.errorAmountPositive', locale),
+    amountMax: t('tools.split.errorAmountMax', locale),
+    amountDecimals: t('tools.split.errorAmountDecimals', locale),
+    nobody: t('tools.split.errorNobody', locale),
+    shareInvalid: t('tools.split.errorShareInvalid', locale),
+    sharePositive: t('tools.split.errorSharePositive', locale),
+    shareDecimals: t('tools.split.errorShareDecimals', locale),
+    exactTotal: t('tools.split.errorExactTotal', locale),
+    percentTotal: t('tools.split.errorPercentTotal', locale),
+    unexpected: t('tools.split.errorUnexpected', locale),
+  },
+};
+// `<` cannot close the script element
+const messagesJson = JSON.stringify(messages).replace(/</g, '\\u003c');
+---
+
+<div
+  class="split-calc"
+  data-split-calc
+  data-intl={intlCode}
+  data-currency={defaultCurrency}
+  inert
+>
+  <noscript><p class="sc-noscript">{t('tools.split.noscript', locale)}</p></noscript>
+  <p class="sc-privacy">{t('tools.split.privacy', locale)}</p>
+
+  <div class="sc-layout">
+    <div class="sc-inputs">
+      <div class="sc-panel">
+        <div class="sc-field sc-currency">
+          <label for="sc-currency">{t('tools.split.currency', locale)}</label>
+          <select id="sc-currency" data-ref="currency">
+            {currencies.map(code => (
+              <option value={code} selected={code === defaultCurrency}>{code} · {currencyName(code)}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+
+      <section class="sc-panel" aria-labelledby="sc-people-heading">
+        <h3 id="sc-people-heading">{t('tools.split.people', locale)}</h3>
+        <ol class="sc-people" role="list" data-ref="people"></ol>
+        <p class="sc-limit" data-ref="peopleLimit" hidden>
+          {tf('tools.split.peopleLimit', { max: MAX_PEOPLE }, locale)}
+        </p>
+        <button type="button" class="btn btn-secondary sc-add" data-action="add-person">
+          {t('tools.split.addPerson', locale)}
+        </button>
+      </section>
+
+      <section class="sc-panel" aria-labelledby="sc-expenses-heading">
+        <h3 id="sc-expenses-heading">{t('tools.split.expenses', locale)}</h3>
+        <div class="sc-expenses" data-ref="expenses"></div>
+        <button type="button" class="btn btn-secondary sc-add" data-action="add-expense">
+          {t('tools.split.addExpense', locale)}
+        </button>
+      </section>
+    </div>
+
+    <section class="sc-panel sc-results" aria-labelledby="sc-result-heading">
+      <h3 id="sc-result-heading">{t('tools.split.result', locale)}</h3>
+      <p class="sc-status" role="status" data-ref="status"></p>
+
+      <div data-ref="result" hidden>
+        <h4 id="sc-balances-heading">{t('example.balances', locale)}</h4>
+        <ul class="sc-list" role="list" aria-labelledby="sc-balances-heading" data-ref="balances"></ul>
+        <p class="sc-hint">{t('example.balanceHint', locale)}</p>
+        <div data-ref="payments-box">
+          <h4 id="sc-payments-heading">{t('example.transfers', locale)}</h4>
+          <ol class="sc-payments" aria-labelledby="sc-payments-heading" data-ref="payments"></ol>
+        </div>
+      </div>
+
+      <div class="sc-cta">
+        <p>{t('tools.split.ctaLine', locale)}</p>
+        <LaunchAppCta target="register" cta="tool-result" pageId={pageId} locale={locale}>
+          {t('home.hero.ctaPrimary', locale)}
+        </LaunchAppCta>
+      </div>
+
+      <div class="sc-share">
+        <button type="button" class="btn btn-secondary sc-add" data-action="copy-link">
+          {t('tools.split.copyLink', locale)}
+        </button>
+        <p class="sc-share__status" aria-live="polite" data-ref="shareStatus"></p>
+        <div class="sc-field sc-link" data-ref="linkBox" hidden>
+          <label for="sc-link">{t('tools.split.linkLabel', locale)}</label>
+          <input id="sc-link" type="text" readonly dir="ltr" data-ref="link" />
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script type="application/json" data-ref="messages" set:html={messagesJson} />
+
+  <template data-template="person">
+    <li class="sc-person">
+      <div class="sc-field">
+        <label data-ref="caption"></label>
+        <input type="text" autocomplete="off" dir="auto" maxlength={MAX_NAME_LENGTH} data-ref="name" />
+      </div>
+      <button type="button" class="sc-remove" data-action="remove-person" data-ref="remove">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+          <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+      </button>
+      <p class="sc-error" data-ref="error" hidden></p>
+    </li>
+  </template>
+
+  <template data-template="expense">
+    <fieldset class="sc-expense">
+      <legend data-ref="legend"></legend>
+      <div class="sc-expense__body">
+        <div class="sc-expense__head">
+          <div class="sc-field">
+            <label data-ref="labelLabel">{t('tools.split.expenseLabel', locale)}</label>
+            <input type="text" autocomplete="off" dir="auto" maxlength={MAX_LABEL_LENGTH} data-ref="label" />
+          </div>
+          <button type="button" class="sc-remove" data-action="remove-expense" data-ref="remove">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+              <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="sc-expense__fields">
+          <div class="sc-field">
+            <label data-ref="payerLabel">{t('tools.split.paidBy', locale)}</label>
+            <select data-ref="payer">
+              <option value="-1" disabled>{t('tools.split.chooseWho', locale)}</option>
+            </select>
+            <p class="sc-error" data-ref="payerError" hidden></p>
+          </div>
+          <div class="sc-field">
+            <label data-ref="amountLabel">{t('tools.split.amount', locale)}</label>
+            <input type="text" inputmode="decimal" autocomplete="off" dir="ltr" maxlength={MAX_NUMBER_LENGTH} data-ref="amount" />
+            <p class="sc-error" data-ref="amountError" hidden></p>
+          </div>
+          <div class="sc-field">
+            <label data-ref="methodLabel">{t('tools.split.howToSplit', locale)}</label>
+            <select data-ref="method">
+              <option value="equal">{t('tools.split.splitEqual', locale)}</option>
+              <option value="exact">{t('tools.split.splitExact', locale)}</option>
+              <option value="percent">{t('tools.split.splitPercent', locale)}</option>
+            </select>
+          </div>
+        </div>
+        <fieldset class="sc-shares" data-ref="sharesBox">
+          <legend>{t('tools.split.sharedBetween', locale)}</legend>
+          <ul class="sc-share-list" role="list" data-ref="shares"></ul>
+          <p class="sc-error" data-ref="sharesError" hidden></p>
+        </fieldset>
+      </div>
+    </fieldset>
+  </template>
+
+  <template data-template="share">
+    <li class="sc-share-row">
+      <div class="sc-share-row__check">
+        <input type="checkbox" data-ref="include" />
+        <label data-ref="includeLabel"></label>
+      </div>
+      <div class="sc-share-row__value">
+        <label class="sr-only" data-ref="valueLabel"></label>
+        <input type="text" inputmode="decimal" autocomplete="off" dir="ltr" maxlength={MAX_NUMBER_LENGTH} data-ref="value" />
+        <span class="sc-unit" aria-hidden="true" data-ref="unit"></span>
+      </div>
+      <p class="sc-error" data-ref="error" hidden></p>
+    </li>
+  </template>
+
+  <template data-template="balance">
+    <li class="sc-balance"><span data-ref="name"></span> <span class="sc-balance__amount" data-ref="amount"></span></li>
+  </template>
+
+  <template data-template="payment">
+    <li></li>
+  </template>
+</div>
+
+<script>
+  import { startSplitCalculators } from './split-calculator';
+
+  startSplitCalculators();
+</script>
+
+<style>
+  .split-calc {
+    --sc-error: #a3200f;
+    --sc-line: var(--glass-border-hover);
+    --sc-surface: rgba(255, 255, 255, 0.72);
+    display: grid;
+    gap: var(--space-lg);
+  }
+
+  /* Until the script has started: visible, so the page does not jump, but plainly not live */
+  .split-calc[inert] {
+    opacity: 0.55;
+  }
+
+  /* `display` on a class would otherwise beat the `hidden` attribute */
+  .split-calc [hidden] {
+    display: none;
+  }
+
+  .sc-privacy,
+  .sc-noscript {
+    margin: 0;
+    color: var(--text-secondary);
+  }
+
+  .sc-noscript {
+    padding: var(--space-md);
+    border: 1px solid var(--glass-border-hover);
+    border-radius: var(--radius-md);
+    background: var(--sc-surface);
+    color: var(--text-primary);
+    font-weight: 600;
+  }
+
+  .sc-layout {
+    display: grid;
+    gap: var(--space-lg);
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+  }
+
+  @media (min-width: 64rem) {
+    .sc-layout {
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    }
+
+    .sc-results {
+      position: sticky;
+      inset-block-start: calc(var(--header-h) + var(--space-md));
+    }
+  }
+
+  .sc-inputs {
+    display: grid;
+    gap: var(--space-lg);
+    min-inline-size: 0;
+  }
+
+  /* The page's global `section` padding is for full-width bands, not panels */
+  .sc-panel {
+    padding: var(--space-lg);
+    background: var(--sc-surface);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    min-inline-size: 0;
+  }
+
+  .sc-panel h3 {
+    margin: 0 0 var(--space-md);
+    font-size: var(--text-xl);
+    overflow-wrap: anywhere;
+  }
+
+  .sc-panel h4 {
+    margin: var(--space-md) 0 var(--space-sm);
+    font-size: var(--text-base);
+    color: var(--text-heading);
+  }
+
+  /* Fields */
+  .sc-field {
+    display: grid;
+    gap: var(--space-xs);
+    min-inline-size: 0;
+    align-content: start;
+  }
+
+  .sc-field label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-heading);
+    overflow-wrap: anywhere;
+  }
+
+  .split-calc input[type='text'],
+  .split-calc select {
+    inline-size: 100%;
+    min-inline-size: 0;
+    min-block-size: 2.75rem;
+    padding: var(--space-sm) var(--space-md);
+    font: inherit;
+    color: var(--text-primary);
+    background: #fff;
+    border: 1px solid var(--sc-line);
+    border-radius: var(--radius-md);
+  }
+
+  /* A select's arrow takes room, so it gets a little less padding to keep its text whole */
+  .split-calc select {
+    padding-inline: var(--space-sm);
+  }
+
+  .split-calc input[readonly] {
+    background: var(--bg-void);
+  }
+
+  .split-calc [aria-invalid='true'] {
+    border-color: var(--sc-error);
+    box-shadow: inset 0 0 0 1px var(--sc-error);
+  }
+
+  .sc-error {
+    margin: 0;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--sc-error);
+    overflow-wrap: anywhere;
+  }
+
+  .sc-limit,
+  .sc-hint {
+    margin: var(--space-sm) 0 0;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+  }
+
+  .sc-add {
+    margin-block-start: var(--space-md);
+    padding: var(--space-sm) var(--space-lg);
+    min-block-size: 2.75rem;
+  }
+
+  .split-calc .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  /* People */
+  .sc-people {
+    display: grid;
+    gap: var(--space-md);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sc-person {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: var(--space-xs) var(--space-sm);
+  }
+
+  .sc-person .sc-error {
+    grid-column: 1 / -1;
+  }
+
+  /* An icon-only button, at least 44 by 44 */
+  .sc-remove {
+    display: inline-grid;
+    place-items: center;
+    inline-size: 2.75rem;
+    block-size: 2.75rem;
+    padding: 0;
+    color: var(--text-primary);
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+  }
+
+  .sc-remove:hover:not(:disabled) {
+    background: var(--bg-deep);
+    border-color: var(--sc-line);
+  }
+
+  .sc-remove:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+
+  /* Expenses */
+  .sc-expenses {
+    display: grid;
+    gap: var(--space-lg);
+  }
+
+  .sc-expense {
+    margin: 0;
+    padding: var(--space-md);
+    min-inline-size: 0;
+    border: 1px solid var(--glass-border-hover);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .sc-expense > legend,
+  .sc-shares > legend {
+    padding-inline: var(--space-sm);
+    font-weight: 700;
+    color: var(--text-heading);
+  }
+
+  .sc-shares > legend {
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+
+  .sc-expense__body {
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .sc-expense__head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: var(--space-sm);
+  }
+
+  .sc-expense__fields {
+    display: grid;
+    gap: var(--space-md);
+    grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+    align-items: start;
+  }
+
+  .sc-shares {
+    margin: 0;
+    padding: var(--space-sm) var(--space-md) var(--space-md);
+    min-inline-size: 0;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+  }
+
+  .sc-share-list {
+    display: grid;
+    gap: var(--space-sm);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sc-share-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-xs) var(--space-md);
+    align-items: center;
+  }
+
+  .sc-share-row__check {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    min-inline-size: 0;
+  }
+
+  .sc-share-row__check input {
+    flex: none;
+    inline-size: 1.25rem;
+    block-size: 1.25rem;
+    accent-color: var(--accent-ink);
+  }
+
+  .sc-share-row__check label {
+    overflow-wrap: anywhere;
+  }
+
+  .sc-share-row__value {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    min-inline-size: 0;
+  }
+
+  .sc-unit {
+    flex: none;
+    min-inline-size: 2.5rem;
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+  }
+
+  .sc-share-row .sc-error {
+    grid-column: 1 / -1;
+  }
+
+  /* The value box only shows for exact amounts and percentages */
+  .sc-expense[data-method='equal'] .sc-share-row__value {
+    display: none;
+  }
+
+  /* Name and figure side by side where there is room, stacked on a phone */
+  @media (min-width: 36rem) {
+    .sc-expense:not([data-method='equal']) .sc-share-row {
+      grid-template-columns: minmax(0, 1fr) minmax(8rem, 11rem);
+    }
+  }
+
+  /* Result */
+  .sc-status {
+    margin: 0;
+    font-weight: 600;
+    color: var(--text-heading);
+    overflow-wrap: anywhere;
+  }
+
+  .sc-list,
+  .sc-payments {
+    display: grid;
+    gap: var(--space-xs);
+    margin: 0;
+    padding: 0;
+  }
+
+  .sc-list {
+    list-style: none;
+  }
+
+  .sc-payments {
+    padding-inline-start: var(--space-lg);
+    font-weight: 600;
+    color: var(--accent-ink);
+  }
+
+  .sc-payments :global(li) {
+    overflow-wrap: anywhere;
+    unicode-bidi: plaintext;
+  }
+
+  .sc-balance {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-md);
+    overflow-wrap: anywhere;
+  }
+
+  .sc-balance__amount {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    unicode-bidi: isolate;
+  }
+
+  .sc-cta {
+    margin-block-start: var(--space-lg);
+    padding-block-start: var(--space-md);
+    border-block-start: 1px solid var(--glass-border);
+  }
+
+  .sc-cta p {
+    margin: 0 0 var(--space-md);
+    color: var(--text-secondary);
+  }
+
+  .sc-share {
+    display: grid;
+    gap: var(--space-sm);
+    margin-block-start: var(--space-lg);
+    padding-block-start: var(--space-md);
+    border-block-start: 1px solid var(--glass-border);
+    justify-items: start;
+  }
+
+  .sc-share .sc-add {
+    margin-block-start: 0;
+  }
+
+  .sc-share__status {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    overflow-wrap: anywhere;
+  }
+
+  .sc-link {
+    inline-size: 100%;
+  }
+</style>

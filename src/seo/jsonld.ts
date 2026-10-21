@@ -106,6 +106,37 @@ export function softwareApplicationNode(
   return node as JsonLdNode;
 }
 
+/** The `@id` of a tool page's `WebApplication` node. */
+export function webApplicationId(pageId: string, locale: Locale): string {
+  return `${canonicalFor(pageId, locale)}#webapp`;
+}
+
+/**
+ * `WebApplication` for a tool page (release 2, R3): a free in-browser tool, priced in GBP like
+ * `SoftwareApplication`. It names the page's `WebPage` as the page it is the main subject of.
+ */
+export function webApplicationNode(
+  pageId: string,
+  locale: Locale,
+  options: { name: string; description: string }
+): JsonLdNode {
+  return {
+    '@type': 'WebApplication',
+    '@id': webApplicationId(pageId, locale),
+    name: options.name,
+    url: canonicalFor(pageId, locale),
+    description: options.description,
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Web',
+    browserRequirements: 'Requires JavaScript',
+    isAccessibleForFree: true,
+    inLanguage: localeConfig[locale].htmlLang,
+    publisher: { '@id': ORGANIZATION_ID },
+    mainEntityOfPage: { '@id': webPageId(pageId, locale) },
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'GBP' },
+  } as JsonLdNode;
+}
+
 export interface FaqItem {
   question: string;
   answer: string;

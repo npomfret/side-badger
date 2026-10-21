@@ -196,8 +196,8 @@ export const pageArt: Readonly<Record<string, PageArtDef>> = {
         title: { expense: 0 },
         total: { label: { payer: 0 }, amount: { amount: 0 } },
       },
-      { prop: 'sticky', text: key('art.rentGuide.sticky') },
-      { prop: 'stamp', text: key('art.rentGuide.stamp'), tone: 'green' },
+      { prop: 'sticky', text: key('art.howToSplitRentByRoomSize.sticky') },
+      { prop: 'stamp', text: key('art.howToSplitRentByRoomSize.stamp'), tone: 'green' },
     ],
   },
   'guide/how-to-split-a-holiday-villa-when-people-stay-different-nights': {
@@ -205,7 +205,7 @@ export const pageArt: Readonly<Record<string, PageArtDef>> = {
     items: [
       { prop: 'ledger', expense: 0 },
       { prop: 'ledger', payment: 0 },
-      { prop: 'stamp', text: key('art.villaGuide.stamp'), tone: 'ink' },
+      { prop: 'stamp', text: key('art.howToSplitAHolidayVillaWhenPeopleStayDifferentNights.stamp'), tone: 'ink' },
     ],
   },
   'guide/how-to-split-a-stag-or-hen-weekend': {
@@ -216,8 +216,8 @@ export const pageArt: Readonly<Record<string, PageArtDef>> = {
         title: { expense: 1 },
         total: { label: { payer: 1 }, amount: { amount: 1 } },
       },
-      { prop: 'sticky', text: key('art.henGuide.sticky'), color: 'pink' },
-      { prop: 'stamp', text: key('art.henGuide.stamp'), tone: 'green' },
+      { prop: 'sticky', text: key('art.howToSplitAStagOrHenWeekend.sticky'), color: 'pink' },
+      { prop: 'stamp', text: key('art.howToSplitAStagOrHenWeekend.stamp'), tone: 'green' },
     ],
   },
 

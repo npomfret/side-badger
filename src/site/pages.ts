@@ -18,7 +18,8 @@ export type PageType =
   | 'pricing'
   | 'support'
   | 'legal'
-  | 'article';
+  | 'article'
+  | 'tool';
 
 /** The page types that describe the product. A guide links to at least two of them (restructure D20). */
 export const PRODUCT_PAGE_TYPES: readonly PageType[] = ['feature', 'use-case', 'how-it-works'];
@@ -312,6 +313,19 @@ export const pages = [
     locales: 'all',
     related: ['use-case/group-trips', 'feature/split-expenses', 'feature/settle-up'],
     content: { collection: 'guides', slug: 'how-to-split-a-stag-or-hen-weekend' },
+    indexing: 'per-locale-review',
+  },
+  {
+    id: 'split-bill-calculator',
+    type: 'tool',
+    path: '/split-bill-calculator/',
+    parent: 'home',
+    published: false,
+    locales: 'all',
+    footer: { group: 'product', order: 8 },
+    related: ['feature/split-expenses', 'feature/settle-up'],
+    features: ['expense-splitting', 'balances'],
+    content: { collection: 'sitePages', slug: 'split-bill-calculator' },
     indexing: 'per-locale-review',
   },
 ] as const satisfies readonly PageDef[];

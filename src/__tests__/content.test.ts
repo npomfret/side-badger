@@ -24,6 +24,7 @@ import {
   guide,
   richTextPageIds,
   richTextProblem,
+  sitePage,
   sitePageByType,
   type ContentCollection,
 } from '@/content/schemas';
@@ -207,7 +208,7 @@ describe(`content entries (${getI18nMode()} mode, ${entries.length} entries, ${a
     expect(failures).toEqual([]);
   });
 
-  it('gives each site page the shape of its registry type (hub or how it works)', () => {
+  it('gives each site page the shape of its registry type (hub, how it works or tool)', () => {
     const failures = entries.flatMap(e => {
       if (e.collection !== 'sitePages') return [];
       const page = contentPages.find(p => p.content!.collection === 'sitePages' && p.content!.slug === e.slug);
@@ -599,6 +600,29 @@ describe('content rules (fixtures)', () => {
     for (const key of ['problem', 'workflow', 'options', 'limits', 'faq', 'useCasesHeading']) delete (hub as Record<string, unknown>)[key];
     expect(sitePageByType.hub.safeParse(hub).success).toBe(true);
     expect(sitePageByType['how-it-works'].safeParse(hub).success).toBe(false);
+    expect(sitePageByType.tool.safeParse(hub).success).toBe(false);
+  });
+
+  it('accepts a tool page with sections and a worked example, and no other site page shape', () => {
+    const tool: Record<string, unknown> = {
+      ...english,
+      sections: [{ heading: 'How it works', body: 'Add the people, then the bills.' }],
+      example: {
+        currency: 'GBP',
+        people: [{ id: 'a', name: 'Ana' }, { id: 'b', name: 'Ben' }],
+        expenses: [{ label: 'Dinner', payer: 'a', amount: 40, split: { method: 'equal' } }],
+      },
+      exampleAfter: 1,
+    };
+    for (const key of ['problem', 'workflow', 'options', 'limits', 'useCasesHeading']) delete tool[key];
+    expect(sitePageByType.tool.safeParse(tool).success).toBe(true);
+    expect(sitePage.safeParse(tool).success).toBe(true);
+    expect(sitePageByType.tool.safeParse({ ...tool, faq: undefined }).success).toBe(true);
+    expect(sitePageByType.tool.safeParse({ ...tool, example: undefined }).success).toBe(false);
+    expect(sitePageByType.tool.safeParse({ ...tool, sections: [] }).success).toBe(false);
+    expect(sitePageByType.tool.safeParse({ ...tool, exampleAfter: 2 }).success).toBe(false);
+    expect(sitePageByType.hub.safeParse(tool).success).toBe(false);
+    expect(sitePageByType['how-it-works'].safeParse(tool).success).toBe(false);
   });
 });
 

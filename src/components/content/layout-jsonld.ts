@@ -11,6 +11,7 @@ import {
   faqPageNode,
   itemListNode,
   softwareApplicationId,
+  webApplicationNode,
   webPageId,
   type JsonLdNode,
 } from '../../seo/jsonld';
@@ -34,4 +35,4 @@ export function faqNode(faq: Faq | undefined): JsonLdNode[] {
   return faq ? [faqPageNode(faq.items.map(({ q, a }) => ({ question: q, answer: plainText(a) })))] : [];
 }
 
-export { articleNode, itemListNode };
+export { articleNode, itemListNode, webApplicationNode };

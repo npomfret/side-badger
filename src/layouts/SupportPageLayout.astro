@@ -1,0 +1,115 @@
+---
+/**
+ * The help page (release 2, R9): the hero with the support address, the short answers grouped by
+ * topic, the closing "Still stuck?" group with the address again, and the closing call to action.
+ * Each group is an H2 with its questions as H3s, in the FaqList pattern (FaqList itself has a
+ * fixed `faq` id, and this page has several groups).
+ *
+ * The address is plain text, never a mailto link, and `dir="ltr"` keeps it readable in
+ * right-to-left locales.
+ *
+ * JSON-LD (2.5): WebPage about the app, plus one FAQPage holding every question on the page with
+ * identical text. The page is one level below Home, so there is no breadcrumb (D22).
+ */
+import BaseLayout from './BaseLayout.astro';
+import ContentSection from '../components/content/ContentSection.astro';
+import CtaBand from '../components/content/CtaBand.astro';
+import PageHero from '../components/content/PageHero.astro';
+import RichText from '../components/content/RichText.astro';
+import { faqNode, webPageNode } from '../components/content/layout-jsonld';
+import type { SupportPageData } from '../content/schemas';
+import type { Locale } from '../i18n';
+import { requirePage, type PageId } from '../site/pages';
+
+interface Props {
+  data: SupportPageData;
+  pageId: string;
+  locale: Locale;
+}
+
+const { data, pageId, locale } = Astro.props;
+const page = requirePage(pageId);
+const { contact } = data;
+
+// Ids are positional, so they are the same in every locale
+const groups = [
+  ...data.groups.map((group, index) => ({ ...group, id: `help-${index + 1}`, closing: false })),
+  { heading: contact.heading, items: contact.items, id: 'still-stuck', closing: true },
+];
+const questions = groups.flatMap(group => group.items);
+---
+
+<BaseLayout
+  page={pageId as PageId}
+  title={data.meta.title}
+  description={data.meta.description}
+  locale={locale}
+  jsonLd={[webPageNode(pageId, locale), ...faqNode({ items: questions })]}
+>
+  <article class="content-page" data-page-type="support" data-unpublished={page.published ? undefined : ''}>
+    <PageHero h1={data.h1} lead={data.lead} pageId={pageId} locale={locale}>
+      <!-- Plain text, not a mailto link, to keep it from link-harvesting scrapers -->
+      <p slot="action" class="support-contact">
+        {contact.emailLabel} <span class="support-email" dir="ltr">{contact.email}</span>
+      </p>
+    </PageHero>
+
+    {groups.map(group => (
+      <ContentSection heading={group.heading} id={group.id}>
+        <div class="help-list">
+          {group.items.map(item => (
+            <div class="help-entry glass">
+              <h3>{item.q}</h3>
+              <RichText as="p" text={item.a} locale={locale} />
+            </div>
+          ))}
+        </div>
+        {group.closing && (
+          <p class="support-contact support-contact--closing">
+            {contact.emailLabel} <span class="support-email" dir="ltr">{contact.email}</span>
+          </p>
+        )}
+      </ContentSection>
+    ))}
+
+    <CtaBand cta={data.cta} pageId={pageId} locale={locale} />
+  </article>
+</BaseLayout>
+
+<style>
+  .help-list {
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .help-entry {
+    padding: var(--space-lg);
+  }
+
+  .help-entry h3 {
+    margin: 0 0 var(--space-sm);
+    font-size: var(--text-xl);
+    overflow-wrap: anywhere;
+  }
+
+  .help-entry :global(p) {
+    margin: 0;
+  }
+
+  .support-contact {
+    margin: 0;
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+  }
+
+  .support-contact--closing {
+    margin-block-start: var(--space-lg);
+  }
+
+  .support-email {
+    font-weight: 600;
+    color: var(--text-primary);
+    user-select: all;
+    overflow-wrap: anywhere;
+  }
+</style>

@@ -73,6 +73,8 @@ const STRUCTURAL_LEAVES = new Set([
   'url',
   'source',
   'tableAfter',
+  // The help page's support address
+  'email',
 ]);
 /** Top-level fields that are bookkeeping and never compared with English. */
 const BOOKKEEPING = new Set(['review', 'translatedFrom', 'identicalApproved']);
@@ -223,7 +225,7 @@ describe(`content entries (${getI18nMode()} mode, ${entries.length} entries, ${a
     expect(failures).toEqual([]);
   });
 
-  it('gives each site page the shape of its registry type (hub, how it works or tool)', () => {
+  it('gives each site page the shape of its registry type (hub, how it works, tool or support)', () => {
     const failures = entries.flatMap(e => {
       if (e.collection !== 'sitePages') return [];
       const page = contentPages.find(p => p.content!.collection === 'sitePages' && p.content!.slug === e.slug);
@@ -638,6 +640,38 @@ describe('content rules (fixtures)', () => {
     expect(sitePageByType.tool.safeParse({ ...tool, exampleAfter: 2 }).success).toBe(false);
     expect(sitePageByType.hub.safeParse(tool).success).toBe(false);
     expect(sitePageByType['how-it-works'].safeParse(tool).success).toBe(false);
+  });
+
+  it('accepts a help page with grouped answers and a structural support address, and no other site page shape', () => {
+    const answer = { q: 'Forgot your password?', a: 'Choose **Forgot your password?** and see [pricing](page:pricing).' };
+    const support: Record<string, unknown> = {
+      ...english,
+      groups: [{ heading: 'Signing in', items: [answer] }],
+      contact: { heading: 'Still stuck?', items: [answer], emailLabel: 'Email us at', email: 'support@sidebadger.me' },
+    };
+    for (const key of ['problem', 'workflow', 'options', 'limits', 'faq', 'useCasesHeading']) delete support[key];
+    expect(sitePageByType.support.safeParse(support).success).toBe(true);
+    expect(sitePage.safeParse(support).success).toBe(true);
+    for (const shape of ['hub', 'how-it-works', 'tool'] as const) {
+      expect(sitePageByType[shape].safeParse(support).success, shape).toBe(false);
+    }
+    const contact = support.contact as Record<string, unknown>;
+    expect(sitePageByType.support.safeParse({ ...support, groups: [] }).success).toBe(false);
+    expect(sitePageByType.support.safeParse({ ...support, groups: [{ heading: 'Empty', items: [] }] }).success).toBe(false);
+    expect(sitePageByType.support.safeParse({ ...support, contact: { ...contact, email: 'not an address' } }).success).toBe(false);
+    expect(sitePageByType.support.safeParse({ ...support, contact: { ...contact, items: [{ q: 'Q?', a: '[x](https://example.com)' }] } }).success).toBe(false);
+
+    // The address is structure, not text: a translation keeps it exactly and is never asked to translate it
+    const french = {
+      ...support,
+      groups: [{ heading: 'Connexion', items: [{ q: 'Mot de passe oublié ?', a: 'Voyez les [tarifs](page:pricing).' }] }],
+      contact: { ...contact, heading: 'Toujours bloqué ?', emailLabel: 'Écrivez-nous à' },
+    };
+    expect(parityProblems(support, french)).toEqual([]);
+    expect(untranslated(support, french)).not.toContain('contact.email');
+    expect(parityProblems(support, { ...french, contact: { ...french.contact, email: 'aide@sidebadger.me' } }).join()).toMatch(
+      /contact\.email must equal English/
+    );
   });
 });
 

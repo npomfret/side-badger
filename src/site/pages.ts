@@ -70,6 +70,7 @@ export const pages = [
     published: true,
     locales: 'all',
     footer: { group: 'product', order: 7 },
+    content: { collection: 'sitePages', slug: 'support' },
     indexing: 'per-locale-review',
   },
   {

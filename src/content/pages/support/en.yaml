@@ -1,0 +1,93 @@
+review:
+  status: machine
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: Help and support | Side Badger
+  description: Forgotten password, a link that won't work, a payment recorded wrong? Short answers to what people get stuck on in Side Badger, and how to reach us.
+h1: Help and support, minus the hold music
+navLabel: Help and support
+lead: Short answers to the things people get stuck on, from a forgotten password to closing a group for good. Each one links to the page that explains more. Can't find yours? Tell us from inside the app, or drop us a line.
+cta:
+  heading: Came for help, staying for the splitting?
+  body: No account yet? Start a group, share the link and add the first expense. Free, with no ads and no daily limits.
+groups:
+  - heading: Signing in
+    items:
+      - q: Forgot your password?
+        a: It happens to the best badgers. Choose **Forgot your password?** on the **Sign In** screen, enter your account email, then follow the link in the email we send to choose a new one. [How it works](page:how-it-works) covers what else an account needs.
+      - q: I've signed up, but I can't add anything. Why?
+        a: Most often your email isn't verified yet, so open the link in the verification email, or choose **Resend verification email** on the reminder banner for a fresh one. If you are verified, the group may be locked or its permissions may not let you, and a viewer sees everything and changes nothing, as [groups and permissions](page:feature/groups-and-permissions) explains.
+      - q: How do I change my email or password?
+        a: In **Settings**, choose **Change Email** or **Change Password**. Both ask for your current password first, and a new email address needs verifying from the link we send to it. [How it works](page:how-it-works) covers accounts.
+      - q: Can I sign in with Google or Apple?
+        a: No. All you need is an email address and a password of at least 12 characters, and you can tick **Remember me** on your own phone or computer. The [web app](page:feature/web-app) page covers the rest of getting started.
+  - heading: Joining a group
+    items:
+      - q: Someone sent me an invite link. How do I join?
+        a: Open it, then sign in or create a free account. You'll see a preview of the group, choose the name people will see you as there, and press **Join Group**. [Groups and permissions](page:feature/groups-and-permissions) shows the whole way in.
+      - q: It says "Awaiting approval". Did I do something wrong?
+        a: Not at all. This group has an admin let each person in, so your request has gone to its admins, and you can't see inside until one of them approves it. A friendly nudge in person is allowed, and [groups and permissions](page:feature/groups-and-permissions) explains approval.
+      - q: The link says it's invalid or has expired.
+        a: Invite links last as long as whoever made them chose, from 15 minutes up to 5 days. Ask someone in the group for a fresh link, or for the QR code if you're in the same room. [How it works](page:how-it-works) covers invites.
+  - heading: Expenses
+    items:
+      - q: How do I add an expense?
+        a: Open the group and choose **Add Expense**. Say what it was, how much, who paid and who shared it, then split it equally, by exact amounts or by percentage. [Split expenses](page:feature/split-expenses) walks through every option.
+      - q: Can the rent repeat every month?
+        a: Not on its own, because there are no recurring expenses. Open last month's and choose **Copy expense**, and the form arrives filled in, ready for a new date and whatever changed. [Split expenses](page:feature/split-expenses) has more on copying.
+      - q: I typed the wrong amount. Can I fix it?
+        a: Yes. Edit the expense, as long as the group's permissions let you and the group isn't locked. The earlier version is kept, so nobody has to take your word for what changed, as [split expenses](page:feature/split-expenses) explains.
+      - q: An expense looks wrong, and it isn't mine. What now?
+        a: Choose **I have a question** on it and say why, and the whole expense stays out of everyone's balances until the person who asked, or an admin, closes the question. No such button? Only people included in an expense can ask, an admin has to turn on **Allow expense questions** in the group's settings first, and the [disputed expense guide](page:guide/what-to-do-when-someone-disputes-a-shared-expense) has the diplomacy.
+  - heading: Payments
+    items:
+      - q: Does Side Badger send the money?
+        a: No, Side Badger never moves money. Pay each other however you like, by bank transfer, cash or whatever works, then record the payment so the balances catch up. [How to settle up after a group trip](page:guide/how-to-settle-up-after-a-group-trip) goes through it from start to finish.
+      - q: How do I record a payment?
+        a: Choose **Settle Up** in the group, say who paid and who received it, enter the amount or let a **Quick settle** button fill it in, and choose **Record Settlement**. Paid only part? Record what was paid and the rest stays on the balance, as [settle up](page:feature/settle-up) explains.
+      - q: I recorded a payment wrong. Can I fix it?
+        a: Whoever recorded it can edit it from the group's **Settlements** history, and they or an admin can delete it, which takes it off the balances. A payment involving someone who has since left the group can't be edited. [Settle up](page:feature/settle-up) covers the history.
+  - heading: Notifications and the home screen
+    items:
+      - q: How do I turn on notifications?
+        a: Switch on **Push notifications** in **Settings** and allow them when your browser asks. If the browser has already blocked them, allow them in its own settings first. Each device is switched on separately and delivery isn't guaranteed, so treat a notification as a nudge, not a promise, as the [web app](page:feature/web-app) page explains.
+      - q: Why don't notifications work on my iPhone?
+        a: On an iPhone or iPad they only work in the app added to your Home Screen, never in a browser tab. Add it, open it from the Home Screen icon, then switch them on in **Settings**. [Plan together](page:feature/plan-together) shows what they tell you about.
+      - q: Is there an app to download?
+        a: Not from an app store, because Side Badger runs in your browser. Sign in, then follow **Add to Home Screen or Dock** in **Settings**, and it opens like an app, in a window of its own. The [web app](page:feature/web-app) page has the steps for each device.
+  - heading: Leaving, archiving, locking and closing
+    items:
+      - q: How do I leave a group?
+        a: Settle up, then choose **Leave Group**. You can't leave while you owe or are owed money in even one currency, while an expense you're in has an open question, or if you're the last admin or the only member, and coming back needs a new invitation. [Groups and permissions](page:feature/groups-and-permissions) has the details.
+      - q: How do I get an old group off my dashboard?
+        a: Choose **Archive Group**. It disappears from your dashboard and nobody else's, you can still open and use it, and **Unarchive Group** brings it back. [Groups and permissions](page:feature/groups-and-permissions) compares archiving, locking and closing.
+      - q: The trip's over. Can we stop the numbers changing?
+        a: Yes. An admin can switch on **Lock Group** in the group's settings, and nobody can add or edit expenses, record new payments or change lists and polls until an admin unlocks it. Everyone can still read the group and its history, and no late taxi sneaks in, as [groups and permissions](page:feature/groups-and-permissions) explains.
+      - q: Can I delete a group?
+        a: An admin can close it with **Close Group**, after typing the group's name to confirm. Closing is permanent and makes the group unavailable to everyone, so if you only want it out of sight, archive it instead. [Groups and permissions](page:feature/groups-and-permissions) has the small print.
+contact:
+  heading: Still stuck?
+  items:
+    - q: Found a bug, or want something changed?
+      a: Tell us from inside the app. Choose **Feedback** in your account menu, then **Send Feedback**, and pick **Report Issue**, **Request Help** or **Feature Request**. Attach a screenshot if it helps, and when we reply you'll find it in the same thread.
+    - q: Would you rather email?
+      a: Write to the address below. Say which group it's about, what you did and what you expected to happen. Venting is fine; passwords are not, so never send yours.
+  emailLabel: Email us at
+  email: support@sidebadger.me

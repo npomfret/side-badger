@@ -15,7 +15,8 @@ const BASE = ['WebSite', 'Organization', 'WebPage'];
 export const requiredTypes: Record<PageType, string[]> = {
   home: [...BASE, 'SoftwareApplication'],
   pricing: [...BASE, 'FAQPage'],
-  support: [...BASE],
+  // The help page's grouped answers are one FAQPage (release 2, R9)
+  support: [...BASE, 'FAQPage'],
   hub: ['WebSite', 'Organization', 'CollectionPage', 'ItemList'],
   feature: [...BASE, 'BreadcrumbList'],
   'use-case': [...BASE, 'BreadcrumbList'],

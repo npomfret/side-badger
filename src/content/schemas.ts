@@ -277,12 +277,36 @@ export const toolPage = entry({
   faq: faq.optional(),
 }).refine(exampleAfterFits, { message: EXAMPLE_AFTER_MESSAGE, path: ['exampleAfter'] });
 
+/** One question and its short answer on the help page */
+const helpAnswer = z.object({ q: text, a: richText }).strict();
+const helpAnswers = z.array(helpAnswer).min(1).max(6);
+
 /**
- * `sitePages`: `src/content/pages/<pageId>/<locale>.yaml` (how it works, the hubs, the tools). The
- * page's registry type picks which of the shapes applies (content.test.ts checks it).
+ * The help page (release 2, R9): short answers grouped by topic, each group an H2 with its
+ * questions as H3s, then the closing "Still stuck?" group, which ends with the support address.
+ * Every question on the page is in its `FAQPage` JSON-LD.
+ *
+ * The address is structural: identical in every locale (content.test.ts) and shown as plain text,
+ * never a mailto link. `emailLabel` is the words in front of it, such as "Email us at".
  */
-export const sitePage = z.union([hubPage, howItWorksPage, toolPage]);
-export const sitePageByType = { hub: hubPage, 'how-it-works': howItWorksPage, tool: toolPage } as const;
+export const supportPage = entry({
+  groups: z.array(z.object({ heading: text, items: helpAnswers }).strict()).min(1),
+  contact: z
+    .object({ heading: text, items: helpAnswers, emailLabel: text, email: z.string().email() })
+    .strict(),
+});
+
+/**
+ * `sitePages`: `src/content/pages/<pageId>/<locale>.yaml` (how it works, the hubs, the tools, the
+ * help page). The page's registry type picks which of the shapes applies (content.test.ts checks it).
+ */
+export const sitePage = z.union([hubPage, howItWorksPage, toolPage, supportPage]);
+export const sitePageByType = {
+  hub: hubPage,
+  'how-it-works': howItWorksPage,
+  tool: toolPage,
+  support: supportPage,
+} as const;
 
 /** An id for a source or a table row's reference to it. Structural: identical in every locale. */
 const sourceId = z.string().regex(/^[a-z][a-z0-9-]*$/);
@@ -415,4 +439,5 @@ export type GuideData = z.infer<typeof guide>;
 export type ComparePageData = z.infer<typeof comparePage>;
 export type SitePageData = z.infer<typeof sitePage>;
 export type ToolPageData = z.infer<typeof toolPage>;
+export type SupportPageData = z.infer<typeof supportPage>;
 export type WorkedExampleData = z.infer<typeof workedExample>;

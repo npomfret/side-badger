@@ -2,7 +2,7 @@
  * Pseudo-locale content (restructure D38): under PREVIEW_PSEUDO=1 the four pseudo-locales have no
  * YAML of their own. Their entry is the English one run through `pseudoize`, except for the
  * fields that are structure rather than text: ids, shot ids, split methods, currency codes,
- * claim ids, a guide's owner and dates, and the review block. Link targets inside rich text
+ * claim ids, a guide's owner and dates, the help page's support address, and the review block. Link targets inside rich text
  * (`](page:pricing)`) are kept too, so the links still resolve.
  */
 import { pseudoize, type PseudoLocale } from '../../i18n/pseudo';
@@ -23,6 +23,7 @@ const STRUCTURAL_KEYS = new Set([
   'url',
   'source',
   'tableAfter',
+  'email',
   'review',
   'translatedFrom',
   'identicalApproved',

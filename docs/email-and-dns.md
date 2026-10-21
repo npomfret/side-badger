@@ -24,7 +24,7 @@ Reference for the next person who changes the sidebadger.me DNS zone or its mail
 
 ### People's mail: Google Workspace
 
-sidebadger.me is a secondary domain on the owner's existing Workspace, with no extra seats. Groups:
+sidebadger.me is a secondary domain on the existing Google Workspace whose primary domain is `snowmonkey.co.uk`, with no extra seats. The groups' owner is `gsuite@snowmonkey.co.uk`. Groups:
 
 - `support@sidebadger.me`: the owner is a member; "Who can post" is External.
 - `dmarc-reports@sidebadger.me`: receives DMARC aggregate reports.

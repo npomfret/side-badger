@@ -3,10 +3,17 @@
  * The top of a content page (restructure 5.6): the one `h1`, the lead, the first call to action
  * and, when the page has one, its first product shot. The default action is a register link
  * through the launch counter; a page can supply its own action through the named slot.
+ *
+ * Pages with art (`src/data/page-art.ts`, R7) show it beside the text on wide screens and under
+ * the call to action on phones, so the h1, lead and action never move down. A product shot that
+ * has an image takes the art's place.
  */
 import LaunchAppCta from '../cta/LaunchAppCta.astro';
+import { artFor } from '../../data/page-art';
+import type { WorkedExampleData } from '../../content/schemas';
 import { t, type Locale } from '../../i18n';
 import BetaLabel from './BetaLabel.astro';
+import PageArt from './PageArt.astro';
 import RichText from './RichText.astro';
 import Screenshot from './Screenshot.astro';
 
@@ -21,9 +28,12 @@ interface Props {
   beta?: boolean;
   /** Extra intro paragraph (hubs) */
   intro?: string;
+  /** The page's worked example, which the art takes its names and amounts from */
+  example?: WorkedExampleData;
 }
 
-const { h1, lead, pageId, locale, shot, beta = false, intro } = Astro.props;
+const { h1, lead, pageId, locale, shot, beta = false, intro, example } = Astro.props;
+const hasArt = artFor(pageId) !== undefined;
 ---
 
 <section class="page-hero" aria-labelledby="page-title">
@@ -43,6 +53,11 @@ const { h1, lead, pageId, locale, shot, beta = false, intro } = Astro.props;
         </slot>
       </div>
     </div>
+    {hasArt && (
+      <div class="page-hero__art">
+        <PageArt pageId={pageId} locale={locale} example={example} />
+      </div>
+    )}
     {shot && (
       <div class="page-hero__shot">
         <Screenshot id={shot.id} locale={locale} alt={shot.alt} eager />
@@ -60,10 +75,6 @@ const { h1, lead, pageId, locale, shot, beta = false, intro } = Astro.props;
     display: grid;
     gap: var(--space-xl);
     align-items: center;
-  }
-
-  .page-hero__grid:has(.page-hero__shot :global(img)) {
-    grid-template-columns: repeat(auto-fit, minmax(min(24rem, 100%), 1fr));
   }
 
   .page-title {
@@ -100,6 +111,28 @@ const { h1, lead, pageId, locale, shot, beta = false, intro } = Astro.props;
 </style>
 
 <style is:global>
+  /*
+   * The hero's two-column cases. Global, because Astro does not unwrap `:global()` inside
+   * `:has()`, so the selector cannot name the screenshot's `img` from the scoped block.
+   * A product shot with an image goes beside the text; art goes beside it from a tablet up, and
+   * under the call to action before that. A shot with an image replaces the art, and one without
+   * (not captured yet) takes no space.
+   */
+  .page-hero__grid:has(.page-hero__shot img) {
+    grid-template-columns: repeat(auto-fit, minmax(min(24rem, 100%), 1fr));
+  }
+
+  @media (min-width: 52rem) {
+    .page-hero__grid:has(.page-hero__art):not(:has(.page-hero__shot img)) {
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    }
+  }
+
+  .page-hero__grid:has(.page-hero__art) .page-hero__shot:not(:has(img)),
+  .page-hero__grid:has(.page-hero__shot img) .page-hero__art {
+    display: none;
+  }
+
   /*
    * Links in running text on content pages (rich-text links, related-page links). The site's
    * link colour is too close to its body text to tell them apart by colour alone (WCAG 1.4.1), so

@@ -2,6 +2,8 @@
 /**
  * One expense card in scene 3's ledger: title, split type, the amount as it was paid, and an
  * optional aside. It drops in at stage 3 (`rise` from above); `from`/`to` are its native range.
+ * With `card` the text is given outright and the card is still: content pages use it for their
+ * hero art (`PageArt`), where the words come from the page's own worked example.
  */
 import { t, type Locale, type TranslationKey } from '@/i18n';
 import Avatar from '../Avatar.astro';
@@ -9,28 +11,51 @@ import type { Expense } from '../../data/example-group';
 import { formatMoney } from '../../format';
 import { expenseTitle, memberColor, memberName, SPLIT_KEYS } from './helpers';
 
-interface Props {
-  expense: Expense;
-  locale: Locale;
-  from: number;
-  to: number;
-  index: number;
+interface Card {
+  payer: string;
+  /** An avatar colour (`MEMBERS[].color.light`) */
+  color: string;
+  title: string;
+  split?: string;
+  /** Already formatted; the card has no amount column without it */
+  amount?: string;
 }
-const { expense, locale, from, to, index } = Astro.props;
-const payer = memberName(expense.paidBy, locale);
+
+interface Props {
+  expense?: Expense;
+  card?: Card;
+  locale: Locale;
+  from?: number;
+  to?: number;
+  index?: number;
+}
+const { expense, card, locale, from = 0, to = 0, index = 0 } = Astro.props;
+if (!expense && !card) throw new Error('LedgerCard needs an expense or a card');
+const content: Card = card ?? {
+  payer: memberName(expense!.paidBy, locale),
+  color: memberColor(expense!.paidBy),
+  title: expenseTitle(expense!, locale),
+  split: t(SPLIT_KEYS[expense!.split.kind], locale),
+  amount: formatMoney(expense!.original.minor, expense!.original.currency, locale),
+};
+const note = card ? undefined : expense!.noteKey;
+// A card animates only on the homepage, where it has an expense and a range
+const motion = card
+  ? {}
+  : { 'data-anim': 'rise', 'data-at': 3, style: `--dy:-32px;--from:${from};--to:${to};--i:${index}` };
 ---
 
-<li class="lc" data-anim="rise" data-at="3" style={`--dy:-32px;--from:${from};--to:${to};--i:${index}`}>
-  <Avatar name={payer} color={memberColor(expense.paidBy)} size="2rem" />
+<li class="lc" {...motion}>
+  <Avatar name={content.payer} color={content.color} size="2rem" />
   <div class="lc__body">
-    <p class="lc__head">
-      <strong>{expenseTitle(expense, locale)}</strong>
-      <span class="lc__sep" aria-hidden="true">·</span>
-      <span class="lc__split">{t(SPLIT_KEYS[expense.split.kind], locale)}</span>
+    <p class:list={['lc__head', { 'lc__head--dotted': card }]}>
+      <strong>{content.title}</strong>
+      {!card && content.split && <span class="lc__sep" aria-hidden="true">·</span>}
+      {content.split && <span class:list={['lc__split', { 'lc__split--dotted': card }]}>{content.split}</span>}
     </p>
-    {expense.noteKey && <p class="lc__note">{t(expense.noteKey as TranslationKey, locale)}</p>}
+    {note && <p class="lc__note">{t(note as TranslationKey, locale)}</p>}
   </div>
-  <bdi class="lc__amount">{formatMoney(expense.original.minor, expense.original.currency, locale)}</bdi>
+  {content.amount && <bdi class="lc__amount">{content.amount}</bdi>}
 </li>
 
 <style>
@@ -59,6 +84,24 @@ const payer = memberName(expense.paidBy, locale);
   }
   .lc__split {
     color: var(--ink-muted, #4e5a52);
+  }
+  /* A card's split carries its own dot, in the space after the title. When the split wraps to a
+     line of its own the dot falls outside the head and is clipped, so it never dangles. */
+  .lc__head--dotted {
+    overflow: clip;
+  }
+  .lc__head--dotted strong {
+    margin-inline-end: 0.5rem;
+  }
+  .lc__split--dotted {
+    position: relative;
+  }
+  .lc__split--dotted::before {
+    content: '·';
+    position: absolute;
+    inset-inline-start: -0.875rem;
+    inline-size: 0.875rem;
+    text-align: center;
   }
   .lc__note {
     margin: 0.125rem 0 0;

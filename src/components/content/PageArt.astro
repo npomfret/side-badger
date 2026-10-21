@@ -1,0 +1,305 @@
+---
+/**
+ * Hero art for a content page (release 2, R7): two to four of the homepage's paper props in one of
+ * five fixed layouts, so the inner pages share some of its charm without changing their look.
+ * What goes in it is `src/data/page-art.ts`; the words are the page's worked example (names,
+ * labels, amounts, formatted for the locale), existing keys or short `art.*` keys.
+ *
+ * It is decoration (`aria-hidden`), static, inline CSS only, and carries no motion. The props
+ * paint with the paper palette of `src/styles/props.css`, scoped here by `.page-art`. On a phone
+ * the whole thing shrinks (`zoom`) to a strip under the hero's call to action.
+ */
+import '../../styles/props.css';
+import Avatar from '../home/props/Avatar.astro';
+import ChatBubble from '../home/props/ChatBubble.astro';
+import Polaroid from '../home/props/Polaroid.astro';
+import Receipt from '../home/props/Receipt.astro';
+import Stamp from '../home/props/Stamp.astro';
+import StickyNote from '../home/props/StickyNote.astro';
+import LedgerCard from '../home/props/expenses/LedgerCard.astro';
+import { EXPENSES, MEMBERS } from '../home/data/example-group';
+import { formatMoney } from '../home/format';
+import { artFor, type ArtItem, type ArtText } from '../../data/page-art';
+import type { WorkedExampleData } from '../../content/schemas';
+import { computeExample, convertedMinor } from '../../lib/settle';
+import { localeConfig, t, tf, type Locale } from '../../i18n';
+import { moneyFormatter } from './money';
+
+interface Props {
+  pageId: string;
+  locale: Locale;
+  /** The page's worked example: where the names and amounts come from */
+  example?: WorkedExampleData;
+}
+
+const { pageId, locale, example } = Astro.props;
+const art = artFor(pageId);
+if (!art) throw new Error(`PageArt: no art for page "${pageId}" (src/data/page-art.ts)`);
+
+const intl = localeConfig[locale].intlCode;
+const money = moneyFormatter(intl);
+// A page without an example (a hub, pricing) has art that names no person or expense
+const { heading: _heading, ...data }: WorkedExampleData = example ?? { currency: 'GBP', people: [], expenses: [] };
+const result = example ? computeExample(data) : undefined;
+
+const fail = (what: string): never => {
+  throw new Error(`PageArt "${pageId}": the page's worked example has no ${what}`);
+};
+const personAt = (n: number) => data.people[n] ?? fail(`person ${n}`);
+const personIndex = (id: string) => data.people.findIndex(person => person.id === id);
+const expenseAt = (n: number) => data.expenses[n] ?? fail(`expense ${n}`);
+const payerIndex = (n: number) => personIndex(expenseAt(n).payer);
+const capitalise = (label: string) => label.charAt(0).toLocaleUpperCase(intl) + label.slice(1);
+const amountOf = (n: number) => money.major(expenseAt(n).amount, expenseAt(n).currency ?? data.currency);
+const transferAt = (n: number) => result?.transfers[n] ?? fail(`payment ${n}`);
+// The avatar colours are the example group's, taken in people order
+const colorOf = (person: number) => MEMBERS[person % MEMBERS.length]!.color.light;
+
+function words(text: ArtText): string {
+  if ('key' in text) return t(text.key, locale);
+  if ('person' in text) return personAt(text.person).name;
+  if ('payer' in text) return personAt(payerIndex(text.payer)).name;
+  if ('expense' in text) return capitalise(expenseAt(text.expense).label);
+  if ('amount' in text) return amountOf(text.amount);
+  if ('converted' in text) return `≈ ${money.minor(convertedMinor(data, expenseAt(text.converted)), data.currency)}`;
+  if ('paid' in text) {
+    const n = text.paid;
+    const payer = personAt(payerIndex(n)).name;
+    return tf('example.paid', { payer, amount: amountOf(n), item: expenseAt(n).label }, locale);
+  }
+  if ('payment' in text) {
+    const { from, to, minor } = transferAt(text.payment);
+    const amount = money.minor(minor, data.currency);
+    return tf('example.transfer', { from: personAt(personIndex(from)).name, to: personAt(personIndex(to)).name, amount }, locale);
+  }
+  const homeExpense = EXPENSES.find(expense => expense.id === text.home) ?? fail(`homepage expense ${text.home}`);
+  return formatMoney(homeExpense.original.minor, homeExpense.original.currency, locale);
+}
+
+const splitKeys = {
+  equal: 'home.expenses.splitEqual',
+  exact: 'home.expenses.splitExact',
+  percent: 'home.expenses.splitPercent',
+} as const;
+
+/** The card an expense or a suggested payment makes (LedgerCard's `card`) */
+function ledgerCard(item: Extract<ArtItem, { prop: 'ledger' }>) {
+  if ('expense' in item) {
+    const n = item.expense;
+    return {
+      payer: personAt(payerIndex(n)).name,
+      color: colorOf(payerIndex(n)),
+      title: capitalise(expenseAt(n).label),
+      split: t(splitKeys[expenseAt(n).split.method], locale),
+      amount: amountOf(n),
+    };
+  }
+  const from = personIndex(transferAt(item.payment).from);
+  return {
+    payer: personAt(from).name,
+    color: colorOf(from),
+    title: words({ payment: item.payment }),
+  };
+}
+
+// Each item's tilt, unless the data sets one: alternating, so neighbours lean apart
+const TILTS = [-3, 2.5, -2, 3];
+const items = art.items.map((item, index) => ({
+  item,
+  tilt: ('tilt' in item && item.tilt) || TILTS[index % TILTS.length]!,
+}));
+---
+
+<div class={`page-art page-art--${art.layout}`} aria-hidden="true" data-art={pageId}>
+  {items.map(({ item, tilt }) => (
+    <div class="page-art__item" data-kind={item.prop} style={item.prop === 'ledger' ? `--rot:${tilt / 3}deg` : undefined}>
+      {item.prop === 'receipt' && (
+        <Receipt
+          title={words(item.title)}
+          total={item.total && { label: words(item.total.label), amount: item.total.amount && words(item.total.amount) }}
+          rotate={tilt}
+        />
+      )}
+      {item.prop === 'sticky' && <StickyNote color={item.color} rotate={tilt}>{words(item.text)}</StickyNote>}
+      {item.prop === 'stamp' && <Stamp tone={item.tone} rotate={item.tilt ?? -6}>{words(item.text)}</Stamp>}
+      {item.prop === 'polaroid' && (
+        <Polaroid name={personAt(item.person).name} color={colorOf(item.person)} rotate={tilt}>
+          {item.tag && <span class="page-art__tag">{words(item.tag)}</span>}
+        </Polaroid>
+      )}
+      {item.prop === 'avatar' && <Avatar name={personAt(item.person).name} color={colorOf(item.person)} />}
+      {item.prop === 'bubble' && <ChatBubble side={item.side} decorative>{words(item.text)}</ChatBubble>}
+      {item.prop === 'ledger' && (
+        <ul class="page-art__ledger" role="list">
+          <LedgerCard locale={locale} card={ledgerCard(item)} />
+        </ul>
+      )}
+    </div>
+  ))}
+</div>
+
+<style is:global>
+  /*
+   * Global, because the layouts size and place props whose own styles are scoped to them. Everything
+   * is logical, so the compositions mirror in right-to-left locales; the tilts are the props' own
+   * `rotate`.
+   */
+  .page-art {
+    display: grid;
+    inline-size: min(100%, 26rem);
+    margin-inline: auto;
+    padding: 0.75rem;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .page-art__item {
+    display: grid;
+    min-inline-size: 0;
+    rotate: var(--rot, 0deg);
+  }
+
+  .page-art__ledger {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* An amount never breaks; a long label wraps instead (as on the homepage's receipts) */
+  .page-art .receipt :is(.receipt__lines li, .receipt__total) > bdi {
+    flex: none;
+    white-space: nowrap;
+  }
+
+  /* The amount under a polaroid's name */
+  .page-art__tag {
+    display: block;
+    margin-block-start: 0.125rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--green-ink);
+  }
+
+  /* Cluster: a tall prop at the start, a second at the end and a third under it */
+  .page-art--cluster {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      'a b'
+      'a c';
+    gap: 1rem 1.5rem;
+    align-items: center;
+  }
+  .page-art--cluster > :nth-child(1) {
+    grid-area: a;
+  }
+  .page-art--cluster > :nth-child(2) {
+    grid-area: b;
+  }
+  .page-art--cluster > :nth-child(3) {
+    grid-area: c;
+    justify-self: center;
+  }
+  .page-art--cluster > :nth-child(2):last-child {
+    grid-row: 1 / span 2;
+  }
+
+  /* Stack: expense cards, each leaning a little the other way; a stamp lands under the last,
+     just touching it, so it never covers the words (which end at the other side in right-to-left) */
+  .page-art--stack {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.625rem;
+  }
+  .page-art--stack > :nth-child(odd) {
+    margin-inline-end: 1.25rem;
+  }
+  .page-art--stack > :nth-child(even) {
+    margin-inline-start: 1.25rem;
+  }
+  .page-art--stack > [data-kind='stamp'] {
+    justify-self: end;
+    margin-block: -0.5rem 0;
+    margin-inline: 0 0.5rem;
+    position: relative;
+  }
+
+  /* Row: props side by side, overlapping a little */
+  .page-art--row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .page-art--row > .page-art__item {
+    flex: 0 1 8.5rem;
+  }
+  .page-art--row > .page-art__item + .page-art__item {
+    margin-inline-start: -0.25rem;
+  }
+  .page-art--row > [data-kind='sticky']:nth-child(even) {
+    margin-block-start: 1.5rem;
+  }
+  .page-art--row > [data-kind='receipt'] {
+    flex-basis: 10rem;
+    min-inline-size: 8.5rem;
+  }
+  .page-art--row > [data-kind='receipt'] + [data-kind='receipt'] {
+    margin-inline-start: 0.75rem;
+  }
+  .page-art--row > [data-kind='polaroid'] {
+    flex: 0 0 auto;
+  }
+  .page-art--row > [data-kind='stamp'] {
+    flex: 0 0 auto;
+    margin-inline-start: -2rem;
+    margin-block-start: 3rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Chat: avatar then bubble, bubble then avatar */
+  .page-art--chat {
+    grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr) auto;
+    grid-template-areas:
+      'a b b .'
+      '. c c d';
+    gap: 0.75rem;
+    align-items: end;
+  }
+  .page-art--chat > :nth-child(1) {
+    grid-area: a;
+  }
+  .page-art--chat > :nth-child(2) {
+    grid-area: b;
+  }
+  .page-art--chat > :nth-child(3) {
+    grid-area: c;
+  }
+  .page-art--chat > :nth-child(4) {
+    grid-area: d;
+  }
+
+  /* Flank: two props side by side; the pricing hero spreads them to the two ends (pricing.css) */
+  .page-art--flank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .page-art--flank > [data-kind='receipt'] {
+    flex: 0 1 10rem;
+  }
+
+  /* Sizes: the props are drawn for the homepage's 16px; a wide hero has room for more, a phone gets a strip */
+  @media (min-width: 70rem) {
+    .page-art {
+      zoom: 1.25;
+    }
+  }
+  @media (max-width: 599px) {
+    .page-art {
+      zoom: 0.85;
+      /* About 160px at most, whatever the language: the art is decoration, so a long one is cropped */
+      max-block-size: 11.5rem;
+      overflow: clip;
+    }
+  }
+</style>

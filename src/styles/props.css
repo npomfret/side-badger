@@ -1,0 +1,38 @@
+/*
+ * The paper-and-ink palette the illustration props are drawn in (src/components/home/props/).
+ * The props read these tokens with no --home-* prefix, so any page that shows them scopes the
+ * palette on a wrapper: the homepage (`.home`), the hero art on content pages (`.page-art`) and
+ * the worked example (`.worked-example`). Light only: the site has no dark mode.
+ */
+:is(.home, .page-art, .worked-example) {
+  /* Palette */
+  --paper: #fffdf8;
+  --kraft: #e9dcc3;
+  --ink: #1d2b24;
+  --ink-muted: #4e5a52; /* 6.3:1 on the homepage table. Dim with this, never with opacity. */
+  --green-ink: #2f6b2e;
+  --teal-ink: #2b6670;
+  --brand-green: #6aa864;
+  --brand-teal: #508c96;
+  --thread-red: #c8433a; /* graphics */
+  --thread-red-text: #b3362e; /* text, 5.2:1 */
+  --sticky-yellow: #ffe58a;
+  --sticky-pink: #f9c6cf;
+  --paper-shadow: 0 1px 1px rgb(29 43 36 / 0.12), 0 6px 14px -4px rgb(29 43 36 / 0.22);
+  --paper-shadow-lift: 0 2px 3px rgb(29 43 36 / 0.14), 0 16px 28px -8px rgb(29 43 36 / 0.3);
+
+  /* Member avatar colours, in people order: the app's palette as in components/home/data/example-group.ts */
+  --member-1: #1f5582;
+  --member-2: #c2410c;
+  --member-3: #0f766e;
+  --member-4: #59359a;
+  --member-5: #b45309;
+
+  /* App interface inside AppFrame: the real app's tokens, unchanged */
+  --app-primary: #16a34a;
+  --app-primary-dark: #15803d;
+  --app-ink: #1f2937;
+  --app-surface: #ffffff;
+  --app-tint: #f0fdf4;
+  --app-danger: #dc2626;
+}

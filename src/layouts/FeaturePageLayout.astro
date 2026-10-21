@@ -59,6 +59,7 @@ const guides = await relatedCards(pageId, locale, other => other.type === 'artic
       pageId={pageId}
       locale={locale}
       beta={isBetaPage(pageId)}
+      example={data.example}
       shot={heroShot?.shot ? { id: heroShot.shot, alt: heroShot.shotAlt ?? '' } : undefined}
     />
 

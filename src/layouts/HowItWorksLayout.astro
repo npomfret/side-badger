@@ -47,7 +47,7 @@ const guides = await relatedCards(pageId, locale, other => other.type === 'artic
   jsonLd={[webPageNode(pageId, locale), ...faqNode(data.faq)]}
 >
   <article class="content-page" data-page-type="how-it-works" data-unpublished={page.published ? undefined : ''}>
-    <PageHero h1={data.h1} lead={data.lead} pageId={pageId} locale={locale} />
+    <PageHero h1={data.h1} lead={data.lead} pageId={pageId} locale={locale} example={data.example} />
 
     {/* Each step is its own h2, so the list needs no landmark (an h1-named region would repeat the hero) */}
     <div class="hiw-steps" data-section="steps">

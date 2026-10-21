@@ -50,7 +50,7 @@ const exampleAfter = data.exampleAfter ?? 0;
   ]}
 >
   <article class="content-page tool-page" data-page-type="tool" data-unpublished={page.published ? undefined : ''}>
-    <PageHero h1={data.h1} lead={data.lead} pageId={pageId} locale={locale}>
+    <PageHero h1={data.h1} lead={data.lead} pageId={pageId} locale={locale} example={data.example}>
       <Fragment slot="action" />
     </PageHero>
 

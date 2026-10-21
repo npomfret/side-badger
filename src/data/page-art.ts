@@ -187,6 +187,16 @@ export const pageArt: Readonly<Record<string, PageArtDef>> = {
     ],
   },
 
+  // The calculator: the worked example's answer, stamped
+  'split-bill-calculator': {
+    layout: 'stack',
+    items: [
+      { prop: 'ledger', payment: 0 },
+      { prop: 'ledger', payment: 1 },
+      { prop: 'stamp', text: key('home.settle.allSettled'), tone: 'green' },
+    ],
+  },
+
   // Guides: the story's own expense, the joke and the rule
   'guide/how-to-split-rent-by-room-size': {
     layout: 'cluster',

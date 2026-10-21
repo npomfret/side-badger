@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger no tiene anuncios ni analítica de terceros ni rastreadores de anuncios. Las únicas cookies son las que mantienen tu sesión iniciada. No vendemos tus datos personales y solo los miembros de un grupo pueden ver ese grupo.',
   'pricing.trust.title': 'Sin anuncios ni rastreadores de anuncios o de analítica',
   'related.heading': 'Páginas relacionadas',
+  'support.title': 'Ayuda',
+  'support.description': 'Para obtener ayuda con la aplicación Side Badger, envíanos un correo electrónico.',
+  'support.email': 'support@sidebadger.me',
 } as const;

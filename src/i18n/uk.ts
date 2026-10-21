@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'У Side Badger немає реклами та сторонніх аналітичних чи рекламних трекерів. Єдині cookie — ті, що тримають вас у системі. Ми не продаємо ваші персональні дані, а групу бачать лише її учасники.',
   'pricing.trust.title': 'Без реклами, без рекламних і аналітичних трекерів',
   'related.heading': 'Пов\'язані сторінки',
+  'support.title': 'Підтримка',
+  'support.description': 'Щоб отримати допомогу з додатком Side Badger, напишіть нам на електронну пошту.',
+  'support.email': 'support@sidebadger.me',
 } as const;

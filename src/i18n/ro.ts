@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger nu are reclame și nici trackere de analiză sau de reclame ale terților. Singurele cookie-uri sunt cele care te țin autentificat. Nu vindem datele tale personale, iar doar membrii unui grup pot vedea acel grup.',
   'pricing.trust.title': 'Fără reclame, fără trackere de reclame sau de analiză',
   'related.heading': 'Pagini conexe',
+  'support.title': 'Asistență',
+  'support.description': 'Pentru ajutor cu aplicația Side Badger, trimiteți-ne un e-mail.',
+  'support.email': 'support@sidebadger.me',
 } as const;

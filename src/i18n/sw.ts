@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger haina matangazo wala vifuatiliaji vya matangazo au takwimu vya watu wengine. Vidakuzi pekee ni vile vinavyokuweka umeingia. Hatuuzi data yako binafsi, na ni wanachama wa kikundi pekee wanaoweza kuona kikundi hicho.',
   'pricing.trust.title': 'Hakuna matangazo, hakuna vifuatiliaji vya matangazo au takwimu',
   'related.heading': 'Kurasa zinazohusiana',
+  'support.title': 'Usaidizi',
+  'support.description': 'Kwa msaada kuhusu programu ya Side Badger, tutumie barua pepe.',
+  'support.email': 'support@sidebadger.me',
 } as const;

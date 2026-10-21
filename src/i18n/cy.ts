@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Mae Side Badger heb hysbysebion a heb olrheinwyr dadansoddeg na hysbysebion trydydd parti. Y cwcis sy\'n eich cadw wedi mewngofnodi yw\'r unig rai. Dydyn ni ddim yn gwerthu eich data personol, a dim ond aelodau grŵp all weld y grŵp hwnnw.',
   'pricing.trust.title': 'Dim hysbysebion, dim olrheinwyr hysbysebion na dadansoddeg',
   'related.heading': 'Tudalennau cysylltiedig',
+  'support.title': 'Cymorth',
+  'support.description': 'I gael help gyda\'r ap Side Badger, anfonwch e-bost atom.',
+  'support.email': 'support@sidebadger.me',
 } as const;

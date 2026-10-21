@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger tidak memiliki iklan maupun pelacak analitik atau iklan pihak ketiga. Satu-satunya cookie adalah yang membuat Anda tetap masuk. Kami tidak menjual data pribadi Anda, dan hanya anggota grup yang dapat melihat grup itu.',
   'pricing.trust.title': 'Tanpa iklan, tanpa pelacak iklan atau analitik',
   'related.heading': 'Halaman terkait',
+  'support.title': 'Bantuan',
+  'support.description': 'Untuk bantuan terkait aplikasi Side Badger, kirim email kepada kami.',
+  'support.email': 'support@sidebadger.me',
 } as const;

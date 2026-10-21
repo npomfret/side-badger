@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger में कोई विज्ञापन नहीं हैं और कोई थर्ड-पार्टी एनालिटिक्स या विज्ञापन ट्रैकर नहीं हैं। सिर्फ वही कुकीज़ हैं जो आपको साइन इन रखती हैं। हम आपका निजी डेटा नहीं बेचते, और किसी ग्रुप को सिर्फ उसके सदस्य ही देख सकते हैं।',
   'pricing.trust.title': 'कोई विज्ञापन नहीं, कोई विज्ञापन या एनालिटिक्स ट्रैकर नहीं',
   'related.heading': 'संबंधित पेज',
+  'support.title': 'सहायता',
+  'support.description': 'Side Badger ऐप से मदद के लिए हमें ईमेल करें।',
+  'support.email': 'support@sidebadger.me',
 } as const;

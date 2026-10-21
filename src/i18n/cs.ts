@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger nemá žádné reklamy ani analytické či reklamní trackery třetích stran. Jediné cookies jsou ty, které vás udržují přihlášené. Neprodáváme vaše osobní údaje a skupinu vidí jen její členové.',
   'pricing.trust.title': 'Žádné reklamy, žádné reklamní ani analytické trackery',
   'related.heading': 'Související stránky',
+  'support.title': 'Podpora',
+  'support.description': 'Potřebujete-li pomoc s aplikací Side Badger, napište nám e-mail.',
+  'support.email': 'support@sidebadger.me',
 } as const;

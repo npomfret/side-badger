@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger-ek ez du iragarkirik, ez hirugarrenen analitika- edo iragarki-jarraipen-tresnarik. Cookie bakarrak saioa irekita mantentzen dutenak dira. Ez ditugu saltzen zure datu pertsonalak, eta taldeko kideek bakarrik ikus dezakete taldea.',
   'pricing.trust.title': 'Iragarkirik ez, iragarki edo analitiken jarraipen-tresnarik ez',
   'related.heading': 'Erlazionatutako orriak',
+  'support.title': 'Laguntza',
+  'support.description': 'Side Badger aplikazioarekin laguntza behar baduzu, bidali mezu elektroniko bat.',
+  'support.email': 'support@sidebadger.me',
 } as const;

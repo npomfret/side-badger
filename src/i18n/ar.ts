@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'لا يحتوي Side Badger على إعلانات ولا على متتبّعات تحليلات أو إعلانات من جهات خارجية. وملفات تعريف الارتباط الوحيدة هي التي تُبقيك مسجّل الدخول. نحن لا نبيع بياناتك الشخصية، ولا يرى المجموعة إلا أعضاؤها.',
   'pricing.trust.title': 'بلا إعلانات، وبلا متتبّعات إعلانات أو تحليلات',
   'related.heading': 'صفحات ذات صلة',
+  'support.title': 'الدعم',
+  'support.description': 'للحصول على مساعدة بشأن تطبيق Side Badger، راسلنا عبر البريد الإلكتروني.',
+  'support.email': 'support@sidebadger.me',
 } as const;

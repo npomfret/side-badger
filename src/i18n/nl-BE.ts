@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger heeft geen advertenties en geen analyse- of advertentietrackers van derden. De enige cookies zijn die waarmee je ingelogd blijft. We verkopen je persoonsgegevens niet en alleen leden van een groep kunnen die groep zien.',
   'pricing.trust.title': 'Geen advertenties, geen advertentie- of analysetrackers',
   'related.heading': 'Gerelateerde pagina\'s',
+  'support.title': 'Ondersteuning',
+  'support.description': 'Hulp nodig met de Side Badger-app? Stuur ons een e-mail.',
+  'support.email': 'support@sidebadger.me',
 } as const;

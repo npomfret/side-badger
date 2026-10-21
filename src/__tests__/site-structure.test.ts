@@ -313,11 +313,12 @@ describe('route generation', () => {
     expect(i18n.getLocalePaths()).toHaveLength(39);
   });
 
-  it('builds 39 × 14 pages in strict mode (5 core and 9 release 1 pages)', async () => {
+  it('builds 39 × 15 pages in strict mode (including support)', async () => {
     vi.stubEnv('I18N_MODE', 'strict');
     const { routes, registry } = await loadFresh();
     const total = registry.pages.reduce((sum, page) => sum + routes.pathsFor(page.id).length, 0);
-    expect(total).toBe(39 * 14);
+    expect(total).toBe(39 * 15);
+    expect(routes.pathsFor('support')).toHaveLength(39);
     expect(routes.pathsForType('legal')).toHaveLength(39 * 3);
     expect(routes.pathsForType('home')).toHaveLength(39);
     expect(routes.pathsForType('pricing')).toHaveLength(39);

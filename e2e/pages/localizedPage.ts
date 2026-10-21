@@ -51,6 +51,7 @@ const SHELL_KEYS: readonly StringKey[] = [
   'footer.privacy',
   'footer.terms',
   'footer.cookies',
+  'support.title',
   'footer.tagline',
   'a11y.homeLink',
   'a11y.mainNavigation',
@@ -182,7 +183,7 @@ export class LocalizedPage {
     await expect
       .poll(() => hrefs('footer.product'), { message: 'footer product links', timeout: ELEMENT_TIMEOUT })
       .toEqual(
-        ['how-it-works', 'features', 'features/split-expenses', 'features/settle-up', 'features/multiple-currencies', 'pricing'].map(
+        ['how-it-works', 'features', 'features/split-expenses', 'features/settle-up', 'features/multiple-currencies', 'pricing', 'support'].map(
           route => pathFor(this.locale, route)
         )
       );

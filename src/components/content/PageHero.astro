@@ -1,8 +1,8 @@
 ---
 /**
  * The top of a content page (restructure 5.6): the one `h1`, the lead, the first call to action
- * and, when the page has one, its first product shot. The call to action is a register link
- * through the launch counter; its text is the shared "Create a free account" string.
+ * and, when the page has one, its first product shot. The default action is a register link
+ * through the launch counter; a page can supply its own action through the named slot.
  */
 import LaunchAppCta from '../cta/LaunchAppCta.astro';
 import { t, type Locale } from '../../i18n';
@@ -36,9 +36,11 @@ const { h1, lead, pageId, locale, shot, beta = false, intro } = Astro.props;
       <RichText as="p" class="page-hero__lead" text={lead} locale={locale} />
       {intro && <RichText as="p" class="page-hero__intro" text={intro} locale={locale} />}
       <div class="page-hero__cta">
-        <LaunchAppCta target="register" cta="hero" pageId={pageId} locale={locale} confetti>
-          {t('home.hero.ctaPrimary', locale)}
-        </LaunchAppCta>
+        <slot name="action">
+          <LaunchAppCta target="register" cta="hero" pageId={pageId} locale={locale} confetti>
+            {t('home.hero.ctaPrimary', locale)}
+          </LaunchAppCta>
+        </slot>
       </div>
     </div>
     {shot && (

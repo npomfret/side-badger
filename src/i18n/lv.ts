@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger nav reklāmu un trešo pušu analītikas vai reklāmu izsekotāju. Vienīgās sīkdatnes ir tās, kas ļauj jums palikt pierakstītiem. Mēs nepārdodam jūsu personas datus, un grupu var redzēt tikai tās dalībnieki.',
   'pricing.trust.title': 'Bez reklāmām, bez reklāmu vai analītikas izsekotājiem',
   'related.heading': 'Saistītās lapas',
+  'support.title': 'Atbalsts',
+  'support.description': 'Ja nepieciešama palīdzība saistībā ar Side Badger lietotni, rakstiet mums e-pastā.',
+  'support.email': 'support@sidebadger.me',
 } as const;

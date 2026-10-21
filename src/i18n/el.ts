@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Το Side Badger δεν έχει διαφημίσεις ούτε αναλυτικά ή διαφημιστικά trackers τρίτων. Τα μόνα cookies είναι αυτά που σας κρατούν συνδεδεμένους. Δεν πουλάμε τα προσωπικά σας δεδομένα και μόνο τα μέλη μιας ομάδας μπορούν να τη δουν.',
   'pricing.trust.title': 'Χωρίς διαφημίσεις, χωρίς διαφημιστικά και αναλυτικά trackers',
   'related.heading': 'Σχετικές σελίδες',
+  'support.title': 'Υποστήριξη',
+  'support.description': 'Για βοήθεια με την εφαρμογή Side Badger, στείλτε μας email.',
+  'support.email': 'support@sidebadger.me',
 } as const;

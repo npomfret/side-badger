@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badgerissa ei ole mainoksia eikä kolmannen osapuolen analytiikka- tai mainosseuraimia. Ainoat evästeet ovat ne, jotka pitävät sinut kirjautuneena. Emme myy henkilötietojasi, ja vain ryhmän jäsenet näkevät kyseisen ryhmän.',
   'pricing.trust.title': 'Ei mainoksia, ei mainos- tai analytiikkaseuraimia',
   'related.heading': 'Aiheeseen liittyvät sivut',
+  'support.title': 'Tuki',
+  'support.description': 'Jos tarvitset apua Side Badger -sovelluksen kanssa, lähetä meille sähköpostia.',
+  'support.email': 'support@sidebadger.me',
 } as const;

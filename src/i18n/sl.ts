@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger nima oglasov ali analitičnih in oglasnih sledilnikov tretjih oseb. Edini piškotki so tisti, ki te ohranjajo prijavljenega. Tvojih osebnih podatkov ne prodajamo, skupino pa vidijo samo njeni člani.',
   'pricing.trust.title': 'Brez oglasov, brez oglasnih in analitičnih sledilnikov',
   'related.heading': 'Sorodne strani',
+  'support.title': 'Podpora',
+  'support.description': 'Za pomoč pri aplikaciji Side Badger nam pišite po e-pošti.',
+  'support.email': 'support@sidebadger.me',
 } as const;

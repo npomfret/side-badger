@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger er án auglýsinga og án greiningar- eða auglýsingarekjara þriðju aðila. Einu vafrakökurnar eru þær sem halda þér innskráðum. Við seljum ekki persónuupplýsingarnar þínar og aðeins meðlimir hóps geta séð þann hóp.',
   'pricing.trust.title': 'Engar auglýsingar, engir auglýsinga- eða greiningarrekjarar',
   'related.heading': 'Tengdar síður',
+  'support.title': 'Aðstoð',
+  'support.description': 'Sendu okkur tölvupóst ef þú þarft aðstoð við Side Badger-forritið.',
+  'support.email': 'support@sidebadger.me',
 } as const;

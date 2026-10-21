@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Níl aon fhógraí ag Side Badger ná aon rianairí anailísíochta nó fógraí tríú páirtí. Is iad na fianáin a choinníonn sínithe isteach thú an t-aon cheann atá ann. Ní dhíolaimid do shonraí pearsanta, agus ní féidir ach le baill de ghrúpa an grúpa sin a fheiceáil.',
   'pricing.trust.title': 'Gan fógraí, gan rianairí fógraí ná anailísíochta',
   'related.heading': 'Leathanaigh ghaolmhara',
+  'support.title': 'Tacaíocht',
+  'support.description': 'Chun cabhair a fháil leis an aip Side Badger, seol ríomhphost chugainn.',
+  'support.email': 'support@sidebadger.me',
 } as const;

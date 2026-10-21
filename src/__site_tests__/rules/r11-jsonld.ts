@@ -15,6 +15,7 @@ const BASE = ['WebSite', 'Organization', 'WebPage'];
 export const requiredTypes: Record<PageType, string[]> = {
   home: [...BASE, 'SoftwareApplication'],
   pricing: [...BASE, 'FAQPage'],
+  support: [...BASE],
   hub: ['WebSite', 'Organization', 'CollectionPage', 'ItemList'],
   feature: [...BASE, 'BreadcrumbList'],
   'use-case': [...BASE, 'BreadcrumbList'],

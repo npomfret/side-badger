@@ -19,6 +19,7 @@ const FOOTER_LABEL_KEYS: Readonly<Record<string, TranslationKey>> = {
   privacy: 'footer.privacy',
   terms: 'footer.terms',
   cookies: 'footer.cookies',
+  support: 'support.title',
 };
 
 /**

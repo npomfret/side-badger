@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger hat keine Werbung und keine Analyse- oder Werbe-Tracker von Drittanbietern. Die einzigen Cookies sind die, die dich angemeldet halten. Wir verkaufen deine persönlichen Daten nicht, und nur Mitglieder einer Gruppe können diese Gruppe sehen.',
   'pricing.trust.title': 'Keine Werbung, keine Werbe- oder Analyse-Tracker',
   'related.heading': 'Verwandte Seiten',
+  'support.title': 'Support',
+  'support.description': 'Wenn du Hilfe mit der Side-Badger-App brauchst, schreib uns eine E-Mail.',
+  'support.email': 'support@sidebadger.me',
 } as const;

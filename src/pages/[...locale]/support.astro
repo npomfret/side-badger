@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/content/PageHero.astro';
+import { t, type Locale } from '../../i18n';
+import { pathsFor } from '../../site/routes';
+
+export function getStaticPaths() {
+  return pathsFor('support');
+}
+
+const { locale } = Astro.props as { locale: Locale };
+---
+
+<BaseLayout
+  page="support"
+  locale={locale}
+  title={t('support.title', locale)}
+  description={t('support.description', locale)}
+>
+  <article class="content-page" data-page-type="support">
+    <PageHero
+      h1={t('support.title', locale)}
+      lead={t('support.description', locale)}
+      pageId="support"
+      locale={locale}
+    >
+      <a slot="action" class="btn btn-primary" href={`mailto:${t('support.email', locale)}`}>
+        {t('support.email', locale)}
+      </a>
+    </PageHero>
+  </article>
+</BaseLayout>

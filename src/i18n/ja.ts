@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badgerには広告も、第三者の分析・広告トラッカーもありません。使用するCookieは、ログインを維持するためのものだけです。個人データは販売せず、グループを見られるのはそのグループのメンバーだけです。',
   'pricing.trust.title': '広告なし、広告・分析トラッカーなし',
   'related.heading': '関連ページ',
+  'support.title': 'サポート',
+  'support.description': 'Side Badgerアプリについてお困りの場合は、メールでお問い合わせください。',
+  'support.email': 'support@sidebadger.me',
 } as const;

@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'A Side Badgerben nincsenek hirdetések, sem harmadik féltől származó elemző vagy hirdetési nyomkövetők. Az egyetlen sütik azok, amelyek bejelentkezve tartanak. Nem adjuk el a személyes adataidat, és egy csoportot csak a tagjai láthatnak.',
   'pricing.trust.title': 'Hirdetések nélkül, hirdetési és elemző nyomkövetők nélkül',
   'related.heading': 'Kapcsolódó oldalak',
+  'support.title': 'Támogatás',
+  'support.description': 'Ha segítségre van szükséged a Side Badger alkalmazással kapcsolatban, írj nekünk e-mailt.',
+  'support.email': 'support@sidebadger.me',
 } as const;

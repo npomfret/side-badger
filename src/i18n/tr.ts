@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger\'da reklam ve üçüncü taraf analiz veya reklam tracker\'ı yok. Tek çerezler oturumunuzu açık tutanlardır. Kişisel verilerinizi satmıyoruz ve bir grubu yalnızca üyeleri görebilir.',
   'pricing.trust.title': 'Reklam yok, reklam ve analiz tracker\'ı yok',
   'related.heading': 'İlgili sayfalar',
+  'support.title': 'Destek',
+  'support.description': 'Side Badger uygulamasıyla ilgili yardım için bize e-posta gönderin.',
+  'support.email': 'support@sidebadger.me',
 } as const;

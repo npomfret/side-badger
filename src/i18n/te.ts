@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badgerలో ప్రకటనలు లేవు, థర్డ్-పార్టీ అనలిటిక్స్ లేదా యాడ్ ట్రాకర్లు లేవు. మిమ్మల్ని సైన్ ఇన్‌లో ఉంచే కుకీలు మాత్రమే ఉన్నాయి. మేము మీ వ్యక్తిగత డేటాను అమ్మము, ఒక గ్రూప్‌ను దాని సభ్యులు మాత్రమే చూడగలరు.',
   'pricing.trust.title': 'ప్రకటనలు లేవు, యాడ్ లేదా అనలిటిక్స్ ట్రాకర్లు లేవు',
   'related.heading': 'సంబంధిత పేజీలు',
+  'support.title': 'మద్దతు',
+  'support.description': 'Side Badger యాప్‌తో సహాయం కోసం మాకు ఇమెయిల్ చేయండి.',
+  'support.email': 'support@sidebadger.me',
 } as const;

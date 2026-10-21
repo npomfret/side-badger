@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger har inga annonser och inga analys- eller annonsspårare från tredje part. De enda cookies som används är de som håller dig inloggad. Vi säljer inte dina personuppgifter, och bara medlemmar i en grupp kan se den gruppen.',
   'pricing.trust.title': 'Inga annonser, inga annons- eller analysspårare',
   'related.heading': 'Relaterade sidor',
+  'support.title': 'Support',
+  'support.description': 'Behöver du hjälp med Side Badger-appen? Mejla oss.',
+  'support.email': 'support@sidebadger.me',
 } as const;

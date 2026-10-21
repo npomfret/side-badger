@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Walang ad at walang third-party analytics o ad tracker ang Side Badger. Ang tanging mga cookie ay yaong nagpapanatili sa iyong naka-sign in. Hindi namin ibinebenta ang personal mong data, at ang mga miyembro lang ng grupo ang nakakakita sa grupong iyon.',
   'pricing.trust.title': 'Walang ad, walang analytics o ad tracker',
   'related.heading': 'Mga kaugnay na pahina',
+  'support.title': 'Suporta',
+  'support.description': 'Para sa tulong sa Side Badger app, mag-email sa amin.',
+  'support.email': 'support@sidebadger.me',
 } as const;

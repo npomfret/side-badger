@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger 没有广告，也没有第三方分析或广告追踪器。唯一的 Cookie 是让你保持登录的那些。我们不出售你的个人数据，只有群组成员才能看到该群组。',
   'pricing.trust.title': '无广告，无广告或分析追踪器',
   'related.heading': '相关页面',
+  'support.title': '支持',
+  'support.description': '如需 Side Badger 应用的帮助，请发送电子邮件联系我们。',
+  'support.email': 'support@sidebadger.me',
 } as const;

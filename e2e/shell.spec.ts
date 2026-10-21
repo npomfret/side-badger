@@ -50,6 +50,7 @@ for (const locale of SHELL_LOCALES) {
         'features/settle-up',
         'features/multiple-currencies',
         'pricing',
+        'support',
       ]);
       await site.expectFooterLinkTargets('footer.useCases', [
         'use-cases',

@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': '사이드 배저에는 광고도, 타사 분석 도구나 광고 추적기도 없습니다. 쿠키는 로그인 상태를 유지하는 데 필요한 것만 사용합니다. 개인정보를 판매하지 않으며, 그룹의 멤버만 그 그룹을 볼 수 있습니다.',
   'pricing.trust.title': '광고 없음, 광고·분석 추적기 없음',
   'related.heading': '관련 페이지',
+  'support.title': '지원',
+  'support.description': 'Side Badger 앱에 대한 도움이 필요하면 이메일을 보내 주세요.',
+  'support.email': 'support@sidebadger.me',
 } as const;

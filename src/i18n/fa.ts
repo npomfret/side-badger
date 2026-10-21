@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger تبلیغات ندارد و ردیاب تحلیلی یا تبلیغاتی از شخص ثالث هم ندارد. تنها کوکی‌ها همان‌هایی‌اند که شما را وارد حساب نگه می‌دارند. ما اطلاعات شخصی شما را نمی‌فروشیم و فقط اعضای یک گروه می‌توانند آن گروه را ببینند.',
   'pricing.trust.title': 'بدون تبلیغات، بدون ردیاب تبلیغاتی یا تحلیلی',
   'related.heading': 'صفحه‌های مرتبط',
+  'support.title': 'پشتیبانی',
+  'support.description': 'برای دریافت کمک درباره برنامه Side Badger، به ما ایمیل بزنید.',
+  'support.email': 'support@sidebadger.me',
 } as const;

@@ -258,4 +258,7 @@ export default {
   'pricing.trust.body': 'Side Badger no get ads and e no get third-party analytics or ad trackers. Di only cookies na di ones wey dey keep you signed in. We no dey sell your personal data, and na only members of a group fit see dat group.',
   'pricing.trust.title': 'No ads, no ad or analytics trackers',
   'related.heading': 'Related pages',
+  'support.title': 'Support',
+  'support.description': 'If you need help wit di Side Badger app, send us email.',
+  'support.email': 'support@sidebadger.me',
 } as const;

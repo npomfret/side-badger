@@ -16,6 +16,7 @@ export type PageType =
   | 'use-case'
   | 'comparison'
   | 'pricing'
+  | 'support'
   | 'legal'
   | 'article';
 
@@ -56,6 +57,15 @@ export const pages = [
     locales: 'all',
     nav: { order: 4, labelKey: 'nav.pricing' },
     footer: { group: 'product', order: 6 },
+    indexing: 'per-locale-review',
+  },
+  {
+    id: 'support',
+    type: 'support',
+    path: '/support/',
+    published: true,
+    locales: 'all',
+    footer: { group: 'product', order: 7 },
     indexing: 'per-locale-review',
   },
   {

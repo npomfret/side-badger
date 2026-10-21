@@ -20,7 +20,7 @@ import { pickName, splitList } from './form-input';
 import { HASH_PREFIX } from './share-hash';
 import type { Outcome, Problem, ProblemCode, Target } from './split-engine';
 import { MAX_EXPENSES, MAX_PEOPLE, MIN_PEOPLE, newExpense, type CalcState, type Method } from './split-state';
-import { cloneTemplate, fill, later, ref } from './tool-dom';
+import { cloneTemplate, fill, later, ref, spaceOut } from './tool-dom';
 
 type Deferred = typeof import('./split-deferred');
 
@@ -355,7 +355,7 @@ function start(root: HTMLElement): void {
         const row = template('balance');
         ref(row, 'name').textContent = personText(balance.person);
         ref(row, 'amount').textContent = money.minor(balance.minor, result.currency, { signed: true });
-        return row;
+        return spaceOut(row);
       })
     );
     paymentsBox.hidden = result.payments.length === 0;

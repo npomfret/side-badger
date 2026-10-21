@@ -51,12 +51,16 @@ for (const locale of SHELL_LOCALES) {
         'features/multiple-currencies',
         'pricing',
         'support',
+        'split-bill-calculator',
+        'rent-split-calculator',
       ]);
       await site.expectFooterLinkTargets('footer.useCases', [
         'use-cases',
         'use-cases/group-trips',
         'use-cases/housemates',
         'use-cases/events-and-celebrations',
+        'use-cases/couples',
+        'guides',
       ]);
       await site.expectFooterLinks('footer.legal', ['footer.privacy', 'footer.terms', 'footer.cookies']);
       await site.expectFooterLegal();

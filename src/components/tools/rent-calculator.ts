@@ -31,7 +31,7 @@ import {
   type Unit,
 } from './rent-state';
 import { HASH_PREFIX } from './share-hash';
-import { cloneTemplate, fill, later, ref } from './tool-dom';
+import { cloneTemplate, fill, later, ref, spaceOut } from './tool-dom';
 
 type Deferred = typeof import('./rent-deferred');
 
@@ -334,7 +334,7 @@ function start(root: HTMLElement): void {
         }
         ref(row, 'amounts').textContent = amounts.join(' · ');
         ref(row, 'exact').textContent = fill(messages.shareExact, { percent: exactPercent.format(share.exact / 100) });
-        return row;
+        return spaceOut(row);
       })
     );
 

@@ -183,14 +183,14 @@ export class LocalizedPage {
     await expect
       .poll(() => hrefs('footer.product'), { message: 'footer product links', timeout: ELEMENT_TIMEOUT })
       .toEqual(
-        ['how-it-works', 'features', 'features/split-expenses', 'features/settle-up', 'features/multiple-currencies', 'pricing', 'support'].map(
+        ['how-it-works', 'features', 'features/split-expenses', 'features/settle-up', 'features/multiple-currencies', 'pricing', 'support', 'split-bill-calculator', 'rent-split-calculator'].map(
           route => pathFor(this.locale, route)
         )
       );
     await expect
       .poll(() => hrefs('footer.useCases'), { message: 'footer use-case links', timeout: ELEMENT_TIMEOUT })
       .toEqual(
-        ['use-cases', 'use-cases/group-trips', 'use-cases/housemates', 'use-cases/events-and-celebrations'].map(route =>
+        ['use-cases', 'use-cases/group-trips', 'use-cases/housemates', 'use-cases/events-and-celebrations', 'use-cases/couples', 'guides'].map(route =>
           pathFor(this.locale, route)
         )
       );

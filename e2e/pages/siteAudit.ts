@@ -202,6 +202,17 @@ export class SiteAudit {
         `${el.tagName.toLowerCase()} ${(el.getAttribute('href') ?? el.getAttribute('aria-label') ?? el.textContent ?? '').trim().replace(/\s+/g, ' ').slice(0, 40)}`;
       return Array.from(document.querySelectorAll<HTMLElement>(selector))
         .filter(el => el.checkVisibility({ checkVisibilityCSS: true }) && el.tabIndex >= 0 && !el.closest('[inert]'))
+        // Tab enters a radio group once, at the checked radio; the others take the arrow keys, so Tab never reaches them
+        .filter(
+          el =>
+            !(
+              el instanceof HTMLInputElement &&
+              el.type === 'radio' &&
+              el.name &&
+              !el.checked &&
+              document.querySelector(`input[type="radio"][name="${CSS.escape(el.name)}"]:checked`)
+            )
+        )
         .map((el, index) => {
           el.dataset.siteAudit = String(index);
           return `#${index} ${label(el)}`;

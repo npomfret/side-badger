@@ -51,3 +51,11 @@ export function later<T>(load: () => Promise<T>): Later<T> {
       )),
   };
 }
+
+/** Put a real space between adjacent element children, so a row reads "Ana +£60.00" to text and screen readers alike. */
+export function spaceOut(row: HTMLElement): HTMLElement {
+  for (const child of Array.from(row.children).slice(1)) {
+    if (child.previousSibling === child.previousElementSibling) child.before(document.createTextNode(' '));
+  }
+  return row;
+}

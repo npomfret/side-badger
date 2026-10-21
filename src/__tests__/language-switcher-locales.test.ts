@@ -14,7 +14,8 @@ describe('language switcher locales', () => {
     const offered = offeredLocales(page.path);
     const expected = (page.locales as readonly string[]).filter(l => getBuildLocales().includes(l as never));
     expect([...offered].sort()).toEqual([...expected].sort());
-    expect(offered.size).toBeLessThan(getBuildLocales().length);
+    // English-first with keys pending builds English only, so there is nothing to leave out
+    if (getBuildLocales().length > 1) expect(offered.size).toBeLessThan(getBuildLocales().length);
   });
 
   it('offers every built locale on a page with no registry id', () => {

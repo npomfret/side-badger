@@ -1,0 +1,108 @@
+# Guide 8 of the wave 2 briefs (tasks/release-2-plan.md, "Wave 2 and 3 briefs"). The worked example
+# is the brief's data; every figure in the prose comes from it or from the arithmetic shown. The
+# part-payment figures (EUR 200 now, EUR 148 left) are the brief's own, and the stray-zero check
+# is the example's EUR 348 with a zero added.
+review:
+  status: machine
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: How to settle up after a group trip | Side Badger
+  description: Settle before everyone scatters. Ten tangled debts become four payments, recorded as they land, and a part payment is fine. Sums shown for five friends.
+h1: How to settle up after a group trip
+navLabel: Settle up after a trip
+lead: Settle before everyone scatters. Add the last expense, open the group's balances and pay what you owe from the short list, however you like. Then record each payment in Side Badger so the balance clears for the whole group. For five friends and five expenses, ten tangled debts come down to four payments.
+cta:
+  heading: Close the books before the photos land
+  body: Create a free account, start a group for the next trip and add each cost as it happens. The short list of payments is waiting by the time you reach the airport. Want to see [how settling up works](page:feature/settle-up) first?
+sections:
+  - heading: Five friends, five expenses, one departure lounge
+    body: Mo, Ines, Raf, Tess and Uma spent a week on the coast. Mo booked the apartment and bought the groceries, Ines paid for the boat trip and Raf picked up the big dinner. Tess took the airport taxi with Uma and Mo, because Ines and Raf had the train. Uma's card stayed at home, so she paid for nothing. That is five expenses and €1,700 in all, and in the departure lounge nobody could say who was ahead.
+  - heading: Ten debts, four payments
+    body: The apartment, the boat, the dinner and the groceries are split equally five ways. That is €200, €50, €60 and €18 each, so Ines and Raf owe €328 apiece. The taxi is shared by three at €20 each, so Mo, Tess and Uma owe €348. Mo paid €1,090 and owes €348, which leaves him owed €742. Everyone else paid less than they owe. Uma is €348 short, Tess €288, Ines €78 and Raf €28, and those add up to Mo's €742. Settle each pair of people directly and you get ten separate debts. Side Badger suggests four payments instead, all to Mo.
+  - heading: Settle before everyone scatters
+    body: The best moment is the last evening or the ride home, while everyone is still in one place and a €28 debt is easy to mention. Add every expense first, taxi included. Nobody can leave a group while they owe or are owed money, so the count has to close at some point anyway.
+    items:
+      - "**Check the list.** Open the group and look at **Balances**. By default you see the debts that involve you. Choose **Show all** to see the whole group's list."
+      - "**Pay however you like.** Bank transfer, cash, a favour owed from the last holiday. Side Badger doesn't move the money."
+      - "**Record it.** Choose **Settle Up**. Under **Quick settle** each button is one of your suggested payments, and choosing one fills in the amount. Add a **Note** such as bank transfer, check the **Date** (it can't be in the future) and choose **Record Settlement**."
+      - "**Watch it clear.** The balance updates for everyone. When the last payment is in, **Balances** reads **All settled up!**"
+  - heading: Paying part now, the rest later
+    body: Uma can send €200 tonight and the rest at the end of the month. She records €200, and the form warns her that she will still owe Mo €148 afterwards, which is €348 less €200. Save it and the €148 stays on her balance until she records the rest. The warning works the other way too. If a stray zero turns €348 into €3,480, the form says she only owes Mo €348 and that saving would create a debt in the opposite direction. Fix the zero before you save.
+  - heading: Fixing mistakes, and cheering payments
+    items:
+      - "**A wrong payment.** Only the person who recorded a payment can edit it. They or a group admin can delete it, and then it can be recorded again."
+      - "**A payment worth noticing.** Every recorded payment sits under **Settlements** with its date and note, where everyone in the group can see it and react. Mo can choose **Celebrate** when Uma's last €148 arrives."
+      - "**The end.** With every balance at zero, an admin can lock the group so the numbers stay put."
+  - heading: What Side Badger doesn't do here
+    items:
+      - It never moves money. It has no payment links or payment requests, so a payment in the app is a record of one made elsewhere.
+      - It sends no reminders. Chasing a late payment is still up to you.
+      - It doesn't set deadlines. When the rest of Uma's €148 is due is for the group to agree.
+      - The suggested payments are a short list, not a promise of the shortest possible one. They are worked out per currency, so a trip paid in euros and pounds gets a list for each.
+exampleAfter: 2
+example:
+  heading: Five friends on the coast
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: Apartment
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: Boat trip
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: Big dinner
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: Airport taxi
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: Groceries
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: Questions
+  items:
+    - q: Who should record a payment, the person paying or the person paid?
+      a: Recording a payment needs permission to edit expenses, and the form asks **Who paid?** and **Who received the payment?** Only the person who recorded it can edit it later, so it is usually simplest if the payer does it, using the quick-settle button.
+    - q: What if the trip ran in two currencies?
+      a: Balances are kept per currency, so a euro debt stays a euro debt and each currency gets its own short list, unless expenses were converted when they were entered. [Several currencies](page:guide/how-to-split-a-trip-paid-in-several-currencies) shows both ways.
+    - q: Should we settle during the trip or at the end?
+      a: Either works. Every recorded payment changes the balances, so a payment made mid-trip counts towards the final list. At the end is simpler, because [the whole trip](page:use-case/group-trips) is in one place.

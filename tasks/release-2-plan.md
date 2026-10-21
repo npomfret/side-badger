@@ -279,6 +279,106 @@ Each package owns its files exclusively; agents build in a private copy, never t
 - Writes to the editorial rules in the site plan (voice, guardrails, substitutions), with claims only from the registry.
 - **Done when:** the default model's editorial review passes, and the content and registry tests pass.
 
+**Wave 1 guide briefs.** These are settled. The numbers were computed with `computeExample` on 21 October 2026; prose quotes only numbers the example produces. Every guide:
+- has `owner: npomfret` and `reviewBy: 2027-04-21`;
+- uses claims only from the registry;
+- follows site plan D15 and the substitutions;
+- states the 999,999.99 cap only where it matters.
+
+1. **`how-to-split-rent-by-room-size`**
+   - **H1:** "How to split rent by room size".
+   - **Related:** `use-case/housemates`, `feature/split-expenses`.
+   - **Answer first:**
+     - decide how much of the rent pays for the shared rooms;
+     - split that part equally;
+     - split the rest by each bedroom's floor area;
+     - round to whole percentages;
+     - put the percentages on the rent in Side Badger once, and copy the bill each month.
+   - **Story:** Priya, Tom and Aisha share a flat for £1,950 a month. Their bedrooms are 16, 12 and 10 m². They agree that 40% of the rent pays for the kitchen, bathroom and lounge.
+   - **The method, shown as arithmetic in prose:**
+     - 60% × 16/38 + 13.33% gives 38.6%, which rounds to 39%;
+     - 32% and 29% come out the same way;
+     - check that the three add up to 100.
+   - **Worked example** (GBP):
+
+     | Expense | Paid by | Amount | Split |
+     |---|---|---|---|
+     | Rent | Priya | 1,950 | percent: Priya 39, Tom 32, Aisha 29 |
+     | Energy | Tom | 105 | equal |
+     | Broadband | Aisha | 36 | equal |
+
+     Result:
+     - balances: Priya +1,142.50, Tom −566.00, Aisha −576.50;
+     - payments: Aisha pays Priya 576.50, and Tom pays Priya 566.00.
+   - **Sections also cover:**
+     - en-suites and box rooms (adjust the split by agreement, then write it down);
+     - someone moving out mid-month (an exact split for that month);
+     - what Side Badger doesn't do here: no recurring bills (copy last month's), and it never moves money.
+   - **FAQ:**
+     - "What if someone has a bigger room but less light?";
+     - "Should bills be split by room size too?" (usually equal);
+     - "Can we change the split later?" (yes, for new expenses).
+
+2. **`how-to-split-a-holiday-villa-when-people-stay-different-nights`**
+   - **H1:** "How to split a holiday villa when people stay different nights".
+   - **Related:** `use-case/group-trips`, `feature/split-expenses`, `feature/settle-up`.
+   - **Answer first:**
+     - price the stay per person per night;
+     - multiply by each person's nights;
+     - enter the villa as one expense with exact amounts.
+   - **Story:** Ana books a €2,100 villa for six nights. Ana, Ben and Chloe stay all six; Dev joins for the last three. That makes 21 person-nights at €100 each.
+   - **Worked example** (EUR):
+
+     | Expense | Paid by | Amount | Split |
+     |---|---|---|---|
+     | Villa, 6 nights | Ana | 2,100 | exact: Ana 600, Ben 600, Chloe 600, Dev 300 |
+     | Car hire | Ben | 240 | equal among Ana, Ben and Chloe (Dev came by train) |
+     | Groceries | Dev | 180 | equal among all four |
+
+     Result:
+     - balances: Ana +1,375, Ben −485, Chloe −725, Dev −165;
+     - payments: Chloe pays Ana 725, Ben pays Ana 485, and Dev pays Ana 165.
+   - **Sections also cover:**
+     - per-room pricing when rooms differ;
+     - a deposit paid months earlier;
+     - paying in another currency (link to multiple currencies);
+     - what Side Badger doesn't do: no money moves, and one payer per expense.
+   - **FAQ:**
+     - "What if someone cancels?";
+     - "Should the person who booked pay less?" (the group decides; record what you agree);
+     - "Can we split cleaning fees differently?"
+
+3. **`how-to-split-a-stag-or-hen-weekend`**
+   - **H1:** "How to split the cost of a stag or hen weekend".
+   - **Related:** `use-case/group-trips`, `feature/split-expenses`, `feature/settle-up`.
+   - **Answer first:**
+     - the guest of honour pays nothing, so everyone else shares the costs equally;
+     - for things someone skips, leave them out of that expense;
+     - keep the guest of honour out of the group so the surprise holds.
+   - **Story:** Hannah, Isla, Jess and Kat take Grace away for her hen weekend. Grace isn't in the group. Kat skips the spa.
+   - **Worked example** (GBP):
+
+     | Expense | Paid by | Amount | Split |
+     |---|---|---|---|
+     | Cottage | Hannah | 720 | equal |
+     | Spa day | Isla | 360 | equal among Hannah, Isla and Jess (it covers Grace's place too) |
+     | Dinner | Jess | 260 | equal |
+     | Taxi | Kat | 44 | equal |
+
+     Result:
+     - balances: Hannah +344, Isla −16, Jess −116, Kat −212;
+     - payments: Kat pays Hannah 212, Jess pays Hannah 116, and Isla pays Hannah 16.
+   - **Sections also cover:**
+     - collecting a deposit before booking;
+     - someone who joins for one night only (an exact split);
+     - agreeing a budget with a poll (site plan D11: money-related planning only);
+     - what Side Badger doesn't do: it never moves money, and it sends no payment reminders.
+   - **FAQ:**
+     - "Does the best man or maid of honour pay more?" (only if agreed);
+     - "What about drinks some people didn't have?" (exact amounts, or leave them out);
+     - "Can the guest of honour see the group later?" (add them as a viewer).
+   - **Tone:** celebratory, never crude; no alcohol jokes.
+
 **P4. Page art** (R7)
 - Owns:
   - `src/components/content/PageArt.astro`

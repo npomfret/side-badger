@@ -8,25 +8,24 @@
  * Fields are rebuilt only when the structure changes (a person or an expense added or removed, a
  * link opened), never while someone types. An error shows once the visitor has been in its field,
  * but the result stays hidden while any error stands, whether it shows yet or not.
+ *
+ * At load the script only builds the form (restructure D36: at most 10 KB of script at load). The
+ * engine, the share link and money formatting (`split-deferred.ts`) are fetched on the visitor's
+ * first touch of the form, or straight away when the page opens from a share link, in which case
+ * the form is built once they are here. A fresh form needs none of them: its amount is empty, so
+ * all it shows is the line that waits for one.
  */
-import { MAX_EXPENSE_AMOUNT } from '../../lib/settle';
-import { moneyFormatter } from '../content/money';
-import {
-  MAX_EXPENSES,
-  MAX_PEOPLE,
-  MIN_PEOPLE,
-  calculate,
-  newExpense,
-  pickName,
-  splitList,
-  type CalcState,
-  type Method,
-  type Problem,
-  type ProblemCode,
-  type Target,
-} from './split-engine';
-import { encodeState, stateFromHash } from './split-fragment';
-import { cloneTemplate, copyShareLink, fill, ref } from './tool-dom';
+import type { Money } from '../content/money';
+import { pickName, splitList } from './form-input';
+import { HASH_PREFIX } from './share-hash';
+import type { Outcome, Problem, ProblemCode, Target } from './split-engine';
+import { MAX_EXPENSES, MAX_PEOPLE, MIN_PEOPLE, newExpense, type CalcState, type Method } from './split-state';
+import { cloneTemplate, fill, later, ref } from './tool-dom';
+
+type Deferred = typeof import('./split-deferred');
+
+/** One fetch for every calculator on the page */
+const deferred = later<Deferred>(() => import('./split-deferred'));
 
 interface Messages {
   personLabel: string;
@@ -52,7 +51,9 @@ const METHODS: readonly string[] = ['equal', 'exact', 'percent'];
 
 function start(root: HTMLElement): void {
   const messages = JSON.parse(ref(root, 'messages').textContent ?? '{}') as Messages;
-  const money = moneyFormatter(root.dataset.intl ?? 'en');
+  const intl = root.dataset.intl ?? 'en';
+  let formatter: Money | undefined;
+  const moneyOf = (module: Deferred): Money => (formatter ??= module.moneyFormatter(intl));
 
   const currencyBox = ref<HTMLSelectElement>(root, 'currency');
   const currencies = Array.from(currencyBox.options, option => option.value);
@@ -108,7 +109,9 @@ function start(root: HTMLElement): void {
     everythingVisited = fromLink;
     renderPeople();
     renderExpenses();
-    refresh();
+    // Without the engine this is the fresh form, which only waits for its first amount
+    if (deferred.module) refresh();
+    else say(messages.resultWaiting);
   }
 
   // ----- visited fields -----------------------------------------------------------------------
@@ -286,13 +289,14 @@ function start(root: HTMLElement): void {
 
   // ----- errors and the result ---------------------------------------------------------------
 
-  function describe(problem: Problem): string {
+  function describe(problem: Problem, module: Deferred): string {
     const { currency } = state;
+    const money = moneyOf(module);
     return fill(messages.errors[problem.code], {
       name: problem.name ?? '',
       currency,
       places: problem.places ?? 0,
-      max: money.major(MAX_EXPENSE_AMOUNT, currency),
+      max: money.major(module.MAX_EXPENSE_AMOUNT, currency),
       sum: problem.code === 'exactTotal' ? money.minor(problem.sum ?? 0, currency) : (problem.sum ?? 0),
       total: money.minor(problem.total ?? 0, currency),
     });
@@ -314,7 +318,7 @@ function start(root: HTMLElement): void {
     return { message: ref(card, `${target.field}Error`), field: ref(card, target.field), invalid: true };
   }
 
-  function showProblems(problems: Problem[]): void {
+  function showProblems(problems: Problem[], module: Deferred): void {
     root.querySelectorAll<HTMLElement>('.sc-error').forEach(message => {
       message.hidden = true;
       message.textContent = '';
@@ -328,7 +332,7 @@ function start(root: HTMLElement): void {
       const place = placeOf(problem.target);
       if (!place) continue;
       place.message.hidden = false;
-      place.message.textContent = describe(problem);
+      place.message.textContent = describe(problem, module);
       place.field.setAttribute('aria-describedby', place.message.id);
       if (place.invalid) place.field.setAttribute('aria-invalid', 'true');
     }
@@ -339,7 +343,7 @@ function start(root: HTMLElement): void {
     if (status.textContent !== text) status.textContent = text;
   }
 
-  function showResult(problems: Problem[], result: ReturnType<typeof calculate>['result']): void {
+  function showResult({ problems, result }: Outcome, money: Money): void {
     resultBox.hidden = !result;
     if (!result) {
       say(state.expenses.length === 0 && problems.length === 0 ? messages.resultEmpty : messages.resultWaiting);
@@ -373,16 +377,34 @@ function start(root: HTMLElement): void {
     );
   }
 
+  function show(module: Deferred): void {
+    const outcome = module.calculate(state);
+    showProblems(outcome.problems, module);
+    showResult(outcome, moneyOf(module));
+  }
+
+  /** Recompute now, or once the engine is here: changes made meanwhile are in `state` by then */
+  let waiting = false;
   function refresh(): void {
-    const { problems, result } = calculate(state);
-    showProblems(problems);
-    showResult(problems, result);
+    if (deferred.module) return show(deferred.module);
+    if (waiting) return;
+    waiting = true;
+    deferred
+      .fetch()
+      // Offline, say: the waiting line stays, and the next change tries again
+      .then(show, () => undefined)
+      .finally(() => (waiting = false));
   }
 
   // ----- the share link -----------------------------------------------------------------------
 
-  const copyLink = (): Promise<void> =>
-    copyShareLink(encodeState(state), { status: shareStatus, linkBox, linkInput }, messages);
+  function copyLink(): void {
+    const parts = { status: shareStatus, linkBox, linkInput };
+    const copy = (module: Deferred) => module.copyShareLink(module.encodeState(state), parts, messages);
+    // Within the click when the codec is here, as some browsers allow the clipboard only then
+    if (deferred.module) void copy(deferred.module);
+    else deferred.fetch().then(copy, () => undefined);
+  }
 
   // ----- events -------------------------------------------------------------------------------
 
@@ -449,19 +471,41 @@ function start(root: HTMLElement): void {
       case 'remove-expense':
         return removeExpense(index);
       case 'copy-link':
-        return void copyLink();
+        return copyLink();
     }
   });
 
+  // The visitor's first touch fetches the engine, so it is usually here by the time it is needed
+  const warm = () => void deferred.fetch().catch(() => undefined);
+  root.addEventListener('focusin', warm, { once: true });
+  root.addEventListener('pointerdown', warm, { once: true });
+
   // A link pasted into this page's own tab changes the hash without reloading it
   window.addEventListener('hashchange', () => {
-    const opened = stateFromHash(location.hash, currencies);
-    if (opened) load(opened, true);
+    const changed = location.hash;
+    if (!changed.startsWith(HASH_PREFIX)) return;
+    deferred.fetch().then(
+      module => {
+        const opened = module.stateFromHash(changed, currencies);
+        if (opened) load(opened, true);
+      },
+      () => undefined
+    );
   });
 
-  const opened = stateFromHash(location.hash, currencies);
-  load(opened ?? fresh(), opened !== null);
-  root.removeAttribute('inert');
+  const begin = (opened: CalcState | null): void => {
+    load(opened ?? fresh(), opened !== null);
+    root.removeAttribute('inert');
+  };
+  const hash = location.hash;
+  if (!hash.startsWith(HASH_PREFIX)) begin(null);
+  else {
+    // Opened from a link: the form is built once, with its figures, as soon as the engine is here
+    deferred.fetch().then(
+      module => begin(module.stateFromHash(hash, currencies)),
+      () => begin(null)
+    );
+  }
 }
 
 export function startSplitCalculators(): void {

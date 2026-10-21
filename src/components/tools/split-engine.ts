@@ -1,7 +1,8 @@
 /**
- * The split-bill calculator's logic (release 2, R3): the form's state, its validation and the
- * balances and payments. Pure functions with no DOM, so Vitest covers them and the page's script
- * can load them on their own.
+ * The split-bill calculator's logic (release 2, R3): the form's validation and the balances and
+ * payments. Pure functions with no DOM, so Vitest covers them and the page's script can load them
+ * on their own, after the page (`split-deferred.ts`). The form's state is in `split-state.ts`, and
+ * re-exported here.
  *
  * The sums are `settle.ts`, the same module that computes the worked examples: the form state is
  * mapped to an `ExampleData` and `computeExample` does the arithmetic. Validation applies the rules
@@ -19,36 +20,24 @@ import {
   type ExampleData,
   type ExampleExpense,
 } from '../../lib/settle';
-import { MAX_NAME_LENGTH, MAX_NUMBER_LENGTH, MIN_PEOPLE, nameKey, parseNumber, pickName, splitList } from './form-input';
+import { nameKey, parseNumber, pickName, splitList } from './form-input';
+import type { CalcState } from './split-state';
 
 // Reading a field and naming people are shared with the rent calculator (`form-input.ts`)
-export { MAX_NAME_LENGTH, MAX_NUMBER_LENGTH, MIN_PEOPLE, parseNumber, pickName, splitList };
-
-export const MAX_PEOPLE = 20;
-export const MAX_EXPENSES = 100;
-export const MAX_LABEL_LENGTH = 60;
-
-export type Method = 'equal' | 'exact' | 'percent';
-
-/** One expense as the form holds it: numbers stay as typed until they are checked. */
-export interface ExpenseState {
-  label: string;
-  /** Index into `people`, or -1 when nobody is chosen (the person who paid was removed) */
-  payer: number;
-  amount: string;
-  method: Method;
-  /** Per person: shares in the expense */
-  include: boolean[];
-  /** Per person: the exact amount or percentage typed (used when `method` is not `equal`) */
-  values: string[];
-}
-
-export interface CalcState {
-  /** ISO 4217 code */
-  currency: string;
-  people: string[];
-  expenses: ExpenseState[];
-}
+export { parseNumber, pickName, splitList };
+// The form's state and limits, which the page script needs at load (`split-state.ts`)
+export {
+  MAX_EXPENSES,
+  MAX_LABEL_LENGTH,
+  MAX_NAME_LENGTH,
+  MAX_NUMBER_LENGTH,
+  MAX_PEOPLE,
+  MIN_PEOPLE,
+  newExpense,
+  type CalcState,
+  type ExpenseState,
+  type Method,
+} from './split-state';
 
 export type ProblemCode =
   | 'nameMissing'
@@ -245,17 +234,5 @@ export function calculate(state: CalcState): Outcome {
       })),
       totalMinor: computed.totalMinor,
     },
-  };
-}
-
-/** An expense for the people given, shared by everyone */
-export function newExpense(label: string, people: number, payer = 0): ExpenseState {
-  return {
-    label,
-    payer,
-    amount: '',
-    method: 'equal',
-    include: Array.from({ length: people }, () => true),
-    values: Array.from({ length: people }, () => ''),
   };
 }

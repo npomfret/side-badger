@@ -10,6 +10,10 @@ Run the local Lighthouse baseline: production image behind a brotli/gzip proxy.
 Usage: scripts/lighthouse-local.sh [options]
 
 Options:
+  --dist DIR         skip the image build: serve this built site (an `astro build`
+                     output, such as an english-first build) with the repo's nginx
+                     config in the Dockerfile's nginx base image
+                     (default: build the production image)
   --urls LIST        comma-separated paths (default: /,/pricing/,/ja/,/ar/,/privacy/)
   --runs N           runs per URL and device (default: 3)
   --devices LIST     mobile,desktop (default: mobile,desktop)
@@ -24,6 +28,7 @@ Exit codes: 0 succeeded, 1 failed, 2 called wrongly.
 Raw JSON goes to --out-dir; a median table goes to stdout.
 
 Example: scripts/lighthouse-local.sh --urls /,/pricing/ --runs 3
+Example: scripts/lighthouse-local.sh --dist dist --urls /pricing/ --devices mobile
 USAGE
 }
 
@@ -41,6 +46,7 @@ out_dir="$root/tasks/baselines/$(date +%Y-%m)/lighthouse"
 container_port=18101
 proxy_port=18102
 name="sb-lighthouse"
+dist=""
 
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -48,9 +54,10 @@ while [ $# -gt 0 ]; do
       usage
       exit 0
       ;;
-    --urls | --runs | --devices | --out-dir | --container-port | --proxy-port | --name)
+    --dist | --urls | --runs | --devices | --out-dir | --container-port | --proxy-port | --name)
       [ $# -ge 2 ] || die_usage "$1 needs a value"
       case "$1" in
+        --dist) dist="$2" ;;
         --urls) urls="$2" ;;
         --runs) runs="$2" ;;
         --devices) devices="$2" ;;
@@ -65,6 +72,10 @@ while [ $# -gt 0 ]; do
   esac
 done
 case "$runs" in '' | *[!0-9]* | 0) die_usage "--runs must be a positive integer" ;; esac
+if [ -n "$dist" ]; then
+  [ -f "$dist/index.html" ] || die_usage "--dist $dist is not a built site (no index.html)"
+  dist="$(cd "$dist" && pwd)"
+fi
 
 mkdir -p "$out_dir"
 log="$out_dir/run.log"
@@ -91,11 +102,31 @@ slug_of() {
   echo "${s:-home}"
 }
 
+# The production stage without its build: the Dockerfile's nginx base image, the repo's nginx
+# config where the Dockerfile puts it, and a site that is already built (--dist).
+serve_dist() {
+  local base
+  base="$(sed -n 's/^FROM \(nginx:[^ ]*\).*/\1/p' "$root/Dockerfile" | tail -n 1)"
+  [ -n "$base" ] || fail "no nginx base image in the Dockerfile"
+  docker create --name "$name" -p "127.0.0.1:$container_port:80" "$base" >>"$log" 2>&1 || fail "docker create"
+  # Every nginx/*.conf goes to /etc/nginx/side-badger/ and default.conf also to conf.d/, as in the
+  # Dockerfile; the stray copy of default.conf is inert, since only explicit includes read that folder
+  docker cp "$root/nginx/." "$name:/etc/nginx/side-badger" >>"$log" 2>&1 || fail "copy nginx config"
+  docker cp "$root/nginx/default.conf" "$name:/etc/nginx/conf.d/default.conf" >>"$log" 2>&1 || fail "copy default.conf"
+  docker cp "$dist/." "$name:/usr/share/nginx/html" >>"$log" 2>&1 || fail "copy $dist"
+  docker start "$name" >>"$log" 2>&1 || fail "docker start"
+}
+
 started=$(date +%s)
-echo "building image $name"
-docker build -t "$name" "$root" >>"$log" 2>&1 || fail "docker build"
 docker rm -f "$name" >/dev/null 2>&1 || true
-docker run -d --name "$name" -p "127.0.0.1:$container_port:80" "$name" >>"$log" 2>&1 || fail "docker run"
+if [ -n "$dist" ]; then
+  echo "serving $dist"
+  serve_dist
+else
+  echo "building image $name"
+  docker build -t "$name" "$root" >>"$log" 2>&1 || fail "docker build"
+  docker run -d --name "$name" -p "127.0.0.1:$container_port:80" "$name" >>"$log" 2>&1 || fail "docker run"
+fi
 
 node "$root/scripts/lighthouse-proxy.mjs" --listen "$proxy_port" --target "$container_port" >>"$log" 2>&1 &
 proxy_pid=$!

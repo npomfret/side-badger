@@ -1,9 +1,10 @@
 /**
- * What the calculators' page scripts share (release 2, R3): finding script hooks, cloning the
- * `<template>`s that rows are built from, filling `{placeholders}`, and the "Copy link" flow.
- * Both scripts are loaded on their own page, so only what a page uses is shipped with it.
+ * What the calculators' page scripts share at load (release 2, R3): finding script hooks, cloning
+ * the `<template>`s that rows are built from, filling `{placeholders}`, and fetching what can wait
+ * until after load (`later`). Both scripts are loaded on their own page, so only what a page uses
+ * is shipped with it. The "Copy link" flow is in `share-link.ts`, fetched with the engine
+ * (restructure D36).
  */
-import { HASH_PREFIX } from './fragment-codec';
 
 /** Fill `{placeholders}` in one pass, so a value that contains braces is never expanded again */
 export const fill = (template: string, params: Record<string, string | number>): string =>
@@ -22,42 +23,31 @@ export function cloneTemplate(root: ParentNode, name: string): HTMLElement {
   return template.content.firstElementChild!.cloneNode(true) as HTMLElement;
 }
 
-export interface ShareParts {
-  /** Where "Link copied" and its failures are said */
-  status: HTMLElement;
-  /** The box that holds the link to copy by hand */
-  linkBox: HTMLElement;
-  linkInput: HTMLInputElement;
-}
-
-export interface ShareMessages {
-  copied: string;
-  copyFailed: string;
-  linkTooLarge: string;
+export interface Later<T> {
+  /** The module, once it has arrived */
+  readonly module: T | undefined;
+  /** Fetch the module, unless it is here or on its way. A failed fetch is forgotten, so the next call retries. */
+  fetch(): Promise<T>;
 }
 
 /**
- * Put the link for `payload` in the address bar and on the clipboard. A payload of `null` is a
- * calculation too big for a link. With no clipboard permission, or on an insecure page, the link
- * is shown selected, to copy by hand.
+ * A module the page fetches after load, when it is first needed (restructure D36). Pass a function
+ * that calls `import()` with a literal path, so the bundler splits the module out.
  */
-export async function copyShareLink(payload: string | null, parts: ShareParts, messages: ShareMessages): Promise<void> {
-  parts.linkBox.hidden = true;
-  if (payload === null) {
-    parts.status.textContent = messages.linkTooLarge;
-    return;
-  }
-  // The address bar gets the same link, so a reload or a bookmark keeps the figures
-  history.replaceState(null, '', `${HASH_PREFIX}${payload}`);
-  const url = `${location.origin}${location.pathname}${location.search}${HASH_PREFIX}${payload}`;
-  try {
-    await navigator.clipboard.writeText(url);
-    parts.status.textContent = messages.copied;
-  } catch {
-    parts.status.textContent = messages.copyFailed;
-    parts.linkInput.value = url;
-    parts.linkBox.hidden = false;
-    parts.linkInput.focus();
-    parts.linkInput.select();
-  }
+export function later<T>(load: () => Promise<T>): Later<T> {
+  let module: T | undefined;
+  let loading: Promise<T> | undefined;
+  return {
+    get module() {
+      return module;
+    },
+    fetch: () =>
+      (loading ??= load().then(
+        arrived => (module = arrived),
+        error => {
+          loading = undefined;
+          throw error;
+        }
+      )),
+  };
 }

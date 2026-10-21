@@ -8,29 +8,35 @@
  * Fields are rebuilt only when the structure changes (a person added or removed, a link opened),
  * never while someone types. An error shows once the visitor has been in its field, but the result
  * stays hidden while any error stands, whether it shows yet or not.
+ *
+ * At load the script only builds the form (restructure D36: at most 10 KB of script at load). The
+ * engine, the share link and money formatting (`rent-deferred.ts`) are fetched on the visitor's
+ * first touch of the form, or straight away when the page opens from a share link, in which case
+ * the form is built once they are here. A fresh form needs none of them: its rent is empty, so all
+ * it shows is the line that waits for it.
  */
-import { MAX_EXPENSE_AMOUNT } from '../../lib/settle';
-import { moneyFormatter } from '../content/money';
+import type { Money } from '../content/money';
+import { pickName, splitList } from './form-input';
+import type { RentProblem, RentProblemCode, RentResult, RentTarget } from './rent-engine';
 import {
   MAX_RENT_PEOPLE,
   MIN_PEOPLE,
   MODES,
   UNITS,
-  calculate,
   freshState,
   newPerson,
   valueOf,
   type Mode,
-  type RentProblem,
-  type RentProblemCode,
-  type RentResult,
   type RentState,
-  type RentTarget,
   type Unit,
-} from './rent-engine';
-import { encodeRent, rentFromHash } from './rent-fragment';
-import { pickName, splitList } from './form-input';
-import { cloneTemplate, copyShareLink, fill, ref } from './tool-dom';
+} from './rent-state';
+import { HASH_PREFIX } from './share-hash';
+import { cloneTemplate, fill, later, ref } from './tool-dom';
+
+type Deferred = typeof import('./rent-deferred');
+
+/** One fetch for every calculator on the page */
+const deferred = later<Deferred>(() => import('./rent-deferred'));
 
 interface Messages {
   personLabel: string;
@@ -62,7 +68,8 @@ const FIELDS = ['rent', 'bills', 'shared'] as const;
 function start(root: HTMLElement): void {
   const messages = JSON.parse(ref(root, 'messages').textContent ?? '{}') as Messages;
   const intl = root.dataset.intl ?? 'en';
-  const money = moneyFormatter(intl);
+  let formatter: Money | undefined;
+  const moneyOf = (module: Deferred): Money => (formatter ??= module.moneyFormatter(intl));
   // Western digits in every locale, as the money is
   const numbers = { numberingSystem: 'latn' } as const;
   const wholePercent = new Intl.NumberFormat(intl, { ...numbers, style: 'percent' });
@@ -134,7 +141,9 @@ function start(root: HTMLElement): void {
     everythingVisited = fromLink;
     renderPeople();
     syncMode();
-    refresh();
+    // Without the engine this is the fresh form, which only waits for the rent
+    if (deferred.module) refresh();
+    else say(messages.resultWaiting);
   }
 
   /** The mode's own fields show, the other's hide, and every person's figure becomes the mode's */
@@ -239,12 +248,15 @@ function start(root: HTMLElement): void {
 
   // ----- errors and the result ---------------------------------------------------------------
 
-  function describe(problem: RentProblem): string {
+  function describe(problem: RentProblem, module: Deferred): string {
     return fill(messages.errors[problem.code], {
       name: problem.name ?? '',
       currency: state.currency,
       places: problem.places ?? 0,
-      max: problem.code === 'valueMax' ? count.format(problem.max ?? 0) : money.major(MAX_EXPENSE_AMOUNT, state.currency),
+      max:
+        problem.code === 'valueMax'
+          ? count.format(problem.max ?? 0)
+          : moneyOf(module).major(module.MAX_EXPENSE_AMOUNT, state.currency),
     });
   }
 
@@ -260,7 +272,7 @@ function start(root: HTMLElement): void {
       : { message: ref(row, 'valueError'), field: ref(row, 'value') };
   }
 
-  function showProblems(problems: RentProblem[]): void {
+  function showProblems(problems: RentProblem[], module: Deferred): void {
     root.querySelectorAll<HTMLElement>('.sc-error').forEach(message => {
       message.hidden = true;
       message.textContent = '';
@@ -274,7 +286,7 @@ function start(root: HTMLElement): void {
       const place = placeOf(problem.target);
       if (!place) continue;
       place.message.hidden = false;
-      place.message.textContent = describe(problem);
+      place.message.textContent = describe(problem, module);
       place.field.setAttribute('aria-describedby', place.message.id);
       place.field.setAttribute('aria-invalid', 'true');
     }
@@ -300,7 +312,7 @@ function start(root: HTMLElement): void {
       });
   }
 
-  function showResult(result: RentResult | undefined): void {
+  function showResult(result: RentResult | undefined, money: Money): void {
     resultBox.hidden = !result;
     if (!result) {
       say(messages.resultWaiting);
@@ -341,10 +353,33 @@ function start(root: HTMLElement): void {
     );
   }
 
+  function show(module: Deferred): void {
+    const { problems, result } = module.calculate(state);
+    showProblems(problems, module);
+    showResult(result, moneyOf(module));
+  }
+
+  /** Recompute now, or once the engine is here: changes made meanwhile are in `state` by then */
+  let waiting = false;
   function refresh(): void {
-    const { problems, result } = calculate(state);
-    showProblems(problems);
-    showResult(result);
+    if (deferred.module) return show(deferred.module);
+    if (waiting) return;
+    waiting = true;
+    deferred
+      .fetch()
+      // Offline, say: the waiting line stays, and the next change tries again
+      .then(show, () => undefined)
+      .finally(() => (waiting = false));
+  }
+
+  // ----- the share link -----------------------------------------------------------------------
+
+  function copyLink(): void {
+    const parts = { status: shareStatus, linkBox, linkInput };
+    const copy = (module: Deferred) => module.copyShareLink(module.encodeRent(state), parts, messages);
+    // Within the click when the codec is here, as some browsers allow the clipboard only then
+    if (deferred.module) void copy(deferred.module);
+    else deferred.fetch().then(copy, () => undefined);
   }
 
   // ----- events -------------------------------------------------------------------------------
@@ -400,19 +435,41 @@ function start(root: HTMLElement): void {
       case 'remove-person':
         return removePerson(index);
       case 'copy-link':
-        return void copyShareLink(encodeRent(state), { status: shareStatus, linkBox, linkInput }, messages);
+        return copyLink();
     }
   });
 
+  // The visitor's first touch fetches the engine, so it is usually here by the time it is needed
+  const warm = () => void deferred.fetch().catch(() => undefined);
+  root.addEventListener('focusin', warm, { once: true });
+  root.addEventListener('pointerdown', warm, { once: true });
+
   // A link pasted into this page's own tab changes the hash without reloading it
   window.addEventListener('hashchange', () => {
-    const opened = rentFromHash(location.hash, currencies);
-    if (opened) load(opened, true);
+    const changed = location.hash;
+    if (!changed.startsWith(HASH_PREFIX)) return;
+    deferred.fetch().then(
+      module => {
+        const opened = module.rentFromHash(changed, currencies);
+        if (opened) load(opened, true);
+      },
+      () => undefined
+    );
   });
 
-  const opened = rentFromHash(location.hash, currencies);
-  load(opened ?? fresh(), opened !== null);
-  root.removeAttribute('inert');
+  const begin = (opened: RentState | null): void => {
+    load(opened ?? fresh(), opened !== null);
+    root.removeAttribute('inert');
+  };
+  const hash = location.hash;
+  if (!hash.startsWith(HASH_PREFIX)) begin(null);
+  else {
+    // Opened from a link: the form is built once, with its figures, as soon as the engine is here
+    deferred.fetch().then(
+      module => begin(module.rentFromHash(hash, currencies)),
+      () => begin(null)
+    );
+  }
 }
 
 export function startRentCalculators(): void {

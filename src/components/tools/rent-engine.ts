@@ -1,7 +1,8 @@
 /**
- * The rent calculator's logic (release 2, P9): the form's state, its validation and each person's
- * share of the rent. Pure functions with no DOM, so Vitest covers them and the page's script can
- * load them on their own.
+ * The rent calculator's logic (release 2, P9): the form's validation and each person's share of
+ * the rent. Pure functions with no DOM, so Vitest covers them and the page's script can load them
+ * on their own, after the page (`rent-deferred.ts`). The form's state is in `rent-state.ts`, and
+ * re-exported here.
  *
  * Two ways to share the rent between 2 and 10 people:
  * - By room size. A share of the rent (40% unless the group says otherwise) pays for the shared
@@ -12,49 +13,34 @@
  * Each person gets the exact share (a percentage), a whole-percentage share from the largest
  * remainder method (so the whole shares total exactly 100, which is what Side Badger's Percentage
  * split needs) and the amount, which is the whole percentage applied to the rent in minor units
- * with `apportion` from `settle.ts`: what the app will charge once those percentages are typed in.
- * The area's unit is a label only: the shares do not depend on it.
+ * with `apportion` (`lib/minor-units.ts`): what the app will charge once those percentages are
+ * typed in. The area's unit is a label only: the shares do not depend on it.
  */
-import { MAX_EXPENSE_AMOUNT, apportion, isWholeMinor, minorExponent, toMinor } from '../../lib/settle';
-import { MAX_NAME_LENGTH, MAX_NUMBER_LENGTH, MIN_PEOPLE, nameKey, parseNumber } from './form-input';
+import { MAX_EXPENSE_AMOUNT, apportion, isWholeMinor, minorExponent, toMinor } from '../../lib/minor-units';
+import { nameKey, parseNumber } from './form-input';
+import { valueOf, type Mode, type RentState } from './rent-state';
 
-export { MAX_NAME_LENGTH, MAX_NUMBER_LENGTH, MIN_PEOPLE };
+// The form's state and limits, which the page script needs at load (`rent-state.ts`)
+export {
+  DEFAULT_SHARED,
+  MAX_NAME_LENGTH,
+  MAX_NUMBER_LENGTH,
+  MAX_RENT_PEOPLE,
+  MIN_PEOPLE,
+  MODES,
+  UNITS,
+  freshState,
+  newPerson,
+  valueOf,
+  type Mode,
+  type PersonState,
+  type RentState,
+  type Unit,
+} from './rent-state';
 
-export const MAX_RENT_PEOPLE = 10;
-/** The share of the rent that pays for the shared rooms, until the group says otherwise */
-export const DEFAULT_SHARED = '40';
 /** The largest bedroom area and income a field takes: far past anything real, but finite */
 export const MAX_AREA = 100_000;
 export const MAX_INCOME = 99_999_999;
-
-export type Mode = 'room' | 'income';
-/** A label only: it does not change a share */
-export type Unit = 'm2' | 'ft2';
-
-export const MODES: readonly Mode[] = ['room', 'income'];
-export const UNITS: readonly Unit[] = ['m2', 'ft2'];
-
-/** One person as the form holds them: numbers stay as typed until they are checked. */
-export interface PersonState {
-  name: string;
-  /** Bedroom area (by room size) */
-  area: string;
-  /** Income (by income) */
-  income: string;
-}
-
-export interface RentState {
-  mode: Mode;
-  /** ISO 4217 code */
-  currency: string;
-  rent: string;
-  /** By income only: shared bills, split like the rent. Blank means none. */
-  bills: string;
-  /** By room size only: the percentage of the rent that pays for the shared rooms */
-  shared: string;
-  unit: Unit;
-  people: PersonState[];
-}
 
 export type RentProblemCode =
   | 'nameMissing'
@@ -112,10 +98,6 @@ export interface RentOutcome {
   /** Present only when there are no problems */
   result?: RentResult;
 }
-
-/** The field that says how big this person's share is, in the current mode */
-export const valueOf = (state: Pick<RentState, 'mode'>, person: PersonState): string =>
-  state.mode === 'room' ? person.area : person.income;
 
 /** The biggest figure a person's field takes, in the current mode */
 export const maxValue = (mode: Mode): number => (mode === 'room' ? MAX_AREA : MAX_INCOME);
@@ -244,20 +226,4 @@ export function calculate(state: RentState): RentOutcome {
   } catch {
     return { problems: [{ code: 'unexpected', target: { kind: 'rent' } }] };
   }
-}
-
-/** A person for the form: blank figures */
-export const newPerson = (name: string): PersonState => ({ name, area: '', income: '' });
-
-/** The form as it opens: two people, nothing typed, 40% for the shared rooms */
-export function freshState(currency: string, names: readonly [string, string]): RentState {
-  return {
-    mode: 'room',
-    currency,
-    rent: '',
-    bills: '',
-    shared: DEFAULT_SHARED,
-    unit: 'm2',
-    people: names.map(newPerson),
-  };
 }

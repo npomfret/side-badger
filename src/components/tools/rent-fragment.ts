@@ -24,7 +24,7 @@ import {
   newPerson,
   type RentState,
   type Unit,
-} from './rent-engine';
+} from './rent-state';
 
 const VERSION = 1;
 

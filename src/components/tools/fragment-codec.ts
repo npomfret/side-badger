@@ -6,9 +6,11 @@
  * Nothing here throws: a bad length, character set, encoding or JSON gives `undefined`, and the
  * calculator starts afresh.
  */
+import { HASH_PREFIX } from './share-hash';
 
-/** Hash prefix of a share link */
-export const HASH_PREFIX = '#c=';
+/** Hash prefix of a share link (`share-hash.ts`, so a page can spot a link without this module) */
+export { HASH_PREFIX };
+
 /** Longest payload accepted or produced, in characters (about 3 KB of JSON) */
 export const MAX_PAYLOAD_LENGTH = 4096;
 

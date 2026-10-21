@@ -23,7 +23,7 @@ import {
   type CalcState,
   type ExpenseState,
   type Method,
-} from './split-engine';
+} from './split-state';
 import { HASH_PREFIX, MAX_PAYLOAD_LENGTH, isIndex, isRecord, isText, readPayload, writePayload } from './fragment-codec';
 
 export { HASH_PREFIX, MAX_PAYLOAD_LENGTH };

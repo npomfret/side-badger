@@ -25,9 +25,17 @@ const { locale } = Astro.props as { locale: Locale };
       pageId="support"
       locale={locale}
     >
-      <a slot="action" class="btn btn-primary" href={`mailto:${t('support.email', locale)}`}>
-        {t('support.email', locale)}
-      </a>
+      <!-- Plain text, not a mailto link, to keep it from link-harvesting scrapers -->
+      <p slot="action" class="support-email" dir="ltr">{t('support.email', locale)}</p>
     </PageHero>
   </article>
 </BaseLayout>
+
+<style>
+  .support-email {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+    user-select: all;
+  }
+</style>

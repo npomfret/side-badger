@@ -62,6 +62,10 @@ No upload, review submission, approval or publication has occurred.
 All test commands ran serially with one worker. Logs are under `tmp/logs/`:
 
 - `npm test -- --run src/__tests__/translations.test.ts src/__tests__/site-structure.test.ts --maxWorkers=1 --no-file-parallelism`: 471 passed.
+- The first branch CI run found a further product-footer expectation in the
+  colocated navigation unit test. Added Support to that expected list; targeted
+  `npm test -- --run src/components/nav/navigation.test.ts --maxWorkers=1 --no-file-parallelism`
+  passes all 11 checks. Independent test-policy review found no issues.
 - `npm run i18n:audit`: passed, no missing/stale/untranslated entries.
 - `npm run build`: passed, including all 39 support routes.
 - `npm exec -- astro check`: 0 errors, 0 warnings (7 existing hints).

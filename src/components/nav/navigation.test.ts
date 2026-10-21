@@ -149,6 +149,7 @@ describe('navigation from the registry', () => {
       expect(footerGroups('en', labels).find(group => group.id === 'product')!.links.map(link => link.label)).toEqual([
         'Settle up',
         'Pricing',
+        'Support',
       ]);
       expect((await pageLabels('fr', read))['feature/settle-up']).toBe('Régler');
       // Not built in German, so no label is loaded

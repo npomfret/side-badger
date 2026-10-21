@@ -397,6 +397,197 @@ Each package owns its files exclusively; agents build in a private copy, never t
 
 Then flip `published: true`, merge, push to `main`, and check production.
 
+### Wave 2 and 3 briefs
+
+These are settled. They extend the site plan's briefs, which still apply where not amended here. Every page follows the cheeky-voice rule: fun and cheeky, never dorky, and translations carry the joke. Numbers come from `computeExample`, run on 21 October 2026. A page with a worked example quotes only its figures, plus the arithmetic shown.
+
+**P6. Four feature pages.** Each has its own `src/content/features/<slug>/en.yaml`, a `feature` registry entry and page art.
+
+- **`groups-and-permissions`**
+  - Base: the site plan brief "Groups and permissions".
+  - Add these:
+    - The preset names are the app's, "Open collaboration" and "Managed group", plus custom permissions.
+    - Invite links expire after a period you choose (15 minutes to 5 days).
+    - Join approval.
+    - Per-group display names and avatars, and the group header image.
+    - Archive, lock and close, each in one sentence:
+      - archive hides a group from your own dashboard only;
+      - lock freezes changes until an admin unlocks it;
+      - close is permanent, for everyone.
+  - Keep the presets table as the page's "worked example". It is a section with items, not a `WorkedExample`.
+  - Tone: "Your group, your rules, within reason."
+- **`plan-together`** (replaces the brief's "Lists and polls")
+  - H1: "Plan it together, split it after".
+  - Sections:
+    - comments and reactions next to the numbers;
+    - question an expense (it leaves the balances until the question is closed);
+    - shared lists;
+    - polls (anonymous if you like, one or several choices);
+    - the activity feed;
+    - push notifications.
+  - Everything is framed around shared spending (site plan D11).
+  - Worked example: the site plan's villa poll is prose. The `WorkedExample` is the three-housemate dispute example below (guide 7's data), after the question was resolved.
+  - Tone: "The shopping list and the shopping bill, finally on speaking terms."
+- **`receipt-scanning`**
+  - Base: the site plan brief, with R5's gate: no accuracy, speed or language claims. Drop the FAQ "How long does it take?".
+  - Keep the disclosure that Google's AI service reads the image.
+  - Attachments: photos or PDFs, up to three per expense; PDFs are attached, not read.
+  - No `WorkedExample`. The fields filled in (description, total, currency, date, time, place) are a list.
+  - Tone: "Let the badger read the receipt. You check its homework."
+- **`web-app`**
+  - H1: "No app store. No download. Still feels like an app".
+  - Sections:
+    - it runs in any modern browser on a phone or computer;
+    - add it to your home screen or dock (the app offers it after sign-in; Settings shows how on iPhone);
+    - push notifications (opt-in; iPhone and iPad from the home screen app only);
+    - live updates;
+    - 39 languages, each person their own;
+    - accessibility;
+    - what it doesn't do: no offline use, no app-store app.
+  - Queries:
+    - "bill splitting app without download";
+    - "split expenses online";
+    - "splitwise web version alternative" (never name a competitor in an H1).
+  - No `WorkedExample`.
+  - Tone: "Your phone is full. We get it."
+
+**P7. Couples** (`use-case/couples`)
+- The site plan brief, unchanged.
+- Worked example:
+
+  | Expense | Paid by | Amount | Split |
+  |---|---|---|---|
+  | Rent | Sam | 1,500 | Sam 60%, Alex 40% |
+  | Groceries | Alex | 90 | equal |
+
+  Alex pays Sam £555.00, one payment.
+- Links to guide 4, through `related`.
+
+**P8. Guides 4 to 8.** The same rules as wave 1, with `owner: npomfret`, `reviewBy: 2027-04-21`, and `datePublished` set to the day English is final.
+
+4. **`how-to-split-bills-with-a-partner-who-earns-more`**
+   - H1: "How to split bills with a partner who earns more".
+   - Related: `use-case/couples`, `feature/split-expenses`.
+   - Story: Maya takes home £2,800 a month and Jon £1,700. 2,800 ÷ 4,500 is 62.2%, which rounds to 62/38.
+   - Worked example (GBP):
+
+     | Expense | Paid by | Amount | Split |
+     |---|---|---|---|
+     | Rent | Maya | 1,400 | Maya 62%, Jon 38% |
+     | Energy and broadband | Jon | 180 | Maya 62%, Jon 38% |
+     | Takeaway | Jon | 36 | equal |
+
+     Jon pays Maya £402.40, one payment.
+   - Sections also cover:
+     - 50/50 versus income-based, and agreeing which costs count as shared;
+     - what happens when someone's pay changes;
+     - the takeaway split equally on purpose (treats can be 50/50).
+   - FAQ:
+     - "Gross or take-home pay?" The group decides; take-home is common.
+     - "Does Side Badger see our incomes?" No; you enter percentages only.
+     - "Can we set 62/38 once?" Per expense; copy one that has it.
+5. **`how-to-split-a-trip-paid-in-several-currencies`**
+   - Related: `feature/multiple-currencies`, `use-case/group-trips`, `feature/settle-up`.
+   - Story: Zoe, Kenji and Lucy go to Japan. The hotel was booked at home in pounds. The illustrative rate is ¥1 = £0.005.
+   - Worked example (GBP, with JPY at rate 0.005):
+
+     | Expense | Paid by | Amount | Split |
+     |---|---|---|---|
+     | Hotel, booked at home | Zoe | £600 | equal |
+     | Rail passes | Lucy | ¥90,000 | equal |
+     | Ramen night | Kenji | ¥9,000 | equal |
+
+   - Results:
+     - kept separate: in pounds, Kenji pays Zoe £200 and Lucy pays Zoe £200; in yen, Zoe pays Lucy ¥33,000 and Kenji pays Lucy ¥24,000;
+     - converted: Kenji pays Zoe £235 and Kenji pays Lucy £85.
+   - The guide explains both ways and when to choose each. The wording is "a current exchange rate"; never claim live or mid-market rates.
+   - States the cap: 999,999.99 per expense in its own currency.
+6. **`how-to-collect-for-a-group-gift`**
+   - Related: `use-case/events-and-celebrations`, `feature/split-expenses`, `feature/settle-up`.
+   - Story: Priya buys a £240 present online. Omar and Priya chip in £60, Lena £80, and Sam £40.
+   - Worked example (GBP):
+
+     | Expense | Paid by | Amount | Split |
+     |---|---|---|---|
+     | The gift | Priya | 240 | exact: Priya 60, Omar 60, Lena 80, Sam 40 |
+     | Card and wrapping | Omar | 12 | equal |
+
+     Lena pays Priya £83, Omar pays Priya £51, and Sam pays Priya £43.
+   - Sections also cover:
+     - a budget poll (D11);
+     - keeping the recipient out of the group;
+     - collecting before or after buying.
+7. **`what-to-do-when-someone-disputes-a-shared-expense`**
+   - Related: `feature/plan-together`, `use-case/housemates`, `feature/settle-up`.
+   - Story: Tom adds £45 of party wine split between all three. Aisha didn't drink and questions it.
+     - While the question is open, the wine is out of everyone's balances.
+     - They agree it is Tom and Priya's. Tom edits the split and Aisha closes the question.
+   - Worked example (GBP), the state after the edit:
+
+     | Expense | Paid by | Amount | Split |
+     |---|---|---|---|
+     | Big shop | Tom | 84 | equal |
+     | Cleaner | Priya | 60 | equal |
+     | Party wine | Tom | 45 | equal between Tom and Priya |
+
+     Aisha pays Tom £48 and Priya pays Tom £10.50.
+   - Sections also cover:
+     - how to word a question (with the app's labels);
+     - who can close one (the questioner or an admin);
+     - questions only work when the group turns them on;
+     - an edit keeps the earlier version.
+   - Tone: diplomatic, cheeky about the wine, never sides with anyone.
+8. **`how-to-settle-up-after-a-group-trip`**
+   - Related: `feature/settle-up`, `use-case/group-trips`.
+   - Story: five friends, five expenses.
+   - Worked example (EUR):
+
+     | Expense | Paid by | Amount | Split |
+     |---|---|---|---|
+     | Apartment | Mo | 1,000 | equal |
+     | Boat trip | Ines | 250 | equal |
+     | Big dinner | Raf | 300 | equal |
+     | Airport taxi | Tess | 60 | equal among Tess, Uma and Mo |
+     | Groceries | Mo | 90 | equal |
+
+     Ten person-to-person debts become four payments, all to Mo: Uma €348, Tess €288, Ines €78 and Raf €28.
+   - The part-payment section uses its own stated figures: Uma pays €200 now, and €148 stays on her balance.
+   - Sections also cover:
+     - when to settle (before everyone scatters);
+     - recording each payment;
+     - quick-settle;
+     - reactions on a payment.
+
+**P9. Rent calculator** (`/rent-split-calculator/`, type `tool`, product footer order 9). It reuses P1's patterns: the fragment link, no network or storage, the script budget, page art and a 500 to 700 word page.
+- **Two modes:**
+  - **By room size:** the rent, currency, the share for shared rooms (default 40%), and 2 to 10 people with bedroom areas. The unit (m² or ft²) is a label only.
+  - **By income:** the rent, plus optional bills, and 2 to 10 people with incomes.
+- **Output for each person:**
+  - the exact share to two decimals;
+  - a whole-percentage share by the largest remainder, so it totals exactly 100;
+  - the amount, apportioned in minor units.
+- **Under the result:** "In Side Badger, choose **Percentage** and type …", using the app's label.
+- **Content:** its worked example is guide 1's flat. It links to guides 1 and 4 through `related`, and guide 1 adds the calculator to its `related`.
+
+**P11. Splitwise comparison.**
+- The site plan brief and D16.
+- Facts gathered on the day of writing from splitwise.com only, with the date on the page.
+- No logos. No claims about Splitwise's daily expense limit.
+
+**P12. Help page** (`/support/` rebuilt, type `support`, English indexable).
+- Short answers, each one to three sentences, grouped under:
+  - "Signing in";
+  - "Joining a group";
+  - "Expenses";
+  - "Payments";
+  - "Notifications and the home screen";
+  - "Leaving, archiving, locking and closing";
+  - "Still stuck?".
+- Each answer links to the page or guide that explains more. Facts come from the app's `docs/user-features.md`.
+- The email stays as plain text, not a link.
+- `FAQPage` JSON-LD.
+- Tone: helpful first, cheeky second: "Forgot your password? It happens to the best badgers."
+
 ### Wave 2
 
 - **P6.** Four feature pages (R5), one agent each, using the existing briefs as amended here.

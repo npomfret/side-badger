@@ -52,7 +52,7 @@ const related = await relatedCards(pageId, locale);
   ]}
 >
   <article class="content-page" data-page-type="guide" data-unpublished={page.published ? undefined : ''}>
-    <PageHero h1={data.h1} lead={data.lead} pageId={pageId} locale={locale} />
+    <PageHero h1={data.h1} lead={data.lead} pageId={pageId} locale={locale} example={data.example} />
 
     {data.example ? (
       <>

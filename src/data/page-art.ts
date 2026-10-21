@@ -187,6 +187,40 @@ export const pageArt: Readonly<Record<string, PageArtDef>> = {
     ],
   },
 
+  // Guides: the story's own expense, the joke and the rule
+  'guide/how-to-split-rent-by-room-size': {
+    layout: 'cluster',
+    items: [
+      {
+        prop: 'receipt',
+        title: { expense: 0 },
+        total: { label: { payer: 0 }, amount: { amount: 0 } },
+      },
+      { prop: 'sticky', text: key('art.rentGuide.sticky') },
+      { prop: 'stamp', text: key('art.rentGuide.stamp'), tone: 'green' },
+    ],
+  },
+  'guide/how-to-split-a-holiday-villa-when-people-stay-different-nights': {
+    layout: 'stack',
+    items: [
+      { prop: 'ledger', expense: 0 },
+      { prop: 'ledger', payment: 0 },
+      { prop: 'stamp', text: key('art.villaGuide.stamp'), tone: 'ink' },
+    ],
+  },
+  'guide/how-to-split-a-stag-or-hen-weekend': {
+    layout: 'cluster',
+    items: [
+      {
+        prop: 'receipt',
+        title: { expense: 1 },
+        total: { label: { payer: 1 }, amount: { amount: 1 } },
+      },
+      { prop: 'sticky', text: key('art.henGuide.sticky'), color: 'pink' },
+      { prop: 'stamp', text: key('art.henGuide.stamp'), tone: 'green' },
+    ],
+  },
+
   // Layout-review pages (src/site/preview-pages.ts): one per layout, so the layouts spec checks
   // every layout for overflow and axe in English and the pseudo-locales
   'preview/hub': {

@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Kalkylator för att dela notan: vem är skyldig vem | Side Badger"
+  description: "Vem betalade, vem är skyldig, vem betalar vem: klart på några sekunder. Dela lika, exakt eller i procent. Gratis, i webbläsaren och inget sparas eller skickas."
+h1: Kalkylator för att dela notan
+navLabel: Kalkylator för att dela notan
+lead: Skriv in vem som betalade vad så säger kalkylatorn vem som är skyldig vem, med en kort lista över betalningar för att göra upp. Den körs i din webbläsare, sparar ingenting och flyttar inga pengar. Om gruppen vill att räkningen ska överleva fliken gör [dela utgifter](page:feature/split-expenses) och [göra upp](page:feature/settle-up) i Side Badger samma uträkningar och behåller dem.
+cta:
+  heading: Gillar du uträkningarna? Behåll dem.
+  body: Den här kalkylatorn glömmer allt när du stänger fliken, ungefär som den som definitivt betalade förra gången. En Side Badger-grupp behåller utgifterna, uppdaterar allas saldo och registrerar betalningarna. Det är gratis, utan annonser och utan dagliga gränser.
+sections:
+  - heading: Så fungerar uträkningen
+    body: För varje utgift räknar kalkylatorn ut allas andel. Du kan dela den lika, efter exakta belopp eller i procent, mellan de personer du väljer. Varje persons saldo är sedan vad hen betalade minus vad hen är skyldig. Ett plustecken betyder att gruppen är skyldig hen, och ett minustecken betyder att hen är skyldig gruppen. Saldona blir alltid noll tillsammans, eftersom det som en person har att få är något andra är skyldiga.
+  - heading: Varför listan med betalningar är kort
+    body: Ingen behöver göra upp varje kvitto för sig. När alla saldon är kända parar kalkylatorn ihop den som är skyldig mest med den som har mest att få, gör upp så mycket som en betalning kan, och fortsätter nedåt i listan tills alla står på noll. Det behövs aldrig fler betalningar än antalet personer med ett saldo minus en, och ofta färre än om man gör upp räkning för räkning. Det blir en kort lista med betalningar, men kalkylatorn lovar inte att den är den kortaste möjliga.
+  - heading: Vad kalkylatorn inte gör
+    items:
+      - "**Hantera mer än en valuta.** Välj en och använd den för hela uträkningen. Appen håller ett separat saldo för varje valuta och kan räkna om en utgift med en aktuell växelkurs, som du kan ändra."
+      - "**Spara något.** Stänger du fliken är siffrorna borta. Vill du behålla dem, kopiera länken. Den innehåller dina siffror efter #, som din webbläsare aldrig skickar till en server, och alla du skickar den till kan läsa dem."
+      - "**Flytta pengar.** Den talar om vem som ska betala vem. Ni betalar varandra hur ni vill och registrerar sedan betalningen i appen om gruppen håller räkningen där."
+      - "**Välja udda öret på slumpen.** När en räkning inte går jämnt ut går de överblivna ören till de första i listan, så att summorna ändå stämmer. I appen går det udda öret till en person på slumpen, så det blir inte alltid samma."
+      - "**Gå över gränserna.** Kalkylatorn tar 2 till 20 personer, och en utgift kan vara på upp till 999 999,99, som i appen."
+exampleAfter: 2
+example:
+  heading: En långhelg, fyra vänner
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: stugan
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: matinköp
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: taxin
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: puben
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: Frågor
+  items:
+    - q: Är kalkylatorn gratis?
+      a: Ja. Gratis. Utan annonser. Utan dagliga gränser. Du behöver inget konto heller.
+    - q: Sparar den det jag skriver?
+      a: Nej. Ingenting sparas eller skickas någonstans. Vill du behålla dina siffror, använd Kopiera länk och spara länken någonstans.
+    - q: Vem kan se länken jag kopierar?
+      a: "Alla som har den. Siffrorna ligger i själva länken, efter #, så dela den bara med dem som ska se dem."
+    - q: Flyttar den pengar?
+      a: Nej. Den räknar ut vem som ska betala vem, och ni betalar varandra hur ni vill. Inte heller Side Badger rör dina pengar. Se [göra upp](page:feature/settle-up).
+    - q: Kan jag dela en resa som betalats i två valutor?
+      a: Inte här, eftersom en uträkning har en valuta. I en grupp har varje valuta sitt eget saldo. Se [flera valutor](page:feature/multiple-currencies).
+    - q: Vad händer om beloppen inte stämmer?
+      a: Kalkylatorn säger det under utgiften och visar inget resultat förrän de stämmer. Exakta belopp måste bli lika med totalsumman, och procenten måste bli 100.

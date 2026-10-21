@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Kako razdeliti potovanje, plačano v več valutah | Side Badger"
+  description: "Funti za hotel, jeni za ramen. Vsako valuto poravnaj posebej ali pretvori po tečaju, ki ga vidiš. Obe poti z izračuni."
+h1: "Kako razdeliti potovanje, plačano v več valutah"
+navLabel: "Potovanja v več valutah"
+lead: "Vsak strošek vnesi v valuti, v kateri si plačal, nato izberi pot. Valute ohrani ločene in vsako poravnaj v njenem denarju ali pa pretvori po trenutnem menjalnem tečaju in poravnaj enkrat. Isto potovanje na Japonsko pride na štiri plačila po prvi poti in dve po drugi."
+cta:
+  heading: "Vnesi v denarju, v katerem si plačal"
+  body: "Ustvari brezplačen uporabniški račun, ustanovi skupino za potovanje in dodaj vsak strošek v valuti, ki je bila na računu. Bi rad najprej več podrobnosti? Poglej [več valut](page:feature/multiple-currencies) ali [kaj pokriva brezplačno](page:pricing)."
+sections:
+  - heading: "Trije prijatelji, en hotel in precej jenov"
+    body: "Zoe, Kenji in Lucy preživijo teden na Japonskem na [skupinskem potovanju](page:use-case/group-trips) in vsak strošek se razdeli enako na tri. Zoe je hotel rezervirala doma, v funtih, za 600 £. Lucy je v Tokiu kupila vozovnice za vlak za 90.000 ¥. Kenji je plačal večer ramena, 9.000 ¥, in ga omenja vsak dan. Nihče ne želi na železniškem peronu pretvarjati treh računov. Za izračune tukaj je 1 ¥ enak 0,005 £, okrogel tečaj, izmišljen za ta vodnik. V aplikaciji bi uporabili trenutni menjalni tečaj ali vpisali tistega, ki ste ga res dobili."
+  - heading: "Vsak strošek vnesi v denarju z računa"
+    body: "To naredi ne glede na to, katero pot izbereš. Nič še ni treba pretvarjati."
+    items:
+      - "**Ustanovi skupino.** Na nadzorni plošči izberi **Ustvari skupino**, jo poimenuj po potovanju, nato izberi **Povabi druge** in pošlji povezavo ali kodo QR."
+      - "**Dodaj hotel.** Izberi **Dodaj strošek** in vnesi 600, ob znesku pa kot valuto izberi funte. Pri **Kdo je plačal?** izberi Zoe. Pri **Razdeli med** pusti vse tri, **Način razdelitve** pusti na **Enako** in izberi **Shrani strošek**."
+      - "**Dodaj jene.** Enako naredi za vozovnice (plačala je Lucy) in ramen (plačal je Kenji), z jeni kot valuto. Jeni nimajo decimalk, zato jih obrazec ne zahteva."
+  - heading: "Prva pot: valute ostanejo ločene"
+    body: "Side Badger vodi stanje za vsako valuto posebej in ene ne pobota z drugo. V funtih je hotel 200 £ na osebo, zato Kenji in Lucy vsak dolgujeta Zoe 200 £. V jenih vozovnice in ramen skupaj znesejo 99.000 ¥, kar je 33.000 ¥ na osebo. Lucy je plačala 90.000 ¥ in ji pripada 57.000 ¥. Zoe jenov ni plačala in dolguje 33.000 ¥. Kenji je plačal 9.000 ¥, zato dolguje 24.000 ¥."
+    items:
+      - "**Funti.** Kenji plača Zoe 200 £ in Lucy plača Zoe 200 £."
+      - "**Jeni.** Zoe plača Lucy 33.000 ¥ in Kenji plača Lucy 24.000 ¥."
+      - "**Skupaj štiri plačila.** Zoe in Lucy si dolgujeta v dveh valutah, ki se ne izničita. Tečaj tu ne igra nobene vloge, zato ni o čem razpravljati."
+      - "**Dolguješ jene, plačaš v funtih.** Kdor nima jenov, lahko vseeno plača v funtih. Ko zabeležiš plačilo, odpri **Druga valuta?**, izberi **Pretvori v** funte in preveri tečaj. Teh 33.000 ¥, ki jih dolguje Zoe, je po tečaju iz tega vodnika 165 £, stanje v jenih pa se vseeno izide."
+      - "**Zabeleži vsako plačilo.** Plačajte si, kakor želite, nato izberi **Poravnaj** in uporabi **Zabeleži poravnavo**. Več o tem je v [poravnavi](page:feature/settle-up)."
+  - heading: "Druga pot: pretvori sproti"
+    body: "Če skupina raje vidi eno številko na osebo, pretvori ob vnosu stroška."
+    items:
+      - "**Pretvori v obrazcu.** Pri **Dodaj strošek** izberi **Pretvori v** in izberi funte. Side Badger prikaže tečaj in pretvorjeni znesek, označen z ≈. Tečaj uredi, če ste dobili drugega. Prvotni znesek v jenih ostane pri stroških."
+      - "**Preberi funte.** Pri 1 ¥ = 0,005 £ vozovnice postanejo 450 £ in ramen 45 £. S hotelom za 600 £ to znese 600 £ + 450 £ + 45 £ = 1.095 £, ali 365 £ na osebo. Zoe je plačala 600 £, zato ji pripada 235 £. Lucy je plačala 450 £ in ji pripada 85 £. Kenji je plačal 45 £ in dolguje 320 £."
+      - "**Dve plačili.** Obe od Kenjija: 235 £ Zoe in 85 £ Lucy. Zoe in Lucy si sploh ne plačujeta več."
+      - "**Ali nastavi valuto skupine.** Če želiš preskočiti dodatni korak, odpri **Nastavitve** skupine, poišči **Nastavitve valut** in izberi **Samodejno pretvori stroške v**. Vsak nov strošek se nato pretvori v to valuto, še vedno po tečaju, ki ga vidiš in lahko spremeniš."
+  - heading: "Katero pot izbrati?"
+    items:
+      - "**Ohrani ločeno**, kadar imajo ljudje v denarnicah še jene ali se raje ne bi prepirali o tečaju. Cena je več plačil v več kot eni valuti."
+      - "**Pretvori**, kadar skupina živi v eni valuti in želi eno številko na osebo ter krajši seznam, kot sta Kenjijevi dve nakazili. Cena je, da skupina zaupa tečaju, ta pa se ob shranjevanju na vsakem strošku zaklene."
+      - "**Odloči se zgodaj.** Valuta skupine pretvarja samo nove in kopirane stroške. Ne bo se vrnila in popravila tistega, kar si že vnesel."
+  - heading: "Tečaj in zgornja meja"
+    items:
+      - "**Tečaj se zaklene ob shranjevanju.** Stari stroški se nikoli ne prevrednotijo, zato se stanje ne premika, samo ker se je premaknil trg. Stroški, vneseni ob različnih dneh, imajo lahko različne tečaje, zato se za en tečaj za celo potovanje dogovorite in ga vsakič vpišite."
+      - "**Ni tečaja? Vpiši ga.** Side Badger poišče trenutni menjalni tečaj, kjer le more, vendar ni zagotovljen za vsak par. Če ga ni ali ti je menjalnica ponudila boljšega, vpiši svojega."
+      - "**999.999,99 na strošek, v njegovi valuti.** Ena meja, ne glede na denar. V jenih je to tik pod 1.000.000 ¥, približno 5.000 £ po tečaju iz tega vodnika. V valuti z velikimi številkami, kot je indonezijska rupija, lahko en sam račun doseže mejo prej. Račun razdeli na dva stroška ali ga vnesi v drugi valuti in pretvori."
+  - heading: "Česa Side Badger tu ne počne"
+    items:
+      - "Denarja nikoli ne premika ali menja. Plačate si, kakor želite, nato plačilo zabeležite."
+      - "Pozna 140 valut. Kriptovalut in kovin med njimi ni."
+exampleAfter: 2
+example:
+  heading: "Japonska, poravnana na dva načina"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "hotel, rezerviran doma"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "vozovnice za vlak"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "večer ramena"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Kateri menjalni tečaj uporablja Side Badger?"
+      a: "Trenutni menjalni tečaj, ki se poišče ob vnosu stroška, kjer je na voljo. Spremeniš ga lahko v tečaj, ki si ga res dobil."
+    - q: "Ali se lahko skupina drži funtov in jenov?"
+      a: "Da. V **Nastavitvah** skupine pod **Nastavitve valut** vklopi **Omeji valute za to skupino**, izberi **Dovoljene valute** in nastavi **Privzeta valuta za nove stroške**. Manj možnosti na seznamu, manj napačnih ugibanj pri blagajni."
+    - q: "Ali moramo sploh pretvarjati?"
+      a: "Ne. Valute ostanejo ločene, razen če se ti ali skupina odločite za pretvorbo, vsaka valuta pa dobi svoj kratek seznam plačil."

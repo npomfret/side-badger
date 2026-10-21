@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: Ohje ja tuki | Side Badger
+  description: "Unohtunut salasana, linkki joka ei toimi, väärin kirjattu maksu? Lyhyet vastaukset siihen, mihin Side Badgerissa jäädään jumiin, ja miten meidät tavoittaa."
+h1: Ohje ja tuki ilman jonotusmusiikkia
+navLabel: Ohje ja tuki
+lead: Lyhyet vastaukset asioihin, joihin ihmiset jäävät jumiin, unohtuneesta salasanasta ryhmän lopulliseen sulkemiseen. Jokaisesta pääsee sivulle, joka kertoo lisää. Etkö löydä omaasi? Kerro meille sovelluksen sisällä tai kirjoita meille.
+cta:
+  heading: Tulit hakemaan apua, jäätkö jakamaan?
+  body: Eikö tiliä vielä ole? Perusta ryhmä, jaa linkki ja lisää ensimmäinen kulu. Ilmainen, ilman mainoksia ja päivittäisiä rajoja.
+groups:
+  - heading: Kirjautuminen
+    items:
+      - q: Unohtuiko salasana?
+        a: "Sitä sattuu parhaille mäyrille. Valitse **Kirjaudu sisään** -näkymässä **Unohditko salasanasi?**, anna tilisi sähköpostiosoite ja seuraa lähettämässämme viestissä olevaa linkkiä uuden salasanan valitsemiseksi. [Näin se toimii](page:how-it-works) kertoo, mitä muuta tili vaatii."
+      - q: Olen rekisteröitynyt, mutta en voi lisätä mitään. Miksi?
+        a: "Useimmiten sähköpostiosoitettasi ei ole vielä vahvistettu, joten avaa vahvistusviestin linkki tai valitse muistutuspalkista **Lähetä vahvistusviesti uudelleen** saadaksesi uuden. Jos sähköpostisi on vahvistettu, ryhmä voi olla lukittu tai sen oikeudet eivät ehkä salli sitä, ja katselija näkee kaiken mutta ei muuta mitään, kuten [ryhmät ja oikeudet](page:feature/groups-and-permissions) selittää."
+      - q: Miten vaihdan sähköpostiosoitteeni tai salasanani?
+        a: "Valitse kohdassa **Asetukset** **Vaihda sähköposti** tai **Vaihda salasana**. Molemmat kysyvät ensin nykyistä salasanaasi, ja uusi sähköpostiosoite pitää vahvistaa sille lähettämämme linkin kautta. [Näin se toimii](page:how-it-works) kertoo tileistä."
+      - q: Voinko kirjautua Googlella tai Applella?
+        a: "Et. Tarvitset vain sähköpostiosoitteen ja vähintään 12 merkin salasanan, ja omalla puhelimellasi tai tietokoneellasi voit rastittaa **Muista minut**. Loput aloittamisesta kertoo [verkkosovellusta](page:feature/web-app) käsittelevä sivu."
+  - heading: Ryhmään liittyminen
+    items:
+      - q: Joku lähetti minulle kutsulinkin. Miten liityn?
+        a: "Avaa se ja kirjaudu sisään tai luo ilmainen tili. Näet ryhmän esikatselun, valitset nimen, jolla muut näkevät sinut siellä, ja painat **Liity ryhmään**. [Ryhmät ja oikeudet](page:feature/groups-and-permissions) näyttää koko reitin sisään."
+      - q: Siinä lukee ”Odottaa hyväksyntää”. Tein jotain väärin?
+        a: "Et lainkaan. Tässä ryhmässä ylläpitäjä päästää jokaisen sisään, joten pyyntösi on mennyt sen ylläpitäjille, etkä näe sisälle, ennen kuin yksi heistä hyväksyy sen. Ystävällinen muistutus kasvotusten on sallittu, ja [ryhmät ja oikeudet](page:feature/groups-and-permissions) selittää hyväksynnän."
+      - q: Linkki sanoo, että se on virheellinen tai vanhentunut.
+        a: "Kutsulinkit kestävät niin kauan kuin niiden tekijä on valinnut, 15 minuutista 5 päivään. Pyydä joltakulta ryhmästä uusi linkki tai QR-koodi, jos olette samassa huoneessa. [Näin se toimii](page:how-it-works) kertoo kutsuista."
+  - heading: Kulut
+    items:
+      - q: Miten lisään kulun?
+        a: "Avaa ryhmä ja valitse **Lisää kulu**. Kerro, mistä oli kyse, kuinka paljon, kuka maksoi ja ketkä jakoivat sen, ja jaa se sitten tasan, tarkoilla summilla tai prosenteilla. [Kulujen jako](page:feature/split-expenses) käy läpi jokaisen vaihtoehdon."
+      - q: Voiko vuokra toistua joka kuukausi?
+        a: "Ei itsestään, koska toistuvia kuluja ei ole. Avaa viime kuun vuokra ja valitse **Kopioi kulu**, niin lomake tulee täytettynä, valmiina uudelle päivämäärälle ja kaikelle, mikä muuttui. [Kulujen jako](page:feature/split-expenses) kertoo kopioinnista lisää."
+      - q: Kirjoitin väärän summan. Voinko korjata sen?
+        a: "Voit. Muokkaa kulua, kunhan ryhmän oikeudet sen sallivat eikä ryhmä ole lukittu. Aiempi versio säilyy, joten kenenkään ei tarvitse luottaa sanaasi siitä, mikä muuttui, kuten [kulujen jako](page:feature/split-expenses) selittää."
+      - q: Kulu näyttää väärältä, eikä se ole minun. Mitä nyt?
+        a: "Valitse siitä **Minulla on kysymys** ja kerro syy, niin koko kulu pysyy pois kaikkien saldoista, kunnes kysyjä tai ylläpitäjä sulkee kysymyksen. Eikö painiketta ole? Vain kuluun kuuluvat voivat kysyä, ylläpitäjän täytyy ensin ottaa ryhmän asetuksissa käyttöön **Salli kysymykset kuluista**, ja [riitautetun kulun opas](page:guide/what-to-do-when-someone-disputes-a-shared-expense) kertoo diplomatian."
+  - heading: Maksut
+    items:
+      - q: Lähettääkö Side Badger rahat?
+        a: "Ei, Side Badger ei koskaan siirrä rahaa. Maksakaa toisillenne miten haluatte, pankkisiirrolla, käteisellä tai millä tahansa, mikä toimii, ja kirjaa maksu sitten, jotta saldot päivittyvät. [Näin tasaat tilit ryhmämatkan jälkeen](page:guide/how-to-settle-up-after-a-group-trip) käy asian läpi alusta loppuun."
+      - q: Miten kirjaan maksun?
+        a: "Valitse ryhmässä **Maksa velat**, kerro kuka maksoi ja kuka sai maksun, syötä summa tai anna **Pikaselvitys**-painikkeen täyttää se, ja valitse **Kirjaa tilitys**. Maksoitko vain osan? Kirjaa maksettu osa, niin loput jää saldolle, kuten [tilien tasaus](page:feature/settle-up) selittää."
+      - q: Kirjasin maksun väärin. Voinko korjata sen?
+        a: "Sen kirjannut voi muokata maksua ryhmän **Tilitykset**-historiasta, ja hän tai ylläpitäjä voi poistaa sen, jolloin se lähtee saldoista. Maksua, jossa on mukana ryhmästä sittemmin lähtenyt, ei voi muokata. [Tilien tasaus](page:feature/settle-up) kertoo historiasta."
+  - heading: Ilmoitukset ja aloitusnäyttö
+    items:
+      - q: Miten otan ilmoitukset käyttöön?
+        a: "Ota kohdassa **Asetukset** käyttöön **Push-ilmoitukset** ja salli ne, kun selaimesi kysyy. Jos selain on jo estänyt ne, salli ne ensin selaimen omissa asetuksissa. Jokainen laite otetaan käyttöön erikseen, eikä perillemenoa taata, joten pidä ilmoitusta muistutuksena, älä lupauksena, kuten [verkkosovellusta](page:feature/web-app) käsittelevä sivu selittää."
+      - q: Miksi ilmoitukset eivät toimi iPhonellani?
+        a: "iPhonessa ja iPadissa ne toimivat vain aloitusnäytölle lisätyssä sovelluksessa, eivät koskaan selaimen välilehdessä. Lisää se, avaa se aloitusnäytön kuvakkeesta ja ota ilmoitukset sitten käyttöön kohdassa **Asetukset**. [Suunnitelkaa yhdessä](page:feature/plan-together) näyttää, mistä ne kertovat."
+      - q: Onko ladattavaa sovellusta?
+        a: "Ei sovelluskaupasta, koska Side Badger toimii selaimessa. Kirjaudu sisään ja valitse kohdassa **Asetukset** **Lisää Koti-valikkoon tai Dockiin**, niin se avautuu kuin sovellus omassa ikkunassaan. Vaiheet kullekin laitteelle löytyvät [verkkosovellusta](page:feature/web-app) käsittelevältä sivulta."
+  - heading: Poistuminen, arkistointi, lukitseminen ja sulkeminen
+    items:
+      - q: Miten poistun ryhmästä?
+        a: "Tasaa tilit ja valitse sitten **Poistu ryhmästä**. Et voi poistua, jos olet velkaa tai sinulle ollaan velkaa edes yhdessä valuutassa, jos kulussa, jossa olet mukana, on avoin kysymys tai jos olet viimeinen ylläpitäjä tai ainoa jäsen, ja takaisin pääsy vaatii uuden kutsun. [Ryhmät ja oikeudet](page:feature/groups-and-permissions) kertoo yksityiskohdat."
+      - q: Miten saan vanhan ryhmän pois kojelaudaltani?
+        a: "Valitse **Arkistoi ryhmä**. Se katoaa sinun kojelaudaltasi mutta ei kenenkään muun, voit yhä avata ja käyttää sitä, ja **Palauta ryhmä arkistosta** tuo sen takaisin. [Ryhmät ja oikeudet](page:feature/groups-and-permissions) vertailee arkistointia, lukitsemista ja sulkemista."
+      - q: Matka on ohi. Voimmeko estää lukuja muuttumasta?
+        a: "Voitte. Ylläpitäjä voi ottaa ryhmän asetuksissa käyttöön **Lukitse ryhmä**, jolloin kukaan ei voi lisätä tai muokata kuluja, kirjata uusia maksuja tai muuttaa listoja ja kyselyjä, ennen kuin ylläpitäjä avaa lukituksen. Kaikki voivat yhä lukea ryhmää ja sen historiaa, eikä mikään myöhäinen taksi livahda mukaan, kuten [ryhmät ja oikeudet](page:feature/groups-and-permissions) selittää."
+      - q: Voinko poistaa ryhmän?
+        a: "Ylläpitäjä voi sulkea sen valinnalla **Sulje ryhmä** kirjoitettuaan ryhmän nimen vahvistukseksi. Sulkeminen on pysyvä ja tekee ryhmästä kaikille käyttökelvottoman, joten jos haluat sen vain pois silmistä, arkistoi se. [Ryhmät ja oikeudet](page:feature/groups-and-permissions) sisältää sen pienen präntin."
+contact:
+  heading: Yhä jumissa?
+  items:
+    - q: Löysitkö virheen tai haluatko jotain muutettavaksi?
+      a: "Kerro meille sovelluksen sisällä. Valitse käyttäjävalikosta **Palaute**, sitten **Lähetä palautetta** ja valitse **Ilmoita ongelmasta**, **Pyydä apua** tai **Ominaisuuspyyntö**. Liitä mukaan kuvakaappaus, jos siitä on apua, ja kun vastaamme, löydät vastauksen samasta ketjusta."
+    - q: Haluaisitko mieluummin lähettää sähköpostia?
+      a: "Kirjoita alla olevaan osoitteeseen. Kerro, mitä ryhmää asia koskee, mitä teit ja mitä odotit tapahtuvan. Purnaaminen on sallittua, salasanat eivät, joten älä koskaan lähetä omaasi."
+  emailLabel: Kirjoita meille osoitteeseen
+  email: support@sidebadger.me

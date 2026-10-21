@@ -1,0 +1,102 @@
+translatedFrom: "0900d953"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Hvad du gør, når nogen bestrider en delt udgift | Side Badger"
+  description: "Drop den spidse besked. Stil et spørgsmål til udgiften, så forsvinder den fra alles saldi, mens I taler. Regnet igennem med 45 £ festvin."
+h1: "Hvad du gør, når nogen bestrider en delt udgift"
+navLabel: "Uenighed om en udgift"
+lead: "Stil et spørgsmål til udgiften i stedet for at sende en spids besked. Så længe spørgsmålet er åbent, holdes hele udgiften uden for alles saldi. Tal det igennem i kommentarerne, ret fordelingen, hvis gruppen er enig, og lad den, der spurgte, eller en administrator lukke spørgsmålet."
+cta:
+  heading: "Stil det akavede spørgsmål høfligt"
+  body: "Opret en gratis konto, start en gruppe til huset, og bed en administrator slå udgiftsspørgsmål til, som er slået fra, indtil nogen gør det. Vil du have rundvisningen først? Se [sådan virker det](page:how-it-works) eller [hvad gratis dækker](page:pricing)."
+sections:
+  - heading: "Tre bofæller og 45 £ vin"
+    body: "Efter festen tilføjer Tom vinen til husets gruppe. Den koster 45 £, Tom har betalt, og den deles ligeligt mellem Tom, Priya og Aisha, altså 15 £ hver. Aisha drikker ikke. Tom købte den til festen, og festen var for [huset](page:use-case/housemates), så han har ikke gjort noget forkert. Aisha gør heller ikke noget forkert ved at spørge. Ingen her er skurk. Der er bare 15 £ vin i tvivl og masser af måder at gøre det akavet på. En spids besked til hele huset er én. Et spørgsmål til udgiften er en mildere måde."
+  - heading: "Hvad et spørgsmål gør"
+    body: "Aisha åbner udgiften og stiller et spørgsmål. Hele udgiften falder ud af alles saldi, ikke kun hendes andel, og intet andet påvirkes. Det store indkøb (84 £) og rengøringshjælpen (60 £) tæller stadig, hvilket er 28 £ + 20 £ = 48 £ hver. Så mens vinen er sat på pause, skylder Aisha 48 £, Tom har 36 £ til gode, og Priya har 12 £ til gode. Uanset hvad huset beslutter om vinen, indgår den ikke i nogens saldo i mellemtiden. Alle andre i udgiften kan også stille et spørgsmål. Vinen kommer først tilbage i saldiene, når det sidste åbne spørgsmål om den er lukket, og et spørgsmål lukkes af den, der stillede det, eller af en administrator."
+  - heading: "Tal det igennem, og ret det så"
+    body: "Aishas spørgsmål lander i udgiftens kommentarer, så svarene står lige under det. [Planlæg sammen](page:feature/plan-together) fortæller mere om kommentarer og spørgsmål. Tom og Priya læser det, og huset tager en snak. De beslutter, at vinen var Toms og Priyas, fordi det var dem, der drak den. Et andet hus kunne beholde fordelingen på tre eller blive enige om noget midt imellem, og det ville også være fint. Side Badger gemmer, hvad I bliver enige om, og har ingen holdning til vin. Tom retter udgiften, så den deles ligeligt mellem ham selv og Priya, altså 22,50 £ hver (45 £ ÷ 2). Aisha er ikke længere med i den, så hendes spørgsmål forsvinder med den gamle version, og vinen kommer tilbage i saldiene. Den tidligere version bliver gemt."
+  - heading: "Sådan læser du resultatet"
+    body: "Med vinen tilbage i regnskabet har Tom 58,50 £ til gode, Priya skylder 10,50 £, og Aisha skylder 48 £. Side Badger foreslår to betalinger, begge til Tom. Aishas 48 £ er det samme tal, som hun havde, mens vinen var sat på pause, fordi hun ikke er med i den. Priya er gået fra at have 12 £ til gode til at skylde 10,50 £, hvilket er hendes halvdel af vinen på 22,50 £. Havde fordelingen på tre stået ved magt, ville Aisha have skyldt 63 £ (28 £ + 20 £ + 15 £). Hele uenigheden var 15 £ værd. Betal hinanden, som I vil, og registrer så hver betaling under **Afregn**. [Gør op](page:feature/settle-up) dækker resten."
+  - heading: "Sådan formulerer du det, så folk bliver ved med at tale til dig"
+    body: "Aishas spørgsmål: »Jeg fik ikke noget af vinen. Kan vi kigge på fordelingen?« Det er kort, det nævner udgiften, og det spørger i stedet for at anklage. Et par vaner hjælper."
+    items:
+      - "**Spørg om udgiften, ikke om personen.** »Kan vi tjekke fordelingen på vinen?« starter en samtale. »Hvorfor er jeg blevet opkrævet for din vin?« starter den anden slags."
+      - "**Sig, hvad du gerne vil have, der sker.** »Kan det være kun dem, der drak den?« giver gruppen noget at sige ja eller nej til."
+      - "**Giv en begrundelse i en sætning eller to.** Feltet hedder **Dit spørgsmål**, og det kan ikke stå tomt."
+      - "**Hold svarene ét sted.** Svar skal stå i udgiftens kommentarer, lige ved siden af de tal, de handler om."
+  - heading: "Sæt det op i Side Badger"
+    items:
+      - "**Slå spørgsmål til.** De er slået fra som standard. En administrator åbner gruppens **Indstillinger**, slår **Tillad spørgsmål om udgifter** til under **Funktioner** på fanen **Generelt** og vælger **Gem**. Slår du det fra igen, ryddes alle åbne spørgsmål."
+      - "**Stil et.** Åbn udgiften, og vælg **Jeg har et spørgsmål** ved siden af dit eget navn i fordelingen. Skriv din begrundelse i **Dit spørgsmål**, og vælg **Jeg har et spørgsmål** igen. Det kan kun dem, der er med i udgiften, gøre. Udgiften viser nu mærket **Betvivlet**."
+      - "**Find det, der er sat på pause.** I udgiftslisten viser **Kun betvivlet** de udgifter, der har et åbent spørgsmål."
+      - "**Ret det, hvis gruppen er enig.** Åbn udgiften, vælg **Rediger**, ændr **Fordel mellem**, og vælg **Opdater udgift**. Hvem der kan redigere, afgør gruppens rettigheder."
+      - "**Luk det, hvis intet skal rettes.** Den, der spurgte, kan bruge lukkeknappen på sit **Betvivlet**-mærke, som hedder **Luk spørgsmål**, og det kan en administrator også. Udgiften vender tilbage til saldiene, når dens sidste spørgsmål er lukket."
+  - heading: "Når det ikke er så ryddeligt"
+    items:
+      - "**Rettelsen beholder spørgeren med.** Hvis den, der spurgte, stadig er med i udgiften, følger spørgsmålet med over i den rettede version og venter på, at vedkommende eller en administrator lukker det. At rette beløbet er ikke det samme som at være enig i, at det er rettet."
+      - "**Du var ikke med i udgiften.** Kun dem, der er med i en udgift, kan stille spørgsmål til den. Hvis noget ser forkert ud for dig, så skriv det i dens kommentarer, eller spørg den, der tilføjede den."
+      - "**Nogen vil forlade gruppen.** Et åbent spørgsmål forhindrer dem, der er med i den udgift, i at forlade gruppen. Luk spørgsmålet, eller ret udgiften, så de ikke længere er med i den, så kan de gå."
+  - heading: "Det her gør Side Badger ikke"
+    items:
+      - "Den afgør ikke, hvem der har ret. Den holder udgiften uden for saldiene og gemmer, hvad I bliver enige om."
+      - "Den beder ikke nogen om at godkende udgifter, før de tæller. Kun en udgift med et spørgsmål holdes tilbage."
+      - "Den kan ikke holde en del af en udgift tilbage. Stil et spørgsmål, og hele udgiften forlader saldiene."
+      - "Den flytter ikke penge. I betaler hinanden, som I vil, og registrerer det."
+exampleAfter: 3
+example:
+  heading: "Huset efter vinen"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "det store indkøb"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "rengøringshjælpen"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "festvinen"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+faq:
+  heading: "Spørgsmål"
+  items:
+    - q: "Kan jeg stille spørgsmål til kun min andel?"
+      a: "Nej. Et spørgsmål holder hele udgiften ude, for alle i den. Hvis det kun er fordelingen, der er forkert, er løsningen at rette fordelingen."
+    - q: "Hvem kan lukke et spørgsmål?"
+      a: "Den, der stillede det, eller en gruppeadministrator. Hvis den, der tilføjede udgiften, ikke er administrator, kan vedkommende ikke lukke det på spørgerens vegne."
+    - q: "Sletter en rettelse af en udgift originalen?"
+      a: "Nej. Den tidligere version bliver gemt. Hvem der kan redigere, afgøres af gruppens rettigheder, så det er værd at sige det til huset først, fordi saldiene ændrer sig."

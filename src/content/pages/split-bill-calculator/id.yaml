@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Kalkulator bagi tagihan: siapa utang ke siapa, beres | Side Badger"
+  description: "Siapa bayar, siapa utang, siapa bayar siapa: beres dalam detik. Rata, jumlah pasti, atau persentase. Gratis, di peramban, tak ada yang disimpan atau dikirim."
+h1: "Kalkulator bagi tagihan"
+navLabel: "Kalkulator bagi tagihan"
+lead: "Masukkan siapa membayar apa, dan kalkulator menunjukkan siapa berutang kepada siapa, lengkap dengan daftar pembayaran singkat untuk melunasinya. Kalkulator ini berjalan di peramban Anda, tidak menyimpan apa pun, dan tidak memindahkan uang. Jika grup Anda butuh hitungannya bertahan setelah tab ditutup, fitur [bagi pengeluaran](page:feature/split-expenses) dan [pelunasan](page:feature/settle-up) di Side Badger melakukan hitungan yang sama dan menyimpannya."
+cta:
+  heading: "Suka hitungannya? Simpan saja."
+  body: "Kalkulator ini melupakan semuanya begitu tab ditutup, persis seperti siapa pun yang yakin sekali sudah membayar terakhir kali. Grup di Side Badger menyimpan pengeluaran, memperbarui saldo semua orang, dan mencatat pembayaran. Gratis, tanpa iklan, tanpa batas harian."
+sections:
+  - heading: "Cara perhitungannya bekerja"
+    body: "Untuk setiap pengeluaran, kalkulator menghitung bagian tiap orang. Anda bisa membaginya rata, menurut jumlah pasti, atau persentase, di antara orang yang Anda pilih. Saldo tiap orang adalah jumlah yang mereka bayar dikurangi jumlah yang menjadi tanggungan mereka. Tanda plus berarti grup berutang kepada mereka, dan tanda minus berarti mereka berutang kepada grup. Saldo selalu berjumlah nol, karena berapa pun yang dihutangi seseorang, orang lain yang berutang."
+  - heading: "Mengapa daftar pembayarannya singkat"
+    body: "Tidak ada yang perlu melunasi tiap struk satu per satu. Setelah semua saldo diketahui, kalkulator memasangkan orang yang paling banyak berutang dengan orang yang paling banyak dihutangi, melunasi sebanyak yang bisa dicakup satu pembayaran, lalu melanjutkan menyusuri daftar sampai semua orang berada di nol. Jumlah pembayarannya tidak pernah melebihi jumlah orang yang punya saldo dikurangi satu, dan sering kali lebih sedikit daripada melunasi tagihan satu per satu. Hasilnya daftar pembayaran yang singkat, tanpa janji menjadi yang paling singkat."
+  - heading: "Yang tidak dilakukan kalkulator ini"
+    items:
+      - "**Menangani lebih dari satu mata uang.** Pilih satu dan pakai untuk seluruh perhitungan. Aplikasi menyimpan saldo terpisah untuk tiap mata uang, dan bisa mengonversi pengeluaran dengan kurs terkini, yang bisa Anda ubah."
+      - "**Menyimpan apa pun.** Tutup tab dan angkanya hilang. Untuk menyimpannya, salin tautannya. Tautan itu memuat angka Anda setelah tanda #, yang tidak pernah dikirim peramban ke server, dan siapa pun yang Anda kirimi tautan itu bisa membacanya."
+      - "**Memindahkan uang.** Kalkulator hanya menunjukkan siapa yang sebaiknya membayar siapa. Anda membayar satu sama lain dengan cara apa pun yang disuka, lalu mencatat pembayarannya di aplikasi jika grup Anda menyimpan hitungannya di sana."
+      - "**Memilih sisa sen secara acak.** Saat tagihan tidak habis dibagi, sisa sen diberikan kepada orang-orang pertama di daftar, agar totalnya tetap cocok. Di aplikasi, sisa sen diberikan kepada satu orang secara acak, jadi tidak selalu orang yang sama."
+      - "**Melewati batas.** Kalkulator menerima 2 sampai 20 orang, dan satu pengeluaran bisa hingga 999.999,99, seperti di aplikasi."
+exampleAfter: 2
+example:
+  heading: "Akhir pekan panjang, empat teman"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Pondok"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "Belanjaan"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "Taksi"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "Bar"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: "Pertanyaan"
+  items:
+    - q: "Apakah kalkulatornya gratis?"
+      a: "Ya. Gratis. Tanpa iklan. Tanpa batas harian. Anda juga tidak perlu akun."
+    - q: "Apakah kalkulatornya menyimpan yang saya ketik?"
+      a: "Tidak. Tidak ada yang disimpan atau dikirim ke mana pun. Untuk menyimpan angka Anda, pakai Salin tautan dan simpan tautannya di suatu tempat."
+    - q: "Siapa yang bisa melihat tautan yang saya salin?"
+      a: "Siapa pun yang memilikinya. Angkanya ada di dalam tautan itu sendiri, setelah tanda #, jadi bagikan hanya kepada orang yang memang boleh melihatnya."
+    - q: "Apakah kalkulatornya memindahkan uang?"
+      a: "Tidak. Kalkulator hanya menghitung siapa yang sebaiknya membayar siapa, dan Anda membayar satu sama lain dengan cara apa pun yang disuka. Side Badger juga tidak pernah menyentuh uang Anda. Lihat [pelunasan](page:feature/settle-up)."
+    - q: "Bisakah saya membagi perjalanan yang dibayar dalam dua mata uang?"
+      a: "Tidak di sini, karena satu perhitungan hanya punya satu mata uang. Dalam grup, tiap mata uang punya saldonya sendiri. Lihat [beberapa mata uang](page:feature/multiple-currencies)."
+    - q: "Bagaimana jika jumlahnya tidak cocok?"
+      a: "Kalkulator memberi tahu di bawah pengeluaran itu dan tidak menampilkan hasil sampai cocok. Jumlah pasti harus berjumlah sama dengan totalnya, dan persentase harus berjumlah 100."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

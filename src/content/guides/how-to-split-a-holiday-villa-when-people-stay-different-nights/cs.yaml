@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Jak rozdělit vilu podle počtu nocí | Side Badger"
+  description: "Dev přijel jen na tři noci, tak proč platit za šest? Rozdělte dovolenkovou vilu podle nocí, které lidé skutečně strávili, s hotovými výpočty."
+h1: "Jak rozdělit dovolenkovou vilu, když lidé zůstávají různý počet nocí"
+navLabel: "Vila podle počtu nocí"
+lead: "Spočítejte cenu za osobu a noc, vynásobte ji počtem nocí každého člověka a vilu zadejte jako **jeden výdaj s přesnými částkami**. Side Badger vede přehled a až přijde čas na vyrovnání, navrhne krátký seznam plateb."
+cta:
+  heading: "Dejte vile jeden úhledný výdaj"
+  body: "Založte skupinu, pozvěte všechny odkazem nebo QR kódem a vilu zadejte s přesnými částkami. Side Badger vede průběžný přehled, zatímco si vy užíváte dovolenou."
+sections:
+  - heading: "Šest nocí, čtyři lidé, jedna kreditní karta"
+    body: "[Skupinový výlet](page:use-case/group-trips) obvykle začíná kartou jednoho člověka. Tady je to karta Any. Zarezervuje vilu na šest nocí za 2 100 €, protože někdo musí jít první. Ana, Ben a Chloe zůstanou všech šest nocí. Dev se může připojit jen na poslední tři a přijede vlakem. Ben si půjčí auto, ve kterém Dev nikdy nesedí. Dev udělá velký nákup. Nabízí se rozdělit vilu mezi čtyři. Dev by ale platil za tři noci, které strávil doma, a takové věci se připomenou o Vánocích. Dělení podle nocí hádce předejde a výpočet zabere minutu."
+  - heading: "Spočítejte cenu jedné osobonoci"
+    body: "Osobonoc je jedna osoba, která stráví jednu noc. Vila stojí, co stojí, takže cenu rozdělte mezi všechny osobonoci a každému pak přiřaďte ty, které využil."
+    items:
+      - "**Spočítejte osobonoci.** Ana, Ben a Chloe zůstanou po šesti nocích a Dev tři: 6 + 6 + 6 + 3 = 21."
+      - "**Určete cenu jedné.** 2 100 € ÷ 21 = 100 € za osobonoc."
+      - "**Vynásobte počtem nocí každého.** Ana, Ben a Chloe platí každý 6 × 100 € = 600 €. Dev platí 3 × 100 € = 300 €."
+      - "**Zkontrolujte součet.** 600 € + 600 € + 600 € + 300 € = 2 100 €. Pokud podíly nedávají dohromady cenu, nějaká noc chybí, nebo je započítaná dvakrát."
+  - heading: "Zadání v Side Badger"
+    body: "Založte skupinu, pozvěte ostatní tři odkazem nebo QR kódem a pak přidejte náklady. Nejdřív vilu."
+    items:
+      - "Zvolte **Přidat výdaj**. Popište ho, zadejte 2 100 a pod **Kdo platil?** vyberte Anu."
+      - "Pod **Rozdělit mezi** ověřte, že jsou v seznamu všichni čtyři."
+      - "Pod **Jak rozdělit** zvolte **Přesné částky**. Pro Anu, Bena a Chloe zadejte 600 a pro Deva 300. Částky musí dávat dohromady celkovou cenu."
+      - "Zvolte **Uložit výdaj**."
+      - "Stejným způsobem přidejte půjčení auta. Platil Ben, rozdělení je **Rovnoměrně** a Dev je vynechán, protože přijel vlakem. Další způsoby, jak rozdělit náklady, shrnuje [dělení výdajů](page:feature/split-expenses)."
+      - "Přidejte potraviny. Platil Dev, rozdělení je **Rovnoměrně** a jsou v něm všichni čtyři."
+  - heading: "Výsledek a vyrovnání"
+    body: "Účet každého člověka je jeho podíl na vile plus jeho podíl na autu a nákupu. Ana, Ben a Chloe vychází každý na 725 €, což je 600 € + 80 € + 45 €. Dev vychází na 345 €, což je 300 € + 45 €. Odečtěte, kolik kdo zaplatil, a zůstatky jsou na světě. Ana zaplatila 2 100 €, takže se jí dluží 1 375 €. Ben zaplatil 240 € a dluží 485 €. Dev zaplatil 180 € a dluží 165 €. Chloe nezaplatila nic a dluží 725 €. Kdyby se to nechalo být, ty dluhy by se skupinou proplétaly šesti směry. Side Badger místo toho navrhne tři platby, všechny pro Anu. Zaplaťte jí, jak chcete, pak zvolte **Vyrovnat dluhy** a u každé platby použijte **Zaznamenat vyrovnání**, aby se zůstatky dorovnaly. Tlačítka rychlého vyrovnání doplní částku. Víc najdete u [vyrovnání](page:feature/settle-up)."
+  - heading: "Když vila nemá jednu úhlednou cenu"
+    items:
+      - "**Pokoje se liší.** Pokud má apartmá větší hodnotu než komora, nejdřív se dohodněte, kolik stojí který pokoj, a pak počítejte osobonoci po jednom pokoji. Vilu zadejte jako jeden výdaj s celkovou částkou každého, nebo jako jeden výdaj na pokoj. V obou případech musí přesné částky u výdaje dávat dohromady jeho celkovou cenu."
+      - "**Záloha zaplacená před měsíci.** Ten, kdo ji zaplatil, dostane vlastní výdaj s datem dne, kdy platil. Rozdělte ji podle nocí ve stejném poměru jako doplatek."
+      - "**Rezervace je v jiné měně.** Vilu zadejte v měně, ve které jste platili. Pokud skupina převádí průběžně, použijte aktuální směnný kurz, nebo zadejte kurz, který jste skutečně dostali. Původní částka u výdaje zůstává. Podrobnosti najdete u [více měn](page:feature/multiple-currencies)."
+      - "**Částečné noci.** Někdo přijede o půlnoci, někdo odjede před snídaní. Dohodněte jedno pravidlo pro počítání nocí a použijte ho pro všechny."
+  - heading: "Co Side Badger tady nedělá"
+    items:
+      - "Noci za vás nepočítá. Neexistuje dělení podle nocí ani podle dílů, takže každou částku spočítáte jako výše a zadáte **přesné částky**."
+      - "Nepřesouvá peníze. Platíte si, jak chcete, a platbu pak zaznamenáte."
+      - "Každý výdaj může mít jen jednoho plátce. Pokud vilu platili dva lidé, zadejte dva výdaje."
+      - "Nemá přístup pro hosty. Každý ve skupině, včetně Deva, potřebuje bezplatný účet."
+exampleAfter: 2
+example:
+  heading: "Vila, auto a nákup"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Šest nocí ve vile"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "Půjčení auta"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Potraviny"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Otázky k vile"
+  items:
+    - q: "Co když někdo zruší účast?"
+      a: "Odeberte jeho noci, přepočítejte a upravte výdaj za vilu tak, aby přesné částky zase daly dohromady cenu. Předchozí verze se uchovává a úprava se zobrazí v aktivitě skupiny, takže nikdo nemění číslo potichu. Kdo smí upravovat, závisí na oprávněních skupiny."
+    - q: "Má ten, kdo vilu zarezervoval, platit méně?"
+      a: "To je na skupině. Rezervace je dřina a skupiny se liší v tom, jestli si zaslouží slevu. Ať se dohodnete na čemkoli, promítněte to do přesných částek a zapište to do poznámky u výdaje nebo do komentáře vedle něj, aby si nikdo nemusel pamatovat, co bylo domluveno."
+    - q: "Můžeme poplatky za úklid dělit jinak?"
+      a: "Ano. Poplatek zadejte jako samostatný výdaj a dejte mu vlastní rozdělení. Rovnoměrné dělení se hodí na paušální poplatek za celý dům. Přesné částky se hodí pro skupinu, která chce, aby poplatek také odpovídal nocím."

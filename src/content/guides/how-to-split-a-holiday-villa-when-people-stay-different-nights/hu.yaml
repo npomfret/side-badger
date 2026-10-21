@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Nyaralóvilla felosztása eltérő számú éjszakánál | Side Badger"
+  description: "Dev csak három éjszakára jött, miért fizetne hatért? Oszd fel a nyaralóvillát az ott töltött éjszakák szerint, kész számításokkal."
+h1: "Hogyan oszd fel a nyaralóvillát, ha nem mindenki marad ugyanannyi éjszakát"
+navLabel: "Villa éjszakák szerint"
+lead: "Számold ki, mennyibe kerül egy ember egy éjszakája, szorozd meg az egyes emberek éjszakáinak számával, és vidd be a villát **egyetlen költségként, pontos összegekkel**. A Side Badger vezeti a számolást, és rövid kifizetéslistát javasol, amikor eljön az elszámolás ideje."
+cta:
+  heading: "Adj a villának egyetlen rendezett költséget"
+  body: "Csinálj csoportot, hívj meg mindenkit linkkel vagy QR-kóddal, és add meg a villát pontos összegekkel. A Side Badger vezeti a folyamatos számolást, amíg te a nyaralással foglalkozol."
+sections:
+  - heading: "Hat éjszaka, négy ember, egy hitelkártya"
+    body: "Egy [csoportos utazás](page:use-case/group-trips) általában egy ember kártyájával kezdődik. Itt ez Ana kártyája. Lefoglal egy villát hat éjszakára, 2 100 € értékben, mert valakinek elsőnek kell fizetnie. Ana, Ben és Chloe mind a hat éjszakát ott tölti. Dev csak az utolsó háromra tud csatlakozni, és vonattal jön. Ben autót bérel, amelybe Dev sosem ül be. Dev intézi a nagybevásárlást. A villa négyfelé osztása a kézenfekvő lépés. Csakhogy így Dev három olyan éjszakáért fizet, amelyeket otthon töltött, az ilyesmi pedig karácsonykor előkerül. Az éjszakák szerinti felosztás megússza a vitát, a számolás pedig egy percet vesz igénybe."
+  - heading: "Számold ki egy személyéjszaka árát"
+    body: "Egy személyéjszaka az, ha egy ember eltölt egy éjszakát. A villa annyiba kerül, amennyibe, ezért az árat ossz el az összes személyéjszaka között, aztán mindenkinek annyit számolj, ahányat ténylegesen eltöltött."
+    items:
+      - "**Számold meg a személyéjszakákat.** Ana, Ben és Chloe fejenként hat éjszakát marad, Dev hármat: 6 + 6 + 6 + 3 = 21."
+      - "**Határozd meg egynek az árát.** 2 100 € ÷ 21 = 100 € személyéjszakánként."
+      - "**Szorozd meg az egyes emberek éjszakáinak számával.** Ana, Ben és Chloe fejenként 6 × 100 € = 600 €-t fizet, Dev pedig 3 × 100 € = 300 €-t."
+      - "**Ellenőrizd az összeget.** 600 € + 600 € + 600 € + 300 € = 2 100 €. Ha a részek nem adják ki az árat, valamelyik éjszaka hiányzik, vagy kétszer lett számolva."
+  - heading: "Vidd be a Side Badgerbe"
+    body: "Csinálj csoportot, hívd meg a másik hármat linkkel vagy QR-kóddal, aztán add hozzá a költségeket. Előbb a villa."
+    items:
+      - "Válaszd a **Kiadás hozzáadása** lehetőséget. Írd be a leírást, az összeg legyen 2 100, a **Ki fizetett?** mezőnél pedig Ana."
+      - "A **Megosztás közöttük** alatt győződj meg róla, hogy mind a négy ember benne van."
+      - "A **Felosztás módja** alatt válaszd a **Pontos összegek** lehetőséget. Ana, Ben és Chloe mellé írj 600-at, Dev mellé 300-at. Az összegeknek ki kell adniuk a végösszeget."
+      - "Válaszd a **Kiadás mentése** lehetőséget."
+      - "Az autóbérlést ugyanígy add hozzá. Ben fizetett, a felosztás **Egyenlően**, Dev pedig kimarad, mert vonattal jött. A költség többi felosztási módjáról a [költségek felosztása](page:feature/split-expenses) oldalon olvashatsz."
+      - "Add hozzá a bevásárlást. Dev fizetett, a felosztás **Egyenlően**, és mind a négyen benne vannak."
+  - heading: "Olvasd ki az eredményt, aztán számoljatok el"
+    body: "Mindenki számlája a villa rá eső részéből, valamint az autó és a bevásárlás rá eső részéből áll össze. Ana, Ben és Chloe számlája fejenként 725 €, vagyis 600 € + 80 € + 45 €. Dev számlája 345 €, vagyis 300 € + 45 €. Vond le, amit az egyes emberek kifizettek, és kijönnek az egyenlegek. Ana 2 100 €-t fizetett, így 1 375 € jár neki. Ben 240 €-t fizetett, és 485 € a tartozása. Dev 180 €-t fizetett, és 165 € a tartozása. Chloe semmit nem fizetett, és 725 € a tartozása. Magukra hagyva ezek a tartozások hat irányban futnának körbe a csoportban. A Side Badger ehelyett három kifizetést javasol, mind Anának. Fizessetek neki, ahogy akartok, aztán válaszd a **Tartozásrendezés**, majd a **Tartozásrendezés rögzítése** lehetőséget minden egyes kifizetésnél, hogy az egyenlegek felzárkózzanak. A gyors rendezés gombok kitöltik az összeget. Többet az [elszámolásról](page:feature/settle-up) olvashatsz."
+  - heading: "Amikor a villa nem egyetlen szép ár"
+    items:
+      - "**A szobák különböznek.** Ha a lakosztály többet ér, mint a kamraszoba, előbb egyezzetek meg abban, mennyibe kerül egy-egy szoba, aztán a személyéjszakás számításokat végezzétek el szobánként. A villát vidd be egyetlen költségként, mindenki végösszegével, vagy szobánként egy-egy költségként. Akárhogy is, egy költség pontos összegeinek ki kell adniuk a végösszeget."
+      - "**Hónapokkal korábban fizetett foglaló.** A foglalót annak a nevére vidd be külön költségként, aki fizette, azzal a dátummal, amikor fizette. Oszd fel éjszakák szerint, ugyanolyan arányban, mint a fennmaradó összeget."
+      - "**A foglalás másik pénznemben van.** A villát abban a pénznemben vidd be, amelyben fizettél. Ha a csoport menet közben vált át, használj egy aktuális árfolyamot, vagy írd be azt az árfolyamot, amelyet ténylegesen kaptál. Az eredeti összeg a költségnél marad. A részletek a [több pénznemről](page:feature/multiple-currencies) szóló oldalon vannak."
+      - "**Részleges éjszakák.** Valaki éjfélkor érkezik, valaki reggeli előtt távozik. Egyezzetek meg egyetlen szabályban az éjszakák számolására, és mindenkire azt használjátok."
+  - heading: "Amit a Side Badger itt nem csinál"
+    items:
+      - "Nem számolja meg helyetted az éjszakákat. Nincs éjszakák vagy részarányok szerinti felosztás, ezért az egyes összegeket a fentiek szerint te számolod ki, és **pontos összegekként** viszed be."
+      - "Nem mozgat pénzt. Fizessetek egymásnak, ahogy akartok, aztán rögzítsétek a kifizetést."
+      - "Egy költségnek egy fizetője lehet. Ha ketten fizették a villát, vigyél be két költséget."
+      - "Nincs vendéghozzáférés. A csoport minden tagjának, Devnek is, ingyenes fiók kell."
+exampleAfter: 2
+example:
+  heading: "A villa, az autó és a bevásárlás"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "hat éjszaka a villában"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "az autóbérlés"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "bevásárlás"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Kérdések a villáról"
+  items:
+    - q: "Mi van, ha valaki lemondja a részvételét?"
+      a: "Vedd ki az ő éjszakáit, számolj újra, és szerkeszd a villa költségét, hogy a pontos összegek újra kiadják az árat. A korábbi változat megmarad, a szerkesztés pedig megjelenik a csoport tevékenységében, így senki nem változtat meg egy számot csendben. Hogy ki szerkeszthet, a csoport jogosultságaitól függ."
+    - q: "Fizessen kevesebbet, aki lefoglalta?"
+      a: "Ezt a csoport dönti el. A foglalás fáradságos teendő, és a csoportok különböznek abban, hogy jár-e érte kedvezmény. Bármiben egyeztek meg, tegyétek bele a pontos összegekbe, és írjátok le egy megjegyzésbe a költségnél, vagy egy kommentbe mellette, hogy senkinek ne kelljen emlékeznie az alkura."
+    - q: "Oszthatjuk másképp a takarítási díjat?"
+      a: "Igen. Vidd be a díjat külön költségként, és adj neki saját felosztást. Az egyenlő felosztás az egész házra szóló átalánydíjhoz illik. A pontos összegek annak a csoportnak valók, amely azt szeretné, hogy a díj is kövesse az éjszakákat."

@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: Ryhmän ylläpito ja oikeudet yhteisille kuluille | Side Badger
+  description: Kutsu linkillä tai QR-koodilla, hyväksy liittyjät, tee katselijoita, säädä oikeudet ja lukitse ryhmä valmiina. Sinun ryhmäsi, sinun sääntösi, kohtuudella.
+h1: "Ryhmän ylläpito ja oikeudet: sinun sääntösi, kohtuudella"
+navLabel: Ryhmät ja oikeudet
+lead: Joissakin ryhmissä tarvitaan rahastonhoitaja. Side Badgerissa on sitä varten asetus. Kutsu ihmiset linkillä tai QR-koodilla, päätä, ketkä pääsevät sisään, ja valitse, ketkä saavat muuttaa lukuja. Pieni kaveriporukka voi ohittaa kaiken tämän, koska uudet ryhmät alkavat täysin avoimina.
+cta:
+  heading: Valmiina pitämään ryhmä järjestyksessä?
+  body: Luo tili, perusta ryhmä ja lähetä kutsulinkki. Jätä ryhmä avoimeksi tai kiristä sääntöjä, kun porukka kasvaa tai muuttuu nirsommaksi.
+problem:
+  heading: Jonkun on pidettävä luvut siistinä
+  body: Neljä kämppistä pärjää luottamuksella. Kolmekymmentä vierasta hääviikonloppuna tuskin pärjää. Tee ryhmä jokaiselle kodille, matkalle tai tapahtumalle, enintään 50 ihmisen kokoisena, ja jokaisella ryhmällä on omat jäsenensä, omat roolinsa ja omat sääntönsä. Kojelautasi listaa ne kaikki yhdellä näytöllä ja kertoo, missä tilanteessa olet kussakin. Useimmat ryhmät eivät koskaan koske asetuksiin. Niissä, jotka koskevat, on yleensä joku tarpeeksi järjestelmällinen haluamaan niitä.
+workflow:
+  heading: Tyhjästä ryhmästä lukittuun ryhmään
+  steps:
+    - title: Kutsu linkillä tai QR-koodilla
+      body: Avaa **Kutsu muita**, valitse, kuinka kauan linkki on voimassa (15 minuuttia, 1 tunti, 1 päivä tai 5 päivää), ja kopioi linkki tai näytä QR-koodi skannattavaksi. Voit kutsua sovelluksessa myös ihmisiä, joiden kanssa jaat jo jonkin toisen ryhmän.
+      shot: S03
+      shotAlt: Kutsuikkuna, jossa ryhmän linkki, sen QR-koodi ja valinta siitä, kuinka kauan linkki on voimassa
+    - title: Anna heidän katsoa ennen liittymistä
+      body: Kuka tahansa, jolla on linkki, kirjautuu sisään tai luo tilin, näkee ryhmän esikatselun ja valitsee nimen, jota haluaa ryhmässä käyttää. Sitten hän painaa **Liity ryhmään**.
+      shot: S04
+      shotAlt: Ryhmän liittymisen esikatselu, jonka kirjautunut henkilö näkee ennen liittymistä
+    - title: Hyväksy, ketkä pääsevät sisään
+      body: Ota hyväksyntä käyttöön, niin linkillä tulevat jäävät odottaviksi jäseniksi, kunnes ylläpitäjä päästää heidät sisään. Ylläpitäjät löytävät heidät **Turvallisuus ja oikeudet** -kohdan osiosta **Odottavat jäsenet** ja valitsevat **Hyväksy** tai **Hylkää**. Siihen asti odottava ihminen ei näe ryhmästä mitään.
+      shot: S14
+      shotAlt: Odottavat jäsenet, jotka odottavat ylläpitäjän hyväksyntää tai hylkäystä
+    - title: Valitse, kuka voi muuttaa mitä
+      body: "Valitse **Avoin yhteistyö** tai **Hallittu ryhmä** tai säädä oikeudet yksi kerrallaan. Anna sitten jokaiselle rooli: ylläpitäjä, jäsen tai katselija. Vain ylläpitäjät voivat muuttaa oikeuksia ja rooleja."
+      shot: S13
+      shotAlt: Ryhmän asetusten turvallisuusvälilehti, jossa kaksi esiasetusta ja mukautetut oikeudet
+    - title: Lukitse, kun se on valmis
+      body: Kun matka on ohi ja luvut ovat tasoissa, ylläpitäjä voi ottaa käyttöön **Lukitse ryhmä** -asetuksen. Kukaan ei voi lisätä tai muuttaa kuluja, kirjata maksuja eikä muokata listoja ja äänestyksiä, ja banneri kertoo siitä. Kukaan ei voi hiljaa lisätä myöhästynyttä taksia. Jos sellainen sittenkin ilmestyy, ylläpitäjä voi avata ryhmän lukituksen.
+      shot: S15
+      shotAlt: Ryhmä, jossa banneri kertoo sen olevan lukittu
+options:
+  heading: Ylläpitäjät, jäsenet ja katselijat
+  items:
+    - title: Ylläpitäjä
+      body: Pitää ryhmän käynnissä. Ylläpitäjät hyväksyvät uudet jäsenet, muuttavat rooleja ja oikeuksia, lukitsevat ryhmän ja avaavat sen lukituksen sekä sulkevat sen. Ryhmän luoja aloittaa sen ylläpitäjänä, eikä ryhmä jää koskaan ilman ylläpitäjää, koska viimeistä ylläpitäjää ei voi alentaa.
+    - title: Jäsen
+      body: Osallistuu. Mitä jäsen saa tehdä, riippuu ryhmän oikeuksista. Avoimen yhteistyön ryhmässä se on lähes kaikki. Hallitussa ryhmässä jäsenet voivat muuttaa vain itse luomiaan kuluja ja listoja.
+    - title: Katselija
+      body: Näkee kaiken eikä muuta mitään. Katselija ei voi lisätä tai muokata kuluja tai listoja, kutsua ihmisiä, muuttaa asetuksia eikä koskea otsikkokuvaan. Kätevä sille, joka haluaa seurata lukuja ja lupaa olla sörkkimättä niitä.
+sections:
+  - heading: Avoin, hallittu tai omat säännöt
+    body: Uudet ryhmät alkavat tilassa **Avoin yhteistyö**, jossa kaikki voivat kutsua ihmisiä, muuttaa kuluja ja muokata listoja ja uudet jäsenet liittyvät automaattisesti. **Hallittu ryhmä** on sitä varten, kun jonkun on oltava aikuinen. Voit myös säätää seitsemän oikeutta yksi kerrallaan, ja yhden muuttaminen käsin vaihtaa ryhmän mukautettuun tilaan. Mitä tahansa valitset, vain ylläpitäjät voivat muuttaa itse oikeuksia, ja jokainen muutos näkyy toimintasyötteessä. [Kämppisten](page:use-case/housemates) asunto voi jättää kaiken avoimeksi. Suuri [tapahtuma tai juhla](page:use-case/events-and-celebrations) tarvitsee usein hallitun ryhmän, jotta joku päättää, ketkä liittyvät. Onko tämä kaikki uutta? [Näin se toimii](page:how-it-works) käy läpi koko matkan ensimmäisestä kulusta tasattuun tilanteeseen.
+    items:
+      - "**Kuka voi muokata kuluja.** Avoin yhteistyö: kuka tahansa jäsen. Hallittu ryhmä: luojat ja ylläpitäjät."
+      - "**Kuka voi poistaa kuluja.** Avoin yhteistyö: kuka tahansa jäsen. Hallittu ryhmä: luojat ja ylläpitäjät."
+      - "**Kuka voi muokata listoja.** Avoin yhteistyö: kuka tahansa jäsen. Hallittu ryhmä: luojat ja ylläpitäjät."
+      - "**Kuka voi kutsua jäseniä.** Avoin yhteistyö: kuka tahansa jäsen. Hallittu ryhmä: vain ylläpitäjät."
+      - "**Uusien jäsenten hyväksyntä.** Avoin yhteistyö: automaattinen. Hallittu ryhmä: ylläpitäjän hyväksyntä vaaditaan."
+      - "**Kuka voi muuttaa asetuksia.** Avoin yhteistyö: kuka tahansa jäsen. Hallittu ryhmä: vain ylläpitäjät."
+      - "**Kuka voi muuttaa otsikkokuvaa.** Avoin yhteistyö: kuka tahansa jäsen. Hallittu ryhmä: vain ylläpitäjät."
+  - heading: Nimesi, kuvasi ja otsikkokuvasi
+    body: Jokaisella ryhmällä on oma roolijakonsa. Valitse nimi, jonka ihmiset näkevät kussakin ryhmässä (2–50 merkkiä, ja nimen on oltava ryhmässä yksilöllinen), sekä se, mitä profiilikuvistasi käytät siellä. Ole talossa **Sam** ja matkalla **Sam (auto on hänellä)**. Kuka tahansa, jolla on oikeus muuttaa asetuksia, voi nimetä ryhmän uudelleen ja muokata sen kuvausta. Otsikkokuvalla, joka on JPEG-, PNG-, GIF- tai WebP-tiedosto ja enintään 10 MB, on oma oikeutensa.
+  - heading: Arkistointi, lukitus tai sulkeminen
+    body: Kolme tapaa panna ryhmä pois, lievimmästä vakavimpaan.
+    items:
+      - "**Arkistointi** piilottaa ryhmän vain omalta kojelaudaltasi, ei kenenkään muun. Voit yhä avata sen ja käyttää sitä kuten ennenkin, ja **Palauta ryhmä arkistosta** tuo sen takaisin."
+      - "**Lukitus** jäädyttää muutokset, kunnes ylläpitäjä avaa lukituksen. Kaikki voivat yhä lukea ryhmän ja sen historian."
+      - "**Sulkeminen** on pysyvä ja koskee kaikkia. Vain ylläpitäjä voi tehdä sen kirjoittamalla ryhmän nimen vahvistukseksi, eikä kukaan voi enää avata ryhmää."
+  - heading: Ryhmästä poistuminen
+    body: Kuka tahansa voi poistua, kun on tasannut tilinsä. Et voi poistua, jos olet velkaa tai sinulle ollaan velkaa rahaa vaikka vain yhdessä valuutassa, jos avoin kysymys kulusta koskee sinua tai jos olet viimeinen ylläpitäjä tai ainoa jäsen. [Kirjaa maksu](page:feature/settle-up), selvitä [kulukysymys](page:guide/what-to-do-when-someone-disputes-a-shared-expense) tai tee joku toinen ylläpitäjäksi ja poistu sitten. Takaisin tullaksesi tarvitset uuden kutsun.
+limits:
+  heading: "Kohtuudella: pieni präntti"
+  items:
+    - Ryhmään mahtuu enintään 50 ihmistä.
+    - Vain ylläpitäjät voivat muuttaa oikeuksia ja rooleja. Viimeistä ylläpitäjää ei voi alentaa.
+    - Kun kulujen muokkaus asetetaan tilaan **Vain ylläpitäjät**, vain ylläpitäjät voivat myös lisätä kuluja.
+    - Lukitus estää kulujen muutokset, uudet maksut sekä listojen ja äänestysten muutokset. Kaikki voivat yhä lukea ryhmän ja sen historian sekä reagoida maksuihin.
+    - Sulkeminen on pysyvä. Sovelluksessa ei ole tapaa avata suljettua ryhmää uudelleen.
+    - Uuden kutsulinkin tekeminen ei peruuta vanhoja. Jokainen linkki on voimassa oman vanhenemisaikansa loppuun, joten valitse lyhyt, jos epäröit, minne linkki voi päätyä.
+    - Sovelluksen sisäiset kutsut listaavat ihmisiä 10 viimeksi aktiivisesta ryhmästäsi. Kaikki muut tarvitsevat linkin, ja se, kuka saa kutsua, riippuu ryhmän oikeuksista.
+    - Liittyminen vaatii tilin, ja ihmisten on vahvistettava sähköpostinsa, ennen kuin he voivat lisätä mitään.
+useCasesHeading: Missä pieni järjestys auttaa
+faq:
+  heading: Kysymyksiä
+  items:
+    - q: Voiko katselija lisätä kuluja?
+      a: Ei. Katselija näkee kaiken eikä muuta mitään. Hän ei voi lisätä tai muokata kuluja tai listoja, kutsua ihmisiä eikä muuttaa asetuksia.
+    - q: Voiko joku poistua ryhmästä, kun on velkaa?
+      a: Ei. Kukaan ei voi poistua ryhmästä, jos hän on velkaa tai hänelle ollaan velkaa rahaa vaikka vain yhdessä valuutassa. Tasaa ensin ja poistu sitten.
+    - q: Mitä tapahtuu, kun ryhmä suljetaan?
+      a: Kukaan ei voi avata sitä uudelleen. Vain ylläpitäjä voi sulkea ryhmän, hänen on kirjoitettava ryhmän nimi vahvistukseksi, ja ryhmä muuttuu kaikille käyttökelvottomaksi. Jos haluat vain estää muutokset, lukitse se. Jos haluat vain pois omalta kojelaudaltasi, arkistoi se.
+    - q: Voinko perua lukituksen?
+      a: Kyllä. Ylläpitäjä voi avata ryhmän lukituksen, ja muutokset toimivat taas.
+    - q: Täytyykö minun hyväksyä ihmiset ennen liittymistä?
+      a: Vain jos haluat. Uudet ryhmät alkavat tilassa Avoin yhteistyö, jossa linkillä tulevat liittyvät automaattisesti. Ota ylläpitäjän hyväksyntä käyttöön tai valitse Hallittu ryhmä, niin jokainen odottaa, kunnes ylläpitäjä päästää hänet sisään.
+    - q: Kuinka monta ihmistä ryhmässä voi olla?
+      a: Enintään 50.

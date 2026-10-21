@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "分账计算器：谁该付给谁，一算就清楚 | Side Badger"
+  description: "谁付了钱、谁欠了钱、谁该付给谁，几秒就理清。可平分、按确切金额或按百分比。免费，在浏览器中运行，不保存也不发送任何数据。"
+h1: 分账计算器
+navLabel: 分账计算器
+lead: 输入谁为什么付了钱，计算器就会告诉你谁欠谁，并给出一份简短的付款清单来结清。它在你的浏览器里运行，不保存任何内容，也不转移资金。如果你的群组需要让这笔账在标签页关掉之后继续存在，Side Badger 里的[分摊支出](page:feature/split-expenses)和[结算](page:feature/settle-up)做的是同样的计算，并且会替你保存下来。
+cta:
+  heading: 喜欢这样算账？那就留下来。
+  body: 这个计算器一关掉标签页就什么都忘了，很像那位“肯定付过上次钱”的人。Side Badger 群组会保存支出、更新每个人的余额并记录付款。免费，无广告，无每日限制。
+sections:
+  - heading: 计算是怎么进行的
+    body: 对每一笔支出，计算器先算出每个人的份额。你可以在选定的人之间平均分摊、按确切金额或按百分比分摊。每个人的余额就是他付出的钱减去他应付的钱。正号表示群组欠他，负号表示他欠群组。所有余额加起来永远是零，因为一个人被欠多少，别人就欠多少。
+  - heading: 为什么付款清单这么短
+    body: 没有人需要把每张收据单独结清。所有余额算出来之后，计算器会把欠得最多的人和被欠得最多的人配成一对，用一笔付款尽可能多地结清，然后沿着清单继续往下，直到每个人都归零。付款笔数最多只比有余额的人数少一笔，通常比逐张账单结算要少。它给出的是一份简短的付款清单，并不保证那是最短的一份。
+  - heading: 计算器不做什么
+    items:
+      - "**处理多种货币。**选一种货币，整个计算都用它。应用会为每种货币单独保留余额，并且可以按当前汇率换算一笔支出，汇率你也可以修改。"
+      - "**保存任何内容。**关掉标签页，数字就没了。想保留它们，请复制链接。链接把你的数字放在 # 之后，浏览器从不把这部分发送给服务器，不过拿到链接的人都能读到这些数字。"
+      - "**转移资金。**它告诉你谁该付给谁。你们想怎么付就怎么付，然后如果你的群组在应用里记账，就在应用里记录这笔付款。"
+      - "**随机决定谁多出一分钱。**账单除不尽时，多出的零头会落在清单靠前的人身上，这样合计仍然对得上。在应用里，多出的零头会随机落在某一个人身上，所以不会总是同一个人。"
+      - "**突破上限。**计算器支持 2 到 20 人，单笔支出最多 999,999.99，与应用一致。"
+exampleAfter: 2
+example:
+  heading: 一个长周末，四位朋友
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: 小木屋
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: 杂货
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: 打车
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: 酒吧
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: 常见问题
+  items:
+    - q: 这个计算器免费吗？
+      a: 免费。无广告。无每日限制。你也不需要账户。
+    - q: 它会保存我输入的内容吗？
+      a: 不会。不会保存，也不会发送到任何地方。想保留你的数字，请使用“复制链接”，再把链接存在某个地方。
+    - q: 谁能看到我复制的链接？
+      a: "拿到它的任何人。数字就存在链接本身里，位于 # 之后，所以只把它分享给应该看到这些数字的人。"
+    - q: 它会转移资金吗？
+      a: 不会。它只算出谁该付给谁，你们想怎么付就怎么付。Side Badger 也从不经手你的钱。详见[结算](page:feature/settle-up)。
+    - q: 可以分摊用两种货币支付的旅行吗？
+      a: 这里不行，因为一次计算只有一种货币。在群组里，每种货币各有自己的余额。详见[多币种](page:feature/multiple-currencies)。
+    - q: 如果金额对不上怎么办？
+      a: 计算器会在那笔支出下面提示，并在对上之前不显示结果。确切金额必须合计等于总额，百分比必须合计为 100。
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

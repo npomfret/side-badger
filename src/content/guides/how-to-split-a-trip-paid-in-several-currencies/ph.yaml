@@ -1,0 +1,117 @@
+# Guide 5 of the wave 2 briefs (tasks/release-2-plan.md, P8). The worked example is the brief's data;
+# every number in the prose below comes from it or from the arithmetic shown. The rate is illustrative.
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.expenses.2.label
+meta:
+  title: Paano hatiin ang biyaheng binayaran sa maraming pera | Side Badger
+  description: Pounds sa hotel, yen sa ramen. Mag-settle sa bawat pera nang hiwalay o mag-convert sa rate na nakikita mo. Parehong paraan, may kuwenta.
+h1: Paano hatiin ang gastos sa biyaheng binayaran sa iba't ibang pera
+navLabel: Biyahe sa maraming pera
+lead: Ilagay ang bawat gastos sa perang ginamit mo sa pagbayad, saka pumili ng paraan. Panatilihing magkahiwalay ang mga pera at i-settle ang bawat isa sa sarili nitong pera, o mag-convert sa kasalukuyang exchange rate at mag-settle nang isang beses. Ang parehong biyahe sa Japan ay apat na bayad sa unang paraan at dalawa sa pangalawa.
+cta:
+  heading: Ilagay ito sa perang ginamit mo
+  body: Gumawa ng libreng account, magsimula ng grupo para sa biyahe, at idagdag ang bawat gastos sa anumang pera ang nasa resibo. Gusto munang makita ang detalye? Tingnan ang [maraming pera](page:feature/multiple-currencies) o ang [saklaw ng libre](page:pricing).
+sections:
+  - heading: Tatlong magkakaibigan, isang hotel, napakaraming yen
+    body: Isang linggo sa Japan sina Zoe, Kenji, at Lucy sa isang [group trip](page:use-case/group-trips), at pantay na hinahati sa tatlo ang bawat gastos. Na-book ni Zoe ang hotel mula sa bahay, sa pounds, sa halagang £600. Binili ni Lucy ang mga rail pass sa Tokyo sa halagang ¥90,000. Si Kenji ang nagbayad sa ramen night, ¥9,000, at binabanggit na niya ito araw-araw mula noon. Walang gustong mag-convert ng tatlong resibo sa platform ng istasyon. Para sa mga kuwenta rito, ang ¥1 ay £0.005, isang bilog na rate na ginawa lang para sa guide na ito. Sa app, gagamit ka ng kasalukuyang exchange rate, o ng rate na aktuwal mong nakuha.
+  - heading: Ilagay ang bawat isa sa perang nasa resibo
+    body: Gawin ang bahaging ito anuman ang piliin mong paraan. Wala pang kailangang i-convert.
+    items:
+      - "**Gawin ang grupo.** Sa dashboard, piliin ang **Gumawa ng Grupo**, ipangalan ito sa biyahe, saka piliin ang **Mag-imbita ng Iba** at ipadala ang link o QR code."
+      - "**Idagdag ang hotel.** Piliin ang **Magdagdag ng Gastusin** at ilagay ang 600, na pounds ang pera sa tabi ng halaga. Sa **Sino ang nagbayad?**, piliin si Zoe. Panatilihing nakapili ang tatlo sa **Hatiin sa pagitan ng**, iwanang **Pantay** ang **Paano hatiin**, at piliin ang **I-save ang Gastusin**."
+      - "**Idagdag ang yen.** Gawin din ito para sa mga rail pass (nagbayad si Lucy) at sa ramen (nagbayad si Kenji), na yen ang pera. Walang decimal ang yen, kaya hindi humihingi ng decimal ang form."
+  - heading: "Unang paraan: panatilihing magkahiwalay ang mga pera"
+    body: Nagtatabi ang Side Badger ng balanse para sa bawat pera at hindi nito pinagbabawas ang isa sa isa. Sa pounds, £200 bawat isa ang hotel, kaya may utang sina Kenji at Lucy kay Zoe na tig-£200. Sa yen, umaabot sa ¥99,000 ang mga rail pass at ramen, o ¥33,000 bawat isa. Nagbayad si Lucy ng ¥90,000 kaya may makukuha siyang ¥57,000. Walang binayarang yen si Zoe at may utang siyang ¥33,000. Nagbayad si Kenji ng ¥9,000, kaya may utang siyang ¥24,000.
+    items:
+      - "**Pounds.** Magbabayad si Kenji kay Zoe ng £200 at magbabayad si Lucy kay Zoe ng £200."
+      - "**Yen.** Magbabayad si Zoe kay Lucy ng ¥33,000 at magbabayad si Kenji kay Lucy ng ¥24,000."
+      - "**Apat na bayad lahat.** May utang sina Zoe at Lucy sa isa't isa sa dalawang pera na hindi nagbabawas sa isa't isa. Walang rate na kasangkot, kaya walang pagtatalunan."
+      - "**May utang na yen, pounds ang bayad.** Ang walang yen ay puwede pa ring magbayad sa pounds. Kapag nagtatala ka ng bayad, buksan ang **Ibang pera?**, piliin ang **I-convert sa** pounds, at tingnan ang rate. Ang ¥33,000 ni Zoe ay £165 sa rate ng guide na ito, at tama pa rin ang balanse sa yen."
+      - "**Itala ang bawat bayad.** Magbayaran kayo sa paraang gusto ninyo, saka buksan ang **Magbayad** at piliin ang **Itala ang Kasunduan**. May higit pa tungkol sa [pag-settle up](page:feature/settle-up)."
+  - heading: "Pangalawang paraan: mag-convert habang tumatakbo"
+    body: Kung gusto ng grupo na isang numero na lang ang makita ng bawat isa, mag-convert kapag inilalagay ang gastos.
+    items:
+      - "**Mag-convert sa form.** Sa **Magdagdag ng Gastusin**, piliin ang **I-convert sa** at piliin ang pounds. Ipinapakita ng Side Badger ang rate at ang na-convert na halaga, na may tandang ≈. I-edit ang rate kung iba ang nakuha mo. Nananatili sa gastos ang orihinal na halaga sa yen."
+      - "**Basahin ang pounds.** Sa ¥1 = £0.005, nagiging £450 ang mga rail pass at £45 ang ramen. Kasama ang £600 na hotel, £600 + £450 + £45 = £1,095 iyon, o £365 bawat isa. Nagbayad si Zoe ng £600, kaya may makukuha siyang £235. Nagbayad si Lucy ng £450 at may makukuha siyang £85. Nagbayad si Kenji ng £45 at may utang siyang £320."
+      - "**Dalawang bayad.** Parehong mula kay Kenji: £235 kay Zoe at £85 kay Lucy. Hindi na nagbabayaran sina Zoe at Lucy."
+      - "**O magtakda ng pera ng grupo.** Para laktawan ang dagdag na hakbang, buksan ang **Mga Setting** ng grupo, hanapin ang **Mga Setting ng Currency**, at piliin ang **Automatic Convert Expenses To**. Kusang iko-convert sa perang iyon ang bawat bagong gastos, sa rate pa ring nakikita at mababago mo."
+  - heading: Alin sa dalawang paraan ang pipiliin mo?
+    items:
+      - "**Panatilihing magkahiwalay** kapag may yen pa sa wallet ang mga tao, o kapag ayaw ninyong magtalo tungkol sa rate. Ang kapalit ay mas maraming bayad, sa higit sa isang pera."
+      - "**Mag-convert** kapag iisang pera ang gamit ng grupo at gusto nito ng isang numero bawat isa at mas maikling listahan, gaya ng dalawang transfer ni Kenji. Ang kapalit ay kailangang magtiwala ng grupo sa isang rate, at nakapirmi ang rate sa bawat gastos kapag na-save ito."
+      - "**Magpasya nang maaga.** Ang pera ng grupo ay nagko-convert lang ng mga bago at kinopyang gastos. Hindi nito babalikan at aayusin ang mga naipasok mo na."
+  - heading: Ang rate, at ang hangganan
+    items:
+      - "**Nakapirmi ang rate kapag na-save.** Hindi kailanman muling binabalyuhan ang mga lumang gastos, kaya hindi nag-iiba ang balanse dahil gumalaw ang merkado. Puwedeng magkaiba ang rate ng mga gastos na inilagay sa magkakaibang araw, kaya kung gusto ng grupo ng iisang rate para sa buong biyahe, pagkasunduan ito at i-type sa bawat pagkakataon."
+      - "**Walang rate? Mag-type ka.** Kumukuha ang Side Badger ng kasalukuyang exchange rate kung kaya, pero hindi garantisado ang bawat pares. Kung wala, o kung mas magandang deal ang ibinigay ng cash desk, i-type ang sarili mong rate."
+      - "**999,999.99 bawat gastos, sa sarili nitong pera.** Isang hangganan lang, anuman ang pera. Sa yen, bahagyang kulang iyon sa ¥1,000,000, mga £5,000 sa rate ng guide na ito. Sa perang malalaki ang numero, gaya ng rupiah ng Indonesia, mas maaga itong maaabot ng isang bayarin. Hatiin ang bayarin sa dalawang gastos, o ilagay ito sa ibang pera at i-convert."
+  - heading: Ang hindi ginagawa ng Side Badger dito
+    items:
+      - Hindi ito naglilipat o nagpapalit ng pera. Magbayaran kayo sa paraang gusto ninyo, saka itala ang bayad.
+      - May 140 pera ito. Hindi kasama ang mga cryptocurrency at metal.
+exampleAfter: 2
+example:
+  heading: Japan, na-settle sa dalawang paraan
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: ang hotel, na-book mula sa bahay
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: mga rail pass
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: ramen night
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: Mga tanong
+  items:
+    - q: Anong exchange rate ang ginagamit ng Side Badger?
+      a: Kasalukuyang exchange rate, na kinukuha kapag inilagay mo ang gastos kung may available. Mababago mo ito sa rate na aktuwal mong nakuha.
+    - q: Puwede bang pounds at yen lang ang gamitin ng grupo?
+      a: Oo. Sa **Mga Setting** ng grupo, i-on ang **Limitahan ang mga currency para sa grupong ito** sa ilalim ng **Mga Setting ng Currency**, piliin ang **Mga pinahihintulutang currency**, at itakda ang **Default na currency para sa mga bagong gastusin**. Mas kaunting opsyon sa listahan, mas kaunting maling hula sa kahera.
+    - q: Kailangan ba talagang mag-convert?
+      a: Hindi. Nananatiling magkahiwalay ang mga pera maliban kung ikaw o ang grupo ninyo ang pumiling mag-convert, at may sariling maikling listahan ng mga bayad ang bawat pera.

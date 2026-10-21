@@ -1,0 +1,103 @@
+translatedFrom: "a2338738"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Divide el alquiler según el tamaño de la habitación | Side Badger"
+  description: "Habitación más grande, parte más grande. Aparta las zonas comunes, divide el resto por superficie y escribe los porcentajes una vez. Cuentas para tres compañeros."
+h1: "Cómo dividir el alquiler según el tamaño de la habitación"
+navLabel: "Alquiler según la habitación"
+lead: "Decide qué parte del alquiler corresponde a las zonas comunes y divídela a partes iguales; después reparte el resto según la superficie de cada dormitorio. Redondea a porcentajes enteros, escríbelos una vez en el alquiler en Side Badger y copia el gasto cada mes."
+cta:
+  heading: "Apunta el alquiler una sola vez"
+  body: "Crea una cuenta gratis, empieza un grupo para el piso y apunta el alquiler con los porcentajes que habéis acordado. El mes que viene es una copia. ¿Prefieres ver primero el recorrido? Mira [cómo funciona](page:how-it-works) o [qué cubre lo gratis](page:pricing)."
+sections:
+  - heading: "Tres personas, un piso, una discusión"
+    body: "Priya, Tom y Aisha comparten un piso por 1.950 £ al mes. Durante un año lo dividieron entre tres, porque era fácil. Entonces Aisha midió su habitación. La de Priya mide 16 m², la de Tom 12 m² y la de Aisha 10 m², así que Aisha pagaba lo mismo que Priya por una habitación más de un tercio más pequeña. Nadie había sido poco razonable. Nadie había hecho la cuenta. Con una cena para llevar sobre la mesa acordaron primero una regla. El 40 % del alquiler paga la cocina, el baño y el salón, que usan los tres."
+  - heading: "El método, con las cuentas a la vista"
+    body: "Cuatro pasos, una cinta métrica y la calculadora del móvil."
+    items:
+      - "**Aparta la parte común.** El grupo acuerda qué parte del alquiler corresponde a las habitaciones que usa todo el mundo. En este piso es el 40 %, que son 13,33 % para cada uno entre tres personas."
+      - "**Reparte el resto según la superficie.** El otro 60 % se reparte por el tamaño de cada dormitorio. Los dormitorios suman 38 m² (16 + 12 + 10), así que la parte de Priya es 60 % × 16/38, que son 25,26 %."
+      - "**Suma las dos partes.** Priya: 25,26 % + 13,33 % = 38,6 %. Tom: 60 % × 12/38 = 18,95 %, más 13,33 % son 32,3 %. Aisha: 60 % × 10/38 = 15,79 %, más 13,33 % son 29,1 %."
+      - "**Redondea y comprueba.** Los porcentajes enteros son más fáciles de escribir y de discutir, así que 38,6 % pasa a ser 39 %, 32,3 % pasa a ser 32 % y 29,1 % pasa a ser 29 %. Comprueba que 39 + 32 + 29 da 100. Si al redondear te sale 99 o 101, el grupo acuerda a quién se le mueve la cifra un punto."
+  - heading: "Cómo queda el mes del piso"
+    body: "El alquiler al 39 %, 32 % y 29 % sale a 760,50 £, 624,00 £ y 565,50 £. Priya pagó al casero, así que en el conjunto del mes le deben 1.142,50 £, mientras que Tom debe 566,00 £ y Aisha debe 576,50 £. Side Badger sugiere dos pagos, los dos para Priya."
+  - heading: "Configúralo en Side Badger"
+    body: "Una noche, casi toda dedicada a discutir el 40 %."
+    items:
+      - "**Crea el grupo.** En el panel elige **Crear grupo** y ponle el nombre del piso. Elige **Invitar a otros** y envía el enlace o el código QR. Todos inician sesión o crean una cuenta gratis, y eligen el nombre con el que quieren que los vean en este grupo."
+      - "**Añade el alquiler.** Elige **Añadir gasto**. Escribe la descripción y el importe, y en **¿Quién pagó?** elige a quien pagó al casero. Deja a las tres personas en **Dividir entre**; luego, en **Cómo dividir**, elige **Porcentaje** y escribe 39, 32 y 29. El formulario avisa si los porcentajes no suman 100. Elige **Guardar gasto**."
+      - "**Añade las facturas.** La luz y el internet son gastos aparte, cada uno con su pagador. Deja **Cómo dividir** en **Igual**."
+      - "**Cópialo el mes que viene.** Abre el alquiler del mes pasado y elige **Copiar gasto**. La copia conserva el pagador, el importe y la división, y toma la fecha de hoy. Cambia el importe si el alquiler ha cambiado y elige **Crear copia**."
+      - "**Mira quién debe a quién.** La sección **Saldos** lo muestra. Pagaos como queráis y después registrad el pago en **Liquidar**."
+  - heading: "Baños propios, cuartuchos y gente que se va"
+    items:
+      - "**Baños propios y cuartuchos.** La superficie es solo un punto de partida. Una habitación con baño propio vale más que la misma superficie sin él, y un cuartucho en el que caben una cama y una silla con muchas esperanzas vale menos. Ajustad los porcentajes de común acuerdo, comprobad que siguen sumando 100 y apuntad las cifras definitivas donde las vea todo el piso."
+      - "**Alguien se va a mitad de mes.** Calcula lo que debe cada persona ese mes e introduce el alquiler de ese mes con **Cantidades exactas** en lugar de **Porcentaje**. Los importes tienen que sumar el alquiler. Hazlo antes de que se vaya. Nadie puede salir de un grupo mientras deba o le deban dinero, y un gasto en el que participa alguien que ha salido pasa a ser de solo lectura."
+      - "**Llega alguien nuevo.** Vuelve a medir, rehaz las cuentas con los tamaños de habitación nuevos y usa los porcentajes nuevos desde el siguiente alquiler. Los meses anteriores se quedan como estaban."
+  - heading: "Lo que Side Badger no hace aquí"
+    items:
+      - "No mide tus habitaciones ni elige los porcentajes. Las superficies y el 40 % los acuerda el grupo."
+      - "No tiene facturas recurrentes, así que copias el alquiler del mes pasado cada vez."
+      - "Nunca mueve dinero y no paga al casero. Os pagáis como queráis y lo registráis."
+      - "No sabe lo que dice vuestro contrato de alquiler. Lleva la cuenta entre las personas del grupo."
+exampleAfter: 2
+example:
+  heading: "Un mes en el piso"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "el alquiler"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "la factura de la luz"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "el internet"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Preguntas"
+  items:
+    - q: "¿Y si alguien tiene una habitación más grande pero con menos luz?"
+      a: "La superficie es solo el punto de partida, así que el grupo puede acordar un ajuste. Quita un punto o dos a la habitación oscura, repártelos entre los demás y comprueba que los porcentajes siguen sumando 100. Side Badger guarda lo que acordéis y no lo juzga."
+    - q: "¿También hay que dividir las facturas según el tamaño de la habitación?"
+      a: "Normalmente no. La luz y el internet los usa todo el mundo, así que dividir a partes iguales es más sencillo, como en el ejemplo de arriba. Si un compañero está en casa todo el día, el grupo puede acordar otra cosa, como importes exactos. [Dividir gastos](page:feature/split-expenses) explica las opciones."
+    - q: "¿Podemos cambiar la división más adelante?"
+      a: "Sí, para los gastos nuevos. Cambia los porcentajes al copiar el alquiler y los meses anteriores se quedan como estaban. Para corregir un gasto pasado, edítalo si los permisos del grupo lo permiten, y avisa antes a la casa, porque los saldos cambian. La versión anterior se conserva."

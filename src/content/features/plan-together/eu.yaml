@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Taldeko zerrendak, inkestak eta iruzkinak | Side Badger"
+  description: "Iruzkindu gastuak, galdetu bitxia dirudienari, partekatu erosketa-zerrenda eta bozkatu villa. Planifikatu elkarrekin, banatu gero. Doakoa, iragarkirik gabe."
+h1: Planifikatu elkarrekin, banatu gero
+navLabel: Planifikatu elkarrekin
+lead: Erosketa-zerrenda eta erosketen faktura, azkenean elkarri hitz egiten. Side Badger-ek zure taldeari dirua gastatu aurretik eta ondoren hitz egiteko toki bat ematen dio, gastu bakoitzean iruzkinekin, gaizki dirudienari galdetzeko modu batekin, zerrenda partekatuekin eta inkestekin erabaki handietarako. Gero [gastuak banatzen dituzu](page:feature/split-expenses) ohi bezala.
+cta:
+  heading: Planifikatu, eta gero banatu
+  body: Sortu doako kontu bat, hasi talde bat eta jarri lehen zerrenda, inkesta edo galdera dirua dagoen tokian bertan. Ez dakizu zer gertatzen den gero? Ikusi [nola funtzionatzen duen](page:how-it-works).
+problem:
+  heading: Txata hemen dago, faktura han
+  body: Taldeko gastua bi tokitan bizi ohi da. Zenbakiak toki batean daude, eta zenbakiei buruzko eztabaida asteartean korrituta desagertu zen txat batean. Erosketa-zerrenda hozkailu baten argazkia da. Villa gehienen 👍 batekin erabaki zen, ziurrenik. Side Badger-ek planifikazioa taldean gordetzen du, dagozkion gastuen ondoan, beraz kostua dagoen tokian iruzkin bat dago, erosketa dagoen tokian zerrenda bat, erabaki handirako inkesta bat, eta “itxaron, hau zuzena al da?” esateko modu bat paragrafo bat idatzi gabe. Guztia taldearen diruari buruzkoa izaten jarraitzen du, horretarako baitago taldea.
+workflow:
+  heading: Villa-bozketatik erosketen fakturara
+  steps:
+    - title: Jarri erabaki handia bozketara
+      body: Gehitu inkesta faktura finkatzen duen erabakiarentzat, adibidez zein villa. Aukeratu bi eta hamar aukera artean, esan pertsona bakoitzak zenbat boto dituen, eta itxi denek bozkatu dutenean; irabazlea markatuta geratzen da.
+      shot: S17
+      shotAlt: Irabazlea markatuta eta aukera bakoitzaren ondoan boto kopurua dituen inkesta itxi bat
+    - title: Idatzi erosketa-zerrenda elkarrekin
+      body: Hasi zerrenda partekatu bat, gehitu elementuak eta markatu saskira iristen diren heinean. Erosketa gero gastu gisa sartzen da.
+      shot: S16
+      shotAlt: Erosketa-zerrenda partekatu bat, elementu batzuk markatuta eta aurrerapen-kontagailu batekin
+    - title: Hitz egin kostuaz dagoen tokian
+      body: Iruzkindu gastuan bertan, erantsi ordainagiria eta erreakzionatu emoji batekin. Elkarrizketa dagokion zenbakiaren ondoan geratzen da.
+      shot: S08
+      shotAlt: Gastu bat bere xehetasunekin, ordainagiri baten miniatura, iruzkin-hari bat eta emoji erreakzioak
+    - title: Galdetu gaizki dirudienari
+      body: Taldeak gastu-galderak aktibatuta baditu, gastu batean sartuta dagoen edonork **Galdera bat daukat** aukera dezake. Gastua saldoetatik kanpo geratzen da galdera konpondu arte.
+      shot: S18
+      shotAlt: Gastu-zerrenda, “Zalantzan jarri da” bereizgarri batekin eta “Zalantzan jarritakoak bakarrik” iragazkiarekin
+    - title: Ikusi zer aldatu den, eta nork aldatu duen
+      body: Jarduera-historiak eta jakinarazpen-kanpaiak zure talde guztietan zer berri dagoen erakusten dute. Push jakinarazpenak ere badaude, nahi baduzu.
+      shot: S19
+      shotAlt: Jakinarazpenen goitibeherakoa, azken jardueren zerrenda batekin
+options:
+  heading: Aukerak
+  items: []
+example:
+  heading: Hiru etxekide, zalantzan jarritako ardo-faktura bat
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: erosketa handia
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: garbitzailea
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: festako ardoa
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: Iruzkinak eta erreakzioak, zenbakien ondoan
+    body: Gastu bakoitzak bere iruzkin-haria du, eta baita taldeak, zerrenda bakoitzak eta inkesta bakoitzak ere. Galdetu taxiak zergatik kostatu zuen hainbeste taxiaren gastuan bertan, inork atzera irakurtzen ez duen txat batean ez. Gehitu ordainagiriaren argazki bat edo erreserbaren PDF bat, eta gero erreakzionatu ados, bihotz, barre, harrigarria, triste edo ospatu batekin gastuetan, ordainketetan eta iruzkinetan. Ospatu ordainketa bat iristen denean. Txalo-zaparradatik Side Badger-ek duen gauzarik hurbilena da.
+  - heading: Egin galdera gastu bati eztabaida hasi gabe
+    body: Taldeak gastu-galderak aktibatuta dituenean, gastu batean sartuta dagoen edonork **Galdera bat daukat** aukeratu eta zergatik esan dezake. Galdera gastuaren iruzkin gisa argitaratzen da, gastuak **Zalantzan jarri da** bereizgarria hartzen du, eta gastu osoa guztien saldoetatik kanpo geratzen da galdera konpondu arte.
+    items:
+      - "**Aktibatzea.** Lehenespenez desaktibatuta dago. Administratzaile batek **Baimendu gastuen galderak** aktibatzen du taldearen ezarpenetan, **Eginbideak** atalean."
+      - "**Ixtea.** Galdera egin duenak, edo administratzaile batek, **Itxi galdera** aukeratzen du. Hainbat pertsonak gastu bera zalantzan jarri badute, azken galdera ixten denean itzultzen da saldoetara."
+      - "**Editatzea.** Gastu bat editatzen denean, galdera irekia bertsio berrira pasatzen da oraindik zati bat duten guztientzat. Edizioak kanpoan uzten duen edonoren galdera bertsio zaharrarekin amaitzen da, beraz ez dago ezer itxi beharrik."
+      - "**Aurkitzea.** Gastu-zerrendak **Zalantzan jarritakoak bakarrik** iragazkia du. Hau ez da onarpen-urrats bat: norbaitek zalantzan jartzen dituen gastuak bakarrik geratzen dira saldoetatik kanpo, eta gainerako guztia gehitu bezain laster kontatzen da."
+  - heading: Galdera bat nola amaitzen den
+    body: Tomek festako ardoa gehitzen du, 45 £, hiru etxekideen artean banatuta. Aishak ez zuen edan, beraz galdera bat egiten du, eta irekita dagoen bitartean ardoa inorentzat ez da kontatzen. Etxeak ardoa Tom eta Priyarena dela erabakitzen du, beraz Tomek banaketa bi horietara editatzen du. Aisha ez dago gastuan jada, beraz bere galdera aurreko bertsioarekin amaitzen da, gordeta geratzen dena, eta ardoa berehala itzultzen da saldoetara, bakoitzari 15 £ egokitu ordez 22,50 £ egokitzen zaizkiola. Aisha gastuan geratu balitz, bere galdera bertsio berrira pasatuko zen, eta berak edo administratzaile batek ixtea itxarongo luke. Behean, Aisharen 48 £ erosketaren 28 £ eta garbitzailearen 20 £ dira, eta Priyaren 10,50 £ bere zatia da, 70,50 £ (28 £, 20 £ eta 22,50 £), ordaindu zituen 60 £ kenduta. [Etxekideen](page:use-case/housemates) eztabaida klasikoa. Galdera nola idatzi jakiteko, ikusi [zer egin norbaitek partekatutako gastu bat zalantzan jartzen duenean](page:guide/what-to-do-when-someone-disputes-a-shared-expense).
+  - heading: Zerrenda partekatuak, erosketetarako
+    body: Hasi zerrenda bat taldean, eman izen bat, adibidez Erosketa-zerrenda, gehitu elementuak eta markatu itzazu. Arrastatu elementuak ordena hobe batera, ikusi aurrerapen-kontagailua igotzen eta iruzkindu zerrenda norbaitek olo-esne okerra erosten duenean. Artxibatu amaitutako zerrenda txukuntzeko (**Erakutsi artxibatutakoak** aukerak itzultzen du), edo kopiatu zerrenda bat berrerabiltzeko. Eduki erosketa-zerrenda partekatua erosketa-fakturen ondoan, zerrendak zer erosi esan dezan eta gastuak zenbat kostatu zen. Nork sor eta edita ditzakeen zerrendak taldearen baimenen araberakoa da, [taldeak eta baimenak](page:feature/groups-and-permissions) orriak azaltzen duen bezala.
+  - heading: Inkestak, anonimoak nahi baduzu
+    body: Galdetu taldeari faktura erabakitzen duen zerbait, adibidez zein villa, zenbat gastatu opariaren gainean edo itsasontzi-txangoak merezi duen. Inkesta batek galdera bat eta bi eta hamar aukera artean ditu. Zuk aukeratzen duzu pertsona bakoitzak zenbat boto dituen, aukera bakarretik hamar arte, eta bozketa anonimoa den. **Boto anonimoa** aukerak nork zer bozkatu duen ezkutatzen du, eta ezin da aldatu lehen botoa sartu ondoren. Jendeak bere botoa alda edo kendu dezake inkesta itxi arte, eta berriro ireki dezakezu taldeak iritzia aldatzen badu. Villa aukeratzea [taldeko bidaien](page:use-case/group-trips) oinarrizko lana da, eta opari-aurrekontua adostea klasikoa da [ekitaldi eta ospakizunetarako](page:use-case/events-and-celebrations).
+  - heading: Jarduera-historia, ezer isilean aldatu ez dadin
+    body: Talde bakoitzak jarduera-historia du, eta jakinarazpen-kanpaiak zure talde guztietako jarduera toki bakarrean biltzen du. Gehitu gastu bat eta denek berehala ikusten dute, freskatu gabe, eta historiak zer aldatu den eta nork aldatu duen erakusten du. Horren barruan daude gehitutako, editatutako edo ezabatutako gastuak, egindako eta itxitako galderak, iruzkinak, zerrenda- eta inkesta-aldaketak eta erregistratutako ordainketak.
+  - heading: Push jakinarazpenak, nahi badituzu
+    body: Push jakinarazpenak aukerakoak dira. Aktibatu itzazu zure kontuko **Ezarpenak** atalean, **Jakinarazpenak** azpian, eta zure gailuak abisatuko dizu zure taldeetan jarduera berria dagoenean, adibidez gastu berri bat edo iruzkin bat. Gailu bakoitza bereizita aktibatzen da, eta zure nabigatzaileak lehenik baimena eskatzen du. iPhone edo iPad batean hasierako pantailan gehitutako aplikazioan bakarrik funtzionatzen dute, [web aplikazioa](page:feature/web-app) orriak azaltzen duen bezala. Hartu erosotasun gisa, ez promesa gisa, bidalketa ez baitago bermatuta.
+limits:
+  heading: Mugak
+  items:
+    - Iruzkinak, zerrendak eta inkestak taldearen dirurako dira. [Zerbitzu-baldintzek](page:terms) eskatzen dute argitaratzen den guztia taldearen finantzei lotuta egotea, beraz hau gastua planifikatzeko tokia da, ez txat orokor bat edo egin beharreko zereginen aplikazio bat.
+    - Iruzkin batek gehienez 500 karaktere izan ditzake, eta gehienez hiru eranskin, irudiak edo PDFak, bakoitza gehienez 5 MB-koa. Egileak bakarrik ezaba dezake iruzkin bat.
+    - Gastu-galderak lehenespenez desaktibatuta daude, eta administratzaile batek talde bakoitzerako aktibatzen ditu. Gastu batean sartuta dauden pertsonek bakarrik zalantzan jar dezakete, eginbidea desaktibatzeak irekitako galdera guztiak garbitzen ditu, eta inork ezin du taldea utzi parte den gastu batek galdera irekia duen bitartean.
+    - Talde batek gehienez 100 zerrenda izan ditzake, bakoitzak gehienez 200 elementurekin, eta elementu bakoitzak gehienez 500 karaktere. Taldearen baimenek erabakitzen dute nork sor, edita eta ezaba ditzakeen zerrendak, eta blokeatutako talde batek ez du aldaketarik onartzen.
+    - Talde batek gehienez 50 inkesta izan ditzake, bakoitzak bi eta hamar aukera artean eta pertsona bakoitzeko gehienez hamar boto. Inkestek ez dute epemugarik eta ez dira beren kabuz ixten.
+    - Jarduera-historia 90 egunez gordetzen da.
+    - Push jakinarazpenak aukerakoak dira kontu bakoitzerako eta gailu bakoitzerako. Haiek onartzen dituen nabigatzailea eta zure baimena behar dituzte, iPhone eta iPad gailuetan hasierako pantailan gehitutako aplikaziotik bakarrik funtzionatzen dute, eta bidalketa ez dago bermatuta. Ez dago jarduerarako posta elektronikoko edo SMS alertarik eta ez dago ordainketa-gogorarazpenik, beraz ordainketa bat jarraitzea zure esku geratzen da.
+useCasesHeading: Elkarrekin planifikatzeak non laguntzen duen
+faq:
+  heading: Galderak
+  items:
+    - q: Boto anonimoak izan daitezke?
+      a: Bai. Aktibatu **Boto anonimoa** inkesta sortzean eta nork zer bozkatu duen ezkutatzen du. Erabaki lehen botoaren aurretik, gero ezin delako aldatu.
+    - q: Inkesta bat beren kabuz itxi daiteke?
+      a: Ez. Inkestak ez du epemugarik, beraz sortu duenak **Itxi inkesta** aukeratzen du taldeak erabaki duenean. Taldeak iritzia aldatzen badu, **Ireki inkesta berriro** aukerak itzultzen du.
+    - q: Zenbat elementu har ditzake zerrenda batek?
+      a: Gehienez 200 elementu zerrendako eta 100 zerrenda taldeko. Elementu bakoitzak gehienez 500 karaktere izan ditzake, eta hori olo-esne asko da.
+    - q: Nork itxi dezake galdera bat, eta zer gertatzen zaio gastuari bitartean?
+      a: Galdera egin duenak, edo taldeko administratzaile batek. Galdera irekita dagoen bitartean, gastu osoa guztien saldoetatik kanpo dago. Saldoetara itzultzen da gastu horretan irekita dagoen azken galdera ixten denean, edo edizio batek galdera egin duena gastutik kanpo uzten duenean.
+    - q: Zerrendak eta iruzkinak egin beharreko zereginen aplikazio edo talde-txat gisa erabil ditzaket?
+      a: Ez. Iruzkinak, zerrendak eta inkestak taldearen dirurako dira, [zerbitzu-baldintzek](page:terms) eskatzen duten bezala. Pentsatu erosketa-zerrendetan, aurrekontu-inkestetan eta “zergatik da hau 45 £?” galderan.
+    - q: Side Badger-ek posta elektronikoz abisatuko al dit jarduerari buruz?
+      a: Ez. Ez dago jarduerarako posta elektronikoko edo SMS alertarik. Push jakinarazpenak gailu bakoitzean aktiba ditzakezu, eta aplikazioko jakinarazpen-kanpaiak zer berri dagoen erakusten du.

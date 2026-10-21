@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Kalkulator podziału czynszu: pokój czy dochód | Side Badger"
+  description: "Większy pokój, większy udział? Policz, ile płaci każdy współlokator, według pokoju lub dochodu. Działa w przeglądarce: nic nie jest zapisywane ani wysyłane."
+h1: "Kalkulator podziału czynszu"
+navLabel: "Kalkulator podziału czynszu"
+lead: "Większa sypialnia, większy udział? Wpisz czynsz i zobacz, ile płaci każda osoba, według wielkości pokoju albo dochodu, co do grosza. Działa w przeglądarce, niczego nie zapisuje i nie przesyła pieniędzy. Gdy dom chce mieć rachunek na stałe, [dziel wydatki](page:feature/split-expenses) w Side Badger i co miesiąc kopiuj czynsz."
+cta:
+  heading: "Ustal procenty raz. Kopiuj je w nieskończoność."
+  body: "Ten kalkulator zapomina wszystko po zamknięciu karty, zupełnie jak współlokator, który na pewno zapłacił za internet. Grupa w Side Badger przechowuje czynsz, rachunki i informację, kto za co zapłacił. Jest za darmo, bez reklam i bez dziennych limitów."
+sections:
+  - heading: "Dwa sposoby dzielenia czynszu"
+    items:
+      - "**Według wielkości pokoju.** Część czynszu idzie na kuchnię, łazienkę i salon, z których korzystają wszyscy. Tę część ustalasz ty (na początek 40%) i dzieli się ją po równo. Reszta idzie według powierzchni pokoi, więc duży pokój płaci więcej, a klitka dostaje zasłużoną zniżkę."
+      - "**Według dochodu.** Każdy płaci taki procent czynszu, jaki procent wszystkich dochodów zarabia. Dodaj wspólne rachunki, a będą dzielone według tych samych udziałów."
+  - heading: "Jak działają obliczenia"
+    body: "Każda osoba dostaje dokładny udział, a potem całe procenty, bo całe liczby łatwiej wpisać i się o nie spierać. Zaokrąglamy metodą największej reszty: każdy zachowuje liczbę całkowitą poniżej swojego udziału, a pozostałe punkty trafiają do tych, którzy stracili najwięcej. Procenty zawsze dają w sumie 100. W mieszkaniu poniżej wspólne 40% to po 13,33% na osobę. Pokój Priyi to 16 z 38 m² mieszkania, więc 60% × 16/38 to 25,26%, a razem z 13,33% daje 38,6%, co zaokrągla się do 39%. Tom i Aisha wychodzą na 32% i 29%, a 39 + 32 + 29 to 100. Każda kwota to ten procent czynszu: 39% z 1 950 £ to 760,50 £."
+  - heading: "A potem wpisz to w Side Badger"
+    body: "Całą historię, z miarką włącznie, opisuje poradnik [jak podzielić czynsz według wielkości pokoju](page:guide/how-to-split-rent-by-room-size), a dla par poradnik [jak dzielić rachunki z partnerem, który zarabia więcej](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+    items:
+      - "**Dodaj czynsz.** W swojej grupie wybierz **Dodaj wydatek**, wskaż, kto zapłacił właścicielowi, w polu **Kto zapłacił?** i zostaw wszystkich w polu **Podział między**."
+      - "**Wybierz Procentowo.** W polu **Sposób podziału** wybierz **Procentowo** i wpisz całe procenty. Formularz da znać, jeśli nie dają w sumie 100."
+      - "**Skopiuj go w następnym miesiącu.** Otwórz zeszłomiesięczny czynsz i wybierz **Kopiuj wydatek**. Podział przychodzi razem z nim."
+  - heading: "Czego kalkulator nie robi"
+    items:
+      - "**Nie mierzy pokoi.** Powierzchnia to punkt wyjścia. Pokój z własną łazienką jest wart więcej niż pokój o tej samej powierzchni bez niej, a klitka, w której mieści się łóżko i pełne nadziei krzesło, jest warta mniej."
+      - "**Nie decyduje, co jest dochodem.** Netto czy brutto, pensja czy fucha: decyduje grupa. Użyj tego samego okresu dla wszystkich."
+      - "**Niczego nie zapisuje.** Zamknij kartę, a liczby znikną. Żeby je zachować, skopiuj link. Zawiera twoje liczby po znaku #, a tej części przeglądarki nigdy nie wysyłają na serwer. Każdy, kto go ma, może je przeczytać."
+      - "**Nie przesyła pieniędzy.** Właścicielowi płacisz, jak chcesz."
+      - "**Nie miesza walut i nie wychodzi poza limity.** Wybierz jedną walutę. Kalkulator przyjmuje od 2 do 10 osób i czynsz do 999 999,99, tak jak w aplikacji."
+exampleAfter: 2
+example:
+  heading: "Jedno mieszkanie, jeden miesiąc"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "Czynsz"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "Rachunek za energię"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "Internet"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Co jest uczciwsze: wielkość pokoju czy dochód?"
+      a: "Żadne nie jest zawsze uczciwsze. Wielkość pokoju pasuje do współlokatorów, którzy płacą za przestrzeń, w której śpią. Dochód pasuje do par i przyjaciół, którzy zarabiają bardzo różnie. Ustalcie to przed pierwszym dniem płacenia czynszu, a nie po."
+    - q: "Czy rachunki dzielić tak samo?"
+      a: "Przy współlokatorach zwykle nie. Z energii i internetu korzystają wszyscy, więc po równo jest prościej, jak w przykładzie. Przy podziale według dochodu kalkulator dzieli rachunki według tych samych udziałów co czynsz."
+    - q: "Czy mogę użyć stóp kwadratowych?"
+      a: "Tak. Wybierz ft² i wpisz powierzchnie w stopach kwadratowych. Jednostka to tylko etykieta, a udziały wychodzą takie same, o ile wszyscy używają jednej."
+    - q: "Czy kalkulator jest darmowy?"
+      a: "Tak. Za darmo. Bez reklam. Bez dziennych limitów. Konto też nie jest potrzebne."

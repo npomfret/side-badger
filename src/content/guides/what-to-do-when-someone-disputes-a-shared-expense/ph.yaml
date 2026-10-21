@@ -1,0 +1,119 @@
+# Guide 7 of the wave 2 briefs (tasks/release-2-plan.md, "Wave 2 and 3 briefs", P8). The worked example
+# is the brief's data (the state after Tom's edit); every number in the prose below comes from it or
+# from the arithmetic shown. Facts about expense questions: registry record `expense-questions`, the
+# app's user-features doc, and ExpenseService (an edit carries a question over only for people who
+# remain in the expense).
+translatedFrom: "0900d953"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: Kapag may tumutol sa pinagsaluhang gastos | Side Badger
+  description: Huwag magpadala ng mensaheng may pasaring. Kuwestyunin ang gastos para lumabas ito sa mga balanse habang nag-uusap kayo. May kuwenta, sa £45 na alak sa party.
+h1: Ano ang gagawin kapag may tumututol sa pinagsaluhang gastos
+navLabel: Mga kinukuwestyong gastos
+lead: Magtanong sa mismong gastos sa halip na magpadala ng mensaheng may pasaring. Habang bukas ang tanong, nananatili sa labas ng mga balanse ng lahat ang buong gastos. Pag-usapan ito sa mga komento, i-edit ang hati kung pumapayag ang grupo, at hayaang ang nagtanong, o isang admin, ang magsara ng tanong.
+cta:
+  heading: Itanong ang nakakailang na tanong, nang magalang
+  body: Gumawa ng libreng account, magsimula ng grupo para sa bahay, at ipa-on sa admin ang mga tanong sa gastos, na naka-off hanggang may mag-on. Gusto munang makita kung paano? Tingnan ang [paano ito gumagana](page:how-it-works) o ang [saklaw ng libre](page:pricing).
+sections:
+  - heading: Tatlong housemate at £45 na alak
+    body: Pagkatapos ng party, idinagdag ni Tom ang alak sa grupo ng bahay. £45 ito, si Tom ang nagbayad, hinati nang pantay kina Tom, Priya, at Aisha, kaya £15 bawat isa. Hindi umiinom si Aisha. Binili ito ni Tom para sa party, at ang party ay para sa [bahay](page:use-case/housemates), kaya wala siyang ginawang mali. Hindi rin mali si Aisha na magtanong. Walang kontrabida rito. £15 na alak lang ang pinagtatalunan at maraming paraan para gawin itong awkward. Isa roon ang mensaheng may pasaring sa buong bahay. Mas banayad ang tanong sa gastos.
+  - heading: Ano ang ginagawa ng tanong
+    body: Binuksan ni Aisha ang gastos at nagtanong. Natatanggal sa mga balanse ng lahat ang buong gastos, hindi lang ang bahagi niya, at walang ibang naaapektuhan. Bilang pa rin ang malaking grocery (£84) at ang tagalinis (£60), na £28 + £20 = £48 bawat isa. Kaya habang naka-hold ang alak, may utang si Aisha na £48, may makukuha si Tom na £36, at may makukuha si Priya na £12. Anuman ang pasya ng bahay tungkol sa alak, walang balanse ng sinuman ang may kasamang alak sa ngayon. Puwede ring magtanong ng sarili nila ang iba pang kasali sa gastos. Babalik lang ang alak sa mga balanse kapag naisara ang huling bukas na tanong dito, at ang nagtanong o isang admin ang nagsasara ng tanong.
+  - heading: Pag-uusap, saka pag-aayos
+    body: Napupunta ang tanong ni Aisha sa mga komento ng gastos, kaya nasa ilalim mismo nito ang mga sagot. May higit pang sinasabi ang [magplano nang sama-sama](page:feature/plan-together) tungkol sa mga komento at tanong. Binasa nina Tom at Priya ito at nag-usap ang bahay. Napagpasyahan nilang kina Tom at Priya ang alak, dahil sila ang uminom. Puwede ring panatilihin ng ibang bahay ang hati sa tatlo, o magkasundo sa nasa gitna, at ayos din iyon. Itinatago ng Side Badger ang napagkasunduan ninyo at walang opinyon tungkol sa alak. In-edit ni Tom ang gastos para pantay na mahati sa kanila ni Priya, na £22.50 bawat isa (£45 ÷ 2). Wala na si Aisha rito, kaya sumasama sa lumang bersyon ang tanong niya at bumabalik ang alak sa mga balanse. Nananatili ang naunang bersyon.
+  - heading: Pagbasa sa resulta
+    body: Kapag bumalik na ang alak, may makukuha si Tom na £58.50, may utang si Priya na £10.50, at may utang si Aisha na £48. Dalawang bayad ang iminumungkahi ng Side Badger, parehong kay Tom. Ang £48 ni Aisha ay ang numerong hawak niya habang naka-hold ang alak, dahil wala siya rito. Mula sa makukuhang £12, napunta si Priya sa utang na £10.50, dahil sa £22.50 niyang kalahati ng alak. Kung nanatili ang hati sa tatlo, may utang sana si Aisha na £63 (£28 + £20 + £15). £15 lang ang halaga ng buong pagtatalo. Magbayaran kayo sa paraang gusto ninyo, saka itala ang bawat bayad sa ilalim ng **Magbayad**. Saklaw ng [pag-settle up](page:feature/settle-up) ang iba pa.
+  - heading: Pagsasabi nito para patuloy ka pa ring kausapin
+    body: "Tanong ni Aisha: “Hindi ako uminom ng alak. Puwede bang tingnan natin ang hati?” Maikli ito, binabanggit ang gastos, at nagtatanong sa halip na nag-aakusa. May ilang gawi na nakakatulong."
+    items:
+      - >-
+        **Magtanong tungkol sa gastos, hindi sa tao.** “Puwede bang tingnan natin ang hati sa alak?” ay nagsisimula ng usapan. “Bakit ako sinisingil sa alak mo?” ay nagsisimula ng ibang klase.
+      - >-
+        **Sabihin kung ano ang gusto mong mangyari.** “Puwede bang ang mga uminom na lang?” ay nagbibigay sa grupo ng masasang-ayunan o masasagot.
+      - >-
+        **Magbigay ng dahilan sa isa o dalawang pangungusap.** Ang field ay **Ang iyong tanong** at hindi ito puwedeng iwanang walang laman.
+      - >-
+        **Panatilihin ang mga sagot sa iisang lugar.** Sa mga komento ng gastos napupunta ang mga sagot, katabi ng mga numerong pinag-uusapan.
+  - heading: I-set up sa Side Badger
+    items:
+      - >-
+        **I-on ang mga tanong.** Naka-off ang mga ito bilang default. Bubuksan ng admin ang **Mga Setting** ng grupo, io-on ang **Payagan ang mga tanong sa gastos** sa ilalim ng **Mga Tampok** sa tab na **Pangkalahatan**, at pipiliin ang **I-save**. Kapag in-off ito mamaya, buburahin nito ang bawat bukas na tanong.
+      - >-
+        **Magtanong.** Buksan ang gastos at, sa tabi ng sarili mong pangalan sa hati, piliin ang **Mayroon akong tanong**. Isulat ang dahilan mo sa **Ang iyong tanong** at piliin muli ang **Mayroon akong tanong**. Ang mga kasali lang sa gastos ang puwedeng gumawa nito. Magpapakita na ang gastos ng badge na **Kinukuwestyon**.
+      - >-
+        **Hanapin ang naka-hold.** Sa listahan ng mga gastos, ipinapakita ng **Kinukuwestyon lang** ang mga gastos na may bukas na tanong.
+      - >-
+        **Ayusin ito, kung pumapayag ang grupo.** Buksan ang gastos, piliin ang **I-edit**, baguhin ang **Hatiin sa pagitan ng**, at piliin ang **I-update ang Gastusin**. Nakadepende sa mga pahintulot ng grupo kung sino ang puwedeng mag-edit.
+      - >-
+        **Isara ito, kung walang kailangang ayusin.** Puwedeng gamitin ng nagtanong ang close button sa badge niyang **Kinukuwestyon**, na may label na **Isara ang tanong**, at puwede rin ang admin. Babalik ang gastos sa mga balanse kapag naisara ang huli nitong tanong.
+  - heading: Kapag hindi ito ganoon kaayos
+    items:
+      - >-
+        **Kasama pa rin ang nagtanong sa na-edit na gastos.** Kung kasali pa rin sa gastos ang nagtanong, dadalhin ang tanong niya sa na-edit na bersyon at maghihintay ito na isara niya, o ng admin. Hindi pareho ang pag-aayos ng halaga at ang pagsang-ayon na naayos na ito.
+      - >-
+        **Hindi ka kasali sa gastos.** Ang mga kasali lang sa gastos ang puwedeng kumuwestyon dito. Kung may mukhang mali sa iyo, sabihin ito sa mga komento nito o tanungin ang nagdagdag.
+      - >-
+        **May gustong umalis sa grupo.** Pinipigilan ng bukas na tanong ang mga kasali sa gastos na iyon na umalis. Isara ang tanong, o i-edit ang gastos para wala na sila rito, at makakaalis na sila.
+  - heading: Ang hindi ginagawa ng Side Badger dito
+    items:
+      - Hindi nito pinapasyahan kung sino ang tama. Pinapanatili nitong labas sa mga balanse ang gastos at itinatago ang napagkasunduan ninyo.
+      - Hindi nito hinihingan ng pag-apruba ang sinuman bago mabilang ang mga gastos. Ang kinukuwestyong gastos lang ang naka-hold.
+      - Hindi nito kayang i-hold ang bahagi lang ng isang gastos. Kuwestyunin ito at ang buo nito ang lalabas sa mga balanse.
+      - Hindi ito naglilipat ng pera. Magbayaran kayo sa paraang gusto ninyo at itala ito.
+exampleAfter: 3
+example:
+  heading: Ang bahay pagkatapos ng alak
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: ang malaking grocery
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: ang tagalinis
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: ang alak sa party
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+faq:
+  heading: Mga tanong
+  items:
+    - q: Puwede bang kuwestyunin ko lang ang bahagi ko?
+      a: Hindi. Ang buong gastos ang hini-hold ng tanong, para sa lahat ng kasali. Kung ang hati lang ang mali, ang solusyon ay i-edit ang hati.
+    - q: Sino ang puwedeng magsara ng tanong?
+      a: Ang nagtanong, o admin ng grupo. Kung hindi admin ang nagdagdag ng gastos, hindi niya ito maisasara para sa nagtanong.
+    - q: Binubura ba ng pag-edit ng gastos ang orihinal?
+      a: Hindi. Nananatili ang naunang bersyon. Ang mga pahintulot ng grupo ang nagpapasya kung sino ang puwedeng mag-edit, kaya mabuting sabihan muna ang bahay, dahil magbabago ang mga balanse.

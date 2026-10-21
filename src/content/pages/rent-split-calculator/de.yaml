@@ -1,0 +1,88 @@
+# P9 der Briefings für Welle 2 und 3 (tasks/release-2-plan.md). Das durchgerechnete Beispiel ist die Wohnung aus Ratgeber 1
+# (how-to-split-rent-by-room-size); jede Zahl im Text stammt aus dem Beispiel oder aus der gezeigten Rechnung.
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Miete aufteilen: nach Zimmergröße oder Einkommen | Side Badger"
+  description: "Größeres Zimmer, größerer Anteil? Rechne aus, was jede Person zahlt, nach Zimmergröße oder Einkommen. Läuft im Browser, nichts wird gespeichert oder gesendet."
+h1: Rechner zum Aufteilen der Miete
+navLabel: "Rechner: Miete aufteilen"
+lead: Größeres Zimmer, größerer Anteil? Gib die Miete ein und sieh, was jede Person zahlt, nach Zimmergröße oder nach Einkommen, auf den Cent genau. Der Rechner läuft in deinem Browser, speichert nichts und bewegt kein Geld. Will das Haus die Rechnung festhalten, [teilt eure Ausgaben](page:feature/split-expenses) in Side Badger und kopiert jeden Monat die Miete.
+cta:
+  heading: Die Prozente einmal klären, dann immer wieder kopieren.
+  body: Dieser Rechner vergisst alles, sobald du den Tab schließt, ganz wie die Person in der WG, die das Internet garantiert bezahlt hat. Eine Gruppe in Side Badger behält die Miete, die Rechnungen und wer was bezahlt hat. Es ist kostenlos, ohne Werbung und ohne Tageslimits.
+sections:
+  - heading: Zwei Arten, die Miete zu teilen
+    items:
+      - "**Nach Zimmergröße.** Ein Teil der Miete gilt für Küche, Bad und Wohnzimmer, die alle nutzen. Diesen Anteil legst du fest (zu Beginn 40 %), und er wird gleichmäßig geteilt. Der Rest richtet sich nach der Fläche der Zimmer, das große Zimmer zahlt also mehr, und die Kammer bekommt den Rabatt, den sie sich verdient hat."
+      - "**Nach Einkommen.** Jede Person zahlt denselben Anteil an der Miete, den sie am gesamten Einkommen hat. Kommen gemeinsame Rechnungen dazu, gelten dieselben Anteile."
+  - heading: So funktioniert die Rechnung
+    body: "Jede Person bekommt zuerst einen genauen Anteil und dann einen ganzen Prozentsatz, weil sich ganze Zahlen leichter eintippen und leichter bestreiten lassen. Gerundet wird nach dem Verfahren des größten Rests: Alle behalten die ganze Zahl unter ihrem Anteil, und die übrigen Prozentpunkte gehen an die, die beim Abrunden am meisten verloren haben. Die Prozentsätze ergeben zusammen immer 100. In der Wohnung unten sind die gemeinsamen 40 % je 13,33 %. Priyas Zimmer hat 16 der 38 m² der Wohnung, also sind 60 % × 16/38 gleich 25,26 %, plus 13,33 % macht 38,6 %, gerundet 39 %. Tom und Aisha kommen auf 32 % und 29 %, und 39 + 32 + 29 ergibt 100. Jeder Betrag ist dieser Prozentsatz der Miete: 39 % von 1.950 £ sind 760,50 £."
+  - heading: Dann in Side Badger eintippen
+    body: "Die ganze Geschichte, Maßband inklusive, steht unter [Miete nach Zimmergröße teilen](page:guide/how-to-split-rent-by-room-size), und für Paare unter [Rechnungen mit einem Partner teilen, der mehr verdient](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+    items:
+      - "**Miete hinzufügen.** Wähle in deiner Gruppe **Ausgabe hinzufügen**, such unter **Wer hat bezahlt?** die Person aus, die den Vermieter bezahlt hat, und lass unter **Aufteilen zwischen** alle ausgewählt."
+      - "**Prozentsatz wählen.** Wähle unter **Wie aufteilen** die Option **Prozentsatz** und tippe die ganzen Prozentsätze ein. Das Formular meldet sich, wenn sie zusammen nicht 100 ergeben."
+      - "**Nächsten Monat kopieren.** Öffne die Miete vom letzten Monat und wähle **Ausgabe kopieren**. Die Aufteilung kommt mit."
+  - heading: Was der Rechner nicht kann
+    items:
+      - "**Deine Zimmer ausmessen.** Die Fläche ist ein Anfang. Ein Zimmer mit eigenem Bad ist mehr wert als dieselbe Fläche ohne, und eine Kammer, in die ein Bett und ein hoffnungsvoller Stuhl passen, ist weniger wert."
+      - "**Entscheiden, was als Einkommen zählt.** Netto oder brutto, Gehalt oder Nebenjob: Das entscheidet die Gruppe. Nimm für alle denselben Zeitraum."
+      - "**Etwas speichern.** Schließt du den Tab, sind die Zahlen weg. Willst du sie behalten, kopiere den Link. Er enthält deine Zahlen hinter dem #, und das schicken Browser nie an einen Server. Alle, die ihn haben, können sie lesen."
+      - "**Geld bewegen.** Du bezahlst den Vermieter, wie du willst."
+      - "**Währungen mischen oder die Grenzen überschreiten.** Wähle eine Währung. Der Rechner nimmt 2 bis 10 Personen und eine Miete bis zu 999.999,99, wie in der App."
+exampleAfter: 2
+example:
+  heading: Eine Wohnung, ein Monat
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: die Miete
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: die Energiekosten
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: der Internetanschluss
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: Fragen
+  items:
+    - q: Was ist fairer, Zimmergröße oder Einkommen?
+      a: Keins von beiden ist immer fairer. Die Zimmergröße passt zu Mitbewohnern, die für den Platz zahlen, in dem sie schlafen. Das Einkommen passt zu Paaren und Freunden mit sehr unterschiedlichem Gehalt. Einigt euch, bevor die erste Miete fällig wird, nicht danach.
+    - q: Sollen die Rechnungen genauso geteilt werden?
+      a: Bei Mitbewohnern meistens nicht. Alle nutzen Energie und Internet, also ist gleichmäßig einfacher, wie im Beispiel. Beim Einkommen gibt der Rechner den Rechnungen dieselben Anteile wie der Miete.
+    - q: Kann ich Quadratfuß nutzen?
+      a: Ja. Wähle ft² und gib deine Flächen in Quadratfuß ein. Die Einheit ist nur eine Beschriftung, und die Anteile kommen gleich heraus, solange alle dieselbe nutzen.
+    - q: Ist der Rechner kostenlos?
+      a: Ja. Kostenlos. Keine Werbung. Keine Tageslimits. Ein Konto brauchst du dafür auch nicht.

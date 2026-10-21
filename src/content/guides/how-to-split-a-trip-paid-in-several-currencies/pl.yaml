@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Jak podzielić wyjazd opłacany w kilku walutach | Side Badger"
+  description: "Funty za hotel, jeny za ramen. Rozliczaj każdą walutę osobno albo przeliczaj po kursie, który widzisz. Obie drogi rozpisane na liczbach."
+h1: "Jak podzielić wyjazd opłacany w kilku walutach"
+navLabel: "Wyjazd w kilku walutach"
+lead: "Wpisuj każdy wydatek w walucie, w której zapłacono, a potem wybierz drogę. Trzymaj waluty osobno i rozliczaj każdą w jej własnych pieniądzach albo przelicz po aktualnym kursie wymiany i rozlicz się raz. Ten sam wyjazd do Japonii daje cztery płatności pierwszym sposobem i dwie drugim."
+cta:
+  heading: "Wpisz w walucie z paragonu"
+  body: "Załóż darmowe konto, utwórz grupę na wyjazd i dodawaj każdy wydatek w takiej walucie, jaka była na paragonie. Wolisz najpierw poznać szczegóły? Zobacz [wiele walut](page:feature/multiple-currencies) albo [co obejmuje darmowy plan](page:pricing)."
+sections:
+  - heading: "Troje znajomych, jeden hotel, mnóstwo jenów"
+    body: "Zoe, Kenji i Lucy spędzają tydzień w Japonii na [wyjeździe grupowym](page:use-case/group-trips), a każdy koszt dzielą po równo na troje. Zoe zarezerwowała hotel w domu, w funtach, za 600 £. Lucy kupiła w Tokio karnety kolejowe za 90 000 ¥. Kenji zapłacił za wieczór z ramenem, 9 000 ¥, i od tamtej pory wspomina o tym codziennie. Nikt nie chce przeliczać trzech paragonów na peronie. W rachunkach poniżej 1 ¥ to 0,005 £, okrągły kurs wymyślony na potrzeby tego poradnika. W aplikacji użyjesz aktualnego kursu wymiany albo wpiszesz ten, który faktycznie obowiązywał."
+  - heading: "Wpisz każdy wydatek w walucie z paragonu"
+    body: "Ten krok zrobisz, którąkolwiek drogę wybierzesz. Na razie nic nie trzeba przeliczać."
+    items:
+      - "**Załóż grupę.** Na panelu głównym wybierz **Utwórz grupę**, nazwij ją od wyjazdu, potem wybierz **Zaproś innych** i wyślij link albo kod QR."
+      - "**Dodaj hotel.** Wybierz **Dodaj wydatek** i wpisz 600, a obok kwoty funty jako walutę. W polu **Kto zapłacił?** wskaż Zoe. Zostaw wszystkie trzy osoby w **Podział między**, **Sposób podziału** zostaw na **Równo** i wybierz **Zapisz wydatek**."
+      - "**Dodaj jeny.** Zrób to samo dla karnetów kolejowych (zapłaciła Lucy) i ramenu (zapłacił Kenji), z jenami jako walutą. Jeny nie mają miejsc po przecinku, więc formularz o nie nie pyta."
+  - heading: "Droga pierwsza: trzymaj waluty osobno"
+    body: "Side Badger prowadzi saldo dla każdej waluty i nie kompensuje jednej drugą. W funtach hotel to 200 £ na osobę, więc Kenji i Lucy są winni Zoe po 200 £. W jenach karnety i ramen dają razem 99 000 ¥, czyli 33 000 ¥ na osobę. Lucy zapłaciła 90 000 ¥ i należy jej się 57 000 ¥. Zoe nie zapłaciła w jenach nic i jest winna 33 000 ¥. Kenji zapłacił 9 000 ¥, więc jest winien 24 000 ¥."
+    items:
+      - "**Funty.** Kenji płaci Zoe 200 £, a Lucy płaci Zoe 200 £."
+      - "**Jeny.** Zoe płaci Lucy 33 000 ¥, a Kenji płaci Lucy 24 000 ¥."
+      - "**Cztery płatności w sumie.** Zoe i Lucy są sobie winne pieniądze w dwóch walutach, które nie kasują się nawzajem. Kurs nie ma tu nic do rzeczy, więc nie ma o co się spierać."
+      - "**Wisisz jeny, a płacisz w funtach.** Kto nie ma jenów, i tak może zapłacić w funtach. Przy rejestrowaniu płatności otwórz **Inna waluta?**, w polu **Przelicz na** wskaż funty i sprawdź kurs. Dług Zoe, 33 000 ¥, to przy kursie z tego poradnika 165 £, a saldo w jenach i tak wychodzi dobrze."
+      - "**Zarejestruj każdą płatność.** Płaćcie sobie, jak chcecie, potem wybierz **Ureguluj** i użyj **Zarejestruj rozliczenie**. Więcej o [rozliczaniu](page:feature/settle-up)."
+  - heading: "Droga druga: przeliczaj na bieżąco"
+    body: "Jeśli grupa woli widzieć po jednej liczbie na osobę, przeliczaj przy wpisywaniu wydatku."
+    items:
+      - "**Przelicz w formularzu.** W formularzu **Dodaj wydatek** wybierz **Przelicz na** i wskaż funty. Side Badger pokaże kurs i przeliczoną kwotę, oznaczoną znakiem ≈. Jeśli kurs był inny, popraw go. Oryginalna kwota w jenach zostaje przy wydatku."
+      - "**Odczytaj funty.** Przy 1 ¥ = 0,005 £ karnety kolejowe zmieniają się w 450 £, a ramen w 45 £. Z hotelem za 600 £ to 600 £ + 450 £ + 45 £ = 1 095 £, czyli 365 £ na osobę. Zoe zapłaciła 600 £, więc należy jej się 235 £. Lucy zapłaciła 450 £ i należy jej się 85 £. Kenji zapłacił 45 £ i jest winien 320 £."
+      - "**Dwie płatności.** Obie robi Kenji: 235 £ dla Zoe i 85 £ dla Lucy. Zoe i Lucy nie płacą już sobie wcale."
+      - "**Albo ustaw walutę grupy.** Żeby pominąć dodatkowy krok, otwórz **Ustawienia** grupy, znajdź **Ustawienia walut** i wybierz **Automatycznie przelicz wydatki na**. Każdy nowy wydatek przelicza się wtedy na tę walutę, nadal po kursie, który widzisz i możesz zmienić."
+  - heading: "Którą drogę wybrać?"
+    items:
+      - "**Trzymaj osobno**, gdy ludzie wciąż mają jeny w portfelach albo gdy wolicie nie spierać się o kurs. Cena to więcej płatności, w więcej niż jednej walucie."
+      - "**Przeliczaj**, gdy grupa żyje w jednej walucie i chce jednej liczby na osobę oraz krótszej listy, jak dwa przelewy, które wysyła Kenji. Cena to zaufanie grupy do kursu, a kurs jest ustalany przy zapisie każdego wydatku."
+      - "**Zdecydujcie wcześnie.** Waluta grupy przelicza tylko nowe i skopiowane wydatki. Nie wróci i nie uporządkuje tego, co już wpisano."
+  - heading: "Kurs i limit"
+    items:
+      - "**Kurs jest ustalany przy zapisie.** Stare wydatki nigdy nie są przeszacowywane, więc saldo nie dryfuje dlatego, że ruszył się rynek. Wydatki wpisane w różne dni mogą mieć różne kursy, więc jeśli grupa chce jednego kursu na cały wyjazd, ustalcie go i wpisujcie za każdym razem."
+      - "**Nie ma kursu? Wpisz własny.** Side Badger pobiera aktualny kurs wymiany, gdy może, ale nie każda para ma go zagwarantowanego. Jeśli go nie ma albo kantor dał ci lepszy kurs, wpisz własny."
+      - "**999 999,99 na wydatek, w jego własnej walucie.** Jeden limit, niezależnie od waluty. W jenach to tuż poniżej 1 000 000 ¥, czyli około 5 000 £ przy kursie z tego poradnika. W walucie z wielkimi liczbami, takiej jak rupia indonezyjska, pojedynczy rachunek może go osiągnąć szybciej. Podziel rachunek na dwa wydatki albo wpisz go w innej walucie i przelicz."
+  - heading: "Czego Side Badger tu nie robi"
+    items:
+      - "Nigdy nie przesyła ani nie wymienia pieniędzy. Płacicie sobie, jak chcecie, a potem rejestrujecie płatność."
+      - "Obsługuje 140 walut. Kryptowalut ani metali wśród nich nie ma."
+exampleAfter: 2
+example:
+  heading: "Japonia, rozliczona na dwa sposoby"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "hotel, zarezerwowany w domu"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "karnety kolejowe"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "wieczór z ramenem"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Jakiego kursu wymiany używa Side Badger?"
+      a: "Aktualnego kursu wymiany, pobieranego przy wpisywaniu wydatku, gdy jest dostępny. Możesz zmienić go na ten, który faktycznie obowiązywał."
+    - q: "Czy grupa może trzymać się funtów i jenów?"
+      a: "Tak. Otwórz **Ustawienia** grupy, w sekcji **Ustawienia walut** włącz **Ogranicz waluty dla tej grupy**, wybierz **Dozwolone waluty** i ustaw **Domyślna waluta dla nowych wydatków**. Mniej opcji na liście to mniej pomyłek przy kasie."
+    - q: "Czy w ogóle trzeba przeliczać?"
+      a: "Nie. Waluty zostają osobno, chyba że ty lub twoja grupa zdecydujecie się przeliczać, a każda waluta ma własną krótką listę płatności."

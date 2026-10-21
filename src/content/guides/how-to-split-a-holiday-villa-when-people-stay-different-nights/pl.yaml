@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Podziel willę, gdy goście zostają różnie długo | Side Badger"
+  description: "Dev przyjechał na trzy noce, więc czemu ma płacić za sześć? Podziel wakacyjną willę według nocy, które ludzie faktycznie spędzili. Obliczenia w środku."
+h1: "Jak podzielić willę wakacyjną, gdy ludzie zostają na różną liczbę nocy"
+navLabel: "Willa według nocy"
+lead: "Wylicz cenę za osobę za noc, pomnóż ją przez liczbę nocy każdej osoby i wpisz willę jako **jeden wydatek z dokładnymi kwotami**. Side Badger prowadzi rachunek i, gdy przyjdzie czas rozliczenia, podpowiada krótką listę płatności."
+cta:
+  heading: "Daj willi jeden schludny wydatek"
+  body: "Załóż grupę, zaproś wszystkich linkiem lub kodem QR i wpisz willę z dokładnymi kwotami. Side Badger prowadzi bieżący rachunek, a ty zajmujesz się wakacjami."
+sections:
+  - heading: "Sześć nocy, czworo ludzi, jedna karta kredytowa"
+    body: "[Wyjazd grupowy](page:use-case/group-trips) zwykle zaczyna się od czyjejś karty. Tym razem należy do Any. Ana rezerwuje willę na sześć nocy za 2 100 €, bo ktoś musi zacząć. Ana, Ben i Chloe zostają wszystkie sześć nocy. Dev może dołączyć tylko na ostatnie trzy noce i przyjeżdża pociągiem. Ben wypożycza samochód, którym Dev nigdy nie jedzie. Dev robi duże zakupy spożywcze. Najprościej byłoby podzielić willę na cztery. Wtedy Dev płaciłby za trzy noce spędzone w domu, a takie rzeczy wracają przy świątecznym stole. Podział według nocy oszczędza kłótni, a rachunek zajmuje minutę."
+  - heading: "Wyceń jedną osobonoc"
+    body: "Osobonoc to jedna osoba spędzająca jedną noc. Willa kosztuje tyle, ile kosztuje, więc rozłóż cenę na wszystkie osobonoce, a potem przypisz każdej osobie te, z których skorzystała."
+    items:
+      - "**Policz osobonoce.** Ana, Ben i Chloe zostają po sześć nocy, a Dev trzy: 6 + 6 + 6 + 3 = 21."
+      - "**Wyceń jedną.** 2 100 € ÷ 21 = 100 € za osobonoc."
+      - "**Pomnóż przez liczbę nocy każdej osoby.** Ana, Ben i Chloe płacą po 6 × 100 € = 600 €. Dev płaci 3 × 100 € = 300 €."
+      - "**Sprawdź sumę.** 600 € + 600 € + 600 € + 300 € = 2 100 €. Jeśli udziały nie dają w sumie ceny, jakaś noc zginęła albo została policzona dwa razy."
+  - heading: "Wpisz to w Side Badger"
+    body: "Załóż grupę, zaproś pozostałą trójkę linkiem lub kodem QR, a potem dodaj koszty. Najpierw willa."
+    items:
+      - "Wybierz **Dodaj wydatek**. Opisz go, wpisz 2 100 i w polu **Kto zapłacił?** wybierz Anę."
+      - "W polu **Podział między** sprawdź, czy są wszystkie cztery osoby."
+      - "W polu **Sposób podziału** wybierz **Dokładne kwoty**. Wpisz 600 dla Any, Bena i Chloe oraz 300 dla Deva. Kwoty muszą dawać w sumie całość."
+      - "Wybierz **Zapisz wydatek**."
+      - "Samochód dodaj tak samo. Zapłacił Ben, podział jest **Równo**, a Dev zostaje pominięty, bo przyjechał pociągiem. Inne sposoby dzielenia kosztów opisuje [dzielenie wydatków](page:feature/split-expenses)."
+      - "Dodaj zakupy. Zapłacił Dev, podział jest **Równo** i cała czwórka jest w środku."
+  - heading: "Odczytaj wynik i rozlicz się"
+    body: "Rachunek każdej osoby to jej udział w willi plus udział w samochodzie i zakupach. Ana, Ben i Chloe wychodzą po 725 €, czyli 600 € + 80 € + 45 €. Dev wychodzi 345 €, czyli 300 € + 45 €. Odejmij to, co każda osoba zapłaciła, i salda same wychodzą. Ana zapłaciła 2 100 €, więc należy jej się 1 375 €. Ben zapłacił 240 € i jest winien 485 €. Dev zapłacił 180 € i jest winien 165 €. Chloe niczego nie zapłaciła i jest winna 725 €. Zostawione same sobie, te długi rozeszłyby się po grupie sześcioma ścieżkami. Side Badger podpowiada zamiast tego trzy płatności, wszystkie do Any. Zapłaćcie jej, jak chcecie, a potem wybierzcie **Ureguluj** i przy każdej płatności użyjcie **Zarejestruj rozliczenie**, żeby salda się zaktualizowały. Przyciski szybkiego rozliczenia uzupełniają kwotę. Więcej o [rozliczaniu](page:feature/settle-up)."
+  - heading: "Gdy willa nie ma jednej schludnej ceny"
+    items:
+      - "**Pokoje się różnią.** Jeśli apartament jest wart więcej niż klitka, ustalcie najpierw, ile kosztuje każdy pokój, a potem policzcie osobonoce osobno dla każdego pokoju. Willę wpisz jako jeden wydatek z łączną kwotą każdej osoby albo jako jeden wydatek na pokój. Tak czy inaczej dokładne kwoty w wydatku muszą dawać w sumie jego całość."
+      - "**Zaliczka zapłacona miesiące wcześniej.** Ten, kto ją zapłacił, dostaje własny wydatek z datą dnia, w którym zapłacił. Podziel go według nocy w tych samych proporcjach co resztę."
+      - "**Rezerwacja jest w innej walucie.** Wpisz willę w walucie, w której zapłacono. Jeśli grupa przelicza na bieżąco, użyj aktualnego kursu albo wpisz kurs, który faktycznie obowiązywał. Oryginalna kwota zostaje przy wydatku. Szczegóły opisują [wiele walut](page:feature/multiple-currencies)."
+      - "**Niepełne noce.** Ktoś przyjeżdża o północy, ktoś wyjeżdża przed śniadaniem. Ustalcie jedną zasadę liczenia nocy i stosujcie ją do wszystkich."
+  - heading: "Czego Side Badger tu nie robi"
+    items:
+      - "Nie liczy za ciebie nocy. Nie ma podziału według nocy ani według udziałów, więc każdą kwotę wyliczasz jak wyżej i wpisujesz jako **dokładne kwoty**."
+      - "Nie przesyła pieniędzy. Płacicie sobie, jak chcecie, a potem rejestrujecie płatność."
+      - "Pozwala na jednego płacącego na wydatek. Jeśli willę zapłaciły dwie osoby, wpisz dwa wydatki."
+      - "Nie wpuszcza gości bez konta. Każdy w grupie, także Dev, potrzebuje darmowego konta."
+exampleAfter: 2
+example:
+  heading: "Willa, samochód i zakupy"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "sześć nocy w willi"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "wynajem samochodu"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "zakupy spożywcze"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Pytania o willę"
+  items:
+    - q: "A jeśli ktoś zrezygnuje?"
+      a: "Odejmij noce tej osoby, przelicz i edytuj wydatek za willę, żeby dokładne kwoty znów dawały w sumie cenę. Wcześniejsza wersja zostaje zachowana, a edycja widnieje w aktywności grupy, więc nikt nie zmienia liczby po cichu. Kto może edytować, zależy od uprawnień grupy."
+    - q: "Czy osoba, która rezerwowała, powinna płacić mniej?"
+      a: "To decyzja grupy. Rezerwacja to obowiązek i grupy różnie podchodzą do tego, czy należy się za nią zniżka. Cokolwiek ustalicie, wpiszcie to w dokładne kwoty i zapiszcie w notatce przy wydatku albo w komentarzu obok, żeby nikt nie musiał pamiętać umowy."
+    - q: "Czy opłatę za sprzątanie możemy podzielić inaczej?"
+      a: "Tak. Wpisz opłatę jako osobny wydatek i nadaj mu własny podział. Po równo pasuje do stałej opłaty za cały dom. Dokładne kwoty pasują do grupy, która chce, żeby opłata też podążała za nocami."

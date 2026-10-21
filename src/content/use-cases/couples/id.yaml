@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+meta:
+  title: "Bagi tagihan berdua, 50/50 atau sesuai penghasilan | Side Badger"
+  description: "Bagi biaya membosankan tanpa mengubah kencan malam jadi rapat keuangan kuartalan. Bagi 50/50, sesuai penghasilan, atau per tagihan. Gratis."
+h1: "Bagi biaya sebagai pasangan, secara adil"
+navLabel: "Pasangan"
+lead: "Bagi biaya yang membosankan tanpa mengubah kencan malam menjadi rapat keuangan kuartalan. Side Badger menyimpan satu hitungan berjalan untuk sewa, tagihan, dan belanjaan bagi **pasangan** yang berbagi rumah, sofa, dan ingatan samar tentang siapa yang membayar tagihan internet. Bagi 50/50, sesuai penghasilan, atau tagihan per tagihan, dan lihat siapa berutang kepada siapa."
+cta:
+  heading: "Mulai grup berdua"
+  body: "Buat akun, buat grup, dan kirim tautan undangan ke pasangan Anda. Makanan bungkus malam ini bisa jadi pengeluaran pertama."
+scenario:
+  heading: "Adil tak harus berarti 50/50"
+  body: "Sam dan Alex berbagi rumah. Sam berpenghasilan lebih besar, jadi mereka sepakat Sam menanggung 60% sewa dan Alex 40%. Sam membayar pemilik rumah, Alex berbelanja, dan keduanya cukup yakin semuanya impas pada akhirnya. \"Cukup yakin\" adalah cara catatan di ponsel seseorang berubah menjadi perselisihan yang tak kunjung selesai. Jadi buat grup untuk Anda berdua, pilih nama yang ingin dilihat pasangan Anda, dan kirim tautan undangan atau kode QR. Tambahkan tiap biaya saat terjadi, tentukan siapa yang membayar dan bagaimana pembagiannya, dan biarkan grup menyimpan hitungan. Buat grup terpisah untuk tiap liburan (lihat [perjalanan grup](page:use-case/group-trips)), supaya tiket pesawat tidak tercampur dengan belanjaan."
+sections:
+  - heading: "50/50, sesuai penghasilan, atau tagihan per tagihan"
+    body: "Tidak ada pembagian yang adil secara universal, hanya pembagian yang Anda berdua setujui, idealnya sebelum tagihan pertama, bukan sesudah helaan napas pertama. Ini tiga cara yang lazim."
+    items:
+      - "**50/50.** Pilih **Rata** dan masing-masing berutang separuh. Cocok untuk biaya bersama saat penghasilan Anda berdua hampir sama, dan sama sekali tak perlu berhitung."
+      - "**Sesuai penghasilan.** Jika salah satu dari Anda berpenghasilan lebih besar, bagi menurut porsi masing-masing dari uang yang masuk. Sepakati dulu apa yang dihitung (gaji bersih adalah pilihan umum), jumlahkan keduanya, lalu bagi bagian Anda dengan totalnya. Jika salah satu membawa pulang tiga bagian dibanding dua bagian milik yang lain, itu 3 ÷ (3 + 2) = 60%, jadi satu orang menanggung 60% dan yang lain 40%. Bulatkan ke persentase bulat dan masukkan di bawah **Persentase**, yang harus berjumlah 100. Tidak ada tempat untuk memasukkan gaji Anda, jadi Anda hanya mengetik persentasenya."
+      - "**Tagihan per tagihan.** Setiap pengeluaran punya pembagiannya sendiri, jadi Anda bisa mencampur: sewa menurut penghasilan, belanjaan 50/50, dan kado bersama dengan **Jumlah pasti** jika masing-masing memilih berapa yang dimasukkan."
+      - "**Saat gaji berubah,** pakai persentase baru mulai pengeluaran berikutnya. Pengeluaran sebelumnya tetap memakai pembagian saat dimasukkan. Untuk melihat hitungannya dengan slip gaji sungguhan, baca [cara membagi tagihan dengan pasangan yang berpenghasilan lebih besar](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: "Rekap bulanan"
+    body: "Sebulan sekali, atau kapan pun angkanya mulai gatal, buka grup dan periksa **Saldo**. Berdua, hanya ada satu pembayaran dalam tiap mata uang, dari yang berutang kepada yang dihutangi. Ambil bulan Sam dan Alex. Sam membayar sewa £1.500, dan 40% bagian Alex adalah £600. Alex membayar £90 untuk belanjaan, dibagi rata, jadi £45 adalah separuh bagian Sam. Side Badger mengurangkan yang satu dari yang lain, £600 dikurangi £45, dan Alex membayar Sam £555. Bayar dengan cara apa pun yang Anda suka, lewat transfer bank, tunai, atau utang budi, lalu catat di bawah **Lunasi** agar saldo kembali ke nol. Tidak ada tagihan berulang, jadi salin sewa bulan lalu, ganti tanggalnya, dan lanjut. Side Badger tidak memindahkan uangnya dan tidak mengirim pengingat, jadi colekannya tetap tugas Anda."
+  - heading: "Hanya berdua"
+    body: "Grup berdua punya dua anggota, dan hanya anggota grup yang bisa melihatnya. Pasangan Anda bergabung dengan tautan undangan atau kode QR. Sebuah tautan bisa berlaku dari 15 menit sampai 5 hari, jadi pilih yang paling singkat yang masih memberi pasangan Anda waktu untuk memakainya. Membuat tautan baru tidak membatalkan yang lama, jadi jangan tinggalkan tautan di obrolan yang berisi orang lain. Siapa pun yang memakai tautan yang masih aktif bisa bergabung, jadi jika Anda ingin benar-benar yakin, aktifkan persetujuan dan seorang admin meloloskan tiap orang. Pasangan Anda perlu akun sendiri, yang gratis."
+exampleAfter: 2
+example:
+  heading: "Siapa berutang kepada siapa bulan ini"
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: "Sewa"
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: "Belanjaan"
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: "Fitur yang dipakai pasangan"
+faq:
+  heading: "Pertanyaan"
+  items:
+    - q: "Bisakah kami menetapkan 60/40 sekali untuk semuanya?"
+      a: "Tidak. Pembagian melekat pada tiap pengeluaran. Atur persentase pada yang pertama, lalu salin lain kali dan ubah apa yang berbeda. [Bagi pengeluaran](page:feature/split-expenses) membahas ketiga cara membagi."
+    - q: "Apakah ini terhubung ke bank kami?"
+      a: "Tidak. Side Badger tidak pernah menyentuh uang Anda. Anda saling membayar dengan cara apa pun yang disuka, lalu mencatatnya, seperti dijelaskan [pelunasan](page:feature/settle-up)."
+    - q: "Bisakah orang lain melihat grup kami?"
+      a: "Hanya anggotanya, dan grup pasangan punya dua. Siapa pun yang memakai tautan undangan yang masih aktif bisa bergabung, jadi bagikan kepada satu orang saja dan beri masa berlaku singkat."
+    - q: "Bagaimana jika kami masing-masing membayar sebagian dari tagihan yang sama?"
+      a: "Satu pengeluaran punya satu pembayar. Catat dua pengeluaran, satu untuk masing-masing dari Anda, dan saldonya tetap sama."
+    - q: "Apakah ia akan mengingatkan pasangan saya untuk membayar?"
+      a: "Tidak. Tidak ada pengingat, jadi colekannya tetap tugas Anda. Setidaknya Anda berdua akan melihat angka yang sama."
+    - q: "Apa yang terjadi saat kami berhenti berbagi biaya?"
+      a: "Lunasi saldo dan catat pembayarannya, supaya tak ada yang berutang. Lalu admin bisa mengunci grup, yang menjaga angkanya tetap seperti adanya, atau menutupnya untuk selamanya, yang membuatnya tidak dapat diakses semua orang. Tutup hanya jika Anda berdua tidak lagi memerlukan riwayatnya."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name

@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+meta:
+  title: Dela utgifter med partnern, 50/50 eller efter inkomst | Side Badger
+  description: Dela de tråkiga kostnaderna utan att dejtkvällen blir en kvartalsvis ekonomigenomgång. Dela 50/50, efter inkomst eller räkning för räkning. Gratis.
+h1: Dela kostnader som par, rättvist
+navLabel: Par
+lead: Dela de tråkiga kostnaderna utan att dejtkvällen blir en kvartalsvis ekonomigenomgång. Side Badger håller en löpande räkning på hyran, räkningarna och inköpen för **par** som delar ett hem, en soffa och ett vagt minne av vem som betalade bredbandet. Dela 50/50, efter inkomst eller räkning för räkning, och se vem som är skyldig vem.
+cta:
+  heading: Starta en grupp för två
+  body: Skapa ett konto, gör en grupp och skicka inbjudningslänken till din partner. Kvällens hämtmat kan bli den första utgiften.
+scenario:
+  heading: Rättvist behöver inte betyda 50/50
+  body: Sam och Alex delar ett hem. Sam tjänar mer, så de kom överens om att Sam tar 60 % av hyran och Alex 40 %. Sam betalar hyresvärden, Alex handlar maten, och båda är ganska säkra på att det jämnar ut sig. Ganska säker är hur en anteckning i någons telefon blir en bestående osämja. Så gör en grupp för er två, välj namnet du vill att din partner ska se och skicka inbjudningslänken eller QR-koden. Lägg till varje kostnad när den uppstår, ange vem som betalade och hur den delas, och låt gruppen hålla räkningen. Gör en egen grupp för varje semester (se [gruppresor](page:use-case/group-trips)), så att flygen hålls utanför matinköpen.
+sections:
+  - heading: 50/50, efter inkomst, eller räkning för räkning
+    body: Det finns ingen allmängiltigt rättvis delning, bara den ni båda går med på, helst före den första räkningen snarare än efter den första suckan. Här är de tre vanliga.
+    items:
+      - "**50/50.** Välj **Lika** så är ni skyldiga hälften var. Det passar gemensamma kostnader när era inkomster ligger nära varandra, och det kräver ingen matte alls."
+      - "**Efter inkomst.** Om en av er tjänar mer, dela efter var och ens andel av pengarna som kommer in. Kom först överens om vad som räknas (lön efter skatt är det vanliga valet), lägg ihop era två och dela din med summan. Om en av er har tre delar efter skatt mot den andras två är det 3 ÷ (3 + 2) = 60 %, så en av er täcker 60 % och den andra 40 %. Avrunda till hela procent och skriv in dem under **Procentandel**, där de måste bli 100 tillsammans. Det finns ingenstans att skriva in din lön, så du skriver bara någonsin in procenten."
+      - "**Räkning för räkning.** Varje utgift har sin egen delning, så ni kan blanda: hyran efter inkomst, matinköpen 50/50 och en gemensam present med **Exakta belopp** om ni valde var sitt belopp."
+      - "**När lönen ändras,** använd de nya procenten från nästa utgift. Tidigare utgifter behåller den delning de lades in med. För att se uträkningarna med riktiga lönebesked, läs [hur du delar utgifter med en partner som tjänar mer](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: Månadsavstämningen
+    body: En gång i månaden, eller så fort siffrorna börjar klia, öppna gruppen och kolla **Saldon**. Med två personer finns det alltid bara en betalning i varje valuta, från den som är skyldig till den som ska ha. Ta Sams och Alex månad. Sam betalade hyran på 1 500 £, och Alex 40 % av den är 600 £. Alex betalade 90 £ för matinköp, delat lika, så Sams hälft är 45 £. Side Badger ställer det ena mot det andra, 600 £ minus 45 £, och Alex betalar Sam 555 £. Betala hur ni vill, med banköverföring, kontant eller med en gentjänst, och registrera det sedan under **Reglera** så att saldot går tillbaka till noll. Det finns inga återkommande räkningar, så kopiera förra månadens hyra, ändra datumet och fortsätt. Side Badger flyttar inte pengarna och skickar inga påminnelser, så knuffen är fortfarande din.
+  - heading: Bara ni två
+    body: En grupp om två har två medlemmar, och bara gruppens medlemmar kan se den. Din partner går med via inbjudningslänken eller QR-koden. En länk kan gälla allt från 15 minuter till 5 dagar, så välj den kortaste som ger din partner tid att använda den. Att skapa en ny länk avbryter inte de gamla, så lämna dem inte kvar i en chatt där andra också är med. Alla som använder en giltig länk kan gå med, så om du vill vara helt säker, slå på godkännande så släpper en administratör in varje person. Din partner behöver ett eget konto, som är gratis.
+exampleAfter: 2
+example:
+  heading: Vem som är skyldig vem den här månaden
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: Hyra
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: Matinköp
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: Funktionerna ett par använder
+faq:
+  heading: Frågor
+  items:
+    - q: Kan vi ställa in 60/40 en gång för allt?
+      a: Nej. Delningen hör till varje utgift. Ställ in procenten på den första, kopiera den sedan nästa gång och ändra det som skiljer sig. [Dela utgifter](page:feature/split-expenses) tar upp alla tre sätten att dela.
+    - q: Kopplas den till vår bank?
+      a: Nej. Side Badger rör aldrig dina pengar. Ni betalar varandra hur ni vill och registrerar det sedan, som [göra upp](page:feature/settle-up) förklarar.
+    - q: Kan någon annan se vår grupp?
+      a: Bara dess medlemmar, och ett pars grupp har två. Alla som använder en giltig inbjudningslänk kan gå med, så dela den med en person och ge den ett kort utgångsdatum.
+    - q: Tänk om vi betalade var sin del av samma räkning?
+      a: En utgift har en betalare. Lägg in två utgifter, en för vardera av er, så blir saldot detsamma.
+    - q: Påminner den min partner om att betala?
+      a: Nej. Det finns inga påminnelser, så knuffen är fortfarande din. Åtminstone tittar ni båda på samma siffra.
+    - q: Vad händer när vi slutar dela kostnader?
+      a: Gör upp saldot och registrera betalningen, så att ingen är skyldig något. Sedan kan en administratör låsa gruppen, vilket behåller siffrorna som de är, eller stänga den för gott, vilket gör den oåtkomlig för alla. Stäng den först när ingen av er behöver historiken.

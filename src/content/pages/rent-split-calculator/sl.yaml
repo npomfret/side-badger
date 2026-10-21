@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Kalkulator delitve najemnine: po sobi ali dohodku | Side Badger"
+  description: "Večja soba, večji delež? Izračunaj, koliko plača vsak sostanovalec, po velikosti sobe ali po dohodku. V brskalniku: nič se ne shrani ali pošlje."
+h1: "Kalkulator delitve najemnine"
+navLabel: "Kalkulator delitve najemnine"
+lead: "Večja spalnica, večji delež? Vpiši najemnino in poglej, koliko plača vsak, po velikosti sobe ali po dohodku, na cent natančno. Deluje v brskalniku, ničesar ne shrani in ne premika denarja. Ko hiša želi, da se štetje vodi, [deli stroške](page:feature/split-expenses) v Side Badgerju in vsak mesec kopiraj najemnino."
+cta:
+  heading: "Odstotke določi enkrat. Kopiraj jih za vedno."
+  body: "Ta kalkulator vse pozabi, ko zapreš zavihek, podobno kot sostanovalec, ki je zagotovo plačal internet. Skupina v Side Badgerju hrani najemnino, račune in to, kdo je kaj plačal. Je brezplačen, brez oglasov in brez dnevnih omejitev."
+sections:
+  - heading: "Dva načina delitve najemnine"
+    items:
+      - "**Po velikosti sobe.** Del najemnine gre za kuhinjo, kopalnico in dnevno sobo, ki jih uporabljajo vsi. Ta delež izbereš sam (na začetku 40 %) in se razdeli enako. Preostanek gre po površini spalnice, zato velika soba plača več, kamrica pa dobi popust, ki si ga je prislužila."
+      - "**Po dohodku.** Vsak plača enak delež najemnine, kot ga zasluži od skupnega. Če dodaš skupne račune, sledijo istim deležem."
+  - heading: "Kako se izide"
+    body: "Vsak dobi natančen delež, nato cel odstotek, ker so cela števila lažja za vnos in za prepir. Zaokroževanje poteka po metodi največjega ostanka: vsak obdrži celo število pod svojim deležem, preostale točke pa gredo tistim, ki so izgubili največ. Odstotki skupaj vedno dajo 100. V spodnjem stanovanju je skupnih 40 % po 13,33 % na osebo. Priyina soba meri 16 od 38 m² stanovanja, zato je 60 % × 16/38 enako 25,26 %, skupaj s 13,33 % pa 38,6 %, kar se zaokroži na 39 %. Tom in Aisha pristaneta pri 32 % in 29 %, 39 + 32 + 29 pa je 100. Vsak znesek je ta odstotek najemnine: 39 % od 1.950 £ je 760,50 £."
+  - heading: "Nato vpiši v Side Badger"
+    body: "Za celotno zgodbo, z metrom vred, glej [kako razdeliti najemnino po velikosti sobe](page:guide/how-to-split-rent-by-room-size) ali za pare [partnerja, ki zasluži več](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+    items:
+      - "**Dodaj najemnino.** V skupini izberi **Dodaj strošek**, pod **Kdo je plačal?** izberi, kdo je plačal gospodarju, pod **Razdeli med** pa pusti vse."
+      - "**Izberi odstotek.** Pod **Način razdelitve** izberi **Odstotek** in vpiši cele odstotke. Obrazec te opozori, če skupaj ne dajo 100."
+      - "**Kopiraj jo naslednji mesec.** Odpri najemnino prejšnjega meseca in izberi **Kopiraj strošek**. Delitev se prenese."
+  - heading: "Česa kalkulator ne zna"
+    items:
+      - "**Ne izmeri tvojih sob.** Površina je izhodišče. Soba z lastno kopalnico je vredna več kot enaka površina brez nje, kamrica, v katero gresta postelja in upajoč stol, pa manj."
+      - "**Ne odloči, kaj šteje za dohodek.** Neto ali bruto, plača ali postranski posel: odloči skupina. Za vse uporabi isto obdobje."
+      - "**Ne shranjuje.** Zapri zavihek in številk ni več. Če jih želiš obdržati, kopiraj povezavo. V njej so tvoje številke za znakom #, ki ga brskalniki nikoli ne pošljejo strežniku, vsak, ki jo ima, pa jih lahko prebere."
+      - "**Ne premika denarja.** Gospodarju plačaš, kakor želiš."
+      - "**Ne meša valut in ne gre čez omejitve.** Izberi eno valuto. Sprejme od 2 do 10 oseb in najemnino do 999.999,99, tako kot aplikacija."
+exampleAfter: 2
+example:
+  heading: "Eno stanovanje, en mesec"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "Najemnina"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "Račun za energijo"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "Internet"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Kaj je pravičnejše, velikost sobe ali dohodek?"
+      a: "Nobeno ni vedno pravičnejše. Velikost sobe ustreza sostanovalcem, ki plačujejo prostor, v katerem spijo. Dohodek ustreza parom in prijateljem z zelo različnimi plačami. Dogovorite se pred prvim dnevom plačila najemnine, ne po njem."
+    - q: "Ali naj se računi delijo na enak način?"
+      a: "Pri sostanovalcih običajno ne. Energijo in internet uporabljajo vsi, zato je enako preprostejše, kot v primeru. Pri dohodku kalkulator računom da enake deleže kot najemnini."
+    - q: "Ali lahko uporabim kvadratne čevlje?"
+      a: "Da. Izberi ft² in vpiši površine v kvadratnih čevljih. Enota je le oznaka, deleži pa so enaki, če vsi uporabljajo isto."
+    - q: "Ali je kalkulator brezplačen?"
+      a: "Da. Brezplačno. Brez oglasov. Brez dnevnih omejitev. Tudi uporabniški račun ni potreben."

@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "How to split trip wey you pay for many currencies | Side Badger"
+  description: "Pounds for di hotel, yen for di ramen. Settle each currency for im own or change am for rate wey you fit see. Both ways dey worked out, sums dey show."
+h1: "How to split trip wey you pay for many currencies"
+navLabel: "Trip for many currencies"
+lead: "Enter each expense for di currency wey you pay am, then pick one route. Keep di currencies separate and settle each one for im own money, or change dem for current exchange rate and settle once. Di same Japan trip come to four payments di first way and two di second way."
+cta:
+  heading: "Enter am for di money wey you pay am"
+  body: "Create free account, start group for di trip and add each expense for whatever currency dey di receipt. You wan see di detail first? See [multiple currencies](page:feature/multiple-currencies) or [wetin free cover](page:pricing)."
+sections:
+  - heading: "Three friends, one hotel, plenty yen"
+    body: "Zoe, Kenji and Lucy spend one week for Japan for [group trip](page:use-case/group-trips), and dem share every cost equal-equal three ways. Zoe book di hotel from house, for pounds, £600. Lucy buy di train passes for Tokyo, ¥90,000. Kenji pay for ramen night, ¥9,000, and e don dey mention am every day since. Nobody wan convert three receipts for station platform. For di sums here, ¥1 na £0.005, round rate wey dem make up for dis guide. For di app, you go use current exchange rate, or type di one wey you really get."
+  - heading: "Enter each one for di money wey dey di receipt"
+    body: "Do dis part whichever route you choose. Nothing need to convert yet."
+    items:
+      - "**Make di group.** For di Dashbod choose **Kreate Grup**, name am after di trip, then choose **Invite others** and send di link or QR code."
+      - "**Add di hotel.** Choose **Add expense** and enter 600, with pounds as di currency next to di amount. Under **Who pay?** pick Zoe. Make all three people dey under **Split bitwin**, leave **How we go split am** for **Equal** and choose **Sev Expense**."
+      - "**Add di yen.** Do di same for di train passes (Lucy pay) and di ramen (Kenji pay), with yen as di currency. Yen no get decimals, so di form no dey ask for any."
+  - heading: "Route one: keep di currencies separate"
+    body: "Side Badger dey keep balance for each currency and e no dey cancel one currency against another. For pounds, di hotel na £200 each, so Kenji and Lucy each owe Zoe £200. For yen, di train passes and ramen come to ¥99,000, wey be ¥33,000 each. Lucy pay ¥90,000 and dem owe am ¥57,000. Zoe no pay any yen and e owe ¥33,000. Kenji pay ¥9,000, so e owe ¥24,000."
+    items:
+      - "**Pounds.** Kenji go pay Zoe £200 and Lucy go pay Zoe £200."
+      - "**Yen.** Zoe go pay Lucy ¥33,000 and Kenji go pay Lucy ¥24,000."
+      - "**Four payments altogether.** Zoe and Lucy owe each other for two currencies wey no cancel each other. No rate dey inside am, so nothing dey to argue about."
+      - "**Owe yen, pay for pounds.** Person wey no get yen fit still pay for pounds. When you record di payment, open **Di money na another kind?**, choose **Change to** pounds and check di rate. Zoe ¥33,000 na £165 for dis guide rate, and di yen balance still come out correct."
+      - "**Record each payment.** Pay each other anyhow you like, then choose **Settle up** and use **Rekod Settlement**. More dey for [settling up](page:feature/settle-up)."
+  - heading: "Route two: convert as you dey go"
+    body: "If di group prefer to see one number each, convert when you enter di expense."
+    items:
+      - "**Convert for di form.** For **Add expense**, choose **Change to** and pick pounds. Side Badger go show di rate and di converted amount, wey get ≈ mark. Edit di rate if you get different one. Di original yen amount go stay on di expense."
+      - "**Read di pounds.** At ¥1 = £0.005, di train passes become £450 and di ramen £45. With di £600 hotel, na £600 + £450 + £45 = £1,095, or £365 each. Zoe pay £600, so dem owe am £235. Lucy pay £450 and dem owe am £85. Kenji pay £45 and e owe £320."
+      - "**Two payments.** Both come from Kenji: £235 to Zoe and £85 to Lucy. Zoe and Lucy no go pay each other again at all."
+      - "**Or set group currency.** To skip di extra step, open di group **Settings page**, find **Karensi Settings** and choose **Convert Expenses Automatic Go**. Each new expense go then convert into dat currency, still for rate wey you fit see and change."
+  - heading: "Which route you go take?"
+    items:
+      - "**Keep dem separate** when people still get yen for dem wallet, or when you no wan argue about rate. Di cost na more payments, for more than one currency."
+      - "**Convert** when di group dey live for one currency and wan one number each and shorter list, like Kenji two transfers. Di cost na say di group go trust one rate, and di rate dey fixed for each expense when dem save am."
+      - "**Decide early.** Group currency dey convert only new and copied expenses. E no go go back to tidy wetin you don enter already."
+  - heading: "Di rate, and di cap"
+    items:
+      - "**Di rate dey fixed when you save.** Dem no dey ever revalue old expenses, so balance no dey drift because di market drift. Expenses wey dem enter for different days fit carry different rates, so if di group want one rate for di whole trip, agree am and type am every time."
+      - "**No rate? Type one.** Side Badger dey fetch current exchange rate where e fit, but no guarantee dey say every pair go get one. If none dey, or cash desk give you better deal, type your own."
+      - "**999,999.99 per expense, for im own currency.** One cap, whatever di money be. For yen na just under ¥1,000,000, about £5,000 for dis guide rate. For currency wey get big numbers, like Indonesian rupiah, one bill fit reach am sooner. Split di bill into two expenses, or enter am for another currency and convert."
+  - heading: "Wetin Side Badger no dey do here"
+    items:
+      - "E no dey ever move or exchange money. You go pay each other anyhow you like, then record di payment."
+      - "E get 140 currencies. Cryptocurrencies and metals no dey among dem."
+exampleAfter: 2
+example:
+  heading: "Japan, we settle am two ways"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "di hotel, wey dem book from house"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "train passes"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "di ramen night"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Question dem"
+  items:
+    - q: "Which exchange rate Side Badger dey use?"
+      a: "Current exchange rate, wey dem fetch when you enter di expense where one dey available. You fit change am to di rate wey you really get."
+    - q: "Di group fit stick to pounds and yen?"
+      a: "Yes. For di group **Settings page**, turn on **Limit currencies for dis group** under **Karensi Settings**, pick di **Currencies wey we gree** and set di **Main currency for new expenses**. Fewer options for di list, fewer wrong guesses for di till."
+    - q: "We must convert at all?"
+      a: "No. Currencies go stay separate unless you or your group choose to convert, and each currency get im own short list of payments."

@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Cymorth a chefnogaeth | Side Badger"
+  description: "Cyfrinair wedi'i anghofio, dolen nad yw'n gweithio, taliad wedi'i gofnodi'n anghywir? Atebion byr i'r hyn sy'n peri trafferth, a sut i gysylltu â ni."
+h1: "Cymorth a chefnogaeth, heb y gerddoriaeth aros"
+navLabel: "Cymorth a chefnogaeth"
+lead: "Atebion byr i'r pethau y mae pobl yn mynd yn sownd arnynt, o gyfrinair sydd wedi'i anghofio i gau grŵp am byth. Mae pob un yn cysylltu â'r dudalen sy'n esbonio mwy. Methu dod o hyd i'ch un chi? Dywedwch wrthon ni o'r tu mewn i'r ap, neu anfonwch air atom."
+cta:
+  heading: "Wedi dod am gymorth, yn aros i rannu?"
+  body: "Dim cyfrif eto? Cychwynnwch grŵp, rhannwch y ddolen ac ychwanegwch y gost gyntaf. Am ddim, heb hysbysebion a heb gyfyngiadau dyddiol."
+groups:
+  - heading: "Mewngofnodi"
+    items:
+      - q: "Wedi anghofio eich cyfrinair?"
+        a: "Mae'n digwydd i'r moch daear gorau. Dewiswch **Wedi anghofio eich cyfrinair?** ar y sgrin **Mewngofnodi**, rhowch e-bost eich cyfrif, yna dilynwch y ddolen yn yr e-bost a anfonwn i ddewis un newydd. Mae [sut mae'n gweithio](page:how-it-works) yn trafod beth arall sydd ei angen ar gyfrif."
+      - q: "Dw i wedi cofrestru, ond alla i ddim ychwanegu dim byd. Pam?"
+        a: "Fel arfer, nid yw eich e-bost wedi'i ddilysu eto, felly agorwch y ddolen yn yr e-bost dilysu, neu dewiswch **Ail-anfon e-bost dilysu** ar y faner atgoffa i gael un newydd. Os ydych wedi'ch dilysu, efallai bod y grŵp wedi'i gloi neu efallai nad yw ei ganiatâd yn gadael i chi, ac mae gwyliwr yn gweld popeth heb newid dim, fel mae [grwpiau a chaniatâd](page:feature/groups-and-permissions) yn esbonio."
+      - q: "Sut mae newid fy e-bost neu fy nghyfrinair?"
+        a: "Yn **Gosodiadau**, dewiswch **Newid E-bost** neu **Newid Cyfrinair**. Mae'r ddau yn gofyn am eich cyfrinair presennol yn gyntaf, ac mae angen dilysu cyfeiriad e-bost newydd o'r ddolen a anfonwn ato. Mae [sut mae'n gweithio](page:how-it-works) yn trafod cyfrifon."
+      - q: "Alla i fewngofnodi gyda Google neu Apple?"
+        a: "Na. Cyfeiriad e-bost a chyfrinair o 12 nod o leiaf yw'r cyfan sydd ei angen, a gallwch dicio **Cofio fi** ar eich ffôn neu gyfrifiadur eich hun. Mae tudalen yr [ap gwe](page:feature/web-app) yn trafod gweddill y camau cychwyn."
+  - heading: "Ymuno â grŵp"
+    items:
+      - q: "Mae rhywun wedi anfon dolen wahoddiad ataf. Sut mae ymuno?"
+        a: "Agorwch hi, yna mewngofnodwch neu crëwch gyfrif am ddim. Fe welwch ragolwg o'r grŵp, yna dewiswch yr enw y bydd pobl yn eich gweld chi fel yno a gwasgwch **Ymuno â Grŵp**. Mae [grwpiau a chaniatâd](page:feature/groups-and-permissions) yn dangos y ffordd i mewn yn llawn."
+      - q: "Mae'n dweud “Aros am gymeradwyaeth”. Ydw i wedi gwneud rhywbeth o'i le?"
+        a: "Dim o gwbl. Mae gweinyddwr yn gadael pob person i mewn i'r grŵp hwn, felly mae eich cais wedi mynd at ei weinyddwyr, ac ni allwch weld y tu mewn nes bydd un ohonyn nhw'n ei gymeradwyo. Mae croeso i hwb cyfeillgar wyneb yn wyneb, ac mae [grwpiau a chaniatâd](page:feature/groups-and-permissions) yn esbonio cymeradwyo."
+      - q: "Mae'r ddolen yn dweud ei bod yn annilys neu wedi dod i ben."
+        a: "Mae dolenni gwahoddiad yn para am gyhyd ag y dewisodd y person a'u creodd, o 15 munud hyd at 5 diwrnod. Gofynnwch i rywun yn y grŵp am ddolen newydd, neu am y cod QR os ydych yn yr un ystafell. Mae [sut mae'n gweithio](page:how-it-works) yn trafod gwahoddiadau."
+  - heading: "Costau"
+    items:
+      - q: "Sut mae ychwanegu cost?"
+        a: "Agorwch y grŵp a dewiswch **Ychwanegu Cost**. Dywedwch beth oedd hi, faint, pwy dalodd a phwy oedd yn ei rhannu, yna rhannwch hi'n gyfartal, yn ôl symiau union neu yn ôl canran. Mae [rhannu treuliau](page:feature/split-expenses) yn mynd drwy bob opsiwn."
+      - q: "All y rhent ailadrodd bob mis?"
+        a: "Nid yn awtomatig, oherwydd does dim treuliau cylchol. Agorwch gost y mis diwethaf a dewiswch **Copïo cost**, ac mae'r ffurflen yn cyrraedd wedi'i llenwi, yn barod ar gyfer dyddiad newydd a beth bynnag sydd wedi newid. Mae gan [rhannu treuliau](page:feature/split-expenses) fwy am gopïo."
+      - q: "Dw i wedi teipio'r swm anghywir. Alla i ei gywiro?"
+        a: "Gallwch. Golygwch y gost, cyn belled â bod caniatâd y grŵp yn gadael i chi ac nad yw'r grŵp wedi'i gloi. Mae'r fersiwn cynharach yn cael ei gadw, felly does dim rhaid i neb gymryd eich gair am yr hyn a newidiodd, fel mae [rhannu treuliau](page:feature/split-expenses) yn esbonio."
+      - q: "Mae cost yn edrych yn anghywir, ac nid fy un i yw hi. Beth nawr?"
+        a: "Dewiswch **Mae gen i gwestiwn** arni a dweud pam, ac mae'r gost gyfan yn aros allan o falansau pawb nes bydd y sawl a ofynnodd, neu weinyddwr, yn cau'r cwestiwn. Dim botwm felly? Dim ond pobl sydd wedi'u cynnwys mewn cost all ofyn, mae'n rhaid i weinyddwr droi **Caniatáu cwestiynau am dreuliau** ymlaen yng ngosodiadau'r grŵp yn gyntaf, ac mae'r diplomyddiaeth i'w chael yn y [canllaw ar gostau dadleuol](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Taliadau"
+    items:
+      - q: "Ydy Side Badger yn anfon yr arian?"
+        a: "Nac ydy, dyw Side Badger byth yn symud arian. Talwch eich gilydd sut bynnag y dymunwch, drwy drosglwyddiad banc, arian parod neu beth bynnag sy'n gweithio, yna cofnodwch y taliad fel bod y balansau'n dal i fyny. Mae [sut i setlo ar ôl taith grŵp](page:guide/how-to-settle-up-after-a-group-trip) yn mynd drwyddo o'r dechrau i'r diwedd."
+      - q: "Sut mae cofnodi taliad?"
+        a: "Dewiswch **Setlo** yn y grŵp, dywedwch pwy dalodd a phwy a'i derbyniodd, rhowch y swm neu gadewch i fotwm **Setlo cyflym** ei lenwi, a dewiswch **Cofnodi Setliad**. Dim ond rhan a dalwyd? Cofnodwch yr hyn a dalwyd ac mae'r gweddill yn aros ar y balans, fel mae [setlo](page:feature/settle-up) yn esbonio."
+      - q: "Dw i wedi cofnodi taliad yn anghywir. Alla i ei gywiro?"
+        a: "Gall pwy bynnag a'i cofnododd ei olygu o hanes **Setliadau** y grŵp, a gallan nhw neu weinyddwr ei ddileu, sy'n ei dynnu oddi ar y balansau. Ni ellir golygu taliad sy'n cynnwys rhywun sydd wedi gadael y grŵp ers hynny. Mae [setlo](page:feature/settle-up) yn trafod yr hanes."
+  - heading: "Hysbysiadau a'r sgrin gartref"
+    items:
+      - q: "Sut mae troi hysbysiadau ymlaen?"
+        a: "Trowch **Hysbysiadau gwthio** ymlaen yn **Gosodiadau** a'u caniatáu pan fydd eich porwr yn gofyn. Os yw'r porwr eisoes wedi eu rhwystro, caniatewch nhw yn ei osodiadau ei hun yn gyntaf. Caiff pob dyfais ei throi ymlaen ar wahân ac nid oes sicrwydd y caiff hysbysiad ei ddanfon, felly triniwch hysbysiad fel hwb, nid addewid, fel mae tudalen yr [ap gwe](page:feature/web-app) yn esbonio."
+      - q: "Pam nad yw hysbysiadau'n gweithio ar fy iPhone?"
+        a: "Ar iPhone neu iPad dim ond yn yr ap sydd wedi'i ychwanegu at eich Sgrin Gartref y maen nhw'n gweithio, byth mewn tab porwr. Ychwanegwch ef, agorwch ef o eicon y Sgrin Gartref, yna trowch nhw ymlaen yn **Gosodiadau**. Mae [cynllunio ar y cyd](page:feature/plan-together) yn dangos beth maen nhw'n eich hysbysu amdano."
+      - q: "Oes ap i'w lawrlwytho?"
+        a: "Nid o siop apiau, oherwydd mae Side Badger yn rhedeg yn eich porwr. Mewngofnodwch, yna dilynwch **Ychwanegu at y Sgrin Gartref neu'r Doc** yn **Gosodiadau**, ac mae'n agor fel ap, yn ei ffenestr ei hun. Mae gan dudalen yr [ap gwe](page:feature/web-app) y camau ar gyfer pob dyfais."
+  - heading: "Gadael, archifo, cloi a chau"
+    items:
+      - q: "Sut mae gadael grŵp?"
+        a: "Setlwch, yna dewiswch **Gadael Grŵp**. Ni allwch adael tra bo arian yn ddyledus gennych neu i chi mewn hyd yn oed un arian cyfred, tra bo cwestiwn agored ar gost rydych chi ynddi, neu os mai chi yw'r gweinyddwr olaf neu'r unig aelod, ac mae dod yn ôl angen gwahoddiad newydd. Mae [grwpiau a chaniatâd](page:feature/groups-and-permissions) yn rhoi'r manylion."
+      - q: "Sut mae cael hen grŵp oddi ar fy nangosfwrdd?"
+        a: "Dewiswch **Archifo Grŵp**. Mae'n diflannu o'ch dangosfwrdd chi ac o ddangosfwrdd neb arall, gallwch ei agor a'i ddefnyddio o hyd, ac mae **Dad-archifo Grŵp** yn dod ag ef yn ôl. Mae [grwpiau a chaniatâd](page:feature/groups-and-permissions) yn cymharu archifo, cloi a chau."
+      - q: "Mae'r daith drosodd. Allwn ni atal y rhifau rhag newid?"
+        a: "Gallwn. Gall gweinyddwr droi **Cloi Grŵp** ymlaen yng ngosodiadau'r grŵp, ac ni all neb ychwanegu na golygu costau, cofnodi taliadau newydd na newid rhestrau a pholau nes bydd gweinyddwr yn ei ddatgloi. Gall pawb ddarllen y grŵp a'i hanes o hyd, ac nid oes tacsi hwyr yn sleifio i mewn, fel mae [grwpiau a chaniatâd](page:feature/groups-and-permissions) yn esbonio."
+      - q: "Alla i ddileu grŵp?"
+        a: "Gall gweinyddwr ei gau gyda **Cau'r Grŵp**, ar ôl teipio enw'r grŵp i gadarnhau. Mae cau yn barhaol ac yn gwneud y grŵp yn anhygyrch i bawb, felly os mai dim ond ei gael o'r golwg rydych am ei wneud, archifwch ef yn lle hynny. Mae'r print mân yn [grwpiau a chaniatâd](page:feature/groups-and-permissions)."
+contact:
+  heading: "Dal yn sownd?"
+  items:
+    - q: "Wedi dod o hyd i fyg, neu eisiau newid rhywbeth?"
+      a: "Dywedwch wrthon ni o'r tu mewn i'r ap. Dewiswch **Adborth** yn newislen eich cyfrif, yna **Anfon Adborth**, a dewis **Adrodd Problem**, **Cais am Gymorth** neu **Cais am Nodwedd**. Atodwch sgrinlun os yw'n helpu, a phan fyddwn yn ateb fe welwch yr ateb yn yr un edefyn."
+    - q: "Hoffech chi e-bostio yn lle hynny?"
+      a: "Ysgrifennwch i'r cyfeiriad isod. Dywedwch pa grŵp y mae'n ymwneud ag ef, beth wnaethoch a beth roeddech yn disgwyl iddo ddigwydd. Mae gollwng stêm yn iawn; cyfrineiriau ddim, felly peidiwch byth ag anfon eich un chi."
+  emailLabel: "E-bostiwch ni yn"
+  email: support@sidebadger.me

@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: Hjälp och support | Side Badger
+  description: Glömt lösenord, en länk som inte fungerar, en betalning som registrerats fel? Korta svar på det folk fastnar på i Side Badger, och hur du når oss.
+h1: Hjälp och support, utan telefonkö
+navLabel: Hjälp och support
+lead: Korta svar på det folk fastnar på, från ett glömt lösenord till att stänga en grupp för gott. Varje svar länkar till sidan som förklarar mer. Hittar du inte ditt? Berätta för oss inifrån appen, eller skriv några rader.
+cta:
+  heading: Kom för hjälp, stannar för delandet?
+  body: Inget konto än? Starta en grupp, dela länken och lägg till den första utgiften. Gratis, utan annonser och utan dagliga gränser.
+groups:
+  - heading: Logga in
+    items:
+      - q: Glömt lösenordet?
+        a: Det händer de bästa grävlingar. Välj **Glömt lösenord?** på skärmen **Logga in**, ange e-postadressen till ditt konto och följ sedan länken i mejlet vi skickar för att välja ett nytt. [Så fungerar det](page:how-it-works) tar upp vad mer ett konto behöver.
+      - q: Jag har registrerat mig, men kan inte lägga till något. Varför?
+        a: Oftast är din e-post inte verifierad än, så öppna länken i verifieringsmejlet, eller välj **Skicka verifieringsmail igen** på påminnelsebannern för en ny. Om du är verifierad kan gruppen vara låst eller dess behörigheter inte tillåta dig, och en tittare ser allt men ändrar inget, som [grupper och behörigheter](page:feature/groups-and-permissions) förklarar.
+      - q: Hur ändrar jag min e-post eller mitt lösenord?
+        a: I **Inställningar** väljer du **Ändra e-post** eller **Ändra lösenord**. Båda frågar först efter ditt nuvarande lösenord, och en ny e-postadress måste verifieras via länken vi skickar till den. [Så fungerar det](page:how-it-works) tar upp konton.
+      - q: Kan jag logga in med Google eller Apple?
+        a: Nej. Allt som behövs är en e-postadress och ett lösenord på minst 12 tecken, och du kan kryssa i **Kom ihåg mig** på din egen telefon eller dator. Sidan om [webbappen](page:feature/web-app) går igenom resten av att komma igång.
+  - heading: Gå med i en grupp
+    items:
+      - q: Någon skickade mig en inbjudningslänk. Hur går jag med?
+        a: Öppna den och logga sedan in eller skapa ett gratiskonto. Du ser en förhandsvisning av gruppen, väljer namnet folk ska se dig under där och trycker på **Gå med i grupp**. [Grupper och behörigheter](page:feature/groups-and-permissions) visar hela vägen in.
+      - q: Det står "Väntar på godkännande". Har jag gjort något fel?
+        a: Inte alls. I den här gruppen släpper en administratör in var och en, så din förfrågan har gått till dess administratörer, och du kan inte se in förrän någon av dem godkänner den. En vänlig knuff i verkliga livet är tillåten, och [grupper och behörigheter](page:feature/groups-and-permissions) förklarar godkännandet.
+      - q: Länken säger att den är ogiltig eller har gått ut.
+        a: Inbjudningslänkar gäller så länge den som skapade dem valde, från 15 minuter upp till 5 dagar. Be någon i gruppen om en ny länk, eller om QR-koden om ni är i samma rum. [Så fungerar det](page:how-it-works) tar upp inbjudningar.
+  - heading: Utgifter
+    items:
+      - q: Hur lägger jag till en utgift?
+        a: Öppna gruppen och välj **Lägg till utgift**. Säg vad det var, hur mycket, vem som betalade och vilka som delade den, och dela den sedan lika, efter exakta belopp eller i procent. [Dela utgifter](page:feature/split-expenses) går igenom alla alternativ.
+      - q: Kan hyran upprepas varje månad?
+        a: Inte av sig själv, eftersom det inte finns några återkommande utgifter. Öppna förra månadens och välj **Kopiera utgift**, så kommer formuläret ifyllt, redo för ett nytt datum och det som ändrats. [Dela utgifter](page:feature/split-expenses) har mer om att kopiera.
+      - q: Jag skrev fel belopp. Kan jag rätta det?
+        a: Ja. Redigera utgiften, så länge gruppens behörigheter tillåter det och gruppen inte är låst. Den tidigare versionen sparas, så ingen behöver lita på ditt ord om vad som ändrades, som [dela utgifter](page:feature/split-expenses) förklarar.
+      - q: En utgift ser fel ut, och det är inte min. Vad gör jag?
+        a: Välj **Jag har en fråga** på den och säg varför, så hålls hela utgiften utanför allas saldon tills den som frågade, eller en administratör, avslutar frågan. Ingen sådan knapp? Bara personer som ingår i en utgift kan fråga, en administratör måste först slå på **Tillåt frågor om utgifter** i gruppens inställningar, och [guiden om en omtvistad utgift](page:guide/what-to-do-when-someone-disputes-a-shared-expense) har diplomatin.
+  - heading: Betalningar
+    items:
+      - q: Skickar Side Badger pengarna?
+        a: Nej, Side Badger flyttar aldrig pengar. Betala varandra hur ni vill, med banköverföring, kontanter eller vad som fungerar, och registrera sedan betalningen så att saldona hänger med. [Så gör ni upp efter en gruppresa](page:guide/how-to-settle-up-after-a-group-trip) går igenom det från början till slut.
+      - q: Hur registrerar jag en betalning?
+        a: Välj **Reglera** i gruppen, säg vem som betalade och vem som fick pengarna, ange beloppet eller låt en **Snabbreglering**-knapp fylla i det, och välj **Registrera reglering**. Betalade du bara en del? Registrera det som betalades så ligger resten kvar på saldot, som [göra upp](page:feature/settle-up) förklarar.
+      - q: Jag registrerade en betalning fel. Kan jag rätta den?
+        a: Den som registrerade den kan redigera den från gruppens historik under **Regleringar**, och hen eller en administratör kan ta bort den, vilket tar bort den från saldona. En betalning som involverar någon som sedan lämnat gruppen kan inte redigeras. [Göra upp](page:feature/settle-up) tar upp historiken.
+  - heading: Aviseringar och hemskärmen
+    items:
+      - q: Hur slår jag på aviseringar?
+        a: Slå på **Pushaviseringar** i **Inställningar** och tillåt dem när webbläsaren frågar. Om webbläsaren redan har blockerat dem, tillåt dem först i dess egna inställningar. Varje enhet slås på för sig och leverans är inte garanterad, så se en avisering som en knuff, inte ett löfte, som sidan om [webbappen](page:feature/web-app) förklarar.
+      - q: Varför fungerar inte aviseringar på min iPhone?
+        a: På en iPhone eller iPad fungerar de bara i appen när den är tillagd på hemskärmen, aldrig i en webbläsarflik. Lägg till den, öppna den från hemskärmsikonen och slå sedan på dem i **Inställningar**. [Planera tillsammans](page:feature/plan-together) visar vad de berättar om.
+      - q: Finns det en app att ladda ner?
+        a: Inte från en appbutik, eftersom Side Badger körs i din webbläsare. Logga in och följ sedan **Lägg till på hemskärmen eller i Dock** i **Inställningar**, så öppnas den som en app, i ett eget fönster. Sidan om [webbappen](page:feature/web-app) har stegen för varje enhet.
+  - heading: Lämna, arkivera, låsa och stänga
+    items:
+      - q: Hur lämnar jag en grupp?
+        a: Gör upp och välj sedan **Lämna grupp**. Du kan inte lämna om du är skyldig eller har pengar att få i så mycket som en valuta, om en utgift du ingår i har en öppen fråga, eller om du är sista administratören eller enda medlemmen, och för att komma tillbaka krävs en ny inbjudan. [Grupper och behörigheter](page:feature/groups-and-permissions) har detaljerna.
+      - q: Hur får jag bort en gammal grupp från min översikt?
+        a: Välj **Arkivera grupp**. Den försvinner från din översikt och ingen annans, du kan fortfarande öppna och använda den, och **Avarkivera grupp** tar tillbaka den. [Grupper och behörigheter](page:feature/groups-and-permissions) jämför att arkivera, låsa och stänga.
+      - q: Resan är över. Kan vi hindra att siffrorna ändras?
+        a: Ja. En administratör kan slå på **Lås grupp** i gruppens inställningar, och ingen kan lägga till eller redigera utgifter, registrera nya betalningar eller ändra listor och omröstningar förrän en administratör låser upp den. Alla kan fortfarande läsa gruppen och dess historik, och ingen sen taxi smyger sig in, som [grupper och behörigheter](page:feature/groups-and-permissions) förklarar.
+      - q: Kan jag ta bort en grupp?
+        a: En administratör kan stänga den med **Stäng gruppen**, efter att ha skrivit in gruppens namn för att bekräfta. Att stänga är permanent och gör gruppen otillgänglig för alla, så om du bara vill ha den ur sikte, arkivera den i stället. [Grupper och behörigheter](page:feature/groups-and-permissions) har det finstilta.
+contact:
+  heading: Fortfarande fast?
+  items:
+    - q: Hittat en bugg, eller vill du ha något ändrat?
+      a: Berätta för oss inifrån appen. Välj **Återkoppling** i din kontomeny, sedan **Skicka feedback**, och välj **Rapportera problem**, **Begär hjälp** eller **Funktionsförfrågan**. Bifoga en skärmbild om det hjälper, och när vi svarar hittar du svaret i samma tråd.
+    - q: Skulle du hellre mejla?
+      a: Skriv till adressen nedan. Säg vilken grupp det gäller, vad du gjorde och vad du förväntade dig skulle hända. Att vädra frustration är okej; lösenord är det inte, så skicka aldrig ditt.
+  emailLabel: Mejla oss på
+  email: support@sidebadger.me

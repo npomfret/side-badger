@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Skiptu ferð sem er greidd í mörgum gjaldmiðlum | Side Badger"
+  description: "Pund fyrir hótelið, jen fyrir ramen-súpuna. Gerðu upp hvern gjaldmiðil sér eða umreiknaðu á gengi sem þú sérð. Báðar leiðir reiknaðar, með útreikningum."
+h1: "Hvernig á að skipta ferð sem er greidd í mörgum gjaldmiðlum"
+navLabel: "Ferðir í mörgum gjaldmiðlum"
+lead: "Skráðu hvert útgjald í gjaldmiðlinum sem þú greiddir í og veldu svo leið. Hafðu gjaldmiðlana aðskilda og gerðu upp hvern fyrir sig í eigin mynt, eða umreiknaðu á núverandi gengi og gerðu upp í einu lagi. Sama Japansferðin verður að fjórum greiðslum á fyrri háttinn og tveimur á þann seinni."
+cta:
+  heading: "Skráðu það í gjaldmiðlinum sem þú greiddir í"
+  body: "Stofnaðu ókeypis aðgang, byrjaðu hóp fyrir ferðina og bættu við hverju útgjaldi í þeim gjaldmiðli sem var á kvittuninni. Viltu sjá nánar fyrst? Sjá [marga gjaldmiðla](page:feature/multiple-currencies) eða [hvað ókeypis nær yfir](page:pricing)."
+sections:
+  - heading: "Þrír vinir, eitt hótel og býsna mikið af jenum"
+    body: "Zoe, Kenji og Lucy eyða viku í Japan í [hópferð](page:use-case/group-trips) og hver kostnaður skiptist jafnt á þau þrjú. Zoe bókaði hótelið heima, í pundum, fyrir 600 £. Lucy keypti lestarpassana í Tókýó fyrir 90.000 ¥. Kenji borgaði fyrir ramen-kvöldið, 9.000 ¥, og hefur minnst á það daglega síðan. Enginn nennir að umreikna þrjár kvittanir á brautarpalli. Í útreikningunum hér er 1 ¥ jafnt og 0,005 £, kringlótt gengi sem er fundið upp fyrir þessar leiðbeiningar. Í appinu notarðu núverandi gengi, eða slærð inn það sem þú fékkst í raun."
+  - heading: "Skráðu hvert í gjaldmiðlinum á kvittuninni"
+    body: "Þetta skref er eins hvora leið sem þú velur. Ekkert þarf að umreikna enn."
+    items:
+      - "**Búðu til hópinn.** Á stjórnborðinu skaltu velja **Búa til hóp**, nefna hann eftir ferðinni, velja svo **Bjóða öðrum** og senda tengilinn eða QR-kóðann."
+      - "**Bættu við hótelinu.** Veldu **Skrá útgjöld** og sláðu inn 600, með pundum sem gjaldmiðil við hlið upphæðarinnar. Undir **Hver greiddi?** velurðu Zoe. Hafðu alla þrjá undir **Skipta á milli**, láttu **Hvernig á að skipta** vera á **Jafnt** og veldu **Vista útgjöld**."
+      - "**Bættu við jenunum.** Gerðu það sama fyrir lestarpassana (Lucy greiddi) og ramen-kvöldið (Kenji greiddi), með jen sem gjaldmiðil. Jen hafa enga aukastafi, svo eyðublaðið biður ekki um þá."
+  - heading: "Leið eitt: haltu gjaldmiðlunum aðskildum"
+    body: "Side Badger heldur stöðu fyrir hvern gjaldmiðil og jafnar þá ekki hvern á móti öðrum. Í pundum kostar hótelið 200 £ á mann, svo Kenji og Lucy skulda Zoe hvort um sig 200 £. Í jenum eru lestarpassarnir og ramen-kvöldið samtals 99.000 ¥, sem eru 33.000 ¥ á mann. Lucy greiddi 90.000 ¥ og á inni 57.000 ¥. Zoe greiddi engin jen og skuldar 33.000 ¥. Kenji greiddi 9.000 ¥, svo hann skuldar 24.000 ¥."
+    items:
+      - "**Pund.** Kenji borgar Zoe 200 £ og Lucy borgar Zoe 200 £."
+      - "**Jen.** Zoe borgar Lucy 33.000 ¥ og Kenji borgar Lucy 24.000 ¥."
+      - "**Fjórar greiðslur samtals.** Zoe og Lucy skulda hvort öðru í tveimur gjaldmiðlum sem strikast ekki hvor á móti öðrum. Ekkert gengi kemur við sögu, svo það er ekkert til að þræta um."
+      - "**Skuldar jen, borgar í pundum.** Sá sem á engin jen getur samt borgað í pundum. Þegar þú skráir greiðsluna skaltu opna **Annar gjaldmiðill?**, velja **Breyta í** og pund og athuga gengið. Zoe skuldar 33.000 ¥, sem eru 165 £ á gengi þessara leiðbeininga, og jenastaðan kemur samt rétt út."
+      - "**Skráðu hverja greiðslu.** Borgið hvert öðru eins og ykkur hentar, veldu svo **Gera upp** og notaðu **Skrá uppgjör**. Nánar um [uppgjör](page:feature/settle-up)."
+  - heading: "Leið tvö: umreiknaðu jafnóðum"
+    body: "Ef hópurinn vill frekar sjá eina tölu á mann skaltu umreikna um leið og þú skráir útgjaldið."
+    items:
+      - "**Umreiknaðu á eyðublaðinu.** Veldu **Breyta í** á eyðublaðinu **Skrá útgjöld** og veldu pund. Side Badger sýnir gengið og umreiknuðu upphæðina, merkta með ≈. Breyttu genginu ef þú fékkst annað. Upphaflega jenaupphæðin helst á útgjaldinu."
+      - "**Lestu pundin.** Á genginu 1 ¥ = 0,005 £ verða lestarpassarnir 450 £ og ramen-kvöldið 45 £. Með 600 £ hótelinu eru það 600 £ + 450 £ + 45 £ = 1.095 £, eða 365 £ á mann. Zoe greiddi 600 £, svo hún á inni 235 £. Lucy greiddi 450 £ og á inni 85 £. Kenji greiddi 45 £ og skuldar 320 £."
+      - "**Tvær greiðslur.** Báðar frá Kenji: 235 £ til Zoe og 85 £ til Lucy. Zoe og Lucy þurfa alls ekki lengur að borga hvort öðru."
+      - "**Eða veldu gjaldmiðil hópsins.** Til að sleppa aukaskrefinu skaltu opna **Stillingar** hópsins, finna **Gjaldmiðlastillingar** og velja **Breyta sjálfkrafa kostnaði í**. Hvert nýtt útgjald umreiknast þá í þann gjaldmiðil, enn á gengi sem þú sérð og getur breytt."
+  - heading: "Hvora leið ættirðu að velja?"
+    items:
+      - "**Haltu þeim aðskildum** þegar fólk á enn jen í veskinu, eða þegar þú vilt helst ekki rífast um gengi. Gallinn er fleiri greiðslur, í fleiri en einum gjaldmiðli."
+      - "**Umreiknaðu** þegar hópurinn lifir í einum gjaldmiðli og vill eina tölu á mann og styttri lista, eins og millifærslurnar tvær hjá Kenji. Gallinn er að hópurinn treystir gengi, og gengið festist á hverju útgjaldi þegar það er vistað."
+      - "**Ákveðið snemma.** Gjaldmiðill hópsins umreiknar aðeins ný og afrituð útgjöld. Hann fer ekki til baka og lagfærir það sem þú hefur þegar skráð."
+  - heading: "Gengið og hámarkið"
+    items:
+      - "**Gengið festist þegar þú vistar.** Gömul útgjöld eru aldrei endurmetin, svo staða rekur ekki af leið þótt markaðurinn geri það. Útgjöld sem eru skráð á mismunandi dögum geta haft mismunandi gengi, svo ef hópurinn vill eitt gengi fyrir alla ferðina skuluð þið koma ykkur saman um það og slá það inn í hvert skipti."
+      - "**Ekkert gengi? Sláðu inn eitt.** Side Badger sækir núverandi gengi þar sem það getur, en ekki er tryggt að öll pör hafi gengi. Ef það er ekkert, eða gjaldeyrisafgreiðsla gaf þér betri kjör, skaltu slá inn þitt eigið."
+      - "**999.999,99 á hvert útgjald, í eigin gjaldmiðli.** Eitt hámark, sama hver gjaldmiðillinn er. Í jenum er það rétt undir 1.000.000 ¥, um 5.000 £ á gengi þessara leiðbeininga. Í gjaldmiðli með stórar tölur, eins og indónesískum rúpíum, getur einn reikningur náð því fyrr. Skiptu reikningnum í tvö útgjöld, eða skráðu hann í öðrum gjaldmiðli og umreiknaðu."
+  - heading: "Það sem Side Badger gerir ekki hér"
+    items:
+      - "Það flytur aldrei peninga né skiptir þeim. Þið borgið hvert öðru eins og ykkur hentar og skráið svo greiðsluna."
+      - "Gjaldmiðlarnir eru 140. Rafmyntir og málmar eru ekki þar á meðal."
+exampleAfter: 2
+example:
+  heading: "Japan, gert upp á tvo vegu"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "hótelið, bókað heima"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "lestarpassar"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "ramen-kvöld"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Spurningar"
+  items:
+    - q: "Hvaða gengi notar Side Badger?"
+      a: "Núverandi gengi, sótt þegar þú skráir útgjaldið þar sem það er í boði. Þú getur breytt því í gengið sem þú fékkst í raun."
+    - q: "Getur hópurinn haldið sig við pund og jen?"
+      a: "Já. Í **Stillingum** hópsins skaltu kveikja á **Takmarka gjaldmiðla fyrir þennan hóp** undir **Gjaldmiðlastillingar**, velja **Leyfðir gjaldmiðlar** og stilla **Sjálfgefinn gjaldmiðill fyrir ný útgjöld**. Færri valkostir á listanum þýða færri mistök við kassann."
+    - q: "Þurfum við að umreikna yfirleitt?"
+      a: "Nei. Gjaldmiðlar haldast aðskildir nema þú eða hópurinn þinn veljið að umreikna, og hver gjaldmiðill fær sinn eigin stutta lista yfir greiðslur."

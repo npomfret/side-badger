@@ -1,0 +1,113 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Kako se poravnati po skupinskem potovanju | Side Badger"
+  description: "Poravnajte se, preden se razidete. Deset zapletenih dolgov postane štiri plačila, zabeležena sproti, delno plačilo pa je v redu. Izračuni za pet prijateljev."
+h1: "Kako se poravnati po skupinskem potovanju"
+navLabel: "Poravnava po potovanju"
+lead: "Poravnajte se, preden se razidete. Dodaj zadnji strošek, odpri stanja skupine in plačaj, kar dolguješ, s kratkega seznama, kakor želiš. Nato vsako plačilo zabeleži v Side Badgerju, da se stanje očisti za vso skupino. Pri petih prijateljih in petih stroških se deset zapletenih dolgov skrči na štiri plačila."
+cta:
+  heading: "Zaključi knjige, preden pristanejo fotografije"
+  body: "Ustvari brezplačen uporabniški račun, ustanovi skupino za naslednje potovanje in dodajaj vsak strošek sproti. Kratek seznam plačil te čaka, ko prideš na letališče. Bi rad najprej videl, [kako deluje poravnava](page:feature/settle-up)?"
+sections:
+  - heading: "Pet prijateljev, pet stroškov, ena čakalnica na letališču"
+    body: "Mo, Ines, Raf, Tess in Uma so preživeli teden na obali. Mo je rezerviral stanovanje in kupil živila, Ines je plačala izlet z ladjico, Raf pa veliko večerjo. Tess se je s taksijem z letališča peljala z Umo in Mom, ker sta Ines in Raf imela vlak. Umina kartica je ostala doma, zato ni plačala ničesar. To je pet stroškov in skupaj 1.700 €, v čakalnici na letališču pa nihče ni znal reči, kdo je v plusu."
+  - heading: "Deset dolgov, štiri plačila"
+    body: "Stanovanje, ladjica, večerja in živila se razdelijo enako na pet. To je 200 €, 50 €, 60 € in 18 € na osebo, zato Ines in Raf dolgujeta po 328 €. Taksi si delijo trije po 20 €, zato Mo, Tess in Uma dolgujejo 348 €. Mo je plačal 1.090 € in dolguje 348 €, zato mu pripada 742 €. Vsi drugi so plačali manj, kot dolgujejo. Umi manjka 348 €, Tess 288 €, Ines 78 € in Rafu 28 €, kar skupaj da Moinih 742 €. Če poravnate vsak par ljudi neposredno, dobite deset ločenih dolgov. Side Badger namesto tega predlaga štiri plačila, vsa Mo."
+  - heading: "Poravnajte se, preden se razidete"
+    body: "Najboljši trenutek je zadnji večer ali vožnja domov, ko so še vsi na enem mestu in je dolg 28 € lahko omeniti. Najprej dodajte vse stroške, taksi vključno. Nihče ne more zapustiti skupine, dokler komu dolguje ali mu je kdo dolžan denar, zato se mora štetje tako ali tako nekoč zaključiti."
+    items:
+      - "**Preglej seznam.** Odpri skupino in poglej **Stanja**. Privzeto vidiš dolgove, ki te zadevajo. Izberi **Prikaži vse**, da vidiš seznam za vso skupino."
+      - "**Plačaj, kakor želiš.** Bančno nakazilo, gotovina, usluga iz zadnjih počitnic. Side Badger denarja ne premika."
+      - "**Zabeleži.** Izberi **Poravnaj**. Pod **Hitra poravnava** je vsak gumb eno od predlaganih plačil, z izbiro pa se znesek izpolni. Dodaj **Opomba**, na primer bančno nakazilo, preveri **Datum** (ne sme biti v prihodnosti) in izberi **Zabeleži poravnavo**."
+      - "**Opazuj, kako se očisti.** Stanje se posodobi za vse. Ko je zadnje plačilo vneseno, **Stanja** kažejo **Vse je poravnano!**"
+  - heading: "Nekaj zdaj, ostalo pozneje"
+    body: "Uma lahko nocoj pošlje 200 €, ostalo pa konec meseca. Zabeleži 200 € in obrazec jo opozori, da bo Mo potem še vedno dolžna 148 €, kar je 348 € minus 200 €. Shrani in teh 148 € ostane na njenem stanju, dokler ne zabeleži preostanka. Opozorilo deluje tudi v obratno smer. Če se iz 348 € zaradi zablodele ničle naredi 3.480 €, obrazec pove, da je Uma Mo dolžna le 348 € in da bi shranjevanje ustvarilo dolg v nasprotni smeri. Ničlo popravi, preden shraniš."
+  - heading: "Popravljanje napak in praznovanje plačil"
+    items:
+      - "**Napačno plačilo.** Plačilo lahko ureja samo oseba, ki ga je zabeležila. Ona ali skrbnik skupine ga lahko izbriše, nato ga je mogoče zabeležiti znova."
+      - "**Plačilo, ki ga je vredno opaziti.** Vsako zabeleženo plačilo je pod **Poravnave** z datumom in opombo, kjer ga lahko vidi in se nanj odzove vsak v skupini. Mo lahko izbere **Praznuj**, ko prispe Umin zadnji 148 €."
+      - "**Konec.** Ko je vsako stanje ničelno, lahko skrbnik skupino zaklene, da številke ostanejo, kot so."
+  - heading: "Česa Side Badger tu ne počne"
+    items:
+      - "Denarja nikoli ne premika. Nima povezav za plačilo ali zahtevkov za plačilo, zato je plačilo v aplikaciji zapis o plačilu, opravljenem drugje."
+      - "Ne pošilja opomnikov. Priganjanje zamudnika ostaja tvoja naloga."
+      - "Ne določa rokov. Kdaj zapade preostalih 148 € od Ume, se dogovori skupina."
+      - "Predlagana plačila so kratek seznam, ne obljuba najkrajšega možnega. Izračunana so po valutah, zato potovanje, plačano v evrih in funtih, dobi seznam za vsako."
+exampleAfter: 2
+example:
+  heading: "Pet prijateljev na obali"
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: "Stanovanje"
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: "Izlet z ladjico"
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: "Velika večerja"
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: "Taksi z letališča"
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: "Živila"
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Kdo naj zabeleži plačilo, tisti, ki plačuje, ali tisti, ki prejme?"
+      a: "Za beleženje plačila je potrebno dovoljenje za urejanje stroškov, obrazec pa vpraša **Kdo je plačal?** in **Kdo je prejel plačilo?** Zabeleženo plačilo lahko pozneje ureja samo oseba, ki ga je zabeležila, zato je običajno najlažje, če to stori plačnik z gumbom za hitro poravnavo."
+    - q: "Kaj, če je potovanje potekalo v dveh valutah?"
+      a: "Stanja se vodijo po valutah, zato evrski dolg ostane evrski dolg in vsaka valuta dobi svoj kratek seznam, razen če so bili stroški pretvorjeni ob vnosu. [Več valut](page:guide/how-to-split-a-trip-paid-in-several-currencies) prikaže obe poti."
+    - q: "Ali naj se poravnamo med potovanjem ali na koncu?"
+      a: "Obe možnosti delujeta. Vsako zabeleženo plačilo spremeni stanja, zato plačilo sredi potovanja šteje k končnemu seznamu. Na koncu je preprosteje, ker je [celotno potovanje](page:use-case/group-trips) na enem mestu."

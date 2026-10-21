@@ -1,0 +1,116 @@
+# Guía 5 de los briefs de la oleada 2 (tasks/release-2-plan.md, P8). El ejemplo resuelto son los datos del brief;
+# todas las cifras de la prosa salen de él o de la aritmética que se muestra. El tipo es ilustrativo.
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: Cómo dividir un viaje pagado en varias monedas | Side Badger
+  description: Libras para el hotel, yenes para el ramen. Salda cada moneda por separado o convierte a un tipo que puedes ver. Las dos vías resueltas, con las cuentas.
+h1: Cómo dividir un viaje pagado en varias monedas
+navLabel: Viajes en varias monedas
+lead: Introduce cada gasto en la moneda en la que pagaste y después elige una vía. Mantén las monedas por separado y salda cada una con su propio dinero, o convierte con un tipo de cambio actual y salda una sola vez. El mismo viaje a Japón sale en cuatro pagos de la primera manera y en dos de la segunda.
+cta:
+  heading: Introdúcelo en el dinero con el que pagaste
+  body: Crea una cuenta gratis, empieza un grupo para el viaje y añade cada gasto en la moneda que saliera en el recibo. ¿Quieres ver antes los detalles? Consulta [varias monedas](page:feature/multiple-currencies) o [qué cubre lo gratis](page:pricing).
+sections:
+  - heading: Tres amigos, un hotel y muchísimos yenes
+    body: Zoe, Kenji y Lucy pasan una semana en Japón en un [viaje en grupo](page:use-case/group-trips), y todos los costes se dividen a partes iguales entre los tres. Zoe reservó el hotel desde casa, en libras, por 600 £. Lucy compró los pases de tren en Tokio por 90.000 ¥. Kenji pagó la noche de ramen, 9.000 ¥, y lo ha mencionado a diario desde entonces. Nadie quiere convertir tres recibos en el andén de una estación. Para las cuentas de aquí, 1 ¥ son 0,005 £, un tipo redondo inventado para esta guía. En la app usarías un tipo de cambio actual, o escribirías el que te aplicaron de verdad.
+  - heading: Introduce cada gasto en la moneda del recibo
+    body: Haz esta parte elijas la vía que elijas. Todavía no hay que convertir nada.
+    items:
+      - "**Crea el grupo.** En el panel elige **Crear grupo**, ponle el nombre del viaje, elige **Invitar a otros** y envía el enlace o el código QR."
+      - "**Añade el hotel.** Elige **Añadir gasto** y escribe 600, con libras como moneda junto al importe. En **¿Quién pagó?** elige a Zoe. Deja a los tres en **Dividir entre**, deja **Cómo dividir** en **Igual** y elige **Guardar gasto**."
+      - "**Añade los yenes.** Haz lo mismo con los pases de tren (pagó Lucy) y el ramen (pagó Kenji), con yenes como moneda. Los yenes no tienen decimales, así que el formulario no pide ninguno."
+  - heading: "Primera vía: mantén las monedas por separado"
+    body: Side Badger lleva un saldo para cada moneda y no compensa una con otra. En libras, el hotel sale a 200 £ por cabeza, así que Kenji y Lucy deben 200 £ cada uno a Zoe. En yenes, los pases de tren y el ramen suman 99.000 ¥, que son 33.000 ¥ cada uno. Lucy pagó 90.000 ¥ y le deben 57.000 ¥. Zoe no pagó nada en yenes y debe 33.000 ¥. Kenji pagó 9.000 ¥, así que debe 24.000 ¥.
+    items:
+      - "**Libras.** Kenji paga 200 £ a Zoe y Lucy paga 200 £ a Zoe."
+      - "**Yenes.** Zoe paga 33.000 ¥ a Lucy y Kenji paga 24.000 ¥ a Lucy."
+      - "**Cuatro pagos en total.** Zoe y Lucy se deben dinero entre sí en dos monedas que no se anulan. No interviene ningún tipo, así que no hay nada que discutir."
+      - "**Debes yenes, pagas en libras.** Quien no tiene yenes puede pagar igualmente en libras. Al registrar el pago, abre **¿Otra moneda?**, elige **Convertir a** libras y revisa el tipo. Los 33.000 ¥ de Zoe son 165 £ con el tipo de esta guía, y el saldo en yenes sigue saliendo bien."
+      - "**Registra cada pago.** Pagaos como queráis, después elige **Liquidar** y usa **Registrar liquidación**. Hay más sobre [saldar cuentas](page:feature/settle-up)."
+  - heading: "Segunda vía: convierte sobre la marcha"
+    body: Si el grupo prefiere ver un solo número cada uno, convertid al introducir el gasto.
+    items:
+      - "**Convierte en el formulario.** En **Añadir gasto**, elige **Convertir a** y escoge libras. Side Badger muestra el tipo y el importe convertido, marcado con un ≈. Edita el tipo si te aplicaron otro. El importe original en yenes se queda en el gasto."
+      - "**Lee las libras.** Con 1 ¥ = 0,005 £, los pases de tren pasan a ser 450 £ y el ramen 45 £. Con el hotel de 600 £, son 600 £ + 450 £ + 45 £ = 1.095 £, o 365 £ cada uno. Zoe pagó 600 £, así que le deben 235 £. Lucy pagó 450 £ y le deben 85 £. Kenji pagó 45 £ y debe 320 £."
+      - "**Dos pagos.** Los dos de Kenji: 235 £ a Zoe y 85 £ a Lucy. Zoe y Lucy ya no se pagan entre sí en absoluto."
+      - "**O fija una moneda de grupo.** Para ahorrarte ese paso extra, abre la **Configuración** del grupo, busca **Configuración de moneda** y elige **Convertir gastos automáticamente a**. Cada gasto nuevo se convierte entonces a esa moneda, igualmente con un tipo que puedes ver y cambiar."
+  - heading: ¿Qué vía te conviene?
+    items:
+      - "**Mantenlas por separado** cuando la gente aún tiene yenes en la cartera, o cuando prefieres no discutir por un tipo. El coste son más pagos, y en más de una moneda."
+      - "**Convierte** cuando el grupo vive en una sola moneda y quiere un número cada uno y una lista más corta, como las dos transferencias de Kenji. El coste es que el grupo se fía de un tipo, y el tipo queda fijado en cada gasto al guardarlo."
+      - "**Decidid pronto.** Una moneda de grupo solo convierte los gastos nuevos y copiados. No vuelve atrás a ordenar lo que ya has introducido."
+  - heading: El tipo y el tope
+    items:
+      - "**El tipo queda fijado al guardar.** Los gastos antiguos nunca se revalorizan, así que un saldo no se desvía porque se mueva el mercado. Los gastos introducidos en días distintos pueden llevar tipos distintos, así que, si el grupo quiere un único tipo para todo el viaje, acordadlo y escribidlo cada vez."
+      - "**¿No hay tipo? Escribe uno.** Side Badger obtiene un tipo de cambio actual cuando puede, pero no se garantiza uno para cada par. Si no hay ninguno, o una casa de cambio te dio mejor trato, escribe el tuyo."
+      - "**999.999,99 por gasto, en su propia moneda.** Un solo tope, sea cual sea el dinero. En yenes son casi 1.000.000 ¥, unas 5.000 £ con el tipo de esta guía. En una moneda con cifras grandes, como la rupia indonesia, una sola cuenta puede llegar antes. Divide la cuenta en dos gastos, o introdúcela en otra moneda y conviértela."
+  - heading: Lo que Side Badger no hace aquí
+    items:
+      - Nunca mueve ni cambia dinero. Os pagáis como queráis y después registráis el pago.
+      - Tiene 140 monedas. Las criptomonedas y los metales no están entre ellas.
+exampleAfter: 2
+example:
+  heading: Japón, saldado de dos maneras
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: el hotel, reservado en casa
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: pases de tren
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: noche de ramen
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: Preguntas
+  items:
+    - q: ¿Qué tipo de cambio usa Side Badger?
+      a: Un tipo de cambio actual, obtenido al introducir el gasto cuando hay uno disponible. Puedes cambiarlo por el tipo que te aplicaron de verdad.
+    - q: ¿Puede el grupo ceñirse a libras y yenes?
+      a: Sí. En la **Configuración** del grupo, activa **Restringir monedas para este grupo** en **Configuración de moneda**, elige las **Monedas permitidas** y fija la **Moneda predeterminada para nuevos gastos**. Menos opciones en la lista, menos equivocaciones al pagar en caja.
+    - q: ¿Tenemos que convertir?
+      a: No. Las monedas se quedan por separado salvo que tú o tu grupo decidáis convertir, y cada moneda tiene su propia lista corta de pagos.

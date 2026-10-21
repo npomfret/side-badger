@@ -1,0 +1,101 @@
+translatedFrom: "5d92090e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: Så samlar ni in till en gemensam present | Side Badger
+  description: Alla bidrar med olika belopp och en persons kort tar smällen. Gör en budgetomröstning, ange exakta belopp och låt Side Badger göra uträkningarna.
+h1: Så samlar ni in till en gemensam present
+navLabel: Samla in till present
+lead: Att samla in till en gemensam present betyder att en person lägger ut pengarna och alla andra är skyldiga den personen sitt bidrag. Kom överens om en budget med en omröstning, låt köparen lägga presenten på sitt kort och lägg sedan in den som en utgift med [exakta belopp](page:feature/split-expenses), en siffra per person. Side Badger visar vem som är skyldig köparen vad, och alla skickar sin andel hur de vill.
+cta:
+  heading: Skicka runt hatten utan hatt
+  body: Skapa en grupp, lämna den som ska få presenten utanför och lägg in presenten med exakta belopp. Side Badger är gratis, utan reklam och utan dagliga gränser. Vill du ha rundturen först? Läs [hur det fungerar](page:how-it-works) eller [vad gratis omfattar](page:pricing).
+sections:
+  - heading: Fyra vänner, en skivspelare, fyra olika summor
+    body: Bea fyller 30 och vill ha en skivspelare. Priya, Omar, Lena och Sam köper den åt henne. Priya hittar en för 240 £ och köper den med sitt eget kort, för någon måste gå först. De fyra bidrar inte lika. Priya och Omar lägger in 60 £ var, Lena 80 £ och Sam 40 £. Ingen förklarar sin siffra och ingen frågar. Omar köper dessutom ett kort och presentpapper för 12 £. Alla fyra skriver på kortet, så det delas lika.
+  - heading: Kom överens om budgeten innan någon klickar på Köp
+    body: En budgetomröstning sparar er från bråket om en skivspelare för 400 £. Välj **Lägg till omröstning** i gruppen och fråga hur mycket presenten ska kosta. Gör alternativen till belopp, till exempel upp till 150 £, upp till 200 £ och upp till 250 £. Slå på **Anonym omröstning**, som döljer vem som röstade på vad, så att ingen behöver försvara en lägre siffra högt. Inställningarna går inte att ändra när den första rösten är lagd, så kontrollera dem först. En omröstning stänger sig inte själv. När alla har röstat väljer du **Stäng omröstning** och **Vinnare** visas. Omröstningen bestämmer totalbeloppet. Den bestämmer inte någons andel.
+  - heading: Att läsa av räkningen
+    body: Presenten delas på 60 £, 60 £, 80 £ och 40 £, vilket blir de 240 £ som står på kvittot. Kortet och presentpappret delas på fyra, 3 £ var. Priyas räkning är 60 £ + 3 £, alltså 63 £, och hon betalade 240 £, så hon har 177 £ att få. Omars räkning är också 63 £, men han betalade 12 £, så han är skyldig 51 £. Lena är skyldig 80 £ + 3 £, alltså 83 £, och Sam är skyldig 40 £ + 3 £, alltså 43 £. De tre summorna blir tillsammans Priyas 177 £. Lämnas det som det är löper skulderna åt fem håll i gruppen. Side Badger föreslår i stället tre betalningar, alla till Priya. [Reglera](page:feature/settle-up) har detaljerna.
+  - heading: Lägg in det i Side Badger
+    body: Priyas del tar ungefär fem minuter.
+    items:
+      - "**Skapa gruppen.** Välj **Skapa grupp** på instrumentpanelen. Välj **Bjud in andra** och skicka länken eller QR-koden till dem som bidrar, och ingen annan."
+      - "**Lägg till presenten.** Välj **Lägg till utgift**, beskriv den, skriv 240 och välj Priya under **Vem betalade?**. Låt alla fyra stå kvar under **Dela mellan** och välj sedan **Exakta belopp** under **Hur ska det delas?** och skriv 60, 60, 80 och 40. Beloppen måste bli 240 tillsammans. Bifoga orderbekräftelsen om du vill. Välj **Spara utgift**."
+      - "**Lägg till kortet.** Omar lägger själv in de 12 £, väljer sig själv under **Vem betalade?** och låter **Hur ska det delas?** stå på **Lika**, med alla fyra markerade."
+      - "**Räkna, betala sedan.** Alla kollar **Saldon**, som visar vem som är skyldig vem, och skickar Priya sin andel hur de vill. Registrera det sedan med **Reglera** och **Registrera reglering**. Snabbreglering fyller i beloppet."
+  - heading: Köpa först eller samla in först
+    body: "Side Badger håller inte i kassan, så ”samla in” betyder egentligen att räkna. Två ordningar fungerar."
+    items:
+      - "**Köp först.** Köparen betalar, lägger in utgiften till rätt pris och alla ser sin andel direkt. Det är ordnat, men köparen bär kostnaden tills folk betalar, så välj en köpare som klarar det."
+      - "**Samla in först.** Folk skickar sin summa till köparen före köpet. När ni vet priset lägger ni in presenten och registrerar sedan varje betalning med det datum pengarna faktiskt flyttades. Lägg in presenten först, så att varje betalning har ett saldo att landa mot."
+      - "**Priset ändras.** Frakt, en rabattkod, en sen prishöjning. Redigera presenten och ändra de exakta beloppen så att de fortfarande går ihop. Den tidigare versionen sparas, men säg till gruppen först, eftersom deras saldon ändras."
+  - heading: Håll Bea utanför
+    body: Bara medlemmar i en grupp kan se den, så Bea kan inte se en grupp hon inte är med i. Bjud in dem som bidrar och ingen annan. En länk fungerar tills den går ut, och du kan välja allt från 15 minuter till 5 dagar, så välj en kort och skicka den dit Bea inte ser den. Länken visar en förhandsvisning av gruppen för den som öppnar den, så döp gruppen till något tråkigt, till exempel Lördagskassan, och håll Beas namn borta från utgiftsetiketter och omröstningsalternativ också.
+  - heading: Vad Side Badger inte gör här
+    items:
+      - Den håller inte i eller samlar in pengarna. Bidragen går till köparen via banköverföring, kontanter eller vad ni nu använder, och sedan registrerar någon dem.
+      - Den skickar inga betalningspåminnelser. Att puffa på den som inte har betalat är fortfarande ett mänskligt jobb.
+      - Den räknar inte ut någons andel. En omröstning bestämmer budgeten och det finns inget alternativ som delar det som är kvar, så du skriver in varje belopp.
+      - Varje utgift har en betalare. Om två personer köpte olika delar av presenten lägger du in två utgifter.
+      - Alla som ingår i delningen behöver ett gratis konto och en plats i gruppen.
+exampleAfter: 2
+example:
+  heading: Beas skivspelare, och kortet
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: presenten
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: kort och presentpapper
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: Frågor
+  items:
+    - q: Vad gör vi om vi samlar in mer än presenten kostar?
+      a: De exakta beloppen måste bli lika med priset, så trimma andelarna tills de gör det. Eller lägg överskottet på något verkligt, till exempel blommor, och lägg in det som en andra utgift, som kortet och presentpappret i exemplet.
+    - q: Kan någon bidra utan att gå med i gruppen?
+      a: Inte om du vill ha med personen i uträkningen. Alla som ingår i delningen behöver ett gratis konto och ska vara med i gruppen. För någon som bara har kontanter kan Priya ta emot dem och lägga in presenten för det gruppen fortfarande är skyldig. Om Sam till exempel gav henne 40 £ i kontanter skulle hon lägga in 200 £ och dela det 60, 60 och 80 mellan sig själv, Omar och Lena.
+    - q: Kan omröstningen avgöra hur mycket var och en bidrar med?
+      a: Nej. En omröstning bestämmer en siffra för hela gruppen, till exempel budgeten. Var och ens andel bestämmer ni själva, och skriver sedan in i utgiften som **Exakta belopp**.

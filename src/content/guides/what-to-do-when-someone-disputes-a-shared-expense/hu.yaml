@@ -1,0 +1,102 @@
+translatedFrom: "0900d953"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Mit tegyél, ha valaki vitatja a közös költséget | Side Badger"
+  description: "Felejtsd el a szúrós üzenetet. Kérdőjelezd meg inkább a költséget, és amíg beszélgettek, kikerül mindenki egyenlegéből. Végigszámolva 45 £ házibuli-borral."
+h1: "Mit tegyél, ha valaki vitatja a közös költséget"
+navLabel: "Vitatott költségek"
+lead: "Szúrós üzenet helyett tegyél fel egy kérdést a költségnél. Amíg a kérdés nyitva van, az egész költség kimarad mindenki egyenlegéből. Beszéljétek meg a hozzászólásokban, szerkesszétek át a felosztást, ha a csoport egyetért, a kérdést pedig az zárja le, aki feltette, vagy egy adminisztrátor."
+cta:
+  heading: "Tedd fel udvariasan a kínos kérdést"
+  body: "Hozz létre ingyenes fiókot, indíts csoportot a lakásnak, és kérd meg egy adminisztrátort, hogy kapcsolja be a költségekkel kapcsolatos kérdéseket, amelyek addig ki vannak kapcsolva, amíg valaki be nem kapcsolja. Előbb megnéznéd, hogyan megy? Olvasd el, [hogyan működik](page:how-it-works), vagy azt, [mit tartalmaz az ingyenes használat](page:pricing)."
+sections:
+  - heading: "Három lakótárs és 45 £ bor"
+    body: "A buli után Tom hozzáadja a bort a lakás csoportjához. 45 £, Tom fizette, egyenlően osztva Tom, Priya és Aisha között, vagyis fejenként 15 £. Aisha nem iszik. Tom a bulira vette, a buli pedig a [lakásnak](page:use-case/housemates) szólt, tehát nem tett semmi rosszat. Aisha sem téved, amikor rákérdez. Itt senki nem a gonosz. Csak 15 £ bor van vitában, és sok módja a helyzet kínossá tételének. Az egyik egy szúrós üzenet az egész háznak. Egy szelídebb módszer egy kérdés a költségnél."
+  - heading: "Mit csinál egy kérdés"
+    body: "Aisha megnyitja a költséget, és feltesz egy kérdést. Az egész költség kikerül mindenki egyenlegéből, nem csak az ő része, és semmi más nem változik. A nagybevásárlás (84 £) és a takarító (60 £) még számít, ami fejenként 28 £ + 20 £ = 48 £. Tehát amíg a bor függőben van, Aisha tartozása 48 £, Tomnak 36 £ jár, Priyának 12 £. Bármit dönt a lakás a borról, addig senki egyenlegében nem szerepel. A költségben szereplő bárki más is feltehet saját kérdést. A bor csak akkor kerül vissza az egyenlegekbe, ha az utolsó nyitott kérdést is lezárták, a kérdést pedig az zárja le, aki feltette, vagy egy adminisztrátor."
+  - heading: "Megbeszélés, aztán javítás"
+    body: "Aisha kérdése a költség hozzászólásai közé kerül, így a válaszok közvetlenül alatta ülnek. A [Tervezzetek együtt](page:feature/plan-together) oldalon többet olvashatsz a hozzászólásokról és kérdésekről. Tom és Priya elolvassa, és a lakás elbeszélget. Úgy döntenek, hogy a bor Tomé és Priyáé volt, mert ők itták meg. Egy másik lakás megtarthatná a háromfelé osztást, vagy megegyezhetne valamiben a kettő között, és az is rendben lenne. A Side Badger eltárolja, amiben megegyeztek, és nincs véleménye a borról. Tom úgy szerkeszti a költséget, hogy az egyenlően oszoljon meg közte és Priya között, ami fejenként 22,50 £ (45 £ ÷ 2). Aisha már nincs benne, ezért a kérdése a régi változattal együtt elmegy, a bor pedig visszakerül az egyenlegekbe. A korábbi változat megmarad."
+  - heading: "Az eredmény leolvasása"
+    body: "Miután a bor visszakerült, Tomnak 58,50 £ jár, Priya tartozása 10,50 £, Aisha tartozása pedig 48 £. A Side Badger két kifizetést javasol, mindkettőt Tomnak. Aisha 48 £-ja ugyanaz az összeg, amely a bor függőben tartása alatt volt, mert ő nincs benne. Priya 12 £ követelésből 10,50 £ tartozásba került, ez a bor rá eső, 22,50 £-os fele. Ha a háromfelé osztás érvényben maradt volna, Aisha tartozása 63 £ lett volna (28 £ + 20 £ + 15 £). Az egész nézeteltérés 15 £-ot ért. Fizessetek egymásnak, ahogy akartok, aztán rögzítsetek minden kifizetést a **Tartozásrendezés** alatt. Az [elszámolás](page:feature/settle-up) a többit leírja."
+  - heading: "Úgy fogalmazd, hogy az emberek továbbra is szóba álljanak veled"
+    body: "Aisha kérdése: „Nem ittam a borból. Megnézhetnénk a felosztást?” Rövid, megnevezi a költséget, és kérdez, nem vádol. Pár szokás segít."
+    items:
+      - "**A költségről kérdezz, ne a személyről.** „Megnézhetnénk a bor felosztását?” beszélgetést indít. „Miért terheltek meg a te boroddal?” a másik fajtát."
+      - "**Mondd meg, mit szeretnél.** „Lehetne csak azoké, akik itták?” ad a csoportnak valamit, amivel egyetérthet vagy amire válaszolhat."
+      - "**Indokolj egy-két mondatban.** A mező neve **Az Ön kérdése**, és nem hagyható üresen."
+      - "**A válaszok egy helyen legyenek.** A válaszok a költség hozzászólásaiba kerülnek, a számok mellé, amelyekről szólnak."
+  - heading: "Állítsd be a Side Badgerben"
+    items:
+      - "**Kapcsold be a kérdéseket.** Alapból ki vannak kapcsolva. Egy adminisztrátor megnyitja a csoport **Beállítások** részét, az **Általános** lapon a **Funkciók** alatt bekapcsolja a **Kiadásokra vonatkozó kérdések engedélyezése** lehetőséget, és a **Mentés** gombot választja. Ha később kikapcsolja, minden nyitott kérdés törlődik."
+      - "**Tegyél fel egyet.** Nyisd meg a költséget, és a felosztásban a saját neved mellett válaszd a **Van egy kérdésem** gombot. Írd be az indokot a kérdés mezőjébe (**Az Ön kérdése**), és válaszd ismét a **Van egy kérdésem** gombot. Ezt csak a költségben szereplők tehetik meg. A költségen ekkor megjelenik egy **Kérdőre vont** jelvény."
+      - "**Találd meg, ami függőben van.** A költséglistában a **Csak kérdőre vont** azokat a költségeket mutatja, amelyeken nyitott kérdés van."
+      - "**Javítsd ki, ha a csoport egyetért.** Nyisd meg a költséget, válaszd a **Szerkesztés** lehetőséget, módosítsd a **Megosztás közöttük** mezőt, és válaszd a **Kiadás frissítése** lehetőséget. Hogy ki szerkeszthet, a csoport jogosultságain múlik."
+      - "**Zárd le, ha semmit nem kell javítani.** Aki a kérdést feltette, a **Kérdőre vont** jelvényén lévő lezáró gombbal (felirata: **Kérdés lezárása**) zárhatja le, és egy adminisztrátor is. A költség visszakerül az egyenlegekbe, amint az utolsó kérdését is lezárták."
+  - heading: "Amikor nem ennyire tiszta a helyzet"
+    items:
+      - "**A szerkesztés bent tartja a kérdezőt.** Ha aki a kérdést feltette, még benne van a költségben, a kérdése átkerül a szerkesztett változatra, és arra vár, hogy ő vagy egy adminisztrátor lezárja. Az összeg kijavítása nem ugyanaz, mint egyetérteni abban, hogy ki van javítva."
+      - "**Te nem voltál benne a költségben.** Egy költséget csak a benne szereplők kérdőjelezhetnek meg. Ha neked valami gyanús, írd meg a hozzászólásai között, vagy kérdezd meg azt, aki felvitte."
+      - "**Valaki ki akar lépni a csoportból.** Egy nyitott kérdés megakadályozza, hogy az abban a költségben szereplők kilépjenek. Zárd le a kérdést, vagy szerkeszd úgy a költséget, hogy már ne szerepeljenek benne, és mehetnek."
+  - heading: "Mit nem csinál itt a Side Badger"
+    items:
+      - "Nem dönti el, kinek van igaza. Kiveszi a költséget az egyenlegekből, és megőrzi, amiben megegyeztek."
+      - "Nem kéri, hogy bárki jóváhagyjon költségeket, mielőtt számítanak. Csak a megkérdőjelezett költség van függőben."
+      - "Nem tudja visszatartani egy költségnek csak az egyik részét. Kérdőjelezd meg, és az egész kikerül az egyenlegekből."
+      - "Nem mozgat pénzt. Fizettek egymásnak, ahogy akartok, és rögzítitek."
+exampleAfter: 3
+example:
+  heading: "A lakás a bor után"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "a nagybevásárlás"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "a takarító"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "a bulibor"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+faq:
+  heading: "Kérdések"
+  items:
+    - q: "Megkérdőjelezhetem csak a saját részemet?"
+      a: "Nem. Egy kérdés az egész költséget kiveszi, mindenkinek, aki benne van. Ha csak a felosztás rossz, a megoldás a felosztás szerkesztése."
+    - q: "Ki zárhat le egy kérdést?"
+      a: "Aki feltette, vagy egy csoportadminisztrátor. Ha a költséget felvivő személy nem adminisztrátor, nem zárhatja le a kérdező helyett."
+    - q: "A szerkesztés törli az eredetit?"
+      a: "Nem. A korábbi változat megmarad. Hogy ki szerkeszthet, a csoport jogosultságai döntik el, ezért érdemes előbb szólni a háznak, mert az egyenlegek változnak."

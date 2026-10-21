@@ -1,0 +1,85 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+meta:
+  title: "Frais de couple : 50/50 ou selon les revenus | Side Badger"
+  description: "Partagez les dépenses ennuyeuses sans que la soirée tourne à la revue financière. 50/50, selon les revenus ou facture par facture : voyez qui doit quoi. Gratuit."
+h1: "Partager les frais en couple, équitablement"
+navLabel: Couples
+lead: "Partagez les dépenses ennuyeuses sans que la soirée en amoureux tourne à la revue financière trimestrielle. Side Badger tient un seul compte courant du loyer, des factures et des courses pour les **couples** qui partagent un logement, un canapé et un vague souvenir de qui a payé l'abonnement internet. Partagez à 50/50, selon les revenus ou facture par facture, et voyez qui doit quoi à qui."
+cta:
+  heading: "Lancez un groupe à deux"
+  body: "Créez un compte, faites un groupe et envoyez le lien d'invitation à votre partenaire. Le plat à emporter de ce soir peut être la première dépense."
+scenario:
+  heading: "Équitable ne veut pas forcément dire 50/50"
+  body: "Sam et Alex partagent un logement. Sam gagne plus, donc ils ont convenu que Sam supporte 60 % du loyer et Alex 40 %. Sam paie le propriétaire, Alex fait les courses, et tous deux sont assez sûrs que tout s'équilibre. « Assez sûrs », c'est comme ça qu'une note sur le téléphone de quelqu'un devient un désaccord durable. Alors faites un groupe pour vous deux, choisissez le nom que vous voulez que votre partenaire voie, et envoyez-lui le lien d'invitation ou le code QR. Ajoutez chaque coût quand il arrive, dites qui a payé et comment il se partage, et laissez le groupe tenir le compte. Faites un groupe distinct pour chaque départ en vacances (voir [voyages en groupe](page:use-case/group-trips)), pour que les vols restent hors des courses."
+sections:
+  - heading: "50/50, selon les revenus, ou facture par facture"
+    body: "Il n'existe pas de partage universellement équitable, seulement celui sur lequel vous êtes d'accord tous les deux, idéalement avant la première facture plutôt qu'après le premier soupir. Voici les trois habituels."
+    items:
+      - "**50/50.** Choisissez **Égal** et chacun doit la moitié. Cela convient aux coûts partagés quand vos revenus sont proches, et cela ne demande aucun calcul."
+      - "**Selon les revenus.** Si l'un de vous gagne plus, partagez selon la part de chacun dans l'argent qui rentre. Convenez d'abord de ce qui compte (le salaire net est le choix courant), additionnez les deux et divisez le vôtre par le total. Si l'un de vous touche trois parts quand l'autre en touche deux, cela donne 3 ÷ (3 + 2) = 60 %, donc l'un de vous prend 60 % à sa charge et l'autre 40 %. Arrondissez à des pourcentages entiers et saisissez-les sous **Pourcentage**, où ils doivent faire 100 au total. Il n'y a nulle part où saisir votre salaire, donc vous ne tapez jamais que les pourcentages."
+      - "**Facture par facture.** Chaque dépense a son propre partage, donc vous pouvez mélanger : le loyer selon les revenus, les courses à 50/50, et un cadeau commun en **Montants exacts** si chacun a choisi ce qu'il y met."
+      - "**Quand les salaires changent,** utilisez les nouveaux pourcentages à partir de la dépense suivante. Les dépenses antérieures gardent le partage avec lequel elles ont été saisies. Pour voir les calculs faits avec de vraies fiches de paie, lisez [comment partager les factures avec un partenaire qui gagne plus](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: "Le point mensuel"
+    body: "Une fois par mois, ou dès que les chiffres commencent à démanger, ouvrez le groupe et consultez les **Soldes**. À deux, il n'y a jamais qu'un seul paiement dans chaque devise, de celui qui doit à celui à qui l'on doit. Prenons le mois de Sam et Alex. Sam a payé le loyer de 1 500 £, et les 40 % d'Alex en représentent 600 £. Alex a payé 90 £ de courses, partagées à parts égales, donc la moitié de Sam, c'est 45 £. Side Badger compense l'un par l'autre, 600 £ moins 45 £, et Alex paie 555 £ à Sam. Payez comme vous voulez, par virement bancaire, en espèces ou avec un service rendu, puis enregistrez-le via **Régler** pour que le solde revienne à zéro. Il n'y a pas de factures récurrentes, donc copiez le loyer du mois dernier, changez la date et continuez. Side Badger ne fait pas circuler l'argent et n'envoie pas de rappels, donc relancer reste à votre charge."
+  - heading: "Rien que vous deux"
+    body: "Un groupe de deux a deux membres, et seuls les membres d'un groupe peuvent le voir. Votre partenaire le rejoint avec le lien d'invitation ou le code QR. Un lien peut durer de 15 minutes à 5 jours, donc choisissez la durée la plus courte qui laisse à votre partenaire le temps de l'utiliser. Créer un nouveau lien n'annule pas les anciens, donc ne les laissez pas dans une discussion qui inclut d'autres personnes. Toute personne qui utilise un lien encore actif peut rejoindre, donc si vous voulez en être sûr, activez l'approbation et un admin laisse entrer chaque personne. Votre partenaire a besoin de son propre compte, qui est gratuit."
+exampleAfter: 2
+example:
+  heading: "Qui doit quoi à qui ce mois-ci"
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: Loyer
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: Courses
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: "Les fonctionnalités qu'un couple utilise"
+faq:
+  heading: Questions
+  items:
+    - q: "Peut-on fixer le 60/40 une fois pour tout ?"
+      a: "Non. Le partage appartient à chaque dépense. Réglez les pourcentages sur la première, puis copiez-la la fois suivante et changez ce qui diffère. [Partager les dépenses](page:feature/split-expenses) présente les trois façons de partager."
+    - q: "Est-il relié à notre banque ?"
+      a: "Non. Side Badger ne touche jamais à votre argent. Vous vous remboursez comme vous voulez, puis vous l'enregistrez, comme l'explique [régler les comptes](page:feature/settle-up)."
+    - q: "Quelqu'un d'autre peut-il voir notre groupe ?"
+      a: "Seulement ses membres, et le groupe d'un couple en a deux. Toute personne qui utilise un lien d'invitation encore actif peut rejoindre, donc partagez-le avec une seule personne et donnez-lui une expiration courte."
+    - q: "Et si nous avons chacun payé une partie de la même facture ?"
+      a: "Une dépense n'a qu'une seule personne qui a payé. Saisissez deux dépenses, une pour chacun de vous, et le solde est le même."
+    - q: "Rappellera-t-il à mon partenaire de payer ?"
+      a: "Non. Il n'y a pas de rappels, donc relancer reste à votre charge. Au moins, vous regarderez tous les deux le même chiffre."
+    - q: "Que se passe-t-il quand on arrête de partager les frais ?"
+      a: "Réglez le solde et enregistrez le paiement, pour que plus personne ne doive rien. Ensuite, un admin peut verrouiller le groupe, ce qui garde les chiffres tels quels, ou le fermer pour de bon, ce qui le rend inaccessible à tous. Ne le fermez que si aucun de vous deux n'a besoin de l'historique."
+identicalApproved:
+  - navLabel
+  - example.people.0.name
+  - example.people.1.name
+  - faq.heading

@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Pomoć i podrška | Side Badger"
+  description: "Zaboravljena lozinka, poveznica koja ne radi, krivo zabilježena uplata? Kratki odgovori na ono oko čega ljudi zapnu u Side Badgeru i kako nas kontaktirati."
+h1: "Pomoć i podrška, bez glazbe na čekanju"
+navLabel: "Pomoć i podrška"
+lead: "Kratki odgovori na ono oko čega ljudi zapnu, od zaboravljene lozinke do trajnog zatvaranja grupe. Svaki vodi na stranicu koja objašnjava više. Ne nalaziš svoje pitanje? Javi nam iz aplikacije ili nam napiši poruku."
+cta:
+  heading: "Tu si zbog pomoći, a ostaješ zbog dijeljenja?"
+  body: "Nemaš još korisnički račun? Osnuj grupu, podijeli poveznicu i dodaj prvi trošak. Besplatno, bez oglasa i bez dnevnih ograničenja."
+groups:
+  - heading: "Prijava"
+    items:
+      - q: "Zaboravljena lozinka?"
+        a: "Događa se i najboljim jazavcima. Na zaslonu **Prijava** odaberi **Zaboravili ste lozinku?**, upiši e-adresu svog korisničkog računa, a zatim slijedi poveznicu u e-poruci koju ti šaljemo da odabereš novu. [Kako radi](page:how-it-works) opisuje što još treba za korisnički račun."
+      - q: "Registracija je gotova, ali ništa ne mogu dodati. Zašto?"
+        a: "Najčešće tvoja e-adresa još nije potvrđena, pa otvori poveznicu u e-poruci za verifikaciju ili na podsjetniku odaberi **Ponovno pošalji e-poštu za verifikaciju** da dobiješ novu. Ako je potvrđena, grupa je možda zaključana ili ti dopuštenja grupe to ne dopuštaju, a promatrač vidi sve i ništa ne mijenja, kako objašnjavaju [grupe i dopuštenja](page:feature/groups-and-permissions)."
+      - q: "Kako promijeniti e-adresu ili lozinku?"
+        a: "Otvori **Postavke** i odaberi **Promijeni e-poštu** ili **Promijeni lozinku**. Oboje najprije traže tvoju trenutačnu lozinku, a novu e-adresu treba potvrditi poveznicom koju joj šaljemo. [Kako radi](page:how-it-works) opisuje korisničke račune."
+      - q: "Mogu li se prijaviti preko Googlea ili Applea?"
+        a: "Ne. Dovoljni su e-adresa i lozinka od najmanje 12 znakova, a na vlastitom telefonu ili računalu možeš označiti **Zapamti me**. Stranica o [web-aplikaciji](page:feature/web-app) opisuje ostatak početka rada."
+  - heading: "Pridruživanje grupi"
+    items:
+      - q: "Netko mi je poslao poveznicu za poziv. Kako se pridružiti?"
+        a: "Otvori je, a zatim se prijavi ili napravi besplatan korisnički račun. Vidjet ćeš pregled grupe, odabrati ime pod kojim će te tamo ljudi vidjeti i pritisnuti **Pridruži se grupi**. [Grupe i dopuštenja](page:feature/groups-and-permissions) prikazuju cijeli put unutra."
+      - q: "Piše „Čeka se odobrenje“. Radim li nešto krivo?"
+        a: "Uopće ne. U ovoj grupi administrator pušta svaku osobu unutra, pa je tvoj zahtjev otišao njezinim administratorima, a unutra ne možeš gledati dok ga jedan od njih ne odobri. Prijateljski podsjetnik uživo je dopušten, a odobravanje objašnjavaju [grupe i dopuštenja](page:feature/groups-and-permissions)."
+      - q: "Poveznica kaže da je nevažeća ili je istekla."
+        a: "Poveznice za poziv traju onoliko koliko odabere osoba koja ih je napravila, od 15 minuta do 5 dana. Zamoli nekoga iz grupe za novu poveznicu ili za QR kod ako ste u istoj prostoriji. [Kako radi](page:how-it-works) opisuje pozive."
+  - heading: "Troškovi"
+    items:
+      - q: "Kako dodati trošak?"
+        a: "Otvori grupu i odaberi **Dodaj trošak**. Reci što je bilo, koliko, tko je platio i tko ga je dijelio, a zatim ga podijeli jednako, po točnim iznosima ili po postocima. [Podjela troškova](page:feature/split-expenses) prolazi kroz svaku opciju."
+      - q: "Može li se najamnina ponavljati svaki mjesec?"
+        a: "Ne sama od sebe, jer nema ponavljajućih troškova. Otvori prošlomjesečni i odaberi **Kopiraj trošak**, pa obrazac stiže ispunjen, spreman za novi datum i sve što se promijenilo. [Podjela troškova](page:feature/split-expenses) ima više o kopiranju."
+      - q: "Upisan je krivi iznos. Mogu li ga ispraviti?"
+        a: "Da. Uredi trošak, ako ti to dopuštenja grupe dopuštaju i grupa nije zaključana. Ranija verzija se čuva, pa nitko ne mora vjerovati tvojoj riječi o tome što se promijenilo, kako objašnjava [podjela troškova](page:feature/split-expenses)."
+      - q: "Trošak izgleda krivo, a nije moj. Što sad?"
+        a: "Na njemu odaberi **Imam pitanje** i reci zašto, pa cijeli trošak ostaje izvan svačijih stanja dok osoba koja je pitala ili administrator ne zatvori pitanje. Nema takvog gumba? Pitati mogu samo osobe uključene u trošak, administrator najprije mora u postavkama grupe uključiti **Dopusti pitanja o troškovima**, a diplomaciju donosi [vodič o osporenom trošku](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Uplate"
+    items:
+      - q: "Šalje li Side Badger novac?"
+        a: "Ne, Side Badger nikad ne premješta novac. Platite si kako god želite, bankovnim prijenosom, gotovinom ili čime god radi, a zatim zabilježite uplatu da se stanja ažuriraju. [Kako se poravnati nakon grupnog putovanja](page:guide/how-to-settle-up-after-a-group-trip) prolazi kroz to od početka do kraja."
+      - q: "Kako zabilježiti uplatu?"
+        a: "U grupi odaberi **Poravnaj**, reci tko je platio i tko je primio uplatu, upiši iznos ili pusti da ga ispuni gumb **Brzo poravnanje**, i odaberi **Zabilježi poravnanje**. Plaćen je samo dio? Zabilježi što je plaćeno, a ostatak ostaje na stanju, kako objašnjava [poravnanje](page:feature/settle-up)."
+      - q: "Krivo je zabilježena uplata. Mogu li je ispraviti?"
+        a: "Tko ju je zabilježio, može je urediti iz povijesti **Poravnanja** grupe, a ta osoba ili administrator mogu je izbrisati, čime nestaje sa stanja. Uplata u kojoj sudjeluje netko tko je u međuvremenu napustio grupu ne može se uređivati. [Poravnanje](page:feature/settle-up) opisuje povijest."
+  - heading: "Obavijesti i početni zaslon"
+    items:
+      - q: "Kako uključiti obavijesti?"
+        a: "Otvori **Postavke**, uključi **Push obavijesti** i dopusti ih kad preglednik pita. Ako ih je preglednik već blokirao, najprije ih dopusti u njegovim postavkama. Svaki se uređaj uključuje zasebno, a isporuka nije zajamčena, pa obavijest shvati kao poticaj, a ne kao obećanje, kako objašnjava stranica o [web-aplikaciji](page:feature/web-app)."
+      - q: "Zašto obavijesti ne rade na mom iPhoneu?"
+        a: "Na iPhoneu ili iPadu rade samo u aplikaciji dodanoj na početni zaslon, nikad u kartici preglednika. Dodaj je, otvori je s ikone na početnom zaslonu, a zatim ih uključi u **Postavkama**. [Planiranje zajedno](page:feature/plan-together) pokazuje o čemu te obavještavaju."
+      - q: "Postoji li aplikacija za preuzimanje?"
+        a: "Ne iz trgovine aplikacijama, jer Side Badger radi u pregledniku. Prijavi se, otvori **Postavke** i slijedi **Dodaj na početni zaslon ili u Dock**, pa se otvara kao aplikacija, u vlastitom prozoru. Stranica o [web-aplikaciji](page:feature/web-app) ima korake za svaki uređaj."
+  - heading: "Napuštanje, arhiviranje, zaključavanje i zatvaranje"
+    items:
+      - q: "Kako napustiti grupu?"
+        a: "Poravnaj se, a zatim odaberi **Napusti grupu**. Ne možeš otići dok duguješ ili ti se duguje novac, makar samo u jednoj valuti, dok trošak u kojem sudjeluješ ima otvoreno pitanje, ni ako si posljednji administrator ili jedini član, a za povratak treba nova pozivnica. [Grupe i dopuštenja](page:feature/groups-and-permissions) donose pojedinosti."
+      - q: "Kako maknuti staru grupu s nadzorne ploče?"
+        a: "Odaberi **Arhiviraj grupu**. Nestaje s tvoje nadzorne ploče, ali ne i s ploče nikoga drugog, i dalje je možeš otvoriti i koristiti, a **Odarhiviraj grupu** je vraća. [Grupe i dopuštenja](page:feature/groups-and-permissions) uspoređuju arhiviranje, zaključavanje i zatvaranje."
+      - q: "Putovanje je gotovo. Možemo li spriječiti da se brojke mijenjaju?"
+        a: "Da. Administrator može u postavkama grupe uključiti **Zaključaj grupu**, pa nitko ne može dodavati ni uređivati troškove, bilježiti nove uplate ni mijenjati popise i ankete dok administrator ne otključa grupu. Svi i dalje mogu čitati grupu i njezinu povijest, a nijedan zakašnjeli taksi ne može se provući, kako objašnjavaju [grupe i dopuštenja](page:feature/groups-and-permissions)."
+      - q: "Mogu li izbrisati grupu?"
+        a: "Administrator je može zatvoriti s **Zatvori grupu**, nakon što upiše naziv grupe radi potvrde. Zatvaranje je trajno i grupu čini nedostupnom svima, pa je, ako je samo želiš maknuti s očiju, radije arhiviraj. [Grupe i dopuštenja](page:feature/groups-and-permissions) imaju sitni tisak."
+contact:
+  heading: "Još zapinješ?"
+  items:
+    - q: "Našla se greška ili želiš da se nešto promijeni?"
+      a: "Javi nam iz aplikacije. U izborniku svog korisničkog računa odaberi **Povratne informacije**, zatim **Pošalji povratnu informaciju** i odaberi **Prijavi problem**, **Zatraži pomoć** ili **Zahtjev za značajkom**. Priloži snimku zaslona ako pomaže, a kad odgovorimo, odgovor ćeš naći u istoj niti."
+    - q: "Radije pišeš e-poštom?"
+      a: "Piši na adresu ispod. Navedi o kojoj se grupi radi, što si napravio/la i što si očekivao/la da će se dogoditi. Ispuhivanje je u redu, lozinke nisu, zato nikad ne šalji svoju."
+  emailLabel: "Piši nam na"
+  email: support@sidebadger.me

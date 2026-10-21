@@ -1,0 +1,98 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+identicalApproved:
+  - navLabel
+meta:
+  title: "Help and support, no wahala | Side Badger"
+  description: "You forget password, link no dey work, or you record payment wrong? Short answers to wetin dey make people hang for Side Badger, and how to reach us."
+h1: "Help and support, without di hold music"
+navLabel: "Help and support"
+lead: "Short answers to di things wey people dey get stuck on, from forgotten password to closing group for good. Each one link to di page wey explain more. You no see yours? Tell us from inside di app, or drop us line."
+cta:
+  heading: "You come for help, you stay for di sharing?"
+  body: "You never get account? Start group, share di link and add di first expense. Free, with no ads and no daily limits."
+groups:
+  - heading: "How to sign in"
+    items:
+      - q: "You forget your password?"
+        a: "E dey happen to even di best badgers. Choose **You forget password?** for di **Sign in** screen, enter your account email, then follow di link for di email wey we send to choose new one. [How e dey work](page:how-it-works) cover wetin else account need."
+      - q: "I don sign up, but I no fit add anything. Why?"
+        a: "Most times, na because dem never verify your email, so open di link for di verification email, or choose **Send verification again** for di reminder banner to get fresh one. If dem don verify you, di group fit dey locked or im permissions fit no allow you, and viewer dey see everything and change nothing, as [groups and permission dem](page:feature/groups-and-permissions) explain."
+      - q: "How I go change my email or password?"
+        a: "For **Settings page**, choose **Chenj Email** or **Chenj Paswod**. Both go ask for your current password first, and new email address need verification from di link wey we send to am. [How e dey work](page:how-it-works) cover accounts."
+      - q: "I fit sign in with Google or Apple?"
+        a: "No. Na only email address and password of at least 12 characters you need, and you fit tick **Memba mi** for your own phone or computer. Di [web app](page:feature/web-app) page cover di rest of how to start."
+  - heading: "How to join group"
+    items:
+      - q: "Somebody send me invite link. How I go join?"
+        a: "Open am, then sign in or create free account. You go see preview of di group, choose di name wey people go see for you there, and press **Join Grup**. [Groups and permission dem](page:feature/groups-and-permissions) show di whole way enter."
+      - q: "E talk say “E dey wait for admin”. I do something wrong?"
+        a: "No at all. Dis group get admin wey dey let each person enter, so your request don go to im admins, and you no fit see inside until one of dem approve am. Friendly nudge in person dey allowed, and [groups and permission dem](page:feature/groups-and-permissions) explain approval."
+      - q: "Di link talk say e no valid or e don expire."
+        a: "Invite link dey last as long as di person wey make am choose, from 15 minutes up to 5 days. Ask somebody for di group for fresh link, or for di QR code if una dey di same room. [How e dey work](page:how-it-works) cover invites."
+  - heading: "Expense dem"
+    items:
+      - q: "How I go add expense?"
+        a: "Open di group and choose **Add expense**. Talk wetin e be, how much, who pay and who share am, then share am equal-equal, by exact amounts or by percentage. [Share expenses](page:feature/split-expenses) go waka you through every option."
+      - q: "Rent fit repeat every month?"
+        a: "No, e no dey do am by itself, because no recurring expenses dey. Open last month own and choose **Kopi expense**, and di form go come filled in, ready for new date and whatever change. [Share expenses](page:feature/split-expenses) get more on copying."
+      - q: "I type wrong amount. I fit fix am?"
+        a: "Yes. Edit di expense, as long as di group permissions allow you and di group no lock. Di earlier version dey kept, so nobody need take your word for wetin change, as [share expenses](page:feature/split-expenses) explain."
+      - q: "One expense look wrong, and e no be mine. Wetin I go do?"
+        a: "Choose **I get question** on am and talk why, and di whole expense go stay out of everybody balances until di person wey ask, or admin, close di question. You no see di button? Only people wey dey inside one expense fit ask, admin must first turn on **Allow expense questions** for di group settings, and di [disputed expense guide](page:guide/what-to-do-when-someone-disputes-a-shared-expense) get di diplomacy."
+  - heading: "Payment dem"
+    items:
+      - q: "Side Badger dey send di money?"
+        a: "No, Side Badger no dey ever move money. Pay each other anyhow you like, by bank transfer, cash or whatever work, then record di payment so di balances go catch up. [How to settle up after group trip](page:guide/how-to-settle-up-after-a-group-trip) go waka through am from start to finish."
+      - q: "How I go record payment?"
+        a: "Choose **Settle up** for di group, talk who pay and who collect am, enter di amount or make **Kwik settul** button fill am, and choose **Rekod Settlement**. You pay only part? Record wetin dem pay and di rest go stay on di balance, as [settle up](page:feature/settle-up) explain."
+      - q: "I record payment wrong. I fit fix am?"
+        a: "Whoever record am fit edit am from di group **Payments** history, and dem or admin fit delete am, wey go comot am from di balances. Payment wey involve person wey don leave di group no fit edit. [Settle up](page:feature/settle-up) cover di history."
+  - heading: "Notifications and di home screen"
+    items:
+      - q: "How I go turn on notifications?"
+        a: "Switch on **Push notifikashons** for **Settings page** and allow dem when your browser ask. If di browser don block dem already, allow dem for im own settings first. Each device dey switch on separately and delivery no dey guaranteed, so treat notification as nudge, no be promise, as di [web app](page:feature/web-app) page explain."
+      - q: "Why notifications no dey work for my iPhone?"
+        a: "For iPhone or iPad, dem only dey work for di app wey you add to your Home Screen, never for browser tab. Add am, open am from di Home Screen icon, then switch dem on for **Settings page**. [Plan together](page:feature/plan-together) show wetin dem dey tell you about."
+      - q: "Dem get app wey I fit download?"
+        a: "No for app store, because Side Badger dey run for your browser. Sign in, then follow **Add am to Home Screen or Dock** for **Settings page**, and e go open like an app, for window of im own. Di [web app](page:feature/web-app) page get di steps for each device."
+  - heading: "How to leave, archive, lock and close group"
+    items:
+      - q: "How I go leave group?"
+        a: "Settle up first, then choose **Comot from group**. You no fit leave while you owe or dem owe you money for even one currency, while expense wey you dey inside get open question, or if you be di last admin or di only member, and to come back need new invitation. [Groups and permission dem](page:feature/groups-and-permissions) get di details."
+      - q: "How I go take old group commot from my dashboard?"
+        a: "Choose **Keep for corner**. E go disappear from your dashboard and nobody else own, you fit still open and use am, and **Bring out from corner** go bring am back. [Groups and permission dem](page:feature/groups-and-permissions) compare archiving, locking and closing."
+      - q: "Di trip don end. We fit stop di numbers from changing?"
+        a: "Yes. Admin fit switch on **Lock group** for di group settings, and nobody go fit add or edit expenses, record new payments or change lists and polls until admin unlock am. Everybody still fit read di group and im history, and no late taxi go sneak in, as [groups and permission dem](page:feature/groups-and-permissions) explain."
+      - q: "I fit delete group?"
+        a: "Admin fit close am with **Close di group**, after e type di group name to confirm. Closing na permanent and e make di group unavailable to everybody, so if you only want am out of sight, archive am instead. [Groups and permission dem](page:feature/groups-and-permissions) get di small print."
+contact:
+  heading: "You still dey stuck?"
+  items:
+    - q: "You see bug, or you want make dem change something?"
+      a: "Tell us from inside di app. Choose **Fidback** for your account menu, then **Send Fidback**, and pick **Report Bug**, **Get Help** or **New Feature**. Attach screenshot if e go help, and when we reply you go find am for di same thread."
+    - q: "You prefer email?"
+      a: "Write to di address wey dey below. Talk which group e be about, wetin you do and wetin you expect to happen. To vent fine; passwords no fine, so never send yours."
+  emailLabel: "Email us for"
+  email: support@sidebadger.me

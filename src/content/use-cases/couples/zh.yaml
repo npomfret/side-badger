@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+meta:
+  title: 与伴侣分账，五五分或按收入分 | Side Badger
+  description: 分担日常开销，又不让约会之夜变成季度财务审查。五五分、按收入分或逐笔分，看清谁欠谁。免费。
+h1: 情侣公平分担开销
+navLabel: 情侣
+lead: 分担日常开销，又不让约会之夜变成季度财务审查。Side Badger 为**情侣**持续记下房租、账单和采购，你们共享一个家、一张沙发，以及对宽带到底是谁付的这件事的模糊记忆。五五分、按收入分或逐笔分，都能看清谁欠谁。
+cta:
+  heading: 为两个人建一个群组
+  body: 创建账户，建一个群组，把邀请链接发给你的伴侣。今晚的外卖就可以是第一笔支出。
+scenario:
+  heading: 公平不一定是五五开
+  body: Sam 和 Alex 同住一个家。Sam 赚得多，所以他们商定 Sam 承担 60% 的房租，Alex 承担 40%。Sam 付房东，Alex 去采购，两人都相当确定最后会扯平。“相当确定”正是手机里的一条备忘录变成长期分歧的方式。所以为你们俩建一个群组，选一个你希望伴侣看到的名字，把邀请链接或二维码发给对方。每笔开销发生时就记下来，说明谁付了钱、怎么分，让群组替你们记账。每次假期另建一个群组（见[团体旅行](page:use-case/group-trips)），这样机票就不会混进杂货里。
+sections:
+  - heading: 五五分、按收入分，或逐笔分
+    body: 不存在人人都认为公平的分法，只有你们俩都同意的那一种，最好是在第一张账单之前，而不是第一声叹气之后。常见的有这三种。
+    items:
+      - "**五五分。** 选择**平分**，你们各欠一半。当你们的收入差不多时，它适合共同开销，而且完全不用算术。"
+      - "**按收入分。** 如果你们中有一人赚得更多，就按每个人占总收入的比例来分。先商定什么算收入（常见的选择是税后收入），把两人的加起来，再用你的除以总数。如果一人到手三份，另一人到手两份，那就是 3 ÷ (3 + 2) = 60%，所以一人承担 60%，另一人承担 40%。四舍五入到整数百分比，输入到**百分比**下，加起来必须是 100。没有地方输入你的收入，所以你只需要输入百分比。"
+      - "**逐笔分。** 每笔支出都有自己的分法，所以可以混着用：房租按收入分，杂货五五分，共同送的礼物，如果你们各自选了出多少，就按**确切金额**。"
+      - "**收入变动时，**从下一笔支出起使用新的百分比。之前的支出保持录入时的分法。想看用真实工资单算一遍的例子，请读[收入更高的伴侣怎么分账](page:guide/how-to-split-bills-with-a-partner-who-earns-more)。"
+  - heading: 每月核算
+    body: 每月一次，或者数字开始让人心痒时，打开群组查看**余额**。你们两个人，每种货币永远只有一笔付款，从欠钱的人付给被欠的人。以 Sam 和 Alex 的这个月为例。Sam 付了 £1,500 的房租，Alex 的 40% 是 £600。Alex 付了 £90 的杂货，平分，所以 Sam 的一半是 £45。Side Badger 把两者抵消，£600 减去 £45，Alex 付给 Sam £555。想怎么付都行，银行转账、现金，或者欠个人情，然后在**结算**下记录下来，余额就回到零。没有定期账单，所以复制上个月的房租，改一下日期，接着往下走。Side Badger 不转移资金，也不发送提醒，所以催一催仍然是你的事。
+  - heading: 只有你们两个人
+    body: 两个人的群组有两位成员，只有群组的成员才能看到它。你的伴侣通过邀请链接或二维码加入。链接的有效期可以从 15 分钟到 5 天，选个最短、够伴侣用的就好。生成新链接不会让旧链接失效，所以别把它们留在有其他人的聊天里。任何拿到有效链接的人都可以加入，所以如果想万无一失，就开启审批，由管理员放行每个人。你的伴侣需要自己的账户，账户是免费的。
+exampleAfter: 2
+example:
+  heading: 这个月谁欠谁
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: 房租
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: 杂货
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: 情侣用得上的功能
+faq:
+  heading: 常见问题
+  items:
+    - q: 能一次设好 60/40，适用于所有开销吗？
+      a: 不能。分法属于每一笔支出。在第一笔上设好百分比，下次复制它，再改不同的地方。[分摊支出](page:feature/split-expenses)介绍了三种分法。
+    - q: 它会连接我们的银行吗？
+      a: 不会。Side Badger 从不碰你们的钱。你们想怎么互相付款都行，然后记录下来，[结算](page:feature/settle-up)里有说明。
+    - q: 别人能看到我们的群组吗？
+      a: 只有它的成员能看到，而情侣的群组有两位成员。任何拿到有效邀请链接的人都可以加入，所以只发给一个人，并设一个短的有效期。
+    - q: 如果我们各付了同一张账单的一部分呢？
+      a: 一笔支出只有一位付款人。记两笔支出，你们各一笔，余额的结果是一样的。
+    - q: 它会提醒我的伴侣付款吗？
+      a: 不会。没有提醒，所以催一催仍然是你的事。至少你们俩看到的是同一个数字。
+    - q: 不再共担开销后怎么办？
+      a: 结清余额并记录这笔付款，这样谁都不欠谁。然后管理员可以锁定群组，让数字保持原样，或者永久关闭，这样所有人都无法再访问。只有在你们俩都不再需要历史记录时才关闭。
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name

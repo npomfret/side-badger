@@ -1,0 +1,109 @@
+translatedFrom: "92a9bff3"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - faq.heading
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Partager les factures quand l'un gagne plus | Side Badger"
+  description: "Le 50/50 devient gênant quand l'un gagne bien plus. Partagez plutôt les factures communes selon le revenu, calculs à l'appui pour deux, sans tableur."
+h1: "Comment partager les factures avec un partenaire qui gagne plus"
+navLabel: "Partenaire qui gagne plus"
+lead: "Additionnez vos salaires nets, calculez la part de chacun dans le total et arrondissez à des pourcentages entiers. Maya touche 2 800 £ net et Jon 1 700 £, donc ils partagent les factures communes 62/38. Saisissez ces pourcentages sur une dépense commune dans Side Badger, puis copiez-la chaque fois que la même facture revient."
+cta:
+  heading: "Faites le calcul une fois"
+  body: "Créez un compte gratuit, faites un groupe pour vous deux et saisissez le loyer avec vos pourcentages. Le loyer du mois prochain est une copie. Envie de la visite d'abord ? Voyez [comment ça marche](page:how-it-works) ou [ce que couvre la gratuité](page:pricing)."
+sections:
+  - heading: "Deux salaires, un appartement, un silence poli"
+    body: "Maya et Jon vivent ensemble. Maya touche 2 800 £ net par mois et Jon touche 1 700 £ net. Pendant deux ans, ils ont tout partagé 50/50, parce que c'était simple et qu'aucun des deux ne voulait être celui qui en parlait. Puis Jon a regardé le loyer seul. La moitié de 1 400 £ fait 700 £, soit un quart du salaire net de Maya et 41 % du sien. Personne n'avait été injuste. Personne n'avait fait le calcul. Beaucoup de [couples](page:use-case/couples) y arrivent un jour. Autour d'un plat à emporter, ils ont convenu que les factures communes devaient prélever une part comparable sur chaque salaire."
+  - heading: "La méthode, calculs à l'appui"
+    body: "Quatre étapes, une calculette et une conversation que vous deviez avoir de toute façon."
+    items:
+      - "**Convenez de ce qui compte comme revenu.** Maya et Jon retiennent le salaire net, l'argent qui arrive sur le compte chaque mois. Ensemble, cela fait 2 800 £ + 1 700 £ = 4 500 £."
+      - "**Calculez la part de chacun.** Celle de Maya est 2 800 ÷ 4 500, soit 62,2 %. Celle de Jon est 1 700 ÷ 4 500, soit 37,8 %."
+      - "**Arrondissez à des pourcentages entiers.** 62,2 % devient 62 et 37,8 % devient 38. À deux, arrondissez un chiffre et retirez-le de 100 pour obtenir l'autre, et le total fait toujours 100."
+      - "**Vérifiez ce que cela donne.** Sur le loyer de 1 400 £, Maya paie 868 £ (62 %) et Jon paie 532 £ (38 %). Cela fait environ 31 % du salaire net de chacun. Moitié-moitié aurait pris 25 % de celui de Maya et 41 % de celui de Jon."
+  - heading: "Lire le mois"
+    body: "Maya a payé le loyer de 1 400 £ et Jon a payé les 216 £ restants. La part de Maya sur le mois est 868,00 £ + 111,60 £ + 18,00 £ = 997,60 £, et elle a payé 1 400 £, donc on lui doit 402,40 £. La part de Jon est 532,00 £ + 68,40 £ + 18,00 £ = 618,40 £, et il a payé 216 £, donc il doit 402,40 £. Side Badger suggère un seul paiement, de Jon à Maya, de 402,40 £, que vous enregistrez une fois le paiement effectué, comme l'explique [régler les comptes](page:feature/settle-up). Partagé 50/50, le même mois aurait vu Jon payer 592,00 £ à Maya."
+  - heading: "Mettre tout en place dans Side Badger"
+    body: "Dix minutes, dont l'essentiel passé sur les pourcentages."
+    items:
+      - "**Créez le groupe.** Sur le tableau de bord, choisissez **Créer Groupe** et donnez-lui le nom de l'appartement. Choisissez **Inviter d'Autres** et envoyez à Jon le lien ou le code QR. Il se connecte ou crée un compte gratuit, et choisit le nom sous lequel il veut être vu dans ce groupe. Seuls les membres peuvent voir un groupe, donc celui-ci ne concerne que vous deux."
+      - "**Ajoutez le loyer.** Choisissez **Ajouter Dépense**. Saisissez la description et le montant, et sous **Qui a payé ?** choisissez Maya. Gardez les deux personnes sous **Divisé entre**, puis sous **Comment diviser** choisissez **Pourcentage** et saisissez 62 et 38. Le formulaire vous prévient si les pourcentages ne font pas 100 au total. Choisissez **Enregistrer Dépense**."
+      - "**Ajoutez les autres factures.** L'énergie et l'internet s'ajoutent de la même façon, avec Jon comme payeur et les mêmes 62 et 38. Le plat à emporter est sa propre dépense, avec **Comment diviser** laissé sur **Égal**."
+      - "**Copiez-la le mois prochain.** Ouvrez le loyer du mois dernier et choisissez **Copier dépense**. La copie garde le payeur, le montant et le partage, et prend la date du jour. Changez le montant si le loyer a changé, puis choisissez **Créer Copie**. La facture d'énergie fonctionne de la même façon."
+      - "**Voyez qui doit quoi à qui.** La section **Soldes** l'affiche et suggère une courte liste de paiements. Remboursez-vous comme vous voulez, puis enregistrez le paiement sous **Régler**."
+  - heading: "50/50, selon le revenu, ou facture par facture"
+    body: "Il n'y a pas de bonne réponse, seulement celle avec laquelle vous pouvez vivre tous les deux. Trois cas courants."
+    items:
+      - "**Moitié-moitié pour tout.** Le plus simple à tenir. Il convient aux couples dont les salaires sont proches."
+      - "**Selon le revenu pour tout ce qui est commun.** Ce que font Maya et Jon. Une seule conversation, une seule paire de pourcentages."
+      - "**Facture par facture.** Le loyer et les factures selon le revenu, les vacances et les petits plaisirs en 50/50 ou comme vous en convenez, et chaque facture reçoit la règle qui lui convient."
+  - heading: "Convenez de ce qui est commun"
+    body: "Les disputes portent d'habitude sur la liste, pas sur les pourcentages. Le loyer, l'énergie, l'internet, les courses de la semaine et le canapé comptent comme communs dans la plupart des foyers. L'abonnement à la salle de sport de Maya et l'abonnement foot de Jon ne le sont peut-être pas. Convenez de la liste une fois, écrivez-la, et ne mettez dans le groupe que les coûts communs."
+  - heading: "Le plat à emporter reste en 50/50, exprès"
+    body: "Les petits plaisirs sont petits et facultatifs, et personne ne devrait avoir besoin d'une calculette pour commander des gyozas. Dans Side Badger, le plat à emporter est une dépense comme une autre. Jon paie 36 £, **Comment diviser** reste sur **Égal** et chacun doit 18 £."
+  - heading: "Quand le salaire de l'un change"
+    body: "Une augmentation, un nouvel emploi ou un congé changent le calcul. Calculez les nouveaux pourcentages de la même façon et utilisez-les à partir de la dépense suivante. Les dépenses précédentes restent comme elles étaient. Copiez le loyer du mois dernier, changez les pourcentages, puis choisissez **Créer Copie**. Pour en corriger une déjà saisie, modifiez-la si les permissions du groupe le permettent, et prévenez d'abord votre partenaire, car les soldes changent. La version précédente est conservée. Convenez de quand vous recalculerez, par exemple une fois par an, et réglez vos comptes avant de changer, pour que l'ancien partage se termine sur un compte net."
+  - heading: "Ce que Side Badger ne fait pas ici"
+    items:
+      - "Il ne demande jamais ce que gagne chacun et ne calcule pas les pourcentages. Vous saisissez les chiffres convenus."
+      - "Il ne peut pas définir un partage par défaut pour tout le groupe. Les pourcentages se mettent sur chaque dépense, donc copiez-en une qui les a déjà."
+      - "Il n'a pas de factures récurrentes, donc vous copiez le loyer du mois dernier à chaque fois."
+      - "Il ne fait jamais circuler l'argent. Vous vous payez comme vous voulez et vous l'enregistrez."
+exampleAfter: 2
+example:
+  heading: "Un mois dans l'appartement de Maya et Jon"
+  currency: GBP
+  people:
+    - id: maya
+      name: Maya
+    - id: jon
+      name: Jon
+  expenses:
+    - label: "le loyer"
+      payer: maya
+      amount: 1400
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: "l'énergie et l'internet"
+      payer: jon
+      amount: 180
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: "le plat à emporter"
+      payer: jon
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: Questions
+  items:
+    - q: "Faut-il prendre le salaire brut ou net ?"
+      a: "C'est au groupe de décider. Le net est courant, parce que c'est l'argent dont vous disposez vraiment. Le brut ignore que les impôts, les cotisations de retraite et les remboursements de prêts prélèvent des montants différents sur des salaires différents. Quel que soit votre choix, utilisez la même mesure pour vous deux."
+    - q: "Side Badger voit-il nos revenus ?"
+      a: "Non. Vous ne saisissez que des pourcentages, jamais des salaires. Les pourcentages sont visibles pour les membres du groupe, et pour un couple, c'est vous deux."
+    - q: "Peut-on fixer 62/38 une fois pour tout ?"
+      a: "Le partage se définit par dépense, pas par groupe. Copiez une dépense qui a déjà 62 et 38, puis changez ce qui diffère. [Partager les dépenses](page:feature/split-expenses) présente les autres options."

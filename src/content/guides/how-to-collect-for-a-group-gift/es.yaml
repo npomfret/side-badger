@@ -1,0 +1,103 @@
+# Guía 6 bajo P8 (tasks/release-2-plan.md, «Wave 2 and 3 briefs»). El ejemplo resuelto son los datos del brief;
+# todas las cifras de la prosa salen de él o de la aritmética que se muestra.
+translatedFrom: "5d92090e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: Cómo reunir dinero para un regalo en grupo | Side Badger
+  description: Cada uno aporta una cantidad distinta y la tarjeta de uno carga con todo. Haz una encuesta de presupuesto, usa importes exactos y deja las cuentas a Side Badger.
+h1: Cómo reunir dinero para un regalo en grupo
+navLabel: Reunir para un regalo
+lead: Reunir dinero para un regalo en grupo significa que una persona adelanta el dinero y los demás le deben su aportación. Acordad un presupuesto con una encuesta, dejad que quien compra ponga el regalo en su tarjeta e introducidlo como un solo gasto con [importes exactos](page:feature/split-expenses), una cifra para cada persona. Side Badger muestra qué debe cada uno a quien compró, y cada cual envía su parte como quiera.
+cta:
+  heading: Pasa el sombrero, pero sin sombrero
+  body: Haz un grupo, deja fuera a la persona que recibe el regalo e introduce el regalo con importes exactos. Side Badger es gratis, sin anuncios y sin límites diarios. ¿Quieres ver antes cómo funciona? Consulta [cómo funciona](page:how-it-works) o [qué cubre lo gratis](page:pricing).
+sections:
+  - heading: Cuatro amigos, un tocadiscos, cuatro cifras distintas
+    body: Bea cumple 30 años y quiere un tocadiscos. Priya, Omar, Lena y Sam se lo regalan. Priya encuentra uno por 240 £ y lo compra con su propia tarjeta, porque alguien tiene que ir primero. Los cuatro no aportan lo mismo. Priya y Omar ponen 60 £ cada uno, Lena 80 £ y Sam 40 £. Nadie explica su cifra y nadie pregunta. Omar compra además una tarjeta de felicitación y papel de regalo por 12 £. Los cuatro firman la tarjeta, así que esa se divide a partes iguales.
+  - heading: Acordad el presupuesto antes de que nadie pulse Comprar
+    body: Una encuesta de presupuesto evita la discusión sobre un tocadiscos de 400 £. En el grupo, elige **Añadir encuesta** y pregunta cuánto debería costar el regalo. Haz que las opciones sean importes, como hasta 150 £, hasta 200 £ y hasta 250 £. Activa **Votación anónima**, que oculta quién votó qué, para que nadie tenga que defender en voz alta una cifra más baja. Los ajustes no se pueden cambiar una vez entra el primer voto, así que revísalos antes. Una encuesta no se cierra sola. Cuando todo el mundo ha votado, elige **Cerrar encuesta** y aparece el **Ganador**. La encuesta acuerda el total. No fija la parte de nadie.
+  - heading: Cómo salen las cuentas
+    body: El regalo se divide en 60 £, 60 £, 80 £ y 40 £, que suman las 240 £ del recibo. La felicitación y el papel se dividen entre cuatro, a 3 £ cada uno. La cuenta de Priya es 60 £ + 3 £, o sea 63 £, y ella pagó 240 £, así que le deben 177 £. La cuenta de Omar también es de 63 £, pero él pagó 12 £, así que debe 51 £. Lena debe 80 £ + 3 £, que son 83 £, y Sam debe 40 £ + 3 £, que son 43 £. Esos tres suman las 177 £ de Priya. Si se dejara tal cual, las deudas irían en cinco direcciones por el grupo. Side Badger sugiere tres pagos, todos para Priya. [Saldar cuentas](page:feature/settle-up) tiene los detalles.
+  - heading: Llévalo a Side Badger
+    body: La parte de Priya lleva unos cinco minutos.
+    items:
+      - "**Crea el grupo.** En el panel elige **Crear grupo**. Elige **Invitar a otros** y envía el enlace o el código QR a quienes ponen dinero, y a nadie más."
+      - "**Añade el regalo.** Elige **Añadir gasto**, descríbelo, escribe 240 y en **¿Quién pagó?** elige a Priya. Deja a los cuatro en **Dividir entre** y después, en **Cómo dividir**, elige **Cantidades exactas** y escribe 60, 60, 80 y 40. Las cantidades tienen que sumar 240. Adjunta la confirmación del pedido si quieres. Elige **Guardar gasto**."
+      - "**Añade la felicitación.** Omar añade él mismo las 12 £, se elige a sí mismo en **¿Quién pagó?** y deja **Cómo dividir** en **Igual**, con las cuatro personas marcadas."
+      - "**Cuenta y paga.** Todo el mundo mira **Saldos**, que muestra quién debe a quién, y envía a Priya su parte como quiera. Después lo registra con **Liquidar** y **Registrar liquidación**. La liquidación rápida rellena el importe."
+  - heading: Comprar primero o cobrar primero
+    body: "Side Badger no guarda el bote, así que «reunir el dinero» en realidad significa contar. Valen dos órdenes."
+    items:
+      - "**Comprar primero.** Quien compra paga, añade el gasto con el precio real y todo el mundo ve enseguida su parte. Es más ordenado, pero quien compra carga con el coste hasta que la gente pague, así que elige a alguien que pueda."
+      - "**Cobrar primero.** La gente envía su cifra a quien compra antes de la compra. Cuando tengáis el precio, introducid el regalo y después registrad cada pago con la fecha en que el dinero se movió de verdad. Añade primero el regalo, para que cada pago tenga un saldo al que aplicarse."
+      - "**El precio cambia.** Los gastos de envío, un código de descuento, una subida de última hora. Edita el regalo y cambia las cantidades exactas para que sigan sumando. Se conserva la versión anterior, pero avisa antes al grupo, porque sus saldos cambian."
+  - heading: Mantén a Bea al margen
+    body: Solo los miembros de un grupo pueden verlo, así que Bea no puede ver un grupo en el que no está. Invita a quienes ponen dinero y a nadie más. Un enlace funciona hasta que caduca, y puedes elegir cualquier plazo entre 15 minutos y 5 días, así que elige uno corto y envíalo donde Bea no lo vea. El enlace muestra una vista previa del grupo a quien lo abra, así que ponle al grupo un nombre aburrido, como Bote del sábado, y deja el nombre de Bea fuera también de las descripciones de los gastos y de las opciones de las encuestas.
+  - heading: Lo que Side Badger no hace aquí
+    items:
+      - No guarda ni cobra el dinero. Las aportaciones van a quien compra por transferencia bancaria, en efectivo o como os venga bien, y después alguien las registra.
+      - No envía recordatorios de pago. Dar un toque a quien no ha pagado sigue siendo trabajo humano.
+      - No calcula la parte de nadie. Una encuesta acuerda el presupuesto y no hay una opción de «dividir lo que falta», así que escribes cada importe.
+      - Cada gasto tiene un solo pagador. Si dos personas compraron partes distintas del regalo, introduce dos gastos.
+      - Todos los que están en la división necesitan una cuenta gratuita y un sitio en el grupo.
+exampleAfter: 2
+example:
+  heading: El tocadiscos de Bea y la felicitación
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: el regalo
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: felicitación y papel de regalo
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: Preguntas
+  items:
+    - q: ¿Y si reunimos más de lo que cuesta el regalo?
+      a: Las cantidades exactas tienen que sumar el precio, así que recorta las partes hasta que lo hagan. O destina el extra a algo real, como flores, e introdúcelo como un segundo gasto, igual que la felicitación y el papel del ejemplo.
+    - q: ¿Puede alguien aportar sin unirse al grupo?
+      a: No, si quieres que entre en la cuenta. Todos los que están en la división necesitan una cuenta gratuita y estar en el grupo. Para alguien que solo tiene efectivo, Priya podría cogerlo e introducir el regalo por lo que el grupo aún debe. Por ejemplo, si Sam le diera 40 £ en efectivo, ella introduciría 200 £ y las dividiría 60, 60 y 80 entre ella, Omar y Lena.
+    - q: ¿Puede la encuesta decidir cuánto pone cada uno?
+      a: No. Una encuesta acuerda una cifra para todo el grupo, como el presupuesto. La parte de cada persona la acordáis vosotros, y después la escribís en el gasto como **Cantidades exactas**.

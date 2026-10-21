@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Csoportadmin és jogosultságok közös költségekhez | Side Badger"
+  description: "Hívj meg embereket linkkel vagy QR-kóddal, hagyd jóvá a csatlakozókat, állítsd be a jogosultságokat, és zárold a csoportot, ha kész. A te csoportod, ésszel."
+h1: "Csoportadmin és jogosultságok: a te szabályaid, ésszel"
+navLabel: "Csoportok és jogosultságok"
+lead: "Egyes csoportoknak pénztáros kell. A Side Badgerben van erre egy beállítás. Hívj meg embereket linkkel vagy QR-kóddal, döntsd el, ki kerül be, és válaszd ki, ki változtathatja a számokat. Egy kis baráti társaság az egészet figyelmen kívül hagyhatja, mert az új csoportok tárva-nyitva indulnak."
+cta:
+  heading: "Készen állsz egy rendezett csoport vezetésére?"
+  body: "Hozz létre fiókot, indíts csoportot, és küldd el a meghívó linket. Hagyd nyitva, vagy szigoríts a szabályokon, amikor a csoport nagyobbra nő, vagy válogatósabb lesz."
+problem:
+  heading: "Valakinek rendben kell tartania a számokat"
+  body: "Négy lakótárs elboldogul bizalomból. Harminc vendég egy esküvői hétvégén valószínűleg nem. Csinálj csoportot minden házhoz, utazáshoz vagy eseményhez, legfeljebb 50 emberrel, és minden csoportnak saját tagjai, saját szerepei és saját szabályai vannak. A vezérlőpultod egy képernyőn mindet felsorolja, azzal együtt, hogy melyikben hol állsz. A legtöbb csoport sosem nyúl a beállításokhoz. Azokban a csoportokban, amelyek igen, általában van valaki, aki elég szervezett ahhoz, hogy akarja őket."
+workflow:
+  heading: "Az üres csoporttól a lezárt csoportig"
+  steps:
+    - title: "Hívj meg linkkel vagy QR-kóddal"
+      body: "Nyisd meg a **Mások meghívása** lehetőséget, válaszd ki, meddig legyen érvényes a link (15 perc, 1 óra, 1 nap vagy 5 nap), aztán másold ki a linket, vagy mutasd meg a QR-kódot beolvasásra. Az alkalmazáson belül azokat is meghívhatod, akikkel már közös egy másik csoportod."
+      shot: S03
+      shotAlt: "A meghívó párbeszédablak egy csoportlinkkel, a hozzá tartozó QR-kóddal és a link érvényességi idejének választásával"
+    - title: "Hadd nézzenek körül, mielőtt csatlakoznak"
+      body: "Aki megkapja a linket, bejelentkezik vagy fiókot hoz létre, megnézi a csoport előnézetét, és kiválasztja a nevet, amelyet használni akar benne. Aztán megnyomja a **Csatlakozás a csoporthoz** gombot."
+      shot: S04
+      shotAlt: "Egy csoport csatlakozási előnézete, egy bejelentkezett embernek megjelenítve, mielőtt csatlakozik"
+    - title: "Hagyd jóvá, ki csatlakozik"
+      body: "Kapcsold be a jóváhagyást, és a linket használók függőben lévő tagként várnak, amíg egy adminisztrátor be nem engedi őket. Az adminisztrátorok a **Biztonság és jogosultságok** alatt találják meg őket a **Függőben lévő tagok** között, és a **Jóváhagyás** vagy az **Elutasítás** lehetőséget választhatják. Addig a függőben lévő ember semmit nem lát a csoportban."
+      shot: S14
+      shotAlt: "Függőben lévő tagok, akik arra várnak, hogy egy adminisztrátor jóváhagyja vagy elutasítsa őket"
+    - title: "Válaszd ki, ki mit változtathat"
+      body: "Válaszd a **Nyílt együttműködés** vagy a **Felügyelt csoport** sablont, vagy állítsd be a jogosultságokat egyenként. Aztán adj mindenkinek szerepet: adminisztrátor, tag vagy megfigyelő. Jogosultságokat és szerepeket csak az adminisztrátorok változtathatnak."
+      shot: S13
+      shotAlt: "A csoportbeállítások biztonsági lapja a két sablonnal és az egyéni jogosultságokkal"
+    - title: "Zárold, ha vége"
+      body: "Amikor az utazásnak vége, és a számok letisztultak, egy adminisztrátor bekapcsolhatja a **Csoport lezárása** kapcsolót. Senki nem adhat hozzá vagy változtathat költséget, nem rögzíthet kifizetést, nem szerkeszthet listát vagy szavazást, és egy sáv ezt ki is írja. Senki nem csempészhet be csendben egy elkésett taxit. Ha mégis előkerül egy, egy adminisztrátor feloldhatja a csoportot."
+      shot: S15
+      shotAlt: "Egy csoport a lezárásáról szóló sávval"
+options:
+  heading: "Adminisztrátorok, tagok és megfigyelők"
+  items:
+    - title: "Adminisztrátor"
+      body: "Ő vezeti a csoportot. Az adminisztrátorok jóváhagyják az új tagokat, változtatják a szerepeket és a jogosultságokat, zárolják és feloldják a csoportot, és bezárják. Aki létrehoz egy csoportot, adminisztrátorként indul, és a csoport sosem marad adminisztrátor nélkül, mert az utolsó adminisztrátort nem lehet lefokozni."
+    - title: "Tag"
+      body: "Részt vesz. Hogy mit tehet egy tag, a csoport jogosultságain múlik. Egy Nyílt együttműködés csoportban ez majdnem minden. Egy Felügyelt csoportban a tagok csak a saját maguk által létrehozott költségeket és listákat változtathatják."
+    - title: "Megfigyelő"
+      body: "Mindent lát, és semmit nem változtat. A megfigyelő nem adhat hozzá és nem szerkeszthet költségeket vagy listákat, nem hívhat meg embereket, nem módosíthatja a beállításokat, és a fejlécképhez sem nyúlhat. Jól jön annak, aki a számokat akarja nézni, és megígéri, hogy nem piszkálja őket."
+sections:
+  - heading: "Nyitott, felügyelt vagy a saját szabályaid"
+    body: "Az új csoportok **Nyílt együttműködéssel** indulnak, ahol mindenki meghívhat embereket, változtathat költségeket és szerkeszthet listákat, az új tagok pedig automatikusan csatlakoznak. A **Felügyelt csoport** arra való, amikor valakinek a felnőtt szerepét kell játszania. A hét jogosultságot egyenként is beállíthatod, és ha egyet kézzel átírsz, a csoport egyéni beállításra vált. Bármit választasz, magukat a jogosultságokat csak az adminisztrátorok változtathatják, és minden változás megjelenik a tevékenységi hírfolyamban. Egy lakás [lakótársai](page:use-case/housemates) mindent nyitva hagyhatnak. Egy nagy [rendezvény vagy ünnep](page:use-case/events-and-celebrations) gyakran a Felügyelt csoportot kívánja, hogy valaki felelős legyen azért, ki csatlakozik. Új vagy a dologban? A [hogyan működik](page:how-it-works) végigvezet az egész úton, az első költségtől az elszámolásig."
+    items:
+      - "**Ki szerkesztheti a kiadásokat.** Nyílt együttműködés: bármelyik tag. Felügyelt csoport: létrehozók és adminisztrátorok."
+      - "**Ki törölhet kiadásokat.** Nyílt együttműködés: bármelyik tag. Felügyelt csoport: létrehozók és adminisztrátorok."
+      - "**Ki szerkesztheti a listákat.** Nyílt együttműködés: bármelyik tag. Felügyelt csoport: létrehozók és adminisztrátorok."
+      - "**Ki hívhat meg tagokat.** Nyílt együttműködés: bármelyik tag. Felügyelt csoport: csak adminisztrátorok."
+      - "**Új tagok jóváhagyása.** Nyílt együttműködés: automatikus. Felügyelt csoport: adminisztrátori jóváhagyás szükséges."
+      - "**Ki módosíthatja a beállításokat.** Nyílt együttműködés: bármelyik tag. Felügyelt csoport: csak adminisztrátorok."
+      - "**Ki változtathatja meg a fejléc képet.** Nyílt együttműködés: bármelyik tag. Felügyelt csoport: csak adminisztrátorok."
+  - heading: "A neved, a fotód, a fejlécképed"
+    body: "Minden csoportnak saját szereplőgárdája van. Válaszd ki a nevet, amelyet az emberek az egyes csoportokban látnak (2–50 karakter, és egyedi a csoporton belül), és azt, hogy a profilfotóid közül melyiket viseled ott. Legyél **Sam** a házban, és **Sam (nála van az autó)** az utazáson. Aki módosíthatja a beállításokat, átnevezheti a csoportot, és szerkesztheti a leírását. A fejlécképnek, amely JPEG, PNG, GIF vagy WebP lehet, legfeljebb 10 MB-os, saját jogosultsága van."
+  - heading: "Archiválás, zárolás vagy bezárás"
+    body: "Három módja van egy csoport elrakásának, a legkevésbé komolytól a legkomolyabbig."
+    items:
+      - "Az **Archiválás** elrejti a csoportot a saját vezérlőpultodról, és senki máséról nem. Továbbra is megnyithatod és használhatod, mint azelőtt, a **Csoport visszaállítása** pedig visszahozza."
+      - "A **Zárolás** befagyasztja a változtatásokat, amíg egy adminisztrátor fel nem oldja. Mindenki továbbra is olvashatja a csoportot és az előzményeit."
+      - "A **Bezárás** végleges, és mindenkire vonatkozik. Csak egy adminisztrátor teheti meg, a csoport nevének beírásával megerősítve, és utána senki nem nyithatja meg újra a csoportot."
+  - heading: "Kilépés egy csoportból"
+    body: "Bárki kiléphet, amint elszámolt. Nem léphetsz ki, ha akár csak egy pénznemben is tartozol vagy tartoznak neked, ha egy költségről szóló nyitott kérdés érint téged, vagy ha te vagy az utolsó adminisztrátor vagy az egyetlen tag. [Rögzítsd a kifizetést](page:feature/settle-up), tisztázd a [költségről szóló kérdést](page:guide/what-to-do-when-someone-disputes-a-shared-expense), vagy tegyél valaki mást adminisztrátorrá, aztán mehetsz. A visszatéréshez új meghívó kell."
+limits:
+  heading: "Ésszel: az apró betűs rész"
+  items:
+    - "Egy csoportban legfeljebb 50 ember lehet."
+    - "Jogosultságokat és szerepeket csak az adminisztrátorok változtathatnak. Az utolsó adminisztrátort nem lehet lefokozni."
+    - "Ha a költségszerkesztést **Csak adminisztrátorok** értékre állítod, az azt is jelenti, hogy költséget is csak adminisztrátorok adhatnak hozzá."
+    - "A zárolás megállítja a költségek változtatását, az új kifizetéseket, a listákat és a szavazásokat. Mindenki továbbra is olvashatja a csoportot és az előzményeit, és reagálhat a kifizetésekre."
+    - "A bezárás végleges. Az alkalmazásban nincs mód egy bezárt csoport újranyitására."
+    - "Egy új meghívó link elkészítése nem érvényteleníti a régieket. Minden link a saját lejártáig él, ezért válassz rövidet, ha aggódsz, hová kerülhet."
+    - "Az alkalmazáson belüli meghívások a legutóbbi 10 aktív csoportod tagjait listázzák. Mindenki másnak a link kell, és hogy ki hívhat meg, a csoport jogosultságain múlik."
+    - "A csatlakozáshoz fiók kell, és az embereknek meg kell erősíteniük az e-mail-címüket, mielőtt bármit hozzáadhatnának."
+useCasesHeading: "Ahol jól jön egy kis rend"
+faq:
+  heading: "Kérdések"
+  items:
+    - q: "Hozzáadhat költséget egy megfigyelő?"
+      a: "Nem. A megfigyelő mindent lát, és semmit nem változtat. Nem adhat hozzá és nem szerkeszthet költségeket vagy listákat, nem hívhat meg embereket, és nem módosíthatja a beállításokat."
+    - q: "Kiléphet valaki, amíg tartozik?"
+      a: "Nem. Senki nem léphet ki egy csoportból, amíg akár csak egy pénznemben is tartozik vagy tartoznak neki. Előbb számoljon el, aztán mehet."
+    - q: "Mi történik, ha egy csoportot bezárnak?"
+      a: "Senki nem nyithatja meg újra. Csak egy adminisztrátor zárhat be csoportot, a csoport nevének beírásával kell megerősítenie, és a csoport mindenki számára elérhetetlenné válik. Ha csak a változtatásokat akarod megállítani, zárold. Ha csak a saját vezérlőpultodról akarod levenni, archiváld."
+    - q: "Visszavonható a zárolás?"
+      a: "Igen. Egy adminisztrátor feloldhatja a csoportot, és a változtatások újra működnek."
+    - q: "Muszáj jóváhagynom az embereket, mielőtt csatlakoznak?"
+      a: "Csak ha akarod. Az új csoportok Nyílt együttműködéssel indulnak, ahol a linket használók automatikusan csatlakoznak. Kapcsold be az adminisztrátori jóváhagyást, vagy válaszd a Felügyelt csoportot, és mindenki vár, amíg egy adminisztrátor be nem engedi."
+    - q: "Hány ember lehet egy csoportban?"
+      a: "Legfeljebb 50."

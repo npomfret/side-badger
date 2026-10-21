@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Így oszd fel a több pénznemben fizetett utazást | Side Badger"
+  description: "Font a szállodára, jen a ramenre. Számoljatok el pénznemenként külön, vagy váltsatok át egy látható árfolyamon. Mindkét út végigszámolva."
+h1: "Így oszd fel a több pénznemben fizetett utazást"
+navLabel: "Utazás több pénznemben"
+lead: "Add meg minden költséget abban a pénznemben, amelyben fizettél, aztán válassz utat. Tartsátok külön a pénznemeket, és mindegyiket a saját pénzében rendezzétek, vagy válts át egy aktuális árfolyamon, és számoljatok el egyszer. Ugyanaz a japán utazás az első úton négy kifizetés, a másodikon kettő."
+cta:
+  heading: "Add meg abban a pénzben, amiben fizettél"
+  body: "Hozz létre ingyenes fiókot, indíts csoportot az utazásnak, és add hozzá az egyes költségeket abban a pénznemben, amelyik a nyugtán állt. Előbb a részletek érdekelnek? Nézd meg a [több pénznemet](page:feature/multiple-currencies), vagy azt, [mit tartalmaz az ingyenes használat](page:pricing)."
+sections:
+  - heading: "Három barát, egy szálloda, rengeteg jen"
+    body: "Zoe, Kenji és Lucy egy hetet tölt Japánban egy [csoportos utazáson](page:use-case/group-trips), és minden költséget egyenlően osztanak el hármuk között. Zoe otthonról, fontban foglalta le a szállodát 600 £-ért. Lucy 90 000 ¥-ért vette a vasúti bérleteket Tokióban. Kenji állta a ramenes estét (9 000 ¥), és azóta naponta szóba hozza. Senki nem akar három nyugtát átváltani egy pályaudvari peronon. Az itteni számításokhoz 1 ¥ = 0,005 £, egy kerek árfolyam, amelyet ehhez az útmutatóhoz találtunk ki. Az alkalmazásban egy aktuális árfolyamot használnál, vagy azt írnád be, amelyet ténylegesen kaptál."
+  - heading: "Add meg mindegyiket abban a pénzben, ami a nyugtán áll"
+    body: "Ezt a részt bármelyik utat választod, ugyanígy csináld. Átváltani még semmit nem kell."
+    items:
+      - "**Csinálj csoportot.** A vezérlőpulton válaszd az **Új csoport** lehetőséget, nevezd el az utazásról, majd válaszd a **Mások meghívása** lehetőséget, és küldd el a linket vagy a QR-kódot."
+      - "**Add hozzá a szállodát.** Válaszd a **Kiadás hozzáadása** lehetőséget, és írd be: 600, az összeg melletti pénznemnek pedig font legyen. A **Ki fizetett?** alatt válaszd Zoe-t. Hagyd mindhármukat a **Megosztás közöttük** alatt, a **Felosztás módja** maradjon **Egyenlően**, és válaszd a **Kiadás mentése** lehetőséget."
+      - "**Add hozzá a jent.** Ugyanígy vidd be a vasúti bérleteket (Lucy fizette) és a ramenes estét (Kenji fizette), pénznemnek jent választva. A jennek nincs tizedesjegye, ezért az űrlap nem is kér ilyet."
+  - heading: "Első út: tartsd külön a pénznemeket"
+    body: "A Side Badger pénznemenként vezet egyenleget, és az egyiket nem számolja le a másikkal szemben. Fontban a szálloda fejenként 200 £, tehát Kenji és Lucy tartozása Zoe-nak egyaránt 200 £. Jenben a vasúti bérletek és a ramen együtt 99 000 ¥, vagyis fejenként 33 000 ¥. Lucy 90 000 ¥-t fizetett, neki 57 000 ¥ jár. Zoe jenben nem fizetett semmit, a tartozása 33 000 ¥. Kenji 9 000 ¥-t fizetett, így az ő tartozása 24 000 ¥."
+    items:
+      - "**Font.** Kenji 200 £-ot fizet Zoe-nak, Lucy is 200 £-ot fizet Zoe-nak."
+      - "**Jen.** Zoe 33 000 ¥-t fizet Lucy-nak, Kenji pedig 24 000 ¥-t fizet Lucy-nak."
+      - "**Összesen négy kifizetés.** Zoe és Lucy két pénznemben tartozik egymásnak, és ezek nem oltják ki egymást. Árfolyam szóba sem kerül, így nincs min vitatkozni."
+      - "**Jenben tartozol, fontban fizetsz.** Akinek nincs jene, az is fizethet fontban. A kifizetés rögzítésekor nyisd meg a **Másik pénznem?** részt, válaszd az **Átváltás erre** mezőt, azon belül a fontot, és ellenőrizd az árfolyamot. Zoe 33 000 ¥-os tartozása ennek az útmutatónak az árfolyamán 165 £, a jenegyenleg pedig így is helyesen jön ki."
+      - "**Rögzítsd az egyes kifizetéseket.** Fizessetek egymásnak, ahogy akartok, aztán válaszd a **Tartozásrendezés** lehetőséget, és használd a **Tartozásrendezés rögzítése** gombot. Többet az [elszámolásról](page:feature/settle-up) olvashatsz."
+  - heading: "Második út: válts át menet közben"
+    body: "Ha a csoport inkább egy-egy számot látna fejenként, váltsatok át a költség megadásakor."
+    items:
+      - "**Válts át az űrlapon.** A **Kiadás hozzáadása** űrlapon válaszd az **Átváltás erre** mezőt, és add meg a fontot. A Side Badger megmutatja az árfolyamot és az átváltott összeget, ≈ jellel megjelölve. Ha te más árfolyamot kaptál, írd át. Az eredeti jenösszeg ott marad a költségnél."
+      - "**Olvasd le fontban.** 1 ¥ = 0,005 £ árfolyamon a vasúti bérletek 450 £, a ramen 45 £ lesz. A 600 £-os szállodával ez 600 £ + 450 £ + 45 £ = 1 095 £, azaz fejenként 365 £. Zoe 600 £-ot fizetett, ezért 235 £ jár neki. Lucy 450 £-ot fizetett, neki 85 £ jár. Kenji 45 £-ot fizetett, a tartozása 320 £."
+      - "**Két kifizetés.** Mindkettő Kenjitől megy: 235 £ Zoe-nak és 85 £ Lucy-nak. Zoe és Lucy már egyáltalán nem fizet egymásnak."
+      - "**Vagy állíts be csoportpénznemet.** Hogy kihagyd a plusz lépést, nyisd meg a csoport **Beállítások** részét, keresd meg a **Pénznem beállítások** részt, és válaszd a **Kiadások automatikus átváltása** lehetőséget. Minden új költség ekkor erre a pénznemre váltódik át, továbbra is látható és módosítható árfolyamon."
+  - heading: "Melyik utat válaszd?"
+    items:
+      - "**Tartsd külön,** ha az embereknek még van jen a pénztárcájukban, vagy ha nem akartok az árfolyamon vitatkozni. Ennek ára a több kifizetés, és több pénznemben."
+      - "**Válts át,** ha a csoport egy pénznemben él, fejenként egy számot és rövidebb listát szeretne, mint Kenji két utalása. Ennek ára, hogy a csoport megbízik egy árfolyamban, az árfolyam pedig mentéskor rögzül az adott költségen."
+      - "**Döntsetek korán.** A csoportpénznem csak az új és a másolt költségeket váltja át. Nem megy vissza rendet rakni abban, amit már beírtál."
+  - heading: "Az árfolyam és a felső határ"
+    items:
+      - "**Az árfolyam mentéskor rögzül.** A régi költségeket soha nem értékeli újra, így egy egyenleg nem sodródik el attól, hogy a piac mozdult. A különböző napokon rögzített költségeken más-más árfolyam lehet, ezért ha a csoport az egész útra egyetlen árfolyamot szeretne, egyezzetek meg benne, és minden alkalommal írjátok be."
+      - "**Nincs árfolyam? Írj be egyet.** A Side Badger lekér egy aktuális árfolyamot, ahol tud, de nem minden pároshoz garantált. Ha nincs, vagy a pénzváltóban jobbat kaptál, írd be a sajátodat."
+      - "**Költségenként 999 999,99, a saját pénznemében.** Egyetlen felső határ van, bármilyen pénzről legyen szó. Jenben ez épp 1 000 000 ¥ alatt van, ennek az útmutatónak az árfolyamán nagyjából 5 000 £. Egy nagy számokkal dolgozó pénznemben, például az indonéz rúpiában egy számla hamarabb elérheti. Bontsd két költségre a számlát, vagy add meg egy másik pénznemben, és váltsd át."
+  - heading: "Mit nem csinál itt a Side Badger"
+    items:
+      - "Soha nem mozgat és nem vált pénzt. Ti fizettek egymásnak, ahogy akartok, aztán rögzítitek a kifizetést."
+      - "140 pénznemet ismer. A kriptovaluták és a nemesfémek nincsenek köztük."
+exampleAfter: 2
+example:
+  heading: "Japán, kétféleképpen elszámolva"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "a szálloda, otthon lefoglalva"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "vasúti bérletek"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "ramenes est"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Kérdések"
+  items:
+    - q: "Melyik árfolyamot használja a Side Badger?"
+      a: "Egy aktuális árfolyamot, amelyet a költség megadásakor kér le, ahol van ilyen. Átírhatod arra, amelyet ténylegesen kaptál."
+    - q: "Maradhat a csoport a fontnál és a jennél?"
+      a: "Igen. A csoport **Beállítások** részében a **Pénznem beállítások** alatt kapcsold be a **Pénznemek korlátozása a csoportban** lehetőséget, válaszd ki az **Engedélyezett pénznemeket**, és állítsd be az **Alapértelmezett pénznem új kiadásokhoz** értéket. Rövidebb a lista, kevesebb a tévedés a pénztárnál."
+    - q: "Muszáj egyáltalán átváltani?"
+      a: "Nem. A pénznemek külön maradnak, hacsak te vagy a csoportod nem dönt az átváltás mellett, és minden pénznem a saját rövid kifizetéslistáját kapja."

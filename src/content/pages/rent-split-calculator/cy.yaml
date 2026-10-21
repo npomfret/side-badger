@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Cyfrifiannell rhannu rhent: yn ôl ystafell neu incwm | Side Badger"
+  description: "Ystafell fwy, cyfran fwy? Beth mae pob cyd-letywr yn ei dalu, yn ôl maint ystafell neu incwm. Yn eich porwr: dim yn cael ei gadw na'i anfon."
+h1: "Cyfrifiannell rhannu rhent"
+navLabel: "Cyfrifiannell rhannu rhent"
+lead: "Ystafell wely fwy, cyfran fwy? Teipiwch y rhent a gweld beth mae pob person yn ei dalu, yn ôl maint ystafell neu incwm, hyd at y geiniog. Mae'n rhedeg yn eich porwr, yn cadw dim ac yn symud dim arian. Pan fydd y tŷ eisiau cadw'r cyfrif, [rhannwch dreuliau](page:feature/split-expenses) yn Side Badger a chopïwch y rhent bob mis."
+cta:
+  heading: "Setlwch y canrannau unwaith. Copïwch nhw am byth."
+  body: "Mae'r gyfrifiannell hon yn anghofio popeth pan fyddwch yn cau'r tab, yn union fel y cyd-letywr sy'n taeru iddo dalu'r band eang. Mae grŵp Side Badger yn cadw'r rhent, y biliau a phwy sydd wedi talu beth. Mae am ddim, heb hysbysebion a heb gyfyngiadau dyddiol."
+sections:
+  - heading: "Dwy ffordd o rannu'r rhent"
+    items:
+      - "**Yn ôl maint ystafell.** Mae rhan o'r rhent yn talu am y gegin, yr ystafell ymolchi a'r lolfa, y mae pawb yn eu defnyddio. Chi sy'n dewis y gyfran honno (40% i ddechrau) ac mae'n cael ei rhannu'n gyfartal. Mae'r gweddill yn mynd yn ôl arwynebedd yr ystafelloedd gwely, felly mae'r ystafell fawr yn talu mwy ac mae'r ystafell fach yn cael y gostyngiad y mae wedi'i ennill."
+      - "**Yn ôl incwm.** Mae pawb yn talu'r un darn o'r rhent ag y mae'n ei ennill o'r cyfanswm. Ychwanegwch filiau a rennir a byddan nhw'n dilyn yr un cyfrannau."
+  - heading: "Sut mae'r symiau'n gweithio"
+    body: "Mae pob person yn cael cyfran union, yna canran gyfan, oherwydd mae rhifau cyfan yn haws i'w teipio ac i ddadlau yn eu cylch. Y dull talgrynnu yw dull y gweddill mwyaf: mae pawb yn cadw'r rhif cyfan o dan ei gyfran, ac mae'r pwyntiau sy'n weddill yn mynd i'r sawl a gollodd fwyaf. Mae'r canrannau bob amser yn adio i 100. Yn y fflat isod, mae'r 40% a rennir yn 13.33% yr un. Mae ystafell Priya yn 16 o 38 m² y fflat, felly mae 60% × 16/38 yn 25.26%, ac mae ychwanegu 13.33% yn gwneud 38.6%, sy'n talgrynnu i 39%. Mae Tom ac Aisha yn dod allan ar 32% a 29%, ac mae 39 + 32 + 29 yn 100. Mae pob swm yn ganran o'r rhent: mae 39% o £1,950 yn £760.50."
+  - heading: "Yna ei deipio i mewn i Side Badger"
+    body: "I gael y stori lawn, tâp mesur a phopeth, gweler [sut i rannu rhent yn ôl maint ystafell](page:guide/how-to-split-rent-by-room-size), neu [partner sy'n ennill mwy](page:guide/how-to-split-bills-with-a-partner-who-earns-more) ar gyfer cyplau."
+    items:
+      - "**Ychwanegu'r rhent.** Yn eich grŵp, dewiswch **Ychwanegu Cost**, dewiswch pwy dalodd y landlord o dan **Pwy dalodd?** a chadwch bawb o dan **Rhannu rhwng**."
+      - "**Dewis Canran.** O dan **Sut i rannu**, dewiswch **Canran** a theipiwch y canrannau cyfan. Mae'r ffurflen yn tynnu sylw os nad ydyn nhw'n adio i 100."
+      - "**Ei gopïo'r mis nesaf.** Agorwch rent y mis diwethaf a dewiswch **Copïo cost**. Mae'r rhaniad yn dod gyda'r gost."
+  - heading: "Beth nad yw'r gyfrifiannell yn ei wneud"
+    items:
+      - "**Mesur eich ystafelloedd.** Man cychwyn yw arwynebedd llawr. Mae en-suite yn werth mwy na'r un arwynebedd hebddi, ac mae ystafell fach sy'n dal gwely a chadair obeithiol yn werth llai."
+      - "**Penderfynu beth sy'n cyfrif fel incwm.** Cyflog net neu gros, swydd neu waith ochr: y grŵp sy'n penderfynu. Defnyddiwch yr un cyfnod ar gyfer pawb."
+      - "**Cadw dim.** Caewch y tab ac mae'r ffigurau wedi mynd. I'w cadw, copïwch y ddolen. Mae'n dal eich ffigurau ar ôl yr arwydd #, nad yw porwyr byth yn ei anfon at weinydd, a gall unrhyw un sydd â hi eu darllen."
+      - "**Symud arian.** Rydych yn talu'r landlord sut bynnag y dymunwch."
+      - "**Cymysgu arian cyfred, neu fynd dros y cyfyngiadau.** Dewiswch un arian cyfred. Mae'n derbyn 2 i 10 o bobl a rhent hyd at 999,999.99, fel yn yr ap."
+exampleAfter: 2
+example:
+  heading: "Un fflat, un mis"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "y rhent"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "y bil ynni"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "y band eang"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Cwestiynau"
+  items:
+    - q: "Pa un sy'n decach, maint ystafell neu incwm?"
+      a: "Nid yw'r naill na'r llall yn decach bob tro. Mae maint ystafell yn addas i gyd-letywyr sy'n talu am y lle maen nhw'n cysgu ynddo. Mae incwm yn addas i gyplau a ffrindiau ar gyflogau gwahanol iawn. Cytunwch arno cyn y diwrnod rhent cyntaf, nid ar ei ôl."
+    - q: "Ddylai'r biliau gael eu rhannu yr un ffordd?"
+      a: "I gyd-letywyr, fel arfer ddim. Mae pawb yn defnyddio'r ynni a'r band eang, felly mae cyfartal yn symlach, fel yn yr enghraifft. Yn ôl incwm, mae'r gyfrifiannell yn rhoi'r un cyfrannau i'r biliau ag i'r rhent."
+    - q: "Alla i ddefnyddio troedfeddi sgwâr?"
+      a: "Gallwch. Dewiswch ft² a theipiwch eich arwynebeddau mewn troedfeddi sgwâr. Dim ond label yw'r uned, ac mae'r cyfrannau'n dod allan yr un fath cyn belled â bod pawb yn defnyddio'r un uned."
+    - q: "Ydy'r gyfrifiannell am ddim?"
+      a: "Ydy. Am ddim. Dim hysbysebion. Dim cyfyngiadau dyddiol. Does dim angen cyfrif arnoch chwaith."

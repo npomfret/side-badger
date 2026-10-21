@@ -1,0 +1,95 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Calculateur pour partager l'addition : qui doit quoi | Side Badger"
+  description: "Qui a payé, qui doit, qui paie qui : trié en secondes. Partage égal, exact ou en pourcentage. Gratuit, dans votre navigateur, rien d'enregistré ni envoyé."
+h1: "Calculateur pour partager l'addition"
+navLabel: "Calculateur d'addition"
+lead: "Indiquez qui a payé quoi et le calculateur dit qui doit quoi à qui, avec une courte liste de paiements pour tout régler. Il tourne dans votre navigateur, n'enregistre rien et ne fait circuler aucun argent. Si votre groupe veut que le compte survive à l'onglet, [partager les dépenses](page:feature/split-expenses) et [régler les comptes](page:feature/settle-up) dans Side Badger font les mêmes calculs, et les gardent."
+cta:
+  heading: "Les calculs vous plaisent ? Gardez-les."
+  body: "Ce calculateur oublie tout dès que vous fermez l'onglet, un peu comme la personne qui avait « forcément » payé la dernière fois. Un groupe Side Badger garde les dépenses, met à jour le solde de chacun et enregistre les paiements. C'est gratuit, sans publicité et sans limite quotidienne."
+sections:
+  - heading: "Comment fonctionne le calcul"
+    body: "Pour chaque dépense, le calculateur détermine la part de chaque personne. Vous pouvez la partager à parts égales, par montants exacts ou par pourcentage, entre les personnes que vous choisissez. Le solde de chacun est alors ce qu'il a payé moins ce qu'il doit. Un signe plus signifie que le groupe lui doit de l'argent, et un signe moins qu'il en doit au groupe. Les soldes font toujours zéro au total, car ce qu'on doit à une personne, d'autres le doivent."
+  - heading: "Pourquoi la liste de paiements est courte"
+    body: "Personne n'a besoin de régler chaque reçu séparément. Une fois tous les soldes connus, le calculateur associe la personne qui doit le plus à celle à qui l'on doit le plus, règle autant qu'un seul paiement le permet, et continue ainsi jusqu'à ce que tout le monde soit à zéro. Il ne demande jamais plus d'un paiement de moins que le nombre de personnes ayant un solde, et en demande souvent moins que si l'on réglait facture par facture. Il donne une courte liste de paiements, sans promettre que ce soit la plus courte possible."
+  - heading: "Ce que le calculateur ne fait pas"
+    items:
+      - "**Gérer plusieurs devises.** Choisissez-en une pour tout le calcul. L'appli tient un solde séparé pour chaque devise, et peut convertir une dépense à un taux de change actuel, que vous pouvez modifier."
+      - "**Enregistrer quoi que ce soit.** Fermez l'onglet et les chiffres disparaissent. Pour les garder, copiez le lien. Il contient vos chiffres après le #, que votre navigateur n'envoie jamais à un serveur, et toute personne à qui vous l'envoyez peut les lire."
+      - "**Faire circuler l'argent.** Il vous dit qui doit payer qui. Vous vous remboursez comme vous voulez, puis vous enregistrez le paiement dans l'appli si votre groupe y tient son compte."
+      - "**Tirer au sort le centime en trop.** Quand une facture ne se divise pas rond, les centimes restants vont aux premières personnes de la liste, pour que les totaux tombent juste. Dans l'appli, le centime en trop va à une personne au hasard, donc pas toujours la même."
+      - "**Dépasser les limites.** Le calculateur accepte de 2 à 20 personnes, et une dépense peut aller jusqu'à 999 999,99, comme dans l'appli."
+exampleAfter: 2
+example:
+  heading: "Un long week-end, quatre amis"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "le cottage"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "les courses"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "le taxi"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "le pub"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: Questions
+  items:
+    - q: "Le calculateur est-il gratuit ?"
+      a: "Oui. Gratuit. Sans publicité. Sans limite quotidienne. Il ne faut pas de compte non plus."
+    - q: "Enregistre-t-il ce que je saisis ?"
+      a: "Non. Rien n'est enregistré ni envoyé nulle part. Pour garder vos chiffres, utilisez « Copier le lien » et conservez le lien quelque part."
+    - q: "Qui peut voir le lien que je copie ?"
+      a: "Toute personne qui l'a. Les chiffres vivent dans le lien lui-même, après le #, donc ne le partagez qu'avec les personnes qui doivent les voir."
+    - q: "Fait-il circuler de l'argent ?"
+      a: "Non. Il calcule qui doit payer qui, et vous vous remboursez comme vous voulez. Side Badger ne touche jamais non plus à votre argent. Voir [régler les comptes](page:feature/settle-up)."
+    - q: "Puis-je partager un voyage payé en deux devises ?"
+      a: "Pas ici, car un calcul n'a qu'une devise. Dans un groupe, chaque devise garde son propre solde. Voir [plusieurs devises](page:feature/multiple-currencies)."
+    - q: "Et si les montants ne tombent pas juste ?"
+      a: "Le calculateur le signale sous la dépense et n'affiche aucun résultat tant que ce n'est pas le cas. Les montants exacts doivent égaler le total, et les pourcentages doivent faire 100."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - faq.heading

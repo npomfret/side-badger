@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Jak rozdělit výlet placený v několika měnách | Side Badger"
+  description: "Libry za hotel, jeny za ramen. Vyrovnejte každou měnu zvlášť, nebo převádějte kurzem, který vidíte. Obě cesty projdeme i s výpočty."
+h1: "Jak rozdělit výlet placený v několika měnách"
+navLabel: "Výlety ve více měnách"
+lead: "Zadávejte každý výdaj v měně, ve které jste platili, a pak zvolte cestu. Buď nechte měny odděleně a každou vyrovnejte v jejích vlastních penězích, nebo převeďte podle aktuálního směnného kurzu a vyrovnejte se jednou. Stejný výlet do Japonska vyjde první cestou na čtyři platby a druhou na dvě."
+cta:
+  heading: "Zadejte to v penězích, ve kterých jste platili"
+  body: "Vytvořte si bezplatný účet, založte skupinu pro výlet a přidávejte každý výdaj v té měně, která byla na účtence. Chcete si nejdřív přečíst podrobnosti? Podívejte se na [více měn](page:feature/multiple-currencies) nebo na [co zahrnuje bezplatná verze](page:pricing)."
+sections:
+  - heading: "Tři přátelé, jeden hotel, hromada jenů"
+    body: "Zoe, Kenji a Lucy tráví týden v Japonsku na [skupinovém výletu](page:use-case/group-trips) a každý výdaj se dělí rovným dílem na tři. Zoe zarezervovala hotel ještě doma, v librách, za 600 £. Lucy koupila v Tokiu jízdenky na vlak za 90 000 ¥. Kenji zaplatil ramenový večer, 9 000 ¥, a od té doby o tom mluví denně. Nikdo nechce na nástupišti přepočítávat tři účtenky. Pro výpočty tady platí 1 ¥ = 0,005 £, kulatý kurz vymyšlený pro tento návod. V aplikaci použijete aktuální směnný kurz, nebo zadáte ten, který jste skutečně dostali."
+  - heading: "Zadejte každý výdaj v měně z účtenky"
+    body: "Tuto část udělejte, ať zvolíte kteroukoli cestu. Zatím není co převádět."
+    items:
+      - "**Založte skupinu.** Na nástěnce zvolte **Vytvořit skupinu**, pojmenujte ji podle výletu, pak zvolte **Pozvat ostatní** a pošlete odkaz nebo QR kód."
+      - "**Přidejte hotel.** Zvolte **Přidat výdaj** a zadejte 600, s librami jako měnou vedle částky. Pod **Kdo platil?** vyberte Zoe. Nechte všechny tři pod **Rozdělit mezi**, ponechte **Jak rozdělit** na **Rovnoměrně** a zvolte **Uložit výdaj**."
+      - "**Přidejte jeny.** Totéž udělejte u jízdenek na vlak (platila Lucy) a u ramenového večera (platil Kenji), s jeny jako měnou. Jeny nemají desetinná místa, takže formulář žádná nevyžaduje."
+  - heading: "První cesta: nechte měny odděleně"
+    body: "Side Badger vede zůstatek pro každou měnu zvlášť a jednu proti druhé nezapočítává. V librách vychází hotel na 200 £ na osobu, takže Kenji i Lucy dluží Zoe po 200 £. V jenech dělají jízdenky na vlak a ramenový večer dohromady 99 000 ¥, tedy 33 000 ¥ na osobu. Lucy zaplatila 90 000 ¥ a má dostat 57 000 ¥. Zoe žádné jeny nezaplatila a dluží 33 000 ¥. Kenji zaplatil 9 000 ¥, takže dluží 24 000 ¥."
+    items:
+      - "**Libry.** Kenji platí Zoe 200 £ a Lucy platí Zoe 200 £."
+      - "**Jeny.** Zoe platí Lucy 33 000 ¥ a Kenji platí Lucy 24 000 ¥."
+      - "**Celkem čtyři platby.** Zoe a Lucy si dluží ve dvou měnách, které se navzájem nevyruší. Žádný kurz se tu nepoužívá, takže není o čem se hádat."
+      - "**Dlužíte jeny, platíte v librách.** Kdo žádné jeny nemá, může přesto zaplatit v librách. Při zaznamenání platby otevřete **Jiná měna?**, zvolte **Převést na** libry a zkontrolujte kurz. Dluh Zoe ve výši 33 000 ¥ je při kurzu tohoto návodu 165 £ a zůstatek v jenech přesto vyjde správně."
+      - "**Zaznamenejte každou platbu.** Zaplaťte si, jak chcete, pak zvolte **Vyrovnat dluhy** a použijte **Zaznamenat vyrovnání**. Víc o [vyrovnání](page:feature/settle-up) najdete na jeho stránce."
+  - heading: "Druhá cesta: převádějte průběžně"
+    body: "Pokud by skupina raději viděla u každého jedno číslo, převádějte už při zadávání výdaje."
+    items:
+      - "**Převeďte ve formuláři.** U **Přidat výdaj** zvolte **Převést na** a vyberte libry. Side Badger ukáže kurz a převedenou částku, označenou znakem ≈. Pokud jste dostali jiný kurz, upravte ho. Původní částka v jenech u výdaje zůstává."
+      - "**Přečtěte si to v librách.** Při 1 ¥ = 0,005 £ se jízdenky na vlak změní na 450 £ a ramenový večer na 45 £. Spolu s hotelem za 600 £ to dělá 600 £ + 450 £ + 45 £ = 1 095 £, tedy 365 £ na osobu. Zoe zaplatila 600 £, takže má dostat 235 £. Lucy zaplatila 450 £ a má dostat 85 £. Kenji zaplatil 45 £ a dluží 320 £."
+      - "**Dvě platby.** Obě od Kenjiho: 235 £ Zoe a 85 £ Lucy. Zoe a Lucy si už navzájem neplatí vůbec."
+      - "**Nebo nastavte měnu skupiny.** Aby odpadl krok navíc, otevřete **Nastavení** skupiny, najděte **Nastavení měny** a zvolte **Automaticky převést výdaje na**. Každý nový výdaj se pak převede do této měny, pořád podle kurzu, který vidíte a můžete změnit."
+  - heading: "Kterou cestu zvolit?"
+    items:
+      - "**Nechte měny odděleně**, když lidem ještě zbyly jeny v peněžence nebo když se nechcete hádat o kurz. Cenou je víc plateb, a to ve více než jedné měně."
+      - "**Převádějte**, když skupina žije v jedné měně a chce mít u každého jedno číslo a kratší seznam, jako Kenjiho dva převody. Cenou je, že skupina musí kurzu věřit, a kurz se u každého výdaje zafixuje při uložení."
+      - "**Rozhodněte se brzy.** Měna skupiny převádí jen nové a zkopírované výdaje. Zpětně neuklízí, co už jste zadali."
+  - heading: "Kurz a horní limit"
+    items:
+      - "**Kurz se zafixuje při uložení.** Staré výdaje se nikdy nepřeceňují, takže zůstatek neutíká jen proto, že se pohnul trh. Výdaje zadané v různé dny mohou mít různé kurzy, takže pokud chce skupina jeden kurz na celý výlet, domluvte ho a pokaždé ho zadejte."
+      - "**Žádný kurz? Zadejte ho.** Side Badger načte aktuální směnný kurz, kde je to možné, ale ne pro každou dvojici měn je zaručen. Pokud žádný není, nebo vám směnárna dala lepší kurz, zadejte vlastní."
+      - "**999 999,99 na výdaj, ve své měně.** Jeden limit, ať jde o jakékoli peníze. V jenech je to těsně pod 1 000 000 ¥, při kurzu tohoto návodu asi 5 000 £. V měně s velkými čísly, třeba v indonéských rupiích, může jediný účet narazit na limit dřív. Rozdělte účet na dva výdaje, nebo ho zadejte v jiné měně a převeďte."
+  - heading: "Co Side Badger tady nedělá"
+    items:
+      - "Nikdy nepřesouvá ani nesměňuje peníze. Platíte si, jak chcete, a pak platbu zaznamenáte."
+      - "Má 140 měn. Kryptoměny a kovy mezi nimi nejsou."
+exampleAfter: 2
+example:
+  heading: "Japonsko, vyrovnané dvěma způsoby"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "hotel zarezervovaný doma"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "jízdenky na vlak"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "ramenový večer"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Jaký směnný kurz Side Badger používá?"
+      a: "Aktuální směnný kurz, který se načte při zadání výdaje, pokud je k dispozici. Můžete ho změnit na kurz, který jste skutečně dostali."
+    - q: "Může se skupina držet jen liber a jenů?"
+      a: "Ano. V **Nastavení** skupiny zapněte pod **Nastavení měny** volbu **Omezit měny pro tuto skupinu**, vyberte **Povolené měny** a nastavte **Výchozí měna pro nové výdaje**. Méně možností v seznamu, méně chybných tipů u pokladny."
+    - q: "Musíme vůbec převádět?"
+      a: "Ne. Měny zůstávají odděleně, pokud se vy nebo vaše skupina nerozhodnete převádět, a každá měna dostane vlastní krátký seznam plateb."

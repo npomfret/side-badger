@@ -1,0 +1,107 @@
+translatedFrom: "6c8b8630"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - privacy-posture.no-ads
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - polls.villa-shortlist-vote
+  - permissions.viewer-sees-everything
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.0.label
+  - example.expenses.1.label
+  - example.expenses.2.label
+  - example.expenses.3.label
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "How to share di cost of stag or hen weekend | Side Badger"
+  description: "Guest of honour no pay anything and everybody still dey talk to each other by Monday. How to share stag or hen weekend, sums included."
+h1: "How to share di cost of stag or hen weekend"
+navLabel: "Stag and hen weekend dem"
+lead: "Guest of honour no dey pay anything, so di rest of di group go share every cost [equal-equal](page:feature/split-expenses) among dem. Leave people out of di costs wey dem skip, and keep di guest of honour out of di group so di surprise go hold."
+cta:
+  heading: "Keep di count, keep di surprise"
+  body: "Make group, send di link to everybody except di guest of honour and add each cost as e dey happen. Side Badger free, with no ads and no daily limits."
+sections:
+  - heading: "Four friends, one surprise"
+    body: "Hannah, Isla, Jess and Kat dey carry Grace go hen weekend. Grace na di guest of honour, so Grace no go pay for anything. E no dey inside di group too, so e no fit see wetin im friends dey spend for am. Hannah book di cottage, Isla pay for di spa day, Jess cover dinner and Kat pay di taxi. By Sunday everybody don pay for something, and nobody fit talk who dey ahead. Di sums na di same for stag or hen weekend, whoever be di guest of honour."
+  - heading: "Share am among di people wey dey pay, no be di people wey dey there"
+    body: "Di guest of honour share no dey vanish. Dem go share am out. Di cottage cost £720 and four friends dey pay for am, so na £180 each, and Grace own place don already dey inside dat figure. Dinner na £260, so £65 each. Di taxi na £44, so £11 each. Anything wey somebody skip go comot from dat expense only. Kat skip di spa, so di £360, wey cover Grace own place too, Hannah, Isla and Jess go share am at £120 each. Add am up and Hannah, Isla and Jess each owe £376 of di weekend, and Kat owe £256."
+  - heading: "Set am up for Side Badger"
+    items:
+      - "Make group for di weekend and give am dull name, like Cottage weekend. Grace no be member, and only members of group fit see am."
+      - "Choose **Invite others** and send di link, or show di QR code, only for where Grace no go see am. Di link go show preview of di group before anybody join. Choose how long e go last, from 15 minutes to 5 days. Old link go keep working until e expire, so no leave am longer than you need."
+      - "For each cost, choose **Add expense**, enter di amount and pick di payer under **Who pay?** Under **Split bitwin**, tick di people wey dey pay, leaving out anybody wey skip am, like Kat for di spa. Choose **Equal** under **How we go split am**."
+      - "When you reach house, open di group **Balansis**. Side Badger go show who owe who and suggest short list of payments. Here e be three: Kat pay Hannah £212, Jess pay Hannah £116 and Isla pay Hannah £16. Pay each other anyhow you like, then use **Settle up** to record each payment."
+  - heading: "Before you book, budget and deposit"
+    body: "Agree di budget before anybody book. Choose **Add poll**, ask wetin di group go spend for di cottage and offer few figures as options. Turn on **No-name voting** when you create di poll, to hide who vote for wetin, so nobody go need defend smaller budget out loud. Close di poll once everybody don vote and di winner go show. Then di deposit come. Whoever book go pay am and add am as expense, shared equal-equal, and di balance go enter as second expense when e due. Di others fit send dem share sharp sharp and record di payment, or wait for di final count. Di balances go come out di same either way."
+  - heading: "When somebody join for one night only"
+    body: "Friend wey show face for Saturday only no suppose pay for Friday. Leave am out of di costs wey e no dey part of. Where di cost depend on how long each person stay, like room, choose **Exact amaunts** under **How we go split am** and type each person share, wey must add up to di total. Work out price per person per night first, then multiply am by di nights wey each person stay. Di [group trips](page:use-case/group-trips) page get more about costs wey no be di same for everybody."
+  - heading: "Wetin Side Badger no dey do here"
+    items:
+      - "E no dey ever move money. You pay each other by bank transfer, cash or whatever suit you, then record di payment so di balances go update for everybody."
+      - "E no dey send payment reminders. Friendly nudge for di group chat still na human work."
+      - "Each expense get one payer, and Side Badger no fit share receipt line by line. If two cards pay for di cottage, enter am as two expenses. If some people order extras for dinner, enter di extras as dem own expense."
+      - "E dey count di money, no be di itinerary. Polls and comments dey stay on di costs, so di plans for di weekend go stay for your group chat."
+exampleAfter: 2
+example:
+  heading: "Grace hen weekend, shared four ways"
+  currency: GBP
+  people:
+    - id: hannah
+      name: Hannah
+    - id: isla
+      name: Isla
+    - id: jess
+      name: Jess
+    - id: kat
+      name: Kat
+  expenses:
+    - label: Cottage
+      payer: hannah
+      amount: 720
+      split:
+        method: equal
+    - label: Spa day
+      payer: isla
+      amount: 360
+      split:
+        method: equal
+        shares:
+          hannah: 1
+          isla: 1
+          jess: 1
+    - label: Dinner
+      payer: jess
+      amount: 260
+      split:
+        method: equal
+    - label: Taxi
+      payer: kat
+      amount: 44
+      split:
+        method: equal
+faq:
+  heading: "Question dem"
+  items:
+    - q: "Best man or maid of honour go pay more?"
+      a: "Only if di group agree. Di app no dey give anybody special role for di sums. If somebody dey cover more, choose **Exact amaunts** or **Pasentej** under **How we go split am** and enter di shares wey una agree."
+    - q: "Wetin about drinks wey some people no drink?"
+      a: "Add di drinks as dem own expense and tick only di people wey drink dem. If everybody drink different amount, choose **Exact amaunts** and type each person share. Nobody go pay for wetin im no take."
+    - q: "Guest of honour fit see di group later?"
+      a: "Yes, once di surprise don finish. Invite am, then admin fit make am **Viua** under **Security** for di group settings. Viua go see everything and change nothing, so wait until nothing be secret again. E need free account to join."

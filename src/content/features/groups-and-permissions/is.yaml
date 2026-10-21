@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Stjórnun hópa og leyfi fyrir sameiginleg útgjöld | Side Badger"
+  description: "Bjóddu fólki með tengli eða QR-kóða, samþykktu hverjir koma inn, gerðu fólk að áhorfendum, stilltu leyfi og læstu hópnum þegar hann er búinn. Þinn hópur, þínar reglur, innan skynsamlegra marka."
+h1: "Stjórnun hópa og leyfi: þínar reglur, innan skynsamlegra marka"
+navLabel: "Hópar og leyfi"
+lead: "Sumir hópar þurfa gjaldkera. Side Badger er með stillingu fyrir það. Bjóddu fólki með tengli eða QR-kóða, ákveddu hverjir komast inn og veldu hver má breyta tölunum. Lítill vinahópur getur hunsað þetta allt, því nýir hópar byrja galopnir."
+cta:
+  heading: "Tilbúin að stjórna snyrtilegum hópi?"
+  body: "Stofnaðu aðgang, byrjaðu hóp og sendu boðstengilinn. Hafðu hópinn opinn eða hertu reglurnar þegar hann stækkar eða verður vandlátari."
+problem:
+  heading: "Einhver þarf að halda tölunum snyrtilegum"
+  body: "Fjórir meðleigjendur geta treyst hver öðrum. Þrjátíu gestir í brúðkaupshelgi líklega ekki. Búðu til hóp fyrir hvert heimili, hverja ferð og hvern viðburð, með allt að 50 manns í hverjum, og hver hópur heldur sínum eigin meðlimum, hlutverkum og reglum. Á stjórnborðinu sérðu þá alla, og hvar þú stendur í hverjum þeirra, á einum skjá. Flestir hópar snerta aldrei stillingarnar. Þeir sem gera það eiga yfirleitt einhvern nógu skipulagðan til að vilja þær."
+workflow:
+  heading: "Frá tómum hópi að læstum hópi"
+  steps:
+    - title: "Bjóddu með tengli eða QR-kóða"
+      body: "Opnaðu **Bjóða öðrum**, veldu hve lengi tengillinn á að gilda (15 mínútur, 1 klukkustund, 1 dag eða 5 daga) og afritaðu svo tengilinn eða sýndu QR-kóðann til að skanna. Þú getur líka boðið fólki sem er með þér í öðrum hópi, úr appinu sjálfu."
+      shot: S03
+      shotAlt: "Boðsglugginn með hóptengli, QR-kóða hans og vali um hve lengi tengillinn gildir"
+    - title: "Leyfðu fólki að kíkja áður en það gengur í hópinn"
+      body: "Fólk sem opnar tengilinn skráir sig inn eða stofnar aðgang, sér forskoðun á hópnum og velur nafnið sem það vill nota í honum. Svo ýtir það á **Ganga í hóp**."
+      shot: S04
+      shotAlt: "Forskoðun á hópi, sýnd innskráðri manneskju áður en hún gengur í hann"
+    - title: "Samþykktu hverjir koma inn"
+      body: "Kveiktu á samþykki og fólk sem notar tengilinn bíður sem meðlimir í bið þar til stjórnandi hleypir því inn. Stjórnendur finna það undir **Meðlimir í bið** í **Öryggi og leyfi** og velja **Samþykkja** eða **Hafna**. Þangað til sér sá sem bíður ekkert í hópnum."
+      shot: S14
+      shotAlt: "Meðlimir í bið sem stjórnandi á eftir að samþykkja eða hafna"
+    - title: "Veldu hver má breyta hverju"
+      body: "Veldu **Opin samvinna** eða **Stýrður hópur**, eða stilltu leyfin eitt og eitt. Gefðu svo hverjum og einum hlutverk: stjórnandi, meðlimur eða áhorfandi. Aðeins stjórnendur geta breytt leyfum og hlutverkum."
+      shot: S13
+      shotAlt: "Öryggisflipi hópstillinga með sniðunum tveimur og sérsniðnum leyfum"
+    - title: "Læstu þegar því er lokið"
+      body: "Þegar ferðinni er lokið og tölurnar hafa sest getur stjórnandi kveikt á **Læsa hóp**. Enginn getur þá bætt við eða breytt útgjöldum, skráð greiðslur eða breytt listum og könnunum, og borði á skjánum segir til um það. Enginn getur í kyrrþey bætt við leigubíl eftir á. Ef slíkur leigubíll skýtur samt upp kollinum getur stjórnandi aflæst hópnum."
+      shot: S15
+      shotAlt: "Hópur með borða sem segir að hann sé læstur"
+options:
+  heading: "Stjórnendur, meðlimir og áhorfendur"
+  items:
+    - title: "Stjórnandi"
+      body: "Stýrir hópnum. Stjórnendur samþykkja nýja meðlimi, breyta hlutverkum og leyfum, læsa og aflæsa hópnum og loka honum. Sá sem stofnar hóp byrjar sem stjórnandi hans, og hópur er aldrei án stjórnanda, því ekki er hægt að svipta síðasta stjórnandann hlutverkinu."
+    - title: "Meðlimur"
+      body: "Tekur þátt. Hvað meðlimur má gera fer eftir leyfum hópsins. Í hópi á sniðinu Opin samvinna er það nánast allt. Í hópi á sniðinu Stýrður hópur mega meðlimir aðeins breyta þeim útgjöldum og listum sem þeir bjuggu sjálfir til."
+    - title: "Áhorfandi"
+      body: "Sér allt og breytir engu. Áhorfandi getur ekki bætt við eða breytt útgjöldum eða listum, boðið fólki, breytt stillingum eða snert hausmyndina. Hentar vel þeim sem vill fylgjast með tölunum og lofar að fikta ekki í þeim."
+sections:
+  - heading: "Opið, stýrt eða þínar eigin reglur"
+    body: "Nýir hópar byrja á sniðinu **Opin samvinna**, þar sem allir geta boðið fólki, breytt útgjöldum og breytt listum og nýir meðlimir ganga sjálfkrafa í hópinn. **Stýrður hópur** er fyrir þegar einhver þarf að vera sá fullorðni. Þú getur líka stillt leyfin sjö eitt í einu, og ef þú breytir einu handvirkt færist hópurinn yfir í sérsniðið snið. Hvað sem þú velur geta aðeins stjórnendur breytt leyfunum sjálfum, og hver breyting birtist í virkni hópsins. Íbúð með [meðleigjendum](page:use-case/housemates) getur haft allt opið. Stór [viðburður eða veisla](page:use-case/events-and-celebrations) vill oft frekar stýrðan hóp, svo einhver ráði hverjir koma inn. Er þetta allt nýtt fyrir þér? [Hvernig þetta virkar](page:how-it-works) fer með þig í gegnum alla leiðina, frá fyrsta útgjaldi að því að vera kvitt."
+    items:
+      - "**Hverjir mega breyta útgjöldum.** Opin samvinna: allir meðlimir. Stýrður hópur: höfundar og stjórnendur."
+      - "**Hverjir mega eyða útgjöldum.** Opin samvinna: allir meðlimir. Stýrður hópur: höfundar og stjórnendur."
+      - "**Hver getur breytt listum.** Opin samvinna: allir meðlimir. Stýrður hópur: höfundar og stjórnendur."
+      - "**Hverjir mega bjóða meðlimum.** Opin samvinna: allir meðlimir. Stýrður hópur: aðeins stjórnendur."
+      - "**Samþykki nýrra meðlima.** Opin samvinna: sjálfvirkt. Stýrður hópur: samþykki stjórnanda nauðsynlegt."
+      - "**Hverjir mega breyta stillingum.** Opin samvinna: allir meðlimir. Stýrður hópur: aðeins stjórnendur."
+      - "**Hver getur breytt hausmynd.** Opin samvinna: allir meðlimir. Stýrður hópur: aðeins stjórnendur."
+  - heading: "Nafnið þitt, myndin þín, hausmyndin þín"
+    body: "Hver hópur hefur sína eigin leikaraskrá. Veldu nafnið sem fólk sér í hverjum hópi (2 til 50 stafir og einstakt innan hópsins) og hverja af prófílmyndunum þínum þú berð þar. Vertu **Sam** í húsinu og **Sam (með bílinn)** í ferðinni. Hver sem má breyta stillingum getur endurnefnt hópinn og breytt lýsingu hans. Hausmyndin, JPEG, PNG, GIF eða WebP allt að 10 MB, hefur sitt eigið leyfi."
+  - heading: "Færa í safn, læsa eða loka"
+    body: "Þrjár leiðir til að leggja hóp til hliðar, frá þeirri vægustu til þeirrar alvarlegustu."
+    items:
+      - "**Færa hóp í safn** felur hópinn á þínu eigin stjórnborði, en ekki annarra. Þú getur samt opnað hann og notað eins og áður, og **Taka hóp úr safni** kemur honum aftur á sinn stað."
+      - "**Læsa hóp** frystir breytingar þar til stjórnandi aflæsir honum. Allir geta áfram lesið hópinn og söguna hans."
+      - "**Loka hópnum** er varanlegt og gildir fyrir alla. Aðeins stjórnandi getur gert það, með því að slá inn nafn hópsins til staðfestingar, og enginn getur opnað hópinn aftur."
+  - heading: "Að yfirgefa hóp"
+    body: "Hægt er að yfirgefa hóp þegar búið er að gera upp. Þú getur ekki yfirgefið hóp á meðan þú skuldar eða átt inni pening í einum einasta gjaldmiðli, á meðan opin spurning um útgjald snertir þig, eða ef þú ert síðasti stjórnandinn eða eini meðlimurinn. [Skráðu greiðsluna](page:feature/settle-up), leystu úr [spurningunni um útgjaldið](page:guide/what-to-do-when-someone-disputes-a-shared-expense) eða gerðu einhvern annan að stjórnanda, og farðu svo. Til að koma aftur þarftu nýtt boð."
+limits:
+  heading: "Innan skynsamlegra marka: smáa letrið"
+  items:
+    - "Í hóp komast allt að 50 manns."
+    - "Aðeins stjórnendur geta breytt leyfum og hlutverkum. Ekki er hægt að svipta síðasta stjórnandann hlutverkinu."
+    - "Ef breyting á útgjöldum er stillt á **Aðeins stjórnendur** geta aðeins stjórnendur líka bætt við útgjöldum."
+    - "Læsing stöðvar breytingar á útgjöldum, nýjar greiðslur og breytingar á listum og könnunum. Allir geta áfram lesið hópinn og söguna hans og brugðist við greiðslum."
+    - "Lokun er varanleg. Appið býður ekki upp á að opna lokaðan hóp aftur."
+    - "Nýr boðstengill ógildir ekki þá gömlu. Hver tengill gildir þar til hann rennur út, svo veldu stuttan gildistíma ef þú hefur áhyggjur af því hvar tengillinn gæti lent."
+    - "Boð í appinu sýna fólk úr 10 nýjustu virku hópunum þínum. Allir aðrir þurfa tengilinn, og hverjir mega bjóða fer eftir leyfum hópsins."
+    - "Til að ganga í hóp þarf aðgang, og fólk verður að staðfesta netfangið sitt áður en það getur bætt nokkru við."
+useCasesHeading: "Þar sem smá regla hjálpar"
+faq:
+  heading: "Spurningar"
+  items:
+    - q: "Getur áhorfandi bætt við útgjöldum?"
+      a: "Nei. Áhorfandi sér allt og breytir engu. Hann getur ekki bætt við eða breytt útgjöldum eða listum, boðið fólki eða breytt stillingum."
+    - q: "Getur einhver yfirgefið hóp á meðan hann skuldar?"
+      a: "Nei. Enginn getur yfirgefið hóp á meðan hann skuldar eða á inni pening í einum einasta gjaldmiðli. Gerðu fyrst upp og farðu svo."
+    - q: "Hvað gerist þegar hópi er lokað?"
+      a: "Enginn getur opnað hann aftur. Aðeins stjórnandi getur lokað hópi, hann þarf að slá inn nafn hópsins til staðfestingar og hópurinn verður óaðgengilegur öllum. Ef þú vilt bara stöðva breytingar skaltu læsa honum. Ef þú vilt bara losna við hann af þínu eigin stjórnborði skaltu færa hann í safn."
+    - q: "Get ég afturkallað læsingu?"
+      a: "Já. Stjórnandi getur aflæst hópnum og þá virka breytingar aftur."
+    - q: "Þarf ég að samþykkja fólk áður en það gengur í hópinn?"
+      a: "Aðeins ef þú vilt. Nýir hópar byrja á sniðinu Opin samvinna, þar sem fólk sem notar tengilinn gengur sjálfkrafa í hópinn. Kveiktu á samþykki stjórnanda, eða veldu Stýrður hópur, og þá bíður fólk þar til stjórnandi hleypir því inn."
+    - q: "Hve margir geta verið í hópi?"
+      a: "Allt að 50."

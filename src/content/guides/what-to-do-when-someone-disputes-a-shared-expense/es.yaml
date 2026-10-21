@@ -1,0 +1,107 @@
+# Guía 7 de los briefs de la oleada 2 (tasks/release-2-plan.md, «Wave 2 and 3 briefs», P8). El ejemplo resuelto
+# son los datos del brief (el estado tras la edición de Tom); todas las cifras de la prosa salen de él o de la
+# aritmética que se muestra. Los datos sobre las preguntas de gasto: registro `expense-questions`, el documento
+# de funciones del usuario de la app y ExpenseService (una edición mantiene una pregunta solo para quienes
+# siguen en el gasto).
+translatedFrom: "0900d953"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: Qué hacer si alguien cuestiona un gasto compartido | Side Badger
+  description: Ahórrate el mensaje con segundas. Cuestiona el gasto y sale de los saldos de todos mientras habláis. Resuelto con 45 £ de vino de fiesta.
+h1: Qué hacer si alguien cuestiona un gasto compartido
+navLabel: Gastos cuestionados
+lead: Plantea una pregunta sobre el gasto en lugar de mandar un mensaje con segundas. Mientras la pregunta siga abierta, todo el gasto queda fuera de los saldos de todos. Habladlo en los comentarios, editad la división si el grupo está de acuerdo y deja que cierre la pregunta quien la hizo, o un administrador.
+cta:
+  heading: Haz la pregunta incómoda con buenos modales
+  body: Crea una cuenta gratis, empieza un grupo para el piso y pide a un administrador que active las preguntas sobre gastos, que están desactivadas hasta que alguien lo haga. ¿Quieres ver antes cómo funciona? Consulta [cómo funciona](page:how-it-works) o [qué cubre lo gratis](page:pricing).
+sections:
+  - heading: Tres compañeros de piso y 45 £ de vino
+    body: Tras la fiesta, Tom añade el vino al grupo del piso. Son 45 £, pagadas por Tom y divididas a partes iguales entre Tom, Priya y Aisha, que salen a 15 £ cada uno. Aisha no bebe. Tom lo compró para la fiesta, y la fiesta era para el [piso](page:use-case/housemates), así que no ha hecho nada malo. Aisha tampoco se equivoca al preguntar. Aquí nadie es el malo de la película. Solo hay 15 £ de vino en disputa y muchas formas de ponerlo incómodo. Un mensaje con segundas a toda la casa es una. Una pregunta sobre el gasto es otra más suave.
+  - heading: Qué hace una pregunta
+    body: Aisha abre el gasto y plantea una pregunta. Todo el gasto sale de los saldos de todos, no solo su parte, y nada más se ve afectado. La compra grande (84 £) y la limpieza (60 £) siguen contando, lo que son 28 £ + 20 £ = 48 £ cada uno. Así que mientras el vino está en espera, Aisha debe 48 £, a Tom le deben 36 £ y a Priya le deben 12 £. Decida lo que decida el piso sobre el vino, el saldo de nadie lo incluye mientras tanto. Cualquier otra persona del gasto también puede plantear su propia pregunta. El vino vuelve a los saldos solo cuando se cierra la última pregunta abierta sobre él, y una pregunta la cierra quien la hizo o un administrador.
+  - heading: Hablarlo y después arreglarlo
+    body: La pregunta de Aisha llega a los comentarios del gasto, así que las respuestas quedan justo debajo. [Planificar juntos](page:feature/plan-together) tiene más sobre comentarios y preguntas. Tom y Priya la leen y el piso charla. Deciden que el vino era de Tom y Priya, porque se lo bebieron. Otro piso podría mantener la división entre tres, o acordar algo intermedio, y también estaría bien. Side Badger guarda lo que acordáis y no tiene opinión sobre el vino. Tom edita el gasto para que se divida a partes iguales entre él y Priya, lo que son 22,50 £ cada uno (45 £ ÷ 2). Aisha ya no está en él, así que su pregunta se va con la versión antigua y el vino vuelve a los saldos. Se conserva la versión anterior.
+  - heading: Cómo queda el resultado
+    body: Con el vino de vuelta, a Tom le deben 58,50 £, Priya debe 10,50 £ y Aisha debe 48 £. Side Badger sugiere dos pagos, ambos para Tom. Las 48 £ de Aisha son la cifra que tenía mientras el vino estaba en espera, porque ella no está en él. Priya ha pasado de que le deban 12 £ a deber 10,50 £, la diferencia de su mitad del vino, 22,50 £. Si se hubiera mantenido la división entre tres, Aisha habría debido 63 £ (28 £ + 20 £ + 15 £). Toda la discusión valía 15 £. Pagaos como queráis y después registrad cada pago en **Liquidar**. [Saldar cuentas](page:feature/settle-up) cuenta el resto.
+  - heading: Cómo decirlo para que la gente siga hablándote
+    body: "La pregunta de Aisha: «No he probado el vino. ¿Podemos revisar la división?». Es corta, nombra el gasto y pregunta en lugar de acusar. Unos cuantos hábitos ayudan."
+    items:
+      - "**Pregunta por el gasto, no por la persona.** «¿Podemos revisar la división del vino?» abre una conversación. «¿Por qué me han cobrado tu vino?» abre la otra."
+      - "**Di qué te gustaría que pasara.** «¿Podría ser solo para quienes lo bebieron?» da al grupo algo con lo que estar de acuerdo o que responder."
+      - "**Da un motivo en una o dos frases.** El campo se llama **Tu pregunta** y no se puede dejar vacío."
+      - "**Mantén las respuestas en un solo sitio.** Las respuestas van en los comentarios del gasto, junto a los números de los que hablan."
+  - heading: Configúralo en Side Badger
+    items:
+      - "**Activa las preguntas.** Están desactivadas por defecto. Un administrador abre la **Configuración** del grupo, activa **Permitir preguntas sobre gastos** en **Funciones**, en la pestaña **General**, y elige **Guardar**. Si las desactivas más tarde, se borran todas las preguntas abiertas."
+      - "**Plantea una.** Abre el gasto y, junto a tu nombre en la división, elige **Tengo una pregunta**. Escribe tu motivo en **Tu pregunta** y vuelve a elegir **Tengo una pregunta**. Solo pueden hacerlo las personas que están en el gasto. El gasto muestra entonces una insignia de **Cuestionado**."
+      - "**Encuentra lo que está en espera.** En la lista de gastos, **Solo cuestionado** muestra los gastos con una pregunta abierta."
+      - "**Arréglalo, si el grupo está de acuerdo.** Abre el gasto, elige **Editar**, cambia **Dividir entre** y elige **Actualizar gasto**. Quién puede editar depende de los permisos del grupo."
+      - "**Ciérrala, si no hay nada que arreglar.** Quien preguntó puede usar el botón de cerrar de su insignia de **Cuestionado**, llamado **Cerrar pregunta**, y un administrador también. El gasto vuelve a los saldos cuando se cierra su última pregunta."
+  - heading: Cuando no queda tan limpio
+    items:
+      - "**La edición mantiene dentro a quien preguntó.** Si quien preguntó sigue en el gasto, su pregunta pasa a la versión editada y espera a que la cierre esa persona o un administrador. Arreglar el importe no es lo mismo que aceptar que está arreglado."
+      - "**No estabas en el gasto.** Solo las personas que están en un gasto pueden cuestionarlo. Si algo te parece raro, dilo en sus comentarios o pregunta a quien lo añadió."
+      - "**Alguien quiere salir del grupo.** Una pregunta abierta impide salir a las personas que están en ese gasto. Cierra la pregunta, o edita el gasto para que ya no estén en él, y podrán irse."
+  - heading: Lo que Side Badger no hace aquí
+    items:
+      - No decide quién tiene razón. Mantiene el gasto fuera de los saldos y guarda lo que acordáis.
+      - No pide a nadie que apruebe los gastos antes de que cuenten. Solo se retiene un gasto cuestionado.
+      - No puede retener una parte de un gasto. Cuestiónalo y todo él sale de los saldos.
+      - No mueve dinero. Os pagáis como queráis y lo registráis.
+exampleAfter: 3
+example:
+  heading: El piso después del vino
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: la compra grande
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: la limpieza
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: el vino de la fiesta
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+faq:
+  heading: Preguntas
+  items:
+    - q: ¿Puedo cuestionar solo mi parte?
+      a: No. Una pregunta retiene todo el gasto, para todos los que están en él. Si solo la división está mal, la solución es editar la división.
+    - q: ¿Quién puede cerrar una pregunta?
+      a: Quien la hizo, o un administrador del grupo. Si quien añadió el gasto no es administrador, no puede cerrarla en nombre de quien preguntó.
+    - q: ¿Editar un gasto borra el original?
+      a: No. Se conserva la versión anterior. Quién puede editar lo deciden los permisos del grupo, así que conviene avisar antes a la casa, porque los saldos cambian.

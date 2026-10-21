@@ -1,0 +1,115 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Comment partager un voyage payé en plusieurs devises | Side Badger"
+  description: "Des livres pour l'hôtel, des yens pour les ramens. Réglez chaque devise à part ou convertissez à un taux visible. Les deux façons, calculs à l'appui."
+h1: "Comment partager un voyage payé en plusieurs devises"
+navLabel: "Voyages en plusieurs devises"
+lead: "Saisissez chaque dépense dans la devise où vous avez payé, puis choisissez une méthode. Gardez les devises séparées et réglez chacune dans sa propre monnaie, ou convertissez à un taux de change actuel et réglez en une seule fois. Le même voyage au Japon donne quatre paiements d'un côté et deux de l'autre."
+cta:
+  heading: "Saisissez-la dans la monnaie avec laquelle vous avez payé"
+  body: "Créez un compte gratuit, lancez un groupe pour le voyage et ajoutez chaque dépense dans la devise qui figurait sur le reçu. Vous voulez d'abord le détail ? Voyez [plusieurs devises](page:feature/multiple-currencies) ou [ce que couvre la gratuité](page:pricing)."
+sections:
+  - heading: "Trois amis, un hôtel, énormément de yens"
+    body: "Zoe, Kenji et Lucy passent une semaine au Japon pour un [voyage en groupe](page:use-case/group-trips), et chaque dépense est partagée à parts égales entre eux trois. Zoe a réservé l'hôtel depuis chez elle, en livres, pour 600 £. Lucy a acheté les pass rail à Tokyo pour 90 000 ¥. Kenji a payé la soirée ramen, 9 000 ¥, et en parle tous les jours depuis. Personne n'a envie de convertir trois reçus sur un quai de gare. Pour les calculs d'ici, 1 ¥ vaut 0,005 £, un taux rond inventé pour ce guide. Dans l'appli, vous utiliseriez un taux de change actuel, ou vous saisiriez celui que vous avez réellement obtenu."
+  - heading: "Saisissez chacune dans la monnaie du reçu"
+    body: "Cette partie est la même quelle que soit la méthode choisie. Rien n'est encore à convertir."
+    items:
+      - "**Faites le groupe.** Sur le tableau de bord, choisissez **Créer Groupe**, donnez-lui le nom du voyage, puis choisissez **Inviter d'Autres** et envoyez le lien ou le code QR."
+      - "**Ajoutez l'hôtel.** Choisissez **Ajouter Dépense** et saisissez 600, avec les livres comme devise à côté du montant. Sous **Qui a payé ?**, choisissez Zoe. Gardez les trois personnes sous **Divisé entre**, laissez **Comment diviser** sur **Égal** et choisissez **Enregistrer Dépense**."
+      - "**Ajoutez les yens.** Faites de même pour les pass rail (Lucy a payé) et les ramens (Kenji a payé), avec les yens comme devise. Les yens n'ont pas de décimales, donc le formulaire n'en demande pas."
+  - heading: "Première méthode : garder les devises séparées"
+    body: "Side Badger tient un solde par devise et ne compense pas l'une avec l'autre. En livres, l'hôtel revient à 200 £ chacun, donc Kenji et Lucy doivent chacun 200 £ à Zoe. En yens, les pass rail et les ramens font 99 000 ¥, soit 33 000 ¥ chacun. Lucy a payé 90 000 ¥ et on lui doit 57 000 ¥. Zoe n'a payé aucun yen et doit 33 000 ¥. Kenji a payé 9 000 ¥, donc il doit 24 000 ¥."
+    items:
+      - "**Livres.** Kenji paie 200 £ à Zoe et Lucy paie 200 £ à Zoe."
+      - "**Yens.** Zoe paie 33 000 ¥ à Lucy et Kenji paie 24 000 ¥ à Lucy."
+      - "**Quatre paiements en tout.** Zoe et Lucy se doivent de l'argent dans deux devises qui ne s'annulent pas. Aucun taux n'entre en jeu, donc rien sur quoi se disputer."
+      - "**Devoir des yens, payer en livres.** Quelqu'un qui n'a pas de yens peut quand même payer en livres. Quand vous enregistrez le paiement, ouvrez **Autre devise ?**, choisissez **Convertir en** livres et vérifiez le taux. Les 33 000 ¥ de Zoe font 165 £ au taux de ce guide, et le solde en yens tombe quand même juste."
+      - "**Enregistrez chaque paiement.** Remboursez-vous comme vous voulez, puis choisissez **Régler** et utilisez **Enregistrer Règlement**. [Régler les comptes](page:feature/settle-up) en dit plus."
+  - heading: "Deuxième méthode : convertir au fil de l'eau"
+    body: "Si le groupe préfère voir un seul chiffre chacun, convertissez au moment de saisir la dépense."
+    items:
+      - "**Convertissez sur le formulaire.** Dans **Ajouter Dépense**, choisissez **Convertir en** et choisissez les livres. Side Badger affiche le taux et le montant converti, marqué d'un ≈. Modifiez le taux si vous en avez obtenu un autre. Le montant d'origine en yens reste sur la dépense."
+      - "**Lisez les livres.** À 1 ¥ = 0,005 £, les pass rail deviennent 450 £ et les ramens 45 £. Avec l'hôtel à 600 £, cela fait 600 £ + 450 £ + 45 £ = 1 095 £, soit 365 £ chacun. Zoe a payé 600 £, donc on lui doit 235 £. Lucy a payé 450 £ et on lui doit 85 £. Kenji a payé 45 £ et doit 320 £."
+      - "**Deux paiements.** Les deux viennent de Kenji : 235 £ à Zoe et 85 £ à Lucy. Zoe et Lucy n'ont plus rien à se payer."
+      - "**Ou fixez une devise de groupe.** Pour sauter l'étape en plus, ouvrez les **Paramètres** du groupe, trouvez **Paramètres de Devise** et choisissez **Convertir automatiquement les dépenses en**. Chaque nouvelle dépense se convertit alors dans cette devise, toujours à un taux que vous voyez et pouvez modifier."
+  - heading: "Quelle méthode choisir ?"
+    items:
+      - "**Gardez-les séparées** quand chacun a encore des yens dans son portefeuille, ou quand vous préférez ne pas vous disputer sur un taux. Le prix à payer : plus de paiements, dans plus d'une devise."
+      - "**Convertissez** quand le groupe vit dans une seule devise et veut un seul chiffre chacun et une liste plus courte, comme les deux virements de Kenji. Le prix à payer : le groupe doit se fier à un taux, et ce taux est fixé sur chaque dépense quand elle est enregistrée."
+      - "**Décidez tôt.** Une devise de groupe ne convertit que les nouvelles dépenses et les dépenses copiées. Elle ne revient pas remettre en ordre ce que vous avez déjà saisi."
+  - heading: "Le taux, et le plafond"
+    items:
+      - "**Le taux est fixé à l'enregistrement.** Les anciennes dépenses ne sont jamais réévaluées, donc un solde ne dérive pas parce que le marché a bougé. Des dépenses saisies à des jours différents peuvent avoir des taux différents ; si le groupe veut un seul taux pour tout le voyage, convenez-en et saisissez-le à chaque fois."
+      - "**Pas de taux ? Saisissez-en un.** Side Badger va chercher un taux de change actuel quand il le peut, mais il n'est pas garanti qu'il en existe un pour chaque paire de devises. S'il n'y en a pas, ou si un bureau de change vous a fait un meilleur prix, saisissez le vôtre."
+      - "**999 999,99 par dépense, dans sa propre devise.** Un seul plafond, quelle que soit la monnaie. En yens, cela fait un peu moins de 1 000 000 ¥, soit environ 5 000 £ au taux de ce guide. Dans une devise aux grands nombres, comme la roupie indonésienne, une seule facture peut l'atteindre plus vite. Scindez la facture en deux dépenses, ou saisissez-la dans une autre devise et convertissez."
+  - heading: "Ce que Side Badger ne fait pas ici"
+    items:
+      - "Il ne fait jamais circuler ni échanger d'argent. Vous vous remboursez comme vous voulez, puis vous enregistrez le paiement."
+      - "Il gère 140 devises. Les cryptomonnaies et les métaux n'en font pas partie."
+exampleAfter: 2
+example:
+  heading: "Le Japon, réglé de deux façons"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "l'hôtel, réservé de chez soi"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "pass rail"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "soirée ramen"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: Questions
+  items:
+    - q: "Quel taux de change Side Badger utilise-t-il ?"
+      a: "Un taux de change actuel, récupéré quand vous saisissez la dépense, lorsqu'il y en a un de disponible. Vous pouvez le remplacer par le taux que vous avez réellement obtenu."
+    - q: "Le groupe peut-il s'en tenir aux livres et aux yens ?"
+      a: "Oui. Dans les **Paramètres** du groupe, activez **Restreindre les devises pour ce groupe** sous **Paramètres de Devise**, choisissez les **Devises autorisées** et réglez la **Devise par défaut pour les nouvelles dépenses**. Moins d'options dans la liste, moins de paris ratés à la caisse."
+    - q: "Est-on obligé de convertir ?"
+      a: "Non. Les devises restent séparées, sauf si vous ou votre groupe choisissez de convertir, et chaque devise a sa propre courte liste de paiements."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - faq.heading

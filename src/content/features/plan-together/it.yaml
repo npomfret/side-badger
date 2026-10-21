@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: Liste, sondaggi e commenti per le spese di gruppo | Side Badger
+  description: Commenta le spese, metti in discussione quella strana, tieni la lista della spesa e vota la villa. Pianifica insieme, poi dividi. Gratis, senza pubblicità.
+h1: Pianificalo insieme, dividilo dopo
+navLabel: Pianificare insieme
+lead: La lista della spesa e lo scontrino della spesa, finalmente tornati a parlarsi. Side Badger dà al tuo gruppo un posto dove parlare dei soldi prima e dopo averli spesi, con commenti su ogni spesa, un modo per mettere in discussione quelle che sembrano sbagliate, liste condivise e sondaggi per le grandi decisioni. Poi [dividi le spese](page:feature/split-expenses) come al solito.
+cta:
+  heading: Pianifica, poi dividi
+  body: Crea un account gratuito, avvia un gruppo e metti la prima lista, il primo sondaggio o la prima domanda proprio accanto ai soldi. Non sai cosa succede dopo? Vedi [come funziona](page:how-it-works).
+problem:
+  heading: La chat è di qua, il conto è di là
+  body: Le spese di gruppo di solito vivono in due posti. I numeri stanno in uno, e la discussione sui numeri in una chat sepolta da altri messaggi martedì. La lista della spesa è la foto di un frigo. La villa l'hanno decisa i pollici alzati della maggior parte delle persone, probabilmente. Side Badger tiene la pianificazione nel gruppo, accanto alle spese di cui parla, così c'è un commento dove c'è il costo, una lista dove c'è la spesa, un sondaggio per la grande scelta e un modo per dire "aspetta, è giusto?" senza scrivere un paragrafo. Tutto resta sui soldi del gruppo, che è il motivo per cui il gruppo esiste.
+workflow:
+  heading: Dal voto sulla villa al conto della spesa
+  steps:
+    - title: Metti ai voti la scelta importante
+      body: Aggiungi un sondaggio per la decisione che fissa il conto, come quale villa. Scegli da due a dieci opzioni, stabilisci quanti voti ha ogni persona, poi chiudilo quando hanno votato tutti e il vincitore viene segnato.
+      shot: S17
+      shotAlt: Un sondaggio chiuso con l'opzione vincente segnata e il numero di voti accanto a ogni opzione
+    - title: Scrivete insieme la lista della spesa
+      body: Avvia una lista condivisa, aggiungi gli articoli e spuntali man mano che finiscono nel carrello. Poi aggiungi il totale dello scontrino come spesa.
+      shot: S16
+      shotAlt: Una lista della spesa condivisa con alcuni articoli spuntati e il conteggio dei progressi
+    - title: Parlane dove sta il costo
+      body: Commenta la spesa stessa, allega lo scontrino e reagisci con un'emoji. La conversazione resta accanto al numero di cui parla.
+      shot: S08
+      shotAlt: Una spesa con i suoi dettagli, la miniatura di uno scontrino, una discussione di commenti e reazioni emoji
+    - title: Metti in discussione quella che non torna
+      body: Se il gruppo ha attivato le domande sulle spese, chiunque sia incluso in una spesa può scegliere **Ho una domanda**. La spesa resta fuori dai saldi finché la domanda non è risolta.
+      shot: S18
+      shotAlt: L'elenco delle spese con un badge In discussione e il filtro Solo in discussione
+    - title: Guarda cosa è cambiato, e chi l'ha cambiato
+      body: Lo storico delle attività e la campanella delle notifiche mostrano le novità in tutti i tuoi gruppi. Le notifiche push ci sono, se le vuoi.
+      shot: S19
+      shotAlt: Il menu a tendina delle notifiche con un elenco delle attività recenti
+options:
+  heading: Opzioni
+  items: []
+example:
+  heading: Tre coinquilini, un conto del vino in discussione
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: la spesa grande
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: le pulizie
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: il vino della festa
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: Commenti e reazioni, accanto ai numeri
+    body: Ogni spesa ha la sua discussione di commenti, e così il gruppo, ogni lista e ogni sondaggio. Chiedi perché il taxi è costato tanto sotto il taxi, non in una chat che nessuno rilegge. Aggiungi la foto di uno scontrino o il PDF di una prenotazione, poi reagisci con pollice in su, cuore, risata, wow, triste o festeggia sulle spese, sui pagamenti e sui commenti. Festeggia un pagamento quando arriva. È la cosa più vicina a un applauso che Side Badger sappia offrire.
+  - heading: Metti in discussione una spesa senza litigare
+    body: Quando il gruppo ha attivato le domande sulle spese, chiunque sia incluso in una spesa può scegliere **Ho una domanda** e spiegare perché. La domanda viene pubblicata come commento sulla spesa, la spesa riceve un badge **In discussione**, e l'intera spesa esce dai saldi di tutti finché la domanda non è risolta.
+    items:
+      - "**Attivarla.** È disattivata di default. Un admin attiva **Consenti domande sulle spese** nelle impostazioni del gruppo, sotto **Funzionalità**."
+      - "**Chiuderla.** La persona che l'ha posta, o un admin, sceglie **Chiudi domanda**. Se più persone hanno messo in discussione la stessa spesa, questa rientra nei saldi quando viene chiusa l'ultima domanda."
+      - "**Modificarla.** Quando una spesa viene modificata, una domanda aperta passa alla nuova versione per chiunque abbia ancora una quota. Se la modifica lascia fuori qualcuno, la sua domanda finisce con la vecchia versione, così non resta niente da chiudere."
+      - "**Trovarle.** L'elenco delle spese ha un filtro **Solo in discussione**. Non è un passaggio di approvazione: vengono trattenute solo le spese che qualcuno mette in discussione, e tutto il resto conta appena viene aggiunto."
+  - heading: Come va a finire una domanda
+    body: Tom aggiunge 45 £ di vino per la festa, diviso tra tutti e tre i coinquilini. Aisha non ha bevuto, quindi solleva una domanda, e finché è aperta il vino non conta per nessuno. La casa concorda che il vino è di Tom e Priya, quindi Tom modifica la divisione tra i due. Aisha non fa più parte della spesa, quindi la sua domanda finisce con la versione precedente, che viene conservata, e il vino rientra subito nei saldi a 22,50 £ a testa invece di 15 £ a testa. Se Aisha fosse rimasta nella spesa, la sua domanda sarebbe passata alla nuova versione e avrebbe aspettato che lei o un admin la chiudesse. Qui sotto, i 48 £ di Aisha sono 28 £ della spesa e 20 £ delle pulizie, e i 10,50 £ di Priya sono la sua quota di 70,50 £ (28 £, 20 £ e 22,50 £) meno i 60 £ che ha pagato. Una discussione molto da [coinquilini](page:use-case/housemates). Per sapere come formulare una domanda, vedi [cosa fare quando qualcuno contesta una spesa condivisa](page:guide/what-to-do-when-someone-disputes-a-shared-expense).
+  - heading: Liste condivise, per la spesa
+    body: Avvia una lista nel gruppo, chiamala per esempio Lista della spesa, aggiungi gli articoli e spuntali. Trascina gli articoli in un ordine migliore, guarda salire il conteggio dei progressi e commenta la lista quando qualcuno compra il latte d'avena sbagliato. Archivia una lista finita per metterla via (**Mostra archiviati** la riporta indietro), oppure copiala per riusarla. Tieni la lista della spesa condivisa accanto ai conti della spesa, così la lista dice cosa comprare e la spesa dice quanto è costato. Chi può creare e modificare le liste dipende dai permessi del gruppo, che [gruppi e permessi](page:feature/groups-and-permissions) spiega.
+  - heading: Sondaggi, anche anonimi se vuoi
+    body: Chiedi al gruppo qualcosa che decide il conto, come quale villa, quanto spendere per il regalo o se la gita in barca vale la pena. Un sondaggio ha una domanda e da due a dieci opzioni. Scegli quanti voti ha ogni persona, da una sola scelta fino a dieci, e se il voto è anonimo. **Voto anonimo** nasconde chi ha votato per cosa e non si può cambiare dopo il primo voto. Le persone possono cambiare o togliere il proprio voto finché il sondaggio non si chiude, e puoi riaprirlo se il gruppo ci ripensa. Scegliere la villa è esattamente il genere di cose di cui sono fatti i [viaggi di gruppo](page:use-case/group-trips), e concordare il budget del regalo è un classico per [eventi e feste](page:use-case/events-and-celebrations).
+  - heading: Lo storico delle attività, così niente cambia di nascosto
+    body: Ogni gruppo ha uno storico delle attività, e la campanella delle notifiche raccoglie in un posto solo l'attività di tutti i tuoi gruppi. Aggiungi una spesa e tutti la vedono subito, senza ricaricare, e lo storico mostra cosa è cambiato e chi l'ha cambiato. Comprende spese aggiunte, modificate o eliminate, domande poste e chiuse, commenti, modifiche a liste e sondaggi e pagamenti registrati.
+  - heading: Notifiche push, se le vuoi
+    body: Le notifiche push sono facoltative. Attivale nelle **Impostazioni** del tuo account, sotto **Notifiche**, e il tuo dispositivo ti avvisa quando c'è una nuova attività nei tuoi gruppi, come una nuova spesa o un commento. Ogni dispositivo si attiva separatamente, e il browser chiede prima il permesso. Su iPhone o iPad funzionano solo dall'app aggiunta alla schermata Home, come spiega la pagina [app web](page:feature/web-app). Considerale una comodità, non una promessa, perché la consegna non è garantita.
+limits:
+  heading: Limiti
+  items:
+    - Commenti, liste e sondaggi riguardano i soldi del gruppo. I [termini](page:terms) chiedono che tutto ciò che si pubblica riguardi le finanze del gruppo, quindi questo è un posto per pianificare le spese, non una chat generica né un'app di to-do.
+    - Un commento può arrivare a 500 caratteri, con fino a tre allegati che sono immagini o PDF da massimo 5 MB ciascuno. Solo l'autore può eliminare un commento.
+    - Le domande sulle spese sono disattivate di default, e un admin le attiva per ogni gruppo. Solo le persone incluse in una spesa possono metterla in discussione, disattivare la funzione cancella ogni domanda aperta, e nessuno può lasciare il gruppo finché una spesa di cui fa parte ha una domanda aperta.
+    - Un gruppo può contenere fino a 100 liste, ciascuna con fino a 200 voci da massimo 500 caratteri. I permessi del gruppo decidono chi può creare, modificare ed eliminare le liste, e un gruppo bloccato non permette modifiche.
+    - Un gruppo può contenere fino a 50 sondaggi, ciascuno con da due a dieci opzioni e fino a dieci voti per persona. I sondaggi non hanno scadenza e non si chiudono da soli.
+    - Lo storico delle attività viene conservato per 90 giorni.
+    - Le notifiche push sono facoltative per ogni account e ogni dispositivo. Richiedono un browser che le supporti e il tuo permesso, su iPhone e iPad funzionano solo dall'app aggiunta alla schermata Home, e la consegna non è garantita. Non ci sono avvisi via email o SMS per l'attività né promemoria di pagamento, quindi sollecitare un pagamento resta compito tuo.
+useCasesHeading: Dove pianificare insieme aiuta
+faq:
+  heading: Domande
+  items:
+    - q: I voti possono essere anonimi?
+      a: Sì. Attiva **Voto anonimo** quando crei il sondaggio e nasconde chi ha votato per cosa. Decidilo prima del primo voto, perché dopo non si può cambiare.
+    - q: Un sondaggio può chiudersi da solo?
+      a: No. Un sondaggio non ha scadenza, quindi la persona che l'ha creato sceglie **Chiudi sondaggio** quando il gruppo ha deciso. Se il gruppo ci ripensa, **Riapri sondaggio** lo riporta indietro.
+    - q: Quante voci può contenere una lista?
+      a: Fino a 200 voci per lista e fino a 100 liste per gruppo. Ogni voce può arrivare a 500 caratteri, che è un sacco di latte d'avena.
+    - q: Chi può chiudere una domanda, e cosa succede intanto alla spesa?
+      a: La persona che l'ha posta, o un admin del gruppo. Finché una domanda è aperta, l'intera spesa è fuori dai saldi di tutti. Rientra quando viene chiusa l'ultima domanda aperta su di essa, oppure quando una modifica toglie dalla spesa la persona che l'ha posta.
+    - q: Posso usare liste e commenti come app di to-do o chat di gruppo?
+      a: No. Commenti, liste e sondaggi riguardano i soldi del gruppo, come chiedono i [termini](page:terms). Pensa a liste della spesa, sondaggi sul budget e "perché questi 45 £?".
+    - q: Side Badger mi manda email sull'attività?
+      a: No. Non ci sono avvisi via email o SMS per l'attività. Puoi attivare le notifiche push su ogni dispositivo, e la campanella delle notifiche nell'app mostra le novità.
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name

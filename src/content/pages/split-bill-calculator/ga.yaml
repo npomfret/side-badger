@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Áireamhán chun billí a roinnt: cé atá i bhfiacha le cé | Side Badger"
+  description: "Cé a d'íoc, cé atá i bhfiacha, cé a íocann le cé: réitithe i soicindí. Roinn go cothrom, go cruinn nó de réir céatadáin. Saor in aisce, i do bhrabhsálaí, agus ní shábháiltear ná ní sheoltar aon rud."
+h1: "Áireamhán chun billí a roinnt"
+navLabel: "Áireamhán chun billí a roinnt"
+lead: "Cuir isteach cé a d'íoc as cad agus insíonn an t-áireamhán duit cé atá i bhfiacha le cé, le liosta gearr íocaíochtaí chun é a shocrú. Ritheann sé i do bhrabhsálaí, ní shábhálann sé tada agus ní bhogann sé aon airgead. Má theastaíonn ó do ghrúpa go bhfanfadh an cuntas tar éis an cluaisín a dhúnadh, déanann [roinn costais](page:feature/split-expenses) agus [socraigh suas](page:feature/settle-up) i Side Badger na suimeanna céanna agus coinníonn siad iad."
+cta:
+  heading: "Is maith leat na suimeanna? Coinnigh iad."
+  body: "Déanann an t-áireamhán seo dearmad ar gach rud nuair a dhúnann tú an cluaisín, díreach mar a dhéanann an té a deir go cinnte gur íoc sé an uair dheireanach. Coinníonn grúpa Side Badger na costais, nuashonraíonn sé iarmhéid gach duine agus taifeadann sé na híocaíochtaí. Tá sé saor in aisce, gan fógraí agus gan teorainneacha laethúla."
+sections:
+  - heading: "Conas a oibríonn an ríomh"
+    body: "I gcás gach costais, oibríonn an t-áireamhán amach sciar gach duine. Is féidir leat é a roinnt go cothrom, de réir suimeanna cruinne nó de réir céatadáin, idir na daoine a roghnaíonn tú. Is é iarmhéid gach duine ansin an méid a d'íoc siad lúide an méid atá dlite acu. Ciallaíonn comhartha móide go bhfuil an grúpa i bhfiacha leo, agus ciallaíonn comhartha lúide go bhfuil siad i bhfiacha leis an ngrúpa. Déanann na hiarmhéideanna nialas le chéile i gcónaí, mar cibé méid atá dlite do dhuine amháin, tá sé dlite ag daoine eile."
+  - heading: "Cén fáth a bhfuil an liosta íocaíochtaí gearr"
+    body: "Ní gá d'aon duine gach admháil a shocrú ar leithligh. Nuair a bhíonn gach iarmhéid ar eolas, cuireann an t-áireamhán an duine is mó atá i bhfiacha i bpéire leis an duine is mó atá dlite dó, socraíonn sé an oiread agus is féidir le híocaíocht amháin, agus leanann sé síos an liosta go dtí go mbíonn gach duine ar nialas. Ní bhíonn níos mó íocaíochtaí de dhíth air riamh ná líon na ndaoine a bhfuil iarmhéid acu lúide a haon, agus is minic a bhíonn níos lú de dhíth ná má shocraítear billí ceann ar cheann. Tugann sé liosta gearr íocaíochtaí, agus ní gheallann sé gurb é an liosta is giorra is féidir é."
+  - heading: "Cad nach ndéanann an t-áireamhán"
+    items:
+      - "**Níos mó ná airgeadra amháin a láimhseáil.** Roghnaigh ceann amháin agus úsáid é don ríomh ar fad. Coinníonn an aip iarmhéid ar leith do gach airgeadra, agus is féidir léi costas a thiontú ar ráta malairte reatha, ar féidir leat é a athrú."
+      - "**Aon rud a shábháil.** Dún an cluaisín agus tá na figiúirí imithe. Chun iad a choinneáil, cóipeáil an nasc. Coinníonn sé do chuid figiúirí i ndiaidh an #, rud nach seolann do bhrabhsálaí chuig freastalaí choíche, agus is féidir le gach duine a seolann tú chuige iad a léamh."
+      - "**Airgead a bhogadh.** Insíonn sé duit cé ba chóir a íoc le cé. Íocann sibh a chéile ar an gcaoi is fearr libh, ansin taifeadann tú an íocaíocht san aip má choinníonn do ghrúpa a chuntas ann."
+      - "**An phingin chorr a roghnú go randamach.** Nuair a fhágann roinnt bille pinginí breise, téann siad chuig na chéad daoine ar an liosta, ionas go dtagann na hiomláin amach i gceart fós. San aip, téann an phingin chorr chuig duine amháin go randamach, mar sin ní hé an duine céanna i gcónaí é."
+      - "**Dul thar na teorainneacha.** Glacann an t-áireamhán le 2 go 20 duine, agus is féidir le costas amháin a bheith suas le 999,999.99, mar atá san aip."
+exampleAfter: 2
+example:
+  heading: "Deireadh seachtaine fada, ceathrar cairde"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "an teachín"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "earraí grósaera"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "an tacsaí"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "an teach tábhairne"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: "Ceisteanna"
+  items:
+    - q: "An bhfuil an t-áireamhán saor in aisce?"
+      a: "Tá. Saor in aisce. Gan fógraí. Gan teorainneacha laethúla. Níl cuntas de dhíth ort ach an oiread."
+    - q: "An sábhálann sé an méid a chlóscríobhaim?"
+      a: "Ní shábhálann. Ní shábháiltear ná ní sheoltar aon rud áit ar bith. Chun do chuid figiúirí a choinneáil, úsáid Cóipeáil an nasc agus sábháil an nasc áit éigin."
+    - q: "Cé atá in ann an nasc a chóipeálaim a fheiceáil?"
+      a: "Duine ar bith a bhfuil sé aige. Tá na figiúirí sa nasc féin, i ndiaidh an #, mar sin ná roinn é ach leis na daoine ar chóir dóibh iad a fheiceáil."
+    - q: "An mbogann sé airgead?"
+      a: "Ní bhogann. Oibríonn sé amach cé ba chóir a íoc le cé, agus íocann sibh a chéile ar an gcaoi is fearr libh. Ní théann Side Badger i dteagmháil le d'airgead choíche ach an oiread. Féach [socraigh suas](page:feature/settle-up)."
+    - q: "An féidir liom turas a íocadh i dhá airgeadra a roinnt?"
+      a: "Ní féidir anseo, mar tá airgeadra amháin i ríomh. I ngrúpa, coinníonn gach airgeadra a iarmhéid féin. Féach [ilairgeadraí](page:feature/multiple-currencies)."
+    - q: "Cad a tharlaíonn mura n-aontaíonn na méideanna leis an iomlán?"
+      a: "Deir an t-áireamhán sin faoin gcostas agus ní thaispeánann sé aon toradh go dtí go n-aontaíonn siad. Caithfidh na suimeanna cruinne an t-iomlán a bhaint amach, agus caithfidh na céatadáin 100 a bhaint amach le chéile."

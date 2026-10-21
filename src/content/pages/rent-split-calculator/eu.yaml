@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Alokairu-kalkulagailua: gelaren edo sarreren arabera | Side Badger"
+  description: "Gela handiagoa, zati handiagoa? Atera etxekide bakoitzaren zatia, gelaren edo sarreren arabera. Nabigatzailean dabil: ezer ez da gordetzen edo bidaltzen."
+h1: "Alokairua banatzeko kalkulagailua"
+navLabel: "Alokairuaren kalkulagailua"
+lead: "Logela handiagoa, zati handiagoa? Idatzi alokairua eta ikusi pertsona bakoitzak zenbat ordaintzen duen, gelen tamainaren edo diru-sarreren arabera, zentimora arte. Zure nabigatzailean dabil, ez du ezer gordetzen eta ez du dirurik mugitzen. Etxeak kontua gordeta izan nahi duenean, [banatu gastuak](page:feature/split-expenses) Side Badger-en eta kopiatu alokairua hilero."
+cta:
+  heading: "Finkatu ehunekoak behin. Kopiatu betiko."
+  body: "Kalkulagailu honek dena ahazten du fitxa ixten duzunean, Interneta ordaindu zuela ziur zegoen etxekideak bezala. Side Badger-eko talde batek alokairua, fakturak eta nork zer ordaindu duen gordetzen ditu. Doakoa da, iragarkirik gabe eta eguneko mugarik gabe."
+sections:
+  - heading: "Alokairua partekatzeko bi modu"
+    items:
+      - "**Gelen tamainaren arabera.** Alokairuaren zati batek sukaldea, bainugela eta egongela ordaintzen ditu, denek erabiltzen dituztenak. Zati hori zuk aukeratzen duzu (%40 hasteko) eta berdin banatzen da. Gainerakoa logelen azaleraren arabera doa, beraz gela handiak gehiago ordaintzen du eta gelatxoak irabazitako deskontua jasotzen du."
+      - "**Diru-sarreren arabera.** Bakoitzak alokairuaren zati bat ordaintzen du, guztien diru-sarreren artean berak irabazten duen zatiaren neurrian. Partekatutako fakturak gehitzen badituzu, zati berberak jarraitzen dituzte."
+  - heading: "Kalkuluek nola funtzionatzen duten"
+    body: "Pertsona bakoitzak zati zehatz bat jasotzen du, eta gero ehuneko oso bat, zenbaki osoak errazagoak baitira idazteko eta eztabaidatzeko. Biribiltzeak hondarrik handieneko metodoa erabiltzen du: bakoitzak bere zatiaren azpiko zenbaki osoa gordetzen du, eta soberan geratzen diren puntuak gehien galdu duenari ematen zaizkio. Ehunekoek beti 100 batzen dute. Beheko pisuan, partekatutako %40 hori %13,33 da bakoitzeko. Priyaren gelak 16 m² ditu, pisuaren 38 m²-tik, beraz %60 × 16/38 = %25,26; %13,33 gehituta, %38,6 ateratzen da, eta hori %39 gisa biribiltzen da. Tomek eta Aishak %32 eta %29 dituzte, eta 39 + 32 + 29 = 100. Zenbateko bakoitza alokairuaren ehuneko hori da: alokairua 1.950 £ izanik, %39 = 760,50 £."
+  - heading: "Gero idatzi Side Badger-en"
+    body: "Istorio osoa nahi baduzu, metro-zinta barne, ikusi [alokairua gelen tamainaren arabera nola banatu](page:guide/how-to-split-rent-by-room-size), edo bikoteentzat, [gehiago irabazten duen bikotekidea](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+    items:
+      - "**Gehitu alokairua.** Zure taldean, aukeratu **Gehitu gastua**, hautatu jabeari nork ordaindu dion **Nork ordaindu du?** atalean eta utzi denak **Banatu honen artean** atalean."
+      - "**Aukeratu Ehunekoa.** **Nola banatu** atalean, aukeratu **Ehunekoa** eta idatzi ehuneko osoak. Formularioak abisatzen du 100 batzen ez badute."
+      - "**Kopiatu hurrengo hilabetean.** Ireki joan den hilabeteko alokairua eta aukeratu **Kopiatu gastua**. Banaketa berarekin dator."
+  - heading: "Kalkulagailuak egiten ez duena"
+    items:
+      - "**Zure gelak neurtu.** Azalera abiapuntu bat da. Bainugela propioa duen gela batek balio handiagoa du azalera bera duen baina bainugelarik gabeko batek baino, eta ohea eta aulki itxaropentsu bat sartzen diren gelatxo batek gutxiago."
+      - "**Diru-sarrera zer den erabaki.** Soldata garbia ala gordina, soldata ala alboko lana: taldeak erabakitzen du. Erabili epe bera denentzat."
+      - "**Ezer gorde.** Itxi fitxa eta zifrak desagertu egiten dira. Gordetzeko, kopiatu esteka. Zure zifrak # ikurraren ondoren daramatza, eta nabigatzaileek ez dute inoiz zerbitzari batera bidaltzen; duen edonork irakur ditzake."
+      - "**Dirua mugitu.** Jabeari zuek nahi duzuen moduan ordaintzen diozue."
+      - "**Monetak nahastu, edo mugak gainditu.** Aukeratu moneta bakarra. 2 eta 10 pertsona artean onartzen ditu, eta alokairuak gehienez 999.999,99 izan dezake, aplikazioan bezala."
+exampleAfter: 2
+example:
+  heading: "Pisu bat, hilabete bat"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "Alokairua"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "Energia-faktura"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "Interneta"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Galderak"
+  items:
+    - q: "Zein da bidezkoagoa, gelen tamaina ala diru-sarrerak?"
+      a: "Bietako bat ere ez da beti bidezkoagoa. Gelen tamaina egokia da lo egiten duten espazioagatik ordaintzen duten pisukideentzat. Diru-sarrerak egokiak dira bikoteentzat eta soldata oso desberdinak dituzten lagunentzat. Adostu lehen alokairu-egunaren aurretik, ez ondoren."
+    - q: "Fakturak modu berean banatu behar dira?"
+      a: "Pisukideentzat, normalean ez. Denek erabiltzen dituzte energia eta Interneta, beraz berdin banatzea errazagoa da, adibidean bezala. Diru-sarreren arabera, kalkulagailuak fakturei alokairuaren zati berberak ematen dizkie."
+    - q: "Oin karratuak erabil ditzaket?"
+      a: "Bai. Aukeratu ft² eta idatzi zure azalerak oin karratutan. Unitatea etiketa bat besterik ez da, eta zatiak berdinak ateratzen dira denek unitate bera erabiltzen duten bitartean."
+    - q: "Kalkulagailua doakoa al da?"
+      a: "Bai. Doakoa. Iragarkirik ez. Eguneko mugarik ez. Ez duzu kontu bat behar ere."

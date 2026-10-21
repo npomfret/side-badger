@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Hesap bölüşme hesaplayıcı: kim kime borçlu | Side Badger"
+  description: "Kim ödedi, kim borçlu, kim kime ödeyecek: saniyeler içinde hallolur. Eşit, tam tutarlarla ya da yüzdeyle bölün. Ücretsiz, tarayıcınızda; hiçbir şey kaydedilmez ya da gönderilmez."
+h1: "Hesap bölüşme hesaplayıcı"
+navLabel: "Hesap bölüşme hesaplayıcı"
+lead: "Kimin neyi ödediğini yazın; hesaplayıcı kimin kime borçlu olduğunu ve hesabı kapatacak kısa bir ödeme listesini söylesin. Tarayıcınızda çalışır, hiçbir şey kaydetmez ve para taşımaz. Grubunuz hesabın sekmeden uzun yaşamasını istiyorsa, Side Badger'daki [harcamaları bölüşme](page:feature/split-expenses) ve [hesaplaşma](page:feature/settle-up) aynı hesapları yapar ve saklar."
+cta:
+  heading: "Hesaplar hoşunuza gitti mi? Saklayın."
+  body: "Bu hesaplayıcı sekmeyi kapatınca her şeyi unutur; geçen sefer kesinlikle ödediğini söyleyen kişi gibi. Bir Side Badger grubu harcamaları saklar, herkesin bakiyesini günceller ve ödemeleri kaydeder. Ücretsizdir, reklam yok, günlük sınır yok."
+sections:
+  - heading: "Hesaplama nasıl çalışır"
+    body: "Hesaplayıcı her harcama için herkesin payını bulur. Harcamayı seçtiğiniz kişiler arasında eşit, tam tutarlarla ya da yüzdeyle bölebilirsiniz. Herkesin bakiyesi, ödediği tutar eksi borçlu olduğu tutardır. Artı işareti grubun ona borçlu olduğu, eksi işareti onun gruba borçlu olduğu anlamına gelir. Bakiyelerin toplamı hep sıfırdır, çünkü birinin alacağı kadar başkalarının borcu vardır."
+  - heading: "Ödeme listesi neden kısa"
+    body: "Kimsenin her fişi tek tek ödeşmesi gerekmez. Her bakiye bilindikten sonra hesaplayıcı en çok borçlu olanı en çok alacaklı olanla eşleştirir, tek bir ödemenin kapatabildiği kadarını kapatır ve herkes sıfıra gelene kadar listede ilerler. Bakiyesi olan kişi sayısından bir eksik ödemeden fazlasına asla ihtiyaç duymaz ve çoğu zaman fatura fatura ödeşmekten daha azına ihtiyaç duyar. Kısa bir ödeme listesi verir; olabilecek en kısa liste olduğunu vaat etmez."
+  - heading: "Hesaplayıcının yapmadıkları"
+    items:
+      - "**Birden fazla para birimini işlemez.** Birini seçin ve tüm hesaplamada onu kullanın. Uygulama her para birimi için ayrı bir bakiye tutar ve bir harcamayı değiştirebileceğiniz güncel bir döviz kuruyla çevirebilir."
+      - "**Hiçbir şey kaydetmez.** Sekmeyi kapatınca rakamlar gider. Saklamak için bağlantıyı kopyalayın. Bağlantı rakamlarınızı # işaretinden sonra taşır; tarayıcınız bu kısmı hiçbir sunucuya göndermez, ama bağlantıyı gönderdiğiniz herkes onları okuyabilir."
+      - "**Para taşımaz.** Kimin kime ödemesi gerektiğini söyler. Birbirinize istediğiniz yolla ödersiniz, grubunuz hesabı uygulamada tutuyorsa ödemeyi orada kaydedersiniz."
+      - "**Artan kuruşu rastgele vermez.** Bir hesap eşit bölünmediğinde artan kuruşlar listedeki ilk kişilere gider, böylece toplamlar yine tutar. Uygulamada artan kuruş rastgele bir kişiye gider, yani hep aynı kişi olmaz."
+      - "**Sınırları aşmaz.** Hesaplayıcı 2 ile 20 kişi arasını kabul eder ve tek bir harcama, uygulamadaki gibi en çok 999.999,99 olabilir."
+exampleAfter: 2
+example:
+  heading: "Uzun bir hafta sonu, dört arkadaş"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "kır evi"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "market"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "taksi"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "pub"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Hesaplayıcı ücretsiz mi?"
+      a: "Evet. Ücretsiz. Reklam yok. Günlük sınır yok. Hesap açmanız da gerekmez."
+    - q: "Yazdıklarımı kaydeder mi?"
+      a: "Hayır. Hiçbir şey kaydedilmez ya da bir yere gönderilmez. Rakamlarınızı saklamak için Bağlantıyı kopyala'yı kullanın ve bağlantıyı bir yere kaydedin."
+    - q: "Kopyaladığım bağlantıyı kim görebilir?"
+      a: "Bağlantıya sahip herkes. Rakamlar # işaretinden sonra bağlantının içinde durur; bu yüzden onu yalnızca görmesi gereken kişilerle paylaşın."
+    - q: "Para taşır mı?"
+      a: "Hayır. Kimin kime ödemesi gerektiğini hesaplar, siz birbirinize istediğiniz yolla ödersiniz. Side Badger da paranıza asla dokunmaz. [Hesaplaşma](page:feature/settle-up) sayfasına bakın."
+    - q: "İki para biriminde ödenen bir geziyi bölebilir miyim?"
+      a: "Burada olmaz, çünkü bir hesaplamanın tek para birimi var. Bir grupta her para biriminin kendi bakiyesi tutulur. [Birden fazla para birimi](page:feature/multiple-currencies) sayfasına bakın."
+    - q: "Tutarlar toplamda tutmazsa ne olur?"
+      a: "Hesaplayıcı bunu harcamanın altında söyler ve tutana kadar sonuç göstermez. Tam tutarların toplamı harcamaya eşit olmalı, yüzdelerin toplamı 100 etmeli."

@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: Tulong at suporta | Side Badger
+  description: Nakalimutang password, link na ayaw gumana, maling naitalang bayad? Maiikling sagot sa mga problema sa Side Badger, at kung paano kami maaabot.
+h1: Tulong at suporta, walang hold music
+navLabel: Tulong at suporta
+lead: Maiikling sagot sa mga bagay na pinagtitigilan ng mga tao, mula sa nakalimutang password hanggang sa tuluyang pagsasara ng grupo. May link ang bawat isa sa pahinang may mas detalyadong paliwanag. Wala ang sa iyo? Sabihin sa amin mula sa loob ng app, o magpadala ng mensahe.
+cta:
+  heading: Dumating para sa tulong, mananatili para sa paghahati?
+  body: Wala ka pang account? Magsimula ng grupo, ibahagi ang link, at idagdag ang unang gastos. Libre, walang ad at walang pang-araw-araw na limitasyon.
+groups:
+  - heading: Pag-sign in
+    items:
+      - q: Nakalimutan ang password?
+        a: Nangyayari ito kahit sa pinakamahuhusay na badger. Piliin ang **Nakalimutan ang password?** sa screen na **Mag-sign in**, ilagay ang email ng account mo, saka sundan ang link sa email na ipapadala namin para pumili ng bago. Saklaw ng [paano ito gumagana](page:how-it-works) kung ano pa ang kailangan ng isang account.
+      - q: Nag-sign up ako, pero wala akong maidagdag. Bakit?
+        a: Kadalasan ay hindi pa na-verify ang email mo, kaya buksan ang link sa verification email, o piliin ang **Ipadala muli ang verification email** sa reminder banner para sa bago. Kung na-verify ka na, maaaring naka-lock ang grupo o hindi ka pinapayagan ng mga pahintulot nito, at ang viewer ay nakakakita ng lahat pero walang binabago, gaya ng ipinapaliwanag ng [mga grupo at pahintulot](page:feature/groups-and-permissions).
+      - q: Paano ko babaguhin ang email o password ko?
+        a: Sa **Mga Setting**, piliin ang **Baguhin ang Email** o **Baguhin ang Password**. Parehong hihingin muna ang kasalukuyan mong password, at kailangang i-verify ang bagong email address mula sa link na ipapadala namin dito. Saklaw ng [paano ito gumagana](page:how-it-works) ang mga account.
+      - q: Puwede ba akong mag-sign in gamit ang Google o Apple?
+        a: Hindi. Email address at password na hindi bababa sa 12 character lang ang kailangan, at puwede mong i-tick ang **Tandaan ako** sa sarili mong telepono o computer. Saklaw ng pahina ng [web app](page:feature/web-app) ang iba pa sa pagsisimula.
+  - heading: Pagsali sa grupo
+    items:
+      - q: May nagpadala sa akin ng invite link. Paano ako sasali?
+        a: Buksan ito, saka mag-sign in o gumawa ng libreng account. Makakakita ka ng preview ng grupo, pipiliin mo ang pangalang makikita ng mga tao sa iyo roon, at pipindutin ang **Sumali sa Grupo**. Ipinapakita ng [mga grupo at pahintulot](page:feature/groups-and-permissions) ang buong daan papasok.
+      - q: Sabi ay “Naghihintay ng pag-apruba”. May nagawa ba akong mali?
+        a: Wala naman. Sa grupong ito, admin ang nagpapapasok sa bawat tao, kaya napunta ang kahilingan mo sa mga admin nito, at hindi ka makakakita sa loob hangga't hindi ito inaaprubahan ng isa sa kanila. Puwede ang magiliw na pagkalabit nang personal, at ipinapaliwanag ng [mga grupo at pahintulot](page:feature/groups-and-permissions) ang pag-apruba.
+      - q: Sabi ng link ay hindi ito valid o nag-expire na.
+        a: Tumatagal ang mga invite link ayon sa pinili ng gumawa nito, mula 15 minuto hanggang 5 araw. Humingi ng bagong link sa isang tao sa grupo, o ng QR code kung magkasama kayo sa iisang kuwarto. Saklaw ng [paano ito gumagana](page:how-it-works) ang mga imbitasyon.
+  - heading: Mga gastos
+    items:
+      - q: Paano ako magdaragdag ng gastos?
+        a: Buksan ang grupo at piliin ang **Magdagdag ng Gastusin**. Sabihin kung para saan ito, magkano, sino ang nagbayad at sino ang nagsalo, saka hatiin ito nang pantay, ayon sa eksaktong halaga, o ayon sa porsyento. Dinadaanan ng [paghahati ng gastos](page:feature/split-expenses) ang bawat opsyon.
+      - q: Puwede bang kusang umulit ang upa bawat buwan?
+        a: Hindi nang kusa, dahil walang umuulit na gastos. Buksan ang noong nakaraang buwan at piliin ang **Kopyahin ang gastusin**, at darating na puno ang form, handa para sa bagong petsa at anumang nagbago. May higit pang detalye tungkol sa pagkopya sa [paghahati ng gastos](page:feature/split-expenses).
+      - q: Mali ang na-type kong halaga. Maaayos ko ba?
+        a: Oo. I-edit ang gastos, basta pinapayagan ka ng mga pahintulot ng grupo at hindi naka-lock ang grupo. Napapanatili ang naunang bersyon, kaya walang kailangang maniwala lang sa sabi mo kung ano ang nagbago, gaya ng ipinapaliwanag ng [paghahati ng gastos](page:feature/split-expenses).
+      - q: May gastos na mukhang mali, at hindi akin iyon. Ano ang gagawin?
+        a: Piliin ang **Mayroon akong tanong** dito at sabihin kung bakit, at mananatili sa labas ng mga balanse ng lahat ang buong gastos hanggang isara ng nagtanong, o ng admin, ang tanong. Walang ganoong button? Ang mga taong kasama lang sa gastos ang puwedeng magtanong, kailangan munang i-on ng admin ang **Payagan ang mga tanong sa gastos** sa mga setting ng grupo, at nasa [gabay sa pinagtatalunang gastos](page:guide/what-to-do-when-someone-disputes-a-shared-expense) ang diplomasya.
+  - heading: Mga bayad
+    items:
+      - q: Ipinapadala ba ng Side Badger ang pera?
+        a: Hindi, hindi kailanman naglilipat ng pera ang Side Badger. Magbayaran kayo sa paraang gusto ninyo, sa bank transfer, cash, o anumang gumagana, saka itala ang bayad para humabol ang mga balanse. Dinadaanan ito ng [paano mag-settle up pagkatapos ng group trip](page:guide/how-to-settle-up-after-a-group-trip) mula simula hanggang wakas.
+      - q: Paano ako magtatala ng bayad?
+        a: Piliin ang **Magbayad** sa grupo, sabihin kung sino ang nagbayad at sino ang tumanggap, ilagay ang halaga o hayaang punan ito ng isang button na **Mabilis na Kasunduan**, at piliin ang **Itala ang Kasunduan**. Bahagi lang ang nabayaran? Itala ang nabayad at mananatili ang natitira sa balanse, gaya ng ipinapaliwanag ng [settle up](page:feature/settle-up).
+      - q: Mali ang pagkakatala ko ng bayad. Maaayos ko ba?
+        a: Ang nagtala nito ang makakapag-edit nito mula sa kasaysayan ng **Mga Kasunduan** ng grupo, at siya o ang admin ang makakapagbura nito, na mag-aalis dito sa mga balanse. Hindi na puwedeng i-edit ang bayad na kinasasangkutan ng taong umalis na sa grupo. Saklaw ng [settle up](page:feature/settle-up) ang kasaysayan.
+  - heading: Mga notification at ang home screen
+    items:
+      - q: Paano ko ino-on ang mga notification?
+        a: I-on ang **Mga push notification** sa **Mga Setting** at payagan ang mga ito kapag nagtanong ang browser mo. Kung na-block na ng browser ang mga ito, payagan muna sa sarili nitong mga setting. Hiwalay na ino-on ang bawat device at hindi garantisado ang pagdating, kaya ituring ang notification na pagkalabit, hindi pangako, gaya ng ipinapaliwanag ng pahina ng [web app](page:feature/web-app).
+      - q: Bakit hindi gumagana ang mga notification sa iPhone ko?
+        a: Sa iPhone o iPad, gumagana lang ang mga ito sa app na naidagdag sa Home Screen mo, hindi kailanman sa tab ng browser. Idagdag ito, buksan mula sa icon sa Home Screen, saka i-on ang mga ito sa **Mga Setting**. Ipinapakita ng [magplano nang sama-sama](page:feature/plan-together) kung ano ang ipinapaalam ng mga ito.
+      - q: May app ba na dina-download?
+        a: Wala sa app store, dahil tumatakbo ang Side Badger sa browser mo. Mag-sign in, saka sundan ang **Idagdag sa Home Screen o Dock** sa **Mga Setting**, at bubukas ito na parang app, sa sarili nitong window. Nasa pahina ng [web app](page:feature/web-app) ang mga hakbang para sa bawat device.
+  - heading: Pag-alis, pag-archive, pag-lock, at pagsasara
+    items:
+      - q: Paano ako aalis sa isang grupo?
+        a: Mag-settle up, saka piliin ang **Umalis sa Grupo**. Hindi ka puwedeng umalis habang may utang ka o may sisingilin ka, kahit sa isang pera lang, habang may bukas na tanong ang gastos na kasali ka, o kung ikaw ang huling admin o ang nag-iisang miyembro, at kailangan ng bagong imbitasyon para makabalik. Nasa [mga grupo at pahintulot](page:feature/groups-and-permissions) ang mga detalye.
+      - q: Paano ko aalisin sa dashboard ko ang lumang grupo?
+        a: Piliin ang **I-archive ang Grupo**. Mawawala ito sa dashboard mo at hindi sa iba, mabubuksan at magagamit mo pa rin ito, at ibabalik ito ng **I-unarchive ang Grupo**. Inihahambing ng [mga grupo at pahintulot](page:feature/groups-and-permissions) ang pag-archive, pag-lock, at pagsasara.
+      - q: Tapos na ang biyahe. Mapipigilan ba naming magbago ang mga numero?
+        a: Oo. Puwedeng i-on ng admin ang **I-lock ang Grupo** sa mga setting ng grupo, at walang makakapagdagdag o makakapag-edit ng gastos, makakapagtala ng bagong bayad, o makakapagbago ng mga listahan at poll hangga't hindi ito ina-unlock ng admin. Mababasa pa rin ng lahat ang grupo at ang kasaysayan nito, at walang makakasingit na taxing huli nang naidagdag, gaya ng ipinapaliwanag ng [mga grupo at pahintulot](page:feature/groups-and-permissions).
+      - q: Puwede ko bang burahin ang grupo?
+        a: Puwede itong isara ng admin gamit ang **Isara ang grupo**, pagkatapos i-type ang pangalan ng grupo para kumpirmahin. Permanente ang pagsasara at hindi na ma-access ng sinuman ang grupo, kaya kung gusto mo lang itong itago, i-archive na lang. Nasa [mga grupo at pahintulot](page:feature/groups-and-permissions) ang fine print.
+contact:
+  heading: Nahihirapan pa rin?
+  items:
+    - q: May nakitang bug, o gusto ng pagbabago?
+      a: Sabihin sa amin mula sa loob ng app. Piliin ang **Feedback** sa account menu mo, saka **Magpadala ng Feedback**, at piliin ang **Mag-ulat ng Isyu**, **Humingi ng Tulong**, o **Feature Request**. Mag-attach ng screenshot kung makakatulong, at kapag sumagot kami, mababasa mo ito sa parehong thread.
+    - q: Mas gusto mo bang mag-email?
+      a: "Sumulat sa address sa ibaba. Sabihin kung aling grupo ang tinutukoy, ano ang ginawa mo, at ano ang inaasahan mong mangyari. Okay ang maglabas ng sama ng loob; hindi ang password, kaya huwag mong ipadala ang sa iyo."
+  emailLabel: I-email kami sa
+  email: support@sidebadger.me

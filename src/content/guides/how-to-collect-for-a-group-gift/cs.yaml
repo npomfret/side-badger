@@ -1,0 +1,101 @@
+translatedFrom: "5d92090e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Jak vybrat peníze na společný dárek | Side Badger"
+  description: "Každý přispěje jinak a kartu to odnese jeden z vás. Uspořádejte hlasování o rozpočtu, zadejte přesné částky a výpočty nechte na Side Badger."
+h1: "Jak vybrat peníze na společný dárek"
+navLabel: "Sbírka na společný dárek"
+lead: "Sbírka na společný dárek znamená, že jeden člověk peníze předloží a všichni ostatní mu dluží svůj příspěvek. Domluvte rozpočet hlasováním, nechte kupujícího dárek zaplatit vlastní kartou a pak ho zadejte jako jeden výdaj s [přesnými částkami](page:feature/split-expenses), tedy s číslem pro každého. Side Badger ukáže, kdo kupujícímu kolik dluží, a každý pošle svůj podíl, jak chce."
+cta:
+  heading: "Sbírka do klobouku, jen bez klobouku"
+  body: "Založte skupinu, vynechte z ní toho, kdo dárek dostane, a zadejte dárek s přesnými částkami. Side Badger je zdarma, bez reklam a bez denních limitů. Chcete si nejdřív projít, jak to funguje? Podívejte se na [jak to funguje](page:how-it-works) nebo na [co zahrnuje bezplatná verze](page:pricing)."
+sections:
+  - heading: "Čtyři přátelé, jeden gramofon, čtyři různé částky"
+    body: "Bea slaví 30. narozeniny a chce gramofon. Priya, Omar, Lena a Sam jí ho koupí. Priya najde jeden za 240 £ a koupí ho na vlastní kartu, protože někdo musí jít první. Čtveřice nepřispívá rovným dílem. Priya a Omar dají po 60 £, Lena 80 £ a Sam 40 £. Nikdo svou částku nevysvětluje a nikdo se neptá. Omar navíc koupí přáníčko a balicí papír za 12 £. Přáníčko podepíšou všichni čtyři, takže se tento výdaj dělí rovným dílem."
+  - heading: "Dohodněte rozpočet dřív, než někdo klikne na Koupit"
+    body: "Hlasování o rozpočtu ušetří hádku o gramofon za 400 £. Ve skupině zvolte **Přidat hlasování** a zeptejte se, kolik má dárek stát. Jako možnosti zadejte částky, například do 150 £, do 200 £ a do 250 £. Zapněte **Anonymní hlasování**, které skryje, kdo pro co hlasoval, takže nikdo nemusí hájit nižší číslo nahlas. Nastavení hlasování nejde po prvním odevzdaném hlasu změnit, takže je nejdřív zkontrolujte. Hlasování se samo neuzavře. Až všichni odhlasují, zvolte **Uzavřít hlasování** a zobrazí se **Vítěz**. Hlasování určí celkovou částku. Podíl nikoho nestanoví."
+  - heading: "Jak číst výpočet"
+    body: "Dárek se dělí na 60 £, 60 £, 80 £ a 40 £, což dává dohromady 240 £ z účtenky. Přáníčko a papír se dělí na čtyři díly po 3 £. Priyin podíl je 60 £ + 3 £, tedy 63 £, a ona zaplatila 240 £, takže má dostat 177 £. Omarův podíl je také 63 £, ale zaplatil jen 12 £, takže dluží 51 £. Lena dluží 80 £ + 3 £, tedy 83 £, a Sam dluží 40 £ + 3 £, tedy 43 £. Ti tři dohromady dluží právě těch 177 £, které má dostat Priya. Bez zásahu by dluhy putovaly mezi lidmi pěti směry. Side Badger místo toho navrhne tři platby, všechny pro Priyu. Podrobnosti najdete na stránce [vyrovnání](page:feature/settle-up)."
+  - heading: "Zadejte to do Side Badger"
+    body: "Priyina část zabere asi pět minut."
+    items:
+      - "**Založte skupinu.** Na nástěnce zvolte **Vytvořit skupinu**. Zvolte **Pozvat ostatní** a pošlete odkaz nebo QR kód lidem, kteří přispívají, a nikomu jinému."
+      - "**Přidejte dárek.** Zvolte **Přidat výdaj**, popište ho, zadejte 240 a pod **Kdo platil?** vyberte Priyu. Nechte všechny čtyři pod **Rozdělit mezi**, pak pod **Jak rozdělit** zvolte **Přesné částky** a napište 60, 60, 80 a 40. Částky se musí sečíst na 240. Chcete-li, přiložte potvrzení objednávky. Zvolte **Uložit výdaj**."
+      - "**Přidejte přáníčko.** Omar zadá 12 £ sám, pod **Kdo platil?** vybere sebe a nechá **Jak rozdělit** na **Rovnoměrně**, se zaškrtnutými všemi čtyřmi lidmi."
+      - "**Spočítejte, pak zaplaťte.** Každý zkontroluje **Zůstatky**, které ukazují, kdo komu dluží, a pošle Priye svůj podíl, jak chce. Pak platbu zaznamenejte přes **Vyrovnat dluhy** a **Zaznamenat vyrovnání**. Rychlé vyrovnání doplní částku."
+  - heading: "Nejdřív koupit, nebo nejdřív vybrat"
+    body: "Side Badger společnou kasu nedrží, takže „vybírání“ ve skutečnosti znamená počítání. Fungují dvě pořadí."
+    items:
+      - "**Nejdřív koupit.** Kupující zaplatí, přidá výdaj se skutečnou cenou a všichni hned vidí svůj podíl. Je to přehlednější, ale kupující nese náklad, dokud lidé nezaplatí, takže vyberte kupujícího, který si to může dovolit."
+      - "**Nejdřív vybrat.** Lidé pošlou svou částku kupujícímu před nákupem. Jakmile znáte cenu, zadejte dárek a pak zaznamenejte každou platbu s datem, kdy peníze skutečně přešly. Dárek přidejte jako první, aby měla každá platba zůstatek, ke kterému se vztahuje."
+      - "**Cena se pohne.** Doprava, slevový kód, pozdní zdražení. Upravte dárek a změňte přesné částky tak, aby se stále sčítaly. Dřívější verze se uchová, ale řekněte to nejdřív skupině, protože se jí změní zůstatky."
+  - heading: "Ať se Bea nic nedozví"
+    body: "Skupinu vidí jen její členové, takže Bea skupinu, ve které není, vidět nemůže. Pozvěte jen lidi, kteří přispívají, a nikoho jiného. Odkaz funguje, dokud nevyprší, a můžete zvolit cokoli od 15 minut do 5 dní, takže vyberte krátkou dobu a pošlete ho tam, kde ho Bea neuvidí. Odkaz ukáže náhled skupiny každému, kdo ho otevře, proto skupinu pojmenujte nějak nudně, třeba Sobotní kasa, a jméno Bea nepište ani do popisů výdajů a možností hlasování."
+  - heading: "Co Side Badger tady nedělá"
+    items:
+      - "Peníze nedrží ani nevybírá. Příspěvky jdou kupujícímu bankovním převodem, v hotovosti nebo čímkoli, co používáte, a pak je někdo zaznamená."
+      - "Neposílá žádné připomínky plateb. Postrkovat toho, kdo ještě nezaplatil, je pořád lidská práce."
+      - "Neurčuje ničí podíl. Hlasování určí rozpočet a možnost „rozdělit zbytek“ neexistuje, takže každou částku zadáváte sami."
+      - "Každý výdaj má jednoho plátce. Pokud dva lidé koupili různé části dárku, zadejte dva výdaje."
+      - "Každý, kdo je v rozdělení, potřebuje bezplatný účet a místo ve skupině."
+exampleAfter: 2
+example:
+  heading: "Gramofon pro Beu a přáníčko"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: "dárek"
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: "přáníčko a balicí papír"
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Co když vybereme víc, než dárek stojí?"
+      a: "Přesné částky se musí sečíst na cenu, takže podíly zkraťte, dokud to nesedí. Nebo přebytek použijte na něco skutečného, například na květiny, a zadejte to jako druhý výdaj, jako přáníčko s papírem v příkladu."
+    - q: "Může někdo přispět, aniž by se připojil do skupiny?"
+      a: "Ne, pokud ho chcete mít v počtu. Každý v rozdělení potřebuje bezplatný účet a místo ve skupině. U někoho, kdo má jen hotovost, ji může převzít Priya a zadat dárek v částce, kterou skupina ještě dluží. Například pokud jí Sam předá 40 £ v hotovosti, Priya zadá 200 £ a rozdělí je 60, 60 a 80 mezi sebe, Omara a Lenu."
+    - q: "Může hlasování rozhodnout, kolik každý přispěje?"
+      a: "Ne. Hlasování určí jedno číslo pro celou skupinu, například rozpočet. Podíl každého si domluvíte mezi sebou a pak ho zadáte do výdaje jako **Přesné částky**."

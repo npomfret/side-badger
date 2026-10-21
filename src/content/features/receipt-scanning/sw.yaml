@@ -1,0 +1,78 @@
+translatedFrom: "42f5cf35"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.read-by-googles-ai
+  - receipt-attachments.keep-the-receipt
+meta:
+  title: "Skani risiti ili kuongeza gharama | Side Badger"
+  description: "Mwache beji asome risiti. Anajaza jumla, tarehe na mahali ili uvihakiki, bila mikopo ya kuskani. Huduma ya AI ya Google husoma picha."
+h1: "Skani risiti, hakiki maelezo, igawanye"
+navLabel: "Kuskani risiti"
+lead: "Mwache beji asome risiti, nawe ukague kazi yake. Ongeza picha kwenye gharama mpya na Side Badger inajaza jumla, tarehe na mahali ili uvihakiki. Kisha [unaigawanya](page:feature/split-expenses) kama gharama nyingine yoyote. Kuskani ni bure, bila mikopo ya kuskani. Kunajaza gharama moja na hakugawanyi bili kwa kila kitu. Picha za risiti zinasomwa na huduma ya AI ya Google."
+cta:
+  heading: "Piga picha. Hakiki. Gawanya."
+  body: "Fungua akaunti ya bure, anzisha kikundi na ongeza gharama yenye picha ya risiti. Tazama kinachojazwa, badilisha kisicho sahihi, na uhifadhi ukiridhika."
+problem:
+  heading: "Hakuna anayetaka kuandika risiti kwenye foleni ya teksi"
+  body: "Safari na usiku mkubwa wa kutoka huja na karatasi. Chakula cha jioni, teksi, raundi iliyogeuka kuwa sita. Kuandika kila moja kwenye simu kwa vidole vilivyoganda huku foleni iko nyuma yako ndivyo gharama zinavyosahaulika. Kwa hivyo Side Badger itakusomea risiti. Inafanya rasimu ya kwanza na wewe unafanya ukaguzi. Inafaa [safari za kikundi](page:use-case/group-trips) na [matukio na sherehe](page:use-case/events-and-celebrations), ambapo risiti zinarundikana haraka kuliko mtu yeyote anavyotaka kuzishughulikia."
+workflow:
+  heading: "Kutoka picha hadi gharama kwa hatua tatu"
+  steps:
+    - title: "Ongeza risiti kwenye gharama mpya"
+      body: "Anza gharama mpya na ugonge **Skani risiti**, au tumia kitendo cha haraka cha **Skani risiti** kwenye dashibodi yako. Piga picha au chagua uliyonayo tayari. **Ongeza risiti au kiambatisho** kwenye fomu pia kinafaa."
+    - title: "Iache isome risiti"
+      body: "Fomu inasema **Inachambua risiti...** wakati AI ya Side Badger inasoma picha. Kisha inajaza ilichokipata, kama maelezo, jumla, sarafu, tarehe, saa na mahali. Chochote ulichokuwa umeshaandika kinaachwa kama kilivyo."
+      shot: S09
+      shotAlt: "Fomu ya gharama mpya ikionyesha Inachambua risiti..., kisha fomu hiyo hiyo ikiwa na maelezo yaliyojazwa"
+    - title: "Hakiki, kisha ugawanye"
+      body: "Linganisha fomu na karatasi. Sahihisha kisicho sahihi, sema nani alilipa na nani alishiriki gharama, chagua jinsi ya kugawanya na uhifadhi. Gharama haipo hadi ufanye hivyo. [Kugawanya gharama](page:feature/split-expenses) kunaeleza kugawanya."
+options:
+  heading: "Chaguo"
+  items: []
+sections:
+  - heading: "Kinachojazwa"
+    body: "Ongeza picha ya risiti kwenye gharama mpya na sehemu hizi zinaweza kujazwa. Nani alilipa, nani alishiriki gharama na jinsi ya kugawanya bado ni juu yako."
+    items:
+      - "**Maelezo** ya gharama."
+      - "**Jumla**."
+      - "**Sarafu**, ikiwa kikundi chako kinaruhusu."
+      - "**Tarehe** na **saa**."
+      - "**Mahali**."
+      - "Nakala ya maandishi ya risiti katika **maelezo ya ziada**, kwa wakati ile ya karatasi inapofifia au kupita kwenye mashine ya kufulia."
+  - heading: "Unachohakiki bado"
+    body: "Vyote. Chukulia kinachojazwa kama rasimu. Linganisha jumla na karatasi, kisha sarafu, tarehe na mahali. Picha zenye ukungu na karatasi zilizokunjamana zinaweza kumdanganya msomaji yeyote, na hatuahidi kwamba inapata kila risiti sawa, kwa hivyo tafadhali angalia kabla ya kuhifadhi. Kitu kikiwa kimekosewa, andika juu yake. Risiti ikiwa kwa yen na kikundi kinamaliza hesabu kwa pauni, [sarafu nyingi](page:feature/multiple-currencies) inaeleza kinachofuata."
+  - heading: "Weka risiti pamoja na gharama"
+    body: "Iwe imeskaniwa au la, risiti inaweza kubaki na gharama. Ambatisha picha au PDF, hadi tatu kwa kila gharama na hadi MB 10 kila moja. Wanachama wa kikundi wanaziona kwenye gharama. Picha zinaonekana kama picha ndogo zinazofunguka kwenye kitazamaji, na PDF zinafunguka kama viungo. Picha unayoiskani pia inaambatishwa, isipokuwa uiondoe kabla ya kuhifadhi. Mtu akiuliza chakula kile cha jioni kiligharimu kweli kiasi gani, ushahidi uko hapo hapo."
+  - heading: "Risiti yako inakoenda"
+    body: "Picha za risiti zinasomwa na huduma ya AI ya Google. Ili kujaza fomu, picha inasomwa na Google Vertex AI (Gemini) katika eneo la Google la Marekani lenye maeneo mengi. Ongeza picha kwenye gharama mpya na itasomwa. PDF, au picha iliyoongezwa kwenye gharama iliyopo tayari, inahifadhiwa bila kusomwa. Risiti zilizoambatishwa zinaonekana kwa wanachama wa kikundi, kwa hivyo kama risiti inaonyesha kitu usichopenda kushiriki, ruka picha na uandike gharama hiyo kwa mkono."
+limits:
+  heading: "Mipaka"
+  items:
+    - "Picha pekee. JPEG, PNG na WebP, na HEIC baada ya kubadilishwa. PDF zinaweza kuambatishwa kwenye gharama lakini hazisomwi."
+    - "Kuskani ni kwa gharama mpya tu. Kwenye gharama iliyopo unaweza kuambatisha risiti, lakini hakuna kinachosomwa."
+    - "Inajaza tu sehemu ambazo hujagusa, na sarafu tu ikiwa kikundi chako kinaruhusu."
+    - "Haigawanyi kwa kila kitu wala kuwapa watu vipengele vya risiti. Inajaza gharama moja na wewe unaigawanya kama kawaida."
+    - "Hakuna ahadi kwamba inachojaza ni sahihi, au kwamba kuskani kutafanya kazi kila mara. Hakiki kabla ya kuhifadhi, na ongeza gharama kwa mkono ikiwa kuskani kunashindwa au hakupatikani."
+    - "Gharama ina hadi viambatisho vitatu, kila kimoja hadi MB 10, kama JPEG, PNG, WebP, HEIC au PDF."
+    - "Picha za risiti zinasomwa na Google Vertex AI (Gemini) katika eneo la Google la Marekani lenye maeneo mengi, na risiti zilizoambatishwa zinaonekana kwa wanachama wa kikundi."
+useCasesHeading: "Mahali ambapo risiti zinarundikana"
+faq:
+  heading: "Maswali"
+  items:
+    - q: "Je, inaweza kugawanya risiti kwa kila kitu?"
+      a: "Hapana. Inajaza gharama, ikiwemo jumla, na wewe unaigawanya kwa usawa, kwa kiasi halisi au kwa asilimia. Kwa bili ambapo kila mtu aliagiza tofauti, weka kila mtu anachodaiwa kama kiasi halisi. [Kugawanya gharama](page:feature/split-expenses) kuna maelezo."
+    - q: "Je, inaweza kusoma PDF?"
+      a: "Hapana. Unaweza kuambatisha PDF kwenye gharama ili isafiri pamoja na nambari, lakini picha pekee ndizo zinazosomwa."
+    - q: "Je, kuna kikomo cha kuskani?"
+      a: "Hakuna mikopo ya kuskani ya kuisha, na kuskani ni bure. Faili zina mipaka, ambayo ni hadi viambatisho vitatu kwa kila gharama na MB 10 kila kimoja. [Kile ambacho bure kinajumuisha](page:pricing) kina mengine."
+    - q: "Nani anaweza kuona risiti yangu?"
+      a: "Wanachama wa kikundi wanaweza kuona risiti zilizoambatishwa kwenye gharama. Picha za risiti pia zinasomwa na huduma ya AI ya Google, ndivyo fomu inavyojazwa."
+    - q: "Je, naweza kuskani risiti ya gharama niliyokwisha kuongeza?"
+      a: "Hapana, kuskani ni kwa gharama mpya. Bado unaweza kuambatisha risiti kwenye gharama iliyopo, na inahifadhiwa bila kusomwa."
+    - q: "Je, ikijaza kitu kisicho sahihi?"
+      a: "Andika juu yake. Kila sehemu inabaki kuhaririwa hadi uhifadhi, na unapaswa kuzihakiki zote hata hivyo. Kuskani kukishindwa au kutopatikana, ongeza gharama kwa mkono kama kawaida."

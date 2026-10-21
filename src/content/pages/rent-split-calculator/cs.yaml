@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Kalkulačka dělení nájmu: podle pokoje nebo příjmu | Side Badger"
+  description: "Větší pokoj, větší podíl? Spočítejte, kolik platí každý spolubydlící, podle velikosti pokoje nebo příjmu. Běží v prohlížeči: nic se neukládá ani neodesílá."
+h1: "Kalkulačka dělení nájmu"
+navLabel: "Kalkulačka dělení nájmu"
+lead: "Větší ložnice, větší podíl? Zadejte nájem a uvidíte, kolik každý platí, podle velikosti pokoje nebo příjmu, na haléř přesně. Běží ve vašem prohlížeči, nic neukládá a nepřesouvá žádné peníze. Když chce dům vést přehled, [dělte výdaje](page:feature/split-expenses) v Side Badger a nájem každý měsíc zkopírujte."
+cta:
+  heading: "Domluvte procenta jednou. Kopírujte je donekonečna."
+  body: "Tahle kalkulačka zapomene všechno, jakmile zavřete kartu, stejně jako spolubydlící, který internet určitě platil. Skupina v Side Badger uchovává nájem, účty i to, kdo co zaplatil. Je zdarma, bez reklam a bez denních limitů."
+sections:
+  - heading: "Dva způsoby, jak sdílet nájem"
+    items:
+      - "**Podle velikosti pokoje.** Část nájmu platí za kuchyň, koupelnu a obývák, které využívají všichni. Tento podíl si zvolíte (na začátku je to 40 %) a dělí se rovným dílem. Zbytek se dělí podle plochy ložnic, takže velký pokoj platí víc a komůrka dostane slevu, kterou si zaslouží."
+      - "**Podle příjmu.** Každý platí takový podíl nájmu, jaký podíl na celku vydělává. Přidáte-li společné účty, řídí se stejnými podíly."
+  - heading: "Jak výpočty fungují"
+    body: "Každý dostane přesný podíl a pak celé procento, protože celá čísla se snáz zadávají i snáz se o nich hádá. Zaokrouhluje se metodou největšího zbytku: každý si ponechá celé číslo pod svým podílem a zbylé body připadnou těm, kdo zaokrouhlením ztratili nejvíc. Procenta dávají vždy dohromady 100. V bytě níže tvoří společných 40 % po 13,33 % na osobu. Priyin pokoj má 16 ze 38 m² bytu, takže 60 % × 16/38 je 25,26 %, plus 13,33 % dá 38,6 %, což se zaokrouhlí na 39 %. Tom a Aisha vycházejí na 32 % a 29 % a 39 + 32 + 29 je 100. Každá částka je toto procento z nájmu: 39 % z 1 950 £ je 760,50 £."
+  - heading: "Pak to zadejte do Side Badger"
+    body: "Celý příběh, včetně svinovacího metru, najdete v návodu [jak dělit nájem podle velikosti pokoje](page:guide/how-to-split-rent-by-room-size), a pro páry v návodu [jak dělit účty s partnerem, který vydělává víc](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+    items:
+      - "**Přidejte nájem.** Ve skupině zvolte **Přidat výdaj**, v části **Kdo platil?** vyberte, kdo zaplatil pronajímateli, a v části **Rozdělit mezi** nechte všechny."
+      - "**Zvolte Procenta.** V části **Jak rozdělit** zvolte **Procenta** a zadejte celá procenta. Pokud nedávají dohromady 100, formulář na to upozorní."
+      - "**Zkopírujte ho příští měsíc.** Otevřete nájem z minulého měsíce a zvolte **Kopírovat výdaj**. Rozdělení se zkopíruje s ním."
+  - heading: "Co kalkulačka nedělá"
+    items:
+      - "**Nezměří vaše pokoje.** Podlahová plocha je jen výchozí bod. Pokoj s vlastní koupelnou má větší hodnotu než stejně velký bez ní a komůrka, do které se vejde postel a jedna optimistická židle, má hodnotu menší."
+      - "**Nerozhodne, co se počítá jako příjem.** Čistý nebo hrubý, mzda nebo vedlejší výdělek: rozhodne skupina. Pro všechny použijte stejné období."
+      - "**Nic neukládá.** Zavřete kartu a čísla jsou pryč. Chcete-li je zachovat, zkopírujte odkaz. Obsahuje vaše čísla za znakem #, tedy v části adresy, kterou prohlížeče na server nikdy neposílají, a kdokoli s ním je může přečíst."
+      - "**Nepřesouvá peníze.** Pronajímateli zaplatíte, jak chcete."
+      - "**Nemíchá měny a nezvládne víc, než dovolují limity.** Vyberte jednu měnu. Zvládne 2 až 10 lidí a nájem do 999 999,99, stejně jako v aplikaci."
+exampleAfter: 2
+example:
+  heading: "Jeden byt, jeden měsíc"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "Nájem"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "Účet za energie"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "Internet"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Co je spravedlivější, velikost pokoje, nebo příjem?"
+      a: "Ani jedno není spravedlivější vždycky. Velikost pokoje se hodí pro spolubydlící, kteří platí za prostor, ve kterém spí. Příjem se hodí pro páry a přátele s velmi odlišným výdělkem. Domluvte se před prvním dnem placení nájmu, ne po něm."
+    - q: "Mají se účty dělit stejně?"
+      a: "U spolubydlících obvykle ne. Energie a internet využívají všichni, takže rovnoměrné dělení je jednodušší, jako v příkladu. Při dělení podle příjmu kalkulačka dá účtům stejné podíly jako nájmu."
+    - q: "Mohu použít čtvereční stopy?"
+      a: "Ano. Zvolte ft² a zadejte plochy ve čtverečních stopách. Jednotka je jen popisek a podíly vyjdou stejně, pokud všichni použijí tutéž."
+    - q: "Je kalkulačka zdarma?"
+      a: "Ano. Zdarma. Bez reklam. Bez denních limitů. Nepotřebujete ani účet."

@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Msaada na usaidizi | Side Badger"
+  description: "Umesahau nywila, kiungo kisichofanya kazi, malipo yaliyorekodiwa vibaya? Majibu mafupi kwa yanayowakwamisha watu kwenye Side Badger, na jinsi ya kutufikia."
+h1: "Msaada na usaidizi, bila muziki wa kusubiri"
+navLabel: "Msaada na usaidizi"
+lead: "Majibu mafupi kwa mambo yanayowakwamisha watu, kuanzia nywila iliyosahaulika hadi kufunga kikundi kabisa. Kila jibu lina kiungo cha ukurasa unaoeleza zaidi. Hukupata lako? Tuambie ukiwa ndani ya programu, au tuandikie."
+cta:
+  heading: "Ulikuja kwa msaada, unabaki kwa kugawanya?"
+  body: "Huna akaunti bado? Anzisha kikundi, shiriki kiungo na ongeza gharama ya kwanza. Bure, bila matangazo na bila vikomo vya kila siku."
+groups:
+  - heading: "Kuingia"
+    items:
+      - q: "Umesahau nywila?"
+        a: "Hutokea hata kwa nyegere bora. Chagua **Umesahau nywila?** kwenye skrini ya **Ingia**, andika barua pepe ya akaunti yako, kisha fuata kiungo kwenye barua pepe tunayotuma ili uchague mpya. [Inavyofanya kazi](page:how-it-works) inaeleza akaunti inahitaji nini kingine."
+      - q: "Nimejisajili, lakini siwezi kuongeza chochote. Kwa nini?"
+        a: "Mara nyingi barua pepe yako haijathibitishwa bado, kwa hivyo fungua kiungo kwenye barua pepe ya uthibitishaji, au chagua **Tuma tena barua pepe ya uthibitishaji** kwenye bango la kikumbusho upate mpya. Kama umethibitishwa, kikundi kinaweza kuwa kimefungwa au ruhusa zake zisikuruhusu, na mtazamaji anaona kila kitu bila kubadilisha chochote, kama [vikundi na ruhusa](page:feature/groups-and-permissions) inavyoeleza."
+      - q: "Nabadilishaje barua pepe au nywila yangu?"
+        a: "Kwenye **Mipangilio**, chagua **Badilisha Barua Pepe** au **Badilisha Nywila**. Zote mbili zinaomba nywila yako ya sasa kwanza, na anwani mpya ya barua pepe inahitaji kuthibitishwa kupitia kiungo tunachotuma huko. [Inavyofanya kazi](page:how-it-works) inaeleza akaunti."
+      - q: "Je, naweza kuingia kwa Google au Apple?"
+        a: "Hapana. Unachohitaji ni anwani ya barua pepe na nywila yenye angalau herufi 12, na unaweza kuweka tiki **Nikumbuke** kwenye simu au kompyuta yako mwenyewe. Ukurasa wa [programu ya wavuti](page:feature/web-app) unaeleza yaliyobaki ya kuanza."
+  - heading: "Kujiunga na kikundi"
+    items:
+      - q: "Mtu amenitumia kiungo cha mwaliko. Najiungaje?"
+        a: "Kifungue, kisha ingia au fungua akaunti ya bure. Utaona hakikisho la kikundi, utachagua jina watu watakalokuona nalo huko, na ubonyeze **Jiunge na Kikundi**. [Vikundi na ruhusa](page:feature/groups-and-permissions) inaonyesha njia nzima ya kuingia."
+      - q: "Inasema \"Inasubiri Idhini\". Nimekosea kitu?"
+        a: "Hata kidogo. Kikundi hiki kina msimamizi anayemruhusu kila mtu kuingia, kwa hivyo ombi lako limeenda kwa wasimamizi wake, na huwezi kuona ndani hadi mmoja wao aidhinishe. Kumkumbusha kwa upole ana kwa ana kunaruhusiwa, na [vikundi na ruhusa](page:feature/groups-and-permissions) inaeleza idhini."
+      - q: "Kiungo kinasema si halali au muda wake umeisha."
+        a: "Viungo vya mwaliko hudumu kwa muda alioamua aliyevitengeneza, kuanzia dakika 15 hadi siku 5. Mwombe mtu kwenye kikundi kiungo kipya, au msimbo wa QR kama mko chumba kimoja. [Inavyofanya kazi](page:how-it-works) inaeleza mialiko."
+  - heading: "Gharama"
+    items:
+      - q: "Naongezaje gharama?"
+        a: "Fungua kikundi na uchague **Ongeza Gharama**. Sema ilikuwa ya nini, kiasi gani, nani alilipa na nani wanashiriki, kisha igawanye kwa usawa, kwa kiasi kamili au kwa asilimia. [Gawanya gharama](page:feature/split-expenses) inapitia kila chaguo."
+      - q: "Je, kodi inaweza kujirudia kila mwezi?"
+        a: "Si yenyewe, kwa sababu hakuna gharama zinazojirudia. Fungua ya mwezi uliopita na uchague **Kopi gharama**, na fomu inakuja ikiwa imejazwa, tayari kwa tarehe mpya na chochote kilichobadilika. [Gawanya gharama](page:feature/split-expenses) ina zaidi kuhusu kunakili."
+      - q: "Nimeandika kiasi kisicho sahihi. Naweza kurekebisha?"
+        a: "Ndiyo. Hariri gharama, mradi ruhusa za kikundi zikuruhusu na kikundi kisiwe kimefungwa. Toleo la awali linahifadhiwa, kwa hivyo hakuna anayehitaji kuamini neno lako kuhusu kilichobadilika, kama [kugawanya gharama](page:feature/split-expenses) inavyoeleza."
+      - q: "Gharama inaonekana si sahihi, na si yangu. Nifanye nini?"
+        a: "Chagua **Nina swali** kwenye gharama hiyo na useme kwa nini, na gharama nzima inabaki nje ya salio la kila mtu hadi aliyeuliza, au msimamizi, afunge swali. Hakuna kitufe hicho? Ni watu waliojumuishwa kwenye gharama pekee wanaoweza kuuliza, msimamizi lazima kwanza awashe **Ruhusu maswali ya gharama** kwenye mipangilio ya kikundi, na [mwongozo wa gharama inayobishaniwa](page:guide/what-to-do-when-someone-disputes-a-shared-expense) una diplomasia."
+  - heading: "Malipo"
+    items:
+      - q: "Je, Side Badger inatuma pesa?"
+        a: "Hapana, Side Badger haisogezi pesa kamwe. Lipaneni mtakavyo, kwa uhamisho wa benki, pesa taslimu au chochote kinachofanya kazi, kisha rekodi malipo ili salio liwe la sasa. [Jinsi ya kumaliza hesabu baada ya safari ya kikundi](page:guide/how-to-settle-up-after-a-group-trip) inapitia kuanzia mwanzo hadi mwisho."
+      - q: "Narekodije malipo?"
+        a: "Chagua **Lipa deni** kwenye kikundi, sema nani alilipa na nani alipokea, andika kiasi au acha kitufe cha **Lipa haraka** kikijaze, kisha chagua **Rekodi Malipo**. Umelipa sehemu tu? Rekodi kilicholipwa na kilichobaki kinabaki kwenye salio, kama [kumaliza hesabu](page:feature/settle-up) inavyoeleza."
+      - q: "Nimerekodi malipo vibaya. Naweza kurekebisha?"
+        a: "Aliyeyarekodi anaweza kuyahariri kutoka historia ya **Malipo** ya kikundi, na yeye au msimamizi anaweza kuyafuta, jambo linaloyaondoa kwenye salio. Malipo yanayomhusisha mtu ambaye ameondoka kwenye kikundi hayawezi kuhaririwa. [Kumaliza hesabu](page:feature/settle-up) inaeleza historia."
+  - heading: "Arifa na skrini ya mwanzo"
+    items:
+      - q: "Nawashaje arifa?"
+        a: "Washa **Arifa za push** kwenye **Mipangilio** na uziruhusu kivinjari chako kikiuliza. Kama kivinjari kimezizuia tayari, ziruhusu kwenye mipangilio yake kwanza. Kila kifaa huwashwa kivyake na kufikishwa hakuhakikishiwi, kwa hivyo chukulia arifa kama kikumbusho, si ahadi, kama ukurasa wa [programu ya wavuti](page:feature/web-app) unavyoeleza."
+      - q: "Kwa nini arifa hazifanyi kazi kwenye iPhone yangu?"
+        a: "Kwenye iPhone au iPad zinafanya kazi tu kwenye programu iliyoongezwa kwenye Skrini ya Kwanza, kamwe kwenye kichupo cha kivinjari. Iongeze, ifungue kutoka ikoni ya Skrini ya Kwanza, kisha ziwashe kwenye **Mipangilio**. [Pangeni pamoja](page:feature/plan-together) inaonyesha zinakuambia nini."
+      - q: "Je, kuna programu ya kupakua?"
+        a: "Si kutoka duka la programu, kwa sababu Side Badger inafanya kazi kwenye kivinjari chako. Ingia, kisha fuata **Ongeza kwenye Skrini ya Kwanza au Dock** kwenye **Mipangilio**, na inafunguka kama programu, kwenye dirisha lake. Ukurasa wa [programu ya wavuti](page:feature/web-app) una hatua za kila kifaa."
+  - heading: "Kuondoka, kuhifadhi, kufunga na kufunga kabisa"
+    items:
+      - q: "Naondokaje kwenye kikundi?"
+        a: "Maliza hesabu, kisha chagua **Ondoka kwenye Kikundi**. Huwezi kuondoka ukiwa unadaiwa au unadai pesa hata kwa sarafu moja, wakati gharama uliyomo ina swali wazi, au kama wewe ni msimamizi wa mwisho au mwanachama pekee, na kurudi kunahitaji mwaliko mpya. [Vikundi na ruhusa](page:feature/groups-and-permissions) ina maelezo."
+      - q: "Naondoaje kikundi cha zamani kwenye dashibodi yangu?"
+        a: "Chagua **Hifadhi Kikundi**. Kinatoweka kwenye dashibodi yako na si ya mtu mwingine, bado unaweza kukifungua na kukitumia, na **Ondoa kwenye hifadhi** kinakirudisha. [Vikundi na ruhusa](page:feature/groups-and-permissions) inalinganisha kuhifadhi, kufunga na kufunga kabisa."
+      - q: "Safari imekwisha. Tunaweza kuzuia nambari zisibadilike?"
+        a: "Ndiyo. Msimamizi anaweza kuwasha **Funga kikundi** kwenye mipangilio ya kikundi, na hakuna anayeweza kuongeza wala kuhariri gharama, kurekodi malipo mapya au kubadilisha orodha na kura za maoni hadi msimamizi akifungue. Kila mtu bado anaweza kusoma kikundi na historia yake, na hakuna teksi ya kuchelewa itakayoingia, kama [vikundi na ruhusa](page:feature/groups-and-permissions) inavyoeleza."
+      - q: "Naweza kufuta kikundi?"
+        a: "Msimamizi anaweza kukifunga kabisa kwa **Funga kikundi** kwenye mipangilio ya kikundi, baada ya kuandika jina la kikundi kuthibitisha. Kufunga kabisa hakurudiwi na kunafanya kikundi kisipatikane kwa kila mtu, kwa hivyo kama unataka tu kisionekane, kihifadhi badala yake. [Vikundi na ruhusa](page:feature/groups-and-permissions) ina maandishi madogo."
+contact:
+  heading: "Bado umekwama?"
+  items:
+    - q: "Umekuta hitilafu, au unataka kitu kibadilishwe?"
+      a: "Tuambie ukiwa ndani ya programu. Chagua **Maoni** kwenye menyu ya akaunti yako, kisha **Tuma Maoni**, na uchague **Ripoti Hitilafu**, **Pata Msaada** au **Kipengele Kipya**. Ambatisha picha ya skrini ikisaidia, na tukijibu utaona jibu kwenye mazungumzo yaleyale."
+    - q: "Ungependa kutuma barua pepe?"
+      a: "Andika kwenye anwani iliyo hapa chini. Sema ni kikundi gani, ulifanya nini na ulitarajia nini kitokee. Kulalamika ni sawa; nywila si sawa, kwa hivyo usitume yako kamwe."
+  emailLabel: "Tuandikie barua pepe kwa"
+  email: support@sidebadger.me

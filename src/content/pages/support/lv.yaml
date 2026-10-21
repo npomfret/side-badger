@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Palīdzība un atbalsts | Side Badger"
+  description: "Aizmirsta parole, saite, kas nedarbojas, nepareizi reģistrēts maksājums? Īsas atbildes uz to, kur cilvēki iestrēgst Side Badger, un kā ar mums sazināties."
+h1: "Palīdzība un atbalsts, bez gaidīšanas mūzikas"
+navLabel: "Palīdzība un atbalsts"
+lead: "Īsas atbildes uz to, kur cilvēki iestrēgst, sākot ar aizmirstu paroli un beidzot ar grupas aizvēršanu uz visiem laikiem. Katra atsaucas uz lapu, kas paskaidro vairāk. Neatradāt savu? Pastāstiet mums lietotnē vai uzrakstiet mums."
+cta:
+  heading: "Atnācāt pēc palīdzības, paliekat sadalīšanas dēļ?"
+  body: "Vēl nav konta? Sāciet grupu, kopīgojiet saiti un pievienojiet pirmo izdevumu. Bez maksas, bez reklāmām un bez dienas ierobežojumiem."
+groups:
+  - heading: "Pierakstīšanās"
+    items:
+      - q: "Aizmirsāt paroli?"
+        a: "Tā gadās arī labākajiem āpšiem. Ekrānā **Pierakstīties** izvēlieties **Aizmirsāt paroli?**, ievadiet sava konta e-pastu un tad sekojiet saitei e-pastā, ko mēs nosūtām, lai izvēlētos jaunu paroli. Ko vēl kontam vajag, aprakstīts sadaļā [kā tas darbojas](page:how-it-works)."
+      - q: "Reģistrējos, bet neko nevaru pievienot. Kāpēc?"
+        a: "Visbiežāk e-pasts vēl nav apstiprināts, tāpēc atveriet saiti apstiprinājuma e-pastā vai atgādinājuma joslā izvēlieties **Atkārtoti nosūtīt apstiprinājuma e-pastu**, lai saņemtu jaunu. Ja e-pasts jau ir apstiprināts, grupa var būt bloķēta vai tās atļaujas var jums to neļaut, bet skatītājs visu redz un neko nemaina, kā skaidro [grupas un atļaujas](page:feature/groups-and-permissions)."
+      - q: "Kā nomainīt e-pastu vai paroli?"
+        a: "Sadaļā **Iestatījumi** izvēlieties **Mainīt e-pastu** vai **Mainīt paroli**. Abas vispirms prasa pašreizējo paroli, un jaunā e-pasta adrese jāapstiprina ar saiti, ko mēs tajā nosūtām. Par kontiem plašāk lasiet sadaļā [kā tas darbojas](page:how-it-works)."
+      - q: "Vai varu pierakstīties ar Google vai Apple?"
+        a: "Nē. Pietiek ar e-pasta adresi un paroli, kas ir vismaz 12 rakstzīmju gara, un savā tālrunī vai datorā varat atzīmēt **Atcerēties mani**. Pārējo par darba sākšanu skaidro lapa [tīmekļa lietotne](page:feature/web-app)."
+  - heading: "Pievienošanās grupai"
+    items:
+      - q: "Kāds man atsūtīja uzaicinājuma saiti. Kā pievienoties?"
+        a: "Atveriet to, tad pierakstieties vai izveidojiet bezmaksas kontu. Redzēsiet grupas priekšskatījumu, izvēlēsieties vārdu, ar kādu jūs tur redzēs, un nospiedīsiet **Pievienoties grupai**. Kā tikt grupā, soli pa solim rāda [grupas un atļaujas](page:feature/groups-and-permissions)."
+      - q: "Rakstīts „Gaida apstiprinājumu”. Vai kaut ko izdarīju nepareizi?"
+        a: "Nepavisam. Šajā grupā administrators ielaiž katru cilvēku, tāpēc jūsu pieprasījums ir nonācis pie tās administratoriem, un iekšā neko neredzēsiet, kamēr kāds no viņiem to neapstiprinās. Draudzīgs pagrūdiens klātienē ir atļauts, un apstiprināšanu skaidro [grupas un atļaujas](page:feature/groups-and-permissions)."
+      - q: "Saite saka, ka tā nav derīga vai ir beigusies."
+        a: "Uzaicinājuma saites ir derīgas tik ilgi, cik ilgi to izveidotājs ir iestatījis, no 15 minūtēm līdz 5 dienām. Palūdziet kādam grupā jaunu saiti vai QR kodu, ja esat vienā telpā. Par uzaicinājumiem lasiet sadaļā [kā tas darbojas](page:how-it-works)."
+  - heading: "Izdevumi"
+    items:
+      - q: "Kā pievienot izdevumu?"
+        a: "Atveriet grupu un izvēlieties **Pievienot izdevumus**. Norādiet, kas tas bija, cik maksāja, kurš samaksāja un kurš tajā dalījās, tad sadaliet vienādi, pēc precīzām summām vai procentuāli. Katru iespēju izved cauri [izdevumu sadale](page:feature/split-expenses)."
+      - q: "Vai īre var atkārtoties katru mēnesi?"
+        a: "Pati no sevis nē, jo atkārtotu izdevumu nav. Atveriet pagājušā mēneša izdevumu un izvēlieties **Kopēt izdevumus**, un veidlapa parādās aizpildīta, gatava jaunam datumam un tam, kas mainījies. Par kopēšanu vairāk lasiet sadaļā [izdevumu sadale](page:feature/split-expenses)."
+      - q: "Ierakstīju nepareizu summu. Vai varu to labot?"
+        a: "Jā. Labojiet izdevumu, ja vien grupas atļaujas to ļauj un grupa nav bloķēta. Iepriekšējā versija tiek saglabāta, tāpēc nevienam nav jātic jums uz vārda par to, kas mainījies, kā skaidro [izdevumu sadale](page:feature/split-expenses)."
+      - q: "Kāds izdevums šķiet nepareizs, un tas nav mans. Ko darīt?"
+        a: "Izdevumā izvēlieties **Man ir jautājums** un pasakiet, kāpēc, un viss izdevums paliek ārpus visu atlikumiem, kamēr to neaizver tas, kas jautāja, vai administrators. Nav šādas pogas? Jautāt var tikai cilvēki, kas iekļauti izdevumā, un administratoram vispirms grupas iestatījumos jāieslēdz **Atļaut jautājumus par izdevumiem**, bet diplomātiju sniedz [pamācība par apstrīdētu izdevumu](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Maksājumi"
+    items:
+      - q: "Vai Side Badger sūta naudu?"
+        a: "Nē, Side Badger nekad nepārvieto naudu. Samaksājiet viens otram, kā vēlaties, ar bankas pārskaitījumu, skaidru naudu vai to, kas der, tad reģistrējiet maksājumu, lai atlikumi to atspoguļotu. [Kā norēķināties pēc grupas ceļojuma](page:guide/how-to-settle-up-after-a-group-trip) to izved cauri no sākuma līdz beigām."
+      - q: "Kā reģistrēt maksājumu?"
+        a: "Grupā izvēlieties **Norēķināties**, norādiet, kas samaksāja un kas saņēma maksājumu, ievadiet summu vai ļaujiet to aizpildīt pogai **Ātrais norēķins** un izvēlieties **Ierakstīt norēķinu**. Samaksāta tikai daļa? Reģistrējiet samaksāto, un pārējais paliek atlikumā, kā skaidro [norēķināšanās](page:feature/settle-up)."
+      - q: "Nepareizi reģistrēju maksājumu. Vai varu to labot?"
+        a: "To var labot tas, kas to reģistrēja, grupas **Norēķini** vēsturē, un viņš vai administrators var to dzēst, un tad tas pazūd no atlikumiem. Maksājumu, kurā iesaistīts cilvēks, kas kopš tā laika pametis grupu, labot nevar. Par vēsturi lasiet sadaļā [norēķināšanās](page:feature/settle-up)."
+  - heading: "Paziņojumi un sākuma ekrāns"
+    items:
+      - q: "Kā ieslēgt paziņojumus?"
+        a: "Sadaļā **Iestatījumi** ieslēdziet **Push paziņojumi** un atļaujiet tos, kad pārlūkprogramma jautā. Ja pārlūkprogramma tos jau ir bloķējusi, vispirms atļaujiet tos tās pašas iestatījumos. Katra ierīce tiek ieslēgta atsevišķi, un piegāde nav garantēta, tāpēc uztveriet paziņojumu kā pagrūdienu, nevis solījumu, kā skaidro lapa [tīmekļa lietotne](page:feature/web-app)."
+      - q: "Kāpēc paziņojumi nedarbojas manā iPhone tālrunī?"
+        a: "iPhone vai iPad ierīcē tie darbojas tikai lietotnē, kas pievienota sākuma ekrānam, nekad pārlūkprogrammas cilnē. Pievienojiet to, atveriet to no sākuma ekrāna ikonas, tad ieslēdziet tos sadaļā **Iestatījumi**. Par ko tie jūs informē, rāda lapa [Plānojiet kopā](page:feature/plan-together)."
+      - q: "Vai ir lietotne, ko lejupielādēt?"
+        a: "Ne no lietotņu veikala, jo Side Badger darbojas jūsu pārlūkprogrammā. Pierakstieties, tad sadaļā **Iestatījumi** sekojiet **Pievienot sākuma ekrānam vai Dokam**, un tas atveras kā lietotne, savā logā. Soļus katrai ierīcei sniedz lapa [tīmekļa lietotne](page:feature/web-app)."
+  - heading: "Pamešana, arhivēšana, bloķēšana un aizvēršana"
+    items:
+      - q: "Kā pamest grupu?"
+        a: "Norēķinieties, tad izvēlieties **Pamest grupu**. Pamest nevar, kamēr jums ir parāds vai jums pienākas nauda pat vienā valūtā, kamēr izdevumam, kurā piedalāties, ir atvērts jautājums, vai ja esat pēdējais administrators vai vienīgais dalībnieks, un atgriezties var tikai ar jaunu uzaicinājumu. Sīkāk lasiet sadaļā [grupas un atļaujas](page:feature/groups-and-permissions)."
+      - q: "Kā noņemt vecu grupu no sava paneļa?"
+        a: "Izvēlieties **Arhivēt grupu**. Tā pazūd no jūsu paneļa, bet ne no kāda cita paneļa, joprojām varat to atvērt un izmantot, un **Atarhivēt grupu** to atgriež. Arhivēšanu, bloķēšanu un aizvēršanu salīdzina [grupas un atļaujas](page:feature/groups-and-permissions)."
+      - q: "Ceļojums beidzies. Vai varam apturēt skaitļu mainīšanos?"
+        a: "Jā. Administrators grupas iestatījumos var ieslēgt **Bloķēt grupu**, un neviens nevar pievienot vai labot izdevumus, reģistrēt jaunus maksājumus vai mainīt sarakstus un aptaujas, kamēr administrators grupu neatbloķē. Visi joprojām var lasīt grupu un tās vēsturi, un neviens vēls taksi neiezogas, kā skaidro [grupas un atļaujas](page:feature/groups-and-permissions)."
+      - q: "Vai varu dzēst grupu?"
+        a: "Administrators var to aizvērt ar **Aizvērt grupu**, apstiprinājumam ierakstot grupas nosaukumu. Aizvēršana ir neatgriezeniska un padara grupu nepieejamu visiem, tāpēc, ja vien gribat to noņemt no redzesloka, tā vietā arhivējiet. Sīko druku sniedz [grupas un atļaujas](page:feature/groups-and-permissions)."
+contact:
+  heading: "Joprojām neizdodas?"
+  items:
+    - q: "Atradāt kļūdu vai vēlaties ko mainīt?"
+      a: "Pastāstiet mums lietotnē. Konta izvēlnē izvēlieties **Atsauksmes**, tad **Nosūtīt atsauksmi** un izvēlieties **Ziņot par problēmu**, **Lūgt palīdzību** vai **Funkcijas pieprasījums**. Pievienojiet ekrānuzņēmumu, ja tas palīdz, un, kad atbildēsim, atbildi atradīsiet tajā pašā pavedienā."
+    - q: "Labāk rakstīt e-pastu?"
+      a: "Rakstiet uz tālāk norādīto adresi. Pasakiet, par kuru grupu ir runa, ko izdarījāt un ko gaidījāt. Izlādēties drīkst, paroles nē, tāpēc nekad nesūtiet savu."
+  emailLabel: "Rakstiet mums uz"
+  email: support@sidebadger.me

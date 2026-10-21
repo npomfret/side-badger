@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: "Wspólne listy, ankiety i komentarze do wydatków | Side Badger"
+  description: "Komentuj wydatki, kwestionuj te dziwne, prowadź wspólną listę zakupów i głosuj nad willą. Zaplanujcie wydatki razem, potem je podzielcie. Za darmo, bez reklam."
+h1: "Zaplanujcie razem, podzielcie potem"
+navLabel: "Planowanie razem"
+lead: "Lista zakupów i rachunek za zakupy wreszcie ze sobą rozmawiają. Side Badger daje twojej grupie miejsce do rozmów o pieniądzach przed wydaniem i po nim: komentarze przy każdym wydatku, sposób na zakwestionowanie tych, które wyglądają źle, wspólne listy i ankiety do wielkich decyzji. Potem [dzielicie wydatki](page:feature/split-expenses) jak zawsze."
+cta:
+  heading: "Zaplanuj, a potem podziel"
+  body: "Załóż darmowe konto, utwórz grupę i dodaj pierwszą listę, ankietę albo pytanie tuż obok pieniędzy. Nie wiesz, co dalej? Zobacz [jak to działa](page:how-it-works)."
+problem:
+  heading: "Czat jest tu, rachunek tam"
+  body: "Wspólne wydatki mieszkają zwykle w dwóch miejscach. Liczby są w jednym, a kłótnia o liczby w czacie, który przewinął się we wtorek. Lista zakupów to zdjęcie lodówki. O willi zdecydował kciuk w górę od większości osób, chyba. Side Badger trzyma planowanie w grupie, obok wydatków, których dotyczy, więc jest komentarz tam, gdzie koszt, lista tam, gdzie zakupy, ankieta do wielkiej decyzji i sposób, żeby powiedzieć „chwila, czy to się zgadza?”, bez pisania akapitu. Całość dotyczy pieniędzy grupy, bo po to ta grupa istnieje."
+workflow:
+  heading: "Od głosowania nad willą do rachunku za zakupy"
+  steps:
+    - title: "Poddaj wielką decyzję pod głosowanie"
+      body: "Dodaj ankietę do decyzji, która wyznacza rachunek, na przykład którą willę wybrać. Podaj od dwóch do dziesięciu opcji, ustal, ile głosów ma każda osoba, a gdy wszyscy zagłosują, zamknij ją, żeby zwycięzca został oznaczony."
+      shot: S17
+      shotAlt: "Zamknięta ankieta z oznaczoną zwycięską opcją i liczbą głosów obok każdej opcji"
+    - title: "Napiszcie razem listę zakupów"
+      body: "Utwórz wspólną listę, dodaj pozycje i odhaczaj je, gdy trafią do wózka. Rachunek za zakupy dodajesz potem jako wydatek."
+      shot: S16
+      shotAlt: "Wspólna lista zakupów z kilkoma odhaczonymi pozycjami i licznikiem postępu"
+    - title: "Rozmawiaj o koszcie tam, gdzie mieszka"
+      body: "Skomentuj sam wydatek, załącz paragon i zareaguj emoji. Rozmowa zostaje obok liczby, której dotyczy."
+      shot: S08
+      shotAlt: "Wydatek ze szczegółami, miniaturą paragonu, wątkiem komentarzy i reakcjami emoji"
+    - title: "Zakwestionuj ten, który wygląda dziwnie"
+      body: "Jeśli grupa włączyła pytania do wydatków, każdy uwzględniony w wydatku może wybrać **Mam pytanie**. Wydatek zostaje poza saldami, dopóki pytanie nie zostanie wyjaśnione."
+      shot: S18
+      shotAlt: "Lista wydatków z plakietką Zakwestionowano i filtrem Tylko zakwestionowane"
+    - title: "Zobacz, co się zmieniło i kto to zmienił"
+      body: "Historia aktywności i dzwonek powiadomień pokazują, co nowego w twoich grupach. Powiadomienia push są do dyspozycji, jeśli ich chcesz."
+      shot: S19
+      shotAlt: "Rozwijane powiadomienia z listą ostatniej aktywności"
+options:
+  heading: "Opcje"
+  items: []
+example:
+  heading: "Troje współlokatorów, jeden zakwestionowany rachunek za wino"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "duże zakupy"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "sprzątanie"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "wino na imprezę"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Komentarze i reakcje, obok liczb"
+    body: "Każdy wydatek ma własny wątek komentarzy, podobnie grupa, każda lista i każda ankieta. Zapytaj, czemu taksówka tyle kosztowała, pod taksówką, a nie w czacie, do którego nikt nie wraca. Dodaj zdjęcie paragonu albo plik PDF z rezerwacją, a potem zareaguj kciukiem w górę, sercem, śmiechem, zdziwieniem, smutkiem albo świętowaniem przy wydatkach, płatnościach i komentarzach. Uczcij płatność, gdy dotrze. To najbliższe brawom, co Side Badger potrafi zrobić."
+  - heading: "Zakwestionuj wydatek bez wszczynania awantury"
+    body: "Gdy grupa ma włączone pytania do wydatków, każdy uwzględniony w wydatku może wybrać **Mam pytanie** i napisać dlaczego. Pytanie pojawia się jako komentarz przy wydatku, wydatek dostaje plakietkę **Zakwestionowano**, a cały wydatek wypada z sald wszystkich, dopóki pytanie nie zostanie wyjaśnione."
+    items:
+      - "**Włączanie.** Domyślnie jest wyłączone. Administrator włącza **Zezwalaj na pytania dotyczące wydatków** w ustawieniach grupy, w sekcji **Funkcje**."
+      - "**Zamykanie.** Osoba, która zapytała, albo administrator wybiera **Zamknij pytanie**. Jeśli kilka osób zakwestionowało ten sam wydatek, wraca on do sald, gdy zamknięte zostanie ostatnie pytanie."
+      - "**Edycja.** Gdy wydatek jest edytowany, otwarte pytanie przechodzi do nowej wersji dla każdego, kto nadal ma w nim udział. Pytanie każdego, kogo edycja pomija, kończy się ze starą wersją, więc nie ma już czego zamykać."
+      - "**Znajdowanie.** Lista wydatków ma filtr **Tylko zakwestionowane**. To nie jest etap zatwierdzania: wstrzymywane są tylko wydatki, które ktoś zakwestionuje, a cała reszta liczy się od razu po dodaniu."
+  - heading: "Jak toczy się pytanie"
+    body: "Tom dodaje wino na imprezę za 45 £, podzielone na troje współlokatorów. Aisha nie piła, więc zgłasza pytanie, a dopóki jest otwarte, wino nie wlicza się w niczyje saldo. Dom ustala, że wino jest Toma i Priyi, więc Tom zmienia podział na ich dwoje. Aisha nie jest już w wydatku, więc jej pytanie kończy się ze wcześniejszą wersją, która zostaje zachowana, a wino wraca do sald od razu, po 22,50 £ na osobę zamiast po 15 £. Gdyby Aisha została w wydatku, jej pytanie przeszłoby dalej i czekało, aż ona albo administrator je zamknie. Poniżej 48 £ Aishy to 28 £ z zakupów i 20 £ ze sprzątania, a 10,50 £ Priyi to jej udział 70,50 £ (28 £, 20 £ i 22,50 £) minus 60 £, które zapłaciła. Typowa [współlokatorska](page:use-case/housemates) kłótnia. O tym, jak sformułować pytanie, przeczytasz w [co robić, gdy ktoś kwestionuje wspólny wydatek](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Wspólne listy, na zakupy"
+    body: "Utwórz w grupie listę, nazwij ją na przykład Lista zakupów, dodawaj pozycje i odhaczaj je. Przeciągaj pozycje w lepszą kolejność, patrz, jak rośnie licznik postępu, i komentuj listę, gdy ktoś kupi złe mleko owsiane. Zarchiwizuj skończoną listę, żeby ją schować (**Pokaż zarchiwizowane** ją przywraca), albo skopiuj listę, żeby użyć jej znowu. Trzymaj wspólną listę zakupów obok rachunków za zakupy, żeby lista mówiła, co kupić, a wydatek, ile to kosztowało. To, kto może tworzyć i edytować listy, zależy od uprawnień grupy, które wyjaśniają [grupy i uprawnienia](page:feature/groups-and-permissions)."
+  - heading: "Ankiety, anonimowe, jeśli chcesz"
+    body: "Zapytaj grupę o coś, co rozstrzyga rachunek, na przykład którą willę wybrać, ile wydać na prezent albo czy rejs łodzią jest wart zachodu. Ankieta ma pytanie i od dwóch do dziesięciu opcji. Ty wybierasz, ile głosów ma każda osoba, od jednego do dziesięciu, oraz czy głosowanie jest anonimowe. **Anonimowe głosowanie** ukrywa, kto na co głosował, i nie można go zmienić po oddaniu pierwszego głosu. Ludzie mogą zmienić albo wycofać swój głos aż do zamknięcia ankiety, a jeśli grupa zmieni zdanie, możesz ją otworzyć ponownie. Wybór willi to dokładnie to, z czego zbudowane są [wyjazdy grupowe](page:use-case/group-trips), a ustalanie budżetu na prezent to klasyk w [wydarzeniach i uroczystościach](page:use-case/events-and-celebrations)."
+  - heading: "Historia aktywności, żeby nic nie zmieniało się po cichu"
+    body: "Każda grupa ma historię aktywności, a dzwonek powiadomień zbiera aktywność ze wszystkich twoich grup w jednym miejscu. Dodaj wydatek, a wszyscy zobaczą go od razu, bez odświeżania, a historia pokaże, co się zmieniło i kto to zmienił. Obejmuje to dodawanie, edycję i usuwanie wydatków, zgłaszanie i zamykanie pytań, komentarze, zmiany list i ankiet oraz zarejestrowane płatności."
+  - heading: "Powiadomienia push, jeśli chcesz"
+    body: "Powiadomienia push są opcjonalne. Otwórz **Ustawienia** konta, włącz je w sekcji **Powiadomienia**, a urządzenie da ci znać, gdy w twoich grupach pojawi się nowa aktywność, na przykład nowy wydatek lub komentarz. Każde urządzenie włącza się osobno, a przeglądarka najpierw poprosi o zgodę. Na iPhonie i iPadzie działają tylko w aplikacji dodanej do ekranu początkowego, co wyjaśnia strona o [aplikacji internetowej](page:feature/web-app). Traktuj je jako wygodę, a nie obietnicę, bo dostarczenie nie jest gwarantowane."
+limits:
+  heading: "Limity"
+  items:
+    - "Komentarze, listy i ankiety służą pieniądzom grupy. [Warunki usługi](page:terms) wymagają, by wszystko, co publikujesz, dotyczyło finansów grupy, więc to miejsce do planowania wydatków, a nie ogólny czat czy aplikacja do list zadań."
+    - "Komentarz może mieć do 500 znaków i do trzech załączników będących obrazami lub plikami PDF, każdy do 5 MB. Komentarz może usunąć tylko jego autor."
+    - "Pytania do wydatków są domyślnie wyłączone, a administrator włącza je dla każdej grupy osobno. Wydatek mogą zakwestionować tylko osoby w nim uwzględnione, wyłączenie funkcji usuwa wszystkie otwarte pytania, a nikt nie może opuścić grupy, dopóki wydatek, w którym uczestniczy, ma otwarte pytanie."
+    - "Grupa może mieć do 100 list, każda z maksymalnie 200 pozycji, a każda pozycja ma do 500 znaków. O tym, kto może tworzyć, edytować i usuwać listy, decydują uprawnienia grupy, a zablokowana grupa nie pozwala na żadne zmiany."
+    - "Grupa może mieć do 50 ankiet. Każda ankieta ma od dwóch do dziesięciu opcji i do dziesięciu głosów na osobę. Ankiety nie mają terminu i nie zamykają się same."
+    - "Historia aktywności jest przechowywana przez 90 dni."
+    - "Powiadomienia push trzeba włączyć dla każdego konta i każdego urządzenia. Wymagają przeglądarki, która je obsługuje, i twojej zgody, na iPhonie i iPadzie działają tylko z aplikacji dodanej do ekranu początkowego, a dostarczenie nie jest gwarantowane. Nie ma powiadomień e-mail ani SMS o aktywności i nie ma przypomnień o płatnościach, więc ponaglanie z płatnością nadal zależy od ciebie."
+useCasesHeading: "Gdzie wspólne planowanie pomaga"
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Czy głosy mogą być anonimowe?"
+      a: "Tak. Włącz **Anonimowe głosowanie** przy tworzeniu ankiety, a ukryje ono, kto na co głosował. Zdecyduj przed pierwszym głosem, bo później nie można tego zmienić."
+    - q: "Czy ankieta może zamknąć się sama?"
+      a: "Nie. Ankieta nie ma terminu, więc osoba, która ją utworzyła, wybiera **Zamknij ankietę**, gdy grupa się zdecyduje. Jeśli grupa zmieni zdanie, **Otwórz ponownie** ją przywraca."
+    - q: "Ile pozycji może mieć lista?"
+      a: "Do 200 pozycji na listę i do 100 list na grupę. Każda pozycja może mieć do 500 znaków, a to dużo mleka owsianego."
+    - q: "Kto może zamknąć pytanie i co dzieje się w tym czasie z wydatkiem?"
+      a: "Osoba, która zapytała, albo administrator grupy. Dopóki pytanie jest otwarte, cały wydatek jest poza saldami wszystkich. Wraca do nich, gdy zamknięte zostanie ostatnie otwarte pytanie o niego albo gdy edycja usunie z wydatku osobę, która zapytała."
+    - q: "Czy mogę używać list i komentarzy jako aplikacji do zadań albo czatu grupowego?"
+      a: "Nie. Komentarze, listy i ankiety służą pieniądzom grupy, tego wymagają [warunki usługi](page:terms). Myśl o listach zakupów, ankietach o budżecie i pytaniach „czemu to kosztuje 45 £?”."
+    - q: "Czy Side Badger wyśle mi e-mail o aktywności?"
+      a: "Nie. Nie ma powiadomień e-mail ani SMS o aktywności. Możesz włączyć powiadomienia push na każdym urządzeniu, a dzwonek powiadomień w aplikacji pokazuje, co nowego."

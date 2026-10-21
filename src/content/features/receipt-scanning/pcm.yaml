@@ -1,0 +1,78 @@
+translatedFrom: "42f5cf35"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.read-by-googles-ai
+  - receipt-attachments.keep-the-receipt
+meta:
+  title: "Scan receipt to add expense | Side Badger"
+  description: "Make di badger read di receipt. E go fill di total, date and place make you check am, with no scan credits. Google AI service dey read di image."
+h1: "Scan receipt, check di details, share am"
+navLabel: "Scan receipt"
+lead: "Make di badger read di receipt, then check im homework. Add photo to new expense and Side Badger go fill di total, date and place make you check am. Then you go [share am](page:feature/split-expenses) like any other expense. Scanning free, with no scan credits. E dey fill one expense and e no dey divide di bill by item. Google AI service dey read receipt images."
+cta:
+  heading: "Snap am. Check am. Share am."
+  body: "Create free account, start group and add expense with receipt photo. See wetin e fill, change whatever no correct, and save when you don happy."
+problem:
+  heading: "Nobody wan type receipt for taxi queue"
+  body: "Trips and big nights out dey come with paper. Dinner, di taxi, di round wey turn to six. To type each one inside phone with tired thumbs and queue behind you na how expenses dey forgotten. So Side Badger go read di receipt for you. E go do di first draft and you go do di checking. E fit [group trips](page:use-case/group-trips) and [events and celebrations](page:use-case/events-and-celebrations) well, where receipts dey pile up faster than anybody wan deal with dem."
+workflow:
+  heading: "From photo reach expense in three steps"
+  steps:
+    - title: "Add receipt to new expense"
+      body: "Start new expense and tap **Scan receipt**, or use di **Scan receipt** quick action for your dashboard. Take photo or choose one wey you don get already. **Add risit or attachmen** for di form dey work too."
+    - title: "Let am read di receipt"
+      body: "Di form go talk **Dey analyse di receipt...** while Side Badger AI dey read di image. Then e go fill wetin e find, like di description, di total, di currency, di date, di time and di place. Anything wey you don type already, e no go touch am."
+      shot: S09
+      shotAlt: "Di new expense form wey show Dey analyse di receipt..., then di same form with di details filled in"
+    - title: "Check am, then share am"
+      body: "Compare di form with di paper. Fix anything wey no correct, talk who pay and who share di cost, choose how to split am and save. Di expense no go exist until you save am. [Share expenses](page:feature/split-expenses) cover di splitting."
+options:
+  heading: "Opshons"
+  items: []
+sections:
+  - heading: "Wetin e dey fill"
+    body: "Add receipt image to new expense and dis fields fit fill. Who pay, who share di cost and how to share am still dey for you."
+    items:
+      - "**Description** for di expense."
+      - "Di **total**."
+      - "Di **currency**, if your group allow am."
+      - "Di **date** and di **time**."
+      - "Di **place**."
+      - "Text copy of di receipt inside di **notes**, for when di paper one fade or enter wash."
+  - heading: "Wetin you still go check"
+    body: "All of am. Treat wetin e fill as draft. Check di total against di paper, then di currency, date and place. Blurry photos and crumpled paper fit fool any reader, and we no promise say e go get every receipt correct, so abeg look before you save. If something no correct, type over am. If di receipt dey yen and di group dey settle for pounds, [multiple currencies](page:feature/multiple-currencies) cover wetin go happen next."
+  - heading: "Keep di receipt with di expense"
+    body: "Scanned or not, receipt fit stay with di expense. Attach photos or PDFs, up to three per expense and up to 10 MB each. Group members go see dem for di expense. Images dey show as thumbnails wey open for viewer, and PDFs dey open as links. Di photo wey you scan dem attach am too, unless you comot am before you save. When somebody ask how much dat dinner really cost, di proof dey right there."
+  - heading: "Where your receipt dey go"
+    body: "Google AI service dey read receipt images. To fill di form, Google Vertex AI (Gemini) dey read di image for Google US multi-region. Add image to new expense and dem go read am. PDF, or photo wey you add to expense wey dey already, dem go store am without reading am. Members of di group fit see attached receipts, so if receipt show something wey you no wan share, skip di photo and type dat expense in."
+limits:
+  heading: "Di limits"
+  items:
+    - "Images only. JPEG, PNG and WebP, and HEIC once dem convert am. You fit attach PDFs to expense but dem no dey read dem."
+    - "Scanning na for new expenses only. For expense wey dey already, you fit attach receipts, but dem no go read anything."
+    - "E dey fill only di fields wey you never touch, and di currency only if your group allow am."
+    - "E no dey split by item or give line items to people. E dey fill one expense and you go share am as usual."
+    - "No promise dey say wetin e fill correct, or say scanning go work every time. Check before you save, and add di expense by hand if scanning fail or e no available."
+    - "Expense fit hold up to three attachments, each up to 10 MB, as JPEG, PNG, WebP, HEIC or PDF."
+    - "Google Vertex AI (Gemini) dey read receipt images for Google US multi-region, and members of di group fit see attached receipts."
+useCasesHeading: "Where receipts dey pile up"
+faq:
+  heading: "Question dem"
+  items:
+    - q: "E fit split receipt by item?"
+      a: "No. E dey fill di expense, including di total, and you go share am equal-equal, by exact amounts or by percentage. For bill where everybody order different thing, enter wetin each person owe as exact amounts. [Share expenses](page:feature/split-expenses) get di details."
+    - q: "E fit read PDF?"
+      a: "No. You fit attach PDF to expense so e go follow di numbers, but only images dem dey read."
+    - q: "Limit dey for scans?"
+      a: "No scan credits dey wey go finish, and scanning free. Files get limits, wey be up to three attachments per expense and 10 MB each. [Wetin free cover](page:pricing) get di rest."
+    - q: "Who fit see my receipt?"
+      a: "Members of di group fit see di receipts wey dem attach to expense. Google AI service dey read receipt images too, na so di form dey fill."
+    - q: "I fit scan receipt for expense wey I don add already?"
+      a: "No, scanning na for new expenses. You fit still attach receipt to expense wey dey already, and dem go store am without reading am."
+    - q: "Wetin if e fill something wey wrong?"
+      a: "Type over am. Every field dey stay editable until you save, and you suppose check all of dem anyway. If scanning fail or e no available, add di expense by hand as normal."

@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Pomoč in podpora | Side Badger"
+  description: "Pozabljeno geslo, povezava, ki ne dela, narobe zabeleženo plačilo? Kratki odgovori na to, kjer se ljudje zataknejo v Side Badgerju, in kako nas doseči."
+h1: "Pomoč in podpora, brez čakalne glasbe"
+navLabel: "Pomoč in podpora"
+lead: "Kratki odgovori na stvari, pri katerih se ljudje zataknejo, od pozabljenega gesla do trajnega zaprtja skupine. Vsak vodi na stran, ki razloži več. Ne najdeš svojega? Sporoči nam iz aplikacije ali nam piši."
+cta:
+  heading: "Pomoč iščeš, ostaneš pa zaradi delitve?"
+  body: "Še nimaš uporabniškega računa? Ustanovi skupino, deli povezavo in dodaj prvi strošek. Brezplačno, brez oglasov in brez dnevnih omejitev."
+groups:
+  - heading: "Prijava"
+    items:
+      - q: "Pozabljeno geslo?"
+        a: "To se zgodi tudi najboljšim jazbecem. Na zaslonu **Prijava** izberi **Ste pozabili geslo?**, vpiši e-pošto svojega računa in sledi povezavi v e-pošti, ki jo pošljemo, da izbereš novo. [Kako deluje](page:how-it-works) pove, kaj še potrebuje uporabniški račun."
+      - q: "Registracija je opravljena, a ničesar ne morem dodati. Zakaj?"
+        a: "Najpogosteje tvoja e-pošta še ni potrjena, zato odpri povezavo v potrditveni e-pošti ali na opomniku izberi **Ponovno pošlji potrditveno e-pošto** za novo. Če si potrjen, je skupina morda zaklenjena ali pa ti dovoljenja ne dovoljujejo, gledalec pa vidi vse in ničesar ne spreminja, kot pojasnjuje [skupine in dovoljenja](page:feature/groups-and-permissions)."
+      - q: "Kako spremenim e-pošto ali geslo?"
+        a: "V **Nastavitvah** izberi **Spremeni e-pošto** ali **Spremeni geslo**. Oboje najprej zahteva tvoje trenutno geslo, nov e-poštni naslov pa je treba potrditi s povezavo, ki jo pošljemo nanj. [Kako deluje](page:how-it-works) pokriva uporabniške račune."
+      - q: "Ali se lahko prijavim z Googlom ali Applom?"
+        a: "Ne. Potrebuješ le e-poštni naslov in geslo z vsaj 12 znaki, na svojem telefonu ali računalniku pa lahko obkljukaš **Zapomni si me**. Stran o [spletni aplikaciji](page:feature/web-app) pokriva preostanek začetka."
+  - heading: "Pridružitev skupini"
+    items:
+      - q: "Nekdo mi je poslal povezavo za povabilo. Kako se pridružim?"
+        a: "Odpri jo, nato se prijavi ali ustvari brezplačen uporabniški račun. Videl boš predogled skupine, izbral ime, pod katerim te bodo tam videli, in pritisnil **Pridruži se skupini**. [Skupine in dovoljenja](page:feature/groups-and-permissions) pokažejo celotno pot noter."
+      - q: "Piše „Čakanje na odobritev“. Je šlo kaj narobe?"
+        a: "Nikakor. V tej skupini vsakogar spusti noter skrbnik, zato je tvoja zahteva šla njenim skrbnikom, vanjo pa ne vidiš, dokler je eden od njih ne odobri. Prijazen sunek v živo je dovoljen, [skupine in dovoljenja](page:feature/groups-and-permissions) pa razložijo odobritev."
+      - q: "Povezava pravi, da je neveljavna ali potekla."
+        a: "Povezave za povabilo trajajo, kolikor je izbral njihov ustvarjalec, od 15 minut do 5 dni. Prosi koga v skupini za novo povezavo ali za kodo QR, če sta v isti sobi. [Kako deluje](page:how-it-works) pokriva povabila."
+  - heading: "Stroški"
+    items:
+      - q: "Kako dodam strošek?"
+        a: "Odpri skupino in izberi **Dodaj strošek**. Povej, za kaj je šlo, koliko je bilo, kdo je plačal in kdo je delil, nato razdeli enako, po točnih zneskih ali po odstotkih. [Delitev stroškov](page:feature/split-expenses) opiše vsako možnost."
+      - q: "Ali se lahko najemnina ponavlja vsak mesec?"
+        a: "Ne sama od sebe, ker ponavljajočih se stroškov ni. Odpri strošek prejšnjega meseca in izberi **Kopiraj strošek**, obrazec pa pride izpolnjen, pripravljen za nov datum in vse, kar se je spremenilo. [Delitev stroškov](page:feature/split-expenses) ima več o kopiranju."
+      - q: "Vnesen je napačen znesek. Ga lahko popravim?"
+        a: "Da. Uredi strošek, če ti dovoljenja skupine to dovoljujejo in skupina ni zaklenjena. Prejšnja različica se ohrani, zato nihče ne rabi verjeti na besedo, kaj se je spremenilo, kot pojasnjuje [delitev stroškov](page:feature/split-expenses)."
+      - q: "Strošek je videti napačen in ni moj. Kaj zdaj?"
+        a: "Na njem izberi **Imam vprašanje** in povej, zakaj, ves strošek pa ostane zunaj stanj vseh, dokler vprašanja ne zapre oseba, ki ga je postavila, ali skrbnik. Gumba ni? Vprašanje lahko postavijo samo osebe, vključene v strošek, skrbnik pa mora najprej v nastavitvah skupine vklopiti **Dovoli vprašanja o stroških**, [vodnik o spornih stroških](page:guide/what-to-do-when-someone-disputes-a-shared-expense) pa ima diplomacijo."
+  - heading: "Plačila"
+    items:
+      - q: "Ali Side Badger pošlje denar?"
+        a: "Ne, Side Badger denarja nikoli ne premika. Plačajte si, kakor želite, z bančnim nakazilom, gotovino ali čimerkoli, kar deluje, nato plačilo zabeležite, da se stanja uskladijo. [Kako se poravnati po skupinskem potovanju](page:guide/how-to-settle-up-after-a-group-trip) ga opiše od začetka do konca."
+      - q: "Kako zabeležim plačilo?"
+        a: "V skupini izberi **Poravnaj**, povej, kdo je plačal in kdo prejel, vpiši znesek ali ga pusti izpolniti gumbu **Hitra poravnava** in izberi **Zabeleži poravnavo**. Plačan le del? Zabeleži, kar je bilo plačano, preostanek pa ostane na stanju, kot pojasnjuje [poravnava](page:feature/settle-up)."
+      - q: "Plačilo je zabeleženo narobe. Ga lahko popravim?"
+        a: "Kdor ga je zabeležil, ga lahko uredi v zgodovini **Poravnav** skupine, on ali skrbnik pa ga lahko izbriše, kar ga odstrani iz stanj. Plačila, v katerem je oseba, ki je medtem zapustila skupino, ni mogoče urediti. [Poravnava](page:feature/settle-up) pokriva zgodovino."
+  - heading: "Obvestila in domači zaslon"
+    items:
+      - q: "Kako vklopim obvestila?"
+        a: "V **Nastavitvah** vklopi **Potisna obvestila** in jih dovoli, ko te vpraša brskalnik. Če jih je brskalnik že blokiral, jih najprej dovoli v njegovih nastavitvah. Vsaka naprava se vklopi posebej in dostava ni zagotovljena, zato obvestilo obravnavaj kot sunek, ne kot obljubo, kot pojasnjuje stran o [spletni aplikaciji](page:feature/web-app)."
+      - q: "Zakaj obvestila ne delujejo na mojem iPhonu?"
+        a: "Na iPhonu ali iPadu delujejo samo v aplikaciji, dodani na domači zaslon, nikoli v zavihku brskalnika. Dodaj jo, odpri jo z ikone na domačem zaslonu, nato jih vklopi v **Nastavitvah**. [Načrtujte skupaj](page:feature/plan-together) pokaže, o čem te obveščajo."
+      - q: "Ali je na voljo aplikacija za prenos?"
+        a: "Ne iz trgovine z aplikacijami, ker Side Badger deluje v brskalniku. Prijavi se, nato sledi **Dodaj na domači zaslon ali v Dock** v **Nastavitvah** in odpre se kot aplikacija, v svojem oknu. Stran o [spletni aplikaciji](page:feature/web-app) ima korake za vsako napravo."
+  - heading: "Zapustitev, arhiviranje, zaklepanje in zapiranje"
+    items:
+      - q: "Kako zapustim skupino?"
+        a: "Poravnaj se, nato izberi **Zapusti skupino**. Ne moreš je zapustiti, dokler dolguješ ali ti dolgujejo denar v kateri koli valuti, dokler ima strošek, v katerem si, odprto vprašanje, ali če si zadnji skrbnik ali edini član, vrnitev pa potrebuje novo povabilo. [Skupine in dovoljenja](page:feature/groups-and-permissions) imajo podrobnosti."
+      - q: "Kako dobim staro skupino z nadzorne plošče?"
+        a: "Izberi **Arhiviraj skupino**. Izgine z tvoje nadzorne plošče, pri drugih pa ostane. Še vedno jo lahko odpreš in uporabljaš, **Obnovi skupino** pa jo vrne. [Skupine in dovoljenja](page:feature/groups-and-permissions) primerjajo arhiviranje, zaklepanje in zapiranje."
+      - q: "Potovanje je končano. Ali lahko preprečimo spreminjanje številk?"
+        a: "Da. Skrbnik lahko v nastavitvah skupine vklopi **Zakleni skupino**, nato nihče ne more dodajati ali urejati stroškov, beležiti novih plačil ali spreminjati seznamov in anket, dokler skrbnik ne odklene. Vsak lahko še vedno bere skupino in njeno zgodovino, noben pozni taksi pa se ne prikrade noter, kot pojasnjujejo [skupine in dovoljenja](page:feature/groups-and-permissions)."
+      - q: "Ali lahko izbrišem skupino?"
+        a: "Skrbnik jo lahko zapre z **Zapri skupino**, potem ko vpiše ime skupine v potrditev. Zaprtje je trajno in skupino naredi nedostopno vsem, zato jo raje arhiviraj, če jo želiš le spraviti izpred oči. [Skupine in dovoljenja](page:feature/groups-and-permissions) imajo drobni tisk."
+contact:
+  heading: "Še vedno zataknjeno?"
+  items:
+    - q: "Naletiš na napako ali želiš kaj spremeniti?"
+      a: "Sporoči nam iz aplikacije. V meniju računa izberi **Povratne informacije**, nato **Pošlji povratne informacije** in izberi **Prijava napake**, **Pomoč** ali **Nova funkcija**. Priloži posnetek zaslona, če pomaga, ko odgovorimo, pa boš odgovor našel v isti niti."
+    - q: "Raje pišeš e-pošto?"
+      a: "Piši na spodnji naslov. Povej, za katero skupino gre, kaj se je zgodilo in kaj si pričakoval(a). Izliv frustracij je v redu, gesla pa ne, zato nikoli ne pošiljaj svojega."
+  emailLabel: "Piši nam na"
+  email: support@sidebadger.me

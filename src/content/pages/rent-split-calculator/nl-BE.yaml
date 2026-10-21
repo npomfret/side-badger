@@ -1,0 +1,88 @@
+# P9 van de briefings voor golf 2 en 3 (tasks/release-2-plan.md). Het uitgewerkte voorbeeld is het appartement van gids 1
+# (how-to-split-rent-by-room-size); elk getal in de tekst is dat van het voorbeeld of de getoonde rekensom.
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Calculator huur verdelen: kamergrootte of inkomen | Side Badger"
+  description: "Grotere kamer, groter aandeel? Reken uit wat elke huisgenoot betaalt, naar kamergrootte of inkomen. Alles in je browser: niets wordt bewaard of verstuurd."
+h1: "Calculator om de huur te verdelen"
+navLabel: "Calculator huur verdelen"
+lead: "Grotere slaapkamer, groter aandeel? Typ de huur in en zie wat elke persoon betaalt, naar kamergrootte of naar inkomen, tot op de cent. Alles gebeurt in je browser: er wordt niets bewaard en er verhuist geen geld. Wil het huis de rekening laten bijhouden, [verdeel dan je uitgaven](page:feature/split-expenses) in Side Badger en kopieer de huur elke maand."
+cta:
+  heading: "Spreek de percentages één keer af. Kopieer ze voor altijd."
+  body: "Deze calculator vergeet alles zodra je het tabblad sluit, net als de huisgenoot die de internetrekening zeker betaald heeft. Een Side Badger-groep houdt de huur, de rekeningen en wie wat betaald heeft bij. Het is gratis, zonder advertenties en zonder dagelijkse limieten."
+sections:
+  - heading: "Twee manieren om de huur te delen"
+    items:
+      - "**Naar kamergrootte.** Een deel van de huur is voor de keuken, de badkamer en de living, die iedereen gebruikt. Dat deel kies je zelf (om te beginnen 40%) en het wordt gelijk verdeeld. De rest gaat naar de oppervlakte van de slaapkamer, dus de grote kamer betaalt meer en het piepkleine kamertje krijgt de korting die het verdiend heeft."
+      - "**Naar inkomen.** Ieders aandeel in de huur is even groot als zijn of haar aandeel in het totale inkomen. Voeg gedeelde rekeningen toe en die volgen dezelfde aandelen."
+  - heading: "Hoe de sommen werken"
+    body: "Elke persoon krijgt een exact aandeel en daarna een heel percentage, want hele getallen zijn makkelijker in te typen en om over te discussiëren. De afronding gebeurt met de methode van de grootste rest: iedereen houdt het hele getal onder zijn of haar aandeel, en de overgebleven punten gaan naar wie het meest verloor. De percentages tellen altijd op tot 100. In het appartement hieronder is de gedeelde 40% elk 13,33%. De kamer van Priya is 16 van de 38 m² van het appartement, dus 60% × 16/38 is 25,26%, plus 13,33% geeft 38,6%, wat afgerond 39% wordt. Tom en Aisha komen uit op 32% en 29%, en 39 + 32 + 29 is 100. Elk bedrag is dat percentage van de huur: 39% van £ 1.950 is £ 760,50."
+  - heading: "Typ het dan in Side Badger"
+    body: "Voor het hele verhaal, meetlint inbegrepen, zie [hoe je de huur verdeelt naar kamergrootte](page:guide/how-to-split-rent-by-room-size), of [een partner die meer verdient](page:guide/how-to-split-bills-with-a-partner-who-earns-more) voor koppels."
+    items:
+      - "**Voeg de huur toe.** Kies in je groep **Uitgave toevoegen**, kies onder **Wie heeft betaald?** wie de huisbaas betaald heeft en laat iedereen geselecteerd onder **Verdelen tussen**."
+      - "**Kies Percentage.** Kies onder **Hoe te verdelen** voor **Percentage** en typ de hele percentages. Het formulier meldt het als ze samen geen 100 zijn."
+      - "**Kopieer de uitgave volgende maand.** Open de huur van vorige maand en kies **Uitgave kopiëren**. De verdeling komt mee."
+  - heading: "Wat de calculator niet doet"
+    items:
+      - "**Je kamers opmeten.** De vloeroppervlakte is een beginpunt. Een kamer met eigen badkamer is meer waard dan dezelfde oppervlakte zonder, en een piepklein kamertje waar een bed en een hoopvolle stoel net in passen is minder waard."
+      - "**Bepalen wat als inkomen telt.** Netto of bruto, loon of bijverdienste: de groep beslist. Gebruik voor iedereen dezelfde periode."
+      - "**Iets bewaren.** Sluit het tabblad en de cijfers zijn weg. Wil je ze houden, kopieer dan de link. Die bevat je cijfers achter het #, wat browsers nooit naar een server sturen, en iedereen die de link heeft, kan de cijfers lezen."
+      - "**Geld verplaatsen.** Je betaalt de huisbaas zoals je wilt."
+      - "**Valuta’s mengen of over de limieten gaan.** Kies één valuta. De calculator verwerkt 2 tot 10 personen en een huur tot 999.999,99, net als de app."
+exampleAfter: 2
+example:
+  heading: "Eén appartement, één maand"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "de huur"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "de energierekening"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "het internet"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Vragen"
+  items:
+    - q: "Wat is eerlijker, kamergrootte of inkomen?"
+      a: "Geen van beide is altijd eerlijker. Kamergrootte past bij huisgenoten die betalen voor de ruimte waarin ze slapen. Inkomen past bij koppels en vrienden met heel verschillende lonen. Spreek het af vóór de eerste huurdag, niet erna."
+    - q: "Moeten de rekeningen op dezelfde manier verdeeld worden?"
+      a: "Bij huisgenoten meestal niet. Iedereen gebruikt energie en internet, dus gelijk verdelen is eenvoudiger, zoals in het voorbeeld. Naar inkomen geeft de calculator de rekeningen dezelfde aandelen als de huur."
+    - q: "Kan ik vierkante voet gebruiken?"
+      a: "Ja. Kies ft² en typ je oppervlaktes in vierkante voet. De eenheid is enkel een label, en de aandelen blijven dezelfde zolang iedereen dezelfde eenheid gebruikt."
+    - q: "Is de calculator gratis?"
+      a: "Ja. Gratis. Geen advertenties. Geen dagelijkse limieten. Je hebt ook geen account nodig."

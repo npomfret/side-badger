@@ -1,0 +1,113 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: Näin tasaat tilit ryhmämatkan jälkeen | Side Badger
+  description: Tasaa tilit, ennen kuin kaikki hajaantuvat. Kymmenen sekavaa velkaa muuttuu neljäksi maksuksi, jotka kirjataan sitä mukaa kuin ne saapuvat, ja osamaksukin käy. Laskut viidelle ystävälle.
+h1: Näin tasaat tilit ryhmämatkan jälkeen
+navLabel: Tasaa tilit matkan jälkeen
+lead: Tasaa tilit, ennen kuin kaikki hajaantuvat. Lisää viimeinen kulu, avaa ryhmän saldot ja maksa lyhyen listan mukaan se, mitä olet velkaa, miten haluat. Kirjaa sitten jokainen maksu Side Badgeriin, jotta saldo nollautuu koko ryhmän osalta. Viiden ystävän ja viiden kulun tapauksessa kymmenen sekavaa velkaa supistuu neljäksi maksuksi.
+cta:
+  heading: Sulje kirjat, ennen kuin kuvat saapuvat
+  body: Luo ilmainen tili, perusta ryhmä seuraavaa matkaa varten ja lisää jokainen kulu sitä mukaa kuin se syntyy. Lyhyt maksulista odottaa jo, kun saavut lentokentälle. Haluatko nähdä ensin, [miten tilien tasaus toimii](page:feature/settle-up)?
+sections:
+  - heading: Viisi ystävää, viisi kulua, yksi lähtöaula
+    body: Mo, Ines, Raf, Tess ja Uma viettivät viikon rannikolla. Mo varasi asunnon ja osti ruokaostokset, Ines maksoi venematkan ja Raf maksoi ison illallisen. Tess otti lentokenttätaksin Uman ja Mon kanssa, koska Ines ja Raf menivät junalla. Uman kortti oli jäänyt kotiin, joten hän ei maksanut mitään. Kuluja on yhteensä viisi, summaltaan 1 700 €, ja lähtöaulassa kukaan ei osannut sanoa, kuka oli plussalla.
+  - heading: Kymmenen velkaa, neljä maksua
+    body: Asunto, vene, illallinen ja ruokaostokset jaetaan tasan viidelle. Se on 200 €, 50 €, 60 € ja 18 € kullekin, joten Ines ja Raf ovat velkaa 328 € kumpikin. Taksi jaetaan kolmelle, 20 € kullekin, joten Mo, Tess ja Uma ovat velkaa 348 €. Mo maksoi 1 090 € ja on velkaa 348 €, joten hänelle ollaan velkaa 742 €. Kaikki muut maksoivat vähemmän kuin ovat velkaa. Uma on 348 € miinuksella, Tess 288 €, Ines 78 € ja Raf 28 €, ja nämä tekevät yhteensä Mon 742 €. Jos tasaat jokaisen ihmisparin välit suoraan, saat kymmenen erillistä velkaa. Side Badger ehdottaa sen sijaan neljää maksua, kaikki Molle.
+  - heading: Tasaa tilit, ennen kuin kaikki hajaantuvat
+    body: Paras hetki on viimeinen ilta tai kotimatka, kun kaikki ovat vielä samassa paikassa ja 28 € velan mainitseminen on helppoa. Lisää ensin kaikki kulut, taksi mukaan lukien. Kukaan ei voi poistua ryhmästä, jos hän on velkaa tai hänelle ollaan velkaa, joten laskenta on joka tapauksessa suljettava jossain vaiheessa.
+    items:
+      - "**Tarkista lista.** Avaa ryhmä ja katso **Saldot**. Oletuksena näet sinua koskevat velat. Valitse **Näytä kaikki** nähdäksesi koko ryhmän listan."
+      - "**Maksa miten haluat.** Pankkisiirto, käteinen, edellisen loman palvelus. Side Badger ei siirrä rahaa."
+      - "**Kirjaa se.** Valitse **Maksa velat**. Kohdassa **Pikaselvitys** jokainen painike on yksi ehdotetuista maksuistasi, ja yhden valitseminen täyttää summan. Lisää **Huomautus**, esimerkiksi pankkisiirto, tarkista **Päivämäärä** (se ei voi olla tulevaisuudessa) ja valitse **Kirjaa tilitys**."
+      - "**Seuraa, kuinka se tyhjenee.** Saldo päivittyy kaikille. Kun viimeinenkin maksu on kirjattu, **Saldot**-kohdassa lukee **Kaikki tilit tasan!**"
+  - heading: Osa nyt, loput myöhemmin
+    body: Uma voi lähettää 200 € tänä iltana ja loput kuun lopussa. Hän kirjaa 200 €, ja lomake varoittaa, että hän on sen jälkeen yhä velkaa Molle 148 €, eli 348 € miinus 200 €. Tallenna se, niin 148 € jää hänen saldolleen, kunnes hän kirjaa loput. Varoitus toimii myös toisinpäin. Jos ylimääräinen nolla muuttaa 348 € luvuksi 3 480 €, lomake kertoo, että hän on velkaa Molle vain 348 € ja että tallentaminen loisi velan vastakkaiseen suuntaan. Korjaa nolla ennen tallennusta.
+  - heading: Virheiden korjaus ja maksujen juhlinta
+    items:
+      - "**Väärä maksu.** Vain maksun kirjannut voi muokata sitä. Hän tai ryhmän ylläpitäjä voi poistaa sen, minkä jälkeen se voidaan kirjata uudelleen."
+      - "**Huomionarvoinen maksu.** Jokainen kirjattu maksu on kohdassa **Tilitykset** päivämäärineen ja huomautuksineen, jossa kaikki ryhmässä näkevät sen ja voivat reagoida. Mo voi valita **Juhli**, kun Uman viimeiset 148 € saapuvat."
+      - "**Loppu.** Kun jokainen saldo on nollassa, ylläpitäjä voi lukita ryhmän, jotta luvut pysyvät paikoillaan."
+  - heading: Mitä Side Badger ei tee tässä
+    items:
+      - Se ei koskaan siirrä rahaa. Siinä ei ole maksulinkkejä eikä maksupyyntöjä, joten sovelluksen maksu on kirjaus muualla tehdystä maksusta.
+      - Se ei lähetä muistutuksia. Myöhässä olevan maksun perään kysyminen on edelleen sinun vastuullasi.
+      - Se ei aseta määräaikoja. Milloin Uman loput 148 € erääntyvät, on ryhmän sovittavissa.
+      - Ehdotetut maksut ovat lyhyt lista, eivät lupaus lyhyimmästä mahdollisesta. Ne lasketaan valuutoittain, joten euroina ja puntina maksettu matka saa listan kummallekin.
+exampleAfter: 2
+example:
+  heading: Viisi ystävää rannikolla
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: Asunto
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: Venematka
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: Iso illallinen
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: Lentokenttätaksi
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: Ruokaostokset
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: Kysymyksiä
+  items:
+    - q: Kenen pitäisi kirjata maksu, maksajan vai maksun saajan?
+      a: Maksun kirjaaminen vaatii oikeuden muokata kuluja, ja lomake kysyy **Kuka maksoi?** ja **Kuka vastaanotti maksun?** Vain sen kirjannut voi muokata sitä myöhemmin, joten yleensä on yksinkertaisinta, että maksaja tekee sen pikaselvityspainikkeella.
+    - q: Entä jos matka oli kahdessa valuutassa?
+      a: Saldot pidetään valuutoittain, joten euroina oleva velka pysyy euroina ja jokaisella valuutalla on oma lyhyt listansa, ellei kuluja muunnettu niitä syötettäessä. [Matkat useassa valuutassa](page:guide/how-to-split-a-trip-paid-in-several-currencies) näyttää molemmat tavat.
+    - q: Pitäisikö tilit tasata matkan aikana vai lopussa?
+      a: Kumpikin käy. Jokainen kirjattu maksu muuttaa saldoja, joten kesken matkaa tehty maksu lasketaan mukaan lopulliseen listaan. Lopussa on yksinkertaisempaa, koska [koko matka](page:use-case/group-trips) on yhdessä paikassa.

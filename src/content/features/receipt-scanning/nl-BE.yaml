@@ -1,0 +1,78 @@
+translatedFrom: "42f5cf35"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.read-by-googles-ai
+  - receipt-attachments.keep-the-receipt
+meta:
+  title: "Scan een bonnetje om een uitgave toe te voegen | Side Badger"
+  description: "Laat de das het bonnetje lezen. Hij vult totaal, datum en plaats in om na te kijken, zonder scancredits. De AI-dienst van Google leest de afbeelding."
+h1: "Scan een bonnetje, controleer de details, verdeel het"
+navLabel: "Bonnetjes scannen"
+lead: "Laat de das het bonnetje lezen, en kijk zijn huiswerk na. Voeg een foto toe aan een nieuwe uitgave en Side Badger vult het totaal, de datum en de plaats in, zodat jij ze kunt nakijken. Daarna [verdeel je het](page:feature/split-expenses) zoals elke andere uitgave. Scannen is gratis, zonder scancredits. Het vult één uitgave in en verdeelt de rekening niet per item. Afbeeldingen van bonnetjes worden gelezen door de AI-dienst van Google."
+cta:
+  heading: "Fotografeer het. Controleer het. Verdeel het."
+  body: "Maak een gratis account aan, start een groep en voeg een uitgave toe met een foto van het bonnetje. Zie wat er ingevuld wordt, verander wat niet klopt en sla het op als je tevreden bent."
+problem:
+  heading: "Niemand wil een bonnetje intikken in de rij voor de taxi"
+  body: "Reizen en grote avonden komen met papier. Het diner, de taxi, de ronde die er zes werd. Elk ervan intikken op een telefoon, met koude duimen en een rij achter je, is hoe uitgaven vergeten worden. Dus Side Badger leest het bonnetje voor je. Het maakt de eerste versie en jij doet het nakijkwerk. Het past bij [groepsreizen](page:use-case/group-trips) en [evenementen en feestjes](page:use-case/events-and-celebrations), waar de bonnetjes sneller opstapelen dan iemand lief is."
+workflow:
+  heading: "Van foto tot uitgave in drie stappen"
+  steps:
+    - title: "Voeg een bonnetje toe aan een nieuwe uitgave"
+      body: "Start een nieuwe uitgave en tik op **Bon scannen**, of gebruik de snelle actie **Bon scannen** op je dashboard. Neem een foto of kies er een die je al hebt. **Bonnetje of bijlage toevoegen** in het formulier werkt ook."
+    - title: "Laat het bonnetje lezen"
+      body: "Het formulier zegt **Bon aan het analyseren...** terwijl de AI van Side Badger de afbeelding leest. Dan vult het in wat het gevonden heeft, zoals de omschrijving, het totaal, de valuta, de datum, het tijdstip en de plaats. Wat je al getypt had, blijft ongemoeid."
+      shot: S09
+      shotAlt: "Het formulier voor een nieuwe uitgave met Bon aan het analyseren..., en daarna hetzelfde formulier met de details ingevuld"
+    - title: "Controleer het, verdeel het dan"
+      body: "Vergelijk het formulier met het papier. Verbeter wat niet klopt, zeg wie betaald heeft en wie de kost deelde, kies hoe je verdeelt en sla op. De uitgave bestaat pas als je dat doet. [Uitgaven verdelen](page:feature/split-expenses) legt het verdelen uit."
+options:
+  heading: "Opties"
+  items: []
+sections:
+  - heading: "Wat het invult"
+    body: "Voeg een afbeelding van een bonnetje toe aan een nieuwe uitgave en deze velden kunnen ingevuld worden. Wie betaald heeft, wie de kost deelde en hoe verdeeld wordt, blijft aan jou."
+    items:
+      - "Een **omschrijving** voor de uitgave."
+      - "Het **totaal**."
+      - "De **valuta**, als je groep dat toelaat."
+      - "De **datum** en het **tijdstip**."
+      - "De **plaats**."
+      - "Een tekstkopie van het bonnetje in de **notities**, voor als het papieren exemplaar vervaagt of door de was gaat."
+  - heading: "Wat jij nog nakijkt"
+    body: "Alles. Beschouw wat het invult als een kladversie. Vergelijk het totaal met het papier, en kijk dan de valuta, de datum en de plaats na. Wazige foto’s en gekreukeld papier kunnen elke lezer om de tuin leiden, en we beloven niet dat het elk bonnetje juist leest, dus kijk na voor je opslaat. Klopt er iets niet, typ er dan gewoon overheen. Staat het bonnetje in yen en rekent de groep af in pond, dan legt [meerdere valuta’s](page:feature/multiple-currencies) uit wat er daarna gebeurt."
+  - heading: "Hou het bonnetje bij de uitgave"
+    body: "Gescand of niet, een bonnetje kan bij de uitgave blijven. Voeg foto’s of pdf’s toe, tot drie per uitgave en tot 10 MB elk. Groepsleden zien ze bij de uitgave. Afbeeldingen verschijnen als miniaturen die in een viewer openen, en pdf’s openen als links. De foto die je scant wordt ook toegevoegd, tenzij je hem verwijdert voor je opslaat. Als iemand vraagt wat dat diner echt kostte, ligt het bewijs er meteen."
+  - heading: "Waar je bonnetje naartoe gaat"
+    body: "Afbeeldingen van bonnetjes worden gelezen door de AI-dienst van Google. Om het formulier in te vullen wordt de afbeelding gelezen door Google Vertex AI (Gemini) in de Amerikaanse multiregio van Google. Voeg een afbeelding toe aan een nieuwe uitgave en ze wordt gelezen. Een pdf, of een foto die aan een bestaande uitgave wordt toegevoegd, wordt bewaard zonder gelezen te worden. Toegevoegde bonnetjes zijn zichtbaar voor de leden van de groep, dus toont een bonnetje iets wat je liever niet deelt, sla de foto dan over en typ die uitgave in."
+limits:
+  heading: "Limieten"
+  items:
+    - "Enkel afbeeldingen. JPEG, PNG en WebP, en HEIC eens omgezet. Pdf’s kunnen aan een uitgave toegevoegd worden maar worden niet gelezen."
+    - "Scannen is enkel voor nieuwe uitgaven. Bij een bestaande uitgave kun je bonnetjes toevoegen, maar er wordt niets gelezen."
+    - "Het vult enkel de velden in die je nog niet aangeraakt hebt, en de valuta enkel als je groep dat toelaat."
+    - "Het verdeelt niet per item en wijst geen regels van het bonnetje aan mensen toe. Het vult één uitgave in en jij verdeelt die zoals gewoonlijk."
+    - "Er is geen belofte dat wat het invult juist is, of dat scannen elke keer lukt. Kijk na voor je opslaat, en voeg de uitgave met de hand toe als scannen mislukt of niet beschikbaar is."
+    - "Een uitgave kan tot drie bijlagen bevatten, elk tot 10 MB, als JPEG, PNG, WebP, HEIC of pdf."
+    - "Afbeeldingen van bonnetjes worden gelezen door Google Vertex AI (Gemini) in de Amerikaanse multiregio van Google, en toegevoegde bonnetjes zijn zichtbaar voor de leden van de groep."
+useCasesHeading: "Waar de bonnetjes zich opstapelen"
+faq:
+  heading: "Vragen"
+  items:
+    - q: "Kan het een bonnetje per item verdelen?"
+      a: "Nee. Het vult de uitgave in, met het totaal, en jij verdeelt die gelijk, op exacte bedragen of op percentage. Voor een rekening waarbij iedereen iets anders bestelde, voer je in wat elke persoon schuldig is als exacte bedragen. [Uitgaven verdelen](page:feature/split-expenses) heeft de details."
+    - q: "Kan het een pdf lezen?"
+      a: "Nee. Je kunt een pdf aan een uitgave toevoegen zodat hij bij de cijfers blijft, maar enkel afbeeldingen worden gelezen."
+    - q: "Is er een limiet op het aantal scans?"
+      a: "Er zijn geen scancredits die kunnen opraken, en scannen is gratis. Bestanden hebben wel limieten: tot drie bijlagen per uitgave en 10 MB elk. [Wat gratis dekt](page:pricing) heeft de rest."
+    - q: "Wie kan mijn bonnetje zien?"
+      a: "Leden van de groep kunnen de bonnetjes zien die aan een uitgave toegevoegd zijn. Afbeeldingen van bonnetjes worden ook gelezen door de AI-dienst van Google, en zo wordt het formulier ingevuld."
+    - q: "Kan ik een bonnetje scannen voor een uitgave die ik al toegevoegd heb?"
+      a: "Nee, scannen is voor nieuwe uitgaven. Je kunt wel nog een bonnetje aan een bestaande uitgave toevoegen, en het wordt bewaard zonder gelezen te worden."
+    - q: "Wat als het iets verkeerd invult?"
+      a: "Typ er gewoon overheen. Elk veld blijft bewerkbaar tot je opslaat, en je moet ze sowieso allemaal nakijken. Mislukt scannen of is het niet beschikbaar, voeg de uitgave dan met de hand toe zoals gewoonlijk."

@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Īres kalkulators: pēc istabas vai ienākumiem | Side Badger"
+  description: "Lielāka istaba, lielāka daļa? Cik maksā katrs mājokļa biedrs, pēc istabas lieluma vai ienākumiem. Darbojas pārlūkprogrammā, nekas netiek saglabāts vai sūtīts."
+h1: "Īres sadales kalkulators"
+navLabel: "Īres sadales kalkulators"
+lead: "Lielāka guļamistaba, lielāka daļa? Ierakstiet īri un redziet, cik maksā katrs, pēc istabas lieluma vai ienākumiem, līdz pēdējam santīmam. Kalkulators darbojas jūsu pārlūkprogrammā, neko nesaglabā un nepārvieto naudu. Kad mājai vajag, lai uzskaite tiek turēta, [sadaliet izdevumus](page:feature/split-expenses) Side Badger un katru mēnesi nokopējiet īri."
+cta:
+  heading: "Vienojieties par procentiem vienreiz. Kopējiet tos mūžīgi."
+  body: "Šis kalkulators visu aizmirst, tiklīdz aizverat cilni, gluži kā mājokļa biedrs, kurš noteikti samaksāja par internetu. Side Badger grupa saglabā īri, rēķinus un to, kurš par ko samaksāja. Tas ir bez maksas, bez reklāmām un bez dienas ierobežojumiem."
+sections:
+  - heading: "Divi veidi, kā dalīt īri"
+    items:
+      - "**Pēc istabas lieluma.** Daļa īres sedz virtuvi, vannasistabu un viesistabu, ko izmanto visi. Šo daļu izvēlaties jūs (sākumā 40%), un tā tiek sadalīta vienādi. Pārējā īre tiek sadalīta pēc guļamistabu platības, tāpēc lielā istaba maksā vairāk, bet mazā istabiņa saņem atlaidi, ko ir pelnījusi."
+      - "**Pēc ienākumiem.** Katrs maksā tik lielu īres daļu, cik lielu daļu no kopējiem ienākumiem pelna. Pievienojiet kopīgos rēķinus, un tie seko tām pašām daļām."
+  - heading: "Kā aprēķini darbojas"
+    body: "Katrs cilvēks vispirms saņem precīzu daļu, tad veselu procentu, jo veselus skaitļus ir vieglāk ierakstīt un par tiem strīdēties. Noapaļošana notiek pēc lielākā atlikuma metodes: katram paliek vesels skaitlis zem viņa daļas, un atlikušie procentpunkti nonāk pie tā, kurš noapaļojot zaudēja visvairāk. Procenti kopā vienmēr dod 100. Tālāk redzamajā dzīvoklī kopīgie 40% ir 13,33% katram. Priyas istaba ir 16 no dzīvokļa 38 m², tāpēc 60% × 16/38 ir 25,26%, plus 13,33% sanāk 38,6%, ko noapaļo uz 39%. Tom un Aisha – attiecīgi 32% un 29%, un 39 + 32 + 29 ir 100. Katra summa ir šis procents no īres: 39% no 1 950 £ ir 760,50 £."
+  - heading: "Pēc tam ierakstiet to Side Badger"
+    body: "Visu stāstu, mērlenti ieskaitot, skatiet [kā sadalīt īri pēc istabas lieluma](page:guide/how-to-split-rent-by-room-size), bet pāriem – [partneri, kurš pelna vairāk](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+    items:
+      - "**Pievienojiet īri.** Savā grupā izvēlieties **Pievienot izdevumus**, sadaļā **Kas samaksāja?** norādiet, kurš samaksāja saimniekam, un sadaļā **Sadalīt starp** atstājiet atzīmētus visus."
+      - "**Izvēlieties procentus.** Sadaļā **Kā sadalīt** izvēlieties **Procenti** un ierakstiet veselos procentus. Veidlapa brīdina, ja tie kopā nedod 100."
+      - "**Nokopējiet to nākamajā mēnesī.** Atveriet pagājušā mēneša īri un izvēlieties **Kopēt izdevumus**. Sadale nokopējas līdzi."
+  - heading: "Ko kalkulators nedara"
+    items:
+      - "**Neizmēra jūsu istabas.** Platība ir tikai sākumpunkts. Istaba ar savu vannasistabu ir vērtīgāka par tāda paša izmēra istabu bez tās, bet mazā istabiņa, kurā ietilpst gulta un cerību pilns krēsls, ir vērtīga mazāk."
+      - "**Neizlemj, kas ir ienākumi.** Neto vai bruto, alga vai blakusdarbi: to izlemj grupa. Visiem izmantojiet vienu un to pašu periodu."
+      - "**Neko nesaglabā.** Aizveriet cilni, un skaitļi pazūd. Lai tos paturētu, nokopējiet saiti. Tajā jūsu skaitļi ir aiz #, ko pārlūkprogrammas nekad nesūta serverim, un ikviens, kam tā ir, tos var izlasīt."
+      - "**Nepārvieto naudu.** Saimniekam maksājat, kā vēlaties."
+      - "**Nejauc valūtas un netiek pāri ierobežojumiem.** Izvēlieties vienu valūtu. Kalkulators pieņem no 2 līdz 10 cilvēkiem un īri līdz 999 999,99, tāpat kā lietotne."
+exampleAfter: 2
+example:
+  heading: "Viens dzīvoklis, viens mēnesis"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "īre"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "rēķins par enerģiju"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "internets"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Jautājumi"
+  items:
+    - q: "Kas ir godīgāk, istabas lielums vai ienākumi?"
+      a: "Neviens no tiem nav vienmēr godīgāks. Istabas lielums der kopīrniekiem, kas maksā par telpu, kurā guļ. Ienākumi der pāriem un draugiem ar ļoti atšķirīgu algu. Vienojieties par to pirms pirmās īres dienas, nevis pēc tās."
+    - q: "Vai rēķini jādala tāpat?"
+      a: "Kopīrniekiem parasti nē. Enerģiju un internetu izmanto visi, tāpēc vienādi ir vienkāršāk, kā piemērā. Pēc ienākumiem kalkulators rēķiniem dod tādas pašas daļas kā īrei."
+    - q: "Vai varu izmantot kvadrātpēdas?"
+      a: "Jā. Izvēlieties ft² un ierakstiet platības kvadrātpēdās. Vienība ir tikai apzīmējums, un daļas sanāk tādas pašas, ja vien visi izmanto vienu un to pašu."
+    - q: "Vai kalkulators ir bez maksas?"
+      a: "Jā. Bez maksas. Bez reklāmām. Bez dienas ierobežojumiem. Arī konts nav vajadzīgs."

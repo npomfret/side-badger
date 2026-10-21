@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Yardım ve destek | Side Badger"
+  description: "Unutulan şifre, çalışmayan bir bağlantı, yanlış kaydedilen bir ödeme mi? Side Badger'da takıldığınız şeylere kısa yanıtlar ve bize nasıl ulaşacağınız."
+h1: "Yardım ve destek, bekleme müziği olmadan"
+navLabel: "Yardım ve destek"
+lead: "İnsanların takıldığı şeylere, unutulan bir şifreden bir grubu kalıcı olarak kapatmaya kadar kısa yanıtlar. Her biri daha fazlasını anlatan sayfaya bağlanır. Sizinkini bulamadınız mı? Uygulamanın içinden bize söyleyin ya da bir e-posta atın."
+cta:
+  heading: "Yardım için geldiniz, bölüşmek için mi kalıyorsunuz?"
+  body: "Henüz hesabınız yok mu? Bir grup kurun, bağlantıyı paylaşın ve ilk harcamayı ekleyin. Ücretsiz, reklam yok, günlük sınır yok."
+groups:
+  - heading: "Giriş yapma"
+    items:
+      - q: "Şifrenizi mi unuttunuz?"
+        a: "En iyi porsuklarda bile olur. **Giriş Yap** ekranında **Şifrenizi mi unuttunuz?** seçeneğini seçin, hesap e-postanızı girin, sonra yeni bir şifre seçmek için gönderdiğimiz e-postadaki bağlantıyı izleyin. Bir hesabın başka nelere ihtiyaç duyduğunu [nasıl çalışır](page:how-it-works) sayfası anlatır."
+      - q: "Kaydoldum ama bir şey ekleyemiyorum. Neden?"
+        a: "Çoğunlukla e-postanız henüz doğrulanmamıştır; doğrulama e-postasındaki bağlantıyı açın ya da hatırlatma bandındaki **Doğrulama e-postasını tekrar gönder** seçeneğiyle yenisini isteyin. Doğrulanmışsanız grup kilitli olabilir ya da grubun izinleri buna izin vermiyor olabilir; izleyici her şeyi görür ama hiçbir şeyi değiştirmez, [gruplar ve izinler](page:feature/groups-and-permissions) sayfasında anlatıldığı gibi."
+      - q: "E-postamı veya şifremi nasıl değiştiririm?"
+        a: "**Ayarlar**'da **E-postayı Değiştir** veya **Şifreyi Değiştir** seçeneğini seçin. İkisi de önce mevcut şifrenizi ister ve yeni bir e-posta adresinin, ona gönderdiğimiz bağlantıdan doğrulanması gerekir. Hesaplar için [nasıl çalışır](page:how-it-works) sayfasına bakın."
+      - q: "Google veya Apple ile giriş yapabilir miyim?"
+        a: "Hayır. Tek ihtiyacınız bir e-posta adresi ve en az 12 karakterlik bir şifre; kendi telefonunuzda ya da bilgisayarınızda **Beni hatırla**'yı işaretleyebilirsiniz. Başlamanın geri kalanı [web uygulaması](page:feature/web-app) sayfasında."
+  - heading: "Bir gruba katılma"
+    items:
+      - q: "Biri bana davet bağlantısı gönderdi. Nasıl katılırım?"
+        a: "Bağlantıyı açın, sonra giriş yapın ya da ücretsiz bir hesap oluşturun. Grubun bir önizlemesini görürsünüz, orada insanların sizi hangi adla göreceğini seçin ve **Gruba Katıl**'a basın. İçeri giden tüm yolu [gruplar ve izinler](page:feature/groups-and-permissions) sayfası gösterir."
+      - q: "“Onay Bekliyor” yazıyor. Yanlış bir şey mi yaptım?"
+        a: "Hiç de değil. Bu grupta her kişiyi bir yönetici içeri alıyor; isteğiniz yöneticilerine gitti ve biri onaylayana kadar içeriyi göremezsiniz. Yüz yüze nazik bir dürtme serbesttir; onay konusunu [gruplar ve izinler](page:feature/groups-and-permissions) sayfası açıklar."
+      - q: "Bağlantı geçersiz ya da süresi dolmuş diyor."
+        a: "Davet bağlantıları, onu oluşturanın seçtiği kadar sürer; 15 dakikadan 5 güne kadar. Gruptan birinden yeni bir bağlantı isteyin, aynı odadaysanız QR kodunu isteyin. Davetler için [nasıl çalışır](page:how-it-works) sayfasına bakın."
+  - heading: "Harcamalar"
+    items:
+      - q: "Harcamayı nasıl eklerim?"
+        a: "Grubu açın ve **Harcama Ekle**'yi seçin. Ne olduğunu, ne kadar tuttuğunu, kimin ödediğini ve kimlerin paylaştığını söyleyin, sonra eşit, tam tutarlarla ya da yüzdeyle bölüştürün. Her seçeneği [harcamaları bölüşme](page:feature/split-expenses) sayfası adım adım anlatır."
+      - q: "Kira her ay tekrarlanabilir mi?"
+        a: "Kendiliğinden olmaz, çünkü yinelenen harcama yok. Geçen ayınkini açın ve **Harcamayı kopyala**'yı seçin; form dolu gelir, yeni bir tarih ve değişenler için hazırdır. Kopyalama hakkında daha fazlası [harcamaları bölüşme](page:feature/split-expenses) sayfasında."
+      - q: "Tutarı yanlış yazdım. Düzeltebilir miyim?"
+        a: "Evet. Grubun izinleri izin veriyorsa ve grup kilitli değilse harcamayı düzenleyin. Önceki sürüm saklanır, bu yüzden neyin değiştiği konusunda kimsenin sözünüze güvenmesi gerekmez; [harcamaları bölüşme](page:feature/split-expenses) sayfasında anlatıldığı gibi."
+      - q: "Bir harcama yanlış görünüyor ve benim değil. Şimdi ne yapmalı?"
+        a: "Üzerinde **Bir sorum var**'ı seçin ve nedenini yazın; soruyu soran kişi ya da bir yönetici soruyu kapatana kadar bütün harcama herkesin bakiyesinin dışında tutulur. Bu düğme yok mu? Yalnızca bir harcamaya dahil olanlar soru sorabilir, önce bir yöneticinin grup ayarlarında **Harcama sorularına izin ver**'i açması gerekir ve [itiraz edilen harcama rehberi](page:guide/what-to-do-when-someone-disputes-a-shared-expense) diplomasiyi anlatır."
+  - heading: "Ödemeler"
+    items:
+      - q: "Side Badger parayı gönderir mi?"
+        a: "Hayır, Side Badger para taşımaz. Birbirinize istediğiniz yolla ödeyin; banka havalesi, nakit ya da işe yarayan her şey; sonra bakiyeler yetişsin diye ödemeyi kaydedin. [Grup gezisinden sonra nasıl ödeşilir](page:guide/how-to-settle-up-after-a-group-trip) rehberi baştan sona anlatır."
+      - q: "Ödemeyi nasıl kaydederim?"
+        a: "Grupta **Ödeş**'i seçin, kimin ödediğini ve kimin aldığını belirtin, tutarı girin ya da bir **Hızlı ödeşme** düğmesinin doldurmasına izin verin ve **Ödeşmeyi Kaydet**'i seçin. Yalnızca bir kısmını mı ödediniz? Ödenen kısmı kaydedin, gerisi bakiyede kalır; [hesaplaşma](page:feature/settle-up) sayfasında anlatıldığı gibi."
+      - q: "Bir ödemeyi yanlış kaydettim. Düzeltebilir miyim?"
+        a: "Kaydeden kişi onu grubun **Ödeşmeler** geçmişinden düzenleyebilir; kendisi ya da bir yönetici silebilir ve silinen ödeme bakiyelerden çıkar. Sonradan gruptan ayrılmış biriyle ilgili bir ödeme düzenlenemez. Geçmiş için [hesaplaşma](page:feature/settle-up) sayfasına bakın."
+  - heading: "Bildirimler ve ana ekran"
+    items:
+      - q: "Bildirimleri nasıl açarım?"
+        a: "**Ayarlar**'da **Anlık bildirimler**'i açın ve tarayıcınız sorunca izin verin. Tarayıcı bunları zaten engellediyse önce tarayıcının kendi ayarlarından izin verin. Her cihaz ayrı açılır ve iletim garanti değildir; bu yüzden bildirimi söz değil, dürtme sayın; [web uygulaması](page:feature/web-app) sayfasında anlatıldığı gibi."
+      - q: "Bildirimler iPhone'umda neden çalışmıyor?"
+        a: "iPhone veya iPad'de yalnızca Ana Ekranınıza eklenmiş uygulamada çalışır, tarayıcı sekmesinde asla. Ekleyin, Ana Ekran simgesinden açın, sonra **Ayarlar**'dan açın. Size nelerden haber verdiklerini [birlikte planlayın](page:feature/plan-together) sayfası gösterir."
+      - q: "İndirebileceğim bir uygulama var mı?"
+        a: "Uygulama mağazasından yok, çünkü Side Badger tarayıcınızda çalışır. Giriş yapın, sonra **Ayarlar**'daki **Ana Ekrana veya Dock'a Ekle**'yi izleyin; kendi penceresinde, bir uygulama gibi açılır. Her cihazın adımları [web uygulaması](page:feature/web-app) sayfasında."
+  - heading: "Ayrılma, arşivleme, kilitleme ve kapatma"
+    items:
+      - q: "Bir gruptan nasıl ayrılırım?"
+        a: "Ödeşin, sonra **Gruptan Ayrıl**'ı seçin. Tek bir para biriminde bile borçluyken ya da alacaklıyken, içinde olduğunuz bir harcamada açık bir soru varken, son yönetici ya da tek üye sizseniz ayrılamazsınız; geri dönmek için yeni bir davet gerekir. Ayrıntılar [gruplar ve izinler](page:feature/groups-and-permissions) sayfasında."
+      - q: "Eski bir grubu panomdan nasıl kaldırırım?"
+        a: "**Grubu Arşivle**'yi seçin. Grup yalnızca sizin panonuzdan kaybolur, başkasınınkinden değil; yine açıp kullanabilirsiniz ve **Grubu Arşivden Çıkar** onu geri getirir. Arşivlemeyi, kilitlemeyi ve kapatmayı [gruplar ve izinler](page:feature/groups-and-permissions) sayfası karşılaştırır."
+      - q: "Gezi bitti. Rakamların değişmesini durdurabilir miyiz?"
+        a: "Evet. Bir yönetici grup ayarlarında **Grubu kilitle**'yi açabilir; bir yönetici kilidi açana kadar kimse harcama ekleyemez ya da düzenleyemez, yeni ödeme kaydedemez, liste ve anketleri değiştiremez. Herkes grubu ve geçmişini yine okuyabilir ve geç gelen bir taksi araya sızmaz; [gruplar ve izinler](page:feature/groups-and-permissions) sayfasında anlatıldığı gibi."
+      - q: "Bir grubu silebilir miyim?"
+        a: "Bir yönetici, onaylamak için grubun adını yazdıktan sonra **Grubu kapat** ile kapatabilir. Kapatma kalıcıdır ve grubu herkes için erişilemez hale getirir; bu yüzden yalnızca gözden uzak olsun istiyorsanız onu arşivleyin. Küçük puntolu kısım [gruplar ve izinler](page:feature/groups-and-permissions) sayfasında."
+contact:
+  heading: "Hâlâ takıldınız mı?"
+  items:
+    - q: "Bir hata mı buldunuz ya da bir şeyin değişmesini mi istiyorsunuz?"
+      a: "Uygulamanın içinden bize söyleyin. Hesap menünüzde **Geri bildirim**'i, sonra **Geri Bildirim Gönder**'i seçin ve **Hata Bildir**, **Yardım Al** veya **Yeni Özellik**'ten birini seçin. İşe yarayacaksa bir ekran görüntüsü ekleyin; yanıtladığımızda onu aynı konuşmada bulursunuz."
+    - q: "E-posta göndermeyi mi tercih edersiniz?"
+      a: "Aşağıdaki adrese yazın. Hangi grupla ilgili olduğunu, ne yaptığınızı ve ne olmasını beklediğinizi söyleyin. Dert yanmak serbest; şifreler değil, bu yüzden kendinizinkini asla göndermeyin."
+  emailLabel: "Bize e-posta gönderin:"
+  email: support@sidebadger.me

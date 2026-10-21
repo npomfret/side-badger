@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: "Listas, sondagens e comentários para o grupo | Side Badger"
+  description: "Comenta despesas, questiona a esquisita, partilha a lista de compras e vota na villa. Planeia os gastos em conjunto e depois divide. Grátis, sem anúncios."
+h1: "Planeia em conjunto, divide depois"
+navLabel: "Planear em conjunto"
+lead: "A lista de compras e a conta das compras, finalmente a falarem-se. O Side Badger dá ao teu grupo um sítio para falar do dinheiro antes e depois de ele ser gasto, com comentários em cada despesa, uma forma de questionar as que parecem erradas e listas e sondagens partilhadas para as grandes decisões. Depois [divides as despesas](page:feature/split-expenses) como de costume."
+cta:
+  heading: "Planeia e depois divide"
+  body: "Cria uma conta grátis, começa um grupo e põe a primeira lista, sondagem ou pergunta mesmo ao lado do dinheiro. Não sabes o que acontece a seguir? Vê [como funciona](page:how-it-works)."
+problem:
+  heading: "A conversa está para aqui, a conta está para ali"
+  body: "As despesas de grupo costumam viver em dois sítios. Os números estão num, e a discussão sobre os números está numa conversa que desapareceu na terça-feira. A lista de compras é a fotografia de um frigorífico. A villa foi decidida com o polegar para cima da maioria, provavelmente. O Side Badger mantém o planeamento no grupo, ao lado das despesas de que fala, por isso há um comentário onde está o custo, uma lista onde está a compra, uma sondagem para a grande decisão e uma forma de dizer “espera, isto está certo?” sem escrever um parágrafo. Tudo gira à volta do dinheiro do grupo, que é para isso que o grupo serve."
+workflow:
+  heading: "Da votação da villa à conta das compras"
+  steps:
+    - title: "Põe a grande decisão a votos"
+      body: "Adiciona uma sondagem para a decisão que define a conta, como a escolha da villa. Escolhe de duas a dez opções, diz quantos votos cada pessoa tem e depois fecha-a quando todos tiverem votado, e o vencedor fica marcado."
+      shot: S17
+      shotAlt: "Uma sondagem fechada com a opção vencedora marcada e o número de votos ao lado de cada opção"
+    - title: "Escreve a lista de compras em grupo"
+      body: "Começa uma lista partilhada, adiciona os itens e vai riscando-os à medida que chegam ao carrinho. A compra entra depois como despesa."
+      shot: S16
+      shotAlt: "Uma lista de compras partilhada com alguns itens riscados e uma contagem do progresso"
+    - title: "Fala do custo onde ele vive"
+      body: "Comenta a própria despesa, anexa o recibo e reage com um emoji. A conversa fica ao lado do número de que fala."
+      shot: S08
+      shotAlt: "Uma despesa com os seus detalhes, a miniatura de um recibo, uma conversa de comentários e reações com emojis"
+    - title: "Questiona a que parece estranha"
+      body: "Se o grupo tiver ativado as perguntas sobre despesas, qualquer pessoa incluída numa despesa pode escolher **Tenho uma pergunta**. A despesa fica de fora dos saldos até a pergunta ser resolvida."
+      shot: S18
+      shotAlt: "A lista de despesas com um selo de Questionado e o filtro Apenas questionado"
+    - title: "Vê o que mudou e quem mudou"
+      body: "O histórico de atividade e o sino de notificações mostram o que há de novo nos teus grupos. As notificações push estão lá, se as quiseres."
+      shot: S19
+      shotAlt: "O menu de notificações com uma lista de atividade recente"
+options:
+  heading: "Opções"
+  items: []
+example:
+  heading: "Três colegas de casa, uma conta de vinho questionada"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "as compras grandes"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "a limpeza"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "o vinho da festa"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Comentários e reações, ao lado dos números"
+    body: "Cada despesa tem a sua própria conversa de comentários, tal como o grupo, cada lista e cada sondagem. Pergunta porque custou tanto o táxi na própria despesa do táxi, e não numa conversa a que ninguém volta atrás. Junta uma fotografia do recibo ou um PDF da reserva e reage com polegar para cima, coração, riso, uau, tristeza ou celebração, em despesas, pagamentos e comentários. Celebra um pagamento quando ele chega. É o mais perto de uma salva de palmas que o Side Badger consegue."
+  - heading: "Questiona uma despesa sem começar uma discussão"
+    body: "Quando o grupo tem as perguntas sobre despesas ativadas, qualquer pessoa incluída numa despesa pode escolher **Tenho uma pergunta** e dizer porquê. A pergunta fica publicada como comentário na despesa, a despesa ganha um selo de **Questionado** e a despesa inteira sai dos saldos de todos até a pergunta ser resolvida."
+    items:
+      - "**Ativar.** Vêm desligadas por defeito. Um administrador ativa **Permitir perguntas sobre despesas** nas definições do grupo, em **Funcionalidades**."
+      - "**Fechar uma pergunta.** Quem perguntou, ou um administrador, escolhe **Fechar pergunta**. Se várias pessoas questionaram a mesma despesa, ela volta aos saldos quando a última pergunta for fechada."
+      - "**Editar a despesa.** Quando uma despesa é editada, uma pergunta em aberto passa para a nova versão para todos os que ainda têm uma parte nela. Quem a edição deixar de fora vê a sua pergunta terminar com a versão antiga, por isso não há nada que tenha de fechar."
+      - "**Encontrar as perguntas.** A lista de despesas tem um filtro **Apenas questionado**. Isto não é um passo de aprovação: só ficam retidas as despesas que alguém questiona, e todas as outras contam assim que são adicionadas."
+  - heading: "Como uma pergunta se resolve"
+    body: "O Tom adiciona 45 £ de vinho da festa, divididos pelos três colegas de casa. A Aisha não bebeu, por isso levanta uma pergunta, e enquanto ela estiver aberta o vinho não conta para ninguém. A casa concorda que o vinho é do Tom e da Priya, por isso o Tom edita a divisão para os dois. A Aisha já não está na despesa, por isso a pergunta dela termina com a versão anterior, que fica guardada, e o vinho volta aos saldos logo, a 22,50 £ cada um em vez de 15 £ cada um. Se a Aisha tivesse ficado na despesa, a pergunta dela teria passado para a nova versão e esperaria que ela, ou um administrador, a fechasse. Abaixo, os 48 £ da Aisha são 28 £ das compras e 20 £ da limpeza, e os 10,50 £ da Priya são a sua parte de 70,50 £ (28 £, 20 £ e 22,50 £) menos os 60 £ que pagou. Uma discussão muito de [colegas de casa](page:use-case/housemates). Para saber como formular uma pergunta, vê [o que fazer quando alguém contesta uma despesa partilhada](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Listas partilhadas, para as compras"
+    body: "Começa uma lista no grupo, dá-lhe um nome como Lista de compras, adiciona itens e vai riscando-os. Arrasta os itens para uma ordem melhor, vê a contagem do progresso subir e comenta na lista quando alguém comprar o leite de aveia errado. Arquiva uma lista terminada para a arrumares (**Mostrar arquivados** traz-a de volta), ou copia uma lista para a reutilizares. Mantém a lista de compras partilhada ao lado das contas das compras, para a lista dizer o que comprar e a despesa dizer quanto custou. Quem pode criar e editar listas depende das permissões do grupo, que [grupos e permissões](page:feature/groups-and-permissions) explica."
+  - heading: "Sondagens, anónimas se quiseres"
+    body: "Pergunta ao grupo algo que decide a conta, como qual a villa, quanto gastar no presente ou se o passeio de barco vale a pena. Uma sondagem tem uma pergunta e de duas a dez opções. Tu escolhes quantos votos cada pessoa tem, de uma escolha única até dez, e se a votação é anónima. A **Votação anónima** esconde quem votou em quê, e não pode ser alterada depois de entrar o primeiro voto. As pessoas podem alterar ou retirar o seu voto até a sondagem fechar, e podes reabri-la se o grupo se arrepender. Escolher a villa é exatamente de que são feitas as [viagens em grupo](page:use-case/group-trips), e combinar o orçamento do presente é um clássico dos [eventos e celebrações](page:use-case/events-and-celebrations)."
+  - heading: "O histórico de atividade, para nada mudar em silêncio"
+    body: "Cada grupo tem um histórico de atividade, e o sino de notificações reúne num só sítio a atividade de todos os teus grupos. Adiciona uma despesa e todos a veem logo, sem atualizar a página, e o histórico mostra o que mudou e quem mudou. Isso inclui despesas adicionadas, editadas ou apagadas, perguntas levantadas e fechadas, comentários, alterações a listas e sondagens e pagamentos registados."
+  - heading: "Notificações push, se quiseres"
+    body: "As notificações push são opcionais. Ativa-as nas **Definições** da tua conta, em **Notificações**, e o teu dispositivo avisa-te quando houver nova atividade nos teus grupos, como uma nova despesa ou um comentário. Cada dispositivo é ativado em separado, e o teu navegador pede primeiro permissão. No iPhone ou iPad só funcionam na app adicionada ao ecrã principal, o que a página da [app web](page:feature/web-app) explica. Trata-as como uma comodidade, não como uma promessa, porque a entrega não é garantida."
+limits:
+  heading: "Limites"
+  items:
+    - "Os comentários, as listas e as sondagens são para o dinheiro do grupo. Os [termos](page:terms) pedem que tudo o que for publicado diga respeito às finanças do grupo, por isso este é um sítio para planear os gastos, não uma conversa geral nem uma app de tarefas."
+    - "Um comentário pode ter até 500 caracteres, com até três anexos que sejam imagens ou PDF de até 5 MB cada. Só quem escreveu um comentário o pode apagar."
+    - "As perguntas sobre despesas vêm desligadas por defeito, e um administrador ativa-as em cada grupo. Só as pessoas incluídas numa despesa a podem questionar, desligar a funcionalidade apaga todas as perguntas em aberto e ninguém pode sair do grupo enquanto uma despesa de que faz parte tiver uma pergunta em aberto."
+    - "Um grupo pode ter até 100 listas, cada uma com até 200 itens de até 500 caracteres. As permissões do grupo decidem quem pode criar, editar e apagar listas, e um grupo bloqueado não permite alterações."
+    - "Um grupo pode ter até 50 sondagens, cada uma com duas a dez opções e até dez votos por pessoa. As sondagens não têm prazo e não fecham sozinhas."
+    - "O histórico de atividade é guardado durante 90 dias."
+    - "As notificações push são opcionais em cada conta e em cada dispositivo. Precisam de um navegador que as suporte e da tua permissão, no iPhone e no iPad só funcionam a partir da app adicionada ao ecrã principal, e a entrega não é garantida. Não há alertas por e-mail nem por SMS sobre a atividade e não há lembretes de pagamento, por isso andar atrás de um pagamento continua a ser contigo."
+useCasesHeading: "Onde planear em conjunto ajuda"
+faq:
+  heading: "Perguntas"
+  items:
+    - q: "Os votos podem ser anónimos?"
+      a: "Sim. Ativa a **Votação anónima** ao criar a sondagem e ela esconde quem votou em quê. Decide antes do primeiro voto, porque depois não se pode alterar."
+    - q: "Uma sondagem pode fechar sozinha?"
+      a: "Não. Uma sondagem não tem prazo, por isso quem a criou escolhe **Encerrar sondagem** quando o grupo tiver decidido. Se o grupo se arrepender, **Reabrir sondagem** traz-a de volta."
+    - q: "Quantos itens cabem numa lista?"
+      a: "Até 200 itens por lista e até 100 listas por grupo. Cada item pode ter até 500 caracteres, o que dá muito leite de aveia."
+    - q: "Quem pode fechar uma pergunta, e o que acontece entretanto à despesa?"
+      a: "Quem perguntou, ou um administrador do grupo. Enquanto uma pergunta está aberta, a despesa inteira fica fora dos saldos de todos. Volta a entrar quando a última pergunta em aberto sobre ela for fechada, ou quando uma edição tirar da despesa a pessoa que perguntou."
+    - q: "Posso usar listas e comentários como app de tarefas ou conversa de grupo?"
+      a: "Não. Os comentários, as listas e as sondagens são para o dinheiro do grupo, que é o que os [termos](page:terms) pedem. Pensa em listas de compras, sondagens de orçamento e “porque é que isto custa 45 £?”."
+    - q: "O Side Badger vai enviar-me e-mails sobre a atividade?"
+      a: "Não. Não há alertas por e-mail nem por SMS sobre a atividade. Podes ativar as notificações push em cada dispositivo, e o sino de notificações na app mostra o que há de novo."

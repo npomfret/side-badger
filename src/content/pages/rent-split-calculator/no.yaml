@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Husleiekalkulator: etter romstørrelse eller inntekt | Side Badger"
+  description: "Større rom, større andel? Regn ut hva hver romkamerat betaler, etter romstørrelse eller inntekt. Den kjører i nettleseren: ingenting lagres eller sendes."
+h1: Kalkulator for å dele husleien
+navLabel: Kalkulator for å dele husleien
+lead: Større soverom, større andel? Skriv inn husleien og se hva hver person betaler, etter romstørrelse eller inntekt, helt ned til øret. Den kjører i nettleseren din, lagrer ingenting og flytter ingen penger. Når huset vil ha regnskapet ført, kan dere [dele utgifter](page:feature/split-expenses) i Side Badger og kopiere husleien hver måned.
+cta:
+  heading: Bli enige om prosentene én gang. Kopier dem for alltid.
+  body: Denne kalkulatoren glemmer alt når du lukker fanen, omtrent som romkameraten som definitivt betalte bredbåndet. En Side Badger-gruppe beholder husleien, regningene og hvem som har betalt hva. Den er gratis, uten annonser og uten daglige grenser.
+sections:
+  - heading: To måter å dele husleien på
+    items:
+      - "**Etter romstørrelse.** En del av husleien betaler for kjøkkenet, badet og stua, som alle bruker. Du velger den andelen (40% som utgangspunkt), og den deles likt. Resten fordeles etter soveromsareal, så det store rommet betaler mer og kottet får den rabatten det har fortjent."
+      - "**Etter inntekt.** Alle betaler like stor andel av husleien som de tjener av den samlede inntekten. Legg til felles regninger, så følger de de samme andelene."
+  - heading: Slik fungerer regnestykket
+    body: "Hver person får en nøyaktig andel, deretter en hel prosent, fordi hele tall er lettere å skrive inn og å krangle om. Avrundingen bruker metoden med største rest: alle beholder heltallet under sin andel, og de gjenværende prosentpoengene går til dem som mistet mest. Prosentene summerer seg alltid til 100. I leiligheten nedenfor er den delte andelen på 40% lik 13,33% hver. Priyas rom er 16 av leilighetens 38 m², så 60% × 16/38 er 25,26%, og med 13,33% blir det 38,6%, som rundes til 39%. Tom og Aisha kommer ut på 32% og 29%, og 39 + 32 + 29 er 100. Hvert beløp er den prosenten av husleien: 39% av 1 950 £ er 760,50 £."
+  - heading: Skriv det så inn i Side Badger
+    body: "For hele historien, målebånd inkludert, se [hvordan du deler husleien etter romstørrelse](page:guide/how-to-split-rent-by-room-size), eller [en partner som tjener mer](page:guide/how-to-split-bills-with-a-partner-who-earns-more) for par."
+    items:
+      - "**Legg til husleien.** I gruppen din velger du **Legg til utgift**, velger hvem som betalte utleieren under **Hvem betalte?** og beholder alle under **Fordel mellom**."
+      - "**Velg Prosent.** Under **Hvordan fordele** velger du **Prosent** og skriver inn de hele prosentene. Skjemaet gir beskjed hvis de ikke summerer seg til 100."
+      - "**Kopier den neste måned.** Åpne forrige måneds husleie og velg **Kopier utgift**. Delingen følger med."
+  - heading: Hva kalkulatoren ikke gjør
+    items:
+      - "**Måle rommene dine.** Gulvareal er et utgangspunkt. Et rom med eget bad er mer verdt enn samme areal uten, og et kott som rommer en seng og en håpefull stol er verdt mindre."
+      - "**Bestemme hva som regnes som inntekt.** Etter skatt eller brutto, lønn eller ekstrajobb: gruppen bestemmer. Bruk samme periode for alle."
+      - "**Lagre noe.** Lukker du fanen, er tallene borte. Vil du beholde dem, kopierer du lenken. Den inneholder tallene dine etter #-tegnet, som nettlesere aldri sender til en server, og alle som har den, kan lese dem."
+      - "**Flytte penger.** Du betaler utleieren slik du vil."
+      - "**Blande valutaer, eller gå over grensene.** Velg én valuta. Den tar 2 til 10 personer og en husleie på opptil 999 999,99, som i appen."
+exampleAfter: 2
+example:
+  heading: Én leilighet, én måned
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: husleien
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: strømregningen
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: bredbåndet
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: Spørsmål
+  items:
+    - q: Hva er mest rettferdig, romstørrelse eller inntekt?
+      a: Ingen av dem er alltid mest rettferdig. Romstørrelse passer for romkamerater som betaler for plassen de sover i. Inntekt passer for par og venner med svært ulik lønn. Bli enige om det før den første husleiedagen, ikke etter.
+    - q: Bør regningene deles på samme måte?
+      a: For romkamerater vanligvis ikke. Alle bruker strømmen og bredbåndet, så likt er enklere, som i eksempelet. Etter inntekt gir kalkulatoren regningene de samme andelene som husleien.
+    - q: Kan jeg bruke kvadratfot?
+      a: Ja. Velg ft² og skriv inn arealene i kvadratfot. Enheten er bare en etikett, og andelene blir de samme så lenge alle bruker den samme.
+    - q: Er kalkulatoren gratis?
+      a: Ja. Gratis. Ingen annonser. Ingen daglige grenser. Du trenger heller ingen konto.

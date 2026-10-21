@@ -1,0 +1,113 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Como acertar contas depois de uma viagem em grupo | Side Badger"
+  description: "Acerta antes de o grupo se dispersar. Dez dívidas emaranhadas viram quatro pagamentos, registados à medida que chegam, e pagar só parte também vale."
+h1: "Como acertar as contas depois de uma viagem em grupo"
+navLabel: "Acertar contas depois da viagem"
+lead: "Acerta antes de todos se dispersarem. Adiciona a última despesa, abre os saldos do grupo e paga o que deves da lista curta, como preferires. Depois regista cada pagamento no Side Badger para o saldo ficar limpo para todo o grupo. Para cinco amigos e cinco despesas, dez dívidas emaranhadas reduzem-se a quatro pagamentos."
+cta:
+  heading: "Fecha as contas antes de chegarem as fotos"
+  body: "Cria uma conta grátis, começa um grupo para a próxima viagem e adiciona cada custo à medida que acontece. A lista curta de pagamentos está à espera quando chegares ao aeroporto. Queres ver primeiro [como funciona acertar contas](page:feature/settle-up)?"
+sections:
+  - heading: "Cinco amigos, cinco despesas, uma sala de embarque"
+    body: "O Mo, a Ines, o Raf, a Tess e a Uma passaram uma semana na costa. O Mo reservou o apartamento e fez as compras, a Ines pagou o passeio de barco e o Raf ficou com a conta do jantar grande. A Tess apanhou o táxi do aeroporto com a Uma e o Mo, porque a Ines e o Raf foram de comboio. O cartão da Uma ficou em casa, por isso ela não pagou nada. São cinco despesas e 1 700 € ao todo, e na sala de embarque ninguém sabia dizer quem estava à frente."
+  - heading: "Dez dívidas, quatro pagamentos"
+    body: "O apartamento, o passeio de barco, o jantar e as compras dividem-se em partes iguais por cinco. Isso dá 200 €, 50 €, 60 € e 18 € cada um, por isso a Ines e o Raf devem 328 € cada um. O táxi é partilhado por três, a 20 € cada um, por isso o Mo, a Tess e a Uma devem 348 €. O Mo pagou 1 090 € e deve 348 €, o que lhe deixa 742 € a receber. Todos os outros pagaram menos do que devem. A Uma fica a faltar 348 €, a Tess 288 €, a Ines 78 € e o Raf 28 €, e isto soma os 742 € do Mo. Se acertares diretamente cada par de pessoas, ficas com dez dívidas separadas. O Side Badger sugere antes quatro pagamentos, todos para o Mo."
+  - heading: "Acertem antes de todos se dispersarem"
+    body: "O melhor momento é a última noite ou a viagem de regresso, enquanto toda a gente ainda está no mesmo sítio e é fácil mencionar uma dívida de 28 €. Adiciona primeiro todas as despesas, o táxi incluído. Ninguém pode sair de um grupo enquanto deve ou tem dinheiro a receber, por isso a contagem tem de fechar em algum momento de qualquer maneira."
+    items:
+      - "**Confere a lista.** Abre o grupo e vê os **Saldos**. Por defeito vês as dívidas que te envolvem. Escolhe **Mostrar tudo** para veres a lista do grupo inteiro."
+      - "**Paga como preferires.** Transferência bancária, dinheiro, um favor que se deve desde as últimas férias. O Side Badger não movimenta o dinheiro."
+      - "**Regista.** Escolhe **Acertar contas**. Em **Acerto rápido**, cada botão é um dos teus pagamentos sugeridos, e escolher um preenche o valor. Acrescenta uma **Nota**, como transferência bancária, confirma a **Data** (não pode estar no futuro) e escolhe **Registar acerto**."
+      - "**Vê o saldo ficar limpo.** O saldo atualiza-se para todos. Quando entrar o último pagamento, os **Saldos** dizem **Tudo acertado!**"
+  - heading: "Pagar uma parte agora e o resto mais tarde"
+    body: "A Uma pode enviar 200 € esta noite e o resto no fim do mês. Ela regista 200 €, e o formulário avisa-a de que depois ainda vai dever 148 € ao Mo, ou seja, 348 € menos 200 €. Guarda e os 148 € ficam no saldo dela até registar o resto. O aviso funciona também no sentido contrário. Se um zero a mais transformar 348 € em 3 480 €, o formulário diz que ela só deve 348 € ao Mo e que guardar criaria uma dívida no sentido contrário. Corrige o zero antes de guardar."
+  - heading: "Corrigir erros e celebrar pagamentos"
+    items:
+      - "**Um pagamento errado.** Só quem registou um pagamento o pode editar. Essa pessoa ou um administrador do grupo pode apagá-lo, e depois pode ser registado de novo."
+      - "**Um pagamento que merece destaque.** Cada pagamento registado fica em **Acertos** com a sua data e nota, onde todos no grupo o podem ver e reagir. O Mo pode escolher **Celebrar** quando chegarem os últimos 148 € da Uma."
+      - "**O fim.** Com todos os saldos a zero, um administrador pode bloquear o grupo para os números ficarem como estão."
+  - heading: "O que o Side Badger não faz aqui"
+    items:
+      - "Nunca movimenta dinheiro. Não tem links de pagamento nem pedidos de pagamento, por isso um pagamento na app é o registo de um feito noutro sítio."
+      - "Não envia lembretes. Andar atrás de um pagamento atrasado continua a ser contigo."
+      - "Não define prazos. Quando vencem os restantes 148 € da Uma é o grupo que combina."
+      - "Os pagamentos sugeridos são uma lista curta, não a promessa da mais curta possível. São calculados por moeda, por isso uma viagem paga em euros e libras tem uma lista para cada."
+exampleAfter: 2
+example:
+  heading: "Cinco amigos na costa"
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: "Apartamento"
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: "Passeio de barco"
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: "Jantar grande"
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: "Táxi do aeroporto"
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: "Compras"
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: "Perguntas"
+  items:
+    - q: "Quem deve registar um pagamento, quem paga ou quem recebe?"
+      a: "Registar um pagamento exige permissão para editar despesas, e o formulário pergunta **Quem pagou?** e **Quem recebeu o pagamento?** Só quem o registou o pode editar depois, por isso costuma ser mais simples que seja quem paga a fazê-lo, com o botão de acerto rápido."
+    - q: "E se a viagem teve duas moedas?"
+      a: "Os saldos são mantidos por moeda, por isso uma dívida em euros continua a ser uma dívida em euros e cada moeda tem a sua própria lista curta, a menos que as despesas tenham sido convertidas quando foram introduzidas. [Várias moedas](page:guide/how-to-split-a-trip-paid-in-several-currencies) mostra os dois caminhos."
+    - q: "Devemos acertar durante a viagem ou no fim?"
+      a: "Qualquer um serve. Cada pagamento registado muda os saldos, por isso um pagamento feito a meio da viagem conta para a lista final. No fim é mais simples, porque [a viagem toda](page:use-case/group-trips) está num só sítio."

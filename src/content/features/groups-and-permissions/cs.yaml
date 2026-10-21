@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Správa skupiny a oprávnění pro sdílené výdaje | Side Badger"
+  description: "Pozvěte lidi odkazem nebo QR kódem, schvalujte nováčky, vytvářejte prohlížeče, nastavte oprávnění a hotovou skupinu uzamkněte. Vaše skupina, vaše pravidla, v rozumných mezích."
+h1: "Správa skupiny a oprávnění: vaše pravidla, v rozumných mezích"
+navLabel: "Skupiny a oprávnění"
+lead: "Některé skupiny potřebují pokladníka. Side Badger na to má nastavení. Pozvěte lidi odkazem nebo QR kódem, rozhodněte, kdo se dostane dovnitř, a vyberte, kdo smí měnit čísla. Malá parta kamarádů to všechno může ignorovat, protože nové skupiny začínají dokořán otevřené."
+cta:
+  heading: "Chcete vést skupinu v pořádku?"
+  body: "Vytvořte si účet, založte skupinu a pošlete odkaz s pozvánkou. Nechte ji otevřenou, nebo pravidla zpřísněte, až bude skupina větší nebo pedantičtější."
+problem:
+  heading: "Někdo musí držet čísla v pořádku"
+  body: "Čtyři spolubydlící si vystačí s důvěrou. Třicet hostů na svatebním víkendu pravděpodobně ne. Založte skupinu pro každý dům, výlet nebo akci, až s 50 lidmi, a každá skupina má vlastní členy, vlastní role a vlastní pravidla. Nástěnka je vypíše všechny, i s tím, jak na tom v každé jste, na jedné obrazovce. Většina skupin nastavení nikdy neotevře. Ty, které ano, mívají někoho dost organizovaného, aby je chtěl."
+workflow:
+  heading: "Od prázdné skupiny po uzamčenou"
+  steps:
+    - title: "Pozvěte odkazem nebo QR kódem"
+      body: "Otevřete **Pozvat ostatní**, vyberte, jak dlouho má odkaz platit (15 minut, 1 hodina, 1 den nebo 5 dní), a pak odkaz zkopírujte, nebo ukažte QR kód k naskenování. V aplikaci můžete také pozvat lidi, se kterými už sdílíte jinou skupinu."
+      shot: S03
+      shotAlt: "Dialog pozvánky s odkazem na skupinu, jeho QR kódem a volbou, jak dlouho odkaz platí"
+    - title: "Nechte je nahlédnout, než se připojí"
+      body: "Kdokoli s odkazem se přihlásí nebo si vytvoří účet, uvidí náhled skupiny a zvolí si jméno, pod kterým v ní chce vystupovat. Pak stiskne **Připojit se ke skupině**."
+      shot: S04
+      shotAlt: "Náhled připojení ke skupině, který se zobrazí přihlášenému člověku před připojením"
+    - title: "Schvalujte, kdo se připojí"
+      body: "Zapněte schvalování a lidé, kteří použijí odkaz, čekají jako čekající členové, dokud je administrátor nepustí dovnitř. Administrátoři je najdou v části **Čekající členové** v **Zabezpečení a oprávnění** a zvolí **Schválit** nebo **Odmítnout**. Do té doby čekající člověk ve skupině nic nevidí."
+      shot: S14
+      shotAlt: "Čekající členové, kteří čekají, až je administrátor schválí nebo odmítne"
+    - title: "Vyberte, kdo co smí měnit"
+      body: "Vyberte **Otevřená spolupráce** nebo **Spravovaná skupina**, nebo nastavte oprávnění jedno po druhém. Pak každému dejte roli: administrátor, člen nebo prohlížeč. Oprávnění a role mohou měnit jen administrátoři."
+      shot: S13
+      shotAlt: "Karta zabezpečení v nastavení skupiny se dvěma předvolbami a vlastními oprávněními"
+    - title: "Až je hotovo, uzamkněte ji"
+      body: "Až výlet skončí a čísla se usadí, může administrátor zapnout **Uzamknout skupinu**. Nikdo pak nemůže přidávat ani měnit výdaje, zaznamenávat platby ani upravovat seznamy a hlasování a banner to oznamuje. Nikdo tak nemůže potichu přidat opožděný taxík. Pokud nějaký přece jen vyplave, administrátor skupinu odemkne."
+      shot: S15
+      shotAlt: "Skupina s bannerem oznamujícím, že je uzamčená"
+options:
+  heading: "Administrátoři, členové a prohlížeči"
+  items:
+    - title: "Administrátor"
+      body: "Spravuje skupinu. Administrátoři schvalují nové členy, mění role a oprávnění, skupinu uzamykají, odemykají a uzavírají. Kdo skupinu založí, začíná jako její administrátor, a skupina nikdy nezůstane bez něj, protože posledního administrátora nelze degradovat."
+    - title: "Člen"
+      body: "Zapojuje se. Co člen smí, závisí na oprávněních skupiny. Ve skupině s otevřenou spoluprací je to téměř všechno. Ve spravované skupině mohou členové měnit jen výdaje a seznamy, které sami vytvořili."
+    - title: "Prohlížeč"
+      body: "Vidí všechno a nic nemění. Prohlížeč nemůže přidávat ani upravovat výdaje a seznamy, zvát lidi, měnit nastavení ani sahat na obrázek záhlaví. Hodí se pro člověka, který chce čísla jen sledovat a slibuje, že se jich nebude dotýkat."
+sections:
+  - heading: "Otevřená, spravovaná nebo vlastní pravidla"
+    body: "Nové skupiny začínají s předvolbou **Otevřená spolupráce**, kde každý může zvát lidi, měnit výdaje a upravovat seznamy a noví členové se připojují automaticky. **Spravovaná skupina** je pro chvíle, kdy se někdo musí chovat dospěle. Můžete také nastavit sedm oprávnění jedno po druhém a ruční změna jednoho z nich přepne skupinu na vlastní nastavení. Ať vyberete cokoli, samotná oprávnění mohou měnit jen administrátoři a každá změna se objeví v aktivitě skupiny. Parta [spolubydlících](page:use-case/housemates) může nechat všechno otevřené. Velká [akce nebo oslava](page:use-case/events-and-celebrations) často chce spravovanou skupinu, aby někdo měl na starosti, kdo se připojí. Jste v tom noví? [Jak to funguje](page:how-it-works) provede celou cestou, od prvního výdaje po vyrovnání."
+    items:
+      - "**Kdo může upravovat výdaje.** Otevřená spolupráce: kterýkoli člen. Spravovaná skupina: tvůrci a administrátoři."
+      - "**Kdo může mazat výdaje.** Otevřená spolupráce: kterýkoli člen. Spravovaná skupina: tvůrci a administrátoři."
+      - "**Kdo může upravovat seznamy.** Otevřená spolupráce: kterýkoli člen. Spravovaná skupina: tvůrci a administrátoři."
+      - "**Kdo může zvát členy.** Otevřená spolupráce: kterýkoli člen. Spravovaná skupina: pouze administrátoři."
+      - "**Schvalování nových členů.** Otevřená spolupráce: automaticky. Spravovaná skupina: vyžadováno schválení administrátorem."
+      - "**Kdo může měnit nastavení.** Otevřená spolupráce: kterýkoli člen. Spravovaná skupina: pouze administrátoři."
+      - "**Kdo může měnit záhlaví.** Otevřená spolupráce: kterýkoli člen. Spravovaná skupina: pouze administrátoři."
+  - heading: "Vaše jméno, vaše fotka, obrázek záhlaví"
+    body: "Každá skupina má vlastní obsazení. Zvolte si jméno, které lidé uvidí v každé skupině (2 až 50 znaků, jedinečné v rámci skupiny), a kterou ze svých profilových fotek tam budete nosit. Doma buďte **Sam** a na výletu **Sam (s autem)**. Kdo smí měnit nastavení, může skupinu přejmenovat a upravit její popis. Obrázek záhlaví, JPEG, PNG, GIF nebo WebP do 10 MB, má vlastní oprávnění."
+  - heading: "Archivovat, uzamknout nebo uzavřít"
+    body: "Tři způsoby, jak skupinu odložit, od nejmírnějšího po nejvážnější."
+    items:
+      - "**Archivace** skryje skupinu z vaší vlastní nástěnky, ne z nástěnky nikoho jiného. Pořád ji můžete otevřít a používat jako dřív a **Obnovit skupinu z archivu** ji vrátí."
+      - "**Uzamčení** zmrazí změny, dokud ho administrátor neodemkne. Skupinu a její historii si může dál přečíst každý."
+      - "**Uzavření** je trvalé a platí pro všechny. Může ho provést jen administrátor, a to napsáním názvu skupiny na potvrzení, a nikdo už skupinu znovu neotevře."
+  - heading: "Opuštění skupiny"
+    body: "Opustit skupinu může každý, kdo se vyrovnal. Nemůžete odejít, dokud dlužíte nebo se vám dluží peníze, byť jen v jedné měně, dokud se vás týká otevřený dotaz k výdaji, nebo pokud jste poslední administrátor či jediný člen. [Zaznamenejte platbu](page:feature/settle-up), vyřešte [dotaz k výdaji](page:guide/what-to-do-when-someone-disputes-a-shared-expense), nebo udělejte administrátorem někoho jiného, a pak odejděte. Abyste se vrátili, budete potřebovat novou pozvánku."
+limits:
+  heading: "V rozumných mezích: drobné písmo"
+  items:
+    - "Skupina pojme až 50 lidí."
+    - "Oprávnění a role mohou měnit jen administrátoři. Posledního administrátora nelze degradovat."
+    - "Nastavení úprav výdajů na **Pouze administrátoři** také znamená, že výdaje mohou přidávat jen administrátoři."
+    - "Zámek zastaví změny výdajů, nové platby, seznamy a hlasování. Skupinu a její historii může dál číst každý a reagovat na platby."
+    - "Uzavření je trvalé. Aplikace nemá způsob, jak uzavřenou skupinu znovu otevřít."
+    - "Vytvoření nového odkazu s pozvánkou staré neruší. Každý odkaz platí do svého vypršení, takže zvolte krátký, pokud se bojíte, kam by mohl zamířit."
+    - "Pozvánky v aplikaci nabízejí lidi z vašich 10 naposledy aktivních skupin. Všichni ostatní potřebují odkaz a kdo smí zvát, závisí na oprávněních skupiny."
+    - "Připojení vyžaduje účet a lidé musí ověřit svůj e-mail, než mohou cokoli přidat."
+useCasesHeading: "Kde pomůže trocha pořádku"
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Může prohlížeč přidávat výdaje?"
+      a: "Ne. Prohlížeč vidí všechno a nic nemění. Nemůže přidávat ani upravovat výdaje a seznamy, zvát lidi ani měnit nastavení."
+    - q: "Může někdo odejít, když dluží peníze?"
+      a: "Ne. Nikdo nemůže skupinu opustit, dokud dluží nebo se mu dluží peníze, byť jen v jedné měně. Nejdřív se vyrovnejte, pak odejděte."
+    - q: "Co se stane, když se skupina uzavře?"
+      a: "Nikdo ji už neotevře. Skupinu může uzavřít jen administrátor, na potvrzení musí napsat název skupiny a skupina se stane nedostupnou pro všechny. Pokud chcete jen zastavit změny, uzamkněte ji. Pokud ji chcete jen pryč z vlastní nástěnky, archivujte ji."
+    - q: "Dá se zámek vzít zpět?"
+      a: "Ano. Administrátor může skupinu odemknout a změny zase fungují."
+    - q: "Musím lidi schvalovat, než se připojí?"
+      a: "Jen pokud chcete. Nové skupiny začínají s předvolbou Otevřená spolupráce, kde se lidé s odkazem připojují automaticky. Zapněte schvalování administrátorem nebo vyberte Spravovanou skupinu a každý počká, dokud ho administrátor nepustí dovnitř."
+    - q: "Kolik lidí může být ve skupině?"
+      a: "Až 50."

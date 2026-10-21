@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: Delade listor, omröstningar och kommentarer | Side Badger
+  description: Kommentera utgifter, ifrågasätt den konstiga, för en gemensam inköpslista och rösta om villan. Planera utgifterna tillsammans och dela dem sedan. Gratis, utan annonser.
+h1: Planera tillsammans, dela efteråt
+navLabel: Planera tillsammans
+lead: Inköpslistan och inköpsnotan, äntligen på talfot. Side Badger ger gruppen en plats att prata om pengarna både före och efter att de är spenderade, med kommentarer på varje utgift, ett sätt att ifrågasätta de som ser fel ut, delade listor och omröstningar för de stora besluten. Sedan [delar du utgifter](page:feature/split-expenses) som vanligt.
+cta:
+  heading: Planera först, dela sedan
+  body: Skapa ett gratis konto, starta en grupp och lägg den första listan, omröstningen eller frågan precis bredvid pengarna. Osäker på vad som händer sen? Se [så fungerar det](page:how-it-works).
+problem:
+  heading: Chatten finns här, notan finns där
+  body: Gruppens utgifter brukar bo på två ställen. Siffrorna finns på ett, och grälet om siffrorna i en chatt som rullade förbi i tisdags. Inköpslistan är ett foto av ett kylskåp. Villan avgjordes av en tummen upp från de flesta, förmodligen. Side Badger håller planeringen i gruppen, bredvid utgifterna den handlar om, så det finns en kommentar där kostnaden är, en lista där inköpet är, en omröstning för det stora beslutet och ett sätt att säga "vänta, stämmer det här?" utan att skriva ett stycke. Allt handlar om gruppens pengar, vilket är det gruppen finns till för.
+workflow:
+  heading: Från villaomröstning till inköpsnota
+  steps:
+    - title: Låt det stora beslutet gå till omröstning
+      body: Lägg till en omröstning om beslutet som avgör notan, till exempel vilken villa. Välj två till tio alternativ, ange hur många röster var och en får och stäng den när alla har röstat, så markeras vinnaren.
+      shot: S17
+      shotAlt: En stängd omröstning där det vinnande alternativet är markerat och antalet röster står bredvid varje alternativ
+    - title: Skriv inköpslistan tillsammans
+      body: Starta en delad lista, lägg till varorna och bocka av dem när de hamnar i vagnen. Inköpet läggs sedan in som en utgift.
+      shot: S16
+      shotAlt: En delad inköpslista där några varor är avbockade, med en framstegsräknare
+    - title: Prata om kostnaden där den finns
+      body: Kommentera själva utgiften, bifoga kvittot och reagera med en emoji. Samtalet stannar bredvid siffran det handlar om.
+      shot: S08
+      shotAlt: En utgift med sina detaljer, ett miniatyrkvitto, en kommentarstråd och emojireaktioner
+    - title: Ifrågasätt den som ser konstig ut
+      body: Om gruppen har slagit på frågor om utgifter kan alla som ingår i en utgift välja **Jag har en fråga**. Utgiften hålls utanför saldona tills frågan är avklarad.
+      shot: S18
+      shotAlt: Utgiftslistan med ett märke för Ifrågasatt och filtret Endast ifrågasatt
+    - title: Se vad som ändrats, och vem som ändrade
+      body: Aktivitetsflödet och aviseringsklockan visar vad som är nytt i dina grupper. Pushaviseringar finns om du vill ha dem.
+      shot: S19
+      shotAlt: Aviseringsrutan med en lista över senaste aktivitet
+options:
+  heading: Alternativ
+  items: []
+example:
+  heading: Tre rumskamrater, en ifrågasatt vinnota
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: storhandlingen
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: städhjälpen
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: partyvinet
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: Kommentarer och reaktioner, bredvid siffrorna
+    body: Varje utgift har sin egen kommentarstråd, och det har gruppen, varje lista och varje omröstning också. Fråga varför taxin kostade så mycket under taxin, inte i en chatt som ingen bläddrar tillbaka i. Lägg till ett foto av kvittot eller en PDF med bokningen och reagera sedan med tumme upp, hjärta, skratt, wow, ledsen eller fira på utgifter, betalningar och kommentarer. Fira en betalning när den kommer fram. Det är det närmaste Side Badger kommer en applåd.
+  - heading: Ifrågasätt en utgift utan att starta ett bråk
+    body: När gruppen har slagit på frågor om utgifter kan alla som ingår i en utgift välja **Jag har en fråga** och säga varför. Frågan läggs ut som en kommentar på utgiften, utgiften får märket **Ifrågasatt**, och hela utgiften faller bort ur allas saldon tills frågan är avklarad.
+    items:
+      - "**Slå på den.** Den är avstängd från början. En administratör slår på **Tillåt frågor om utgifter** i gruppens inställningar, under **Funktioner**."
+      - "**Stänga den.** Den som frågade, eller en administratör, väljer **Stäng frågan**. Om flera ifrågasatte samma utgift kommer den tillbaka i saldona när den sista frågan stängs."
+      - "**Redigera den.** När en utgift redigeras följer en öppen fråga med till den nya versionen för alla som fortfarande har en andel i den. De som redigeringen lämnar utanför får sin fråga avslutad tillsammans med den gamla versionen, så det finns inget kvar för dem att stänga."
+      - "**Hitta dem.** Utgiftslistan har ett filter, **Endast ifrågasatt**. Det här är inget godkännandesteg: bara de utgifter någon ifrågasätter hålls kvar, och allt annat räknas så fort det läggs till."
+  - heading: Så går en fråga till
+    body: Tom lägger till 45 £ partyvin, delat mellan alla tre rumskamraterna. Aisha drack inte, så hon ställer en fråga, och medan den är öppen räknas vinet för ingen. Huset kommer överens om att vinet är Toms och Priyas, så Tom ändrar delningen till de två. Aisha ingår inte längre i utgiften, så hennes fråga avslutas med den tidigare versionen, som sparas, och vinet kommer tillbaka i saldona direkt med 22,50 £ var i stället för 15 £ var. Hade Aisha stannat kvar i utgiften hade hennes fråga följt med och väntat på att hon eller en administratör skulle stänga den. Nedan består Aishas 48 £ av 28 £ från storhandlingen och 20 £ från städhjälpen, och Priyas 10,50 £ är hennes andel på 70,50 £ (28 £, 20 £ och 22,50 £) minus de 60 £ hon betalade. Ett bråk som är typiskt för [rumskamrater](page:use-case/housemates). För hur du formulerar en fråga, se [vad du gör när någon ifrågasätter en delad utgift](page:guide/what-to-do-when-someone-disputes-a-shared-expense).
+  - heading: Delade listor, för inköpen
+    body: Starta en lista i gruppen, döp den till något i stil med Inköpslista, lägg till varor och bocka av dem. Dra varorna i en bättre ordning, se framstegsräknaren stiga och kommentera listan när någon köper fel havremjölk. Arkivera en färdig lista för att städa undan den (**Visa arkiverade** tar tillbaka den), eller kopiera en lista för att använda den igen. Ha den delade inköpslistan bredvid inköpsnotorna, så att listan säger vad som ska köpas och utgiften säger vad det kostade. Vem som kan skapa och redigera listor beror på gruppens behörigheter, som [grupper och behörigheter](page:feature/groups-and-permissions) förklarar.
+  - heading: Omröstningar, anonyma om du vill
+    body: Fråga gruppen något som avgör notan, till exempel vilken villa, hur mycket gåvan ska kosta eller om båtturen är värd det. En omröstning har en fråga och två till tio alternativ. Du väljer hur många röster var och en får, från ett enda val upp till tio, och om omröstningen är anonym. **Anonym omröstning** döljer vem som röstade på vad, och den kan inte ändras när den första rösten är lagd. Folk kan ändra eller ta bort sin röst tills omröstningen stängs, och du kan öppna den igen om gruppen ångrar sig. Att välja villa är precis vad [gruppresor](page:use-case/group-trips) är gjorda av, och att enas om gåvans budget är en klassiker för [evenemang och firanden](page:use-case/events-and-celebrations).
+  - heading: Aktivitetsflödet, så att inget ändras i tysthet
+    body: Varje grupp har en aktivitetshistorik, och aviseringsklockan samlar aktivitet från alla dina grupper på ett ställe. Lägg till en utgift så ser alla den direkt, utan att uppdatera, och flödet visar vad som ändrades och vem som ändrade. Det gäller utgifter som läggs till, redigeras eller tas bort, frågor som ställs och stängs, kommentarer, ändringar i listor och omröstningar och registrerade betalningar.
+  - heading: Pushaviseringar, om du vill ha dem
+    body: Pushaviseringar är valfria. Slå på dem i ditt konto under **Inställningar**, under **Aviseringar**, så ger din enhet dig besked när det finns ny aktivitet i dina grupper, till exempel en ny utgift eller en kommentar. Varje enhet slås på för sig, och din webbläsare frågar om tillstånd först. På en iPhone eller iPad fungerar de bara i appen som lagts till på hemskärmen, vilket sidan om [webbappen](page:feature/web-app) förklarar. Se dem som en bekvämlighet, inte ett löfte, eftersom leverans inte garanteras.
+limits:
+  heading: Begränsningar
+  items:
+    - Kommentarer, listor och omröstningar är till för gruppens pengar. [Villkoren](page:terms) ber att allt som läggs ut ska ha med gruppens ekonomi att göra, så det här är en plats att planera utgifterna på, inte en allmän chatt eller en att göra-app.
+    - En kommentar kan vara upp till 500 tecken, med upp till tre bilagor som är bilder eller PDF-filer på upp till 5 MB var. Bara författaren kan ta bort en kommentar.
+    - Frågor om utgifter är avstängda från början, och en administratör slår på dem för varje grupp. Bara personer som ingår i en utgift kan ifrågasätta den, att stänga av funktionen rensar alla öppna frågor, och ingen kan lämna gruppen medan en utgift de ingår i har en öppen fråga.
+    - En grupp rymmer upp till 100 listor, var och en med upp till 200 poster på upp till 500 tecken. Gruppens behörigheter avgör vem som kan skapa, redigera och ta bort listor, och en låst grupp tillåter inga ändringar.
+    - En grupp rymmer upp till 50 omröstningar, var och en med två till tio alternativ och upp till tio röster per person. Omröstningar har ingen tidsgräns och stängs inte av sig själva.
+    - Aktivitetshistoriken sparas i 90 dagar.
+    - Pushaviseringar är valfria för varje konto och varje enhet. De kräver en webbläsare som stöder dem och ditt tillstånd, de fungerar på iPhone och iPad bara från appen som lagts till på hemskärmen, och leverans garanteras inte. Det finns inga e-post- eller sms-aviseringar om aktivitet och inga betalningspåminnelser, så att jaga en betalning är fortfarande ditt jobb.
+useCasesHeading: Där det hjälper att planera tillsammans
+faq:
+  heading: Frågor
+  items:
+    - q: Kan röster vara anonyma?
+      a: Ja. Slå på **Anonym omröstning** när du skapar omröstningen så döljs vem som röstade på vad. Bestäm dig före den första rösten, för det kan inte ändras efteråt.
+    - q: Kan en omröstning stängas av sig själv?
+      a: Nej. En omröstning har ingen tidsgräns, så den som skapade den väljer **Stäng omröstning** när gruppen har bestämt sig. Om gruppen ångrar sig tar **Öppna omröstning igen** tillbaka den.
+    - q: Hur många poster får en lista rymma?
+      a: Upp till 200 poster per lista och upp till 100 listor per grupp. Varje post kan vara upp till 500 tecken, vilket är mycket havremjölk.
+    - q: Vem kan stänga en fråga, och vad händer med utgiften under tiden?
+      a: Den som frågade, eller en gruppadministratör. Medan en fråga är öppen är hela utgiften utanför allas saldon. Den kommer tillbaka när den sista öppna frågan om den stängs, eller när en redigering tar bort den som frågade från utgiften.
+    - q: Kan jag använda listor och kommentarer som en att göra-app eller en gruppchatt?
+      a: Nej. Kommentarer, listor och omröstningar är till för gruppens pengar, vilket [villkoren](page:terms) ber om. Tänk inköpslistor, budgetomröstningar och "varför kostar det här 45 £?".
+    - q: Mejlar Side Badger mig om aktivitet?
+      a: Nej. Det finns inga e-post- eller sms-aviseringar om aktivitet. Du kan slå på pushaviseringar på varje enhet, och aviseringsklockan i appen visar vad som är nytt.

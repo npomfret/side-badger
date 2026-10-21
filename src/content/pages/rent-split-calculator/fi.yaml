@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Vuokran jakolaskuri: huoneen koko tai tulot | Side Badger"
+  description: "Isompi huone, isompi osuus? Laske, paljonko kukin kämppis maksaa, huoneen koon tai tulojen mukaan. Toimii selaimessa: mitään ei tallenneta eikä lähetetä."
+h1: Vuokran jakolaskuri
+navLabel: Vuokran jakolaskuri
+lead: "Isompi makuuhuone, isompi osuus? Kirjoita vuokra ja katso, paljonko kukin maksaa, huoneen koon tai tulojen mukaan, pennin tarkkuudella. Se toimii selaimessasi, ei tallenna mitään eikä siirrä rahaa. Kun talo haluaa pitää kirjaa, [jaa kulut](page:feature/split-expenses) Side Badgerissa ja kopioi vuokra joka kuukausi."
+cta:
+  heading: Sovi prosentit kerran. Kopioi ne ikuisesti.
+  body: "Tämä laskuri unohtaa kaiken, kun suljet välilehden, aivan kuten kämppis, joka ehdottomasti maksoi laajakaistan. Side Badger -ryhmä säilyttää vuokran, laskut ja sen, kuka on maksanut mitä. Se on ilmainen, ilman mainoksia ja päivittäisiä rajoja."
+sections:
+  - heading: Kaksi tapaa jakaa vuokra
+    items:
+      - "**Huoneen koon mukaan.** Osa vuokrasta maksaa keittiöstä, kylpyhuoneesta ja olohuoneesta, joita kaikki käyttävät. Valitset tämän osuuden (aluksi 40 %), ja se jaetaan tasan. Loput menevät makuuhuoneen pinta-alan mukaan, joten iso huone maksaa enemmän ja komero saa ansaitsemansa alennuksen."
+      - "**Tulojen mukaan.** Jokainen maksaa vuokrasta saman osuuden kuin hän ansaitsee kaikkien tuloista. Lisää yhteiset laskut, niin ne seuraavat samoja osuuksia."
+  - heading: Näin laskelmat toimivat
+    body: "Jokainen saa tarkan osuuden ja sitten kokonaisen prosentin, koska kokonaislukuja on helpompi kirjoittaa ja niistä on helpompi kinastella. Pyöristys tehdään suurimman jakojäännöksen menetelmällä: jokainen saa osuutensa alapuolella olevan kokonaisluvun, ja jäljelle jäävät prosenttiyksiköt menevät sille, joka menetti eniten. Prosenttien summa on aina 100. Alla olevassa asunnossa yhteisten tilojen 40 % on 13,33 % kullekin. Priyan huone on 16 neliömetriä asunnon 38:sta, joten 60 % × 16/38 on 25,26 %, ja lisättynä 13,33 % se tekee 38,6 %, joka pyöristyy 39 %:iin. Tom ja Aisha saavat 32 % ja 29 %, ja 39 + 32 + 29 on 100. Kunkin summa on tuo prosentti vuokrasta: 39 % määrästä 1 950 £ on 760,50 £."
+  - heading: Syötä se sitten Side Badgeriin
+    body: "Koko tarina mittanauhoineen löytyy oppaasta [näin jaat vuokran huoneen koon mukaan](page:guide/how-to-split-rent-by-room-size), ja pareille on opas [kumppanista, joka ansaitsee enemmän](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+    items:
+      - "**Lisää vuokra.** Valitse ryhmässäsi **Lisää kulu**, valitse kohdasta **Kuka maksoi?** se, joka maksoi vuokranantajalle, ja pidä kaikki mukana kohdassa **Jaa seuraavien kesken**."
+      - "**Valitse Prosentteina.** Valitse kohdassa **Miten jaetaan** vaihtoehto **Prosentteina** ja kirjoita kokonaiset prosentit. Lomake huomauttaa, jos niiden summa ei ole 100."
+      - "**Kopioi se ensi kuussa.** Avaa viime kuun vuokra ja valitse **Kopioi kulu**. Jako tulee mukana."
+  - heading: Mitä laskuri ei tee
+    items:
+      - "**Mitata huoneitasi.** Lattiapinta-ala on vain lähtökohta. Huone, jossa on oma kylpyhuone, on arvokkaampi kuin yhtä suuri huone ilman sellaista, ja komero, johon mahtuu sänky ja toiveikas tuoli, on vähemmän arvokas."
+      - "**Päättää, mikä lasketaan tuloksi.** Nettona vai bruttona, palkka vai sivubisnes: ryhmä päättää. Käytä kaikille samaa ajanjaksoa."
+      - "**Tallentaa mitään.** Sulje välilehti, ja luvut ovat poissa. Säilyttääksesi ne kopioi linkki. Se sisältää lukusi #-merkin jälkeen, jota selaimet eivät koskaan lähetä palvelimelle, ja jokainen, jolla linkki on, voi lukea ne."
+      - "**Siirtää rahaa.** Maksat vuokranantajalle miten haluat."
+      - "**Sekoittaa valuuttoja tai ylittää rajoja.** Valitse yksi valuutta. Se hyväksyy 2–10 ihmistä ja vuokran, joka on enintään 999 999,99, kuten sovellus."
+exampleAfter: 2
+example:
+  heading: Yksi asunto, yksi kuukausi
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: vuokra
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: sähkölasku
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: laajakaista
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: Kysymyksiä
+  items:
+    - q: Kumpi on reilumpi, huoneen koko vai tulot?
+      a: Ei aina kumpikaan. Huoneen koko sopii kämppiksille, jotka maksavat tilasta, jossa nukkuvat. Tulot sopivat pareille ja ystäville, joiden palkat ovat hyvin erilaiset. Sopikaa asia ennen ensimmäistä vuokrapäivää, ei sen jälkeen.
+    - q: Pitäisikö laskut jakaa samalla tavalla?
+      a: Kämppiksillä yleensä ei. Kaikki käyttävät sähköä ja laajakaistaa, joten tasajako on yksinkertaisempi, kuten esimerkissä. Tulojen mukaan laskuri antaa laskuille samat osuudet kuin vuokralle.
+    - q: Voinko käyttää neliöjalkoja?
+      a: Kyllä. Valitse ft² ja kirjoita pinta-alat neliöjalkoina. Yksikkö on vain nimike, ja osuudet tulevat samoiksi, kunhan kaikki käyttävät samaa yksikköä.
+    - q: Onko laskuri ilmainen?
+      a: Kyllä. Ilmainen. Ei mainoksia. Ei päivittäisiä rajoja. Et tarvitse myöskään tiliä.

@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Kalkulator podziału rachunków: kto komu wisi | Side Badger"
+  description: "Kto zapłacił, kto wisi, kto komu płaci: policzone w kilka sekund. Po równo, dokładnie lub procentowo. Za darmo, w przeglądarce, bez zapisywania i wysyłania."
+h1: "Kalkulator podziału rachunków"
+navLabel: "Kalkulator podziału rachunków"
+lead: "Wpisz, kto za co zapłacił, a kalkulator pokaże, kto komu jest winien, razem z krótką listą płatności, które to rozliczają. Działa w przeglądarce, niczego nie zapisuje i nie przesyła pieniędzy. Jeśli twoja grupa potrzebuje rachunku, który przetrwa zamknięcie karty, [dzielenie wydatków](page:feature/split-expenses) i [rozliczanie](page:feature/settle-up) w Side Badger robią te same obliczenia i je zachowują."
+cta:
+  heading: "Podobają ci się obliczenia? Zachowaj je."
+  body: "Ten kalkulator zapomina wszystko po zamknięciu karty, zupełnie jak ten, kto na pewno płacił ostatnim razem. Grupa w Side Badger przechowuje wydatki, aktualizuje saldo każdego i rejestruje płatności. Jest za darmo, bez reklam i bez dziennych limitów."
+sections:
+  - heading: "Jak działa obliczenie"
+    body: "Dla każdego wydatku kalkulator liczy udział każdej osoby. Możesz podzielić wydatek po równo, według dokładnych kwot albo procentowo między wybrane osoby. Saldo każdej osoby to potem to, co zapłaciła, minus to, co jest winna. Plus oznacza, że grupa jest jej winna pieniądze, a minus, że to ona jest winna grupie. Salda zawsze dają w sumie zero, bo ile jedna osoba ma do odzyskania, tyle winni są jej inni."
+  - heading: "Dlaczego lista płatności jest krótka"
+    body: "Nikt nie musi rozliczać każdego paragonu osobno. Gdy znane jest każde saldo, kalkulator łączy osobę, która jest winna najwięcej, z osobą, której należy się najwięcej, rozlicza tyle, ile zmieści się w jednej płatności, i idzie dalej w dół listy, aż wszyscy są na zerze. Liczba płatności nigdy nie przekracza liczby osób z saldem pomniejszonej o jeden, a często jest mniejsza niż przy rozliczaniu rachunek po rachunku. Kalkulator daje krótką listę płatności i nie obiecuje, że jest to najkrótsza możliwa."
+  - heading: "Czego kalkulator nie robi"
+    items:
+      - "**Nie obsługuje kilku walut.** Wybierz jedną i używaj jej w całym obliczeniu. Aplikacja prowadzi osobne saldo dla każdej waluty i może przeliczyć wydatek po aktualnym kursie, który możesz zmienić."
+      - "**Niczego nie zapisuje.** Zamknij kartę, a liczby znikną. Żeby je zachować, skopiuj link. Zawiera twoje liczby po znaku #, a tej części przeglądarka nigdy nie wysyła na serwer. Każdy, komu wyślesz link, może je przeczytać."
+      - "**Nie przesyła pieniędzy.** Mówi, kto komu powinien zapłacić. Płacicie sobie, jak chcecie, a potem rejestrujesz płatność w aplikacji, jeśli twoja grupa tam prowadzi rachunek."
+      - "**Nie losuje, kto dostaje ostatni grosz.** Gdy rachunek nie dzieli się równo, pozostałe grosze trafiają do pierwszych osób na liście, więc sumy nadal się zgadzają. W aplikacji ostatni grosz trafia do jednej osoby losowo, więc nie zawsze do tej samej."
+      - "**Nie wychodzi poza limity.** Kalkulator przyjmuje od 2 do 20 osób, a jeden wydatek może wynosić do 999 999,99, tak jak w aplikacji."
+exampleAfter: 2
+example:
+  heading: "Długi weekend, czworo znajomych"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Domek"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "Zakupy"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "Taksówka"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "Pub"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Czy kalkulator jest darmowy?"
+      a: "Tak. Za darmo. Bez reklam. Bez dziennych limitów. Konto też nie jest potrzebne."
+    - q: "Czy zapisuje to, co wpiszę?"
+      a: "Nie. Nic nie jest nigdzie zapisywane ani wysyłane. Żeby zachować liczby, użyj „Kopiuj link” i zapisz link w jakimś miejscu."
+    - q: "Kto może zobaczyć skopiowany przeze mnie link?"
+      a: "Każdy, kto go ma. Liczby są w samym linku, po znaku #, więc udostępniaj go tylko osobom, które powinny je zobaczyć."
+    - q: "Czy przesyła pieniądze?"
+      a: "Nie. Wylicza, kto komu powinien zapłacić, a płacicie sobie, jak chcecie. Side Badger też nigdy nie dotyka twoich pieniędzy. Zobacz [rozliczanie](page:feature/settle-up)."
+    - q: "Czy mogę podzielić wyjazd opłacany w dwóch walutach?"
+      a: "Tutaj nie, bo obliczenie ma jedną walutę. W grupie każda waluta ma własne saldo. Zobacz [wiele walut](page:feature/multiple-currencies)."
+    - q: "Co, jeśli kwoty się nie zgadzają?"
+      a: "Kalkulator mówi o tym pod wydatkiem i nie pokazuje wyniku, dopóki się nie zgodzą. Dokładne kwoty muszą dawać w sumie kwotę wydatku, a procenty muszą dawać 100."

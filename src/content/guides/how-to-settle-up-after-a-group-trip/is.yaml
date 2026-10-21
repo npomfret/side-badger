@@ -1,0 +1,113 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Hvernig á að gera upp eftir hópferð | Side Badger"
+  description: "Gerðu upp áður en allir tvístrast. Tíu flæktar skuldir verða að fjórum greiðslum, skráðum jafnóðum, og hlutagreiðsla er í lagi. Útreikningar fyrir fimm vini."
+h1: "Hvernig á að gera upp eftir hópferð"
+navLabel: "Uppgjör eftir ferð"
+lead: "Gerðu upp áður en allir tvístrast. Bættu við síðasta útgjaldinu, opnaðu stöðu hópsins og borgaðu það sem þú skuldar af stutta listanum, eins og þér hentar. Skráðu svo hverja greiðslu í Side Badger svo staðan hreinsist fyrir allan hópinn. Hjá fimm vinum og fimm útgjöldum verða tíu flæktar skuldir að fjórum greiðslum."
+cta:
+  heading: "Lokaðu bókhaldinu áður en myndirnar fara að streyma inn"
+  body: "Stofnaðu ókeypis aðgang, búðu til hóp fyrir næstu ferð og bættu við hverjum kostnaði um leið og hann fellur til. Stutti listinn yfir greiðslur bíður þín þegar þú kemur á flugvöllinn. Viltu sjá [hvernig uppgjör virkar](page:feature/settle-up) fyrst?"
+sections:
+  - heading: "Fimm vinir, fimm útgjöld, einn brottfararsalur"
+    body: "Mo, Ines, Raf, Tess og Uma eyddu viku við ströndina. Mo bókaði íbúðina og keypti í matinn, Ines borgaði fyrir bátsferðina og Raf tók stóra kvöldverðinn á sig. Leigubílinn á flugvöllinn tóku Tess, Uma og Mo saman, því Ines og Raf tóku lestina. Uma skildi kortið sitt eftir heima, svo hún borgaði ekkert. Það eru fimm útgjöld og 1.700 € samtals, og í brottfararsalnum gat enginn sagt hver væri á undan."
+  - heading: "Tíu skuldir, fjórar greiðslur"
+    body: "Íbúðinni, bátnum, kvöldverðinum og matvörunum er skipt jafnt á fimm. Það eru 200 €, 50 €, 60 € og 18 € á mann, svo Ines og Raf skulda 328 € hvort. Leigubílnum er skipt á þrjá, 20 € á mann, svo Mo, Tess og Uma skulda 348 €. Mo greiddi 1.090 € og skuldar 348 €, svo hann á inni 742 €. Öll hin greiddu minna en þau skulda. Uma skuldar 348 €, Tess 288 €, Ines 78 € og Raf 28 € þegar tekið er tillit til þess sem þau greiddu, og það er samtals 742 €, upphæðin sem Mo á inni. Ef þú gerir upp milli hverra tveggja manna beint færðu tíu aðskildar skuldir. Side Badger leggur þess í stað til fjórar greiðslur, allar til Mo."
+  - heading: "Gerðu upp áður en allir tvístrast"
+    body: "Besti tíminn er síðasta kvöldið eða ferðin heim, meðan allir eru enn á sama stað og auðvelt er að nefna 28 € skuld. Bættu fyrst við öllum útgjöldum, leigubílnum líka. Enginn getur yfirgefið hóp meðan hann skuldar eða á inni pening, svo það þarf hvort sem er að loka talningunni einhvern tímann."
+    items:
+      - "**Athugaðu listann.** Opnaðu hópinn og skoðaðu **Staða**. Sjálfgefið sérðu skuldirnar sem tengjast þér. Veldu **Sýna allt** til að sjá lista alls hópsins."
+      - "**Borgaðu eins og þér hentar.** Millifærsla, reiðufé, greiði sem þú skuldar frá síðasta fríi. Side Badger flytur ekki peningana."
+      - "**Skráðu það.** Veldu **Gera upp**. Undir **Flýtiuppgjör** er hver hnappur ein af greiðslunum sem lagðar eru til og með því að velja einn fyllist upphæðin út. Skrifaðu í **Athugasemd** eitthvað eins og „millifærsla“, athugaðu reitinn **Dagsetning** (hún má ekki vera í framtíðinni) og veldu **Skrá uppgjör**."
+      - "**Horfðu á það hreinsast.** Staðan uppfærist hjá öllum. Þegar síðasta greiðslan er komin inn stendur **Allt uppgert!** undir **Staða**."
+  - heading: "Borga hluta núna og restina síðar"
+    body: "Uma getur sent 200 € í kvöld og restina í lok mánaðarins. Hún skráir 200 € og eyðublaðið varar hana við að hún skuldi Mo enn 148 € á eftir, sem er 348 € mínus 200 €. Vistaðu og 148 € haldast á stöðu hennar þar til hún skráir restina. Viðvörunin virkar líka í hina áttina. Ef aukanúll breytir 348 € í 3.480 € segir eyðublaðið að hún skuldi Mo aðeins 348 € og að vistun myndi búa til skuld í gagnstæða átt. Lagaðu núllið áður en þú vistar."
+  - heading: "Mistök löguð og greiðslum fagnað"
+    items:
+      - "**Röng greiðsla.** Aðeins sá sem skráði greiðslu getur breytt henni. Sá sem skráði hana eða stjórnandi hópsins getur eytt henni og þá er hægt að skrá hana aftur."
+      - "**Greiðsla sem vert er að taka eftir.** Hver skráð greiðsla er undir **Uppgjör** með dagsetningu og athugasemd, þar sem allir í hópnum sjá hana og geta brugðist við. Mo getur valið **Fagna** þegar síðustu 148 € frá Uma berast."
+      - "**Endirinn.** Þegar allar stöður eru núll getur stjórnandi læst hópnum svo tölurnar haldist á sínum stað."
+  - heading: "Það sem Side Badger gerir ekki hér"
+    items:
+      - "Það flytur aldrei peninga. Það hefur enga greiðslutengla eða greiðslubeiðnir, svo greiðsla í appinu er skráning á greiðslu sem var gerð annars staðar."
+      - "Það sendir engar áminningar. Að elta greiðslu sem dregst er enn á þinni könnu."
+      - "Það setur engin tímamörk. Hvenær afgangurinn af 148 € frá Uma á að greiðast er hópsins að semja um."
+      - "Greiðslurnar sem lagðar eru til eru stuttur listi, ekki loforð um þann allra stysta mögulega. Þær eru reiknaðar fyrir hvern gjaldmiðil, svo ferð sem er greidd í evrum og pundum fær lista fyrir hvorn."
+exampleAfter: 2
+example:
+  heading: "Fimm vinir við ströndina"
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: "Íbúð"
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: "Bátsferð"
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: "Stóri kvöldverðurinn"
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: "Leigubíll á flugvöllinn"
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: "Matvörur"
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: "Spurningar"
+  items:
+    - q: "Hver ætti að skrá greiðslu, sá sem borgar eða sá sem fær greitt?"
+      a: "Til að skrá greiðslu þarf heimild til að breyta útgjöldum og eyðublaðið spyr **Hver greiddi?** og **Hver fékk greitt?** Aðeins sá sem skráði hana getur breytt henni síðar, svo það er yfirleitt einfaldast að sá sem borgar geri það með flýtiuppgjörshnappnum."
+    - q: "Hvað ef ferðin var í tveimur gjaldmiðlum?"
+      a: "Staða er haldin fyrir hvern gjaldmiðil, svo evruskuld helst evruskuld og hver gjaldmiðill fær sinn eigin stutta lista, nema útgjöld hafi verið umreiknuð þegar þau voru skráð. [Margir gjaldmiðlar](page:guide/how-to-split-a-trip-paid-in-several-currencies) sýnir báðar leiðir."
+    - q: "Ættum við að gera upp á meðan á ferðinni stendur eða í lokin?"
+      a: "Hvort tveggja gengur. Hver skráð greiðsla breytir stöðunni, svo greiðsla sem er gerð um miðja ferð telst með í lokalistanum. Í lokin er einfaldara, því [öll ferðin](page:use-case/group-trips) er á einum stað."

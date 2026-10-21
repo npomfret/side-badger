@@ -1,0 +1,101 @@
+translatedFrom: "5d92090e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Sut i gasglu at anrheg grŵp | Side Badger"
+  description: "Mae pawb yn cyfrannu swm gwahanol ac un cerdyn yn cymryd y pwysau. Cynhaliwch bleidlais gyllideb, rhowch symiau union a gadewch i Side Badger wneud y sym."
+h1: "Sut i gasglu at anrheg grŵp"
+navLabel: "Casglu at anrheg grŵp"
+lead: "Mae casglu at anrheg grŵp yn golygu bod un person yn talu ymlaen llaw a bod pawb arall mewn dyled iddo am eu cyfraniad. Cytunwch ar gyllideb gyda phleidlais, gadewch i gerdyn y prynwr dalu am yr anrheg, yna rhowch hi i mewn fel un gost gyda [symiau union](page:feature/split-expenses), ffigur ar gyfer pob person. Mae Side Badger yn dangos pwy sy'n ddyledus i'r prynwr a faint, ac mae pawb yn anfon eu cyfran sut bynnag y dymunant."
+cta:
+  heading: "Mynd â'r het rownd, heb yr het"
+  body: "Gwnewch grŵp, gadewch y person sy'n cael yr anrheg allan ohono a rhowch yr anrheg i mewn gyda symiau union. Mae Side Badger am ddim, heb hysbysebion a heb gyfyngiadau dyddiol. Eisiau'r daith yn gyntaf? Gweler [sut mae'n gweithio](page:how-it-works) neu [beth mae am ddim yn ei gynnwys](page:pricing)."
+sections:
+  - heading: "Pedwar ffrind, un chwaraewr recordiau, pedwar swm gwahanol"
+    body: "Mae Bea yn troi'n 30 ac eisiau chwaraewr recordiau. Priya, Omar, Lena a Sam sy'n ei brynu iddi. Mae Priya yn dod o hyd i un am £240 ac yn ei brynu ar ei cherdyn ei hun, am fod rhaid i rywun fynd yn gyntaf. Dyw'r pedwar ddim yn cyfrannu'n gyfartal. Mae Priya ac Omar yn rhoi £60 yr un, Lena £80 a Sam £40. Does neb yn esbonio eu ffigur a does neb yn gofyn. Mae Omar hefyd yn prynu cerdyn cyfarch a phapur lapio am £12. Mae'r pedwar yn arwyddo'r cerdyn, felly caiff hwnnw ei rannu'n gyfartal."
+  - heading: "Cytunwch ar y gyllideb cyn i neb glicio Prynu"
+    body: "Mae pleidlais gyllideb yn arbed y ddadl am drofwrdd £400. Yn y grŵp, dewiswch **Ychwanegu Pleidlais** a gofynnwch faint ddylai'r anrheg ei gostio. Gwnewch yr opsiynau'n symiau, fel hyd at £150, hyd at £200 a hyd at £250. Trowch **Pleidleisio anhysbys** ymlaen, sy'n cuddio pwy bleidleisiodd dros beth, fel nad oes rhaid i neb amddiffyn rhif llai yn uchel. Ni all y gosodiadau newid unwaith y bydd y bleidlais gyntaf i mewn, felly gwiriwch nhw yn gyntaf. Dyw pleidlais ddim yn cau ei hun. Pan fydd pawb wedi pleidleisio, dewiswch **Cau pleidlais** ac mae'r **Enillydd** yn ymddangos. Mae'r bleidlais yn cytuno ar y cyfanswm. Dyw hi ddim yn gosod cyfran neb."
+  - heading: "Darllen y cyfrif"
+    body: "Mae'r anrheg yn cael ei rhannu'n £60, £60, £80 a £40, sy'n adio i'r £240 ar y dderbynneb. Mae'r cerdyn a'r papur lapio yn cael eu rhannu bedair ffordd, £3 yr un. Bil Priya yw £60 + £3, sef £63, a thalodd hi £240, felly mae £177 yn ddyledus iddi. Mae bil Omar hefyd yn £63, ond talodd ef £12, felly mae arno £51. Mae ar Lena £80 + £3, sef £83, ac mae ar Sam £40 + £3, sef £43. Mae'r tri hynny'n adio i'r £177 sy'n ddyledus i Priya. Pe baech yn eu gadael fel y maent, byddai'r dyledion yn croesi'r grŵp mewn pum ffordd. Yn lle hynny, mae Side Badger yn awgrymu tri thaliad, pob un i Priya. Mae [setlo](page:feature/settle-up) yn rhoi'r manylion."
+  - heading: "Ei roi i mewn yn Side Badger"
+    body: "Mae ochr Priya yn cymryd tua phum munud."
+    items:
+      - "**Gwnewch y grŵp.** Ar y dangosfwrdd dewiswch **Creu Grŵp**. Dewiswch **Gwahodd Eraill** ac anfon y ddolen neu'r cod QR at y bobl sy'n cyfrannu, a neb arall."
+      - "**Ychwanegwch yr anrheg.** Dewiswch **Ychwanegu Cost**, disgrifiwch hi, rhowch 240 ac o dan **Pwy dalodd?** dewiswch Priya. Cadwch y pedwar o dan **Rhannu rhwng**, yna o dan **Sut i rannu** dewiswch **Union symiau** a theipiwch 60, 60, 80 a 40. Rhaid i'r symiau adio i 240. Atodwch y cadarnhad archeb os dymunwch. Dewiswch **Cadw Cost**."
+      - "**Ychwanegwch y cerdyn.** Mae Omar yn ychwanegu'r £12 ei hun, yn dewis ei hun o dan **Pwy dalodd?** ac yn gadael **Sut i rannu** ar **Cyfartal**, gyda'r pedwar person wedi'u ticio."
+      - "**Cyfrif, yna talu.** Mae pawb yn gwirio **Balansau**, sy'n dangos pwy sy'n ddyledus i bwy, ac yn anfon eu cyfran at Priya sut bynnag y dymunant. Yna cofnodwch y taliad gyda **Setlo** a **Cofnodi Setliad**. Mae setlo cyflym yn llenwi'r swm."
+  - heading: "Prynu yn gyntaf, neu gasglu yn gyntaf"
+    body: "Dyw Side Badger ddim yn dal y pot, felly mae “casglu” yn golygu cyfrif mewn gwirionedd. Mae dwy drefn yn gweithio."
+    items:
+      - "**Prynu yn gyntaf.** Mae'r prynwr yn talu, yn ychwanegu'r gost am y pris go iawn ac mae pawb yn gweld eu cyfran ar unwaith. Mae'n daclusach, ond mae'r prynwr yn cario'r gost nes bydd pobl yn talu, felly dewiswch brynwr sy'n gallu fforddio hynny."
+      - "**Casglu yn gyntaf.** Mae pobl yn anfon eu ffigur at y prynwr cyn y pryniant. Unwaith y bydd gennych y pris, rhowch yr anrheg i mewn, yna cofnodwch bob taliad gyda'r dyddiad y symudodd yr arian mewn gwirionedd. Ychwanegwch yr anrheg yn gyntaf, fel bod gan bob taliad falans i'w osod yn ei erbyn."
+      - "**Mae'r pris yn newid.** Cludiant, cod disgownt, codiad pris munud olaf. Golygwch yr anrheg a newidiwch y symiau union fel eu bod yn dal i adio. Cedwir y fersiwn gynharach, ond dywedwch wrth y grŵp yn gyntaf, oherwydd bod eu balansau'n newid."
+  - heading: "Cadwch Bea allan ohono"
+    body: "Dim ond aelodau grŵp all ei weld, felly all Bea ddim gweld grŵp nad yw hi ynddo. Gwahoddwch y bobl sy'n cyfrannu a neb arall. Mae dolen yn gweithio nes iddi ddod i ben, a gallwch ddewis unrhyw beth o 15 munud i 5 diwrnod, felly dewiswch un fer a'i hanfon lle na fydd Bea yn ei gweld. Mae'r ddolen yn dangos rhagolwg o'r grŵp i bwy bynnag sy'n ei hagor, felly rhowch enw diflas i'r grŵp, fel Pot dydd Sadwrn, a chadwch enw Bea allan o labeli'r costau ac opsiynau'r bleidlais hefyd."
+  - heading: "Beth nad yw Side Badger yn ei wneud yma"
+    items:
+      - "Dyw e ddim yn dal nac yn casglu'r arian. Mae cyfraniadau'n mynd at y prynwr trwy drosglwyddiad banc, arian parod neu beth bynnag rydych yn ei ddefnyddio, ac yna mae rhywun yn eu cofnodi."
+      - "Dyw e ddim yn anfon nodiadau atgoffa talu. Mae procio pwy bynnag sydd heb dalu yn dal i fod yn waith i berson."
+      - "Dyw e ddim yn gweithio allan cyfran neb. Mae pleidlais yn cytuno ar y gyllideb ac nid oes dewis “rhannu'r hyn sy'n weddill”, felly rydych yn teipio pob swm."
+      - "Dim ond un talwr sydd i bob cost. Os prynodd dau berson wahanol rannau o'r anrheg, rhowch ddwy gost i mewn."
+      - "Mae angen cyfrif am ddim a lle yn y grŵp ar bawb yn y rhaniad."
+exampleAfter: 2
+example:
+  heading: "Chwaraewr recordiau Bea, a'r cerdyn"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: "yr anrheg"
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: "cerdyn a phapur lapio"
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: "Cwestiynau"
+  items:
+    - q: "Beth os byddwn yn casglu mwy nag y mae'r anrheg yn ei gostio?"
+      a: "Rhaid i'r symiau union adio i'r pris, felly tociwch y cyfrannau nes eu bod yn gwneud hynny. Neu rhowch y gweddill ar rywbeth go iawn, fel blodau, a'i roi i mewn fel ail gost, fel y cerdyn a'r papur lapio yn yr enghraifft."
+    - q: "A all rhywun gyfrannu heb ymuno â'r grŵp?"
+      a: "Nid os ydych am eu cynnwys yn y cyfrif. Mae angen cyfrif am ddim a lle yn y grŵp ar bawb yn y rhaniad. I rywun sydd ag arian parod yn unig, gallai Priya ei gymryd a rhoi'r anrheg i mewn am yr hyn sy'n dal yn ddyledus gan y grŵp. Er enghraifft, pe bai Sam yn rhoi £40 o arian parod iddi, byddai hi'n rhoi £200 i mewn ac yn ei rannu'n 60, 60 ac 80 rhyngddi hi ei hun, Omar a Lena."
+    - q: "A all y bleidlais benderfynu faint mae pob person yn ei roi?"
+      a: "Na all. Mae pleidlais yn cytuno ar un ffigur i'r grŵp cyfan, fel y gyllideb. Eich lle chi yw cytuno ar gyfran pob person rhyngoch, yna ei theipio i mewn i'r gost fel **Union symiau**."

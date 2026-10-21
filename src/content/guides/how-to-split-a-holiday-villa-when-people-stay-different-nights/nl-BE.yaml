@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Verdeel een villa naar het aantal nachten | Side Badger"
+  description: "Dev kwam maar drie nachten, dus waarom zes betalen? Verdeel een vakantievilla naar de nachten die mensen echt bleven, met de sommen voor je uitgewerkt."
+h1: "Hoe verdeel je een vakantievilla als mensen verschillende nachten blijven"
+navLabel: "Villa verdelen naar nachten"
+lead: "Reken de prijs van het verblijf om naar een prijs per persoon per nacht, vermenigvuldig met het aantal nachten van elke persoon en voer de villa in als **één uitgave met exacte bedragen**. Side Badger houdt de rekening bij en stelt een korte lijst betalingen voor wanneer het tijd is om af te rekenen."
+cta:
+  heading: "Geef de villa één nette uitgave"
+  body: "Maak een groep, nodig iedereen uit met een link of QR-code en voer de villa in met exacte bedragen. Side Badger houdt de lopende rekening bij terwijl jullie van de vakantie genieten."
+sections:
+  - heading: "Zes nachten, vier mensen, één kredietkaart"
+    body: "Een [groepsreis](page:use-case/group-trips) begint meestal met de kaart van één persoon. Hier is dat die van Ana. Zij boekt een villa voor zes nachten, € 2.100, want iemand moet het voorschieten. Ana, Ben en Chloe blijven alle zes nachten. Dev kan pas voor de laatste drie aansluiten en komt met de trein. Ben huurt een auto waar Dev nooit in zit. Dev doet de grote boodschappen. De villa in vier delen verdelen is de voor de hand liggende keuze. Dan betaalt Dev voor drie nachten die hij thuis doorbracht, en dat soort dingen komt met Kerstmis weer boven. Verdelen naar nachten voorkomt die discussie, en de rekensom kost een minuutje."
+  - heading: "Reken één persoonsnacht uit"
+    body: "Een persoonsnacht is één persoon die één nacht blijft. De villa kost wat ze kost, dus deel de prijs over alle persoonsnachten en geef iedereen de nachten die hij of zij gebruikte."
+    items:
+      - "**Tel de persoonsnachten.** Ana, Ben en Chloe blijven elk zes nachten en Dev drie: 6 + 6 + 6 + 3 = 21."
+      - "**Reken er één uit.** € 2.100 ÷ 21 = € 100 per persoonsnacht."
+      - "**Vermenigvuldig met de nachten van elke persoon.** Ana, Ben en Chloe betalen elk 6 × € 100 = € 600. Dev betaalt 3 × € 100 = € 300."
+      - "**Controleer het totaal.** € 600 + € 600 + € 600 + € 300 = € 2.100. Als jullie aandelen samen niet de prijs zijn, ontbreekt er een nacht of is er een dubbel geteld."
+  - heading: "Voer het in bij Side Badger"
+    body: "Maak een groep, nodig de andere drie uit met een link of QR-code en voeg dan de kosten toe. Eerst de villa."
+    items:
+      - "Kies **Uitgave toevoegen**. Beschrijf de uitgave, voer 2.100 in en zet **Wie heeft betaald?** op Ana."
+      - "Zorg er bij **Verdelen tussen** voor dat alle vier de personen erbij staan."
+      - "Kies bij **Hoe te verdelen** voor **Exacte bedragen**. Typ 600 voor Ana, Ben en Chloe en 300 voor Dev. De bedragen moeten samen het totaal zijn."
+      - "Kies **Uitgave opslaan**."
+      - "Voeg de autohuur op dezelfde manier toe. Ben betaalde, de verdeling is **Gelijk** en Dev wordt weggelaten, omdat hij met de trein kwam. [Uitgaven verdelen](page:feature/split-expenses) behandelt de andere manieren om een kost te verdelen."
+      - "Voeg de boodschappen toe. Dev betaalde, de verdeling is **Gelijk** en alle vier doen mee."
+  - heading: "Lees het resultaat en reken dan af"
+    body: "Het totaal voor elke persoon is het aandeel in de villa plus het aandeel in de auto en de boodschappen. Ana, Ben en Chloe komen elk op € 725, wat € 600 + € 80 + € 45 is. Dev komt op € 345, wat € 300 + € 45 is. Trek af wat iedereen betaalde en de saldi rollen eruit. Ana betaalde € 2.100, dus ze heeft € 1.375 tegoed. Ben betaalde € 240 en is € 485 schuldig. Dev betaalde € 180 en is € 165 schuldig. Chloe betaalde niets en is € 725 schuldig. Zonder ingreep zouden die schulden in zes richtingen door de groep lopen. Side Badger stelt in plaats daarvan drie betalingen voor, allemaal aan Ana. Betaal haar zoals je wilt, kies dan **Vereffenen** en gebruik **Vereffening registreren** voor elke betaling, zodat de saldi bijgewerkt worden. De knoppen voor snel afrekenen vullen het bedrag in. Meer daarover bij [afrekenen](page:feature/settle-up)."
+  - heading: "Als de villa geen mooie vaste prijs heeft"
+    items:
+      - "**De kamers verschillen.** Als de suite meer waard is dan het kleinste kamertje, spreek dan eerst af wat elke kamer kost en maak de persoonsnachtsommen dan kamer per kamer. Voer de villa in als één uitgave met ieders totaal, of als één uitgave per kamer. In beide gevallen moeten de exacte bedragen van een uitgave samen het totaal van die uitgave zijn."
+      - "**Een voorschot dat maanden eerder betaald werd.** Wie het betaalde, krijgt een eigen uitgave, gedateerd op de dag van betaling. Verdeel het naar nachten in dezelfde verhoudingen als het resterende bedrag."
+      - "**De boeking is in een andere valuta.** Voer de villa in met de valuta waarin je betaalde. Rekent de groep onderweg om, gebruik dan een actuele wisselkoers of typ de koers die je echt kreeg. Het oorspronkelijke bedrag blijft bij de uitgave staan. [Meerdere valuta’s](page:feature/multiple-currencies) legt de details uit."
+      - "**Halve nachten.** Iemand komt aan om middernacht, iemand vertrekt voor het ontbijt. Spreek één regel af om nachten te tellen en pas ze op iedereen toe."
+  - heading: "Wat Side Badger hier niet doet"
+    items:
+      - "Het telt de nachten niet voor je. Er is geen verdeling per nacht of per aandeel, dus je rekent elk bedrag uit zoals hierboven en voert **exacte bedragen** in."
+      - "Het verplaatst geen geld. Betaal elkaar zoals je wilt en registreer de betaling dan."
+      - "Er is één betaler per uitgave. Als twee mensen de villa betaalden, voer je twee uitgaven in."
+      - "Er is geen gasttoegang. Iedereen in de groep, Dev inbegrepen, heeft een gratis account nodig."
+exampleAfter: 2
+example:
+  heading: "De villa, de auto en de boodschappen"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "zes nachten in de villa"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "de autohuur"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "boodschappen"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Vragen over de villa"
+  items:
+    - q: "Wat als iemand annuleert?"
+      a: "Haal hun nachten eruit, maak de sommen opnieuw en bewerk de villa-uitgave zodat de exacte bedragen weer samen de prijs zijn. De eerdere versie blijft bewaard en de wijziging verschijnt in de groepsactiviteit, dus niemand past stilletjes een bedrag aan. Wie mag bewerken, hangt af van de machtigingen van de groep."
+    - q: "Moet de persoon die geboekt heeft minder betalen?"
+      a: "Dat beslist de groep. Boeken is een karwei en groepen verschillen van mening over of dat een korting verdient. Wat jullie ook afspreken, verwerk het in de exacte bedragen en schrijf het in een notitie bij de uitgave, of in een opmerking ernaast, zodat niemand de afspraak hoeft te onthouden."
+    - q: "Kunnen we de schoonmaakkosten anders verdelen?"
+      a: "Ja. Voer de kost in als aparte uitgave en geef ze een eigen verdeling. Gelijk verdelen past bij een vast bedrag voor het hele huis. Exacte bedragen passen bij een groep die wil dat de kost ook de nachten volgt."

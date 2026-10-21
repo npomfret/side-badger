@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Kira bölüşme hesaplayıcı: oda büyüklüğü veya gelir | Side Badger"
+  description: "Büyük oda, büyük pay mı? Her ev arkadaşının ödeyeceğini oda büyüklüğüne ya da gelire göre hesaplayın. Tarayıcınızda çalışır: hiçbir şey kaydedilmez ya da gönderilmez."
+h1: "Kira bölüşme hesaplayıcı"
+navLabel: "Kira bölüşme hesaplayıcı"
+lead: "Büyük yatak odası, büyük pay mı? Kirayı yazın ve herkesin ne ödeyeceğini oda büyüklüğüne ya da gelire göre, kuruşu kuruşuna görün. Tarayıcınızda çalışır, hiçbir şey kaydetmez ve para taşımaz. Ev, hesabın tutulmasını istiyorsa Side Badger'da [harcamaları bölüşün](page:feature/split-expenses) ve kirayı her ay kopyalayın."
+cta:
+  heading: "Yüzdeleri bir kez belirleyin. Sonsuza dek kopyalayın."
+  body: "Bu hesaplayıcı sekmeyi kapatınca her şeyi unutur; kesinlikle internet faturasını ödediğini söyleyen ev arkadaşı gibi. Bir Side Badger grubu kirayı, faturaları ve kimin neyi ödediğini saklar. Ücretsizdir, reklam yok, günlük sınır yok."
+sections:
+  - heading: "Kirayı paylaşmanın iki yolu"
+    items:
+      - "**Oda büyüklüğüne göre.** Kiranın bir kısmı herkesin kullandığı mutfağın, banyonun ve salonun karşılığıdır. O payı siz seçersiniz (başlangıç için %40) ve eşit bölünür. Gerisi yatak odası alanına göre dağılır; büyük oda daha çok öder, kiler gibi küçük oda hak ettiği indirimi alır."
+      - "**Gelire göre.** Herkes kiranın, toplam gelirden kendi kazandığı dilim kadarını öder. Ortak faturalar eklerseniz aynı paylarla bölünür."
+  - heading: "Hesaplar nasıl çalışır"
+    body: "Herkes önce tam bir pay, sonra tam sayı bir yüzde alır; çünkü tam sayıları yazmak da, tartışmak da daha kolaydır. Yuvarlama en büyük kalan yöntemidir: herkes payının altındaki tam sayıyı alır, artan puanlar en çok kaybedene gider. Yüzdelerin toplamı hep 100'dür. Aşağıdaki dairede ortak %40'lık kısım kişi başı %13,33'tür. Priya'nın odası dairenin 38 m²'sinin 16'sı, yani %60 × 16/38 = %25,26; üstüne %13,33 eklenince %38,6 olur ve %39'a yuvarlanır. Tom ve Aisha %32 ve %29 çıkar; 39 + 32 + 29 = 100. Her tutar, kiranın o yüzdesidir: 1.950 £'ın %39'u 760,50 £'dır."
+  - heading: "Sonra Side Badger'a girin"
+    body: "Tüm hikâye için, mezura dahil, [oda büyüklüğüne göre kira nasıl bölüşülür](page:guide/how-to-split-rent-by-room-size) rehberine ya da çiftler için [daha çok kazanan bir partner](page:guide/how-to-split-bills-with-a-partner-who-earns-more) rehberine bakın."
+    items:
+      - "**Kirayı ekleyin.** Grubunuzda **Harcama Ekle**'yi seçin, ev sahibine kimin ödediğini **Kim ödedi?** altında belirleyin ve **Şunlar arasında bölüştür** altında herkesi bırakın."
+      - "**Yüzde'yi seçin.** **Nasıl bölüştürülsün** altında **Yüzde**'yi seçin ve tam sayı yüzdeleri yazın. Toplamları 100 etmezse form sizi uyarır."
+      - "**Gelecek ay kopyalayın.** Geçen ayın kirasını açın ve **Harcamayı kopyala**'yı seçin. Bölüşüm de onunla gelir."
+  - heading: "Hesaplayıcının yapmadıkları"
+    items:
+      - "**Odalarınızı ölçmez.** Taban alanı yalnızca bir başlangıç noktasıdır. Banyolu bir oda, aynı alandaki banyosuz odadan daha değerlidir; bir yatağa ve umutlu bir sandalyeye zor sığan kiler gibi bir oda ise daha az."
+      - "**Neyin gelir sayılacağına karar vermez.** Net mi brüt mü, maaş mı yan iş mi: grup karar verir. Herkes için aynı dönemi kullanın."
+      - "**Hiçbir şey kaydetmez.** Sekmeyi kapatınca rakamlar gider. Saklamak için bağlantıyı kopyalayın. Bağlantı rakamlarınızı # işaretinden sonra taşır; tarayıcılar bu kısmı hiçbir sunucuya göndermez, ama bağlantıya sahip herkes onları okuyabilir."
+      - "**Para taşımaz.** Ev sahibine istediğiniz yolla ödersiniz."
+      - "**Para birimlerini karıştırmaz, sınırları da aşmaz.** Tek bir para birimi seçin. Uygulamadaki gibi 2 ile 10 kişi ve en çok 999.999,99 kira kabul eder."
+exampleAfter: 2
+example:
+  heading: "Bir daire, bir ay"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "kira"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "enerji faturası"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "internet"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Hangisi daha adil, oda büyüklüğü mü gelir mi?"
+      a: "Her zaman biri değil. Oda büyüklüğü, uyudukları alan için ödeyen ev arkadaşlarına uyar. Gelir, çiftlere ve maaşları çok farklı arkadaşlara uyar. Kira gününden önce kararlaştırın, sonra değil."
+    - q: "Faturalar da aynı şekilde mi bölünmeli?"
+      a: "Ev arkadaşları için genellikle hayır. Enerjiyi ve interneti herkes kullanır, bu yüzden örnekteki gibi eşit bölmek daha basittir. Gelire göre seçince hesaplayıcı faturalara kiranın paylarını verir."
+    - q: "Fit kare kullanabilir miyim?"
+      a: "Evet. ft²'yi seçin ve alanlarınızı fit kare olarak yazın. Birim yalnızca bir etikettir; herkes aynı birimi kullandığı sürece paylar aynı çıkar."
+    - q: "Hesaplayıcı ücretsiz mi?"
+      a: "Evet. Ücretsiz. Reklam yok. Günlük sınır yok. Hesap açmanız da gerekmez."

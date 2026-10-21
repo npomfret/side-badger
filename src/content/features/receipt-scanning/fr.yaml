@@ -1,0 +1,81 @@
+translatedFrom: "42f5cf35"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.read-by-googles-ai
+  - receipt-attachments.keep-the-receipt
+meta:
+  title: "Scannez un reçu pour ajouter une dépense | Side Badger"
+  description: "Laissez le blaireau lire le reçu. Il remplit le total, la date et le lieu à vérifier, sans crédits de scan. Le service d'IA de Google lit l'image."
+h1: "Scannez un reçu, vérifiez les détails, partagez"
+navLabel: "Scan de reçus"
+lead: "Laissez le blaireau lire le reçu, et vérifiez sa copie. Ajoutez une photo à une nouvelle dépense et Side Badger remplit le total, la date et le lieu pour que vous les vérifiiez. Ensuite, vous [la partagez](page:feature/split-expenses) comme n'importe quelle autre dépense. Le scan est gratuit, sans crédits de scan. Il remplit une seule dépense et ne divise pas l'addition article par article. Les images de reçus sont lues par le service d'IA de Google."
+cta:
+  heading: "Photographiez. Vérifiez. Partagez."
+  body: "Créez un compte gratuit, lancez un groupe et ajoutez une dépense avec une photo de reçu. Voyez ce qu'il remplit, changez ce qui cloche, et enregistrez quand le résultat vous convient."
+problem:
+  heading: "Personne n'a envie de saisir un reçu dans une file de taxis"
+  body: "Les voyages et les grandes soirées viennent avec du papier. Le dîner, le taxi, la tournée qui s'est transformée en six. Les saisir une à une sur un téléphone, les pouces gelés et une file derrière soi, c'est comme ça qu'on oublie des dépenses. Alors Side Badger lit le reçu à votre place. Il fait le brouillon, et vous faites la vérification. Cela convient aux [voyages en groupe](page:use-case/group-trips) et aux [événements et fêtes](page:use-case/events-and-celebrations), où les reçus s'accumulent plus vite que personne n'a envie de s'en occuper."
+workflow:
+  heading: "De la photo à la dépense en trois étapes"
+  steps:
+    - title: "Ajoutez un reçu à une nouvelle dépense"
+      body: "Commencez une nouvelle dépense et touchez **Scanner le reçu**, ou utilisez l'action rapide **Scanner le reçu** sur votre tableau de bord. Prenez une photo ou choisissez-en une que vous avez déjà. **Ajouter un reçu ou une pièce jointe** dans le formulaire marche aussi."
+    - title: "Laissez-le lire le reçu"
+      body: "Le formulaire affiche **Analyse du reçu...** pendant que l'IA de Side Badger lit l'image. Puis il remplit ce qu'elle a trouvé, comme la description, le total, la devise, la date, l'heure et le lieu. Tout ce que vous aviez déjà saisi est laissé tel quel."
+      shot: S09
+      shotAlt: "Le formulaire de nouvelle dépense affichant « Analyse du reçu... », puis le même formulaire avec les détails remplis"
+    - title: "Vérifiez, puis partagez"
+      body: "Comparez le formulaire avec le papier. Corrigez ce qui cloche, dites qui a payé et qui partage le coût, choisissez comment le partager et enregistrez. La dépense n'existe pas tant que vous ne l'avez pas fait. [Partager les dépenses](page:feature/split-expenses) explique le partage."
+options:
+  heading: Options
+  items: []
+sections:
+  - heading: "Ce qu'il remplit"
+    body: "Ajoutez une image de reçu à une nouvelle dépense et ces champs peuvent se remplir. Qui a payé, qui partage le coût et comment le partager restent à votre charge."
+    items:
+      - "Une **description** de la dépense."
+      - "Le **total**."
+      - "La **devise**, si votre groupe l'autorise."
+      - "La **date** et l'**heure**."
+      - "Le **lieu**."
+      - "Une copie texte du reçu dans les **notes**, pour quand le papier pâlit ou passe à la machine."
+  - heading: "Ce que vous vérifiez encore"
+    body: "Tout. Considérez ce qu'il remplit comme un brouillon. Comparez le total avec le papier, puis la devise, la date et le lieu. Les photos floues et le papier froissé peuvent tromper n'importe quel lecteur, et nous ne promettons pas qu'il lit chaque reçu correctement, alors regardez avant d'enregistrer. Si quelque chose cloche, retapez par-dessus. Si le reçu est en yens et que le groupe règle en livres, [plusieurs devises](page:feature/multiple-currencies) explique la suite."
+  - heading: "Gardez le reçu avec la dépense"
+    body: "Scanné ou non, un reçu peut rester avec la dépense. Joignez des photos ou des PDF, jusqu'à trois par dépense et jusqu'à 10 Mo chacun. Les membres du groupe les voient sur la dépense. Les images s'affichent en miniatures qui s'ouvrent dans une visionneuse, et les PDF s'ouvrent comme des liens. La photo que vous scannez est jointe aussi, sauf si vous la retirez avant d'enregistrer. Quand quelqu'un demande ce que ce dîner a vraiment coûté, la preuve est juste là."
+  - heading: "Où va votre reçu"
+    body: "Les images de reçus sont lues par le service d'IA de Google. Pour remplir le formulaire, l'image est lue par Google Vertex AI (Gemini) dans la multirégion américaine de Google. Ajoutez une image à une nouvelle dépense et elle est lue. Un PDF, ou une photo ajoutée à une dépense qui existe déjà, est stocké sans être lu. Les reçus joints sont visibles par les membres du groupe, donc si un reçu montre quelque chose que vous préférez ne pas partager, sautez la photo et saisissez cette dépense à la main."
+limits:
+  heading: Limites
+  items:
+    - "Images uniquement. JPEG, PNG et WebP, et HEIC une fois converti. Les PDF peuvent être joints à une dépense mais ne sont pas lus."
+    - "Le scan est réservé aux nouvelles dépenses. Sur une dépense existante, vous pouvez joindre des reçus, mais rien n'est lu."
+    - "Il ne remplit que les champs que vous n'avez pas touchés, et la devise seulement si votre groupe l'autorise."
+    - "Il ne partage pas par article et n'attribue pas de lignes à des personnes. Il remplit une seule dépense, que vous partagez comme d'habitude."
+    - "Nous ne promettons pas que ce qu'il remplit est juste, ni que le scan marchera à chaque fois. Vérifiez avant d'enregistrer, et ajoutez la dépense à la main si le scan échoue ou n'est pas disponible."
+    - "Une dépense accepte jusqu'à trois pièces jointes, de 10 Mo chacune au maximum, en JPEG, PNG, WebP, HEIC ou PDF."
+    - "Les images de reçus sont lues par Google Vertex AI (Gemini) dans la multirégion américaine de Google, et les reçus joints sont visibles par les membres du groupe."
+useCasesHeading: "Là où les reçus s'accumulent"
+faq:
+  heading: Questions
+  items:
+    - q: "Peut-il partager un reçu article par article ?"
+      a: "Non. Il remplit la dépense, total compris, et vous la partagez à parts égales, par montants exacts ou par pourcentage. Pour une addition où chacun a commandé autre chose, saisissez ce que chaque personne doit en montants exacts. [Partager les dépenses](page:feature/split-expenses) donne les détails."
+    - q: "Peut-il lire un PDF ?"
+      a: "Non. Vous pouvez joindre un PDF à une dépense pour qu'il voyage avec les chiffres, mais seules les images sont lues."
+    - q: "Y a-t-il une limite de scans ?"
+      a: "Il n'y a pas de crédits de scan à épuiser, et le scan est gratuit. Les fichiers, eux, ont des limites : jusqu'à trois pièces jointes par dépense et 10 Mo chacune. [Ce que couvre la gratuité](page:pricing) donne le reste."
+    - q: "Qui peut voir mon reçu ?"
+      a: "Les membres du groupe peuvent voir les reçus joints à une dépense. Les images de reçus sont aussi lues par le service d'IA de Google, c'est ainsi que le formulaire se remplit."
+    - q: "Puis-je scanner un reçu pour une dépense déjà ajoutée ?"
+      a: "Non, le scan est réservé aux nouvelles dépenses. Vous pouvez quand même joindre un reçu à une dépense existante, et il est stocké sans être lu."
+    - q: "Et s'il remplit quelque chose de faux ?"
+      a: "Retapez par-dessus. Chaque champ reste modifiable jusqu'à l'enregistrement, et vous devriez tous les vérifier de toute façon. Si le scan échoue ou n'est pas disponible, ajoutez la dépense à la main comme d'habitude."
+identicalApproved:
+  - options.heading
+  - faq.heading

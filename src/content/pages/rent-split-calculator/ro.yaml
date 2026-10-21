@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Calculator de împărțire a chiriei: cameră sau venit | Side Badger"
+  description: "Cameră mai mare, parte mai mare? Află cât plătește fiecare coleg, după mărimea camerei sau după venit. Rulează în browser: nimic nu se salvează sau trimite."
+h1: "Calculator de împărțire a chiriei"
+navLabel: "Calculator împărțire chirie"
+lead: "Dormitor mai mare, parte mai mare? Scrie chiria și vezi ce plătește fiecare, după mărimea camerei sau după venit, până la ultimul ban. Rulează în browserul tău, nu salvează nimic și nu mută bani. Când casa vrea ca socoteala să rămână, [împarte cheltuielile](page:feature/split-expenses) în Side Badger și copiază chiria în fiecare lună."
+cta:
+  heading: "Stabilește procentele o singură dată. Copiază-le la nesfârșit."
+  body: "Acest calculator uită totul când închizi fila, cam ca acel coleg de casă care jură că a plătit internetul. Un grup Side Badger păstrează chiria, facturile și cine a plătit ce. E gratuit, fără reclame și fără limite zilnice."
+sections:
+  - heading: "Două moduri de a împărți chiria"
+    items:
+      - "**După mărimea camerei.** O parte din chirie plătește bucătăria, baia și livingul, pe care le folosește toată lumea. Tu alegi acea parte (40% la început) și se împarte egal. Restul merge după suprafața dormitorului, așa că încăperea mare plătește mai mult, iar debaraua primește reducerea pe care și-a meritat-o."
+      - "**După venit.** Fiecare plătește din chirie aceeași parte pe care o are din venitul total. Adaugă facturile comune și ele urmează aceleași părți."
+  - heading: "Cum se fac calculele"
+    body: "Fiecare persoană primește mai întâi o parte exactă, apoi un procent întreg, pentru că numerele întregi se scriu mai ușor și se contestă mai ușor. Rotunjirea folosește metoda celui mai mare rest: fiecare păstrează numărul întreg de sub partea lui exactă, iar punctele rămase merg la cei care au pierdut cel mai mult. Procentele dau întotdeauna 100 împreună. În apartamentul de mai jos, cele 40% comune înseamnă 13,33% pentru fiecare. Camera lui Priya are 16 din cei 38 m² ai apartamentului, deci 60% × 16/38 fac 25,26%, la care se adaugă 13,33%, ceea ce dă 38,6%, rotunjit la 39%. Tom și Aisha ies la 32% și 29%, iar 39 + 32 + 29 fac 100. Fiecare sumă este acel procent din chirie: 39% din 1.950 £ este 760,50 £."
+  - heading: "Apoi introdu-le în Side Badger"
+    body: "Pentru toată povestea, cu ruleta cu tot, vezi [cum împarți chiria după mărimea camerei](page:guide/how-to-split-rent-by-room-size) sau [un partener care câștigă mai mult](page:guide/how-to-split-bills-with-a-partner-who-earns-more) pentru cupluri."
+    items:
+      - "**Adaugă chiria.** În grupul tău, alege **Adaugă Cheltuială**, alege cine l-a plătit pe proprietar la **Cine a plătit?** și păstrează-i pe toți la **Împarte între**."
+      - "**Alege Procentaj.** La **Cum se împarte**, alege **Procentaj** și scrie procentele întregi. Formularul te avertizează dacă nu dau 100 împreună."
+      - "**Copiază-o luna viitoare.** Deschide chiria din luna trecută și alege **Copiază cheltuiala**. Împărțirea vine odată cu ea."
+  - heading: "Ce nu face calculatorul"
+    items:
+      - "**Nu îți măsoară camerele.** Suprafața este un punct de plecare. O cameră cu baie proprie valorează mai mult decât aceeași suprafață fără una, iar o debara în care încape un pat și un scaun plin de speranță valorează mai puțin."
+      - "**Nu hotărăște ce înseamnă venit.** Net sau brut, salariu sau muncă pe lângă: hotărăște grupul. Folosește aceeași perioadă pentru toți."
+      - "**Nu salvează nimic.** Închide fila și cifrele dispar. Ca să le păstrezi, copiază linkul. Acesta conține cifrele tale după #, partea pe care browserele nu o trimit niciodată unui server, iar oricine îl are le poate citi."
+      - "**Nu mută bani.** Îl plătești pe proprietar cum preferi."
+      - "**Nu amestecă valutele și nu depășește limitele.** Alege o singură valută. Acceptă de la 2 până la 10 persoane și o chirie de până la 999.999,99, ca în aplicație."
+exampleAfter: 2
+example:
+  heading: "Un apartament, o lună"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "chiria"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "factura la energie"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "internetul"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Întrebări"
+  items:
+    - q: "Ce e mai corect, mărimea camerei sau venitul?"
+      a: "Niciuna nu e mereu mai corectă. Mărimea camerei se potrivește colegilor de apartament care plătesc pentru spațiul în care dorm. Venitul se potrivește cuplurilor și prietenilor cu venituri foarte diferite. Puneți-vă de acord înainte de prima zi de chirie, nu după."
+    - q: "Ar trebui facturile împărțite la fel?"
+      a: "La colegii de apartament, de obicei nu. Toți folosesc energia și internetul, deci egal e mai simplu, ca în exemplu. La împărțirea după venit, calculatorul dă facturilor aceleași părți ca chiriei."
+    - q: "Pot folosi picioare pătrate?"
+      a: "Da. Alege ft² și scrie suprafețele în picioare pătrate. Unitatea e doar o etichetă, iar părțile ies la fel atâta timp cât toți folosesc aceeași unitate."
+    - q: "Este calculatorul gratuit?"
+      a: "Da. Gratuit. Fără reclame. Fără limite zilnice. Nici cont nu îți trebuie."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name

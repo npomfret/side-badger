@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Roinn teach saoire de réir oícheanta an duine | Side Badger"
+  description: "Níor fhan Dev ach trí oíche, mar sin cén fáth a n-íocfadh sé as sé? Roinn teach saoire de réir na n-oícheanta a d'fhan daoine, agus na suimeanna déanta duit."
+h1: "Conas teach saoire a roinnt nuair a fhanann daoine oícheanta éagsúla"
+navLabel: "Teach saoire de réir oícheanta"
+lead: "Oibrigh amach praghas na fanachta in aghaidh an duine in aghaidh na hoíche, méadaigh é faoi líon na n-oícheanta a fhanann gach duine, agus cuir isteach an teach saoire mar **chostas amháin le méideanna cruinne**. Coinníonn Side Badger an cuntas agus molann sé liosta gearr íocaíochtaí nuair a thagann an t-am le socrú."
+cta:
+  heading: "Tabhair costas néata amháin don teach saoire"
+  body: "Déan grúpa, tabhair cuireadh do gach duine le nasc nó cód QR agus cuir an teach saoire isteach le méideanna cruinne. Coinníonn Side Badger an cuntas reatha agus tú ag baint sult as an saoire."
+sections:
+  - heading: "Sé oíche, ceathrar, cárta creidmheasa amháin"
+    body: "Is minic a thosaíonn [turas grúpa](page:use-case/group-trips) le cárta duine amháin. Anseo is cárta Ana é. Cuireann sí teach saoire in áirithe ar feadh sé oíche ar €2,100, mar caithfidh duine éigin dul ar dtús. Fanann Ana, Ben agus Chloe na sé oíche ar fad. Ní féidir le Dev teacht ach ar feadh trí oíche, ag an deireadh, agus tagann sé ar an traein. Faigheann Ben carr ar cíos, agus ní shuíonn Dev ann riamh. Déanann Dev an tsiopadóireacht mhór earraí grósaera. Is é an rogha is soiléire an teach saoire a roinnt go cothrom idir an ceathrar. Ach ansin bheadh Dev ag íoc as trí oíche a chaith sé sa bhaile, agus tagann rudaí mar sin aníos arís um Nollaig. Seachnaíonn roinnt de réir oícheanta an argóint, agus tógann an uimhríocht nóiméad."
+  - heading: "Cuir praghas ar oíche-duine amháin"
+    body: "Is é atá in “oíche-duine” ná duine amháin ag fanacht oíche amháin. Cosnaíonn an teach saoire an méid a chosnaíonn sé, mar sin roinn an praghas ar na hoícheanta-duine ar fad, ansin tabhair do gach duine na cinn a d'úsáid siad."
+    items:
+      - "**Comhair na hoícheanta-duine.** Fanann Ana, Ben agus Chloe sé oíche an duine agus fanann Dev trí oíche: 6 + 6 + 6 + 3 = 21."
+      - "**Cuir praghas ar cheann amháin.** €2,100 ÷ 21 = €100 as gach oíche-duine."
+      - "**Méadaigh faoi líon oícheanta gach duine.** Íocann Ana, Ben agus Chloe 6 × €100 = €600 an duine. Íocann Dev 3 × €100 = €300."
+      - "**Seiceáil an t-iomlán.** €600 + €600 + €600 + €300 = €2,100. Mura ndéanann na sciar an praghas le chéile, tá oíche ar iarraidh nó comhairthe faoi dhó."
+  - heading: "Cuir isteach i Side Badger é"
+    body: "Déan grúpa, tabhair cuireadh don triúr eile le nasc nó cód QR, ansin cuir na costais leis. An teach saoire ar dtús."
+    items:
+      - "Roghnaigh **Cuir Costas Leis**. Déan cur síos air, cuir isteach 2,100 agus socraigh **Cé a d'íoc?** ar Ana."
+      - "Faoi **Roinn idir**, cinntigh go bhfuil an ceathrar acu istigh."
+      - "Faoi **Conas a roinntear**, roghnaigh **Méideanna cruinne**. Clóscríobh 600 d'Ana, Ben agus Chloe agus 300 do Dev. Caithfidh na méideanna an t-iomlán a bhaint amach le chéile."
+      - "Roghnaigh **Sábháil an Costas**."
+      - "Cuir an cíos cairr leis ar an mbealach céanna. D'íoc Ben, is **Cothrom** an roinnt, agus fágtar Dev amach, mar tháinig sé ar an traein. Clúdaíonn [roinn costais](page:feature/split-expenses) na bealaí eile chun costas a roinnt."
+      - "Cuir na hearraí grósaera leis. D'íoc Dev, is **Cothrom** an roinnt, agus tá an ceathrar acu istigh."
+  - heading: "Léigh an toradh, ansin socraigh suas"
+    body: "Is é bille gach duine a sciar den teach saoire móide a sciar den charr agus den siopadóireacht. Tagann €725 an duine ar Ana, Ben agus Chloe, is é sin €600 + €80 + €45. Tagann €345 ar Dev, is é sin €300 + €45. Bain an méid a d'íoc gach duine agus tagann na hiarmhéideanna amach. D'íoc Ana €2,100, mar sin tá €1,375 dlite di. D'íoc Ben €240 agus tá €485 dlite aige. D'íoc Dev €180 agus tá €165 dlite aige. Níor íoc Chloe aon rud agus tá €725 dlite aici. Dá bhfágfaí na fiacha sin mar atá, rithfeadh siad sé bhealach timpeall an ghrúpa. Molann Side Badger trí íocaíocht ina n-ionad, iad uile chuig Ana. Íoc léi ar an gcaoi is fearr leat, ansin roghnaigh **Socraigh** agus úsáid **Taifead Socrú** do gach íocaíocht, ionas go mbeidh na hiarmhéideanna cothrom le dáta. Líonann na cnaipí Socrú gasta an méid isteach. Tá tuilleadh faoi [socrú suas](page:feature/settle-up)."
+  - heading: "Nuair nach bhfuil praghas néata amháin ar an teach saoire"
+    items:
+      - "**Tá na seomraí éagsúil.** Má tá níos mó luach sa seomra is fearr ná sa seomra beag, aontaigh cad a chosnaíonn gach seomra ar dtús, ansin déan suimeanna na n-oícheanta-duine seomra amháin ag an am. Cuir an teach saoire isteach mar chostas amháin le hiomlán gach duine, nó mar chostas amháin in aghaidh an tseomra. Pé scéal é, caithfidh na méideanna cruinne ar chostas a iomlán a bhaint amach."
+      - "**Éarlais a íocadh míonna roimhe sin.** Faigheann an té a d'íoc í costas dá cuid féin, dátaithe an lá a d'íoc sé. Roinn de réir oícheanta é sna comhréireanna céanna leis an iarmhéid."
+      - "**Tá an áirithint in airgeadra eile.** Cuir an teach saoire isteach san airgeadra inar íoc tú. Má thiontaíonn an grúpa de réir mar a théann sé ar aghaidh, úsáid ráta malairte reatha, nó clóscríobh an ráta a fuair tú i ndáiríre. Fanann an tsuim bhunaidh ar an gcostas. Tá na sonraí in [ilairgeadraí](page:feature/multiple-currencies)."
+      - "**Oícheanta páirteacha.** Sroicheann duine ag meán oíche, fágann duine eile roimh bhricfeasta. Aontaigh riail amháin chun oícheanta a chomhaireamh agus úsáid í do gach duine."
+  - heading: "Cad nach ndéanann Side Badger anseo"
+    items:
+      - "Ní chomhairíonn sé oícheanta duit. Níl aon roinnt de réir oícheanta ná de réir sciar ann, mar sin oibríonn tú amach gach méid mar atá thuas agus cuireann tú isteach **méideanna cruinne**."
+      - "Ní bhogann sé airgead. Íocaigí a chéile ar an gcaoi is fearr libh, ansin taifead an íocaíocht."
+      - "Ceadaíonn sé íocóir amháin in aghaidh an chostais. Má d'íoc beirt as an teach saoire, cuir isteach dhá chostas."
+      - "Níl aon rochtain aoi ann. Teastaíonn cuntas saor in aisce ó gach duine sa ghrúpa, Dev san áireamh."
+exampleAfter: 2
+example:
+  heading: "An teach saoire, an carr agus an tsiopadóireacht"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "sé oíche sa teach saoire"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "cíos cairr"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "earraí grósaera"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Ceisteanna faoin teach saoire"
+  items:
+    - q: "Cad má chealaíonn duine?"
+      a: "Bain a n-oícheanta amach, déan na suimeanna arís agus cuir costas an tí saoire in eagar ionas go mbeidh na méideanna cruinne cothrom leis an bpraghas arís. Coinnítear an leagan níos luaithe agus feictear an t-athrú i ngníomhaíocht an ghrúpa, mar sin ní athraíonn aon duine uimhir go ciúin. Braitheann cé a fhéadfaidh cur in eagar ar cheadanna an ghrúpa."
+    - q: "Ar cheart don duine a rinne an áirithint níos lú a íoc?"
+      a: "Is faoin ngrúpa é sin. Is cúram é an áirithint, agus tá grúpaí éagsúil maidir le cé acu an bhfaigheann sé lascaine. Pé rud a aontaíonn sibh, cuir sna méideanna cruinne é agus scríobh i nóta ar an gcostas é, nó i dtrácht in aice leis, ionas nach gcaithfidh aon duine cuimhneamh ar an margadh."
+    - q: "An féidir táillí glantacháin a roinnt ar bhealach difriúil?"
+      a: "Is féidir. Cuir isteach an táille mar chostas ar leith agus tabhair a roinnt féin dó. Oireann roinnt chothrom do tháille sheasta don teach ar fad. Oireann méideanna cruinne do ghrúpa ar mian leis go leanfadh an táille na hoícheanta freisin."

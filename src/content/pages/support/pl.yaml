@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Pomoc i wsparcie | Side Badger"
+  description: "Zapomniane hasło, link, który nie działa, źle zarejestrowana płatność? Krótkie odpowiedzi na to, w czym ludzie utykają w Side Badger, i jak do nas dotrzeć."
+h1: "Pomoc i wsparcie, bez muzyczki w słuchawce"
+navLabel: "Pomoc i wsparcie"
+lead: "Krótkie odpowiedzi na to, w czym ludzie utykają, od zapomnianego hasła po zamknięcie grupy na dobre. Każda odsyła do strony, która tłumaczy więcej. Nie ma twojego pytania? Napisz do nas z poziomu aplikacji albo wyślij nam wiadomość."
+cta:
+  heading: "Wpadasz po pomoc, zostajesz dla dzielenia?"
+  body: "Nie masz jeszcze konta? Załóż grupę, udostępnij link i dodaj pierwszy wydatek. Za darmo, bez reklam i bez dziennych limitów."
+groups:
+  - heading: "Logowanie"
+    items:
+      - q: "Nie pamiętasz hasła?"
+        a: "Zdarza się najlepszym borsukom. Wybierz **Zapomniałeś/aś hasła?** na ekranie **Logowanie**, wpisz e-mail swojego konta, a potem otwórz link z wiadomości, którą ci wyślemy, i wybierz nowe hasło. [Jak to działa](page:how-it-works) opisuje, czego jeszcze potrzebuje konto."
+      - q: "Konto jest, ale niczego nie mogę dodać. Dlaczego?"
+        a: "Najczęściej e-mail nie jest jeszcze zweryfikowany, więc otwórz link z wiadomości weryfikacyjnej albo wybierz **Wyślij ponownie e-mail weryfikacyjny** na banerze z przypomnieniem, żeby dostać świeży. Jeśli e-mail jest zweryfikowany, grupa może być zablokowana albo jej uprawnienia mogą ci na to nie pozwalać, a widz widzi wszystko i niczego nie zmienia, jak wyjaśniają [grupy i uprawnienia](page:feature/groups-and-permissions)."
+      - q: "Jak zmienić e-mail lub hasło?"
+        a: "Otwórz **Ustawienia** i wybierz **Zmień e-mail** albo **Zmień hasło**. Oba najpierw pytają o obecne hasło, a nowy adres e-mail trzeba potwierdzić linkiem, który na niego wyślemy. [Jak to działa](page:how-it-works) opisuje konta."
+      - q: "Czy mogę logować się przez Google lub Apple?"
+        a: "Nie. Wystarczy adres e-mail i hasło o długości co najmniej 12 znaków, a na własnym telefonie lub komputerze możesz zaznaczyć **Zapamiętaj mnie**. Resztę początków opisuje strona o [aplikacji internetowej](page:feature/web-app)."
+  - heading: "Dołączanie do grupy"
+    items:
+      - q: "Ktoś przysłał mi link z zaproszeniem. Jak dołączyć?"
+        a: "Otwórz go, a potem zaloguj się albo załóż darmowe konto. Zobaczysz podgląd grupy, wybierzesz imię, pod którym ludzie będą cię tam widzieć, i naciśniesz **Dołącz do grupy**. [Grupy i uprawnienia](page:feature/groups-and-permissions) pokazują całą drogę do środka."
+      - q: "Widzę „Oczekiwanie na akceptację”. Czy to moja wina?"
+        a: "Ani trochę. W tej grupie każdą osobę wpuszcza administrator, więc twoja prośba trafiła do administratorów grupy i nie zobaczysz, co jest w środku, dopóki któryś jej nie zatwierdzi. Przyjazne szturchnięcie osobiście jest dozwolone, a zatwierdzanie wyjaśniają [grupy i uprawnienia](page:feature/groups-and-permissions)."
+      - q: "Link twierdzi, że jest nieprawidłowy albo wygasł."
+        a: "Linki z zaproszeniem działają tak długo, jak ustawiła osoba, która je utworzyła, od 15 minut do 5 dni. Poproś kogoś z grupy o nowy link albo o kod QR, jeśli jesteście w jednym pomieszczeniu. [Jak to działa](page:how-it-works) opisuje zaproszenia."
+  - heading: "Wydatki"
+    items:
+      - q: "Jak dodać wydatek?"
+        a: "Otwórz grupę i wybierz **Dodaj wydatek**. Napisz, czego dotyczył, ile kosztował, kto zapłacił i kto w nim uczestniczył, a potem podziel go po równo, według dokładnych kwot albo procentowo. [Dzielenie wydatków](page:feature/split-expenses) przeprowadza przez wszystkie opcje."
+      - q: "Czy czynsz może powtarzać się co miesiąc?"
+        a: "Sam z siebie nie, bo nie ma wydatków cyklicznych. Otwórz zeszłomiesięczny i wybierz **Kopiuj wydatek**, a formularz pojawi się wypełniony, gotowy na nową datę i to, co się zmieniło. Więcej o kopiowaniu jest w [dzieleniu wydatków](page:feature/split-expenses)."
+      - q: "Wpisana kwota jest błędna. Mogę to poprawić?"
+        a: "Tak. Edytuj wydatek, o ile uprawnienia grupy ci na to pozwalają, a grupa nie jest zablokowana. Poprzednia wersja jest zachowana, więc nikt nie musi wierzyć ci na słowo, co się zmieniło, jak wyjaśnia [dzielenie wydatków](page:feature/split-expenses)."
+      - q: "Wydatek wygląda źle, a nie jest mój. Co teraz?"
+        a: "Wybierz przy nim **Mam pytanie** i napisz dlaczego, a cały wydatek zostanie poza saldami wszystkich, dopóki osoba, która zapytała, albo administrator nie zamknie pytania. Nie ma takiego przycisku? Zapytać mogą tylko osoby uwzględnione w wydatku, administrator musi najpierw włączyć w ustawieniach grupy **Zezwalaj na pytania dotyczące wydatków**, a dyplomację znajdziesz w [poradniku o spornym wydatku](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Płatności"
+    items:
+      - q: "Czy Side Badger wysyła pieniądze?"
+        a: "Nie, Side Badger nigdy nie przesyła pieniędzy. Płaćcie sobie, jak chcecie, przelewem, gotówką albo czymkolwiek, co działa, a potem zarejestrujcie płatność, żeby salda się zaktualizowały. [Jak rozliczyć się po wyjeździe grupowym](page:guide/how-to-settle-up-after-a-group-trip) przeprowadza przez to od początku do końca."
+      - q: "Jak zarejestrować płatność?"
+        a: "W grupie wybierz **Ureguluj**, wskaż, kto zapłacił i kto otrzymał płatność, wpisz kwotę albo pozwól, żeby uzupełnił ją przycisk **Szybkie rozliczenie**, i wybierz **Zarejestruj rozliczenie**. Zapłacona tylko część? Zarejestruj to, co zapłacono, a reszta zostaje na saldzie, jak wyjaśnia [rozliczanie](page:feature/settle-up)."
+      - q: "Płatność zarejestrowana błędnie. Mogę to naprawić?"
+        a: "Osoba, która ją zarejestrowała, może ją edytować w historii **Rozliczenia** grupy, a ona albo administrator może ją usunąć, co zdejmuje ją z sald. Płatności z udziałem kogoś, kto od tego czasu opuścił grupę, nie można edytować. Historię opisuje [rozliczanie](page:feature/settle-up)."
+  - heading: "Powiadomienia i ekran główny"
+    items:
+      - q: "Jak włączyć powiadomienia?"
+        a: "Otwórz **Ustawienia**, włącz **Powiadomienia push** i zezwól na nie, gdy zapyta przeglądarka. Jeśli przeglądarka już je zablokowała, najpierw zezwól na nie w jej własnych ustawieniach. Każde urządzenie włącza się osobno, a dostarczenie nie jest gwarantowane, więc traktuj powiadomienie jak szturchnięcie, nie obietnicę, jak wyjaśnia strona o [aplikacji internetowej](page:feature/web-app)."
+      - q: "Dlaczego powiadomienia nie działają na moim iPhonie?"
+        a: "Na iPhonie i iPadzie działają tylko w aplikacji dodanej do ekranu głównego, nigdy w karcie przeglądarki. Dodaj ją, otwórz z ikony na ekranie głównym, a potem włącz je na ekranie **Ustawienia**. O czym informują, pokazuje [planowanie razem](page:feature/plan-together)."
+      - q: "Czy jest aplikacja do pobrania?"
+        a: "Nie ze sklepu z aplikacjami, bo Side Badger działa w przeglądarce. Zaloguj się, a potem na ekranie **Ustawienia** wybierz **Dodaj do ekranu początkowego lub Docka**, a otworzy się jak aplikacja, we własnym oknie. Kroki dla każdego urządzenia ma strona o [aplikacji internetowej](page:feature/web-app)."
+  - heading: "Opuszczanie, archiwizowanie, blokowanie i zamykanie"
+    items:
+      - q: "Jak opuścić grupę?"
+        a: "Rozlicz się, a potem wybierz **Opuść grupę**. Nie możesz wyjść, dopóki jesteś komuś winien pieniądze albo ktoś jest winien tobie, choćby w jednej walucie, dopóki wydatek, w którym uczestniczysz, ma otwarte pytanie, ani jeśli jesteś ostatnim administratorem lub jedynym członkiem, a powrót wymaga nowego zaproszenia. Szczegóły są w [grupach i uprawnieniach](page:feature/groups-and-permissions)."
+      - q: "Jak zdjąć starą grupę z pulpitu?"
+        a: "Wybierz **Zarchiwizuj grupę**. Znika z twojego pulpitu, ale nie z pulpitów innych osób, nadal możesz ją otworzyć i z niej korzystać, a **Przywróć grupę** ją przywraca. [Grupy i uprawnienia](page:feature/groups-and-permissions) porównują archiwizowanie, blokowanie i zamykanie."
+      - q: "Wyjazd się skończył. Czy możemy zatrzymać zmiany liczb?"
+        a: "Tak. Administrator może włączyć w ustawieniach grupy **Zablokuj grupę**, a wtedy nikt nie może dodawać ani edytować wydatków, rejestrować nowych płatności ani zmieniać list i ankiet, dopóki administrator jej nie odblokuje. Wszyscy nadal mogą czytać grupę i jej historię, a żadna spóźniona taksówka się nie prześliźnie, jak wyjaśniają [grupy i uprawnienia](page:feature/groups-and-permissions)."
+      - q: "Czy mogę usunąć grupę?"
+        a: "Administrator może ją zamknąć przyciskiem **Zamknij grupę**, po wpisaniu nazwy grupy dla potwierdzenia. Zamknięcie jest trwałe i czyni grupę niedostępną dla wszystkich, więc jeśli chcesz ją tylko schować z oczu, zarchiwizuj ją. Drobny druk znajdziesz w [grupach i uprawnieniach](page:feature/groups-and-permissions)."
+contact:
+  heading: "Nadal coś nie gra?"
+  items:
+    - q: "Błąd albo coś do zmiany?"
+      a: "Napisz do nas z poziomu aplikacji. W menu konta wybierz **Opinie**, potem **Wyślij opinię** i wskaż **Zgłoś błąd**, **Pomoc** albo **Nowa funkcja**. Dołącz zrzut ekranu, jeśli pomoże, a gdy odpowiemy, znajdziesz odpowiedź w tym samym wątku."
+    - q: "Wolisz e-mail?"
+      a: "Napisz na adres poniżej. Podaj, której grupy to dotyczy, jakie były twoje kroki i co miało się stać. Wyżalanie się jest w porządku; hasła nie, więc nigdy nie wysyłaj swojego."
+  emailLabel: "Napisz do nas na adres"
+  email: support@sidebadger.me

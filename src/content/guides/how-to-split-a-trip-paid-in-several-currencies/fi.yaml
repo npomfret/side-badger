@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: Näin jaat useassa valuutassa maksetun matkan kulut | Side Badger
+  description: Punnat hotelliin, jenit rameniin. Tasaa jokainen valuutta erikseen tai muunna kurssilla, jonka näet. Molemmat tavat läpi laskettuna, laskut näkyvissä.
+h1: Näin jaat useassa valuutassa maksetun matkan kulut
+navLabel: Matkat useassa valuutassa
+lead: Syötä jokainen kulu valuutassa, jolla maksoit, ja valitse sitten reitti. Pidä valuutat erillään ja tasaa kukin omalla rahallaan, tai muunna nykyisellä valuuttakurssilla ja tasaa kerralla. Sama Japanin matka päätyy ensimmäisellä reitillä neljään maksuun ja toisella kahteen.
+cta:
+  heading: Syötä se rahalla, jolla maksoit
+  body: Luo ilmainen tili, perusta ryhmä matkalle ja lisää jokainen kulu siinä valuutassa, joka kuitissa luki. Haluatko yksityiskohdat ensin? Katso [useita valuuttoja](page:feature/multiple-currencies) tai [mitä ilmainen kattaa](page:pricing).
+sections:
+  - heading: Kolme ystävää, yksi hotelli, melkoinen määrä jenejä
+    body: Zoe, Kenji ja Lucy viettävät viikon Japanissa [ryhmämatkalla](page:use-case/group-trips), ja jokainen kulu jaetaan tasan kolmeen osaan. Zoe varasi hotellin kotoa puntina hintaan 600 £. Lucy osti junapassit Tokiosta hintaan 90 000 ¥. Kenji maksoi ramen-illan, 9 000 ¥, ja on maininnut siitä joka päivä sen jälkeen. Kukaan ei halua muuntaa kolmea kuittia asemalaiturilla. Tämän oppaan laskuissa 1 ¥ on 0,005 £, pyöreä kurssi, joka on keksitty tätä opasta varten. Sovelluksessa käyttäisit nykyistä valuuttakurssia tai kirjoittaisit sen, jonka todella sait.
+  - heading: Syötä jokainen siinä rahassa, joka kuitissa on
+    body: Tämä osa on sama, kumman reitin tahansa valitset. Mitään ei tarvitse vielä muuntaa.
+    items:
+      - "**Perusta ryhmä.** Valitse kojelaudalla **Luo ryhmä**, nimeä se matkan mukaan, valitse sitten **Kutsu muita** ja lähetä linkki tai QR-koodi."
+      - "**Lisää hotelli.** Valitse **Lisää kulu** ja syötä 600, ja valitse summan viereen valuutaksi punnat. Valitse kohdassa **Kuka maksoi?** Zoe. Pidä kaikki kolme kohdassa **Jaa seuraavien kesken**, jätä **Miten jaetaan** -kohta arvoon **Tasan** ja valitse **Tallenna kulu**."
+      - "**Lisää jenit.** Tee samoin junapasseille (Lucy maksoi) ja ramenille (Kenji maksoi) ja valitse valuutaksi jeni. Jeneillä ei ole desimaaleja, joten lomake ei kysy niitä."
+  - heading: "Reitti yksi: pidä valuutat erillään"
+    body: Side Badger pitää kustakin valuutasta oman saldon eikä kuittaa niitä toisiaan vastaan. Punnissa hotelli on 200 £ per henki, joten Kenji ja Lucy ovat kumpikin velkaa Zoelle 200 £. Jeneissä junapassit ja ramen tekevät yhteensä 99 000 ¥, eli 33 000 ¥ per henki. Lucy maksoi 90 000 ¥ ja hänelle ollaan velkaa 57 000 ¥. Zoe ei maksanut jenejä lainkaan ja on velkaa 33 000 ¥. Kenji maksoi 9 000 ¥, joten hän on velkaa 24 000 ¥.
+    items:
+      - "**Punnat.** Kenji maksaa Zoelle 200 £ ja Lucy maksaa Zoelle 200 £."
+      - "**Jenit.** Zoe maksaa Lucylle 33 000 ¥ ja Kenji maksaa Lucylle 24 000 ¥."
+      - "**Neljä maksua yhteensä.** Zoe ja Lucy ovat velkaa toisilleen kahdessa valuutassa, jotka eivät kumoa toisiaan. Kurssia ei tarvita, joten ei ole mistä kiistellä."
+      - "**Velkaa jenejä, maksu puntina.** Se, jolla ei ole jenejä, voi silti maksaa puntina. Kun kirjaat maksun, avaa **Eri valuutta?**, valitse kohdasta **Muunna** punnat ja tarkista kurssi. Zoen 33 000 ¥ on tämän oppaan kurssilla 165 £, ja jenisaldo menee silti oikein."
+      - "**Kirjaa jokainen maksu.** Maksakaa toisillenne miten haluatte, valitse sitten **Maksa velat** ja käytä kohtaa **Kirjaa tilitys**. Lisää aiheesta sivulla [tilien tasaus](page:feature/settle-up)."
+  - heading: "Reitti kaksi: muunna matkan varrella"
+    body: Jos ryhmä haluaa mieluummin nähdä yhden luvun per henki, muunna kulu sitä syöttäessäsi.
+    items:
+      - "**Muunna lomakkeella.** Avaa **Lisää kulu**, valitse **Muunna** ja valitse punnat. Side Badger näyttää kurssin ja muunnetun summan, joka on merkitty merkillä ≈. Muokkaa kurssia, jos sait eri kurssin. Alkuperäinen jenisumma säilyy kulussa."
+      - "**Lue summat puntina.** Kurssilla 1 ¥ = 0,005 £ junapasseista tulee 450 £ ja ramenista 45 £. Hotellin 600 £ mukaan lukien yhteensä tulee 600 £ + 450 £ + 45 £ = 1 095 £, eli 365 £ per henki. Zoe maksoi 600 £, joten hänelle ollaan velkaa 235 £. Lucy maksoi 450 £ ja hänelle ollaan velkaa 85 £. Kenji maksoi 45 £ ja on velkaa 320 £."
+      - "**Kaksi maksua.** Molemmat Kenjiltä: 235 £ Zoelle ja 85 £ Lucylle. Zoen ja Lucyn ei enää tarvitse maksaa toisilleen lainkaan."
+      - "**Tai aseta ryhmän valuutta.** Jos haluat ohittaa ylimääräisen vaiheen, avaa ryhmän **Asetukset**, etsi **Valuutta-asetukset** ja valitse **Muunna kulut automaattisesti**. Jokainen uusi kulu muunnetaan sitten kyseiseen valuuttaan, yhä kurssilla, jonka näet ja voit muuttaa."
+  - heading: Kumman reitin valitset?
+    items:
+      - "**Pidä erillään**, kun ihmisillä on vielä jenejä lompakoissaan tai kun et halua kiistellä kurssista. Hintana on enemmän maksuja, ja useammassa kuin yhdessä valuutassa."
+      - "**Muunna**, kun ryhmän arki pyörii yhdessä valuutassa ja se haluaa yhden luvun per henki ja lyhyemmän listan, kuten Kenjin kaksi siirtoa. Hintana on, että ryhmä luottaa kurssiin, ja kurssi lukitaan kuhunkin kuluun, kun se tallennetaan."
+      - "**Päätä ajoissa.** Ryhmän valuutta muuntaa vain uusia ja kopioituja kuluja. Se ei palaa siivoamaan sitä, minkä olet jo syöttänyt."
+  - heading: Kurssi ja yläraja
+    items:
+      - "**Kurssi lukitaan tallennettaessa.** Vanhoja kuluja ei koskaan arvosteta uudelleen, joten saldo ei ajelehdi markkinoiden mukana. Eri päivinä syötetyillä kuluilla voi olla eri kurssi, joten jos ryhmä haluaa yhden kurssin koko matkalle, sopikaa se ja kirjoittakaa se joka kerta."
+      - "**Ei kurssia? Kirjoita oma.** Side Badger hakee nykyisen valuuttakurssin, kun voi, mutta kaikille valuuttapareille kurssia ei ole taattu. Jos kurssia ei ole tai vaihtopiste antoi paremman, kirjoita oma."
+      - "**999 999,99 kulua kohden, omassa valuutassaan.** Yksi yläraja, olipa raha mitä tahansa. Jeneissä se on hieman alle 1 000 000 ¥, noin 5 000 £ tämän oppaan kurssilla. Valuutassa, jossa luvut ovat isoja, kuten Indonesian rupiassa, yksittäinen lasku voi ylittää rajan nopeammin. Jaa lasku kahdeksi kuluksi tai syötä se toisessa valuutassa ja muunna."
+  - heading: Mitä Side Badger ei tee tässä
+    items:
+      - Se ei koskaan siirrä eikä vaihda rahaa. Maksatte toisillenne miten haluatte ja kirjaatte maksun sitten.
+      - Valuuttoja on 140. Kryptovaluutat ja metallit eivät kuulu joukkoon.
+exampleAfter: 2
+example:
+  heading: Japani, tasattuna kahdella tavalla
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: hotelli, varattu kotoa
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: junapassit
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: ramen-ilta
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: Kysymyksiä
+  items:
+    - q: Mitä valuuttakurssia Side Badger käyttää?
+      a: Nykyistä valuuttakurssia, joka haetaan kulua syötettäessä, kun sellainen on saatavilla. Voit vaihtaa sen kurssiin, jonka todella sait.
+    - q: Voiko ryhmä pitäytyä punnissa ja jeneissä?
+      a: "Kyllä. Avaa ryhmän **Asetukset**, ota **Valuutta-asetukset**-osiossa käyttöön **Rajoita valuuttoja tässä ryhmässä**, valitse **Sallitut valuutat** ja aseta **Oletusvaluutta uusille kuluille**. Vähemmän vaihtoehtoja listassa tarkoittaa vähemmän väärää arvausta kassalla."
+    - q: Onko meidän pakko muuntaa?
+      a: Ei. Valuutat pysyvät erillään, ellet sinä tai ryhmäsi valitse muuntamista, ja jokaisella valuutalla on oma lyhyt maksulistansa.

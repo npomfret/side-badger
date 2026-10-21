@@ -1,0 +1,101 @@
+translatedFrom: "5d92090e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Como juntar dinheiro para um presente de grupo | Side Badger"
+  description: "Cada pessoa dá um valor diferente e o cartão de uma só leva com o golpe. Faz uma sondagem de orçamento, usa valores exatos e deixa as contas ao Side Badger."
+h1: "Como juntar dinheiro para um presente de grupo"
+navLabel: "Juntar para um presente"
+lead: "Juntar dinheiro para um presente de grupo significa que uma pessoa adianta o dinheiro e todas as outras lhe devem o seu contributo. Combinem um orçamento com uma sondagem, deixem quem compra pôr o presente no seu cartão e introduzam-no depois como uma só despesa com [valores exatos](page:feature/split-expenses), um valor para cada pessoa. O Side Badger mostra o que cada um deve a quem comprou, e todos enviam a sua parte como preferirem."
+cta:
+  heading: "Passa o chapéu sem o chapéu"
+  body: "Faz um grupo, deixa de fora a pessoa que vai receber o presente e introduz a prenda com valores exatos. O Side Badger é grátis, sem anúncios e sem limites diários. Queres ver primeiro como funciona? Vê [como funciona](page:how-it-works) ou [o que o grátis inclui](page:pricing)."
+sections:
+  - heading: "Quatro amigos, um gira-discos, quatro valores diferentes"
+    body: "A Bea faz 30 anos e quer um gira-discos. A Priya, o Omar, a Lena e o Sam vão oferecer-lho. A Priya encontra um por 240 £ e paga-o com o seu próprio cartão, porque alguém tem de ir primeiro. Os quatro não contribuem por igual. A Priya e o Omar põem 60 £ cada um, a Lena 80 £ e o Sam 40 £. Ninguém explica o seu valor e ninguém pergunta. O Omar compra também um cartão de parabéns e papel de embrulho por 12 £. Os quatro assinam o cartão, por isso essa despesa é dividida em partes iguais."
+  - heading: "Combinem o orçamento antes de alguém clicar em Comprar"
+    body: "Uma sondagem de orçamento poupa a discussão sobre um gira-discos de 400 £. No grupo, escolhe **Adicionar sondagem** e pergunta quanto deve custar o presente. Faz das opções valores, como até 150 £, até 200 £ e até 250 £. Ativa **Votação anónima**, que esconde quem votou em quê, para ninguém ter de defender um valor mais baixo em voz alta. As definições não podem mudar depois de entrar o primeiro voto, por isso confirma-as antes. Uma sondagem não se fecha sozinha. Quando todos tiverem votado, escolhe **Encerrar sondagem** e aparece o **Vencedor**. A sondagem serve para combinar o total. Não define a parte de ninguém."
+  - heading: "Fazer as contas"
+    body: "O presente divide-se em 60 £, 60 £, 80 £ e 40 £, o que soma as 240 £ do recibo. O cartão de parabéns e o embrulho dividem-se por quatro, a 3 £ cada um. A conta da Priya é 60 £ + 3 £, ou seja, 63 £, e ela pagou 240 £, o que lhe deixa 177 £ a receber. A conta do Omar também é 63 £, mas ele pagou 12 £, por isso deve 51 £. A Lena deve 80 £ + 3 £, ou seja, 83 £, e o Sam deve 40 £ + 3 £, ou seja, 43 £. Estes três somam os 177 £ da Priya. Se ninguém mexesse nelas, as dívidas correriam em cinco direções pelo grupo. O Side Badger sugere antes três pagamentos, todos para a Priya. [Acertar contas](page:feature/settle-up) tem os pormenores."
+  - heading: "Pôr isto no Side Badger"
+    body: "O lado da Priya demora cerca de cinco minutos."
+    items:
+      - "**Faz o grupo.** No painel principal escolhe **Criar grupo**. Escolhe **Convidar outras pessoas** e envia o link ou o código QR a quem vai contribuir, e a mais ninguém."
+      - "**Adiciona o presente.** Escolhe **Adicionar despesa**, descreve-o, escreve 240 e em **Quem pagou?** escolhe a Priya. Deixa os quatro em **Dividir entre**, depois em **Como dividir** escolhe **Valores exatos** e escreve 60, 60, 80 e 40. Os valores têm de somar 240. Anexa a confirmação da encomenda, se quiseres. Escolhe **Guardar despesa**."
+      - "**Adiciona o cartão.** O Omar acrescenta ele próprio as 12 £, escolhe-se a si próprio em **Quem pagou?** e deixa **Como dividir** em **Igual**, com as quatro pessoas marcadas."
+      - "**Contem e paguem.** Cada um confere os **Saldos**, que mostram quem deve a quem, e envia à Priya a sua parte como preferir. Depois registem o pagamento com **Acertar contas** e **Registar acerto**. O acerto rápido preenche o valor."
+  - heading: "Comprar primeiro ou juntar primeiro"
+    body: "O Side Badger não guarda o mealheiro, por isso “juntar” é, na verdade, contar. Há duas ordens que funcionam."
+    items:
+      - "**Comprar primeiro.** Quem compra paga, adiciona a despesa ao preço real e todos veem logo a sua parte. É mais arrumado, mas quem compra carrega o custo até as pessoas pagarem, por isso escolhe alguém que possa."
+      - "**Juntar primeiro.** As pessoas enviam o seu valor a quem vai comprar antes da compra. Quando tiverem o preço, introduzam o presente e registem depois cada pagamento com a data em que o dinheiro realmente mexeu. Adiciona primeiro o presente, para cada pagamento ter um saldo onde assentar."
+      - "**O preço mexe.** Portes de envio, um código de desconto, uma subida de preço à última hora. Edita o presente e muda os valores exatos para continuarem a somar. A versão anterior fica guardada, mas avisa primeiro o grupo, porque os saldos deles mudam."
+  - heading: "Mantém a Bea de fora"
+    body: "Só os membros de um grupo o podem ver, por isso a Bea não vê um grupo em que não está. Convida as pessoas que vão contribuir e mais ninguém. Um link funciona até expirar, e podes escolher qualquer duração entre 15 minutos e 5 dias, por isso escolhe uma curta e envia-o para onde a Bea não o veja. O link mostra uma pré-visualização do grupo a quem o abrir, por isso dá ao grupo um nome sem graça, como Mealheiro de sábado, e mantém o nome da Bea fora dos nomes das despesas e também das opções da sondagem."
+  - heading: "O que o Side Badger não faz aqui"
+    items:
+      - "Não guarda nem recolhe o dinheiro. Os contributos vão para quem comprou por transferência bancária, dinheiro ou o que usarem, e depois alguém os regista."
+      - "Não envia lembretes de pagamento. Dar um toque a quem ainda não pagou continua a ser trabalho humano."
+      - "Não calcula a parte de ninguém. Uma sondagem combina o orçamento e não há opção de “dividir o que sobra”, por isso escreves cada valor."
+      - "Cada despesa tem um só pagador. Se duas pessoas compraram partes diferentes do presente, introduz duas despesas."
+      - "Todas as pessoas da divisão precisam de uma conta grátis e de um lugar no grupo."
+exampleAfter: 2
+example:
+  heading: "O gira-discos da Bea, e o cartão"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: "o presente"
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: "cartão de parabéns e embrulho"
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: "Perguntas"
+  items:
+    - q: "E se juntarmos mais do que o presente custa?"
+      a: "Os valores exatos têm de somar o preço, por isso reduz as partes até somarem. Ou põe o extra em algo real, como flores, e introduz isso como segunda despesa, como o cartão de parabéns e o embrulho do exemplo."
+    - q: "Alguém pode contribuir sem entrar no grupo?"
+      a: "Não, se quiseres a pessoa na conta. Todos os que estão na divisão precisam de uma conta grátis e de estar no grupo. Para quem só tem dinheiro vivo, a Priya podia ficar com ele e introduzir o presente pelo que o grupo ainda deve. Por exemplo, se o Sam lhe desse 40 £ em dinheiro, ela introduzia 200 £ e dividia 60, 60 e 80 entre si, o Omar e a Lena."
+    - q: "A sondagem pode decidir quanto cada pessoa dá?"
+      a: "Não. Uma sondagem combina um valor para o grupo todo, como o orçamento. A parte de cada pessoa é convosco: combinem-na e escrevam-na na despesa como **Valores exatos**."

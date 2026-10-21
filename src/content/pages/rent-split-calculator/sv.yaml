@@ -1,0 +1,87 @@
+# P9 (tasks/release-2-plan.md). Exemplet är guide 1:s lägenhet (how-to-split-rent-by-room-size); varje tal i texten är exemplets eller den visade uträkningen.
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Hyreskalkylator: efter rummens storlek eller inkomst | Side Badger"
+  description: "Större rum, större andel? Räkna ut vad varje rumskamrat betalar, efter rummens storlek eller inkomst. Den körs i webbläsaren: inget sparas eller skickas."
+h1: Hyreskalkylator
+navLabel: Hyreskalkylator
+lead: Större sovrum, större andel? Skriv in hyran och se vad var och en betalar, efter rummens storlek eller inkomst, till öret. Den körs i din webbläsare, sparar ingenting och flyttar inga pengar. När hushållet vill ha räkningen bevarad, [dela utgifter](page:feature/split-expenses) i Side Badger och kopiera hyran varje månad.
+cta:
+  heading: Bestäm procenten en gång. Kopiera dem för alltid.
+  body: Den här kalkylatorn glömmer allt när du stänger fliken, ungefär som rumskamraten som definitivt betalade bredbandet. En Side Badger-grupp behåller hyran, räkningarna och vem som har betalat vad. Det är gratis, utan annonser och utan dagliga gränser.
+sections:
+  - heading: Två sätt att dela hyran
+    items:
+      - "**Efter rummens storlek.** En del av hyran betalar för köket, badrummet och vardagsrummet, som alla använder. Du väljer den andelen (40 % till att börja med) och den delas lika. Resten går efter sovrummets yta, så att det stora rummet betalar mer och skrubben får den rabatt den har förtjänat."
+      - "**Efter inkomst.** Alla betalar lika stor del av hyran som de tjänar av totalen. Lägg till gemensamma räkningar så följer de samma andelar."
+  - heading: Så fungerar uträkningen
+    body: "Varje person får en exakt andel och sedan ett helt procenttal, eftersom hela tal är lättare att skriva in och att gräla om. Avrundningen sker med metoden största rest: alla behåller heltalet under sin andel, och de överblivna procentenheterna går till dem som tappade mest. Procenten blir alltid 100 tillsammans. I lägenheten nedan är de gemensamma 40 % lika med 13,33 % var. Priyas rum är 16 av lägenhetens 38 m², så 60 % × 16/38 blir 25,26 %, plus 13,33 % ger 38,6 %, som avrundas till 39 %. Tom och Aisha hamnar på 32 % och 29 %, och 39 + 32 + 29 är 100. Varje belopp är det procenttalet av hyran: 39 % av 1 950 £ är 760,50 £."
+  - heading: Skriv sedan in det i Side Badger
+    body: "För hela historien, måttband inkluderat, se [så delar du hyran efter rummens storlek](page:guide/how-to-split-rent-by-room-size), eller [en partner som tjänar mer](page:guide/how-to-split-bills-with-a-partner-who-earns-more) för par."
+    items:
+      - "**Lägg till hyran.** Välj **Lägg till utgift** i din grupp, välj vem som betalade hyresvärden under **Vem betalade?** och låt alla vara kvar under **Dela mellan**."
+      - "**Välj Procentandel.** Under **Hur ska det delas?** väljer du **Procentandel** och skriver in de hela procenttalen. Formuläret markerar det om de inte blir 100 tillsammans."
+      - "**Kopiera den nästa månad.** Öppna förra månadens hyra och välj **Kopiera utgift**. Delningen följer med."
+  - heading: Vad kalkylatorn inte gör
+    items:
+      - "**Mäta dina rum.** Golvyta är en utgångspunkt. Ett rum med eget badrum är värt mer än samma yta utan, och en skrubb som rymmer en säng och en hoppfull stol är värd mindre."
+      - "**Avgöra vad som räknas som inkomst.** Efter eller före skatt, lön eller extraknäck: det bestämmer gruppen. Använd samma period för alla."
+      - "**Spara något.** Stänger du fliken är siffrorna borta. Vill du behålla dem, kopiera länken. Den innehåller dina siffror efter #, som webbläsare aldrig skickar till en server, och alla som har den kan läsa dem."
+      - "**Flytta pengar.** Du betalar hyresvärden hur du vill."
+      - "**Blanda valutor, eller gå över gränserna.** Välj en valuta. Den tar 2 till 10 personer och en hyra på upp till 999 999,99, som i appen."
+exampleAfter: 2
+example:
+  heading: En lägenhet, en månad
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: hyran
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: elräkningen
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: bredbandet
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: Frågor
+  items:
+    - q: Vilket är rättvisast, rummens storlek eller inkomst?
+      a: Inget av dem är alltid rättvisast. Rummens storlek passar rumskamrater som betalar för ytan de sover på. Inkomst passar par och vänner med mycket olika lön. Bestäm det före första hyresdagen, inte efter.
+    - q: Ska räkningarna delas på samma sätt?
+      a: För rumskamrater, oftast inte. Alla använder el och bredband, så lika är enklare, som i exemplet. Efter inkomst ger kalkylatorn räkningarna samma andelar som hyran.
+    - q: Kan jag använda kvadratfot?
+      a: Ja. Välj ft² och skriv in dina ytor i kvadratfot. Enheten är bara en etikett, och andelarna blir desamma så länge alla använder en och samma.
+    - q: Är kalkylatorn gratis?
+      a: Ja. Gratis. Utan annonser. Utan dagliga gränser. Du behöver inget konto heller.

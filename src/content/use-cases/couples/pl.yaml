@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+meta:
+  title: "Dziel rachunki w parze, 50/50 albo według dochodów | Side Badger"
+  description: "Dziel nudne koszty, nie zamieniając randki w kwartalny przegląd finansów. 50/50, według dochodów albo rachunek po rachunku. Widać, kto komu winien. Za darmo."
+h1: "Dziel koszty w parze, uczciwie"
+navLabel: "Pary"
+lead: "Dziel nudne koszty, nie zamieniając randki w kwartalny przegląd finansów. Side Badger prowadzi jeden bieżący rachunek czynszu, opłat i zakupów dla **par**, które dzielą dom, kanapę i mgliste wspomnienie, kto zapłacił za internet. Dziel 50/50, według dochodów albo rachunek po rachunku i sprawdzaj, kto komu jest winien."
+cta:
+  heading: "Załóż grupę dla dwojga"
+  body: "Załóż konto, utwórz grupę i wyślij swojej drugiej połówce link z zaproszeniem. Dzisiejsze jedzenie na wynos może być pierwszym wydatkiem."
+scenario:
+  heading: "Uczciwie nie musi znaczyć 50/50"
+  body: "Sam i Alex dzielą dom. Sam zarabia więcej, więc w ich umowie Sam bierze 60% czynszu, a Alex 40%. Sam płaci właścicielowi mieszkania, Alex robi zakupy i obie strony są dość pewne, że wszystko się wyrównuje. „Dość pewne” to sposób, w jaki notatka w czyimś telefonie staje się trwałym sporem. Załóż więc grupę dla was dwojga, wybierz imię, pod którym druga połówka ma cię widzieć, i wyślij jej link z zaproszeniem albo kod QR. Dodawaj każdy koszt, gdy się pojawi, mów, kto zapłacił i jak się dzieli, i niech grupa prowadzi rachunek. Załóż osobną grupę na każde wakacje (zobacz [wyjazdy grupowe](page:use-case/group-trips)), żeby loty nie mieszały się z zakupami spożywczymi."
+sections:
+  - heading: "50/50, według dochodów albo rachunek po rachunku"
+    body: "Nie ma podziału uczciwego dla wszystkich, jest tylko ten, na który zgadzacie się wspólnie, najlepiej przed pierwszym rachunkiem, a nie po pierwszym westchnieniu. Oto trzy zwykłe sposoby."
+    items:
+      - "**50/50.** Wybierz **Równo**, a każde z was jest winne połowę. Pasuje do wspólnych kosztów, gdy wasze dochody są zbliżone, i nie wymaga żadnej arytmetyki."
+      - "**Według dochodów.** Jeśli jedno z was zarabia więcej, podzielcie według udziału każdej osoby w łącznych dochodach. Najpierw ustalcie, co się liczy (najczęściej wybiera się pensję netto), dodajcie oba dochody i podzielcie swój dochód przez sumę. Jeśli jedno z was zarabia na rękę trzy części, a drugie dwie, to 3 ÷ (3 + 2) = 60%, więc jedno z was pokrywa 60%, a drugie 40%. Zaokrąglijcie do pełnych procentów i wpiszcie je w trybie **Procentowo**, gdzie muszą dawać w sumie 100. Nie ma miejsca na wpisanie waszych zarobków, więc wpisujecie wyłącznie procenty."
+      - "**Rachunek po rachunku.** Każdy wydatek ma własny podział, więc możecie mieszać: czynsz według dochodów, zakupy 50/50, a wspólny prezent w trybie **Dokładne kwoty**, jeśli każde z was samo wybrało, ile dorzuca."
+      - "**Gdy zarobki się zmieniają,** używajcie nowych procentów od następnego wydatku. Wcześniejsze wydatki zachowują podział, z którym je wpisano. Żeby zobaczyć rachunki policzone na prawdziwych paskach wypłat, przeczytaj [jak dzielić rachunki z osobą, która zarabia więcej](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: "Miesięczne podsumowanie"
+    body: "Raz w miesiącu albo kiedy tylko liczby zaczynają swędzieć, otwórz grupę i sprawdź **Salda**. Przy dwojgu jest zawsze tylko jedna płatność w każdej walucie, od tego, kto jest winien, do tego, komu się należy. Weźmy miesiąc Sama i Alexa. Sam płaci czynsz 1 500 £, z czego 40% Alexa to 600 £. Alex płaci 90 £ za zakupy spożywcze, dzielone po równo, więc połowa Sama to 45 £. Side Badger zestawia jedno z drugim, 600 £ minus 45 £, i Alex płaci Samowi 555 £. Zapłaćcie, jak chcecie, przelewem, gotówką albo przysługą do odrobienia, a potem zarejestrujcie to przez **Ureguluj**, żeby saldo wróciło do zera. Nie ma rachunków cyklicznych, więc skopiuj zeszłomiesięczny czynsz, zmień datę i jedź dalej. Side Badger nie przesyła pieniędzy ani nie wysyła przypomnień, więc ponaglanie nadal należy do ciebie."
+  - heading: "Tylko wy dwoje"
+    body: "Grupa dla dwojga ma dwoje członków, a grupę widzą tylko jej członkowie. Twoja druga połówka dołącza przez link z zaproszeniem albo kod QR. Link może działać od 15 minut do 5 dni, więc wybierz najkrótszy, który daje jej czas go użyć. Utworzenie nowego linku nie unieważnia starych, więc nie zostawiaj ich na czacie, w którym są inne osoby. Każdy, kto użyje ważnego linku, może dołączyć, więc jeśli chcesz mieć pewność, włącz zatwierdzanie, a administrator wpuści każdą osobę. Twoja druga połówka potrzebuje własnego konta, które jest darmowe."
+exampleAfter: 2
+example:
+  heading: "Kto komu jest winien w tym miesiącu"
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: "Czynsz"
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: "Zakupy spożywcze"
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: "Funkcje, z których korzysta para"
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Czy możemy raz ustawić 60/40 dla wszystkiego?"
+      a: "Nie. Podział należy do każdego wydatku. Ustaw procenty przy pierwszym, a następnym razem skopiuj go i zmień to, co się różni. Wszystkie trzy sposoby podziału opisuje [dzielenie wydatków](page:feature/split-expenses)."
+    - q: "Czy łączy się z naszym bankiem?"
+      a: "Nie. Side Badger nigdy nie dotyka waszych pieniędzy. Płacicie sobie, jak chcecie, a potem to rejestrujecie, jak wyjaśnia [rozliczanie](page:feature/settle-up)."
+    - q: "Czy ktoś jeszcze widzi naszą grupę?"
+      a: "Tylko jej członkowie, a grupa pary ma dwoje. Każdy, kto użyje ważnego linku z zaproszeniem, może dołączyć, więc udostępnij go jednej osobie i ustaw krótki termin ważności."
+    - q: "Co, jeśli każde z nas zapłaciło część tego samego rachunku?"
+      a: "Wydatek ma jednego płatnika. Zarejestruj dwa wydatki, po jednym dla każdego z was, a saldo wyjdzie tak samo."
+    - q: "Czy Side Badger przypomni mojej drugiej połówce o płatności?"
+      a: "Nie. Nie ma przypomnień, więc ponaglanie nadal należy do ciebie. Przynajmniej patrzycie na tę samą liczbę."
+    - q: "Co się dzieje, gdy przestaniemy dzielić koszty?"
+      a: "Rozliczcie saldo i zarejestrujcie płatność, żeby nikt nic nie był winien. Potem administrator może zablokować grupę, co zostawia liczby tak, jak są, albo zamknąć ją na dobre, co czyni ją niedostępną dla wszystkich. Zamykajcie ją dopiero wtedy, gdy żadne z was nie potrzebuje historii."

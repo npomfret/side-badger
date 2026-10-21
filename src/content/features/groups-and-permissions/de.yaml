@@ -1,0 +1,111 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - options.items.0.title
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: Gruppenadmin und Berechtigungen für geteilte Kosten | Side Badger
+  description: Per Link oder QR-Code einladen, Beitritte freigeben, Betrachter festlegen, die Gruppe sperren, wenn alles erledigt ist. Deine Gruppe, deine Regeln, mit Augenmaß.
+h1: "Gruppenadmin und Berechtigungen: deine Regeln, mit Augenmaß"
+navLabel: Gruppen und Berechtigungen
+lead: Manche Gruppen brauchen jemanden, der die Kasse führt. Side Badger hat dafür eine Einstellung. Lade Leute per Link oder QR-Code ein, entscheide, wer hineinkommt, und bestimme, wer die Zahlen ändern darf. Eine kleine Freundesgruppe kann das alles ignorieren, denn neue Gruppen starten sperrangelweit offen.
+cta:
+  heading: Bereit für eine aufgeräumte Gruppe?
+  body: Erstelle ein Konto, starte eine Gruppe und schick den Einladungslink. Lass sie offen oder zieh die Regeln an, wenn die Gruppe größer oder pingeliger wird.
+problem:
+  heading: Jemand muss die Zahlen in Ordnung halten
+  body: Vier Mitbewohner kommen mit Vertrauen aus. Dreißig Gäste an einem Hochzeitswochenende wohl eher nicht. Leg für jedes Haus, jede Reise und jedes Event eine eigene Gruppe an, mit bis zu 50 Personen, und jede Gruppe führt ihre eigenen Mitglieder, ihre eigenen Rollen und ihre eigenen Regeln. Dein Dashboard listet alle auf einem Bildschirm auf, samt deinem Stand in jeder. Die meisten Gruppen fassen die Einstellungen nie an. Die, die es tun, haben meist jemanden, der organisiert genug ist, sie zu wollen.
+workflow:
+  heading: Von der leeren zur gesperrten Gruppe
+  steps:
+    - title: Per Link oder QR-Code einladen
+      body: Öffne **Andere einladen**, wähle, wie lange der Link gelten soll (15 Minuten, 1 Stunde, 1 Tag oder 5 Tage), und kopiere dann den Link oder zeig den QR-Code zum Scannen. Du kannst auch Leute, mit denen du schon eine andere Gruppe teilst, direkt in der App einladen.
+      shot: S03
+      shotAlt: Der Einladungsdialog mit einem Gruppenlink, seinem QR-Code und der Auswahl, wie lange der Link gilt
+    - title: Erst reinschauen, dann beitreten
+      body: Jede Person mit dem Link meldet sich an oder erstellt ein Konto, sieht eine Vorschau der Gruppe und wählt den Namen, den sie darin tragen möchte. Dann drückt sie auf **Gruppe beitreten**.
+      shot: S04
+      shotAlt: Die Beitrittsvorschau einer Gruppe, die eine angemeldete Person sieht, bevor sie beitritt
+    - title: Beitritte freigeben
+      body: Schalte die Freigabe ein, und Leute, die den Link nutzen, warten als ausstehende Mitglieder, bis ein Admin sie hereinlässt. Admins finden sie unter **Ausstehende Mitglieder** in **Sicherheit & Berechtigungen** und wählen **Genehmigen** oder **Ablehnen**. Bis dahin sieht eine ausstehende Person nichts in der Gruppe.
+      shot: S14
+      shotAlt: Ausstehende Mitglieder, die darauf warten, dass ein Admin sie genehmigt oder ablehnt
+    - title: Lege fest, wer was ändern darf
+      body: "Wähle **Offene Zusammenarbeit** oder **Verwaltete Gruppe**, oder setze die Berechtigungen einzeln. Gib dann jeder Person eine Rolle: Admin, Mitglied oder Betrachter. Nur Admins können Berechtigungen und Rollen ändern."
+      shot: S13
+      shotAlt: Der Sicherheits-Tab der Gruppeneinstellungen mit den zwei Voreinstellungen und den benutzerdefinierten Berechtigungen
+    - title: Sperren, wenn alles erledigt ist
+      body: Wenn die Reise vorbei ist und die Zahlen stehen, kann ein Admin **Gruppe sperren** einschalten. Niemand kann dann Ausgaben hinzufügen oder ändern, Zahlungen erfassen oder Listen und Umfragen bearbeiten, und ein Banner sagt das auch. Niemand schiebt unbemerkt noch ein spätes Taxi nach. Taucht doch eines auf, kann ein Admin die Gruppe wieder entsperren.
+      shot: S15
+      shotAlt: Eine Gruppe mit dem Banner, das anzeigt, dass sie gesperrt ist
+options:
+  heading: Admins, Mitglieder und Betrachter
+  items:
+    - title: Admin
+      body: Führt die Gruppe. Admins genehmigen neue Mitglieder, ändern Rollen und Berechtigungen, sperren und entsperren die Gruppe und schließen sie. Wer eine Gruppe erstellt, ist zunächst ihr Admin, und eine Gruppe bleibt nie ohne einen, denn der letzte Admin kann nicht herabgestuft werden.
+    - title: Mitglied
+      body: Macht mit. Was ein Mitglied darf, hängt von den Berechtigungen der Gruppe ab. In einer Gruppe mit der Voreinstellung Offene Zusammenarbeit ist das fast alles. In einer verwalteten Gruppe können Mitglieder nur die Ausgaben und Listen ändern, die sie selbst erstellt haben.
+    - title: Betrachter
+      body: Sieht alles und ändert nichts. Ein Betrachter kann keine Ausgaben oder Listen hinzufügen oder bearbeiten, niemanden einladen, keine Einstellungen ändern und das Headerbild nicht anrühren. Praktisch für die Person, die die Zahlen im Blick behalten will und verspricht, nicht daran herumzufummeln.
+sections:
+  - heading: Offen, verwaltet oder nach euren eigenen Regeln
+    body: Neue Gruppen starten in der Voreinstellung **Offene Zusammenarbeit**, in der alle Leute einladen, Ausgaben ändern und Listen bearbeiten können und neue Mitglieder automatisch beitreten. **Verwaltete Gruppe** ist für den Fall, dass jemand die Erwachsenenrolle übernehmen muss. Du kannst die sieben Berechtigungen auch einzeln setzen, und wenn du eine von Hand änderst, wechselt die Gruppe auf benutzerdefiniert. Was du auch wählst, nur Admins können die Berechtigungen selbst ändern, und jede Änderung erscheint im Aktivitätsverlauf. Eine WG von [Mitbewohnern](page:use-case/housemates) kann alles offen lassen. Ein großes [Event oder eine Feier](page:use-case/events-and-celebrations) will oft die verwaltete Variante, damit jemand bestimmt, wer beitritt. Neu in der Sache? [So funktioniert es](page:how-it-works) führt durch die ganze Reise, von der ersten Ausgabe bis zur Abrechnung.
+    items:
+      - "**Wer kann Ausgaben bearbeiten?** Offene Zusammenarbeit: jedes Mitglied. Verwaltete Gruppe: Ersteller und Admins."
+      - "**Wer kann Ausgaben löschen?** Offene Zusammenarbeit: jedes Mitglied. Verwaltete Gruppe: Ersteller und Admins."
+      - "**Wer kann Listen bearbeiten?** Offene Zusammenarbeit: jedes Mitglied. Verwaltete Gruppe: Ersteller und Admins."
+      - "**Wer kann Mitglieder einladen?** Offene Zusammenarbeit: jedes Mitglied. Verwaltete Gruppe: nur Admins."
+      - "**Genehmigung neuer Mitglieder.** Offene Zusammenarbeit: automatisch. Verwaltete Gruppe: Genehmigung durch einen Admin erforderlich."
+      - "**Wer kann Einstellungen ändern?** Offene Zusammenarbeit: jedes Mitglied. Verwaltete Gruppe: nur Admins."
+      - "**Wer kann das Headerbild ändern?** Offene Zusammenarbeit: jedes Mitglied. Verwaltete Gruppe: nur Admins."
+  - heading: Dein Name, dein Foto, dein Headerbild
+    body: Jede Gruppe hat ihre eigene Besetzungsliste. Wähle den Namen, unter dem dich Leute in jeder Gruppe sehen (2 bis 50 Zeichen, innerhalb der Gruppe eindeutig), und welches deiner Profilfotos du dort trägst. Sei im Haus **Sam** und auf der Reise **Sam (hat das Auto)**. Wer Einstellungen ändern darf, kann die Gruppe umbenennen und ihre Beschreibung bearbeiten. Das Headerbild, ein JPEG, PNG, GIF oder WebP mit bis zu 10 MB, hat eine eigene Berechtigung.
+  - heading: Archivieren, sperren oder schließen
+    body: Drei Wege, eine Gruppe wegzulegen, vom harmlosesten zum ernstesten.
+    items:
+      - "**Archivieren** blendet die Gruppe nur auf deinem eigenen Dashboard aus, auf keinem anderen. Du kannst sie weiterhin öffnen und wie bisher nutzen, und **Gruppe dearchivieren** holt sie zurück."
+      - "**Sperren** friert Änderungen ein, bis ein Admin die Gruppe entsperrt. Alle können die Gruppe und ihren Verlauf weiterhin lesen."
+      - "**Schließen** ist endgültig und gilt für alle. Nur Admins können es tun, indem sie zur Bestätigung den Namen der Gruppe eintippen, und danach kann niemand die Gruppe mehr öffnen."
+  - heading: Eine Gruppe verlassen
+    body: Alle können gehen, sobald sie abgerechnet haben. Du kannst nicht gehen, solange du in auch nur einer Währung Geld schuldest oder bekommst, solange eine offene Frage zu einer Ausgabe dich betrifft oder wenn du der letzte Admin oder das einzige Mitglied bist. [Erfasse die Zahlung](page:feature/settle-up), kläre die [Ausgabenfrage](page:guide/what-to-do-when-someone-disputes-a-shared-expense) oder mach jemand anderen zum Admin, und dann geh. Um zurückzukommen, brauchst du eine neue Einladung.
+limits:
+  heading: "Mit Augenmaß: das Kleingedruckte"
+  items:
+    - Eine Gruppe fasst bis zu 50 Personen.
+    - Nur Admins können Berechtigungen und Rollen ändern. Der letzte Admin kann nicht herabgestuft werden.
+    - Wenn du das Bearbeiten von Ausgaben auf **Nur Administratoren** stellst, können auch nur Admins Ausgaben hinzufügen.
+    - Eine Sperre stoppt Änderungen an Ausgaben, neue Zahlungen sowie Änderungen an Listen und Umfragen. Alle können die Gruppe und ihren Verlauf weiterhin lesen und auf Zahlungen reagieren.
+    - Schließen ist endgültig. Die App kann eine geschlossene Gruppe nicht wieder öffnen.
+    - Ein neuer Einladungslink macht die alten nicht ungültig. Jeder Link gilt bis zu seinem eigenen Ablauf, wähle also einen kurzen, wenn dir mulmig ist, wo er landen könnte.
+    - Einladungen in der App listen Leute aus deinen 10 zuletzt aktiven Gruppen auf. Alle anderen brauchen den Link, und wer einladen darf, hängt von den Berechtigungen der Gruppe ab.
+    - Zum Beitreten braucht man ein Konto, und die Leute müssen ihre E-Mail-Adresse bestätigen, bevor sie etwas hinzufügen können.
+useCasesHeading: Wo ein bisschen Ordnung hilft
+faq:
+  heading: Fragen
+  items:
+    - q: Können Betrachter Ausgaben hinzufügen?
+      a: Nein. Betrachter sehen alles und ändern nichts. Sie können keine Ausgaben oder Listen hinzufügen oder bearbeiten, niemanden einladen und keine Einstellungen ändern.
+    - q: Kann man die Gruppe verlassen, solange man Geld schuldet?
+      a: Nein. Eine Gruppe verlässt man erst, wenn man in keiner Währung mehr Geld schuldet oder bekommt. Rechne zuerst ab, dann geh.
+    - q: Was passiert, wenn eine Gruppe geschlossen wird?
+      a: Niemand kann sie wieder öffnen. Nur Admins können eine Gruppe schließen und müssen zur Bestätigung den Namen der Gruppe eintippen, und danach ist die Gruppe für alle nicht mehr verfügbar. Willst du nur Änderungen stoppen, sperre sie. Willst du sie nur von deinem eigenen Dashboard loswerden, archiviere sie.
+    - q: Kann ich eine Sperre rückgängig machen?
+      a: Ja. Ein Admin kann die Gruppe entsperren, und Änderungen sind wieder möglich.
+    - q: Muss ich Leute freigeben, bevor sie beitreten?
+      a: Nur, wenn du willst. Neue Gruppen starten mit Offener Zusammenarbeit, wo Leute, die den Link nutzen, automatisch beitreten. Schalte die Freigabe durch Admins ein oder wähle Verwaltete Gruppe, und jede Person wartet, bis ein Admin sie hereinlässt.
+    - q: Wie viele Leute passen in eine Gruppe?
+      a: Bis zu 50.

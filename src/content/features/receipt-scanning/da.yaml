@@ -1,0 +1,78 @@
+translatedFrom: "42f5cf35"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.read-by-googles-ai
+  - receipt-attachments.keep-the-receipt
+meta:
+  title: Scan en kvittering for at tilføje en udgift | Side Badger
+  description: Lad grævlingen læse kvitteringen. Den udfylder total, dato og sted, så du kan tjekke dem, uden scanningskreditter. Googles AI-tjeneste læser billedet.
+h1: Scan en kvittering, tjek detaljerne, del den
+navLabel: Kvitteringsscanning
+lead: Lad grævlingen læse kvitteringen, og tjek dens lektier. Tilføj et billede til en ny udgift, så udfylder Side Badger total, dato og sted, så du kan tjekke dem. Så [deler du den](page:feature/split-expenses) som enhver anden udgift. Scanning er gratis, uden scanningskreditter. Den udfylder én udgift og deler ikke regningen op efter vare. Kvitteringsbilleder læses af Googles AI-tjeneste.
+cta:
+  heading: Tag et billede. Tjek det. Del det.
+  body: Opret en gratis konto, start en gruppe, og tilføj en udgift med et kvitteringsbillede. Se, hvad der bliver udfyldt, ret det, der er skævt, og gem, når du er tilfreds.
+problem:
+  heading: Ingen gider skrive en kvittering ind i taxakøen
+  body: Ture og store aftener kommer med papir. Middagen, taxaen, den runde, der blev til seks. At skrive hver enkelt ind på en telefon med kolde tommelfingre og en kø bag sig er sådan, udgifter bliver glemt. Så Side Badger læser kvitteringen for dig. Den laver første udkast, og du tjekker. Det passer godt til [gruppeture](page:use-case/group-trips) og [begivenheder og fester](page:use-case/events-and-celebrations), hvor kvitteringerne hober sig op hurtigere, end nogen gider tage sig af dem.
+workflow:
+  heading: Fra billede til udgift i tre trin
+  steps:
+    - title: Tilføj en kvittering til en ny udgift
+      body: Start en ny udgift, og tryk på **Scan kvittering**, eller brug hurtighandlingen **Scan kvittering** på dit dashboard. Tag et billede, eller vælg et, du allerede har. **Tilføj kvittering eller vedhæftet fil** i formularen virker også.
+    - title: Lad den læse kvitteringen
+      body: Formularen siger **Analyserer kvittering...**, mens Side Badgers AI læser billedet. Så udfylder den det, den fandt, f.eks. beskrivelse, total, valuta, dato, klokkeslæt og sted. Det, du allerede har skrevet, bliver ikke rørt.
+      shot: S09
+      shotAlt: Formularen til en ny udgift, der viser Analyserer kvittering..., og derefter den samme formular med detaljerne udfyldt
+    - title: Tjek den, og del den så
+      body: Sammenlign formularen med papiret. Ret det, der er forkert, sig, hvem der betalte, og hvem der delte udgiften, vælg, hvordan den deles, og gem. Udgiften findes ikke, før du gør det. [Del udgifter](page:feature/split-expenses) gennemgår delingen.
+options:
+  heading: Muligheder
+  items: []
+sections:
+  - heading: Hvad den udfylder
+    body: Tilføj et kvitteringsbillede til en ny udgift, så kan disse felter blive udfyldt. Hvem der betalte, hvem der delte udgiften, og hvordan den deles, er stadig op til dig.
+    items:
+      - En **beskrivelse** af udgiften.
+      - "**Totalen**."
+      - "**Valutaen**, hvis din gruppe tillader det."
+      - "**Datoen** og **klokkeslættet**."
+      - "**Stedet**."
+      - En tekstkopi af kvitteringen i **noterne**, til når papirkvitteringen falmer eller havner i vasketøjet.
+  - heading: Hvad du stadig tjekker
+    body: Det hele. Se det, den udfylder, som et udkast. Tjek totalen mod papiret, og så valutaen, datoen og stedet. Slørede billeder og krøllet papir kan narre enhver læser, og vi lover ikke, at den får hver kvittering rigtig, så kig, før du gemmer. Er noget forkert, så skriv ind over det. Hvis kvitteringen er i yen, og gruppen gør op i pund, forklarer [flere valutaer](page:feature/multiple-currencies), hvad der sker derefter.
+  - heading: Behold kvitteringen sammen med udgiften
+    body: Scannet eller ej kan en kvittering blive hos udgiften. Vedhæft fotos eller PDF'er, op til tre pr. udgift og op til 10 MB hver. Gruppens medlemmer ser dem på udgiften. Billeder vises som miniaturer, der åbner i en fremviser, og PDF'er åbner som links. Det foto, du scanner, bliver også vedhæftet, medmindre du fjerner det, før du gemmer. Når nogen spørger, hvad den middag egentlig kostede, ligger beviset lige der.
+  - heading: Hvor din kvittering havner
+    body: Kvitteringsbilleder læses af Googles AI-tjeneste. For at udfylde formularen læses billedet af Google Vertex AI (Gemini) i Googles multiregion i USA. Tilføj et billede til en ny udgift, så bliver det læst. En PDF eller et foto, der tilføjes en udgift, som allerede findes, bliver gemt uden at blive læst. Vedhæftede kvitteringer kan ses af gruppens medlemmer, så hvis en kvittering viser noget, du hellere vil holde for dig selv, så spring fotoet over, og skriv den udgift ind i hånden.
+limits:
+  heading: Grænser
+  items:
+    - Kun billeder. JPEG, PNG og WebP, og HEIC, når det er konverteret. PDF'er kan vedhæftes en udgift, men bliver ikke læst.
+    - Scanning er kun til nye udgifter. På en eksisterende udgift kan du vedhæfte kvitteringer, men intet bliver læst.
+    - Den udfylder kun de felter, du ikke har rørt, og valutaen kun hvis din gruppe tillader det.
+    - Den deler ikke efter vare og tildeler ikke varelinjer til personer. Den udfylder én udgift, og du deler den som sædvanligt.
+    - Der er intet løfte om, at det, den udfylder, er rigtigt, eller at scanning virker hver gang. Tjek, før du gemmer, og tilføj udgiften i hånden, hvis scanning fejler eller ikke er tilgængelig.
+    - En udgift rummer op til tre vedhæftede filer, hver på op til 10 MB, som JPEG, PNG, WebP, HEIC eller PDF.
+    - Kvitteringsbilleder læses af Google Vertex AI (Gemini) i Googles multiregion i USA, og vedhæftede kvitteringer kan ses af gruppens medlemmer.
+useCasesHeading: Hvor kvitteringerne hober sig op
+faq:
+  heading: Spørgsmål
+  items:
+    - q: Kan den dele en kvittering op efter vare?
+      a: Nej. Den udfylder udgiften, herunder totalen, og du deler den ligeligt, efter nøjagtige beløb eller i procent. Til en regning, hvor alle bestilte forskelligt, kan du indtaste, hvad hver person skylder, som nøjagtige beløb. [Del udgifter](page:feature/split-expenses) har detaljerne.
+    - q: Kan den læse en PDF?
+      a: Nej. Du kan vedhæfte en PDF til en udgift, så den følger med tallene, men kun billeder bliver læst.
+    - q: Er der en grænse for scanninger?
+      a: Der er ingen scanningskreditter, der kan løbe tør, og scanning er gratis. Filer har grænser, nemlig op til tre vedhæftede filer pr. udgift og 10 MB hver. [Hvad gratis dækker](page:pricing) har resten.
+    - q: Hvem kan se min kvittering?
+      a: Gruppens medlemmer kan se de kvitteringer, der er vedhæftet en udgift. Kvitteringsbilleder læses også af Googles AI-tjeneste, og det er sådan, formularen bliver udfyldt.
+    - q: Kan jeg scanne en kvittering til en udgift, jeg allerede har tilføjet?
+      a: Nej, scanning er til nye udgifter. Du kan stadig vedhæfte en kvittering til en eksisterende udgift, og den bliver gemt uden at blive læst.
+    - q: Hvad hvis den udfylder noget forkert?
+      a: Skriv ind over det. Hvert felt kan redigeres, til du gemmer, og du bør tjekke dem alle alligevel. Hvis scanning fejler eller ikke er tilgængelig, så tilføj udgiften i hånden som normalt.

@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Kalkulator bagi sewa: luas kamar atau penghasilan | Side Badger"
+  description: "Kamar lebih luas, bagian lebih besar? Hitung bayaran tiap teman serumah menurut ukuran kamar atau penghasilan. Di peramban: tak ada yang disimpan atau dikirim."
+h1: "Kalkulator bagi sewa"
+navLabel: "Kalkulator bagi sewa"
+lead: "Kamar tidur lebih besar, bagian lebih besar? Masukkan sewanya dan lihat berapa yang dibayar tiap orang, menurut ukuran kamar atau penghasilan, sampai ke sen. Kalkulator ini berjalan di peramban Anda, tidak menyimpan apa pun, dan tidak memindahkan uang. Saat rumah ingin hitungannya tersimpan, [bagi pengeluaran](page:feature/split-expenses) di Side Badger dan salin sewanya tiap bulan."
+cta:
+  heading: "Tetapkan persentasenya sekali. Salin selamanya."
+  body: "Kalkulator ini melupakan semuanya saat tab ditutup, persis seperti teman serumah yang yakin sekali sudah membayar tagihan internet. Grup di Side Badger menyimpan sewa, tagihan, dan siapa yang sudah membayar apa. Gratis, tanpa iklan, tanpa batas harian."
+sections:
+  - heading: "Dua cara membagi sewa"
+    items:
+      - "**Menurut ukuran kamar.** Sebagian sewa membayar dapur, kamar mandi, dan ruang tamu, yang dipakai semua orang. Anda yang menentukan bagian itu (awalnya 40%) dan bagian itu dibagi rata. Sisanya menurut luas kamar tidur, sehingga kamar besar membayar lebih dan kamar sempit mendapat diskon yang pantas didapatnya."
+      - "**Menurut penghasilan.** Setiap orang membayar bagian sewa yang setara dengan bagiannya dari total penghasilan. Tambahkan tagihan bersama dan tagihan itu mengikuti bagian yang sama."
+  - heading: "Cara hitungannya bekerja"
+    body: "Setiap orang mendapat bagian persis, lalu persentase bulat, karena bilangan bulat lebih mudah diketik dan lebih mudah diperdebatkan. Pembulatannya memakai metode sisa terbesar: setiap orang mendapat bilangan bulat di bawah bagiannya, dan poin yang tersisa diberikan kepada yang kehilangan paling banyak. Persentasenya selalu berjumlah 100. Di apartemen di bawah, 40% bersama itu menjadi 13,33% per orang. Kamar Priya 16 dari 38 m² apartemen itu, jadi 60% × 16/38 adalah 25,26%, ditambah 13,33% menjadi 38,6%, yang dibulatkan menjadi 39%. Tom dan Aisha mendapat 32% dan 29%, dan 39 + 32 + 29 adalah 100. Setiap jumlah adalah persentase itu dari sewa: 39% dari £1.950 adalah £760,50."
+  - heading: "Lalu ketik di Side Badger"
+    body: "Untuk cerita lengkapnya, termasuk meteran, lihat [cara membagi sewa menurut ukuran kamar](page:guide/how-to-split-rent-by-room-size), atau, bagi pasangan, [pasangan yang berpenghasilan lebih besar](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+    items:
+      - "**Tambahkan sewanya.** Di grup Anda, pilih **Tambah Pengeluaran**, pilih siapa yang membayar pemilik rumah di bawah **Siapa yang membayar?**, dan biarkan semua orang tetap terpilih di bawah **Dibagi antara**."
+      - "**Pilih Persentase.** Di bawah **Cara membagi**, pilih **Persentase** dan ketik persentase bulatnya. Formulir akan menandainya jika totalnya bukan 100."
+      - "**Salin bulan depan.** Buka sewa bulan lalu dan pilih **Salin pengeluaran**. Pembagiannya ikut tersalin."
+  - heading: "Yang tidak dilakukan kalkulator ini"
+    items:
+      - "**Mengukur kamar Anda.** Luas lantai hanyalah titik awal. Kamar dengan kamar mandi dalam lebih berharga daripada kamar seluas itu tanpanya, dan kamar sempit yang cuma muat satu kasur dan satu kursi penuh harap bernilai lebih rendah."
+      - "**Menentukan apa yang dihitung sebagai penghasilan.** Gaji bersih atau kotor, gaji tetap atau kerja sampingan: grup yang memutuskan. Pakai periode yang sama untuk semua orang."
+      - "**Menyimpan apa pun.** Tutup tab dan angkanya hilang. Untuk menyimpannya, salin tautannya. Tautan itu memuat angka Anda setelah tanda #, yang tidak pernah dikirim peramban ke server, dan siapa pun yang memilikinya bisa membacanya."
+      - "**Memindahkan uang.** Anda membayar pemilik rumah dengan cara apa pun yang disuka."
+      - "**Mencampur mata uang, atau melewati batas.** Pilih satu mata uang. Kalkulator menerima 2 sampai 10 orang dan sewa hingga 999.999,99, seperti di aplikasi."
+exampleAfter: 2
+example:
+  heading: "Satu apartemen, satu bulan"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "Sewa"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "Tagihan listrik"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "Internet"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Pertanyaan"
+  items:
+    - q: "Mana yang lebih adil, ukuran kamar atau penghasilan?"
+      a: "Tak ada yang selalu lebih adil. Ukuran kamar cocok untuk teman serumah yang membayar ruang tempat mereka tidur. Penghasilan cocok untuk pasangan dan teman dengan gaji yang sangat berbeda. Sepakati sebelum hari bayar sewa pertama, bukan sesudahnya."
+    - q: "Apakah tagihannya dibagi dengan cara yang sama?"
+      a: "Untuk teman serumah, biasanya tidak. Semua orang memakai listrik dan internet, jadi bagi rata lebih sederhana, seperti pada contoh. Menurut penghasilan, kalkulator memberi tagihan bagian yang sama dengan sewanya."
+    - q: "Bisakah saya memakai kaki persegi?"
+      a: "Bisa. Pilih ft² dan ketik luasnya dalam kaki persegi. Satuan ini hanya label, dan hasil bagiannya sama selama semua orang memakai satuan yang sama."
+    - q: "Apakah kalkulatornya gratis?"
+      a: "Ya. Gratis. Tanpa iklan. Tanpa batas harian. Anda juga tidak perlu akun."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name

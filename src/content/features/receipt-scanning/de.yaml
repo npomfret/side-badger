@@ -1,0 +1,78 @@
+translatedFrom: "42f5cf35"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.read-by-googles-ai
+  - receipt-attachments.keep-the-receipt
+meta:
+  title: Beleg scannen und Ausgabe hinzufügen | Side Badger
+  description: Lass den Dachs den Beleg lesen. Er trägt Summe, Datum und Ort zum Prüfen ein, ohne Scan-Guthaben. Das Bild liest der KI-Dienst von Google.
+h1: Beleg scannen, Details prüfen, teilen
+navLabel: Belege scannen
+lead: Lass den Dachs den Beleg lesen, und kontrolliere seine Hausaufgaben. Füge einer neuen Ausgabe ein Foto hinzu, und Side Badger trägt Summe, Datum und Ort zum Prüfen ein. Dann [teilst du sie](page:feature/split-expenses) wie jede andere Ausgabe. Das Scannen ist kostenlos, ohne Scan-Guthaben. Es füllt eine Ausgabe aus und teilt die Rechnung nicht nach Posten auf. Belegbilder liest der KI-Dienst von Google.
+cta:
+  heading: Knipsen. Prüfen. Teilen.
+  body: Erstelle ein kostenloses Konto, starte eine Gruppe und füge eine Ausgabe mit einem Belegfoto hinzu. Sieh, was eingetragen wird, ändere, was nicht stimmt, und speichere, wenn du zufrieden bist.
+problem:
+  heading: Niemand will in der Taxischlange einen Beleg abtippen
+  body: "Reisen und große Abende kommen mit Papier daher. Das Abendessen, das Taxi, die Runde, aus der sechs wurden. Jeden Beleg mit kalten Daumen und einer Schlange hinter dir ins Handy zu tippen, ist der Weg, auf dem Ausgaben vergessen werden. Also liest Side Badger den Beleg für dich: den ersten Entwurf macht es, das Kontrollieren bleibt bei dir. Das passt zu [Gruppenreisen](page:use-case/group-trips) und [Events und Feiern](page:use-case/events-and-celebrations), wo sich die Belege schneller stapeln, als sich irgendjemand darum kümmern will."
+workflow:
+  heading: Vom Foto zur Ausgabe in drei Schritten
+  steps:
+    - title: Füge einer neuen Ausgabe einen Beleg hinzu
+      body: Starte eine neue Ausgabe und tippe auf **Beleg scannen**, oder nutze die Schnellaktion **Beleg scannen** auf deinem Dashboard. Mach ein Foto oder wähle eines, das du schon hast. **Beleg oder Anhang hinzufügen** im Formular funktioniert auch.
+    - title: Den Beleg lesen lassen
+      body: Das Formular zeigt **Beleg wird analysiert...**, während die KI von Side Badger das Bild liest. Dann trägt sie ein, was sie gefunden hat, etwa die Beschreibung, die Summe, die Währung, das Datum, die Uhrzeit und den Ort. Was du schon getippt hast, bleibt unberührt.
+      shot: S09
+      shotAlt: Das Formular für eine neue Ausgabe mit „Beleg wird analysiert...“, danach dasselbe Formular mit den eingetragenen Details
+    - title: Prüfen, dann teilen
+      body: Vergleiche das Formular mit dem Papier. Korrigiere, was nicht stimmt, gib an, wer bezahlt hat und wer die Kosten teilt, wähle die Aufteilung und speichere. Die Ausgabe existiert erst, wenn du das tust. [Ausgaben teilen](page:feature/split-expenses) erklärt das Teilen.
+options:
+  heading: Optionen
+  items: []
+sections:
+  - heading: Was eingetragen wird
+    body: Füge einer neuen Ausgabe ein Belegbild hinzu, und diese Felder können sich füllen. Wer bezahlt hat, wer die Kosten teilt und wie aufgeteilt wird, bleibt deine Sache.
+    items:
+      - Eine **Beschreibung** für die Ausgabe.
+      - Die **Summe**.
+      - Die **Währung**, wenn deine Gruppe es erlaubt.
+      - Das **Datum** und die **Uhrzeit**.
+      - Der **Ort**.
+      - Eine Textkopie des Belegs in den **Notizen**, falls der Papierbeleg verblasst oder in die Wäsche gerät.
+  - heading: Was du weiterhin prüfst
+    body: Alles. Behandle das Eingetragene als Entwurf. Prüfe die Summe am Papier, dann Währung, Datum und Ort. Unscharfe Fotos und zerknittertes Papier können beim Lesen jeden täuschen, und wir versprechen nicht, dass jeder Beleg richtig erkannt wird, also sieh bitte nach, bevor du speicherst. Wenn etwas nicht stimmt, überschreibe es. Ist der Beleg in Yen und die Gruppe rechnet in Pfund ab, erklärt [Mehrere Währungen](page:feature/multiple-currencies), wie es weitergeht.
+  - heading: Den Beleg bei der Ausgabe behalten
+    body: Gescannt oder nicht, ein Beleg kann bei der Ausgabe bleiben. Hänge Fotos oder PDFs an, bis zu drei pro Ausgabe und je bis zu 10 MB. Gruppenmitglieder sehen sie an der Ausgabe. Bilder erscheinen als Vorschaubilder, die sich in einer Ansicht öffnen, und PDFs öffnen sich als Links. Das Foto, das du scannst, wird ebenfalls angehängt, es sei denn, du entfernst es vor dem Speichern. Wenn jemand fragt, was das Abendessen wirklich gekostet hat, liegt der Beweis gleich daneben.
+  - heading: Wohin dein Beleg geht
+    body: Belegbilder liest der KI-Dienst von Google. Um das Formular auszufüllen, wird das Bild von Google Vertex AI (Gemini) in Googles US-Multiregion gelesen. Füge einer neuen Ausgabe ein Bild hinzu, und es wird gelesen. Ein PDF oder ein Foto, das einer bereits bestehenden Ausgabe hinzugefügt wird, wird gespeichert, ohne gelesen zu werden. Angehängte Belege sind für die Mitglieder der Gruppe sichtbar. Zeigt ein Beleg etwas, das du lieber nicht teilen möchtest, lass das Foto weg und tipp die Ausgabe von Hand ein.
+limits:
+  heading: Grenzen
+  items:
+    - Nur Bilder. JPEG, PNG und WebP, und HEIC, sobald es konvertiert ist. PDFs können an eine Ausgabe angehängt werden, werden aber nicht gelesen.
+    - Gescannt wird nur bei neuen Ausgaben. An einer bestehenden Ausgabe kannst du Belege anhängen, aber nichts wird gelesen.
+    - Es füllt nur die Felder, die du nicht angefasst hast, und die Währung nur, wenn deine Gruppe es erlaubt.
+    - Es teilt nicht nach Posten und weist Personen keine einzelnen Positionen zu. Es füllt eine Ausgabe aus, und die teilst du wie gewohnt.
+    - Es gibt kein Versprechen, dass das Eingetragene stimmt oder dass das Scannen jedes Mal klappt. Prüfe vor dem Speichern, und füge die Ausgabe von Hand hinzu, wenn das Scannen fehlschlägt oder nicht verfügbar ist.
+    - Eine Ausgabe fasst bis zu drei Anhänge, je bis zu 10 MB, als JPEG, PNG, WebP, HEIC oder PDF.
+    - Belegbilder werden von Google Vertex AI (Gemini) in Googles US-Multiregion gelesen, und angehängte Belege sind für die Mitglieder der Gruppe sichtbar.
+useCasesHeading: Wo sich die Belege stapeln
+faq:
+  heading: Fragen
+  items:
+    - q: Kann es einen Beleg nach Posten teilen?
+      a: Nein. Es füllt die Ausgabe aus, einschließlich der Summe, und die teilst du gleichmäßig, nach genauen Beträgen oder in Prozent. Bei einer Rechnung, auf der alle etwas anderes bestellt haben, gib als genaue Beträge ein, was jede Person schuldet. [Ausgaben teilen](page:feature/split-expenses) hat die Details.
+    - q: Kann es ein PDF lesen?
+      a: Nein. Du kannst ein PDF an eine Ausgabe anhängen, damit es bei den Zahlen bleibt, aber gelesen werden nur Bilder.
+    - q: Gibt es ein Limit für Scans?
+      a: Es gibt kein Scan-Guthaben, das sich aufbrauchen kann, und das Scannen ist kostenlos. Dateien haben allerdings Grenzen, nämlich bis zu drei Anhänge pro Ausgabe und je 10 MB. Den Rest findest du unter [was kostenlos abgedeckt ist](page:pricing).
+    - q: Wer kann meinen Beleg sehen?
+      a: Mitglieder der Gruppe können die an einer Ausgabe angehängten Belege sehen. Belegbilder liest außerdem der KI-Dienst von Google, so wird das Formular ausgefüllt.
+    - q: Kann ich einen Beleg für eine Ausgabe scannen, die ich schon hinzugefügt habe?
+      a: Nein, das Scannen gilt nur für neue Ausgaben. Du kannst aber weiterhin einen Beleg an eine bestehende Ausgabe anhängen, er wird gespeichert, ohne gelesen zu werden.
+    - q: Was, wenn es etwas Falsches einträgt?
+      a: Überschreibe es. Jedes Feld bleibt bis zum Speichern bearbeitbar, und du solltest ohnehin alle prüfen. Schlägt das Scannen fehl oder ist es nicht verfügbar, füge die Ausgabe wie gewohnt von Hand hinzu.

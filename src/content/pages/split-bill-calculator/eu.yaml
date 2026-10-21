@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Fakturak banatzeko kalkulagailua: nork nori zor | Side Badger"
+  description: "Nork ordaindu, nork zor, nork nori ordaindu: segundotan argituta. Banatu berdin, zehatz edo ehunekoka. Doakoa, nabigatzailean, ezer gorde edo bidali gabe."
+h1: "Fakturak banatzeko kalkulagailua"
+navLabel: "Fakturak banatzeko kalkulagailua"
+lead: "Idatzi nork zer ordaindu duen, eta kalkulagailuak esango dizu nork nori zor dion, dena kitatzeko ordainketa-zerrenda labur batekin. Zure nabigatzailean dabil, ez du ezer gordetzen eta ez du dirurik mugitzen. Zure taldeak kontuak fitxa baino gehiago iraun dezan nahi badu, Side Badger-ek kalkulu berberak egiten ditu [gastuak banatzean](page:feature/split-expenses) eta [kitatzean](page:feature/settle-up), eta gorde egiten ditu."
+cta:
+  heading: "Kalkuluak gustatu zaizkizu? Gorde itzazu."
+  body: "Kalkulagailu honek dena ahazten du fitxa ixten duzunean, aurreko aldian ordaindu zuela ziur zegoen horrek bezala. Side Badger-eko talde batek gastuak gordetzen ditu, denen saldoa eguneratzen du eta ordainketak erregistratzen ditu. Doakoa da, iragarkirik gabe eta eguneko mugarik gabe."
+sections:
+  - heading: "Kalkulua nola egiten den"
+    body: "Gastu bakoitzeko, kalkulagailuak pertsona bakoitzaren zatia kalkulatzen du. Aukeratzen dituzun pertsonen artean banatu dezakezu berdin, zenbateko zehatzen arabera edo ehunekoen arabera. Pertsona bakoitzaren saldoa, gero, ordaindu duena ken zor duena da. Gehi ikurrak taldeak pertsonari zor diola esan nahi du, eta ken ikurrak pertsonak taldeari zor diola. Saldoek beti zero batzen dute, norbaiti zor zaion guztia beste batzuek zor dutelako."
+  - heading: "Zergatik den laburra ordainketen zerrenda"
+    body: "Inork ez du tiketa bakoitza bere aldetik kitatu beharrik. Saldo guztiak ezagutzen direnean, kalkulagailuak gehien zor duen pertsona gehien zor zaion pertsonarekin parekatzen du, ordainketa batek kitatu dezakeen guztia kitatzen du, eta zerrendan behera jarraitzen du denak zeroan egon arte. Saldoa duten pertsonak baino ordainketa bat gutxiago behar ditu gehienez, eta sarritan fakturaz faktura kitatzeak baino gutxiago. Ordainketa-zerrenda labur bat ematen du, eta ez du agintzen posible den laburrena denik."
+  - heading: "Kalkulagailuak egiten ez duena"
+    items:
+      - "**Moneta bat baino gehiago kudeatu.** Aukeratu bat eta erabili kalkulu osoan. Aplikazioak moneta bakoitzeko saldo bereizi bat gordetzen du, eta gastu bat egungo kanbio-tasa batekin bihur dezake, aldatu dezakezun tasa batekin."
+      - "**Ezer gorde.** Itxi fitxa eta zifrak desagertu egiten dira. Gordetzeko, kopiatu esteka. Zure zifrak # ikurraren ondoren daramatza, eta zure nabigatzaileak ez du inoiz zerbitzari batera bidaltzen; bidaltzen diozun edonork irakur ditzake."
+      - "**Dirua mugitu.** Nork nori ordaindu behar dion esaten dizu. Zuek ordaintzen duzue nahi duzuen moduan, eta gero ordainketa aplikazioan erregistratzen duzue, zure taldeak bertan eramaten badu kontua."
+      - "**Hondar zentimoa zoriz aukeratu.** Faktura bat zehazki zatitzen ez denean, soberan geratzen diren zentimoak zerrendako lehen pertsonei ematen zaizkie, guztizkoek bat etor daitezen. Aplikazioan, hondar zentimoa pertsona bati ematen zaio zoriz, beraz ez da beti berbera izaten."
+      - "**Mugak gainditu.** Kalkulagailuak 2 eta 20 pertsona artean onartzen ditu, eta gastu batek gehienez 999.999,99 izan dezake, aplikazioan bezala."
+exampleAfter: 2
+example:
+  heading: "Asteburu luze bat, lau lagun"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Landetxea"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "Erosketak"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "Taxia"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "Taberna"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: "Galderak"
+  items:
+    - q: "Kalkulagailua doakoa al da?"
+      a: "Bai. Doakoa. Iragarkirik ez. Eguneko mugarik ez. Ez duzu kontu bat behar ere."
+    - q: "Idazten dudana gordetzen al du?"
+      a: "Ez. Ez da ezer gordetzen edo inora bidaltzen. Zifrak gordetzeko, erabili “Kopiatu esteka” eta gorde esteka nonbait."
+    - q: "Nork ikus dezake kopiatzen dudan esteka?"
+      a: "Esteka duen edonork. Zifrak estekan bertan daude, # ikurraren ondoren, beraz partekatu ikusi behar dituzten pertsonekin bakarrik."
+    - q: "Dirua mugitzen al du?"
+      a: "Ez. Nork nori ordaindu behar dion kalkulatzen du, eta zuek ordaintzen duzue nahi duzuen moduan. Side Badger-ek ere ez du inoiz zure dirua ukitzen. Ikusi [kitatzea](page:feature/settle-up)."
+    - q: "Bi monetatan ordaindutako bidaia bat banatu dezaket?"
+      a: "Hemen ez, kalkulu batek moneta bakarra duelako. Talde batean, moneta bakoitzak bere saldoa du. Ikusi [moneta anitz](page:feature/multiple-currencies)."
+    - q: "Zer gertatzen da zenbatekoak ez badatoz bat?"
+      a: "Kalkulagailuak gastuaren azpian esaten du, eta ez du emaitzarik erakusten bat etorri arte. Zenbateko zehatzek guztizkoa osatu behar dute, eta ehunekoek 100."

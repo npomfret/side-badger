@@ -1,0 +1,78 @@
+translatedFrom: "42f5cf35"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.read-by-googles-ai
+  - receipt-attachments.keep-the-receipt
+meta:
+  title: "Harcama eklemek için fiş tarayın | Side Badger"
+  description: "Fişi porsuk okusun. Toplamı, tarihi ve yeri sizin kontrol etmeniz için doldurur; tarama kredisi yok. Görseli Google'ın yapay zekâ hizmeti okur."
+h1: "Fişi tarayın, ayrıntıları kontrol edin, bölüşün"
+navLabel: "Fiş tarama"
+lead: "Fişi porsuk okusun, ödevini de siz kontrol edin. Yeni bir harcamaya fotoğraf ekleyin; Side Badger toplamı, tarihi ve yeri sizin kontrol etmeniz için doldursun. Sonra onu başka her harcama gibi [bölüşürsünüz](page:feature/split-expenses). Tarama ücretsizdir, tarama kredisi yoktur. Tek bir harcamayı doldurur, hesabı kalemlere göre bölmez. Fiş görsellerini Google'ın yapay zekâ hizmeti okur."
+cta:
+  heading: "Çekin. Kontrol edin. Bölüşün."
+  body: "Ücretsiz bir hesap oluşturun, bir grup kurun ve fiş fotoğrafıyla bir harcama ekleyin. Neleri doldurduğunu görün, yanlış olanı düzeltin ve memnun kalınca kaydedin."
+problem:
+  heading: "Kimse taksi kuyruğunda bir fişi elle yazmak istemez"
+  body: "Geziler ve büyük geceler kâğıtla gelir. Akşam yemeği, taksi, altıya dönüşen tur. Soğuk başparmaklarla, arkanızda bir kuyruk varken her birini telefona yazmak, harcamaların unutulma yoludur. Bu yüzden Side Badger fişi sizin için okur. İlk taslağı o yapar, kontrolü siz. Fişlerin kimsenin başa çıkmak istemeyeceği hızla yığıldığı [grup gezileri](page:use-case/group-trips) ve [etkinlikler ve kutlamalar](page:use-case/events-and-celebrations) için uygundur."
+workflow:
+  heading: "Üç adımda fotoğraftan harcamaya"
+  steps:
+    - title: "Yeni bir harcamaya fiş ekleyin"
+      body: "Yeni bir harcama başlatın ve **Fişi tara**'ya dokunun ya da panonuzdaki **Fişi tara** hızlı eylemini kullanın. Bir fotoğraf çekin veya var olan birini seçin. Formdaki **Fiş veya ek ekle** de işe yarar."
+    - title: "Fişi okumasına izin verin"
+      body: "Side Badger'ın yapay zekâsı görseli okurken form **Makbuz analiz ediliyor...** der. Sonra bulduklarını doldurur: açıklama, toplam, para birimi, tarih, saat ve yer gibi. Önceden yazdığınız hiçbir şeye dokunulmaz."
+      shot: S09
+      shotAlt: "Makbuz analiz ediliyor... yazan yeni harcama formu, ardından aynı formun doldurulmuş ayrıntılarla hali"
+    - title: "Kontrol edin, sonra bölüşün"
+      body: "Formu kâğıtla karşılaştırın. Yanlış olanı düzeltin, kimin ödediğini ve masrafı kimlerin paylaştığını söyleyin, nasıl bölüşüleceğini seçin ve kaydedin. Siz kaydedene kadar harcama yoktur. Bölüşme için [harcamaları bölüşme](page:feature/split-expenses) sayfasına bakın."
+options:
+  heading: "Seçenekler"
+  items: []
+sections:
+  - heading: "Neleri doldurur"
+    body: "Yeni bir harcamaya fiş görseli ekleyin; şu alanlar dolabilir. Kimin ödediği, masrafı kimlerin paylaştığı ve nasıl bölüneceği yine size kalır."
+    items:
+      - "Harcama için bir **açıklama**."
+      - "**Toplam**."
+      - "**Para birimi**, grubunuz izin veriyorsa."
+      - "**Tarih** ve **saat**."
+      - "**Yer**."
+      - "Kâğıt fiş solduğunda ya da çamaşıra girdiğinde diye, fişin **notlar** bölümünde bir metin kopyası."
+  - heading: "Neleri yine de siz kontrol edersiniz"
+    body: "Hepsini. Doldurduğunu bir taslak olarak görün. Toplamı kâğıtla karşılaştırın, sonra para birimini, tarihi ve yeri. Bulanık fotoğraflar ve buruşuk kâğıtlar her okuyucuyu yanıltabilir ve her fişi doğru okuyacağına söz vermiyoruz; bu yüzden kaydetmeden önce lütfen bakın. Bir şey yanlışsa üzerine yazın. Fiş yen cinsindeyse ve grup sterlinle hesaplaşıyorsa, sonrasında ne olacağını [birden fazla para birimi](page:feature/multiple-currencies) sayfası anlatır."
+  - heading: "Fişi harcamayla birlikte tutun"
+    body: "Taranmış olsun olmasın, bir fiş harcamayla birlikte kalabilir. Harcama başına en fazla üç, her biri en fazla 10 MB olan fotoğraf veya PDF ekleyin. Grup üyeleri bunları harcamada görür. Görseller, bir görüntüleyicide açılan küçük resimler olarak, PDF'ler ise bağlantı olarak açılır. Taradığınız fotoğraf, kaydetmeden önce kaldırmazsanız ek olarak da eklenir. Biri o akşam yemeğinin gerçekte neye mal olduğunu sorduğunda kanıt tam orada."
+  - heading: "Fişiniz nereye gidiyor"
+    body: "Fiş görsellerini Google'ın yapay zekâ hizmeti okur. Formu doldurmak için görseli, Google'ın ABD çoklu bölgesindeki Google Vertex AI (Gemini) okur. Yeni bir harcamaya görsel ekleyin, okunur. Bir PDF ya da var olan bir harcamaya eklenen fotoğraf okunmadan saklanır. Eklenen fişleri grubun üyeleri görebilir; bu yüzden bir fiş paylaşmayı tercih etmeyeceğiniz bir şey gösteriyorsa fotoğrafı atlayın ve o harcamayı elle yazın."
+limits:
+  heading: "Sınırlar"
+  items:
+    - "Yalnızca görseller. JPEG, PNG ve WebP, bir de dönüştürüldükten sonra HEIC. PDF'ler bir harcamaya eklenebilir ama okunmaz."
+    - "Tarama yalnızca yeni harcamalar içindir. Var olan bir harcamaya fiş ekleyebilirsiniz ama hiçbir şey okunmaz."
+    - "Yalnızca dokunmadığınız alanları doldurur; para birimini de yalnızca grubunuz izin veriyorsa."
+    - "Kalemlere göre bölmez ve kalemleri kişilere atamaz. Tek bir harcamayı doldurur ve onu her zamanki gibi siz bölüştürürsünüz."
+    - "Doldurduğunun doğru olacağına ya da taramanın her seferinde çalışacağına dair bir söz yoktur. Kaydetmeden önce kontrol edin; tarama başarısız olursa ya da kullanılamıyorsa harcamayı elle ekleyin."
+    - "Bir harcama, her biri en fazla 10 MB olan JPEG, PNG, WebP, HEIC veya PDF biçiminde en fazla üç ek tutar."
+    - "Fiş görsellerini Google'ın ABD çoklu bölgesindeki Google Vertex AI (Gemini) okur ve eklenen fişleri grubun üyeleri görebilir."
+useCasesHeading: "Fişlerin yığıldığı yerler"
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Bir fişi kalemlere göre bölebilir mi?"
+      a: "Hayır. Toplam dahil harcamayı doldurur; onu eşit olarak, tam tutarlarla ya da yüzdeyle siz bölüştürürsünüz. Herkesin farklı sipariş verdiği bir hesap için, her kişinin borçlu olduğunu tam tutarlar olarak girin. Ayrıntılar [harcamaları bölüşme](page:feature/split-expenses) sayfasında."
+    - q: "Bir PDF'yi okuyabilir mi?"
+      a: "Hayır. Bir PDF'yi rakamlarla birlikte gitsin diye harcamaya ekleyebilirsiniz ama yalnızca görseller okunur."
+    - q: "Tarama için bir sınır var mı?"
+      a: "Bitecek tarama kredisi yoktur ve tarama ücretsizdir. Dosyaların sınırları vardır: harcama başına en fazla üç ek ve her biri 10 MB. Gerisi için [ücretsiz olanlar](page:pricing) sayfasına bakın."
+    - q: "Fişimi kimler görebilir?"
+      a: "Grubun üyeleri, bir harcamaya eklenen fişleri görebilir. Fiş görsellerini ayrıca Google'ın yapay zekâ hizmeti okur; form bu şekilde doldurulur."
+    - q: "Zaten eklediğim bir harcama için fiş tarayabilir miyim?"
+      a: "Hayır, tarama yeni harcamalar içindir. Var olan bir harcamaya yine de fiş ekleyebilirsiniz; okunmadan saklanır."
+    - q: "Yanlış bir şey doldurursa ne olur?"
+      a: "Üzerine yazın. Her alan siz kaydedene kadar düzenlenebilir kalır ve zaten hepsini kontrol etmelisiniz. Tarama başarısız olursa ya da kullanılamıyorsa harcamayı her zamanki gibi elle ekleyin."

@@ -1,0 +1,113 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Kā norēķināties pēc grupas ceļojuma | Side Badger"
+  description: "Norēķinieties, pirms visi izklīst. Desmit sapinušies parādi kļūst par četriem maksājumiem, kas tiek reģistrēti, kad nonāk, un der arī daļējs maksājums. Aprēķini piecu draugu grupai."
+h1: "Kā norēķināties pēc grupas ceļojuma"
+navLabel: "Norēķināties pēc ceļojuma"
+lead: "Norēķinieties, pirms visi izklīst. Pievienojiet pēdējo izdevumu, atveriet grupas atlikumus un samaksājiet to, ko esat parādā, no īsā saraksta, kā vēlaties. Tad reģistrējiet katru maksājumu Side Badger, lai atlikums nokārtojas visai grupai. Piecu draugu un piecu izdevumu gadījumā desmit sapinušies parādi samazinās līdz četriem maksājumiem."
+cta:
+  heading: "Aizveriet grāmatas, pirms ienāk ceļojuma fotogrāfijas"
+  body: "Izveidojiet bezmaksas kontu, sāciet grupu nākamajam ceļojumam un pievienojiet katras izmaksas, kad tās rodas. Īsais maksājumu saraksts jūs gaida, kad nonākat lidostā. Gribat vispirms redzēt, [kā darbojas norēķināšanās](page:feature/settle-up)?"
+sections:
+  - heading: "Pieci draugi, pieci izdevumi, viena izlidošanas zāle"
+    body: "Mo, Ines, Raf, Tess un Uma nedēļu pavadīja piekrastē. Mo rezervēja apartamentus un nopirka pārtiku, Ines samaksāja par braucienu ar laivu, un Raf nopirka lielās vakariņas. Tess kopā ar Uma un Mo paņēma taksi uz lidostu, jo Ines un Raf brauca ar vilcienu. Umas karte palika mājās, tāpēc viņa nesamaksāja par neko. Tie ir pieci izdevumi un kopā 1 700 €, un izlidošanas zālē neviens nevarēja pateikt, kurš ir uz plus."
+  - heading: "Desmit parādi, četri maksājumi"
+    body: "Apartamenti, laiva, vakariņas un pārtika tiek sadalīti vienādi uz pieciem. Tas ir 200 €, 50 €, 60 € un 18 € katram, tāpēc Ines un Raf ir parādā pa 328 €. Taksi dala trīs cilvēki pa 20 €, tāpēc Mo, Tess un Uma ir parādā 348 €. Mo samaksāja 1 090 € un ir parādā 348 €, tāpēc viņam pienākas 742 €. Visi pārējie samaksāja mazāk, nekā ir parādā. Umai trūkst 348 €, Tess 288 €, Ines 78 € un Raf 28 €, un kopā tas dod Mo 742 €. Ja katrs pāris norēķinātos tieši, sanāktu desmit atsevišķi parādi. Side Badger tā vietā iesaka četrus maksājumus, visus Mo."
+  - heading: "Norēķinieties, pirms visi izklīst"
+    body: "Labākais brīdis ir pēdējais vakars vai ceļš mājup, kamēr visi vēl ir vienā vietā un 28 € parādu ir viegli pieminēt. Vispirms pievienojiet katru izdevumu, taksi ieskaitot. Neviens nevar pamest grupu, kamēr viņam kāds ir parādā vai viņš ir parādā, tāpēc norēķins tāpat kādā brīdī ir jānoslēdz."
+    items:
+      - "**Pārbaudiet sarakstu.** Atveriet grupu un apskatiet **Bilances**. Pēc noklusējuma redzat parādus, kas skar jūs. Izvēlieties **Rādīt visu**, lai redzētu visas grupas sarakstu."
+      - "**Maksājiet, kā vēlaties.** Bankas pārskaitījums, skaidra nauda, pakalpojums, ko esat parādā kopš pagājušā atvaļinājuma. Side Badger naudu nepārvieto."
+      - "**Reģistrējiet to.** Izvēlieties **Norēķināties**. Sadaļā **Ātrais norēķins** katra poga ir viens no jūsu ieteiktajiem maksājumiem, un, izvēloties vienu, summa tiek aizpildīta. Laukā **Piezīme** ierakstiet, piemēram, „bankas pārskaitījums”, pārbaudiet **Datums** (tas nevar būt nākotnē) un izvēlieties **Ierakstīt norēķinu**."
+      - "**Vērojiet, kā nokārtojas.** Atlikums atjaunojas visiem. Kad pēdējais maksājums ir iekšā, **Bilances** rāda **Viss ir nokārtots!**"
+  - heading: "Maksāt daļu tagad, pārējo vēlāk"
+    body: "Uma šovakar var nosūtīt 200 €, bet pārējo mēneša beigās. Viņa reģistrē 200 €, un veidlapa brīdina, ka pēc tam viņa vēl būs parādā Mo 148 €, tas ir 348 € mīnus 200 €. Saglabājiet, un 148 € paliek viņas atlikumā, līdz viņa reģistrē pārējo. Brīdinājums darbojas arī otrādi. Ja liekā nulle pārvērš 348 € par 3 480 €, veidlapa saka, ka viņa ir parādā Mo tikai 348 € un ka saglabāšana radītu parādu pretējā virzienā. Izlabojiet nulli, pirms saglabājat."
+  - heading: "Kļūdu labošana un maksājumu svinēšana"
+    items:
+      - "**Nepareizs maksājums.** Maksājumu var rediģēt tikai tas, kas to reģistrēja. Viņš vai grupas administrators to var izdzēst, un tad to var reģistrēt vēlreiz."
+      - "**Maksājums, ko vērts pamanīt.** Katrs reģistrētais maksājums atrodas sadaļā **Norēķini** ar savu datumu un piezīmi, kur ikviens grupā to var redzēt un reaģēt. Mo var izvēlēties **Svinēt**, kad ierodas Umas pēdējie 148 €."
+      - "**Beigas.** Kad visi atlikumi ir nulle, administrators var bloķēt grupu, lai skaitļi paliktu nemainīgi."
+  - heading: "Ko Side Badger šeit nedara"
+    items:
+      - "Tas nekad nepārvieto naudu. Tam nav maksājumu saišu vai maksājumu pieprasījumu, tāpēc maksājums lietotnē ir ieraksts par maksājumu, kas veikts citur."
+      - "Tas nesūta atgādinājumus. Kavēta maksājuma pakaļdzīšanās joprojām ir jūsu ziņā."
+      - "Tas nenosaka termiņus. Kad jāsamaksā Umas atlikušie 148 €, grupai jāvienojas pašai."
+      - "Ieteiktie maksājumi ir īss saraksts, nevis solījums par īsāko iespējamo. Tie tiek aprēķināti katrā valūtā atsevišķi, tāpēc ceļojumam, kas apmaksāts eiro un mārciņās, ir saraksts katrai."
+exampleAfter: 2
+example:
+  heading: "Pieci draugi piekrastē"
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: "Apartamenti"
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: "Brauciens ar laivu"
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: "Lielās vakariņas"
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: "Lidostas taksi"
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: "Pārtikas pirkumi"
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: "Jautājumi"
+  items:
+    - q: "Kam jāreģistrē maksājums, maksātājam vai saņēmējam?"
+      a: "Maksājuma reģistrēšanai vajadzīga atļauja labot izdevumus, un veidlapa jautā **Kas samaksāja?** un **Kas saņēma maksājumu?** Vēlāk to var rediģēt tikai tas, kas to reģistrēja, tāpēc parasti vienkāršāk, ja to dara maksātājs, izmantojot ātrā norēķina pogu."
+    - q: "Ko darīt, ja ceļojums notika divās valūtās?"
+      a: "Atlikumi tiek uzturēti katrā valūtā, tāpēc parāds eiro paliek parāds eiro, un katrai valūtai ir savs īss saraksts, ja vien izdevumi netika konvertēti, kad tie tika ievadīti. [Vairākas valūtas](page:guide/how-to-split-a-trip-paid-in-several-currencies) parāda abus veidus."
+    - q: "Vai norēķināties ceļojuma laikā vai beigās?"
+      a: "Der abi. Katrs reģistrētais maksājums maina atlikumus, tāpēc maksājums ceļojuma vidū skaitās galīgajā sarakstā. Beigās ir vienkāršāk, jo [viss ceļojums](page:use-case/group-trips) ir vienuviet."

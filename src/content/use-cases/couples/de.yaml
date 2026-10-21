@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+meta:
+  title: Kosten als Paar teilen, 50/50 oder nach Einkommen | Side Badger
+  description: Teilt die langweiligen Kosten, ohne aus dem Date-Abend ein Quartals-Finanzmeeting zu machen. 50/50, nach Einkommen oder Rechnung für Rechnung. Kostenlos.
+h1: Kosten als Paar fair teilen
+navLabel: Paare
+lead: Teilt die langweiligen Kosten, ohne aus dem Date-Abend ein Quartals-Finanzmeeting zu machen. Side Badger führt eine laufende Rechnung für Miete, Rechnungen und Einkauf von **Paaren**, die sich ein Zuhause, ein Sofa und eine vage Erinnerung daran teilen, wer den Internetanschluss bezahlt hat. Teilt 50/50, nach Einkommen oder Rechnung für Rechnung, und seht, wer wem was schuldet.
+cta:
+  heading: Starte eine Gruppe für zwei
+  body: Erstelle ein Konto, mach eine Gruppe und schick der anderen Person den Einladungslink. Das Takeaway von heute Abend kann die erste Ausgabe sein.
+scenario:
+  heading: Fair muss nicht 50/50 heißen
+  body: Sam und Alex teilen sich ein Zuhause. Sam verdient mehr, deshalb haben die beiden vereinbart, dass Sam 60 % der Miete übernimmt und Alex 40 %. Sam zahlt den Vermieter, Alex macht den Einkauf, und beide sind ziemlich sicher, dass sich am Ende alles ausgleicht. „Ziemlich sicher“ ist der Weg, auf dem aus einer Notiz auf irgendjemandes Handy ein Dauerstreit wird. Mach also eine Gruppe für euch zwei, wähle den Namen, den dein Partner oder deine Partnerin sehen soll, und schick den Einladungslink oder QR-Code. Füge jede Ausgabe hinzu, wenn sie anfällt, sag, wer bezahlt hat und wie sie sich aufteilt, und lass die Gruppe mitzählen. Mach für jeden Urlaub eine eigene Gruppe (siehe [Gruppenreisen](page:use-case/group-trips)), damit die Flüge nicht bei den Lebensmitteln landen.
+sections:
+  - heading: 50/50, nach Einkommen oder Rechnung für Rechnung
+    body: Es gibt keine allgemein faire Aufteilung, nur die, der ihr beide zustimmt, am besten vor der ersten Rechnung statt nach dem ersten Seufzer. Das sind die üblichen drei.
+    items:
+      - "**50/50.** Wähle **Gleichmäßig**, und jede Person schuldet die Hälfte. Das passt zu gemeinsamen Kosten, wenn eure Einkommen nah beieinander liegen, und braucht überhaupt keine Rechnerei."
+      - "**Nach Einkommen.** Verdient eine Person mehr, teilt nach dem Anteil, den jede am Einkommen hat. Einigt euch zuerst, was zählt (üblich ist das Nettogehalt), addiert beide Beträge und teilt jeweils den eigenen durch die Summe. Bringt eine Person drei Teile nach Hause und die andere zwei, ist das 3 ÷ (3 + 2) = 60 %, also trägt eine Person 60 % und die andere 40 %. Rundet auf ganze Prozentzahlen und tragt sie unter **Prozentsatz** ein, wo sie zusammen 100 ergeben müssen. Euer Gehalt lässt sich nirgends eintragen, ihr tippt also immer nur die Prozentsätze."
+      - "**Rechnung für Rechnung.** Jede Ausgabe hat ihre eigene Aufteilung, ihr könnt also mischen: Miete nach Einkommen, Lebensmittel 50/50 und ein gemeinsames Geschenk mit **Genaue Beträge**, wenn jede Person selbst gewählt hat, was sie dazugibt."
+      - "**Wenn sich das Gehalt ändert,** nutzt ab der nächsten Ausgabe die neuen Prozentsätze. Frühere Ausgaben behalten die Aufteilung, mit der sie eingegeben wurden. Wie die Rechnung mit echten Gehaltsabrechnungen aussieht, steht in [So teilt ihr Rechnungen, wenn einer von euch mehr verdient](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: Der monatliche Kassensturz
+    body: Einmal im Monat oder immer dann, wenn es bei den Zahlen zu jucken anfängt, öffne die Gruppe und sieh unter **Salden** nach. Zu zweit gibt es pro Währung immer nur eine Zahlung, von der Person, die schuldet, an die, die etwas bekommt. Nehmen wir den Monat von Sam und Alex. Sam hat die Miete von 1.500 £ bezahlt, und Alex' 40 % davon sind 600 £. Alex hat 90 £ für Lebensmittel gezahlt, gleichmäßig geteilt, also macht Sams Hälfte 45 £ aus. Side Badger rechnet das eine gegen das andere auf, 600 £ abzüglich 45 £, und Alex zahlt Sam 555 £. Zahlt es, wie ihr wollt, per Banküberweisung, bar oder mit einem ausstehenden Gefallen, und erfasst es dann unter **Abrechnen**, damit der Saldo wieder auf null geht. Es gibt keine wiederkehrenden Rechnungen, also kopiere die Miete vom letzten Monat, ändere das Datum und mach weiter. Side Badger bewegt das Geld nicht und sendet keine Erinnerungen, das Anstupsen bleibt also euch überlassen.
+  - heading: Nur ihr zwei
+    body: Eine Gruppe aus zwei Personen hat zwei Mitglieder, und nur Mitglieder einer Gruppe können sie sehen. Die andere Person tritt mit dem Einladungslink oder QR-Code bei. Ein Link kann zwischen 15 Minuten und 5 Tagen gelten, wähle also den kürzesten, der ihr Zeit gibt, ihn zu nutzen. Ein neuer Link macht die alten nicht ungültig, lass sie also nicht in einem Chat liegen, in dem auch andere Leute sind. Wer einen gültigen Link nutzt, kann beitreten. Wenn du ganz sicher sein willst, schalte die Freigabe ein, dann lässt ein Admin jede Person herein. Die andere Person braucht ein eigenes Konto, das kostenlos ist.
+exampleAfter: 2
+example:
+  heading: Wer diesen Monat wem was schuldet
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: Miete
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: Lebensmittel
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: Die Funktionen, die ein Paar nutzt
+faq:
+  heading: Fragen
+  items:
+    - q: Können wir 60/40 einmal für alles festlegen?
+      a: Nein. Die Aufteilung gehört zu jeder einzelnen Ausgabe. Lege die Prozentsätze bei der ersten fest, kopiere sie beim nächsten Mal und ändere, was anders ist. [Ausgaben teilen](page:feature/split-expenses) behandelt alle drei Arten zu teilen.
+    - q: Ist es mit unserer Bank verbunden?
+      a: Nein. Side Badger fasst euer Geld nie an. Ihr zahlt einander, wie ihr wollt, und erfasst es dann, wie [Abrechnen](page:feature/settle-up) erklärt.
+    - q: Kann sonst jemand unsere Gruppe sehen?
+      a: Nur ihre Mitglieder, und die Gruppe eines Paares hat zwei. Wer einen gültigen Einladungslink nutzt, kann beitreten, teile ihn also mit einer einzigen Person und gib ihm ein kurzes Ablaufdatum.
+    - q: Was, wenn wir beide einen Teil derselben Rechnung bezahlt haben?
+      a: Eine Ausgabe hat eine zahlende Person. Erfasse zwei Ausgaben, eine für jede von euch, und der Saldo kommt gleich heraus.
+    - q: Erinnert es meinen Partner oder meine Partnerin ans Zahlen?
+      a: Nein. Es gibt keine Erinnerungen, das Anstupsen bleibt also deine Sache. Immerhin schaut ihr beide auf dieselbe Zahl.
+    - q: Was passiert, wenn wir keine Kosten mehr teilen?
+      a: Gleicht den Saldo aus und erfasst die Zahlung, damit niemand etwas schuldet. Dann kann ein Admin die Gruppe sperren, wodurch die Zahlen bleiben, wie sie sind, oder sie endgültig schließen, wodurch sie für alle unzugänglich wird. Schließt sie nur, wenn niemand von euch beiden den Verlauf mehr braucht.

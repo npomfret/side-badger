@@ -1,0 +1,108 @@
+translatedFrom: "92a9bff3"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Rechnungen als Paar nach Einkommen teilen | Side Badger"
+  description: "50/50 wird unangenehm, wenn einer von euch viel mehr verdient. Teilt gemeinsame Rechnungen lieber nach Einkommen, mit Rechenweg für zwei und ohne Tabelle."
+h1: "So teilt ihr Rechnungen, wenn einer von euch mehr verdient"
+navLabel: "Wenn einer mehr verdient"
+lead: "Addiert euer Nettoeinkommen, berechnet den Anteil jeder Person an der Summe und rundet auf ganze Prozent. Maya hat netto 2.800 £ im Monat und Jon 1.700 £, also teilen sie die gemeinsamen Rechnungen 62/38. Tragt diese Prozentsätze bei einer gemeinsamen Ausgabe in Side Badger ein und kopiert sie, wann immer dieselbe Rechnung wiederkommt."
+cta:
+  heading: "Einmal rechnen"
+  body: "Erstelle ein kostenloses Konto, mach eine Gruppe für euch zwei und trage die Miete mit euren Prozentsätzen ein. Die Miete im nächsten Monat ist eine Kopie. Lieber erst die Tour? Schau dir an, [wie es funktioniert](page:how-it-works), oder [was die kostenlose Nutzung abdeckt](page:pricing)."
+sections:
+  - heading: "Zwei Gehälter, eine Wohnung, ein höfliches Schweigen"
+    body: "Maya und Jon wohnen zusammen. Maya hat im Monat 2.800 £ netto, Jon 1.700 £. Zwei Jahre lang teilten sie alles 50/50, weil es einfach war und keiner von beiden das Thema ansprechen wollte. Dann sah Jon sich die Miete einzeln an. Die Hälfte von 1.400 £ sind 700 £, das ist ein Viertel von Mayas Nettoeinkommen und 41 % von seinem. Niemand war unfair gewesen. Niemand hatte nachgerechnet. Viele [Paare](page:use-case/couples) kommen irgendwann an diesen Punkt. Beim Essen vom Lieferdienst einigten sie sich darauf, dass die gemeinsamen Rechnungen aus beiden Gehältern einen ähnlich großen Bissen nehmen sollen."
+  - heading: "Die Methode, mit allen Rechenschritten"
+    body: "Vier Schritte, ein Taschenrechner und ein Gespräch, das ihr ohnehin führen wolltet."
+    items:
+      - "**Klärt, was als Einkommen zählt.** Maya und Jon nehmen das Nettoeinkommen, also das Geld, das jeden Monat auf dem Konto landet. Zusammen sind das 2.800 £ + 1.700 £ = 4.500 £."
+      - "**Berechnet jeden Anteil.** Mayas Anteil ist 2.800 ÷ 4.500, das sind 62,2 %. Jons Anteil ist 1.700 ÷ 4.500, das sind 37,8 %."
+      - "**Rundet auf ganze Prozent.** Aus 62,2 % werden 62 und aus 37,8 % werden 38. Bei zwei Personen rundet ihr eine Zahl und zieht sie von 100 ab, um die andere zu bekommen, dann ergeben beide immer 100."
+      - "**Prüft, was das bedeutet.** Bei der Miete von 1.400 £ zahlt Maya 868 £ (62 %) und Jon 532 £ (38 %). Das sind bei beiden etwa 31 % des Nettoeinkommens. Je die Hälfte hätte 25 % von Mayas und 41 % von Jons Einkommen gekostet."
+  - heading: "Der Monat im Überblick"
+    body: "Maya hat die Miete von 1.400 £ bezahlt und Jon die übrigen 216 £. Mayas Anteil am Monat ist 868,00 £ + 111,60 £ + 18,00 £ = 997,60 £, und sie hat 1.400 £ bezahlt, ihr stehen also 402,40 £ zu. Jons Anteil ist 532,00 £ + 68,40 £ + 18,00 £ = 618,40 £, und er hat 216 £ bezahlt, er schuldet also 402,40 £. Side Badger schlägt eine Zahlung vor, Jon an Maya, über 402,40 £, und beim [Abrechnen](page:feature/settle-up) erfasst ihr sie, sobald sie erfolgt ist. Bei 50/50 hätte derselbe Monat Jon 592,00 £ an Maya zahlen lassen."
+  - heading: "In Side Badger einrichten"
+    body: "Zehn Minuten, die meiste Zeit für die Prozentsätze."
+    items:
+      - "**Gruppe anlegen.** Wähle im Dashboard **Gruppe erstellen** und benenne sie nach der Wohnung. Wähle **Andere einladen** und schicke Jon den Link oder QR-Code. Er meldet sich an oder erstellt ein kostenloses Konto und wählt den Namen, unter dem er in dieser Gruppe angezeigt wird. Nur Mitglieder können eine Gruppe sehen, diese hier ist also nur für euch zwei."
+      - "**Miete eintragen.** Wähle **Ausgabe hinzufügen**. Gib Beschreibung und Betrag ein und wähle unter **Wer hat bezahlt?** Maya. Lass unter **Aufteilen zwischen** beide Personen ausgewählt, wähle dann unter **Wie aufteilen** den Eintrag **Prozentsatz** und tippe 62 und 38 ein. Das Formular meldet sich, wenn die Prozentsätze nicht zusammen 100 ergeben. Wähle **Ausgabe speichern**."
+      - "**Die anderen Rechnungen eintragen.** Energie und Internet kommen genauso hinein, mit Jon als der Person, die bezahlt hat, und denselben 62 und 38. Das Lieferessen ist eine eigene Ausgabe, bei der **Wie aufteilen** auf **Gleichmäßig** bleibt."
+      - "**Im nächsten Monat kopieren.** Öffne die Miete vom letzten Monat und wähle **Ausgabe kopieren**. Die Kopie behält die Person, die bezahlt hat, den Betrag und die Aufteilung und übernimmt das heutige Datum. Ändere den Betrag, falls sich die Miete geändert hat, und wähle dann **Kopie erstellen**. Bei der Energierechnung geht es genauso."
+      - "**Prüfen, wer wem was schuldet.** Der Bereich **Salden** zeigt es und schlägt eine kurze Liste von Zahlungen vor. Zahlt einander, wie ihr wollt, und erfasst die Zahlung dann unter **Abrechnen**."
+  - heading: "50/50, nach Einkommen oder Rechnung für Rechnung"
+    body: "Es gibt keine richtige Antwort, nur die, mit der ihr beide leben könnt. Drei verbreitete."
+    items:
+      - "**Alles zur Hälfte.** Am einfachsten zu führen, und es passt zu Paaren, deren Einkommen nah beieinanderliegen."
+      - "**Alles Gemeinsame nach Einkommen.** Das machen Maya und Jon. Ein Gespräch, ein Paar Prozentsätze."
+      - "**Rechnung für Rechnung.** Miete und Rechnungen nach Einkommen, Urlaub und kleine Gönnungen 50/50 oder wie ihr es sonst vereinbart, und jede Rechnung bekommt die Regel, die zu ihr passt."
+  - heading: "Einigt euch, was als gemeinsam gilt"
+    body: "Gestritten wird meistens über die Liste, nicht über die Prozentsätze. Miete, Energie, Internet, der Wocheneinkauf und das Sofa gelten in den meisten Haushalten als gemeinsam. Mayas Fitnessstudio-Mitgliedschaft und Jons Fußball-Abo vielleicht nicht. Einigt euch einmal auf die Liste, schreibt sie auf und tragt nur die gemeinsamen Kosten in die Gruppe ein."
+  - heading: "Das Lieferessen bleibt mit Absicht 50/50"
+    body: "Gönnungen sind klein und freiwillig, und niemand sollte einen Taschenrechner brauchen, um Dumplings zu bestellen. In Side Badger ist das Lieferessen einfach eine weitere Ausgabe. Jon bezahlt 36 £, **Wie aufteilen** bleibt auf **Gleichmäßig**, und jeder von beiden trägt 18 £."
+  - heading: "Wenn sich ein Gehalt ändert"
+    body: "Eine Gehaltserhöhung, ein neuer Job oder eine Auszeit vom Job ändern die Rechnung. Berechnet die neuen Prozentsätze auf dieselbe Weise und nutzt sie ab der nächsten Ausgabe. Frühere Ausgaben bleiben, wie sie waren. Kopiere die Miete vom letzten Monat, ändere die Prozentsätze und wähle dann **Kopie erstellen**. Um eine bereits eingetragene Ausgabe zu korrigieren, bearbeite sie, wenn die Berechtigungen der Gruppe es zulassen, und sag es zuerst der anderen Person, denn die Salden ändern sich. Die frühere Version bleibt erhalten. Vereinbart, wann ihr neu rechnet, etwa einmal im Jahr, und rechnet ab, bevor ihr umstellt, damit die alte Aufteilung mit einem sauberen Stand endet."
+  - heading: "Was Side Badger hier nicht kann"
+    items:
+      - "Es fragt nie, was jemand verdient, und berechnet die Prozentsätze nicht. Du tippst die Zahlen ein, auf die ihr euch geeinigt habt."
+      - "Es kann keine Standardaufteilung für die ganze Gruppe festlegen. Die Prozentsätze gehören an jede Ausgabe, also kopiere eine, die sie schon hat."
+      - "Es gibt keine wiederkehrenden Rechnungen, also kopierst du jeden Monat die Miete vom letzten."
+      - "Es bewegt nie Geld. Ihr zahlt einander, wie ihr wollt, und erfasst es."
+exampleAfter: 2
+example:
+  heading: "Ein Monat in Mayas und Jons Wohnung"
+  currency: GBP
+  people:
+    - id: maya
+      name: Maya
+    - id: jon
+      name: Jon
+  expenses:
+    - label: "die Miete"
+      payer: maya
+      amount: 1400
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: "Energie und Internet"
+      payer: jon
+      amount: 180
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: "das Lieferessen"
+      payer: jon
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Fragen"
+  items:
+    - q: "Sollen wir Brutto- oder Nettoeinkommen nehmen?"
+      a: "Das entscheidet ihr. Netto ist üblich, weil es das Geld ist, das ihr tatsächlich ausgeben könnt. Das Bruttogehalt ignoriert, dass Steuern, Rentenbeiträge und Kreditrückzahlungen bei verschiedenen Gehältern unterschiedlich viel abziehen. Was ihr auch wählt, nehmt für euch beide dasselbe Maß."
+    - q: "Sieht Side Badger unser Einkommen?"
+      a: "Nein. Du gibst nur Prozentsätze ein, nie Gehälter. Die Prozentsätze sind für die Mitglieder der Gruppe sichtbar, und bei einem Paar seid das ihr zwei."
+    - q: "Können wir 62/38 einmal für alles festlegen?"
+      a: "Die Aufteilung wird pro Ausgabe festgelegt, nicht pro Gruppe. Kopiere eine Ausgabe, die schon 62 und 38 hat, und ändere, was abweicht. [Ausgaben teilen](page:feature/split-expenses) zeigt die anderen Möglichkeiten."

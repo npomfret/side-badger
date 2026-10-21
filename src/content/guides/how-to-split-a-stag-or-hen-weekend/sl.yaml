@@ -1,0 +1,106 @@
+translatedFrom: "6c8b8630"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - privacy-posture.no-ads
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - polls.villa-shortlist-vote
+  - permissions.viewer-sees-everything
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Kako deliti stroške fantovščine ali dekliščine | Side Badger"
+  description: "Slavljenec ne plača ničesar, v ponedeljek pa se vsi še pogovarjajo. Kako razdeliti stroške fantovščine ali dekliščine, z računi vred."
+h1: "Kako deliti stroške fantovščine ali dekliščine"
+navLabel: "Fantovščina ali dekliščina"
+lead: "Slavljenec ne plača ničesar, zato preostala skupina vsak strošek med seboj deli [enako](page:feature/split-expenses). Ljudi izpusti iz stroškov, ki jih preskočijo, slavljenca pa pusti zunaj skupine, da presenečenje ostane presenečenje."
+cta:
+  heading: "Vodi štetje, ohrani presenečenje"
+  body: "Ustanovi skupino, povezavo pošlji vsem razen slavljencu in dodajaj vsak strošek sproti. Side Badger je brezplačen, brez oglasov in brez dnevnih omejitev."
+sections:
+  - heading: "Štiri prijateljice in eno presenečenje"
+    body: "Hannah, Isla, Jess in Kat peljejo Grace na njeno dekliščino. Grace je slavljenka, zato ne plača ničesar. V skupini je tudi ni, zato ne more videti, koliko prijateljice zapravljajo zanjo. Hannah rezervira kočo, Isla plača dan v toplicah, Jess pokrije večerjo, Kat pa taksi. Do nedelje je vsaka plačala kaj in nihče ne ve, kdo je v prednosti. Račun je enak za fantovščino in dekliščino, ne glede na to, kdo je slavljenec."
+  - heading: "Deli med tiste, ki plačujejo, ne med tiste, ki so zraven"
+    body: "Slavljenčev delež ne izgine. Razdeli se. Koča stane 720 £ in jo plačajo štiri prijateljice, torej 180 £ na osebo, Gracein del pa je v tej številki že všteta. Večerja je 260 £, torej 65 £ na osebo. Taksi je 44 £, torej 11 £ na osebo. Karkoli kdo preskoči, gre samo iz tistega stroška. Kat preskoči toplice, zato njihovih 360 £, ki pokrijejo tudi Gracein del, razdelijo Hannah, Isla in Jess po 120 £. Seštej in Hannah, Isla in Jess za vikend dolgujejo vsaka 376 £, Kat pa 256 £."
+  - heading: "Nastavitev v Side Badgerju"
+    items:
+      - "Za vikend ustanovi skupino in ji daj dolgočasno ime, na primer Vikend v koči. Grace ni članica, skupino pa vidijo samo člani."
+      - >-
+        Izberi **Povabi druge** in pošlji povezavo ali pokaži kodo QR samo tam, kjer je Grace ne bo videla. Povezava pokaže predogled skupine, še preden se kdo pridruži. Izberi, kako dolgo velja, od 15 minut do 5 dni. Stara povezava deluje, dokler ne poteče, zato je ne pusti dlje, kot je treba.
+      - >-
+        Za vsak strošek izberi **Dodaj strošek**, vnesi znesek in pod **Kdo je plačal?** izberi plačnika. Pod **Razdeli med** označi ljudi, ki plačujejo, in izpusti tiste, ki so ga preskočili, na primer Kat pri toplicah. Pod **Način razdelitve** izberi **Enako**.
+      - >-
+        Ko se vrneš domov, odpri **Stanja** skupine. Side Badger pokaže, kdo komu dolguje, in predlaga kratek seznam plačil. Tukaj so tri: Kat plača Hannah 212 £, Jess plača Hannah 116 £ in Isla plača Hannah 16 £. Plačajte si, kakor želite, nato vsako plačilo zabeležite pod **Poravnaj**.
+  - heading: "Pred rezervacijo: proračun in polog"
+    body: "Dogovorite se o proračunu, preden kdo rezervira. Izberi **Dodaj anketo**, vprašaj, koliko bo skupina porabila za kočo, in ponudi nekaj zneskov kot možnosti. Ob ustvarjanju vklopi **Anonimno glasovanje**, da se skrije, kdo je za kaj glasoval in nihče ne mora na glas zagovarjati manjšega proračuna. Anketo zapri, ko vsi glasujejo in se pokaže zmagovalec. Nato pride polog. Kdor rezervira, ga plača in doda kot strošek, razdeljen enako, preostanek pa vneseš kot drugi strošek, ko zapade. Ostali lahko svoj del pošljejo takoj in plačilo zabeležijo ali počakajo na končno štetje. Stanja so v obeh primerih enaka."
+  - heading: "Ko se kdo pridruži samo za eno noč"
+    body: "Prijatelj, ki se pojavi samo za soboto, ne bi smel plačati petka. Izpusti ga iz stroškov, pri katerih ni bil. Kjer je strošek odvisen od tega, kako dolgo kdo ostane, na primer soba, pod **Način razdelitve** izberi **Točni zneski** in vtipkaj deleže vseh, ki morajo skupaj dati skupni znesek. Najprej izračunaj ceno na osebo na noč, nato jo pomnoži s številom noči vsake osebe. Več o stroških, ki niso enaki za vse, je na strani o [skupinskih potovanjih](page:use-case/group-trips)."
+  - heading: "Česa Side Badger tu ne naredi"
+    items:
+      - "Nikoli ne prenaša denarja. Plačate si z bančnim nakazilom, z gotovino ali kakor vam ustreza, nato plačilo zabeležite, da se stanja posodobijo za vse."
+      - "Ne pošilja opomnikov za plačilo. Prijazen opomin v klepetu skupine še vedno opravi človek."
+      - "Vsak strošek ima enega plačnika, Side Badger pa ne zna razdeliti računa po vrsticah. Če sta kočo plačali dve kartici, vnesi dva stroška. Če so nekateri pri večerji naročili dodatke, vnesi dodatke kot samostojen strošek."
+      - "Vodi denar, ne načrta potovanja. Ankete in komentarji ostanejo pri stroških, načrti za vikend pa v klepetu skupine."
+exampleAfter: 2
+example:
+  heading: "Gracein dekliščina, razdeljena na štiri"
+  currency: GBP
+  people:
+    - id: hannah
+      name: Hannah
+    - id: isla
+      name: Isla
+    - id: jess
+      name: Jess
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Koča"
+      payer: hannah
+      amount: 720
+      split:
+        method: equal
+    - label: "Dan v toplicah"
+      payer: isla
+      amount: 360
+      split:
+        method: equal
+        shares:
+          hannah: 1
+          isla: 1
+          jess: 1
+    - label: "Večerja"
+      payer: jess
+      amount: 260
+      split:
+        method: equal
+    - label: "Taksi"
+      payer: kat
+      amount: 44
+      split:
+        method: equal
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Ali priča ali glavni organizator plača več?"
+      a: "Samo če se skupina tako dogovori. Aplikacija nikomur ne daje posebne vloge pri računih. Če kdo krije več, pod **Način razdelitve** izberi **Točni zneski** ali **Odstotek** in vnesi dogovorjene deleže."
+    - q: "Kaj pa pijača, ki je nekateri niso pili?"
+      a: "Pijačo dodaj kot samostojen strošek in označi samo tiste, ki so jo pili. Če je vsak popil drugače, izberi **Točni zneski** in vtipkaj delež vsake osebe. Nihče ne plača tistega, česar ni imel."
+    - q: "Ali slavljenec pozneje lahko vidi skupino?"
+      a: "Da, ko presenečenja ni več. Povabi ga, nato ga lahko skrbnik pod **Varnost** v nastavitvah skupine nastavi za **Gledalca**. Gledalec vidi vse in ne spreminja ničesar, zato počakaj, da ni več nobene skrivnosti. Za pridružitev potrebuje brezplačen uporabniški račun."

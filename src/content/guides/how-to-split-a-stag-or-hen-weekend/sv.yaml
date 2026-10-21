@@ -1,0 +1,107 @@
+translatedFrom: "6c8b8630"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - privacy-posture.no-ads
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - polls.villa-shortlist-vote
+  - permissions.viewer-sees-everything
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: Så delar ni kostnaden för svensexa eller möhippa | Side Badger
+  description: Hedersgästen betalar ingenting och alla pratar fortfarande med varandra på måndagen. Så delar ni en svensexa eller möhippa, med uträkningar.
+h1: Så delar ni kostnaden för en svensexa eller möhippa
+navLabel: Svensexa eller möhippa
+lead: Hedersgästen betalar ingenting, så resten av gruppen delar varje kostnad [lika](page:feature/split-expenses) mellan sig. Lämna utanför dem som hoppar över en kostnad, och håll hedersgästen utanför gruppen så att överraskningen består.
+cta:
+  heading: Håll räkningen, håll överraskningen
+  body: Gör en grupp, skicka länken till alla utom hedersgästen och lägg in varje kostnad när den uppstår. Side Badger är gratis, utan reklam och utan dagliga gränser.
+sections:
+  - heading: Fyra vänner och en överraskning
+    body: Hannah, Isla, Jess och Kat tar med Grace på hennes möhippa. Grace är hedersgäst, så hon betalar för ingenting. Hon är inte heller med i gruppen, så hon kan inte se vad hennes vänner lägger på henne. Hannah bokar stugan, Isla betalar spadagen, Jess tar middagen och Kat tar taxin. På söndagen har alla betalat för något, och ingen kan säga vem som ligger före. Uträkningen är densamma för en svensexa eller en möhippa, vem hedersgästen än är.
+  - heading: Dela på dem som betalar, inte på dem som är där
+    body: Hedersgästens andel försvinner inte. Den fördelas ut. Stugan kostar 720 £ och fyra vänner betalar den, så det blir 180 £ var, och Graces plats ingår redan i den siffran. Middagen är 260 £, alltså 65 £ var. Taxin är 44 £, alltså 11 £ var. Allt någon hoppar över tas bort från just den utgiften. Kat hoppar över spat, så dess 360 £, som också täcker Graces plats, delas av Hannah, Isla och Jess med 120 £ var. Lägg ihop det så är Hannah, Isla och Jess skyldiga 376 £ var av helgen, och Kat är skyldig 256 £.
+  - heading: Ställ in det i Side Badger
+    items:
+      - Gör en grupp för helgen och ge den ett tråkigt namn, till exempel Stugahelg. Grace är inte medlem, och bara medlemmar i en grupp kan se den.
+      - >-
+        Välj **Bjud in andra** och skicka länken, eller visa QR-koden, bara där Grace inte ser den. Länken visar en förhandsvisning av gruppen innan någon går med. Välj hur länge den ska gälla, från 15 minuter till 5 dagar. En gammal länk fortsätter fungera tills den går ut, så låt den inte gälla längre än du behöver.
+      - >-
+        För varje kostnad väljer du **Lägg till utgift**, skriver beloppet och väljer betalaren under **Vem betalade?** Under **Dela mellan** kryssar du i de som betalar och lämnar utanför den som hoppade över den, till exempel Kat för spat. Välj **Lika** under **Hur ska det delas?**.
+      - >-
+        När ni är hemma öppnar du gruppens **Saldon**. Side Badger visar vem som är skyldig vem och föreslår en kort lista med betalningar. Här är det tre: Kat betalar Hannah 212 £, Jess betalar Hannah 116 £ och Isla betalar Hannah 16 £. Betala varandra hur ni vill och använd sedan **Reglera** för att registrera varje betalning.
+  - heading: Före bokningen, en budget och en deposition
+    body: Kom överens om budgeten innan någon bokar. Välj **Lägg till omröstning**, fråga vad gruppen ska lägga på stugan och ge några belopp som alternativ. Slå på **Anonym omröstning** när du skapar den, för att dölja vem som röstade på vad, så att ingen behöver försvara en mindre budget högt. Stäng omröstningen när alla har röstat och vinnaren syns. Sedan kommer depositionen. Den som bokar betalar den och lägger in den som en utgift, delad lika, och restbeloppet läggs in som en andra utgift när det förfaller. De andra kan skicka sin andel direkt och registrera betalningen, eller vänta på sluträkningen. Saldona blir desamma hur ni än gör.
+  - heading: När någon är med en natt
+    body: En vän som dyker upp bara på lördagen ska inte betala för fredagen. Lämna hen utanför de kostnader hen inte var med på. Där kostnaden beror på hur länge var och en stannar, till exempel ett rum, väljer du **Exakta belopp** under **Hur ska det delas?** och skriver in varje persons andel, som måste summera till totalen. Räkna först ut ett pris per person och natt och multiplicera sedan med de nätter varje person stannar. Sidan om [gruppresor](page:use-case/group-trips) har mer om kostnader som inte är lika för alla.
+  - heading: Det här gör inte Side Badger
+    items:
+      - Det flyttar aldrig pengar. Ni betalar varandra med banköverföring, kontanter eller vad som passar och registrerar sedan betalningen så att saldona uppdateras för alla.
+      - Det skickar inga betalningspåminnelser. En vänlig knuff i gruppchatten är fortfarande en människas jobb.
+      - Varje utgift har en betalare, och Side Badger kan inte dela ett kvitto rad för rad. Om två kort betalade stugan, lägg in den som två utgifter. Om några beställde extra på middagen, lägg in extrasakerna som en egen utgift.
+      - Det håller reda på pengarna, inte programmet. Omröstningar och kommentarer stannar på kostnaderna, så planerna för helgen stannar i er gruppchatt.
+exampleAfter: 2
+example:
+  heading: Graces möhippa, delad på fyra
+  currency: GBP
+  people:
+    - id: hannah
+      name: Hannah
+    - id: isla
+      name: Isla
+    - id: jess
+      name: Jess
+    - id: kat
+      name: Kat
+  expenses:
+    - label: Stugan
+      payer: hannah
+      amount: 720
+      split:
+        method: equal
+    - label: Spadag
+      payer: isla
+      amount: 360
+      split:
+        method: equal
+        shares:
+          hannah: 1
+          isla: 1
+          jess: 1
+    - label: Middag
+      payer: jess
+      amount: 260
+      split:
+        method: equal
+    - label: Taxi
+      payer: kat
+      amount: 44
+      split:
+        method: equal
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.3.label
+faq:
+  heading: Frågor
+  items:
+    - q: Betalar bästa mannen eller bästa kvinnan mer?
+      a: Bara om gruppen kommer överens om det. Appen ger ingen någon särskild roll i uträkningen. Om någon täcker mer, välj **Exakta belopp** eller **Procentandel** under **Hur ska det delas?** och skriv in de andelar ni kom överens om.
+    - q: Hur är det med drinkar som några inte drack?
+      a: Lägg in drinkarna som en egen utgift och kryssa bara i dem som drack. Om alla hade olika mycket, välj **Exakta belopp** och skriv in var och ens andel. Ingen betalar för det hen inte fick.
+    - q: Kan hedersgästen se gruppen senare?
+      a: Ja, när överraskningen är över. Bjud in hen, så kan en administratör göra hen till **Tittare** under **Säkerhet och behörigheter** i gruppens inställningar. En tittare ser allt och ändrar inget, så vänta tills inget är hemligt. Hen behöver ett gratis konto för att gå med.

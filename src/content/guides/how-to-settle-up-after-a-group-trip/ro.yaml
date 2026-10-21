@@ -1,0 +1,113 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Cum te achiți după o excursie de grup | Side Badger"
+  description: "Achitați-vă înainte să se împrăștie toți. Zece datorii încurcate devin patru plăți, înregistrate pe măsură ce sosesc, iar o plată parțială e în regulă. Calculele, pentru cinci prieteni."
+h1: "Cum te achiți după o excursie de grup"
+navLabel: "Achitarea după excursie"
+lead: "Achitați-vă înainte să se împrăștie toți. Adaugă ultima cheltuială, deschide soldurile grupului și plătește ce datorezi din lista scurtă, cum preferi. Apoi înregistrează fiecare plată în Side Badger, ca soldul să se închidă pentru tot grupul. La cinci prieteni și cinci cheltuieli, zece datorii încurcate ajung la patru plăți."
+cta:
+  heading: "Închide socotelile înainte să apară pozele"
+  body: "Creează un cont gratuit, începe un grup pentru următoarea excursie și adaugă fiecare cost pe măsură ce apare. Lista scurtă de plăți te așteaptă până ajungi la aeroport. Vrei să vezi mai întâi [cum funcționează decontarea](page:feature/settle-up)?"
+sections:
+  - heading: "Cinci prieteni, cinci cheltuieli, o sală de plecări"
+    body: "Mo, Ines, Raf, Tess și Uma au petrecut o săptămână pe coastă. Mo a rezervat apartamentul și a cumpărat alimentele, Ines a plătit plimbarea cu barca, iar Raf a achitat cina cea mare. Tess a luat taxiul spre aeroport cu Uma și Mo, pentru că Ines și Raf au mers cu trenul. Cardul Umei a rămas acasă, așa că ea n-a plătit nimic. Asta înseamnă cinci cheltuieli și 1.700 € în total, iar în sala de plecări nimeni nu putea spune cine e în avantaj."
+  - heading: "Zece datorii, patru plăți"
+    body: "Apartamentul, plimbarea cu barca, cina și alimentele se împart egal în cinci. Asta înseamnă 200 €, 50 €, 60 € și 18 € de persoană, deci Ines și Raf datorează câte 328 €. Taxiul e împărțit între trei, câte 20 €, deci Mo, Tess și Uma datorează 348 €. Mo a plătit 1.090 € și datorează 348 €, ceea ce lasă să i se datoreze 742 €. Toți ceilalți au plătit mai puțin decât datorează. Uma are un minus de 348 €, Tess de 288 €, Ines de 78 € și Raf de 28 €, iar împreună dau cei 742 € ai lui Mo. Dacă vă achitați direct fiecare pereche de oameni, ajungeți la zece datorii separate. Side Badger sugerează în schimb patru plăți, toate către Mo."
+  - heading: "Achitați-vă înainte să se împrăștie toți"
+    body: "Cel mai bun moment e ultima seară sau drumul spre casă, cât timp toți sunt încă într-un loc și o datorie de 28 € e ușor de pomenit. Adăugați mai întâi toate cheltuielile, inclusiv taxiul. Nimeni nu poate părăsi un grup cât timp datorează sau i se datorează bani, așa că socoteala trebuie oricum să se închidă la un moment dat."
+    items:
+      - "**Verifică lista.** Deschide grupul și uită-te la **Solduri**. Implicit vezi datoriile care te privesc. Alege **Arată tot** ca să vezi lista întregului grup."
+      - "**Plătește cum preferi.** Transfer bancar, numerar, o favoare datorată din ultima vacanță. Side Badger nu mută banii."
+      - "**Înregistrează-o.** Alege **Decontează**. Sub **Decontare rapidă** fiecare buton este una dintre plățile tale sugerate, iar alegerea unuia completează suma. Adaugă o **Notă**, de exemplu „transfer bancar”, verifică **Data** (nu poate fi în viitor) și alege **Înregistrează Decontarea**."
+      - "**Privește cum se curăță.** Soldul se actualizează pentru toți. Când intră ultima plată, **Solduri** arată **Totul este decontat!**"
+  - heading: "O parte acum, restul mai târziu"
+    body: "Uma poate trimite 200 € diseară și restul la sfârșitul lunii. Ea înregistrează 200 €, iar formularul o avertizează că după aceea tot îi va datora lui Mo 148 €, adică 348 € minus 200 €. Salvează, iar cei 148 € rămân în soldul ei până înregistrează restul. Avertismentul funcționează și invers. Dacă un zero rătăcit transformă 348 € în 3.480 €, formularul spune că ea îi datorează lui Mo doar 348 € și că salvarea ar crea o datorie în sens opus. Corectează zeroul înainte să salvezi."
+  - heading: "Greșelile se repară, plățile se sărbătoresc"
+    items:
+      - "**O plată greșită.** Doar cel care a înregistrat o plată o poate edita. El sau un administrator al grupului o poate șterge, iar apoi poate fi înregistrată din nou."
+      - "**O plată care merită remarcată.** Fiecare plată înregistrată stă la **Decontări**, cu data și nota ei, unde o poate vedea și reacționa la ea oricine din grup. Mo poate alege **Sărbătorește** când sosesc ultimii 148 € ai Umei."
+      - "**Sfârșitul.** Cu fiecare sold la zero, un administrator poate bloca grupul, ca cifrele să rămână pe loc."
+  - heading: "Ce nu face Side Badger aici"
+    items:
+      - "Nu mută niciodată bani. N-are linkuri de plată și nici cereri de plată, deci o plată din aplicație este înregistrarea uneia făcute în altă parte."
+      - "Nu trimite mementouri. Urmărirea unei plăți întârziate rămâne treaba ta."
+      - "Nu stabilește termene. Când trebuie plătit restul de 148 € al Umei hotărăște grupul."
+      - "Plățile sugerate sunt o listă scurtă, nu o promisiune că e cea mai scurtă posibilă. Se calculează pe valute, așa că o excursie plătită în euro și lire primește câte o listă pentru fiecare."
+exampleAfter: 2
+example:
+  heading: "Cinci prieteni pe coastă"
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: "Apartament"
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: "Plimbare cu barca"
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: "Cina cea mare"
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: "Taxi spre aeroport"
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: "Alimente"
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: "Întrebări"
+  items:
+    - q: "Cine ar trebui să înregistreze o plată, cel care plătește sau cel care primește?"
+      a: "Pentru a înregistra o plată e nevoie de permisiunea de a edita cheltuieli, iar formularul întreabă **Cine a plătit?** și **Cine a primit plata?** Doar cel care a înregistrat plata o poate edita ulterior, așa că de obicei e mai simplu s-o facă plătitorul, cu butonul de decontare rapidă."
+    - q: "Dacă excursia a fost în două valute?"
+      a: "Soldurile se țin pe valute, așa că o datorie în euro rămâne o datorie în euro, iar fiecare valută primește propria listă scurtă, dacă cheltuielile nu au fost convertite la introducere. [Excursii în mai multe valute](page:guide/how-to-split-a-trip-paid-in-several-currencies) arată ambele variante."
+    - q: "Ne achităm în timpul excursiei sau la final?"
+      a: "Merg ambele. Fiecare plată înregistrată schimbă soldurile, așa că o plată făcută pe parcurs se ia în calcul pentru lista finală. La final e mai simplu, pentru că [toată excursia](page:use-case/group-trips) e într-un singur loc."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name

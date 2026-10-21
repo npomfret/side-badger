@@ -1,0 +1,78 @@
+translatedFrom: "42f5cf35"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.read-by-googles-ai
+  - receipt-attachments.keep-the-receipt
+meta:
+  title: "Scanează o chitanță ca să adaugi o cheltuială | Side Badger"
+  description: "Lasă bursucul să citească chitanța. Completează totalul, data și locul ca să le verifici, fără credite de scanare. Imaginea e citită de serviciul AI al Google."
+h1: "Scanează chitanța, verifică detaliile, împarte-o"
+navLabel: "Scanarea chitanțelor"
+lead: "Lasă bursucul să citească chitanța, iar tu verifică-i tema. Adaugă o fotografie la o cheltuială nouă, iar Side Badger completează totalul, data și locul ca să le verifici. Apoi [o împarți](page:feature/split-expenses) ca pe orice altă cheltuială. Scanarea este gratuită, fără credite de scanare. Completează o singură cheltuială și nu împarte nota pe articole. Imaginile chitanțelor sunt citite de serviciul AI al Google."
+cta:
+  heading: "Fotografiază-o. Verifică-o. Împarte-o."
+  body: "Creează un cont gratuit, începe un grup și adaugă o cheltuială cu fotografia unei chitanțe. Vezi ce completează, schimbă ce nu e bine și salvează când arată cum trebuie."
+problem:
+  heading: "Nimeni nu vrea să tasteze o chitanță stând la coadă la taxi"
+  body: "Excursiile și serile mari vin cu hârtie. Cina, taxiul, runda care s-a făcut șase. Să tastezi fiecare chitanță pe telefon, cu degetele înghețate și o coadă în spate, e felul în care cheltuielile sunt uitate. Așa că Side Badger citește chitanța pentru tine. El face prima ciornă, iar tu verifici. Se potrivește la [excursiile de grup](page:use-case/group-trips) și la [evenimente și sărbători](page:use-case/events-and-celebrations), unde chitanțele se adună mai repede decât vrea cineva să se ocupe de ele."
+workflow:
+  heading: "De la fotografie la cheltuială în trei pași"
+  steps:
+    - title: "Adaugă o chitanță la o cheltuială nouă"
+      body: "Începe o cheltuială nouă și atinge **Scanează chitanța**, sau folosește acțiunea rapidă **Scanează chitanța** din panoul tău. Fă o fotografie sau alege una pe care o ai deja. Funcționează și **Adaugă chitanță sau atașament** din formular."
+    - title: "Lasă-l să citească chitanța"
+      body: "Formularul afișează **Se analizează chitanța...** cât timp AI-ul din Side Badger citește imaginea. Apoi completează ce a găsit, cum ar fi descrierea, totalul, valuta, data, ora și locul. Tot ce ai tastat deja rămâne neatins."
+      shot: S09
+      shotAlt: "Formularul de cheltuială nouă cu mesajul Se analizează chitanța..., apoi același formular cu detaliile completate"
+    - title: "Verifică, apoi împarte"
+      body: "Compară formularul cu hârtia. Corectează ce nu e bine, spune cine a plătit și cine a împărțit costul, alege cum se împarte și salvează. Cheltuiala nu există până nu salvezi. [Împărțirea cheltuielilor](page:feature/split-expenses) explică împărțirea."
+options:
+  heading: "Opțiuni"
+  items: []
+sections:
+  - heading: "Ce completează"
+    body: "Adaugă imaginea unei chitanțe la o cheltuială nouă și aceste câmpuri se pot completa. Cine a plătit, cine a împărțit costul și cum se împarte rămân treaba ta."
+    items:
+      - "O **descriere** pentru cheltuială."
+      - "**Totalul**."
+      - "**Valuta**, dacă grupul tău o permite."
+      - "**Data** și **ora**."
+      - "**Locul**."
+      - "O copie text a chitanței în **note**, pentru când cea de hârtie se șterge sau ajunge în mașina de spălat."
+  - heading: "Ce verifici în continuare"
+    body: "Tot. Tratează ce completează ca pe o ciornă. Verifică totalul față de hârtie, apoi valuta, data și locul. Fotografiile neclare și hârtia mototolită pot păcăli orice cititor și nu promitem că citește corect fiecare chitanță, așa că te rugăm să te uiți înainte să salvezi. Dacă ceva nu e bine, scrie peste. Dacă chitanța e în yeni, iar grupul se achită în lire, [mai multe valute](page:feature/multiple-currencies) explică ce urmează."
+  - heading: "Păstrează chitanța lângă cheltuială"
+    body: "Scanată sau nu, o chitanță poate rămâne lângă cheltuială. Atașează fotografii sau PDF-uri, până la trei pe cheltuială și până la 10 MB fiecare. Membrii grupului le văd la cheltuială. Imaginile apar ca miniaturi care se deschid într-un vizualizator, iar PDF-urile se deschid ca linkuri. Fotografia pe care o scanezi se atașează și ea, dacă n-o elimini înainte să salvezi. Când cineva întreabă cât a costat de fapt cina aceea, dovada e chiar acolo."
+  - heading: "Unde ajunge chitanța ta"
+    body: "Imaginile chitanțelor sunt citite de serviciul AI al Google. Ca să completeze formularul, imaginea este citită de Google Vertex AI (Gemini), în multi-regiunea SUA a Google. Adaugă o imagine la o cheltuială nouă și ea este citită. Un PDF sau o fotografie adăugată la o cheltuială care există deja se stochează fără să fie citită. Chitanțele atașate sunt vizibile pentru membrii grupului, așa că, dacă o chitanță arată ceva ce ai prefera să nu împărtășești, sari peste fotografie și tastează cheltuiala."
+limits:
+  heading: "Limite"
+  items:
+    - "Doar imagini. JPEG, PNG și WebP, iar HEIC după conversie. PDF-urile pot fi atașate la o cheltuială, dar nu sunt citite."
+    - "Scanarea este doar pentru cheltuieli noi. La o cheltuială existentă poți atașa chitanțe, dar nu se citește nimic."
+    - "Completează doar câmpurile pe care nu le-ai atins, iar valuta doar dacă grupul tău o permite."
+    - "Nu împarte pe articole și nu atribuie rânduri din chitanță unor persoane. Completează o singură cheltuială, iar tu o împarți ca de obicei."
+    - "Nu există nicio promisiune că ce completează este corect sau că scanarea va merge de fiecare dată. Verifică înainte să salvezi și adaugă cheltuiala de mână dacă scanarea eșuează sau nu e disponibilă."
+    - "O cheltuială poate avea până la trei atașamente, fiecare de până la 10 MB, ca JPEG, PNG, WebP, HEIC sau PDF."
+    - "Imaginile chitanțelor sunt citite de Google Vertex AI (Gemini), în multi-regiunea SUA a Google, iar chitanțele atașate sunt vizibile pentru membrii grupului."
+useCasesHeading: "Unde se adună chitanțele"
+faq:
+  heading: "Întrebări"
+  items:
+    - q: "Poate Side Badger să împartă o chitanță pe articole?"
+      a: "Nu. Completează cheltuiala, inclusiv totalul, iar tu o împarți egal, pe sume exacte sau procentual. Pentru o notă la care fiecare a comandat altceva, introdu ce datorează fiecare persoană ca sume exacte. [Împărțirea cheltuielilor](page:feature/split-expenses) are detaliile."
+    - q: "Poate Side Badger să citească un PDF?"
+      a: "Nu. Poți atașa un PDF la o cheltuială ca să călătorească împreună cu cifrele, dar sunt citite doar imaginile."
+    - q: "Există o limită de scanări?"
+      a: "Nu există credite de scanare care să se epuizeze, iar scanarea este gratuită. Fișierele au însă limite: până la trei atașamente pe cheltuială și 10 MB fiecare. [Ce acoperă gratuitul](page:pricing) are restul."
+    - q: "Cine îmi poate vedea chitanța?"
+      a: "Membrii grupului pot vedea chitanțele atașate la o cheltuială. Imaginile chitanțelor sunt citite și de serviciul AI al Google, așa se completează formularul."
+    - q: "Pot scana o chitanță pentru o cheltuială pe care am adăugat-o deja?"
+      a: "Nu, scanarea este pentru cheltuieli noi. Poți totuși atașa o chitanță la o cheltuială existentă, iar ea se stochează fără să fie citită."
+    - q: "Ce se întâmplă dacă completează ceva greșit?"
+      a: "Scrie peste. Fiecare câmp rămâne editabil până salvezi și oricum ar trebui să le verifici pe toate. Dacă scanarea eșuează sau nu e disponibilă, adaugă cheltuiala de mână, ca de obicei."

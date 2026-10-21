@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Divide una villa según las noches de cada uno | Side Badger"
+  description: "Dev solo vino tres noches, ¿por qué iba a pagar seis? Divide una villa de vacaciones según las noches que se quedó cada uno, con las cuentas hechas."
+h1: "Cómo dividir una villa de vacaciones cuando cada uno se queda noches distintas"
+navLabel: "Villa según las noches"
+lead: "Calcula el precio por persona y noche, multiplícalo por las noches de cada uno e introduce la villa como **un solo gasto con importes exactos**. Side Badger lleva la cuenta y sugiere una lista corta de pagos cuando toca saldar."
+cta:
+  heading: "Dale a la villa un solo gasto ordenado"
+  body: "Crea un grupo, invita a todos con un enlace o un código QR e introduce la villa con importes exactos. Side Badger lleva la cuenta mientras tú te dedicas a las vacaciones."
+sections:
+  - heading: "Seis noches, cuatro personas, una tarjeta de crédito"
+    body: "Un [viaje en grupo](page:use-case/group-trips) suele empezar con la tarjeta de una persona. Aquí es la de Ana. Reserva una villa para seis noches, 2.100 €, porque alguien tiene que ser el primero. Ana, Ben y Chloe se quedan las seis noches. Dev solo puede unirse las tres últimas, y llega en tren. Ben alquila un coche en el que Dev nunca se sienta. Dev hace la compra grande. Dividir la villa entre cuatro es lo más obvio. Con eso Dev paga tres noches que pasó en casa, y esas cosas reaparecen por Navidad. Dividir por noches evita la discusión, y la aritmética lleva un minuto."
+  - heading: "Calcula el precio de una persona-noche"
+    body: "Una persona-noche es una persona que se queda una noche. La villa cuesta lo que cuesta, así que reparte el precio entre todas las personas-noche y da a cada uno las que usó."
+    items:
+      - "**Cuenta las personas-noche.** Ana, Ben y Chloe se quedan seis noches cada uno y Dev se queda tres: 6 + 6 + 6 + 3 = 21."
+      - "**Calcula el precio de una.** 2.100 € ÷ 21 = 100 € por persona-noche."
+      - "**Multiplica por las noches de cada uno.** Ana, Ben y Chloe pagan 6 × 100 € = 600 € cada uno. Dev paga 3 × 100 € = 300 €."
+      - "**Comprueba el total.** 600 € + 600 € + 600 € + 300 € = 2.100 €. Si tus partes no suman el precio, falta una noche o se ha contado dos veces."
+  - heading: "Introdúcelo en Side Badger"
+    body: "Crea un grupo, invita a los otros tres con un enlace o un código QR y añade los gastos. Primero, la villa."
+    items:
+      - "Elige **Añadir gasto**. Descríbelo, escribe 2.100 y pon a Ana en **¿Quién pagó?**."
+      - "En **Dividir entre**, comprueba que están las cuatro personas."
+      - "En **Cómo dividir**, elige **Cantidades exactas**. Escribe 600 para Ana, Ben y Chloe y 300 para Dev. Los importes tienen que sumar el total."
+      - "Elige **Guardar gasto**."
+      - "Añade el alquiler del coche de la misma manera. Pagó Ben, la división es **Igual** y Dev queda fuera, porque vino en tren. [Dividir gastos](page:feature/split-expenses) explica las otras formas de repartir un gasto."
+      - "Añade la compra. Pagó Dev, la división es **Igual** y están las cuatro personas."
+  - heading: "Lee el resultado y salda cuentas"
+    body: "La cuenta de cada persona es su parte de la villa más su parte del coche y de la compra. Ana, Ben y Chloe salen a 725 € cada uno, que son 600 € + 80 € + 45 €. Dev sale a 345 €, que son 300 € + 45 €. Resta lo que pagó cada persona y salen los saldos. Ana pagó 2.100 €, así que le deben 1.375 €. Ben pagó 240 € y debe 485 €. Dev pagó 180 € y debe 165 €. Chloe no pagó nada y debe 725 €. Si se dejaran tal cual, esas deudas recorrerían el grupo de seis maneras. Side Badger sugiere tres pagos, todos para Ana. Págale como queráis, después elige **Liquidar** y usa **Registrar liquidación** para cada pago, para que los saldos se pongan al día. Los botones de liquidación rápida rellenan el importe. Hay más sobre [saldar cuentas](page:feature/settle-up)."
+  - heading: "Cuando la villa no tiene un precio tan ordenado"
+    items:
+      - "**Las habitaciones son distintas.** Si la suite vale más que el cuartito, acordad primero cuánto cuesta cada habitación y haced las cuentas de personas-noche habitación por habitación. Introducid la villa como un solo gasto con el total de cada persona, o como un gasto por habitación. En cualquier caso, los importes exactos de un gasto tienen que sumar su total."
+      - "**Una señal pagada meses antes.** Quien la pagó añade su propio gasto, con la fecha del día en que pagó. Dividid la señal por noches, en las mismas proporciones que el resto del pago."
+      - "**La reserva está en otra moneda.** Introduce la villa en la moneda en la que pagaste. Si el grupo convierte sobre la marcha, usa un tipo de cambio actual o escribe el tipo que te aplicaron de verdad. El importe original se queda en el gasto. [Varias monedas](page:feature/multiple-currencies) lo explica con detalle."
+      - "**Noches parciales.** Alguien llega a medianoche, alguien se va antes del desayuno. Acordad una regla para contar las noches y aplicadla a todos."
+  - heading: "Lo que Side Badger no hace aquí"
+    items:
+      - "No cuenta las noches por ti. No hay división por noches ni por partes, así que calculas cada importe como arriba e introduces **importes exactos**."
+      - "No mueve dinero. Pagaos como queráis y después registrad el pago."
+      - "Admite un solo pagador por gasto. Si dos personas pagaron la villa, introduce dos gastos."
+      - "No hay acceso de invitado. Todas las personas del grupo, Dev incluido, necesitan una cuenta gratis."
+exampleAfter: 2
+example:
+  heading: "La villa, el coche y la compra"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "seis noches en la villa"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "el alquiler del coche"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "la compra"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Preguntas sobre la villa"
+  items:
+    - q: "¿Y si alguien cancela?"
+      a: "Quita sus noches, rehaz las cuentas y edita el gasto de la villa para que los importes exactos vuelvan a sumar el precio. La versión anterior se conserva y la edición aparece en la actividad del grupo, así que nadie cambia una cifra a escondidas. Quién puede editar depende de los permisos del grupo."
+    - q: "¿Debería pagar menos quien hizo la reserva?"
+      a: "Eso lo decide el grupo. Reservar es una tarea, y los grupos no se ponen de acuerdo sobre si merece un descuento. Sea lo que sea lo que acordéis, ponedlo en los importes exactos y escribidlo en una nota del gasto, o en un comentario junto a él, para que nadie tenga que acordarse del trato."
+    - q: "¿Podemos dividir la tarifa de limpieza de otra manera?"
+      a: "Sí. Introduce la tarifa como un gasto aparte y dale su propia división. Dividir a partes iguales sirve para una tarifa fija por toda la casa. Los importes exactos sirven para un grupo que quiere que la tarifa también siga las noches."

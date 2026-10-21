@@ -1,0 +1,103 @@
+translatedFrom: "6c8b8630"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - privacy-posture.no-ads
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - polls.villa-shortlist-vote
+  - permissions.viewer-sees-everything
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: 单身派对周末的费用怎么分摊 | Side Badger
+  description: 主角一分钱不用出，周一大家还能好好说话。单身派对周末怎么分摊费用，算式都有。
+h1: 单身派对周末的费用怎么分摊
+navLabel: 单身派对周末
+lead: 主角不用出钱，所以其余的人把每一笔费用在彼此之间[平分](page:feature/split-expenses)。没参加某项的人，就不要算进那项费用里；主角则不要拉进群组，这样惊喜才不会泄露。
+cta:
+  heading: 账记清楚，惊喜守住
+  body: 建一个群组，把链接发给除主角以外的所有人，每笔费用发生时就记上。Side Badger 免费，没有广告，也没有每日限制。
+sections:
+  - heading: 四个朋友，一个惊喜
+    body: Hannah、Isla、Jess 和 Kat 要带 Grace 出去过她的单身派对周末。Grace 是主角，所以什么都不用付。她也不在群组里，因此看不到朋友们为她花了多少钱。Hannah 订小屋，Isla 付水疗日的钱，Jess 请客吃晚饭，Kat 付打车钱。到了周日，每个人都付过点什么，却没人说得清谁多谁少。无论主角是谁，单身派对周末的算法都是一样的。
+  - heading: 按出钱的人来除，而不是按到场的人
+    body: 主角的那一份不会凭空消失，而是被大家分掉。小屋 £720，由四位朋友来付，所以每人 £180，Grace 的那一份已经算在这个数字里了。晚餐 £260，每人 £65。打车 £44，每人 £11。谁没参加某一项，就只在那一笔支出里把他排除。Kat 没去水疗，所以水疗的 £360（其中也包含 Grace 的那份）由 Hannah、Isla 和 Jess 分担，每人 £120。全部加起来，Hannah、Isla 和 Jess 这个周末各欠 £376，Kat 欠 £256。
+  - heading: 在 Side Badger 里设置
+    items:
+      - 为这个周末建一个群组，起个平淡无奇的名字，比如“小屋周末”。Grace 不是成员，而群组只有成员才看得到。
+      - 选择**邀请他人**，只在 Grace 看不到的地方发链接或出示二维码。链接会在有人加入之前显示群组的预览。你可以选择链接的有效期，从 15 分钟到 5 天不等。旧链接在过期之前一直有效，所以别设得比需要的更久。
+      - 每一笔费用都选择**添加费用**，输入金额，在**谁付的钱？**里选出付款人。在**分摊给**里勾选出钱的人，没参加的人就不要勾，比如水疗那笔不勾 Kat。在**如何拆分**里选择**平分**。
+      - 回到家之后，打开群组的**余额**。Side Badger 会显示谁欠谁，并建议一份简短的付款清单。这里是三笔：Kat 付给 Hannah £212，Jess 付给 Hannah £116，Isla 付给 Hannah £16。你们想怎么付就怎么付，然后用**结算**记录每一笔付款。
+  - heading: 订之前，先定预算和订金
+    body: 在任何人下单之前先商定预算。选择**添加投票**，问问大家愿意在小屋上花多少，并列出几个数字作为选项。创建时打开**匿名投票**来隐藏谁投了什么，这样就没人需要当面为一个较低的预算辩护。等大家都投完，关闭投票，结果就出来了。然后是订金。谁订谁付，把它作为一笔支出录入，平分，尾款到期时再作为第二笔支出录入。其他人可以立刻转自己那份并记录这笔付款，也可以等最终的账。两种做法下余额都是一样的。
+  - heading: 有人只来一晚
+    body: 只赶来参加周六的朋友，不该为周五付钱。把他们没参与的费用排除掉。如果费用取决于每个人待多久，比如房间，就在**如何拆分**里选择**确切金额**，输入每个人的份额，加起来必须等于总额。先算出每人每晚的价格，再乘以每个人住的晚数。关于并非人人相同的费用，[群组旅行](page:use-case/group-trips)页面有更多说明。
+  - heading: Side Badger 在这里不做的事
+    items:
+      - 它从不转移资金。你们用银行转账、现金或任何合适的方式互相付款，然后记录这笔付款，让所有人的余额同步更新。
+      - 它不发送付款提醒。在群聊里友好地提醒一句，还得靠人来做。
+      - 每笔支出只有一位付款人，Side Badger 也不能把一张收据逐行拆分。如果小屋是两张卡付的，就录入两笔支出。如果有人在晚餐时加点了东西，就把加点的部分单独录成一笔支出。
+      - 它记的是钱，不是行程。投票和评论只围绕费用，所以周末的安排还是留在你们的群聊里。
+exampleAfter: 2
+example:
+  heading: Grace 的单身派对周末，四人分摊
+  currency: GBP
+  people:
+    - id: hannah
+      name: Hannah
+    - id: isla
+      name: Isla
+    - id: jess
+      name: Jess
+    - id: kat
+      name: Kat
+  expenses:
+    - label: 小屋
+      payer: hannah
+      amount: 720
+      split:
+        method: equal
+    - label: 水疗日
+      payer: isla
+      amount: 360
+      split:
+        method: equal
+        shares:
+          hannah: 1
+          isla: 1
+          jess: 1
+    - label: 晚餐
+      payer: jess
+      amount: 260
+      split:
+        method: equal
+    - label: 打车
+      payer: kat
+      amount: 44
+      split:
+        method: equal
+faq:
+  heading: 常见问题
+  items:
+    - q: 伴郎或伴娘要多付一些吗？
+      a: 只有群组同意才这样。应用不会在算账时给任何人特殊角色。如果有人多承担了一些，就在**如何拆分**里选择**确切金额**或**百分比**，输入你们谈好的份额。
+    - q: 有些人没喝的酒水怎么办？
+      a: 把酒水作为单独一笔支出，只勾选喝了的人。如果每个人喝的量不同，就选择**确切金额**，输入每个人的份额。没享用的东西，没人需要为它付钱。
+    - q: 主角之后能看到这个群组吗？
+      a: 能，等惊喜揭晓之后。邀请对方加入，然后由管理员在群组设置的**安全**里把对方设为**观察者**。观察者能看到一切，但什么也改不了，所以要等到不再有任何秘密再这样做。对方需要一个免费账户才能加入。
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

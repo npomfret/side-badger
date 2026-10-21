@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: "Liste, sondaje și comentarii pentru cheltuieli | Side Badger"
+  description: "Comentează cheltuieli, pune în discuție pe cea ciudată, ține o listă de cumpărături și votează vila. Planifică împreună, apoi împarte. Gratuit, fără reclame."
+h1: "Planifică împreună, împarte după"
+navLabel: "Planifică împreună"
+lead: "Lista de cumpărături și nota de la cumpărături, în sfârșit în relații bune. Side Badger îi dă grupului tău un loc unde să vorbească despre bani înainte și după ce sunt cheltuiți, cu comentarii la fiecare cheltuială, o cale de a pune în discuție cheltuielile care par greșite, liste comune și sondaje pentru deciziile mari. Apoi [împarți cheltuielile](page:feature/split-expenses) ca de obicei."
+cta:
+  heading: "Planifică, apoi împarte"
+  body: "Creează un cont gratuit, începe un grup și pune prima listă, primul sondaj sau prima întrebare chiar lângă bani. Nu ești sigur ce urmează? Vezi [cum funcționează](page:how-it-works)."
+problem:
+  heading: "Chatul e într-o parte, nota în alta"
+  body: "Cheltuielile de grup trăiesc de obicei în două locuri. Cifrele sunt într-unul, iar cearta despre cifre e într-un chat îngropat de marți sub alte mesaje. Lista de cumpărături e o poză cu frigiderul. Vila a fost hotărâtă printr-un deget mare ridicat de cei mai mulți, probabil. Side Badger ține planificarea în grup, lângă cheltuielile la care se referă, așa că există un comentariu acolo unde e costul, o listă acolo unde e magazinul, un sondaj pentru decizia mare și o cale de a spune „stai puțin, e corect asta?” fără să scrii un paragraf. Totul rămâne despre banii grupului, că doar de-asta există grupul."
+workflow:
+  heading: "De la votul pentru vilă la nota de la cumpărături"
+  steps:
+    - title: "Pune decizia mare la vot"
+      body: "Adaugă un sondaj pentru decizia care stabilește nota, cum ar fi ce vilă. Alege între două și zece opțiuni, spune câte voturi are fiecare persoană, apoi închide sondajul când au votat toți, iar câștigătorul este marcat."
+      shot: S17
+      shotAlt: "Un sondaj închis, cu opțiunea câștigătoare marcată și numărul de voturi lângă fiecare opțiune"
+    - title: "Scrieți lista de cumpărături împreună"
+      body: "Începe o listă comună, adaugă articolele și bifează-le pe măsură ce ajung în coș. Cumpărăturile intră după aceea ca o cheltuială."
+      shot: S16
+      shotAlt: "O listă de cumpărături comună, cu unele articole bifate și un contor de progres"
+    - title: "Vorbiți despre cost acolo unde trăiește"
+      body: "Comentează chiar la cheltuială, atașează chitanța și reacționează cu un emoji. Conversația rămâne lângă cifra despre care e vorba."
+      shot: S08
+      shotAlt: "O cheltuială cu detaliile ei, o miniatură a chitanței, un fir de comentarii și reacții emoji"
+    - title: "Pune în discuție cheltuiala care pare ciudată"
+      body: "Dacă grupul a activat întrebările despre cheltuieli, oricine e inclus într-o cheltuială poate alege **Am o întrebare**. Cheltuiala rămâne în afara soldurilor până când întrebarea e lămurită."
+      shot: S18
+      shotAlt: "Lista de cheltuieli cu o insignă „Pus în discuție” și filtrul „Doar pus în discuție”"
+    - title: "Vezi ce s-a schimbat și cine a schimbat"
+      body: "Fluxul de activitate și clopoțelul de notificări arată ce e nou în grupurile tale. Notificările push sunt acolo dacă le vrei."
+      shot: S19
+      shotAlt: "Meniul de notificări, cu o listă de activitate recentă"
+options:
+  heading: "Opțiuni"
+  items: []
+example:
+  heading: "Trei colegi de casă, o notă de vin pusă în discuție"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "cumpărăturile mari"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "curățenia"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "vinul de petrecere"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Comentarii și reacții, lângă cifre"
+    body: "Fiecare cheltuială are propriul fir de comentarii, la fel și grupul, fiecare listă și fiecare sondaj. Întreabă de ce a costat taxiul atât chiar sub taxi, nu într-un chat în care nu mai derulează nimeni înapoi. Adaugă o poză cu chitanța sau un PDF cu rezervarea, apoi reacționează la cheltuieli, plăți și comentarii cu emoji-uri (degetul mare în sus, inimă, râs, uau, tristețe sau sărbătorește). Sărbătorește o plată când ajunge. E cel mai aproape de o rundă de aplauze la care ajunge Side Badger."
+  - heading: "Pune în discuție o cheltuială fără să începi o ceartă"
+    body: "Când grupul are întrebările despre cheltuieli activate, oricine e inclus într-o cheltuială poate alege **Am o întrebare** și poate spune de ce. Întrebarea apare ca un comentariu la cheltuială, cheltuiala primește o insignă **Pus în discuție**, iar întreaga cheltuială iese din soldurile tuturor până când întrebarea e lămurită."
+    items:
+      - "**Activarea.** Implicit e dezactivată. Un administrator activează **Permite întrebări despre cheltuieli** în setările grupului, la **Funcționalități**."
+      - "**Închiderea.** Persoana care a întrebat sau un administrator alege **Închide întrebarea**. Dacă mai multe persoane au pus aceeași cheltuială în discuție, ea intră înapoi în solduri când se închide ultima întrebare."
+      - "**Editarea.** Când o cheltuială este editată, o întrebare deschisă trece la noua versiune pentru toți cei care mai au o parte în ea. Cei pe care editarea îi scoate din cheltuială își văd întrebarea încheiată odată cu versiunea veche, așa că nu mai au nimic de închis."
+      - "**Găsirea lor.** Lista de cheltuieli are filtrul **Doar pus în discuție**. Nu e un pas de aprobare: doar cheltuielile pe care cineva le pune în discuție sunt reținute, iar tot restul contează imediat ce e adăugat."
+  - heading: "Cum se desfășoară o întrebare"
+    body: "Tom adaugă vin de petrecere de 45 £, împărțit între toți trei colegii de casă. Aisha n-a băut, așa că ridică o întrebare, iar cât timp e deschisă, vinul nu contează pentru nimeni. Casa e de acord că vinul e al lui Tom și al Priyei, așa că Tom editează împărțirea pe cei doi. Aisha nu mai e în cheltuială, așa că întrebarea ei se încheie cu versiunea anterioară, care se păstrează, iar vinul reintră imediat în solduri, cu câte 22,50 £ în loc de câte 15 £. Dacă Aisha ar fi rămas în cheltuială, întrebarea ei ar fi trecut mai departe și ar fi așteptat ca ea sau un administrator s-o închidă. Mai jos, suma Aishei de 48 £ înseamnă 28 £ din cumpărăturile mari și 20 £ din curățenie, iar suma Priyei de 10,50 £ este partea ei de 70,50 £ (28 £, 20 £ și 22,50 £) minus 60 £, cât a plătit ea. O ceartă foarte de [colegi de casă](page:use-case/housemates). Pentru cum să formulezi o întrebare, vezi [ce să faci când cineva contestă o cheltuială comună](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Liste comune, pentru cumpărături"
+    body: "Începe o listă în grup, dă-i un nume ca „Listă de cumpărături”, adaugă articole și bifează-le. Trage articolele într-o ordine mai bună, urmărește cum crește contorul de progres și comentează la listă când cineva cumpără laptele de ovăz greșit. Arhivează o listă terminată ca s-o dai la o parte (**Arată arhivate** o readuce) sau copiază o listă ca s-o refolosești. Ține lista de cumpărături comună lângă notele de plată pentru cumpărături, ca lista să spună ce să cumperi, iar cheltuiala să spună cât a costat. Cine poate crea și edita liste depinde de permisiunile grupului, pe care le explică [grupuri și permisiuni](page:feature/groups-and-permissions)."
+  - heading: "Sondaje, anonime dacă vrei"
+    body: "Întreabă grupul ceva care decide nota, cum ar fi ce vilă, cât să se cheltuie pe cadou sau dacă merită plimbarea cu barca. Un sondaj are o întrebare și între două și zece opțiuni. Alegi câte voturi are fiecare persoană, de la o singură alegere până la zece, și dacă votul este anonim. **Vot anonim** ascunde cine a votat pentru ce și nu mai poate fi schimbat după ce a intrat primul vot. Oamenii își pot schimba sau elimina votul până se închide sondajul, iar tu îl poți redeschide dacă grupul are îndoieli. Alegerea vilei este exact din ce sunt făcute [excursiile de grup](page:use-case/group-trips), iar stabilirea bugetului pentru cadou este un clasic la [evenimente și sărbători](page:use-case/events-and-celebrations)."
+  - heading: "Fluxul de activitate, ca nimic să nu se schimbe pe tăcute"
+    body: "Fiecare grup are un istoric de activitate, iar clopoțelul de notificări adună activitatea din toate grupurile tale într-un singur loc. Adaugi o cheltuială și toți o văd imediat, fără reîmprospătare, iar fluxul arată ce s-a schimbat și cine a schimbat. Asta cuprinde cheltuieli adăugate, editate sau șterse, întrebări ridicate și închise, comentarii, schimbări la liste și sondaje și plăți înregistrate."
+  - heading: "Notificări push, dacă le vrei"
+    body: "Notificările push sunt opționale. Activează-le din **Setări**, la **Notificări**, iar dispozitivul tău te anunță când apare activitate nouă în grupurile tale, cum ar fi o cheltuială nouă sau un comentariu. Fiecare dispozitiv se activează separat, iar browserul îți cere mai întâi permisiunea. Pe iPhone sau iPad funcționează doar în aplicația adăugată pe ecranul principal, lucru pe care îl explică pagina [aplicație web](page:feature/web-app). Tratează-le ca pe o comoditate, nu ca pe o promisiune, pentru că livrarea nu e garantată."
+limits:
+  heading: "Limite"
+  items:
+    - "Comentariile, listele și sondajele sunt pentru banii grupului. [Termenii](page:terms) cer ca tot ce se postează să se refere la finanțele grupului, așadar este un loc pentru a planifica cheltuielile, nu un chat general sau o aplicație de sarcini."
+    - "Un comentariu poate avea până la 500 de caractere, cu până la trei atașamente, imagini sau PDF-uri, de până la 5 MB fiecare. Doar autorul poate șterge un comentariu."
+    - "Întrebările despre cheltuieli sunt dezactivate implicit, iar un administrator le activează pentru fiecare grup. Doar persoanele incluse într-o cheltuială o pot pune în discuție, dezactivarea funcției șterge toate întrebările deschise, iar nimeni nu poate părăsi grupul cât timp o cheltuială din care face parte are o întrebare deschisă."
+    - "Un grup poate avea până la 100 de liste, fiecare cu până la 200 de articole de până la 500 de caractere. Permisiunile grupului hotărăsc cine poate crea, edita și șterge liste, iar un grup blocat nu permite nicio schimbare."
+    - "Un grup poate avea până la 50 de sondaje, fiecare cu între două și zece opțiuni și cu până la zece voturi pe persoană. Sondajele nu au termen limită și nu se închid singure."
+    - "Istoricul de activitate se păstrează 90 de zile."
+    - "Notificările push sunt opționale pentru fiecare cont și fiecare dispozitiv. Au nevoie de un browser care le acceptă și de permisiunea ta, funcționează pe iPhone și iPad doar din aplicația adăugată pe ecranul principal, iar livrarea nu e garantată. Nu există alerte prin e-mail sau SMS pentru activitate și nici mementouri de plată, așa că urmărirea unei plăți rămâne treaba ta."
+useCasesHeading: "Unde ajută planificarea în comun"
+faq:
+  heading: "Întrebări"
+  items:
+    - q: "Pot fi voturile anonime?"
+      a: "Da. Activează **Vot anonim** când creezi sondajul și el ascunde cine a votat pentru ce. Decide înainte de primul vot, pentru că nu mai poate fi schimbat după aceea."
+    - q: "Se poate închide un sondaj singur?"
+      a: "Nu. Un sondaj nu are termen limită, așa că persoana care l-a creat alege **Închide sondajul** când grupul s-a hotărât. Dacă grupul are îndoieli, **Redeschide sondajul** îl readuce."
+    - q: "Câte articole poate avea o listă?"
+      a: "Până la 200 de articole pe listă și până la 100 de liste pe grup. Fiecare articol poate avea până la 500 de caractere, ceea ce înseamnă mult lapte de ovăz."
+    - q: "Cine poate închide o întrebare și ce se întâmplă între timp cu cheltuiala?"
+      a: "Persoana care a întrebat sau un administrator de grup. Cât timp o întrebare e deschisă, întreaga cheltuială e în afara soldurilor tuturor. Ea revine când se închide ultima întrebare deschisă despre ea sau când o editare scoate persoana care a întrebat din cheltuială."
+    - q: "Pot folosi listele și comentariile ca aplicație de sarcini sau ca chat de grup?"
+      a: "Nu. Comentariile, listele și sondajele sunt pentru banii grupului, ceea ce cer și [termenii](page:terms). Gândește-te la liste de cumpărături, sondaje de buget și „de ce costă asta 45 £?”."
+    - q: "Îmi trimite Side Badger e-mailuri despre activitate?"
+      a: "Nu. Nu există alerte prin e-mail sau SMS pentru activitate. Poți activa notificările push pe fiecare dispozitiv, iar clopoțelul de notificări din aplicație arată ce e nou."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name

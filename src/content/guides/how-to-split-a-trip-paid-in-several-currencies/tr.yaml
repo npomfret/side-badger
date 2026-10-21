@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Birden fazla para biriminde harcanan gezi nasıl bölüşülür | Side Badger"
+  description: "Otel sterlin, ramen yen. Her para birimini ayrı ödeşin ya da görebildiğiniz bir kurla çevirin. İki yol da hesaplarıyla gösterildi."
+h1: "Birden fazla para biriminde harcanan gezi nasıl bölüşülür"
+navLabel: "Çok para birimli geziler"
+lead: "Her harcamayı ödediğiniz para biriminde girin, sonra bir yol seçin. Para birimlerini ayrı tutup her birini kendi parasıyla ödeşin ya da güncel bir döviz kuruyla çevirip bir kez ödeşin. Aynı Japonya gezisi birinci yolda dört, ikincisinde iki ödemeye iner."
+cta:
+  heading: "Ödediğiniz parayla girin"
+  body: "Ücretsiz bir hesap oluşturun, gezi için bir grup kurun ve her harcamayı fişte hangi para birimi yazıyorsa onunla ekleyin. Önce ayrıntıyı mı görmek istiyorsunuz? [Birden fazla para birimi](page:feature/multiple-currencies) veya [ücretsiz planın kapsamı](page:pricing) sayfasına bakın."
+sections:
+  - heading: "Üç arkadaş, bir otel ve bir sürü yen"
+    body: "Zoe, Kenji ve Lucy bir [grup gezisi](page:use-case/group-trips) için Japonya'da bir hafta geçiriyor ve her masraf üçe eşit bölünüyor. Zoe oteli evden, sterlinle, 600 £ karşılığında ayırttı. Lucy Tokyo'da 90.000 ¥ tutarında tren kartlarını aldı. Kenji ramen gecesini, 9.000 ¥, ödedi ve o günden beri her gün hatırlatıyor. Kimse bir tren peronunda üç fişi çevirmek istemez. Buradaki hesaplarda 1 ¥ = 0,005 £, bu rehber için uydurulmuş yuvarlak bir kur. Uygulamada güncel bir döviz kuru kullanırsınız ya da gerçekten aldığınız kuru yazarsınız."
+  - heading: "Her birini fişteki parayla girin"
+    body: "Hangi yolu seçerseniz seçin bu kısmı yapın. Henüz hiçbir şeyin çevrilmesi gerekmiyor."
+    items:
+      - "**Grubu kurun.** Panoda **Grup Oluştur**'u seçin, gruba geziyle aynı adı verin, sonra **Başkalarını davet et**'i seçip bağlantıyı veya QR kodunu gönderin."
+      - "**Oteli ekleyin.** **Harcama Ekle**'yi seçin ve 600 girin, tutarın yanındaki para birimi olarak sterlini seçin. **Kim ödedi?** altında Zoe'yi seçin. **Şunlar arasında bölüştür** altında üçünü de işaretli bırakın, **Nasıl bölüştürülsün** için **Eşit**'i bırakın ve **Harcamayı Kaydet**'i seçin."
+      - "**Yenleri ekleyin.** Aynısını tren kartları (Lucy ödedi) ve ramen (Kenji ödedi) için yapın, para birimi olarak yeni seçin. Yenin ondalığı yoktur, bu yüzden form kuruş sormaz."
+  - heading: "Birinci yol: para birimlerini ayrı tutun"
+    body: "Side Badger her para birimi için ayrı bir bakiye tutar ve birini diğerinden düşmez. Sterlinde otel kişi başı 200 £, yani Kenji ve Lucy Zoe'ye 200 £ borçlu. Yende tren kartları ve ramen 99.000 ¥ eder, kişi başı 33.000 ¥. Lucy 90.000 ¥ ödedi ve 57.000 ¥ alacaklı. Zoe hiç yen ödemedi ve 33.000 ¥ borçlu. Kenji 9.000 ¥ ödedi, bu yüzden 24.000 ¥ borçlu."
+    items:
+      - "**Sterlin.** Kenji Zoe'ye 200 £ öder, Lucy de Zoe'ye 200 £ öder."
+      - "**Yen.** Zoe Lucy'ye 33.000 ¥ öder, Kenji de Lucy'ye 24.000 ¥ öder."
+      - "**Toplam dört ödeme.** Zoe ile Lucy birbirine iki para biriminde borçlu ve bunlar birbirini götürmez. İşin içinde kur olmadığı için tartışacak bir şey de yok."
+      - "**Yen borcu, sterlinle ödeme.** Hiç yeni olmayan biri yine de sterlinle ödeyebilir. Ödemeyi kaydederken **Farklı para birimi mi?**'ni açın, **Şuna çevir** için sterlini seçin ve kuru kontrol edin. Zoe'nin 33.000 ¥ borcu bu rehberin kuruyla 165 £ eder ve yen bakiyesi yine doğru çıkar."
+      - "**Her ödemeyi kaydedin.** Birbirinize istediğiniz yolla ödeyin, sonra **Ödeş**'i seçip **Ödeşmeyi Kaydet**'i kullanın. [Hesaplaşma](page:feature/settle-up) sayfasında daha fazlası var."
+  - heading: "İkinci yol: girerken çevirin"
+    body: "Grup herkesin tek bir rakam görmesini tercih ediyorsa, harcamayı girerken çevirin."
+    items:
+      - "**Formda çevirin.** **Harcama Ekle** ekranında **Şuna çevir**'i seçin ve sterlini belirleyin. Side Badger kuru ve çevrilen tutarı ≈ işaretiyle gösterir. Farklı bir kur aldıysanız kuru düzenleyin. Orijinal yen tutarı harcamada kalır."
+      - "**Sterlini okuyun.** 1 ¥ = 0,005 £ kuruyla tren kartları 450 £, ramen 45 £ olur. 600 £'lik otelle birlikte bu 600 £ + 450 £ + 45 £ = 1.095 £, yani kişi başı 365 £ eder. Zoe 600 £ ödedi, 235 £ alacaklı. Lucy 450 £ ödedi ve 85 £ alacaklı. Kenji 45 £ ödedi ve 320 £ borçlu."
+      - "**İki ödeme.** İkisi de Kenji'den: Zoe'ye 235 £, Lucy'ye 85 £. Zoe ile Lucy artık birbirine hiç ödeme yapmıyor."
+      - "**Ya da grup para birimi belirleyin.** Ekstra adımı atlamak için grubun **Ayarlar**'ını açın, **Para Birimi Ayarları**'nı bulun ve **Masrafları otomatik olarak dönüştür**'ü seçin. Her yeni harcama o para birimine çevrilir; kur yine görebileceğiniz ve değiştirebileceğiniz bir kurdur."
+  - heading: "Hangi yolu seçmelisiniz?"
+    items:
+      - "**Ayrı tutun**: insanların cüzdanında hâlâ yen varsa ya da bir kur yüzünden tartışmak istemiyorsanız. Bedeli, birden fazla para biriminde daha çok ödemedir."
+      - "**Çevirin**: grup tek bir para biriminde yaşıyorsa ve herkes tek bir rakam ve Kenji'nin iki transferi gibi daha kısa bir liste istiyorsa. Bedeli, grubun bir kura güvenmesidir; kur da harcama kaydedilirken sabitlenir."
+      - "**Erken karar verin.** Grup para birimi yalnızca yeni ve kopyalanan harcamaları çevirir. Geri dönüp zaten girdiklerinizi düzeltmez."
+  - heading: "Kur ve üst sınır"
+    items:
+      - "**Kur kaydederken sabitlenir.** Eski harcamalar asla yeniden değerlenmez, bu yüzden piyasa oynadı diye bir bakiye kaymaz. Farklı günlerde girilen harcamalar farklı kurlar taşıyabilir; grup bütün gezi için tek bir kur istiyorsa, onu kararlaştırın ve her seferinde elle girin."
+      - "**Kur yok mu? Kendiniz yazın.** Side Badger elinden geldiğinde güncel bir döviz kuru getirir, ama her çift için bir kurun bulunacağı garanti değildir. Yoksa ya da bir döviz bürosu size daha iyi bir fiyat verdiyse, kendi kurunuzu yazın."
+      - "**Harcama başına, kendi para biriminde 999.999,99.** Para birimi ne olursa olsun tek bir üst sınır. Yende bu 1.000.000 ¥'in hemen altıdır, bu rehberin kuruyla yaklaşık 5.000 £. Endonezya rupisi gibi büyük sayılı bir para biriminde tek bir hesap buna daha çabuk ulaşabilir. Hesabı iki harcamaya bölün ya da başka bir para biriminde girip çevirin."
+  - heading: "Side Badger burada neleri yapmaz"
+    items:
+      - "Parayı asla taşımaz ya da bozdurmaz. Birbirinize istediğiniz yolla ödersiniz, sonra ödemeyi kaydedersiniz."
+      - "140 para birimi var. Kripto paralar ve madenler bunların arasında değil."
+exampleAfter: 2
+example:
+  heading: "Japonya, iki şekilde ödeşildi"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "otel, evden ayırtıldı"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "tren kartları"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "ramen gecesi"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Side Badger hangi döviz kurunu kullanır?"
+      a: "Harcamayı girdiğinizde, varsa güncel bir döviz kuru getirilir. Bunu gerçekten aldığınız kurla değiştirebilirsiniz."
+    - q: "Grup yalnızca sterlin ve yenle sınırlı kalabilir mi?"
+      a: "Evet. Grubun **Ayarlar**'ında, **Para Birimi Ayarları** altında **Bu grup için para birimlerini kısıtla**'yı açın, **İzin verilen para birimleri**'ni seçin ve **Yeni harcamalar için varsayılan para birimi**'ni belirleyin. Listede daha az seçenek, kasada daha az yanlış tahmin demek."
+    - q: "Hiç çevirmek zorunda mıyız?"
+      a: "Hayır. Siz ya da grubunuz çevirmeyi seçmedikçe para birimleri ayrı kalır ve her para biriminin kendi kısa ödeme listesi olur."

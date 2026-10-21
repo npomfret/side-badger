@@ -1,0 +1,108 @@
+translatedFrom: "92a9bff3"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Daha çok kazanan partnerle faturalar nasıl bölüşülür | Side Badger"
+  description: "Biriniz çok daha fazla kazanırken yarı yarıya bölüşmek tuhaflaşır. Ortak faturaları gelire göre bölüşün; iki kişi için hesaplarla, e-tablosuz."
+h1: "Daha çok kazanan partnerle faturalar nasıl bölüşülür"
+navLabel: "Daha çok kazanan partner"
+lead: "Net maaşlarınızı toplayın, toplamdan her kişinin payını hesaplayın ve tam yüzdelere yuvarlayın. Maya eline 2.800 £, Jon 1.700 £ alıyor; bu yüzden ortak faturaları %62/%38 bölüşüyorlar. Bu yüzdeleri Side Badger'da ortak bir harcamaya girin, aynı fatura her geldiğinde kopyalayın."
+cta:
+  heading: "Hesabı bir kez yapın"
+  body: "Ücretsiz bir hesap oluşturun, ikiniz için bir grup kurun ve kirayı yüzdelerinizle girin. Gelecek ayın kirası bir kopyadan ibaret. Önce tura mı çıkmak istersiniz? [Nasıl çalışır](page:how-it-works) ya da [ücretsiz olan neleri kapsıyor](page:pricing) sayfalarına bakın."
+sections:
+  - heading: "İki maaş, tek daire, tek kibar sessizlik"
+    body: "Maya ve Jon birlikte yaşıyor. Maya ayda eline 2.800 £, Jon 1.700 £ alıyor. İki yıl boyunca her şeyi yarı yarıya bölüştüler, çünkü basitti ve ikisi de konuyu açan kişi olmak istemiyordu. Sonra Jon kiraya tek başına baktı. 1.400 £'un yarısı 700 £; bu Maya'nın net maaşının dörtte biri, kendisininkinin ise %41'i. Kimse haksızlık etmemişti. Kimse hesabı yapmamıştı. Pek çok [çift](page:use-case/couples) eninde sonunda buraya gelir. Bir paket yemeğin başında, ortak faturaların iki maaştan da benzer bir ısırık almasında anlaştılar."
+  - heading: "Yöntem, hesaplarla birlikte"
+    body: "Dört adım, bir hesap makinesi ve zaten yapacağınız bir konuşma."
+    items:
+      - "**Neyin maaş sayılacağında anlaşın.** Maya ve Jon net maaşı, yani her ay bankaya yatan parayı kullanıyor. Birlikte bu 2.800 £ + 1.700 £ = 4.500 £ eder."
+      - "**Her payı hesaplayın.** Maya'nın payı 2.800 ÷ 4.500, yani %62,2. Jon'unki 1.700 ÷ 4.500, yani %37,8."
+      - "**Tam yüzdelere yuvarlayın.** %62,2 62, %37,8 38 olur. İki kişide bir rakamı yuvarlayın ve diğerini 100'den çıkararak bulun; toplam hep 100 eder."
+      - "**Ne anlama geldiğine bakın.** 1.400 £'luk kirada Maya 868 £ (%62), Jon 532 £ (%38) öder. Bu, her kişinin net maaşının yaklaşık %31'i eder. Yarı yarıya bölüşmek Maya'nın maaşının %25'ini, Jon'unkinin %41'ini alırdı."
+  - heading: "Ayı okumak"
+    body: "Kirayı 1.400 £ Maya, kalan 216 £'u Jon ödedi. Maya'nın ay boyunca payı 868,00 £ + 111,60 £ + 18,00 £ = 997,60 £; o 1.400 £ ödedi, yani 402,40 £ alacaklı. Jon'un payı 532,00 £ + 68,40 £ + 18,00 £ = 618,40 £; o 216 £ ödedi, yani 402,40 £ borçlu. Side Badger tek bir ödeme önerir, Jon'dan Maya'ya 402,40 £; ödeme yapıldıktan sonra [hesaplaşma](page:feature/settle-up) onu kaydeder. Aynı ay yarı yarıya bölünseydi Jon, Maya'ya 592,00 £ öderdi."
+  - heading: "Side Badger'da kurulumu"
+    body: "On dakika; çoğu yüzdelere gider."
+    items:
+      - "**Grubu kurun.** Panelde **Grup Oluştur**'u seçin ve gruba dairenin adını verin. **Başkalarını davet et**'i seçip Jon'a bağlantıyı ya da QR kodunu gönderin. O giriş yapar ya da ücretsiz bir hesap oluşturur ve bu grupta görünmek istediği adı seçer. Bir grubu yalnızca üyeler görebilir; yani bu grup sadece ikinizi kapsar."
+      - "**Kirayı ekleyin.** **Harcama Ekle**'yi seçin. Açıklamayı ve tutarı girin, **Kim ödedi?** altında Maya'yı seçin. İki kişiyi de **Şunlar arasında bölüştür** altında bırakın, sonra **Nasıl bölüştürülsün** altında **Yüzde**'yi seçip 62 ve 38 yazın. Yüzdeler 100 etmezse form sizi uyarır. **Harcamayı Kaydet**'i seçin."
+      - "**Diğer faturaları ekleyin.** Enerji ve internet aynı şekilde girer; ödeyen Jon, yüzdeler aynı 62 ve 38. Paket yemek kendi harcamasıdır ve **Nasıl bölüştürülsün** seçeneği **Eşit** üzerinde kalır."
+      - "**Gelecek ay kopyalayın.** Geçen ayın kirasını açın ve **Harcamayı kopyala**'yı seçin. Kopya ödeyeni, tutarı ve bölüşümü korur, tarih olarak bugünü alır. Kira değiştiyse tutarı değiştirin, sonra **Kopya oluştur**'u seçin. Enerji faturası da aynı şekilde işler."
+      - "**Kimin kime borçlu olduğuna bakın.** **Bakiyeler** bölümü bunu gösterir ve kısa bir ödeme listesi önerir. Birbirinize istediğiniz yolla ödeyin, sonra ödemeyi **Ödeş** altında kaydedin."
+  - heading: "Yarı yarıya, gelire göre ya da fatura fatura"
+    body: "Doğru bir cevap yok, yalnızca ikinizin de yaşayabileceği bir cevap var. Yaygın üç tanesi."
+    items:
+      - "**Her şey için yarı yarıya.** Tutması en kolay olanı; maaşları birbirine yakın çiftlere uyar."
+      - "**Ortak olan her şey için gelire göre.** Maya ve Jon'un yaptığı. Tek bir konuşma, tek bir yüzde çifti."
+      - "**Fatura fatura.** Kira ve faturalar gelire göre, tatiller ve küçük keyifler yarı yarıya ya da başka türlü anlaştığınız gibi; her fatura ona uyan kuralı alır."
+  - heading: "Neyin ortak sayılacağında anlaşın"
+    body: "Tartışmalar genellikle yüzdeler hakkında değil, liste hakkındadır. Kira, enerji, internet, haftalık alışveriş ve kanepe çoğu evde ortak sayılır. Maya'nın spor salonu üyeliği ve Jon'un futbol aboneliği olmayabilir. Listeyi bir kez kararlaştırın, yazın ve gruba yalnızca ortak masrafları koyun."
+  - heading: "Paket yemek bilerek yarı yarıya kalır"
+    body: "Keyifler küçüktür ve isteğe bağlıdır; mantı sipariş etmek için kimsenin hesap makinesine ihtiyacı olmamalı. Side Badger'da paket yemek sadece başka bir harcamadır. Jon 36 £ öder, **Nasıl bölüştürülsün** seçeneği **Eşit** kalır ve her biri 18 £ borçlu olur."
+  - heading: "Birinin maaşı değiştiğinde"
+    body: "Bir zam, yeni bir iş ya da işten izin hesabı değiştirir. Yeni yüzdeleri aynı şekilde hesaplayın ve bir sonraki harcamadan itibaren kullanın. Önceki harcamalar olduğu gibi kalır. Geçen ayın kirasını kopyalayın, yüzdeleri değiştirin, sonra **Kopya oluştur**'u seçin. Zaten girilmiş bir harcamayı düzeltmek için grubun izinleri izin veriyorsa onu düzenleyin ve önce partnerinize söyleyin, çünkü bakiyeler değişir. Önceki sürüm saklanır. Ne zaman yeniden hesaplayacağınızda anlaşın, örneğin yılda bir kez, ve geçiş yapmadan önce ödeşin ki eski bölüşüm temiz bir sayımla kapansın."
+  - heading: "Side Badger burada neyi yapmaz"
+    items:
+      - "Kimsenin ne kazandığını asla sormaz ve yüzdeleri hesaplamaz. Anlaştığınız rakamları siz yazarsınız."
+      - "Bütün grup için varsayılan bir bölüşüm belirleyemez. Yüzdeler her harcamaya girilir; bu yüzden onlara zaten sahip olanı kopyalayın."
+      - "Yinelenen fatura yok; bu yüzden her ay geçen ayın kirasını kopyalarsınız."
+      - "Parayı hiç taşımaz. Birbirinize istediğiniz yolla ödersiniz ve kaydedersiniz."
+exampleAfter: 2
+example:
+  heading: "Maya ve Jon'un dairesinde bir ay"
+  currency: GBP
+  people:
+    - id: maya
+      name: Maya
+    - id: jon
+      name: Jon
+  expenses:
+    - label: "kira"
+      payer: maya
+      amount: 1400
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: "enerji ve internet"
+      payer: jon
+      amount: 180
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: "paket yemek"
+      payer: jon
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Brüt mü net maaşı mı kullanmalıyız?"
+      a: "Buna grup karar verir. Net maaş yaygındır, çünkü gerçekten harcayabileceğiniz paradır. Brüt maaş, verginin, emeklilik kesintilerinin ve kredi ödemelerinin farklı maaşlardan farklı miktarlar aldığı gerçeğini yok sayar. Hangisini seçerseniz seçin, ikiniz için aynı ölçüyü kullanın."
+    - q: "Side Badger gelirlerimizi görüyor mu?"
+      a: "Hayır. Yalnızca yüzdeleri girersiniz, maaşları asla. Yüzdeleri grubun üyeleri görebilir; bir çift için bu, ikinizsiniz."
+    - q: "62/38'i her şey için bir kez belirleyebilir miyiz?"
+      a: "Bölüşüm grup başına değil, harcama başına belirlenir. Zaten 62 ve 38 olan bir harcamayı kopyalayın, sonra farklı olanı değiştirin. Diğer seçenekler [harcamaları bölüşme](page:feature/split-expenses) sayfasında."

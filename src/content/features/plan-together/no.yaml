@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: Lister, avstemninger og kommentarer for gruppen | Side Badger
+  description: Kommenter utgifter, still spørsmål ved den rare, ha en delt handleliste og stem over villaen. Planlegg sammen, del etterpå. Gratis, uten annonser.
+h1: Planlegg sammen, del etterpå
+navLabel: Planlegg sammen
+lead: Handlelisten og handleregningen, endelig på talefot. Side Badger gir gruppen et sted å snakke om pengene før og etter de er brukt, med kommentarer på hver utgift, en måte å stille spørsmål ved dem som ser feil ut, delte lister og avstemninger for de store valgene. Så [deler du utgifter](page:feature/split-expenses) som vanlig.
+cta:
+  heading: Planlegg det, del det
+  body: Opprett en gratis konto, start en gruppe og legg den første listen, avstemningen eller det første spørsmålet rett ved siden av pengene. Usikker på hva som skjer videre? Se [slik fungerer det](page:how-it-works).
+problem:
+  heading: Chatten er her, regningen er der
+  body: Gruppeutgifter lever vanligvis to steder. Tallene ligger ett sted, og krangelen om tallene ligger i en chat som rullet bort på tirsdag. Handlelisten er et bilde av et kjøleskap. Villaen ble avgjort med en tommel opp fra de fleste, antakelig. Side Badger holder planleggingen i gruppen, ved siden av utgiftene den handler om, så det finnes en kommentar der kostnaden er, en liste der handleturen er, en avstemning for det store valget, og en måte å si «vent litt, stemmer dette?» uten å skrive et helt avsnitt. Alt handler fortsatt om gruppens penger, som er det gruppen er til for.
+workflow:
+  heading: Fra villavalget til handleregningen
+  steps:
+    - title: Sett det store valget til avstemning
+      body: Legg til en avstemning for avgjørelsen som bestemmer regningen, for eksempel hvilken villa. Velg to til ti alternativer, si hvor mange stemmer hver person får, og lukk den når alle har stemt, så markeres vinneren.
+      shot: S17
+      shotAlt: En lukket avstemning med vinneralternativet markert og antall stemmer ved siden av hvert alternativ
+    - title: Skriv handlelisten sammen
+      body: Start en delt liste, legg til varene og kryss dem av etter hvert som de havner i vogna. Handleturen legges inn som en utgift etterpå.
+      shot: S16
+      shotAlt: En delt handleliste med noen varer avkrysset og en fremdriftsteller
+    - title: Snakk om kostnaden der den bor
+      body: Kommenter selve utgiften, legg ved kvitteringen og reager med en emoji. Samtalen blir stående ved siden av tallet den handler om.
+      shot: S08
+      shotAlt: En utgift med detaljer, et miniatyrbilde av kvitteringen, en kommentartråd og emoji-reaksjoner
+    - title: Still spørsmål ved den som ser rar ut
+      body: Hvis gruppen har slått på utgiftsspørsmål, kan alle som er med i en utgift velge **Jeg har et spørsmål**. Utgiften holdes utenfor saldoene til spørsmålet er avklart.
+      shot: S18
+      shotAlt: Utgiftslisten med merket Stilt spørsmål ved og filteret Kun stilt spørsmål ved
+    - title: Se hva som endret seg, og hvem som endret det
+      body: Aktivitetsloggen og varselklokken viser hva som er nytt på tvers av gruppene dine. Pushvarsler finnes hvis du vil ha dem.
+      shot: S19
+      shotAlt: Varselmenyen med en liste over nylig aktivitet
+options:
+  heading: Valg
+  items: []
+example:
+  heading: Tre romkamerater, én omstridt vinregning
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: den store handleturen
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: vaskehjelpen
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: festvinen
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: Kommentarer og reaksjoner, ved siden av tallene
+    body: Hver utgift har sin egen kommentartråd, og det har gruppen, hver liste og hver avstemning også. Spør hvorfor taxien kostet så mye under taxien, ikke i en chat ingen blar tilbake i. Legg ved et bilde av kvitteringen eller en PDF av bookingen, og reager med tommel opp, hjerte, latter, wow, trist eller feiring på utgifter, betalinger og kommentarer. Feir en betaling når den kommer frem. Det er det nærmeste Side Badger kommer en applausrunde.
+  - heading: Still spørsmål ved en utgift uten å starte krangel
+    body: Når gruppen har utgiftsspørsmål slått på, kan alle som er med i en utgift velge **Jeg har et spørsmål** og si hvorfor. Spørsmålet legges ut som en kommentar på utgiften, utgiften får merket **Stilt spørsmål ved**, og hele utgiften faller ut av alles saldoer til spørsmålet er avklart.
+    items:
+      - "**Slå det på.** Det er av som standard. En administrator slår på **Tillat spørsmål om utgifter** i gruppens innstillinger, under **Funksjoner**."
+      - "**Lukke det.** Den som spurte, eller en administrator, velger **Lukk spørsmålet**. Hvis flere har stilt spørsmål ved den samme utgiften, går den tilbake i saldoene når det siste spørsmålet er lukket."
+      - "**Redigere det.** Når en utgift redigeres, følger et åpent spørsmål med til den nye versjonen for alle som fortsatt har en andel i den. Den som redigeringen lar falle utenfor, får spørsmålet sitt avsluttet sammen med den gamle versjonen, så det er ingenting igjen for vedkommende å lukke."
+      - "**Finne dem.** Utgiftslisten har filteret **Kun stilt spørsmål ved**. Dette er ikke et godkjenningstrinn: bare utgiftene noen stiller spørsmål ved, holdes tilbake, og alt annet teller med en gang det legges til."
+  - heading: Slik forløper et spørsmål
+    body: Tom legger inn 45 £ i festvin, delt mellom alle tre romkameratene. Aisha drakk ikke, så hun tar opp et spørsmål, og mens det er åpent, teller vinen for ingen. Huset blir enige om at vinen er Toms og Priyas, så Tom redigerer delingen til de to. Aisha er ikke lenger med i utgiften, så spørsmålet hennes avsluttes sammen med den tidligere versjonen, som blir bevart, og vinen er tilbake i saldoene med en gang, med 22,50 £ hver i stedet for 15 £ hver. Hadde Aisha blitt værende i utgiften, ville spørsmålet hennes ha fulgt med og ventet på at hun eller en administrator lukket det. Nedenfor består Aishas 48 £ av 28 £ fra handleturen og 20 £ fra vaskehjelpen, og Priyas 10,50 £ er hennes andel på 70,50 £ (28 £, 20 £ og 22,50 £) minus de 60 £ hun betalte. En krangel som er typisk for [romkamerater](page:use-case/housemates). For hvordan du formulerer et spørsmål, se [hva du gjør når noen bestrider en delt utgift](page:guide/what-to-do-when-someone-disputes-a-shared-expense).
+  - heading: Delte lister, til handlingen
+    body: Start en liste i gruppen, kall den noe som Handleliste, legg til varer og kryss dem av. Dra varer til en bedre rekkefølge, se fremdriftstelleren stige og kommenter listen når noen kjøper feil havremelk. Arkiver en ferdig liste for å rydde den bort (**Vis arkiverte** henter den tilbake), eller kopier en liste for å bruke den på nytt. Ha den felles handlelisten ved siden av handleregningene, så listen sier hva som skal kjøpes og utgiften sier hva det kostet. Hvem som kan opprette og redigere lister, avhenger av gruppens tillatelser, som [grupper og tillatelser](page:feature/groups-and-permissions) forklarer.
+  - heading: Avstemninger, anonyme hvis du vil
+    body: Spør gruppen om noe som avgjør regningen, for eksempel hvilken villa, hvor mye gaven skal koste eller om båtturen er verdt det. En avstemning har et spørsmål og to til ti alternativer. Du velger hvor mange stemmer hver person får, fra ett enkelt valg opp til ti, og om stemmegivingen er anonym. **Anonym avstemning** skjuler hvem som stemte på hva, og kan ikke endres etter at den første stemmen er inne. Folk kan endre eller fjerne stemmen sin til avstemningen lukkes, og du kan åpne den igjen hvis gruppen får betenkeligheter. Å velge villa er akkurat det [gruppereiser](page:use-case/group-trips) er laget av, og å bli enige om gavebudsjettet er en klassiker for [arrangementer og feiringer](page:use-case/events-and-celebrations).
+  - heading: Aktivitetsloggen, så ingenting endres i det stille
+    body: Hver gruppe har en aktivitetshistorikk, og varselklokken samler aktivitet fra alle gruppene dine på ett sted. Legg til en utgift, så ser alle den med en gang, uten å laste siden på nytt, og loggen viser hva som endret seg og hvem som endret det. Det gjelder utgifter som er lagt til, redigert eller slettet, spørsmål som er tatt opp og lukket, kommentarer, endringer i lister og avstemninger og registrerte betalinger.
+  - heading: Pushvarsler, hvis du vil ha dem
+    body: Pushvarsler er valgfrie. Slå dem på i kontoens **Innstillinger**, under **Varsler**, så gir enheten beskjed når det er ny aktivitet i gruppene dine, for eksempel en ny utgift eller en kommentar. Hver enhet slås på for seg, og nettleseren din ber om tillatelse først. På iPhone og iPad fungerer de bare i appen som er lagt til på Hjem-skjermen, som siden om [nettappen](page:feature/web-app) forklarer. Se på dem som en bekvemmelighet, ikke et løfte, for levering er ikke garantert.
+limits:
+  heading: Grenser
+  items:
+    - Kommentarer, lister og avstemninger er for gruppens penger. [Vilkårene](page:terms) ber om at alt som legges ut, handler om gruppens økonomi, så dette er et sted å planlegge utgiftene, ikke en generell chat eller en gjøremålsapp.
+    - En kommentar kan være opptil 500 tegn, med opptil tre vedlegg som er bilder eller PDF-er på opptil 5 MB hver. Bare forfatteren kan slette en kommentar.
+    - Utgiftsspørsmål er av som standard, og en administrator slår dem på for hver gruppe. Bare personer som er med i en utgift, kan stille spørsmål ved den, å slå funksjonen av fjerner alle åpne spørsmål, og ingen kan forlate gruppen mens en utgift de er med i, har et åpent spørsmål.
+    - En gruppe kan ha opptil 100 lister, hver med opptil 200 elementer på opptil 500 tegn. Gruppens tillatelser avgjør hvem som kan opprette, redigere og slette lister, og en låst gruppe tillater ingen endringer.
+    - En gruppe kan ha opptil 50 avstemninger, hver med to til ti alternativer og opptil ti stemmer per person. Avstemninger har ingen frist og lukkes ikke av seg selv.
+    - Aktivitetshistorikken beholdes i 90 dager.
+    - Pushvarsler må slås på for hver konto og hver enhet. De krever en nettleser som støtter dem og din tillatelse, de fungerer på iPhone og iPad bare fra appen som er lagt til på Hjem-skjermen, og levering er ikke garantert. Det finnes ingen e-post- eller SMS-varsler for aktivitet og ingen betalingspåminnelser, så det er fortsatt opp til deg å purre på en betaling.
+useCasesHeading: Der det hjelper å planlegge sammen
+faq:
+  heading: Spørsmål
+  items:
+    - q: Kan stemmene være anonyme?
+      a: Ja. Slå på **Anonym avstemning** når du oppretter avstemningen, så skjules det hvem som stemte på hva. Bestem deg før den første stemmen, for det kan ikke endres etterpå.
+    - q: Kan en avstemning lukkes av seg selv?
+      a: Nei. En avstemning har ingen frist, så den som opprettet den, velger **Lukk avstemning** når gruppen har bestemt seg. Hvis gruppen får betenkeligheter, henter **Gjenåpne avstemning** den tilbake.
+    - q: Hvor mange elementer kan en liste ha?
+      a: Opptil 200 elementer per liste og opptil 100 lister per gruppe. Hvert element kan være opptil 500 tegn, som er mye havremelk.
+    - q: Hvem kan lukke et spørsmål, og hva skjer med utgiften i mellomtiden?
+      a: Den som spurte, eller en gruppeadministrator. Mens et spørsmål er åpent, er hele utgiften utenfor alles saldoer. Den kommer tilbake når det siste åpne spørsmålet på den er lukket, eller når en redigering tar den som spurte, ut av utgiften.
+    - q: Kan jeg bruke lister og kommentarer som en gjøremålsapp eller en gruppechat?
+      a: Nei. Kommentarer, lister og avstemninger er for gruppens penger, som [vilkårene](page:terms) ber om. Tenk handlelister, budsjettavstemninger og «hvorfor er dette 45 £?».
+    - q: Sender Side Badger meg e-post om aktivitet?
+      a: Nei. Det finnes ingen e-post- eller SMS-varsler for aktivitet. Du kan slå på pushvarsler på hver enhet, og varselklokken i appen viser hva som er nytt.

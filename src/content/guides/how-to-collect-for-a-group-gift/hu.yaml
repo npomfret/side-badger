@@ -1,0 +1,101 @@
+translatedFrom: "5d92090e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Így gyűjtsetek pénzt egy közös ajándékra | Side Badger"
+  description: "Mindenki más összeggel száll be, és egy ember kártyája issza meg a levét. Szavazzatok a keretről, írjatok be pontos összegeket, a számolás a Side Badger dolga."
+h1: "Így gyűjtsetek pénzt egy közös ajándékra"
+navLabel: "Gyűjtés közös ajándékra"
+lead: "A közös ajándékra gyűjtés azt jelenti, hogy egy ember előlegezi a pénzt, a többiek pedig neki tartoznak a saját részükkel. Szavazással döntsetek a keretről, a vevő fizesse az ajándékot a saját kártyájáról, aztán vigye be egyetlen költségként [pontos összegekkel](page:feature/split-expenses), mindenki nevéhez egy összeggel. A Side Badger megmutatja, ki mennyivel tartozik a vevőnek, és mindenki úgy küldi el a részét, ahogy akarja."
+cta:
+  heading: "Járjon a kalap, kalap nélkül"
+  body: "Csinálj csoportot, hagyd ki belőle azt, aki az ajándékot kapja, és vidd be az ajándékot pontos összegekkel. A Side Badger ingyenes, hirdetések és napi korlátok nélkül. Előbb megnéznéd, hogyan megy? Olvasd el, [hogyan működik](page:how-it-works), vagy azt, [mit tartalmaz az ingyenes használat](page:pricing)."
+sections:
+  - heading: "Négy barát, egy lemezjátszó, négy különböző összeg"
+    body: "Bea 30 éves lesz, és lemezjátszót szeretne. Priya, Omar, Lena és Sam veszik meg neki. Priya talál egyet 240 £-ért, és a saját bankkártyájával kifizeti, mert valakinek kezdenie kell. A négyen nem egyenlően szállnak be. Priya és Omar fejenként 60 £-ot tesz be, Lena 80 £-ot, Sam 40 £-ot. Senki nem magyarázza a saját összegét, és senki nem kérdez rá. Omar vesz még egy üdvözlőkártyát és csomagolópapírt 12 £-ért. Mind a négyen aláírják a kártyát, ezért azt egyenlően osztják."
+  - heading: "Állapodjatok meg a keretről, mielőtt bárki a Vásárlásra kattint"
+    body: "Egy szavazás a keretről megspórol egy vitát egy 400 £-os lemezjátszó körül. A csoportban válaszd a **Szavazás hozzáadása** lehetőséget, és kérdezd meg, mennyibe kerüljön az ajándék. A válaszlehetőségek legyenek összegek, például legfeljebb 150 £, legfeljebb 200 £ és legfeljebb 250 £. Kapcsold be a **Névtelen szavazás** lehetőséget, amely elrejti, ki mire szavazott, így senkinek nem kell hangosan védenie egy kisebb számot. A beállítások az első szavazat leadása után már nem módosíthatók, ezért előbb ellenőrizd őket. A szavazás nem zárul le magától. Ha mindenki szavazott, válaszd a **Szavazás lezárása** lehetőséget, és megjelenik a **Győztes**. A szavazás a teljes összegről dönt. Senki részét nem határozza meg."
+  - heading: "A számolás"
+    body: "Az ajándék 60 £, 60 £, 80 £ és 40 £ szerint oszlik, ami együtt a nyugtán szereplő 240 £. A kártya és a csomagolás négyfelé oszlik, fejenként 3 £. Priya számlája 60 £ + 3 £, vagyis 63 £, ő pedig 240 £-ot fizetett, így 177 £ jár neki. Omar számlája is 63 £, de ő 12 £-ot fizetett, így a tartozása 51 £. Lena tartozása 80 £ + 3 £, vagyis 83 £, Samé 40 £ + 3 £, vagyis 43 £. E három együtt éppen Priya 177 £-nyi követelését adja ki. Magukra hagyva a tartozások öt különböző úton kerengenének a csoportban. A Side Badger ehelyett három kifizetést javasol, mind Priyának. Az [elszámolás](page:feature/settle-up) oldalon a részletek."
+  - heading: "Vidd be a Side Badgerbe"
+    body: "Priya oldala nagyjából öt percet vesz igénybe."
+    items:
+      - "**Csinálj csoportot.** A vezérlőpulton válaszd az **Új csoport** lehetőséget. Válaszd a **Mások meghívása** lehetőséget, és küldd el a linket vagy a QR-kódot azoknak, akik beszállnak, senki másnak."
+      - "**Add hozzá az ajándékot.** Válaszd a **Kiadás hozzáadása** lehetőséget, írd le, mi az, add meg a 240-et, és a **Ki fizetett?** alatt válaszd Priyát. Hagyd mind a négyüket a **Megosztás közöttük** alatt, majd a **Felosztás módja** alatt válaszd a **Pontos összegek** lehetőséget, és írd be: 60, 60, 80 és 40. Az összegeknek ki kell adniuk a 240-et. Ha szeretnéd, csatold a rendelés visszaigazolását. Válaszd a **Kiadás mentése** lehetőséget."
+      - "**Add hozzá az üdvözlőkártyát.** Omar maga viszi be a 12 £-ot, a **Ki fizetett?** alatt saját magát választja, a **Felosztás módja** pedig marad **Egyenlően**, mind a négy ember kipipálva."
+      - "**Számoljatok, aztán fizessetek.** Mindenki megnézi az **Egyenlegek** részt, amely megmutatja, ki kinek tartozik, és elküldi Priyának a részét, ahogy akarja. Aztán rögzíti a **Tartozásrendezés** és a **Tartozásrendezés rögzítése** segítségével. A **Gyors rendezés** kitölti az összeget."
+  - heading: "Előbb vásároltok, vagy előbb gyűjtötök"
+    body: "A Side Badger nem tartja a közös kasszát, így a „gyűjtés” valójában számolást jelent. Két sorrend is működik."
+    items:
+      - "**Előbb vásárolni.** A vevő fizet, a valódi áron felviszi a költséget, és mindenki azonnal látja a részét. Rendezettebb, de a vevő viseli a költséget, amíg az emberek nem fizetnek, ezért olyan vevőt válassz, aki bírja."
+      - "**Előbb gyűjteni.** Az emberek a vásárlás előtt elküldik a saját összegüket a vevőnek. Ha megvan az ár, vidd fel az ajándékot, aztán rögzítsd az egyes kifizetéseket azzal a dátummal, amikor a pénz ténylegesen mozgott. Az ajándékot vidd fel előbb, hogy minden kifizetésnek legyen egyenlege, amelyre érkezhet."
+      - "**Változik az ár.** Szállítási díj, kuponkód, késői áremelés. Szerkeszd az ajándékot, és módosítsd a pontos összegeket úgy, hogy továbbra is kiadják az árat. A korábbi változat megmarad, de szólj előbb a csoportnak, mert az egyenlegeik változnak."
+  - heading: "Tartsd távol Beát"
+    body: "Egy csoportot csak a tagjai látnak, így Bea nem láthat olyan csoportot, amelyben nincs benne. Csak azokat hívd meg, akik beszállnak, senki mást. A link a lejáratáig működik, és 15 perctől 5 napig bármit választhatsz, ezért rövidet válassz, és olyan helyre küldd, ahol Bea nem látja. A link megmutatja a csoport előnézetét annak, aki megnyitja, ezért nevezd el a csoportot valami unalmasnak, például Szombati kasszának, és Bea nevét a költségek címkéiből és a szavazás válaszlehetőségeiből is hagyd ki."
+  - heading: "Mit nem csinál itt a Side Badger"
+    items:
+      - "Nem tartja és nem gyűjti be a pénzt. A beszállók a vevőnek utalják, készpénzben adják, vagy ahogy szoktatok, aztán valaki rögzíti."
+      - "Nem küld fizetési emlékeztetőket. Aki nem fizetett, azt megbökni továbbra is emberi feladat."
+      - "Nem számolja ki senki részét. A szavazás a keretről dönt, „oszd el, ami marad” lehetőség pedig nincs, ezért minden összeget te írsz be."
+      - "Minden költségnek egyetlen fizetője van. Ha két ember vette az ajándék különböző részeit, vidd be két költségként."
+      - "A felosztásban szereplő mindenkinek kell egy ingyenes fiók és egy hely a csoportban."
+exampleAfter: 2
+example:
+  heading: "Bea lemezjátszója, és a kártya"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: "az ajándék"
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: "üdvözlőkártya és csomagolás"
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: "Kérdések"
+  items:
+    - q: "Mi van, ha többet gyűjtünk, mint amennyibe az ajándék kerül?"
+      a: "A pontos összegeknek ki kell adniuk az árat, ezért addig csökkentsd a részeket, amíg ez nem sikerül. Vagy költsd a többletet valami valódira, például virágra, és vidd be második költségként, mint a példában az üdvözlőkártyát és a csomagolást."
+    - q: "Beszállhat valaki úgy, hogy nem csatlakozik a csoporthoz?"
+      a: "Nem, ha azt akarjátok, hogy benne legyen a számolásban. A felosztásban szereplő mindenkinek kell egy ingyenes fiók, és tagnak kell lennie a csoportban. Annak, akinek csak készpénze van, Priya elveheti, és az ajándékot annyiért viheti fel, amennyivel a csoport még tartozik. Például ha Sam 40 £-ot adna neki készpénzben, Priya 200 £-ot vinne fel, és 60, 60 és 80 szerint osztaná el saját maga, Omar és Lena között."
+    - q: "Dönthet a szavazás arról, ki mennyit tesz be?"
+      a: "Nem. A szavazás az egész csoportra egy számot dönt el, például a keretet. Az egyes részekről köztetek kell megegyeznetek, aztán a költségbe a **Pontos összegek** módszerrel írjátok be őket."

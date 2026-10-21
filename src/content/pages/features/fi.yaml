@@ -1,7 +1,7 @@
-translatedFrom: "daad8614"
+translatedFrom: "013f7b92"
 review:
   status: checked
-  checker: "PN-check"
+  checker: "R2-check"
   date: "2026-10-21"
 claims:
   - groups.group-per-house-trip-event
@@ -24,23 +24,23 @@ meta:
 h1: Mitä Side Badger tekee
 navLabel: Ominaisuudet
 lead: Kaikki mitä laatikossa on, ja mitä ei.
-intro: Tässä koko paletti. Taulukkolaskennan jätimme tarkoituksella pois. Aloita kolmesta tehtävästä, joita Side Badger hoitaa joka päivä, ja katso sitten loput listasta sekä lyhyt luettelo asioista, joita se ei tee.
+intro: Tässä koko paletti. Taulukkolaskennan jätimme tarkoituksella pois. Valitse alta ominaisuus, niin pääset pitkään versioon, tai silmäile listan loppuosa ja lyhyt luettelo asioista, joita Side Badger ei tee.
 cta:
   heading: Tekeekö se sen, mitä ryhmäsi tarvitsee?
   body: Luo ilmainen tili ja kokeile ensin pienellä ryhmällä.
-cardsHeading: Kolme tehtävää tarkemmin
+cardsHeading: Jokainen ominaisuus tarkemmin
 sections:
   - heading: Kuittien skannaus
-    body: Ota kuva kuitista, niin Side Badger täyttää summan, päivämäärän ja paikan tarkistettavaksesi. Googlen tekoälypalvelu lukee kuittikuvat.
+    body: Ota kuva kuitista, niin Side Badger täyttää summan, päivämäärän ja paikan tarkistettavaksesi. Googlen tekoälypalvelu lukee kuittikuvat. [Näin kuittien skannaus toimii](page:feature/receipt-scanning).
   - heading: Ryhmät ja oikeudet
-    body: Tee oma ryhmä jokaiselle kodille, matkalle tai tapahtumalle, enintään 50 ihmisen kokoisena. Kutsu ihmiset linkillä tai QR-koodilla. Isommassa ryhmässä voit tehdä jonkun katselijaksi, joka näkee kaiken mutta ei muuta mitään.
+    body: Tee oma ryhmä jokaiselle kodille, matkalle tai tapahtumalle, enintään 50 ihmisen kokoisena. Kutsu ihmiset linkillä tai QR-koodilla. Isommassa ryhmässä voit tehdä jonkun katselijaksi, joka näkee kaiken mutta ei muuta mitään. [Ryhmät ja oikeudet](page:feature/groups-and-permissions) sisältää sen pienen präntin.
   - heading: Listat ja kyselyt
-    body: Pidä yhteinen ostoslista ostoslaskujen vieressä. Laita huvilakandidaatit äänestykseen, halutessasi nimettömänä.
+    body: Pidä yhteinen ostoslista ostoslaskujen vieressä. Laita huvilakandidaatit äänestykseen, halutessasi nimettömänä. [Suunnitelkaa yhdessä](page:feature/plan-together) käsittelee kommentit, kysymykset, listat ja kyselyt.
   - heading: Kaikki muu
     items:
       - "**Päivitykset heti:** lisää kulu, niin kaikki näkevät sen heti."
       - "**Kielet:** käytä Side Badgeria 39 kielellä. Jokainen ryhmän jäsen voi valita oman kielensä."
-      - "**Aloitusnäyttö:** sovelluskauppaa ei tarvita. Kirjaudu sisään ja lisää sitten Side Badger aloitusnäytölle, niin se avautuu kuin sovellus. Sovelluksen Asetukset näyttää, miten."
+      - "**Aloitusnäyttö:** sovelluskauppaa ei tarvita. Kirjaudu sisään ja lisää sitten Side Badger aloitusnäytölle, niin se avautuu kuin sovellus. Sovelluksen Asetukset näyttää, miten. [Lisää verkkosovelluksesta](page:feature/web-app)."
       - "**Ilmoitukset:** ota push-ilmoitukset käyttöön Asetuksissa, niin saat ilmoituksen, kun ryhmissäsi on uutta toimintaa. Lisää iPhonessa ja iPadissa Side Badger ensin aloitusnäytölle."
       - "**Palaute:** löysitkö virheen? Kerro siitä sovelluksen sisällä ja näe vastauksemme siellä."
   - heading: Mitä Side Badger ei tee

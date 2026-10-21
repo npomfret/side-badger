@@ -1,0 +1,88 @@
+# P9 of the wave 2 and 3 briefs (tasks/release-2-plan.md). The worked example is guide 1's flat
+# (how-to-split-rent-by-room-size); every number in the prose is the example's or the arithmetic shown.
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Leigureiknivél: eftir stærð herbergja eða tekjum | Side Badger"
+  description: "Stærra herbergi, stærri hlutur? Reiknaðu hvað hver meðleigjandi borgar, eftir stærð herbergja eða tekjum. Keyrir í vafranum: ekkert er vistað eða sent."
+h1: "Reiknivél til að skipta leigu"
+navLabel: "Reiknivél: skipta leigu"
+lead: "Stærra svefnherbergi, stærri hlutur? Sláðu inn leiguna og sjáðu hvað hver borgar, eftir stærð herbergja eða tekjum, upp á eyri. Hún keyrir í vafranum þínum, vistar ekkert og flytur enga peninga. Þegar heimilið vill halda utan um bókhaldið geturðu [skipt útgjöldum](page:feature/split-expenses) í Side Badger og afritað leiguna í hverjum mánuði."
+cta:
+  heading: "Ákveddu prósenturnar einu sinni. Afritaðu þær endalaust."
+  body: "Þessi reiknivél gleymir öllu þegar þú lokar flipanum, rétt eins og meðleigjandinn sem borgaði örugglega internetið. Hópur í Side Badger geymir leiguna, reikningana og hver hefur borgað hvað. Það er ókeypis, án auglýsinga og án daglegra takmarka."
+sections:
+  - heading: "Tvær leiðir til að skipta leigunni"
+    items:
+      - "**Eftir stærð herbergja.** Hluti leigunnar fer í eldhúsið, baðherbergið og stofuna, sem allir nota. Þú velur þennan hluta (40% til að byrja með) og honum er skipt jafnt. Afganginum er skipt eftir flatarmáli svefnherbergja, svo stóra herbergið borgar meira og kompan fær afsláttinn sem hún á skilið."
+      - "**Eftir tekjum.** Hver og einn borgar sama hlutfall af leigunni og hlutfall hans er af heildartekjunum. Bættu við sameiginlegum reikningum og þeir skiptast í sömu hlutföllum."
+  - heading: "Hvernig reikningurinn gengur upp"
+    body: "Hver og einn fær nákvæman hlut og síðan heila prósentu, því heilar tölur er auðveldara að slá inn og þrasa um. Námundunin notar aðferð stærsta afgangs: allir halda heilu tölunni fyrir neðan hlut sinn og prósentustigin sem eftir eru fara til þess sem missti mest. Prósenturnar leggjast alltaf saman í 100. Í íbúðinni hér að neðan eru sameiginlegu 40% 13,33% á mann. Herbergið sem Priya býr í er 16 af 38 m² íbúðarinnar, svo 60% × 16/38 er 25,26%, og með 13,33% bætt við verður það 38,6%, sem námundast í 39%. Tom og Aisha enda á 32% og 29%, og 39 + 32 + 29 er 100. Hver upphæð er þessi prósenta af leigunni: 39% af 1.950 £ er 760,50 £."
+  - heading: "Sláðu það svo inn í Side Badger"
+    body: "Alla söguna, málbandið meðtalið, má lesa í leiðarvísinum [Hvernig á að skipta leigu eftir stærð herbergja](page:guide/how-to-split-rent-by-room-size) eða, fyrir pör, í leiðarvísinum [Hvernig á að skipta reikningum með maka sem þénar meira](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+    items:
+      - "**Bættu leigunni við.** Í hópnum þínum skaltu velja **Skrá útgjöld**, velja þann sem borgaði leigusalanum undir **Hver greiddi?** og hafa alla áfram undir **Skipta á milli**."
+      - "**Veldu prósentuskiptingu.** Undir **Hvernig á að skipta** skaltu velja **Prósenta** og slá inn heilu prósenturnar. Eyðublaðið lætur vita ef þær ná ekki samtals 100."
+      - "**Afritaðu hana næsta mánuð.** Opnaðu leigu síðasta mánaðar og veldu **Afrita útgjöld**. Skiptingin fylgir með."
+  - heading: "Það sem reiknivélin gerir ekki"
+    items:
+      - "**Mæla herbergin þín.** Gólfflötur er upphafspunktur. Herbergi með eigin baðherbergi er meira virði en jafn stórt herbergi án þess, og kompa sem rúmar rúm og bjartsýnan stól er minna virði."
+      - "**Ákveða hvað telst til tekna.** Útborguð laun eða heildarlaun, föst laun eða aukavinna: hópurinn ákveður. Notaðu sama tímabil fyrir alla."
+      - "**Vista neitt.** Lokaðu flipanum og tölurnar eru horfnar. Til að halda þeim skaltu afrita tengilinn. Hann geymir tölurnar þínar fyrir aftan #, sem vafrar senda aldrei á netþjón, og allir sem hafa hann geta lesið þær."
+      - "**Flytja peninga.** Þú borgar leigusalanum eins og þér hentar."
+      - "**Blanda gjaldmiðlum eða fara yfir mörkin.** Veldu einn gjaldmiðil. Hún tekur 2 til 10 manns og leigu allt að 999.999,99, eins og í appinu."
+exampleAfter: 2
+example:
+  heading: "Ein íbúð, einn mánuður"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "leigan"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "rafmagnsreikningurinn"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "internetið"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Spurningar"
+  items:
+    - q: "Hvort er sanngjarnara, stærð herbergja eða tekjur?"
+      a: "Hvorugt er alltaf sanngjarnara. Stærð herbergja hentar meðleigjendum sem borga fyrir plássið sem þeir sofa í. Tekjur henta pörum og vinum með mjög ólík laun. Komið ykkur saman um það fyrir fyrsta leigudaginn, ekki eftir hann."
+    - q: "Á að skipta reikningunum á sama hátt?"
+      a: "Meðal meðleigjenda yfirleitt ekki. Allir nota rafmagnið og internetið, svo jöfn skipting er einfaldari, eins og í dæminu. Eftir tekjum gefur reiknivélin reikningunum sömu hlutföll og leigunni."
+    - q: "Get ég notað ferfet?"
+      a: "Já. Veldu ft² og sláðu inn flatarmálið í ferfetum. Einingin er aðeins merking og hlutföllin verða þau sömu svo lengi sem allir nota sömu eininguna."
+    - q: "Er reiknivélin ókeypis?"
+      a: "Já. Ókeypis. Engar auglýsingar. Engin dagleg takmörk. Þú þarft ekki heldur aðgang."

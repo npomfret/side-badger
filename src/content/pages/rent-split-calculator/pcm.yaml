@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Rent share calculator: room size or income | Side Badger"
+  description: "Big room, big share? Work out wetin each housemate go pay, by room size or by income. E dey run for your browser: nothing dey save or send."
+h1: "Rent share calculator"
+navLabel: "Rent share calculator"
+lead: "Bigger bedroom, bigger share? Type in di rent and see wetin each person go pay, by room size or by income, down to di penny. E dey run for your browser, e no dey save anything and e no dey move money. When di house want make dem keep di count, [share expenses](page:feature/split-expenses) for Side Badger and copy di rent every month."
+cta:
+  heading: "Settle di percentages once. Copy dem forever."
+  body: "Dis calculator dey forget everything when you close di tab, just like di housemate wey definitely pay di broadband. Side Badger group dey keep di rent, di bills and who don pay wetin. E free, with no ads and no daily limits."
+sections:
+  - heading: "Two ways to share di rent"
+    items:
+      - "**By room size.** Part of di rent dey pay for di kitchen, bathroom and parlour, wey everybody dey use. You choose dat share (40% to start with) and dem go share am equal-equal. Di rest go follow bedroom area, so di big room go pay more and di box room go get di discount wey e don earn."
+      - "**By income.** Everybody dey pay di same slice of di rent as dem earn of di total. Add shared bills and dem go follow di same shares."
+  - heading: "How di sums dey work"
+    body: "Each person get exact share, then whole percentage, because whole numbers easier to type and to argue about. Di rounding na di largest remainder method: everybody keep di whole number below dia share, and di leftover points go to whoever lose pass. Di percentages always total 100. For di flat below, di shared 40% na 13.33% each. Priya room na 16 of di flat 38 m², so 60% × 16/38 na 25.26%, plus 13.33% make 38.6%, wey round to 39%. Tom and Aisha come out at 32% and 29%, and 39 + 32 + 29 na 100. Each amount na dat percentage of di rent: 39% of £1,950 na £760.50."
+  - heading: "Then type am into Side Badger"
+    body: "For di whole story, tape measure included, see [how to share rent by room size](page:guide/how-to-split-rent-by-room-size), or [partner wey dey earn more](page:guide/how-to-split-bills-with-a-partner-who-earns-more) for couples."
+    items:
+      - "**Add di rent.** For your group, choose **Add expense**, pick who pay di landlord under **Who pay?** and keep everybody under **Split bitwin**."
+      - "**Choose Pasentej.** Under **How we go split am**, choose **Pasentej** and type di whole percentages. Di form go flag am if dem no total 100."
+      - "**Copy am next month.** Open last month rent and choose **Kopi expense**. Di split go follow."
+  - heading: "Wetin di calculator no dey do"
+    items:
+      - "**Measure your rooms.** Floor area na just starting point. En-suite worth more than di same area without one, and box room wey only fit bed and one hopeful chair worth less."
+      - "**Decide wetin count as income.** Take-home or gross, salary or side hustle: di group go decide. Use di same period for everybody."
+      - "**Save anything.** Close di tab and di figures don go. To keep dem, copy di link. E hold your figures after di #, wey browsers no dey ever send to server, and anybody wey get am fit read dem."
+      - "**Move money.** You pay di landlord anyhow you like."
+      - "**Mix currencies, or go pass di limits.** Pick one currency. E dey take 2 to 10 people and rent up to 999,999.99, like for di app."
+exampleAfter: 2
+example:
+  heading: "One flat, for one month"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "di rent"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "di light bill"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "di broadband"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Question dem"
+  items:
+    - q: "Which one fairer, room size or income?"
+      a: "Neither, always. Room size suit flatmates wey dey pay for di space wey dem dey sleep inside. Income suit couples and friends wey get very different pay. Agree am before di first rent day, no be after."
+    - q: "We go share di bills di same way?"
+      a: "For flatmates, usually no. Everybody dey use di light and broadband, so equal-equal simpler, like for di example. By income, di calculator go give di bills di same shares as di rent."
+    - q: "I fit use square feet?"
+      a: "Yes. Choose ft² and type your areas for square feet. Di unit na only label, and di shares go come out di same as long as everybody use one."
+    - q: "Di calculator free?"
+      a: "Yes. Free. No ads. No daily limits. You no need account too."

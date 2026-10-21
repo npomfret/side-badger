@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Ajutor și asistență | Side Badger"
+  description: "Parolă uitată, un link care nu merge, o plată înregistrată greșit? Răspunsuri scurte la ce îi încurcă pe oameni în Side Badger și cum ne poți contacta."
+h1: "Ajutor și asistență, fără muzică de așteptare"
+navLabel: "Ajutor și asistență"
+lead: "Răspunsuri scurte la lucrurile la care se blochează oamenii, de la o parolă uitată până la închiderea definitivă a unui grup. Fiecare trimite la pagina care explică mai mult. Nu ți-ai găsit întrebarea? Spune-ne din aplicație sau scrie-ne câteva rânduri."
+cta:
+  heading: "Ai venit după ajutor, rămâi la împărțit?"
+  body: "Nu ai încă un cont? Începe un grup, trimite linkul și adaugă prima cheltuială. Gratuit, fără reclame și fără limite zilnice."
+groups:
+  - heading: "Autentificarea"
+    items:
+      - q: "Ai uitat parola?"
+        a: "Se întâmplă și celor mai buni bursuci. Alege **Ai uitat parola?** pe ecranul **Autentificare**, introdu e-mailul contului, apoi urmează linkul din e-mailul pe care ți-l trimitem ca să alegi una nouă. [Cum funcționează](page:how-it-works) explică de ce altceva mai are nevoie un cont."
+      - q: "M-am înscris, dar nu pot adăuga nimic. De ce?"
+        a: "Cel mai des, e-mailul tău nu este încă verificat, așa că deschide linkul din e-mailul de verificare sau alege **Retrimite e-mailul de verificare** de pe bannerul de reamintire pentru unul nou. Dacă ești verificat, grupul poate fi blocat sau permisiunile lui nu te lasă, iar un vizualizator vede tot și nu schimbă nimic, după cum explică [grupurile și permisiunile](page:feature/groups-and-permissions)."
+      - q: "Cum îmi schimb e-mailul sau parola?"
+        a: "În **Setări**, alege **Schimbă E-mailul** sau **Schimbă Parola**. Ambele îți cer mai întâi parola actuală, iar o adresă de e-mail nouă trebuie verificată din linkul pe care îl trimitem la ea. [Cum funcționează](page:how-it-works) explică conturile."
+      - q: "Mă pot autentifica cu Google sau Apple?"
+        a: "Nu. Ai nevoie doar de o adresă de e-mail și de o parolă de cel puțin 12 caractere, iar pe propriul telefon sau computer poți bifa **Ține-mă minte**. Pagina [aplicația web](page:feature/web-app) explică restul despre cum începi."
+  - heading: "Alăturarea la un grup"
+    items:
+      - q: "Cineva mi-a trimis un link de invitație. Cum mă alătur?"
+        a: "Deschide-l, apoi conectează-te sau creează un cont gratuit. Vei vedea o previzualizare a grupului, alegi acolo numele sub care te vor vedea ceilalți și apeși **Alătură-te Grupului**. [Grupuri și permisiuni](page:feature/groups-and-permissions) arată tot drumul înăuntru."
+      - q: "Scrie „În așteptarea aprobării”. Am greșit ceva?"
+        a: "Deloc. În acest grup, un administrator lasă fiecare persoană să intre, așa că cererea ta a ajuns la administratorii lui și nu poți vedea înăuntru până nu o aprobă unul dintre ei. Un îndemn prietenesc, față în față, este permis, iar [grupuri și permisiuni](page:feature/groups-and-permissions) explică aprobarea."
+      - q: "Linkul spune că este invalid sau a expirat."
+        a: "Linkurile de invitație sunt valabile cât a ales cine le-a creat, de la 15 minute până la 5 zile. Cere un link nou cuiva din grup sau codul QR dacă sunteți în aceeași încăpere. [Cum funcționează](page:how-it-works) explică invitațiile."
+  - heading: "Cheltuieli"
+    items:
+      - q: "Cum adaug o cheltuială?"
+        a: "Deschide grupul și alege **Adaugă Cheltuială**. Spune ce a fost, cât, cine a plătit și cine a împărțit-o, apoi împarte-o egal, pe sume exacte sau procentual. [Împărțirea cheltuielilor](page:feature/split-expenses) parcurge fiecare opțiune."
+      - q: "Se poate repeta chiria în fiecare lună?"
+        a: "Nu de la sine, pentru că nu există cheltuieli recurente. Deschide-o pe cea din luna trecută și alege **Copiază cheltuiala**, iar formularul apare completat, gata pentru o dată nouă și pentru orice s-a schimbat. [Împărțirea cheltuielilor](page:feature/split-expenses) are mai multe despre copiere."
+      - q: "Am scris suma greșit. O pot corecta?"
+        a: "Da. Editează cheltuiala, atâta timp cât permisiunile grupului te lasă și grupul nu este blocat. Versiunea anterioară se păstrează, așa că nimeni nu trebuie să te creadă pe cuvânt ce s-a schimbat, după cum explică [împărțirea cheltuielilor](page:feature/split-expenses)."
+      - q: "O cheltuială pare greșită și nu e a mea. Ce fac?"
+        a: "Alege **Am o întrebare** la ea și spune de ce, iar întreaga cheltuială rămâne în afara soldurilor tuturor până când persoana care a întrebat, sau un administrator, închide întrebarea. Nu vezi butonul? Doar persoanele incluse într-o cheltuială pot întreba, un administrator trebuie mai întâi să activeze **Permite întrebări despre cheltuieli** în setările grupului, iar [ghidul despre cheltuiala contestată](page:guide/what-to-do-when-someone-disputes-a-shared-expense) are partea de diplomație."
+  - heading: "Plăți"
+    items:
+      - q: "Trimite Side Badger banii?"
+        a: "Nu, Side Badger nu mută niciodată bani. Vă plătiți unii altora cum preferați, prin transfer bancar, numerar sau orice merge, apoi înregistrați plata ca soldurile să se pună la zi. [Cum vă achitați după o excursie de grup](page:guide/how-to-settle-up-after-a-group-trip) parcurge totul de la cap la coadă."
+      - q: "Cum înregistrez o plată?"
+        a: "Alege **Decontează** în grup, spune cine a plătit și cine a primit plata, introdu suma sau lasă un buton **Decontare rapidă** să o completeze și alege **Înregistrează Decontarea**. Ai plătit doar o parte? Înregistrează ce s-a plătit, iar restul rămâne în sold, după cum explică [decontarea](page:feature/settle-up)."
+      - q: "Am înregistrat o plată greșit. O pot corecta?"
+        a: "Cine a înregistrat-o o poate edita din istoricul **Decontări** al grupului, iar acea persoană sau un administrator o poate șterge, ceea ce o scoate din solduri. O plată la care participă cineva care a părăsit între timp grupul nu se poate edita. [Decontarea](page:feature/settle-up) explică istoricul."
+  - heading: "Notificările și ecranul de pornire"
+    items:
+      - q: "Cum activez notificările?"
+        a: "Pornește **Notificări push** în **Setări** și permite-le când te întreabă browserul. Dacă browserul le-a blocat deja, permite-le mai întâi din propriile lui setări. Fiecare dispozitiv se activează separat, iar livrarea nu este garantată, așa că tratează o notificare ca pe un îndemn, nu ca pe o promisiune, după cum explică pagina [aplicația web](page:feature/web-app)."
+      - q: "De ce nu merg notificările pe iPhone?"
+        a: "Pe iPhone sau iPad funcționează doar în aplicația adăugată pe ecranul de pornire, niciodată într-o filă de browser. Adaugă-o, deschide-o din pictograma de pe ecranul de pornire, apoi pornește-le în **Setări**. [Planificați împreună](page:feature/plan-together) arată despre ce te anunță."
+      - q: "Există o aplicație de descărcat?"
+        a: "Nu dintr-un magazin de aplicații, pentru că Side Badger rulează în browser. Conectează-te, apoi urmează **Adaugă pe ecranul principal sau în Dock** din **Setări** și se deschide ca o aplicație, într-o fereastră proprie. Pagina [aplicația web](page:feature/web-app) are pașii pentru fiecare dispozitiv."
+  - heading: "Părăsirea, arhivarea, blocarea și închiderea"
+    items:
+      - q: "Cum părăsesc un grup?"
+        a: "Achită-te, apoi alege **Părăsește Grupul**. Nu poți pleca cât timp datorezi sau ți se datorează bani, chiar și într-o singură valută, cât timp o cheltuială în care ești inclus are o întrebare deschisă sau dacă ești ultimul administrator ori singurul membru, iar revenirea cere o invitație nouă. [Grupuri și permisiuni](page:feature/groups-and-permissions) are detaliile."
+      - q: "Cum scap de un grup vechi de pe panou?"
+        a: "Alege **Arhivează Grupul**. Dispare de pe panoul tău, dar nu și de pe al altcuiva, îl poți deschide și folosi în continuare, iar **Dezarhivează Grupul** îl aduce înapoi. [Grupuri și permisiuni](page:feature/groups-and-permissions) compară arhivarea, blocarea și închiderea."
+      - q: "Excursia s-a terminat. Putem opri schimbarea cifrelor?"
+        a: "Da. Un administrator poate porni **Blochează grupul** în setările grupului, iar nimeni nu mai poate adăuga sau edita cheltuieli, înregistra plăți noi sau schimba liste și sondaje până când un administrator îl deblochează. Toți pot citi în continuare grupul și istoricul lui, iar niciun taxi întârziat nu se mai strecoară, după cum explică [grupuri și permisiuni](page:feature/groups-and-permissions)."
+      - q: "Pot șterge un grup?"
+        a: "Un administrator îl poate închide cu **Închide grupul**, după ce tastează numele grupului pentru confirmare. Închiderea este definitivă și face grupul indisponibil pentru toți, deci dacă vrei doar să nu-l mai vezi, arhivează-l. [Grupuri și permisiuni](page:feature/groups-and-permissions) are scrisul mărunt."
+contact:
+  heading: "Tot blocat?"
+  items:
+    - q: "Ai găsit un bug sau vrei să schimbăm ceva?"
+      a: "Spune-ne din aplicație. Alege **Păreri** în meniul contului, apoi **Trimite Feedback** și alege **Raportează problemă**, **Solicită ajutor** sau **Solicitare funcționalitate**. Atașează o captură de ecran dacă ajută, iar când îți răspundem, vei găsi răspunsul în același fir."
+    - q: "Preferi să scrii prin e-mail?"
+      a: "Scrie la adresa de mai jos. Spune despre ce grup e vorba, ce ai făcut și ce te așteptai să se întâmple. Să te descarci e în regulă; parolele nu, așa că nu o trimite niciodată pe a ta."
+  emailLabel: "Scrie-ne la"
+  email: support@sidebadger.me

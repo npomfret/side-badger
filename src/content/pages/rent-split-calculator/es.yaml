@@ -1,0 +1,88 @@
+# P9 de los briefs de las olas 2 y 3 (tasks/release-2-plan.md). El ejemplo resuelto es el piso de la guía 1
+# (how-to-split-rent-by-room-size); cada número de la prosa es el del ejemplo o la aritmética que se muestra.
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Calculadora de alquiler: por tamaño o por ingresos | Side Badger"
+  description: "¿Habitación grande, parte grande? Calcula lo que paga cada compañero, por tamaño o por ingresos. En tu navegador: no se guarda ni se envía nada."
+h1: Calculadora para repartir el alquiler
+navLabel: Calculadora de alquiler
+lead: ¿Dormitorio más grande, parte más grande? Escribe el alquiler y mira lo que paga cada persona, por tamaño de habitación o por ingresos, hasta el último céntimo. Funciona en tu navegador, no guarda nada y no mueve dinero. Cuando la casa quiera llevar la cuenta, [divide los gastos](page:feature/split-expenses) en Side Badger y copia el alquiler cada mes.
+cta:
+  heading: Acordad los porcentajes una vez. Copiadlos para siempre.
+  body: Esta calculadora lo olvida todo al cerrar la pestaña, igual que el compañero que jura que pagó el internet. Un grupo de Side Badger guarda el alquiler, las facturas y quién ha pagado qué. Es gratis, sin anuncios y sin límites diarios.
+sections:
+  - heading: Dos formas de repartir el alquiler
+    items:
+      - "**Por tamaño de habitación.** Una parte del alquiler paga la cocina, el baño y el salón, que usa todo el mundo. Tú eliges esa parte (un 40 % para empezar) y se divide a partes iguales. El resto va según la superficie de cada dormitorio, así que la habitación grande paga más y el cuartucho se lleva el descuento que se ha ganado."
+      - "**Por ingresos.** Cada persona paga del alquiler una porción igual a la que gana del total. Si añades facturas compartidas, siguen las mismas partes."
+  - heading: Cómo funcionan las cuentas
+    body: "Cada persona recibe una parte exacta y luego un porcentaje entero, porque los números enteros son más fáciles de escribir y de discutir. El redondeo usa el método del mayor resto: todos se quedan con el número entero por debajo de su parte, y los puntos que sobran van a quienes más perdieron al redondear. Los porcentajes siempre suman 100. En el piso de abajo, el 40 % compartido son 13,33 % para cada uno. La habitación de Priya ocupa 16 de los 38 m² del piso, así que 60 % × 16/38 es 25,26 %, más 13,33 % da 38,6 %, que se redondea a 39 %. Tom y Aisha salen a 32 % y 29 %, y 39 + 32 + 29 es 100. Cada importe es ese porcentaje del alquiler: el 39 % de 1.950 £ es 760,50 £."
+  - heading: Luego escríbelo en Side Badger
+    body: "Para la historia completa, cinta métrica incluida, mira [cómo dividir el alquiler según el tamaño de la habitación](page:guide/how-to-split-rent-by-room-size) o, si sois pareja, [cómo dividir las facturas cuando uno de los dos gana más](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+    items:
+      - "**Añade el alquiler.** En tu grupo, elige **Añadir gasto**, elige en **¿Quién pagó?** a quien pagó al casero y deja a todo el mundo en **Dividir entre**."
+      - "**Elige Porcentaje.** En **Cómo dividir**, elige **Porcentaje** y escribe los porcentajes enteros. El formulario avisa si no suman 100."
+      - "**Cópialo el mes que viene.** Abre el alquiler del mes pasado y elige **Copiar gasto**. La división viene con él."
+  - heading: Lo que la calculadora no hace
+    items:
+      - "**Medir tus habitaciones.** La superficie es un punto de partida. Un dormitorio con baño propio vale más que la misma superficie sin él, y un cuartucho en el que caben una cama y una silla con muchas esperanzas vale menos."
+      - "**Decidir qué cuenta como ingresos.** Netos o brutos, sueldo o trabajillos extra: lo decide el grupo. Usad el mismo periodo para todos."
+      - "**Guardar tus cifras.** Cierra la pestaña y las cifras desaparecen. Para conservarlas, copia el enlace. Lleva tus cifras después del #, que los navegadores nunca envían a un servidor, y cualquiera que lo tenga puede leerlas."
+      - "**Mover dinero.** Pagas al casero como quieras."
+      - "**Mezclar monedas o pasarse de los límites.** Elige una sola moneda. Admite de 2 a 10 personas y un alquiler de hasta 999.999,99, como en la app."
+exampleAfter: 2
+example:
+  heading: Un piso, un mes
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: el alquiler
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: la factura de la luz
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: el internet
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: Preguntas
+  items:
+    - q: ¿Qué es más justo, el tamaño de la habitación o los ingresos?
+      a: Ninguno lo es siempre. El tamaño de la habitación va bien para compañeros de piso que pagan por el espacio en el que duermen. Los ingresos van bien para parejas y amigos con sueldos muy distintos. Acordadlo antes del primer día de pago del alquiler, no después.
+    - q: ¿Hay que dividir las facturas de la misma manera?
+      a: Entre compañeros de piso, normalmente no. Todos usan la luz y el internet, así que a partes iguales es más sencillo, como en el ejemplo. Por ingresos, la calculadora da a las facturas las mismas partes que al alquiler.
+    - q: ¿Puedo usar pies cuadrados?
+      a: Sí. Elige ft² y escribe tus superficies en pies cuadrados. La unidad es solo una etiqueta, y las partes salen igual mientras todos usen la misma.
+    - q: ¿Es gratis la calculadora?
+      a: Sí. Gratis. Sin anuncios. Sin límites diarios. Tampoco necesitas una cuenta.

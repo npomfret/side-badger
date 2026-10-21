@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Költségmegosztó kalkulátor: ki kinek tartozik | Side Badger"
+  description: "Ki kinek tartozik, másodpercek alatt: egyenlően, pontosan vagy százalékosan osztva. Ingyenes, a böngésződben fut, semmit nem ment és nem küld el."
+h1: "Költségmegosztó kalkulátor"
+navLabel: "Költségmegosztó kalkulátor"
+lead: "Írd be, ki mit fizetett, és a kalkulátor megmondja, ki kinek tartozik, egy rövid kifizetéslistával, amely mindent rendez. A böngésződben fut, semmit nem ment, és nem mozgat pénzt. Ha a csoportodnak az kell, hogy a számolás a fül bezárása után is megmaradjon, a Side Badger [költségfelosztása](page:feature/split-expenses) és [elszámolása](page:feature/settle-up) ugyanezeket a számításokat végzi, és meg is őrzi őket."
+cta:
+  heading: "Tetszenek a számok? Őrizd meg őket."
+  body: "Ez a kalkulátor mindent elfelejt, amint bezárod a fület, nagyjából úgy, mint az, aki biztosan fizetett legutóbb. Egy Side Badger-csoport megőrzi a költségeket, frissíti mindenki egyenlegét, és rögzíti a kifizetéseket. Ingyenes, hirdetések és napi korlátok nélkül."
+sections:
+  - heading: "Hogyan működik a számítás"
+    body: "Minden költségnél a kalkulátor kiszámolja mindenki részét. Egyenlően, pontos összegek szerint vagy százalékosan oszthatod fel, az általad kiválasztott emberek között. Mindenki egyenlege ezután az, amennyit fizetett, mínusz amennyivel tartozik. A plusz jel azt jelenti, hogy a csoport tartozik neki, a mínusz jel pedig azt, hogy ő tartozik a csoportnak. Az egyenlegek összege mindig nulla, mert amennyivel az egyik embernek tartoznak, azzal mások tartoznak."
+  - heading: "Miért rövid a kifizetéslista"
+    body: "Senkinek nem kell minden nyugtát külön rendeznie. Amint minden egyenleg ismert, a kalkulátor összepárosítja azt, aki a legtöbbel tartozik, azzal, akinek a legtöbbel tartoznak, annyit rendez, amennyit egyetlen kifizetés elbír, és halad tovább a listán lefelé, amíg mindenki nullán nem áll. Soha nem kell több kifizetés, mint ahány embernek van egyenlege, mínusz egy, és gyakran kevesebb is elég, mint ha számláról számlára rendeznétek. Rövid kifizetéslistát ad, és nem ígéri, hogy a lehető legrövidebb."
+  - heading: "Amit a kalkulátor nem csinál"
+    items:
+      - "**Nem kezel több pénznemet.** Válassz egyet, és azt használd az egész számításhoz. Az alkalmazás pénznemenként külön egyenleget vezet, és egy költséget át tud váltani egy aktuális árfolyamon, amelyet módosíthatsz."
+      - "**Nem ment semmit.** Ha bezárod a fület, a számok eltűnnek. Ha meg akarod őrizni őket, másold ki a linket. A számaid a # után vannak benne, amit a böngésződ sosem küld el a szervernek, és akinek elküldöd a linket, az el is olvashatja őket."
+      - "**Nem mozgat pénzt.** Megmondja, ki kinek fizessen. Ti fizettek egymásnak, ahogy akartok, aztán rögzítsd a kifizetést az alkalmazásban, ha a csoportod ott vezeti a számolást."
+      - "**Nem választja véletlenszerűen a felesleges fillért.** Ha egy számla nem osztható egyenletesen, a megmaradt fillérek a lista első embereihez kerülnek, így az összegek továbbra is kijönnek. Az alkalmazásban a felesleges fillér véletlenszerűen egy emberhez kerül, így nem mindig ugyanahhoz."
+      - "**Nem lépi túl a korlátokat.** A kalkulátor 2–20 embert kezel, és egy költség legfeljebb 999 999,99 lehet, ahogy az alkalmazásban."
+exampleAfter: 2
+example:
+  heading: "Egy hosszú hétvége, négy barát"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Nyaraló"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "Bevásárlás"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "Taxi"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "Kocsma"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: "Kérdések"
+  items:
+    - q: "Ingyenes a kalkulátor?"
+      a: "Igen. Ingyenes. Hirdetések nélkül. Napi korlátok nélkül. Fiók sem kell hozzá."
+    - q: "Elmenti, amit beírok?"
+      a: "Nem. Semmit nem mentünk el, és sehova nem küldünk el. Ha meg akarod őrizni a számokat, használd a Link másolása gombot, és mentsd el valahová a linket."
+    - q: "Ki láthatja a linket, amit kimásolok?"
+      a: "Bárki, akinél megvan. A számok magában a linkben vannak, a # után, ezért csak azokkal oszd meg, akiknek látniuk kell őket."
+    - q: "Mozgat pénzt?"
+      a: "Nem. Kiszámolja, ki kinek fizessen, ti pedig fizettek egymásnak, ahogy akartok. A Side Badger sem nyúl soha a pénzedhez. Lásd az [elszámolást](page:feature/settle-up)."
+    - q: "Fel tudok osztani egy két pénznemben fizetett utazást?"
+      a: "Itt nem, mert egy számításnak egy pénzneme van. Egy csoportban minden pénznemnek külön egyenlege van. Lásd a [több pénznemet](page:feature/multiple-currencies)."
+    - q: "Mi van, ha az összegek nem jönnek ki?"
+      a: "A kalkulátor ezt jelzi a költség alatt, és addig nem mutat eredményt, amíg ki nem jönnek. A pontos összegeknek ki kell adniuk a végösszeget, a százalékoknak pedig 100-at."

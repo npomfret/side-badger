@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Sameiginlegir listar, kannanir og athugasemdir | Side Badger"
+  description: "Skrifaðu athugasemdir við útgjöld, dragðu það skrýtna í efa, haltu innkaupalista og kjóstu um orlofshúsið. Skipuleggðu, skiptu svo. Ókeypis, án auglýsinga."
+h1: "Skipuleggðu saman, skiptu á eftir"
+navLabel: "Skipuleggja saman"
+lead: "Innkaupalistinn og innkaupareikningurinn eru loksins farnir að talast við. Side Badger gefur hópnum stað til að ræða peningana bæði áður en þeim er eytt og eftir það, með athugasemdum við hvert útgjald, leið til að draga þau sem virðast röng í efa, sameiginlegum listum og könnunum fyrir stóru ákvarðanirnar. Svo [skiptirðu útgjöldum](page:feature/split-expenses) eins og venjulega."
+cta:
+  heading: "Skipuleggðu fyrst, skiptu svo"
+  body: "Stofnaðu ókeypis aðgang, byrjaðu hóp og settu fyrsta listann, könnunina eða spurninguna við hlið peninganna. Ekki viss hvað gerist næst? Sjáðu [hvernig þetta virkar](page:how-it-works)."
+problem:
+  heading: "Spjallið er hér, reikningurinn þar"
+  body: "Hópútgjöld lifa venjulega á tveimur stöðum. Tölurnar eru á einum og rifrildið um tölurnar í spjalli sem flettist upp og burt á þriðjudag. Innkaupalistinn er mynd af ísskáp. Orlofshúsið var valið með þumli upp frá flestum, líklega. Side Badger geymir skipulagið í hópnum, við hlið útgjaldanna sem það snýst um, svo það er athugasemd þar sem kostnaðurinn er, listi þar sem búðarferðin er, könnun fyrir stóru ákvörðunina og leið til að segja „bíddu, er þetta rétt?“ án þess að skrifa heila málsgrein. Allt snýst þetta um peninga hópsins, sem er einmitt tilgangur hópsins."
+workflow:
+  heading: "Frá orlofshúsakosningu að innkaupareikningi"
+  steps:
+    - title: "Berðu stóru ákvörðunina undir atkvæði"
+      body: "Bættu við könnun fyrir ákvörðunina sem ræður reikningnum, eins og hvaða orlofshús verður fyrir valinu. Veldu tvo til tíu valkosti, segðu hve mörg atkvæði hver og einn fær og lokaðu henni þegar allir hafa kosið, þá er sigurvegarinn merktur."
+      shot: S17
+      shotAlt: "Lokuð könnun með sigurvalkostinn merktan og fjölda atkvæða við hvern valkost"
+    - title: "Skrifaðu innkaupalistann saman"
+      body: "Byrjaðu sameiginlegan lista, bættu við hlutum og hakaðu við þá þegar þeir komast í körfuna. Búðarferðin fer svo inn á eftir sem útgjald."
+      shot: S16
+      shotAlt: "Sameiginlegur innkaupalisti þar sem búið er að haka við suma hluti, með framvindutölu"
+    - title: "Ræddu kostnaðinn þar sem hann býr"
+      body: "Skrifaðu athugasemd við útgjaldið sjálft, hengdu kvittunina við og bregstu við með emoji. Samtalið helst við hlið tölunnar sem það snýst um."
+      shot: S08
+      shotAlt: "Útgjald með upplýsingum sínum, smámynd af kvittun, athugasemdaþræði og emoji-viðbrögðum"
+    - title: "Dragðu það sem lítur undarlega út í efa"
+      body: "Ef hópurinn hefur kveikt á spurningum um útgjöld getur hver sem tekur þátt í útgjaldi valið **Ég er með spurningu**. Útgjaldið helst utan stöðunnar þar til úr spurningunni er leyst."
+      shot: S18
+      shotAlt: "Útgjaldalisti með merkinu Dregið í efa og síunni Aðeins dregið í efa"
+    - title: "Sjáðu hvað breyttist og hver breytti því"
+      body: "Virkni hópsins og tilkynningabjallan sýna hvað er nýtt í öllum hópunum þínum. Ýtitilkynningar eru í boði ef þú vilt þær."
+      shot: S19
+      shotAlt: "Tilkynningavalmynd með lista yfir nýlega virkni"
+options:
+  heading: "Valkostir"
+  items: []
+example:
+  heading: "Þrír meðleigjendur og einn vínreikningur í efa"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "stóru innkaupin"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "þrifin"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "veisluvínið"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Athugasemdir og viðbrögð, við hlið talnanna"
+    body: "Hvert útgjald hefur sinn eigin athugasemdaþráð, og það hafa hópurinn, hver listi og hver könnun líka. Spurðu hvers vegna leigubíllinn kostaði svona mikið undir leigubílnum sjálfum, ekki í spjalli sem enginn flettir aftur í gegnum. Bættu við mynd af kvittuninni eða PDF-skjali með bókuninni og bregstu svo við með þumal upp, hjarta, hlátri, vá, sorg eða fögnuði á útgjöldum, greiðslum og athugasemdum. Fagnaðu greiðslu þegar hún skilar sér. Nær lófataki kemst Side Badger ekki."
+  - heading: "Dragðu útgjald í efa án þess að stofna til rifrildis"
+    body: "Þegar hópurinn hefur kveikt á spurningum um útgjöld getur hver sem tekur þátt í útgjaldi valið **Ég er með spurningu** og sagt hvers vegna. Spurningin birtist sem athugasemd við útgjaldið, útgjaldið fær merkið **Dregið í efa** og allt útgjaldið dettur út úr stöðu allra þar til úr spurningunni er leyst."
+    items:
+      - "**Kveikt á þessu.** Það er slökkt sjálfgefið. Stjórnandi kveikir á **Leyfa spurningar um útgjöld** í stillingum hópsins, undir **Eiginleikar**."
+      - "**Spurningu lokað.** Sá sem spurði, eða stjórnandi, velur **Loka spurningu**. Ef fleiri en einn drógu sama útgjald í efa fer það aftur inn í stöðuna þegar síðustu spurningunni er lokað."
+      - "**Útgjaldi breytt.** Þegar útgjaldi er breytt flyst opin spurning yfir á nýju útgáfuna fyrir alla sem eiga enn hlut í því. Ef einhver fellur út úr útgjaldinu við breytinguna lýkur spurningu hans með gömlu útgáfunni, svo hann hefur engu að loka."
+      - "**Að finna þær.** Útgjaldalistinn er með síuna **Aðeins dregið í efa**. Þetta er ekki samþykktarskref: aðeins útgjöldin sem einhver dregur í efa eru sett í bið, og allt annað telur um leið og því er bætt við."
+  - heading: "Hvernig spurning gengur fyrir sig"
+    body: "Tom bætir við veisluvíni fyrir 45 £, skipt milli allra þriggja meðleigjendanna. Aisha drakk ekki, svo hún setur fram spurningu, og á meðan hún er opin telur vínið hjá engum. Heimilið er sammála um að vínið sé Toms og Priyu, svo Tom breytir skiptingunni þannig að hún nái til þeirra tveggja. Aisha er ekki lengur í útgjaldinu, svo spurningin hennar endar með fyrri útgáfunni, sem er geymd, og vínið fer strax aftur inn í stöðuna, nú 22,50 £ á mann í stað 15 £ á mann. Hefði Aisha verið áfram í útgjaldinu hefði spurningin hennar flust yfir og beðið þess að hún eða stjórnandi lokaði henni. Hér að neðan koma 48 £ Aishu úr 28 £ af innkaupunum og 20 £ af þrifunum, og 10,50 £ Priyu eru 70,50 £ hlutur hennar (28 £, 20 £ og 22,50 £) að frádregnum 60 £ sem hún greiddi. Mjög [meðleigjendaleg](page:use-case/housemates) deila. Um hvernig á að orða spurningu, sjá [hvað á að gera þegar einhver dregur sameiginlegt útgjald í efa](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Sameiginlegir listar, fyrir innkaupin"
+    body: "Búðu til lista í hópnum, nefndu hann til dæmis Innkaupalisti, bættu við hlutum og hakaðu við þá. Dragðu hluti í betri röð, fylgstu með framvindutölunni hækka og skrifaðu athugasemd við listann þegar einhver kaupir ranga haframjólk. Færðu kláraðan lista í safn til að ganga frá honum (**Sýna í safni** kemur honum aftur í ljós), eða afritaðu lista til að nota hann aftur. Hafðu sameiginlega innkaupalistann við hlið innkaupareikninganna, svo listinn segi hvað á að kaupa og útgjaldið hvað það kostaði. Hverjir mega búa til og breyta listum fer eftir leyfum hópsins, sem [hópar og leyfi](page:feature/groups-and-permissions) útskýrir."
+  - heading: "Kannanir, nafnlausar ef þú vilt"
+    body: "Spurðu hópinn að einhverju sem ræður reikningnum, eins og hvaða orlofshús, hve miklu á að eyða í gjöfina eða hvort bátsferðin sé þess virði. Könnun hefur eina spurningu og tvo til tíu valkosti. Þú velur hve mörg atkvæði hver og einn fær, allt frá einu upp í tíu, og hvort atkvæðagreiðslan sé nafnlaus. **Nafnlæg atkvæðagreiðsla** felur hver kaus hvað og ekki er hægt að breyta henni eftir að fyrsta atkvæðið er komið. Fólk getur breytt atkvæði sínu eða dregið það til baka þar til könnuninni er lokað, og þú getur opnað hana aftur ef hópurinn skiptir um skoðun. Að velja orlofshúsið er nákvæmlega það sem [hópferðir](page:use-case/group-trips) snúast um, og að ná saman um gjafakostnað er klassískt fyrir [viðburði og veislur](page:use-case/events-and-celebrations)."
+  - heading: "Virkni hópsins, svo ekkert breytist í kyrrþey"
+    body: "Hver hópur hefur virknisögu og tilkynningabjallan safnar virkni úr öllum hópunum þínum á einn stað. Bættu við útgjaldi og allir sjá það strax, án þess að endurhlaða, og virknin sýnir hvað breyttist og hver breytti því. Það nær yfir útgjöld sem er bætt við, breytt eða eytt, spurningar sem eru settar fram og þeim lokað, athugasemdir, breytingar á listum og könnunum og skráðar greiðslur."
+  - heading: "Ýtitilkynningar, ef þú vilt þær"
+    body: "Ýtitilkynningar eru valfrjálsar. Kveiktu á þeim í aðganginum þínum, undir **Stillingar** og svo **Tilkynningar**, og tækið lætur þig vita þegar ný virkni er í hópunum þínum, eins og nýtt útgjald eða athugasemd. Kveikt er á hverju tæki fyrir sig og vafrinn biður fyrst um leyfi. Á iPhone eða iPad virka þær aðeins í appinu sem hefur verið bætt við heimaskjáinn, sem síðan um [vefforritið](page:feature/web-app) útskýrir. Líttu á þær sem þægindi, ekki loforð, því afhending er ekki tryggð."
+limits:
+  heading: "Takmörk"
+  items:
+    - "Athugasemdir, listar og kannanir eru fyrir peninga hópsins. [Skilmálarnir](page:terms) fara fram á að allt sem er birt tengist fjármálum hópsins, svo þetta er staður til að skipuleggja útgjöldin, ekki almennt spjall eða verkefnalistaapp."
+    - "Athugasemd getur verið allt að 500 stafir að lengd, með allt að þremur viðhengjum sem eru myndir eða PDF-skjöl, hvert allt að 5 MB. Aðeins höfundur athugasemdar getur eytt henni."
+    - "Slökkt er sjálfgefið á spurningum um útgjöld og stjórnandi kveikir á þeim fyrir hvern hóp. Aðeins fólk sem tekur þátt í útgjaldi getur dregið það í efa. Ef slökkt er á eiginleikanum hverfa allar opnar spurningar og enginn getur yfirgefið hópinn á meðan útgjald sem hann tekur þátt í er með opna spurningu."
+    - "Í hóp komast allt að 100 listar, hver með allt að 200 hlutum sem eru allt að 500 stafir að lengd. Leyfi hópsins ráða hverjir mega búa til, breyta og eyða listum og læstur hópur leyfir engar breytingar."
+    - "Í hóp komast allt að 50 kannanir, hver með tveimur til tíu valkostum og allt að tíu atkvæðum á mann. Kannanir hafa engan frest og lokast ekki af sjálfu sér."
+    - "Virknisagan er geymd í 90 daga."
+    - "Ýtitilkynningar eru valfrjálsar fyrir hvern aðgang og hvert tæki. Þær krefjast vafra sem styður þær og leyfis frá þér, virka á iPhone og iPad aðeins úr appinu sem hefur verið bætt við heimaskjáinn og afhending er ekki tryggð. Það eru engar tilkynningar með tölvupósti eða SMS um virkni og engar greiðsluáminningar, svo að elta greiðslu er enn á þinni könnu."
+useCasesHeading: "Þar sem gagnlegt er að skipuleggja saman"
+faq:
+  heading: "Spurningar"
+  items:
+    - q: "Geta atkvæði verið nafnlaus?"
+      a: "Já. Kveiktu á **Nafnlæg atkvæðagreiðsla** þegar þú býrð til könnunina og hún felur hver kaus hvað. Ákveddu það áður en fyrsta atkvæðið kemur, því ekki er hægt að breyta því eftir á."
+    - q: "Getur könnun lokast af sjálfri sér?"
+      a: "Nei. Könnun hefur engan frest, svo sá sem bjó hana til velur **Loka könnun** þegar hópurinn hefur ákveðið sig. Ef hópurinn skiptir um skoðun kemur **Opna könnun aftur** henni aftur af stað."
+    - q: "Hve marga hluti rúmar listi?"
+      a: "Allt að 200 hluti á hvern lista og allt að 100 lista í hverjum hópi. Hver hlutur má vera allt að 500 stafir að lengd, sem er heilmikil haframjólk."
+    - q: "Hver getur lokað spurningu og hvað gerist með útgjaldið á meðan?"
+      a: "Sá sem spurði, eða stjórnandi hópsins. Á meðan spurning er opin er allt útgjaldið utan stöðu allra. Það fer aftur inn þegar síðustu opnu spurningunni um það er lokað, eða þegar breyting tekur þann sem spurði út úr útgjaldinu."
+    - q: "Get ég notað lista og athugasemdir sem verkefnalista eða hópspjall?"
+      a: "Nei. Athugasemdir, listar og kannanir eru fyrir peninga hópsins, sem er það sem [skilmálarnir](page:terms) fara fram á. Hugsaðu innkaupalista, kostnaðarkannanir og „af hverju kostar þetta 45 £?“."
+    - q: "Sendir Side Badger mér tölvupóst um virkni?"
+      a: "Nei. Það eru engar tilkynningar með tölvupósti eða SMS um virkni. Þú getur kveikt á ýtitilkynningum á hverju tæki og tilkynningabjallan í appinu sýnir hvað er nýtt."

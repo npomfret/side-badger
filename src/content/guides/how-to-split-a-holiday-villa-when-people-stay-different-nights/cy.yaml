@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Rhannu fila pan fo pobl yn aros nosweithiau gwahanol | Side Badger"
+  description: "Dim ond tair noson y daeth Dev, felly pam talu am chwech? Rhannwch fila gwyliau yn ôl y nosweithiau yr arhosodd pobl, gyda'r symiau wedi'u gwneud i chi."
+h1: "Sut i rannu fila gwyliau pan fydd pobl yn aros nosweithiau gwahanol"
+navLabel: "Rhannu fila yn ôl nosweithiau"
+lead: "Prisiwch yr arhosiad fesul person fesul noson, lluoswch â nosweithiau pob person, a rhowch y fila i mewn fel **un gost gyda symiau union**. Mae Side Badger yn cadw'r cyfrif ac yn awgrymu rhestr fer o daliadau pan fydd yn bryd setlo."
+cta:
+  heading: "Rhowch un gost daclus i'r fila"
+  body: "Gwnewch grŵp, gwahoddwch bawb gyda dolen neu god QR a rhowch y fila i mewn gyda symiau union. Mae Side Badger yn cadw'r cyfrif tra byddwch chi'n bwrw ymlaen â'r gwyliau."
+sections:
+  - heading: "Chwe noson, pedwar person, un cerdyn credyd"
+    body: "Mae [taith grŵp](page:use-case/group-trips) fel arfer yn dechrau gyda cherdyn un person. Yma, cerdyn Ana ydyw. Mae hi'n archebu fila am chwe noson, €2,100, oherwydd mae'n rhaid i rywun fynd yn gyntaf. Mae Ana, Ben a Chloe yn aros pob un o'r chwe noson. Dim ond am y tair noson olaf y gall Dev ymuno, ac mae'n dod ar y trên. Mae Ben yn llogi car, na fydd Dev byth yn eistedd ynddo. Dev sy'n gwneud y siopa bwyd mawr. Rhannu'r fila'n bedair yw'r cam amlwg. Mae hynny'n golygu bod Dev yn talu am dair noson a dreuliodd gartref, ac mae pethau felly'n codi eu pen adeg y Nadolig. Mae rhannu yn ôl nosweithiau yn osgoi'r ddadl, ac mae'r mathemateg yn cymryd munud."
+  - heading: "Prisio un person-noson"
+    body: "Person-noson yw un person yn aros un noson. Mae'r fila'n costio'r hyn y mae'n ei gostio, felly rhannwch y pris ar draws yr holl berson-nosweithiau, yna rhowch i bob person y rhai a ddefnyddiodd."
+    items:
+      - "**Cyfrifwch y person-nosweithiau.** Mae Ana, Ben a Chloe yn aros chwe noson yr un ac mae Dev yn aros tair: 6 + 6 + 6 + 3 = 21."
+      - "**Prisiwch un.** €2,100 ÷ 21 = €100 fesul person-noson."
+      - "**Lluoswch â nosweithiau pob person.** Mae Ana, Ben a Chloe yn talu 6 × €100 = €600 yr un. Mae Dev yn talu 3 × €100 = €300."
+      - "**Gwiriwch y cyfanswm.** €600 + €600 + €600 + €300 = €2,100. Os nad yw eich cyfrannau'n adio i'r pris, mae noson ar goll neu wedi'i chyfrif ddwywaith."
+  - heading: "Ei roi i mewn yn Side Badger"
+    body: "Gwnewch grŵp, gwahoddwch y tri arall gyda dolen neu god QR, yna ychwanegwch y costau. Y fila yn gyntaf."
+    items:
+      - "Dewiswch **Ychwanegu Cost**. Disgrifiwch hi, rhowch 2,100 a gosodwch **Pwy dalodd?** i Ana."
+      - "O dan **Rhannu rhwng**, gwnewch yn siŵr bod y pedwar person i mewn."
+      - "O dan **Sut i rannu**, dewiswch **Union symiau**. Teipiwch 600 ar gyfer Ana, Ben a Chloe a 300 ar gyfer Dev. Rhaid i'r symiau adio i'r cyfanswm."
+      - "Dewiswch **Cadw Cost**."
+      - "Ychwanegwch y car llog yr un ffordd. Talodd Ben, y rhaniad yw **Cyfartal**, ac mae Dev wedi'i adael allan, oherwydd iddo ddod ar y trên. Mae [rhannu treuliau](page:feature/split-expenses) yn trafod y ffyrdd eraill o rannu cost."
+      - "Ychwanegwch y nwyddau bwyd. Talodd Dev, y rhaniad yw **Cyfartal**, ac mae'r pedwar i mewn."
+  - heading: "Darllen y canlyniad, yna setlo"
+    body: "Bil pob person yw cyfran y fila ynghyd â'i gyfran o'r car a'r siopa. Mae Ana, Ben a Chloe yn dod i €725 yr un, sef €600 + €80 + €45. Mae Dev yn dod i €345, sef €300 + €45. Tynnwch yr hyn a dalodd pob person ac mae'r balansau'n dod i'r golwg. Talodd Ana €2,100, felly mae €1,375 yn ddyledus iddi. Talodd Ben €240 ac mae €485 yn ddyledus ganddo. Talodd Dev €180 ac mae €165 yn ddyledus ganddo. Ni thalodd Chloe ddim ac mae €725 yn ddyledus ganddi. Pe baech yn eu gadael fel y maent, byddai'r dyledion hynny'n rhedeg chwe ffordd o gwmpas y grŵp. Yn lle hynny, mae Side Badger yn awgrymu tri thaliad, pob un i Ana. Talwch hi sut bynnag y dymunwch, yna dewiswch **Setlo** a defnyddiwch **Cofnodi Setliad** ar gyfer pob taliad, fel bod y balansau'n dal i fyny. Mae'r botymau setlo cyflym yn llenwi'r swm. Mae mwy am [setlo](page:feature/settle-up)."
+  - heading: "Pan nad yw'r fila'n un pris taclus"
+    items:
+      - "**Mae'r ystafelloedd yn wahanol.** Os yw'r swît yn werth mwy na'r ystafell fach, cytunwch yn gyntaf beth mae pob ystafell yn ei gostio, yna gwnewch symiau'r person-nosweithiau un ystafell ar y tro. Rhowch y fila i mewn fel un gost gyda chyfanswm pawb, neu un gost i bob ystafell. Y naill ffordd neu'r llall, rhaid i'r symiau union ar gost adio i'w chyfanswm."
+      - "**Blaendal a dalwyd fisoedd ynghynt.** Mae pwy bynnag a'i talodd yn cael ei gost ei hun, wedi'i dyddio ar y diwrnod y talodd. Rhannwch hi yn ôl nosweithiau yn yr un cyfrannau â'r balans."
+      - "**Mae'r archeb mewn arian cyfred arall.** Rhowch y fila yn yr arian cyfred y talasoch ynddo. Os yw'r grŵp yn trosi wrth fynd, defnyddiwch gyfradd gyfnewid gyfredol, neu teipiwch y gyfradd a gawsoch mewn gwirionedd. Mae'r swm gwreiddiol yn aros ar y gost. Mae [arian cyfred lluosog](page:feature/multiple-currencies) yn rhoi'r manylion."
+      - "**Nosweithiau rhannol.** Mae rhywun yn cyrraedd am hanner nos, mae rhywun yn gadael cyn brecwast. Cytunwch ar un rheol ar gyfer cyfrif nosweithiau a'i defnyddio ar gyfer pawb."
+  - heading: "Beth nad yw Side Badger yn ei wneud yma"
+    items:
+      - "Dyw Side Badger ddim yn cyfrif nosweithiau i chi. Does dim rhaniad yn ôl nosweithiau nac yn ôl cyfrannau, felly rydych yn gweithio allan pob swm fel uchod ac yn rhoi **symiau union** i mewn."
+      - "Dyw Side Badger ddim yn symud arian. Talwch eich gilydd sut bynnag y dymunwch, yna cofnodwch y taliad."
+      - "Mae gan bob cost un talwr yn unig. Os talodd dau berson am y fila, rhowch ddwy gost i mewn."
+      - "Does dim mynediad i westeion. Mae angen cyfrif am ddim ar bawb yn y grŵp, gan gynnwys Dev."
+exampleAfter: 2
+example:
+  heading: "Y fila, y car a'r siopa"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "chwe noson yn y fila"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "y car llog"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "nwyddau bwyd"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Cwestiynau am y fila"
+  items:
+    - q: "Beth os yw rhywun yn canslo?"
+      a: "Tynnwch eu nosweithiau allan, gwnewch y symiau eto a golygwch gost y fila fel bod y symiau union yn adio i'r pris unwaith eto. Cedwir y fersiwn gynharach ac mae'r golygiad i'w weld yng ngweithgarwch y grŵp, felly nid yw neb yn newid rhif yn dawel. Mae pwy a gaiff olygu yn dibynnu ar ganiatâd y grŵp."
+    - q: "A ddylai'r sawl a archebodd dalu llai?"
+      a: "Mater i'r grŵp yw hynny. Mae archebu'n dasg, ac mae grwpiau'n gwahaniaethu ynghylch a yw'n haeddu gostyngiad. Beth bynnag y cytunwch arno, rhowch ef yn y symiau union a'i ysgrifennu mewn nodyn ar y gost, neu mewn sylw wrth ei hymyl, fel nad oes rhaid i neb gofio'r fargen."
+    - q: "Allwn ni rannu ffioedd glanhau'n wahanol?"
+      a: "Gallwch. Rhowch y ffi i mewn fel cost ar wahân a rhowch ei rhaniad ei hun iddi. Mae cyfartal yn addas i dâl sefydlog am y tŷ cyfan. Mae symiau union yn addas i grŵp sydd eisiau i'r ffi ddilyn y nosweithiau hefyd."

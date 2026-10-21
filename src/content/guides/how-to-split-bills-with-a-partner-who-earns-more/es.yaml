@@ -1,0 +1,108 @@
+translatedFrom: "92a9bff3"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Divide las facturas con una pareja que gana más | Side Badger"
+  description: "El 50/50 se vuelve incómodo cuando uno gana mucho más. Divide las facturas según los ingresos, con las cuentas a la vista para dos y sin hoja de cálculo."
+h1: "Cómo dividir las facturas con una pareja que gana más"
+navLabel: "Pareja que gana más"
+lead: "Sumad vuestros sueldos netos, calculad la parte de cada uno sobre el total y redondead a porcentajes enteros. Maya cobra 2.800 £ netos y Jon 1.700 £, así que dividen las facturas compartidas 62/38. Escribid esos porcentajes en un gasto compartido en Side Badger y copiadlo cada vez que vuelva la misma factura."
+cta:
+  heading: "Haced la cuenta una sola vez"
+  body: "Crea una cuenta gratis, haz un grupo para los dos y apunta el alquiler con vuestros porcentajes. El alquiler del mes que viene es una copia. ¿Prefieres ver primero el recorrido? Mira [cómo funciona](page:how-it-works) o [qué cubre lo gratis](page:pricing)."
+sections:
+  - heading: "Dos sueldos, un piso, un silencio educado"
+    body: "Maya y Jon viven juntos. Maya cobra 2.800 £ netos al mes y Jon cobra 1.700 £ netos. Durante dos años lo dividieron todo al 50/50, porque era sencillo y ninguno quería ser quien sacara el tema. Entonces Jon miró el alquiler por separado. La mitad de 1.400 £ son 700 £, que es una cuarta parte del sueldo neto de Maya y el 41 % del suyo. Nadie había sido injusto. Nadie había hecho la cuenta. Muchas [parejas](page:use-case/couples) llegan a esto tarde o temprano. Con una cena para llevar sobre la mesa acordaron que las facturas compartidas deberían llevarse un mordisco parecido de cada sueldo."
+  - heading: "El método, con las cuentas a la vista"
+    body: "Cuatro pasos, una calculadora y una conversación que ibais a tener de todos modos."
+    items:
+      - "**Acordad qué cuenta como sueldo.** Maya y Jon usan el sueldo neto, el dinero que llega al banco cada mes. Juntos son 2.800 £ + 1.700 £ = 4.500 £."
+      - "**Calculad la parte de cada uno.** La de Maya es 2.800 ÷ 4.500, que son 62,2 %. La de Jon es 1.700 ÷ 4.500, que son 37,8 %."
+      - "**Redondead a porcentajes enteros.** 62,2 % pasa a ser 62 y 37,8 % pasa a ser 38. Con dos personas, redondead una cifra y restadla de 100 para obtener la otra, y siempre sumarán 100."
+      - "**Comprobad qué significa.** En el alquiler de 1.400 £, Maya paga 868 £ (62 %) y Jon paga 532 £ (38 %). Eso es alrededor del 31 % del sueldo neto de cada uno. A medias habría sido el 25 % del de Maya y el 41 % del de Jon."
+  - heading: "Cómo queda el mes"
+    body: "Maya pagó el alquiler de 1.400 £ y Jon pagó las otras 216 £. La parte de Maya del mes es 868,00 £ + 111,60 £ + 18,00 £ = 997,60 £, y ella pagó 1.400 £, así que le deben 402,40 £. La parte de Jon es 532,00 £ + 68,40 £ + 18,00 £ = 618,40 £, y él pagó 216 £, así que debe 402,40 £. Side Badger sugiere un pago, de Jon a Maya, por 402,40 £, y [saldar cuentas](page:feature/settle-up) lo registra cuando se ha hecho. Al 50/50, el mismo mes habría tenido a Jon pagando 592,00 £ a Maya."
+  - heading: "Configúralo en Side Badger"
+    body: "Diez minutos, casi todos dedicados a los porcentajes."
+    items:
+      - "**Crea el grupo.** En el panel elige **Crear grupo** y ponle el nombre del piso. Elige **Invitar a otros** y envía a Jon el enlace o el código QR. Jon inicia sesión o crea una cuenta gratis, y elige el nombre con el que quiere que lo vean en este grupo. Solo los miembros pueden ver un grupo, así que este es solo para los dos."
+      - "**Añade el alquiler.** Elige **Añadir gasto**. Escribe la descripción y el importe, y en **¿Quién pagó?** elige a Maya. Deja a las dos personas en **Dividir entre**; luego, en **Cómo dividir**, elige **Porcentaje** y escribe 62 y 38. El formulario avisa si los porcentajes no suman 100. Elige **Guardar gasto**."
+      - "**Añade las otras facturas.** La luz y el internet se añaden igual, con Jon como pagador y los mismos 62 y 38. La cena para llevar es un gasto aparte, con **Cómo dividir** en **Igual**."
+      - "**Cópialo el mes que viene.** Abre el alquiler del mes pasado y elige **Copiar gasto**. La copia conserva el pagador, el importe y la división, y toma la fecha de hoy. Cambia el importe si el alquiler ha cambiado y elige **Crear copia**. La factura de la luz funciona igual."
+      - "**Mira quién debe a quién.** La sección **Saldos** lo muestra y sugiere una lista corta de pagos. Pagaos como queráis y después registrad el pago en **Liquidar**."
+  - heading: "50/50, según los ingresos o factura a factura"
+    body: "No hay una respuesta correcta, solo la que podáis aceptar los dos. Tres habituales."
+    items:
+      - "**La mitad cada uno para todo.** La más fácil de mantener, y sirve para parejas con sueldos parecidos."
+      - "**Según los ingresos para todo lo compartido.** Lo que hacen Maya y Jon. Una conversación, un par de porcentajes."
+      - "**Factura a factura.** Alquiler y facturas según los ingresos, vacaciones y caprichos al 50/50 o como acordéis, y cada factura recibe la regla que le va bien."
+  - heading: "Acordad qué cuenta como compartido"
+    body: "Las discusiones suelen ser sobre la lista, no sobre los porcentajes. El alquiler, la luz, el internet, la compra de la semana y el sofá cuentan como compartidos en la mayoría de las casas. La cuota del gimnasio de Maya y la suscripción de fútbol de Jon puede que no. Acordad la lista una vez, apuntadla y poned en el grupo solo los gastos compartidos."
+  - heading: "La cena para llevar sigue al 50/50, a propósito"
+    body: "Los caprichos son pequeños y opcionales, y nadie debería necesitar una calculadora para pedir gyozas. En Side Badger la cena para llevar es un gasto más. Jon paga 36 £, **Cómo dividir** se queda en **Igual** y cada uno debe 18 £."
+  - heading: "Cuando cambia el sueldo de alguien"
+    body: "Una subida, un trabajo nuevo o un tiempo sin trabajar cambian la cuenta. Calculad los porcentajes nuevos de la misma manera y usadlos desde el siguiente gasto. Los gastos anteriores se quedan como estaban. Copia el alquiler del mes pasado, cambia los porcentajes y elige **Crear copia**. Para corregir uno que ya está dentro, edítalo si los permisos del grupo lo permiten, y avisa antes a tu pareja, porque los saldos cambian. La versión anterior se conserva. Acordad cuándo volveréis a calcular, por ejemplo una vez al año, y saldad cuentas antes de cambiar para que la división antigua se cierre con la cuenta limpia."
+  - heading: "Lo que Side Badger no hace aquí"
+    items:
+      - "Nunca pregunta cuánto gana nadie y no calcula los porcentajes. Tú escribes las cifras que acordasteis."
+      - "No puede fijar una división por defecto para todo el grupo. Los porcentajes van en cada gasto, así que copia uno que ya los tenga."
+      - "No tiene facturas recurrentes, así que copias el alquiler del mes pasado cada vez."
+      - "Nunca mueve dinero. Os pagáis como queráis y lo registráis."
+exampleAfter: 2
+example:
+  heading: "Un mes en el piso de Maya y Jon"
+  currency: GBP
+  people:
+    - id: maya
+      name: Maya
+    - id: jon
+      name: Jon
+  expenses:
+    - label: "el alquiler"
+      payer: maya
+      amount: 1400
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: "la luz y el internet"
+      payer: jon
+      amount: 180
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: "la cena para llevar"
+      payer: jon
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Preguntas"
+  items:
+    - q: "¿Usamos el sueldo bruto o el neto?"
+      a: "Lo decide el grupo. El neto es lo habitual, porque es el dinero que de verdad tenéis para gastar. El bruto ignora que los impuestos, las aportaciones a la pensión y las cuotas de los préstamos se llevan cantidades distintas de sueldos distintos. Elijáis lo que elijáis, usad la misma medida para los dos."
+    - q: "¿Ve Side Badger nuestros ingresos?"
+      a: "No. Solo introduces porcentajes, nunca sueldos. Los porcentajes los ven los miembros del grupo, y en una pareja sois los dos."
+    - q: "¿Podemos fijar 62/38 una vez para todo?"
+      a: "La división se fija por gasto, no por grupo. Copia un gasto que ya tenga 62 y 38 y cambia lo que sea distinto. [Dividir gastos](page:feature/split-expenses) explica las otras opciones."

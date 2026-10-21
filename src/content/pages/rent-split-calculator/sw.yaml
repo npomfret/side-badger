@@ -1,0 +1,88 @@
+# P9 of the wave 2 and 3 briefs (tasks/release-2-plan.md). The worked example is guide 1's flat
+# (how-to-split-rent-by-room-size); every number in the prose is the example's or the arithmetic shown.
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Kikokotoo cha kugawanya kodi: kwa chumba au kipato | Side Badger"
+  description: "Chumba kikubwa, sehemu kubwa? Kokotoa kila mpangaji mwenza analipa nini, kwa ukubwa wa chumba au kwa kipato. Kinafanya kazi kwenye kivinjari: hakuna kinachohifadhiwa wala kutumwa."
+h1: "Kikokotoo cha kugawanya kodi"
+navLabel: "Kikokotoo cha kugawanya kodi"
+lead: "Chumba kikubwa, sehemu kubwa? Andika kodi na uone kila mtu analipa nini, kwa ukubwa wa chumba au kwa kipato, hadi senti. Kinafanya kazi kwenye kivinjari chako, hakihifadhi chochote na hakisogezi pesa. Nyumba ikitaka hesabu itunzwe, [gawanya gharama](page:feature/split-expenses) kwenye Side Badger na unakili kodi kila mwezi."
+cta:
+  heading: "Panga asilimia mara moja. Zinakili milele."
+  body: "Kikokotoo hiki husahau kila kitu ukifunga kichupo, kama yule mpangaji mwenza aliyedai kwamba alilipa intaneti. Kikundi cha Side Badger hutunza kodi, bili na nani amelipa nini. Ni bure, bila matangazo na bila vikomo vya kila siku."
+sections:
+  - heading: "Njia mbili za kushiriki kodi"
+    items:
+      - "**Kwa ukubwa wa chumba.** Sehemu ya kodi inalipia jikoni, bafu na sebule, ambavyo kila mtu hutumia. Unachagua sehemu hiyo (40% mwanzoni) na inagawanywa kwa usawa. Iliyobaki inafuata eneo la chumba cha kulala, kwa hivyo chumba kikubwa kinalipa zaidi na kile kidogo kinapata punguzo ambalo kimestahili."
+      - "**Kwa kipato.** Kila mtu analipa sehemu ya kodi inayolingana na sehemu anayopata kwenye jumla ya kipato. Ukiongeza bili za pamoja, zinafuata sehemu zilezile."
+  - heading: "Jinsi hesabu zinavyofanya kazi"
+    body: "Kila mtu anapata sehemu kamili, kisha asilimia kamili, kwa sababu nambari kamili ni rahisi kuandika na kubishania. Kuzungusha kunatumia njia ya masalio makubwa zaidi: kila mtu anabaki na nambari kamili iliyo chini ya sehemu yake, na pointi zinazobaki zinaenda kwa yule aliyepoteza zaidi. Asilimia zinajumlisha 100 kila mara. Kwenye nyumba iliyo hapa chini, 40% ya pamoja ni 13.33% kwa kila mtu. Chumba cha Priya ni mita za mraba 16 kati ya 38 za nyumba, kwa hivyo 60% × 16/38 ni 25.26%, na ukiongeza 13.33% inakuwa 38.6%, inayozungushwa hadi 39%. Tom na Aisha wanapata 32% na 29%, na 39 + 32 + 29 ni 100. Kila kiasi ni asilimia hiyo ya kodi: 39% ya £1,950 ni £760.50."
+  - heading: "Kisha iandike kwenye Side Badger"
+    body: "Kwa hadithi kamili, pamoja na kipimo cha mkanda, tazama [jinsi ya kugawanya kodi kwa ukubwa wa chumba](page:guide/how-to-split-rent-by-room-size), au [mwenzi anayepata zaidi](page:guide/how-to-split-bills-with-a-partner-who-earns-more) kwa wapenzi."
+    items:
+      - "**Ongeza kodi.** Kwenye kikundi chako, chagua **Ongeza Gharama**, chagua aliyemlipa mwenye nyumba chini ya **Nani alilipa?** na waache wote chini ya **Gawanya kati ya**."
+      - "**Chagua Asilimia.** Chini ya **Jinsi ya kugawanya**, chagua **Asilimia** na uandike asilimia kamili. Fomu inakuonya zisipojumlisha 100."
+      - "**Nakili mwezi ujao.** Fungua kodi ya mwezi uliopita na uchague **Kopi gharama**. Mgawanyo unakuja nayo."
+  - heading: "Kisichofanywa na kikokotoo"
+    items:
+      - "**Kupima vyumba vyako.** Eneo la sakafu ni mahali pa kuanzia. Chumba chenye bafu ndani kina thamani zaidi ya eneo lilelile lisilo na bafu, na chumba kidogo kinachotosha kitanda na kiti cha matumaini kina thamani ndogo."
+      - "**Kuamua nini kinahesabiwa kama kipato.** Mshahara wa mkononi au wa jumla, mshahara au kazi ya pembeni: kikundi kinaamua. Tumia kipindi kilekile kwa kila mtu."
+      - "**Kuhifadhi chochote.** Ukifunga kichupo nambari zinapotea. Ili kuzitunza, nakili kiungo. Kinabeba nambari zako baada ya #, ambayo vivinjari havitumi kamwe kwa seva, na yeyote aliye nacho anaweza kuzisoma."
+      - "**Kusogeza pesa.** Unamlipa mwenye nyumba mtakavyo."
+      - "**Kuchanganya sarafu, au kuvuka vikomo.** Chagua sarafu moja. Kinakubali watu 2 hadi 10 na kodi hadi 999,999.99, kama kwenye programu."
+exampleAfter: 2
+example:
+  heading: "Nyumba moja, mwezi mmoja"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "kodi"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "bili ya umeme"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "intaneti"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Maswali"
+  items:
+    - q: "Ipi ina haki zaidi, ukubwa wa chumba au kipato?"
+      a: "Hakuna, kila mara. Ukubwa wa chumba unafaa wapangaji wenza wanaolipia nafasi wanayolalia. Kipato kinafaa wapenzi na marafiki wenye mishahara tofauti sana. Kubalianeni kabla ya siku ya kwanza ya kodi, si baada yake."
+    - q: "Je, bili zigawanywe kwa njia ileile?"
+      a: "Kwa wapangaji wenza, kwa kawaida hapana. Kila mtu anatumia umeme na intaneti, kwa hivyo usawa ni rahisi zaidi, kama kwenye mfano. Kwa kipato, kikokotoo kinatoa bili sehemu zilezile za kodi."
+    - q: "Je, naweza kutumia futi za mraba?"
+      a: "Ndiyo. Chagua ft² na uandike maeneo kwa futi za mraba. Kipimo ni lebo tu, na sehemu zinatoka zilezile mradi kila mtu atumie kipimo kimoja."
+    - q: "Je, kikokotoo ni bure?"
+      a: "Ndiyo. Bure. Hakuna matangazo. Hakuna vikomo vya kila siku. Huhitaji akaunti pia."

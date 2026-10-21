@@ -1,0 +1,113 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Zo reken je af na een groepsreis | Side Badger"
+  description: "Reken af voor de groep uiteengaat. Tien verwarde schulden worden vier betalingen, geregistreerd zodra ze gebeuren. Deelbetalingen mogen. Sommen voor vijf vrienden."
+h1: "Zo reken je af na een groepsreis"
+navLabel: "Afrekenen na de reis"
+lead: "Reken af voor iedereen uit elkaar gaat. Voeg de laatste uitgave toe, open de saldi van de groep en betaal wat je schuldig bent van de korte lijst, op de manier die je wilt. Registreer daarna elke betaling in Side Badger zodat het saldo voor de hele groep verdwijnt. Voor vijf vrienden en vijf uitgaven worden tien verwarde schulden vier betalingen."
+cta:
+  heading: "Sluit de boeken voor de foto’s binnenstromen"
+  body: "Maak een gratis account aan, start een groep voor de volgende reis en voeg elke kost toe zodra hij gebeurt. De korte lijst betalingen ligt klaar tegen de tijd dat je op de luchthaven bent. Wil je eerst zien [hoe afrekenen werkt](page:feature/settle-up)?"
+sections:
+  - heading: "Vijf vrienden, vijf uitgaven, één vertrekhal"
+    body: "Mo, Ines, Raf, Tess en Uma brachten een week door aan de kust. Mo boekte het appartement en kocht de boodschappen, Ines betaalde de boottocht en Raf nam het grote diner voor zijn rekening. Tess nam de taxi naar de luchthaven met Uma en Mo, omdat Ines en Raf de trein hadden. Uma’s kaart was thuisgebleven, dus zij betaalde niets. Dat zijn vijf uitgaven en in totaal € 1.700, en in de vertrekhal kon niemand zeggen wie er voor stond."
+  - heading: "Tien schulden, vier betalingen"
+    body: "Het appartement, de boottocht, het diner en de boodschappen worden gelijk door vijf gedeeld. Dat is € 200, € 50, € 60 en € 18 per persoon, dus Ines en Raf zijn elk € 328 schuldig. De taxi wordt door drie gedeeld, € 20 per persoon, dus Mo, Tess en Uma zijn € 348 schuldig. Mo betaalde € 1.090 en is € 348 schuldig, dus hij heeft € 742 tegoed. Alle anderen betaalden minder dan ze verschuldigd zijn. Uma komt € 348 tekort, Tess € 288, Ines € 78 en Raf € 28, en samen is dat Mo’s € 742. Reken je elk paar mensen rechtstreeks af, dan krijg je tien aparte schulden. Side Badger stelt in plaats daarvan vier betalingen voor, allemaal aan Mo."
+  - heading: "Reken af voor iedereen uit elkaar gaat"
+    body: "Het beste moment is de laatste avond of de rit naar huis, terwijl iedereen nog op één plek is en een schuld van € 28 makkelijk ter sprake te brengen is. Voeg eerst elke uitgave toe, de taxi inbegrepen. Niemand kan een groep verlaten zolang die geld schuldig is of tegoed heeft, dus de telling moet toch ooit afgesloten worden."
+    items:
+      - "**Bekijk de lijst.** Open de groep en kijk bij **Saldi**. Standaard zie je de schulden waarbij jij betrokken bent. Kies **Alles tonen** om de lijst van de hele groep te zien."
+      - "**Betaal zoals je wilt.** Bankoverschrijving, cash, een gunst die nog openstaat van de vorige vakantie. Side Badger verplaatst het geld niet."
+      - "**Registreer het.** Kies **Vereffenen**. Onder **Snelle vereffening** is elke knop een van je voorgestelde betalingen, en een knop kiezen vult het bedrag in. Voeg een **Notitie** toe, bijvoorbeeld bankoverschrijving, controleer de **Datum** (die mag niet in de toekomst liggen) en kies **Vereffening registreren**."
+      - "**Zie het verdwijnen.** Het saldo wordt voor iedereen bijgewerkt. Als de laatste betaling binnen is, staat er bij **Saldi**: **Alles is vereffend!**"
+  - heading: "Nu een deel betalen, de rest later"
+    body: "Uma kan vanavond € 200 overschrijven en de rest eind van de maand. Ze registreert € 200, en het formulier waarschuwt haar dat ze Mo daarna nog € 148 schuldig zal zijn, dat is € 348 min € 200. Als ze het opslaat, blijft die € 148 op haar saldo staan tot ze de rest registreert. De waarschuwing werkt ook in de andere richting. Als een verdwaalde nul € 348 verandert in € 3.480, zegt het formulier dat ze Mo maar € 348 schuldig is en dat opslaan een schuld in de tegenovergestelde richting zou creëren. Corrigeer de nul voor je opslaat."
+  - heading: "Fouten herstellen, en betalingen vieren"
+    items:
+      - "**Een foute betaling.** Enkel degene die een betaling registreerde, kan ze bewerken. Die persoon of een groepsbeheerder kan ze verwijderen, waarna ze opnieuw geregistreerd kan worden."
+      - "**Een betaling die aandacht verdient.** Elke geregistreerde betaling staat met haar datum en notitie onder **Vereffeningen**, waar iedereen in de groep ze kan zien en erop kan reageren. Mo kan **Vieren** kiezen als Uma’s laatste € 148 binnenkomt."
+      - "**Het einde.** Staat elk saldo op nul, dan kan een beheerder de groep vergrendelen zodat de cijfers blijven staan."
+  - heading: "Wat Side Badger hier niet doet"
+    items:
+      - "Het verplaatst nooit geld. Het heeft geen betaallinks of betalingsverzoeken, dus een betaling in de app is de registratie van een betaling die elders gebeurd is."
+      - "Het stuurt geen herinneringen. Een late betaling opvolgen blijft aan jou."
+      - "Het stelt geen deadlines. Wanneer de rest van Uma’s € 148 betaald moet zijn, bepaalt de groep onderling."
+      - "De voorgestelde betalingen zijn een korte lijst, geen belofte van de kortst mogelijke. Ze worden per valuta berekend, dus een reis die in euro’s en ponden betaald werd, krijgt voor elke valuta een lijst."
+exampleAfter: 2
+example:
+  heading: "Vijf vrienden aan de kust"
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: "Appartement"
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: "Boottocht"
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: "Groot diner"
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: "Taxi naar de luchthaven"
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: "Boodschappen"
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: "Vragen"
+  items:
+    - q: "Wie registreert best een betaling, de betaler of de ontvanger?"
+      a: "Een betaling registreren vraagt toestemming om uitgaven te bewerken, en het formulier vraagt **Wie heeft betaald?** en **Wie heeft de betaling ontvangen?** Enkel degene die ze registreerde kan ze later bewerken, dus het is meestal het eenvoudigst als de betaler het doet, met de knop voor snelle vereffening."
+    - q: "Wat als de reis in twee valuta’s liep?"
+      a: "Saldi worden per valuta bijgehouden, dus een schuld in euro blijft een schuld in euro en elke valuta krijgt haar eigen korte lijst, tenzij uitgaven bij het invoeren omgerekend werden. [Meerdere valuta’s](page:guide/how-to-split-a-trip-paid-in-several-currencies) toont beide manieren."
+    - q: "Moeten we tijdens de reis afrekenen of op het einde?"
+      a: "Allebei kan. Elke geregistreerde betaling verandert de saldi, dus een betaling halverwege de reis telt mee voor de eindlijst. Op het einde is eenvoudiger, omdat [de hele reis](page:use-case/group-trips) dan op één plek staat."

@@ -1,0 +1,78 @@
+translatedFrom: "42f5cf35"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.read-by-googles-ai
+  - receipt-attachments.keep-the-receipt
+meta:
+  title: "Skenējiet čeku, lai pievienotu izdevumu | Side Badger"
+  description: "Ļaujiet āpsim nolasīt čeku. Tas aizpilda kopsummu, datumu un vietu, lai jūs pārbaudītu, bez skenēšanas kredītiem. Attēlu nolasa Google AI pakalpojums."
+h1: "Skenējiet čeku, pārbaudiet detaļas, sadaliet"
+navLabel: "Čeku skenēšana"
+lead: "Ļaujiet āpsim nolasīt čeku un pārbaudiet viņa mājasdarbu. Pievienojiet jaunam izdevumam fotogrāfiju, un Side Badger aizpilda kopsummu, datumu un vietu, lai jūs tos pārbaudītu. Tad jūs [sadalāt to](page:feature/split-expenses) kā jebkuru citu izdevumu. Skenēšana ir bez maksas, un skenēšanas kredītu nav. Tā aizpilda vienu izdevumu un nedala rēķinu pa pozīcijām. Čeku attēlus nolasa Google AI pakalpojums."
+cta:
+  heading: "Nofotografējiet. Pārbaudiet. Sadaliet."
+  body: "Izveidojiet bezmaksas kontu, sāciet grupu un pievienojiet izdevumu ar čeka fotogrāfiju. Paskatieties, ko tas aizpilda, izlabojiet visu nepareizo un saglabājiet, kad esat apmierināti."
+problem:
+  heading: "Neviens negrib pārrakstīt čeku taksometru rindā"
+  body: "Ceļojumiem un garajiem vakariem pilsētā līdzi nāk papīrs. Vakariņas, taksometrs, kārta, kas pārvērtās sešās. Katru no tiem ievadīt tālrunī ar aukstiem īkšķiem un rindu aiz muguras ir tas, kā izdevumi tiek aizmirsti. Tāpēc Side Badger čeku nolasīs jūsu vietā. Tas sagatavo pirmo melnrakstu, bet pārbaudi veicat jūs. Tas der [grupu ceļojumiem](page:use-case/group-trips) un [pasākumiem un svinībām](page:use-case/events-and-celebrations), kur čeki krājas ātrāk, nekā kāds vēlas ar tiem tikt galā."
+workflow:
+  heading: "No fotogrāfijas līdz izdevumam trīs soļos"
+  steps:
+    - title: "Pievienojiet čeku jaunam izdevumam"
+      body: "Sāciet jaunu izdevumu un pieskarieties **Skenēt čeku**, vai izmantojiet ātro darbību **Skenēt čeku** savā panelī. Uzņemiet fotogrāfiju vai izvēlieties jau esošu. Der arī **Pievienot čeku vai pielikumu** veidlapā."
+    - title: "Ļaujiet to nolasīt"
+      body: "Veidlapa rāda **Analizē čeku...**, kamēr Side Badger AI nolasa attēlu. Tad tā aizpilda atrasto, piemēram, aprakstu, kopsummu, valūtu, datumu, laiku un vietu. Visu, ko jau bijāt ierakstījuši, tā neaiztiek."
+      shot: S09
+      shotAlt: "Jauna izdevuma veidlapa ar uzrakstu „Analizē čeku...”, tad tā pati veidlapa ar aizpildītām detaļām"
+    - title: "Pārbaudiet, tad sadaliet"
+      body: "Salīdziniet veidlapu ar papīru. Izlabojiet visu nepareizo, norādiet, kas maksāja un kas dalījās izmaksās, izvēlieties, kā sadalīt, un saglabājiet. Izdevums nepastāv, kamēr to nesaglabājat. [Izdevumu sadale](page:feature/split-expenses) aptver sadali."
+options:
+  heading: "Iespējas"
+  items: []
+sections:
+  - heading: "Ko tas aizpilda"
+    body: "Pievienojiet jauna izdevuma čeka attēlu, un šie lauki var aizpildīties. Kurš maksāja, kurš dalījās izmaksās un kā sadalīt, joprojām ir jūsu ziņā."
+    items:
+      - "**Apraksts** izdevumam."
+      - "**Kopsumma**."
+      - "**Valūta**, ja jūsu grupa to atļauj."
+      - "**Datums** un **laiks**."
+      - "**Vieta**."
+      - "Čeka teksta kopija **piezīmēs**, gadījumam, ja papīra čeks izbalē vai iziet cauri veļas mašīnai."
+  - heading: "Ko jums joprojām jāpārbauda"
+    body: "Visu. Uztveriet aizpildīto kā melnrakstu. Salīdziniet kopsummu ar papīru, tad valūtu, datumu un vietu. Izplūdušas fotogrāfijas un saburzīts papīrs var apmuļķot jebkuru lasītāju, un mēs nesolām, ka tas atpazīst katru čeku pareizi, tāpēc lūdzu paskatieties, pirms saglabājat. Ja kaut kas nav pareizi, pārrakstiet. Ja čeks ir jenās un grupa norēķinās mārciņās, [vairākas valūtas](page:feature/multiple-currencies) izskaidro, kas notiek tālāk."
+  - heading: "Turiet čeku pie izdevuma"
+    body: "Skenēts vai ne, čeks var palikt pie izdevuma. Pievienojiet fotogrāfijas vai PDF, līdz trim uz izdevumu un līdz 10 MB katrs. Grupas dalībnieki tos redz pie izdevuma. Attēli parādās kā sīktēli, kas atveras skatītājā, un PDF atveras kā saites. Fotogrāfija, ko skenējat, tiek pievienota arī, ja vien to nenoņemat pirms saglabāšanas. Kad kāds jautā, cik tās vakariņas īsti maksāja, pierādījums ir turpat."
+  - heading: "Kur nonāk jūsu čeks"
+    body: "Čeku attēlus nolasa Google AI pakalpojums. Lai aizpildītu veidlapu, attēlu nolasa Google Vertex AI (Gemini) Google ASV multiregionā. Pievienojiet attēlu jaunam izdevumam, un tas tiek nolasīts. PDF vai fotogrāfija, kas pievienota jau esošam izdevumam, tiek saglabāta nenolasīta. Pievienotie čeki ir redzami grupas dalībniekiem, tāpēc, ja čekā ir kaut kas, ko nevēlaties kopīgot, izlaidiet fotogrāfiju un šo izdevumu ierakstiet ar roku."
+limits:
+  heading: "Ierobežojumi"
+  items:
+    - "Tikai attēli. JPEG, PNG un WebP, un HEIC pēc pārveidošanas. PDF var pievienot izdevumam, bet tie netiek nolasīti."
+    - "Skenēšana ir tikai jauniem izdevumiem. Esošam izdevumam varat pievienot čekus, bet nekas netiek nolasīts."
+    - "Tā aizpilda tikai laukus, kurus neesat aiztikuši, un valūtu tikai tad, ja jūsu grupa to atļauj."
+    - "Tā nedala pa pozīcijām un nepiešķir čeka pozīcijas cilvēkiem. Tā aizpilda vienu izdevumu, un jūs to sadalāt kā parasti."
+    - "Nav nekāda solījuma, ka aizpildītais ir pareizs vai ka skenēšana darbosies katru reizi. Pārbaudiet pirms saglabāšanas un pievienojiet izdevumu ar roku, ja skenēšana neizdodas vai nav pieejama."
+    - "Izdevumam var būt līdz trim pielikumiem, katrs līdz 10 MB, kā JPEG, PNG, WebP, HEIC vai PDF."
+    - "Čeku attēlus nolasa Google Vertex AI (Gemini) Google ASV multiregionā, un pievienotie čeki ir redzami grupas dalībniekiem."
+useCasesHeading: "Kur čeki krājas"
+faq:
+  heading: "Jautājumi"
+  items:
+    - q: "Vai tas var sadalīt čeku pa pozīcijām?"
+      a: "Nē. Tas aizpilda izdevumu, tostarp kopsummu, un jūs to sadalāt vienādi, pēc precīzām summām vai procentuāli. Rēķinam, kurā visi pasūtīja dažādi, ievadiet, cik katrs ir parādā, kā precīzas summas. [Izdevumu sadale](page:feature/split-expenses) sniedz detaļas."
+    - q: "Vai tas var nolasīt PDF?"
+      a: "Nē. PDF varat pievienot izdevumam, lai tas ceļo kopā ar skaitļiem, bet tiek nolasīti tikai attēli."
+    - q: "Vai skenēšanai ir ierobežojums?"
+      a: "Nav skenēšanas kredītu, kas varētu beigties, un skenēšana ir bez maksas. Failiem gan ir ierobežojumi: līdz trim pielikumiem uz izdevumu un 10 MB katrs. [Ko sedz bezmaksas versija](page:pricing) sniedz pārējo."
+    - q: "Kas var redzēt manu čeku?"
+      a: "Grupas dalībnieki var redzēt čekus, kas pievienoti izdevumam. Čeku attēlus nolasa arī Google AI pakalpojums, tādējādi veidlapa tiek aizpildīta."
+    - q: "Vai varu skenēt čeku izdevumam, kas jau pievienots?"
+      a: "Nē, skenēšana ir paredzēta jauniem izdevumiem. Čeku esošam izdevumam joprojām varat pievienot, un tas tiek saglabāts nenolasīts."
+    - q: "Ko darīt, ja tas aizpilda kaut ko nepareizi?"
+      a: "Pārrakstiet. Katrs lauks paliek rediģējams līdz saglabāšanai, un jums tik un tā jāpārbauda tie visi. Ja skenēšana neizdodas vai nav pieejama, pievienojiet izdevumu ar roku kā parasti."

@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: Ayuda y soporte | Side Badger
+  description: ¿Contraseña olvidada, un enlace que no funciona, un pago mal registrado? Respuestas cortas a lo que atasca a la gente en Side Badger, y cómo escribirnos.
+h1: Ayuda y soporte, sin música de espera
+navLabel: Ayuda y soporte
+lead: Respuestas cortas a lo que se le atasca a la gente, desde una contraseña olvidada hasta cerrar un grupo para siempre. Cada una enlaza con la página que lo explica más a fondo. ¿No encuentras la tuya? Cuéntanoslo desde la app o escríbenos unas líneas.
+cta:
+  heading: ¿Viniste a por ayuda y te quedas a dividir?
+  body: ¿Aún no tienes cuenta? Empieza un grupo, comparte el enlace y añade el primer gasto. Gratis, sin anuncios y sin límites diarios.
+groups:
+  - heading: Iniciar sesión
+    items:
+      - q: ¿Has olvidado tu contraseña?
+        a: Le pasa hasta a los mejores tejones. Elige **¿Olvidó su contraseña?** en la pantalla **Iniciar sesión**, escribe el correo de tu cuenta y sigue el enlace del correo que te enviamos para elegir una nueva. [Cómo funciona](page:how-it-works) explica qué más necesita una cuenta.
+      - q: Me he registrado, pero no puedo añadir nada. ¿Por qué?
+        a: Lo más habitual es que tu correo aún no esté verificado, así que abre el enlace del correo de verificación o elige **Reenviar correo de verificación** en el aviso recordatorio para recibir uno nuevo. Si tu correo ya está verificado, puede que el grupo esté bloqueado o que sus permisos no te dejen, y un espectador lo ve todo y no cambia nada, como explica [grupos y permisos](page:feature/groups-and-permissions).
+      - q: ¿Cómo cambio mi correo o mi contraseña?
+        a: En **Configuración**, elige **Cambiar correo electrónico** o **Cambiar contraseña**. Ambos piden primero tu contraseña actual, y una dirección de correo nueva hay que verificarla con el enlace que le enviamos. [Cómo funciona](page:how-it-works) explica las cuentas.
+      - q: ¿Puedo iniciar sesión con Google o con Apple?
+        a: No. Solo necesitas una dirección de correo y una contraseña de al menos 12 caracteres, y puedes marcar **Recordarme** en tu propio móvil u ordenador. La página de la [aplicación web](page:feature/web-app) cuenta el resto para empezar.
+  - heading: Unirse a un grupo
+    items:
+      - q: Me han mandado un enlace de invitación. ¿Cómo me uno?
+        a: Ábrelo y luego inicia sesión o crea una cuenta gratis. Verás una vista previa del grupo, elegirás ahí el nombre con el que te verá la gente y pulsarás **Unirse al grupo**. [Grupos y permisos](page:feature/groups-and-permissions) muestra todo el camino de entrada.
+      - q: Pone «Pendiente de aprobación». ¿He hecho algo mal?
+        a: Para nada. En este grupo es un administrador quien deja entrar a cada persona, así que tu solicitud ha ido a sus administradores y no puedes ver dentro hasta que uno la apruebe. Un empujoncito amistoso en persona está permitido, y [grupos y permisos](page:feature/groups-and-permissions) explica la aprobación.
+      - q: El enlace dice que no es válido o que ha caducado.
+        a: Los enlaces de invitación duran lo que eligió quien los creó, de 15 minutos a 5 días. Pide a alguien del grupo un enlace nuevo, o el código QR si estáis en la misma sala. [Cómo funciona](page:how-it-works) explica las invitaciones.
+  - heading: Gastos
+    items:
+      - q: ¿Cómo añado un gasto?
+        a: Abre el grupo y elige **Añadir gasto**. Di qué fue, cuánto, quién pagó y quién lo compartió, y luego divídelo a partes iguales, por importes exactos o por porcentaje. [Dividir gastos](page:feature/split-expenses) repasa todas las opciones.
+      - q: ¿Puede repetirse el alquiler todos los meses?
+        a: Por sí solo, no, porque no hay gastos recurrentes. Abre el del mes pasado y elige **Copiar gasto**, y el formulario llega rellenado, listo para una fecha nueva y para lo que haya cambiado. [Dividir gastos](page:feature/split-expenses) cuenta más sobre copiar.
+      - q: Me he equivocado de importe. ¿Puedo arreglarlo?
+        a: Sí. Edita el gasto, siempre que los permisos del grupo te lo dejen y el grupo no esté bloqueado. La versión anterior se conserva, así que nadie tiene que fiarse de tu palabra sobre lo que cambió, como explica [dividir gastos](page:feature/split-expenses).
+      - q: Un gasto parece estar mal y no es mío. ¿Qué hago?
+        a: Elige **Tengo una pregunta** en él y explica por qué, y el gasto entero queda fuera de los saldos de todos hasta que quien preguntó, o un administrador, cierre la pregunta. ¿No ves ese botón? Solo pueden preguntar las personas incluidas en un gasto, un administrador tiene que activar antes **Permitir preguntas sobre gastos** en los ajustes del grupo, y la [guía del gasto cuestionado](page:guide/what-to-do-when-someone-disputes-a-shared-expense) trae la diplomacia.
+  - heading: Pagos
+    items:
+      - q: ¿Envía Side Badger el dinero?
+        a: No, Side Badger nunca mueve dinero. Pagaos como queráis, por transferencia bancaria, en efectivo o como os funcione, y después registrad el pago para que los saldos se pongan al día. [Cómo saldar cuentas después de un viaje en grupo](page:guide/how-to-settle-up-after-a-group-trip) lo recorre de principio a fin.
+      - q: ¿Cómo registro un pago?
+        a: Elige **Liquidar** en el grupo, indica quién pagó y quién lo recibió, escribe el importe o deja que un botón de **Liquidación rápida** lo rellene, y elige **Registrar liquidación**. ¿Se pagó solo una parte? Registra lo que se pagó y el resto se queda en el saldo, como explica [saldar cuentas](page:feature/settle-up).
+      - q: He registrado mal un pago. ¿Puedo arreglarlo?
+        a: Quien lo registró puede editarlo desde el historial de **Liquidaciones** del grupo, y esa persona o un administrador pueden borrarlo, lo que lo quita de los saldos. Un pago en el que participa alguien que ha salido después del grupo no se puede editar. [Saldar cuentas](page:feature/settle-up) explica el historial.
+  - heading: Notificaciones y pantalla de inicio
+    items:
+      - q: ¿Cómo activo las notificaciones?
+        a: Activa **Notificaciones push** en **Configuración** y permítelas cuando el navegador te lo pida. Si el navegador ya las ha bloqueado, permítelas antes en sus propios ajustes. Cada dispositivo se activa por separado y la entrega no está garantizada, así que trata una notificación como un toque de atención, no como una promesa, como explica la página de la [aplicación web](page:feature/web-app).
+      - q: ¿Por qué no funcionan las notificaciones en mi iPhone?
+        a: En un iPhone o un iPad solo funcionan en la app añadida a tu pantalla de inicio, nunca en una pestaña del navegador. Añádela, ábrela desde el icono de la pantalla de inicio y luego actívalas en **Configuración**. [Planear juntos](page:feature/plan-together) muestra de qué te avisan.
+      - q: ¿Hay una app para descargar?
+        a: No desde una tienda de aplicaciones, porque Side Badger funciona en tu navegador. Inicia sesión y luego sigue **Añadir a la pantalla de inicio o al Dock** en **Configuración**, y se abre como una app, en su propia ventana. La página de la [aplicación web](page:feature/web-app) trae los pasos para cada dispositivo.
+  - heading: Salir, archivar, bloquear y cerrar
+    items:
+      - q: ¿Cómo abandono un grupo?
+        a: Salda cuentas y luego elige **Abandonar grupo**. No puedes salir mientras debas o te deban dinero aunque sea en una sola moneda, mientras un gasto en el que participas tenga una pregunta abierta, ni si eres el último administrador o el único miembro, y para volver hace falta una invitación nueva. [Grupos y permisos](page:feature/groups-and-permissions) trae los detalles.
+      - q: ¿Cómo quito un grupo viejo de mi panel?
+        a: Elige **Archivar grupo**. Desaparece de tu panel y del de nadie más, aún puedes abrirlo y usarlo, y **Desarchivar grupo** lo devuelve. [Grupos y permisos](page:feature/groups-and-permissions) compara archivar, bloquear y cerrar.
+      - q: El viaje se acabó. ¿Podemos evitar que los números cambien?
+        a: Sí. Un administrador puede activar **Bloquear grupo** en los ajustes del grupo, y nadie podrá añadir ni editar gastos, registrar pagos nuevos ni cambiar listas y encuestas hasta que un administrador lo desbloquee. Todo el mundo puede seguir leyendo el grupo y su historial, y no se cuela ningún taxi tardío, como explica [grupos y permisos](page:feature/groups-and-permissions).
+      - q: ¿Puedo borrar un grupo?
+        a: Un administrador puede cerrarlo con **Cerrar grupo**, tras escribir el nombre del grupo para confirmar. Cerrar es permanente y deja el grupo inaccesible para todos, así que si solo quieres quitarlo de la vista, archívalo en su lugar. [Grupos y permisos](page:feature/groups-and-permissions) trae la letra pequeña.
+contact:
+  heading: ¿Sigues sin solución?
+  items:
+    - q: ¿Has encontrado un error o quieres que cambiemos algo?
+      a: Cuéntanoslo desde la app. Elige **Comentarios** en el menú de tu cuenta, luego **Enviar comentario**, y escoge **Reportar problema**, **Solicitar ayuda** o **Solicitud de función**. Adjunta una captura de pantalla si ayuda, y cuando respondamos encontrarás la respuesta en el mismo hilo.
+    - q: ¿Prefieres escribirnos por correo?
+      a: Escribe a la dirección de abajo. Di de qué grupo se trata, qué hiciste y qué esperabas que pasara. Desahogarse está bien; las contraseñas no, así que nunca envíes la tuya.
+  emailLabel: Escríbenos a
+  email: support@sidebadger.me

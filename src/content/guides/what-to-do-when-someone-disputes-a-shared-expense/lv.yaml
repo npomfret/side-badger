@@ -1,0 +1,102 @@
+translatedFrom: "0900d953"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Ko darīt, ja kāds apstrīd kopīgu izdevumu | Side Badger"
+  description: "Nekādu dzēlīgu ziņu. Apšaubiet izdevumu, un, kamēr runājat, tas izkrīt no visu atlikumiem. Izstrādāts ar 45 £ vērtu ballītes vīnu."
+h1: "Ko darīt, ja kāds apstrīd kopīgu izdevumu"
+navLabel: "Apstrīdēti izdevumi"
+lead: "Uzdodiet jautājumu par izdevumu, nevis sūtiet dzēlīgu ziņu. Kamēr jautājums ir atvērts, viss izdevums paliek ārpus visu atlikumiem. Pārrunājiet to komentāros, labojiet sadali, ja grupa piekrīt, un ļaujiet cilvēkam, kas jautāja, vai administratoram jautājumu aizvērt."
+cta:
+  heading: "Uzdodiet neveiklo jautājumu pieklājīgi"
+  body: "Izveidojiet bezmaksas kontu, sāciet grupu mājoklim un lūdziet administratoram ieslēgt jautājumus par izdevumiem, kas ir izslēgti, kamēr kāds tos neieslēdz. Gribat vispirms apskatīties, kā tas notiek? Skatiet [kā tas darbojas](page:how-it-works) vai [ko sedz bezmaksas versija](page:pricing)."
+sections:
+  - heading: "Trīs mājokļa biedri un 45 £ vīna"
+    body: "Pēc ballītes Tom pievieno vīnu mājokļa grupai. Tas ir 45 £, maksāja Tom, sadalīts vienādi starp Tom, Priya un Aisha, tas ir 15 £ katram. Aisha nedzer. Tom to nopirka ballītei, un ballīte bija [mājoklim](page:use-case/housemates), tāpēc viņš nav izdarījis neko nepareizu. Arī Aisha nekļūdās, jautājot. Šeit nav neviena ļaundara. Ir tikai strīds par 15 £ vīna un daudz veidu, kā to padarīt neveiklu. Dzēlīga ziņa visai mājai ir viens no tiem. Jautājums par izdevumu ir maigāks veids."
+  - heading: "Ko jautājums dara"
+    body: "Aisha atver izdevumu un uzdod jautājumu. Viss izdevums izkrīt no visu atlikumiem, ne tikai viņas daļa, un nekas cits netiek skarts. Lielais iepirkums (84 £) un uzkopšana (60 £) joprojām tiek skaitīti, tas ir 28 £ + 20 £ = 48 £ katram. Tātad, kamēr vīns ir aizturēts, Aisha ir parādā 48 £, Tom pienākas 36 £ un Priya pienākas 12 £. Lai ko mājoklis par vīnu nolemtu, pa to laiku tas nav iekļauts neviena atlikumā. Arī ikviens cits, kas ir izdevumā, var uzdot savu jautājumu. Vīns atgriežas atlikumos tikai tad, kad ir aizvērts pēdējais atvērtais jautājums par to, un jautājumu aizver cilvēks, kas to uzdeva, vai administrators."
+  - heading: "Pārrunāšana, tad labošana"
+    body: "Aishas jautājums nonāk izdevuma komentāros, tāpēc atbildes ir tieši zem tā. [Plānojiet kopā](page:feature/plan-together) vairāk stāsta par komentāriem un jautājumiem. Tom un Priya to izlasa, un mājoklis aprunājas. Viņi nolemj, ka par vīnu jāmaksā Tom un Priya, jo viņi to dzēra. Cits mājoklis varētu paturēt sadali uz trim vai vienoties par kaut ko pa vidu, un arī tas būtu labi. Side Badger saglabā, par ko vienojāties, un par vīnu viedokļa tam nav. Tom izlabo izdevumu, lai tas tiktu sadalīts vienādi starp viņu un Priya, tas ir 22,50 £ katram (45 £ ÷ 2). Aisha tajā vairs nav, tāpēc viņas jautājums paliek pie vecās versijas, un vīns atgriežas atlikumos. Iepriekšējā versija tiek saglabāta."
+  - heading: "Rezultāta nolasīšana"
+    body: "Kad vīns atkal ir iekšā, Tom pienākas 58,50 £, Priya ir parādā 10,50 £ un Aisha ir parādā 48 £. Side Badger iesaka divus maksājumus, abus Tom. Aishas 48 £ ir tas pats skaitlis, kas viņai bija, kamēr vīns bija aizturēts, jo viņa tajā nav. Priya no 12 £ pienākošās summas ir nonākusi pie 10,50 £ parāda, jo viņas puse no vīna ir 22,50 £. Ja sadale uz trim būtu palikusi, Aisha būtu parādā 63 £ (28 £ + 20 £ + 15 £). Viss strīds bija vērts 15 £. Samaksājiet viens otram, kā vēlaties, tad reģistrējiet katru maksājumu sadaļā **Norēķināties**. [Norēķināšanās](page:feature/settle-up) apraksta pārējo."
+  - heading: "Kā to formulēt, lai ar jums turpina runāt"
+    body: "Aishas jautājums: „Es vīnu nedzēru. Vai varam apskatīt sadali?” Tas ir īss, nosauc izdevumu un jautā, nevis apsūdz. Daži ieradumi palīdz."
+    items:
+      - "**Jautājiet par izdevumu, nevis par cilvēku.** „Vai varam pārbaudīt vīna sadali?” sāk sarunu. „Kāpēc man rēķina tavu vīnu?” sāk citāda veida sarunu."
+      - "**Pasakiet, ko vēlētos.** „Vai tas varētu būt tikai tiem, kas to dzēra?” dod grupai ko piekrist vai uz ko atbildēt."
+      - "**Pamatojiet vienā vai divos teikumos.** Lauks ir **Jūsu jautājums**, un to nedrīkst atstāt tukšu."
+      - "**Turiet atbildes vienuviet.** Atbildes iet izdevuma komentāros, blakus skaitļiem, par kuriem tās ir."
+  - heading: "Iestatiet to Side Badger"
+    items:
+      - "**Ieslēdziet jautājumus.** Tie pēc noklusējuma ir izslēgti. Administrators atver grupas **Iestatījumi**, cilnē **Vispārīgi** sadaļā **Funkcijas** ieslēdz **Atļaut jautājumus par izdevumiem** un izvēlas **Saglabāt**. Izslēdzot tos vēlāk, tiek notīrīti visi atvērtie jautājumi."
+      - "**Uzdodiet jautājumu.** Atveriet izdevumu un blakus savam vārdam sadalē izvēlieties **Man ir jautājums**. Ierakstiet iemeslu laukā **Jūsu jautājums** un vēlreiz izvēlieties **Man ir jautājums**. To var darīt tikai cilvēki, kas ir izdevumā. Izdevumam tagad ir zīme **Apšaubīts**."
+      - "**Atrodiet, kas aizturēts.** Izdevumu sarakstā **Tikai apšaubīti** rāda izdevumus ar atvērtu jautājumu."
+      - "**Labojiet, ja grupa piekrīt.** Atveriet izdevumu, izvēlieties **Rediģēt**, mainiet **Sadalīt starp** un izvēlieties **Atjaunināt izdevumus**. Kurš var labot, ir atkarīgs no grupas atļaujām."
+      - "**Aizveriet, ja nekas nav jālabo.** Cilvēks, kas jautāja, var izmantot aizvēršanas pogu uz sava **Apšaubīts** apzīmējuma, ar uzrakstu **Aizvērt jautājumu**, un tāpat var darīt administrators. Izdevums atgriežas atlikumos, kad ir aizvērts tā pēdējais jautājums."
+  - heading: "Kad nav tik kārtīgi"
+    items:
+      - "**Labojums atstāj jautātāju iekšā.** Ja cilvēks, kas jautāja, joprojām ir izdevumā, viņa jautājums pāriet uz labotu versiju un gaida, kamēr to aizver viņš vai administrators. Summas izlabošana nav tas pats, kas piekrišana, ka viss ir izlabots."
+      - "**Jūs neesat izdevumā.** Izdevumu var apšaubīt tikai tie, kas tajā ir. Ja jums kaut kas šķiet nepareizs, pasakiet to izdevuma komentāros vai pajautājiet tam, kas to pievienoja."
+      - "**Kāds grib pamest grupu.** Atvērts jautājums neļauj pamest grupu cilvēkiem, kas ir šajā izdevumā. Aizveriet jautājumu vai labojiet izdevumu, lai viņi tajā vairs nav, un viņi var iet."
+  - heading: "Ko Side Badger šeit nedara"
+    items:
+      - "Tas nelemj, kam taisnība. Tas notur izdevumu ārpus atlikumiem un saglabā, par ko vienojāties."
+      - "Tas neprasa nevienam apstiprināt izdevumus, pirms tie skaitās. Tiek aizturēts tikai apšaubītais izdevums."
+      - "Tas nevar aizturēt izdevuma daļu. Apšaubiet to, un viss izdevums pamet atlikumus."
+      - "Tas nepārvieto naudu. Jūs samaksājat viens otram, kā vēlaties, un to reģistrējat."
+exampleAfter: 3
+example:
+  heading: "Mājoklis pēc vīna"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "lielais iepirkums"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "uzkopšana"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "ballītes vīns"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+faq:
+  heading: "Jautājumi"
+  items:
+    - q: "Vai varu apšaubīt tikai savu daļu?"
+      a: "Nē. Jautājums aiztur visu izdevumu, visiem tajā. Ja nepareiza ir tikai sadale, risinājums ir sadales labojums."
+    - q: "Kas var aizvērt jautājumu?"
+      a: "Cilvēks, kas jautāja, vai grupas administrators. Ja cilvēks, kas pievienoja izdevumu, nav administrators, viņš nevar to aizvērt jautātāja vietā."
+    - q: "Vai izdevuma labošana izdzēš oriģinālu?"
+      a: "Nē. Iepriekšējā versija tiek saglabāta. Kurš var labot, nosaka grupas atļaujas, tāpēc vērts vispirms pateikt mājai, jo atlikumi mainās."

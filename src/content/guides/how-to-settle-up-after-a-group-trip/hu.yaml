@@ -1,0 +1,113 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Hogyan számoljatok el egy csoportos utazás után | Side Badger"
+  description: "Számoljatok el, mielőtt mindenki szétszéled. Tíz gubancos tartozásból négy kifizetés lesz, menet közben rögzítve, a részkifizetés is jó. Öt barát összegeivel."
+h1: "Hogyan számoljatok el egy csoportos utazás után"
+navLabel: "Elszámolás utazás után"
+lead: "Számoljatok el, mielőtt mindenki szétszéled. Add hozzá az utolsó költséget, nyisd meg a csoport egyenlegeit, és fizesd ki, amivel tartozol, a rövid listáról, ahogy akarod. Aztán rögzítsd az egyes kifizetéseket a Side Badgerben, hogy az egyenleg az egész csoportnál kiürüljön. Öt barátnál és öt költségnél tíz gubancos tartozásból négy kifizetés lesz."
+cta:
+  heading: "Zárd le a könyveket, mielőtt megérkeznek a fotók"
+  body: "Hozz létre ingyenes fiókot, indíts csoportot a következő utazásnak, és add hozzá az egyes költségeket, ahogy megtörténnek. A rövid kifizetéslista már vár, mire a reptérre értek. Előbb megnéznéd, [hogyan működik az elszámolás](page:feature/settle-up)?"
+sections:
+  - heading: "Öt barát, öt költség, egy indulási váróterem"
+    body: "Mo, Ines, Raf, Tess és Uma egy hetet töltött a tengerparton. Mo foglalta le az apartmant és vette a bevásárlást, Ines fizette a hajókirándulást, Raf pedig állta a nagy vacsorát. Tess Umával és Mo-val taxival ment a reptérre, Ines és Raf ugyanis vonatot választott. Uma kártyája otthon maradt, ezért ő semmit nem fizetett. Ez öt költség és összesen 1 700 €, és az indulási váróteremben senki nem tudta megmondani, ki áll plusszban."
+  - heading: "Tíz tartozás, négy kifizetés"
+    body: "Az apartman, a hajó, a vacsora és a bevásárlás egyenlően oszlik öt felé. Ez fejenként 200 €, 50 €, 60 € és 18 €, így Ines és Raf tartozása fejenként 328 €. A taxit hárman osztják, fejenként 20 €, ezért Mo, Tess és Uma tartozása 348 €. Mo 1 090 €-t fizetett, a tartozása 348 €, így 742 € jár neki. Mindenki más kevesebbet fizetett, mint amennyivel tartozik. Umának 348 € hiányzik, Tessnek 288 €, Inesnek 78 €, Rafnak 28 €, és ezek együtt kiadják Mo 742 €-ját. Ha minden párt közvetlenül rendeztek, tíz külön tartozást kaptok. A Side Badger ehelyett négy kifizetést javasol, mind Mo-nak."
+  - heading: "Számoljatok el, mielőtt mindenki szétszéled"
+    body: "A legjobb pillanat az utolsó este vagy a hazaút, amíg mindenki egy helyen van, és egy 28 €-s tartozást könnyű felhozni. Előbb vigyél fel minden költséget, a taxit is. Senki nem hagyhat el csoportot, amíg tartozik vagy neki tartoznak, így a számolást úgyis le kell zárni egyszer."
+    items:
+      - "**Nézd meg a listát.** Nyisd meg a csoportot, és nézd meg az **Egyenlegek** részt. Alapból azokat a tartozásokat látod, amelyek téged érintenek. Az **Összes megjelenítése** a teljes csoport listáját mutatja."
+      - "**Fizess, ahogy akarsz.** Banki átutalás, készpénz, egy szívesség a múlt nyaralásról. A Side Badger nem mozgatja a pénzt."
+      - "**Rögzítsd.** Válaszd a **Tartozásrendezés** lehetőséget. A **Gyors rendezés** alatt minden gomb egy a javasolt kifizetéseid közül, és egyre kattintva kitöltődik az összeg. Írj a **Megjegyzés** mezőbe valamit, például „banki átutalás”, ellenőrizd a **Dátum** mezőt (nem lehet a jövőben), és válaszd a **Tartozásrendezés rögzítése** lehetőséget."
+      - "**Nézd, ahogy kiürül.** Az egyenleg mindenkinél frissül. Amikor az utolsó kifizetés is bekerült, az **Egyenlegek** ezt írja: **Mindenki elszámolt!**"
+  - heading: "Egy részt most, a többit később"
+    body: "Uma ma este elküldhet 200 €-t, a többit a hónap végén. Ő 200 €-t rögzít, az űrlap pedig figyelmezteti, hogy utána még 148 €-val tartozik Mo-nak, ami 348 € mínusz 200 €. Mentsd el, és a 148 € az egyenlegén marad, amíg a többit rögzíti. A figyelmeztetés fordítva is működik. Ha egy eltévedt nulla a 348 €-ból 3 480 €-t csinál, az űrlap azt mondja, hogy csak 348 €-val tartozik Mo-nak, és a mentés ellenkező irányú tartozást hozna létre. Mentés előtt javítsd ki a nullát."
+  - heading: "A hibák javítása és a kifizetések ünneplése"
+    items:
+      - "**Rossz kifizetés.** Egy kifizetést csak az szerkeszthet, aki rögzítette. Ő vagy egy csoportadminisztrátor törölheti, és utána újra rögzíthető."
+      - "**Egy kifizetés, amit érdemes észrevenni.** Minden rögzített kifizetés a **Tartozásrendezések** alatt áll a dátumával és a megjegyzésével, ahol a csoport minden tagja látja és reagálhat rá. Mo az **Ünneplés** lehetőséget választhatja, amikor megérkezik Uma utolsó 148 €-ja."
+      - "**A vége.** Ha minden egyenleg nulla, egy adminisztrátor zárolhatja a csoportot, hogy a számok a helyükön maradjanak."
+  - heading: "Mit nem csinál itt a Side Badger"
+    items:
+      - "Soha nem mozgat pénzt. Nincsenek fizetési linkjei és fizetési kérései, ezért az alkalmazásbeli kifizetés egy máshol megtörtént kifizetés feljegyzése."
+      - "Nem küld emlékeztetőket. Egy késő kifizetés hajkurászása továbbra is rád marad."
+      - "Nem szab határidőket. Hogy Uma 148 €-jának hátralévő része mikor esedékes, azt a csoportnak kell megbeszélnie."
+      - "A javasolt kifizetések egy rövid lista, nem ígéret a lehető legrövidebbre. Pénznemenként számoljuk ki őket, így egy euróban és fontban fizetett utazás mindkettőhöz kap egy-egy listát."
+exampleAfter: 2
+example:
+  heading: "Öt barát a tengerparton"
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: "Apartman"
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: "Hajókirándulás"
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: "Nagy vacsora"
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: "Reptéri taxi"
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: "Bevásárlás"
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: "Kérdések"
+  items:
+    - q: "Ki rögzítse a kifizetést, aki fizet, vagy aki kapja?"
+      a: "A kifizetés rögzítéséhez jogosultság kell a költségek szerkesztésére, az űrlap pedig ezt kérdezi: **Ki fizetett?** és **Ki kapta a kifizetést?** Később csak az szerkesztheti, aki rögzítette, ezért általában az a legegyszerűbb, ha a fizető teszi meg a gyors rendezés gombbal."
+    - q: "Mi van, ha az utazás két pénznemben zajlott?"
+      a: "Az egyenlegek pénznemenként vannak vezetve, így az eurós tartozás eurós tartozás marad, és minden pénznem saját rövid listát kap, hacsak a költségeket nem váltották át bevitelkor. A [több pénznemben fizetett utazásról szóló útmutató](page:guide/how-to-split-a-trip-paid-in-several-currencies) mindkét módot megmutatja."
+    - q: "Az utazás alatt számoljunk el, vagy a végén?"
+      a: "Mindkettő jó. Minden rögzített kifizetés változtat az egyenlegeken, így egy utazás közbeni kifizetés beleszámít a végső listába. A végén egyszerűbb, mert [az egész utazás](page:use-case/group-trips) egy helyen van."

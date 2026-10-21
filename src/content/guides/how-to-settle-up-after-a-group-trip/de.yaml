@@ -1,0 +1,113 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "So rechnest du nach einer Gruppenreise ab | Side Badger"
+  description: "Rechnet ab, bevor sich alle zerstreuen. Zehn verknotete Schulden werden vier Zahlungen, eine Teilzahlung geht auch. Alle Summen für fünf Freunde."
+h1: "So rechnest du nach einer Gruppenreise ab"
+navLabel: "Nach der Reise abrechnen"
+lead: "Rechne ab, bevor sich alle zerstreuen. Füge die letzte Ausgabe hinzu, öffne die Salden der Gruppe und zahle, was du schuldest, wie du willst, anhand der kurzen Liste. Erfasse dann jede Zahlung in Side Badger, damit sich der Saldo für die ganze Gruppe ausgleicht. Bei fünf Freunden und fünf Ausgaben schrumpfen zehn verknotete Schulden auf vier Zahlungen."
+cta:
+  heading: "Schließ die Bücher, bevor die Fotos eintrudeln"
+  body: "Erstelle ein kostenloses Konto, starte eine Gruppe für die nächste Reise und füge jede Ausgabe hinzu, wenn sie anfällt. Die kurze Liste von Zahlungen wartet schon, wenn du am Flughafen bist. Willst du erst sehen, [wie das Abrechnen funktioniert](page:feature/settle-up)?"
+sections:
+  - heading: "Fünf Freunde, fünf Ausgaben, eine Abflughalle"
+    body: "Mo, Ines, Raf, Tess und Uma haben eine Woche an der Küste verbracht. Mo hat die Ferienwohnung gebucht und die Lebensmittel eingekauft, Ines hat den Bootsausflug bezahlt, und Raf hat die Rechnung für das große Abendessen übernommen. Tess hat das Taxi zum Flughafen mit Uma und Mo genommen, weil Ines und Raf den Zug hatten. Umas Karte war zu Hause geblieben, also hat sie für nichts bezahlt. Das sind fünf Ausgaben und insgesamt 1.700 €, und in der Abflughalle konnte keiner sagen, wer vorn liegt."
+  - heading: "Zehn Schulden, vier Zahlungen"
+    body: "Ferienwohnung, Bootsausflug, Abendessen und Lebensmittel werden gleichmäßig auf fünf geteilt. Das sind je 200 €, 50 €, 60 € und 18 €, sodass Ines und Raf je 328 € schulden. Das Taxi teilen sich drei, je 20 €, also schulden Mo, Tess und Uma 348 €. Mo hat 1.090 € bezahlt und schuldet 348 €, bekommt also 742 €. Alle anderen haben weniger bezahlt, als sie schulden. Uma fehlen 348 €, Tess 288 €, Ines 78 € und Raf 28 €, und das ergibt zusammen Mos 742 €. Rechnest du jedes Paar direkt ab, bekommst du zehn einzelne Schulden. Side Badger schlägt stattdessen vier Zahlungen vor, alle an Mo."
+  - heading: "Rechne ab, bevor sich alle zerstreuen"
+    body: "Der beste Moment ist der letzte Abend oder die Fahrt nach Hause, solange noch alle an einem Ort sind und eine Schuld von 28 € leicht anzusprechen ist. Füge zuerst jede Ausgabe hinzu, das Taxi inklusive. Niemand kann eine Gruppe verlassen, solange man Geld schuldet oder bekommt, die Zählung muss also irgendwann ohnehin abgeschlossen werden."
+    items:
+      - "**Die Liste prüfen.** Öffne die Gruppe und sieh dir die **Salden** an. Standardmäßig siehst du die Schulden, die dich betreffen. Wähle **Alle anzeigen**, um die Liste der ganzen Gruppe zu sehen."
+      - "**Zahle, wie du willst.** Banküberweisung, Bargeld, ein Gefallen aus dem letzten Urlaub. Side Badger bewegt das Geld nicht."
+      - "**Erfassen.** Wähle **Abrechnen**. Unter **Schnellausgleich** ist jede Schaltfläche eine deiner vorgeschlagenen Zahlungen, und ein Klick darauf trägt den Betrag ein. Füge eine **Notiz** wie Banküberweisung hinzu, prüfe das **Datum** (es darf nicht in der Zukunft liegen) und wähle **Abrechnung erfassen**."
+      - "**Zusehen, wie es sich ausgleicht.** Der Saldo aktualisiert sich für alle. Ist die letzte Zahlung drin, steht bei den **Salden**: **Alles ausgeglichen!**"
+  - heading: "Jetzt einen Teil zahlen, den Rest später"
+    body: "Uma kann heute Abend 200 € schicken und den Rest Ende des Monats. Sie erfasst 200 €, und das Formular warnt sie, dass sie Mo danach noch 148 € schuldet, also 348 € minus 200 €. Speichert sie es, bleiben die 148 € auf ihrem Saldo, bis sie den Rest erfasst. Die Warnung funktioniert auch andersherum. Wird aus 348 € durch eine verirrte Null 3.480 €, sagt das Formular, dass sie Mo nur 348 € schuldet und dass das Speichern eine Schuld in die Gegenrichtung erzeugen würde. Korrigiere die Null, bevor du speicherst."
+  - heading: "Fehler beheben und Zahlungen feiern"
+    items:
+      - "**Eine falsche Zahlung.** Nur die Person, die eine Zahlung erfasst hat, kann sie bearbeiten. Sie oder ein Gruppen-Admin kann sie löschen, und dann lässt sie sich neu erfassen."
+      - "**Eine Zahlung, die Beachtung verdient.** Jede erfasste Zahlung steht mit Datum und Notiz unter **Abrechnungen**, wo alle in der Gruppe sie sehen und darauf reagieren können. Mo kann **Feiern** wählen, wenn Umas letzte 148 € ankommen."
+      - "**Das Ende.** Stehen alle Salden auf null, kann ein Admin die Gruppe sperren, damit die Zahlen stehen bleiben."
+  - heading: "Was Side Badger hier nicht tut"
+    items:
+      - "Es bewegt nie Geld. Es hat keine Zahlungslinks und keine Zahlungsanfragen, eine Zahlung in der App ist also die Aufzeichnung einer Zahlung, die anderswo erfolgt ist."
+      - "Es sendet keine Erinnerungen. Einer verspäteten Zahlung hinterherzulaufen bleibt deine Sache."
+      - "Es setzt keine Fristen. Wann der Rest von Umas 148 € fällig ist, entscheidet die Gruppe."
+      - "Die vorgeschlagenen Zahlungen sind eine kurze Liste, keine Garantie für die kürzestmögliche. Sie werden pro Währung berechnet, eine Reise in Euro und Pfund bekommt also für jede eine Liste."
+exampleAfter: 2
+example:
+  heading: "Fünf Freunde an der Küste"
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: "Ferienwohnung"
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: "Bootsausflug"
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: "Großes Abendessen"
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: "Taxi zum Flughafen"
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: "Lebensmittel"
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: "Fragen"
+  items:
+    - q: "Wer sollte eine Zahlung erfassen, die zahlende oder die empfangende Person?"
+      a: "Zum Erfassen einer Zahlung brauchst du die Berechtigung, Ausgaben zu bearbeiten, und das Formular fragt **Wer hat bezahlt?** und **Wer hat die Zahlung erhalten?** Nur die Person, die sie erfasst hat, kann sie später bearbeiten, am einfachsten ist es also meist, wenn die zahlende Person es mit der Schnellausgleich-Schaltfläche macht."
+    - q: "Was, wenn die Reise in zwei Währungen lief?"
+      a: "Salden werden pro Währung geführt, eine Euro-Schuld bleibt also eine Euro-Schuld, und jede Währung bekommt ihre eigene kurze Liste, es sei denn, Ausgaben wurden bei der Eingabe umgerechnet. [Mehrere Währungen](page:guide/how-to-split-a-trip-paid-in-several-currencies) zeigt beide Wege."
+    - q: "Sollten wir während der Reise abrechnen oder am Ende?"
+      a: "Beides geht. Jede erfasste Zahlung ändert die Salden, eine Zahlung mitten auf der Reise zählt also für die endgültige Liste. Am Ende ist es einfacher, weil [die ganze Reise](page:use-case/group-trips) an einem Ort liegt."

@@ -1,0 +1,78 @@
+translatedFrom: "42f5cf35"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.read-by-googles-ai
+  - receipt-attachments.keep-the-receipt
+meta:
+  title: "Naskenujte účtenku a přidejte výdaj | Side Badger"
+  description: "Nechte jezevce přečíst účtenku. Doplní celkovou částku, datum a místo ke kontrole, bez kreditů za skenování. Obrázek čte AI služba společnosti Google."
+h1: "Naskenujte účtenku, zkontrolujte údaje, rozdělte ji"
+navLabel: "Skenování účtenek"
+lead: "Nechte jezevce přečíst účtenku a zkontrolujte jeho domácí úkol. Přidejte k novému výdaji fotku a Side Badger doplní celkovou částku, datum a místo ke kontrole. Pak ji [rozdělíte](page:feature/split-expenses) jako každý jiný výdaj. Skenování je zdarma, bez kreditů za skenování. Doplní jeden výdaj a účet nerozdělí podle položek. Obrázky účtenek čte AI služba společnosti Google."
+cta:
+  heading: "Vyfoťte. Zkontrolujte. Rozdělte."
+  body: "Vytvořte si bezplatný účet, založte skupinu a přidejte výdaj s fotkou účtenky. Podívejte se, co doplní, opravte, co nesedí, a uložte, až budete spokojeni."
+problem:
+  heading: "Nikdo nechce přepisovat účtenku ve frontě na taxi"
+  body: "Výlety a velké večery přinášejí papír. Večeře, taxík, runda pití, která se změnila v šest. Zadávat každou do telefonu zmrzlými palci a s frontou za zády je způsob, jak se výdaje zapomínají. Proto Side Badger přečte účtenku za vás. Udělá první návrh a kontrola je na vás. Hodí se pro [skupinové výlety](page:use-case/group-trips) a [akce a oslavy](page:use-case/events-and-celebrations), kde se účtenky hromadí rychleji, než je kdo chce řešit."
+workflow:
+  heading: "Od fotky k výdaji ve třech krocích"
+  steps:
+    - title: "Přidejte účtenku k novému výdaji"
+      body: "Začněte nový výdaj a klepněte na **Naskenovat účtenku**, nebo použijte rychlou akci **Naskenovat účtenku** na nástěnce. Vyfoťte ji, nebo vyberte fotku, kterou už máte. Funguje i **Přidat účtenku nebo přílohu** ve formuláři."
+    - title: "Nechte ji účtenku přečíst"
+      body: "Formulář hlásí **Analyzuji účtenku...**, zatímco AI čte obrázek. Pak doplní, co našla, například popis, celkovou částku, měnu, datum, čas a místo. Cokoli jste už napsali, nechá být."
+      shot: S09
+      shotAlt: "Formulář nového výdaje s textem Analyzuji účtenku..., poté stejný formulář s vyplněnými údaji"
+    - title: "Zkontrolujte ji, pak rozdělte"
+      body: "Porovnejte formulář s papírem. Opravte, co nesedí, řekněte, kdo platil a kdo se na nákladu podílel, vyberte způsob rozdělení a uložte. Dokud neuložíte, výdaj neexistuje. Dělení popisuje stránka [dělení výdajů](page:feature/split-expenses)."
+options:
+  heading: "Možnosti"
+  items: []
+sections:
+  - heading: "Co doplní"
+    body: "Přidejte k novému výdaji obrázek účtenky a tato pole se mohou doplnit. Kdo platil, kdo se na nákladu podílel a jak ho rozdělit, zůstává na vás."
+    items:
+      - "**Popis** výdaje."
+      - "**Celková částka**."
+      - "**Měna**, pokud to vaše skupina umožňuje."
+      - "**Datum** a **čas**."
+      - "**Místo**."
+      - "Textová kopie účtenky v **poznámkách**, pro případ, že papírová vybledne nebo projde pračkou."
+  - heading: "Co pořád kontrolujete"
+    body: "Všechno. Berte doplněné údaje jako koncept. Zkontrolujte celkovou částku podle papíru, pak měnu, datum a místo. Rozmazané fotky a zmačkaný papír mohou zmást jakéhokoli čtenáře a neslibujeme, že přečte správně každou účtenku, takže se prosím před uložením podívejte. Pokud něco nesedí, přepište to. Pokud je účtenka v jenech a skupina se vyrovnává v librách, co se stane dál, popisuje stránka o [více měnách](page:feature/multiple-currencies)."
+  - heading: "Nechte účtenku u výdaje"
+    body: "Ať už je naskenovaná, nebo ne, účtenka může zůstat u výdaje. Přiložte fotky nebo PDF, až tři na výdaj a každý do 10 MB. Členové skupiny je u výdaje vidí. Obrázky se zobrazí jako náhledy, které se otevřou v prohlížeči příloh, a PDF se otevírají jako odkazy. Fotka, kterou naskenujete, se také přiloží, pokud ji před uložením neodeberete. Když se někdo zeptá, kolik ta večeře opravdu stála, důkaz je hned tam."
+  - heading: "Kam vaše účtenka putuje"
+    body: "Obrázky účtenek čte AI služba společnosti Google. Aby se formulář vyplnil, čte obrázek Google Vertex AI (Gemini) v multiregionu Googlu v USA. Přidáte-li obrázek k novému výdaji, přečte se. PDF nebo fotka přidaná k už existujícímu výdaji se uloží bez přečtení. Přiložené účtenky vidí členové skupiny, takže pokud účtenka ukazuje něco, co byste raději nesdíleli, fotku vynechte a výdaj zadejte ručně."
+limits:
+  heading: "Omezení"
+  items:
+    - "Jen obrázky. JPEG, PNG a WebP a HEIC po převedení. PDF lze k výdaji přiložit, ale nečtou se."
+    - "Skenování je jen pro nové výdaje. U existujícího výdaje můžete účtenky přikládat, ale nic se nečte."
+    - "Vyplní jen pole, kterých jste se nedotkli, a měnu jen pokud to vaše skupina umožňuje."
+    - "Nedělí podle položek ani nepřiřazuje položky lidem. Vyplní jeden výdaj a ten rozdělíte jako obvykle."
+    - "Neslibujeme, že doplněné údaje jsou správné, ani že skenování zafunguje pokaždé. Před uložením zkontrolujte a pokud skenování selže nebo není k dispozici, přidejte výdaj ručně."
+    - "Výdaj má až tři přílohy, každou do 10 MB, ve formátu JPEG, PNG, WebP, HEIC nebo PDF."
+    - "Obrázky účtenek čte Google Vertex AI (Gemini) v multiregionu Googlu v USA a přiložené účtenky vidí členové skupiny."
+useCasesHeading: "Kde se hromadí účtenky"
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Dokáže rozdělit účtenku podle položek?"
+      a: "Ne. Vyplní výdaj včetně celkové částky a vy ho rozdělíte rovnoměrně, podle přesných částek nebo procentuálně. U účtu, kde si každý objednal něco jiného, zadejte, kolik kdo dluží, jako přesné částky. Podrobnosti má [dělení výdajů](page:feature/split-expenses)."
+    - q: "Přečte PDF?"
+      a: "Ne. PDF můžete k výdaji přiložit, aby cestovalo s čísly, ale čtou se jen obrázky."
+    - q: "Je skenování nějak omezené?"
+      a: "Žádné kredity za skenování se nemohou vyčerpat a skenování je zdarma. Soubory limity mají: až tři přílohy na výdaj a každá do 10 MB. Zbytek najdete v části [co zahrnuje bezplatná verze](page:pricing)."
+    - q: "Kdo vidí moji účtenku?"
+      a: "Členové skupiny vidí účtenky přiložené k výdaji. Obrázky účtenek čte také AI služba společnosti Google, čímž se formulář vyplní."
+    - q: "Mohu naskenovat účtenku k výdaji, který už je přidaný?"
+      a: "Ne, skenování je pro nové výdaje. K existujícímu výdaji můžete účtenku pořád přiložit a uloží se bez přečtení."
+    - q: "Co když doplní něco špatně?"
+      a: "Přepište to. Každé pole zůstává upravitelné, dokud neuložíte, a stejně byste měli zkontrolovat všechna. Pokud skenování selže nebo není k dispozici, přidejte výdaj ručně jako obvykle."

@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Banatu villa gau-kopuru desberdinen arabera | Side Badger"
+  description: "Devek hiru gau bakarrik egin zituen, zergatik ordaindu sei? Banatu oporretako villa jendeak benetan egindako gauen arabera, kalkuluak eginda."
+h1: "Nola banatu oporretako villa bat jendeak gau-kopuru desberdinak pasatzen dituenean"
+navLabel: "Villa gauen arabera"
+lead: "Kalkulatu egonaldiaren prezioa pertsona eta gau bakoitzeko, biderkatu pertsona bakoitzaren gauekin eta sartu villa **zenbateko zehatzak dituen gastu bakar bat** bezala. Side Badger-ek kontua eramaten du eta ordainketa-zerrenda labur bat proposatzen du kitatzeko garaia iristen denean."
+cta:
+  heading: "Eman villari gastu txukun bat"
+  body: "Sortu talde bat, gonbidatu denak esteka edo QR kode batekin eta sartu villa zenbateko zehatzekin. Side Badger-ek kontua egunean mantentzen du zuek oporrekin segitzen duzuen bitartean."
+sections:
+  - heading: "Sei gau, lau pertsona, kreditu-txartel bat"
+    body: "[Taldeko bidaia](page:use-case/group-trips) bat norbaiten txartelarekin hasi ohi da. Hemen, Anarenarekin. Villa bat erreserbatzen du sei gauetarako, 2.100 €, norbaitek lehena izan behar duelako. Ana, Ben eta Chloe sei gauetan geratzen dira. Dev azken hiru gauetan bakarrik batu daiteke, eta trenez dator. Benek auto bat alokatzen du, eta Dev ez da sekula sartzen. Devek erosketa handia egiten du. Villa lauren artean banatzea da bide begi-bistakoena. Horrek Dev hiru gau etxean emandakoengatik ordaintzera behartzen du, eta horrelako gauzak Gabonetan azaltzen dira berriro. Gauen arabera banatzeak eztabaida saihesten du, eta aritmetikak minutu bat hartzen du."
+  - heading: "Kalkulatu pertsona-gau baten prezioa"
+    body: "Pertsona-gau bat pertsona batek gau bat egitea da. Villak kostatzen duena kostatzen du, beraz banatu prezioa pertsona-gau guztien artean, eta eman pertsona bakoitzari erabili dituenak."
+    items:
+      - "**Kontatu pertsona-gauak.** Ana, Ben eta Chloe sei gauetan geratzen dira bakoitza, eta Dev hirutan: 6 + 6 + 6 + 3 = 21."
+      - "**Jarri prezioa bati.** 2.100 € ÷ 21 = 100 € pertsona-gau bakoitzeko."
+      - "**Biderkatu pertsona bakoitzaren gauekin.** Ana, Ben eta Chloe bakoitzak 6 × 100 € = 600 € ordaintzen ditu. Devek 3 × 100 € = 300 € ordaintzen ditu."
+      - "**Egiaztatu guztizkoa.** 600 € + 600 € + 600 € + 300 € = 2.100 €. Zuen zatiek prezioa batzen ez badute, gau bat falta da edo birritan kontatu da."
+  - heading: "Sartu Side Badger-en"
+    body: "Sortu talde bat, gonbidatu beste hirurak esteka edo QR kode batekin eta gehitu kostuak. Villa lehenengo."
+    items:
+      - "Aukeratu **Gehitu gastua**. Deskribatu, sartu 2.100 eta jarri **Nork ordaindu du?** atalean Ana."
+      - "**Banatu honen artean** atalean, ziurtatu lau pertsonak daudela."
+      - "**Nola banatu** atalean, aukeratu **Zenbateko zehatzak**. Idatzi 600 Anarentzat, Benentzat eta Chloerentzat, eta 300 Deventzat. Zenbatekoek guztizkoa batu behar dute."
+      - "Aukeratu **Gorde gastua**."
+      - "Gehitu auto-alokairua modu berean. Benek ordaindu zuen, banaketa **Berdin-berdin** da, eta Dev kanpoan geratzen da, trenez etorri zelako. [Gastuak banatzea](page:feature/split-expenses) orrian kostu bat banatzeko beste moduak azaltzen dira."
+      - "Gehitu erosketak. Devek ordaindu zuen, banaketa **Berdin-berdin** da eta lauak daude barruan."
+  - heading: "Irakurri emaitza, gero kitatu"
+    body: "Pertsona bakoitzaren zatia bere villa-zatia da, gehi autoaren eta erosketen zatia. Ana, Ben eta Chloe bakoitzaren zatia 725 € da, hau da, 600 € + 80 € + 45 €. Devena 345 € da, hau da, 300 € + 45 €. Kendu pertsona bakoitzak ordaindu duena eta saldoak ateratzen dira. Anak 2.100 € ordaindu zituen, beraz 1.375 € zor zaizkio. Benek 240 € ordaindu zituen eta 485 € zor ditu. Devek 180 € ordaindu zituen eta 165 € zor ditu. Chloek ez zuen ezer ordaindu eta 725 € zor ditu. Hala utzita, zor horiek sei norabide desberdinetan ibiliko lirateke taldean. Side Badger-ek, ordez, hiru ordainketa proposatzen ditu, denak Anarentzat. Ordaindu Anari nahi duzuen moduan, eta gero aukeratu **Kitatu** eta erabili **Erregistratu likidazioa** ordainketa bakoitzerako, saldoak eguneratzeko. Likidazio azkarreko botoiek zenbatekoa betetzen dute. [Kitatzeari](page:feature/settle-up) buruz gehiago dago."
+  - heading: "Villak prezio txukun bakar bat ez duenean"
+    items:
+      - "**Gelak desberdinak dira.** Suitea gela txikia baino gehiago balio badu, adostu lehenik gela bakoitzak zenbat kostatzen duen, eta gero egin pertsona-gauen kalkuluak gela batez bestea. Sartu villa denen guztizkoarekin gastu bakar gisa, edo gastu bat gela bakoitzeko. Dena delakoa, gastu baten zenbateko zehatzek bere guztizkoa batu behar dute."
+      - "**Hilabete batzuk lehenago ordaindutako fidantza.** Ordaindu zuenak bere gastua izango du, ordaindu zuen eguneko dataz. Banatu gauen arabera, saldoaren proportzio berberekin."
+      - "**Erreserba beste moneta batean dago.** Sartu villa ordaindu zenuen monetan. Taldeak joan ahala bihurtzen badu, erabili egungo kanbio-tasa bat, edo idatzi benetan lortu zenuen tasa. Jatorrizko zenbatekoa gastuan geratzen da. [Moneta anitz](page:feature/multiple-currencies) orrian xehetasunak daude."
+      - "**Gau partzialak.** Norbait gauerdian iristen da, beste bat gosaldu aurretik joaten da. Adostu gauak kontatzeko arau bat eta erabili denentzat."
+  - heading: "Side Badger-ek hemen egiten ez duena"
+    items:
+      - "Ez ditu gauak zuretzat kontatzen. Ez dago gauen edo zatien araberako banaketarik, beraz zuk kalkulatzen duzu zenbateko bakoitza goian bezala eta **zenbateko zehatzak** sartzen dituzu."
+      - "Ez du dirurik mugitzen. Ordaindu elkarri nahi duzuen moduan, eta gero erregistratu ordainketa."
+      - "Gastu bakoitzak ordaintzaile bakarra onartzen du. Bi pertsonak villa ordaindu badute, sartu bi gastu."
+      - "Ez dago gonbidatu-sarbiderik. Taldeko guztiek, Devek ere, doako kontu bat behar dute."
+exampleAfter: 2
+example:
+  heading: "Villa, autoa eta erosketak"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "villako sei gauak"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "auto-alokairua"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "erosketak"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Villari buruzko galderak"
+  items:
+    - q: "Zer gertatzen da norbaitek bertan behera uzten badu?"
+      a: "Kendu haren gauak, egin kalkuluak berriro eta editatu villaren gastua, zenbateko zehatzek prezioa berriro batu dezaten. Aurreko bertsioa gorde egiten da eta aldaketa taldearen jardueran agertzen da, beraz inork ez du zenbaki bat isilean aldatzen. Nork edita dezakeen taldearen baimenen araberakoa da."
+    - q: "Erreserba egin duenak gutxiago ordaindu behar al du?"
+      a: "Taldeak erabaki behar du. Erreserbatzea lana da, eta taldeen artean aldatzen da horrek deskontua merezi duen ala ez. Adosten duzuena dena delakoa, jarri zenbateko zehatzetan eta idatzi gastuaren ohar batean, edo ondoko iruzkin batean, inork akordioa gogoratu behar izan ez dezan."
+    - q: "Garbiketa-kuotak beste modu batera banatu al ditzakegu?"
+      a: "Bai. Sartu kuota gastu bereizi gisa eta eman bere banaketa. Berdin banatzea egokia da etxe osoarentzako tarifa finko batean. Zenbateko zehatzak egokiak dira kuotak gauei ere jarraitzea nahi duen taldearentzat."

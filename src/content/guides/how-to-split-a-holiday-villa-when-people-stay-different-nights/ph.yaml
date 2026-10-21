@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Hatiin ang villa kapag iba-iba ang gabi ng tao | Side Badger"
+  description: "Tatlong gabi lang si Dev, bakit siya magbabayad ng anim? Hatiin ang holiday villa ayon sa gabing tinuluyan ng bawat isa, kasama ang kuwenta."
+h1: "Paano hatiin ang holiday villa kapag magkakaiba ang gabing tinuluyan ng mga tao"
+navLabel: "Hatiin ang villa ayon sa gabi"
+lead: "Alamin ang presyo ng pananatili kada tao kada gabi, i-multiply sa dami ng gabi ng bawat isa, at ilagay ang villa bilang **isang gastos na may eksaktong halaga**. Ang Side Badger ang bahala sa bilang at magmumungkahi ng maikling listahan ng mga bayad kapag oras nang mag-settle."
+cta:
+  heading: "Bigyan ang villa ng isang maayos na gastos"
+  body: "Gumawa ng grupo, imbitahan ang lahat gamit ang link o QR code, at ilagay ang villa na may eksaktong halaga. Nagtatabi ang Side Badger ng tumatakbong bilang habang nag-eenjoy kayo sa bakasyon."
+sections:
+  - heading: "Anim na gabi, apat na tao, isang credit card"
+    body: "Kadalasang nagsisimula ang [group trip](page:use-case/group-trips) sa card ng isang tao. Dito, kay Ana ito. Nag-book siya ng villa para sa anim na gabi, €2,100, dahil may kailangang mauna. Mananatili nang buong anim na gabi sina Ana, Ben, at Chloe. Sa huling tatlong gabi lang makakasama si Dev, at sasakay siya ng tren. Umuupa si Ben ng kotse na hindi kailanman sinasakyan ni Dev. Si Dev ang namimili ng malaking grocery. Ang halatang gawin ay hatiin sa apat ang villa. Pero magbabayad si Dev para sa tatlong gabing nasa sarili niyang bahay siya, at ang ganitong bagay ay lumilitaw ulit tuwing Pasko. Iiwasan ng paghahati ayon sa gabi ang pagtatalo, at isang minuto lang ang kuwenta."
+  - heading: "Presyuhan ang isang person-night"
+    body: "Ang person-night ay isang taong nanatili nang isang gabi. Ganoon na ang presyo ng villa, kaya ibahagi ang presyo sa lahat ng person-night, saka ibigay sa bawat tao ang bilang na nagamit niya."
+    items:
+      - "**Bilangin ang person-night.** Anim na gabi bawat isa sina Ana, Ben, at Chloe at tatlo si Dev: 6 + 6 + 6 + 3 = 21."
+      - "**Presyuhan ang isa.** €2,100 ÷ 21 = €100 kada person-night."
+      - "**I-multiply sa dami ng gabi ng bawat tao.** Nagbabayad sina Ana, Ben, at Chloe ng 6 × €100 = €600 bawat isa. Si Dev naman, 3 × €100 = €300."
+      - "**Suriin ang kabuuan.** €600 + €600 + €600 + €300 = €2,100. Kung hindi umabot sa presyo ang mga bahagi ninyo, may gabing nawawala o nabilang nang dalawang beses."
+  - heading: "Ilagay ito sa Side Badger"
+    body: "Gumawa ng grupo, imbitahan ang tatlo pa gamit ang link o QR code, saka idagdag ang mga gastos. Villa muna."
+    items:
+      - "Piliin ang **Magdagdag ng Gastusin**. Lagyan ng deskripsyon, ilagay ang 2,100, at sa **Sino ang nagbayad?**, piliin si Ana."
+      - "Sa ilalim ng **Hatiin sa pagitan ng**, tiyaking kasama ang apat na tao."
+      - "Sa ilalim ng **Paano hatiin**, piliin ang **Eksaktong halaga**. I-type ang 600 para kina Ana, Ben, at Chloe at 300 para kay Dev. Dapat umabot sa kabuuan ang mga halaga."
+      - "Piliin ang **I-save ang Gastusin**."
+      - "Idagdag ang pag-upa ng kotse sa parehong paraan. Si Ben ang nagbayad, **Pantay** ang hati, at hindi kasama si Dev dahil tren ang sinakyan niya papunta. Tinatalakay ng [paghahati ng gastos](page:feature/split-expenses) ang iba pang paraan ng paghahati ng gastos."
+      - "Idagdag ang grocery. Si Dev ang nagbayad, **Pantay** ang hati, at kasama ang apat."
+  - heading: "Basahin ang resulta, saka mag-settle up"
+    body: "Ang bayarin ng bawat tao ay ang bahagi niya sa villa dagdag ang bahagi niya sa kotse at sa pamimili. €725 bawat isa ang kina Ana, Ben, at Chloe, na €600 + €80 + €45. €345 ang kay Dev, na €300 + €45. Ibawas ang binayaran ng bawat tao at lalabas ang mga balanse. Nagbayad si Ana ng €2,100, kaya may makukuha siyang €1,375. Nagbayad si Ben ng €240 at may utang siyang €485. Nagbayad si Dev ng €180 at may utang siyang €165. Walang binayaran si Chloe at may utang siyang €725. Kung pababayaan, tatakbo ang mga utang na iyon sa anim na direksyon sa loob ng grupo. Sa halip, nagmumungkahi ang Side Badger ng tatlong bayad, lahat kay Ana. Bayaran siya sa paraang gusto ninyo, saka piliin ang **Magbayad** at gamitin ang **Itala ang Kasunduan** para sa bawat bayad, para humabol ang mga balanse. Pinupunan ng mga quick-settle button ang halaga. May higit pang paliwanag sa [pag-settle up](page:feature/settle-up)."
+  - heading: "Kapag hindi isang maayos na presyo ang villa"
+    items:
+      - "**Magkakaiba ang mga kuwarto.** Kung mas mahalaga ang suite kaysa sa pinakamaliit na kuwarto, pagkasunduan muna kung magkano ang bawat kuwarto, saka gawin ang kuwenta ng person-night isa-isang kuwarto. Ilagay ang villa bilang isang gastos na may kabuuan ng bawat tao, o isang gastos kada kuwarto. Alinman doon, dapat umabot sa kabuuan ng gastos ang mga eksaktong halaga."
+      - "**Deposit na binayaran ilang buwan nang mas maaga.** Magkakaroon ng sariling gastos ang nagbayad nito, na may petsa ng araw na nagbayad siya. Hatiin ito ayon sa gabi sa parehong proporsyon ng natitirang bayad."
+      - "**Sa ibang pera ang booking.** Ilagay ang villa sa perang ginamit mo sa pagbayad. Kung nagko-convert ang grupo habang nagpapatuloy ang biyahe, gumamit ng kasalukuyang exchange rate, o i-type ang rate na aktuwal mong nakuha. Nananatili sa gastos ang orihinal na halaga. May mga detalye sa [maraming pera](page:feature/multiple-currencies)."
+      - "**Hindi buong gabi.** May dumarating nang hatinggabi, may umaalis bago mag-almusal. Magkasundo sa isang patakaran sa pagbibilang ng gabi at gamitin ito para sa lahat."
+  - heading: "Ang hindi ginagawa ng Side Badger dito"
+    items:
+      - "Hindi nito binibilang ang mga gabi para sa iyo. Walang paghahati ayon sa gabi o ayon sa shares, kaya kukuwentahin mo ang bawat halaga gaya ng nasa itaas at ilalagay bilang **eksaktong halaga**."
+      - "Hindi ito naglilipat ng pera. Magbayaran kayo sa paraang gusto ninyo, saka itala ang bayad."
+      - "Isang nagbabayad lang ang pinapayagan sa bawat gastos. Kung dalawang tao ang nagbayad sa villa, maglagay ng dalawang gastos."
+      - "Walang guest access. Kailangan ng libreng account ng lahat ng nasa grupo, kasama si Dev."
+exampleAfter: 2
+example:
+  heading: "Ang villa, ang kotse, at ang pamimili"
+  currency: EUR
+  people:
+    - id: ana
+      name: "Ana"
+    - id: ben
+      name: "Ben"
+    - id: chloe
+      name: "Chloe"
+    - id: dev
+      name: "Dev"
+  expenses:
+    - label: "anim na gabi sa villa"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "pag-upa ng kotse"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "grocery"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Mga tanong tungkol sa villa"
+  items:
+    - q: "Paano kung may magka-cancel?"
+      a: "Alisin ang mga gabi nila, ulitin ang kuwenta, at i-edit ang gastos ng villa para umabot ulit sa presyo ang mga eksaktong halaga. Iniingatan ang naunang bersyon at makikita ang pag-edit sa aktibidad ng grupo, kaya walang tahimik na magbabago ng numero. Nakadepende sa mga pahintulot ng grupo kung sino ang puwedeng mag-edit."
+    - q: "Dapat bang mas mababa ang bayad ng nag-book?"
+      a: "Ang grupo ang magpapasya niyan. Abala ang pag-book, at magkakaiba ang mga grupo kung dapat ba itong may diskwento. Anuman ang pagkasunduan ninyo, ilagay ito sa mga eksaktong halaga at isulat sa tala ng gastos, o sa komento sa tabi nito, para walang kailangang tandaan ang kasunduan."
+    - q: "Puwede bang iba ang hati ng cleaning fee?"
+      a: "Oo. Ilagay ang bayad bilang hiwalay na gastos at bigyan ito ng sarili nitong hati. Bagay ang pantay na hati sa flat fee para sa buong bahay. Bagay ang eksaktong halaga sa grupong gustong sumunod din sa dami ng gabi ang bayad."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Rechnung teilen: wer wem was schuldet, geklärt | Side Badger"
+  description: "Wer hat gezahlt, wer schuldet, wer zahlt wem: in Sekunden geklärt. Gleichmäßig, genau oder in Prozent. Kostenlos, im Browser, ohne Speichern oder Senden."
+h1: Rechner zum Teilen von Rechnungen
+navLabel: "Rechner: Rechnung teilen"
+lead: Trag ein, wer was bezahlt hat, und der Rechner sagt dir, wer wem was schuldet, samt einer kurzen Liste von Zahlungen, die alles ausgleicht. Er läuft in deinem Browser, speichert nichts und bewegt kein Geld. Soll die Rechnung deiner Gruppe den Tab überleben, rechnen [Ausgaben teilen](page:feature/split-expenses) und [Abrechnen](page:feature/settle-up) in Side Badger dieselben Summen und behalten sie.
+cta:
+  heading: Gefällt dir die Rechnerei? Behalte sie.
+  body: Dieser Rechner vergisst alles, sobald du den Tab schließt, ganz wie die Person, die beim letzten Mal ganz sicher gezahlt hat. Eine Gruppe in Side Badger behält die Ausgaben, aktualisiert den Saldo von allen und erfasst die Zahlungen. Es ist kostenlos, ohne Werbung und ohne Tageslimits.
+sections:
+  - heading: So rechnet der Rechner
+    body: Für jede Ausgabe berechnet der Rechner den Anteil jeder Person. Du kannst sie gleichmäßig, nach genauen Beträgen oder in Prozent auf die Personen aufteilen, die du auswählst. Der Saldo jeder Person ist dann das, was sie bezahlt hat, minus dem, was sie schuldet. Ein Plus heißt, die Gruppe schuldet ihr Geld, ein Minus heißt, sie schuldet der Gruppe Geld. Die Salden ergeben zusammen immer null, denn was einer Person zusteht, schulden andere.
+  - heading: Warum die Liste der Zahlungen kurz ist
+    body: Niemand muss jeden Beleg einzeln ausgleichen. Sobald alle Salden feststehen, ordnet der Rechner der Person, die am meisten schuldet, die Person zu, die am meisten bekommt, gleicht so viel aus, wie eine Zahlung schafft, und arbeitet sich die Liste hinunter, bis alle bei null sind. Er braucht höchstens eine Zahlung weniger, als es Personen mit einem Saldo gibt, und oft sogar weniger als beim Ausgleichen Rechnung für Rechnung. Das ergibt eine kurze Liste von Zahlungen, verspricht aber nicht, die kürzestmögliche zu sein.
+  - heading: Was der Rechner nicht kann
+    items:
+      - "**Mehrere Währungen verarbeiten.** Wähle eine und nutze sie für die ganze Berechnung. Die App führt für jede Währung einen eigenen Saldo und kann eine Ausgabe zu einem aktuellen Wechselkurs umrechnen, den du ändern kannst."
+      - "**Etwas speichern.** Schließt du den Tab, sind die Zahlen weg. Willst du sie behalten, kopiere den Link. Er enthält deine Zahlen hinter dem #, das dein Browser nie an einen Server schickt, und alle, denen du ihn schickst, können sie lesen."
+      - "**Geld bewegen.** Er sagt dir, wer wem zahlen sollte. Ihr zahlt einander, wie ihr wollt, und erfasst die Zahlung dann in der App, falls eure Gruppe dort ihre Rechnung führt."
+      - "**Den übrigen Cent zufällig vergeben.** Lässt sich eine Rechnung nicht glatt teilen, gehen die übrigen Cent an die ersten Personen in der Liste, damit die Summen trotzdem stimmen. In der App bekommt eine Person den übrigen Cent zufällig, es ist also nicht immer dieselbe."
+      - "**Über die Grenzen hinausgehen.** Der Rechner nimmt 2 bis 20 Personen, und eine Ausgabe kann bis zu 999.999,99 betragen, wie in der App."
+exampleAfter: 2
+example:
+  heading: Ein langes Wochenende, vier Freunde
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: das Ferienhaus
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: Lebensmittel
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: das Taxi
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: die Kneipe
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: Fragen
+  items:
+    - q: Ist der Rechner kostenlos?
+      a: Ja. Kostenlos. Keine Werbung. Keine Tageslimits. Ein Konto brauchst du dafür auch nicht.
+    - q: Speichert er, was ich eingebe?
+      a: Nein. Nichts wird gespeichert oder irgendwohin gesendet. Um deine Zahlen zu behalten, nutze „Link kopieren“ und speichere den Link irgendwo.
+    - q: Wer kann den Link sehen, den ich kopiere?
+      a: "Alle, die ihn haben. Die Zahlen stecken im Link selbst, hinter dem #, schick ihn also nur an die, die sie sehen sollen."
+    - q: Bewegt er Geld?
+      a: Nein. Er rechnet aus, wer wem zahlen sollte, und ihr zahlt einander, wie ihr wollt. Auch Side Badger fasst dein Geld nie an. Siehe [Abrechnen](page:feature/settle-up).
+    - q: Kann ich eine Reise teilen, die in zwei Währungen bezahlt wurde?
+      a: Hier nicht, denn eine Berechnung hat nur eine Währung. In einer Gruppe führt jede Währung einen eigenen Saldo. Siehe [Mehrere Währungen](page:feature/multiple-currencies).
+    - q: Was, wenn die Beträge nicht aufgehen?
+      a: Der Rechner sagt das unter der Ausgabe und zeigt kein Ergebnis, bis es stimmt. Genaue Beträge müssen die Gesamtsumme ergeben, und Prozentsätze müssen zusammen 100 ergeben.

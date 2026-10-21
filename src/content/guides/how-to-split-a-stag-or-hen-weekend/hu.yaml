@@ -1,0 +1,104 @@
+translatedFrom: "6c8b8630"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.3.label
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - privacy-posture.no-ads
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - polls.villa-shortlist-vote
+  - permissions.viewer-sees-everything
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Legény- vagy leánybúcsú költségeinek felosztása | Side Badger"
+  description: "Az ünnepelt nem fizet semmit, és hétfőn még mindenki szóba áll egymással. Így oszd fel egy legény- vagy leánybúcsú költségeit, számolással együtt."
+h1: "Hogyan oszd fel egy legény- vagy leánybúcsú költségeit"
+navLabel: "Legény- vagy leánybúcsú"
+lead: "Az ünnepelt nem fizet semmit, ezért a csoport többi tagja minden költséget [egyenlően](page:feature/split-expenses) oszt el egymás között. Hagyd ki az embereket azokból a költségekből, amelyeket kihagytak, az ünnepeltet pedig tartsd kívül a csoporton, hogy a meglepetés megmaradjon."
+cta:
+  heading: "Vezesd a számolást, tartsd meg a meglepetést"
+  body: "Csinálj csoportot, küldd el a linket mindenkinek, kivéve az ünnepeltet, és add hozzá az egyes költségeket, ahogy felmerülnek. A Side Badger ingyenes, hirdetések és napi korlátok nélkül."
+sections:
+  - heading: "Négy barát és egy meglepetés"
+    body: "Hannah, Isla, Jess és Kat elviszik Grace-t a leánybúcsú hétvégéjére. Grace az ünnepelt, ezért semmiért nem fizet. A csoportban sincs benne, így nem látja, mennyit költenek rá a barátai. Hannah lefoglalja a nyaralót, Isla állja a wellnessnapot, Jess a vacsorát, Kat pedig a taxit. Vasárnapra mindenki fizetett valamit, és senki nem tudja megmondani, ki áll nyerésre. A számítás ugyanaz egy legény- vagy leánybúcsúnál, bárki is az ünnepelt."
+  - heading: "Azok között oszd, akik fizetnek, ne azok között, akik ott vannak"
+    body: "Az ünnepelt része nem tűnik el. Elosztódik. A nyaraló ára 720 £, és négy barát fizeti, így fejenként 180 £, és Grace helye már benne van ebben a számban. A vacsora 260 £, vagyis fejenként 65 £. A taxi 44 £, vagyis fejenként 11 £. Amit valaki kihagy, az csak az adott költségből marad ki. Kat kihagyja a wellnesst, így annak 360 £-os ára, amely Grace helyét is fedezi, Hannah, Isla és Jess között oszlik meg, fejenként 120 £. Add össze, és Hannah, Isla és Jess része a hétvégéből egyaránt 376 £, Katé pedig 256 £."
+  - heading: "Állítsd be a Side Badgerben"
+    items:
+      - "Csinálj csoportot a hétvégének, és adj neki unalmas nevet, például Nyaralóhétvége. Grace nem tag, a csoportot pedig csak a tagok látják."
+      - "Válaszd a **Mások meghívása** lehetőséget, és a linket csak ott küldd el, vagy a QR-kódot csak ott mutasd meg, ahol Grace nem látja. A link megmutatja a csoport előnézetét, mielőtt valaki csatlakozik. Te választod ki, meddig érvényes, 15 perctől 5 napig. A régi link addig működik, amíg le nem jár, ezért ne hagyd hosszabbra, mint amennyire szükséged van."
+      - "Minden költségnél válaszd a **Kiadás hozzáadása** lehetőséget, írd be az összeget, és a **Ki fizetett?** alatt válaszd ki a fizetőt. A **Megosztás közöttük** alatt jelöld be a fizető embereket, és hagyd ki azt, aki kihagyta, például Kat a wellnessnél. A **Felosztás módja** alatt válaszd az **Egyenlően** lehetőséget."
+      - "Ha hazaértetek, nyisd meg a csoport **Egyenlegek** részét. A Side Badger megmutatja, ki kinek tartozik, és rövid kifizetéslistát javasol. Itt ez három kifizetés: Kat 212 £-ot fizet Hannának, Jess 116 £-ot fizet Hannának, Isla pedig 16 £-ot fizet Hannának. Fizessetek egymásnak, ahogy akartok, aztán a **Tartozásrendezés** alatt rögzítsd az egyes kifizetéseket."
+  - heading: "Foglalás előtt: költségkeret és foglaló"
+    body: "Egyezzetek meg a költségkeretben, mielőtt bárki foglal. Válaszd a **Szavazás hozzáadása** lehetőséget, kérdezd meg, mennyit költ a csoport a nyaralóra, és adj meg pár összeget lehetőségként. A létrehozáskor kapcsold be a **Névtelen szavazás** beállítást, hogy ne látszódjon, ki mire szavazott, így senkinek nem kell hangosan megvédenie egy kisebb költségkeretet. Zárd le a szavazást, amint mindenki szavazott, és megjelenik a nyertes. Aztán jön a foglaló. Aki foglal, az fizeti ki, és költségként hozzáadja, egyenlően elosztva, a fennmaradó összeg pedig második költségként kerül be, amikor esedékes. A többiek azonnal elküldhetik a részüket és rögzíthetik a kifizetést, vagy megvárhatják a végső számolást. Az egyenlegek mindkét esetben ugyanúgy jönnek ki."
+  - heading: "Amikor valaki csak egy éjszakára csatlakozik"
+    body: "Az a barát, aki csak szombatra jön, ne fizessen a péntekért. Hagyd ki azokból a költségekből, amelyekben nem vett részt. Ahol a költség attól függ, ki meddig marad, például egy szobánál, a **Felosztás módja** alatt válaszd a **Pontos összegek** lehetőséget, és írd be az egyes emberek részét, amelynek ki kell adnia a végösszeget. Előbb számold ki, mennyibe kerül egy ember egy éjszakája, aztán szorozd meg az egyes emberek éjszakáinak számával. A nem mindenkinek egyforma költségekről a [csoportos utazások](page:use-case/group-trips) oldalon olvashatsz többet."
+  - heading: "Amit a Side Badger itt nem csinál"
+    items:
+      - "Soha nem mozgat pénzt. Banki átutalással, készpénzzel vagy ahogy nektek megfelel, fizettek egymásnak, aztán rögzítitek a kifizetést, hogy az egyenlegek mindenkinél frissüljenek."
+      - "Nem küld fizetési emlékeztetőt. A baráti noszogatás a csoportos csevegésben továbbra is emberi feladat."
+      - "Minden költségnek egy fizetője van, és a Side Badger nem tudja tételenként felosztani a nyugtát. Ha két kártya fizette a nyaralót, vidd be két költségként. Ha páran extrákat rendeltek a vacsorához, az extrákat vidd be külön költségként."
+      - "A pénzt vezeti, nem a programot. A szavazások és a kommentek a költségeknél maradnak, a hétvége tervei pedig a csoportos csevegésetekben."
+exampleAfter: 2
+example:
+  heading: "Grace leánybúcsúja, négyfelé osztva"
+  currency: GBP
+  people:
+    - id: hannah
+      name: Hannah
+    - id: isla
+      name: Isla
+    - id: jess
+      name: Jess
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Nyaraló"
+      payer: hannah
+      amount: 720
+      split:
+        method: equal
+    - label: "Wellnessnap"
+      payer: isla
+      amount: 360
+      split:
+        method: equal
+        shares:
+          hannah: 1
+          isla: 1
+          jess: 1
+    - label: "Vacsora"
+      payer: jess
+      amount: 260
+      split:
+        method: equal
+    - label: Taxi
+      payer: kat
+      amount: 44
+      split:
+        method: equal
+faq:
+  heading: "Kérdések"
+  items:
+    - q: "Többet fizet a tanú vagy a koszorúslány?"
+      a: "Csak ha a csoport úgy dönt. Az alkalmazás senkinek nem ad különleges szerepet a számolásban. Ha valaki többet vállal, a **Felosztás módja** alatt válaszd a **Pontos összegek** vagy a **Százalék** lehetőséget, és írd be a megbeszélt részeket."
+    - q: "És az italok, amelyeket páran nem ittak?"
+      a: "Add hozzá az italokat külön költségként, és csak azokat jelöld be, akik ittak. Ha mindenki másmennyit ivott, válaszd a **Pontos összegek** lehetőséget, és írd be az egyes emberek részét. Senki nem fizet azért, amit nem fogyasztott."
+    - q: "Láthatja az ünnepelt később a csoportot?"
+      a: "Igen, ha vége a meglepetésnek. Hívd meg, aztán egy adminisztrátor a csoport beállításaiban a **Biztonság és jogosultságok** alatt **Megfigyelő** szerepet adhat neki. A megfigyelő mindent lát, és semmit nem változtat, ezért várj, amíg már nincs titok. A csatlakozáshoz ingyenes fiók kell."

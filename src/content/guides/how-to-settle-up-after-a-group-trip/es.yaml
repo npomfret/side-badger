@@ -1,0 +1,117 @@
+# Guía 8 de los briefs de la oleada 2 (tasks/release-2-plan.md, «Wave 2 and 3 briefs»). El ejemplo resuelto
+# son los datos del brief; todas las cifras de la prosa salen de él o de la aritmética que se muestra. Las
+# cifras del pago parcial (200 € ahora, 148 € pendientes) son las del propio brief, y la comprobación del cero
+# de más es el ejemplo de 348 € con un cero añadido.
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+meta:
+  title: Cómo saldar cuentas después de un viaje en grupo | Side Badger
+  description: Saldad antes de que el grupo se disperse. Diez deudas enredadas quedan en cuatro pagos, registrados según llegan, y vale pagar una parte. Cuentas a la vista.
+h1: Cómo saldar cuentas después de un viaje en grupo
+navLabel: Saldar cuentas tras un viaje
+lead: Saldad antes de que todo el mundo se disperse. Añade el último gasto, abre los saldos del grupo y paga lo que debes de la lista corta, como quieras. Después registra cada pago en Side Badger para que el saldo se despeje para todo el grupo. Con cinco amigos y cinco gastos, diez deudas enredadas se quedan en cuatro pagos.
+cta:
+  heading: Cierra las cuentas antes de que lleguen las fotos
+  body: Crea una cuenta gratis, empieza un grupo para el próximo viaje y añade cada gasto según ocurre. La lista corta de pagos te estará esperando cuando llegues al aeropuerto. ¿Quieres ver antes [cómo funciona saldar cuentas](page:feature/settle-up)?
+sections:
+  - heading: Cinco amigos, cinco gastos y una sala de embarque
+    body: Mo, Ines, Raf, Tess y Uma pasaron una semana en la costa. Mo reservó el apartamento e hizo la compra, Ines pagó la excursión en barco y Raf se encargó de la cena grande. Tess cogió el taxi del aeropuerto con Uma y Mo, porque Ines y Raf iban en tren. La tarjeta de Uma se quedó en casa, así que no pagó nada. Son cinco gastos y 1.700 € en total, y en la sala de embarque nadie sabía decir quién iba por delante.
+  - heading: Diez deudas, cuatro pagos
+    body: El apartamento, la excursión, la cena y la compra se dividen a partes iguales entre cinco. Son 200 €, 50 €, 60 € y 18 € cada uno, así que Ines y Raf deben 328 € cada uno. El taxi lo comparten tres, a 20 € cada uno, así que Mo, Tess y Uma deben 348 €. Mo pagó 1.090 € y debe 348 €, así que le deben 742 €. Todos los demás pagaron menos de lo que deben. A Uma le faltan 348 €, a Tess 288 €, a Ines 78 € y a Raf 28 €, y eso suma los 742 € de Mo. Si saldas cada pareja de personas directamente, salen diez deudas sueltas. Side Badger sugiere cuatro pagos, todos para Mo.
+  - heading: Saldad antes de que cada uno se vaya por su lado
+    body: El mejor momento es la última tarde o el viaje de vuelta, mientras todo el mundo sigue en el mismo sitio y es fácil mencionar una deuda de 28 €. Añade primero todos los gastos, el taxi incluido. Nadie puede salir de un grupo mientras deba o le deban dinero, así que la cuenta tiene que cerrarse en algún momento de todos modos.
+    items:
+      - "**Revisa la lista.** Abre el grupo y mira **Saldos**. Por defecto ves las deudas que te afectan. Elige **Mostrar todo** para ver la lista de todo el grupo."
+      - "**Paga como quieras.** Transferencia bancaria, efectivo, un favor que te deben de las últimas vacaciones. Side Badger no mueve el dinero."
+      - "**Regístralo.** Elige **Liquidar**. En **Liquidación rápida**, cada botón es uno de tus pagos sugeridos, y al elegir uno se rellena el importe. Añade una **Nota** como transferencia bancaria, revisa la **Fecha** (no puede ser futura) y elige **Registrar liquidación**."
+      - "**Míralo despejarse.** El saldo se actualiza para todos. Cuando entra el último pago, **Saldos** dice **¡Todo liquidado!**"
+  - heading: Pagar una parte ahora y el resto después
+    body: Uma puede enviar 200 € esta noche y el resto a final de mes. Registra 200 €, y el formulario le avisa de que después seguirá debiendo 148 € a Mo, que son 348 € menos 200 €. Guárdalo y los 148 € se quedan en su saldo hasta que registre el resto. El aviso funciona también al revés. Si un cero de más convierte 348 € en 3.480 €, el formulario dice que solo debe 348 € a Mo y que guardarlo crearía una deuda en sentido contrario. Corrige el cero antes de guardar.
+  - heading: Corregir errores y celebrar pagos
+    items:
+      - "**Un pago equivocado.** Solo quien registró un pago puede editarlo. Esa persona o un administrador del grupo pueden borrarlo, y entonces puede volver a registrarse."
+      - "**Un pago que merece una mención.** Cada pago registrado aparece en **Liquidaciones** con su fecha y su nota, donde todo el mundo en el grupo puede verlo y reaccionar. Mo puede elegir **Celebrar** cuando llegue el último pago de 148 € de Uma."
+      - "**El final.** Con todos los saldos a cero, un administrador puede bloquear el grupo para que los números no se muevan."
+  - heading: Lo que Side Badger no hace aquí
+    items:
+      - Nunca mueve dinero. No tiene enlaces de pago ni solicitudes de pago, así que un pago en la app es el registro de uno hecho en otro sitio.
+      - No envía recordatorios. Perseguir un pago atrasado sigue siendo cosa tuya.
+      - No fija plazos. Cuándo vence el resto de los 148 € de Uma lo decide el grupo.
+      - Los pagos sugeridos son una lista corta, no una promesa de la más corta posible. Se calculan por moneda, así que un viaje pagado en euros y libras tiene una lista para cada una.
+exampleAfter: 2
+example:
+  heading: Cinco amigos en la costa
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: Apartamento
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: Excursión en barco
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: Cena grande
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: Taxi del aeropuerto
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: Compra
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: Preguntas
+  items:
+    - q: ¿Quién debería registrar un pago, quien paga o quien cobra?
+      a: Registrar un pago requiere permiso para editar gastos, y el formulario pregunta **¿Quién pagó?** y **¿Quién recibió el pago?** Solo quien lo registró puede editarlo después, así que normalmente es más sencillo que lo haga quien paga, con el botón de liquidación rápida.
+    - q: ¿Y si el viaje fue en dos monedas?
+      a: Los saldos se llevan por moneda, así que una deuda en euros sigue siendo una deuda en euros y cada moneda tiene su propia lista corta, salvo que los gastos se convirtieran al introducirlos. [Varias monedas](page:guide/how-to-split-a-trip-paid-in-several-currencies) muestra las dos maneras.
+    - q: ¿Hay que saldar durante el viaje o al final?
+      a: Vale cualquiera de los dos. Cada pago registrado cambia los saldos, así que un pago hecho a mitad de viaje cuenta para la lista final. Al final es más sencillo, porque [todo el viaje](page:use-case/group-trips) está en un solo sitio.

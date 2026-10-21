@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Kalkulator podjele računa: tko kome duguje, sređeno | Side Badger"
+  description: "Tko je platio, tko duguje, tko kome plaća: sređeno u sekundi. Jednako, po točnim iznosima ili postocima. Besplatno, u pregledniku, ništa se ne sprema ni šalje."
+h1: "Kalkulator podjele računa"
+navLabel: "Kalkulator podjele računa"
+lead: "Upiši tko je što platio, a kalkulator kaže tko kome duguje, uz kratak popis uplata kojim se sve poravnava. Radi u tvom pregledniku, ništa ne sprema i ne premješta novac. Ako grupi treba evidencija koja nadživi karticu, [podjela troškova](page:feature/split-expenses) i [poravnanje](page:feature/settle-up) u Side Badgeru rade iste izračune i čuvaju ih."
+cta:
+  heading: "Sviđa ti se računica? Zadrži je."
+  body: "Ovaj kalkulator sve zaboravi čim zatvoriš karticu, baš kao onaj tko je sigurno platio prošli put. Grupa u Side Badgeru čuva troškove, ažurira stanje svakoga i bilježi uplate. Besplatno je, bez oglasa i bez dnevnih ograničenja."
+sections:
+  - heading: "Kako izračun funkcionira"
+    body: "Za svaki trošak kalkulator izračuna udio svake osobe. Možeš ga podijeliti jednako, po točnim iznosima ili po postocima, među osobe koje odabereš. Stanje svake osobe zatim je ono što je platila minus ono što duguje. Plus znači da joj grupa duguje, a minus da ona duguje grupi. Stanja se uvijek zbrajaju u nulu, jer sve što se jednoj osobi duguje, to duguju druge osobe."
+  - heading: "Zašto je popis uplata kratak"
+    body: "Nitko ne mora poravnavati svaki račun zasebno. Kad su sva stanja poznata, kalkulator spaja osobu koja najviše duguje s osobom kojoj se najviše duguje, poravnava koliko god može jedna uplata i nastavlja niz popis dok svi ne budu na nuli. Nikad ne treba više uplata od broja osoba sa stanjem umanjenog za jedan, a često ih treba manje nego kad se računi poravnavaju jedan po jedan. Daje kratak popis uplata i ne obećava da je najkraći mogući."
+  - heading: "Što kalkulator ne radi"
+    items:
+      - "**Ne radi s više valuta.** Odaberi jednu i koristi je za cijeli izračun. Aplikacija vodi zasebno stanje za svaku valutu i može pretvoriti trošak po aktualnom tečaju, koji možeš promijeniti."
+      - "**Ništa ne sprema.** Zatvori karticu i brojke nestaju. Da ih zadržiš, kopiraj poveznicu. Ona sadrži tvoje brojke iza znaka #, koji tvoj preglednik nikad ne šalje poslužitelju, a svatko kome je pošalješ može ih pročitati."
+      - "**Ne premješta novac.** Kaže ti tko bi kome trebao platiti. Platite si kako god želite, a zatim zabilježite uplatu u aplikaciji ako grupa tamo vodi evidenciju."
+      - "**Ne bira preostali cent nasumično.** Kad se račun ne dijeli bez ostatka, preostali centi idu prvim osobama na popisu, pa se zbrojevi i dalje slažu. U aplikaciji preostali cent ide jednoj osobi nasumično, pa to nije uvijek ista osoba."
+      - "**Ne prelazi ograničenja.** Kalkulator prima od 2 do 20 osoba, a jedan trošak može iznositi do 999.999,99, kao i u aplikaciji."
+exampleAfter: 2
+example:
+  heading: "Produženi vikend, četvero prijatelja"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "kućica"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "namirnice"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "taksi"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "kafić"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: "Pitanja"
+  items:
+    - q: "Je li kalkulator besplatan?"
+      a: "Da. Besplatan je. Bez oglasa. Bez dnevnih ograničenja. Ni korisnički račun ti ne treba."
+    - q: "Sprema li ono što upišem?"
+      a: "Ne. Ništa se nigdje ne sprema niti šalje. Da zadržiš brojke, koristi Kopiraj poveznicu i spremi poveznicu negdje."
+    - q: "Tko može vidjeti poveznicu koju kopiram?"
+      a: "Svatko tko je ima. Brojke su u samoj poveznici, iza znaka #, pa je podijeli samo s osobama koje bi ih trebale vidjeti."
+    - q: "Premješta li novac?"
+      a: "Ne. Izračuna tko bi kome trebao platiti, a vi si plaćate kako god želite. Ni Side Badger nikad ne dira tvoj novac. Vidi [poravnanje](page:feature/settle-up)."
+    - q: "Mogu li podijeliti putovanje plaćeno u dvije valute?"
+      a: "Ne ovdje, jer izračun ima jednu valutu. U grupi svaka valuta ima svoje stanje. Vidi [više valuta](page:feature/multiple-currencies)."
+    - q: "Što ako se iznosi ne zbrajaju?"
+      a: "Kalkulator to kaže ispod troška i ne prikazuje rezultat dok se ne zbroje. Točni iznosi moraju zajedno davati ukupni iznos, a postoci moraju davati 100."

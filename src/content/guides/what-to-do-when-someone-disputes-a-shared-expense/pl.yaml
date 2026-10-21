@@ -1,0 +1,102 @@
+translatedFrom: "0900d953"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Co zrobić, gdy ktoś kwestionuje wspólny wydatek | Side Badger"
+  description: "Daruj sobie uszczypliwą wiadomość. Zakwestionuj wydatek, a na czas rozmowy zniknie z sald wszystkich. Rozpisane na 45 £ za wino na imprezę."
+h1: "Co zrobić, gdy ktoś kwestionuje wspólny wydatek"
+navLabel: "Sporne wydatki"
+lead: "Zamiast uszczypliwej wiadomości zgłoś pytanie przy wydatku. Dopóki pytanie jest otwarte, cały wydatek zostaje poza saldami wszystkich. Omówcie sprawę w komentarzach, zmieńcie podział, jeśli grupa się zgodzi, a pytanie niech zamknie osoba, która je zadała, albo administrator."
+cta:
+  heading: "Zadaj niewygodne pytanie grzecznie"
+  body: "Załóż darmowe konto, utwórz grupę dla mieszkania i poproś administratora o włączenie pytań o wydatki. Są wyłączone, dopóki ktoś ich nie włączy. Chcesz najpierw obejść całość? Zobacz, [jak to działa](page:how-it-works), albo [co obejmuje darmowy plan](page:pricing)."
+sections:
+  - heading: "Troje współlokatorów i wino za 45 £"
+    body: "Po imprezie Tom dodaje wino do grupy mieszkania. Kosztowało 45 £, zapłacił Tom, a wydatek dzieli się po równo między Toma, Priyę i Aishę, czyli po 15 £. Aisha nie pije. Tom kupił wino na imprezę, a impreza była dla całego [mieszkania](page:use-case/housemates), więc nie zrobił nic złego. Aisha też nie robi nic złego, pytając. Nikt tu nie jest złoczyńcą. Jest po prostu 15 £ wina w sporze i mnóstwo sposobów, żeby zrobić z tego niezręczną sytuację. Uszczypliwa wiadomość do całego domu to jeden z nich. Pytanie przy wydatku to łagodniejszy."
+  - heading: "Co robi pytanie"
+    body: "Aisha otwiera wydatek i zgłasza pytanie. Cały wydatek wypada z sald wszystkich, nie tylko jej część, a nic innego nie jest ruszane. Duże zakupy (84 £) i sprzątanie (60 £) nadal się liczą, co daje 28 £ + 20 £ = 48 £ na osobę. Dopóki wino czeka, Aisha jest winna 48 £, Tomowi należy się 36 £, a Priyi 12 £. Cokolwiek mieszkanie postanowi o winie, w międzyczasie nie wlicza się ono do niczyjego salda. Każda inna osoba z tego wydatku może też zgłosić własne pytanie. Wino wraca do sald dopiero, gdy zamknięte zostanie ostatnie otwarte pytanie o nie, a pytanie zamyka osoba, która je zadała, albo administrator."
+  - heading: "Rozmowa, a potem poprawka"
+    body: "Pytanie Aishy trafia do komentarzy pod wydatkiem, więc odpowiedzi są tuż pod nim. [Planowanie razem](page:feature/plan-together) mówi więcej o komentarzach i pytaniach. Tom i Priya je czytają i w mieszkaniu wywiązuje się rozmowa. Uznają, że wino należało do Toma i Priyi, bo to oni je wypili. Inne mieszkanie mogłoby zostawić podział na troje albo ustalić coś pośredniego i to też byłoby w porządku. Side Badger zapisuje to, co uzgodnicie, i nie ma zdania o winie. Tom edytuje wydatek tak, żeby dzielił się po równo między niego i Priyę, czyli po 22,50 £ (45 £ ÷ 2). Aishy już w nim nie ma, więc jej pytanie odchodzi ze starą wersją, a wino wraca do sald. Wcześniejsza wersja zostaje zachowana."
+  - heading: "Co z tego wychodzi"
+    body: "Gdy wino wraca, Tomowi należy się 58,50 £, Priya jest winna 10,50 £, a Aisha 48 £. Side Badger podpowiada dwie płatności, obie do Toma. Aisha nadal jest winna 48 £, tyle samo co wtedy, gdy wino czekało, bo nie ma jej w tym wydatku. Priya przechodzi od należnych jej 12 £ do długu 10,50 £, bo doszła jej połowa wina, 22,50 £. Gdyby podział na troje został, Aisha byłaby winna 63 £ (28 £ + 20 £ + 15 £). Cały spór był wart 15 £. Płaćcie sobie, jak chcecie, a potem zarejestrujcie każdą płatność przez **Ureguluj**. [Rozliczanie](page:feature/settle-up) opisuje resztę."
+  - heading: "Jak to sformułować, żeby ludzie dalej z tobą rozmawiali"
+    body: "Pytanie Aishy: „Nie piłam wina. Czy możemy przyjrzeć się podziałowi?” Jest krótkie, wskazuje wydatek i prosi, zamiast oskarżać. Pomaga kilka nawyków."
+    items:
+      - "**Pytaj o wydatek, nie o osobę.** „Możemy sprawdzić podział na wino?” zaczyna rozmowę. „Czemu obciążono mnie za twoje wino?” zaczyna rozmowę innego rodzaju."
+      - "**Powiedz, co miałoby się stać.** „Czy mogłoby to być tylko dla osób, które piły?” daje grupie coś, z czym można się zgodzić albo na co odpowiedzieć."
+      - "**Podaj powód w zdaniu lub dwóch.** Pole nazywa się **Twoje pytanie** i nie może być puste."
+      - "**Trzymaj odpowiedzi w jednym miejscu.** Odpowiedzi trafiają do komentarzy pod wydatkiem, obok liczb, których dotyczą."
+  - heading: "Ustaw to w Side Badger"
+    items:
+      - "**Włącz pytania.** Domyślnie są wyłączone. Administrator otwiera **Ustawienia** grupy, w sekcji **Funkcje** na karcie **Ogólne** włącza **Zezwalaj na pytania dotyczące wydatków** i wybiera **Zapisz**. Wyłączenie ich później usuwa wszystkie otwarte pytania."
+      - "**Zgłoś pytanie.** Otwórz wydatek i obok własnego imienia w podziale wybierz **Mam pytanie**. Wpisz powód w polu **Twoje pytanie** i ponownie wybierz **Mam pytanie**. Mogą to zrobić tylko osoby z wydatku. Przy wydatku pojawia się wtedy znaczek **Zakwestionowano**."
+      - "**Znajdź to, co czeka.** Na liście wydatków **Tylko zakwestionowane** pokazuje wydatki z otwartym pytaniem."
+      - "**Popraw, jeśli grupa się zgodzi.** Otwórz wydatek, wybierz **Edytuj**, zmień **Podział między** i wybierz **Aktualizuj wydatek**. Kto może edytować, zależy od uprawnień grupy."
+      - "**Zamknij, jeśli nic nie trzeba poprawiać.** Osoba, która zapytała, może użyć przycisku zamknięcia na swoim znaczku **Zakwestionowano**, opisanego jako **Zamknij pytanie**, tak samo administrator. Wydatek wraca do sald, gdy zamknięte zostanie jego ostatnie pytanie."
+  - heading: "Gdy nie jest tak czysto"
+    items:
+      - "**Edycja zostawia pytającego w środku.** Jeśli osoba, która zapytała, nadal jest w wydatku, jej pytanie przechodzi na zmienioną wersję i czeka, aż ona albo administrator je zamknie. Poprawienie kwoty to nie to samo, co zgoda, że jest poprawiona."
+      - "**Nie było cię w wydatku.** Tylko osoby z wydatku mogą go zakwestionować. Jeśli coś wygląda ci źle, napisz o tym w komentarzach pod nim albo zapytaj osobę, która go dodała."
+      - "**Ktoś chce opuścić grupę.** Otwarte pytanie nie pozwala opuścić grupy osobom z tego wydatku. Zamknij pytanie albo edytuj wydatek tak, żeby ich w nim nie było, a będą mogli odejść."
+  - heading: "Czego Side Badger tu nie robi"
+    items:
+      - "Nie rozstrzyga, kto ma rację. Wstrzymuje wydatek poza saldami i zachowuje to, co uzgodnicie."
+      - "Nie prosi nikogo o zatwierdzenie wydatków, zanim zaczną się liczyć. Wstrzymany jest tylko zakwestionowany wydatek."
+      - "Nie potrafi wstrzymać części wydatku. Zakwestionuj go, a cały zniknie z sald."
+      - "Nie przesyła pieniędzy. Płacicie sobie, jak chcecie, i rejestrujecie to."
+exampleAfter: 3
+example:
+  heading: "Mieszkanie po winie"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "duże zakupy"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "sprzątanie"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "wino na imprezę"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Czy mogę zakwestionować tylko swoją część?"
+      a: "Nie. Pytanie wstrzymuje cały wydatek, dla wszystkich w nim. Jeśli zły jest tylko podział, naprawą jest edycja podziału."
+    - q: "Kto może zamknąć pytanie?"
+      a: "Osoba, która zapytała, albo administrator grupy. Jeśli osoba, która dodała wydatek, nie jest administratorem, nie może go zamknąć w imieniu pytającego."
+    - q: "Czy edycja wydatku kasuje oryginał?"
+      a: "Nie. Wcześniejsza wersja zostaje zachowana. O tym, kto może edytować, decydują uprawnienia grupy, więc warto najpierw powiedzieć o tym domownikom, bo salda się zmienią."

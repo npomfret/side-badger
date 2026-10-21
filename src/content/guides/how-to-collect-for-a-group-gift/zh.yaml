@@ -1,0 +1,101 @@
+translatedFrom: "5d92090e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: 怎样为集体礼物收钱 | Side Badger
+  description: 每人出的钱不一样，还有一个人的卡先挨一刀。用投票定预算，输入确切金额，算术交给 Side Badger。
+h1: 怎样为集体礼物收钱
+navLabel: 集体礼物收钱
+lead: 为集体礼物收钱，就是一个人先垫钱，其他人各欠他自己那份。先用投票商定预算，让买礼物的人刷自己的卡，再把它作为一笔支出，用[确切金额](page:feature/split-expenses)录入，也就是给每个人一个数字。Side Badger 会显示每个人欠买家多少，大家想怎么付就怎么付。
+cta:
+  heading: 不用帽子也能凑份子
+  body: 建一个群组，把收礼物的人留在群组之外，用确切金额录入这份礼物。Side Badger 免费，没有广告，也没有每日限制。想先了解一下？请看[使用方式](page:how-it-works)或[免费包含什么](page:pricing)。
+sections:
+  - heading: 四个朋友，一台唱机，四个不同的数
+    body: Bea 要过 30 岁生日了，想要一台唱机。Priya、Omar、Lena 和 Sam 要送她一台。Priya 找到一台 £240 的，用自己的卡买了，毕竟总得有人先出手。四个人出的钱不一样。Priya 和 Omar 各出 £60，Lena 出 £80，Sam 出 £40。没人解释自己的数字，也没人追问。Omar 还买了一张贺卡和包装纸，£12。四个人都在卡上签名，所以这一笔平均分摊。
+  - heading: 先定预算，再点购买
+    body: 一次预算投票，能省下一场关于 £400 唱盘的争论。在群组里选择**添加投票**，问礼物该花多少钱。选项设成金额，比如最多 £150、最多 £200、最多 £250。打开**匿名投票**，它会隐藏谁投了什么，这样就没人需要当众为一个更小的数字辩护。第一票投出后，设置就不能再改，所以先检查。投票不会自己结束。等大家都投完，选择**关闭投票**，**获胜者**就会显示出来。投票只商定总额，不决定任何人的份额。
+  - heading: 数一数
+    body: 礼物按 £60、£60、£80 和 £40 分摊，加起来正好是收据上的 £240。贺卡和包装纸四人平分，每人 £3。Priya 的账是 £60 + £3，即 £63，她付了 £240，所以她应收 £177。Omar 的账同样是 £63，但他付了 £12，所以他欠 £51。Lena 欠 £80 + £3，也就是 £83，Sam 欠 £40 + £3，也就是 £43。这三笔加起来正好是 Priya 的 £177。如果放着不管，债务会在群组里绕五个方向。Side Badger 改为建议三笔付款，全部付给 Priya。详情见[结算](page:feature/settle-up)。
+  - heading: 把它记进 Side Badger
+    body: Priya 这边大约五分钟。
+    items:
+      - "**建群组。** 在仪表板上选择**创建群组**。选择**邀请他人**，把链接或二维码只发给要出钱的人，别发给其他人。"
+      - "**添加礼物。** 选择**添加费用**，写上说明，输入 240，在**谁付的钱？**下选 Priya。**分摊给**保留全部四个人，然后在**如何拆分**里选择**确切金额**，输入 60、60、80 和 40。这些金额加起来必须是 240。愿意的话可以附上订单确认。选择**保存费用**。"
+      - "**添加贺卡。** Omar 自己添加这笔 £12，在**谁付的钱？**下选自己，**如何拆分**保持**平分**，四个人都勾上。"
+      - "**数清，再付钱。** 每个人查看**余额**，它会显示谁欠谁，然后想怎么付就怎么付，把自己那份转给 Priya。再用**结算**和**记录结算**记下来。快速结算会帮你填好金额。"
+  - heading: 先买，还是先收
+    body: "Side Badger 不保管这笔钱，所以“收钱”其实是在“算账”。两种顺序都行。"
+    items:
+      - "**先买。** 买家先付款，按实际价格添加支出，每个人立刻就能看到自己的份额。这样更整洁，但在大家付钱之前，买家要自己扛着这笔费用，所以挑一个扛得起的人。"
+      - "**先收。** 大家在购买之前把各自的数目转给买家。知道价格后，录入礼物，再按钱实际转出的日期逐笔记录付款。先添加礼物，这样每笔付款都有余额可以对上。"
+      - "**价格变了。** 运费、折扣码、临时涨价。编辑礼物，改动确切金额，使它们仍然加得起来。先前的版本会保留，但要先告诉群组，因为他们的余额会变。"
+  - heading: 别让 Bea 知道
+    body: 只有群组成员才能看到群组，所以 Bea 看不到她不在其中的群组。只邀请要出钱的人，别邀请其他人。链接在过期前一直有效，你可以选 15 分钟到 5 天，所以选个短的，并发到 Bea 看不到的地方。任何打开链接的人都能看到群组的预览，所以给群组起个无聊的名字，比如周六小金库，也别让 Bea 的名字出现在支出标签和投票选项里。
+  - heading: Side Badger 在这件事上不做什么
+    items:
+      - 它不保管也不收取这笔钱。大家的份子通过银行转账、现金或你们惯用的方式交给买家，然后由某个人记录下来。
+      - 它不发送付款提醒。催还没付的人，仍然是人的活儿。
+      - 它不替任何人算份额。投票只商定预算，也没有“把剩下的分掉”这个选项，所以每个金额都要你自己输入。
+      - 每笔支出只有一个付款人。如果两个人分别买了礼物的不同部分，就录入两笔支出。
+      - 分摊里的每个人都需要一个免费账户，并在群组里占一个位置。
+exampleAfter: 2
+example:
+  heading: Bea 的唱机，还有那张贺卡
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: 礼物
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: 贺卡和包装纸
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: 常见问题
+  items:
+    - q: 如果收的钱比礼物贵怎么办？
+      a: 确切金额必须加起来等于价格，所以把份额削减到刚好相等。或者把多出来的钱花在实实在在的东西上，比如鲜花，并作为第二笔支出录入，就像示例里的贺卡和包装纸。
+    - q: 有人能不加入群组就出钱吗？
+      a: 如果想让他们算进去，就不行。分摊里的每个人都需要一个免费账户并加入群组。对于只有现金的人，Priya 可以收下现金，并按群组仍欠的金额录入礼物。例如，Sam 给了她 £40 现金，她就录入 £200，并在自己、Omar 和 Lena 之间按 60、60 和 80 分摊。
+    - q: 投票能决定每个人出多少吗？
+      a: 不能。投票只商定整个群组的一个数字，比如预算。每个人的份额由你们自己商量，再作为**确切金额**输入支出。
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

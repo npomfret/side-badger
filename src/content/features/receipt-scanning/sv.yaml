@@ -1,0 +1,78 @@
+translatedFrom: "42f5cf35"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.read-by-googles-ai
+  - receipt-attachments.keep-the-receipt
+meta:
+  title: Skanna ett kvitto för att lägga till en utgift | Side Badger
+  description: Låt grävlingen läsa kvittot. Den fyller i summa, datum och plats så att du kan kontrollera dem, utan skanningskrediter. Googles AI-tjänst läser bilden.
+h1: Skanna ett kvitto, kontrollera uppgifterna, dela det
+navLabel: Kvittoskanning
+lead: Låt grävlingen läsa kvittot, och rätta dess läxa. Lägg till ett foto på en ny utgift så fyller Side Badger i summa, datum och plats så att du kan kontrollera dem. Sedan [delar du det](page:feature/split-expenses) som vilken annan utgift som helst. Skanning är gratis, utan skanningskrediter. Den fyller i en utgift och delar inte notan per vara. Kvittobilder läses av Googles AI-tjänst.
+cta:
+  heading: Knäpp det. Kontrollera det. Dela det.
+  body: Skapa ett gratis konto, starta en grupp och lägg till en utgift med ett kvittofoto. Se vad som fylls i, ändra det som är fel och spara när du är nöjd.
+problem:
+  heading: Ingen vill skriva in ett kvitto i taxikön
+  body: Resor och stora kvällar kommer med papper. Middagen, taxin, ronden som blev sex. Att knappa in varje kvitto på en telefon med kalla tummar och en kö bakom sig är hur utgifter glöms bort. Så Side Badger läser kvittot åt dig. Den gör första utkastet och du gör kontrollen. Det passar [gruppresor](page:use-case/group-trips) och [evenemang och firanden](page:use-case/events-and-celebrations), där kvittona hopar sig fortare än någon orkar ta hand om dem.
+workflow:
+  heading: Från foto till utgift i tre steg
+  steps:
+    - title: Lägg till ett kvitto på en ny utgift
+      body: Starta en ny utgift och tryck på **Skanna kvitto**, eller använd snabbåtgärden **Skanna kvitto** på din översikt. Ta ett foto eller välj ett du redan har. **Lägg till kvitto eller bilaga** i formuläret fungerar också.
+    - title: Låt den läsa kvittot
+      body: Formuläret säger **Analyserar kvitto...** medan Side Badgers AI läser bilden. Sedan fyller den i det den hittade, till exempel beskrivning, summa, valuta, datum, tid och plats. Det du redan hade skrivit lämnas ifred.
+      shot: S09
+      shotAlt: Formuläret för ny utgift som visar Analyserar kvitto..., och sedan samma formulär med uppgifterna ifyllda
+    - title: Kontrollera, och dela sedan
+      body: Jämför formuläret med pappret. Rätta det som är fel, ange vem som betalade och vilka som delade kostnaden, välj hur den ska delas och spara. Utgiften finns inte förrän du har gjort det. [Dela utgifter](page:feature/split-expenses) tar upp delningen.
+options:
+  heading: Alternativ
+  items: []
+sections:
+  - heading: Vad den fyller i
+    body: Lägg till en kvittobild på en ny utgift så kan de här fälten fyllas i. Vem som betalade, vilka som delade kostnaden och hur den ska delas är fortfarande ditt jobb.
+    items:
+      - En **beskrivning** av utgiften.
+      - "**Summan**."
+      - "**Valutan**, om din grupp tillåter det."
+      - "**Datumet** och **tiden**."
+      - "**Platsen**."
+      - En textkopia av kvittot i **anteckningarna**, för när pappersversionen bleknar eller åker med i tvätten.
+  - heading: Vad du fortfarande kontrollerar
+    body: Allt. Behandla det den fyller i som ett utkast. Kontrollera summan mot pappret, sedan valuta, datum och plats. Suddiga foton och skrynkligt papper kan lura vilken läsare som helst, och vi lovar inte att den får varje kvitto rätt, så titta efter innan du sparar. Om något är fel, skriv över det. Om kvittot är i yen och gruppen gör upp i pund förklarar [flera valutor](page:feature/multiple-currencies) vad som händer sedan.
+  - heading: Behåll kvittot med utgiften
+    body: Skannat eller inte kan ett kvitto ligga kvar hos utgiften. Bifoga foton eller PDF-filer, upp till tre per utgift och upp till 10 MB var. Gruppens medlemmar ser dem på utgiften. Bilder visas som miniatyrer som öppnas i en visare, och PDF-filer öppnas som länkar. Fotot du skannar bifogas också, om du inte tar bort det innan du sparar. När någon frågar vad den där middagen egentligen kostade finns beviset precis där.
+  - heading: Vart ditt kvitto tar vägen
+    body: Kvittobilder läses av Googles AI-tjänst. För att fylla i formuläret läses bilden av Google Vertex AI (Gemini) i Googles multiregion i USA. Lägg till en bild på en ny utgift så läses den. En PDF, eller ett foto som läggs till på en utgift som redan finns, lagras utan att läsas. Bifogade kvitton syns för gruppens medlemmar, så om ett kvitto visar något du hellre inte delar, hoppa över fotot och skriv in den utgiften för hand.
+limits:
+  heading: Begränsningar
+  items:
+    - Bara bilder. JPEG, PNG och WebP, och HEIC när den har konverterats. PDF-filer kan bifogas till en utgift men läses inte.
+    - Skanning är bara för nya utgifter. På en befintlig utgift kan du bifoga kvitton, men inget läses.
+    - Den fyller bara i de fält du inte har rört, och valutan bara om din grupp tillåter det.
+    - Den delar inte per vara och tilldelar inte kvittorader till personer. Den fyller i en utgift och du delar den som vanligt.
+    - Det finns inget löfte om att det den fyller i är rätt, eller att skanningen fungerar varje gång. Kontrollera innan du sparar, och lägg till utgiften för hand om skanningen misslyckas eller inte är tillgänglig.
+    - En utgift rymmer upp till tre bilagor, var och en på upp till 10 MB, som JPEG, PNG, WebP, HEIC eller PDF.
+    - Kvittobilder läses av Google Vertex AI (Gemini) i Googles multiregion i USA, och bifogade kvitton syns för gruppens medlemmar.
+useCasesHeading: Där kvittona hopar sig
+faq:
+  heading: Frågor
+  items:
+    - q: Kan den dela ett kvitto per vara?
+      a: Nej. Den fyller i utgiften, inklusive summan, och du delar den lika, med exakta belopp eller i procent. För en nota där alla beställde olika, ange vad var och en är skyldig som exakta belopp. [Dela utgifter](page:feature/split-expenses) har detaljerna.
+    - q: Kan den läsa en PDF?
+      a: Nej. Du kan bifoga en PDF till en utgift så att den följer med siffrorna, men bara bilder läses.
+    - q: Finns det en gräns för skanningar?
+      a: Det finns inga skanningskrediter som kan ta slut, och skanning är gratis. Filer har däremot gränser, som är upp till tre bilagor per utgift och 10 MB var. [Vad gratis omfattar](page:pricing) har resten.
+    - q: Vem kan se mitt kvitto?
+      a: Gruppens medlemmar kan se kvittona som är bifogade till en utgift. Kvittobilder läses också av Googles AI-tjänst, och det är så formuläret fylls i.
+    - q: Kan jag skanna ett kvitto för en utgift jag redan har lagt till?
+      a: Nej, skanning är för nya utgifter. Du kan fortfarande bifoga ett kvitto till en befintlig utgift, och det lagras utan att läsas.
+    - q: Vad om den fyller i något fel?
+      a: Skriv över det. Varje fält kan redigeras tills du sparar, och du bör kontrollera dem alla ändå. Om skanningen misslyckas eller inte är tillgänglig, lägg till utgiften för hand som vanligt.

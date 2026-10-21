@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Farklı gecelerde kalanlarla tatil villası nasıl bölüşülür | Side Badger"
+  description: "Dev yalnızca üç gece geldi, neden altısını ödesin? Tatil villasını insanların gerçekte kaldığı gecelere göre bölüşün; hesabı sizin yerinize yapıyoruz."
+h1: "İnsanlar farklı gecelerde kalırken tatil villası nasıl bölüşülür"
+navLabel: "Villayı gecelere göre bölüşme"
+lead: "Konaklamanın fiyatını kişi başı geceye bölün, her kişinin gece sayısıyla çarpın ve villayı **tam tutarlı tek bir harcama** olarak girin. Side Badger hesabı tutar ve ödeşme vakti geldiğinde kısa bir ödeme listesi önerir."
+cta:
+  heading: "Villaya derli toplu tek bir harcama verin"
+  body: "Bir grup kurun, herkesi bir bağlantı veya QR koduyla davet edin ve villayı tam tutarlarla girin. Siz tatille ilgilenirken Side Badger güncel hesabı tutar."
+sections:
+  - heading: "Altı gece, dört kişi, tek kredi kartı"
+    body: "Bir [grup gezisi](page:use-case/group-trips) genellikle birinin kartıyla başlar. Burada bu Ana'nın kartı. Biri ilk adımı atmak zorunda olduğu için altı gecelik bir villayı 2.100 € karşılığında o ayırtıyor. Ana, Ben ve Chloe altı gecenin hepsinde kalıyor. Dev yalnızca son üç geceye katılabiliyor ve trenle geliyor. Ben bir araba kiralıyor; Dev ona hiç binmiyor. Büyük market alışverişini Dev yapıyor. Villayı dörde bölmek akla en yakın hamle. Ama bu, Dev'e evde geçirdiği üç gece için ödeme yaptırır ve bu tür şeyler Noel'de yeniden gündeme gelir. Gecelere göre bölüşmek tartışmayı önler ve hesap bir dakika sürer."
+  - heading: "Bir kişi-geceyi fiyatlayın"
+    body: "Kişi-gece, bir kişinin bir gece kalmasıdır. Villa ne kadarsa o kadar tutar; bu yüzden fiyatı bütün kişi-gecelere paylaştırın, sonra her kişiye kullandıklarını verin."
+    items:
+      - "**Kişi-geceleri sayın.** Ana, Ben ve Chloe altışar gece, Dev üç gece kalıyor: 6 + 6 + 6 + 3 = 21."
+      - "**Birini fiyatlayın.** 2.100 € ÷ 21 = kişi-gece başına 100 €."
+      - "**Her kişinin gece sayısıyla çarpın.** Ana, Ben ve Chloe kişi başı 6 × 100 € = 600 € öder. Dev 3 × 100 € = 300 € öder."
+      - "**Toplamı kontrol edin.** 600 € + 600 € + 600 € + 300 € = 2.100 €. Paylarınız fiyatı vermiyorsa bir gece eksik ya da iki kez sayılmıştır."
+  - heading: "Side Badger'a girin"
+    body: "Bir grup kurun, diğer üç kişiyi bir bağlantı veya QR koduyla davet edin, sonra giderleri ekleyin. Önce villa."
+    items:
+      - "**Harcama Ekle**'yi seçin. Açıklayın, 2.100 girin ve **Kim ödedi?** alanını Ana yapın."
+      - "**Şunlar arasında bölüştür** altında dört kişinin de seçili olduğundan emin olun."
+      - "**Nasıl bölüştürülsün** altında **Tam tutarlar**'ı seçin. Ana, Ben ve Chloe için 600, Dev için 300 yazın. Tutarlar toplamda genel toplamı vermelidir."
+      - "**Harcamayı Kaydet**'i seçin."
+      - "Araba kirasını aynı şekilde ekleyin. Ben ödedi, bölüşüm **Eşit** ve Dev dışarıda, çünkü trenle geldi. Bir gideri bölmenin diğer yolları [harcamaları bölüşme](page:feature/split-expenses) sayfasında."
+      - "Market alışverişini ekleyin. Dev ödedi, bölüşüm **Eşit** ve dördü de içinde."
+  - heading: "Sonucu okuyun, sonra ödeşin"
+    body: "Her kişinin hesabı, villa payı artı arabadan ve alışverişten payıdır. Ana, Ben ve Chloe kişi başı 725 € eder; bu 600 € + 80 € + 45 €'dur. Dev 345 € eder; bu 300 € + 45 €'dur. Her kişinin ödediğini çıkarın, bakiyeler ortaya çıkar. Ana 2.100 € ödedi, yani 1.375 € alacaklı. Ben 240 € ödedi ve 485 € borçlu. Dev 180 € ödedi ve 165 € borçlu. Chloe hiçbir şey ödemedi ve 725 € borçlu. Kendi hâline bırakılırsa bu borçlar grubun içinde altı yönde dolaşırdı. Side Badger bunun yerine hepsi Ana'ya giden üç ödeme önerir. Ona istediğiniz yolla ödeyin, sonra **Ödeş**'i seçin ve her ödeme için **Ödeşmeyi Kaydet**'i kullanın; böylece bakiyeler güncellenir. Hızlı ödeşme düğmeleri tutarı doldurur. [Hesaplaşma](page:feature/settle-up) hakkında daha fazlası var."
+  - heading: "Villa tek derli toplu bir fiyat olmadığında"
+    items:
+      - "**Odalar farklıysa.** Süit küçük odadan daha değerliyse önce her odanın ne kadar tutacağında anlaşın, sonra kişi-gece hesabını oda oda yapın. Villayı herkesin toplamıyla tek bir harcama olarak ya da oda başına bir harcama olarak girin. İkisinde de bir harcamadaki tam tutarlar toplamında o harcamanın tutarını vermelidir."
+      - "**Aylar önce ödenen bir depozito.** Kim ödediyse onun kendi harcaması olur ve ödediği günün tarihini taşır. Bakiyedeki oranlarla aynı biçimde gecelere göre bölüştürün."
+      - "**Rezervasyon başka bir para biriminde.** Villayı ödediğiniz para biriminde girin. Grup ilerledikçe çeviriyorsa güncel bir döviz kuru kullanın ya da gerçekte aldığınız kuru yazın. Orijinal tutar harcamada kalır. Ayrıntılar [birden fazla para birimi](page:feature/multiple-currencies) sayfasında."
+      - "**Kısmi geceler.** Biri gece yarısı geliyor, biri kahvaltıdan önce ayrılıyor. Geceleri saymak için tek bir kural belirleyin ve herkes için onu kullanın."
+  - heading: "Side Badger burada neyi yapmaz"
+    items:
+      - "Geceleri sizin yerinize saymaz. Geceye ya da paylara göre bölüşüm yok; bu yüzden her tutarı yukarıdaki gibi hesaplar ve **tam tutarlar** olarak girersiniz."
+      - "Parayı taşımaz. Birbirinize istediğiniz yolla ödeyin, sonra ödemeyi kaydedin."
+      - "Harcama başına tek ödeyene izin verir. Villayı iki kişi ödediyse iki harcama girin."
+      - "Misafir erişimi yok. Gruptaki herkesin, Dev dahil, ücretsiz bir hesaba ihtiyacı var."
+exampleAfter: 2
+example:
+  heading: "Villa, araba ve alışveriş"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "villada altı gece"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "araba kirası"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "market"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Villa soruları"
+  items:
+    - q: "Biri iptal ederse?"
+      a: "Gecelerini çıkarın, hesapları yeniden yapın ve villa harcamasını, tam tutarlar yeniden fiyatı verecek şekilde düzenleyin. Önceki sürüm saklanır ve düzenleme grubun etkinliğinde görünür; yani kimse bir rakamı sessizce değiştirmez. Kimin düzenleyebileceği grubun izinlerine bağlıdır."
+    - q: "Rezervasyonu yapan daha az mı ödemeli?"
+      a: "Buna grup karar verir. Rezervasyon yapmak bir iştir ve gruplar bunun indirim hak edip etmediği konusunda ayrışır. Ne üzerinde anlaşırsanız anlaşın, tam tutarlara koyun ve harcamaya bir not olarak ya da yanına bir yorum olarak yazın; böylece kimsenin anlaşmayı hatırlaması gerekmez."
+    - q: "Temizlik ücretlerini farklı bölüşebilir miyiz?"
+      a: "Evet. Ücreti ayrı bir harcama olarak girin ve ona kendi bölüşümünü verin. Eşit bölüşüm bütün ev için sabit bir ücrete uyar. Tam tutarlar, ücretin de gecelere göre dağılmasını isteyen bir gruba uyar."

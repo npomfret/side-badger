@@ -1,0 +1,114 @@
+translatedFrom: "0900d953"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Zer egin partekatutako gastu bat zalantzan jartzean | Side Badger"
+  description: "Ahaztu mezu zorrotza. Egin galdera gastuari, eta hitz egiten duzuen bitartean denen saldoetatik kanpo geratuko da. Azalduta, festako 45 £-ko ardoarekin."
+h1: "Zer egin norbaitek partekatutako gastu bat zalantzan jartzen duenean"
+navLabel: "Zalantzan jarritako gastuak"
+lead: "Egin galdera bat gastuari, mezu zorrotz bat bidali beharrean. Galdera irekita dagoen bitartean, gastu osoa kanpoan geratzen da denen saldoetatik. Hitz egin iruzkinetan, editatu banaketa taldea ados badago, eta galdera egin duenak, edo administratzaile batek, itxi dezala galdera."
+cta:
+  heading: "Egin galdera deserosoa adeitsuki"
+  body: "Sortu doako kontu bat, hasi talde bat pisurako eta eskatu administratzaile bati gastu-galderak aktibatzeko; desaktibatuta daude norbaitek aktibatu arte. Lehenik ikuspegi orokorra nahi duzu? Ikusi [nola funtzionatzen duen](page:how-it-works) edo [doakoak zer hartzen duen](page:pricing)."
+sections:
+  - heading: "Hiru etxekide eta 45 £-ko ardoa"
+    body: "Festaren ondoren, Tomek ardoa pisuko taldean gehitzen du. 45 £ dira, Tomek ordainduta, Tom, Priya eta Aisharen artean berdin banatuta, hau da, 15 £ bakoitzeko. Aishak ez du edaten. Tomek festarako erosi zuen, eta festa [pisuarentzat](page:use-case/housemates) zen, beraz ez du ezer gaizki egin. Aisha ere ez dago oker galdetzen. Hemen inor ez da gaizkilea. 15 £-ko ardoa dago eztabaidagai, eta modu asko daude hori deserosoa egiteko. Etxe osoari bidalitako mezu zorrotz bat da horietako bat. Gastuari egindako galdera bat, berriz, leunagoa da."
+  - heading: "Galdera batek zer egiten duen"
+    body: "Aishak gastua irekitzen du eta galdera bat egiten du. Gastu osoa denen saldoetatik kanpo geratzen da, ez bere zatia bakarrik, eta beste ezer ez da ukitzen. Erosketa handia (84 £) eta garbitzailea (60 £) kontatzen jarraitzen dute, hau da, 28 £ + 20 £ = 48 £ bakoitzeko. Beraz, ardoa zain dagoen bitartean, Aishak 48 £ zor ditu, Tomi 36 £ zor zaizkio eta Priyari 12 £. Pisuak ardoaz zer erabaki ere, bitartean inoren saldoak ez du ardoa barnean hartzen. Gastuan dagoen beste edonork bere galdera ere egin dezake. Ardoa saldoetara itzultzen da gainean irekita dagoen azken galdera itxi denean bakarrik, eta galdera bat galdera egin duenak edo administratzaile batek ixten du."
+  - heading: "Hitz egin, eta gero konpondu"
+    body: "Aisharen galdera gastuaren iruzkinetan ageri da, beraz erantzunak berehala azpian daude. [Planifikatu elkarrekin](page:feature/plan-together) orrian iruzkinei eta galderei buruz gehiago dago. Tomek eta Priyak irakurri egiten dute eta pisuak solasaldi bat egiten du. Erabakitzen dute ardoa Tomena eta Priyarena zela, edan zutelako. Beste pisu batek hiruko banaketari eutsiko lioke, edo tarteko zerbait adostuko luke, eta hori ere ondo legoke. Side Badger-ek adosten duzuena gordetzen du eta ez du iritzirik ardoaz. Tomek gastua editatzen du bera eta Priyaren artean berdin banatuta, hau da, 22,50 £ bakoitzeko (45 £ ÷ 2). Aisha jada ez dago bertan, beraz bere galdera bertsio zaharrarekin joaten da eta ardoa saldoetara itzultzen da. Aurreko bertsioa gordetzen da."
+  - heading: "Emaitza irakurtzen"
+    body: "Ardoa berriro sartuta, Tomi 58,50 £ zor zaizkio, Priyak 10,50 £ zor ditu eta Aishak 48 £. Side Badger-ek bi ordainketa proposatzen ditu, biak Tomentzat. Aisharen 48 £ ardoa zain zegoenean zuen zifra bera da, ez baitago bertan. Priya 12 £ zor zaizkion egoeratik 10,50 £ zor dituen egoerara pasatu da, hau da, ardoaren bere 22,50 £-ko erdia. Hiruko banaketak jarraitu izan balu, Aishak 63 £ zor izango zituen (28 £ + 20 £ + 15 £). Desadostasun osoak 15 £ balio zuen. Ordaindu elkarri nahi duzuen moduan, eta gero erregistratu ordainketa bakoitza **Kitatu** atalean. [Kitatzeak](page:feature/settle-up) gainerakoa azaltzen du."
+  - heading: "Esan modu batean jendeak zurekin hitz egiten jarrai dezan"
+    body: "Aisharen galdera: “Ardotik ez nuen ezer hartu. Banaketari begirada bat eman diezaiokegu?” Laburra da, gastua aipatzen du eta eskatu egiten du, ez du salatzen. Ohitura batzuk lagungarri dira."
+    items:
+      - >-
+        **Galdetu gastuaz, ez pertsonaz.** “Ardoaren banaketa egiazta dezakegu?” elkarrizketa bat hasten du. “Zergatik kobratu didate zure ardoa?” beste mota bateko elkarrizketa bat hasten du.
+      - >-
+        **Esan zer gertatzea nahi zenukeen.** “Edan zutenen artean bakarrik banatu liteke?” esaldiak taldeari ados egoteko edo erantzuteko zerbait ematen dio.
+      - >-
+        **Eman arrazoi bat esaldi batean edo bitan.** Eremuak **Zure galdera** du izena eta ezin da hutsik utzi.
+      - >-
+        **Mantendu erantzunak toki batean.** Erantzunak gastuaren iruzkinetan doaz, dagozkien zenbakien ondoan.
+  - heading: "Ezarri Side Badger-en"
+    items:
+      - >-
+        **Aktibatu galderak.** Desaktibatuta daude lehenespenez. Administratzaile batek taldearen **Ezarpenak** irekitzen ditu, **Orokorra** fitxako **Eginbideak** atalean **Baimendu gastuen galderak** aktibatzen du eta **Gorde** aukeratzen du. Geroago desaktibatzeak galdera ireki guztiak garbitzen ditu.
+      - >-
+        **Egin bat.** Ireki gastua eta, banaketan zure izenaren ondoan, aukeratu **Galdera bat daukat**. Idatzi zure arrazoia **Zure galdera** eremuan eta aukeratu berriro **Galdera bat daukat**. Gastuan dauden pertsonek bakarrik egin dezakete hau. Gastuak orain **Zalantzan jarri da** bereizgarria erakusten du.
+      - >-
+        **Aurkitu zer dagoen zain.** Gastu-zerrendan, **Zalantzan jarritakoak bakarrik** aukerak galdera irekia duten gastuak erakusten ditu.
+      - >-
+        **Konpondu, taldea ados badago.** Ireki gastua, aukeratu **Editatu**, aldatu **Banatu honen artean** eta aukeratu **Eguneratu gastua**. Nork edita dezakeen taldearen baimenen araberakoa da.
+      - >-
+        **Itxi, ezer konpondu behar ez bada.** Galdera egin duenak erabil dezake bere **Zalantzan jarri da** bereizgarriko itxi botoia, **Itxi galdera** etiketakoa, eta administratzaile batek ere bai. Gastua saldoetara itzultzen da bere azken galdera itxi denean.
+  - heading: "Hain txukun ez dagoenean"
+    items:
+      - >-
+        **Edizioak galdetzailea barruan uzten du.** Galdera egin duena gastuan oraindik badago, bere galdera editatutako bertsiora pasatzen da eta berak, edo administratzaile batek, itxi arte itxaroten du. Zenbatekoa zuzentzea eta arazoa konponduta dagoela adostea ez dira gauza bera.
+      - >-
+        **Gastuan ez zinen.** Gastu batean dauden pertsonek bakarrik egin dezakete galdera. Zerbait arraroa iruditzen bazaizu, esan iruzkinetan edo galdetu gehitu duenari.
+      - >-
+        **Norbaitek taldea utzi nahi du.** Galdera ireki batek gastu horretako pertsonak taldea uztea eragozten du. Itxi galdera, edo editatu gastua haiek jada bertan ez egoteko, eta joan daitezke.
+  - heading: "Side Badger-ek hemen egiten ez duena"
+    items:
+      - "Ez du erabakitzen nork duen arrazoia. Gastua saldoetatik kanpo mantentzen du eta adosten duzuena gordetzen du."
+      - "Ez dio inori eskatzen gastuak onar ditzan kontatu aurretik. Zalantzan jarritako gastua bakarrik gelditzen da zain."
+      - "Ezin du gastu baten zati bat bakarrik atxiki. Egin galdera eta gastu osoa saldoetatik ateratzen da."
+      - "Ez du dirurik mugitzen. Elkarri nahi duzuen moduan ordaintzen diozue eta erregistratzen duzue."
+exampleAfter: 3
+example:
+  heading: "Pisua ardoaren ondoren"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "erosketa handia"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "garbitzailea"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "festako ardoa"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+faq:
+  heading: "Galderak"
+  items:
+    - q: "Nire zatia bakarrik jar dezaket zalantzan?"
+      a: "Ez. Galdera batek gastu osoa uzten du kanpoan, bertan dagoen guztiarentzat. Banaketa bakarrik badago gaizki, konponbidea banaketa editatzea da."
+    - q: "Nork itxi dezake galdera bat?"
+      a: "Galdera egin duenak, edo taldeko administratzaile batek. Gastua gehitu zuena administratzailea ez bada, ezin du galdera egin duenaren izenean itxi."
+    - q: "Gastu bat editatzeak jatorrizkoa ezabatzen al du?"
+      a: "Ez. Aurreko bertsioa gordetzen da. Nork edita dezakeen taldearen baimenek erabakitzen dute, beraz merezi du etxeari lehenik esatea, saldoak aldatzen direlako."

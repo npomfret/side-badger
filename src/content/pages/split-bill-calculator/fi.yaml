@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Laskujen jakolaskuri: kuka on velkaa kenelle | Side Badger"
+  description: "Kuka maksoi, kuka on velkaa, kuka maksaa kenelle: selvä sekunneissa. Jaa tasan, tarkoilla summilla tai prosenteilla. Ilmainen, selaimessa, mitään ei tallenneta eikä lähetetä."
+h1: Laskujen jakolaskuri
+navLabel: Laskujen jakolaskuri
+lead: "Kirjoita, kuka maksoi mistä, niin laskuri kertoo, kuka on velkaa kenelle, ja antaa lyhyen maksulistan tilien tasaamiseen. Se toimii selaimessasi, ei tallenna mitään eikä siirrä rahaa. Jos ryhmäsi haluaa laskelman säilyvän välilehden sulkemisen jälkeen, [kulujen jako](page:feature/split-expenses) ja [tilien tasaus](page:feature/settle-up) Side Badgerissa tekevät samat laskut ja säilyttävät ne."
+cta:
+  heading: Tykkäätkö laskuista? Säilytä ne.
+  body: "Tämä laskuri unohtaa kaiken, kun suljet välilehden, aivan kuten se, joka ehdottomasti maksoi viimeksi. Side Badger -ryhmä säilyttää kulut, päivittää kaikkien saldot ja kirjaa maksut. Se on ilmainen, ilman mainoksia ja päivittäisiä rajoja."
+sections:
+  - heading: Näin laskenta toimii
+    body: "Jokaisesta kulusta laskuri selvittää kunkin osuuden. Voit jakaa kulun tasan, tarkoilla summilla tai prosenteilla valitsemiesi ihmisten kesken. Jokaisen saldo on sitten se, mitä hän maksoi, miinus se, mitä hän on velkaa. Plusmerkki tarkoittaa, että ryhmä on hänelle velkaa, ja miinusmerkki tarkoittaa, että hän on velkaa ryhmälle. Saldojen summa on aina nolla, koska se, mitä yhdelle ollaan velkaa, on aina jonkun toisen velkaa."
+  - heading: Miksi maksulista on lyhyt
+    body: "Kenenkään ei tarvitse tasata jokaista kuittia erikseen. Kun jokaisen saldo tiedetään, laskuri yhdistää eniten velkaa olevan sen kanssa, jolle ollaan eniten velkaa, tasaa niin paljon kuin yksi maksu pystyy ja jatkaa listaa alaspäin, kunnes kaikki ovat nollassa. Maksuja tarvitaan korkeintaan yhtä monta kuin on ihmisiä, joilla on saldo, miinus yksi, ja usein vähemmän kuin jos laskut tasattaisiin yksi kerrallaan. Se antaa lyhyen maksulistan, mutta ei lupaa, että se olisi lyhin mahdollinen."
+  - heading: Mitä laskuri ei tee
+    items:
+      - "**Käsitellä useaa valuuttaa.** Valitse yksi ja käytä sitä koko laskelmassa. Sovellus pitää jokaiselle valuutalle erillistä saldoa ja voi muuntaa kulun nykyisellä valuuttakurssilla, jota voit muuttaa."
+      - "**Tallentaa mitään.** Sulje välilehti, ja luvut ovat poissa. Säilyttääksesi ne kopioi linkki. Se sisältää lukusi #-merkin jälkeen, jota selaimesi ei koskaan lähetä palvelimelle, ja jokainen, jolle linkin lähetät, voi lukea ne."
+      - "**Siirtää rahaa.** Se kertoo, kuka kenelle pitäisi maksaa. Maksatte toisillenne miten haluatte ja kirjaatte maksun sitten sovellukseen, jos ryhmänne pitää kirjaa siellä."
+      - "**Arpoa ylimääräistä penniä.** Kun lasku ei mene tasan, jäljelle jäävät pennit menevät listan ensimmäisille, jotta summat silti täsmäävät. Sovelluksessa ylimääräinen penni menee satunnaiselle henkilölle, joten se ei ole aina sama."
+      - "**Ylittää rajoja.** Laskuri hyväksyy 2–20 ihmistä, ja yksi kulu voi olla enintään 999 999,99, kuten sovelluksessa."
+exampleAfter: 2
+example:
+  heading: Pitkä viikonloppu, neljä ystävää
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: mökki
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: ruokaostokset
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: taksi
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: pubi
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: Kysymyksiä
+  items:
+    - q: Onko laskuri ilmainen?
+      a: Kyllä. Ilmainen. Ei mainoksia. Ei päivittäisiä rajoja. Et tarvitse myöskään tiliä.
+    - q: Tallentaako se kirjoittamani?
+      a: "Ei. Mitään ei tallenneta eikä lähetetä minnekään. Säilyttääksesi luvut käytä Kopioi linkki -painiketta ja tallenna linkki jonnekin."
+    - q: Kuka voi nähdä kopioimani linkin?
+      a: "Jokainen, jolla se on. Luvut ovat itse linkissä #-merkin jälkeen, joten jaa se vain niiden kanssa, joiden kuuluu nähdä ne."
+    - q: Siirtääkö se rahaa?
+      a: Ei. Se selvittää, kuka kenelle pitäisi maksaa, ja te maksatte toisillenne miten haluatte. Side Badger ei myöskään koskaan koske rahoihisi. Katso [tilien tasaus](page:feature/settle-up).
+    - q: Voinko jakaa kahdella valuutalla maksetun matkan?
+      a: Ei täällä, koska laskelmassa on yksi valuutta. Ryhmässä jokaisella valuutalla on oma saldonsa. Katso [useita valuuttoja](page:feature/multiple-currencies).
+    - q: Entä jos summat eivät täsmää?
+      a: Laskuri kertoo siitä kulun alla eikä näytä tulosta, ennen kuin ne täsmäävät. Tarkkojen summien on oltava yhteensä loppusumma, ja prosenttien summan on oltava 100.

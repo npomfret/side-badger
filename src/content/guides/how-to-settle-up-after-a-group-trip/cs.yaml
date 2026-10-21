@@ -1,0 +1,113 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Jak se vyrovnat po skupinovém výletu | Side Badger"
+  description: "Vyrovnejte se, než se všichni rozutečou. Deset zamotaných dluhů se změní ve čtyři platby, zaznamenané průběžně. Částečná platba nevadí. Výpočty pro pět přátel."
+h1: "Jak se vyrovnat po skupinovém výletu"
+navLabel: "Vyrovnání po výletu"
+lead: "Vyrovnejte se, než se všichni rozutečou. Přidejte poslední výdaj, otevřete zůstatky skupiny a zaplaťte podle krátkého seznamu, co dlužíte, jakým způsobem chcete. Pak každou platbu zaznamenejte v Side Badger, aby se zůstatek vyrovnal pro celou skupinu. U pěti přátel a pěti výdajů se deset zamotaných dluhů zredukuje na čtyři platby."
+cta:
+  heading: "Uzavřete účty dřív, než dorazí fotky"
+  body: "Vytvořte si bezplatný účet, založte skupinu pro další výlet a přidávejte každý náklad, jak vzniká. Krátký seznam plateb na vás čeká, než dojedete na letiště. Chcete nejdřív vidět, [jak vyrovnání funguje](page:feature/settle-up)?"
+sections:
+  - heading: "Pět přátel, pět výdajů, jedna odletová hala"
+    body: "Mo, Ines, Raf, Tess a Uma strávili týden na pobřeží. Mo zarezervoval apartmán a koupil potraviny, Ines zaplatila výlet lodí a Raf uhradil velkou večeři. Tess vzala taxi na letiště s Umou a Mo, protože Ines a Raf jeli vlakem. Umina karta zůstala doma, takže neplatila nic. To je pět výdajů a celkem 1 700 € a v odletové hale nikdo nedokázal říct, kdo je v plusu."
+  - heading: "Deset dluhů, čtyři platby"
+    body: "Apartmán, výlet lodí, večeře a potraviny se dělí rovným dílem na pět. To je po 200 €, 50 €, 60 € a 18 €, takže Ines a Raf dluží po 328 €. Taxi se dělí na tři po 20 €, takže Mo, Tess a Uma dluží po 348 €. Mo zaplatil 1 090 € a dluží 348 €, takže má dostat 742 €. Všichni ostatní zaplatili méně, než dluží. Umě chybí 348 €, Tess 288 €, Ines 78 € a Rafovi 28 € a dohromady to dává právě těch 742 €, které má dostat Mo. Kdybyste se vyrovnávali přímo mezi každou dvojicí lidí, vyjde deset samostatných dluhů. Side Badger místo toho navrhne čtyři platby, všechny pro Mo."
+  - heading: "Vyrovnejte se, než se všichni rozutečou"
+    body: "Nejlepší chvíle je poslední večer nebo cesta domů, dokud jsou všichni na jednom místě a dluh 28 € se dá snadno zmínit. Nejdřív přidejte každý výdaj, včetně taxi. Nikdo nemůže opustit skupinu, dokud dluží nebo se mu dluží peníze, takže se počítání stejně musí někdy uzavřít."
+    items:
+      - "**Zkontrolujte seznam.** Otevřete skupinu a podívejte se na **Zůstatky**. Ve výchozím stavu vidíte dluhy, které se týkají vás. Volbou **Zobrazit vše** uvidíte seznam celé skupiny."
+      - "**Zaplaťte, jak chcete.** Bankovní převod, hotovost, laskavost z minulé dovolené. Side Badger peníze nepřesouvá."
+      - "**Zaznamenejte to.** Zvolte **Vyrovnat dluhy**. Pod **Rychlé vyrovnání** je každé tlačítko jednou z vašich navržených plateb a jeho zvolením se doplní částka. Do pole **Poznámka** napište třeba bankovní převod, zkontrolujte **Datum** (nesmí být v budoucnosti) a zvolte **Zaznamenat vyrovnání**."
+      - "**Sledujte, jak se zůstatek vyrovná.** Zůstatek se aktualizuje všem. Jakmile dorazí poslední platba, na **Zůstatky** se zobrazí **Vše vyrovnáno!**"
+  - heading: "Část teď, zbytek později"
+    body: "Uma může dnes večer poslat 200 € a zbytek koncem měsíce. Zaznamená 200 € a formulář ji upozorní, že jí po tom zůstane dluh vůči Mo 148 €, tedy 348 € minus 200 €. Uložte to a 148 € zůstane na jejím zůstatku, dokud nezaznamená zbytek. Upozornění funguje i opačným směrem. Pokud nula navíc změní 348 € na 3 480 €, formulář řekne, že vůči Mo dluží jen 348 € a že uložení by vytvořilo dluh opačným směrem. Opravte tu nulu, než to uložíte."
+  - heading: "Opravy chyb a oslavy plateb"
+    items:
+      - "**Špatná platba.** Platbu může upravit jen ten, kdo ji zaznamenal. Smazat ji může on nebo správce skupiny a pak ji lze zaznamenat znovu."
+      - "**Platba, které stojí za pozornost.** Každá zaznamenaná platba je pod **Vyrovnání** s datem a poznámkou, kde ji vidí všichni ve skupině a mohou na ni reagovat. Mo může zvolit **Oslava**, až dorazí posledních 148 € od Umy."
+      - "**Konec.** Když jsou všechny zůstatky na nule, může správce skupinu zamknout, aby čísla zůstala, jak jsou."
+  - heading: "Co Side Badger tady nedělá"
+    items:
+      - "Nikdy nepřesouvá peníze. Nemá odkazy na platbu ani žádosti o platbu, takže platba v aplikaci je záznam platby provedené jinde."
+      - "Neposílá žádné připomínky. Vymáhání opožděné platby je pořád na vás."
+      - "Nestanovuje lhůty. Kdy má Uma doplatit zbylých 148 €, se musí domluvit skupina."
+      - "Navržené platby jsou krátký seznam, ne příslib nejkratšího možného. Počítají se zvlášť pro každou měnu, takže výlet placený v eurech a librách dostane seznam pro každou."
+exampleAfter: 2
+example:
+  heading: "Pět přátel na pobřeží"
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: "Apartmán"
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: "Výlet lodí"
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: "Velká večeře"
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: "Taxi na letiště"
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: "Potraviny"
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Kdo by měl platbu zaznamenat, ten, kdo platí, nebo ten, kdo dostává?"
+      a: "Zaznamenání platby vyžaduje oprávnění upravovat výdaje a formulář se ptá **Kdo platil?** a **Kdo platbu přijal?** Platbu může později upravit jen ten, kdo ji zaznamenal, takže je obvykle nejjednodušší, když ji zadá plátce pomocí tlačítka rychlého vyrovnání."
+    - q: "Co když výlet běžel ve dvou měnách?"
+      a: "Zůstatky se vedou podle měn, takže dluh v eurech zůstane dluhem v eurech a každá měna dostane vlastní krátký seznam, pokud nebyly výdaje při zadání převedeny. [Výlet placený v několika měnách](page:guide/how-to-split-a-trip-paid-in-several-currencies) ukazuje obě cesty."
+    - q: "Máme se vyrovnat během výletu, nebo na konci?"
+      a: "Obojí funguje. Každá zaznamenaná platba mění zůstatky, takže platba uprostřed výletu se započítá do konečného seznamu. Na konci je to jednodušší, protože [celý výlet](page:use-case/group-trips) je na jednom místě."

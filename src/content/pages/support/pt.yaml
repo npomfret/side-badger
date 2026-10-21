@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Ajuda e apoio | Side Badger"
+  description: "Palavra-passe esquecida, um link que não funciona, um pagamento registado mal? Respostas curtas ao que prende as pessoas no Side Badger, e como falar connosco."
+h1: "Ajuda e apoio, sem música de espera"
+navLabel: "Ajuda e apoio"
+lead: "Respostas curtas ao que prende as pessoas, desde uma palavra-passe esquecida até fechar um grupo para sempre. Cada uma liga à página que explica mais. Não encontras a tua? Diz-nos de dentro da app, ou manda-nos umas linhas."
+cta:
+  heading: "Vieste pela ajuda, ficas para dividir?"
+  body: "Ainda sem conta? Começa um grupo, partilha o link e adiciona a primeira despesa. Grátis, sem anúncios e sem limites diários."
+groups:
+  - heading: "Iniciar sessão"
+    items:
+      - q: "Esqueceste-te da palavra-passe?"
+        a: "Acontece aos melhores texugos. Escolhe **Esqueceste-te da palavra-passe?** no ecrã **Entrar**, escreve o e-mail da tua conta e segue o link do e-mail que enviamos para escolheres uma nova. [Como funciona](page:how-it-works) explica o que mais é preciso numa conta."
+      - q: "Já me registei, mas não consigo adicionar nada. Porquê?"
+        a: "Quase sempre o e-mail ainda não está verificado, por isso abre o link do e-mail de verificação, ou escolhe **Reenviar e-mail de verificação** no aviso para receberes um novo. Se o e-mail já estiver verificado, o grupo pode estar bloqueado ou as suas permissões podem não o permitir, e um visualizador vê tudo e não altera nada, como explica [grupos e permissões](page:feature/groups-and-permissions)."
+      - q: "Como mudo o meu e-mail ou a minha palavra-passe?"
+        a: "Em **Definições**, escolhe **Alterar e-mail** ou **Alterar palavra-passe**. Ambas pedem primeiro a tua palavra-passe atual, e um novo endereço de e-mail tem de ser verificado através do link que lhe enviamos. [Como funciona](page:how-it-works) explica as contas."
+      - q: "Posso entrar com a Google ou a Apple?"
+        a: "Não. Basta um endereço de e-mail e uma palavra-passe com pelo menos 12 caracteres, e podes marcar **Lembrar de mim** no teu telemóvel ou computador. A página da [app web](page:feature/web-app) explica o resto para começares."
+  - heading: "Entrar num grupo"
+    items:
+      - q: "Alguém me enviou um link de convite. Como entro?"
+        a: "Abre-o e depois inicia sessão ou cria uma conta grátis. Vais ver uma pré-visualização do grupo, escolhes lá o nome com que as pessoas te vão ver e carregas em **Participar no grupo**. [Grupos e permissões](page:feature/groups-and-permissions) mostra o caminho todo."
+      - q: "Diz “A aguardar aprovação”. Fiz alguma coisa mal?"
+        a: "De maneira nenhuma. Neste grupo, um administrador deixa entrar cada pessoa, por isso o teu pedido foi para os administradores e não consegues ver lá dentro até um deles o aprovar. Um empurrãozinho simpático em pessoa é permitido, e [grupos e permissões](page:feature/groups-and-permissions) explica a aprovação."
+      - q: "O link diz que é inválido ou que expirou."
+        a: "Os links de convite duram o tempo que quem os criou escolheu, de 15 minutos até 5 dias. Pede a alguém do grupo um link novo, ou o código QR se estiverem na mesma sala. [Como funciona](page:how-it-works) explica os convites."
+  - heading: "Despesas"
+    items:
+      - q: "Como adiciono uma despesa?"
+        a: "Abre o grupo e escolhe **Adicionar despesa**. Diz o que foi, quanto custou, quem pagou e quem a partilhou, e depois divide-a em partes iguais, por valores exatos ou por percentagem. [Dividir despesas](page:feature/split-expenses) percorre todas as opções."
+      - q: "A renda pode repetir-se todos os meses?"
+        a: "Sozinha não, porque não há despesas recorrentes. Abre a do mês passado e escolhe **Copiar despesa**, e o formulário aparece preenchido, pronto para uma nova data e para o que tiver mudado. [Dividir despesas](page:feature/split-expenses) tem mais sobre copiar."
+      - q: "Escrevi o valor errado. Posso corrigi-lo?"
+        a: "Sim. Edita a despesa, desde que as permissões do grupo o permitam e o grupo não esteja bloqueado. A versão anterior fica guardada, por isso ninguém tem de acreditar na tua palavra sobre o que mudou, como explica [dividir despesas](page:feature/split-expenses)."
+      - q: "Uma despesa parece errada, e não é minha. E agora?"
+        a: "Escolhe **Tenho uma pergunta** nela e diz porquê, e a despesa inteira fica fora dos saldos de todos até a pessoa que perguntou, ou um administrador, fechar a pergunta. Não há esse botão? Só as pessoas incluídas numa despesa podem perguntar, um administrador tem de ativar primeiro **Permitir perguntas sobre despesas** nas definições do grupo, e o [guia da despesa contestada](page:guide/what-to-do-when-someone-disputes-a-shared-expense) tem a diplomacia."
+  - heading: "Pagamentos"
+    items:
+      - q: "O Side Badger envia o dinheiro?"
+        a: "Não, o Side Badger nunca movimenta dinheiro. Paguem-se como preferirem, por transferência bancária, em dinheiro ou pelo que funcionar, e depois registem o pagamento para os saldos acompanharem. [Como acertar as contas depois de uma viagem em grupo](page:guide/how-to-settle-up-after-a-group-trip) percorre tudo do princípio ao fim."
+      - q: "Como registo um pagamento?"
+        a: "Escolhe **Acertar contas** no grupo, indica quem pagou e quem recebeu, escreve o valor ou deixa um botão de **Acerto rápido** preenchê-lo, e escolhe **Registar acerto**. Pagou-se só uma parte? Regista o que foi pago e o resto fica no saldo, como explica [acertar contas](page:feature/settle-up)."
+      - q: "Registei um pagamento mal. Posso corrigi-lo?"
+        a: "Quem o registou pode editá-lo no histórico de **Acertos** do grupo, e essa pessoa ou um administrador pode apagá-lo, o que o tira dos saldos. Um pagamento que envolva alguém que entretanto saiu do grupo não pode ser editado. [Acertar contas](page:feature/settle-up) explica o histórico."
+  - heading: "Notificações e ecrã principal"
+    items:
+      - q: "Como ativo as notificações?"
+        a: "Liga **Notificações push** nas **Definições** e permite-as quando o navegador perguntar. Se o navegador já as tiver bloqueado, permite-as primeiro nas definições dele. Cada dispositivo é ativado em separado e a entrega não é garantida, por isso trata uma notificação como um empurrãozinho, não como uma promessa, como explica a página da [app web](page:feature/web-app)."
+      - q: "Porque é que as notificações não funcionam no meu iPhone?"
+        a: "No iPhone e no iPad só funcionam na app adicionada ao ecrã principal, nunca num separador do navegador. Adiciona-a, abre-a a partir do ícone do ecrã principal e depois liga-as nas **Definições**. [Planear em conjunto](page:feature/plan-together) mostra o que elas te dizem."
+      - q: "Há uma app para descarregar?"
+        a: "Não numa loja de aplicações, porque o Side Badger funciona no navegador. Inicia sessão e depois segue **Adicionar ao ecrã principal ou ao Dock** nas **Definições**, e ele abre como uma app, numa janela própria. A página da [app web](page:feature/web-app) tem os passos para cada dispositivo."
+  - heading: "Sair, arquivar, bloquear e fechar"
+    items:
+      - q: "Como saio de um grupo?"
+        a: "Acerta as contas e depois escolhe **Sair do grupo**. Não podes sair enquanto deves ou tens dinheiro a receber, mesmo numa só moeda, enquanto uma despesa em que estás tiver uma pergunta em aberto, nem se fores o último administrador ou o único membro, e voltar exige um novo convite. [Grupos e permissões](page:feature/groups-and-permissions) tem os detalhes."
+      - q: "Como tiro um grupo antigo do meu painel?"
+        a: "Escolhe **Arquivar grupo**. Ele desaparece do teu painel e de mais ninguém, podes continuar a abri-lo e a usá-lo, e **Desarquivar grupo** traz-o de volta. [Grupos e permissões](page:feature/groups-and-permissions) compara arquivar, bloquear e fechar."
+      - q: "A viagem acabou. Podemos impedir que os números mudem?"
+        a: "Sim. Um administrador pode ativar **Bloquear grupo** nas definições do grupo, e ninguém pode adicionar nem editar despesas, registar novos pagamentos nem alterar listas e sondagens até um administrador o desbloquear. Todos continuam a poder ler o grupo e o seu histórico, e nenhum táxi tardio se esgueira lá para dentro, como explica [grupos e permissões](page:feature/groups-and-permissions)."
+      - q: "Posso apagar um grupo?"
+        a: "Um administrador pode fechá-lo com **Fechar grupo**, depois de escrever o nome do grupo para confirmar. Fechar é permanente e torna o grupo indisponível para todos, por isso, se só o queres fora de vista, arquiva-o. [Grupos e permissões](page:feature/groups-and-permissions) tem as letras pequenas."
+contact:
+  heading: "Ainda sem solução?"
+  items:
+    - q: "Encontraste um erro, ou queres que algo mude?"
+      a: "Diz-nos de dentro da app. Escolhe **Opiniões** no menu da tua conta, depois **Enviar feedback**, e escolhe **Reportar problema**, **Solicitar ajuda** ou **Solicitação de funcionalidade**. Anexa uma captura de ecrã se ajudar, e quando respondermos encontras a resposta na mesma conversa."
+    - q: "Preferes escrever-nos um e-mail?"
+      a: "Escreve para o endereço abaixo. Diz de que grupo se trata, o que fizeste e o que esperavas que acontecesse. Desabafar é permitido; palavras-passe não, por isso nunca envies a tua."
+  emailLabel: "Envia-nos um e-mail para"
+  email: support@sidebadger.me

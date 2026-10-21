@@ -1,0 +1,88 @@
+# P9 of the wave 2 and 3 briefs (tasks/release-2-plan.md). The worked example is guide 1's flat
+# (how-to-split-rent-by-room-size); every number in the prose is the example's or the arithmetic shown.
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "房租分摊计算器：按房间大小或收入 | Side Badger"
+  description: "房间大，就多付一点？按房间大小或收入，算出每位室友该付多少。在浏览器中运行，不保存也不发送任何数据。"
+h1: 房租分摊计算器
+navLabel: 房租分摊计算器
+lead: 卧室更大，份额就更大？输入房租，按房间大小或收入，精确算出每个人该付多少。它在你的浏览器里运行，不保存任何内容，也不转移资金。等这个家想把账一直记下去时，就在 Side Badger 里[分摊支出](page:feature/split-expenses)，每个月复制一次房租即可。
+cta:
+  heading: 比例定一次，从此一直复制。
+  body: 这个计算器一关掉标签页就什么都忘了，很像那位“肯定付过宽带费”的室友。Side Badger 群组会保存房租、账单，以及谁付了什么。免费，无广告，无每日限制。
+sections:
+  - heading: 分摊房租的两种方式
+    items:
+      - "**按房间大小。**房租的一部分是为厨房、浴室和客厅付的，这些人人都用。这一部分的比例由你定（一开始是 40%），并且平均分摊。其余部分按卧室面积分，所以大房间多付，杂物间则得到它应得的折扣。"
+      - "**按收入。**每个人付的房租占比，等于他的收入占总收入的比例。加上共同账单的话，账单也沿用同样的份额。"
+  - heading: 计算过程
+    body: "每个人先得到一个精确份额，再得到一个取整的百分比，因为整数更容易输入，也更方便争论。取整用的是最大余数法：每个人先保留低于自己份额的那个整数，剩下的百分点分给损失最多的人。百分比合计永远是 100。在下面这套房子里，共用的 40% 每人 13.33%。Priya 的房间是整套房子 38 平方米里的 16 平方米，所以 60% × 16/38 是 25.26%，再加上 13.33% 就是 38.6%，取整为 39%。Tom 和 Aisha 分别是 32% 和 29%，而 39 + 32 + 29 正好是 100。每笔金额就是房租乘以这个百分比：£1,950 的 39% 是 £760.50。"
+  - heading: 然后输入到 Side Badger
+    body: "想看完整的故事（连卷尺都有），请见[如何按房间大小分摊房租](page:guide/how-to-split-rent-by-room-size)；情侣可以看[收入更高的伴侣](page:guide/how-to-split-bills-with-a-partner-who-earns-more)。"
+    items:
+      - "**添加房租。**在你的群组里选择**添加费用**，在**谁付的钱？**下选出付给房东的人，并让**分摊给**下保持所有人都在。"
+      - "**选择百分比。**在**如何拆分**下选择**百分比**，输入取整后的百分比。如果合计不是 100，表单会提醒你。"
+      - "**下个月复制。**打开上个月的房租，选择**复制费用**。分摊方式会一并带过来。"
+  - heading: 计算器不做什么
+    items:
+      - "**替你量房间。**面积只是个起点。带独立卫生间的房间比同样面积却没有的更值钱，而只放得下一张床和一把满怀希望的椅子的杂物间则不那么值钱。"
+      - "**决定什么算收入。**税后还是税前，工资还是副业：由群组自己决定。所有人请使用同一个周期。"
+      - "**保存任何内容。**关掉标签页，数字就没了。想保留它们，请复制链接。链接把你的数字放在 # 之后，浏览器从不把这部分发送给服务器，不过拿到链接的人都能读到这些数字。"
+      - "**转移资金。**你们想怎么付给房东就怎么付。"
+      - "**混用货币，或突破上限。**请选一种货币。它支持 2 到 10 人，房租最高 999,999.99，与应用一致。"
+exampleAfter: 2
+example:
+  heading: 一套房子，一个月
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: 房租
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: 能源费
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: 宽带费
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: 常见问题
+  items:
+    - q: 按房间大小和按收入，哪种更公平？
+      a: 没有哪一种永远更公平。按房间大小适合各自为睡的空间付钱的室友；按收入适合收入差距很大的情侣和朋友。请在第一个交租日之前谈好，而不是之后。
+    - q: 账单也要这样分摊吗？
+      a: 对室友来说，通常不用。能源和宽带大家都用，所以平均分摊更简单，就像算例里那样。按收入时，计算器会让账单沿用与房租相同的份额。
+    - q: 可以用平方英尺吗？
+      a: 可以。选择 ft²，再用平方英尺输入面积。单位只是个标签，只要所有人用同一个单位，算出的份额都一样。
+    - q: 这个计算器免费吗？
+      a: 免费。无广告。无每日限制。你也不需要账户。
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name

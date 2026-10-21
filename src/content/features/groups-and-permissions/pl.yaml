@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Uprawnienia i zarządzanie grupą wydatków | Side Badger"
+  description: "Zapraszaj linkiem lub kodem QR, zatwierdzaj nowych, ustaw widzów i uprawnienia, a na końcu zablokuj grupę. Twoja grupa, twoje zasady, w granicach rozsądku."
+h1: "Zarządzanie grupą i uprawnienia: twoje zasady, w granicach rozsądku"
+navLabel: "Grupy i uprawnienia"
+lead: "Niektóre grupy potrzebują skarbnika. Side Badger ma na to ustawienie. Zapraszaj ludzi linkiem lub kodem QR, decyduj, kto wchodzi, i wybieraj, kto może zmieniać kwoty. Mała grupa znajomych może to wszystko zignorować, bo nowe grupy startują szeroko otwarte."
+cta:
+  heading: "Czas zaprowadzić w grupie porządek?"
+  body: "Załóż konto, utwórz grupę i wyślij link z zaproszeniem. Zostaw ją otwartą albo zaostrz zasady, gdy grupa się powiększy albo zrobi się bardziej drobiazgowa."
+problem:
+  heading: "Ktoś musi trzymać liczby w ryzach"
+  body: "Czworo współlokatorów może działać na zaufaniu. Trzydziestu gości na weselnym weekendzie raczej nie. Załóż grupę dla każdego domu, wyjazdu i wydarzenia, z maksymalnie 50 osobami, a każda grupa ma własnych członków, własne role i własne zasady. Twój panel pokazuje je wszystkie, razem z twoją sytuacją w każdej, na jednym ekranie. Większość grup nigdy nie rusza ustawień. Te, które to robią, mają zwykle kogoś na tyle zorganizowanego, że chce z nich korzystać."
+workflow:
+  heading: "Od pustej grupy do zablokowanej"
+  steps:
+    - title: "Zaproś linkiem lub kodem QR"
+      body: "Otwórz **Zaproś innych**, wybierz, jak długo ma działać link (15 minut, 1 godzinę, 1 dzień albo 5 dni), a potem skopiuj link albo pokaż kod QR do zeskanowania. W aplikacji możesz też zaprosić osoby, z którymi masz już wspólną inną grupę."
+      shot: S03
+      shotAlt: "Okno zaproszenia z linkiem do grupy, jego kodem QR i wyborem czasu ważności linku"
+    - title: "Niech się rozejrzą, zanim dołączą"
+      body: "Każdy z linkiem loguje się albo zakłada konto, widzi podgląd grupy i wybiera imię, pod którym chce w niej występować. Potem naciska **Dołącz do grupy**."
+      shot: S04
+      shotAlt: "Podgląd grupy przed dołączeniem, widoczny dla zalogowanej osoby"
+    - title: "Zatwierdzaj, kto dołącza"
+      body: "Włącz zatwierdzanie, a osoby korzystające z linku czekają jako oczekujący członkowie, aż administrator je wpuści. Administratorzy znajdą je w sekcji **Oczekujący członkowie** w zakładce **Bezpieczeństwo** i wybiorą **Zatwierdź** albo **Odrzuć**. Do tego czasu oczekująca osoba nie widzi niczego w grupie."
+      shot: S14
+      shotAlt: "Oczekujący członkowie czekają, aż administrator ich zatwierdzi albo odrzuci"
+    - title: "Wybierz, kto może co zmieniać"
+      body: "Wybierz profil **Otwarty** lub **Zarządzany** albo ustaw uprawnienia jedno po drugim. Potem nadaj każdej osobie rolę: administratora, członka lub widza. Uprawnienia i role mogą zmieniać tylko administratorzy."
+      shot: S13
+      shotAlt: "Zakładka bezpieczeństwa w ustawieniach grupy z dwoma profilami i uprawnieniami niestandardowymi"
+    - title: "Zablokuj ją, gdy po wszystkim"
+      body: "Gdy wyjazd się skończy, a kwoty się ułożą, administrator może włączyć **Zablokuj grupę**. Nikt nie może dodawać ani zmieniać wydatków, rejestrować płatności ani edytować list i ankiet, a baner o tym informuje. Nikt nie dorzuci po cichu spóźnionej taksówki. Jeśli jakaś się jednak pojawi, administrator może odblokować grupę."
+      shot: S15
+      shotAlt: "Grupa z banerem informującym, że jest zablokowana"
+options:
+  heading: "Administratorzy, członkowie i widzowie"
+  items:
+    - title: "Administrator"
+      body: "Prowadzi grupę. Administratorzy zatwierdzają nowych członków, zmieniają role i uprawnienia, blokują i odblokowują grupę oraz ją zamykają. Kto tworzy grupę, zaczyna jako jej administrator, a grupa nigdy nie zostaje bez administratora, bo ostatniego nie można zdegradować."
+    - title: "Członek"
+      body: "Bierze udział. To, co członek może robić, zależy od uprawnień grupy. W grupie z profilem Otwarty to prawie wszystko. W grupie z profilem Zarządzany członkowie mogą zmieniać tylko wydatki i listy, które sami utworzyli."
+    - title: "Widz"
+      body: "Widzi wszystko i niczego nie zmienia. Widz nie może dodawać ani edytować wydatków i list, zapraszać ludzi, zmieniać ustawień ani ruszać zdjęcia nagłówka. Przydatne dla osoby, która chce patrzeć na liczby i obiecuje przy nich nie majstrować."
+sections:
+  - heading: "Otwarty, zarządzany albo własne zasady"
+    body: "Nowe grupy zaczynają z profilem **Otwarty**, w którym każdy może zapraszać ludzi, zmieniać wydatki i edytować listy, a nowi członkowie dołączają automatycznie. Profil **Zarządzany** jest na takie sytuacje, gdy ktoś musi być tym dorosłym. Możesz też ustawić siedem uprawnień jedno po drugim, a ręczna zmiana któregokolwiek przełącza grupę na ustawienia niestandardowe. Cokolwiek wybierzesz, same uprawnienia mogą zmieniać tylko administratorzy, a każda zmiana pojawia się w aktywności grupy. Grupa [współlokatorów](page:use-case/housemates) w jednym mieszkaniu może zostawić wszystko otwarte. Duże [wydarzenie albo uroczystość](page:use-case/events-and-celebrations) często woli profil Zarządzany, żeby ktoś decydował, kto dołącza. Dopiero zaczynasz? [Jak to działa](page:how-it-works) przeprowadza przez całą drogę, od pierwszego wydatku do rozliczenia."
+    items:
+      - "**Kto może edytować wydatki.** Otwarty: każdy członek. Zarządzany: twórcy i administratorzy."
+      - "**Kto może usuwać wydatki.** Otwarty: każdy członek. Zarządzany: twórcy i administratorzy."
+      - "**Kto może edytować listy.** Otwarty: każdy członek. Zarządzany: twórcy i administratorzy."
+      - "**Kto może zapraszać członków.** Otwarty: każdy członek. Zarządzany: tylko administratorzy."
+      - "**Zatwierdzanie nowych członków.** Otwarty: automatycznie. Zarządzany: wymagana akceptacja administratora."
+      - "**Kto może zarządzać ustawieniami.** Otwarty: każdy członek. Zarządzany: tylko administratorzy."
+      - "**Kto może zmienić zdjęcie nagłówka.** Otwarty: każdy członek. Zarządzany: tylko administratorzy."
+  - heading: "Twoja nazwa, twoje zdjęcie, zdjęcie nagłówka"
+    body: "Każda grupa ma własną obsadę. Wybierz nazwę, pod którą widzą cię ludzie w każdej grupie (od 2 do 50 znaków, niepowtarzalną w grupie), i które ze swoich zdjęć profilowych tam nosisz. W domu możesz być **Kasią**, a na wyjeździe **Kasią (z samochodem)**. Każdy, kto może zmieniać ustawienia, może zmienić nazwę grupy i edytować jej opis. Zdjęcie nagłówka, JPEG, PNG, GIF albo WebP do 10 MB, ma własne uprawnienie."
+  - heading: "Zarchiwizuj, zablokuj albo zamknij"
+    body: "Trzy sposoby na odłożenie grupy, od najmniej do najbardziej poważnego."
+    items:
+      - "Opcja **Zarchiwizuj grupę** ukrywa grupę w twoim panelu, a w niczyim innym. Nadal możesz ją otworzyć i korzystać z niej jak dotąd, a **Przywróć grupę** pokazuje ją znowu."
+      - "Opcja **Zablokuj grupę** zamraża zmiany, dopóki administrator jej nie odblokuje. Wszyscy nadal mogą czytać grupę i jej historię."
+      - "Opcja **Zamknij grupę** jest nieodwracalna i dotyczy wszystkich. Może to zrobić tylko administrator, wpisując na potwierdzenie nazwę grupy, a potem nikt nie może jej już otworzyć."
+  - heading: "Opuszczanie grupy"
+    body: "Każdy może wyjść, gdy się rozliczy. Nie możesz wyjść, dopóki jesteś komuś winien pieniądze albo ktoś jest winien tobie, nawet w jednej walucie, dopóki dotyczy cię otwarte pytanie o wydatek, ani jeśli jesteś ostatnim administratorem albo jedynym członkiem. [Zarejestruj płatność](page:feature/settle-up), wyjaśnij [pytanie o wydatek](page:guide/what-to-do-when-someone-disputes-a-shared-expense) albo zrób administratorem kogoś innego, a potem wychodź. Żeby wrócić, będziesz potrzebować nowego zaproszenia."
+limits:
+  heading: "W granicach rozsądku: drobny druk"
+  items:
+    - "W grupie może być do 50 osób."
+    - "Uprawnienia i role mogą zmieniać tylko administratorzy. Ostatniego administratora nie można zdegradować."
+    - "Ustawienie edycji wydatków na **Tylko administratorzy** oznacza też, że tylko administratorzy mogą dodawać wydatki."
+    - "Blokada wstrzymuje zmiany wydatków, nowe płatności, listy i ankiety. Wszyscy nadal mogą czytać grupę i jej historię oraz reagować na płatności."
+    - "Zamknięcie jest nieodwracalne. Aplikacja nie ma sposobu, by ponownie otworzyć zamkniętą grupę."
+    - "Utworzenie nowego linku z zaproszeniem nie unieważnia starych. Każdy link działa do własnego wygaśnięcia, więc wybierz krótki, gdy martwisz się, gdzie może wylądować."
+    - "Zaproszenia w aplikacji pokazują osoby z twoich 10 ostatnio aktywnych grup. Wszyscy inni potrzebują linku, a to, kto może zapraszać, zależy od uprawnień grupy."
+    - "Dołączenie wymaga konta, a przed dodaniem czegokolwiek trzeba zweryfikować adres e-mail."
+useCasesHeading: "Gdzie przydaje się odrobina porządku"
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Czy widz może dodawać wydatki?"
+      a: "Nie. Widz widzi wszystko i niczego nie zmienia. Nie może dodawać ani edytować wydatków i list, zapraszać ludzi ani zmieniać ustawień."
+    - q: "Czy ktoś może wyjść, będąc komuś winien pieniądze?"
+      a: "Nie. Nikt nie może opuścić grupy, dopóki jest komuś winien pieniądze albo ktoś jest winien jemu, nawet w jednej walucie. Najpierw się rozlicz, potem wychodź."
+    - q: "Co się dzieje, gdy grupa zostanie zamknięta?"
+      a: "Nikt nie może otworzyć jej ponownie. Grupę może zamknąć tylko administrator, musi wpisać na potwierdzenie nazwę grupy, a grupa staje się niedostępna dla wszystkich. Jeśli chcesz tylko zatrzymać zmiany, zablokuj ją. Jeśli chcesz tylko zdjąć ją ze swojego panelu, zarchiwizuj ją."
+    - q: "Czy mogę cofnąć blokadę?"
+      a: "Tak. Administrator może odblokować grupę i zmiany znów działają."
+    - q: "Czy muszę zatwierdzać ludzi, zanim dołączą?"
+      a: "Tylko jeśli chcesz. Nowe grupy zaczynają z profilem Otwarty, w którym osoby korzystające z linku dołączają automatycznie. Włącz akceptację administratora albo wybierz profil Zarządzany, a każda osoba czeka, aż administrator ją wpuści."
+    - q: "Ile osób może być w grupie?"
+      a: "Do 50."

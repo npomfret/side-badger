@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+meta:
+  title: "Bikote-gastuak: 50/50 edo diru-sarreren arabera | Side Badger"
+  description: "Partekatu kostu aspergarriak, zita-gaua hiruhileko finantza-berrikuspen bihurtu gabe. Banatu 50/50, diru-sarreren arabera edo gastuz gastu. Doakoa."
+h1: Partekatu kostuak bikote gisa, bidezko moduan
+navLabel: Bikoteak
+lead: Partekatu kostu aspergarriak zita-gaua hiruhileko finantza-berrikuspen bihurtu gabe. Side Badger-ek alokairuaren, fakturen eta erosketaren kontu bakarra eramaten du etxe bat, sofa bat eta Interneta nork ordaindu zuen oroitzapen lauso bat partekatzen dituzten **bikoteentzat**. Banatu 50/50, diru-sarreren arabera edo faktura bakoitza bere aldetik, eta ikusi nork nori zor dion.
+cta:
+  heading: Hasi bi pertsonako talde bat
+  body: Sortu kontu bat, egin talde bat eta bidali gonbidapen-esteka zure bikotekideari. Gaurko eramateko janaria izan daiteke lehen gastua.
+scenario:
+  heading: Bidezkoa ez da zertan 50/50 izan
+  body: Samek eta Alexek etxe bat partekatzen dute. Samek gehiago irabazten du, beraz alokairuaren %60 Samek eta %40 Alexek hartzea adostu zuten. Samek etxejabeari ordaintzen dio, Alexek erosketak egiten ditu, eta biak nahiko ziur daude dena berdintzen dela. “Nahiko ziur” da norbaiten telefonoko ohar bat desadostasun iraunkor bihurtzen den modua. Beraz, egin talde bat zuek biontzat, aukeratu zure bikotekideak ikusiko duen izena eta bidali gonbidapen-esteka edo QR kodea. Gehitu kostu bakoitza gertatzen denean, esan nork ordaindu duen eta nola banatzen den, eta utzi taldeari kontua eramaten. Egin talde bereizi bat oporraldi bakoitzerako (ikusi [taldeko bidaiak](page:use-case/group-trips)), hegaldiak erosketetatik kanpo geratzeko.
+sections:
+  - heading: 50/50, diru-sarreren arabera edo faktura bakoitza bere aldetik
+    body: Ez dago denentzat bidezkoa den banaketarik, zuek biok adosten duzuena baizik, ahal bada lehen fakturaren aurretik eta ez lehen hasperenaren ondoren. Hauek dira ohiko hiru moduak.
+    items:
+      - "**50/50.** Aukeratu **Berdin-berdin** eta bakoitzak erdia zor du. Zuen diru-sarrerak antzekoak direnean partekatutako kostuetarako egokia da, eta ez du aritmetikarik behar."
+      - "**Diru-sarreren arabera.** Zuetako batek gehiago irabazten badu, banatu pertsona bakoitzak etxera sartzen den diruaren zer zati ekartzen duen kontuan hartuta. Adostu lehenik zer kontatzen den (eskuratutako soldata garbia da ohiko aukera), batu biak eta zatitu zurea guztizkoaz. Zuetako batek hiru zati etxera eramaten baditu besteak bi eramaten dituen bitartean, hori 3 ÷ (3 + 2) = %60 da, beraz batek %60 hartzen du eta besteak %40. Biribildu ehuneko osoetara eta sartu **Ehunekoa** azpian, non 100 batu behar duten. Ez dago zure soldata sartzeko tokirik, beraz ehunekoak bakarrik idazten dituzu."
+      - "**Faktura bakoitza bere aldetik.** Gastu bakoitzak bere banaketa du, beraz nahas dezakezue: alokairua diru-sarreren arabera, erosketak 50/50, eta opari bateratua **Zenbateko zehatzak** erabiliz, bakoitzak zer jarri aukeratu baduzue."
+      - "**Soldata aldatzen denean,** erabili ehuneko berriak hurrengo gastutik. Aurreko gastuek sartu zirenean zuten banaketa gordetzen dute. Kalkuluak benetako soldata-orriekin ikusteko, irakurri [soldata handiagoa duen bikotekidearekin fakturak nola banatu](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: Hilabeteko laburpena
+    body: Hilean behin, edo zenbakiek azkura ematen hasten direnean, ireki taldea eta egiaztatu **Balantzeak**. Bi zaretenez, moneta bakoitzean ordainketa bakarra dago beti, zor duenetik zor zaionera. Hartu Sam eta Alexen hilabetea. Samek alokairua ordaindu zuen, 1.500 £, eta horren %40 Alexena da, 600 £. Alexek 90 £ ordaindu zituen erosketengatik, berdin banatuta, beraz Samen erdia 45 £ da. Side Badger-ek bata bestearen aurka jartzen du, 600 £ ken 45 £, eta Alexek 555 £ ordaintzen dizkio Sami. Ordaindu nahi duzuen moduan, banku-transferentziaz, eskudiruz edo mesede baten truke, eta gero erregistratu **Kitatu** atalean saldoa zerora itzul dadin. Ez dago faktura errepikaririk, beraz kopiatu joan den hilabeteko alokairua, aldatu data eta aurrera. Side Badger-ek ez du dirua mugitzen eta ez du gogorarazpenik bidaltzen, beraz bultza txiki hori zurea izaten jarraitzen du.
+  - heading: Zuek biok bakarrik
+    body: Bi pertsonako talde batek bi kide ditu, eta talde bateko kideek bakarrik ikus dezakete. Zure bikotekidea gonbidapen-esteka edo QR kodearekin batzen da. Esteka batek 15 minutu eta 5 egun artean iraun dezake, beraz aukeratu zure bikotekideak erabiltzeko denbora ematen dion laburrena. Esteka berri bat egiteak ez ditu zaharrak baliogabetzen, beraz ez utzi beste jendea dagoen txat batean. Esteka bizi bat erabiltzen duen edonor batu daiteke, beraz ziur egon nahi baduzu, aktibatu onarpena eta administratzaile batek utziko dio pertsona bakoitzari sartzen. Zure bikotekideak bere kontu bat behar du, doakoa.
+exampleAfter: 2
+example:
+  heading: Hilabete honetan nork nori zor dion
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: Alokairua
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: Erosketak
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: Bikote batek erabiltzen dituen ezaugarriak
+faq:
+  heading: Galderak
+  items:
+    - q: 60/40 behin ezar dezakegu dena egiteko?
+      a: Ez. Banaketa gastu bakoitzarena da. Ezarri ehunekoak lehenengoan, gero kopiatu hurrengoan eta aldatu desberdina dena. [Gastuak banatzeak](page:feature/split-expenses) hiru banaketa moduak azaltzen ditu.
+    - q: Gure bankuarekin lotzen al da?
+      a: Ez. Side Badger-ek ez du inoiz zure dirua ukitzen. Elkarri nahi duzuen moduan ordaintzen diozue, eta gero erregistratu, [kitatzeak](page:feature/settle-up) azaltzen duen bezala.
+    - q: Beste inork ikus dezake gure taldea?
+      a: Kideek bakarrik, eta bikote baten taldeak bi ditu. Gonbidapen-esteka bizi bat erabiltzen duen edonor batu daiteke, beraz partekatu pertsona bakar batekin eta jarri iraungitze labur bat.
+    - q: Zer gertatzen da biok fakturaren zati bat ordaindu badugu?
+      a: Gastu batek ordaintzaile bakarra du. Erregistratu bi gastu, bat zuetako bakoitzarentzat, eta saldoa berdin ateratzen da.
+    - q: Nire bikotekideari ordaintzeko gogoraraziko al dio?
+      a: Ez. Ez dago gogorarazpenik, beraz bultza txiki hori zurea izaten jarraitzen du. Behintzat biok zenbaki bera begiratuko duzue.
+    - q: Zer gertatzen da kostuak partekatzeari uzten diogunean?
+      a: Kitatu saldoa eta erregistratu ordainketa, inork ezer zor ez dezan. Gero administratzaile batek taldea blokea dezake, zenbakiak dauden bezala uzten dituena, edo betiko itxi, denentzat sartezina bihurtzen duena. Itxi bakarrik zuetako inork historiarik behar ez duenean.

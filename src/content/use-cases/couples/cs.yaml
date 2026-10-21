@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+meta:
+  title: "Dělte účty s partnerem, 50/50 i podle příjmu | Side Badger"
+  description: "Sdílejte nudné náklady, aniž byste z rande udělali čtvrtletní finanční audit. Dělte 50/50, podle příjmu nebo účet po účtu a sledujte, kdo komu dluží. Zdarma."
+h1: "Sdílejte náklady jako pár, spravedlivě"
+navLabel: "Páry"
+lead: "Sdílejte nudné náklady, aniž byste z rande udělali čtvrtletní finanční audit. Side Badger vede jeden průběžný přehled nájmu, účtů a nákupů pro **páry**, které sdílejí domov, gauč a mlhavou vzpomínku na to, kdo platil internet. Dělte 50/50, podle příjmu nebo účet po účtu a sledujte, kdo komu dluží."
+cta:
+  heading: "Založte skupinu pro dva"
+  body: "Vytvořte si účet, založte skupinu a pošlete protějšku odkaz s pozvánkou. Dnešní jídlo s sebou může být první výdaj."
+scenario:
+  heading: "Spravedlivě nemusí znamenat 50/50"
+  body: "Sam a Alex sdílejí domov. Sam vydělává víc, takže se dohodli, že Sam vezme 60 % nájmu a Alex 40 %. Sam platí pronajímateli, Alex dělá nákup a oba si jsou docela jistí, že se to vyrovná. Docela jistí je přesně to, z čeho se poznámka v něčím telefonu stane trvalou neshodou. Založte tedy skupinu pro vás dva, zvolte jméno, pod kterým vás má protějšek vidět, a pošlete mu odkaz s pozvánkou nebo QR kód. Přidávejte každý náklad, když nastane, řekněte, kdo platil a jak se dělí, a nechte skupinu vést počty. Pro každou dovolenou udělejte samostatnou skupinu (viz [skupinové výlety](page:use-case/group-trips)), aby letenky zůstaly mimo potraviny."
+sections:
+  - heading: "50/50, podle příjmu nebo účet po účtu"
+    body: "Neexistuje univerzálně spravedlivé rozdělení, jen to, na kterém se oba shodnete, ideálně před prvním účtem, ne po prvním povzdechu. Tady jsou obvyklé tři."
+    items:
+      - "**50/50.** Vyberte **Rovnoměrně** a každý z vás dluží polovinu. Hodí se na společné náklady, když jsou vaše příjmy blízko sebe, a nepotřebuje žádnou matematiku."
+      - "**Podle příjmu.** Pokud jeden z vás vydělává víc, dělte podle podílu každého na příjmech. Nejdřív se dohodněte, co se počítá (běžná je čistá mzda), sečtěte oba příjmy a svůj vydělte součtem. Pokud jeden z vás přinese domů tři díly a druhý dva, je to 3 ÷ (3 + 2) = 60 %, takže jeden z vás pokrývá 60 % a druhý 40 %. Zaokrouhlete na celá procenta a zadejte je pod **Procenta**, kde musí dát dohromady 100. Nemáte kam zadat plat, takže vždy píšete jen procenta."
+      - "**Účet po účtu.** Každý výdaj má vlastní rozdělení, takže můžete míchat: nájem podle příjmu, nákupy 50/50 a společný dárek přes **Přesné částky**, pokud jste si každý vybrali, kolik přidáte."
+      - "**Když se plat změní,** použijte nová procenta od dalšího výdaje. Dřívější výdaje si ponechají rozdělení, se kterým byly zadány. Chcete-li vidět výpočty se skutečnými výplatními páskami, přečtěte si [jak dělit účty, když jeden z partnerů vydělává víc](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: "Měsíční uzávěrka"
+    body: "Jednou za měsíc, nebo kdykoli čísla začnou svědit, otevřete skupinu a zkontrolujte **Zůstatky**. S vámi dvěma je vždy jen jedna platba v každé měně, od toho, kdo dluží, tomu, komu se dluží. Vezměte měsíc Sama a Alexe. Sam zaplatil nájem 1 500 £ a Alexových 40 % z toho je 600 £. Alex zaplatil 90 £ za potraviny, rozdělené rovným dílem, takže Samova polovina je 45 £. Side Badger jedno postaví proti druhému, 600 £ mínus 45 £, a Alex platí Samovi 555 £. Zaplaťte, jak chcete, bankovním převodem, hotově nebo dluženou laskavostí, a pak platbu zaznamenejte pod **Vyrovnat dluhy**, aby se zůstatek vrátil na nulu. Opakované účty neexistují, takže nájem z minulého měsíce zkopírujte, změňte datum a pokračujte. Side Badger peníze nepřesouvá ani neposílá připomínky, takže šťouchnutí zůstává na vás."
+  - heading: "Jen vy dva"
+    body: "Skupina dvou má dva členy a skupinu vidí jen její členové. Váš protějšek se připojí odkazem s pozvánkou nebo QR kódem. Odkaz může platit od 15 minut do 5 dní, zvolte tedy nejkratší, který protějšku dá čas ho použít. Vytvoření nového odkazu staré neruší, takže je nenechávejte v chatu, kde jsou i jiní lidé. Připojit se může každý, kdo použije platný odkaz, takže pokud chcete mít jistotu, zapněte schvalování a administrátor každého pustí dovnitř. Váš protějšek potřebuje vlastní účet, který je zdarma."
+exampleAfter: 2
+example:
+  heading: "Kdo komu tento měsíc dluží"
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: "Nájem"
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: "Nákupy"
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: "Funkce, které pár využívá"
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Můžeme nastavit 60/40 jednou pro všechno?"
+      a: "Ne. Rozdělení patří ke každému výdaji. Nastavte procenta u prvního, pak ho příště zkopírujte a změňte, co je jinak. [Dělení výdajů](page:feature/split-expenses) popisuje všechny tři způsoby dělení."
+    - q: "Napojuje se to na naši banku?"
+      a: "Ne. Side Badger se vašich peněz nikdy nedotkne. Platíte si, jak chcete, a pak platbu zaznamenáte, jak vysvětluje [vyrovnání](page:feature/settle-up)."
+    - q: "Může naši skupinu vidět někdo jiný?"
+      a: "Jen její členové a skupina páru má dva. Připojit se může každý, kdo použije platný odkaz s pozvánkou, takže ho sdílejte s jedním člověkem a dejte mu krátkou platnost."
+    - q: "Co když jsme každý zaplatili část téhož účtu?"
+      a: "Výdaj má jednoho plátce. Zaznamenejte dva výdaje, jeden za každého z vás, a zůstatek vyjde stejně."
+    - q: "Bude to mému protějšku připomínat platbu?"
+      a: "Ne. Připomínky neexistují, takže šťouchnutí zůstává na vás. Aspoň oba budete koukat na stejné číslo."
+    - q: "Co se stane, až přestaneme sdílet náklady?"
+      a: "Vyrovnejte zůstatek a zaznamenejte platbu, aby nikdo nic nedlužil. Pak může administrátor skupinu uzamknout, čímž čísla zůstanou, jak jsou, nebo ji uzavřít nadobro, čímž se stane nepřístupnou všem. Uzavřete ji, až ani jeden z vás nebude potřebovat historii."

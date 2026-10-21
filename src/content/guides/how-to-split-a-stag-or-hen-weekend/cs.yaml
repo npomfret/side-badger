@@ -1,0 +1,104 @@
+translatedFrom: "6c8b8630"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.3.label
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - privacy-posture.no-ads
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - polls.villa-shortlist-vote
+  - permissions.viewer-sees-everything
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Jak rozdělit náklady na rozlučku se svobodou | Side Badger"
+  description: "Oslavenec neplatí nic a v pondělí spolu všichni ještě mluví. Jak rozdělit náklady na rozlučku se svobodou, včetně výpočtů."
+h1: "Jak rozdělit náklady na rozlučku se svobodou"
+navLabel: "Rozlučka se svobodou"
+lead: "Oslavenec nebo oslavenkyně neplatí nic, takže ostatní dělí každý náklad [rovným dílem](page:feature/split-expenses) mezi sebe. Lidi vynechte u nákladů, kterých se neúčastní, a oslavence nechte mimo skupinu, aby překvapení vyšlo."
+cta:
+  heading: "Veďte přehled, udržte překvapení"
+  body: "Založte skupinu, pošlete odkaz všem kromě oslavence a každý náklad přidávejte, jak vznikne. Side Badger je zdarma, bez reklam a bez denních limitů."
+sections:
+  - heading: "Čtyři kamarádky a jedno překvapení"
+    body: "Hannah, Isla, Jess a Kat berou Grace na její rozlučku se svobodou. Grace je oslavenkyně, takže neplatí za nic. Také není ve skupině, takže nevidí, co na ni kamarádky utrácejí. Hannah zarezervuje chalupu, Isla zaplatí den ve wellness, Jess pokryje večeři a Kat zaplatí taxi. V neděli každá za něco zaplatila a nikdo nedokáže říct, kdo je v plusu. Výpočty jsou stejné u pánské i dámské rozlučky se svobodou, ať je oslavencem kdokoli."
+  - heading: "Dělte mezi ty, kdo platí, ne mezi ty, kdo tam jsou"
+    body: "Podíl oslavenkyně nezmizí. Rozdělí se. Chalupa stojí 720 £ a platí ji čtyři kamarádky, takže je to 180 £ na hlavu a místo Grace je už v té částce započítané. Večeře je 260 £, tedy 65 £ na hlavu. Taxi je 44 £, tedy 11 £ na hlavu. Co někdo vynechá, ubere se jen z toho jednoho výdaje. Kat vynechá wellness, takže 360 £ za ten den, v nichž je zahrnuto i místo Grace, si rozdělí Hannah, Isla a Jess po 120 £. Sečteno: Hannah, Isla a Jess dluží z víkendu každá 376 £ a Kat dluží 256 £."
+  - heading: "Nastavení v Side Badger"
+    items:
+      - "Založte skupinu pro víkend a dejte jí nudný název, například Víkend na chalupě. Grace není členkou a skupinu vidí jen její členové."
+      - "Zvolte **Pozvat ostatní** a pošlete odkaz, nebo ukažte QR kód, jen tam, kde ho Grace neuvidí. Odkaz zobrazí náhled skupiny ještě před připojením. Zvolte, jak dlouho bude platit, od 15 minut do 5 dní. Starý odkaz funguje, dokud mu nevyprší platnost, takže ho nenechávejte platit déle, než potřebujete."
+      - "U každého nákladu zvolte **Přidat výdaj**, zadejte částku a pod **Kdo platil?** vyberte plátce. Pod **Rozdělit mezi** zaškrtněte ty, kdo platí, a vynechte každého, kdo to vynechal, například Kat u wellness. Pod **Jak rozdělit** zvolte **Rovnoměrně**."
+      - "Až budete doma, otevřete **Zůstatky** skupiny. Side Badger ukáže, kdo komu dluží, a navrhne krátký seznam plateb. Tady jsou tři: Kat zaplatí Hannah 212 £, Jess zaplatí Hannah 116 £ a Isla zaplatí Hannah 16 £. Zaplaťte si, jak chcete, a každou platbu pak zaznamenejte pod **Vyrovnat dluhy**."
+  - heading: "Než zarezervujete: rozpočet a záloha"
+    body: "Rozpočet odsouhlaste dřív, než kdokoli cokoli zarezervuje. Zvolte **Přidat hlasování**, zeptejte se, kolik skupina utratí za chalupu, a nabídněte několik částek jako možnosti. Při vytváření zapněte **Anonymní hlasování**, aby nebylo vidět, kdo pro co hlasoval, a nikdo nemusel nahlas hájit menší rozpočet. Až všichni zahlasují a objeví se vítěz, hlasování uzavřete. Pak přijde záloha. Kdo rezervuje, zaplatí ji a přidá jako výdaj rozdělený rovným dílem a doplatek se zadá jako druhý výdaj, až bude splatný. Ostatní mohou svůj podíl poslat hned a platbu zaznamenat, nebo počkat na konečný přehled. Zůstatky vyjdou v obou případech stejně."
+  - heading: "Když se někdo přidá jen na jednu noc"
+    body: "Kdo dorazí jen na sobotu, neměl by platit za pátek. Vynechte ho z nákladů, kterých se neúčastnil. Tam, kde cena závisí na tom, jak dlouho kdo zůstane, například u pokoje, zvolte pod **Jak rozdělit** **Přesné částky** a zadejte podíl každého, který musí dávat dohromady celek. Nejdřív spočítejte cenu na osobu a noc a vynásobte ji počtem nocí, které každý zůstane. Na stránce o [skupinových výletech](page:use-case/group-trips) je víc o nákladech, které nejsou pro všechny stejné."
+  - heading: "Co Side Badger tady nedělá"
+    items:
+      - "Nikdy nepřesouvá peníze. Platíte si bankovním převodem, hotově nebo jak vám vyhovuje, a pak platbu zaznamenáte, aby se zůstatky aktualizovaly všem."
+      - "Neposílá upomínky k platbám. Přátelské pošťouchnutí ve skupinovém chatu zůstává na člověku."
+      - "Každý výdaj má jednoho plátce a Side Badger neumí rozdělit účtenku po položkách. Pokud chalupu platily dvě karty, zadejte ji jako dva výdaje. Pokud si někteří u večeře objednali něco navíc, zadejte tyto položky jako samostatný výdaj."
+      - "Vede peníze, ne itinerář. Hlasování a komentáře zůstávají u nákladů, takže plány víkendu zůstanou ve vašem skupinovém chatu."
+exampleAfter: 2
+example:
+  heading: "Rozlučka Grace, rozdělená mezi čtyři"
+  currency: GBP
+  people:
+    - id: hannah
+      name: Hannah
+    - id: isla
+      name: Isla
+    - id: jess
+      name: Jess
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Chalupa"
+      payer: hannah
+      amount: 720
+      split:
+        method: equal
+    - label: "Den ve wellness"
+      payer: isla
+      amount: 360
+      split:
+        method: equal
+        shares:
+          hannah: 1
+          isla: 1
+          jess: 1
+    - label: "Večeře"
+      payer: jess
+      amount: 260
+      split:
+        method: equal
+    - label: Taxi
+      payer: kat
+      amount: 44
+      split:
+        method: equal
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Platí svědek ženicha nebo svědkyně nevěsty víc?"
+      a: "Jen pokud se na tom skupina shodne. Aplikace nedává nikomu v počtech zvláštní roli. Pokud někdo hradí víc, zvolte pod **Jak rozdělit** **Přesné částky** nebo **Procenta** a zadejte podíly, na kterých jste se dohodli."
+    - q: "A co pití, které někteří nepili?"
+      a: "Přidejte pití jako samostatný výdaj a zaškrtněte jen ty, kdo ho měli. Pokud každý měl jiné množství, zvolte **Přesné částky** a zadejte podíl každého. Nikdo neplatí za to, co neměl."
+    - q: "Může oslavenec skupinu později vidět?"
+      a: "Ano, až bude po překvapení. Pozvěte ho a správce ho pak může v nastavení skupiny pod **Zabezpečení a oprávnění** nastavit jako **Prohlížeč**. Prohlížeč vidí všechno a nic nemění, takže počkejte, až nebude nic tajné. K připojení potřebuje bezplatný účet."

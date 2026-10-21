@@ -1,0 +1,79 @@
+translatedFrom: "42f5cf35"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved: []
+claims:
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.read-by-googles-ai
+  - receipt-attachments.keep-the-receipt
+meta:
+  title: "Skeniraj račun in dodaj strošek | Side Badger"
+  description: "Naj jazbec prebere račun. Izpolni skupni znesek, datum in kraj, ti pa preveriš. Brez kreditov za skeniranje. Sliko prebere Googlova storitev z umetno inteligenco."
+h1: "Skeniraj račun, preveri podrobnosti, razdeli"
+navLabel: "Skeniranje računov"
+lead: "Naj jazbec prebere račun, ti pa mu preglej domačo nalogo. Novemu strošku dodaj fotografijo in Side Badger izpolni skupni znesek, datum in kraj, da jih preveriš. Nato ga [razdeliš](page:feature/split-expenses) kot vsak drug strošek. Skeniranje je brezplačno, brez kreditov za skeniranje. Izpolni en strošek in računa ne razdeli po postavkah. Slike računov bere Googlova storitev z umetno inteligenco."
+cta:
+  heading: "Poslikaj. Preveri. Razdeli."
+  body: "Ustvari brezplačen uporabniški račun, ustanovi skupino in dodaj strošek s fotografijo računa. Poglej, kaj izpolni, popravi, kar ne drži, in shrani, ko si zadovoljen."
+problem:
+  heading: "Nihče ne želi tipkati računa v čakalni vrsti za taksi"
+  body: "Potovanja in velike noči v mestu prinesejo papir. Večerja, taksi, runda, ki je postala šest. Vsako tipkati v telefon z mrzlimi prsti in vrsto za hrbtom je tisto, zaradi česar se stroški pozabijo. Zato Side Badger račun prebere namesto tebe. Prvi osnutek naredi on, preverjanje je tvoje. Prav pride na [potovanjih v skupini](page:use-case/group-trips) ter [dogodkih in praznovanjih](page:use-case/events-and-celebrations), kjer se računi kopičijo hitreje, kot bi kdorkoli rad reševal."
+workflow:
+  heading: "Od fotografije do stroška v treh korakih"
+  steps:
+    - title: "Dodaj račun novemu strošku"
+      body: "Začni nov strošek in tapni **Skeniraj račun** ali uporabi hitro dejanje **Skeniraj račun** na nadzorni plošči. Poslikaj ali izberi fotografijo, ki jo že imaš. Deluje tudi **Dodaj račun ali prilogo** v obrazcu."
+    - title: "Naj prebere račun"
+      body: "Obrazec med branjem slike z umetno inteligenco Side Badgerja pokaže **Analiziranje računa...**. Nato izpolni, kar je našel, na primer opis, skupni znesek, valuto, datum, uro in kraj. Vsega, kar si že vpisal, se ne dotakne."
+      shot: S09
+      shotAlt: "Obrazec za nov strošek z napisom Analiziranje računa..., nato isti obrazec z izpolnjenimi podrobnostmi"
+    - title: "Preveri, nato razdeli"
+      body: "Primerjaj obrazec s papirjem. Popravi, kar ne drži, povej, kdo je plačal in kdo je strošek delil, izberi način delitve in shrani. Strošek ne obstaja, dokler ne shraniš. O delitvi več pove [delitev stroškov](page:feature/split-expenses)."
+options:
+  heading: "Možnosti"
+  items: []
+sections:
+  - heading: "Kaj izpolni"
+    body: "Novemu strošku dodaj sliko računa in ta polja se lahko izpolnijo. Kdo je plačal, kdo je strošek delil in kako se deli, ostaja tvoja stvar."
+    items:
+      - "**Opis** stroška."
+      - "**Skupni znesek**."
+      - "**Valuta**, če jo skupina dovoljuje."
+      - "**Datum** in **ura**."
+      - "**Kraj**."
+      - "Besedilna kopija računa v **opombah**, za primer, ko papirnati zbledi ali gre skozi pranje."
+  - heading: "Kaj še vedno preveriš"
+    body: "Vse. Tisto, kar izpolni, obravnavaj kot osnutek. Skupni znesek primerjaj s papirjem, nato še valuto, datum in kraj. Zamegljene fotografije in zmečkan papir lahko zavedejo vsakega bralnika in ne obljubljamo, da prebere vsak račun pravilno, zato poglej, preden shraniš. Če je kaj narobe, prepiši. Če je račun v jenih, skupina pa se poravnava v funtih, [več valut](page:feature/multiple-currencies) pojasni, kaj sledi."
+  - heading: "Račun naj ostane pri strošku"
+    body: "Skeniran ali ne, račun lahko ostane pri strošku. Priloži fotografije ali PDF-je, do tri na strošek in do 10 MB vsaka. Člani skupine jih vidijo pri strošku. Slike se pokažejo kot sličice, ki se odprejo v pregledovalniku, PDF-ji pa se odprejo kot povezave. Tudi fotografija, ki jo skeniraš, je priložena, razen če jo pred shranjevanjem odstraniš. Ko nekdo vpraša, koliko je ta večerja v resnici stala, je dokaz tik zraven."
+  - heading: "Kam gre tvoj račun"
+    body: "Slike računov bere Googlova storitev z umetno inteligenco. Da se obrazec izpolni, sliko prebere Google Vertex AI (Gemini) v Googlovi večregiji ZDA. Dodaj sliko novemu strošku in se prebere. PDF ali fotografija, dodana že obstoječemu strošku, se shrani, ne da bi se prebrala. Priloženi računi so vidni članom skupine, zato fotografijo izpusti in strošek vpiši ročno, če račun kaže kaj, česar ne bi rad delil."
+limits:
+  heading: "Omejitve"
+  items:
+    - "Samo slike. JPEG, PNG in WebP ter HEIC, ko je pretvorjen. PDF-je je mogoče priložiti strošku, vendar se ne berejo."
+    - "Skeniranje je samo za nove stroške. Obstoječemu strošku lahko priložiš račune, vendar se nič ne prebere."
+    - "Izpolni samo polja, ki se jih nisi dotaknil, valuto pa samo, če jo skupina dovoljuje."
+    - "Ne deli po postavkah in ne dodeljuje postavk ljudem. Izpolni en strošek, ti pa ga razdeliš kot običajno."
+    - "Ni obljube, da je to, kar izpolni, pravilno, ali da bo skeniranje delovalo vsakič. Preveri, preden shraniš, in strošek dodaj ročno, če skeniranje ne uspe ali ni na voljo."
+    - "Strošek lahko vsebuje do tri priloge, vsaka do 10 MB, kot JPEG, PNG, WebP, HEIC ali PDF."
+    - "Slike računov bere Google Vertex AI (Gemini) v Googlovi večregiji ZDA, priloženi računi pa so vidni članom skupine."
+useCasesHeading: "Kjer se kopičijo računi"
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Ali lahko račun razdeli po postavkah?"
+      a: "Ne. Izpolni strošek, vključno s skupnim zneskom, ti pa ga razdeliš enako, po točnih zneskih ali po odstotkih. Za račun, kjer je vsak naročil nekaj drugega, vpiši, koliko dolguje vsak, kot točne zneske. Podrobnosti so pri [delitvi stroškov](page:feature/split-expenses)."
+    - q: "Ali lahko prebere PDF?"
+      a: "Ne. PDF lahko priložiš strošku, da potuje skupaj s številkami, vendar se berejo samo slike."
+    - q: "Ali so skeniranja omejena?"
+      a: "Kreditov za skeniranje, ki bi jih zmanjkalo, ni, skeniranje pa je brezplačno. Datoteke imajo omejitve: do tri priloge na strošek in 10 MB vsaka. Ostalo je v [kaj vključuje brezplačna različica](page:pricing)."
+    - q: "Kdo lahko vidi moj račun?"
+      a: "Člani skupine vidijo račune, priložene strošku. Slike računov bere tudi Googlova storitev z umetno inteligenco, tako se izpolni obrazec."
+    - q: "Ali lahko skeniram račun za strošek, ki sem ga že dodal?"
+      a: "Ne, skeniranje je za nove stroške. Račun lahko še vedno priložiš obstoječemu strošku in se shrani, ne da bi se prebral."
+    - q: "Kaj, če izpolni kaj narobe?"
+      a: "Prepiši. Vsako polje ostane urejljivo, dokler ne shraniš, in vse bi moral preveriti tako ali tako. Če skeniranje ne uspe ali ni na voljo, strošek dodaj ročno kot običajno."

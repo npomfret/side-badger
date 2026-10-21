@@ -1,0 +1,103 @@
+translatedFrom: "a2338738"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Vuokran jako huoneen koon mukaan | Side Badger"
+  description: "Isompi huone, isompi osuus. Erota yhteiset tilat, jaa loput lattiapinta-alan mukaan ja syötä prosentit kerran. Laskut kolmelle kämppikselle."
+h1: "Näin jaat vuokran huoneen koon mukaan"
+navLabel: "Vuokra huoneen koon mukaan"
+lead: "Päätä, kuinka suuri osa vuokrasta maksaa yhteisistä tiloista, ja jaa se osuus tasan. Jaa loput kunkin makuuhuoneen lattiapinta-alan mukaan. Pyöristä kokonaisiin prosentteihin, syötä ne vuokran kululle Side Badgerissa kerran ja kopioi kulu joka kuukausi."
+cta:
+  heading: "Syötä vuokra kerran"
+  body: "Luo ilmainen tili, perusta ryhmä asunnolle ja syötä vuokra sovituilla prosenteilla. Ensi kuussa se on pelkkä kopio. Haluatko ensin esittelykierroksen? Katso [näin se toimii](page:how-it-works) tai [mitä ilmaiseen kuuluu](page:pricing)."
+sections:
+  - heading: "Kolme ihmistä, yksi asunto, yksi riita"
+    body: "Priya, Tom ja Aisha jakavat asunnon, jonka vuokra on 1 950 £ kuussa. Vuoden ajan he jakoivat sen tasan kolmeen osaan, koska se oli helppoa. Sitten Aisha mittasi makuuhuoneensa. Priyan huone on 16 m², Tomin 12 m² ja Aishan 10 m², joten Aisha maksoi saman kuin Priya huoneesta, joka on yli kolmanneksen pienempi. Kukaan ei ollut toiminut kohtuuttomasti. Kukaan ei vain ollut laskenut. Noutoruoan äärellä he sopivat ensin yhden säännön. Vuokrasta 40 % maksaa keittiöstä, kylpyhuoneesta ja olohuoneesta, joita kaikki kolme käyttävät."
+  - heading: "Menetelmä ja laskut näkyvissä"
+    body: "Neljä vaihetta, yksi mittanauha ja puhelimen laskin."
+    items:
+      - "**Erota yhteinen osa.** Ryhmä sopii, kuinka suuri osa vuokrasta kuuluu kaikkien käyttämille tiloille. Tässä asunnossa se on 40 %, eli 13,33 % jokaiselle kolmesta."
+      - "**Jaa loput lattiapinta-alan mukaan.** Loput 60 % jaetaan makuuhuoneiden koon mukaan. Makuuhuoneet ovat yhteensä 38 m² (16 + 12 + 10), joten Priyan osuus on 60 % × 16/38, eli 25,26 %."
+      - "**Laske osat yhteen.** Priya: 25,26 % + 13,33 % = 38,6 %. Tom: 60 % × 12/38 = 18,95 %, ja 13,33 % lisättynä saadaan 32,3 %. Aisha: 60 % × 10/38 = 15,79 %, ja 13,33 % lisättynä saadaan 29,1 %."
+      - "**Pyöristä ja tarkista.** Kokonaisia prosentteja on helpompi kirjoittaa ja niistä on helpompi kinastella, joten 38,6 %:sta tulee 39 %, 32,3 %:sta 32 % ja 29,1 %:sta 29 %. Tarkista, että 39 + 32 + 29 on 100. Jos pyöristys päätyy lukuun 99 tai 101, ryhmä sopii, kenen luku muuttuu yhdellä prosenttiyksiköllä."
+  - heading: "Asunnon kuukausi luettuna"
+    body: "Vuokra jakautuu osuuksilla 39 %, 32 % ja 29 % summiin 760,50 £, 624,00 £ ja 565,50 £. Priya maksoi vuokranantajalle, joten kuukauden kaikki kulut huomioiden hänen saatavansa on 1 142,50 £, kun taas Tom on velkaa 566,00 £ ja Aisha 576,50 £. Side Badger ehdottaa kahta maksua, molemmat Priyalle."
+  - heading: "Näin se tehdään Side Badgerissa"
+    body: "Yksi ilta, josta suurin osa kuluu 40 %:n väittelyyn."
+    items:
+      - "**Perusta ryhmä.** Valitse kojelaudalla **Luo ryhmä** ja anna sille asunnon nimi. Valitse **Kutsu muita** ja lähetä linkki tai QR-koodi. Jokainen kirjautuu sisään tai luo ilmaisen tilin ja valitsee nimen, jolla haluaa näkyä tässä ryhmässä."
+      - "**Lisää vuokra.** Valitse **Lisää kulu**. Syötä kuvaus ja summa ja valitse kohdasta **Kuka maksoi?** se, joka maksoi vuokranantajalle. Pidä kaikki kolme mukana kohdassa **Jaa seuraavien kesken**, valitse sitten kohdasta **Miten jaetaan** vaihtoehto **Prosentteina** ja kirjoita 39, 32 ja 29. Lomake huomauttaa, jos prosenttien summa ei ole 100. Valitse **Tallenna kulu**."
+      - "**Lisää laskut.** Sähkö ja internet ovat omia kulujaan, ja niillä on omat maksajansa. Jätä kohtaan **Miten jaetaan** vaihtoehto **Tasan**."
+      - "**Kopioi se ensi kuussa.** Avaa viime kuun vuokra ja valitse **Kopioi kulu**. Kopio säilyttää maksajan, summan ja jaon, ja siihen tulee tämän päivän päivämäärä. Muuta summaa, jos vuokra muuttui, ja valitse sitten **Luo kopio**."
+      - "**Katso, kuka on velkaa kenelle.** Sen näyttää **Saldot**-osio. Maksakaa toisillenne miten haluatte ja kirjatkaa maksu kohdassa **Maksa velat**."
+  - heading: "Oma kylpyhuone, komerot ja lähtijät"
+    items:
+      - "**Oma kylpyhuone ja komero.** Lattiapinta-ala on vain lähtökohta. Huone, jossa on oma kylpyhuone, on arvokkaampi kuin yhtä suuri huone ilman sellaista, ja komero, johon mahtuu sänky ja toiveikas tuoli, on vähemmän arvokas. Säädä prosentteja yhteisellä sopimuksella, tarkista, että ne yhä summautuvat sataan, ja kirjoita lopulliset luvut paikkaan, jonka koko asunto näkee."
+      - "**Joku muuttaa pois kesken kuun.** Laske, paljonko kukin on velkaa kyseiseltä kuukaudelta, ja syötä sen kuukauden vuokra vaihtoehdolla **Tarkat summat** vaihtoehdon **Prosentteina** sijaan. Summien on oltava yhteensä vuokran suuruiset. Tee se ennen kuin hän lähtee. Kukaan ei voi poistua ryhmästä, jos hän on velkaa tai hänelle ollaan velkaa, ja kulu, jossa on mukana ryhmästä lähtenyt, muuttuu vain luettavaksi."
+      - "**Joku muuttaa sisään.** Mittaa uudelleen, laske uudelleen uusilla huonekooilla ja käytä uusia prosentteja seuraavasta vuokrasta alkaen. Aiemmat kuukaudet pysyvät ennallaan."
+  - heading: "Mitä Side Badger ei tee tässä"
+    items:
+      - "Se ei mittaa huoneitasi eikä valitse prosentteja. Lattiapinta-alat ja se 40 % ovat ryhmän sovittavissa."
+      - "Toistuvia laskuja ei ole, joten kopioit viime kuun vuokran joka kerta."
+      - "Se ei koskaan siirrä rahaa eikä maksa vuokranantajalle. Maksatte toisillenne miten haluatte ja kirjaatte maksun."
+      - "Se ei tiedä, mitä vuokrasopimuksessanne lukee. Se pitää kirjaa ryhmän jäsenten kesken."
+exampleAfter: 2
+example:
+  heading: "Kuukausi asunnossa"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "vuokra"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "sähkölasku"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "internet-yhteys"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Kysymyksiä"
+  items:
+    - q: "Entä jos jollain on isompi huone mutta vähemmän valoa?"
+      a: "Lattiapinta-ala on vain lähtökohta, joten ryhmä voi sopia säädöstä. Ota pimeästä huoneesta piste tai kaksi pois, anna ne muille ja tarkista, että prosentit yhä tekevät yhteensä 100. Side Badger tallentaa sen, mistä sovitte, eikä arvostele sitä."
+    - q: "Pitäisikö laskutkin jakaa huoneen koon mukaan?"
+      a: "Yleensä ei. Sähköä ja internetiä käyttävät kaikki, joten tasajako on yksinkertaisempi, kuten yllä olevassa esimerkissä. Jos yksi kämppis on kotona koko päivän, ryhmä voi sopia jotain muuta, kuten tarkat summat. [Kulujen jako](page:feature/split-expenses) kertoo vaihtoehdoista."
+    - q: "Voiko jakoa muuttaa myöhemmin?"
+      a: "Kyllä, uusiin kuluihin. Muuta prosentteja, kun kopioit vuokran, niin aiemmat kuukaudet pysyvät ennallaan. Jos haluat korjata jo syötetyn kulun, muokkaa sitä, jos ryhmän oikeudet sen sallivat, ja kerro siitä ensin talolle, koska saldot muuttuvat. Aiempi versio säilyy."

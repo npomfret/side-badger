@@ -1,0 +1,101 @@
+translatedFrom: "5d92090e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Grup hediyesi için para nasıl toplanır | Side Badger"
+  description: "Herkes farklı bir tutar verir, bir kişinin kartı yanar. Bütçe anketi yapın, tam tutarları girin, hesabı Side Badger yapsın."
+h1: "Grup hediyesi için para nasıl toplanır"
+navLabel: "Grup hediyesi için toplamak"
+lead: "Grup hediyesi için para toplamak, bir kişinin parayı cebinden çıkarması ve herkesin ona kendi payını borçlanması demektir. Bütçeyi bir anketle belirleyin, hediyeyi satın alan kişi kartıyla ödesin, sonra hediyeyi her kişi için bir rakam olan [tam tutarlarla](page:feature/split-expenses) tek bir harcama olarak girin. Side Badger kimin hediyeyi satın alan kişiye ne kadar borçlu olduğunu gösterir, herkes payını istediği yolla gönderir."
+cta:
+  heading: "Şapkayı şapkasız dolaştırın"
+  body: "Bir grup kurun, hediyenin verileceği kişiyi grubun dışında bırakın ve hediyeyi tam tutarlarla girin. Side Badger ücretsizdir, reklam yoktur, günlük sınır yoktur. Önce turu mu görmek istiyorsunuz? [Nasıl çalışır](page:how-it-works) veya [ücretsiz planın kapsamı](page:pricing) sayfasına bakın."
+sections:
+  - heading: "Dört arkadaş, bir plak çalar, dört farklı tutar"
+    body: "Bea 30 yaşına giriyor ve bir plak çalar istiyor. Priya, Omar, Lena ve Sam onu ona alıyor. Priya 240 £'luk birini buluyor ve kendi kartıyla alıyor, çünkü birinin önce gitmesi gerek. Dördü eşit vermiyor. Priya ile Omar 60'ar £, Lena 80 £, Sam 40 £ koyuyor. Kimse kendi rakamını açıklamıyor, kimse sormuyor. Omar ayrıca 12 £'a bir kart ve ambalaj kâğıdı alıyor. Kartı dördü de imzalıyor, bu yüzden o eşit bölünüyor."
+  - heading: "Biri Satın Al'a basmadan önce bütçeyi kararlaştırın"
+    body: "Bir bütçe anketi, 400 £'luk bir pikap tartışmasını önler. Grupta **Anket Ekle**'yi seçin ve hediyenin ne kadar tutması gerektiğini sorun. Seçenekleri tutar yapın; örneğin en çok 150 £, en çok 200 £ ve en çok 250 £. Kimin neye oy verdiğini gizleyen **Anonim oylama**'yı açın, böylece kimse daha küçük bir rakamı yüksek sesle savunmak zorunda kalmaz. İlk oy geldikten sonra ayarlar değiştirilemez, bu yüzden önce kontrol edin. Anket kendiliğinden kapanmaz. Herkes oy verdiğinde **Anketi kapat**'ı seçin, **Kazanan** görünür. Anket toplamı belirler. Kimsenin payını belirlemez."
+  - heading: "Sayımı okumak"
+    body: "Hediye 60 £, 60 £, 80 £ ve 40 £ olarak bölünür, toplamı fişteki 240 £ eder. Kart ve ambalaj dörde bölünür, kişi başı 3 £. Priya'nın payı 60 £ + 3 £, yani 63 £ ve o 240 £ ödedi, bu da 177 £ alacaklı olduğu anlamına gelir. Omar'ın payı da 63 £ ama o 12 £ ödedi, yani 51 £ borçlu. Lena 80 £ + 3 £, yani 83 £ borçlu, Sam da 40 £ + 3 £, yani 43 £ borçlu. Bu üçü Priya'nın 177 £'una tamamlanır. Kendi hallerine bırakılırsa borçlar grubun içinde beş yönde dolaşırdı. Side Badger onun yerine üç ödeme önerir, hepsi Priya'ya. [Hesaplaşma](page:feature/settle-up) sayfasında ayrıntılar var."
+  - heading: "Side Badger'a girin"
+    body: "Priya'nın tarafı yaklaşık beş dakika sürer."
+    items:
+      - "**Grubu kurun.** Panoda **Grup Oluştur**'u seçin. **Başkalarını davet et**'i seçin ve bağlantıyı ya da QR kodunu para verecek kişilere gönderin, başka kimseye değil."
+      - "**Hediyeyi ekleyin.** **Harcama Ekle**'yi seçin, açıklamasını yazın, 240 girin ve **Kim ödedi?** altında Priya'yı seçin. **Şunlar arasında bölüştür** altında dördünü de işaretli bırakın, sonra **Nasıl bölüştürülsün** altında **Tam tutarlar**'ı seçin ve 60, 60, 80 ve 40 yazın. Tutarların toplamı 240 etmeli. İsterseniz sipariş onayını ekleyin. **Harcamayı Kaydet**'i seçin."
+      - "**Kartı ekleyin.** Omar 12 £'u kendisi ekler, **Kim ödedi?** altında kendini seçer ve **Nasıl bölüştürülsün**'ü dört kişi de işaretliyken **Eşit** bırakır."
+      - "**Sayın, sonra ödeyin.** Herkes kimin kime borçlu olduğunu gösteren **Bakiyeler**'e bakar ve payını istediği yolla Priya'ya gönderir. Sonra **Ödeş** ve **Ödeşmeyi Kaydet** ile kaydeder. Hızlı ödeşme tutarı kendisi doldurur."
+  - heading: "Önce alın, ya da önce toplayın"
+    body: "Side Badger kumbarayı tutmaz, yani “toplamak” aslında saymak demektir. İki sıra da işe yarar."
+    items:
+      - "**Önce alın.** Satın alan kişi öder, harcamayı gerçek fiyatla ekler ve herkes payını hemen görür. Daha derli toplu, ama insanlar ödeyene kadar maliyeti satın alan kişi taşır; bunu kaldırabilecek birini seçin."
+      - "**Önce toplayın.** İnsanlar satın almadan önce rakamlarını satın alacak kişiye gönderir. Fiyatı öğrendiğinizde hediyeyi girin, sonra her ödemeyi paranın gerçekten el değiştirdiği tarihle kaydedin. Önce hediyeyi ekleyin, böylece her ödemenin karşısında oturacağı bir bakiye olur."
+      - "**Fiyat oynar.** Teslimat, bir indirim kodu, geç gelen bir zam. Hediyeyi düzenleyin ve tam tutarları hâlâ toplama uyacak şekilde değiştirin. Önceki sürüm saklanır, ama önce gruba söyleyin, çünkü bakiyeleri değişir."
+  - heading: "Bea'yı işin dışında tutun"
+    body: "Bir grubu yalnızca üyeleri görebilir, yani Bea üyesi olmadığı bir grubu göremez. Para verecek kişileri davet edin, başkasını değil. Bir bağlantı süresi dolana kadar çalışır ve 15 dakikadan 5 güne kadar bir süre seçebilirsiniz, bu yüzden kısa bir süre seçin ve Bea'nın görmeyeceği bir yerden gönderin. Bağlantıyı açan kişi grubun bir önizlemesini görür, bu yüzden gruba Cumartesi kumbarası gibi sıkıcı bir ad verin ve Bea'nın adını harcama etiketlerinin ve anket seçeneklerinin dışında tutun."
+  - heading: "Side Badger burada neleri yapmaz"
+    items:
+      - "Parayı tutmaz ya da toplamaz. Katkılar satın alan kişiye banka havalesiyle, nakitle ya da ne kullanıyorsanız onunla gider, sonra biri kaydeder."
+      - "Ödeme hatırlatması göndermez. Ödemeyenlere dürtmek hâlâ insanın işidir."
+      - "Kimsenin payını hesaplamaz. Anket bütçeyi belirler ve “kalanı böl” diye bir seçenek yoktur, bu yüzden her tutarı kendiniz yazarsınız."
+      - "Her harcamanın tek bir ödeyeni vardır. İki kişi hediyenin farklı parçalarını aldıysa iki harcama girin."
+      - "Bölüşümdeki herkesin ücretsiz bir hesabı ve grupta bir yeri olmalıdır."
+exampleAfter: 2
+example:
+  heading: "Bea'nın plak çaları ve kart"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: "hediye"
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: "kart ve ambalaj"
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Hediyenin fiyatından fazla toplarsak ne olur?"
+      a: "Tam tutarların toplamı fiyata eşit olmalı, bu yüzden toplam tutana kadar payları kırpın. Ya da fazlasını çiçek gibi gerçek bir şeye ayırın ve örnekteki kart ve ambalaj gibi bunu ikinci bir harcama olarak girin."
+    - q: "Biri gruba katılmadan para verebilir mi?"
+      a: "Sayıma dahil olmasını istiyorsanız hayır. Bölüşümdeki herkesin ücretsiz bir hesabı olmalı ve grupta olmalı. Yalnızca nakdi olan biri için Priya parayı alıp hediyeyi grubun hâlâ borçlu olduğu tutarla girebilir. Örneğin Sam ona 40 £ nakit verdiyse, Priya 200 £ girer ve kendisi, Omar ve Lena arasında 60, 60 ve 80 olarak böler."
+    - q: "Anket kişi başı tutarı belirleyebilir mi?"
+      a: "Hayır. Anket, bütçe gibi tüm grup için bir rakam belirler. Her kişinin payını kendi aranızda kararlaştırır, sonra harcamaya **Tam tutarlar** olarak yazarsınız."

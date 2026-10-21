@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: "Grup harcamaları için ortak listeler, anketler ve yorumlar | Side Badger"
+  description: "Harcamalara yorum yapın, tuhaf olanı sorgulayın, ortak alışveriş listesi tutun ve villa için oy verin. Harcamayı birlikte planlayın, sonra bölüşün. Ücretsiz, reklamsız."
+h1: "Birlikte planlayın, sonra bölüşün"
+navLabel: "Birlikte planlama"
+lead: "Alışveriş listesi ve alışveriş faturası, sonunda aynı dilden konuşuyor. Side Badger grubunuza parayla ilgili harcanmadan önce ve sonra konuşacak bir yer verir: her harcamaya yorumlar, yanlış görünenleri sorgulamanın bir yolu, ortak listeler ve büyük kararlar için anketler. Sonra her zamanki gibi [harcamaları bölüşürsünüz](page:feature/split-expenses)."
+cta:
+  heading: "Planlayın, sonra bölüşün"
+  body: "Ücretsiz bir hesap oluşturun, bir grup kurun ve ilk listeyi, anketi ya da soruyu paranın hemen yanına koyun. Sonrasında ne olacağından emin değil misiniz? [Nasıl çalışır](page:how-it-works) sayfasına bakın."
+problem:
+  heading: "Sohbet burada, fatura orada"
+  body: "Grup harcamaları genellikle iki yerde yaşar. Rakamlar bir yerde, rakamlar hakkındaki kavga ise salı günü kayıp giden bir sohbettedir. Alışveriş listesi bir buzdolabı fotoğrafıdır. Villaya çoğunluğun bir başparmak işaretiyle karar verdi, herhalde. Side Badger planlamayı grubun içinde, ilgili olduğu harcamaların yanında tutar: maliyetin olduğu yerde bir yorum, alışverişin olduğu yerde bir liste, büyük karar için bir anket ve bir paragraf yazmadan “dur bir dakika, bu doğru mu?” demenin bir yolu. Hepsi grubun parasıyla ilgili kalır; grup zaten bunun için var."
+workflow:
+  heading: "Villa oylamasından alışveriş faturasına"
+  steps:
+    - title: "Büyük kararı oya sunun"
+      body: "Faturayı belirleyen karar için, örneğin hangi villa, bir anket ekleyin. İki ila on seçenek belirleyin, her kişinin kaç oyu olacağını söyleyin, herkes oyunu verince anketi kapatın; kazanan işaretlenir."
+      shot: S17
+      shotAlt: "Kazanan seçeneğin işaretlendiği ve her seçeneğin yanında oy sayısının görüldüğü kapatılmış bir anket"
+    - title: "Alışveriş listesini birlikte yazın"
+      body: "Ortak bir liste başlatın, ürünleri ekleyin ve sepete girdikçe işaretleyin. Alışveriş sonradan bir harcama olarak girer."
+      shot: S16
+      shotAlt: "Bazı ürünleri işaretlenmiş ve ilerleme sayısı olan ortak bir alışveriş listesi"
+    - title: "Maliyeti olduğu yerde konuşun"
+      body: "Harcamanın kendisine yorum yapın, makbuzu ekleyin ve emojiyle tepki verin. Konuşma, hakkında olduğu rakamın yanında kalır."
+      shot: S08
+      shotAlt: "Ayrıntıları, makbuz küçük resmi, yorum dizisi ve emoji tepkileri olan bir harcama"
+    - title: "Tuhaf görüneni sorgulayın"
+      body: "Grup harcama sorularını açtıysa, bir harcamada payı olan herkes **Bir sorum var**'ı seçebilir. Soru çözülene kadar harcama bakiyelerin dışında kalır."
+      shot: S18
+      shotAlt: "Sorgulandı rozeti ve Yalnızca sorgulanan filtresiyle harcama listesi"
+    - title: "Neyin değiştiğini ve kimin değiştirdiğini görün"
+      body: "Etkinlik akışı ve bildirim zili, gruplarınızda nelerin yeni olduğunu gösterir. İsterseniz anlık bildirimler de var."
+      shot: S19
+      shotAlt: "Son etkinliklerin listelendiği bildirimler açılır menüsü"
+options:
+  heading: "Seçenekler"
+  items: []
+example:
+  heading: "Üç ev arkadaşı, sorgulanan bir şarap faturası"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "büyük alışveriş"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "temizlikçi"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "parti şarabı"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Rakamların yanında yorumlar ve tepkiler"
+    body: "Her harcamanın kendi yorum dizisi vardır; grubun, her listenin ve her anketin de. Taksi neden bu kadar tuttu sorusunu taksinin altında sorun, kimsenin geri kaydırmadığı bir sohbette değil. Makbuzun fotoğrafını ya da rezervasyonun PDF'sini ekleyin, sonra harcamalara, ödemelere ve yorumlara başparmak, kalp, kahkaha, vay, üzgün veya kutlama ile tepki verin. Bir ödeme ulaştığında kutlayın. Side Badger'ın alkışa en yaklaştığı an budur."
+  - heading: "Kavga çıkarmadan bir harcamayı sorgulayın"
+    body: "Grup harcama sorularını açtığında, bir harcamada payı olan herkes **Bir sorum var**'ı seçip nedenini söyleyebilir. Soru harcamaya yorum olarak eklenir, harcama **Sorgulandı** rozeti alır ve harcamanın tamamı, soru çözülene kadar herkesin bakiyesinin dışında kalır."
+    items:
+      - "**Açmak.** Varsayılan olarak kapalıdır. Bir yönetici grubun ayarlarında, **Özellikler** altında **Harcama sorularına izin ver**'i açar."
+      - "**Kapatmak.** Soruyu soran kişi veya bir yönetici **Soruyu kapat**'ı seçer. Aynı harcamayı birkaç kişi sorguladıysa, son soru kapatıldığında harcama bakiyelere geri döner."
+      - "**Düzenlemek.** Bir harcama düzenlendiğinde, açık bir soru hâlâ payı olan herkes için yeni sürüme taşınır. Düzenlemenin dışarıda bıraktığı kişinin sorusu eski sürümle biter; böylece kapatacak bir şey kalmaz."
+      - "**Bulmak.** Harcama listesinde **Yalnızca sorgulanan** filtresi var. Bu bir onay adımı değildir: yalnızca birinin sorguladığı harcamalar bekletilir, geri kalan her şey eklendiği anda sayılır."
+  - heading: "Bir soru nasıl ilerler"
+    body: "Tom, üç ev arkadaşı arasında bölünen 45 £'luk parti şarabı ekler. Aisha içmediği için bir soru açar ve soru açıkken şarap hiç kimsenin hesabına girmez. Ev, şarabın Tom ile Priya'nın olduğu konusunda anlaşır; Tom da bölüşümü ikisine göre düzenler. Aisha artık harcamada olmadığından sorusu, saklanan önceki sürümle biter ve şarap, kişi başı 15 £ yerine kişi başı 22,50 £ olarak hemen bakiyelere geri girer. Aisha harcamada kalsaydı sorusu taşınır ve kendisinin ya da bir yöneticinin kapatmasını beklerdi. Aşağıda Aisha'nın 48 £'u, alışverişten 28 £ ve temizlikçiden 20 £'tur; Priya'nın 10,50 £'u ise 70,50 £'luk payı (28 £, 20 £ ve 22,50 £) ile ödediği 60 £ arasındaki farktır. Tam bir [ev arkadaşları](page:use-case/housemates) kavgası. Bir soruyu nasıl ifade edeceğiniz için [biri paylaşılan bir harcamaya itiraz ettiğinde ne yapılır](page:guide/what-to-do-when-someone-disputes-a-shared-expense) yazısına bakın."
+  - heading: "Alışveriş için ortak listeler"
+    body: "Grupta bir liste başlatın, ona Alışveriş Listesi gibi bir ad verin, ürünleri ekleyin ve işaretleyin. Ürünleri daha iyi bir sıraya sürükleyin, ilerleme sayısının yükselişini izleyin ve biri yanlış yulaf sütünü aldığında listeye yorum yapın. Biten bir listeyi kaldırmak için arşivleyin (**Arşivlenenleri göster** onu geri getirir) ya da bir listeyi yeniden kullanmak için kopyalayın. Ortak alışveriş listesini alışveriş faturalarının yanında tutun; liste neyin alınacağını, harcama da neye mal olduğunu söylesin. Listeleri kimin oluşturup düzenleyebileceği grubun izinlerine bağlıdır; bunu [gruplar ve izinler](page:feature/groups-and-permissions) sayfası açıklar."
+  - heading: "Anketler, isterseniz anonim"
+    body: "Gruba faturayı belirleyen bir şey sorun: hangi villa, hediyeye ne kadar harcanacağı ya da tekne turunun buna değip değmeyeceği gibi. Bir anketin bir sorusu ve iki ila on seçeneği vardır. Her kişinin kaç oyu olacağını, tek seçimden ona kadar, ve oylamanın anonim olup olmayacağını siz seçersiniz. **Anonim oylama** kimin neye oy verdiğini gizler ve ilk oy girdikten sonra değiştirilemez. İnsanlar anket kapanana kadar oylarını değiştirebilir veya geri alabilir; grup fikrini değiştirirse anketi yeniden açabilirsiniz. Villa seçmek tam olarak [grup gezilerinin](page:use-case/group-trips) işidir; hediye bütçesinde anlaşmak ise [etkinlikler ve kutlamalar](page:use-case/events-and-celebrations) için bir klasiktir."
+  - heading: "Etkinlik akışı, hiçbir şey sessizce değişmesin diye"
+    body: "Her grubun bir etkinlik geçmişi vardır ve bildirim zili tüm gruplarınızın etkinliğini tek yerde toplar. Bir harcama ekleyin, herkes yenilemeden hemen görür; akış neyin değiştiğini ve kimin değiştirdiğini gösterir. Buna eklenen, düzenlenen veya silinen harcamalar, açılan ve kapanan sorular, yorumlar, liste ve anket değişiklikleri ile kaydedilen ödemeler dahildir."
+  - heading: "Anlık bildirimler, isterseniz"
+    body: "Anlık bildirimler isteğe bağlıdır. Hesap **Ayarlar**'ınızda, **Bildirimler** altında açın; gruplarınızda yeni bir harcama veya yorum gibi yeni etkinlik olduğunda cihazınız size haber verir. Her cihaz ayrı ayrı açılır ve tarayıcınız önce izin ister. iPhone veya iPad'de yalnızca Ana Ekran'a eklenmiş uygulamada çalışırlar; bunu [web uygulaması](page:feature/web-app) sayfası açıklar. Bunlara bir kolaylık olarak bakın, söz olarak değil; çünkü iletim garanti değildir."
+limits:
+  heading: "Sınırlar"
+  items:
+    - "Yorumlar, listeler ve anketler grubun parası içindir. [Şartlar](page:terms), paylaşılan her şeyin grubun finansıyla ilgili olmasını ister; yani burası harcamayı planlamak için bir yerdir, genel bir sohbet ya da yapılacaklar uygulaması değil."
+    - "Bir yorum en fazla 500 karakter olabilir ve her biri en fazla 5 MB olan, görsel veya PDF en fazla üç eki olabilir. Bir yorumu yalnızca yazarı silebilir."
+    - "Harcama soruları varsayılan olarak kapalıdır ve bir yönetici bunları her grup için açar. Bir harcamayı yalnızca içinde yer alanlar sorgulayabilir, özelliği kapatmak açık olan her soruyu temizler ve payı olduğu bir harcamada açık soru varken kimse gruptan ayrılamaz."
+    - "Bir grupta en fazla 100 liste olabilir; her liste en fazla 500 karakterlik 200 ürün tutar. Grup izinleri listeleri kimin oluşturup düzenleyip sileceğini belirler ve kilitli bir grup hiçbir değişikliğe izin vermez."
+    - "Bir grupta en fazla 50 anket olabilir; her birinde iki ila on seçenek ve kişi başı en fazla on oy vardır. Anketlerin son tarihi yoktur ve kendiliğinden kapanmaz."
+    - "Etkinlik geçmişi 90 gün saklanır."
+    - "Anlık bildirimler her hesap ve her cihaz için isteğe bağlıdır. Bunları destekleyen bir tarayıcı ve sizin izniniz gerekir, iPhone ve iPad'de yalnızca Ana Ekran'a eklenmiş uygulamadan çalışırlar ve iletim garanti değildir. Etkinlik için e-posta veya kısa mesaj uyarısı ve ödeme hatırlatıcısı yoktur; bu yüzden ödemenin peşine düşmek hâlâ size kalmış."
+useCasesHeading: "Birlikte planlamanın işe yaradığı yerler"
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Oylar anonim olabilir mi?"
+      a: "Evet. Anketi oluştururken **Anonim oylama**'yı açın; kimin neye oy verdiğini gizler. İlk oydan önce karar verin, çünkü sonradan değiştirilemez."
+    - q: "Bir anket kendiliğinden kapanabilir mi?"
+      a: "Hayır. Anketin son tarihi yoktur; bu yüzden grup karar verince onu oluşturan kişi **Anketi kapat**'ı seçer. Grup fikrini değiştirirse **Anketi tekrar aç** onu geri getirir."
+    - q: "Bir liste kaç ürün tutabilir?"
+      a: "Liste başına en fazla 200 ürün, grup başına en fazla 100 liste. Her ürün en fazla 500 karakter olabilir; bu epey yulaf sütü demek."
+    - q: "Bir soruyu kim kapatabilir ve bu arada harcamaya ne olur?"
+      a: "Soruyu soran kişi ya da bir grup yöneticisi. Bir soru açıkken harcamanın tamamı herkesin bakiyesinin dışında kalır. Üzerindeki son açık soru kapatıldığında ya da bir düzenleme soruyu soran kişiyi harcamanın dışında bıraktığında geri girer."
+    - q: "Listeleri ve yorumları yapılacaklar uygulaması ya da grup sohbeti olarak kullanabilir miyim?"
+      a: "Hayır. Yorumlar, listeler ve anketler grubun parası içindir; [şartlar](page:terms) bunu ister. Alışveriş listelerini, bütçe anketlerini ve “bu neden 45 £?” sorusunu düşünün."
+    - q: "Side Badger etkinlik hakkında bana e-posta gönderir mi?"
+      a: "Hayır. Etkinlik için e-posta veya kısa mesaj uyarısı yoktur. Her cihazda anlık bildirimleri açabilirsiniz ve uygulamadaki bildirim zili nelerin yeni olduğunu gösterir."

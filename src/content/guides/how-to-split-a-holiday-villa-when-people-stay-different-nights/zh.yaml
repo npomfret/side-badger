@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: 度假别墅住的晚数不同，怎么分摊 | Side Badger
+  description: Dev 只来三晚，凭什么付六晚？按每个人实际住的晚数分摊度假别墅，算式替你列好。
+h1: 度假别墅住的晚数不同，怎么分摊
+navLabel: 按晚数分别墅
+lead: 先算出每人每晚的价格，乘以每个人住的晚数，然后把别墅作为**一笔使用确切金额的支出**录入。到了结算的时候，Side Badger 会一直记着账，并建议一份简短的付款清单。
+cta:
+  heading: 把别墅记成一笔清清爽爽的支出
+  body: 建一个群组，用链接或二维码邀请所有人，再用确切金额录入别墅。你们安心度假，Side Badger 帮你们记着账。
+sections:
+  - heading: 六晚，四个人，一张信用卡
+    body: "[群组旅行](page:use-case/group-trips)通常从某一个人的信用卡开始。这次是 Ana 的。她订了六晚的别墅，€2,100，因为总得有人先出头。Ana、Ben 和 Chloe 住满六晚。Dev 只能赶上最后三晚，而且是坐火车来的。Ben 租了一辆车，Dev 一次也没坐过。Dev 负责了那次大采购。把别墅四个人平分是最显而易见的做法，但那样 Dev 就要为他在家待着的三晚付钱，这种事到圣诞节还会被翻出来。按晚数分就能避开这场争论，算起来也就一分钟。"
+  - heading: 算出一个人一晚的价格
+    body: 一个“人晚”就是一个人住一晚。别墅该多少钱就是多少钱，所以把总价摊到所有人晚上，再按每个人用掉的人晚数分给各人。
+    items:
+      - "**数一数人晚。**Ana、Ben 和 Chloe 各住六晚，Dev 住三晚：6 + 6 + 6 + 3 = 21。"
+      - "**算出单价。**€2,100 ÷ 21 = 每人晚 €100。"
+      - "**乘以每个人住的晚数。**Ana、Ben 和 Chloe 各付 6 × €100 = €600。Dev 付 3 × €100 = €300。"
+      - "**核对总数。**€600 + €600 + €600 + €300 = €2,100。如果各人份额加起来不等于总价，就是少算了一晚或多算了一晚。"
+  - heading: 在 Side Badger 里录入
+    body: 建一个群组，用链接或二维码邀请另外三位，然后添加各项费用。先从别墅开始。
+    items:
+      - 选择**添加费用**。写上描述，输入 2,100，把**谁付的钱？**设为 Ana。
+      - 在**分摊给**里，确认四个人都在。
+      - 在**如何拆分**里选择**确切金额**。Ana、Ben 和 Chloe 各输入 600，Dev 输入 300。这些金额加起来必须等于总额。
+      - 选择**保存费用**。
+      - 租车也用同样的方式添加。付款人是 Ben，分摊方式是**平分**，Dev 排除在外，因为他是坐火车来的。其他分摊方式见[分摊支出](page:feature/split-expenses)。
+      - 添加杂货。付款人是 Dev，分摊方式是**平分**，四个人都参与。
+  - heading: 看结果，然后结算
+    body: "每个人的账单是别墅份额，加上租车和采购中自己的那份。Ana、Ben 和 Chloe 各是 €725，也就是 €600 + €80 + €45。Dev 是 €345，也就是 €300 + €45。再减去每个人已经付的钱，余额就出来了。Ana 付了 €2,100，所以她可收 €1,375。Ben 付了 €240，欠 €485。Dev 付了 €180，欠 €165。Chloe 一分没付，欠 €725。如果放着不管，这些债务会在群组里六个方向来回流转。Side Badger 建议改成三笔付款，全部付给 Ana。你们想怎么付就怎么付，然后选择**结算**，对每一笔付款使用**记录结算**，让余额同步更新。快速结算按钮会自动填入金额。更多内容见[结算](page:feature/settle-up)。"
+  - heading: 当别墅价格不是整整齐齐的一笔
+    items:
+      - "**房间不一样。**如果套房比小房间更值钱，先商定每个房间的价格，再一个房间一个房间地做人晚计算。可以把别墅作为一笔含每个人合计金额的支出录入，也可以每个房间录一笔。无论哪种，一笔支出里的确切金额加起来必须等于它的总额。"
+      - "**几个月前付的订金。**谁付的订金，谁就单独记一笔，日期写付款当天。按晚数用与尾款相同的比例分摊。"
+      - "**订单用的是另一种货币。**用你实际支付的货币录入别墅。如果群组边付边换算，就用当前汇率，或者输入你实际换到的汇率。原始金额会一直保留在这笔支出上。详情见[多种货币](page:feature/multiple-currencies)。"
+      - "**不足一晚。**有人半夜才到，有人早饭前就走。商定一条数晚数的规则，对所有人一视同仁。"
+  - heading: Side Badger 在这里不做的事
+    items:
+      - 它不会替你数晚数。没有按晚数或按份数拆分的方式，所以你要像上面那样自己算出每个金额，再输入**确切金额**。
+      - 它不转移资金。你们想怎么付就怎么付，然后记录下来。
+      - 每笔支出只允许一位付款人。如果别墅是两个人付的，就录入两笔支出。
+      - 它没有访客访问。群组里的每个人，包括 Dev，都需要一个免费账户。
+exampleAfter: 2
+example:
+  heading: 别墅、租车和采购
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: 别墅六晚
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: 租车
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: 杂货
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: 别墅常见问题
+  items:
+    - q: 如果有人取消了怎么办？
+      a: 扣掉他们的晚数，重新计算，再编辑别墅这笔支出，让确切金额重新加起来等于总价。之前的版本会保留，修改也会显示在群组活动里，所以没人能悄悄改数字。谁能编辑取决于群组的权限。
+    - q: 负责订房的人应该少付一点吗？
+      a: 这由群组决定。订房是件苦差事，各个群组对它是否值得打折看法不一。无论你们怎么商定，都把它体现在确切金额里，并写进这笔支出的备注或旁边的评论里，这样就不用靠谁来记着这个约定。
+    - q: 清洁费可以用不同的方式分吗？
+      a: 可以。把清洁费作为单独一笔支出录入，给它自己的分摊方式。整栋房子统一收费的话，适合平分。想让清洁费也跟着晚数走的群组，适合用确切金额。
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

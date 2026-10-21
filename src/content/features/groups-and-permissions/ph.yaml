@@ -1,0 +1,112 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+identicalApproved:
+  - options.items.0.title
+  - options.items.2.title
+meta:
+  title: "Admin at mga pahintulot ng grupo para sa gastos | Side Badger"
+  description: "Mag-imbita gamit ang link o QR code, aprubahan ang sasali, gumawa ng viewer, magtakda ng pahintulot, at i-lock ang grupo. Ang grupo mo, ang patakaran mo, basta makatwiran."
+h1: "Admin at mga pahintulot ng grupo: ang mga patakaran mo, basta makatwiran"
+navLabel: "Mga grupo at pahintulot"
+lead: "May mga grupong kailangan ng treasurer. May setting ang Side Badger para diyan. Mag-imbita gamit ang link o QR code, magpasya kung sino ang makakapasok, at piliin kung sino ang puwedeng magbago ng mga numero. Puwedeng balewalain ng maliit na grupo ng magkakaibigan ang lahat ng ito, dahil bukas na bukas ang mga bagong grupo sa simula."
+cta:
+  heading: "Handa nang magpatakbo ng maayos na grupo?"
+  body: "Gumawa ng account, magsimula ng grupo, at ipadala ang invite link. Iwanan itong bukas, o higpitan ang mga patakaran kapag lumaki ang grupo o naging mas maselan."
+problem:
+  heading: "May kailangang mag-ayos ng mga numero"
+  body: "Kaya nang umasa sa tiwala ng apat na housemate. Ang tatlumpung bisita sa weekend ng kasal, malamang hindi na. Gumawa ng grupo para sa bawat bahay, biyahe, o event, na hanggang 50 tao ang laman, at may sarili nitong mga miyembro, role, at patakaran ang bawat grupo. Inilista ng dashboard mo ang lahat ng ito, kasama kung nasaan ka sa bawat isa, sa iisang screen. Karamihan ng mga grupo ay hindi kailanman nagagalaw ang mga setting. Ang mga nagagalaw ay kadalasang may kasamang taong sapat ang pagkaorganisado para gustuhin ang mga ito."
+workflow:
+  heading: "Mula sa walang laman na grupo hanggang sa naka-lock na grupo"
+  steps:
+    - title: "Mag-imbita gamit ang link o QR code"
+      body: "Buksan ang **Mag-imbita ng Iba**, piliin kung gaano katagal tatagal ang link (15 minuto, 1 oras, 1 araw o 5 araw), saka kopyahin ang link o ipakita ang QR code para i-scan ng mga tao. Puwede ka ring mag-imbita ng mga taong kasama mo na sa ibang grupo, mula mismo sa app."
+      shot: S03
+      shotAlt: "Ang invite dialog na may group link, ang QR code nito, at pagpipilian kung gaano katagal tatagal ang link"
+    - title: "Hayaan silang silipin muna bago sumali"
+      body: "Ang sinumang may link ay magsa-sign in o gagawa ng account, makikita ang preview ng grupo, at pipiliin ang pangalang gusto niyang gamitin dito. Saka niya pipindutin ang **Sumali sa Grupo**."
+      shot: S04
+      shotAlt: "Ang join preview ng isang grupo, na ipinapakita sa naka-sign in na tao bago siya sumali"
+    - title: "Aprubahan kung sino ang sasali"
+      body: "I-on ang pag-apruba at maghihintay bilang nakabinbing miyembro ang mga gumamit ng link hanggang papasukin sila ng admin. Makikita ito ng mga admin sa **Mga nakabinbing miyembro** sa loob ng **Seguridad at mga Pahintulot**, at pipiliin nila ang **Aprubahan** o **Tanggihan**. Hanggang sa oras na iyon, walang makikita ang nakabinbing tao sa grupo."
+      shot: S14
+      shotAlt: "Mga nakabinbing miyembro na naghihintay na aprubahan o tanggihan ng admin"
+    - title: "Piliin kung sino ang puwedeng magbago ng ano"
+      body: "Piliin ang **Bukas na kolaborasyon** o **Pinamamahalaang grupo**, o itakda ang mga pahintulot nang isa-isa. Saka bigyan ang bawat tao ng role: admin, miyembro, o viewer. Mga admin lang ang makakapagbago ng mga pahintulot at role."
+      shot: S13
+      shotAlt: "Ang security tab ng group settings na may dalawang preset at ang mga custom na pahintulot"
+    - title: "I-lock kapag tapos na"
+      body: "Kapag tapos na ang biyahe at nag-settle na ang mga numero, puwedeng i-on ng admin ang **I-lock ang Grupo**. Walang makakapagdagdag o makakapagbago ng gastos, makakapagtala ng bayad, o makakapag-edit ng listahan at poll, at may banner na nagsasabi nito. Wala nang tahimik na magsisingit ng taxi na nakalimutan. Kung may lumitaw nga, puwedeng i-unlock ng admin ang grupo."
+      shot: S15
+      shotAlt: "Isang grupong may banner na nagsasabing naka-lock ito"
+options:
+  heading: "Mga admin, miyembro, at viewer"
+  items:
+    - title: "Admin"
+      body: "Namamahala sa grupo. Inaaprubahan ng mga admin ang mga bagong miyembro, binabago ang mga role at pahintulot, nila-lock at ina-unlock ang grupo, at isinasara ito. Ang gumawa ng grupo ang unang admin nito, at hindi kailanman nawawalan ng admin ang grupo, dahil hindi puwedeng ibaba ang huling admin."
+    - title: "Miyembro"
+      body: "Nakikilahok sa grupo. Nakadepende sa mga pahintulot ng grupo kung ano ang magagawa ng miyembro. Sa grupong may Bukas na kolaborasyon, halos lahat. Sa Pinamamahalaang grupo, ang mga gastos at listahang ginawa lang niya ang mababago ng miyembro."
+    - title: "Viewer"
+      body: "Nakakakita ng lahat pero walang binabago. Hindi makakapagdagdag o makakapag-edit ng gastos o listahan ang viewer, at hindi rin siya makakapag-imbita, makakapagbago ng settings, o makakagalaw sa header image. Bagay sa taong gustong manood ng mga numero at nangangakong hindi mangingialam."
+sections:
+  - heading: "Bukas, pinamamahalaan, o sarili mong mga patakaran"
+    body: "Nagsisimula ang mga bagong grupo sa **Bukas na kolaborasyon**, kung saan puwedeng mag-imbita, magbago ng gastos, at mag-edit ng listahan ang lahat, at kusang sumasali ang mga bagong miyembro. Ang **Pinamamahalaang grupo** naman ay para kapag may kailangang maging matanda sa grupo. Puwede mo ring itakda nang isa-isa ang pitong pahintulot, at kapag may binago ka nang mano-mano, magiging custom ang grupo. Anuman ang piliin mo, mga admin lang ang makakapagbago ng mga pahintulot mismo, at lumalabas sa activity feed ang bawat pagbabago. Puwedeng iwanang bukas ang lahat sa isang bahay ng [mga housemate](page:use-case/housemates). Madalas na gusto ng malaking [event o selebrasyon](page:use-case/events-and-celebrations) ang Pinamamahalaang grupo, para may nangangasiwa kung sino ang sasali. Bago ka pa lang sa lahat ng ito? Tinatalakay ng [paano ito gumagana](page:how-it-works) ang buong biyahe, mula sa unang gastos hanggang sa quits na."
+    items:
+      - "**Sino ang maaaring mag-edit ng mga gastusin.** Bukas na kolaborasyon: sinumang miyembro. Pinamamahalaang grupo: mga lumikha at admin."
+      - "**Sino ang maaaring magtanggal ng mga gastusin.** Bukas na kolaborasyon: sinumang miyembro. Pinamamahalaang grupo: mga lumikha at admin."
+      - "**Sino ang maaaring mag-edit ng mga listahan.** Bukas na kolaborasyon: sinumang miyembro. Pinamamahalaang grupo: mga lumikha at admin."
+      - "**Sino ang maaaring mag-imbita ng mga miyembro.** Bukas na kolaborasyon: sinumang miyembro. Pinamamahalaang grupo: mga admin lang."
+      - "**Pag-apruba ng bagong miyembro.** Bukas na kolaborasyon: awtomatiko. Pinamamahalaang grupo: kailangan ng pag-apruba ng admin."
+      - "**Sino ang maaaring magbago ng mga setting.** Bukas na kolaborasyon: sinumang miyembro. Pinamamahalaang grupo: mga admin lang."
+      - "**Sino ang maaaring magpalit ng header image.** Bukas na kolaborasyon: sinumang miyembro. Pinamamahalaang grupo: mga admin lang."
+  - heading: "Ang pangalan mo, ang larawan mo, ang header image mo"
+    body: "May sariling listahan ng cast ang bawat grupo. Piliin ang pangalang makikita ng mga tao sa bawat grupo (2 hanggang 50 character, at walang kapareho sa loob ng grupo) at kung alin sa mga profile photo mo ang isusuot mo roon. Maging **Sam** sa bahay at **Sam (may kotse)** sa biyahe. Ang sinumang pinapayagang magbago ng settings ay puwedeng magpalit ng pangalan ng grupo at mag-edit ng description nito. May sarili namang pahintulot ang header image, isang JPEG, PNG, GIF o WebP na hanggang 10 MB."
+  - heading: "I-archive, i-lock, o isara"
+    body: "Tatlong paraan para itabi ang grupo, mula sa pinakamagaan hanggang sa pinakaseryoso."
+    items:
+      - "**I-archive**: itinatago nito ang grupo sa sarili mong dashboard, hindi sa dashboard ng iba. Mabubuksan mo pa rin at magagamit gaya ng dati, at ibinabalik ito ng **I-unarchive ang Grupo**."
+      - "**I-lock**: pinapatigil nito ang mga pagbabago hanggang i-unlock ng admin. Mababasa pa rin ng lahat ang grupo at ang kasaysayan nito."
+      - "**Isara ang grupo**: permanente ito, at para sa lahat. Admin lang ang makakagawa nito, sa pag-type ng pangalan ng grupo para kumpirmahin, at wala nang makakapagbukas muli ng grupo."
+  - heading: "Pag-alis sa grupo"
+    body: "Puwedeng umalis ang sinuman kapag nakapag-settle na. Hindi ka makakaalis kung may utang ka o may sisingilin ka, kahit sa isang currency lang, kung may bukas na tanong tungkol sa isang gastos na kinasasangkutan mo, o kung ikaw ang huling admin o ang nag-iisang miyembro. [Itala ang bayad](page:feature/settle-up), ayusin ang [tanong sa gastos](page:guide/what-to-do-when-someone-disputes-a-shared-expense), o gawing admin ang iba, saka umalis. Kung gusto mong bumalik, kakailanganin mo ng bagong imbitasyon."
+limits:
+  heading: "Basta makatwiran: ang fine print"
+  items:
+    - "Hanggang 50 tao ang kasya sa isang grupo."
+    - "Mga admin lang ang makakapagbago ng mga pahintulot at role. Hindi puwedeng ibaba ang huling admin."
+    - "Kapag **Mga admin lang** ang itinakda sa pag-edit ng gastos, mga admin lang din ang makakapagdagdag ng gastos."
+    - "Pinipigilan ng lock ang mga pagbabago sa gastos, mga bagong bayad, listahan, at poll. Mababasa pa rin ng lahat ang grupo at ang kasaysayan nito, at makakapag-react pa rin sa mga bayad."
+    - "Permanente ang pagsasara. Walang paraan ang app para buksan muli ang saradong grupo."
+    - "Hindi kinakansela ng paggawa ng bagong invite link ang mga luma. Tumatagal ang bawat link hanggang sa sarili nitong expiry, kaya pumili ng maikli kapag kinakabahan ka kung saan ito mapupunta."
+    - "Ang mga in-app invite ay naglilista ng mga tao mula sa 10 pinakahuling aktibong grupo mo. Ang iba ay kailangan ng link, at nakadepende sa mga pahintulot ng grupo kung sino ang puwedeng mag-imbita."
+    - "Kailangan ng account para sumali, at kailangang i-verify ng mga tao ang email nila bago sila makapagdagdag ng anuman."
+useCasesHeading: "Saan nakakatulong ang kaunting kaayusan"
+faq:
+  heading: "Mga tanong"
+  items:
+    - q: "Puwede bang magdagdag ng gastos ang viewer?"
+      a: "Hindi. Nakikita ng viewer ang lahat pero walang binabago. Hindi siya makakapagdagdag o makakapag-edit ng gastos o listahan, makakapag-imbita ng tao, o makakapagbago ng settings."
+    - q: "Puwede bang umalis ang may utang?"
+      a: "Hindi. Walang makakaalis sa grupo habang may utang o may sisingilin pa siya, kahit sa isang currency lang. Mag-settle up muna, saka umalis."
+    - q: "Ano ang mangyayari kapag sarado na ang grupo?"
+      a: "Wala nang makakapagbukas muli nito. Admin lang ang puwedeng magsara ng grupo, kailangan niyang i-type ang pangalan ng grupo para kumpirmahin, at hindi na magiging available ang grupo sa sinuman. Kung pipigilan mo lang ang mga pagbabago, i-lock ito. Kung gusto mo lang itong alisin sa sarili mong dashboard, i-archive."
+    - q: "Mababawi ba ang lock?"
+      a: "Oo. Puwedeng i-unlock ng admin ang grupo, at gagana na muli ang mga pagbabago."
+    - q: "Kailangan ko bang aprubahan ang mga tao bago sila sumali?"
+      a: "Kung gusto mo lang. Nagsisimula ang mga bagong grupo sa Bukas na kolaborasyon, kung saan kusang sumasali ang mga gumagamit ng link. I-on ang pag-apruba ng admin, o piliin ang Pinamamahalaang grupo, at maghihintay ang bawat tao hanggang papasukin siya ng admin."
+    - q: "Ilang tao ang puwede sa isang grupo?"
+      a: "Hanggang 50."

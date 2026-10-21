@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: "Rhestrau, pleidleisiau a sylwadau ar gostau grŵp | Side Badger"
+  description: "Sylwadau ar gostau, holi'r un od, rhestr siopa a rennir a phleidleisio ar y fila. Cynlluniwch y gwario, yna ei rannu. Am ddim, dim hysbysebion."
+h1: "Cynlluniwch gyda'ch gilydd, rhannwch wedyn"
+navLabel: "Cynllunio gyda'ch gilydd"
+lead: "Y rhestr siopa a'r bil siopa, o'r diwedd yn siarad â'i gilydd. Mae Side Badger yn rhoi rhywle i'ch grŵp siarad am yr arian cyn ac ar ôl ei wario, gyda sylwadau ar bob cost, ffordd o holi'r rhai sy'n edrych yn anghywir, a rhestrau a phleidleisiau a rennir ar gyfer y penderfyniadau mawr. Yna rydych yn [rhannu treuliau](page:feature/split-expenses) fel arfer."
+cta:
+  heading: "Cynlluniwch, yna rhannwch"
+  body: "Creu cyfrif am ddim, cychwyn grŵp a rhoi eich rhestr, pleidlais neu gwestiwn cyntaf reit wrth ymyl yr arian. Ddim yn siŵr beth sy'n digwydd nesaf? Gweler [sut mae'n gweithio](page:how-it-works)."
+problem:
+  heading: "Mae'r sgwrs fan hyn, mae'r bil fan draw"
+  body: "Mae gwario grŵp fel arfer yn byw mewn dau le. Mae'r rhifau mewn un, ac mae'r ddadl am y rhifau mewn sgwrs a sgroliodd o'r golwg ddydd Mawrth. Llun o oergell yw'r rhestr siopa. Penderfynwyd ar y fila drwy fawd i fyny gan y rhan fwyaf o bobl, mae'n debyg. Mae Side Badger yn cadw'r cynllunio yn y grŵp, wrth ymyl y costau y mae'n ymwneud â nhw, felly mae sylw lle mae'r gost, rhestr lle mae'r siopa, pleidlais ar gyfer y penderfyniad mawr, a ffordd o ddweud “arhoswch funud, ydy hyn yn iawn?” heb ysgrifennu paragraff. Mae'r cyfan yn aros yn ymwneud ag arian y grŵp, a dyna beth yw pwrpas y grŵp."
+workflow:
+  heading: "O bleidlais y fila i'r bil siopa"
+  steps:
+    - title: "Rhoi'r penderfyniad mawr i bleidlais"
+      body: "Ychwanegwch bleidlais ar gyfer y penderfyniad sy'n pennu'r bil, fel pa fila. Dewiswch ddau i ddeg opsiwn, dywedwch faint o bleidleisiau y mae pob person yn eu cael, yna caewch hi pan fydd pawb wedi pleidleisio a bod yr enillydd wedi'i nodi."
+      shot: S17
+      shotAlt: "Pleidlais gaeedig gyda'r opsiwn buddugol wedi'i nodi a nifer y pleidleisiau wrth ymyl pob opsiwn"
+    - title: "Ysgrifennu'r rhestr siopa gyda'ch gilydd"
+      body: "Cychwynnwch restr a rennir, ychwanegwch yr eitemau a thiciwch nhw wrth iddynt gyrraedd y troli. Yna mae'r siopa yn mynd i mewn fel cost."
+      shot: S16
+      shotAlt: "Rhestr siopa a rennir gyda rhai eitemau wedi'u ticio a chyfrif cynnydd"
+    - title: "Siarad am y gost lle mae'n byw"
+      body: "Gwnewch sylw ar y gost ei hun, atodwch y dderbynneb ac ymatebwch gydag emoji. Mae'r sgwrs yn aros wrth ymyl y rhif y mae'n ymwneud ag ef."
+      shot: S08
+      shotAlt: "Cost gyda'i manylion, mân-lun derbynneb, edefyn sylwadau ac ymatebion emoji"
+    - title: "Holi'r un sy'n edrych yn od"
+      body: "Os yw'r grŵp wedi troi cwestiynau am gostau ymlaen, gall unrhyw un sydd wedi'i gynnwys mewn cost ddewis **Mae gen i gwestiwn**. Mae'r gost yn aros allan o'r balansau nes bod y cwestiwn wedi'i ddatrys."
+      shot: S18
+      shotAlt: "Y rhestr gostau gyda bathodyn Wedi'i gwestiynu a'r hidlydd Wedi'i gwestiynu yn unig"
+    - title: "Gweld beth newidiodd, a phwy a'i newidiodd"
+      body: "Mae'r ffrwd gweithgaredd a chloch yr hysbysiadau yn dangos beth sy'n newydd ar draws eich grwpiau. Mae hysbysiadau gwthio ar gael os hoffech eu cael."
+      shot: S19
+      shotAlt: "Cwymplen yr hysbysiadau gyda rhestr o weithgaredd diweddar"
+options:
+  heading: "Opsiynau"
+  items: []
+example:
+  heading: "Tri chyd-letywr, un bil gwin wedi'i gwestiynu"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "y siopa mawr"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "y glanhawr"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "gwin y parti"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Sylwadau ac ymatebion, wrth ymyl y rhifau"
+    body: "Mae gan bob cost edefyn sylwadau ei hun, ac felly hefyd y grŵp, pob rhestr a phob pleidlais. Gofynnwch pam roedd y tacsi'n costio cymaint o dan y tacsi, nid mewn sgwrs na fydd neb yn sgrolio'n ôl drwyddi. Ychwanegwch lun o'r dderbynneb neu PDF o'r archeb, yna ymatebwch gyda bawd i fyny, calon, chwerthin, rhyfeddu, tristwch neu ddathlu ar gostau, taliadau a sylwadau. Dathlwch daliad pan fydd yn glanio. Dyna'r agosaf y mae Side Badger yn ei gael at gymeradwyaeth."
+  - heading: "Holi cost heb gychwyn ffrae"
+    body: "Pan fo'r grŵp wedi troi cwestiynau am gostau ymlaen, gall unrhyw un sydd wedi'i gynnwys mewn cost ddewis **Mae gen i gwestiwn** a dweud pam. Caiff y cwestiwn ei bostio fel sylw ar y gost, mae'r gost yn cael bathodyn **Wedi'i gwestiynu**, ac mae'r gost gyfan yn disgyn allan o falansau pawb nes bod y cwestiwn wedi'i ddatrys."
+    items:
+      - "**Troi'r nodwedd ymlaen.** Mae wedi'i diffodd yn ddiofyn. Mae gweinyddwr yn troi **Caniatáu cwestiynau am dreuliau** ymlaen yng ngosodiadau'r grŵp, o dan **Nodweddion**."
+      - "**Ei gau.** Mae'r person a ofynnodd, neu weinyddwr, yn dewis **Cau'r cwestiwn**. Os bu sawl person yn holi'r un gost, mae'n mynd yn ôl i'r balansau pan gaiff y cwestiwn olaf ei gau."
+      - "**Golygu'r gost.** Pan gaiff cost ei golygu, mae cwestiwn agored yn trosglwyddo i'r fersiwn newydd i bawb sy'n dal i fod â chyfran ynddi. I unrhyw un y mae'r golygiad yn ei adael allan, mae ei gwestiwn yn dod i ben gyda'r hen fersiwn, felly does dim ar ôl iddynt ei gau."
+      - "**Dod o hyd iddynt.** Mae gan y rhestr gostau hidlydd **Wedi'i gwestiynu yn unig**. Nid cam cymeradwyo yw hwn: dim ond y costau y mae rhywun yn eu holi sy'n cael eu dal yn ôl, ac mae popeth arall yn cyfrif cyn gynted ag y caiff ei ychwanegu."
+  - heading: "Sut mae cwestiwn yn datblygu"
+    body: "Mae Tom yn ychwanegu £45 o win parti, wedi'i rannu rhwng y tri chyd-letywr. Wnaeth Aisha ddim yfed, felly mae'n codi cwestiwn, a thra bo'n agored, nid yw'r gwin yn cyfrif i neb. Mae'r tŷ yn cytuno mai gwin Tom a Priya yw'r gwin, felly mae Tom yn golygu'r rhaniad i'r ddau ohonynt. Nid yw Aisha yn y gost mwyach, felly mae ei chwestiwn yn dod i ben gyda'r fersiwn gynharach, sy'n cael ei chadw, ac mae'r gwin yn ailymuno â'r balansau ar unwaith ar £22.50 yr un yn lle £15 yr un. Pe bai Aisha wedi aros yn y gost, byddai ei chwestiwn wedi trosglwyddo ac wedi aros iddi hi neu weinyddwr ei gau. Isod, mae £48 Aisha yn £28 o'r siopa a £20 o'r glanhawr, ac mae £10.50 Priya yn ei chyfran o £70.50 (£28, £20 a £22.50) llai'r £60 a dalodd. Dadl [cyd-letywyr](page:use-case/housemates) iawn. I weld sut i eirio cwestiwn, gweler [beth i'w wneud pan fydd rhywun yn anghytuno â chost a rennir](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Rhestrau a rennir, ar gyfer y siopa"
+    body: "Cychwynnwch restr yn y grŵp, enwch hi yn rhywbeth fel Rhestr Siopa, ychwanegwch eitemau a thiciwch nhw. Llusgwch eitemau i drefn well, gwyliwch y cyfrif cynnydd yn codi a gwnewch sylw ar y rhestr pan fydd rhywun yn prynu'r llaeth ceirch anghywir. Archifwch restr sydd wedi'i gorffen i'w chadw o'r ffordd (mae **Dangos rhai archifol** yn dod â hi'n ôl), neu copïwch restr i'w hailddefnyddio. Cadwch y rhestr siopa a rennir wrth ymyl y biliau siopa, fel bod y rhestr yn dweud beth i'w brynu a'r gost yn dweud beth oedd y pris. Mae pwy all greu a golygu rhestrau yn dibynnu ar ganiatâd y grŵp, fel mae [grwpiau a chaniatâd](page:feature/groups-and-permissions) yn ei esbonio."
+  - heading: "Pleidleisiau, yn ddienw os dymunwch"
+    body: "Gofynnwch i'r grŵp am rywbeth sy'n penderfynu'r bil, fel pa fila, faint i'w wario ar yr anrheg neu a yw'r daith gwch yn werth chweil. Mae gan bleidlais gwestiwn a dau i ddeg opsiwn. Rydych yn dewis faint o bleidleisiau y mae pob person yn eu cael, o un dewis hyd at ddeg, ac a yw'r pleidleisio'n ddienw. Mae **Pleidleisio anhysbys** yn cuddio pwy bleidleisiodd dros beth, ac ni ellir ei newid unwaith y bydd y bleidlais gyntaf i mewn. Gall pobl newid neu dynnu eu pleidlais nes bod y bleidlais yn cau, a gallwch ei hailagor os oes gan y grŵp ail feddyliau. Dewis y fila yw'r union beth y mae [teithiau grŵp](page:use-case/group-trips) wedi'u gwneud ohono, ac mae cytuno ar gyllideb yr anrheg yn glasur ar gyfer [digwyddiadau a dathliadau](page:use-case/events-and-celebrations)."
+  - heading: "Y ffrwd gweithgaredd, fel nad oes dim yn newid yn dawel"
+    body: "Mae gan bob grŵp hanes gweithgaredd, ac mae cloch yr hysbysiadau yn casglu gweithgaredd o'ch holl grwpiau mewn un lle. Ychwanegwch gost a bydd pawb yn ei gweld ar unwaith, heb adnewyddu, ac mae'r ffrwd yn dangos beth newidiodd a phwy a'i newidiodd. Mae hynny'n cynnwys costau a ychwanegwyd, a olygwyd neu a ddilëwyd, cwestiynau a godwyd ac a gaewyd, sylwadau, newidiadau i restrau a phleidleisiau, a thaliadau a gofnodwyd."
+  - heading: "Hysbysiadau gwthio, os hoffech eu cael"
+    body: "Mae hysbysiadau gwthio yn ddewisol. Trowch nhw ymlaen yn **Gosodiadau** eich cyfrif, o dan **Hysbysiadau**, a bydd eich dyfais yn rhoi gwybod i chi pan fydd gweithgaredd newydd yn eich grwpiau, fel cost newydd neu sylw. Caiff pob dyfais ei throi ymlaen ar wahân, ac mae eich porwr yn gofyn am ganiatâd yn gyntaf. Ar iPhone neu iPad dim ond yn yr ap sydd wedi'i ychwanegu at y Sgrin Gartref y maent yn gweithio, fel mae'r dudalen [ap gwe](page:feature/web-app) yn ei esbonio. Ystyriwch nhw fel cyfleustra, nid addewid, oherwydd nid oes sicrwydd y byddant yn cyrraedd."
+limits:
+  heading: "Cyfyngiadau"
+  items:
+    - "Mae sylwadau, rhestrau a phleidleisiau ar gyfer arian y grŵp. Mae'r [telerau](page:terms) yn gofyn bod popeth a bostir yn ymwneud â chyllid y grŵp, felly lle i gynllunio'r gwario yw hwn, nid sgwrs gyffredinol nac ap tasgau."
+    - "Gall sylw gynnwys hyd at 500 nod, gyda hyd at dri atodiad sy'n ddelweddau neu'n PDFs o hyd at 5 MB yr un. Dim ond yr awdur all ddileu sylw."
+    - "Mae cwestiynau am gostau wedi'u diffodd yn ddiofyn, ac mae gweinyddwr yn eu troi ymlaen ar gyfer pob grŵp. Dim ond pobl sydd wedi'u cynnwys mewn cost all ei holi, mae diffodd y nodwedd yn clirio pob cwestiwn agored, ac ni all neb adael y grŵp tra bo cwestiwn agored ar gost y maent yn rhan ohoni."
+    - "Gall grŵp ddal hyd at 100 o restrau, pob un â hyd at 200 o eitemau o hyd at 500 nod. Caniatâd y grŵp sy'n penderfynu pwy all greu, golygu a dileu rhestrau, ac nid yw grŵp wedi'i gloi yn caniatáu unrhyw newidiadau."
+    - "Gall grŵp ddal hyd at 50 o bleidleisiau, pob un â dau i ddeg opsiwn a hyd at ddeg pleidlais i bob person. Does dim terfyn amser ar bleidleisiau ac nid ydynt yn cau ar eu pen eu hunain."
+    - "Cedwir hanes y gweithgaredd am 90 diwrnod."
+    - "Mae hysbysiadau gwthio yn ddewisol ar gyfer pob cyfrif a phob dyfais. Mae arnynt angen porwr sy'n eu cefnogi a'ch caniatâd, maent yn gweithio ar iPhone ac iPad dim ond o'r ap sydd wedi'i ychwanegu at y Sgrin Gartref, ac nid oes sicrwydd y byddant yn cyrraedd. Does dim rhybuddion e-bost na negeseuon testun am weithgaredd a dim nodiadau atgoffa am daliadau, felly mae mynd ar ôl taliad yn dal i fod yn fater i chi."
+useCasesHeading: "Lle mae cynllunio gyda'ch gilydd yn helpu"
+faq:
+  heading: "Cwestiynau"
+  items:
+    - q: "All pleidleisio fod yn ddienw?"
+      a: "Gall. Trowch **Pleidleisio anhysbys** ymlaen pan fyddwch yn creu'r bleidlais ac mae'n cuddio pwy bleidleisiodd dros beth. Penderfynwch cyn y bleidlais gyntaf, oherwydd ni ellir ei newid wedyn."
+    - q: "All pleidlais gau ar ei phen ei hun?"
+      a: "Na. Does dim terfyn amser ar bleidlais, felly mae'r person a'i chreodd yn dewis **Cau pleidlais** unwaith y bydd y grŵp wedi penderfynu. Os oes gan y grŵp ail feddyliau, mae **Ail-agor pleidlais** yn dod â hi'n ôl."
+    - q: "Faint o eitemau all rhestr eu dal?"
+      a: "Hyd at 200 o eitemau fesul rhestr a hyd at 100 o restrau fesul grŵp. Gall pob eitem fod hyd at 500 nod, sy'n llawer o laeth ceirch."
+    - q: "Pwy all gau cwestiwn, a beth sy'n digwydd i'r gost yn y cyfamser?"
+      a: "Y person a ofynnodd, neu weinyddwr y grŵp. Tra bo cwestiwn yn agored, mae'r gost gyfan allan o falansau pawb. Mae'n mynd yn ôl i mewn pan gaiff y cwestiwn agored olaf arni ei gau, neu pan fydd golygiad yn tynnu'r person a ofynnodd allan o'r gost."
+    - q: "Alla i ddefnyddio rhestrau a sylwadau fel ap tasgau neu sgwrs grŵp?"
+      a: "Na. Mae sylwadau, rhestrau a phleidleisiau ar gyfer arian y grŵp, sef yr hyn y mae'r [telerau](page:terms) yn ei ofyn. Meddyliwch am restrau siopa, pleidleisiau cyllideb a “pam mae hwn yn £45?”."
+    - q: "Fydd Side Badger yn anfon e-bost ataf am weithgaredd?"
+      a: "Na fydd. Does dim rhybuddion e-bost na negeseuon testun am weithgaredd. Gallwch droi hysbysiadau gwthio ymlaen ar bob dyfais, ac mae cloch yr hysbysiadau yn yr ap yn dangos beth sy'n newydd."

@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Nápověda a podpora | Side Badger"
+  description: "Zapomenuté heslo, odkaz, který nefunguje, špatně zaznamenaná platba? Krátké odpovědi na to, v čem lidé v Side Badger váznou, a jak nás zastihnete."
+h1: "Nápověda a podpora, bez čekací hudby"
+navLabel: "Nápověda a podpora"
+lead: "Krátké odpovědi na věci, na kterých lidé váznou, od zapomenutého hesla po definitivní uzavření skupiny. Každá odkazuje na stránku, která vysvětluje víc. Nenašli jste tu svou? Napište nám přímo z aplikace, nebo nám pošlete pár řádků."
+cta:
+  heading: "Přišli jste pro pomoc a zůstanete kvůli dělení?"
+  body: "Ještě nemáte účet? Založte skupinu, sdílejte odkaz a přidejte první výdaj. Zdarma, bez reklam a bez denních limitů."
+groups:
+  - heading: "Přihlášení"
+    items:
+      - q: "Zapomněli jste heslo?"
+        a: "To se stane i těm nejlepším jezevcům. Na obrazovce **Přihlásit se** zvolte **Zapomněli jste heslo?**, zadejte e-mail ke svému účtu a pak otevřete odkaz v e-mailu, který vám pošleme, a zvolte si nové heslo. Co dalšího účet potřebuje, najdete v části [Jak to funguje](page:how-it-works)."
+      - q: "Registrace proběhla, ale nic nemohu přidat. Proč?"
+        a: "Nejčastěji proto, že váš e-mail ještě není ověřený. Otevřete odkaz v ověřovacím e-mailu, nebo na pruhu s upozorněním zvolte **Znovu odeslat ověřovací e-mail**, aby vám přišel nový. Pokud je váš e-mail ověřený, skupina může být uzamčená nebo vám to její oprávnění nemusí dovolovat, a prohlížeč vidí všechno a nic nemění, jak vysvětluje stránka [skupiny a oprávnění](page:feature/groups-and-permissions)."
+      - q: "Jak změním e-mail nebo heslo?"
+        a: "V **Nastavení** zvolte **Změnit e-mail** nebo **Změnit heslo**. Obojí si nejdřív vyžádá vaše současné heslo a novou e-mailovou adresu je třeba ověřit odkazem, který na ni pošleme. O účtech se víc dočtete v části [Jak to funguje](page:how-it-works)."
+      - q: "Mohu se přihlásit přes Google nebo Apple?"
+        a: "Ne. Stačí e-mailová adresa a heslo o délce alespoň 12 znaků a na vlastním telefonu nebo počítači si můžete zaškrtnout **Zapamatovat si mě**. Zbytek začátků pokrývá stránka o [webové aplikaci](page:feature/web-app)."
+  - heading: "Připojení ke skupině"
+    items:
+      - q: "Někdo mi poslal odkaz s pozvánkou. Jak se připojím?"
+        a: "Otevřete ho, pak se přihlaste, nebo si vytvořte bezplatný účet. Uvidíte náhled skupiny, vyberete si jméno, pod kterým vás tam lidé uvidí, a stisknete **Připojit se ke skupině**. Celou cestu dovnitř ukazuje stránka [skupiny a oprávnění](page:feature/groups-and-permissions)."
+      - q: "Stránka hlásí „Čeká na schválení“. Dělám něco špatně?"
+        a: "Vůbec ne. V této skupině každého pouští dovnitř administrátor, takže vaše žádost šla jejím administrátorům a dovnitř neuvidíte, dokud ji jeden z nich neschválí. Přátelské ťuknutí do ramene osobně je povoleno a schvalování vysvětluje stránka [skupiny a oprávnění](page:feature/groups-and-permissions)."
+      - q: "Odkaz hlásí, že je neplatný nebo mu vypršela platnost."
+        a: "Odkazy s pozvánkou platí tak dlouho, jak zvolil ten, kdo je vytvořil, od 15 minut až po 5 dní. Požádejte někoho ve skupině o nový odkaz, nebo o QR kód, pokud jste ve stejné místnosti. Pozvánky pokrývá část [Jak to funguje](page:how-it-works)."
+  - heading: "Výdaje"
+    items:
+      - q: "Jak přidám výdaj?"
+        a: "Otevřete skupinu a zvolte **Přidat výdaj**. Řekněte, o co šlo, kolik to stálo, kdo platil a kdo se o to dělil, a pak výdaj rozdělte rovnoměrně, podle přesných částek nebo procentuálně. Každou možnost projde stránka [dělení výdajů](page:feature/split-expenses)."
+      - q: "Může se nájem opakovat každý měsíc?"
+        a: "Samo od sebe ne, protože opakované výdaje neexistují. Otevřete výdaj z minulého měsíce a zvolte **Kopírovat výdaj**. Formulář se objeví vyplněný, připravený na nové datum a na to, co se změnilo. O kopírování se víc dočtete v části [dělení výdajů](page:feature/split-expenses)."
+      - q: "Překlep v částce. Dá se to opravit?"
+        a: "Ano. Výdaj upravte, pokud to oprávnění skupiny dovolují a skupina není uzamčená. Dřívější verze se uchovává, takže nikdo nemusí věřit vám na slovo, co se změnilo, jak vysvětluje stránka [dělení výdajů](page:feature/split-expenses)."
+      - q: "Výdaj vypadá špatně a není můj. Co teď?"
+        a: "Zvolte u něj **Mám dotaz** a napište proč. Celý výdaj pak zůstane mimo zůstatky všech, dokud dotaz neuzavře ten, kdo se ptal, nebo administrátor. Žádné takové tlačítko? Ptát se mohou jen lidé zahrnutí do výdaje, administrátor musí nejdřív v nastavení skupiny zapnout **Povolit dotazy k výdajům** a diplomacii najdete v [návodu ke zpochybněnému výdaji](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Platby"
+    items:
+      - q: "Posílá Side Badger peníze?"
+        a: "Ne, Side Badger peníze nikdy nepřesouvá. Platíte si, jak chcete, bankovním převodem, hotově nebo čímkoli, co funguje, a pak platbu zaznamenáte, aby zůstatky dohnaly skutečnost. Od začátku do konce to projde návod [jak se vyrovnat po skupinovém výletu](page:guide/how-to-settle-up-after-a-group-trip)."
+      - q: "Jak zaznamenám platbu?"
+        a: "Ve skupině zvolte **Vyrovnat dluhy**, uveďte, kdo platil a kdo platbu přijal, zadejte částku nebo ji nechte vyplnit tlačítkem **Rychlé vyrovnání** a zvolte **Zaznamenat vyrovnání**. Zaplatili jste jen část? Zaznamenejte, co se zaplatilo, a zbytek zůstane na zůstatku, jak vysvětluje stránka [vyrovnání](page:feature/settle-up)."
+      - q: "Platba je zaznamenaná špatně. Dá se to opravit?"
+        a: "Upravit ji může ten, kdo ji zaznamenal, a to z historie **Vyrovnání** ve skupině. Smazat ji může on nebo administrátor, čímž zmizí ze zůstatků. Platbu, která se týká někoho, kdo skupinu mezitím opustil, upravit nelze. Historii pokrývá část [vyrovnání](page:feature/settle-up)."
+  - heading: "Oznámení a domovská obrazovka"
+    items:
+      - q: "Jak zapnu oznámení?"
+        a: "V **Nastavení** zapněte **Push oznámení** a povolte je, až se zeptá prohlížeč. Pokud je prohlížeč už zablokoval, povolte je nejdřív v jeho vlastním nastavení. Každé zařízení se zapíná zvlášť a doručení není zaručeno, takže oznámení berte jako postrčení, ne jako slib, jak vysvětluje stránka o [webové aplikaci](page:feature/web-app)."
+      - q: "Proč mi na iPhonu nefungují oznámení?"
+        a: "Na iPhonu nebo iPadu fungují jen v aplikaci přidané na domovskou obrazovku, nikdy na kartě prohlížeče. Přidejte ji, otevřete ji z ikony na domovské obrazovce a pak je zapněte v **Nastavení**. Na co vás upozorňují, ukazuje stránka [Plánujte spolu](page:feature/plan-together)."
+      - q: "Dá se stáhnout nějaká aplikace?"
+        a: "Z obchodu s aplikacemi ne, protože Side Badger běží v prohlížeči. Přihlaste se, pak v **Nastavení** použijte **Přidat na plochu nebo do Docku** a Side Badger se otevírá jako aplikace, ve vlastním okně. Kroky pro jednotlivá zařízení najdete na stránce o [webové aplikaci](page:feature/web-app)."
+  - heading: "Odchod, archivace, uzamčení a uzavření"
+    items:
+      - q: "Jak opustím skupinu?"
+        a: "Nejdřív se vyrovnejte, pak zvolte **Opustit skupinu**. Odejít nemůžete, dokud dlužíte nebo se vám dluží, byť jen v jedné měně, ani dokud je u výdaje, na kterém se podílíte, otevřený dotaz. Nejde to ani tehdy, když jste poslední administrátor nebo jediný člen, a návrat vyžaduje novou pozvánku. Podrobnosti má stránka [skupiny a oprávnění](page:feature/groups-and-permissions)."
+      - q: "Jak dostanu starou skupinu ze své nástěnky?"
+        a: "Zvolte **Archivovat skupinu**. Zmizí z vaší nástěnky, ne z nástěnky nikoho jiného, stále ji můžete otevřít a používat a **Obnovit skupinu z archivu** ji vrátí. Archivaci, uzamčení a uzavření srovnává stránka [skupiny a oprávnění](page:feature/groups-and-permissions)."
+      - q: "Výlet skončil. Můžeme zabránit tomu, aby se čísla měnila?"
+        a: "Ano. Administrátor může v nastavení skupiny zapnout **Uzamknout skupinu** a nikdo pak nemůže přidávat ani upravovat výdaje, zaznamenávat nové platby ani měnit seznamy a hlasování, dokud to administrátor neodemkne. Skupinu i její historii si mohou všichni dál číst a žádné pozdní taxi se nepropašuje, jak vysvětluje stránka [skupiny a oprávnění](page:feature/groups-and-permissions)."
+      - q: "Mohu skupinu smazat?"
+        a: "Administrátor ji může uzavřít tlačítkem **Uzavřít skupinu** poté, co pro potvrzení napíše název skupiny. Uzavření je trvalé a skupina pak není dostupná nikomu, takže pokud ji chcete mít jen z očí, raději ji archivujte. Drobné písmo najdete v části [skupiny a oprávnění](page:feature/groups-and-permissions)."
+contact:
+  heading: "Pořád nevíte, jak dál?"
+  items:
+    - q: "Našli jste chybu, nebo chcete něco změnit?"
+      a: "Napište nám přímo z aplikace. V nabídce účtu zvolte **Zpětná vazba**, pak **Odeslat zpětnou vazbu** a vyberte **Nahlásit problém**, **Žádost o pomoc** nebo **Žádost o funkci**. Pokud to pomůže, přiložte snímek obrazovky, a až odpovíme, najdete odpověď ve stejném vlákně."
+    - q: "Raději e-mailem?"
+      a: "Napište na adresu níže. Uveďte, které skupiny se to týká, co jste udělali a co jste čekali, že se stane. Ulevit si je v pořádku; hesla ne, takže nikdy neposílejte své."
+  emailLabel: "Napište nám na"
+  email: support@sidebadger.me

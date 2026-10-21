@@ -1,0 +1,110 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved: []
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Administratorji in dovoljenja skupine za skupne stroške | Side Badger"
+  description: "Povabi z povezavo ali kodo QR, potrdi, kdo se pridruži, določi gledalce, nastavi dovoljenja in skupino zakleni, ko je konec. Tvoja skupina, tvoja pravila, v razumnih mejah."
+h1: "Administratorji in dovoljenja skupine: tvoja pravila, v razumnih mejah"
+navLabel: "Skupine in dovoljenja"
+lead: "Nekatere skupine potrebujejo blagajnika. Side Badger ima za to nastavitev. Ljudi povabi s povezavo ali kodo QR, odloči, kdo vstopi, in izberi, kdo sme spreminjati številke. Majhna skupina prijateljev lahko vse to preskoči, saj se nove skupine začnejo na stežaj odprte."
+cta:
+  heading: "Si pripravljen na urejeno skupino?"
+  body: "Ustvari uporabniški račun, ustanovi skupino in pošlji povezavo za povabilo. Pusti jo odprto ali zaostri pravila, ko skupina zraste ali postane izbirčnejša."
+problem:
+  heading: "Nekdo mora skrbeti, da so številke urejene"
+  body: "Štirje sostanovalci zmorejo na zaupanju. Trideset gostov na poročnem vikendu verjetno ne. Naredi skupino za vsako hišo, potovanje ali dogodek, z do 50 ljudmi v njej, in vsaka skupina ima svoje člane, svoje vloge in svoja pravila. Na nadzorni plošči so vse naštete, skupaj s tem, kako stojiš v posamezni, na enem zaslonu. Večina skupin se nastavitev nikoli ne dotakne. Tiste, ki se jih, imajo običajno nekoga, ki je dovolj organiziran, da jih želi."
+workflow:
+  heading: "Od prazne skupine do zaklenjene skupine"
+  steps:
+    - title: "Povabi s povezavo ali kodo QR"
+      body: "Odpri **Povabi druge**, izberi, kako dolgo naj povezava velja (15 minut, 1 uro, 1 dan ali 5 dni), nato kopiraj povezavo ali pokaži kodo QR, ki jo ljudje skenirajo. Povabiš lahko tudi osebe, s katerimi že deliš drugo skupino, kar v aplikaciji."
+      shot: S03
+      shotAlt: "Pogovorno okno za povabilo s povezavo do skupine, njeno kodo QR in izbiro, kako dolgo povezava velja"
+    - title: "Naj pogledajo, preden se pridružijo"
+      body: "Vsakdo s povezavo se prijavi ali ustvari račun, vidi predogled skupine in izbere ime, pod katerim želi nastopati v njej. Nato pritisne **Pridruži se skupini**."
+      shot: S04
+      shotAlt: "Predogled pridružitve skupini, ki ga prijavljena oseba vidi, preden se pridruži"
+    - title: "Potrdi, kdo se pridruži"
+      body: "Vklopi potrjevanje in ljudje, ki uporabijo povezavo, čakajo kot čakajoči člani, dokler jih administrator ne spusti noter. Administratorji jih najdejo pod **Čakajoči člani** v razdelku **Varnost** in izberejo **Odobri** ali **Zavrni**. Do takrat čakajoča oseba v skupini ne vidi ničesar."
+      shot: S14
+      shotAlt: "Čakajoči člani, ki čakajo, da jih administrator odobri ali zavrne"
+    - title: "Izberi, kdo sme kaj spreminjati"
+      body: "Izberi **Odprto** ali **Upravljano** ali pa dovoljenja nastavi enega za drugim. Nato vsaki osebi dodeli vlogo: administrator, član ali gledalec. Dovoljenja in vloge lahko spreminjajo samo administratorji."
+      shot: S13
+      shotAlt: "Zavihek z varnostnimi nastavitvami skupine z dvema prednastavitvama in lastnimi dovoljenji"
+    - title: "Zakleni, ko je konec"
+      body: "Ko je potovanja konec in so številke poravnane, lahko administrator vklopi **Zakleni skupino**. Nihče ne more dodajati ali spreminjati stroškov, beležiti plačil ali urejati seznamov in anket, pasica pa to tudi pove. Nihče ne more tiho dodati poznega taksija. Če se kakšen vendarle pojavi, lahko administrator skupino odklene."
+      shot: S15
+      shotAlt: "Skupina s pasico, ki pove, da je zaklenjena"
+options:
+  heading: "Administratorji, člani in gledalci"
+  items:
+    - title: "Administrator"
+      body: "Vodi skupino. Administratorji odobravajo nove člane, spreminjajo vloge in dovoljenja, skupino zaklepajo in odklepajo ter jo zaprejo. Kdor skupino ustvari, je na začetku njen administrator, skupina pa nikoli ne ostane brez njega, ker zadnjega administratorja ni mogoče znižati."
+    - title: "Član"
+      body: "Sodeluje. Kaj član sme, je odvisno od dovoljenj skupine. V odprti skupini je to skoraj vse. V upravljani skupini lahko člani spreminjajo samo stroške in sezname, ki so jih ustvarili sami."
+    - title: "Gledalec"
+      body: "Vidi vse in ne spreminja ničesar. Gledalec ne more dodajati ali urejati stroškov in seznamov, vabiti ljudi, spreminjati nastavitev ali se dotikati slike glave. Prav pride za osebo, ki želi spremljati številke in obljublja, da se ne bo igrala z njimi."
+sections:
+  - heading: "Odprto, upravljano ali po lastnih pravilih"
+    body: "Nove skupine se začnejo kot **Odprto**, kjer lahko vsi vabijo ljudi, spreminjajo stroške in urejajo sezname, novi člani pa se pridružijo samodejno. **Upravljano** je za primer, ko mora nekdo biti odrasla oseba. Sedem dovoljenj lahko nastaviš tudi posamično, ročna sprememba enega pa skupino preklopi na lastno nastavitev. Karkoli izbereš, samo administratorji lahko spreminjajo sama dovoljenja, vsaka sprememba pa se prikaže v dnevniku dejavnosti. Stanovanje [sostanovalcev](page:use-case/housemates) lahko pusti vse odprto. Velik [dogodek ali praznovanje](page:use-case/events-and-celebrations) pogosto želi Upravljano, da je nekdo zadolžen za to, kdo se pridruži. Vse to ti je novo? [Kako deluje](page:how-it-works) vodi skozi celotno pot, od prvega stroška do poravnave."
+    items:
+      - "**Kdo lahko ureja stroške.** Odprto: vsak član. Upravljano: ustvarjalci in administratorji."
+      - "**Kdo lahko briše stroške.** Odprto: vsak član. Upravljano: ustvarjalci in administratorji."
+      - "**Kdo lahko ureja sezname.** Odprto: vsak član. Upravljano: ustvarjalci in administratorji."
+      - "**Kdo lahko vabi člane.** Odprto: vsak član. Upravljano: samo administratorji."
+      - "**Odobritev novih članov.** Odprto: samodejno. Upravljano: potrebna je odobritev administratorja."
+      - "**Kdo lahko spreminja nastavitve.** Odprto: vsak član. Upravljano: samo administratorji."
+      - "**Kdo lahko spreminja sliko glave.** Odprto: vsak član. Upravljano: samo administratorji."
+  - heading: "Tvoje ime, tvoja fotografija, tvoja slika glave"
+    body: "Vsaka skupina ima svojo zasedbo. Izberi ime, ki ga ljudje vidijo v posamezni skupini (od 2 do 50 znakov in enolično znotraj skupine), in katero od svojih profilnih fotografij tam nosiš. V hiši bodi **Sam**, na potovanju pa **Sam (ima avto)**. Vsak, ki sme spreminjati nastavitve, lahko skupino preimenuje in uredi njen opis. Slika glave, JPEG, PNG, GIF ali WebP do 10 MB, ima svoje dovoljenje."
+  - heading: "Arhiviraj, zakleni ali zapri"
+    body: "Trije načini, kako skupino odložiti, od najmanj do najbolj resnega."
+    items:
+      - "**Arhiviraj** skupino skrije z tvoje nadzorne plošče, ne pa z ničesar nikogar drugega. Še vedno jo lahko odpreš in uporabljaš kot prej, **Obnovi skupino** pa jo vrne."
+      - "**Zakleni** zamrzne spremembe, dokler administrator ne odklene. Vsi lahko še vedno berejo skupino in njeno zgodovino."
+      - "**Zapri** je trajno in za vse. To lahko stori samo administrator, tako da za potrditev vpiše ime skupine, nihče pa skupine ne more več odpreti."
+  - heading: "Zapustitev skupine"
+    body: "Vsak lahko skupino zapusti, ko je poravnan. Ne moreš je zapustiti, dokler dolguješ ali ti dolgujejo denar, pa čeprav le v eni valuti, dokler je odprto vprašanje o stroških, ki te zadeva, ali če si zadnji administrator ali edini član. [Zabeleži plačilo](page:feature/settle-up), uredi [vprašanje o stroških](page:guide/what-to-do-when-someone-disputes-a-shared-expense) ali naredi administratorja koga drugega, nato pojdi. Če se želiš vrniti, boš potreboval novo povabilo."
+limits:
+  heading: "V razumnih mejah: drobni tisk"
+  items:
+    - "Skupina lahko šteje do 50 ljudi."
+    - "Dovoljenja in vloge lahko spreminjajo samo administratorji. Zadnjega administratorja ni mogoče znižati."
+    - "Če urejanje stroškov nastaviš na **Samo administratorji**, to pomeni tudi, da lahko stroške dodajajo samo administratorji."
+    - "Zaklep ustavi spremembe stroškov, nova plačila, sezname in ankete. Vsi lahko še vedno berejo skupino in njeno zgodovino ter se odzivajo na plačila."
+    - "Zaprtje je trajno. V aplikaciji zaprte skupine ni mogoče znova odpreti."
+    - "Nova povezava za povabilo starih ne prekliče. Vsaka velja do svojega poteka, zato izberi kratko, če te skrbi, kam bi lahko zašla."
+    - "Povabila v aplikaciji prikažejo ljudi iz tvojih 10 nazadnje aktivnih skupin. Vsi drugi potrebujejo povezavo, to, kdo sme vabiti, pa je odvisno od dovoljenj skupine."
+    - "Za pridružitev je potreben račun, ljudje pa morajo potrditi e-pošto, preden lahko karkoli dodajo."
+useCasesHeading: "Kjer malo reda pride prav"
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Ali lahko gledalec dodaja stroške?"
+      a: "Ne. Gledalec vidi vse in ne spreminja ničesar. Ne more dodajati ali urejati stroškov in seznamov, vabiti ljudi ali spreminjati nastavitev."
+    - q: "Ali lahko nekdo zapusti skupino, medtem ko dolguje denar?"
+      a: "Ne. Nihče ne more zapustiti skupine, dokler dolguje ali mu dolgujejo denar, pa čeprav le v eni valuti. Najprej se poravnaj, nato pojdi."
+    - q: "Kaj se zgodi, ko je skupina zaprta?"
+      a: "Nihče je ne more več odpreti. Skupino lahko zapre samo administrator, za potrditev pa mora vpisati ime skupine, nato skupina postane nedostopna vsem. Če želiš samo ustaviti spremembe, jo zakleni. Če jo želiš samo odstraniti s svoje nadzorne plošče, jo arhiviraj."
+    - q: "Ali lahko zaklep razveljavim?"
+      a: "Da. Administrator lahko skupino odklene in spremembe spet delujejo."
+    - q: "Ali moram ljudi odobriti, preden se pridružijo?"
+      a: "Samo če želiš. Nove skupine se začnejo kot Odprto, kjer se ljudje, ki uporabijo povezavo, pridružijo samodejno. Vklopi odobritev administratorja ali izberi Upravljano in vsak čaka, dokler ga administrator ne spusti noter."
+    - q: "Koliko ljudi je lahko v skupini?"
+      a: "Do 50."

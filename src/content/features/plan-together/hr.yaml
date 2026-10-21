@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: "Zajednički popisi, ankete i komentari za troškove | Side Badger"
+  description: "Komentiraj troškove, dovedi u pitanje čudne, vodi zajednički popis za kupnju i glasaj o vili. Planirajte zajedno, pa podijelite. Besplatno, bez oglasa."
+h1: "Planiraj zajedno, podijeli poslije"
+navLabel: "Planiranje zajedno"
+lead: "Popis za kupnju i račun za kupnju napokon razgovaraju jedno s drugim. Side Badger daje tvojoj grupi mjesto za razgovor o novcu prije i nakon što se potroši, s komentarima na svakom trošku, načinom da dovedeš u pitanje one koji izgledaju krivo, zajedničkim popisima i anketama za velike odluke. Zatim [dijeliš troškove](page:feature/split-expenses) kao i inače."
+cta:
+  heading: "Isplaniraj, pa podijeli"
+  body: "Napravi besplatan korisnički račun, osnuj grupu i stavi prvi popis, anketu ili pitanje točno uz novac. Ne znaš što slijedi? Pogledaj [kako radi](page:how-it-works)."
+problem:
+  heading: "Razgovor je ovdje, račun je ondje"
+  body: "Troškovi grupe obično žive na dva mjesta. Brojevi su na jednom, a svađa oko brojeva u chatu koji je u utorak otklizao daleko gore. Popis za kupnju je fotografija hladnjaka. Vila je odlučena palcem gore od većine ljudi, vjerojatno. Side Badger drži planiranje u grupi, uz troškove na koje se odnosi, pa komentar stoji ondje gdje i trošak, popis ondje gdje i kupnja, anketa uz veliku odluku, a „čekaj, je li ovo točno?“ možeš reći bez pisanja eseja. Sve ostaje o novcu grupe, zbog čega grupa i postoji."
+workflow:
+  heading: "Od glasanja o vili do računa za kupnju"
+  steps:
+    - title: "Stavi veliku odluku na glasanje"
+      body: "Dodaj anketu za odluku koja određuje račun, primjerice koja vila. Odaberi od dvije do deset opcija, reci koliko glasova svaka osoba ima, a zatim je zatvori kad su svi glasali i pobjednik je označen."
+      shot: S17
+      shotAlt: "Zatvorena anketa s označenom pobjedničkom opcijom i brojem glasova uz svaku opciju"
+    - title: "Zajedno napišite popis za kupnju"
+      body: "Započni zajednički popis, dodaj stavke i kvačicom ih označavaj kad stignu u kolica. Kupnja se poslije unosi kao trošak."
+      shot: S16
+      shotAlt: "Zajednički popis za kupnju s nekoliko označenih stavki i brojačem napretka"
+    - title: "Razgovaraj o cijeni tamo gdje živi"
+      body: "Komentiraj sam trošak, priloži račun i reagiraj emojijem. Razgovor ostaje uz broj na koji se odnosi."
+      shot: S08
+      shotAlt: "Trošak s pojedinostima, sličicom računa, nitom komentara i reakcijama emojijima"
+    - title: "Dovedi u pitanje onaj koji izgleda čudno"
+      body: "Ako je grupa uključila pitanja o troškovima, svatko tko je uključen u trošak može odabrati **Imam pitanje**. Trošak ostaje izvan stanja dok se pitanje ne riješi."
+      shot: S18
+      shotAlt: "Popis troškova s oznakom Dovedeno u pitanje i filtrom Samo dovedeno u pitanje"
+    - title: "Vidi što se promijenilo i tko je to promijenio"
+      body: "Aktivnost grupe i zvonce obavijesti prikazuju što je novo u svim tvojim grupama. Push obavijesti su tu ako ih želiš."
+      shot: S19
+      shotAlt: "Padajući izbornik obavijesti s popisom nedavne aktivnosti"
+options:
+  heading: "Opcije"
+  items: []
+example:
+  heading: "Troje cimera, jedan račun za vino doveden u pitanje"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "velika kupnja"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "čišćenje"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "vino za zabavu"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Komentari i reakcije, uz brojeve"
+    body: "Svaki trošak ima vlastitu nit komentara, a tako i grupa, svaki popis i svaka anketa. Pitaj zašto je taksi toliko koštao ispod taksija, a ne u chatu kojem se nitko ne vraća. Dodaj fotografiju računa ili PDF rezervacije, a zatim reagiraj palcem gore, srcem, smijehom, „vau“, tugom ili slavljem na troškove, uplate i komentare. Proslavi uplatu kad stigne. To je najbliže pljesku što Side Badger može dati."
+  - heading: "Dovedi trošak u pitanje bez svađe"
+    body: "Kad grupa ima uključena pitanja o troškovima, svatko tko je uključen u trošak može odabrati **Imam pitanje** i reći zašto. Pitanje se objavljuje kao komentar na trošku, trošak dobiva oznaku **Dovedeno u pitanje**, a cijeli trošak ispada iz svačijeg stanja dok se pitanje ne riješi."
+    items:
+      - "**Uključivanje.** Isključeno je prema zadanim postavkama. Administrator u postavkama grupe, pod **Značajke**, uključuje **Dopusti pitanja o troškovima**."
+      - "**Zatvaranje.** Osoba koja je pitala ili administrator bira **Zatvori pitanje**. Ako je više ljudi dovelo isti trošak u pitanje, vraća se u stanja kad se zatvori posljednje pitanje."
+      - "**Uređivanje.** Kad se trošak uredi, otvoreno pitanje prelazi na novu verziju za svakoga tko u njoj još ima udio. Pitanje svakoga koga uređivanje izostavi završava sa starom verzijom, pa mu nema što zatvarati."
+      - "**Pronalaženje.** Popis troškova ima filtar **Samo dovedeno u pitanje**. Ovo nije korak odobravanja: zadržavaju se samo troškovi koje netko dovede u pitanje, a sve ostalo vrijedi čim se doda."
+  - heading: "Kako se pitanje odvija"
+    body: "Tom dodaje 45 £ vina za zabavu, podijeljenog na sve troje cimera. Aisha nije pila, pa postavlja pitanje, a dok je otvoreno, vino se ne računa nikome. Kuća se slaže da je vino Tomovo i Priyino, pa Tom uređuje podjelu na njih dvoje. Aisha više nije u trošku, pa njezino pitanje završava s ranijom verzijom, koja se čuva, a vino se odmah vraća u stanja, po 22,50 £ svakome umjesto po 15 £. Da je Aisha ostala u trošku, njezino bi pitanje prešlo dalje i čekalo da ga ona ili administrator zatvori. Ispod, Aishinih 48 £ je 28 £ kupnje i 20 £ čišćenja, a Priyinih 10,50 £ je njezin udio od 70,50 £ (28 £, 20 £ i 22,50 £) umanjen za 60 £ koje je platila. Vrlo [cimerska](page:use-case/housemates) vrsta svađe. Kako formulirati pitanje, pročitaj u [što učiniti kad netko ospori zajednički trošak](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Zajednički popisi, za kupnju"
+    body: "Započni popis u grupi, nazovi ga primjerice Popis za kupnju, dodaj stavke i označavaj ih kvačicom. Povuci stavke u bolji redoslijed, gledaj kako brojač napretka raste i komentiraj popis kad netko kupi krivo zobeno mlijeko. Arhiviraj gotov popis da ga pospremiš (**Prikaži arhivirano** ga vraća) ili kopiraj popis da ga ponovno upotrijebiš. Zajednički popis za kupnju drži uz račune za kupnju, pa popis kaže što kupiti, a trošak koliko je koštalo. Tko može stvarati i uređivati popise, ovisi o dopuštenjima grupe, što objašnjavaju [grupe i dopuštenja](page:feature/groups-and-permissions)."
+  - heading: "Ankete, anonimne ako želiš"
+    body: "Pitaj grupu nešto što odlučuje o računu, primjerice koja vila, koliko potrošiti na dar ili vrijedi li izlet brodom. Anketa ima pitanje i od dvije do deset opcija. Biraš koliko glasova svaka osoba ima, od jednog glasa do deset, i je li glasanje anonimno. **Anonimno glasanje** skriva tko je za što glasao i ne može se promijeniti nakon prvog glasa. Ljudi mogu promijeniti ili ukloniti svoj glas dok se anketa ne zatvori, a ti je možeš ponovno otvoriti ako grupa predomisli. Biranje vile je upravo ono od čega se sastoje [grupna putovanja](page:use-case/group-trips), a dogovaranje proračuna za dar klasik je za [događaje i proslave](page:use-case/events-and-celebrations)."
+  - heading: "Aktivnost grupe, da se ništa ne mijenja krišom"
+    body: "Svaka grupa ima povijest aktivnosti, a zvonce obavijesti skuplja aktivnost iz svih tvojih grupa na jednom mjestu. Dodaj trošak i svi ga odmah vide, bez osvježavanja, a aktivnost pokazuje što se promijenilo i tko je to promijenio. To obuhvaća dodane, uređene ili obrisane troškove, postavljena i zatvorena pitanja, komentare, promjene popisa i anketa te zabilježene uplate."
+  - heading: "Push obavijesti, ako ih želiš"
+    body: "Push obavijesti su izborne. Uključi ih u svom računu, u odjeljku **Postavke** pod **Obavijesti**, a uređaj ti javlja kad u tvojim grupama ima nove aktivnosti, primjerice novi trošak ili komentar. Svaki se uređaj uključuje zasebno, a preglednik prvo traži dopuštenje. Na iPhoneu ili iPadu rade samo iz aplikacije dodane na početni zaslon, što objašnjava stranica o [web-aplikaciji](page:feature/web-app). Shvati ih kao pogodnost, a ne obećanje, jer isporuka nije zajamčena."
+limits:
+  heading: "Ograničenja"
+  items:
+    - "Komentari, popisi i ankete služe novcu grupe. [Uvjeti](page:terms) traže da sve objavljeno ima veze s financijama grupe, pa je ovo mjesto za planiranje troškova, a ne opći chat ni aplikacija za popis zadataka."
+    - "Komentar može imati do 500 znakova, s do tri privitka koji su slike ili PDF-ovi do 5 MB svaki. Komentar može obrisati samo njegov autor."
+    - "Pitanja o troškovima isključena su prema zadanim postavkama, a administrator ih uključuje za svaku grupu. Trošak mogu dovesti u pitanje samo osobe koje su u njega uključene, isključivanje značajke uklanja svako otvoreno pitanje, a nitko ne može napustiti grupu dok trošak u kojem sudjeluje ima otvoreno pitanje."
+    - "Grupa može imati do 100 popisa, svaki s do 200 stavki od najviše 500 znakova. Dopuštenja grupe određuju tko može stvarati, uređivati i brisati popise, a zaključana grupa ne dopušta nikakve promjene."
+    - "Grupa može imati do 50 anketa, svaka s dvije do deset opcija i do deset glasova po osobi. Ankete nemaju rok i ne zatvaraju se same."
+    - "Povijest aktivnosti čuva se 90 dana."
+    - "Push obavijesti su izborne za svaki račun i svaki uređaj. Trebaju preglednik koji ih podržava i tvoje dopuštenje, na iPhoneu i iPadu rade samo iz aplikacije dodane na početni zaslon, a isporuka nije zajamčena. Nema obavijesti e-poštom ni SMS-om o aktivnosti ni podsjetnika na uplate, pa je potjerivanje uplate i dalje na tebi."
+useCasesHeading: "Gdje zajedničko planiranje pomaže"
+faq:
+  heading: "Pitanja"
+  items:
+    - q: "Mogu li glasovi biti anonimni?"
+      a: "Da. Uključi **Anonimno glasanje** pri stvaranju ankete i skrivat će tko je za što glasao. Odluči prije prvog glasa, jer se poslije ne može promijeniti."
+    - q: "Može li se anketa zatvoriti sama?"
+      a: "Ne. Anketa nema rok, pa osoba koja ju je stvorila bira **Zatvori anketu** kad grupa odluči. Ako grupa predomisli, **Ponovno otvori anketu** je vraća."
+    - q: "Koliko stavki stane na popis?"
+      a: "Do 200 stavki po popisu i do 100 popisa po grupi. Svaka stavka može imati do 500 znakova, a to je puno zobenog mlijeka."
+    - q: "Tko može zatvoriti pitanje i što je s troškom u međuvremenu?"
+      a: "Osoba koja je pitala ili administrator grupe. Dok je pitanje otvoreno, cijeli je trošak izvan svačijeg stanja. Vraća se kad se zatvori posljednje otvoreno pitanje o njemu ili kad uređivanje iz troška izbaci osobu koja je pitala."
+    - q: "Mogu li popise i komentare koristiti kao aplikaciju za zadatke ili grupni chat?"
+      a: "Ne. Komentari, popisi i ankete služe novcu grupe, što i traže [uvjeti](page:terms). Misli na popise za kupnju, ankete o proračunu i „zašto je ovo 45 £?“."
+    - q: "Hoće li me Side Badger obavještavati e-poštom o aktivnosti?"
+      a: "Ne. Nema obavijesti e-poštom ni SMS-om o aktivnosti. Push obavijesti možeš uključiti na svakom uređaju, a zvonce obavijesti u aplikaciji pokazuje što je novo."

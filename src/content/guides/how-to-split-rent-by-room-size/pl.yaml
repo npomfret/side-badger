@@ -1,0 +1,103 @@
+translatedFrom: "a2338738"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Jak podzielić czynsz według wielkości pokoju | Side Badger"
+  description: "Większy pokój, większy udział. Odłóż wspólne pomieszczenia, resztę podziel według metrażu i wpisz procenty raz. Rachunek pokazany dla trojga współlokatorów."
+h1: "Jak podzielić czynsz według wielkości pokoju"
+navLabel: "Czynsz według wielkości pokoju"
+lead: "Ustal, ile z czynszu przypada na wspólne pomieszczenia, i podziel tę część po równo, a resztę według powierzchni sypialni. Zaokrąglij do pełnych procentów, wpisz je raz przy czynszu w Side Badger i co miesiąc kopiuj wydatek."
+cta:
+  heading: "Wpisz czynsz raz"
+  body: "Załóż darmowe konto, utwórz grupę dla mieszkania i wpisz czynsz z ustalonymi procentami. Następny miesiąc to kopia. Chcesz najpierw rozejrzeć się po aplikacji? Zobacz [jak to działa](page:how-it-works) albo sprawdź, [co obejmuje darmowy plan](page:pricing)."
+sections:
+  - heading: "Troje ludzi, jedno mieszkanie, jedna kłótnia"
+    body: "Priya, Tom i Aisha wynajmują mieszkanie za 1 950 £ miesięcznie. Przez rok dzielili czynsz na trzy, bo tak było łatwo. Potem Aisha zmierzyła swój pokój. Priya ma pokój 16 m², Tom 12 m², a Aisha 10 m², więc Aisha płaciła tyle samo co Priya za pokój o ponad jedną trzecią mniejszy. Nikt nie postąpił nierozsądnie. Nikt po prostu nie liczył. Przy jedzeniu na wynos uzgodnili najpierw jedną zasadę. Z czynszu 40% idzie na kuchnię, łazienkę i salon, z których korzysta cała trójka."
+  - heading: "Metoda, z pokazanymi obliczeniami"
+    body: "Cztery kroki, jedna miarka i kalkulator w telefonie."
+    items:
+      - "**Odłóż wspólną część.** Grupa ustala, jaka część czynszu przypada na pomieszczenia, z których korzystają wszyscy. W tym mieszkaniu to 40%, czyli 13,33% na każdą z trzech osób."
+      - "**Resztę podziel według powierzchni.** Pozostałe 60% idzie według wielkości sypialni. Sypialnie mają razem 38 m² (16 + 12 + 10), więc Priya dostaje 60% × 16/38, czyli 25,26%."
+      - "**Dodaj obie części.** Priya: 25,26% + 13,33% = 38,6%. Tom: 60% × 12/38 = 18,95%, a z 13,33% wspólnej części to 32,3%. Aisha: 60% × 10/38 = 15,79%, a z 13,33% wspólnej części to 29,1%."
+      - "**Zaokrąglij i sprawdź.** Pełne procenty łatwiej wpisać i łatwiej o nich dyskutować, więc 38,6% zamienia się w 39%, 32,3% w 32%, a 29,1% w 29%. Sprawdź, czy 39 + 32 + 29 daje 100. Jeśli po zaokrągleniu wychodzi 99 albo 101, grupa ustala, czyja wartość przesuwa się o jeden punkt."
+  - heading: "Jak wygląda miesiąc w mieszkaniu"
+    body: "Czynsz po 39%, 32% i 29% daje 760,50 £, 624,00 £ i 565,50 £. Wynajmującemu zapłaciła Priya, więc w skali miesiąca należy jej się 1 142,50 £, a Tom jest winien 566,00 £, Aisha zaś 576,50 £. Side Badger podpowiada dwie płatności, w obu odbiorcą jest Priya."
+  - heading: "Ustaw to w Side Badger"
+    body: "Jeden wieczór, w większości poświęcony dyskusji o tych 40%."
+    items:
+      - "**Załóż grupę.** Na panelu głównym wybierz **Utwórz grupę** i nazwij ją od mieszkania. Wybierz **Zaproś innych** i wyślij link albo kod QR. Każdy loguje się albo zakłada darmowe konto i wybiera imię, pod którym ma być widoczny w tej grupie."
+      - "**Dodaj czynsz.** Wybierz **Dodaj wydatek**. Wpisz opis i kwotę, a w polu **Kto zapłacił?** wskaż osobę, która zapłaciła wynajmującemu. W polu **Podział między** zostaw wszystkie trzy osoby, a w polu **Sposób podziału** wybierz **Procentowo** i wpisz 39, 32 i 29. Formularz ostrzeże, jeśli procenty nie dają w sumie 100. Wybierz **Zapisz wydatek**."
+      - "**Dodaj rachunki.** Energia i internet to osobne wydatki z własnymi płacącymi. W polu **Sposób podziału** zostaw **Równo**."
+      - "**Skopiuj w następnym miesiącu.** Otwórz zeszłomiesięczny czynsz i wybierz **Kopiuj wydatek**. Kopia zachowuje płacącego, kwotę i podział, a datę ustawia na dzisiejszą. Zmień kwotę, jeśli czynsz się zmienił, i wybierz **Utwórz kopię**."
+      - "**Sprawdź, kto komu jest winien.** Pokazują to **Salda**. Płaćcie sobie, jak chcecie, a potem zarejestrujcie płatność, wybierając **Ureguluj**."
+  - heading: "Pokoje z łazienką, klitki i wyprowadzki"
+    items:
+      - "**Pokoje z łazienką i klitki.** Powierzchnia to punkt wyjścia. Pokój z własną łazienką jest wart więcej niż taki sam metraż bez niej, a klitka, w której mieści się łóżko i pełne nadziei krzesło, jest warta mniej. Skoryguj procenty za wspólną zgodą, sprawdź, czy nadal dają w sumie 100, i zapisz ostateczne liczby w miejscu, które widzi całe mieszkanie."
+      - "**Ktoś wyprowadza się w połowie miesiąca.** Policz, ile każda osoba ma zapłacić za ten miesiąc, i wpisz czynsz za ten miesiąc z opcją **Dokładne kwoty** zamiast **Procentowo**. Kwoty muszą dawać w sumie czynsz. Zrób to, zanim ktoś wyjedzie. Nikt nie może opuścić grupy, dopóki jest komuś winien pieniądze albo ktoś jest winien jemu, a wydatek z udziałem osoby, która odeszła, staje się tylko do odczytu."
+      - "**Ktoś się wprowadza.** Zmierz jeszcze raz, przelicz od nowa z nowymi wielkościami pokoi i używaj nowych procentów od następnego czynszu. Wcześniejsze miesiące zostają, jak były."
+  - heading: "Czego Side Badger tu nie robi"
+    items:
+      - "Nie mierzy waszych pokoi i nie wybiera procentów. Metraż i te 40% grupa ustala sama."
+      - "Nie ma rachunków cyklicznych, więc co miesiąc kopiujesz zeszłomiesięczny czynsz."
+      - "Nigdy nie przesyła pieniędzy i nie płaci wynajmującemu. Płacicie sobie, jak chcecie, i rejestrujecie to."
+      - "Nie wie, co mówi wasza umowa najmu. Prowadzi rachunek między osobami z grupy."
+exampleAfter: 2
+example:
+  heading: "Miesiąc w mieszkaniu"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "czynsz"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "rachunek za energię"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "internet"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Pytania"
+  items:
+    - q: "A co, jeśli ktoś ma większy pokój, ale mniej światła?"
+      a: "Powierzchnia to tylko punkt wyjścia, więc grupa może się umówić na korektę. Odejmij punkt albo dwa ciemnemu pokojowi, rozdziel je między pozostałych i sprawdź, czy procenty nadal dają w sumie 100. Side Badger zapisuje to, na co się umówicie, i tego nie ocenia."
+    - q: "Czy rachunki też dzielić według wielkości pokoju?"
+      a: "Zwykle nie. Z energii i internetu korzystają wszyscy, więc prostszy jest podział po równo, jak w przykładzie powyżej. Jeśli jeden współlokator siedzi w domu cały dzień, grupa może ustalić coś innego, na przykład dokładne kwoty. Opcje opisuje [dzielenie wydatków](page:feature/split-expenses)."
+    - q: "Czy możemy później zmienić podział?"
+      a: "Tak, w nowych wydatkach. Zmień procenty, gdy kopiujesz czynsz, a wcześniejsze miesiące zostaną, jak były. Żeby poprawić dawny wydatek, edytuj go, jeśli pozwalają na to uprawnienia grupy, i najpierw uprzedź dom, bo salda się zmienią. Wcześniejsza wersja zostaje zachowana."

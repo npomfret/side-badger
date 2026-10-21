@@ -1,0 +1,113 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Jak rozliczyć się po wyjeździe grupowym | Side Badger"
+  description: "Rozliczcie się, zanim wszyscy się rozjadą. Dziesięć splątanych długów to cztery płatności, a płatność częściowa jest w porządku. Rachunki dla pięciu osób."
+h1: "Jak rozliczyć się po wyjeździe grupowym"
+navLabel: "Rozliczenie po wyjeździe"
+lead: "Rozliczcie się, zanim wszyscy się rozjadą. Dodaj ostatni wydatek, otwórz salda grupy i zapłać to, co wisisz, z krótkiej listy, jak chcesz. Potem zarejestruj każdą płatność w Side Badger, żeby saldo wyczyściło się dla całej grupy. Przy pięciu przyjaciołach i pięciu wydatkach dziesięć splątanych długów zmienia się w cztery płatności."
+cta:
+  heading: "Zamknij księgi, zanim wylądują zdjęcia"
+  body: "Załóż darmowe konto, utwórz grupę na następny wyjazd i dodawaj każdy koszt na bieżąco. Krótka lista płatności czeka, zanim dojedziesz na lotnisko. Chcesz najpierw zobaczyć, [jak działa rozliczanie](page:feature/settle-up)?"
+sections:
+  - heading: "Pięcioro przyjaciół, pięć wydatków, jedna hala odlotów"
+    body: "Mo, Ines, Raf, Tess i Uma spędzili tydzień na wybrzeżu. Mo zarezerwował apartament i zrobił zakupy spożywcze, Ines zapłaciła za rejs łodzią, a Raf wziął na siebie wielką kolację. Tess wzięła taksówkę na lotnisko z Umą i Mo, bo Ines i Raf jechali pociągiem. Karta Umy została w domu, więc Uma za nic nie płaciła. To pięć wydatków i 1 700 € w sumie, a w hali odlotów nikt nie umiał powiedzieć, kto jest na plusie."
+  - heading: "Dziesięć długów, cztery płatności"
+    body: "Apartament, rejs, kolacja i zakupy spożywcze dzielą się po równo na pięć osób. To 200 €, 50 €, 60 € i 18 € na osobę, więc Ines i Raf są winni po 328 €. Taksówkę dzielą trzy osoby po 20 €, więc Mo, Tess i Uma są winni po 348 €. Mo zapłacił 1 090 € i jest winien 348 €, więc należy mu się 742 €. Wszyscy inni zapłacili mniej, niż są winni. Umie brakuje 348 €, Tess 288 €, Ines 78 €, a Rafowi 28 €, i razem dają one 742 € Mo. Rozliczaj każdą parę osób bezpośrednio, a wyjdzie dziesięć osobnych długów. Zamiast tego Side Badger podpowiada cztery płatności, wszystkie do Mo."
+  - heading: "Rozliczcie się, zanim wszyscy się rozjadą"
+    body: "Najlepszy moment to ostatni wieczór albo droga do domu, gdy wszyscy są jeszcze w jednym miejscu, a dług 28 € łatwo przy okazji wspomnieć. Najpierw dodajcie każdy wydatek, także taksówkę. Nikt nie może opuścić grupy, dopóki jest komuś winien pieniądze albo ktoś jest winien jemu, więc i tak w którymś momencie rachunek trzeba zamknąć."
+    items:
+      - "**Sprawdź listę.** Otwórz grupę i spójrz na **Salda**. Domyślnie widzisz długi, które cię dotyczą. Wybierz **Pokaż wszystko**, żeby zobaczyć listę całej grupy."
+      - "**Zapłać, jak chcesz.** Przelew, gotówka, przysługa z ostatnich wakacji. Side Badger nie przesyła pieniędzy."
+      - "**Zarejestruj to.** Wybierz **Ureguluj**. W części **Szybkie rozliczenie** każdy przycisk to jedna z podpowiedzianych płatności, a wybranie go uzupełnia kwotę. Dodaj notatkę w polu **Notatka**, na przykład „przelew bankowy”, sprawdź datę w polu **Data** (nie może być w przyszłości) i wybierz **Zarejestruj rozliczenie**."
+      - "**Patrz, jak znika.** Saldo aktualizuje się dla wszystkich. Gdy wpłynie ostatnia płatność, **Salda** pokazują **Wszystko rozliczone!**"
+  - heading: "Część teraz, reszta później"
+    body: "Uma może wysłać 200 € dziś wieczorem, a resztę pod koniec miesiąca. Rejestruje 200 €, a formularz ostrzega, że po tym nadal będzie winna Mo 148 €, czyli 348 € minus 200 €. Zapisz, a 148 € zostaje na jej saldzie, dopóki nie zarejestruje reszty. Ostrzeżenie działa też w drugą stronę. Jeśli zabłąkane zero zmieni 348 € w 3 480 €, formularz powie, że jest winna Mo tylko 348 €, a zapis stworzyłby dług w przeciwnym kierunku. Popraw zero przed zapisem."
+  - heading: "Naprawianie błędów i świętowanie płatności"
+    items:
+      - "**Błędna płatność.** Tylko osoba, która zarejestrowała płatność, może ją edytować. Ona albo administrator grupy może ją usunąć, a wtedy można ją zarejestrować od nowa."
+      - "**Płatność warta zauważenia.** Każda zarejestrowana płatność ląduje w sekcji **Rozliczenia** z datą i notatką, gdzie każdy w grupie może ją zobaczyć i zareagować. Mo może wybrać **Świętuj**, gdy dotrze ostatnie 148 € od Umy."
+      - "**Koniec.** Gdy każde saldo wynosi zero, administrator może zablokować grupę, żeby liczby zostały na miejscu."
+  - heading: "Czego Side Badger tu nie robi"
+    items:
+      - "Nigdy nie przesyła pieniędzy. Nie ma linków do płatności ani próśb o płatność, więc płatność w aplikacji to zapis płatności dokonanej gdzie indziej."
+      - "Nie wysyła przypomnień. Ponaglanie spóźnionej płatności nadal należy do ciebie."
+      - "Nie ustala terminów. Kiedy ma wpłynąć reszta 148 € Umy, uzgadnia grupa."
+      - "Podpowiadane płatności to krótka lista, a nie obietnica najkrótszej możliwej. Są liczone osobno dla każdej waluty, więc wyjazd opłacany w euro i funtach dostaje osobną listę dla każdej."
+exampleAfter: 2
+example:
+  heading: "Pięcioro znajomych na wybrzeżu"
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: "Apartament"
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: "Rejs łodzią"
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: "Wielka kolacja"
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: "Taksówka z lotniska"
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: "Zakupy spożywcze"
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Kto powinien zarejestrować płatność, płacący czy odbierający?"
+      a: "Rejestrowanie płatności wymaga uprawnienia do edycji wydatków, a formularz pyta **Kto zapłacił?** i **Kto otrzymał płatność?** Później może ją edytować tylko osoba, która ją zarejestrowała, więc zwykle najprościej, gdy robi to płacący, przyciskiem szybkiego rozliczenia."
+    - q: "Co, jeśli wyjazd odbywał się w dwóch walutach?"
+      a: "Salda są prowadzone osobno dla każdej waluty, więc dług w euro zostaje długiem w euro, a każda waluta dostaje własną krótką listę, chyba że wydatki przeliczono przy wpisywaniu. [Kilka walut](page:guide/how-to-split-a-trip-paid-in-several-currencies) pokazuje oba sposoby."
+    - q: "Rozliczać się w trakcie wyjazdu czy na końcu?"
+      a: "Jedno i drugie działa. Każda zarejestrowana płatność zmienia salda, więc płatność z połowy wyjazdu liczy się do końcowej listy. Na końcu jest prościej, bo [cały wyjazd](page:use-case/group-trips) jest w jednym miejscu."

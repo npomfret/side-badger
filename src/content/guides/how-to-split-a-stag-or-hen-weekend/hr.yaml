@@ -1,0 +1,103 @@
+translatedFrom: "6c8b8630"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - privacy-posture.no-ads
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - polls.villa-shortlist-vote
+  - permissions.viewer-sees-everything
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Podjela troškova momačkog ili djevojačkog vikenda | Side Badger"
+  description: "Počasni gost ne plaća ništa, a u ponedjeljak se svi još razgovaraju. Kako podijeliti troškove momačkog ili djevojačkog vikenda, s izračunima."
+h1: "Kako podijeliti troškove momačkog ili djevojačkog vikenda"
+navLabel: "Momački ili djevojački vikend"
+lead: "Počasni gost ne plaća ništa, pa ostatak grupe svaki trošak dijeli [jednako](page:feature/split-expenses) među sobom. Izostavi ljude iz troškova koje su preskočili, a počasnog gosta drži izvan grupe da iznenađenje izdrži."
+cta:
+  heading: "Vodi evidenciju, sačuvaj iznenađenje"
+  body: "Napravi grupu, pošalji poveznicu svima osim počasnom gostu i dodaj svaki trošak kako nastaje. Side Badger je besplatan, bez oglasa i bez dnevnih ograničenja."
+sections:
+  - heading: "Četiri prijateljice i jedno iznenađenje"
+    body: "Hannah, Isla, Jess i Kat vode Grace na njezin djevojački vikend. Grace je počasni gost, pa ne plaća ništa. Nije ni u grupi, pa ne može vidjeti koliko njezine prijateljice troše na nju. Hannah rezervira vikendicu, Isla plaća dan u spa centru, Jess pokriva večeru, a Kat taksi. Do nedjelje je svaka za nešto platila i nitko ne zna tko je u plusu. Račun je isti za momački i djevojački vikend, tko god bio počasni gost."
+  - heading: "Dijeli među onima koji plaćaju, ne među onima koji su tu"
+    body: "Udio počasnog gosta ne nestaje. Dijeli se na ostale. Vikendica košta 720 £, plaćaju je četiri prijateljice, pa je to 180 £ po osobi, a mjesto za Grace već je u toj brojci. Večera je 260 £, dakle 65 £ po osobi. Taksi je 44 £, dakle 11 £ po osobi. Što god netko preskoči, odbija se samo od tog troška. Kat preskače spa, pa 360 £ za spa, što pokriva i mjesto za Grace, dijele Hannah, Isla i Jess po 120 £. Zbrojeno, Hannah, Isla i Jess duguju po 376 £ za vikend, a Kat duguje 256 £."
+  - heading: "Postavi u Side Badgeru"
+    items:
+      - "Napravi grupu za vikend i daj joj dosadno ime, primjerice Vikend u vikendici. Grace nije članica, a grupu mogu vidjeti samo članovi."
+      - "Odaberi **Pozovi druge** i pošalji poveznicu ili pokaži QR kod samo tamo gdje ga Grace neće vidjeti. Poveznica prikazuje pregled grupe prije nego što se netko pridruži. Odaberi koliko dugo vrijedi, od 15 minuta do 5 dana. Stara poveznica radi dok ne istekne, pa je ne ostavljaj dulje nego što treba."
+      - "Za svaki trošak odaberi **Dodaj trošak**, upiši iznos i pod **Tko je platio?** odaberi platitelja. Pod **Podijeli između** označi ljude koji plaćaju, a izostavi one koji su ga preskočili, poput Kat kod spa. Pod **Kako podijeliti** odaberi **Jednako**."
+      - "Kad se vratite kući, otvori **Stanja** grupe. Side Badger pokazuje tko kome duguje i predlaže kratak popis uplata. Ovdje su to tri: Kat plaća Hannah 212 £, Jess plaća Hannah 116 £, a Isla plaća Hannah 16 £. Platite si kako god želite, a zatim pod **Poravnaj** zabilježite svaku uplatu."
+  - heading: "Prije rezervacije: proračun i polog"
+    body: "Dogovorite proračun prije nego itko rezervira. Odaberi **Dodaj anketu**, pitaj koliko će grupa potrošiti na vikendicu i ponudi nekoliko iznosa kao opcije. Pri izradi uključi **Anonimno glasanje**, da se sakrije tko je za što glasao, pa nitko ne mora naglas braniti manji proračun. Zatvori anketu kad su svi glasali, pa se pokaže pobjednik. Zatim dolazi polog. Tko rezervira, plaća ga i dodaje kao trošak, podijeljen jednako, a ostatak ide kao drugi trošak kad dospije. Ostali mogu odmah poslati svoj udio i zabilježiti uplatu ili pričekati konačni obračun. Stanja ispadnu ista u oba slučaja."
+  - heading: "Kad se netko pridruži samo na jednu noć"
+    body: "Tko dođe samo za subotu, ne bi trebao plaćati petak. Izostavi tu osobu iz troškova u kojima nije sudjelovala. Gdje trošak ovisi o tome koliko dugo tko ostaje, primjerice soba, pod **Kako podijeliti** odaberi **Točni iznosi** i upiši udio svake osobe, koji se mora zbrajati u ukupan iznos. Prvo izračunaj cijenu po osobi po noći, a zatim je pomnoži s brojem noći koje svaka osoba ostaje. Stranica o [grupnim putovanjima](page:use-case/group-trips) više govori o troškovima koji nisu isti za sve."
+  - heading: "Što Side Badger ovdje ne radi"
+    items:
+      - "Nikad ne premješta novac. Platite si bankovnim prijenosom, gotovinom ili kako vam odgovara, a zatim zabilježite uplatu da se stanja ažuriraju za sve."
+      - "Ne šalje podsjetnike za uplatu. Prijateljsko pogurivanje u grupnom chatu i dalje je na ljudima."
+      - "Svaki trošak ima jednog platitelja, a Side Badger ne može podijeliti račun stavku po stavku. Ako su vikendicu platile dvije kartice, unesi je kao dva troška. Ako su neki naručili dodatke na večeri, unesi dodatke kao zaseban trošak."
+      - "Vodi novac, a ne itinerar. Ankete i komentari ostaju uz troškove, pa se planovi za vikend i dalje vode u grupnom chatu."
+exampleAfter: 2
+example:
+  heading: "Djevojački vikend za Grace, podijeljen na četvero"
+  currency: GBP
+  people:
+    - id: hannah
+      name: Hannah
+    - id: isla
+      name: Isla
+    - id: jess
+      name: Jess
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Vikendica"
+      payer: hannah
+      amount: 720
+      split:
+        method: equal
+    - label: "Dan u spa centru"
+      payer: isla
+      amount: 360
+      split:
+        method: equal
+        shares:
+          hannah: 1
+          isla: 1
+          jess: 1
+    - label: "Večera"
+      payer: jess
+      amount: 260
+      split:
+        method: equal
+    - label: "Taksi"
+      payer: kat
+      amount: 44
+      split:
+        method: equal
+faq:
+  heading: "Pitanja"
+  items:
+    - q: "Plaća li kum ili djeveruša više?"
+      a: "Samo ako se grupa tako dogovori. Aplikacija nikome ne daje posebnu ulogu u računu. Ako netko pokriva više, pod **Kako podijeliti** odaberi **Točni iznosi** ili **Postotak** i upiši dogovorene udjele."
+    - q: "Što s pićima koja neki nisu pili?"
+      a: "Dodaj piće kao zaseban trošak i označi samo ljude koji su ga pili. Ako je svatko popio drukčiju količinu, odaberi **Točni iznosi** i upiši udio svake osobe. Nitko ne plaća ono što nije popio."
+    - q: "Može li počasni gost kasnije vidjeti grupu?"
+      a: "Da, kad iznenađenje prođe. Pozovi počasnog gosta, a zatim mu administrator može dodijeliti ulogu **Promatrač** pod **Sigurnost i dopuštenja** u postavkama grupe. Promatrač vidi sve i ništa ne mijenja, pa pričekaj dok više ništa nije tajna. Za pridruživanje treba besplatan korisnički račun."

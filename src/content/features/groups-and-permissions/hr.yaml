@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Administracija grupe i dopuštenja za troškove | Side Badger"
+  description: "Pozovi poveznicom ili QR kodom, odobri tko ulazi, odredi promatrače i dopuštenja te zaključaj grupu kad je gotovo. Tvoja grupa, tvoja pravila, u granicama razuma."
+h1: "Administracija grupe i dopuštenja: tvoja pravila, u granicama razuma"
+navLabel: "Grupe i dopuštenja"
+lead: "Neke grupe trebaju blagajnika. Side Badger ima postavku za to. Pozovi ljude poveznicom ili QR kodom, odluči tko ulazi i odaberi tko smije mijenjati brojeve. Mala grupa prijatelja sve to može ignorirati, jer nove grupe počinju širom otvorene."
+cta:
+  heading: "Spremni voditi urednu grupu?"
+  body: "Napravi korisnički račun, osnuj grupu i pošalji poveznicu za poziv. Ostavi je otvorenom ili pooštri pravila kad grupa naraste ili postane zahtjevnija."
+problem:
+  heading: "Netko mora držati brojeve urednima"
+  body: "Četvero cimera može funkcionirati na povjerenju. Trideset gostiju na svadbenom vikendu vjerojatno ne može. Napravi grupu za svaku kuću, putovanje ili događaj, s do 50 osoba, i svaka grupa ima vlastite članove, vlastite uloge i vlastita pravila. Tvoja nadzorna ploča ih sve navodi, zajedno s tvojim stanjem u svakoj, na jednom zaslonu. Većina grupa nikad ne dotakne postavke. One koje to učine obično imaju nekoga dovoljno organiziranog da ih poželi."
+workflow:
+  heading: "Od prazne do zaključane grupe"
+  steps:
+    - title: "Pozovi poveznicom ili QR kodom"
+      body: "Otvori **Pozovi druge**, odaberi koliko dugo poveznica vrijedi (15 minuta, 1 sat, 1 dan ili 5 dana), a zatim kopiraj poveznicu ili pokaži QR kod da ga ljudi skeniraju. Iz aplikacije možeš pozvati i ljude s kojima već dijeliš neku drugu grupu."
+      shot: S03
+      shotAlt: "Dijaloški okvir poziva s poveznicom grupe, njezinim QR kodom i izborom koliko dugo poveznica vrijedi"
+    - title: "Neka pogledaju prije nego što se pridruže"
+      body: "Svatko s poveznicom prijavi se ili napravi korisnički račun, vidi pregled grupe i odabere ime pod kojim želi nastupati u njoj. Zatim pritisne **Pridruži se grupi**."
+      shot: S04
+      shotAlt: "Pregled grupe koji se prijavljenoj osobi prikazuje prije pridruživanja"
+    - title: "Odobri tko ulazi"
+      body: "Uključi odobravanje i ljudi koji koriste poveznicu čekaju kao članovi na čekanju dok ih administrator ne pusti unutra. Administratori ih nalaze pod **Članovi na čekanju** u **Sigurnost i dopuštenja** i biraju **Odobri** ili **Odbij**. Do tada osoba na čekanju u grupi ne vidi ništa."
+      shot: S14
+      shotAlt: "Članovi na čekanju koje administrator treba odobriti ili odbiti"
+    - title: "Odaberi tko što smije mijenjati"
+      body: "Odaberi **Otvorena suradnja** ili **Upravljana grupa**, ili postavi dopuštenja jedno po jedno. Zatim svakoj osobi dodijeli ulogu: administrator, član ili promatrač. Samo administratori mogu mijenjati dopuštenja i uloge."
+      shot: S13
+      shotAlt: "Kartica sigurnosti u postavkama grupe s dva predloška i prilagođenim dopuštenjima"
+    - title: "Zaključaj kad je gotovo"
+      body: "Kad je putovanje gotovo i brojevi su se slegli, administrator može uključiti **Zaključaj grupu**. Nitko ne može dodavati ni mijenjati troškove, bilježiti uplate ni uređivati popise i ankete, a natpis to jasno kaže. Nitko ne može krišom dodati zakašnjeli taksi. Ako se jedan ipak pojavi, administrator može otključati grupu."
+      shot: S15
+      shotAlt: "Grupa s natpisom koji kaže da je zaključana"
+options:
+  heading: "Administratori, članovi i promatrači"
+  items:
+    - title: "Administrator"
+      body: "Vodi grupu. Administratori odobravaju nove članove, mijenjaju uloge i dopuštenja, zaključavaju i otključavaju grupu te je zatvaraju. Tko stvori grupu, počinje kao njezin administrator, a grupa nikad ne ostaje bez njega, jer se posljednjem administratoru ne može oduzeti uloga."
+    - title: "Član"
+      body: "Sudjeluje. Što član smije, ovisi o dopuštenjima grupe. U grupi s otvorenom suradnjom to je gotovo sve. U upravljanoj grupi članovi mogu mijenjati samo troškove i popise koje su sami stvorili."
+    - title: "Promatrač"
+      body: "Vidi sve i ne mijenja ništa. Promatrač ne može dodavati ni uređivati troškove ni popise, pozivati ljude, mijenjati postavke ni dirati sliku zaglavlja. Zgodno za osobu koja želi pratiti brojeve i obećava da neće petljati po njima."
+sections:
+  - heading: "Otvorena, upravljana ili tvoja vlastita pravila"
+    body: "Nove grupe počinju s predloškom **Otvorena suradnja**, gdje svatko može pozivati ljude, mijenjati troškove i uređivati popise, a novi članovi pristupaju automatski. **Upravljana grupa** je za slučaj kad netko mora biti odrasla osoba. Sedam dopuštenja možeš postaviti i jedno po jedno, a ručna promjena bilo kojeg prebacuje grupu na prilagođeno. Što god odabereš, samo administratori mogu mijenjati sama dopuštenja, a svaka promjena pojavljuje se u aktivnosti grupe. Stan [cimera](page:use-case/housemates) može sve ostaviti otvoreno. Veliki [događaj ili proslava](page:use-case/events-and-celebrations) često traži upravljanu grupu, da netko odlučuje tko ulazi. Sve ti je ovo novo? [Kako radi](page:how-it-works) vodi kroz cijeli put, od prvog troška do poravnanja."
+    items:
+      - "**Tko može uređivati troškove.** Otvorena suradnja: bilo koji član. Upravljana grupa: autori i admini."
+      - "**Tko može brisati troškove.** Otvorena suradnja: bilo koji član. Upravljana grupa: autori i admini."
+      - "**Tko može uređivati popise.** Otvorena suradnja: bilo koji član. Upravljana grupa: autori i admini."
+      - "**Tko može pozivati članove.** Otvorena suradnja: bilo koji član. Upravljana grupa: samo admini."
+      - "**Odobrenje novih članova.** Otvorena suradnja: automatski. Upravljana grupa: potrebno odobrenje admina."
+      - "**Tko može mijenjati postavke.** Otvorena suradnja: bilo koji član. Upravljana grupa: samo admini."
+      - "**Tko može promijeniti sliku zaglavlja.** Otvorena suradnja: bilo koji član. Upravljana grupa: samo admini."
+  - heading: "Tvoje ime, tvoja fotografija, tvoja slika zaglavlja"
+    body: "Svaka grupa ima vlastitu podjelu uloga. Odaberi ime koje ljudi vide u svakoj grupi (od 2 do 50 znakova, jedinstveno unutar grupe) i koju od svojih profilnih fotografija tamo nosiš. Budi **Sam** u kući i **Sam (ima auto)** na putovanju. Tko god smije mijenjati postavke, može preimenovati grupu i urediti njezin opis. Slika zaglavlja, JPEG, PNG, GIF ili WebP do 10 MB, ima vlastito dopuštenje."
+  - heading: "Arhiviraj, zaključaj ili zatvori"
+    body: "Tri načina da grupu odložiš, od najblažeg do najozbiljnijeg."
+    items:
+      - "**Arhiviraj** skriva grupu s tvoje nadzorne ploče, a ne ničije tuđe. I dalje je možeš otvoriti i koristiti kao prije, a **Odarhiviraj grupu** je vraća."
+      - "**Zaključaj** zamrzava promjene dok ih administrator ne otključa. Svi i dalje mogu čitati grupu i njezinu povijest."
+      - "**Zatvori** je trajno, i za sve. To može samo administrator, upisivanjem imena grupe radi potvrde, i nitko više ne može otvoriti grupu."
+  - heading: "Napuštanje grupe"
+    body: "Svatko može otići kad se poravna. Ne možeš otići dok duguješ ili ti se duguje novac, makar u samo jednoj valuti, dok postoji otvoreno pitanje o trošku u kojem sudjeluješ ili ako si posljednji administrator ili jedini član. [Zabilježi uplatu](page:feature/settle-up), riješi [pitanje o trošku](page:guide/what-to-do-when-someone-disputes-a-shared-expense) ili nekoga drugog postavi za administratora, pa idi. Za povratak ćeš trebati novi poziv."
+limits:
+  heading: "U granicama razuma: sitni tisak"
+  items:
+    - "Grupa može imati do 50 osoba."
+    - "Samo administratori mogu mijenjati dopuštenja i uloge. Posljednjem administratoru ne može se oduzeti uloga."
+    - "Postavljanje uređivanja troškova na **Samo admini** znači i da samo administratori mogu dodavati troškove."
+    - "Zaključavanje zaustavlja promjene troškova, nove uplate, popise i ankete. Svi i dalje mogu čitati grupu i njezinu povijest te reagirati na uplate."
+    - "Zatvaranje je trajno. Aplikacija nema načina da se zatvorena grupa ponovno otvori."
+    - "Nova poveznica za poziv ne poništava stare. Svaka vrijedi do vlastitog isteka, pa odaberi kratak rok kad te brine gdje bi mogla završiti."
+    - "Pozivi unutar aplikacije navode ljude iz tvojih 10 najnovijih aktivnih grupa. Svi ostali trebaju poveznicu, a tko smije pozivati, ovisi o dopuštenjima grupe."
+    - "Za pridruživanje je potreban korisnički račun, a ljudi moraju potvrditi e-adresu prije nego što išta mogu dodati."
+useCasesHeading: "Gdje malo reda pomaže"
+faq:
+  heading: "Pitanja"
+  items:
+    - q: "Može li promatrač dodavati troškove?"
+      a: "Ne. Promatrač vidi sve i ne mijenja ništa. Ne može dodavati ni uređivati troškove ni popise, pozivati ljude ni mijenjati postavke."
+    - q: "Može li netko otići dok duguje novac?"
+      a: "Ne. Nitko ne može napustiti grupu dok duguje ili mu se duguje novac, makar u samo jednoj valuti. Prvo se poravnaj, pa idi."
+    - q: "Što se događa kad se grupa zatvori?"
+      a: "Nitko je više ne može otvoriti. Grupu može zatvoriti samo administrator, mora upisati ime grupe radi potvrde, a grupa postaje nedostupna svima. Ako samo želiš zaustaviti promjene, zaključaj je. Ako je samo želiš maknuti sa svoje nadzorne ploče, arhiviraj je."
+    - q: "Mogu li poništiti zaključavanje?"
+      a: "Da. Administrator može otključati grupu i promjene opet rade."
+    - q: "Moram li odobriti ljude prije nego što se pridruže?"
+      a: "Samo ako želiš. Nove grupe počinju s otvorenom suradnjom, gdje se ljudi koji koriste poveznicu pridružuju automatski. Uključi odobravanje administratora ili odaberi upravljanu grupu i svaka osoba čeka dok je administrator ne pusti unutra."
+    - q: "Koliko ljudi može biti u grupi?"
+      a: "Do 50."

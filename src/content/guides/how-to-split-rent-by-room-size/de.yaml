@@ -1,0 +1,103 @@
+translatedFrom: "a2338738"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Miete nach Zimmergröße aufteilen | Side Badger"
+  description: "Größeres Zimmer, größerer Anteil. Gemeinschaftsräume vorab abziehen, den Rest nach Fläche teilen und die Prozente einmal eintragen. Mit Rechenweg für drei."
+h1: "So teilst du die Miete nach Zimmergröße"
+navLabel: "Miete nach Zimmergröße"
+lead: "Legt fest, wie viel der Miete auf die gemeinsam genutzten Räume entfällt, und teilt diesen Teil gleichmäßig. Den Rest teilt ihr nach der Fläche jedes Schlafzimmers. Rundet auf ganze Prozent, tragt sie einmal bei der Miete in Side Badger ein und kopiert die Ausgabe jeden Monat."
+cta:
+  heading: "Die Miete einmal eintragen"
+  body: "Erstelle ein kostenloses Konto, starte eine Gruppe für die Wohnung und trage die Miete mit den vereinbarten Prozentsätzen ein. Im nächsten Monat reicht eine Kopie. Lieber erst die Tour? Schau dir an, [wie es funktioniert](page:how-it-works), oder [was die kostenlose Nutzung abdeckt](page:pricing)."
+sections:
+  - heading: "Drei Leute, eine Wohnung, ein Streit"
+    body: "Priya, Tom und Aisha teilen sich eine Wohnung für 1.950 £ im Monat. Ein Jahr lang teilten sie die Miete durch drei, weil es einfach war. Dann hat Aisha ihr Zimmer ausgemessen. Priyas Zimmer hat 16 m², Toms 12 m² und Aishas 10 m². Aisha zahlte also so viel wie Priya für ein Zimmer, das mehr als ein Drittel kleiner ist. Niemand war unvernünftig gewesen. Niemand hatte nachgerechnet. Beim Essen vom Lieferdienst einigten sie sich als Erstes auf eine Regel: Von der Miete zahlen 40 % für Küche, Bad und Wohnzimmer, die alle drei nutzen."
+  - heading: "Die Methode, mit allen Rechenschritten"
+    body: "Vier Schritte, ein Maßband und der Taschenrechner im Handy."
+    items:
+      - "**Den gemeinsamen Teil abziehen.** Die Gruppe legt fest, welcher Anteil der Miete auf die Räume entfällt, die alle nutzen. Für die Wohnung sind es 40 %, also 13,33 % pro Person bei drei Personen."
+      - "**Den Rest nach Fläche teilen.** Die übrigen 60 % gehen nach Zimmergröße. Die Schlafzimmer ergeben zusammen 38 m² (16 + 12 + 10), Priyas Teil ist also 60 % × 16/38, das sind 25,26 %."
+      - "**Beide Teile addieren.** Priya: 25,26 % + 13,33 % = 38,6 %. Tom: 60 % × 12/38 = 18,95 %, plus 13,33 % macht 32,3 %. Aisha: 60 % × 10/38 = 15,79 %, plus 13,33 % macht 29,1 %."
+      - "**Runden und prüfen.** Ganze Prozentzahlen sind leichter einzutippen und leichter auszudiskutieren, aus 38,6 % werden also 39 %, aus 32,3 % werden 32 % und aus 29,1 % werden 29 %. Prüft, ob 39 + 32 + 29 genau 100 ergibt. Landet eure Rundung bei 99 oder 101, einigt sich die Gruppe, bei wem sich eine Zahl um einen Punkt verschiebt."
+  - heading: "Der Monat in der Wohnung"
+    body: "Bei 39 %, 32 % und 29 % kommt die Miete auf 760,50 £, 624,00 £ und 565,50 £. Priya hat den Vermieter bezahlt, über den Monat hinweg stehen ihr also 1.142,50 £ zu, während Tom 566,00 £ und Aisha 576,50 £ schulden. Side Badger schlägt zwei Zahlungen vor, beide an Priya."
+  - heading: "In Side Badger einrichten"
+    body: "Ein Abend, der größtenteils für die Diskussion über die 40 % draufgeht."
+    items:
+      - "**Gruppe anlegen.** Wähle im Dashboard **Gruppe erstellen** und benenne sie nach der Wohnung. Wähle **Andere einladen** und schicke den Link oder QR-Code. Alle melden sich an oder erstellen ein kostenloses Konto und wählen den Namen, unter dem sie in dieser Gruppe angezeigt werden."
+      - "**Miete eintragen.** Wähle **Ausgabe hinzufügen**. Gib Beschreibung und Betrag ein und wähle unter **Wer hat bezahlt?** die Person, die den Vermieter bezahlt hat. Lass unter **Aufteilen zwischen** alle drei Personen ausgewählt, wähle dann unter **Wie aufteilen** den Eintrag **Prozentsatz** und tippe 39, 32 und 29 ein. Das Formular meldet sich, wenn die Prozentsätze nicht zusammen 100 ergeben. Wähle **Ausgabe speichern**."
+      - "**Rechnungen eintragen.** Energie und Internet sind eigene Ausgaben, jeweils mit eigener Person, die bezahlt hat. Lass **Wie aufteilen** auf **Gleichmäßig** stehen."
+      - "**Im nächsten Monat kopieren.** Öffne die Miete vom letzten Monat und wähle **Ausgabe kopieren**. Die Kopie behält die Person, die bezahlt hat, den Betrag und die Aufteilung und übernimmt das heutige Datum. Ändere den Betrag, falls sich die Miete geändert hat, und wähle dann **Kopie erstellen**."
+      - "**Prüfen, wer wem was schuldet.** Der Bereich **Salden** zeigt es. Zahlt einander, wie ihr wollt, und erfasst die Zahlung dann unter **Abrechnen**."
+  - heading: "Zimmer mit eigenem Bad, Kammern und Auszüge"
+    items:
+      - "**Zimmer mit eigenem Bad und Kammern.** Die Fläche ist nur ein Ausgangspunkt. Ein Zimmer mit eigenem Bad ist mehr wert als dieselbe Fläche ohne, und eine Kammer, in die ein Bett und ein hoffnungsvoller Stuhl gerade so passen, ist weniger wert. Passt die Prozentsätze nach Absprache an, prüft, dass sie weiter 100 ergeben, und schreibt die endgültigen Zahlen dorthin, wo die ganze Wohnung sie sehen kann."
+      - "**Jemand zieht mitten im Monat aus.** Rechne aus, was jede Person für diesen Monat schuldet, und trage die Miete dieses Monats mit **Genaue Beträge** statt **Prozentsatz** ein. Die Beträge müssen zusammen die Miete ergeben. Tu das, bevor die Person geht. Niemand kann eine Gruppe verlassen, solange er Geld schuldet oder bekommt, und eine Ausgabe, an der jemand beteiligt ist, der die Gruppe verlassen hat, lässt sich nicht mehr bearbeiten."
+      - "**Jemand zieht ein.** Messt noch einmal, rechnet mit den neuen Zimmergrößen neu und nutzt die neuen Prozentsätze ab der nächsten Miete. Frühere Monate bleiben, wie sie waren."
+  - heading: "Was Side Badger hier nicht kann"
+    items:
+      - "Es misst eure Zimmer nicht aus und legt die Prozentsätze nicht fest. Die Flächen und die 40 % sind Sache der Gruppe."
+      - "Es gibt keine wiederkehrenden Rechnungen, also kopierst du jeden Monat die Miete vom letzten."
+      - "Es bewegt nie Geld und bezahlt auch den Vermieter nicht. Ihr zahlt einander, wie ihr wollt, und erfasst es."
+      - "Es weiß nicht, was in eurem Mietvertrag steht. Es führt die Rechnung zwischen den Leuten in der Gruppe."
+exampleAfter: 2
+example:
+  heading: "Ein Monat in der Wohnung"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "die Miete"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "die Energierechnung"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "den Internetanschluss"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Fragen"
+  items:
+    - q: "Was, wenn jemand das größere Zimmer hat, aber weniger Licht?"
+      a: "Die Fläche ist nur der Ausgangspunkt, die Gruppe kann sich also auf eine Anpassung einigen. Nehmt dem dunklen Zimmer ein oder zwei Punkte ab, gebt sie den anderen und prüft, dass die Prozentsätze weiter 100 ergeben. Side Badger speichert, was ihr vereinbart, und urteilt nicht darüber."
+    - q: "Sollen die Rechnungen auch nach Zimmergröße geteilt werden?"
+      a: "Meistens nicht. Energie und Internet nutzen alle, ein gleichmäßiger Anteil ist also einfacher, wie im Beispiel oben. Ist jemand den ganzen Tag zu Hause, kann die Gruppe etwas anderes vereinbaren, etwa genaue Beträge. [Ausgaben teilen](page:feature/split-expenses) zeigt die Möglichkeiten."
+    - q: "Können wir die Aufteilung später ändern?"
+      a: "Ja, für neue Ausgaben. Ändert die Prozentsätze, wenn ihr die Miete kopiert, und frühere Monate bleiben, wie sie waren. Um eine vergangene Ausgabe zu korrigieren, bearbeite sie, wenn die Berechtigungen der Gruppe es zulassen, und sag vorher allen in der Wohnung Bescheid, denn die Salden ändern sich. Die frühere Version bleibt erhalten."

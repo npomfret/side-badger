@@ -1,0 +1,102 @@
+translatedFrom: "0900d953"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Was tun, wenn jemand eine Ausgabe anzweifelt | Side Badger"
+  description: "Spar dir die spitze Nachricht. Hinterfrage stattdessen die Ausgabe, und sie bleibt aus allen Salden, solange ihr redet. Durchgerechnet mit 45 £ Partywein."
+h1: "Was tun, wenn jemand eine gemeinsame Ausgabe anzweifelt"
+navLabel: "Angezweifelte Ausgaben"
+lead: "Stell eine Frage zur Ausgabe, statt eine spitze Nachricht zu schicken. Solange die Frage offen ist, bleibt die ganze Ausgabe aus den Salden aller heraus. Besprecht es in den Kommentaren, ändert die Aufteilung, wenn die Gruppe zustimmt, und lasst die Person, die gefragt hat, oder einen Admin die Frage schließen."
+cta:
+  heading: "Stell die unangenehme Frage höflich"
+  body: "Erstelle ein kostenloses Konto, starte eine Gruppe für die WG und bitte einen Admin, Fragen zu Ausgaben einzuschalten, denn sie sind aus, bis jemand sie einschaltet. Willst du erst einen Rundgang? Dann schau dir an, [wie es funktioniert](page:how-it-works), oder [was kostenlos alles umfasst](page:pricing)."
+sections:
+  - heading: "Drei Mitbewohner und 45 £ Wein"
+    body: "Nach der Party trägt Tom den Wein in die Gruppe der WG ein. Es sind 45 £, von Tom bezahlt, gleichmäßig geteilt zwischen Tom, Priya und Aisha, also 15 £ pro Person. Aisha trinkt nicht. Tom hat ihn für die Party gekauft, und die Party war für die [WG](page:use-case/housemates), er hat also nichts falsch gemacht. Aisha liegt aber auch nicht falsch, wenn sie nachfragt. Niemand hier ist ein Bösewicht. Es geht nur um 15 £ Wein, und es gibt reichlich Wege, das unangenehm zu machen. Eine spitze Nachricht an das ganze Haus ist einer. Eine Frage zur Ausgabe ist ein sanfterer."
+  - heading: "Was eine Frage bewirkt"
+    body: "Aisha öffnet die Ausgabe und stellt eine Frage. Die ganze Ausgabe fällt aus den Salden aller heraus, nicht nur ihr Anteil, und nichts anderes ist betroffen. Der große Einkauf (84 £) und die Putzhilfe (60 £) zählen weiter, das sind 28 £ + 20 £ = 48 £ pro Person. Solange der Wein ruht, schuldet Aisha also 48 £, Tom bekommt 36 £ und Priya bekommt 12 £. Was die WG auch über den Wein entscheidet: In der Zwischenzeit steckt er in niemandes Saldo. Auch alle anderen in der Ausgabe können ihre eigene Frage stellen. Der Wein kommt erst wieder in die Salden, wenn die letzte offene Frage dazu geschlossen ist, und eine Frage schließt die Person, die sie gestellt hat, oder ein Admin."
+  - heading: "Darüber reden, dann korrigieren"
+    body: "Aishas Frage landet in den Kommentaren der Ausgabe, die Antworten stehen also direkt darunter. [Gemeinsam planen](page:feature/plan-together) sagt mehr zu Kommentaren und Fragen. Tom und Priya lesen sie, und die WG redet darüber. Sie entscheiden, dass der Wein Tom und Priya gehörte, weil sie ihn getrunken haben. Eine andere WG könnte die Aufteilung auf drei behalten oder sich auf etwas dazwischen einigen, und das wäre genauso in Ordnung. Side Badger speichert, worauf ihr euch einigt, und hat keine Meinung zu Wein. Tom bearbeitet die Ausgabe, sodass sie gleichmäßig zwischen ihm und Priya geteilt wird, also 22,50 £ pro Person (45 £ ÷ 2). Aisha ist nicht mehr dabei, ihre Frage geht also mit der alten Version, und der Wein kehrt in die Salden zurück. Die frühere Version bleibt erhalten."
+  - heading: "Das Ergebnis lesen"
+    body: "Mit dem Wein wieder drin bekommt Tom 58,50 £, Priya schuldet 10,50 £ und Aisha schuldet 48 £. Side Badger schlägt zwei Zahlungen vor, beide an Tom. Aishas 48 £ sind der Betrag, den sie schon hatte, als der Wein ruhte, denn sie ist an ihm nicht mehr beteiligt. Priya ist von 12 £ im Plus zu 10,50 £ im Minus gerutscht, das ist ihre Hälfte vom Wein, 22,50 £. Wäre es bei der Aufteilung auf drei geblieben, hätte Aisha 63 £ geschuldet (28 £ + 20 £ + 15 £). Der ganze Streit war 15 £ wert. Zahlt einander, wie ihr wollt, und erfasst dann jede Zahlung unter **Abrechnen**. [Abrechnen](page:feature/settle-up) erklärt den Rest."
+  - heading: "So formulierst du es, dass die Leute weiter mit dir reden"
+    body: "Aishas Frage: \"Ich hatte nichts vom Wein. Können wir uns die Aufteilung ansehen?\" Sie ist kurz, nennt die Ausgabe und fragt, statt anzuklagen. Ein paar Gewohnheiten helfen."
+    items:
+      - "**Frag nach der Ausgabe, nicht nach der Person.** \"Können wir die Aufteilung beim Wein prüfen?\" beginnt ein Gespräch. \"Warum musste ich deinen Wein mitbezahlen?\" beginnt die andere Sorte."
+      - "**Sag, was du dir wünschst.** \"Könnte es nur auf die gehen, die ihn getrunken haben?\" gibt der Gruppe etwas, dem sie zustimmen oder auf das sie antworten kann."
+      - "**Gib einen Grund in ein, zwei Sätzen.** Das Feld heißt **Ihre Frage** und darf nicht leer bleiben."
+      - "**Halte die Antworten an einem Ort.** Antworten gehören in die Kommentare der Ausgabe, direkt neben die Zahlen, um die es geht."
+  - heading: "In Side Badger einrichten"
+    items:
+      - "**Fragen einschalten.** Sie sind standardmäßig aus. Ein Admin öffnet die **Einstellungen** der Gruppe, schaltet auf dem Tab **Allgemein** unter **Funktionen** **Fragen zu Ausgaben erlauben** ein und wählt **Speichern**. Schaltet man sie später wieder aus, werden alle offenen Fragen gelöscht."
+      - "**Eine stellen.** Öffne die Ausgabe und wähle neben deinem eigenen Namen in der Aufteilung **Ich habe eine Frage**. Schreib deinen Grund in **Ihre Frage** und wähle noch einmal **Ich habe eine Frage**. Das können nur Personen in der Ausgabe. Die Ausgabe zeigt jetzt ein Abzeichen **Hinterfragt**."
+      - "**Finden, was ruht.** In der Ausgabenliste zeigt **Nur hinterfragt** die Ausgaben mit einer offenen Frage."
+      - "**Korrigieren, wenn die Gruppe zustimmt.** Öffne die Ausgabe, wähle **Bearbeiten**, ändere **Aufteilen zwischen** und wähle **Ausgabe aktualisieren**. Wer bearbeiten darf, hängt von den Berechtigungen der Gruppe ab."
+      - "**Schließen, wenn nichts zu korrigieren ist.** Die Person, die gefragt hat, kann die Schaltfläche zum Schließen an ihrem Abzeichen **Hinterfragt** nutzen, sie heißt **Frage schließen**, und ein Admin ebenfalls. Die Ausgabe kehrt in die Salden zurück, sobald ihre letzte Frage geschlossen ist."
+  - heading: "Wenn es nicht so ordentlich ist"
+    items:
+      - "**Die Bearbeitung behält die fragende Person drin.** Ist die Person, die gefragt hat, noch in der Ausgabe, geht ihre Frage auf die bearbeitete Version über und wartet darauf, dass sie oder ein Admin sie schließt. Den Betrag zu korrigieren ist nicht dasselbe, wie zuzustimmen, dass er korrigiert ist."
+      - "**Du warst nicht in der Ausgabe.** Nur Personen in einer Ausgabe können sie hinterfragen. Kommt dir etwas komisch vor, sag es in den Kommentaren oder frag die Person, die sie eingetragen hat."
+      - "**Jemand will die Gruppe verlassen.** Eine offene Frage hindert die Personen in dieser Ausgabe am Verlassen. Schließe die Frage oder bearbeite die Ausgabe, sodass sie nicht mehr darin sind, und sie können gehen."
+  - heading: "Was Side Badger hier nicht tut"
+    items:
+      - "Es entscheidet nicht, wer recht hat. Es hält die Ausgabe aus den Salden heraus und bewahrt, worauf ihr euch einigt."
+      - "Es verlangt von niemandem, Ausgaben zu genehmigen, bevor sie zählen. Nur eine hinterfragte Ausgabe wird zurückgehalten."
+      - "Es kann einen Teil einer Ausgabe nicht zurückhalten. Hinterfragst du sie, verschwindet sie ganz aus den Salden."
+      - "Es bewegt kein Geld. Ihr zahlt einander, wie ihr wollt, und erfasst es."
+exampleAfter: 3
+example:
+  heading: "Die WG nach dem Wein"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "der große Einkauf"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "die Putzhilfe"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "der Partywein"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+faq:
+  heading: "Fragen"
+  items:
+    - q: "Kann ich nur meinen Anteil hinterfragen?"
+      a: "Nein. Eine Frage hält die ganze Ausgabe zurück, für alle darin. Stimmt nur die Aufteilung nicht, ist die Lösung eine Änderung der Aufteilung."
+    - q: "Wer kann eine Frage schließen?"
+      a: "Die Person, die gefragt hat, oder ein Gruppen-Admin. Ist die Person, die die Ausgabe eingetragen hat, kein Admin, kann sie die Frage nicht im Namen der fragenden Person schließen."
+    - q: "Löscht eine Bearbeitung das Original?"
+      a: "Nein. Die frühere Version bleibt erhalten. Wer bearbeiten darf, bestimmen die Berechtigungen der Gruppe, sag es dem Haus also vorher, denn die Salden ändern sich."

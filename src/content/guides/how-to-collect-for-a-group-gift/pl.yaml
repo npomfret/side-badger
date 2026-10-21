@@ -1,0 +1,101 @@
+translatedFrom: "5d92090e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Jak zebrać na wspólny prezent | Side Badger"
+  description: "Każdy dorzuca inną kwotę, a karta jednej osoby przyjmuje cios. Zrób ankietę o budżecie, wpisz dokładne kwoty, a rachunki zostaw Side Badger."
+h1: "Jak zebrać na wspólny prezent"
+navLabel: "Zbiórka na wspólny prezent"
+lead: "Zbiórka na wspólny prezent oznacza, że jedna osoba wykłada pieniądze, a wszyscy pozostali są jej winni swoją składkę. Ustalcie budżet w ankiecie, niech osoba kupująca zapłaci za prezent swoją kartą, a potem wpiszcie go jako jeden wydatek z [dokładnymi kwotami](page:feature/split-expenses), czyli z liczbą dla każdego. Side Badger pokazuje, kto ile jest winien kupującemu, a każdy przesyła swoją część, jak chce."
+cta:
+  heading: "Puść czapkę w obieg, ale bez czapki"
+  body: "Załóż grupę, pomiń w niej osobę, która dostaje prezent, i wpisz podarunek z dokładnymi kwotami. Side Badger jest darmowy, bez reklam i bez dziennych limitów. Chcesz najpierw obejść całość? Zobacz, [jak to działa](page:how-it-works), albo [co obejmuje darmowy plan](page:pricing)."
+sections:
+  - heading: "Czworo przyjaciół, jeden gramofon, cztery różne sumy"
+    body: "Bea kończy 30 lat i chce gramofon. Priya, Omar, Lena i Sam kupują go dla niej. Priya znajduje taki za 240 £ i kupuje go własną kartą, bo ktoś musi być pierwszy. Cała czwórka nie dorzuca po równo. Priya i Omar wkładają po 60 £, Lena 80 £, a Sam 40 £. Nikt nie tłumaczy swojej kwoty i nikt nie pyta. Omar kupuje jeszcze kartkę i papier do pakowania za 12 £. Kartkę podpisuje cała czwórka, więc ten wydatek dzieli się po równo."
+  - heading: "Ustalcie budżet, zanim ktokolwiek kliknie Kup"
+    body: "Ankieta o budżecie oszczędza kłótni o gramofon za 400 £. W grupie wybierz **Dodaj ankietę** i zapytaj, ile ma kosztować prezent. Niech opcje będą kwotami, na przykład do 150 £, do 200 £ i do 250 £. Włącz **Anonimowe głosowanie**, które ukrywa, kto na co głosował, żeby nikt nie musiał bronić mniejszej kwoty na głos. Ustawień nie da się zmienić po oddaniu pierwszego głosu, więc sprawdź je wcześniej. Ankieta sama się nie zamyka. Gdy wszyscy zagłosują, wybierz **Zamknij ankietę**, a pojawi się **Zwycięzca**. Ankieta ustala sumę. Nie wyznacza niczyjego udziału."
+  - heading: "Czytamy wyliczenie"
+    body: "Prezent dzieli się na 60 £, 60 £, 80 £ i 40 £, co daje 240 £ z paragonu. Kartka i papier dzielą się na czworo po 3 £. Rachunek Priyi to 60 £ + 3 £, czyli 63 £, a ona zapłaciła 240 £, więc należy jej się 177 £. Rachunek Omara to również 63 £, ale on zapłacił 12 £, więc jest winien 51 £. Lena jest winna 80 £ + 3 £, czyli 83 £, a Sam jest winien 40 £ + 3 £, czyli 43 £. Te trzy kwoty dają razem dokładnie tyle, ile należy się Priyi: 177 £. Zostawione same sobie, długi krążyłyby po grupie pięcioma ścieżkami. Zamiast tego Side Badger podpowiada trzy płatności, wszystkie do Priyi. [Rozliczanie](page:feature/settle-up) opisuje szczegóły."
+  - heading: "Wpisz to w Side Badger"
+    body: "Strona Priyi zajmuje około pięciu minut."
+    items:
+      - "**Załóż grupę.** Na panelu głównym wybierz **Utwórz grupę**. Wybierz **Zaproś innych** i wyślij link albo kod QR osobom, które dorzucają się do prezentu, i nikomu więcej."
+      - "**Dodaj prezent.** Wybierz **Dodaj wydatek**, opisz go, wpisz 240 i w polu **Kto zapłacił?** wskaż Priyę. Zostaw wszystkie cztery osoby w **Podział między**, potem w **Sposób podziału** wybierz **Dokładne kwoty** i wpisz 60, 60, 80 i 40. Kwoty muszą dawać w sumie 240. Jeśli chcesz, załącz potwierdzenie zamówienia. Wybierz **Zapisz wydatek**."
+      - "**Dodaj kartkę.** Omar dodaje 12 £ sam, wskazuje siebie w polu **Kto zapłacił?** i zostawia **Sposób podziału** na **Równo**, ze wszystkimi czterema osobami zaznaczonymi."
+      - "**Policzcie, potem zapłaćcie.** Wszyscy sprawdzają **Salda**, gdzie widać, kto komu jest winien, i przesyłają Priyi swoją część, jak chcą. Potem rejestrują to przez **Ureguluj** i **Zarejestruj rozliczenie**. Szybkie rozliczenie uzupełnia kwotę."
+  - heading: "Najpierw kup albo najpierw zbierz"
+    body: "Side Badger nie trzyma kasy, więc „zbieranie” to tak naprawdę liczenie. Działają dwie kolejności."
+    items:
+      - "**Najpierw kup.** Osoba kupująca płaci, dodaje wydatek w prawdziwej cenie i wszyscy od razu widzą swoją część. Jest porządniej, ale kupujący dźwiga koszt, dopóki ludzie nie zapłacą, więc wybierz kogoś, kogo na to stać."
+      - "**Najpierw zbieraj.** Ludzie przesyłają swoją kwotę kupującemu przed zakupem. Gdy znacie cenę, wpiszcie prezent, a potem zarejestrujcie każdą płatność z datą, kiedy pieniądze faktycznie się przemieściły. Najpierw dodajcie prezent, żeby każda płatność miała saldo, do którego trafi."
+      - "**Cena się zmienia.** Dostawa, kod rabatowy, spóźniona podwyżka. Edytuj prezent i zmień dokładne kwoty tak, żeby nadal się zgadzały. Wcześniejsza wersja zostaje zachowana, ale uprzedź grupę, bo ich salda się zmienią."
+  - heading: "Niech Bea o niczym nie wie"
+    body: "Grupę widzą tylko jej członkowie, więc Bea nie zobaczy grupy, do której nie należy. Zapraszaj osoby, które się dorzucają, i nikogo więcej. Link działa, dopóki nie wygaśnie, a możesz wybrać czas od 15 minut do 5 dni, więc wybierz krótki i wyślij go tam, gdzie Bea go nie zobaczy. Link pokazuje podgląd grupy każdemu, kto go otworzy, więc nazwij grupę nudno, na przykład „Sobotnia skarbonka”, i nie wpisuj imienia Bea ani w opisach wydatków, ani w opcjach ankiety."
+  - heading: "Czego Side Badger tu nie robi"
+    items:
+      - "Nie trzyma ani nie zbiera pieniędzy. Składki trafiają do kupującego przelewem, gotówką albo czymkolwiek, czego używacie, a potem ktoś je rejestruje."
+      - "Nie wysyła przypomnień o płatnościach. Szturchanie osoby, która jeszcze nie zapłaciła, nadal jest ludzką robotą."
+      - "Nie wylicza niczyjego udziału. Ankieta ustala budżet, a opcji „podziel to, co zostało” nie ma, więc każdą kwotę wpisujesz ręcznie."
+      - "Każdy wydatek ma jednego płacącego. Jeśli dwie osoby kupiły różne części prezentu, wpisz dwa wydatki."
+      - "Każdy w podziale potrzebuje darmowego konta i miejsca w grupie."
+exampleAfter: 2
+example:
+  heading: "Gramofon Bei i kartka"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: "prezent"
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: "kartka i papier do pakowania"
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Co, jeśli zbierzemy więcej, niż kosztuje prezent?"
+      a: "Dokładne kwoty muszą dawać w sumie cenę, więc przytnij udziały, aż się zgodzą. Albo przeznacz nadwyżkę na coś prawdziwego, na przykład kwiaty, i wpisz to jako drugi wydatek, jak kartkę i papier w przykładzie."
+    - q: "Czy ktoś może się dorzucić bez dołączania do grupy?"
+      a: "Nie, jeśli ma być w rachunku. Każdy w podziale potrzebuje darmowego konta i miejsca w grupie. Dla kogoś, kto ma tylko gotówkę, Priya może ją przyjąć i wpisać prezent na kwotę, którą grupa jeszcze jest winna. Na przykład jeśli Sam przekaże jej 40 £ gotówką, Priya wpisze 200 £ i podzieli je 60, 60 i 80 między siebie, Omara i Lenę."
+    - q: "Czy ankieta może ustalić, ile dorzuca każdy?"
+      a: "Nie. Ankieta ustala kwotę dla całej grupy, na przykład budżet. Udział każdej osoby ustalacie między sobą, a potem wpisujecie go do wydatku jako **Dokładne kwoty**."

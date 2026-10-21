@@ -1,0 +1,103 @@
+translatedFrom: "6c8b8630"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - privacy-posture.no-ads
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - polls.villa-shortlist-vote
+  - permissions.viewer-sees-everything
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Podziel koszty weekendu kawalerskiego/panieńskiego | Side Badger"
+  description: "Gość honorowy nie płaci, a w poniedziałek wszyscy nadal ze sobą rozmawiają. Jak podzielić koszty weekendu kawalerskiego lub panieńskiego, z obliczeniami."
+h1: "Jak podzielić koszty weekendu kawalerskiego lub panieńskiego"
+navLabel: "Weekend kawalerski/panieński"
+lead: "Gość honorowy nic nie płaci, więc reszta grupy dzieli każdy koszt między siebie [po równo](page:feature/split-expenses). Pomijaj osoby przy kosztach, w których nie uczestniczą, a gościa honorowego trzymaj poza grupą, żeby niespodzianka się udała."
+cta:
+  heading: "Pilnuj rachunku i niespodzianki"
+  body: "Załóż grupę, wyślij link wszystkim oprócz gościa honorowego i dodawaj każdy koszt na bieżąco. Side Badger jest darmowy, bez reklam i bez dziennych limitów."
+sections:
+  - heading: "Cztery przyjaciółki i jedna niespodzianka"
+    body: "Hannah, Isla, Jess i Kat zabierają Grace na jej weekend panieński. Grace jest gościem honorowym, więc za nic nie płaci. Nie ma jej też w grupie, więc nie widzi, ile przyjaciółki na nią wydają. Hannah rezerwuje domek, Isla płaci za dzień w spa, Jess pokrywa kolację, a Kat bierze taksówkę. W niedzielę każda za coś zapłaciła i żadna nie umie powiedzieć, która jest do przodu. Rachunek wygląda tak samo przy weekendzie kawalerskim czy panieńskim, kimkolwiek jest gość honorowy."
+  - heading: "Dziel przez osoby, które płacą, a nie przez osoby na miejscu"
+    body: "Udział gościa honorowego nie znika. Zostaje rozdzielony. Domek kosztuje 720 £, a płacą za niego cztery przyjaciółki, więc wychodzi po 180 £, a miejsce Grace jest już w tej kwocie. Kolacja to 260 £, czyli po 65 £. Taksówka to 44 £, czyli po 11 £. To, co ktoś pomija, wypada tylko z tego jednego wydatku. Kat pomija spa, więc 360 £ za spa, które obejmują też miejsce Grace, dzielą między siebie Hannah, Isla i Jess, po 120 £. Po zsumowaniu Hannah, Isla i Jess są winne po 376 £ za weekend, a Kat 256 £."
+  - heading: "Ustaw to w Side Badger"
+    items:
+      - "Załóż grupę na weekend i nadaj jej nudną nazwę, na przykład „Weekend w domku”. Grace nie jest członkiem, a grupę widzą tylko jej członkowie."
+      - "Wybierz **Zaproś innych** i wyślij link albo pokaż kod QR tylko tam, gdzie Grace tego nie zobaczy. Link pokazuje podgląd grupy, zanim ktokolwiek dołączy. Wybierz, jak długo ma działać, od 15 minut do 5 dni. Stary link działa, dopóki nie wygaśnie, więc nie zostawiaj go dłużej, niż trzeba."
+      - "Przy każdym koszcie wybierz **Dodaj wydatek**, wpisz kwotę i wskaż płacącą osobę w polu **Kto zapłacił?** W polu **Podział między** zaznacz osoby, które płacą, pomijając każdą, która z tego kosztu zrezygnowała, jak Kat przy spa. W polu **Sposób podziału** wybierz **Równo**."
+      - "Po powrocie otwórz **Salda** grupy. Side Badger pokaże, kto komu jest winien, i podpowie krótką listę płatności. Tu są to trzy: Kat płaci Hannah 212 £, Jess płaci Hannah 116 £, a Isla płaci Hannah 16 £. Płaćcie sobie, jak chcecie, a potem zarejestrujcie każdą płatność, wybierając **Ureguluj**."
+  - heading: "Zanim zarezerwujecie: budżet i zaliczka"
+    body: "Uzgodnijcie budżet, zanim ktokolwiek zarezerwuje. Wybierz **Dodaj ankietę**, zapytaj, ile grupa wyda na domek, i podaj kilka kwot jako opcje. Włącz **Anonimowe głosowanie** przy tworzeniu, żeby ukryć, kto na co głosował, tak aby nikt nie musiał głośno bronić mniejszego budżetu. Zamknij ankietę, gdy wszyscy zagłosują i pojawi się zwycięzca. Potem przychodzi zaliczka. Kto rezerwuje, płaci ją i dodaje jako wydatek dzielony po równo, a pozostałą kwotę wpisuje jako drugi wydatek, gdy przyjdzie na nią termin. Pozostałe osoby mogą od razu wysłać swój udział i zarejestrować płatność albo poczekać na ostateczne rozliczenie. Salda wychodzą tak samo w obu przypadkach."
+  - heading: "Gdy ktoś dołącza na jedną noc"
+    body: "Osoba, która wpada tylko na sobotę, nie powinna płacić za piątek. Pomiń ją przy kosztach, w których nie uczestniczyła. Tam, gdzie koszt zależy od tego, jak długo każda osoba zostaje, na przykład pokój, wybierz w polu **Sposób podziału** **Dokładne kwoty** i wpisz udział każdej osoby, który musi dawać w sumie całość. Najpierw wylicz cenę za osobę za noc, a potem pomnóż ją przez liczbę nocy każdej osoby. Więcej o kosztach, które nie są dla wszystkich takie same, znajdziesz w [wyjazdach grupowych](page:use-case/group-trips)."
+  - heading: "Czego Side Badger tu nie robi"
+    items:
+      - "Nigdy nie przesyła pieniędzy. Płacicie sobie przelewem, gotówką albo jak wam wygodnie, a potem rejestrujecie płatność, żeby salda zaktualizowały się dla wszystkich."
+      - "Nie wysyła przypomnień o płatnościach. Przyjazne szturchnięcie na czacie grupy nadal należy do człowieka."
+      - "Każdy wydatek ma jednego płacącego, a Side Badger nie umie podzielić paragonu pozycja po pozycji. Jeśli domek opłaciły dwie karty, wpisz dwa wydatki. Jeśli ktoś zamówił do kolacji dodatki, wpisz te dodatki jako osobny wydatek."
+      - "Prowadzi pieniądze, nie plan podróży. Ankiety i komentarze zostają przy kosztach, więc plany na weekend zostają na czacie grupy."
+exampleAfter: 2
+example:
+  heading: "Weekend panieński Grace, podzielony na cztery"
+  currency: GBP
+  people:
+    - id: hannah
+      name: Hannah
+    - id: isla
+      name: Isla
+    - id: jess
+      name: Jess
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Domek"
+      payer: hannah
+      amount: 720
+      split:
+        method: equal
+    - label: "Dzień w spa"
+      payer: isla
+      amount: 360
+      split:
+        method: equal
+        shares:
+          hannah: 1
+          isla: 1
+          jess: 1
+    - label: "Kolacja"
+      payer: jess
+      amount: 260
+      split:
+        method: equal
+    - label: "Taksówka"
+      payer: kat
+      amount: 44
+      split:
+        method: equal
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Czy świadek albo świadkowa płaci więcej?"
+      a: "Tylko jeśli grupa się na to zgodzi. Aplikacja nie daje nikomu specjalnej roli w rachunkach. Jeśli ktoś pokrywa więcej, wybierz w polu **Sposób podziału** **Dokładne kwoty** albo **Procentowo** i wpisz udziały, na które się umówiliście."
+    - q: "A napoje, których część osób nie piła?"
+      a: "Dodaj napoje jako osobny wydatek i zaznacz tylko osoby, które je piły. Jeśli każda osoba wypiła inną ilość, wybierz **Dokładne kwoty** i wpisz udział każdej z nich. Nikt nie płaci za to, czego nie miał."
+    - q: "Czy gość honorowy może później zobaczyć grupę?"
+      a: "Tak, gdy niespodzianka się skończy. Zaproś tę osobę, a potem administrator może nadać jej rolę **Widz** w zakładce **Bezpieczeństwo** w ustawieniach grupy. Widz widzi wszystko i niczego nie zmienia, więc poczekaj, aż nic nie będzie tajemnicą. Do dołączenia potrzebne jest darmowe konto."

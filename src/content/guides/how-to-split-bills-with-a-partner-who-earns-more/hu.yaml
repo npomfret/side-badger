@@ -1,0 +1,108 @@
+translatedFrom: "92a9bff3"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Oszd fel a számlákat, ha a párod többet keres | Side Badger"
+  description: "Az 50/50 kínossá válik, ha egyikőtök sokkal többet keres. Oszd fel inkább a közös számlákat a jövedelem szerint, két ember számaival, táblázat nélkül."
+h1: "Hogyan oszd fel a számlákat, ha a párod többet keres"
+navLabel: "Ha a párod többet keres"
+lead: "Adjátok össze a nettó fizetéseteket, számoljátok ki mindenki részét az összegből, és kerekítsetek egész százalékokra. Maya nettó fizetése 2 800 £, Jon nettó fizetése 1 700 £, ezért a közös számlákat 62/38 arányban osztják. Írjátok be ezeket a százalékokat egy közös költségre a Side Badgerben, aztán másoljátok le, valahányszor ugyanaz a számla visszajön."
+cta:
+  heading: "A számítást elég egyszer elvégezni"
+  body: "Hozz létre ingyenes fiókot, csinálj csoportot kettőtöknek, és add meg a lakbért a ti százalékaitokkal. A következő havi lakbér már csak másolás. Előbb körbenéznél? Nézd meg, [hogyan működik](page:how-it-works), vagy azt, [mit fed le az ingyenes használat](page:pricing)."
+sections:
+  - heading: "Két fizetés, egy lakás, egy udvarias hallgatás"
+    body: "Maya és Jon együtt élnek. Maya havi nettó fizetése 2 800 £, Jon havi nettó fizetése 1 700 £. Két évig mindent 50/50-ben osztottak, mert egyszerű volt, és egyikük sem akarta szóba hozni. Aztán Jon megnézte külön a lakbért. 1 400 £ fele 700 £, ami Maya nettó fizetésének egynegyede, az övének pedig 41%-a. Senki nem volt tisztességtelen. Senki nem számolta ki. [Párok](page:use-case/couples) közül sokan eljutnak idáig. Egy elvitelre rendelt vacsora mellett megegyeztek abban, hogy a közös számlák nagyjából egyforma falatot harapjanak ki mindkét fizetésből."
+  - heading: "A módszer, a számításokkal együtt"
+    body: "Négy lépés, egy számológép és egy beszélgetés, amelyet úgyis meg akartatok ejteni."
+    items:
+      - "**Egyezzetek meg abban, mi számít fizetésnek.** Maya és Jon a nettó fizetést használja, azt a pénzt, amely minden hónapban megérkezik a bankszámlára. Együtt ez 2 800 £ + 1 700 £ = 4 500 £."
+      - "**Számoljátok ki az egyes részeket.** Maya része 2 800 ÷ 4 500, vagyis 62,2%. Jon része 1 700 ÷ 4 500, vagyis 37,8%."
+      - "**Kerekítsetek egész százalékokra.** A 62,2% 62 lesz, a 37,8% pedig 38. Két embernél az egyik számot kerekítsd, és vond ki 100-ból, hogy megkapd a másikat, így az összegük mindig 100."
+      - "**Nézzétek meg, mit jelent.** Az 1 400 £ lakbérből Maya fizet 868 £-ot (62%), Jon pedig 532 £-ot (38%). Ez nagyjából mindkettejük nettó fizetésének 31%-a. A fele-fele felosztás Maya fizetésének 25%-át, Jon fizetésének 41%-át vitte volna el."
+  - heading: "Így olvasd ki a hónapot"
+    body: "Maya fizette az 1 400 £ lakbért, Jon pedig a másik 216 £-ot. Maya része a hónapból 868,00 £ + 111,60 £ + 18,00 £ = 997,60 £, ő 1 400 £-ot fizetett, így 402,40 £ jár neki. Jon része 532,00 £ + 68,40 £ + 18,00 £ = 618,40 £, ő 216 £-ot fizetett, így 402,40 £ a tartozása. A Side Badger egy kifizetést javasol, Jontól Mayának, 402,40 £ összegben, és miután megtörtént, az [elszámolásnál](page:feature/settle-up) rögzíthetitek. 50/50-ben osztva ugyanebben a hónapban Jon 592,00 £-ot fizetett volna Mayának."
+  - heading: "Állítsd be a Side Badgerben"
+    body: "Tíz perc, nagyrészt a százalékokkal."
+    items:
+      - "**Hozd létre a csoportot.** A vezérlőpulton válaszd az **Új csoport** lehetőséget, és nevezd el a lakásról. Válaszd a **Mások meghívása** lehetőséget, és küldd el Jonnak a linket vagy a QR-kódot. Ő bejelentkezik vagy létrehoz egy ingyenes fiókot, és kiválasztja, milyen néven szeretne megjelenni ebben a csoportban. A csoportot csak a tagok látják, így ebben csak ti ketten vagytok."
+      - "**Add hozzá a lakbért.** Válaszd a **Kiadás hozzáadása** lehetőséget. Írd be a leírást és az összeget, a **Ki fizetett?** alatt pedig válaszd ki Mayát. A **Megosztás közöttük** alatt hagyd mindkét embert, majd a **Felosztás módja** alatt válaszd a **Százalék** lehetőséget, és írd be: 62 és 38. Az űrlap jelzi, ha a százalékok összege nem 100. Válaszd a **Kiadás mentése** lehetőséget."
+      - "**Add hozzá a többi számlát.** Az energia és az internet ugyanígy kerül be, Jon a fizető, és ugyanaz a 62 és 38. Az elvitelre rendelt vacsora külön költség, a **Felosztás módja** pedig marad az **Egyenlően** értéken."
+      - "**Másold le a következő hónapban.** Nyisd meg a múlt havi lakbért, és válaszd a **Kiadás másolása** lehetőséget. A másolat megtartja a fizetőt, az összeget és a felosztást, a dátuma pedig a mai nap lesz. Ha változott a lakbér, írd át az összeget, aztán válaszd a **Másolat készítése** lehetőséget. Az energiaszámlával ugyanígy működik."
+      - "**Nézd meg, ki kinek tartozik.** Az **Egyenlegek** rész megmutatja, és rövid kifizetéslistát javasol. Fizessetek egymásnak, ahogy akartok, aztán rögzítsd a kifizetést a **Tartozásrendezés** alatt."
+  - heading: "50/50, jövedelem szerint vagy számláról számlára"
+    body: "Nincs helyes válasz, csak olyan, amellyel mindketten együtt tudtok élni. Három gyakori."
+    items:
+      - "**Mindenből a fele-fele.** A legkönnyebben tartható, és az olyan párokhoz illik, akiknek a fizetése közel áll egymáshoz."
+      - "**Jövedelem szerint mindenre, ami közös.** Ezt csinálja Maya és Jon. Egy beszélgetés, egy százalékpár."
+      - "**Számláról számlára.** A lakbér és a számlák jövedelem szerint, a nyaralások és az apró kényeztetések 50/50-ben vagy ahogy megegyeztek, és minden számla azt a szabályt kapja, amelyik illik hozzá."
+  - heading: "Egyezzetek meg abban, mi számít közösnek"
+    body: "A viták általában a listáról szólnak, nem a százalékokról. A lakbér, az energia, az internet, a heti bevásárlás és a kanapé a legtöbb otthonban közösnek számít. Maya edzőtermi bérlete és Jon futball-előfizetése lehet, hogy nem. Egyezzetek meg a listában egyszer, írjátok le, és csak a közös költségek kerüljenek a csoportba."
+  - heading: "Az elvitelre rendelt vacsora szándékosan marad 50/50"
+    body: "Az apró örömök kicsik és nem kötelezőek, és senkinek nem kellene számológép ahhoz, hogy gyozát rendeljen. A Side Badgerben az elvitelre rendelt vacsora is csak egy költség. Jon 36 £-ot fizet, a **Felosztás módja** marad az **Egyenlően** értéken, és mindkettejükre 18 £ jut."
+  - heading: "Amikor valakinek megváltozik a fizetése"
+    body: "Egy fizetésemelés, egy új munka vagy egy munkaszünet megváltoztatja a számítást. Számold ki az új százalékokat ugyanígy, és a következő költségtől használd őket. A korábbi költségek úgy maradnak, ahogy voltak. Másold le a múlt havi lakbért, írd át a százalékokat, aztán válaszd a **Másolat készítése** lehetőséget. Egy már bevitt költség javításához szerkeszd, ha a csoport jogosultságai megengedik, és előbb szólj a párodnak, mert az egyenlegek változnak. A korábbi változat megmarad. Egyezzetek meg abban, mikor számoltok újra, például évente egyszer, és váltás előtt számoljatok el, hogy a régi felosztás tiszta számolással záruljon."
+  - heading: "Amit a Side Badger itt nem csinál"
+    items:
+      - "Soha nem kérdezi meg, ki mennyit keres, és nem számolja ki a százalékokat. Te írod be a megbeszélt számokat."
+      - "Nem tud alapértelmezett felosztást beállítani az egész csoportnak. A százalékok az egyes költségekre kerülnek, ezért másolj le egyet, amelyen már rajta vannak."
+      - "Ismétlődő számlák nincsenek, ezért minden alkalommal a múlt havi lakbért másolod."
+      - "Soha nem mozgat pénzt. Fizettek egymásnak, ahogy akartok, és rögzítitek."
+exampleAfter: 2
+example:
+  heading: "Egy hónap Maya és Jon lakásában"
+  currency: GBP
+  people:
+    - id: maya
+      name: Maya
+    - id: jon
+      name: Jon
+  expenses:
+    - label: "a lakbér"
+      payer: maya
+      amount: 1400
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: "energia és internet"
+      payer: jon
+      amount: 180
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: "az elvitelre rendelt vacsora"
+      payer: jon
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Kérdések"
+  items:
+    - q: "Bruttó vagy nettó fizetést használjunk?"
+      a: "A csoport dönt. A nettó a gyakoribb, mert ez az a pénz, amelyet ténylegesen el lehet költeni. A bruttó fizetés figyelmen kívül hagyja, hogy az adó, a nyugdíj-hozzájárulás és a hiteltörlesztés különböző fizetésekből különböző összegeket visz el. Bármelyiket választjátok, mindkettőtökre ugyanazt a mércét használjátok."
+    - q: "Látja a Side Badger a jövedelmünket?"
+      a: "Nem. Csak százalékokat adsz meg, fizetést soha. A százalékokat a csoport tagjai látják, egy párnál ez ti ketten vagytok."
+    - q: "Beállíthatjuk egyszer a 62/38-at mindenre?"
+      a: "A felosztás költségenként állítható be, nem csoportonként. Másolj le egy költséget, amelyen már rajta van a 62 és a 38, aztán változtasd meg, ami eltér. A többi lehetőségről a [költségek felosztása](page:feature/split-expenses) oldalon olvashatsz."

@@ -1,0 +1,101 @@
+translatedFrom: "5d92090e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Kako zbrati denar za skupinsko darilo | Side Badger"
+  description: "Vsak prispeva drugačen znesek, kartico pa udari eden. Izvedi anketo o proračunu, vnesi točne zneske, račune pa prepusti Side Badgerju."
+h1: "Kako zbrati denar za skupinsko darilo"
+navLabel: "Zbiranje za skupinsko darilo"
+lead: "Zbiranje za skupinsko darilo pomeni, da ena oseba založi denar, vsi drugi pa ji dolgujejo svoj prispevek. Z anketo se dogovorite za proračun, kupec naj darilo plača s svojo kartico, nato ga vnesite kot en strošek s [točnimi zneski](page:feature/split-expenses), s številko za vsako osebo. Side Badger pokaže, kdo kupcu koliko dolguje, vsak pa pošlje svoj delež, kakor mu ustreza."
+cta:
+  heading: "Obhodi klobuk brez klobuka"
+  body: "Ustanovi skupino, ne vključi osebe, ki bo darilo dobila, in vnesi darilo s točnimi zneski. Side Badger je brezplačen, brez oglasov in brez dnevnih omejitev. Bi rad najprej ogled? Poglej [kako deluje](page:how-it-works) ali [kaj pokriva brezplačno](page:pricing)."
+sections:
+  - heading: "Štirje prijatelji, en gramofon, štiri različne vsote"
+    body: "Bea bo dopolnila 30 let in si želi gramofon. Priya, Omar, Lena in Sam ji ga kupujejo. Priya najde enega za 240 £ in ga kupi s svojo kartico, ker mora nekdo biti prvi. Štirje ne prispevajo enako. Priya in Omar dasta po 60 £, Lena 80 £ in Sam 40 £. Nihče ne razlaga svoje številke in nihče ne sprašuje. Omar kupi še voščilnico in darilni papir za 12 £. Voščilnico podpišejo vsi štirje, zato se ta strošek razdeli enako."
+  - heading: "Dogovorite se za proračun, preden kdo klikne Kupi"
+    body: "Anketa o proračunu prihrani prepir o gramofonu za 400 £. V skupini izberi **Dodaj anketo** in vprašaj, koliko naj stane darilo. Možnosti naj bodo zneski, na primer do 150 £, do 200 £ in do 250 £. Vklopi **Anonimno glasovanje**, ki skrije, kdo je za kaj glasoval, da nikomur ni treba na glas zagovarjati manjše številke. Ko je prvi glas oddan, se nastavitev ne da več spremeniti, zato jih najprej preveri. Anketa se ne zapre sama. Ko so vsi glasovali, izberi **Zapri anketo** in prikaže se **Zmagovalec**. Anketa uskladi skupni znesek. Ne določa deleža nikogar."
+  - heading: "Branje seštevka"
+    body: "Darilo se razdeli na 60 £, 60 £, 80 £ in 40 £, kar znese 240 £ z računa. Voščilnica in papir se razdelita na štiri po 3 £. Priyin račun je 60 £ + 3 £, torej 63 £, plačala pa je 240 £, zato ji pripada 177 £. Omarjev račun je prav tako 63 £, plačal pa je 12 £, zato dolguje 51 £. Lena dolguje 80 £ + 3 £, kar je 83 £, Sam pa dolguje 40 £ + 3 £, kar je 43 £. Ti trije skupaj dajo Priyinih 177 £. Če bi stvari prepustili sebi, bi se dolgovi pletli v petih smereh po skupini. Side Badger namesto tega predlaga tri plačila, vsa Priyi. [Poravnava](page:feature/settle-up) ima podrobnosti."
+  - heading: "Vnesi v Side Badger"
+    body: "Priyin del vzame približno pet minut."
+    items:
+      - "**Ustanovi skupino.** Na nadzorni plošči izberi **Ustvari skupino**. Izberi **Povabi druge** in pošlji povezavo ali kodo QR ljudem, ki prispevajo, in nikomur drugemu."
+      - "**Dodaj darilo.** Izberi **Dodaj strošek**, ga opiši, vnesi 240 in pri **Kdo je plačal?** izberi Priyo. Pri **Razdeli med** pusti vse štiri, nato pri **Način razdelitve** izberi **Točni zneski** in vpiši 60, 60, 80 in 40. Zneski morajo skupaj dati 240. Če želiš, priloži potrdilo o naročilu. Izberi **Shrani strošek**."
+      - "**Dodaj voščilnico.** Omar doda teh 12 £ sam, pri **Kdo je plačal?** izbere sebe in **Način razdelitve** pusti na **Enako**, z odkljukanimi vsemi štirimi."
+      - "**Seštej, nato plačaj.** Vsak preveri **Stanja**, ki pokažejo, kdo komu dolguje, in pošlje Priyi svoj delež, kakor mu ustreza. Nato ga zabeleži z **Poravnaj** in **Zabeleži poravnavo**. Hitra poravnava izpolni znesek."
+  - heading: "Najprej kupi ali najprej zberi"
+    body: "Side Badger ne hrani blagajne, zato „zbiranje“ pravzaprav pomeni štetje. Delujeta dva vrstna reda."
+    items:
+      - "**Najprej kupi.** Kupec plača, doda strošek po pravi ceni in vsi takoj vidijo svoj delež. Je urejeneje, a kupec nosi strošek, dokler ljudje ne plačajo, zato izberi kupca, ki si to lahko privošči."
+      - "**Najprej zberi.** Ljudje pošljejo svoj znesek kupcu pred nakupom. Ko poznate ceno, vnesite darilo, nato zabeležite vsako plačilo z datumom, ko je denar res šel naprej. Darilo dodajte prvo, da ima vsako plačilo stanje, ob katero pade."
+      - "**Cena se premakne.** Dostava, koda za popust, pozna podražitev. Uredi darilo in spremeni točne zneske, da še vedno dajo skupaj. Prejšnja različica se ohrani, a skupino najprej obvesti, ker se njihova stanja spremenijo."
+  - heading: "Bea naj ne izve"
+    body: "Skupino lahko vidijo samo njeni člani, zato Bea ne vidi skupine, v kateri ni. Povabi ljudi, ki prispevajo, in nikogar drugega. Povezava deluje, dokler ne poteče, in izbereš lahko karkoli od 15 minut do 5 dni, zato izberi kratko in jo pošlji tja, kjer je Bea ne bo videla. Povezava pokaže predogled skupine vsakomur, ki jo odpre, zato skupino poimenuj dolgočasno, na primer sobotna blagajna, in Beinega imena ne piši niti v poimenovanja stroškov ali možnosti ankete."
+  - heading: "Česa Side Badger tu ne počne"
+    items:
+      - "Denarja ne hrani in ne zbira. Prispevki gredo kupcu z bančnim nakazilom, z gotovino ali kakor pač plačujete, nato jih nekdo zabeleži."
+      - "Ne pošilja opomnikov za plačila. Priganjanje tistih, ki še niso plačali, ostaja človeško delo."
+      - "Ne izračuna deleža nikogar. Anketa uskladi proračun, možnosti „razdeli, kar ostane“ pa ni, zato vsak znesek vpišeš sam."
+      - "Vsak strošek ima enega plačnika. Če sta dva kupila različna dela darila, vnesi dva stroška."
+      - "Vsak, ki je v razdelitvi, potrebuje brezplačen uporabniški račun in mesto v skupini."
+exampleAfter: 2
+example:
+  heading: "Bein gramofon in voščilnica"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: "darilo"
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: "voščilnica in papir"
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Kaj, če zberemo več, kot stane darilo?"
+      a: "Točni zneski morajo skupaj dati ceno, zato krajšajte deleže, dokler ne dajo. Ali pa presežek porabite za nekaj resničnega, na primer rože, in to vnesite kot drugi strošek, kot voščilnico in papir v primeru."
+    - q: "Ali lahko nekdo prispeva, ne da bi se pridružil skupini?"
+      a: "Ne, če ga želite imeti v seštevku. Vsak v razdelitvi potrebuje brezplačen uporabniški račun in mesto v skupini. Za nekoga, ki ima samo gotovino, jo lahko Priya vzame in vnese darilo za znesek, ki ga skupina še dolguje. Na primer, če bi ji Sam dal 40 £ v gotovini, bi vnesla 200 £ in jih razdelila 60, 60 in 80 med sebe, Omarja in Leno."
+    - q: "Ali lahko anketa odloči, koliko prispeva vsak?"
+      a: "Ne. Anketa uskladi številko za celotno skupino, na primer proračun. Delež vsakogar se dogovorite med seboj, nato ga vpišite v strošek kot **Točni zneski**."

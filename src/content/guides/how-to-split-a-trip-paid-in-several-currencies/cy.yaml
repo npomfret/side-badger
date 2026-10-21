@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Sut i rannu taith a dalwyd mewn sawl arian cyfred | Side Badger"
+  description: "Punnoedd am y gwesty, yen am y ramen. Setlo pob arian cyfred ar wahân, neu drosi ar gyfradd y gallwch ei gweld. Y ddau ddull, gyda'r symiau."
+h1: "Sut i rannu taith a dalwyd mewn sawl arian cyfred"
+navLabel: "Teithiau mewn sawl arian cyfred"
+lead: "Rhowch bob cost i mewn yn yr arian cyfred y talasoch ynddo, yna dewiswch lwybr. Gallwch gadw'r arian cyfred ar wahân a setlo pob un yn ei arian ei hun, neu eu trosi ar gyfradd gyfnewid gyfredol a setlo unwaith. Mae'r un daith i Japan yn dod i bedwar taliad y ffordd gyntaf a dau daliad yr ail."
+cta:
+  heading: "Rhowch hi i mewn yn yr arian y talasoch ynddo"
+  body: "Creu cyfrif am ddim, cychwyn grŵp ar gyfer y daith ac ychwanegu pob cost yn ba bynnag arian cyfred oedd ar y dderbynneb. Eisiau'r manylion yn gyntaf? Gweler [arian cyfred lluosog](page:feature/multiple-currencies) neu [beth mae am ddim yn ei gynnwys](page:pricing)."
+sections:
+  - heading: "Tri ffrind, un gwesty, cryn dipyn o yen"
+    body: "Mae Zoe, Kenji a Lucy yn treulio wythnos yn Japan ar [daith grŵp](page:use-case/group-trips), ac mae pob cost yn cael ei rhannu'n gyfartal rhwng y tri. Archebodd Zoe'r gwesty gartref, mewn punnoedd, am £600. Prynodd Lucy y tocynnau trên yn Tokyo am ¥90,000. Talodd Kenji am noson ramen, ¥9,000, ac mae wedi sôn amdani bob dydd ers hynny. Does neb eisiau trosi tair derbynneb ar blatfform gorsaf. Ar gyfer y symiau hyn, mae ¥1 yn £0.005, cyfradd gron a ddyfeisiwyd ar gyfer y canllaw hwn. Yn yr ap, byddech yn defnyddio cyfradd gyfnewid gyfredol, neu'n teipio'r un a gawsoch mewn gwirionedd."
+  - heading: "Rhowch bob un i mewn yn yr arian sydd ar y dderbynneb"
+    body: "Gwnewch y rhan hon ba bynnag lwybr a ddewiswch. Does dim angen trosi dim eto."
+    items:
+      - "**Gwnewch y grŵp.** Ar y dangosfwrdd dewiswch **Creu Grŵp** a'i enwi ar ôl y daith, yna dewiswch **Gwahodd Eraill** ac anfon y ddolen neu'r cod QR."
+      - "**Ychwanegwch y gwesty.** Dewiswch **Ychwanegu Cost** a rhowch 600, gyda phunnoedd fel yr arian cyfred wrth ymyl y swm. O dan **Pwy dalodd?** dewiswch Zoe. Cadwch y tri o dan **Rhannu rhwng**, gadewch **Sut i rannu** ar **Cyfartal** a dewiswch **Cadw Cost**."
+      - "**Ychwanegwch yr yen.** Gwnewch yr un peth ar gyfer y tocynnau trên (talodd Lucy) a'r ramen (talodd Kenji), gydag yen fel yr arian cyfred. Does gan yen ddim degolion, felly dyw'r ffurflen ddim yn gofyn am rai."
+  - heading: "Llwybr un: cadw'r arian cyfred ar wahân"
+    body: "Mae Side Badger yn cadw balans ar gyfer pob arian cyfred ac nid yw'n netio un yn erbyn y llall. Mewn punnoedd, mae'r gwesty'n £200 yr un, felly mae ar Kenji a Lucy £200 yr un i Zoe. Mewn yen, mae'r tocynnau trên a'r ramen yn dod i ¥99,000, sef ¥33,000 yr un. Talodd Lucy ¥90,000 ac mae ¥57,000 yn ddyledus iddi. Ni thalodd Zoe yen o gwbl ac mae arni ¥33,000. Talodd Kenji ¥9,000, felly mae arno ¥24,000."
+    items:
+      - "**Punnoedd.** Mae Kenji yn talu £200 i Zoe ac mae Lucy yn talu £200 i Zoe."
+      - "**Yen.** Mae Zoe yn talu ¥33,000 i Lucy ac mae Kenji yn talu ¥24,000 i Lucy."
+      - "**Pedwar taliad i gyd.** Mae Zoe a Lucy mewn dyled i'w gilydd mewn dau arian cyfred, ac nid yw'r rheini'n canslo ei gilydd. Does dim cyfradd yn rhan o'r sym, felly does dim byd i ddadlau yn ei gylch."
+      - "**Yn ddyledus mewn yen, talu mewn punnoedd.** Gall rhywun heb yen dalu mewn punnoedd o hyd. Pan fyddwch yn cofnodi'r taliad, agorwch **Arian cyfred gwahanol?**, gosodwch **Trosi i** yn bunnoedd a gwiriwch y gyfradd. Mae ¥33,000 Zoe yn £165 ar gyfradd y canllaw hwn, ac mae'r balans yen yn dal i ddod allan yn iawn."
+      - "**Cofnodwch bob taliad.** Talwch eich gilydd sut bynnag y dymunwch, yna dewiswch **Setlo** a defnyddio **Cofnodi Setliad**. Mae mwy am [setlo](page:feature/settle-up)."
+  - heading: "Llwybr dau: trosi wrth fynd"
+    body: "Os yw'n well gan y grŵp weld un rhif yr un, gwnewch y trosi pan fyddwch yn rhoi'r gost i mewn."
+    items:
+      - "**Trosi ar y ffurflen.** Ar **Ychwanegu Cost**, dewiswch **Trosi i** a dewiswch bunnoedd. Mae Side Badger yn dangos y gyfradd a'r swm wedi'i drosi, gyda ≈ wrth ei ymyl. Golygwch y gyfradd os cawsoch un wahanol. Mae'r swm yen gwreiddiol yn aros ar y gost."
+      - "**Darllen y punnoedd.** Ar ¥1 = £0.005, mae'r tocynnau trên yn dod yn £450 a'r ramen yn £45. Gyda'r gwesty £600, mae hynny'n £600 + £450 + £45 = £1,095, neu £365 yr un. Talodd Zoe £600, felly mae £235 yn ddyledus iddi. Talodd Lucy £450 ac mae £85 yn ddyledus iddi. Talodd Kenji £45 ac mae arno £320."
+      - "**Dau daliad.** Y ddau gan Kenji: £235 i Zoe a £85 i Lucy. Dyw Zoe a Lucy ddim yn talu ei gilydd o gwbl mwyach."
+      - "**Neu osod arian cyfred i'r grŵp.** I hepgor y cam ychwanegol, agorwch **Gosodiadau** y grŵp, dewch o hyd i **Gosodiadau Arian Cyfred** a dewiswch **Trosi Costau yn Awtomatig i**. Yna mae pob cost newydd yn trosi i'r arian cyfred hwnnw, o hyd ar gyfradd y gallwch ei gweld a'i newid."
+  - heading: "Pa lwybr ddylech chi ei gymryd?"
+    items:
+      - "**Cadw ar wahân** pan fydd gan bobl yen yn eu waledi o hyd, neu pan fyddai'n well gennych beidio â dadlau am gyfradd. Y pris yw mwy o daliadau, mewn mwy nag un arian cyfred."
+      - "**Trosi** pan fydd y grŵp yn byw mewn un arian cyfred ac eisiau un rhif yr un a rhestr fyrrach, fel dau drosglwyddiad Kenji. Y pris yw bod y grŵp yn ymddiried mewn cyfradd, a bod y gyfradd yn sefydlog ar bob cost pan gaiff ei chadw."
+      - "**Penderfynwch yn gynnar.** Dim ond costau newydd a chostau wedi'u copïo y mae arian cyfred grŵp yn eu trosi. Nid yw'n mynd yn ôl i dacluso'r hyn rydych eisoes wedi'i roi i mewn."
+  - heading: "Y gyfradd, a'r terfyn"
+    items:
+      - "**Mae'r gyfradd yn sefydlog pan fyddwch yn cadw.** Ni chaiff hen gostau byth eu hailbrisio, felly dyw balans ddim yn symud am fod y farchnad wedi symud. Gall costau a roddwyd i mewn ar ddiwrnodau gwahanol gario cyfraddau gwahanol, felly os yw'r grŵp eisiau un gyfradd ar gyfer y daith gyfan, cytunwch arni a'i theipio bob tro."
+      - "**Dim cyfradd? Teipiwch un.** Mae Side Badger yn nôl cyfradd gyfnewid gyfredol lle gall, ond does dim sicrwydd bod un ar gael ar gyfer pob pâr. Os nad oes un, neu os cawsoch well bargen wrth y cownter cyfnewid, teipiwch eich un eich hun."
+      - "**999,999.99 fesul cost, yn ei harian cyfred ei hun.** Un terfyn, ba bynnag yw'r arian. Mewn yen mae hynny ychydig o dan ¥1,000,000, tua £5,000 ar gyfradd y canllaw hwn. Mewn arian cyfred â rhifau mawr, fel rwpia Indonesia, gall un bil ei gyrraedd yn gynt. Rhannwch y bil yn ddwy gost, neu rhowch ef i mewn mewn arian cyfred arall a throsi."
+  - heading: "Beth nad yw Side Badger yn ei wneud yma"
+    items:
+      - "Dyw e byth yn symud nac yn cyfnewid arian. Rydych yn talu eich gilydd sut bynnag y dymunwch, yna'n cofnodi'r taliad."
+      - "Mae ganddo 140 o arian cyfred. Nid yw arian crypto a metelau yn eu plith."
+exampleAfter: 2
+example:
+  heading: "Japan, wedi'i setlo mewn dwy ffordd"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "y gwesty, wedi'i archebu gartref"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "tocynnau trên"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "noson ramen"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Cwestiynau"
+  items:
+    - q: "Pa gyfradd gyfnewid mae Side Badger yn ei defnyddio?"
+      a: "Cyfradd gyfnewid gyfredol, wedi'i nôl pan fyddwch yn rhoi'r gost i mewn lle mae un ar gael. Gallwch ei newid i'r gyfradd a gawsoch mewn gwirionedd."
+    - q: "A all y grŵp gadw at bunnoedd ac yen?"
+      a: "Gall. Yn **Gosodiadau** y grŵp, trowch **Cyfyngu arian cyfred ar gyfer y grŵp hwn** ymlaen o dan **Gosodiadau Arian Cyfred**, dewiswch yr **Arian cyfred a ganiateir** a gosodwch yr **Arian cyfred rhagosodedig ar gyfer costau newydd**. Llai o opsiynau yn y rhestr, llai o ddyfalu anghywir wrth y til."
+    - q: "Oes rhaid i ni drosi o gwbl?"
+      a: "Nac oes. Mae arian cyfred yn aros ar wahân oni bai eich bod chi neu eich grŵp yn dewis trosi, ac mae pob arian cyfred yn cael ei restr fer ei hun o daliadau."

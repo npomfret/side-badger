@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Partager une villa selon les nuits de chacun | Side Badger"
+  description: "Dev ne vient que trois nuits, alors pourquoi en payer six ? Partagez une villa de vacances selon les nuits réellement passées, avec les calculs déjà faits."
+h1: "Comment partager une villa de vacances quand chacun reste des nuits différentes"
+navLabel: "Partager une villa par nuits"
+lead: "Chiffrez le séjour par personne et par nuit, multipliez par le nombre de nuits de chacun, et saisissez la villa en **une seule dépense avec montants exacts**. Side Badger tient le compte et suggère une courte liste de paiements au moment de régler."
+cta:
+  heading: "Une seule dépense bien rangée pour la villa"
+  body: "Faites un groupe, invitez tout le monde avec un lien ou un code QR et saisissez la villa avec des montants exacts. Side Badger tient le compte courant pendant que vous profitez des vacances."
+sections:
+  - heading: "Six nuits, quatre personnes, une carte bancaire"
+    body: "Un [voyage en groupe](page:use-case/group-trips) commence généralement avec la carte de quelqu'un. Ici, c'est celle d'Ana. Elle réserve une villa pour six nuits, 2 100 €, parce qu'il faut bien que quelqu'un commence. Ana, Ben et Chloe restent les six nuits. Dev ne peut les rejoindre que pour les trois dernières, et vient en train. Ben loue une voiture, dans laquelle Dev ne monte jamais. Dev fait les grosses courses. Partager la villa en quatre est le réflexe évident. Dev paierait alors trois nuits passées chez lui, et ce genre de chose refait surface à Noël. Partager selon les nuits évite la dispute, et le calcul prend une minute."
+  - heading: "Chiffrer une nuitée"
+    body: "Une nuitée, c'est une personne qui reste une nuit. La villa coûte ce qu'elle coûte, donc répartissez le prix sur toutes les nuitées, puis donnez à chacun celles qu'il a utilisées."
+    items:
+      - "**Comptez les nuitées.** Ana, Ben et Chloe restent six nuits chacun et Dev en reste trois : 6 + 6 + 6 + 3 = 21."
+      - "**Chiffrez-en une.** 2 100 € ÷ 21 = 100 € par nuitée."
+      - "**Multipliez par les nuits de chacun.** Ana, Ben et Chloe paient 6 × 100 € = 600 € chacun. Dev paie 3 × 100 € = 300 €."
+      - "**Vérifiez le total.** 600 € + 600 € + 600 € + 300 € = 2 100 €. Si vos parts ne font pas le prix, une nuit manque ou a été comptée deux fois."
+  - heading: "Saisissez-la dans Side Badger"
+    body: "Faites un groupe, invitez les trois autres avec un lien ou un code QR, puis ajoutez les coûts. La villa d'abord."
+    items:
+      - "Choisissez **Ajouter Dépense**. Décrivez-la, saisissez 2 100 et réglez **Qui a payé ?** sur Ana."
+      - "Sous **Divisé entre**, vérifiez que les quatre personnes y sont."
+      - "Sous **Comment diviser**, choisissez **Montants exacts**. Saisissez 600 pour Ana, Ben et Chloe et 300 pour Dev. Les montants doivent égaler le total."
+      - "Choisissez **Enregistrer Dépense**."
+      - "Ajoutez la location de voiture de la même façon. Ben a payé, le partage est **Égal**, et Dev est laissé de côté, car il est venu en train. [Partager les dépenses](page:feature/split-expenses) présente les autres façons de répartir un coût."
+      - "Ajoutez les courses. Dev a payé, le partage est **Égal**, et les quatre y sont."
+  - heading: "Lire le résultat, puis régler les comptes"
+    body: "La note de chacun est sa part de la villa plus sa part de la voiture et des courses. Ana, Ben et Chloe en sont à 725 € chacun, soit 600 € + 80 € + 45 €. Dev en est à 345 €, soit 300 € + 45 €. Soustrayez ce que chacun a payé et les soldes en ressortent. Ana a payé 2 100 €, donc on lui doit 1 375 €. Ben a payé 240 € et doit 485 €. Dev a payé 180 € et doit 165 €. Chloe n'a rien payé et doit 725 €. Laissées telles quelles, ces dettes circuleraient dans six directions autour du groupe. Side Badger suggère plutôt trois paiements, tous pour Ana. Payez-la comme vous voulez, puis choisissez **Régler** et utilisez **Enregistrer le règlement** pour chaque paiement, afin que les soldes suivent. Les boutons de règlement rapide remplissent le montant. Pour en savoir plus, voyez [régler les comptes](page:feature/settle-up)."
+  - heading: "Quand la villa n'a pas un prix bien net"
+    items:
+      - "**Les chambres diffèrent.** Si la suite vaut plus que le cagibi, convenez d'abord de ce que coûte chaque chambre, puis faites le calcul par nuitée une chambre à la fois. Saisissez la villa en une seule dépense avec le total de chacun, ou une dépense par chambre. Dans les deux cas, les montants exacts d'une dépense doivent égaler son total."
+      - "**Un acompte payé des mois plus tôt.** Celui qui l'a payé saisit sa propre dépense, datée du jour de son paiement. Partagez-la selon les nuits dans les mêmes proportions que le solde."
+      - "**La réservation est dans une autre devise.** Saisissez la villa dans la devise avec laquelle vous avez payé. Si le groupe convertit au fil de l'eau, utilisez un taux de change actuel, ou saisissez le taux que vous avez réellement obtenu. Le montant d'origine reste sur la dépense. [Plusieurs devises](page:feature/multiple-currencies) donne le détail."
+      - "**Les nuits partielles.** Quelqu'un arrive à minuit, quelqu'un part avant le petit-déjeuner. Convenez d'une seule règle pour compter les nuits et appliquez-la à tout le monde."
+  - heading: "Ce que Side Badger ne fait pas ici"
+    items:
+      - "Il ne compte pas les nuits pour vous. Il n'y a pas de partage par nuits ni par parts, donc vous calculez chaque montant comme ci-dessus et vous saisissez des **montants exacts**."
+      - "Il ne fait pas circuler l'argent. Payez-vous comme vous voulez, puis enregistrez le paiement."
+      - "Il n'accepte qu'un payeur par dépense. Si deux personnes ont payé la villa, saisissez deux dépenses."
+      - "Il n'a pas d'accès invité. Chaque personne du groupe, Dev compris, a besoin d'un compte gratuit."
+exampleAfter: 2
+example:
+  heading: "La villa, la voiture et les courses"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "six nuits à la villa"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "la location de voiture"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "les courses"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Questions sur la villa"
+  items:
+    - q: "Et si quelqu'un annule ?"
+      a: "Retirez ses nuits, refaites les calculs et modifiez la dépense de la villa pour que les montants exacts égalent de nouveau le prix. La version précédente est conservée et la modification apparaît dans l'activité du groupe, donc personne ne change un chiffre en douce. Qui peut modifier dépend des permissions du groupe."
+    - q: "Celui qui a réservé doit-il payer moins ?"
+      a: "C'est au groupe d'en décider. Réserver est une corvée, et les groupes sont divisés sur la question de savoir si elle mérite une remise. Quoi que vous conveniez, mettez-le dans les montants exacts et écrivez-le dans une note sur la dépense, ou dans un commentaire à côté, pour que personne n'ait à se rappeler l'arrangement."
+    - q: "Peut-on partager les frais de ménage différemment ?"
+      a: "Oui. Saisissez les frais comme une dépense séparée et donnez-leur leur propre partage. Le partage à parts égales convient à un forfait pour toute la maison. Les montants exacts conviennent à un groupe qui veut que les frais suivent aussi les nuits."

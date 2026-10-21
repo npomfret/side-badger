@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+meta:
+  title: "Sadaliet rēķinus ar partneri, 50/50 vai pēc ienākumiem | Side Badger"
+  description: "Dalieties garlaicīgajos izdevumos, nepārvēršot randiņu vakaru par ceturkšņa finanšu pārskatu. Sadaliet 50/50, pēc ienākumiem vai rēķins pēc rēķina. Bez maksas."
+h1: "Dalieties izmaksās kā pāris, taisnīgi"
+navLabel: "Pāri"
+lead: "Dalieties garlaicīgajos izdevumos, nepārvēršot randiņu vakaru par ceturkšņa finanšu pārskatu. Side Badger uztur vienu kārtējo uzskaiti par īri, rēķiniem un iepirkumiem **pāriem**, kas dala mājokli, dīvānu un miglainu atmiņu par to, kurš samaksāja par internetu. Sadaliet 50/50, pēc ienākumiem vai rēķins pēc rēķina un skatiet, kurš kam ir parādā."
+cta:
+  heading: "Sāciet grupu diviem"
+  body: "Izveidojiet kontu, izveidojiet grupu un nosūtiet partnerim uzaicinājuma saiti. Šovakar līdzņemamais ēdiens var būt pirmais izdevums."
+scenario:
+  heading: "Taisnīgi nenozīmē 50/50"
+  body: "Sam un Alex dala mājokli. Sam pelna vairāk, tāpēc viņi vienojās, ka Sam maksā 60% īres un Alex 40%. Sam maksā izīrētājam, Alex iepērkas, un abi ir diezgan pārliecināti, ka viss izlīdzinās. „Diezgan pārliecināts” ir tas, kā piezīme kāda tālrunī pārtop ilgstošā nesaskaņā. Tāpēc izveidojiet grupu abiem, izvēlieties vārdu, ar kādu vēlaties, lai partneris jūs redz, un nosūtiet viņam uzaicinājuma saiti vai QR kodu. Pievienojiet katras izmaksas, kad tās rodas, norādiet, kas maksāja un kā tas dalās, un ļaujiet grupai skaitīt. Katram atvaļinājumam veidojiet atsevišķu grupu (skatiet [grupu ceļojumi](page:use-case/group-trips)), lai lidojumi neiemaisītos pārtikas pirkumos."
+sections:
+  - heading: "50/50, pēc ienākumiem vai rēķins pēc rēķina"
+    body: "Nav universāli taisnīga sadalījuma, ir tikai tas, par ko abi vienojaties, vēlams pirms pirmā rēķina, nevis pēc pirmās nopūtas. Šie ir trīs parastie."
+    items:
+      - "**50/50.** Izvēlieties **Vienādi**, un katrs ir parādā pusi. Der kopīgām izmaksām, kad ienākumi ir tuvu viens otram, un nekāda aritmētika nav vajadzīga."
+      - "**Pēc ienākumiem.** Ja viens no jums pelna vairāk, sadaliet pēc katra daļas no kopējiem ienākumiem. Vispirms vienojieties, kas tiek skaitīts (parasta izvēle ir alga uz rokas), saskaitiet abu summas un sava ienākuma daļu izdaliet ar kopsummu. Ja viens no jums saņem trīs daļas pret otra divām, tas ir 3 ÷ (3 + 2) = 60%, tāpēc viens sedz 60% un otrs 40%. Noapaļojiet līdz veseliem procentiem un ievadiet tos sadaļā **Procenti**, kur tiem jāsakrīt ar 100. Algas ievadīšanai nav vietas, tāpēc jūs vienmēr ierakstāt tikai procentus."
+      - "**Rēķins pēc rēķina.** Katram izdevumam ir sava sadale, tāpēc varat jaukt: īri pēc ienākumiem, pārtikas pirkumus 50/50 un kopīgu dāvanu ar **Precīzas summas**, ja katrs izvēlējās, cik iemaksāt."
+      - "**Kad alga mainās,** izmantojiet jaunos procentus no nākamā izdevuma. Agrākie izdevumi saglabā sadali, ar kādu tie tika ievadīti. Lai redzētu aprēķinus ar īstām algas izrakstiem, lasiet [kā sadalīt rēķinus ar partneri, kurš pelna vairāk](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: "Mēneša kopsavilkums"
+    body: "Reizi mēnesī vai kad vien skaitļi sāk niezēt, atveriet grupu un pārbaudiet **Bilances**. Jums abiem katrā valūtā vienmēr ir tikai viens maksājums, no tā, kurš ir parādā, uz to, kuram pienākas. Ņemsim Sam un Alex mēnesi. Sam samaksāja 1 500 £ īri, un Alex 40% no tās ir 600 £. Alex samaksāja 90 £ par pārtikas pirkumiem, sadalītiem vienādi, tāpēc Sam puse ir 45 £. Side Badger vienu nosedz ar otru, 600 £ mīnus 45 £, un Alex maksā Sam 555 £. Samaksājiet, kā vēlaties, ar bankas pārskaitījumu, skaidrā naudā vai ar pakalpojumu, ko esat parādā, tad reģistrējiet to sadaļā **Norēķināties**, lai atlikums atkal kļūst nulle. Atkārtotu rēķinu nav, tāpēc nokopējiet pagājušā mēneša īri, nomainiet datumu un turpiniet. Side Badger nepārvieto naudu un nesūta atgādinājumus, tāpēc pamudināšana joprojām ir jūsu ziņā."
+  - heading: "Tikai jūs divi"
+    body: "Grupā diviem ir divi dalībnieki, un grupu var redzēt tikai tās dalībnieki. Partneris pievienojas ar uzaicinājuma saiti vai QR kodu. Saite var darboties no 15 minūtēm līdz 5 dienām, tāpēc izvēlieties īsāko, kas dod partnerim laiku to izmantot. Jaunas saites izveide neatceļ vecās, tāpēc neatstājiet tās tērzēšanā, kurā ir arī citi cilvēki. Ikviens, kas izmanto derīgu saiti, var pievienoties, tāpēc, ja vēlaties būt droši, ieslēdziet apstiprināšanu, un administrators katru cilvēku ielaiž. Partnerim vajadzīgs savs konts, kas ir bez maksas."
+exampleAfter: 2
+example:
+  heading: "Kurš šomēnes kam ir parādā"
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: "Īre"
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: "Pārtikas pirkumi"
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: "Funkcijas, ko izmanto pāris"
+faq:
+  heading: "Jautājumi"
+  items:
+    - q: "Vai varam vienreiz iestatīt 60/40 visam?"
+      a: "Nē. Sadale pieder katram izdevumam. Iestatiet procentus pirmajā, tad nākamreiz to nokopējiet un nomainiet to, kas atšķiras. [Izdevumu sadale](page:feature/split-expenses) aptver visus trīs sadales veidus."
+    - q: "Vai tas savienojas ar mūsu banku?"
+      a: "Nē. Side Badger nekad neskar jūsu naudu. Jūs samaksājat viens otram, kā vēlaties, tad to reģistrējat, kā skaidro [norēķināšanās](page:feature/settle-up)."
+    - q: "Vai kāds cits var redzēt mūsu grupu?"
+      a: "Tikai tās dalībnieki, un pāra grupā to ir divi. Ikviens, kas izmanto derīgu uzaicinājuma saiti, var pievienoties, tāpēc kopīgojiet to ar vienu cilvēku un iestatiet īsu derīguma termiņu."
+    - q: "Ko darīt, ja katrs samaksājām daļu no viena un tā paša rēķina?"
+      a: "Izdevumam ir viens maksātājs. Reģistrējiet divus izdevumus, vienu katram, un atlikums sanāk tāds pats."
+    - q: "Vai tas atgādinās partnerim samaksāt?"
+      a: "Nē. Atgādinājumu nav, tāpēc pamudināšana joprojām ir jūsu ziņā. Vismaz abi skatīsieties uz vienu un to pašu skaitli."
+    - q: "Kas notiek, kad pārtraucam dalīt izmaksas?"
+      a: "Nokārtojiet atlikumu un reģistrējiet maksājumu, lai neviens nav parādā. Tad administrators var bloķēt grupu, kas saglabā skaitļus, kādi tie ir, vai aizvērt to uz visiem laikiem, kas padara to nepieejamu visiem. Aizveriet to tikai tad, kad nevienam no jums vairs nevajag vēsturi."

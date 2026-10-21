@@ -1,0 +1,78 @@
+translatedFrom: "42f5cf35"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.read-by-googles-ai
+  - receipt-attachments.keep-the-receipt
+meta:
+  title: "Zeskanuj paragon, żeby dodać wydatek | Side Badger"
+  description: "Niech borsuk przeczyta paragon. Uzupełni sumę, datę i miejsce do sprawdzenia, bez kredytów na skany. Obraz czyta usługa AI Google."
+h1: "Zeskanuj paragon, sprawdź szczegóły, podziel"
+navLabel: "Skanowanie paragonów"
+lead: "Niech borsuk przeczyta paragon, a ty sprawdź mu zadanie domowe. Dodaj zdjęcie do nowego wydatku, a Side Badger uzupełni sumę, datę i miejsce do sprawdzenia. Potem [dzielisz go](page:feature/split-expenses) jak każdy inny wydatek. Skanowanie jest darmowe i nie ma żadnych kredytów na skany. Uzupełnia jeden wydatek i nie dzieli rachunku według pozycji. Obrazy paragonów odczytuje usługa AI Google."
+cta:
+  heading: "Pstryknij. Sprawdź. Podziel."
+  body: "Załóż darmowe konto, utwórz grupę i dodaj wydatek ze zdjęciem paragonu. Zobacz, co uzupełni, popraw to, co się nie zgadza, i zapisz, gdy wszystko będzie w porządku."
+problem:
+  heading: "Nikt nie chce przepisywać paragonu w kolejce na taksówkę"
+  body: "Wyjazdy i duże wieczory wiążą się z papierem. Kolacja, taksówka, kolejka drinków, która zamieniła się w sześć. Wpisywanie każdego do telefonu zmarzniętymi kciukami, z kolejką za plecami, to sposób, w jaki wydatki idą w zapomnienie. Dlatego Side Badger przeczyta paragon za ciebie. Robi pierwszy szkic, a ty sprawdzasz. Pasuje do [wyjazdów grupowych](page:use-case/group-trips) i [wydarzeń i uroczystości](page:use-case/events-and-celebrations), gdzie paragony piętrzą się szybciej, niż ktokolwiek chce się nimi zajmować."
+workflow:
+  heading: "Od zdjęcia do wydatku w trzech krokach"
+  steps:
+    - title: "Dodaj paragon do nowego wydatku"
+      body: "Zacznij nowy wydatek i stuknij **Zeskanuj paragon** albo użyj szybkiej akcji **Zeskanuj paragon** w swoim panelu. Zrób zdjęcie albo wybierz to, które już masz. Działa też **Dodaj paragon lub załącznik** w formularzu."
+    - title: "Niech przeczyta paragon"
+      body: "Formularz pokazuje **Analizowanie paragonu...**, gdy AI w Side Badger czyta obraz. Potem uzupełnia to, co znalazło, na przykład opis, sumę, walutę, datę, godzinę i miejsce. To, co już wpisano, zostaje nietknięte."
+      shot: S09
+      shotAlt: "Formularz nowego wydatku z napisem Analizowanie paragonu..., a potem ten sam formularz z uzupełnionymi szczegółami"
+    - title: "Sprawdź, potem podziel"
+      body: "Porównaj formularz z papierem. Popraw to, co się nie zgadza, powiedz, kto zapłacił i kto dzielił koszt, wybierz sposób podziału i zapisz. Wydatek nie istnieje, dopóki tego nie zrobisz. O samym dzieleniu mówi [dzielenie wydatków](page:feature/split-expenses)."
+options:
+  heading: "Opcje"
+  items: []
+sections:
+  - heading: "Co uzupełnia"
+    body: "Dodaj obraz paragonu do nowego wydatku, a te pola mogą się uzupełnić. To, kto zapłacił, kto dzielił koszt i jak go podzielić, nadal zależy od ciebie."
+    items:
+      - "**Opis** wydatku."
+      - "**Suma**."
+      - "**Waluta**, jeśli twoja grupa na to pozwala."
+      - "**Data** i **godzina**."
+      - "**Miejsce**."
+      - "Tekstowa kopia paragonu w **notatkach**, na wypadek gdy papierowy wyblaknie albo przejdzie przez pralkę."
+  - heading: "Co nadal sprawdzasz"
+    body: "Wszystko. Traktuj to, co uzupełni, jak szkic. Porównaj sumę z papierem, a potem walutę, datę i miejsce. Nieostre zdjęcia i pognieciony papier mogą zmylić każdego czytającego, a my nie obiecujemy, że poprawnie odczyta każdy paragon, więc spójrz, zanim zapiszesz. Jeśli coś się nie zgadza, nadpisz to. Jeśli paragon jest w jenach, a grupa rozlicza się w funtach, co dalej, wyjaśnia [wiele walut](page:feature/multiple-currencies)."
+  - heading: "Zachowaj paragon przy wydatku"
+    body: "Zeskanowany czy nie, paragon może zostać przy wydatku. Załączaj zdjęcia albo pliki PDF, do trzech na wydatek i do 10 MB każdy. Członkowie grupy widzą je przy wydatku. Obrazy pokazują się jako miniatury otwierające podgląd, a pliki PDF otwierają się jako linki. Zeskanowane zdjęcie też zostaje załączone, chyba że usuniesz je przed zapisem. Gdy ktoś zapyta, ile naprawdę kosztowała ta kolacja, dowód jest tuż obok."
+  - heading: "Dokąd trafia twój paragon"
+    body: "Obrazy paragonów odczytuje usługa AI Google. Żeby uzupełnić formularz, obraz czyta Google Vertex AI (Gemini) w wieloregionie Google w USA. Dodaj obraz do nowego wydatku, a zostanie odczytany. Plik PDF albo zdjęcie dodane do już istniejącego wydatku jest przechowywane bez odczytu. Załączone paragony są widoczne dla członków grupy, więc jeśli paragon pokazuje coś, czym wolisz się nie dzielić, pomiń zdjęcie i wpisz ten wydatek ręcznie."
+limits:
+  heading: "Limity"
+  items:
+    - "Tylko obrazy. JPEG, PNG i WebP oraz HEIC po konwersji. Pliki PDF można załączyć do wydatku, ale nie są odczytywane."
+    - "Skanowanie dotyczy tylko nowych wydatków. Przy istniejącym wydatku możesz załączać paragony, ale nic nie jest odczytywane."
+    - "Uzupełnia tylko pola, których jeszcze nie ruszono, a walutę tylko wtedy, gdy twoja grupa na to pozwala."
+    - "Nie dzieli według pozycji ani nie przypisuje pozycji z paragonu osobom. Uzupełnia jeden wydatek, a ty dzielisz go jak zwykle."
+    - "Nie ma obietnicy, że to, co uzupełni, jest poprawne, ani że skanowanie zadziała za każdym razem. Sprawdź przed zapisem, a jeśli skanowanie zawiedzie albo będzie niedostępne, dodaj wydatek ręcznie."
+    - "Wydatek może mieć do trzech załączników, każdy do 10 MB, w formacie JPEG, PNG, WebP, HEIC lub PDF."
+    - "Obrazy paragonów czyta Google Vertex AI (Gemini) w wieloregionie Google w USA, a załączone paragony są widoczne dla członków grupy."
+useCasesHeading: "Gdzie piętrzą się paragony"
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Czy potrafi podzielić paragon według pozycji?"
+      a: "Nie. Uzupełnia wydatek, w tym sumę, a ty dzielisz go po równo, według dokładnych kwot albo procentowo. Przy rachunku, w którym każdy zamówił co innego, wpisz, ile jest winna każda osoba, jako dokładne kwoty. Szczegóły są w [dzieleniu wydatków](page:feature/split-expenses)."
+    - q: "Czy potrafi odczytać plik PDF?"
+      a: "Nie. Plik PDF możesz załączyć do wydatku, żeby podróżował razem z liczbami, ale odczytywane są tylko obrazy."
+    - q: "Czy jest limit skanów?"
+      a: "Nie ma kredytów na skany, które mogłyby się skończyć, a skanowanie jest darmowe. Pliki mają jednak limity: do trzech załączników na wydatek i do 10 MB każdy. Resztę znajdziesz w [co obejmuje darmowy plan](page:pricing)."
+    - q: "Kto widzi mój paragon?"
+      a: "Członkowie grupy widzą paragony załączone do wydatku. Obrazy paragonów odczytuje też usługa AI Google, dzięki czemu formularz się uzupełnia."
+    - q: "Czy mogę zeskanować paragon do już dodanego wydatku?"
+      a: "Nie, skanowanie dotyczy nowych wydatków. Nadal możesz załączyć paragon do istniejącego wydatku, a zostanie on zapisany bez odczytu."
+    - q: "Co, jeśli uzupełni coś źle?"
+      a: "Nadpisz to. Każde pole można edytować do zapisu, a i tak warto sprawdzić wszystkie. Jeśli skanowanie zawiedzie albo będzie niedostępne, dodaj wydatek ręcznie, jak zawsze."

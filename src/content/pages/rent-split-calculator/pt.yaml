@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Calculadora da renda: por quarto ou por rendimento | Side Badger"
+  description: "Quarto maior, parte maior? Descobre o que paga cada colega de casa, pelo tamanho do quarto ou pelo rendimento. Corre no navegador: nada é guardado nem enviado."
+h1: "Calculadora para dividir a renda"
+navLabel: "Calculadora da renda"
+lead: "Quarto maior, parte maior? Escreve a renda e vê o que cada pessoa paga, pelo tamanho do quarto ou pelo rendimento, ao cêntimo. Corre no teu navegador, não guarda nada e não movimenta dinheiro. Quando a casa quiser a conta guardada, [divide as despesas](page:feature/split-expenses) no Side Badger e copia a renda todos os meses."
+cta:
+  heading: "Define as percentagens uma vez. Copia-as para sempre."
+  body: "Esta calculadora esquece tudo quando fechas o separador, tal como o colega que tem a certeza de que pagou a internet. Um grupo do Side Badger guarda a renda, as contas e quem pagou o quê. É grátis, sem anúncios e sem limites diários."
+sections:
+  - heading: "Duas formas de dividir a renda"
+    items:
+      - "**Por tamanho do quarto.** Parte da renda paga a cozinha, a casa de banho e a sala, que todos usam. Tu escolhes essa parte (40% para começar) e ela é dividida em partes iguais. O resto vai pela área dos quartos, para o quarto grande pagar mais e o quartinho ter o desconto que merece."
+      - "**Por rendimento.** Cada pessoa paga da renda uma fatia igual à fatia que ganha do total. Se juntares contas partilhadas, elas seguem as mesmas partes."
+  - heading: "Como funcionam as contas"
+    body: "Cada pessoa recebe primeiro uma parte exata e depois uma percentagem inteira, porque os números inteiros são mais fáceis de escrever e de discutir. O arredondamento usa o método do maior resto: cada pessoa fica com o número inteiro abaixo da sua parte, e os pontos que sobram vão para quem perdeu mais. As percentagens somam sempre 100. No apartamento abaixo, os 40% partilhados dão 13,33% a cada um. O quarto da Priya tem 16 dos 38 m² do apartamento, por isso 60% × 16/38 dá 25,26%, e com os 13,33% fica em 38,6%, que arredonda para 39%. O Tom e a Aisha ficam com 32% e 29%, e 39 + 32 + 29 dá 100. Cada valor é essa percentagem da renda: 39% de 1 950 £ são 760,50 £."
+  - heading: "Depois, escreve-o no Side Badger"
+    body: "Para a história toda, fita métrica incluída, vê [como dividir a renda pelo tamanho dos quartos](page:guide/how-to-split-rent-by-room-size), ou [quando um dos dois ganha mais](page:guide/how-to-split-bills-with-a-partner-who-earns-more) para casais."
+    items:
+      - "**Adiciona a renda.** No teu grupo, escolhe **Adicionar despesa**, indica em **Quem pagou?** quem pagou ao senhorio e deixa toda a gente em **Dividir entre**."
+      - "**Escolhe Percentagem.** Em **Como dividir**, escolhe **Percentagem** e escreve as percentagens inteiras. O formulário avisa-te se não somarem 100."
+      - "**Copia-a no mês seguinte.** Abre a renda do mês passado e escolhe **Copiar despesa**. A divisão vai com ela."
+  - heading: "O que a calculadora não faz"
+    items:
+      - "**Medir os teus quartos.** A área é um ponto de partida. Um quarto com casa de banho própria vale mais do que a mesma área sem ela, e um quartinho onde cabem uma cama e uma cadeira esperançosa vale menos."
+      - "**Decidir o que conta como rendimento.** Líquido ou bruto, ordenado ou biscates: o grupo decide. Usa o mesmo período para todos."
+      - "**Guardar seja o que for.** Fecha o separador e os valores desaparecem. Para os manteres, copia o link. Ele guarda os teus valores depois do #, que os navegadores nunca enviam a um servidor, e quem o tiver pode lê-los."
+      - "**Movimentar dinheiro.** Pagas ao senhorio como preferires."
+      - "**Misturar moedas ou ir além dos limites.** Escolhe uma só moeda. Aceita de 2 a 10 pessoas e uma renda até 999 999,99, como na app."
+exampleAfter: 2
+example:
+  heading: "Um apartamento, um mês"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "renda"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "conta da luz"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "internet"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Perguntas"
+  items:
+    - q: "O que é mais justo, o tamanho do quarto ou o rendimento?"
+      a: "Nenhum é sempre o mais justo. O tamanho do quarto serve para colegas de casa que pagam pelo espaço onde dormem. O rendimento serve para casais e amigos com salários muito diferentes. Combinem antes do primeiro dia de renda, e não depois."
+    - q: "As contas devem ser divididas da mesma maneira?"
+      a: "Entre colegas de casa, normalmente não. Todos usam a eletricidade e a internet, por isso partes iguais é mais simples, como no exemplo. Por rendimento, a calculadora dá às contas as mesmas partes da renda."
+    - q: "Posso usar pés quadrados?"
+      a: "Sim. Escolhe ft² e escreve as áreas em pés quadrados. A unidade é só uma etiqueta, e as partes saem iguais desde que todos usem a mesma."
+    - q: "A calculadora é grátis?"
+      a: "Sim. Grátis. Sem anúncios. Sem limites diários. Também não precisas de uma conta."

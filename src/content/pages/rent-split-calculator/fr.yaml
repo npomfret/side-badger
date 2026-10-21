@@ -1,0 +1,87 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Calculateur de partage du loyer : chambre ou revenu | Side Badger"
+  description: "Grande chambre, grosse part ? Calculez ce que paie chaque colocataire, selon la taille de la chambre ou le revenu. Rien n'est enregistré ni envoyé."
+h1: "Calculateur de partage du loyer"
+navLabel: "Calculateur de loyer"
+lead: "Grande chambre, grosse part ? Saisissez le loyer et voyez ce que paie chaque personne, selon la taille de la chambre ou le revenu, au centime près. Il tourne dans votre navigateur, n'enregistre rien et ne fait circuler aucun argent. Quand le logement veut que le compte soit tenu, [partagez les dépenses](page:feature/split-expenses) dans Side Badger et copiez le loyer chaque mois."
+cta:
+  heading: "Fixez les pourcentages une fois. Copiez-les pour toujours."
+  body: "Ce calculateur oublie tout dès que vous fermez l'onglet, un peu comme le colocataire qui avait « forcément » payé la box internet. Un groupe Side Badger garde le loyer, les factures et qui a payé quoi. C'est gratuit, sans publicité et sans limite quotidienne."
+sections:
+  - heading: "Deux façons de partager le loyer"
+    items:
+      - "**Selon la taille de la chambre.** Une partie du loyer paie la cuisine, la salle de bains et le salon, que tout le monde utilise. Vous choisissez cette part (40 % pour commencer) et elle est répartie à parts égales. Le reste suit la surface des chambres : la grande chambre paie plus, et le cagibi a droit à la remise qu'il a méritée."
+      - "**Selon le revenu.** Chacun paie une part du loyer égale à sa part dans le total des revenus. Ajoutez des factures communes et elles suivent les mêmes parts."
+  - heading: "Comment les calculs fonctionnent"
+    body: "Chaque personne obtient une part exacte, puis un pourcentage entier, parce que les nombres entiers se saisissent et se discutent plus facilement. L'arrondi suit la méthode du plus fort reste : chacun garde l'entier situé juste en dessous de sa part, et les points restants vont à ceux qui ont le plus perdu. Les pourcentages totalisent toujours 100. Dans l'appartement ci-dessous, les 40 % communs font 13,33 % chacun. La chambre de Priya fait 16 des 38 m² de l'appartement, donc 60 % × 16/38 font 25,26 %, auxquels s'ajoutent 13,33 %, soit 38,6 %, arrondis à 39 %. Tom et Aisha arrivent à 32 % et 29 %, et 39 + 32 + 29 font 100. Chaque montant est ce pourcentage du loyer : 39 % de 1 950 £ font 760,50 £."
+  - heading: "Saisissez-le ensuite dans Side Badger"
+    body: "Pour l'histoire complète, mètre ruban compris, voyez [comment partager le loyer selon la taille des chambres](page:guide/how-to-split-rent-by-room-size), ou [quand l'un des deux gagne plus](page:guide/how-to-split-bills-with-a-partner-who-earns-more) pour les couples."
+    items:
+      - "**Ajoutez le loyer.** Dans votre groupe, choisissez **Ajouter Dépense**, indiquez qui a payé le propriétaire sous **Qui a payé ?** et gardez tout le monde sous **Divisé entre**."
+      - "**Choisissez Pourcentage.** Sous **Comment diviser**, choisissez **Pourcentage** et saisissez les pourcentages entiers. Le formulaire le signale s'ils ne font pas 100 au total."
+      - "**Copiez-le le mois prochain.** Ouvrez le loyer du mois dernier et choisissez **Copier dépense**. Le partage suit."
+  - heading: "Ce que le calculateur ne fait pas"
+    items:
+      - "**Mesurer vos chambres.** La surface n'est qu'un point de départ. Une chambre avec salle de bains privative vaut plus que la même surface sans, et un cagibi où tiennent un lit et une chaise optimiste vaut moins."
+      - "**Décider de ce qui compte comme revenu.** Net ou brut, salaire ou activité à côté : c'est le groupe qui décide. Utilisez la même période pour tout le monde."
+      - "**Enregistrer quoi que ce soit.** Fermez l'onglet et les chiffres disparaissent. Pour les garder, copiez le lien. Il contient vos chiffres après le #, que les navigateurs n'envoient jamais à un serveur, et toute personne qui l'a peut les lire."
+      - "**Faire circuler l'argent.** Vous payez le propriétaire comme vous voulez."
+      - "**Mélanger les devises ou dépasser les limites.** Choisissez une seule devise. Il accepte de 2 à 10 personnes et un loyer jusqu'à 999 999,99, comme dans l'appli."
+exampleAfter: 2
+example:
+  heading: "Un appartement, un mois"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "le loyer"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "la facture d'énergie"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "la box internet"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: Questions
+  items:
+    - q: "Qu'est-ce qui est plus équitable, la taille de la chambre ou le revenu ?"
+      a: "Aucun des deux n'est toujours plus équitable. La taille de la chambre convient à des colocataires qui paient l'espace où ils dorment. Le revenu convient aux couples et aux amis dont les salaires sont très différents. Mettez-vous d'accord avant le premier jour de loyer, pas après."
+    - q: "Faut-il partager les factures de la même façon ?"
+      a: "Entre colocataires, en général non. Tout le monde utilise l'énergie et la box, donc à parts égales, c'est plus simple, comme dans l'exemple. Selon le revenu, le calculateur donne aux factures les mêmes parts qu'au loyer."
+    - q: "Puis-je utiliser les pieds carrés ?"
+      a: "Oui. Choisissez ft² et saisissez vos surfaces en pieds carrés. L'unité n'est qu'une étiquette, et les parts sont les mêmes tant que tout le monde en utilise une seule."
+    - q: "Le calculateur est-il gratuit ?"
+      a: "Oui. Gratuit. Sans publicité. Sans limite quotidienne. Il ne faut pas de compte non plus."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - faq.heading

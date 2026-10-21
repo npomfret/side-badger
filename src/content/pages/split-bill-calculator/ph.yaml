@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Calculator sa paghahati ng bill: ayos na ang utang | Side Badger"
+  description: "Sino ang may utang kanino, ayos sa ilang segundo. Pantay, eksakto, o porsyento ang hati. Libre, nasa browser mo, at walang sine-save o ipinapadala."
+h1: Calculator sa paghahati ng bill
+navLabel: Calculator sa paghahati ng bill
+lead: "Ilagay kung sino ang nagbayad ng ano at sasabihin ng calculator kung sino ang may utang kanino, kasama ang maikling listahan ng mga bayad para ma-settle ito. Tumatakbo ito sa browser mo, walang sine-save, at hindi naglilipat ng pera. Kung kailangang manatili ang bilang ng grupo mo kahit nakasara na ang tab, ginagawa rin ng [paghahati ng gastos](page:feature/split-expenses) at [settle up](page:feature/settle-up) sa Side Badger ang parehong kuwenta at iniingatan ang mga ito."
+cta:
+  heading: Gusto mo ang kuwenta? Itago mo na.
+  body: "Nakakalimutan ng calculator na ito ang lahat kapag isinara mo ang tab, gaya ng taong sigurado raw na nagbayad noong nakaraan. Iniingatan ng isang grupo sa Side Badger ang mga gastos, ina-update ang balanse ng lahat, at itinatala ang mga bayad. Libre ito, walang ad at walang pang-araw-araw na limitasyon."
+sections:
+  - heading: Paano gumagana ang kuwenta
+    body: "Sa bawat gastos, kinukuwenta ng calculator ang bahagi ng bawat tao. Puwede mo itong hatiin nang pantay, ayon sa eksaktong halaga, o ayon sa porsyento, sa mga taong pipiliin mo. Ang balanse ng bawat tao ay ang ibinayad niya bawas ang utang niya. Ang plus sign ay nangangahulugang may utang sa kanya ang grupo, at ang minus sign ay nangangahulugang may utang siya sa grupo. Laging zero ang kabuuan ng mga balanse, dahil kung may sisingilin ang isa, may utang ang iba."
+  - heading: Bakit maikli ang listahan ng mga bayad
+    body: "Hindi kailangang i-settle ang bawat resibo nang isa-isa. Kapag alam na ang bawat balanse, itinutugma ng calculator ang taong pinakamalaki ang utang sa taong pinakamalaki ang sisingilin, nagse-settle ng pinakamalaking halagang kaya ng isang bayad, at itinutuloy ito pababa sa listahan hanggang zero na ang lahat. Hindi ito kailanman lalampas sa bilang ng mga taong may balanse, bawas isa, at madalas ay mas kaunti pa ito kaysa sa pagbabayad ng bawat bill nang isa-isa. Maikling listahan ng mga bayad ang ibinibigay nito, at hindi nito ipinapangakong ito na ang pinakamaikling posible."
+  - heading: Ang hindi ginagawa ng calculator
+    items:
+      - "**Mag-asikaso ng higit sa isang pera.** Pumili ng isa at gamitin ito sa buong kalkulasyon. Nagtatabi ang app ng hiwalay na balanse para sa bawat pera, at puwede nitong i-convert ang gastos sa kasalukuyang exchange rate, na mababago mo."
+      - "**Mag-save ng anuman.** Isara ang tab at wala na ang mga numero. Para itago ang mga ito, kopyahin ang link. Nasa link ang mga numero mo pagkatapos ng #, na hindi kailanman ipinapadala ng browser mo sa server, at mababasa ito ng sinumang padadalhan mo."
+      - "**Maglipat ng pera.** Sinasabi lang nito kung sino ang dapat magbayad kanino. Magbayaran kayo sa paraang gusto ninyo, saka itala ang bayad sa app kung doon nagtatabi ng bilang ang grupo ninyo."
+      - "**Pumili ng sobrang sentimo nang random.** Kapag hindi eksaktong mahahati ang bill, napupunta ang natitirang sentimo sa mga unang tao sa listahan, para tumama pa rin ang kabuuan. Sa app, napupunta sa isang tao nang random ang sobrang sentimo, kaya hindi ito laging iisang tao."
+      - "**Lampasan ang mga limitasyon.** Tumatanggap ang calculator ng 2 hanggang 20 tao, at hanggang 999,999.99 ang isang gastos, gaya sa app."
+exampleAfter: 2
+example:
+  heading: Isang mahabang weekend, apat na magkakaibigan
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: cottage
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: grocery
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: taxi
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: pub
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: Mga tanong
+  items:
+    - q: Libre ba ang calculator?
+      a: Oo. Libre. Walang ad. Walang pang-araw-araw na limitasyon. Hindi mo rin kailangan ng account.
+    - q: Sine-save ba nito ang tina-type ko?
+      a: Hindi. Walang sine-save o ipinapadala saanman. Para itago ang mga numero mo, gamitin ang Kopyahin ang link at i-save ang link kung saan mo gusto.
+    - q: Sino ang makakakita sa link na kinopya ko?
+      a: "Sinumang may hawak nito. Nasa mismong link ang mga numero, pagkatapos ng #, kaya ibahagi lang ito sa mga taong dapat makakita."
+    - q: Naglilipat ba ito ng pera?
+      a: Hindi. Kinukuwenta nito kung sino ang dapat magbayad kanino, at magbayaran kayo sa paraang gusto ninyo. Hindi rin kailanman ginagalaw ng Side Badger ang pera mo. Tingnan ang [settle up](page:feature/settle-up).
+    - q: Puwede bang hatiin ang biyaheng binayaran sa dalawang pera?
+      a: Hindi dito, dahil iisang pera ang isang kalkulasyon. Sa grupo, may sariling balanse ang bawat pera. Tingnan ang [maraming pera](page:feature/multiple-currencies).
+    - q: Paano kung hindi tumugma ang mga halaga?
+      a: Sasabihin ito ng calculator sa ilalim ng gastos at hindi ito magpapakita ng resulta hangga't hindi tumutugma ang mga halaga. Dapat umabot sa kabuuan ang mga eksaktong halaga, at dapat umabot sa 100 ang mga porsyento.

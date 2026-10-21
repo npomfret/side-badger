@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+meta:
+  title: "Divide as contas a dois, 50/50 ou por rendimento | Side Badger"
+  description: "Partilha os custos aborrecidos sem transformar o jantar a dois numa reunião trimestral de finanças. Divide 50/50, por rendimento ou conta a conta. Grátis."
+h1: "Partilha os custos a dois, com justiça"
+navLabel: "Casais"
+lead: "Partilha os custos aborrecidos sem transformar o jantar a dois numa reunião trimestral de finanças. O Side Badger mantém uma só conta corrente da renda, das contas e das compras para **casais** que partilham uma casa, um sofá e uma vaga memória de quem pagou a internet. Divide 50/50, por rendimento ou conta a conta, e vê quem deve a quem."
+cta:
+  heading: "Começa um grupo para dois"
+  body: "Cria uma conta, faz um grupo e envia o link de convite à tua cara-metade. O take-away desta noite pode ser a primeira despesa."
+scenario:
+  heading: "Justo não tem de ser 50/50"
+  body: "Sam e Alex partilham uma casa. Sam ganha mais, por isso combinaram que Sam fica com 60% da renda e Alex com 40%. Sam paga ao senhorio, Alex faz as compras, e os dois têm quase a certeza de que tudo acaba por se compensar. Ter quase a certeza é assim que uma nota no telemóvel de alguém se transforma num desacordo permanente. Por isso faz um grupo para os dois, escolhe o nome com que queres que a tua cara-metade te veja e envia-lhe o link de convite ou o código QR. Adiciona cada custo quando acontece, diz quem pagou e como se divide, e deixa o grupo fazer a conta. Faz um grupo à parte para cada viagem de férias (vê [viagens em grupo](page:use-case/group-trips)), para os voos ficarem fora das compras."
+sections:
+  - heading: "50/50, por rendimento ou conta a conta"
+    body: "Não existe uma divisão justa universal, só aquela com que ambos concordam, de preferência antes da primeira conta e não depois do primeiro suspiro. Estas são as três do costume."
+    items:
+      - "**50/50.** Escolhe **Igual** e cada um de vocês deve metade. Serve para custos partilhados quando os vossos rendimentos são parecidos, e não precisa de aritmética nenhuma."
+      - "**Por rendimento.** Se um de vocês ganha mais, dividam pela parte de cada um no dinheiro que entra. Combinem primeiro o que conta (o salário líquido é a escolha habitual), somem os dois valores e dividam o de cada um pelo total. Se um de vocês leva para casa três partes e o outro duas, são 3 ÷ (3 + 2) = 60%, por isso um cobre 60% e o outro 40%. Arredondem para percentagens inteiras e introduzam-nas em **Percentagem**, onde têm de somar 100. Não há onde introduzir o salário, por isso só escrevem as percentagens."
+      - "**Conta a conta.** Cada despesa tem a sua própria divisão, por isso podem misturar: a renda por rendimento, as compras 50/50 e um presente conjunto por **Valores exatos**, se cada um escolheu quanto pôr."
+      - "**Quando os salários mudam,** usem as novas percentagens a partir da despesa seguinte. As despesas anteriores mantêm a divisão com que foram introduzidas. Para ver as contas feitas com recibos de vencimento a sério, leiam [como dividir contas com a cara-metade que ganha mais](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: "O ponto de situação mensal"
+    body: "Uma vez por mês, ou sempre que os números começarem a comichar, abre o grupo e vê os **Saldos**. Com vocês os dois, só há sempre um pagamento em cada moeda, de quem deve para quem tem a receber. Vejamos o mês de Sam e Alex. Sam pagou a renda de 1 500 £, e os 40% de Alex são 600 £. Alex pagou 90 £ de compras, divididas em partes iguais, por isso a metade de Sam são 45 £. O Side Badger compensa uma com a outra, 600 £ menos 45 £, e Alex paga 555 £ a Sam. Paguem-se como preferirem, por transferência bancária, em dinheiro ou com um favor que fica a dever, e depois registem em **Acertar contas** para o saldo voltar a zero. Não há contas recorrentes, por isso copiem a renda do mês passado, mudem a data e sigam em frente. O Side Badger não movimenta o dinheiro nem envia lembretes, por isso o empurrãozinho continua a ser vosso."
+  - heading: "Só vocês os dois"
+    body: "Um grupo de dois tem dois membros, e só os membros de um grupo o podem ver. A tua cara-metade entra com o link de convite ou o código QR. Um link pode durar entre 15 minutos e 5 dias, por isso escolhe o mais curto que dê tempo à outra pessoa para o usar. Criar um novo link não cancela os antigos, por isso não os deixes numa conversa que inclua outras pessoas. Quem usar um link ativo pode entrar, por isso, se quiseres ter a certeza, ativa a aprovação e um administrador deixa entrar cada pessoa. Essa pessoa precisa de uma conta própria, que é grátis."
+exampleAfter: 2
+example:
+  heading: "Quem deve a quem este mês"
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: "Renda"
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: "Compras"
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: "As funcionalidades que um casal usa"
+faq:
+  heading: "Perguntas"
+  items:
+    - q: "Podemos definir 60/40 uma vez para tudo?"
+      a: "Não. A divisão pertence a cada despesa. Define as percentagens na primeira, depois copia-a da próxima vez e altera o que for diferente. [Dividir despesas](page:feature/split-expenses) explica as três formas de dividir."
+    - q: "Liga-se ao nosso banco?"
+      a: "Não. O Side Badger nunca toca no vosso dinheiro. Paguem-se como preferirem e depois registem, como explica [acertar contas](page:feature/settle-up)."
+    - q: "Mais alguém pode ver o nosso grupo?"
+      a: "Só os membros, e o grupo de um casal tem dois. Quem usar um link de convite ativo pode entrar, por isso partilha-o com uma só pessoa e dá-lhe um prazo curto."
+    - q: "E se cada um pagou parte da mesma conta?"
+      a: "Uma despesa tem um só pagador. Registem duas despesas, uma para cada um, e o saldo sai igual."
+    - q: "Vai lembrar a minha cara-metade de pagar?"
+      a: "Não. Não há lembretes, por isso o empurrãozinho continua a ser vosso. Pelo menos os dois vão olhar para o mesmo número."
+    - q: "O que acontece quando deixamos de partilhar custos?"
+      a: "Acertem o saldo e registem o pagamento, para ninguém dever nada. Depois um administrador pode bloquear o grupo, o que mantém os números como estão, ou fechá-lo de vez, o que o torna inacessível para todos. Fechem-no só quando nenhum dos dois precisar do histórico."

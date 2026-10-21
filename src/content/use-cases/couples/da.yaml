@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+meta:
+  title: Del regninger som par, 50/50 eller efter indkomst | Side Badger
+  description: Del de kedelige udgifter uden at gøre date night til et kvartalsvist økonomimøde. Del 50/50, efter indkomst eller regning for regning. Gratis.
+h1: Del udgifter som par, retfærdigt
+navLabel: Par
+lead: Del de kedelige udgifter uden at gøre date night til et kvartalsvist økonomimøde. Side Badger fører ét løbende regnskab over huslejen, regningerne og indkøbene for **par**, der deler et hjem, en sofa og en vag erindring om, hvem der betalte for bredbåndet. Del 50/50, efter indkomst eller regning for regning, og se, hvem der skylder hvem.
+cta:
+  heading: Start en gruppe for to
+  body: Opret en konto, lav en gruppe, og send din partner invitationslinket. Aftenens takeaway kan være den første udgift.
+scenario:
+  heading: Retfærdigt behøver ikke betyde 50/50
+  body: Sam og Alex deler et hjem. Sam tjener mere, så de har aftalt, at Sam står for 60 % af huslejen og Alex for 40 %. Sam betaler udlejeren, Alex klarer indkøbet, og begge er ret sikre på, at det går lige op. »Ret sikre« er sådan, et notat på en telefon bliver til en evig uenighed. Så lav en gruppe til jer to, vælg det navn, du vil have din partner til at se, og send vedkommende invitationslinket eller QR-koden. Tilføj hver udgift, når den sker, sig, hvem der betalte, og hvordan den deles, og lad gruppen føre regnskabet. Lav en separat gruppe til hver ferie (se [gruppeture](page:use-case/group-trips)), så flybillettene holdes ude af dagligvarerne.
+sections:
+  - heading: 50/50, efter indkomst eller regning for regning
+    body: Der findes ingen universelt retfærdig deling, kun den, I begge er enige om, helst før den første regning og ikke efter det første suk. Her er de tre almindelige.
+    items:
+      - "**50/50.** Vælg **Ligeligt**, og hver af jer skylder halvdelen. Det passer til fælles udgifter, når jeres indkomster er tæt på hinanden, og det kræver slet ingen regning."
+      - "**Efter indkomst.** Hvis den ene af jer tjener mere, så del efter hver persons andel af de penge, der kommer ind. Aftal først, hvad der tæller (løn efter skat er det almindelige valg), læg de to sammen, og divider din med totalen. Hvis den ene af jer tager tre dele hjem mod den andens to, er det 3 ÷ (3 + 2) = 60 %, så den ene dækker 60 % og den anden 40 %. Rund af til hele procenter, og indtast dem under **Procent**, hvor de skal give 100 i alt. Der er ingen steder at indtaste din løn, så du indtaster kun procenterne."
+      - "**Regning for regning.** Hver udgift har sin egen deling, så I kan blande: husleje efter indkomst, dagligvarer 50/50 og en fælles gave med **Præcise beløb**, hvis I hver valgte, hvad I ville give."
+      - "**Når lønnen ændrer sig,** brug de nye procenter fra den næste udgift. Tidligere udgifter beholder den deling, de blev indtastet med. Regnestykkerne med rigtige lønsedler kan du se i [sådan deler du regninger med en partner, der tjener mere](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: Den månedlige opsamling
+    body: Én gang om måneden, eller når tallene begynder at klø, så åbn gruppen, og tjek **Saldi**. Med to af jer er der aldrig mere end én betaling i hver valuta, fra den, der skylder, til den, der er til gode. Tag Sams og Alex' måned. Sam betalte huslejen på 1.500 £, og Alex' 40 % af den er 600 £. Alex betalte 90 £ for dagligvarer, delt ligeligt, så Sams halvdel er 45 £. Side Badger stiller det ene op mod det andet, 600 £ minus 45 £, og Alex betaler Sam 555 £. Betal, som I vil, med bankoverførsel, kontanter eller en tjeneste, man skylder, og registrer det så under **Afregn**, så saldoen går tilbage til nul. Der er ingen tilbagevendende regninger, så kopiér sidste måneds husleje, ændr datoen, og kør videre. Side Badger flytter ikke pengene og sender ingen påmindelser, så det er stadig dig, der skal puffe.
+  - heading: Bare jer to
+    body: En gruppe på to har to medlemmer, og kun gruppens medlemmer kan se den. Din partner deltager med invitationslinket eller QR-koden. Et link kan gælde fra 15 minutter til 5 dage, så vælg det korteste, der giver din partner tid til at bruge det. Et nyt link annullerer ikke de gamle, så lad dem ikke ligge i en chat, hvor der er andre med. Alle med et gyldigt link kan deltage, så hvis du vil være helt sikker, så slå godkendelse til, og en administrator lukker hver person ind. Din partner skal have en konto for sig selv, og den er gratis.
+exampleAfter: 2
+example:
+  heading: Hvem skylder hvem denne måned
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: Husleje
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: Dagligvarer
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: De funktioner, et par bruger
+faq:
+  heading: Spørgsmål
+  items:
+    - q: Kan vi sætte 60/40 én gang for alt?
+      a: Nej. Delingen hører til hver udgift. Sæt procenterne på den første, og kopiér den så næste gang, og ret det, der er anderledes. [Del udgifter](page:feature/split-expenses) gennemgår alle tre måder at dele på.
+    - q: Er den koblet til vores bank?
+      a: Nej. Side Badger rører aldrig jeres penge. I betaler hinanden, som I vil, og registrerer det så, som [gør op](page:feature/settle-up) forklarer.
+    - q: Kan andre se vores gruppe?
+      a: Kun dens medlemmer, og et pars gruppe har to. Alle med et gyldigt invitationslink kan deltage, så del det med én person, og giv det en kort udløbstid.
+    - q: Hvad hvis vi hver betalte en del af den samme regning?
+      a: En udgift har én betaler. Registrer to udgifter, én for hver af jer, så bliver saldoen den samme.
+    - q: Minder den min partner om at betale?
+      a: Nej. Der er ingen påmindelser, så det er stadig dig, der skal puffe. I kigger i det mindste begge på det samme tal.
+    - q: Hvad sker der, når vi holder op med at dele udgifter?
+      a: Gør saldoen op, og registrer betalingen, så ingen skylder noget. Så kan en administrator låse gruppen, hvilket beholder tallene, som de er, eller lukke den for altid, hvilket gør den utilgængelig for alle. Luk den kun, når ingen af jer har brug for historikken.

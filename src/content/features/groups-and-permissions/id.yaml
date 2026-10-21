@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Admin grup dan izin untuk pengeluaran bersama | Side Badger"
+  description: "Undang lewat tautan atau kode QR, setujui anggota, buat pengamat, atur izin, dan kunci grup saat selesai. Grup Anda, aturan Anda, dalam batas wajar."
+h1: "Admin grup dan izin: aturan Anda, dalam batas wajar"
+navLabel: "Grup dan izin"
+lead: "Sebagian grup butuh bendahara. Side Badger punya pengaturan untuk itu. Undang orang dengan tautan atau kode QR, tentukan siapa yang boleh masuk, dan pilih siapa yang boleh mengubah angka. Grup kecil berisi teman boleh mengabaikan semuanya, karena grup baru dimulai dalam keadaan terbuka lebar."
+cta:
+  heading: "Siap menjalankan grup yang rapi?"
+  body: "Buat akun, mulai grup, dan kirim tautan undangan. Biarkan terbuka, atau perketat aturannya saat grup makin besar atau makin rewel."
+problem:
+  heading: "Seseorang harus menjaga angkanya tetap rapi"
+  body: "Empat teman serumah bisa jalan dengan saling percaya. Tiga puluh tamu di akhir pekan pernikahan, mungkin tidak. Buat satu grup untuk tiap rumah, perjalanan, atau acara, dengan hingga 50 orang di dalamnya, dan setiap grup menyimpan anggotanya sendiri, perannya sendiri, dan aturannya sendiri. Dasbor Anda mencantumkan semuanya, beserta posisi Anda di masing-masing, dalam satu layar. Kebanyakan grup tidak pernah menyentuh pengaturan. Grup yang menyentuhnya biasanya punya seseorang yang cukup teratur untuk menginginkannya."
+workflow:
+  heading: "Dari grup kosong sampai grup terkunci"
+  steps:
+    - title: "Undang dengan tautan atau kode QR"
+      body: "Buka **Undang Orang Lain**, pilih berapa lama tautan berlaku (15 menit, 1 jam, 1 hari, atau 5 hari), lalu salin tautannya atau tampilkan kode QR untuk dipindai. Anda juga bisa mengundang orang yang sudah berbagi grup lain dengan Anda, dari dalam aplikasi."
+      shot: S03
+      shotAlt: "Dialog undangan dengan tautan grup, kode QR-nya, dan pilihan berapa lama tautan berlaku"
+    - title: "Biarkan mereka melihat dulu sebelum bergabung"
+      body: "Siapa pun yang punya tautan akan masuk atau membuat akun, melihat pratinjau grup, dan memilih nama yang ingin dipakai di dalamnya. Lalu mereka menekan **Bergabung dengan Grup**."
+      shot: S04
+      shotAlt: "Pratinjau bergabung untuk sebuah grup, ditampilkan kepada orang yang sudah masuk sebelum mereka bergabung"
+    - title: "Setujui siapa yang bergabung"
+      body: "Aktifkan persetujuan dan orang yang memakai tautan menunggu sebagai anggota tertunda sampai admin mengizinkan mereka masuk. Admin menemukannya di bawah **Anggota tertunda** dalam **Keamanan & Izin**, lalu memilih **Setujui** atau **Tolak**. Sampai saat itu, orang yang tertunda tidak bisa melihat apa pun di grup."
+      shot: S14
+      shotAlt: "Anggota tertunda yang menunggu admin menyetujui atau menolak mereka"
+    - title: "Pilih siapa yang bisa mengubah apa"
+      body: "Pilih **Kolaborasi terbuka** atau **Grup terkelola**, atau atur izinnya satu per satu. Lalu beri tiap orang sebuah peran: admin, anggota, atau pengamat. Hanya admin yang bisa mengubah izin dan peran."
+      shot: S13
+      shotAlt: "Tab keamanan pada pengaturan grup dengan dua preset dan izin kustom"
+    - title: "Kunci saat sudah selesai"
+      body: "Saat perjalanan usai dan angkanya sudah beres, admin bisa mengaktifkan **Kunci Grup**. Tak ada yang bisa menambah atau mengubah pengeluaran, mencatat pembayaran, atau mengedit daftar dan jajak pendapat, dan sebuah spanduk memberi tahu hal itu. Tak ada yang bisa diam-diam menyelipkan taksi susulan. Jika taksi susulan itu benar-benar muncul, admin bisa membuka kunci grup."
+      shot: S15
+      shotAlt: "Sebuah grup yang menampilkan spanduk bahwa grup itu terkunci"
+options:
+  heading: "Admin, anggota, dan pengamat"
+  items:
+    - title: "Administrator"
+      body: "Menjalankan grup. Admin menyetujui anggota baru, mengubah peran dan izin, mengunci dan membuka kunci grup, serta menutupnya. Siapa pun yang membuat grup otomatis menjadi adminnya, dan grup tak pernah dibiarkan tanpa admin, karena admin terakhir tidak bisa diturunkan perannya."
+    - title: "Anggota"
+      body: "Ikut serta. Apa yang bisa dilakukan anggota bergantung pada izin grup. Dalam preset Kolaborasi terbuka, itu hampir segalanya. Dalam preset Grup terkelola, anggota hanya bisa mengubah pengeluaran dan daftar yang mereka buat sendiri."
+    - title: "Pengamat"
+      body: "Melihat semuanya dan tidak mengubah apa pun. Pengamat tidak bisa menambah atau mengedit pengeluaran maupun daftar, mengundang orang, mengubah pengaturan, atau mengganti gambar header. Berguna untuk orang yang ingin memantau angka dan berjanji tidak akan mengutak-atiknya."
+sections:
+  - heading: "Terbuka, terkelola, atau aturan Anda sendiri"
+    body: "Grup baru dimulai dengan **Kolaborasi terbuka**, tempat semua orang bisa mengundang orang, mengubah pengeluaran, dan mengedit daftar, dan anggota baru bergabung otomatis. **Grup terkelola** untuk saat ada yang harus bersikap dewasa. Anda juga bisa mengatur tujuh izin satu per satu, dan mengubah salah satunya secara manual membuat grup beralih ke izin kustom. Apa pun pilihan Anda, hanya admin yang bisa mengubah izin itu sendiri, dan setiap perubahan muncul di umpan aktivitas. Satu rumah berisi [teman serumah](page:use-case/housemates) bisa membiarkan semuanya terbuka. [Acara atau perayaan](page:use-case/events-and-celebrations) besar sering menginginkan Grup terkelola, supaya ada yang memegang kendali atas siapa yang bergabung. Baru mengenal semua ini? [Cara kerja](page:how-it-works) menuntun seluruh perjalanan, dari pengeluaran pertama sampai lunas."
+    items:
+      - "**Siapa yang dapat mengedit pengeluaran.** Kolaborasi terbuka: anggota mana pun. Grup terkelola: pembuat & admin."
+      - "**Siapa yang dapat menghapus pengeluaran.** Kolaborasi terbuka: anggota mana pun. Grup terkelola: pembuat & admin."
+      - "**Siapa yang dapat mengedit daftar.** Kolaborasi terbuka: anggota mana pun. Grup terkelola: pembuat & admin."
+      - "**Siapa yang dapat mengundang anggota.** Kolaborasi terbuka: anggota mana pun. Grup terkelola: hanya admin."
+      - "**Persetujuan anggota baru.** Kolaborasi terbuka: otomatis. Grup terkelola: persetujuan admin diperlukan."
+      - "**Siapa yang dapat mengubah pengaturan.** Kolaborasi terbuka: anggota mana pun. Grup terkelola: hanya admin."
+      - "**Siapa yang dapat mengubah gambar header.** Kolaborasi terbuka: anggota mana pun. Grup terkelola: hanya admin."
+  - heading: "Nama Anda, foto Anda, gambar header Anda"
+    body: "Setiap grup punya daftar pemerannya sendiri. Pilih nama yang dilihat orang di tiap grup (2 sampai 50 karakter, dan unik di dalam grup) serta foto profil mana yang Anda pakai di sana. Jadilah **Sam** di rumah dan **Sam (yang bawa mobil)** di perjalanan. Siapa pun yang boleh mengubah pengaturan bisa mengganti nama grup dan mengedit deskripsinya. Gambar header, berupa JPEG, PNG, GIF, atau WebP hingga 10 MB, punya izinnya sendiri."
+  - heading: "Arsipkan, kunci, atau tutup"
+    body: "Tiga cara menyimpan sebuah grup, dari yang paling ringan sampai yang paling serius."
+    items:
+      - "**Arsipkan** menyembunyikan grup dari dasbor Anda sendiri, bukan dasbor orang lain. Anda masih bisa membukanya dan memakainya seperti sebelumnya, dan **Batal Arsipkan Grup** mengembalikannya."
+      - "**Kunci** membekukan perubahan sampai admin membukanya. Semua orang tetap bisa membaca grup dan riwayatnya."
+      - "**Tutup** bersifat permanen, dan berlaku untuk semua orang. Hanya admin yang bisa melakukannya, dengan mengetik nama grup untuk mengonfirmasi, dan tak ada yang bisa membuka grup itu lagi."
+  - heading: "Meninggalkan grup"
+    body: "Siapa pun bisa keluar setelah melunasi. Anda tidak bisa keluar selagi berutang atau dihutangi dalam satu mata uang saja, selagi ada pertanyaan terbuka tentang pengeluaran yang melibatkan Anda, atau jika Anda admin terakhir atau satu-satunya anggota. [Catat pembayarannya](page:feature/settle-up), selesaikan [pertanyaan pengeluaran](page:guide/what-to-do-when-someone-disputes-a-shared-expense), atau jadikan orang lain admin, lalu silakan pergi. Untuk kembali, Anda memerlukan undangan baru."
+limits:
+  heading: "Dalam batas wajar: tulisan kecilnya"
+  items:
+    - "Satu grup berisi hingga 50 orang."
+    - "Hanya admin yang bisa mengubah izin dan peran. Admin terakhir tidak bisa diturunkan perannya."
+    - "Mengatur pengeditan pengeluaran ke **Hanya admin** juga berarti hanya admin yang bisa menambahkan pengeluaran."
+    - "Kunci menghentikan perubahan pada pengeluaran, pembayaran baru, daftar, dan jajak pendapat. Semua orang tetap bisa membaca grup dan riwayatnya, dan memberi reaksi pada pembayaran."
+    - "Penutupan bersifat permanen. Aplikasi tidak punya cara untuk membuka kembali grup yang sudah ditutup."
+    - "Membuat tautan undangan baru tidak membatalkan yang lama. Setiap tautan berlaku sampai masa berlakunya sendiri berakhir, jadi pilih yang singkat saat Anda khawatir tautan itu bisa sampai ke tangan yang salah."
+    - "Undangan di dalam aplikasi mencantumkan orang dari 10 grup aktif terbaru Anda. Orang lain memerlukan tautan, dan siapa yang boleh mengundang bergantung pada izin grup."
+    - "Bergabung memerlukan akun, dan orang harus memverifikasi email mereka sebelum bisa menambahkan apa pun."
+useCasesHeading: "Di mana sedikit keteraturan membantu"
+faq:
+  heading: "Pertanyaan"
+  items:
+    - q: "Bisakah pengamat menambahkan pengeluaran?"
+      a: "Tidak. Pengamat melihat semuanya dan tidak mengubah apa pun. Mereka tidak bisa menambah atau mengedit pengeluaran atau daftar, mengundang orang, atau mengubah pengaturan."
+    - q: "Bisakah seseorang keluar selagi masih berutang?"
+      a: "Tidak. Tak ada yang bisa keluar dari grup selagi berutang atau dihutangi dalam satu mata uang saja. Lunasi dulu, baru pergi."
+    - q: "Apa yang terjadi saat grup ditutup?"
+      a: "Tak ada yang bisa membukanya lagi. Hanya admin yang bisa menutup grup, mereka harus mengetik nama grup untuk mengonfirmasi, dan grup menjadi tidak tersedia bagi semua orang. Jika Anda hanya ingin menghentikan perubahan, kunci saja. Jika Anda hanya ingin menyingkirkannya dari dasbor Anda sendiri, arsipkan."
+    - q: "Bisakah kunci dibatalkan?"
+      a: "Bisa. Admin bisa membuka kunci grup, dan perubahan bisa dilakukan lagi."
+    - q: "Apakah saya harus menyetujui orang sebelum mereka bergabung?"
+      a: "Hanya jika Anda mau. Grup baru dimulai dengan Kolaborasi terbuka, tempat orang yang memakai tautan bergabung otomatis. Aktifkan persetujuan admin, atau pilih Grup terkelola, dan setiap orang menunggu sampai admin mengizinkan mereka masuk."
+    - q: "Berapa banyak orang yang bisa ada dalam satu grup?"
+      a: "Hingga 50."

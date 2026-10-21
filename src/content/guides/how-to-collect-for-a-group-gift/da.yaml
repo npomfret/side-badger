@@ -1,0 +1,101 @@
+translatedFrom: "5d92090e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Sådan samler I ind til en fælles gave | Side Badger"
+  description: "Alle bidrager med forskellige beløb, og ét betalingskort tager stødet. Lav en afstemning om budgettet, indtast præcise beløb, og lad Side Badger regne."
+h1: "Sådan samler I ind til en fælles gave"
+navLabel: "Indsamling til en gave"
+lead: "At samle ind til en fælles gave betyder, at én lægger pengene ud, og alle andre skylder vedkommende deres bidrag. Aftal et budget med en afstemning, lad køberen betale gaven med sit eget betalingskort, og indtast den så som én udgift med [præcise beløb](page:feature/split-expenses), et tal til hver person. Side Badger viser, hvem der skylder køberen hvad, og alle sender deres andel, som de vil."
+cta:
+  heading: "Send hatten rundt, bare uden hat"
+  body: "Lav en gruppe, lad den, der skal have gaven, stå uden for den, og indtast gaven med præcise beløb. Side Badger er gratis, uden reklamer og uden daglige grænser. Vil du have rundvisningen først? Se [sådan virker det](page:how-it-works) eller [hvad gratis dækker](page:pricing)."
+sections:
+  - heading: "Fire venner, én pladespiller, fire forskellige beløb"
+    body: "Bea fylder 30 og ønsker sig en pladespiller. Priya, Omar, Lena og Sam køber den til hende. Priya finder en til 240 £ og køber den med sit eget betalingskort, for nogen må jo gå først. De fire bidrager ikke lige meget. Priya og Omar lægger 60 £ hver, Lena 80 £ og Sam 40 £. Ingen forklarer sit beløb, og ingen spørger. Omar køber også et lykønskningskort og gavepapir for 12 £. Alle fire skriver på kortet, så den udgift deles ligeligt."
+  - heading: "Aftal budgettet, før nogen klikker på Køb"
+    body: "En afstemning om budgettet sparer dig for skænderiet om en pladespiller til 400 £. Vælg **Tilføj afstemning** i gruppen, og spørg, hvad gaven må koste. Lav mulighederne til beløb, for eksempel op til 150 £, op til 200 £ og op til 250 £. Slå **Anonym afstemning** til, som skjuler, hvem der stemte på hvad, så ingen skal forsvare et lavere beløb højt. Indstillingerne kan ikke ændres, når den første stemme er afgivet, så tjek dem først. En afstemning lukker ikke af sig selv. Når alle har stemt, vælger du **Luk afstemning**, og **Vinder** vises. Afstemningen aftaler totalen. Den fastsætter ikke nogens andel."
+  - heading: "Sådan læser du regnestykket"
+    body: "Gaven deles som 60 £, 60 £, 80 £ og 40 £, hvilket giver de 240 £ på kvitteringen. Kortet og gavepapiret deles på fire med 3 £ hver. Priyas regning er 60 £ + 3 £, altså 63 £, og hun betalte 240 £, så hun har 177 £ til gode. Omars regning er også 63 £, men han betalte 12 £, så han skylder 51 £. Lena skylder 80 £ + 3 £, altså 83 £, og Sam skylder 40 £ + 3 £, altså 43 £. De tre lægger sammen op til Priyas 177 £. Lader man det ligge, løber gælden fem veje rundt i gruppen. Side Badger foreslår i stedet tre betalinger, alle til Priya. [Gør op](page:feature/settle-up) har detaljerne."
+  - heading: "Læg det ind i Side Badger"
+    body: "Priyas side tager omkring fem minutter."
+    items:
+      - "**Opret gruppen.** Vælg **Opret gruppe** på dashboardet. Vælg **Inviter andre**, og send linket eller QR-koden til dem, der bidrager, og ingen andre."
+      - "**Tilføj gaven.** Vælg **Tilføj udgift**, beskriv den, indtast 240, og vælg Priya under **Hvem betalte?**. Lad alle fire stå under **Fordel mellem**, vælg derefter **Præcise beløb** under **Hvordan skal det fordeles**, og skriv 60, 60, 80 og 40. Beløbene skal give 240 i alt. Vedhæft ordrebekræftelsen, hvis du vil. Vælg **Gem udgift**."
+      - "**Tilføj kortet.** Omar tilføjer selv de 12 £, vælger sig selv under **Hvem betalte?** og lader **Hvordan skal det fordeles** stå på **Ligeligt**, med alle fire personer afkrydset."
+      - "**Tæl sammen, og betal så.** Alle tjekker **Saldi**, som viser, hvem der skylder hvem, og sender Priya deres andel, som de vil. Registrer det derefter med **Afregn** og **Registrer afregning**. Hurtig afregning udfylder beløbet."
+  - heading: "Køb først, eller saml ind først"
+    body: "Side Badger holder ikke på fælleskassen, så »at samle ind« betyder i praksis at tælle sammen. Der er to rækkefølger, der virker."
+    items:
+      - "**Køb først.** Køberen betaler, tilføjer udgiften til den rigtige pris, og alle ser deres andel med det samme. Det er ryddeligere, men køberen bærer udgiften, til folk har betalt, så vælg en køber, der kan det."
+      - "**Saml ind først.** Folk sender deres beløb til køberen før købet. Når du kender prisen, indtaster du gaven og registrerer så hver betaling med den dato, pengene faktisk blev flyttet. Tilføj gaven først, så hver betaling har en saldo at lande på."
+      - "**Prisen ændrer sig.** Levering, en rabatkode, en sen prisstigning. Rediger gaven, og ret de præcise beløb, så de stadig giver totalen. Den tidligere version bliver gemt, men sig det til gruppen først, for deres saldi ændrer sig."
+  - heading: "Hold Bea uden for det"
+    body: "Kun medlemmer af en gruppe kan se den, så Bea kan ikke se en gruppe, hun ikke er med i. Inviter dem, der bidrager, og ingen andre. Et link virker, til det udløber, og du kan vælge alt fra 15 minutter til 5 dage, så vælg en kort varighed og send det et sted, hvor Bea ikke ser det. Linket viser en forhåndsvisning af gruppen til den, der åbner det, så giv gruppen et kedeligt navn, for eksempel Lørdagskassen, og hold også Beas navn ude af udgifternes beskrivelser og afstemningens svarmuligheder."
+  - heading: "Det her gør Side Badger ikke"
+    items:
+      - "Den holder eller opkræver ikke pengene. Bidragene går til køberen via bankoverførsel, kontanter eller det, I nu bruger, og så registrerer nogen dem."
+      - "Den sender ingen betalingspåmindelser. At puffe til dem, der ikke har betalt, er stadig et menneskeligt job."
+      - "Den regner ikke på nogens andel. En afstemning aftaler budgettet, og der er ingen mulighed for »del det, der er tilbage«, så du skriver hvert beløb selv."
+      - "Hver udgift har én betaler. Hvis to personer købte forskellige dele af gaven, så indtast to udgifter."
+      - "Alle i fordelingen skal have en gratis konto og en plads i gruppen."
+exampleAfter: 2
+example:
+  heading: "Beas pladespiller og kortet"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: "gaven"
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: "kort og gavepapir"
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: "Spørgsmål"
+  items:
+    - q: "Hvad hvis vi samler mere ind, end gaven koster?"
+      a: "De præcise beløb skal give prisen i alt, så beskær andelene, til de gør. Eller brug det overskydende på noget virkeligt, for eksempel blomster, og indtast det som en anden udgift, ligesom kortet og gavepapiret i eksemplet."
+    - q: "Kan nogen bidrage uden at være med i gruppen?"
+      a: "Ikke hvis personen skal med i regnskabet. Alle i fordelingen skal have en gratis konto og være med i gruppen. Til en, der kun har kontanter, kan Priya tage imod dem og indtaste gaven for det, gruppen stadig skylder. Hvis Sam for eksempel gav hende 40 £ kontant, ville hun indtaste 200 £ og dele dem 60, 60 og 80 mellem sig selv, Omar og Lena."
+    - q: "Kan afstemningen afgøre, hvor meget hver person lægger?"
+      a: "Nej. En afstemning aftaler et tal for hele gruppen, for eksempel budgettet. Hver persons andel aftaler I indbyrdes og skriver så ind i udgiften som **Præcise beløb**."

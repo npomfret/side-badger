@@ -1,0 +1,119 @@
+translatedFrom: "0900d953"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Que faire si quelqu'un conteste une dépense partagée | Side Badger"
+  description: "Oubliez le message qui pique. Posez une question sur la dépense : elle sort des soldes de chacun le temps d'en parler. Détaillé avec 45 £ de vin de fête."
+h1: "Que faire si quelqu'un conteste une dépense partagée"
+navLabel: "Dépenses contestées"
+lead: "Posez une question sur la dépense plutôt que d'envoyer un message qui pique. Tant que la question est ouverte, toute la dépense reste hors des soldes de chacun. Discutez-en dans les commentaires, modifiez le partage si le groupe est d'accord, et laissez la personne qui a posé la question, ou un admin, la fermer."
+cta:
+  heading: "Posez poliment la question gênante"
+  body: "Créez un compte gratuit, lancez un groupe pour le logement et demandez à un admin d'activer les questions sur les dépenses, qui sont désactivées tant que personne ne le fait. Vous voulez d'abord faire le tour ? Voyez [comment ça marche](page:how-it-works) ou [ce que couvre la gratuité](page:pricing)."
+sections:
+  - heading: "Trois colocataires et 45 £ de vin"
+    body: "Après la fête, Tom ajoute le vin au groupe du logement. Cela fait 45 £, payées par Tom, partagées à parts égales entre Tom, Priya et Aisha, soit 15 £ chacun. Aisha ne boit pas. Tom l'a acheté pour la fête, et la fête était pour le [logement](page:use-case/housemates), donc il n'a rien fait de mal. Aisha n'a pas tort de poser la question non plus. Personne ici n'est un méchant. Il y a juste 15 £ de vin en litige et mille façons d'en faire un moment gênant. Un message qui pique envoyé à toute la maison en est une. Une question sur la dépense en est une plus douce."
+  - heading: "Ce que fait une question"
+    body: "Aisha ouvre la dépense et pose une question. Toute la dépense sort des soldes de chacun, pas seulement sa part, et rien d'autre n'est touché. Les grosses courses (84 £) et le ménage (60 £) comptent toujours, soit 28 £ + 20 £ = 48 £ chacun. Donc, tant que le vin est en suspens, Aisha doit 48 £, on doit 36 £ à Tom et 12 £ à Priya. Quoi que le logement décide pour le vin, le solde de personne ne l'inclut en attendant. Toute autre personne concernée par la dépense peut aussi poser sa propre question. Le vin ne revient dans les soldes que lorsque la dernière question ouverte à son sujet est fermée, et une question est fermée par la personne qui l'a posée ou par un admin."
+  - heading: "En parler, puis corriger"
+    body: "La question d'Aisha atterrit dans les commentaires de la dépense, donc les réponses se trouvent juste en dessous. [Planifier ensemble](page:feature/plan-together) en dit plus sur les commentaires et les questions. Tom et Priya la lisent et le logement en discute. Ils décident que le vin était l'affaire de Tom et Priya, puisque ce sont eux qui l'ont bu. Un autre logement pourrait garder le partage en trois, ou convenir d'un compromis, et ce serait très bien aussi. Side Badger garde ce dont vous convenez et n'a aucun avis sur le vin. Tom modifie la dépense pour qu'elle soit partagée à parts égales entre lui et Priya, soit 22,50 £ chacun (45 £ ÷ 2). Aisha n'en fait plus partie, donc sa question part avec l'ancienne version et le vin réintègre les soldes. La version précédente est conservée."
+  - heading: "Lire le résultat"
+    body: "Avec le vin de retour, on doit 58,50 £ à Tom, Priya doit 10,50 £ et Aisha doit 48 £. Side Badger suggère deux paiements, les deux pour Tom. Les 48 £ d'Aisha sont le chiffre qu'elle avait pendant que le vin était en suspens, parce qu'elle n'en fait pas partie. Priya est passée de 12 £ à recevoir à 10,50 £ à devoir, ce qui correspond à sa moitié du vin, 22,50 £. Si le partage en trois était resté en place, Aisha aurait dû 63 £ (28 £ + 20 £ + 15 £). Tout le désaccord valait 15 £. Remboursez-vous comme vous voulez, puis enregistrez chaque paiement sous **Régler**. [Régler les comptes](page:feature/settle-up) couvre le reste."
+  - heading: "Le formuler pour qu'on continue de vous parler"
+    body: "La question d'Aisha : « Je n'ai pas touché au vin. Pourrait-on regarder le partage ? » Elle est courte, elle nomme la dépense et elle demande plutôt qu'elle n'accuse. Quelques habitudes aident."
+    items:
+      - >-
+        **Parlez de la dépense, pas de la personne.** « Pourrait-on vérifier le partage du vin ? » lance une conversation. « Pourquoi m'a-t-on fait payer ton vin ? » en lance une tout autre sorte.
+      - >-
+        **Dites ce que vous aimeriez qu'il se passe.** « Ne pourrait-on le partager qu'entre ceux qui l'ont bu ? » donne au groupe quelque chose à approuver ou à quoi répondre.
+      - >-
+        **Donnez une raison en une phrase ou deux.** Le champ s'appelle **Votre question** et il ne peut pas rester vide.
+      - >-
+        **Gardez les réponses au même endroit.** Les réponses vont dans les commentaires de la dépense, à côté des chiffres dont elles parlent.
+  - heading: "Mettez-le en place dans Side Badger"
+    items:
+      - >-
+        **Activez les questions.** Elles sont désactivées par défaut. Un admin ouvre les **Paramètres** du groupe, active **Autoriser les questions sur les dépenses** sous **Fonctionnalités** dans l'onglet **Général** et choisit **Enregistrer**. Les désactiver plus tard efface toutes les questions ouvertes.
+      - >-
+        **Posez-en une.** Ouvrez la dépense et, à côté de votre propre nom dans le partage, choisissez **J'ai une question**. Écrivez votre raison dans **Votre question** et choisissez de nouveau **J'ai une question**. Seules les personnes concernées par la dépense peuvent le faire. La dépense affiche alors un badge **Questionné**.
+      - >-
+        **Retrouvez ce qui est en suspens.** Dans la liste des dépenses, **Uniquement questionné** affiche les dépenses qui ont une question ouverte.
+      - >-
+        **Corrigez, si le groupe est d'accord.** Ouvrez la dépense, choisissez **Modifier**, changez **Divisé entre** et choisissez **Mettre à jour Dépense**. Qui peut modifier dépend des permissions du groupe.
+      - >-
+        **Fermez-la, si rien n'est à corriger.** La personne qui a posé la question peut utiliser le bouton de fermeture de son badge **Questionné**, intitulé **Fermer la question**, et un admin le peut aussi. La dépense revient dans les soldes dès que sa dernière question est fermée.
+  - heading: "Quand ce n'est pas aussi simple"
+    items:
+      - >-
+        **Une modification qui garde la personne dans la dépense.** Si la personne qui a posé la question en fait toujours partie, sa question est reportée sur la version modifiée et attend qu'elle, ou un admin, la ferme. Corriger le montant, ce n'est pas convenir que le problème est réglé.
+      - >-
+        **Vous n'étiez pas dans la dépense.** Seules les personnes concernées par une dépense peuvent la remettre en question. Si quelque chose vous semble louche, dites-le dans ses commentaires ou demandez à la personne qui l'a ajoutée.
+      - >-
+        **Quelqu'un veut quitter le groupe.** Une question ouverte empêche les personnes concernées par cette dépense de partir. Fermez la question, ou modifiez la dépense pour qu'elles n'en fassent plus partie, et elles pourront s'en aller.
+  - heading: "Ce que Side Badger ne fait pas ici"
+    items:
+      - >-
+        Il ne décide pas qui a raison. Il met la dépense à l'écart des soldes et garde ce dont vous convenez.
+      - >-
+        Il ne demande à personne d'approuver les dépenses avant qu'elles comptent. Seule une dépense mise en question est suspendue.
+      - >-
+        Il ne peut pas suspendre une partie d'une dépense. Posez une question et toute la dépense quitte les soldes.
+      - >-
+        Il ne fait pas circuler l'argent. Vous vous remboursez comme vous voulez et vous l'enregistrez.
+exampleAfter: 3
+example:
+  heading: "Le logement après le vin"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "les grosses courses"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "le ménage"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "le vin de la fête"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+faq:
+  heading: Questions
+  items:
+    - q: "Puis-je ne questionner que ma part ?"
+      a: "Non. Une question met toute la dépense de côté, pour tous ceux qui en font partie. Si seul le partage est faux, la solution est de modifier le partage."
+    - q: "Qui peut fermer une question ?"
+      a: "La personne qui l'a posée, ou un admin du groupe. Si la personne qui a ajouté la dépense n'est pas admin, elle ne peut pas la fermer à la place de celle qui a posé la question."
+    - q: "Modifier une dépense efface-t-il l'original ?"
+      a: "Non. La version précédente est conservée. Qui peut modifier est décidé par les permissions du groupe, donc mieux vaut prévenir la maison d'abord, car les soldes changent."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - faq.heading

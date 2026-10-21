@@ -1,0 +1,84 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+identicalApproved:
+  - example.expenses.0.label
+  - example.people.0.name
+  - example.people.1.name
+meta:
+  title: "Share bills with your partner, 50/50 or by income | Side Badger"
+  description: "Share di boring costs and no turn date night into quarterly finance review. Share 50/50, by income or bill by bill, and see who owe who. Free."
+h1: "Share costs as couple, di fair way"
+navLabel: "Couple dem"
+lead: "Share di boring costs and no turn date night into quarterly finance review. Side Badger dey keep one running count of di rent, di bills and di shop for **couples** wey share house, sofa and fuzzy memory of who pay for di wifi. Share am 50/50, by income or bill by bill, and see who owe who."
+cta:
+  heading: "Start group for two"
+  body: "Create account, make group and send your partner di invite link. Tonight takeaway fit be di first expense."
+scenario:
+  heading: "Fair no mean say e must be 50/50"
+  body: "Sam and Alex dey share house. Sam dey earn more, so dem agree say Sam go take 60% of di rent and Alex 40%. Sam dey pay di landlord, Alex dey do di shop, and both of dem dey fairly sure say everything go even out. Fairly sure na how note for somebody phone take become standing disagreement. So make group for di two of you, choose di name wey you want your partner to see, and send am di invite link or QR code. Add each cost when e happen, talk who pay and how e share, and let di group keep di count. Make separate group for each holiday (see [group trips](page:use-case/group-trips)), so di flights go stay out of di groceries."
+sections:
+  - heading: "50/50, by income, or one bill at a time"
+    body: "No universally fair split dey, only di one wey una both agree to, ideally before di first bill instead of after di first sigh. Dis na di usual three."
+    items:
+      - "**50/50.** Pick **Equal** and each of una go owe half. E suit shared costs when your incomes close, and e no need any arithmetic at all."
+      - "**By income.** If one of una dey earn more, share by each person share of di money wey dey come in. Agree wetin go count first (take-home pay na di common choice), add di two together and divide yours by di total. If one of una take home three parts to di other own two, dat one na 3 ÷ (3 + 2) = 60%, so one of una go cover 60% and di other one 40%. Round am to whole percentages and enter dem under **Pasentej**, where dem must add up to 100. No place dey to enter your pay, so na only di percentages you go ever type."
+      - "**Bill by bill.** Each expense get im own split, so you fit mix: rent by income, di groceries 50/50, and joint present by **Exact amaunts** if each of una choose wetin to put in."
+      - "**When pay change,** use di new percentages from di next expense. Earlier expenses go keep di split wey dem enter dem with. To see di sums wey dem do with real pay slips, read [how to share bills with partner wey earn more](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: "Di monthly round-up"
+    body: "Once every month, or whenever di numbers start to itch, open di group and check **Balansis**. With two of una, only one payment dey ever for each currency, from whoever owe to whoever dem owe. Take Sam and Alex month. Sam pay di £1,500 rent, and Alex 40% of am na £600. Alex pay £90 for groceries, wey dem share equal-equal, so Sam half na £45. Side Badger go set one against di other, £600 less £45, and Alex go pay Sam £555. Pay am anyhow you like, by bank transfer, cash or favour wey you owe, then record am under **Settle up** so di balance go return to zero. No recurring bills dey, so copy last month rent, change di date and carry on. Side Badger no dey move di money or send reminders, so di nudge still be your own."
+  - heading: "Just di two of una"
+    body: "Group of two get two members, and only members of group fit see am. Your partner go join with di invite link or QR code. Link fit last anywhere from 15 minutes to 5 days, so choose di shortest one wey go give your partner time to use am. To make new link no dey cancel di old ones, so no leave dem inside chat wey include other people. Anybody wey use live link fit join, so if you wan sure well, turn on approval and admin go let each person enter. Your partner need account of im own, wey free."
+exampleAfter: 2
+example:
+  heading: "Who owe who dis month"
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: "Rent"
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: "Chop shopping"
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: "Di features wey couple dey use"
+faq:
+  heading: "Question dem"
+  items:
+    - q: "We fit set 60/40 once for everything?"
+      a: "No. Di split belong to each expense. Set di percentages for di first one, then copy am next time and change wetin different. [Share expenses](page:feature/split-expenses) cover all three ways to share."
+    - q: "E dey link to our bank?"
+      a: "No. Side Badger no dey ever touch your money. Una go pay each other anyhow una like, then record am, as [settle up](page:feature/settle-up) explain."
+    - q: "Anybody else fit see our group?"
+      a: "Only im members, and couple group get two. Anybody wey use live invite link fit join, so share am with one person and give am short expiry."
+    - q: "Wetin if each of us pay part of di same bill?"
+      a: "Expense get one payer. Record two expenses, one for each of una, and di balance go come out di same."
+    - q: "E go remind my partner to pay?"
+      a: "No. No reminders dey, so di nudge still be your own. At least una go both dey look di same number."
+    - q: "Wetin go happen when we stop to share costs?"
+      a: "Settle di balance and record di payment, so nobody go owe anything. Then admin fit lock di group, wey go keep di numbers as dem be, or close am for good, wey go make am inaccessible to everybody. Close am only when neither of una need di history."

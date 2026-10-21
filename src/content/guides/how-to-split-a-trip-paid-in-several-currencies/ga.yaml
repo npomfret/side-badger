@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Conas turas a íocadh i roinnt airgeadraí a roinnt | Side Badger"
+  description: "Punt don óstán, yen don ramen. Socraigh gach airgeadra ar leith nó tiontaigh ar ráta a fheiceann tú. An dá bhealach oibrithe amach, suimeanna léirithe."
+h1: "Conas turas a íocadh i roinnt airgeadraí a roinnt"
+navLabel: "Turais i roinnt airgeadraí"
+lead: "Cuir gach costas isteach san airgeadra inar íoc tú, ansin roghnaigh bealach. Coinnigh na hairgeadraí ar leith agus socraigh gach ceann ina airgead féin, nó tiontaigh ar ráta malairte reatha agus socraigh uair amháin. Is ceithre íocaíocht a thagann as an turas céanna chun na Seapáine ar an gcéad bhealach agus dhá cheann ar an dara ceann."
+cta:
+  heading: "Cuir isteach é san airgead inar íoc tú"
+  body: "Cruthaigh cuntas saor in aisce, tosaigh grúpa don turas agus cuir gach costas leis in aon airgeadra a bhí ar an admháil. An bhfuil an mionchuntas uait ar dtús? Féach [ilairgeadraí](page:feature/multiple-currencies) nó [cad a chlúdaíonn saor in aisce](page:pricing)."
+sections:
+  - heading: "Triúr cairde, óstán amháin, an-chuid yen"
+    body: "Caitheann Zoe, Kenji agus Lucy seachtain sa tSeapáin ar [thuras grúpa](page:use-case/group-trips), agus roinntear gach costas go cothrom idir an triúr acu. Chuir Zoe an t-óstán in áirithe sa bhaile, i bpunt, ar £600. Cheannaigh Lucy na pasanna iarnróid i dTóiceo ar ¥90,000. D'íoc Kenji as oíche an ramen, ¥9,000, agus luann sé gach lá é ó shin. Níl aon duine ag iarraidh trí admháil a thiontú ar ardán stáisiúin. Sna suimeanna anseo, is é £0.005 ¥1, ráta cruinn a cumadh don treoir seo. San aip, d'úsáidfeá ráta malairte reatha, nó chlóscríobhfá an ceann a fuair tú i ndáiríre."
+  - heading: "Cuir isteach gach ceann san airgead atá ar an admháil"
+    body: "Déan an chuid seo cibé bealach a roghnaíonn tú. Níl aon rud le tiontú go fóill."
+    items:
+      - "**Déan an grúpa.** Ar an bpainéal roghnaigh **Cruthaigh Grúpa**, tabhair ainm an turais air, ansin roghnaigh **Tabhair Cuireadh do Dhaoine Eile** agus seol an nasc nó an cód QR."
+      - "**Cuir an t-óstán leis.** Roghnaigh **Cuir Costas Leis** agus clóscríobh 600, le punt mar airgeadra in aice leis an méid. Faoi **Cé a d'íoc?** roghnaigh Zoe. Fág an triúr acu roghnaithe faoi **Roinn idir**, fág **Conas a roinntear** ar **Cothrom** agus roghnaigh **Sábháil an Costas**."
+      - "**Cuir an yen leis.** Déan an rud céanna do na pasanna iarnróid (d'íoc Lucy) agus don ramen (d'íoc Kenji), le yen mar airgeadra. Níl aon deachúlacha ag an yen, mar sin ní iarrann an fhoirm aon cheann."
+  - heading: "Bealach a haon: coinnigh na hairgeadraí ar leith"
+    body: "Coinníonn Side Badger iarmhéid do gach airgeadra agus ní chealaíonn sé ceann amháin in aghaidh ceann eile. I bpunt, is é £200 an t-óstán do gach duine, mar sin tá £200 dlite ag Kenji agus ag Lucy do Zoe an duine. I yen, tagann na pasanna iarnróid agus an ramen le chéile ar ¥99,000, is é sin ¥33,000 an duine. D'íoc Lucy ¥90,000 agus tá ¥57,000 dlite di. Níor íoc Zoe aon yen agus tá ¥33,000 dlite aici. D'íoc Kenji ¥9,000, mar sin tá ¥24,000 dlite aige."
+    items:
+      - "**Punt.** Íocann Kenji £200 le Zoe agus íocann Lucy £200 le Zoe."
+      - "**Yen.** Íocann Zoe ¥33,000 le Lucy agus íocann Kenji ¥24,000 le Lucy."
+      - "**Ceithre íocaíocht ar fad.** Tá Zoe agus Lucy i bhfiacha lena chéile i dhá airgeadra nach gcealaíonn a chéile. Ní thagann aon ráta isteach ann, mar sin níl aon rud le argóint faoi."
+      - "**Yen dlite agat, ag íoc i bpunt.** Is féidir le duine nach bhfuil aon yen aige íoc i bpunt fós. Nuair a thaifeadann tú an íocaíocht, oscail **Airgeadra difriúil?**, roghnaigh **Tiontaigh go**, pioc punt agus seiceáil an ráta. Is ionann ¥33,000 Zoe agus £165 ag ráta na treorach seo, agus tagann an t-iarmhéid yen amach i gceart fós."
+      - "**Taifead gach íocaíocht.** Íocaigí a chéile ar an gcaoi is fearr libh, ansin roghnaigh **Socraigh** agus úsáid **Taifead Socrú**. Tá tuilleadh faoi [shocrú suas](page:feature/settle-up)."
+  - heading: "Bealach a dó: tiontaigh de réir a chéile"
+    body: "Más fearr leis an ngrúpa uimhir amháin an duine a fheiceáil, tiontaigh nuair a chuireann tú an costas isteach."
+    items:
+      - "**Tiontaigh ar an bhfoirm.** Ar **Cuir Costas Leis**, roghnaigh **Tiontaigh go** agus pioc punt. Taispeánann Side Badger an ráta agus an tsuim thiontaithe, marcáilte le ≈. Cuir an ráta in eagar má fuair tú ceann difriúil. Fanann an tsuim bhunaidh yen ar an gcostas."
+      - "**Léigh na punt.** Ag ¥1 = £0.005, éiríonn na pasanna iarnróid £450 agus an ramen £45. Leis an óstán £600, sin £600 + £450 + £45 = £1,095, nó £365 an duine. D'íoc Zoe £600, mar sin tá £235 dlite di. D'íoc Lucy £450 agus tá £85 dlite di. D'íoc Kenji £45 agus tá £320 dlite aige."
+      - "**Dhá íocaíocht.** An dá cheann ó Kenji: £235 chuig Zoe agus £85 chuig Lucy. Ní íocann Zoe agus Lucy a chéile ar chor ar bith a thuilleadh."
+      - "**Nó socraigh airgeadra grúpa.** Chun an chéim bhreise a scipeáil, oscail **Socruithe** an ghrúpa, aimsigh **Socruithe Airgeadra** agus roghnaigh **Tiontaigh Costais go hUathoibríoch go**. Tiontaítear gach costas nua go dtí an t-airgeadra sin ansin, fós ar ráta is féidir leat a fheiceáil agus a athrú."
+  - heading: "Cén bealach ar chóir duit a ghlacadh?"
+    items:
+      - "**Coinnigh ar leith iad** nuair a bhíonn yen fós ag daoine ina sparáin, nó nuair is fearr leat gan argóint a dhéanamh faoi ráta. Is é an costas atá air níos mó íocaíochtaí, i níos mó ná airgeadra amháin."
+      - "**Tiontaigh** nuair a bhaineann an grúpa úsáid as airgeadra amháin sa ghnáthshaol agus gur mian leis uimhir amháin an duine agus liosta níos giorra, cosúil le dhá aistriú Kenji. Is é an costas atá air go gcuireann an grúpa muinín i ráta, agus go socraítear an ráta ar gach costas nuair a shábháiltear é."
+      - "**Socraigh go luath.** Ní thiontaíonn airgeadra grúpa ach costais nua agus cóipeáilte. Ní théann sé siar chun an méid atá curtha isteach agat cheana a chur in ord."
+  - heading: "An ráta, agus an uasteorainn"
+    items:
+      - "**Socraítear an ráta nuair a shábhálann tú.** Ní athluacháiltear seanchostais choíche, mar sin ní imíonn iarmhéid ar strae toisc gur athraigh an margadh. Is féidir ráta difriúil a bheith ar chostais a cuireadh isteach ar laethanta éagsúla, mar sin má theastaíonn ráta amháin ón ngrúpa don turas ar fad, aontaigh é agus clóscríobh isteach gach uair é."
+      - "**Gan ráta? Clóscríobh ceann.** Faigheann Side Badger ráta malairte reatha nuair is féidir leis, ach ní chinntítear ceann do gach péire. Mura bhfuil ceann ann, nó má thug deasc airgid thirim ráta níos fearr duit, clóscríobh do cheann féin."
+      - "**999,999.99 an costas, ina airgeadra féin.** Uasteorainn amháin, cibé airgead é. I yen is beagán faoi bhun ¥1,000,000 é sin, thart ar £5,000 ag ráta na treorach seo. In airgeadra le huimhreacha móra, mar rupiah na hIndinéise, is féidir le bille amháin é a bhaint amach níos luaithe. Roinn an bille ina dhá chostas, nó cuir isteach in airgeadra eile é agus tiontaigh."
+  - heading: "Cad nach ndéanann Side Badger anseo"
+    items:
+      - "Ní bhogann sé airgead ná ní mhalartaíonn sé é choíche. Íocann sibh a chéile ar an gcaoi is fearr libh, ansin taifeadann sibh an íocaíocht."
+      - "Tá 140 airgeadra ann. Níl airgeadraí cripte ná miotail ina measc."
+exampleAfter: 2
+example:
+  heading: "An tSeapáin, socraithe ar dhá bhealach"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "an t-óstán, in áirithe sa bhaile"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "pasanna iarnróid"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "oíche an ramen"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Ceisteanna"
+  items:
+    - q: "Cén ráta malairte a úsáideann Side Badger?"
+      a: "Ráta malairte reatha, a fhaightear nuair a chuireann tú an costas isteach, má tá ceann ar fáil. Is féidir leat é a athrú go dtí an ráta a fuair tú i ndáiríre."
+    - q: "An féidir leis an ngrúpa cloí le punt agus yen?"
+      a: "Is féidir. I **Socruithe** an ghrúpa, cuir **Cuir srian ar airgeadraí don ghrúpa seo** ar siúl faoi **Socruithe Airgeadra**, roghnaigh faoi **Airgeadraí ceadaithe** na cinn atá uait agus socraigh an **Airgeadra réamhshocraithe do chostais nua**. Níos lú roghanna sa liosta, níos lú buille faoi thuairim mícheart ag an gcuntar."
+    - q: "An gcaithfimid tiontú ar chor ar bith?"
+      a: "Ní chaithfimid. Fanann airgeadraí ar leith mura roghnaíonn tusa nó do ghrúpa tiontú, agus faigheann gach airgeadra a liosta gearr féin d'íocaíochtaí."

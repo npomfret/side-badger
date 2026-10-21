@@ -1,0 +1,114 @@
+translatedFrom: "0900d953"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Kaj storiti, ko nekdo izpodbija skupni strošek | Side Badger"
+  description: "Pozabi na zbadljivo sporočilo. Strošek postavi pod vprašaj in izpade iz stanj, medtem ko se pogovarjate. Z vinom za 45 £ korak za korakom."
+h1: "Kaj storiti, ko nekdo izpodbija skupni strošek"
+navLabel: "Izpodbijani stroški"
+lead: "Namesto zbadljivega sporočila postavi strošek pod vprašaj. Dokler je vprašanje odprto, cel strošek ostane zunaj stanj vseh. Pogovorite se v komentarjih, uredite razdelitev, če se skupina strinja, vprašanje pa naj zapre oseba, ki ga je postavila, ali skrbnik."
+cta:
+  heading: "Neprijetno vprašanje postavi vljudno"
+  body: "Ustvari brezplačen uporabniški račun, ustanovi skupino za stanovanje in prosi skrbnika, naj vklopi vprašanja o stroških, ki so izklopljena, dokler jih nekdo ne vklopi. Bi rad najprej ogled? Poglej [kako deluje](page:how-it-works) ali [kaj pokriva brezplačno](page:pricing)."
+sections:
+  - heading: "Trije sostanovalci in vino za 45 £"
+    body: "Po zabavi Tom doda vino v skupino stanovanja. Stane 45 £, plačal ga je Tom in se razdeli enako med Toma, Priyo in Aisho, kar je 15 £ na osebo. Aisha ne pije. Tom ga je kupil za zabavo, zabava pa je bila za [stanovanje](page:use-case/housemates), zato ni storil nič narobe. Tudi Aisha ne dela napake, ko sprašuje. Nihče tu ni zlobnež. Gre le za 15 £ vina in veliko načinov, kako zadevo narediti neprijetno. Zbadljivo sporočilo celi hiši je eden. Vprašanje pri stroških je blažji."
+  - heading: "Kaj naredi vprašanje"
+    body: "Aisha odpre strošek in postavi vprašanje. Cel strošek izpade iz stanj vseh, ne le njen delež, na nič drugega pa to ne vpliva. Velik nakup (84 £) in čistilka (60 £) še vedno štejeta, kar je 28 £ + 20 £ = 48 £ na osebo. Dokler je vino v čakanju, Aisha torej dolguje 48 £, Tomu pripada 36 £ in Priyi 12 £. Karkoli se stanovanje odloči glede vina, medtem ni v ničjem stanju. Vprašanje lahko postavi tudi vsak drug v strošku. Vino se vrne v stanja šele, ko je zaprto zadnje odprto vprašanje, vprašanje pa zapre oseba, ki ga je postavila, ali skrbnik."
+  - heading: "Pogovor, nato popravek"
+    body: "Aishino vprašanje pristane v komentarjih stroška, zato so odgovori tik pod njim. Več o komentarjih in vprašanjih je v [skupnem načrtovanju](page:feature/plan-together). Tom in Priya ga preberta in stanovanje se pogovori. Odločijo se, da je bilo vino Tomovo in Priyino, ker sta ga popila. Drugo stanovanje bi morda obdržalo delitev na tri ali se dogovorilo za kaj vmes, in tudi to bi bilo v redu. Side Badger shrani, kar se dogovorite, o vinu pa nima mnenja. Tom uredi strošek tako, da se razdeli enako med njega in Priyo, kar je 22,50 £ na osebo (45 £ ÷ 2). Aisha ni več v njem, zato njeno vprašanje ostane pri stari različici in vino se vrne v stanja. Prejšnja različica se ohrani."
+  - heading: "Branje rezultata"
+    body: "Ko je vino spet noter, Tomu pripada 58,50 £, Priya dolguje 10,50 £ in Aisha dolguje 48 £. Side Badger predlaga dve plačili, obe Tomu. Aishinih 48 £ je znesek, ki ga je imela, ko je bilo vino v čakanju, ker v njem ni. Priya je od terjatve 12 £ prešla na dolg 10,50 £, ker je njena polovica vina 22,50 £. Če bi delitev na tri obveljala, bi Aisha dolgovala 63 £ (28 £ + 20 £ + 15 £). Celoten spor je bil vreden 15 £. Plačajte si, kakor želite, nato vsako plačilo zabeležite pod **Poravnaj**. [Poravnava](page:feature/settle-up) pokrije ostalo."
+  - heading: "Kako to povedati, da se še naprej pogovarjate"
+    body: "Aishino vprašanje: „Nisem pila vina. Bi lahko pogledali razdelitev?“ Kratko je, poimenuje strošek in sprašuje, ne obtožuje. Pomaga nekaj navad."
+    items:
+      - >-
+        **Vprašaj o stroških, ne o osebi.** „Bi lahko preverili razdelitev za vino?“ začne pogovor. „Zakaj plačujem tvoje vino?“ začne drugačnega.
+      - >-
+        **Povej, kaj bi rad.** „Bi lahko bilo samo za tiste, ki so ga pili?“ da skupini nekaj, s čimer se lahko strinja ali odgovori.
+      - >-
+        **Navedi razlog v stavku ali dveh.** Polje je **Vaše vprašanje** in ne sme ostati prazno.
+      - >-
+        **Odgovore imej na enem mestu.** Odgovori gredo v komentarje stroška, ob številke, o katerih govorijo.
+  - heading: "Nastavi v Side Badgerju"
+    items:
+      - >-
+        **Vklopi vprašanja.** Privzeto so izklopljena. Skrbnik odpre **Nastavitve** skupine, pod **Funkcije** na zavihku **Splošno** vklopi **Dovoli vprašanja o stroških** in izbere **Shrani**. Če jih pozneje izklopi, se vsa odprta vprašanja izbrišejo.
+      - >-
+        **Postavi vprašanje.** Odpri strošek in ob svojem imenu v razdelitvi izberi **Imam vprašanje**. Razlog napiši v **Vaše vprašanje** in ponovno izberi **Imam vprašanje**. To lahko storijo samo osebe v strošku. Strošek zdaj kaže značko **Postavljeno pod vprašaj**.
+      - >-
+        **Poišči, kaj je v čakanju.** Na seznamu stroškov **Samo postavljeno pod vprašaj** prikaže stroške z odprtim vprašanjem.
+      - >-
+        **Popravi, če se skupina strinja.** Odpri strošek, izberi **Uredi**, spremeni **Razdeli med** in izberi **Posodobi strošek**. Kdo lahko ureja, določajo dovoljenja skupine.
+      - >-
+        **Zapri, če ni treba nič popraviti.** Oseba, ki je vprašala, lahko uporabi gumb za zapiranje na svoji znački **Postavljeno pod vprašaj**, z oznako **Zapri vprašanje**, enako lahko stori skrbnik. Strošek se vrne v stanja, ko je zadnje vprašanje zaprto.
+  - heading: "Ko ni tako urejeno"
+    items:
+      - >-
+        **Urejanje obdrži spraševalca noter.** Če je oseba, ki je vprašala, še v strošku, njeno vprašanje preide na urejeno različico in čaka, da ga ona ali skrbnik zapre. Popravek zneska ni isto kot dogovor, da je popravljeno.
+      - >-
+        **Če te v strošku ni.** Strošek lahko postavijo pod vprašaj samo osebe v njem. Če se ti kaj zdi čudno, to povej v komentarjih ali vprašaj tistega, ki ga je dodal.
+      - >-
+        **Nekdo želi zapustiti skupino.** Odprto vprašanje ljudem v tem strošku prepreči odhod. Zapri vprašanje ali uredi strošek tako, da jih ni več v njem, in lahko gredo.
+  - heading: "Česa Side Badger tu ne počne"
+    items:
+      - "Ne odloča, kdo ima prav. Strošek drži zunaj stanj in shrani, kar se dogovorite."
+      - "Ne zahteva, da kdo potrdi stroške, preden štejejo. V čakanju je samo strošek, postavljen pod vprašaj."
+      - "Dela stroška ni mogoče zadržati. Postavi ga pod vprašaj in iz stanj izpade ves."
+      - "Denarja ne premika. Plačate si, kakor želite, in to zabeležite."
+exampleAfter: 3
+example:
+  heading: "Stanovanje po vinu"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "velik nakup"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "čistilka"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "vino za zabavo"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Ali lahko pod vprašaj postavim samo svoj delež?"
+      a: "Ne. Vprašanje zadrži cel strošek, za vse v njem. Če je narobe samo razdelitev, je popravek urejanje razdelitve."
+    - q: "Kdo lahko zapre vprašanje?"
+      a: "Oseba, ki ga je postavila, ali skrbnik skupine. Če oseba, ki je strošek dodala, ni skrbnik, ga ne more zapreti namesto spraševalca."
+    - q: "Ali urejanje stroška izbriše izvirnik?"
+      a: "Ne. Prejšnja različica se ohrani. Kdo lahko ureja, določajo dovoljenja skupine, zato je dobro najprej povedati hiši, ker se stanja spremenijo."

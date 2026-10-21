@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: "Daftar, jajak pendapat, dan komentar untuk grup | Side Badger"
+  description: "Komentari pengeluaran, pertanyakan yang janggal, buat daftar belanja, dan pilih vila lewat jajak pendapat. Rencanakan dulu, lalu bagi. Gratis, tanpa iklan."
+h1: "Rencanakan bersama, bagi sesudahnya"
+navLabel: "Rencanakan bersama"
+lead: "Daftar belanja dan tagihan belanja, akhirnya mau saling bicara. Side Badger memberi grup Anda tempat membicarakan uang sebelum dan sesudah dibelanjakan, dengan komentar di setiap pengeluaran, cara mempertanyakan yang tampak salah, daftar bersama, dan jajak pendapat untuk keputusan besar. Lalu Anda [membagi pengeluaran](page:feature/split-expenses) seperti biasa."
+cta:
+  heading: "Rencanakan dulu, lalu bagi"
+  body: "Buat akun gratis, mulai grup, dan taruh daftar, jajak pendapat, atau pertanyaan pertama tepat di samping uangnya. Tidak yakin apa yang terjadi selanjutnya? Lihat [cara kerja](page:how-it-works)."
+problem:
+  heading: "Obrolannya di sini, tagihannya di sana"
+  body: "Pengeluaran grup biasanya hidup di dua tempat. Angkanya di satu tempat, dan pertengkaran soal angka itu ada di obrolan yang sudah tergulir jauh sejak hari Selasa. Daftar belanja adalah foto kulkas. Vila diputuskan lewat acungan jempol dari sebagian besar orang, mungkin. Side Badger menyimpan perencanaan di dalam grup, di samping pengeluaran yang dibahas, jadi ada komentar di tempat biaya itu berada, daftar di tempat belanja itu terjadi, jajak pendapat untuk keputusan besar, dan cara untuk bilang \"tunggu, ini benar?\" tanpa menulis satu paragraf. Semuanya tetap berkisar pada uang grup, karena itulah gunanya grup."
+workflow:
+  heading: "Dari memilih vila sampai tagihan belanja"
+  steps:
+    - title: "Putuskan hal besar lewat pemungutan suara"
+      body: "Tambahkan jajak pendapat untuk keputusan yang menentukan tagihan, seperti vila mana. Pilih dua sampai sepuluh pilihan, tentukan berapa suara yang didapat tiap orang, lalu tutup saat semua sudah memilih dan pemenangnya ditandai."
+      shot: S17
+      shotAlt: "Jajak pendapat yang sudah ditutup dengan pilihan pemenang ditandai dan jumlah suara di samping tiap pilihan"
+    - title: "Tulis daftar belanja bersama"
+      body: "Mulai daftar bersama, tambahkan barang, dan centang saat masuk troli. Belanjaannya dimasukkan sesudahnya sebagai pengeluaran."
+      shot: S16
+      shotAlt: "Daftar belanja bersama dengan beberapa barang yang sudah dicentang dan hitungan kemajuan"
+    - title: "Bicarakan biaya di tempatnya berada"
+      body: "Beri komentar pada pengeluarannya sendiri, lampirkan struk, dan beri reaksi dengan emoji. Percakapan tetap berada di samping angka yang dibahas."
+      shot: S08
+      shotAlt: "Sebuah pengeluaran dengan detailnya, gambar mini struk, utas komentar, dan reaksi emoji"
+    - title: "Pertanyakan yang tampak janggal"
+      body: "Jika grup mengaktifkan pertanyaan pengeluaran, siapa pun yang termasuk dalam sebuah pengeluaran bisa memilih **Saya punya pertanyaan**. Pengeluaran itu tetap di luar saldo sampai pertanyaannya ditangani."
+      shot: S18
+      shotAlt: "Daftar pengeluaran dengan lencana Dipertanyakan dan filter Hanya dipertanyakan"
+    - title: "Lihat apa yang berubah, dan siapa yang mengubahnya"
+      body: "Umpan aktivitas dan lonceng notifikasi menampilkan yang baru di seluruh grup Anda. Notifikasi push tersedia jika Anda mau."
+      shot: S19
+      shotAlt: "Dropdown notifikasi dengan daftar aktivitas terbaru"
+options:
+  heading: "Opsi"
+  items: []
+example:
+  heading: "Tiga teman serumah, satu tagihan wine yang dipertanyakan"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "belanja besar"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "jasa kebersihan"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "wine pesta"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Komentar dan reaksi, di samping angkanya"
+    body: "Setiap pengeluaran punya utas komentarnya sendiri, begitu juga grup, tiap daftar, dan tiap jajak pendapat. Tanyakan kenapa taksinya semahal itu di bawah taksinya, bukan di obrolan yang tak pernah digulir kembali oleh siapa pun. Tambahkan foto struk atau PDF pemesanan, lalu beri reaksi jempol, hati, tertawa, wah, sedih, atau rayakan pada pengeluaran, pembayaran, dan komentar. Rayakan pembayaran saat sudah masuk. Itu yang paling mendekati tepuk tangan di Side Badger."
+  - heading: "Pertanyakan pengeluaran tanpa memulai pertengkaran"
+    body: "Saat grup mengaktifkan pertanyaan pengeluaran, siapa pun yang termasuk dalam sebuah pengeluaran bisa memilih **Saya punya pertanyaan** dan menjelaskan alasannya. Pertanyaan itu diposting sebagai komentar pada pengeluaran, pengeluaran mendapat lencana **Dipertanyakan**, dan seluruh pengeluaran keluar dari saldo semua orang sampai pertanyaannya ditangani."
+    items:
+      - "**Mengaktifkannya.** Secara bawaan mati. Admin mengaktifkan **Izinkan pertanyaan pengeluaran** di pengaturan grup, di bawah **Fitur**."
+      - "**Menutupnya.** Orang yang bertanya, atau admin, memilih **Tutup pertanyaan**. Jika beberapa orang mempertanyakan pengeluaran yang sama, pengeluaran itu kembali ke saldo saat pertanyaan terakhir ditutup."
+      - "**Mengeditnya.** Saat sebuah pengeluaran diedit, pertanyaan yang terbuka berlanjut ke versi baru bagi semua orang yang masih punya bagian di dalamnya. Pertanyaan orang yang dikeluarkan oleh edit itu berakhir bersama versi lama, jadi tidak ada lagi yang perlu mereka tutup."
+      - "**Menemukannya.** Daftar pengeluaran punya filter **Hanya dipertanyakan**. Ini bukan langkah persetujuan: hanya pengeluaran yang dipertanyakan seseorang yang tertahan, dan yang lain dihitung begitu ditambahkan."
+  - heading: "Bagaimana sebuah pertanyaan berjalan"
+    body: "Tom menambahkan wine pesta senilai £45, dibagi di antara ketiga teman serumah. Aisha tidak minum, jadi ia mengajukan pertanyaan, dan selagi terbuka, wine itu tidak dihitung untuk siapa pun. Rumah sepakat bahwa wine itu urusan Tom dan Priya, jadi Tom mengedit pembagiannya menjadi dua orang itu. Aisha tidak lagi ada di dalam pengeluaran itu, jadi pertanyaannya berakhir bersama versi sebelumnya, yang tetap disimpan, dan wine kembali ke saldo seketika menjadi £22,50 per orang, bukan £15 per orang. Seandainya Aisha tetap berada di pengeluaran itu, pertanyaannya akan berlanjut dan menunggu dia atau admin menutupnya. Di bawah ini, £48 milik Aisha terdiri dari £28 dari belanja dan £20 dari jasa kebersihan, dan £10,50 milik Priya adalah bagiannya sebesar £70,50 (£28, £20, dan £22,50) dikurangi £60 yang ia bayar. Pertengkaran yang benar-benar khas [teman serumah](page:use-case/housemates). Untuk cara menyusun sebuah pertanyaan, lihat [apa yang dilakukan saat seseorang mempersoalkan pengeluaran bersama](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Daftar bersama, untuk belanjaan"
+    body: "Mulai daftar di grup, beri nama seperti Daftar Belanja, tambahkan barang, dan centang satu per satu. Seret barang ke urutan yang lebih baik, saksikan hitungan kemajuan naik, dan beri komentar pada daftar saat seseorang membeli susu oat yang salah. Arsipkan daftar yang sudah selesai untuk merapikannya (**Tampilkan yang diarsipkan** mengembalikannya), atau salin daftar untuk dipakai lagi. Simpan daftar belanja bersama di samping tagihan belanja, supaya daftar menyebut apa yang harus dibeli dan pengeluaran menyebut berapa harganya. Siapa yang bisa membuat dan mengedit daftar bergantung pada izin grup, yang dijelaskan di [grup dan izin](page:feature/groups-and-permissions)."
+  - heading: "Jajak pendapat, anonim jika Anda mau"
+    body: "Tanyakan kepada grup sesuatu yang menentukan tagihan, seperti vila mana, berapa anggaran kado, atau apakah naik perahu itu sepadan. Sebuah jajak pendapat punya satu pertanyaan dan dua sampai sepuluh pilihan. Anda menentukan berapa suara yang didapat tiap orang, dari satu pilihan tunggal sampai sepuluh, dan apakah pemungutan suaranya anonim. **Pemungutan suara anonim** menyembunyikan siapa memilih apa, dan tidak bisa diubah setelah suara pertama masuk. Orang bisa mengubah atau menghapus suaranya sampai jajak pendapat ditutup, dan Anda bisa membukanya kembali jika grup berubah pikiran. Memilih vila adalah inti dari [perjalanan grup](page:use-case/group-trips), dan menyepakati anggaran kado adalah klasik untuk [acara dan perayaan](page:use-case/events-and-celebrations)."
+  - heading: "Umpan aktivitas, supaya tak ada yang berubah diam-diam"
+    body: "Setiap grup punya riwayat aktivitas, dan lonceng notifikasi mengumpulkan aktivitas dari semua grup Anda di satu tempat. Tambahkan pengeluaran dan semua orang langsung melihatnya, tanpa menyegarkan halaman, dan umpannya menunjukkan apa yang berubah dan siapa yang mengubahnya. Itu mencakup pengeluaran yang ditambahkan, diedit, atau dihapus, pertanyaan yang diajukan dan ditutup, komentar, perubahan daftar dan jajak pendapat, serta pembayaran yang dicatat."
+  - heading: "Notifikasi push, jika Anda mau"
+    body: "Notifikasi push bersifat opsional. Aktifkan di **Pengaturan** akun Anda, di bawah **Notifikasi**, dan perangkat Anda memberi tahu saat ada aktivitas baru di grup Anda, seperti pengeluaran atau komentar baru. Setiap perangkat diaktifkan terpisah, dan peramban Anda meminta izin terlebih dahulu. Di iPhone atau iPad, notifikasi hanya bekerja di aplikasi yang ditambahkan ke Layar Utama, yang dijelaskan di halaman [aplikasi web](page:feature/web-app). Anggap sebagai kemudahan, bukan janji, karena pengiriman tidak dijamin."
+limits:
+  heading: "Batasan"
+  items:
+    - "Komentar, daftar, dan jajak pendapat dibuat untuk uang grup. [Ketentuan layanan](page:terms) meminta agar semua yang diposting berkaitan dengan keuangan grup, jadi ini tempat merencanakan pengeluaran, bukan obrolan umum atau aplikasi daftar tugas."
+    - "Sebuah komentar bisa sampai 500 karakter, dengan hingga tiga lampiran berupa gambar atau PDF masing-masing hingga 5 MB. Hanya penulisnya yang bisa menghapus komentar."
+    - "Pertanyaan pengeluaran mati secara bawaan, dan admin mengaktifkannya untuk tiap grup. Hanya orang yang termasuk dalam sebuah pengeluaran yang bisa mempertanyakannya, mematikan fitur ini menghapus semua pertanyaan yang terbuka, dan tak ada yang bisa keluar dari grup selagi pengeluaran yang melibatkannya punya pertanyaan terbuka."
+    - "Satu grup bisa berisi hingga 100 daftar, masing-masing dengan hingga 200 item sepanjang hingga 500 karakter. Izin grup menentukan siapa yang bisa membuat, mengedit, dan menghapus daftar, dan grup yang terkunci tidak mengizinkan perubahan."
+    - "Satu grup bisa berisi hingga 50 jajak pendapat, masing-masing dengan dua sampai sepuluh pilihan dan hingga sepuluh suara per orang. Jajak pendapat tidak punya tenggat dan tidak ditutup sendiri."
+    - "Riwayat aktivitas disimpan selama 90 hari."
+    - "Notifikasi push harus diaktifkan sendiri untuk tiap akun dan tiap perangkat. Notifikasi memerlukan peramban yang mendukungnya dan izin Anda, di iPhone dan iPad hanya bekerja dari aplikasi yang ditambahkan ke Layar Utama, dan pengirimannya tidak dijamin. Tidak ada peringatan lewat email atau pesan teks untuk aktivitas dan tidak ada pengingat pembayaran, jadi menagih pembayaran tetap urusan Anda."
+useCasesHeading: "Di mana merencanakan bersama membantu"
+faq:
+  heading: "Pertanyaan"
+  items:
+    - q: "Bisakah suara dibuat anonim?"
+      a: "Bisa. Aktifkan **Pemungutan suara anonim** saat membuat jajak pendapat dan siapa memilih apa akan disembunyikan. Putuskan sebelum suara pertama, karena tidak bisa diubah sesudahnya."
+    - q: "Bisakah jajak pendapat ditutup sendiri?"
+      a: "Tidak. Jajak pendapat tidak punya tenggat, jadi orang yang membuatnya memilih **Tutup jajak pendapat** setelah grup memutuskan. Jika grup berubah pikiran, **Buka kembali jajak pendapat** mengembalikannya."
+    - q: "Berapa banyak item yang bisa dimuat sebuah daftar?"
+      a: "Hingga 200 item per daftar dan hingga 100 daftar per grup. Setiap item bisa sampai 500 karakter, yang berarti banyak sekali susu oat."
+    - q: "Siapa yang bisa menutup pertanyaan, dan apa yang terjadi pada pengeluaran selama itu?"
+      a: "Orang yang bertanya, atau admin grup. Selama pertanyaan terbuka, seluruh pengeluaran berada di luar saldo semua orang. Pengeluaran itu kembali saat pertanyaan terbuka terakhir padanya ditutup, atau saat sebuah edit mengeluarkan orang yang bertanya dari pengeluaran itu."
+    - q: "Bisakah saya memakai daftar dan komentar sebagai aplikasi daftar tugas atau obrolan grup?"
+      a: "Tidak. Komentar, daftar, dan jajak pendapat dibuat untuk uang grup, sesuai permintaan [ketentuan layanan](page:terms). Bayangkan daftar belanja, jajak pendapat anggaran, dan \"kenapa ini £45?\"."
+    - q: "Apakah Side Badger akan mengirim email tentang aktivitas?"
+      a: "Tidak. Tidak ada peringatan lewat email atau pesan teks untuk aktivitas. Anda bisa mengaktifkan notifikasi push di tiap perangkat, dan lonceng notifikasi di aplikasi menunjukkan apa yang baru."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name

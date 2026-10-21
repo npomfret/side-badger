@@ -1,0 +1,103 @@
+translatedFrom: "a2338738"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Jak rozdělit nájem podle velikosti pokoje | Side Badger"
+  description: "Větší pokoj, větší podíl. Oddělte společné místnosti, zbytek rozdělte podle podlahové plochy a procenta zadejte jednou. Výpočty pro tři spolubydlící."
+h1: "Jak rozdělit nájem podle velikosti pokoje"
+navLabel: "Nájem podle velikosti pokoje"
+lead: "Rozhodněte, kolik z nájmu připadá na společné místnosti, a tuto část rozdělte rovným dílem. Zbytek rozdělte podle podlahové plochy ložnic. Zaokrouhlete na celá procenta, jednou je zadejte u nájmu v Side Badger a výdaj každý měsíc zkopírujte."
+cta:
+  heading: "Zadejte nájem jednou provždy"
+  body: "Vytvořte si bezplatný účet, založte skupinu pro byt a zadejte nájem s dohodnutými procenty. Příští měsíc stačí kopie. Chcete nejdřív prohlídku? Podívejte se, [jak to funguje](page:how-it-works), nebo [co pokrývá verze zdarma](page:pricing)."
+sections:
+  - heading: "Tři lidé, jeden byt, jedna hádka"
+    body: "Priya, Tom a Aisha sdílejí byt za 1 950 £ měsíčně. Celý rok si nájem dělili na třetiny, protože to bylo snadné. Pak Aisha změřila svůj pokoj. Priyin pokoj má 16 m², Tomův 12 m² a Aishin 10 m², takže Aisha platila stejně jako Priya za pokoj o víc než třetinu menší. Nikdo se nezachoval nerozumně. Nikdo to jen nespočítal. Nad jídlem z rozvozu se nejdřív shodli na jednom pravidle. Z nájmu připadá 40 % na kuchyni, koupelnu a obývák, které využívají všichni tři."
+  - heading: "Postup s vypsanými výpočty"
+    body: "Čtyři kroky, jeden metr a kalkulačka v telefonu."
+    items:
+      - "**Oddělte společnou část.** Skupina se dohodne, jaký podíl z nájmu připadne na místnosti, které používají všichni. U tohoto bytu je to 40 %, což je mezi třemi lidmi 13,33 % na hlavu."
+      - "**Zbytek rozdělte podle podlahové plochy.** Ostatních 60 % se dělí podle velikosti ložnic. Ložnice mají dohromady 38 m² (16 + 12 + 10), takže Priyin díl je 60 % × 16/38, tedy 25,26 %."
+      - "**Sečtěte obě části.** Priya: 25,26 % + 13,33 % = 38,6 %. Tom: 60 % × 12/38 = 18,95 %, plus 13,33 % je 32,3 %. Aisha: 60 % × 10/38 = 15,79 %, plus 13,33 % je 29,1 %."
+      - "**Zaokrouhlete a zkontrolujte.** Celá procenta se snáz píšou i probírají, takže 38,6 % se změní na 39 %, 32,3 % na 32 % a 29,1 % na 29 %. Ověřte, že 39 + 32 + 29 dává 100. Pokud zaokrouhlení vyjde na 99 nebo 101, skupina se dohodne, komu se číslo posune o jeden procentní bod."
+  - heading: "Jak vypadal měsíc v bytě"
+    body: "Nájem při 39 %, 32 % a 29 % vychází na 760,50 £, 624,00 £ a 565,50 £. Priya zaplatila pronajímateli, takže za celý měsíc se jí dluží 1 142,50 £, zatímco Tom dluží 566,00 £ a Aisha 576,50 £. Side Badger navrhne dvě platby, obě pro Priyu."
+  - heading: "Nastavení v Side Badger"
+    body: "Jeden večer, z větší části strávený debatou o těch 40 %."
+    items:
+      - "**Založte skupinu.** Na nástěnce zvolte **Vytvořit skupinu** a pojmenujte ji podle bytu. Zvolte **Pozvat ostatní** a pošlete odkaz nebo QR kód. Každý se přihlásí nebo si vytvoří bezplatný účet a vybere si jméno, pod kterým se má v této skupině zobrazovat."
+      - "**Přidejte nájem.** Zvolte **Přidat výdaj**. Zadejte popis a částku a pod **Kdo platil?** vyberte toho, kdo zaplatil pronajímateli. Všechny tři osoby nechte pod **Rozdělit mezi**, pak pod **Jak rozdělit** zvolte **Procenta** a zadejte 39, 32 a 29. Formulář upozorní, pokud procenta nedávají dohromady 100. Zvolte **Uložit výdaj**."
+      - "**Přidejte účty.** Energie a internet jsou samostatné výdaje s vlastními plátci. Pod **Jak rozdělit** nechte **Rovnoměrně**."
+      - "**Příští měsíc ho zkopírujte.** Otevřete nájem z minulého měsíce a zvolte **Kopírovat výdaj**. Kopie si ponechá plátce, částku i rozdělení a převezme dnešní datum. Pokud se nájem změnil, upravte částku a zvolte **Vytvořit kopii**."
+      - "**Zkontrolujte, kdo komu dluží.** Ukáže to sekce **Zůstatky**. Zaplaťte si, jak chcete, a platbu pak zaznamenejte pod **Vyrovnat dluhy**."
+  - heading: "Pokoje s koupelnou, komory a stěhování"
+    items:
+      - "**Pokoje s vlastní koupelnou a komory.** Podlahová plocha je jen výchozí bod. Pokoj s vlastní koupelnou má větší hodnotu než stejně velký pokoj bez ní a komora, do které se vejde postel a jedna optimisticky vtěsnaná židle, má hodnotu menší. Upravte procenta po dohodě, ověřte, že stále dávají dohromady 100, a konečná čísla si zapište někam, kde je uvidí celý byt."
+      - "**Někdo se odstěhuje uprostřed měsíce.** Spočítejte, kolik každý za ten měsíc dluží, a nájem za tento měsíc zadejte s rozdělením **Přesné částky** místo **Procenta**. Částky musí dávat dohromady nájem. Udělejte to dřív, než dotyčný odejde. Nikdo nemůže opustit skupinu, dokud dluží nebo se mu dluží peníze, a výdaj, na kterém se podílí někdo, kdo skupinu opustil, je už jen ke čtení."
+      - "**Někdo se nastěhuje.** Změřte znovu, přepočítejte s novými velikostmi pokojů a nová procenta používejte od příštího nájmu. Dřívější měsíce zůstanou, jaké byly."
+  - heading: "Co Side Badger tady nedělá"
+    items:
+      - "Neměří vaše pokoje a nevybírá procenta. Podlahové plochy i těch 40 % jsou věcí dohody ve skupině."
+      - "Nemá opakované účty, takže nájem z minulého měsíce kopírujete pokaždé znovu."
+      - "Nikdy nepřesouvá peníze a pronajímateli neplatí. Platíte si navzájem, jak chcete, a platbu zaznamenáte."
+      - "Neví, co říká vaše nájemní smlouva. Vede přehled mezi lidmi ve skupině."
+exampleAfter: 2
+example:
+  heading: "Měsíc v bytě"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "Nájem"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "Účet za energie"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "Internet"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Co když má někdo větší pokoj, ale méně světla?"
+      a: "Podlahová plocha je jen výchozí bod, takže se skupina může dohodnout na úpravě. Uberte tmavému pokoji bod či dva, přidejte je ostatním a ověřte, že procenta stále dávají dohromady 100. Side Badger uloží, na čem se dohodnete, a nijak to nehodnotí."
+    - q: "Mají se podle velikosti pokoje dělit i účty?"
+      a: "Obvykle ne. Energie a internet používají všichni, takže je jednodušší rovnoměrné dělení, jako v příkladu výše. Pokud je jeden spolubydlící doma celý den, může se skupina dohodnout jinak, například na přesných částkách. Možnosti shrnuje [dělení výdajů](page:feature/split-expenses)."
+    - q: "Můžeme rozdělení později změnit?"
+      a: "Ano, u nových výdajů. Změňte procenta při kopírování nájmu a dřívější měsíce zůstanou, jaké byly. Chcete-li opravit starší výdaj, upravte ho, pokud to oprávnění skupiny dovolují, a nejdřív to řekněte ostatním v bytě, protože se změní zůstatky. Předchozí verze se uchovává."

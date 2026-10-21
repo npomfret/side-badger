@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Groepsbeheer en machtigingen voor gedeelde uitgaven | Side Badger"
+  description: "Nodig mensen uit via link of QR-code, keur goed wie erin mag, maak kijkers, stel machtigingen in en vergrendel de groep als het klaar is. Jouw groep, jouw regels, binnen de perken."
+h1: "Groepsbeheer en machtigingen: jouw regels, binnen de perken"
+navLabel: "Groepen en machtigingen"
+lead: "Sommige groepen hebben een penningmeester nodig. Side Badger heeft daar een instelling voor. Nodig mensen uit met een link of QR-code, bepaal wie erin mag en kies wie de cijfers mag wijzigen. Een klein groepje vrienden kan dit allemaal negeren, want nieuwe groepen starten wagenwijd open."
+cta:
+  heading: "Klaar voor een nette groep?"
+  body: "Maak een account aan, start een groep en stuur de uitnodigingslink. Laat alles open, of scherp de regels aan als de groep groter of kieskeuriger wordt."
+problem:
+  heading: "Iemand moet de cijfers netjes houden"
+  body: "Vier huisgenoten kunnen op vertrouwen draaien. Dertig gasten op een bruiloftsweekend waarschijnlijk niet. Maak een groep per huis, reis of evenement, met tot 50 personen erin, en elke groep houdt zijn eigen leden, zijn eigen rollen en zijn eigen regels bij. Je dashboard toont ze allemaal, met hoe je er in elk voor staat, op één scherm. De meeste groepen komen nooit aan de instellingen. De groepen die dat wel doen, hebben meestal iemand die georganiseerd genoeg is om ze te willen."
+workflow:
+  heading: "Van lege groep tot vergrendelde groep"
+  steps:
+    - title: "Nodig uit met een link of QR-code"
+      body: "Open **Anderen uitnodigen**, kies hoe lang de link geldig blijft (15 minuten, 1 uur, 1 dag of 5 dagen) en kopieer dan de link of toon de QR-code zodat mensen hem kunnen scannen. Je kunt ook mensen uitnodigen met wie je al een andere groep deelt, vanuit de app zelf."
+      shot: S03
+      shotAlt: "Het uitnodigingsvenster met een groepslink, de QR-code en de keuze hoe lang de link geldig blijft"
+    - title: "Laat ze eerst kijken voor ze meedoen"
+      body: "Wie de link heeft, logt in of maakt een account, ziet een voorbeeld van de groep en kiest de naam die hij of zij erin wil gebruiken. Daarna drukt die persoon op **Lid worden van groep**."
+      shot: S04
+      shotAlt: "Het voorbeeld van een groep, getoond aan een aangemelde persoon voor die lid wordt"
+    - title: "Keur goed wie erin mag"
+      body: "Zet goedkeuring aan en mensen die de link gebruiken wachten als wachtende leden tot een beheerder ze binnenlaat. Beheerders vinden ze onder **Wachtende leden** in **Beveiliging en machtigingen** en kiezen **Goedkeuren** of **Afwijzen**. Tot dan kan een wachtende persoon niets in de groep zien."
+      shot: S14
+      shotAlt: "Wachtende leden die wachten tot een beheerder ze goedkeurt of afwijst"
+    - title: "Kies wie wat mag wijzigen"
+      body: "Kies **Open samenwerking** of **Beheerde groep**, of stel de machtigingen een voor een in. Geef dan elke persoon een rol: beheerder, lid of kijker. Alleen beheerders kunnen machtigingen en rollen wijzigen."
+      shot: S13
+      shotAlt: "Het tabblad Beveiliging in de groepsinstellingen, met de twee voorinstellingen en de aangepaste machtigingen"
+    - title: "Vergrendel de groep als het klaar is"
+      body: "Als de reis voorbij is en de cijfers geregeld zijn, kan een beheerder **Groep vergrendelen** aanzetten. Niemand kan dan uitgaven toevoegen of wijzigen, betalingen registreren of lijsten en peilingen bewerken, en een banner zegt dat ook. Niemand kan nog stiekem een late taxi toevoegen. Duikt er toch een op, dan kan een beheerder de groep ontgrendelen."
+      shot: S15
+      shotAlt: "Een groep met de banner die zegt dat ze vergrendeld is"
+options:
+  heading: "Beheerders, leden en kijkers"
+  items:
+    - title: "Beheerder"
+      body: "Leidt de groep. Beheerders keuren nieuwe leden goed, wijzigen rollen en machtigingen, vergrendelen en ontgrendelen de groep en sluiten ze af. Wie een groep maakt, begint als beheerder ervan, en een groep zit nooit zonder, want de laatste beheerder kan geen lagere rol krijgen."
+    - title: "Lid"
+      body: "Doet mee. Wat een lid mag, hangt af van de machtigingen van de groep. In een groep met Open samenwerking is dat bijna alles. In een beheerde groep kunnen leden enkel de uitgaven en lijsten wijzigen die ze zelf gemaakt hebben."
+    - title: "Kijker"
+      body: "Ziet alles en wijzigt niets. Een kijker kan geen uitgaven of lijsten toevoegen of bewerken, geen mensen uitnodigen, geen instellingen wijzigen en niet aan de headerafbeelding komen. Handig voor wie de cijfers wil volgen en belooft er niet aan te prutsen."
+sections:
+  - heading: "Open, beheerd of je eigen regels"
+    body: "Nieuwe groepen starten met **Open samenwerking**, waar iedereen mensen kan uitnodigen, uitgaven kan wijzigen en lijsten kan bewerken, en waar nieuwe leden automatisch toetreden. **Beheerde groep** is voor wanneer iemand de volwassene moet zijn. Je kunt de zeven machtigingen ook een voor een instellen, en wijzig je er een met de hand, dan schakelt de groep over op aangepast. Wat je ook kiest, alleen beheerders kunnen de machtigingen zelf wijzigen, en elke wijziging verschijnt in de activiteitenfeed. Een huis vol [huisgenoten](page:use-case/housemates) kan alles open laten. Een groot [evenement of feest](page:use-case/events-and-celebrations) wil vaak een beheerde groep, zodat iemand bepaalt wie erin komt. Is dit allemaal nieuw voor je? [Zo werkt het](page:how-it-works) loopt de hele reis af, van de eerste uitgave tot quitte staan."
+    items:
+      - "**Wie kan uitgaven bewerken.** Open samenwerking: elk lid. Beheerde groep: makers en beheerders."
+      - "**Wie kan uitgaven verwijderen.** Open samenwerking: elk lid. Beheerde groep: makers en beheerders."
+      - "**Wie kan lijsten bewerken.** Open samenwerking: elk lid. Beheerde groep: makers en beheerders."
+      - "**Wie kan leden uitnodigen.** Open samenwerking: elk lid. Beheerde groep: alleen beheerders."
+      - "**Goedkeuring nieuw lid.** Open samenwerking: automatisch. Beheerde groep: goedkeuring door beheerder vereist."
+      - "**Wie kan instellingen wijzigen.** Open samenwerking: elk lid. Beheerde groep: alleen beheerders."
+      - "**Wie kan de headerfoto wijzigen.** Open samenwerking: elk lid. Beheerde groep: alleen beheerders."
+  - heading: "Jouw naam, jouw foto, jouw headerafbeelding"
+    body: "Elke groep heeft zijn eigen rolverdeling. Kies de naam die mensen in elke groep zien (2 tot 50 tekens, en uniek binnen de groep) en welke van je profielfoto’s je daar draagt. Wees **Sam** in het huis en **Sam (heeft de auto)** op de reis. Wie instellingen mag wijzigen, kan de groep hernoemen en de beschrijving bewerken. De headerafbeelding, een JPEG, PNG, GIF of WebP tot 10 MB, heeft een eigen machtiging."
+  - heading: "Archiveren, vergrendelen of sluiten"
+    body: "Drie manieren om een groep weg te leggen, van de minst tot de meest ingrijpende."
+    items:
+      - "**Archiveren** verbergt de groep op je eigen dashboard, en op dat van niemand anders. Je kunt ze nog openen en gebruiken zoals voorheen, en **Groep dearchiveren** brengt ze terug."
+      - "**Vergrendelen** bevriest wijzigingen tot een beheerder ontgrendelt. Iedereen kan de groep en haar geschiedenis nog lezen."
+      - "**Sluiten** is definitief, en voor iedereen. Alleen een beheerder kan het doen, door ter bevestiging de naam van de groep te typen, en daarna kan niemand de groep nog openen."
+  - heading: "Een groep verlaten"
+    body: "Iedereen kan vertrekken zodra er is afgerekend. Je kunt niet vertrekken zolang je geld schuldig bent of tegoed hebt, al is het maar in één valuta, zolang een open vraag over een uitgave jou betreft, of als je de laatste beheerder of het enige lid bent. [Registreer de betaling](page:feature/settle-up), regel de [vraag over de uitgave](page:guide/what-to-do-when-someone-disputes-a-shared-expense) of maak iemand anders beheerder, en ga dan. Om terug te komen heb je een nieuwe uitnodiging nodig."
+limits:
+  heading: "Binnen de perken: het kleine lettertje"
+  items:
+    - "Een groep telt tot 50 personen."
+    - "Alleen beheerders kunnen machtigingen en rollen wijzigen. De laatste beheerder kan geen lagere rol krijgen."
+    - "Zet je het bewerken van uitgaven op **Alleen beheerders**, dan kunnen ook enkel beheerders uitgaven toevoegen."
+    - "Een vergrendeling stopt wijzigingen aan uitgaven, nieuwe betalingen, lijsten en peilingen. Iedereen kan de groep en haar geschiedenis nog lezen, en op betalingen reageren."
+    - "Sluiten is definitief. De app kan een gesloten groep niet heropenen."
+    - "Een nieuwe uitnodigingslink maken annuleert de oude niet. Elke link blijft geldig tot zijn eigen vervaldatum, dus kies een korte als je je zorgen maakt over waar hij terecht kan komen."
+    - "Uitnodigingen in de app tonen mensen uit je 10 meest recente actieve groepen. Alle anderen hebben de link nodig, en wie mag uitnodigen, hangt af van de machtigingen van de groep."
+    - "Meedoen vraagt een account, en mensen moeten hun e-mailadres verifiëren voor ze iets kunnen toevoegen."
+useCasesHeading: "Waar wat orde helpt"
+faq:
+  heading: "Vragen"
+  items:
+    - q: "Kan een kijker uitgaven toevoegen?"
+      a: "Nee. Een kijker ziet alles en wijzigt niets. Die kan geen uitgaven of lijsten toevoegen of bewerken, geen mensen uitnodigen en geen instellingen wijzigen."
+    - q: "Kan iemand vertrekken terwijl die geld schuldig is?"
+      a: "Nee. Niemand kan een groep verlaten zolang die geld schuldig is of tegoed heeft, al is het maar in één valuta. Reken eerst af en ga dan."
+    - q: "Wat gebeurt er als een groep gesloten wordt?"
+      a: "Niemand kan ze nog openen. Alleen een beheerder kan een groep sluiten, ter bevestiging moet die de naam van de groep typen, en de groep wordt voor iedereen onbeschikbaar. Wil je alleen wijzigingen stoppen, vergrendel ze dan. Wil je ze alleen van je eigen dashboard halen, archiveer ze dan."
+    - q: "Kan ik een vergrendeling ongedaan maken?"
+      a: "Ja. Een beheerder kan de groep ontgrendelen, en wijzigingen werken weer."
+    - q: "Moet ik mensen goedkeuren voor ze meedoen?"
+      a: "Enkel als je dat wilt. Nieuwe groepen starten met Open samenwerking, waar mensen die de link gebruiken automatisch meedoen. Zet goedkeuring door een beheerder aan, of kies Beheerde groep, en iedereen wacht tot een beheerder hem of haar binnenlaat."
+    - q: "Hoeveel mensen kunnen er in een groep zitten?"
+      a: "Tot 50."

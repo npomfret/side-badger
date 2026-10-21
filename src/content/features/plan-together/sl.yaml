@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: "Skupni seznami, ankete in komentarji za stroške | Side Badger"
+  description: "Komentiraj stroške, postavi pod vprašaj čudnega, vodi skupni nakupovalni seznam in glasuj o vili. Najprej načrtuj, nato razdeli. Brezplačno, brez oglasov."
+h1: "Načrtuj skupaj, deli potem"
+navLabel: "Načrtuj skupaj"
+lead: "Nakupovalni seznam in nakupovalni račun se končno razumeta. Side Badger skupini nudi prostor, kjer se o denarju pogovarja pred porabo in po njej, s komentarji pri vsakem strošku, načinom, kako postaviti pod vprašaj tiste, ki zgledajo narobe, ter skupnimi seznami in anketami za velike odločitve. Nato [stroške razdeliš](page:feature/split-expenses) kot običajno."
+cta:
+  heading: "Najprej načrtuj, nato deli"
+  body: "Ustvari brezplačen uporabniški račun, ustanovi skupino in daj prvi seznam, anketo ali vprašanje tik ob denar. Ne veš, kaj sledi? Poglej, [kako deluje](page:how-it-works)."
+problem:
+  heading: "Klepet je tu, račun je tam"
+  body: "Skupna poraba običajno živi na dveh mestih. Številke so na enem, prepir o številkah pa v klepetu, ki je v torek odrinil iz vidnega polja. Nakupovalni seznam je fotografija hladilnika. O vili je odločil palec gor večine, verjetno. Side Badger načrtovanje ohranja v skupini, ob stroških, o katerih govori, zato je komentar tam, kjer je cena, seznam tam, kjer je trgovina, anketa za veliko odločitev in način, da rečeš „počakaj, ali je to prav?“, ne da bi napisal odstavek. Vse ostaja o denarju skupine, zaradi česar skupina sploh obstaja."
+workflow:
+  heading: "Od glasovanja o vili do nakupovalnega računa"
+  steps:
+    - title: "Daj veliko odločitev na glasovanje"
+      body: "Dodaj anketo za odločitev, ki določa račun, na primer katera vila. Izberi od dve do deset možnosti, določi, koliko glasov ima vsaka oseba, in jo zapri, ko so vsi glasovali in je zmagovalec označen."
+      shot: S17
+      shotAlt: "Zaprta anketa z označeno zmagovalno možnostjo in številom glasov ob vsaki možnosti"
+    - title: "Nakupovalni seznam sestavi skupaj z drugimi"
+      body: "Začni skupni seznam, dodaj postavke in jih odkljukaj, ko pristanejo v vozičku. Nakup nato vneseš kot strošek."
+      shot: S16
+      shotAlt: "Skupni nakupovalni seznam z nekaj odkljukanimi postavkami in štetjem napredka"
+    - title: "Pogovori se o ceni tam, kjer živi"
+      body: "Komentiraj sam strošek, priloži račun in se odzovi z emojijem. Pogovor ostane ob številki, o kateri govori."
+      shot: S08
+      shotAlt: "Strošek s podrobnostmi, sličico računa, nitjo komentarjev in odzivi z emojiji"
+    - title: "Postavi pod vprašaj tistega, ki je čuden"
+      body: "Če je skupina vklopila vprašanja o stroških, lahko vsak, ki je vključen v strošek, izbere **Imam vprašanje**. Strošek ostane zunaj stanj, dokler se vprašanje ne razreši."
+      shot: S18
+      shotAlt: "Seznam stroškov z značko Postavljeno pod vprašaj in filtrom Samo postavljeno pod vprašaj"
+    - title: "Poglej, kaj se je spremenilo in kdo je to naredil"
+      body: "Dnevnik dejavnosti in zvonec z obvestili kažeta, kaj je novega v vseh tvojih skupinah. Potisna obvestila so na voljo, če jih želiš."
+      shot: S19
+      shotAlt: "Spustni seznam obvestil s seznamom nedavne dejavnosti"
+options:
+  heading: "Možnosti"
+  items: []
+example:
+  heading: "Trije sostanovalci, en vprašljiv račun za vino"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "velik nakup"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "čistilka"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "vino za zabavo"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Komentarji in odzivi, ob številkah"
+    body: "Vsak strošek ima svojo nit komentarjev, prav tako skupina, vsak seznam in vsaka anketa. Vprašaj, zakaj je taksi stal toliko, pod taksijem, ne v klepetu, po katerem se nihče ne vrača. Dodaj fotografijo računa ali PDF rezervacije, nato se odzovi s palcem gor, srčkom, smehom, vau, žalostjo ali praznovanjem pri stroških, plačilih in komentarjih. Plačilo proslavi, ko prispe. Bližje aplosu Side Badger ne pride."
+  - heading: "Postavi strošek pod vprašaj brez prepira"
+    body: "Ko ima skupina vklopljena vprašanja o stroških, lahko vsak, ki je vključen v strošek, izbere **Imam vprašanje** in pove, zakaj. Vprašanje se objavi kot komentar ob strošku, strošek dobi značko **Postavljeno pod vprašaj**, celoten strošek pa izpade iz stanj vseh, dokler se vprašanje ne razreši."
+    items:
+      - "**Vklop.** Privzeto je izklopljeno. Administrator vklopi **Dovoli vprašanja o stroških** v nastavitvah skupine, pod **Funkcije**."
+      - "**Zaprtje.** Oseba, ki je vprašala, ali administrator izbere **Zapri vprašanje**. Če je isti strošek postavilo pod vprašaj več ljudi, se vrne v stanja, ko je zaprto zadnje vprašanje."
+      - "**Urejanje.** Ko se strošek uredi, se odprto vprašanje prenese na novo različico za vse, ki imajo v njem še vedno delež. Komur ga urejanje izpusti, se vprašanje konča s staro različico, zato mu ni ničesar več za zapreti."
+      - "**Iskanje.** Seznam stroškov ima filter **Samo postavljeno pod vprašaj**. To ni korak odobritve: zadržani so samo stroški, ki jih kdo postavi pod vprašaj, vse drugo šteje takoj, ko je dodano."
+  - heading: "Kako se vprašanje odvije"
+    body: "Tom doda 45 £ za vino za zabavo, razdeljeno med vse tri sostanovalce. Aisha ni pila, zato postavi vprašanje. Dokler je odprto, vino ne šteje nikomur. Hiša se strinja, da je vino Tomovo in Priyino, zato Tom razdelitev uredi na onadva. Aisha ni več v strošku, zato se njeno vprašanje konča z zgodnejšo različico, ki se ohrani, vino pa se takoj vrne v stanja, in sicer po 22,50 £ na osebo namesto po 15 £. Če bi Aisha ostala v strošku, bi se njeno vprašanje prenesilo in čakalo, da ga zapre ona ali administrator. Spodaj Aishinih 48 £ pomeni 28 £ nakupa in 20 £ čistilke, Priyinih 10,50 £ pa je njen delež 70,50 £ (28 £, 20 £ in 22,50 £) minus 60 £, ki jih je plačala. Zelo [sostanovalska](page:use-case/housemates) vrsta prepira. Kako vprašanje oblikovati, preberi pri [kaj storiti, ko nekdo izpodbija skupni strošek](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Skupni seznami, za nakupovanje"
+    body: "Začni seznam v skupini, poimenuj ga na primer Nakupovalni seznam, dodaj postavke in jih odkljukaj. Postavke povleci v boljši vrstni red, opazuj, kako raste štetje napredka, in komentiraj seznam, ko nekdo kupi napačno ovseno mleko. Končan seznam arhiviraj, da ga pospraviš (**Prikaži arhivirano** ga vrne), ali ga kopiraj za ponovno uporabo. Skupni nakupovalni seznam imej ob nakupovalnih računih, tako da seznam pove, kaj kupiti, strošek pa, koliko je stalo. Kdo sme ustvarjati in urejati sezname, je odvisno od dovoljenj skupine, ki jih pojasnjuje stran [skupine in dovoljenja](page:feature/groups-and-permissions)."
+  - heading: "Ankete, anonimne, če želiš"
+    body: "Vprašaj skupino nekaj, kar odloča o računu, na primer katera vila, koliko porabiti za darilo ali se izlet z ladjico splača. Anketa ima vprašanje in od dve do deset možnosti. Izbereš, koliko glasov ima vsaka oseba, od ene same izbire do deset, in ali je glasovanje anonimno. **Anonimno glasovanje** skrije, kdo je glasoval za kaj, in ga po prvem glasu ni mogoče več spremeniti. Ljudje lahko svoj glas spremenijo ali umaknejo, dokler se anketa ne zapre, ti pa jo lahko znova odpreš, če si skupina premisli. Izbira vile je točno to, iz česar so narejena [potovanja v skupini](page:use-case/group-trips), dogovor o proračunu za darilo pa je klasika za [dogodke in praznovanja](page:use-case/events-and-celebrations)."
+  - heading: "Dnevnik dejavnosti, da se nič ne spremeni na tihem"
+    body: "Vsaka skupina ima zgodovino dejavnosti, zvonec z obvestili pa zbira dejavnost iz vseh tvojih skupin na enem mestu. Dodaj strošek in vsi ga vidijo takoj, brez osveževanja, dnevnik pa pokaže, kaj se je spremenilo in kdo je to naredil. To zajema dodane, urejene ali izbrisane stroške, postavljena in zaprta vprašanja, komentarje, spremembe seznamov in anket ter zabeležena plačila."
+  - heading: "Potisna obvestila, če jih želiš"
+    body: "Potisna obvestila so izbirna. Vklopi jih v **Nastavitvah** računa, pod **Obvestila**, naprava pa te opozori, ko je v tvojih skupinah nova dejavnost, na primer nov strošek ali komentar. Vsaka naprava se vklopi posebej, brskalnik pa te najprej vpraša za dovoljenje. Na iPhonu ali iPadu delujejo samo v aplikaciji, dodani na domači zaslon, kar pojasnjuje stran [spletna aplikacija](page:feature/web-app). Obravnavaj jih kot udobje, ne kot obljubo, saj dostava ni zagotovljena."
+limits:
+  heading: "Omejitve"
+  items:
+    - "Komentarji, seznami in ankete so za denar skupine. [Pogoji](page:terms) zahtevajo, da je vse objavljeno povezano s financami skupine, zato je to mesto za načrtovanje porabe, ne splošen klepet ali aplikacija za opravila."
+    - "Komentar je lahko dolg do 500 znakov, z do tremi prilogami, ki so slike ali PDF-ji do 5 MB vsaka. Komentar lahko izbriše samo avtor."
+    - "Vprašanja o stroških so privzeto izklopljena, administrator pa jih vklopi za vsako skupino. Strošek lahko postavijo pod vprašaj samo osebe, ki so vanj vključene, izklop funkcije počisti vsa odprta vprašanja, nihče pa ne more zapustiti skupine, dokler ima strošek, pri katerem sodeluje, odprto vprašanje."
+    - "Skupina lahko vsebuje do 100 seznamov, vsak z do 200 postavkami po največ 500 znakov. Dovoljenja skupine določajo, kdo lahko ustvarja, ureja in briše sezname, zaklenjena skupina pa ne dovoljuje nobenih sprememb."
+    - "Skupina lahko vsebuje do 50 anket, vsaka z od dvema do desetimi možnostmi in do desetimi glasovi na osebo. Ankete nimajo roka in se ne zaprejo same."
+    - "Zgodovina dejavnosti se hrani 90 dni."
+    - "Potisna obvestila so izbirna za vsak račun in vsako napravo. Potrebujejo brskalnik, ki jih podpira, in tvoje dovoljenje, na iPhonu in iPadu delujejo samo iz aplikacije, dodane na domači zaslon, dostava pa ni zagotovljena. Za dejavnost ni opozoril po e-pošti ali SMS-u in ni opomnikov za plačila, zato je lovljenje plačila še vedno tvoje."
+useCasesHeading: "Kjer skupno načrtovanje pomaga"
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Ali so glasovi lahko anonimni?"
+      a: "Da. Ob ustvarjanju ankete vklopi **Anonimno glasovanje** in skrito bo, kdo je glasoval za kaj. Odloči se pred prvim glasom, ker se pozneje ne da spremeniti."
+    - q: "Ali se anketa lahko zapre sama?"
+      a: "Ne. Anketa nima roka, zato oseba, ki jo je ustvarila, izbere **Zapri anketo**, ko se skupina odloči. Če si skupina premisli, jo **Ponovno odpri anketo** vrne."
+    - q: "Koliko postavk lahko vsebuje seznam?"
+      a: "Do 200 postavk na seznam in do 100 seznamov na skupino. Vsaka postavka je lahko dolga do 500 znakov, kar je veliko ovsenega mleka."
+    - q: "Kdo lahko zapre vprašanje in kaj se medtem zgodi s stroškom?"
+      a: "Oseba, ki je vprašala, ali administrator skupine. Dokler je vprašanje odprto, je celoten strošek zunaj stanj vseh. Vrne se, ko je zaprto zadnje odprto vprašanje o njem ali ko urejanje osebo, ki je vprašala, izloči iz stroška."
+    - q: "Ali lahko sezname in komentarje uporabljam kot aplikacijo za opravila ali skupinski klepet?"
+      a: "Ne. Komentarji, seznami in ankete so za denar skupine, kar zahtevajo [pogoji](page:terms). Pomisli na nakupovalne sezname, proračunske ankete in „zakaj je to 45 £?“."
+    - q: "Ali mi bo Side Badger pošiljal e-pošto o dejavnosti?"
+      a: "Ne. Za dejavnost ni opozoril po e-pošti ali SMS-u. Potisna obvestila lahko vklopiš na vsaki napravi, zvonec z obvestili v aplikaciji pa kaže, kaj je novega."

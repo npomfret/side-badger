@@ -1,0 +1,114 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Comment régler les comptes après un voyage en groupe | Side Badger"
+  description: "Réglez avant la dispersion. Dix dettes emmêlées deviennent quatre paiements, enregistrés à mesure, et un paiement partiel passe aussi. Calculs pour cinq amis."
+h1: "Comment régler les comptes après un voyage en groupe"
+navLabel: "Régler après un voyage"
+lead: "Réglez avant que tout le monde se disperse. Ajoutez la dernière dépense, ouvrez les soldes du groupe et payez ce que vous devez d'après la courte liste, comme vous voulez. Puis enregistrez chaque paiement dans Side Badger pour que le solde s'efface pour tout le groupe. Pour cinq amis et cinq dépenses, dix dettes emmêlées se réduisent à quatre paiements."
+cta:
+  heading: "Bouclez les comptes avant que les photos n'arrivent"
+  body: "Créez un compte gratuit, lancez un groupe pour le prochain voyage et ajoutez chaque dépense au fur et à mesure. La courte liste de paiements vous attend quand vous arrivez à l'aéroport. Envie de voir d'abord [comment fonctionne le règlement](page:feature/settle-up) ?"
+sections:
+  - heading: "Cinq amis, cinq dépenses, une salle d'embarquement"
+    body: "Mo, Ines, Raf, Tess et Uma ont passé une semaine sur la côte. Mo a réservé l'appartement et payé les courses, Ines a réglé la sortie en bateau et Raf a pris en charge le grand dîner. Tess a pris le taxi de l'aéroport avec Uma et Mo, parce qu'Ines et Raf avaient le train. La carte d'Uma était restée à la maison, donc elle n'a rien payé. Cela fait cinq dépenses et 1 700 € en tout, et dans la salle d'embarquement, personne n'aurait su dire qui était en avance."
+  - heading: "Dix dettes, quatre paiements"
+    body: "L'appartement, le bateau, le dîner et les courses sont partagés à parts égales entre les cinq. Cela fait 200 €, 50 €, 60 € et 18 € chacun, donc Ines et Raf doivent 328 € chacun. Le taxi est partagé à trois, à 20 € chacun, donc Mo, Tess et Uma doivent 348 €. Mo a payé 1 090 € et doit 348 €, ce qui lui laisse 742 € à recevoir. Tous les autres ont payé moins que ce qu'ils doivent. Au final, Uma doit 348 €, Tess 288 €, Ines 78 € et Raf 28 €, et ces montants font les 742 € de Mo. Réglez chaque paire de personnes directement et vous obtenez dix dettes distinctes. Side Badger suggère plutôt quatre paiements, tous pour Mo."
+  - heading: "Réglez avant que tout le monde se disperse"
+    body: "Le meilleur moment, c'est la dernière soirée ou le trajet du retour, quand tout le monde est encore au même endroit et qu'une dette de 28 € est facile à mentionner. Ajoutez d'abord toutes les dépenses, taxi compris. Personne ne peut quitter un groupe tant qu'il doit de l'argent ou qu'on lui en doit, donc le compte doit de toute façon se clore un jour."
+    items:
+      - "**Vérifiez la liste.** Ouvrez le groupe et regardez les **Soldes**. Par défaut, vous voyez les dettes qui vous concernent. Choisissez **Tout afficher** pour voir la liste de tout le groupe."
+      - "**Payez comme vous voulez.** Virement bancaire, espèces, un service rendu depuis les dernières vacances. Side Badger ne fait pas circuler l'argent."
+      - "**Enregistrez-le.** Choisissez **Régler**. Sous **Règlement rapide**, chaque bouton est l'un de vos paiements suggérés, et en choisir un remplit le montant. Ajoutez une **Note** comme virement bancaire, vérifiez la **Date** (elle ne peut pas être dans le futur) et choisissez **Enregistrer Règlement**."
+      - "**Regardez-le s'effacer.** Le solde se met à jour pour tout le monde. Quand le dernier paiement est enregistré, les **Soldes** affichent **Tout est réglé !**"
+  - heading: "Payer une partie maintenant, le reste plus tard"
+    body: "Uma peut envoyer 200 € ce soir et le reste à la fin du mois. Elle enregistre 200 €, et le formulaire l'avertit qu'elle devra encore 148 € à Mo ensuite, soit 348 € moins 200 €. Enregistrez-le, et les 148 € restent sur son solde jusqu'à ce qu'elle enregistre le reste. L'avertissement fonctionne aussi dans l'autre sens. Si un zéro de trop transforme 348 € en 3 480 €, le formulaire dit qu'elle ne doit que 348 € à Mo et qu'enregistrer créerait une dette dans le sens inverse. Corrigez le zéro avant d'enregistrer."
+  - heading: "Corriger les erreurs, et applaudir les paiements"
+    items:
+      - "**Un paiement erroné.** Seule la personne qui a enregistré un paiement peut le modifier. Elle ou un admin du groupe peut le supprimer, et il peut alors être enregistré de nouveau."
+      - "**Un paiement qui mérite d'être remarqué.** Chaque paiement enregistré se trouve sous **Règlements** avec sa date et sa note, où tout le groupe peut le voir et réagir. Mo peut choisir **Célébrer** quand les derniers 148 € d'Uma arrivent."
+      - "**La fin.** Quand tous les soldes sont à zéro, un admin peut verrouiller le groupe pour que les chiffres ne bougent plus."
+  - heading: "Ce que Side Badger ne fait pas ici"
+    items:
+      - "Il ne fait jamais circuler d'argent. Il n'a ni liens de paiement ni demandes de paiement, donc un paiement dans l'appli est l'enregistrement d'un paiement fait ailleurs."
+      - "Il n'envoie aucun rappel. Relancer un paiement en retard reste à votre charge."
+      - "Il ne fixe pas d'échéances. La date à laquelle le reste des 148 € d'Uma est dû, c'est au groupe d'en convenir."
+      - "Les paiements suggérés forment une courte liste, pas la promesse de la plus courte possible. Ils sont calculés par devise, donc un voyage payé en euros et en livres obtient une liste pour chacune."
+exampleAfter: 2
+example:
+  heading: "Cinq amis sur la côte"
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: Appartement
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: "Sortie en bateau"
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: "Grand dîner"
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: "Taxi de l'aéroport"
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: Courses
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: Questions
+  items:
+    - q: "Qui doit enregistrer un paiement, celui qui paie ou celui qui est payé ?"
+      a: "Enregistrer un paiement demande la permission de modifier les dépenses, et le formulaire demande **Qui a payé ?** et **Qui a reçu le paiement ?** Seule la personne qui l'a enregistré peut le modifier ensuite, donc le plus simple est en général que ce soit le payeur, avec le bouton de règlement rapide."
+    - q: "Et si le voyage s'est déroulé en deux devises ?"
+      a: "Les soldes sont tenus par devise, donc une dette en euros reste une dette en euros et chaque devise a sa propre courte liste, sauf si les dépenses ont été converties à la saisie. [Plusieurs devises](page:guide/how-to-split-a-trip-paid-in-several-currencies) montre les deux façons."
+    - q: "Faut-il régler pendant le voyage ou à la fin ?"
+      a: "Les deux marchent. Chaque paiement enregistré change les soldes, donc un paiement fait en cours de voyage compte pour la liste finale. À la fin, c'est plus simple, parce que [tout le voyage](page:use-case/group-trips) est au même endroit."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - faq.heading

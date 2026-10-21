@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Gweinyddu grŵp a chaniatâd ar gyfer costau a rennir | Side Badger"
+  description: "Gwahoddwch gyda dolen neu god QR, cymeradwywch bwy sy'n ymuno, gwnewch wylwyr, gosodwch ganiatâd a chlowch y grŵp pan fydd drosodd. Eich grŵp, eich rheolau, o fewn rheswm."
+h1: "Gweinyddu grŵp a chaniatâd: eich rheolau, o fewn rheswm"
+navLabel: "Grwpiau a chaniatâd"
+lead: "Mae rhai grwpiau angen trysorydd. Mae gan Side Badger osodiad ar gyfer hynny. Gwahoddwch bobl gyda dolen neu god QR, penderfynwch pwy sy'n cael dod i mewn, a dewiswch pwy all newid y rhifau. Gall grŵp bach o ffrindiau anwybyddu'r cyfan, oherwydd mae grwpiau newydd yn dechrau'n llydan agored."
+cta:
+  heading: "Yn barod i redeg grŵp taclus?"
+  body: "Creu cyfrif, cychwyn grŵp ac anfon y ddolen wahodd. Gadewch ef yn agored, neu dynhewch y rheolau pan fydd y grŵp yn tyfu neu'n mynd yn fwy piwis."
+problem:
+  heading: "Mae'n rhaid i rywun gadw'r rhifau'n daclus"
+  body: "Gall pedwar cyd-letywr ddibynnu ar ymddiriedaeth. Mae'n debyg na all 30 o westeion ar benwythnos priodas wneud hynny. Gwnewch grŵp ar gyfer pob tŷ, taith neu ddigwyddiad, gyda hyd at 50 o bobl ynddo, ac mae pob grŵp yn cadw ei aelodau ei hun, ei rolau ei hun a'i reolau ei hun. Mae eich dangosfwrdd yn rhestru pob un, a ble rydych chi'n sefyll ym mhob un, ar un sgrin. Dyw'r rhan fwyaf o grwpiau byth yn cyffwrdd â'r gosodiadau. Fel arfer mae gan y rhai sy'n gwneud hynny rywun sy'n ddigon trefnus i fynnu eu cael."
+workflow:
+  heading: "O grŵp gwag i grŵp wedi'i gloi"
+  steps:
+    - title: "Gwahodd gyda dolen neu god QR"
+      body: "Agorwch **Gwahodd Eraill**, dewiswch am ba mor hir y dylai'r ddolen bara (15 munud, 1 awr, 1 diwrnod neu 5 diwrnod), yna copïwch y ddolen neu dangoswch y cod QR i bobl ei sganio. Gallwch hefyd wahodd pobl rydych eisoes yn rhannu grŵp arall â nhw, o'r tu mewn i'r ap."
+      shot: S03
+      shotAlt: "Y ffenest wahodd gyda dolen i'r grŵp, ei chod QR a'r dewis o ba mor hir y mae'r ddolen yn para"
+    - title: "Gadael iddynt edrych cyn ymuno"
+      body: "Mae unrhyw un sydd â'r ddolen yn mewngofnodi neu'n creu cyfrif, yn gweld rhagolwg o'r grŵp ac yn dewis yr enw y maent am ei ddefnyddio ynddo. Yna maent yn pwyso **Ymuno â Grŵp**."
+      shot: S04
+      shotAlt: "Rhagolwg ymuno grŵp, a ddangosir i rywun sydd wedi mewngofnodi cyn iddo ymuno"
+    - title: "Cymeradwyo pwy sy'n ymuno"
+      body: "Trowch gymeradwyaeth ymlaen ac mae pobl sy'n defnyddio'r ddolen yn ymddangos fel aelodau yn aros nes bod gweinyddwr yn eu gadael i mewn. Mae gweinyddwyr yn dod o hyd iddynt o dan **Aelodau yn aros** yn **Diogelwch a Chaniatâd**, ac yn dewis **Cymeradwyo** neu **Gwrthod**. Tan hynny, ni all person sy'n aros weld unrhyw beth yn y grŵp."
+      shot: S14
+      shotAlt: "Aelodau yn aros i weinyddwr eu cymeradwyo neu eu gwrthod"
+    - title: "Dewis pwy all newid beth"
+      body: "Dewiswch **Cydweithio agored** neu **Grŵp rheoledig**, neu gosodwch y caniatâd fesul un. Yna rhowch rôl i bob person: gweinyddwr, aelod neu wyliwr. Dim ond gweinyddwyr all newid caniatâd a rolau."
+      shot: S13
+      shotAlt: "Tab diogelwch gosodiadau'r grŵp gyda'r ddau ragosodiad a'r caniatâd wedi'i deilwra"
+    - title: "Cloi'r grŵp pan fydd wedi gorffen"
+      body: "Pan fydd y daith drosodd a'r rhifau wedi setlo, gall gweinyddwr droi **Cloi Grŵp** ymlaen. Ni all neb ychwanegu na newid costau, cofnodi taliadau na golygu rhestrau a phleidleisiau, ac mae baner yn dweud hynny. Ni all neb ychwanegu tacsi hwyr yn dawel bach. Os bydd un yn codi, gall gweinyddwr ddatgloi'r grŵp."
+      shot: S15
+      shotAlt: "Grŵp yn dangos y faner sy'n dweud ei fod wedi'i gloi"
+options:
+  heading: "Gweinyddwyr, aelodau a gwylwyr"
+  items:
+    - title: "Gweinyddwr"
+      body: "Yn rhedeg y grŵp. Mae gweinyddwyr yn cymeradwyo aelodau newydd, yn newid rolau a chaniatâd, yn cloi ac yn datgloi'r grŵp, ac yn ei gau. Mae pwy bynnag sy'n creu grŵp yn dechrau fel gweinyddwr y grŵp, ac ni chaiff grŵp byth ei adael heb un, oherwydd ni ellir israddio'r gweinyddwr olaf."
+    - title: "Aelod"
+      body: "Yn cymryd rhan. Mae'r hyn y gall aelod ei wneud yn dibynnu ar ganiatâd y grŵp. Mewn grŵp cydweithio agored mae hynny'n bron popeth. Mewn grŵp rheoledig, gall aelodau newid dim ond y costau a'r rhestrau y maent wedi'u creu."
+    - title: "Gwyliwr"
+      body: "Yn gweld popeth heb newid dim. Ni all gwyliwr ychwanegu na golygu costau na rhestrau, gwahodd pobl, newid gosodiadau na chyffwrdd â delwedd y pennawd. Defnyddiol i'r sawl sydd eisiau gwylio'r rhifau ac sy'n addo peidio ag ymyrryd â nhw."
+sections:
+  - heading: "Agored, rheoledig neu eich rheolau eich hun"
+    body: "Mae grwpiau newydd yn dechrau gyda'r rhagosodiad **Cydweithio agored**, lle gall pawb wahodd pobl, newid costau a golygu rhestrau, ac mae aelodau newydd yn ymuno'n awtomatig. Mae **Grŵp rheoledig** ar gyfer pan fydd angen i rywun fod yr oedolyn. Gallwch hefyd osod y saith caniatâd fesul un, ac mae newid un â llaw yn troi'r grŵp yn un wedi'i deilwra. Beth bynnag a ddewiswch, dim ond gweinyddwyr all newid y gosodiadau caniatâd eu hunain, ac mae pob newid yn ymddangos yn y ffrwd gweithgaredd. Gall fflat o [gyd-letywyr](page:use-case/housemates) adael popeth yn agored. Mae [digwyddiad neu ddathliad](page:use-case/events-and-celebrations) mawr yn aml yn gweithio'n well fel grŵp rheoledig, fel bod rhywun yn gyfrifol am bwy sy'n ymuno. Yn newydd i hyn i gyd? Mae [sut mae'n gweithio](page:how-it-works) yn eich tywys drwy'r daith gyfan, o'r gost gyntaf i setlo'n llwyr."
+    items:
+      - "**Pwy all olygu costau.** Cydweithio agored: unrhyw aelod. Grŵp rheoledig: crëwyr a gweinyddwyr."
+      - "**Pwy all ddileu costau.** Cydweithio agored: unrhyw aelod. Grŵp rheoledig: crëwyr a gweinyddwyr."
+      - "**Pwy all olygu rhestrau.** Cydweithio agored: unrhyw aelod. Grŵp rheoledig: crëwyr a gweinyddwyr."
+      - "**Pwy all wahodd aelodau.** Cydweithio agored: unrhyw aelod. Grŵp rheoledig: gweinyddwyr yn unig."
+      - "**Cymeradwyo aelod newydd.** Cydweithio agored: awtomatig. Grŵp rheoledig: angen cymeradwyaeth gweinyddwr."
+      - "**Pwy all newid gosodiadau.** Cydweithio agored: unrhyw aelod. Grŵp rheoledig: gweinyddwyr yn unig."
+      - "**Pwy all newid delwedd y pennawd.** Cydweithio agored: unrhyw aelod. Grŵp rheoledig: gweinyddwyr yn unig."
+  - heading: "Eich enw, eich llun, delwedd eich pennawd"
+    body: "Mae gan bob grŵp ei restr cast ei hun. Dewiswch yr enw y mae pobl yn ei weld ym mhob grŵp (2 i 50 nod, ac yn unigryw o fewn y grŵp) a pha un o'ch lluniau proffil rydych yn ei wisgo yno. Byddwch yn **Sam** yn y tŷ ac yn **Sam (sydd â'r car)** ar y daith. Gall unrhyw un sy'n cael newid gosodiadau ailenwi'r grŵp a golygu ei ddisgrifiad. Mae gan ddelwedd y pennawd (JPEG, PNG, GIF neu WebP, hyd at 10 MB) ganiatâd ei hun."
+  - heading: "Archifo, cloi neu gau"
+    body: "Tair ffordd o roi grŵp o'r neilltu, o'r lleiaf i'r mwyaf difrifol."
+    items:
+      - "Mae **Archifo** yn cuddio'r grŵp o'ch dangosfwrdd eich hun, ac nid o ddangosfwrdd neb arall. Gallwch ei agor a'i ddefnyddio fel o'r blaen o hyd, ac mae **Dad-archifo Grŵp** yn dod ag ef yn ôl."
+      - "Mae **Cloi** yn rhewi newidiadau nes bod gweinyddwr yn ei ddatgloi. Gall pawb ddal i ddarllen y grŵp a'i hanes."
+      - "Mae **Cau** yn barhaol, ac i bawb. Dim ond gweinyddwr all ei wneud, drwy deipio enw'r grŵp i gadarnhau, ac ni all neb agor y grŵp eto."
+  - heading: "Gadael grŵp"
+    body: "Gall unrhyw un adael unwaith y mae wedi setlo. Ni allwch adael tra bo arian yn ddyledus gennych neu i chi mewn hyd yn oed un arian cyfred, tra bo cwestiwn agored am gost yn eich cynnwys, neu os mai chi yw'r gweinyddwr olaf neu'r unig aelod. [Cofnodwch y taliad](page:feature/settle-up), datryswch y [cwestiwn am gost](page:guide/what-to-do-when-someone-disputes-a-shared-expense), neu gwnewch rywun arall yn weinyddwr, yna ewch. I ddod yn ôl, bydd arnoch angen gwahoddiad newydd."
+limits:
+  heading: "O fewn rheswm: y print mân"
+  items:
+    - "Mae grŵp yn dal hyd at 50 o bobl."
+    - "Dim ond gweinyddwyr all newid caniatâd a rolau. Ni ellir israddio'r gweinyddwr olaf."
+    - "Mae dewis **Gweinyddwyr yn unig** ar gyfer golygu costau hefyd yn golygu mai dim ond gweinyddwyr all ychwanegu costau."
+    - "Mae clo yn atal newidiadau i gostau, taliadau newydd, rhestrau a phleidleisiau. Gall pawb ddal i ddarllen y grŵp a'i hanes, ac ymateb i daliadau."
+    - "Mae cau yn barhaol. Does gan yr ap ddim ffordd o ailagor grŵp sydd wedi'i gau."
+    - "Dyw gwneud dolen wahodd newydd ddim yn diddymu'r hen rai. Mae pob dolen yn para tan ei dyddiad dod i ben ei hun, felly dewiswch un fer pan fyddwch yn poeni i ble y gallai fynd."
+    - "Mae gwahoddiadau yn yr ap yn rhestru pobl o'ch 10 grŵp gweithredol mwyaf diweddar. Mae angen y ddolen ar unrhyw un arall, ac mae pwy gaiff wahodd yn dibynnu ar ganiatâd y grŵp."
+    - "Mae ymuno'n gofyn am gyfrif, ac mae'n rhaid i bobl ddilysu eu cyfeiriad e-bost cyn y gallant ychwanegu unrhyw beth."
+useCasesHeading: "Lle mae tipyn o drefn yn helpu"
+faq:
+  heading: "Cwestiynau"
+  items:
+    - q: "All gwyliwr ychwanegu costau?"
+      a: "Na. Mae gwyliwr yn gweld popeth ac yn newid dim. Ni all ychwanegu na golygu costau na rhestrau, gwahodd pobl na newid gosodiadau."
+    - q: "All rhywun adael tra bo arian yn ddyledus ganddo?"
+      a: "Na. Ni all neb adael grŵp tra bo arian yn ddyledus ganddo neu iddo mewn hyd yn oed un arian cyfred. Setlwch yn gyntaf, yna ewch."
+    - q: "Beth sy'n digwydd pan fydd grŵp yn cael ei gau?"
+      a: "Ni all neb ei agor eto. Dim ond gweinyddwr all gau grŵp, mae'n rhaid iddo deipio enw'r grŵp i gadarnhau, ac mae'r grŵp yn mynd yn anhygyrch i bawb. Os mai dim ond atal newidiadau rydych eisiau, clowch ef. Os mai dim ond ei dynnu oddi ar eich dangosfwrdd eich hun rydych eisiau, archifwch ef."
+    - q: "Alla i ddadwneud clo?"
+      a: "Gallwch. Gall gweinyddwr ddatgloi'r grŵp, ac mae newidiadau'n gweithio eto."
+    - q: "Oes rhaid i mi gymeradwyo pobl cyn iddynt ymuno?"
+      a: "Dim ond os dymunwch. Mae grwpiau newydd yn dechrau gyda'r rhagosodiad cydweithio agored, lle mae pobl sy'n defnyddio'r ddolen yn ymuno'n awtomatig. Trowch gymeradwyaeth gweinyddwr ymlaen, neu dewiswch grŵp rheoledig, ac mae pob person yn aros nes bod gweinyddwr yn ei adael i mewn."
+    - q: "Faint o bobl all fod mewn grŵp?"
+      a: "Hyd at 50."

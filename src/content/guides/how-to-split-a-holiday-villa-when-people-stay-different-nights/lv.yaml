@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Sadaliet villu, ja cilvēki paliek dažādas naktis | Side Badger"
+  description: "Dev atbrauca tikai uz trim naktīm, kāpēc viņam jāmaksā par sešām? Sadaliet atvaļinājuma villu pēc patiešām pavadītajām naktīm, aprēķini iekļauti."
+h1: "Kā sadalīt atvaļinājuma villu, ja cilvēki paliek dažādas naktis"
+navLabel: "Villas sadale pēc naktīm"
+lead: "Aprēķiniet cenu uz vienu cilvēku uz vienu nakti, reiziniet ar katra cilvēka naktu skaitu un ievadiet villu kā **vienu izdevumu ar precīzām summām**. Side Badger uztur uzskaiti un, kad pienāk laiks norēķināties, iesaka īsu maksājumu sarakstu."
+cta:
+  heading: "Dodiet villai vienu kārtīgu izdevumu"
+  body: "Izveidojiet grupu, uzaiciniet visus ar saiti vai QR kodu un ievadiet villu ar precīzām summām. Side Badger uztur kārtējo uzskaiti, kamēr jūs baudāt atvaļinājumu."
+sections:
+  - heading: "Sešas naktis, četri cilvēki, viena kredītkarte"
+    body: "[Grupas ceļojums](page:use-case/group-trips) parasti sākas ar viena cilvēka karti. Šoreiz karti iedod Ana. Viņa uz sešām naktīm rezervē villu par 2 100 €, jo kādam jābūt pirmajam. Ana, Ben un Chloe paliek visas sešas naktis. Dev var pievienoties tikai uz pēdējām trim naktīm un atbrauc ar vilcienu. Ben īrē auto, kurā Dev nekad nesēž. Dev veic lielo pārtikas iepirkšanos. Sadalīt villu uz četriem ir acīmredzams risinājums. Tad Dev maksātu par trim naktīm, ko pavadīja mājās, un tādas lietas uzpeld Ziemassvētkos. Sadale pēc naktīm strīdu novērš, un aprēķins aizņem minūti."
+  - heading: "Aprēķiniet cenu vienai cilvēknaktij"
+    body: "Cilvēknakts ir viens cilvēks, kas paliek vienu nakti. Villa maksā tik, cik maksā, tāpēc sadaliet cenu pa visām cilvēknaktīm un katram piešķiriet tās, ko viņš izmantoja."
+    items:
+      - "**Saskaitiet cilvēknaktis.** Ana, Ben un Chloe paliek katrs sešas naktis, bet Dev trīs: 6 + 6 + 6 + 3 = 21."
+      - "**Aprēķiniet cenu vienai.** 2 100 € ÷ 21 = 100 € par cilvēknakti."
+      - "**Reiziniet ar katra cilvēka naktu skaitu.** Ana, Ben un Chloe maksā 6 × 100 € = 600 € katrs. Dev maksā 3 × 100 € = 300 €."
+      - "**Pārbaudiet kopsummu.** 600 € + 600 € + 600 € + 300 € = 2 100 €. Ja jūsu daļas kopā nedod cenu, kāda nakts ir izlaista vai saskaitīta divreiz."
+  - heading: "Ievadiet to Side Badger"
+    body: "Izveidojiet grupu, uzaiciniet pārējos trīs ar saiti vai QR kodu, tad pievienojiet izmaksas. Vispirms villa."
+    items:
+      - "Izvēlieties **Pievienot izdevumus**. Aprakstiet to, ievadiet 2 100 un laukā **Kas samaksāja?** izvēlieties Ana."
+      - "Laukā **Sadalīt starp** pārliecinieties, ka visi četri cilvēki ir iekļauti."
+      - "Laukā **Kā sadalīt** izvēlieties **Precīzas summas**. Ievadiet 600 personām Ana, Ben un Chloe un 300 personai Dev. Summām kopā jāsakrīt ar kopsummu."
+      - "Izvēlieties **Saglabāt izdevumus**."
+      - "Tāpat pievienojiet auto nomu. Maksāja Ben, sadale ir **Vienādi**, un Dev ir izlaists, jo viņš atbrauca ar vilcienu. [Izdevumu sadale](page:feature/split-expenses) apraksta citus veidus, kā sadalīt izmaksas."
+      - "Pievienojiet pārtikas pirkumus. Maksāja Dev, sadale ir **Vienādi**, un iekļauti ir visi četri."
+  - heading: "Izlasiet rezultātu, tad norēķinieties"
+    body: "Katra cilvēka rēķins ir viņa daļa villā plus daļa no auto nomas un iepirkuma. Personām Ana, Ben un Chloe sanāk 725 € katram, tas ir 600 € + 80 € + 45 €. Personai Dev sanāk 345 €, tas ir 300 € + 45 €. Atņemiet to, ko katrs samaksāja, un atlikumi sanāk paši. Ana samaksāja 2 100 €, tāpēc viņai pienākas 1 375 €. Ben samaksāja 240 € un ir parādā 485 €. Dev samaksāja 180 € un ir parādā 165 €. Chloe nesamaksāja neko un ir parādā 725 €. Ja šos parādus atstātu, kā ir, tie pa grupu skrietu sešos virzienos. Side Badger tā vietā iesaka trīs maksājumus, visus personai Ana. Samaksājiet viņai, kā vēlaties, tad izvēlieties **Norēķināties** un katram maksājumam izmantojiet **Ierakstīt norēķinu**, lai atlikumi tiktu atjaunoti. Ātrā norēķina pogas aizpilda summu. Vairāk par [norēķināšanos](page:feature/settle-up)."
+  - heading: "Kad villai nav vienas kārtīgas cenas"
+    items:
+      - "**Istabas atšķiras.** Ja plašais numurs ir vērtīgāks par mazo istabiņu, vispirms vienojieties, cik maksā katra istaba, tad izdariet cilvēknakšu aprēķinus pa vienai istabai. Ievadiet villu kā vienu izdevumu ar katra cilvēka kopsummu vai kā vienu izdevumu katrai istabai. Abos gadījumos precīzajām summām izdevumā jāsakrīt ar tā kopsummu."
+      - "**Depozīts, kas samaksāts mēnešus agrāk.** Tam, kurš to samaksāja, ir savs izdevums ar maksājuma dienas datumu. Sadaliet to pēc naktīm tādās pašās proporcijās kā atlikušo maksājumu."
+      - "**Rezervācija ir citā valūtā.** Ievadiet villu valūtā, kurā maksājāt. Ja grupa konvertē līdzi, izmantojiet pašreizējo valūtas kursu vai ierakstiet kursu, ko patiešām saņēmāt. Sākotnējā summa paliek pie izdevuma. [Vairākas valūtas](page:feature/multiple-currencies) apraksta sīkāk."
+      - "**Daļējas naktis.** Kāds ierodas pusnaktī, kāds aizbrauc pirms brokastīm. Vienojieties par vienu noteikumu naktu skaitīšanai un izmantojiet to visiem."
+  - heading: "Ko Side Badger šeit nedara"
+    items:
+      - "Tas neskaita naktis jūsu vietā. Sadales pēc naktīm vai pēc daļām nav, tāpēc katru summu aprēķiniet, kā aprakstīts iepriekš, un ievadiet **precīzas summas**."
+      - "Tas nepārvieto naudu. Samaksājiet viens otram, kā vēlaties, tad reģistrējiet maksājumu."
+      - "Katram izdevumam var būt viens maksātājs. Ja villu samaksāja divi cilvēki, ievadiet divus izdevumus."
+      - "Viesu piekļuves nav. Ikvienam grupā, arī Dev, vajadzīgs bezmaksas konts."
+exampleAfter: 2
+example:
+  heading: "Villa, auto un iepirkumi"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "sešas naktis villā"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "auto noma"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "pārtikas pirkumi"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Jautājumi par villu"
+  items:
+    - q: "Ko darīt, ja kāds atsakās?"
+      a: "Izņemiet šī cilvēka naktis, pārrēķiniet un rediģējiet villas izdevumu, lai precīzās summas atkal kopā dotu cenu. Iepriekšējā versija tiek saglabāta, un labojums redzams grupas aktivitātē, tāpēc neviens klusām nemaina skaitli. Kurš drīkst rediģēt, atkarīgs no grupas atļaujām."
+    - q: "Vai tam, kurš rezervēja, jāmaksā mazāk?"
+      a: "Tas jālemj grupai. Rezervēšana ir ņemšanās, un grupas atšķiras, vai par to pienākas atlaide. Par ko arī vienotos, ierakstiet to precīzajās summās un pierakstiet piezīmē pie izdevuma vai komentārā blakus tam, lai nevienam nebūtu jāatceras vienošanās."
+    - q: "Vai tīrīšanas maksu var sadalīt citādi?"
+      a: "Jā. Ievadiet maksu kā atsevišķu izdevumu un dodiet tam savu sadali. Vienādi der fiksētai maksai par visu māju. Precīzas summas der grupai, kas grib, lai arī maksa seko naktīm."

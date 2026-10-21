@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Cum împarți o excursie plătită în mai multe valute | Side Badger"
+  description: "Lire pentru hotel, yeni pentru ramen. Achită fiecare valută separat sau convertește la un curs pe care îl vezi. Ambele variante, cu socotelile la vedere."
+h1: "Cum împarți o excursie plătită în mai multe valute"
+navLabel: "Excursii în mai multe valute"
+lead: "Introdu fiecare cheltuială în valuta în care ai plătit-o, apoi alege una dintre două variante. Ține valutele separate și achită fiecare în banii ei, sau convertește la un curs de schimb actual și achită-te o singură dată. Aceeași excursie în Japonia ajunge la patru plăți prin prima variantă și la două prin a doua."
+cta:
+  heading: "Introdu-o în moneda în care ai plătit"
+  body: "Creează un cont gratuit, începe un grup pentru excursie și adaugă fiecare cheltuială în orice valută scria pe chitanță. Vrei mai întâi detaliile? Vezi [mai multe valute](page:feature/multiple-currencies) sau [ce acoperă gratuitul](page:pricing)."
+sections:
+  - heading: "Trei prieteni, un hotel, o grămadă de yeni"
+    body: "Zoe, Kenji și Lucy petrec o săptămână în Japonia într-o [excursie de grup](page:use-case/group-trips), iar fiecare cost se împarte egal în trei. Zoe a rezervat hotelul de acasă, în lire, pentru 600 £. Lucy a cumpărat abonamentele de tren la Tokyo cu 90.000 ¥. Kenji a plătit seara de ramen, 9.000 ¥, și a pomenit-o zilnic de atunci. Nimeni nu vrea să convertească trei chitanțe pe peronul unei gări. Pentru calculele de aici, 1 ¥ este 0,005 £, un curs rotund inventat pentru acest ghid. În aplicație ai folosi un curs de schimb actual sau l-ai scrie pe cel pe care l-ai primit de fapt."
+  - heading: "Introdu fiecare cheltuială în banii de pe chitanță"
+    body: "Această parte e la fel, oricare variantă ai alege. Încă nu trebuie convertit nimic."
+    items:
+      - "**Fă grupul.** În panoul principal alege **Creează Grup**, dă-i numele excursiei, apoi alege **Invită pe alții** și trimite linkul sau codul QR."
+      - "**Adaugă hotelul.** Alege **Adaugă Cheltuială** și scrie 600, cu lire ca valută lângă sumă. La **Cine a plătit?** alege-o pe Zoe. Lasă-i pe toți trei la **Împarte între**, lasă **Cum se împarte** pe **Egal** și alege **Salvează Cheltuiala**."
+      - "**Adaugă yenii.** Fă la fel pentru abonamentele de tren (a plătit Lucy) și pentru ramen (a plătit Kenji), cu yeni ca valută. Yenii nu au zecimale, așa că formularul nu cere niciuna."
+  - heading: "Varianta întâi: ține valutele separate"
+    body: "Side Badger ține un sold pentru fiecare valută și nu le compensează între ele. În lire, hotelul înseamnă 200 £ de persoană, deci Kenji și Lucy îi datorează fiecare câte 200 £ lui Zoe. În yeni, abonamentele de tren și ramenul ajung la 99.000 ¥, adică 33.000 ¥ de persoană. Lucy a plătit 90.000 ¥ și i se datorează 57.000 ¥. Zoe n-a plătit niciun yen și datorează 33.000 ¥. Kenji a plătit 9.000 ¥, deci datorează 24.000 ¥."
+    items:
+      - "**Lire.** Kenji îi plătește lui Zoe 200 £, iar Lucy îi plătește lui Zoe 200 £."
+      - "**Yeni.** Zoe îi plătește lui Lucy 33.000 ¥, iar Kenji îi plătește lui Lucy 24.000 ¥."
+      - "**Patru plăți în total.** Zoe și Lucy își datorează reciproc în două valute care nu se compensează. Niciun curs nu intră în calcul, așa că nu e nimic pentru care să vă certați."
+      - "**Datorezi yeni, plătești în lire.** Cine n-are yeni poate plăti totuși în lire. Când înregistrezi plata, deschide **Altă monedă?**, alege **Convertește în** lire și verifică cursul. Cei 33.000 ¥ ai lui Zoe înseamnă 165 £ la cursul din acest ghid, iar soldul în yeni iese tot corect."
+      - "**Înregistrează fiecare plată.** Plătiți-vă unii altora cum preferați, apoi alege **Decontează** și folosește **Înregistrează Decontarea**. Mai multe despre [decontare](page:feature/settle-up)."
+  - heading: "Varianta a doua: convertește pe parcurs"
+    body: "Dacă grupul preferă să vadă câte o singură cifră pentru fiecare, convertește când introduci cheltuiala."
+    items:
+      - "**Convertește în formular.** La **Adaugă Cheltuială** alege **Convertește în** și alege lire. Side Badger arată cursul și suma convertită, marcată cu ≈. Editează cursul dacă ai primit altul. Suma inițială în yeni rămâne pe cheltuială."
+      - "**Citește în lire.** La 1 ¥ = 0,005 £, abonamentele de tren devin 450 £, iar ramenul 45 £. Cu hotelul de 600 £ ajungi la 600 £ + 450 £ + 45 £ = 1.095 £, adică 365 £ de persoană. Zoe a plătit 600 £, deci i se datorează 235 £. Lucy a plătit 450 £ și i se datorează 85 £. Kenji a plătit 45 £ și datorează 320 £."
+      - "**Două plăți.** Amândouă de la Kenji: 235 £ către Zoe și 85 £ către Lucy. Zoe și Lucy nu-și mai plătesc deloc una alteia."
+      - "**Sau setează o valută a grupului.** Ca să sari peste pasul în plus, deschide **Setări** în grup, caută **Setări Monedă** și alege **Convertește automat cheltuielile în**. Fiecare cheltuială nouă se convertește apoi în acea valută, tot la un curs pe care îl poți vedea și schimba."
+  - heading: "Ce variantă să alegi?"
+    items:
+      - "**Ține-le separate** dacă oamenii mai au yeni în portofel sau dacă preferi să nu te cerți pe un curs. Prețul: mai multe plăți, în mai multe valute."
+      - "**Convertește** dacă grupul trăiește într-o singură valută și vrea câte o singură cifră pentru fiecare și o listă mai scurtă, ca cele două transferuri ale lui Kenji. Prețul: grupul trebuie să aibă încredere într-un curs, iar cursul se fixează pe fiecare cheltuială la salvarea ei."
+      - "**Hotărâți din timp.** O valută a grupului convertește doar cheltuielile noi și pe cele copiate. Nu se întoarce să aranjeze ce ai introdus deja."
+  - heading: "Cursul și plafonul"
+    items:
+      - "**Cursul se fixează la salvare.** Cheltuielile vechi nu sunt niciodată reevaluate, așa că un sold nu alunecă doar pentru că s-a mișcat piața. Cheltuielile introduse în zile diferite pot avea cursuri diferite, deci, dacă grupul vrea un singur curs pentru toată excursia, hotărâți-l și scrieți-l de fiecare dată."
+      - "**Niciun curs? Scrie-l tu.** Side Badger ia un curs de schimb actual acolo unde poate, dar nu pentru orice pereche e garantat unul. Dacă nu există, sau dacă o casă de schimb ți-a dat o ofertă mai bună, scrie-l pe al tău."
+      - "**999.999,99 pe cheltuială, în propria valută.** Un singur plafon, indiferent de bani. În yeni înseamnă puțin sub 1.000.000 ¥, adică aproximativ 5.000 £ la cursul din acest ghid. Într-o valută cu cifre mari, cum e rupiah indoneziană, o singură notă de plată îl poate atinge mai repede. Împarte nota în două cheltuieli sau introdu-o în altă valută și convertește."
+  - heading: "Ce nu face Side Badger aici"
+    items:
+      - "Nu mută și nu schimbă niciodată bani. Vă plătiți unii altora cum preferați, apoi înregistrați plata."
+      - "Are 140 de valute. Criptomonedele și metalele nu se numără printre ele."
+exampleAfter: 2
+example:
+  heading: "Japonia, achitată în două feluri"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "hotelul, rezervat acasă"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "abonamente de tren"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "seara de ramen"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Întrebări"
+  items:
+    - q: "Ce curs de schimb folosește Side Badger?"
+      a: "Un curs de schimb actual, luat când introduci cheltuiala, acolo unde există unul. Îl poți schimba cu cursul pe care l-ai primit de fapt."
+    - q: "Putem rămâne doar la lire și yeni?"
+      a: "Da. În **Setări** ale grupului, activează **Restricționează monedele pentru acest grup** la **Setări Monedă**, alege **Monede permise** și setează **Moneda implicită pentru cheltuieli noi**. Mai puține opțiuni în listă, mai puține alegeri greșite la casă."
+    - q: "Trebuie să convertim deloc?"
+      a: "Nu. Valutele rămân separate, dacă tu sau grupul nu alegeți să convertiți, iar fiecare valută primește propria listă scurtă de plăți."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name

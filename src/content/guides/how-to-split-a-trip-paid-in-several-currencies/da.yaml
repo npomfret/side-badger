@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Sådan deler du en tur betalt i flere valutaer | Side Badger"
+  description: "Pund til hotellet, yen til ramen. Gør hver valuta op for sig, eller omregn med en kurs, du kan se. Begge veje regnet igennem, med udregningerne vist."
+h1: "Sådan deler du en tur betalt i flere valutaer"
+navLabel: "Ture i flere valutaer"
+lead: "Indtast hver udgift i den valuta, du betalte i, og vælg så en rute. Hold valutaerne adskilt, og gør hver op i sine egne penge, eller omregn med en aktuel valutakurs, og gør op én gang. Den samme Japan-tur ender på fire betalinger med den første rute og to med den anden."
+cta:
+  heading: "Indtast den i de penge, du betalte med"
+  body: "Opret en gratis konto, start en gruppe til turen, og tilføj hver udgift i den valuta, der stod på kvitteringen. Vil du have detaljerne først? Se [flere valutaer](page:feature/multiple-currencies) eller [hvad gratis dækker](page:pricing)."
+sections:
+  - heading: "Tre venner, ét hotel og rigtig mange yen"
+    body: "Zoe, Kenji og Lucy tilbringer en uge i Japan på en [gruppetur](page:use-case/group-trips), og alle udgifter deles ligeligt mellem de tre. Zoe bookede hotellet hjemmefra, i pund, for 600 £. Lucy købte togpassene i Tokyo for 90.000 ¥. Kenji betalte for ramenaftenen, 9.000 ¥, og har nævnt det hver dag siden. Ingen gider at omregne tre kvitteringer på en perron. I udregningerne her er 1 ¥ lig med 0,005 £, en rund kurs, der er opfundet til denne guide. I appen bruger du en aktuel valutakurs eller skriver den, du faktisk fik."
+  - heading: "Indtast hver udgift i de penge, der står på kvitteringen"
+    body: "Den her del gør du, uanset hvilken rute du vælger. Intet skal omregnes endnu."
+    items:
+      - "**Opret gruppen.** Vælg **Opret gruppe** på dashboardet, og navngiv den efter turen. Vælg derefter **Inviter andre**, og send linket eller QR-koden."
+      - "**Tilføj hotellet.** Vælg **Tilføj udgift**, og indtast 600 med pund som valuta ved siden af beløbet. Vælg Zoe under **Hvem betalte?**. Lad alle tre stå under **Fordel mellem**, lad **Hvordan skal det fordeles** stå på **Ligeligt**, og vælg **Gem udgift**."
+      - "**Tilføj udgifterne i yen.** Gør det samme for togpassene (Lucy betalte) og ramenen (Kenji betalte), med yen som valuta. Yen har ingen decimaler, så formularen spørger ikke efter nogen."
+  - heading: "Rute ét: hold valutaerne adskilt"
+    body: "Side Badger fører en saldo for hver valuta og modregner ikke den ene mod den anden. I pund er hotellet 200 £ pr. person, så Kenji og Lucy skylder hver Zoe 200 £. I yen løber togpas og ramen op i 99.000 ¥, altså 33.000 ¥ pr. person. Lucy betalte 90.000 ¥ og har 57.000 ¥ til gode. Zoe betalte ingen yen og skylder 33.000 ¥. Kenji betalte 9.000 ¥, så han skylder 24.000 ¥."
+    items:
+      - "**Pund.** Kenji betaler Zoe 200 £, og Lucy betaler Zoe 200 £."
+      - "**Yen.** Zoe betaler Lucy 33.000 ¥, og Kenji betaler Lucy 24.000 ¥."
+      - "**Fire betalinger i alt.** Zoe og Lucy skylder hinanden i to valutaer, som ikke kan modregnes mod hinanden. Der kommer ingen kurs ind i billedet, så der er intet at skændes om."
+      - "**Skylder yen, betaler i pund.** Den, der ingen yen har, kan stadig betale i pund. Når du registrerer betalingen, så åbn **Anden valuta?**, vælg **Konverter til** pund, og tjek kursen. Zoes 33.000 ¥ er 165 £ med denne guides kurs, og yensaldoen stemmer stadig."
+      - "**Registrer hver betaling.** Betal hinanden, som I vil, vælg så **Afregn**, og brug **Registrer afregning**. Der står mere om at [gøre op](page:feature/settle-up)."
+  - heading: "Rute to: omregn undervejs"
+    body: "Hvis gruppen hellere vil se ét tal hver, så omregn, når du indtaster udgiften."
+    items:
+      - "**Omregn i formularen.** Vælg **Konverter til** i formularen **Tilføj udgift**, og vælg pund. Side Badger viser kursen og det omregnede beløb, markeret med ≈. Ret kursen, hvis du fik en anden. Det oprindelige beløb i yen bliver stående på udgiften."
+      - "**Læs pundene.** Med 1 ¥ = 0,005 £ bliver togpassene til 450 £ og ramenen til 45 £. Med hotellet på 600 £ giver det 600 £ + 450 £ + 45 £ = 1.095 £, altså 365 £ hver. Zoe betalte 600 £, så hun har 235 £ til gode. Lucy betalte 450 £ og har 85 £ til gode. Kenji betalte 45 £ og skylder 320 £."
+      - "**To betalinger.** Begge fra Kenji: 235 £ til Zoe og 85 £ til Lucy. Zoe og Lucy betaler slet ikke hinanden længere."
+      - "**Eller vælg en gruppevaluta.** Vil du springe det ekstra trin over, så åbn gruppens **Indstillinger**, find **Valutaindstillinger**, og vælg **Konverter automatisk udgifter til**. Hver ny udgift omregnes så til den valuta, stadig med en kurs, du kan se og ændre."
+  - heading: "Hvilken rute skal du vælge?"
+    items:
+      - "**Hold dem adskilt**, når folk stadig har yen i pungen, eller når I helst ikke vil skændes om en kurs. Prisen er flere betalinger i mere end én valuta."
+      - "**Omregn**, når gruppen lever i én valuta og vil have ét tal hver og en kortere liste, som Kenjis to overførsler. Prisen er, at gruppen skal stole på en kurs, og at kursen fastlåses på hver udgift, når den gemmes."
+      - "**Beslut det tidligt.** En gruppevaluta omregner kun nye og kopierede udgifter. Den går ikke tilbage og rydder op i det, du allerede har indtastet."
+  - heading: "Kursen og loftet"
+    items:
+      - "**Kursen fastlåses, når du gemmer.** Gamle udgifter omvurderes aldrig, så en saldo driver ikke, fordi markedet gjorde. Udgifter, der er indtastet på forskellige dage, kan have forskellige kurser, så hvis gruppen vil have én kurs for hele turen, så aftal den og skriv den ind hver gang."
+      - "**Ingen kurs? Skriv en.** Side Badger henter en aktuel valutakurs, hvor det er muligt, men ikke alle par er garanteret en. Hvis der ikke er nogen, eller et vekselkontor gav dig en bedre aftale, så skriv din egen."
+      - "**999.999,99 pr. udgift, i dens egen valuta.** Ét loft, uanset hvilke penge det er. I yen er det lige under 1.000.000 ¥, omkring 5.000 £ med denne guides kurs. I en valuta med store tal, som indonesiske rupiah, kan en enkelt regning nå det hurtigere. Del regningen op i to udgifter, eller indtast den i en anden valuta, og omregn."
+  - heading: "Det her gør Side Badger ikke"
+    items:
+      - "Den flytter eller veksler aldrig penge. I betaler hinanden, som I vil, og registrerer så betalingen."
+      - "Der er 140 valutaer. Kryptovalutaer og metaller er ikke iblandt dem."
+exampleAfter: 2
+example:
+  heading: "Japan, gjort op på to måder"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "hotellet, booket hjemmefra"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "togpas"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "ramenaften"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Spørgsmål"
+  items:
+    - q: "Hvilken valutakurs bruger Side Badger?"
+      a: "En aktuel valutakurs, hentet når du indtaster udgiften, hvor der findes en. Du kan ændre den til den kurs, du faktisk fik."
+    - q: "Kan gruppen holde sig til pund og yen?"
+      a: "Ja. Slå **Begræns valutaer for denne gruppe** til under **Valutaindstillinger** i gruppens **Indstillinger**, vælg de **Tilladte valutaer**, og sæt **Standardvaluta for nye udgifter**. Færre valg på listen giver færre forkerte gæt ved kassen."
+    - q: "Skal vi overhovedet omregne?"
+      a: "Nej. Valutaerne forbliver adskilt, medmindre du eller din gruppe vælger at omregne, og hver valuta får sin egen korte liste over betalinger."

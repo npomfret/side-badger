@@ -1,0 +1,106 @@
+translatedFrom: "6c8b8630"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - privacy-posture.no-ads
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - polls.villa-shortlist-vote
+  - permissions.viewer-sees-everything
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: Del udgifterne til en polterabend-weekend | Side Badger
+  description: Æresgæsten betaler ingenting, og alle taler stadig sammen mandag. Sådan deler du en polterabend-weekend, regnestykker inklusive.
+h1: Sådan deler du udgifterne til en polterabend-weekend
+navLabel: Polterabend-weekend
+lead: Æresgæsten betaler ingenting, så resten af gruppen deler hver udgift [ligeligt](page:feature/split-expenses) mellem sig. Udelad folk fra de udgifter, de springer over, og hold æresgæsten uden for gruppen, så overraskelsen holder.
+cta:
+  heading: Hold styr på regnskabet og på overraskelsen
+  body: Opret en gruppe, send linket til alle undtagen æresgæsten, og tilføj hver udgift, når den sker. Side Badger er gratis, uden reklamer og uden daglige grænser.
+sections:
+  - heading: Fire venner og en overraskelse
+    body: Hannah, Isla, Jess og Kat tager Grace med på hendes polterabend-weekend. Grace er æresgæst, så hun betaler ikke for noget. Hun er heller ikke med i gruppen, så hun kan ikke se, hvad hendes venner bruger på hende. Hannah booker sommerhuset, Isla betaler for spadagen, Jess dækker middagen, og Kat klarer taxaen. Om søndagen har alle betalt for noget, og ingen kan sige, hvem der er foran. Regnestykket er det samme til en polterabend-weekend, uanset hvem æresgæsten er.
+  - heading: Del med dem, der betaler, ikke dem, der er der
+    body: Æresgæstens andel forsvinder ikke. Den bliver fordelt. Sommerhuset koster 720 £, og fire venner betaler for det, så det er 180 £ hver, og Graces plads er allerede med i det tal. Middagen er 260 £, så 65 £ hver. Taxaen er 44 £, så 11 £ hver. Det, nogen springer over, trækkes kun fra den udgift. Kat springer spaen over, så dens 360 £, som også dækker Graces plads, deles mellem Hannah, Isla og Jess med 120 £ hver. Læg det sammen, og Hannah, Isla og Jess skylder hver 376 £ af weekenden, og Kat skylder 256 £.
+  - heading: Sådan sætter du det op i Side Badger
+    items:
+      - Opret en gruppe til weekenden, og giv den et kedeligt navn, som Sommerhusweekend. Grace er ikke medlem, og kun gruppens medlemmer kan se den.
+      - >-
+        Vælg **Inviter andre**, og send linket, eller vis QR-koden, kun der, hvor Grace ikke ser det. Linket viser en forhåndsvisning af gruppen, før nogen kommer med. Vælg, hvor længe det varer, fra 15 minutter til 5 dage. Et gammelt link virker, indtil det udløber, så lad det ikke vare længere, end du har brug for.
+      - >-
+        For hver udgift: Vælg **Tilføj udgift**, indtast beløbet, og vælg betaleren under **Hvem betalte?** Afkryds de personer, der betaler, under **Fordel mellem**, og udelad alle, der sprang den over, som Kat ved spaen. Vælg **Ligeligt** under **Hvordan skal det fordeles**.
+      - >-
+        Når I er hjemme, så åbn gruppens **Saldi**. Side Badger viser, hvem der skylder hvem, og foreslår en kort liste over betalinger. Her er det tre: Kat betaler Hannah 212 £, Jess betaler Hannah 116 £, og Isla betaler Hannah 16 £. Betal hinanden, som I vil, og brug så **Afregn** til at registrere hver betaling.
+  - heading: Før I booker, et budget og et depositum
+    body: Aftal budgettet, før nogen booker. Vælg **Tilføj afstemning**, spørg, hvad gruppen vil bruge på sommerhuset, og tilbyd nogle beløb som valgmuligheder. Slå **Anonym afstemning** til, når du opretter den, for at skjule, hvem der stemte på hvad, så ingen skal forsvare et mindre budget højt. Luk afstemningen, når alle har stemt, og vinderen vises. Så kommer depositummet. Den, der booker, betaler det og tilføjer det som en udgift, delt ligeligt, og restbeløbet kommer ind som en anden udgift, når det forfalder. De andre kan sende deres andel med det samme og registrere betalingen eller vente på det endelige regnskab. Saldiene bliver de samme begge veje.
+  - heading: Når nogen kun er med en enkelt nat
+    body: En ven, der kun dukker op til lørdag, skal ikke betale for fredag. Udelad vedkommende fra de udgifter, vedkommende ikke var med i. Hvor udgiften afhænger af, hvor længe hver person bliver, som et værelse, så vælg **Præcise beløb** under **Hvordan skal det fordeles** og skriv hver persons andel, som skal give totalen. Regn først en pris pr. person pr. nat ud, og gang så med de nætter, hver person bliver. Siden om [gruppeture](page:use-case/group-trips) har mere om udgifter, der ikke er ens for alle.
+  - heading: Hvad Side Badger ikke gør her
+    items:
+      - Den flytter aldrig penge. I betaler hinanden med bankoverførsel, kontanter eller det, der passer jer, og registrerer så betalingen, så saldiene opdateres for alle.
+      - Den sender ingen betalingspåmindelser. Et venligt puf i gruppechatten er stadig op til et menneske.
+      - Hver udgift har én betaler, og Side Badger kan ikke dele en kvittering linje for linje. Hvis to kort betalte for sommerhuset, så indtast det som to udgifter. Hvis nogle bestilte ekstra til middagen, så indtast ekstraerne som deres egen udgift.
+      - Den holder styr på pengene, ikke rejseplanen. Afstemninger og kommentarer bliver på udgifterne, så planerne for weekenden bliver i jeres gruppechat.
+exampleAfter: 2
+example:
+  heading: Graces polterabend-weekend, delt på fire
+  currency: GBP
+  people:
+    - id: hannah
+      name: Hannah
+    - id: isla
+      name: Isla
+    - id: jess
+      name: Jess
+    - id: kat
+      name: Kat
+  expenses:
+    - label: Sommerhus
+      payer: hannah
+      amount: 720
+      split:
+        method: equal
+    - label: Spadag
+      payer: isla
+      amount: 360
+      split:
+        method: equal
+        shares:
+          hannah: 1
+          isla: 1
+          jess: 1
+    - label: Middag
+      payer: jess
+      amount: 260
+      split:
+        method: equal
+    - label: Taxa
+      payer: kat
+      amount: 44
+      split:
+        method: equal
+faq:
+  heading: Spørgsmål
+  items:
+    - q: Betaler forloveren mere?
+      a: Kun hvis gruppen er enig. Appen giver ingen en særlig rolle i regnestykket. Hvis nogen dækker mere, så vælg **Præcise beløb** eller **Procent** under **Hvordan skal det fordeles** og indtast de andele, I aftalte.
+    - q: Hvad med drikkevarer, som nogle ikke fik?
+      a: Tilføj drikkevarerne som deres egen udgift, og afkryds kun dem, der fik dem. Hvis alle fik forskellige mængder, så vælg **Præcise beløb** og skriv hver persons andel. Ingen betaler for det, de ikke fik.
+    - q: Kan æresgæsten se gruppen senere?
+      a: Ja, når overraskelsen er overstået. Inviter vedkommende, og så kan en administrator gøre vedkommende til **Seer** under **Sikkerhed & Tilladelser** i gruppens indstillinger. En seer ser alt og ændrer intet, så vent, til intet længere er en hemmelighed. Vedkommende skal have en gratis konto for at komme med.

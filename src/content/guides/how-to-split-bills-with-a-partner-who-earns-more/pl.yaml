@@ -1,0 +1,108 @@
+translatedFrom: "92a9bff3"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Jak dzielić rachunki, gdy jedno z was zarabia więcej | Side Badger"
+  description: "50/50 robi się niezręcznie, gdy jedno z was zarabia znacznie więcej. Podziel wspólne rachunki według dochodów, z obliczeniami dla dwojga i bez arkusza."
+h1: "Jak dzielić rachunki, gdy jedno z was zarabia więcej"
+navLabel: "Gdy jedno zarabia więcej"
+lead: "Zsumuj pensje na rękę, wylicz udział każdej osoby w całości i zaokrąglij do pełnych procentów. Maya zarabia na rękę 2 800 £, a Jon 1 700 £, więc wspólne rachunki dzielą 62/38. Wpisz te procenty przy wspólnym wydatku w Side Badger, a potem kopiuj go, ilekroć wraca ten sam rachunek."
+cta:
+  heading: "Policz raz"
+  body: "Załóż darmowe konto, utwórz grupę dla was dwojga i wpisz czynsz z waszymi procentami. Czynsz w następnym miesiącu to kopia. Chcesz najpierw rozejrzeć się po aplikacji? Zobacz [jak to działa](page:how-it-works) albo sprawdź, [co obejmuje darmowy plan](page:pricing)."
+sections:
+  - heading: "Dwie pensje, jedno mieszkanie, jedna grzeczna cisza"
+    body: "Maya i Jon mieszkają razem. Maya zarabia na rękę 2 800 £ miesięcznie, a Jon 1 700 £. Przez dwa lata dzielili wszystko 50/50, bo było prosto i żadne nie chciało być tym, które poruszy temat. Potem Jon spojrzał na sam czynsz. Połowa z 1 400 £ to 700 £, czyli jedna czwarta tego, co zarabia na rękę Maya, i 41% tego, co zarabia on. Nikt nie był nieuczciwy. Nikt po prostu nie policzył. Wiele [par](page:use-case/couples) w końcu do tego dochodzi. Przy jedzeniu na wynos uzgodnili, że wspólne rachunki powinny odgryzać z każdej pensji podobny kawałek."
+  - heading: "Metoda, z pokazanymi obliczeniami"
+    body: "Cztery kroki, jeden kalkulator i rozmowa, którą i tak zamierzaliście odbyć."
+    items:
+      - "**Ustalcie, co liczy się jako zarobki.** Maya i Jon biorą pensję na rękę, czyli pieniądze, które co miesiąc lądują na koncie. Razem to 2 800 £ + 1 700 £ = 4 500 £."
+      - "**Wylicz udział każdej osoby.** Maya: 2 800 ÷ 4 500, czyli 62,2%. Jon: 1 700 ÷ 4 500, czyli 37,8%."
+      - "**Zaokrąglij do pełnych procentów.** 62,2% zamienia się w 62, a 37,8% w 38. Przy dwóch osobach zaokrąglij jedną wartość i odejmij ją od 100, żeby dostać drugą, a zawsze wyjdzie w sumie 100."
+      - "**Sprawdź, co to znaczy.** Z czynszu 1 400 £ Maya płaci 868 £ (62%), a Jon 532 £ (38%). To około 31% pensji na rękę każdej z dwóch osób. Po połowie Maya oddawałaby 25% swojej pensji, a Jon 41% swojej."
+  - heading: "Jak wygląda miesiąc"
+    body: "Maya zapłaciła czynsz 1 400 £, a Jon pozostałe 216 £. Maya ma w tym miesiącu do pokrycia 868,00 £ + 111,60 £ + 18,00 £ = 997,60 £, a zapłaciła 1 400 £, więc należy jej się 402,40 £. Jon ma do pokrycia 532,00 £ + 68,40 £ + 18,00 £ = 618,40 £, a zapłacił 216 £, więc jest winien 402,40 £. Side Badger podpowiada jedną płatność, Jon → Maya, na 402,40 £, a [rozliczanie](page:feature/settle-up) zapisuje ją, gdy już zostanie wykonana. Przy podziale 50/50 ten sam miesiąc wyglądałby tak: Jon → Maya, 592,00 £."
+  - heading: "Ustaw to w Side Badger"
+    body: "Dziesięć minut, w większości poświęconych procentom."
+    items:
+      - "**Załóż grupę.** Na panelu głównym wybierz **Utwórz grupę** i nazwij ją od mieszkania. Wybierz **Zaproś innych** i wyślij Jonowi link albo kod QR. Jon loguje się albo zakłada darmowe konto i wybiera imię, pod którym ma być widoczny w tej grupie. Grupę widzą tylko jej członkowie, więc ta jest tylko dla was dwojga."
+      - "**Dodaj czynsz.** Wybierz **Dodaj wydatek**. Wpisz opis i kwotę, a w polu **Kto zapłacił?** wskaż Mayę. W polu **Podział między** zostaw obie osoby, a w polu **Sposób podziału** wybierz **Procentowo** i wpisz 62 i 38. Formularz ostrzeże, jeśli procenty nie dają w sumie 100. Wybierz **Zapisz wydatek**."
+      - "**Dodaj pozostałe rachunki.** Energia i internet wchodzą tak samo, z Jonem jako płacącym i tymi samymi 62 i 38. Jedzenie na wynos to osobny wydatek, z podziałem **Równo**."
+      - "**Skopiuj w następnym miesiącu.** Otwórz zeszłomiesięczny czynsz i wybierz **Kopiuj wydatek**. Kopia zachowuje płacącego, kwotę i podział, a datę ustawia na dzisiejszą. Zmień kwotę, jeśli czynsz się zmienił, i wybierz **Utwórz kopię**. Rachunek za energię działa tak samo."
+      - "**Sprawdź, kto komu jest winien.** Pokazują to **Salda** i podpowiadają krótką listę płatności. Płaćcie sobie, jak chcecie, a potem zarejestrujcie płatność, wybierając **Ureguluj**."
+  - heading: "50/50, według dochodów albo rachunek po rachunku"
+    body: "Nie ma jednej poprawnej odpowiedzi, jest tylko ta, z którą oboje możecie żyć. Oto trzy popularne."
+    items:
+      - "**Wszystko po połowie.** Najłatwiej to prowadzić i pasuje parom, których zarobki są zbliżone."
+      - "**Wszystko, co wspólne, według dochodów.** Tak robią Maya i Jon. Jedna rozmowa, jedna para procentów."
+      - "**Rachunek po rachunku.** Czynsz i rachunki według dochodów, wakacje i przyjemności 50/50 albo jak ustalicie, a każdy rachunek dostaje zasadę, która do niego pasuje."
+  - heading: "Ustalcie, co jest wspólne"
+    body: "Kłótnie dotyczą zwykle listy, a nie procentów. Czynsz, energia, internet, cotygodniowe zakupy i sofa są wspólne w większości domów. Maya ma karnet na siłownię, a Jon abonament piłkarski i to niekoniecznie wspólne koszty. Ustalcie listę raz, zapiszcie ją i wpisujcie do grupy tylko koszty wspólne."
+  - heading: "Jedzenie na wynos zostaje 50/50, celowo"
+    body: "Przyjemności są małe i nieobowiązkowe, a nikt nie powinien potrzebować kalkulatora, żeby zamówić pierogi. W Side Badger jedzenie na wynos to po prostu kolejny wydatek. Jon płaci 36 £, w polu **Sposób podziału** zostaje **Równo** i na każde z nich przypada 18 £."
+  - heading: "Gdy zmieniają się zarobki"
+    body: "Podwyżka, nowa praca albo przerwa w pracy zmieniają rachunek. Wylicz nowe procenty tak samo i używaj ich od następnego wydatku. Wcześniejsze wydatki zostają, jak były. Skopiuj zeszłomiesięczny czynsz, zmień procenty, a potem wybierz **Utwórz kopię**. Żeby poprawić wydatek, który już jest, edytuj go, jeśli pozwalają na to uprawnienia grupy, i najpierw uprzedź drugą osobę, bo salda się zmienią. Wcześniejsza wersja zostaje zachowana. Ustalcie, kiedy będziecie przeliczać, na przykład raz w roku, i rozliczcie się przed zmianą, żeby stary podział zamknął się czystym rachunkiem."
+  - heading: "Czego Side Badger tu nie robi"
+    items:
+      - "Nigdy nie pyta, ile kto zarabia, i nie wylicza procentów. Wpisujesz liczby, na które się umówiliście."
+      - "Nie ustawi domyślnego podziału dla całej grupy. Procenty trafiają do każdego wydatku, więc kopiuj taki, który je już ma."
+      - "Nie ma rachunków cyklicznych, więc co miesiąc kopiujesz zeszłomiesięczny czynsz."
+      - "Nigdy nie przesyła pieniędzy. Płacicie sobie, jak chcecie, i rejestrujecie to."
+exampleAfter: 2
+example:
+  heading: "Maya i Jon: miesiąc w mieszkaniu"
+  currency: GBP
+  people:
+    - id: maya
+      name: Maya
+    - id: jon
+      name: Jon
+  expenses:
+    - label: "czynsz"
+      payer: maya
+      amount: 1400
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: "energia i internet"
+      payer: jon
+      amount: 180
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: "jedzenie na wynos"
+      payer: jon
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Pytania"
+  items:
+    - q: "Użyć pensji brutto czy na rękę?"
+      a: "Decyduje grupa. Pensja na rękę jest częstym wyborem, bo to pieniądze, które faktycznie macie do wydania. Brutto pomija to, że podatek, składki emerytalne i spłaty kredytów zabierają z różnych pensji różne kwoty. Cokolwiek wybierzecie, użyjcie tej samej miary dla obojga."
+    - q: "Czy Side Badger widzi nasze zarobki?"
+      a: "Nie. Wpisujesz tylko procenty, nigdy pensje. Procenty widzą członkowie grupy, a w przypadku pary to wy dwoje."
+    - q: "Czy możemy ustawić 62/38 raz dla wszystkiego?"
+      a: "Podział ustawia się przy wydatku, nie przy grupie. Skopiuj wydatek, który już ma 62 i 38, a potem zmień to, co się różni. Pozostałe opcje opisuje [dzielenie wydatków](page:feature/split-expenses)."

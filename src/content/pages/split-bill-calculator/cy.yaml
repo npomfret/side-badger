@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Cyfrifiannell rhannu bil: pwy sy'n ddyledus i bwy | Side Badger"
+  description: "Pwy dalodd a phwy sy'n ddyledus, wedi'i drefnu mewn eiliadau. Rhannwch yn gyfartal, yn union neu yn ôl canran. Am ddim, yn eich porwr, a dim yn cael ei gadw na'i anfon."
+h1: "Cyfrifiannell rhannu bil"
+navLabel: "Cyfrifiannell rhannu bil"
+lead: "Teipiwch pwy dalodd am beth ac mae'r gyfrifiannell yn dweud pwy sy'n ddyledus i bwy, gyda rhestr fer o daliadau i'w setlo. Mae'n rhedeg yn eich porwr, yn cadw dim ac yn symud dim arian. Os oes angen i'r cyfrif oroesi'r tab ar eich grŵp, mae [rhannu treuliau](page:feature/split-expenses) a [setlo](page:feature/settle-up) yn Side Badger yn gwneud yr un symiau ac yn eu cadw."
+cta:
+  heading: "Hoffi'r symiau? Cadwch nhw."
+  body: "Mae'r gyfrifiannell hon yn anghofio popeth pan fyddwch yn cau'r tab, yn union fel pwy bynnag sy'n taeru iddyn nhw dalu y tro diwethaf. Mae grŵp Side Badger yn cadw'r costau, yn diweddaru balans pawb ac yn cofnodi'r taliadau. Mae am ddim, heb hysbysebion a heb gyfyngiadau dyddiol."
+sections:
+  - heading: "Sut mae'r symiau'n gweithio"
+    body: "Ar gyfer pob cost, mae'r gyfrifiannell yn gweithio allan cyfran pob person. Gallwch ei rhannu'n gyfartal, yn ôl symiau union neu yn ôl canran, rhwng y bobl a ddewiswch. Balans pob person wedyn yw'r hyn a dalodd minws yr hyn sy'n ddyledus ganddo. Mae arwydd plws yn golygu bod y grŵp yn ddyledus iddo, ac mae arwydd minws yn golygu ei fod yn ddyledus i'r grŵp. Mae'r balansau bob amser yn adio i sero, oherwydd mae beth bynnag sy'n ddyledus i un person yn ddyledus gan bobl eraill."
+  - heading: "Pam mae'r rhestr o daliadau yn fyr"
+    body: "Does dim angen i neb setlo pob derbynneb ar ei phen ei hun. Unwaith y bydd pob balans yn hysbys, mae'r gyfrifiannell yn paru'r sawl sydd â'r ddyled fwyaf â'r sawl y mae'r mwyaf yn ddyledus iddo, yn setlo cymaint ag y gall un taliad, ac yn mynd ymlaen i lawr y rhestr nes bod pawb ar sero. Y mwyaf sydd ei angen yw un taliad yn llai na nifer y bobl sydd â balans, ac yn aml mae angen llai na setlo bil wrth fil. Mae'n rhoi rhestr fer o daliadau, ac nid yw'n addo mai hon yw'r fyrraf bosibl."
+  - heading: "Beth nad yw'r gyfrifiannell yn ei wneud"
+    items:
+      - "**Trin mwy nag un arian cyfred.** Dewiswch un a'i ddefnyddio ar gyfer y symiau i gyd. Mae'r ap yn cadw balans ar wahân ar gyfer pob arian cyfred, a gall drosi cost ar gyfradd gyfnewid gyfredol, y gallwch ei newid."
+      - "**Cadw dim.** Caewch y tab ac mae'r ffigurau wedi mynd. I'w cadw, copïwch y ddolen. Mae'n dal eich ffigurau ar ôl yr arwydd #, nad yw eich porwr byth yn ei anfon at weinydd, a gall unrhyw un yr anfonwch y ddolen ato eu darllen."
+      - "**Symud arian.** Mae'n dweud wrthych pwy ddylai dalu i bwy. Rydych yn talu eich gilydd sut bynnag y dymunwch, yna'n cofnodi'r taliad yn yr ap os yw eich grŵp yn cadw ei gyfrif yno."
+      - "**Dewis y geiniog weddilliol ar hap.** Pan nad yw bil yn rhannu'n daclus, mae'r ceiniogau sy'n weddill yn mynd i'r bobl gyntaf yn y rhestr, fel bod y cyfansymiau'n dal i adio. Yn yr ap, mae'r geiniog weddilliol yn mynd i un person ar hap, felly nid yr un person ydyw bob tro."
+      - "**Mynd dros y cyfyngiadau.** Mae'r gyfrifiannell yn derbyn 2 i 20 o bobl, a gall un gost fod hyd at 999,999.99, fel yn yr ap."
+exampleAfter: 2
+example:
+  heading: "Penwythnos hir, pedwar ffrind"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "y bwthyn"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "nwyddau bwyd"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "y tacsi"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "y dafarn"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: "Cwestiynau"
+  items:
+    - q: "Ydy'r gyfrifiannell am ddim?"
+      a: "Ydy. Am ddim. Dim hysbysebion. Dim cyfyngiadau dyddiol. Does dim angen cyfrif arnoch chwaith."
+    - q: "Ydy hi'n cadw'r hyn rwy'n ei deipio?"
+      a: "Nac ydy. Does dim yn cael ei gadw na'i anfon i unman. I gadw eich ffigurau, defnyddiwch Copïo dolen a chadwch y ddolen yn rhywle."
+    - q: "Pwy all weld y ddolen rwy'n ei chopïo?"
+      a: "Unrhyw un sydd â hi. Mae'r ffigurau yn y ddolen ei hun, ar ôl yr arwydd #, felly rhannwch hi dim ond â'r bobl a ddylai eu gweld."
+    - q: "Ydy hi'n symud arian?"
+      a: "Nac ydy. Mae'n gweithio allan pwy ddylai dalu i bwy, ac rydych chi'n talu eich gilydd sut bynnag y dymunwch. Dyw Side Badger byth yn cyffwrdd â'ch arian chwaith. Gweler [setlo](page:feature/settle-up)."
+    - q: "Alla i rannu taith a dalwyd mewn dau arian cyfred?"
+      a: "Nid yma, oherwydd mae gan y symiau un arian cyfred. Mewn grŵp, mae pob arian cyfred yn cadw ei falans ei hun. Gweler [arian cyfred lluosog](page:feature/multiple-currencies)."
+    - q: "Beth os nad yw'r symiau'n adio?"
+      a: "Mae'r gyfrifiannell yn dweud hynny o dan y gost ac nid yw'n dangos canlyniad nes eu bod yn adio. Rhaid i symiau union adio i'r cyfanswm, a rhaid i ganrannau wneud 100."

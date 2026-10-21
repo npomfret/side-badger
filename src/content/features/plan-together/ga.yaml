@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: "Liostaí, vótaíochtaí agus tráchtanna do chostais ghrúpa | Side Badger"
+  description: "Déan trácht ar chostais, ceistigh an costas corr, coinnigh liosta siopadóireachta comhroinnte agus vótáil ar an teach saoire. Pleanáil le chéile, ansin roinn. Saor in aisce, gan fógraí."
+h1: "Pleanáil le chéile, roinn ina dhiaidh sin"
+navLabel: "Pleanáil le chéile"
+lead: "Tá liosta na siopadóireachta agus bille na siopadóireachta ag caint le chéile faoi dheireadh. Tugann Side Badger áit do do ghrúpa chun labhairt faoin airgead roimh agus tar éis é a chaitheamh, le tráchtanna ar gach costas, bealach chun ceist a chur faoi na cinn a bhfuil cuma mhícheart orthu, liostaí comhroinnte agus vótaíochtaí do na cinntí móra. Ansin [roinneann tú costais](page:feature/split-expenses) mar is gnách."
+cta:
+  heading: "Pleanáil é, ansin roinn é"
+  body: "Cruthaigh cuntas saor in aisce, tosaigh grúpa agus cuir an chéad liosta, vótaíocht nó ceist díreach in aice an airgid. Nach bhfuil tú cinnte cad a tharlaíonn ina dhiaidh sin? Féach [conas a oibríonn sé](page:how-it-works)."
+problem:
+  heading: "Tá an comhrá anseo, tá an bille ansiúd"
+  body: "Is minic go gcónaíonn caiteachas grúpa in dhá áit. Tá na huimhreacha in aon áit amháin, agus an argóint faoi na huimhreacha i gcomhrá a scrollaigh amach Dé Máirt. Is grianghraf de chuisneoir an liosta siopadóireachta. Socraíodh an teach saoire le hordóg in airde ó fhormhór na ndaoine, is dócha. Coinníonn Side Badger an phleanáil sa ghrúpa, in aice leis na costais a bhaineann léi, mar sin tá trácht san áit a bhfuil an costas, liosta san áit a bhfuil an siopa, vótaíocht don chinneadh mór, agus bealach chun a rá “fan, an bhfuil sé seo ceart?” gan alt a scríobh. Fanann an t-iomlán ag plé le hairgead an ghrúpa, agus sin an fáth a bhfuil an grúpa ann."
+workflow:
+  heading: "Ón vótáil ar an teach saoire go bille na siopadóireachta"
+  steps:
+    - title: "Cuir an cinneadh mór chun vótála"
+      body: "Cuir vótaíocht leis don chinneadh a shocraíonn an bille, mar cén teach saoire. Roghnaigh idir dhá rogha agus deich rogha, abair cé mhéad vóta a fhaigheann gach duine, ansin dún í nuair atá gach duine tar éis vótáil, agus marcáiltear an buaiteoir."
+      shot: S17
+      shotAlt: "Vótaíocht dhúnta agus an rogha bhuaiteach marcáilte, agus líon na vótaí in aice le gach rogha"
+    - title: "Scríobh an liosta siopadóireachta le chéile"
+      body: "Tosaigh liosta comhroinnte, cuir na míreanna leis agus cuir tic orthu de réir mar a shroicheann siad an tralaí. Téann an siopa isteach ina dhiaidh sin mar chostas."
+      shot: S16
+      shotAlt: "Liosta siopadóireachta comhroinnte agus roinnt míreanna ticeáilte, agus comhaireamh dul chun cinn"
+    - title: "Labhair faoin gcostas san áit a bhfuil sé"
+      body: "Déan trácht ar an gcostas féin, ceangail an admháil agus imoibrigh le emoji. Fanann an comhrá in aice leis an uimhir a bhfuil sé faoi."
+      shot: S08
+      shotAlt: "Costas lena shonraí, mionsamhail den admháil, snáithe tráchta agus imoibrithe emoji"
+    - title: "Ceistigh an ceann a bhfuil cuma aisteach air"
+      body: "Má chuir an grúpa ceisteanna costais ar siúl, is féidir le duine ar bith atá san áireamh i gcostas **Tá ceist agam** a roghnú. Fanann an costas as na hiarmhéideanna go dtí go réitítear an cheist."
+      shot: S18
+      shotAlt: "An liosta costas le suaitheantas Ceistithe agus an scagaire Ceistithe amháin"
+    - title: "Féach cad a athraigh, agus cé a d'athraigh é"
+      body: "Taispeánann an sruth gníomhaíochta agus cloigín na bhfógraí cad atá nua i do ghrúpaí go léir. Tá fógraí brú ar fáil má theastaíonn siad uait."
+      shot: S19
+      shotAlt: "An roghchlár anuas fógraí agus liosta de ghníomhaíocht le déanaí"
+options:
+  heading: "Roghanna"
+  items: []
+example:
+  heading: "Triúr comhchónaitheoirí, bille fíona amháin ceistithe"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "an tsiopadóireacht mhór"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "an glantóir"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "fíon na cóisire"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Tráchtanna agus imoibrithe, in aice leis na huimhreacha"
+    body: "Tá snáithe tráchta dá chuid féin ag gach costas, agus ag an ngrúpa, ag gach liosta agus ag gach vótaíocht. Fiafraigh cén fáth ar chosain an tacsaí an oiread sin ar an gcostas tacsaí féin, ní i gcomhrá nach scrollaíonn aon duine siar tríd. Cuir grianghraf den admháil nó PDF den áirithint leis, ansin imoibrigh le hordóg in airde, croí, gáire, iontas, brón nó ceiliúradh ar chostais, ar íocaíochtaí agus ar thráchtanna. Ceiliúir íocaíocht nuair a thagann sí. Is é sin an rud is gaire a thagann Side Badger do bhualadh bos."
+  - heading: "Ceistigh costas gan achrann a thosú"
+    body: "Nuair atá ceisteanna costais casta ar siúl sa ghrúpa, is féidir le duine ar bith atá san áireamh i gcostas **Tá ceist agam** a roghnú agus a mhíniú cén fáth. Postáiltear an cheist mar thrácht ar an gcostas, faigheann an costas suaitheantas **Ceistithe**, agus titeann an costas ar fad amach as iarmhéideanna gach duine go dtí go réitítear an cheist."
+    items:
+      - "**É a chasadh air.** Tá sé múchta de réir réamhshocraithe. Casann riarthóir **Cead ceisteanna faoi chaiteachais** air i socruithe an ghrúpa, faoi **Gnéithe**."
+      - "**É a dhúnadh.** Roghnaíonn an duine a chuir an cheist, nó riarthóir, **Dún an cheist**. Má cheistigh roinnt daoine an costas céanna, téann sé ar ais isteach sna hiarmhéideanna nuair a dhúntar an cheist dheireanach."
+      - "**É a chur in eagar.** Nuair a chuirtear costas in eagar, iompraítear ceist oscailte chuig an leagan nua do gach duine a bhfuil sciar aige ann fós. Tagann deireadh le ceist aon duine a fhágann an t-athrú amach leis an seanleagan, mar sin níl aon rud fágtha acu le dúnadh."
+      - "**Iad a aimsiú.** Tá scagaire **Ceistithe amháin** ag an liosta costas. Ní céim cheadaithe é seo: ní choinnítear siar ach na costais a cheistíonn duine éigin, agus áirítear gach costas eile a luaithe a chuirtear leis é."
+  - heading: "Conas a imríonn ceist amach"
+    body: "Cuireann Tom £45 d'fhíon cóisire leis, roinnte idir an triúr comhchónaitheoirí. Níor ól Aisha, mar sin ardaíonn sí ceist, agus fad atá sí oscailte ní áirítear an fíon d'aon duine. Aontaíonn an teach gur fíon Tom agus Priya é, mar sin cuireann Tom an roinnt in eagar don bheirt acu. Níl Aisha sa chostas a thuilleadh, mar sin tagann deireadh lena ceist leis an leagan roimhe, a choinnítear, agus téann an fíon ar ais isteach sna hiarmhéideanna láithreach ar £22.50 an duine in ionad £15 an duine. Dá bhfanfadh Aisha sa chostas, d'iompródh a ceist ar aghaidh agus d'fhanfadh sí di nó do riarthóir í a dhúnadh. Thíos, is é £28 den siopa agus £20 den ghlantóir an £48 a bhaineann le hAisha, agus is é sciar £70.50 Priya (£28, £20 agus £22.50) lúide an £60 a d'íoc sí an £10.50 a bhaineann léi. Argóint de chuid [comhchónaitheoirí](page:use-case/housemates) go smior. Chun a fháil amach conas ceist a fhoirmiú, féach [cad atá le déanamh nuair a bhíonn díospóid ann faoi chostas comhroinnte](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Liostaí comhroinnte, don tsiopadóireacht"
+    body: "Tosaigh liosta sa ghrúpa, tabhair ainm dó mar Liosta Siopadóireachta, cuir míreanna leis agus cuir tic orthu. Tarraing míreanna in ord níos fearr, féach ar an gcomhaireamh dul chun cinn ag dul i méid agus déan trácht ar an liosta nuair a cheannaíonn duine an bainne coirce mícheart. Cuir liosta críochnaithe i dtaisce chun é a chur i leataobh (tugann **Taispeáin cinn i dtaisce** ar ais é), nó cóipeáil liosta chun é a athúsáid. Coinnigh an liosta siopadóireachta comhroinnte in aice le billí na siopadóireachta, ionas go ndeir an liosta cad atá le ceannach agus go ndeir an costas cad a chosain sé. Braitheann cé a fhéadfaidh liostaí a chruthú agus a chur in eagar ar cheadanna an ghrúpa, rud a mhíníonn [grúpaí agus ceadanna](page:feature/groups-and-permissions)."
+  - heading: "Vótaíochtaí, gan ainm más mian leat"
+    body: "Fiafraigh den ghrúpa rud a shocraíonn an bille, mar cén teach saoire, cé mhéad a chaitheamh ar an mbronntanas nó an fiú an turas bád. Tá ceist ag vótaíocht, agus idir dhá rogha agus deich rogha. Roghnaíonn tú cé mhéad vóta a fhaigheann gach duine, ó rogha amháin suas le deich, agus cibé an bhfuil an vótáil gan ainm. Folaíonn **Vótáil gan ainm** cé a vótáil do cad, agus ní féidir é a athrú nuair a thagann an chéad vóta isteach. Is féidir le daoine a vóta a athrú nó a bhaint go dtí go ndúntar an vótaíocht, agus is féidir leat í a athoscailt má athraíonn an grúpa a intinn. Is é an teach saoire a roghnú an stuif as a ndéantar [turais ghrúpa](page:use-case/group-trips), agus is clasaiceach d'[imeachtaí agus ceiliúradh](page:use-case/events-and-celebrations) an buiséad bronntanais a aontú."
+  - heading: "An sruth gníomhaíochta, ionas nach n-athraíonn aon rud go ciúin"
+    body: "Tá stair ghníomhaíochta ag gach grúpa, agus bailíonn cloigín na bhfógraí gníomhaíocht ó do ghrúpaí go léir in aon áit amháin. Cuir costas leis agus feiceann gach duine é gan mhoill, gan athnuachan, agus taispeánann an sruth cad a athraigh agus cé a d'athraigh é. Clúdaíonn sé sin costais a cuireadh leis, a cuireadh in eagar nó a scriosadh, ceisteanna a ardaíodh agus a dúnadh, tráchtanna, athruithe ar liostaí agus ar vótaíochtaí, agus íocaíochtaí a taifeadadh."
+  - heading: "Fógraí brú, más mian leat iad"
+    body: "Tá fógraí brú roghnach. Cas orthu i **Socruithe** do chuntais, faoi **Fógraí**, agus cuireann do ghléas in iúl duit nuair a bhíonn gníomhaíocht nua i do ghrúpaí, mar chostas nua nó trácht. Casann tú ar gach gléas ar leith, agus iarrann do bhrabhsálaí cead ar dtús. Ar iPhone nó iPad, ní oibríonn siad ach san aip a cuireadh leis an Scáileán Baile, rud a mhíníonn leathanach an [aip ghréasáin](page:feature/web-app). Caith leo mar áis, ní mar gheall, mar nach bhfuil seachadadh cinnte."
+limits:
+  heading: "Teorainneacha"
+  items:
+    - "Is don airgead an ghrúpa atá tráchtanna, liostaí agus vótaíochtaí. Iarrann na [téarmaí](page:terms) go mbeadh baint ag gach rud a phostáiltear le hairgeadas an ghrúpa, mar sin is áit é seo chun an caiteachas a phleanáil, ní comhrá ginearálta ná aip liosta tascanna."
+    - "Féadfaidh trácht a bheith suas le 500 carachtar, le suas le trí cheangaltán (íomhánna nó PDFanna, suas le 5 MB an ceann). Ní féidir ach leis an údar trácht a scriosadh."
+    - "Tá ceisteanna costais múchta de réir réamhshocraithe, agus casann riarthóir orthu do gach grúpa. Ní féidir ach le daoine atá san áireamh i gcostas é a cheistiú, glanann múchadh na gné gach ceist oscailte, agus ní féidir le haon duine an grúpa a fhágáil fad is atá ceist oscailte ar chostas a bhfuil sé páirteach ann."
+    - "Is féidir suas le 100 liosta a bheith i ngrúpa, gach ceann acu le suas le 200 mír de suas le 500 carachtar. Socraíonn ceadanna an ghrúpa cé a fhéadfaidh liostaí a chruthú, a chur in eagar agus a scriosadh, agus ní cheadaíonn grúpa faoi ghlas aon athruithe."
+    - "Is féidir suas le 50 vótaíocht a bheith i ngrúpa, gach ceann acu le idir dhá rogha agus deich rogha agus suas le deich vóta an duine. Níl spriocdháta ag vótaíochtaí agus ní dhúntar iad astu féin."
+    - "Coinnítear an stair ghníomhaíochta ar feadh 90 lá."
+    - "Roghnach is ea fógraí brú do gach cuntas agus do gach gléas. Teastaíonn brabhsálaí a thacaíonn leo agus do chead, ní oibríonn siad ar iPhone ná iPad ach ón aip a cuireadh leis an Scáileán Baile, agus níl seachadadh cinnte. Níl aon rabhaidh ríomhphoist ná téacs ann do ghníomhaíocht agus níl aon mheabhrúcháin íocaíochta ann, mar sin is ortsa atá sé fós duine a spreagadh chun íoc."
+useCasesHeading: "Cá gcuidíonn pleanáil le chéile"
+faq:
+  heading: "Ceisteanna"
+  items:
+    - q: "An féidir vótaí a bheith gan ainm?"
+      a: "Is féidir. Cas ar **Vótáil gan ainm** nuair a chruthaíonn tú an vótaíocht agus folaíonn sé cé a vótáil do cad. Socraigh roimh an gcéad vóta é, mar ní féidir é a athrú ina dhiaidh sin."
+    - q: "An ndúnann vótaíocht uaithi féin?"
+      a: "Ní dhúnann. Níl spriocdháta ag vótaíocht, mar sin roghnaíonn an té a chruthaigh í **Dún an vótaíocht** nuair atá cinneadh déanta ag an ngrúpa. Má athraíonn an grúpa a intinn, tugann **Athoscail an vótaíocht** ar ais í."
+    - q: "Cé mhéad mír a fhéadfaidh liosta a choinneáil?"
+      a: "Suas le 200 mír in aghaidh an liosta agus suas le 100 liosta in aghaidh an ghrúpa. Féadfaidh gach mír a bheith suas le 500 carachtar, agus is neart bainne coirce é sin."
+    - q: "Cé a fhéadfaidh ceist a dhúnadh, agus cad a tharlaíonn don chostas idir an dá linn?"
+      a: "An duine a chuir an cheist, nó riarthóir grúpa. Fad atá ceist oscailte, tá an costas ar fad as iarmhéideanna gach duine. Téann sé ar ais isteach nuair a dhúntar an cheist oscailte dheireanach air, nó nuair a bhaineann athrú an duine a chuir an cheist amach as an gcostas."
+    - q: "An féidir liom liostaí agus tráchtanna a úsáid mar aip liosta tascanna nó mar chomhrá grúpa?"
+      a: "Ní féidir. Is don airgead an ghrúpa atá tráchtanna, liostaí agus vótaíochtaí, agus sin a iarrann na [téarmaí](page:terms). Smaoinigh ar liostaí siopadóireachta, vótaíochtaí buiséid agus “cén fáth a bhfuil £45 ar seo?”."
+    - q: "An seolfaidh Side Badger ríomhphost chugam faoi ghníomhaíocht?"
+      a: "Ní sheolfaidh. Níl aon rabhaidh ríomhphoist ná téacs ann do ghníomhaíocht. Is féidir leat fógraí brú a chasadh air ar gach gléas, agus taispeánann cloigín na bhfógraí san aip cad atá nua."

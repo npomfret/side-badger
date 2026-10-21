@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Del huslejen efter værelsesstørrelse eller indkomst | Side Badger"
+  description: "Større værelse, større andel? Find ud af, hvad hver bofælle betaler, efter værelsesstørrelse eller indkomst. Den kører i din browser: intet gemmes eller sendes."
+h1: Beregner til at dele huslejen
+navLabel: Beregner til husleje
+lead: Større værelse, større andel? Skriv huslejen ind, og se, hvad hver person betaler, efter værelsesstørrelse eller indkomst, helt ned til øret. Den kører i din browser, gemmer ingenting og flytter ingen penge. Når huset vil have regnskabet gemt, så [del udgifter](page:feature/split-expenses) i Side Badger og kopiér huslejen hver måned.
+cta:
+  heading: Aftal procenterne én gang. Kopiér dem for evigt.
+  body: Beregneren glemmer alt, når du lukker fanen, ligesom bofællen, der helt sikkert betalte for bredbåndet. En Side Badger-gruppe gemmer huslejen, regningerne og hvem der har betalt hvad. Det er gratis, uden reklamer og uden daglige grænser.
+sections:
+  - heading: To måder at dele huslejen på
+    items:
+      - "**Efter værelsesstørrelse.** En del af huslejen betaler for køkken, bad og stue, som alle bruger. Du vælger den andel (40 % til at begynde med), og den deles ligeligt. Resten fordeles efter værelsernes areal, så det store værelse betaler mere, og pulterkammeret får den rabat, det har fortjent."
+      - "**Efter indkomst.** Hver person betaler den samme andel af huslejen, som vedkommende tjener af husets samlede indkomst. Tilføj fælles regninger, og de følger de samme andele."
+  - heading: Sådan går regnestykket op
+    body: "Hver person får en nøjagtig andel og derefter en hel procent, fordi hele tal er lettere at skrive og at skændes om. Afrundingen følger metoden med største rest: alle beholder det hele tal under deres andel, og de overskydende point går til dem, der mistede mest. Procenterne giver altid 100 i alt. I lejligheden nedenfor er de fælles 40 % 13,33 % hver. Priyas værelse er 16 af lejlighedens 38 m², så 60 % × 16/38 er 25,26 %, og med 13,33 % oveni bliver det 38,6 %, som runder op til 39 %. Tom og Aisha ender på 32 % og 29 %, og 39 + 32 + 29 er 100. Hvert beløb er den procentdel af huslejen: 39 % af 1.950 £ er 760,50 £."
+  - heading: Skriv den så ind i Side Badger
+    body: "Den fulde historie, målebånd inklusive, finder du under [sådan deler du huslejen efter værelsesstørrelse](page:guide/how-to-split-rent-by-room-size), eller under [en partner, der tjener mere](page:guide/how-to-split-bills-with-a-partner-who-earns-more), hvis I er et par."
+    items:
+      - "**Tilføj huslejen.** Vælg **Tilføj udgift** i din gruppe, angiv under **Hvem betalte?**, hvem der betalte udlejeren, og behold alle under **Fordel mellem**."
+      - "**Vælg Procent.** Vælg **Procent** under **Hvordan skal det fordeles**, og skriv de hele procenter. Formularen markerer det, hvis de ikke giver 100 i alt."
+      - "**Kopiér den næste måned.** Åbn sidste måneds husleje, og vælg **Kopier udgift**. Fordelingen følger med."
+  - heading: Hvad beregneren ikke gør
+    items:
+      - "**Måle dine værelser.** Gulvareal er et udgangspunkt. Et værelse med eget bad er mere værd end det samme areal uden, og et pulterkammer, der lige har plads til en seng og en håbefuld stol, er mindre værd."
+      - "**Afgøre, hvad der tæller som indkomst.** Løn før eller efter skat, fast job eller bijob: det beslutter gruppen. Brug den samme periode for alle."
+      - "**Gemme noget.** Luk fanen, og tallene er væk. Vil du beholde dem, så kopiér linket. Det rummer dine tal efter #, som browsere aldrig sender til en server, og alle, der har det, kan læse dem."
+      - "**Flytte penge.** Du betaler udlejeren, som du vil."
+      - "**Blande valutaer eller overskride grænserne.** Vælg én valuta. Den tager 2 til 10 personer og en husleje på op til 999.999,99, ligesom i appen."
+exampleAfter: 2
+example:
+  heading: Én lejlighed, én måned
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: huslejen
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: energiregningen
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: bredbåndet
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: Spørgsmål
+  items:
+    - q: Hvad er mest fair, værelsesstørrelse eller indkomst?
+      a: Ingen af dem er altid mest fair. Værelsesstørrelse passer til bofæller, der betaler for den plads, de sover på. Indkomst passer til par og venner med meget forskellig løn. Aftal det før første huslejedag, ikke bagefter.
+    - q: Skal regningerne deles på samme måde?
+      a: For bofæller normalt ikke. Alle bruger energi og bredbånd, så ligeligt er enklere, som i eksemplet. Ved indkomst giver beregneren regningerne de samme andele som huslejen.
+    - q: Kan jeg bruge kvadratfod?
+      a: Ja. Vælg ft², og skriv dine arealer i kvadratfod. Enheden er kun en etiket, og andelene bliver de samme, så længe alle bruger den samme enhed.
+    - q: Er beregneren gratis?
+      a: Ja. Gratis. Ingen reklamer. Ingen daglige grænser. Du behøver heller ikke en konto.

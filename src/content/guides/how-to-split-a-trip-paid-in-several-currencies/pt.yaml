@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Como dividir uma viagem paga em várias moedas | Side Badger"
+  description: "Libras para o hotel, ienes para o ramen. Acerta cada moeda à parte ou converte a uma taxa que podes ver. Os dois caminhos resolvidos, com as contas."
+h1: "Como dividir uma viagem paga em várias moedas"
+navLabel: "Viagens em várias moedas"
+lead: "Introduz cada despesa na moeda em que pagaste e escolhe depois um caminho. Mantém as moedas separadas e acerta cada uma no seu próprio dinheiro, ou converte a uma taxa de câmbio atual e acerta uma só vez. A mesma viagem ao Japão dá quatro pagamentos da primeira maneira e dois da segunda."
+cta:
+  heading: "Introduz na moeda em que pagaste"
+  body: "Cria uma conta grátis, começa um grupo para a viagem e adiciona cada despesa na moeda que vinha no recibo. Queres ver primeiro os pormenores? Vê [várias moedas](page:feature/multiple-currencies) ou [o que o grátis inclui](page:pricing)."
+sections:
+  - heading: "Três amigos, um hotel e uma data de ienes"
+    body: "A Zoe, o Kenji e a Lucy passam uma semana no Japão numa [viagem em grupo](page:use-case/group-trips), e todos os custos são divididos em partes iguais pelos três. A Zoe reservou o hotel em casa, em libras, por 600 £. A Lucy comprou os passes de comboio em Tóquio por 90 000 ¥. O Kenji pagou a noite de ramen, 9 000 ¥, e menciona-o todos os dias desde então. Ninguém quer converter três recibos numa plataforma de estação. Para as contas aqui, 1 ¥ vale 0,005 £, uma taxa redonda inventada para este guia. Na app, usarias uma taxa de câmbio atual, ou escreverias a que realmente tiveste."
+  - heading: "Introduz cada uma na moeda do recibo"
+    body: "Faz esta parte, escolhas o caminho que escolheres. Ainda não é preciso converter nada."
+    items:
+      - "**Faz o grupo.** No painel principal escolhe **Criar grupo**, dá-lhe o nome da viagem, escolhe depois **Convidar outras pessoas** e envia o link ou o código QR."
+      - "**Adiciona o hotel.** Escolhe **Adicionar despesa** e escreve 600, com libras como moeda junto ao valor. Em **Quem pagou?** escolhe a Zoe. Deixa os três em **Dividir entre**, deixa **Como dividir** em **Igual** e escolhe **Guardar despesa**."
+      - "**Adiciona os ienes.** Faz o mesmo para os passes de comboio (pagou a Lucy) e para o ramen (pagou o Kenji), com ienes como moeda. Os ienes não têm decimais, por isso o formulário não pede nenhuns."
+  - heading: "Primeiro caminho: manter as moedas separadas"
+    body: "O Side Badger mantém um saldo para cada moeda e não compensa uma com a outra. Em libras, o hotel dá 200 £ a cada um, por isso o Kenji e a Lucy devem 200 £ cada um à Zoe. Em ienes, os passes de comboio e o ramen somam 99 000 ¥, ou seja, 33 000 ¥ cada um. A Lucy pagou 90 000 ¥ e tem 57 000 ¥ a receber. A Zoe não pagou ienes e deve 33 000 ¥. O Kenji pagou 9 000 ¥, por isso deve 24 000 ¥."
+    items:
+      - "**Libras.** O Kenji paga 200 £ à Zoe e a Lucy paga 200 £ à Zoe."
+      - "**Ienes.** A Zoe paga 33 000 ¥ à Lucy e o Kenji paga 24 000 ¥ à Lucy."
+      - "**Quatro pagamentos ao todo.** A Zoe e a Lucy devem-se uma à outra em duas moedas que não se anulam. Não entra taxa nenhuma, por isso não há nada para discutir."
+      - "**Deves ienes, pagas em libras.** Quem não tem ienes pode na mesma pagar em libras. Ao registar o pagamento, abre **Outra moeda?**, escolhe **Converter para** libras e confirma a taxa. Os 33 000 ¥ da Zoe são 165 £ à taxa deste guia, e o saldo em ienes continua a sair certo."
+      - "**Regista cada pagamento.** Paguem-se como preferirem, escolham depois **Acertar contas** e usem **Registar acerto**. Há mais sobre [acertar contas](page:feature/settle-up)."
+  - heading: "Segundo caminho: converter à medida que avanças"
+    body: "Se o grupo preferir ver um só número cada um, converte quando introduzes a despesa."
+    items:
+      - "**Converte no formulário.** Em **Adicionar despesa**, escolhe **Converter para** e escolhe libras. O Side Badger mostra a taxa e o valor convertido, marcado com um ≈. Edita a taxa se tiveste outra. O valor original em ienes fica na despesa."
+      - "**Lê as libras.** A 1 ¥ = 0,005 £, os passes de comboio passam a 450 £ e o ramen a 45 £. Com o hotel de 600 £, são 600 £ + 450 £ + 45 £ = 1 095 £, ou seja, 365 £ cada um. A Zoe pagou 600 £, por isso tem 235 £ a receber. A Lucy pagou 450 £ e tem 85 £ a receber. O Kenji pagou 45 £ e deve 320 £."
+      - "**Dois pagamentos.** Ambos do Kenji: 235 £ para a Zoe e 85 £ para a Lucy. A Zoe e a Lucy já não se pagam de todo."
+      - "**Ou define uma moeda do grupo.** Para saltar o passo extra, abre as **Definições** do grupo, procura **Definições de moeda** e escolhe **Converter despesas automaticamente para**. Cada nova despesa converte-se então para essa moeda, ainda a uma taxa que podes ver e alterar."
+  - heading: "Que caminho escolher?"
+    items:
+      - "**Mantém as moedas separadas** quando as pessoas ainda têm ienes na carteira, ou quando preferes não discutir uma taxa. O custo são mais pagamentos, em mais do que uma moeda."
+      - "**Converte** quando o grupo vive numa só moeda e quer um só número cada um e uma lista mais curta, como as duas transferências do Kenji. O custo é o grupo confiar numa taxa, e a taxa fica fixa em cada despesa quando esta é guardada."
+      - "**Decidam cedo.** Uma moeda do grupo só converte despesas novas e copiadas. Não volta atrás para arrumar o que já introduziste."
+  - heading: "A taxa e o limite"
+    items:
+      - "**A taxa fica fixa quando guardas.** As despesas antigas nunca são reavaliadas, por isso um saldo não se desvia só porque o mercado se mexeu. Despesas introduzidas em dias diferentes podem ter taxas diferentes, por isso, se o grupo quiser uma só taxa para a viagem toda, combinem-na e escrevam-na de cada vez."
+      - "**Sem taxa? Escreve uma.** O Side Badger obtém uma taxa de câmbio atual sempre que consegue, mas nem todos os pares têm essa garantia. Se não houver, ou se uma casa de câmbio te tiver dado melhor taxa, escreve a tua."
+      - "**999 999,99 por despesa, na sua própria moeda.** Um só limite, seja qual for a moeda. Em ienes, isso é um pouco menos de 1 000 000 ¥, cerca de 5 000 £ à taxa deste guia. Numa moeda com números grandes, como a rupia indonésia, uma única conta pode lá chegar mais cedo. Divide a conta em duas despesas, ou introduz-a noutra moeda e converte."
+  - heading: "O que o Side Badger não faz aqui"
+    items:
+      - "Nunca movimenta nem troca dinheiro. Pagam-se como preferirem e depois registam o pagamento."
+      - "Tem 140 moedas. As criptomoedas e os metais não estão entre elas."
+exampleAfter: 2
+example:
+  heading: "Japão, acertado de duas maneiras"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "o hotel, reservado em casa"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "passes de comboio"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "noite de ramen"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Perguntas"
+  items:
+    - q: "Que taxa de câmbio usa o Side Badger?"
+      a: "Uma taxa de câmbio atual, obtida quando introduzes a despesa, sempre que houver uma disponível. Podes alterá-la para a taxa que realmente tiveste."
+    - q: "O grupo pode ficar só por libras e ienes?"
+      a: "Sim. Nas **Definições** do grupo, ativa **Restringir moedas para este grupo** em **Definições de moeda**, escolhe as **Moedas permitidas** e define a **Moeda predefinida para novas despesas**. Menos opções na lista, menos palpites errados à caixa."
+    - q: "Temos mesmo de converter?"
+      a: "Não. As moedas ficam separadas, a menos que tu ou o teu grupo escolham converter, e cada moeda tem a sua própria lista curta de pagamentos."

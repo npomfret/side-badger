@@ -1,0 +1,114 @@
+translatedFrom: "0900d953"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Biri ortak bir harcamaya itiraz ederse ne yapmalı | Side Badger"
+  description: "İğneleyici mesajı bırakın. Harcamayı sorgulayın; siz konuşurken herkesin bakiyesinden çıksın. 45 £'luk parti şarabıyla hesaplandı."
+h1: "Biri ortak bir harcamaya itiraz ederse ne yapmalı"
+navLabel: "İtiraz edilen harcamalar"
+lead: "İğneleyici bir mesaj atmak yerine harcamada bir soru açın. Soru açıkken harcamanın tamamı herkesin bakiyesinin dışında kalır. Yorumlarda konuşun, grup kabul ederse bölüşümü düzenleyin ve soruyu soran kişi ya da bir yönetici kapatsın."
+cta:
+  heading: "Zor soruyu kibarca sorun"
+  body: "Ücretsiz bir hesap oluşturun, ev için bir grup kurun ve bir yöneticiden harcama sorularını açmasını isteyin; biri açana kadar kapalıdırlar. Önce turu mu görmek istiyorsunuz? [Nasıl çalışır](page:how-it-works) veya [ücretsiz planın kapsamı](page:pricing) sayfasına bakın."
+sections:
+  - heading: "Üç ev arkadaşı ve 45 £'luk şarap"
+    body: "Partiden sonra Tom şarabı evin grubuna ekler. 45 £, Tom ödedi, Tom, Priya ve Aisha arasında eşit bölünüyor; kişi başı 15 £. Aisha içki içmiyor. Tom şarabı parti için aldı, parti de [ev](page:use-case/housemates) içindi, yani yanlış bir şey yapmadı. Aisha'nın sorması da yanlış değil. Burada kimse kötü adam değil. Sadece 15 £'luk bir şarap tartışması var ve bunu gergin hale getirmenin bir sürü yolu. Eve atılan iğneleyici bir mesaj bunlardan biri. Harcamadaki bir soru ise daha nazik olanı."
+  - heading: "Bir soru ne yapar"
+    body: "Aisha harcamayı açar ve bir soru sorar. Yalnızca onun payı değil, harcamanın tamamı herkesin bakiyesinin dışına çıkar ve başka hiçbir şey etkilenmez. Büyük alışveriş (84 £) ve temizlikçi (60 £) hâlâ sayılır; bu kişi başı 28 £ + 20 £ = 48 £ eder. Yani şarap beklemedeyken Aisha 48 £ borçlu, Tom 36 £ alacaklı ve Priya 12 £ alacaklı. Ev şarap hakkında ne karar verirse versin, o arada kimsenin bakiyesine dahil değildir. Harcamadaki başka biri de kendi sorusunu açabilir. Şarap bakiyelere ancak üzerindeki son açık soru kapatıldığında geri döner ve bir soruyu soran kişi ya da bir yönetici kapatır."
+  - heading: "Konuşmak, sonra düzeltmek"
+    body: "Aisha'nın sorusu harcamanın yorumlarına düşer, yanıtlar da hemen altında durur. Yorumlar ve sorular hakkında daha fazlası için [birlikte planlayın](page:feature/plan-together) sayfasına bakın. Tom ile Priya okur ve ev bir sohbet eder. Şarabın Tom ile Priya'nın olduğuna, çünkü onların içtiğine karar verirler. Başka bir ev üçlü bölüşümü koruyabilir ya da ikisinin arası bir şeyde anlaşabilir, o da sorun olmazdı. Side Badger anlaştığınızı saklar ve şarap konusunda bir fikri yoktur. Tom harcamayı kendisi ile Priya arasında eşit bölünecek şekilde düzenler; kişi başı 22,50 £ (45 £ ÷ 2). Aisha artık içinde olmadığı için sorusu eski sürümle gider ve şarap bakiyelere geri döner. Önceki sürüm saklanır."
+  - heading: "Sonucu okumak"
+    body: "Şarap geri girince Tom 58,50 £ alacaklı, Priya 10,50 £ borçlu ve Aisha 48 £ borçlu. Side Badger iki ödeme önerir, ikisi de Tom'a. Aisha'nın 48 £'u, şarap beklemedeyken sahip olduğu rakamdır, çünkü o şarabın içinde değil. Priya 12 £ alacaklıyken 10,50 £ borçlu hale geldi; bu şarabın 22,50 £'luk yarısıdır. Üçlü bölüşüm geçerli kalsaydı Aisha 63 £ borçlu olurdu (28 £ + 20 £ + 15 £). Bütün anlaşmazlığın değeri 15 £ idi. Birbirinize istediğiniz yolla ödeyin, sonra her ödemeyi **Ödeş** altında kaydedin. Gerisi için [hesaplaşma](page:feature/settle-up) sayfasında."
+  - heading: "İnsanlar sizinle konuşmaya devam etsin diye nasıl yazmalı"
+    body: "Aisha'nın sorusu: “Şaraptan hiç içmedim. Bölüşüme bir bakabilir miyiz?” Kısa, harcamayı adıyla anıyor ve suçlamıyor, soruyor. Birkaç alışkanlık yardımcı olur."
+    items:
+      - >-
+        **Kişiyi değil, harcamayı sorun.** “Şaraptaki bölüşüme bir bakabilir miyiz?” bir sohbet başlatır. “Neden senin şarabın parasını ödüyorum?” öbür türünü başlatır.
+      - >-
+        **Ne olmasını istediğinizi söyleyin.** “Yalnızca içenler arasında olabilir mi?” gruba katılacağı ya da yanıtlayacağı bir şey verir.
+      - >-
+        **Bir iki cümleyle gerekçe verin.** Alan **Sorunuz** olarak geçer ve boş bırakılamaz.
+      - >-
+        **Yanıtları tek yerde tutun.** Yanıtlar, ilgili oldukları rakamların yanında, harcamanın yorumlarına gider.
+  - heading: "Side Badger'da kurun"
+    items:
+      - >-
+        **Soruları açın.** Varsayılan olarak kapalıdırlar. Bir yönetici grubun **Ayarlar**'ını açar, **Genel** sekmesinde **Özellikler** altındaki **Harcama sorularına izin ver**'i açar ve **Kaydet**'i seçer. Sonradan kapatmak her açık soruyu temizler.
+      - >-
+        **Bir soru açın.** Harcamayı açın ve bölüşümde kendi adınızın yanında **Bir sorum var**'ı seçin. Gerekçenizi **Sorunuz**'a yazın ve yeniden **Bir sorum var**'ı seçin. Bunu yalnızca harcamadaki kişiler yapabilir. Harcamada artık bir **Sorgulandı** rozeti görünür.
+      - >-
+        **Beklemede olanı bulun.** Harcama listesinde **Yalnızca sorgulanan**, açık sorusu olan harcamaları gösterir.
+      - >-
+        **Grup kabul ederse düzeltin.** Harcamayı açın, **Düzenle**'yi seçin, **Şunlar arasında bölüştür**'ü değiştirin ve **Harcamayı Güncelle**'yi seçin. Kimin düzenleyebileceği grubun izinlerine bağlıdır.
+      - >-
+        **Düzeltilecek bir şey yoksa kapatın.** Soruyu soran kişi **Sorgulandı** rozetindeki **Soruyu kapat** düğmesini kullanabilir, bir yönetici de. Son sorusu kapandığında harcama bakiyelere geri döner.
+  - heading: "O kadar derli toplu olmadığında"
+    items:
+      - >-
+        **Düzenleme soruyu soranı içeride tutar.** Soruyu soran kişi hâlâ harcamadaysa sorusu düzenlenmiş sürüme taşınır ve kendisinin ya da bir yöneticinin kapatmasını bekler. Tutarı düzeltmek, düzeltildiği konusunda anlaşmakla aynı şey değildir.
+      - >-
+        **Harcamada değildiniz.** Bir harcamayı yalnızca içindeki kişiler sorgulayabilir. Size bir şey tuhaf görünüyorsa bunu yorumlarında söyleyin ya da onu ekleyene sorun.
+      - >-
+        **Biri gruptan ayrılmak istiyor.** Açık bir soru, o harcamadaki kişilerin ayrılmasını engeller. Soruyu kapatın ya da harcamayı, artık içinde olmayacak şekilde düzenleyin; gidebilirler.
+  - heading: "Side Badger burada neleri yapmaz"
+    items:
+      - "Kimin haklı olduğuna karar vermez. Harcamayı bakiyelerin dışında tutar ve anlaştığınızı saklar."
+      - "Harcamalar sayılmadan önce kimseden onay istemez. Yalnızca sorgulanan bir harcama bekletilir."
+      - "Bir harcamanın bir kısmını tutamaz. Sorgulayın, tamamı bakiyelerden çıkar."
+      - "Parayı taşımaz. Birbirinize istediğiniz yolla ödersiniz ve kaydedersiniz."
+exampleAfter: 3
+example:
+  heading: "Şaraptan sonra ev"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "büyük alışveriş"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "temizlikçi"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "parti şarabı"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Yalnızca kendi payımı sorgulayabilir miyim?"
+      a: "Hayır. Bir soru, içindeki herkes için harcamanın tamamını dışarıda tutar. Yalnızca bölüşüm yanlışsa çözüm bölüşümü düzenlemektir."
+    - q: "Bir soruyu kim kapatabilir?"
+      a: "Soruyu soran kişi ya da bir grup yöneticisi. Harcamayı ekleyen kişi yönetici değilse, soruyu soranın yerine kapatamaz."
+    - q: "Bir harcamayı düzenlemek aslını siler mi?"
+      a: "Hayır. Önceki sürüm saklanır. Kimin düzenleyebileceğine grubun izinleri karar verir; bakiyeler değişeceği için önce eve haber vermekte fayda var."

@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Bagi vila saat orang menginap di malam berbeda | Side Badger"
+  description: "Dev hanya datang tiga malam, jadi mengapa ikut membayar enam? Bagi vila liburan menurut malam yang benar-benar ditempati, hitungannya sudah dikerjakan."
+h1: "Cara membagi vila liburan saat orang menginap di malam yang berbeda"
+navLabel: "Bagi vila menurut malam"
+lead: "Hitung harga per orang per malam, kalikan dengan jumlah malam tiap orang, dan masukkan vila sebagai **satu pengeluaran dengan jumlah pasti**. Side Badger menjaga hitungan dan menyarankan daftar pembayaran singkat saat tiba waktunya melunasi."
+cta:
+  heading: "Beri vila satu pengeluaran yang rapi"
+  body: "Buat grup, undang semua orang dengan tautan atau kode QR, dan masukkan vila dengan jumlah pasti. Side Badger menjaga hitungan berjalan selagi Anda menikmati liburan."
+sections:
+  - heading: "Enam malam, empat orang, satu kartu kredit"
+    body: "Sebuah [perjalanan grup](page:use-case/group-trips) biasanya dimulai dari kartu milik satu orang. Kali ini kartu Ana. Ia memesan vila untuk enam malam, €2.100, karena harus ada yang maju lebih dulu. Ana, Ben, dan Chloe menginap enam malam penuh. Dev hanya bisa bergabung untuk tiga malam terakhir, dan datang naik kereta. Ben menyewa mobil, yang tak pernah diduduki Dev. Dev yang berbelanja bahan makanan untuk semua orang. Membagi vila empat sama rata adalah pilihan yang paling gampang. Namun itu membuat Dev membayar tiga malam yang ia habiskan di rumah, dan hal semacam itu akan diungkit lagi di acara kumpul-kumpul berikutnya. Membagi menurut malam menghindarkan pertengkaran itu, dan hitungannya hanya semenit."
+  - heading: "Hitung harga satu orang-malam"
+    body: "Satu orang-malam adalah satu orang yang menginap satu malam. Harga vila ya harga vila, jadi bagi harganya ke seluruh orang-malam, lalu beri tiap orang bagian yang mereka pakai."
+    items:
+      - "**Hitung orang-malamnya.** Ana, Ben, dan Chloe masing-masing menginap enam malam dan Dev tiga malam: 6 + 6 + 6 + 3 = 21."
+      - "**Tentukan harga satu.** €2.100 ÷ 21 = €100 per orang-malam."
+      - "**Kalikan dengan malam tiap orang.** Ana, Ben, dan Chloe masing-masing membayar 6 × €100 = €600. Dev membayar 3 × €100 = €300."
+      - "**Periksa totalnya.** €600 + €600 + €600 + €300 = €2.100. Jika bagian-bagian Anda tidak berjumlah sama dengan harganya, ada malam yang terlewat atau terhitung dua kali."
+  - heading: "Masukkan di Side Badger"
+    body: "Buat grup, undang tiga orang lainnya dengan tautan atau kode QR, lalu tambahkan biayanya. Vila lebih dulu."
+    items:
+      - "Pilih **Tambah Pengeluaran**. Beri deskripsi, masukkan 2.100, dan atur **Siapa yang membayar?** ke Ana."
+      - "Di bawah **Dibagi antara**, pastikan keempat orang ada di dalamnya."
+      - "Di bawah **Cara membagi**, pilih **Jumlah pasti**. Ketik 600 untuk Ana, Ben, dan Chloe, dan 300 untuk Dev. Jumlahnya harus sama dengan totalnya."
+      - "Pilih **Simpan Pengeluaran**."
+      - "Tambahkan sewa mobil dengan cara yang sama. Ben yang membayar, pembagiannya **Rata**, dan Dev dikeluarkan, karena ia naik kereta. [Bagi pengeluaran](page:feature/split-expenses) membahas cara lain membagi biaya."
+      - "Tambahkan belanjaan. Dev yang membayar, pembagiannya **Rata**, dan keempatnya ikut."
+  - heading: "Baca hasilnya, lalu lunasi"
+    body: "Tagihan tiap orang adalah bagian vilanya ditambah bagiannya dari mobil dan belanjaan. Ana, Ben, dan Chloe masing-masing menjadi €725, yaitu €600 + €80 + €45. Dev menjadi €345, yaitu €300 + €45. Kurangkan apa yang dibayar tiap orang dan saldonya muncul. Ana membayar €2.100, jadi ia dihutangi €1.375. Ben membayar €240 dan berutang €485. Dev membayar €180 dan berutang €165. Chloe tidak membayar apa pun dan berutang €725. Jika dibiarkan, utang-utang itu akan berputar ke enam arah di dalam grup. Side Badger menyarankan tiga pembayaran saja, semuanya kepada Ana. Bayar dia dengan cara apa pun yang Anda suka, lalu pilih **Lunasi** dan pakai **Catat Penyelesaian** untuk tiap pembayaran, supaya saldo menyusul. Tombol lunasi cepat mengisi jumlahnya. Penjelasan lebih lanjut ada di [pelunasan](page:feature/settle-up)."
+  - heading: "Saat vila tidak punya satu harga yang rapi"
+    items:
+      - "**Kamarnya berbeda.** Jika kamar suite lebih bernilai daripada kamar sempit, sepakati dulu harga tiap kamar, lalu lakukan hitungan orang-malam satu kamar demi satu kamar. Masukkan vila sebagai satu pengeluaran dengan total tiap orang, atau satu pengeluaran per kamar. Bagaimanapun caranya, jumlah pasti pada sebuah pengeluaran harus sama dengan totalnya."
+      - "**Deposit yang dibayar berbulan-bulan sebelumnya.** Siapa pun yang membayarnya mendapat pengeluaran sendiri, bertanggal hari ia membayar. Bagi menurut malam dengan proporsi yang sama seperti sisa pembayarannya."
+      - "**Pemesanan dalam mata uang lain.** Masukkan vila dalam mata uang yang Anda pakai untuk membayar. Jika grup mengonversi sambil jalan, pakai kurs terkini, atau ketik kurs yang benar-benar Anda dapatkan. Jumlah aslinya tetap tersimpan di pengeluaran. [Beberapa mata uang](page:feature/multiple-currencies) menjelaskan rinciannya."
+      - "**Malam yang tidak penuh.** Ada yang tiba tengah malam, ada yang pergi sebelum sarapan. Sepakati satu aturan untuk menghitung malam dan pakai untuk semua orang."
+  - heading: "Yang tidak dilakukan Side Badger di sini"
+    items:
+      - "Side Badger tidak menghitung malam untuk Anda. Tidak ada pembagian menurut malam atau menurut bagian, jadi Anda menghitung tiap jumlah seperti di atas dan memasukkan **jumlah pasti**."
+      - "Side Badger tidak memindahkan uang. Bayar satu sama lain dengan cara apa pun yang Anda suka, lalu catat pembayarannya."
+      - "Satu pengeluaran hanya boleh punya satu pembayar. Jika dua orang membayar vila, catat dua pengeluaran."
+      - "Tidak ada akses tamu. Semua orang di grup, termasuk Dev, memerlukan akun gratis."
+exampleAfter: 2
+example:
+  heading: "Vila, mobil, dan belanjaan"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "enam malam di vila"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "sewa mobil"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "belanjaan"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Pertanyaan soal vila"
+  items:
+    - q: "Bagaimana jika ada yang batal?"
+      a: "Keluarkan malam mereka, hitung ulang, dan ubah pengeluaran vila agar jumlah pastinya kembali berjumlah sama dengan harga. Versi sebelumnya disimpan dan perubahannya tampak di aktivitas grup, jadi tak ada yang mengubah angka diam-diam. Siapa yang boleh mengubah bergantung pada izin grup."
+    - q: "Haruskah orang yang memesan membayar lebih sedikit?"
+      a: "Itu keputusan grup. Memesan itu repot, dan tiap grup berbeda pendapat soal apakah itu pantas mendapat potongan. Apa pun yang Anda sepakati, masukkan ke jumlah pasti dan tulis di catatan pada pengeluaran, atau di komentar di sampingnya, supaya tak ada yang harus mengingat kesepakatannya."
+    - q: "Bisakah biaya kebersihan dibagi dengan cara berbeda?"
+      a: "Bisa. Masukkan biayanya sebagai pengeluaran terpisah dan beri pembagiannya sendiri. Rata cocok untuk biaya tetap seluruh rumah. Jumlah pasti cocok untuk grup yang ingin biaya itu juga mengikuti jumlah malam."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

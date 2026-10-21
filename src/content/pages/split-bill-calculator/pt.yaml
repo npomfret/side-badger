@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Calculadora para dividir contas: quem deve a quem | Side Badger"
+  description: "Quem pagou, quem deve, quem paga a quem: tratado em segundos. Partes iguais, valores exatos ou percentagem. Grátis, no navegador, sem guardar nem enviar nada."
+h1: "Calculadora para dividir contas"
+navLabel: "Calculadora para dividir contas"
+lead: "Escreve quem pagou o quê e a calculadora diz quem deve a quem, com uma lista curta de pagamentos para acertar tudo. Corre no teu navegador, não guarda nada e não movimenta dinheiro. Se o teu grupo precisa de que a conta sobreviva ao separador, [dividir despesas](page:feature/split-expenses) e [acertar contas](page:feature/settle-up) no Side Badger fazem as mesmas contas e guardam-nas."
+cta:
+  heading: "Gostas das contas? Guarda-as."
+  body: "Esta calculadora esquece tudo quando fechas o separador, tal como quem tinha a certeza de que pagou da última vez. Um grupo do Side Badger guarda as despesas, atualiza o saldo de cada pessoa e regista os pagamentos. É grátis, sem anúncios e sem limites diários."
+sections:
+  - heading: "Como funciona o cálculo"
+    body: "Para cada despesa, a calculadora apura a parte de cada pessoa. Podes dividir em partes iguais, por valores exatos ou por percentagem, entre as pessoas que escolheres. O saldo de cada pessoa é depois o que pagou menos o que deve. Um sinal de mais quer dizer que o grupo lhe deve, e um sinal de menos que ela deve ao grupo. Os saldos somam sempre zero, porque tudo o que uma pessoa tem a receber, outras pessoas devem."
+  - heading: "Porque é que a lista de pagamentos é curta"
+    body: "Ninguém precisa de acertar cada recibo à parte. Quando todos os saldos são conhecidos, a calculadora junta quem deve mais com quem tem mais a receber, acerta o máximo que um pagamento consegue e segue pela lista até todos ficarem a zero. Nunca são precisos mais pagamentos do que o número de pessoas com saldo menos um, e muitas vezes são precisos menos do que se acertasse conta a conta. Dá uma lista curta de pagamentos, e não promete ser a mais curta possível."
+  - heading: "O que a calculadora não faz"
+    items:
+      - "**Lidar com mais do que uma moeda.** Escolhe uma e usa-a em todo o cálculo. A app mantém um saldo separado para cada moeda e pode converter uma despesa a uma taxa de câmbio atual, que podes alterar."
+      - "**Guardar seja o que for.** Fecha o separador e os valores desaparecem. Para os manteres, copia o link. Ele guarda os teus valores depois do #, que o teu navegador nunca envia a um servidor, e quem o receber pode lê-los."
+      - "**Movimentar dinheiro.** Diz quem deve pagar a quem. Paguem-se como preferirem e depois registem o pagamento na app, se o vosso grupo mantiver lá a conta."
+      - "**Escolher ao acaso o cêntimo que sobra.** Quando uma conta não se divide exatamente, os cêntimos que sobram vão para as primeiras pessoas da lista, para os totais continuarem a bater certo. Na app, o cêntimo que sobra vai para uma pessoa ao acaso, por isso não é sempre a mesma."
+      - "**Ir além dos limites.** A calculadora aceita de 2 a 20 pessoas, e uma despesa pode ir até 999 999,99, como na app."
+exampleAfter: 2
+example:
+  heading: "Um fim de semana prolongado, quatro amigos"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "casa de campo"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "compras"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "táxi"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "pub"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: "Perguntas"
+  items:
+    - q: "A calculadora é grátis?"
+      a: "Sim. Grátis. Sem anúncios. Sem limites diários. Também não precisas de uma conta."
+    - q: "Guarda o que escrevo?"
+      a: "Não. Nada é guardado nem enviado para lado nenhum. Para manteres os valores, usa Copiar link e guarda o link nalgum sítio."
+    - q: "Quem pode ver o link que copio?"
+      a: "Quem o tiver. Os valores vivem no próprio link, depois do #, por isso partilha-o só com as pessoas que os devem ver."
+    - q: "Movimenta dinheiro?"
+      a: "Não. Calcula quem deve pagar a quem, e vocês pagam-se como preferirem. O Side Badger também nunca toca no teu dinheiro. Vê [acertar contas](page:feature/settle-up)."
+    - q: "Posso dividir uma viagem paga em duas moedas?"
+      a: "Aqui não, porque um cálculo tem uma só moeda. Num grupo, cada moeda mantém o seu próprio saldo. Vê [várias moedas](page:feature/multiple-currencies)."
+    - q: "E se os valores não somarem?"
+      a: "A calculadora avisa-te por baixo da despesa e não mostra resultado até somarem. Os valores exatos têm de somar o total, e as percentagens têm de dar 100."

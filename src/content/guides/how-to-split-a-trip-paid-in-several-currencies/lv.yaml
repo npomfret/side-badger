@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Kā sadalīt ceļojumu, kas apmaksāts vairākās valūtās | Side Badger"
+  description: "Mārciņas par viesnīcu, jenas par ramenu. Norēķinieties katrā valūtā atsevišķi vai konvertējiet pēc kursa, ko redzat. Abi veidi izrēķināti, skaitļi redzami."
+h1: "Kā sadalīt ceļojumu, kas apmaksāts vairākās valūtās"
+navLabel: "Ceļojumi vairākās valūtās"
+lead: "Ievadiet katru izdevumu valūtā, kurā maksājāt, tad izvēlieties ceļu. Vai nu turiet valūtas atsevišķi un katru nokārtojiet tās pašas valūtā, vai konvertējiet pēc pašreizējā valūtas kursa un norēķinieties vienreiz. Tas pats Japānas ceļojums pirmajā veidā dod četrus maksājumus, otrajā divus."
+cta:
+  heading: "Ievadiet to naudā, kurā samaksājāt"
+  body: "Izveidojiet bezmaksas kontu, sāciet grupu ceļojumam un pievienojiet katru izdevumu tajā valūtā, kas bija čekā. Gribat vispirms uzzināt vairāk? Skatiet [vairākas valūtas](page:feature/multiple-currencies) vai [ko sedz bezmaksas versija](page:pricing)."
+sections:
+  - heading: "Trīs draugi, viena viesnīca, ļoti daudz jenu"
+    body: "Zoe, Kenji un Lucy nedēļu pavada Japānā [grupas ceļojumā](page:use-case/group-trips), un katras izmaksas tiek sadalītas vienādi uz trim. Zoe mājās rezervēja viesnīcu mārciņās par 600 £. Lucy Tokijā nopirka vilcienu caurlaides par 90 000 ¥. Kenji samaksāja par ramena vakaru, 9 000 ¥, un kopš tā laika to piemin katru dienu. Neviens nevēlas konvertēt trīs čekus uz stacijas perona. Šajos aprēķinos 1 ¥ ir 0,005 £, apaļš kurss, izdomāts šai pamācībai. Lietotnē jūs izmantotu pašreizējo valūtas kursu vai ierakstītu to, ko patiešām saņēmāt."
+  - heading: "Ievadiet katru tajā naudā, kas ir čekā"
+    body: "Šo daļu veiciet vienalga, kuru ceļu izvēlēsieties. Vēl nekas nav jākonvertē."
+    items:
+      - "**Izveidojiet grupu.** Panelī izvēlieties **Izveidot grupu**, nosauciet to pēc ceļojuma, tad izvēlieties **Uzaicināt citus** un nosūtiet saiti vai QR kodu."
+      - "**Pievienojiet viesnīcu.** Izvēlieties **Pievienot izdevumus** un ievadiet 600, blakus summai kā valūtu norādot mārciņas. Sadaļā **Kas samaksāja?** izvēlieties Zoe. Sadaļā **Sadalīt starp** atstājiet visus trīs, sadaļā **Kā sadalīt** atstājiet **Vienādi** un izvēlieties **Saglabāt izdevumus**."
+      - "**Pievienojiet jenas.** Tāpat pievienojiet vilcienu caurlaides (maksāja Lucy) un ramenu (maksāja Kenji), par valūtu norādot jenas. Jenām nav decimāldaļu, tāpēc veidlapa to neprasa."
+  - heading: "Pirmais ceļš: turiet valūtas atsevišķi"
+    body: "Side Badger uztur atlikumu katrai valūtai un nesaskaita vienu ar otru. Mārciņās viesnīca ir 200 £ katram, tāpēc Kenji un Lucy katrs ir parādā Zoe 200 £. Jenās vilcienu caurlaides un ramens kopā ir 99 000 ¥, tas ir 33 000 ¥ katram. Lucy samaksāja 90 000 ¥, un viņai pienākas 57 000 ¥. Zoe jenās nemaksāja neko un ir parādā 33 000 ¥. Kenji samaksāja 9 000 ¥, tāpēc viņš ir parādā 24 000 ¥."
+    items:
+      - "**Mārciņas.** Kenji maksā Zoe 200 £, un Lucy maksā Zoe 200 £."
+      - "**Jenas.** Zoe maksā Lucy 33 000 ¥, un Kenji maksā Lucy 24 000 ¥."
+      - "**Kopā četri maksājumi.** Zoe un Lucy ir parādā viens otram divās valūtās, un šie parādi viens otru nenoslēdz. Kurss šeit nav iesaistīts, tāpēc nav par ko strīdēties."
+      - "**Parāds jenās, maksājums mārciņās.** Cilvēks bez jenām tomēr var maksāt mārciņās. Reģistrējot maksājumu, atveriet **Cita valūta?**, izvēlieties **Konvertēt uz** mārciņas un pārbaudiet kursu. Zoe 33 000 ¥ parāds pēc šīs pamācības kursa ir 165 £, un jenu atlikums tāpat sanāk pareizs."
+      - "**Reģistrējiet katru maksājumu.** Samaksājiet viens otram, kā vēlaties, tad izvēlieties **Norēķināties** un lietojiet **Ierakstīt norēķinu**. Vairāk par [norēķināšanos](page:feature/settle-up)."
+  - heading: "Otrais ceļš: konvertējiet līdzi"
+    body: "Ja grupa labāk vēlētos katram redzēt vienu skaitli, konvertējiet, ievadot izdevumu."
+    items:
+      - "**Konvertējiet veidlapā.** Sadaļā **Pievienot izdevumus** izvēlieties **Konvertēt uz** un norādiet mārciņas. Side Badger parāda kursu un konvertēto summu, atzīmētu ar ≈. Ja saņēmāt citu kursu, to var rediģēt. Sākotnējā summa jenās paliek pie izdevuma."
+      - "**Izlasiet mārciņās.** Pie 1 ¥ = 0,005 £ vilcienu caurlaides kļūst par 450 £ un ramens par 45 £. Kopā ar 600 £ viesnīcu tas ir 600 £ + 450 £ + 45 £ = 1 095 £, jeb 365 £ katram. Zoe samaksāja 600 £, tāpēc viņai pienākas 235 £. Lucy samaksāja 450 £, un viņai pienākas 85 £. Kenji samaksāja 45 £ un ir parādā 320 £."
+      - "**Divi maksājumi.** Abi no Kenji: 235 £ Zoe un 85 £ Lucy. Zoe un Lucy vairs vispār nemaksā viens otram."
+      - "**Vai arī iestatiet grupas valūtu.** Lai izlaistu papildu soli, atveriet grupas **Iestatījumi**, atrodiet **Valūtas iestatījumi** un izvēlieties **Automātiski pārveidot izdevumus uz**. Tad katrs jaunais izdevums tiek pārveidots šajā valūtā, joprojām pēc kursa, ko redzat un varat mainīt."
+  - heading: "Kuru ceļu izvēlēties?"
+    items:
+      - "**Turiet atsevišķi**, kad cilvēkiem maciņos vēl ir jenas vai kad negribat strīdēties par kursu. Cena: vairāk maksājumu, un vairāk nekā vienā valūtā."
+      - "**Konvertējiet**, kad grupa dzīvo vienā valūtā un grib katram vienu skaitli un īsāku sarakstu, kā Kenji divi pārskaitījumi. Cena: grupa uzticas kursam, un kurss tiek fiksēts katram izdevumam, kad tas tiek saglabāts."
+      - "**Izlemiet laikus.** Grupas valūta konvertē tikai jaunus un nokopētus izdevumus. Tā neatgriezīsies un nesakārtos to, ko jau esat ievadījuši."
+  - heading: "Kurss un ierobežojums"
+    items:
+      - "**Kurss tiek fiksēts, kad saglabājat.** Vecie izdevumi nekad netiek pārvērtēti, tāpēc atlikums nenovirzās tāpēc, ka mainījies tirgus. Dažādās dienās ievadītiem izdevumiem var būt dažādi kursi, tāpēc, ja grupa grib vienu kursu visam ceļojumam, vienojieties par to un ievadiet to katru reizi."
+      - "**Nav kursa? Ierakstiet savu.** Side Badger iegūst pašreizējo valūtas kursu, kur vien var, bet ne katram pārim kurss ir garantēts. Ja kursa nav vai valūtas maiņas punktā dabūjāt labāku piedāvājumu, ierakstiet savu."
+      - "**999 999,99 par izdevumu, savā valūtā.** Viens ierobežojums, lai kāda nauda. Jenās tas ir tikai mazliet zem 1 000 000 ¥, aptuveni 5 000 £ pēc šīs pamācības kursa. Valūtā ar lieliem skaitļiem, piemēram, Indonēzijas rūpijās, viens rēķins to var sasniegt ātrāk. Sadaliet rēķinu divos izdevumos vai ievadiet to citā valūtā un konvertējiet."
+  - heading: "Ko Side Badger šeit nedara"
+    items:
+      - "Tas nekad nepārvieto un neapmaina naudu. Jūs samaksājat viens otram, kā vēlaties, tad reģistrējat maksājumu."
+      - "Ir 140 valūtas. Kriptovalūtas un metāli to vidū nav."
+exampleAfter: 2
+example:
+  heading: "Japāna, nokārtota divos veidos"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "viesnīca, rezervēta mājās"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "vilcienu caurlaides"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "ramena vakars"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Jautājumi"
+  items:
+    - q: "Kādu valūtas kursu Side Badger izmanto?"
+      a: "Pašreizējo valūtas kursu, kas tiek iegūts, ievadot izdevumu, ja tāds ir pieejams. Varat to nomainīt uz kursu, ko patiešām saņēmāt."
+    - q: "Vai grupa var palikt pie mārciņām un jenām?"
+      a: "Jā. Grupas **Iestatījumi** sadaļā **Valūtas iestatījumi** ieslēdziet **Ierobežot valūtas šai grupai**, izvēlieties **Atļautās valūtas** un iestatiet **Noklusējuma valūta jauniem izdevumiem**. Mazāk iespēju sarakstā, mazāk nepareizu minējumu pie kases."
+    - q: "Vai mums vispār jākonvertē?"
+      a: "Nē. Valūtas paliek atsevišķas, ja vien jūs vai jūsu grupa nevēlas konvertēt, un katrai valūtai ir savs īss maksājumu saraksts."

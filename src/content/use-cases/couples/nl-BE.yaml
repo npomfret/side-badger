@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+meta:
+  title: "Verdeel kosten met je partner, 50/50 of naar inkomen | Side Badger"
+  description: "Deel de saaie kosten zonder van een avondje uit een driemaandelijkse financiële evaluatie te maken. Verdeel 50/50, naar inkomen of per rekening. Gratis."
+h1: "Deel kosten als koppel, eerlijk"
+navLabel: "Koppels"
+lead: "Deel de saaie kosten zonder van een avondje uit een driemaandelijkse financiële evaluatie te maken. Side Badger houdt één lopende rekening bij van de huur, de rekeningen en de boodschappen voor **koppels** die een huis, een zetel en een vage herinnering delen aan wie het internet betaalde. Verdeel 50/50, naar inkomen of per rekening, en zie wie wie iets schuldig is."
+cta:
+  heading: "Start een groep voor twee"
+  body: "Maak een account aan, maak een groep en stuur je partner de uitnodigingslink. De afhaalmaaltijd van vanavond kan de eerste uitgave zijn."
+scenario:
+  heading: "Eerlijk hoeft niet 50/50 te zijn"
+  body: "Sam en Alex delen een huis. Sam verdient meer, dus ze spraken af dat Sam 60% van de huur neemt en Alex 40%. Sam betaalt de huisbaas, Alex doet de boodschappen, en beiden zijn er vrij zeker van dat het uiteindelijk wel gelijk komt. Vrij zeker is hoe een notitie op iemands telefoon een blijvende onenigheid wordt. Maak dus een groep voor jullie tweeën, kies de naam die je je partner wilt laten zien en stuur hem of haar de uitnodigingslink of QR-code. Voeg elke kost toe wanneer hij gebeurt, zeg wie betaald heeft en hoe hij verdeeld wordt, en laat de groep de tel bijhouden. Maak voor elke vakantie een aparte groep (zie [groepsreizen](page:use-case/group-trips)), zodat de vluchten buiten de boodschappen blijven."
+sections:
+  - heading: "50/50, naar inkomen, of per rekening"
+    body: "Er bestaat geen universeel eerlijke verdeling, enkel die waar jullie allebei mee akkoord gaan, bij voorkeur vóór de eerste rekening en niet na de eerste zucht. Dit zijn de gebruikelijke drie."
+    items:
+      - "**50/50.** Kies **Gelijk** en jullie zijn elk de helft schuldig. Het past bij gedeelde kosten wanneer jullie inkomens dicht bij elkaar liggen, en het vraagt helemaal geen rekenwerk."
+      - "**Naar inkomen.** Verdient een van jullie meer, verdeel dan naar ieders aandeel in het inkomende geld. Spreek eerst af wat meetelt (nettoloon is de gangbare keuze), tel de twee samen en deel het jouwe door het totaal. Neemt een van jullie drie delen mee naar huis tegenover twee voor de ander, dan is dat 3 ÷ (3 + 2) = 60%, dus de ene neemt 60% voor zijn rekening en de ander 40%. Rond af op hele percentages en voer ze in onder **Percentage**, waar ze samen 100 moeten zijn. Je loon invoeren kan nergens, dus je typt altijd enkel de percentages."
+      - "**Per rekening.** Elke uitgave heeft haar eigen verdeling, dus je kunt mixen: de huur naar inkomen, de boodschappen 50/50 en een gezamenlijk cadeau met **Exacte bedragen** als jullie elk zelf kozen wat jullie erin leggen."
+      - "**Als het loon verandert,** gebruik je de nieuwe percentages vanaf de volgende uitgave. Eerdere uitgaven houden de verdeling waarmee ze ingevoerd werden. Om de sommen te zien met echte loonfiches, lees [hoe je rekeningen verdeelt met een partner die meer verdient](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: "Het maandelijkse overzicht"
+    body: "Eén keer per maand, of wanneer de cijfers beginnen te jeuken, open je de groep en bekijk je **Saldi**. Met jullie tweeën is er per valuta altijd maar één betaling, van wie schuldig is aan wie tegoed heeft. Neem de maand van Sam en Alex. Sam betaalde de huur van £ 1.500, en Alex’ 40% daarvan is £ 600. Alex betaalde £ 90 aan boodschappen, gelijk verdeeld, dus de helft van Sam is £ 45. Side Badger zet het ene tegen het andere, £ 600 min £ 45, en Alex betaalt Sam £ 555. Betaal het hoe je wilt, per bankoverschrijving, cash of met een gunst die nog openstaat, en registreer het dan onder **Vereffenen** zodat het saldo weer op nul komt. Er zijn geen terugkerende rekeningen, dus kopieer de huur van vorige maand, wijzig de datum en ga verder. Side Badger verplaatst het geld niet en stuurt geen herinneringen, dus het aanmanen blijft aan jou."
+  - heading: "Alleen jullie twee"
+    body: "Een groep van twee heeft twee leden, en enkel leden van een groep kunnen ze zien. Je partner komt erbij met de uitnodigingslink of QR-code. Een link kan tussen 15 minuten en 5 dagen geldig blijven, dus kies de kortste die je partner tijd geeft om hem te gebruiken. Een nieuwe link maken annuleert de oude niet, dus laat ze niet achter in een chat waar ook andere mensen in zitten. Iedereen die een geldige link gebruikt, kan lid worden, dus wil je het zeker weten, zet dan goedkeuring aan en een beheerder laat elke persoon binnen. Je partner heeft een eigen account nodig, en dat is gratis."
+exampleAfter: 2
+example:
+  heading: "Wie wie deze maand iets schuldig is"
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: "Huur"
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: "Boodschappen"
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: "De functies die een koppel gebruikt"
+faq:
+  heading: "Vragen"
+  items:
+    - q: "Kunnen we 60/40 één keer voor alles instellen?"
+      a: "Nee. De verdeling hoort bij elke uitgave. Stel de percentages in bij de eerste, kopieer ze de volgende keer en wijzig wat anders is. [Uitgaven verdelen](page:feature/split-expenses) behandelt alle drie de manieren om te verdelen."
+    - q: "Is het gekoppeld aan onze bank?"
+      a: "Nee. Side Badger raakt je geld nooit aan. Jullie betalen elkaar zoals jullie willen en registreren het dan, zoals [afrekenen](page:feature/settle-up) uitlegt."
+    - q: "Kan iemand anders onze groep zien?"
+      a: "Enkel de leden, en de groep van een koppel heeft er twee. Iedereen die een geldige uitnodigingslink gebruikt, kan lid worden, dus deel hem met één persoon en geef hem een korte vervaldatum."
+    - q: "Wat als we elk een deel van dezelfde rekening betaalden?"
+      a: "Een uitgave heeft één betaler. Registreer twee uitgaven, een voor elk van jullie, en het saldo komt hetzelfde uit."
+    - q: "Herinnert het mijn partner eraan om te betalen?"
+      a: "Nee. Er zijn geen herinneringen, dus het aanmanen blijft aan jou. Jullie kijken wel allebei naar hetzelfde getal."
+    - q: "Wat gebeurt er als we geen kosten meer delen?"
+      a: "Reken het saldo af en registreer de betaling, zodat niemand nog iets schuldig is. Dan kan een beheerder de groep vergrendelen, wat de cijfers laat zoals ze zijn, of ze definitief sluiten, waardoor ze voor iedereen ontoegankelijk wordt. Sluit ze pas als geen van beiden de geschiedenis nog nodig heeft."

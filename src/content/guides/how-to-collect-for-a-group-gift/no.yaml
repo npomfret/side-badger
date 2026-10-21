@@ -1,0 +1,101 @@
+translatedFrom: "5d92090e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Slik samler du inn til en felles gave | Side Badger"
+  description: "Alle bidrar med ulikt beløp, og ett kort tar støyten. Kjør en budsjettavstemning, legg inn nøyaktige beløp og la Side Badger ta regnestykkene."
+h1: "Slik samler du inn til en felles gave"
+navLabel: "Samle inn til en gave"
+lead: "Å samle inn til en felles gave betyr at én person legger ut pengene, og alle andre skylder vedkommende sitt bidrag. Bli enige om et budsjett i en avstemning, la kjøperen legge gaven på kortet sitt, og legg den så inn som én utgift med [nøyaktige beløp](page:feature/split-expenses), ett tall per person. Side Badger viser hvem som skylder kjøperen hva, og alle sender sin andel slik de vil."
+cta:
+  heading: "Send hatten rundt, uten hatten"
+  body: "Lag en gruppe, la den som skal ha gaven stå utenfor, og legg inn gaven med nøyaktige beløp. Side Badger er gratis, uten annonser og uten daglige grenser. Vil du ha omvisningen først? Se [slik fungerer det](page:how-it-works) eller [hva gratis dekker](page:pricing)."
+sections:
+  - heading: "Fire venner, én platespiller, fire ulike summer"
+    body: "Bea fyller 30 og ønsker seg en platespiller. Priya, Omar, Lena og Sam skal gi henne en. Priya finner en for 240 £ og kjøper den med sitt eget kort, for noen må gå først. De fire bidrar ikke likt. Priya og Omar legger inn 60 £ hver, Lena 80 £ og Sam 40 £. Ingen forklarer tallet sitt, og ingen spør. Omar kjøper også et kort og gavepapir for 12 £. Alle fire signerer kortet, så den utgiften deles likt."
+  - heading: "Bli enige om budsjettet før noen trykker Kjøp"
+    body: "En budsjettavstemning sparer dere for krangelen om en platespiller til 400 £. I gruppen velger du **Legg til avstemning** og spør hvor mye gaven skal koste. Gjør alternativene til beløp, for eksempel opptil 150 £, opptil 200 £ og opptil 250 £. Slå på **Anonym avstemning**, som skjuler hvem som stemte på hva, så ingen må forsvare et lavere tall foran alle. Innstillingene kan ikke endres etter at den første stemmen er avgitt, så sjekk dem først. En avstemning lukker seg ikke selv. Når alle har stemt, velger du **Lukk avstemning**, og **Vinner** vises. Avstemningen avklarer totalbeløpet. Den bestemmer ingens andel."
+  - heading: "Slik leser du regnestykket"
+    body: "Gaven deles 60 £, 60 £, 80 £ og 40 £, som blir de 240 £ på kvitteringen. Kortet og gavepapiret deles på fire, 3 £ hver. Priyas andel er 60 £ + 3 £, altså 63 £, og hun betalte 240 £, så hun har 177 £ til gode. Omars andel er også 63 £, men han betalte 12 £, så han skylder 51 £. Lena skylder 80 £ + 3 £, som er 83 £, og Sam skylder 40 £ + 3 £, som er 43 £. Disse tre summerer seg til Priyas 177 £. Hvis dere lot det stå, ville gjelden gå i fem retninger rundt i gruppen. Side Badger foreslår i stedet tre betalinger, alle til Priya. [Gjøre opp](page:feature/settle-up) har detaljene."
+  - heading: "Legg det inn i Side Badger"
+    body: "Priyas del tar omtrent fem minutter."
+    items:
+      - "**Lag gruppen.** På oversikten velger du **Opprett gruppe**. Velg **Inviter andre** og send lenken eller QR-koden til dem som bidrar, og ingen andre."
+      - "**Legg til gaven.** Velg **Legg til utgift**, beskriv den, skriv inn 240, og under **Hvem betalte?** velger du Priya. La alle fire stå under **Fordel mellom**, velg så **Eksakte beløp** under **Hvordan fordele** og skriv inn 60, 60, 80 og 40. Beløpene må summere seg til 240. Legg ved ordrebekreftelsen hvis du vil. Velg **Lagre utgift**."
+      - "**Legg til kortet.** Omar legger inn de 12 £ selv, velger seg selv under **Hvem betalte?** og lar **Hvordan fordele** stå på **Likt**, med alle fire krysset av."
+      - "**Tell opp, og betal.** Alle sjekker **Saldoer**, som viser hvem som skylder hvem, og sender Priya sin andel slik de vil. Registrer det deretter med **Gjør opp** og **Registrer oppgjør**. Hurtigoppgjør fyller inn beløpet."
+  - heading: "Kjøp først, eller samle inn først"
+    body: "Side Badger holder ikke potten, så «innsamling» betyr egentlig å telle opp. To rekkefølger fungerer."
+    items:
+      - "**Kjøp først.** Kjøperen betaler, legger inn utgiften til den faktiske prisen, og alle ser andelen sin med en gang. Det er ryddigere, men kjøperen bærer kostnaden til folk har betalt, så velg en kjøper som tåler det."
+      - "**Samle inn først.** Folk sender tallet sitt til kjøperen før kjøpet. Når dere har prisen, legger dere inn gaven og registrerer så hver betaling med datoen pengene faktisk ble flyttet. Legg inn gaven først, så hver betaling har en saldo å føres mot."
+      - "**Prisen flytter seg.** Frakt, en rabattkode, en prisøkning i siste liten. Rediger gaven og endre de nøyaktige beløpene så de fortsatt summerer seg. Den tidligere versjonen blir lagret, men si fra til gruppen først, for saldoene deres endres."
+  - heading: "Hold Bea utenfor"
+    body: "Bare medlemmer av en gruppe kan se den, så Bea kan ikke se en gruppe hun ikke er med i. Inviter dem som bidrar, og ingen andre. En lenke virker til den utløper, og du kan velge alt fra 15 minutter til 5 dager, så velg en kort og send den et sted Bea ikke ser den. Lenken viser en forhåndsvisning av gruppen til den som åpner den, så gi gruppen et kjedelig navn, for eksempel Lørdagspotten, og hold Beas navn utenfor utgiftsnavn og avstemningsalternativer også."
+  - heading: "Hva Side Badger ikke gjør her"
+    items:
+      - "Den holder eller krever ikke inn pengene. Bidragene går til kjøperen med bankoverføring, kontanter eller hva dere bruker, og så registrerer noen dem."
+      - "Den sender ingen betalingspåminnelser. Å purre på den som ikke har betalt, er fortsatt en jobb for et menneske."
+      - "Den regner ikke ut noens andel. En avstemning fastsetter budsjettet, og det finnes ikke noe valg for «del det som er igjen», så du skriver inn hvert beløp."
+      - "Hver utgift har én betaler. Hvis to personer kjøpte hver sin del av gaven, legger du inn to utgifter."
+      - "Alle i delingen trenger en gratis konto og en plass i gruppen."
+exampleAfter: 2
+example:
+  heading: "Beas platespiller, og kortet"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: "gaven"
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: "kort og gavepapir"
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: "Spørsmål"
+  items:
+    - q: "Hva om vi samler inn mer enn gaven koster?"
+      a: "De nøyaktige beløpene må summere seg til prisen, så kutt andelene til de gjør det. Eller bruk overskuddet på noe ekte, for eksempel blomster, og legg det inn som en egen utgift, slik som kortet og gavepapiret i eksemplet."
+    - q: "Kan noen bidra uten å bli med i gruppen?"
+      a: "Ikke hvis dere vil ha dem med i regnskapet. Alle i delingen trenger en gratis konto og må være med i gruppen. For en som bare har kontanter, kan Priya ta imot dem og legge inn gaven for det gruppen fortsatt skylder. Hvis for eksempel Sam ga henne 40 £ kontant, ville hun lagt inn 200 £ og delt dem 60, 60 og 80 mellom seg selv, Omar og Lena."
+    - q: "Kan avstemningen avgjøre hvor mye hver person legger inn?"
+      a: "Nei. En avstemning avklarer ett tall for hele gruppen, for eksempel budsjettet. Hver persons andel må dere bli enige om dere imellom, og så skriver dere den inn på utgiften som **Eksakte beløp**."

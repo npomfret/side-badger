@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Calcolatore per l'affitto: per stanza o reddito | Side Badger"
+  description: "Stanza più grande, quota più grande? Calcola quanto paga ogni coinquilino, per stanza o per reddito. Funziona nel browser: nulla viene salvato o inviato."
+h1: Calcolatore per dividere l'affitto
+navLabel: Dividi l'affitto
+lead: Camera più grande, quota più grande? Inserisci l'affitto e guarda quanto paga ciascuno, in base alla dimensione delle stanze o al reddito, al centesimo. Funziona nel browser, non salva nulla e non sposta denaro. Quando la casa vuole che il conto resti, in Side Badger [dividi le spese](page:feature/split-expenses) e copi l'affitto ogni mese.
+cta:
+  heading: Stabilisci le percentuali una volta. Copiale per sempre.
+  body: Questo calcolatore dimentica tutto quando chiudi la scheda, proprio come il coinquilino che giurava di aver pagato la connessione internet. Un gruppo di Side Badger conserva l'affitto, le bollette e chi ha pagato cosa. È gratis, senza pubblicità e senza limiti giornalieri.
+sections:
+  - heading: Due modi di dividere l'affitto
+    items:
+      - "**In base alla dimensione della stanza.** Una parte dell'affitto paga la cucina, il bagno e il soggiorno, che usano tutti. Scegli tu quella quota (all'inizio è il 40%) e si divide in parti uguali. Il resto va in base alla superficie delle camere, così la camera grande paga di più e lo sgabuzzino ottiene lo sconto che si è guadagnato."
+      - "**In base al reddito.** Ognuno paga la stessa fetta di affitto che guadagna sul totale. Aggiungi le bollette condivise e seguono le stesse quote."
+  - heading: Come funzionano i conti
+    body: "Ogni persona ottiene una quota esatta, poi una percentuale intera, perché i numeri interi sono più facili da scrivere e da discutere. L'arrotondamento usa il metodo dei resti più alti: ognuno tiene il numero intero sotto la propria quota, e i punti che avanzano vanno a chi ne ha persi di più. Le percentuali sommano sempre 100. Nell'appartamento qui sotto, il 40% in comune fa il 13,33% a testa. La camera di Priya è di 16 dei 38 m² dell'appartamento, quindi 60% × 16/38 fa il 25,26%, più il 13,33% fa il 38,6%, che si arrotonda al 39%. Tom e Aisha arrivano al 32% e al 29%, e 39 + 32 + 29 fa 100. Ogni importo è quella percentuale dell'affitto: il 39% di 1.950 £ è 760,50 £."
+  - heading: Poi scrivilo in Side Badger
+    body: "Per la storia completa, metro compreso, vedi [come dividere l'affitto in base alla dimensione delle stanze](page:guide/how-to-split-rent-by-room-size), oppure [un partner che guadagna di più](page:guide/how-to-split-bills-with-a-partner-who-earns-more) per le coppie."
+    items:
+      - "**Aggiungi l'affitto.** Nel tuo gruppo, scegli **Aggiungi spesa**, indica chi ha pagato il padrone di casa sotto **Chi ha pagato?** e lascia tutti sotto **Dividi tra**."
+      - "**Scegli Percentuale.** Sotto **Come dividere**, scegli **Percentuale** e scrivi le percentuali intere. Il modulo ti avvisa se non sommano 100."
+      - "**Copialo il mese dopo.** Apri l'affitto del mese scorso e scegli **Copia spesa**. La divisione viene con lui."
+  - heading: Cosa non fa il calcolatore
+    items:
+      - "**Misurare le tue stanze.** La superficie è un punto di partenza. Una camera con bagno privato vale più della stessa superficie senza, e uno sgabuzzino in cui entrano un letto e, con un po' di ottimismo, una sedia vale meno."
+      - "**Decidere cosa conta come reddito.** Netto o lordo, stipendio o lavoretti: lo decide il gruppo. Usa lo stesso periodo per tutti."
+      - "**Salvare qualcosa.** Chiudi la scheda e i numeri spariscono. Per conservarli, copia il link. Contiene i tuoi numeri dopo il #, che i browser non inviano mai a un server, e chiunque lo abbia può leggerli."
+      - "**Spostare denaro.** Il padrone di casa lo paghi come preferisci."
+      - "**Mescolare le valute o superare i limiti.** Scegli una sola valuta. Accetta da 2 a 10 persone e un affitto fino a 999.999,99, come nell'app."
+exampleAfter: 2
+example:
+  heading: Un appartamento, un mese
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: l'affitto
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: la bolletta dell'energia
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: la connessione internet
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: Domande
+  items:
+    - q: Cosa è più giusto, la dimensione delle stanze o il reddito?
+      a: Nessuno dei due è sempre più giusto. La dimensione delle stanze va bene per coinquilini che pagano lo spazio in cui dormono. Il reddito va bene per coppie e amici con stipendi molto diversi. Mettetevi d'accordo prima del primo giorno d'affitto, non dopo.
+    - q: Le bollette vanno divise allo stesso modo?
+      a: Per i coinquilini, di solito no. Energia e internet li usano tutti, quindi le parti uguali sono più semplici, come nell'esempio. In base al reddito, il calcolatore dà alle bollette le stesse quote dell'affitto.
+    - q: Posso usare i piedi quadrati?
+      a: Sì. Scegli ft² e scrivi le superfici in piedi quadrati. L'unità è solo un'etichetta, e le quote vengono uguali purché tutti usino la stessa.
+    - q: Il calcolatore è gratuito?
+      a: Sì. Gratis. Niente pubblicità. Nessun limite giornaliero. E non ti serve nemmeno un account.
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name

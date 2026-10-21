@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: Yhteiset listat, äänestykset ja kommentit kuluille | Side Badger
+  description: Kommentoi kuluja, kyseenalaista outo kulu, pidä yhteistä ostoslistaa ja äänestä huvilasta. Suunnitelkaa menot yhdessä, jakakaa sitten. Ilmainen, ei mainoksia.
+h1: Suunnitelkaa yhdessä, jakakaa jälkikäteen
+navLabel: Suunnitelkaa yhdessä
+lead: Ostoslista ja ostoslasku, vihdoin puheväleissä. Side Badger antaa ryhmällesi paikan puhua rahasta ennen menoja ja niiden jälkeen. Jokaisella kululla on kommentit, outoa kulua voi kyseenalaistaa, ja isoihin päätöksiin on yhteiset listat ja äänestykset. Sitten [jaatte kulut](page:feature/split-expenses) kuten ennenkin.
+cta:
+  heading: Suunnittele ensin, jaa sitten
+  body: Luo ilmainen tili, perusta ryhmä ja laita ensimmäinen lista, äänestys tai kysymys heti rahan viereen. Etkö ole varma, mitä seuraavaksi tapahtuu? Katso [näin se toimii](page:how-it-works).
+problem:
+  heading: Keskustelu on täällä, lasku tuolla
+  body: Ryhmän rahankäyttö asuu yleensä kahdessa paikassa. Luvut ovat yhdessä, ja kiista luvuista käydään chatissa, joka vieri pois tiistaina. Ostoslista on valokuva jääkaapista. Huvila päätettiin useimpien peukulla, luultavasti. Side Badger pitää suunnittelun ryhmässä, niiden kulujen vieressä, joita se koskee. Kommentti on siellä, missä kulu on, lista siellä, missä kauppa, äänestys isoa päätöstä varten ja tapa sanoa ”hetkinen, onko tämä oikein?” kirjoittamatta kokonaista kappaletta. Kaikki koskee ryhmän rahoja, ja sitä varten ryhmä on olemassa.
+workflow:
+  heading: Huvilaäänestyksestä ostoslaskuun
+  steps:
+    - title: Laita iso päätös äänestykseen
+      body: Lisää äänestys päätökselle, joka määrää laskun, kuten mikä huvila. Valitse kahdesta kymmeneen vaihtoehtoa, kerro, montako ääntä kukin saa, ja sulje äänestys, kun kaikki ovat äänestäneet, jolloin voittaja merkitään.
+      shot: S17
+      shotAlt: Suljettu äänestys, jossa voittanut vaihtoehto on merkitty ja kunkin vaihtoehdon vieressä äänimäärä
+    - title: Kirjoittakaa ostoslista yhdessä
+      body: Aloita yhteinen lista, lisää tuotteet ja rastita ne, kun ne päätyvät kärryyn. Kauppareissu kirjataan perään kuluna.
+      shot: S16
+      shotAlt: Yhteinen ostoslista, jossa osa tuotteista on rastitettu, sekä edistymislaskuri
+    - title: Puhukaa kustannuksesta siellä, missä se asuu
+      body: Kommentoi itse kulua, liitä kuitti ja reagoi emojilla. Keskustelu pysyy sen luvun vieressä, jota se koskee.
+      shot: S08
+      shotAlt: Kulu tietoineen, kuitin pienoiskuva, kommenttiketju ja emoji-reaktioita
+    - title: Kyseenalaista se, joka näyttää oudolta
+      body: Jos ryhmä on ottanut kulukysymykset käyttöön, kuka tahansa kuluun kuuluva voi valita **Minulla on kysymys**. Kulu pysyy poissa saldoista, kunnes kysymys on selvitetty.
+      shot: S18
+      shotAlt: Kululista, jossa Kyseenalaistettu-merkki ja Vain kyseenalaistettu -suodatin
+    - title: Katso, mikä muuttui ja kuka muutti
+      body: Toimintasyöte ja ilmoituskello näyttävät, mitä uutta on kaikissa ryhmissäsi. Push-ilmoitukset ovat käytettävissä, jos haluat ne.
+      shot: S19
+      shotAlt: Ilmoitusvalikko, jossa lista viimeaikaisesta toiminnasta
+options:
+  heading: Vaihtoehdot
+  items: []
+example:
+  heading: Kolme kämppistä, yksi kyseenalaistettu viinilasku
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: iso kauppareissu
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: siivooja
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: juhlaviini
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: Kommentit ja reaktiot lukujen vieressä
+    body: Jokaisella kululla on oma kommenttiketju, samoin ryhmällä, jokaisella listalla ja jokaisella äänestyksellä. Kysy, miksi taksi maksoi niin paljon, taksin alla, älä chatissa, jota kukaan ei selaa taaksepäin. Lisää valokuva kuitista tai PDF varauksesta ja reagoi sitten peukulla, sydämellä, naurulla, vau-reaktiolla, surullisella tai juhlalla kuluihin, maksuihin ja kommentteihin. Juhli maksua, kun se on perillä. Se on lähin asia aplodeihin, mihin Side Badger pystyy.
+  - heading: Kyseenalaista kulu aloittamatta riitaa
+    body: Kun ryhmä on ottanut kulukysymykset käyttöön, kuka tahansa kuluun kuuluva voi valita **Minulla on kysymys** ja kertoa syyn. Kysymys julkaistaan kommenttina kulun alla, kulu saa **Kyseenalaistettu**-merkin, ja koko kulu putoaa kaikkien saldoista, kunnes kysymys on selvitetty.
+    items:
+      - "**Käyttöönotto.** Se on oletuksena pois päältä. Ylläpitäjä ottaa **Salli kysymykset kuluista** -asetuksen käyttöön ryhmän asetuksissa kohdassa **Ominaisuudet**."
+      - "**Sulkeminen.** Kysyjä tai ylläpitäjä valitsee **Sulje kysymys**. Jos useampi ihminen on kyseenalaistanut saman kulun, se palaa saldoihin, kun viimeinen kysymys suljetaan."
+      - "**Muokkaaminen.** Kun kulua muokataan, avoin kysymys siirtyy uuteen versioon kaikille, joilla on siinä yhä osuus. Jos muokkaus jättää jonkun pois, hänen kysymyksensä päättyy vanhaan versioon, joten hänellä ei ole enää mitään suljettavaa."
+      - "**Löytäminen.** Kululistassa on **Vain kyseenalaistettu** -suodatin. Tämä ei ole hyväksyntävaihe: vain kulut, joita joku kyseenalaistaa, pidätetään, ja kaikki muu lasketaan heti, kun se on lisätty."
+  - heading: Näin kysymys etenee
+    body: Tom lisää juhlaviinin hintaan 45 £ ja jakaa sen kaikkien kolmen kämppiksen kesken. Aisha ei juonut, joten hän nostaa kysymyksen, ja niin kauan kuin se on auki, viiniä ei lasketa kenellekään. Talo päättää, että viini on Tomin ja Priyan, joten Tom muokkaa jaon heidän kahden kesken. Aisha ei enää kuulu kuluun, joten hänen kysymyksensä päättyy aiempaan versioon, joka säilyy, ja viini palaa heti saldoihin hintaan 22,50 £ per henkilö, ei 15 £. Jos Aisha olisi jäänyt kuluun, hänen kysymyksensä olisi siirtynyt uuteen versioon ja odottanut, että hän tai ylläpitäjä sulkee sen. Alla Aishan 48 £ koostuu kauppareissusta (28 £) ja siivoojasta (20 £), ja Priyan 10,50 £ on hänen osuutensa 70,50 £ (28 £, 20 £ ja 22,50 £) miinus hänen maksamansa 60 £. Hyvin [kämppisten](page:use-case/housemates) tyylinen riita. Miten kysymys kannattaa muotoilla, selviää kohdasta [mitä tehdä, kun joku kiistää yhteisen kulun](page:guide/what-to-do-when-someone-disputes-a-shared-expense).
+  - heading: Yhteiset listat ostoksiin
+    body: Aloita ryhmässä lista, nimeä se vaikkapa ”Kauppalista”, lisää tuotteet ja rastita ne. Vedä tuotteet parempaan järjestykseen, seuraa edistymislaskurin nousua ja kommentoi listaa, kun joku ostaa väärää kauramaitoa. Arkistoi valmis lista siivotaksesi sen pois (**Näytä arkistoidut** tuo sen takaisin) tai kopioi lista käyttääksesi sitä uudelleen. Pidä yhteinen ostoslista ostoslaskujen vieressä, jolloin lista kertoo, mitä ostaa, ja kulu sen, mitä se maksoi. Se, kuka voi luoda ja muokata listoja, riippuu ryhmän oikeuksista, jotka selittyvät sivulla [ryhmät ja oikeudet](page:feature/groups-and-permissions).
+  - heading: Äänestykset, anonyymeinä jos haluat
+    body: Kysy ryhmältä jotain, mikä ratkaisee laskun, kuten mikä huvila, paljonko lahjaan käytetään tai kannattaako venematka. Äänestyksellä on kysymys ja kahdesta kymmeneen vaihtoehtoa. Valitset, montako ääntä kukin saa, yhdestä kymmeneen, ja onko äänestys anonyymi. **Anonyymi äänestys** piilottaa, kuka äänesti mitä, eikä sitä voi muuttaa, kun ensimmäinen ääni on annettu. Ihmiset voivat muuttaa tai poistaa äänensä, kunnes äänestys suljetaan, ja voit avata sen uudelleen, jos ryhmä katuu. Huvilan valinta on juuri sitä, mistä [ryhmämatkat](page:use-case/group-trips) tehdään, ja lahjabudjetista sopiminen on [tapahtumien ja juhlien](page:use-case/events-and-celebrations) klassikko.
+  - heading: Toimintasyöte, jotta mikään ei muutu hiljaa
+    body: Jokaisella ryhmällä on toimintahistoria, ja ilmoituskello kerää toiminnan kaikista ryhmistäsi yhteen paikkaan. Lisää kulu, niin kaikki näkevät sen heti ilman päivittämistä, ja syöte näyttää, mikä muuttui ja kuka muutti. Se kattaa lisätyt, muokatut ja poistetut kulut, nostetut ja suljetut kysymykset, kommentit, lista- ja äänestysmuutokset sekä kirjatut maksut.
+  - heading: Push-ilmoitukset, jos haluat ne
+    body: Push-ilmoitukset ovat valinnaisia. Ota ne käyttöön tilisi **Asetuksissa** kohdassa **Ilmoitukset**, niin laitteesi kertoo, kun ryhmissäsi on uutta toimintaa, kuten uusi kulu tai kommentti. Jokainen laite otetaan käyttöön erikseen, ja selain kysyy ensin luvan. iPhonessa ja iPadissa ne toimivat vain aloitusnäytölle lisätyssä sovelluksessa, minkä [verkkosovellus](page:feature/web-app)-sivu selittää. Pidä niitä mukavuutena, älä lupauksena, sillä toimitusta ei taata.
+limits:
+  heading: Rajat
+  items:
+    - Kommentit, listat ja äänestykset ovat ryhmän rahaa varten. [Käyttöehdot](page:terms) edellyttävät, että kaikki julkaistu liittyy ryhmän talouteen, joten tämä on paikka suunnitella menoja, ei yleinen chat eikä tehtävälistasovellus.
+    - Kommentti voi olla enintään 500 merkkiä pitkä, ja siihen voi liittää enintään kolme liitettä, jotka ovat kuvia tai PDF-tiedostoja, kukin enintään 5 MB. Vain kirjoittaja voi poistaa kommentin.
+    - Kulukysymykset ovat oletuksena pois päältä, ja ylläpitäjä ottaa ne käyttöön ryhmäkohtaisesti. Vain kuluun kuuluvat voivat kyseenalaistaa sen, ominaisuuden poistaminen käytöstä tyhjentää kaikki avoimet kysymykset, eikä kukaan voi poistua ryhmästä, jos jossakin kulussa, johon hän kuuluu, on avoin kysymys.
+    - Ryhmässä voi olla enintään 100 listaa, joissa kussakin on enintään 200 kohtaa, kukin enintään 500 merkkiä. Ryhmän oikeudet ratkaisevat, kuka voi luoda, muokata ja poistaa listoja, eikä lukitussa ryhmässä voi tehdä muutoksia.
+    - Ryhmässä voi olla enintään 50 äänestystä, joissa kussakin on kahdesta kymmeneen vaihtoehtoa ja enintään kymmenen ääntä per henkilö. Äänestyksillä ei ole määräaikaa, eivätkä ne sulkeudu itsestään.
+    - Toimintahistoria säilytetään 90 päivää.
+    - Push-ilmoitukset ovat valinnaisia tilikohtaisesti ja laitekohtaisesti. Ne vaativat selaimen, joka tukee niitä, ja sinun lupasi. Ne toimivat iPhonessa ja iPadissa vain aloitusnäytölle lisätystä sovelluksesta, eikä toimitusta taata. Toiminnasta ei lähetetä sähköposti- eikä tekstiviestihälytyksiä, eikä maksumuistutuksia ole, joten maksun perään kyseleminen on edelleen sinun vastuullasi.
+useCasesHeading: Missä yhdessä suunnittelusta on hyötyä
+faq:
+  heading: Kysymyksiä
+  items:
+    - q: Voivatko äänet olla anonyymejä?
+      a: Kyllä. Ota **Anonyymi äänestys** käyttöön äänestystä luodessasi, niin se piilottaa, kuka äänesti mitä. Päätä ennen ensimmäistä ääntä, sillä sitä ei voi muuttaa jälkikäteen.
+    - q: Voiko äänestys sulkeutua itsestään?
+      a: Ei. Äänestyksellä ei ole määräaikaa, joten sen luonut valitsee **Sulje äänestys**, kun ryhmä on päättänyt. Jos ryhmä katuu, **Avaa äänestys uudelleen** tuo sen takaisin.
+    - q: Montako kohtaa listaan mahtuu?
+      a: Enintään 200 kohtaa listaa kohden ja enintään 100 listaa ryhmää kohden. Jokainen kohta voi olla enintään 500 merkkiä, mikä on aika paljon kauramaitoa.
+    - q: Kuka voi sulkea kysymyksen, ja mitä kululle tapahtuu sillä välin?
+      a: Kysyjä tai ryhmän ylläpitäjä. Kun kysymys on auki, koko kulu on poissa kaikkien saldoista. Se palaa takaisin, kun viimeinen sen avoin kysymys suljetaan tai kun muokkaus poistaa kysyjän kulusta.
+    - q: Voinko käyttää listoja ja kommentteja tehtävälistana tai ryhmächattina?
+      a: Ei. Kommentit, listat ja äänestykset ovat ryhmän rahaa varten, mitä [käyttöehdot](page:terms) edellyttävät. Ajattele ostoslistoja, budjettiäänestyksiä ja kysymystä ”miksi tämä maksaa 45 £?”.
+    - q: Lähettääkö Side Badger minulle sähköpostia toiminnasta?
+      a: Ei. Toiminnasta ei lähetetä sähköposti- eikä tekstiviestihälytyksiä. Voit ottaa push-ilmoitukset käyttöön kullakin laitteella, ja sovelluksen ilmoituskello näyttää, mitä uutta on.

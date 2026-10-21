@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+meta:
+  title: "Skiptu reikningum með maka, 50/50 eða eftir tekjum | Side Badger"
+  description: "Deildu leiðinlega kostnaðinum án þess að breyta stefnumótakvöldinu í ársfjórðungslegan fjármálafund. Skiptu 50/50, eftir tekjum eða hverjum reikningi. Ókeypis."
+h1: "Deildu kostnaði sem par, á sanngjarnan hátt"
+navLabel: "Pör"
+lead: "Deildu leiðinlega kostnaðinum án þess að breyta stefnumótakvöldinu í ársfjórðungslegan fjármálafund. Side Badger heldur eina samfellda talningu á leigunni, reikningunum og innkaupunum fyrir **pör** sem deila heimili, sófa og óljósri minningu um hver borgaði netið. Skiptu 50/50, eftir tekjum eða reikningur fyrir reikning, og sjáðu hver skuldar hverjum."
+cta:
+  heading: "Byrjaðu hóp fyrir tvö"
+  body: "Stofnaðu aðgang, búðu til hóp og sendu makanum boðstengilinn. Maturinn sem þið pantið í kvöld getur verið fyrsta útgjaldið."
+scenario:
+  heading: "Sanngjarnt þarf ekki að þýða 50/50"
+  body: "Sam og Alex deila heimili. Sam þénar meira, svo þau sömdu um að Sam borgi 60% af leigunni og Alex 40%. Sam borgar leigusalanum, Alex sér um innkaupin og bæði eru nokkuð viss um að þetta jafnist allt út. „Nokkuð viss“ er hvernig minnismiði í síma einhvers verður að viðvarandi ósætti. Búðu því til hóp fyrir ykkur tvö, veldu nafnið sem þú vilt að makinn þinn sjái og sendu boðstengilinn eða QR-kóðann. Bættu við hverjum kostnaði þegar hann fellur til, segðu hver greiddi og hvernig honum er skipt og láttu hópinn halda talninguna. Búðu til sérstakan hóp fyrir hvert frí (sjá [hópferðir](page:use-case/group-trips)), svo flugin haldist utan við matvörurnar."
+sections:
+  - heading: "50/50, eftir tekjum eða reikningur fyrir reikning"
+    body: "Það er engin algild sanngjörn skipting, aðeins sú sem þið samþykkið bæði, helst fyrir fyrsta reikninginn frekar en eftir fyrsta andvarpið. Þetta eru þær þrjár algengustu."
+    items:
+      - "**50/50.** Veldu **Jafnt** og hvort ykkar um sig skuldar helminginn. Það hentar sameiginlegum kostnaði þegar tekjur ykkar eru svipaðar og krefst engra útreikninga yfirhöfuð."
+      - "**Eftir tekjum.** Ef annað ykkar þénar meira skaltu skipta eftir hlut hvors um sig af tekjunum sem koma inn. Ákveðið fyrst hvað telst með (útborguð laun eru algengasta valið), leggið báðar tölurnar saman og deilið ykkar tölu með summunni. Ef annað ykkar fær þrjá hluta heim á móti tveimur hjá hinu er það 3 ÷ (3 + 2) = 60%, svo annað ykkar borgar 60% og hitt 40%. Námundaðu í heil prósent og sláðu þau inn undir **Prósenta**, þar sem þau verða að ná samtals 100. Það er hvergi hægt að slá inn launin þín, svo þú slærð aðeins inn prósenturnar."
+      - "**Reikningur fyrir reikning.** Hvert útgjald hefur sína eigin skiptingu, svo þið getið blandað: leiguna eftir tekjum, matvörurnar 50/50 og sameiginlega gjöf með **Nákvæmar upphæðir** ef þið völduð hvort um sig hvað þið leggið í hana."
+      - "**Þegar laun breytast** skaltu nota nýju prósenturnar frá næsta útgjaldi. Fyrri útgjöld halda skiptingunni sem þau voru skráð með. Til að sjá reikningsdæmið gert með alvöru launaseðlum skaltu lesa [hvernig á að skipta reikningum með maka sem þénar meira](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: "Mánaðaruppgjörið"
+    body: "Einu sinni í mánuði, eða hvenær sem tölurnar fara að klæja, skaltu opna hópinn og skoða **Staða**. Með ykkur tveimur er aðeins ein greiðsla í hverjum gjaldmiðli, frá þeim sem skuldar til þess sem á inni. Tökum mánuð Sams og Alex. Sam greiddi 1.500 £ í leigu og 40% hlutur Alex í henni er 600 £. Alex greiddi 90 £ fyrir matvörur, skipt jafnt, svo hlutur Sams er 45 £. Side Badger jafnar annað á móti hinu, 600 £ að frádregnum 45 £, og Alex borgar Sam 555 £. Borgið það eins og ykkur hentar, með millifærslu, reiðufé eða greiða sem þið skuldið, og skráið það svo undir **Gera upp** svo staðan fari aftur í núll. Það eru engir endurteknir reikningar, svo afritaðu leigu síðasta mánaðar, breyttu dagsetningunni og haltu áfram. Side Badger flytur ekki peningana og sendir engar áminningar, svo að ýta við makanum er áfram á þinni könnu."
+  - heading: "Bara þið tvö"
+    body: "Hópur fyrir tvö hefur tvo meðlimi og aðeins meðlimir hóps geta séð hann. Makinn þinn gengur í hópinn með boðstengli eða QR-kóða. Tengill getur gilt allt frá 15 mínútum upp í 5 daga, svo veldu stysta tímann sem gefur makanum svigrúm til að nota hann. Nýr tengill ógildir ekki þá gömlu, svo skildu þá ekki eftir í spjalli þar sem fleira fólk er. Hver sem notar tengil sem enn gildir getur gengið í hópinn, svo ef þú vilt vera viss skaltu kveikja á samþykki og þá hleypir stjórnandi hverjum og einum inn. Makinn þinn þarf sinn eigin aðgang, sem er ókeypis."
+exampleAfter: 2
+example:
+  heading: "Hver skuldar hverjum þennan mánuð"
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: "Leiga"
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: "Matvörur"
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: "Eiginleikarnir sem par notar"
+faq:
+  heading: "Spurningar"
+  items:
+    - q: "Getum við stillt 60/40 einu sinni fyrir allt?"
+      a: "Nei. Skiptingin tilheyrir hverju útgjaldi. Settu prósenturnar á það fyrsta, afritaðu það svo næst og breyttu því sem er öðruvísi. [Skipting útgjalda](page:feature/split-expenses) fjallar um allar þrjár leiðirnar til að skipta."
+    - q: "Tengist það bankanum okkar?"
+      a: "Nei. Side Badger snertir aldrei peningana þína. Þið borgið hvort öðru eins og ykkur hentar og skráið það svo, eins og [uppgjör](page:feature/settle-up) útskýrir."
+    - q: "Getur einhver annar séð hópinn okkar?"
+      a: "Aðeins meðlimir hans, og hópur fyrir tvö hefur tvo. Hver sem notar tengil sem enn gildir getur gengið í hópinn, svo deildu honum með einni manneskju og hafðu gildistímann stuttan."
+    - q: "Hvað ef við greiddum sitt hvorn hluta sama reiknings?"
+      a: "Útgjald hefur einn greiðanda. Skráðu tvö útgjöld, eitt fyrir hvort ykkar, og staðan verður sú sama."
+    - q: "Minnir það makann minn á að borga?"
+      a: "Nei. Það eru engar áminningar, svo að ýta við makanum er áfram á þinni könnu. Að minnsta kosti horfið þið þá bæði á sömu töluna."
+    - q: "Hvað gerist þegar við hættum að deila kostnaði?"
+      a: "Gerið upp stöðuna og skráið greiðsluna, svo enginn skuldi neitt. Þá getur stjórnandi læst hópnum, sem heldur tölunum eins og þær eru, eða lokað honum fyrir fullt og allt, sem gerir hann óaðgengilegan öllum. Lokið honum aðeins þegar hvorugt ykkar þarf á sögunni að halda."

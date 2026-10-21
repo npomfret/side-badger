@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Lijsten, peilingen en opmerkingen bij uitgaven | Side Badger"
+  description: "Reageer op uitgaven, stel de rare in vraag, hou een boodschappenlijst bij en stem over de villa. Plan samen, verdeel daarna. Gratis, zonder advertenties."
+h1: "Plan het samen, verdeel het achteraf"
+navLabel: "Samen plannen"
+lead: "De boodschappenlijst en de boodschappenrekening, eindelijk weer op goede voet. Side Badger geeft je groep een plek om over het geld te praten voor en nadat het is uitgegeven, met opmerkingen bij elke uitgave, een manier om de uitgaven die er raar uitzien in vraag te stellen, gedeelde lijsten en peilingen voor de grote keuzes. Daarna [verdeel je de uitgaven](page:feature/split-expenses) zoals gewoonlijk."
+cta:
+  heading: "Plan het, verdeel het dan"
+  body: "Maak een gratis account aan, start een groep en zet de eerste lijst, peiling of vraag meteen naast het geld. Weet je niet wat er daarna gebeurt? Zie [zo werkt het](page:how-it-works)."
+problem:
+  heading: "De chat is hier, de rekening daar"
+  body: "Groepsuitgaven leven meestal op twee plaatsen. De cijfers staan op de ene, en de discussie over die cijfers staat in een chat die dinsdag al weggescrold is. De boodschappenlijst is een foto van een koelkast. De villa werd beslist met een duim omhoog van de meeste mensen, waarschijnlijk. Side Badger houdt het plannen in de groep, naast de uitgaven waarover het gaat. Zo staat er een opmerking waar de kost staat, een lijst waar de boodschappen zijn, een peiling voor de grote keuze en een manier om “wacht even, klopt dit wel?” te zeggen zonder een alinea te schrijven. Het blijft allemaal over het geld van de groep, daar dient de groep voor."
+workflow:
+  heading: "Van de villastemming tot de boodschappenrekening"
+  steps:
+    - title: "Leg de grote keuze ter stemming voor"
+      body: "Voeg een peiling toe voor de beslissing die de rekening bepaalt, zoals welke villa. Kies twee tot tien opties, bepaal hoeveel stemmen elke persoon krijgt en sluit de peiling zodra iedereen gestemd heeft. De winnaar wordt dan gemarkeerd."
+      shot: S17
+      shotAlt: "Een gesloten peiling met de winnende optie gemarkeerd en het aantal stemmen naast elke optie"
+    - title: "Schrijf samen de boodschappenlijst"
+      body: "Start een gedeelde lijst, voeg de items toe en vink ze af zodra ze in het karretje belanden. De boodschappen komen achteraf als uitgave."
+      shot: S16
+      shotAlt: "Een gedeelde boodschappenlijst met enkele items afgevinkt en een voortgangsteller"
+    - title: "Praat over de kost waar die staat"
+      body: "Plaats een opmerking bij de uitgave zelf, voeg het bonnetje toe en reageer met een emoji. Het gesprek blijft naast het getal waarover het gaat."
+      shot: S08
+      shotAlt: "Een uitgave met haar details, een miniatuur van het bonnetje, een opmerkingendraad en emoji-reacties"
+    - title: "Stel de uitgave in vraag die er raar uitziet"
+      body: "Als de groep uitgavenvragen heeft ingeschakeld, kan iedereen die bij een uitgave betrokken is **Ik heb een vraag** kiezen. De uitgave blijft buiten de saldi tot de vraag is afgehandeld."
+      shot: S18
+      shotAlt: "De uitgavenlijst met een badge In vraag gesteld en het filter Alleen in vraag gesteld"
+    - title: "Zie wat er veranderd is, en wie het deed"
+      body: "De activiteitenfeed en het belletje met meldingen tonen wat er nieuw is in al je groepen. Pushmeldingen zijn er als je ze wilt."
+      shot: S19
+      shotAlt: "Het uitklapmenu met meldingen en een lijst van recente activiteit"
+options:
+  heading: "Opties"
+  items: []
+example:
+  heading: "Drie huisgenoten, één betwiste wijnrekening"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "de grote boodschappen"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "de schoonmaak"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "de feestwijn"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Opmerkingen en reacties, naast de cijfers"
+    body: "Elke uitgave heeft een eigen opmerkingendraad, en de groep, elke lijst en elke peiling ook. Vraag waarom de taxi zoveel kostte onder de taxi, niet in een chat waar niemand in terugscrolt. Voeg een foto van het bonnetje of een pdf van de boeking toe, en reageer dan met een duim omhoog, hartje, lach, wow, verdriet of feest op uitgaven, betalingen en opmerkingen. Vier een betaling wanneer ze binnenkomt. Dichter bij een applaus komt Side Badger niet."
+  - heading: "Een uitgave in vraag stellen zonder ruzie te beginnen"
+    body: "Wanneer de groep uitgavenvragen heeft ingeschakeld, kan iedereen die bij een uitgave betrokken is **Ik heb een vraag** kiezen en zeggen waarom. De vraag wordt als opmerking bij de uitgave geplaatst, de uitgave krijgt een badge **In vraag gesteld**, en de hele uitgave valt uit ieders saldi tot de vraag is afgehandeld."
+    items:
+      - "**Inschakelen.** Standaard staat het uit. Een beheerder zet **Vragen over uitgaven toestaan** aan in de instellingen van de groep, onder **Functies**."
+      - "**Afsluiten.** De persoon die de vraag stelde, of een beheerder, kiest **Vraag sluiten**. Als meerdere mensen dezelfde uitgave in vraag stelden, komt ze terug in de saldi wanneer de laatste vraag gesloten wordt."
+      - "**Bewerken.** Wanneer een uitgave bewerkt wordt, gaat een open vraag mee naar de nieuwe versie voor iedereen die er nog een aandeel in heeft. Bij wie door de bewerking buiten de uitgave valt, eindigt de vraag bij de oude versie, dus er valt niets meer af te sluiten."
+      - "**Terugvinden.** De uitgavenlijst heeft een filter **Alleen in vraag gesteld**. Dit is geen goedkeuringsstap: enkel de uitgaven die iemand in vraag stelt worden vastgehouden, en al de rest telt meteen mee zodra ze toegevoegd is."
+  - heading: "Hoe een vraag verloopt"
+    body: "Tom voegt £ 45 feestwijn toe, verdeeld over alle drie de huisgenoten. Aisha dronk niet, dus ze stelt een vraag, en zolang die openstaat telt de wijn voor niemand mee. Het huis is het erover eens dat de wijn van Tom en Priya is, dus Tom wijzigt de verdeling naar hen twee. Aisha zit niet meer in de uitgave, dus haar vraag eindigt bij de eerdere versie, die bewaard blijft, en de wijn komt meteen terug in de saldi, aan £ 22,50 elk in plaats van £ 15 elk. Was Aisha in de uitgave gebleven, dan was haar vraag meegegaan naar de nieuwe versie en opengebleven tot zijzelf of een beheerder ze sloot. Hieronder bestaat de £ 48 van Aisha uit £ 28 van de grote boodschappen en £ 20 van de schoonmaak, en is de £ 10,50 van Priya haar aandeel van £ 70,50 (£ 28, £ 20 en £ 22,50) min de £ 60 die ze betaalde. Een ruzie zoals je ze alleen bij [huisgenoten](page:use-case/housemates) ziet. Voor hoe je een vraag best verwoordt, zie [wat te doen als iemand een gedeelde uitgave betwist](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Gedeelde lijsten, voor de boodschappen"
+    body: "Start een lijst in de groep, geef ze een naam zoals Boodschappenlijst, voeg items toe en vink ze af. Sleep items in een betere volgorde, kijk hoe de voortgangsteller oploopt en plaats een opmerking bij de lijst wanneer iemand de verkeerde haverdrank koopt. Archiveer een afgewerkte lijst om ze weg te bergen (**Gearchiveerde tonen** haalt ze terug), of kopieer een lijst om ze opnieuw te gebruiken. Hou de gedeelde boodschappenlijst naast de boodschappenrekeningen, zodat de lijst zegt wat je moet kopen en de uitgave wat het kostte. Wie lijsten mag maken en bewerken, hangt af van de machtigingen van de groep, wat [groepen en machtigingen](page:feature/groups-and-permissions) uitlegt."
+  - heading: "Peilingen, anoniem als je wilt"
+    body: "Vraag de groep iets wat de rekening bepaalt, zoals welke villa, hoeveel je aan het cadeau uitgeeft of of het uitstapje met de boot de moeite waard is. Een peiling heeft een vraag en twee tot tien opties. Je kiest hoeveel stemmen elke persoon krijgt, van één keuze tot tien, en of de stemming anoniem is. **Anoniem stemmen** verbergt wie waarvoor stemde, en kan niet meer veranderd worden zodra de eerste stem binnen is. Mensen kunnen hun stem wijzigen of intrekken tot de peiling sluit, en je kunt ze heropenen als de groep twijfelt. De villa kiezen is precies waar [groepsreizen](page:use-case/group-trips) van gemaakt zijn, en het cadeaubudget afspreken is een klassieker bij [evenementen en feestjes](page:use-case/events-and-celebrations)."
+  - heading: "De activiteitenfeed, zodat niets stilletjes verandert"
+    body: "Elke groep heeft een activiteitengeschiedenis, en het belletje met meldingen verzamelt de activiteit van al je groepen op één plek. Voeg een uitgave toe en iedereen ziet ze meteen, zonder te verversen, en de feed toont wat er veranderd is en wie dat deed. Dat omvat toegevoegde, bewerkte of verwijderde uitgaven, gestelde en gesloten vragen, opmerkingen, wijzigingen aan lijsten en peilingen, en geregistreerde betalingen."
+  - heading: "Pushmeldingen, als je ze wilt"
+    body: "Pushmeldingen zijn optioneel. Zet ze aan in je account bij **Instellingen**, onder **Meldingen**, en je toestel laat het je weten wanneer er nieuwe activiteit is in je groepen, zoals een nieuwe uitgave of een opmerking. Elk toestel wordt apart ingeschakeld, en je browser vraagt eerst om toestemming. Op een iPhone of iPad werken ze enkel in de app die aan het beginscherm is toegevoegd, wat de pagina over de [webapp](page:feature/web-app) uitlegt. Beschouw ze als een gemak, niet als een belofte, want aflevering is niet gegarandeerd."
+limits:
+  heading: "Limieten"
+  items:
+    - "Opmerkingen, lijsten en peilingen gaan over het geld van de groep. De [algemene voorwaarden](page:terms) vragen dat alles wat geplaatst wordt met groepsfinanciën te maken heeft, dus dit is een plek om de uitgaven te plannen, geen algemene chat of to-do-app."
+    - "Een opmerking mag tot 500 tekens lang zijn, met tot drie bijlagen die afbeeldingen of pdf’s van elk tot 5 MB zijn. Alleen de auteur kan een opmerking verwijderen."
+    - "Uitgavenvragen staan standaard uit, en een beheerder zet ze per groep aan. Enkel wie bij een uitgave betrokken is, kan ze in vraag stellen, de functie uitschakelen wist elke open vraag, en niemand kan de groep verlaten zolang er een open vraag staat over een uitgave waar die persoon bij hoort."
+    - "Een groep kan tot 100 lijsten bevatten, elk met tot 200 items van tot 500 tekens. De machtigingen van de groep bepalen wie lijsten mag maken, bewerken en verwijderen, en een vergrendelde groep laat geen wijzigingen toe."
+    - "Een groep kan tot 50 peilingen bevatten, elk met twee tot tien opties en tot tien stemmen per persoon. Peilingen hebben geen deadline en sluiten niet vanzelf."
+    - "De activiteitsgeschiedenis wordt 90 dagen bewaard."
+    - "Pushmeldingen zet je zelf aan, per account en per toestel. Ze hebben een browser nodig die ze ondersteunt en jouw toestemming, ze werken op iPhone en iPad enkel vanuit de app die aan het beginscherm is toegevoegd, en aflevering is niet gegarandeerd. Er zijn geen e-mail- of sms-meldingen voor activiteit en geen betalingsherinneringen, dus een betaling opvolgen blijft aan jou."
+useCasesHeading: "Waar samen plannen helpt"
+faq:
+  heading: "Vragen"
+  items:
+    - q: "Kunnen stemmen anoniem zijn?"
+      a: "Ja. Zet **Anoniem stemmen** aan wanneer je de peiling maakt en het verbergt wie waarvoor stemde. Beslis vóór de eerste stem, want daarna kan het niet meer veranderd worden."
+    - q: "Kan een peiling vanzelf sluiten?"
+      a: "Nee. Een peiling heeft geen deadline, dus de persoon die ze maakte kiest **Poll sluiten** zodra de groep beslist heeft. Twijfelt de groep, dan brengt **Poll heropenen** ze terug."
+    - q: "Hoeveel items kan een lijst bevatten?"
+      a: "Tot 200 items per lijst en tot 100 lijsten per groep. Elk item mag tot 500 tekens lang zijn, wat heel wat haverdrank is."
+    - q: "Wie kan een vraag sluiten, en wat gebeurt er intussen met de uitgave?"
+      a: "De persoon die de vraag stelde, of een groepsbeheerder. Zolang een vraag openstaat, valt de hele uitgave uit ieders saldi. Ze komt terug zodra de laatste openstaande vraag erover gesloten is, of wanneer een bewerking de persoon die de vraag stelde uit de uitgave haalt."
+    - q: "Kan ik lijsten en opmerkingen gebruiken als to-do-app of groepschat?"
+      a: "Nee. Opmerkingen, lijsten en peilingen gaan over het geld van de groep, wat de [algemene voorwaarden](page:terms) vragen. Denk aan boodschappenlijstjes, budgetpeilingen en “waarom is dit £ 45?”."
+    - q: "Mailt Side Badger me over activiteit?"
+      a: "Nee. Er zijn geen e-mail- of sms-meldingen voor activiteit. Je kunt pushmeldingen aanzetten op elk toestel, en het belletje met meldingen in de app toont wat er nieuw is."

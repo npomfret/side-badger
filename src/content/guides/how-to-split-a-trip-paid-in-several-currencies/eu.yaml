@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Nola banatu hainbat monetatan ordaindutako bidaia | Side Badger"
+  description: "Libera esterlinak hotelerako, yenak ramenerako. Kitatu moneta bakoitza bere aldetik edo bihurtu ikus dezakezun tasa batean. Bi bideak landuta, kontuak agerian."
+h1: "Nola banatu hainbat monetatan ordaindutako bidaia"
+navLabel: "Hainbat monetatako bidaiak"
+lead: "Sartu gastu bakoitza ordaindu zenuen monetan, eta aukeratu bide bat. Mantendu monetak bereizita eta kitatu bakoitza bere dirutan, edo bihurtu egungo kanbio-tasa batean eta kitatu behin. Japoniako bidaia bera lau ordainketatan geratzen da lehen bidean, eta bitan bigarrenean."
+cta:
+  heading: "Sartu ordaindu zenuen dirutan"
+  body: "Sortu doako kontu bat, hasi talde bat bidaiarako eta gehitu gastu bakoitza tiketak zuen monetan. Xehetasunak lehenago nahi dituzu? Ikusi [moneta anitz](page:feature/multiple-currencies) edo [doakoak zer hartzen duen](page:pricing)."
+sections:
+  - heading: "Hiru lagun, hotel bat eta yen ugari"
+    body: "Zoe, Kenji eta Lucy aste bat pasatzen ari dira Japonian [taldeko bidaia](page:use-case/group-trips) batean, eta kostu guztiak berdin banatzen dira hirurren artean. Zoek hotela erreserbatu zuen etxetik, libera esterlinetan, 600 £-ren truke. Lucyk tren-pasak erosi zituen Tokion, 90.000 ¥-ren truke. Kenjik ramen-gaua ordaindu zuen, 9.000 ¥, eta ordutik egunero aipatzen du. Inork ez du hiru tiketa bihurtu nahi tren-geltokiko andeanean. Hemengo kontuetarako 1 ¥ = 0,005 £ da, gida honetarako asmatutako tasa borobila. Aplikazioan egungo kanbio-tasa bat erabiliko zenuke, edo benetan lortu zenuena idatziko zenuke."
+  - heading: "Sartu bakoitza tiketeko dirutan"
+    body: "Zati hau zein bide aukeratu ere egin behar da. Oraingoz ez da ezer bihurtu behar."
+    items:
+      - "**Egin taldea.** Arbelean aukeratu **Sortu taldea**, jarri bidaiaren izena, eta gero aukeratu **Gonbidatu beste batzuk** eta bidali esteka edo QR kodea."
+      - "**Gehitu hotela.** Aukeratu **Gehitu gastua** eta idatzi 600, zenbatekoaren ondoan libera esterlinak moneta gisa jarrita. **Nork ordaindu du?** atalean aukeratu Zoe. Mantendu hirurak **Banatu honen artean** atalean, utzi **Nola banatu** eremua **Berdin-berdin** aukeran eta aukeratu **Gorde gastua**."
+      - "**Gehitu yenak.** Egin gauza bera tren-pasekin (Lucyk ordaindu zituen) eta ramenarekin (Kenjik ordaindu zuen), yenak moneta gisa jarrita. Yenek ez dute hamartarrik, beraz formularioak ez ditu eskatzen."
+  - heading: "Lehen bidea: mantendu monetak bereizita"
+    body: "Side Badger-ek moneta bakoitzeko saldo bat gordetzen du, eta ez ditu batzuk besteen kontra konpentsatzen. Libera esterlinetan hotela 200 £ da bakoitzeko, beraz Kenjik eta Lucyk 200 £ zor dizkiote Zoeri. Yenetan, tren-pasek eta ramenak 99.000 ¥ egiten dute, hau da, 33.000 ¥ bakoitzeko. Lucyk 90.000 ¥ ordaindu zituen eta 57.000 ¥ zor zaizkio. Zoek ez zuen yenik ordaindu eta 33.000 ¥ zor ditu. Kenjik 9.000 ¥ ordaindu zituen, beraz 24.000 ¥ zor ditu."
+    items:
+      - "**Libera esterlinak.** Kenjik 200 £ ordaintzen dizkio Zoeri eta Lucyk 200 £ ordaintzen dizkio Zoeri."
+      - "**Yenak.** Zoek 33.000 ¥ ordaintzen dizkio Lucyri eta Kenjik 24.000 ¥ ordaintzen dizkio Lucyri."
+      - "**Lau ordainketa guztira.** Zoek eta Lucyk elkarri zor diote bi monetatan, eta horiek ez dute elkar ezeztatzen. Ez dago tasarik tartean, beraz ez dago zeri buruz eztabaidatu."
+      - "**Yenak zor, libera esterlinetan ordaindu.** Yenik ez duen batek libera esterlinetan ordain dezake. Ordainketa erregistratzean, ireki **Beste moneta bat?**, aukeratu **Bihurtu hona** eta libera esterlinak, eta egiaztatu tasa. Zoeren 33.000 ¥ gida honen tasarekin 165 £ dira, eta yen-saldoak ondo ateratzen jarraitzen du."
+      - "**Erregistratu ordainketa bakoitza.** Ordaindu elkarri nahi duzuen moduan, eta gero aukeratu **Kitatu** eta erabili **Erregistratu likidazioa**. Gehiago [kitatzeari buruz](page:feature/settle-up)."
+  - heading: "Bigarren bidea: bihurtu joan ahala"
+    body: "Taldeak nahiago badu bakoitzak zenbaki bakarra ikusi, bihurtu gastua sartzen duzunean."
+    items:
+      - "**Bihurtu formularioan.** **Gehitu gastua** formularioan, aukeratu **Bihurtu hona** eta hautatu libera esterlinak. Side Badger-ek tasa eta bihurtutako zenbatekoa erakusten ditu, ≈ ikurrarekin markatuta. Editatu tasa beste bat lortu baduzu. Yenetako jatorrizko zenbatekoa gastuan geratzen da."
+      - "**Irakurri libera esterlinak.** 1 ¥ = 0,005 £ tasarekin, tren-pasak 450 £ dira eta ramena 45 £. 600 £-ko hotelarekin, 600 £ + 450 £ + 45 £ = 1.095 £ da, hau da, 365 £ bakoitzeko. Zoek 600 £ ordaindu zituen, beraz 235 £ zor zaizkio. Lucyk 450 £ ordaindu zituen eta 85 £ zor zaizkio. Kenjik 45 £ ordaindu zituen eta 320 £ zor ditu."
+      - "**Bi ordainketa.** Biak Kenjirenak: 235 £ Zoeri eta 85 £ Lucyri. Zoek eta Lucyk ez diote elkarri ezer ordaintzen."
+      - "**Edo ezarri taldearen moneta.** Urrats gehigarri hori saihesteko, ireki taldearen **Ezarpenak**, bilatu **Moneta ezarpenak** eta aukeratu **Gastuak automatikoki bihurtu**. Orduan gastu berri bakoitza moneta horretara bihurtzen da, oraindik ikus eta alda dezakezun tasa batean."
+  - heading: "Zein bide hartu?"
+    items:
+      - "**Mantendu bereizita** jendeak oraindik yenak poltsikoan dituenean, edo tasa baten gainean eztabaidatu nahi ez duzunean. Kostua: ordainketa gehiago, eta moneta batean baino gehiagotan."
+      - "**Bihurtu** taldea moneta bakarrean bizi denean eta bakoitzak zenbaki bakarra eta zerrenda laburragoa nahi dituenean, Kenjiren bi transferentziak bezala. Kostua: taldeak tasa batean fidatzen da, eta tasa gastu bakoitzean finkatzen da gordetzen denean."
+      - "**Erabaki goiz.** Taldearen monetak gastu berriak eta kopiatuak bakarrik bihurtzen ditu. Ez da atzera joango sartuta duzuna txukuntzera."
+  - heading: "Tasa, eta muga"
+    items:
+      - "**Tasa gordetzean finkatzen da.** Gastu zaharrak ez dira inoiz berriro baloratzen, beraz saldo bat ez da mugitzen merkatua mugitu delako. Egun desberdinetan sartutako gastuek tasa desberdinak izan ditzakete, beraz taldeak bidaia osorako tasa bakarra nahi badu, adostu ezazue eta idatzi aldi bakoitzean."
+      - "**Tasarik ez? Idatzi bat.** Side Badger egungo kanbio-tasa bat lortzen saiatzen da ahal duen lekuan, baina ez dago bermatuta moneta-pare guztiek bat izango dutenik. Tasarik ez badago, edo kanbio-bulego batek tratu hobea eman badizu, idatzi zurea."
+      - "**999.999,99 gastu bakoitzeko, bere monetan.** Muga bakarra, edozein dirutan. Yenetan 1.000.000 ¥ baino zertxobait gutxiago da, gida honen tasarekin 5.000 £ inguru. Zenbaki handiak dituen moneta batean, hala nola Indonesiako rupian, faktura bakar batek lehenago irits dezake. Zatitu faktura bi gastutan, edo sartu beste moneta batean eta bihurtu."
+  - heading: "Side Badger-ek hemen egiten ez duena"
+    items:
+      - "Ez du inoiz dirurik mugitzen edo trukatzen. Elkarri nahi duzuen moduan ordaintzen diozue, eta gero ordainketa erregistratzen duzue."
+      - "140 moneta ditu. Kriptomonetak eta metalak ez daude haien artean."
+exampleAfter: 2
+example:
+  heading: "Japonia, bi modutara kitatuta"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "hotela, etxetik erreserbatua"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "tren-pasak"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "ramen-gaua"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Galderak"
+  items:
+    - q: "Zer kanbio-tasa erabiltzen du Side Badger-ek?"
+      a: "Egungo kanbio-tasa bat, gastua sartzen duzunean lortua, eskuragarri dagoen lekuan. Benetan lortu zenuen tasara alda dezakezu."
+    - q: "Taldeak libera esterlinetan eta yenetan geratu al daiteke?"
+      a: "Bai. Taldearen **Ezarpenak** atalean, aktibatu **Mugatu monetak talde honetarako** **Moneta ezarpenak** azpian, aukeratu **Baimendutako monetak** eta ezarri **Moneta lehenetsia gastu berrietarako**. Zerrendan aukera gutxiago, kutxan moneta oker gutxiago."
+    - q: "Bihurtu behar al dugu?"
+      a: "Ez. Monetak bereizita geratzen dira zuk edo zure taldeak bihurtzea aukeratzen ez baduzue, eta moneta bakoitzak ordainketen zerrenda labur propioa du."

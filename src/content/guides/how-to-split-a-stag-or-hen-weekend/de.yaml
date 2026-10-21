@@ -1,0 +1,103 @@
+translatedFrom: "6c8b8630"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - privacy-posture.no-ads
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - polls.villa-shortlist-vote
+  - permissions.viewer-sees-everything
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Kosten für ein JGA-Wochenende teilen | Side Badger"
+  description: "Der Ehrengast zahlt nichts, und am Montag reden trotzdem noch alle miteinander. So teilt ihr die Kosten eines JGA-Wochenendes, Rechenweg inklusive."
+h1: "So teilst du die Kosten für ein JGA-Wochenende"
+navLabel: "JGA-Wochenende"
+lead: "Der Ehrengast zahlt nichts, also teilen die anderen jede Ausgabe [gleichmäßig](page:feature/split-expenses) unter sich. Wer bei etwas nicht mitmacht, bleibt bei dieser Ausgabe außen vor, und der Ehrengast gehört nicht in die Gruppe, damit die Überraschung hält."
+cta:
+  heading: "Die Rechnung führen, die Überraschung wahren"
+  body: "Lege eine Gruppe an, schicke den Link an alle außer den Ehrengast und füge jede Ausgabe hinzu, sobald sie anfällt. Side Badger ist kostenlos, ohne Werbung und ohne Tageslimits."
+sections:
+  - heading: "Vier Freundinnen und eine Überraschung"
+    body: "Hannah, Isla, Jess und Kat entführen Grace zu ihrem Junggesellinnenabschied (JGA) übers Wochenende. Grace ist der Ehrengast, also zahlt sie für nichts. Sie ist auch nicht in der Gruppe und kann deshalb nicht sehen, was ihre Freundinnen für sie ausgeben. Hannah bucht das Ferienhaus, Isla bezahlt den Spa-Tag, Jess übernimmt das Abendessen und Kat das Taxi. Bis Sonntag hat jede für etwas bezahlt, und keine kann sagen, wer vorn liegt. Die Rechnung ist bei einem Junggesellen- oder Junggesellinnenabschied dieselbe, wer auch immer der Ehrengast ist."
+  - heading: "Durch die Zahlenden teilen, nicht durch die Anwesenden"
+    body: "Der Anteil des Ehrengasts verschwindet nicht. Er wird verteilt. Das Ferienhaus kostet 720 £ und vier Freundinnen zahlen dafür, also sind es 180 £ pro Person, und Graces Platz steckt schon in dieser Zahl. Das Abendessen kostet 260 £, also 65 £ pro Person. Das Taxi kostet 44 £, also 11 £ pro Person. Was jemand auslässt, wird nur bei dieser Ausgabe herausgerechnet. Kat lässt den Spa aus, also teilen Hannah, Isla und Jess dessen 360 £, die auch Graces Platz abdecken, zu je 120 £. Rechnet man alles zusammen, schulden Hannah, Isla und Jess je 376 £ vom Wochenende und Kat 256 £."
+  - heading: "In Side Badger einrichten"
+    items:
+      - "Lege eine Gruppe für das Wochenende an und gib ihr einen langweiligen Namen, etwa „Ferienhaus-Wochenende“. Grace ist kein Mitglied, und nur Mitglieder einer Gruppe können sie sehen."
+      - "Wähle **Andere einladen** und schicke den Link oder zeige den QR-Code nur dort, wo Grace es nicht sieht. Der Link zeigt eine Vorschau der Gruppe, bevor jemand beitritt. Wähle, wie lange er gilt, von 15 Minuten bis 5 Tage. Ein alter Link funktioniert weiter, bis er abläuft, wähle die Dauer also nicht länger als nötig."
+      - "Wähle für jede Ausgabe **Ausgabe hinzufügen**, gib den Betrag ein und wähle unter **Wer hat bezahlt?** die Person, die bezahlt hat. Hake unter **Aufteilen zwischen** die Leute an, die zahlen, und lass alle weg, die es ausgelassen haben, etwa Kat beim Spa. Wähle unter **Wie aufteilen** den Eintrag **Gleichmäßig**."
+      - "Öffne zu Hause die **Salden** der Gruppe. Side Badger zeigt, wer wem was schuldet, und schlägt eine kurze Liste von Zahlungen vor. Hier sind es drei: Kat zahlt Hannah 212 £, Jess zahlt Hannah 116 £ und Isla zahlt Hannah 16 £. Zahlt einander, wie ihr wollt, wähle dann **Abrechnen** und erfasse jede Zahlung."
+  - heading: "Vor der Buchung: Budget und Anzahlung"
+    body: "Einigt euch auf das Budget, bevor jemand bucht. Wähle **Umfrage hinzufügen**, frage, was die Gruppe für das Ferienhaus ausgeben will, und biete ein paar Beträge als Optionen an. Schalte beim Erstellen **Anonyme Abstimmung** ein, um zu verbergen, wer für was gestimmt hat, damit niemand ein kleineres Budget laut verteidigen muss. Schließe die Umfrage, sobald alle abgestimmt haben und das Ergebnis feststeht. Dann kommt die Anzahlung. Wer bucht, zahlt sie und trägt sie als Ausgabe ein, gleichmäßig geteilt, und der Restbetrag kommt als zweite Ausgabe dazu, wenn er fällig ist. Die anderen können ihren Anteil sofort überweisen und die Zahlung erfassen oder auf die Endabrechnung warten. Die Salden kommen so oder so gleich heraus."
+  - heading: "Wenn jemand nur für eine Nacht dazukommt"
+    body: "Wer nur für den Samstag dazukommt, sollte den Freitag nicht mitbezahlen. Lass die Person bei den Kosten weg, an denen sie nicht beteiligt war. Hängen die Kosten davon ab, wie lange jede Person bleibt, etwa bei einem Zimmer, wähle unter **Wie aufteilen** den Eintrag **Genaue Beträge** und gib den Anteil jeder Person ein. Die Anteile müssen zusammen die Gesamtsumme ergeben. Rechne zuerst einen Preis pro Person und Nacht aus und multipliziere ihn dann mit den Nächten, die jede Person bleibt. Die Seite [Gruppenreisen](page:use-case/group-trips) sagt mehr zu Kosten, die nicht für alle gleich sind."
+  - heading: "Was Side Badger hier nicht kann"
+    items:
+      - "Es bewegt nie Geld. Ihr zahlt einander per Banküberweisung, bar oder wie es euch passt, und erfasst die Zahlung dann, damit die Salden für alle stimmen."
+      - "Es schickt keine Zahlungserinnerungen. Ein freundlicher Schubs im Gruppenchat bleibt Menschensache."
+      - "Jede Ausgabe hat eine Person, die bezahlt hat, und Side Badger kann einen Beleg nicht Zeile für Zeile aufteilen. Haben zwei Karten das Ferienhaus bezahlt, trage es als zwei Ausgaben ein. Haben manche beim Abendessen Extras bestellt, trage die Extras als eigene Ausgabe ein."
+      - "Es führt das Geld, nicht das Programm. Umfragen und Kommentare bleiben bei den Kosten, die Pläne fürs Wochenende bleiben also in eurem Gruppenchat."
+exampleAfter: 2
+example:
+  heading: "Graces JGA-Wochenende, auf vier geteilt"
+  currency: GBP
+  people:
+    - id: hannah
+      name: Hannah
+    - id: isla
+      name: Isla
+    - id: jess
+      name: Jess
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "das Ferienhaus"
+      payer: hannah
+      amount: 720
+      split:
+        method: equal
+    - label: "den Spa-Tag"
+      payer: isla
+      amount: 360
+      split:
+        method: equal
+        shares:
+          hannah: 1
+          isla: 1
+          jess: 1
+    - label: "das Abendessen"
+      payer: jess
+      amount: 260
+      split:
+        method: equal
+    - label: "das Taxi"
+      payer: kat
+      amount: 44
+      split:
+        method: equal
+faq:
+  heading: "Fragen"
+  items:
+    - q: "Zahlt der Trauzeuge oder die Trauzeugin mehr?"
+      a: "Nur, wenn die Gruppe es so vereinbart. Die App gibt niemandem eine Sonderrolle bei der Rechnung. Übernimmt jemand mehr, wähle unter **Wie aufteilen** den Eintrag **Genaue Beträge** oder **Prozentsatz** und gib die vereinbarten Anteile ein."
+    - q: "Was ist mit Getränken, die manche nicht hatten?"
+      a: "Trage die Getränke als eigene Ausgabe ein und hake nur die Leute an, die sie hatten. Hatten alle unterschiedlich viel, wähle **Genaue Beträge** und gib den Anteil jeder Person ein. Bezahlt wird nur, was man auch hatte."
+    - q: "Kann der Ehrengast die Gruppe später sehen?"
+      a: "Ja, sobald die Überraschung vorbei ist. Lade die Person ein, dann kann ein Admin sie in den Einstellungen der Gruppe unter **Sicherheit & Berechtigungen** zum **Betrachter** machen. Ein Betrachter sieht alles und ändert nichts, warte also, bis nichts mehr geheim ist. Die Person braucht ein kostenloses Konto, um beizutreten."

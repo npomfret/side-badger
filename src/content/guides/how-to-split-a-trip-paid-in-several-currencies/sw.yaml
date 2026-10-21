@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Jinsi ya kugawanya safari iliyolipwa kwa sarafu kadhaa | Side Badger"
+  description: "Pauni kwa hoteli, yeni kwa ramen. Maliza kila sarafu peke yake au badilisha kwa kiwango unachokiona. Njia zote mbili zimehesabiwa, hesabu zikionyeshwa."
+h1: "Jinsi ya kugawanya safari iliyolipwa kwa sarafu kadhaa"
+navLabel: "Safari za sarafu kadhaa"
+lead: "Ingiza kila gharama kwa sarafu uliyolipia, kisha chagua njia. Weka sarafu zikiwa tofauti na umalize kila moja kwa pesa yake, au badilisha kwa kiwango cha sasa cha kubadilisha fedha na umalize mara moja. Safari ileile ya Japani inakuwa malipo manne kwa njia ya kwanza na mawili kwa ya pili."
+cta:
+  heading: "Iingize kwa pesa uliyolipia"
+  body: "Fungua akaunti ya bure, anzisha kikundi cha safari na ongeza kila gharama kwa sarafu iliyokuwa kwenye risiti. Unataka maelezo kwanza? Tazama [sarafu nyingi](page:feature/multiple-currencies) au [kile ambacho bure inajumuisha](page:pricing)."
+sections:
+  - heading: "Marafiki watatu, hoteli moja, yeni nyingi mno"
+    body: "Zoe, Kenji na Lucy wanatumia wiki moja nchini Japani kwenye [safari ya kikundi](page:use-case/group-trips), na kila gharama inagawanywa sawa kwa watatu. Zoe alihifadhi hoteli akiwa nyumbani, kwa pauni, £600. Lucy alinunua tiketi za treni mjini Tokyo kwa ¥90,000. Kenji alilipia usiku wa ramen, ¥9,000, na ameutaja kila siku tangu hapo. Hakuna anayetaka kubadilisha risiti tatu kwenye jukwaa la kituo cha treni. Kwa hesabu hizi, ¥1 ni £0.005, kiwango cha mviringo kilichobuniwa kwa mwongozo huu. Kwenye programu ungetumia kiwango cha sasa cha kubadilisha fedha, au uandike kile ulichopata kweli."
+  - heading: "Ingiza kila moja kwa pesa iliyo kwenye risiti"
+    body: "Fanya sehemu hii njia yoyote utakayochagua. Hakuna kinachohitaji kubadilishwa bado."
+    items:
+      - "**Tengeneza kikundi.** Kwenye dashibodi chagua **Unda Kikundi**, kipe jina la safari, kisha chagua **Alika wengine** na utume kiungo au msimbo wa QR."
+      - "**Ongeza hoteli.** Chagua **Ongeza Gharama** na uweke 600, ukichagua pauni kama sarafu iliyo kando ya kiasi. Chini ya **Nani alilipa?** chagua Zoe. Waache wote watatu chini ya **Gawanya kati ya**, acha **Jinsi ya kugawanya** kwenye **Sawa** na uchague **Hifadhi Gharama**."
+      - "**Ongeza yeni.** Fanya vivyo hivyo kwa tiketi za treni (Lucy alilipa) na ramen (Kenji alilipa), ukichagua yeni kama sarafu. Yeni haina desimali, kwa hivyo fomu haiziombi."
+  - heading: "Njia ya kwanza: weka sarafu tofauti"
+    body: "Side Badger huweka salio kwa kila sarafu na haifutanishi moja dhidi ya nyingine. Kwa pauni, hoteli ni £200 kila mmoja, kwa hivyo Kenji na Lucy kila mmoja anapaswa kumlipa Zoe £200. Kwa yeni, tiketi za treni na ramen zinafika ¥99,000, yaani ¥33,000 kila mmoja. Lucy alilipa ¥90,000 na anadai ¥57,000. Zoe hakulipa yeni yoyote na anadaiwa ¥33,000. Kenji alilipa ¥9,000, kwa hivyo anadaiwa ¥24,000."
+    items:
+      - "**Pauni.** Kenji anamlipa Zoe £200 na Lucy anamlipa Zoe £200."
+      - "**Yeni.** Zoe anamlipa Lucy ¥33,000 na Kenji anamlipa Lucy ¥24,000."
+      - "**Malipo manne kwa jumla.** Zoe na Lucy wanadaiana kwa sarafu mbili ambazo hazifutani. Hakuna kiwango kinachohusika, kwa hivyo hakuna cha kubishania."
+      - "**Deni la yeni, lipa kwa pauni.** Mtu asiye na yeni bado anaweza kulipa kwa pauni. Unaporekodi malipo, fungua **Sarafu tofauti?**, chagua **Badilisha kuwa** pauni na uhakiki kiwango. ¥33,000 za Zoe ni £165 kwa kiwango cha mwongozo huu, na salio la yeni bado linatoka sawa."
+      - "**Rekodi kila malipo.** Lipaneni mtakavyo, kisha chagua **Lipa deni** na utumie **Rekodi Malipo**. Kuna zaidi kuhusu [kumaliza hesabu](page:feature/settle-up)."
+  - heading: "Njia ya pili: badilisha unapoendelea"
+    body: "Kikundi kikipendelea kuona nambari moja kila mmoja, badilisha unapoingiza gharama."
+    items:
+      - "**Badilisha kwenye fomu.** Kwenye **Ongeza Gharama**, chagua **Badilisha kuwa** na uchague pauni. Side Badger inaonyesha kiwango na kiasi kilichobadilishwa, vikiwa na alama ya ≈. Hariri kiwango ukipata kingine. Kiasi cha awali cha yeni kinabaki kwenye gharama."
+      - "**Soma pauni.** Kwa ¥1 = £0.005, tiketi za treni zinakuwa £450 na ramen £45. Pamoja na hoteli ya £600, hiyo ni £600 + £450 + £45 = £1,095, au £365 kila mmoja. Zoe alilipa £600, kwa hivyo anadai £235. Lucy alilipa £450 na anadai £85. Kenji alilipa £45 na anadaiwa £320."
+      - "**Malipo mawili.** Yote kutoka kwa Kenji: £235 kwa Zoe na £85 kwa Lucy. Zoe na Lucy hawalipani tena kabisa."
+      - "**Au weka sarafu ya kikundi.** Ili kuruka hatua ya ziada, fungua **Mipangilio** ya kikundi, tafuta **Mipangilio ya Sarafu** na uchague **Badilisha Matumizi Kiotomatiki kwa**. Kila gharama mpya basi inabadilishwa kuwa sarafu hiyo, bado kwa kiwango unachokiona na unachoweza kubadilisha."
+  - heading: "Njia ipi uchague?"
+    items:
+      - "**Weka tofauti** watu wakiwa bado na yeni kwenye pochi zao, au usipotaka kubishana kuhusu kiwango. Gharama yake ni malipo mengi zaidi, kwa sarafu zaidi ya moja."
+      - "**Badilisha** kikundi kikiishi kwa sarafu moja na kutaka nambari moja kila mmoja na orodha fupi, kama malipo mawili ya Kenji. Gharama yake ni kwamba kikundi kinaamini kiwango, na kiwango kinawekwa kwenye kila gharama inapohifadhiwa."
+      - "**Amueni mapema.** Sarafu ya kikundi hubadilisha tu gharama mpya na zilizonakiliwa. Haitarudi nyuma kupanga ulichokwisha kuingiza."
+  - heading: "Kiwango, na kikomo"
+    items:
+      - "**Kiwango kinawekwa unapohifadhi.** Gharama za zamani hazipimwi upya kamwe, kwa hivyo salio halipotoki kwa sababu soko lilibadilika. Gharama zilizoingizwa siku tofauti zinaweza kuwa na viwango tofauti, kwa hivyo kikundi kikitaka kiwango kimoja kwa safari nzima, kubalianeni kimoja na kukiandika kila mara."
+      - "**Hakuna kiwango? Andika chako.** Side Badger huchukua kiwango cha sasa cha kubadilisha fedha inapowezekana, lakini si kila jozi ina uhakika wa kuwa nacho. Kama hakipo, au dirisha la kubadilishia pesa lilikupa bei nzuri zaidi, andika chako."
+      - "**999,999.99 kwa kila gharama, katika sarafu yake yenyewe.** Kikomo kimoja, pesa yoyote. Kwa yeni hiyo ni chini kidogo ya ¥1,000,000, takriban £5,000 kwa kiwango cha mwongozo huu. Kwa sarafu zenye nambari kubwa, kama rupia ya Indonesia, bili moja inaweza kukifikia mapema zaidi. Gawa bili kuwa gharama mbili, au iingize kwa sarafu nyingine na ubadilishe."
+  - heading: "Kile ambacho Side Badger haifanyi hapa"
+    items:
+      - "Haihamishi wala kubadilisha pesa kamwe. Mnalipana mtakavyo, kisha mnarekodi malipo."
+      - "Ina sarafu 140. Sarafu fiche (crypto) na metali hazimo."
+exampleAfter: 2
+example:
+  heading: "Japani, imemalizwa kwa njia mbili"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "hoteli, iliyohifadhiwa nyumbani"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "tiketi za treni"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "usiku wa ramen"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Maswali"
+  items:
+    - q: "Side Badger inatumia kiwango gani cha kubadilisha fedha?"
+      a: "Kiwango cha sasa cha kubadilisha fedha, kinachochukuliwa unapoingiza gharama pale kinapopatikana. Unaweza kukibadilisha kiwe kile ulichopata kweli."
+    - q: "Je, kikundi kinaweza kushikilia pauni na yeni tu?"
+      a: "Ndiyo. Kwenye **Mipangilio** ya kikundi, washa **Weka vizuizi vya sarafu kwa kikundi hiki** chini ya **Mipangilio ya Sarafu**, chagua **Sarafu zinazoruhusiwa** na uweke **Sarafu chaguomsingi kwa gharama mpya**. Chaguo chache kwenye orodha, makosa machache kwenye kaunta ya malipo."
+    - q: "Je, ni lazima tubadilishe kabisa?"
+      a: "Hapana. Sarafu hubaki tofauti isipokuwa wewe au kikundi chenu mchague kubadilisha, na kila sarafu ina orodha yake fupi ya malipo."

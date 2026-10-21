@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Saraksti, aptaujas un komentāri grupas izdevumiem | Side Badger"
+  description: "Komentējiet izdevumus, apšaubiet dīvainos, turiet kopīgu iepirkumu sarakstu un balsojiet par villu. Plānojiet izmaksas kopā, tad sadaliet. Bez maksas, bez reklāmām."
+h1: "Plānojiet kopā, sadaliet pēc tam"
+navLabel: "Plānojiet kopā"
+lead: "Iepirkumu saraksts un iepirkumu rēķins beidzot runājas. Side Badger dod grupai vietu, kur parunāt par naudu pirms un pēc tam, kad tā iztērēta: komentāri pie katra izdevuma, veids, kā apšaubīt tos, kas šķiet nepareizi, kopīgi saraksti un aptaujas lielajiem lēmumiem. Tad jūs [sadalāt izdevumus](page:feature/split-expenses) kā parasti."
+cta:
+  heading: "Plānojiet, tad sadaliet"
+  body: "Izveidojiet bezmaksas kontu, sāciet grupu un ielieciet pirmo sarakstu, aptauju vai jautājumu tieši blakus naudai. Neesat pārliecināti, kas notiks tālāk? Skatiet [kā tas darbojas](page:how-it-works)."
+problem:
+  heading: "Tērzēšana ir šeit, rēķins ir tur"
+  body: "Grupas izdevumi parasti dzīvo divās vietās. Skaitļi ir vienā, bet strīds par skaitļiem ir tērzēšanā, kas otrdien aizritināta prom. Iepirkumu saraksts ir ledusskapja fotogrāfija. Villu izlēma, kad lielākā daļa, šķiet, uzlika īkšķi uz augšu. Side Badger plānošanu notur grupā, blakus izdevumiem, uz kuriem tā attiecas, tāpēc ir komentārs turpat, kur izmaksas, saraksts turpat, kur iepirkšanās, aptauja lielajam lēmumam un veids pateikt „pagaidiet, vai tas ir pareizi?”, nerakstot veselu rindkopu. Viss paliek par grupas naudu, un tieši tam grupa ir domāta."
+workflow:
+  heading: "No balsojuma par villu līdz iepirkumu rēķinam"
+  steps:
+    - title: "Nododiet lielo lēmumu balsojumam"
+      body: "Pievienojiet aptauju lēmumam, kas nosaka rēķinu, piemēram, kuru villu izvēlēties. Izvēlieties no divām līdz desmit iespējām, norādiet, cik balsu ir katram cilvēkam, un aizveriet aptauju, kad visi ir nobalsojuši un uzvarētājs ir atzīmēts."
+      shot: S17
+      shotAlt: "Aizvērta aptauja ar atzīmētu uzvarošo variantu un balsu skaitu pie katra varianta"
+    - title: "Rakstiet iepirkumu sarakstu kopā"
+      body: "Sāciet kopīgu sarakstu, pievienojiet pozīcijas un atķeksējiet tās, kad tās nonāk ratos. Iepirkums pēc tam tiek pievienots kā izdevums."
+      shot: S16
+      shotAlt: "Kopīgs iepirkumu saraksts ar dažām atķeksētām pozīcijām un progresa skaitītāju"
+    - title: "Parunājiet par izmaksām tur, kur tās dzīvo"
+      body: "Komentējiet pašu izdevumu, pievienojiet čeku un reaģējiet ar emocijzīmi. Saruna paliek blakus skaitlim, par ko tā ir."
+      shot: S08
+      shotAlt: "Izdevums ar detaļām, čeka sīktēlu, komentāru pavedienu un emocijzīmju reakcijām"
+    - title: "Apšaubiet to, kas šķiet nepareizs"
+      body: "Ja grupa ir ieslēgusi izdevumu jautājumus, ikviens, kas iekļauts izdevumā, var izvēlēties **Man ir jautājums**. Izdevums paliek ārpus atlikumiem, kamēr jautājums nav nokārtots."
+      shot: S18
+      shotAlt: "Izdevumu saraksts ar zīmi „Apšaubīts” un filtru „Tikai apšaubīti”"
+    - title: "Redziet, kas mainījies un kurš to mainīja"
+      body: "Aktivitāšu plūsma un paziņojumu zvaniņš rāda, kas jauns jūsu grupās. Push paziņojumi ir pieejami, ja tos vēlaties."
+      shot: S19
+      shotAlt: "Paziņojumu nolaižamā izvēlne ar nesenās aktivitātes sarakstu"
+options:
+  heading: "Iespējas"
+  items: []
+example:
+  heading: "Trīs mājokļa biedri, viens apšaubīts vīna rēķins"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "lielais iepirkums"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "uzkopšana"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "ballītes vīns"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Komentāri un reakcijas, blakus skaitļiem"
+    body: "Katram izdevumam ir sava komentāru ķēde, tāpat grupai, katram sarakstam un katrai aptaujai. Jautājiet, kāpēc taksis maksāja tik daudz, zem pašas taksometra izmaksām, nevis tērzēšanā, kurā neviens neritina atpakaļ. Pievienojiet čeka fotogrāfiju vai rezervācijas PDF, tad reaģējiet ar īkšķi uz augšu, sirdi, smiekliem, „oho”, skumjām vai svinībām uz izdevumiem, maksājumiem un komentāriem. Nosvinēiet maksājumu, kad tas ir ienācis. Tas ir tuvākais, ko Side Badger spēj dot aplausiem."
+  - heading: "Apšaubiet izdevumu, nesākot ķildu"
+    body: "Kad grupa ir ieslēgusi izdevumu jautājumus, ikviens, kas iekļauts izdevumā, var izvēlēties **Man ir jautājums** un pateikt kāpēc. Jautājums tiek ievietots kā komentārs pie izdevuma, izdevums saņem zīmi **Apšaubīts**, un viss izdevums izkrīt no visu atlikumiem, kamēr jautājums nav nokārtots."
+    items:
+      - "**Ieslēgšana.** Pēc noklusējuma tas ir izslēgts. Administrators grupas iestatījumos sadaļā **Funkcijas** ieslēdz **Atļaut jautājumus par izdevumiem**."
+      - "**Aizvēršana.** Tas, kas jautāja, vai administrators izvēlas **Aizvērt jautājumu**. Ja vairāki cilvēki apšaubīja vienu izdevumu, tas atgriežas atlikumos, kad ir aizvērts pēdējais jautājums."
+      - "**Labošana.** Kad izdevumu labo, atvērts jautājums pāriet uz jauno versiju visiem, kam tajā joprojām ir daļa. Ja kādu labojums no izdevuma izņem, viņa jautājums beidzas ar veco versiju, tāpēc viņam nekas nav jāaizver."
+      - "**Atrašana.** Izdevumu sarakstā ir filtrs **Tikai apšaubīti**. Tas nav apstiprināšanas solis: aizturēti tiek tikai tie izdevumi, ko kāds apšauba, un viss pārējais tiek skaitīts, tiklīdz tiek pievienots."
+  - heading: "Kā jautājums noris"
+    body: "Tom pievieno 45 £ ballītes vīna, sadalītus starp visiem trim mājokļa biedriem. Aisha nedzēra, tāpēc viņa uzdod jautājumu, un kamēr tas ir atvērts, vīns neskaitās nevienam. Māja vienojas, ka vīnu dala tikai Tom un Priya, tāpēc Tom maina sadali uz abiem. Aisha vairs nav izdevumā, tāpēc viņas jautājums beidzas ar iepriekšējo versiju, kas tiek saglabāta, un vīns atgriežas atlikumos uzreiz, pa 22,50 £ katram 15 £ vietā. Ja Aisha būtu palikusi izdevumā, viņas jautājums būtu pārgājis uz jauno versiju un gaidījis, kad to aizvērs viņa vai administrators. Tālāk Aisha ir parādā 48 £: tie ir 28 £ no iepirkuma un 20 £ no uzkopšanas, bet Priya ir parādā 10,50 £: tā ir viņas 70,50 £ daļa (28 £, 20 £ un 22,50 £) mīnus 60 £, ko viņa samaksāja. Ļoti [mājokļa biedru](page:use-case/housemates) veida strīds. Par to, kā formulēt jautājumu, skatiet [ko darīt, kad kāds apšauba kopīgu izdevumu](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Kopīgi saraksti iepirkumiem"
+    body: "Sāciet sarakstu grupā, nosauciet to, piemēram, Iepirkumu saraksts, pievienojiet pozīcijas un atķeksējiet tās. Velciet pozīcijas labākā secībā, vērojiet, kā aug progresa skaitītājs, un komentējiet sarakstu, kad kāds nopērk nepareizo auzu pienu. Arhivējiet pabeigtu sarakstu, lai to noliktu malā (**Rādīt arhivētos** to atgriež), vai nokopējiet sarakstu, lai to izmantotu atkārtoti. Turiet kopīgo iepirkumu sarakstu blakus iepirkumu rēķiniem, lai saraksts saka, ko pirkt, bet izdevums saka, cik tas maksāja. Kurš drīkst veidot un labot sarakstus, atkarīgs no grupas atļaujām, ko izskaidro [grupas un atļaujas](page:feature/groups-and-permissions)."
+  - heading: "Aptaujas, anonīmas, ja vēlaties"
+    body: "Pajautājiet grupai to, kas nosaka rēķinu, piemēram, kuru villu izvēlēties, cik tērēt dāvanai, vai laivas brauciens ir naudas vērts. Aptaujai ir jautājums un no divām līdz desmit iespējām. Jūs izvēlaties, cik balsu ir katram cilvēkam, no vienas līdz desmit, un vai balsošana ir anonīma. **Anonīma balsošana** paslēpj, kurš par ko balsoja, un to nevar mainīt, kad ir iekšā pirmā balss. Cilvēki var mainīt vai noņemt savu balsi, līdz aptauja tiek aizvērta, un jūs varat to atvērt no jauna, ja grupa pārdomā. Villas izvēle ir tieši tas, no kā sastāv [grupu ceļojumi](page:use-case/group-trips), un dāvanas budžeta saskaņošana ir klasika [pasākumiem un svinībām](page:use-case/events-and-celebrations)."
+  - heading: "Aktivitāšu plūsma, lai nekas nemainās klusām"
+    body: "Katrai grupai ir aktivitāšu vēsture, un paziņojumu zvaniņš savāc aktivitāti no visām jūsu grupām vienuviet. Pievienojiet izdevumu, un visi to redz uzreiz, bez pārlādēšanas, un plūsma rāda, kas mainījies un kurš to mainīja. Tas ietver pievienotus, labotus vai dzēstus izdevumus, uzdotus un aizvērtus jautājumus, komentārus, sarakstu un aptauju izmaiņas un reģistrētus maksājumus."
+  - heading: "Push paziņojumi, ja vēlaties"
+    body: "Push paziņojumi ir neobligāti. Ieslēdziet tos sava konta **Iestatījumos**, sadaļā **Paziņojumi**, un jūsu ierīce paziņos, kad jūsu grupās ir jauna aktivitāte, piemēram, jauns izdevums vai komentārs. Katra ierīce tiek ieslēgta atsevišķi, un pārlūkprogramma vispirms lūdz atļauju. iPhone vai iPad ierīcē tie darbojas tikai lietotnē, kas pievienota sākuma ekrānam, ko izskaidro [tīmekļa lietotnes](page:feature/web-app) lapa. Uztveriet tos kā ērtību, nevis solījumu, jo piegāde netiek garantēta."
+limits:
+  heading: "Ierobežojumi"
+  items:
+    - "Komentāri, saraksti un aptaujas ir paredzēti grupas naudai. [Lietošanas noteikumi](page:terms) prasa, lai viss, kas tiek ievietots, attiektos uz grupas finansēm, tāpēc šī ir vieta izdevumu plānošanai, nevis vispārīga tērzētava vai uzdevumu lietotne."
+    - "Komentārs var būt līdz 500 rakstzīmēm, ar līdz trim pielikumiem, kas ir attēli vai PDF, katrs līdz 5 MB. Komentāru var dzēst tikai tā autors."
+    - "Izdevumu jautājumi pēc noklusējuma ir izslēgti, un administrators tos ieslēdz katrai grupai. Izdevumu var apšaubīt tikai cilvēki, kas tajā iekļauti, funkcijas izslēgšana notīra visus atvērtos jautājumus, un neviens nevar pamest grupu, kamēr izdevumam, kurā viņš piedalās, ir atvērts jautājums."
+    - "Grupā var būt līdz 100 sarakstiem, katrā līdz 200 pozīcijām, un katra pozīcija var būt līdz 500 rakstzīmēm. Grupas atļaujas nosaka, kurš var veidot, labot un dzēst sarakstus, un bloķēta grupa neļauj nekādas izmaiņas."
+    - "Grupā var būt līdz 50 aptaujām, katrā no divām līdz desmit iespējām un līdz desmit balsīm uz cilvēku. Aptaujām nav termiņa, un tās neaizveras pašas."
+    - "Aktivitāšu vēsture tiek glabāta 90 dienas."
+    - "Push paziņojumi ir izvēles kārtībā katram kontam un katrai ierīcei. Tiem vajadzīga pārlūkprogramma, kas tos atbalsta, un jūsu atļauja, iPhone un iPad ierīcē tie darbojas tikai no lietotnes, kas pievienota sākuma ekrānam, un piegāde netiek garantēta. Aktivitātei nav e-pasta vai īsziņu brīdinājumu un nav maksājumu atgādinājumu, tāpēc maksājuma pakaļdzīšanās joprojām ir jūsu ziņā."
+useCasesHeading: "Kur noder plānošana kopā"
+faq:
+  heading: "Jautājumi"
+  items:
+    - q: "Vai balsis var būt anonīmas?"
+      a: "Jā. Veidojot aptauju, ieslēdziet **Anonīma balsošana**, un tā paslēpj, kurš par ko balsoja. Izlemiet pirms pirmās balss, jo vēlāk to nevar mainīt."
+    - q: "Vai aptauja var aizvērties pati?"
+      a: "Nē. Aptaujai nav termiņa, tāpēc tās veidotājs izvēlas **Aizvērt aptauju**, kad grupa ir izlēmusi. Ja grupa pārdomā, **Atvērt aptauju atkārtoti** to atgriež."
+    - q: "Cik pozīciju var būt sarakstā?"
+      a: "Līdz 200 pozīcijām sarakstā un līdz 100 sarakstiem grupā. Katra pozīcija var būt līdz 500 rakstzīmēm, kas ir daudz auzu piena."
+    - q: "Kurš var aizvērt jautājumu, un kas tikmēr notiek ar izdevumu?"
+      a: "Tas, kas jautāja, vai grupas administrators. Kamēr jautājums ir atvērts, viss izdevums ir ārpus visu atlikumiem. Tas atgriežas, kad tiek aizvērts pēdējais atvērtais jautājums par to vai kad labojums izņem jautātāju no izdevuma."
+    - q: "Vai sarakstus un komentārus drīkst izmantot kā uzdevumu lietotni vai grupas tērzēšanu?"
+      a: "Nē. Komentāri, saraksti un aptaujas ir paredzēti grupas naudai, ko prasa [lietošanas noteikumi](page:terms). Domājiet par iepirkumu sarakstiem, budžeta aptaujām un „kāpēc šis ir 45 £?”."
+    - q: "Vai Side Badger sūtīs man e-pastus par aktivitāti?"
+      a: "Nē. Aktivitātei nav e-pasta vai īsziņu brīdinājumu. Varat ieslēgt push paziņojumus katrā ierīcē, un paziņojumu zvaniņš lietotnē rāda, kas jauns."

@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Een reis in meerdere valuta’s verdelen | Side Badger"
+  description: "Ponden voor het hotel, yen voor de ramen. Reken elke valuta apart af of om tegen een koers die je ziet. Beide manieren uitgewerkt, met de sommen."
+h1: "Zo verdeel je een reis die in meerdere valuta’s betaald werd"
+navLabel: "Reizen in meerdere valuta’s"
+lead: "Voer elke uitgave in de valuta in waarin je betaalde en kies dan een route. Hou de valuta’s uit elkaar en reken elke valuta in haar eigen geld af, of reken om tegen een actuele wisselkoers en reken één keer af. Dezelfde Japanreis wordt op de eerste manier vier betalingen en op de tweede manier twee."
+cta:
+  heading: "Noteer het in het geld waarmee je betaalde"
+  body: "Maak een gratis account aan, start een groep voor de reis en voeg elke uitgave toe in de valuta die op het bonnetje stond. Wil je eerst de details? Kijk dan bij [meerdere valuta’s](page:feature/multiple-currencies) of [wat gratis inhoudt](page:pricing)."
+sections:
+  - heading: "Drie vrienden, één hotel, heel veel yen"
+    body: "Zoe, Kenji en Lucy gaan een week naar Japan op [groepsreis](page:use-case/group-trips), en elke kost wordt gelijk door drie gedeeld. Zoe boekte het hotel van thuis uit, in ponden, voor £ 600. Lucy kocht de treinpassen in Tokio voor ¥ 90.000. Kenji betaalde de ramenavond, ¥ 9.000, en brengt dat sindsdien dagelijks ter sprake. Niemand wil drie bonnetjes omrekenen op een stationsperron. Voor de sommen hier is ¥ 1 gelijk aan £ 0,005, een afgeronde koers die voor deze gids verzonnen is. In de app gebruik je een actuele wisselkoers, of tik je de koers in die je echt kreeg."
+  - heading: "Voer elke uitgave in het geld van het bonnetje in"
+    body: "Dit deel doe je welke route je ook kiest. Er hoeft nog niets omgerekend te worden."
+    items:
+      - "**Maak de groep.** Kies op het overzicht **Groep aanmaken**, noem de groep naar de reis, kies dan **Anderen uitnodigen** en stuur de link of QR-code."
+      - "**Voeg het hotel toe.** Kies **Uitgave toevoegen** en voer 600 in, met ponden als valuta naast het bedrag. Kies onder **Wie heeft betaald?** Zoe. Laat alle drie staan onder **Verdelen tussen**, laat **Hoe te verdelen** op **Gelijk** staan en kies **Uitgave opslaan**."
+      - "**Voeg de yen toe.** Doe hetzelfde voor de treinpassen (Lucy betaalde) en de ramenavond (Kenji betaalde), met yen als valuta. Yen hebben geen decimalen, dus het formulier vraagt er geen."
+  - heading: "Route één: hou de valuta’s apart"
+    body: "Side Badger houdt voor elke valuta een apart saldo bij en verrekent de ene niet met de andere. In ponden is het hotel £ 200 per persoon, dus Kenji en Lucy zijn Zoe elk £ 200 schuldig. In yen komen de treinpassen en de ramenavond samen op ¥ 99.000, dat is ¥ 33.000 per persoon. Lucy betaalde ¥ 90.000 en heeft ¥ 57.000 tegoed. Zoe betaalde geen yen en is ¥ 33.000 schuldig. Kenji betaalde ¥ 9.000, dus hij is ¥ 24.000 schuldig."
+    items:
+      - "**Ponden.** Kenji betaalt Zoe £ 200 en Lucy betaalt Zoe £ 200."
+      - "**Yen.** Zoe betaalt Lucy ¥ 33.000 en Kenji betaalt Lucy ¥ 24.000."
+      - "**Vier betalingen in totaal.** Zoe en Lucy zijn elkaar schuldig in twee valuta’s die elkaar niet opheffen. Er komt geen koers aan te pas, dus daar valt niets over te kibbelen."
+      - "**Yen schuldig, in ponden betalen.** Wie geen yen heeft, kan toch in ponden betalen. Open bij het registreren van de betaling **Andere munteenheid?**, kies bij **Converteren naar** ponden en controleer de koers. Zoe’s ¥ 33.000 is £ 165 tegen de koers van deze gids, en het yensaldo klopt nog steeds."
+      - "**Registreer elke betaling.** Betaal elkaar zoals je wilt, kies dan **Vereffenen** en gebruik **Vereffening registreren**. Meer daarover bij [afrekenen](page:feature/settle-up)."
+  - heading: "Route twee: reken om terwijl je bezig bent"
+    body: "Ziet de groep liever één getal per persoon, reken dan om wanneer je de uitgave invoert."
+    items:
+      - "**Reken om in het formulier.** Kies in **Uitgave toevoegen** de optie **Converteren naar** en kies ponden. Side Badger toont de koers en het omgerekende bedrag, gemarkeerd met een ≈. Pas de koers aan als je een andere kreeg. Het oorspronkelijke bedrag in yen blijft bij de uitgave staan."
+      - "**Lees de ponden.** Bij ¥ 1 = £ 0,005 worden de treinpassen £ 450 en de ramenavond £ 45. Met het hotel van £ 600 is dat £ 600 + £ 450 + £ 45 = £ 1.095, of £ 365 per persoon. Zoe betaalde £ 600, dus ze heeft £ 235 tegoed. Lucy betaalde £ 450 en heeft £ 85 tegoed. Kenji betaalde £ 45 en is £ 320 schuldig."
+      - "**Twee betalingen.** Allebei van Kenji: £ 235 aan Zoe en £ 85 aan Lucy. Zoe en Lucy betalen elkaar helemaal niets meer."
+      - "**Of kies een groepsvaluta.** Om de extra stap over te slaan, open je de **Instellingen** van de groep, zoek je **Valuta-instellingen** en kies je **Uitgaven automatisch omrekenen naar**. Elke nieuwe uitgave wordt dan naar die valuta omgerekend, nog altijd tegen een koers die je kunt zien en aanpassen."
+  - heading: "Welke route neem je?"
+    items:
+      - "**Hou ze apart** als mensen nog yen in hun portemonnee hebben, of als je liever niet over een koers discussieert. De keerzijde is meer betalingen, in meer dan één valuta."
+      - "**Reken om** als de groep in één valuta leeft en één getal per persoon en een kortere lijst wil, zoals Kenji’s twee overschrijvingen. De keerzijde is dat de groep een koers moet vertrouwen, en die koers ligt vast op elke uitgave zodra ze wordt opgeslagen."
+      - "**Beslis vroeg.** Een groepsvaluta rekent enkel nieuwe en gekopieerde uitgaven om. Ze gaat niet terug om op te ruimen wat je al hebt ingevoerd."
+  - heading: "De koers, en het plafond"
+    items:
+      - "**De koers ligt vast zodra je opslaat.** Oude uitgaven worden nooit herwaardeerd, dus een saldo schuift niet op omdat de markt dat deed. Uitgaven die op verschillende dagen worden ingevoerd, kunnen verschillende koersen hebben. Wil de groep één koers voor de hele reis, spreek die dan af en tik ze telkens in."
+      - "**Geen koers? Tik er een in.** Side Badger haalt waar mogelijk een actuele wisselkoers op, maar niet voor elk valutapaar is er gegarandeerd een. Is er geen, of gaf een wisselkantoor je een betere deal, tik dan je eigen koers in."
+      - "**999.999,99 per uitgave, in haar eigen valuta.** Eén plafond, welk geld het ook is. In yen is dat net onder ¥ 1.000.000, ongeveer £ 5.000 tegen de koers van deze gids. In een valuta met grote getallen, zoals de Indonesische roepia, kan één rekening er sneller tegenaan botsen. Splits de rekening op in twee uitgaven, of voer ze in een andere valuta in en reken om."
+  - heading: "Wat Side Badger hier niet doet"
+    items:
+      - "Het verplaatst of wisselt nooit geld. Jullie betalen elkaar zoals jullie willen en registreren de betaling dan."
+      - "Het kent 140 valuta’s. Cryptomunten en metalen zitten daar niet bij."
+exampleAfter: 2
+example:
+  heading: "Japan, op twee manieren afgerekend"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "het hotel, van thuis uit geboekt"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "treinpassen"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "ramenavond"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Vragen"
+  items:
+    - q: "Welke wisselkoers gebruikt Side Badger?"
+      a: "Een actuele wisselkoers, opgehaald wanneer je de uitgave invoert, waar er een beschikbaar is. Je kunt de koers veranderen in wat je echt kreeg."
+    - q: "Kan de groep bij ponden en yen blijven?"
+      a: "Ja. Zet in de **Instellingen** van de groep onder **Valuta-instellingen** de optie **Valuta's beperken voor deze groep** aan, kies de **Toegestane valuta’s** en stel de **Standaardvaluta voor nieuwe uitgaven** in. Minder opties in de lijst, minder verkeerde gokken aan de kassa."
+    - q: "Moeten we sowieso omrekenen?"
+      a: "Nee. Valuta’s blijven apart, tenzij jij of je groep ervoor kiest de bedragen om te rekenen, en elke valuta krijgt haar eigen korte lijst betalingen."

@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Grupas administrēšana un atļaujas kopīgiem izdevumiem | Side Badger"
+  description: "Uzaiciniet ar saiti vai QR kodu, apstipriniet, kas pievienojas, iestatiet atļaujas un bloķējiet grupu, kad viss beidzies. Jūsu grupa, jūsu noteikumi, ar mēru."
+h1: "Grupas administrēšana un atļaujas: jūsu noteikumi, saprātīgās robežās"
+navLabel: "Grupas un atļaujas"
+lead: "Dažām grupām vajag kasieri. Side Badger tam ir iestatījums. Uzaiciniet cilvēkus ar saiti vai QR kodu, izlemiet, kas tiek iekšā, un izvēlieties, kas drīkst mainīt skaitļus. Neliela draugu grupa visu to var ignorēt, jo jaunas grupas sākas pilnīgi atvērtas."
+cta:
+  heading: "Gatavi vadīt kārtīgu grupu?"
+  body: "Izveidojiet kontu, sāciet grupu un nosūtiet uzaicinājuma saiti. Atstājiet to atvērtu vai pastipriniet noteikumus, kad grupa kļūst lielāka vai prasīgāka."
+problem:
+  heading: "Kādam jāuztur skaitļi kārtībā"
+  body: "Četri mājokļa biedri var iztikt ar uzticēšanos. Trīsdesmit viesiem kāzu nedēļas nogalē, visticamāk, nevar. Izveidojiet grupu katrai mājai, ceļojumam vai pasākumam, ar līdz 50 cilvēkiem tajā, un katrai grupai ir savi dalībnieki, savas lomas un savi noteikumi. Jūsu panelī tās visas redzamas kopā ar to, kā jums iet katrā, vienā ekrānā. Vairums grupu iestatījumus nekad neaiztiek. Tajās, kas aiztiek, parasti ir kāds pietiekami organizēts, lai tos gribētu."
+workflow:
+  heading: "No tukšas grupas līdz bloķētai grupai"
+  steps:
+    - title: "Uzaiciniet ar saiti vai QR kodu"
+      body: "Atveriet **Uzaicināt citus**, izvēlieties, cik ilgi saitei jādarbojas (15 minūtes, 1 stunda, 1 diena vai 5 dienas), tad nokopējiet saiti vai parādiet QR kodu, ko citi var noskenēt. Varat arī lietotnē uzaicināt cilvēkus, ar kuriem jau dalāties citā grupā."
+      shot: S03
+      shotAlt: "Uzaicinājuma dialogs ar grupas saiti, tās QR kodu un izvēli, cik ilgi saite darbojas"
+    - title: "Ļaujiet apskatīties, pirms pievienojas"
+      body: "Ikviens ar saiti pierakstās vai izveido kontu, redz grupas priekšskatījumu un izvēlas vārdu, ar kādu vēlas tajā figurēt. Tad nospiež **Pievienoties grupai**."
+      shot: S04
+      shotAlt: "Grupas pievienošanās priekšskatījums, ko redz pierakstījies cilvēks pirms pievienošanās"
+    - title: "Apstipriniet, kas pievienojas"
+      body: "Ieslēdziet apstiprināšanu, un cilvēki, kas pievienojas pa saiti, gaida apstiprinājumu, līdz administrators viņus ielaiž. Administratori tos atrod sadaļā **Gaida dalībniekus** cilnē **Drošība un atļaujas** un izvēlas **Apstiprināt** vai **Noraidīt**. Līdz tam gaidošais cilvēks grupā neredz neko."
+      shot: S14
+      shotAlt: "Dalībnieki, kas gaida, kamēr administrators viņus apstiprinās vai noraidīs"
+    - title: "Izvēlieties, kurš ko drīkst mainīt"
+      body: "Izvēlieties **Atvērta sadarbība** vai **Pārvaldīta grupa**, vai iestatiet atļaujas pa vienai. Tad piešķiriet katram cilvēkam lomu: administrators, biedrs vai skatītājs. Atļaujas un lomas var mainīt tikai administratori."
+      shot: S13
+      shotAlt: "Grupas iestatījumu drošības cilne ar abām sagatavēm un pielāgotajām atļaujām"
+    - title: "Bloķējiet, kad viss beidzies"
+      body: "Kad ceļojums beidzies un skaitļi nokārtoti, administrators var ieslēgt **Bloķēt grupu**. Neviens nevar pievienot vai mainīt izdevumus, reģistrēt maksājumus vai labot sarakstus un aptaujas, un baneris par to paziņo. Neviens vairs nevar klusiņām pielikt vēlu taksi. Ja tāds tomēr uzrodas, administrators var grupu atbloķēt."
+      shot: S15
+      shotAlt: "Grupa ar baneri, kas paziņo, ka tā ir bloķēta"
+options:
+  heading: "Administratori, biedri un skatītāji"
+  items:
+    - title: "Administrators"
+      body: "Vada grupu. Administratori apstiprina jaunus dalībniekus, maina lomas un atļaujas, bloķē un atbloķē grupu un to aizver. Tas, kurš izveido grupu, sāk kā tās administrators, un grupa nekad nepaliek bez administratora, jo pēdējo administratoru nevar pazemināt."
+    - title: "Biedrs"
+      body: "Piedalās. Ko biedrs drīkst darīt, atkarīgs no grupas atļaujām. Atvērtas sadarbības grupā tas ir gandrīz viss. Pārvaldītā grupā biedri var mainīt tikai tos izdevumus un sarakstus, ko paši izveidojuši."
+    - title: "Skatītājs"
+      body: "Redz visu un neko nemaina. Skatītājs nevar pievienot vai labot izdevumus un sarakstus, uzaicināt cilvēkus, mainīt iestatījumus vai aiztikt galvenes attēlu. Noder cilvēkam, kurš grib vērot skaitļus un apsola tos neaiztikt."
+sections:
+  - heading: "Atvērta, pārvaldīta vai jūsu pašu noteikumi"
+    body: "Jaunas grupas sākas ar **Atvērta sadarbība**, kur ikviens var uzaicināt cilvēkus, mainīt izdevumus un labot sarakstus, un jauni dalībnieki pievienojas automātiski. **Pārvaldīta grupa** der, kad kādam jābūt pieaugušajam. Septiņas atļaujas var iestatīt arī pa vienai, un, mainot kādu ar roku, grupa pārslēdzas uz pielāgotām atļaujām. Lai ko izvēlētos, pašas atļaujas var mainīt tikai administratori, un katra izmaiņa parādās aktivitāšu plūsmā. Dzīvoklī ar [mājokļa biedriem](page:use-case/housemates) var visu atstāt atvērtu. Liels [pasākums vai svinības](page:use-case/events-and-celebrations) bieži vēlas pārvaldītu grupu, lai kāds būtu atbildīgs par to, kas tiek iekšā. Jauns šajā visā? [Kā tas darbojas](page:how-it-works) iziet visu ceļu no pirmā izdevuma līdz nokārtotiem norēķiniem."
+    items:
+      - "**Kas var rediģēt izdevumus.** Atvērta sadarbība: jebkurš dalībnieks. Pārvaldīta grupa: radītāji un administratori."
+      - "**Kas var dzēst izdevumus.** Atvērta sadarbība: jebkurš dalībnieks. Pārvaldīta grupa: radītāji un administratori."
+      - "**Kas var rediģēt sarakstus.** Atvērta sadarbība: jebkurš dalībnieks. Pārvaldīta grupa: radītāji un administratori."
+      - "**Kas var uzaicināt dalībniekus.** Atvērta sadarbība: jebkurš dalībnieks. Pārvaldīta grupa: tikai administratori."
+      - "**Jauna dalībnieka apstiprinājums.** Atvērta sadarbība: automātiski. Pārvaldīta grupa: nepieciešams administratora apstiprinājums."
+      - "**Kas var mainīt iestatījumus.** Atvērta sadarbība: jebkurš dalībnieks. Pārvaldīta grupa: tikai administratori."
+      - "**Kas var mainīt galvenes attēlu.** Atvērta sadarbība: jebkurš dalībnieks. Pārvaldīta grupa: tikai administratori."
+  - heading: "Jūsu vārds, jūsu foto, jūsu galvenes attēls"
+    body: "Katrai grupai ir savs aktieru sastāvs. Izvēlieties vārdu, ko cilvēki redz katrā grupā (no 2 līdz 50 rakstzīmēm, un tam jābūt unikālam grupā), un to, kuru no savām profila fotogrāfijām tur valkājat. Esiet **Sam** mājā un **Sam (ar mašīnu)** ceļojumā. Ikviens, kam atļauts mainīt iestatījumus, var pārdēvēt grupu un labot tās aprakstu. Galvenes attēlam, JPEG, PNG, GIF vai WebP līdz 10 MB, ir sava atļauja."
+  - heading: "Arhivēt, bloķēt vai aizvērt"
+    body: "Trīs veidi, kā grupu noliekt malā, no vismazāk līdz visnopietnākajam."
+    items:
+      - "**Arhivēšana** paslēpj grupu tikai jūsu paša panelī, nevienam citam. Joprojām varat to atvērt un lietot kā agrāk, un **Atarhivēt grupu** to atgriež."
+      - "**Bloķēšana** iesaldē izmaiņas, līdz administrators to atbloķē. Visi joprojām var lasīt grupu un tās vēsturi."
+      - "**Aizvēršana** ir neatgriezeniska un attiecas uz visiem. To var izdarīt tikai administrators, apstiprinot ar grupas nosaukuma ierakstīšanu, un neviens vairs nevar atvērt grupu."
+  - heading: "Grupas pamešana"
+    body: "Ikviens var pamest grupu, kad ir norēķinājies. Nevar aiziet, kamēr jums kāds ir parādā vai jūs esat parādā kaut vienā valūtā, kamēr ir atvērts jautājums par izdevumu, kurā piedalāties, vai ja esat pēdējais administrators vai vienīgais dalībnieks. [Reģistrējiet maksājumu](page:feature/settle-up), nokārtojiet [jautājumu par izdevumu](page:guide/what-to-do-when-someone-disputes-a-shared-expense) vai padariet kādu citu par administratoru, un tad ejiet. Lai atgrieztos, vajadzēs jaunu uzaicinājumu."
+limits:
+  heading: "Saprātīgās robežās: sīkais drukājums"
+  items:
+    - "Grupā var būt līdz 50 cilvēkiem."
+    - "Atļaujas un lomas var mainīt tikai administratori. Pēdējo administratoru nevar pazemināt."
+    - "Ja izdevumu labošana iestatīta uz **Tikai administratori**, tad arī izdevumus var pievienot tikai administratori."
+    - "Bloķēšana aptur izmaiņas izdevumos, jaunus maksājumus, sarakstus un aptaujas. Visi joprojām var lasīt grupu un tās vēsturi un reaģēt uz maksājumiem."
+    - "Aizvēršana ir neatgriezeniska. Lietotnē nav iespējas aizvērtu grupu atvērt no jauna."
+    - "Jaunas uzaicinājuma saites izveide neatceļ vecās. Katra saite darbojas līdz sava termiņa beigām, tāpēc izvēlieties īsu, ja uztraucaties, kur tā varētu nonākt."
+    - "Lietotnē uzaicināmo cilvēku saraksts ir no jūsu 10 pēdējām aktīvajām grupām. Visiem pārējiem vajadzīga saite, un tas, kurš drīkst uzaicināt, atkarīgs no grupas atļaujām."
+    - "Lai pievienotos, vajadzīgs konts, un cilvēkiem jāapstiprina e-pasts, pirms viņi var kaut ko pievienot."
+useCasesHeading: "Kur noder mazliet kārtības"
+faq:
+  heading: "Jautājumi"
+  items:
+    - q: "Vai skatītājs var pievienot izdevumus?"
+      a: "Nē. Skatītājs redz visu un neko nemaina. Viņš nevar pievienot vai labot izdevumus un sarakstus, uzaicināt cilvēkus vai mainīt iestatījumus."
+    - q: "Vai kāds var pamest grupu, būdams parādā?"
+      a: "Nē. Neviens nevar pamest grupu, kamēr viņam kāds ir parādā vai viņš ir parādā kaut vienā valūtā. Vispirms norēķinieties, tad ejiet."
+    - q: "Kas notiek, kad grupa tiek aizvērta?"
+      a: "Neviens to vairs nevar atvērt. Grupu var aizvērt tikai administrators, kuram jāieraksta grupas nosaukums, lai apstiprinātu, un grupa visiem kļūst nepieejama. Ja gribat tikai apturēt izmaiņas, bloķējiet to. Ja gribat tikai noņemt to no sava paneļa, arhivējiet."
+    - q: "Vai varu atsaukt bloķēšanu?"
+      a: "Jā. Administrators var grupu atbloķēt, un izmaiņas atkal darbojas."
+    - q: "Vai man jāapstiprina cilvēki, pirms viņi pievienojas?"
+      a: "Tikai tad, ja vēlaties. Jaunas grupas sākas ar Atvērtu sadarbību, kur cilvēki, kas izmanto saiti, pievienojas automātiski. Ieslēdziet administratora apstiprinājumu vai izvēlieties Pārvaldītu grupu, un katrs cilvēks gaida, līdz administrators viņu ielaiž."
+    - q: "Cik cilvēku var būt grupā?"
+      a: "Līdz 50."

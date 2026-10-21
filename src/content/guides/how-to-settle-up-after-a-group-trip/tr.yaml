@@ -1,0 +1,113 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Grup gezisinden sonra hesap nasıl kapatılır | Side Badger"
+  description: "Herkes dağılmadan ödeşin. On karışık borç dört ödemeye iner, geldikçe kaydedilir ve kısmi ödeme sorun değil. Beş arkadaş için hesaplarıyla."
+h1: "Grup gezisinden sonra hesap nasıl kapatılır"
+navLabel: "Geziden sonra ödeşmek"
+lead: "Herkes dağılmadan ödeşin. Son harcamayı ekleyin, grubun bakiyelerini açın ve borcunuzu kısa listeden istediğiniz yolla ödeyin. Sonra bakiye tüm grup için temizlensin diye her ödemeyi Side Badger'da kaydedin. Beş arkadaş ve beş harcama için on karışık borç dört ödemeye iner."
+cta:
+  heading: "Fotoğraflar gelmeden defteri kapatın"
+  body: "Ücretsiz bir hesap oluşturun, sonraki gezi için bir grup kurun ve her masrafı olduğu anda ekleyin. Havalimanına vardığınızda kısa ödeme listesi sizi bekliyor olur. Önce [hesaplaşmanın nasıl işlediğini](page:feature/settle-up) mi görmek istiyorsunuz?"
+sections:
+  - heading: "Beş arkadaş, beş harcama, bir gidiş salonu"
+    body: "Mo, Ines, Raf, Tess ve Uma kıyıda bir hafta geçirdi. Mo apartmanı tuttu ve marketten alışveriş yaptı, Ines tekne turunu ödedi, Raf da büyük akşam yemeğini üstlendi. Ines ile Raf trenle gittiği için havalimanı taksisine Tess, Uma ve Mo bindi. Uma'nın kartı evde kalmıştı, o yüzden hiçbir şey ödemedi. Bu beş harcama ve toplam 1.700 € eder; gidiş salonunda kimse kimin önde olduğunu söyleyemiyordu."
+  - heading: "On borç, dört ödeme"
+    body: "Apartman, tekne, akşam yemeği ve market beşe eşit bölünür. Bu kişi başı 200 €, 50 €, 60 € ve 18 € eder, yani Ines ile Raf ikişer 328 € borçlu. Taksiyi üç kişi paylaşır, kişi başı 20 €; Mo, Tess ve Uma 348 € borçlu. Mo 1.090 € ödedi ve 348 € borçlu, bu da ona 742 € alacak bırakır. Diğer herkes borcundan az ödedi. Uma 348 € eksik, Tess 288 €, Ines 78 € ve Raf 28 €; bunlar Mo'nun 742 €'suna tamamlanır. Her kişi çiftini doğrudan ödeştirirseniz on ayrı borç elde edersiniz. Side Badger onun yerine dört ödeme önerir, hepsi Mo'ya."
+  - heading: "Herkes dağılmadan ödeşin"
+    body: "En iyi an son akşam ya da dönüş yolculuğudur; herkes hâlâ aynı yerdeyken ve 28 €'luk bir borçtan söz etmek kolayken. Önce her harcamayı, taksi dahil, ekleyin. Borçlu ya da alacaklıyken kimse gruptan ayrılamaz, yani hesabın bir noktada kapanması zaten gerekiyor."
+    items:
+      - "**Listeye bakın.** Grubu açın ve **Bakiyeler**'e bakın. Varsayılan olarak sizi ilgilendiren borçları görürsünüz. Tüm grubun listesini görmek için **Tümünü göster**'i seçin."
+      - "**İstediğiniz yolla ödeyin.** Banka havalesi, nakit, geçen tatilden kalma bir iyilik borcu. Side Badger parayı taşımaz."
+      - "**Kaydedin.** **Ödeş**'i seçin. **Hızlı ödeşme** altında her düğme önerilen ödemelerinizden biridir ve birini seçmek tutarı doldurur. Banka havalesi gibi bir **Not** ekleyin, **Tarih**'i kontrol edin (gelecekte olamaz) ve **Ödeşmeyi Kaydet**'i seçin."
+      - "**Temizlenişini izleyin.** Bakiye herkes için güncellenir. Son ödeme girildiğinde **Bakiyeler** **Herkes ödeşti!** der."
+  - heading: "Şimdi bir kısmı, gerisi sonra"
+    body: "Uma bu akşam 200 € gönderip kalanı ay sonunda gönderebilir. 200 € kaydeder ve form ona sonrasında Mo'ya hâlâ 148 € borçlu olacağını söyler; bu 348 € eksi 200 €'dur. Kaydedin, 148 € gerisini kaydedene kadar bakiyesinde kalır. Uyarı ters yönde de işler. Yanlışlıkla eklenen bir sıfır 348 €'yu 3.480 €'ya çevirirse, form onun Mo'ya yalnızca 348 € borçlu olduğunu ve kaydetmenin ters yönde bir borç yaratacağını söyler. Kaydetmeden önce sıfırı düzeltin."
+  - heading: "Hataları düzeltmek ve ödemeleri kutlamak"
+    items:
+      - "**Yanlış bir ödeme.** Bir ödemeyi yalnızca onu kaydeden kişi düzenleyebilir. O ya da bir grup yöneticisi silebilir, sonra yeniden kaydedilebilir."
+      - "**Fark edilmeye değer bir ödeme.** Kaydedilen her ödeme tarihi ve notuyla **Ödeşmeler** altında durur; gruptaki herkes görebilir ve tepki verebilir. Uma'nın son 148 €'su geldiğinde Mo **Kutla**'yı seçebilir."
+      - "**Son.** Her bakiye sıfırdayken bir yönetici rakamlar yerinde dursun diye grubu kilitleyebilir."
+  - heading: "Side Badger burada neleri yapmaz"
+    items:
+      - "Parayı asla taşımaz. Ödeme bağlantıları ya da ödeme istekleri yoktur, yani uygulamadaki bir ödeme başka yerde yapılmış bir ödemenin kaydıdır."
+      - "Hatırlatma göndermez. Geciken bir ödemenin peşine düşmek hâlâ size kalmıştır."
+      - "Son tarih koymaz. Uma'nın 148 €'sunun kalanının ne zaman ödeneceği grubun anlaşacağı bir iştir."
+      - "Önerilen ödemeler kısa bir listedir, mümkün olan en kısa listenin sözü değildir. Para birimi başına hesaplanırlar, yani euro ve sterlinle ödenen bir gezi için her birine bir liste çıkar."
+exampleAfter: 2
+example:
+  heading: "Kıyıda beş arkadaş"
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: "Apartman"
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: "Tekne turu"
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: "Büyük akşam yemeği"
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: "Havalimanı taksisi"
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: "Market"
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Ödemeyi kim kaydetmeli, ödeyen mi ödenen mi?"
+      a: "Bir ödemeyi kaydetmek için harcamaları düzenleme izni gerekir ve form **Kim ödedi?** ile **Kim ödeme aldı?** diye sorar. Bir ödemeyi sonradan yalnızca onu kaydeden kişi düzenleyebilir, bu yüzden hızlı ödeşme düğmesini kullanarak ödeyenin yapması genellikle en basitidir."
+    - q: "Gezi iki para biriminde geçtiyse ne olur?"
+      a: "Bakiyeler para birimi başına tutulur, yani euro borcu euro borcu olarak kalır ve harcamalar girilirken çevrilmediyse her para biriminin kendi kısa listesi olur. [Birden fazla para birimi](page:guide/how-to-split-a-trip-paid-in-several-currencies) iki yolu da gösterir."
+    - q: "Gezi sırasında mı ödeşmeliyiz, sonunda mı?"
+      a: "İkisi de olur. Kaydedilen her ödeme bakiyeleri değiştirir, yani gezi sırasında yapılan bir ödeme son listeye sayılır. Sonda olması daha basittir, çünkü [bütün gezi](page:use-case/group-trips) tek yerdedir."

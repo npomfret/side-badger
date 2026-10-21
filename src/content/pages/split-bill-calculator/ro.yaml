@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Calculator de împărțire a notei: cine cui datorează | Side Badger"
+  description: "Cine a plătit, cine datorează, cine plătește cui: rezolvat în secunde. Împarte egal, exact sau procentual. Gratuit, în browser, fără nimic salvat sau trimis."
+h1: "Calculator de împărțire a notei"
+navLabel: "Calculator de împărțire a notei"
+lead: "Scrie cine a plătit pentru ce, iar calculatorul îți spune cine cui datorează, cu o listă scurtă de plăți ca să vă achitați. Rulează în browserul tău, nu salvează nimic și nu mută bani. Dacă grupul vostru vrea ca socoteala să supraviețuiască filei, [împărțirea cheltuielilor](page:feature/split-expenses) și [decontarea](page:feature/settle-up) din Side Badger fac aceleași calcule și le păstrează."
+cta:
+  heading: "Îți plac socotelile? Păstrează-le."
+  body: "Acest calculator uită totul când închizi fila, cam ca cel care jură că a plătit data trecută. Un grup Side Badger păstrează cheltuielile, actualizează soldul fiecăruia și înregistrează plățile. E gratuit, fără reclame și fără limite zilnice."
+sections:
+  - heading: "Cum se face calculul"
+    body: "Pentru fiecare cheltuială, calculatorul stabilește partea fiecărei persoane. O poți împărți egal, pe sume exacte sau procentual, între persoanele pe care le alegi. Soldul fiecărei persoane este apoi ce a plătit minus ce datorează. Un semn plus înseamnă că grupul îi datorează, iar un semn minus înseamnă că persoana datorează grupului. Soldurile dau întotdeauna zero împreună, pentru că tot ce i se datorează cuiva este datorat de altcineva."
+  - heading: "De ce lista de plăți este scurtă"
+    body: "Nimeni nu trebuie să achite fiecare chitanță separat. După ce se știe fiecare sold, calculatorul îl potrivește pe cel care datorează cel mai mult cu cel căruia i se datorează cel mai mult, achită cât se poate printr-o singură plată și merge mai departe pe listă până când toți ajung la zero. Nu are nevoie niciodată de mai multe plăți decât numărul persoanelor cu sold minus una, iar adesea are nevoie de mai puține decât dacă ați achita chitanță cu chitanță. Oferă o listă scurtă de plăți și nu promite că este cea mai scurtă cu putință."
+  - heading: "Ce nu face calculatorul"
+    items:
+      - "**Nu lucrează cu mai multe valute.** Alege una și folosește-o pentru tot calculul. Aplicația ține un sold separat pentru fiecare valută și poate converti o cheltuială la un curs de schimb actual, pe care îl poți schimba."
+      - "**Nu salvează nimic.** Închide fila și cifrele dispar. Ca să le păstrezi, copiază linkul. Acesta conține cifrele tale după #, partea pe care browserul tău nu o trimite niciodată unui server, iar oricine primește linkul le poate citi."
+      - "**Nu mută bani.** Îți spune cine ar trebui să plătească cui. Vă plătiți unii altora cum preferați, apoi înregistrați plata în aplicație dacă grupul vostru ține evidența acolo."
+      - "**Nu alege la întâmplare cine primește restul de un ban.** Când o notă nu se împarte exact, bănuții rămași ajung la primele persoane din listă, ca totalurile să iasă tot corect. În aplicație, restul de un ban ajunge la o persoană aleasă la întâmplare, deci nu este mereu aceeași."
+      - "**Nu depășește limitele.** Calculatorul acceptă de la 2 până la 20 de persoane, iar o cheltuială poate fi de până la 999.999,99, ca în aplicație."
+exampleAfter: 2
+example:
+  heading: "Un weekend lung, patru prieteni"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "cabana"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "alimentele"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "taxiul"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "pub-ul"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: "Întrebări"
+  items:
+    - q: "Este calculatorul gratuit?"
+      a: "Da. Gratuit. Fără reclame. Fără limite zilnice. Nici cont nu îți trebuie."
+    - q: "Salvează ce scriu?"
+      a: "Nu. Nimic nu se salvează și nimic nu se trimite nicăieri. Ca să-ți păstrezi cifrele, folosește Copiază linkul și salvează linkul undeva."
+    - q: "Cine poate vedea linkul pe care îl copiez?"
+      a: "Oricine îl are. Cifrele se află chiar în link, după #, așa că dă-l doar celor care ar trebui să le vadă."
+    - q: "Mută bani?"
+      a: "Nu. Calculează cine ar trebui să plătească cui, iar voi vă plătiți unii altora cum preferați. Nici Side Badger nu se atinge de banii tăi. Vezi [decontarea](page:feature/settle-up)."
+    - q: "Pot împărți o excursie plătită în două valute?"
+      a: "Nu aici, pentru că un calcul are o singură valută. Într-un grup, fiecare valută își ține propriul sold. Vezi [mai multe valute](page:feature/multiple-currencies)."
+    - q: "Ce se întâmplă dacă sumele nu dau totalul?"
+      a: "Calculatorul spune asta sub cheltuială și nu arată niciun rezultat până când se potrivesc. Sumele exacte trebuie să dea împreună totalul, iar procentele trebuie să dea 100."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

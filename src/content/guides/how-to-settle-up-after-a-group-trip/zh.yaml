@@ -1,0 +1,113 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: 团体旅行结束后怎么结清 | Side Badger
+  description: 趁大家还没各奔东西就结清。十笔纠缠的债务变成四笔付款，随到随记，先付一部分也行。以五个朋友为例算给你看。
+h1: 团体旅行结束后怎么结清
+navLabel: 旅行后结清
+lead: 趁大家还没各奔东西就结清。添加最后一笔支出，打开群组的余额，按那份简短清单想怎么付就怎么付。然后在 Side Badger 里记录每笔付款，让余额对整个群组清零。五个朋友、五笔支出，十笔纠缠的债务只需四笔付款。
+cta:
+  heading: 在照片发出来之前把账结了
+  body: 创建免费账户，为下一趟旅行建一个群组，每笔花销发生时就添加。等你到了机场，那份简短的付款清单已经在等你。想先看看[结算是怎么回事](page:feature/settle-up)吗？
+sections:
+  - heading: 五个朋友，五笔支出，一个候机厅
+    body: Mo、Ines、Raf、Tess 和 Uma 在海边玩了一周。Mo 订了公寓还买了杂货，Ines 付了乘船游的钱，Raf 买了那顿大餐。Tess 和 Uma、Mo 一起打车去机场，因为 Ines 和 Raf 坐火车。Uma 的卡留在家里，所以她什么也没付。一共五笔支出，总计 €1,700，而在候机厅里没人说得清谁多谁少。
+  - heading: 十笔债务，四笔付款
+    body: 公寓、乘船游、大餐和杂货五人平均分摊。每人分别是 €200、€50、€60 和 €18，所以 Ines 和 Raf 各欠 €328。出租车三人共乘，每人 €20，所以 Mo、Tess 和 Uma 欠 €348。Mo 付了 €1,090，欠 €348，所以应收 €742。其他人付的都比欠的少。Uma 差 €348，Tess 差 €288，Ines 差 €78，Raf 差 €28，加起来正好是 Mo 的 €742。如果每两个人直接互相结清，就是十笔各自独立的债务。Side Badger 改为建议四笔付款，全部付给 Mo。
+  - heading: 趁大家还没散就结清
+    body: 最好的时机是最后一个晚上或回家的路上，大家还在一起，提一句 €28 的债务也不难开口。先把所有支出都加进去，出租车也算。只要还欠钱或还有钱没收回，谁都不能退出群组，所以这笔账总归要有个了结。
+    items:
+      - "**查看清单。** 打开群组，看**余额**。默认你看到的是与你相关的债务。选择**显示全部**可以看整个群组的清单。"
+      - "**想怎么付就怎么付。** 银行转账、现金，或者上次度假欠下的人情。Side Badger 不转移资金。"
+      - "**记录下来。** 选择**结算**。在**快速结算**下，每个按钮都是你的一笔建议付款，选择其中一个就会填好金额。添加一条**备注**，比如银行转账，核对**日期**（不能在未来），然后选择**记录结算**。"
+      - "**看它清零。** 余额会为所有人更新。最后一笔付款记入后，**余额**会显示**全部结清！**"
+  - heading: 先付一部分，剩下的以后再付
+    body: Uma 今晚可以先转 €200，剩下的月底再付。她记录 €200，表单会提醒她之后仍欠 Mo €148，也就是 €348 减去 €200。保存后，这 €148 会一直留在她的余额上，直到她记录剩下的部分。这个提醒反过来也管用。如果手滑多打了个零，把 €348 变成了 €3,480，表单会告诉她只欠 Mo €348，保存会造成方向相反的债务。保存之前先把那个零改掉。
+  - heading: 纠正错误，为付款喝彩
+    items:
+      - "**记错的付款。** 只有记录付款的人才能编辑它。他们或群组管理员可以删除它，然后重新记录。"
+      - "**值得留意的付款。** 每笔记录下来的付款都带着日期和备注放在**结算**下，群组里的每个人都能看到并作出回应。Uma 最后的 €148 到账时，Mo 可以选择**庆祝**。"
+      - "**收尾。** 所有余额都归零后，管理员可以锁定群组，让数字不再变动。"
+  - heading: Side Badger 在这件事上不做什么
+    items:
+      - 它从不转移资金。它没有付款链接，也没有收款请求，所以应用里的一笔付款只是对在别处完成的付款的记录。
+      - 它不发送提醒。追着迟付的人要钱，仍然是你自己的事。
+      - 它不设截止日期。Uma 剩下的 €148 何时到期，由群组自己约定。
+      - 建议的付款是一份简短清单，而不是承诺它就是最短的那一份。它们按货币分别计算，所以用欧元和英镑付款的旅行，每种货币各得一份清单。
+exampleAfter: 2
+example:
+  heading: 海边的五个朋友
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: 公寓
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: 乘船游
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: 大餐
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: 机场出租车
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: 杂货
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: 常见问题
+  items:
+    - q: 谁应该记录付款，付钱的人还是收钱的人？
+      a: 记录付款需要编辑支出的权限，表单会问**谁付的钱？**和**谁收到了付款？**只有记录它的人以后才能编辑它，所以通常由付款的人用快速结算按钮来记最简单。
+    - q: 如果这趟旅行用了两种货币呢？
+      a: 余额按货币分别记录，所以欧元的债务仍是欧元的债务，每种货币各有自己的简短清单，除非支出在录入时做了换算。[多种货币](page:guide/how-to-split-a-trip-paid-in-several-currencies)展示了两种办法。
+    - q: 应该在旅行中结清，还是结束时再结？
+      a: 都行。每笔记录下来的付款都会改变余额，所以旅行中途的付款会计入最终清单。结束时更简单，因为[整趟旅行](page:use-case/group-trips)都在一个地方。
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name

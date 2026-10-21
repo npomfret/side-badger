@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Riarachán grúpa agus ceadanna do chostais chomhroinnte | Side Badger"
+  description: "Tabhair cuireadh le nasc nó le cód QR, ceadaigh cé a thagann isteach, cruthaigh breathnóirí, socraigh ceadanna agus glasáil an grúpa. Do ghrúpa, do rialacha, laistigh de réasún."
+h1: "Riarachán grúpa agus ceadanna: do rialacha, laistigh de réasún"
+navLabel: "Grúpaí agus ceadanna"
+lead: "Tá cisteoir de dhíth ar roinnt grúpaí, agus tá socrú ag Side Badger dó sin. Tabhair cuireadh do dhaoine le nasc nó le cód QR, socraigh cé a ligtear isteach, agus roghnaigh cé a fhéadfaidh na huimhreacha a athrú. Is féidir le grúpa beag cairde neamhaird a dhéanamh air go léir, mar go dtosaíonn grúpaí nua go hiomlán oscailte."
+cta:
+  heading: "Réidh le grúpa néata a reáchtáil?"
+  body: "Cruthaigh cuntas, tosaigh grúpa agus seol an nasc cuiridh. Fág oscailte é, nó teann na rialacha nuair a fhásann an grúpa nó nuair a theastaíonn níos mó cúraim uaidh."
+problem:
+  heading: "Caithfidh duine éigin na huimhreacha a choinneáil néata"
+  body: "Is féidir le ceathrar comhchónaitheoirí brath ar iontaoibh. Is dócha nach féidir le tríocha aoi ag deireadh seachtaine bainise é sin a dhéanamh. Déan grúpa do gach teach, turas nó imeacht, le suas le 50 duine ann, agus coinníonn gach grúpa a bhaill féin, a róil féin agus a rialacha féin. Liostaíonn do phainéal iad go léir ar aon scáileán amháin, agus an áit a bhfuil tú i ngach ceann acu. Ní bhaineann formhór na ngrúpaí leis na socruithe riamh. Sna grúpaí a bhaineann leo, is gnách go mbíonn duine sách eagraithe chun iad a iarraidh."
+workflow:
+  heading: "Ó ghrúpa folamh go grúpa faoi ghlas"
+  steps:
+    - title: "Tabhair cuireadh le nasc nó le cód QR"
+      body: "Oscail **Tabhair Cuireadh do Dhaoine Eile**, roghnaigh cé chomh fada is a mhaireann an nasc (15 nóiméad, 1 uair an chloig, 1 lá nó 5 lá), ansin cóipeáil an nasc nó taispeáin an cód QR le scanadh. Is féidir leat cuireadh a thabhairt freisin, ón taobh istigh den aip, do dhaoine a bhfuil grúpa eile á roinnt agat leo cheana."
+      shot: S03
+      shotAlt: "An dialóg chuiridh le nasc grúpa, a chód QR agus an rogha cé chomh fada is a mhaireann an nasc"
+    - title: "Lig dóibh breathnú sula dtagann siad isteach"
+      body: "Logálann daoine a bhfuil an nasc acu isteach nó cruthaíonn siad cuntas, feiceann siad réamhamharc den ghrúpa agus roghnaíonn siad an t-ainm is mian leo a úsáid ann. Ansin brúnn siad **Tar isteach sa Ghrúpa**."
+      shot: S04
+      shotAlt: "An réamhamharc teacht isteach ar ghrúpa, a thaispeántar do dhuine atá logáilte isteach sula dtagann an duine isteach"
+    - title: "Ceadaigh cé a thagann isteach"
+      body: "Cas ar cheadú agus fanann daoine a úsáideann an nasc mar bhaill ar feitheamh go dtí go ligeann riarthóir isteach iad. Faigheann riarthóirí iad faoi **Baill ar feitheamh** in **Slándáil & Ceadanna**, agus roghnaíonn siad **Ceadaigh** nó **Diúltaigh**. Go dtí sin, ní fheiceann duine ar feitheamh aon rud sa ghrúpa."
+      shot: S14
+      shotAlt: "Baill ar feitheamh ag fanacht go gceadóidh riarthóir iad nó go ndiúltóidh sé dóibh"
+    - title: "Roghnaigh cé a fhéadfaidh cad a athrú"
+      body: "Roghnaigh **Comhoibriú oscailte** nó **Grúpa bainistithe**, nó socraigh na ceadanna ceann ar cheann. Ansin tabhair ról do gach duine: riarthóir, ball nó breathnóir. Ní féidir ach le riarthóirí ceadanna agus róil a athrú."
+      shot: S13
+      shotAlt: "Cluaisín slándála socruithe an ghrúpa leis an dá réamhshocrú agus na ceadanna custaim"
+    - title: "Glasáil é nuair a bhíonn sé thart"
+      body: "Nuair a bhíonn an turas thart agus na huimhreacha socraithe, is féidir le riarthóir **Cuir glas ar an nGrúpa** a chasadh air. Ní féidir le haon duine costais a chur leis ná a athrú, íocaíochtaí a thaifeadadh ná liostaí agus vótaíochtaí a chur in eagar, agus deir fógra sa ghrúpa é. Ní féidir le haon duine tacsaí déanach a chur leis go ciúin. Má thagann ceann chun solais, is féidir le riarthóir an grúpa a dhíghlasáil."
+      shot: S15
+      shotAlt: "Grúpa ag taispeáint an fhógra a deir go bhfuil sé faoi ghlas"
+options:
+  heading: "Riarthóirí, baill agus breathnóirí"
+  items:
+    - title: "Riarthóir"
+      body: "Reáchtálann sé an grúpa. Ceadaíonn riarthóirí baill nua, athraíonn siad róil agus ceadanna, glasálann agus díghlasálann siad an grúpa, agus dúnann siad é. Is riarthóir é an té a chruthaíonn grúpa ar dtús, agus ní fhágtar grúpa gan riarthóir riamh, mar ní féidir an riarthóir deireanach a ísliú i gcéim."
+    - title: "Ball"
+      body: "Glacann sé páirt. Braitheann cad a fhéadfaidh ball a dhéanamh ar cheadanna an ghrúpa. I ngrúpa Comhoibriú oscailte is beagnach gach rud é sin. I ngrúpa bainistithe, ní féidir le baill ach na costais agus na liostaí a chruthaigh siad féin a athrú."
+    - title: "Breathnóir"
+      body: "Feiceann sé gach rud agus ní athraíonn sé aon rud. Ní féidir le breathnóir costais ná liostaí a chur leis ná a chur in eagar, cuireadh a thabhairt do dhaoine, socruithe a athrú ná lámh a leagan ar an íomhá cheanntáisc. Úsáideach don duine ar mhaith leis súil a choinneáil ar na huimhreacha agus a thugann gealltanas gan bheith ag tinceáil leo."
+sections:
+  - heading: "Oscailte, bainistithe nó do rialacha féin"
+    body: "Tosaíonn grúpaí nua ar **Comhoibriú oscailte**, áit ar féidir le gach duine cuireadh a thabhairt do dhaoine, costais a athrú agus liostaí a chur in eagar, agus áit a gcuirtear baill nua leis go huathoibríoch. Is é **Grúpa bainistithe** an rogha nuair a theastaíonn go mbeadh duine amháin ina dhuine fásta. Is féidir leat na seacht gceadanna a shocrú ceann ar cheann freisin, agus má athraíonn tú ceann de láimh aistrítear an grúpa go ceadanna custaim. Is cuma cad a roghnaíonn tú, ní féidir ach le riarthóirí na ceadanna féin a athrú, agus taispeánann gach athrú sa sruth gníomhaíochta. Is féidir le hárasán [comhchónaitheoirí](page:use-case/housemates) gach rud a fhágáil oscailte. Is minic gur mian le [himeacht nó ceiliúradh](page:use-case/events-and-celebrations) mór an rogha Bainistithe, ionas go mbíonn duine i gceannas ar cé a thagann isteach. Nua ar seo go léir? Treoraíonn [conas a oibríonn sé](page:how-it-works) thú tríd an turas ar fad, ón gcéad chostas go dtí socraithe suas."
+    items:
+      - "**Cé a fhéadfaidh costais a chur in eagar?** Comhoibriú oscailte: ball ar bith. Grúpa bainistithe: cruthaitheoirí agus riarthóirí."
+      - "**Cé a fhéadfaidh costais a scriosadh?** Comhoibriú oscailte: ball ar bith. Grúpa bainistithe: cruthaitheoirí agus riarthóirí."
+      - "**Cé a fhéadfaidh liostaí a chur in eagar?** Comhoibriú oscailte: ball ar bith. Grúpa bainistithe: cruthaitheoirí agus riarthóirí."
+      - "**Cé a fhéadfaidh cuireadh a thabhairt do bhaill?** Comhoibriú oscailte: ball ar bith. Grúpa bainistithe: riarthóirí amháin."
+      - "**Ceadú ball nua.** Comhoibriú oscailte: uathoibríoch. Grúpa bainistithe: ceadú riarthóra ag teastáil."
+      - "**Cé a fhéadfaidh socruithe a athrú?** Comhoibriú oscailte: ball ar bith. Grúpa bainistithe: riarthóirí amháin."
+      - "**Cé a fhéadfaidh an íomhá ceanntáisc a athrú?** Comhoibriú oscailte: ball ar bith. Grúpa bainistithe: riarthóirí amháin."
+  - heading: "D'ainm, do ghrianghraf, d'íomhá cheanntáisc"
+    body: "Tá a liosta aisteoirí féin ag gach grúpa. Roghnaigh an t-ainm a fheiceann daoine i ngach grúpa (2 go 50 carachtar, agus uathúil laistigh den ghrúpa) agus cé acu de do ghrianghraif phróifíle a chaitheann tú ann. Bí i do **Sam** sa teach agus i do **Sam (leis an gcarr)** ar an turas. Is féidir le duine ar bith a bhfuil cead aige socruithe a athrú an grúpa a athainmniú agus a chur síos a chur in eagar. Tá cead dá chuid féin ag an íomhá cheanntáisc (JPEG, PNG, GIF nó WebP suas le 10 MB)."
+  - heading: "Cuir i dtaisce, glasáil nó dún"
+    body: "Trí bhealach chun grúpa a chur i leataobh, ón gceann is éadroime go dtí an ceann is tromchúisí."
+    items:
+      - "Folaíonn **Cuir i dtaisce** an grúpa ó do phainéal féin amháin, ní ó phainéal aon duine eile. Is féidir leat é a oscailt agus a úsáid fós mar a rinne tú cheana, agus tugann **Bain an Grúpa as an dTaisce** ar ais é."
+      - "Reonn **Glasáil** na hathruithe go dtí go ndíghlasálann riarthóir é. Is féidir le gach duine an grúpa agus a stair a léamh fós."
+      - "Tá **Dún** buan, agus do gach duine. Ní féidir ach le riarthóir é a dhéanamh, trí ainm an ghrúpa a chlóscríobh le deimhniú, agus ní féidir le haon duine an grúpa a oscailt arís."
+  - heading: "Grúpa a fhágáil"
+    body: "Is féidir le duine ar bith imeacht nuair atá sé socraithe suas. Ní féidir leat imeacht fad is atá airgead dlite agat nó dlite duit in aon airgeadra amháin fiú, fad is atá ceist oscailte faoi chostas ann a bhaineann leat, nó más tú an riarthóir deireanach nó an t-aon bhall. [Taifead an íocaíocht](page:feature/settle-up), réitigh [an cheist faoin gcostas](page:guide/what-to-do-when-someone-disputes-a-shared-expense), nó déan riarthóir de dhuine eile, agus ansin imigh. Chun teacht ar ais, beidh cuireadh nua de dhíth ort."
+limits:
+  heading: "Laistigh de réasún: an cló beag"
+  items:
+    - "Is féidir suas le 50 duine a bheith i ngrúpa."
+    - "Ní féidir ach le riarthóirí ceadanna agus róil a athrú. Ní féidir an riarthóir deireanach a ísliú i gcéim."
+    - "Má shocraíonn tú cur costas in eagar ar **Riarthóirí amháin**, ciallaíonn sé sin freisin nach féidir ach le riarthóirí costais a chur leis."
+    - "Cuireann glas stop le hathruithe ar chostais, ar íocaíochtaí nua, ar liostaí agus ar vótaíochtaí. Is féidir le gach duine an grúpa agus a stair a léamh fós, agus imoibriú ar íocaíochtaí."
+    - "Tá dúnadh buan. Níl aon bhealach san aip chun grúpa dúnta a athoscailt."
+    - "Ní chuireann nasc cuiridh nua na cinn eile ar ceal. Maireann gach nasc go dtí a dháta éaga féin, mar sin roghnaigh ceann gearr nuair a bhíonn imní ort faoi cá bhféadfadh sé dul."
+    - "Liostaíonn cuirí san aip daoine as do 10 ngrúpa gníomhacha is déanaí. Teastaíonn an nasc ó dhaoine eile ar bith, agus braitheann cé a fhéadfaidh cuireadh a thabhairt ar cheadanna an ghrúpa."
+    - "Teastaíonn cuntas chun dul isteach, agus caithfidh daoine a ríomhphost a fhíorú sula bhféadfaidh siad aon rud a chur leis."
+useCasesHeading: "Cá gcuidíonn beagán eagair"
+faq:
+  heading: "Ceisteanna"
+  items:
+    - q: "An féidir le breathnóir costais a chur leis?"
+      a: "Ní féidir. Feiceann breathnóir gach rud agus ní athraíonn sé aon rud. Ní féidir leis costais ná liostaí a chur leis ná a chur in eagar, cuireadh a thabhairt do dhaoine ná socruithe a athrú."
+    - q: "An féidir le duine imeacht fad is atá airgead dlite aige?"
+      a: "Ní féidir. Ní féidir le haon duine grúpa a fhágáil fad is atá airgead dlite aige nó dlite dó in aon airgeadra amháin fiú. Socraigh suas ar dtús, agus ansin imigh."
+    - q: "Cad a tharlaíonn nuair a dhúntar grúpa?"
+      a: "Ní féidir le haon duine é a oscailt arís. Ní féidir ach le riarthóir grúpa a dhúnadh, caithfidh sé ainm an ghrúpa a chlóscríobh le deimhniú, agus ní bhíonn an grúpa ar fáil do dhuine ar bith ina dhiaidh sin. Mura bhfuil uait ach stop a chur le hathruithe, glasáil é. Mura bhfuil uait ach é a bhaint de do phainéal féin, cuir i dtaisce é."
+    - q: "An féidir liom glas a chealú?"
+      a: "Is féidir. Is féidir le riarthóir an grúpa a dhíghlasáil, agus oibríonn athruithe arís."
+    - q: "An gcaithfidh mé daoine a cheadú sula dtagann siad isteach?"
+      a: "Ní gá, ach más mian leat. Tosaíonn grúpaí nua ar Comhoibriú oscailte, áit a dtagann daoine a úsáideann an nasc isteach go huathoibríoch. Cas ar cheadú riarthóra, nó roghnaigh Grúpa bainistithe, agus fanann gach duine go dtí go ligeann riarthóir isteach é."
+    - q: "Cé mhéad duine a fhéadfaidh a bheith i ngrúpa?"
+      a: "Suas le 50."

@@ -1,0 +1,113 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+meta:
+  title: "How to settle up after group trip | Side Badger"
+  description: "Settle before everybody scatter. Ten tangled debts become four payments, wey you record as dem land, and part payment fine. Sums dey show for five friends."
+h1: "How to settle up after group trip"
+navLabel: "Settle up after trip"
+lead: "Settle before everybody scatter. Add di last expense, open di group balances and pay wetin you owe from di short list, anyhow you like. Then record each payment for Side Badger so di balance go clear for di whole group. For five friends and five expenses, ten tangled debts come down to four payments."
+cta:
+  heading: "Close di books before di photos land"
+  body: "Create free account, start group for di next trip and add each cost as e dey happen. Di short list of payments go dey wait by di time you reach di airport. You wan see [how settling up dey work](page:feature/settle-up) first?"
+sections:
+  - heading: "Five friends, five expenses, one airport lounge"
+    body: "Mo, Ines, Raf, Tess and Uma spend one week for di coast. Mo book di apartment and buy di groceries, Ines pay for di boat trip and Raf cover di big dinner. Tess take di airport taxi with Uma and Mo, because Ines and Raf take train. Uma card stay for house, so Uma no pay for anything. Dat na five expenses and €1,700 altogether, and for di departure lounge nobody fit talk who dey ahead."
+  - heading: "Ten debts, but four payments"
+    body: "Dem split di apartment, di boat, di dinner and di groceries equal five ways. Dat na €200, €50, €60 and €18 each, so Ines and Raf owe €328 each. Three people share di taxi for €20 each, so Mo, Tess and Uma owe €348. Mo pay €1,090 and e owe €348, wey leave dem owe am €742. Everybody else pay less than wetin dem owe. Uma short by €348, Tess €288, Ines €78 and Raf €28, and dem add up to Mo €742. If you settle each pair of people directly, you go get ten separate debts. Side Badger suggest four payments instead, all to Mo."
+  - heading: "Settle before everybody scatter"
+    body: "Di best moment na di last evening or di ride go house, while everybody still dey one place and €28 debt easy to mention. Add every expense first, taxi included. Nobody fit leave group while dem owe or dem owe dem money, so di count must close at some point anyway."
+    items:
+      - "**Check di list.** Open di group and look **Balansis**. By default you go see di debts wey involve you. Choose **Sho all** to see di whole group list."
+      - "**Pay anyhow you like.** Bank transfer, cash, favour wey dem owe from last holiday. Side Badger no dey move di money."
+      - "**Record am.** Choose **Settle up**. Under **Kwik settul** each button na one of your suggested payments, and when you choose one e go fill in di amount. Add **Not** like bank transfer, check di **Det** (e no fit dey for future) and choose **Rekod Settlement**."
+      - "**Watch am clear.** Di balance go update for everybody. When di last payment enter, **Balansis** go read **Everyone don pay!**"
+  - heading: "Pay part now, di rest later"
+    body: "Uma fit send €200 tonight and di rest for di end of di month. Uma record €200, and di form go warn am say e go still owe Mo €148 afterwards, wey be €348 minus €200. Save am and di €148 go stay for Uma balance until e record di rest. Di warning dey work di other way too. If stray zero turn €348 to €3,480, di form go talk say Uma owe Mo only €348 and say if you save am e go create debt for opposite direction. Fix di zero before you save."
+  - heading: "Fix mistakes, and celebrate payments"
+    items:
+      - "**Wrong payment.** Na only di person wey record payment fit edit am. Dem or group admin fit delete am, and then dem fit record am again."
+      - "**Payment wey worth noticing.** Every payment wey dem record dey sit under **Payments** with im date and note, where everybody for di group fit see am and react. Mo fit choose **Selebret** when Uma last €148 land."
+      - "**Di end.** With every balance for zero, admin fit lock di group so di numbers go stay put."
+  - heading: "Wetin Side Badger no dey do here"
+    items:
+      - "E no dey ever move money. E no get payment links or payment requests, so payment for di app na record of one wey dem make somewhere else."
+      - "E no dey send reminders. To chase late payment still na your own work."
+      - "E no dey set deadlines. When di rest of Uma €148 due na for di group to agree."
+      - "Di suggested payments na short list, no be promise say na di shortest possible one. Dem dey work am out per currency, so trip wey dem pay for euros and pounds go get list for each."
+exampleAfter: 2
+example:
+  heading: "Five friends for di coast"
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: "Di apartment"
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: "Di boat trip"
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: "Di big dinner"
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: "Di airport taxi"
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: "Chop shopping"
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: "Question dem"
+  items:
+    - q: "Who suppose record payment, di person wey pay or di person wey collect?"
+      a: "To record payment need permission to edit expenses, and di form dey ask **Who pay?** and **Who collect money?** Na only di person wey record am fit edit am later, so e usually simple pass if di payer do am, with di Kwik settul button."
+    - q: "Wetin if di trip use two currencies?"
+      a: "Balances dey kept per currency, so euro debt go stay euro debt and each currency go get im own short list, unless dem convert expenses when dem enter dem. [Several currencies](page:guide/how-to-split-a-trip-paid-in-several-currencies) show both ways."
+    - q: "We suppose settle during di trip or for di end?"
+      a: "Any one fit work. Every payment wey dem record dey change di balances, so payment wey dem make for middle of di trip go count towards di final list. For di end simple pass, because [di whole trip](page:use-case/group-trips) dey one place."

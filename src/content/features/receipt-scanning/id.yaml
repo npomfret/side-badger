@@ -1,0 +1,78 @@
+translatedFrom: "42f5cf35"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.read-by-googles-ai
+  - receipt-attachments.keep-the-receipt
+meta:
+  title: "Pindai struk untuk menambah pengeluaran | Side Badger"
+  description: "Biarkan si badger membaca struknya. Ia mengisi total, tanggal, dan tempat untuk Anda periksa, tanpa kredit pindai. Layanan AI Google yang membaca gambarnya."
+h1: "Pindai struk, periksa rinciannya, bagi"
+navLabel: "Pemindaian struk"
+lead: "Biarkan si badger membaca struknya, lalu periksa PR-nya. Tambahkan foto ke pengeluaran baru dan Side Badger mengisi total, tanggal, dan tempat untuk Anda periksa. Lalu Anda [membaginya](page:feature/split-expenses) seperti pengeluaran lain. Pemindaian gratis, tanpa kredit pindai. Ia mengisi satu pengeluaran dan tidak membagi tagihan per item. Gambar struk dibaca oleh layanan AI Google."
+cta:
+  heading: "Foto. Periksa. Bagi."
+  body: "Buat akun gratis, mulai grup, dan tambahkan pengeluaran dengan foto struk. Lihat apa yang diisinya, ubah yang keliru, dan simpan kalau sudah puas."
+problem:
+  heading: "Tak ada yang mau mengetik struk di antrean taksi"
+  body: "Perjalanan dan malam keluar yang heboh datang dengan kertas. Makan malam, taksi, putaran minum yang berubah jadi enam. Mengetik satu per satu di ponsel dengan jempol kedinginan dan antrean di belakang Anda adalah cara pengeluaran terlupakan. Jadi Side Badger akan membaca struknya untuk Anda. Ia membuat draf pertama dan Anda yang memeriksa. Cocok untuk [perjalanan grup](page:use-case/group-trips) dan [acara dan perayaan](page:use-case/events-and-celebrations), tempat struk menumpuk lebih cepat daripada yang mau diurus siapa pun."
+workflow:
+  heading: "Dari foto ke pengeluaran dalam tiga langkah"
+  steps:
+    - title: "Tambahkan struk ke pengeluaran baru"
+      body: "Mulai pengeluaran baru dan ketuk **Pindai tanda terima**, atau pakai aksi cepat **Pindai tanda terima** di dasbor Anda. Ambil foto atau pilih yang sudah ada. **Tambah struk atau lampiran** di formulir juga bisa."
+    - title: "Biarkan ia membaca struknya"
+      body: "Formulir menampilkan **Menganalisis tanda terima...** selagi AI Side Badger membaca gambarnya. Lalu ia mengisi apa yang ditemukannya, seperti deskripsi, total, mata uang, tanggal, waktu, dan tempat. Apa pun yang sudah Anda ketik dibiarkan apa adanya."
+      shot: S09
+      shotAlt: "Formulir pengeluaran baru yang menampilkan Menganalisis tanda terima..., lalu formulir yang sama dengan rincian yang sudah terisi"
+    - title: "Periksa, lalu bagi"
+      body: "Bandingkan formulir dengan kertasnya. Perbaiki yang keliru, tentukan siapa yang membayar dan siapa yang ikut menanggung biaya, pilih cara membaginya, lalu simpan. Pengeluaran itu belum ada sampai Anda menyimpannya. [Bagi pengeluaran](page:feature/split-expenses) membahas cara membaginya."
+options:
+  heading: "Opsi"
+  items: []
+sections:
+  - heading: "Apa yang diisinya"
+    body: "Tambahkan gambar struk ke pengeluaran baru dan kolom-kolom ini bisa terisi. Siapa yang membayar, siapa yang ikut menanggung biaya, dan cara membaginya tetap urusan Anda."
+    items:
+      - "Sebuah **deskripsi** untuk pengeluaran itu."
+      - "**Total**."
+      - "**Mata uang**, jika grup Anda mengizinkannya."
+      - "**Tanggal** dan **waktu**."
+      - "**Tempat**."
+      - "Salinan teks struk di **catatan**, untuk saat struk kertasnya memudar atau ikut tercuci."
+  - heading: "Apa yang tetap Anda periksa"
+    body: "Semuanya. Anggap yang diisinya sebagai draf. Periksa total dengan kertasnya, lalu mata uang, tanggal, dan tempat. Foto buram dan kertas kusut bisa mengecoh pembaca mana pun, dan kami tidak berjanji ia benar untuk setiap struk, jadi tolong lihat dulu sebelum menyimpan. Jika ada yang keliru, ketik ulang. Jika struknya dalam yen dan grup melunasi dalam pound, [beberapa mata uang](page:feature/multiple-currencies) menjelaskan apa yang terjadi berikutnya."
+  - heading: "Simpan struk bersama pengeluaran"
+    body: "Dipindai atau tidak, sebuah struk bisa tetap bersama pengeluarannya. Lampirkan foto atau PDF, hingga tiga per pengeluaran dan hingga 10 MB masing-masing. Anggota grup melihatnya di pengeluaran. Gambar tampil sebagai gambar mini yang terbuka di penampil, dan PDF terbuka sebagai tautan. Foto yang Anda pindai ikut terlampir, kecuali Anda menghapusnya sebelum menyimpan. Saat seseorang bertanya berapa sebenarnya harga makan malam itu, buktinya ada di sana."
+  - heading: "Ke mana struk Anda pergi"
+    body: "Gambar struk dibaca oleh layanan AI Google. Untuk mengisi formulir, gambar dibaca oleh Google Vertex AI (Gemini) di multi-region AS milik Google. Tambahkan gambar ke pengeluaran baru dan gambar itu dibaca. PDF, atau foto yang ditambahkan ke pengeluaran yang sudah ada, disimpan tanpa dibaca. Struk terlampir terlihat oleh anggota grup, jadi jika sebuah struk menampilkan sesuatu yang tidak ingin Anda bagikan, lewati fotonya dan ketik pengeluaran itu secara manual."
+limits:
+  heading: "Batasan"
+  items:
+    - "Hanya gambar. JPEG, PNG, dan WebP, serta HEIC setelah dikonversi. PDF bisa dilampirkan ke pengeluaran tetapi tidak dibaca."
+    - "Pemindaian hanya untuk pengeluaran baru. Pada pengeluaran yang sudah ada Anda bisa melampirkan struk, tetapi tidak ada yang dibaca."
+    - "Ia hanya mengisi kolom yang belum Anda sentuh, dan mata uangnya hanya jika grup Anda mengizinkan."
+    - "Ia tidak membagi per item atau menetapkan item baris kepada orang. Ia mengisi satu pengeluaran dan Anda membaginya seperti biasa."
+    - "Tidak ada janji bahwa yang diisinya benar, atau bahwa pemindaian akan berhasil setiap kali. Periksa sebelum menyimpan, dan tambahkan pengeluaran secara manual jika pemindaian gagal atau tidak tersedia."
+    - "Satu pengeluaran memuat hingga tiga lampiran, masing-masing hingga 10 MB, berupa JPEG, PNG, WebP, HEIC, atau PDF."
+    - "Gambar struk dibaca oleh Google Vertex AI (Gemini) di multi-region AS milik Google, dan struk terlampir terlihat oleh anggota grup."
+useCasesHeading: "Di mana struk menumpuk"
+faq:
+  heading: "Pertanyaan"
+  items:
+    - q: "Bisakah ia membagi struk per item?"
+      a: "Tidak. Ia mengisi pengeluaran, termasuk totalnya, dan Anda membaginya secara merata, berdasarkan jumlah pasti, atau persentase. Untuk tagihan yang pesanan tiap orangnya berbeda, masukkan apa yang diutang tiap orang sebagai jumlah pasti. [Bagi pengeluaran](page:feature/split-expenses) punya rinciannya."
+    - q: "Bisakah ia membaca PDF?"
+      a: "Tidak. Anda bisa melampirkan PDF ke pengeluaran agar ikut bersama angkanya, tetapi hanya gambar yang dibaca."
+    - q: "Apakah ada batas pemindaian?"
+      a: "Tidak ada kredit pindai yang bisa habis, dan pemindaian gratis. Berkas memang punya batas, yaitu hingga tiga lampiran per pengeluaran dan masing-masing 10 MB. [Apa saja yang gratis](page:pricing) membahas sisanya."
+    - q: "Siapa yang bisa melihat struk saya?"
+      a: "Anggota grup bisa melihat struk yang dilampirkan pada sebuah pengeluaran. Gambar struk juga dibaca oleh layanan AI Google, begitulah formulirnya terisi."
+    - q: "Bisakah saya memindai struk untuk pengeluaran yang sudah saya tambahkan?"
+      a: "Tidak, pemindaian hanya untuk pengeluaran baru. Anda tetap bisa melampirkan struk ke pengeluaran yang sudah ada, dan struk itu disimpan tanpa dibaca."
+    - q: "Bagaimana jika ia mengisi sesuatu yang salah?"
+      a: "Ketik ulang. Setiap kolom tetap bisa diedit sampai Anda menyimpan, dan sebaiknya Anda tetap memeriksa semuanya. Jika pemindaian gagal atau tidak tersedia, tambahkan pengeluaran secara manual seperti biasa."

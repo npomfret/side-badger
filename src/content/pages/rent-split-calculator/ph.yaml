@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Calculator sa paghahati ng upa: kuwarto o kita | Side Badger"
+  description: "Mas malaking kuwarto, mas malaking bahagi? Alamin ang babayaran ng bawat housemate, ayon sa kuwarto o kita. Nasa browser mo: walang sine-save o ipinapadala."
+h1: Calculator sa paghahati ng upa
+navLabel: Calculator sa paghahati ng upa
+lead: "Mas malaking kuwarto, mas malaking bahagi? Ilagay ang upa at tingnan kung magkano ang babayaran ng bawat isa, ayon sa laki ng kuwarto o ayon sa kita, hanggang sa sentimo. Tumatakbo ito sa browser mo, walang sine-save, at hindi naglilipat ng pera. Kapag gusto ng bahay na may nagtatabi ng bilang, [hatiin ang gastos](page:feature/split-expenses) sa Side Badger at kopyahin ang upa bawat buwan."
+cta:
+  heading: Ayusin ang mga porsyento nang minsanan. Kopyahin magpakailanman.
+  body: "Nakakalimutan ng calculator na ito ang lahat kapag isinara mo ang tab, gaya ng housemate na sigurado raw na nagbayad ng broadband. Iniingatan ng isang grupo sa Side Badger ang upa, ang mga bayarin, at kung sino ang nagbayad ng ano. Libre ito, walang ad at walang pang-araw-araw na limitasyon."
+sections:
+  - heading: Dalawang paraan ng paghahati ng upa
+    items:
+      - "**Ayon sa laki ng kuwarto.** May bahagi ng upa na para sa kusina, banyo, at sala, na ginagamit ng lahat. Ikaw ang pipili ng bahaging iyon (40% sa simula) at pantay itong hahatiin. Ang natitira ay ayon sa sukat ng kuwarto, kaya mas malaki ang bayad ng malaking kuwarto at nakukuha ng pinakamaliit na kuwarto ang diskwentong pinaghirapan nito."
+      - "**Ayon sa kita.** Nagbabayad ang bawat isa ng bahagi ng upa na katumbas ng bahagi niya sa kabuuang kita. Kapag nagdagdag ka ng shared na bayarin, sinusunod din nito ang parehong mga bahagi."
+  - heading: Paano gumagana ang kuwenta
+    body: "Bawat tao ay may eksaktong bahagi, na ginagawang buong porsyento, dahil mas madaling i-type at pagtalunan ang buong numero. Ang pag-round ay sa pamamagitan ng largest remainder method: pinapanatili ng bawat isa ang buong numerong nasa ibaba ng bahagi niya, at ang natitirang puntos ay ibinibigay sa mga pinakamalaki ang nawala. Laging 100 ang kabuuan ng mga porsyento. Sa flat sa ibaba, 13.33% bawat isa ang shared na 40%. Ang kuwarto ni Priya ay 16 sa 38 m² ng flat, kaya ang 60% × 16/38 ay 25.26%, at kapag idinagdag ang 13.33% ay 38.6%, na nagiging 39% kapag ni-round. Lumalabas na 32% at 29% sina Tom at Aisha, at 100 ang 39 + 32 + 29. Ang bawat halaga ay ang porsyentong iyon ng upa: ang 39% ng £1,950 ay £760.50."
+  - heading: Saka i-type sa Side Badger
+    body: "Para sa buong kuwento, kasama ang panukat, tingnan ang [paano hatiin ang upa ayon sa laki ng kuwarto](page:guide/how-to-split-rent-by-room-size), o ang [kapareha na mas malaki ang kita](page:guide/how-to-split-bills-with-a-partner-who-earns-more) para sa magkapareha."
+    items:
+      - "**Idagdag ang upa.** Sa grupo mo, piliin ang **Magdagdag ng Gastusin**, piliin kung sino ang nagbayad sa may-ari ng bahay sa ilalim ng **Sino ang nagbayad?** at panatilihin ang lahat sa ilalim ng **Hatiin sa pagitan ng**."
+      - "**Piliin ang Porsyento.** Sa ilalim ng **Paano hatiin**, piliin ang **Porsyento** at i-type ang mga buong porsyento. Magbababala ang form kung hindi umabot sa 100 ang kabuuan."
+      - "**Kopyahin ito sa susunod na buwan.** Buksan ang upa noong nakaraang buwan at piliin ang **Kopyahin ang gastusin**. Kasama na ang paghahati."
+  - heading: Ang hindi ginagawa ng calculator
+    items:
+      - "**Magsukat ng mga kuwarto mo.** Panimulang punto lang ang sukat ng sahig. Mas mahalaga ang kuwartong may sariling banyo kaysa sa kasinlaking kuwartong wala nito, at mas mababa ang halaga ng maliit na kuwartong kasya lang ang kama at isang upuang puno ng pag-asa."
+      - "**Magpasya kung ano ang bibilangin na kita.** Take-home man o gross, sahod man o sideline: ang grupo ang magpapasya. Gamitin ang parehong panahon para sa lahat."
+      - "**Mag-save ng anuman.** Isara ang tab at wala na ang mga numero. Para itago ang mga ito, kopyahin ang link. Nasa link ang mga numero mo pagkatapos ng #, na hindi kailanman ipinapadala ng mga browser sa server, at mababasa ito ng sinumang may hawak nito."
+      - "**Maglipat ng pera.** Magbayad ka sa may-ari ng bahay sa paraang gusto mo."
+      - "**Maghalo ng mga pera, o lampasan ang mga limitasyon.** Pumili ng isang pera. Tumatanggap ito ng 2 hanggang 10 tao at upa na hanggang 999,999.99, gaya sa app."
+exampleAfter: 2
+example:
+  heading: Isang flat, isang buwan
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: upa
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: kuryente
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: broadband
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: Mga tanong
+  items:
+    - q: Alin ang mas patas, laki ng kuwarto o kita?
+      a: Walang laging mas patas sa dalawa. Bagay ang laki ng kuwarto sa mga housemate na nagbabayad para sa espasyong tinutulugan nila. Bagay ang kita sa magkapareha at magkakaibigang malaki ang agwat ng sahod. Pagkasunduan ito bago ang unang araw ng upa, hindi pagkatapos.
+    - q: Dapat bang ganoon din ang paghahati ng mga bayarin?
+      a: Para sa mga housemate, kadalasan ay hindi. Ginagamit ng lahat ang kuryente at broadband, kaya mas simple ang pantay, gaya sa halimbawa. Kapag ayon sa kita, binibigyan ng calculator ang mga bayarin ng parehong bahagi tulad ng sa upa.
+    - q: Puwede ba ang square feet?
+      a: Oo. Piliin ang ft² at i-type ang mga sukat sa square feet. Label lang ang yunit, at pareho ang lalabas na bahagi basta iisang yunit ang gamit ng lahat.
+    - q: Libre ba ang calculator?
+      a: Oo. Libre. Walang ad. Walang pang-araw-araw na limitasyon. Hindi mo rin kailangan ng account.

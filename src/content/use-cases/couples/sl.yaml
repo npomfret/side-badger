@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+meta:
+  title: "Deli račune s partnerjem, 50/50 ali po dohodku | Side Badger"
+  description: "Deli dolgočasne stroške, ne da bi zmenek postal četrtletni finančni pregled. Deli 50/50, po dohodku ali račun za računom in poglej, kdo komu dolguje. Brezplačno."
+h1: "Pošteno deljenje stroškov v paru"
+navLabel: "Pari"
+lead: "Deli dolgočasne stroške, ne da bi zmenek postal četrtletni finančni pregled. Side Badger vodi eno tekoče štetje najemnine, računov in nakupov za **pare**, ki delijo dom, kavč in meglen spomin na to, kdo je plačal internet. Deli 50/50, po dohodku ali račun za računom in poglej, kdo komu dolguje."
+cta:
+  heading: "Ustanovi skupino za dva"
+  body: "Ustvari račun, naredi skupino in partnerju pošlji povezavo za povabilo. Prvi strošek je lahko današnja dostava hrane."
+scenario:
+  heading: "Pošteno ni nujno 50/50"
+  body: "Sam in Alex delita dom. Sam zasluži več, zato sta se dogovorila, da Sam prevzame 60 % najemnine in Alex 40 %. Sam plača stanodajalcu, Alex opravi nakup in oba sta precej prepričana, da se vse izravna. Precej prepričan je tisto, iz česar zapis na nekomu telefonu postane stalno nesoglasje. Zato naredi skupino za vaju: izberi ime, ki ga želiš, da ga partner vidi, in mu pošlji povezavo za povabilo ali kodo QR. Vsak strošek dodaj, ko nastane, povej, kdo je plačal in kako se deli, štetje pa prepusti skupini. Za vsak dopust naredi ločeno skupino (glej [potovanja v skupini](page:use-case/group-trips)), da letalske karte ostanejo ločene od živil."
+sections:
+  - heading: "50/50, po dohodku ali račun za računom"
+    body: "Univerzalno poštene delitve ni, je le tista, na katero pristaneta oba, po možnosti pred prvim računom in ne po prvem vzdihu. To so običajne tri."
+    items:
+      - "**50/50.** Izberi **Enako** in vsak dolguje polovico. Ustreza skupnim stroškom, ko sta vajina dohodka podobna, in ne potrebuje nobenega računanja."
+      - "**Po dohodku.** Če eden zasluži več, deli po deležu vsakega pri denarju, ki prihaja. Najprej se dogovorita, kaj šteje (običajna izbira je plača, ki jo dobiš na račun), seštej oba zneska in svojega deli s skupnim. Če eden odnese tri dele, drugi pa dva, je to 3 ÷ (3 + 2) = 60 %, torej eden pokrije 60 %, drugi 40 %. Zaokroži na cele odstotke in jih vnesi pod **Odstotek**, kjer morajo skupaj dati 100. Za vnos plače ni mesta, zato vedno vpišeš samo odstotke."
+      - "**Račun za računom.** Vsak strošek ima svojo delitev, zato lahko mešaš: najemnino po dohodku, živila 50/50 in skupno darilo po **Točnih zneskih**, če sta vsak izbrala, koliko vložita."
+      - "**Ko se plača spremeni,** uporabi nove odstotke od naslednjega stroška. Prejšnji stroški obdržijo delitev, s katero so bili vneseni. Da vidiš račune z resničnimi izplačilnimi listki, preberi [kako deliti račune s partnerjem, ki zasluži več](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: "Mesečni pregled"
+    body: "Enkrat na mesec ali kadar koli številke začnejo srbeti odpri skupino in preveri **Stanja**. Ko sta dva, je v vsaki valuti vedno samo eno plačilo, od tistega, ki dolguje, k tistemu, ki mu dolgujejo. Vzemimo mesec Sama in Alexa. Sam je plačal najemnino 1.500 £, Alexovih 40 % je 600 £. Alex je plačal 90 £ za živila, razdeljeno enako, torej je Samova polovica 45 £. Side Badger eno pobota z drugim, 600 £ minus 45 £, in Alex plača Samu 555 £. Plačaj, kakor želita, z bančnim nakazilom, v gotovini ali z uslugo, ki jo dolgujeta, nato zabeležita pod **Poravnaj**, da se stanje vrne na nič. Ponavljajočih se računov ni, zato kopiraj najemnino prejšnjega meseca, spremeni datum in nadaljuj. Side Badger ne premika denarja in ne pošilja opomnikov, zato je rahel sunek še vedno tvoj."
+  - heading: "Samo vidva"
+    body: "Skupina za dva ima dva člana, vidijo pa jo samo člani skupine. Partner se pridruži s povezavo za povabilo ali kodo QR. Povezava lahko velja od 15 minut do 5 dni, zato izberi najkrajšo, ki partnerju da čas, da jo uporabi. Nova povezava starih ne prekliče, zato jih ne pusti v klepetu, v katerem so še drugi. Vsak, ki uporabi veljavno povezavo, se lahko pridruži, zato vklopi odobritev, če želiš biti prepričan, in administrator spusti noter vsako osebo. Partner potrebuje svoj račun, ki je brezplačen."
+exampleAfter: 2
+example:
+  heading: "Kdo komu dolguje ta mesec"
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: "Najemnina"
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: "Živila"
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: "Funkcije, ki jih uporablja par"
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Ali lahko 60/40 nastaviva enkrat za vse?"
+      a: "Ne. Delitev pripada vsakemu strošku posebej. Odstotke nastavi pri prvem, nato ga naslednjič kopiraj in spremeni, kar je drugače. [Delitev stroškov](page:feature/split-expenses) pokriva vse tri načine delitve."
+    - q: "Ali se poveže z najino banko?"
+      a: "Ne. Side Badger se nikoli ne dotakne vajinega denarja. Plačata si, kakor želita, nato zabeležita, kot pojasnjuje [poravnava](page:feature/settle-up)."
+    - q: "Ali lahko kdo drug vidi najino skupino?"
+      a: "Samo njeni člani, v skupini para pa sta dva. Vsak, ki uporabi veljavno povezavo za povabilo, se lahko pridruži, zato jo deli z eno osebo in nastavi kratek rok veljavnosti."
+    - q: "Kaj, če sva vsak plačala del istega računa?"
+      a: "Strošek ima enega plačnika. Zabeleži dva stroška, enega za vsakega od vaju, in stanje ostane enako."
+    - q: "Ali bo partnerja opomnil, naj plača?"
+      a: "Ne. Opomnikov ni, zato je rahel sunek še vedno tvoj. Vsaj oba bosta gledala isto številko."
+    - q: "Kaj se zgodi, ko nehava deliti stroške?"
+      a: "Poravnajta stanje in zabeležita plačilo, da nihče nič ne dolguje. Nato lahko administrator skupino zaklene, kar ohrani številke, kakršne so, ali jo za vedno zapre, zaradi česar je vsem nedostopna. Zapri jo samo, ko nobeden od vaju ne potrebuje zgodovine."

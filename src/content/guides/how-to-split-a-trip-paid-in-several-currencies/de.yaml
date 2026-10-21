@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Reise in mehreren Währungen teilen | Side Badger"
+  description: "Pfund fürs Hotel, Yen für die Ramen. Rechne jede Währung für sich ab oder zu einem Kurs um, den du sehen kannst. Beide Wege durchgerechnet, mit Summen."
+h1: "So teilst du eine Reise, die in mehreren Währungen bezahlt wurde"
+navLabel: "Reisen in mehreren Währungen"
+lead: "Gib jede Ausgabe in der Währung ein, in der du bezahlt hast, und wähle dann einen Weg. Halte die Währungen getrennt und begleiche jede in ihrem eigenen Geld, oder rechne zu einem aktuellen Wechselkurs um und rechne einmal ab. Dieselbe Japanreise ergibt auf dem ersten Weg vier Zahlungen und auf dem zweiten zwei."
+cta:
+  heading: "Gib es in dem Geld ein, mit dem du bezahlt hast"
+  body: "Erstelle ein kostenloses Konto, starte eine Gruppe für die Reise und füge jede Ausgabe in der Währung hinzu, die auf dem Beleg stand. Willst du erst die Einzelheiten? Dann schau dir [Mehrere Währungen](page:feature/multiple-currencies) an oder [was kostenlos alles umfasst](page:pricing)."
+sections:
+  - heading: "Drei Freunde, ein Hotel, eine Menge Yen"
+    body: "Zoe, Kenji und Lucy verbringen eine Woche in Japan auf einer [Gruppenreise](page:use-case/group-trips), und jede Ausgabe wird gleichmäßig auf alle drei geteilt. Zoe hat das Hotel zu Hause gebucht, in Pfund, für 600 £. Lucy hat die Bahnpässe in Tokio für 90.000 ¥ gekauft. Kenji hat den Ramen-Abend bezahlt, 9.000 ¥, und erwähnt ihn seitdem täglich. Niemand will drei Belege auf einem Bahnsteig umrechnen. Für die Rechnungen hier gilt 1 ¥ = 0,005 £, ein runder Kurs, den wir uns für diese Anleitung ausgedacht haben. In der App nimmst du einen aktuellen Wechselkurs oder tippst den ein, den du tatsächlich bekommen hast."
+  - heading: "Gib jede Ausgabe in dem Geld ein, das auf dem Beleg steht"
+    body: "Diesen Teil machst du auf jedem Weg. Noch muss nichts umgerechnet werden."
+    items:
+      - "**Gruppe anlegen.** Wähle im Dashboard **Gruppe erstellen**, nenne sie nach der Reise, wähle dann **Andere einladen** und schick den Link oder QR-Code."
+      - "**Das Hotel hinzufügen.** Wähle **Ausgabe hinzufügen** und gib 600 ein, mit Pfund als Währung neben dem Betrag. Wähle unter **Wer hat bezahlt?** Zoe. Lass alle drei unter **Aufteilen zwischen** stehen, lass **Wie aufteilen** auf **Gleichmäßig** und wähle **Ausgabe speichern**."
+      - "**Die Yen hinzufügen.** Mach dasselbe für die Bahnpässe (Lucy hat bezahlt) und die Ramen (Kenji hat bezahlt), mit Yen als Währung. Yen haben keine Dezimalstellen, deshalb fragt das Formular auch nicht danach."
+  - heading: "Weg eins: die Währungen getrennt halten"
+    body: "Side Badger führt für jede Währung einen eigenen Saldo und verrechnet keine gegen eine andere. In Pfund kostet das Hotel 200 £ pro Person, also schulden Kenji und Lucy Zoe je 200 £. In Yen kommen Bahnpässe und Ramen auf 99.000 ¥, das sind 33.000 ¥ pro Person. Lucy hat 90.000 ¥ bezahlt und bekommt 57.000 ¥. Zoe hat keine Yen bezahlt und schuldet 33.000 ¥. Kenji hat 9.000 ¥ bezahlt, schuldet also 24.000 ¥."
+    items:
+      - "**Pfund.** Kenji zahlt Zoe 200 £ und Lucy zahlt Zoe 200 £."
+      - "**Yen.** Zoe zahlt Lucy 33.000 ¥ und Kenji zahlt Lucy 24.000 ¥."
+      - "**Insgesamt vier Zahlungen.** Zoe und Lucy schulden einander in zwei Währungen, die sich nicht aufheben. Es kommt kein Kurs ins Spiel, also gibt es nichts, worüber man streiten könnte."
+      - "**Yen geschuldet, in Pfund gezahlt.** Wer keine Yen hat, kann trotzdem in Pfund zahlen. Öffne beim Erfassen der Zahlung **Andere Währung?**, wähle **Umrechnen in** Pfund und prüfe den Kurs. Zoes 33.000 ¥ sind beim Kurs dieser Anleitung 165 £, und der Yen-Saldo geht trotzdem auf."
+      - "**Jede Zahlung erfassen.** Zahlt einander, wie ihr wollt, wähle dann **Abrechnen** und nutze **Abrechnung erfassen**. Mehr dazu steht unter [Abrechnen](page:feature/settle-up)."
+  - heading: "Weg zwei: unterwegs umrechnen"
+    body: "Wenn die Gruppe lieber eine einzige Zahl pro Person sehen will, rechne um, sobald du die Ausgabe eingibst."
+    items:
+      - "**Im Formular umrechnen.** Wähle bei **Ausgabe hinzufügen** **Umrechnen in** und dann Pfund. Side Badger zeigt den Kurs und den umgerechneten Betrag, mit einem ≈ markiert. Ändere den Kurs, falls du einen anderen bekommen hast. Der ursprüngliche Yen-Betrag bleibt an der Ausgabe."
+      - "**In Pfund gerechnet.** Bei 1 ¥ = 0,005 £ werden die Bahnpässe zu 450 £ und die Ramen zu 45 £. Mit dem Hotel für 600 £ sind das 600 £ + 450 £ + 45 £ = 1.095 £, also 365 £ pro Person. Zoe hat 600 £ bezahlt und bekommt 235 £. Lucy hat 450 £ bezahlt und bekommt 85 £. Kenji hat 45 £ bezahlt und schuldet 320 £."
+      - "**Zwei Zahlungen.** Beide von Kenji: 235 £ an Zoe und 85 £ an Lucy. Zoe und Lucy zahlen einander gar nichts mehr."
+      - "**Oder eine Gruppenwährung festlegen.** Um den Extraschritt zu sparen, öffne die **Einstellungen** der Gruppe, such die **Währungseinstellungen** und wähle **Ausgaben automatisch umrechnen in**. Jede neue Ausgabe wird dann in diese Währung umgerechnet, weiterhin zu einem Kurs, den du sehen und ändern kannst."
+  - heading: "Welchen Weg solltest du nehmen?"
+    items:
+      - "**Getrennt halten**, wenn die Leute noch Yen im Portemonnaie haben oder ihr nicht über einen Kurs streiten wollt. Der Preis sind mehr Zahlungen in mehr als einer Währung."
+      - "**Umrechnen**, wenn die Gruppe in einer Währung lebt und pro Person eine Zahl und eine kürzere Liste will, wie Kenjis zwei Überweisungen. Der Preis ist, dass die Gruppe einem Kurs vertraut, und der Kurs wird für jede Ausgabe beim Speichern festgelegt."
+      - "**Entscheidet früh.** Eine Gruppenwährung rechnet nur neue und kopierte Ausgaben um. Sie geht nicht zurück und räumt auf, was ihr schon eingegeben habt."
+  - heading: "Der Kurs und die Obergrenze"
+    items:
+      - "**Der Kurs wird beim Speichern festgelegt.** Alte Ausgaben werden nie neu bewertet, ein Saldo driftet also nicht, nur weil sich der Markt bewegt hat. Ausgaben, die an verschiedenen Tagen eingegeben wurden, können verschiedene Kurse tragen. Will die Gruppe einen Kurs für die ganze Reise, einigt euch darauf und tippt ihn jedes Mal ein."
+      - "**Kein Kurs? Tipp einen ein.** Side Badger holt einen aktuellen Wechselkurs, wo es geht, aber nicht für jedes Paar ist einer garantiert. Gibt es keinen, oder hat dir die Wechselstube ein besseres Angebot gemacht, tippe deinen eigenen ein."
+      - "**999.999,99 pro Ausgabe, in ihrer eigenen Währung.** Eine Obergrenze, egal in welchem Geld. In Yen sind das knapp unter 1.000.000 ¥, beim Kurs dieser Anleitung etwa 5.000 £. In einer Währung mit großen Zahlen, wie der indonesischen Rupiah, kann eine einzelne Rechnung sie früher erreichen. Teile die Rechnung in zwei Ausgaben, oder gib sie in einer anderen Währung ein und rechne um."
+  - heading: "Was Side Badger hier nicht tut"
+    items:
+      - "Es bewegt oder tauscht nie Geld. Ihr zahlt einander, wie ihr wollt, und erfasst die Zahlung dann."
+      - "Es gibt 140 Währungen. Kryptowährungen und Metalle gehören nicht dazu."
+exampleAfter: 2
+example:
+  heading: "Japan, auf zwei Arten abgerechnet"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "das Hotel, zu Hause gebucht"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "Bahnpässe"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "Ramen-Abend"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Fragen"
+  items:
+    - q: "Welchen Wechselkurs verwendet Side Badger?"
+      a: "Einen aktuellen Wechselkurs, der beim Eingeben der Ausgabe abgerufen wird, wo einer verfügbar ist. Du kannst ihn auf den Kurs ändern, den du tatsächlich bekommen hast."
+    - q: "Kann die Gruppe bei Pfund und Yen bleiben?"
+      a: "Ja. Schalte in den **Einstellungen** der Gruppe unter **Währungseinstellungen** **Währungen für diese Gruppe einschränken** ein, wähle unter **Erlaubte Währungen** die Währungen aus und lege die **Standardwährung für neue Ausgaben** fest. Weniger Auswahl in der Liste, weniger Fehlgriffe an der Kasse."
+    - q: "Müssen wir überhaupt umrechnen?"
+      a: "Nein. Währungen bleiben getrennt, es sei denn, du oder deine Gruppe entscheidet sich fürs Umrechnen, und jede Währung bekommt ihre eigene kurze Liste von Zahlungen."

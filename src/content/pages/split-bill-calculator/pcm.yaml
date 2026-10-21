@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Share bill calculator: who owe who, sorted | Side Badger"
+  description: "Who pay, who owe, who go pay who: sorted in seconds. Share equal-equal, exactly or by percentage. Free, for your browser, and nothing dey save or send."
+h1: "Share bill calculator"
+navLabel: "Share bill calculator"
+lead: "Type in who pay for wetin and di calculator go tell you who owe who, with short list of payments to clear am. E dey run for your browser, e no dey save anything and e no dey move money. If your group need di count to dey remain after you close di tab, [share expenses](page:feature/split-expenses) and [settle up](page:feature/settle-up) for Side Badger do di same sums and keep dem."
+cta:
+  heading: "You like di sums? Keep dem."
+  body: "Dis calculator dey forget everything when you close di tab, just like whoever definitely pay last time. Side Badger group dey keep di expenses, update everybody balance and record di payments. E free, with no ads and no daily limits."
+sections:
+  - heading: "How di calculation dey work"
+    body: "For each expense, di calculator dey work out every person share. You fit share am equal-equal, by exact amounts or by percentage, among di people wey you pick. Each person balance na wetin dem pay minus wetin dem owe. Plus sign mean say di group owe dem, and minus sign mean say dem owe di group. Di balances always add up to zero, because whatever one person dey owed, other people owe am."
+  - heading: "Why di list of payments dey short"
+    body: "Nobody need clear each receipt one by one. Once every balance dey known, di calculator go match di person wey owe pass with di person wey dem owe pass, settle as much as one payment fit settle, and continue down di list until everybody reach zero. Di payments no go ever reach di number of people wey get balance (at most one less), and often e need fewer than if you settle bill by bill. E give short list of payments, and e no promise say na di shortest one possible."
+  - heading: "Wetin di calculator no dey do"
+    items:
+      - "**Use plenty currency for one go.** Pick one and use am for di whole calculation. Di app dey keep separate balance for each currency, and e fit convert expense at current exchange rate, wey you fit change."
+      - "**Save anything.** Close di tab and di figures don go. To keep dem, copy di link. E hold your figures after di #, wey your browser no dey ever send to server, and anybody wey you send am to fit read dem."
+      - "**Move money.** E tell you who suppose pay who. You go pay each other anyhow you like, then record di payment for di app if your group dey keep dia count there."
+      - "**Pick di odd penny at random.** When bill no divide evenly, di leftover pennies go to di first people for di list, so di totals still add up. For di app, di odd penny dey go to one person at random, so e no always be di same one."
+      - "**Go pass di limits.** Di calculator dey take 2 to 20 people, and one expense fit reach 999,999.99, like for di app."
+exampleAfter: 2
+example:
+  heading: "One long weekend, four friends"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "di cottage"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "chop shopping"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "di taxi"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "di pub"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: "Question dem"
+  items:
+    - q: "Di calculator free?"
+      a: "Yes. Free. No ads. No daily limits. You no need account too."
+    - q: "E dey save wetin I type?"
+      a: "No. Nothing dey save or send anywhere. To keep your figures, use Copy di link and save di link somewhere."
+    - q: "Who fit see di link wey I copy?"
+      a: "Anybody wey get am. Di figures dey inside di link itself, after di #, so share am only with di people wey suppose see dem."
+    - q: "E dey move money?"
+      a: "No. E dey work out who suppose pay who, and una go pay each other anyhow una like. Side Badger no dey ever touch your money too. See [settle up](page:feature/settle-up)."
+    - q: "I fit share trip wey dem pay for two currencies?"
+      a: "No for here, because one calculation get one currency. For group, each currency get im own balance. See [multiple currencies](page:feature/multiple-currencies)."
+    - q: "Wetin if di amounts no add up?"
+      a: "Di calculator go talk am under di expense and e no go show result until dem add up. Exact amounts must add up to di total, and percentages must make 100."

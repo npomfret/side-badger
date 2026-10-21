@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Huvilan jako, kun ihmiset viipyvät eri yöt | Side Badger"
+  description: "Dev tuli vain kolmeksi yöksi, joten miksi hän maksaisi kuusi? Jaa lomahuvila yöpymisten mukaan, kukin sen mukaan kuin oikeasti viipyi. Laskut valmiina."
+h1: "Näin jaat lomahuvilan, kun ihmiset viipyvät eri yöt"
+navLabel: "Huvila yöpymisten mukaan"
+lead: "Hinnoittele oleskelu henkilöä ja yötä kohden, kerro hinta jokaisen henkilön yöpymisillä ja syötä huvila **yhtenä kuluna tarkoilla summilla**. Side Badger pitää kirjaa ja ehdottaa lyhyttä maksulistaa, kun on aika tasata tilit."
+cta:
+  heading: "Anna huvilalle yksi siisti kulu"
+  body: "Perusta ryhmä, kutsu kaikki linkillä tai QR-koodilla ja syötä huvila tarkoilla summilla. Side Badger pitää juoksevaa kirjaa, kun sinä nautit lomasta."
+sections:
+  - heading: "Kuusi yötä, neljä ihmistä, yksi luottokortti"
+    body: "[Ryhmämatka](page:use-case/group-trips) alkaa yleensä yhden ihmisen kortilta. Tällä kertaa se on Anan. Hän varaa huvilan kuudeksi yöksi, 2 100 €, koska jonkun on mentävä ensin. Ana, Ben ja Chloe viipyvät kaikki kuusi yötä. Dev pääsee mukaan vasta viimeiseksi kolmeksi yöksi ja tulee junalla. Ben vuokraa auton, jossa Dev ei koskaan istu. Dev hoitaa ison ruokaostoskierroksen. Huvilan jako neljään osaan on ilmeinen ratkaisu. Siinä Dev maksaa kolmesta yöstä, jotka hän vietti kotona, ja sellaiset asiat muistetaan vielä jouluna. Yöpymisten mukaan jakaminen välttää riidan, ja lasku vie minuutin."
+  - heading: "Hinnoittele yksi henkilöyö"
+    body: "Henkilöyö on yksi ihminen yhden yön ajan. Huvila maksaa sen, mitä se maksaa, joten jaa hinta kaikkien henkilöyöiden kesken ja anna jokaiselle ne, jotka hän käytti."
+    items:
+      - "**Laske henkilöyöt.** Ana, Ben ja Chloe viipyvät kuusi yötä kukin ja Dev kolme: 6 + 6 + 6 + 3 = 21."
+      - "**Hinnoittele yksi.** 2 100 € ÷ 21 = 100 € henkilöyötä kohden."
+      - "**Kerro jokaisen henkilön yöpymisillä.** Ana, Ben ja Chloe maksavat 6 × 100 € = 600 € kukin. Dev maksaa 3 × 100 € = 300 €."
+      - "**Tarkista loppusumma.** 600 € + 600 € + 600 € + 300 € = 2 100 €. Jos osuutesi eivät summaudu hintaan, yksi yö puuttuu tai se on laskettu kahdesti."
+  - heading: "Syötä se Side Badgeriin"
+    body: "Perusta ryhmä, kutsu kolme muuta linkillä tai QR-koodilla ja lisää sitten kulut. Huvila ensin."
+    items:
+      - "Valitse **Lisää kulu**. Kuvaile se, syötä 2 100 ja aseta kohtaan **Kuka maksoi?** Ana."
+      - "Varmista kohdassa **Jaa seuraavien kesken**, että kaikki neljä ovat mukana."
+      - "Valitse kohdassa **Miten jaetaan** vaihtoehto **Tarkat summat**. Kirjoita Analle, Benille ja Chloelle 600 ja Deville 300. Summien on oltava yhteensä loppusumma."
+      - "Valitse **Tallenna kulu**."
+      - "Lisää autovuokra samalla tavalla. Ben maksoi, jako on **Tasan**, ja Dev jätetään pois, koska hän tuli junalla. [Kulujen jako](page:feature/split-expenses) kertoo muista tavoista jakaa kulu."
+      - "Lisää ruokaostokset. Dev maksoi, jako on **Tasan** ja kaikki neljä ovat mukana."
+  - heading: "Lue tulos, tasaa sitten tilit"
+    body: "Jokaisen lasku on hänen osuutensa huvilasta plus osuus autosta ja ruokaostoksista. Anan, Benin ja Chloen osuus on kukin 725 €, eli 600 € + 80 € + 45 €. Devin osuus on 345 €, eli 300 € + 45 €. Vähennä se, mitä kukin maksoi, niin saldot selviävät. Ana maksoi 2 100 €, joten hänen saatavansa on 1 375 €. Ben maksoi 240 € ja on velkaa 485 €. Dev maksoi 180 € ja on velkaa 165 €. Chloe ei maksanut mitään ja on velkaa 725 €. Jos velat jätettäisiin sellaisikseen, ne kulkisivat kuutta eri reittiä ryhmän sisällä. Side Badger ehdottaa sen sijaan kolmea maksua, kaikki Analle. Maksa hänelle miten haluat, valitse sitten **Maksa velat** ja käytä jokaiselle maksulle **Kirjaa tilitys**, jotta saldot päivittyvät. Pikaselvityspainikkeet täyttävät summan. Lisää [tilien tasauksesta](page:feature/settle-up)."
+  - heading: "Kun huvilalla ei ole yhtä siistiä hintaa"
+    items:
+      - "**Huoneet eroavat.** Jos sviitti on arvokkaampi kuin komero, sopikaa ensin, mitä kukin huone maksaa, ja tehkää henkilöyölaskut huone kerrallaan. Syötä huvila yhtenä kuluna, jossa on jokaisen kokonaissumma, tai yhtenä kuluna huonetta kohden. Kummassakin tapauksessa kulun tarkkojen summien on oltava yhteensä sen loppusumma."
+      - "**Kuukausia aiemmin maksettu etumaksu.** Sille, joka sen maksoi, tehdään oma kulu, jonka päivämäärä on maksupäivä. Jaa se yöpymisten mukaan samoissa suhteissa kuin loppuosa."
+      - "**Varaus on toisessa valuutassa.** Syötä huvila valuutalla, jolla maksoit. Jos ryhmä muuntaa matkan varrella, käytä nykyistä valuuttakurssia tai kirjoita kurssi, jonka todella sait. Alkuperäinen summa säilyy kulussa. [Useita valuuttoja](page:feature/multiple-currencies) kertoo lisää."
+      - "**Osittaiset yöt.** Joku saapuu keskiyöllä, joku lähtee ennen aamiaista. Sopikaa yksi sääntö öiden laskemiseen ja käyttäkää sitä kaikkiin."
+  - heading: "Mitä Side Badger ei tee tässä"
+    items:
+      - "Se ei laske öitä puolestasi. Jakoa yöpymisten tai osuuksien mukaan ei ole, joten lasket jokaisen summan kuten yllä ja syötät **tarkat summat**."
+      - "Se ei siirrä rahaa. Maksakaa toisillenne miten haluatte ja kirjatkaa maksu."
+      - "Jokaisella kululla on yksi maksaja. Jos kaksi ihmistä maksoi huvilan, syötä kaksi kulua."
+      - "Vieraspääsyä ei ole. Jokaisella ryhmän jäsenellä, myös Devillä, on oltava ilmainen tili."
+exampleAfter: 2
+example:
+  heading: "Huvila, auto ja ruokaostokset"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "kuusi yötä huvilassa"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "autovuokra"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "ruokaostokset"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Huvilakysymyksiä"
+  items:
+    - q: "Entä jos joku peruu?"
+      a: "Ota hänen yönsä pois, laske uudelleen ja muokkaa huvilan kulua niin, että tarkat summat taas vastaavat hintaa. Aiempi versio säilyy ja muokkaus näkyy ryhmän toimintahistoriassa, joten kukaan ei muuta lukua huomaamatta. Se, kuka saa muokata, riippuu ryhmän oikeuksista."
+    - q: "Pitäisikö varaajan maksaa vähemmän?"
+      a: "Siitä päättää ryhmä. Varaaminen on vaivaa, ja ryhmät ovat eri mieltä siitä, ansaitseeko se alennuksen. Mistä tahansa sovitte, laita se tarkkoihin summiin ja kirjoita se kulun muistiinpanoon tai sen viereiseen kommenttiin, jotta kenenkään ei tarvitse muistaa sopimusta."
+    - q: "Voiko siivousmaksut jakaa toisin?"
+      a: "Kyllä. Syötä maksu erillisenä kuluna ja anna sille oma jako. Tasan sopii kiinteälle maksulle koko talosta. Tarkat summat sopivat ryhmälle, joka haluaa maksun seuraavan myös öitä."

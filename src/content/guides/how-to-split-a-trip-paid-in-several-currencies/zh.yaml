@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: 多种货币付款的旅行怎么分摊 | Side Badger
+  description: 酒店付英镑，拉面付日元。各币种分开结清，或按看得见的汇率换算，两种办法都算给你看。
+h1: 多种货币付款的旅行怎么分摊
+navLabel: 多币种旅行
+lead: 每笔支出都用你付款时的货币录入，然后选一条路。让各币种分开，各用各的钱结清；或者按当前汇率换算，一次结清。同一趟日本之行，第一种办法是四笔付款，第二种是两笔。
+cta:
+  heading: 用你付款的那种钱来记
+  body: 创建免费账户，为这趟旅行建一个群组，收据上是什么货币就按什么货币添加每笔支出。想先了解详情？请看[多种货币](page:feature/multiple-currencies)或[免费包含什么](page:pricing)。
+sections:
+  - heading: 三个朋友，一间酒店，一大堆日元
+    body: Zoe、Kenji 和 Lucy 去日本玩了一周，这是一趟[团体旅行](page:use-case/group-trips)，每笔费用三人平均分摊。Zoe 在家订了酒店，用英镑付了 £600。Lucy 在东京买了铁路通票，花了 ¥90,000。Kenji 请大家吃了拉面夜，¥9,000，之后天天都要提一遍。没人想在车站站台上换算三张收据。本文的算式里，¥1 等于 £0.005，这是为本文编的一个整数汇率。在应用里，你会使用当前汇率，或者输入你实际拿到的那个。
+  - heading: 按收据上的货币逐笔录入
+    body: 不管选哪条路，这一步都一样。现在还不需要换算。
+    items:
+      - "**建群组。** 在仪表板上选择**创建群组**，用旅行的名字命名，然后选择**邀请他人**，把链接或二维码发出去。"
+      - "**添加酒店。** 选择**添加费用**，输入 600，金额旁的货币选英镑。在**谁付的钱？**下选 Zoe。**分摊给**保留三个人，**如何拆分**保持**平分**，然后选择**保存费用**。"
+      - "**添加日元。** 铁路通票（Lucy 付的）和拉面（Kenji 付的）也一样，货币选日元。日元没有小数位，所以表单不会要你填小数。"
+  - heading: "路线一：各币种分开"
+    body: Side Badger 为每种货币各记一份余额，不会把一种货币和另一种相互抵消。英镑方面，酒店每人 £200，所以 Kenji 和 Lucy 各欠 Zoe £200。日元方面，铁路通票加拉面共 ¥99,000，每人 ¥33,000。Lucy 付了 ¥90,000，应收 ¥57,000。Zoe 没付过日元，欠 ¥33,000。Kenji 付了 ¥9,000，所以欠 ¥24,000。
+    items:
+      - "**英镑。** Kenji 付给 Zoe £200，Lucy 付给 Zoe £200。"
+      - "**日元。** Zoe 付给 Lucy ¥33,000，Kenji 付给 Lucy ¥24,000。"
+      - "**一共四笔付款。** Zoe 和 Lucy 在两种货币里互相欠钱，而且不会抵消。这里完全不涉及汇率，所以没什么好争的。"
+      - "**欠日元，用英镑付。** 手里没有日元的人也可以用英镑付款。记录付款时，打开**不同的货币？**，选择**转换为**英镑，再核对汇率。按本文的汇率，Zoe 的 ¥33,000 是 £165，日元余额照样能正确结清。"
+      - "**逐笔记录。** 你们想怎么付就怎么付，然后选择**结算**，使用**记录结算**。更多内容见[结算](page:feature/settle-up)。"
+  - heading: "路线二：边录边换算"
+    body: 如果群组更想每人只看到一个数字，就在录入支出时换算。
+    items:
+      - "**在表单上换算。** 在**添加费用**里选择**转换为**并选英镑。Side Badger 会显示汇率和换算后的金额，并标上 ≈。如果你拿到的汇率不同，可以修改。支出上仍保留原来的日元金额。"
+      - "**看英镑数。** 按 ¥1 = £0.005，铁路通票成了 £450，拉面成了 £45。加上 £600 的酒店，总计 £600 + £450 + £45 = £1,095，每人 £365。Zoe 付了 £600，应收 £235。Lucy 付了 £450，应收 £85。Kenji 付了 £45，欠 £320。"
+      - "**两笔付款。** 都是 Kenji 付：£235 给 Zoe，£85 给 Lucy。Zoe 和 Lucy 之间不再互相付钱。"
+      - "**或者设一个群组货币。** 想省掉这一步，就打开群组的**设置**，找到**货币设置**，选择**自动转换支出至**。之后每笔新支出都会换算成那种货币，汇率依然看得见、改得了。"
+  - heading: 该走哪条路？
+    items:
+      - "**分开记**：适合大家钱包里还有日元，或者你们不想为汇率争论的时候。代价是付款笔数更多，而且不止一种货币。"
+      - "**换算**：适合群组平时只用一种货币，希望每人一个数字、清单更短的时候，比如 Kenji 的两笔转账。代价是群组要信任某个汇率，而且汇率在每笔支出保存时就固定了。"
+      - "**早点决定。** 群组货币只会换算新增和复制的支出，不会回头整理你已经录入的。"
+  - heading: 汇率与上限
+    items:
+      - "**汇率在保存时固定。** 旧支出不会重新估值，所以余额不会因为市场波动而漂移。不同日子录入的支出可能带着不同的汇率，所以如果群组想整趟旅行用同一个汇率，就先商量好，每次都输入它。"
+      - "**没有汇率？自己输入。** Side Badger 会尽可能获取当前汇率，但并不保证每一对货币都有。如果没有，或者换汇柜台给你的更划算，就输入你自己的。"
+      - "**每笔支出上限 999,999.99，按它自己的货币计。** 不论哪种货币，上限只有一个。以日元计，就是不到 ¥1,000,000，按本文的汇率约 £5,000。在数额很大的货币里，比如印尼盾，一张账单可能更早就碰到上限。把账单拆成两笔支出，或者改用另一种货币录入再换算。"
+  - heading: Side Badger 在这件事上不做什么
+    items:
+      - 它从不转移或兑换资金。你们想怎么付就怎么付，然后记录这笔付款。
+      - 它支持 140 种货币，其中没有加密货币和金属。
+exampleAfter: 2
+example:
+  heading: 日本之行，两种结清法
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: 酒店，在家订的
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: 铁路通票
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: 拉面夜
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: 常见问题
+  items:
+    - q: Side Badger 用哪个汇率？
+      a: 当前汇率，在你录入支出时获取（有的话）。你可以改成你实际拿到的汇率。
+    - q: 群组可以只用英镑和日元吗？
+      a: 可以。在群组的**设置**里，打开**货币设置**下的**为此群组限制货币**，选好**允许的货币**，并设置**新费用的默认货币**。列表里的选项少了，在收银台选错的机会也少了。
+    - q: 我们非得换算吗？
+      a: 不用。除非你或你的群组选择换算，否则各货币保持分开，每种货币都有自己的简短付款清单。
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name

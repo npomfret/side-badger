@@ -1,0 +1,101 @@
+translatedFrom: "5d92090e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Kako skupiti novac za grupni dar | Side Badger"
+  description: "Svatko da drukčiji iznos, a udarac prima kartica jedne osobe. Provedi anketu o proračunu, unesi točne iznose i prepusti računicu Side Badgeru."
+h1: "Kako skupiti novac za grupni dar"
+navLabel: "Skupljanje za grupni dar"
+lead: "Skupljanje za grupni dar znači da jedna osoba plati unaprijed, a svi ostali njoj duguju svoj udio. Dogovori proračun anketom, neka kupac stavi dar na svoju karticu, a zatim ga unesi kao jedan trošak s [točnim iznosima](page:feature/split-expenses), po jedan broj za svaku osobu. Side Badger pokazuje tko kupcu koliko duguje, a svatko pošalje svoj dio kako god želi."
+cta:
+  heading: "Pusti šešir da kruži, bez šešira"
+  body: "Napravi grupu, izostavi osobu koja dobiva dar i unesi poklon s točnim iznosima. Side Badger je besplatan, bez oglasa i bez dnevnih ograničenja. Želiš prvo obilazak? Pogledaj [kako radi](page:how-it-works) ili [što pokriva besplatna verzija](page:pricing)."
+sections:
+  - heading: "Četvero prijatelja, jedan gramofon, četiri različita iznosa"
+    body: "Bea puni 30 godina i želi gramofon. Priya, Omar, Lena i Sam kupuju joj ga. Priya nalazi jedan za 240 £ i kupuje ga svojom karticom, jer netko mora prvi. Njih četvero ne daju jednako. Priya i Omar daju po 60 £, Lena 80 £, a Sam 40 £. Nitko ne objašnjava svoj iznos i nitko ne pita. Omar kupuje i čestitku te papir za pakiranje za 12 £. Čestitku potpisuje svih četvero, pa se ona dijeli jednako."
+  - heading: "Dogovori proračun prije nego itko klikne Kupi"
+    body: "Anketa o proračunu štedi svađu oko gramofona od 400 £. U grupi odaberi **Dodaj anketu** i pitaj koliko bi dar trebao koštati. Neka opcije budu iznosi, primjerice do 150 £, do 200 £ i do 250 £. Uključi **Anonimno glasanje**, koje skriva tko je za što glasao, da nitko ne mora naglas braniti manji iznos. Postavke se ne mogu promijeniti nakon što stigne prvi glas, zato ih prvo provjeri. Anketa se ne zatvara sama. Kad svi glasaju, odaberi **Zatvori anketu** i prikazat će se **Pobjednik**. Anketa dogovara ukupni iznos. Ne određuje ničiji udio."
+  - heading: "Čitanje računice"
+    body: "Dar se dijeli na 60 £, 60 £, 80 £ i 40 £, što zajedno daje 240 £ s računa. Čestitka i papir dijele se na četvero, po 3 £ svatko. Priyin ukupni dio je 60 £ + 3 £, dakle 63 £, a ona je platila 240 £, pa potražuje 177 £. Omarov ukupni dio također je 63 £, ali on je platio 12 £, pa duguje 51 £. Lena duguje 80 £ + 3 £, odnosno 83 £, a Sam 40 £ + 3 £, odnosno 43 £. Ta tri iznosa zajedno daju Priyinih 177 £. Prepušteni sami sebi, dugovi bi kružili grupom na pet načina. Side Badger umjesto toga predlaže tri uplate, sve Priyi. [Poravnanje](page:feature/settle-up) ima detalje."
+  - heading: "Unesi to u Side Badger"
+    body: "Priyin dio posla traje otprilike pet minuta."
+    items:
+      - "**Napravi grupu.** Na nadzornoj ploči odaberi **Kreiraj grupu**. Odaberi **Pozovi druge** i pošalji poveznicu ili QR kod ljudima koji sudjeluju, i nikome drugome."
+      - "**Dodaj dar.** Odaberi **Dodaj trošak**, opiši ga, upiši 240 i pod **Tko je platio?** odaberi Priyu. Ostavi sve četvero pod **Podijeli između**, zatim pod **Kako podijeliti** odaberi **Točni iznosi** i upiši 60, 60, 80 i 40. Iznosi moraju zajedno davati 240. Priloži potvrdu narudžbe ako želiš. Odaberi **Spremi trošak**."
+      - "**Dodaj čestitku.** Omar sam dodaje 12 £, pod **Tko je platio?** bira sebe i ostavlja **Kako podijeliti** na **Jednako**, a sve četvero ostaje označeno."
+      - "**Prebroji, pa plati.** Svatko provjerava **Stanja**, koja pokazuju tko kome duguje, i šalje Priyi svoj dio kako god želi. Zatim to zabilježi pomoću **Poravnaj** i **Zabilježi poravnanje**. Brzo poravnanje upisuje iznos."
+  - heading: "Prvo kupi ili prvo skupi"
+    body: "Side Badger ne drži zajedničku kasicu, pa „skupljanje“ zapravo znači brojanje. Rade dva redoslijeda."
+    items:
+      - "**Prvo kupi.** Kupac plaća, dodaje trošak po stvarnoj cijeni i svi odmah vide svoj dio. Urednije je, ali kupac snosi trošak dok ljudi ne plate, pa odaberi kupca koji to može."
+      - "**Prvo skupi.** Ljudi šalju svoj iznos kupcu prije kupnje. Kad znaš cijenu, unesi dar, a zatim zabilježi svaku uplatu s datumom kad je novac stvarno promijenio vlasnika. Prvo dodaj dar, da svaka uplata ima stanje na koje se odnosi."
+      - "**Cijena se pomakne.** Dostava, kod za popust, naknadno poskupljenje. Uredi dar i promijeni točne iznose tako da i dalje zbrajaju. Prethodna verzija ostaje sačuvana, ali prvo reci grupi, jer se njihova stanja mijenjaju."
+  - heading: "Drži Beu podalje od toga"
+    body: "Grupu mogu vidjeti samo njezini članovi, pa Bea ne može vidjeti grupu u kojoj nije. Pozovi ljude koji sudjeluju i nikoga drugog. Poveznica vrijedi dok ne istekne, a možeš odabrati bilo što od 15 minuta do 5 dana, pa odaberi kratku i pošalji je tamo gdje je Bea neće vidjeti. Poveznica svakome tko je otvori pokazuje pregled grupe, zato grupu nazovi dosadno, primjerice Subotnja kasica, i drži Beino ime podalje i od naziva troškova i od opcija ankete."
+  - heading: "Što Side Badger ovdje ne radi"
+    items:
+      - "Ne drži niti prikuplja novac. Udjeli idu kupcu bankovnim prijenosom, gotovinom ili čime god koristite, a zatim ih netko zabilježi."
+      - "Ne šalje podsjetnike za plaćanje. Podsjećanje onih koji nisu platili i dalje je ljudski posao."
+      - "Ne izračunava ničiji udio. Anketa dogovara proračun i nema opcije „podijeli ono što je ostalo“, pa svaki iznos upisuješ sam."
+      - "Svaki trošak ima jednog platitelja. Ako su dvije osobe kupile različite dijelove dara, unesi dva troška."
+      - "Svatko u podjeli treba besplatan korisnički račun i mjesto u grupi."
+exampleAfter: 2
+example:
+  heading: "Bein gramofon i čestitka"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: "dar"
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: "čestitka i papir za pakiranje"
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: "Pitanja"
+  items:
+    - q: "Što ako skupimo više nego što dar košta?"
+      a: "Točni iznosi moraju zajedno davati cijenu, zato smanji udjele dok ne zbrajaju. Ili višak potroši na nešto stvarno, primjerice cvijeće, i unesi to kao drugi trošak, poput čestitke i papira za pakiranje u primjeru."
+    - q: "Može li netko sudjelovati bez pridruživanja grupi?"
+      a: "Ne, ako ga želiš u računici. Svatko u podjeli treba besplatan korisnički račun i mjesto u grupi. Za nekoga tko ima samo gotovinu, Priya bi je mogla uzeti i unijeti dar za iznos koji grupa još duguje. Primjerice, ako joj Sam da 40 £ u gotovini, unijela bi 200 £ i podijelila ih 60, 60 i 80 između sebe, Omara i Lene."
+    - q: "Može li anketa odlučiti koliko tko daje?"
+      a: "Ne. Anketa dogovara iznos za cijelu grupu, primjerice proračun. Udio svake osobe dogovorite među sobom, a zatim ga upišite u trošak kao **Točni iznosi**."

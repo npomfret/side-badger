@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Kalkulator for å dele regningen: hvem skylder hvem | Side Badger"
+  description: "Hvem betalte, hvem skylder, hvem betaler hvem: ordnet på sekunder. Del likt, nøyaktig eller etter prosent. Gratis, i nettleseren: ingenting lagres eller sendes."
+h1: Kalkulator for å dele regningen
+navLabel: Kalkulator for å dele regningen
+lead: Skriv inn hvem som betalte for hva, så sier kalkulatoren hvem som skylder hvem, med en kort liste over betalinger som gjør opp for det. Den kjører i nettleseren din, lagrer ingenting og flytter ingen penger. Trenger gruppen at regnskapet overlever fanen, kan dere [dele utgifter](page:feature/split-expenses) og [gjøre opp](page:feature/settle-up) i Side Badger, som gjør de samme regnestykkene og beholder dem.
+cta:
+  heading: Liker du regnestykkene? Behold dem.
+  body: Denne kalkulatoren glemmer alt når du lukker fanen, omtrent som den som definitivt betalte forrige gang. En Side Badger-gruppe beholder utgiftene, oppdaterer alles saldo og registrerer betalingene. Den er gratis, uten annonser og uten daglige grenser.
+sections:
+  - heading: Slik fungerer utregningen
+    body: For hver utgift regner kalkulatoren ut hver persons andel. Du kan dele den likt, etter nøyaktige beløp eller etter prosent, mellom de du velger. Hver persons saldo er så det vedkommende betalte minus det vedkommende skylder. Et plusstegn betyr at gruppen skylder personen, og et minustegn betyr at personen skylder gruppen. Saldoene summerer seg alltid til null, for det én person har til gode, skylder andre.
+  - heading: Hvorfor listen over betalinger er kort
+    body: Ingen trenger å gjøre opp hver kvittering for seg. Når hver saldo er kjent, setter kalkulatoren den som skylder mest sammen med den som har mest til gode, gjør opp så mye som én betaling kan, og fortsetter nedover listen til alle står på null. Den trenger aldri flere betalinger enn antall personer med en saldo minus én, og ofte færre enn om dere gjør opp regning for regning. Den gir en kort liste over betalinger, og lover ikke at den er den kortest mulige.
+  - heading: Hva kalkulatoren ikke gjør
+    items:
+      - "**Håndtere mer enn én valuta.** Velg én og bruk den i hele utregningen. Appen fører en egen saldo for hver valuta, og kan konvertere en utgift med en gjeldende valutakurs, som du kan endre."
+      - "**Lagre noe.** Lukker du fanen, er tallene borte. Vil du beholde dem, kopierer du lenken. Den inneholder tallene dine etter #-tegnet, som nettleseren din aldri sender til en server, og alle du sender den til, kan lese dem."
+      - "**Flytte penger.** Den sier hvem som bør betale hvem. Dere betaler hverandre slik dere vil, og registrerer så betalingen i appen hvis gruppen fører regnskapet der."
+      - "**Velge det odde øret tilfeldig.** Når en regning ikke går opp likt, går de overskytende øre til de første på listen, så summene fortsatt stemmer. I appen går det odde øret til én person tilfeldig, så det er ikke alltid den samme."
+      - "**Gå over grensene.** Kalkulatoren tar 2 til 20 personer, og én utgift kan være opptil 999 999,99, som i appen."
+exampleAfter: 2
+example:
+  heading: En lang helg, fire venner
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: hytta
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: dagligvarer
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: taxien
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: puben
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: Spørsmål
+  items:
+    - q: Er kalkulatoren gratis?
+      a: Ja. Gratis. Ingen annonser. Ingen daglige grenser. Du trenger heller ingen konto.
+    - q: Lagrer den det jeg skriver inn?
+      a: Nei. Ingenting lagres eller sendes noe sted. Vil du beholde tallene, bruk «Kopier lenke» og lagre lenken et sted.
+    - q: Hvem kan se lenken jeg kopierer?
+      a: "Alle som har den. Tallene ligger i selve lenken, etter #-tegnet, så del den bare med dem som skal se dem."
+    - q: Flytter den penger?
+      a: Nei. Den regner ut hvem som bør betale hvem, og dere betaler hverandre slik dere vil. Side Badger rører heller aldri pengene dine. Se [gjøre opp](page:feature/settle-up).
+    - q: Kan jeg dele en tur som er betalt i to valutaer?
+      a: Ikke her, for en utregning har én valuta. I en gruppe har hver valuta sin egen saldo. Se [flere valutaer](page:feature/multiple-currencies).
+    - q: Hva om beløpene ikke går opp?
+      a: Kalkulatoren sier fra under utgiften og viser ikke noe resultat før de gjør det. Nøyaktige beløp må summere seg til totalen, og prosentene må bli 100.

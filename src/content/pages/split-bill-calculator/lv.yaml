@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Rēķina sadales kalkulators: kurš kam parādā | Side Badger"
+  description: "Kurš maksāja, kurš ir parādā, kurš kam maksā: sakārtots sekundēs. Vienādi, precīzi vai procentuāli. Bez maksas, pārlūkā, nekas netiek saglabāts vai sūtīts."
+h1: "Rēķina sadales kalkulators"
+navLabel: "Rēķina sadales kalkulators"
+lead: "Ierakstiet, kurš par ko maksāja, un kalkulators pateiks, kurš kam ir parādā, ar īsu maksājumu sarakstu, kas visu nokārto. Tas darbojas jūsu pārlūkprogrammā, neko nesaglabā un nepārvieto naudu. Ja grupai uzskaite jāsaglabā ilgāk par atvērto cilni, Side Badger [izdevumu sadale](page:feature/split-expenses) un [norēķināšanās](page:feature/settle-up) veic tos pašus aprēķinus un tos saglabā."
+cta:
+  heading: "Patīk aprēķini? Paturiet tos."
+  body: "Šis kalkulators visu aizmirst, tiklīdz aizverat cilni, gluži kā tas, kurš pagājušoreiz noteikti samaksāja. Side Badger grupa saglabā izdevumus, atjaunina visu atlikumus un reģistrē maksājumus. Tas ir bez maksas, bez reklāmām un bez dienas ierobežojumiem."
+sections:
+  - heading: "Kā aprēķins darbojas"
+    body: "Katram izdevumam kalkulators aprēķina katra cilvēka daļu. Varat to sadalīt vienādi, pēc precīzām summām vai procentuāli starp cilvēkiem, ko izvēlaties. Katra cilvēka atlikums tad ir tas, ko viņš samaksāja, mīnus tas, ko viņš ir parādā. Pluss zīme nozīmē, ka grupa viņam ir parādā, bet mīnus zīme nozīmē, ka viņš ir parādā grupai. Atlikumi vienmēr kopā dod nulli, jo to, kas pienākas vienam cilvēkam, ir parādā citi."
+  - heading: "Kāpēc maksājumu saraksts ir īss"
+    body: "Nevienam nav jānorēķinās par katru čeku atsevišķi. Kad katrs atlikums ir zināms, kalkulators savieno to, kurš ir parādā visvairāk, ar to, kuram pienākas visvairāk, nokārto tik daudz, cik var ar vienu maksājumu, un turpina pa sarakstu, līdz visiem ir nulle. Maksājumu nekad nav vairāk kā cilvēku ar atlikumu skaits mīnus viens, un bieži to ir mazāk nekā tad, ja norēķinātos par katru rēķinu atsevišķi. Tas dod īsu maksājumu sarakstu un neapsola, ka tas ir pats īsākais iespējamais."
+  - heading: "Ko kalkulators nedara"
+    items:
+      - "**Nestrādā ar vairākām valūtām.** Izvēlieties vienu un izmantojiet to visam aprēķinam. Lietotne katrai valūtai tur atsevišķu atlikumu un var konvertēt izdevumu pēc pašreizējā valūtas kursa, ko varat mainīt."
+      - "**Neko nesaglabā.** Aizveriet cilni, un skaitļi pazūd. Lai tos paturētu, nokopējiet saiti. Tajā jūsu skaitļi ir aiz #, ko pārlūkprogramma nekad nesūta serverim, un ikviens, kam saiti nosūtāt, tos var izlasīt."
+      - "**Nepārvieto naudu.** Tas pasaka, kam būtu jāmaksā kam. Jūs samaksājat viens otram, kā vēlaties, tad reģistrējat maksājumu lietotnē, ja jūsu grupas uzskaite ir tajā."
+      - "**Neizvēlas lieko santīmu nejauši.** Ja rēķins nedalās vienmērīgi, atlikušie santīmi nonāk pie pirmajiem cilvēkiem sarakstā, lai kopsummas sakristu. Lietotnē lieko santīmu nejauši dabū viens cilvēks, tāpēc tas nav vienmēr viens un tas pats."
+      - "**Netiek pāri ierobežojumiem.** Kalkulators pieņem no 2 līdz 20 cilvēkiem, un viens izdevums var būt līdz 999 999,99, tāpat kā lietotnē."
+exampleAfter: 2
+example:
+  heading: "Garā nedēļas nogale, četri draugi"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "lauku māja"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "pārtikas pirkumi"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "taksi"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "pubs"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: "Jautājumi"
+  items:
+    - q: "Vai kalkulators ir bez maksas?"
+      a: "Jā. Bez maksas. Bez reklāmām. Bez dienas ierobežojumiem. Arī konts nav vajadzīgs."
+    - q: "Vai tas saglabā to, ko ierakstu?"
+      a: "Nē. Nekas netiek saglabāts vai kaut kur sūtīts. Lai paturētu skaitļus, izmantojiet Kopēt saiti un saglabājiet saiti kaut kur."
+    - q: "Kas var redzēt saiti, ko nokopēju?"
+      a: "Ikviens, kam tā ir. Skaitļi ir pašā saitē, aiz #, tāpēc kopīgojiet to tikai ar tiem, kam šie skaitļi jāredz."
+    - q: "Vai tas pārvieto naudu?"
+      a: "Nē. Tas aprēķina, kam būtu jāmaksā kam, un jūs samaksājat viens otram, kā vēlaties. Arī Side Badger nekad neskar jūsu naudu. Skatiet [norēķināšanās](page:feature/settle-up)."
+    - q: "Vai varu sadalīt ceļojumu, kas apmaksāts divās valūtās?"
+      a: "Šeit nē, jo aprēķinam ir viena valūta. Grupā katrai valūtai ir savs atlikums. Skatiet [vairākas valūtas](page:feature/multiple-currencies)."
+    - q: "Ko darīt, ja summas nesakrīt?"
+      a: "Kalkulators to pasaka zem izdevuma un nerāda rezultātu, līdz summas sakrīt. Precīzām summām jāsakrīt ar kopsummu, bet procentiem jāsakrīt ar 100."

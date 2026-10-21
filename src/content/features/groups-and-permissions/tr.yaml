@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Paylaşılan harcamalar için grup yönetimi ve izinler | Side Badger"
+  description: "Bağlantı veya QR koduyla davet edin, kimin katılacağını onaylayın, izleyici ekleyin, izinleri ayarlayın ve iş bitince grubu kilitleyin. Grubunuz, kurallarınız; makul ölçüde."
+h1: "Grup yönetimi ve izinler: kurallar sizin, makul ölçüde"
+navLabel: "Gruplar ve izinler"
+lead: "Bazı gruplarda bir sayman gerekir. Side Badger'da bunun için bir ayar var. İnsanları bağlantı veya QR koduyla davet edin, kimin gireceğine karar verin ve rakamları kimin değiştirebileceğini seçin. Küçük bir arkadaş grubu bunların hepsini görmezden gelebilir, çünkü yeni gruplar sonuna kadar açık başlar."
+cta:
+  heading: "Derli toplu bir grup yönetmeye hazır mısınız?"
+  body: "Bir hesap oluşturun, bir grup kurun ve davet bağlantısını gönderin. Açık bırakın ya da grup büyüyüp titizleştiğinde kuralları sıkılaştırın."
+problem:
+  heading: "Birinin rakamları düzenli tutması gerekiyor"
+  body: "Dört ev arkadaşı güvene dayanarak idare edebilir. Bir düğün hafta sonunda otuz misafir muhtemelen edemez. Her ev, gezi veya etkinlik için bir grup kurun; her grupta en fazla 50 kişi olabilir ve her grubun kendi üyeleri, kendi rolleri ve kendi kuralları vardır. Panonuz hepsini, her birinde nerede durduğunuzla birlikte tek ekranda listeler. Çoğu grup ayarlara hiç dokunmaz. Dokunanlarda genellikle bunları isteyecek kadar düzenli biri vardır."
+workflow:
+  heading: "Boş gruptan kilitli gruba"
+  steps:
+    - title: "Bağlantı veya QR koduyla davet edin"
+      body: "**Başkalarını davet et**'i açın, bağlantının ne kadar süre geçerli olacağını seçin (15 dakika, 1 saat, 1 gün veya 5 gün), sonra bağlantıyı kopyalayın ya da insanların okutması için QR kodunu gösterin. Uygulamanın içinden, başka bir grubu paylaştığınız kişileri de davet edebilirsiniz."
+      shot: S03
+      shotAlt: "Bir grup bağlantısını, QR kodunu ve bağlantının ne kadar süre geçerli olacağı seçimini gösteren davet penceresi"
+    - title: "Katılmadan önce bir göz atsınlar"
+      body: "Bağlantıya sahip herkes oturum açar veya hesap oluşturur, grubun bir önizlemesini görür ve grupta kullanmak istediği adı seçer. Sonra **Gruba Katıl**'a basar."
+      shot: S04
+      shotAlt: "Oturum açmış bir kişiye katılmadan önce gösterilen bir grubun katılma önizlemesi"
+    - title: "Kimin katılacağını onaylayın"
+      body: "Onayı açın; bağlantıyı kullananlar bir yönetici içeri alana kadar bekleyen üye olarak bekler. Yöneticiler onları **Güvenlik** altındaki **Bekleyen Üyeler** bölümünde bulur ve **Onayla** veya **Reddet**'i seçer. O zamana kadar bekleyen kişi grupta hiçbir şey göremez."
+      shot: S14
+      shotAlt: "Bir yöneticinin onaylamasını veya reddetmesini bekleyen üyeler"
+    - title: "Kimin neyi değiştirebileceğini seçin"
+      body: "**Açık** veya **Yönetilen** şablonunu seçin ya da izinleri tek tek ayarlayın. Sonra herkese bir rol verin: yönetici, üye veya izleyici. İzinleri ve rolleri yalnızca yöneticiler değiştirebilir."
+      shot: S13
+      shotAlt: "İki hazır şablonu ve özel izinleri gösteren grup ayarları güvenlik sekmesi"
+    - title: "İş bitince kilitleyin"
+      body: "Gezi bittiğinde ve rakamlar oturduğunda bir yönetici **Grubu kilitle**'yi açabilir. Kimse harcama ekleyemez ya da değiştiremez, ödeme kaydedemez, liste ve anketleri düzenleyemez; bir afiş de bunu söyler. Kimse sessizce geç kalmış bir taksi ekleyemez. Gerçekten biri çıkarsa yönetici grubun kilidini açabilir."
+      shot: S15
+      shotAlt: "Kilitli olduğunu söyleyen afişi gösteren bir grup"
+options:
+  heading: "Yöneticiler, üyeler ve izleyiciler"
+  items:
+    - title: "Yönetici"
+      body: "Grubu yürütür. Yöneticiler yeni üyeleri onaylar, rolleri ve izinleri değiştirir, grubu kilitler, kilidini açar ve kapatır. Bir grubu kuran kişi yönetici olarak başlar ve grup asla yöneticisiz kalmaz, çünkü son yöneticinin yetkisi alınamaz."
+    - title: "Üye"
+      body: "Katılır. Bir üyenin neler yapabileceği grubun izinlerine bağlıdır. Açık iş birliği olan bir grupta hemen her şey. Yönetilen bir grupta üyeler yalnızca kendi oluşturdukları harcamaları ve listeleri değiştirebilir."
+    - title: "İzleyici"
+      body: "Her şeyi görür, hiçbir şeyi değiştirmez. Bir izleyici harcama veya liste ekleyemez ya da düzenleyemez, kimseyi davet edemez, ayarları değiştiremez, kapak görseline dokunamaz. Rakamları izlemek isteyen ve kurcalamayacağına söz veren biri için ideal."
+sections:
+  - heading: "Açık, yönetilen ya da kendi kurallarınız"
+    body: "Yeni gruplar **Açık** şablonuyla, yani açık iş birliğiyle başlar: herkes insanları davet edebilir, harcamaları değiştirebilir ve listeleri düzenleyebilir; yeni üyeler otomatik katılır. **Yönetilen** şablon, birinin ağabey ya da abla rolüne girmesi gerektiğinde içindir. Yedi izni tek tek de ayarlayabilirsiniz; birini elle değiştirmek grubu özel ayara geçirir. Ne seçerseniz seçin izinlerin kendisini yalnızca yöneticiler değiştirebilir ve her değişiklik etkinlik akışında görünür. Bir [ev arkadaşları](page:use-case/housemates) dairesi her şeyi açık bırakabilir. Büyük bir [etkinlik veya kutlama](page:use-case/events-and-celebrations) çoğu zaman Yönetilen ister, böylece kimin katılacağından biri sorumlu olur. Bunların hepsine yeni misiniz? [Nasıl çalışır](page:how-it-works) ilk harcamadan ödeşmeye kadar bütün yolculuğu anlatır."
+    items:
+      - "**Harcamaları kimler düzenleyebilir.** Açık iş birliği: her üye. Yönetilen grup: oluşturanlar ve yöneticiler."
+      - "**Harcamaları kimler silebilir.** Açık iş birliği: her üye. Yönetilen grup: oluşturanlar ve yöneticiler."
+      - "**Listeleri kim düzenleyebilir.** Açık iş birliği: her üye. Yönetilen grup: oluşturanlar ve yöneticiler."
+      - "**Üyeleri kimler davet edebilir.** Açık iş birliği: her üye. Yönetilen grup: yalnızca yöneticiler."
+      - "**Yeni üye onayı.** Açık iş birliği: otomatik. Yönetilen grup: yönetici onayı gerekli."
+      - "**Ayarları kimler yönetebilir.** Açık iş birliği: her üye. Yönetilen grup: yalnızca yöneticiler."
+      - "**Kapak resmini kim değiştirebilir.** Açık iş birliği: her üye. Yönetilen grup: yalnızca yöneticiler."
+  - heading: "Adınız, fotoğrafınız, kapak görseliniz"
+    body: "Her grubun kendi oyuncu kadrosu vardır. İnsanların her grupta göreceği adı (2 ila 50 karakter, grupta benzersiz) ve profil fotoğraflarınızdan hangisini orada takacağınızı seçin. Evde **Sam**, gezide **Sam (arabası olan)** olun. Ayarları değiştirmeye izni olan herkes grubu yeniden adlandırabilir ve açıklamasını düzenleyebilir. Kapak görselinin, yani 10 MB'a kadar bir JPEG, PNG, GIF veya WebP'nin, kendine ait bir izni vardır."
+  - heading: "Arşivleyin, kilitleyin ya da kapatın"
+    body: "Bir grubu kaldırmanın üç yolu var, en hafifinden en ciddisine."
+    items:
+      - "**Arşivle** grubu yalnızca sizin panonuzdan gizler, kimsenin panosundan değil. Yine açıp eskisi gibi kullanabilirsiniz; **Grubu Arşivden Çıkar** onu geri getirir."
+      - "**Kilitle** bir yönetici kilidi açana kadar değişiklikleri dondurur. Herkes grubu ve geçmişini yine de okuyabilir."
+      - "**Kapat** kalıcıdır ve herkes için geçerlidir. Bunu yalnızca bir yönetici yapabilir; onaylamak için grubun adını yazar ve bundan sonra kimse grubu yeniden açamaz."
+  - heading: "Gruptan ayrılmak"
+    body: "Herkes ödeştikten sonra ayrılabilir. Tek bir para biriminde bile borçluyken veya alacaklıyken, sizi ilgilendiren bir harcama sorusu açıkken ya da son yönetici veya tek üye sizsiniz diye ayrılamazsınız. [Ödemeyi kaydedin](page:feature/settle-up), [harcama sorusunu](page:guide/what-to-do-when-someone-disputes-a-shared-expense) çözün ya da başka birini yönetici yapın, sonra çıkın. Geri dönmek için yeni bir davet gerekir."
+limits:
+  heading: "Makul ölçüde: ince yazı"
+  items:
+    - "Bir grupta en fazla 50 kişi olabilir."
+    - "İzinleri ve rolleri yalnızca yöneticiler değiştirebilir. Son yöneticinin yetkisi alınamaz."
+    - "Harcama düzenlemeyi **Sadece yöneticiler** olarak ayarlamak, harcamayı yalnızca yöneticilerin ekleyebileceği anlamına da gelir."
+    - "Bir kilit harcamalarda, yeni ödemelerde, listelerde ve anketlerde değişikliği durdurur. Herkes grubu ve geçmişini yine de okuyabilir ve ödemelere tepki verebilir."
+    - "Kapatmak kalıcıdır. Uygulamada kapatılmış bir grubu yeniden açmanın yolu yoktur."
+    - "Yeni bir davet bağlantısı oluşturmak eskilerini iptal etmez. Her bağlantı kendi süresi dolana kadar geçerlidir; bu yüzden nereye düşebileceğinden endişeliyseniz kısa bir süre seçin."
+    - "Uygulama içi davetler, en son etkin olan 10 grubunuzdaki kişileri listeler. Diğer herkes için bağlantı gerekir ve kimin davet edebileceği grubun izinlerine bağlıdır."
+    - "Katılmak için hesap gerekir ve insanlar bir şey ekleyebilmeden önce e-postalarını doğrulamalıdır."
+useCasesHeading: "Biraz düzenin işe yaradığı yerler"
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Bir izleyici harcama ekleyebilir mi?"
+      a: "Hayır. İzleyici her şeyi görür, hiçbir şeyi değiştirmez. Harcama veya liste ekleyemez ya da düzenleyemez, kimseyi davet edemez, ayarları değiştiremez."
+    - q: "Biri borçluyken gruptan ayrılabilir mi?"
+      a: "Hayır. Tek bir para biriminde bile borçluyken veya alacaklıyken kimse gruptan ayrılamaz. Önce ödeşin, sonra çıkın."
+    - q: "Bir grup kapatılınca ne olur?"
+      a: "Kimse onu yeniden açamaz. Grubu yalnızca bir yönetici kapatabilir, onaylamak için grubun adını yazması gerekir ve grup herkes için erişilemez olur. Sadece değişiklikleri durdurmak istiyorsanız kilitleyin. Sadece kendi panonuzdan kalkmasını istiyorsanız arşivleyin."
+    - q: "Bir kilidi geri alabilir miyim?"
+      a: "Evet. Bir yönetici grubun kilidini açabilir ve değişiklikler yeniden çalışır."
+    - q: "İnsanlar katılmadan önce onları onaylamak zorunda mıyım?"
+      a: "Yalnızca isterseniz. Yeni gruplar, bağlantıyı kullananların otomatik katıldığı Açık şablonla başlar. Yönetici onayını açın ya da Yönetilen şablonu seçin; her kişi bir yönetici içeri alana kadar bekler."
+    - q: "Bir grupta kaç kişi olabilir?"
+      a: "En fazla 50."

@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Bantuan dan dukungan | Side Badger"
+  description: "Lupa kata sandi, tautan tak mau dibuka, pembayaran salah catat? Jawaban singkat untuk hal yang sering bikin buntu di Side Badger, dan cara menghubungi kami."
+h1: "Bantuan dan dukungan, tanpa musik tunggu"
+navLabel: "Bantuan dan dukungan"
+lead: "Jawaban singkat untuk hal-hal yang membuat orang buntu, dari lupa kata sandi sampai menutup grup untuk selamanya. Tiap jawaban menautkan ke halaman yang menjelaskan lebih lanjut. Pertanyaan Anda tidak ada? Beri tahu kami dari dalam aplikasi, atau kirim pesan kepada kami."
+cta:
+  heading: "Datang mencari bantuan, lalu betah membagi tagihan?"
+  body: "Belum punya akun? Mulai grup, bagikan tautannya, dan tambahkan pengeluaran pertama. Gratis, tanpa iklan, tanpa batas harian."
+groups:
+  - heading: "Masuk ke akun"
+    items:
+      - q: "Lupa kata sandi?"
+        a: "Badger terbaik pun pernah mengalaminya. Pilih **Lupa kata sandi?** di layar **Masuk**, masukkan email akun Anda, lalu ikuti tautan dalam email yang kami kirim untuk memilih kata sandi baru. [Cara kerja](page:how-it-works) membahas apa lagi yang diperlukan sebuah akun."
+      - q: "Saya sudah mendaftar, tetapi tidak bisa menambahkan apa pun. Kenapa?"
+        a: "Paling sering karena email Anda belum diverifikasi, jadi buka tautan di email verifikasi, atau pilih **Kirim ulang email verifikasi** pada banner pengingat untuk mendapat yang baru. Jika sudah terverifikasi, bisa jadi grupnya dikunci atau izinnya tidak mengizinkan Anda, dan seorang pemirsa melihat semuanya tetapi tidak mengubah apa pun, seperti dijelaskan [grup dan izin](page:feature/groups-and-permissions)."
+      - q: "Bagaimana cara mengubah email atau kata sandi saya?"
+        a: "Di **Pengaturan**, pilih **Ubah Email** atau **Ubah Kata Sandi**. Keduanya meminta kata sandi Anda saat ini lebih dulu, dan alamat email baru perlu diverifikasi lewat tautan yang kami kirim ke alamat itu. [Cara kerja](page:how-it-works) membahas soal akun."
+      - q: "Bisakah saya masuk dengan Google atau Apple?"
+        a: "Tidak. Anda hanya perlu alamat email dan kata sandi minimal 12 karakter, dan Anda bisa mencentang **Ingat saya** di ponsel atau komputer Anda sendiri. Halaman [aplikasi web](page:feature/web-app) membahas sisa cara memulai."
+  - heading: "Bergabung dengan grup"
+    items:
+      - q: "Seseorang mengirimi saya tautan undangan. Bagaimana cara bergabung?"
+        a: "Buka tautannya, lalu masuk atau buat akun gratis. Anda akan melihat pratinjau grup, memilih nama yang akan dilihat orang untuk Anda di sana, lalu menekan **Bergabung dengan Grup**. [Grup dan izin](page:feature/groups-and-permissions) menunjukkan seluruh jalur masuknya."
+      - q: "Tertulis \"Menunggu persetujuan\". Apakah saya melakukan kesalahan?"
+        a: "Sama sekali tidak. Grup ini membiarkan admin yang meloloskan tiap orang, jadi permintaan Anda sudah masuk ke admin-nya, dan Anda belum bisa melihat isinya sampai salah satu dari mereka menyetujuinya. Senggolan ramah secara langsung diperbolehkan, dan [grup dan izin](page:feature/groups-and-permissions) menjelaskan soal persetujuan."
+      - q: "Tautannya dibilang tidak valid atau sudah kedaluwarsa."
+        a: "Tautan undangan berlaku selama yang dipilih pembuatnya, dari 15 menit hingga 5 hari. Minta tautan baru kepada seseorang di grup, atau kode QR jika kalian berada di ruangan yang sama. [Cara kerja](page:how-it-works) membahas soal undangan."
+  - heading: "Pengeluaran"
+    items:
+      - q: "Bagaimana cara menambahkan pengeluaran?"
+        a: "Buka grup dan pilih **Tambah Pengeluaran**. Isi untuk apa, berapa, siapa yang membayar, dan siapa yang ikut menanggung, lalu bagi rata, menurut jumlah pasti, atau persentase. [Bagi pengeluaran](page:feature/split-expenses) menjelaskan setiap pilihannya."
+      - q: "Bisakah sewa berulang tiap bulan?"
+        a: "Tidak otomatis, karena tidak ada pengeluaran berulang. Buka sewa bulan lalu dan pilih **Salin pengeluaran**, maka formulir muncul sudah terisi, siap untuk tanggal baru dan apa pun yang berubah. [Bagi pengeluaran](page:feature/split-expenses) membahas penyalinan lebih lanjut."
+      - q: "Saya salah mengetik jumlah. Bisakah diperbaiki?"
+        a: "Bisa. Ubah pengeluarannya, selama izin grup mengizinkan Anda dan grup tidak dikunci. Versi sebelumnya disimpan, jadi tidak ada yang perlu percaya begitu saja pada kata Anda soal apa yang berubah, seperti dijelaskan [bagi pengeluaran](page:feature/split-expenses)."
+      - q: "Ada pengeluaran yang tampak keliru, dan bukan milik saya. Lalu bagaimana?"
+        a: "Pilih **Saya punya pertanyaan** pada pengeluaran itu dan jelaskan alasannya, maka seluruh pengeluaran itu tidak masuk ke saldo siapa pun sampai orang yang bertanya, atau admin, menutup pertanyaannya. Tidak ada tombol itu? Hanya orang yang tercakup dalam sebuah pengeluaran yang bisa bertanya, admin harus mengaktifkan **Izinkan pertanyaan pengeluaran** di pengaturan grup lebih dulu, dan [panduan pengeluaran yang dipersoalkan](page:guide/what-to-do-when-someone-disputes-a-shared-expense) berisi diplomasinya."
+  - heading: "Pembayaran"
+    items:
+      - q: "Apakah Side Badger mengirim uangnya?"
+        a: "Tidak, Side Badger tidak pernah memindahkan uang. Bayar satu sama lain dengan cara apa pun yang Anda suka, lewat transfer bank, tunai, atau apa pun yang berhasil, lalu catat pembayarannya agar saldo menyusul. [Cara melunasi setelah perjalanan grup](page:guide/how-to-settle-up-after-a-group-trip) membahasnya dari awal sampai akhir."
+      - q: "Bagaimana cara mencatat pembayaran?"
+        a: "Pilih **Lunasi** di dalam grup, tentukan siapa yang membayar dan siapa yang menerima, masukkan jumlahnya atau biarkan tombol **Penyelesaian cepat** mengisinya, lalu pilih **Catat Penyelesaian**. Hanya membayar sebagian? Catat yang dibayarkan dan sisanya tetap di saldo, seperti dijelaskan [pelunasan](page:feature/settle-up)."
+      - q: "Saya salah mencatat pembayaran. Bisakah diperbaiki?"
+        a: "Orang yang mencatatnya bisa mengubahnya dari riwayat **Penyelesaian** grup, dan mereka atau admin bisa menghapusnya, yang membuatnya hilang dari saldo. Pembayaran yang melibatkan orang yang sudah keluar dari grup tidak bisa diubah. [Pelunasan](page:feature/settle-up) membahas riwayatnya."
+  - heading: "Notifikasi dan layar utama"
+    items:
+      - q: "Bagaimana cara mengaktifkan notifikasi?"
+        a: "Aktifkan **Notifikasi push** di **Pengaturan** dan izinkan saat peramban Anda bertanya. Jika peramban sudah memblokirnya, izinkan dulu di pengaturannya sendiri. Tiap perangkat diaktifkan terpisah dan pengiriman tidak dijamin, jadi anggap notifikasi sebagai sinyal, bukan janji, seperti dijelaskan halaman [aplikasi web](page:feature/web-app)."
+      - q: "Mengapa notifikasi tidak berfungsi di iPhone saya?"
+        a: "Di iPhone atau iPad, notifikasi hanya berfungsi di aplikasi yang ditambahkan ke layar utama, tidak pernah di tab peramban. Tambahkan, buka dari ikon layar utama, lalu aktifkan di **Pengaturan**. [Rencanakan bersama](page:feature/plan-together) menunjukkan hal apa saja yang diberitahukan notifikasi itu."
+      - q: "Apakah ada aplikasi yang bisa diunduh?"
+        a: "Bukan dari toko aplikasi, karena Side Badger berjalan di peramban Anda. Masuk, lalu ikuti **Tambahkan ke Layar Utama atau Dock** di **Pengaturan**, dan ia terbuka seperti aplikasi, di jendelanya sendiri. Halaman [aplikasi web](page:feature/web-app) memuat langkah-langkah untuk tiap perangkat."
+  - heading: "Keluar, mengarsipkan, mengunci, dan menutup"
+    items:
+      - q: "Bagaimana cara keluar dari grup?"
+        a: "Lunasi dulu, lalu pilih **Keluar dari Grup**. Anda tidak bisa keluar selagi berutang atau dihutangi walau hanya dalam satu mata uang, selagi pengeluaran yang melibatkan Anda masih punya pertanyaan terbuka, atau jika Anda admin terakhir atau satu-satunya anggota, dan untuk kembali diperlukan undangan baru. [Grup dan izin](page:feature/groups-and-permissions) memuat rinciannya."
+      - q: "Bagaimana cara menyingkirkan grup lama dari dasbor saya?"
+        a: "Pilih **Arsipkan Grup**. Grup itu hilang dari dasbor Anda dan bukan dari dasbor orang lain, Anda masih bisa membuka dan memakainya, dan **Batal Arsipkan Grup** mengembalikannya. [Grup dan izin](page:feature/groups-and-permissions) membandingkan pengarsipan, penguncian, dan penutupan."
+      - q: "Perjalanannya sudah selesai. Bisakah kami menghentikan perubahan angka?"
+        a: "Bisa. Admin dapat mengaktifkan **Kunci Grup** di pengaturan grup, dan tidak ada yang bisa menambah atau mengubah pengeluaran, mencatat pembayaran baru, atau mengubah daftar dan polling sampai admin membukanya kembali. Semua orang tetap bisa membaca grup dan riwayatnya, dan tidak ada taksi terlambat yang menyelinap masuk, seperti dijelaskan [grup dan izin](page:feature/groups-and-permissions)."
+      - q: "Bisakah saya menghapus grup?"
+        a: "Admin dapat menutupnya dengan **Tutup grup**, setelah mengetik nama grup untuk konfirmasi. Penutupan bersifat permanen dan membuat grup tidak dapat diakses siapa pun, jadi jika Anda hanya ingin grup itu tak terlihat, arsipkan saja. [Grup dan izin](page:feature/groups-and-permissions) memuat ketentuan rincinya."
+contact:
+  heading: "Masih buntu?"
+  items:
+    - q: "Menemukan bug, atau ingin sesuatu diubah?"
+      a: "Beri tahu kami dari dalam aplikasi. Pilih **Umpan Balik** di menu akun Anda, lalu **Kirim Umpan Balik**, dan pilih **Laporkan Masalah**, **Minta Bantuan**, atau **Permintaan Fitur**. Lampirkan tangkapan layar jika membantu, dan saat kami membalas, Anda akan menemukannya di utas yang sama."
+    - q: "Lebih suka lewat email?"
+      a: "Tulis ke alamat di bawah. Sebutkan grup mana yang dimaksud, apa yang Anda lakukan, dan apa yang Anda harapkan terjadi. Curhat boleh; kata sandi jangan, jadi jangan pernah mengirim kata sandi Anda."
+  emailLabel: "Email kami di"
+  email: support@sidebadger.me

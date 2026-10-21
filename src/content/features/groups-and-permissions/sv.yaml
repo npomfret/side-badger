@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: Gruppadministration och behörigheter | Side Badger
+  description: Bjud in med länk eller QR-kod, godkänn vem som får vara med, gör tittare, ställ in behörigheter och lås gruppen när den är klar. Era regler, med måtta.
+h1: "Gruppadministration och behörigheter: era regler, med måtta"
+navLabel: Grupper och behörigheter
+lead: Vissa grupper behöver en kassör. Side Badger har en inställning för det. Bjud in folk med en länk eller QR-kod, bestäm vem som släpps in och välj vem som får ändra siffrorna. En liten vängrupp kan strunta i allt det här, eftersom nya grupper börjar helt öppna.
+cta:
+  heading: Redo att hålla ordning i gruppen?
+  body: Skapa ett konto, starta en grupp och skicka inbjudningslänken. Låt den vara öppen, eller skärp reglerna när gruppen blir större eller kinkigare.
+problem:
+  heading: Någon måste hålla siffrorna i ordning
+  body: Fyra rumskamrater klarar sig på förtroende. Trettio gäster på en bröllopshelg gör det förmodligen inte. Gör en grupp för varje hushåll, resa eller evenemang, med upp till 50 personer i, så har varje grupp sina egna medlemmar, sina egna roller och sina egna regler. Din översikt listar dem alla, med var du står i var och en, på en och samma skärm. De flesta grupper rör aldrig inställningarna. De som gör det har oftast någon som är organiserad nog att vilja ha dem.
+workflow:
+  heading: Från tom grupp till låst grupp
+  steps:
+    - title: Bjud in med länk eller QR-kod
+      body: Öppna **Bjud in andra**, välj hur länge länken ska gälla (15 minuter, 1 timme, 1 dag eller 5 dagar) och kopiera sedan länken eller visa QR-koden så att folk kan skanna den. Du kan också bjuda in personer som du redan delar en annan grupp med, inifrån appen.
+      shot: S03
+      shotAlt: Inbjudningsdialogen med en grupplänk, dess QR-kod och valet av hur länge länken gäller
+    - title: Låt dem titta innan de går med
+      body: Den som har länken loggar in eller skapar ett konto, ser en förhandsvisning av gruppen och väljer vilket namn hen vill använda i den. Sedan trycker hen på **Gå med i grupp**.
+      shot: S04
+      shotAlt: Förhandsvisningen av en grupp, som en inloggad person ser innan hen går med
+    - title: Godkänn vem som går med
+      body: Slå på godkännande så väntar de som använder länken som väntande medlemmar tills en administratör släpper in dem. Administratörer hittar dem under **Väntande medlemmar** i **Säkerhet och behörigheter** och väljer **Godkänn** eller **Avvisa**. Tills dess kan en väntande person inte se något i gruppen.
+      shot: S14
+      shotAlt: Väntande medlemmar som väntar på att en administratör ska godkänna eller avvisa dem
+    - title: Välj vem som får ändra vad
+      body: Välj **Öppet samarbete** eller **Hanterad grupp**, eller ställ in behörigheterna en och en. Ge sedan varje person en roll, administratör, medlem eller tittare. Bara administratörer kan ändra behörigheter och roller.
+      shot: S13
+      shotAlt: Gruppinställningarnas säkerhetsflik med de två förinställningarna och de anpassade behörigheterna
+    - title: Lås den när den är klar
+      body: När resan är över och siffrorna har gjorts upp kan en administratör slå på **Lås grupp**. Ingen kan lägga till eller ändra utgifter, registrera betalningar eller redigera listor och omröstningar, och ett meddelande säger det. Ingen kan i tysthet lägga till en sen taxi. Om en ändå dyker upp kan en administratör låsa upp gruppen.
+      shot: S15
+      shotAlt: En grupp som visar meddelandet om att den är låst
+options:
+  heading: Administratörer, medlemmar och tittare
+  items:
+    - title: Administratör
+      body: Styr gruppen. Administratörer godkänner nya medlemmar, ändrar roller och behörigheter, låser och låser upp gruppen och stänger den. Den som skapar en grupp börjar som dess administratör, och en grupp blir aldrig utan en, eftersom den sista administratören inte kan nedgraderas.
+    - title: Medlem
+      body: Deltar. Vad en medlem kan göra beror på gruppens behörigheter. I en grupp med Öppet samarbete är det nästan allt. I en Hanterad grupp kan medlemmar bara ändra de utgifter och listor de själva har skapat.
+    - title: Tittare
+      body: Ser allt och ändrar inget. En tittare kan inte lägga till eller redigera utgifter eller listor, bjuda in folk, ändra inställningar eller röra rubrikbilden. Praktiskt för den som vill hålla koll på siffrorna och lovar att inte pilla på dem.
+sections:
+  - heading: Öppet, hanterat eller egna regler
+    body: Nya grupper börjar på **Öppet samarbete**, där alla kan bjuda in folk, ändra utgifter och redigera listor, och nya medlemmar går med automatiskt. **Hanterad grupp** är till för när någon behöver vara den vuxna. Du kan också ställa in de sju behörigheterna en i taget, och ändrar du en för hand blir gruppen anpassad. Vad du än väljer kan bara administratörer ändra själva behörigheterna, och varje ändring syns i aktivitetsflödet. Ett kollektiv med [rumskamrater](page:use-case/housemates) kan låta allt vara öppet. Ett stort [evenemang eller firande](page:use-case/events-and-celebrations) vill ofta ha Hanterad, så att någon bestämmer vem som går med. Ny på det här? [Så fungerar det](page:how-it-works) går igenom hela resan, från första utgiften till uppgjort.
+    items:
+      - "**Vem som kan redigera utgifter.** Öppet samarbete: alla medlemmar. Hanterad grupp: skapare och administratörer."
+      - "**Vem som kan ta bort utgifter.** Öppet samarbete: alla medlemmar. Hanterad grupp: skapare och administratörer."
+      - "**Vem som kan redigera listor.** Öppet samarbete: alla medlemmar. Hanterad grupp: skapare och administratörer."
+      - "**Vem som kan bjuda in medlemmar.** Öppet samarbete: alla medlemmar. Hanterad grupp: bara administratörer."
+      - "**Godkännande av nya medlemmar.** Öppet samarbete: automatiskt. Hanterad grupp: administratörens godkännande krävs."
+      - "**Vem som kan ändra inställningar.** Öppet samarbete: alla medlemmar. Hanterad grupp: bara administratörer."
+      - "**Vem som kan byta rubrikbild.** Öppet samarbete: alla medlemmar. Hanterad grupp: bara administratörer."
+  - heading: Ditt namn, ditt foto, din rubrikbild
+    body: Varje grupp har sin egen rollista. Välj namnet som folk ser i varje grupp (2 till 50 tecken, och unikt inom gruppen) och vilket av dina profilfoton du bär där. Var **Sam** i huset och **Sam (har bilen)** på resan. Alla som får ändra inställningar kan byta gruppens namn och redigera dess beskrivning. Rubrikbilden, en JPEG-, PNG-, GIF- eller WebP-fil på upp till 10 MB, har en egen behörighet.
+  - heading: Arkivera, lås eller stäng
+    body: Tre sätt att lägga undan en grupp, från minst till mest allvarligt.
+    items:
+      - "**Arkivera** döljer gruppen från din egen översikt, och ingen annans. Du kan fortfarande öppna den och använda den som förut, och **Avarkivera grupp** tar tillbaka den."
+      - "**Lås** fryser ändringar tills en administratör låser upp. Alla kan fortfarande läsa gruppen och dess historik."
+      - "**Stäng** är permanent, och för alla. Bara en administratör kan göra det, genom att skriva gruppens namn som bekräftelse, och ingen kan öppna gruppen igen."
+  - heading: Att lämna en grupp
+    body: Alla kan lämna gruppen när de har gjort upp. Du kan inte lämna den så länge du är skyldig eller har pengar att få i så mycket som en valuta, så länge en öppen fråga om en utgift rör dig, eller om du är den sista administratören eller den enda medlemmen. [Registrera betalningen](page:feature/settle-up), reda ut [utgiftsfrågan](page:guide/what-to-do-when-someone-disputes-a-shared-expense) eller gör någon annan till administratör, och gå sedan. För att komma tillbaka behöver du en ny inbjudan.
+limits:
+  heading: "Med måtta: det finstilta"
+  items:
+    - En grupp rymmer upp till 50 personer.
+    - Bara administratörer kan ändra behörigheter och roller. Den sista administratören kan inte nedgraderas.
+    - Om du sätter redigering av utgifter till **Endast administratörer** betyder det också att bara administratörer kan lägga till utgifter.
+    - Ett lås stoppar ändringar av utgifter, nya betalningar, listor och omröstningar. Alla kan fortfarande läsa gruppen och dess historik, och reagera på betalningar.
+    - Att stänga är permanent. Appen har inget sätt att öppna en stängd grupp igen.
+    - Att skapa en ny inbjudningslänk avbryter inte de gamla. Varje länk gäller tills den går ut, så välj en kort när du är orolig för var den kan hamna.
+    - Inbjudningar i appen listar personer från dina 10 senast aktiva grupper. Alla andra behöver länken, och vem som får bjuda in beror på gruppens behörigheter.
+    - Att gå med kräver ett konto, och folk måste verifiera sin e-postadress innan de kan lägga till något.
+useCasesHeading: Där lite ordning hjälper
+faq:
+  heading: Frågor
+  items:
+    - q: Kan en tittare lägga till utgifter?
+      a: Nej. En tittare ser allt och ändrar inget. Hen kan inte lägga till eller redigera utgifter eller listor, bjuda in folk eller ändra inställningar.
+    - q: Kan någon lämna gruppen medan hen är skyldig pengar?
+      a: Nej. Ingen kan lämna en grupp så länge hen är skyldig eller har pengar att få i så mycket som en valuta. Gör upp först och gå sedan.
+    - q: Vad händer när en grupp stängs?
+      a: Ingen kan öppna den igen. Bara en administratör kan stänga en grupp, hen måste skriva gruppens namn som bekräftelse, och gruppen blir otillgänglig för alla. Vill du bara stoppa ändringar, lås den. Vill du bara ha bort den från din egen översikt, arkivera den.
+    - q: Kan jag ångra ett lås?
+      a: Ja. En administratör kan låsa upp gruppen, och då fungerar ändringar igen.
+    - q: Måste jag godkänna folk innan de går med?
+      a: Bara om du vill. Nya grupper börjar på Öppet samarbete, där de som använder länken går med automatiskt. Slå på administratörsgodkännande, eller välj Hanterad grupp, så får varje person vänta tills en administratör släpper in hen.
+    - q: Hur många kan vara med i en grupp?
+      a: Upp till 50.

@@ -1,0 +1,106 @@
+translatedFrom: "6c8b8630"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - privacy-posture.no-ads
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - polls.villa-shortlist-vote
+  - permissions.viewer-sees-everything
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Näin jaat polttariviikonlopun kulut | Side Badger"
+  description: "Polttarisankari ei maksa mitään, ja maanantaina kaikki puhuvat vielä keskenään. Näin jaat polttariviikonlopun kulut, laskut mukana."
+h1: "Näin jaat polttariviikonlopun kulut"
+navLabel: "Polttariviikonloppu"
+lead: "Polttarisankari ei maksa mitään, joten muut jakavat jokaisen kulun [tasan](page:feature/split-expenses) keskenään. Jätä ihmiset pois kuluista, joihin he eivät osallistu, ja pidä polttarisankari poissa ryhmästä, jotta yllätys pysyy."
+cta:
+  heading: "Pidä kirjaa, pidä yllätys"
+  body: "Perusta ryhmä, lähetä linkki kaikille paitsi polttarisankarille ja lisää jokainen kulu, kun se syntyy. Side Badger on ilmainen, ilman mainoksia ja päivittäisiä rajoja."
+sections:
+  - heading: "Neljä ystävää ja yksi yllätys"
+    body: "Hannah, Isla, Jess ja Kat vievät Gracen polttariviikonlopulle. Grace on polttarisankari, joten hän ei maksa mistään. Hän ei myöskään ole ryhmässä, joten hän ei näe, mihin ystävät hänen takiaan rahaa käyttävät. Hannah varaa mökin, Isla maksaa kylpyläpäivän, Jess hoitaa illallisen ja Kat ottaa taksin. Sunnuntaina jokainen on maksanut jotain, eikä kukaan osaa sanoa, kuka on plussalla. Laskut ovat samat sekä sulhasen että morsiamen polttareissa, kuka tahansa polttarisankari onkin."
+  - heading: "Jaa maksavien eikä paikalla olevien kesken"
+    body: "Polttarisankarin osuus ei katoa. Se jaetaan muille. Mökki maksaa 720 £, ja sen maksaa neljä ystävää, joten se on 180 £ kullekin, ja Gracen paikka on jo tässä summassa. Illallinen on 260 £, eli 65 £ kullekin. Taksi on 44 £, eli 11 £ kullekin. Se, minkä joku jättää väliin, otetaan pois vain siitä kulusta. Kat jättää kylpylän väliin, joten sen 360 £, joka kattaa myös Gracen paikan, jaetaan Hannahin, Islan ja Jessin kesken, 120 £ kullekin. Laske yhteen, niin Hannah, Isla ja Jess ovat kukin velkaa 376 £ viikonlopusta, ja Kat on velkaa 256 £."
+  - heading: "Perusta se Side Badgerissa"
+    items:
+      - "Perusta ryhmä viikonlopulle ja anna sille tylsä nimi, vaikkapa Mökkiviikonloppu. Grace ei ole jäsen, ja ryhmän näkevät vain sen jäsenet."
+      - >-
+        Valitse **Kutsu muita** ja lähetä linkki tai näytä QR-koodi vain paikassa, jossa Grace ei sitä näe. Linkki näyttää ryhmän esikatselun, ennen kuin kukaan liittyy. Valitse, kuinka kauan se on voimassa, 15 minuutista 5 päivään. Vanha linkki toimii, kunnes se vanhenee, joten älä jätä sitä voimaan pidemmäksi aikaa kuin tarvitset.
+      - >-
+        Valitse jokaiselle kululle **Lisää kulu**, syötä summa ja valitse maksaja kohdasta **Kuka maksoi?** Merkitse kohdassa **Jaa seuraavien kesken** maksavat ihmiset ja jätä pois ne, jotka jättivät kulun väliin, kuten Kat kylpylän. Valitse kohdasta **Miten jaetaan** vaihtoehto **Tasan**.
+      - >-
+        Kun olet kotona, avaa ryhmän **Saldot**. Side Badger näyttää, kuka on velkaa kenelle, ja ehdottaa lyhyttä maksulistaa. Tässä niitä on kolme: Kat maksaa Hannahille 212 £, Jess maksaa Hannahille 116 £ ja Isla maksaa Hannahille 16 £. Maksakaa toisillenne miten haluatte ja kirjatkaa sitten jokainen maksu kohdassa **Maksa velat**.
+  - heading: "Ennen varausta: budjetti ja etumaksu"
+    body: "Sopikaa budjetti ennen kuin kukaan varaa mitään. Valitse **Lisää äänestys**, kysy, paljonko ryhmä käyttää mökkiin, ja tarjoa vaihtoehdoiksi muutama summa. Ota **Anonyymi äänestys** käyttöön äänestystä luodessasi, jotta ei näy, kuka äänesti mitä, eikä kenenkään tarvitse puolustaa pienempää budjettia ääneen. Sulje äänestys, kun kaikki ovat äänestäneet, niin voittaja näkyy. Sitten tulee etumaksu. Se, joka varaa, maksaa sen ja lisää kuluksi, joka jaetaan tasan, ja loppuosa lisätään toisena kuluna, kun se erääntyy. Muut voivat lähettää osuutensa heti ja kirjata maksun tai odottaa lopullista laskua. Saldot ovat samat kummassakin tapauksessa."
+  - heading: "Kun joku tulee vain yhdeksi yöksi"
+    body: "Ystävän, joka saapuu vain lauantaiksi, ei pitäisi maksaa perjantaista. Jätä hänet pois kuluista, joihin hän ei osallistunut. Jos kulu riippuu siitä, kuinka kauan kukin viipyy, kuten huone, valitse kohdasta **Miten jaetaan** vaihtoehto **Tarkat summat** ja kirjoita kunkin osuus, jonka on oltava yhteensä loppusumma. Laske ensin hinta henkilöä ja yötä kohden ja kerro se kunkin yöpymisillä. Lisää kuluista, jotka eivät ole kaikille samat, löytyy sivulta [ryhmämatkat](page:use-case/group-trips)."
+  - heading: "Mitä Side Badger ei tee tässä"
+    items:
+      - "Se ei koskaan siirrä rahaa. Maksatte toisillenne tilisiirrolla, käteisellä tai miten parhaaksi näette ja kirjaatte maksun, jotta saldot päivittyvät kaikille."
+      - "Se ei lähetä maksumuistutuksia. Ystävällinen muistutus ryhmächatissa on edelleen ihmisen työ."
+      - "Jokaisella kululla on yksi maksaja, eikä Side Badger osaa jakaa kuittia rivi riviltä. Jos kaksi korttia maksoi mökin, syötä se kahtena kuluna. Jos jotkut tilasivat illallisella lisää, syötä lisät omana kulunaan."
+      - "Se pitää kirjaa rahasta, ei matkaohjelmasta. Äänestykset ja kommentit koskevat kuluja, joten viikonlopun suunnitelmat jäävät ryhmächattiinne."
+exampleAfter: 2
+example:
+  heading: "Gracen polttariviikonloppu, jaettuna neljään"
+  currency: GBP
+  people:
+    - id: hannah
+      name: Hannah
+    - id: isla
+      name: Isla
+    - id: jess
+      name: Jess
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Mökki"
+      payer: hannah
+      amount: 720
+      split:
+        method: equal
+    - label: "Kylpyläpäivä"
+      payer: isla
+      amount: 360
+      split:
+        method: equal
+        shares:
+          hannah: 1
+          isla: 1
+          jess: 1
+    - label: "Illallinen"
+      payer: jess
+      amount: 260
+      split:
+        method: equal
+    - label: "Taksi"
+      payer: kat
+      amount: 44
+      split:
+        method: equal
+faq:
+  heading: "Kysymyksiä"
+  items:
+    - q: "Maksaako bestman tai kaaso enemmän?"
+      a: "Vain jos ryhmä niin sopii. Sovellus ei anna kenellekään erityisasemaa laskuissa. Jos joku kattaa enemmän, valitse kohdasta **Miten jaetaan** vaihtoehto **Tarkat summat** tai **Prosentteina** ja syötä sovitut osuudet."
+    - q: "Entä juomat, joita jotkut eivät ottaneet?"
+      a: "Lisää juomat omana kulunaan ja merkitse vain ne, jotka ne ottivat. Jos jokainen otti eri määrän, valitse **Tarkat summat** ja kirjoita kunkin osuus. Kukaan ei maksa siitä, mitä ei ottanut."
+    - q: "Näkeekö polttarisankari ryhmän myöhemmin?"
+      a: "Kyllä, kun yllätys on ohi. Kutsu hänet, ja ylläpitäjä voi asettaa hänelle roolin **Katselija** ryhmän asetusten kohdassa **Turvallisuus ja oikeudet**. Katselija näkee kaiken mutta ei muuta mitään, joten odota, kunnes mikään ei ole salaisuus. Hän tarvitsee liittyäkseen ilmaisen tilin."

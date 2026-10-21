@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Share villa by di nights people stay | Side Badger"
+  description: "Dev come for three nights only, so why e go pay for six? Share holiday villa by di nights people really stay, with di sums done for you."
+h1: "How to share holiday villa when people stay different nights"
+navLabel: "Share villa by nights"
+lead: "Price di stay per person per night, multiply am by each person nights, and enter di villa as **one expense wey get exact amaunts**. Side Badger go keep di count and suggest short list of payments when time reach to settle."
+cta:
+  heading: "Give di villa one neat expense"
+  body: "Make group, invite everybody with link or QR code and enter di villa with exact amounts. Side Badger go keep di running count while you dey enjoy di holiday."
+sections:
+  - heading: "Six nights, four people, na one credit card dey carry am"
+    body: "[Group trip](page:use-case/group-trips) usually dey start with one person card. Dis time na Ana own. Ana book villa for six nights, €2,100, because somebody must go first. Ana, Ben and Chloe stay all six nights. Dev fit join only for di last three, and na train e take come. Ben hire car wey Dev no go ever sit inside. Dev do di big chop shopping. To share di villa four ways na di obvious move. E make Dev pay for three nights wey e spend for house, and dat kind thing dey resurface for Christmas. To share by nights go avoid di argument, and di arithmetic go take one minute."
+  - heading: "Find di price of one person-night"
+    body: "Person-night na one person wey stay one night. Di villa cost wetin e cost, so share di price among all di person-nights, then give each person di ones wey dem use."
+    items:
+      - "**Count di person-nights.** Ana, Ben and Chloe stay six nights each and Dev stay three: 6 + 6 + 6 + 3 = 21."
+      - "**Find di price of one.** €2,100 ÷ 21 = €100 for each person-night."
+      - "**Multiply am by each person nights.** Ana, Ben and Chloe pay 6 × €100 = €600 each. Dev pay 3 × €100 = €300."
+      - "**Check di total.** €600 + €600 + €600 + €300 = €2,100. If your shares no add up to di price, one night don miss or dem count am twice."
+  - heading: "Enter am for Side Badger"
+    body: "Make group, invite di other three with link or QR code, then add di costs. Villa first."
+    items:
+      - "Choose **Add expense**. Describe am, enter 2,100 and set **Who pay?** to Ana."
+      - "Under **Split bitwin**, make sure all four people dey inside."
+      - "Under **How we go split am**, choose **Exact amaunts**. Type 600 for Ana, Ben and Chloe and 300 for Dev. Di amounts must add up to di total."
+      - "Choose **Sev Expense**."
+      - "Add di car hire di same way. Ben pay, di split na **Equal**, and Dev dey left out, because e come by train. [Share expenses](page:feature/split-expenses) cover di other ways to divide cost."
+      - "Add di chop shopping. Dev pay, di split na **Equal**, and all four dey inside."
+  - heading: "Read di result, then settle up"
+    body: "Each person bill na dem villa share plus dem share of di car and di chop shopping. Ana, Ben and Chloe come to €725 each, wey be €600 + €80 + €45. Dev come to €345, wey be €300 + €45. Subtract wetin each person pay and di balances go fall out. Ana pay €2,100, so dem owe am €1,375. Ben pay €240 and e owe €485. Dev pay €180 and e owe €165. Chloe pay nothing and e owe €725. If you leave dem, those debts go run six ways round di group. Side Badger suggest three payments instead, all to Ana. Pay am anyhow you like, then choose **Settle up** and use **Rekod Settlement** for each payment, so di balances go catch up. Kwik settul buttons dey fill in di amount. You fit read more for [settle up](page:feature/settle-up)."
+  - heading: "When di villa no be one neat price"
+    items:
+      - "**Di rooms different.** If di suite worth more than di box room, agree wetin each room cost first, then do di person-night sums one room at a time. Enter di villa as one expense with everybody total, or one expense per room. Either way, di exact amounts on expense must add up to im total."
+      - "**Deposit wey dem pay months before.** Whoever pay am go get im own expense, dated di day e pay. Share am by nights for di same proportions as di balance."
+      - "**Di booking dey for another currency.** Enter di villa for di currency wey you pay am. If di group dey convert as e dey go, use current exchange rate, or type di rate wey you really get. Di original amount go stay on di expense. [Multiple currencies](page:feature/multiple-currencies) get di detail."
+      - "**Part nights.** Somebody arrive midnight, another person leave before breakfast. Agree one rule for how to count nights and use am for everybody."
+  - heading: "Wetin Side Badger no dey do here"
+    items:
+      - "E no dey count nights for you. No split by nights or by shares dey, so you go work out each amount as above and enter **exact amaunts**."
+      - "E no dey move money. Pay each other anyhow you like, then record di payment."
+      - "Expense dey get one payer only. If two people pay for di villa, enter two expenses."
+      - "No guest access dey. Everybody for di group, Dev included, need free account."
+exampleAfter: 2
+example:
+  heading: "Di villa, di car and di shopping"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "six nights for di villa"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "di car hire"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "chop shopping"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Villa question dem"
+  items:
+    - q: "Wetin if somebody cancel?"
+      a: "Remove dem nights, redo di sums and edit di villa expense so di exact amounts go add up to di price again. Di earlier version dey kept and di edit go show for di group activity, so nobody go change number quietly. Who fit edit depend on di group permissions."
+    - q: "Di person wey book suppose pay less?"
+      a: "Na for di group to decide. To book na work, and groups no dey agree on whether e deserve discount. Whatever una agree, put am inside di exact amounts and write am for note on di expense, or for comment next to am, so nobody go need remember di deal."
+    - q: "We fit share cleaning fees different way?"
+      a: "Yes. Enter di fee as separate expense and give am im own split. Equal-equal suit flat charge for di whole house. Exact amounts suit group wey wan make di fee follow di nights too."

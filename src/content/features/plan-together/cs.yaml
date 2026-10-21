@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: "Sdílené seznamy, hlasování a komentáře k výdajům | Side Badger"
+  description: "Komentujte výdaje, zpochybněte ten divný, veďte společný nákupní seznam a hlasujte o vile. Plánujte útratu spolu, pak ji rozdělte. Zdarma, bez reklam."
+h1: "Plánujte to spolu, rozdělte to potom"
+navLabel: "Plánujte spolu"
+lead: "Nákupní seznam a účet z nákupu spolu konečně mluví. Side Badger dává vaší skupině místo, kde probrat peníze před výdajem i po něm: komentáře ke každému výdaji, způsob, jak zpochybnit ty, které vypadají špatně, sdílené seznamy a hlasování pro velká rozhodnutí. Pak [výdaje rozdělíte](page:feature/split-expenses) jako obvykle."
+cta:
+  heading: "Naplánujte to, pak rozdělte"
+  body: "Vytvořte si bezplatný účet, založte skupinu a dejte první seznam, hlasování nebo dotaz hned vedle peněz. Nevíte, co bude dál? Podívejte se, [jak to funguje](page:how-it-works)."
+problem:
+  heading: "Chat je tady, účet je tamhle"
+  body: "Skupinové výdaje obvykle žijí na dvou místech. Čísla jsou v jednom a hádka o čísla v chatu, který se v úterý odroloval z dohledu. Nákupní seznam je fotka lednice. O vile rozhodl palec nahoru od většiny lidí, asi. Side Badger drží plánování ve skupině, vedle výdajů, kterých se týká, takže je tu komentář tam, kde je cena, seznam tam, kde je nákup, hlasování pro velké rozhodnutí a způsob, jak říct „počkat, je tohle správně?“, aniž byste psali odstavec. Všechno se točí kolem peněz skupiny, kvůli kterým skupina existuje."
+workflow:
+  heading: "Od hlasování o vile po účet z nákupu"
+  steps:
+    - title: "Nechte o velkém rozhodnutí hlasovat"
+      body: "Přidejte hlasování o rozhodnutí, které určí účet, třeba o tom, která vila. Zvolte dvě až deset možností, řekněte, kolik hlasů má každý člověk, a jakmile odhlasují všichni, hlasování uzavřete a vítěz se označí."
+      shot: S17
+      shotAlt: "Uzavřené hlasování s označenou vítěznou možností a počtem hlasů u každé možnosti"
+    - title: "Napište nákupní seznam společně"
+      body: "Založte sdílený seznam, přidejte položky a odškrtávejte je, jak se dostanou do vozíku. Nákup pak přijde jako výdaj."
+      shot: S16
+      shotAlt: "Sdílený nákupní seznam s několika odškrtnutými položkami a počtem hotových"
+    - title: "Mluvte o ceně tam, kde bydlí"
+      body: "Okomentujte přímo výdaj, přiložte účtenku a zareagujte emoji. Konverzace zůstává vedle čísla, kterého se týká."
+      shot: S08
+      shotAlt: "Výdaj s podrobnostmi, náhledem účtenky, vláknem komentářů a reakcemi emoji"
+    - title: "Zpochybněte ten, který vypadá divně"
+      body: "Pokud skupina zapnula dotazy k výdajům, může kdokoli, koho se výdaj týká, zvolit **Mám dotaz**. Výdaj zůstává mimo zůstatky, dokud se dotaz nevyřeší."
+      shot: S18
+      shotAlt: "Seznam výdajů se štítkem Zpochybněno a filtrem Pouze zpochybněno"
+    - title: "Podívejte se, co se změnilo a kdo to změnil"
+      body: "Aktivita skupiny a zvonek oznámení ukazují, co je nového ve vašich skupinách. Push oznámení jsou k dispozici, pokud je chcete."
+      shot: S19
+      shotAlt: "Rozbalená nabídka oznámení se seznamem nedávné aktivity"
+options:
+  heading: "Možnosti"
+  items: []
+example:
+  heading: "Tři spolubydlící, jeden zpochybněný účet za víno"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "Velký nákup"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "Úklid"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "Víno na večírek"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Komentáře a reakce, vedle čísel"
+    body: "Každý výdaj má své vlákno komentářů, stejně tak skupina, každý seznam i každé hlasování. Zeptejte se, proč taxík stál tolik, přímo pod taxíkem, ne v chatu, ke kterému se nikdo nevrací. Přidejte fotku účtenky nebo PDF s rezervací a pak zareagujte palcem nahoru, srdcem, smíchem, údivem, smutkem nebo oslavou u výdajů, plateb a komentářů. Oslavte platbu, když dorazí. Blíž k potlesku se Side Badger nedostane."
+  - heading: "Zpochybněte výdaj bez hádky"
+    body: "Když má skupina zapnuté dotazy k výdajům, může kdokoli, koho se výdaj týká, zvolit **Mám dotaz** a říct proč. Dotaz se zveřejní jako komentář k výdaji, výdaj dostane štítek **Zpochybněno** a celý výdaj vypadne ze zůstatků všech, dokud se dotaz nevyřeší."
+    items:
+      - "**Zapnutí.** Ve výchozím stavu je vypnuto. Administrátor zapne **Povolit dotazy k výdajům** v nastavení skupiny, v části **Funkce**."
+      - "**Uzavření.** Ten, kdo se ptal, nebo administrátor zvolí **Uzavřít dotaz**. Pokud stejný výdaj zpochybnilo víc lidí, vrátí se do zůstatků, až se uzavře poslední dotaz."
+      - "**Úprava.** Když se výdaj upraví, otevřený dotaz se přenese na novou verzi pro každého, kdo v něm pořád má podíl. U toho, koho úprava vynechá, dotaz končí se starou verzí, takže mu nezbývá nic k uzavření."
+      - "**Hledání.** Seznam výdajů má filtr **Pouze zpochybněno**. Není to schvalovací krok: zadrženy jsou jen výdaje, které někdo zpochybní, a všechno ostatní se počítá, hned jak je přidáno."
+  - heading: "Jak dotaz probíhá"
+    body: "Tom přidá 45 £ za víno na večírek, rozdělené mezi všechny tři spolubydlící. Aisha nepila, takže vznese dotaz a dokud je otevřený, víno se nepočítá nikomu. Dům se shodne, že víno je Tomovo a Priyino, a Tom rozdělení upraví na ně dva. Aisha už ve výdaji není, takže její dotaz končí u dřívější verze, která se uchová, a víno se okamžitě vrací do zůstatků po 22,50 £ místo po 15 £. Kdyby Aisha ve výdaji zůstala, její dotaz by se přenesl a čekal, až ho uzavře ona nebo administrátor. Níže Aisha dluží 48 £, což je 28 £ z nákupu a 20 £ z úklidu, a Priya dluží 10,50 £, což je její podíl 70,50 £ (28 £, 20 £ a 22,50 £) minus 60 £, které zaplatila. Přesně ten druh hádky, jaký znají [spolubydlící](page:use-case/housemates). Jak dotaz formulovat, najdete v návodu [co dělat, když někdo zpochybní sdílený výdaj](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Sdílené seznamy, na nákup"
+    body: "Založte ve skupině seznam, pojmenujte ho třeba Nákupní seznam, přidávejte položky a odškrtávejte je. Přetažením změňte pořadí, sledujte, jak roste počet hotových, a seznam okomentujte, když někdo koupí špatné ovesné mléko. Hotový seznam uklidíte archivací (**Zobrazit archivované** ho vrátí) nebo seznam zkopírujete a použijete znovu. Sdílený nákupní seznam držte vedle účtů za nákupy, aby seznam říkal, co koupit, a výdaj, kolik to stálo. Kdo smí seznamy vytvářet a upravovat, závisí na oprávněních skupiny, což vysvětluje stránka [skupiny a oprávnění](page:feature/groups-and-permissions)."
+  - heading: "Hlasování, na přání anonymní"
+    body: "Zeptejte se skupiny na něco, co rozhoduje o účtu, třeba která vila, kolik utratit za dárek nebo jestli stojí výlet lodí za to. Hlasování má otázku a dvě až deset možností. Sami zvolíte, kolik hlasů má každý člověk, od jedné volby až po deset, a zda je hlasování anonymní. **Anonymní hlasování** skryje, kdo pro co hlasoval, a po prvním hlasu už ho nelze změnit. Lidé mohou svůj hlas změnit nebo odebrat, dokud se hlasování neuzavře, a pokud skupina změní názor, můžete ho znovu otevřít. Výběr vily je přesně to, z čeho se skládají [skupinové výlety](page:use-case/group-trips), a domluva na rozpočtu dárku je klasika pro [akce a oslavy](page:use-case/events-and-celebrations)."
+  - heading: "Aktivita skupiny, aby se nic nezměnilo potichu"
+    body: "Každá skupina má historii aktivity a zvonek oznámení sbírá aktivitu ze všech vašich skupin na jednom místě. Přidáte výdaj a všichni ho hned vidí, bez obnovování stránky, a aktivita ukazuje, co se změnilo a kdo to změnil. To zahrnuje přidané, upravené nebo smazané výdaje, vznesené a uzavřené dotazy, komentáře, změny seznamů a hlasování a zaznamenané platby."
+  - heading: "Push oznámení, pokud je chcete"
+    body: "Push oznámení jsou volitelná. Zapněte je v **Nastavení** účtu, v části **Oznámení**, a vaše zařízení vám dá vědět, když ve vašich skupinách vznikne nová aktivita, třeba nový výdaj nebo komentář. Každé zařízení se zapíná zvlášť a prohlížeč se nejdřív zeptá na povolení. Na iPhonu nebo iPadu fungují jen v aplikaci přidané na plochu, což vysvětluje stránka o [webové aplikaci](page:feature/web-app). Berte je jako pohodlí, ne jako slib, protože doručení není zaručeno."
+limits:
+  heading: "Omezení"
+  items:
+    - "Komentáře, seznamy a hlasování jsou pro peníze skupiny. [Podmínky služby](page:terms) žádají, aby všechno, co zveřejníte, souviselo s financemi skupiny, takže je to místo pro plánování výdajů, ne obecný chat ani aplikace na úkoly."
+    - "Komentář může mít až 500 znaků a až tři přílohy, které jsou obrázky nebo PDF do 5 MB každá. Komentář může smazat jen jeho autor."
+    - "Dotazy k výdajům jsou ve výchozím stavu vypnuté a administrátor je zapíná pro každou skupinu zvlášť. Výdaj mohou zpochybnit jen lidé, kteří jsou v něm zahrnuti, vypnutím funkce se smažou všechny otevřené dotazy a nikdo nemůže skupinu opustit, dokud má výdaj, jehož je součástí, otevřený dotaz."
+    - "Skupina může mít až 100 seznamů, každý s až 200 položkami o délce až 500 znaků. Oprávnění skupiny určují, kdo může seznamy vytvářet, upravovat a mazat, a uzamčená skupina žádné změny nepovoluje."
+    - "Skupina může mít až 50 hlasování, každé se dvěma až deseti možnostmi a až deseti hlasy na člověka. Hlasování nemají žádnou lhůtu a samy se neuzavírají."
+    - "Historie aktivity se uchovává 90 dní."
+    - "Push oznámení jsou volitelná pro každý účet a každé zařízení. Vyžadují prohlížeč, který je podporuje, a vaše povolení, na iPhonu a iPadu fungují jen z aplikace přidané na plochu a doručení není zaručeno. Neexistují žádná e-mailová ani SMS upozornění na aktivitu a žádné připomínky plateb, takže vymáhání platby zůstává na vás."
+useCasesHeading: "Kde pomáhá plánovat spolu"
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Mohou být hlasy anonymní?"
+      a: "Ano. Při vytváření hlasování zapněte **Anonymní hlasování** a skryje, kdo pro co hlasoval. Rozhodněte se před prvním hlasem, protože to pak nelze změnit."
+    - q: "Může se hlasování uzavřít samo?"
+      a: "Ne. Hlasování nemá lhůtu, takže ten, kdo ho vytvořil, zvolí **Uzavřít hlasování**, jakmile se skupina rozhodne. Když skupina změní názor, **Znovu otevřít hlasování** ho vrátí."
+    - q: "Kolik položek může seznam obsahovat?"
+      a: "Až 200 položek na seznam a až 100 seznamů na skupinu. Každá položka může mít až 500 znaků, což je spousta ovesného mléka."
+    - q: "Kdo může uzavřít dotaz a co se mezitím děje s výdajem?"
+      a: "Ten, kdo se ptal, nebo administrátor skupiny. Dokud je dotaz otevřený, celý výdaj je mimo zůstatky všech. Vrací se, když se uzavře poslední otevřený dotaz k němu, nebo když úprava vyřadí z výdaje člověka, který se ptal."
+    - q: "Mohu seznamy a komentáře používat jako aplikaci na úkoly nebo skupinový chat?"
+      a: "Ne. Komentáře, seznamy a hlasování jsou pro peníze skupiny, což žádají [podmínky služby](page:terms). Myslete na nákupní seznamy, rozpočtová hlasování a „proč je tohle 45 £?“."
+    - q: "Bude mi Side Badger psát e-mailem o aktivitě?"
+      a: "Ne. Žádná e-mailová ani SMS upozornění na aktivitu neexistují. Push oznámení můžete zapnout na každém zařízení a zvonek oznámení v aplikaci ukazuje, co je nového."

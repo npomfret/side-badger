@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Gawanya villa watu wakikaa usiku tofauti | Side Badger"
+  description: "Dev alikuja kwa usiku tatu tu, kwa nini alipe sita? Gawanya villa ya likizo kwa usiku ambao watu walikaa kweli, hesabu zikifanywa kwa ajili yako."
+h1: "Jinsi ya kugawanya villa ya likizo watu wakikaa usiku tofauti"
+navLabel: "Gawanya villa kwa usiku"
+lead: "Pangia bei kwa mtu mmoja kwa usiku mmoja, zidisha kwa usiku wa kila mtu, na uweke villa kama **gharama moja yenye kiasi halisi**. Side Badger huweka hesabu na kupendekeza orodha fupi ya malipo wakati wa kumaliza hesabu."
+cta:
+  heading: "Ipe villa gharama moja nadhifu"
+  body: "Tengeneza kikundi, alika kila mtu kwa kiungo au msimbo wa QR na uweke villa kwa kiasi halisi. Side Badger inaweka hesabu inayoendelea wewe ukiendelea na likizo."
+sections:
+  - heading: "Usiku sita, watu wanne, kadi moja ya benki"
+    body: "[Safari ya kikundi](page:use-case/group-trips) kwa kawaida huanza na kadi ya mtu mmoja. Hapa ni ya Ana. Anakodi villa kwa usiku sita, €2,100, kwa sababu lazima mtu aanze. Ana, Ben na Chloe wanakaa usiku wote sita. Dev anaweza kujiunga kwa usiku tatu za mwisho tu, na anakuja kwa treni. Ben anakodi gari, ambalo Dev halipandi kamwe. Dev anafanya ununuzi mkubwa wa vyakula. Kugawanya villa kwa wanne ndiyo hatua dhahiri. Inamfanya Dev alipie usiku tatu alizokaa nyumbani, na mambo kama hayo hurudi wakati wa Krismasi. Kugawanya kwa usiku kunaepusha mzozo, na hesabu inachukua dakika moja."
+  - heading: "Pangia bei ya mtu mmoja kwa usiku mmoja"
+    body: "Usiku wa mtu ni mtu mmoja kukaa usiku mmoja. Villa inagharimu inachogharimu, kwa hivyo gawanya bei kwa usiku wote wa watu, kisha mpe kila mtu ule aliotumia."
+    items:
+      - "**Hesabu usiku wa watu.** Ana, Ben na Chloe wanakaa usiku sita kila mmoja na Dev anakaa usiku tatu: 6 + 6 + 6 + 3 = 21."
+      - "**Pangia bei ya mmoja.** €2,100 ÷ 21 = €100 kwa usiku wa mtu."
+      - "**Zidisha kwa usiku wa kila mtu.** Ana, Ben na Chloe wanalipa 6 × €100 = €600 kila mmoja. Dev analipa 3 × €100 = €300."
+      - "**Hakiki jumla.** €600 + €600 + €600 + €300 = €2,100. Sehemu zenu zisipojumlisha bei, usiku mmoja umekosekana au umehesabiwa mara mbili."
+  - heading: "Uweke kwenye Side Badger"
+    body: "Tengeneza kikundi, alika wale watatu wengine kwa kiungo au msimbo wa QR, kisha ongeza gharama. Villa kwanza."
+    items:
+      - "Chagua **Ongeza Gharama**. Ieleze, weka 2,100 na uweke **Nani alilipa?** kuwa Ana."
+      - "Chini ya **Gawanya kati ya**, hakikisha watu wote wanne wamo."
+      - "Chini ya **Jinsi ya kugawanya**, chagua **Kiasi halisi**. Andika 600 kwa Ana, Ben na Chloe na 300 kwa Dev. Kiasi lazima kijumlishe jumla."
+      - "Chagua **Hifadhi Gharama**."
+      - "Ongeza ukodishaji wa gari kwa njia ileile. Ben alilipa, mgawanyo ni **Sawa**, na Dev ameachwa nje, kwa sababu alikuja kwa treni. [Kugawanya gharama](page:feature/split-expenses) kunaeleza njia nyingine za kugawanya gharama."
+      - "Ongeza vyakula. Dev alilipa, mgawanyo ni **Sawa**, na wote wanne wamo."
+  - heading: "Soma matokeo, kisha maliza hesabu"
+    body: "Bili ya kila mtu ni sehemu yake ya villa pamoja na sehemu yake ya gari na ununuzi. Ana, Ben na Chloe wanafika €725 kila mmoja, yaani €600 + €80 + €45. Dev anafika €345, yaani €300 + €45. Toa kile kila mtu alicholipa na salio linajitokeza. Ana alilipa €2,100, kwa hivyo anadai €1,375. Ben alilipa €240 na anadaiwa €485. Dev alilipa €180 na anadaiwa €165. Chloe hakulipa chochote na anadaiwa €725. Zikiachwa hivyo, madeni hayo yangezunguka kwa njia sita ndani ya kikundi. Side Badger inapendekeza malipo matatu badala yake, yote kwa Ana. Mlipe mtakavyo, kisha chagua **Lipa deni** na utumie **Rekodi Malipo** kwa kila malipo, ili salio liende sawa. Vitufe vya kumaliza haraka hujaza kiasi. Kuna maelezo zaidi kuhusu [kumaliza hesabu](page:feature/settle-up)."
+  - heading: "Wakati villa haina bei moja nadhifu"
+    items:
+      - "**Vyumba vinatofautiana.** Kama chumba kikubwa kina thamani kubwa kuliko kidogo, kubalianeni kwanza kila chumba kinagharimu kiasi gani, kisha fanyeni hesabu za usiku wa watu chumba kimoja kimoja. Weka villa kama gharama moja yenye jumla ya kila mtu, au gharama moja kwa kila chumba. Kwa vyovyote, kiasi halisi kwenye gharama lazima kijumlishe jumla yake."
+      - "**Amana iliyolipwa miezi kabla.** Aliyeilipa anapata gharama yake mwenyewe, yenye tarehe aliyolipa. Igawanye kwa usiku kwa uwiano uleule kama salio."
+      - "**Uhifadhi ni kwa sarafu nyingine.** Weka villa kwa sarafu uliyolipia. Kama kikundi kinabadilisha unapoendelea, tumia kiwango cha sasa cha kubadilisha fedha, au andika kiwango ulichopata kweli. Kiasi cha awali kinabaki kwenye gharama. [Sarafu nyingi](page:feature/multiple-currencies) ina maelezo zaidi."
+      - "**Sehemu za usiku.** Mtu anafika usiku wa manane, mwingine anaondoka kabla ya kifungua kinywa. Kubalianeni kanuni moja ya kuhesabu usiku na mtumie kwa kila mtu."
+  - heading: "Kile ambacho Side Badger haifanyi hapa"
+    items:
+      - "Haikuhesabii usiku. Hakuna mgawanyo kwa usiku au kwa hisa, kwa hivyo unakokotoa kila kiasi kama ilivyo hapo juu na kuweka **kiasi halisi**."
+      - "Haihamishi pesa. Lipaneni mtakavyo, kisha rekodi malipo."
+      - "Inaruhusu mlipaji mmoja kwa kila gharama. Kama watu wawili walilipia villa, weka gharama mbili."
+      - "Haina ufikiaji wa wageni. Kila mtu kwenye kikundi, Dev akiwemo, anahitaji akaunti ya bure."
+exampleAfter: 2
+example:
+  heading: "Villa, gari na ununuzi"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "usiku sita kwenye villa"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "ukodishaji wa gari"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "vyakula"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Maswali kuhusu villa"
+  items:
+    - q: "Je, kama mtu anaghairi?"
+      a: "Toa usiku wake, fanya hesabu upya na uhariri gharama ya villa ili kiasi halisi kijumlishe bei tena. Toleo la awali linahifadhiwa na mabadiliko yanaonekana kwenye shughuli za kikundi, kwa hivyo hakuna anayebadilisha nambari kimyakimya. Nani anaweza kuhariri inategemea ruhusa za kikundi."
+    - q: "Je, aliyeweka nafasi alipe kidogo?"
+      a: "Hilo ni kwa kikundi kuamua. Kuweka nafasi ni kazi, na vikundi hutofautiana kama inastahili punguzo. Chochote mtakachokubaliana, kiweke kwenye kiasi halisi na ukiandike kwenye dokezo la gharama, au kwenye maoni kando yake, ili hakuna anayehitaji kukumbuka makubaliano."
+    - q: "Je, tunaweza kugawanya ada za usafi tofauti?"
+      a: "Ndiyo. Weka ada kama gharama tofauti na uipe mgawanyo wake. Sawa inafaa ada ya kiwango kimoja kwa nyumba nzima. Kiasi halisi kinafaa kikundi kinachotaka ada ifuate usiku pia."

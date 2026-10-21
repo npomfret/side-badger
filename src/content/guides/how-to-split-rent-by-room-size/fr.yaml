@@ -1,0 +1,104 @@
+translatedFrom: "a2338738"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - faq.heading
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Partager le loyer selon la taille des chambres | Side Badger"
+  description: "Grande chambre, grosse part. Écartez les pièces communes, partagez le reste à la surface, saisissez les pourcentages une fois. Calculs pour trois colocataires."
+h1: "Comment partager le loyer selon la taille des chambres"
+navLabel: "Loyer selon la chambre"
+lead: "Décidez quelle part du loyer correspond aux pièces communes et partagez-la à parts égales, puis partagez le reste selon la surface de chaque chambre. Arrondissez à des pourcentages entiers, saisissez-les une fois sur le loyer dans Side Badger, et copiez la dépense chaque mois."
+cta:
+  heading: "Saisissez le loyer une bonne fois pour toutes"
+  body: "Créez un compte gratuit, lancez un groupe pour l'appartement et saisissez le loyer avec les pourcentages convenus. Le mois prochain, c'est une copie. Envie de la visite d'abord ? Voyez [comment ça marche](page:how-it-works) ou [ce que couvre la gratuité](page:pricing)."
+sections:
+  - heading: "Trois personnes, un appartement, une dispute"
+    body: "Priya, Tom et Aisha partagent un appartement pour 1 950 £ par mois. Pendant un an, ils ont partagé le loyer en trois, parce que c'était facile. Puis Aisha a mesuré sa chambre. Celle de Priya fait 16 m², celle de Tom 12 m² et celle d'Aisha 10 m², si bien qu'Aisha payait autant que Priya pour une chambre plus petite de plus d'un tiers. Personne n'avait été déraisonnable. Personne n'avait fait le calcul. Autour d'un plat à emporter, ils se sont d'abord mis d'accord sur une règle. Sur le loyer, 40 % servent à payer la cuisine, la salle de bains et le salon, que tous les trois utilisent."
+  - heading: "La méthode, calculs à l'appui"
+    body: "Quatre étapes, un mètre ruban et la calculette du téléphone."
+    items:
+      - "**Mettez de côté la part commune.** Le groupe convient d'une part du loyer pour les pièces que tout le monde utilise. Pour cet appartement, c'est 40 %, soit 13,33 % chacun à trois."
+      - "**Partagez le reste selon la surface.** Les 60 % restants se répartissent selon la taille des chambres. Les chambres font 38 m² en tout (16 + 12 + 10), donc la part de Priya est 60 % × 16/38, soit 25,26 %."
+      - "**Additionnez les deux parts.** Priya : 25,26 % + 13,33 % = 38,6 %. Tom : 60 % × 12/38 = 18,95 %, plus 13,33 %, soit 32,3 %. Aisha : 60 % × 10/38 = 15,79 %, plus 13,33 %, soit 29,1 %."
+      - "**Arrondissez et vérifiez.** Des pourcentages entiers sont plus faciles à saisir et à discuter, donc 38,6 % devient 39 %, 32,3 % devient 32 % et 29,1 % devient 29 %. Vérifiez que 39 + 32 + 29 fait 100. Si votre arrondi tombe sur 99 ou 101, le groupe décide du chiffre qui bouge d'un point."
+  - heading: "Lire le mois de l'appartement"
+    body: "Avec un loyer à 39 %, 32 % et 29 %, cela donne 760,50 £, 624,00 £ et 565,50 £. Priya a payé le propriétaire, donc sur le mois on lui doit 1 142,50 £, tandis que Tom doit 566,00 £ et Aisha doit 576,50 £. Side Badger suggère deux paiements, tous deux pour Priya."
+  - heading: "Mettre tout en place dans Side Badger"
+    body: "Une soirée, dont l'essentiel passé à discuter des 40 %."
+    items:
+      - "**Créez le groupe.** Sur le tableau de bord, choisissez **Créer Groupe** et donnez-lui le nom de l'appartement. Choisissez **Inviter d'Autres** et envoyez le lien ou le code QR. Chacun se connecte ou crée un compte gratuit, et choisit le nom sous lequel il veut être vu dans ce groupe."
+      - "**Ajoutez le loyer.** Choisissez **Ajouter Dépense**. Saisissez la description et le montant, et sous **Qui a payé ?** choisissez celui qui a payé le propriétaire. Gardez les trois personnes sous **Divisé entre**, puis sous **Comment diviser** choisissez **Pourcentage** et saisissez 39, 32 et 29. Le formulaire vous prévient si les pourcentages ne font pas 100 au total. Choisissez **Enregistrer Dépense**."
+      - "**Ajoutez les factures.** L'énergie et l'internet sont des dépenses séparées, chacune avec son payeur. Laissez **Comment diviser** sur **Égal**."
+      - "**Copiez-la le mois prochain.** Ouvrez le loyer du mois dernier et choisissez **Copier dépense**. La copie garde le payeur, le montant et le partage, et prend la date du jour. Changez le montant si le loyer a changé, puis choisissez **Créer Copie**."
+      - "**Voyez qui doit quoi à qui.** La section **Soldes** l'affiche. Remboursez-vous comme vous voulez, puis enregistrez le paiement sous **Régler**."
+  - heading: "Salles de bains privatives, cagibis et départs"
+    items:
+      - "**Salles de bains privatives et cagibis.** La surface n'est qu'un point de départ. Une chambre avec sa propre salle de bains vaut plus que la même surface sans, et un cagibi où tiennent un lit et une chaise pleine d'espoir vaut moins. Ajustez les pourcentages d'un commun accord, vérifiez qu'ils font toujours 100 au total, et notez les chiffres définitifs là où tout l'appartement peut les voir."
+      - "**Quelqu'un déménage en cours de mois.** Calculez ce que chacun doit pour ce mois-là et saisissez le loyer de ce mois avec **Montants exacts** au lieu de **Pourcentage**. Les montants doivent égaler le loyer. Faites-le avant son départ. Personne ne peut quitter un groupe tant qu'il doit de l'argent ou qu'on lui en doit, et une dépense qui concerne quelqu'un qui est parti passe en lecture seule."
+      - "**Quelqu'un emménage.** Mesurez de nouveau, refaites les calculs avec les nouvelles tailles de chambres et utilisez les nouveaux pourcentages à partir du loyer suivant. Les mois précédents restent comme ils étaient."
+  - heading: "Ce que Side Badger ne fait pas ici"
+    items:
+      - "Il ne mesure pas vos chambres et ne choisit pas les pourcentages. C'est au groupe de s'accorder sur les surfaces et sur les 40 %."
+      - "Il n'a pas de factures récurrentes, donc vous copiez le loyer du mois dernier à chaque fois."
+      - "Il ne fait jamais circuler l'argent et ne paie pas le propriétaire. Vous vous payez comme vous voulez et vous l'enregistrez."
+      - "Il ne sait pas ce que dit votre bail. Il tient le compte entre les personnes du groupe."
+exampleAfter: 2
+example:
+  heading: "Un mois dans l'appartement"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "le loyer"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "la facture d'énergie"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "l'internet"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: Questions
+  items:
+    - q: "Et si quelqu'un a une plus grande chambre mais moins de lumière ?"
+      a: "La surface n'est qu'un point de départ, donc le groupe peut convenir d'un ajustement. Retirez un point ou deux à la chambre sombre, donnez-les aux autres et vérifiez que les pourcentages font toujours 100 au total. Side Badger enregistre ce que vous décidez et ne juge pas."
+    - q: "Faut-il aussi partager les factures selon la taille des chambres ?"
+      a: "En général non. L'énergie et l'internet sont utilisés par tout le monde, donc un partage à parts égales est plus simple, comme dans l'exemple ci-dessus. Si un colocataire est chez lui toute la journée, le groupe peut convenir d'autre chose, comme des montants exacts. [Partager les dépenses](page:feature/split-expenses) présente les options."
+    - q: "Peut-on changer le partage plus tard ?"
+      a: "Oui, pour les nouvelles dépenses. Changez les pourcentages en copiant le loyer et les mois précédents restent comme ils étaient. Pour corriger une dépense passée, modifiez-la si les permissions du groupe le permettent, et prévenez d'abord les colocataires, car les soldes changent. La version précédente est conservée."

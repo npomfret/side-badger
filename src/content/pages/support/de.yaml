@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: Hilfe und Support | Side Badger
+  description: Passwort vergessen, Link ungültig, Zahlung falsch erfasst? Kurze Antworten darauf, woran Leute in Side Badger hängen bleiben, und wie du uns erreichst.
+h1: Hilfe und Support, ohne Warteschleifenmusik
+navLabel: Hilfe und Support
+lead: Kurze Antworten auf das, woran Leute hängen bleiben, vom vergessenen Passwort bis zum endgültigen Schließen einer Gruppe. Zu jeder Antwort gibt es einen Link zur Seite, die mehr erklärt. Deine Frage ist nicht dabei? Sag es uns direkt in der App oder schreib uns eine Zeile.
+cta:
+  heading: Wegen der Hilfe gekommen, wegen des Teilens geblieben?
+  body: Noch kein Konto? Starte eine Gruppe, teile den Link und füge die erste Ausgabe hinzu. Kostenlos, ohne Werbung und ohne Tageslimits.
+groups:
+  - heading: Anmelden
+    items:
+      - q: Passwort vergessen?
+        a: Das passiert den besten Dachsen. Wähle auf dem Bildschirm **Anmelden** die Option **Passwort vergessen?**, gib die E-Mail-Adresse deines Kontos ein und folge dem Link in der E-Mail, die wir dir schicken, um ein neues Passwort festzulegen. [So funktioniert es](page:how-it-works) erklärt, was ein Konto sonst noch braucht.
+      - q: Ich habe mich registriert, kann aber nichts hinzufügen. Warum?
+        a: Meistens ist deine E-Mail-Adresse noch nicht bestätigt. Öffne dann den Link in der Bestätigungs-E-Mail oder wähle im Erinnerungsbanner **Bestätigungs-E-Mail erneut senden**, um eine neue zu bekommen. Bist du bestätigt, kann die Gruppe gesperrt sein, oder ihre Berechtigungen erlauben es dir nicht, denn ein Betrachter sieht alles und ändert nichts, wie [Gruppen und Berechtigungen](page:feature/groups-and-permissions) erklärt.
+      - q: Wie ändere ich meine E-Mail-Adresse oder mein Passwort?
+        a: Wähle unter **Einstellungen** die Option **E-Mail ändern** oder **Passwort ändern**. Beide fragen zuerst nach deinem aktuellen Passwort, und eine neue E-Mail-Adresse muss über den Link bestätigt werden, den wir ihr schicken. [So funktioniert es](page:how-it-works) erklärt Konten.
+      - q: Kann ich mich mit Google oder Apple anmelden?
+        a: Nein. Du brauchst nur eine E-Mail-Adresse und ein Passwort mit mindestens 12 Zeichen, und auf deinem eigenen Handy oder Computer kannst du **Angemeldet bleiben** ankreuzen. Die Seite zur [Web-App](page:feature/web-app) erklärt den Rest zum Einstieg.
+  - heading: Einer Gruppe beitreten
+    items:
+      - q: Mir hat jemand einen Einladungslink geschickt. Wie trete ich bei?
+        a: Öffne ihn und melde dich an oder erstelle ein kostenloses Konto. Du siehst eine Vorschau der Gruppe, wählst dort den Namen, unter dem dich die anderen sehen, und drückst **Gruppe beitreten**. [Gruppen und Berechtigungen](page:feature/groups-and-permissions) zeigt den ganzen Weg hinein.
+      - q: Dort steht „Wartet auf Genehmigung“. Habe ich etwas falsch gemacht?
+        a: Keineswegs. In dieser Gruppe lässt ein Admin jede Person einzeln herein, deshalb ging deine Anfrage an ihre Admins, und du siehst erst hinein, wenn einer sie genehmigt. Ein freundlicher Schubs im echten Leben ist erlaubt, und [Gruppen und Berechtigungen](page:feature/groups-and-permissions) erklärt die Genehmigung.
+      - q: Es heißt, der Link sei ungültig oder abgelaufen.
+        a: Einladungslinks gelten so lange, wie die Person es festgelegt hat, die sie erstellt hat, von 15 Minuten bis zu 5 Tagen. Bitte jemanden in der Gruppe um einen neuen Link oder, wenn ihr im selben Raum seid, um den QR-Code. [So funktioniert es](page:how-it-works) erklärt Einladungen.
+  - heading: Ausgaben
+    items:
+      - q: Wie füge ich eine Ausgabe hinzu?
+        a: Öffne die Gruppe und wähle **Ausgabe hinzufügen**. Sag, was es war, wie viel, wer bezahlt hat und wer sich die Kosten teilt, und teile sie dann gleichmäßig, nach genauen Beträgen oder in Prozent. [Ausgaben teilen](page:feature/split-expenses) führt durch alle Optionen.
+      - q: Kann sich die Miete jeden Monat wiederholen?
+        a: Nicht von selbst, denn es gibt keine wiederkehrenden Ausgaben. Öffne die vom letzten Monat und wähle **Ausgabe kopieren**, und das Formular kommt ausgefüllt, bereit für ein neues Datum und alles, was sich geändert hat. [Ausgaben teilen](page:feature/split-expenses) sagt mehr zum Kopieren.
+      - q: Ich habe den falschen Betrag eingetippt. Kann ich das korrigieren?
+        a: Ja. Bearbeite die Ausgabe, solange die Berechtigungen der Gruppe es dir erlauben und die Gruppe nicht gesperrt ist. Die frühere Version bleibt erhalten, damit niemand dir glauben muss, was sich geändert hat, wie [Ausgaben teilen](page:feature/split-expenses) erklärt.
+      - q: Eine Ausgabe sieht falsch aus, und sie ist nicht von mir. Was nun?
+        a: Wähle bei ihr **Ich habe eine Frage** und sag, warum, und die ganze Ausgabe bleibt aus den Salden aller heraus, bis die Person, die gefragt hat, oder ein Admin die Frage schließt. Keine solche Schaltfläche? Nur Personen, die an einer Ausgabe beteiligt sind, können fragen, ein Admin muss zuerst in den Einstellungen der Gruppe **Fragen zu Ausgaben erlauben** einschalten, und den diplomatischen Teil liefert der [Ratgeber zu strittigen Ausgaben](page:guide/what-to-do-when-someone-disputes-a-shared-expense).
+  - heading: Zahlungen
+    items:
+      - q: Schickt Side Badger das Geld?
+        a: Nein, Side Badger bewegt nie Geld. Zahlt einander, wie ihr wollt, per Banküberweisung, bar oder womit es eben klappt, und erfasst dann die Zahlung, damit die Salden nachziehen. [Nach einer Gruppenreise abrechnen](page:guide/how-to-settle-up-after-a-group-trip) geht alles von Anfang bis Ende durch.
+      - q: Wie erfasse ich eine Zahlung?
+        a: Wähle in der Gruppe **Abrechnen**, gib an, wer bezahlt hat und wer das Geld bekommen hat, trage den Betrag ein oder lass ihn von einer **Schnellausgleich**-Schaltfläche ausfüllen und wähle **Abrechnung erfassen**. Nur einen Teil gezahlt? Erfasse, was gezahlt wurde, und der Rest bleibt auf dem Saldo, wie [Abrechnen](page:feature/settle-up) erklärt.
+      - q: Ich habe eine Zahlung falsch erfasst. Kann ich das korrigieren?
+        a: Wer sie erfasst hat, kann sie im Verlauf **Abrechnungen** der Gruppe bearbeiten, und diese Person oder ein Admin kann sie löschen, wodurch sie aus den Salden verschwindet. Eine Zahlung, an der jemand beteiligt ist, der die Gruppe inzwischen verlassen hat, lässt sich nicht bearbeiten. [Abrechnen](page:feature/settle-up) behandelt den Verlauf.
+  - heading: Benachrichtigungen und Home-Bildschirm
+    items:
+      - q: Wie schalte ich Benachrichtigungen ein?
+        a: Schalte unter **Einstellungen** die **Push-Benachrichtigungen** ein und erlaube sie, wenn dein Browser fragt. Hat der Browser sie schon blockiert, erlaube sie zuerst in seinen eigenen Einstellungen. Jedes Gerät wird einzeln eingeschaltet, und die Zustellung ist nicht garantiert. Nimm eine Benachrichtigung also als Anstoß, nicht als Versprechen, wie die Seite zur [Web-App](page:feature/web-app) erklärt.
+      - q: Warum funktionieren Benachrichtigungen auf meinem iPhone nicht?
+        a: Auf einem iPhone oder iPad funktionieren sie nur in der App, die du zum Home-Bildschirm hinzugefügt hast, nie in einem Browser-Tab. Füge sie hinzu, öffne sie über das Symbol auf dem Home-Bildschirm und schalte sie dann unter **Einstellungen** ein. [Gemeinsam planen](page:feature/plan-together) zeigt, worüber sie dich informieren.
+      - q: Gibt es eine App zum Herunterladen?
+        a: Nicht aus einem App-Store, denn Side Badger läuft in deinem Browser. Melde dich an und folge dann unter **Einstellungen** dem Punkt **Zum Home-Bildschirm oder Dock hinzufügen**, und es öffnet sich wie eine App, in einem eigenen Fenster. Die Seite zur [Web-App](page:feature/web-app) nennt die Schritte für jedes Gerät.
+  - heading: Verlassen, archivieren, sperren und schließen
+    items:
+      - q: Wie verlasse ich eine Gruppe?
+        a: Rechne ab und wähle dann **Gruppe verlassen**. Du kannst nicht gehen, solange du in auch nur einer Währung Geld schuldest oder bekommst, solange eine Ausgabe, an der du beteiligt bist, eine offene Frage hat, oder wenn du der letzte Admin oder das einzige Mitglied bist, und für die Rückkehr brauchst du eine neue Einladung. [Gruppen und Berechtigungen](page:feature/groups-and-permissions) hat die Einzelheiten.
+      - q: Wie bekomme ich eine alte Gruppe von meinem Dashboard?
+        a: Wähle **Gruppe archivieren**. Sie verschwindet von deinem Dashboard und von keinem anderen, du kannst sie weiter öffnen und nutzen, und **Gruppe dearchivieren** holt sie zurück. [Gruppen und Berechtigungen](page:feature/groups-and-permissions) vergleicht Archivieren, Sperren und Schließen.
+      - q: Die Reise ist vorbei. Können wir verhindern, dass sich die Zahlen noch ändern?
+        a: Ja. Ein Admin kann in den Einstellungen der Gruppe **Gruppe sperren** einschalten, und niemand kann Ausgaben hinzufügen oder bearbeiten, neue Zahlungen erfassen oder Listen und Umfragen ändern, bis ein Admin sie wieder entsperrt. Alle können die Gruppe und ihren Verlauf weiter lesen, und kein verspätetes Taxi schleicht sich mehr ein, wie [Gruppen und Berechtigungen](page:feature/groups-and-permissions) erklärt.
+      - q: Kann ich eine Gruppe löschen?
+        a: Ein Admin kann sie mit **Gruppe schließen** schließen, nachdem zur Bestätigung der Name der Gruppe eingetippt wurde. Das Schließen ist endgültig und macht die Gruppe für alle unzugänglich. Wenn du sie also nur aus dem Blick haben willst, archiviere sie stattdessen. [Gruppen und Berechtigungen](page:feature/groups-and-permissions) hat das Kleingedruckte.
+contact:
+  heading: Immer noch nicht weiter?
+  items:
+    - q: Einen Fehler gefunden oder einen Änderungswunsch?
+      a: Sag es uns direkt in der App. Wähle in deinem Kontomenü **Feedback**, dann **Feedback senden** und such **Problem melden**, **Hilfe anfordern** oder **Funktionswunsch** aus. Häng einen Screenshot an, wenn es hilft, und wenn wir antworten, findest du die Antwort im selben Verlauf.
+    - q: Lieber per E-Mail?
+      a: "Schreib an die Adresse unten. Sag, um welche Gruppe es geht, was du getan hast und was du erwartet hast. Dampf ablassen ist in Ordnung, Passwörter nicht, schick also nie deines."
+  emailLabel: Schreib uns an
+  email: support@sidebadger.me

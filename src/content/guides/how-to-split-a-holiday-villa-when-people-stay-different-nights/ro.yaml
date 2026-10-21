@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Împarte o vilă când oamenii stau nopți diferite | Side Badger"
+  description: "Dev a venit doar trei nopți, deci de ce să plătească șase? Împarte o vilă de vacanță după nopțile în care a stat fiecare, cu socotelile făcute pentru tine."
+h1: "Cum împarți o vilă de vacanță când oamenii stau nopți diferite"
+navLabel: "Împarte o vilă pe nopți"
+lead: "Stabilește prețul pe persoană pe noapte, înmulțește-l cu nopțile fiecăruia și introdu vila ca **o singură cheltuială cu sume exacte**. Side Badger ține socoteala și sugerează o listă scurtă de plăți când vine vremea să vă achitați."
+cta:
+  heading: "Dă vilei o singură cheltuială ordonată"
+  body: "Fă un grup, invită-i pe toți cu un link sau un cod QR și introdu vila cu sume exacte. Side Badger ține socoteala curentă, cât tu te ocupi de vacanță."
+sections:
+  - heading: "Șase nopți, patru oameni, un card"
+    body: "O [excursie de grup](page:use-case/group-trips) începe de obicei cu cardul unei singure persoane. Aici, al Anei. Ea rezervă o vilă pentru șase nopți, 2.100 €, pentru că cineva trebuie să înceapă. Ana, Ben și Chloe stau toți cele șase nopți. Dev poate veni doar pentru ultimele trei și vine cu trenul. Ben închiriază o mașină în care Dev nu se urcă niciodată. Dev face cumpărăturile mari. A împărți vila în patru e mișcarea evidentă. Îl face pe Dev să plătească trei nopți petrecute acasă, iar așa ceva iese din nou la iveală de Crăciun. Împărțirea pe nopți evită cearta, iar aritmetica durează un minut."
+  - heading: "Stabilește prețul unei nopți-persoană"
+    body: "O noapte-persoană este o persoană care stă o noapte. Vila costă cât costă, așa că împarte prețul la toate nopțile-persoană, apoi dă fiecăruia câte a folosit."
+    items:
+      - "**Numără nopțile-persoană.** Ana, Ben și Chloe stau câte șase nopți, iar Dev trei: 6 + 6 + 6 + 3 = 21."
+      - "**Calculează prețul uneia.** 2.100 € ÷ 21 = 100 € pe noapte-persoană."
+      - "**Înmulțește cu nopțile fiecăruia.** Ana, Ben și Chloe plătesc câte 6 × 100 € = 600 €. Dev plătește 3 × 100 € = 300 €."
+      - "**Verifică totalul.** 600 € + 600 € + 600 € + 300 € = 2.100 €. Dacă părțile tale nu dau prețul, lipsește o noapte sau a fost numărată de două ori."
+  - heading: "Introdu-o în Side Badger"
+    body: "Fă un grup, invită-i pe ceilalți trei cu un link sau un cod QR, apoi adaugă costurile. Mai întâi vila."
+    items:
+      - "Alege **Adaugă Cheltuială**. Descrie-o, introdu 2.100 și setează **Cine a plătit?** pe Ana."
+      - "La **Împarte între**, asigură-te că sunt incluși toți patru."
+      - "La **Cum se împarte**, alege **Sume exacte**. Scrie 600 pentru Ana, Ben și Chloe și 300 pentru Dev. Sumele trebuie să dea împreună totalul."
+      - "Alege **Salvează Cheltuiala**."
+      - "Adaugă închirierea mașinii în același fel. A plătit Ben, împărțirea este **Egal**, iar Dev rămâne pe dinafară, pentru că a venit cu trenul. [Împărțirea cheltuielilor](page:feature/split-expenses) explică celelalte moduri de a împărți un cost."
+      - "Adaugă cumpărăturile. A plătit Dev, împărțirea este **Egal**, iar toți patru sunt incluși."
+  - heading: "Citește rezultatul, apoi achitați-vă"
+    body: "Nota fiecăruia este partea lui din vilă plus partea din mașină și din cumpărături. Ana, Ben și Chloe ajung la câte 725 €, adică 600 € + 80 € + 45 €. Dev ajunge la 345 €, adică 300 € + 45 €. Scade ce a plătit fiecare și ies soldurile. Ana a plătit 2.100 €, așa că i se datorează 1.375 €. Ben a plătit 240 € și datorează 485 €. Dev a plătit 180 € și datorează 165 €. Chloe n-a plătit nimic și datorează 725 €. Lăsate în pace, datoriile ar circula pe șase căi prin grup. Side Badger sugerează în schimb trei plăți, toate către Ana. Plătiți-i cum preferați, apoi alege **Decontează** și folosește **Înregistrează Decontarea** pentru fiecare plată, ca soldurile să se pună la zi. Butoanele de decontare rapidă completează suma. Mai multe despre [decontare](page:feature/settle-up)."
+  - heading: "Când vila nu are un preț ordonat"
+    items:
+      - "**Camerele diferă.** Dacă suita valorează mai mult decât camera mică, stabiliți mai întâi cât costă fiecare cameră, apoi faceți calculele pe nopți-persoană cameră cu cameră. Introdu vila ca o singură cheltuială cu totalul fiecăruia sau ca o cheltuială pentru fiecare cameră. Oricum, sumele exacte ale unei cheltuieli trebuie să dea totalul ei."
+      - "**Un avans plătit cu luni înainte.** Cine l-a plătit primește propria cheltuială, cu data zilei în care a plătit. Împarte-l pe nopți, în aceleași proporții ca restul de plată."
+      - "**Rezervarea e în altă valută.** Introdu vila în valuta în care ai plătit. Dacă grupul convertește pe parcurs, folosește un curs de schimb actual sau scrie cursul pe care l-ai primit de fapt. Suma inițială rămâne pe cheltuială. [Mai multe valute](page:feature/multiple-currencies) are detaliile."
+      - "**Nopți parțiale.** Cineva ajunge la miezul nopții, cineva pleacă înainte de micul dejun. Stabiliți o singură regulă pentru numărarea nopților și aplicați-o tuturor."
+  - heading: "Ce nu face Side Badger aici"
+    items:
+      - "Nu numără nopțile pentru tine. Nu există împărțire pe nopți sau pe părți, așa că calculezi fiecare sumă ca mai sus și introduci **sume exacte**."
+      - "Nu mută bani. Vă plătiți unii altora cum preferați, apoi înregistrați plata."
+      - "Permite un singur plătitor pe cheltuială. Dacă doi oameni au plătit vila, introdu două cheltuieli."
+      - "Nu are acces pentru invitați. Fiecare din grup, Dev inclus, are nevoie de un cont gratuit."
+exampleAfter: 2
+example:
+  heading: "Vila, mașina și cumpărăturile"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "șase nopți în vilă"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "închirierea mașinii"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "cumpărăturile"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Întrebări despre vilă"
+  items:
+    - q: "Ce se întâmplă dacă cineva renunță?"
+      a: "Scoate-i nopțile, refă socotelile și editează cheltuiala cu vila, ca sumele exacte să dea din nou prețul. Versiunea anterioară se păstrează, iar editarea apare în activitatea grupului, așa că nimeni nu schimbă o cifră pe tăcute. Cine are voie să editeze depinde de permisiunile grupului."
+    - q: "Cel care a făcut rezervarea ar trebui să plătească mai puțin?"
+      a: "Hotărăște grupul. Rezervarea e o corvoadă, iar grupurile nu sunt de acord dacă merită o reducere. Orice ați stabili, treceți asta în sumele exacte și scrieți-o într-o notă pe cheltuială sau într-un comentariu lângă ea, ca nimeni să nu fie nevoit să-și amintească înțelegerea."
+    - q: "Putem împărți altfel taxele de curățenie?"
+      a: "Da. Introdu taxa ca o cheltuială separată și dă-i propria împărțire. O împărțire egală se potrivește pentru o taxă fixă pentru toată casa. Sumele exacte se potrivesc unui grup care vrea ca și taxa să urmeze nopțile."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

@@ -1,0 +1,103 @@
+translatedFrom: "6c8b8630"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - privacy-posture.no-ads
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - polls.villa-shortlist-vote
+  - permissions.viewer-sees-everything
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Despedida de solteiro ou solteira: divide os custos | Side Badger"
+  description: "A pessoa homenageada não paga nada e na segunda toda a gente ainda se fala. Como dividir um fim de semana de despedida de solteiro ou solteira."
+h1: "Como dividir os custos de um fim de semana de despedida de solteiro ou de solteira"
+navLabel: "Fim de semana de despedida"
+lead: "A pessoa homenageada não paga nada, por isso o resto do grupo divide cada custo [em partes iguais](page:feature/split-expenses) entre si. Deixa de fora quem salta os custos de que não faz parte e mantém a pessoa homenageada fora do grupo, para a surpresa se manter."
+cta:
+  heading: "Mantém a conta, mantém a surpresa"
+  body: "Cria um grupo, envia o link a toda a gente menos à pessoa homenageada e adiciona cada custo à medida que acontece. O Side Badger é grátis, sem anúncios e sem limites diários."
+sections:
+  - heading: "Quatro amigas e uma surpresa"
+    body: "A Hannah, a Isla, a Jess e a Kat vão levar a Grace de fim de semana para a despedida de solteira dela. A Grace é a pessoa homenageada, por isso não paga nada. Também não está no grupo, por isso não vê o que as amigas gastam com ela. A Hannah reserva a casa de campo, a Isla paga o dia de spa, a Jess assume o jantar e a Kat o táxi. No domingo, toda a gente já pagou alguma coisa e ninguém sabe quem está à frente. As contas são as mesmas numa despedida de solteiro ou de solteira, seja quem for a pessoa homenageada."
+  - heading: "Divide por quem paga, não por quem lá está"
+    body: "A parte da pessoa homenageada não desaparece. É repartida. A casa de campo custa 720 £ e quatro amigas pagam-na, por isso são 180 £ cada uma, e o lugar da Grace já está nesse valor. O jantar custa 260 £, por isso 65 £ cada uma. O táxi custa 44 £, por isso 11 £ cada uma. O que alguém salta sai só dessa despesa. A Kat salta o spa, por isso as 360 £ do spa, que cobrem também o lugar da Grace, são repartidas pela Hannah, pela Isla e pela Jess, a 120 £ cada uma. Somando tudo, a Hannah, a Isla e a Jess devem cada uma 376 £ do fim de semana, e a Kat deve 256 £."
+  - heading: "Prepara tudo no Side Badger"
+    items:
+      - "Faz um grupo para o fim de semana e dá-lhe um nome aborrecido, como Fim de semana na casa de campo. A Grace não é membro, e só os membros de um grupo o podem ver."
+      - "Escolhe **Convidar outras pessoas** e envia o link, ou mostra o código QR, só onde a Grace não o veja. O link mostra uma pré-visualização do grupo antes de alguém entrar. Escolhe quanto tempo dura, de 15 minutos a 5 dias. Um link antigo continua a funcionar até expirar, por isso não o deixes mais tempo do que o necessário."
+      - "Para cada custo, escolhe **Adicionar despesa**, introduz o valor e escolhe quem pagou em **Quem pagou?** Em **Dividir entre**, assinala as pessoas que pagam, deixando de fora quem o saltou, como a Kat no spa. Escolhe **Igual** em **Como dividir**."
+      - "Quando chegarem a casa, abre os **Saldos** do grupo. O Side Badger mostra quem deve a quem e sugere uma lista curta de pagamentos. Aqui são três: a Kat paga 212 £ à Hannah, a Jess paga 116 £ à Hannah e a Isla paga 16 £ à Hannah. Paguem-se como preferirem e depois usem **Acertar contas** para registar cada pagamento."
+  - heading: "Antes de reservar, um orçamento e um sinal"
+    body: "Combinem o orçamento antes de alguém reservar. Escolhe **Adicionar sondagem**, pergunta quanto o grupo vai gastar na casa de campo e oferece alguns valores como opções. Ativa a **Votação anónima** ao criá-la, para esconder quem votou em quê, para ninguém ter de defender em voz alta um orçamento mais pequeno. Fecha a sondagem quando toda a gente tiver votado e o vencedor aparecer. Depois vem o sinal. Quem reservar paga-o e adiciona-o como despesa, dividida em partes iguais, e o valor restante entra como segunda despesa quando for devido. As outras pessoas podem enviar já a sua parte e registar o pagamento, ou esperar pela conta final. Os saldos dão o mesmo de qualquer das maneiras."
+  - heading: "Quando alguém só fica uma noite"
+    body: "Uma amiga que só aparece no sábado não deve pagar a sexta. Deixa-a de fora dos custos de que não fez parte. Quando o custo depende de quanto tempo cada pessoa fica, como um quarto, escolhe **Valores exatos** em **Como dividir** e escreve a parte de cada pessoa, que tem de somar o total. Calcula primeiro um preço por pessoa e por noite e multiplica depois pelas noites que cada pessoa fica. A página de [viagens em grupo](page:use-case/group-trips) tem mais sobre custos que não são iguais para todos."
+  - heading: "O que o Side Badger não faz aqui"
+    items:
+      - "Nunca movimenta dinheiro. Pagam-se por transferência bancária, em dinheiro ou como for mais conveniente e depois registam o pagamento, para os saldos se atualizarem para todos."
+      - "Não envia lembretes de pagamento. Um empurrãozinho simpático no chat do grupo continua a ser trabalho humano."
+      - "Cada despesa tem um só pagador, e o Side Badger não consegue dividir um recibo linha a linha. Se dois cartões pagaram a casa de campo, introduz duas despesas. Se algumas pessoas pediram extras ao jantar, introduz os extras como despesa própria."
+      - "Guarda o dinheiro, não o itinerário. As sondagens e os comentários ficam pelos custos, por isso os planos do fim de semana ficam no chat do grupo."
+exampleAfter: 2
+example:
+  heading: "A despedida de solteira da Grace, dividida por quatro"
+  currency: GBP
+  people:
+    - id: hannah
+      name: Hannah
+    - id: isla
+      name: Isla
+    - id: jess
+      name: Jess
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Casa de campo"
+      payer: hannah
+      amount: 720
+      split:
+        method: equal
+    - label: "Dia de spa"
+      payer: isla
+      amount: 360
+      split:
+        method: equal
+        shares:
+          hannah: 1
+          isla: 1
+          jess: 1
+    - label: "Jantar"
+      payer: jess
+      amount: 260
+      split:
+        method: equal
+    - label: "Táxi"
+      payer: kat
+      amount: 44
+      split:
+        method: equal
+faq:
+  heading: "Perguntas"
+  items:
+    - q: "A madrinha ou o padrinho paga mais?"
+      a: "Só se o grupo combinar. A app não dá nenhum papel especial a ninguém nas contas. Se alguém assumir mais, escolhe **Valores exatos** ou **Percentagem** em **Como dividir** e introduz as partes que combinaram."
+    - q: "E as bebidas que algumas pessoas não tomaram?"
+      a: "Adiciona as bebidas como despesa própria e assinala só as pessoas que as tomaram. Se cada pessoa tomou uma quantidade diferente, escolhe **Valores exatos** e escreve a parte de cada uma. Ninguém paga o que não consumiu."
+    - q: "A pessoa homenageada pode ver o grupo mais tarde?"
+      a: "Sim, depois de a surpresa acabar. Convida-a e depois um administrador pode torná-la **Visualizador** em **Segurança**, nas definições do grupo. Um visualizador vê tudo e não altera nada, por isso espera até já nada ser segredo. Precisa de uma conta grátis para entrar."

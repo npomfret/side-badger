@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: 帮助与支持 | Side Badger
+  description: 忘了密码、链接打不开、付款记错了？这里有用户在 Side Badger 里常遇到的问题的简短解答，以及联系我们的方式。
+h1: 帮助与支持，没有等待音乐
+navLabel: 帮助与支持
+lead: 用户常卡住的那些事的简短解答，从忘记密码到彻底关闭一个群组。每条都链接到讲得更详细的页面。没找到你的问题？可以在应用里告诉我们，或者写封邮件。
+cta:
+  heading: 为求助而来，却留下来分账了？
+  body: 还没有账户？建一个群组，分享链接，添加第一笔支出。免费，无广告，无每日限制。
+groups:
+  - heading: 登录
+    items:
+      - q: 忘记密码了？
+        a: 再优秀的獾也会遇到这种事。在**登录**界面选择**忘记密码？**，输入你账户的电子邮箱，然后点开我们发来的邮件里的链接设置新密码。账户还需要什么，见[使用方式](page:how-it-works)。
+      - q: 我已经注册了，却什么都添加不了。为什么？
+        a: 最常见的原因是你的电子邮箱还没验证，请点开验证邮件里的链接，或在提醒横幅上选择**重新发送验证邮件**来获取新的一封。如果已经验证，那么可能是群组被锁定了，或者它的权限不允许你操作；查看者能看到一切，却什么也改不了，详见[群组与权限](page:feature/groups-and-permissions)。
+      - q: 怎么更改我的电子邮箱或密码？
+        a: 在**设置**里选择**更改电子邮件**或**更改密码**。两者都会先要求输入你当前的密码，新的邮箱地址则需要通过我们发到那里的链接来验证。账户相关内容见[使用方式](page:how-it-works)。
+      - q: 可以用 Google 或 Apple 登录吗？
+        a: 不可以。你只需要一个电子邮箱地址和至少 12 个字符的密码，在你自己的手机或电脑上可以勾选**记住我**。其余的入门内容见[网页应用](page:feature/web-app)页面。
+  - heading: 加入群组
+    items:
+      - q: 有人给我发了邀请链接。怎么加入？
+        a: 打开它，然后登录或创建一个免费账户。你会看到群组的预览，在其中选择别人看到你时用的名字，再点**加入群组**。完整的加入流程见[群组与权限](page:feature/groups-and-permissions)。
+      - q: 显示“等待批准”。是我做错了什么吗？
+        a: 一点也没有。这个群组设置了由管理员放每个人进来，所以你的申请已经发给它的管理员，在其中一位批准之前你看不到里面的内容。当面轻轻催一下是允许的，批准的详情见[群组与权限](page:feature/groups-and-permissions)。
+      - q: 链接提示无效或已过期。
+        a: 邀请链接的有效期由创建它的人选择，从 15 分钟到最长 5 天不等。请向群组里的人要一个新链接，如果你们在同一个房间，也可以要二维码。邀请相关内容见[使用方式](page:how-it-works)。
+  - heading: 支出
+    items:
+      - q: 怎么添加一笔支出？
+        a: 打开群组，选择**添加费用**。说明这是什么、多少钱、谁付的、谁分摊，然后选择平均分摊、按确切金额或按百分比分摊。每个选项的详细介绍见[分摊支出](page:feature/split-expenses)。
+      - q: 房租可以每个月自动重复吗？
+        a: 不能自动重复，因为没有定期支出。打开上个月的那笔，选择**复制费用**，表单会带着内容过来，你只需改成新的日期和有变化的地方。复制的更多内容见[分摊支出](page:feature/split-expenses)。
+      - q: 我输错了金额。能改吗？
+        a: 可以。只要群组的权限允许你、群组也没被锁定，就可以编辑这笔支出。更早的版本会保留下来，所以改了什么，没人需要光听你一面之词，详见[分摊支出](page:feature/split-expenses)。
+      - q: 有一笔支出看起来不对，而且不是我的。怎么办？
+        a: 在那笔支出上选择**我有一个问题**并说明原因，整笔支出就不会计入任何人的余额，直到提问的人或管理员关闭这个问题。没看到这个按钮？只有参与这笔支出的人才能提问，管理员需要先在群组设置里打开**允许费用问题**，而[有争议的支出指南](page:guide/what-to-do-when-someone-disputes-a-shared-expense)讲了怎么得体地处理。
+  - heading: 付款
+    items:
+      - q: Side Badger 会把钱汇出去吗？
+        a: 不会，Side Badger 从不转移资金。你们想怎么付就怎么付，银行转账、现金，哪样方便用哪样，然后记录这笔付款，让余额跟上。[如何在群组旅行后结清](page:guide/how-to-settle-up-after-a-group-trip)从头到尾讲了一遍。
+      - q: 怎么记录一笔付款？
+        a: 在群组里选择**结算**，说明谁付的、谁收到的，输入金额，或者点**快速结算**按钮自动填入，然后选择**记录结算**。只付了一部分？记录实际付的金额，剩下的仍留在余额上，详见[结算](page:feature/settle-up)。
+      - q: 我把付款记错了。能改吗？
+        a: 记录它的人可以在群组的**结算**历史里编辑它，他们或管理员可以删除它，删除后它就会从余额里去掉。涉及已经离开群组的人的付款无法编辑。历史的详情见[结算](page:feature/settle-up)。
+  - heading: 通知与主屏幕
+    items:
+      - q: 怎么开启通知？
+        a: 在**设置**里打开**推送通知**，浏览器询问时选择允许。如果浏览器已经屏蔽了它们，请先在浏览器自己的设置里允许。每台设备要分别开启，也不保证一定送达，所以请把通知当作提醒而不是承诺，详见[网页应用](page:feature/web-app)页面。
+      - q: 为什么通知在我的 iPhone 上不起作用？
+        a: 在 iPhone 或 iPad 上，通知只在添加到主屏幕的应用里有效，在浏览器标签页里不行。请先添加，再从主屏幕图标打开它，然后在**设置**里开启。通知会告诉你哪些动态，见[一起计划](page:feature/plan-together)。
+      - q: 有可以下载的应用吗？
+        a: 应用商店里没有，因为 Side Badger 在你的浏览器里运行。登录后，在**设置**里按**添加到主屏幕或程序坞**操作，它就会像应用一样在自己的窗口里打开。各种设备上的步骤见[网页应用](page:feature/web-app)页面。
+  - heading: 退出、归档、锁定与关闭
+    items:
+      - q: 怎么离开一个群组？
+        a: 先结清，再选择**离开群组**。只要在任何一种货币里还欠钱或还有钱没收回，你参与的某笔支出还有未解决的问题，或者你是最后一位管理员或唯一的成员，就不能离开，而且回来需要重新受邀。详情见[群组与权限](page:feature/groups-and-permissions)。
+      - q: 怎么把旧群组从我的仪表板上移开？
+        a: 选择**归档群组**。它会从你的仪表板上消失，别人的不受影响，你仍然可以打开和使用它，**取消归档群组**可以把它找回来。归档、锁定和关闭的对比见[群组与权限](page:feature/groups-and-permissions)。
+      - q: 旅行结束了。能让数字不再变动吗？
+        a: 可以。管理员可以在群组设置里打开**锁定群组**，在管理员解锁之前，谁都不能添加或编辑支出、记录新的付款，也不能更改清单和投票。所有人仍然可以查看群组及其历史，也就不会有迟到的出租车溜进来，详见[群组与权限](page:feature/groups-and-permissions)。
+      - q: 可以删除一个群组吗？
+        a: 管理员可以用**关闭群组**来关闭它，需要输入群组名称来确认。关闭是永久的，会让所有人都无法再访问这个群组，所以如果只是想让它不碍眼，请改为归档。细则见[群组与权限](page:feature/groups-and-permissions)。
+contact:
+  heading: 还是没解决？
+  items:
+    - q: 发现了 bug，或者想改点什么？
+      a: 在应用里告诉我们。在账户菜单里选择**反馈**，再选**发送反馈**，然后选**报告问题**、**寻求帮助**或**功能请求**。有需要的话附上截图，我们回复后你会在同一个对话里看到。
+    - q: 你更想发邮件？
+      a: 写信到下面的地址。请说明是哪个群组、你做了什么、以及你原本期望发生什么。发发牢骚没问题，但密码不行，所以千万别发你的密码。
+  emailLabel: 发邮件给我们：
+  email: support@sidebadger.me

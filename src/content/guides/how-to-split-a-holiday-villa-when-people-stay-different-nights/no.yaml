@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Del en villa når folk bor ulikt antall netter | Side Badger"
+  description: "Dev kom bare i tre netter, så hvorfor betale for seks? Del en ferievilla etter nettene folk faktisk bodde der, med regnestykket gjort for deg."
+h1: "Slik deler du en ferievilla når folk bor ulikt antall netter"
+navLabel: "Del en villa etter netter"
+lead: "Sett en pris per person per natt, gang med hver persons netter, og legg inn villaen som **én utgift med eksakte beløp**. Side Badger fører regnskapet og foreslår en kort liste over betalinger når det er på tide å gjøre opp."
+cta:
+  heading: "Gi villaen én ryddig utgift"
+  body: "Lag en gruppe, inviter alle med en lenke eller QR-kode og legg inn villaen med eksakte beløp. Side Badger fører det løpende regnskapet mens dere konsentrerer dere om ferien."
+sections:
+  - heading: "Seks netter, fire personer, ett kredittkort"
+    body: "En [gruppereise](page:use-case/group-trips) starter som regel med én persons kort. Her er det Anas. Hun booker en villa for seks netter, 2 100 €, fordi noen må gå først. Ana, Ben og Chloe bor der alle seks nettene. Dev kan bare komme de tre siste, og kommer med tog. Ben leier en bil som Dev aldri sitter i. Dev gjør den store dagligvarehandelen. Å dele villaen på fire er det åpenbare. Da betaler Dev for tre netter han tilbrakte hjemme, og slikt dukker opp igjen i julen. Å dele etter netter unngår krangelen, og regnestykket tar ett minutt."
+  - heading: "Sett pris på én personnatt"
+    body: "En personnatt er én person som bor én natt. Villaen koster det den koster, så del prisen på alle personnettene, og gi så hver person dem de brukte."
+    items:
+      - "**Tell personnettene.** Ana, Ben og Chloe bor seks netter hver og Dev bor tre: 6 + 6 + 6 + 3 = 21."
+      - "**Sett pris på én.** 2 100 € ÷ 21 = 100 € per personnatt."
+      - "**Gang med hver persons netter.** Ana, Ben og Chloe betaler 6 × 100 € = 600 € hver. Dev betaler 3 × 100 € = 300 €."
+      - "**Kontroller summen.** 600 € + 600 € + 600 € + 300 € = 2 100 €. Hvis andelene dine ikke summerer seg til prisen, mangler en natt eller er talt to ganger."
+  - heading: "Legg det inn i Side Badger"
+    body: "Lag en gruppe, inviter de tre andre med en lenke eller QR-kode, og legg så til kostnadene. Villaen først."
+    items:
+      - "Velg **Legg til utgift**. Beskriv den, skriv inn 2 100 og sett **Hvem betalte?** til Ana."
+      - "Under **Fordel mellom** må alle fire være med."
+      - "Under **Hvordan fordele** velger du **Eksakte beløp**. Skriv 600 for Ana, Ben og Chloe og 300 for Dev. Beløpene må summere seg til totalen."
+      - "Velg **Lagre utgift**."
+      - "Legg til leiebilen på samme måte. Ben betalte, fordelingen er **Likt**, og Dev står utenfor, fordi han kom med tog. [Dele utgifter](page:feature/split-expenses) tar for seg de andre måtene å dele en kostnad på."
+      - "Legg til dagligvarene. Dev betalte, fordelingen er **Likt**, og alle fire er med."
+  - heading: "Les resultatet, og gjør så opp"
+    body: "Hver persons regning er villaandelen pluss andelen av bilen og handleturen. Ana, Ben og Chloe kommer på 725 € hver, som er 600 € + 80 € + 45 €. Dev kommer på 345 €, som er 300 € + 45 €. Trekk fra det hver person betalte, så faller saldoene ut. Ana betalte 2 100 €, så hun har 1 375 € til gode. Ben betalte 240 € og skylder 485 €. Dev betalte 180 € og skylder 165 €. Chloe betalte ingenting og skylder 725 €. Overlatt til seg selv ville gjeldene gått seks veier rundt i gruppen. Side Badger foreslår i stedet tre betalinger, alle til Ana. Betal henne slik dere vil, velg så **Gjør opp** og bruk **Registrer oppgjør** for hver betaling, så saldoene henger med. Hurtigoppgjørsknapper fyller inn beløpet. Det er mer om [å gjøre opp](page:feature/settle-up)."
+  - heading: "Når villaen ikke har én ryddig pris"
+    items:
+      - "**Rommene er ulike.** Hvis suiten er verdt mer enn det minste soverommet, bli først enige om hva hvert rom koster, og gjør så personnattregnestykket ett rom om gangen. Legg villaen inn som én utgift med alles sum, eller som én utgift per rom. Uansett må de eksakte beløpene på en utgift summere seg til totalen."
+      - "**Et depositum betalt måneder i forveien.** Den som betalte det, får sin egen utgift, datert den dagen vedkommende betalte. Del det etter netter i samme forhold som restbeløpet."
+      - "**Bookingen er i en annen valuta.** Legg inn villaen i valutaen dere betalte i. Hvis gruppen konverterer underveis, bruk en gjeldende valutakurs, eller skriv inn kursen du faktisk fikk. Det opprinnelige beløpet blir stående på utgiften. [Flere valutaer](page:feature/multiple-currencies) har detaljene."
+      - "**Deler av netter.** Noen kommer ved midnatt, noen drar før frokost. Bli enige om én regel for å telle netter, og bruk den for alle."
+  - heading: "Hva Side Badger ikke gjør her"
+    items:
+      - "Den teller ikke netter for deg. Det finnes ingen deling etter netter eller andeler, så du regner ut hvert beløp som ovenfor og legger inn **eksakte beløp**."
+      - "Den flytter ikke penger. Betal hverandre slik dere vil, og registrer så betalingen."
+      - "Den tillater én betaler per utgift. Hvis to personer betalte for villaen, legg inn to utgifter."
+      - "Den har ingen gjestetilgang. Alle i gruppen, Dev inkludert, trenger en gratis konto."
+exampleAfter: 2
+example:
+  heading: "Villaen, bilen og handleturen"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "seks netter i villaen"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "leiebilen"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "dagligvarer"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Spørsmål om villaen"
+  items:
+    - q: "Hva om noen avlyser?"
+      a: "Ta nettene deres ut, regn om og rediger villautgiften slik at de eksakte beløpene summerer seg til prisen igjen. Den tidligere versjonen blir bevart og redigeringen vises i gruppens aktivitet, så ingen endrer et tall i det stille. Hvem som kan redigere, avhenger av gruppens tillatelser."
+    - q: "Bør den som booket betale mindre?"
+      a: "Det avgjør gruppen. Å booke er et ork, og grupper er ulike når det gjelder om det gir rabatt. Uansett hva dere blir enige om, legg det inn i de eksakte beløpene og skriv det i et notat på utgiften, eller i en kommentar ved siden av den, så ingen trenger å huske avtalen."
+    - q: "Kan vi dele rengjøringsgebyr annerledes?"
+      a: "Ja. Legg inn gebyret som en egen utgift og gi det sin egen fordeling. Likt passer for et fast gebyr for hele huset. Eksakte beløp passer for en gruppe som vil at gebyret også skal følge nettene."

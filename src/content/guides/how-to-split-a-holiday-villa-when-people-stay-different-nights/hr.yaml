@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Podijeli vilu kad ljudi ostaju različit broj noći | Side Badger"
+  description: "Dev je došao samo na tri noći, pa zašto bi plaćao šest? Podijeli vilu za odmor prema noćima koje je tko stvarno proveo, uz gotov izračun."
+h1: "Kako podijeliti vilu za odmor kad ljudi ostaju različit broj noći"
+navLabel: "Vila prema noćima"
+lead: "Odredi cijenu po osobi i noći, pomnoži je s brojem noći svake osobe i unesi vilu kao **jedan trošak s točnim iznosima**. Side Badger vodi evidenciju i, kad dođe vrijeme za poravnanje, predlaže kratak popis uplata."
+cta:
+  heading: "Daj vili jedan uredan trošak"
+  body: "Napravi grupu, pozovi sve poveznicom ili QR kodom i unesi vilu s točnim iznosima. Side Badger vodi tekuću evidenciju dok ti uživaš na odmoru."
+sections:
+  - heading: "Šest noći, četvero ljudi, jedna kartica"
+    body: "[Grupno putovanje](page:use-case/group-trips) obično počinje nečijom karticom. Ovdje je to Anina. Ona rezervira vilu za šest noći, 2.100 €, jer netko mora prvi. Ana, Ben i Chloe ostaju svih šest noći. Dev se može pridružiti samo za posljednje tri i dolazi vlakom. Ben unajmljuje auto, u kojem Dev nikad ne sjedi. Dev obavlja veliku kupnju namirnica. Podijeliti vilu na četvero očit je potez. Time Dev plaća tri noći koje je proveo kod kuće, a takve se stvari opet pojave oko Božića. Podjela po noćima izbjegava svađu, a računica traje minutu."
+  - heading: "Odredi cijenu jednog noćenja po osobi"
+    body: "Noćenje po osobi je jedna osoba koja ostaje jednu noć. Vila košta koliko košta, pa cijenu podijeli na sva noćenja po osobi, a zatim svakoj osobi pripiši ona koja je iskoristila."
+    items:
+      - "**Izbroji noćenja po osobi.** Ana, Ben i Chloe ostaju po šest noći, a Dev tri: 6 + 6 + 6 + 3 = 21."
+      - "**Odredi cijenu jednog.** 2.100 € ÷ 21 = 100 € po osobi i noći."
+      - "**Pomnoži s brojem noći svake osobe.** Ana, Ben i Chloe plaćaju po 6 × 100 € = 600 €. Dev plaća 3 × 100 € = 300 €."
+      - "**Provjeri zbroj.** 600 € + 600 € + 600 € + 300 € = 2.100 €. Ako se tvoji udjeli ne zbrajaju u cijenu, jedna je noć izostavljena ili izbrojena dvaput."
+  - heading: "Unesi to u Side Badger"
+    body: "Napravi grupu, pozovi ostalo troje poveznicom ili QR kodom, a zatim dodaj troškove. Prvo vilu."
+    items:
+      - "Odaberi **Dodaj trošak**. Opiši ga, upiši 2.100 i pod **Tko je platio?** odaberi Anu."
+      - "Pod **Podijeli između** provjeri da je uključeno svih četvero."
+      - "Pod **Kako podijeliti** odaberi **Točni iznosi**. Upiši 600 za Anu, Bena i Chloe te 300 za Deva. Iznosi se moraju zbrajati u ukupan iznos."
+      - "Odaberi **Spremi trošak**."
+      - "Najam auta dodaj na isti način. Platio je Ben, podjela je **Jednako**, a Dev je izostavljen jer je došao vlakom. [Podjela troškova](page:feature/split-expenses) opisuje ostale načine dijeljenja troška."
+      - "Dodaj namirnice. Platio je Dev, podjela je **Jednako**, a uključeno je svih četvero."
+  - heading: "Pročitaj rezultat, pa se poravnaj"
+    body: "Račun svake osobe je njezin udio u vili plus udio u autu i kupnji. Ana, Ben i Chloe dolaze na po 725 €, što je 600 € + 80 € + 45 €. Dev dolazi na 345 €, što je 300 € + 45 €. Oduzmi ono što je svatko platio i stanja izlaze sama. Ana je platila 2.100 €, pa joj se duguje 1.375 €. Ben je platio 240 € i duguje 485 €. Dev je platio 180 € i duguje 165 €. Chloe nije platila ništa i duguje 725 €. Prepušteni sebi, ti bi dugovi kružili grupom u šest smjerova. Side Badger umjesto toga predlaže tri uplate, sve Ani. Plati joj kako god želiš, a zatim odaberi **Poravnaj** i za svaku uplatu **Zabilježi poravnanje**, da stanja sustignu stvarnost. Gumbi za brzo poravnanje ispunjavaju iznos. Više o tome u [poravnanju](page:feature/settle-up)."
+  - heading: "Kad vila nema jednu urednu cijenu"
+    items:
+      - "**Sobe se razlikuju.** Ako apartman vrijedi više od male sobe, prvo se dogovorite koliko košta koja soba, a zatim izračun po noćenju po osobi napravite za jednu po jednu sobu. Vilu unesi kao jedan trošak s ukupnim iznosom za svaku osobu ili kao jedan trošak po sobi. U oba slučaja točni iznosi na jednom trošku moraju se zbrajati u njegov ukupan iznos."
+      - "**Polog plaćen mjesecima ranije.** Tko ga je platio, dobiva vlastiti trošak s datumom kad je platio. Podijeli ga po noćima u istim omjerima kao i preostali iznos."
+      - "**Rezervacija je u drugoj valuti.** Vilu unesi u valuti u kojoj si platio. Ako grupa pretvara usput, koristi aktualni tečaj ili upiši tečaj koji si stvarno dobio. Izvorni iznos ostaje uz trošak. [Više valuta](page:feature/multiple-currencies) donosi pojedinosti."
+      - "**Djelomične noći.** Netko stiže u ponoć, netko odlazi prije doručka. Dogovorite jedno pravilo za brojanje noći i primijenite ga na sve."
+  - heading: "Što Side Badger ovdje ne radi"
+    items:
+      - "Ne broji noći umjesto tebe. Nema podjele po noćima ni po udjelima, pa svaki iznos izračunaš kao gore i unosiš **točne iznose**."
+      - "Ne premješta novac. Platite si kako god želite, a zatim zabilježite uplatu."
+      - "Dopušta jednog platitelja po trošku. Ako su vilu platile dvije osobe, unesi dva troška."
+      - "Nema pristupa za goste. Svatko u grupi, uključujući Deva, treba besplatan korisnički račun."
+exampleAfter: 2
+example:
+  heading: "Vila, auto i namirnice"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Šest noći u vili"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "Najam auta"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "Namirnice"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Pitanja o vili"
+  items:
+    - q: "Što ako netko otkaže?"
+      a: "Oduzmi njegove noći, ponovi račun i uredi trošak za vilu tako da se točni iznosi opet zbrajaju u cijenu. Prethodna verzija ostaje sačuvana, a izmjena se vidi u aktivnostima grupe, pa nitko ne mijenja broj kriomice. Tko smije uređivati, ovisi o dopuštenjima grupe."
+    - q: "Treba li onaj tko je rezervirao platiti manje?"
+      a: "To odlučuje grupa. Rezerviranje je obveza, a grupe se razlikuju oko toga zaslužuje li popust. Što god dogovorite, ugradite u točne iznose i zapišite u bilješku uz trošak ili u komentar pokraj njega, da se nitko ne mora sjećati dogovora."
+    - q: "Možemo li naknadu za čišćenje podijeliti drukčije?"
+      a: "Da. Unesi naknadu kao zaseban trošak i daj joj vlastitu podjelu. Jednako odgovara paušalnoj naknadi za cijelu kuću. Točni iznosi odgovaraju grupi koja želi da i naknada prati noći."

@@ -1,0 +1,103 @@
+translatedFrom: "a2338738"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "How to share rent by room size | Side Badger"
+  description: "Bigger room, bigger share. Put di shared rooms aside, share di rest by floor area and enter di percentages once. We show di sums for three housemates."
+h1: "How to share rent by room size"
+navLabel: "Rent follow room size"
+lead: "Decide how much of di rent na for di shared rooms and share dat part equal-equal, then share di rest by di floor area of each bedroom. Round am to whole percentages, enter dem once for di rent inside Side Badger, and copy di expense every month."
+cta:
+  heading: "Put di rent inside once"
+  body: "Create free account, start group for di flat and enter di rent with di percentages wey una agree. Next month na just copy. You wan see di tour first? See [how e dey work](page:how-it-works) or check [wetin free cover](page:pricing)."
+sections:
+  - heading: "Three people, one flat, one wahala"
+    body: "Priya, Tom and Aisha dey share one flat for £1,950 every month. For one year dem share am three ways, because e easy. Then Aisha measure im bedroom. Priya room na 16 m², Tom own na 12 m² and Aisha own na 10 m², so Aisha dey pay di same as Priya for room wey small pass Priya own by more than one third. Nobody dey unreasonable. Nobody just do di sum. As dem dey chop takeaway, dem agree one rule first. Out of di rent, 40% na for di kitchen, bathroom and lounge, wey all three of dem dey use."
+  - heading: "Di method, with di sums wey we show"
+    body: "Four steps, one tape measure and phone calculator."
+    items:
+      - "**Put di shared part aside.** Di group go agree how much of di rent na for di rooms wey everybody dey use. For di flat e be 40%, wey be 13.33% each among three people."
+      - "**Share di rest by floor area.** Di other 60% follow bedroom size. Di bedrooms add up to 38 m² (16 + 12 + 10), so Priya part na 60% × 16/38, wey be 25.26%."
+      - "**Add di two parts.** Priya: 25.26% + 13.33% = 38.6%. Tom: 60% × 12/38 = 18.95%, plus 13.33% na 32.3%. Aisha: 60% × 10/38 = 15.79%, plus 13.33% na 29.1%."
+      - "**Round am and check.** Whole percentages easy to type and easy to argue about, so 38.6% become 39%, 32.3% become 32% and 29.1% become 29%. Check say 39 + 32 + 29 na 100. If your rounding land for 99 or 101, di group go agree whose figure go move by one point."
+  - heading: "How to read di flat month"
+    body: "Rent at 39%, 32% and 29% come to £760.50, £624.00 and £565.50. Priya pay di landlord, so for di whole month dem owe am £1,142.50, while Tom owe £566.00 and Aisha owe £576.50. Side Badger suggest two payments, both to Priya."
+  - heading: "Set am up for Side Badger"
+    body: "One evening, wey you go mostly spend am dey talk about di 40%."
+    items:
+      - "**Make di group.** For di dashboard choose **Kreate Grup** and name am after di flat. Choose **Invite others** and send di link or QR code. Everybody go sign in or create free account, and pick di name wey dem wan make people see for dis group."
+      - "**Add di rent.** Choose **Add expense**. Enter di description and amount, and under **Who pay?** pick whoever pay di landlord. Keep all three people under **Split bitwin**, then under **How we go split am** choose **Pasentej** and type 39, 32 and 29. Di form go flag am if di percentages no total 100. Choose **Sev Expense**."
+      - "**Add di bills.** Energy and broadband na separate expenses, each with im own payer. Leave **How we go split am** on **Equal**."
+      - "**Copy am next month.** Open last month rent and choose **Kopi expense**. Di copy go keep di payer, di amount and di split, and e go take today date. Change di amount if di rent change, then choose **Create copy**."
+      - "**Check who owe who.** Di **Balansis** section go show am. Pay each other anyhow you like, then record di payment under **Settle up**."
+  - heading: "En-suites, box rooms and people wey dey go"
+    items:
+      - "**En-suites and box rooms.** Floor area na just where to start. Room wey get im own bathroom worth more than room of di same size wey no get one, and box room wey fit hold bed and one hopeful chair worth less. Adjust di percentages by agreement, check say dem still total 100 and write di final figures down for place wey di whole flat fit see dem."
+      - "**Somebody move out for middle of di month.** Work out wetin each person owe for dat month and enter dat month rent with **Exact amaunts** instead of **Pasentej**. Di amounts must add up to di rent. Do am before dem go. Nobody fit leave group while dem owe or dem owe dem money, and expense wey involve person wey don leave go become read-only."
+      - "**Somebody move in.** Measure again, redo di sums with di new room sizes and use di new percentages from di next rent. Earlier months go stay as dem be."
+  - heading: "Wetin Side Badger no dey do here"
+    items:
+      - "E no dey measure your rooms or pick di percentages. Di floor areas and di 40% na for di group to agree."
+      - "No recurring bills dey, so you go copy last month rent every time."
+      - "E no dey ever move money and e no dey pay di landlord. You pay each other anyhow you like and record am."
+      - "E no know wetin your tenancy agreement talk. E just dey keep di count between di people wey dey di group."
+exampleAfter: 2
+example:
+  heading: "One month for di flat"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "di rent"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "di energy bill"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "di broadband"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Question dem"
+  items:
+    - q: "Wetin if somebody get bigger room but e no get plenty light?"
+      a: "Floor area na just where to start, so di group fit agree to adjust. Take one point or two from di dark room, give dem to di others and check say di percentages still total 100. Side Badger go store whatever una agree and e no dey judge am."
+    - q: "Di bills sef, we suppose share dem by room size?"
+      a: "Usually no. Everybody dey use energy and broadband, so equal-equal split simpler, as for di example above. If one housemate dey house all day, di group fit agree something else, like exact amounts. [Share expenses](page:feature/split-expenses) cover di options."
+    - q: "We fit change di split later?"
+      a: "Yes, for new expenses. Change di percentages when you copy di rent and earlier months go stay as dem be. To correct past expense, edit am if di group permissions allow, and tell di house first, because di balances go change. Di earlier version dey kept."

@@ -1,0 +1,101 @@
+translatedFrom: "5d92090e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "How to collect money for group gift | Side Badger"
+  description: "Everybody contribute different amount and one person card go carry di load. Run budget poll, enter exact amounts and make Side Badger do di sums."
+h1: "How to collect money for group gift"
+navLabel: "Collect for group gift"
+lead: "To collect for group gift mean say one person go front di money and everybody else go owe am dem contribution. Agree budget with poll, make di buyer put di gift on im card, then enter am as one expense with [exact amounts](page:feature/split-expenses), one figure for each person. Side Badger go show who owe di buyer wetin, and everybody go send dem share anyhow dem like."
+cta:
+  heading: "Pass di hat without di hat"
+  body: "Make group, leave out di person wey go collect di gift and enter di present with exact amounts. Side Badger free, no ads, no daily limits. You wan see di tour first? See [how e dey work](page:how-it-works) or [wetin free cover](page:pricing)."
+sections:
+  - heading: "Four friends, one record player, four different amounts"
+    body: "Bea dey turn 30 and wan get record player. Priya, Omar, Lena and Sam dey buy am for Bea. Priya find one for £240 and buy am with im own card, because somebody must go first. Di four no contribute equal. Priya and Omar put £60 each, Lena £80 and Sam £40. Nobody explain dem figure and nobody ask. Omar also buy card and wrapping paper for £12. All four sign di card, so dem share dat one equal-equal."
+  - heading: "Agree di budget before anybody click Buy"
+    body: "Budget poll go save you from argument about £400 turntable. For di group, choose **Add poll** and ask how much di present suppose cost. Make di options amounts, like up to £150, up to £200 and up to £250. Turn on **No-name voting**, wey hide who vote for wetin, so nobody go need defend smaller number for mouth. Settings no fit change once di first vote don enter, so check dem first. Poll no dey close by itself. When everybody don vote, choose **Klos poll** and di **Winna** go show. Di poll agree di total. E no dey set anybody share."
+  - heading: "Reading di count"
+    body: "Di gift split £60, £60, £80 and £40, wey add up to di £240 for di receipt. Di card and wrapping split four ways for £3 each. Priya bill na £60 + £3, so £63, and e pay £240, wey leave dem owe am £177. Omar bill na also £63, but e pay £12, so e owe £51. Lena owe £80 + £3, wey be £83, and Sam owe £40 + £3, wey be £43. Dis three add up to Priya £177. If you leave am alone, di debts go run five ways round di group. Side Badger suggest three payments instead, all to Priya. [Settle up](page:feature/settle-up) get di detail."
+  - heading: "Put am inside Side Badger"
+    body: "Priya side go take about five minutes."
+    items:
+      - "**Make di group.** For di Dashbod choose **Kreate Grup**. Choose **Invite others** and send di link or QR code to di people wey dey contribute, and nobody else."
+      - "**Add di gift.** Choose **Add expense**, describe am, enter 240 and under **Who pay?** pick Priya. Make all four people dey under **Split bitwin**, then under **How we go split am** choose **Exact amaunts** and type 60, 60, 80 and 40. Di amounts must add up to 240. Attach di order confirmation if you like. Choose **Sev Expense**."
+      - "**Add di card.** Omar go add di £12 by imself, pick imself under **Who pay?** and leave **How we go split am** for **Equal**, and all four people dey ticked."
+      - "**Count, then pay.** Everybody go check **Balansis**, wey show who owe who, and send Priya dem share anyhow dem like. Then record am with **Settle up** and **Rekod Settlement**. Kwik settul go fill di amount for you."
+  - heading: "Buy first, or collect money first"
+    body: "Side Badger no dey hold di money pot, so “collecting” na really counting. Two orders fit work."
+    items:
+      - "**Buy first.** Di buyer go pay, add di expense for di real price and everybody go see dem share sharp sharp. E tidy pass, but di buyer go carry di cost until people pay, so pick buyer wey fit."
+      - "**Collect first.** People go send dem figure to di buyer before di purchase. Once you get di price, enter di gift, then record each payment with di date wey di money really move. Add di gift first, so every payment go get balance to land against."
+      - "**Di price fit move.** Delivery, discount code, late price rise. Edit di gift and change di exact amounts so dem still add up. Di earlier version dey kept, but tell di group first, because dem balances go change."
+  - heading: "Keep Bea out of am"
+    body: "Na only members of group fit see am, so Bea no fit see group wey e no join. Invite di people wey dey contribute and nobody else. Link dey work until e expire, and you fit choose anything from 15 minutes to 5 days, so pick short one and send am where Bea no go see am. Di link dey show preview of di group to whoever open am, so name di group something dull, like Saturday contribution, and keep Bea name out of expense labels and poll options too."
+  - heading: "Wetin Side Badger no dey do here"
+    items:
+      - "E no dey hold or collect di money. Contributions dey go to di buyer by bank transfer, cash or whatever you use, and then somebody go record dem."
+      - "E no dey send payment reminders. To nudge whoever never pay still na human work."
+      - "E no dey work out anybody share. Poll dey agree di budget and no “split wetin remain” option dey, so you go type each amount."
+      - "Each expense get one payer. If two people buy different parts of di gift, enter two expenses."
+      - "Everybody for di split need free account and place for di group."
+exampleAfter: 2
+example:
+  heading: "Bea record player, and di card"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: "di gift"
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: "di card and wrapping"
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: "Question dem"
+  items:
+    - q: "Wetin if we collect more than di gift cost?"
+      a: "Di exact amounts must add up to di price, so trim di shares until dem do. Or put di extra for something real, like flowers, and enter dat one as second expense, like di card and wrapping for di example."
+    - q: "Person fit contribute without to join di group?"
+      a: "No, if you want dem inside di count. Everybody for di split need free account and to dey inside di group. For person wey get only cash, Priya fit collect am and enter di gift for wetin di group still owe. For example, if Sam give Priya £40 for cash, Priya go enter £200 and split am 60, 60 and 80 between Priya, Omar and Lena."
+    - q: "Poll fit decide how much each person go put?"
+      a: "No. Poll dey agree one figure for di whole group, like di budget. Each person share na for una to agree between una, then type am inside di expense as **Exact amaunts**."

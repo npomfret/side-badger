@@ -1,0 +1,111 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Gestion et permissions d'un groupe de dépenses | Side Badger"
+  description: "Invitez par lien ou code QR, approuvez les arrivées, fixez les permissions, verrouillez le groupe à la fin. Vos règles, dans la limite du raisonnable."
+h1: "Gérer le groupe et les permissions : vos règles, dans la limite du raisonnable"
+navLabel: "Groupes et permissions"
+lead: "Certains groupes ont besoin d'un trésorier. Side Badger a un réglage pour ça. Invitez par lien ou code QR, décidez qui entre et choisissez qui peut changer les chiffres. Un petit groupe d'amis peut tout ignorer, car les nouveaux groupes démarrent grands ouverts."
+cta:
+  heading: "Prêt à tenir un groupe bien rangé ?"
+  body: "Créez un compte, lancez un groupe et envoyez le lien d'invitation. Laissez-le ouvert, ou resserrez les règles quand le groupe grossit ou devient plus pointilleux."
+problem:
+  heading: "Il faut bien que quelqu'un tienne les chiffres en ordre"
+  body: "Quatre colocataires peuvent fonctionner à la confiance. Trente invités d'un week-end de mariage, probablement pas. Faites un groupe par logement, voyage ou événement, avec jusqu'à 50 personnes, et chaque groupe garde ses propres membres, ses propres rôles et ses propres règles. Votre tableau de bord les liste tous, avec votre situation dans chacun, sur un seul écran. La plupart des groupes ne touchent jamais aux paramètres. Ceux qui le font ont d'ordinaire quelqu'un d'assez organisé pour les vouloir."
+workflow:
+  heading: "Du groupe vide au groupe verrouillé"
+  steps:
+    - title: "Invitez par lien ou code QR"
+      body: "Ouvrez **Inviter d'Autres**, choisissez combien de temps le lien doit durer (15 minutes, 1 heure, 1 jour ou 5 jours), puis copiez le lien ou montrez le code QR à scanner. Vous pouvez aussi inviter, depuis l'appli, des personnes avec qui vous partagez déjà un autre groupe."
+      shot: S03
+      shotAlt: "La fenêtre d'invitation avec un lien de groupe, son code QR et le choix de la durée du lien"
+    - title: "Laissez-les jeter un œil avant de rejoindre"
+      body: "Toute personne munie du lien se connecte ou crée un compte, voit un aperçu du groupe et choisit le nom qu'elle veut y utiliser. Puis elle appuie sur **Rejoindre Groupe**."
+      shot: S04
+      shotAlt: "L'aperçu d'un groupe, montré à une personne connectée avant qu'elle ne le rejoigne"
+    - title: "Approuvez qui entre"
+      body: "Activez l'approbation et les personnes qui utilisent le lien patientent comme membres en attente jusqu'à ce qu'un admin les laisse entrer. Les admins les trouvent sous **Membres en attente** dans **Sécurité & Permissions**, et choisissent **Approuver** ou **Rejeter**. D'ici là, une personne en attente ne voit rien dans le groupe."
+      shot: S14
+      shotAlt: "Des membres en attente d'être approuvés ou rejetés par un admin"
+    - title: "Choisissez qui peut changer quoi"
+      body: "Choisissez **Collaboration ouverte** ou **Groupe géré**, ou réglez les permissions une par une. Donnez ensuite à chaque personne un rôle : admin, membre ou spectateur. Seuls les admins peuvent changer les permissions et les rôles."
+      shot: S13
+      shotAlt: "L'onglet sécurité des paramètres du groupe, avec les deux préréglages et les permissions personnalisées"
+    - title: "Verrouillez-le quand c'est fini"
+      body: "Quand le voyage est terminé et que les chiffres sont posés, un admin peut activer **Verrouiller Groupe**. Plus personne ne peut ajouter ni modifier de dépenses, enregistrer de paiements ou modifier les listes et les sondages, et une bannière le dit. Personne ne peut glisser discrètement un taxi de dernière minute. Si un taxi tardif refait surface, un admin peut déverrouiller le groupe."
+      shot: S15
+      shotAlt: "Un groupe affichant la bannière qui indique qu'il est verrouillé"
+options:
+  heading: "Admins, membres et spectateurs"
+  items:
+    - title: "Administrateur"
+      body: "Fait tourner le groupe. Les admins approuvent les nouveaux membres, changent les rôles et les permissions, verrouillent et déverrouillent le groupe, et le ferment. Celui ou celle qui crée un groupe en est l'admin au départ, et un groupe n'est jamais laissé sans admin, car le dernier admin ne peut pas être rétrogradé."
+    - title: "Membre"
+      body: "Participe. Ce qu'un membre peut faire dépend des permissions du groupe. Dans un groupe en Collaboration ouverte, c'est presque tout. Dans un Groupe géré, les membres ne peuvent modifier que les dépenses et les listes qu'ils ont créées."
+    - title: "Spectateur"
+      body: "Voit tout et ne change rien. Un spectateur ne peut ni ajouter ni modifier de dépenses ou de listes, ni inviter de personnes, ni changer les paramètres, ni toucher à l'image d'en-tête. Pratique pour celui ou celle qui veut surveiller les chiffres et promet de ne pas y toucher."
+sections:
+  - heading: "Ouvert, géré ou vos propres règles"
+    body: "Les nouveaux groupes démarrent en **Collaboration ouverte** : tout le monde peut inviter, modifier les dépenses et les listes, et les nouveaux membres rejoignent automatiquement. **Groupe géré** sert quand il faut que quelqu'un joue l'adulte. Vous pouvez aussi régler les sept permissions une par une, et en changer une à la main fait passer le groupe en personnalisé. Quoi que vous choisissiez, seuls les admins peuvent changer les permissions elles-mêmes, et chaque changement apparaît dans le fil d'activité. Un logement de [colocataires](page:use-case/housemates) peut tout laisser ouvert. Un grand [événement ou une fête](page:use-case/events-and-celebrations) préfère souvent le groupe géré, pour que quelqu'un décide de qui rejoint. Nouveau dans tout ça ? [Comment ça marche](page:how-it-works) suit tout le parcours, de la première dépense au règlement des comptes."
+    items:
+      - "**Qui peut modifier des dépenses.** Collaboration ouverte : tout membre. Groupe géré : créateurs et admins."
+      - "**Qui peut supprimer des dépenses.** Collaboration ouverte : tout membre. Groupe géré : créateurs et admins."
+      - "**Qui peut modifier les listes.** Collaboration ouverte : tout membre. Groupe géré : créateurs et admins."
+      - "**Qui peut inviter des membres.** Collaboration ouverte : tout membre. Groupe géré : admins uniquement."
+      - "**Approbation de nouveau membre.** Collaboration ouverte : automatique. Groupe géré : approbation admin requise."
+      - "**Qui peut changer les paramètres.** Collaboration ouverte : tout membre. Groupe géré : admins uniquement."
+      - "**Qui peut changer l'image d'en-tête.** Collaboration ouverte : tout membre. Groupe géré : admins uniquement."
+  - heading: "Votre nom, votre photo, votre image d'en-tête"
+    body: "Chaque groupe a sa propre distribution. Choisissez le nom que les gens voient dans chaque groupe (de 2 à 50 caractères, et unique dans le groupe) et celle de vos photos de profil que vous y portez. Soyez **Sam** à la maison et **Sam (a la voiture)** en voyage. Toute personne autorisée à changer les paramètres peut renommer le groupe et modifier sa description. L'image d'en-tête, un JPEG, PNG, GIF ou WebP jusqu'à 10 Mo, a sa propre permission."
+  - heading: "Archiver, verrouiller ou fermer"
+    body: "Trois façons de ranger un groupe, de la plus légère à la plus sérieuse."
+    items:
+      - "**Archiver** retire le groupe de votre propre tableau de bord, et seulement du vôtre. Vous pouvez toujours l'ouvrir et l'utiliser comme avant, et **Désarchiver Groupe** le ramène."
+      - "**Verrouiller** fige les changements jusqu'à ce qu'un admin déverrouille. Tout le monde peut encore lire le groupe et son historique."
+      - "**Fermer** est définitif, et pour tout le monde. Seul un admin peut le faire, en tapant le nom du groupe pour confirmer, et plus personne ne peut rouvrir le groupe."
+  - heading: "Quitter un groupe"
+    body: "Tout le monde peut partir une fois les comptes réglés. Vous ne pouvez pas partir tant que vous devez ou qu'on vous doit de l'argent, ne serait-ce que dans une seule devise, tant qu'une question ouverte sur une dépense vous concerne, ni si vous êtes le dernier admin ou le seul membre. [Enregistrez le paiement](page:feature/settle-up), réglez la [question sur la dépense](page:guide/what-to-do-when-someone-disputes-a-shared-expense), ou nommez quelqu'un d'autre admin, puis partez. Pour revenir, il vous faudra une nouvelle invitation."
+limits:
+  heading: "Dans la limite du raisonnable : les petits caractères"
+  items:
+    - "Un groupe accueille jusqu'à 50 personnes."
+    - "Seuls les admins peuvent changer les permissions et les rôles. Le dernier admin ne peut pas être rétrogradé."
+    - "Régler la modification des dépenses sur **Admins uniquement** signifie aussi que seuls les admins peuvent ajouter des dépenses."
+    - "Un verrou arrête les changements des dépenses, les nouveaux paiements, les listes et les sondages. Tout le monde peut encore lire le groupe et son historique, et réagir aux paiements."
+    - "La fermeture est définitive. L'appli n'a aucun moyen de rouvrir un groupe fermé."
+    - "Créer un nouveau lien d'invitation n'annule pas les anciens. Chaque lien dure jusqu'à sa propre expiration, donc choisissez une durée courte si vous vous inquiétez de l'endroit où il pourrait atterrir."
+    - "Les invitations dans l'appli listent les personnes de vos 10 groupes actifs les plus récents. Toute autre personne a besoin du lien, et qui peut inviter dépend des permissions du groupe."
+    - "Rejoindre demande un compte, et les gens doivent vérifier leur e-mail avant de pouvoir ajouter quoi que ce soit."
+useCasesHeading: "Là où un peu d'ordre aide"
+faq:
+  heading: Questions
+  items:
+    - q: "Un spectateur peut-il ajouter des dépenses ?"
+      a: "Non. Un spectateur voit tout et ne change rien. Il ne peut ni ajouter ni modifier de dépenses ou de listes, ni inviter de personnes, ni changer les paramètres."
+    - q: "Peut-on partir en devant de l'argent ?"
+      a: "Non. Personne ne peut quitter un groupe tant qu'il doit ou qu'on lui doit de l'argent, ne serait-ce que dans une seule devise. Réglez d'abord, puis partez."
+    - q: "Que se passe-t-il quand un groupe est fermé ?"
+      a: "Plus personne ne peut le rouvrir. Seul un admin peut fermer un groupe, il doit taper le nom du groupe pour confirmer, et le groupe devient indisponible pour tout le monde. Si vous voulez seulement arrêter les changements, verrouillez-le. Si vous voulez seulement l'ôter de votre propre tableau de bord, archivez-le."
+    - q: "Puis-je annuler un verrou ?"
+      a: "Oui. Un admin peut déverrouiller le groupe, et les changements refonctionnent."
+    - q: "Dois-je approuver les gens avant qu'ils rejoignent ?"
+      a: "Seulement si vous le voulez. Les nouveaux groupes démarrent en Collaboration ouverte, où les personnes qui utilisent le lien rejoignent automatiquement. Activez l'approbation par un admin, ou choisissez Groupe géré, et chaque personne attend qu'un admin la laisse entrer."
+    - q: "Combien de personnes un groupe peut-il compter ?"
+      a: "Jusqu'à 50."
+identicalApproved:
+  - faq.heading

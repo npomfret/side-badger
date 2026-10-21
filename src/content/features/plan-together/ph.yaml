@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Shared na listahan, poll, at komento ng grupo | Side Badger"
+  description: "Magkomento sa gastos, kuwestyunin ang kakaiba, magtabi ng listahan ng bibilhin, at bumoto sa villa. Planuhin muna ang gastos, saka hatiin. Libre, walang ad."
+h1: "Planuhin nang sama-sama, hatiin pagkatapos"
+navLabel: "Magplano nang sama-sama"
+lead: "Ang listahan ng bibilhin at ang bayarin sa pamimili, sa wakas, nag-uusap na. Binibigyan ng Side Badger ang grupo mo ng lugar para pag-usapan ang pera bago at pagkatapos itong gastusin: may komento sa bawat gastos, paraan para kuwestyunin ang mukhang mali, shared na listahan, at poll para sa malalaking desisyon. Saka ninyo [hahatiin ang gastos](page:feature/split-expenses) gaya ng dati."
+cta:
+  heading: "Magplano, saka maghati"
+  body: "Gumawa ng libreng account, magsimula ng grupo, at ilagay ang unang listahan, poll, o tanong sa tabi mismo ng pera. Hindi sigurado sa susunod na mangyayari? Tingnan ang [paano ito gumagana](page:how-it-works)."
+problem:
+  heading: "Nandito ang chat, nandoon ang bayarin"
+  body: "Karaniwang nasa dalawang lugar ang gastos ng grupo. Nasa isa ang mga numero, at nasa chat na nawala na sa scroll noong Martes ang pagtatalo tungkol sa mga numero. Ang listahan ng bibilhin ay litrato ng ref. Ang villa ay napagdesisyunan ng thumbs-up ng karamihan, siguro. Pinapanatili ng Side Badger ang pagpaplano sa loob ng grupo, sa tabi ng mga gastos na tinutukoy nito, kaya may komento kung nasaan ang gastos, listahan kung nasaan ang pamimili, poll para sa malaking desisyon, at paraan para sabihing “teka, tama ba ito?” nang hindi nagsusulat ng isang talata. Lahat ng ito ay nananatiling tungkol sa pera ng grupo, na siyang dahilan kung bakit may grupo."
+workflow:
+  heading: "Mula sa botohan sa villa hanggang sa bayarin sa pamimili"
+  steps:
+    - title: "Ipaboto ang malaking desisyon"
+      body: "Magdagdag ng poll para sa desisyong magtatakda ng bayarin, gaya ng kung aling villa. Pumili ng dalawa hanggang sampung opsyon, sabihin kung ilang boto ang makukuha ng bawat tao, saka isara ito kapag nakaboto na ang lahat at namarkahan na ang panalo."
+      shot: S17
+      shotAlt: "Isang saradong poll na may markadong panalong opsyon at bilang ng boto sa tabi ng bawat opsyon"
+    - title: "Sabay na isulat ang listahan ng bibilhin"
+      body: "Magsimula ng shared na listahan, idagdag ang mga item, at i-tick ang mga ito kapag nasa cart na. Idadagdag ang pamimili bilang gastos pagkatapos."
+      shot: S16
+      shotAlt: "Isang shared na listahan ng bibilhin na may ilang item na na-tick na at bilang ng progress"
+    - title: "Pag-usapan ang gastos kung nasaan ito"
+      body: "Magkomento mismo sa gastos, mag-attach ng resibo, at mag-react gamit ang emoji. Nananatili ang usapan sa tabi ng numerong pinag-uusapan."
+      shot: S08
+      shotAlt: "Isang gastos na may mga detalye, thumbnail ng resibo, thread ng komento, at mga emoji reaction"
+    - title: "Kuwestyunin ang mukhang mali"
+      body: "Kung in-on ng grupo ang mga tanong sa gastos, sinumang kasali sa isang gastos ay puwedeng pumili ng **Mayroon akong tanong**. Mananatili sa labas ng mga balanse ang gastos hanggang maayos ang tanong."
+      shot: S18
+      shotAlt: "Ang listahan ng mga gastos na may badge na Kinukuwestyon at ang filter na Kinukuwestyon lang"
+    - title: "Tingnan kung ano ang nagbago, at sino ang nagbago"
+      body: "Ipinapakita ng activity feed at ng bell ng mga abiso kung ano ang bago sa lahat ng grupo mo. Nariyan ang mga push notification kung gusto mo."
+      shot: S19
+      shotAlt: "Ang dropdown ng mga abiso na may listahan ng kamakailang aktibidad"
+options:
+  heading: "Mga opsyon"
+  items: []
+example:
+  heading: "Tatlong housemate, isang kinukuwestyong bayarin sa alak"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "ang malaking grocery"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "ang cleaner"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "ang alak sa party"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Mga komento at reaksyon, katabi ng mga numero"
+    body: "May sariling thread ng komento ang bawat gastos, at ganoon din ang grupo, ang bawat listahan, at ang bawat poll. Itanong kung bakit ganoon kamahal ang taxi sa ilalim mismo ng taxi, hindi sa chat na walang nag-i-scroll pabalik. Magdagdag ng litrato ng resibo o PDF ng booking, saka mag-react ng thumbs up, puso, tawa, wow, lungkot, o pagdiriwang sa mga gastos, bayad, at komento. Ipagdiwang ang bayad kapag dumating ito. Iyon na ang pinakamalapit sa palakpakan na maibibigay ng Side Badger."
+  - heading: "Magtanong sa gastos nang hindi nagsisimula ng away"
+    body: "Kapag naka-on ang mga tanong sa gastos ng grupo, sinumang kasali sa isang gastos ay puwedeng pumili ng **Mayroon akong tanong** at sabihin kung bakit. Ipo-post ang tanong bilang komento sa gastos, lalagyan ng badge na **Kinukuwestyon** ang gastos, at mawawala ang buong gastos sa mga balanse ng lahat hanggang maayos ang tanong."
+    items:
+      - "**Pag-on nito.** Naka-off ito bilang default. Ino-on ng admin ang **Payagan ang mga tanong sa gastos** sa settings ng grupo, sa ilalim ng **Mga Tampok**."
+      - "**Pagsara nito.** Ang nagtanong, o isang admin, ang pipili ng **Isara ang tanong**. Kung ilang tao ang nagtanong sa iisang gastos, babalik ito sa mga balanse kapag naisara na ang huling tanong."
+      - "**Pag-edit nito.** Kapag na-edit ang isang gastos, ang bukas na tanong ay lilipat sa bagong bersyon para sa lahat ng may bahagi pa rin sa gastos. Para sa sinumang inalis ng edit sa gastos, natatapos ang tanong niya kasama ang lumang bersyon, kaya wala na siyang kailangang isara."
+      - "**Paghahanap sa mga ito.** May filter na **Kinukuwestyon lang** ang listahan ng mga gastos. Hindi ito hakbang ng pag-apruba: ang mga gastos lang na kinukuwestyon ng isang tao ang naka-hold, at ang lahat ng iba ay nabibilang agad pagkadagdag."
+  - heading: "Paano nagtatapos ang isang tanong"
+    body: "Nagdagdag si Tom ng £45 na alak para sa party, hinati sa tatlong housemate. Hindi uminom si Aisha, kaya nagtanong siya, at habang bukas ang tanong, hindi nabibilang sa kaninuman ang alak. Napagkasunduan ng bahay na kina Tom at Priya ang alak, kaya in-edit ni Tom ang hati para silang dalawa na lang ang kasali. Wala na si Aisha sa gastos, kaya natatapos ang tanong niya kasama ang naunang bersyon, na pinapanatili, at bumabalik agad ang alak sa mga balanse sa £22.50 bawat isa sa halip na £15 bawat isa. Kung nanatili si Aisha sa gastos, lilipat ang tanong niya at maghihintay hanggang siya o isang admin ang magsara nito. Sa ibaba, ang £48 ni Aisha ay £28 mula sa grocery at £20 mula sa cleaner, at ang £10.50 ni Priya ay ang £70.50 niyang bahagi (£28, £20, at £22.50) bawas ang £60 na binayaran niya. Tipikal na pagtatalo ng mga [housemate](page:use-case/housemates). Para sa kung paano isusulat ang tanong, tingnan ang [ano ang gagawin kapag may kumukuwestyon sa pinagsasaluhang gastos](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Mga shared na listahan, para sa pamimili"
+    body: "Magsimula ng listahan sa grupo, pangalanan ito ng gaya ng Listahan ng pamimili, magdagdag ng mga item, at i-tick ang mga ito. I-drag ang mga item para maayos ang pagkakasunod, panoorin ang pag-akyat ng progress count, at magkomento sa listahan kapag may bumili ng maling oat milk. I-archive ang tapos nang listahan para maitabi ito (ibinabalik ito ng **Ipakita ang archived**), o kopyahin ang listahan para magamit muli. Ilagay ang shared na listahan ng bibilhin sa tabi ng mga bayarin sa pamimili, para sabi ng listahan kung ano ang bibilhin at sabi ng gastos kung magkano ito. Nakadepende sa mga pahintulot ng grupo kung sino ang puwedeng gumawa at mag-edit ng listahan, na ipinapaliwanag ng [mga grupo at pahintulot](page:feature/groups-and-permissions)."
+  - heading: "Mga poll, anonymous kung gusto mo"
+    body: "Tanungin ang grupo ng bagay na magpapasya sa bayarin, gaya ng aling villa, magkano ang gagastusin sa regalo, o sulit ba ang boat trip. May tanong at dalawa hanggang sampung opsyon ang isang poll. Ikaw ang pipili kung ilang boto ang makukuha ng bawat tao, mula iisang pagpili hanggang sampu, at kung anonymous ang pagboto. Itinatago ng **Anonimong pagboto** kung sino ang bumoto ng alin, at hindi na ito mababago kapag may unang boto na. Puwedeng baguhin o alisin ng mga tao ang boto nila hangga't hindi pa nagsasara ang poll, at puwede mo itong buksan muli kung nagbago ang isip ng grupo. Ang pagpili ng villa ang eksaktong bumubuo sa mga [group trip](page:use-case/group-trips), at klasiko ang pagkasundo sa budget ng regalo para sa mga [event at selebrasyon](page:use-case/events-and-celebrations)."
+  - heading: "Ang activity feed, para walang tahimik na nagbabago"
+    body: "May activity history ang bawat grupo, at kinokolekta ng bell ng mga abiso ang aktibidad mula sa lahat ng grupo mo sa iisang lugar. Magdagdag ng gastos at makikita ito agad ng lahat, nang hindi nagre-refresh, at ipinapakita ng feed kung ano ang nagbago at kung sino ang nagbago. Saklaw nito ang mga gastos na idinagdag, in-edit, o binura, mga tanong na itinaas at isinara, mga komento, mga pagbabago sa listahan at poll, at mga naitalang bayad."
+  - heading: "Mga push notification, kung gusto mo"
+    body: "Opsyonal ang mga push notification. I-on ang mga ito sa **Mga Setting** ng account mo, sa ilalim ng **Mga Abiso**, at ipapaalam ng device mo kapag may bagong aktibidad sa mga grupo mo, gaya ng bagong gastos o komento. Hiwalay na ino-on ang bawat device, at hihingi muna ng pahintulot ang browser mo. Sa iPhone o iPad, gumagana lang ang mga ito sa app na nakadagdag sa Home Screen, na ipinapaliwanag ng pahina ng [web app](page:feature/web-app). Ituring itong kaginhawaan, hindi pangako, dahil hindi garantisado ang pagdating nito."
+limits:
+  heading: "Mga limitasyon"
+  items:
+    - "Para sa pera ng grupo ang mga komento, listahan, at poll. Hinihiling ng [mga tuntunin](page:terms) na lahat ng ipo-post ay may kaugnayan sa pananalapi ng grupo, kaya lugar ito para magplano ng gastos, hindi pangkalahatang chat o to-do app."
+    - "Hanggang 500 character ang isang komento, na may hanggang tatlong attachment na larawan o PDF na hanggang 5 MB ang bawat isa. Ang may-akda lang ang makakapagbura ng komento."
+    - "Naka-off bilang default ang mga tanong sa gastos, at ino-on ito ng admin para sa bawat grupo. Ang mga kasali lang sa isang gastos ang makakapagtanong tungkol dito, binubura ng pag-off ng feature ang lahat ng bukas na tanong, at walang makakaalis sa grupo habang may bukas na tanong sa gastos na kasali siya."
+    - "Hanggang 100 listahan ang kayang hawakan ng isang grupo, bawat isa ay may hanggang 200 item na may hanggang 500 character. Ang mga pahintulot ng grupo ang nagpapasya kung sino ang puwedeng gumawa, mag-edit, at magbura ng listahan, at walang pagbabagong pinapayagan sa naka-lock na grupo."
+    - "Hanggang 50 poll ang kayang hawakan ng isang grupo, bawat isa ay may dalawa hanggang sampung opsyon at hanggang sampung boto bawat tao. Walang deadline ang mga poll at hindi sila kusang nagsasara."
+    - "Pinapanatili ang activity history sa loob ng 90 araw."
+    - "Opt-in ang mga push notification para sa bawat account at bawat device. Kailangan nila ng browser na sumusuporta sa mga ito at ng pahintulot mo, gumagana lang sila sa iPhone at iPad mula sa app na nakadagdag sa Home Screen, at hindi garantisado ang pagdating. Walang email o text alert para sa aktibidad at walang paalala sa bayad, kaya ikaw pa rin ang maniningil ng bayad."
+useCasesHeading: "Saan nakakatulong ang magkakasamang pagpaplano"
+faq:
+  heading: "Mga tanong"
+  items:
+    - q: "Puwede bang anonymous ang mga boto?"
+      a: "Oo. I-on ang **Anonimong pagboto** kapag ginagawa ang poll at itatago nito kung sino ang bumoto ng alin. Magpasya bago ang unang boto, dahil hindi na ito mababago pagkatapos."
+    - q: "Puwede bang kusang magsara ang poll?"
+      a: "Hindi. Walang deadline ang poll, kaya ang gumawa nito ang pipili ng **Isara ang poll** kapag nakapagpasya na ang grupo. Kung nagbago ang isip ng grupo, ibabalik ito ng **Buksan muli ang poll**."
+    - q: "Ilang item ang kaya ng isang listahan?"
+      a: "Hanggang 200 item bawat listahan at hanggang 100 listahan bawat grupo. Hanggang 500 character ang bawat item, na napakaraming oat milk."
+    - q: "Sino ang puwedeng magsara ng tanong, at ano ang mangyayari sa gastos habang bukas ito?"
+      a: "Ang nagtanong, o admin ng grupo. Habang bukas ang tanong, wala sa mga balanse ng lahat ang buong gastos. Babalik ito kapag naisara na ang huling bukas na tanong dito, o kapag inalis ng isang edit sa gastos ang nagtanong."
+    - q: "Puwede ko bang gamitin ang mga listahan at komento bilang to-do app o group chat?"
+      a: "Hindi. Para sa pera ng grupo ang mga komento, listahan, at poll, ayon sa hinihingi ng [mga tuntunin](page:terms). Isipin ang mga listahan ng bibilhin, budget poll, at “bakit £45 ito?”."
+    - q: "Mag-e-email ba sa akin ang Side Badger tungkol sa aktibidad?"
+      a: "Hindi. Walang email o text alert para sa aktibidad. Puwede mong i-on ang mga push notification sa bawat device, at ipinapakita ng bell ng mga abiso sa app kung ano ang bago."

@@ -1,0 +1,101 @@
+translatedFrom: "5d92090e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: Näin keräät rahaa ryhmälahjaan | Side Badger
+  description: Jokainen laittaa eri summan, ja yhden kortti ottaa iskun vastaan. Järjestä budjettiäänestys, syötä tarkat summat ja anna Side Badgerin hoitaa laskut.
+h1: Näin keräät rahaa ryhmälahjaan
+navLabel: Ryhmälahjan keräys
+lead: Ryhmälahjan kerääminen tarkoittaa, että yksi maksaa rahat ensin ja kaikki muut ovat hänelle velkaa osuutensa. Sopikaa budjetti äänestyksellä, anna ostajan maksaa lahja omalla kortillaan ja syötä se sitten yhtenä kuluna [tarkoilla summilla](page:feature/split-expenses), eli kullekin henkilölle omalla luvullaan. Side Badger näyttää, kuka on velkaa ostajalle ja paljonko, ja jokainen lähettää osuutensa miten haluaa.
+cta:
+  heading: Kierrätä hattua ilman hattua
+  body: Perusta ryhmä, jätä lahjan saaja siitä pois ja syötä lahja tarkoilla summilla. Side Badger on ilmainen, ilman mainoksia ja päivittäisiä rajoja. Haluatko tutustua ensin? Katso [näin se toimii](page:how-it-works) tai [mitä ilmainen kattaa](page:pricing).
+sections:
+  - heading: Neljä ystävää, yksi levysoitin, neljä eri summaa
+    body: Bea täyttää 30 ja haluaa levysoittimen. Priya, Omar, Lena ja Sam hankkivat sen hänelle. Priya löytää yhden hintaan 240 £ ja ostaa sen omalla kortillaan, koska jonkun on mentävä ensin. Nelikko ei osallistu tasan. Priya ja Omar laittavat kumpikin 60 £, Lena 80 £ ja Sam 40 £. Kukaan ei selitä summaansa eikä kukaan kysy. Omar ostaa lisäksi kortin ja käärepaperia hintaan 12 £. Kaikki neljä allekirjoittavat kortin, joten se jaetaan tasan.
+  - heading: Sopikaa budjetti, ennen kuin kukaan painaa Osta-nappia
+    body: Budjettiäänestys säästää riidalta levysoittimesta, joka maksaa 400 £. Valitse ryhmässä **Lisää äänestys** ja kysy, kuinka paljon lahjan pitäisi maksaa. Tee vaihtoehdoista summia, esimerkiksi enintään 150 £, enintään 200 £ ja enintään 250 £. Ota käyttöön **Anonyymi äänestys**, joka piilottaa, kuka äänesti mitä, jotta kenenkään ei tarvitse puolustaa pienempää lukua ääneen. Asetuksia ei voi muuttaa, kun ensimmäinen ääni on annettu, joten tarkista ne ensin. Äänestys ei sulkeudu itsestään. Kun kaikki ovat äänestäneet, valitse **Sulje äänestys**, jolloin **Voittaja** näkyy. Äänestyksellä sovitaan kokonaissumma. Se ei määritä kenenkään osuutta.
+  - heading: Laskelman lukeminen
+    body: Lahja jakautuu 60 £, 60 £, 80 £ ja 40 £, ja yhteissumma on kuitin 240 £. Kortti ja käärepaperit jaetaan neljälle, 3 £ kullekin. Priyan osuus on 60 £ + 3 £, eli 63 £, ja hän maksoi 240 £, joten hänelle ollaan velkaa 177 £. Omarin osuus on myös 63 £, mutta hän maksoi 12 £, joten hän on velkaa 51 £. Lena on velkaa 80 £ + 3 £, eli 83 £, ja Sam on velkaa 40 £ + 3 £, eli 43 £. Nämä kolme yhteensä vastaavat Priyalle kuuluvaa 177 £. Jos asiaan ei puututtaisi, velat kulkisivat ryhmässä viiteen suuntaan. Side Badger ehdottaa sen sijaan kolmea maksua, kaikki Priyalle. Yksityiskohdat löytyvät sivulta [tilien tasaus](page:feature/settle-up).
+  - heading: Syötä se Side Badgeriin
+    body: Priyan puoli vie noin viisi minuuttia.
+    items:
+      - "**Perusta ryhmä.** Valitse kojelaudalla **Luo ryhmä**. Valitse **Kutsu muita** ja lähetä linkki tai QR-koodi osallistuville ihmisille eikä kenellekään muulle."
+      - "**Lisää lahja.** Valitse **Lisää kulu**, kuvaile se, syötä 240 ja valitse kohdassa **Kuka maksoi?** Priya. Pidä kaikki neljä kohdassa **Jaa seuraavien kesken**, valitse sitten **Miten jaetaan** -kohdasta **Tarkat summat** ja kirjoita 60, 60, 80 ja 40. Summien on oltava yhteensä 240. Liitä tilausvahvistus halutessasi. Valitse **Tallenna kulu**."
+      - "**Lisää kortti.** Omar lisää 12 £ itse, valitsee itsensä kohdassa **Kuka maksoi?** ja jättää **Miten jaetaan** -kohdan arvoon **Tasan**, kaikki neljä ihmistä rastitettuina."
+      - "**Laske, sitten maksa.** Jokainen tarkistaa **Saldot**-näkymän, joka kertoo, kuka on velkaa kenelle, ja lähettää Priyalle osuutensa miten haluaa. Kirjaa se sitten kohdissa **Maksa velat** ja **Kirjaa tilitys**. Pikaselvitys täyttää summan."
+  - heading: Osta ensin vai kerää ensin
+    body: Side Badger ei pidä yhteistä pottia, joten ”kerääminen” tarkoittaa oikeasti laskemista. Kaksi järjestystä toimii.
+    items:
+      - "**Osta ensin.** Ostaja maksaa, lisää kulun todellisella hinnalla ja kaikki näkevät osuutensa heti. Se on siistimpää, mutta ostaja kantaa kustannuksen, kunnes ihmiset maksavat, joten valitse ostajaksi joku, jolla on siihen varaa."
+      - "**Kerää ensin.** Ihmiset lähettävät summansa ostajalle ennen ostosta. Kun hinta on tiedossa, syötä lahja ja kirjaa sitten jokainen maksu sillä päivämäärällä, jona raha todella liikkui. Lisää lahja ensin, jotta jokaisella maksulla on saldo, johon se kohdistuu."
+      - "**Hinta muuttuu.** Toimituskulut, alennuskoodi, myöhäinen hinnankorotus. Muokkaa lahjaa ja muuta tarkat summat niin, että ne täsmäävät edelleen. Aiempi versio säilyy, mutta kerro ryhmälle ensin, koska heidän saldonsa muuttuvat."
+  - heading: Pidä Bea ulkona kuvioista
+    body: Ryhmän näkevät vain sen jäsenet, joten Bea ei näe ryhmää, jossa hän ei ole. Kutsu osallistuvat ihmiset eikä ketään muuta. Linkki toimii, kunnes se vanhenee, ja voit valita ajaksi mistä tahansa 15 minuutista 5 päivään, joten valitse lyhyt ja lähetä se paikkaan, jossa Bea ei sitä näe. Linkki näyttää ryhmän esikatselun jokaiselle, joka sen avaa, joten nimeä ryhmä tylsästi, vaikkapa Lauantaipotti, ja pidä Bean nimi pois myös kulujen kuvauksista ja äänestysvaihtoehdoista.
+  - heading: Mitä Side Badger ei tee tässä
+    items:
+      - Se ei pidä hallussaan eikä kerää rahaa. Osuudet menevät ostajalle pankkisiirtona, käteisellä tai millä ikinä käytättekin, ja sitten joku kirjaa ne.
+      - Se ei lähetä maksumuistutuksia. Sen tuuppiminen, joka ei ole vielä maksanut, on yhä ihmisen hommaa.
+      - Se ei laske kenenkään osuutta. Äänestyksellä sovitaan budjetti, eikä ”jaa loput” -vaihtoehtoa ole, joten kirjoitat jokaisen summan itse.
+      - Jokaisella kululla on yksi maksaja. Jos kaksi ihmistä osti lahjan eri osia, syötä kaksi kulua.
+      - Jokainen jaossa mukana oleva tarvitsee ilmaisen tilin ja paikan ryhmässä.
+exampleAfter: 2
+example:
+  heading: Bean levysoitin ja kortti
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: lahja
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: kortti ja käärepaperi
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: Kysymyksiä
+  items:
+    - q: Entä jos keräämme enemmän kuin lahja maksaa?
+      a: Tarkkojen summien on oltava yhteensä hinta, joten karsi osuuksia, kunnes ne täsmäävät. Tai käytä ylijäämä johonkin oikeaan, kuten kukkiin, ja syötä se toisena kuluna, kuten kortti ja käärepaperi esimerkissä.
+    - q: Voiko joku osallistua liittymättä ryhmään?
+      a: Ei, jos haluat hänet mukaan laskuun. Jokainen jaossa mukana oleva tarvitsee ilmaisen tilin ja paikan ryhmässä. Jos jollakulla on vain käteistä, Priya voisi ottaa sen vastaan ja syöttää lahjan sillä summalla, jonka ryhmä vielä on velkaa. Jos esimerkiksi Sam antaisi hänelle 40 £ käteisenä, hän syöttäisi 200 £ ja jakaisi sen 60, 60 ja 80 itsensä, Omarin ja Lenan kesken.
+    - q: Voiko äänestys päättää, kuinka paljon kukin laittaa?
+      a: Ei. Äänestyksellä sovitaan yksi luku koko ryhmälle, kuten budjetti. Kunkin osuudesta sovitte keskenänne ja kirjoitatte sen sitten kuluun **Tarkat summat** -jakona.

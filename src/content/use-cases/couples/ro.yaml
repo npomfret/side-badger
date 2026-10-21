@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+meta:
+  title: "Împarte facturile în doi, 50/50 sau după venit | Side Badger"
+  description: "Costurile plictisitoare, fără o analiză financiară trimestrială în seara în doi. 50/50, după venit sau factură cu factură, și vezi cine cui datorează. Gratuit."
+h1: "Împarte costurile în cuplu, corect"
+navLabel: "Cupluri"
+lead: "Împarte costurile plictisitoare fără să transformi seara în doi într-o analiză financiară trimestrială. Side Badger ține o singură evidență curentă a chiriei, a facturilor și a cumpărăturilor pentru **cupluri** care împart o casă, o canapea și o amintire vagă despre cine a plătit internetul. Împarte 50/50, după venit sau factură cu factură și vezi cine cui datorează."
+cta:
+  heading: "Începe un grup pentru doi"
+  body: "Creează un cont, fă un grup și trimite-i partenerului linkul de invitație. Mâncarea la pachet de diseară poate fi prima cheltuială."
+scenario:
+  heading: "Corect nu înseamnă neapărat 50/50"
+  body: "Sam și Alex împart o casă. Sam câștigă mai mult, așa că au convenit ca Sam să preia 60% din chirie și Alex 40%. Sam îl plătește pe proprietar, Alex face cumpărăturile și amândoi sunt destul de siguri că totul se echilibrează. „Destul de sigur” e felul în care o notiță de pe telefonul cuiva devine o neînțelegere permanentă. Așa că fă un grup pentru voi doi, alege numele pe care vrei să-l vadă partenerul și trimite-i linkul de invitație sau codul QR. Adaugă fiecare cost când apare, spune cine a plătit și cum se împarte și lasă grupul să țină socoteala. Fă câte un grup separat pentru fiecare vacanță (vezi [excursiile de grup](page:use-case/group-trips)), ca biletele de avion să nu se amestece cu alimentele."
+sections:
+  - heading: "50/50, după venit sau factură cu factură"
+    body: "Nu există o împărțire corectă pentru toți, ci doar cea la care sunteți amândoi de acord, de preferat înainte de prima factură, nu după primul oftat. Acestea sunt cele trei obișnuite."
+    items:
+      - "**50/50.** Alege **Egal** și fiecare dintre voi datorează jumătate. Se potrivește costurilor comune când veniturile voastre sunt apropiate și nu cere deloc aritmetică."
+      - "**După venit.** Dacă unul dintre voi câștigă mai mult, împărțiți după partea fiecăruia din banii care intră. Stabiliți mai întâi ce se numără (salariul net e alegerea obișnuită), adunați cele două sume și împarte-o pe a ta la total. Dacă unul dintre voi ia acasă trei părți, iar celălalt două, asta înseamnă 3 ÷ (3 + 2) = 60%, deci unul acoperă 60%, iar celălalt 40%. Rotunjește la procente întregi și introdu-le la **Procentaj**, unde trebuie să dea împreună 100. Nu există loc unde să-ți introduci salariul, așa că tastezi mereu doar procentele."
+      - "**Factură cu factură.** Fiecare cheltuială are propria împărțire, deci puteți combina: chiria după venit, alimentele 50/50 și un cadou comun pe **Sume exacte**, dacă fiecare a ales cât să pună."
+      - "**Când se schimbă venitul,** folosește noile procente de la următoarea cheltuială. Cheltuielile anterioare păstrează împărțirea cu care au fost introduse. Ca să vezi calculele făcute cu fluturași de salariu reali, citește [cum împarți facturile cu un partener care câștigă mai mult](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: "Bilanțul lunar"
+    body: "O dată pe lună, sau ori de câte ori cifrele încep să-ți dea mâncărime, deschide grupul și verifică **Solduri**. Cu doi oameni nu există niciodată decât o singură plată în fiecare valută, de la cine datorează la cine i se datorează. Să luăm luna lui Sam și a lui Alex. Sam a plătit chiria de 1.500 £, iar partea de 40% a lui Alex din ea este de 600 £. Alex a plătit 90 £ pentru alimente, împărțite egal, deci jumătatea lui Sam este de 45 £. Side Badger le pune față în față, 600 £ minus 45 £, iar Alex îi plătește lui Sam 555 £. Plătiți cum preferați, prin transfer bancar, numerar sau o favoare datorată, apoi înregistrați plata la **Decontează**, ca soldul să revină la zero. Nu există facturi recurente, așa că copiază chiria lunii trecute, schimbă data și mergi mai departe. Side Badger nu mută banii și nu trimite mementouri, așa că îmboldirea rămâne a ta."
+  - heading: "Doar voi doi"
+    body: "Un grup de doi are doi membri, iar doar membrii unui grup îl pot vedea. Partenerul se alătură cu linkul de invitație sau cu codul QR. Un link poate fi valabil de la 15 minute până la 5 zile, așa că alege durata cea mai scurtă care îi lasă partenerului timp să-l folosească. Un link nou nu le anulează pe cele vechi, așa că nu le lăsa într-un chat în care sunt și alți oameni. Oricine folosește un link încă valabil se poate alătura, așa că, pentru certitudine, activează aprobarea, iar un administrator lasă fiecare persoană să intre. Partenerul are nevoie de propriul cont, care este gratuit."
+exampleAfter: 2
+example:
+  heading: "Cine cui datorează luna aceasta"
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: "Chirie"
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: "Alimente"
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: "Funcțiile pe care le folosește un cuplu"
+faq:
+  heading: "Întrebări"
+  items:
+    - q: "Putem seta 60/40 o dată pentru tot?"
+      a: "Nu. Împărțirea ține de fiecare cheltuială. Setează procentele la prima, apoi copiază-o data viitoare și schimbă ce e diferit. [Împărțirea cheltuielilor](page:feature/split-expenses) acoperă toate cele trei moduri de a împărți."
+    - q: "Se leagă de banca noastră?"
+      a: "Nu. Side Badger nu se atinge niciodată de banii voștri. Vă plătiți unii altora cum preferați, apoi înregistrați, așa cum explică [decontarea](page:feature/settle-up)."
+    - q: "Poate altcineva să ne vadă grupul?"
+      a: "Doar membrii lui, iar grupul unui cuplu are doi. Oricine folosește un link de invitație valabil se poate alătura, așa că trimite-l unei singure persoane și dă-i o expirare scurtă."
+    - q: "Ce facem dacă fiecare a plătit o parte din aceeași factură?"
+      a: "O cheltuială are un singur plătitor. Înregistrați două cheltuieli, câte una pentru fiecare, iar soldul iese la fel."
+    - q: "Îi amintește partenerului meu să plătească?"
+      a: "Nu. Nu există mementouri, așa că îmboldirea rămâne a ta. Măcar vă veți uita amândoi la aceeași cifră."
+    - q: "Ce se întâmplă când nu mai împărțim costuri?"
+      a: "Achitați soldul și înregistrați plata, ca nimeni să nu mai datoreze nimic. Apoi un administrator poate bloca grupul, ceea ce păstrează cifrele așa cum sunt, sau îl poate închide definitiv, ceea ce îl face inaccesibil pentru toți. Închide-l doar când niciunul dintre voi nu mai are nevoie de istoric."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name

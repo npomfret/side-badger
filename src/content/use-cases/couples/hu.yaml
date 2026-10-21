@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+meta:
+  title: "Párok számlafelosztása: 50/50 vagy jövedelem szerint | Side Badger"
+  description: "Osszátok meg az unalmas költségeket úgy, hogy a randi ne váljon negyedéves pénzügyi áttekintéssé. 50/50, jövedelem szerint vagy számlánként. Ingyenes."
+h1: "Osszátok meg igazságosan a költségeket párként"
+navLabel: "Párok"
+lead: "Osszátok meg az unalmas költségeket anélkül, hogy a randit negyedéves pénzügyi áttekintéssé változtatnátok. A Side Badger egyetlen folyamatos számolást vezet a lakbérről, a számlákról és a bevásárlásról a **pároknak**, akik közös otthont, közös kanapét és egy homályos emléket osztanak arról, ki fizette a szélessávot. Osszátok fel 50/50-ben, jövedelem szerint vagy számláról számlára, és lássátok, ki kinek tartozik."
+cta:
+  heading: "Indíts csoportot kettőtöknek"
+  body: "Hozz létre fiókot, csinálj csoportot, és küldd el a párodnak a meghívó linket. A ma esti elvitel lehet az első költség."
+scenario:
+  heading: "A méltányos nem feltétlenül 50/50"
+  body: "Sam és Alex közös otthonban élnek. Sam többet keres, ezért megállapodtak, hogy Sam a lakbér 60%-át viszi, Alex pedig a 40%-át. Sam utalja a lakbért a bérbeadónak, Alex intézi a bevásárlást, és mindketten elég biztosak benne, hogy a végén kijön a nulla. Az „elég biztos” úgy lesz valakinek a telefonján lévő jegyzetből állandó nézeteltérés. Ezért csinálj egy csoportot kettőtöknek, válaszd ki a nevet, amelyet a párod látni fog, és küldd el neki a meghívó linket vagy a QR-kódot. Add hozzá a költségeket, amikor megtörténnek, mondd meg, ki fizette és hogyan oszlik meg, és hagyd, hogy a csoport vezesse a számolást. Csinálj külön csoportot minden nyaralásnak (lásd [csoportos utazások](page:use-case/group-trips)), hogy a repjegyek ne keveredjenek a bevásárlással."
+sections:
+  - heading: "50/50, jövedelem szerint vagy számláról számlára"
+    body: "Nincs mindenki számára igazságos felosztás, csak az, amelyben mindketten megegyeztek, lehetőleg az első számla előtt, nem az első sóhaj után. Ez a szokásos három."
+    items:
+      - "**50/50.** Válaszd az **Egyenlően** lehetőséget, és mindketten a felével tartoztok. Közös költségekhez való, ha a jövedelmetek közel áll egymáshoz, és semmi számolást nem igényel."
+      - "**Jövedelem szerint.** Ha az egyikőtök többet keres, osszatok aszerint, ki mekkora részt hoz a beérkező pénzből. Előbb egyezzetek meg abban, mi számít (a nettó fizetés a szokásos választás), adjátok össze mindkettőtök összegét, és oszd el a sajátodat az összeggel. Ha az egyikőtök három részt visz haza, a másik kettőt, akkor 3 ÷ (3 + 2) = 60%, vagyis az egyikőtök a 60%-ot állja, a másik a 40%-ot. Kerekítsetek egész százalékokra, és írjátok be őket a **Százalék** alá, ahol együtt 100-at kell kiadniuk. Nincs hová beírni a fizetéseteket, így csak a százalékokat kell megadnotok."
+      - "**Számláról számlára.** Minden költségnek saját felosztása van, így keverhetitek: lakbér jövedelem szerint, a bevásárlás 50/50, egy közös ajándék pedig **Pontos összegek** szerint, ha mindketten maguk választottátok meg, mennyit adtok hozzá."
+      - "**Ha változik a fizetés,** a következő költségtől használjátok az új százalékokat. A korábbi költségek megtartják azt a felosztást, amellyel felvitték őket. Ha látni akarod a számításokat valódi fizetési szelvényekkel, olvasd el: [hogyan oszd fel a számlákat a nálad többet kereső párral](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: "A havi összegzés"
+    body: "Havonta egyszer, vagy amikor a számok viszketni kezdenek, nyisd meg a csoportot, és nézd meg az **Egyenlegek** oldalt. Kettőtök esetén pénznemenként mindig csak egy kifizetés van, attól, aki tartozik, annak, akinek tartoznak. Vegyük Sam és Alex hónapját. Sam kifizette az 1 500 £ lakbért, és ebből Alex 40%-a 600 £. Alex 90 £-t fizetett a bevásárlásra, egyenlően felosztva, így Sam fele 45 £. A Side Badger szembeállítja az egyiket a másikkal, 600 £ mínusz 45 £, és Alex 555 £-t fizet Sam részére. Fizessetek, ahogy akartok, banki átutalással, készpénzben vagy egy tartozó szívességgel, aztán rögzítsétek a **Tartozásrendezés** alatt, hogy az egyenleg visszaálljon nullára. Ismétlődő számlák nincsenek, ezért másold le a múlt havi lakbért, írd át a dátumot, és mész tovább. A Side Badger nem mozgatja a pénzt, és nem küld emlékeztetőket, így a noszogatás továbbra is rád marad."
+  - heading: "Csak ti ketten"
+    body: "Egy kétfős csoportnak két tagja van, és egy csoportot csak a tagjai láthatnak. A párod a meghívó linkkel vagy QR-kóddal csatlakozik. Egy link érvényessége 15 perctől 5 napig terjedhet, ezért a legrövidebbet válaszd, amely még időt ad a párodnak a használatára. Egy új link készítése nem érvényteleníti a régieket, ezért ne hagyd őket egy olyan csevegésben, amelyben más emberek is vannak. Aki érvényes linket használ, csatlakozhat, így ha biztosra akarsz menni, kapcsold be a jóváhagyást, és egy adminisztrátor beengedi az egyes embereket. A párodnak saját fiók kell, ami ingyenes."
+exampleAfter: 2
+example:
+  heading: "Ki kinek tartozik ebben a hónapban"
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: "Lakbér"
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: "Bevásárlás"
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: "A funkciók, amelyeket egy pár használ"
+faq:
+  heading: "Kérdések"
+  items:
+    - q: "Beállíthatjuk egyszer a 60/40-et mindenre?"
+      a: "Nem. A felosztás költségenként külön van. Állítsd be a százalékokat az elsőn, aztán másold le legközelebb, és változtasd meg, ami más. A [költségek felosztása](page:feature/split-expenses) mind a három felosztási módot bemutatja."
+    - q: "Kapcsolódik a bankunkhoz?"
+      a: "Nem. A Side Badger sosem nyúl a pénzedhez. Fizettek egymásnak, ahogy akartok, aztán rögzítitek, ahogy az [elszámolás](page:feature/settle-up) elmagyarázza."
+    - q: "Láthatja valaki más a csoportunkat?"
+      a: "Csak a tagjai, és egy pár csoportjának kettő van. Aki érvényes meghívó linket használ, csatlakozhat, ezért egyetlen embernek add oda, és adj neki rövid lejáratot."
+    - q: "Mi van, ha mindketten fizettünk egy részt ugyanabból a számlából?"
+      a: "Egy költségnek egy fizetője van. Rögzíts két költséget, egyet-egyet mindkettőtöknek, és az egyenleg ugyanúgy jön ki."
+    - q: "Emlékeztetni fogja a páromat a fizetésre?"
+      a: "Nem. Emlékeztetők nincsenek, így a noszogatás továbbra is rád marad. Legalább mindketten ugyanazt a számot nézitek."
+    - q: "Mi történik, ha abbahagyjuk a költségek közös viselését?"
+      a: "Számoljatok el, és rögzítsétek a kifizetést, hogy senki ne tartozzon semmivel. Aztán egy adminisztrátor zárolhatja a csoportot, ami úgy tartja a számokat, ahogy vannak, vagy végleg bezárhatja, amitől mindenki számára elérhetetlenné válik. Csak akkor zárd be, ha egyikőtöknek sincs szüksége az előzményekre."

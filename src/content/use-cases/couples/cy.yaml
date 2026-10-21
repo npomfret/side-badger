@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+meta:
+  title: "Rhannu biliau gyda'ch partner, 50/50 neu yn ôl incwm | Side Badger"
+  description: "Costau diflas heb droi noson ddêt yn adolygiad ariannol chwarterol: 50/50, yn ôl incwm neu fesul bil, a gweld pwy sy'n ddyledus i bwy. Am ddim."
+h1: "Rhannu costau fel cwpl, yn deg"
+navLabel: "Cyplau"
+lead: "Rhannwch y costau diflas heb droi noson ddêt yn adolygiad ariannol chwarterol. Mae Side Badger yn cadw un cyfrif parhaus o'r rhent, y biliau a'r siopa ar gyfer **cyplau** sy'n rhannu cartref, soffa a chof niwlog o bwy dalodd am y band eang. Rhannwch 50/50, yn ôl incwm neu fesul bil, a gwelwch pwy sy'n ddyledus i bwy."
+cta:
+  heading: "Cychwyn grŵp i ddau"
+  body: "Creu cyfrif, gwneud grŵp ac anfon y ddolen wahodd at eich partner. Gall y tecawê heno fod y gost gyntaf."
+scenario:
+  heading: "Does dim rhaid i deg olygu 50/50"
+  body: "Mae Sam ac Alex yn rhannu cartref. Mae Sam yn ennill mwy, felly cytunwyd mai Sam sy'n talu 60% o'r rhent ac Alex 40%. Mae Sam yn talu'r landlord, mae Alex yn gwneud y siopa, ac mae'r ddau yn eithaf sicr y bydd y cyfan yn dod yn gyfartal yn y pen draw. “Eithaf sicr” yw sut mae nodyn ar ffôn rhywun yn troi'n anghytundeb parhaol. Felly gwnewch grŵp i'r ddau ohonoch, dewiswch yr enw rydych am i'ch partner ei weld, ac anfonwch y ddolen wahodd neu'r cod QR at y person arall. Ychwanegwch bob cost pan fydd yn digwydd, dywedwch pwy dalodd a sut mae'n rhannu, a gadewch i'r grŵp gadw'r cyfrif. Gwnewch grŵp ar wahân ar gyfer pob gwyliau (gweler [teithiau grŵp](page:use-case/group-trips)), fel bod yr hediadau'n aros allan o'r nwyddau bwyd."
+sections:
+  - heading: "50/50, yn ôl incwm, neu fesul bil"
+    body: "Does dim rhaniad sy'n deg yn gyffredinol, dim ond yr un y mae'r ddau ohonoch yn cytuno iddo, yn ddelfrydol cyn y bil cyntaf yn hytrach nag ar ôl yr ochenaid gyntaf. Dyma'r tri arferol."
+    items:
+      - "**50/50.** Dewiswch **Cyfartal** ac mae pob un ohonoch yn gyfrifol am hanner. Mae'n addas i gostau a rennir pan fydd eich incwm yn agos, ac nid oes angen unrhyw fathemateg o gwbl."
+      - "**Yn ôl incwm.** Os yw un ohonoch yn ennill mwy, rhannwch yn ôl cyfran pob person o'r arian sy'n dod i mewn. Cytunwch ar beth sy'n cyfrif yn gyntaf (cyflog net yw'r dewis cyffredin), adiwch y ddau at ei gilydd a rhannwch eich un chi â'r cyfanswm. Os yw un ohonoch yn mynd â thair rhan adref i ddwy y llall, mae hynny'n 3 ÷ (3 + 2) = 60%, felly mae un ohonoch yn talu 60% a'r llall 40%. Talgrynnwch i ganrannau cyfan a'u rhoi o dan **Canran**, lle mae'n rhaid iddynt adio i 100. Does unman i roi eich cyflog, felly dim ond y canrannau y byddwch byth yn eu teipio."
+      - "**Bil wrth fil.** Mae gan bob cost ei rhaniad ei hun, felly gallwch gymysgu: rhent yn ôl incwm, y nwyddau bwyd 50/50, ac anrheg ar y cyd yn ôl **Union symiau** os yw pob un ohonoch yn dewis faint i'w gyfrannu."
+      - "**Pan fydd cyflog yn newid,** defnyddiwch y canrannau newydd o'r gost nesaf ymlaen. Mae costau cynharach yn cadw'r rhaniad y cawsant eu rhoi ag ef. I weld y symiau wedi'u gwneud gyda slipiau cyflog go iawn, darllenwch [sut i rannu biliau gyda phartner sy'n ennill mwy](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: "Y crynodeb misol"
+    body: "Unwaith y mis, neu pryd bynnag y bydd y rhifau'n dechrau cosi, agorwch y grŵp a gwiriwch **Balansau**. Gyda'r ddau ohonoch, dim ond un taliad sydd byth ym mhob arian cyfred, o'r un sy'n ddyledus i'r un y mae'r arian yn ddyledus iddo. Cymerwch fis Sam ac Alex. Talodd Sam y rhent o £1,500, a chyfran Alex o 40% ohono yw £600. Talodd Alex £90 am nwyddau bwyd, wedi'u rhannu'n gyfartal, felly hanner Sam yw £45. Mae Side Badger yn gosod y naill yn erbyn y llall, £600 llai £45, ac mae Alex yn talu £555 i Sam. Talwch ef sut bynnag y dymunwch, drwy drosglwyddiad banc, mewn arian parod neu gyda ffafr sy'n ddyledus, yna cofnodwch ef o dan **Setlo** fel bod y balans yn mynd yn ôl i sero. Does dim biliau cylchol, felly copïwch rent y mis diwethaf, newidiwch y dyddiad a bwriwch ymlaen. Dyw Side Badger ddim yn symud yr arian nac yn anfon nodiadau atgoffa, felly chi sy'n dal i wneud y procio."
+  - heading: "Dim ond y ddau ohonoch"
+    body: "Mae grŵp o ddau yn cynnwys dau aelod, a dim ond aelodau grŵp all ei weld. Mae eich partner yn ymuno gyda'r ddolen wahodd neu'r cod QR. Gall dolen bara unrhyw beth o 15 munud i 5 diwrnod, felly dewiswch y byrraf sy'n rhoi amser i'ch partner ei defnyddio. Dyw gwneud dolen newydd ddim yn diddymu'r hen rai, felly peidiwch â'u gadael mewn sgwrs sy'n cynnwys pobl eraill. Gall unrhyw un sy'n defnyddio dolen sy'n dal i weithio ymuno, felly os hoffech fod yn sicr, trowch gymeradwyaeth ymlaen a bydd gweinyddwr yn gadael pob person i mewn. Mae angen cyfrif ar wahân ar eich partner, sydd am ddim."
+exampleAfter: 2
+example:
+  heading: "Pwy sy'n ddyledus i bwy y mis hwn"
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: "Rhent"
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: "Nwyddau bwyd"
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: "Y nodweddion y mae cwpl yn eu defnyddio"
+faq:
+  heading: "Cwestiynau"
+  items:
+    - q: "Allwn ni osod 60/40 unwaith ar gyfer popeth?"
+      a: "Na. Mae'r rhaniad yn perthyn i bob cost. Gosodwch y canrannau ar y gyntaf, yna copïwch hi y tro nesaf a newidiwch beth sy'n wahanol. Mae [rhannu treuliau](page:feature/split-expenses) yn trafod y tair ffordd o rannu."
+    - q: "Ydy Side Badger yn cysylltu â'n banc ni?"
+      a: "Nac ydy. Dyw Side Badger byth yn cyffwrdd â'ch arian. Rydych yn talu eich gilydd sut bynnag y dymunwch, yna'n ei gofnodi, fel mae [setlo](page:feature/settle-up) yn esbonio."
+    - q: "All unrhyw un arall weld ein grŵp ni?"
+      a: "Dim ond ei aelodau, ac mae gan grŵp cwpl ddau. Gall unrhyw un sy'n defnyddio dolen wahodd sy'n dal i weithio ymuno, felly rhannwch hi ag un person a rhowch ddyddiad dod i ben byr iddi."
+    - q: "Beth os talodd y ddau ohonom ran o'r un bil?"
+      a: "Mae gan gost un talwr. Cofnodwch ddwy gost, un i bob un ohonoch, ac mae'r balans yr un fath."
+    - q: "A fydd Side Badger yn atgoffa fy mhartner i dalu?"
+      a: "Na fydd. Does dim nodiadau atgoffa, felly chi sy'n dal i wneud y procio. O leiaf bydd y ddau ohonoch yn edrych ar yr un rhif."
+    - q: "Beth sy'n digwydd pan fyddwn yn stopio rhannu costau?"
+      a: "Setlwch y balans a chofnodwch y taliad, fel nad oes dim yn ddyledus gan neb. Yna gall gweinyddwr gloi'r grŵp, sy'n cadw'r rhifau fel y maent, neu ei gau am byth, sy'n ei wneud yn anhygyrch i bawb. Caewch ef dim ond pan nad oes angen yr hanes ar yr un ohonoch."

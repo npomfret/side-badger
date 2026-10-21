@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+meta:
+  title: Jaa laskut kumppanin kanssa 50/50 tai tuloilla | Side Badger
+  description: Jaa tylsät kulut ilman, että treffi-illasta tulee neljännesvuosikatsaus. Jaa 50/50, tulojen mukaan tai laskuittain ja näe, kuka on velkaa kenelle. Ilmainen.
+h1: Jaa kulut parina reilusti
+navLabel: Pariskunnat
+lead: Jaa tylsät kulut muuttamatta treffi-iltaa neljännesvuosittaiseksi talouskatsaukseksi. Side Badger pitää yhtä juoksevaa kirjaa vuokrasta, laskuista ja ruokaostoksista **pariskunnille**, jotka jakavat kodin, sohvan ja hatarat muistikuvat siitä, kuka maksoi laajakaistan. Jaa se 50/50, tulojen mukaan tai laskuittain ja näe, kuka on velkaa kenelle.
+cta:
+  heading: Perusta ryhmä kahdelle
+  body: Luo tili, tee ryhmä ja lähetä kumppanillesi kutsulinkki. Tämän illan noutoruoka voi olla ensimmäinen kulu.
+scenario:
+  heading: Reilu ei tarkoita aina 50/50
+  body: Sam ja Alex asuvat yhdessä. Sam tienaa enemmän, joten he sopivat, että Sam maksaa 60 % vuokrasta ja Alex 40 %. Sam maksaa vuokranantajalle, Alex hoitaa ruokaostokset, ja molemmat ovat melko varmoja, että kaikki tasoittuu. ”Melko varma” on tapa, jolla muistiinpano jonkun puhelimessa muuttuu pysyväksi erimielisyydeksi. Tee siis ryhmä teille kahdelle, valitse nimi, jonka haluat kumppanisi näkevän, ja lähetä hänelle kutsulinkki tai QR-koodi. Lisää jokainen kulu, kun se tapahtuu, kerro, kuka maksoi ja miten se jaetaan, ja anna ryhmän pitää laskua. Tee erillinen ryhmä jokaiselle lomalle (katso [ryhmämatkat](page:use-case/group-trips)), jotta lennot pysyvät erossa ruokaostoksista.
+sections:
+  - heading: 50/50, tulojen mukaan tai laskuittain
+    body: Yleisesti reilua jakoa ei ole, on vain se, josta olette molemmat samaa mieltä, mieluiten ennen ensimmäistä laskua eikä ensimmäisen huokauksen jälkeen. Nämä ovat tavallisimmat kolme.
+    items:
+      - "**50/50.** Valitse **Tasan**, niin kumpikin on velkaa puolet. Se sopii yhteisiin kuluihin, kun tulonne ovat lähellä toisiaan, eikä se vaadi laskutoimituksia lainkaan."
+      - "**Tulojen mukaan.** Jos toinen teistä tienaa enemmän, jaa kunkin osuuden mukaan sisään tulevasta rahasta. Sopikaa ensin, mitä lasketaan (nettopalkka on tavallinen valinta), laske molemmat yhteen ja jaa omasi kokonaissummalla. Jos toinen saa käteen kolme osaa toisen kahta vastaan, se on 3 ÷ (3 + 2) = 60 %, joten toinen kattaa 60 % ja toinen 40 %. Pyöristä kokonaisiin prosentteihin ja syötä ne **Prosentteina**-kohtaan, jossa niiden summan on oltava 100. Palkkaa ei voi syöttää mihinkään, joten kirjoitat aina vain prosentit."
+      - "**Laskuittain.** Jokaisella kululla on oma jakonsa, joten voit sekoittaa: vuokra tulojen mukaan, ruokaostokset 50/50 ja yhteinen lahja **Tarkat summat** -valinnalla, jos kumpikin valitsi, paljonko laittaa mukaan."
+      - "**Kun palkka muuttuu,** käytä uusia prosentteja seuraavasta kulusta alkaen. Aiemmat kulut säilyttävät jaon, jolla ne syötettiin. Jos haluat nähdä laskut tehtynä oikeilla palkkalapuilla, lue [näin jaat laskut kumppanin kanssa, joka tienaa enemmän](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: Kuukausiyhteenveto
+    body: Kerran kuussa tai aina, kun luvut alkavat kutittaa, avaa ryhmä ja tarkista **Saldot**. Kun teitä on kaksi, kussakin valuutassa on aina vain yksi maksu, ja sen maksaa velkaa oleva sille, jolle ollaan velkaa. Otetaan Samin ja Alexin kuukausi. Sam maksoi 1 500 £ vuokran, ja Alexin 40 % siitä on 600 £. Alex maksoi ruokaostoksista 90 £, jaettuna tasan, joten Samin puolikas on 45 £. Side Badger asettaa toisen toista vastaan, 600 £ miinus 45 £, ja Alex maksaa Samille 555 £. Maksa se miten haluat, pankkisiirrolla, käteisellä tai vastapalveluksella, ja kirjaa se sitten kohdassa **Maksa velat**, jotta saldo palaa nollaan. Toistuvia laskuja ei ole, joten kopioi viime kuun vuokra, vaihda päivämäärä ja jatka. Side Badger ei siirrä rahaa eikä lähetä muistutuksia, joten muistuttaminen jää edelleen sinulle.
+  - heading: Vain te kaksi
+    body: Kahden hengen ryhmässä on kaksi jäsentä, ja vain ryhmän jäsenet näkevät sen. Kumppanisi liittyy kutsulinkillä tai QR-koodilla. Linkki voi olla voimassa 15 minuutista 5 päivään, joten valitse lyhin, joka antaa kumppanillesi aikaa käyttää sitä. Uuden linkin tekeminen ei peruuta vanhoja, joten älä jätä niitä chattiin, jossa on muitakin. Kuka tahansa, joka käyttää voimassa olevaa linkkiä, voi liittyä, joten jos haluat olla varma, ota hyväksyntä käyttöön, jolloin ylläpitäjä päästää kunkin sisään. Kumppanisi tarvitsee oman tilin, joka on ilmainen.
+exampleAfter: 2
+example:
+  heading: Kuka on velkaa kenelle tässä kuussa
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: Vuokra
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: Ruokaostokset
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: Ominaisuudet, joita pariskunta käyttää
+faq:
+  heading: Kysymyksiä
+  items:
+    - q: Voimmeko asettaa 60/40 kerran kaikkeen?
+      a: Ei. Jako kuuluu kullekin kululle. Aseta prosentit ensimmäiseen, kopioi se seuraavalla kerralla ja muuta se, mikä on erilaista. [Kulujen jako](page:feature/split-expenses) kertoo kaikki kolme tapaa jakaa.
+    - q: Liittyykö se pankkiimme?
+      a: Ei. Side Badger ei koske rahoihisi koskaan. Maksatte toisillenne miten haluatte ja kirjaatte sen sitten, kuten [tilien tasaus](page:feature/settle-up) selittää.
+    - q: Näkeekö kukaan muu ryhmämme?
+      a: Vain sen jäsenet, ja pariskunnan ryhmässä heitä on kaksi. Kuka tahansa, joka käyttää voimassa olevaa kutsulinkkiä, voi liittyä, joten jaa se yhdelle ihmiselle ja anna sille lyhyt voimassaoloaika.
+    - q: Entä jos maksoimme kumpikin osan samasta laskusta?
+      a: Kululla on yksi maksaja. Kirjaa kaksi kulua, yksi kummallekin, niin saldo tulee samaksi.
+    - q: Muistuttaako se kumppaniani maksamaan?
+      a: Ei. Muistutuksia ei ole, joten muistuttaminen jää sinulle. Ainakin katsotte molemmat samaa lukua.
+    - q: Mitä tapahtuu, kun lopetamme kulujen jakamisen?
+      a: Tasaa saldo ja kirjaa maksu, jotta kukaan ei ole velkaa mitään. Sitten ylläpitäjä voi lukita ryhmän, jolloin luvut pysyvät ennallaan, tai sulkea sen lopullisesti, jolloin se on kaikille käyttökelvoton. Sulje se vasta, kun kumpikaan ei tarvitse historiaa.

@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Group admin and permission dem for group expenses | Side Badger"
+  description: "Invite people with link or QR code, approve who go join, make viewers, set permissions and lock di group when e finish. Your group, your rules, but with sense."
+h1: "Group admin and permissions: your rules, but with sense"
+navLabel: "Group and permission dem"
+lead: "Some groups need treasurer. Side Badger get setting for dat. Invite people with link or QR code, decide who go enter, and choose who fit change di numbers. Small group of friends fit ignore all of am, because new groups dey start wide open."
+cta:
+  heading: "You ready to run neat group?"
+  body: "Create account, start group and send di invite link. Leave am open, or tighten di rules when di group don grow or people don begin dey particular."
+problem:
+  heading: "Somebody must keep di numbers neat"
+  body: "Four housemates fit run on trust. Thirty guests for wedding weekend probably no fit. Make group for each house, trip or event, with up to 50 people inside, and every group dey keep im own members, im own roles and im own rules. Your dashboard dey list all of dem, with where you stand for each one, for one screen. Most groups no dey touch di settings at all. Di ones wey touch am usually get somebody wey organised enough to want am."
+workflow:
+  heading: "From empty group reach locked group"
+  steps:
+    - title: "Invite with link or QR code"
+      body: "Open **Invite others**, choose how long di link go last (15 minutes, 1 hour, 1 day or 5 days), then copy di link or show di QR code make people scan am. You fit also invite people wey you dey share another group with, from inside di app."
+      shot: S03
+      shotAlt: "Di invite window with group link, im QR code and di choice of how long di link go last"
+    - title: "Make dem look before dem join"
+      body: "Anybody wey get di link go sign in or create account, see preview of di group and pick di name wey dem wan use inside am. Then dem press **Join Grup**."
+      shot: S04
+      shotAlt: "Di join preview of group, wey dem show person wey don sign in before e join"
+    - title: "Approve who go join"
+      body: "Turn on approval and people wey use di link go wait as pending members until admin let dem enter. Admins go find dem under **Members wey dey wait** for **Security**, and choose **Appruv** or **Rejet**. Until dat time, person wey dey wait no fit see anything inside di group."
+      shot: S14
+      shotAlt: "Members wey dey wait for admin to approve or reject dem"
+    - title: "Choose who fit change wetin"
+      body: "Pick **Open** or **Managed**, or set di permissions one by one. Then give each person role: admin, member or viewer. Only admins fit change permissions and roles."
+      shot: S13
+      shotAlt: "Di security tab for group settings, with di two presets and di custom permissions"
+    - title: "Lock am when e don finish"
+      body: "When di trip don end and di numbers don settle, admin fit switch on **Lock group**. Nobody fit add or change expenses, record payments or edit lists and polls, and banner go tell everybody so. Nobody fit quietly add late taxi. If one come show face anyway, admin fit unlock di group."
+      shot: S15
+      shotAlt: "Group wey show di banner wey talk say e don lock"
+options:
+  heading: "Admin dem, members and viewers"
+  items:
+    - title: "Admin person"
+      body: "E dey run di group. Admins dey approve new members, change roles and permissions, lock and unlock di group, and close am. Whoever create group start as im admin, and group no go ever dey without admin, because dem no fit demote di last admin."
+    - title: "Memba"
+      body: "E dey take part. Wetin member fit do depend on di group permissions. For Open group, na almost everything. For Managed group, members fit change only di expenses and lists wey dem create."
+    - title: "Viua"
+      body: "E dey see everything and e no dey change anything. Viewer no fit add or edit expenses or lists, invite people, change settings or touch di header image. E good for person wey wan watch di numbers and promise say e no go fiddle with dem."
+sections:
+  - heading: "Open, managed or make your own rules"
+    body: "New groups dey start for **Open**, where everybody fit invite people, change expenses and edit lists, and new members dey join automatically. **Managed** na for when somebody must be di grown-up. You fit also set di seven permissions one by one, and if you change one by hand, di group go switch to custom. Whatever you choose, only admins fit change di permissions themselves, and every change dey show for di activity feed. Flat of [housemates](page:use-case/housemates) fit leave everything open. Big [event or celebration](page:use-case/events-and-celebrations) dey often want Managed, so somebody go dey in charge of who join. You dey new for all dis? [How e dey work](page:how-it-works) go take you through di whole journey, from first expense reach settled up."
+    items:
+      - "**Who fit change expense.** Open: any member. Managed: creators and admins."
+      - "**Who fit delete expense.** Open: any member. Managed: creators and admins."
+      - "**Who fit edit list.** Open: any member. Managed: creators and admins."
+      - "**Who fit invite members.** Open: any member. Managed: admins only."
+      - "**How we go gree for new members.** Open: automatic. Managed: admin approval required."
+      - "**Who fit change settings.** Open: any member. Managed: admins only."
+      - "**Who fit change header image.** Open: any member. Managed: admins only."
+  - heading: "Your name, your photo and di header image"
+    body: "Each group get im own cast list. Choose di name wey people go see for each group (2 to 50 characters, and e must be unique inside di group) and which of your profile photos you go wear there. Be **Sam** for di house and **Sam (wey get motor)** for di trip. Anybody wey get permission to change settings fit rename di group and edit im description. Di header image, JPEG, PNG, GIF or WebP up to 10 MB, get permission of im own."
+  - heading: "Keep am for corner, lock am or close am"
+    body: "Three ways to put group away, from small to serious."
+    items:
+      - "**Keep for corner** dey hide di group from your own dashboard, no be anybody else own. You fit still open am and use am as before, and **Bring out from corner** go bring am back."
+      - "**Lock** dey freeze changes until admin unlock am. Everybody fit still read di group and im history."
+      - "**Close di group** na forever, and e dey for everybody. Only admin fit do am, by typing di group name to confirm, and nobody go fit open di group again."
+  - heading: "How to leave group"
+    body: "Anybody fit leave once dem don settle up. You no fit leave while you owe or dem owe you money, even for one currency, while open question about expense involve you, or if you be di last admin or di only member. [Record di payment](page:feature/settle-up), sort out di [expense question](page:guide/what-to-do-when-someone-disputes-a-shared-expense), or make somebody else admin, then you fit go. If you wan come back, you go need new invitation."
+limits:
+  heading: "With sense: di small print"
+  items:
+    - "Group fit hold up to 50 people."
+    - "Only admins fit change permissions and roles. Dem no fit demote di last admin."
+    - "If you set expense editing to **Admins onli**, e mean say only admins fit add expenses too."
+    - "Lock dey stop changes to expenses, new payments, lists and polls. Everybody fit still read di group and im history, and react to payments."
+    - "To close group na forever. Di app no get way to reopen closed group."
+    - "To make new invite link no dey cancel di old ones. Each link go last until im own expiry, so choose short one if you dey worry about where e fit land."
+    - "Invites inside di app dey list people from your 10 most recent active groups. Anybody else need di link, and who fit invite depend on di group permissions."
+    - "To join, you need account, and people must verify dem email before dem fit add anything."
+useCasesHeading: "Where small order dey help"
+faq:
+  heading: "Question dem"
+  items:
+    - q: "Viewer fit add expenses?"
+      a: "No. Viewer dey see everything and e no dey change anything. E no fit add or edit expenses or lists, invite people or change settings."
+    - q: "Person fit leave while e owe money?"
+      a: "No. Nobody fit leave group while e owe or dem owe am money, even for one currency. Settle up first, then go."
+    - q: "Wetin go happen when group close?"
+      a: "Nobody go fit open am again. Only admin fit close group, e must type di group name to confirm, and di group go become unavailable to everybody. If you just wan stop changes, lock am. If you just wan comot am from your own dashboard, keep am for corner."
+    - q: "I fit undo lock?"
+      a: "Yes. Admin fit unlock di group, and changes go work again."
+    - q: "I must approve people before dem join?"
+      a: "Only if you wan. New groups dey start for Open, where people wey use di link dey join automatically. Turn on admin approval, or pick Managed, and each person go wait until admin let am enter."
+    - q: "How many people fit dey inside one group?"
+      a: "Up to 50 people."

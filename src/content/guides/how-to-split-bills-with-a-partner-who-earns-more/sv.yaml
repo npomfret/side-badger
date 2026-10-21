@@ -1,0 +1,110 @@
+# Guide 4 of the wave 2 briefs (tasks/release-2-plan.md, P8). The worked example is the brief's data;
+# every number in the prose below comes from it or from the arithmetic shown.
+translatedFrom: "92a9bff3"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: Så delar ni räkningarna när en av er tjänar mer | Side Badger
+  description: 50/50 blir krångligt när en av er tjänar mycket mer. Dela de gemensamma räkningarna efter inkomst i stället, med uträkningar för två och utan kalkylblad.
+h1: Så delar ni räkningarna med en partner som tjänar mer
+navLabel: Partner som tjänar mer
+lead: Lägg ihop era löner efter skatt, räkna ut var och ens andel av summan och avrunda till hela procent. Maya har 2 800 £ i handen och Jon 1 700 £, så de delar de gemensamma räkningarna 62/38. Skriv in de procenten på en gemensam utgift i Side Badger och kopiera den när samma räkning kommer igen.
+cta:
+  heading: Gör uträkningen en gång
+  body: Skapa ett gratis konto, gör en grupp för er två och lägg in hyran med era procent. Nästa månads hyra är en kopia. Vill du ha rundturen först? Se [hur det fungerar](page:how-it-works) eller [vad gratis omfattar](page:pricing).
+sections:
+  - heading: Två löner, en lägenhet, en artig tystnad
+    body: Maya och Jon bor ihop. Maya får 2 800 £ i handen i månaden och Jon får 1 700 £. I två år delade de allt 50/50, för det var enkelt och ingen ville vara den som tog upp det. Sedan tittade Jon på hyran för sig. Hälften av 1 400 £ är 700 £, vilket är en fjärdedel av Mayas lön efter skatt och 41 % av hans. Ingen hade varit orättvis. Ingen hade gjort uträkningen. Många [par](page:use-case/couples) hamnar här till slut. Över en hämtmatslåda kom de överens om att de gemensamma räkningarna ska ta en liknande bit av båda lönerna.
+  - heading: Metoden, med uträkningarna framför dig
+    body: Fyra steg, en miniräknare och ett samtal ni ändå skulle ha haft.
+    items:
+      - "**Bestäm vad som räknas som lön.** Maya och Jon använder lön efter skatt, pengarna som landar på kontot varje månad. Tillsammans blir det 2 800 £ + 1 700 £ = 4 500 £."
+      - "**Räkna ut var och ens andel.** Mayas är 2 800 ÷ 4 500, vilket är 62,2 %. Jons är 1 700 ÷ 4 500, vilket är 37,8 %."
+      - "**Avrunda till hela procent.** 62,2 % blir 62 och 37,8 % blir 38. Med två personer avrundar du ena siffran och drar bort den från 100 för att få den andra, så blir summan alltid 100."
+      - "**Kontrollera vad det betyder.** På hyran på 1 400 £ betalar Maya 868 £ (62 %) och Jon betalar 532 £ (38 %). Det är ungefär 31 % av var och ens lön efter skatt. Hälften var hade tagit 25 % av Mayas och 41 % av Jons."
+  - heading: Så ser månaden ut
+    body: Maya betalade hyran på 1 400 £ och Jon betalade de övriga 216 £. Mayas andel av månaden är 868,00 £ + 111,60 £ + 18,00 £ = 997,60 £, och hon betalade 1 400 £, så hon har 402,40 £ att få. Jons andel är 532,00 £ + 68,40 £ + 18,00 £ = 618,40 £, och han betalade 216 £, så han är skyldig 402,40 £. Side Badger föreslår en betalning, från Jon till Maya, på 402,40 £, och [att göra upp](page:feature/settle-up) registrerar den när den har gjorts. Med 50/50 hade samma månad fått Jon att betala Maya 592,00 £.
+  - heading: Ställ in det i Side Badger
+    body: Tio minuter, varav det mesta går åt till procenten.
+    items:
+      - "**Gör gruppen.** Välj **Skapa grupp** på instrumentpanelen och döp den efter lägenheten. Välj **Bjud in andra** och skicka länken eller QR-koden till Jon. Han loggar in eller skapar ett gratis konto och väljer det namn han vill visas under i den här gruppen. Bara medlemmar kan se en grupp, så den här är bara ni två."
+      - "**Lägg in hyran.** Välj **Lägg till utgift**. Skriv beskrivning och belopp, och under **Vem betalade?** väljer du Maya. Behåll båda under **Dela mellan**, välj sedan **Procentandel** under **Hur ska det delas?** och skriv 62 och 38. Formuläret varnar om procenten inte blir 100 tillsammans. Välj **Spara utgift**."
+      - "**Lägg in de andra räkningarna.** El och bredband läggs in på samma sätt, med Jon som betalare och samma 62 och 38. Hämtmaten är en egen utgift, med **Hur ska det delas?** kvar på **Lika**."
+      - "**Kopiera den nästa månad.** Öppna förra månadens hyra och välj **Kopiera utgift**. Kopian behåller betalaren, beloppet och delningen och får dagens datum. Ändra beloppet om hyran ändrats och välj sedan **Skapa kopia**. Elräkningen fungerar likadant."
+      - "**Se vem som är skyldig vem.** Avsnittet **Saldon** visar det och föreslår en kort lista med betalningar. Betala varandra hur ni vill och registrera sedan betalningen under **Reglera**."
+  - heading: 50/50, efter inkomst eller räkning för räkning
+    body: Det finns inget rätt svar, bara det ni båda kan leva med. Tre vanliga.
+    items:
+      - "**Hälften var för allt.** Det enklaste att hålla, och det passar par med ungefär lika lön."
+      - "**Efter inkomst för allt gemensamt.** Det Maya och Jon gör. Ett samtal, ett par procenttal."
+      - "**Räkning för räkning.** Hyra och räkningar efter inkomst, semestrar och godsaker 50/50 eller något annat ni kommer överens om, och varje räkning får den regel som passar den."
+  - heading: Bestäm vad som är gemensamt
+    body: Grälen handlar oftast om listan, inte om procenten. Hyra, el, bredband, veckohandlingen och soffan räknas som gemensamma i de flesta hem. Mayas gymkort och Jons fotbollsabonnemang kanske inte gör det. Kom överens om listan en gång, skriv ner den och lägg bara de gemensamma kostnaderna i gruppen.
+  - heading: Hämtmaten förblir 50/50, med flit
+    body: Godsaker är små och valfria, och ingen ska behöva en miniräknare för att beställa dumplings. I Side Badger är hämtmaten bara en utgift till. Jon betalar 36 £, **Hur ska det delas?** står kvar på **Lika** och var och en är skyldig 18 £.
+  - heading: När någons lön ändras
+    body: En löneförhöjning, ett nytt jobb eller tid borta från jobbet ändrar uträkningen. Räkna ut de nya procenten på samma sätt och använd dem från nästa utgift. Tidigare utgifter förblir som de var. Kopiera förra månadens hyra, ändra procenten och välj sedan **Skapa kopia**. För att rätta en som redan ligger inne redigerar du den om gruppens behörigheter tillåter det, och säger till din partner först, eftersom saldona ändras. Den tidigare versionen sparas. Kom överens om när ni räknar om, till exempel en gång om året, och gör upp innan ni byter så att den gamla delningen avslutas med en ren räkning.
+  - heading: Det här gör inte Side Badger
+    items:
+      - Det frågar aldrig vad någon tjänar och räknar inte ut procenten. Du skriver in de siffror ni kom överens om.
+      - Det kan inte ange en standarddelning för hela gruppen. Procenten läggs på varje utgift, så kopiera en som redan har dem.
+      - Det har inga återkommande räkningar, så du kopierar förra månadens hyra varje gång.
+      - Det flyttar aldrig pengar. Ni betalar varandra hur ni vill och registrerar det.
+exampleAfter: 2
+example:
+  heading: En månad i Mayas och Jons lägenhet
+  currency: GBP
+  people:
+    - id: maya
+      name: Maya
+    - id: jon
+      name: Jon
+  expenses:
+    - label: hyran
+      payer: maya
+      amount: 1400
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: el och bredband
+      payer: jon
+      amount: 180
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: hämtmaten
+      payer: jon
+      amount: 36
+      split:
+        method: equal
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+faq:
+  heading: Frågor
+  items:
+    - q: Ska vi använda lön före eller efter skatt?
+      a: Det avgör gruppen. Lön efter skatt är vanligt, eftersom det är pengarna man faktiskt har att spendera. Lön före skatt bortser från att skatt, pensionsavgifter och lånebetalningar tar olika mycket ur olika löner. Vilket ni än väljer, använd samma mått för er båda.
+    - q: Ser Side Badger våra inkomster?
+      a: Nej. Du skriver bara in procent, aldrig löner. Procenten syns för gruppens medlemmar, och för ett par är det ni två.
+    - q: Kan vi ange 62/38 en gång för allt?
+      a: Delningen anges per utgift, inte per grupp. Kopiera en utgift som redan har 62 och 38 och ändra det som skiljer sig. [Dela utgifter](page:feature/split-expenses) tar upp de andra alternativen.

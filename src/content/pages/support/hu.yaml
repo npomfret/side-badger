@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Segítség és támogatás | Side Badger"
+  description: "Elfelejtett jelszó, nem működő link, rosszul rögzített kifizetés? Rövid válaszok arra, amiben az emberek elakadnak a Side Badgerben, és hogyan érhetsz el minket."
+h1: "Segítség és támogatás, várakozási zene nélkül"
+navLabel: "Segítség és támogatás"
+lead: "Rövid válaszok arra, amiben az emberek elakadnak, az elfelejtett jelszótól egy csoport végleges bezárásáig. Mindegyik arra az oldalra mutat, amely többet elmagyaráz. Nem találod a magadét? Írj nekünk az alkalmazásból, vagy küldj egy e-mailt."
+cta:
+  heading: "Segítségért jöttél, a számolásért maradsz?"
+  body: "Még nincs fiókod? Indíts egy csoportot, oszd meg a linket, és add hozzá az első költséget. Ingyenes, hirdetések és napi korlátok nélkül."
+groups:
+  - heading: "Bejelentkezés"
+    items:
+      - q: "Elfelejtetted a jelszavad?"
+        a: "Ez a legjobb borzokkal is megesik. A **Bejelentkezés** képernyőn válaszd az **Elfelejtetted a jelszavad?** lehetőséget, add meg a fiókod e-mail-címét, majd kövesd az általunk küldött e-mailben lévő linket, és válassz egy újat. A [hogyan működik](page:how-it-works) oldal azt is elmondja, mi mást kíván még egy fiók."
+      - q: "Regisztráltam, de nem tudok semmit hozzáadni. Miért?"
+        a: "Leggyakrabban azért, mert az e-mail-címed még nincs megerősítve, ezért nyisd meg a visszaigazoló e-mailben lévő linket, vagy az emlékeztető sávon válaszd a **Visszaigazoló email újraküldése** lehetőséget egy újért. Ha meg vagy erősítve, lehet, hogy a csoport le van zárva, vagy a jogosultságai nem engedik, a megfigyelő pedig mindent lát, és semmit nem változtat, ahogy a [csoportok és jogosultságok](page:feature/groups-and-permissions) oldal elmagyarázza."
+      - q: "Hogyan változtathatom meg az e-mail-címemet vagy a jelszavamat?"
+        a: "A **Beállítások** között válaszd az **Email módosítása** vagy a **Jelszó módosítása** lehetőséget. Mindkettő előbb a jelenlegi jelszavadat kéri, az új e-mail-címet pedig az oda küldött linkről kell megerősíteni. A fiókokról a [hogyan működik](page:how-it-works) oldalon olvashatsz."
+      - q: "Be tudok jelentkezni Google- vagy Apple-fiókkal?"
+        a: "Nem. Csak egy e-mail-cím és egy legalább 12 karakteres jelszó kell, a saját telefonodon vagy számítógépeden pedig bejelölheted az **Emlékezz rám** lehetőséget. A kezdés többi részét a [webalkalmazás](page:feature/web-app) oldal tárgyalja."
+  - heading: "Csatlakozás egy csoporthoz"
+    items:
+      - q: "Valaki küldött egy meghívó linket. Hogyan csatlakozom?"
+        a: "Nyisd meg, aztán jelentkezz be, vagy hozz létre ingyenes fiókot. Látni fogsz egy előnézetet a csoportról, ott kiválasztod a nevet, amelyen az emberek látni fognak, és megnyomod a **Csatlakozás a csoporthoz** gombot. A [csoportok és jogosultságok](page:feature/groups-and-permissions) oldal az egész utat megmutatja."
+      - q: "Azt írja: „Jóváhagyásra vár”. Rosszat csináltam?"
+        a: "Egyáltalán nem. Ennél a csoportnál egy adminisztrátor engedi be az egyes embereket, ezért a kérésed az adminisztrátorokhoz ment, és addig nem látsz be, amíg valamelyikük jóvá nem hagyja. Egy barátságos noszogatás személyesen megengedett, a jóváhagyást pedig a [csoportok és jogosultságok](page:feature/groups-and-permissions) oldal magyarázza el."
+      - q: "A link azt írja, hogy érvénytelen vagy lejárt."
+        a: "A meghívó linkek addig élnek, ameddig a létrehozójuk beállította, 15 perctől 5 napig. Kérj egy új linket valakitől a csoportban, vagy a QR-kódot, ha ugyanabban a szobában vagytok. A meghívásokról a [hogyan működik](page:how-it-works) oldalon olvashatsz."
+  - heading: "Költségek"
+    items:
+      - q: "Hogyan adok hozzá költséget?"
+        a: "Nyisd meg a csoportot, és válaszd a **Kiadás hozzáadása** lehetőséget. Írd be, mi volt az, mennyi, ki fizette és kik osztoztak rajta, majd oszd fel egyenlően, pontos összegek szerint vagy százalékosan. A [költségek felosztása](page:feature/split-expenses) oldal minden lehetőséget végigvezet."
+      - q: "Ismétlődhet a lakbér minden hónapban?"
+        a: "Magától nem, mert ismétlődő költségek nincsenek. Nyisd meg a múlt havit, és válaszd a **Kiadás másolása** lehetőséget, és az űrlap kitöltve érkezik, készen egy új dátumra és arra, ami változott. A másolásról a [költségek felosztása](page:feature/split-expenses) oldalon találsz többet."
+      - q: "Rossz összeget írtam be. Kijavíthatom?"
+        a: "Igen. Szerkeszd a költséget, amíg a csoport jogosultságai engedik, és a csoport nincs lezárva. A korábbi változat megmarad, így senkinek nem kell a te szavadra hagyatkoznia abban, hogy mi változott, ahogy a [költségek felosztása](page:feature/split-expenses) oldal elmagyarázza."
+      - q: "Egy költség rossznak tűnik, és nem az enyém. Mit tegyek?"
+        a: "Válaszd rajta a **Van egy kérdésem** lehetőséget, és írd meg, miért, és az egész költség kimarad mindenki egyenlegéből, amíg a kérdező vagy egy adminisztrátor le nem zárja a kérdést. Nincs ilyen gomb? Csak a költségben érintett emberek tehetnek fel kérdést, egy adminisztrátornak előbb be kell kapcsolnia a csoport beállításai között a **Kiadásokra vonatkozó kérdések engedélyezése** lehetőséget, a diplomáciáról pedig a [vitatott költségekről szóló útmutató](page:guide/what-to-do-when-someone-disputes-a-shared-expense) szól."
+  - heading: "Kifizetések"
+    items:
+      - q: "Elküldi a Side Badger a pénzt?"
+        a: "Nem, a Side Badger sosem mozgat pénzt. Fizessetek egymásnak, ahogy akartok, banki átutalással, készpénzben vagy ahogy működik, aztán rögzítsd a kifizetést, hogy az egyenlegek felzárkózzanak. Az [elszámolás egy csoportos utazás után](page:guide/how-to-settle-up-after-a-group-trip) című útmutató elejétől végéig végigvezet rajta."
+      - q: "Hogyan rögzítek egy kifizetést?"
+        a: "Válaszd a csoportban a **Tartozásrendezés** lehetőséget, add meg, ki fizetett és ki kapta, írd be az összeget, vagy hagyd, hogy egy **Gyors rendezés** gomb kitöltse, majd válaszd a **Tartozásrendezés rögzítése** lehetőséget. Csak egy részt fizettél ki? Rögzítsd azt, ami ki lett fizetve, a többi pedig az egyenlegen marad, ahogy az [elszámolás](page:feature/settle-up) oldal elmagyarázza."
+      - q: "Rosszul rögzítettem egy kifizetést. Kijavíthatom?"
+        a: "Aki rögzítette, szerkesztheti a csoport **Tartozásrendezések** előzményeiből, és ő vagy egy adminisztrátor törölheti is, ami leveszi az egyenlegekről. Egy olyan kifizetés, amelyben valaki érintett, aki azóta elhagyta a csoportot, nem szerkeszthető. Az előzményekről az [elszámolás](page:feature/settle-up) oldalon olvashatsz."
+  - heading: "Értesítések és a kezdőképernyő"
+    items:
+      - q: "Hogyan kapcsolom be az értesítéseket?"
+        a: "Kapcsold be a **Push-értesítések** beállítást a **Beállítások** között, és engedélyezd őket, amikor a böngésző kéri. Ha a böngésző már letiltotta őket, előbb a saját beállításaiban engedélyezd. Minden eszközt külön kell bekapcsolni, és a kézbesítés nem garantált, ezért az értesítést tekintsd noszogatásnak, nem ígéretnek, ahogy a [webalkalmazás](page:feature/web-app) oldal elmagyarázza."
+      - q: "Miért nem működnek az értesítések az iPhone-omon?"
+        a: "iPhone-on és iPaden csak a kezdőképernyőhöz adott alkalmazásban működnek, böngészőlapon soha. Add hozzá, nyisd meg a kezdőképernyő ikonjáról, aztán kapcsold be őket a **Beállítások** között. A [közös tervezés](page:feature/plan-together) oldal megmutatja, miről tájékoztatnak."
+      - q: "Van letölthető alkalmazás?"
+        a: "Alkalmazásboltból nincs, mert a Side Badger a böngésződben fut. Jelentkezz be, aztán kövesd a **Hozzáadás a főképernyőhöz vagy a Dockhoz** lehetőséget a **Beállítások** között, és úgy nyílik meg, mint egy alkalmazás, saját ablakban. A [webalkalmazás](page:feature/web-app) oldalon minden eszközhöz megtalálod a lépéseket."
+  - heading: "Elhagyás, archiválás, lezárás és bezárás"
+    items:
+      - q: "Hogyan hagyok el egy csoportot?"
+        a: "Számolj el, aztán válaszd a **Csoport elhagyása** lehetőséget. Nem hagyhatod el, ha akár egyetlen pénznemben is tartozol vagy tartoznak neked, ha egy költségnél, amelyben benne vagy, nyitott kérdés van, vagy ha te vagy az utolsó adminisztrátor vagy az egyetlen tag, a visszatéréshez pedig új meghívó kell. A [csoportok és jogosultságok](page:feature/groups-and-permissions) oldalon vannak a részletek."
+      - q: "Hogyan tüntetek el egy régi csoportot a műszerfalamról?"
+        a: "Válaszd a **Csoport archiválása** lehetőséget. Eltűnik a te műszerfaladról, senki máséról nem, továbbra is megnyithatod és használhatod, a **Csoport visszaállítása** pedig visszahozza. A [csoportok és jogosultságok](page:feature/groups-and-permissions) oldal összehasonlítja az archiválást, a lezárást és a bezárást."
+      - q: "Vége az útnak. Megállíthatjuk, hogy változzanak a számok?"
+        a: "Igen. Egy adminisztrátor bekapcsolhatja a **Csoport lezárása** lehetőséget a csoport beállításai között, és senki nem adhat hozzá vagy szerkeszthet költségeket, nem rögzíthet új kifizetéseket, és nem változtathat listákat és szavazásokat, amíg egy adminisztrátor fel nem oldja. Mindenki továbbra is olvashatja a csoportot és az előzményeit, és nem csúszik be egy elkésett taxi sem, ahogy a [csoportok és jogosultságok](page:feature/groups-and-permissions) oldal elmagyarázza."
+      - q: "Törölhetek egy csoportot?"
+        a: "Egy adminisztrátor bezárhatja a **Csoport bezárása** lehetőséggel, a csoport nevének beírásával megerősítve. A bezárás végleges, és a csoportot mindenki számára elérhetetlenné teszi, ezért ha csak szem elől akarod téveszteni, inkább archiváld. A [csoportok és jogosultságok](page:feature/groups-and-permissions) oldalon van az apró betűs rész."
+contact:
+  heading: "Még mindig elakadtál?"
+  items:
+    - q: "Hibát találtál, vagy szeretnél valamit megváltoztatni?"
+      a: "Írj nekünk az alkalmazásból. Válaszd a fiókmenüben a **Visszajelzés** lehetőséget, majd a **Visszajelzés küldése** gombot, és válaszd a **Hiba jelentése**, a **Segítségkérés** vagy a **Funkciókérés** típust. Csatolj képernyőképet, ha segít, és amikor válaszolunk, ugyanabban a szálban találod meg."
+    - q: "Inkább e-mailben írnál?"
+      a: "Írj az alábbi címre. Add meg, melyik csoportról van szó, mit csináltál, és mire számítottál. Panaszkodni szabad, jelszót küldeni nem, ezért a sajátodat soha ne küldd el."
+  emailLabel: "Írj nekünk e-mailben:"
+  email: support@sidebadger.me

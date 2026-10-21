@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Dividere una villa se ci si ferma notti diverse | Side Badger"
+  description: "Dev è venuto solo per tre notti, perché dovrebbe pagarne sei? Dividi la villa per le notti in cui ognuno è rimasto davvero, con i conti già fatti."
+h1: "Come dividere una villa per le vacanze quando ognuno si ferma per notti diverse"
+navLabel: "Villa divisa per notti"
+lead: "Calcola il prezzo del soggiorno per persona e per notte, moltiplicalo per le notti di ciascuno e inserisci la villa come **un'unica spesa con importi esatti**. Side Badger tiene il conto e suggerisce una breve lista di pagamenti quando è ora di saldare."
+cta:
+  heading: "Dai alla villa una sola spesa in ordine"
+  body: "Crea un gruppo, invita tutti con un link o un codice QR e inserisci la villa con importi esatti. Side Badger tiene il conto aggiornato mentre tu ti godi la vacanza."
+sections:
+  - heading: "Sei notti, quattro persone, una carta di credito"
+    body: "Un [viaggio di gruppo](page:use-case/group-trips) di solito parte dalla carta di una persona. Qui è quella di Ana. Prenota una villa per sei notti, 2.100 €, perché qualcuno deve pur fare il primo passo. Ana, Ben e Chloe restano tutte e sei le notti. Dev può unirsi solo per le ultime tre, e arriva in treno. Ben noleggia un'auto, su cui Dev non sale mai. Dev fa la spesa grossa. Dividere la villa in quattro è la mossa ovvia, ma così Dev paga tre notti passate a casa, e certe cose riemergono a Natale. Dividere per notti evita la discussione, e il calcolo richiede un minuto."
+  - heading: "Il prezzo di una persona-notte"
+    body: "Una persona-notte è una persona che si ferma una notte. La villa costa quello che costa, quindi ripartisci il prezzo su tutte le persone-notte, poi assegna a ciascuno quelle che ha usato."
+    items:
+      - "**Conta le persone-notte.** Ana, Ben e Chloe restano sei notti a testa e Dev ne resta tre: 6 + 6 + 6 + 3 = 21."
+      - "**Calcola il prezzo di una.** 2.100 € ÷ 21 = 100 € per persona-notte."
+      - "**Moltiplica per le notti di ciascuno.** Ana, Ben e Chloe pagano 6 × 100 € = 600 € a testa. Dev paga 3 × 100 € = 300 €."
+      - "**Controlla il totale.** 600 € + 600 € + 600 € + 300 € = 2.100 €. Se le quote non sommano al prezzo, manca una notte o ne hai contata una due volte."
+  - heading: "Inseriscila in Side Badger"
+    body: "Crea un gruppo, invita gli altri tre con un link o un codice QR, poi aggiungi i costi. Prima la villa."
+    items:
+      - "Scegli **Aggiungi spesa**. Descrivila, inserisci 2.100 e imposta **Chi ha pagato?** su Ana."
+      - "Sotto **Dividi tra**, assicurati che ci siano tutte e quattro le persone."
+      - "Sotto **Come dividere**, scegli **Importi esatti**. Digita 600 per Ana, Ben e Chloe e 300 per Dev. Gli importi devono sommare al totale."
+      - "Scegli **Salva spesa**."
+      - "Aggiungi il noleggio dell'auto allo stesso modo. Ha pagato Ben, la divisione è **Uguale** e Dev resta fuori, perché è arrivato in treno. [Dividere le spese](page:feature/split-expenses) spiega gli altri modi di dividere un costo."
+      - "Aggiungi la spesa alimentare. Ha pagato Dev, la divisione è **Uguale** e ci sono tutte e quattro le persone."
+  - heading: "Leggi il risultato, poi salda"
+    body: "Il conto di ciascuno è la sua quota della villa più la sua parte di auto e di spesa. Ana, Ben e Chloe arrivano a 725 € a testa, cioè 600 € + 80 € + 45 €. Dev arriva a 345 €, cioè 300 € + 45 €. Sottrai quanto ha pagato ciascuno e i saldi vengono fuori da soli. Ana ha pagato 2.100 €, quindi deve ricevere 1.375 €. Ben ha pagato 240 € e deve 485 €. Dev ha pagato 180 € e deve 165 €. Chloe non ha pagato nulla e deve 725 €. Lasciati così, quei debiti si incrocerebbero in sei direzioni nel gruppo. Side Badger suggerisce invece tre pagamenti, tutti ad Ana. Pagatela come vi fa più comodo, poi scegliete **Salda** e usate **Registra saldo** per ogni pagamento, così i saldi si aggiornano. I pulsanti di saldo rapido compilano l'importo. C'è di più su [saldare i conti](page:feature/settle-up)."
+  - heading: "Quando la villa non ha un unico prezzo ordinato"
+    items:
+      - "**Le camere sono diverse.** Se la suite vale più della cameretta, concordate prima quanto costa ogni camera, poi fate il calcolo delle persone-notte una camera alla volta. Inserisci la villa come un'unica spesa con il totale di ciascuno, oppure come una spesa per camera. In ogni caso, gli importi esatti di una spesa devono sommare al suo totale."
+      - "**Una caparra pagata mesi prima.** Chi l'ha pagata ha una spesa tutta sua, con la data del giorno in cui ha pagato. Dividila per notti nelle stesse proporzioni del resto del prezzo."
+      - "**La prenotazione è in un'altra valuta.** Inserisci la villa nella valuta in cui hai pagato. Se il gruppo converte man mano, usa un tasso di cambio attuale, oppure digita il tasso che hai davvero ottenuto. L'importo originale resta sulla spesa. [Più valute](page:feature/multiple-currencies) spiega i dettagli."
+      - "**Notti parziali.** Qualcuno arriva a mezzanotte, qualcuno parte prima di colazione. Concordate una sola regola per contare le notti e usatela per tutti."
+  - heading: "Cosa Side Badger non fa qui"
+    items:
+      - "Non conta le notti per te. Non c'è una divisione per notti né per quote, quindi calcoli ogni importo come sopra e inserisci **importi esatti**."
+      - "Non sposta denaro. Vi pagate come vi fa più comodo, poi registrate il pagamento."
+      - "Ogni spesa ha una sola persona che ha pagato. Se in due hanno pagato la villa, inserisci due spese."
+      - "Non c'è un accesso per ospiti. Tutte le persone del gruppo, Dev compreso, hanno bisogno di un account gratuito."
+exampleAfter: 2
+example:
+  heading: "La villa, l'auto e la spesa"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "sei notti in villa"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "il noleggio dell'auto"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "la spesa alimentare"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Domande sulla villa"
+  items:
+    - q: "E se qualcuno si ritira?"
+      a: "Togli le sue notti, rifai i conti e modifica la spesa della villa in modo che gli importi esatti sommino di nuovo al prezzo. La versione precedente viene conservata e la modifica compare nell'attività del gruppo, quindi nessuno cambia un numero di nascosto. Chi può modificare dipende dai permessi del gruppo."
+    - q: "Chi ha prenotato dovrebbe pagare meno?"
+      a: "Lo decide il gruppo. Prenotare è una seccatura, e i gruppi non la pensano tutti allo stesso modo su uno sconto in cambio. Qualunque cosa concordiate, mettetela negli importi esatti e scrivetela in una nota sulla spesa, o in un commento accanto, così nessuno deve ricordarsi l'accordo."
+    - q: "Possiamo dividere le spese di pulizia in modo diverso?"
+      a: "Sì. Inserisci la tariffa come spesa a parte e dalle una divisione tutta sua. Dividere in parti uguali va bene per un costo fisso per tutta la casa. Gli importi esatti vanno bene per un gruppo che vuole che anche la tariffa segua le notti."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

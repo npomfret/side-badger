@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Come dividere un viaggio pagato in più valute | Side Badger"
+  description: "Sterline per l'hotel, yen per il ramen. Salda ogni valuta per conto suo o converti a un tasso che puoi vedere. Entrambi i modi svolti, con i conti."
+h1: "Come dividere un viaggio pagato in più valute"
+navLabel: "Viaggi in più valute"
+lead: "Inserisci ogni spesa nella valuta in cui hai pagato, poi scegli una strada. Tieni le valute separate e salda ciascuna nella sua moneta, oppure converti a un tasso di cambio attuale e salda una volta sola. Lo stesso viaggio in Giappone richiede quattro pagamenti nel primo caso e due nel secondo."
+cta:
+  heading: "Inseriscila nella moneta con cui hai pagato"
+  body: "Crea un account gratuito, avvia un gruppo per il viaggio e aggiungi ogni spesa nella valuta che c'era sullo scontrino. Vuoi prima i dettagli? Vedi [più valute](page:feature/multiple-currencies) oppure [cosa include la versione gratuita](page:pricing)."
+sections:
+  - heading: "Tre amici, un hotel, una quantità notevole di yen"
+    body: "Zoe, Kenji e Lucy passano una settimana in Giappone in un [viaggio di gruppo](page:use-case/group-trips), e ogni costo è diviso in parti uguali tra tutti e tre. Zoe ha prenotato l'hotel da casa, in sterline, per 600 £. Lucy ha comprato i pass del treno a Tokyo per 90.000 ¥. Kenji ha pagato la serata ramen, 9.000 ¥, e da allora la nomina ogni giorno. Nessuno vuole convertire tre scontrini sul binario di una stazione. Per i conti di questa guida, 1 ¥ vale 0,005 £, un tasso tondo inventato per l'occasione. Nell'app useresti un tasso di cambio attuale, oppure scriveresti quello che hai davvero ottenuto."
+  - heading: "Inserisci ognuna nella valuta dello scontrino"
+    body: "Questa parte vale qualunque strada tu scelga. Per ora non c'è niente da convertire."
+    items:
+      - "**Crea il gruppo.** Nella dashboard scegli **Crea gruppo**, dagli il nome del viaggio, poi scegli **Invita altri** e manda il link o il codice QR."
+      - "**Aggiungi l'hotel.** Scegli **Aggiungi spesa** e scrivi 600, con le sterline come valuta accanto all'importo. In **Chi ha pagato?** scegli Zoe. Lascia tutti e tre in **Dividi tra**, lascia **Come dividere** su **Uguale** e scegli **Salva spesa**."
+      - "**Aggiungi gli yen.** Fai lo stesso per i pass del treno (ha pagato Lucy) e per il ramen (ha pagato Kenji), con gli yen come valuta. Gli yen non hanno decimali, quindi il modulo non te li chiede."
+  - heading: "Prima strada: tieni le valute separate"
+    body: "Side Badger tiene un saldo per ogni valuta e non compensa l'una con l'altra. In sterline l'hotel costa 200 £ a testa, quindi Kenji e Lucy devono 200 £ a Zoe ciascuno. In yen, i pass del treno e il ramen fanno 99.000 ¥, cioè 33.000 ¥ a testa. Lucy ha pagato 90.000 ¥ e deve ricevere 57.000 ¥. Zoe non ha pagato yen e ne deve 33.000 ¥. Kenji ha pagato 9.000 ¥, quindi ne deve 24.000 ¥."
+    items:
+      - "**Sterline.** Kenji paga 200 £ a Zoe e Lucy paga 200 £ a Zoe."
+      - "**Yen.** Zoe paga 33.000 ¥ a Lucy e Kenji paga 24.000 ¥ a Lucy."
+      - "**Quattro pagamenti in tutto.** Zoe e Lucy si devono soldi a vicenda in due valute che non si compensano. Di tasso non si parla, quindi non c'è niente su cui litigare."
+      - "**Devi yen, paghi in sterline.** Chi non ha yen può comunque pagare in sterline. Quando registri il pagamento, apri **Un'altra valuta?**, scegli **Converti in** sterline e controlla il tasso. I 33.000 ¥ di Zoe sono 165 £ al tasso di questa guida, e il saldo in yen torna comunque giusto."
+      - "**Registra ogni pagamento.** Pagatevi come vi fa più comodo, poi scegli **Salda** e usa **Registra saldo**. Su [saldare i conti](page:feature/settle-up) c'è di più."
+  - heading: "Seconda strada: converti man mano"
+    body: "Se il gruppo preferisce vedere un solo numero a testa, converti quando inserisci la spesa."
+    items:
+      - "**Converti nel modulo.** In **Aggiungi spesa** scegli **Converti in** e seleziona le sterline. Side Badger mostra il tasso e l'importo convertito, segnato con un ≈. Modifica il tasso se ne hai ottenuto un altro. L'importo originale in yen resta sulla spesa."
+      - "**Leggi le sterline.** A 1 ¥ = 0,005 £, i pass del treno diventano 450 £ e il ramen 45 £. Con l'hotel da 600 £, fa 600 £ + 450 £ + 45 £ = 1.095 £, cioè 365 £ a testa. Zoe ha pagato 600 £, quindi deve ricevere 235 £. Lucy ha pagato 450 £ e deve ricevere 85 £. Kenji ha pagato 45 £ e ne deve 320 £."
+      - "**Due pagamenti.** Li fa tutti e due Kenji: 235 £ a Zoe e 85 £ a Lucy. Zoe e Lucy non si pagano più tra loro."
+      - "**Oppure imposta una valuta del gruppo.** Per saltare il passaggio in più, apri le **Impostazioni** del gruppo, trova **Impostazioni valuta** e scegli **Converti automaticamente le spese in**. Ogni nuova spesa si converte in quella valuta, sempre a un tasso che puoi vedere e cambiare."
+  - heading: "Quale strada scegliere?"
+    items:
+      - "**Tienile separate** quando le persone hanno ancora yen nel portafoglio, o quando preferisci non discutere di un tasso. Il costo sono più pagamenti, in più di una valuta."
+      - "**Converti** quando il gruppo vive in una sola valuta e vuole un numero a testa e una lista più corta, come i due bonifici di Kenji. Il costo è che il gruppo si fida di un tasso, e il tasso è fissato su ogni spesa quando viene salvata."
+      - "**Decidete presto.** Una valuta del gruppo converte solo le spese nuove e copiate. Non torna indietro a sistemare quello che hai già inserito."
+  - heading: "Il tasso, e il tetto"
+    items:
+      - "**Il tasso è fissato quando salvi.** Le vecchie spese non vengono mai rivalutate, quindi un saldo non va alla deriva perché è cambiato il mercato. Le spese inserite in giorni diversi possono avere tassi diversi, quindi se il gruppo vuole un solo tasso per tutto il viaggio, concordatelo e scrivetelo ogni volta."
+      - "**Nessun tasso? Scrivilo tu.** Side Badger recupera un tasso di cambio attuale dove può, ma non è garantito per ogni coppia di valute. Se non c'è, o se uno sportello di cambio ti ha fatto un prezzo migliore, scrivi il tuo."
+      - "**999.999,99 per spesa, nella sua valuta.** Un solo tetto, qualunque sia la moneta. In yen sono poco meno di 1.000.000 ¥, circa 5.000 £ al tasso di questa guida. In una valuta con numeri grandi, come la rupia indonesiana, un singolo conto può arrivarci prima. Dividi il conto in due spese, oppure inseriscilo in un'altra valuta e converti."
+  - heading: "Cosa Side Badger non fa qui"
+    items:
+      - "Non sposta né cambia mai denaro. Vi pagate come vi fa più comodo, poi registrate il pagamento."
+      - "Le valute sono 140. Criptovalute e metalli non ne fanno parte."
+exampleAfter: 2
+example:
+  heading: "Il Giappone, saldato in due modi"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "l'hotel, prenotato da casa"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "pass del treno"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "serata ramen"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Domande"
+  items:
+    - q: "Che tasso di cambio usa Side Badger?"
+      a: "Un tasso di cambio attuale, recuperato quando inserisci la spesa dove ce n'è uno disponibile. Puoi cambiarlo con quello che hai davvero ottenuto."
+    - q: "Il gruppo può restare su sterline e yen?"
+      a: "Sì. Nelle **Impostazioni** del gruppo, attiva **Limita valute per questo gruppo** sotto **Impostazioni valuta**, scegli le **Valute consentite** e imposta la **Valuta predefinita per le nuove spese**. Meno opzioni nell'elenco, meno errori alla cassa."
+    - q: "Dobbiamo convertire per forza?"
+      a: "No. Le valute restano separate a meno che tu o il tuo gruppo scegliate di convertire, e ogni valuta ha la sua breve lista di pagamenti."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name

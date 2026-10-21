@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Reiknivél: hver skuldar hverjum, komið á hreint | Side Badger"
+  description: "Hver greiddi, hver skuldar, hver borgar hverjum: komið á hreint á sekúndum. Skiptu jafnt, nákvæmt eða í prósentum. Ókeypis, í vafranum, ekkert vistað eða sent."
+h1: "Reiknivél til að skipta reikningi"
+navLabel: "Reiknivél: skipta reikningi"
+lead: "Sláðu inn hver greiddi fyrir hvað og reiknivélin segir þér hver skuldar hverjum, ásamt stuttum lista yfir greiðslur sem gerir upp. Hún keyrir í vafranum þínum, vistar ekkert og flytur enga peninga. Ef hópurinn þarf að halda utan um bókhaldið lengur en flipinn lifir gera [skipting útgjalda](page:feature/split-expenses) og [uppgjör](page:feature/settle-up) í Side Badger sömu reikningsdæmin og geyma þau."
+cta:
+  heading: "Líkar þér útreikningarnir? Geymdu þá."
+  body: "Þessi reiknivél gleymir öllu þegar þú lokar flipanum, rétt eins og sá sem borgaði örugglega síðast. Hópur í Side Badger geymir útgjöldin, uppfærir stöðu allra og skráir greiðslurnar. Það er ókeypis, án auglýsinga og án daglegra takmarka."
+sections:
+  - heading: "Hvernig útreikningurinn virkar"
+    body: "Fyrir hvert útgjald reiknar reiknivélin út hlut hvers og eins. Þú getur skipt því jafnt, eftir nákvæmum upphæðum eða í prósentum milli þeirra sem þú velur. Staða hvers og eins er svo það sem viðkomandi greiddi að frádregnu því sem viðkomandi skuldar. Plúsmerki þýðir að hópurinn skuldar viðkomandi og mínusmerki að viðkomandi skuldar hópnum. Stöðurnar leggjast alltaf saman í núll, því það sem einn á inni skulda aðrir."
+  - heading: "Af hverju listinn yfir greiðslur er stuttur"
+    body: "Enginn þarf að gera upp hverja kvittun fyrir sig. Þegar staða allra er þekkt para reiknivélin saman þann sem skuldar mest og þann sem á mest inni, gerir upp eins mikið og ein greiðsla ræður við og heldur áfram niður listann þar til allir eru komnir í núll. Hún þarf aldrei fleiri greiðslur en fjöldi þeirra sem eru með stöðu að frádreginni einni, og oft færri en þegar gert er upp reikning fyrir reikning. Hún gefur stuttan lista yfir greiðslur og lofar ekki að hann sé sá stysti sem mögulegt er."
+  - heading: "Það sem reiknivélin gerir ekki"
+    items:
+      - "**Ráða við fleiri en einn gjaldmiðil.** Veldu einn og notaðu hann í allan útreikninginn. Appið heldur sérstaka stöðu fyrir hvern gjaldmiðil og getur umreiknað útgjald á núverandi gengi, sem þú getur breytt."
+      - "**Vista neitt.** Lokaðu flipanum og tölurnar eru horfnar. Til að halda þeim skaltu afrita tengilinn. Hann geymir tölurnar þínar fyrir aftan #, sem vafrinn þinn sendir aldrei á netþjón, og allir sem fá hann frá þér geta lesið þær."
+      - "**Flytja peninga.** Hún segir þér hver ætti að borga hverjum. Þið borgið hvert öðru eins og ykkur hentar og skráið svo greiðsluna í appinu ef hópurinn heldur utan um stöðuna þar."
+      - "**Velja afgangseyri af handahófi.** Þegar reikningur skiptist ekki jafnt fer afgangseyririnn til þeirra fyrstu á listanum, svo heildartölurnar ganga samt upp. Í appinu fer afgangseyririnn til einnar manneskju af handahófi, svo það er ekki alltaf sama manneskjan."
+      - "**Fara yfir mörkin.** Reiknivélin tekur 2 til 20 manns og eitt útgjald getur verið allt að 999.999,99, eins og í appinu."
+exampleAfter: 2
+example:
+  heading: "Löng helgi, fjórir vinir"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "bústaðurinn"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "matvörur"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "leigubíllinn"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "kráin"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: "Spurningar"
+  items:
+    - q: "Er reiknivélin ókeypis?"
+      a: "Já. Ókeypis. Engar auglýsingar. Engin dagleg takmörk. Þú þarft ekki heldur aðgang."
+    - q: "Vistar hún það sem ég slæ inn?"
+      a: "Nei. Ekkert er vistað eða sent neitt. Til að halda tölunum skaltu nota „Afrita tengil“ og vista tengilinn einhvers staðar."
+    - q: "Hver getur séð tengilinn sem ég afrita?"
+      a: "Hver sá sem hefur hann. Tölurnar eru í tengilinum sjálfum, fyrir aftan #, svo deildu honum aðeins með þeim sem mega sjá þær."
+    - q: "Flytur hún peninga?"
+      a: "Nei. Hún reiknar út hver ætti að borga hverjum og þið borgið hvert öðru eins og ykkur hentar. Side Badger snertir heldur aldrei peningana þína. Sjá [uppgjör](page:feature/settle-up)."
+    - q: "Get ég skipt ferð sem var greidd í tveimur gjaldmiðlum?"
+      a: "Ekki hér, því útreikningur hefur einn gjaldmiðil. Í hópi heldur hver gjaldmiðill sína eigin stöðu. Sjá [marga gjaldmiðla](page:feature/multiple-currencies)."
+    - q: "Hvað ef upphæðirnar ganga ekki upp?"
+      a: "Reiknivélin segir frá því undir útgjaldinu og sýnir enga niðurstöðu fyrr en þær gera það. Nákvæmar upphæðir verða að ná heildarupphæðinni og prósentur verða að vera samtals 100."

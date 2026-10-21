@@ -1,0 +1,102 @@
+translatedFrom: "0900d953"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Što učiniti kad netko ospori zajednički trošak | Side Badger"
+  description: "Preskoči poruku s podtekstom. Dovedi trošak u pitanje i on izlazi iz svačijih stanja dok razgovarate. Izračunato na 45 £ vina za zabavu."
+h1: "Što učiniti kad netko ospori zajednički trošak"
+navLabel: "Osporeni troškovi"
+lead: "Postavi pitanje uz trošak umjesto da šalješ poruku s podtekstom. Dok je pitanje otvoreno, cijeli trošak ostaje izvan svačijih stanja. Razgovarajte u komentarima, uredi podjelu ako se grupa slaže, a pitanje neka zatvori osoba koja ga je postavila ili administrator."
+cta:
+  heading: "Postavi neugodno pitanje pristojno"
+  body: "Napravi besplatan korisnički račun, osnuj grupu za stan i zamoli administratora da uključi pitanja o troškovima, koja su isključena dok ih netko ne uključi. Želiš prvo obilazak? Pogledaj [kako radi](page:how-it-works) ili [što pokriva besplatna verzija](page:pricing)."
+sections:
+  - heading: "Troje cimera i 45 £ vina"
+    body: "Nakon zabave Tom dodaje vino u grupu stana. Košta 45 £, platio ga je Tom, a podijeljeno je jednako između Toma, Priye i Aishe, što je 15 £ po osobi. Aisha ne pije. Tom ga je kupio za zabavu, a zabava je bila za [stan](page:use-case/housemates), pa nije učinio ništa loše. Ni Aisha nije u krivu što pita. Nitko ovdje nije zlikovac. Samo je 15 £ vina sporno i ima mnogo načina da to postane neugodno. Poruka s podtekstom cijeloj kući jedan je od njih. Pitanje uz trošak blaži je."
+  - heading: "Što pitanje radi"
+    body: "Aisha otvara trošak i postavlja pitanje. Cijeli trošak ispada iz svačijih stanja, ne samo njezin dio, a ništa drugo nije pogođeno. Velika kupnja (84 £) i čistačica (60 £) i dalje se računaju, što je 28 £ + 20 £ = 48 £ po osobi. Dok je vino na čekanju, Aisha duguje 48 £, Tom potražuje 36 £, a Priya 12 £. Što god stan odlučio o vinu, ničije stanje ga u međuvremenu ne uključuje. Svatko drugi u trošku također može postaviti vlastito pitanje. Vino se vraća u stanja tek kad se zatvori posljednje otvoreno pitanje o njemu, a pitanje zatvara osoba koja ga je postavila ili administrator."
+  - heading: "Razgovor, pa popravak"
+    body: "Aishino pitanje dolazi u komentare troška, pa su odgovori točno ispod njega. [Planiranje zajedno](page:feature/plan-together) ima više o komentarima i pitanjima. Tom i Priya ga pročitaju i stan porazgovara. Odluče da je vino bilo Tomovo i Priyino, jer su ga oni pili. Neki drugi stan možda bi zadržao podjelu na troje ili se dogovorio za nešto između, i to bi također bilo u redu. Side Badger pohranjuje što dogovorite i nema mišljenje o vinu. Tom uređuje trošak tako da se dijeli jednako između njega i Priye, što je 22,50 £ po osobi (45 £ ÷ 2). Aisha više nije u njemu, pa njezino pitanje odlazi sa starom verzijom i vino se vraća u stanja. Prethodna verzija ostaje sačuvana."
+  - heading: "Čitanje ishoda"
+    body: "Kad se vino vrati, Tom potražuje 58,50 £, Priya duguje 10,50 £, a Aisha 48 £. Side Badger predlaže dvije uplate, obje Tomu. Aishinih 48 £ jednako je iznosu koji je imala dok je vino bilo na čekanju, jer nije u njemu. Priya je od potraživanja od 12 £ došla do duga od 10,50 £, a razlika je njezina polovica vina od 22,50 £. Da je podjela na troje ostala, Aisha bi dugovala 63 £ (28 £ + 20 £ + 15 £). Cijeli spor vrijedio je 15 £. Platite si kako god želite, a zatim zabilježite svaku uplatu pod **Poravnaj**. [Poravnanje](page:feature/settle-up) pokriva ostalo."
+  - heading: "Kako to napisati da ljudi i dalje razgovaraju s tobom"
+    body: "Aishino pitanje: „Nisam popila ni gutljaj vina. Možemo li pogledati podjelu?“ Kratko je, imenuje trošak i pita umjesto da optužuje. Pomaže nekoliko navika."
+    items:
+      - "**Pitaj o trošku, ne o osobi.** „Možemo li provjeriti podjelu za vino?“ otvara razgovor. „Zašto su mi naplatili tvoje vino?“ otvara onaj drugi tip razgovora."
+      - "**Reci što predlažeš.** „Može li to biti samo za one koji su ga pili?“ daje grupi nešto s čime se može složiti ili odgovoriti."
+      - "**Obrazloži u rečenici ili dvije.** Polje se zove **Vaše pitanje** i ne može ostati prazno."
+      - "**Drži odgovore na jednom mjestu.** Odgovori idu u komentare troška, uz brojke na koje se odnose."
+  - heading: "Postavi to u Side Badgeru"
+    items:
+      - "**Uključi pitanja.** Isključena su prema zadanim postavkama. Administrator otvara **Postavke** grupe, uključuje **Dopusti pitanja o troškovima** pod **Značajke** na kartici **Općenito** i bira **Spremi**. Kasnije isključivanje briše svako otvoreno pitanje."
+      - "**Postavi pitanje.** Otvori trošak i pokraj svog imena u podjeli odaberi **Imam pitanje**. Napiši razlog u **Vaše pitanje** i ponovno odaberi **Imam pitanje**. To mogu samo ljudi u trošku. Trošak sada prikazuje oznaku **Dovedeno u pitanje**."
+      - "**Pronađi što je na čekanju.** U popisu troškova **Samo dovedeno u pitanje** prikazuje troškove s otvorenim pitanjem."
+      - "**Popravi, ako se grupa slaže.** Otvori trošak, odaberi **Uredi**, promijeni **Podijeli između** i odaberi **Ažuriraj trošak**. Tko može uređivati, ovisi o dopuštenjima grupe."
+      - "**Zatvori, ako ništa ne treba popravljati.** Osoba koja je pitala može upotrijebiti gumb za zatvaranje na svojoj oznaci **Dovedeno u pitanje**, nazvan **Zatvori pitanje**, a može i administrator. Trošak se vraća u stanja kad se zatvori njegovo posljednje pitanje."
+  - heading: "Kad nije tako uredno"
+    items:
+      - "**Uređivanje ostavlja onoga tko je pitao u trošku.** Ako je osoba koja je pitala još u trošku, njezino pitanje prelazi na uređenu verziju i čeka da ga ona ili administrator zatvori. Popraviti iznos nije isto što i složiti se da je popravljen."
+      - "**Nisi u trošku.** Pitanje mogu postaviti samo ljudi u trošku. Ako ti nešto izgleda čudno, reci to u komentarima ili pitaj onoga tko ga je dodao."
+      - "**Netko želi napustiti grupu.** Otvoreno pitanje sprječava ljude u tom trošku da napuste grupu. Zatvori pitanje ili uredi trošak tako da više nisu u njemu i mogu otići."
+  - heading: "Što Side Badger ovdje ne radi"
+    items:
+      - "Ne odlučuje tko je u pravu. Drži trošak izvan stanja i čuva što dogovorite."
+      - "Ne traži od nikoga da odobri troškove prije nego što se računaju. Zadržava se samo trošak doveden u pitanje."
+      - "Ne može zadržati dio troška. Dovedeš li ga u pitanje, cijeli izlazi iz stanja."
+      - "Ne premješta novac. Platite si kako god želite i zabilježite."
+exampleAfter: 3
+example:
+  heading: "Stan nakon vina"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "velika kupnja"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "čistačica"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "vino za zabavu"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+faq:
+  heading: "Pitanja"
+  items:
+    - q: "Mogu li dovesti u pitanje samo svoj dio?"
+      a: "Ne. Pitanje zadržava cijeli trošak, za sve u njemu. Ako je pogrešna samo podjela, rješenje je uređivanje podjele."
+    - q: "Tko može zatvoriti pitanje?"
+      a: "Osoba koja ga je postavila ili administrator grupe. Ako onaj tko je dodao trošak nije administrator, ne može ga zatvoriti umjesto onoga tko je pitao."
+    - q: "Briše li uređivanje troška original?"
+      a: "Ne. Prethodna verzija ostaje sačuvana. Tko može uređivati, određuju dopuštenja grupe, pa vrijedi prvo reći kući, jer se stanja mijenjaju."

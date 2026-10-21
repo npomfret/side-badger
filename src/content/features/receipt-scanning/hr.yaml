@@ -1,0 +1,78 @@
+translatedFrom: "42f5cf35"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.read-by-googles-ai
+  - receipt-attachments.keep-the-receipt
+meta:
+  title: "Skeniraj račun i dodaj trošak | Side Badger"
+  description: "Pusti jazavca da pročita račun. Popunjava ukupni iznos, datum i mjesto da ih provjeriš, bez kredita za skeniranje. Sliku čita Googleova AI usluga."
+h1: "Skeniraj račun, provjeri pojedinosti, podijeli"
+navLabel: "Skeniranje računa"
+lead: "Pusti jazavca da pročita račun, a ti mu provjeri domaću zadaću. Dodaj fotografiju novom trošku i Side Badger popuni ukupni iznos, datum i mjesto da ih provjeriš. Zatim ga [podijeliš](page:feature/split-expenses) kao svaki drugi trošak. Skeniranje je besplatno, bez kredita za skeniranje. Popunjava jedan trošak i ne dijeli račun po stavkama. Slike računa čita Googleova AI usluga."
+cta:
+  heading: "Slikaj. Provjeri. Podijeli."
+  body: "Napravi besplatan korisnički račun, osnuj grupu i dodaj trošak s fotografijom računa. Vidi što popuni, promijeni što nije u redu i spremi kad ti sve izgleda dobro."
+problem:
+  heading: "Nitko ne želi tipkati račun u redu za taksi"
+  body: "Putovanja i velike večeri dolaze s papirom. Večera, taksi, runda koja se pretvorila u šest. Tipkati svaki od njih u telefon hladnim palcima, s redom iza sebe, tako se troškovi zaboravljaju. Zato će Side Badger pročitati račun umjesto tebe. On napravi prvu skicu, a ti provjeravaš. Pristaje [grupnim putovanjima](page:use-case/group-trips) i [događajima i proslavama](page:use-case/events-and-celebrations), gdje se računi gomilaju brže nego što itko želi imati posla s njima."
+workflow:
+  heading: "Od fotografije do troška u tri koraka"
+  steps:
+    - title: "Dodaj račun novom trošku"
+      body: "Započni novi trošak i dodirni **Skeniraj račun**, ili koristi brzu radnju **Skeniraj račun** na nadzornoj ploči. Slikaj ili odaberi fotografiju koju već imaš. Radi i **Dodaj račun ili privitak** u obrascu."
+    - title: "Pusti ga da pročita račun"
+      body: "Obrazac prikazuje **Analiziranje računa...** dok AI u Side Badgeru čita sliku. Zatim popuni ono što je pronašao, primjerice opis, ukupni iznos, valutu, datum, vrijeme i mjesto. Sve što si već upisao ostaje netaknuto."
+      shot: S09
+      shotAlt: "Obrazac novog troška s porukom Analiziranje računa..., a zatim isti obrazac s popunjenim pojedinostima"
+    - title: "Provjeri, pa podijeli"
+      body: "Usporedi obrazac s papirom. Ispravi što nije u redu, reci tko je platio i tko je dijelio trošak, odaberi podjelu i spremi. Trošak ne postoji dok ne spremiš. [Podjela troškova](page:feature/split-expenses) pokriva dijeljenje."
+options:
+  heading: "Opcije"
+  items: []
+sections:
+  - heading: "Što popunjava"
+    body: "Dodaj sliku računa novom trošku i ova se polja mogu popuniti. Tko je platio, tko je dijelio trošak i kako ga podijeliti i dalje ostaje na tebi."
+    items:
+      - "**Opis** troška."
+      - "**Ukupni iznos**."
+      - "**Valuta**, ako je tvoja grupa dopušta."
+      - "**Datum** i **vrijeme**."
+      - "**Mjesto**."
+      - "Tekstualna kopija računa u **bilješkama**, za slučaj da papirnati izblijedi ili završi u perilici."
+  - heading: "Što ipak provjeravaš"
+    body: "Sve. Shvati ono što popuni kao skicu. Usporedi ukupni iznos s papirom, zatim valutu, datum i mjesto. Mutne fotografije i zgužvan papir mogu zavarati svakog čitača i ne obećavamo da pogodi svaki račun, pa pogledaj prije nego što spremiš. Ako nešto nije u redu, prepiši preko toga. Ako je račun u jenima, a grupa se poravnava u funtama, [više valuta](page:feature/multiple-currencies) objašnjava što slijedi."
+  - heading: "Čuvaj račun uz trošak"
+    body: "Skeniran ili ne, račun može ostati uz trošak. Priloži fotografije ili PDF-ove, do tri po trošku i do 10 MB svaki. Članovi grupe ih vide na trošku. Slike se prikazuju kao sličice koje se otvaraju u pregledniku, a PDF-ovi se otvaraju kao poveznice. Fotografija koju skeniraš također se prilaže, osim ako je ukloniš prije spremanja. Kad netko pita koliko je ta večera stvarno koštala, dokaz je tu."
+  - heading: "Kamo ide tvoj račun"
+    body: "Slike računa čita Googleova AI usluga. Da bi se obrazac popunio, sliku čita Google Vertex AI (Gemini) u Googleovoj američkoj multiregiji. Dodaj sliku novom trošku i bit će pročitana. PDF ili fotografija dodana već postojećem trošku pohranjuje se bez čitanja. Priloženi računi vidljivi su članovima grupe, pa ako račun prikazuje nešto što radije ne bi dijelio, preskoči fotografiju i upiši taj trošak ručno."
+limits:
+  heading: "Ograničenja"
+  items:
+    - "Samo slike. JPEG, PNG i WebP, a HEIC nakon pretvorbe. PDF-ove možeš priložiti trošku, ali se ne čitaju."
+    - "Skeniranje je samo za nove troškove. Na postojećem trošku možeš priložiti račune, ali se ništa ne čita."
+    - "Popunjava samo polja koja nisi dirao, a valutu samo ako je tvoja grupa dopušta."
+    - "Ne dijeli po stavkama niti dodjeljuje stavke računa ljudima. Popunjava jedan trošak, a ti ga dijeliš kao i inače."
+    - "Nema obećanja da je ono što popuni točno ni da će skeniranje uspjeti svaki put. Provjeri prije spremanja, a trošak dodaj ručno ako skeniranje ne uspije ili nije dostupno."
+    - "Trošak može imati do tri privitka, svaki do 10 MB, kao JPEG, PNG, WebP, HEIC ili PDF."
+    - "Slike računa čita Google Vertex AI (Gemini) u Googleovoj američkoj multiregiji, a priloženi računi vidljivi su članovima grupe."
+useCasesHeading: "Gdje se gomilaju računi"
+faq:
+  heading: "Pitanja"
+  items:
+    - q: "Može li podijeliti račun po stavkama?"
+      a: "Ne. Popunjava trošak, uključujući ukupni iznos, a ti ga dijeliš jednako, po točnim iznosima ili po postocima. Za račun na kojem je svatko naručio nešto drugo upiši koliko duguje svaka osoba kao točne iznose. [Podjela troškova](page:feature/split-expenses) ima pojedinosti."
+    - q: "Može li pročitati PDF?"
+      a: "Ne. PDF možeš priložiti trošku da putuje uz brojeve, ali se čitaju samo slike."
+    - q: "Postoji li ograničenje skeniranja?"
+      a: "Nema kredita za skeniranje koji bi ti mogli ponestati, a skeniranje je besplatno. Datoteke imaju ograničenja: do tri privitka po trošku i 10 MB svaki. [Što pokriva besplatna verzija](page:pricing) navodi ostalo."
+    - q: "Tko može vidjeti moj račun?"
+      a: "Članovi grupe mogu vidjeti račune priložene trošku. Slike računa čita i Googleova AI usluga, tako se obrazac popunjava."
+    - q: "Mogu li skenirati račun za već dodani trošak?"
+      a: "Ne, skeniranje je za nove troškove. I dalje možeš priložiti račun postojećem trošku, a on se pohranjuje bez čitanja."
+    - q: "Što ako popuni nešto krivo?"
+      a: "Prepiši preko toga. Svako polje ostaje uredivo dok ne spremiš, a sva bi ih ionako trebalo provjeriti. Ako skeniranje ne uspije ili nije dostupno, dodaj trošak ručno kao i inače."

@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: "Orodha, kura na maoni ya pamoja kwa gharama za kikundi | Side Badger"
+  description: "Toa maoni kwenye gharama, hoji ile ya ajabu, weka orodha ya ununuzi ya pamoja na pigeni kura kuhusu villa. Pangeni matumizi pamoja, kisha mgawanye. Bure, bila matangazo."
+h1: "Pangeni pamoja, mgawanye baadaye"
+navLabel: "Pangeni pamoja"
+lead: "Orodha ya ununuzi na bili ya ununuzi, hatimaye zinazungumzana. Side Badger inaipa kikundi chako mahali pa kuzungumzia pesa kabla na baada ya kutumika, kukiwa na maoni kwenye kila gharama, njia ya kuhoji zile zinazoonekana kukosea, orodha za pamoja na kura kwa maamuzi makubwa. Kisha mnafanya [kugawanya gharama](page:feature/split-expenses) kama kawaida."
+cta:
+  heading: "Panga, kisha ugawanye"
+  body: "Fungua akaunti ya bure, anzisha kikundi na weka orodha, kura au swali la kwanza kando ya pesa. Huna uhakika nini kinafuata? Tazama [jinsi inavyofanya kazi](page:how-it-works)."
+problem:
+  heading: "Gumzo liko huku, bili iko kule"
+  body: "Matumizi ya kikundi kwa kawaida huishi mahali pawili. Nambari ziko sehemu moja, na mabishano kuhusu nambari yako kwenye gumzo lililosogea mbali Jumanne. Orodha ya ununuzi ni picha ya friji. Villa iliamuliwa kwa dole gumba la watu wengi, pengine. Side Badger huweka mipango ndani ya kikundi, kando ya gharama zinazohusika, kwa hivyo kuna maoni palipo gharama, orodha palipo ununuzi, kura kwa uamuzi mkubwa, na njia ya kusema “subiri kidogo, hii ni sahihi?” bila kuandika aya nzima. Yote hubaki kuhusu pesa za kikundi, ndiyo kazi ya kikundi."
+workflow:
+  heading: "Kutoka kura ya villa hadi bili ya ununuzi"
+  steps:
+    - title: "Weka uamuzi mkubwa kwenye kura"
+      body: "Ongeza kura kwa uamuzi unaoamua bili, kama ni villa ipi. Chagua chaguo mbili hadi kumi, sema kila mtu ana kura ngapi, kisha ifunge kila mtu akishapiga na mshindi ataonyeshwa."
+      shot: S17
+      shotAlt: "Kura iliyofungwa yenye chaguo lililoshinda limetiwa alama na idadi ya kura kando ya kila chaguo"
+    - title: "Andikeni orodha ya ununuzi pamoja"
+      body: "Anzisheni orodha ya pamoja, ongezeni vitu na viwekeeni tiki vinapofika kwenye kikapu. Ununuzi unaingia baadaye kama gharama."
+      shot: S16
+      shotAlt: "Orodha ya ununuzi ya pamoja yenye vitu vichache vilivyowekewa tiki na idadi ya maendeleo"
+    - title: "Zungumzeni kuhusu gharama palipo"
+      body: "Toa maoni kwenye gharama yenyewe, ambatisha risiti na uitikie kwa emoji. Mazungumzo yanabaki kando ya nambari inayohusika."
+      shot: S08
+      shotAlt: "Gharama yenye maelezo yake, picha ndogo ya risiti, mazungumzo ya maoni na miitikio ya emoji"
+    - title: "Hoji ile inayoonekana kukosea"
+      body: "Kikundi kikiwa kimewasha maswali ya gharama, yeyote aliyejumuishwa kwenye gharama anaweza kuchagua **Nina swali**. Gharama inabaki nje ya salio hadi swali litakaposhughulikiwa."
+      shot: S18
+      shotAlt: "Orodha ya gharama yenye alama ya Inahojiwa na kichujio cha Inahojiwa tu"
+    - title: "Ona nini kilibadilika, na nani alibadilisha"
+      body: "Mlisho wa shughuli na kengele ya arifa vinaonyesha kipya katika vikundi vyako vyote. Arifa za push zipo ukizitaka."
+      shot: S19
+      shotAlt: "Orodha ya arifa iliyofunguka na orodha ya shughuli za hivi karibuni"
+options:
+  heading: "Chaguo"
+  items: []
+example:
+  heading: "Wapangaji wenza watatu, bili moja ya divai inayohojiwa"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "ununuzi mkubwa"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "mfanyakazi wa usafi"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "divai ya sherehe"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+sections:
+  - heading: "Maoni na miitikio, kando ya nambari"
+    body: "Kila gharama ina mazungumzo yake ya maoni, na hivyo pia kikundi, kila orodha na kila kura. Uliza kwa nini teksi iligharimu kiasi hicho chini ya teksi, si kwenye gumzo ambalo hakuna anayelirudia. Ongeza picha ya risiti au PDF ya uhifadhi, kisha itikia kwa dole gumba, moyo, kicheko, mshangao, huzuni au sherehe kwenye gharama, malipo na maoni. Sherehekea malipo yanapofika. Ndiyo karibu zaidi Side Badger inakofikia makofi ya pongezi."
+  - heading: "Hoji gharama bila kuanzisha ugomvi"
+    body: "Kikundi kikiwa kimewasha maswali ya gharama, yeyote aliyejumuishwa kwenye gharama anaweza kuchagua **Nina swali** na kusema kwa nini. Swali linachapishwa kama maoni kwenye gharama, gharama inapata alama ya **Inahojiwa**, na gharama nzima inatoka kwenye salio la kila mtu hadi swali litakaposhughulikiwa."
+    items:
+      - "**Kuliwasha.** Limezimwa kwa chaguo-msingi. Msimamizi anawasha **Ruhusu maswali ya gharama** katika mipangilio ya kikundi, chini ya **Vipengele**."
+      - "**Kulifunga.** Aliyeuliza, au msimamizi, anachagua **Funga swali**. Ikiwa watu kadhaa walihoji gharama hiyo hiyo, inarudi kwenye salio swali la mwisho linapofungwa."
+      - "**Kulihariri.** Gharama ikihaririwa, swali lililo wazi linahamia kwenye toleo jipya kwa kila mtu ambaye bado ana sehemu ndani yake. Yeyote ambaye uhariri unamwacha nje, swali lake linaisha na toleo la zamani, kwa hivyo hakuna kilichobaki cha kufunga."
+      - "**Kuyapata.** Orodha ya gharama ina kichujio cha **Inahojiwa tu**. Hii si hatua ya idhini: ni gharama ambazo mtu amezihoji tu ndizo zinazozuiwa, na kila kingine kinahesabiwa mara kinapoongezwa."
+  - heading: "Swali linavyoendelea"
+    body: "Tom anaongeza £45 za divai ya sherehe, zilizogawanywa kati ya wapangaji wenza wote watatu. Aisha hakunywa, kwa hivyo anaibua swali, na likiwa wazi divai haihesabiwi kwa mtu yeyote. Nyumba inakubali kwamba divai ni ya Tom na Priya, kwa hivyo Tom anahariri mgawanyo kwa wawili hao. Aisha hayumo tena kwenye gharama, kwa hivyo swali lake linaisha na toleo la awali, linalohifadhiwa, na divai inarudi kwenye salio mara moja kwa £22.50 kila mmoja badala ya £15 kila mmoja. Kama Aisha angebaki kwenye gharama, swali lake lingehamia na kusubiri yeye au msimamizi alifunge. Hapa chini, £48 za Aisha ni £28 za ununuzi na £20 za mfanyakazi wa usafi, na £10.50 za Priya ni sehemu yake ya £70.50 (£28, £20 na £22.50) ukitoa £60 alizolipa. Mabishano ya [wapangaji wenza](page:use-case/housemates) kweli kweli. Kuhusu jinsi ya kuandika swali, tazama [la kufanya mtu anapopinga gharama ya pamoja](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Orodha za pamoja, kwa ununuzi"
+    body: "Anzisha orodha kwenye kikundi, ipe jina kama Orodha ya Ununuzi, ongeza vitu na viwekee tiki. Buruta vitu kwenye mpangilio bora, tazama idadi ya maendeleo ikipanda na toa maoni kwenye orodha mtu akinunua maziwa ya oat yasiyo sahihi. Hifadhi orodha iliyokamilika ili kuipanga pembeni (**Onyesha zilizohifadhiwa** inairudisha), au nakili orodha ili kuitumia tena. Weka orodha ya ununuzi ya pamoja kando ya bili za ununuzi, ili orodha iseme cha kununua na gharama iseme kiligharimu kiasi gani. Nani anaweza kuunda na kuhariri orodha kunategemea ruhusa za kikundi, ambazo [vikundi na ruhusa](page:feature/groups-and-permissions) vinaeleza."
+  - heading: "Kura, bila majina ukipenda"
+    body: "Uliza kikundi kitu kinachoamua bili, kama ni villa ipi, bajeti ya zawadi iwe kiasi gani au kama safari ya mashua inafaa. Kura ina swali na chaguo mbili hadi kumi. Unachagua kila mtu ana kura ngapi, kuanzia chaguo moja hadi kumi, na kama kupiga kura ni bila jina. **Kupiga kura bila jina** huficha nani alimchagua nani, na hakiwezi kubadilishwa kura ya kwanza ikishaingia. Watu wanaweza kubadilisha au kuondoa kura yao hadi kura ifungwe, na unaweza kuifungua tena kikundi kikibadili mawazo. Kuchagua villa ndiyo kiini cha [safari za kikundi](page:use-case/group-trips), na kukubaliana bajeti ya zawadi ni jambo la kawaida kwa [matukio na sherehe](page:use-case/events-and-celebrations)."
+  - heading: "Mlisho wa shughuli, ili hakuna kinachobadilika kimyakimya"
+    body: "Kila kikundi kina historia ya shughuli, na kengele ya arifa hukusanya shughuli kutoka vikundi vyako vyote mahali pamoja. Ongeza gharama na kila mtu anaiona mara moja, bila kuonyesha upya, na mlisho unaonyesha nini kilibadilika na nani alibadilisha. Hiyo inajumuisha gharama zilizoongezwa, kuhaririwa au kufutwa, maswali yaliyoibuliwa na kufungwa, maoni, mabadiliko ya orodha na kura, na malipo yaliyorekodiwa."
+  - heading: "Arifa za push, ukizitaka"
+    body: "Arifa za push ni za hiari. Ziwashe katika **Mipangilio** ya akaunti yako, chini ya **Arifa**, na kifaa chako kinakujulisha kuna shughuli mpya kwenye vikundi vyako, kama gharama mpya au maoni. Kila kifaa kinawashwa kivyake, na kivinjari chako kinaomba ruhusa kwanza. Kwenye iPhone au iPad zinafanya kazi tu kwenye programu iliyoongezwa kwenye Skrini ya Kwanza, ambayo ukurasa wa [programu ya wavuti](page:feature/web-app) unaeleza. Zichukulie kama urahisi, si ahadi, kwa sababu kuwasilishwa hakuhakikishwi."
+limits:
+  heading: "Mipaka"
+  items:
+    - "Maoni, orodha na kura ni kwa pesa za kikundi. [Masharti](page:terms) yanaomba kila kinachochapishwa kihusiane na fedha za kikundi, kwa hivyo hapa ni mahali pa kupanga matumizi, si gumzo la jumla wala programu ya kazi za kufanya."
+    - "Maoni yanaweza kuwa hadi herufi 500, yenye hadi viambatisho vitatu vilivyo picha au PDF za hadi MB 5 kila kimoja. Mwandishi pekee ndiye anayeweza kufuta maoni."
+    - "Maswali ya gharama yamezimwa kwa chaguo-msingi, na msimamizi anayawasha kwa kila kikundi. Ni watu waliojumuishwa kwenye gharama pekee wanaoweza kuihoji, kuzima kipengele kunafuta kila swali lililo wazi, na hakuna anayeweza kuondoka kwenye kikundi wakati gharama aliyomo ina swali wazi."
+    - "Kikundi kinaweza kuwa na hadi orodha 100, kila moja ikiwa na hadi vitu 200 vya hadi herufi 500. Ruhusa za kikundi zinaamua nani anaweza kuunda, kuhariri na kufuta orodha, na kikundi kilichofungwa hakiruhusu mabadiliko."
+    - "Kikundi kinaweza kuwa na hadi kura 50, kila moja ikiwa na chaguo mbili hadi kumi na hadi kura kumi kwa kila mtu. Kura hazina tarehe ya mwisho na hazifungwi zenyewe."
+    - "Historia ya shughuli huhifadhiwa kwa siku 90."
+    - "Arifa za push ni za hiari kwa kila akaunti na kila kifaa. Zinahitaji kivinjari kinachozitumia na ruhusa yako, zinafanya kazi kwenye iPhone na iPad tu kutoka kwenye programu iliyoongezwa kwenye Skrini ya Kwanza, na kuwasilishwa hakuhakikishwi. Hakuna arifa za barua pepe au ujumbe mfupi kuhusu shughuli na hakuna vikumbusho vya malipo, kwa hivyo kufuatilia malipo bado ni kazi yako."
+useCasesHeading: "Mahali ambapo kupanga pamoja kunasaidia"
+faq:
+  heading: "Maswali"
+  items:
+    - q: "Je, kura zinaweza kuwa bila majina?"
+      a: "Ndiyo. Washa **Kupiga kura bila jina** unapounda kura na inaficha nani alimchagua nani. Amua kabla ya kura ya kwanza, kwa sababu haiwezi kubadilishwa baadaye."
+    - q: "Je, kura inaweza kufunga yenyewe?"
+      a: "Hapana. Kura haina tarehe ya mwisho, kwa hivyo aliyeiunda anachagua **Funga kura** kikundi kikishaamua. Kikundi kikibadili mawazo, **Fungua kura tena** inairudisha."
+    - q: "Orodha inaweza kuwa na vitu vingapi?"
+      a: "Hadi vitu 200 kwa kila orodha na hadi orodha 100 kwa kila kikundi. Kila kitu kinaweza kuwa hadi herufi 500, ambayo ni maziwa mengi ya oat."
+    - q: "Nani anaweza kufunga swali, na gharama inakuwaje wakati huo?"
+      a: "Aliyeuliza, au msimamizi wa kikundi. Swali likiwa wazi, gharama nzima iko nje ya salio la kila mtu. Inarudi swali la mwisho lililo wazi juu yake linapofungwa, au uhariri unapomtoa aliyeuliza kwenye gharama."
+    - q: "Je, naweza kutumia orodha na maoni kama programu ya kazi za kufanya au gumzo la kikundi?"
+      a: "Hapana. Maoni, orodha na kura ni kwa pesa za kikundi, ndivyo [masharti](page:terms) yanavyoomba. Fikiria orodha za ununuzi, kura za bajeti na “kwa nini hii ni £45?”."
+    - q: "Je, Side Badger itanitumia barua pepe kuhusu shughuli?"
+      a: "Hapana. Hakuna arifa za barua pepe au ujumbe mfupi kuhusu shughuli. Unaweza kuwasha arifa za push kwenye kila kifaa, na kengele ya arifa ndani ya programu inaonyesha kipya."

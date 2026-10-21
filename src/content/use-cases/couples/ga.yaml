@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+meta:
+  title: "Roinn billí le do pháirtí, 50/50 nó de réir ioncaim | Side Badger"
+  description: "Roinn na costais leadránacha gan oíche amach a iompú ina athbhreithniú airgeadais ráithiúil. Roinn 50/50, de réir ioncaim nó bille ar bhille, agus féach cé atá i bhfiacha le cé. Saor in aisce."
+h1: "Roinn costais mar lánúin, go cothrom"
+navLabel: "Lánúineacha"
+lead: "Roinn na costais leadránacha gan oíche amach a iompú ina athbhreithniú airgeadais ráithiúil. Coinníonn Side Badger aon chuntas reatha amháin den chíos, na billí agus an tsiopadóireacht do **lánúineacha** a roinneann teach, tolg agus cuimhne doiléir ar cé a d'íoc as an leathanbhanda. Roinn 50/50, de réir ioncaim nó bille ar bhille, agus féach cé atá i bhfiacha le cé."
+cta:
+  heading: "Tosaigh grúpa don bheirt agaibh"
+  body: "Cruthaigh cuntas, déan grúpa agus seol an nasc cuiridh chuig do pháirtí. Is féidir leis an mbéile beir leat anocht a bheith ar an gcéad chostas."
+scenario:
+  heading: "Ní gá go gciallódh cothrom 50/50"
+  body: "Roinneann Sam agus Alex teach. Tuilleann Sam níos mó, mar sin d'aontaigh siad go mbeadh 60% den chíos ar Sam agus 40% ar Alex. Íocann Sam leis an tiarna talún, déanann Alex an tsiopadóireacht, agus tá an bheirt acu measartha cinnte go n-éiríonn gach rud cothrom ar deireadh. Is é “measartha cinnte” an chaoi a n-éiríonn nóta ar fhón duine ina dhíospóid bhuan. Mar sin déan grúpa don bheirt agaibh, roghnaigh an t-ainm is mian leat a bheith feicthe ag do pháirtí, agus seol an nasc cuiridh nó an cód QR chuig an duine sin. Cuir gach costas leis nuair a tharlaíonn sé, abair cé a d'íoc agus conas a roinntear é, agus lig don ghrúpa an cuntas a choinneáil. Déan grúpa ar leith do gach saoire (féach [turais ghrúpa](page:use-case/group-trips)), ionas go bhfanann na heitiltí amach as na hearraí grósaera."
+sections:
+  - heading: "50/50, de réir ioncaim, nó bille ar bhille"
+    body: "Níl aon roinnt ann atá cothrom go huilíoch, ach amháin an ceann a aontaíonn an bheirt agaibh, go hidéalach roimh an gcéad bhille seachas tar éis na chéad osna. Seo na trí cheann is coitianta."
+    items:
+      - "**50/50.** Roghnaigh **Cothrom** agus tá leath dlite ag gach duine agaibh. Oireann sé do chostais chomhroinnte nuair atá bhur n-ioncam gar dá chéile, agus ní theastaíonn aon uimhríocht uaidh."
+      - "**De réir ioncaim.** Má thuilleann duine agaibh níos mó, roinn de réir sciar gach duine den airgead atá ag teacht isteach. Aontaigh ar dtús cad a chomhaireamh (is é pá glan an rogha coitianta), cuir an dá cheann le chéile agus roinn do cheann féin ar an iomlán. Má thógann duine agaibh trí chuid abhaile in aghaidh dhá chuid an duine eile, sin 3 ÷ (3 + 2) = 60%, mar sin clúdaíonn duine agaibh 60% agus an duine eile 40%. Cruinnigh go céatadáin iomlána agus cuir isteach iad faoi **Céatadán**, áit a gcaithfidh siad suim go 100. Níl aon áit chun do phá a chur isteach, mar sin ní chlóscríobhann tú ach na céatadáin."
+      - "**Bille ar bhille.** Tá a roinnt féin ag gach costas, mar sin is féidir leat meascadh: cíos de réir ioncaim, earraí grósaera 50/50, agus bronntanas comhroinnte de réir **Méideanna cruinne** más rud é gur roghnaigh gach duine agaibh cé mhéad a chur isteach."
+      - "**Nuair a athraíonn pá,** úsáid na céatadáin nua ón gcéad chostas eile. Coinníonn costais níos luaithe an roinnt lenar cuireadh isteach iad. Chun na suimeanna a fheiceáil á ndéanamh le duillíní pá fíora, léigh [conas billí a roinnt le páirtí a thuilleann níos mó](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: "An cuntas míosúil"
+    body: "Uair sa mhí, nó aon uair a thosaíonn na huimhreacha ag tochas, oscail an grúpa agus seiceáil **Iarmhéideanna**. Le beirt agaibh, níl ach íocaíocht amháin ann i ngach airgeadra, ón duine atá i bhfiacha chuig an duine a bhfuil an t-airgead dlite dó. Tóg mí Sam agus Alex mar shampla. D'íoc Sam an cíos £1,500, agus is é £600 sciar 40% Alex de. D'íoc Alex £90 as earraí grósaera, roinnte go cothrom, mar sin is é £45 leath Sam. Cuireann Side Badger ceann i gcoinne an chinn eile, £600 lúide £45, agus íocann Alex £555 le Sam. Íoc é mar is mian leat, trí aistriú bainc, in airgead tirim nó le fabhar atá dlite, ansin taifead é faoi **Socraigh** ionas go dtéann an t-iarmhéid ar ais go nialas. Ní dhéantar billí a athrá, mar sin cóipeáil cíos na míosa seo caite, athraigh an dáta agus lean ort. Ní bhogann Side Badger an t-airgead ná ní sheolann sé meabhrúcháin, mar sin is leatsa an priocadh fós."
+  - heading: "Díreach an bheirt agaibh"
+    body: "Tá beirt bhall i ngrúpa de bheirt, agus ní féidir ach le baill grúpa é a fheiceáil. Téann do pháirtí isteach leis an nasc cuiridh nó an cód QR. Is féidir le nasc maireachtáil aon áit ó 15 nóiméad go 5 lá, mar sin roghnaigh an ceann is giorra a thugann am do do pháirtí é a úsáid. Ní chuireann nasc nua na cinn eile ar ceal, mar sin ná fág iad i gcomhrá a bhfuil daoine eile ann. Is féidir le duine ar bith a úsáideann nasc beo dul isteach, mar sin más mian leat a bheith cinnte, cas ar cheadú agus ligeann riarthóir gach duine isteach. Teastaíonn cuntas dá chuid féin ó do pháirtí, atá saor in aisce."
+exampleAfter: 2
+example:
+  heading: "Cé atá i bhfiacha le cé an mhí seo"
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: "Cíos"
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: "Earraí grósaera"
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: "Na gnéithe a úsáideann lánúin"
+faq:
+  heading: "Ceisteanna"
+  items:
+    - q: "An féidir linn 60/40 a shocrú uair amháin do gach rud?"
+      a: "Ní féidir. Baineann an roinnt le gach costas. Socraigh na céatadáin ar an gcéad cheann, ansin cóipeáil é an chéad uair eile agus athraigh cad atá difriúil. Clúdaíonn [roinn costais](page:feature/split-expenses) na trí bhealach le roinnt."
+    - q: "An nascann sé lenár mbanc?"
+      a: "Ní nascann. Ní bhaineann Side Badger le d'airgead riamh. Íocann sibh a chéile mar is mian libh, ansin taifeadann sibh é, mar a mhíníonn [socraigh suas](page:feature/settle-up)."
+    - q: "An bhfeiceann aon duine eile ár ngrúpa?"
+      a: "Ní fheiceann ach a bhaill, agus tá beirt i ngrúpa lánúine. Is féidir le duine ar bith a úsáideann nasc cuiridh beo dul isteach, mar sin roinn é le duine amháin agus tabhair dáta éaga gearr dó."
+    - q: "Cad má d'íoc gach duine againn cuid den bhille céanna?"
+      a: "Tá íocóir amháin ag costas. Taifead dhá chostas, ceann do gach duine agaibh, agus tagann an t-iarmhéid amach mar an gcéanna."
+    - q: "An meabhróidh sé do mo pháirtí íoc?"
+      a: "Ní mheabhróidh. Níl aon mheabhrúcháin ann, mar sin is leatsa an priocadh fós. Ar a laghad beidh an bheirt agaibh ag féachaint ar an uimhir chéanna."
+    - q: "Cad a tharlaíonn nuair a stopaimid ag roinnt costas?"
+      a: "Socraigh an t-iarmhéid agus taifead an íocaíocht, ionas nach bhfuil aon rud dlite ag aon duine. Ansin is féidir le riarthóir an grúpa a ghlasáil, rud a choinníonn na huimhreacha mar atá, nó é a dhúnadh go buan, rud a fhágann nach féidir le haon duine é a rochtain. Ná dún é ach nuair nach bhfuil an stair de dhíth ar aon duine agaibh."

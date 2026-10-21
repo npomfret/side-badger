@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Lakbérmegosztó kalkulátor: szobaméret vagy jövedelem | Side Badger"
+  description: "Nagyobb szoba, nagyobb rész? Számold ki, mennyit fizet minden lakótárs, szobaméret vagy jövedelem szerint. A böngésződben fut: semmit nem ment és nem küld el."
+h1: "Lakbérmegosztó kalkulátor"
+navLabel: "Lakbérmegosztó kalkulátor"
+lead: "Nagyobb hálószoba, nagyobb rész? Írd be a lakbért, és meglátod, ki mennyit fizet, szobaméret vagy jövedelem szerint, fillérre pontosan. A böngésződben fut, semmit nem ment, és nem mozgat pénzt. Ha a ház azt szeretné, hogy a számolás megmaradjon, [osszátok fel a költségeket](page:feature/split-expenses) a Side Badgerben, és másoljátok le a lakbért minden hónapban."
+cta:
+  heading: "A százalékokat egyszer állítsd be. Másold őket örökké."
+  body: "Ez a kalkulátor mindent elfelejt, amint bezárod a fület, nagyjából úgy, mint az a lakótárs, aki biztosan kifizette az internetet. Egy Side Badger-csoport megőrzi a lakbért, a számlákat és azt, hogy ki mit fizetett. Ingyenes, hirdetések és napi korlátok nélkül."
+sections:
+  - heading: "A lakbér megosztásának két módja"
+    items:
+      - "**Szobaméret szerint.** A lakbér egy része a konyháért, a fürdőszobáért és a nappaliért fizet, amelyeket mindenki használ. Te választod meg ezt a részt (kezdésnek 40%), és egyenlően oszlik el. A többi a hálószobák területe szerint megy, így a nagy szoba többet fizet, a kamra pedig megkapja a kiérdemelt kedvezményt."
+      - "**Jövedelem szerint.** Mindenki akkora részt fizet a lakbérből, amekkora részt ő keres az összes keresetből. Ha közös számlákat is megadsz, azok ugyanezeket a részeket követik."
+  - heading: "Hogyan jönnek ki a számok"
+    body: "Mindenki kap egy pontos részt, aztán egy egész százalékot, mert az egész számokat könnyebb beírni, és könnyebb vitatkozni róluk. A kerekítés a legnagyobb maradék módszere: mindenki megtartja a részénél kisebb egész számot, a megmaradt pontok pedig ahhoz kerülnek, aki a legtöbbet veszítette. A százalékok összege mindig 100. Az alábbi lakásban a közös 40% fejenként 13,33%. Priya szobája 16 m² a lakás 38 m²-éből, így 60% × 16/38 értéke 25,26%, ehhez 13,33%-ot hozzáadva 38,6% jön ki, ami 39%-ra kerekedik. Tom és Aisha 32%-ra és 29%-ra jön ki, és 39 + 32 + 29 összesen 100. Minden összeg a lakbér ennyi százaléka: 1 950 £ 39%-a 760,50 £."
+  - heading: "Aztán írd be a Side Badgerbe"
+    body: "A teljes történetért, mérőszalaggal együtt, lásd: [hogyan oszd fel a lakbért szobaméret szerint](page:guide/how-to-split-rent-by-room-size), pároknak pedig [a többet kereső partner](page:guide/how-to-split-bills-with-a-partner-who-earns-more) útmutatóját."
+    items:
+      - "**Add hozzá a lakbért.** A csoportodban válaszd a **Kiadás hozzáadása** lehetőséget, a **Ki fizetett?** alatt válaszd ki, ki fizetett a háziúrnak, a **Megosztás közöttük** alatt pedig hagyj ott mindenkit."
+      - "**Válaszd a százalékos felosztást.** A **Felosztás módja** alatt válaszd a **Százalék** lehetőséget, és írd be az egész százalékokat. Az űrlap jelzi, ha az összegük nem 100."
+      - "**Másold le a következő hónapra.** Nyisd meg a múlt havi lakbért, és válaszd a **Kiadás másolása** lehetőséget. A felosztás vele jön."
+  - heading: "Amit a kalkulátor nem csinál"
+    items:
+      - "**Nem méri meg a szobáidat.** Az alapterület csak kiindulópont. Egy saját fürdőszobás szoba többet ér, mint ugyanakkora terület fürdőszoba nélkül, az a kamra pedig, amelybe egy ágy és egy reménykedő szék fér be, kevesebbet."
+      - "**Nem dönti el, mi számít jövedelemnek.** Nettó vagy bruttó, fizetés vagy mellékes: a csoport dönti el. Mindenkinél ugyanazt az időszakot használd."
+      - "**Nem ment semmit.** Ha bezárod a fület, a számok eltűnnek. Ha meg akarod őrizni őket, másold ki a linket. A számaid a # után vannak benne, amit a böngészők sosem küldenek el a szervernek, és akinél megvan, az el is olvashatja őket."
+      - "**Nem mozgat pénzt.** A háziúrnak úgy fizetsz, ahogy akarsz."
+      - "**Nem keveri a pénznemeket, és nem lépi túl a korlátokat.** Válassz egy pénznemet. 2–10 embert kezel, és legfeljebb 999 999,99 lakbért, ahogy az alkalmazás."
+exampleAfter: 2
+example:
+  heading: "Egy lakás, egy hónap"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "Lakbér"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "Energia"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "Internet"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Kérdések"
+  items:
+    - q: "Melyik igazságosabb, a szobaméret vagy a jövedelem?"
+      a: "Egyik sem mindig. A szobaméret azoknak a lakótársaknak való, akik azért a helyért fizetnek, ahol alszanak. A jövedelem pároknak és olyan barátoknak való, akiknek nagyon különbözik a fizetésük. Az első lakbérnap előtt egyezzetek meg benne, ne utána."
+    - q: "A számlákat is ugyanígy kell megosztani?"
+      a: "Lakótársaknál általában nem. Az áramot és az internetet mindenki használja, ezért az egyenlő felosztás egyszerűbb, ahogy a példában is. Jövedelem szerint a kalkulátor a számláknak ugyanazokat a részeket adja, mint a lakbérnek."
+    - q: "Használhatok négyzetlábat?"
+      a: "Igen. Válaszd a ft² lehetőséget, és négyzetlábban írd be a területeket. A mértékegység csak címke, és a részek ugyanúgy jönnek ki, amíg mindenki ugyanazt használja."
+    - q: "Ingyenes a kalkulátor?"
+      a: "Igen. Ingyenes. Hirdetések nélkül. Napi korlátok nélkül. Fiók sem kell hozzá."

@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Calculator rekening verdelen: wie betaalt wie | Side Badger"
+  description: "Wie betaalde, wie is wat schuldig, wie betaalt wie: in enkele seconden geregeld. Verdeel gelijk, exact of op percentage. Gratis, in je browser, niets bewaard of verstuurd."
+h1: "Calculator om de rekening te verdelen"
+navLabel: "Calculator rekening verdelen"
+lead: "Typ in wie wat betaald heeft en de calculator zegt wie wie iets schuldig is, met een korte lijst betalingen om het te regelen. Alles gebeurt in je browser: er wordt niets bewaard en er verhuist geen geld. Moet de rekening langer meegaan dan het tabblad, dan doen [uitgaven verdelen](page:feature/split-expenses) en [afrekenen](page:feature/settle-up) in Side Badger dezelfde sommen en onthouden ze die."
+cta:
+  heading: "Bevallen de sommen? Bewaar ze."
+  body: "Deze calculator vergeet alles zodra je het tabblad sluit, net als degene die de vorige keer zeker betaald heeft. Een Side Badger-groep bewaart de uitgaven, werkt ieders saldo bij en registreert de betalingen. Het is gratis, zonder advertenties en zonder dagelijkse limieten."
+sections:
+  - heading: "Hoe de berekening werkt"
+    body: "Voor elke uitgave berekent de calculator het aandeel van elke persoon. Je kunt ze gelijk verdelen, op exacte bedragen of op percentage, onder de mensen die je kiest. Het saldo van elke persoon is dan wat hij of zij betaald heeft min wat hij of zij schuldig is. Een plusteken betekent dat de groep die persoon iets schuldig is, een minteken dat die persoon de groep iets schuldig is. De saldi tellen altijd op tot nul, want wat de ene persoon tegoed heeft, zijn andere mensen schuldig."
+  - heading: "Waarom de lijst met betalingen kort is"
+    body: "Niemand hoeft elke uitgave apart af te rekenen. Zodra elk saldo bekend is, koppelt de calculator de persoon die het meeste schuldig is aan de persoon die het meeste tegoed heeft, regelt zoveel als één betaling kan en gaat verder de lijst af tot iedereen op nul staat. Er zijn nooit meer betalingen nodig dan het aantal mensen met een saldo min één, en vaak minder dan wanneer je uitgave per uitgave afrekent. Het levert een korte lijst betalingen op en belooft niet de kortst mogelijke te zijn."
+  - heading: "Wat de calculator niet doet"
+    items:
+      - "**Met meer dan één valuta werken.** Kies er één en gebruik die voor de hele berekening. De app houdt een apart saldo bij voor elke valuta en kan een uitgave omrekenen tegen een actuele wisselkoers, die je kunt aanpassen."
+      - "**Iets bewaren.** Sluit het tabblad en de cijfers zijn weg. Wil je ze houden, kopieer dan de link. Die bevat je cijfers achter het #, wat je browser nooit naar een server stuurt, en iedereen aan wie je de link doorstuurt, kan de cijfers lezen."
+      - "**Geld verplaatsen.** De calculator zegt wie wie moet betalen. Jullie betalen elkaar zoals jullie willen en registreren de betaling daarna in de app, als je groep daar de rekening bijhoudt."
+      - "**De overschietende cent willekeurig toewijzen.** Als een bedrag niet mooi deelt, gaan de overgebleven centen naar de eerste mensen in de lijst, zodat de totalen toch kloppen. In de app gaat de overschietende cent willekeurig naar één persoon, dus niet altijd naar dezelfde."
+      - "**Over de limieten gaan.** De calculator verwerkt 2 tot 20 personen, en één uitgave kan maximaal 999.999,99 bedragen, net als in de app."
+exampleAfter: 2
+example:
+  heading: "Een lang weekend, vier vrienden"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "het huisje"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "de boodschappen"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "de taxi"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "het café"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: "Vragen"
+  items:
+    - q: "Is de calculator gratis?"
+      a: "Ja. Gratis. Geen advertenties. Geen dagelijkse limieten. Je hebt ook geen account nodig."
+    - q: "Wordt wat ik intyp bewaard?"
+      a: "Nee. Niets wordt ergens bewaard of naartoe gestuurd. Wil je je cijfers houden, gebruik dan Link kopiëren en bewaar de link ergens."
+    - q: "Wie kan de link zien die ik kopieer?"
+      a: "Iedereen die de link heeft. De cijfers zitten in de link zelf, achter het #, dus deel de link enkel met de mensen die ze mogen zien."
+    - q: "Verplaatst de calculator geld?"
+      a: "Nee. De calculator berekent wie wie moet betalen en jullie betalen elkaar zoals jullie willen. Ook Side Badger raakt je geld nooit aan. Zie [afrekenen](page:feature/settle-up)."
+    - q: "Kan ik een reis verdelen die in twee valuta’s betaald is?"
+      a: "Hier niet, want een berekening heeft één valuta. In een groep houdt elke valuta een eigen saldo bij. Zie [meerdere valuta’s](page:feature/multiple-currencies)."
+    - q: "Wat als de bedragen niet optellen?"
+      a: "De calculator meldt het onder de uitgave en toont geen resultaat tot het klopt. Exacte bedragen moeten optellen tot het totaal, en percentages moeten samen 100 zijn."

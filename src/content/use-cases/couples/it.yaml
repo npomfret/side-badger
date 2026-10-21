@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+meta:
+  title: Dividi le spese con il partner, 50/50 o per reddito | Side Badger
+  description: Dividi le spese noiose senza trasformare la serata romantica in una revisione finanziaria trimestrale. 50/50, per reddito o spesa per spesa. Gratis.
+h1: Dividi le spese di coppia, in modo giusto
+navLabel: Coppie
+lead: Dividi le spese noiose senza trasformare la serata romantica in una revisione finanziaria trimestrale. Side Badger tiene un unico conteggio aggiornato di affitto, bollette e spesa per **coppie** che condividono una casa, un divano e un vago ricordo di chi ha pagato la connessione internet. Dividi 50/50, per reddito o spesa per spesa, e guarda chi deve cosa a chi.
+cta:
+  heading: Avvia un gruppo per due
+  body: Crea un account, crea un gruppo e manda al partner il link di invito. Il cibo da asporto di stasera può essere la prima spesa.
+scenario:
+  heading: Giusto non vuol dire per forza 50/50
+  body: Sam e Alex condividono una casa. Sam guadagna di più, quindi hanno concordato che Sam si prende il 60% dell'affitto e Alex il 40%. Sam paga il padrone di casa, Alex fa la spesa, ed entrambi sono abbastanza sicuri che alla fine pareggi tutto. "Abbastanza sicuri" è il modo in cui una nota sul telefono di qualcuno diventa un disaccordo permanente. Quindi crea un gruppo per voi due, scegli il nome con cui vuoi essere visto dal partner e mandagli il link di invito o il codice QR. Aggiungi ogni costo quando capita, indica chi ha pagato e come si divide, e lascia che sia il gruppo a tenere il conto. Crea un gruppo separato per ogni vacanza (vedi [viaggi di gruppo](page:use-case/group-trips)), così i voli restano fuori dalla spesa.
+sections:
+  - heading: 50/50, per reddito o spesa per spesa
+    body: Non esiste una divisione giusta per tutti, solo quella che concordate entrambi, idealmente prima della prima bolletta e non dopo il primo sospiro. Queste sono le tre più comuni.
+    items:
+      - "**50/50.** Scegli **Uguale** e ognuno di voi deve la metà. Va bene per le spese condivise quando i vostri redditi sono vicini, e non richiede nessun calcolo."
+      - "**Per reddito.** Se uno di voi guadagna di più, dividete in base alla quota di ciascuno sul reddito complessivo. Concordate prima cosa conta (lo stipendio netto è la scelta più comune), sommate i due redditi e dividete quello di ciascuno per il totale. Se uno di voi porta a casa tre parti per ogni due dell'altro, fa 3 ÷ (3 + 2) = 60%, quindi uno copre il 60% e l'altro il 40%. Arrotondate alle percentuali intere e inseritele sotto **Percentuale**, dove devono sommare a 100. Non c'è modo di inserire lo stipendio, quindi scrivete sempre e solo le percentuali."
+      - "**Spesa per spesa.** Ogni spesa ha la sua divisione, quindi puoi mescolare: l'affitto per reddito, la spesa 50/50 e un regalo comune per **Importi esatti** se ognuno ha scelto cosa metterci."
+      - "**Quando lo stipendio cambia,** usate le nuove percentuali dalla spesa successiva. Le spese precedenti mantengono la divisione con cui sono state inserite. Per vedere i calcoli fatti con buste paga vere, leggi [come dividere le spese con un partner che guadagna di più](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: Il resoconto mensile
+    body: Una volta al mese, o quando i numeri iniziano a prudere, apri il gruppo e controlla i **Saldi**. In due c'è sempre un solo pagamento per valuta, da chi deve a chi deve ricevere. Prendi il mese di Sam e Alex. Sam ha pagato 1.500 £ di affitto, e il 40% di Alex è 600 £. Alex ha pagato 90 £ di spesa, divisa in parti uguali, quindi la metà di Sam è 45 £. Side Badger compensa una cosa con l'altra, 600 £ meno 45 £, e Alex paga 555 £ a Sam. Pagate come volete, con un bonifico, in contanti o con un favore in sospeso, poi registratelo sotto **Salda** così il saldo torna a zero. Non ci sono conti ricorrenti, quindi copia l'affitto del mese scorso, cambia la data e vai avanti. Side Badger non sposta il denaro né invia promemoria, quindi sollecitare resta compito tuo.
+  - heading: Solo voi due
+    body: Un gruppo di due ha due membri, e solo i membri di un gruppo possono vederlo. Il tuo partner entra con il link di invito o il codice QR. Un link può durare da 15 minuti a 5 giorni, quindi scegli la durata più breve che dia al partner il tempo di usarlo. Creare un nuovo link non annulla i vecchi, quindi non lasciarli in una chat in cui ci sono altre persone. Chiunque usi un link ancora attivo può entrare, quindi se vuoi esserne certo, attiva l'approvazione e un admin fa entrare ogni persona. Il tuo partner ha bisogno di un account tutto suo, ed è gratis.
+exampleAfter: 2
+example:
+  heading: Chi deve cosa a chi questo mese
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: Affitto
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: Spesa alimentare
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: Le funzionalità che usa una coppia
+faq:
+  heading: Domande
+  items:
+    - q: Possiamo impostare 60/40 una volta per tutto?
+      a: No. La divisione appartiene a ogni spesa. Imposta le percentuali sulla prima, poi copiala la volta dopo e cambia ciò che è diverso. [Dividere le spese](page:feature/split-expenses) spiega tutti e tre i modi di dividere.
+    - q: Si collega alla nostra banca?
+      a: No. Side Badger non tocca mai i tuoi soldi. Vi pagate come vi fa più comodo, poi lo registrate, come spiega [saldare i conti](page:feature/settle-up).
+    - q: Qualcun altro può vedere il nostro gruppo?
+      a: Solo i suoi membri, e quello di una coppia ne ha due. Chiunque usi un link di invito ancora attivo può entrare, quindi condividilo con una sola persona e dagli una scadenza breve.
+    - q: E se abbiamo pagato ciascuno una parte dello stesso conto?
+      a: Una spesa ha un solo pagatore. Registra due spese, una per ciascuno, e il saldo viene lo stesso.
+    - q: Ricorderà al mio partner di pagare?
+      a: No. Non ci sono promemoria, quindi sollecitare resta compito tuo. Almeno guarderete entrambi lo stesso numero.
+    - q: Cosa succede quando smettiamo di dividere le spese?
+      a: Saldate e registrate il pagamento, così nessuno deve più niente. Poi un admin può bloccare il gruppo, che tiene i numeri fermi, oppure chiuderlo per sempre, il che lo rende inaccessibile a tutti. Chiudilo solo quando a nessuno dei due serve lo storico.
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name

@@ -1,0 +1,103 @@
+# Guide 6 under P8 (tasks/release-2-plan.md, "Wave 2 and 3 briefs"). The worked example is the
+# brief's data; every number in the prose below comes from it or from the arithmetic shown.
+translatedFrom: "5d92090e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - receipt-attachments.keep-the-receipt
+  - polls.villa-shortlist-vote
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: Paano mangolekta ng ambag para sa regalo ng grupo | Side Badger
+  description: Iba-iba ang ambag ng bawat isa at card ng isang tao ang sumasalo. Magpa-poll ng budget, maglagay ng eksaktong halaga, at hayaang magkuwenta ang Side Badger.
+h1: Paano mangolekta ng ambag para sa regalo ng grupo
+navLabel: Ambagan sa regalo ng grupo
+lead: Ang pangongolekta para sa regalo ng grupo ay nangangahulugang isang tao ang naglalabas muna ng pera at may utang sa kanya ang lahat ng iba ng kani-kanilang ambag. Magkasundo sa budget gamit ang poll, hayaang ilagay ng bibili ang regalo sa card niya, saka ilagay ito bilang isang gastos na may [eksaktong halaga](page:feature/split-expenses), isang numero para sa bawat tao. Ipinapakita ng Side Badger kung magkano ang utang ng bawat isa sa bibili, at ipapadala ng bawat isa ang bahagi niya sa paraang gusto niya.
+cta:
+  heading: Ambagan nang walang pasa-pasang sumbrero
+  body: Gumawa ng grupo, huwag isama ang taong reregaluhan, at ilagay ang regalo na may eksaktong halaga. Libre ang Side Badger, walang ad at walang pang-araw-araw na limitasyon. Gusto munang makita kung paano? Tingnan ang [paano ito gumagana](page:how-it-works) o ang [saklaw ng libre](page:pricing).
+sections:
+  - heading: Apat na magkakaibigan, isang record player, apat na magkakaibang halaga
+    body: Magti-30 na si Bea at gusto niya ng record player. Sina Priya, Omar, Lena, at Sam ang magreregalo nito sa kanya. Nakahanap si Priya ng isa sa halagang £240 at binili niya ito gamit ang sarili niyang card, dahil may kailangang mauna. Hindi pantay ang ambag ng apat. Tig-£60 ang inambag nina Priya at Omar, £80 si Lena, at £40 si Sam. Walang nagpapaliwanag ng numero niya at walang nagtatanong. Bumili rin si Omar ng card at pambalot sa halagang £12. Pirma ng apat ang card, kaya pantay ang hati niyon.
+  - heading: Magkasundo sa budget bago pindutin ng sinuman ang Bumili
+    body: Iniiwasan ng budget poll ang pagtatalo tungkol sa £400 na turntable. Sa grupo, piliin ang **Magdagdag ng poll** at itanong kung magkano dapat ang regalo. Gawing halaga ang mga opsyon, gaya ng hanggang £150, hanggang £200, at hanggang £250. I-on ang **Anonimong pagboto**, na itinatago kung sino ang bumoto sa ano, para walang kailangang ipagtanggol nang malakas ang mas maliit na numero. Hindi na mababago ang mga setting kapag may unang boto na, kaya suriin muna ang mga ito. Hindi kusang nagsasara ang poll. Kapag nakaboto na ang lahat, piliin ang **Isara ang poll** at lalabas ang **Panalo**. Ang poll ang nagpapasya sa kabuuan. Hindi nito itinatakda ang bahagi ng sinuman.
+  - heading: Pagbasa sa kuwenta
+    body: Hinahati ang regalo sa £60, £60, £80, at £40, na umaabot sa £240 sa resibo. Hinahati sa apat ang card at pambalot sa tig-£3. Ang bahagi ni Priya ay £60 + £3, kaya £63, at nagbayad siya ng £240, kaya may makukuha siyang £177. £63 din ang bahagi ni Omar, pero nagbayad siya ng £12, kaya may utang siyang £51. May utang si Lena na £80 + £3, o £83, at may utang si Sam na £40 + £3, o £43. Ang tatlong iyon ay umaabot sa £177 ni Priya. Kapag pinabayaan, iikot sa limang direksyon sa loob ng grupo ang mga utang. Tatlong bayad ang iminumungkahi ng Side Badger, lahat kay Priya. Nasa [pag-settle up](page:feature/settle-up) ang mga detalye.
+  - heading: Ilagay sa Side Badger
+    body: Mga limang minuto ang gawain ni Priya.
+    items:
+      - "**Gawin ang grupo.** Sa dashboard, piliin ang **Gumawa ng Grupo**. Piliin ang **Mag-imbita ng Iba** at ipadala ang link o QR code sa mga mag-aambag, at sa wala nang iba."
+      - "**Idagdag ang regalo.** Piliin ang **Magdagdag ng Gastusin**, ilarawan ito, ilagay ang 240, at sa **Sino ang nagbayad?** piliin si Priya. Panatilihing nakapili ang apat sa **Hatiin sa pagitan ng**, saka sa **Paano hatiin** piliin ang **Eksaktong halaga** at i-type ang 60, 60, 80, at 40. Dapat umabot sa 240 ang kabuuan ng mga halaga. I-attach ang order confirmation kung gusto mo. Piliin ang **I-save ang Gastusin**."
+      - "**Idagdag ang card.** Si Omar mismo ang magdaragdag ng £12, pipiliin ang sarili niya sa **Sino ang nagbayad?**, at iiwanang **Pantay** ang **Paano hatiin**, na nakapili ang apat na tao."
+      - "**Magbilang, saka magbayad.** Tinitingnan ng lahat ang **Mga Balanse**, na nagpapakita kung sino ang may utang kanino, at ipinapadala kay Priya ang bahagi nila sa paraang gusto nila. Saka itala ito gamit ang **Magbayad** at **Itala ang Kasunduan**. Pinupunan ng quick settle ang halaga."
+  - heading: Bumili muna, o mangolekta muna
+    body: Hindi hawak ng Side Badger ang pondo, kaya ang “pangongolekta” ay pagbibilang talaga. Dalawang pagkakasunod-sunod ang puwede.
+    items:
+      - "**Bumili muna.** Nagbabayad ang bibili, idinaragdag ang gastos sa totoong presyo, at agad na nakikita ng lahat ang bahagi nila. Mas maayos ito, pero dala ng bibili ang gastos hanggang makabayad ang mga tao, kaya pumili ng bibili na kaya iyon."
+      - "**Mangolekta muna.** Ipinapadala ng mga tao ang numero nila sa bibili bago ang pagbili. Kapag alam na ang presyo, ilagay ang regalo, saka itala ang bawat bayad kasama ang petsang talagang gumalaw ang pera. Idagdag muna ang regalo, para may balanseng mapupuntahan ang bawat bayad."
+      - "**Gumagalaw ang presyo.** Delivery, discount code, huling pagtaas ng presyo. I-edit ang regalo at baguhin ang eksaktong halaga para umabot pa rin sa kabuuan. Nananatili ang naunang bersyon, pero sabihan muna ang grupo, dahil magbabago ang mga balanse nila."
+  - heading: Ilayo si Bea dito
+    body: Mga miyembro lang ng grupo ang nakakakita nito, kaya hindi makikita ni Bea ang grupong hindi siya kasali. Imbitahan ang mga mag-aambag at wala nang iba. Gumagana ang link hanggang mag-expire ito, at puwede kang pumili mula 15 minuto hanggang 5 araw, kaya pumili ng maikli at ipadala ito kung saan hindi ito makikita ni Bea. Nagpapakita ng preview ng grupo ang link sa sinumang magbubukas nito, kaya pangalanan ang grupo ng nakakabagot, gaya ng Ambagan sa Sabado, at huwag ding ilagay ang pangalan ni Bea sa mga label ng gastos o opsyon ng poll.
+  - heading: Ang hindi ginagawa ng Side Badger dito
+    items:
+      - Hindi nito hawak o kinokolekta ang pera. Papunta sa bibili ang mga ambag sa pamamagitan ng bank transfer, cash, o anumang gamit ninyo, at saka may magtatala ng mga ito.
+      - Hindi ito nagpapadala ng paalala sa pagbabayad. Trabaho pa rin ng tao ang pagkalabit sa hindi pa nagbabayad.
+      - Hindi nito kinukuwenta ang bahagi ng sinuman. Ang poll ang nagpapasya sa budget at walang opsyong “hatiin ang natira,” kaya ikaw ang magta-type ng bawat halaga.
+      - Isa lang ang nagbabayad sa bawat gastos. Kung dalawang tao ang bumili ng magkaibang bahagi ng regalo, maglagay ng dalawang gastos.
+      - Kailangan ng libreng account at puwesto sa grupo ng bawat kasali sa hati.
+exampleAfter: 2
+example:
+  heading: Ang record player ni Bea, at ang card
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: omar
+      name: Omar
+    - id: lena
+      name: Lena
+    - id: sam
+      name: Sam
+  expenses:
+    - label: ang regalo
+      payer: priya
+      amount: 240
+      split:
+        method: exact
+        shares:
+          priya: 60
+          omar: 60
+          lena: 80
+          sam: 40
+    - label: card at pambalot
+      payer: omar
+      amount: 12
+      split:
+        method: equal
+faq:
+  heading: Mga tanong
+  items:
+    - q: Paano kung mas malaki ang nakolekta kaysa sa presyo ng regalo?
+      a: Dapat umabot sa presyo ang eksaktong halaga, kaya bawasan ang mga bahagi hanggang umabot. O gamitin ang sobra sa isang bagay na totoo, gaya ng bulaklak, at ilagay iyon bilang pangalawang gastos, gaya ng card at pambalot sa halimbawa.
+    - q: Puwede bang mag-ambag ang isang tao nang hindi sumasali sa grupo?
+      a: Hindi, kung gusto mo siyang isama sa bilang. Kailangan ng libreng account ang bawat kasali sa hati at dapat nasa grupo siya. Para sa taong cash lang ang hawak, puwede itong tanggapin ni Priya at ilagay ang regalo sa halagang utang pa ng grupo. Halimbawa, kung nagbigay si Sam kay Priya ng £40 na cash, maglalagay si Priya ng £200 at hahatiin ito sa 60, 60, at 80 sa pagitan niya, ni Omar, at ni Lena.
+    - q: Puwede bang magpasya ang poll kung magkano ang ambag ng bawat isa?
+      a: Hindi. Ang poll ay nagpapasya ng numero para sa buong grupo, gaya ng budget. Kayo ang magkakasundo sa bahagi ng bawat tao, saka i-type ito sa gastos bilang **Eksaktong halaga**.

@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Kalkulačka dělení účtu: kdo komu dluží, vyřešeno | Side Badger"
+  description: "Kdo platil, kdo dluží a kdo komu zaplatí: vyřešeno za chvilku. Dělte rovnoměrně, přesně nebo procentuálně. Zdarma, v prohlížeči, nic se neukládá ani neodesílá."
+h1: "Kalkulačka dělení účtu"
+navLabel: "Kalkulačka dělení účtu"
+lead: "Zadejte, kdo za co platil, a kalkulačka vám řekne, kdo komu dluží, a navrhne krátký seznam plateb, kterým se to vyrovná. Běží ve vašem prohlížeči, nic neukládá a nepřesouvá žádné peníze. Pokud má přehled skupiny přežít zavření karty, [dělení výdajů](page:feature/split-expenses) a [vyrovnání](page:feature/settle-up) v Side Badger počítají totéž a výsledky si uchovají."
+cta:
+  heading: "Líbí se vám výpočty? Nechte si je."
+  body: "Tahle kalkulačka zapomene všechno, jakmile zavřete kartu, stejně jako ten, kdo to minule určitě platil. Skupina v Side Badger uchovává výdaje, aktualizuje zůstatek každého a zaznamenává platby. Je zdarma, bez reklam a bez denních limitů."
+sections:
+  - heading: "Jak výpočet funguje"
+    body: "U každého výdaje kalkulačka spočítá podíl každého člověka. Můžete ho rozdělit rovnoměrně, podle přesných částek nebo procentuálně mezi lidi, které vyberete. Zůstatek každého je pak to, co zaplatil, minus to, co dluží. Plus znamená, že skupina dluží dané osobě, mínus znamená, že ona dluží skupině. Zůstatky dávají vždy dohromady nulu, protože kolik se jednomu dluží, tolik dluží ostatní."
+  - heading: "Proč je seznam plateb krátký"
+    body: "Nikdo nemusí vyrovnávat každou účtenku zvlášť. Jakmile jsou zůstatky známé, kalkulačka spáruje toho, kdo dluží nejvíc, s tím, komu se dluží nejvíc, jednou platbou vyrovná, co se dá, a pokračuje dál po seznamu, dokud nejsou všichni na nule. Potřebuje nejvýše o jednu platbu méně, než je lidí se zůstatkem, a často jich potřebuje méně než při vyrovnávání výdaj po výdaji. Dává krátký seznam plateb a neslibuje, že bude ten nejkratší možný."
+  - heading: "Co kalkulačka nedělá"
+    items:
+      - "**Nezvládá více měn.** Vyberte jednu a použijte ji v celém výpočtu. Aplikace vede zvlášť zůstatek pro každou měnu a umí výdaj převést podle aktuálního směnného kurzu, který můžete změnit."
+      - "**Nic neukládá.** Zavřete kartu a čísla jsou pryč. Chcete-li je zachovat, zkopírujte odkaz. Obsahuje vaše čísla za znakem #, tedy v části adresy, kterou váš prohlížeč na server nikdy neposílá, a kdokoli, komu ho pošlete, si je může přečíst."
+      - "**Nepřesouvá peníze.** Řekne vám, kdo by měl komu zaplatit. Platíte si, jak chcete, a pak platbu zaznamenáte v aplikaci, pokud skupina vede přehled tam."
+      - "**Nevybírá zbylý halíř náhodně.** Když se účet nedělí beze zbytku, zbylé haléře připadnou prvním lidem v seznamu, aby součty pořád seděly. V aplikaci zbylý halíř připadne jedné osobě náhodně, takže to není pokaždé tentýž člověk."
+      - "**Nezvládne víc, než dovolují limity.** Kalkulačka zvládne 2 až 20 lidí a jeden výdaj může činit nejvýše 999 999,99, stejně jako v aplikaci."
+exampleAfter: 2
+example:
+  heading: "Prodloužený víkend, čtyři přátelé"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "Chata"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "Nákupy"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "Taxi"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "Hospoda"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Je kalkulačka zdarma?"
+      a: "Ano. Zdarma. Bez reklam. Bez denních limitů. Nepotřebujete ani účet."
+    - q: "Ukládá to, co zadám?"
+      a: "Ne. Nic se nikam neukládá ani neodesílá. Chcete-li čísla zachovat, použijte tlačítko Zkopírovat odkaz a odkaz si někam uložte."
+    - q: "Kdo uvidí odkaz, který zkopíruji?"
+      a: "Každý, kdo ho má. Čísla jsou přímo v odkazu, za znakem #, takže ho sdílejte jen s lidmi, kteří je mají vidět."
+    - q: "Přesouvá kalkulačka peníze?"
+      a: "Ne. Spočítá, kdo by měl komu zaplatit, a vy si platíte, jak chcete. Side Badger se vašich peněz také nikdy nedotkne. Viz [vyrovnání](page:feature/settle-up)."
+    - q: "Mohu dělit výlet placený ve dvou měnách?"
+      a: "Tady ne, protože výpočet má jednu měnu. Ve skupině má každá měna svůj vlastní zůstatek. Viz [více měn](page:feature/multiple-currencies)."
+    - q: "Co když částky nesedí?"
+      a: "Kalkulačka to napíše pod výdaj a nezobrazí žádný výsledek, dokud nesedí. Přesné částky se musí sečíst na celkovou částku a procenta musí dát dohromady 100."

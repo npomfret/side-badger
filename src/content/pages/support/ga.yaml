@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Cabhair agus tacaíocht | Side Badger"
+  description: "Focal faire dearmadta, nasc nach n-oibríonn, íocaíocht mhícheart? Freagraí gearra ar na rudaí a mbíonn daoine i bhfostú orthu, agus conas teagmháil a dhéanamh linn."
+h1: "Cabhair agus tacaíocht, gan an ceol feithimh"
+navLabel: "Cabhair agus tacaíocht"
+lead: "Freagraí gearra ar na rudaí a mbíonn daoine i bhfostú orthu, ó fhocal faire dearmadta go grúpa a dhúnadh go buan. Tá nasc le gach ceann acu chuig an leathanach a mhíníonn tuilleadh. Ní féidir leat do cheist a aimsiú? Inis dúinn ón aip féin, nó seol líne chugainn."
+cta:
+  heading: "Tháinig tú ar lorg cabhrach. An bhfanfaidh tú don roinnt?"
+  body: "Gan cuntas fós? Tosaigh grúpa, roinn an nasc agus cuir an chéad chostas leis. Saor in aisce, gan fógraí agus gan teorainneacha laethúla."
+groups:
+  - heading: "Ag síniú isteach"
+    items:
+      - q: "Ar dhearmad tú d'fhocal faire?"
+        a: "Tarlaíonn sé do na broic is fearr. Roghnaigh **Ar dhearmad tú d'fhocal faire?** ar an scáileán **Logáil Isteach**, cuir isteach ríomhphost do chuntais, ansin lean an nasc sa ríomhphost a sheolaimid chun ceann nua a roghnú. Clúdaíonn [conas a oibríonn sé](page:how-it-works) an méid eile atá de dhíth ar chuntas."
+      - q: "Chláraigh mé, ach ní féidir liom aon rud a chur leis. Cén fáth?"
+        a: "Go hiondúil níl do ríomhphost fíoraithe go fóill, mar sin oscail an nasc sa ríomhphost fíoraithe, nó roghnaigh **Athsheol ríomhphost fíoraithe** ar an mbratach mheabhrúcháin chun ceann nua a fháil. Má tá tú fíoraithe, b'fhéidir go bhfuil an grúpa glasáilte nó nach ligeann a cheadanna duit é, agus feiceann breathnóir gach rud agus ní athraíonn sé aon rud, mar a mhíníonn [grúpaí agus ceadanna](page:feature/groups-and-permissions)."
+      - q: "Conas a athraím mo ríomhphost nó mo fhocal faire?"
+        a: "In **Socruithe**, roghnaigh **Athraigh an Ríomhphost** nó **Athraigh an Focal Faire**. Iarrann an dá cheann d'fhocal faire reatha ar dtús, agus ní mór seoladh ríomhphoist nua a fhíorú leis an nasc a sheolaimid chuige. Clúdaíonn [conas a oibríonn sé](page:how-it-works) cuntais."
+      - q: "An féidir liom síniú isteach le Google nó Apple?"
+        a: "Ní féidir. Níl uait ach seoladh ríomhphoist agus focal faire de 12 charachtar ar a laghad, agus is féidir leat **Cuimhnigh orm** a thiceáil ar do ghuthán nó ríomhaire féin. Clúdaíonn an leathanach [aip ghréasáin](page:feature/web-app) an chuid eile den tosú."
+  - heading: "Dul isteach i ngrúpa"
+    items:
+      - q: "Sheol duine nasc cuiridh chugam. Conas a théim isteach?"
+        a: "Oscail é, ansin sínigh isteach nó cruthaigh cuntas saor in aisce. Feicfidh tú réamhamharc den ghrúpa, roghnaíonn tú ann an t-ainm a fheicfidh daoine ort, agus brúnn tú **Tar isteach sa Ghrúpa**. Léiríonn [grúpaí agus ceadanna](page:feature/groups-and-permissions) an bealach iomlán isteach."
+      - q: "Deir sé “Ag fanacht le ceadú”. An ndearna mé rud éigin mícheart?"
+        a: "Ar chor ar bith. Tá an grúpa seo socraithe ionas go ligeann riarthóir gach duine isteach, mar sin tá d'iarratas imithe chuig a riarthóirí, agus ní féidir leat an taobh istigh a fheiceáil go dtí go gceadaíonn duine acu é. Ceadaítear brú beag cairdiúil duine le duine, agus míníonn [grúpaí agus ceadanna](page:feature/groups-and-permissions) an ceadú."
+      - q: "Deir an nasc go bhfuil sé neamhbhailí nó as dáta."
+        a: "Maireann nasc cuiridh chomh fada agus a roghnaigh an duine a rinne é, ó 15 nóiméad suas le 5 lá. Iarr nasc nua ar dhuine sa ghrúpa, nó an cód QR má tá sibh sa seomra céanna. Clúdaíonn [conas a oibríonn sé](page:how-it-works) cuiridh."
+  - heading: "Costais"
+    items:
+      - q: "Conas a chuirim costas leis?"
+        a: "Oscail an grúpa agus roghnaigh **Cuir Costas Leis**. Abair cad a bhí ann, cé mhéad, cé a d'íoc agus cé a roinn é, ansin roinn go cothrom é, de réir suimeanna cruinne nó de réir céatadáin. Siúlann [roinn costais](page:feature/split-expenses) tríd gach rogha."
+      - q: "An féidir leis an gcíos athrá gach mí?"
+        a: "Ní go huathoibríoch, mar níl aon chostais athfhillteacha ann. Oscail cíos na míosa seo caite agus roghnaigh **Cóipeáil an costas**, agus tagann an fhoirm líonta, réidh le dáta nua agus cibé rud a d'athraigh. Tá tuilleadh faoi chóipeáil ar [roinn costais](page:feature/split-expenses)."
+      - q: "Chlóscríobh mé an méid mícheart. An féidir liom é a cheartú?"
+        a: "Is féidir. Cuir an costas in eagar, fad is a ligeann ceadanna an ghrúpa duit agus nach bhfuil an grúpa glasáilte. Coinnítear an leagan roimhe sin, mar sin ní gá d'aon duine do fhocal a ghlacadh faoin méid a d'athraigh, mar a mhíníonn [roinn costais](page:feature/split-expenses)."
+      - q: "Tá cuma mhícheart ar chostas, agus ní liomsa é. Cad anois?"
+        a: "Roghnaigh **Tá ceist agam** air agus abair cén fáth, agus fanann an costas iomlán amach as iarmhéideanna gach duine go dtí go ndúnann an duine a chuir an cheist, nó riarthóir, an cheist. Níl a leithéid de chnaipe ann? Ní féidir ach le daoine atá san áireamh i gcostas ceist a chur, ní mór do riarthóir **Cead ceisteanna faoi chaiteachais** a chur ar siúl i socruithe an ghrúpa ar dtús, agus tá an diplomacht le fáil sa [treoir ar chostas faoi dhíospóid](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Íocaíochtaí"
+    items:
+      - q: "An seolann Side Badger an t-airgead?"
+        a: "Ní sheolann. Ní bhogann Side Badger airgead choíche. Íocaigí a chéile ar an gcaoi is fearr libh, trí aistriú bainc, airgead tirim nó cibé rud a oibríonn, ansin taifead an íocaíocht ionas go mbeidh na hiarmhéideanna cothrom le dáta. Téann [conas socrú suas tar éis turas grúpa](page:guide/how-to-settle-up-after-a-group-trip) tríd ó thús deireadh."
+      - q: "Conas a thaifeadaim íocaíocht?"
+        a: "Roghnaigh **Socraigh** sa ghrúpa, abair cé a d'íoc agus cé a fuair é, cuir isteach an méid nó lig do chnaipe **Socrú gasta** é a líonadh, agus roghnaigh **Taifead Socrú**. Níor íoc tú ach cuid de? Taifead an méid a íocadh agus fanann an chuid eile ar an iarmhéid, mar a mhíníonn [socraigh suas](page:feature/settle-up)."
+      - q: "Thaifead mé íocaíocht mícheart. An féidir liom í a cheartú?"
+        a: "Is féidir leis an té a thaifead íocaíocht í a chur in eagar ó stair **Socruithe** an ghrúpa, agus is féidir leis nó le riarthóir í a scriosadh, rud a bhaineann de na hiarmhéideanna í. Ní féidir íocaíocht a bhaineann le duine a d'fhág an grúpa ó shin a chur in eagar. Clúdaíonn [socraigh suas](page:feature/settle-up) an stair."
+  - heading: "Fógraí agus an scáileán baile"
+    items:
+      - q: "Conas a chasaim fógraí air?"
+        a: "Cas **Fógraí brú** air i **Socruithe** agus ceadaigh iad nuair a fhiafraíonn do bhrabhsálaí. Má tá siad blocáilte ag an mbrabhsálaí cheana, ceadaigh iad ina shocruithe féin ar dtús. Casann tú ar gach gléas ar leithligh agus ní ráthaítear go seachadfar iad, mar sin déileáil le fógra mar leid, ní mar gheallúint, mar a mhíníonn an leathanach [aip ghréasáin](page:feature/web-app)."
+      - q: "Cén fáth nach n-oibríonn fógraí ar m'iPhone?"
+        a: "Ar iPhone nó iPad ní oibríonn siad ach san aip a cuireadh le do scáileán baile, riamh i gcluaisín brabhsálaí. Cuir leis é, oscail ón deilbhín scáileán baile é, ansin cas air iad i **Socruithe**. Léiríonn [pleanáil le chéile](page:feature/plan-together) cad a insíonn siad duit."
+      - q: "An bhfuil aip le híoslódáil ann?"
+        a: "Ní ó siopa aipeanna, mar ritheann Side Badger i do bhrabhsálaí. Sínigh isteach, ansin lean **Cuir leis an Scáileán Baile nó leis an Dock** i **Socruithe**, agus osclaíonn sé cosúil le haip, i bhfuinneog dá chuid féin. Tá na céimeanna do gach gléas ar an leathanach [aip ghréasáin](page:feature/web-app)."
+  - heading: "Fágáil, cur i dtaisce, glasáil agus dúnadh"
+    items:
+      - q: "Conas a fhágaim grúpa?"
+        a: "Socraigh suas, ansin roghnaigh **Fág an Grúpa**. Ní féidir leat imeacht fad is atá airgead dlite agat nó dlite duit fiú in aon airgeadra amháin, fad is atá ceist oscailte ar chostas a bhfuil tú páirteach ann, nó más tusa an riarthóir deireanach nó an t-aon bhall amháin, agus teastaíonn cuireadh nua chun filleadh. Tá na sonraí ar [grúpaí agus ceadanna](page:feature/groups-and-permissions)."
+      - q: "Conas a bhainim seanghrúpa de mo phainéal?"
+        a: "Roghnaigh **Cuir an Grúpa i dTaisce**. Imíonn sé de do phainéal ach ní de phainéal aon duine eile, is féidir leat é a oscailt agus a úsáid fós, agus cuireann **Bain an Grúpa as an dTaisce** ar ais é. Déanann [grúpaí agus ceadanna](page:feature/groups-and-permissions) comparáid idir cur i dtaisce, glasáil agus dúnadh."
+      - q: "Tá an turas thart. An féidir linn stop a chur leis na huimhreacha ag athrú?"
+        a: "Is féidir. Is féidir le riarthóir **Cuir glas ar an nGrúpa** a chur ar siúl i socruithe an ghrúpa, agus ní féidir le haon duine costais a chur leis ná a chur in eagar, íocaíochtaí nua a thaifeadadh ná liostaí agus vótaí a athrú go dtí go ndíghlasálann riarthóir é. Is féidir le gach duine an grúpa agus a stair a léamh fós, agus ní théann aon tacsaí déanach isteach go ciúin, mar a mhíníonn [grúpaí agus ceadanna](page:feature/groups-and-permissions)."
+      - q: "An féidir liom grúpa a scriosadh?"
+        a: "Is féidir le riarthóir é a dhúnadh le **Dún an Grúpa**, tar éis ainm an ghrúpa a chlóscríobh le deimhniú. Tá dúnadh buan agus fágann sé nach bhfuil an grúpa ar fáil d'aon duine, mar sin mura mian leat ach é a chur as radharc, cuir i dtaisce é ina áit. Tá an cló beag ar [grúpaí agus ceadanna](page:feature/groups-and-permissions)."
+contact:
+  heading: "Fós i bhfostú?"
+  items:
+    - q: "Fuair tú fabht, nó ar mhaith leat rud a athrú?"
+      a: "Inis dúinn ón aip féin. Roghnaigh **Aiseolas** i roghchlár do chuntais, ansin **Seol Aiseolas**, agus roghnaigh **Tuairiscigh Saincheist**, **Iarr Cabhair** nó **Iarratas ar Ghné Nua**. Ceangail grianghraf scáileáin má chabhraíonn sé, agus nuair a fhreagraímid gheobhaidh tú an freagra sa snáithe céanna."
+    - q: "An fearr leat ríomhphost?"
+      a: "Scríobh chuig an seoladh thíos. Abair cén grúpa atá i gceist, cad a rinne tú agus cad a bhí tú ag súil go dtarlódh. Tá gearán ceart go leor; níl focail fhaire, mar sin ná seol do cheann féin choíche."
+  emailLabel: "Seol ríomhphost chugainn ag"
+  email: support@sidebadger.me

@@ -1,0 +1,108 @@
+translatedFrom: "92a9bff3"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Delitev računov s partnerjem, ki zasluži več | Side Badger"
+  description: "50/50 postane neprijetno, ko eden zasluži precej več. Skupne račune razdeli po dohodku, z izračuni za dve osebi in brez preglednice."
+h1: "Kako deliti račune s partnerjem, ki zasluži več"
+navLabel: "Partner, ki zasluži več"
+lead: "Seštej svoji neto plači, izračunaj delež vsakega od skupnega zneska in zaokroži na cele odstotke. Maya prinese domov 2.800 £, Jon 1.700 £, zato skupne račune delita 62/38. Ta odstotka vnesi pri skupnem strošku v Side Badgerju in ga kopiraj, kadar se isti račun vrne."
+cta:
+  heading: "Račun naredi enkrat"
+  body: "Ustvari brezplačen uporabniški račun, ustanovi skupino za vaju in vnesi najemnino z vajinima odstotkoma. Najemnina naslednjega meseca je kopija. Želiš najprej ogled? Poglej, [kako deluje](page:how-it-works), ali [kaj pokriva brezplačna različica](page:pricing)."
+sections:
+  - heading: "Dve plači, eno stanovanje, en vljuden molk"
+    body: "Maya in Jon živita skupaj. Maya prinese domov 2.800 £ na mesec, Jon 1.700 £. Dve leti sta vse delila 50/50, ker je bilo preprosto in nobeden ni hotel načeti pogovora. Potem je Jon pogledal najemnino zase. Polovica od 1.400 £ je 700 £, kar je četrtina Mayine neto plače in 41 % njegove. Nihče ni bil krivičen. Nihče ni naredil računa. Do tod prej ali slej pride marsikateri [par](page:use-case/couples). Ob jedi z dostavo sta se dogovorila, da naj skupni računi odgrizejo podoben kos iz vsake plače."
+  - heading: "Metoda z izračuni"
+    body: "Štirje koraki, en kalkulator in pogovor, ki bi ga imela tako ali tako."
+    items:
+      - "**Dogovorita se, kaj šteje kot plača.** Maya in Jon uporabljata neto plačo, denar, ki vsak mesec pristane v banki. Skupaj je to 2.800 £ + 1.700 £ = 4.500 £."
+      - "**Izračunaj vsakega delež.** Mayin je 2.800 ÷ 4.500, kar je 62,2 %. Jonov je 1.700 ÷ 4.500, kar je 37,8 %."
+      - "**Zaokroži na cele odstotke.** 62,2 % postane 62 in 37,8 % postane 38. Pri dveh osebah zaokroži eno številko in jo odštej od 100, da dobiš drugo, tako sta vedno skupaj 100."
+      - "**Preveri, kaj to pomeni.** Pri najemnini 1.400 £ Maya plača 868 £ (62 %), Jon pa 532 £ (38 %). To je okoli 31 % neto plače vsakega. Pri delitvi na pol bi šlo 25 % Mayine in 41 % Jonove neto plače."
+  - heading: "Branje meseca"
+    body: "Maya je plačala najemnino 1.400 £, Jon pa preostalih 216 £. Mayin del meseca je 868,00 £ + 111,60 £ + 18,00 £ = 997,60 £, plačala pa je 1.400 £, zato ji gre 402,40 £. Jonov del je 532,00 £ + 68,40 £ + 18,00 £ = 618,40 £, plačal pa je 216 £, zato dolguje 402,40 £. Side Badger predlaga eno plačilo, Jon Mayi, 402,40 £, [poravnava](page:feature/settle-up) pa ga zabeleži, ko je opravljeno. Pri delitvi 50/50 bi isti mesec Jon plačal Mayi 592,00 £."
+  - heading: "Nastavitev v Side Badgerju"
+    body: "Deset minut, večinoma porabljenih za odstotke."
+    items:
+      - "**Ustanovi skupino.** Na nadzorni plošči izberi **Ustvari skupino** in jo poimenuj po stanovanju. Izberi **Povabi druge** in Jonu pošlji povezavo ali kodo QR. Jon se prijavi ali ustvari brezplačen uporabniški račun in izbere ime, pod katerim želi biti viden v tej skupini. Skupino vidijo samo člani, zato je ta samo vajina."
+      - "**Dodaj najemnino.** Izberi **Dodaj strošek**. Vnesi opis in znesek, pod **Kdo je plačal?** pa izberi Mayo. Oba pusti pod **Razdeli med**, nato pod **Način razdelitve** izberi **Odstotek** in vtipkaj 62 in 38. Obrazec opozori, če odstotki skupaj niso 100. Izberi **Shrani strošek**."
+      - "**Dodaj druge račune.** Energija in internet gresta noter enako, plačnik je Jon, odstotka pa ista 62 in 38. Hrana z dostavo je samostojen strošek, **Način razdelitve** pa ostane na **Enako**."
+      - "**Naslednji mesec ga kopiraj.** Odpri najemnino prejšnjega meseca in izberi **Kopiraj strošek**. Kopija obdrži plačnika, znesek in delitev ter prevzame današnji datum. Če se je najemnina spremenila, popravi znesek, nato izberi **Ustvari kopijo**. Račun za energijo deluje enako."
+      - "**Preveri, kdo komu dolguje.** Pokaže ga razdelek **Stanja**, ki predlaga tudi kratek seznam plačil. Plačajta si, kakor želita, nato plačilo zabeležita pod **Poravnaj**."
+  - heading: "50/50, po dohodku ali račun za računom"
+    body: "Pravilnega odgovora ni, samo tisti, s katerim lahko živita oba. Trije pogosti."
+    items:
+      - "**Vse na pol.** Najlažje za vzdrževanje in primerno za pare z blizu si plačama."
+      - "**Vse skupno po dohodku.** Kar počneta Maya in Jon. En pogovor, en par odstotkov."
+      - "**Račun za računom.** Najemnina in računi po dohodku, počitnice in razvajanje 50/50 ali kakor se dogovorita, vsak račun pa dobi pravilo, ki mu ustreza."
+  - heading: "Dogovorita se, kaj je skupno"
+    body: "Prepiri so običajno o seznamu, ne o odstotkih. Najemnina, energija, internet, tedenski nakup in kavč so v večini domov skupni. Mayina članarina za telovadnico in Jonova naročnina na nogomet morda niso. Seznam določita enkrat, ga zapišita in v skupino vnašata samo skupne stroške."
+  - heading: "Hrana z dostavo ostane 50/50, namenoma"
+    body: "Razvajanje je majhno in neobvezno in nihče ne bi smel potrebovati kalkulatorja za naročilo cmokov. V Side Badgerju je hrana z dostavo le še en strošek. Jon plača 36 £, **Način razdelitve** ostane na **Enako** in vsak dolguje 18 £."
+  - heading: "Ko se plača spremeni"
+    body: "Povišica, nova služba ali odmor od dela spremeni račun. Nove odstotke izračunaj enako in jih uporabi od naslednjega stroška. Prejšnji stroški ostanejo, kakršni so bili. Kopiraj najemnino prejšnjega meseca, spremeni odstotke, nato izberi **Ustvari kopijo**. Če želiš popraviti strošek, ki je že vnesen, ga uredi, če dovoljenja skupine to dopuščajo, in prej obvesti partnerja, ker se stanja spremenijo. Prejšnja različica se ohrani. Dogovorita se, kdaj bosta preračunala, na primer enkrat na leto, in se poravnata, preden preklopita, da se stara delitev zapre s čistim štetjem."
+  - heading: "Česa Side Badger tu ne naredi"
+    items:
+      - "Nikoli ne vpraša, koliko kdo zasluži, in odstotkov ne izračuna. Vtipkaš številke, o katerih sta se dogovorila."
+      - "Ne zna nastaviti privzete delitve za celotno skupino. Odstotka sta pri vsakem strošku posebej, zato kopiraj strošek, ki ju že ima."
+      - "Ponavljajočih se računov nima, zato najemnino vsak mesec kopiraš."
+      - "Nikoli ne prenaša denarja. Plačata si, kakor želita, in plačilo zabeležita."
+exampleAfter: 2
+example:
+  heading: "En mesec v stanovanju Maye in Jona"
+  currency: GBP
+  people:
+    - id: maya
+      name: Maya
+    - id: jon
+      name: Jon
+  expenses:
+    - label: "najemnina"
+      payer: maya
+      amount: 1400
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: "energija in internet"
+      payer: jon
+      amount: 180
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: "hrana z dostavo"
+      payer: jon
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Naj uporabimo bruto ali neto plačo?"
+      a: "Odloči skupina. Neto je pogosta, ker je to denar, ki ga res imaš na voljo. Bruto plača spregleda, da davek, pokojninski prispevki in odplačila posojil iz različnih plač vzamejo različne zneske. Kar koli izbereta, uporabita isto merilo za oba."
+    - q: "Ali Side Badger vidi najine dohodke?"
+      a: "Ne. Vnašaš samo odstotke, nikoli plač. Odstotke vidijo člani skupine, pri paru sta to onadva."
+    - q: "Ali lahko 62/38 nastaviva enkrat za vse?"
+      a: "Delitev je nastavljena pri vsakem strošku, ne za skupino. Kopiraj strošek, ki že ima 62 in 38, in spremeni, kar je drugače. Druge možnosti so opisane pri [delitvi stroškov](page:feature/split-expenses)."

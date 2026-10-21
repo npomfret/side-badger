@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+meta:
+  title: "Shared lists, polls and comments for group money | Side Badger"
+  description: "Comment on expenses, question di odd one, keep shared shopping list and vote on di villa. Plan di spending together, then share am. Free, no ads."
+h1: "Plan am together, share am after"
+navLabel: "Plan am together"
+lead: "Di shopping list and di shopping bill, finally dey talk to each other. Side Badger give your group place to talk about di money before and after dem spend am, with comments on every expense, way to question di ones wey look wrong, shared lists and polls for di big decisions. Then you go [share expenses](page:feature/split-expenses) as usual."
+cta:
+  heading: "Plan am, then share am"
+  body: "Create free account, start group and put di first list, poll or question right next to di money. You no sure wetin go happen next? See [how e dey work](page:how-it-works)."
+problem:
+  heading: "Di chat dey one side, di bill dey another side"
+  body: "Group spending usually dey stay for two places. Di numbers dey one place, and di argument about di numbers dey inside chat wey don scroll go since Tuesday. Di shopping list na photo of fridge. Dem decide di villa with thumbs-up from most people, probably. Side Badger dey keep di planning inside di group, next to di expenses wey e dey about, so comment dey where di cost dey, list dey where di shop dey, poll dey for di big decision, and way dey to talk say “hold on, dis one correct?” without writing long paragraph. All of am dey stay about di group money, na wetin di group dey for."
+workflow:
+  heading: "From di villa vote reach di shopping bill"
+  steps:
+    - title: "Put di big decision to vote"
+      body: "Add poll for di decision wey go set di bill, like which villa. Pick two to ten options, talk how many votes each person get, then close am when everybody don vote and di winner go dey marked."
+      shot: S17
+      shotAlt: "Closed poll with di winning option marked and number of votes beside each option"
+    - title: "Write di shopping list together"
+      body: "Start shared list, add di items and tick dem off as dem reach di trolley. Di shop go enter afterwards as expense."
+      shot: S16
+      shotAlt: "Shared shopping list with some items wey dem don tick and progress count"
+    - title: "Talk about di cost where e dey stay"
+      body: "Comment on di expense itself, attach di receipt and react with emoji. Di conversation go stay next to di number wey e dey about."
+      shot: S08
+      shotAlt: "Expense with im details, receipt thumbnail, comment thread and emoji reactions"
+    - title: "Question di one wey look off"
+      body: "If di group don switch on expense questions, anybody wey dey inside expense fit choose **I get question**. Di expense go stay out of di balances until dem deal with di question."
+      shot: S18
+      shotAlt: "Di expenses list with Questioned badge and di Only questioned filter"
+    - title: "See wetin change, and who change am"
+      body: "Di activity feed and di notifications bell dey show wetin new across your groups. Push notifications dey there if you want dem."
+      shot: S19
+      shotAlt: "Di notifications dropdown with list of recent activity"
+options:
+  heading: "Opshons"
+  items: []
+example:
+  heading: "Three housemates, one wine bill wey dem question"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "di big shop"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "di cleaner"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "di party wine"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Comments and reactions, next to di numbers"
+    body: "Every expense get im own comment thread, and so too di group, each list and each poll. Ask why di taxi cost dat much under di taxi, no be inside chat wey nobody dey scroll back to. Add photo of di receipt or PDF of di booking, then react with thumbs up, heart, laugh, wow, sad or celebrate on expenses, payments and comments. Celebrate payment when e land. Na di closest wey Side Badger go reach to round of applause."
+  - heading: "Question expense without starting quarrel"
+    body: "When di group don switch on expense questions, anybody wey dey inside expense fit choose **I get question** and talk why. Dem go post di question as comment on di expense, di expense go get **Questioned** badge, and di whole expense go drop out of everybody balances until dem deal with di question."
+    items:
+      - "**To turn am on.** E dey off by default. Admin go switch on **Allow expense questions** for di group settings, under **Features**."
+      - "**To close am.** Di person wey ask, or admin, go choose **Close di question**. If plenty people question di same expense, e go return inside di balances when dem close di last question."
+      - "**To edit am.** When dem edit expense, open question go carry over to di new version for everybody wey still get share inside am. Anybody wey di edit leave out, im question go end with di old version, so nothing remain for am to close."
+      - "**To find dem.** Di expenses list get **Only questioned** filter. Dis one no be approval step: only di expenses wey somebody question dem dey hold, and everything else dey count as soon as dem add am."
+  - heading: "How question go play out"
+    body: "Tom add £45 of party wine, wey dem share between all three housemates. Aisha no drink, so she raise question, and while e dey open di wine no count for anybody. Di house agree say di wine na for Tom and Priya, so Tom edit di split to di two of dem. Aisha no dey inside di expense again, so her question end with di earlier version, wey dem keep, and di wine join di balances back sharp sharp at £22.50 each instead of £15 each. If Aisha remain inside di expense, her question for carry over and wait for her or admin to close am. Below, Aisha £48 na £28 from di shop and £20 from di cleaner, and Priya £10.50 na her £70.50 share (£28, £20 and £22.50) less di £60 wey she pay. Very [housemates](page:use-case/housemates) kind of argument. For how to word question, see [wetin to do when somebody dispute shared expense](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Shared lists, for shopping"
+    body: "Start list inside di group, name am something like Shopping List, add items and tick dem off. Drag items make dem arrange better, watch di progress count climb and comment on di list when somebody buy wrong oat milk. Keep finished list for corner to tidy am away (**Sho archivd** go bring am back), or copy list to reuse am. Keep di shared shopping list next to di shopping bills, so di list go talk wetin to buy and di expense go talk how much e cost. Who fit create and edit lists depend on di group permissions, wey [groups and permissions](page:feature/groups-and-permissions) explain."
+  - heading: "Polls, no-name if you like"
+    body: "Ask di group something wey go decide di bill, like which villa, how much to spend on di gift or whether di boat trip worth am. Poll get one question and two to ten options. You go choose how many votes each person get, from single choice reach ten, and whether voting go be no-name. **No-name voting** dey hide who vote for wetin, and nobody fit change am once di first vote enter. People fit change or remove dem vote until di poll close, and you fit reopen am if di group get second thoughts. To choose di villa na exactly wetin [group trips](page:use-case/group-trips) dey about, and to agree di gift budget na classic for [events and celebrations](page:use-case/events-and-celebrations)."
+  - heading: "Di activity feed, so nothing go change quietly"
+    body: "Every group get activity history, and di notifications bell dey gather activity from all your groups for one place. Add expense and everybody go see am sharp sharp, without refresh, and di feed dey show wetin change and who change am. Dat one cover expenses wey dem add, edit or delete, questions wey dem raise and close, comments, changes to lists and polls, and payments wey dem record."
+  - heading: "Push notifications, if you want dem"
+    body: "Push notifications na optional. Turn dem on for your account **Settings page**, under **Notifikashons**, and your device go let you know when new activity dey for your groups, like new expense or comment. You go switch on each device separate, and your browser go ask for permission first. For iPhone or iPad, dem only work inside di app wey dem add to Home Screen, wey di [web app](page:feature/web-app) page explain. Treat dem as convenience, no be promise, because dem no guarantee delivery."
+limits:
+  heading: "Di limits"
+  items:
+    - "Comments, lists and polls na for di group money. Di [terms](page:terms) ask say everything wey dem post must relate to group finances, so dis na place to plan di spending, no be general chat or to-do app."
+    - "Comment fit reach 500 characters, with up to three attachments wey be images or PDFs of up to 5 MB each. Only di author fit delete comment."
+    - "Expense questions dey off by default, and admin go turn dem on for each group. Only people wey dey inside expense fit question am, if you turn di feature off e go clear every open question, and nobody fit leave di group while expense wey dem dey part of get open question."
+    - "Group fit hold up to 100 lists, each with up to 200 items of up to 500 characters. Group permissions decide who fit create, edit and delete lists, and locked group no allow any changes."
+    - "Group fit hold up to 50 polls, each with two to ten options and up to ten votes per person. Polls no get deadline and dem no dey close by themselves."
+    - "Dem dey keep di activity history for 90 days."
+    - "Push notifications na opt-in for each account and each device. Dem need browser wey support dem and your permission, dem work for iPhone and iPad only from di app wey dem add to Home Screen, and dem no guarantee delivery. No email or text alerts dey for activity and no payment reminders dey, so to chase payment still be your own work."
+useCasesHeading: "Where to plan together dey help"
+faq:
+  heading: "Question dem"
+  items:
+    - q: "Votes fit be no-name?"
+      a: "Yes. Switch on **No-name voting** when you create di poll and e go hide who vote for wetin. Decide before di first vote, because nobody fit change am afterwards."
+    - q: "Poll fit close by itself?"
+      a: "No. Poll no get deadline, so di person wey create am go choose **Klos poll** once di group don decide. If di group get second thoughts, **Open poll again** go bring am back."
+    - q: "How many items fit dey inside one list?"
+      a: "Up to 200 items per list and up to 100 lists per group. Each item fit reach 500 characters, wey be plenty oat milk."
+    - q: "Who fit close question, and wetin go happen to di expense for di meantime?"
+      a: "Di person wey ask, or group admin. While question dey open, di whole expense dey out of everybody balances. E go return inside when dem close di last open question on am, or when edit comot di person wey ask from di expense."
+    - q: "I fit use lists and comments as to-do app or group chat?"
+      a: "No. Comments, lists and polls na for di group money, wey be wetin di [terms](page:terms) ask. Think shopping lists, budget polls and “why dis one na £45?”."
+    - q: "Side Badger go email me about activity?"
+      a: "No. No email or text alerts dey for activity. You fit turn on push notifications for each device, and di notifications bell inside di app dey show wetin new."

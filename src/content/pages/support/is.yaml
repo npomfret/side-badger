@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Hjálp og aðstoð | Side Badger"
+  description: "Gleymt lykilorð, tengill sem virkar ekki, greiðsla skráð vitlaust? Stutt svör við því sem fólk festist á í Side Badger og hvernig þú nærð í okkur."
+h1: "Hjálp og aðstoð, án biðtónlistarinnar"
+navLabel: "Hjálp og aðstoð"
+lead: "Stutt svör við því sem fólk festist á, allt frá gleymdu lykilorði til þess að loka hópi fyrir fullt og allt. Hvert svar vísar á síðuna sem útskýrir meira. Finnurðu ekki þína spurningu? Láttu okkur vita inni í appinu eða sendu okkur línu."
+cta:
+  heading: "Komstu til að fá hjálp en ílengist við skiptinguna?"
+  body: "Ertu ekki með aðgang enn? Byrjaðu hóp, deildu tenglinum og bættu við fyrsta útgjaldinu. Ókeypis, án auglýsinga og án daglegra takmarka."
+groups:
+  - heading: "Innskráning"
+    items:
+      - q: "Gleymdirðu lykilorðinu?"
+        a: "Það kemur fyrir bestu greifingja. Veldu **Gleymdirðu lykilorðinu?** á skjánum **Innskráning**, sláðu inn netfangið á aðganginum þínum og fylgdu svo tenglinum í tölvupóstinum sem við sendum til að velja nýtt. [Hvernig þetta virkar](page:how-it-works) útskýrir hvað annað aðgangur þarf."
+      - q: "Ég er búin(n) að stofna aðgang en get ekki bætt neinu við. Af hverju?"
+        a: "Oftast er netfangið þitt ekki staðfest enn, svo opnaðu tengilinn í staðfestingarpóstinum eða veldu **Senda staðfestingarpóst aftur** á áminningarborðanum til að fá nýjan. Ef netfangið er staðfest getur hópurinn verið læstur eða leyfi hans ekki gert þér kleift að bæta við, en áhorfandi sér allt og breytir engu, eins og [hópar og leyfi](page:feature/groups-and-permissions) útskýra."
+      - q: "Hvernig breyti ég netfanginu eða lykilorðinu?"
+        a: "Veldu **Stillingar** og svo **Breyta netfangi** eða **Breyta lykilorði**. Hvort tveggja biður fyrst um núverandi lykilorð og nýtt netfang þarf að staðfesta með tenglinum sem við sendum á það. [Hvernig þetta virkar](page:how-it-works) fjallar um aðganga."
+      - q: "Get ég skráð mig inn með Google eða Apple?"
+        a: "Nei. Allt sem þú þarft er netfang og lykilorð með að minnsta kosti 12 stöfum, og þú getur hakað við **Muna eftir mér** í þínum eigin síma eða tölvu. Síðan um [vefforritið](page:feature/web-app) fjallar um restina af því hvernig á að byrja."
+  - heading: "Að ganga í hóp"
+    items:
+      - q: "Einhver sendi mér boðstengil. Hvernig geng ég í hópinn?"
+        a: "Opnaðu hann og skráðu þig svo inn eða stofnaðu ókeypis aðgang. Þú sérð forskoðun á hópnum, velur nafnið sem fólk sér þig undir þar og ýtir á **Ganga í hóp**. [Hópar og leyfi](page:feature/groups-and-permissions) sýna alla leiðina inn."
+      - q: "Þar stendur „Bíður samþykkis“. Gerði ég eitthvað rangt?"
+        a: "Alls ekki. Í þessum hópi hleypir stjórnandi hverjum og einum inn, svo beiðnin þín hefur farið til stjórnenda hans og þú sérð ekkert inni í hópnum fyrr en einn þeirra samþykkir hana. Vingjarnlegt pot í eigin persónu er leyfilegt, og [hópar og leyfi](page:feature/groups-and-permissions) útskýra samþykki."
+      - q: "Tengillinn segist ógildur eða útrunninn."
+        a: "Boðstenglar gilda eins lengi og sá sem bjó þá til valdi, frá 15 mínútum upp í 5 daga. Biddu einhvern í hópnum um nýjan tengil, eða um QR-kóðann ef þið eruð í sama herbergi. [Hvernig þetta virkar](page:how-it-works) fjallar um boð."
+  - heading: "Útgjöld"
+    items:
+      - q: "Hvernig bæti ég við útgjaldi?"
+        a: "Opnaðu hópinn og veldu **Skrá útgjöld**. Segðu hvað það var, hversu mikið, hver greiddi og hverjir deildu því, og skiptu því svo jafnt, eftir nákvæmum upphæðum eða í prósentum. [Skipting útgjalda](page:feature/split-expenses) fer í gegnum alla möguleikana."
+      - q: "Getur leigan endurtekið sig í hverjum mánuði?"
+        a: "Ekki sjálfkrafa, því það eru engin endurtekin útgjöld. Opnaðu útgjald síðasta mánaðar og veldu **Afrita útgjöld**, þá kemur eyðublaðið útfyllt, tilbúið fyrir nýja dagsetningu og það sem breyttist. [Skipting útgjalda](page:feature/split-expenses) segir meira um afritun."
+      - q: "Ég sló inn ranga upphæð. Get ég lagað það?"
+        a: "Já. Breyttu útgjaldinu, svo lengi sem leyfi hópsins gera þér það kleift og hópurinn er ekki læstur. Fyrri útgáfan er geymd, svo enginn þarf að treysta á orð þín um hvað breyttist, eins og [skipting útgjalda](page:feature/split-expenses) útskýrir."
+      - q: "Útgjald lítur skakkt út og það er ekki mitt. Hvað nú?"
+        a: "Veldu **Ég er með spurningu** á því og segðu hvers vegna, og allt útgjaldið helst fyrir utan stöðu allra þar til sá sem spurði, eða stjórnandi, lokar málinu. Enginn slíkur hnappur? Aðeins þeir sem taka þátt í útgjaldi geta spurt, stjórnandi þarf fyrst að kveikja á **Leyfa spurningar um útgjöld** í stillingum hópsins, og [leiðarvísirinn um útgjöld sem dregin eru í efa](page:guide/what-to-do-when-someone-disputes-a-shared-expense) kennir háttvísina."
+  - heading: "Greiðslur"
+    items:
+      - q: "Sendir Side Badger peningana?"
+        a: "Nei, Side Badger flytur aldrei peninga. Borgið hvert öðru eins og ykkur hentar, með millifærslu, reiðufé eða hverju sem virkar, og skráið svo greiðsluna svo staðan uppfærist. [Hvernig á að gera upp eftir hópferð](page:guide/how-to-settle-up-after-a-group-trip) fer í gegnum það frá upphafi til enda."
+      - q: "Hvernig skrái ég greiðslu?"
+        a: "Veldu **Gera upp** í hópnum, segðu hver greiddi og hver fékk greitt, sláðu inn upphæðina eða láttu **Flýtiuppgjör**-hnapp fylla hana út, og veldu **Skrá uppgjör**. Greiddirðu aðeins hluta? Skráðu það sem var greitt og afgangurinn helst á stöðunni, eins og [uppgjör](page:feature/settle-up) útskýrir."
+      - q: "Ég skráði greiðslu vitlaust. Get ég lagað það?"
+        a: "Sá sem skráði hana getur breytt henni í sögunni **Uppgjör** í hópnum, og hann eða stjórnandi getur eytt henni, sem tekur hana af stöðunni. Greiðslu sem tengist einhverjum sem hefur síðan yfirgefið hópinn er ekki hægt að breyta. [Uppgjör](page:feature/settle-up) fjallar um söguna."
+  - heading: "Tilkynningar og heimaskjár"
+    items:
+      - q: "Hvernig kveiki ég á tilkynningum?"
+        a: "Kveiktu á **Ýtitilkynningar** undir **Stillingar** og leyfðu þær þegar vafrinn spyr. Ef vafrinn hefur þegar lokað á þær skaltu fyrst leyfa þær í stillingum hans. Kveikt er á hverju tæki fyrir sig og afhending er ekki tryggð, svo líttu á tilkynningu sem ábendingu, ekki loforð, eins og síðan um [vefforritið](page:feature/web-app) útskýrir."
+      - q: "Af hverju virka tilkynningar ekki í iPhone-símanum mínum?"
+        a: "Í iPhone eða iPad virka þær aðeins í appinu eftir að því hefur verið bætt við heimaskjáinn, aldrei í vafraflipa. Bættu því við, opnaðu það með tákninu á heimaskjánum og kveiktu svo á þeim undir **Stillingar**. [Skipuleggja saman](page:feature/plan-together) sýnir hvað þær láta þig vita um."
+      - q: "Er til app til að sækja?"
+        a: "Ekki úr appverslun, því Side Badger keyrir í vafranum þínum. Skráðu þig inn og fylgdu svo **Bæta við heimaskjá eða Dock** undir **Stillingar**, þá opnast það eins og app, í sínum eigin glugga. Síðan um [vefforritið](page:feature/web-app) hefur skrefin fyrir hvert tæki."
+  - heading: "Að yfirgefa, færa í safn, læsa og loka"
+    items:
+      - q: "Hvernig yfirgef ég hóp?"
+        a: "Gerðu upp og veldu svo **Yfirgefa hóp**. Þú getur ekki yfirgefið hóp á meðan þú skuldar eða átt inni pening, jafnvel í aðeins einum gjaldmiðli, á meðan útgjald sem þú ert í hefur opna spurningu, eða ef þú ert síðasti stjórnandinn eða eini meðlimurinn, og til að koma aftur þarf nýtt boð. [Hópar og leyfi](page:feature/groups-and-permissions) hafa nánari upplýsingar."
+      - q: "Hvernig losna ég við gamlan hóp af stjórnborðinu?"
+        a: "Veldu **Færa hóp í safn**. Hann hverfur af þínu stjórnborði en ekki annarra, þú getur samt opnað hann og notað, og **Taka hóp úr safni** kemur honum aftur. [Hópar og leyfi](page:feature/groups-and-permissions) bera saman að færa í safn, læsa og loka."
+      - q: "Ferðin er búin. Getum við stöðvað breytingar á tölunum?"
+        a: "Já. Stjórnandi getur kveikt á **Læsa hóp** í stillingum hópsins og þá getur enginn bætt við útgjöldum eða breytt þeim, skráð nýjar greiðslur eða breytt listum og könnunum fyrr en stjórnandi aflæsir hópnum. Allir geta áfram lesið hópinn og söguna hans, og enginn seinn leigubíll læðist inn, eins og [hópar og leyfi](page:feature/groups-and-permissions) útskýra."
+      - q: "Get ég eytt hópi?"
+        a: "Stjórnandi getur lokað honum með **Loka hópnum**, eftir að hafa slegið inn nafn hópsins til staðfestingar. Lokun er varanleg og gerir hópinn óaðgengilegan öllum, svo ef þú vilt bara losna við hann úr augsýn skaltu frekar færa hann í safn. [Hópar og leyfi](page:feature/groups-and-permissions) hafa smáa letrið."
+contact:
+  heading: "Enn í vandræðum?"
+  items:
+    - q: "Fannstu villu eða viltu fá eitthvað breytt?"
+      a: "Láttu okkur vita inni í appinu. Veldu **Umsagnir** í aðgangsvalmyndinni, svo **Senda umsögn**, og veldu **Tilkynna villu**, **Biðja um aðstoð** eða **Ósk um eiginleika**. Hengdu við skjámynd ef það hjálpar, og þegar við svörum finnurðu svarið í sama þræði."
+    - q: "Viltu frekar senda tölvupóst?"
+      a: "Skrifaðu á netfangið hér fyrir neðan. Segðu um hvaða hóp málið snýst, hvað þú gerðir og hvað þú bjóst við að gerðist. Það er í lagi að fá útrás; lykilorð eru það ekki, svo sendu aldrei þitt."
+  emailLabel: "Sendu okkur póst á"
+  email: support@sidebadger.me

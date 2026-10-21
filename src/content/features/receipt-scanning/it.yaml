@@ -1,0 +1,78 @@
+translatedFrom: "42f5cf35"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - receipt-scanning.fills-in-for-you-to-check
+  - receipt-scanning.no-scan-credits
+  - receipt-scanning.read-by-googles-ai
+  - receipt-attachments.keep-the-receipt
+meta:
+  title: Scansiona uno scontrino per aggiungere una spesa | Side Badger
+  description: Lascia che il tasso legga lo scontrino. Compila totale, data e luogo perché tu li controlli, senza crediti di scansione. Lo legge il servizio di IA di Google.
+h1: Scansiona uno scontrino, controlla i dettagli, dividilo
+navLabel: Scansione scontrini
+lead: Lascia che il tasso legga lo scontrino, e poi controlla i suoi compiti. Aggiungi una foto a una nuova spesa e Side Badger compila totale, data e luogo perché tu li controlli. Poi [dividila](page:feature/split-expenses) come qualsiasi altra spesa. La scansione è gratuita, senza crediti di scansione. Compila una sola spesa e non divide il conto per voce. Le immagini degli scontrini vengono lette dal servizio di IA di Google.
+cta:
+  heading: Scatta. Controlla. Dividi.
+  body: Crea un account gratuito, avvia un gruppo e aggiungi una spesa con la foto di uno scontrino. Guarda cosa compila, cambia ciò che non va e salva quando sei soddisfatto.
+problem:
+  heading: Nessuno vuole digitare uno scontrino in coda per il taxi
+  body: Viaggi e grandi serate si portano dietro la carta. La cena, il taxi, il giro che è diventato sei. Digitarli uno per uno su un telefono con le dita gelate e la coda dietro è così che le spese vengono dimenticate. Così Side Badger legge lo scontrino per te. Fa la prima bozza e tu fai il controllo. Va bene per i [viaggi di gruppo](page:use-case/group-trips) e per [eventi e feste](page:use-case/events-and-celebrations), dove gli scontrini si accumulano più in fretta di quanto qualcuno voglia occuparsene.
+workflow:
+  heading: Da foto a spesa in tre passaggi
+  steps:
+    - title: Aggiungi uno scontrino a una nuova spesa
+      body: Avvia una nuova spesa e tocca **Scansiona lo scontrino**, oppure usa l'azione rapida **Scansiona lo scontrino** nella tua dashboard. Scatta una foto o scegline una che hai già. Funziona anche **Aggiungi ricevuta o allegato** nel modulo.
+    - title: Lascia che legga lo scontrino
+      body: Il modulo mostra **Analisi dello scontrino...** mentre l'IA di Side Badger legge l'immagine. Poi compila ciò che ha trovato, come la descrizione, il totale, la valuta, la data, l'ora e il luogo. Ciò che avevi già scritto non viene toccato.
+      shot: S09
+      shotAlt: Il modulo della nuova spesa che mostra Analisi dello scontrino..., poi lo stesso modulo con i dettagli compilati
+    - title: Controlla, poi dividi
+      body: Confronta il modulo con la carta. Correggi ciò che non va, indica chi ha pagato e chi ha condiviso la spesa, scegli come dividerla e salva. La spesa non esiste finché non salvi. [Dividere le spese](page:feature/split-expenses) spiega come dividere.
+options:
+  heading: Opzioni
+  items: []
+sections:
+  - heading: Cosa compila
+    body: Aggiungi l'immagine di uno scontrino a una nuova spesa e questi campi possono compilarsi. Chi ha pagato, chi ha condiviso la spesa e come dividerla restano affari tuoi.
+    items:
+      - Una **descrizione** per la spesa.
+      - Il **totale**.
+      - La **valuta**, se il tuo gruppo lo consente.
+      - La **data** e l'**ora**.
+      - Il **luogo**.
+      - Una copia in testo dello scontrino nelle **note**, per quando quello di carta sbiadisce o finisce in lavatrice.
+  - heading: Cosa devi comunque controllare
+    body: Tutto. Tratta ciò che compila come una bozza. Controlla il totale con la carta, poi valuta, data e luogo. Foto sfocate e carta spiegazzata possono ingannare qualsiasi lettore, e non promettiamo che azzecchi ogni scontrino, quindi guarda prima di salvare. Se qualcosa non va, scrivici sopra. Se lo scontrino è in yen e il gruppo salda in sterline, [più valute](page:feature/multiple-currencies) spiega cosa succede dopo.
+  - heading: Tieni lo scontrino con la spesa
+    body: Scansionato o no, uno scontrino può restare con la spesa. Allega foto o PDF, fino a tre per spesa e fino a 10 MB ciascuno. I membri del gruppo li vedono sulla spesa. Le immagini compaiono come miniature che si aprono in un visualizzatore, e i PDF si aprono come link. Anche la foto che scansioni viene allegata, a meno che tu non la rimuova prima di salvare. Quando qualcuno chiede quanto è costata davvero quella cena, la prova è lì.
+  - heading: Dove va il tuo scontrino
+    body: Le immagini degli scontrini vengono lette dal servizio di IA di Google. Per compilare il modulo, l'immagine viene letta da Google Vertex AI (Gemini) nella multi-regione USA di Google. Aggiungi un'immagine a una nuova spesa e viene letta. Un PDF, o una foto aggiunta a una spesa già esistente, viene archiviato senza essere letto. Gli scontrini allegati sono visibili ai membri del gruppo, quindi se uno scontrino mostra qualcosa che preferiresti non condividere, salta la foto e scrivi quella spesa a mano.
+limits:
+  heading: Limiti
+  items:
+    - Solo immagini. JPEG, PNG e WebP, e HEIC una volta convertito. I PDF si possono allegare a una spesa ma non vengono letti.
+    - La scansione vale solo per le nuove spese. Su una spesa esistente puoi allegare scontrini, ma non viene letto nulla.
+    - Compila solo i campi che non hai toccato, e la valuta solo se il tuo gruppo lo consente.
+    - Non divide per voce né assegna le singole voci alle persone. Compila una sola spesa e la dividi tu come al solito.
+    - Non promettiamo che ciò che compila sia giusto, né che la scansione funzioni ogni volta. Controlla prima di salvare, e aggiungi la spesa a mano se la scansione fallisce o non è disponibile.
+    - Una spesa contiene fino a tre allegati, ciascuno fino a 10 MB, come JPEG, PNG, WebP, HEIC o PDF.
+    - Le immagini degli scontrini vengono lette da Google Vertex AI (Gemini) nella multi-regione USA di Google, e gli scontrini allegati sono visibili ai membri del gruppo.
+useCasesHeading: Dove gli scontrini si accumulano
+faq:
+  heading: Domande
+  items:
+    - q: Può dividere uno scontrino per voce?
+      a: No. Compila la spesa, totale compreso, e tu la dividi in parti uguali, per importi esatti o per percentuale. Per un conto in cui ognuno ha ordinato cose diverse, inserisci quanto deve ciascuno come importi esatti. [Dividere le spese](page:feature/split-expenses) ha i dettagli.
+    - q: Può leggere un PDF?
+      a: No. Puoi allegare un PDF a una spesa perché viaggi insieme ai numeri, ma vengono lette solo le immagini.
+    - q: C'è un limite alle scansioni?
+      a: Non ci sono crediti di scansione da esaurire, e la scansione è gratuita. I file hanno dei limiti, cioè fino a tre allegati per spesa e 10 MB ciascuno. [Cosa include il gratuito](page:pricing) ha il resto.
+    - q: Chi può vedere il mio scontrino?
+      a: I membri del gruppo possono vedere gli scontrini allegati a una spesa. Le immagini degli scontrini vengono anche lette dal servizio di IA di Google, ed è così che il modulo si compila.
+    - q: Posso scansionare uno scontrino per una spesa che ho già aggiunto?
+      a: No, la scansione vale per le nuove spese. Puoi comunque allegare uno scontrino a una spesa esistente, e viene archiviato senza essere letto.
+    - q: E se compila qualcosa di sbagliato?
+      a: Scrivici sopra. Ogni campo resta modificabile finché non salvi, e comunque dovresti controllarli tutti. Se la scansione fallisce o non è disponibile, aggiungi la spesa a mano come al solito.

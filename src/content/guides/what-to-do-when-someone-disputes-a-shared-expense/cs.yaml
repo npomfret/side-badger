@@ -1,0 +1,102 @@
+translatedFrom: "0900d953"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Co dělat, když někdo zpochybní společný výdaj | Side Badger"
+  description: "Žádné jízlivé zprávy. Vzneste u výdaje dotaz a ten zmizí ze všech zůstatků, zatímco si to vyříkáváte. Projdeme to na víně za 45 £."
+h1: "Co dělat, když někdo zpochybní společný výdaj"
+navLabel: "Zpochybněné výdaje"
+lead: "Místo jízlivé zprávy vzneste u výdaje dotaz. Dokud je dotaz otevřený, celý výdaj zůstává mimo zůstatky všech. Proberte to v komentářích, upravte rozdělení, pokud se skupina shodne, a dotaz nechte uzavřít tomu, kdo se ptal, nebo správci."
+cta:
+  heading: "Zeptejte se na nepříjemnou věc slušně"
+  body: "Vytvořte si bezplatný účet, založte skupinu pro byt a požádejte správce, aby zapnul dotazy k výdajům, které jsou vypnuté, dokud je někdo nezapne. Chcete si nejdřív projít, jak to funguje? Podívejte se na [jak to funguje](page:how-it-works) nebo na [co zahrnuje bezplatná verze](page:pricing)."
+sections:
+  - heading: "Tři spolubydlící a víno za 45 £"
+    body: "Po oslavě přidá Tom víno do skupiny bytu. Stálo 45 £, zaplatil ho Tom a dělí se rovným dílem mezi Toma, Priyu a Aishu, tedy po 15 £. Aisha nepije. Tom víno koupil na oslavu a oslava byla pro celý [byt](page:use-case/housemates), takže neudělal nic špatně. Ani Aisha nedělá nic špatně, když se ptá. Nikdo tu není padouch. Jde jen o víno za 15 £ a spoustu způsobů, jak z toho udělat trapas. Jízlivá zpráva celému bytu je jedním z nich. Dotaz u výdaje je ten mírnější."
+  - heading: "Co dotaz udělá"
+    body: "Aisha otevře výdaj a vznese dotaz. Celý výdaj zmizí ze zůstatků všech, nejen její podíl, a nic jiného se nemění. Velký nákup (84 £) a uklízečka (60 £) se počítají dál, což dělá 28 £ + 20 £ = 48 £ na osobu. Takže dokud je víno pozastavené, Aisha dluží 48 £, Tom má dostat 36 £ a Priya 12 £. Ať se byt o víně rozhodne jakkoli, zatím ho žádný zůstatek nezahrnuje. Dotaz může vznést i kdokoli jiný, kdo ve výdaji je. Víno se vrátí do zůstatků, až když se uzavře poslední otevřený dotaz k němu, a dotaz uzavře ten, kdo se ptal, nebo správce."
+  - heading: "Probrat to a pak opravit"
+    body: "Aishin dotaz se objeví v komentářích u výdaje, takže odpovědi jsou hned pod ním. [Plánujte společně](page:feature/plan-together) říká víc o komentářích a dotazech. Tom a Priya si to přečtou a v bytě si o tom popovídají. Rozhodnou, že víno patřilo Tomovi a Priye, protože ho vypili. Jiný byt by mohl nechat rozdělení na tři nebo se domluvit na něčem mezi tím, a bylo by to také v pořádku. Side Badger uloží, na čem se shodnete, a o víně žádný názor nemá. Tom výdaj upraví tak, aby se dělil rovným dílem mezi něj a Priyu, tedy po 22,50 £ (45 £ ÷ 2). Aisha už v něm není, takže její dotaz odejde se starou verzí a víno se vrátí do zůstatků. Dřívější verze se uchová."
+  - heading: "Jak číst výsledek"
+    body: "Když se víno vrátí, Tom má dostat 58,50 £, Priya dluží 10,50 £ a Aisha dluží 48 £. Side Badger navrhne dvě platby, obě pro Toma. Aisha dluží stejných 48 £ jako v době, kdy bylo víno pozastavené, protože v něm není. Priya přešla z nároku 12 £ na dluh 10,50 £, a to kvůli své polovině vína, tedy 22,50 £. Kdyby zůstalo rozdělení na tři, Aisha by dlužila 63 £ (28 £ + 20 £ + 15 £). Celý spor byl o 15 £. Zaplaťte si, jak chcete, a každou platbu pak zaznamenejte přes **Vyrovnat dluhy**. Zbytek vysvětluje stránka [vyrovnání](page:feature/settle-up)."
+  - heading: "Jak to napsat, aby s vámi lidé dál mluvili"
+    body: "Aishin dotaz: „Z toho vína jsem nic neměla. Mohli bychom se podívat na rozdělení?“ Je krátký, jmenuje výdaj a ptá se, místo aby obviňoval. Pomáhá pár zvyků."
+    items:
+      - "**Ptejte se na výdaj, ne na člověka.** „Mohli bychom zkontrolovat rozdělení u vína?“ začne rozhovor. „Proč mám platit za tvoje víno?“ začne ten druhý druh rozhovoru."
+      - "**Řekněte, co byste chtěli.** „Šlo by to jen mezi ty, kdo ho pili?“ dává skupině něco, s čím může souhlasit nebo na co může odpovědět."
+      - "**Uveďte důvod v jedné či dvou větách.** Políčko se jmenuje **Váš dotaz** a nesmí zůstat prázdné."
+      - "**Odpovědi nechte na jednom místě.** Odpovědi patří do komentářů u výdaje, vedle čísel, o kterých jsou."
+  - heading: "Nastavte to v Side Badger"
+    items:
+      - "**Zapněte dotazy.** Ve výchozím stavu jsou vypnuté. Správce otevře **Nastavení** skupiny, na kartě **Obecné** zapne pod **Funkce** volbu **Povolit dotazy k výdajům** a zvolí **Uložit**. Pozdější vypnutí vymaže všechny otevřené dotazy."
+      - "**Vzneste dotaz.** Otevřete výdaj a v rozdělení u svého jména zvolte **Mám dotaz**. Do pole **Váš dotaz** napište důvod a znovu zvolte **Mám dotaz**. Může to udělat jen ten, kdo ve výdaji je. U výdaje se pak zobrazí odznak **Zpochybněno**."
+      - "**Najděte, co je pozastaveno.** V seznamu výdajů zobrazí **Pouze zpochybněno** výdaje s otevřeným dotazem."
+      - "**Opravte to, pokud se skupina shodne.** Otevřete výdaj, zvolte **Upravit**, změňte **Rozdělit mezi** a zvolte **Aktualizovat výdaj**. Kdo může upravovat, určují oprávnění skupiny."
+      - "**Uzavřete dotaz, pokud není co opravovat.** Ten, kdo se ptal, může použít tlačítko pro uzavření na svém odznaku **Zpochybněno**, označené **Uzavřít dotaz**, a správce také. Výdaj se vrátí do zůstatků, jakmile se uzavře jeho poslední dotaz."
+  - heading: "Když to není tak úhledné"
+    items:
+      - "**Tazatel zůstává ve výdaji.** Pokud je ten, kdo se ptal, po úpravě pořád ve výdaji, jeho dotaz přejde do upravené verze a čeká, až ho uzavře on nebo správce. Opravit částku ještě neznamená, že se skupina shodla, že je to vyřešené."
+      - "**Nejste ve výdaji zahrnuti.** Dotaz může vznést jen ten, kdo ve výdaji je. Pokud vám něco nesedí, napište to do komentářů u něj nebo se zeptejte toho, kdo ho přidal."
+      - "**Někdo chce opustit skupinu.** Otevřený dotaz brání lidem z daného výdaje v odchodu. Uzavřete dotaz, nebo výdaj upravte tak, aby v něm už nebyli, a mohou odejít."
+  - heading: "Co Side Badger tady nedělá"
+    items:
+      - "Nerozhoduje, kdo má pravdu. Drží výdaj mimo zůstatky a ukládá, na čem se shodnete."
+      - "Nežádá nikoho o schválení výdajů, než se započítají. Pozastaví se jen zpochybněný výdaj."
+      - "Nemůže pozastavit jen část výdaje. Vznesete dotaz a celý výdaj ze zůstatků zmizí."
+      - "Nepřesouvá peníze. Platíte si, jak chcete, a platbu zaznamenáte."
+exampleAfter: 3
+example:
+  heading: "Byt po vínu"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "velký nákup"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "uklízečka"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "víno na oslavu"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+faq:
+  heading: "Otázky"
+  items:
+    - q: "Mohu zpochybnit jen svůj podíl?"
+      a: "Ne. Dotaz pozastaví celý výdaj, pro všechny, kdo v něm jsou. Pokud je špatně jen rozdělení, řešením je jeho úprava."
+    - q: "Kdo může dotaz uzavřít?"
+      a: "Ten, kdo se ptal, nebo správce skupiny. Pokud ten, kdo výdaj přidal, není správce, nemůže dotaz uzavřít za tazatele."
+    - q: "Smaže úprava výdaje originál?"
+      a: "Ne. Dřívější verze se uchová. O tom, kdo může upravovat, rozhodují oprávnění skupiny, takže se vyplatí nejdřív to říct bytu, protože se změní zůstatky."

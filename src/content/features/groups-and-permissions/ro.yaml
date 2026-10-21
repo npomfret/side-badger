@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Administrare de grup și permisiuni | Side Badger"
+  description: "Invită oameni cu link sau cod QR, aprobă cine intră, setează permisiuni și blochează grupul la final. Grupul tău, regulile tale, în limite rezonabile."
+h1: "Administrarea grupului și permisiuni: regulile tale, în limite rezonabile"
+navLabel: "Grupuri și permisiuni"
+lead: "Unele grupuri au nevoie de un trezorier. Side Badger are o setare pentru asta. Invită oameni cu un link sau un cod QR, hotărăște cine intră și alege cine poate schimba cifrele. Un grup mic de prieteni poate ignora toate astea, pentru că grupurile noi pornesc larg deschise."
+cta:
+  heading: "Gata să ții un grup în ordine?"
+  body: "Creează un cont, începe un grup și trimite linkul de invitație. Lasă-l deschis sau strânge regulile când grupul crește ori devine mai pretențios."
+problem:
+  heading: "Cineva trebuie să țină cifrele în ordine"
+  body: "Patru colegi de casă pot merge pe încredere. Treizeci de invitați într-un weekend de nuntă, probabil nu. Fă câte un grup pentru fiecare casă, excursie sau eveniment, cu până la 50 de persoane în el, și fiecare grup își ține membrii, rolurile și regulile proprii. Panoul tău le listează pe toate, cu situația ta în fiecare, pe un singur ecran. Cele mai multe grupuri nu ating niciodată setările. Cele care o fac au de obicei pe cineva suficient de organizat cât să le vrea."
+workflow:
+  heading: "De la grup gol la grup blocat"
+  steps:
+    - title: "Invită cu un link sau un cod QR"
+      body: "Deschide **Invită pe alții**, alege cât timp să fie valabil linkul (15 minute, 1 oră, 1 zi sau 5 zile), apoi copiază linkul sau arată codul QR ca să-l scaneze oamenii. Poți invita și oameni cu care ai deja un alt grup în comun, direct din aplicație."
+      shot: S03
+      shotAlt: "Dialogul de invitație, cu linkul grupului, codul QR și alegerea duratei de valabilitate a linkului"
+    - title: "Lasă-i să arunce o privire înainte să intre"
+      body: "Oricine are linkul se autentifică sau își creează un cont, vede o previzualizare a grupului și alege numele pe care vrea să-l folosească în el. Apoi apasă **Alătură-te Grupului**."
+      shot: S04
+      shotAlt: "Previzualizarea unui grup, afișată unei persoane autentificate înainte să se alăture"
+    - title: "Aprobă cine intră"
+      body: "Activează aprobarea, iar cei care folosesc linkul așteaptă ca membri în așteptare până îi lasă un administrator să intre. Administratorii îi găsesc la **Membri în Așteptare**, în **Securitate**, și aleg **Aprobă** sau **Respinge**. Până atunci, o persoană în așteptare nu vede nimic în grup."
+      shot: S14
+      shotAlt: "Membri în așteptare, care așteaptă ca un administrator să-i aprobe sau să-i respingă"
+    - title: "Alege cine poate schimba ce"
+      body: "Alege presetarea **Deschis** sau **Gestionat**, ori setează permisiunile pe rând. Apoi dă fiecărei persoane un rol: administrator, membru sau vizualizator. Doar administratorii pot schimba permisiunile și rolurile."
+      shot: S13
+      shotAlt: "Fila de securitate din setările grupului, cu cele două presetări și permisiunile personalizate"
+    - title: "Blochează-l când s-a terminat"
+      body: "Când excursia s-a încheiat și cifrele s-au așezat, un administrator poate activa **Blochează grupul**. Nimeni nu mai poate adăuga sau schimba cheltuieli, înregistra plăți ori edita liste și sondaje, iar un banner spune asta. Nimeni nu mai poate adăuga pe nesimțite un taxi de ultim moment. Dacă totuși apare unul, un administrator poate debloca grupul."
+      shot: S15
+      shotAlt: "Un grup cu bannerul care spune că este blocat"
+options:
+  heading: "Administratori, membri și vizualizatori"
+  items:
+    - title: "Administrator"
+      body: "Conduce grupul. Administratorii aprobă membrii noi, schimbă rolurile și permisiunile, blochează și deblochează grupul și îl închid. Cine creează un grup începe ca administratorul lui, iar un grup nu rămâne niciodată fără unul, pentru că ultimul administrator nu poate fi retrogradat."
+    - title: "Membru"
+      body: "Participă. Ce poate face un membru depinde de permisiunile grupului. Într-un grup cu presetarea Deschis, aproape orice. Într-un grup Gestionat, membrii pot schimba doar cheltuielile și listele create de ei."
+    - title: "Vizualizator"
+      body: "Vede tot și nu schimbă nimic. Un vizualizator nu poate adăuga sau edita cheltuieli ori liste, nu poate invita oameni, nu poate schimba setările și nu se atinge de imaginea de antet. Util pentru cine vrea să urmărească cifrele și promite să nu umble la ele."
+sections:
+  - heading: "Deschis, gestionat sau cu regulile tale"
+    body: "Grupurile noi pornesc cu presetarea **Deschis**, în care oricine poate invita oameni, schimba cheltuieli și edita liste, iar membrii noi se alătură automat. Presetarea **Gestionat** e pentru când cineva trebuie să fie adultul responsabil. Poți seta și cele șapte permisiuni pe rând, iar dacă schimbi una de mână, grupul trece pe permisiuni personalizate. Orice ai alege, doar administratorii pot schimba permisiunile în sine, iar fiecare schimbare apare în fluxul de activitate. Un apartament de [colegi de casă](page:use-case/housemates) poate lăsa totul deschis. Un [eveniment sau o sărbătoare](page:use-case/events-and-celebrations) mare cere adesea presetarea Gestionat, ca cineva să răspundă de cine intră. Ești nou în toate astea? [Cum funcționează](page:how-it-works) parcurge tot drumul, de la prima cheltuială până la achitare."
+    items:
+      - "**Cine poate edita cheltuieli.** Deschis: orice membru. Gestionat: creatorii și administratorii."
+      - "**Cine poate șterge cheltuieli.** Deschis: orice membru. Gestionat: creatorii și administratorii."
+      - "**Cine poate edita listele.** Deschis: orice membru. Gestionat: creatorii și administratorii."
+      - "**Cine poate invita membri.** Deschis: orice membru. Gestionat: doar administratorii."
+      - "**Aprobarea noilor membri.** Deschis: automată. Gestionat: este necesară aprobarea unui administrator."
+      - "**Cine poate gestiona setările.** Deschis: orice membru. Gestionat: doar administratorii."
+      - "**Cine poate schimba imaginea de antet.** Deschis: orice membru. Gestionat: doar administratorii."
+  - heading: "Numele tău, poza ta, imaginea ta de antet"
+    body: "Fiecare grup are propria distribuție. Alege numele pe care îl văd oamenii în fiecare grup (de la 2 la 50 de caractere, unic în grup) și care dintre pozele tale de profil o porți acolo. Fii **Sam** în casă și **Sam (cu mașina)** în excursie. Oricine are voie să schimbe setările poate redenumi grupul și îi poate edita descrierea. Imaginea de antet, un JPEG, PNG, GIF sau WebP de până la 10 MB, are propria permisiune."
+  - heading: "Arhivează, blochează sau închide"
+    body: "Trei moduri de a pune un grup deoparte, de la cel mai ușor la cel mai grav."
+    items:
+      - "Cu **Arhivează Grupul**, grupul dispare din panoul tău, nu și din al altcuiva. Îl poți deschide și folosi ca înainte, iar **Dezarhivează Grupul** îl aduce înapoi."
+      - "Cu **Blochează grupul**, schimbările îngheață până când un administrator îl deblochează. Toți pot citi în continuare grupul și istoricul lui."
+      - "**Închide grupul** e definitiv și pentru toți. O poate face doar un administrator, scriind numele grupului ca să confirme, iar după aceea nimeni nu mai poate deschide grupul."
+  - heading: "Părăsirea unui grup"
+    body: "Oricine poate pleca după ce s-a achitat. Nu poți pleca cât timp datorezi sau ți se datorează bani, chiar și într-o singură valută; cât timp te implică o întrebare deschisă despre o cheltuială; sau dacă ești ultimul administrator ori singurul membru. [Înregistrează plata](page:feature/settle-up), lămurește [întrebarea despre cheltuială](page:guide/what-to-do-when-someone-disputes-a-shared-expense) sau fă-l administrator pe altcineva, apoi pleacă. Ca să revii, vei avea nevoie de o invitație nouă."
+limits:
+  heading: "În limite rezonabile: scrisul mărunt"
+  items:
+    - "Un grup poate cuprinde până la 50 de persoane."
+    - "Doar administratorii pot schimba permisiunile și rolurile. Ultimul administrator nu poate fi retrogradat."
+    - "Dacă setezi editarea cheltuielilor pe **Doar administratori**, doar administratorii pot și adăuga cheltuieli."
+    - "O blocare oprește schimbările la cheltuieli, plățile noi, liste și sondaje. Toți pot citi în continuare grupul și istoricul lui și pot reacționa la plăți."
+    - "Închiderea este definitivă. Aplicația nu are nicio cale de a redeschide un grup închis."
+    - "Un link de invitație nou nu le anulează pe cele vechi. Fiecare link rămâne valabil până la propria expirare, așa că alege unul scurt când te îngrijorează unde ar putea ajunge."
+    - "Invitațiile din aplicație listează oameni din cele mai recente 10 grupuri active ale tale. Pentru oricine altcineva e nevoie de link, iar cine are voie să invite depinde de permisiunile grupului."
+    - "Alăturarea cere un cont, iar oamenii trebuie să-și verifice e-mailul înainte să poată adăuga ceva."
+useCasesHeading: "Unde ajută un pic de ordine"
+faq:
+  heading: "Întrebări"
+  items:
+    - q: "Poate un vizualizator să adauge cheltuieli?"
+      a: "Nu. Un vizualizator vede tot și nu schimbă nimic. Nu poate adăuga sau edita cheltuieli ori liste, nu poate invita oameni și nu poate schimba setările."
+    - q: "Poate cineva să plece cât timp datorează bani?"
+      a: "Nu. Nimeni nu poate părăsi un grup cât timp datorează sau i se datorează bani, chiar și într-o singură valută. Achită-te mai întâi, apoi pleacă."
+    - q: "Ce se întâmplă când un grup este închis?"
+      a: "Nimeni nu îl mai poate deschide. Doar un administrator poate închide un grup, trebuie să scrie numele grupului ca să confirme, iar grupul devine indisponibil pentru toți. Dacă vrei doar să oprești schimbările, blochează-l. Dacă vrei doar să nu-l mai vezi în panoul tău, arhivează-l."
+    - q: "Pot anula o blocare?"
+      a: "Da. Un administrator poate debloca grupul, iar schimbările funcționează din nou."
+    - q: "Trebuie să aprob oamenii înainte să intre?"
+      a: "Doar dacă vrei. Grupurile noi pornesc cu presetarea Deschis, în care cei care folosesc linkul se alătură automat. Activează aprobarea administratorului sau alege Gestionat, iar fiecare persoană așteaptă până o lasă un administrator să intre."
+    - q: "Câte persoane pot fi într-un grup?"
+      a: "Până la 50."

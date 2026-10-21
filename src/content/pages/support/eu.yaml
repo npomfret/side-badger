@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Laguntza | Side Badger"
+  description: "Pasahitza ahaztuta, esteka hautsita, ordainketa gaizki sartuta? Erantzun laburrak Side Badger-en jendea non trabatzen den, eta gurekin harremanetan jartzeko modua."
+h1: "Laguntza, itxaroteko musikarik gabe"
+navLabel: "Laguntza"
+lead: "Jendea non trabatzen den eta erantzun laburrak, pasahitza ahaztetik talde bat betiko ixtera arte. Bakoitzak gehiago azaltzen duen orrira lotzen du. Zurea ez duzu aurkitzen? Esaiguzu aplikazioaren barrutik, edo idatzi iezaguzu."
+cta:
+  heading: "Laguntzera etorri eta banatzera geratu?"
+  body: "Konturik ez duzu oraindik? Hasi talde bat, partekatu esteka eta gehitu lehen gastua. Doakoa, iragarkirik gabe eta eguneko mugarik gabe."
+groups:
+  - heading: "Saioa hastea"
+    items:
+      - q: "Pasahitza ahaztu duzu?"
+        a: "Azkonar onenei ere gertatzen zaie. Aukeratu **Pasahitza ahaztu duzu?** **Hasi saioa** pantailan, sartu zure kontuaren posta elektronikoa eta jarraitu bidaltzen dizugun mezuko esteka pasahitz berri bat aukeratzeko. [Nola funtzionatzen duen](page:how-it-works) orrian azaltzen da kontu batek zer gehiago behar duen."
+      - q: "Izena eman dut, baina ezin dut ezer gehitu. Zergatik?"
+        a: "Gehienetan zure posta elektronikoa ez dago oraindik egiaztatuta; ireki egiaztapen-mezuko esteka, edo aukeratu **Bidali berriro egiaztapen mezua** gogorarazpen-banerrean berri bat jasotzeko. Egiaztatuta badago, baliteke taldea blokeatuta egotea edo bere baimenek ez uztea, eta ikusle batek dena ikusten du eta ezer ez du aldatzen, [taldeek eta baimenek](page:feature/groups-and-permissions) azaltzen duten bezala."
+      - q: "Nola aldatzen ditut posta elektronikoa edo pasahitza?"
+        a: "**Ezarpenak** atalean, aukeratu **Aldatu posta elektronikoa** edo **Aldatu pasahitza**. Biek zure uneko pasahitza eskatzen dute lehenik, eta posta elektroniko berria hara bidaltzen dugun estekatik egiaztatu behar da. [Nola funtzionatzen duen](page:how-it-works) orrian kontuak azaltzen dira."
+      - q: "Google edo Apple bidez hasi dezaket saioa?"
+        a: "Ez. Posta elektroniko bat eta gutxienez 12 karaktereko pasahitz bat behar dituzu bakarrik, eta **Gogoratu nazazu** markatu dezakezu zure telefono edo ordenagailuan. [Web aplikazioaren](page:feature/web-app) orrian hasteko gainerakoa azaltzen da."
+  - heading: "Talde batera sartzea"
+    items:
+      - q: "Norbaitek gonbidapen-esteka bat bidali dit. Nola sartzen naiz?"
+        a: "Ireki ezazu, eta gero hasi saioa edo sortu doako kontu bat. Taldearen aurrebista bat ikusiko duzu, aukeratu han jendeak zu ikusteko erabiliko duen izena, eta sakatu **Batu taldera**. [Taldeek eta baimenek](page:feature/groups-and-permissions) sartzeko bide osoa erakusten dute."
+      - q: "“Onarpenaren zain” jartzen du. Zerbait gaizki egin dut?"
+        a: "Ez, batere ez. Talde honetan administratzaile batek sartzen utzi behar dio pertsona bakoitzari, beraz zure eskaera bere administratzaileengana joan da, eta ezin duzu barrura begiratu horietako batek onartu arte. Aurrez aurre bultzadatxo lagunkoi bat ematea onartzen da, eta [taldeek eta baimenek](page:feature/groups-and-permissions) onarpena azaltzen dute."
+      - q: "Estekak baliogabea dela edo iraungi dela dio."
+        a: "Gonbidapen-estekek sortu zituenak aukeratutako denbora irauten dute, 15 minututik 5 egunera. Eskatu taldeko norbaiti esteka berri bat, edo QR kodea gela berean bazaudete. [Nola funtzionatzen duen](page:how-it-works) orrian gonbidapenak azaltzen dira."
+  - heading: "Gastuak"
+    items:
+      - q: "Nola gehitzen dut gastu bat?"
+        a: "Ireki taldea eta aukeratu **Gehitu gastua**. Esan zer izan zen, zenbat, nork ordaindu zuen eta nork partekatu zuen, eta gero banatu berdin, zenbateko zehatzen arabera edo ehunekoen arabera. [Gastuak banatzea](page:feature/split-expenses) orriak aukera guztiak azaltzen ditu."
+      - q: "Alokairua hilero errepika daiteke?"
+        a: "Berez ez, ez dagoelako gastu errepikaririk. Ireki joan den hilabetekoa eta aukeratu **Kopiatu gastua**, eta formularioa beteta iristen da, data berri baterako eta aldatu den edozerrerako prest. [Gastuak banatzea](page:feature/split-expenses) orrian kopiatzeari buruz gehiago dago."
+      - q: "Zenbateko okerra idatzi dut. Konpon dezaket?"
+        a: "Bai. Editatu gastua, taldearen baimenek uzten badizute eta taldea blokeatuta ez badago. Aurreko bertsioa gordetzen da, beraz inork ez du zure hitzean sinetsi behar zer aldatu den jakiteko, [gastuak banatzeak](page:feature/split-expenses) azaltzen duen bezala."
+      - q: "Gastu bat gaizki dagoela dirudi, eta ez da nirea. Orain zer?"
+        a: "Aukeratu **Galdera bat daukat** gastuan eta esan zergatik, eta gastu osoa denen saldoetatik kanpo geratzen da galdera egin zuenak, edo administratzaile batek, galdera itxi arte. Botoi hori ez dago? Gastu batean sartutako pertsonek bakarrik galdetu dezakete, administratzaile batek lehenik **Baimendu gastuen galderak** aktibatu behar du taldearen ezarpenetan, eta [gastu eztabaidatuaren gidak](page:guide/what-to-do-when-someone-disputes-a-shared-expense) diplomazia dakar."
+  - heading: "Ordainketak"
+    items:
+      - q: "Side Badger-ek dirua bidaltzen al du?"
+        a: "Ez, Side Badger-ek ez du inoiz dirurik mugitzen. Ordaindu elkarri nahi duzuen moduan, banku-transferentziaz, eskudiruz edo funtzionatzen duen edozein modutan, eta gero erregistratu ordainketa saldoak eguneratu daitezen. [Taldeko bidaia baten ondoren nola kitatu](page:guide/how-to-settle-up-after-a-group-trip) gidak hasieratik amaierara azaltzen du."
+      - q: "Nola erregistratzen dut ordainketa bat?"
+        a: "Taldean, aukeratu **Kitatu**, esan nork ordaindu duen eta nork jaso duen, sartu zenbatekoa edo utzi **Likidazio azkarra** botoi batek betetzen, eta aukeratu **Erregistratu likidazioa**. Zati bat bakarrik ordaindu duzu? Erregistratu ordaindu dena eta gainerakoa saldoan geratzen da, [kitatzeak](page:feature/settle-up) azaltzen duen bezala."
+      - q: "Ordainketa bat gaizki erregistratu dut. Konpon dezaket?"
+        a: "Erregistratu zuenak edita dezake taldearen **Likidazioak** historiatik, eta hark edo administratzaile batek ezaba dezake, saldoetatik kenduz. Gerora taldea utzi duen norbait tartean duen ordainketa ezin da editatu. [Kitatzeak](page:feature/settle-up) historia azaltzen du."
+  - heading: "Jakinarazpenak eta hasierako pantaila"
+    items:
+      - q: "Nola aktibatzen ditut jakinarazpenak?"
+        a: "Aktibatu **Push jakinarazpenak** **Ezarpenak** atalean eta baimendu zure nabigatzaileak galdetzen duenean. Nabigatzaileak dagoeneko blokeatu baditu, baimendu lehenik bere ezarpenetan. Gailu bakoitza bereizita aktibatzen da eta bidalketa ez dago bermatuta, beraz jakinarazpena bultzadatxo gisa hartu, ez promesa gisa, [web aplikazioaren](page:feature/web-app) orriak azaltzen duen bezala."
+      - q: "Zergatik ez dabiltza jakinarazpenak nire iPhonean?"
+        a: "iPhone edo iPad batean, hasierako pantailara gehitutako aplikazioan bakarrik dabiltza, inoiz ez nabigatzaile-fitxa batean. Gehitu, ireki hasierako pantailako ikonotik, eta gero aktibatu **Ezarpenak** atalean. [Antolatu elkarrekin](page:feature/plan-together) orriak jakinarazpenek zertaz jakinarazten duten erakusten du."
+      - q: "Deskargatzeko aplikaziorik ba al dago?"
+        a: "Aplikazio-denda batetik ez, Side Badger zure nabigatzailean dabilelako. Hasi saioa, eta gero jarraitu **Gehitu hasierako pantailan edo Dock-ean** **Ezarpenak** atalean, eta aplikazio bat bezala irekitzen da, bere leihoan. [Web aplikazioaren](page:feature/web-app) orrian gailu bakoitzerako urratsak daude."
+  - heading: "Uztea, artxibatzea, blokeatzea eta ixtea"
+    items:
+      - q: "Nola uzten dut talde bat?"
+        a: "Kitatu, eta gero aukeratu **Utzi taldea**. Ezin duzu utzi moneta bakar batean ere dirua zor baduzu edo zor badizute, zu zauden gastu batek galdera irekia badu, edo azken administratzailea edo kide bakarra bazara, eta itzultzeko gonbidapen berri bat behar da. [Taldeek eta baimenek](page:feature/groups-and-permissions) xehetasunak dituzte."
+      - q: "Nola kentzen dut talde zahar bat nire aginte-paneletik?"
+        a: "Aukeratu **Artxibatu taldea**. Zure aginte-panelean desagertzen da, ez beste inorenean, oraindik ireki eta erabil dezakezu, eta **Desarxibatu taldea** aukerak bueltatzen du. [Taldeek eta baimenek](page:feature/groups-and-permissions) artxibatzea, blokeatzea eta ixtea alderatzen ditu."
+      - q: "Bidaia amaitu da. Zenbakiak aldatzea eten dezakegu?"
+        a: "Bai. Administratzaile batek **Blokeatu taldea** aktiba dezake taldearen ezarpenetan, eta inork ezin du gastuak gehitu edo editatu, ordainketa berriak erregistratu edo zerrendak eta inkestak aldatu administratzaile batek desblokeatu arte. Denek taldea eta bere historia irakurtzen jarraitu dezakete, eta ez da taxi berandu bat ere sartzen, [taldeek eta baimenek](page:feature/groups-and-permissions) azaltzen duten bezala."
+      - q: "Talde bat ezabatu dezaket?"
+        a: "Administratzaile batek itxi dezake **Itxi taldea** erabiliz, berresteko taldearen izena idatzi ondoren. Ixtea betiko da eta taldea denentzat eskuraezin bihurtzen du, beraz ikusmenetik kendu bakarrik nahi baduzu, artxibatu hobe. [Taldeek eta baimenek](page:feature/groups-and-permissions) letra txikia dakarte."
+contact:
+  heading: "Oraindik trabatuta?"
+  items:
+    - q: "Akats bat aurkitu duzu, edo zerbait aldatzea nahi duzu?"
+      a: "Esaiguzu aplikazioaren barrutik. Aukeratu **Iritzia** zure kontuko menuan, gero **Bidali iritzia**, eta hautatu **Arazoaren txostena**, **Laguntza eskaera** edo **Eginbide eskaera**. Erantsi pantaila-argazki bat lagungarri bada, eta erantzuten dizugunean hari berean aurkituko duzu."
+    - q: "Posta elektronikoz idaztea nahiago duzu?"
+      a: "Idatzi beheko helbidera. Esan zein talderi buruzkoa den, zer egin zenuen eta zer gertatzea espero zenuen. Haserrea botatzea ondo dago; pasahitzak ez, beraz ez bidali inoiz zurea."
+  emailLabel: "Idatzi iezaguzu:"
+  email: support@sidebadger.me

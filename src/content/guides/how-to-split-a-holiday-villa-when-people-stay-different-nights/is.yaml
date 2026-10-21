@@ -1,0 +1,112 @@
+translatedFrom: "8f38827e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - invites.link-or-qr-code
+  - comments.next-to-the-expense
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Skiptu orlofshúsi þegar fólk gistir mislangt | Side Badger"
+  description: "Dev kom bara í þrjár nætur, svo hvers vegna að borga fyrir sex? Skiptu orlofshúsi eftir nóttunum sem fólk gisti, með útreikningunum gerðum."
+h1: "Hvernig á að skipta orlofshúsi þegar fólk gistir mismargar nætur"
+navLabel: "Orlofshús eftir nóttum"
+lead: "Verðleggðu dvölina á mann á nótt, margfaldaðu með nóttum hvers og eins og skráðu orlofshúsið sem **eitt útgjald með nákvæmum upphæðum**. Side Badger heldur utan um stöðuna og leggur til stuttan lista yfir greiðslur þegar kemur að uppgjöri."
+cta:
+  heading: "Gefðu orlofshúsinu eitt snyrtilegt útgjald"
+  body: "Búðu til hóp, bjóddu öllum með tengli eða QR-kóða og skráðu orlofshúsið með nákvæmum upphæðum. Side Badger heldur utan um stöðuna á meðan þið njótið frísins."
+sections:
+  - heading: "Sex nætur, fjórar manneskjur, eitt greiðslukort"
+    body: "[Hópferð](page:use-case/group-trips) byrjar yfirleitt á korti eins manns. Hér er það kortið hennar Ana. Hún bókar orlofshús í sex nætur fyrir 2.100 €, því einhver verður að ríða á vaðið. Ana, Ben og Chloe gista öll allar sex næturnar. Dev kemst aðeins síðustu þrjár og kemur með lest. Ben leigir bíl sem Dev situr aldrei í. Dev sér um stóru matarinnkaupin. Að skipta orlofshúsinu í fjóra jafna hluta er augljósi kosturinn. Þá borgar Dev fyrir þrjár nætur sem hann eyddi heima, og svona mál skjóta upp kollinum aftur um jólin. Að skipta eftir nóttum forðast rifrildið og útreikningurinn tekur eina mínútu."
+  - heading: "Verðleggðu eina gistinótt"
+    body: "Gistinótt er ein manneskja sem gistir eina nótt. Orlofshúsið kostar það sem það kostar, svo deildu verðinu á allar gistinæturnar og gefðu hverjum og einum þær sem hann notaði."
+    items:
+      - "**Teldu gistinæturnar.** Ana, Ben og Chloe gista sex nætur hvert og Dev þrjár: 6 + 6 + 6 + 3 = 21."
+      - "**Verðleggðu eina.** 2.100 € ÷ 21 = 100 € á gistinótt."
+      - "**Margfaldaðu með nóttum hvers og eins.** Ana, Ben og Chloe borga 6 × 100 € = 600 € hvert. Dev borgar 3 × 100 € = 300 €."
+      - "**Athugaðu heildina.** 600 € + 600 € + 600 € + 300 € = 2.100 €. Ef hlutirnir ná ekki verðinu vantar nótt eða hún er talin tvisvar."
+  - heading: "Settu það inn í Side Badger"
+    body: "Búðu til hóp, bjóddu hinum þremur með tengli eða QR-kóða og bættu svo kostnaðinum við. Orlofshúsið fyrst."
+    items:
+      - "Veldu **Skrá útgjöld**. Lýstu útgjaldinu, sláðu inn 2.100 og settu **Hver greiddi?** á Ana."
+      - "Gakktu úr skugga um að allar fjórar manneskjurnar séu með undir **Skipta á milli**."
+      - "Veldu **Nákvæmar upphæðir** undir **Hvernig á að skipta**. Sláðu inn 600 fyrir Ana, Ben og Chloe og 300 fyrir Dev. Upphæðirnar verða að ná heildarupphæðinni."
+      - "Veldu **Vista útgjöld**."
+      - "Bættu bílaleigunni við á sama hátt. Ben greiddi, skiptingin er **Jafnt** og Dev er sleppt, því hann kom með lest. [Skipting útgjalda](page:feature/split-expenses) fjallar um aðrar leiðir til að skipta kostnaði."
+      - "Bættu matvörunum við. Dev greiddi, skiptingin er **Jafnt** og allir fjórir eru með."
+  - heading: "Lesið úr niðurstöðunni, svo gert upp"
+    body: "Reikningur hvers og eins er hlutur hans í orlofshúsinu auk hlutar hans í bílnum og innkaupunum. Hjá Ana, Ben og Chloe er það 725 € hvert, sem er 600 € + 80 € + 45 €. Hjá Dev er það 345 €, sem er 300 € + 45 €. Dragðu frá það sem hver og einn greiddi og staðan kemur í ljós. Ana greiddi 2.100 €, svo hún á inni 1.375 €. Ben greiddi 240 € og skuldar 485 €. Dev greiddi 180 € og skuldar 165 €. Chloe greiddi ekkert og skuldar 725 €. Ef ekkert yrði gert myndu þessar skuldir rata sex leiðir um hópinn. Side Badger leggur þess í stað til þrjár greiðslur, allar til Ana. Borgaðu henni eins og þér hentar, veldu svo **Gera upp** og notaðu **Skrá uppgjör** fyrir hverja greiðslu, svo staðan uppfærist. Hnapparnir fyrir fljótlegt uppgjör fylla út upphæðina. Meira um [uppgjör](page:feature/settle-up)."
+  - heading: "Þegar orlofshúsið er ekki eitt snyrtilegt verð"
+    items:
+      - "**Herbergin eru ólík.** Ef svítan er meira virði en kompan skaltu fyrst koma þér saman um hvað hvert herbergi kostar og reikna svo gistinæturnar herbergi fyrir herbergi. Skráðu orlofshúsið sem eitt útgjald með heildarupphæð hvers og eins, eða eitt útgjald fyrir hvert herbergi. Hvort sem er verða nákvæmu upphæðirnar á útgjaldi að ná heildarupphæð þess."
+      - "**Innborgun sem greidd var mörgum mánuðum fyrr.** Sá sem greiddi hana fær sitt eigið útgjald, dagsett daginn sem hann greiddi. Skiptu því eftir nóttum í sömu hlutföllum og eftirstöðvunum."
+      - "**Bókunin er í öðrum gjaldmiðli.** Skráðu orlofshúsið í gjaldmiðlinum sem þú greiddir í. Ef hópurinn umreiknar jafnóðum skaltu nota núverandi gengi, eða slá inn gengið sem þú fékkst í raun. Upphaflega upphæðin helst á útgjaldinu. [Margir gjaldmiðlar](page:feature/multiple-currencies) fara nánar í það."
+      - "**Hlutar úr nótt.** Einhver kemur á miðnætti, einhver fer fyrir morgunmat. Komið ykkur saman um eina reglu til að telja nætur og notið hana fyrir alla."
+  - heading: "Það sem Side Badger gerir ekki hér"
+    items:
+      - "Það telur ekki næturnar fyrir þig. Það er engin skipting eftir nóttum eða hlutum, svo þú reiknar hverja upphæð eins og hér að ofan og skráir **nákvæmar upphæðir**."
+      - "Það flytur ekki peninga. Borgið hvert öðru eins og ykkur hentar og skráið greiðsluna svo."
+      - "Það leyfir einn greiðanda á hvert útgjald. Ef tveir borguðu fyrir orlofshúsið skaltu skrá tvö útgjöld."
+      - "Það er enginn gestaaðgangur. Allir í hópnum, Dev meðtalinn, þurfa ókeypis aðgang."
+exampleAfter: 2
+example:
+  heading: "Orlofshúsið, bíllinn og innkaupin"
+  currency: EUR
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: chloe
+      name: Chloe
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "sex nætur í orlofshúsinu"
+      payer: ana
+      amount: 2100
+      split:
+        method: exact
+        shares:
+          ana: 600
+          ben: 600
+          chloe: 600
+          dev: 300
+    - label: "bílaleigubílinn"
+      payer: ben
+      amount: 240
+      split:
+        method: equal
+        shares:
+          ana: 1
+          ben: 1
+          chloe: 1
+    - label: "matvörur"
+      payer: dev
+      amount: 180
+      split:
+        method: equal
+faq:
+  heading: "Spurningar um orlofshús"
+  items:
+    - q: "Hvað ef einhver hættir við?"
+      a: "Taktu næturnar þeirra út, reiknaðu upp á nýtt og breyttu útgjaldinu fyrir orlofshúsið svo nákvæmu upphæðirnar nái aftur verðinu. Fyrri útgáfan er geymd og breytingin birtist í virkni hópsins, svo enginn breytir tölu í kyrrþey. Hver má breyta fer eftir heimildum hópsins."
+    - q: "Á sá sem bókaði að borga minna?"
+      a: "Það ákveður hópurinn. Að bóka er verk sem enginn sækist eftir og hópar eru ósammála um hvort það veiti afslátt. Hvað sem þið semjið um skaltu setja það í nákvæmu upphæðirnar og skrifa það í minnispunkt á útgjaldinu, eða í athugasemd við hliðina á því, svo enginn þurfi að muna samkomulagið."
+    - q: "Getum við skipt þrifagjaldi öðruvísi?"
+      a: "Já. Skráðu gjaldið sem sérstakt útgjald og gefðu því sína eigin skiptingu. Jafnt hentar fyrir fast gjald fyrir allt húsið. Nákvæmar upphæðir henta hópi sem vill að gjaldið fylgi nóttunum líka."

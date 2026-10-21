@@ -1,0 +1,118 @@
+# Guide 8 of the wave 2 briefs (tasks/release-2-plan.md, "Wave 2 and 3 briefs"). The worked example
+# is the brief's data; every figure in the prose comes from it or from the arithmetic shown. The
+# part-payment figures (EUR 200 now, EUR 148 left) are the brief's own, and the stray-zero check
+# is the example's EUR 348 with a zero added.
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+  - example.expenses.0.label
+meta:
+  title: Paano mag-settle up pagkatapos ng group trip | Side Badger
+  description: Mag-settle bago maghiwa-hiwalay. Sampung gusot na utang, apat na bayad na lang, itinatala habang dumarating; okay ang bahagyang bayad. May kuwenta.
+h1: Paano mag-settle up pagkatapos ng group trip
+navLabel: Settle up pagkatapos ng biyahe
+lead: Mag-settle bago maghiwa-hiwalay ang lahat. Idagdag ang huling gastos, buksan ang mga balanse ng grupo, at bayaran ang utang mo mula sa maikling listahan sa paraang gusto mo. Saka itala ang bawat bayad sa Side Badger para luminis ang balanse para sa buong grupo. Para sa limang magkakaibigan at limang gastos, sampung gusot na utang ang nagiging apat na bayad.
+cta:
+  heading: Isara ang kuwenta bago dumating ang mga litrato
+  body: Gumawa ng libreng account, magsimula ng grupo para sa susunod na biyahe, at idagdag ang bawat gastos habang nangyayari. Nandiyan na ang maikling listahan ng mga bayad pagdating mo sa airport. Gusto munang makita kung [paano gumagana ang pag-settle up](page:feature/settle-up)?
+sections:
+  - heading: Limang magkakaibigan, limang gastos, isang departure lounge
+    body: Isang linggo sa baybayin sina Mo, Ines, Raf, Tess, at Uma. Si Mo ang nag-book ng apartment at bumili ng grocery, si Ines ang nagbayad sa boat trip, at si Raf ang kumuha ng malaking hapunan. Sumakay si Tess ng taxi papuntang airport kasama sina Uma at Mo, dahil tren ang sinakyan nina Ines at Raf. Naiwan sa bahay ang card ni Uma, kaya wala siyang binayaran. Limang gastos iyon at €1,700 lahat, at sa departure lounge, walang makapagsabi kung sino ang nauuna.
+  - heading: Sampung utang, apat na bayad
+    body: Pantay na hinahati sa lima ang apartment, boat trip, hapunan, at grocery. Iyon ay €200, €50, €60, at €18 bawat isa, kaya may utang sina Ines at Raf na €328 bawat isa. Pinaghahatian ng tatlo ang taxi sa €20 bawat isa, kaya may utang sina Mo, Tess, at Uma na €348. Nagbayad si Mo ng €1,090 at may utang siyang €348, kaya may makukuha siyang €742. Mas kaunti ang nabayaran ng iba kaysa sa utang nila. Kulang si Uma ng €348, si Tess ng €288, si Ines ng €78, at si Raf ng €28, na umaabot sa €742 ni Mo. Kapag direktang isa-isahin ang bawat pares, sampung hiwalay na utang ang lalabas. Apat na bayad ang iminumungkahi ng Side Badger, lahat kay Mo.
+  - heading: Mag-settle bago maghiwa-hiwalay
+    body: Ang pinakamagandang oras ay ang huling gabi o ang biyahe pauwi, habang nasa iisang lugar pa ang lahat at madaling banggitin ang €28 na utang. Idagdag muna ang bawat gastos, kasama ang taxi. Walang makakaalis sa grupo habang may utang o may sisingilin pa, kaya kailangan ding magsara ang bilang sa isang punto.
+    items:
+      - "**Tingnan ang listahan.** Buksan ang grupo at tingnan ang **Mga Balanse**. Bilang default, nakikita mo ang mga utang na kinasasangkutan mo. Piliin ang **Ipakita lahat** para makita ang listahan ng buong grupo."
+      - "**Magbayad sa paraang gusto mo.** Bank transfer, cash, utang na loob mula sa nakaraang bakasyon. Hindi inililipat ng Side Badger ang pera."
+      - "**Itala ito.** Piliin ang **Magbayad**. Sa ilalim ng **Mabilis na Kasunduan**, bawat button ay isa sa mga iminungkahing bayad mo, at pinupunan ng pagpili rito ang halaga. Magdagdag ng **Tala** gaya ng bank transfer, tingnan ang **Petsa** (hindi ito puwedeng nasa hinaharap), at piliin ang **Itala ang Kasunduan**."
+      - "**Panoorin itong luminis.** Nag-a-update ang balanse para sa lahat. Kapag pumasok na ang huling bayad, mababasa sa **Mga Balanse** ang **Bayad na lahat!**"
+  - heading: Bahagyang bayad ngayon, ang natira mamaya
+    body: Puwedeng magpadala si Uma ng €200 ngayong gabi at ang natira sa katapusan ng buwan. Itatala niya ang €200, at babalaan siya ng form na may utang pa rin siyang €148 kay Mo pagkatapos, na €348 bawas ang €200. I-save ito at mananatili ang €148 sa balanse niya hanggang maitala niya ang natira. Gumagana rin ang babala sa kabilang direksyon. Kung may naligaw na zero na gagawing €3,480 ang €348, sasabihin ng form na €348 lang ang utang niya kay Mo at lilikha ng utang sa kabilang direksyon ang pag-save. Ayusin ang zero bago mag-save.
+  - heading: Pag-aayos ng mali, at pagdiriwang ng bayad
+    items:
+      - "**Maling bayad.** Ang nagtala lang ng bayad ang puwedeng mag-edit nito. Siya o ang admin ng grupo ang puwedeng magbura nito, at saka puwede itong itala muli."
+      - "**Bayad na dapat pansinin.** Nasa ilalim ng **Mga Kasunduan** ang bawat naitalang bayad kasama ang petsa at tala, kung saan makikita ito ng lahat sa grupo at puwedeng mag-react. Puwedeng piliin ni Mo ang **Magdiwang** kapag dumating ang huling €148 ni Uma."
+      - "**Ang wakas.** Kapag zero na ang bawat balanse, puwedeng i-lock ng admin ang grupo para manatili ang mga numero."
+  - heading: Ang hindi ginagawa ng Side Badger dito
+    items:
+      - Hindi ito naglilipat ng pera. Walang payment link o payment request, kaya ang bayad sa app ay talâ ng bayad na ginawa sa ibang lugar.
+      - Hindi ito nagpapadala ng paalala. Trabaho mo pa rin ang paniningil sa late na bayad.
+      - Hindi ito nagtatakda ng deadline. Ang grupo ang magpapasya kung kailan dapat bayaran ang natitirang €148 ni Uma.
+      - Maikling listahan ang mga iminungkahing bayad, hindi pangakong pinakamaikli ito. Kinukuwenta ang mga ito sa bawat pera, kaya ang biyaheng binayaran sa euro at pounds ay may listahan para sa bawat isa.
+exampleAfter: 2
+example:
+  heading: Limang magkakaibigan sa baybayin
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: Apartment
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: Biyahe sa bangka
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: Malaking hapunan
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: Taxi papuntang airport
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: Grocery
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: Mga tanong
+  items:
+    - q: Sino ang dapat magtala ng bayad, ang nagbabayad o ang binabayaran?
+      a: Kailangan ng pahintulot na mag-edit ng mga gastos para makapagtala ng bayad, at itinatanong ng form ang **Sino ang nagbayad?** at **Sino ang tumanggap ng bayad?** Ang nagtala lang ang makakapag-edit nito mamaya, kaya kadalasang pinakamadali kung ang nagbabayad ang magtatala, gamit ang quick-settle button.
+    - q: Paano kung dalawang pera ang ginamit sa biyahe?
+      a: Magkakahiwalay ang mga balanse sa bawat pera, kaya nananatiling utang na euro ang utang na euro at may sariling maikling listahan ang bawat pera, maliban kung na-convert ang mga gastos nang ilagay ang mga ito. Ipinapakita ng [maraming pera](page:guide/how-to-split-a-trip-paid-in-several-currencies) ang dalawang paraan.
+    - q: Dapat ba kaming mag-settle habang nasa biyahe o sa dulo?
+      a: Puwede ang alinman. Binabago ng bawat naitalang bayad ang mga balanse, kaya bahagi ng huling listahan ang bayad na ginawa sa kalagitnaan ng biyahe. Mas simple sa dulo, dahil nasa iisang lugar na ang [buong biyahe](page:use-case/group-trips).

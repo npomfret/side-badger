@@ -1,0 +1,113 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Sut i setlo ar ôl taith grŵp | Side Badger"
+  description: "Setlo cyn i bawb wasgaru. Mae deg dyled gymhleth yn dod yn bedwar taliad, wedi'u cofnodi wrth iddynt lanio, ac mae taliad rhannol yn iawn. Symiau i bum ffrind."
+h1: "Sut i setlo ar ôl taith grŵp"
+navLabel: "Setlo ar ôl taith"
+lead: "Setlwch cyn i bawb wasgaru. Ychwanegwch y gost olaf, agorwch falansau'r grŵp a thalwch yr hyn sy'n ddyledus gennych o'r rhestr fer, sut bynnag y dymunwch. Yna cofnodwch bob taliad yn Side Badger fel bod y balans yn clirio i'r grŵp cyfan. Gyda phum ffrind a phum cost, mae deg dyled gymhleth yn dod i lawr i bedwar taliad."
+cta:
+  heading: "Caewch y llyfrau cyn i'r lluniau lanio"
+  body: "Creu cyfrif am ddim, cychwyn grŵp ar gyfer y daith nesaf ac ychwanegu pob cost wrth iddi ddigwydd. Mae'r rhestr fer o daliadau yn aros amdanoch erbyn i chi gyrraedd y maes awyr. Eisiau gweld [sut mae setlo'n gweithio](page:feature/settle-up) yn gyntaf?"
+sections:
+  - heading: "Pum ffrind, pum cost, un lolfa ymadael"
+    body: "Treuliodd Mo, Ines, Raf, Tess ac Uma wythnos ar yr arfordir. Archebodd Mo'r fflat a phrynu'r nwyddau bwyd, talodd Ines am y daith cwch a thalodd Raf am y swper mawr. Cymerodd Tess y tacsi i'r maes awyr gydag Uma a Mo, oherwydd bod Ines a Raf wedi mynd ar y trên. Arhosodd cerdyn Uma gartref, felly ni thalodd hi am ddim. Dyna bum cost a €1,700 i gyd, ac yn y lolfa ymadael ni allai neb ddweud pwy oedd ar y blaen."
+  - heading: "Deg dyled, pedwar taliad"
+    body: "Caiff y fflat, y cwch, y swper a'r nwyddau bwyd eu rhannu'n gyfartal bum ffordd. Mae hynny'n €200, €50, €60 a €18 yr un, felly mae ar Ines a Raf €328 yr un. Rhennir y tacsi rhwng tri am €20 yr un, felly mae ar Mo, Tess ac Uma €348. Talodd Mo €1,090 ac mae arno €348, sy'n gadael €742 yn ddyledus iddo. Talodd pawb arall lai nag y mae arnynt. Mae Uma €348 yn brin, Tess €288, Ines €78 a Raf €28, ac mae'r rheini'n adio i'r €742 sy'n ddyledus i Mo. Setlwch bob pâr o bobl yn uniongyrchol a chewch ddeg dyled ar wahân. Yn lle hynny, mae Side Badger yn awgrymu pedwar taliad, pob un i Mo."
+  - heading: "Setlwch cyn i bawb wasgaru"
+    body: "Y foment orau yw'r noson olaf neu'r daith adref, tra bo pawb yn dal mewn un lle a bod dyled €28 yn hawdd sôn amdani. Ychwanegwch bob cost yn gyntaf, y tacsi'n gynwysedig. All neb adael grŵp tra bo arian yn ddyledus ganddynt neu iddynt, felly mae'n rhaid i'r cyfrif gau ar ryw adeg beth bynnag."
+    items:
+      - "**Gwiriwch y rhestr.** Agorwch y grŵp ac edrychwch ar **Balansau**. Yn ddiofyn, rydych yn gweld y dyledion sy'n eich cynnwys chi. Dewiswch **Dangos y cyfan** i weld rhestr y grŵp cyfan."
+      - "**Talwch sut bynnag y dymunwch.** Trosglwyddiad banc, arian parod, ffafr sy'n ddyledus o'r gwyliau diwethaf. Dyw Side Badger ddim yn symud yr arian."
+      - "**Cofnodwch y taliad.** Dewiswch **Setlo**. O dan **Setlo cyflym** mae pob botwm yn un o'ch taliadau a awgrymir, ac mae dewis un yn llenwi'r swm. Ychwanegwch **Nodyn** fel “trosglwyddiad banc”, gwiriwch y **Dyddiad** (ni all fod yn y dyfodol) a dewiswch **Cofnodi Setliad**."
+      - "**Gwyliwch y balans yn clirio.** Mae'r balans yn diweddaru i bawb. Pan fydd y taliad olaf i mewn, mae **Balansau** yn dweud **Popeth wedi'i setlo!**"
+  - heading: "Talu rhan nawr, y gweddill yn ddiweddarach"
+    body: "Gall Uma anfon €200 heno a'r gweddill ar ddiwedd y mis. Mae hi'n cofnodi €200, ac mae'r ffurflen yn ei rhybuddio y bydd arni €148 i Mo o hyd wedyn, sef €348 llai €200. Cadwch y taliad ac mae'r €148 yn aros ar ei balans nes iddi gofnodi'r gweddill. Mae'r rhybudd yn gweithio'r ffordd arall hefyd. Os yw sero ychwanegol ar ddamwain yn troi €348 yn €3,480, mae'r ffurflen yn dweud mai dim ond €348 sydd arni i Mo ac y byddai cadw yn creu dyled i'r cyfeiriad arall. Cywirwch y sero cyn i chi gadw."
+  - heading: "Cywiro camgymeriadau, a dathlu taliadau"
+    items:
+      - "**Taliad anghywir.** Dim ond y person a gofnododd daliad all ei olygu. Gall y person hwnnw neu weinyddwr y grŵp ei ddileu, ac yna gellir ei gofnodi eto."
+      - "**Taliad sy'n werth sylwi arno.** Mae pob taliad a gofnodir yn eistedd o dan **Setliadau** gyda'i ddyddiad a'i nodyn, lle gall pawb yn y grŵp ei weld ac ymateb. Gall Mo ddewis **Dathlu** pan fydd €148 olaf Uma yn cyrraedd."
+      - "**Y diwedd.** Gyda phob balans ar sero, gall gweinyddwr gloi'r grŵp fel bod y rhifau'n aros yn eu lle."
+  - heading: "Beth nad yw Side Badger yn ei wneud yma"
+    items:
+      - "Dyw e byth yn symud arian. Does ganddo ddim dolenni talu na cheisiadau am daliad, felly cofnod o daliad a wnaed mewn man arall yw taliad yn yr ap."
+      - "Dyw e ddim yn anfon nodiadau atgoffa. Mae mynd ar ôl taliad hwyr yn dal i fod yn fater i chi."
+      - "Dyw e ddim yn gosod terfynau amser. Mater i'r grŵp yw cytuno pryd mae gweddill €148 Uma yn ddyledus."
+      - "Rhestr fer yw'r taliadau a awgrymir, nid addewid mai hon yw'r rhestr fyrraf posibl. Maent yn cael eu gweithio allan fesul arian cyfred, felly mae taith a dalwyd mewn ewros a phunnoedd yn cael rhestr ar gyfer pob un."
+exampleAfter: 2
+example:
+  heading: "Pum ffrind ar yr arfordir"
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: "Fflat"
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: "Taith cwch"
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: "Swper mawr"
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: "Tacsi i'r maes awyr"
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: "Nwyddau bwyd"
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: "Cwestiynau"
+  items:
+    - q: "Pwy ddylai gofnodi taliad, y person sy'n talu neu'r person sy'n cael ei dalu?"
+      a: "Mae cofnodi taliad angen caniatâd i olygu costau, ac mae'r ffurflen yn gofyn **Pwy dalodd?** a **Pwy dderbyniodd y taliad?** Dim ond y person a gofnododd y taliad all ei olygu'n ddiweddarach, felly mae'n symlaf fel arfer os mai'r talwr sy'n ei wneud, gan ddefnyddio'r botwm setlo cyflym."
+    - q: "Beth os oedd y daith mewn dau arian cyfred?"
+      a: "Cedwir balansau fesul arian cyfred, felly mae dyled ewro yn aros yn ddyled ewro ac mae pob arian cyfred yn cael ei restr fer ei hun, oni bai bod costau wedi'u trosi pan gawsant eu rhoi i mewn. Mae [sawl arian cyfred](page:guide/how-to-split-a-trip-paid-in-several-currencies) yn dangos y ddwy ffordd."
+    - q: "A ddylem setlo yn ystod y daith neu ar y diwedd?"
+      a: "Mae'r naill neu'r llall yn gweithio. Mae pob taliad a gofnodir yn newid y balansau, felly mae taliad a wneir hanner ffordd drwy'r daith yn cyfrif tuag at y rhestr olaf. Mae setlo ar y diwedd yn symlach, oherwydd bod [y daith gyfan](page:use-case/group-trips) mewn un lle."

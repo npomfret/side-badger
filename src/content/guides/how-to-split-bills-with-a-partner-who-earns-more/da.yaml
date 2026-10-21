@@ -1,0 +1,108 @@
+translatedFrom: "92a9bff3"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - privacy-posture.members-only
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+meta:
+  title: Del regninger med en partner, der tjener mere | Side Badger
+  description: 50/50 bliver akavet, når en af jer tjener langt mere. Del de fælles regninger efter indkomst i stedet, med regnestykket vist for to og uden regneark.
+h1: Sådan deler du regninger med en partner, der tjener mere
+navLabel: Partner, der tjener mere
+lead: Læg jeres nettoløn sammen, find hver persons andel af totalen, og rund af til hele procenter. Maya har 2.800 £ i nettoløn og Jon 1.700 £, så de deler de fælles regninger 62/38. Indtast procenterne på en fælles udgift i Side Badger, og kopiér den, hver gang den samme regning kommer rundt.
+cta:
+  heading: Lav regnestykket én gang
+  body: Opret en gratis konto, lav en gruppe til jer to, og indtast huslejen med jeres procenter. Næste måneds husleje er en kopi. Vil du have rundvisningen først? Se [sådan virker det](page:how-it-works), eller tjek [hvad gratis dækker](page:pricing).
+sections:
+  - heading: To lønninger, én lejlighed, én høflig tavshed
+    body: Maya og Jon bor sammen. Maya har en nettoløn på 2.800 £ om måneden, og Jon har 1.700 £. I to år delte de alt 50/50, fordi det var enkelt, og ingen af dem ville være den, der tog det op. Så kiggede Jon på huslejen for sig. Halvdelen af 1.400 £ er 700 £, hvilket er en fjerdedel af Mayas nettoløn og 41 % af hans. Ingen havde været uretfærdige. Ingen havde regnet efter. Mange [par](page:use-case/couples) når dertil før eller siden. Over noget takeaway blev de enige om, at de fælles regninger skulle tage nogenlunde samme bid af hver løn.
+  - heading: Metoden, med regnestykkerne vist
+    body: Fire trin, én lommeregner og en samtale, du alligevel skulle have haft.
+    items:
+      - "**Aftal, hvad der tæller som løn.** Maya og Jon bruger nettoløn, de penge, der lander i banken hver måned. Sammen er det 2.800 £ + 1.700 £ = 4.500 £."
+      - "**Find hver persons andel.** Mayas er 2.800 ÷ 4.500, hvilket er 62,2 %. Jons er 1.700 ÷ 4.500, hvilket er 37,8 %."
+      - "**Rund af til hele procenter.** 62,2 % bliver til 62, og 37,8 % bliver til 38. Med to personer runder du det ene tal af og trækker det fra 100 for at få det andet, så giver de altid 100 i alt."
+      - "**Se, hvad det betyder.** På huslejen på 1.400 £ betaler Maya 868 £ (62 %), og Jon betaler 532 £ (38 %). Det er omkring 31 % af hver persons nettoløn. Halvt og halvt ville have taget 25 % af Mayas og 41 % af Jons."
+  - heading: Sådan ser måneden ud
+    body: Maya betalte huslejen på 1.400 £, og Jon betalte de øvrige 216 £. Mayas andel af måneden er 868,00 £ + 111,60 £ + 18,00 £ = 997,60 £, og hun betalte 1.400 £, så hun har 402,40 £ til gode. Jons andel er 532,00 £ + 68,40 £ + 18,00 £ = 618,40 £, og han betalte 216 £, så han skylder 402,40 £. Side Badger foreslår én betaling, fra Jon til Maya, på 402,40 £, og når den er foretaget, registrerer I den under [gør op](page:feature/settle-up). Delt 50/50 ville den samme måned have fået Jon til at betale Maya 592,00 £.
+  - heading: Sådan sætter du det op i Side Badger
+    body: Ti minutter, hvoraf det meste går med procenterne.
+    items:
+      - "**Opret gruppen.** Vælg **Opret gruppe** på dashboardet, og navngiv den efter lejligheden. Vælg **Inviter andre**, og send Jon linket eller QR-koden. Han logger ind eller opretter en gratis konto og vælger det navn, han vil vises under i gruppen. Kun medlemmer kan se en gruppe, så den her er kun jer to."
+      - "**Tilføj huslejen.** Vælg **Tilføj udgift**. Indtast beskrivelse og beløb, og vælg Maya under **Hvem betalte?** Lad begge personer blive under **Fordel mellem**, vælg så **Procent** under **Hvordan skal det fordeles**, og skriv 62 og 38. Formularen markerer det, hvis procenterne ikke giver 100 i alt. Vælg **Gem udgift**."
+      - "**Tilføj de andre regninger.** Energi og bredbånd kommer ind på samme måde, med Jon som betaler og de samme 62 og 38. Takeawayen er sin egen udgift, hvor **Hvordan skal det fordeles** står på **Ligeligt**."
+      - "**Kopiér den næste måned.** Åbn sidste måneds husleje, og vælg **Kopier udgift**. Kopien beholder betaleren, beløbet og delingen og får dagens dato. Ret beløbet, hvis huslejen er ændret, og vælg så **Opret kopi**. Energiregningen fungerer på samme måde."
+      - "**Tjek, hvem der skylder hvem.** Afsnittet **Saldi** viser det og foreslår en kort liste over betalinger. Betal hinanden, som I vil, og registrer så betalingen under **Afregn**."
+  - heading: 50/50, efter indkomst eller regning for regning
+    body: Der er intet rigtigt svar, kun det, I begge kan leve med. Tre almindelige.
+    items:
+      - "**Halvt og halvt på alt.** Det nemmeste at føre, og det passer til par, hvis løn er tæt på hinanden."
+      - "**Efter indkomst på alt fælles.** Det, Maya og Jon gør. Én samtale, ét par procenter."
+      - "**Regning for regning.** Husleje og regninger efter indkomst, ferier og lækkerier 50/50 eller hvad I ellers aftaler, og hver regning får den regel, der passer til den."
+  - heading: Aftal, hvad der tæller som fælles
+    body: Skænderierne handler som regel om listen, ikke om procenterne. Husleje, energi, bredbånd, ugens indkøb og sofaen tæller som fælles i de fleste hjem. Mayas fitnessmedlemskab og Jons fodboldabonnement gør måske ikke. Aftal listen én gang, skriv den ned, og læg kun de fælles udgifter i gruppen.
+  - heading: Takeawayen forbliver 50/50, med vilje
+    body: Lækkerier er små og valgfrie, og ingen skal bruge en lommeregner for at bestille dumplings. I Side Badger er takeawayen bare endnu en udgift. Jon betaler 36 £, **Hvordan skal det fordeles** står på **Ligeligt**, og hver af dem skylder 18 £.
+  - heading: Når nogens løn ændrer sig
+    body: En lønforhøjelse, et nyt job eller orlov ændrer regnestykket. Regn de nye procenter ud på samme måde, og brug dem fra den næste udgift. Tidligere udgifter forbliver, som de var. Kopiér sidste måneds husleje, ret procenterne, og vælg så **Opret kopi**. Skal en udgift, der allerede er indtastet, rettes, så redigér den, hvis gruppens rettigheder tillader det, og sig det til din partner først, fordi saldiene ændres. Den tidligere version bliver gemt. Aftal, hvornår I regner om, for eksempel én gang om året, og gør op, før I skifter, så den gamle deling lukker med et rent regnskab.
+  - heading: Hvad Side Badger ikke gør her
+    items:
+      - Den spørger aldrig, hvad nogen tjener, og regner ikke procenterne ud. Du indtaster de tal, I aftalte.
+      - Den kan ikke sætte en standarddeling for hele gruppen. Procenterne sættes på hver udgift, så kopiér en, der allerede har dem.
+      - Den har ingen tilbagevendende regninger, så du kopierer sidste måneds husleje hver gang.
+      - Den flytter aldrig penge. I betaler hinanden, som I vil, og registrerer det.
+exampleAfter: 2
+example:
+  heading: En måned i Mayas og Jons lejlighed
+  currency: GBP
+  people:
+    - id: maya
+      name: Maya
+    - id: jon
+      name: Jon
+  expenses:
+    - label: huslejen
+      payer: maya
+      amount: 1400
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: energi og bredbånd
+      payer: jon
+      amount: 180
+      split:
+        method: percent
+        shares:
+          maya: 62
+          jon: 38
+    - label: takeawayen
+      payer: jon
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: Spørgsmål
+  items:
+    - q: Skal vi bruge brutto- eller nettoløn?
+      a: Det bestemmer gruppen. Nettoløn er almindeligt, fordi det er de penge, du faktisk har at bruge. Bruttoløn ser bort fra, at skat, pensionsindbetalinger og afdrag på lån tager forskellige beløb ud af forskellige lønninger. Uanset hvad I vælger, så brug det samme mål for jer begge.
+    - q: Kan Side Badger se vores indkomst?
+      a: Nej. Du indtaster kun procenter, aldrig lønninger. Procenterne er synlige for gruppens medlemmer, og for et par er det jer to.
+    - q: Kan vi sætte 62/38 én gang for alt?
+      a: Delingen sættes pr. udgift, ikke pr. gruppe. Kopiér en udgift, der allerede har 62 og 38, og ret så det, der er anderledes. [Del udgifter](page:feature/split-expenses) gennemgår de andre muligheder.

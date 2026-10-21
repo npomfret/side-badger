@@ -1,0 +1,111 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+identicalApproved:
+  - options.items.0.title
+meta:
+  title: Gruppeadministration og tilladelser til udgifter | Side Badger
+  description: Inviter med link eller QR-kode, godkend, hvem der kommer med, lav seere, sæt tilladelser, og lås gruppen, når den er færdig. Dine regler, inden for rimelighed.
+h1: "Gruppeadministration og tilladelser: dine regler, inden for rimelighedens grænser"
+navLabel: Grupper og tilladelser
+lead: Nogle grupper har brug for en kasserer. Det har Side Badger en indstilling til. Inviter folk med et link eller en QR-kode, bestem, hvem der kommer ind, og vælg, hvem der må ændre tallene. En lille vennegruppe kan ignorere det hele, for nye grupper starter helt åbne.
+cta:
+  heading: Klar til at holde orden i gruppen?
+  body: Opret en konto, start en gruppe, og send invitationslinket. Lad den stå åben, eller stram reglerne, når gruppen bliver større eller mere nøjeregnende.
+problem:
+  heading: Nogen skal holde orden i tallene
+  body: Fire bofæller kan klare sig på tillid. Tredive gæster til en bryllupsweekend kan nok ikke. Lav en gruppe til hvert hus, hver tur eller hver begivenhed, med op til 50 personer i, og hver gruppe har sine egne medlemmer, sine egne roller og sine egne regler. Dit dashboard viser dem alle på én skærm, og hvor du står i hver af dem. De fleste grupper rører aldrig ved indstillingerne. De, der gør, har som regel en person, der er velorganiseret nok til at have lyst til dem.
+workflow:
+  heading: Fra tom gruppe til låst gruppe
+  steps:
+    - title: Inviter med et link eller en QR-kode
+      body: Åbn **Inviter andre**, vælg, hvor længe linket skal gælde (15 minutter, 1 time, 1 dag eller 5 dage), og kopiér så linket, eller vis QR-koden, så folk kan scanne den. Du kan også invitere folk, du allerede deler en anden gruppe med, inde fra appen.
+      shot: S03
+      shotAlt: Invitationsdialogen med et gruppelink, dets QR-kode og valget af, hvor længe linket gælder
+    - title: Lad dem kigge, før de deltager
+      body: Alle med linket logger ind eller opretter en konto, ser en forhåndsvisning af gruppen og vælger det navn, de vil bruge i den. Så trykker de på **Deltag i gruppe**.
+      shot: S04
+      shotAlt: Forhåndsvisningen af en gruppe, vist for en person, der er logget ind, før vedkommende deltager
+    - title: Godkend, hvem der kommer med
+      body: Slå godkendelse til, så venter folk, der bruger linket, som afventende medlemmer, til en administrator lukker dem ind. Administratorer finder dem under **Afventende medlemmer** i **Sikkerhed & Tilladelser** og vælger **Godkend** eller **Afvis**. Indtil da kan en afventende person ikke se noget i gruppen.
+      shot: S14
+      shotAlt: Afventende medlemmer, der venter på, at en administrator godkender eller afviser dem
+    - title: Vælg, hvem der må ændre hvad
+      body: "Vælg **Åbent samarbejde** eller **Administreret gruppe**, eller sæt tilladelserne én ad gangen. Giv så hver person en rolle: admin, medlem eller seer. Kun administratorer kan ændre tilladelser og roller."
+      shot: S13
+      shotAlt: Gruppeindstillingernes sikkerhedsfane med de to forudindstillinger og de tilpassede tilladelser
+    - title: Lås den, når den er færdig
+      body: Når turen er slut, og tallene har sat sig, kan en administrator slå **Lås gruppe** til. Ingen kan tilføje eller ændre udgifter, registrere betalinger eller redigere lister og afstemninger, og et banner fortæller det. Ingen kan i al hemmelighed snige en sen taxa ind. Hvis der alligevel dukker en op, kan en administrator låse gruppen op.
+      shot: S15
+      shotAlt: En gruppe med banneret, der fortæller, at den er låst
+options:
+  heading: Administratorer, medlemmer og seere
+  items:
+    - title: Admin
+      body: Styrer gruppen. Administratorer godkender nye medlemmer, ændrer roller og tilladelser, kan låse gruppen og låse den op igen og kan lukke den. Den, der opretter en gruppe, starter som dens administrator, og en gruppe står aldrig uden en, fordi den sidste administrator ikke kan degraderes.
+    - title: Medlem
+      body: Deltager. Hvad et medlem kan, afhænger af gruppens tilladelser. I en gruppe med Åbent samarbejde er det næsten alt. I en Administreret gruppe kan medlemmer kun ændre de udgifter og lister, de selv har oprettet.
+    - title: Seer
+      body: Ser alt og ændrer intet. En seer kan ikke tilføje eller redigere udgifter eller lister, invitere folk, ændre indstillinger eller røre ved headerbilledet. Praktisk til den, der gerne vil følge med i tallene og lover ikke at pille ved dem.
+sections:
+  - heading: Åbent, administreret eller dine egne regler
+    body: Nye grupper starter på **Åbent samarbejde**, hvor alle kan invitere folk, ændre udgifter og redigere lister, og nye medlemmer deltager automatisk. **Administreret gruppe** er til, når nogen skal være den voksne. Du kan også sætte de syv tilladelser én ad gangen, og hvis du ændrer én i hånden, skifter gruppen til tilpasset. Uanset hvad du vælger, er det kun administratorer, der kan ændre selve tilladelserne, og hver ændring dukker op i aktivitetsfeedet. En lejlighed med [bofæller](page:use-case/housemates) kan lade alt stå åbent. En stor [begivenhed eller fest](page:use-case/events-and-celebrations) vil ofte have en Administreret gruppe, så nogen har ansvaret for, hvem der kommer med. Er det hele nyt for dig? [Sådan virker det](page:how-it-works) gennemgår hele rejsen, fra første udgift til alt er gjort op.
+    items:
+      - "**Hvem kan redigere udgifter.** Åbent samarbejde: ethvert medlem. Administreret gruppe: oprettere og administratorer."
+      - "**Hvem kan slette udgifter.** Åbent samarbejde: ethvert medlem. Administreret gruppe: oprettere og administratorer."
+      - "**Hvem kan redigere lister.** Åbent samarbejde: ethvert medlem. Administreret gruppe: oprettere og administratorer."
+      - "**Hvem kan invitere medlemmer.** Åbent samarbejde: ethvert medlem. Administreret gruppe: kun administratorer."
+      - "**Godkendelse af nye medlemmer.** Åbent samarbejde: automatisk. Administreret gruppe: admin-godkendelse påkrævet."
+      - "**Hvem kan ændre indstillinger.** Åbent samarbejde: ethvert medlem. Administreret gruppe: kun administratorer."
+      - "**Hvem kan ændre headerbilledet.** Åbent samarbejde: ethvert medlem. Administreret gruppe: kun administratorer."
+  - heading: Dit navn, dit foto, dit headerbillede
+    body: Hver gruppe har sin egen rollebesætning. Vælg det navn, folk ser i hver gruppe (2 til 50 tegn, og unikt i gruppen), og hvilket af dine profilbilleder du bruger dér. Vær **Sam** i huset og **Sam (har bilen)** på turen. Enhver, der må ændre indstillinger, kan omdøbe gruppen og redigere dens beskrivelse. Headerbilledet, en JPEG, PNG, GIF eller WebP på op til 10 MB, har sin egen tilladelse.
+  - heading: Arkiver, lås eller luk
+    body: Tre måder at lægge en gruppe væk på, fra den mindst til den mest alvorlige.
+    items:
+      - "**Arkiver** skjuler gruppen fra dit eget dashboard og ikke fra andres. Du kan stadig åbne den og bruge den som før, og **Gendan gruppe fra arkiv** henter den tilbage."
+      - "**Lås** fryser ændringer, til en administrator låser op. Alle kan stadig læse gruppen og dens historik."
+      - "**Luk** er permanent og gælder for alle. Kun en administrator kan gøre det, ved at skrive gruppens navn for at bekræfte, og ingen kan åbne gruppen igen."
+  - heading: At forlade en gruppe
+    body: Alle kan forlade en gruppe, når de har gjort op. Du kan ikke forlade den, mens du skylder eller er til gode i bare én valuta, mens et åbent spørgsmål om en udgift involverer dig, eller hvis du er den sidste administrator eller det eneste medlem. [Registrer betalingen](page:feature/settle-up), få styr på [udgiftsspørgsmålet](page:guide/what-to-do-when-someone-disputes-a-shared-expense), eller gør en anden til administrator, og gå så. For at komme tilbage skal du have en ny invitation.
+limits:
+  heading: "Inden for rimelighedens grænser: det med småt"
+  items:
+    - En gruppe rummer op til 50 personer.
+    - Kun administratorer kan ændre tilladelser og roller. Den sidste administrator kan ikke degraderes.
+    - Hvis redigering af udgifter sættes til **Kun administratorer**, betyder det også, at kun administratorer kan tilføje udgifter.
+    - En lås stopper ændringer af udgifter, nye betalinger, lister og afstemninger. Alle kan stadig læse gruppen og dens historik og reagere på betalinger.
+    - Lukning er permanent. Appen kan ikke genåbne en lukket gruppe.
+    - Et nyt invitationslink annullerer ikke de gamle. Hvert link gælder, til det udløber, så vælg et kort, hvis du er nervøs for, hvor det kan ende.
+    - Invitationer i appen viser folk fra dine 10 senest aktive grupper. Alle andre skal have linket, og hvem der må invitere, afhænger af gruppens tilladelser.
+    - For at deltage skal man have en konto, og man skal bekræfte sin e-mailadresse, før man kan tilføje noget.
+useCasesHeading: Hvor lidt orden gør godt
+faq:
+  heading: Spørgsmål
+  items:
+    - q: Kan en seer tilføje udgifter?
+      a: Nej. En seer ser alt og ændrer intet. Vedkommende kan ikke tilføje eller redigere udgifter eller lister, invitere folk eller ændre indstillinger.
+    - q: Kan nogen forlade gruppen, mens de skylder penge?
+      a: Nej. Ingen kan forlade en gruppe, mens de skylder eller er til gode i bare én valuta. Gør op først, og gå så.
+    - q: Hvad sker der, når en gruppe lukkes?
+      a: Ingen kan åbne den igen. Kun en administrator kan lukke en gruppe, vedkommende skal skrive gruppens navn for at bekræfte, og gruppen bliver utilgængelig for alle. Vil du bare stoppe ændringer, så lås den. Vil du bare have den væk fra dit eget dashboard, så arkiver den.
+    - q: Kan jeg fortryde en lås?
+      a: Ja. En administrator kan låse gruppen op, og så virker ændringer igen.
+    - q: Skal jeg godkende folk, før de deltager?
+      a: Kun hvis du vil. Nye grupper starter på Åbent samarbejde, hvor folk, der bruger linket, deltager automatisk. Slå administratorgodkendelse til, eller vælg Administreret gruppe, så venter hver person, til en administrator lukker dem ind.
+    - q: Hvor mange kan være i en gruppe?
+      a: Op til 50.

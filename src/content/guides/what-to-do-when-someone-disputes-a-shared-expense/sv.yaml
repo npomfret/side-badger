@@ -1,0 +1,102 @@
+translatedFrom: "0900d953"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: Vad du gör när någon ifrågasätter en delad utgift | Side Badger
+  description: Skippa det spetsiga meddelandet. Ifrågasätt utgiften i stället, så lämnar den allas saldon medan ni pratar. Genomgånget med 45 £ i festvin.
+h1: Vad du gör när någon ifrågasätter en delad utgift
+navLabel: Ifrågasatta utgifter
+lead: Ställ en fråga på utgiften i stället för att skicka ett spetsigt meddelande. Så länge frågan är öppen hålls hela utgiften utanför allas saldon. Prata igenom det i kommentarerna, redigera delningen om gruppen är överens och låt den som frågade, eller en administratör, stänga frågan.
+cta:
+  heading: Ställ den pinsamma frågan snyggt
+  body: Skapa ett gratis konto, starta en grupp för lägenheten och be en administratör slå på frågor om utgifter, som är avstängda tills någon gör det. Vill du ha rundturen först? Läs [hur det fungerar](page:how-it-works) eller [vad gratis omfattar](page:pricing).
+sections:
+  - heading: Tre rumskamrater och 45 £ i vin
+    body: Efter festen lägger Tom in vinet i lägenhetens grupp. Det kostade 45 £, betalades av Tom och delas lika mellan Tom, Priya och Aisha, alltså 15 £ var. Aisha dricker inte alkohol. Tom köpte det till festen, och festen var för [lägenheten](page:use-case/housemates), så han har inte gjort något fel. Aisha har inte heller fel i att fråga. Ingen här är skurk. Det handlar bara om 15 £ i vin som man är oense om och många sätt att göra det pinsamt. Ett spetsigt meddelande till hela huset är ett. En fråga på utgiften är ett mildare.
+  - heading: Vad en fråga gör
+    body: Aisha öppnar utgiften och ställer en fråga. Hela utgiften försvinner ur allas saldon, inte bara hennes andel, och inget annat påverkas. Storhandlingen (84 £) och städerskan (60 £) räknas fortfarande, vilket blir 28 £ + 20 £ = 48 £ var. Så medan vinet ligger på is är Aisha skyldig 48 £, Tom har 36 £ att få och Priya har 12 £ att få. Vad lägenheten än bestämmer om vinet ingår det i ingens saldo under tiden. Alla andra i utgiften kan också ställa en egen fråga. Vinet kommer tillbaka i saldona först när den sista öppna frågan om det är stängd, och en fråga stängs av den som ställde den eller av en administratör.
+  - heading: Prata igenom det, laga det sedan
+    body: Aishas fråga hamnar i utgiftens kommentarer, så svaren står direkt under den. [Planera tillsammans](page:feature/plan-together) har mer om kommentarer och frågor. Tom och Priya läser den och lägenheten tar ett samtal. De kommer fram till att vinet var Toms och Priyas, eftersom de drack det. En annan lägenhet kanske behåller delningen på tre eller kommer överens om något mittemellan, och det vore också helt okej. Side Badger lagrar det ni kommer överens om och har ingen åsikt om vin. Tom redigerar utgiften så att den delas lika mellan honom själv och Priya, vilket blir 22,50 £ var (45 £ ÷ 2). Aisha är inte längre med i den, så hennes fråga följer med den gamla versionen och vinet kommer tillbaka i saldona. Den tidigare versionen sparas.
+  - heading: Att läsa av resultatet
+    body: Med vinet tillbaka har Tom 58,50 £ att få, Priya är skyldig 10,50 £ och Aisha är skyldig 48 £. Side Badger föreslår två betalningar, båda till Tom. Aishas 48 £ är samma summa som hon hade medan vinet låg på is, eftersom hon inte är med i det. Priya har gått från att ha 12 £ att få till att vara skyldig 10,50 £, vilket är hennes halva av vinet på 22,50 £. Hade delningen på tre stått kvar hade Aisha varit skyldig 63 £ (28 £ + 20 £ + 15 £). Hela oenigheten gällde 15 £. Betala varandra hur ni vill och registrera sedan varje betalning under **Reglera**. [Reglera](page:feature/settle-up) tar upp resten.
+  - heading: Formulera det så att folk fortsätter prata med dig
+    body: "Aishas fråga: ”Jag drack inget av vinet. Kan vi titta på delningen?” Den är kort, den namnger utgiften och den frågar i stället för att anklaga. Några vanor hjälper."
+    items:
+      - "**Fråga om utgiften, inte personen.** ”Kan vi kolla delningen på vinet?” startar ett samtal. ”Varför har jag fått betala för ditt vin?” startar den andra sorten."
+      - "**Säg vad du skulle vilja ska hända.** ”Kan det bara vara de som drack det?” ger gruppen något att hålla med om eller svara på."
+      - "**Ge en anledning på en eller två meningar.** Fältet heter **Din fråga** och kan inte lämnas tomt."
+      - "**Håll svaren på ett ställe.** Svaren skrivs i utgiftens kommentarer, intill siffrorna de handlar om."
+  - heading: Ställ in det i Side Badger
+    items:
+      - "**Slå på frågor.** De är avstängda som standard. En administratör öppnar gruppens **Inställningar**, slår på **Tillåt frågor om utgifter** under **Funktioner** på fliken **Allmänt** och väljer **Spara**. Stänger du av det senare rensas alla öppna frågor."
+      - "**Ställ en.** Öppna utgiften och välj **Jag har en fråga** intill ditt eget namn i delningen. Skriv din anledning i **Din fråga** och välj **Jag har en fråga** igen. Bara de som ingår i utgiften kan göra detta. Utgiften visar nu märket **Ifrågasatt**."
+      - "**Hitta det som ligger på is.** I utgiftslistan visar **Endast ifrågasatt** de utgifter som har en öppen fråga."
+      - "**Laga det, om gruppen är överens.** Öppna utgiften, välj **Redigera**, ändra **Dela mellan** och välj **Uppdatera utgift**. Vem som får redigera avgörs av gruppens behörigheter."
+      - "**Stäng den, om inget behöver lagas.** Den som frågade kan använda stängknappen på sitt märke **Ifrågasatt**, som heter **Stäng frågan**, och det kan en administratör också. Utgiften kommer tillbaka i saldona när dess sista fråga är stängd."
+  - heading: När det inte är så prydligt
+    items:
+      - "**Redigeringen behåller den som frågade.** Om den som frågade fortfarande ingår i utgiften följer frågan med till den redigerade versionen och väntar på att hen, eller en administratör, stänger den. Att rätta beloppet är inte detsamma som att vara överens om att det är rättat."
+      - "**Du var inte med i utgiften.** Bara de som ingår i en utgift kan ifrågasätta den. Om något ser konstigt ut för dig, säg det i dess kommentarer eller fråga den som lade in den."
+      - "**Någon vill lämna gruppen.** En öppen fråga hindrar de som ingår i den utgiften från att lämna. Stäng frågan, eller redigera utgiften så att de inte längre ingår i den, så kan de gå."
+  - heading: Vad Side Badger inte gör här
+    items:
+      - Den avgör inte vem som har rätt. Den håller utgiften utanför saldona och sparar det ni kommer överens om.
+      - Den ber ingen godkänna utgifter innan de räknas. Bara en ifrågasatt utgift hålls tillbaka.
+      - Den kan inte hålla tillbaka en del av en utgift. Ifrågasätt den och hela utgiften lämnar saldona.
+      - Den flyttar inga pengar. Ni betalar varandra hur ni vill och registrerar det.
+exampleAfter: 3
+example:
+  heading: Lägenheten efter vinet
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: storhandlingen
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: städerskan
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: festvinet
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+faq:
+  heading: Frågor
+  items:
+    - q: Kan jag ifrågasätta bara min andel?
+      a: Nej. En fråga håller ute hela utgiften, för alla som ingår i den. Om bara delningen är fel är lösningen att redigera delningen.
+    - q: Vem kan stänga en fråga?
+      a: Den som frågade, eller en gruppadministratör. Om den som lade in utgiften inte är administratör kan hen inte stänga den å frågarens vägnar.
+    - q: Raderar en redigering av en utgift originalet?
+      a: Nej. Den tidigare versionen sparas. Vem som får redigera avgörs av gruppens behörigheter, så det är värt att säga till huset först, eftersom saldona ändras.

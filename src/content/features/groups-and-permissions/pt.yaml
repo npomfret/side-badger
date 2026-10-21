@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Administração e permissões de grupos para despesas | Side Badger"
+  description: "Convida por link ou código QR, aprova quem entra, cria visualizadores, define permissões e bloqueia no fim. O teu grupo, as tuas regras, dentro do razoável."
+h1: "Administração e permissões do grupo: as tuas regras, dentro do razoável"
+navLabel: "Grupos e permissões"
+lead: "Alguns grupos precisam de um tesoureiro. O Side Badger tem uma opção para isso. Convida pessoas com um link ou código QR, decide quem entra e escolhe quem pode alterar os números. Um grupo pequeno de amigos pode ignorar tudo isto, porque os grupos novos começam totalmente abertos."
+cta:
+  heading: "Pronto para ter um grupo em ordem?"
+  body: "Cria uma conta, começa um grupo e envia o link de convite. Deixa-o aberto, ou aperta as regras quando o grupo crescer ou ficar mais picuinhas."
+problem:
+  heading: "Alguém tem de manter os números em ordem"
+  body: "Quatro colegas de casa governam-se à base da confiança. Trinta convidados num fim de semana de casamento provavelmente não. Faz um grupo para cada casa, viagem ou evento, com até 50 pessoas, e cada grupo tem os seus próprios membros, as suas próprias funções e as suas próprias regras. O teu painel lista-os todos, com a tua situação em cada um, num só ecrã. A maioria dos grupos nunca mexe nas definições. Os que mexem costumam ter alguém organizado o suficiente para as querer."
+workflow:
+  heading: "Do grupo vazio ao grupo bloqueado"
+  steps:
+    - title: "Convida com um link ou código QR"
+      body: "Abre **Convidar outras pessoas**, escolhe quanto tempo o link deve durar (15 minutos, 1 hora, 1 dia ou 5 dias) e depois copia o link ou mostra o código QR para as pessoas o lerem. Também podes convidar, de dentro da app, pessoas com quem já partilhas outro grupo."
+      shot: S03
+      shotAlt: "A janela de convite com um link de grupo, o respetivo código QR e a escolha de quanto tempo o link dura"
+    - title: "Deixa-as espreitar antes de entrar"
+      body: "Quem tem o link inicia sessão ou cria uma conta, vê uma pré-visualização do grupo e escolhe o nome que quer usar nele. Depois carrega em **Participar no grupo**."
+      shot: S04
+      shotAlt: "A pré-visualização de um grupo, mostrada a uma pessoa com sessão iniciada antes de entrar"
+    - title: "Aprova quem entra"
+      body: "Ativa a aprovação e as pessoas que usam o link ficam como membros pendentes até um administrador as deixar entrar. Os administradores encontram-nas em **Membros pendentes**, em **Segurança**, e escolhem **Aprovar** ou **Rejeitar**. Até lá, uma pessoa pendente não vê nada no grupo."
+      shot: S14
+      shotAlt: "Membros pendentes à espera de que um administrador os aprove ou rejeite"
+    - title: "Escolhe quem pode alterar o quê"
+      body: "Escolhe **Colaboração aberta** ou **Grupo gerido**, ou define as permissões uma a uma. Depois atribui uma função a cada pessoa: administrador, membro ou visualizador. Só os administradores podem alterar permissões e funções."
+      shot: S13
+      shotAlt: "O separador de segurança das definições do grupo, com as duas predefinições e as permissões personalizadas"
+    - title: "Bloqueia quando acabar"
+      body: "Quando a viagem acabou e os números assentaram, um administrador pode ativar **Bloquear grupo**. Ninguém pode adicionar nem alterar despesas, registar pagamentos ou editar listas e sondagens, e uma faixa avisa disso. Ninguém consegue juntar um táxi de última hora às escondidas. Se aparecer mesmo um, um administrador pode desbloquear o grupo."
+      shot: S15
+      shotAlt: "Um grupo com a faixa que diz que está bloqueado"
+options:
+  heading: "Administradores, membros e visualizadores"
+  items:
+    - title: "Administrador"
+      body: "Gere o grupo. Os administradores aprovam novos membros, alteram funções e permissões, bloqueiam e desbloqueiam o grupo e fecham-no. Quem cria um grupo começa como administrador dele, e um grupo nunca fica sem nenhum, porque o último administrador não pode ser despromovido."
+    - title: "Membro"
+      body: "Participa. O que um membro pode fazer depende das permissões do grupo. Num grupo de Colaboração aberta, é quase tudo. Num Grupo gerido, os membros só podem alterar as despesas e as listas que criaram."
+    - title: "Visualizador"
+      body: "Vê tudo e não altera nada. Um visualizador não pode adicionar nem editar despesas ou listas, convidar pessoas, alterar definições nem mexer na imagem de cabeçalho. Útil para quem quer vigiar os números e promete não mexer neles."
+sections:
+  - heading: "Aberto, gerido ou com regras tuas"
+    body: "Os grupos novos começam em **Colaboração aberta**, onde todos podem convidar pessoas, alterar despesas e editar listas, e os novos membros entram automaticamente. O **Grupo gerido** é para quando alguém tem de ser o adulto da sala. Também podes definir as sete permissões uma de cada vez, e mudar uma à mão passa o grupo para personalizado. Seja qual for a escolha, só os administradores podem alterar as próprias permissões, e cada alteração aparece no histórico de atividade. Uma casa de [colegas de casa](page:use-case/housemates) pode deixar tudo aberto. Um grande [evento ou celebração](page:use-case/events-and-celebrations) costuma querer Gerido, para haver alguém a mandar em quem entra. Tudo isto é novidade para ti? [Como funciona](page:how-it-works) percorre a viagem toda, da primeira despesa até estarem quites."
+    items:
+      - "**Quem pode editar despesas.** Colaboração aberta: qualquer membro. Grupo gerido: criadores e administradores."
+      - "**Quem pode apagar despesas.** Colaboração aberta: qualquer membro. Grupo gerido: criadores e administradores."
+      - "**Quem pode editar listas.** Colaboração aberta: qualquer membro. Grupo gerido: criadores e administradores."
+      - "**Quem pode convidar membros.** Colaboração aberta: qualquer membro. Grupo gerido: apenas administradores."
+      - "**Aprovação de novos membros.** Colaboração aberta: automática. Grupo gerido: aprovação do administrador obrigatória."
+      - "**Quem pode gerir as definições.** Colaboração aberta: qualquer membro. Grupo gerido: apenas administradores."
+      - "**Quem pode alterar a imagem de cabeçalho.** Colaboração aberta: qualquer membro. Grupo gerido: apenas administradores."
+  - heading: "O teu nome, a tua foto, a tua imagem de cabeçalho"
+    body: "Cada grupo tem o seu próprio elenco. Escolhe o nome que as pessoas veem em cada grupo (2 a 50 caracteres, e único dentro do grupo) e qual das tuas fotos de perfil usas lá. Sê **Sam** em casa e **Sam (tem o carro)** na viagem. Quem puder alterar as definições pode mudar o nome do grupo e editar a descrição. A imagem de cabeçalho, um JPEG, PNG, GIF ou WebP até 10 MB, tem uma permissão só dela."
+  - heading: "Arquivar, bloquear ou fechar"
+    body: "Três maneiras de pôr um grupo de parte, da menos à mais séria."
+    items:
+      - "**Arquivar** esconde o grupo do teu próprio painel, e de mais ninguém. Ainda o podes abrir e usar como antes, e **Desarquivar grupo** traz-o de volta."
+      - "**Bloquear** congela as alterações até um administrador desbloquear. Todos continuam a poder ler o grupo e o seu histórico."
+      - "**Fechar** é permanente, e para todos. Só um administrador o pode fazer, escrevendo o nome do grupo para confirmar, e ninguém volta a poder abrir o grupo."
+  - heading: "Sair de um grupo"
+    body: "Qualquer pessoa pode sair depois de acertar as contas. Não podes sair enquanto deves ou tens dinheiro a receber, mesmo que seja só numa moeda, enquanto uma pergunta em aberto sobre uma despesa te envolver, nem se fores o último administrador ou o único membro. [Regista o pagamento](page:feature/settle-up), resolve a [pergunta sobre a despesa](page:guide/what-to-do-when-someone-disputes-a-shared-expense) ou faz de outra pessoa um administrador, e depois sai. Para voltares, vais precisar de um novo convite."
+limits:
+  heading: "Dentro do razoável: as letras pequenas"
+  items:
+    - "Um grupo comporta até 50 pessoas."
+    - "Só os administradores podem alterar permissões e funções. O último administrador não pode ser despromovido."
+    - "Definir a edição de despesas como **Apenas administradores** significa também que só os administradores podem adicionar despesas."
+    - "Um bloqueio impede alterações às despesas, novos pagamentos, listas e sondagens. Todos continuam a poder ler o grupo e o seu histórico, e a reagir a pagamentos."
+    - "Fechar é permanente. A app não tem maneira de reabrir um grupo fechado."
+    - "Criar um novo link de convite não cancela os antigos. Cada link dura até ao seu próprio prazo, por isso escolhe um curto quando tiveres receio de onde ele possa ir parar."
+    - "Os convites dentro da app listam pessoas dos teus 10 grupos ativos mais recentes. Qualquer outra pessoa precisa do link, e quem pode convidar depende das permissões do grupo."
+    - "Para entrar é preciso uma conta, e as pessoas têm de verificar o e-mail antes de poderem adicionar o que quer que seja."
+useCasesHeading: "Onde um pouco de ordem ajuda"
+faq:
+  heading: "Perguntas"
+  items:
+    - q: "Um visualizador pode adicionar despesas?"
+      a: "Não. Um visualizador vê tudo e não altera nada. Não pode adicionar nem editar despesas ou listas, convidar pessoas ou alterar definições."
+    - q: "Alguém pode sair enquanto deve dinheiro?"
+      a: "Não. Ninguém pode sair de um grupo enquanto deve ou tem dinheiro a receber, mesmo que seja só numa moeda. Acerta primeiro as contas e depois sai."
+    - q: "O que acontece quando um grupo é fechado?"
+      a: "Ninguém o pode voltar a abrir. Só um administrador pode fechar um grupo, tem de escrever o nome do grupo para confirmar, e o grupo fica indisponível para todos. Se só queres parar as alterações, bloqueia-o. Se só queres tirá-lo do teu painel, arquiva-o."
+    - q: "Posso desfazer um bloqueio?"
+      a: "Sim. Um administrador pode desbloquear o grupo e as alterações voltam a funcionar."
+    - q: "Tenho de aprovar as pessoas antes de entrarem?"
+      a: "Só se quiseres. Os grupos novos começam em Colaboração aberta, onde quem usa o link entra automaticamente. Ativa a aprovação do administrador, ou escolhe Grupo gerido, e cada pessoa espera até um administrador a deixar entrar."
+    - q: "Quantas pessoas pode ter um grupo?"
+      a: "Até 50."

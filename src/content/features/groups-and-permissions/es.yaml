@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: Administración y permisos de grupo para gastos | Side Badger
+  description: Invita con un enlace o un código QR, aprueba quién entra, crea espectadores, fija permisos y bloquea el grupo al terminar. Tus reglas, dentro de lo razonable.
+h1: "Administración y permisos del grupo: tus reglas, dentro de lo razonable"
+navLabel: Grupos y permisos
+lead: Algunos grupos necesitan un tesorero. Side Badger tiene un ajuste para eso. Invita a la gente con un enlace o un código QR, decide quién entra y elige quién puede cambiar los números. Un grupo pequeño de amigos puede ignorarlo todo, porque los grupos nuevos empiezan totalmente abiertos.
+cta:
+  heading: ¿Listo para llevar un grupo ordenado?
+  body: Crea una cuenta, empieza un grupo y envía el enlace de invitación. Déjalo abierto, o aprieta las reglas cuando el grupo crezca o se ponga más quisquilloso.
+problem:
+  heading: Alguien tiene que mantener los números en orden
+  body: Cuatro compañeros de piso pueden funcionar a base de confianza. Treinta invitados en un fin de semana de boda, probablemente no. Haz un grupo para cada casa, viaje o evento, con hasta 50 personas dentro, y cada grupo tiene sus propios miembros, sus propios roles y sus propias reglas. Tu panel los muestra todos, con tu situación en cada uno, en una sola pantalla. La mayoría de los grupos nunca toca la configuración. Los que sí lo hacen suelen tener a alguien lo bastante organizado como para querer usarla.
+workflow:
+  heading: De grupo vacío a grupo bloqueado
+  steps:
+    - title: Invita con un enlace o un código QR
+      body: Abre **Invitar a otros**, elige cuánto debe durar el enlace (15 minutos, 1 hora, 1 día o 5 días) y copia el enlace o muestra el código QR para que lo escaneen. También puedes invitar, desde la propia app, a personas con las que ya compartes otro grupo.
+      shot: S03
+      shotAlt: El cuadro de invitación con un enlace de grupo, su código QR y la opción de cuánto dura el enlace
+    - title: Que miren antes de unirse
+      body: Quien tenga el enlace inicia sesión o crea una cuenta, ve una vista previa del grupo y elige el nombre que quiere usar en él. Después pulsa **Unirse al grupo**.
+      shot: S04
+      shotAlt: La vista previa de un grupo, mostrada a una persona con la sesión iniciada antes de unirse
+    - title: Aprueba quién entra
+      body: Activa la aprobación y quienes usen el enlace esperan como miembros pendientes hasta que un administrador los deje entrar. Los administradores los encuentran en **Miembros pendientes**, dentro de **Seguridad y permisos**, y eligen **Aprobar** o **Rechazar**. Hasta entonces, una persona pendiente no puede ver nada del grupo.
+      shot: S14
+      shotAlt: Miembros pendientes esperando a que un administrador los apruebe o los rechace
+    - title: Elige quién puede cambiar qué
+      body: Elige **Colaboración abierta** o **Grupo administrado**, o fija los permisos uno a uno. Después da a cada persona un rol, que puede ser administrador, miembro o espectador. Solo los administradores pueden cambiar permisos y roles.
+      shot: S13
+      shotAlt: La pestaña de seguridad de la configuración del grupo, con los dos preajustes y los permisos personalizados
+    - title: Bloquéalo cuando haya terminado
+      body: Cuando el viaje ha acabado y los números se han asentado, un administrador puede activar **Bloquear grupo**. Nadie puede añadir ni cambiar gastos, registrar pagos ni editar listas y encuestas, y un aviso lo deja claro. Así nadie puede colar de tapadillo un taxi de última hora. Si de verdad aparece uno, un administrador puede desbloquear el grupo.
+      shot: S15
+      shotAlt: Un grupo que muestra el aviso de que está bloqueado
+options:
+  heading: Administradores, miembros y espectadores
+  items:
+    - title: Administrador
+      body: Dirige el grupo. Los administradores aprueban a los miembros nuevos, cambian roles y permisos, bloquean y desbloquean el grupo y lo cierran. Quien crea un grupo empieza como su administrador, y un grupo nunca se queda sin uno, porque al último administrador no se le puede degradar.
+    - title: Miembro
+      body: Participa. Lo que puede hacer un miembro depende de los permisos del grupo. En un grupo de Colaboración abierta es casi todo. En un Grupo administrado, los miembros solo pueden cambiar los gastos y las listas que han creado.
+    - title: Espectador
+      body: Lo ve todo y no cambia nada. Un espectador no puede añadir ni editar gastos o listas, invitar a gente, cambiar la configuración ni tocar la imagen de cabecera. Viene bien para quien quiere vigilar los números y promete no toquetearlos.
+sections:
+  - heading: Abierto, administrado o con tus propias reglas
+    body: Los grupos nuevos empiezan en **Colaboración abierta**, donde todo el mundo puede invitar a gente, cambiar gastos y editar listas, y los miembros nuevos entran automáticamente. **Grupo administrado** es para cuando alguien tiene que hacer de adulto. También puedes fijar los siete permisos uno a uno, y si cambias uno a mano, el grupo pasa a ser personalizado. Elijas lo que elijas, solo los administradores pueden cambiar los propios permisos, y cada cambio aparece en la actividad del grupo. Para [compañeros de piso](page:use-case/housemates) basta con dejarlo todo abierto. Un [evento o celebración](page:use-case/events-and-celebrations) grande suele pedir Grupo administrado, para que alguien controle quién entra. ¿Primera vez? [Cómo funciona](page:how-it-works) recorre todo el camino, del primer gasto a las cuentas saldadas.
+    items:
+      - "**Quién puede editar gastos.** Colaboración abierta: cualquier miembro. Grupo administrado: creadores y administradores."
+      - "**Quién puede eliminar gastos.** Colaboración abierta: cualquier miembro. Grupo administrado: creadores y administradores."
+      - "**Quién puede editar listas.** Colaboración abierta: cualquier miembro. Grupo administrado: creadores y administradores."
+      - "**Quién puede invitar miembros.** Colaboración abierta: cualquier miembro. Grupo administrado: solo administradores."
+      - "**Aprobación de nuevos miembros.** Colaboración abierta: automática. Grupo administrado: se requiere la aprobación de un administrador."
+      - "**Quién puede cambiar la configuración.** Colaboración abierta: cualquier miembro. Grupo administrado: solo administradores."
+      - "**Quién puede cambiar la imagen de cabecera.** Colaboración abierta: cualquier miembro. Grupo administrado: solo administradores."
+  - heading: Tu nombre, tu foto, tu imagen de cabecera
+    body: Cada grupo tiene su propio reparto. Elige el nombre que ve la gente en cada grupo (de 2 a 50 caracteres, y único dentro del grupo) y cuál de tus fotos de perfil llevas allí. Sé **Sam** en casa y **Sam (el del coche)** en el viaje. Quien pueda cambiar la configuración puede renombrar el grupo y editar su descripción. La imagen de cabecera, un JPEG, PNG, GIF o WebP de hasta 10 MB, tiene un permiso propio.
+  - heading: Archivar, bloquear o cerrar
+    body: Tres formas de dejar un grupo aparcado, de la menos a la más seria.
+    items:
+      - "**Archivar** oculta el grupo de tu panel, y del de nadie más. Puedes seguir abriéndolo y usándolo como antes, y **Desarchivar grupo** lo trae de vuelta."
+      - "**Bloquear** congela los cambios hasta que un administrador lo desbloquee. Todo el mundo puede seguir leyendo el grupo y su historial."
+      - "**Cerrar** es permanente, y para todos. Solo un administrador puede hacerlo, escribiendo el nombre del grupo para confirmar, y nadie podrá volver a abrir el grupo."
+  - heading: Salir de un grupo
+    body: Cualquiera puede salir cuando haya saldado cuentas. No puedes salir mientras debas o te deban dinero, aunque sea en una sola moneda, mientras te afecte una pregunta abierta sobre un gasto, ni si eres el último administrador o el único miembro. [Registra el pago](page:feature/settle-up), resuelve la [pregunta sobre el gasto](page:guide/what-to-do-when-someone-disputes-a-shared-expense) o nombra administrador a otra persona, y entonces vete. Para volver, necesitarás una invitación nueva.
+limits:
+  heading: "Dentro de lo razonable: la letra pequeña"
+  items:
+    - Un grupo admite hasta 50 personas.
+    - Solo los administradores pueden cambiar permisos y roles. Al último administrador no se le puede degradar.
+    - Poner la edición de gastos en **Solo administradores** también significa que solo los administradores pueden añadir gastos.
+    - Un bloqueo detiene los cambios en gastos, los pagos nuevos, las listas y las encuestas. Todo el mundo puede seguir leyendo el grupo y su historial, y reaccionar a los pagos.
+    - Cerrar es permanente. La app no tiene forma de reabrir un grupo cerrado.
+    - Crear un enlace de invitación nuevo no cancela los anteriores. Cada enlace dura hasta su propia caducidad, así que elige uno corto si te preocupa dónde pueda acabar.
+    - Las invitaciones desde la app muestran a personas de tus 10 grupos activos más recientes. Todos los demás necesitan el enlace, y quién puede invitar depende de los permisos del grupo.
+    - Para unirse hace falta una cuenta, y hay que verificar el correo electrónico antes de poder añadir nada.
+useCasesHeading: Donde un poco de orden ayuda
+faq:
+  heading: Preguntas
+  items:
+    - q: ¿Puede un espectador añadir gastos?
+      a: No. Un espectador lo ve todo y no cambia nada. No puede añadir ni editar gastos o listas, invitar a gente ni cambiar la configuración.
+    - q: ¿Puede alguien salir del grupo si debe dinero?
+      a: No. Nadie puede salir de un grupo mientras deba o le deban dinero, aunque sea en una sola moneda. Salda primero y luego vete.
+    - q: ¿Qué pasa cuando se cierra un grupo?
+      a: Nadie puede volver a abrirlo. Solo un administrador puede cerrar un grupo, tiene que escribir el nombre del grupo para confirmar y el grupo deja de estar disponible para todos. Si solo quieres detener los cambios, bloquéalo. Si solo quieres quitarlo de tu panel, archívalo.
+    - q: ¿Puedo deshacer un bloqueo?
+      a: Sí. Un administrador puede desbloquear el grupo y los cambios vuelven a funcionar.
+    - q: ¿Tengo que aprobar a la gente antes de que se una?
+      a: Solo si quieres. Los grupos nuevos empiezan en Colaboración abierta, donde quienes usan el enlace entran automáticamente. Activa la aprobación del administrador, o elige Grupo administrado, y cada persona esperará hasta que un administrador la deje entrar.
+    - q: ¿Cuánta gente puede haber en un grupo?
+      a: Hasta 50.

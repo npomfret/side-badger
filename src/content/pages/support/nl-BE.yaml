@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Hulp en ondersteuning | Side Badger"
+  description: "Wachtwoord vergeten, een link die niet werkt, een betaling verkeerd? Korte antwoorden op waar mensen in Side Badger vastlopen, en hoe je ons bereikt."
+h1: "Hulp en ondersteuning, zonder wachtmuziek"
+navLabel: "Hulp en ondersteuning"
+lead: "Korte antwoorden op waar mensen op vastlopen, van een vergeten wachtwoord tot een groep voorgoed sluiten. Elk antwoord verwijst naar de pagina die meer uitleg geeft. Staat de jouwe er niet bij? Meld het ons vanuit de app, of stuur ons een berichtje."
+cta:
+  heading: "Voor hulp gekomen, voor het verdelen gebleven?"
+  body: "Nog geen account? Start een groep, deel de link en voeg de eerste uitgave toe. Gratis, zonder advertenties en zonder dagelijkse limieten."
+groups:
+  - heading: "Inloggen"
+    items:
+      - q: "Wachtwoord vergeten?"
+        a: "Het overkomt de beste dassen. Kies **Wachtwoord vergeten?** op het scherm **Aanmelden**, vul het e-mailadres van je account in en volg dan de link in de e-mail die we je sturen om een nieuw wachtwoord te kiezen. [Zo werkt het](page:how-it-works) legt uit wat een account verder nodig heeft."
+      - q: "Ik ben geregistreerd, maar ik kan niets toevoegen. Waarom?"
+        a: "Meestal is je e-mailadres nog niet geverifieerd. Open dan de link in de verificatie-e-mail, of kies **Verificatie-e-mail opnieuw versturen** op de herinneringsbanner voor een nieuwe. Ben je wel geverifieerd, dan kan de groep vergrendeld zijn of laten de machtigingen van de groep het niet toe, en een kijker ziet alles maar verandert niets, zoals [groepen en machtigingen](page:feature/groups-and-permissions) uitlegt."
+      - q: "Hoe wijzig ik mijn e-mailadres of wachtwoord?"
+        a: "Kies in **Instellingen** voor **E-mailadres wijzigen** of **Wachtwoord wijzigen**. Beide vragen eerst om je huidige wachtwoord, en een nieuw e-mailadres moet je verifiëren via de link die we ernaartoe sturen. [Zo werkt het](page:how-it-works) behandelt accounts."
+      - q: "Kan ik inloggen met Google of Apple?"
+        a: "Nee. Je hebt enkel een e-mailadres en een wachtwoord van minstens 12 tekens nodig, en op je eigen telefoon of computer kun je **Onthoud mij** aanvinken. De pagina over de [webapp](page:feature/web-app) behandelt de rest van hoe je aan de slag gaat."
+  - heading: "Lid worden van een groep"
+    items:
+      - q: "Iemand stuurde me een uitnodigingslink. Hoe word ik lid?"
+        a: "Open de link en log dan in of maak een gratis account aan. Je ziet een voorvertoning van de groep, kiest de naam waaronder mensen je daar zien en drukt op **Lid worden van groep**. [Groepen en machtigingen](page:feature/groups-and-permissions) toont de hele weg naar binnen."
+      - q: "Er staat “Wacht op goedkeuring”. Heb ik iets fout gedaan?"
+        a: "Helemaal niet. In deze groep laat een beheerder elke persoon binnen, dus je aanvraag is naar de beheerders gegaan en je kunt pas binnenkijken als een van hen ze goedkeurt. Een vriendelijk duwtje in levenden lijve mag, en [groepen en machtigingen](page:feature/groups-and-permissions) legt de goedkeuring uit."
+      - q: "Er staat dat de link ongeldig of verlopen is."
+        a: "Uitnodigingslinks blijven geldig zo lang als de maker ervan koos, van 15 minuten tot 5 dagen. Vraag iemand uit de groep om een nieuwe link, of om de QR-code als jullie in dezelfde kamer zijn. [Zo werkt het](page:how-it-works) behandelt uitnodigingen."
+  - heading: "Uitgaven"
+    items:
+      - q: "Hoe voeg ik een uitgave toe?"
+        a: "Open de groep en kies **Uitgave toevoegen**. Geef aan waarvoor het was, hoeveel het kostte, wie betaald heeft en tussen wie het verdeeld wordt, en verdeel het dan gelijk, op exacte bedragen of op percentage. [Uitgaven verdelen](page:feature/split-expenses) loopt alle opties door."
+      - q: "Kan de huur zich elke maand herhalen?"
+        a: "Niet vanzelf, want er zijn geen terugkerende uitgaven. Open die van vorige maand en kies **Uitgave kopiëren**, en het formulier komt ingevuld, klaar voor een nieuwe datum en wat er veranderd is. [Uitgaven verdelen](page:feature/split-expenses) zegt meer over kopiëren."
+      - q: "Ik typte het verkeerde bedrag. Kan ik dat verbeteren?"
+        a: "Ja. Bewerk de uitgave, zolang de machtigingen van de groep het toelaten en de groep niet vergrendeld is. De vorige versie blijft bewaard, dus niemand moet jou op je woord geloven over wat er veranderd is, zoals [uitgaven verdelen](page:feature/split-expenses) uitlegt."
+      - q: "Een uitgave klopt volgens mij niet, en het is de mijne niet. Wat nu?"
+        a: "Kies **Ik heb een vraag** bij die uitgave en zeg waarom. Dan blijft de hele uitgave buiten ieders saldo tot degene die de vraag stelde, of een beheerder, de vraag sluit. Geen knop te zien? Enkel mensen die bij een uitgave betrokken zijn kunnen een vraag stellen, een beheerder moet eerst **Vragen over uitgaven toestaan** inschakelen in de instellingen van de groep, en voor de diplomatie is er de [gids over een betwiste uitgave](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Betalingen"
+    items:
+      - q: "Stuurt Side Badger het geld door?"
+        a: "Nee, Side Badger verplaatst nooit geld. Betaal elkaar zoals je wilt, per bankoverschrijving, cash of wat dan ook werkt, en registreer daarna de betaling zodat de saldi bijgewerkt worden. [Hoe je afrekent na een groepsreis](page:guide/how-to-settle-up-after-a-group-trip) loopt het van begin tot eind door."
+      - q: "Hoe registreer ik een betaling?"
+        a: "Kies **Vereffenen** in de groep, geef aan wie betaald heeft en wie de betaling ontving, vul het bedrag in of laat een knop van **Snelle vereffening** het invullen, en kies **Vereffening registreren**. Slechts een deel betaald? Registreer wat betaald werd en de rest blijft op het saldo staan, zoals [afrekenen](page:feature/settle-up) uitlegt."
+      - q: "Ik registreerde een betaling verkeerd. Kan ik dat herstellen?"
+        a: "Wie ze registreerde kan ze bewerken in de geschiedenis **Vereffeningen** van de groep, en die persoon of een beheerder kan ze verwijderen, waardoor ze van de saldi verdwijnt. Een betaling waarbij iemand betrokken is die de groep intussen verlaten heeft, kan niet bewerkt worden. [Afrekenen](page:feature/settle-up) behandelt de geschiedenis."
+  - heading: "Meldingen en het startscherm"
+    items:
+      - q: "Hoe schakel ik meldingen in?"
+        a: "Zet **Pushmeldingen** aan in **Instellingen** en sta ze toe wanneer je browser erom vraagt. Heeft de browser ze al geblokkeerd, sta ze dan eerst toe in de eigen instellingen ervan. Elk toestel wordt apart ingeschakeld en aflevering is niet gegarandeerd, dus beschouw een melding als een duwtje, niet als een belofte, zoals de pagina over de [webapp](page:feature/web-app) uitlegt."
+      - q: "Waarom werken meldingen niet op mijn iPhone?"
+        a: "Op een iPhone of iPad werken ze enkel in de app die aan je startscherm is toegevoegd, nooit in een browsertabblad. Voeg de app toe, open ze via het pictogram op je startscherm en schakel meldingen dan in bij **Instellingen**. [Samen plannen](page:feature/plan-together) toont waarover ze je inlichten."
+      - q: "Is er een app om te downloaden?"
+        a: "Niet uit een appstore, want Side Badger draait in je browser. Log in, volg dan **Toevoegen aan beginscherm of Dock** in **Instellingen**, en het opent als een app, in een eigen venster. De pagina over de [webapp](page:feature/web-app) heeft de stappen voor elk toestel."
+  - heading: "Verlaten, archiveren, vergrendelen en sluiten"
+    items:
+      - q: "Hoe verlaat ik een groep?"
+        a: "Reken eerst af en kies dan **Groep verlaten**. Je kunt niet vertrekken zolang je geld schuldig bent of tegoed hebt (al is het maar in één valuta), zolang een uitgave waarin je zit een openstaande vraag heeft, of als je de laatste beheerder of het enige lid bent. Terugkomen kan enkel met een nieuwe uitnodiging. [Groepen en machtigingen](page:feature/groups-and-permissions) heeft de details."
+      - q: "Hoe haal ik een oude groep van mijn dashboard?"
+        a: "Kies **Groep archiveren**. De groep verdwijnt van jouw dashboard en niet van dat van iemand anders, je kunt ze nog openen en gebruiken, en **Groep dearchiveren** brengt ze terug. [Groepen en machtigingen](page:feature/groups-and-permissions) vergelijkt archiveren, vergrendelen en sluiten."
+      - q: "De reis is voorbij. Kunnen we voorkomen dat de cijfers nog veranderen?"
+        a: "Ja. Een beheerder kan **Groep vergrendelen** inschakelen in de instellingen van de groep, en dan kan niemand uitgaven toevoegen of bewerken, nieuwe betalingen registreren of lijsten en peilingen wijzigen tot een beheerder de groep weer ontgrendelt. Iedereen kan de groep en de geschiedenis nog lezen, en er sluipt geen late taxi meer binnen, zoals [groepen en machtigingen](page:feature/groups-and-permissions) uitlegt."
+      - q: "Kan ik een groep verwijderen?"
+        a: "Een beheerder kan ze sluiten met **Groep sluiten**, nadat die de naam van de groep ter bevestiging getypt heeft. Sluiten is definitief en maakt de groep onbereikbaar voor iedereen, dus wil je ze enkel uit het zicht, archiveer ze dan. [Groepen en machtigingen](page:feature/groups-and-permissions) heeft de kleine lettertjes."
+contact:
+  heading: "Nog altijd vast?"
+  items:
+    - q: "Een bug gevonden, of wil je iets veranderd zien?"
+      a: "Meld het ons vanuit de app. Kies **Feedback** in je accountmenu, dan **Stuur feedback**, en kies **Probleem melden**, **Hulp vragen** of **Functieverzoek**. Voeg een schermafbeelding toe als dat helpt, en wanneer we antwoorden, vind je dat in hetzelfde gesprek."
+    - q: "Mail je liever?"
+      a: "Schrijf naar het adres hieronder. Zeg over welke groep het gaat, wat je deed en wat je verwachtte dat er zou gebeuren. Stoom afblazen mag; wachtwoorden niet, dus stuur nooit het jouwe."
+  emailLabel: "Mail ons op"
+  email: support@sidebadger.me

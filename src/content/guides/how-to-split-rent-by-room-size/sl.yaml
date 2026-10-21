@@ -1,0 +1,103 @@
+translatedFrom: "a2338738"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Kako deliti najemnino po velikosti sobe | Side Badger"
+  description: "Večja soba, večji delež. Skupne prostore odštej, preostanek razdeli po površini in odstotke vnesi enkrat. Račun je prikazan za tri sostanovalce."
+h1: "Kako deliti najemnino po velikosti sobe"
+navLabel: "Najemnina po velikosti sobe"
+lead: "Odloči se, koliko najemnine gre za skupne prostore, in ta del razdeli enako, preostanek pa po površini vsake spalnice. Zaokroži na cele odstotke, jih enkrat vnesi pri najemnini v Side Badgerju in strošek vsak mesec kopiraj."
+cta:
+  heading: "Najemnino vnesi enkrat"
+  body: "Ustvari brezplačen uporabniški račun, ustanovi skupino za stanovanje in vnesi najemnino z dogovorjenimi odstotki. Naslednji mesec je le kopija. Želiš najprej ogled? Poglej, [kako deluje](page:how-it-works), ali [kaj pokriva brezplačna različica](page:pricing)."
+sections:
+  - heading: "Trije ljudje, eno stanovanje, en prepir"
+    body: "Priya, Tom in Aisha si delijo stanovanje za 1.950 £ na mesec. Leto dni so najemnino delili na tri, ker je bilo tako preprosto. Potem je Aisha premerila svojo spalnico. Priyina soba meri 16 m², Tomova 12 m², Aishina pa 10 m², zato je Aisha plačevala toliko kot Priya za sobo, ki je več kot tretjino manjša. Nihče ni bil nerazumen. Nihče ni naredil računa. Ob dostavljeni hrani so se najprej dogovorili za eno pravilo. Od najemnine 40 % gre za kuhinjo, kopalnico in dnevno sobo, ki jih uporabljajo vsi trije."
+  - heading: "Metoda z izračuni"
+    body: "Štirje koraki, en meter in kalkulator v telefonu."
+    items:
+      - "**Odštej skupni del.** Skupina se dogovori, kolikšen del najemnine gre za prostore, ki jih uporabljajo vsi. Pri tem stanovanju je to 40 %, kar je 13,33 % na osebo med tremi."
+      - "**Preostanek razdeli po površini.** Drugih 60 % gre po velikosti spalnic. Spalnice skupaj merijo 38 m² (16 + 12 + 10), zato je Priyin del 60 % × 16/38, kar je 25,26 %."
+      - "**Seštej oba dela.** Priya: 25,26 % + 13,33 % = 38,6 %. Tom: 60 % × 12/38 = 18,95 %, plus 13,33 % je 32,3 %. Aisha: 60 % × 10/38 = 15,79 %, plus 13,33 % je 29,1 %."
+      - "**Zaokroži in preveri.** Cele odstotke je lažje vtipkati in se o njih prepirati, zato 38,6 % postane 39 %, 32,3 % postane 32 % in 29,1 % postane 29 %. Preveri, da je 39 + 32 + 29 enako 100. Če zaokrožitev pristane na 99 ali 101, se skupina dogovori, komu se številka premakne za eno točko."
+  - heading: "Branje stanovanjskega meseca"
+    body: "Najemnina pri 39 %, 32 % in 29 % znaša 760,50 £, 624,00 £ in 565,50 £. Priya je plačala najemodajalcu, zato ji je čez mesec dolžnih 1.142,50 £: Tom dolguje 566,00 £, Aisha pa 576,50 £. Side Badger predlaga dve plačili, obe Priyi."
+  - heading: "Nastavitev v Side Badgerju"
+    body: "En večer, večinoma porabljen za pogovor o teh 40 %."
+    items:
+      - "**Ustanovi skupino.** Na nadzorni plošči izberi **Ustvari skupino** in jo poimenuj po stanovanju. Izberi **Povabi druge** in pošlji povezavo ali kodo QR. Vsak se prijavi ali ustvari brezplačen uporabniški račun in izbere ime, pod katerim želi biti viden v tej skupini."
+      - "**Dodaj najemnino.** Izberi **Dodaj strošek**. Vnesi opis in znesek, pod **Kdo je plačal?** pa izberi osebo, ki je plačala najemodajalcu. Vse tri osebe pusti pod **Razdeli med**, nato pod **Način razdelitve** izberi **Odstotek** in vtipkaj 39, 32 in 29. Obrazec opozori, če odstotki skupaj niso 100. Izberi **Shrani strošek**."
+      - "**Dodaj račune.** Energija in internet sta ločena stroška z vsak svojim plačnikom. **Način razdelitve** pusti na **Enako**."
+      - "**Naslednji mesec ga kopiraj.** Odpri najemnino prejšnjega meseca in izberi **Kopiraj strošek**. Kopija obdrži plačnika, znesek in delitev ter prevzame današnji datum. Če se je najemnina spremenila, popravi znesek, nato izberi **Ustvari kopijo**."
+      - "**Preveri, kdo komu dolguje.** Pokaže ga razdelek **Stanja**. Plačajte si, kakor želite, nato plačilo zabeležite pod **Poravnaj**."
+  - heading: "Sobe z lastno kopalnico, shrambe in selitve"
+    items:
+      - "**Sobe z lastno kopalnico in majhne sobice.** Površina je izhodišče. Soba z lastno kopalnico je vredna več kot enako velika soba brez nje, sobica, kamor stopita postelja in en upajoč stol, pa manj. Odstotke prilagodite po dogovoru, preverite, da so še vedno skupaj 100, in končne številke zapišite tja, kjer jih vidi vse stanovanje."
+      - "**Nekdo se izseli sredi meseca.** Izračunaj, koliko je ta oseba dolžna za ta mesec, in najemnino tega meseca vnesi s **Točni zneski** namesto z **Odstotek**. Zneski morajo dati najemnino. Naredi to, preden odide. Nihče ne more zapustiti skupine, dokler komu dolguje ali mu je kdo dolžan denar, strošek, v katerem nastopa oseba, ki je odšla, pa postane samo za branje."
+      - "**Nekdo se vseli.** Ponovno izmeri, preračunaj z novimi velikostmi sob in nove odstotke uporabi od naslednje najemnine. Prejšnji meseci ostanejo, kakršni so bili."
+  - heading: "Česa Side Badger tu ne naredi"
+    items:
+      - "Ne meri vaših sob in ne izbere odstotkov. Površine in teh 40 % se dogovori skupina."
+      - "Ponavljajočih se računov nima, zato najemnino vsak mesec kopiraš."
+      - "Nikoli ne prenaša denarja in ne plačuje najemodajalca. Plačate si, kakor želite, in plačilo zabeležite."
+      - "Ne ve, kaj piše v vaši najemni pogodbi. Vodi štetje med ljudmi v skupini."
+exampleAfter: 2
+example:
+  heading: "En mesec v stanovanju"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "najemnina"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "račun za energijo"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "internet"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Vprašanja"
+  items:
+    - q: "Kaj, če ima nekdo večjo sobo, a manj svetlobe?"
+      a: "Površina je le izhodišče, zato se skupina lahko dogovori za popravek. Temni sobi odvzemi točko ali dve, ju daj drugim in preveri, da so odstotki še vedno skupaj 100. Side Badger shrani, kar se dogovorite, in o tem ne sodi."
+    - q: "Ali naj tudi račune delimo po velikosti sobe?"
+      a: "Običajno ne. Energijo in internet uporabljajo vsi, zato je enaka delitev preprostejša, kot v zgornjem primeru. Če je en sostanovalec ves dan doma, se lahko skupina dogovori drugače, na primer za točne zneske. Možnosti so opisane pri [delitvi stroškov](page:feature/split-expenses)."
+    - q: "Ali lahko delitev pozneje spremenimo?"
+      a: "Da, za nove stroške. Odstotke spremeni, ko kopiraš najemnino, in prejšnji meseci ostanejo, kakršni so bili. Če želiš popraviti pretekli strošek, ga uredi, če dovoljenja skupine to dopuščajo, in prej obvesti hišo, ker se stanja spremenijo. Prejšnja različica se ohrani."

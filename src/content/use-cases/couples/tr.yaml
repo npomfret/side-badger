@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+meta:
+  title: "Partnerinizle hesabı bölüşün: yarı yarıya ya da gelire göre | Side Badger"
+  description: "Sıkıcı masrafları, randevu gecesini üç aylık mali toplantıya çevirmeden paylaşın. Yarı yarıya, gelire göre ya da fatura fatura bölüşün; kimin kime borçlu olduğunu görün. Ücretsiz."
+h1: "Çift olarak masrafları adilce paylaşın"
+navLabel: "Çiftler"
+lead: "Sıkıcı masrafları, randevu gecesini üç aylık mali toplantıya çevirmeden paylaşın. Side Badger; bir evi, bir kanepeyi ve internet faturasını kimin ödediğine dair puslu bir anıyı paylaşan **çiftler** için kira, fatura ve alışverişin tek bir güncel sayımını tutar. Yarı yarıya, gelire göre ya da fatura fatura bölüşün; kimin kime borçlu olduğunu görün."
+cta:
+  heading: "İki kişilik bir grup kurun"
+  body: "Bir hesap oluşturun, bir grup kurun ve partnerinize davet bağlantısını gönderin. Bu akşamki paket yemek ilk harcama olabilir."
+scenario:
+  heading: "Adil olmak yarı yarıya demek zorunda değil"
+  body: "Sam ve Alex bir evi paylaşıyor. Sam daha çok kazandığı için kiranın %60'ını Sam'in, %40'ını Alex'in ödemesi konusunda anlaşmışlar. Sam ev sahibine öder, Alex alışverişi yapar ve ikisi de her şeyin dengelendiğinden oldukça emin. “Oldukça emin” bir telefon notunun kalıcı bir anlaşmazlığa dönüşme yoludur. Bu yüzden ikiniz için bir grup kurun, partnerinizin görmesini istediğiniz adı seçin ve ona davet bağlantısını ya da QR kodunu gönderin. Her masrafı olduğunda ekleyin, kimin ödediğini ve nasıl bölündüğünü söyleyin, sayımı grup tutsun. Her tatil için ayrı bir grup kurun ([grup gezileri](page:use-case/group-trips) sayfasına bakın), böylece uçak biletleri market alışverişinin dışında kalır."
+sections:
+  - heading: "Yarı yarıya, gelire göre ya da fatura fatura"
+    body: "Herkes için adil tek bir bölüşüm yok, yalnızca ikinizin de üzerinde anlaştığı var; tercihen ilk fatura gelmeden, ilk iç çekişten sonra değil. Olağan üç yol şunlar."
+    items:
+      - "**Yarı yarıya.** **Eşit**'i seçin, her biriniz yarısını öder. Gelirleriniz birbirine yakınsa ortak masraflara uyar ve hiç hesap gerektirmez."
+      - "**Gelire göre.** Biriniz daha çok kazanıyorsa, hesabı her kişinin gelen paradaki payına göre bölün. Neyin sayılacağında önce anlaşın (net maaş yaygın tercihtir), ikisini toplayın ve kendinizinkini toplama bölün. Biriniz üç kısım, diğeriniz iki kısım eve götürüyorsa bu 3 ÷ (3 + 2) = %60 eder; yani biriniz %60'ını, diğeri %40'ını öder. Tam yüzdelere yuvarlayın ve toplamın 100 olması gereken **Yüzde** altına girin. Maaşınızı girecek bir yer yok; yalnızca yüzdeleri yazarsınız."
+      - "**Fatura fatura.** Her harcamanın kendi bölüşümü vardır, böylece karıştırabilirsiniz: kira gelire göre, market alışverişi yarı yarıya ve ikinizin de ne koyacağını kendinizin seçtiği ortak bir hediye **Tam tutarlar** ile."
+      - "**Maaş değiştiğinde** bir sonraki harcamadan itibaren yeni yüzdeleri kullanın. Önceki harcamalar girildikleri bölüşümü korur. Hesapların gerçek maaş bordrolarıyla yapılışını görmek için [daha çok kazanan bir partnerle hesap nasıl bölüşülür](page:guide/how-to-split-bills-with-a-partner-who-earns-more) yazısını okuyun."
+  - heading: "Aylık özet"
+    body: "Ayda bir kez ya da rakamlar kaşındırmaya başladığında grubu açın ve **Bakiyeler**'e bakın. İkiniz olunca her para biriminde yalnızca tek bir ödeme olur: borçludan alacaklıya. Sam ve Alex'in ayını alın. Sam 1.500 £'luk kirayı ödedi ve Alex'in %40'ı 600 £. Alex eşit bölünen market için 90 £ ödedi, Sam'in yarısı 45 £. Side Badger birini diğerine karşı mahsup eder, 600 £ eksi 45 £, ve Alex Sam'e 555 £ öder. İstediğiniz gibi ödeyin; banka havalesi, nakit ya da borç bir iyilik olabilir. Sonra bakiye sıfıra dönsün diye **Ödeş** altında kaydedin. Yinelenen fatura yok; bu yüzden geçen ayın kirasını kopyalayın, tarihi değiştirin ve devam edin. Side Badger parayı taşımaz ve hatırlatıcı göndermez, dolayısıyla dürtme işi hâlâ sizde."
+  - heading: "Sadece ikiniz"
+    body: "İki kişilik bir grubun iki üyesi vardır ve bir grubu yalnızca üyeleri görebilir. Partneriniz davet bağlantısı veya QR kodla katılır. Bir bağlantı 15 dakikadan 5 güne kadar geçerli olabilir; partnerinize kullanması için zaman tanıyan en kısasını seçin. Yeni bir bağlantı oluşturmak eskilerini iptal etmez, bu yüzden onları başkalarının da olduğu bir sohbette bırakmayın. Geçerli bir bağlantıyı kullanan herkes katılabilir; emin olmak isterseniz onayı açın ve bir yönetici her kişiyi içeri alsın. Partnerinizin kendine ait bir hesabı olmalı, o da ücretsiz."
+exampleAfter: 2
+example:
+  heading: "Bu ay kim kime borçlu"
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: "Kira"
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: "Market"
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: "Bir çiftin kullandığı özellikler"
+faq:
+  heading: "Sorular"
+  items:
+    - q: "Her şey için bir kez %60/%40 ayarlayabilir miyiz?"
+      a: "Hayır. Bölüşüm her harcamaya aittir. Yüzdeleri ilkinde ayarlayın, sonra bir sonrakinde onu kopyalayıp farklı olanı değiştirin. Üç bölüşüm yolunun hepsi için [harcamaları bölüşme](page:feature/split-expenses) sayfasına bakın."
+    - q: "Bankamıza bağlanıyor mu?"
+      a: "Hayır. Side Badger paranıza hiç dokunmaz. Birbirinize istediğiniz yolla ödersiniz, sonra [hesaplaşma](page:feature/settle-up) sayfasında açıklandığı gibi kaydedersiniz."
+    - q: "Başka biri grubumuzu görebilir mi?"
+      a: "Yalnızca üyeleri, bir çiftin grubunda da iki kişi var. Geçerli bir davet bağlantısını kullanan herkes katılabilir; bu yüzden onu tek bir kişiyle paylaşın ve kısa bir süre verin."
+    - q: "Aynı faturanın bir kısmını ikimiz ayrı ödediysek?"
+      a: "Bir harcamanın tek ödeyeni vardır. İkiniz için birer tane olmak üzere iki harcama kaydedin; bakiye aynı çıkar."
+    - q: "Partnerime ödemesini hatırlatır mı?"
+      a: "Hayır. Hatırlatıcı yok, dürtme işi hâlâ sizde. En azından ikiniz de aynı rakama bakıyor olacaksınız."
+    - q: "Masrafları paylaşmayı bıraktığımızda ne olur?"
+      a: "Bakiyeyi ödeyip ödemeyi kaydedin, böylece kimse borçlu kalmaz. Sonra bir yönetici rakamları olduğu gibi tutan grubu kilitleyebilir ya da herkes için erişilemez yapan kalıcı biçimde kapatabilir. Grubu yalnızca ikinizin de geçmişe ihtiyacı kalmadığında kapatın."

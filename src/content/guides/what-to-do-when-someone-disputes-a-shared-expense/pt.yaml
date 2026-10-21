@@ -1,0 +1,102 @@
+translatedFrom: "0900d953"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-questions.question-held-out-of-balances
+  - comments.next-to-the-expense
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "O que fazer quando alguém contesta uma despesa | Side Badger"
+  description: "Dispensa a mensagem cheia de indiretas. Questiona a despesa e ela sai dos saldos de todos enquanto falam. Explicado com 45 £ de vinho de festa."
+h1: "O que fazer quando alguém contesta uma despesa partilhada"
+navLabel: "Despesas contestadas"
+lead: "Levanta uma pergunta sobre a despesa em vez de mandares uma mensagem cheia de indiretas. Enquanto a pergunta estiver aberta, a despesa inteira fica fora dos saldos de todos. Falem do assunto nos comentários, editem a divisão se o grupo estiver de acordo, e deixem que quem perguntou, ou um administrador, feche a pergunta."
+cta:
+  heading: "Faz a pergunta incómoda com educação"
+  body: "Cria uma conta grátis, começa um grupo para a casa e pede a um administrador que ative as perguntas sobre despesas, que ficam desligadas até alguém as ligar. Queres ver primeiro como funciona? Vê [como funciona](page:how-it-works) ou [o que o grátis inclui](page:pricing)."
+sections:
+  - heading: "Três colegas de casa e 45 £ de vinho"
+    body: "Depois da festa, o Tom adiciona o vinho ao grupo da casa. São 45 £, pagas pelo Tom, divididas em partes iguais entre o Tom, a Priya e a Aisha, ou seja, 15 £ cada um. A Aisha não bebe. O Tom comprou-o para a festa, e a festa foi para a [casa](page:use-case/housemates), por isso não fez nada de mal. A Aisha também não está errada em perguntar. Aqui ninguém é vilão. Há apenas 15 £ de vinho em disputa e muitas maneiras de tornar isto desconfortável. Uma mensagem cheia de indiretas para a casa é uma. Uma pergunta sobre a despesa é uma mais suave."
+  - heading: "O que faz uma pergunta"
+    body: "A Aisha abre a despesa e levanta uma pergunta. A despesa inteira sai dos saldos de todos, não só a parte dela, e mais nada é afetado. As compras grandes (84 £) e a limpeza (60 £) continuam a contar, o que dá 28 £ + 20 £ = 48 £ cada um. Por isso, enquanto o vinho está em espera, a Aisha deve 48 £, o Tom tem 36 £ a receber e a Priya tem 12 £ a receber. Seja o que for que a casa decida sobre o vinho, entretanto o saldo de ninguém o inclui. Qualquer outra pessoa na despesa também pode levantar uma pergunta sua. O vinho só volta aos saldos quando a última pergunta aberta sobre ele for fechada, e uma pergunta é fechada por quem a fez ou por um administrador."
+  - heading: "Falar sobre isto e depois corrigir"
+    body: "A pergunta da Aisha vai parar aos comentários da despesa, por isso as respostas ficam mesmo por baixo. [Planear em conjunto](page:feature/plan-together) tem mais sobre comentários e perguntas. O Tom e a Priya leem-na e a casa tem uma conversa. Decidem que o vinho era do Tom e da Priya, porque foram eles que o beberam. Outra casa podia manter a divisão por três, ou combinar algo pelo meio, e isso também estaria bem. O Side Badger guarda o que combinarem e não tem opinião sobre vinho. O Tom edita a despesa para ficar dividida em partes iguais entre ele e a Priya, o que dá 22,50 £ cada um (45 £ ÷ 2). A Aisha já não está nela, por isso a pergunta dela vai com a versão antiga e o vinho volta aos saldos. A versão anterior fica guardada."
+  - heading: "Ler o resultado"
+    body: "Com o vinho de volta, o Tom tem 58,50 £ a receber, a Priya deve 10,50 £ e a Aisha deve 48 £. O Side Badger sugere dois pagamentos, ambos para o Tom. Os 48 £ da Aisha são o valor que ela tinha enquanto o vinho esteve em espera, porque ela não está nele. A Priya passou de ter 12 £ a receber para dever 10,50 £, por causa da sua metade do vinho, 22,50 £. Se a divisão por três tivesse ficado, a Aisha deveria 63 £ (28 £ + 20 £ + 15 £). A discordância toda valia 15 £. Paguem-se como preferirem e depois registem cada pagamento em **Acertar contas**. [Acertar contas](page:feature/settle-up) explica o resto."
+  - heading: "Como dizê-lo para as pessoas continuarem a falar contigo"
+    body: "A pergunta da Aisha: “Não bebi nada do vinho. Podemos ver a divisão?” É curta, nomeia a despesa e pergunta em vez de acusar. Alguns hábitos ajudam."
+    items:
+      - "**Pergunta sobre a despesa, não sobre a pessoa.** “Podemos confirmar a divisão do vinho?” começa uma conversa. “Porque é que me cobraram o teu vinho?” começa o outro tipo."
+      - "**Diz o que gostarias que acontecesse.** “Podia ser só entre quem o bebeu?” dá ao grupo algo com que concordar ou a que responder."
+      - "**Dá uma razão numa ou duas frases.** O campo chama-se **A sua pergunta** e não pode ficar vazio."
+      - "**Mantém as respostas num só sítio.** As respostas vão para os comentários da despesa, junto dos números de que falam."
+  - heading: "Pôr isto a funcionar no Side Badger"
+    items:
+      - "**Ativa as perguntas.** Estão desligadas por defeito. Um administrador abre as **Definições** do grupo, ativa **Permitir perguntas sobre despesas** em **Funcionalidades**, no separador **Geral**, e escolhe **Guardar**. Desligá-las mais tarde limpa todas as perguntas abertas."
+      - "**Levanta uma.** Abre a despesa e, junto do teu nome na divisão, escolhe **Tenho uma pergunta**. Escreve a tua razão em **A sua pergunta** e escolhe **Tenho uma pergunta** outra vez. Só quem está na despesa o pode fazer. A despesa passa a mostrar um selo **Questionado**."
+      - "**Encontra o que está em espera.** Na lista de despesas, **Apenas questionado** mostra as despesas com uma pergunta aberta."
+      - "**Corrige, se o grupo estiver de acordo.** Abre a despesa, escolhe **Editar**, muda **Dividir entre** e escolhe **Atualizar despesa**. Quem pode editar depende das permissões do grupo."
+      - "**Fecha, se não for preciso corrigir nada.** Quem perguntou pode usar o botão de fechar no seu selo **Questionado**, com o nome **Fechar pergunta**, e um administrador também. A despesa volta aos saldos quando a sua última pergunta for fechada."
+  - heading: "Quando não é assim tão arrumado"
+    items:
+      - "**A edição mantém quem perguntou.** Se a pessoa que perguntou continuar na despesa, a pergunta passa para a versão editada e espera que ela, ou um administrador, a feche. Corrigir o valor não é o mesmo que concordar que está corrigido."
+      - "**Não estavas na despesa.** Só as pessoas numa despesa a podem questionar. Se algo te parecer estranho, di-lo nos comentários da despesa ou pergunta a quem a adicionou."
+      - "**Alguém quer sair do grupo.** Uma pergunta aberta impede que saiam do grupo as pessoas que estão nessa despesa. Fecha a pergunta, ou edita a despesa para elas já não estarem nela, e podem ir."
+  - heading: "O que o Side Badger não faz aqui"
+    items:
+      - "Não decide quem tem razão. Mantém a despesa fora dos saldos e guarda o que combinarem."
+      - "Não pede a ninguém que aprove despesas antes de contarem. Só uma despesa questionada fica em espera."
+      - "Não consegue reter parte de uma despesa. Questiona-a e ela sai toda dos saldos."
+      - "Não movimenta dinheiro. Pagam-se como preferirem e registam o pagamento."
+exampleAfter: 3
+example:
+  heading: "A casa depois do vinho"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "as compras grandes"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "a limpeza"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "o vinho da festa"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+faq:
+  heading: "Perguntas"
+  items:
+    - q: "Posso questionar só a minha parte?"
+      a: "Não. Uma pergunta retém a despesa inteira, para todos os que estão nela. Se só a divisão está errada, a solução é editar a divisão."
+    - q: "Quem pode fechar uma pergunta?"
+      a: "Quem a fez, ou um administrador do grupo. Se quem adicionou a despesa não for administrador, não a pode fechar em nome de quem perguntou."
+    - q: "Editar uma despesa apaga a original?"
+      a: "Não. A versão anterior fica guardada. Quem pode editar é decidido pelas permissões do grupo, por isso vale a pena avisar a casa primeiro, porque os saldos mudam."

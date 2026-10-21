@@ -1,0 +1,86 @@
+translatedFrom: "76cb361e"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Kalkulator najamnine: po sobi ili primanjima | Side Badger"
+  description: "Veća soba, veći udio? Izračunaj koliko plaća svaki cimer, prema veličini sobe ili primanjima. Radi u pregledniku: ništa se ne sprema niti šalje."
+h1: "Kalkulator podjele najamnine"
+navLabel: "Kalkulator podjele najamnine"
+lead: "Veća spavaća soba, veći udio? Upiši najamninu i vidi koliko plaća svaka osoba, prema veličini sobe ili primanjima, do centa. Radi u tvom pregledniku, ništa ne sprema i ne premješta novac. Kad kuća želi da se evidencija čuva, [dijeli troškove](page:feature/split-expenses) u Side Badgeru i svaki mjesec kopiraj najamninu."
+cta:
+  heading: "Dogovori postotke jednom. Kopiraj ih zauvijek."
+  body: "Ovaj kalkulator sve zaboravi čim zatvoriš karticu, baš kao cimer koji je sigurno platio internet. Grupa u Side Badgeru čuva najamninu, račune i tko je što platio. Besplatno je, bez oglasa i bez dnevnih ograničenja."
+sections:
+  - heading: "Dva načina dijeljenja najamnine"
+    items:
+      - "**Prema veličini sobe.** Dio najamnine plaća kuhinju, kupaonicu i dnevni boravak, koje svi koriste. Taj udio odabireš ti (za početak 40 %) i on se dijeli jednako. Ostatak ide prema površini spavaće sobe, pa velika soba plaća više, a sobica dobiva popust koji je zaslužila."
+      - "**Prema primanjima.** Svatko plaća onoliki dio najamnine koliki dio ukupnih primanja zarađuje. Dodaš li zajedničke račune, oni slijede iste udjele."
+  - heading: "Kako funkcionira računica"
+    body: "Svaka osoba dobiva točan udio, a zatim cijeli postotak, jer se cijeli brojevi lakše upisuju i lakše se oko njih svađa. Zaokruživanje je metoda najvećeg ostatka: svatko zadrži cijeli broj ispod svog udjela, a preostali postotni bodovi idu onome tko je najviše izgubio. Postoci uvijek daju ukupno 100. U stanu ispod zajedničkih 40 % je po 13,33 % svakome. Priyina soba je 16 od 38 m² stana, pa je 60 % × 16/38 jednako 25,26 %, plus 13,33 % daje 38,6 %, što se zaokružuje na 39 %. Tom i Aisha dobivaju 32 % i 29 %, a 39 + 32 + 29 je 100. Svaki iznos je taj postotak najamnine: 39 % od 1.950 £ je 760,50 £."
+  - heading: "Zatim to upiši u Side Badger"
+    body: "Cijelu priču, s metrom u ruci, pročitaj u vodiču [kako podijeliti najamninu prema veličini sobe](page:guide/how-to-split-rent-by-room-size), a za parove pročitaj o [partneru koji zarađuje više](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+    items:
+      - "**Dodaj najamninu.** U svojoj grupi odaberi **Dodaj trošak**, u polju **Tko je platio?** odaberi tko je platio stanodavcu, a u polju **Podijeli između** ostavi sve."
+      - "**Odaberi Postotak.** U polju **Kako podijeliti** odaberi **Postotak** i upiši cijele postotke. Obrazac te upozori ako ne daju ukupno 100."
+      - "**Kopiraj ga sljedeći mjesec.** Otvori prošlomjesečnu najamninu i odaberi **Kopiraj trošak**. Podjela dolazi s njom."
+  - heading: "Što kalkulator ne radi"
+    items:
+      - "**Ne mjeri tvoje sobe.** Površina je polazna točka. Soba s vlastitom kupaonicom vrijedi više od iste površine bez nje, a sobica u koju stane krevet i jedna optimistična stolica vrijedi manje."
+      - "**Ne odlučuje što se računa kao primanje.** Neto ili bruto, plaća ili honorarni posao: odlučuje grupa. Za sve koristi isto razdoblje."
+      - "**Ništa ne sprema.** Zatvori karticu i brojke nestaju. Da ih zadržiš, kopiraj poveznicu. Ona sadrži tvoje brojke iza znaka #, koji preglednici nikad ne šalju poslužitelju, a svatko tko je ima može ih pročitati."
+      - "**Ne premješta novac.** Stanodavcu plaćaš kako god želiš."
+      - "**Ne miješa valute i ne prelazi ograničenja.** Odaberi jednu valutu. Prima od 2 do 10 osoba i najamninu do 999.999,99, kao i u aplikaciji."
+exampleAfter: 2
+example:
+  heading: "Jedan stan, jedan mjesec"
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "najamnina"
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: "račun za energiju"
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: "internet"
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: "Pitanja"
+  items:
+    - q: "Što je pravednije, veličina sobe ili primanja?"
+      a: "Nijedno nije uvijek pravednije. Veličina sobe odgovara cimerima koji plaćaju prostor u kojem spavaju. Primanja odgovaraju parovima i prijateljima s vrlo različitim plaćama. Dogovorite se prije prvog dana najamnine, a ne poslije."
+    - q: "Treba li račune dijeliti na isti način?"
+      a: "Za cimere obično ne. Svi koriste energiju i internet, pa je jednako jednostavnije, kao u primjeru. Pri podjeli prema primanjima kalkulator računima daje iste udjele kao i najamnini."
+    - q: "Mogu li koristiti kvadratne stope?"
+      a: "Da. Odaberi ft² i upiši površine u kvadratnim stopama. Jedinica je samo oznaka, a udjeli ispadnu isti sve dok svi koriste istu jedinicu."
+    - q: "Je li kalkulator besplatan?"
+      a: "Da. Besplatan je. Bez oglasa. Bez dnevnih ograničenja. Ni korisnički račun ti ne treba."

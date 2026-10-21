@@ -1,0 +1,108 @@
+translatedFrom: "6c8b8630"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - privacy-posture.members-only
+  - privacy-posture.no-ads
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - polls.villa-shortlist-vote
+  - permissions.viewer-sees-everything
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.expenses.3.label
+  - faq.heading
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Partager les frais d'un week-end d'EVG ou d'EVJF | Side Badger"
+  description: "La personne fêtée ne paie rien et tout le monde se parle encore lundi. Comment partager un week-end d'EVG ou d'EVJF, calculs compris."
+h1: "Comment partager les frais d'un week-end d'EVG ou d'EVJF"
+navLabel: "Week-end d'EVG ou d'EVJF"
+lead: "La personne fêtée ne paie rien, donc les autres partagent chaque coût [à parts égales](page:feature/split-expenses) entre eux. Laissez de côté ceux qui sautent un coût, et gardez la personne fêtée en dehors du groupe pour que la surprise tienne."
+cta:
+  heading: "Gardez le compte, gardez la surprise"
+  body: "Faites un groupe, envoyez le lien à tout le monde sauf à la personne fêtée et ajoutez chaque coût au fur et à mesure. Side Badger est gratuit, sans publicité et sans limite quotidienne."
+sections:
+  - heading: "Quatre amis et une surprise"
+    body: "Hannah, Isla, Jess et Kat emmènent Grace en week-end pour son enterrement de vie de jeune fille. Grace est la personne fêtée, donc elle ne paie rien. Elle n'est pas non plus dans le groupe, donc elle ne peut pas voir ce que ses amis dépensent pour elle. Hannah réserve le cottage, Isla paie la journée au spa, Jess règle le dîner et Kat prend le taxi. Le dimanche, chacun a payé quelque chose, et personne ne sait dire qui est en avance. Les calculs sont les mêmes pour un EVG ou un EVJF, quelle que soit la personne fêtée."
+  - heading: "Divisez par ceux qui paient, pas par ceux qui sont là"
+    body: "La part de la personne fêtée ne disparaît pas. Elle est répartie. Le cottage coûte 720 £ et quatre amis le paient, donc c'est 180 £ chacun, et la place de Grace est déjà dans ce chiffre. Le dîner fait 260 £, donc 65 £ chacun. Le taxi fait 44 £, donc 11 £ chacun. Tout ce que quelqu'un saute est retiré de cette dépense seulement. Kat saute le spa, donc les 360 £ du spa, qui couvrent aussi la place de Grace, sont partagés entre Hannah, Isla et Jess à 120 £ chacun. Additionnez tout et Hannah, Isla et Jess doivent chacun 376 £ du week-end, et Kat doit 256 £."
+  - heading: "Mettre tout en place dans Side Badger"
+    items:
+      - "Faites un groupe pour le week-end et donnez-lui un nom terne, comme Week-end au cottage. Grace n'en est pas membre, et seuls les membres d'un groupe peuvent le voir."
+      - >-
+        Choisissez **Inviter d'Autres** et envoyez le lien, ou montrez le code QR, uniquement là où Grace ne le verra pas. Le lien affiche un aperçu du groupe avant que quiconque le rejoigne. Choisissez combien de temps il reste valable, de 15 minutes à 5 jours. Un ancien lien continue de fonctionner jusqu'à son expiration, donc ne le laissez pas plus longtemps que nécessaire.
+      - >-
+        Pour chaque coût, choisissez **Ajouter Dépense**, saisissez le montant et choisissez le payeur sous **Qui a payé ?** Sous **Divisé entre**, cochez les personnes qui paient, en laissant de côté celles qui l'ont sauté, comme Kat pour le spa. Choisissez **Égal** sous **Comment diviser**.
+      - >-
+        Au retour, ouvrez les **Soldes** du groupe. Side Badger montre qui doit quoi à qui et suggère une courte liste de paiements. Ici, il y en a trois : Kat paie 212 £ à Hannah, Jess paie 116 £ à Hannah et Isla paie 16 £ à Hannah. Remboursez-vous comme vous voulez, puis utilisez **Régler** pour enregistrer chaque paiement.
+  - heading: "Avant de réserver, un budget et un acompte"
+    body: "Convenez du budget avant que quiconque réserve. Choisissez **Ajouter Sondage**, demandez ce que le groupe dépensera pour le cottage et proposez quelques chiffres comme options. Activez **Vote anonyme** à la création, pour masquer qui a voté quoi, afin que personne n'ait à défendre un budget plus petit à voix haute. Fermez le sondage une fois que tout le monde a voté et que le gagnant s'affiche. Vient ensuite l'acompte. Celui qui réserve le paie et l'ajoute comme dépense, partagée à parts égales, et le solde est saisi comme seconde dépense à son échéance. Les autres peuvent envoyer leur part tout de suite et enregistrer le paiement, ou attendre le compte final. Les soldes sont les mêmes dans les deux cas."
+  - heading: "Quand quelqu'un vient pour une seule nuit"
+    body: "Un ami qui ne débarque que pour le samedi ne devrait pas payer le vendredi. Laissez-le de côté pour les coûts auxquels il n'a pas pris part. Quand le coût dépend de la durée de séjour de chacun, comme une chambre, choisissez **Montants exacts** sous **Comment diviser** et saisissez la part de chacun, qui doit égaler le total. Calculez d'abord un prix par personne et par nuit, puis multipliez par le nombre de nuits de chacun. La page [voyages en groupe](page:use-case/group-trips) en dit plus sur les coûts qui ne sont pas les mêmes pour tous."
+  - heading: "Ce que Side Badger ne fait pas ici"
+    items:
+      - "Il ne fait jamais circuler l'argent. Vous vous payez par virement, en espèces ou comme ça vous arrange, puis vous enregistrez le paiement pour que les soldes se mettent à jour pour tout le monde."
+      - "Il n'envoie pas de rappels de paiement. Un petit mot amical dans le fil de discussion reste l'affaire d'un humain."
+      - "Chaque dépense a un seul payeur, et Side Badger ne peut pas partager un reçu ligne par ligne. Si deux cartes ont payé le cottage, saisissez-le en deux dépenses. Si certains ont commandé des extras au dîner, saisissez les extras comme leur propre dépense."
+      - "Il tient les comptes, pas le programme. Les sondages et les commentaires restent sur les coûts, donc le programme du week-end reste dans votre fil de discussion."
+exampleAfter: 2
+example:
+  heading: "L'EVJF de Grace, partagé en quatre"
+  currency: GBP
+  people:
+    - id: hannah
+      name: Hannah
+    - id: isla
+      name: Isla
+    - id: jess
+      name: Jess
+    - id: kat
+      name: Kat
+  expenses:
+    - label: "Le cottage"
+      payer: hannah
+      amount: 720
+      split:
+        method: equal
+    - label: "Journée au spa"
+      payer: isla
+      amount: 360
+      split:
+        method: equal
+        shares:
+          hannah: 1
+          isla: 1
+          jess: 1
+    - label: "Dîner"
+      payer: jess
+      amount: 260
+      split:
+        method: equal
+    - label: Taxi
+      payer: kat
+      amount: 44
+      split:
+        method: equal
+faq:
+  heading: Questions
+  items:
+    - q: "Le témoin ou la demoiselle d'honneur paient-ils plus ?"
+      a: "Seulement si le groupe est d'accord. L'appli ne donne aucun rôle spécial à personne dans les calculs. Si quelqu'un prend en charge davantage, choisissez **Montants exacts** ou **Pourcentage** sous **Comment diviser** et saisissez les parts convenues."
+    - q: "Et les boissons que certains n'ont pas prises ?"
+      a: "Ajoutez les boissons comme leur propre dépense et cochez seulement ceux qui en ont pris. Si chacun en a pris une quantité différente, choisissez **Montants exacts** et saisissez la part de chacun. Personne ne paie ce qu'il n'a pas pris."
+    - q: "La personne fêtée peut-elle voir le groupe plus tard ?"
+      a: "Oui, une fois la surprise passée. Invitez-la, puis un admin peut lui donner le rôle de **Spectateur** sous **Sécurité & Permissions** dans les paramètres du groupe. Un spectateur voit tout et ne change rien, donc attendez qu'il n'y ait plus de secret. Elle a besoin d'un compte gratuit pour rejoindre le groupe."

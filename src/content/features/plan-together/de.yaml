@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: Listen, Umfragen und Kommentare für Gruppenkosten | Side Badger
+  description: Ausgaben kommentieren, die seltsame hinterfragen, eine gemeinsame Liste führen und über die Villa abstimmen. Erst planen, dann teilen. Kostenlos, ohne Werbung.
+h1: Gemeinsam planen, danach teilen
+navLabel: Gemeinsam planen
+lead: Die Einkaufsliste und die Einkaufsrechnung reden endlich miteinander. Side Badger gibt deiner Gruppe einen Ort, um über das Geld zu sprechen, bevor und nachdem es ausgegeben ist, mit Kommentaren an jeder Ausgabe, einer Möglichkeit, Ausgaben zu hinterfragen, die falsch aussehen, sowie gemeinsamen Listen und Umfragen für die großen Entscheidungen. Danach [teilst du Ausgaben](page:feature/split-expenses) wie gewohnt.
+cta:
+  heading: Erst planen, dann teilen
+  body: Erstelle ein kostenloses Konto, starte eine Gruppe und leg die erste Liste, Umfrage oder Frage direkt neben das Geld. Unsicher, was dann passiert? Lies [so funktioniert es](page:how-it-works).
+problem:
+  heading: Der Chat ist hier, die Rechnung ist dort
+  body: "Gruppenausgaben leben meist an zwei Orten. Die Zahlen stehen an einem, und der Streit über die Zahlen steht in einem Chat, der am Dienstag weggescrollt ist. Die Einkaufsliste ist das Foto eines Kühlschranks. Die Villa wurde per Daumen hoch von den meisten beschlossen, vermutlich. Side Badger hält die Planung in der Gruppe, neben den Ausgaben, um die es geht: ein Kommentar dort, wo die Kosten sind, eine Liste dort, wo der Einkauf ist, eine Umfrage für die große Entscheidung und eine Möglichkeit, „Moment, stimmt das so?“ zu sagen, ohne einen Absatz zu schreiben. Alles bleibt beim Geld der Gruppe, wofür die Gruppe ja da ist."
+workflow:
+  heading: Von der Villa-Abstimmung bis zur Einkaufsrechnung
+  steps:
+    - title: Lass über die große Entscheidung abstimmen
+      body: Füge eine Umfrage für die Entscheidung hinzu, die die Rechnung bestimmt, etwa welche Villa. Wähle zwei bis zehn Optionen, lege fest, wie viele Stimmen jede Person hat, und schließe sie, wenn alle abgestimmt haben. Dann ist die Gewinneroption markiert.
+      shot: S17
+      shotAlt: Eine geschlossene Umfrage mit markierter Gewinneroption und der Stimmenzahl neben jeder Option
+    - title: Schreibt die Einkaufsliste gemeinsam
+      body: Starte eine gemeinsame Liste, füge die Posten hinzu und hake sie ab, wenn sie im Einkaufswagen landen. Der Einkauf kommt danach als Ausgabe dazu.
+      shot: S16
+      shotAlt: Eine gemeinsame Einkaufsliste mit einigen abgehakten Posten und einem Fortschrittszähler
+    - title: Rede über die Kosten dort, wo sie stehen
+      body: Kommentiere die Ausgabe selbst, hänge den Beleg an und reagiere mit einem Emoji. Das Gespräch bleibt neben der Zahl, um die es geht.
+      shot: S08
+      shotAlt: Eine Ausgabe mit ihren Details, einer Belegvorschau, einem Kommentarverlauf und Emoji-Reaktionen
+    - title: Hinterfrage die Ausgabe, die komisch aussieht
+      body: Wenn die Gruppe Ausgabenfragen eingeschaltet hat, kann jede an einer Ausgabe beteiligte Person **Ich habe eine Frage** wählen. Die Ausgabe bleibt aus den Salden, bis die Frage geklärt ist.
+      shot: S18
+      shotAlt: Die Ausgabenliste mit einem Abzeichen „Hinterfragt“ und dem Filter „Nur hinterfragt“
+    - title: Sieh, was sich geändert hat und wer es geändert hat
+      body: Der Aktivitätsverlauf und die Benachrichtigungsglocke zeigen, was in deinen Gruppen neu ist. Push-Benachrichtigungen gibt es, wenn du sie willst.
+      shot: S19
+      shotAlt: Das Benachrichtigungs-Dropdown mit einer Liste der letzten Aktivitäten
+options:
+  heading: Optionen
+  items: []
+example:
+  heading: Drei Mitbewohner, eine hinterfragte Weinrechnung
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: der große Einkauf
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: die Putzhilfe
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: der Partywein
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: Kommentare und Reaktionen, direkt neben den Zahlen
+    body: Jede Ausgabe hat ihren eigenen Kommentarverlauf, ebenso die Gruppe, jede Liste und jede Umfrage. Frag direkt unter dem Taxi, warum es so viel gekostet hat, nicht in einem Chat, den niemand zurückscrollt. Füge ein Foto des Belegs oder ein PDF der Buchung hinzu und reagiere dann auf Ausgaben, Zahlungen und Kommentare mit Daumen hoch, Herz, Lachen, Wow, Traurig oder Feiern. Feiere eine Zahlung, wenn sie eintrifft. Näher kommt Side Badger einem Applaus nicht.
+  - heading: Eine Ausgabe hinterfragen, ohne Streit anzufangen
+    body: Wenn die Gruppe Ausgabenfragen eingeschaltet hat, kann jede an einer Ausgabe beteiligte Person **Ich habe eine Frage** wählen und sagen, warum. Die Frage erscheint als Kommentar an der Ausgabe, die Ausgabe bekommt ein Abzeichen **Hinterfragt**, und die ganze Ausgabe fällt aus den Salden aller heraus, bis die Frage geklärt ist.
+    items:
+      - "**Einschalten.** Standardmäßig ist es aus. Ein Admin schaltet **Fragen zu Ausgaben erlauben** in den Einstellungen der Gruppe unter **Funktionen** ein."
+      - "**Schließen.** Die Person, die gefragt hat, oder ein Admin wählt **Frage schließen**. Haben mehrere Personen dieselbe Ausgabe hinterfragt, kommt sie wieder in die Salden, sobald die letzte Frage geschlossen ist."
+      - "**Bearbeiten.** Wird eine Ausgabe bearbeitet, geht eine offene Frage auf die neue Version über, und zwar für alle, die noch einen Anteil daran haben. Wer durch die Bearbeitung herausfällt, dessen Frage endet mit der alten Version, für diese Person bleibt also nichts mehr zu schließen."
+      - "**Finden.** Die Ausgabenliste hat den Filter **Nur hinterfragt**. Das ist kein Freigabeschritt: Nur die Ausgaben, die jemand hinterfragt, werden zurückgehalten, alles andere zählt, sobald es hinzugefügt ist."
+  - heading: So läuft eine Frage ab
+    body: Tom fügt Partywein für 45 £ hinzu, auf alle drei Mitbewohner geteilt. Aisha hat nichts getrunken und stellt deshalb eine Frage, und solange sie offen ist, zählt der Wein für niemanden. Das Haus einigt sich, dass der Wein Tom und Priya gehört, also ändert Tom die Aufteilung auf die beiden. Aisha ist nicht mehr an der Ausgabe beteiligt, ihre Frage endet daher mit der früheren Version, die erhalten bleibt, und der Wein kehrt sofort in die Salden zurück, mit je 22,50 £ statt je 15 £. Wäre Aisha in der Ausgabe geblieben, wäre ihre Frage auf die neue Version übergegangen und hätte darauf gewartet, dass sie oder ein Admin sie schließt. Unten setzen sich Aishas 48 £ aus 28 £ vom Einkauf und 20 £ von der Putzhilfe zusammen, und Priyas 10,50 £ sind ihr Anteil von 70,50 £ (28 £, 20 £ und 22,50 £) abzüglich der 60 £, die sie gezahlt hat. Ein typischer Streit unter [Mitbewohnern](page:use-case/housemates). Wie du eine Frage formulierst, steht unter [was tun, wenn jemand eine gemeinsame Ausgabe anzweifelt](page:guide/what-to-do-when-someone-disputes-a-shared-expense).
+  - heading: Gemeinsame Listen für den Einkauf
+    body: Starte in der Gruppe eine Liste, nenn sie etwa Einkaufsliste, füge Posten hinzu und hake sie ab. Zieh Posten in eine bessere Reihenfolge, sieh zu, wie der Fortschrittszähler steigt, und kommentiere die Liste, wenn jemand die falsche Hafermilch kauft. Archiviere eine fertige Liste, um sie wegzuräumen (**Archivierte anzeigen** holt sie zurück), oder kopiere eine Liste, um sie wiederzuverwenden. Halte die gemeinsame Einkaufsliste neben den Einkaufsrechnungen, damit die Liste sagt, was zu kaufen ist, und die Ausgabe, was es gekostet hat. Wer Listen erstellen und bearbeiten darf, hängt von den Berechtigungen der Gruppe ab, die [Gruppen und Berechtigungen](page:feature/groups-and-permissions) erklärt.
+  - heading: Umfragen, auf Wunsch anonym
+    body: Frag die Gruppe etwas, das die Rechnung bestimmt, etwa welche Villa, wie viel das Geschenk kosten darf oder ob sich die Bootsfahrt lohnt. Eine Umfrage hat eine Frage und zwei bis zehn Optionen. Du legst fest, wie viele Stimmen jede Person hat, von einer einzigen Wahl bis zu zehn, und ob die Abstimmung anonym ist. **Anonyme Abstimmung** verbirgt, wer für was gestimmt hat, und lässt sich nicht mehr ändern, sobald die erste Stimme abgegeben ist. Alle können ihre Stimme ändern oder zurückziehen, bis die Umfrage geschlossen wird, und du kannst sie wieder öffnen, wenn die Gruppe es sich anders überlegt. Die Villa auszusuchen ist genau das, woraus [Gruppenreisen](page:use-case/group-trips) gemacht sind, und das Geschenkbudget abzustimmen ist ein Klassiker bei [Events und Feiern](page:use-case/events-and-celebrations).
+  - heading: Der Aktivitätsverlauf, damit sich nichts heimlich ändert
+    body: Jede Gruppe hat einen Aktivitätsverlauf, und die Benachrichtigungsglocke sammelt die Aktivität aus allen deinen Gruppen an einem Ort. Füge eine Ausgabe hinzu, und alle sehen sie sofort, ohne neu zu laden, und der Verlauf zeigt, was sich geändert hat und wer es geändert hat. Das umfasst hinzugefügte, bearbeitete oder gelöschte Ausgaben, gestellte und geschlossene Fragen, Kommentare, Änderungen an Listen und Umfragen sowie erfasste Zahlungen.
+  - heading: Push-Benachrichtigungen, wenn du sie willst
+    body: Push-Benachrichtigungen sind optional. Schalte sie in den **Einstellungen** deines Kontos unter **Benachrichtigungen** ein, und dein Gerät meldet sich, wenn es neue Aktivität in deinen Gruppen gibt, etwa eine neue Ausgabe oder einen Kommentar. Jedes Gerät wird einzeln eingeschaltet, und dein Browser fragt zuerst um Erlaubnis. Auf einem iPhone oder iPad funktionieren sie nur in der App, die zum Home-Bildschirm hinzugefügt wurde, was die Seite [Web-App](page:feature/web-app) erklärt. Sieh sie als Annehmlichkeit, nicht als Versprechen, denn die Zustellung ist nicht garantiert.
+limits:
+  heading: Grenzen
+  items:
+    - Kommentare, Listen und Umfragen sind für das Geld der Gruppe da. Die [Nutzungsbedingungen](page:terms) bitten darum, dass alles, was gepostet wird, mit den Gruppenfinanzen zu tun hat, dies ist also ein Ort, um Ausgaben zu planen, kein allgemeiner Chat und keine To-do-App.
+    - Ein Kommentar kann bis zu 500 Zeichen lang sein, mit bis zu drei Anhängen, die Bilder oder PDFs mit je bis zu 5 MB sind. Nur wer einen Kommentar geschrieben hat, kann ihn löschen.
+    - Ausgabenfragen sind standardmäßig aus, und ein Admin schaltet sie für jede Gruppe ein. Nur an einer Ausgabe beteiligte Personen können sie hinterfragen, das Ausschalten der Funktion löscht jede offene Frage, und niemand kann die Gruppe verlassen, solange eine Ausgabe, an der die Person beteiligt ist, eine offene Frage hat.
+    - Eine Gruppe kann bis zu 100 Listen enthalten, jede mit bis zu 200 Posten von bis zu 500 Zeichen. Die Berechtigungen der Gruppe bestimmen, wer Listen erstellen, bearbeiten und löschen darf, und eine gesperrte Gruppe erlaubt keine Änderungen.
+    - Eine Gruppe kann bis zu 50 Umfragen enthalten, jede mit zwei bis zehn Optionen und bis zu zehn Stimmen pro Person. Umfragen haben keine Frist und schließen sich nicht von selbst.
+    - Der Aktivitätsverlauf wird 90 Tage aufbewahrt.
+    - Push-Benachrichtigungen sind freiwillig, pro Konto und pro Gerät. Sie brauchen einen Browser, der sie unterstützt, und deine Erlaubnis, sie funktionieren auf iPhone und iPad nur in der App, die zum Home-Bildschirm hinzugefügt wurde, und die Zustellung ist nicht garantiert. Es gibt keine E-Mail- oder SMS-Hinweise zu Aktivitäten und keine Zahlungserinnerungen, das Hinterherlaufen bleibt also deine Sache.
+useCasesHeading: Wo gemeinsames Planen hilft
+faq:
+  heading: Fragen
+  items:
+    - q: Können Abstimmungen anonym sein?
+      a: Ja. Schalte beim Erstellen der Umfrage **Anonyme Abstimmung** ein, dann bleibt verborgen, wer für was gestimmt hat. Entscheide das vor der ersten Stimme, denn danach lässt es sich nicht mehr ändern.
+    - q: Kann sich eine Umfrage von selbst schließen?
+      a: Nein. Eine Umfrage hat keine Frist, deshalb wählt die Person, die sie erstellt hat, **Umfrage schließen**, sobald die Gruppe sich entschieden hat. Überlegt es sich die Gruppe anders, holt **Umfrage erneut öffnen** sie zurück.
+    - q: Wie viele Posten passen auf eine Liste?
+      a: Bis zu 200 Posten pro Liste und bis zu 100 Listen pro Gruppe. Jeder Posten kann bis zu 500 Zeichen lang sein, das ist eine Menge Hafermilch.
+    - q: Wer kann eine Frage schließen, und was passiert so lange mit der Ausgabe?
+      a: Die Person, die gefragt hat, oder ein Gruppen-Admin. Solange eine Frage offen ist, ist die ganze Ausgabe aus den Salden aller herausgenommen. Sie kommt wieder hinein, wenn die letzte offene Frage dazu geschlossen wird oder wenn eine Bearbeitung die fragende Person aus der Ausgabe herausnimmt.
+    - q: Kann ich Listen und Kommentare als To-do-App oder Gruppenchat nutzen?
+      a: Nein. Kommentare, Listen und Umfragen sind für das Geld der Gruppe da, worum die [Nutzungsbedingungen](page:terms) bitten. Denk an Einkaufslisten, Budgetumfragen und „Warum sind das 45 £?“.
+    - q: Schickt Side Badger mir E-Mails zu Aktivitäten?
+      a: Nein. Es gibt keine E-Mail- oder SMS-Hinweise zu Aktivitäten. Du kannst auf jedem Gerät Push-Benachrichtigungen einschalten, und die Benachrichtigungsglocke in der App zeigt, was neu ist.

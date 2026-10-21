@@ -1,0 +1,134 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: "Listes, sondages et commentaires sur les dépenses | Side Badger"
+  description: "Commentez les dépenses, questionnez celle qui cloche, partagez une liste de courses, votez pour la villa. Planifiez, puis partagez. Gratuit, sans publicité."
+h1: "Planifiez ensemble, partagez après"
+navLabel: "Planifier ensemble"
+lead: "La liste de courses et la facture des courses, enfin en bons termes. Side Badger donne à votre groupe un endroit où parler d'argent avant et après l'avoir dépensé, avec des commentaires sur chaque dépense, un moyen de questionner celles qui semblent fausses, des listes partagées et des sondages pour les grandes décisions. Ensuite, vous [partagez les dépenses](page:feature/split-expenses) comme d'habitude."
+cta:
+  heading: "Planifiez, puis partagez"
+  body: "Créez un compte gratuit, lancez un groupe et mettez la première liste, le premier sondage ou la première question juste à côté de l'argent. Vous ne savez pas ce qui se passe ensuite ? Voyez [comment ça marche](page:how-it-works)."
+problem:
+  heading: "La discussion est ici, l'addition est là-bas"
+  body: "Les dépenses de groupe vivent d'ordinaire à deux endroits. Les chiffres sont dans l'un, et la dispute sur les chiffres dans une discussion qui a défilé mardi. La liste de courses est une photo de frigo. La villa a été décidée par un pouce levé de la plupart des gens, probablement. Side Badger garde la planification dans le groupe, à côté des dépenses qu'elle concerne : il y a un commentaire là où est le coût, une liste là où sont les courses, un sondage pour la grande décision, et un moyen de dire « attendez, c'est bien ça ? » sans écrire un paragraphe. Tout cela reste centré sur l'argent du groupe, ce pour quoi le groupe existe."
+workflow:
+  heading: "Du vote pour la villa à la facture des courses"
+  steps:
+    - title: "Soumettez la grande décision à un vote"
+      body: "Ajoutez un sondage pour la décision qui fixe la facture, comme le choix de la villa. Choisissez de deux à dix options, dites combien de votes chaque personne a, puis fermez-le quand tout le monde a voté, et le gagnant est marqué."
+      shot: S17
+      shotAlt: "Un sondage fermé avec l'option gagnante marquée et le nombre de votes à côté de chaque option"
+    - title: "Écrivez la liste de courses à plusieurs"
+      body: "Lancez une liste partagée, ajoutez les articles et cochez-les à mesure qu'ils arrivent dans le caddie. Les courses entrent ensuite comme une dépense."
+      shot: S16
+      shotAlt: "Une liste de courses partagée avec quelques articles cochés et un compteur de progression"
+    - title: "Parlez du coût là où il vit"
+      body: "Commentez la dépense elle-même, joignez le reçu et réagissez avec un emoji. La conversation reste à côté du chiffre dont elle parle."
+      shot: S08
+      shotAlt: "Une dépense avec ses détails, une miniature de reçu, un fil de commentaires et des réactions emoji"
+    - title: "Questionnez la dépense qui semble louche"
+      body: "Si le groupe a activé les questions sur les dépenses, toute personne incluse dans une dépense peut choisir **J'ai une question**. La dépense reste hors des soldes tant que la question n'est pas traitée."
+      shot: S18
+      shotAlt: "La liste des dépenses avec un badge « Questionné » et le filtre « Uniquement questionné »"
+    - title: "Voyez ce qui a changé, et qui l'a changé"
+      body: "Le fil d'activité et la cloche de notifications montrent ce qui est nouveau dans vos groupes. Les notifications push sont là si vous les voulez."
+      shot: S19
+      shotAlt: "Le menu déroulant des notifications avec une liste d'activité récente"
+options:
+  heading: Options
+  items: []
+example:
+  heading: "Trois colocataires, une facture de vin questionnée"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "les grosses courses"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "le ménage"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "le vin de la fête"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Commentaires et réactions, à côté des chiffres"
+    body: "Chaque dépense a son propre fil de commentaires, tout comme le groupe, chaque liste et chaque sondage. Demandez pourquoi le taxi a coûté autant directement sous la dépense du taxi, pas dans une discussion que personne ne remonte. Ajoutez une photo du reçu ou un PDF de la réservation, puis réagissez avec un pouce en l'air, un cœur, un rire, un wouah, un visage triste ou une célébration sur les dépenses, les paiements et les commentaires. Célébrez un paiement quand il arrive. C'est ce qui ressemble le plus, chez Side Badger, à une salve d'applaudissements."
+  - heading: "Questionnez une dépense sans déclencher une dispute"
+    body: "Quand le groupe a activé les questions sur les dépenses, toute personne incluse dans une dépense peut choisir **J'ai une question** et dire pourquoi. La question est publiée en commentaire sur la dépense, la dépense reçoit un badge **Questionné**, et toute la dépense sort des soldes de tout le monde tant que la question n'est pas traitée."
+    items:
+      - "**L'activer.** C'est désactivé par défaut. Un admin active **Autoriser les questions sur les dépenses** dans les paramètres du groupe, sous **Fonctionnalités**."
+      - "**La fermer.** La personne qui a posé la question, ou un admin, choisit **Fermer la question**. Si plusieurs personnes ont questionné la même dépense, elle revient dans les soldes quand la dernière question est fermée."
+      - "**Quand on modifie la dépense.** Une question ouverte passe à la nouvelle version pour toute personne qui y a encore une part. Celles que la modification écarte voient leur question s'arrêter avec l'ancienne version, donc il ne leur reste rien à fermer."
+      - "**Les retrouver.** La liste des dépenses a un filtre **Uniquement questionné**. Ce n'est pas une étape d'approbation : seules les dépenses que quelqu'un questionne sont retenues, et tout le reste compte dès qu'on l'ajoute."
+  - heading: "Comment se déroule une question"
+    body: "Tom ajoute 45 £ de vin pour la fête, partagés entre les trois colocataires. Aisha n'a pas bu, donc elle soulève une question, et tant qu'elle est ouverte, le vin ne compte pour personne. Les colocataires s'accordent pour dire que le vin est celui de Tom et de Priya, donc Tom modifie le partage pour les deux. Aisha n'est plus dans la dépense, donc sa question s'arrête avec la version précédente, qui est conservée, et le vin revient tout de suite dans les soldes à 22,50 £ chacun au lieu de 15 £ chacun. Si Aisha était restée dans la dépense, sa question aurait suivi et attendu qu'elle ou un admin la ferme. Ci-dessous, les 48 £ d'Aisha se composent de 28 £ des courses et de 20 £ du ménage, et les 10,50 £ de Priya sont sa part de 70,50 £ (28 £, 20 £ et 22,50 £) moins les 60 £ qu'elle a payés. Une dispute très [colocataires](page:use-case/housemates). Pour savoir comment formuler une question, voyez [que faire quand quelqu'un conteste une dépense partagée](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Des listes partagées, pour les courses"
+    body: "Lancez une liste dans le groupe, appelez-la par exemple Liste de courses, ajoutez des articles et cochez-les. Faites glisser les articles dans un meilleur ordre, regardez le compteur de progression grimper et commentez la liste quand quelqu'un achète le mauvais lait d'avoine. Archivez une liste terminée pour la ranger (**Afficher archivés** la ramène), ou copiez une liste pour la réutiliser. Gardez la liste de courses partagée à côté des factures de courses, pour que la liste dise quoi acheter et que la dépense dise combien ça a coûté. Qui peut créer et modifier les listes dépend des permissions du groupe, ce qu'expliquent [groupes et permissions](page:feature/groups-and-permissions)."
+  - heading: "Des sondages, anonymes si vous voulez"
+    body: "Posez au groupe une question qui décide de la facture, comme quelle villa, combien dépenser pour le cadeau ou si la sortie en bateau vaut le coup. Un sondage a une question et de deux à dix options. Vous choisissez combien de votes chaque personne a, d'un choix unique jusqu'à dix, et si le vote est anonyme. Le **Vote anonyme** cache qui a voté pour quoi, et ne peut plus être changé une fois le premier vote enregistré. Chacun peut changer ou retirer son vote jusqu'à la fermeture du sondage, et vous pouvez le rouvrir si le groupe change d'avis. Choisir la villa, c'est exactement la matière des [voyages en groupe](page:use-case/group-trips), et se mettre d'accord sur le budget du cadeau est un classique des [événements et des fêtes](page:use-case/events-and-celebrations)."
+  - heading: "Le fil d'activité, pour que rien ne change en douce"
+    body: "Chaque groupe a un historique d'activité, et la cloche de notifications rassemble l'activité de tous vos groupes au même endroit. Ajoutez une dépense et tout le monde la voit tout de suite, sans actualiser, et le fil montre ce qui a changé et qui l'a changé. Cela couvre les dépenses ajoutées, modifiées ou supprimées, les questions soulevées et fermées, les commentaires, les changements de listes et de sondages, et les paiements enregistrés."
+  - heading: "Les notifications push, si vous les voulez"
+    body: "Les notifications push sont facultatives. Activez-les dans les **Paramètres** de votre compte, sous **Notifications**, et votre appareil vous prévient quand il y a de la nouvelle activité dans vos groupes, comme une nouvelle dépense ou un commentaire. Chaque appareil s'active séparément, et votre navigateur demande d'abord la permission. Sur un iPhone ou un iPad, elles ne fonctionnent que dans l'appli ajoutée à l'écran d'accueil, ce qu'explique la page [appli web](page:feature/web-app). Voyez-les comme un confort, pas une promesse, car la livraison n'est pas garantie."
+limits:
+  heading: Limites
+  items:
+    - "Les commentaires, les listes et les sondages servent à l'argent du groupe. Les [conditions d'utilisation](page:terms) demandent que tout ce qui est publié ait trait aux finances du groupe : c'est un endroit pour planifier les dépenses, pas une messagerie générale ni une appli de tâches."
+    - "Un commentaire peut compter jusqu'à 500 caractères, avec jusqu'à trois pièces jointes, images ou PDF, de 5 Mo chacune au maximum. Seul l'auteur peut supprimer un commentaire."
+    - "Les questions sur les dépenses sont désactivées par défaut, et un admin les active pour chaque groupe. Seules les personnes incluses dans une dépense peuvent la questionner, désactiver la fonction efface toutes les questions ouvertes, et personne ne peut quitter le groupe tant qu'une dépense dont il fait partie a une question ouverte."
+    - "Un groupe peut contenir jusqu'à 100 listes, chacune avec jusqu'à 200 articles de 500 caractères au maximum. Les permissions du groupe décident qui peut créer, modifier et supprimer les listes, et un groupe verrouillé n'autorise aucun changement."
+    - "Un groupe peut contenir jusqu'à 50 sondages, chacun avec de deux à dix options et jusqu'à dix votes par personne. Les sondages n'ont pas de date limite et ne se ferment pas tout seuls."
+    - "L'historique d'activité est conservé 90 jours."
+    - "Les notifications push se choisissent pour chaque compte et chaque appareil. Elles demandent un navigateur qui les gère et votre permission, elles ne fonctionnent sur iPhone et iPad que depuis l'appli ajoutée à l'écran d'accueil, et la livraison n'est pas garantie. Il n'y a ni alerte par e-mail ou SMS pour l'activité ni rappel de paiement, donc relancer un paiement reste à votre charge."
+useCasesHeading: "Là où planifier ensemble aide"
+faq:
+  heading: Questions
+  items:
+    - q: "Les votes peuvent-ils être anonymes ?"
+      a: "Oui. Activez **Vote anonyme** en créant le sondage et il cache qui a voté pour quoi. Décidez avant le premier vote, car on ne peut plus le changer ensuite."
+    - q: "Un sondage peut-il se fermer tout seul ?"
+      a: "Non. Un sondage n'a pas de date limite, donc la personne qui l'a créé choisit **Fermer sondage** une fois que le groupe a décidé. Si le groupe change d'avis, **Rouvrir sondage** le ramène."
+    - q: "Combien d'articles une liste peut-elle contenir ?"
+      a: "Jusqu'à 200 articles par liste et jusqu'à 100 listes par groupe. Chaque article peut compter jusqu'à 500 caractères, ce qui fait beaucoup de lait d'avoine."
+    - q: "Qui peut fermer une question, et que devient la dépense entre-temps ?"
+      a: "La personne qui l'a posée, ou un admin du groupe. Tant qu'une question est ouverte, toute la dépense est hors des soldes de tout le monde. Elle y revient quand la dernière question ouverte est fermée, ou quand une modification écarte de la dépense la personne qui a posé la question."
+    - q: "Puis-je utiliser les listes et les commentaires comme appli de tâches ou messagerie de groupe ?"
+      a: "Non. Les commentaires, les listes et les sondages servent à l'argent du groupe, ce que demandent les [conditions d'utilisation](page:terms). Pensez listes de courses, sondages de budget et « pourquoi 45 £ ? »."
+    - q: "Side Badger m'enverra-t-il un e-mail pour l'activité ?"
+      a: "Non. Il n'y a pas d'alerte par e-mail ou SMS pour l'activité. Vous pouvez activer les notifications push sur chaque appareil, et la cloche de notifications dans l'appli montre ce qui est nouveau."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - options.heading
+  - faq.heading

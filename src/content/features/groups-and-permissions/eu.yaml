@@ -1,0 +1,109 @@
+translatedFrom: "1071b584"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - groups.up-to-50-people
+  - groups.no-leaving-while-owing
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - permissions.viewer-sees-everything
+  - permissions.managed-group
+  - permissions.lock-the-group
+  - dashboard.every-group-on-one-screen
+meta:
+  title: "Talde-kudeaketa eta baimenak gastu partekatuetarako | Side Badger"
+  description: "Gonbidatu esteka edo QR kodearekin, onartu nor sartzen den, egin ikusleak, ezarri baimenak eta blokeatu taldea amaitzean. Zure taldea, zure arauak, zentzuz."
+h1: "Talde-kudeaketa eta baimenak: zure arauak, zentzuzko mugen barruan"
+navLabel: Taldeak eta baimenak
+lead: Talde batzuek diruzaina behar dute. Side Badger-ek horretarako ezarpen bat du. Gonbidatu jendea esteka edo QR kode batekin, erabaki nor sartzen den eta aukeratu nork alda ditzakeen zenbakiak. Lagun-talde txiki batek dena ahaztu dezake, talde berriak guztiz irekita hasten direlako.
+cta:
+  heading: Talde txukun bat eramateko prest?
+  body: Sortu kontu bat, hasi talde bat eta bidali gonbidapen-esteka. Utzi irekita, edo estutu arauak taldea handitzen denean edo eskakizun gehiago jartzen dituenean.
+problem:
+  heading: Norbaitek zenbakiak txukun eduki behar ditu
+  body: Lau etxekide konfiantzaz moldatu daitezke. Ezkontza-asteburu bateko hogeita hamar gonbidatuk, ziurrenik ez. Egin talde bat etxe, bidaia edo ekitaldi bakoitzerako, gehienez 50 pertsonarekin, eta talde bakoitzak bere kideak, bere rolak eta bere arauak izango ditu. Zure arbelak guztiak zerrendatzen ditu, bakoitzean non zauden erakusten duela, pantaila bakarrean. Talde gehienek ez dituzte ezarpenak ukitzen. Ukitzen dituztenek, normalean, ezarpenak nahi izateko adina antolatuta dagoen norbait dute.
+workflow:
+  heading: Talde hutsetik talde blokeatura
+  steps:
+    - title: Gonbidatu esteka edo QR kode batekin
+      body: Ireki **Gonbidatu beste batzuk**, aukeratu esteka zenbat irauten duen (15 minutu, ordubete, egun bat edo 5 egun), eta kopiatu esteka edo erakutsi QR kodea jendeak eskaneatzeko. Aplikazioaren barnetik, beste talde bat zurekin partekatzen duen jendea ere gonbidatu dezakezu.
+      shot: S03
+      shotAlt: Gonbidapen-leihoa, taldearen esteka, bere QR kodea eta esteka zenbat iraungo duen hautatzeko aukera erakusten dituela
+    - title: Utzi sartu aurretik begiratzen
+      body: Esteka duen edonork saioa hasten du edo kontu bat sortzen du, taldearen aurrebista ikusten du eta bertan erabili nahi duen izena aukeratzen du. Gero **Batu taldera** sakatzen du.
+      shot: S04
+      shotAlt: Talde baten batzeko aurrebista, saioa hasita duen pertsonari sartu aurretik erakutsia
+    - title: Onartu nor sartzen den
+      body: Aktibatzen baduzu onarpena, esteka erabiltzen duten pertsonak zain dauden kide gisa geratzen dira administratzaile batek sartzen utzi arte. Administratzaileek **Segurtasuna eta baimenak** atalean aurkitzen dituzte, **Zain dauden kideak** azpian, eta **Onartu** edo **Baztertu** aukeratzen dute. Ordura arte, zain dagoen pertsonak ezin du ezer ikusi taldean.
+      shot: S14
+      shotAlt: Administratzaile batek onartu edo baztertzeko zain dauden kideak
+    - title: Aukeratu nork zer alda dezakeen
+      body: Aukeratu **Lankidetza irekia** edo **Kudeatutako taldea**, edo ezarri baimenak banan-banan. Gero eman rol bat pertsona bakoitzari, administratzaile, kide edo ikusle. Administratzaileek bakarrik alda ditzakete baimenak eta rolak.
+      shot: S13
+      shotAlt: Taldearen ezarpenetako segurtasun-fitxa, bi aurrezarpenekin eta baimen pertsonalizatuekin
+    - title: Blokeatu amaitzen denean
+      body: Bidaia amaitu eta zenbakiak finkatu direnean, administratzaile batek **Blokeatu taldea** aktiba dezake. Inork ezin du gastuak gehitu edo aldatu, ordainketak erregistratu edo zerrendak eta inkestak editatu, eta banner batek hala dela esaten du. Inork ezin du isilean berandu iritsitako taxi bat gehitu. Bat agertzen bada, administratzaile batek taldea desblokea dezake.
+      shot: S15
+      shotAlt: Blokeatuta dagoela dioen bannerra duen talde bat
+options:
+  heading: Administratzaileak, kideak eta ikusleak
+  items:
+    - title: Administratzailea
+      body: Taldea zuzentzen du. Administratzaileek kide berriak onartzen dituzte, rolak eta baimenak aldatzen dituzte, taldea blokeatzen eta desblokeatzen dute, eta ixten dute. Talde bat sortzen duena administratzaile gisa hasten da, eta talde bat ez da inoiz administratzailerik gabe geratzen, azken administratzailearen rola ezin delako jaitsi.
+    - title: Kidea
+      body: Parte hartzen du. Kide batek zer egin dezakeen taldearen baimenen araberakoa da. Lankidetza irekiko talde batean ia dena egin dezake. Kudeatutako talde batean, kideek beraiek sortutako gastuak eta zerrendak bakarrik alda ditzakete.
+    - title: Ikuslea
+      body: Dena ikusten du eta ezer ez du aldatzen. Ikusleak ezin ditu gastuak edo zerrendak gehitu edo editatu, jendea gonbidatu, ezarpenak aldatu edo goiburuko irudia ukitu. Erabilgarria da zenbakiei begira egon nahi duen eta haiekin ez nahastuko dela hitz ematen duen pertsonarentzat.
+sections:
+  - heading: Irekia, kudeatua edo zure arauak
+    body: Talde berriak **Lankidetza irekia** aurrezarpenean hasten dira, non denek jendea gonbida dezaketen, gastuak aldatu eta zerrendak editatu, eta kide berriak automatikoki sartzen diren. **Kudeatutako taldea** norbaitek heldu gisa jokatu behar duenerako da. Zazpi baimenak banan-banan ere ezar ditzakezu, eta eskuz bat aldatzeak taldea pertsonalizatu bihurtzen du. Edozer aukeratuta ere, administratzaileek bakarrik alda ditzakete baimenak beraiek, eta aldaketa bakoitza jarduera-historian ageri da. [Etxekideen](page:use-case/housemates) pisu batek dena irekita utz dezake. [Ekitaldi edo ospakizun](page:use-case/events-and-celebrations) handi batek sarri kudeatutako taldea nahi du, norbaitek nor sartzen den kontrola dezan. Hau guztia berria zaizu? [Nola funtzionatzen duen](page:how-it-works) orriak bide osoa jarraitzen du, lehen gastutik kitatu arte.
+    items:
+      - "**Nork editatu ditzake gastuak.** Lankidetza irekia: edozein kidek. Kudeatutako taldea: sortzaileek eta administratzaileek."
+      - "**Nork ezabatu ditzake gastuak.** Lankidetza irekia: edozein kidek. Kudeatutako taldea: sortzaileek eta administratzaileek."
+      - "**Nork editatu ditzake zerrendak.** Lankidetza irekia: edozein kidek. Kudeatutako taldea: sortzaileek eta administratzaileek."
+      - "**Nork gonbidatu ditzake kideak.** Lankidetza irekia: edozein kidek. Kudeatutako taldea: administratzaileek bakarrik."
+      - "**Kide berrien onarpena.** Lankidetza irekia: automatikoa. Kudeatutako taldea: administratzailearen onarpena behar da."
+      - "**Nork alda ditzake ezarpenak.** Lankidetza irekia: edozein kidek. Kudeatutako taldea: administratzaileek bakarrik."
+      - "**Nork alda dezake goiburuko irudia.** Lankidetza irekia: edozein kidek. Kudeatutako taldea: administratzaileek bakarrik."
+  - heading: Zure izena, zure argazkia, zure goiburuko irudia
+    body: Talde bakoitzak bere aktore-zerrenda du. Aukeratu talde bakoitzean jendeak ikusiko duen izena (2 eta 50 karaktere artean, eta taldean bakarra) eta zure profileko zein argazki erabiliko duzun bertan. Izan **Sam** etxean eta **Sam (autoa duena)** bidaian. Ezarpenak aldatzeko baimena duen edonork taldeari izena alda diezaioke eta deskribapena editatu. Goiburuko irudiak (JPEG, PNG, GIF edo WebP, gehienez 10 MB) bere baimen propioa du.
+  - heading: Artxibatu, blokeatu edo itxi
+    body: Talde bat gordetzeko hiru modu, larritasun txikienetik handienera.
+    items:
+      - "**Artxibatu** aukerak taldea zure arbeletik ezkutatzen du, ez beste inorena. Oraindik ireki eta lehen bezala erabil dezakezu, eta **Desarxibatu taldea** aukerak itzultzen du."
+      - "**Blokeatu** aukerak aldaketak izozten ditu administratzaile batek desblokeatu arte. Denek irakur ditzakete taldea eta bere historia."
+      - "**Itxi** aukera betiko da, eta denentzat. Administratzaile batek bakarrik egin dezake, taldearen izena idatziz berretsita, eta inork ezin du taldea berriro ireki."
+  - heading: Talde bat uztea
+    body: Edonork utz dezake kitatu ondoren. Ezin duzu utzi moneta batean bakarrik ere zor baduzu edo zor badizute, zurekin lotutako gastu-galdera irekirik badago, edo azken administratzailea edo kide bakarra bazara. [Erregistratu ordainketa](page:feature/settle-up), konpondu [gastu-galdera](page:guide/what-to-do-when-someone-disputes-a-shared-expense) edo egin beste norbait administratzaile, eta gero joan. Itzultzeko, gonbidapen berri bat beharko duzu.
+limits:
+  heading: "Zentzuzko mugen barruan: letra txikia"
+  items:
+    - Talde batek gehienez 50 pertsona har ditzake.
+    - Administratzaileek bakarrik alda ditzakete baimenak eta rolak. Azken administratzailearen rola ezin da jaitsi.
+    - Gastuen edizioa **Administratzaileak bakarrik** gisa ezartzeak esan nahi du administratzaileek bakarrik gehi ditzaketela gastuak ere.
+    - Blokeoak gastuen aldaketak, ordainketa berriak, zerrendak eta inkestak geldiarazten ditu. Denek irakur ditzakete taldea eta bere historia, eta ordainketei erreakziona diezaiekete.
+    - Ixtea betiko da. Aplikazioak ez du itxitako talde bat berriro irekitzeko modurik.
+    - Gonbidapen-esteka berri bat egiteak ez ditu zaharrak baliogabetzen. Esteka bakoitzak bere iraungitzera arte irauten du, beraz aukeratu iraungitze labur bat, esteka non amaitu daitekeen kezkatzen bazaitu.
+    - Aplikazioko gonbidapenek zure azken 10 talde aktiboetako jendea zerrendatzen dute. Beste edonork esteka behar du, eta nork gonbida dezakeen taldearen baimenen araberakoa da.
+    - Batzeko kontu bat behar da, eta jendeak posta elektronikoa egiaztatu behar du ezer gehitu aurretik.
+useCasesHeading: Ordena apur batek non laguntzen duen
+faq:
+  heading: Galderak
+  items:
+    - q: Ikusle batek gastuak gehi al ditzake?
+      a: Ez. Ikusle batek dena ikusten du eta ezer ez du aldatzen. Ezin ditu gastuak edo zerrendak gehitu edo editatu, jendea gonbidatu edo ezarpenak aldatu.
+    - q: Norbaitek utz dezake zorra duela?
+      a: Ez. Inork ezin du talde bat utzi moneta batean bakarrik ere zor duen edo zor zaion bitartean. Kitatu lehenik, eta gero joan.
+    - q: Zer gertatzen da talde bat ixten denean?
+      a: Inork ezin du berriro ireki. Administratzaile batek bakarrik itxi dezake talde bat, taldearen izena idatzi behar du berresteko, eta taldea eskuraezin geratzen da denentzat. Aldaketak geldiarazi nahi badituzu soilik, blokeatu. Zure arbeletik kendu nahi baduzu soilik, artxibatu.
+    - q: Blokeo bat desegin al dezaket?
+      a: Bai. Administratzaile batek taldea desblokea dezake, eta aldaketek berriro funtzionatzen dute.
+    - q: Jendea onartu behar dut sartu aurretik?
+      a: Nahi baduzu bakarrik. Talde berriak Lankidetza irekian hasten dira, non esteka erabiltzen duten pertsonak automatikoki sartzen diren. Aktibatu administratzailearen onarpena, edo aukeratu Kudeatutako taldea, eta pertsona bakoitzak itxaron egiten du administratzaile batek sartzen utzi arte.
+    - q: Zenbat pertsona egon daitezke talde batean?
+      a: Gehienez 50.

@@ -1,0 +1,114 @@
+translatedFrom: "8a7fd3c8"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - multi-currency.140-currencies
+  - multi-currency.currency-rules
+  - multi-currency.limit-group-currencies
+  - currency-conversion.convert-as-you-go
+  - currency-conversion.original-amount-stays
+  - currency-conversion.group-auto-convert
+  - currency-conversion.owe-euros-pay-pounds
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Membagi biaya perjalanan dalam beberapa mata uang | Side Badger"
+  description: "Pound untuk hotel, yen untuk ramen. Lunasi tiap mata uang sendiri atau konversi dengan kurs yang bisa Anda lihat. Dua cara, lengkap dengan hitungannya."
+h1: "Cara membagi biaya perjalanan yang dibayar dalam beberapa mata uang"
+navLabel: "Perjalanan beda mata uang"
+lead: "Masukkan tiap pengeluaran dalam mata uang yang Anda pakai untuk membayar, lalu pilih jalurnya. Pisahkan mata uangnya dan lunasi masing-masing dengan uangnya sendiri, atau konversi dengan kurs terkini dan lunasi sekali saja. Perjalanan Jepang yang sama menjadi empat pembayaran dengan cara pertama dan dua dengan cara kedua."
+cta:
+  heading: "Masukkan dalam uang yang Anda pakai membayar"
+  body: "Buat akun gratis, mulai grup untuk perjalanan, dan tambahkan tiap pengeluaran dalam mata uang apa pun yang tertera di struk. Ingin rincian dulu? Lihat [beberapa mata uang](page:feature/multiple-currencies) atau [apa saja yang gratis](page:pricing)."
+sections:
+  - heading: "Tiga teman, satu hotel, yen dalam jumlah besar"
+    body: "Zoe, Kenji, dan Lucy menghabiskan seminggu di Jepang dalam [perjalanan grup](page:use-case/group-trips), dan setiap biaya dibagi rata untuk tiga orang. Zoe memesan hotel dari rumah, dalam pound, seharga £600. Lucy membeli tiket terusan kereta di Tokyo seharga ¥90.000. Kenji membayar malam ramen, ¥9.000, dan sejak itu menyebutnya setiap hari. Tak ada yang mau mengonversi tiga struk di peron stasiun. Untuk hitungan di sini, ¥1 adalah £0,005, kurs bulat yang dikarang untuk panduan ini. Di aplikasi Anda akan memakai kurs terkini, atau mengetik kurs yang benar-benar Anda dapatkan."
+  - heading: "Masukkan masing-masing dalam uang yang tertera di struk"
+    body: "Bagian ini sama untuk jalur mana pun yang Anda pilih. Belum ada yang perlu dikonversi."
+    items:
+      - "**Buat grupnya.** Di dasbor pilih **Buat Grup**, beri nama sesuai perjalanannya, lalu pilih **Undang Orang Lain** dan kirim tautan atau kode QR-nya."
+      - "**Tambahkan hotel.** Pilih **Tambah Pengeluaran** dan masukkan 600, dengan pound sebagai mata uang di samping jumlahnya. Di bawah **Siapa yang membayar?** pilih Zoe. Biarkan ketiganya tetap terpilih di **Dibagi antara**, biarkan **Cara membagi** pada **Rata**, lalu pilih **Simpan Pengeluaran**."
+      - "**Tambahkan yen.** Lakukan hal yang sama untuk tiket terusan kereta (Lucy yang membayar) dan ramen (Kenji yang membayar), dengan yen sebagai mata uangnya. Yen tidak punya desimal, jadi formulir tidak memintanya."
+  - heading: "Jalur satu: pisahkan mata uangnya"
+    body: "Side Badger menyimpan saldo untuk tiap mata uang dan tidak mengurangkan satu terhadap yang lain. Dalam pound, hotelnya £200 per orang, jadi Kenji dan Lucy masing-masing berutang £200 kepada Zoe. Dalam yen, tiket terusan kereta dan ramen berjumlah ¥99.000, yaitu ¥33.000 per orang. Lucy membayar ¥90.000 dan dihutangi ¥57.000. Zoe tidak membayar yen sama sekali dan berutang ¥33.000. Kenji membayar ¥9.000, jadi ia berutang ¥24.000."
+    items:
+      - "**Pound.** Kenji membayar Zoe £200 dan Lucy membayar Zoe £200."
+      - "**Yen.** Zoe membayar Lucy ¥33.000 dan Kenji membayar Lucy ¥24.000."
+      - "**Empat pembayaran seluruhnya.** Zoe dan Lucy saling berutang dalam dua mata uang yang tidak saling meniadakan. Tak ada kurs yang ikut campur, jadi tak ada yang perlu diperdebatkan."
+      - "**Berutang yen, bayar dalam pound.** Orang yang tak punya yen tetap bisa membayar dalam pound. Saat mencatat pembayaran, buka **Mata uang lain?**, pilih **Konversi ke** pound, dan periksa kursnya. ¥33.000 milik Zoe setara £165 dengan kurs panduan ini, dan saldo yen tetap keluar dengan benar."
+      - "**Catat setiap pembayaran.** Bayar satu sama lain dengan cara apa pun yang Anda suka, lalu pilih **Lunasi** dan gunakan **Catat Penyelesaian**. Selengkapnya ada di [pelunasan](page:feature/settle-up)."
+  - heading: "Jalur dua: konversi seiring berjalan"
+    body: "Jika grup lebih suka melihat satu angka per orang, konversi saat memasukkan pengeluaran."
+    items:
+      - "**Konversi di formulir.** Di **Tambah Pengeluaran**, pilih **Konversi ke** dan pilih pound. Side Badger menampilkan kurs dan jumlah hasil konversi, bertanda ≈. Ubah kurs jika Anda mendapat kurs yang berbeda. Jumlah yen aslinya tetap ada di pengeluaran."
+      - "**Baca dalam pound.** Dengan ¥1 = £0,005, tiket terusan kereta menjadi £450 dan ramen £45. Bersama hotel £600, totalnya £600 + £450 + £45 = £1.095, atau £365 per orang. Zoe membayar £600, jadi ia dihutangi £235. Lucy membayar £450 dan dihutangi £85. Kenji membayar £45 dan berutang £320."
+      - "**Dua pembayaran.** Keduanya dari Kenji: £235 kepada Zoe dan £85 kepada Lucy. Zoe dan Lucy tak perlu lagi saling membayar sama sekali."
+      - "**Atau tetapkan mata uang grup.** Untuk melewati langkah tambahan, buka **Pengaturan** grup, cari **Pengaturan Mata Uang**, dan pilih **Konversi Biaya Otomatis ke**. Setiap pengeluaran baru lalu dikonversi ke mata uang itu, tetap dengan kurs yang bisa Anda lihat dan ubah."
+  - heading: "Jalur mana yang sebaiknya dipilih?"
+    items:
+      - "**Pisahkan** jika orang-orang masih menyimpan yen di dompet, atau jika Anda tak ingin berdebat soal kurs. Harganya adalah pembayaran yang lebih banyak, dalam lebih dari satu mata uang."
+      - "**Konversi** jika grup hidup dalam satu mata uang dan ingin satu angka per orang serta daftar yang lebih pendek, seperti dua transfer Kenji. Harganya adalah grup harus memercayai sebuah kurs, dan kurs itu ditetapkan pada tiap pengeluaran saat disimpan."
+      - "**Putuskan sejak awal.** Mata uang grup hanya mengonversi pengeluaran baru dan salinan. Ia tidak akan kembali merapikan yang sudah Anda masukkan."
+  - heading: "Kurs, dan batasnya"
+    items:
+      - "**Kurs ditetapkan saat Anda menyimpan.** Pengeluaran lama tidak pernah dinilai ulang, jadi saldo tidak bergeser hanya karena pasar bergerak. Pengeluaran yang dimasukkan pada hari berbeda bisa memakai kurs berbeda, jadi jika grup ingin satu kurs untuk seluruh perjalanan, sepakati kursnya dan ketik setiap kali."
+      - "**Tak ada kurs? Ketik sendiri.** Side Badger mengambil kurs terkini jika bisa, tetapi tidak semua pasangan mata uang dijamin mendapatkannya. Jika tidak ada, atau tempat penukaran uang memberi Anda kurs yang lebih baik, ketik kurs Anda sendiri."
+      - "**999.999,99 per pengeluaran, dalam mata uangnya sendiri.** Satu batas, apa pun mata uangnya. Dalam yen itu sedikit di bawah ¥1.000.000, sekitar £5.000 dengan kurs panduan ini. Pada mata uang dengan angka besar, seperti rupiah, satu tagihan bisa mencapainya lebih cepat. Pecah tagihan menjadi dua pengeluaran, atau masukkan dalam mata uang lain lalu konversi."
+  - heading: "Yang tidak dilakukan Side Badger di sini"
+    items:
+      - "Side Badger tidak pernah memindahkan atau menukar uang. Anda membayar satu sama lain dengan cara apa pun yang disuka, lalu mencatat pembayarannya."
+      - "Ada 140 mata uang. Mata uang kripto dan logam tidak termasuk."
+exampleAfter: 2
+example:
+  heading: "Jepang, dilunasi dengan dua cara"
+  currency: GBP
+  people:
+    - id: zoe
+      name: Zoe
+    - id: kenji
+      name: Kenji
+    - id: lucy
+      name: Lucy
+  expenses:
+    - label: "hotel, dipesan dari rumah"
+      payer: zoe
+      amount: 600
+      split:
+        method: equal
+    - label: "tiket terusan kereta"
+      payer: lucy
+      amount: 90000
+      currency: JPY
+      split:
+        method: equal
+    - label: "malam ramen"
+      payer: kenji
+      amount: 9000
+      currency: JPY
+      split:
+        method: equal
+  conversion:
+    rates:
+      JPY: 0.005
+faq:
+  heading: "Pertanyaan"
+  items:
+    - q: "Kurs apa yang dipakai Side Badger?"
+      a: "Kurs terkini, diambil saat Anda memasukkan pengeluaran jika tersedia. Anda bisa mengubahnya ke kurs yang benar-benar Anda dapatkan."
+    - q: "Bisakah grup membatasi diri pada pound dan yen?"
+      a: "Bisa. Di **Pengaturan** grup, aktifkan **Batasi mata uang untuk grup ini** di bawah **Pengaturan Mata Uang**, pilih **Mata uang yang diizinkan**, dan atur **Mata uang default untuk pengeluaran baru**. Pilihan di daftar lebih sedikit, salah tebak di kasir pun lebih sedikit."
+    - q: "Apakah kami harus mengonversi?"
+      a: "Tidak. Mata uang tetap terpisah kecuali Anda atau grup memilih untuk mengonversi, dan setiap mata uang mendapat daftar pembayaran singkatnya sendiri."
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name

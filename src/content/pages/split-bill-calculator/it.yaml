@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Calcolatore per dividere il conto: chi deve a chi | Side Badger"
+  description: "Chi ha pagato, chi deve, chi paga chi: fatto in pochi secondi. Parti uguali, importi esatti o percentuali. Gratis, nel browser, senza salvare né inviare nulla."
+h1: Calcolatore per dividere il conto
+navLabel: Dividi il conto
+lead: Inserisci chi ha pagato cosa e il calcolatore ti dice chi deve cosa a chi, con una breve lista di pagamenti per saldare. Funziona nel browser, non salva nulla e non sposta denaro. Se al tuo gruppo serve che il conto sopravviva alla scheda, in Side Badger [dividi le spese](page:feature/split-expenses) e [salda i conti](page:feature/settle-up) con gli stessi calcoli, e restano salvati.
+cta:
+  heading: Ti piacciono i conti? Tienili.
+  body: Questo calcolatore dimentica tutto quando chiudi la scheda, proprio come quello che giura di aver pagato l'ultima volta. Un gruppo di Side Badger conserva le spese, aggiorna il saldo di ciascuno e registra i pagamenti. È gratis, senza pubblicità e senza limiti giornalieri.
+sections:
+  - heading: Come funziona il calcolo
+    body: Per ogni spesa, il calcolatore stabilisce la quota di ciascuno. Puoi dividerla in parti uguali, per importi esatti o per percentuale, tra le persone che scegli. Il saldo di ciascuno è poi quello che ha pagato meno quello che deve. Un segno più significa che il gruppo gli deve dei soldi, un segno meno che lui li deve al gruppo. I saldi sommano sempre zero, perché qualunque cifra spetti a una persona, altre persone la devono.
+  - heading: Perché la lista dei pagamenti è breve
+    body: Nessuno ha bisogno di saldare ogni scontrino per conto suo. Una volta noti tutti i saldi, il calcolatore abbina chi deve di più con chi deve ricevere di più, salda quanto può con un solo pagamento e va avanti lungo la lista finché tutti sono a zero. Non ne servono mai più di quante sono le persone con un saldo, meno uno, e spesso ne servono meno che saldando spesa per spesa. Dà una breve lista di pagamenti e non promette che sia la più breve possibile.
+  - heading: Cosa non fa il calcolatore
+    items:
+      - "**Gestire più valute.** Scegline una e usala per tutto il calcolo. L'app tiene un saldo separato per ogni valuta e può convertire una spesa a un tasso di cambio attuale, che puoi modificare."
+      - "**Salvare qualcosa.** Chiudi la scheda e i numeri spariscono. Per conservarli, copia il link. Contiene i tuoi numeri dopo il #, che il browser non invia mai a un server, e chiunque lo riceva può leggerli."
+      - "**Spostare denaro.** Ti dice chi dovrebbe pagare chi. Vi pagate come vi fa più comodo, poi, se il tuo gruppo tiene il conto nell'app, registrate lì il pagamento."
+      - "**Scegliere a caso il centesimo di troppo.** Quando un conto non si divide in modo esatto, i centesimi che avanzano vanno alle prime persone dell'elenco, così i totali tornano comunque. Nell'app il centesimo di troppo va a una persona a caso, quindi non è sempre la stessa."
+      - "**Superare i limiti.** Il calcolatore accetta da 2 a 20 persone, e una spesa può arrivare a 999.999,99, come nell'app."
+exampleAfter: 2
+example:
+  heading: Un weekend lungo, quattro amici
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: il cottage
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: la spesa
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: il taxi
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: il pub
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: Domande
+  items:
+    - q: Il calcolatore è gratuito?
+      a: Sì. Gratis. Niente pubblicità. Nessun limite giornaliero. E non ti serve nemmeno un account.
+    - q: Salva quello che scrivo?
+      a: No. Non viene salvato né inviato da nessuna parte. Per conservare i tuoi numeri, usa Copia link e tieni il link da qualche parte.
+    - q: Chi può vedere il link che copio?
+      a: "Chiunque ce l'abbia. I numeri sono nel link stesso, dopo il #, quindi condividilo solo con chi deve vederli."
+    - q: Sposta denaro?
+      a: No. Calcola chi dovrebbe pagare chi, e voi vi pagate come vi fa più comodo. Nemmeno Side Badger tocca mai i tuoi soldi. Vedi [saldare i conti](page:feature/settle-up).
+    - q: Posso dividere un viaggio pagato in due valute?
+      a: Qui no, perché un calcolo ha una sola valuta. In un gruppo, ogni valuta ha il suo saldo. Vedi [più valute](page:feature/multiple-currencies).
+    - q: E se gli importi non tornano?
+      a: Il calcolatore lo dice sotto la spesa e non mostra nessun risultato finché non tornano. Gli importi esatti devono sommare al totale e le percentuali devono fare 100.
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name

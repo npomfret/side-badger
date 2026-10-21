@@ -1,0 +1,132 @@
+translatedFrom: "bd4db653"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+claims:
+  - comments.next-to-the-expense
+  - reactions.celebrate-a-payment
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - live-updates.everyone-sees-it-straight-away
+  - live-updates.what-changed-and-who
+  - live-updates.push-notifications
+meta:
+  title: "Közös listák, szavazások és kommentek | Side Badger"
+  description: "Kommentelj a költségekhez, vonj kérdőre egy furcsát, vezess közös listát, szavazzatok a villáról. Tervezzétek meg, aztán osszátok fel. Ingyenes, hirdetés nélkül."
+h1: "Tervezzétek meg együtt, osszátok fel utána"
+navLabel: "Közös tervezés"
+lead: "A bevásárlólista és a bevásárlási számla végre szóba áll egymással. A Side Badger helyet ad a csoportodnak, ahol beszélhettek a pénzről azelőtt és azután, hogy elköltöttétek: kommentekkel minden költségnél, egy móddal a gyanúsnak tűnők kérdőre vonására, közös listákkal és szavazásokkal a nagy döntésekhez. Aztán a szokásos módon [felosztjátok a költségeket](page:feature/split-expenses)."
+cta:
+  heading: "Tervezd meg, aztán oszd fel"
+  body: "Hozz létre ingyenes fiókot, indíts csoportot, és tedd az első listát, szavazást vagy kérdést közvetlenül a pénz mellé. Nem tudod, mi jön ezután? Nézd meg, [hogyan működik](page:how-it-works)."
+problem:
+  heading: "A csevegés itt van, a számla ott"
+  body: "A csoportos költekezés általában két helyen él. A számok az egyikben vannak, a számokról szóló vita pedig egy csevegésben, amely kedden már elgörgetett. A bevásárlólista egy fotó a hűtőről. A villáról a legtöbb ember felfelé mutató hüvelykujja döntött, valószínűleg. A Side Badger a tervezést a csoportban tartja, azoknak a költségeknek a mellett, amelyekről szól: ott van a komment, ahol a költség, a lista, ahol a bevásárlás, a szavazás a nagy döntéshez, és egy mód arra, hogy azt mondd: „állj, ez így jó?”, bekezdés írása nélkül. Mindez a csoport pénzéről szól, hiszen a csoport erre való."
+workflow:
+  heading: "A villaszavazástól a bevásárlási számláig"
+  steps:
+    - title: "Tedd szavazásra a nagy döntést"
+      body: "Adj hozzá egy szavazást a számlát meghatározó döntéshez, például hogy melyik villa legyen. Válassz két–tíz lehetőséget, add meg, hány szavazata van mindenkinek, majd zárd le, ha mindenki szavazott, és a nyertes megjelölésre kerül."
+      shot: S17
+      shotAlt: "Egy lezárt szavazás a megjelölt nyertes lehetőséggel és a lehetőségek mellett a szavazatok számával"
+    - title: "Írjátok együtt a bevásárlólistát"
+      body: "Indíts közös listát, add hozzá a tételeket, és pipáld ki őket, ahogy a kosárba kerülnek. A bevásárlás utána költségként kerül be."
+      shot: S16
+      shotAlt: "Egy közös bevásárlólista néhány kipipált tétellel és haladásszámlálóval"
+    - title: "Beszéljetek a költségről ott, ahol él"
+      body: "Kommentelj magán a költségen, csatold a nyugtát, és reagálj egy emojival. A beszélgetés annak a számnak a mellett marad, amelyről szól."
+      shot: S08
+      shotAlt: "Egy költség a részleteivel, egy nyugta bélyegképével, egy kommentszállal és emoji reakciókkal"
+    - title: "Vonj kérdőre, ami nem stimmel"
+      body: "Ha a csoport bekapcsolta a költségkérdéseket, bárki, aki szerepel egy költségben, a **Van egy kérdésem** lehetőséget választhatja. A költség addig kimarad az egyenlegekből, amíg el nem intézik a kérdést."
+      shot: S18
+      shotAlt: "A költséglista egy Kérdőre vont jelvénnyel és a Csak kérdőre vont szűrővel"
+    - title: "Nézd meg, mi változott, és ki változtatta"
+      body: "A tevékenységi hírfolyam és az értesítések csengője megmutatja, mi új a csoportjaidban. A push-értesítések ott vannak, ha kéred őket."
+      shot: S19
+      shotAlt: "Az értesítések legördülő listája a legutóbbi tevékenységek felsorolásával"
+options:
+  heading: "Lehetőségek"
+  items: []
+example:
+  heading: "Három lakótárs, egy kérdőre vont borszámla"
+  currency: GBP
+  people:
+    - id: tom
+      name: Tom
+    - id: priya
+      name: Priya
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: "a nagybevásárlás"
+      payer: tom
+      amount: 84
+      split:
+        method: equal
+    - label: "a takarító"
+      payer: priya
+      amount: 60
+      split:
+        method: equal
+    - label: "a buli bora"
+      payer: tom
+      amount: 45
+      split:
+        method: equal
+        shares:
+          tom: 1
+          priya: 1
+exampleAfter: 3
+sections:
+  - heading: "Kommentek és reakciók, a számok mellett"
+    body: "Minden költségnek saját kommentszála van, ahogy a csoportnak, minden listának és minden szavazásnak is. Kérdezd meg, miért került annyiba a taxi, a taxi alatt, ne egy olyan csevegésben, amelyben senki nem görget vissza. Adj hozzá egy fotót a nyugtáról vagy egy PDF-et a foglalásról, aztán reagálj hüvelykujj felfelé, szív, nevetés, hűha, szomorú vagy ünneplés emojival költségekre, kifizetésekre és kommentekre. Ünnepeld meg a kifizetést, amikor megérkezik. Ennél közelebb a Side Badger nem tud kerülni egy tapsviharhoz."
+  - heading: "Kérdőre vonhatsz egy költséget veszekedés nélkül"
+    body: "Ha a csoportban be vannak kapcsolva a költségkérdések, bárki, aki szerepel egy költségben, a **Van egy kérdésem** lehetőséget választhatja, és megindokolhatja. A kérdés kommentként jelenik meg a költségnél, a költség **Kérdőre vont** jelvényt kap, és az egész költség kikerül mindenki egyenlegéből, amíg el nem intézik a kérdést."
+    items:
+      - "**Bekapcsolás.** Alapértelmezés szerint ki van kapcsolva. Egy adminisztrátor a csoport beállításaiban, a **Funkciók** alatt kapcsolja be a **Kiadásokra vonatkozó kérdések engedélyezése** lehetőséget."
+      - "**Lezárás.** Az, aki kérdezett, vagy egy adminisztrátor a **Kérdés lezárása** lehetőséget választja. Ha többen vonták kérdőre ugyanazt a költséget, az az utolsó kérdés lezárásakor kerül vissza az egyenlegekbe."
+      - "**Szerkesztés.** Ha egy költséget szerkesztenek, egy nyitott kérdés átkerül az új változatra mindenkinél, akinek még van része benne. Akit a szerkesztés kihagy, annak a kérdése a régi változattal véget ér, így nincs mit lezárnia."
+      - "**Megtalálásuk.** A költséglistán van egy **Csak kérdőre vont** szűrő. Ez nem jóváhagyási lépés: csak azokat a költségeket tartja vissza, amelyeket valaki kérdőre von, minden más abban a pillanatban számít, ahogy hozzáadják."
+  - heading: "Hogyan zajlik le egy kérdés"
+    body: "Tom hozzáadja a buli 45 £-ba kerülő borát, mindhárom lakótárs között felosztva. Aisha nem ivott, ezért kérdést tesz fel, és amíg az nyitva van, a bor senkinek nem számít. A ház megegyezik, hogy a bor Tomé és Priyáé, ezért Tom átírja a felosztást kettejükre. Aisha már nincs a költségben, ezért a kérdése a korábbi változattal véget ér, amelyet megőrzünk, és a bor azonnal visszakerül az egyenlegekbe: fejenként 22,50 £, nem 15 £. Ha Aisha benne maradt volna a költségben, a kérdése átkerült volna, és arra várt volna, hogy ő vagy egy adminisztrátor lezárja. Lent Aisha tartozása 48 £: 28 £ a bevásárlásból és 20 £ a takarítóból, Priya 10,50 £-os tartozása pedig a 70,50 £-os részéből (28 £, 20 £ és 22,50 £) adódik, levonva a kifizetett 60 £-ot. Igazán [lakótársas](page:use-case/housemates) vita. A kérdés megfogalmazásához lásd: [mit tegyél, ha valaki vitat egy közös költséget](page:guide/what-to-do-when-someone-disputes-a-shared-expense)."
+  - heading: "Közös listák a bevásárláshoz"
+    body: "Indíts egy listát a csoportban, nevezd el például Bevásárlólistának, adj hozzá tételeket, és pipáld ki őket. Húzd a tételeket jobb sorrendbe, nézd, ahogy nő a haladásszámláló, és kommentelj a listán, amikor valaki rossz zabtejet vesz. Archiválj egy kész listát, hogy elrakd (az **Archiváltak megjelenítése** visszahozza), vagy másolj le egy listát, hogy újra felhasználd. Tartsd a közös bevásárlólistát a bevásárlási számlák mellett, így a lista megmondja, mit vegyél, a költség pedig azt, mibe került. Hogy ki hozhat létre és szerkeszthet listákat, a csoport jogosultságain múlik, amelyet a [csoportok és jogosultságok](page:feature/groups-and-permissions) magyaráz el."
+  - heading: "Szavazások, névtelenül, ha úgy tetszik"
+    body: "Kérdezz meg a csoporttól valamit, ami a számlát eldönti, például melyik villa legyen, mennyit költsetek az ajándékra, vagy megéri-e a hajókirándulás. Egy szavazásnak van egy kérdése és két–tíz lehetősége. Te döntöd el, hány szavazata van mindenkinek, egyetlen választástól tízig, és hogy a szavazás névtelen-e. A **Névtelen szavazás** elrejti, ki mire szavazott, és az első szavazat leadása után már nem módosítható. Az emberek megváltoztathatják vagy visszavonhatják a szavazatukat, amíg a szavazás le nem zárul, és újranyithatod, ha a csoport meggondolja magát. A villa kiválasztása pontosan az, amiből a [csoportos utazások](page:use-case/group-trips) állnak, az ajándékköltségvetés megbeszélése pedig klasszikus [rendezvényeken és ünnepeken](page:use-case/events-and-celebrations)."
+  - heading: "A tevékenységi hírfolyam, hogy semmi ne változzon csendben"
+    body: "Minden csoportnak van tevékenységi előzménye, az értesítések csengője pedig az összes csoportodból egy helyre gyűjti a tevékenységet. Adj hozzá egy költséget, és mindenki rögtön látja, frissítés nélkül, a hírfolyam pedig megmutatja, mi változott, és ki változtatta. Ez lefedi a hozzáadott, szerkesztett vagy törölt költségeket, a felvetett és lezárt kérdéseket, a kommenteket, a lista- és szavazásváltozásokat, valamint a rögzített kifizetéseket."
+  - heading: "Push-értesítések, ha kéred őket"
+    body: "A push-értesítések opcionálisak. Kapcsold be őket a fiókod **Beállítások** menüjében, az **Értesítések** alatt, és az eszközöd szól, ha új tevékenység van a csoportjaidban, például egy új költség vagy komment. Minden eszközt külön kell bekapcsolni, és a böngésző előbb engedélyt kér. iPhone-on és iPaden csak a főképernyőhöz adott alkalmazásban működnek, amit a [webalkalmazás](page:feature/web-app) oldal magyaráz el. Kezeld őket kényelmi funkcióként, nem ígéretként, mert a kézbesítés nem garantált."
+limits:
+  heading: "Korlátok"
+  items:
+    - "A kommentek, listák és szavazások a csoport pénzéről szólnak. A [feltételek](page:terms) azt kérik, hogy minden, amit közzétesznek, a csoport pénzügyeihez kapcsolódjon, így ez a hely a költekezés megtervezésére való, nem általános csevegésre vagy teendőlistára."
+    - "Egy komment legfeljebb 500 karakter lehet, legfeljebb három, egyenként legfeljebb 5 MB-os kép- vagy PDF-melléklettel. Kommentet csak a szerzője törölhet."
+    - "A költségkérdések alapértelmezés szerint ki vannak kapcsolva, és egy adminisztrátor kapcsolja be őket csoportonként. Csak a költségben szereplők vonhatják kérdőre, a funkció kikapcsolása minden nyitott kérdést töröl, és senki nem léphet ki a csoportból, amíg egy olyan költséghez, amelyben részes, nyitott kérdés tartozik."
+    - "Egy csoport legfeljebb 100 listát tárolhat, mindegyikben legfeljebb 200 tétellel, tételenként legfeljebb 500 karakterrel. A csoport jogosultságai döntik el, ki hozhat létre, szerkeszthet és törölhet listákat, a lezárt csoportban pedig nem lehet változtatni."
+    - "Egy csoport legfeljebb 50 szavazást tárolhat, mindegyikben két–tíz lehetőséggel és személyenként legfeljebb tíz szavazattal. A szavazásoknak nincs határidejük, és nem zárulnak le maguktól."
+    - "A tevékenységi előzmények 90 napig maradnak meg."
+    - "A push-értesítések fiókonként és eszközönként bekapcsolhatók. Olyan böngésző kell hozzájuk, amely támogatja őket, és a te engedélyed, iPhone-on és iPaden csak a főképernyőhöz adott alkalmazásból működnek, a kézbesítés pedig nem garantált. Tevékenységről nincsenek e-mail- vagy SMS-értesítések, és nincsenek kifizetési emlékeztetők, így a kifizetés követelése továbbra is rád marad."
+useCasesHeading: "Ahol jól jön az együtt tervezés"
+faq:
+  heading: "Kérdések"
+  items:
+    - q: "Lehetnek névtelenek a szavazatok?"
+      a: "Igen. Kapcsold be a **Névtelen szavazás** opciót a szavazás létrehozásakor, és elrejti, ki mire szavazott. Az első szavazat előtt döntsd el, mert utána már nem módosítható."
+    - q: "Lezárulhat egy szavazás magától?"
+      a: "Nem. A szavazásnak nincs határideje, ezért aki létrehozta, a **Szavazás lezárása** lehetőséget választja, amint a csoport döntött. Ha a csoport meggondolja magát, a **Szavazás újranyitása** visszahozza."
+    - q: "Hány tételt tárolhat egy lista?"
+      a: "Listánként legfeljebb 200 tételt, csoportonként pedig legfeljebb 100 listát. Minden tétel legfeljebb 500 karakter lehet, ami rengeteg zabtej."
+    - q: "Ki zárhat le egy kérdést, és mi történik közben a költséggel?"
+      a: "Az, aki kérdezett, vagy egy csoportadminisztrátor. Amíg egy kérdés nyitva van, az egész költség kint van mindenki egyenlegéből. Visszakerül, amikor az utolsó nyitott kérdést is lezárják rajta, vagy amikor egy szerkesztés kiveszi a költségből azt, aki kérdezett."
+    - q: "Használhatom a listákat és a kommenteket teendőlistaként vagy csoportos csevegésként?"
+      a: "Nem. A kommentek, listák és szavazások a csoport pénzéről szólnak, ahogy a [feltételek](page:terms) kérik. Gondolj bevásárlólistákra, költségvetési szavazásokra és a „miért 45 £ ez?” kérdésre."
+    - q: "Küld nekem e-mailt a Side Badger a tevékenységről?"
+      a: "Nem. Tevékenységről nincsenek e-mail- vagy SMS-értesítések. Bekapcsolhatod a push-értesítéseket az egyes eszközökön, az alkalmazás értesítési csengője pedig megmutatja, mi új."

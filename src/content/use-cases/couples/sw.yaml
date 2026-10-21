@@ -1,0 +1,83 @@
+translatedFrom: "8e76d575"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.choose-your-name
+  - invites.link-or-qr-code
+  - invites.link-expiry
+  - invites.admin-approval
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - settlements.pay-however-then-record
+  - permissions.lock-the-group
+  - privacy-posture.members-only
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+meta:
+  title: "Gawanya bili na mwenzi wako, 50/50 au kwa mapato | Side Badger"
+  description: "Shiriki gharama za kuchosha bila kugeuza usiku wa miadi kuwa mapitio ya fedha ya robo mwaka. Gawanya 50/50, kwa mapato au bili kwa bili, na uone nani anadaiwa na nani. Bure."
+h1: "Shiriki gharama kama wapenzi, kwa haki"
+navLabel: "Wapenzi"
+lead: "Shiriki gharama za kuchosha bila kugeuza usiku wa miadi kuwa mapitio ya fedha ya robo mwaka. Side Badger huweka hesabu moja inayoendelea ya kodi, bili na ununuzi kwa **wapenzi** wanaoshiriki nyumba, kochi na kumbukumbu hafifu ya nani alilipia intaneti. Gawanya 50/50, kwa mapato au bili kwa bili, na uone nani anadaiwa na nani."
+cta:
+  heading: "Anzisha kikundi cha wawili"
+  body: "Fungua akaunti, tengeneza kikundi na mtumie mwenzi wako kiungo cha mwaliko. Chakula cha kuchukua cha usiku wa leo kinaweza kuwa gharama ya kwanza."
+scenario:
+  heading: "Haki si lazima iwe 50/50"
+  body: "Sam na Alex wanaishi pamoja. Sam anapata zaidi, kwa hivyo walikubaliana kwamba Sam anachukua 60% ya kodi na Alex 40%. Sam analipa mwenye nyumba, Alex anafanya ununuzi, na wote wawili wana uhakika kiasi kwamba yote yanalingana. Uhakika kiasi ndivyo kidokezo kwenye simu ya mtu kinavyogeuka mgogoro wa kudumu. Kwa hivyo tengeneza kikundi cha wawili, chagua jina unalotaka mwenzi wako aone, na mtumie kiungo cha mwaliko au msimbo wa QR. Ongeza kila gharama inapotokea, sema nani alilipa na inagawanywaje, na uache kikundi kiweke hesabu. Tengenezeni kikundi tofauti kwa kila likizo (tazama [safari za kikundi](page:use-case/group-trips)), ili tiketi za ndege zisiingie kwenye vyakula."
+sections:
+  - heading: "50/50, kwa mapato, au bili kwa bili"
+    body: "Hakuna mgawanyo wa haki kwa wote, ipo tu ile mnayokubaliana wote wawili, ikiwezekana kabla ya bili ya kwanza badala ya baada ya mguno wa kwanza. Hizi ndizo tatu za kawaida."
+    items:
+      - "**50/50.** Chagua **Sawa** na kila mmoja anadaiwa nusu. Inafaa gharama za pamoja mapato yenu yanapokaribiana, na haihitaji hesabu yoyote."
+      - "**Kwa mapato.** Mmoja akipata zaidi, gawanyeni kulingana na sehemu ya kila mtu ya pesa inayoingia. Kubalianeni kwanza kinachohesabiwa (mshahara baada ya makato ndio chaguo la kawaida), jumlisheni hizo mbili na ugawanye yako kwa jumla. Kama mmoja anapokea sehemu tatu kwa mbili za mwingine, hiyo ni 3 ÷ (3 + 2) = 60%, kwa hivyo mmoja anabeba 60% na mwingine 40%. Zungusha hadi asilimia nzima na uziweke chini ya **Asilimia**, ambapo lazima zijumlishe 100. Hakuna mahali pa kuweka mshahara wako, kwa hivyo unaandika asilimia tu."
+      - "**Bili kwa bili.** Kila gharama ina mgawanyo wake, kwa hivyo mnaweza kuchanganya: kodi kwa mapato, vyakula 50/50, na zawadi ya pamoja kwa **Kiasi halisi** kama kila mmoja alichagua cha kuweka."
+      - "**Mapato yakibadilika,** tumieni asilimia mpya kuanzia gharama inayofuata. Gharama za awali zinabaki na mgawanyo ulioingizwa nazo. Ili kuona hesabu zikifanywa kwa karatasi halisi za mishahara, soma [jinsi ya kugawanya bili na mwenzi anayepata zaidi](page:guide/how-to-split-bills-with-a-partner-who-earns-more)."
+  - heading: "Muhtasari wa kila mwezi"
+    body: "Mara moja kwa mwezi, au nambari zikianza kuwasha, fungua kikundi na uangalie **Salio**. Mkiwa wawili, huwa kuna malipo moja tu kwa kila sarafu, kutoka kwa anayedaiwa kwenda kwa anayedai. Chukua mwezi wa Sam na Alex. Sam alilipa kodi ya £1,500, na 40% ya Alex ni £600. Alex alilipa £90 za vyakula, zilizogawanywa kwa usawa, kwa hivyo nusu ya Sam ni £45. Side Badger inaweka moja dhidi ya nyingine, £600 ukitoa £45, na Alex anamlipa Sam £555. Lipeni mtakavyo, kwa uhamisho wa benki, pesa taslimu au fadhila inayodaiwa, kisha rekodini chini ya **Lipa deni** ili salio lirudi sifuri. Hakuna bili zinazojirudia, kwa hivyo nakili kodi ya mwezi uliopita, badilisha tarehe na uendelee. Side Badger haisogezi pesa wala kutuma vikumbusho, kwa hivyo kumkumbusha bado ni kazi yako."
+  - heading: "Ninyi wawili tu"
+    body: "Kikundi cha wawili kina wanachama wawili, na wanachama wa kikundi pekee ndio wanaokiona. Mwenzi wako anajiunga kwa kiungo cha mwaliko au msimbo wa QR. Kiungo kinaweza kudumu kuanzia dakika 15 hadi siku 5, kwa hivyo chagua kifupi zaidi kinachompa mwenzi wako muda wa kukitumia. Kutengeneza kiungo kipya hakufuti vya zamani, kwa hivyo usiviache kwenye gumzo lenye watu wengine. Yeyote anayetumia kiungo kilicho hai anaweza kujiunga, kwa hivyo ukitaka uhakika, washa idhini na msimamizi anamruhusu kila mtu kuingia. Mwenzi wako anahitaji akaunti yake mwenyewe, ambayo ni bure."
+exampleAfter: 2
+example:
+  heading: "Nani anadaiwa na nani mwezi huu"
+  currency: GBP
+  people:
+    - id: sam
+      name: Sam
+    - id: alex
+      name: Alex
+  expenses:
+    - label: "Kodi"
+      payer: sam
+      amount: 1500
+      split:
+        method: percent
+        shares:
+          sam: 60
+          alex: 40
+    - label: "Vyakula"
+      payer: alex
+      amount: 90
+      split:
+        method: equal
+featuresHeading: "Vipengele wanavyotumia wapenzi"
+faq:
+  heading: "Maswali"
+  items:
+    - q: "Je, tunaweza kuweka 60/40 mara moja kwa kila kitu?"
+      a: "Hapana. Mgawanyo ni wa kila gharama. Weka asilimia kwenye ya kwanza, kisha nakili wakati ujao na ubadilishe kilicho tofauti. [Kugawanya gharama](page:feature/split-expenses) kunaeleza njia zote tatu za kugawanya."
+    - q: "Je, inaunganishwa na benki yetu?"
+      a: "Hapana. Side Badger haigusi pesa zenu kamwe. Mnalipana mtakavyo, kisha mnarekodi, kama [kumaliza hesabu](page:feature/settle-up) kunavyoeleza."
+    - q: "Je, mtu mwingine anaweza kuona kikundi chetu?"
+      a: "Wanachama wake tu, na kikundi cha wapenzi kina wawili. Yeyote anayetumia kiungo cha mwaliko kilicho hai anaweza kujiunga, kwa hivyo mshirikishe mtu mmoja na uweke muda mfupi wa kuisha."
+    - q: "Je, kila mmoja wetu akilipa sehemu ya bili hiyo hiyo?"
+      a: "Gharama ina mlipaji mmoja. Rekodini gharama mbili, moja kwa kila mmoja wenu, na salio linatoka vile vile."
+    - q: "Je, itamkumbusha mwenzi wangu kulipa?"
+      a: "Hapana. Hakuna vikumbusho, kwa hivyo kumkumbusha bado ni kazi yako. Angalau wote wawili mtakuwa mnaangalia nambari ile ile."
+    - q: "Nini kinatokea tukiacha kushiriki gharama?"
+      a: "Maliza salio na urekodi malipo, ili hakuna anayedaiwa chochote. Kisha msimamizi anaweza kufunga kikundi, kinachoweka nambari kama zilivyo, au kukifunga kabisa, kinachokifanya kisifikike kwa kila mtu. Kifunge kabisa tu wakati hakuna mmoja wenu anayehitaji historia."

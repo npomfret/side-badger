@@ -1,0 +1,96 @@
+translatedFrom: "44e97219"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - accounts.all-you-need-is-an-email
+  - permissions.viewer-sees-everything
+  - groups.choose-your-name
+  - invites.admin-approval
+  - invites.link-expiry
+  - invites.link-or-qr-code
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - expense-questions.question-held-out-of-balances
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - live-updates.push-notifications
+  - home-screen.opens-like-an-app
+  - groups.no-leaving-while-owing
+  - permissions.lock-the-group
+  - feedback.tell-us-from-the-app
+meta:
+  title: "Aide et assistance | Side Badger"
+  description: "Mot de passe oublié, lien qui ne marche pas, paiement mal enregistré ? De courtes réponses à ce qui coince dans Side Badger, et comment nous joindre."
+h1: "Aide et assistance, sans la musique d'attente"
+navLabel: "Aide et assistance"
+lead: "De courtes réponses à ce qui coince, du mot de passe oublié à la fermeture définitive d'un groupe. Chacune renvoie à la page qui en dit plus. Vous ne trouvez pas la vôtre ? Dites-le-nous depuis l'appli, ou écrivez-nous un mot."
+cta:
+  heading: "Vous cherchiez de l'aide ? Restez pour le partage."
+  body: "Pas encore de compte ? Lancez un groupe, partagez le lien et ajoutez la première dépense. Gratuit, sans publicité et sans limite quotidienne."
+groups:
+  - heading: "Connexion"
+    items:
+      - q: "Mot de passe oublié ?"
+        a: "Ça arrive aux meilleurs blaireaux. Choisissez **Mot de passe oublié ?** sur l'écran **Se Connecter**, saisissez l'e-mail de votre compte, puis suivez le lien de l'e-mail que nous vous envoyons pour en choisir un nouveau. [Comment ça marche](page:how-it-works) explique ce dont un compte a besoin d'autre."
+      - q: "Mon compte est créé, mais je ne peux rien ajouter. Pourquoi ?"
+        a: "Le plus souvent, votre e-mail n'est pas encore vérifié : ouvrez le lien de l'e-mail de vérification, ou choisissez **Renvoyer l'email de vérification** sur la bannière de rappel pour en recevoir un nouveau. Si votre e-mail est vérifié, le groupe est peut-être verrouillé ou ses permissions ne vous le permettent peut-être pas, et un spectateur voit tout sans rien changer, comme l'explique [groupes et permissions](page:feature/groups-and-permissions)."
+      - q: "Comment changer mon e-mail ou mon mot de passe ?"
+        a: "Dans **Paramètres**, choisissez **Changer Email** ou **Changer Mot de Passe**. Les deux demandent d'abord votre mot de passe actuel, et une nouvelle adresse e-mail doit être vérifiée avec le lien que nous lui envoyons. [Comment ça marche](page:how-it-works) présente les comptes."
+      - q: "Puis-je me connecter avec Google ou Apple ?"
+        a: "Non. Il suffit d'une adresse e-mail et d'un mot de passe d'au moins 12 caractères, et vous pouvez cocher **Se souvenir de moi** sur votre propre téléphone ou ordinateur. La page [appli web](page:feature/web-app) couvre le reste pour bien démarrer."
+  - heading: "Rejoindre un groupe"
+    items:
+      - q: "On m'a envoyé un lien d'invitation. Comment rejoindre le groupe ?"
+        a: "Ouvrez-le, puis connectez-vous ou créez un compte gratuit. Vous verrez un aperçu du groupe, choisirez le nom sous lequel les autres vous verront, et appuierez sur **Rejoindre Groupe**. [Groupes et permissions](page:feature/groups-and-permissions) montre tout le chemin pour entrer."
+      - q: "Il est écrit « En attente d'approbation ». Ai-je fait une erreur ?"
+        a: "Pas du tout. Dans ce groupe, un admin laisse entrer chaque personne : votre demande a été envoyée à ses admins, et vous ne pouvez rien voir avant que l'un d'eux l'approuve. Un petit coup de coude en personne est autorisé, et [groupes et permissions](page:feature/groups-and-permissions) explique l'approbation."
+      - q: "Le lien indique qu'il est invalide ou expiré."
+        a: "Les liens d'invitation durent le temps choisi par la personne qui les a créés, de 15 minutes à 5 jours. Demandez un nouveau lien à quelqu'un du groupe, ou le code QR si vous êtes dans la même pièce. [Comment ça marche](page:how-it-works) présente les invitations."
+  - heading: "Dépenses"
+    items:
+      - q: "Comment ajouter une dépense ?"
+        a: "Ouvrez le groupe et choisissez **Ajouter Dépense**. Dites ce que c'était, combien, qui a payé et qui a partagé, puis partagez à parts égales, par montants exacts ou par pourcentage. [Partager les dépenses](page:feature/split-expenses) passe en revue chaque option."
+      - q: "Le loyer peut-il se répéter chaque mois ?"
+        a: "Pas tout seul, car il n'y a pas de dépenses récurrentes. Ouvrez celle du mois dernier et choisissez **Copier dépense** : le formulaire arrive rempli, prêt pour une nouvelle date et tout ce qui a changé. [Partager les dépenses](page:feature/split-expenses) en dit plus sur la copie."
+      - q: "J'ai saisi un mauvais montant. Puis-je le corriger ?"
+        a: "Oui. Modifiez la dépense, tant que les permissions du groupe vous le permettent et que le groupe n'est pas verrouillé. La version précédente est conservée, donc personne n'a à vous croire sur parole pour ce qui a changé, comme l'explique [partager les dépenses](page:feature/split-expenses)."
+      - q: "Une dépense semble fausse, et ce n'est pas la mienne. Que faire ?"
+        a: "Choisissez **J'ai une question** sur la dépense et dites pourquoi : toute la dépense reste hors des soldes de chacun jusqu'à ce que la personne qui l'a posée, ou un admin, la clôture. Pas de bouton ? Seules les personnes incluses dans une dépense peuvent poser une question, un admin doit d'abord activer **Autoriser les questions sur les dépenses** dans les paramètres du groupe, et le [guide sur les dépenses contestées](page:guide/what-to-do-when-someone-disputes-a-shared-expense) donne les clés de la diplomatie."
+  - heading: "Paiements"
+    items:
+      - q: "Side Badger envoie-t-il l'argent ?"
+        a: "Non, Side Badger ne fait jamais circuler d'argent. Remboursez-vous comme vous voulez, par virement bancaire, en espèces ou par tout autre moyen, puis enregistrez le paiement pour que les soldes se mettent à jour. [Comment régler les comptes après un voyage en groupe](page:guide/how-to-settle-up-after-a-group-trip) l'explique du début à la fin."
+      - q: "Comment enregistrer un paiement ?"
+        a: "Choisissez **Régler** dans le groupe, indiquez qui a payé et qui a reçu, saisissez le montant ou laissez un bouton de **Règlement rapide** le remplir, puis choisissez **Enregistrer Règlement**. Vous n'avez payé qu'une partie ? Enregistrez ce qui a été payé et le reste demeure dans le solde, comme l'explique [régler les comptes](page:feature/settle-up)."
+      - q: "J'ai mal enregistré un paiement. Puis-je le corriger ?"
+        a: "La personne qui l'a enregistré peut le modifier depuis l'historique **Règlements** du groupe, et elle ou un admin peut le supprimer, ce qui le retire des soldes. Un paiement concernant quelqu'un qui a quitté le groupe depuis ne peut pas être modifié. [Régler les comptes](page:feature/settle-up) présente l'historique."
+  - heading: "Notifications et écran d'accueil"
+    items:
+      - q: "Comment activer les notifications ?"
+        a: "Activez **Notifications push** dans **Paramètres** et autorisez-les quand votre navigateur le demande. Si le navigateur les a déjà bloquées, autorisez-les d'abord dans ses propres paramètres. Chaque appareil s'active séparément et la remise n'est pas garantie : prenez une notification pour un coup de coude, pas pour une promesse, comme l'explique la page [appli web](page:feature/web-app)."
+      - q: "Pourquoi les notifications ne marchent-elles pas sur mon iPhone ?"
+        a: "Sur un iPhone ou un iPad, elles ne fonctionnent que dans l'appli ajoutée à votre écran d'accueil, jamais dans un onglet de navigateur. Ajoutez-la, ouvrez-la depuis l'icône de l'écran d'accueil, puis activez-les dans **Paramètres**. [Planifier ensemble](page:feature/plan-together) montre ce qu'elles vous signalent."
+      - q: "Y a-t-il une appli à télécharger ?"
+        a: "Pas depuis une boutique d'applications, car Side Badger fonctionne dans votre navigateur. Connectez-vous, puis suivez **Ajouter à l'écran d'accueil ou au Dock** dans **Paramètres**, et il s'ouvre comme une appli, dans une fenêtre à part. La page [appli web](page:feature/web-app) donne les étapes pour chaque appareil."
+  - heading: "Quitter, archiver, verrouiller et fermer"
+    items:
+      - q: "Comment quitter un groupe ?"
+        a: "Réglez les comptes, puis choisissez **Quitter Groupe**. Vous ne pouvez pas partir tant que vous devez de l'argent ou qu'on vous en doit, ne serait-ce que dans une seule devise, tant qu'une dépense à laquelle vous participez a une question ouverte, ni si vous êtes le dernier admin ou le seul membre, et revenir demande une nouvelle invitation. [Groupes et permissions](page:feature/groups-and-permissions) donne les détails."
+      - q: "Comment retirer un ancien groupe de mon tableau de bord ?"
+        a: "Choisissez **Archiver Groupe**. Il disparaît de votre tableau de bord et pas de celui des autres, vous pouvez toujours l'ouvrir et l'utiliser, et **Désarchiver Groupe** le ramène. [Groupes et permissions](page:feature/groups-and-permissions) compare l'archivage, le verrouillage et la fermeture."
+      - q: "Le voyage est terminé. Peut-on empêcher les chiffres de bouger ?"
+        a: "Oui. Un admin peut activer **Verrouiller Groupe** dans les paramètres du groupe, et plus personne ne peut ajouter ni modifier de dépenses, enregistrer de nouveaux paiements ou changer les listes et les sondages tant qu'un admin ne le déverrouille pas. Tout le monde peut toujours lire le groupe et son historique, et aucun taxi tardif ne s'y glisse, comme l'explique [groupes et permissions](page:feature/groups-and-permissions)."
+      - q: "Puis-je supprimer un groupe ?"
+        a: "Un admin peut le fermer avec **Fermer le groupe**, après avoir saisi le nom du groupe pour confirmer. La fermeture est définitive et rend le groupe inaccessible à tous, donc si vous voulez seulement qu'il disparaisse de la vue, archivez-le plutôt. [Groupes et permissions](page:feature/groups-and-permissions) donne les petits caractères."
+contact:
+  heading: "Ça coince encore ?"
+  items:
+    - q: "Un bug, ou quelque chose à changer ?"
+      a: "Dites-le-nous depuis l'appli. Choisissez **Commentaires** dans le menu de votre compte, puis **Envoyer Retour**, et sélectionnez **Signaler un Problème**, **Demander de l'Aide** ou **Demande de Fonctionnalité**. Joignez une capture d'écran si cela aide, et quand nous répondrons, vous trouverez notre réponse dans le même fil."
+    - q: "Vous préférez écrire par e-mail ?"
+      a: "Écrivez à l'adresse ci-dessous. Dites de quel groupe il s'agit, ce que vous avez fait et ce que vous attendiez. Se défouler est permis ; les mots de passe non, n'envoyez donc jamais le vôtre."
+  emailLabel: "Écrivez-nous à"
+  email: support@sidebadger.me

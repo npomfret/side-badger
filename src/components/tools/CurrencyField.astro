@@ -18,20 +18,24 @@ const { intlCode } = localeConfig[locale];
 const chosen = defaultCurrency(locale, intlCode);
 const currencies = currencyChoices(likelyCurrency(locale, intlCode));
 const currencyNames = new Intl.DisplayNames(intlCode, { type: 'currency' });
-const currencyName = (code: string) => {
+const englishNames = new Intl.DisplayNames('en', { type: 'currency' });
+const nameIn = (names: Intl.DisplayNames, code: string) => {
   try {
-    return currencyNames.of(code) ?? code;
+    return names.of(code) ?? code;
   } catch {
     return code;
   }
 };
+const currencyName = (code: string) => nameIn(currencyNames, code);
+// Some locales' Intl data (pcm, fil) names currencies in English; mark those names as English
+const isEnglish = (code: string) => locale !== 'en' && currencyName(code) === nameIn(englishNames, code);
 ---
 
 <div class="sc-field sc-currency">
   <label for="sc-currency">{t('tools.split.currency', locale)}</label>
   <select id="sc-currency" data-ref="currency">
     {currencies.map(code => (
-      <option value={code} selected={code === chosen}>{code} · {currencyName(code)}</option>
+      <option value={code} selected={code === chosen} lang={isEnglish(code) ? 'en' : undefined}>{code} · {currencyName(code)}</option>
     ))}
   </select>
 </div>

@@ -1,0 +1,113 @@
+translatedFrom: "c0228941"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - groups.group-per-house-trip-event
+  - groups.no-leaving-while-owing
+  - expense-splitting.only-people-involved
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+  - settlements.quick-settle-fills-amount
+  - settlements.part-payment-stays-on-balance
+  - reactions.celebrate-a-payment
+  - permissions.lock-the-group
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+  - example.people.4.name
+owner: npomfret
+reviewBy: 2027-04-21
+datePublished: 2026-10-22
+meta:
+  title: "Slik gjør dere opp etter en gruppereise | Side Badger"
+  description: "Gjør opp før alle spres. Ti sammenfiltrede gjeldsposter blir til fire betalinger, registrert underveis, og en delbetaling går fint. Regnet for fem venner."
+h1: "Slik gjør dere opp etter en gruppereise"
+navLabel: "Gjør opp etter en tur"
+lead: "Gjør opp før alle spres. Legg inn den siste utgiften, åpne gruppens saldoer og betal det du skylder fra den korte listen, slik du vil. Registrer så hver betaling i Side Badger, så saldoen ryddes for hele gruppen. For fem venner og fem utgifter går ti sammenfiltrede gjeldsposter ned til fire betalinger."
+cta:
+  heading: "Lukk regnskapet før bildene dukker opp"
+  body: "Opprett en gratis konto, start en gruppe for neste tur og legg til hver kostnad etter hvert som den oppstår. Den korte listen over betalinger venter når du kommer til flyplassen. Vil du først se [hvordan oppgjør fungerer](page:feature/settle-up)?"
+sections:
+  - heading: "Fem venner, fem utgifter, én avgangshall"
+    body: "Mo, Ines, Raf, Tess og Uma tilbrakte en uke ved kysten. Mo booket leiligheten og kjøpte dagligvarene, Ines betalte for båtturen, og Raf tok regningen for den store middagen. Tess tok flyplasstaxien sammen med Uma og Mo, fordi Ines og Raf tok toget. Umas kort ble igjen hjemme, så hun betalte for ingenting. Det er fem utgifter og 1 700 € til sammen, og i avgangshallen kunne ingen si hvem som lå foran."
+  - heading: "Ti gjeldsposter, fire betalinger"
+    body: "Leiligheten, båtturen, middagen og dagligvarene deles likt på fem. Det er 200 €, 50 €, 60 € og 18 € hver, så Ines og Raf skylder 328 € hver. Taxien deles på tre med 20 € hver, så Mo, Tess og Uma skylder 348 €. Mo betalte 1 090 € og skylder 348 €, så han har 742 € til gode. Alle de andre betalte mindre enn de skylder. Uma mangler 348 €, Tess 288 €, Ines 78 € og Raf 28 €, og de summerer seg til Mos 742 €. Gjør du opp hvert par av personer direkte, får du ti separate gjeldsposter. Side Badger foreslår i stedet fire betalinger, alle til Mo."
+  - heading: "Gjør opp før alle spres"
+    body: "Det beste tidspunktet er siste kveld eller hjemturen, mens alle fortsatt er på samme sted og en gjeld på 28 € er lett å nevne. Legg inn alle utgiftene først, taxien også. Ingen kan forlate en gruppe mens de skylder eller har penger til gode, så regnskapet må uansett lukkes en gang."
+    items:
+      - "**Sjekk listen.** Åpne gruppen og se på **Saldoer**. Som standard ser du gjelden som angår deg. Velg **Vis alle** for å se hele gruppens liste."
+      - "**Betal slik du vil.** Bankoverføring, kontanter, en tjeneste du skylder fra forrige ferie. Side Badger flytter ikke pengene."
+      - "**Registrer den.** Velg **Gjør opp**. Under **Hurtigoppgjør** er hver knapp en av de foreslåtte betalingene dine, og når du velger en, fylles beløpet inn. Legg til et **Notat**, for eksempel bankoverføring, sjekk **Dato** (den kan ikke ligge i fremtiden) og velg **Registrer oppgjør**."
+      - "**Se gjelden forsvinne.** Saldoen oppdateres for alle. Når den siste betalingen er inne, står det **Alt er gjort opp!** under **Saldoer**."
+  - heading: "Betale en del nå, resten senere"
+    body: "Uma kan sende 200 € i kveld og resten i slutten av måneden. Hun registrerer 200 €, og skjemaet advarer henne om at hun fortsatt vil skylde Mo 148 € etterpå, som er 348 € minus 200 €. Lagrer hun det, blir de 148 € stående på saldoen hennes til hun registrerer resten. Advarselen virker begge veier. Hvis en null for mye gjør 348 € til 3 480 €, sier skjemaet at hun bare skylder Mo 348 €, og at lagring ville skape en gjeld i motsatt retning. Fjern den ekstra nullen før du lagrer."
+  - heading: "Rette feil, og juble for betalinger"
+    items:
+      - "**En feil betaling.** Bare den som registrerte en betaling, kan redigere den. Vedkommende eller en gruppeadministrator kan slette den, og så kan den registreres på nytt."
+      - "**En betaling verdt å merke seg.** Hver registrerte betaling står under **Oppgjør** med dato og notat, der alle i gruppen kan se den og reagere. Mo kan velge **Feire** når Umas siste 148 € kommer inn."
+      - "**Slutten.** Når alle saldoer er på null, kan en administrator låse gruppen så tallene blir stående."
+  - heading: "Hva Side Badger ikke gjør her"
+    items:
+      - "Den flytter aldri penger. Den har ingen betalingslenker eller betalingsforespørsler, så en betaling i appen er en registrering av en som ble gjort et annet sted."
+      - "Den sender ingen påminnelser. Å purre på en forsinket betaling er fortsatt opp til deg."
+      - "Den setter ingen frister. Det er opp til gruppen å bli enig om når resten av Umas 148 € forfaller."
+      - "De foreslåtte betalingene er en kort liste, ikke et løfte om den kortest mulige. De regnes ut per valuta, så en tur betalt i euro og pund får en liste for hver."
+exampleAfter: 2
+example:
+  heading: "Fem venner ved kysten"
+  currency: EUR
+  people:
+    - id: mo
+      name: Mo
+    - id: ines
+      name: Ines
+    - id: raf
+      name: Raf
+    - id: tess
+      name: Tess
+    - id: uma
+      name: Uma
+  expenses:
+    - label: "Leilighet"
+      payer: mo
+      amount: 1000
+      split:
+        method: equal
+    - label: "Båttur"
+      payer: ines
+      amount: 250
+      split:
+        method: equal
+    - label: "Stor middag"
+      payer: raf
+      amount: 300
+      split:
+        method: equal
+    - label: "Flyplasstaxi"
+      payer: tess
+      amount: 60
+      split:
+        method: equal
+        shares:
+          tess: 1
+          uma: 1
+          mo: 1
+    - label: "Dagligvarer"
+      payer: mo
+      amount: 90
+      split:
+        method: equal
+faq:
+  heading: "Spørsmål"
+  items:
+    - q: "Hvem bør registrere en betaling, den som betaler eller den som får betalt?"
+      a: "Å registrere en betaling krever tillatelse til å redigere utgifter, og skjemaet spør **Hvem betalte?** og **Hvem mottok betalingen?** Bare den som registrerte den, kan redigere den senere, så det er vanligvis enklest at betaleren gjør det, med hurtigoppgjørsknappen."
+    - q: "Hva om turen gikk i to valutaer?"
+      a: "Saldoer føres per valuta, så en gjeld i euro forblir en gjeld i euro, og hver valuta får sin egen korte liste, med mindre utgiftene ble konvertert da de ble lagt inn. [Flere valutaer](page:guide/how-to-split-a-trip-paid-in-several-currencies) viser begge måtene."
+    - q: "Bør vi gjøre opp under turen eller til slutt?"
+      a: "Begge deler fungerer. Hver registrerte betaling endrer saldoene, så en betaling midt i turen teller med i den endelige listen. Til slutt er enklere, fordi [hele turen](page:use-case/group-trips) er samlet på ett sted."

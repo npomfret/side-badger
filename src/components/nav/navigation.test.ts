@@ -14,9 +14,27 @@ const release1 = vi.hoisted(
       'use-case/group-trips',
       'use-case/housemates',
       'use-case/events-and-celebrations',
+      // Release 2
+      'split-bill-calculator',
+      'rent-split-calculator',
+      'guides',
+      'guide/how-to-split-rent-by-room-size',
+      'guide/how-to-split-a-holiday-villa-when-people-stay-different-nights',
+      'guide/how-to-split-a-stag-or-hen-weekend',
+      'guide/how-to-split-bills-with-a-partner-who-earns-more',
+      'guide/how-to-split-a-trip-paid-in-several-currencies',
+      'guide/how-to-collect-for-a-group-gift',
+      'guide/what-to-do-when-someone-disputes-a-shared-expense',
+      'guide/how-to-settle-up-after-a-group-trip',
+      'feature/groups-and-permissions',
+      'feature/plan-together',
+      'feature/receipt-scanning',
+      'feature/web-app',
+      'use-case/couples',
+      'compare/splitwise',
     ])
 );
-// Release 1 is published for real now, but this fixture models a registry where those pages are
+// Releases 1 and 2 are published for real now, but this fixture models a registry where those pages are
 // still unpublished: they count as published and built only once they are in `extraBuilt`
 vi.mock('../../site/pages', async importActual => {
   const actual = await importActual<typeof import('../../site/pages')>();

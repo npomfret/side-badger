@@ -1,0 +1,94 @@
+translatedFrom: "1a58db8f"
+review:
+  status: checked
+  checker: "R2-check"
+  date: "2026-10-21"
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.odd-penny-at-random
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+identicalApproved:
+  - example.people.0.name
+  - example.people.1.name
+  - example.people.2.name
+  - example.people.3.name
+meta:
+  title: "Kikokotoo cha kugawanya bili: nani anadaiwa na nani | Side Badger"
+  description: "Nani alilipa, nani anadaiwa, nani analipa nani: yote kwa sekunde. Gawanya kwa usawa, kwa kiasi kamili au kwa asilimia. Bure, kwenye kivinjari, hakuna kinachohifadhiwa wala kutumwa."
+h1: "Kikokotoo cha kugawanya bili"
+navLabel: "Kikokotoo cha kugawanya bili"
+lead: "Andika nani alilipa nini, na kikokotoo kinakuambia nani anadaiwa na nani, pamoja na orodha fupi ya malipo ya kumaliza hesabu. Kinafanya kazi kwenye kivinjari chako, hakihifadhi chochote na hakisogezi pesa. Kikundi chenu kikihitaji hesabu idumu zaidi ya kichupo, [kugawanya gharama](page:feature/split-expenses) na [kumaliza hesabu](page:feature/settle-up) kwenye Side Badger hufanya hesabu zilezile na kuzitunza."
+cta:
+  heading: "Unapenda hesabu? Zitunze."
+  body: "Kikokotoo hiki husahau kila kitu ukifunga kichupo, kama yule aliyedai kwamba alilipa mara ya mwisho. Kikundi cha Side Badger hutunza gharama, husasisha salio la kila mtu na kurekodi malipo. Ni bure, bila matangazo na bila vikomo vya kila siku."
+sections:
+  - heading: "Jinsi hesabu inavyofanyika"
+    body: "Kwa kila gharama, kikokotoo kinahesabu sehemu ya kila mtu. Unaweza kuigawanya kwa usawa, kwa viasi kamili au kwa asilimia, kati ya watu unaowachagua. Salio la kila mtu ni alichokilipa ukitoa anachodaiwa. Alama ya kujumlisha inamaanisha kikundi kinamdai, na alama ya kutoa inamaanisha anadaiwa na kikundi. Salio huwa linajumlisha sifuri kila mara, kwa sababu kila anachodai mtu mmoja ni deni la wengine."
+  - heading: "Kwa nini orodha ya malipo ni fupi"
+    body: "Hakuna anayehitaji kulipa kila risiti peke yake. Salio la kila mtu likishajulikana, kikokotoo kinamlinganisha mwenye deni kubwa zaidi na anayedai zaidi, kinamaliza kiasi kikubwa iwezekanavyo kwa malipo moja, na kinaendelea chini ya orodha hadi kila mtu afike sifuri. Hakihitaji kamwe malipo mengi zaidi ya idadi ya watu wenye salio ukipunguza moja, na mara nyingi kinahitaji machache kuliko kulipa bili moja baada ya nyingine. Kinatoa orodha fupi ya malipo, na hakiahidi kuwa ndiyo fupi kuliko zote inayowezekana."
+  - heading: "Kisichofanywa na kikokotoo"
+    items:
+      - "**Kushughulikia sarafu zaidi ya moja.** Chagua moja na uitumie kwa hesabu nzima. Programu huweka salio tofauti kwa kila sarafu, na inaweza kubadilisha gharama kwa kiwango cha sasa cha ubadilishaji, ambacho unaweza kukibadilisha."
+      - "**Kuhifadhi chochote.** Ukifunga kichupo nambari zinapotea. Ili kuzitunza, nakili kiungo. Kinabeba nambari zako baada ya #, ambayo kivinjari chako hakitumi kamwe kwa seva, na yeyote utakayemtumia anaweza kuzisoma."
+      - "**Kusogeza pesa.** Kinakuambia nani anapaswa kumlipa nani. Mnalipana mtakavyo, kisha mnarekodi malipo kwenye programu ikiwa kikundi chenu kinaweka hesabu huko."
+      - "**Kuchagua senti isiyo na mwenyewe kwa bahati nasibu.** Bili isipogawanyika sawasawa, senti zinazobaki huenda kwa watu wa kwanza kwenye orodha, ili jumla ziendelee kujumlishwa sawa. Kwenye programu, senti hiyo huenda kwa mtu mmoja kwa bahati nasibu, kwa hivyo si yuleyule kila mara."
+      - "**Kuvuka vikomo.** Kikokotoo kinakubali watu 2 hadi 20, na gharama moja inaweza kufikia 999,999.99, kama kwenye programu."
+exampleAfter: 2
+example:
+  heading: "Wikendi ndefu, marafiki wanne"
+  currency: GBP
+  people:
+    - id: ana
+      name: Ana
+    - id: ben
+      name: Ben
+    - id: cara
+      name: Cara
+    - id: dev
+      name: Dev
+  expenses:
+    - label: "kibanda cha likizo"
+      payer: ana
+      amount: 360
+      split:
+        method: equal
+    - label: "mboga na vyakula"
+      payer: ben
+      amount: 160
+      split:
+        method: equal
+    - label: "teksi"
+      payer: cara
+      amount: 36
+      split:
+        method: equal
+        shares:
+          ben: 1
+          cara: 1
+          dev: 1
+    - label: "baa"
+      payer: dev
+      amount: 60
+      split:
+        method: equal
+        shares:
+          ana: 1
+          cara: 1
+          dev: 1
+faq:
+  heading: "Maswali"
+  items:
+    - q: "Je, kikokotoo ni bure?"
+      a: "Ndiyo. Bure. Hakuna matangazo. Hakuna vikomo vya kila siku. Huhitaji akaunti pia."
+    - q: "Je, kinahifadhi ninachoandika?"
+      a: "Hapana. Hakuna kinachohifadhiwa wala kutumwa popote. Ili kutunza nambari zako, tumia Nakili kiungo na uhifadhi kiungo mahali fulani."
+    - q: "Nani anaweza kuona kiungo ninachonakili?"
+      a: "Yeyote anayekuwa nacho. Nambari ziko ndani ya kiungo chenyewe, baada ya #, kwa hivyo kitume tu kwa watu wanaopaswa kuziona."
+    - q: "Je, kinasogeza pesa?"
+      a: "Hapana. Kinakokotoa nani anapaswa kulipa nani, nanyi mnalipana mtakavyo. Side Badger pia haigusi pesa zako kamwe. Tazama [kumaliza hesabu](page:feature/settle-up)."
+    - q: "Je, naweza kugawanya safari iliyolipwa kwa sarafu mbili?"
+      a: "Si hapa, kwa sababu hesabu moja ina sarafu moja. Kwenye kikundi, kila sarafu ina salio lake. Tazama [sarafu mbalimbali](page:feature/multiple-currencies)."
+    - q: "Je, kiasi kisipojumlisha sawa?"
+      a: "Kikokotoo kinasema hivyo chini ya gharama na hakionyeshi matokeo hadi vijumlishe sawa. Viasi kamili lazima vijumlishe jumla ya gharama, na asilimia lazima zifikie 100."

@@ -13,15 +13,17 @@ const PREVIEW_LOCALES = ['en', ...PSEUDO_LOCALES] as const;
  * fails any build that contains them. Their English text is the `__preview__` fixtures under
  * `src/content/**`; the pseudo-locales (PREVIEW_PSEUDO=1) derive theirs from it.
  *
- * Between them they exercise the four layouts:
+ * Between them they exercise the five layouts:
  * - `preview/hub`: HubLayout, with the two preview pages below as its cards
  * - `preview/how-it-works`: HowItWorksLayout
  * - `feature/preview`: FeaturePageLayout (worked example with a currency conversion)
  * - `use-case/preview`: UseCasePageLayout (worked example that settles six payments into two)
+ * - `guide/preview`: GuidePageLayout (worked example, FAQ, three product pages in `related`); the
+ *   three pages it names list it back, and it is filed under the real guides hub
  *
  * The hub and how-it-works previews have their own route (`preview/[slug].astro`) because the
- * real hubs and how it works are routes of their own; the other two use the real feature and
- * use-case routes. `nav` on the hub only gives the breadcrumbs a label, because the page is not
+ * real hubs and how it works are routes of their own; the others use the real feature, use-case
+ * and guide routes. `nav` on the hub only gives the breadcrumbs a label, because the page is not
  * published and so never reaches the header.
  */
 export const previewPages: readonly PageDef[] = [
@@ -66,6 +68,17 @@ export const previewPages: readonly PageDef[] = [
     locales: PREVIEW_LOCALES,
     related: ['feature/preview', 'preview/how-it-works', 'pricing'],
     content: { collection: 'useCasePages', slug: '__preview__' },
+    indexing: 'per-locale-review',
+  },
+  {
+    id: 'guide/preview',
+    type: 'article',
+    path: '/guides/preview/',
+    parent: 'guides',
+    published: false,
+    locales: PREVIEW_LOCALES,
+    related: ['feature/preview', 'use-case/preview', 'preview/how-it-works'],
+    content: { collection: 'guides', slug: '__preview__' },
     indexing: 'per-locale-review',
   },
 ];

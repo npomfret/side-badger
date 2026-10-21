@@ -3,11 +3,20 @@ import { expect, type Locator, type Page } from '@playwright/test';
 import { ELEMENT_TIMEOUT, NAVIGATION_TIMEOUT } from './timeouts';
 import { isRtl, pathFor, text, type ShellLocale } from './strings';
 import { moneyFormatter } from '../../src/components/content/money';
-import { exampleLines, fixtureFor, INTL, LAYOUT_ROUTES, uiText, type Fixture, type LayoutKind } from './layoutsFixtures';
+import {
+  exampleLines,
+  fixtureFor,
+  INTL,
+  LAYOUT_PAGE_IDS,
+  LAYOUT_ROUTES,
+  uiText,
+  type Fixture,
+  type LayoutKind,
+} from './layoutsFixtures';
 
 /**
- * One of the four content layouts (FeaturePageLayout, UseCasePageLayout, HubLayout,
- * HowItWorksLayout), shown by its preview page. The expected text is the page's fixture
+ * One of the five content layouts (FeaturePageLayout, UseCasePageLayout, HubLayout,
+ * HowItWorksLayout, GuidePageLayout), shown by its preview page. The expected text is the page's fixture
  * (`src/content/**\/__preview__`), pseudoized for the pseudo-locales, so every check names what
  * the visitor should read. `navigateTo` is the only way in.
  */
@@ -52,7 +61,7 @@ export class ContentPage {
   }
 
   /** The register link in the hero or the closing band; its accessible name ends with "External link". */
-  private launchLink(where: 'hero' | 'footer-cta'): Locator {
+  private launchLink(where: 'hero' | 'footer-cta' | 'guide-end'): Locator {
     const label = text(this.locale, 'home.hero.ctaPrimary');
     return (where === 'hero' ? this.hero : this.closing).getByRole('link', {
       name: new RegExp(`^${escapeRegExp(label)}`),
@@ -85,6 +94,8 @@ export class ContentPage {
     const example = f.example ? [f.example.heading!] : [];
     const around = [...extra.slice(0, split), ...example, ...extra.slice(split)];
     const related = text(this.locale, 'related.heading');
+    // The product pages list the guide that names them, between the FAQ and the related pages
+    const guides = text(this.locale, 'related.guidesHeading');
     switch (this.kind) {
       case 'feature':
         return [
@@ -95,11 +106,12 @@ export class ContentPage {
           f.limits!.heading,
           f.useCasesHeading!,
           f.faq!.heading,
+          guides,
           related,
           f.cta.heading,
         ];
       case 'use-case':
-        return [f.scenario!.heading, ...around, f.featuresHeading!, f.faq!.heading, related, f.cta.heading];
+        return [f.scenario!.heading, ...around, f.featuresHeading!, f.faq!.heading, guides, related, f.cta.heading];
       case 'hub':
         return [f.cardsHeading!, ...extra, f.faq!.heading, related, f.cta.heading];
       case 'how-it-works':
@@ -108,19 +120,22 @@ export class ContentPage {
           f.requirements!.heading,
           ...around,
           f.faq!.heading,
+          guides,
           related,
           f.cta.heading,
         ];
+      case 'guide':
+        return [...around, f.faq!.heading, related, f.cta.heading];
     }
   }
 
   // ----- hero, calls to action -----
 
-  /** Both calls to action are register links through the launch counter, with the page's id. */
+  /** Both calls to action are register links through the launch counter, with the page's id. A guide's closing one is counted as `guide-end`. */
   async expectLaunchLinks(): Promise<void> {
-    const from = this.kind === 'feature' ? 'feature/preview' : this.kind === 'use-case' ? 'use-case/preview' : `preview/${this.kind === 'hub' ? 'hub' : 'how-it-works'}`;
+    const from = LAYOUT_PAGE_IDS[this.kind];
     const lang = this.locale === 'en' || this.locale.startsWith('xx-') ? '' : `&lang=${this.locale}`;
-    for (const cta of ['hero', 'footer-cta'] as const) {
+    for (const cta of ['hero', this.kind === 'guide' ? 'guide-end' : 'footer-cta'] as const) {
       const link = this.launchLink(cta);
       await expect(link, `the ${cta} call to action`).toBeVisible();
       await expect(link).toHaveAttribute('href', `/go/register/?from=${from}&cta=${cta}${lang}`);
@@ -130,9 +145,16 @@ export class ContentPage {
 
   // ----- breadcrumbs -----
 
-  /** Feature and use-case pages are two levels down and show Home, the hub and the page. */
+  /** Feature and use-case pages are two levels down and show Home, the hub and the page; a guide shows Home, Guides and the page. */
   async expectBreadcrumb(): Promise<void> {
-    if (this.kind === 'feature' || this.kind === 'use-case') {
+    if (this.kind === 'guide') {
+      await expect(this.breadcrumb.getByRole('listitem'), 'breadcrumb trail').toHaveText([
+        text(this.locale, 'nav.home'),
+        text(this.locale, 'footer.guides'),
+        this.fixture.h1,
+      ]);
+      await expect(this.breadcrumb.getByRole('link', { name: this.fixture.h1 }), 'the page is not a link').toHaveCount(0);
+    } else if (this.kind === 'feature' || this.kind === 'use-case') {
       await expect(this.breadcrumb.getByRole('listitem'), 'breadcrumb trail').toHaveText([
         text(this.locale, 'nav.home'),
         text(this.locale, 'nav.features'),
@@ -162,6 +184,22 @@ export class ContentPage {
       const title = fixtureFor(kind, this.locale).h1;
       await expect(this.region(this.fixture.cardsHeading!).getByRole('link', { name: title, exact: true })).toBeVisible();
     }
+  }
+
+  /** A guide's related pages: the three product pages its registry entry names, in that order, as links titled with their own headings. */
+  async expectRelatedProductPages(): Promise<void> {
+    const titles = (['feature', 'use-case', 'how-it-works'] as const).map(kind => fixtureFor(kind, this.locale).h1);
+    await expect(
+      this.region(text(this.locale, 'related.heading')).getByRole('link'),
+      'the product pages the guide links to'
+    ).toHaveText(titles);
+  }
+
+  /** A product page lists the guide that names it, under its own heading, and the link goes to the guide. */
+  async expectRelatedGuides(): Promise<void> {
+    const guide = this.region(text(this.locale, 'related.guidesHeading')).getByRole('link');
+    await expect(guide, 'the guides that name this page').toHaveText([fixtureFor('guide', this.locale).h1]);
+    await expect(guide).toHaveAttribute('href', pathFor(this.locale, LAYOUT_ROUTES.guide));
   }
 
   // ----- worked example -----

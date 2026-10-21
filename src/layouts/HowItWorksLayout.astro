@@ -2,7 +2,8 @@
 /**
  * How it works (restructure 5.6, D23): the hero, the ordered steps with their screenshots (each
  * step an H2, as the brief's outline has it), what you need, an optional worked example, further
- * sections, an optional FAQ, and the closing call to action.
+ * sections, an optional FAQ, the published guides that name the page, and the closing call to
+ * action.
  *
  * JSON-LD (2.5): WebPage about the app, plus FAQPage when the page shows a FAQ. The page is one
  * level below Home, so there is no breadcrumb (D22).
@@ -20,7 +21,7 @@ import WorkflowSteps from '../components/content/WorkflowSteps.astro';
 import { faqNode, webPageNode } from '../components/content/layout-jsonld';
 import { relatedCards } from '../components/content/page-content';
 import type { SitePageData } from '../content/schemas';
-import type { Locale } from '../i18n';
+import { t, type Locale } from '../i18n';
 import { requirePage, type PageId } from '../site/pages';
 
 type HowItWorksData = Extract<SitePageData, { requirements: unknown }>;
@@ -33,7 +34,8 @@ interface Props {
 
 const { data, pageId, locale } = Astro.props;
 const page = requirePage(pageId);
-const others = await relatedCards(pageId, locale);
+const others = await relatedCards(pageId, locale, other => other.type !== 'article');
+const guides = await relatedCards(pageId, locale, other => other.type === 'article');
 ---
 
 <BaseLayout
@@ -74,6 +76,8 @@ const others = await relatedCards(pageId, locale);
     )}
 
     {data.faq && <FaqList faq={data.faq} locale={locale} />}
+
+    <RelatedPages links={guides} locale={locale} heading={t('related.guidesHeading', locale)} id="guides" />
 
     <RelatedPages links={others} locale={locale} />
 

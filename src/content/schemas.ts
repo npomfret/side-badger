@@ -274,8 +274,25 @@ export const sitePageByType = { hub: hubPage, 'how-it-works': howItWorksPage } a
 /** `comparePages` (release 2): `src/content/compare/<slug>/<locale>.yaml` */
 export const comparePage = entry({ sections, faq: faq.optional() });
 
-/** `guides` (step 8): `src/content/guides/<slug>/<locale>.yaml` */
-export const guide = entry({ sections, faq: faq.optional() });
+/**
+ * `guides`: `src/content/guides/<slug>/<locale>.yaml`. A user story told through one fictional
+ * group: the lead answers the question in the `h1`, the sections tell the story, and the worked
+ * example sits after `exampleAfter` of them (restructure R4).
+ */
+export const guide = entry({
+  /** Who keeps the guide accurate (restructure D20). Structural: identical in every locale. */
+  owner: text,
+  /** The date by which the owner reviews the guide again (D20). Structural. */
+  reviewBy: isoDate,
+  /** First and last substantive edit: the Article's `datePublished` and `dateModified`. Structural. */
+  datePublished: isoDate,
+  dateModified: isoDate.optional(),
+  sections,
+  example: workedExample.optional(),
+  /** With an example: sections shown before it. Absent: the example comes before the sections. */
+  exampleAfter,
+  faq: faq.optional(),
+}).refine(exampleAfterFits, { message: EXAMPLE_AFTER_MESSAGE, path: ['exampleAfter'] });
 
 export const contentSchemas = {
   featurePages: featurePage,
@@ -298,5 +315,6 @@ export const contentDirs: Record<ContentCollection, string> = {
 
 export type FeaturePageData = z.infer<typeof featurePage>;
 export type UseCasePageData = z.infer<typeof useCasePage>;
+export type GuideData = z.infer<typeof guide>;
 export type SitePageData = z.infer<typeof sitePage>;
 export type WorkedExampleData = z.infer<typeof workedExample>;

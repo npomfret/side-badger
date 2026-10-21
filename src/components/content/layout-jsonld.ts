@@ -1,11 +1,13 @@
 /**
  * The JSON-LD nodes the content layouts pass to BaseLayout's `jsonLd` (restructure 2.5, D7):
- * the page-specific `WebPage` fields, the `FAQPage` for the visible FAQ, and a hub's `ItemList`.
- * BaseLayout adds the base nodes and the `BreadcrumbList` (feature and use-case pages only: hubs
- * and how it works are one level below Home and show no breadcrumb, D22).
+ * the page-specific `WebPage` fields, the `FAQPage` for the visible FAQ, a hub's `ItemList` and a
+ * guide's `Article`.
+ * BaseLayout adds the base nodes and the `BreadcrumbList` (feature, use-case and guide pages only:
+ * hubs and how it works are one level below Home and show no breadcrumb, D22).
  */
 import type { Locale } from '../../i18n';
 import {
+  articleNode,
   faqPageNode,
   itemListNode,
   softwareApplicationId,
@@ -32,4 +34,4 @@ export function faqNode(faq: Faq | undefined): JsonLdNode[] {
   return faq ? [faqPageNode(faq.items.map(({ q, a }) => ({ question: q, answer: plainText(a) })))] : [];
 }
 
-export { itemListNode };
+export { articleNode, itemListNode };

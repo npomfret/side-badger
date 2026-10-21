@@ -20,6 +20,9 @@ export type PageType =
   | 'legal'
   | 'article';
 
+/** The page types that describe the product. A guide links to at least two of them (restructure D20). */
+export const PRODUCT_PAGE_TYPES: readonly PageType[] = ['feature', 'use-case', 'how-it-works'];
+
 export interface PageDef {
   /** 'home', 'pricing', 'features', 'feature/split-expenses', … */
   id: string;
@@ -36,7 +39,7 @@ export interface PageDef {
   /** Registry feature ids the page depicts (`src/data/features.ts`) */
   features?: readonly string[];
   /** The content entry that fills the page, for pages built from content collections */
-  content?: { collection: 'featurePages' | 'useCasePages' | 'sitePages'; slug: string };
+  content?: { collection: 'featurePages' | 'useCasePages' | 'sitePages' | 'guides'; slug: string };
   indexing: 'per-locale-review' | 'english-only';
 }
 
@@ -264,6 +267,18 @@ export const pages = [
       'polls',
     ],
     content: { collection: 'useCasePages', slug: 'events-and-celebrations' },
+    indexing: 'per-locale-review',
+  },
+  {
+    id: 'guides',
+    type: 'hub',
+    path: '/guides/',
+    parent: 'home',
+    published: false,
+    locales: 'all',
+    footer: { group: 'useCases', order: 10 },
+    related: ['use-cases', 'how-it-works', 'pricing'],
+    content: { collection: 'sitePages', slug: 'guides' },
     indexing: 'per-locale-review',
   },
 ] as const satisfies readonly PageDef[];

@@ -1,6 +1,6 @@
 ---
 /**
- * A hub page (restructure 5.6, D23): the features index and the use-cases index. Hero with the
+ * A hub page (restructure 5.6, D23): the features, use-cases and guides indexes. Hero with the
  * intro, cards for the hub's child pages (registry `parent`, each child's `h1` and
  * `meta.description`), further sections, an optional FAQ, and the closing call to action.
  *
@@ -40,7 +40,7 @@ const others = await relatedCards(pageId, locale, other => other.parent !== page
   title={data.meta.title}
   description={data.meta.description}
   locale={locale}
-  ogCard={page.path.startsWith('/use-cases') ? 'use-cases' : 'features'}
+  ogCard={page.path.startsWith('/use-cases') || page.path.startsWith('/guides') ? 'use-cases' : 'features'}
   jsonLd={[
     webPageNode(pageId, locale, 'CollectionPage'),
     itemListNode(cards.map(card => ({ name: card.title, url: card.url }))),

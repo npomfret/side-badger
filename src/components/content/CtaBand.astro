@@ -2,7 +2,8 @@
 /**
  * The closing call to action of a content page (every brief ends with one): the entry's `cta`
  * heading and body, and a register link through the launch counter with the site's one main
- * button label, `home.hero.ctaPrimary`.
+ * button label, `home.hero.ctaPrimary`. `position` is the launch counter's `cta` value: the
+ * default `footer-cta`, or `guide-end` on a guide (restructure R12).
  */
 import LaunchAppCta from '../cta/LaunchAppCta.astro';
 import { t, type Locale } from '../../i18n';
@@ -12,9 +13,10 @@ interface Props {
   cta: { heading: string; body: string };
   pageId: string;
   locale: Locale;
+  position?: string;
 }
 
-const { cta, pageId, locale } = Astro.props;
+const { cta, pageId, locale, position = 'footer-cta' } = Astro.props;
 ---
 
 <section class="cta-band" aria-labelledby="cta-heading" data-section="cta">
@@ -22,7 +24,7 @@ const { cta, pageId, locale } = Astro.props;
     <div class="cta-band__card glass">
       <h2 id="cta-heading">{cta.heading}</h2>
       <RichText as="p" text={cta.body} locale={locale} />
-      <LaunchAppCta target="register" cta="footer-cta" pageId={pageId} locale={locale} confetti>
+      <LaunchAppCta target="register" cta={position} pageId={pageId} locale={locale} confetti>
         {t('home.hero.ctaPrimary', locale)}
       </LaunchAppCta>
     </div>

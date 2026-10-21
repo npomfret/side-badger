@@ -35,6 +35,7 @@ Read the mail in Gmail. To reply as support@, use Gmail -> Settings -> Accounts 
 
 - Return-Path: `pm-bounces.sidebadger.me`, a CNAME to `pm.mtasv.net`.
 - DKIM selector: `20251218094557pm._domainkey`.
+- SPF: because Postmark sends with that custom Return-Path, receivers evaluate SPF for Postmark mail against `pm-bounces.sidebadger.me`, not the apex record. The `include:spf.mtasv.net` in the apex SPF is harmless but optional; Postmark says an SPF record isn't needed when a custom Return-Path is set up. The apex SPF matters for mail sent from Google Workspace.
 
 ### Inbound mail to the app (not set up)
 
@@ -45,7 +46,7 @@ If the app ever needs to process incoming mail, use Postmark inbound on a separa
 | Type | Host | Value | Purpose |
 |---|---|---|---|
 | MX | apex | `1 smtp.google.com` (the only MX record) | Delivers people's mail to Workspace |
-| TXT | apex | `v=spf1 include:_spf.google.com include:spf.mtasv.net ~all` | SPF for Google and Postmark |
+| TXT | apex | `v=spf1 include:_spf.google.com include:spf.mtasv.net ~all` | SPF for Google Workspace mail. The Postmark include is optional (see Postmark above) |
 | TXT | apex | `google-site-verification=...` | Verified the domain for Workspace. Do not remove it |
 | TXT | `google._domainkey` | Google DKIM, RSA 2048 | Signs Workspace mail |
 | TXT | `20251218094557pm._domainkey` | Postmark DKIM | Signs app mail |
@@ -60,7 +61,7 @@ If the app ever needs to process incoming mail, use Postmark inbound on a separa
 ## Status as of 2026-10-21 (point in time)
 
 - MX and both DKIM records are live.
-- SPF on ns1 is stale (see the Easyspace quirks above).
+- SPF drift on ns1 (see the Easyspace quirks above): as of 2026-10-21, ns1 still serves the old SPF `v=spf1 include:_spf.google.com ~all`, while ns2 serves the current one. Both report the same SOA serial, 2026102105. Re-saving the record, and deleting then re-adding it, did not change ns1, and the panel edits did not change the serial either. Next step: raise an Easyspace support ticket.
 - Gmail activation in Workspace is pending. The first check failed, most likely because the "no MX" answer was still cached (1-hour negative TTL).
 - Google DKIM "Start authentication" has been clicked.
 - The inbound test email has not been sent yet.

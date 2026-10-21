@@ -25,7 +25,8 @@ import {
   type ProblemCode,
   type Target,
 } from './split-engine';
-import { HASH_PREFIX, encodeState, stateFromHash } from './split-fragment';
+import { encodeState, stateFromHash } from './split-fragment';
+import { cloneTemplate, copyShareLink, fill, ref } from './tool-dom';
 
 interface Messages {
   personLabel: string;
@@ -48,17 +49,6 @@ interface Messages {
 }
 
 const METHODS: readonly string[] = ['equal', 'exact', 'percent'];
-
-/** Fill `{placeholders}` in one pass, so a value that contains braces is never expanded again */
-const fill = (template: string, params: Record<string, string | number>): string =>
-  template.replace(/\{(\w+)\}/g, (_token, name: string) => String(params[name] ?? ''));
-
-/** The element a script hook (`data-ref`) names inside `scope` */
-function ref<T extends HTMLElement = HTMLElement>(scope: ParentNode, name: string): T {
-  const element = scope.querySelector<T>(`[data-ref="${name}"]`);
-  if (!element) throw new Error(`Split calculator: no element with data-ref="${name}"`);
-  return element;
-}
 
 function start(root: HTMLElement): void {
   const messages = JSON.parse(ref(root, 'messages').textContent ?? '{}') as Messages;
@@ -86,9 +76,7 @@ function start(root: HTMLElement): void {
   const personDefault = (number: number) => fill(messages.personLabel, { number });
   const expenseDefault = (number: number) => fill(messages.expenseLegend, { number });
 
-  const template = (name: string): HTMLElement =>
-    (root.querySelector<HTMLTemplateElement>(`template[data-template="${name}"]`)!.content
-      .firstElementChild as HTMLElement).cloneNode(true) as HTMLElement;
+  const template = (name: string): HTMLElement => cloneTemplate(root, name);
 
   let state: CalcState;
   // Each person and expense gets an id that outlives its position, to say which fields were visited
@@ -393,28 +381,8 @@ function start(root: HTMLElement): void {
 
   // ----- the share link -----------------------------------------------------------------------
 
-  async function copyLink(): Promise<void> {
-    const payload = encodeState(state);
-    linkBox.hidden = true;
-    if (payload === null) {
-      shareStatus.textContent = messages.linkTooLarge;
-      return;
-    }
-    // The address bar gets the same link, so a reload or a bookmark keeps the figures
-    history.replaceState(null, '', `${HASH_PREFIX}${payload}`);
-    const url = `${location.origin}${location.pathname}${location.search}${HASH_PREFIX}${payload}`;
-    try {
-      await navigator.clipboard.writeText(url);
-      shareStatus.textContent = messages.copied;
-    } catch {
-      // No clipboard permission, or an insecure page: show the link to copy by hand
-      shareStatus.textContent = messages.copyFailed;
-      linkInput.value = url;
-      linkBox.hidden = false;
-      linkInput.focus();
-      linkInput.select();
-    }
-  }
+  const copyLink = (): Promise<void> =>
+    copyShareLink(encodeState(state), { status: shareStatus, linkBox, linkInput }, messages);
 
   // ----- events -------------------------------------------------------------------------------
 

@@ -88,6 +88,11 @@ export function likelyCurrency(locale: string, intlCode: string): string | undef
   return REGION_CURRENCY[region];
 }
 
+/** The currency a calculator opens with: the locale's likely one, else pounds */
+export function defaultCurrency(locale: string, intlCode: string): string {
+  return likelyCurrency(locale, intlCode) ?? 'GBP';
+}
+
 /** The select's currencies: the short list, with the locale's likely currency added if it is not in it. */
 export function currencyChoices(likely: string | undefined): string[] {
   const list: string[] = [...CURRENCIES];

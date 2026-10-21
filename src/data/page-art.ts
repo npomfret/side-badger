@@ -187,6 +187,29 @@ export const pageArt: Readonly<Record<string, PageArtDef>> = {
     ],
   },
 
+  // The help page: the questions people arrive with, and the stamp they leave with (no example, no new keys)
+  support: {
+    layout: 'row',
+    items: [
+      { prop: 'sticky', text: key('home.chaos.chatTaxi') },
+      { prop: 'sticky', text: key('home.chaos.sticky'), color: 'pink' },
+      { prop: 'stamp', text: key('home.settle.allSettled'), tone: 'green' },
+    ],
+  },
+
+  // The comparison page: the bill the free bits leave you, and the stamp that says so (no Splitwise marks, no new keys)
+  'compare/splitwise': {
+    layout: 'cluster',
+    items: [
+      {
+        prop: 'receipt',
+        title: key('art.pricing.title'),
+        total: { label: key('art.pricing.total'), amount: key('pricing.free.price') },
+      },
+      { prop: 'stamp', text: key('art.pricing.stamp'), tone: 'green' },
+    ],
+  },
+
   // The calculator: the worked example's answer, stamped
   'split-bill-calculator': {
     layout: 'stack',
@@ -194,6 +217,20 @@ export const pageArt: Readonly<Record<string, PageArtDef>> = {
       { prop: 'ledger', payment: 0 },
       { prop: 'ledger', payment: 1 },
       { prop: 'stamp', text: key('home.settle.allSettled'), tone: 'green' },
+    ],
+  },
+
+  // The rent calculator: the flat's rent, the question every flat asks, and the check that closes it
+  'rent-split-calculator': {
+    layout: 'row',
+    items: [
+      {
+        prop: 'receipt',
+        title: { expense: 0 },
+        total: { label: { payer: 0 }, amount: { amount: 0 } },
+      },
+      { prop: 'sticky', text: key('art.rentSplitCalculator.sticky'), color: 'pink' },
+      { prop: 'stamp', text: key('art.rentSplitCalculator.stamp'), tone: 'green' },
     ],
   },
 
@@ -257,6 +294,17 @@ export const pageArt: Readonly<Record<string, PageArtDef>> = {
       { prop: 'ledger', expense: 0 },
       { prop: 'ledger', expense: 2 },
       { prop: 'stamp', text: { converted: 1 }, tone: 'green' },
+    ],
+  },
+  'compare/preview': {
+    layout: 'cluster',
+    items: [
+      {
+        prop: 'receipt',
+        title: key('art.pricing.title'),
+        total: { label: key('art.pricing.total'), amount: key('pricing.free.price') },
+      },
+      { prop: 'stamp', text: key('art.pricing.stamp'), tone: 'green' },
     ],
   },
   'use-case/preview': {

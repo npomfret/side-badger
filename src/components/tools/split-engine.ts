@@ -19,14 +19,14 @@ import {
   type ExampleData,
   type ExampleExpense,
 } from '../../lib/settle';
+import { MAX_NAME_LENGTH, MAX_NUMBER_LENGTH, MIN_PEOPLE, nameKey, parseNumber, pickName, splitList } from './form-input';
 
-export const MIN_PEOPLE = 2;
+// Reading a field and naming people are shared with the rent calculator (`form-input.ts`)
+export { MAX_NAME_LENGTH, MAX_NUMBER_LENGTH, MIN_PEOPLE, parseNumber, pickName, splitList };
+
 export const MAX_PEOPLE = 20;
 export const MAX_EXPENSES = 100;
-export const MAX_NAME_LENGTH = 40;
 export const MAX_LABEL_LENGTH = 60;
-/** Longest amount, percentage or share a field takes, in characters */
-export const MAX_NUMBER_LENGTH = 14;
 
 export type Method = 'equal' | 'exact' | 'percent';
 
@@ -101,19 +101,6 @@ export interface Outcome {
   result?: Result;
 }
 
-// A plain number: digits with one optional "." or "," as the decimal mark
-const NUMBER = /^(\d+([.,]\d*)?|[.,]\d+)$/;
-
-/** The number in a field, or undefined if it is not one. No signs, exponents or grouping. */
-export function parseNumber(text: string): number | undefined {
-  const trimmed = text.trim();
-  if (!NUMBER.test(trimmed)) return undefined;
-  const value = Number(trimmed.replace(',', '.'));
-  return Number.isFinite(value) ? value : undefined;
-}
-
-const key = (name: string) => name.trim().toLocaleLowerCase();
-
 /** A stable id for each person. Ids are never shown. */
 const personId = (index: number) => `p${index}`;
 
@@ -127,8 +114,8 @@ export function checkState(state: CalcState): Problem[] {
   people.forEach((name, person) => {
     const target: Target = { kind: 'person', person };
     if (name.trim() === '') problems.push({ code: 'nameMissing', target });
-    else if (seen.has(key(name))) problems.push({ code: 'nameDuplicate', target, name: name.trim() });
-    seen.add(key(name));
+    else if (seen.has(nameKey(name))) problems.push({ code: 'nameDuplicate', target, name: name.trim() });
+    seen.add(nameKey(name));
   });
 
   expenses.forEach((expense, index) => {
@@ -259,21 +246,6 @@ export function calculate(state: CalcState): Outcome {
       totalMinor: computed.totalMinor,
     },
   };
-}
-
-/** The first name in `pool` that no one has, else `fallback(n)` for the first free number */
-export function pickName(pool: readonly string[], taken: readonly string[], fallback: (number: number) => string): string {
-  const used = new Set(taken.map(key));
-  const free = pool.find(name => !used.has(key(name)));
-  if (free) return free;
-  let number = taken.length + 1;
-  while (used.has(key(fallback(number)))) number++;
-  return fallback(number);
-}
-
-/** A comma-separated list from a translation: trimmed, empty and repeated entries dropped */
-export function splitList(list: string): string[] {
-  return [...new Set(list.split(/[,،、]/).map(item => item.trim()).filter(Boolean))];
 }
 
 /** An expense for the people given, shared by everyone */

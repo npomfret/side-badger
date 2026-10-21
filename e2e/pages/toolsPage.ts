@@ -1,27 +1,21 @@
-import AxeBuilder from '@axe-core/playwright';
 import { expect, type Locator, type Page } from '@playwright/test';
-import { ELEMENT_TIMEOUT, NAVIGATION_TIMEOUT } from './timeouts';
-import { isRtl, pathFor, text, type ShellLocale } from './strings';
+import { ELEMENT_TIMEOUT } from './timeouts';
+import { text } from './strings';
+import { ToolLayoutPage, ToolPage } from './toolBase';
 
 const PATH = '/split-bill-calculator/';
-
-/** Request kinds a page makes when it talks to a server of its own, rather than loading its assets */
-const TALKING_TYPES = ['fetch', 'xhr', 'websocket', 'eventsource', 'ping'];
 
 export type SplitMethod = 'Equally' | 'By exact amounts' | 'By percentage';
 
 /**
  * The split-bill calculator (release 2, R3). The words are the English page's, written out. The
  * entry points are `navigateTo`, `navigateToWithoutClipboard` and `openLink`; every action waits for
- * its own effect. It records the page's requests from the first, so a calculation that reached a
- * server would be caught.
+ * its own effect. What every calculator page shares (the result's summary, the share link, the
+ * record of requests, axe) is in `ToolPage`.
  */
-export class ToolsPage {
-  private readonly requested: { url: string; type: string }[] = [];
-  private requestsAtLoad = 0;
-
-  private constructor(private readonly page: Page) {
-    page.on('request', request => this.requested.push({ url: request.url(), type: request.resourceType() }));
+export class ToolsPage extends ToolPage {
+  private constructor(page: Page) {
+    super(page, PATH, 'Work out who pays whom');
   }
 
   /** The calculator, ready for input */
@@ -49,25 +43,17 @@ export class ToolsPage {
     const tools = new ToolsPage(page);
     await page.goto(address);
     await tools.verifyLoaded();
-    tools.requestsAtLoad = tools.requested.length;
+    tools.markLoaded();
     return tools;
   }
 
   /** The script has started: it builds the first person, so that field is the sign it is ready */
   async verifyLoaded(): Promise<void> {
-    await expect(this.page, 'the split bill calculator page').toHaveURL(/\/split-bill-calculator\/(#.*)?$/, {
-      timeout: NAVIGATION_TIMEOUT,
-    });
-    await expect(this.page.getByRole('heading', { level: 1 })).toHaveText('Split bill calculator');
-    await expect(this.calculator).toBeVisible();
+    await this.expectOnPage('Split bill calculator');
     await expect(this.personField(1), 'the calculator has not started (no first person)').toBeVisible();
   }
 
   // ----- locators, built fresh on every use -----
-
-  private get calculator(): Locator {
-    return this.page.getByRole('main').getByRole('region', { name: 'Work out who pays whom', exact: true });
-  }
 
   private get people(): Locator {
     return this.calculator.getByRole('region', { name: 'People', exact: true });
@@ -75,10 +61,6 @@ export class ToolsPage {
 
   private get expenses(): Locator {
     return this.calculator.getByRole('region', { name: 'Expenses', exact: true });
-  }
-
-  private get result(): Locator {
-    return this.calculator.getByRole('region', { name: 'Result', exact: true });
   }
 
   private get currency(): Locator {
@@ -133,48 +115,12 @@ export class ToolsPage {
     return this.shares(expense).getByRole('textbox', { name: `${kind} for ${person}`, exact: true });
   }
 
-  private get summary(): Locator {
-    return this.result.getByRole('status');
-  }
-
   private get balances(): Locator {
     return this.result.getByRole('list', { name: 'Net balances' }).getByRole('listitem');
   }
 
   private get payments(): Locator {
     return this.result.getByRole('list', { name: 'Who pays whom' }).getByRole('listitem');
-  }
-
-  private get copyLinkButton(): Locator {
-    return this.result.getByRole('button', { name: 'Copy link', exact: true });
-  }
-
-  private get startGroupLink(): Locator {
-    return this.result.getByRole('link', { name: 'Start a group' });
-  }
-
-  private get linkField(): Locator {
-    return this.result.getByRole('textbox', { name: 'Link to this calculation', exact: true });
-  }
-
-  // ----- sanity checks: a failure names the step that went wrong, and what the page showed -----
-
-  private async stillOnTheCalculator(step: string): Promise<void> {
-    try {
-      await expect(this.calculator).toBeVisible({ timeout: ELEMENT_TIMEOUT });
-    } catch {
-      throw new Error(`${step}: the calculator is not showing. The page is ${this.page.url()}, titled "${await this.page.title()}".`);
-    }
-  }
-
-  /** Assert `check`; if it fails, say what the named part of the page showed instead */
-  private async expectShowing(what: string, check: () => Promise<void>, shown: () => Promise<unknown>): Promise<void> {
-    try {
-      await check();
-    } catch (error) {
-      const seen = await shown().catch(() => '(could not be read)');
-      throw new Error(`${what} did not show as expected. It shows: ${JSON.stringify(seen)}.\n${(error as Error).message}`);
-    }
   }
 
   // ----- people -----
@@ -363,10 +309,6 @@ export class ToolsPage {
     await expect(this.result.getByRole('list', { name: 'Who pays whom' })).toHaveCount(0);
   }
 
-  async expectSummary(summary: string): Promise<void> {
-    await this.expectShowing('The summary', () => expect(this.summary).toHaveText(summary), () => this.summary.allInnerTexts());
-  }
-
   async expectBalances(balances: string[]): Promise<void> {
     await this.expectShowing('The balances', () => expect(this.balances).toHaveText(balances), () => this.balances.allInnerTexts());
   }
@@ -383,49 +325,7 @@ export class ToolsPage {
     await expect(this.balances).toHaveCount(count);
   }
 
-  /** The link to the app under the result goes through the launch counter, counted as `tool-result` */
-  async expectStartGroupLink(): Promise<void> {
-    await expect(this.startGroupLink).toBeVisible();
-    await expect(this.startGroupLink).toHaveAttribute('href', /^\/go\/register\/\?from=split-bill-calculator&cta=tool-result/);
-  }
-
   // ----- the share link -----
-
-  /**
-   * Press Copy link and return what the clipboard then holds, as a visitor pasting it would see.
-   * Needs the clipboard permissions the spec grants.
-   */
-  async copyLink(): Promise<string> {
-    await this.stillOnTheCalculator('copyLink');
-    await expect(this.copyLinkButton).toBeEnabled();
-    await expect(this.linkField, 'the fallback link field before copying').toBeHidden();
-    await this.copyLinkButton.click();
-    await expect(this.result.getByText('Link copied. Anyone with it can see these figures.')).toBeVisible();
-    let link = '';
-    await expect
-      .poll(async () => (link = await this.page.evaluate(() => navigator.clipboard.readText())), {
-        message: 'the clipboard holds a link to this calculation',
-        timeout: ELEMENT_TIMEOUT,
-      })
-      .toMatch(/\/split-bill-calculator\/#c=[A-Za-z0-9_-]+$/);
-    await expect(this.linkField).toBeHidden();
-    return link;
-  }
-
-  /** With no clipboard, the link is shown to copy by hand, selected, and the page says why */
-  async copyLinkByHand(): Promise<string> {
-    await this.stillOnTheCalculator('copyLinkByHand');
-    await expect(this.linkField, 'the link field before copying').toBeHidden();
-    await this.copyLinkButton.click();
-    await expect(this.result.getByText("Couldn't copy automatically. Copy the link below.")).toBeVisible();
-    await expect(this.linkField).toBeVisible();
-    await expect(this.linkField).toBeFocused();
-    let link = '';
-    await expect
-      .poll(async () => (link = await this.linkField.inputValue()), { message: 'the link field holds a link', timeout: ELEMENT_TIMEOUT })
-      .toMatch(/\/split-bill-calculator\/#c=[A-Za-z0-9_-]+$/);
-    return link;
-  }
 
   /** A calculation over the link's size cap gets a message, not a link */
   async copyLinkExpectingTooLarge(): Promise<void> {
@@ -435,45 +335,6 @@ export class ToolsPage {
     await expect(this.result.getByText('This calculation is too big for a link. Remove a few expenses and try again.')).toBeVisible();
     await expect(this.linkField).toBeHidden();
     await this.expectAddressWithoutLink();
-  }
-
-  // ----- privacy -----
-
-  /** Nothing was requested from another origin, and nothing made a request of its own after the page loaded */
-  async expectNothingLeftTheBrowser(): Promise<void> {
-    const origin = new URL(this.page.url()).origin;
-    const elsewhere = this.requested.filter(request => new URL(request.url).origin !== origin).map(request => request.url);
-    const talking = this.requested.slice(this.requestsAtLoad).filter(request => TALKING_TYPES.includes(request.type));
-    // Requests are recorded as they happen; there is no element to poll
-    expect({ elsewhere, talking: talking.map(request => `${request.type} ${request.url}`) }, 'requests the page made').toEqual({
-      elsewhere: [],
-      talking: [],
-    });
-  }
-
-  /** The address carries the share link's fragment, and no figures in its path or query */
-  async expectAddressHoldsLink(): Promise<void> {
-    await expect(this.page).toHaveURL(/\/split-bill-calculator\/#c=[A-Za-z0-9_-]+$/);
-  }
-
-  async expectAddressWithoutLink(): Promise<void> {
-    await expect(this.page).toHaveURL(/\/split-bill-calculator\/(#(?!c=).*)?$/);
-  }
-
-  // ----- the page as a whole -----
-
-  async expectNoSeriousAccessibilityViolations(): Promise<void> {
-    await this.stillOnTheCalculator('expectNoSeriousAccessibilityViolations');
-    const results = await new AxeBuilder({ page: this.page }).analyze();
-    const serious = results.violations
-      .filter(violation => violation.impact === 'serious' || violation.impact === 'critical')
-      .map(violation => ({
-        rule: violation.id,
-        impact: violation.impact,
-        targets: violation.nodes.map(node => node.target.join(' ')),
-      }));
-    // axe returns its findings in one analysis; there is no element to poll
-    expect(serious, 'serious or critical accessibility violations').toEqual([]);
   }
 
   /** The three labelled parts the calculator is made of, and the link to the app under the result */
@@ -490,22 +351,20 @@ export class ToolsPage {
  * right-to-left text lay out. The pseudo-locales have no fixed words to write out, so this page
  * object takes the two button names from the generated text of the English source.
  */
-export class ToolsLayoutPage {
-  private constructor(
-    private readonly page: Page,
-    private readonly locale: ShellLocale
-  ) {}
+export class ToolsLayoutPage extends ToolLayoutPage {
+  private constructor(page: Page, locale: 'xx-long' | 'xx-ar') {
+    super(page, locale, PATH);
+  }
 
   static async navigateTo(page: Page, locale: 'xx-long' | 'xx-ar'): Promise<ToolsLayoutPage> {
     const layout = new ToolsLayoutPage(page, locale);
-    await page.goto(pathFor(locale, PATH));
+    await page.goto(layout.address());
     await layout.verifyLoaded();
     return layout;
   }
 
   async verifyLoaded(): Promise<void> {
-    await expect(this.page).toHaveURL(new RegExp(`/${this.locale}/split-bill-calculator/$`), { timeout: NAVIGATION_TIMEOUT });
-    await expect(this.page.locator('html')).toHaveAttribute('dir', isRtl(this.locale) ? 'rtl' : 'ltr');
+    await this.expectOnPage();
     await expect(this.addPersonButton, 'the calculator has not started').toBeEnabled();
     await expect(this.firstPersonField).toBeVisible();
   }
@@ -531,29 +390,5 @@ export class ToolsLayoutPage {
     await this.addPersonButton.click();
     await this.addExpenseButton.click();
     await expect(this.secondExpenseRemoveButton, 'the second expense').toBeVisible();
-  }
-
-  /** No element sticks out past the page's width (the page must not scroll sideways) */
-  async expectNoHorizontalOverflow(): Promise<void> {
-    await expect
-      .poll(
-        () =>
-          this.page.evaluate(() => {
-            const width = document.documentElement.clientWidth;
-            const offenders: string[] = [];
-            if (document.documentElement.scrollWidth > width) offenders.push('<html> scrolls sideways');
-            for (const el of document.querySelectorAll<HTMLElement>('main *')) {
-              if (!el.checkVisibility({ checkVisibilityCSS: true })) continue;
-              const rect = el.getBoundingClientRect();
-              if (rect.width === 0 || rect.height === 0) continue;
-              if (rect.right > width + 1 || rect.left < -1) {
-                offenders.push(`${el.tagName.toLowerCase()}.${el.className} spans ${Math.round(rect.left)}..${Math.round(rect.right)} of ${width}`);
-              }
-            }
-            return offenders.slice(0, 5);
-          }),
-        { message: 'elements wider than the page', timeout: ELEMENT_TIMEOUT }
-      )
-      .toEqual([]);
   }
 }

@@ -1,0 +1,233 @@
+/*
+ * What the calculators share (release 2, R3): the frame, the panels, fields, buttons, errors, the
+ * status line and the call to action and share link under a result. `SplitCalculator.astro` and
+ * `RentCalculator.astro` import it; each keeps only the styles of its own rows.
+ *
+ * It is global rather than scoped, because the rows a script builds from `<template>`s and the
+ * shared `ToolResultFooter.astro` are not all in one component. Every selector starts at
+ * `.split-calc`, the root class both calculators carry, so nothing reaches the rest of the page
+ * and the weight of each rule matches what scoped styles had.
+ * Logical properties only, so the calculators mirror in right-to-left locales.
+ */
+.split-calc {
+  --sc-error: #a3200f;
+  --sc-line: var(--glass-border-hover);
+  --sc-surface: rgba(255, 255, 255, 0.72);
+  display: grid;
+  gap: var(--space-lg);
+}
+
+/* Until the script has started: visible, so the page does not jump, but plainly not live */
+.split-calc[inert] {
+  opacity: 0.55;
+}
+
+/* `display` on a class would otherwise beat the `hidden` attribute, so this outweighs one: `.sc-field` */
+.split-calc [hidden][hidden] {
+  display: none;
+}
+
+.split-calc .sc-privacy,
+.split-calc .sc-noscript {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.split-calc .sc-noscript {
+  padding: var(--space-md);
+  border: 1px solid var(--glass-border-hover);
+  border-radius: var(--radius-md);
+  background: var(--sc-surface);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.split-calc .sc-layout {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+}
+
+@media (min-width: 64rem) {
+  .split-calc .sc-layout {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+
+  .split-calc .sc-results {
+    position: sticky;
+    inset-block-start: calc(var(--header-h) + var(--space-md));
+  }
+}
+
+.split-calc .sc-inputs {
+  display: grid;
+  gap: var(--space-lg);
+  min-inline-size: 0;
+}
+
+/* The page's global `section` padding is for full-width bands, not panels */
+.split-calc .sc-panel {
+  padding: var(--space-lg);
+  background: var(--sc-surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  min-inline-size: 0;
+}
+
+.split-calc .sc-panel h3 {
+  margin: 0 0 var(--space-md);
+  font-size: var(--text-xl);
+  overflow-wrap: anywhere;
+}
+
+.split-calc .sc-panel h4 {
+  margin: var(--space-md) 0 var(--space-sm);
+  font-size: var(--text-base);
+  color: var(--text-heading);
+}
+
+/* Fields */
+.split-calc .sc-field {
+  display: grid;
+  gap: var(--space-xs);
+  min-inline-size: 0;
+  align-content: start;
+}
+
+.split-calc .sc-field label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-heading);
+  overflow-wrap: anywhere;
+}
+
+.split-calc input[type='text'],
+.split-calc select {
+  inline-size: 100%;
+  min-inline-size: 0;
+  min-block-size: 2.75rem;
+  padding: var(--space-sm) var(--space-md);
+  font: inherit;
+  color: var(--text-primary);
+  background: #fff;
+  border: 1px solid var(--sc-line);
+  border-radius: var(--radius-md);
+}
+
+/* A select's arrow takes room, so it gets a little less padding to keep its text whole */
+.split-calc select {
+  padding-inline: var(--space-sm);
+}
+
+.split-calc input[readonly] {
+  background: var(--bg-void);
+}
+
+.split-calc [aria-invalid='true'] {
+  border-color: var(--sc-error);
+  box-shadow: inset 0 0 0 1px var(--sc-error);
+}
+
+.split-calc .sc-error {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--sc-error);
+  overflow-wrap: anywhere;
+}
+
+.split-calc .sc-limit,
+.split-calc .sc-hint {
+  margin: var(--space-sm) 0 0;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.split-calc .sc-add {
+  margin-block-start: var(--space-md);
+  padding: var(--space-sm) var(--space-lg);
+  min-block-size: 2.75rem;
+}
+
+.split-calc .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* An icon-only button, at least 44 by 44 */
+.split-calc .sc-remove {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 2.75rem;
+  block-size: 2.75rem;
+  padding: 0;
+  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.split-calc .sc-remove:hover:not(:disabled) {
+  background: var(--bg-deep);
+  border-color: var(--sc-line);
+}
+
+.split-calc .sc-remove:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* The unit beside a figure: %, or a currency code */
+.split-calc .sc-unit {
+  flex: none;
+  min-inline-size: 2.5rem;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+/* Result */
+.split-calc .sc-status {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-heading);
+  overflow-wrap: anywhere;
+}
+
+.split-calc .sc-cta {
+  margin-block-start: var(--space-lg);
+  padding-block-start: var(--space-md);
+  border-block-start: 1px solid var(--glass-border);
+}
+
+.split-calc .sc-cta p {
+  margin: 0 0 var(--space-md);
+  color: var(--text-secondary);
+}
+
+.split-calc .sc-share {
+  display: grid;
+  gap: var(--space-sm);
+  margin-block-start: var(--space-lg);
+  padding-block-start: var(--space-md);
+  border-block-start: 1px solid var(--glass-border);
+  justify-items: start;
+}
+
+.split-calc .sc-share .sc-add {
+  margin-block-start: 0;
+}
+
+.split-calc .sc-share__status {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.split-calc .sc-link {
+  inline-size: 100%;
+}

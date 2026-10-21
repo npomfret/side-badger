@@ -1,0 +1,35 @@
+---
+/**
+ * What sits under a calculator's result (release 2, R3): the call to the app, counted as
+ * `tool-result`, and the "Copy link" button with the place its status and fallback link appear.
+ * The calculator's script finds the `data-ref` hooks and `data-action="copy-link"` button inside
+ * its root. Styles are in `calculator.css`.
+ */
+import LaunchAppCta from '../cta/LaunchAppCta.astro';
+import { t, type Locale } from '../../i18n';
+
+interface Props {
+  pageId: string;
+  locale: Locale;
+}
+
+const { pageId, locale } = Astro.props;
+---
+
+<div class="sc-cta">
+  <p>{t('tools.split.ctaLine', locale)}</p>
+  <LaunchAppCta target="register" cta="tool-result" pageId={pageId} locale={locale}>
+    {t('home.hero.ctaPrimary', locale)}
+  </LaunchAppCta>
+</div>
+
+<div class="sc-share">
+  <button type="button" class="btn btn-secondary sc-add" data-action="copy-link">
+    {t('tools.split.copyLink', locale)}
+  </button>
+  <p class="sc-share__status" aria-live="polite" data-ref="shareStatus"></p>
+  <div class="sc-field sc-link" data-ref="linkBox" hidden>
+    <label for="sc-link">{t('tools.split.linkLabel', locale)}</label>
+    <input id="sc-link" type="text" readonly dir="ltr" data-ref="link" />
+  </div>
+</div>

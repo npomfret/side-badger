@@ -2,7 +2,8 @@
 /**
  * A tool page (release 2, R2): the hero, the tool itself, the sections around it, the worked example
  * computed at build time (so the page is useful without JavaScript), an optional FAQ, related pages
- * and the closing call to action. The split-bill calculator is the first tool.
+ * and the closing call to action. The tools are the split-bill calculator and the rent calculator:
+ * `TOOLS` says which calculator, and which heading, each page shows.
  *
  * JSON-LD: WebPage about the app, the `WebApplication` for the tool, and FAQPage when the page
  * shows a FAQ. The page is one level below Home, so there is no breadcrumb (D22).
@@ -20,6 +21,7 @@ import RelatedPages from '../components/content/RelatedPages.astro';
 import WorkedExample from '../components/content/WorkedExample.astro';
 import { faqNode, webApplicationNode, webPageNode } from '../components/content/layout-jsonld';
 import { relatedCards } from '../components/content/page-content';
+import RentCalculator from '../components/tools/RentCalculator.astro';
 import SplitCalculator from '../components/tools/SplitCalculator.astro';
 import type { ToolPageData } from '../content/schemas';
 import { t, type Locale } from '../i18n';
@@ -31,8 +33,17 @@ interface Props {
   locale: Locale;
 }
 
+/** The calculator and the heading above it, for each tool page */
+const TOOLS = {
+  'split-bill-calculator': { Calculator: SplitCalculator, heading: 'tools.split.heading' },
+  'rent-split-calculator': { Calculator: RentCalculator, heading: 'tools.rent.heading' },
+} as const;
+
 const { data, pageId, locale } = Astro.props;
 const page = requirePage(pageId);
+const tool = TOOLS[pageId as keyof typeof TOOLS];
+if (!tool) throw new Error(`ToolPageLayout: "${pageId}" is not a tool page (see TOOLS)`);
+const { Calculator } = tool;
 const others = await relatedCards(pageId, locale);
 // The example goes after this many sections; with no setting, straight after the tool
 const exampleAfter = data.exampleAfter ?? 0;
@@ -54,8 +65,8 @@ const exampleAfter = data.exampleAfter ?? 0;
       <Fragment slot="action" />
     </PageHero>
 
-    <ContentSection heading={t('tools.split.heading', locale)} id="calculator">
-      <SplitCalculator pageId={pageId} locale={locale} />
+    <ContentSection heading={t(tool.heading, locale)} id="calculator">
+      <Calculator pageId={pageId} locale={locale} />
     </ContentSection>
 
     <ExtraSections sections={data.sections} locale={locale} to={exampleAfter} />

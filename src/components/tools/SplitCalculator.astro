@@ -3,16 +3,19 @@
  * The split-bill calculator (release 2, R3). Everything runs in the browser: this component
  * renders the frame, the `<template>`s for the rows the script adds, and the interface text as
  * JSON for the script. People, expenses and the result are built by `split-calculator.ts` from
- * the templates, so every node carries this component's scoped styles.
+ * the templates, so every node carries this component's scoped styles. The styles both
+ * calculators share are in `calculator.css`.
  *
  * The frame is `inert` and dimmed until the script starts, so a visitor without JavaScript sees
  * the noscript line and the page's worked example rather than a form that does nothing. All
  * text comes from `tools.split.*`; amounts are formatted by the script with the locale's Intl
  * code. The call to the app under the result goes through `LaunchAppCta` (cta `tool-result`).
  */
-import LaunchAppCta from '../cta/LaunchAppCta.astro';
+import CurrencyField from './CurrencyField.astro';
+import ToolResultFooter from './ToolResultFooter.astro';
 import { localeConfig, t, tf, type Locale } from '../../i18n';
-import { currencyChoices, likelyCurrency } from './currencies';
+import './calculator.css';
+import { defaultCurrency } from './currencies';
 import {
   MAX_LABEL_LENGTH,
   MAX_NAME_LENGTH,
@@ -28,17 +31,7 @@ interface Props {
 const { pageId, locale } = Astro.props;
 const { intlCode } = localeConfig[locale];
 
-const likely = likelyCurrency(locale, intlCode);
-const currencies = currencyChoices(likely);
-const defaultCurrency = likely ?? 'GBP';
-const currencyNames = new Intl.DisplayNames(intlCode, { type: 'currency' });
-const currencyName = (code: string) => {
-  try {
-    return currencyNames.of(code) ?? code;
-  } catch {
-    return code;
-  }
-};
+const startCurrency = defaultCurrency(locale, intlCode);
 
 // The text the script needs after load. Every key is written out, so the unused-key test sees it.
 const messages = {
@@ -84,7 +77,7 @@ const messagesJson = JSON.stringify(messages).replace(/</g, '\\u003c');
   class="split-calc"
   data-split-calc
   data-intl={intlCode}
-  data-currency={defaultCurrency}
+  data-currency={startCurrency}
   inert
 >
   <noscript><p class="sc-noscript">{t('tools.split.noscript', locale)}</p></noscript>
@@ -93,14 +86,7 @@ const messagesJson = JSON.stringify(messages).replace(/</g, '\\u003c');
   <div class="sc-layout">
     <div class="sc-inputs">
       <div class="sc-panel">
-        <div class="sc-field sc-currency">
-          <label for="sc-currency">{t('tools.split.currency', locale)}</label>
-          <select id="sc-currency" data-ref="currency">
-            {currencies.map(code => (
-              <option value={code} selected={code === defaultCurrency}>{code} · {currencyName(code)}</option>
-            ))}
-          </select>
-        </div>
+        <CurrencyField locale={locale} />
       </div>
 
       <section class="sc-panel" aria-labelledby="sc-people-heading">
@@ -137,23 +123,7 @@ const messagesJson = JSON.stringify(messages).replace(/</g, '\\u003c');
         </div>
       </div>
 
-      <div class="sc-cta">
-        <p>{t('tools.split.ctaLine', locale)}</p>
-        <LaunchAppCta target="register" cta="tool-result" pageId={pageId} locale={locale}>
-          {t('home.hero.ctaPrimary', locale)}
-        </LaunchAppCta>
-      </div>
-
-      <div class="sc-share">
-        <button type="button" class="btn btn-secondary sc-add" data-action="copy-link">
-          {t('tools.split.copyLink', locale)}
-        </button>
-        <p class="sc-share__status" aria-live="polite" data-ref="shareStatus"></p>
-        <div class="sc-field sc-link" data-ref="linkBox" hidden>
-          <label for="sc-link">{t('tools.split.linkLabel', locale)}</label>
-          <input id="sc-link" type="text" readonly dir="ltr" data-ref="link" />
-        </div>
-      </div>
+      <ToolResultFooter pageId={pageId} locale={locale} />
     </section>
   </div>
 
@@ -251,153 +221,7 @@ const messagesJson = JSON.stringify(messages).replace(/</g, '\\u003c');
 </script>
 
 <style>
-  .split-calc {
-    --sc-error: #a3200f;
-    --sc-line: var(--glass-border-hover);
-    --sc-surface: rgba(255, 255, 255, 0.72);
-    display: grid;
-    gap: var(--space-lg);
-  }
-
-  /* Until the script has started: visible, so the page does not jump, but plainly not live */
-  .split-calc[inert] {
-    opacity: 0.55;
-  }
-
-  /* `display` on a class would otherwise beat the `hidden` attribute */
-  .split-calc [hidden] {
-    display: none;
-  }
-
-  .sc-privacy,
-  .sc-noscript {
-    margin: 0;
-    color: var(--text-secondary);
-  }
-
-  .sc-noscript {
-    padding: var(--space-md);
-    border: 1px solid var(--glass-border-hover);
-    border-radius: var(--radius-md);
-    background: var(--sc-surface);
-    color: var(--text-primary);
-    font-weight: 600;
-  }
-
-  .sc-layout {
-    display: grid;
-    gap: var(--space-lg);
-    grid-template-columns: minmax(0, 1fr);
-    align-items: start;
-  }
-
-  @media (min-width: 64rem) {
-    .sc-layout {
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-    }
-
-    .sc-results {
-      position: sticky;
-      inset-block-start: calc(var(--header-h) + var(--space-md));
-    }
-  }
-
-  .sc-inputs {
-    display: grid;
-    gap: var(--space-lg);
-    min-inline-size: 0;
-  }
-
-  /* The page's global `section` padding is for full-width bands, not panels */
-  .sc-panel {
-    padding: var(--space-lg);
-    background: var(--sc-surface);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-card);
-    min-inline-size: 0;
-  }
-
-  .sc-panel h3 {
-    margin: 0 0 var(--space-md);
-    font-size: var(--text-xl);
-    overflow-wrap: anywhere;
-  }
-
-  .sc-panel h4 {
-    margin: var(--space-md) 0 var(--space-sm);
-    font-size: var(--text-base);
-    color: var(--text-heading);
-  }
-
-  /* Fields */
-  .sc-field {
-    display: grid;
-    gap: var(--space-xs);
-    min-inline-size: 0;
-    align-content: start;
-  }
-
-  .sc-field label {
-    font-size: var(--text-sm);
-    font-weight: 600;
-    color: var(--text-heading);
-    overflow-wrap: anywhere;
-  }
-
-  .split-calc input[type='text'],
-  .split-calc select {
-    inline-size: 100%;
-    min-inline-size: 0;
-    min-block-size: 2.75rem;
-    padding: var(--space-sm) var(--space-md);
-    font: inherit;
-    color: var(--text-primary);
-    background: #fff;
-    border: 1px solid var(--sc-line);
-    border-radius: var(--radius-md);
-  }
-
-  /* A select's arrow takes room, so it gets a little less padding to keep its text whole */
-  .split-calc select {
-    padding-inline: var(--space-sm);
-  }
-
-  .split-calc input[readonly] {
-    background: var(--bg-void);
-  }
-
-  .split-calc [aria-invalid='true'] {
-    border-color: var(--sc-error);
-    box-shadow: inset 0 0 0 1px var(--sc-error);
-  }
-
-  .sc-error {
-    margin: 0;
-    font-size: var(--text-sm);
-    font-weight: 600;
-    color: var(--sc-error);
-    overflow-wrap: anywhere;
-  }
-
-  .sc-limit,
-  .sc-hint {
-    margin: var(--space-sm) 0 0;
-    font-size: var(--text-sm);
-    color: var(--text-secondary);
-  }
-
-  .sc-add {
-    margin-block-start: var(--space-md);
-    padding: var(--space-sm) var(--space-lg);
-    min-block-size: 2.75rem;
-  }
-
-  .split-calc .btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    transform: none;
-  }
+  /* Shared by both calculators: calculator.css. Only the split calculator's own rows are here. */
 
   /* People */
   .sc-people {
@@ -417,30 +241,6 @@ const messagesJson = JSON.stringify(messages).replace(/</g, '\\u003c');
 
   .sc-person .sc-error {
     grid-column: 1 / -1;
-  }
-
-  /* An icon-only button, at least 44 by 44 */
-  .sc-remove {
-    display: inline-grid;
-    place-items: center;
-    inline-size: 2.75rem;
-    block-size: 2.75rem;
-    padding: 0;
-    color: var(--text-primary);
-    background: transparent;
-    border: 1px solid transparent;
-    border-radius: var(--radius-md);
-    cursor: pointer;
-  }
-
-  .sc-remove:hover:not(:disabled) {
-    background: var(--bg-deep);
-    border-color: var(--sc-line);
-  }
-
-  .sc-remove:disabled {
-    opacity: 0.35;
-    cursor: not-allowed;
   }
 
   /* Expenses */
@@ -537,13 +337,6 @@ const messagesJson = JSON.stringify(messages).replace(/</g, '\\u003c');
     min-inline-size: 0;
   }
 
-  .sc-unit {
-    flex: none;
-    min-inline-size: 2.5rem;
-    color: var(--text-secondary);
-    font-size: var(--text-sm);
-  }
-
   .sc-share-row .sc-error {
     grid-column: 1 / -1;
   }
@@ -561,13 +354,6 @@ const messagesJson = JSON.stringify(messages).replace(/</g, '\\u003c');
   }
 
   /* Result */
-  .sc-status {
-    margin: 0;
-    font-weight: 600;
-    color: var(--text-heading);
-    overflow-wrap: anywhere;
-  }
-
   .sc-list,
   .sc-payments {
     display: grid;
@@ -603,40 +389,5 @@ const messagesJson = JSON.stringify(messages).replace(/</g, '\\u003c');
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
     unicode-bidi: isolate;
-  }
-
-  .sc-cta {
-    margin-block-start: var(--space-lg);
-    padding-block-start: var(--space-md);
-    border-block-start: 1px solid var(--glass-border);
-  }
-
-  .sc-cta p {
-    margin: 0 0 var(--space-md);
-    color: var(--text-secondary);
-  }
-
-  .sc-share {
-    display: grid;
-    gap: var(--space-sm);
-    margin-block-start: var(--space-lg);
-    padding-block-start: var(--space-md);
-    border-block-start: 1px solid var(--glass-border);
-    justify-items: start;
-  }
-
-  .sc-share .sc-add {
-    margin-block-start: 0;
-  }
-
-  .sc-share__status {
-    margin: 0;
-    font-size: var(--text-sm);
-    color: var(--text-secondary);
-    overflow-wrap: anywhere;
-  }
-
-  .sc-link {
-    inline-size: 100%;
   }
 </style>

@@ -1,0 +1,81 @@
+# P9 of the wave 2 and 3 briefs (tasks/release-2-plan.md). The worked example is guide 1's flat
+# (how-to-split-rent-by-room-size); every number in the prose is the example's or the arithmetic shown.
+review:
+  status: machine
+claims:
+  - expense-splitting.equal-exact-percentage
+  - expense-splitting.copy-last-months-rent
+  - balances.who-owes-whom
+  - balances.short-list-of-payments
+  - settlements.pay-however-then-record
+meta:
+  title: "Rent split calculator: by room size or income | Side Badger"
+  description: "Bigger room, bigger share? Work out what each housemate pays, by room size or by income. It runs in your browser: nothing is saved or sent."
+h1: Rent split calculator
+navLabel: Rent split calculator
+lead: Bigger bedroom, bigger share? Type in the rent and see what each person pays, by room size or by income, to the penny. It runs in your browser, saves nothing and moves no money. When the house wants the count kept, [split expenses](page:feature/split-expenses) in Side Badger and copy the rent every month.
+cta:
+  heading: Settle the percentages once. Copy them forever.
+  body: This calculator forgets everything when you close the tab, much like the housemate who definitely paid the broadband. A Side Badger group keeps the rent, the bills and who has paid what. It is free, with no ads and no daily limits.
+sections:
+  - heading: Two ways to share the rent
+    items:
+      - "**By room size.** Part of the rent pays for the kitchen, bathroom and lounge, which everyone uses. You choose that share (40% to start with) and it is split equally. The rest goes by bedroom area, so the big room pays more and the box room gets the discount it has earned."
+      - "**By income.** Everyone pays the same slice of the rent as they earn of the total. Add shared bills and they follow the same shares."
+  - heading: How the sums work
+    body: "Each person gets an exact share, then a whole percentage, because whole numbers are easier to type and to argue about. The rounding is the largest remainder method: everyone keeps the whole number below their share, and the leftover points go to whoever lost the most. The percentages always total 100. In the flat below, the shared 40% is 13.33% each. Priya's room is 16 of the flat's 38 m², so 60% × 16/38 is 25.26%, plus 13.33% makes 38.6%, which rounds to 39%. Tom and Aisha come out at 32% and 29%, and 39 + 32 + 29 is 100. Each amount is that percentage of the rent: 39% of £1,950 is £760.50."
+  - heading: Then type it into Side Badger
+    body: "For the whole story, tape measure included, see [how to split rent by room size](page:guide/how-to-split-rent-by-room-size), or [a partner who earns more](page:guide/how-to-split-bills-with-a-partner-who-earns-more) for couples."
+    items:
+      - "**Add the rent.** In your group, choose **Add Expense**, pick who paid the landlord under **Who paid?** and keep everyone under **Split between**."
+      - "**Choose Percentage.** Under **How to split**, choose **Percentage** and type the whole percentages. The form flags it if they don't total 100."
+      - "**Copy it next month.** Open last month's rent and choose **Copy expense**. The split comes with it."
+  - heading: What the calculator doesn't do
+    items:
+      - "**Measure your rooms.** Floor area is a starting point. An en-suite is worth more than the same area without one, and a box room that fits a bed and a hopeful chair is worth less."
+      - "**Decide what counts as income.** Take-home or gross, salary or side hustle: the group decides. Use the same period for everyone."
+      - "**Save anything.** Close the tab and the figures are gone. To keep them, copy the link. It holds your figures after the #, which browsers never send to a server, and anyone with it can read them."
+      - "**Move money.** You pay the landlord however you like."
+      - "**Mix currencies, or go past the limits.** Pick one currency. It takes 2 to 10 people and a rent up to 999,999.99, as in the app."
+exampleAfter: 2
+example:
+  heading: One flat, one month
+  currency: GBP
+  people:
+    - id: priya
+      name: Priya
+    - id: tom
+      name: Tom
+    - id: aisha
+      name: Aisha
+  expenses:
+    - label: the rent
+      payer: priya
+      amount: 1950
+      split:
+        method: percent
+        shares:
+          priya: 39
+          tom: 32
+          aisha: 29
+    - label: the energy bill
+      payer: tom
+      amount: 105
+      split:
+        method: equal
+    - label: the broadband
+      payer: aisha
+      amount: 36
+      split:
+        method: equal
+faq:
+  heading: Questions
+  items:
+    - q: Which is fairer, room size or income?
+      a: Neither, always. Room size suits flatmates who pay for the space they sleep in. Income suits couples and friends on very different pay. Agree it before the first rent day, not after.
+    - q: Should the bills be split the same way?
+      a: For flatmates, usually not. Everyone uses the energy and broadband, so equal is simpler, as in the example. By income, the calculator gives the bills the same shares as the rent.
+    - q: Can I use square feet?
+      a: Yes. Choose ft² and type your areas in square feet. The unit is only a label, and the shares come out the same as long as everyone uses one.
+    - q: Is the calculator free?
+      a: Yes. Free. No ads. No daily limits. You don't need an account either.

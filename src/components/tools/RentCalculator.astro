@@ -1,0 +1,389 @@
+---
+/**
+ * The rent calculator (release 2, P9). Everything runs in the browser: this component renders the
+ * frame, the `<template>`s for the rows the script adds, and the interface text as JSON for the
+ * script. The people and the result are built by `rent-calculator.ts` from the templates, so every
+ * node carries this component's scoped styles. The styles both calculators share are in
+ * `calculator.css`.
+ *
+ * Two modes, one form: by room size (a share of the rent for the shared rooms, the rest by bedroom
+ * area) and by income. Fields that belong to one mode carry `data-only` and are hidden in the other.
+ * The frame is `inert` and dimmed until the script starts, so a visitor without JavaScript sees the
+ * noscript line and the page's worked example rather than a form that does nothing. Text comes
+ * from `tools.rent.*`, and from `tools.split.*` where the split-bill calculator says the same thing.
+ * Amounts are formatted by the script with the locale's Intl code. The call to the app under the
+ * result goes through `LaunchAppCta` (cta `tool-result`).
+ */
+import CurrencyField from './CurrencyField.astro';
+import ToolResultFooter from './ToolResultFooter.astro';
+import { localeConfig, t, tf, type Locale } from '../../i18n';
+import './calculator.css';
+import { defaultCurrency } from './currencies';
+import { MAX_NAME_LENGTH, MAX_NUMBER_LENGTH, MAX_RENT_PEOPLE } from './rent-engine';
+
+interface Props {
+  pageId: string;
+  locale: Locale;
+}
+
+const { pageId, locale } = Astro.props;
+const { intlCode } = localeConfig[locale];
+const startCurrency = defaultCurrency(locale, intlCode);
+
+// The text the script needs after load. Every key is written out, so the unused-key test sees it.
+const messages = {
+  personLabel: t('tools.split.personLabel', locale),
+  removePerson: t('tools.split.removePerson', locale),
+  defaultNames: t('tools.split.defaultNames', locale),
+  area: t('tools.rent.area', locale),
+  income: t('tools.rent.income', locale),
+  copied: t('tools.split.copied', locale),
+  copyFailed: t('tools.split.copyFailed', locale),
+  linkTooLarge: t('tools.split.linkTooLarge', locale),
+  resultWaiting: t('tools.split.resultWaiting', locale),
+  summary: t('tools.rent.summary', locale),
+  summaryBills: t('tools.rent.summaryBills', locale),
+  shareExact: t('tools.rent.shareExact', locale),
+  rentAmount: t('tools.rent.rentAmount', locale),
+  billsAmount: t('tools.rent.billsAmount', locale),
+  totalAmount: t('tools.rent.totalAmount', locale),
+  appStep: t('tools.rent.appStep', locale),
+  appHow: t('tools.rent.appHow', locale),
+  appPercentage: t('tools.rent.appPercentage', locale),
+  zeroNote: t('tools.rent.zeroNote', locale),
+  errors: {
+    nameMissing: t('tools.split.errorNameMissing', locale),
+    nameDuplicate: t('tools.split.errorNameDuplicate', locale),
+    amountMissing: t('tools.split.errorAmountMissing', locale),
+    amountInvalid: t('tools.split.errorAmountInvalid', locale),
+    amountPositive: t('tools.split.errorAmountPositive', locale),
+    amountMax: t('tools.split.errorAmountMax', locale),
+    amountDecimals: t('tools.split.errorAmountDecimals', locale),
+    sharedRange: t('tools.rent.errorSharedRange', locale),
+    valueInvalid: t('tools.rent.errorValue', locale),
+    valueMax: t('tools.rent.errorValueMax', locale),
+    unexpected: t('tools.split.errorUnexpected', locale),
+  },
+};
+// `<` cannot close the script element
+const messagesJson = JSON.stringify(messages).replace(/</g, '\\u003c');
+---
+
+<div
+  class="split-calc rent-calc"
+  data-rent-calc
+  data-intl={intlCode}
+  data-currency={startCurrency}
+  data-mode="room"
+  inert
+>
+  <noscript><p class="sc-noscript">{t('tools.split.noscript', locale)}</p></noscript>
+  <p class="sc-privacy">{t('tools.split.privacy', locale)}</p>
+
+  <div class="sc-layout">
+    <div class="sc-inputs">
+      <section class="sc-panel" aria-labelledby="rc-rent-heading">
+        <h3 id="rc-rent-heading">{t('tools.rent.rentHeading', locale)}</h3>
+
+        <fieldset class="rc-mode">
+          <legend>{t('tools.rent.modeLegend', locale)}</legend>
+          <label class="rc-mode__choice">
+            <input type="radio" name="rc-mode" value="room" data-ref="mode-room" checked />
+            <span>{t('tools.rent.modeRoom', locale)}</span>
+          </label>
+          <label class="rc-mode__choice">
+            <input type="radio" name="rc-mode" value="income" data-ref="mode-income" />
+            <span>{t('tools.rent.modeIncome', locale)}</span>
+          </label>
+        </fieldset>
+
+        <div class="rc-fields">
+          <div class="sc-field">
+            <label for="rc-rent">{t('tools.rent.rent', locale)}</label>
+            <input id="rc-rent" type="text" inputmode="decimal" autocomplete="off" dir="ltr" maxlength={MAX_NUMBER_LENGTH} data-ref="rent" />
+            <p class="sc-error" id="rc-rent-error" data-ref="rentError" hidden></p>
+          </div>
+
+          <CurrencyField locale={locale} />
+
+          <div class="sc-field" data-only="income" hidden>
+            <label for="rc-bills">{t('tools.rent.bills', locale)}</label>
+            <input id="rc-bills" type="text" inputmode="decimal" autocomplete="off" dir="ltr" maxlength={MAX_NUMBER_LENGTH} data-ref="bills" />
+            <p class="sc-error" id="rc-bills-error" data-ref="billsError" hidden></p>
+          </div>
+
+          <div class="sc-field" data-only="room">
+            <label for="rc-shared">{t('tools.rent.shared', locale)}</label>
+            <div class="rc-affix">
+              <input id="rc-shared" type="text" inputmode="decimal" autocomplete="off" dir="ltr" maxlength={MAX_NUMBER_LENGTH} data-ref="shared" />
+              <span class="sc-unit" aria-hidden="true">%</span>
+            </div>
+            <p class="sc-error" id="rc-shared-error" data-ref="sharedError" hidden></p>
+          </div>
+
+          <div class="sc-field" data-only="room">
+            <label for="rc-unit">{t('tools.rent.unit', locale)}</label>
+            <select id="rc-unit" data-ref="unit">
+              <option value="m2" selected>m²</option>
+              <option value="ft2">ft²</option>
+            </select>
+          </div>
+        </div>
+        <p class="sc-hint" data-only="room">{t('tools.rent.sharedHint', locale)}</p>
+      </section>
+
+      <section class="sc-panel" aria-labelledby="sc-people-heading">
+        <h3 id="sc-people-heading">{t('tools.split.people', locale)}</h3>
+        <p class="sc-hint rc-hint" data-only="income" hidden>{t('tools.rent.incomeHint', locale)}</p>
+        <ol class="rc-people" role="list" data-ref="people"></ol>
+        <p class="sc-limit" data-ref="peopleLimit" hidden>
+          {tf('tools.split.peopleLimit', { max: MAX_RENT_PEOPLE }, locale)}
+        </p>
+        <button type="button" class="btn btn-secondary sc-add" data-action="add-person">
+          {t('tools.split.addPerson', locale)}
+        </button>
+      </section>
+    </div>
+
+    <section class="sc-panel sc-results" aria-labelledby="sc-result-heading">
+      <h3 id="sc-result-heading">{t('tools.split.result', locale)}</h3>
+      <p class="sc-status" role="status" data-ref="status"></p>
+
+      <div data-ref="result" hidden>
+        <h4 id="rc-shares-heading">{t('tools.rent.sharesHeading', locale)}</h4>
+        <ul class="rc-shares" role="list" aria-labelledby="rc-shares-heading" data-ref="shares"></ul>
+        <p class="sc-hint">{t('tools.rent.amountsHint', locale)}</p>
+        <p class="sc-hint rc-zero" data-ref="zeroNote" hidden></p>
+        <div class="rc-app">
+          <p data-ref="appStep"></p>
+          <p data-ref="appBills" hidden>{t('tools.rent.appBills', locale)}</p>
+        </div>
+      </div>
+
+      <ToolResultFooter pageId={pageId} locale={locale} />
+    </section>
+  </div>
+
+  <script type="application/json" data-ref="messages" set:html={messagesJson} />
+
+  <template data-template="person">
+    <li class="rc-person">
+      <fieldset>
+        <legend data-ref="legend"></legend>
+        <div class="rc-person__fields">
+          <div class="sc-field">
+            <label data-ref="nameLabel">{t('tools.rent.name', locale)}</label>
+            <input type="text" autocomplete="off" dir="auto" maxlength={MAX_NAME_LENGTH} data-ref="name" />
+            <p class="sc-error" data-ref="nameError" hidden></p>
+          </div>
+          <div class="sc-field">
+            <label data-ref="valueLabel"></label>
+            <div class="rc-affix">
+              <input type="text" inputmode="decimal" autocomplete="off" dir="ltr" maxlength={MAX_NUMBER_LENGTH} data-ref="value" />
+              <span class="sc-unit" aria-hidden="true" data-ref="unit"></span>
+            </div>
+            <p class="sc-error" data-ref="valueError" hidden></p>
+          </div>
+        </div>
+        <button type="button" class="sc-remove" data-action="remove-person" data-ref="remove">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+            <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
+        </button>
+      </fieldset>
+    </li>
+  </template>
+
+  <template data-template="share">
+    <li class="rc-share">
+      <span class="rc-share__name" data-ref="name"></span>
+      <span class="rc-share__whole" data-ref="whole"></span>
+      <span class="rc-share__amounts" data-ref="amounts"></span>
+      <span class="rc-share__exact" data-ref="exact"></span>
+    </li>
+  </template>
+</div>
+
+<script>
+  import { startRentCalculators } from './rent-calculator';
+
+  startRentCalculators();
+</script>
+
+<style>
+  /* Shared by both calculators: calculator.css. Only the rent calculator's own rows are here. */
+
+  /* The mode: two choices side by side, as large as a button */
+  .rc-mode {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-md);
+    margin: 0;
+    margin-block-end: var(--space-md);
+    padding: 0;
+    border: 0;
+    min-inline-size: 0;
+  }
+
+  .rc-mode > legend {
+    padding: 0;
+    margin-block-end: var(--space-xs);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-heading);
+  }
+
+  .rc-mode__choice {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    min-block-size: 2.75rem;
+    padding-inline: var(--space-md);
+    background: #fff;
+    border: 1px solid var(--sc-line);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+  }
+
+  .rc-mode__choice input {
+    inline-size: 1.25rem;
+    block-size: 1.25rem;
+    accent-color: var(--accent-ink);
+  }
+
+  .rc-mode__choice:has(input:checked) {
+    border-color: var(--accent-ink);
+    box-shadow: inset 0 0 0 1px var(--accent-ink);
+    font-weight: 600;
+  }
+
+  .rc-mode__choice:has(input:focus-visible) {
+    outline: 2px solid var(--accent-ink);
+    outline-offset: 2px;
+  }
+
+  .rc-fields {
+    display: grid;
+    gap: var(--space-md);
+    grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+    align-items: start;
+  }
+
+  /* A figure and its unit side by side */
+  .rc-affix {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    min-inline-size: 0;
+  }
+
+  p.rc-hint {
+    margin-block: 0 var(--space-md);
+  }
+
+  /* People: a labelled group each, with its remove button */
+  .rc-people {
+    display: grid;
+    gap: var(--space-md);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .rc-person fieldset {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: var(--space-xs) var(--space-sm);
+    margin: 0;
+    padding: var(--space-sm) var(--space-md) var(--space-md);
+    min-inline-size: 0;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+  }
+
+  .rc-person legend {
+    padding-inline: var(--space-sm);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-heading);
+  }
+
+  .rc-person__fields {
+    display: grid;
+    gap: var(--space-sm) var(--space-md);
+    grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
+    align-items: start;
+    min-inline-size: 0;
+  }
+
+  /* Result: a card for each person, the whole percentage first */
+  .rc-shares {
+    display: grid;
+    gap: var(--space-sm);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .rc-share {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0 var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    background: #fff;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    overflow-wrap: anywhere;
+  }
+
+  .rc-share__name {
+    font-weight: 700;
+    color: var(--text-heading);
+  }
+
+  .rc-share__whole {
+    font-weight: 700;
+    font-size: var(--text-lg);
+    font-variant-numeric: tabular-nums;
+    color: var(--accent-ink);
+    unicode-bidi: isolate;
+  }
+
+  /* The amounts and the exact share each take a line, so long text wraps in the full width */
+  .rc-share__amounts {
+    grid-column: 1 / -1;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    unicode-bidi: plaintext;
+  }
+
+  .rc-share__exact {
+    grid-column: 1 / -1;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    font-variant-numeric: tabular-nums;
+    unicode-bidi: plaintext;
+  }
+
+  /* What to type in the app: set apart, since it is the point of the page */
+  .rc-app {
+    margin-block-start: var(--space-md);
+    padding: var(--space-md);
+    background: var(--bg-deep);
+    border-inline-start: 4px solid var(--accent-ink);
+    border-radius: var(--radius-md);
+  }
+
+  .rc-app p {
+    margin: 0;
+  }
+
+  .rc-app p + p {
+    margin-block-start: var(--space-xs);
+  }
+
+  .rc-zero {
+    font-weight: 600;
+  }
+</style>

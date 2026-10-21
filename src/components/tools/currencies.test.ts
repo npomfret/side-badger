@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { localeConfig, locales } from '@/i18n';
 import { minorExponent } from '@/lib/settle';
-import { CURRENCIES, currencyChoices, likelyCurrency } from './currencies';
+import { CURRENCIES, currencyChoices, defaultCurrency, likelyCurrency } from './currencies';
 
 describe('the calculator\'s currencies', () => {
   it('lists GBP, EUR and USD first, once each, all real currencies', () => {
@@ -29,6 +29,13 @@ describe('the calculator\'s currencies', () => {
     expect(likelyCurrency('cs', 'cs-CZ')).toBe('CZK');
     expect(likelyCurrency('ar', 'ar-EG')).toBe('EGP');
     expect(likelyCurrency('xx', 'xx-ZZ')).toBeUndefined();
+  });
+
+  it('opens in the locale\'s money, or pounds when the region is not listed', () => {
+    expect(defaultCurrency('en', 'en-US')).toBe('GBP');
+    expect(defaultCurrency('de', 'de-DE')).toBe('EUR');
+    expect(defaultCurrency('ja', 'ja-JP')).toBe('JPY');
+    expect(defaultCurrency('xx', 'xx-ZZ')).toBe('GBP');
   });
 
   it('adds a missing currency after the first three and leaves the list alone otherwise', () => {

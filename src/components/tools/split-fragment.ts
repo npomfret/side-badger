@@ -24,39 +24,15 @@ import {
   type ExpenseState,
   type Method,
 } from './split-engine';
+import { HASH_PREFIX, MAX_PAYLOAD_LENGTH, isIndex, isRecord, isText, readPayload, writePayload } from './fragment-codec';
 
-/** Hash prefix of a share link */
-export const HASH_PREFIX = '#c=';
-/** Longest payload accepted or produced, in characters (about 3 KB of JSON) */
-export const MAX_PAYLOAD_LENGTH = 4096;
+export { HASH_PREFIX, MAX_PAYLOAD_LENGTH };
 const VERSION = 1;
 
 const METHOD_CODE: Record<Method, string> = { equal: 'e', exact: 'x', percent: 'p' };
 const CODE_METHOD: Record<string, Method> = { e: 'equal', x: 'exact', p: 'percent' };
 
 type Wire = [label: string, payer: number, amount: string, method: string, shares: unknown[]];
-
-// ---------------------------------------------------------------------------
-// base64url over UTF-8
-// ---------------------------------------------------------------------------
-
-function toBase64Url(text: string): string {
-  const bytes = new TextEncoder().encode(text);
-  let binary = '';
-  for (const byte of bytes) binary += String.fromCharCode(byte);
-  return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-}
-
-function fromBase64Url(payload: string): string | null {
-  if (!/^[A-Za-z0-9_-]*$/.test(payload) || payload.length % 4 === 1) return null;
-  try {
-    const binary = atob(payload.replace(/-/g, '+').replace(/_/g, '/'));
-    const bytes = Uint8Array.from(binary, char => char.charCodeAt(0));
-    return new TextDecoder('utf-8', { fatal: true }).decode(bytes);
-  } catch {
-    return null;
-  }
-}
 
 // ---------------------------------------------------------------------------
 // Encode
@@ -77,29 +53,17 @@ export function encodeState(state: CalcState): string | null {
       expense.method === 'equal' ? people : people.map(person => [person, expense.values[person] ?? '']),
     ];
   });
-  const payload = toBase64Url(JSON.stringify({ v: VERSION, c: state.currency, p: state.people, e: expenses }));
-  return payload.length > MAX_PAYLOAD_LENGTH ? null : payload;
+  return writePayload({ v: VERSION, c: state.currency, p: state.people, e: expenses });
 }
 
 // ---------------------------------------------------------------------------
 // Decode
 // ---------------------------------------------------------------------------
 
-const CONTROL = /[\u0000-\u001f\u007f]/;
-
-const isRecord = (value: unknown): value is Record<string, unknown> =>
-  typeof value === 'object' && value !== null && !Array.isArray(value);
-
-const text = (value: unknown, max: number): value is string =>
-  typeof value === 'string' && value.length <= max && !CONTROL.test(value);
-
-const index = (value: unknown, below: number): value is number =>
-  Number.isInteger(value) && (value as number) >= 0 && (value as number) < below;
-
 function expenseFrom(wire: unknown, people: number): ExpenseState | null {
   if (!Array.isArray(wire) || wire.length !== 5) return null;
   const [label, payer, amount, code, shares] = wire as unknown[];
-  if (!text(label, MAX_LABEL_LENGTH) || !text(amount, MAX_NUMBER_LENGTH)) return null;
+  if (!isText(label, MAX_LABEL_LENGTH) || !isText(amount, MAX_NUMBER_LENGTH)) return null;
   if (!Number.isInteger(payer) || (payer as number) < -1 || (payer as number) >= people) return null;
   const method = typeof code === 'string' ? CODE_METHOD[code] : undefined;
   if (!method || !Array.isArray(shares) || shares.length > people) return null;
@@ -108,10 +72,10 @@ function expenseFrom(wire: unknown, people: number): ExpenseState | null {
   const values = Array.from({ length: people }, () => '');
   for (const share of shares) {
     const person = method === 'equal' ? share : Array.isArray(share) && share.length === 2 ? share[0] : undefined;
-    if (!index(person, people) || include[person]) return null;
+    if (!isIndex(person, people) || include[person]) return null;
     include[person] = true;
     if (method !== 'equal') {
-      if (!text((share as unknown[])[1], MAX_NUMBER_LENGTH)) return null;
+      if (!isText((share as unknown[])[1], MAX_NUMBER_LENGTH)) return null;
       values[person] = (share as string[])[1];
     }
   }
@@ -123,15 +87,7 @@ function expenseFrom(wire: unknown, people: number): ExpenseState | null {
  * `currencies` are the codes the page offers; any other currency is refused.
  */
 export function decodeState(payload: string, currencies: readonly string[]): CalcState | null {
-  if (payload.length === 0 || payload.length > MAX_PAYLOAD_LENGTH) return null;
-  const json = fromBase64Url(payload);
-  if (json === null) return null;
-  let data: unknown;
-  try {
-    data = JSON.parse(json);
-  } catch {
-    return null;
-  }
+  const data = readPayload(payload);
   if (!isRecord(data)) return null;
   // Exactly these four fields: an unknown one means the link is not ours
   const keys = Object.keys(data).sort();
@@ -140,7 +96,7 @@ export function decodeState(payload: string, currencies: readonly string[]): Cal
   const { c: currency, p: people, e: expenses } = data;
   if (typeof currency !== 'string' || !currencies.includes(currency)) return null;
   if (!Array.isArray(people) || people.length < MIN_PEOPLE || people.length > MAX_PEOPLE) return null;
-  if (!people.every(name => text(name, MAX_NAME_LENGTH))) return null;
+  if (!people.every(name => isText(name, MAX_NAME_LENGTH))) return null;
   if (!Array.isArray(expenses) || expenses.length > MAX_EXPENSES) return null;
 
   const decoded: ExpenseState[] = [];

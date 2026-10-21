@@ -11,7 +11,7 @@ import { describe, expect, it } from 'vitest';
 import { load } from 'js-yaml';
 import en from '@/i18n/en';
 import { getI18nMode } from '@/i18n';
-import { allPages, type PageDef } from '@/site/pages';
+import { allPages, PRODUCT_PAGE_TYPES, type PageDef } from '@/site/pages';
 import { contentDirs } from '@/content/schemas';
 import type { FeatureRecord, Screenshot, Substitution, UseCaseRecord } from '@/data/types';
 
@@ -123,6 +123,23 @@ export function registryProblems(r: Registry): string[] {
     if (p.parent && !pageIds.has(p.parent)) problems.push(`page "${p.id}": parent "${p.parent}" is not a page`);
     for (const id of p.related ?? []) if (!pageIds.has(id)) problems.push(`page "${p.id}": related page "${id}" is unknown`);
     for (const id of p.features ?? []) if (!featureIds.has(id)) problems.push(`page "${p.id}": feature "${id}" is unknown`);
+  }
+
+  // Guides (restructure D20, release-2 plan R4): filed under the guides hub, and each links to at
+  // least two product pages through `related`. A published guide counts only published ones.
+  for (const p of r.pages.filter(page => page.type === 'article')) {
+    const slug = p.id.replace(/^guide\//, '');
+    if (!p.id.startsWith('guide/')) problems.push(`guide "${p.id}": the id must be guide/<slug>`);
+    if (p.path !== `/guides/${slug}/`) problems.push(`guide "${p.id}": the path must be /guides/${slug}/`);
+    if (p.parent !== 'guides') problems.push(`guide "${p.id}": the parent must be the guides hub`);
+    const product = [...new Set(p.related ?? [])]
+      .map(id => r.pages.find(other => other.id === id))
+      .filter((other): other is PageDef => !!other && PRODUCT_PAGE_TYPES.includes(other.type) && (other.published || !p.published));
+    if (product.length < 2) {
+      problems.push(
+        `guide "${p.id}" links to ${product.length} ${p.published ? 'published ' : ''}product page(s) through related; restructure D20 needs at least two feature, use-case or how-it-works pages`
+      );
+    }
   }
 
   // Pages depict only available or beta features; beta is labelled; each published page has substance
@@ -353,6 +370,56 @@ describe('registry rules (fixtures)', () => {
     ['a phrase to avoid in an approved claim', { features: [{ ...split, claims: [{ id: 'split.equal', text: 'Zero tracking.' }] }] }, /claim "split.equal"/],
   ])('reports %s', (_name, patch, message) => {
     expect(registryProblems({ ...good, ...patch }).join('\n')).toMatch(message);
+  });
+
+  describe('guides (restructure D20)', () => {
+    const product = [
+      page({ id: 'feature/settle-up' }),
+      page({ id: 'use-case/housemates', type: 'use-case' }),
+      page({ id: 'how-it-works', type: 'how-it-works', path: '/how-it-works/' }),
+    ];
+    const guide = (over: Partial<PageDef> = {}) =>
+      page({
+        id: 'guide/rent',
+        type: 'article',
+        path: '/guides/rent/',
+        parent: 'guides',
+        related: ['feature/settle-up', 'use-case/housemates'],
+        ...over,
+      });
+    const withGuide = (g: PageDef, others: readonly PageDef[] = product): Registry => ({
+      ...good,
+      pages: [splitPage, ...others, page({ id: 'guides', type: 'hub', path: '/guides/' }), g],
+    });
+
+    it('accepts a guide that links to two product pages', () => {
+      expect(registryProblems(withGuide(guide()))).toEqual([]);
+    });
+
+    it('accepts a guide that links to a how-it-works page and a feature page', () => {
+      expect(registryProblems(withGuide(guide({ related: ['how-it-works', 'feature/settle-up'] })))).toEqual([]);
+    });
+
+    it.each<[string, Partial<PageDef>, RegExp]>([
+      ['no related pages', { related: undefined }, /links to 0 .*product page/],
+      ['one product page', { related: ['feature/settle-up'] }, /links to 1 .*product page/],
+      ['the same product page twice', { related: ['feature/settle-up', 'feature/settle-up'] }, /links to 1 .*product page/],
+      ['a hub and one product page', { related: ['guides', 'feature/settle-up'] }, /links to 1 .*product page/],
+      ['an unknown related page', { related: ['feature/settle-up', 'nope'] }, /links to 1 .*product page/],
+      ['an id without the guide/ prefix', { id: 'rent' }, /the id must be guide\/<slug>/],
+      ['a path that differs from the id', { path: '/guides/other/' }, /the path must be \/guides\/rent\//],
+      ['another parent', { parent: 'features' }, /the parent must be the guides hub/],
+    ])('rejects a guide with %s', (_name, patch, message) => {
+      expect(registryProblems(withGuide(guide(patch))).join('\n')).toMatch(message);
+    });
+
+    it('counts only published product pages for a published guide', () => {
+      const draft = product.map(p => (p.id === 'use-case/housemates' ? { ...p, published: false } : p));
+      expect(registryProblems(withGuide(guide({ published: false }), draft))).toEqual([]);
+      expect(registryProblems(withGuide(guide({ published: true }), draft)).join('\n')).toMatch(
+        /links to 1 published product page\(s\)/
+      );
+    });
   });
 
   it('accepts a worked example on a page as well as on a use case', () => {

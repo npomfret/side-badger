@@ -2,6 +2,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import { isIndexable, overrideLockPages } from '../seo/indexability';
 import { alternatesFor } from '../seo/alternates';
 import {
+  articleNode,
   breadcrumbListNode,
   buildGraph,
   faqPageNode,
@@ -197,6 +198,20 @@ describe('JSON-LD graph', () => {
     expect(node.offers).toEqual({ '@type': 'Offer', price: '0', priceCurrency: 'GBP' });
     const text = serializeJsonLd([node as JsonLdNode, breadcrumbListNode([])]);
     expect(text).not.toMatch(/HowTo|aggregateRating|AggregateRating|Review/);
+  });
+
+  it('adds an Article for a guide, written by the organization, to the graph beside the WebPage', () => {
+    const article = articleNode({ headline: 'How?', datePublished: '2026-10-21', dateModified: '2026-11-02', locale: 'ph' });
+    const graph = buildGraph({ pageId: 'guide/preview', locale: 'ph', name: 'N', description: 'D', nodes: [article], ...base });
+    expect(graph.map(n => (n as Loose)['@type'])).toEqual(['WebSite', 'Organization', 'WebPage', 'Article']);
+    expect(byType(graph, 'Article')[0]).toMatchObject({
+      headline: 'How?',
+      datePublished: '2026-10-21',
+      dateModified: '2026-11-02',
+      inLanguage: 'fil',
+      author: { '@id': 'https://sidebadger.me/#organization' },
+    });
+    expect(serializeJsonLd(graph)).not.toMatch(/HowTo/);
   });
 
   it('escapes < so no value can close the script element', () => {

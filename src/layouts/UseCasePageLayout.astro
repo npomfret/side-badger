@@ -1,8 +1,9 @@
 ---
 /**
  * A use-case page (restructure 5.6, D23): hero, scenario, worked example (required), further
- * sections from the brief, the features used (links to the feature pages), an optional FAQ, and
- * the closing call to action. See FeaturePageLayout for how `data` and the JSON-LD work.
+ * sections from the brief, the features used (links to the feature pages), an optional FAQ, the
+ * published guides that name the page, and the closing call to action. See FeaturePageLayout for
+ * how `data` and the JSON-LD work.
  */
 import BaseLayout from './BaseLayout.astro';
 import CardGrid from '../components/content/CardGrid.astro';
@@ -17,7 +18,7 @@ import WorkedExample from '../components/content/WorkedExample.astro';
 import { faqNode, webPageNode } from '../components/content/layout-jsonld';
 import { relatedCards } from '../components/content/page-content';
 import type { UseCasePageData } from '../content/schemas';
-import type { Locale } from '../i18n';
+import { t, type Locale } from '../i18n';
 import { requirePage, type PageId } from '../site/pages';
 
 interface Props {
@@ -29,7 +30,8 @@ interface Props {
 const { data, pageId, locale } = Astro.props;
 const page = requirePage(pageId);
 const features = await relatedCards(pageId, locale, other => other.type === 'feature');
-const others = await relatedCards(pageId, locale, other => other.type !== 'feature');
+const others = await relatedCards(pageId, locale, other => other.type !== 'feature' && other.type !== 'article');
+const guides = await relatedCards(pageId, locale, other => other.type === 'article');
 ---
 
 <BaseLayout
@@ -61,6 +63,8 @@ const others = await relatedCards(pageId, locale, other => other.type !== 'featu
     )}
 
     {data.faq && <FaqList faq={data.faq} locale={locale} />}
+
+    <RelatedPages links={guides} locale={locale} heading={t('related.guidesHeading', locale)} id="guides" />
 
     <RelatedPages links={others} locale={locale} />
 

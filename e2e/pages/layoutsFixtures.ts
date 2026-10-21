@@ -8,14 +8,24 @@ import { computeExample, type Ledger } from '../../src/lib/settle';
 import type { PseudoLocale } from '../../src/i18n/pseudo';
 import { text, type ShellLocale, type StringKey } from './strings';
 
-/** The four layouts, each shown by one preview page (src/site/preview-pages.ts). */
-export type LayoutKind = 'feature' | 'use-case' | 'hub' | 'how-it-works';
+/** The five layouts, each shown by one preview page (src/site/preview-pages.ts). */
+export type LayoutKind = 'feature' | 'use-case' | 'hub' | 'how-it-works' | 'guide';
 
 export const LAYOUT_ROUTES: Record<LayoutKind, string> = {
   feature: 'features/preview',
   'use-case': 'use-cases/preview',
   hub: 'preview/hub',
   'how-it-works': 'preview/how-it-works',
+  guide: 'guides/preview',
+};
+
+/** The registry id of each layout's preview page, as the launch counter's `from` names it. */
+export const LAYOUT_PAGE_IDS: Record<LayoutKind, string> = {
+  feature: 'feature/preview',
+  'use-case': 'use-case/preview',
+  hub: 'preview/hub',
+  'how-it-works': 'preview/how-it-works',
+  guide: 'guide/preview',
 };
 
 const FIXTURE_FILES: Record<LayoutKind, string> = {
@@ -23,6 +33,7 @@ const FIXTURE_FILES: Record<LayoutKind, string> = {
   'use-case': 'src/content/use-cases/__preview__/en.yaml',
   hub: 'src/content/pages/__preview__/en.yaml',
   'how-it-works': 'src/content/pages/__preview__/how-it-works.yaml',
+  guide: 'src/content/guides/__preview__/en.yaml',
 };
 
 export interface Section {

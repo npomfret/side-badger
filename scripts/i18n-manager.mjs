@@ -1578,7 +1578,7 @@ const CONTENT_DIRS = {
 // Fields that are bookkeeping, never translated and never part of the English hash
 const CONTENT_BOOKKEEPING = ['review', 'translatedFrom', 'identicalApproved', 'claims'];
 // Leaves that stay identical in every locale
-const CONTENT_STRUCTURAL = new Set(['shot', 'payer', 'method', 'id', 'currency']);
+const CONTENT_STRUCTURAL = new Set(['shot', 'payer', 'method', 'id', 'currency', 'owner', 'reviewBy', 'datePublished', 'dateModified']);
 
 /** Canonical JSON: sorted keys, no whitespace. Must match src/__tests__/content.test.ts. */
 function canonicalJson(value) {

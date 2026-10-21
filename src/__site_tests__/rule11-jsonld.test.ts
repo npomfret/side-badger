@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { checkJsonLd } from './rules/r11-jsonld';
+import { checkJsonLd, requiredTypes } from './rules/r11-jsonld';
 import { dist } from './lib/site';
 import { fx, mentions, one, sites } from './lib/fixtures';
 
@@ -63,6 +63,19 @@ describe('rule 11: JSON-LD parses, has the required nodes and matches the visibl
 
     it('fails a BreadcrumbList with no visible breadcrumb', () => {
       expect(mentions(checkJsonLd(one('r11/breadcrumb-not-visible.html')), 'no visible breadcrumb')).toBe(true);
+    });
+
+    it('requires an Article and a BreadcrumbList on a guide', () => {
+      expect(requiredTypes.article).toEqual(['WebSite', 'Organization', 'WebPage', 'Article', 'BreadcrumbList']);
+    });
+
+    it('passes a guide with an Article and a breadcrumb that matches the visible one', () => {
+      expect(checkJsonLd(one('r11/guide-ok.html', 'guides/preview/index.html'))).toEqual([]);
+    });
+
+    it('fails a guide without an Article node', () => {
+      const problems = checkJsonLd(one('r11/guide-without-article.html', 'guides/preview/index.html'));
+      expect(mentions(problems, 'lacks a Article node', 'article page')).toBe(true);
     });
 
     it('fails an English legal page whose WebPage has no dateModified', () => {

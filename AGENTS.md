@@ -93,7 +93,7 @@ npm run i18n audit   # Check for missing/extra keys
 ### Registries and content
 
 - `src/data/features.ts`, `use-cases.ts`, `substitutions.ts` and `screenshots.ts` (types in `types.ts`) are the English, internal registry: feature ids and statuses, claims, proof, approved wording. Pages reference ids and never print registry strings. `substitutions.ts` lists phrases banned from English copy and what to write instead. `src/__tests__/registry.test.ts` checks every reference.
-- Content is YAML, one file per page per locale: `src/content/{features,use-cases,pages}/<slug>/<locale>.yaml`. `src/content/schemas.ts` (zod) defines every shape; `content.test.ts` checks structural parity between locales (same keys as English).
+- Content is YAML, one file per page per locale: `src/content/{features,use-cases,pages,guides}/<slug>/<locale>.yaml`. `src/content/schemas.ts` (zod) defines every shape; `content.test.ts` checks structural parity between locales (same keys as English).
 - `richText` fields are inline Markdown only. The one link form is `[text](page:<pageId>)`, resolved per locale by `RichText.astro`; an unknown or unbuilt page id fails the build. No app links in rich text.
 - A worked example is data, not prose: `computeExample` (`src/lib/settle.ts`) computes the settlement, `content/money.ts` formats it and `WorkedExample` shows it. Locales may change names, labels and amounts, but people, payers, split methods and payment count must match English. `exampleAfter` places the example after N sections; `navLabel` (max 32 characters) is the short label used in navigation.
 - Every entry has a `review` block. `machine` is the default; `checked` is set by an agent that back-checked the text (needs `checker` and `date`); `reviewed` only for a named fluent human (needs `reviewer` and `date`). Agents never write `reviewed`.
@@ -101,7 +101,8 @@ npm run i18n audit   # Check for missing/extra keys
 
 ### Layouts and content blocks
 
-- `src/layouts/`: `FeaturePageLayout`, `UseCasePageLayout`, `HubLayout` (the features and use-cases indexes), `HowItWorksLayout`, plus `BaseLayout`. The route files in `src/pages/[...locale]/` load the collection entry and pass it in.
+- `src/layouts/`: `FeaturePageLayout`, `UseCasePageLayout`, `HubLayout` (the features, use-cases and guides indexes), `HowItWorksLayout`, `GuidePageLayout`, plus `BaseLayout`. The route files in `src/pages/[...locale]/` load the collection entry and pass it in.
+- `GuidePageLayout` (guides: page type `article`, id `guide/<slug>`, path `/guides/<slug>/`) composes the hero, sections, `WorkedExample` (by `exampleAfter`), `FaqList`, `RelatedPages` and `CtaBand`, and emits `Article` JSON-LD. A guide's `owner`, `reviewBy` and dates are structural, and it names at least two product pages in `related` (restructure D20); those pages list it back.
 - `src/components/content/` holds the building blocks: `PageHero`, `ContentSection`, `ExtraSections`, `CardGrid`, `WorkflowSteps`, `WorkedExample`, `Screenshot`, `FaqList`, `LimitsList`, `RelatedPages`, `CtaBand`, `BetaLabel`, `RichText`. Compose these rather than writing page-specific markup.
 
 ## Components
@@ -127,7 +128,7 @@ A scroll-driven set of scenes. Styles are in `src/styles/home/` (`tokens.css`, `
 
 All in `src/pages/` (file-based routing); most are under `[...locale]/` so one file serves every locale:
 - `index.astro` (homepage), `pricing.astro` (free tier with FAQ schema)
-- `features/index.astro`, `features/[slug].astro`, `use-cases/index.astro`, `use-cases/[slug].astro`, `how-it-works.astro` - content pages built from the collections
+- `features/index.astro`, `features/[slug].astro`, `use-cases/index.astro`, `use-cases/[slug].astro`, `how-it-works.astro`, `guides/index.astro`, `guides/[slug].astro` - content pages built from the collections
 - `privacy.astro`, `terms.astro`, `cookies.astro` - Policy pages (pre-rendered from snapshots at build time)
 - `preview/[slug].astro` - layout review pages, only under `PREVIEW_UNPUBLISHED=1`
 - Outside `[...locale]/`: `404.astro`, `robots.txt.ts` and `og/[card].png.ts` (social cards)

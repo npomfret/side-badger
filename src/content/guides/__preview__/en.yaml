@@ -1,0 +1,75 @@
+# Layout fixture for GuidePageLayout (P2). Built only under PREVIEW_UNPUBLISHED=1; the page is
+# registered in src/site/preview-pages.ts. The copy is plausible filler written to exercise every
+# block of the layout, not site copy: it is never published and no real page links to it.
+review:
+  status: machine
+claims: []
+owner: Layout fixture
+reviewBy: 2027-10-21
+datePublished: 2026-10-21
+meta:
+  title: Preview guide, every block of the layout
+  description: A fixture guide that fills every block of the guide layout, including a worked example with exact amounts and an FAQ.
+h1: How do we split a villa when people stay different nights?
+navLabel: Guide fixture
+lead: Split the villa by **exact amounts**, one per person for the nights they stayed, and let the app turn every expense into a short list of payments. This is a layout fixture.
+cta:
+  heading: Planning your own week away?
+  body: Create an account, start a group and add the villa. The sums are done for you.
+sections:
+  - heading: Four friends, one villa
+    body: Ines books the villa for the week. Joel and Ines stay all seven nights, Kit and Lena only four, so an equal split would have the short stayers paying for beds they never slept in.
+  - heading: Enter the villa with exact amounts
+    body: Add the villa as one expense paid by Ines, choose **exact amounts** and type each person's share. The shares have to add up to the total, and the groceries and the boat trip go in as separate expenses with their own splits. [Read how settling up works](page:feature/preview) before the last night.
+  - heading: What to watch for
+    items:
+      - Shares that do not add up to the villa's total.
+      - People who were not there. Leave them out of that expense, not out of the group.
+      - Expenses in another currency. Set the group up to convert, or keep them separate.
+exampleAfter: 1
+example:
+  heading: A week at the villa
+  currency: GBP
+  people:
+    - id: ines
+      name: Ines
+    - id: joel
+      name: Joel
+    - id: kit
+      name: Kit
+    - id: lena
+      name: Lena
+  expenses:
+    - label: the villa
+      payer: ines
+      amount: 800
+      split:
+        method: exact
+        shares:
+          ines: 250
+          joel: 250
+          kit: 150
+          lena: 150
+    - label: groceries
+      payer: joel
+      amount: 120
+      split:
+        method: equal
+    - label: the boat trip
+      payer: kit
+      amount: 90
+      split:
+        method: equal
+        shares:
+          ines: 1
+          joel: 1
+          kit: 1
+faq:
+  heading: Questions
+  items:
+    - q: Can I split the villa by the number of nights?
+      a: Not automatically. Work out each person's share first, then enter the amounts. The calculator on your phone is fine for that.
+    - q: What if someone leaves a day early?
+      a: Change their share on the villa expense and the balances update for everyone.
+    - q: Does everyone need an account?
+      a: Yes, everyone in the group needs a free account. See [pricing](page:pricing) for what free covers.

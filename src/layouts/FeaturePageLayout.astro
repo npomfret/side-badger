@@ -2,7 +2,8 @@
 /**
  * A feature page (restructure 5.6, D23): hero (h1, lead, call to action, first shot), problem,
  * workflow steps, options, the worked example and further sections when the brief has them,
- * limits, related use cases, FAQ, final call to action.
+ * limits, related use cases, FAQ, the published guides that name the page, related pages, final
+ * call to action.
  *
  * `data` is the page's content entry for the locale (`loadPageContent`), already validated by
  * `featurePage`; the route file loads it and never falls back to English. Numbers in the worked
@@ -25,7 +26,7 @@ import { isBetaPage } from '../components/content/beta';
 import { faqNode, webPageNode } from '../components/content/layout-jsonld';
 import { relatedCards } from '../components/content/page-content';
 import type { FeaturePageData } from '../content/schemas';
-import type { Locale } from '../i18n';
+import { t, type Locale } from '../i18n';
 import { requirePage, type PageId } from '../site/pages';
 
 interface Props {
@@ -38,7 +39,8 @@ const { data, pageId, locale } = Astro.props;
 const page = requirePage(pageId);
 const heroShot = data.workflow.steps.find(step => step.shot);
 const useCases = await relatedCards(pageId, locale, other => other.type === 'use-case');
-const others = await relatedCards(pageId, locale, other => other.type !== 'use-case');
+const others = await relatedCards(pageId, locale, other => other.type !== 'use-case' && other.type !== 'article');
+const guides = await relatedCards(pageId, locale, other => other.type === 'article');
 ---
 
 <BaseLayout
@@ -102,6 +104,8 @@ const others = await relatedCards(pageId, locale, other => other.type !== 'use-c
     )}
 
     <FaqList faq={data.faq} locale={locale} />
+
+    <RelatedPages links={guides} locale={locale} heading={t('related.guidesHeading', locale)} id="guides" />
 
     <RelatedPages links={others} locale={locale} />
 

@@ -21,6 +21,7 @@ import {
   contentDirs,
   contentSchemas,
   featurePage,
+  guide,
   richTextPageIds,
   richTextProblem,
   sitePageByType,
@@ -56,7 +57,7 @@ export function sourceHash(english: Record<string, unknown>): string {
 }
 
 /** Leaves that must be identical in every locale (ids, shot ids, split structure). */
-const STRUCTURAL_LEAVES = new Set(['shot', 'payer', 'method', 'id', 'exampleAfter']);
+const STRUCTURAL_LEAVES = new Set(['shot', 'payer', 'method', 'id', 'exampleAfter', 'owner', 'reviewBy', 'datePublished', 'dateModified']);
 /** Top-level fields that are bookkeeping and never compared with English. */
 const BOOKKEEPING = new Set(['review', 'translatedFrom', 'identicalApproved']);
 
@@ -74,7 +75,9 @@ export function leaves(value: unknown, prefix = '', key = ''): Leaf[] {
       return leaves(v, prefix ? `${prefix}.${k}` : k, k);
     });
   }
-  return [{ path: prefix, key, value: value as Leaf['value'] }];
+  // An unquoted YAML date loads as a Date; compare it as the ISO date the schema turns it into
+  const leaf = value instanceof Date ? value.toISOString().slice(0, 10) : (value as Leaf['value']);
+  return [{ path: prefix, key, value: leaf }];
 }
 
 /** Differences in shape between the English entry and a translation. */
@@ -512,6 +515,83 @@ describe('content rules (fixtures)', () => {
     expect(exampleProblems({ example: trip(0.85) }, { example: trip(0.85, 900, 'USD') }).join()).toMatch(/currencies and rates/);
     // Flights £510 and villa €1,200 leave A square once converted: one payment instead of two
     expect(exampleProblems({ example: trip(0.85) }, { example: trip(0.85, 1200, 'EUR', 510) }).join()).toMatch(/2\/2\/2 transfers in English, 1\/2\/2/);
+  });
+
+  describe('guides', () => {
+    const story = {
+      review: english.review,
+      claims: [],
+      owner: 'Nick',
+      reviewBy: '2027-04-21',
+      datePublished: '2026-10-21',
+      meta: english.meta,
+      h1: 'How do we split the villa?',
+      lead: english.lead,
+      cta,
+      sections: [{ heading: 'The group', body: 'Four friends and one villa.' }],
+      example: {
+        currency: 'GBP',
+        people: [{ id: 'a', name: 'A' }, { id: 'b', name: 'B' }],
+        expenses: [{ label: 'villa', payer: 'a', amount: 100, split: { method: 'equal' as const } }],
+      },
+      exampleAfter: 1,
+      faq: english.faq,
+    };
+    const translated = {
+      ...story,
+      translatedFrom: 'deadbeef',
+      h1: 'Comment partager la villa ?',
+      lead: french.lead,
+      cta: french.cta,
+      sections: [{ heading: 'Le groupe', body: 'Quatre amis et une villa.' }],
+      example: { ...story.example, people: [{ id: 'a', name: 'Ana' }, { id: 'b', name: 'Ben' }] },
+      faq: french.faq,
+    };
+
+    it('accepts a complete guide, with or without a worked example', () => {
+      expect(guide.safeParse(story).success).toBe(true);
+      const { example: _example, exampleAfter: _after, ...plain } = story;
+      expect(guide.safeParse(plain).success).toBe(true);
+    });
+
+    it.each([
+      ['no owner', { ...story, owner: undefined }],
+      ['an empty owner', { ...story, owner: '' }],
+      ['no reviewBy', { ...story, reviewBy: undefined }],
+      ['a reviewBy that is not an ISO date', { ...story, reviewBy: 'next spring' }],
+      ['no datePublished', { ...story, datePublished: undefined }],
+      ['no sections', { ...story, sections: [] }],
+      ['exampleAfter beyond the sections', { ...story, exampleAfter: 2 }],
+      ['an unknown field', { ...story, author: 'Nick' }],
+    ])('rejects a guide with %s', (_name, entry) => {
+      expect(guide.safeParse(entry).success).toBe(false);
+    });
+
+    it('accepts YAML dates, which load as Date objects', () => {
+      const dated = { ...story, reviewBy: new Date('2027-04-21'), datePublished: new Date('2026-10-21') };
+      expect(guide.safeParse(dated).success).toBe(true);
+    });
+
+    it('needs the owner, the dates and exampleAfter to equal English in every locale', () => {
+      expect(parityProblems(story, translated)).toEqual([]);
+      expect(parityProblems(story, { ...translated, owner: 'Nicolas' }).join()).toMatch(/owner must equal English/);
+      expect(parityProblems(story, { ...translated, reviewBy: '2027-05-01' }).join()).toMatch(/reviewBy must equal English/);
+      expect(parityProblems(story, { ...translated, datePublished: '2026-11-01' }).join()).toMatch(/datePublished must equal English/);
+      expect(parityProblems(story, { ...translated, dateModified: '2026-11-01' }).join()).toMatch(/extra dateModified/);
+      expect(parityProblems(story, { ...translated, exampleAfter: 0 }).join()).toMatch(/exampleAfter must equal English/);
+    });
+
+    it('compares a YAML date by its day, not by object identity', () => {
+      const a = { ...story, reviewBy: new Date('2027-04-21') };
+      const b = { ...translated, reviewBy: new Date('2027-04-21') };
+      expect(parityProblems(a, b)).toEqual([]);
+      expect(parityProblems(a, { ...b, reviewBy: new Date('2027-04-22') }).join()).toMatch(/reviewBy must equal English/);
+    });
+
+    it('does not count an owner or a date as untranslated', () => {
+      expect(untranslated(story, translated)).not.toContain('owner');
+      expect(untranslated(story, translated)).not.toContain('reviewBy');
+    });
   });
 
   it('checks a site page against the shape its registry type needs', () => {

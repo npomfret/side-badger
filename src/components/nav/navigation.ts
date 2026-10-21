@@ -20,6 +20,7 @@ const FOOTER_LABEL_KEYS: Readonly<Record<string, TranslationKey>> = {
   terms: 'footer.terms',
   cookies: 'footer.cookies',
   support: 'support.title',
+  guides: 'footer.guides',
 };
 
 /**
@@ -38,12 +39,12 @@ export function pageLabel(page: PageDef, locale: Locale, labels: PageLabels = {}
 }
 
 /** The content files by path. Lazy, so only the files a label needs are read, once per build. */
-const contentFiles = import.meta.glob('/src/content/{features,use-cases,pages}/*/*.yaml', {
+const contentFiles = import.meta.glob('/src/content/{features,use-cases,pages,guides}/*/*.yaml', {
   query: '?raw',
   import: 'default',
 }) as Record<string, () => Promise<string>>;
 
-const CONTENT_DIRS = { featurePages: 'features', useCasePages: 'use-cases', sitePages: 'pages' } as const;
+const CONTENT_DIRS = { featurePages: 'features', useCasePages: 'use-cases', sitePages: 'pages', guides: 'guides' } as const;
 
 /** The link text in a content entry: its short `navLabel` if it has one, else its `h1`. */
 export function linkTextOf(data: { navLabel?: unknown; h1?: unknown } | null | undefined): string | undefined {

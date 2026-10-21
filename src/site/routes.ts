@@ -26,6 +26,7 @@ const CONTENT_DIRS: Record<NonNullable<PageDef['content']>['collection'], string
   featurePages: 'features',
   useCasePages: 'use-cases',
   sitePages: 'pages',
+  guides: 'guides',
 };
 
 // Only the file names matter, so the modules are never loaded

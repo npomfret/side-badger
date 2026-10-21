@@ -4,9 +4,9 @@
  * ids, statuses and claim ids and never print these strings verbatim.
  *
  * Conventions (the plan's transcription notes):
- * - `homePage` is the first page the plan lists for the feature, `null` for "none". Release 2
- *   pages are not registered yet, so a feature homed there has `homePage: null` and a `R2`
- *   comment naming the page; set it when that page is registered.
+ * - `homePage` is the page that explains the feature best, `null` for "none". Release 2 moved
+ *   groups, invites, permissions, receipts, lists, polls, comments and the home screen onto
+ *   their own feature pages (tasks/release-2-plan.md).
  * - Claim ids are `<feature id>.<short-kebab-summary>`, in the plan's order.
  * - Audience words are ids: organisers, everyone, group-trips, housemates, events, couples.
  * - The rows of "What Side Badger does not do" are recorded last, with no page and no claims;
@@ -50,7 +50,7 @@ function notOffered(row: {
 export const features: readonly FeatureRecord[] = [
   {
     id: 'groups',
-    homePage: null, // R2: feature/groups-and-permissions
+    homePage: 'feature/groups-and-permissions',
     capability:
       "Create a group with a name, optional description, your own display name in that group, an optional header image and a per-group photo. Hide it from your dashboard by archiving it, and close it permanently when it's done.",
     problem: 'Costs from different parts of life get mixed up in one spreadsheet or chat.',
@@ -96,7 +96,7 @@ export const features: readonly FeatureRecord[] = [
   },
   {
     id: 'invites',
-    homePage: null, // R2: feature/groups-and-permissions
+    homePage: 'feature/groups-and-permissions',
     capability:
       'Share a join link or QR code that expires after 15 minutes, 1 hour, 1 day or 5 days. Or invite people you already share another group with, from inside the app. People see a preview of the group before joining.',
     problem: 'Getting everyone into the group without collecting phone numbers or email addresses.',
@@ -138,7 +138,7 @@ export const features: readonly FeatureRecord[] = [
   },
   {
     id: 'permissions',
-    homePage: null, // R2: feature/groups-and-permissions
+    homePage: 'feature/groups-and-permissions',
     capability:
       'Each member is an admin, a member or a viewer, who can see everything and change nothing. Pick the "Open collaboration" or "Managed group" preset, or set seven permissions individually: who can edit expenses, delete expenses, edit lists, invite, approve new members, change settings and change the header image. Admins can lock a group so nothing changes until it is unlocked.',
     problem: 'In bigger or more formal groups, one person needs to keep the numbers tidy.',
@@ -463,7 +463,7 @@ export const features: readonly FeatureRecord[] = [
   },
   {
     id: 'receipt-attachments',
-    homePage: null, // R2: feature/receipt-scanning
+    homePage: 'feature/receipt-scanning',
     capability: 'Attach up to three files to an expense, visible to group members.',
     problem: '',
     audiences: { primary: [], secondary: [] },
@@ -494,7 +494,7 @@ export const features: readonly FeatureRecord[] = [
   },
   {
     id: 'receipt-scanning',
-    homePage: null, // R2: feature/receipt-scanning
+    homePage: 'feature/receipt-scanning',
     capability:
       "When adding a new expense, photograph or upload a receipt. Side Badger's AI reads it and fills in a description, the total, the currency, the date, the time and the place, and puts a text copy of the receipt in the notes, for you to check.",
     problem: 'Typing receipts on a phone in a taxi queue.',
@@ -541,7 +541,7 @@ export const features: readonly FeatureRecord[] = [
   },
   {
     id: 'comments',
-    homePage: 'feature/split-expenses', // also lists-and-polls (R2)
+    homePage: 'feature/plan-together',
     capability: 'Comment on the group, on any expense, list or poll, with formatting and up to three attachments.',
     problem: '',
     audiences: { primary: [], secondary: [] },
@@ -595,7 +595,7 @@ export const features: readonly FeatureRecord[] = [
   },
   {
     id: 'lists',
-    homePage: null, // R2: feature/lists-and-polls
+    homePage: 'feature/plan-together',
     capability: 'Checklists inside a group. Tick items off, drag to reorder, watch progress, archive, copy and comment.',
     problem: '',
     audiences: { primary: [], secondary: [] },
@@ -623,7 +623,7 @@ export const features: readonly FeatureRecord[] = [
   },
   {
     id: 'polls',
-    homePage: null, // R2: feature/lists-and-polls
+    homePage: 'feature/plan-together',
     capability:
       'Ask the group with 2 to 10 options. Allow up to 10 votes each, optionally hide who voted for what, change your vote, close and reopen, and see the winner once closed.',
     problem: '',
@@ -776,7 +776,7 @@ export const features: readonly FeatureRecord[] = [
   },
   {
     id: 'home-screen',
-    homePage: 'how-it-works',
+    homePage: 'feature/web-app',
     capability:
       "Add the web app to a phone's home screen or a computer's dock, where it opens in its own window. Settings explains how for each platform.",
     problem: '',

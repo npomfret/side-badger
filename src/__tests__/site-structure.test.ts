@@ -313,11 +313,11 @@ describe('route generation', () => {
     expect(i18n.getLocalePaths()).toHaveLength(39);
   });
 
-  it('builds 39 × 15 pages in strict mode (including support)', async () => {
+  it('builds 39 × 32 pages in strict mode (including support and release 2)', async () => {
     vi.stubEnv('I18N_MODE', 'strict');
     const { routes, registry } = await loadFresh();
     const total = registry.pages.reduce((sum, page) => sum + routes.pathsFor(page.id).length, 0);
-    expect(total).toBe(39 * 15);
+    expect(total).toBe(39 * 32);
     expect(routes.pathsFor('support')).toHaveLength(39);
     expect(routes.pathsForType('legal')).toHaveLength(39 * 3);
     expect(routes.pathsForType('home')).toHaveLength(39);
@@ -433,7 +433,7 @@ describe('route generation', () => {
     const { routes } = await loadFresh({ previewPages: [draft] });
     expect(routes.pathsFor('draft-hub')).toEqual([]);
     expect(routes.pathsForType('hub').filter(path => path.props.pageId === 'draft-hub')).toEqual([]);
-    expect(routes.pathsForType('hub')).toHaveLength(39 * 2);
+    expect(routes.pathsForType('hub')).toHaveLength(39 * 3);
     vi.stubEnv('PREVIEW_UNPUBLISHED', '1');
     expect(routes.pathsFor('draft-hub')).toHaveLength(39);
   });

@@ -37,8 +37,48 @@ jobs:
       - name: Verify
         run: npm run verify
 
+  # The Playwright suite (e2e/), split across shards. Each shard builds the preview site itself
+  # (playwright.config.ts webServer). A deploy needs every shard to pass.
+  e2e:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      I18N_MODE: strict
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Browser tests
+        run: npx playwright test --shard=${{ matrix.shard }}/3
+
+      - name: Upload traces
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-traces-${{ matrix.shard }}
+          path: test-results/playwright
+          retention-days: 7
+
   build-and-push:
-    needs: verify
+    needs: [verify, e2e]
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
@@ -104,7 +144,7 @@ jobs:
             PUBLIC_DOMAIN=${{ matrix.domain }}
 
   deploy:
-    needs: [verify, build-and-push]
+    needs: [verify, e2e, build-and-push]
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:

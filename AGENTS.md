@@ -161,7 +161,7 @@ npm run docker:logs
 Multi-stage Dockerfile:
 1. `dev` - hot-reload container
 2. `builder` - Node 22, install deps (dev included), build, run `check:site`
-3. `production` - `nginx:1.27-alpine` serving `dist/`; `nginx/default.conf` goes in `conf.d/`, other `nginx/*.conf` in `/etc/nginx/side-badger/`
+3. `production` - digest-pinned `nginx:1.30.6-alpine` serving `dist/`; `nginx/default.conf` goes in `conf.d/`, other `nginx/*.conf` in `/etc/nginx/side-badger/`
 
 `nginx/default.conf` owns every response header except HSTS, plus caching and the body limit. The shared Snowmonkey proxy terminates TLS, compresses responses (brotli or gzip) and forwards to the `side-badger` alias.
 

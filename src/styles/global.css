@@ -24,7 +24,7 @@
  * Romanian comma-below (U+0218-021B) and Welsh w/y accents. That is every letter of the nine
  * Latin Extended locales' alphabets, so copy changes never need a re-subset, and it keeps those
  * pages inside the 100 KB Latin budget (Inter latin-ext was 85 KB, now 15 KB). Regenerate with:
- *   pyftsubset <fontsource latin-ext woff2> --unicodes=U+0100-017F,U+0218-021B,U+1E80-1E85,U+1EF2-1EF3 --flavor=woff2
+ *   pyftsubset <latin-ext woff2 from the @fontsource-variable/inter npm package> --unicodes=U+0100-017F,U+0218-021B,U+1E80-1E85,U+1EF2-1EF3 --flavor=woff2
  */
 @font-face {
   font-family: 'Inter Latin Ext';

@@ -17,7 +17,7 @@ Reference for the next person who changes the sidebadger.me DNS zone or its mail
 sidebadger.me is a secondary domain on the existing Google Workspace, whose primary domain is `pomocorp.com`, with no extra seats. The groups' owner is `gsuite@snowmonkey.co.uk`. Groups:
 
 - `support@sidebadger.me`: the owner is a member; "Who can post" is External.
-- `dmarc-reports@sidebadger.me`: receives DMARC aggregate reports.
+- `dmarc-reports@sidebadger.me`: receives DMARC aggregate reports. Since 2026-10-25 its owner is gsuite@ with delivery set to no email, spam is set to allow everything, and only managers can view it. Read the reports in its archive at groups.google.com.
 
 Read the mail in Gmail. To reply as support@, use Gmail -> Settings -> Accounts -> "Send mail as".
 

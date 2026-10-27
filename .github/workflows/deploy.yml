@@ -154,23 +154,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Copy docker-compose to server
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: sidebadger.me
-          username: root
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "docker-compose.prod.yml"
-          target: "/opt/side-badger-website/"
-
-      - name: Deploy to server
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: sidebadger.me
-          username: root
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            cd /opt/side-badger-website
-            mv docker-compose.prod.yml docker-compose.yml
-            docker pull ghcr.io/${{ github.repository }}:latest-me
-            docker compose up -d --remove-orphans
+      - name: Deploy to production over verified SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: bash scripts/deploy-ci.sh

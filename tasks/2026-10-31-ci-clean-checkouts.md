@@ -4,7 +4,7 @@ Project: `side-badger`. Requested by Nick on 31 October 2026. Status: open.
 
 Ensure every CI build starts from an empty source directory before checking out
 the exact requested revision, unless a specific, justified exception is recorded.
-Follow the [shared acceptance criteria](../../snowmonkey-proxy-common/tasks/2026-10-31-ci-clean-checkouts.md#shared-acceptance-criteria).
+Follow the [shared acceptance criteria](../../snowmonkey-proxy-common/docs/CI-CHECKOUTS.md#shared-acceptance-criteria).
 
 Local CI entry points found: `.github/workflows`. Include server-managed builds and inherited templates in the inventory too.
 

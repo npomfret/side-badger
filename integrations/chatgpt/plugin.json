@@ -1,32 +1,46 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "sidebadger",
-  "version": "0.1.0",
-  "description": "Manage shared expense groups, expenses and recorded settlements with your connected Side Badger account.",
+  "version": "0.2.0",
+  "description": "Manage shared expense groups, expenses, receipts and recorded settlements with your connected Side Badger account.",
   "author": {
     "name": "Side Badger",
     "email": "support@sidebadger.me",
     "url": "https://sidebadger.me/"
   },
   "homepage": "https://sidebadger.me/",
-  "keywords": ["shared-expenses", "groups", "balances", "settlements"],
+  "keywords": [
+    "shared-expenses",
+    "groups",
+    "balances",
+    "settlements",
+    "receipts"
+  ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Side Badger",
         "developerName": "Side Badger",
         "shortDescription": "Manage shared expenses",
-        "longDescription": "View your Side Badger groups, members, expenses and outstanding balances. Prepare expenses and record settlements after confirming the details. Requires a Side Badger account and access to the relevant group. Uses your existing account permissions. Recording a settlement records a payment that has already happened; it does not transfer money. Expense deletion, bulk operations and receipt uploads are not supported by this integration.",
+        "longDescription": "View your Side Badger groups, members, expenses and outstanding balances, search across your groups, and see what has changed recently. Add an expense from a receipt: the receipt is scanned to fill in the details, and you review and confirm them before anything is saved. You can also prepare an expense by hand and record settlements. Nothing is saved until you confirm the details. Requires a Side Badger account and access to the relevant group. Uses your existing account permissions. Recording a settlement records a payment that has already happened; it does not transfer money. Receipt scanning works on JPEG, PNG and WebP images. PDFs are stored with the expense but not scanned, and iPhone HEIC photos are not accepted. Editing or deleting expenses and bulk operations are not supported by this integration.",
         "category": "Productivity",
-        "capabilities": ["Read groups and members", "Read expenses and balances", "Create expenses", "Record settlements"],
+        "capabilities": [
+          "Read groups and members",
+          "Read expenses and balances",
+          "Search groups",
+          "View recent activity",
+          "Scan receipts",
+          "Create expenses",
+          "Record settlements"
+        ],
         "websiteURL": "https://sidebadger.me/",
         "supportURL": "https://sidebadger.me/support/",
         "privacyPolicyURL": "https://sidebadger.me/privacy/",
         "termsOfServiceURL": "https://sidebadger.me/terms/",
         "defaultPrompt": [
           "List my Side Badger groups and their outstanding balances.",
-          "Show the recent expenses in one of my Side Badger groups.",
-          "Help me prepare a shared expense and show me the details before saving."
+          "Add an expense from a receipt photo and show me the details before saving.",
+          "What has changed in my Side Badger groups recently?"
         ],
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/icon.png"
@@ -35,10 +49,10 @@
         "test_cases": {
           "positive": [
             {
-              "description": "List groups available to the connected review account.",
-              "prompt": "List my Side Badger groups. Don't change anything.",
-              "tools_triggered": "list_groups",
-              "expected_behavior": "Return only the connected account's accessible groups, handling pagination when needed. The groups match the app and no records change."
+              "description": "List groups available to the connected review account, and what changed recently.",
+              "prompt": "List my Side Badger groups and what has changed recently. Don't change anything.",
+              "tools_triggered": "list_groups, list_activity",
+              "expected_behavior": "Return only the connected account's accessible groups, handling pagination when needed, and recent activity matching the app's activity feed. No records change."
             },
             {
               "description": "Read members and outstanding balances of the review group supplied in secure reviewer instructions.",
@@ -47,16 +61,16 @@
               "expected_behavior": "Resolve the actual group and show its members, debts and currencies matching the app. Ask for clarification if the group is ambiguous. No records change."
             },
             {
-              "description": "Read recent expenses in the review group.",
-              "prompt": "Show the recent expenses in my review group. Don't change anything.",
-              "tools_triggered": "list_groups, list_group_expenses",
-              "expected_behavior": "Resolve the actual group and return accessible expenses with accurate payer, description, date, amount and shares. Handle pagination when needed. Do not invent expenses or change records."
+              "description": "Find a record by search and read the recent expenses in the review group.",
+              "prompt": "Search my review group for the expense description given in the reviewer instructions, then show its recent expenses. Don't change anything.",
+              "tools_triggered": "list_groups, search, list_group_expenses",
+              "expected_behavior": "Resolve the actual group, return search results with excerpts and links that match the app, and show accessible expenses with accurate payer, description, date, amount and shares. Handle pagination when needed. Do not invent records or change anything."
             },
             {
-              "description": "Prepare and save an expense only after the reviewer confirms its concrete details.",
-              "prompt": "Help me add a test expense to my review group. Ask for details and show the complete expense before saving.",
-              "tools_triggered": "list_groups, list_group_members, create_expense, list_group_expenses, get_group_balances",
-              "expected_behavior": "Resolve the group and members, collect the amount, currency, payer, date and splits, and show the complete operation. Do not save before explicit confirmation. After confirmation, save exactly one expense with the confirmed values and app balances. An exact retry with the same retryKey returns the original result without duplicate records or balance changes."
+              "description": "Scan a receipt and save an expense only after the reviewer confirms its concrete details.",
+              "prompt": "Add an expense to my review group from this receipt. Show the complete expense before saving.",
+              "tools_triggered": "list_groups, list_group_members, upload_receipt, get_receipt_scan, create_expense, list_group_expenses, get_group_balances",
+              "expected_behavior": "Resolve the group and members, upload the receipt once, follow its scan and prefill the description, amount, currency and date from it. Ask only for what is missing, such as payer and splits, and show the complete expense. Do not save before explicit confirmation. After confirmation, save exactly one expense with the confirmed values and the receipt attached, with balances matching the app. An exact retry with the same retryKey returns the original result without duplicate records or balance changes."
             },
             {
               "description": "Record an already completed payment as a settlement after confirming the details.",

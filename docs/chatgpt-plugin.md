@@ -3,7 +3,8 @@
 Side Badger owns the package source in [`integrations/chatgpt/`](../integrations/chatgpt/)
 and this tenant-specific delivery record. The shared bill-splitter repository owns
 the hosted MCP server and the reusable procedure in
-`docs/chatgpt-tenant-plugin-delivery.md`. No skill or embedded UI is required.
+`docs/chatgpt-tenant-plugin-delivery.md`, and the shared `manage-shared-expenses`
+skill that the archive bundles. No embedded UI is required.
 
 The tenant owner confirmed publisher name **Side Badger** and support contact
 **support@sidebadger.me** on 2026-10-21. Publisher identity still needs verification
@@ -13,7 +14,8 @@ in the selected OpenAI organization/project.
 
 - [`plugin.json`](../integrations/chatgpt/plugin.json): portable Agent Plugins
   manifest, listing copy, publisher/legal/support links, example prompts and five
-  positive/three negative proposed review cases.
+  positive/three negative proposed review cases. Receipts, search and activity
+  are described in the listing copy and exercised by the review cases.
 - [`mcp.json`](../integrations/chatgpt/mcp.json): production
   `https://app.sidebadger.me/api/mcp`, Streamable HTTP,
   OAuth with CIMD; no fixed credentials, headers or discovery overrides.
@@ -21,21 +23,22 @@ in the selected OpenAI organization/project.
   `public/images/icons/icon-512.png` (512 by 512 pixels). If branding changes,
   update the package copy too.
 
-The prepared archive is `tmp/chatgpt-submission/sidebadger-draft.zip`. Its root
-contains `plugin.json`, `mcp.json` and `assets/icon.png`; neither this guide nor the
-package README is included. Version
-0.1.0 identifies this draft package, not an application release.
+The prepared archive is `tmp/chatgpt-submission/sidebadger-0.2.0.zip`. Its root
+contains `plugin.json`, `mcp.json`, `skills/manage-shared-expenses/SKILL.md` and
+`assets/icon.png`; neither this guide nor the package README is included. Version
+0.2.0 identifies this package, not an application release.
 
-The ZIP contains listing metadata, connection settings and the icon. The six
-tools and their schemas are served by the deployed MCP endpoint, not bundled as
-application code. No skill, credentials, tokens or reviewer login details are
+The ZIP contains listing metadata, connection settings, the shared skill and the
+icon. The ten tools and their schemas are served by the deployed MCP endpoint, not
+bundled as application code. No credentials, tokens or reviewer login details are
 included. The public listing has not yet been submitted or published.
 
-To regenerate it, archive the three source files listed above with paths relative
-to `integrations/chatgpt/`, so the manifests are at the ZIP root. Save the result
-under the ignored `tmp/chatgpt-submission/` directory. Exclude both this guide and
-the package README, then check the archive's file list, JSON and referenced icon
-before uploading. Changes to the source files do not update the ZIP automatically.
+To regenerate it, run `npm run plugin:build -- --tenant-dir <this repo>/integrations/chatgpt --out tmp/sidebadger-0.2.0.zip`
+in the shared bill-splitter repository. The packager validates the manifests,
+listing limits, review-case counts and icon, adds the shared skill, and checks the
+ZIP against its sources. It only writes under that repository's `tmp/`, so copy the
+result into this repository's ignored `tmp/chatgpt-submission/` directory. ZIPs are
+not committed. Changes to the source files do not update the ZIP automatically.
 
 ## Side Badger listing values
 
@@ -62,8 +65,8 @@ confirmed an expense was saved and appeared in the web app, and instructed us to
 assume the remaining client flows work and proceed. Settlement, native ordinary
 Chat, identical write retries, refresh/revocation and denied-operation acceptance
 remain unexecuted assumptions, not passing observations.
-The optional expense time/noon default request is a separate API task in the
-bill-splitter repository; this package does not implement it.
+An expense's time is not required: the date is a plain date with an IANA time
+zone, and the time defaults to local noon.
 
 This draft is **not ready for public submission**:
 
@@ -132,20 +135,25 @@ review details. Do not use the tenant owner's staging account for public review.
 Exactly five positive and three negative cases are currently required for initial
 MCP review. The proposed positive cases are:
 
-1. “List my Side Badger groups. Don't change anything.” Expect `list_groups` and
-   only the account's accessible groups, handling pagination as needed. Compare
-   the results with the app.
+1. “List my Side Badger groups and what has changed recently. Don't change
+   anything.” Expect `list_groups`, `list_activity` and only the account's
+   accessible groups, handling pagination as needed. Compare the results with the
+   app and its activity feed.
 2. “Show the members and outstanding balances of my review group. Don't change
    anything.” Expect group resolution, `list_group_members` and
    `get_group_balances`. Verify identities, debts and currencies against the app.
-3. “Show the recent expenses in my review group. Don't change anything.” Expect
-   group resolution and `list_group_expenses`. Verify payer, description, date,
-   amount and shares, with no fabricated entries or writes.
-4. “Help me add a test expense to my review group. Ask for details and show the
-   complete expense before saving.” Supply the actual payer, amount, currency,
-   date, currently required time and splits. Confirm the concrete operation
-   separately before `create_expense`. Verify the app record and balances; repeat
-   the exact tool input with the same `retryKey` and verify there is one record.
+3. “Search my review group for the expense description given in the reviewer
+   instructions, then show its recent expenses. Don't change anything.” Expect
+   group resolution, `search` and `list_group_expenses`. Verify the excerpts and
+   links against the app, and the payer, description, date, amount and shares,
+   with no fabricated entries or writes.
+4. “Add an expense to my review group from this receipt. Show the complete
+   expense before saving.” Attach a JPEG, PNG or WebP receipt. Expect
+   `upload_receipt` once, `get_receipt_scan`, then a draft prefilled from the scan.
+   Supply the payer and splits; no time is needed, the time defaults to local
+   noon. Confirm the concrete operation separately before `create_expense`.
+   Verify the app record, the attached receipt and balances; repeat the exact
+   tool input with the same `retryKey` and verify there is one record.
 5. “Help me record a payment I already made in my review group. Show all details
    before saving.” Supply payer, payee, amount and currency, then confirm the
    concrete operation before `record_settlement`. Verify the app record and
@@ -168,8 +176,9 @@ ZIP. Do not label cases passed before running them.
 
 ## Submit and publish
 
-After the open checks pass, upload the ZIP through **With MCP**, connect OAuth
-and resolve required metadata/tool findings. Submit for review with the dedicated
+After the open checks pass, upload the ZIP through **With MCP**: there is no
+`.app.json` and no app ID. Connect OAuth and resolve required metadata/tool
+findings. Submit for review with the dedicated
 account and video. Approval does not publish the plugin: the owner chooses
 **Publish plugin** after release authorization. Verify a fresh user can discover,
 install, connect and use the public listing, then record its URL.

@@ -6,6 +6,8 @@ import { resolve } from 'path';
 export default defineConfig({
   test: {
     globals: true,
+    maxWorkers: 1,
+    fileParallelism: false,
     include: ['src/__site_tests__/**/*.test.ts'],
     exclude: ['node_modules/**', '.claude/worktrees/**'],
     testTimeout: 60_000,

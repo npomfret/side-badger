@@ -6,6 +6,7 @@
 import { logoFor } from '../nav/logo';
 import { footerGroups, pageLabels } from '../nav/navigation';
 import { t, tf, getLocalizedPath, type Locale } from '../../i18n';
+import AnalyticsChoice from '../AnalyticsChoice.astro';
 
 interface Props {
   locale?: Locale;
@@ -36,6 +37,7 @@ const groups = footerGroups(locale, await pageLabels(locale));
       ))}
     </nav>
 
+    <AnalyticsChoice locale={locale} />
     <div class="footer-bottom flex items-center justify-between">
       <p class="text-muted text-sm">{tf('footer.copyright', { year: new Date().getFullYear() }, locale)}</p>
       <p class="text-muted text-sm">{t('footer.madeWith', locale)}</p>

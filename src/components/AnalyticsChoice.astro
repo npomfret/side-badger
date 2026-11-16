@@ -1,0 +1,70 @@
+---
+import { t, type Locale } from '@/i18n';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+---
+
+<div class="analytics-choice">
+  <label><input type="checkbox" data-analytics-choice disabled /> {t('analytics.allow', locale)}</label>
+  <span data-analytics-error role="alert" hidden>{t('analytics.saveFailed', locale)}</span>
+</div>
+
+<script>
+  import { isAnalyticsVisitEligible } from '@/lib/analytics-eligibility';
+
+  const input = document.querySelector<HTMLInputElement>('[data-analytics-choice]');
+  const error = document.querySelector<HTMLElement>('[data-analytics-error]');
+  const privacySignal = navigator.doNotTrack === '1'
+    || ('globalPrivacyControl' in navigator && navigator.globalPrivacyControl === true);
+  window.addEventListener('storage', event => {
+    if (event.key === 'sidebadger:analytics' || event.key === null) location.reload();
+  });
+  if (input && error) {
+    const key = 'sidebadger:analytics';
+    let permission = false;
+    let storage: Storage | undefined;
+    try {
+      storage = window.localStorage;
+      permission = storage.getItem(key) === 'on';
+      input.disabled = privacySignal;
+    } catch {
+      // This optional measurement stays off when its browser choice cannot be read.
+      input.disabled = true;
+    }
+    input.checked = permission && !privacySignal;
+    input.addEventListener('change', () => {
+      if (!storage) return;
+      try {
+        storage.setItem(key, input.checked ? 'on' : 'off');
+        location.reload();
+      } catch {
+        input.checked = permission && !privacySignal;
+        input.disabled = true;
+        error.hidden = false;
+      }
+    });
+    if (isAnalyticsVisitEligible({
+      hostname: location.hostname,
+      search: location.search,
+      hash: location.hash,
+      referrer: document.referrer,
+      pageEligible: document.documentElement.dataset.analyticsEligible === 'true',
+      permission,
+      privacySignal,
+    })) {
+      const beacon = document.createElement('script');
+      beacon.type = 'module';
+      beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+      beacon.dataset.cfBeacon = JSON.stringify({ token: '2e6c37c7df5243fb904d7f3030071eb1', spa: false });
+      document.head.append(beacon);
+    }
+  }
+</script>
+
+<style>
+  .analytics-choice { margin-block: 1rem; font-size: .875rem; }
+  label { display: flex; align-items: center; gap: .5rem; }
+  input { inline-size: 1rem; block-size: 1rem; }
+  [role="alert"] { display: block; margin-block-start: .5rem; }
+  [hidden] { display: none; }
+</style>

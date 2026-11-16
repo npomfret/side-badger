@@ -4,6 +4,8 @@ import { resolve } from 'path';
 export default defineConfig({
   test: {
     globals: true,
+    maxWorkers: 1,
+    fileParallelism: false,
     // The output checks read dist/ and run through `npm run check:site` (vitest.site.config.ts)
     exclude: [
       ...configDefaults.exclude,

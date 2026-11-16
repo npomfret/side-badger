@@ -8,6 +8,10 @@ on:
 # No token scope by default; each job asks for what it needs.
 permissions: {}
 
+concurrency:
+  group: side-badger-tests
+  cancel-in-progress: false
+
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
@@ -40,6 +44,7 @@ jobs:
   # The Playwright suite (e2e/), split across shards. Each shard builds the preview site itself
   # (playwright.config.ts webServer). A deploy needs every shard to pass.
   e2e:
+    needs: verify
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -47,6 +52,7 @@ jobs:
       I18N_MODE: strict
     strategy:
       fail-fast: false
+      max-parallel: 1
       matrix:
         shard: [1, 2, 3]
 

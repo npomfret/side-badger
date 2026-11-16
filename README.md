@@ -60,6 +60,20 @@ Privacy, Terms, and Cookie pages fetch content from your API:
 
 Expected response: Markdown text.
 
+## Optional website analytics
+
+The footer's analytics checkbox is off by default. It stores only a browser
+choice (`sidebadger:analytics`) and reloads after a change; other open tabs reload
+when that choice changes. The optional Cloudflare beacon loads only for direct,
+clean-URL visits to published marketing pages on `sidebadger.me`. DNT/GPC,
+calculators, preview pages, staging and the private app are excluded. Withdrawal
+can send the current page's final exit measurement during reload, as disclosed
+in the privacy policy. The public site token is configuration, not an API secret.
+
+Policy snapshots must be refreshed with `npm run policies:sync` after publishing
+the shared policies and before deploying a changed collection practice. Existing
+no-third-party-analytics claims refer specifically to the private app.
+
 ## Tech Stack
 
 - **Astro 5** - Static site generation

@@ -1,12 +1,14 @@
 ---
 policyId: "privacy-policy"
 sourceUrl: "https://app.sidebadger.me/api/policies/privacy-policy/text"
-versionHash: "9dead6a5c33581e0b98795e7265d306fb8ad9399e4729be875ebe882ced06292"
-publishedAt: "2026-10-14T19:05:30.720Z"
-fetchedAt: "2026-10-14T21:23:26.921Z"
+versionHash: "c4ef0d5e1e6cd7c68816826690acfc382b44240289bc177fcd8de9caee10d1d7"
+publishedAt: "2026-11-16T13:36:15.944Z"
+fetchedAt: "2026-11-16T13:37:52.380Z"
 ---
 
 ## Summary
+
+**Last revised: 16 November 2026. Effective on publication.**
 
 We are committed to protecting your privacy. This policy explains what information we collect, how we use it, and what your rights are.
 
@@ -57,7 +59,13 @@ Currently, we do not collect information about you from third parties. If this c
 
 ### 2.4. Analytics and Tracking
 
-**Currently, we do not use third-party analytics services (such as Google Analytics) or advertising trackers.** If we introduce such services in the future, we will update this policy and, where required by law, obtain your consent.
+**The private bill-splitting applications do not use third-party analytics or advertising trackers.**
+
+The public marketing websites at theexpensehub.com and sidebadger.me may offer optional **Cloudflare Web Analytics** to measure visits and loading performance. It is off until you choose to allow it in that website's privacy controls. This choice does not enable analytics in the private applications, and we do not give Cloudflare your account, group, expense or receipt content through this beacon.
+
+If enabled, your browser loads Cloudflare's JavaScript and sends page addresses, referring website information, browser/device information and performance measurements to Cloudflare. Cloudflare receives your IP address when handling these network requests. This analytics service does not use analytics cookies or advertising profiles. Cookie-free does not mean that no information is transmitted. See [Cloudflare's privacy policy](https://www.cloudflare.com/privacypolicy/) and [Web Analytics documentation](https://developers.cloudflare.com/web-analytics/).
+
+Public website pages opened with a query string, fragment or referring page are excluded, as are calculators and private application pages. Do Not Track and Global Privacy Control keep this optional analytics off. You can disable it using the same website controls; the page reloads to end the loaded beacon. A final measurement for the page being left may still be sent during that reload, and earlier reports cannot be recalled by that control. Your browser choice is stored locally until you change it or clear the website's browser data. If that storage is unavailable, analytics stays off on page load.
 
 ---
 
@@ -70,6 +78,7 @@ We use the information we collect for the following purposes:
 | **To Provide the Service:** To create your account, process your bill-splitting calculations, enable collaboration with others, and deliver the core functionality of the Service. | Performance of a contract with you |
 | **To Secure the Service:** To protect your account, prevent fraud, detect and investigate security incidents, and monitor for unauthorized or malicious activity. | Legitimate interest; Legal obligation |
 | **To Communicate With You:** To send you important service-related notifications, such as security alerts, changes to our terms, or responses to your inquiries. We do not send marketing emails without your explicit consent. | Performance of a contract; Legitimate interest |
+| **Optional Public Website Analytics:** To measure visits and performance on public marketing pages after you allow it. | Consent |
 | **To Improve the Service:** To understand how users interact with the app, identify bugs, develop new features, and improve overall user experience. We use aggregated and anonymized data where possible. | Legitimate interest |
 | **To Enforce Policy and Safety:** To detect and investigate prohibited non-financial usage, illegal content, and abuse using automated systems (including AI-assisted scanning) and human review. | Legitimate interest; Legal obligation |
 | **To Deliver Promotional Campaigns:** To personalize promotional messages and campaigns using account activity, submitted text, image-related signals, and engagement data where permitted by law. | Consent (where required); Legitimate interest |
@@ -244,7 +253,7 @@ The Service may contain links to third-party websites or services that are not o
 
 ## 11. Do Not Track Signals
 
-Some browsers offer a "Do Not Track" (DNT) feature. Because there is no common understanding of how to interpret DNT signals, the Service does not currently respond to DNT browser signals. However, as noted above, we do not currently use third-party tracking or analytics services.
+The optional public website analytics described in Section 2.4 stays off when your browser sends Do Not Track or Global Privacy Control. The private applications do not use this third-party analytics beacon. These signals do not disable authentication, security checks or other processing needed to provide the Service.
 
 ---
 

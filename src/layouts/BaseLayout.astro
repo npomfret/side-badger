@@ -7,7 +7,7 @@ import SiteFooter from '../components/layout/SiteFooter.astro';
 import { t, isPseudoLocale, localeConfig, type Locale } from '../i18n';
 import Breadcrumbs from '../components/nav/Breadcrumbs.astro';
 import { breadcrumbJsonLd, breadcrumbsFor } from '../components/nav/navigation';
-import type { PageId } from '../site/pages';
+import { pages, type PageId } from '../site/pages';
 import type { JsonLdNode } from '../seo/jsonld';
 import type { OgCardId } from '../pages/og/[card].png';
 
@@ -62,7 +62,7 @@ const preloadLatin = fontScript === 'latin';
 ---
 
 <!DOCTYPE html>
-<html lang={htmlLang} dir={dir} data-font-script={fontScript} data-pseudo={pseudo ? '' : undefined}>
+<html lang={htmlLang} dir={dir} data-font-script={fontScript} data-pseudo={pseudo ? '' : undefined} data-analytics-eligible={pages.some(entry => entry.id === page && entry.type !== 'tool' && entry.published) && !pseudo ? 'true' : 'false'}>
   <head>
     <SeoHead page={page} title={title} description={description} locale={locale} ogCard={ogCard} jsonLd={pageJsonLd}>
       <slot name="head" slot="head" />

@@ -1,16 +1,19 @@
 ---
 policyId: "cookie-policy"
 sourceUrl: "https://app.sidebadger.me/api/policies/cookie-policy/text"
-versionHash: "7ca6486664e3fbd7c2c8114ea4fb2240af3937f843bc9b982a1a47de6c779d1c"
-publishedAt: "2026-10-14T19:05:30.716Z"
-fetchedAt: "2026-10-14T21:23:26.921Z"
+versionHash: "9336d84991e13943daed916b7b4dde034690a441d84f07a53292fa3f5d789abd"
+publishedAt: "2026-11-16T13:40:54.924Z"
+fetchedAt: "2026-11-16T13:41:33.800Z"
 ---
 
 ## Summary
 
+**Last revised: 16 November 2026. Effective on publication.**
+
 This policy explains how our service ("we," "us," "our") uses cookies and similar technologies.
 
 *   **What we use:** We only use cookies that are essential for the Service to work correctly and securely. For example, we use cookies to keep you logged in.
+*   **Optional public website analytics:** The public marketing websites may load Cloudflare Web Analytics only after you allow it in their privacy controls. The beacon uses no analytics cookies. Its browser choice is stored locally until you change it or clear site data. It is not installed in the private applications. See Privacy Policy Section 2.4 for the information Cloudflare receives.
 *   **What we DON'T use:** We **do not** currently use cookies for analytics, advertising, or other non-essential tracking.
 *   **Future Changes:** If we decide to use non-essential cookies in the future (like for analytics), we will ask for your explicit consent through a cookie banner before we do so.
 *   **Scope Reminder:** The Service is a financial coordination tool and not a social media or general chat platform. Communication features are for finance-related discussions only.
@@ -25,7 +28,7 @@ Similar technologies include:
 
 *   **Local Storage:** Data stored in your browser that persists until cleared
 *   **Session Storage:** Data stored in your browser that is cleared when you close the tab
-*   **Pixels/Web Beacons:** Small images that can track when content is viewed (we do not currently use these)
+*   **Web Beacons:** Optional public website analytics can send JavaScript measurements after you allow it, as described in Privacy Policy Section 2.4. The private applications do not use that beacon.
 
 ---
 
@@ -59,9 +62,9 @@ If affiliate recommendations are enabled, we may use first-party storage, referr
 
 ## 3. What We Do NOT Use
 
-Our service **does not** currently use cookies or other tracking technologies for:
+The private applications **do not** use third-party analytics. The public website exception is the optional, cookie-free Cloudflare beacon described above. We do not use cookies or tracking technologies for:
 
-*   **Analytics:** We do not use Google Analytics, Mixpanel, or similar services to track your behavior
+*   **Private application analytics:** The private applications do not use Google Analytics, Mixpanel, Cloudflare Web Analytics, or similar third-party services to track your behavior.
 *   **Advertising:** We do not use advertising cookies, remarketing pixels, or ad networks
 *   **Social Media:** We do not embed social media tracking widgets
 *   **Third-Party Tracking:** We do not allow third parties to place tracking cookies through our Service
@@ -98,13 +101,13 @@ Please note that if you block or delete strictly necessary cookies, the Service 
 
 ### 4.3. Current Status
 
-Since we only use strictly necessary cookies, there is no need for a cookie preferences panel or consent banner at this time. Browser-level controls are the only mechanism available for managing cookies.
+Browser controls manage the private application's essential cookies. The public marketing websites provide a separate choice for optional Cloudflare Web Analytics; it is off until allowed, and that local browser choice can be changed using the website control. This choice does not disable essential sign-in cookies.
 
 ---
 
 ## 5. Do Not Track Signals
 
-Some browsers offer a "Do Not Track" (DNT) feature. Because there is no industry consensus on how to respond to DNT signals, and because we do not currently use tracking cookies, our Service does not specifically respond to DNT signals.
+Do Not Track and Global Privacy Control keep optional public website analytics off. You can also disable it in that website's privacy controls; the page reloads to stop the loaded beacon. A final page-exit measurement may still be sent during that reload, and earlier reports cannot be recalled. These choices do not disable the private application's essential sign-in storage.
 
 ---
 

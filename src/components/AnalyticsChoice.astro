@@ -45,6 +45,7 @@ const { locale } = Astro.props;
     });
     if (isAnalyticsVisitEligible({
       hostname: location.hostname,
+      pathname: location.pathname,
       search: location.search,
       hash: location.hash,
       referrer: document.referrer,

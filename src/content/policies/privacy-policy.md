@@ -1,9 +1,9 @@
 ---
 policyId: "privacy-policy"
 sourceUrl: "https://app.sidebadger.me/api/policies/privacy-policy/text"
-versionHash: "c4ef0d5e1e6cd7c68816826690acfc382b44240289bc177fcd8de9caee10d1d7"
-publishedAt: "2026-11-16T13:36:15.944Z"
-fetchedAt: "2026-11-16T13:37:52.380Z"
+versionHash: "45362ecdd8ea2f94d4d0215fe9cb4cd575464a9ef04ea384eedb76f2d4637347"
+publishedAt: "2026-11-16T16:12:28.786Z"
+fetchedAt: "2026-11-16T16:12:49.247Z"
 ---
 
 ## Summary
@@ -65,7 +65,7 @@ The public marketing websites at theexpensehub.com and sidebadger.me may offer o
 
 If enabled, your browser loads Cloudflare's JavaScript and sends page addresses, referring website information, browser/device information and performance measurements to Cloudflare. Cloudflare receives your IP address when handling these network requests. This analytics service does not use analytics cookies or advertising profiles. Cookie-free does not mean that no information is transmitted. See [Cloudflare's privacy policy](https://www.cloudflare.com/privacypolicy/) and [Web Analytics documentation](https://developers.cloudflare.com/web-analytics/).
 
-Public website pages opened with a query string, fragment or referring page are excluded, as are calculators and private application pages. Do Not Track and Global Privacy Control keep this optional analytics off. You can disable it using the same website controls; the page reloads to end the loaded beacon. A final measurement for the page being left may still be sent during that reload, and earlier reports cannot be recalled by that control. Your browser choice is stored locally until you change it or clear the website's browser data. If that storage is unavailable, analytics stays off on page load.
+Public website pages opened with a query string, fragment or a referring address other than the same clean public page are excluded, as are calculators and private application pages. Reloading that same clean page after saving your choice is allowed. Do Not Track and Global Privacy Control keep this optional analytics off. You can disable it using the same website controls; the page reloads to end the loaded beacon. A final measurement for the page being left may still be sent during that reload, and earlier reports cannot be recalled by that control. Your browser choice is stored locally until you change it or clear the website's browser data. If that storage is unavailable, analytics stays off on page load.
 
 ---
 

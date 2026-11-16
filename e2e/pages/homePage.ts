@@ -289,6 +289,7 @@ export class HomePage {
     // Start with the scene's top at the top of the viewport, then jump to 30 % of a viewport above its
     // bottom in one wheel event: far past the confetti point, with the scene still on screen
     await this.settleRegion.evaluate(scene => scene.scrollIntoView({ block: 'start', behavior: 'instant' }));
+    await expect(this.settleRegion, 'the settle scene is on screen before the flick').toBeInViewport();
     await expect.poll(() => this.settleRegion.evaluate(scene => Math.round(scene.getBoundingClientRect().top)), { message: 'the settle scene starts at the top of the viewport, below the header' }).toBeLessThanOrEqual(120);
     expect(this.requested.filter(url => /confetti/.test(url)), 'confetti before the scene finishes').toEqual([]);
     const sceneHeight = await this.settleRegion.evaluate(scene => scene.getBoundingClientRect().height);

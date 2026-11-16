@@ -15,7 +15,8 @@ export default defineConfig({
   testDir: './e2e',
   testMatch: '**/*.spec.ts',
   outputDir: './test-results/playwright',
-  fullyParallel: false,
+  // Shard individual cases while the single worker still runs them serially.
+  fullyParallel: true,
   workers: 1,
   forbidOnly: !!process.env.CI,
   retries: 0,

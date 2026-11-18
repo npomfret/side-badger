@@ -1,12 +1,16 @@
 ---
 policyId: "terms-of-service"
 sourceUrl: "https://app.sidebadger.me/api/policies/terms-of-service/text"
-versionHash: "828e3983124346c693f7677d52d0b7ad35d37dc0de8b1ce42be0bcb208b24b08"
-publishedAt: "2026-10-14T19:05:30.708Z"
-fetchedAt: "2026-10-14T21:23:26.921Z"
+versionHash: "5ea88a20db1571a30676346801ac98f64668974d1929c03294ab4881908645ca"
+publishedAt: "2026-11-18T22:56:13.832Z"
+fetchedAt: "2026-11-18T22:56:39.166Z"
 ---
 
 These Terms and Conditions ("Terms") govern your use of the application, website, and services (collectively, the "Service"). Please read them carefully.
+
+**Last revised: 18 November 2026.** The effective date of a published change will be stated in the notice accompanying that change.
+
+The **service operator** provides the branded Service you use. The **platform provider** supplies and supports the underlying software. References to "we," "us" and "our" in these Terms mean the service operator, unless the platform provider is expressly identified. Read these Terms together with the branded Service's legal and contact information identifying the service operator and the Privacy Policy explaining the organisations responsible for your personal information. These Terms do not transfer either organisation's legal responsibilities to the other.
 
 **By using our Service, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the Service.**
 
@@ -16,7 +20,7 @@ These Terms and Conditions ("Terms") govern your use of the application, website
 
 The Service is a convenience tool designed to help you and others track shared bills and expenses. The Service helps you record, calculate, and organize expense information—it does not process payments, transfer money, or hold funds on your behalf.
 
-**The Service is not a social media platform, public forum, or general chat app.** Any communication features (including comments and attachments) are provided only to discuss and verify group financial records.
+**The Service is not a social media platform, public forum, or general chat app.** Content and communications must relate to the Service's core functions: coordinating groups, lists and polls; recording and discussing expenses and settlements; or obtaining support for the application.
 
 **The Service is currently provided free of charge.** We reserve the right to introduce fees, subscriptions, or different service models in the future. If we do, we will provide you with reasonable notice of any changes.
 
@@ -40,7 +44,7 @@ You must be at least 18 years old to use the Service. By using the Service, you 
 
 ### 3.1. Use at Your Own Risk
 
-**THE SERVICE IS PROVIDED FOR INFORMATIONAL AND CONVENIENCE PURPOSES ONLY. YOU USE THE SERVICE ENTIRELY AT YOUR OWN RISK.**
+**The Service is provided for informational and convenience purposes.** You remain responsible for reviewing the information you submit and the actions you authorise. This does not remove our responsibility for obligations imposed by applicable law.
 
 ### 3.2. Not Financial, Legal, or Professional Advice
 
@@ -54,16 +58,19 @@ This includes any recommendations, sponsored cards, or affiliate-linked offers s
 *   The Service may contain bugs, errors, or inaccuracies in its calculations.
 *   Currency conversions, rounding, and mathematical operations may produce incorrect results.
 *   Data entry errors by you or other users may cause incorrect information to be displayed.
+*   Software, automated processing, and integrations may misinterpret information or instructions, omit details, or produce incorrect results, suggestions, or records, even when they appear complete or reliable.
 *   Synchronization issues or system failures may result in data loss or corruption.
-*   **We make no representations or warranties regarding the accuracy, completeness, or reliability of any calculations or data.**
+*   **You should not treat calculations, suggestions or records as guaranteed to be accurate, complete or reliable.** This does not exclude any guarantee or duty that applies by law.
 
 ### 3.4. Independent Verification Required
 
-**You are solely responsible for independently verifying all amounts, calculations, and information before making any payments or financial decisions.** Do not rely on the Service as your sole record of financial obligations. The Service does not replace proper financial record-keeping.
+**Independently verify all amounts, calculations and information before making payments or financial decisions.** Do not rely on the Service as your sole record of financial obligations. The Service does not replace proper financial record-keeping.
+
+Information and suggestions provided by the Service, including through automated features or integrations, are not independently verified facts or professional advice. Before confirming any action, check the proposed group, participants, payer, amounts, currency, dates, split and attachments, as applicable. Check the resulting saved records and correct any mistakes. These responsibilities do not exclude or restrict any rights or liabilities that cannot lawfully be excluded or restricted.
 
 ### 3.5. We Do Not Handle Money
 
-**The Service does not process payments, transfer funds, hold money, or act as a payment intermediary.** Any actual payments between users occur outside of the Service and are solely between those users. We have no involvement in, responsibility for, or liability arising from any payment or non-payment between users.
+**The Service does not process payments, transfer funds, hold money, or act as a payment intermediary.** Actual payments between users take place outside the Service. Recording a settlement does not send money or verify that a payment was received. We do not guarantee another user's payment or performance of their obligations.
 
 ---
 
@@ -75,18 +82,11 @@ This includes any recommendations, sponsored cards, or affiliate-linked offers s
 
 ### 4.2. No Mediation or Arbitration by Us
 
-We do not mediate, arbitrate, or otherwise involve ourselves in disputes between users. We have no obligation to investigate claims, determine fault, or enforce any resolution.
+We do not determine what one user legally owes another, provide a dispute-resolution service, or enforce payments. We may review reports and take action to address misuse of the Service or comply with law. Moderation does not decide the merits of a financial dispute.
 
-### 4.3. Release of Claims
+### 4.3. Responsibility for User Disputes
 
-**You hereby release us, our affiliates, officers, directors, employees, and agents from any and all claims, demands, damages, losses, and causes of action arising out of or relating to disputes with other users**, including but not limited to disputes about:
-
-*   Amounts owed or paid
-*   Accuracy of expense records
-*   Fairness of expense splits
-*   Non-payment by other users
-*   Any financial loss resulting from reliance on Service data
-*   Any other disagreement between users
+We are not responsible for another user's conduct or failure to pay merely because you used the Service to coordinate with them. This does not release us or the platform provider from responsibility for our respective acts or omissions, or restrict rights or remedies that cannot lawfully be excluded.
 
 ### 4.4. Your Responsibility
 
@@ -101,7 +101,7 @@ You are solely responsible for resolving any disputes with other users. We recom
 You may need to create an account to use the Service. You are responsible for:
 
 *   Maintaining the confidentiality of your login credentials
-*   All activity that occurs under your account
+*   Actions you take or authorise through your account, including through connected integrations
 *   Notifying us immediately if you suspect unauthorized access
 
 ### 5.2. Accurate Information
@@ -124,33 +124,33 @@ Your email preferences can be managed at any time through your account settings.
 
 ---
 
-## 6. Content and Data Ownership
+## 6. Your Content and Shared Records
 
-### 6.1. Platform Ownership of Service Data
+### 6.1. Your Content and Collaborative Records
 
-The Service is a collaborative platform where users collectively create and share financial records. **All content submitted to the Service—including expense records, group information, settlements, comments, and activity data ("Service Data")—is owned by us, not by any individual user.**
+You retain any ownership and intellectual property rights you have in content you submit ("Your Content"). Submitting content does not give you ownership of the Service or exclusive control over shared group records.
 
-This ownership structure exists because:
-
-*   **The Service is collaborative by nature.** Expense records, settlements, and balances represent shared agreements between multiple users, not individual property.
-*   **Data integrity requires platform control.** Financial records must remain accurate and available to all affected parties, regardless of any individual user's status.
-*   **No single user can unilaterally modify or delete shared records.** Group data affects all members and cannot be treated as the personal property of its creator.
+Group records are shared and affect other members. After you delete your account, shared records, including expenses, settlements and their history, remain available to the group. One member cannot remove a shared record simply by deleting their account. Your name shown in the group may remain on those records. Personal information in shared records remains subject to the Privacy Policy and applicable data protection rights.
 
 ### 6.2. Your Personal Information
 
-Your personal profile information (such as your name, email address, and profile photo) remains subject to your rights as described in our Privacy Policy. This section concerns Service Data created within groups, not your personal account information.
+Your rights in personal information apply wherever that information appears in the Service, including within group content, subject to applicable law and the rights of other people. Content ownership and the licence below do not override those rights.
 
 ### 6.3. License from You
 
-By submitting content to the Service, you grant us a perpetual, worldwide, royalty-free, irrevocable license to use, host, store, reproduce, modify, create derivative works from, communicate, publish, and distribute such content for any purpose related to operating, developing, and improving the Service. You waive any moral rights in such content to the extent permitted by law.
+By submitting content, you grant the service operator and platform provider a non-exclusive, worldwide, royalty-free licence to host, store, copy, process and display it as necessary to provide, maintain and secure the Service, enable its authorised features and sharing, handle support, enforce these Terms and meet legal obligations. They may permit their authorised service providers to do the same solely for those purposes.
+
+The licence lasts only for as long as the content is lawfully held for those purposes. It does not authorise unrelated publication or advertising use, or override the Privacy Policy or applicable data protection law.
 
 ### 6.4. Your Responsibilities
 
-You are responsible for the accuracy and legality of any content you submit. You represent that you have all necessary rights to provide such content and that it does not violate any laws or third-party rights. You acknowledge that content you submit may be visible to other group members and will remain part of the Service's records even if you later leave a group or close your account.
+You are responsible for the accuracy and legality of content you submit and for having the rights and permissions needed to submit it and share it with the intended recipients. Content may contain other people's personal information; do not submit it without an appropriate justification. Shared records may remain after you leave a group or close your account, where continued retention is lawful as described in the Privacy Policy.
 
 ### 6.5. Moderation, Monitoring, and Enforcement Rights
 
 We reserve the right (but not the obligation) to monitor, review, remove, refuse, restrict, or disable access to any content, account, feature, or activity at any time to enforce these Terms, protect users, investigate suspected abuse, and comply with legal obligations.
+
+All content submitted to the Service is subject to review for those purposes. This includes content in groups that have not been reported for abuse. Review may be carried out by the operator of your branded service (the tenant), the underlying platform provider, and their authorised personnel and service providers, where necessary for their roles. Group visibility controls do not prevent this authorised provider access. Access and use remain subject to the Privacy Policy and applicable data protection law.
 
 We may preserve content, metadata, logs, and related account records where reasonably necessary for legal compliance, safety investigations, fraud prevention, security response, dispute handling, or policy enforcement.
 
@@ -166,33 +166,33 @@ You agree not to misuse the Service. You must not:
 *   Upload viruses, malware, or other malicious content
 *   Attempt to gain unauthorized access to the Service or its systems
 *   Interfere with or disrupt the Service or servers
-*   Use bots, scrapers, or other automated means to access the Service
+*   Access the Service's APIs directly, or use scripts, bots, scrapers, or other automated tools to access any part of the Service, except through an integration we supply or expressly authorise. Access through an integration we supply does not grant permission for independent API access, use outside that integration, or bypassing access controls or usage limits
 *   Attempt to reverse engineer, decompile, or disassemble the Service
 *   Use the Service to harass, abuse, or harm others
 *   Provide false or misleading information
 *   Impersonate any person or entity
 
-### 7.1. Financial-Purpose-Only Communications
+### 7.1. Content Must Relate to the Service's Core Purpose
 
-Comments, messages, and uploads must be directly related to group finances, including shared expenses, receipts, reimbursements, settlements, and related disputes.
+Comments, messages, images, files and other content must relate directly to the Service's core functions, including groups, shared lists, polls, expenses, receipts, reimbursements, settlements and related coordination or disputes. Application support and feedback are also permitted.
 
-**Any non-financial communication is strictly prohibited.** The Service must not be used for general social conversation, personal messaging, dating, entertainment, political discussion, or unrelated content sharing.
+**Use unrelated to those functions is prohibited.** The Service must not be used as a general social network, public forum, private messaging service, or repository for unrelated content. The availability of comments or uploads does not authorise unrelated use.
 
 ### 7.2. Prohibited Content (Text, Images, and Files)
 
-You must not upload, post, send, or store any text, images, or files that are unrelated to group finances. You must also not upload or share any content that is unlawful in any jurisdiction that applies to you, us, or our service providers.
+You must not upload, post, send, or store any text, images, or files unrelated to the permitted purposes in Section 7.1. You must also not upload or share any content that is unlawful in any jurisdiction that applies to you, us, or our service providers, or use the Service to facilitate unlawful activity.
 
-**Any such content may result in immediate account suspension or termination.** Where required by law, or where we reasonably determine it is necessary to protect users or the public, we may preserve evidence and report activity to relevant authorities.
+**Such misuse may result in account suspension or termination as described in Section 9.** We may preserve relevant evidence and disclose relevant content and account information to law enforcement agencies, courts, regulators or other competent authorities where required by law, or where otherwise lawful, necessary and proportionate to prevent or investigate unlawful activity or protect people from harm.
 
-### 7.3. Automated Monitoring and AI Review
+### 7.3. Content Moderation
 
-To enforce these Terms, prevent abuse, and protect users, **all uploaded content and account activity may be subject to automated and manual review, including AI-assisted scanning.** Potential violations may be automatically flagged for enforcement action.
+We moderate content to enforce these Terms, prevent abuse, and protect users. **All submitted content and account activity may be reviewed**, including content in groups that have not been reported for abuse. Review may include routine checks as well as investigations of reports or suspected misuse; it is not limited to publicly visible content.
 
-You acknowledge and agree that moderation systems may review text, images, file metadata, and other submission data to detect policy violations, illegal activity, fraud, and security risks.
+Moderation may cover all content and account activity to identify policy violations, unlawful activity, fraud and security risks. Review does not mean that every item is checked or that all misuse will be detected. Our use of personal information for moderation is described in the Privacy Policy.
 
 ### 7.4. No Expectation of Private Messaging Use
 
-Because the Service is a finance coordination platform and not an end-to-end encrypted messaging app, you must not assume communications in the Service are private chat messages. Do not upload highly sensitive personal information unrelated to group finances.
+The Service provides group collaboration, not end-to-end encrypted private messaging. Content is shared according to the relevant feature's visibility rules, but it is not confidential from the authorised operators, platform provider and personnel described in Section 6.5. Do not upload highly sensitive personal information unrelated to the permitted purposes in Section 7.1.
 
 ---
 
@@ -200,7 +200,7 @@ Because the Service is a finance coordination platform and not an end-to-end enc
 
 ### 8.1. Our Ownership
 
-The Service, including its design, features, functionality, and content (excluding Your Content), is owned by us and protected by intellectual property laws. You receive no ownership interest in the Service.
+The underlying software and related intellectual property belong to the platform provider or its licensors. The service operator and its licensors retain their rights in the branded Service and its materials. Your Content is treated as described in Section 6. You receive no ownership interest in the Service.
 
 ### 8.2. Limited License to You
 
@@ -216,11 +216,7 @@ If you provide us with feedback, suggestions, or ideas about the Service, you gr
 
 ### 8.4. Reporting Problems and Public Comments
 
-You agree to report problems, bugs, complaints, suggestions, and other feedback about the Service through the application's built-in feedback system. Service-related reports submitted through that system are permitted notwithstanding the financial-purpose-only communication restrictions in Section 7.1.
-
-To the extent permitted by applicable law, you agree not to publish or share negative comments about the Service on social media, review websites, public forums, or similar public channels, and to convey those concerns through the application's built-in feedback system instead.
-
-Nothing in this section restricts honest reviews, statements, complaints, or disclosures protected by applicable law, prevents you from contacting a regulator or other competent authority, or limits any statutory rights that cannot lawfully be excluded.
+Please report problems, bugs, complaints and suggestions through the application's feedback system or the service operator's contact channel so they can be investigated. Service-related feedback is permitted under Section 7.1. This does not restrict honest public reviews, complaints, lawful disclosures, contact with regulators or other authorities, or the exercise of legal rights.
 
 ---
 
@@ -230,18 +226,20 @@ Nothing in this section restricts honest reviews, statements, complaints, or dis
 
 You may stop using the Service at any time.
 
-Self-service account deletion is not currently available. You may request account closure by contacting us.
+You can delete your account in the Service.
 
 ### 9.2. Termination by Us
 
-We may suspend or terminate your access to the Service at any time, with or without cause, with or without notice. Reasons for termination may include, but are not limited to:
+The service operator and platform provider may restrict or end access, within their respective responsibilities, where reasonably necessary for the following reasons:
 
 *   Violation of these Terms
 *   Conduct that we believe is harmful to other users or the Service
-*   Extended periods of inactivity
-*   Requests by law enforcement or government agencies
+*   Extended inactivity, following reasonable notice where practicable
+*   Compliance with a legal obligation or a lawful requirement of a competent authority
 *   Discontinuation of the Service
 *   Suspected fraud, abuse, policy evasion, or illegal activity
+
+Action will be proportionate, with reasonable notice and an explanation where practicable. Immediate suspension or termination may be used where needed to address serious misuse, protect users or systems, or comply with law. Details may be withheld where disclosure would prejudice a lawful investigation or security, or where law prohibits disclosure. You may contact the service operator to ask for a decision to be reviewed.
 
 ### 9.3. Effect of Termination
 
@@ -250,72 +248,49 @@ Upon termination:
 *   Your license to use the Service ends immediately
 *   We may close or deactivate your account
 *   We may delete, anonymize, or retain personal profile information as required or permitted by law and as needed for legitimate business purposes
-*   Service Data you contributed to groups (including expenses, settlements, comments, receipts, and activity history) will remain in the Service as part of the collective records, as it affects other users
+*   Shared content may remain where retention is lawful and necessary for other users' records, integrity, security or legal obligations, subject to applicable personal-data rights
 *   We may retain relevant records as required or permitted by law and as needed for legitimate business purposes (including security, fraud prevention, policy enforcement, and dispute resolution)
-*   Provisions that by their nature should survive (including disclaimers, limitations of liability, and indemnification) will survive
+*   Provisions that by their nature should survive, including lawful content-retention rights, responsibility for misuse and limitations of liability, will survive
 
 ---
 
 ## 10. Disclaimers and No Warranties
 
-**THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.**
+The Service is provided on an "as available" basis. We do not promise uninterrupted availability, compatibility with every device or third-party service, or that all errors will be prevented. We remain responsible for duties and guarantees imposed by applicable law.
 
 ### 10.1. No End-to-End Encryption
 
 **The Service is not an end-to-end encrypted communications service.** Content you submit may be accessible to us and our authorized service providers for operations, moderation, security, and legal compliance. Do not use the Service to share information you expect to be private messaging content.
 
-TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO:
-
-*   IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT
-*   WARRANTIES THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, SECURE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS
-*   WARRANTIES REGARDING THE ACCURACY, RELIABILITY, OR COMPLETENESS OF ANY CONTENT OR CALCULATIONS
-*   WARRANTIES THAT THE SERVICE WILL MEET YOUR REQUIREMENTS OR EXPECTATIONS
-
-**YOU ASSUME ALL RISK FOR YOUR USE OF THE SERVICE.**
+You should keep independent records of important obligations and take reasonable steps to protect your account. These precautions do not excuse a failure by us or the platform provider to meet our respective legal obligations.
 
 ---
 
 ## 11. Limitation of Liability
 
-### 11.1. Exclusion of Damages
+### 11.1. Losses for Which We Are Responsible
 
-**TO THE FULLEST EXTENT PERMITTED BY LAW, IN NO EVENT SHALL WE, OUR AFFILIATES, DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR:**
-
-*   ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES
-*   ANY LOSS OF PROFITS, REVENUES, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES
-*   ANY DAMAGES ARISING FROM YOUR USE OF OR INABILITY TO USE THE SERVICE
-*   ANY DAMAGES ARISING FROM USER DISPUTES OR INTERACTIONS
-*   ANY DAMAGES ARISING FROM ERRORS, INACCURACIES, OR OMISSIONS IN THE SERVICE
-*   ANY DAMAGES ARISING FROM UNAUTHORIZED ACCESS TO YOUR ACCOUNT OR DATA
-*   ANY DAMAGES ARISING FROM THIRD-PARTY CONDUCT OR CONTENT
+Where we breach these Terms or fail to use legally required care and skill, we are responsible for resulting loss that was reasonably foreseeable. We are not responsible for loss caused solely by another user's conduct, your misuse of the Service, or circumstances outside our reasonable control, except where applicable law makes us responsible. We do not guarantee another user's financial obligations. Nothing in these Terms excuses the platform provider's own legal responsibilities.
 
 ### 11.2. Cap on Liability
 
-**OUR TOTAL AGGREGATE LIABILITY FOR ALL CLAIMS RELATING TO THE SERVICE SHALL NOT EXCEED THE GREATER OF:**
+Subject to Section 11.3 and only where a cap is lawful and fair in the circumstances, our total liability for claims relating to the Service is limited to the greater of £100 or the amount you paid us for the Service in the 12 months before the event giving rise to the claim. This cap does not apply where it would reduce a statutory remedy or compensation entitlement that cannot lawfully be limited.
 
-*   ONE HUNDRED BRITISH POUNDS (£100), OR
-*   THE TOTAL AMOUNT YOU HAVE PAID US FOR THE SERVICE IN THE 12 MONTHS PRECEDING THE CLAIM
+The protections and limitations in Sections 3, 4, 10 and 11 also apply to the platform provider and the authorised personnel and service providers involved in providing the Service, to the extent they may lawfully rely on them. They do not remove any person's responsibility that applicable law prevents them from limiting.
 
-### 11.3. Basis of the Bargain
+### 11.3. Liability That Is Not Excluded or Limited
 
-THE LIMITATIONS IN THIS SECTION REFLECT A REASONABLE ALLOCATION OF RISK AND ARE A FUNDAMENTAL BASIS OF THE AGREEMENT BETWEEN US. THE SERVICE WOULD NOT BE PROVIDED WITHOUT THESE LIMITATIONS.
+Nothing in these Terms excludes or limits liability for death or personal injury caused by negligence, fraud or fraudulent misrepresentation, or any other liability that cannot lawfully be excluded or limited. Your mandatory consumer and data protection rights remain unaffected, including applicable rights to remedies for failure to exercise reasonable care and skill.
 
 ### 11.4. Jurisdictional Limitations
 
-SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES OR LIMITATION OF LIABILITY FOR CERTAIN DAMAGES. IN SUCH JURISDICTIONS, OUR LIABILITY SHALL BE LIMITED TO THE MAXIMUM EXTENT PERMITTED BY LAW.
+Where the law applicable to you provides greater protection than a limitation in these Terms, that protection applies. These Terms do not require you to give up mandatory rights in your country of residence.
 
 ---
 
-## 12. Indemnification
+## 12. Responsibility for Misuse
 
-**You agree to defend, indemnify, and hold harmless us, our affiliates, officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, costs, and expenses (including reasonable legal fees) arising out of or relating to:**
-
-*   Your use of the Service
-*   Content you submit to the Service
-*   Your violation of these Terms
-*   Your violation of any law or third-party rights
-*   Your disputes with other users
-*   Any claim that content you submitted caused damage to a third party
+You are responsible under applicable law for harm caused by your unlawful conduct or deliberate misuse of the Service. We may seek recovery of losses for which you are legally responsible. This is not an obligation to reimburse us for ordinary permitted use, another person's conduct, or our own fault, and does not require you to pay claims or costs that applicable law does not make your responsibility.
 
 ---
 
@@ -323,37 +298,37 @@ SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES OR LIMITATIO
 
 ### 13.1. Informal Resolution
 
-We want to address your concerns without a formal legal case. Before filing a claim, you agree to try to resolve the dispute informally by contacting us. We will try to resolve the dispute informally by contacting you via email.
+Please contact the service operator first so we have an opportunity to address your concerns. Doing so is not a condition of exercising a legal right and does not prevent urgent action or stop a legal time limit from running.
 
-### 13.2. Arbitration Agreement
+### 13.2. Optional Alternative Dispute Resolution
 
-**If we cannot resolve a dispute informally, you and us agree to resolve any disputes through binding arbitration rather than in court**, except that either party may bring claims in small claims court if eligible.
+You and we may agree to mediation or another appropriate alternative dispute-resolution process after a dispute arises. These Terms do not require binding arbitration or prevent access to a court or regulator.
 
-### 13.3. Arbitration Procedures
+### 13.3. Your Legal Remedies
 
-*   Arbitration will be conducted by a single arbitrator under the rules of the London Court of International Arbitration (LCIA) or another mutually agreed arbitration body.
-*   The arbitration will take place in London, England, unless otherwise agreed.
-*   The arbitrator's decision will be final and binding.
+You retain any applicable right to use small-claims procedures, seek urgent relief, or use other legal remedies available under the law applicable to you.
 
-### 13.4. Class Action Waiver
+### 13.4. Collective Proceedings
 
-**YOU AND WE AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY CLASS OR REPRESENTATIVE ACTION.** Unless both parties agree otherwise, the arbitrator may not consolidate more than one person's claims.
+These Terms do not waive any right to participate in collective or representative proceedings that is available under applicable law.
 
 ### 13.5. Exceptions
 
-This arbitration agreement does not preclude you from bringing issues to the attention of government agencies or from seeking injunctive relief in court for intellectual property infringement.
+Nothing in this section restricts lawful reports to public authorities or access to remedies that cannot lawfully be restricted.
 
 ---
 
 ## 14. Governing Law
 
-These Terms are governed by the laws of England and Wales, without regard to conflict of law principles. Any legal action not subject to arbitration shall be brought exclusively in the courts of England and Wales, and you consent to the jurisdiction of such courts.
+These Terms are governed by the laws of England and Wales. If you are a consumer, this choice does not deprive you of mandatory protections under the law that would otherwise apply, including protections in your country of habitual residence where applicable. Courts of England and Wales may hear disputes, but this does not restrict your right to bring proceedings in another court with jurisdiction under applicable consumer law. Mandatory local law takes priority over conflicting provisions of these Terms.
 
 ---
 
 ## 15. Changes to These Terms
 
-We may modify these Terms at any time. When we make changes, we will update the "Effective Date" at the top of these Terms. **Your continued use of the Service after changes become effective constitutes your acceptance of the revised Terms.** If you do not agree to the revised Terms, you must stop using the Service.
+We may update these Terms for legal, regulatory or security reasons, to address misuse, or to reflect changes to the Service. Material changes will be brought to your attention with reasonable advance notice through the Service or an appropriate contact channel, stating when they take effect. Changes needed urgently for security or legal compliance may take effect sooner, with notice as soon as reasonably practicable.
+
+Changes will not retrospectively remove accrued rights. Where acceptance is required, we will seek it before the revised Terms govern your continued use. If you do not agree, you may stop using the Service and request account closure; your existing legal rights remain unaffected. New fees will require clear information and any agreement required by law before they apply to you.
 
 We encourage you to review these Terms periodically.
 
@@ -375,15 +350,15 @@ Our failure to enforce any provision of these Terms is not a waiver of our right
 
 ### 16.4. Assignment
 
-We may assign or transfer these Terms and our rights hereunder without restriction. You may not assign or transfer these Terms without our prior written consent.
+We may transfer our rights and obligations where this does not reduce your rights under these Terms or applicable law. We will notify you of a material change in the organisation responsible for providing the Service. You may transfer your rights only with our consent or where permitted by law.
 
 ### 16.5. No Third-Party Beneficiaries
 
-These Terms do not create any third-party beneficiary rights.
+The platform provider and other persons expressly protected by Section 11 may enforce the provisions intended to protect them where applicable law permits. Otherwise, these Terms do not create enforcement rights for someone who is not a party to them. This does not restrict any person's rights under applicable law.
 
 ### 16.6. Force Majeure
 
-We are not liable for any failure or delay in performance due to circumstances beyond our reasonable control.
+If circumstances outside our reasonable control disrupt the Service, we will take reasonable steps to limit the effects and resume performance. This does not exclude rights or remedies that applicable law provides in those circumstances.
 
 ### 16.7. Electronic Communications
 

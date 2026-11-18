@@ -815,10 +815,11 @@ export const features: readonly FeatureRecord[] = [
       'server/src/auth/turnstile.ts',
       'server/src/auth/session-cookie.ts',
     ],
-    verifiedAt: APP_COMMIT,
+    // Account deletion shipped after APP_COMMIT; production release 29155bb31fd5 (18 November 2026)
+    verifiedAt: '29155bb31',
     limits: [
       'Email and password only. Google and Apple sign-in are planned (tasks/apple-and-google-sign-in.md).',
-      'No self-service account deletion; closure is by request (config/policies/privacy-policy.md section 8.5).',
+      "Account deletion is in Settings and needs the current password and an explicit confirmation. It is refused while the person is a group's last admin, has a non-zero balance or has an open expense question. Shared group records, balances and the person's in-group name are kept, and the same email can register again as a fresh account (webapp-v2/src/components/settings/DeleteAccountDialog.tsx, server/src/services/UserService2.ts, config/policies/privacy-policy.md sections 5 and 8.5).",
     ],
     prerequisites: ['18 or over.'],
     proof: [],
@@ -1009,13 +1010,6 @@ export const features: readonly FeatureRecord[] = [
     capability: 'Join or view without an account.',
     evidence: ['webapp-v2/src/App.tsx'],
     copy: 'Everyone in the group needs a free account.',
-  }),
-  notOffered({
-    id: 'account-deletion',
-    status: 'not-offered',
-    capability: 'Self-service account deletion.',
-    evidence: ['config/policies/privacy-policy.md section 8.5'],
-    copy: 'Not mentioned on marketing pages.',
   }),
   notOffered({
     id: 'dark-mode',

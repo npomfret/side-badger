@@ -1,21 +1,22 @@
 ---
 policyId: "privacy-policy"
 sourceUrl: "https://app.sidebadger.me/api/policies/privacy-policy/text"
-versionHash: "45362ecdd8ea2f94d4d0215fe9cb4cd575464a9ef04ea384eedb76f2d4637347"
-publishedAt: "2026-11-16T16:12:28.786Z"
-fetchedAt: "2026-11-16T16:12:49.247Z"
+versionHash: "8b27c730e12bcaff8dad3de36b2381d1f711b308b235b23b9146a7aa8e2b7945"
+publishedAt: "2026-11-18T22:56:13.851Z"
+fetchedAt: "2026-11-18T22:56:39.166Z"
 ---
 
 ## Summary
 
-**Last revised: 16 November 2026. Effective on publication.**
+**Last revised: 18 November 2026. Effective on publication.**
 
 We are committed to protecting your privacy. This policy explains what information we collect, how we use it, and what your rights are.
 
 *   **What we collect:** We collect the information you provide (like your name, email, and expense details) and basic operational data needed for the app to work securely and reliably.
 *   **How we use it:** We use your data to provide and improve the service, process your calculations, and keep your account secure. **We do not sell your personal data.**
-*   **Your Rights:** You have rights over your personal profile data, including rights to access and correct it, and to request closure of your account or deletion of profile data where required by applicable law.
-*   **Collaborative Data:** This is a financial coordination platform, not a social media platform. Group data (expenses, settlements, finance-related comments, and receipts) is collectively owned by the platform, not individual users. See our Terms and Conditions for details.
+*   **Your Rights:** Applicable rights concern your personal information wherever it appears, including within shared content. You can request access, correction, deletion or other action as described below; lawful exceptions and other people's rights may affect the response.
+*   **Collaborative Data:** This is a group coordination and shared-expense service, not a social media platform. Shared records may remain after account closure where there is a lawful reason to retain them. Ownership does not remove personal-data rights.
+*   **Provider Access and Moderation:** We moderate content to prevent abuse and enforce the Terms. Group content is not confidential from the operator of your branded service, the underlying platform provider, or their authorised personnel and service providers. They may review any submitted content, including unreported group content, as necessary to operate and secure the Service, investigate abuse, enforce its permitted purposes and comply with law.
 
 This is just a summary. Please read the full policy below for complete details.
 
@@ -25,7 +26,9 @@ This is just a summary. Please read the full policy below for complete details.
 
 This Privacy Policy applies to the application, website, and services (collectively, the "Service"), operated by us ("we," "us," or "our").
 
-We are committed to being transparent about our data practices. This policy describes how we collect, use, disclose, and protect your information when you use our Service. **By using the Service, you agree to the collection and use of information in accordance with this policy.**
+The **service operator** provides the branded Service you use. The **platform provider** supplies and supports the underlying software. The operator is your initial contact for questions about the branded Service and personal-data requests. Read this policy together with the branded Service's legal and contact information identifying the responsible organisations and their contact details. Each organisation's responsibilities are determined by its use of personal information and applicable law; the operator and platform provider are not necessarily responsible for the same processing.
+
+This policy explains how personal information is collected, used, disclosed and protected. It is a privacy notice, not a request for blanket consent. Where consent is required for a particular activity, it will be requested separately and may be withdrawn.
 
 ---
 
@@ -35,10 +38,10 @@ We collect information in several ways to provide and improve our Service.
 
 ### 2.1. Information You Provide to Us
 
-*   **Account Information:** When you register for an account, we collect information such as your name, email address, and password (stored in hashed form).
+*   **Account Information:** Registration and sign-in involve your name, email address, authentication information and account preferences. Credentials are handled for authentication and must not be shared with other users or integrations.
 *   **Profile Information:** You may choose to provide additional information such as a profile photo or display name.
-*   **User Content:** We collect the information you create while using the Service, including group names, expense descriptions and amounts, comments, settlements, and any other content you submit.
-    *   Communication features are intended only for finance-related collaboration. Non-financial content is prohibited under our Terms and may be removed.
+*   **User Content:** We collect all content you submit to or create within the Service, together with information needed to associate it with the relevant account and group.
+    *   Content must relate to the Service's core functions, including groups, lists, polls, expenses, settlements and application support. Unrelated social use and content are prohibited under our Terms and may be removed.
 *   **Communications:** If you contact us for support or other inquiries, we collect the contents of those communications.
 
 ### 2.2. Information We Automatically Collect
@@ -49,13 +52,11 @@ We collect information in several ways to provide and improve our Service.
     *   IP addresses (for security monitoring and fraud prevention)
     *   Error logs (for debugging and improving the Service)
 *   **Device Information:** We may collect basic information about the device and browser you are using, such as device type, operating system, and browser type, to help us diagnose technical problems and optimize the Service.
-*   **Moderation and Safety Data:** We may collect and derive moderation signals from submitted text, images, files, and associated metadata to detect policy violations, fraud, abuse, or unlawful activity.
-*   **Image Metadata Handling:** We may remove or suppress embedded image metadata in user-facing contexts, while separately extracting, deriving, storing, and using metadata signals for security, abuse prevention, legal compliance, analytics, and promotional targeting where permitted by law.
-*   **Recommendation and Affiliate Data:** We may derive recommendation signals from your expense history and interaction events (such as impressions, clicks, dismissals, and conversions) to rank contextual offers and measure affiliate performance.
+*   **File Metadata:** Files can contain information beyond their visible content. Relevant metadata may be processed for file handling, service operation, security and abuse prevention. Do not include unnecessary personal information in uploads.
 
 ### 2.3. Information from Third Parties
 
-Currently, we do not collect information about you from third parties. If this changes in the future, we will update this policy.
+Other users may provide information about you through shared records, invitations or content. Authentication, communications and security providers may return information needed to perform their services. If you choose to connect an external integration, information may also be received from that integration to carry out your authorised requests.
 
 ### 2.4. Analytics and Tracking
 
@@ -80,10 +81,12 @@ We use the information we collect for the following purposes:
 | **To Communicate With You:** To send you important service-related notifications, such as security alerts, changes to our terms, or responses to your inquiries. We do not send marketing emails without your explicit consent. | Performance of a contract; Legitimate interest |
 | **Optional Public Website Analytics:** To measure visits and performance on public marketing pages after you allow it. | Consent |
 | **To Improve the Service:** To understand how users interact with the app, identify bugs, develop new features, and improve overall user experience. We use aggregated and anonymized data where possible. | Legitimate interest |
-| **To Enforce Policy and Safety:** To detect and investigate prohibited non-financial usage, illegal content, and abuse using automated systems (including AI-assisted scanning) and human review. | Legitimate interest; Legal obligation |
-| **To Deliver Promotional Campaigns:** To personalize promotional messages and campaigns using account activity, submitted text, image-related signals, and engagement data where permitted by law. | Consent (where required); Legitimate interest |
-| **To Provide Affiliate Recommendations and Attribution:** To select, display, and measure contextual affiliate offers, including conversion attribution and payout validation. | Consent (where required); Legitimate interest; Performance of a contract |
+| **To Enforce Policy and Safety:** To moderate content and review activity for use unrelated to the Service's permitted purposes, unlawful activity, fraud and abuse, as described in Section 4.6. | Legitimate interest; Legal obligation, where applicable |
+| **To Send Optional Marketing:** To send marketing communications where you have opted in, with a way to withdraw that choice. | Consent |
+| **To Support Optional Offers:** Where an offer feature is available and you choose to use it, to deliver the offer and any disclosed attribution. Any additional targeting or tracking requires clear information and the lawful basis and consent required for that activity. | Depends on the specific activity; consent where required |
 | **To Comply with Legal Obligations:** To respond to legal requests, comply with applicable laws, and protect our legal rights. | Legal obligation; Legitimate interest |
+
+The applicable lawful basis depends on the activity and the organisation responsible for it. A legal obligation is relied on only where an obligation actually applies. Where legitimate interests are relied on, the relevant interest must be balanced against your rights. Sensitive personal information and information about alleged offences require any additional legal conditions applicable to that processing. General acceptance of the Service does not replace those conditions.
 
 ---
 
@@ -95,64 +98,63 @@ We may share your information in the following limited circumstances:
 
 ### 4.1. With Other Users
 
-Your name and the content you post within a group (such as expenses, comments, and settlements) are visible to other members of that group. **Be mindful of what you share in groups, as other members can see this information.**
+Your identity and submitted content may be visible to other users according to the relevant feature's permissions and visibility rules. **Consider who can access content before sharing it.** Other members may submit information about you, and may keep their own copies of information they can lawfully access.
+
+Group visibility settings do not prevent authorised provider access. The operator of your branded service (the tenant), the underlying platform provider, and their authorised personnel and service providers may access and review all content and account activity where necessary for service operation, support, security, abuse prevention, enforcement of the Terms or legal compliance. Review may include routine checks of unreported groups as well as investigations of specific concerns. Access must be limited to what those roles and purposes require; this is not permission for unrelated use or unrestricted access by other tenants.
 
 ### 4.2. With Service Providers
 
-We use third-party service providers to help us operate the Service. These providers have access to your information only to perform services on our behalf and are contractually obligated to protect your data. Our current service providers include:
+The service operator and platform provider use service providers for hosting, databases and file storage, authentication, receipt and file processing, email delivery, and security or abuse prevention. Information needed for those functions may be disclosed to the relevant providers. For example, receipt processing involves sending the submitted receipt for processing, and email delivery involves the recipient's address and message content.
 
-*   **Google Firebase:** Cloud hosting, authentication, and database services (data may be stored and processed in the United States and other countries where Google operates)
+Providers acting as processors must handle personal information under appropriate instructions and contractual safeguards. Where a recipient handles information for its own purposes, its role and applicable privacy information must be identified separately. Details of the providers used by your branded Service and relevant processing locations can be requested through the operator's contact channel.
 
 ### 4.3. For Legal Reasons
 
-We may disclose your information if required to do so by law, or if we believe in good faith that such disclosure is necessary to:
+We may preserve evidence and disclose relevant content and account information to law enforcement agencies, courts, regulators or other competent authorities where required by law, or where otherwise lawful, necessary and proportionate to prevent or investigate unlawful activity or protect people from harm. Relevant information may also be used or disclosed where lawful and necessary to establish, exercise or defend legal claims.
 
-*   Comply with a legal obligation, court order, or legal process
-*   Protect and defend our rights or property
-*   Prevent or investigate possible wrongdoing in connection with the Service
-*   Protect the personal safety of users or the public
-*   Protect against legal liability
+Disclosures must have an appropriate lawful basis and be limited to what is necessary. An authority's request does not by itself give unrestricted access to user information.
 
 ### 4.4. Business Transfers
 
 If our company is involved in a merger, acquisition, sale of assets, or bankruptcy, your information may be transferred as part of that transaction. We will notify you of any such change and any choices you may have regarding your information.
 
-### 4.5. With Your Consent
+### 4.5. Connected Integrations and Your Choices
 
-We may share your information for other purposes with your explicit consent.
+If you connect an external assistant or other integration, it may receive information accessible to your account within the permissions you grant, and may submit content or actions you authorise. This can include information shared with you by other group members. Only connect services you trust and review proposed actions before confirming them.
 
-### 4.6. Automated Review and Decision Support
+The external provider's handling of information it receives is also governed by its own terms and privacy notice. Disconnecting or revoking access prevents further access in accordance with the connection's revocation rules; it does not automatically delete information already received by that provider. You may request information about disconnecting an integration through the operator's support channel.
 
-We use automated systems, including AI-assisted tools, to scan and classify submitted content for policy enforcement, fraud detection, and legal/safety risk detection. These systems help prioritize moderation and enforcement actions, including account restrictions.
+Sharing for another purpose that requires consent will be subject to a separate consent request.
 
-Automated systems can produce false positives or false negatives. Where appropriate, we may conduct human review before final enforcement decisions.
+### 4.6. Content Moderation
+
+We moderate content to enforce the Terms, prevent abuse and protect users. Authorised personnel and service providers may review submitted content and account activity for the purposes described above, including routine checks of unreported groups. All submitted content is eligible for review; this does not mean every item is reviewed or that every violation will be detected.
+
+Moderation may cover all content and account activity. Access and use are limited to the stated purposes and remain subject to applicable data protection law.
 
 ### 4.7. Affiliate and Offer Partners
 
-When affiliate recommendations are enabled, we may share limited data with affiliate networks, offer providers, and attribution partners as necessary to deliver and measure offers. Depending on integration requirements, this may include identifiers, geo/region information, recommendation context, and click/conversion events.
-
-We require partners to process shared data under contractual controls and only for authorized purposes.
-
-We do not control third-party partner systems or sites. When you interact with partner links or offers, their terms and privacy policies also apply.
+Where an optional offer or affiliate feature is available, any sharing with offer or attribution partners must be explained before the relevant information is collected or disclosed, with consent where required. This policy does not give blanket permission to use group content for advertising. When you visit an external offer or partner site, its terms and privacy policy apply to its handling of your information.
 
 ---
 
 ## 5. Data Retention
 
-We retain your personal data for as long as your account is active or as needed to provide you with the Service. After you close your account or request deletion:
+Personal information is retained only for as long as necessary for a stated lawful purpose. The relevant criteria include whether an account or shared record is still in use, obligations to other users, security needs, applicable legal requirements and the period reasonably needed to handle claims. After you close your account or request deletion:
 
-*   Self-service account deletion is not currently available.
-*   You may request account closure/deactivation by contacting us.
+*   **Self-service account deletion is available in the Service.** You may also request account closure by contacting us.
 *   Following closure/deactivation, we may delete, anonymize, or retain personal profile data (name, email, profile photo) based on legal requirements and legitimate business needs.
-*   **Group data you contributed (expenses, settlements, comments) will be retained as part of the Service's collective records.** This data is owned by the platform, not individual users, because it represents shared financial records that affect all group members. See our Terms and Conditions for details.
+*   **Shared records are not automatically deleted when you delete your account.** Your name shown in a group may remain on its expenses, settlements and history so the group can understand its records and balances. Requests concerning personal information within shared records are assessed individually; shared status is not a blanket reason to refuse access, correction or deletion.
 *   We may retain certain information for longer periods as necessary to:
     *   Comply with legal obligations (e.g., tax, accounting, or legal hold requirements)
     *   Resolve disputes and enforce our agreements
     *   Prevent fraud and abuse
     *   Maintain security and integrity of the Service
-    *   Investigate and document policy violations, including prohibited non-financial or unlawful content
+    *   Investigate and document policy violations, including content unrelated to the Service's permitted purposes or unlawful content
     *   Support legal claims, legal holds, and law-enforcement cooperation where required or permitted by law
 *   Aggregated, anonymized data that cannot identify you may be retained indefinitely for analytics and Service improvement.
+
+Temporary files, security records and backups may have different retention periods. Deletion from active systems may precede expiry of protected backup copies; retained backup information must not be reused for unrelated purposes. Applicable periods or the criteria used to determine them can be requested from the service operator. Legal holds may require relevant information to be preserved for longer.
 
 ---
 
@@ -163,13 +165,13 @@ We take the security of your data seriously and implement reasonable administrat
 *   Encryption of data in transit (HTTPS/TLS)
 *   Secure, hashed storage of passwords
 *   Access controls and authentication requirements
-*   Regular security assessments
+*   Measures to protect access to systems and stored information
 
-**However, no method of transmission over the internet or electronic storage is 100% secure.** We cannot guarantee absolute security, and you use the Service at your own risk. You are responsible for maintaining the security of your account credentials.
+**No method of transmission or storage can guarantee absolute security.** You are responsible for protecting your credentials and reviewing connected integrations. This does not remove the service operator's or platform provider's own security obligations.
 
 ### 6.1. No End-to-End Encryption
 
-The Service is **not** an end-to-end encrypted communications platform. Data submitted to the Service may be accessible to us and our authorized processors for service operation, moderation, security monitoring, and legal compliance.
+The Service is **not** an end-to-end encrypted communications platform. Group access controls restrict ordinary user access; they do not make content confidential from the operator of your branded service, the underlying platform provider, or their authorised personnel and processors when access is necessary for the purposes described in Sections 3 and 4. Data protection rights and obligations continue to apply to that access and review.
 
 ### 6.2. Security Breach Notification
 
@@ -179,14 +181,9 @@ In the event of a data breach that affects your personal information, we will no
 
 ## 7. International Data Transfers
 
-Our Service is global, which means your information may be stored and processed in countries outside of your own, including the United States and other countries where our service providers operate.
+The Service can be used internationally. The organisations and providers handling your information may be located in different countries, and your information may be processed outside the country where you live. Locations depend on the branded Service and relevant provider.
 
-These countries may have data protection laws that are different from those in your country. When we transfer your data internationally, we take steps to ensure that your data is treated securely and in accordance with this Privacy Policy, including:
-
-*   Using service providers that participate in approved data transfer mechanisms
-*   Implementing appropriate contractual safeguards
-
-By using the Service, you consent to the transfer of your information to countries outside your country of residence.
+Where a transfer is restricted by applicable data protection law, the organisation making it must rely on an applicable adequacy decision, appropriate contractual or other recognised safeguards, or a legally available exception. Acceptance of this policy is not blanket consent to international transfers. You may request information about relevant destinations, the transfer mechanism used and how to obtain a copy of applicable safeguards through the service operator's contact channel.
 
 ---
 
@@ -194,7 +191,7 @@ By using the Service, you consent to the transfer of your information to countri
 
 Depending on your location, you may have certain rights regarding your personal information.
 
-**Important:** The rights described in this section apply to your **personal profile data** (name, email, profile photo, account settings). Group data (expenses, settlements, comments) is owned by the platform as described in our Terms and Conditions. You cannot unilaterally delete or modify group records because they represent shared financial agreements that affect other users.
+**These rights concern personal information wherever it appears, including within shared content.** They do not necessarily give you a right to remove a whole group record or information belonging to other people. Applicable exceptions, other people's rights and lawful retention needs are considered for each request. Content ownership does not determine whether personal information is protected.
 
 ### 8.1. Rights for All Users
 
@@ -202,46 +199,46 @@ Regardless of your location, you can:
 
 *   **Access** your personal profile data through your account settings
 *   **Update or correct** your personal information through your account settings
-*   **Request account closure/deactivation** by contacting us (group data you contributed will be retained as collective records)
+*   **Request account closure/deactivation** and ask about deletion or retention of your personal information
 *   **Export your personal data** by contacting us
-*   **Opt out of personalized affiliate recommendations** by using available settings when this feature is enabled
+*   **Withdraw optional marketing consent** through the available preference controls or the service operator's contact channel
 
-### 8.2. Rights for Users in the European Economic Area (EEA), UK, and Switzerland
+### 8.2. UK, EEA and Swiss Data Protection Rights
 
-If you are a resident of the EEA, UK, or Switzerland, you have the following rights under the GDPR with respect to your personal profile data:
+Where UK or EU data protection law applies, rights may include the following, subject to the conditions and exceptions in that law. Swiss law provides applicable rights for processing within its scope as well; these are not determined solely by your nationality or residence.
 
 *   **Right of Access:** You can request a copy of the personal data we hold about you.
-*   **Right to Rectification:** You can request that we correct any inaccurate or incomplete personal profile data.
-*   **Right to Erasure:** You can request that we delete your personal profile data in certain circumstances (the "right to be forgotten"). Note that group data you contributed cannot be erased as it represents shared records affecting other users and is retained under our legitimate interest in maintaining data integrity.
+*   **Right to Rectification:** You can request correction of inaccurate or incomplete personal information.
+*   **Right to Erasure:** You can request deletion in qualifying circumstances. We will assess whether deletion, anonymisation or another response is required, taking account of lawful exceptions and other people's rights.
 *   **Right to Restrict Processing:** You can request that we limit how we use your personal data in certain circumstances.
-*   **Right to Data Portability:** You can request that we transfer your personal profile data to another organization, or to you, in a structured, machine-readable format.
+*   **Right to Data Portability:** In qualifying circumstances, you can request your personal information in a structured, machine-readable format or its transfer to another provider.
 *   **Right to Object:** You can object to our processing of your personal data based on legitimate interests.
 *   **Right to Withdraw Consent:** Where we rely on consent, you can withdraw it at any time.
 *   **Right to Lodge a Complaint:** You have the right to lodge a complaint with a supervisory authority.
 
 ### 8.3. Rights for Users in California
 
-If you are a California resident, you have rights under the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA) with respect to your personal profile data, including:
+Where the California Consumer Privacy Act, as amended, applies to the responsible organisation's processing of your personal information, rights may include:
 
 *   **Right to Know:** You can request information about what personal information we collect, use, and disclose.
-*   **Right to Delete:** You can request deletion of your personal profile information. Group data you contributed will be retained as collective records affecting other users.
-*   **Right to Correct:** You can request correction of inaccurate personal profile information.
-*   **Right to Opt-Out:** You can opt out of the "sale" or "sharing" of your personal information. **We do not currently "sell" or "share" your personal information as defined by the CCPA/CPRA.**
+*   **Right to Delete:** You can request deletion, subject to applicable exceptions.
+*   **Right to Correct:** You can request correction of inaccurate personal information.
+*   **Right to Opt-Out or Limit Use:** Applicable rights to opt out of sale or sharing and limit certain uses of sensitive personal information where the relevant processing occurs.
 *   **Right to Non-Discrimination:** We will not discriminate against you for exercising your privacy rights.
 
 ### 8.4. Exercising Your Rights
 
-To exercise any of these rights, please contact us at the email address below. We may need to verify your identity before processing your request. We will respond to your request within the timeframe required by applicable law.
+Contact the service operator using the contact information for your branded Service. You do not need to use special wording, quote a law or use a particular form to make a valid request. We may seek proportionate information to confirm identity or clarify the request. Requests will be handled within the time required by applicable law, with an explanation of any lawful extension or refusal and available complaint rights. Other countries may provide additional rights; these are not excluded by this policy.
 
 ### 8.5. Account Deletion Availability
 
-The Service does not currently provide an in-app/self-service account deletion function. Requests to close/deactivate accounts or to exercise applicable deletion rights must be submitted through our contact process.
+The Service provides an in-app account-deletion function. You may also contact us to exercise applicable deletion rights.
 
 ---
 
 ## 9. Children's Privacy
 
-**Our Service is not intended for use by anyone under the age of 18.** We do not knowingly collect personal information from children under 18. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us immediately. If we become aware that we have collected personal information from a child under 18 without verification of parental consent, we will take steps to delete that information.
+**The Service is intended for adults aged 18 and over.** Parental consent does not override that eligibility rule. If you believe a person under 18 is using the Service, contact the operator. We will assess the report, restrict ineligible use where appropriate and address the personal information in accordance with applicable law, including any lawful need to preserve evidence or shared records. Adults should not submit unnecessary information about children.
 
 ---
 
@@ -261,9 +258,9 @@ The optional public website analytics described in Section 2.4 stays off when yo
 
 We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make changes:
 
-*   We will update the "Effective Date" at the top of this policy.
-*   For significant changes, we will provide more prominent notice (such as an in-app notification or email).
-*   Your continued use of the Service after changes become effective constitutes your acceptance of the revised policy.
+*   We will update the revision date and identify when the published change takes effect.
+*   Material changes and new uses of personal information will be brought to your attention through an appropriate notice before the new processing begins, except where law permits or requires otherwise.
+*   Where a new activity requires consent, we will request it separately. Continued use alone is not consent to processing that requires a specific choice.
 
 We encourage you to review this policy periodically.
 
@@ -273,7 +270,7 @@ We encourage you to review this policy periodically.
 
 If you have any questions about this Privacy Policy, wish to exercise your privacy rights, or have concerns about our data practices, please contact us using the contact information provided on our website.
 
-For GDPR-related inquiries, please include "GDPR Request" in the subject line of your message.
+The service operator is the initial contact for questions about the relevant branded Service. You may also exercise applicable rights with any organisation legally responsible for the processing. No particular subject line is required.
 
 ---
 

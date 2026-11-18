@@ -589,7 +589,7 @@ Transcription notes for P22, so it never has to ask:
 - **Limits:**
   - Email and password only. Google and Apple sign-in are planned (`tasks/apple-and-google-sign-in.md`).
   - 18 or over.
-  - No self-service account deletion; closure is by request (`config/policies/privacy-policy.md` section 8.5).
+  - Account deletion is in Settings and needs the current password and an explicit confirmation. It is refused while the person is a group's last admin, has a non-zero balance or has an open expense question. Shared group records, balances and the person's in-group name are kept, and the same email can register again as a fresh account (`webapp-v2/src/components/settings/DeleteAccountDialog.tsx`, `server/src/services/UserService2.ts`, `config/policies/privacy-policy.md` sections 5 and 8.5).
 - **Evidence:** `webapp-v2/src/pages/RegisterPage.tsx`, `server/src/auth/middleware.ts:159`, `server/src/auth/turnstile.ts`, `server/src/auth/session-cookie.ts`.
 - **Approved claims:** "All you need is an email address."
 - **Not approved:** "sign in with Google or Apple", "delete your account any time", "no sign-up".
@@ -640,7 +640,6 @@ Pages and FAQs may state these plainly. None may be described as "coming soon" (
 | `reports` | Spending charts, budgets, totals | not planned | none found | Do not imply "budget tracking". |
 | `social-sign-in` | Google or Apple sign-in | planned | `tasks/apple-and-google-sign-in.md` | "Sign up with email." |
 | `guest-access` | Join or view without an account | not planned | `webapp-v2/src/App.tsx` | "Everyone in the group needs a free account." |
-| `account-deletion` | Self-service account deletion | not planned | privacy policy section 8.5 | Not mentioned on marketing pages. |
 | `dark-mode` | App-wide dark mode switch | not planned | `webapp-v2/src/app/stores/theme-store.ts` | Not mentioned. |
 | `ai-assistants` | ChatGPT or Claude connectors | planned | `tasks/deferred/chatgpt-claude-mcp-plugins.md` | Not mentioned. |
 | `affiliate-offers` | Sponsored offers based on spending | planned | `tasks/deferred/affiliate-recommendation-engine.md`; terms section 1.1 | Its launch ends the "No ads" claim ([D3](#d3-trust-claims-match-the-policies)). |

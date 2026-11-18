@@ -1,9 +1,9 @@
 ---
 policyId: "cookie-policy"
 sourceUrl: "https://app.sidebadger.me/api/policies/cookie-policy/text"
-versionHash: "9336d84991e13943daed916b7b4dde034690a441d84f07a53292fa3f5d789abd"
-publishedAt: "2026-11-16T13:40:54.924Z"
-fetchedAt: "2026-11-16T13:41:33.800Z"
+versionHash: "337c62b0fca34b4ba8c13d7cc2ea9a703b8091edbd2d0e12b4da9cc468da44eb"
+publishedAt: "2026-11-17T19:14:08.264Z"
+fetchedAt: "2026-11-18T22:56:39.166Z"
 ---
 
 ## Summary
@@ -12,11 +12,13 @@ fetchedAt: "2026-11-16T13:41:33.800Z"
 
 This policy explains how our service ("we," "us," "our") uses cookies and similar technologies.
 
-*   **What we use:** We only use cookies that are essential for the Service to work correctly and securely. For example, we use cookies to keep you logged in.
+The service operator provides the branded Service you use; the platform provider supplies and supports the underlying software. This policy applies to storage used to provide that Service. Read it together with the Privacy Policy and the branded Service's legal and contact information.
+
+*   **What we use:** Cookies maintain sign-in and remember your sign-in persistence choice. Browser storage also supports selected preferences, installation reminders and recovery from application updates.
 *   **Optional public website analytics:** The public marketing websites may load Cloudflare Web Analytics only after you allow it in their privacy controls. The beacon uses no analytics cookies. Its browser choice is stored locally until you change it or clear site data. It is not installed in the private applications. See Privacy Policy Section 2.4 for the information Cloudflare receives.
 *   **What we DON'T use:** We **do not** currently use cookies for analytics, advertising, or other non-essential tracking.
 *   **Future Changes:** If we decide to use non-essential cookies in the future (like for analytics), we will ask for your explicit consent through a cookie banner before we do so.
-*   **Scope Reminder:** The Service is a financial coordination tool and not a social media or general chat platform. Communication features are for finance-related discussions only.
+*   **Scope Reminder:** Content must relate to the Service's core functions, including group coordination and application support, as described in the Terms. It is not a general social or messaging platform.
 
 ---
 
@@ -27,36 +29,37 @@ A "cookie" is a small text file that a website stores on your computer or mobile
 Similar technologies include:
 
 *   **Local Storage:** Data stored in your browser that persists until cleared
-*   **Session Storage:** Data stored in your browser that is cleared when you close the tab
+*   **Session Storage:** Data generally kept for the browser tab or page session; browser session-restoration behaviour can affect when it is cleared
 *   **Web Beacons:** Optional public website analytics can send JavaScript measurements after you allow it, as described in Privacy Policy Section 2.4. The private applications do not use that beacon.
 
 ---
 
 ## 2. How We Use Cookies
 
-We use cookies for a limited number of **essential purposes only**. We believe in data minimization and only use cookies that are strictly necessary to provide our Service.
+Cookies and browser storage are used for the purposes below. A technology's being first-party does not by itself exempt it from consent rules. Any use requiring consent under applicable law must wait until that consent is given.
 
-### 2.1. Strictly Necessary Cookies
+### 2.1. Cookies and Browser Storage
 
-These cookies are essential for you to browse the Service and use its features. Without these cookies, the Service cannot function properly. **You cannot opt out of these cookies** as they are fundamental to the Service's operation.
+Sign-in cookies are necessary to provide the authenticated Service you request. No optional-cookie setting disables them while keeping you signed in, but you can sign out or block or remove site data through your browser.
 
-| Cookie Type | Purpose | Duration |
-|-------------|---------|----------|
-| **Authentication Cookies** | To verify your identity and maintain your login session as you navigate through the app | Session / Persistent |
-| **Security Cookies** | To help identify and prevent security risks, such as cross-site request forgery (CSRF) attacks | Session |
-| **Preference Cookies** | To remember your settings and preferences within the Service | Persistent |
+| Storage | Purpose | Duration |
+|---------|---------|----------|
+| **Sign-in cookie** | Authenticate requests while you use the Service | Browser session, or up to 14 days when persistent sign-in is selected; renewed sessions can extend sign-in |
+| **Sign-in persistence cookie** | Retain your choice to stay signed in when a session is renewed | Up to 14 days when persistent sign-in is selected |
+| **Local storage** | Remember selected language and installation-reminder choices | Persists until removed or replaced; some device preferences remain after sign-out |
+| **Session storage** | Prevent repeated reloads during application-update recovery | Browser tab/page session, subject to browser restoration behaviour |
 
-### 2.2. Firebase Authentication
+### 2.2. Authentication and Security
 
-We use Google Firebase for authentication, which sets cookies to manage your login session securely. These cookies are essential for the Service to function and cannot be disabled.
+The Service sets its sign-in cookies using its authentication provider. The cookies are used to authenticate you, not for advertising. Security and abuse-prevention providers may process device and request information as described in the Privacy Policy. Any additional device storage used by those providers must be assessed under the applicable cookie and storage rules.
 
 ### 2.3. Relationship to Promotional Campaigns
 
-Our statement that we do not currently use advertising cookies means we do not currently place ad-tech cookies for cross-site ad tracking. It does not prevent us from using first-party account and service data (as described in our Privacy Policy) for promotional campaigns where permitted by law.
+Not using advertising cookies does not remove the privacy and marketing rules that apply to optional communications or offers. Marketing preferences and any separate choices about tracking serve different purposes; agreeing to these policies does not opt you into marketing.
 
 ### 2.4. Affiliate Attribution Technologies
 
-If affiliate recommendations are enabled, we may use first-party storage, referral parameters, and server-side attribution events to measure offer performance (such as clicks and conversions). If non-essential client-side cookies or similar tracking technologies are introduced for affiliate attribution, we will request consent where required by law before activating them.
+If an optional offer or affiliate feature introduces device storage or tracking, its purpose and duration must be explained and any required consent obtained before activation. Using first-party storage or describing an activity as attribution does not make it strictly necessary. A separate website you choose to visit may use its own technologies under its own policies.
 
 ---
 
@@ -64,10 +67,9 @@ If affiliate recommendations are enabled, we may use first-party storage, referr
 
 The private applications **do not** use third-party analytics. The public website exception is the optional, cookie-free Cloudflare beacon described above. We do not use cookies or tracking technologies for:
 
-*   **Private application analytics:** The private applications do not use Google Analytics, Mixpanel, Cloudflare Web Analytics, or similar third-party services to track your behavior.
 *   **Advertising:** We do not use advertising cookies, remarketing pixels, or ad networks
 *   **Social Media:** We do not embed social media tracking widgets
-*   **Third-Party Tracking:** We do not allow third parties to place tracking cookies through our Service
+*   **Cross-site advertising tracking:** We do not currently enable third-party cookies for this purpose through the Service
 
 **If we introduce non-essential cookies in the future**, we will:
 
@@ -94,14 +96,11 @@ Please note that if you block or delete strictly necessary cookies, the Service 
 
 ### 4.2. How to Manage Cookies in Common Browsers
 
-*   **Chrome:** Settings → Privacy and Security → Cookies and other site data
-*   **Firefox:** Settings → Privacy & Security → Cookies and Site Data
-*   **Safari:** Preferences → Privacy → Cookies and website data
-*   **Edge:** Settings → Cookies and site permissions → Cookies and site data
+Use your browser's privacy or site-data settings to view, block or clear cookies and local storage. Names and available controls vary by browser and device. Installed web apps may share some browser-managed site data; consult your device's settings for available controls.
 
 ### 4.3. Current Status
 
-Browser controls manage the private application's essential cookies. The public marketing websites provide a separate choice for optional Cloudflare Web Analytics; it is off until allowed, and that local browser choice can be changed using the website control. This choice does not disable essential sign-in cookies.
+Sign-out and available preference controls manage the relevant Service choices; browser controls can remove or block stored data. If a use of storage requires consent in your jurisdiction, a suitable consent choice must be provided before that use begins. This policy does not treat all preferences or installation reminders as automatically exempt from consent requirements.
 
 ---
 
@@ -115,7 +114,7 @@ Do Not Track and Global Privacy Control keep optional public website analytics o
 
 We may update this Cookie Policy from time to time, particularly if we decide to introduce new types of cookies or tracking technologies. When we make changes:
 
-*   We will update the "Effective Date" at the top of this policy
+*   We will update the revision date and identify when the published change takes effect
 *   For significant changes (such as introducing analytics or advertising cookies), we will provide more prominent notice and obtain consent where required
 
 We encourage you to review this policy periodically.

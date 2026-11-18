@@ -18,7 +18,7 @@ Options:
   --url BASE        test an already running server, e.g. http://127.0.0.1:8080
                     (no container is started; the launch-log check is skipped)
   --skip GROUPS     comma-separated groups to skip. Groups: pages, aliases,
-                    slash, notfound, go, headers, og (default: none)
+                    slash, notfound, go, headers, og, markdown (default: none)
   --log FILE        log file (default: a temp file, path printed first)
   --keep            leave the container running afterwards
   --help            show this message
@@ -315,6 +315,13 @@ main() {
   skipped go || check_go
   skipped headers || check_headers
   skipped og || check_og
+  if ! skipped markdown; then
+    if node "$root/scripts/check-markdown.mjs" "$base" >>"$log" 2>&1; then
+      check markdown "Markdown negotiation and content" "pass" "pass"
+    else
+      check markdown "Markdown negotiation and content (see log)" "pass" "fail"
+    fi
+  fi
   if [ "$keep" -eq 1 ] && [ -n "$container" ]; then
     echo "container left running: $container on port $port"
   fi

@@ -1,0 +1,57 @@
+import { describe, expect, it } from 'vitest';
+import { load } from 'cheerio';
+import { marked } from 'marked';
+import { dist, squash } from './lib/site';
+import { isPseudoLocale } from '../i18n';
+
+describe('published Markdown representations', () => {
+  const site = dist();
+  const published = site.pages.filter(page => page.page?.published && page.locale && !isPseudoLocale(page.locale));
+
+  it('provides discoverable alternates only for built published pages', () => {
+    const expected = new Set(published.map(page => page.file.replace(/index\.html$/, 'index.md')));
+    expect(new Set(site.files.filter(file => file.endsWith('.md')))).toEqual(expected);
+    for (const page of site.pages) {
+      const alternates = page.$('link[rel="alternate"][type="text/markdown"]');
+      expect(alternates.length, page.urlPath).toBe(published.includes(page) ? 1 : 0);
+      if (alternates.length) {
+        expect(alternates.attr('href'), page.urlPath).toBe(`/${page.file.replace(/index\.html$/, 'index.md')}`);
+      }
+    }
+  });
+
+  it('retains headings, plan/feature limits, FAQ answers, language and source URLs', () => {
+    for (const page of published) {
+      const markdown = site.read(page.file.replace(/index\.html$/, 'index.md'))!.toString('utf8');
+      const body = markdown.replace(/^---\n[\s\S]*?\n---\n/, '');
+      const $ = load(marked.parse(body) as string);
+      expect(squash($('h1').text()), page.urlPath).toBe(squash(page.$('main h1').text()));
+      expect(markdown, page.urlPath).toContain(`url: "https://sidebadger.me${page.urlPath}"`);
+      expect(markdown, page.urlPath).toContain(`lang: ${JSON.stringify(page.$('html').attr('lang'))}`);
+      const noindex = page.$('meta[name="robots"]').attr('content')?.includes('noindex');
+      expect(markdown, page.urlPath).toContain(`robots: "${noindex ? 'noindex' : 'index, follow'}"`);
+      const text = squash($.text());
+      for (const element of page.$('.faq-entry, .limits-list li, .page-hero__lead').toArray()) {
+        // Markdown syntax can add whitespace between adjacent inline/block elements.
+        const original = squash(page.$(element).text());
+        expect(text.replace(/\s/g, ''), page.urlPath).toContain(original.replace(/\s/g, ''));
+      }
+      expect(body, page.urlPath).not.toContain('<script');
+    }
+  });
+
+  it('keeps Markdown HTTP links resolvable and launch URLs routed through the counter', () => {
+    for (const page of published) {
+      const markdown = site.read(page.file.replace(/index\.html$/, 'index.md'))!.toString('utf8');
+      const $ = load(marked.parse(markdown.replace(/^---\n[\s\S]*?\n---\n/, '')) as string);
+      for (const link of $('a[href], img[src]').toArray()) {
+        const url = new URL($(link).attr('href') ?? $(link).attr('src')!);
+        expect(url.hostname, page.urlPath).not.toBe('staging.sidebadger.me');
+        expect(url.hostname, page.urlPath).not.toBe('app.sidebadger.me');
+        if (url.origin !== 'https://sidebadger.me' || url.pathname.startsWith('/go/')) continue;
+        const file = url.pathname.slice(1) + (url.pathname.endsWith('/') ? 'index.html' : '');
+        expect(site.exists(decodeURI(file)), `${page.urlPath}: ${url}`).toBe(true);
+      }
+    }
+  });
+});

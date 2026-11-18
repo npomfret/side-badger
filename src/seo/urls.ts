@@ -33,6 +33,11 @@ export function canonicalFor(pageIdOrPath: PageId | (string & {}), locale: Local
   return absoluteUrl(localizedPath(pageIdOrPath, locale));
 }
 
+/** Downloadable alternate representation; the page's canonical URL remains the slash form. */
+export function markdownPathFor(pageId: PageId, locale: Locale): string {
+  return new URL('index.md', canonicalFor(pageId, locale)).pathname;
+}
+
 export type LaunchTarget = 'app' | 'register';
 
 export interface LaunchOptions {

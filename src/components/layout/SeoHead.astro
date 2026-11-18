@@ -8,9 +8,9 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
 import { OG_RENDER_VERSION, type OgCardId } from '../../pages/og/[card].png';
-import { t, logoLocales, localeConfig, type Locale } from '../../i18n';
-import type { PageId } from '../../site/pages';
-import { absoluteUrl, canonicalFor } from '../../seo/urls';
+import { t, logoLocales, localeConfig, isPseudoLocale, type Locale } from '../../i18n';
+import { getPage, type PageId } from '../../site/pages';
+import { absoluteUrl, canonicalFor, markdownPathFor } from '../../seo/urls';
 import { isIndexable } from '../../seo/indexability';
 import { alternatesFor } from '../../seo/alternates';
 import { buildGraph, serializeJsonLd, type JsonLdNode } from '../../seo/jsonld';
@@ -68,6 +68,9 @@ const graph = buildGraph({
 {alternates.map((alternate) => (
   <link rel="alternate" hreflang={alternate.hreflang} href={alternate.href} />
 ))}
+{page !== 'not-found' && getPage(page)?.published && !isPseudoLocale(locale) && (
+  <link rel="alternate" type="text/markdown" href={markdownPathFor(page, locale)} />
+)}
 
 <!-- Open Graph -->
 <meta property="og:title" content={title} />

@@ -6,6 +6,7 @@ The site redesign (restructure task, homepage task and release 1 of [the site pl
 
 - **P35 app screenshots.** Waits for the capture script and demo scenario in `wl-bill-splitter` (site plan follow-up 9 and D14). This repo owns the shot list (site plan "Shot list", `src/data/screenshots.ts`), optimization and placement. Until then English pages may use `placeholder-en` shots, and localized pages show none.
 - **Release 2** is planned in [release-2-plan.md](./release-2-plan.md): calculators, guides, four feature pages, couples, page art, the Splitwise comparison and a help page, in three waves.
+- **AI discovery and integration docs** are tracked in [ai-discovery-and-integration-docs.md](./ai-discovery-and-integration-docs.md): research-led product copy, Markdown delivery for agents, Pro API documentation, standalone MCP access, and ChatGPT/Claude plugins combining MCP and skills. Implementation has started with Markdown delivery; API contracts, entitlement decisions and integration release verification remain dependencies.
 - **Search reviews** at 4, 8 and 12 weeks after release (site plan success measures, `/go/app/` counts by `from`), once Search Console and Loki access exist.
 - **Real-device checks** of the homepage: the iOS toolbar behaviour, and a VoiceOver pass.
 - **Install happens in the app.** Since 17 October 2026 this site has no web manifest; its copy says

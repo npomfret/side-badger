@@ -1,9 +1,11 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import { locales, pseudoLocales } from './src/i18n/index.ts';
+import { locales, pseudoLocales, isPseudoLocale } from './src/i18n/index.ts';
 import { previewPseudoEnabled } from './src/i18n/pseudo.ts';
 import { isIndexable } from './src/seo/indexability.ts';
 import { pageForPath } from './src/site/routes.ts';
+import { canonicalFor } from './src/seo/urls.ts';
+import { markdownSite } from './scripts/markdown/index.mjs';
 
 export default defineConfig({
   site: 'https://sidebadger.me',
@@ -14,6 +16,17 @@ export default defineConfig({
   devToolbar: { enabled: false },
   // Only indexable page/locale pairs reach the sitemap (D8, D9); pseudo-locales never do
   integrations: [
+    markdownSite({
+      resolvePage: path => {
+        const match = pageForPath(path);
+        if (!match?.page.published || isPseudoLocale(match.locale)) return undefined;
+        return {
+          url: canonicalFor(match.page.id, match.locale),
+          locale: match.locale,
+          indexable: isIndexable(match.page.id, match.locale),
+        };
+      },
+    }),
     sitemap({
       filter: url => {
         const match = pageForPath(url);

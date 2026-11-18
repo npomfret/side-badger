@@ -35,6 +35,7 @@ FROM nginx:1.30.6-alpine@sha256:c59d1f8b1e0e42da75be973424cd72e23f7f8adfb54e982f
 # and is pulled in by an explicit include, so it can never become a second server block.
 COPY nginx/*.conf /etc/nginx/side-badger/
 RUN mv /etc/nginx/side-badger/default.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /app/.astro/markdown-headers.conf /etc/nginx/side-badger/markdown-headers.conf
 COPY --from=builder /app/dist /usr/share/nginx/html
 
 # 127.0.0.1, not localhost: busybox wget tries ::1 first, and nginx listens on IPv4 only

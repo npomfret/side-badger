@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { load } from 'cheerio';
 import { marked } from 'marked';
 import { dist, squash } from './lib/site';
-import { isPseudoLocale } from '../i18n';
+import { isPseudoLocale, t, type Locale } from '../i18n';
 import { hasMarkdownAlternate } from '../site/pages';
 
 describe('published Markdown representations', () => {
@@ -47,6 +47,17 @@ describe('published Markdown representations', () => {
         expect(text.replace(/\s/g, ''), page.urlPath).toContain(original.replace(/\s/g, ''));
       }
       expect(body, page.urlPath).not.toContain('<script');
+    }
+  });
+
+  it('keeps the screen-reader "external link" marker out of Markdown link text', () => {
+    for (const page of published) {
+      const markdown = site.read(page.file.replace(/index\.html$/, 'index.md'))!.toString('utf8');
+      const $ = load(marked.parse(markdown.replace(/^---\n[\s\S]*?\n---\n/, '')) as string);
+      const marker = t('a11y.externalLink', page.locale as Locale);
+      for (const link of $('a').toArray()) {
+        expect($(link).text(), `${page.urlPath} link to ${$(link).attr('href')}`).not.toContain(marker);
+      }
     }
   });
 

@@ -41,6 +41,22 @@ describe('Markdown alternate representations', () => {
     ]);
   });
 
+  it.each([
+    { locale: 'en', marker: 'External link' },
+    { locale: 'fr', marker: 'Lien externe' },
+  ])('omits external-link markers in $locale while preserving other screen-reader text', ({ locale, marker }) => {
+    const md = renderMarkdown(document(`<h1>Links</h1>
+      <a class="launch-cta" href="/go/register/?from=home&amp;cta=hero"><span class="launch-cta__text">Start a group</span><span class="sr-only">${marker}</span></a>
+      <p class="compare-source"><a href="https://example.com/source/" rel="noopener">Source<span class="sr-only">${marker}</span></a></p>
+      <a href="/pricing/">Pricing<span class="sr-only"> details</span></a>
+      <h2 class="sr-only">Worked example</h2>`, locale), { ...info, locale });
+    expect(md).toContain('[Start a group](https://sidebadger.me/go/register/?from=home&cta=hero)');
+    expect(md).toContain('[Source](https://example.com/source/)');
+    expect(md).toContain('[Pricing details](https://sidebadger.me/pricing/)');
+    expect(md).toContain('## Worked example');
+    expect(md).not.toContain(marker);
+  });
+
   it('omits chrome, decoration and simulated app screens while retaining use-case descriptions', () => {
     const md = renderMarkdown(document(`<h1>Split bills</h1><nav>Breadcrumb</nav><p>Product explanation</p>
       <span aria-hidden="true">Decorative receipt</span><div hidden>Hidden result</div>

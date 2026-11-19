@@ -13,6 +13,8 @@ export function renderMarkdown(html, { url, locale, indexable }) {
     throw new Error(`Markdown needs a main landmark and one h1: ${url}`);
   }
   main.find('script, style, template, svg, [aria-hidden="true"], [hidden], nav, button, input, select, textarea').remove();
+  // These link markers repeat the destination type; other screen-reader text is meaningful content.
+  main.find('a.launch-cta > .sr-only, .compare-source > a > .sr-only').remove();
   // The homepage's simulated app screens are illustrations, not the visitor's account data.
   // Keep the use-case descriptions and links that share its visual slot.
   main.find('.scene__visual').not(':has(.world__text)').remove();

@@ -3,7 +3,8 @@ import { expect, type Locator, type Page } from '@playwright/test';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { ELEMENT_TIMEOUT, MODAL_TIMEOUT, NAVIGATION_TIMEOUT } from './timeouts';
 import { isRtl, pathFor, text, type ShellLocale, type StringKey } from './strings';
-import { stubPolicyApi } from './policyApi';
+import { expectStubPolicyShown, stubPolicyApi } from './policyApi';
+import { expectAnimationsSettled } from './animations';
 
 /** The registry's launch-counter page id for each route the shell tests visit */
 export type ShellRoute = 'pricing' | 'privacy' | 'terms' | 'cookies' | '';
@@ -85,6 +86,7 @@ export class SitePage {
     await expect(this.banner, 'the site header').toBeVisible({ timeout: ELEMENT_TIMEOUT });
     await expect(this.footer, 'the site footer').toBeVisible({ timeout: ELEMENT_TIMEOUT });
     await expect(this.homeLink, 'the logo link').toBeVisible();
+    if (this.route === 'privacy' || this.route === 'terms' || this.route === 'cookies') await expectStubPolicyShown(this.page);
   }
 
   // ----- header -----
@@ -310,6 +312,7 @@ export class SitePage {
 
   /** axe reports no serious or critical violations on the page as it now stands. */
   async expectNoSeriousAccessibilityViolations(): Promise<void> {
+    await expectAnimationsSettled(this.page);
     const results = await new AxeBuilder({ page: this.page }).analyze();
     const serious = results.violations
       .filter(violation => violation.impact === 'serious' || violation.impact === 'critical')
@@ -411,6 +414,7 @@ export class OpenMenu {
   }
 
   async expectNoSeriousAccessibilityViolations(): Promise<void> {
+    await expectAnimationsSettled(this.page);
     const results = await new AxeBuilder({ page: this.page }).analyze();
     const serious = results.violations
       .filter(violation => violation.impact === 'serious' || violation.impact === 'critical')

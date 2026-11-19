@@ -3,7 +3,8 @@ import { expect, type Locator, type Page } from '@playwright/test';
 import { allPages, type PageDef } from '../../src/site/pages';
 import { ELEMENT_TIMEOUT, NAVIGATION_TIMEOUT } from './timeouts';
 import { isRtl, pathFor, SHELL_LOCALES, text, type ShellLocale, type StringKey } from './strings';
-import { stubPolicyApi } from './policyApi';
+import { expectStubPolicyShown, stubPolicyApi } from './policyApi';
+import { expectAnimationsSettled } from './animations';
 
 /** Every registry page (published, unpublished and preview-only) that exists in a locale */
 export function pagesIn(locale: ShellLocale): readonly PageDef[] {
@@ -89,6 +90,7 @@ export class SiteAudit {
     await expect(this.page.locator('html'), 'text direction').toHaveAttribute('dir', isRtl(this.locale) ? 'rtl' : 'ltr');
     await expect(this.banner, `the site header of ${this.localized(this.def)}`).toBeVisible({ timeout: ELEMENT_TIMEOUT });
     await expect(this.footer, 'the site footer').toBeVisible({ timeout: ELEMENT_TIMEOUT });
+    if (this.def.type === 'legal') await expectStubPolicyShown(this.page);
   }
 
   async expectOneH1(): Promise<void> {
@@ -134,7 +136,7 @@ export class SiteAudit {
 
   /** axe reports no serious or critical violations on the page as it now stands */
   async expectNoSeriousAccessibilityViolations(): Promise<void> {
-    await this.waitForMotionToSettle();
+    await expectAnimationsSettled(this.page);
     const results = await new AxeBuilder({ page: this.page }).analyze();
     const serious = results.violations
       .filter(violation => violation.impact === 'serious' || violation.impact === 'critical')
@@ -145,32 +147,6 @@ export class SiteAudit {
       }));
     // axe returns its findings in one analysis; there is no element to poll
     expect(serious, 'serious or critical accessibility violations').toEqual([]);
-  }
-
-  /**
-   * Fade-ins (`.fade-up`, the hero title) blend text with the background while they run, so axe's
-   * color-contrast result depends on when it samples. Wait until every finite animation and
-   * transition on the document timeline has finished. Infinite ones (the shimmer) never settle, and
-   * scroll-driven ones (the homepage scenes) follow the scroll position, so both are left out.
-   */
-  private async waitForMotionToSettle(): Promise<void> {
-    await expect
-      .poll(
-        () =>
-          this.page.evaluate(() =>
-            document
-              .getAnimations()
-              .filter(
-                a =>
-                  a.playState === 'running' &&
-                  a.timeline instanceof DocumentTimeline &&
-                  a.effect?.getComputedTiming().endTime !== Infinity
-              )
-              .map(a => `${(a as CSSAnimation).animationName ?? (a as CSSTransition).transitionProperty ?? 'animation'}`)
-          ),
-        { message: 'finite animations still running', timeout: ELEMENT_TIMEOUT }
-      )
-      .toEqual([]);
   }
 
   /** Scroll to the foot of the page; the header's state changes once the page has scrolled */

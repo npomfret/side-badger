@@ -1,4 +1,5 @@
-import type { Page, Route } from '@playwright/test';
+import { expect, type Page, type Route } from '@playwright/test';
+import { ELEMENT_TIMEOUT } from './timeouts';
 
 /** The production API origin the policy pages read from. Tests never reach it: every request is answered here. */
 const API = 'https://app.sidebadger.me/api/policies/**';
@@ -11,9 +12,22 @@ export type PolicyReply =
   | { kind: 'hang' }
   | { kind: 'hold' };
 
+/** The sample policy's top heading (`#` in the Markdown, an h2 on the page) */
+export const SAMPLE_HEADING = 'Policy of the sample';
+
+/**
+ * The stubbed policy text has arrived and is on the page. Shell and audit checks on a legal page
+ * (overflow, axe) must run against the policy's content, not the loading state.
+ */
+export async function expectStubPolicyShown(page: Page): Promise<void> {
+  await expect(page.getByRole('main').getByRole('heading', { name: SAMPLE_HEADING }), 'the stubbed policy text').toBeVisible({
+    timeout: ELEMENT_TIMEOUT,
+  });
+}
+
 /** Wide enough to scroll on a phone, with a heading before it and a link after */
 export const SAMPLE_MARKDOWN = [
-  '# Policy of the sample',
+  `# ${SAMPLE_HEADING}`,
   '',
   '**Last revised: 18 November 2026.** We keep this *short*.',
   '',

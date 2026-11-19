@@ -1,6 +1,7 @@
 import AxeBuilder from '@axe-core/playwright';
 import { expect, type Locator, type Page } from '@playwright/test';
-import { PolicyApi, type PolicyReply } from './policyApi';
+import { PolicyApi, SAMPLE_HEADING, type PolicyReply } from './policyApi';
+import { expectAnimationsSettled } from './animations';
 import { ELEMENT_TIMEOUT, NAVIGATION_TIMEOUT } from './timeouts';
 import { isRtl, pathFor, text, type ShellLocale, type StringKey } from './strings';
 
@@ -104,7 +105,7 @@ export class PolicyPage {
   async expectSingleH1(): Promise<void> {
     await expect(this.page.getByRole('heading', { level: 1 })).toHaveCount(1);
     await expect(this.body.getByRole('heading', { level: 1 })).toHaveCount(0);
-    await expect(this.body.getByRole('heading', { level: 2, name: 'Policy of the sample' })).toBeVisible();
+    await expect(this.body.getByRole('heading', { level: 2, name: SAMPLE_HEADING })).toBeVisible();
   }
 
   async expectPublicationDate(expected: string): Promise<void> {
@@ -226,19 +227,7 @@ export class PolicyPage {
   }
 
   async expectNoSeriousAccessibilityViolations(): Promise<void> {
-    // The content's fade-in blends text with the background while it runs, so axe's contrast result depends on when it samples
-    await expect
-      .poll(
-        () =>
-          this.page.evaluate(() =>
-            document
-              .getAnimations()
-              .filter(a => a.playState === 'running' && a.timeline instanceof DocumentTimeline && a.effect?.getComputedTiming().endTime !== Infinity)
-              .map(a => (a as CSSAnimation).animationName ?? 'animation')
-          ),
-        { message: 'finite animations still running', timeout: ELEMENT_TIMEOUT }
-      )
-      .toEqual([]);
+    await expectAnimationsSettled(this.page);
     const results = await new AxeBuilder({ page: this.page }).analyze();
     const serious = results.violations
       .filter(violation => violation.impact === 'serious' || violation.impact === 'critical')

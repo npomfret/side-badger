@@ -141,14 +141,26 @@ The app lives at `app.sidebadger.me` (production). `staging.sidebadger.me` is fo
 The legal policies are owned by the app and are never copied into this repository. The build makes no API call and needs no snapshot, so a build and every other page work while the app is down. A policy page's static HTML is a shell; the visitor's browser fetches `https://app.sidebadger.me/api/policies/{privacy-policy,terms-of-service,cookie-policy}/text` (Markdown) and `/current` (publication date, `createdAt`) when the page opens, so a policy change shows on the next page load with no site deploy. The API sends `access-control-allow-origin` for the requesting origin and this site's CSP has no `connect-src`, so no change is needed on either side today. If the API fails, times out (10 s) or returns an empty or malformed body, the page shows a translated message and a Retry button and no policy text. Never point this at staging (rule 12).
 
 <!-- agent-standards:begin -->
-## Shared agent guidance
+## Operating contract
 
-Before starting work, read [Scope](.agents/agent-standards/guidance/scope.md), [Running commands](.agents/agent-standards/guidance/commands.md), [Git](.agents/agent-standards/guidance/git.md), [Review before commit](.agents/agent-standards/guidance/review.md).
-Before code changes: [State and dependencies](.agents/agent-standards/guidance/dependencies.md); Before UI changes: [Interface text](.agents/agent-standards/guidance/interface-text.md); Before tests or timeout changes: [Test timeouts](.agents/agent-standards/guidance/test-timeouts.md).
-Keep the shared checkout on its default branch. Use detached worktrees. Agents commit, fast-forward land and push their verified, reviewed work.
+*Managed by `npomfret/agent-standards`; detailed workflows are skills.*
+
+- Scope: do what was asked plus the callers, tests and migrations it needs. Leave unrelated refactors, renames, cleanup, dependency bumps and docs for separate work; suggest them at the end. Add failure handling only for observed evidence. Ask when readings differ materially. Done means the behaviour works, verification passes, and you report evidence and blockers.
+- Gates: only substantive failures block (types, broken behaviour, agreed rules). Cosmetics are autoformatted and never block commits, CI or reviews. Run tests, builds and type checks yourself; no test or lint hooks, and formatting hooks only when targeted at changed files.
+- Other agents share the checkout. Stage only your files; never stash, discard, revert or commit their changes. The shared checkout stays on the default branch; isolate with `git worktree add --detach tmp/worktrees/<name> main`.
+- Git: work is complete only when verified, reviewed commits are on the default branch and pushed (`git pull --rebase`, land with `git merge --ff-only`). Commit, land and push without asking. Repositories stay private.
+- Significant work (behaviour, refactor, tests, config, tooling) is reviewed independently before commit by a project reviewer or `change-reviewer`; resolve every finding. Tests and review replace neither each other nor user approval.
+- Substantial work needs a committed task file under `tasks/`.
+- Run commands yourself unless they need the user's login, password, sudo, device or install. Reuse the project's scripts and `tmp/ad-hoc-scripts/`; put multi-step or quoted shell in a named script there. Hand the user one short command, else a script run as `! tmp/ad-hoc-scripts/<purpose>.sh`. Send long output to `tmp/logs/`; read it with `rg` and bounded excerpts; never paste whole logs.
+- Secrets never go in source, arguments, output or logs, or the repo; they live in iCloud Drive, reached through gitignored `secrets/` links. Configuration comes only from explicitly supplied files, never environment, dotenv or ambient login.
+- Code: construct dependencies at the entry point and inject them; no globals, singletons or hidden construction; immutable by default; structured logs with fixed labels that preserve error causes and stacks; no sleeps in tests. Raising any test timeout or limit needs the user's approval.
+
 - Be concise: lead with the outcome; give only the detail needed to act or decide.
 - Do the work properly and verify it; never trade correctness for speed or cost.
 - When options exist, recommend the best technical solution first, even if costlier; state cheaper alternatives separately with their trade-offs.
+- Fail fast: surface errors with their cause; never swallow, mask or silently fall back from them.
+- Keep one canonical implementation: migrate callers and delete superseded code instead of adding shims or compatibility layers.
+- Question unclear or unsound requests before acting on them; do not comply silently.
 In Codex, use native skills and specialists for equivalent Claude invocations; referenced `.claude/` files remain canonical project knowledge.
 
 *Managed by `npomfret/agent-standards`; edit the shared sources there.*

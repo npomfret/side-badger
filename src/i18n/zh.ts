@@ -224,7 +224,7 @@ export default {
   'policy.cookies.meta.title': 'Cookie 政策 - Side Badger',
   'policy.cookies.title': 'Cookie 政策',
   'policy.englishOnly': '本政策仅提供英文版本。下方文字为英文原文。',
-  'policy.error': '暂时无法加载这份政策。网站的其他部分一切正常。请再试一次。',
+  'policy.error': '刚才没能加载这份政策。网站的其他部分一切正常。请再试一次。',
   'policy.lastUpdated': '最后更新：{date}',
   'policy.loading': '正在加载最新政策…',
   'policy.noscript': '需要启用 JavaScript 才能在此页面加载政策。你也可以直接打开当前文本：',

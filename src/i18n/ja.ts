@@ -227,7 +227,7 @@ export default {
   'policy.error': 'ただいまこのポリシーを読み込めませんでした。サイトのほかの部分は問題なく使えます。もう一度お試しください。',
   'policy.lastUpdated': '最終更新日：{date}',
   'policy.loading': '最新のポリシーを読み込み中…',
-  'policy.noscript': 'ポリシーを読み込むには、このページで JavaScript を有効にする必要があります。現在の本文は直接開けます。',
+  'policy.noscript': 'ポリシーを読み込むには、このページで JavaScript を有効にする必要があります。現在の本文は直接開けます：',
   'policy.privacy.meta.description': 'アプリ内：プライバシーポリシーでは、Side Badgerがあなたのデータをどう扱うかを説明します。ネタバレ：追跡も、データの販売も、広告表示もしません。',
   'policy.privacy.meta.title': 'プライバシーポリシー - サイドバジャー',
   'policy.privacy.title': 'プライバシーポリシー',

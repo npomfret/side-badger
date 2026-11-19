@@ -14,7 +14,7 @@ export const substitutions: readonly Substitution[] = [
   { insteadOf: 'Settle with a single tap / pay back', use: 'Record a payment' },
   { insteadOf: 'The fewest payments / minimise', use: 'Fewer payments / a short list of payments' },
   { insteadOf: 'Real-time rates / live rates', use: 'A current exchange rate, which you can change' },
-  { insteadOf: 'Any currency', use: '140 currencies' },
+  { insteadOf: 'Any currency', use: '133 currencies' },
   { insteadOf: 'Join instantly', use: 'Join with a link or QR code' },
   { insteadOf: 'AI extracts the details accurately', use: 'Fills in the details for you to check' },
   { insteadOf: 'Instant notifications', use: 'Updates appear in the app straight away' },

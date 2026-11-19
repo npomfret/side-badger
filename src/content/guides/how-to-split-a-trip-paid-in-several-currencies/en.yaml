@@ -6,7 +6,7 @@ claims:
   - groups.group-per-house-trip-event
   - invites.link-or-qr-code
   - expense-splitting.equal-exact-percentage
-  - multi-currency.140-currencies
+  - multi-currency.currency-count
   - multi-currency.currency-rules
   - multi-currency.limit-group-currencies
   - currency-conversion.convert-as-you-go
@@ -61,11 +61,11 @@ sections:
     items:
       - "**The rate is fixed when you save.** Old expenses are never revalued, so a balance doesn't drift because the market did. Expenses entered on different days can carry different rates, so if the group wants one rate for the whole trip, agree it and type it in each time."
       - "**No rate? Type one.** Side Badger fetches a current exchange rate where it can, but not every pair is guaranteed one. If there isn't one, or a cash desk gave you a better deal, type your own."
-      - "**999,999.99 per expense, in its own currency.** One cap, whatever the money. In yen that is just under ¥1,000,000, about £5,000 at this guide's rate. In a currency with big numbers, such as Indonesian rupiah, a single bill can hit it sooner. Split the bill into two expenses, or enter it in another currency and convert."
+      - "**Up to 999,999.99 per expense, in its own currency.** Currencies with small units get more room: yen go up to ¥99,999,999 and rupiah to Rp9,999,999,999.99, so a big bill is unlikely to trip it. If one does, split the bill into two expenses, or enter it in another currency and convert."
   - heading: What Side Badger doesn't do here
     items:
       - It never moves or exchanges money. You pay each other however you like, then record the payment.
-      - It has 140 currencies. Cryptocurrencies and metals aren't among them.
+      - It has 133 currencies. Cryptocurrencies and metals aren't among them.
 exampleAfter: 2
 example:
   heading: Japan, settled two ways

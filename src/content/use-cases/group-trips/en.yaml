@@ -7,7 +7,7 @@ claims:
   - expense-splitting.only-people-involved
   - balances.short-list-of-payments
   - settlements.pay-however-then-record
-  - multi-currency.140-currencies
+  - multi-currency.currency-count
   - multi-currency.limit-group-currencies
   - currency-conversion.convert-as-you-go
   - currency-conversion.original-amount-stays
@@ -19,9 +19,9 @@ claims:
   - permissions.managed-group
   - permissions.lock-the-group
 meta:
-  title: Split group trip costs, in 140 currencies
+  title: Split group trip costs, in 133 currencies
   description: Track who paid what on a group trip, enter costs in the local currency, convert them or not, and settle once at the end. Free, in your browser.
-h1: Split group trip costs, in 140 currencies
+h1: Split group trip costs, in 133 currencies
 navLabel: Group trips
 lead: Track the villa, the taxi, and the one cocktail round nobody remembers volunteering to buy. Side Badger keeps the running count while you're away, [handles pounds, euros and 138 other currencies](page:feature/multiple-currencies), and gives you a [short list of payments](page:feature/settle-up) when you get home.
 cta:
@@ -100,4 +100,4 @@ faq:
     - q: Can we freeze the group after the trip?
       a: Yes. An admin can lock the group so the numbers stay put.
     - q: Is there a limit on amounts?
-      a: Yes. 999,999.99 per expense, in its own currency.
+      a: Yes. One expense can be up to 999,999.99 in its own currency, and more for currencies with small units, such as yen or rupiah.

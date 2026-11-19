@@ -111,7 +111,7 @@ limits:
     - One person pays for each expense. If two people paid, record two expenses.
     - There is no split by item and no split by shares. Equal, exact amounts and percentages are what there is.
     - Percentages must add up to 100.
-    - An expense can be up to 999,999.99 in its own currency, with that currency's usual decimal places.
+    - An expense can be up to 999,999.99 in its own currency, and more for currencies with small units, with that currency's usual decimal places.
     - Expenses can't repeat on their own. Copy last month's instead.
     - Dates can't be in the future or more than 10 years ago.
     - An expense involving someone who has left the group becomes read-only.

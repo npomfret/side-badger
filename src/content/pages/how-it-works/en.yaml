@@ -46,7 +46,7 @@ steps:
     shot: S05
     shotAlt: The expense form with a percentage split, dividing the rent by room size
   - title: Watch the balances
-    body: Side Badger keeps a running balance for each currency, so you can see who owes whom at a glance. Rather than leaving everyone to untangle a web of small debts, it suggests a short list of payments that settles the group.
+    body: Side Badger keeps a running balance for each currency, so you can see who owes whom at a glance. If an expense was in another currency, you can convert it at a fetched rate that you can edit; otherwise each currency keeps its own balance. Rather than leaving everyone to untangle a web of small debts, it suggests a short list of payments that settles the group.
     shot: S10
     shotAlt: The balances screen showing simplified debts in two currencies, with Show all switched on
   - title: Settle up outside the app, record it inside
@@ -98,4 +98,4 @@ faq:
     - q: How many people can join a group?
       a: Up to 50 people in a group. Invite them with a link or a QR code, and turn on approval if you want an admin to let each person in.
     - q: What about trips with more than one currency?
-      a: Balances are kept separately for each currency. See [multiple currencies](page:feature/multiple-currencies).
+      a: Balances are kept separately for each currency, and you can convert an expense at a fetched rate that you can edit. See [multiple currencies](page:feature/multiple-currencies).

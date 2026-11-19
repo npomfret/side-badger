@@ -210,7 +210,7 @@ export const features: readonly FeatureRecord[] = [
       'One payer per expense. No split by shares and no split by receipt line.',
       'Percentages must add up to 100.',
       'In equal splits, a leftover cent goes to one person chosen at random (calculateEqualSplits in packages/shared/src/split-utils.ts).',
-      "Amounts up to 999,999.99, with each currency's own decimal places: none for yen, three for Bahraini or Kuwaiti dinar.",
+      "Amounts up to 999,999.99 in the currency's own units (more for currencies with small units, such as yen), with each currency's own decimal places: none for yen, three for Bahraini or Kuwaiti dinar.",
       'Description up to 200 characters; notes up to 5,000 with formatting; labels up to 3 of 50 characters each.',
       'Dates cannot be in the future or more than 10 years ago. Shortcuts: today, yesterday, this morning, last night.',
       'Pasting a link from Google Maps, Apple Maps, Waze, Bing Maps, OpenStreetMap, HERE, Baidu, Yandex, Kakao or Naver fills in the place name.',
@@ -374,7 +374,7 @@ export const features: readonly FeatureRecord[] = [
     id: 'multi-currency',
     homePage: 'feature/multiple-currencies',
     capability:
-      'Enter any expense or payment in any of 140 currencies. Balances are kept separately per currency. A group can restrict which currencies may be used and set a default. Your recently used currencies come first.',
+      'Enter any expense or payment in any of 133 currencies. Balances are kept separately per currency. A group can restrict which currencies may be used and set a default. Your recently used currencies come first.',
     problem: 'Trips and international groups pay in more than one currency.',
     audiences: { primary: ['group-trips'], secondary: ['housemates', 'couples'] },
     status: 'available',
@@ -388,9 +388,9 @@ export const features: readonly FeatureRecord[] = [
     ],
     verifiedAt: APP_COMMIT,
     limits: [
-      '140 ISO currencies; no cryptocurrencies or metals.',
+      '133 ISO currencies; no cryptocurrencies or metals.',
       "Each currency's decimal places are respected.",
-      'The 999,999.99 cap applies in each currency (site plan D19).',
+      'One expense is capped at 999,999.99 in its own currency; 85 of the 133 currencies, those with small units, have a higher cap (a multiple of 10 up to 100,000 of the base, via amount_cap_multiple and getAmountCap in packages/shared/src/currencies.ts), so the cap is not one number for every currency (site plan D19).',
     ],
     prerequisites: [],
     proof: [
@@ -401,7 +401,7 @@ export const features: readonly FeatureRecord[] = [
     useCases: ['group-trips'],
     searchLanguage: ['split expenses multiple currencies', 'group travel expenses different currencies'],
     claims: [
-      { id: 'multi-currency.140-currencies', text: '140 currencies.' },
+      { id: 'multi-currency.currency-count', text: '133 currencies.' },
       {
         id: 'multi-currency.currency-rules',
         text: "Yen without decimals, dinars with three: every amount follows its currency's rules.",
@@ -966,7 +966,7 @@ export const features: readonly FeatureRecord[] = [
     id: 'offline',
     status: 'not-offered',
     capability: 'Use without a connection.',
-    evidence: ['no service worker'],
+    evidence: ['push-only service worker (webapp-v2/src/serviceWorker.ts): handles push and badges, no fetch handler and no cache; registration and login need a connection'],
     copy: 'Needs a connection.',
   }),
   notOffered({

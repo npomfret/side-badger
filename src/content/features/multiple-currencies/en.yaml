@@ -3,7 +3,7 @@ review:
   checker: P33c-review
   date: 2026-10-15
 claims:
-  - multi-currency.140-currencies
+  - multi-currency.currency-count
   - multi-currency.currency-rules
   - multi-currency.limit-group-currencies
   - currency-conversion.convert-as-you-go
@@ -12,11 +12,11 @@ claims:
   - currency-conversion.owe-euros-pay-pounds
   - settlements.pay-however-then-record
 meta:
-  title: Split costs in 140 currencies, converted or kept separate
+  title: Split costs in 133 currencies, converted or kept separate
   description: Enter each expense in the currency you paid in, keep balances separate or convert at a rate you can see and change, then settle up with a short list of payments.
-h1: Split costs in 140 currencies
+h1: Split costs in 133 currencies
 navLabel: Multiple currencies
-lead: Euros, yen, and that one taxi in baht. Side Badger takes each expense in the currency you paid in, keeps the balances straight, and can convert when your group would rather settle once. It works in 140 currencies, and it is a natural fit for [group trips](page:use-case/group-trips).
+lead: Euros, yen, and that one taxi in baht. Side Badger takes each expense in the currency you paid in, keeps the balances straight, and can convert when your group would rather settle once. It works in 133 currencies, and it is a natural fit for [group trips](page:use-case/group-trips).
 cta:
   heading: Bring your euros, bring your yen
   body: Create an account, start a group and add the first expense in whatever currency you happened to be holding.
@@ -99,8 +99,8 @@ limits:
     - The rate is fixed when the expense is saved. Old expenses are never revalued.
     - Side Badger fetches a current rate where it can. Not every pair is guaranteed one, and you can always type the rate yourself.
     - Group auto-convert applies to new and copied expenses only, not to edits or existing expenses.
-    - Each expense is capped at 999,999.99 in its own currency.
-    - There are 140 currencies. Cryptocurrencies and metals are not among them.
+    - One expense can be up to 999,999.99 in its own currency, and more for currencies with small units, such as yen or rupiah.
+    - There are 133 currencies. Cryptocurrencies and metals are not among them.
     - Side Badger records payments. It never moves money or exchanges it.
 useCasesHeading: Where this helps
 faq:
@@ -111,9 +111,9 @@ faq:
     - q: Do old expenses get revalued?
       a: No. The rate is fixed when the expense is saved, so a balance does not drift because the market did.
     - q: Do you support crypto?
-      a: No. There are 140 currencies, and cryptocurrencies are not among them.
-    - q: Why can't I enter 2,000,000 rupiah?
-      a: Each expense is capped at 999,999.99 in its own currency. Enter it in another currency and convert, or split it into two expenses.
+      a: No. There are 133 currencies, and cryptocurrencies are not among them.
+    - q: Is there a limit on how big an expense can be?
+      a: Yes. One expense can be up to 999,999.99 in its own currency, and more for currencies with small units, such as yen or rupiah. If you hit it, split it into two expenses, or enter it in another currency and convert.
     - q: Does conversion cost anything?
       a: No. Converting is free, like the rest of Side Badger. See [pricing](page:pricing).
     - q: Do I have to convert?

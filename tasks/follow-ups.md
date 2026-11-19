@@ -4,7 +4,7 @@ The site redesign (restructure task, homepage task and release 1 of [the site pl
 
 ## Open work
 
-- **Load policies from the API** is implemented (see [load-policies-from-api.md](./load-policies-from-api.md)): the policy pages fetch the current text in the browser and keep no copy. What remains is landing and deploying it, then a production check on the three live pages.
+- **App policy data (upstream).** The policy pages load the app's current text in the browser (D10; `AGENTS.md` External Dependencies). In the app's data, the cookie policy `createdAt` (17 November 2026) differs from its text's "Last revised: 16 November"; correcting it belongs in `wl-bill-splitter`.
 - **P35 app screenshots.** Waits for the capture script and demo scenario in `wl-bill-splitter` (site plan follow-up 9 and D14). This repo owns the shot list (site plan "Shot list", `src/data/screenshots.ts`), optimization and placement. Until then English pages may use `placeholder-en` shots, and localized pages show none.
 - **Release 2** is planned in [release-2-plan.md](./release-2-plan.md): calculators, guides, four feature pages, couples, page art, the Splitwise comparison and a help page, in three waves.
 - **AI discovery and integration docs** are tracked in [ai-discovery-and-integration-docs.md](./ai-discovery-and-integration-docs.md): research-led product copy, Markdown delivery for agents, Pro API documentation, standalone MCP access, and ChatGPT/Claude plugins combining MCP and skills. Implementation has started with Markdown delivery; API contracts, entitlement decisions and integration release verification remain dependencies.

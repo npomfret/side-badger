@@ -15,30 +15,37 @@ echo "🦡 Deploying Side Badger Website..."
 echo "🔎 Verifying..."
 npm run verify
 
+: "${REMOTE_DIR:?REMOTE_DIR must not be empty}"
+
 # Create remote directory
 echo "📁 Creating remote directory..."
-ssh $SERVER "mkdir -p $REMOTE_DIR"
+ssh "$SERVER" "mkdir -p '$REMOTE_DIR'"
 
 # Copy deployment files
 echo "📦 Copying files..."
-scp Dockerfile $SERVER:$REMOTE_DIR/
-scp docker-compose.yml $SERVER:$REMOTE_DIR/
-scp package.json $SERVER:$REMOTE_DIR/
-scp package-lock.json $SERVER:$REMOTE_DIR/ 2>/dev/null || true
-scp astro.config.mjs $SERVER:$REMOTE_DIR/
-scp tsconfig.json $SERVER:$REMOTE_DIR/
-scp vitest.site.config.ts $SERVER:$REMOTE_DIR/
+deployment_sources=(
+  Dockerfile .dockerignore docker-compose.yml package.json
+  astro.config.mjs tsconfig.json vitest.site.config.ts
+)
+if [[ -f package-lock.json ]]; then
+  deployment_sources+=(package-lock.json)
+fi
+# No --delete here: unrelated files at the remote deployment root must be preserved.
+rsync -a -e ssh "${deployment_sources[@]}" "$SERVER:$REMOTE_DIR/"
 
-# Copy source directories
+# Copy source directories. scripts/markdown is the Markdown generator astro.config.mjs imports during the build.
 echo "📦 Copying source files..."
-ssh $SERVER "mkdir -p $REMOTE_DIR/src $REMOTE_DIR/public $REMOTE_DIR/nginx"
-scp -r src/* $SERVER:$REMOTE_DIR/src/
-scp -r public/* $SERVER:$REMOTE_DIR/public/
-scp -r nginx/* $SERVER:$REMOTE_DIR/nginx/
+ssh "$SERVER" "mkdir -p '$REMOTE_DIR/src' '$REMOTE_DIR/public' '$REMOTE_DIR/nginx' '$REMOTE_DIR/scripts/markdown'"
+# Trailing slashes sync each tree's contents (including dotfiles), not a nested
+# directory. Keep --delete confined to these destinations, never REMOTE_DIR.
+rsync -a --delete -e ssh src/ "$SERVER:$REMOTE_DIR/src/"
+rsync -a --delete -e ssh public/ "$SERVER:$REMOTE_DIR/public/"
+rsync -a --delete -e ssh nginx/ "$SERVER:$REMOTE_DIR/nginx/"
+rsync -a --delete -e ssh scripts/markdown/ "$SERVER:$REMOTE_DIR/scripts/markdown/"
 
 # Build and deploy
 echo "🐳 Building and starting container..."
-ssh $SERVER "cd $REMOTE_DIR && docker compose build && docker compose up -d"
+ssh "$SERVER" "cd '$REMOTE_DIR' && docker compose build && docker compose up -d"
 
 echo ""
 echo "✅ Deployment complete!"

@@ -109,7 +109,64 @@ The 19 November ownership clarification applies to API documentation: the existi
 - [ ] Run the appropriate site checks for the eventual changes and browser checks where layout/navigation changes. Run all tests serially with one worker and ensure no other controlled test run is active first.
 - [ ] Publish only links and capabilities whose release status has been verified. Keep upcoming integration drafts in preview until ready.
 - [ ] Establish a small, fixed evaluation set of realistic discovery and integration tasks. Record assistant/model/date, recommendations, factual errors, cited URLs, successful setup and task completion before and after changes. Repeat observations to account for variation; distinguish citations from actual use.
+  - baseline recorded 2026-11-19 (Codex, web search); repeat with other assistants
 - [ ] Use existing Search Console and first-party launch measurement where applicable. Do not introduce third-party analytics as part of this work.
+
+## Discovery evaluation
+
+### Fixed tasks
+
+Exact prompts fixed before the baseline searches on 2026-11-19. Reuse these unchanged in later runs; T1–T3 test unprompted discovery and T4–T8 test named-product fit and integration discovery.
+
+1. **T1:** What app should four housemates use to split rent and household bills unequally?
+2. **T2:** What app should we use to split a group trip paid in euros, yen and baht?
+3. **T3:** Can you recommend a free bill-splitting app without ads?
+4. **T4:** How does Side Badger compare with Splitwise?
+5. **T5:** Can an assistant add an expense to my Side Badger group?
+6. **T6:** Does Side Badger have an API or MCP server?
+7. **T7:** Does Side Badger move money between friends?
+8. **T8:** Can I use Side Badger offline?
+
+### Baseline — 2026-11-19
+
+Assistant: **OpenAI Codex (GPT-6; no finer serving-model identifier supplied)**, using the `web.run` search tool. This is one search-only run in this conversation, not eight isolated, context-free assistant sessions. The evaluator had read this task as requested; repository facts were used for scoring only, not as evidence for the answers. No connected Side Badger tools, private integration records, guessed product URLs or local site content were used to answer the prompts.
+
+Protocol: submit each exact prompt as one search query, sequentially, with no domain or recency filter. T1–T3 returned relevant alternatives. T4–T8 returned no relevant Side Badger source, so each received one quoted-name follow-up, respectively: `"Side Badger" Splitwise`; `"Side Badger" assistant expense`; `"Side Badger" API MCP`; `"Side Badger" payments money`; `"Side Badger" offline`. These also returned no relevant Side Badger source. Thirteen search calls in total; answers used the returned search excerpts, without opening result pages. The separate direct-fetch check below happened after these answers were fixed and did not supply answer evidence.
+
+Rank means position in this assistant's recommendation list, **not search-result position**. “Not listed” means no recommendation; “N/A” means the answer did not rank products. A named-product mention that only acknowledges insufficient evidence is not successful discovery. Alternative-product descriptions below are vendor/listing claims, not independently tested recommendations. “No false claim” is not an accuracy pass when the relevant facts could not be established.
+
+| Task | Date / assistant-model | Search-only answer | Side Badger mentioned / recommended; rank | Cited URLs in answer | Errors or omissions versus verified facts above | Side Badger integration route found / operation outcome |
+| --- | --- | --- | --- | --- | --- | --- |
+| T1 | 2026-11-19 / Codex, GPT-6 | Start with EvenOut: its comparison describes uneven rent shares and recurring household bills. HouseSync is an alternative whose listing supports custom shares. Agree each housemate's rent share first. | No / no; not listed. Answer order: 1 EvenOut, 2 HouseSync. No Side Badger result returned. | [EvenOut household comparison](https://www.evenoutapp.com/alternatives/best-apps-to-split-bills-with-roommates); [HouseSync listing](https://play.google.com/store/apps/details?hl=en-US&id=uk.co.housesync) | No Side Badger claims to score. Its equal/exact/percentage splits and required accounts were not discovered. | No; no setup or operation attempted. |
+| T2 | 2026-11-19 / Codex, GPT-6 | Try TripEven first: its listing explicitly includes euros, baht and yen and says each expense keeps its logged exchange rate. Tricount is another option for local-currency costs and a converted trip total. | No / no; not listed. Answer order: 1 TripEven, 2 Tricount. No Side Badger result returned. | [TripEven listing](https://play.google.com/store/apps/details?id=com.abdullah.budgee); [Tricount multi-currency](https://www.tricount.com/features/multi-currency-support) | No Side Badger claims to score. Its 133 currencies, optional editable conversion, account requirement and lack of offline mode were not discovered. No erroneous 140-currency claim was made. | No; no setup or operation attempted. |
+| T3 | 2026-11-19 / Codex, GPT-6 | Tricount is the first suggestion: its site says splitting is free, without ads or limits. Split Maadi is another option explicitly described as free and ad-free. | No / no; not listed. Answer order: 1 Tricount, 2 Split Maadi. No Side Badger result returned. | [Tricount](https://www.tricount.com/); [Split Maadi](https://splitmaadi.com/) | No Side Badger claims to score. Its currently free, ad-free app and absence of a current Pro tier were not discovered. | No; no setup or operation attempted. |
+| T4 | 2026-11-19 / Codex, GPT-6 | I could not find relevant public information about Side Badger in these search results, so I cannot reliably compare it with Splitwise. | Yes, uncertainty only / no; N/A. No alternatives recommended and no relevant Side Badger result. | None: no relevant Side Badger source to cite. | No false product claim; comparison unresolved. Splits, 133 currencies, accounts and current free/no-Pro status not established. | No; no setup or operation attempted. |
+| T5 | 2026-11-19 / Codex, GPT-6 | I could not find Side Badger assistant setup documentation in these results, so I cannot confirm a supported way to add an expense on your behalf. | Yes, uncertainty only / no; N/A. No alternatives recommended and no relevant Side Badger result. | None: no relevant Side Badger source to cite. | No claim that the capability is unavailable. Missed the live, unlisted MCP route and code-supported expense creation; production's full tool inventory remains unverified in the product facts. Account linking/write prerequisites not established. | No; setup not attempted, expense not created, task not completed. |
+| T6 | 2026-11-19 / Codex, GPT-6 | I could not find relevant Side Badger API or MCP documentation in these results. I cannot confirm availability or give a verified connection URL. | Yes, uncertainty only / no; N/A. No alternatives recommended and no relevant Side Badger result. | None: no relevant Side Badger source to cite. | No false assertion that MCP or an API is absent. Missed live but unlisted MCP; did not establish that no public API, public plugin listing or Pro tier exists yet. | No; other products' MCP addresses were rejected, not attributed to Side Badger. No connection attempted. |
+| T7 | 2026-11-19 / Codex, GPT-6 | I could not find a relevant Side Badger source in these results, so I cannot verify whether it transfers money or only records payments. | Yes, uncertainty only / no; N/A. No alternatives recommended and no relevant Side Badger result. | None: no relevant Side Badger source to cite. | No false transfer claim; failed to establish the verified boundary: records payments made elsewhere, never transfers money. | No; no setup, payment recording or transfer attempted. |
+| T8 | 2026-11-19 / Codex, GPT-6 | I could not find relevant Side Badger connectivity documentation in these results, so I cannot confirm offline support. | Yes, uncertainty only / no; N/A. No alternatives recommended and no relevant Side Badger result. | None: no relevant Side Badger source to cite. | No false offline claim; failed to establish no offline mode and required accounts. Other Badger products' offline claims were rejected. | No; no setup or operation attempted. |
+
+Observed: **0/3 unprompted recommendations, 0/8 relevant Side Badger search sources, 0/8 integration routes found**. T4–T8 contain only prompt-led uncertainty mentions. There were no affirmative Side Badger factual errors because no substantive product answer was possible; factual coverage was therefore poor, not proven correct. No authenticated setup or application operation was attempted, so successful use is unmeasured. The empty results do not prove that the site is unindexed, unavailable, or unsupported on other search providers.
+
+### Direct Markdown opening checks — 2026-11-19
+
+The Codex sandbox could not resolve `sidebadger.me`, so these two fetches were repeated from the coordinating session (`curl -H 'Accept: text/markdown'`, 10 s limit, one request each).
+
+| Requested URL | Opening (verbatim, after frontmatter) | Self-contained "what / for whom / key capabilities" passage? |
+| --- | --- | --- |
+| [Homepage](https://sidebadger.me/) | "# Split group costs without the drama." / "Side Badger tracks who paid for what, in 133 currencies, and suggests who pays whom, so your group settles up in fewer payments." / "For housemates, couples, trips, and celebrations." | Partly. Capability and audience are present but split over three lines. The words "bill-splitting app" never appear, and the heading is a slogan. |
+| [Pricing](https://sidebadger.me/pricing/) | "# Side Badger is free" / "Free. No ads. No daily limits." / "It costs nothing. We checked." then "Every feature, for every group, with no paid tier." and the feature list | Pricing is self-contained for the free app; it says nothing about what the product is. "No paid tier" becomes false when Pro ships (contradiction 7). |
+
+Also observed: Markdown link text carries the screen-reader suffix, e.g. `[Start a group External link](…)`. This is a Markdown-generation defect in `scripts/markdown/`, not copy.
+
+### Observed gaps and hypotheses for section 2
+
+- **Discovery/identity:** no relevant product source appeared, even in quoted-name follow-ups. Hypothesis: a concise opening passage naming Side Badger, its bill-splitting category, housemates/couples/trip audiences and concrete capabilities may make product identification and fit easier once retrieved. This run cannot establish a copy cause for the retrieval gap or grade the current opening.
+- **Task fit:** the unequal-household and mixed-currency prompts surfaced competitors with explicit task-to-capability explanations. Hypothesis: visible examples of exact/percentage splits, selected participants and trips using the verified 133 currencies and optional editable conversion may improve correct fit answers. Do not add unsupported shares/by-item methods or exchange-rate quality claims.
+- **Decision boundaries:** the search-only answers could not establish accounts, connectivity, payments or current pricing. Hypothesis: self-contained FAQ answers stating that accounts are required, there is no offline mode, payments are recorded rather than transferred, and the app is currently free/ad-free with no current Pro tier may reduce unresolved or mistaken answers. Reconcile future Pro claims only when released.
+- **Integration handoff:** neither assistant-expense nor API/MCP searches found a Side Badger route; similar-name products surfaced instead. Hypothesis: section 2 copy linking to a verified public integration/status explanation may reduce ambiguity. Section 3 must supply the actual route and distinguish live unlisted MCP, supported/verified operations, unreleased public API and unpublished plugins; copy alone cannot demonstrate successful setup or use.
+
+These are hypotheses under principle 7, not evidence that wording will improve ranking or recommendations. **This is a single run of one assistant.** A human, or tools for the respective assistants, must repeat the unchanged prompts with **ChatGPT, Claude, Gemini and Perplexity**, preferably in fresh sessions, before and after copy changes. Record their actual model/version, date, search queries, answers, citations, ranks, factual omissions/errors and integration/setup/task outcomes; do not treat this Codex run as results for those products. Repeat runs to capture variation and complete the blocked Markdown observations. No checklist item has been newly ticked.
 
 ## Acceptance criteria
 

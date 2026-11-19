@@ -39,6 +39,13 @@ export class SiteAudit {
   static async navigateTo(page: Page, locale: ShellLocale, def: PageDef): Promise<SiteAudit> {
     const audit = new SiteAudit(page, locale, def);
     await stubPolicyApi(page); // the policy pages load their text from the app API
+    // The homepage's scenes fade with the scroll position, so the scene just below the fold is part
+    // faded at load: with CI's CJK fonts the zh hero is short and the group scene's app mock-up sat
+    // at 0.6 opacity off screen, which axe reports as low contrast. How far depends on font metrics,
+    // so these whole-page audits measure the homepage at rest (reduced motion: the static engine,
+    // every scene at its static stage). Accepted cost: in the real locales nothing runs axe on the
+    // homepage with motion on; home.spec covers the native and stages engines in SHELL_LOCALES.
+    if (def.id === 'home') await page.emulateMedia({ reducedMotion: 'reduce' });
     await page.goto(audit.localized(def));
     await audit.verifyLoaded();
     return audit;
@@ -91,6 +98,10 @@ export class SiteAudit {
     await expect(this.banner, `the site header of ${this.localized(this.def)}`).toBeVisible({ timeout: ELEMENT_TIMEOUT });
     await expect(this.footer, 'the site footer').toBeVisible({ timeout: ELEMENT_TIMEOUT });
     if (this.def.type === 'legal') await expectStubPolicyShown(this.page);
+    if (this.def.id === 'home') {
+      // An attribute, not something a person sees (rule 2): the audit is only valid at rest
+      await expect(this.page.locator('html'), 'the homepage at rest (static engine)').toHaveAttribute('data-scene-engine', 'static');
+    }
   }
 
   async expectOneH1(): Promise<void> {

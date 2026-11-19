@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'جاپان کا سفر',
   'home.group.scanCode': 'یا یہ کوڈ اسکین کریں',
   'home.group.title': 'گروپ شروع کریں۔ لنک شیئر کریں۔',
-  'home.hero.audience': 'ساتھ رہنے والوں، جوڑوں، سفروں اور تقریبات کے لیے۔',
   'home.hero.ctaPrimary': 'گروپ شروع کریں',
   'home.hero.ctaSecondary': 'دیکھیں یہ کیسے کام کرتا ہے',
   'home.hero.haveAccount': 'کیا آپ کا پہلے سے اکاؤنٹ ہے؟',

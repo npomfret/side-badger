@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Japansferð',
   'home.group.scanCode': 'Eða skannaðu þennan kóða',
   'home.group.title': 'Stofnaðu hóp. Deildu tengli.',
-  'home.hero.audience': 'Fyrir meðleigjendur, pör, ferðalög og veislur.',
   'home.hero.ctaPrimary': 'Stofnaðu hóp',
   'home.hero.ctaSecondary': 'Sjáðu hvernig þetta virkar',
   'home.hero.haveAccount': 'Ertu þegar með aðgang?',

@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'జపాన్ ట్రిప్',
   'home.group.scanCode': 'లేదా ఈ కోడ్‌ను స్కాన్ చేయండి',
   'home.group.title': 'గ్రూప్ మొదలుపెట్టండి. లింక్ షేర్ చేయండి.',
-  'home.hero.audience': 'రూమ్‌మేట్లు, జంటలు, ట్రిప్‌లు, వేడుకల కోసం.',
   'home.hero.ctaPrimary': 'గ్రూప్ మొదలుపెట్టండి',
   'home.hero.ctaSecondary': 'ఇది ఎలా పనిచేస్తుందో చూడండి',
   'home.hero.haveAccount': 'ఇప్పటికే ఖాతా ఉందా?',

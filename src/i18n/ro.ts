@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Excursia în Japonia',
   'home.group.scanCode': 'Sau scanează acest cod QR',
   'home.group.title': 'Începe un grup. Trimite un link.',
-  'home.hero.audience': 'Pentru colegi de casă, cupluri, excursii și sărbători.',
   'home.hero.ctaPrimary': 'Începe un grup',
   'home.hero.ctaSecondary': 'Vezi cum funcționează',
   'home.hero.haveAccount': 'Ai deja un cont?',

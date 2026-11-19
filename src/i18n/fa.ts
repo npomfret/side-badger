@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'سفر ژاپن',
   'home.group.scanCode': 'یا این کد را اسکن کنید',
   'home.group.title': 'یک گروه بسازید. یک لینک بفرستید.',
-  'home.hero.audience': 'برای هم‌خانه‌ها، زوج‌ها، سفرها و جشن‌ها.',
   'home.hero.ctaPrimary': 'یک گروه بسازید',
   'home.hero.ctaSecondary': 'ببینید چطور کار می‌کند',
   'home.hero.haveAccount': 'از قبل حساب دارید؟',

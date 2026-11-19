@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Podróż do Japonii',
   'home.group.scanCode': 'Lub zeskanuj ten kod QR',
   'home.group.title': 'Załóż grupę. Udostępnij link.',
-  'home.hero.audience': 'Dla współlokatorów, par, wyjazdów i uroczystości.',
   'home.hero.ctaPrimary': 'Załóż grupę',
   'home.hero.ctaSecondary': 'Zobacz, jak to działa',
   'home.hero.haveAccount': 'Masz już konto?',

@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Путовање у Јапан',
   'home.group.scanCode': 'Или скенирајте овај код',
   'home.group.title': 'Оснуј групу. Подели везу.',
-  'home.hero.audience': 'За цимере, парове, путовања и прославе.',
   'home.hero.ctaPrimary': 'Оснуј групу',
   'home.hero.ctaSecondary': 'Погледај како ради',
   'home.hero.haveAccount': 'Већ имаш налог?',

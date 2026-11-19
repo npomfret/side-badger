@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Japoniako bidaia',
   'home.group.scanCode': 'Edo eskaneatu kode hau',
   'home.group.title': 'Hasi talde bat. Partekatu esteka.',
-  'home.hero.audience': 'Etxekideentzat, bikoteentzat, bidaietarako eta ospakizunetarako.',
   'home.hero.ctaPrimary': 'Hasi talde bat',
   'home.hero.ctaSecondary': 'Ikusi nola funtzionatzen duen',
   'home.hero.haveAccount': 'Baduzu kontu bat dagoeneko?',

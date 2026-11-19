@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Japanresa',
   'home.group.scanCode': 'Eller skanna den här koden',
   'home.group.title': 'Starta en grupp. Dela en länk.',
-  'home.hero.audience': 'För rumskamrater, par, resor och firanden.',
   'home.hero.ctaPrimary': 'Starta en grupp',
   'home.hero.ctaSecondary': 'Se hur det fungerar',
   'home.hero.haveAccount': 'Har du redan ett konto?',

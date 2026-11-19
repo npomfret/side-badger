@@ -107,7 +107,7 @@ faq:
   heading: Questions
   items:
     - q: Which exchange rate do you use?
-      a: A current exchange rate, fetched when you enter the expense where one is available. You can change it to the rate you actually got, and the converted amount updates.
+      a: Side Badger fetches an exchange rate when you choose to convert an expense, where a rate is available. You can change it to the rate you actually got, and the converted amount updates.
     - q: Do old expenses get revalued?
       a: No. The rate is fixed when the expense is saved, so a balance does not drift because the market did.
     - q: Do you support crypto?
@@ -117,4 +117,4 @@ faq:
     - q: Does conversion cost anything?
       a: No. Converting is free, like the rest of Side Badger. See [pricing](page:pricing).
     - q: Do I have to convert?
-      a: No. Currencies stay separate unless you or your group choose to convert, and each currency gets its own short list of payments.
+      a: Currency conversion in Side Badger is optional. Balances stay separate by currency unless you or your group choose to convert, and each currency gets its own short list of suggested payments.

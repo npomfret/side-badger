@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'जापान ट्रिप',
   'home.group.scanCode': 'या इस कोड को स्कैन करें',
   'home.group.title': 'ग्रुप शुरू करें। लिंक शेयर करें।',
-  'home.hero.audience': 'रूममेट्स, कपल्स, ट्रिप और जश्न के लिए।',
   'home.hero.ctaPrimary': 'ग्रुप शुरू करें',
   'home.hero.ctaSecondary': 'देखें यह कैसे काम करता है',
   'home.hero.haveAccount': 'क्या आपका पहले से खाता है?',

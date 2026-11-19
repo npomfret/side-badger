@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Turas na Seapáine',
   'home.group.scanCode': 'Nó scan an cód seo',
   'home.group.title': 'Tosaigh grúpa. Roinn nasc.',
-  'home.hero.audience': 'Do chomhchónaitheoirí, lánúineacha, turais agus ceiliúradh.',
   'home.hero.ctaPrimary': 'Tosaigh grúpa',
   'home.hero.ctaSecondary': 'Féach conas a oibríonn sé',
   'home.hero.haveAccount': 'An bhfuil cuntas agat cheana?',

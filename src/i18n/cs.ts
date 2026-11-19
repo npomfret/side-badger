@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Cesta do Japonska',
   'home.group.scanCode': 'Nebo naskenujte tento kód',
   'home.group.title': 'Založte skupinu. Sdílejte odkaz.',
-  'home.hero.audience': 'Pro spolubydlící, páry, výlety a oslavy.',
   'home.hero.ctaPrimary': 'Založte skupinu',
   'home.hero.ctaSecondary': 'Podívejte se, jak to funguje',
   'home.hero.haveAccount': 'Už máte účet?',

@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Taith i Japan',
   'home.group.scanCode': 'Neu sganiwch y cod hwn',
   'home.group.title': 'Cychwyn grŵp. Rhannu dolen.',
-  'home.hero.audience': 'Ar gyfer cyd-letywyr, cyplau, teithiau a dathliadau.',
   'home.hero.ctaPrimary': 'Cychwyn grŵp',
   'home.hero.ctaSecondary': 'Gweld sut mae\'n gweithio',
   'home.hero.haveAccount': 'Oes gennych chi gyfrif yn barod?',

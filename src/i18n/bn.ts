@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'জাপান ট্রিপ',
   'home.group.scanCode': 'অথবা এই কোডটি স্ক্যান করুন',
   'home.group.title': 'গ্রুপ শুরু করুন। লিঙ্ক শেয়ার করুন।',
-  'home.hero.audience': 'রুমমেট, দম্পতি, ট্রিপ আর উদযাপনের জন্য।',
   'home.hero.ctaPrimary': 'গ্রুপ শুরু করুন',
   'home.hero.ctaSecondary': 'কীভাবে কাজ করে দেখুন',
   'home.hero.haveAccount': 'আগে থেকেই অ্যাকাউন্ট আছে?',

@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Japan-tur',
   'home.group.scanCode': 'Eller skann denne koden',
   'home.group.title': 'Start en gruppe. Del en lenke.',
-  'home.hero.audience': 'For romkamerater og kollektiver, par, reiser og feiringer.',
   'home.hero.ctaPrimary': 'Start en gruppe',
   'home.hero.ctaSecondary': 'Se hvordan det fungerer',
   'home.hero.haveAccount': 'Har du allerede en konto?',

@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Voyage au Japon',
   'home.group.scanCode': 'Ou scannez ce code',
   'home.group.title': 'Lancez un groupe. Partagez un lien.',
-  'home.hero.audience': 'Pour les colocataires, les couples, les voyages et les fêtes.',
   'home.hero.ctaPrimary': 'Lancez un groupe',
   'home.hero.ctaSecondary': 'Voir comment ça marche',
   'home.hero.haveAccount': 'Vous avez déjà un compte ?',

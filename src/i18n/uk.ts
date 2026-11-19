@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Поїздка до Японії',
   'home.group.scanCode': 'Або відскануйте цей код',
   'home.group.title': 'Заведіть групу. Поділіться посиланням.',
-  'home.hero.audience': 'Для сусідів по квартирі, пар, подорожей і свят.',
   'home.hero.ctaPrimary': 'Заведіть групу',
   'home.hero.ctaSecondary': 'Подивитися, як це працює',
   'home.hero.haveAccount': 'Уже маєте обліковий запис?',

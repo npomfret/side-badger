@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Japan trip',
   'home.group.scanCode': 'Or scan dis code',
   'home.group.title': 'Start group. Share link.',
-  'home.hero.audience': 'For housemate dem, couples, trips, and celebrations.',
   'home.hero.ctaPrimary': 'Start group',
   'home.hero.ctaSecondary': 'See how e dey work',
   'home.hero.haveAccount': 'You don get account before?',

@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Liburan ke Jepang',
   'home.group.scanCode': 'Atau pindai kode ini',
   'home.group.title': 'Mulai grup. Bagikan tautan.',
-  'home.hero.audience': 'Untuk teman serumah, pasangan, perjalanan, dan perayaan.',
   'home.hero.ctaPrimary': 'Mulai grup',
   'home.hero.ctaSecondary': 'Lihat cara kerjanya',
   'home.hero.haveAccount': 'Sudah punya akun?',

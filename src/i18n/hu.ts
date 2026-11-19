@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Japán utazás',
   'home.group.scanCode': 'Vagy szkenneld be ezt a kódot',
   'home.group.title': 'Indíts csoportot. Oszd meg a linket.',
-  'home.hero.audience': 'Lakótársaknak, pároknak, utazásoknak és ünnepeknek.',
   'home.hero.ctaPrimary': 'Indíts csoportot',
   'home.hero.ctaSecondary': 'Nézd meg, hogyan működik',
   'home.hero.haveAccount': 'Már van fiókod?',

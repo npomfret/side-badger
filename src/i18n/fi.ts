@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Japanin matka',
   'home.group.scanCode': 'Tai skannaa tämä koodi',
   'home.group.title': 'Perusta ryhmä. Jaa linkki.',
-  'home.hero.audience': 'Kämppiksille, pareille, matkoille ja juhliin.',
   'home.hero.ctaPrimary': 'Perusta ryhmä',
   'home.hero.ctaSecondary': 'Katso, miten se toimii',
   'home.hero.haveAccount': 'Onko sinulla jo tili?',

@@ -131,7 +131,6 @@ export default {
   'home.group.name': '日本之旅',
   'home.group.scanCode': '或扫描此二维码',
   'home.group.title': '建一个群组，分享一个链接。',
-  'home.hero.audience': '适合室友、情侣、旅行和庆祝活动。',
   'home.hero.ctaPrimary': '创建群组',
   'home.hero.ctaSecondary': '了解使用方式',
   'home.hero.haveAccount': '已有账户？',

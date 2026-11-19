@@ -131,7 +131,6 @@ export default {
   'home.group.name': '日本旅行',
   'home.group.scanCode': 'またはこのコードをスキャン',
   'home.group.title': 'グループを作って、リンクを共有。',
-  'home.hero.audience': 'ルームメイト、カップル、旅行、お祝いごとに。',
   'home.hero.ctaPrimary': 'グループを作る',
   'home.hero.ctaSecondary': '使い方を見る',
   'home.hero.haveAccount': 'アカウントをお持ちの方は',

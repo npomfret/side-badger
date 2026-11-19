@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Ταξίδι στην Ιαπωνία',
   'home.group.scanCode': 'Ή σαρώστε αυτόν τον κωδικό',
   'home.group.title': 'Ξεκινήστε μια ομάδα. Μοιραστείτε έναν σύνδεσμο.',
-  'home.hero.audience': 'Για συγκάτοικους, ζευγάρια, ταξίδια και γιορτές.',
   'home.hero.ctaPrimary': 'Ξεκινήστε μια ομάδα',
   'home.hero.ctaSecondary': 'Δείτε πώς λειτουργεί',
   'home.hero.haveAccount': 'Έχετε ήδη λογαριασμό;',

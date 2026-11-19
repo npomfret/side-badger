@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Japānas ceļojums',
   'home.group.scanCode': 'Vai skenējiet šo kodu',
   'home.group.title': 'Sāciet grupu. Kopīgojiet saiti.',
-  'home.hero.audience': 'Mājokļa biedriem, pāriem, ceļojumiem un svinībām.',
   'home.hero.ctaPrimary': 'Sāciet grupu',
   'home.hero.ctaSecondary': 'Skatīt, kā tas darbojas',
   'home.hero.haveAccount': 'Jums jau ir konts?',

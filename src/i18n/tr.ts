@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Japonya gezisi',
   'home.group.scanCode': 'Veya bu kodu taratın',
   'home.group.title': 'Bir grup kurun. Bir bağlantı paylaşın.',
-  'home.hero.audience': 'Ev arkadaşları, çiftler, geziler ve kutlamalar için.',
   'home.hero.ctaPrimary': 'Bir grup kurun',
   'home.hero.ctaSecondary': 'Nasıl çalıştığını gör',
   'home.hero.haveAccount': 'Zaten hesabınız var mı?',

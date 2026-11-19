@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'رحلة اليابان',
   'home.group.scanCode': 'أو امسح هذا الرمز',
   'home.group.title': 'ابدأ مجموعة. وشارك رابطاً.',
-  'home.hero.audience': 'لزملاء السكن والأزواج والرحلات والاحتفالات.',
   'home.hero.ctaPrimary': 'ابدأ مجموعة',
   'home.hero.ctaSecondary': 'شاهد كيف يعمل',
   'home.hero.haveAccount': 'لديك حساب بالفعل؟',

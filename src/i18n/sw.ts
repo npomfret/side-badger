@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Safari ya Japani',
   'home.group.scanCode': 'Au skana msimbo huu',
   'home.group.title': 'Anzisha kikundi. Shiriki kiungo.',
-  'home.hero.audience': 'Kwa wapangaji wenza, wapenzi, safari, na sherehe.',
   'home.hero.ctaPrimary': 'Anzisha kikundi',
   'home.hero.ctaSecondary': 'Tazama inavyofanya kazi',
   'home.hero.haveAccount': 'Tayari una akaunti?',

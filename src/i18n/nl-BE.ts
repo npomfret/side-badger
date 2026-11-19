@@ -131,7 +131,6 @@ export default {
   'home.group.name': 'Japanreis',
   'home.group.scanCode': 'Of scan deze code',
   'home.group.title': 'Start een groep. Deel een link.',
-  'home.hero.audience': 'Voor huisgenoten, koppels, reizen en feestjes.',
   'home.hero.ctaPrimary': 'Start een groep',
   'home.hero.ctaSecondary': 'Zo werkt het',
   'home.hero.haveAccount': 'Heb je al een account?',

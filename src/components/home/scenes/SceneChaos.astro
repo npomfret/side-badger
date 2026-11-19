@@ -4,9 +4,9 @@
  * = tidy) and rests at stage 0, the mess, under reduced motion ("because chaos is the point").
  *
  * Copy: the page's only h1, the lede (which names the audiences), the `/go/register/` button
- * (`LaunchAppCta`, cta `hero`), the "See how it works" link, the "Already have an account? Sign in"
- * line (`/go/app/`, cta `hero-sign-in`) and the pricing line ("Free. No ads. No daily limits."
- * linking to /pricing/). None of it animates.
+ * (`LaunchAppCta`, cta `hero`), the "See how it works" link, then one small-print line with
+ * plain trust text ("Free. No ads. No daily limits.") and "Already have an account? Sign in"
+ * (`/go/app/`, cta `hero-sign-in`). None of it animates.
  *
  * Visual: three receipts, a spreadsheet with an unfinished total, a sticky note and a phone with
  * the group chat. Each prop sits in a `.chaos__item` wrapper that carries the tidy motion
@@ -29,7 +29,7 @@ import ChatPhone from '../props/chaos/ChatPhone.astro';
 import { t, type Locale } from '@/i18n';
 import { formatMoney } from '../format';
 import LaunchAppCta from '@/components/cta/LaunchAppCta.astro';
-import { pricingHref, resolveHowItWorks } from '../data/links';
+import { resolveHowItWorks } from '../data/links';
 
 interface Props {
   locale: Locale;
@@ -56,8 +56,10 @@ const sheetRows = [
       <LaunchAppCta target="register" cta="hero" pageId="home" locale={locale} class="btn-lg">{t('home.hero.ctaPrimary', locale)}</LaunchAppCta>
       <a class="scene-link" href={howItWorks.href}>{t(howItWorks.labelKey, locale)}</a>
     </div>
-    <p>{t('home.hero.haveAccount', locale)} <LaunchAppCta target="app" cta="hero-sign-in" pageId="home" locale={locale} variant="link" class="scene-link">{t('header.signIn', locale)}</LaunchAppCta></p>
-    <p><a class="scene-link" href={pricingHref(locale)}>{t('home.hero.trust', locale)}</a></p>
+    <p class="scene__meta">
+      <span>{t('home.hero.trust', locale)}</span>
+      <span>{t('home.hero.haveAccount', locale)} <LaunchAppCta target="app" cta="hero-sign-in" pageId="home" locale={locale} variant="link" class="scene-link">{t('header.signIn', locale)}</LaunchAppCta></span>
+    </p>
   </Fragment>
 
   <div slot="visual" class="chaos">
@@ -104,6 +106,16 @@ const sheetRows = [
 </ScrollScene>
 
 <style>
+  .scene__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: var(--space-md);
+    row-gap: var(--space-xs);
+    font-size: var(--text-xs);
+    color: var(--ink-muted);
+  }
+
   /* ===== Layout: a grid so props grow with their text and never clip ===== */
   .chaos {
     display: grid;

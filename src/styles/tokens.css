@@ -27,7 +27,8 @@
   /* Text colors */
   --text-primary: #1b3a27;
   --text-secondary: rgba(20, 83, 45, 0.85);
-  --text-muted: rgba(20, 83, 45, 0.6);
+  /* 0.75 keeps small muted text at AA (about 4.6:1) on the near-white footer, cards and page; 0.6 gave 3.2:1 */
+  --text-muted: rgba(20, 83, 45, 0.75);
   --text-heading: #0c1f16;
 
   /* ===== SPACING SYSTEM ===== */

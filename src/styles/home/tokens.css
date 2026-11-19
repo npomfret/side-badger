@@ -3,9 +3,22 @@
  * `--dir` (1, or -1 under dir="rtl") and `--header-h` come from the site tokens. The props'
  * palette (paper, ink, stickies, shadows, the app's colours) is `src/styles/props.css`.
  */
-.home {
-  /* Palette: the table is the homepage's own; paper, ink and the rest are in props.css */
+/*
+ * The table is the homepage's own colour. It is the page background, not only `.home`'s, so the
+ * paper runs edge to edge: behind the sticky header and down to the footer, with no strip of the
+ * site's green between them. Inner pages keep the green body. The colour is declared on :root (this
+ * file loads only on the homepage) so `.home` still has it in browsers without :has().
+ */
+:root {
   --table: #f4eee2;
+}
+
+body:has(.home) {
+  background: var(--table);
+}
+
+.home {
+  /* Palette: paper, ink and the rest are in props.css */
 
   /* Motion */
   --ease-paper: cubic-bezier(0.2, 0.8, 0.2, 1);

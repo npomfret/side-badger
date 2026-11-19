@@ -15,7 +15,8 @@ This file records the research discussed on 17 November and the owner's subseque
 - **The API will be a Pro account feature.** Document this requirement clearly in pricing, integration overviews, the API quickstart and access/error guidance. The Pro price, quotas and exact entitlement rules are not specified yet.
 - **Standalone MCP access and both ChatGPT and Claude plugins are planned.** The plugins combine MCP tools with skills. Explain each route separately so people can choose between direct API integration, an MCP client and a packaged assistant integration.
 - **MCP/plugin entitlement is not decided by this task.** Do not infer that they require Pro merely because the API does. Confirm how their underlying access is licensed before writing pricing claims.
-- This repository owns the marketing site and tenant-specific package/listing material; the shared bill-splitter repository owns the application, API/MCP implementation and shared skills. Coordinate documentation against those sources.
+- **API ownership — owner clarification, 19 November 2026.** Side Badger is a tenant of the base white-label bill splitter project (`wl-bill-splitter`). The base project owns API implementation and the creation, maintenance and serving of API documentation, including its reference, contract, quickstarts and examples. Carry out that work in the base project. This repository owns the tenant marketing site and tenant-specific package/listing material; its API-documentation responsibility is to render the documentation supplied by the base project.
+- **Render upstream documentation dynamically.** Follow the same source-owned approach requested for [policies](./load-policies-from-api.md): load API documentation from the base project's supported source at runtime, without committing copies, adding a sync/PR workflow or fetching it during the marketing build. Static page shells must build independently of that source. If it is unavailable, omit the documentation body and show an appropriate unavailable state. Confirm the delivery endpoint/format with the base project rather than inventing one here. Shared API/MCP implementation and skills also remain owned by the base project.
 - Reuse [the ChatGPT delivery record](../docs/chatgpt-plugin.md) and [package source](../integrations/chatgpt/README.md). The delivery record describes an existing deployed MCP endpoint and a prepared ChatGPT package, with outstanding verification/submission steps. Recheck current status before implementation; do not rebuild this work from scratch or equate an endpoint/package with a published integration.
 - This direction reopens the historical assumptions about there being no Pro tier in [the site expansion plan](./seo-site-expansion-plan.md), particularly D2 and D12. Reconcile affected claims when the offering ships; this task does not establish a public launch date.
 
@@ -66,9 +67,12 @@ Explain the free offering and Pro API separately using the confirmed pricing mod
 
 ### 3. Publish usable integration documentation
 
+API documentation creation and delivery in this section belong to `wl-bill-splitter`. This tenant renders the supplied documentation and provides tenant navigation, branding and links. Shared documentation corrections go back to the base project; do not author a second API reference or quickstart here.
+
 - [ ] Choose the documentation location and page structure. Provide a public, indexable integration overview linking to API, MCP, ChatGPT and Claude setup guides; final paths are to be settled during implementation.
-- [ ] **API overview and quickstart:** state the Pro requirement before setup, show how to obtain access, identify the verified production base URL/version, and provide a working request/response example and troubleshooting for missing entitlement or authentication.
-- [ ] **API reference:** publish the authoritative machine-readable contract (OpenAPI if supported by the implementation), with authentication, scopes/permissions, endpoint inputs/outputs, amounts/currencies/dates, pagination, errors, rate limits, retries/idempotency where supported, and version/deprecation guidance. Keep executable examples aligned with that contract.
+- [ ] **API overview and quickstart (base project):** create and serve documentation stating the Pro requirement before setup, showing how to obtain access, identifying the verified production base URL/version, and providing a working request/response example and troubleshooting for missing entitlement or authentication. Render that source in the tenant site.
+- [ ] **API reference (base project):** create and serve the authoritative machine-readable contract (OpenAPI if supported by the implementation) and documentation covering authentication, scopes/permissions, endpoint inputs/outputs, amounts/currencies/dates, pagination, errors, rate limits, retries/idempotency where supported, and version/deprecation guidance. Keep executable examples aligned with that contract upstream; the tenant consumes and renders it.
+- [ ] **Tenant renderer:** consume the base project's documentation delivery contract at runtime, with safe rendering, accessible loading/error states and verified browser/CSP access. Confirm that upstream documentation updates appear without rebuilding this site, and that an unavailable source does not block the build. Do not bundle a documentation snapshot as a fallback.
 - [ ] **MCP setup:** document the verified endpoint, transport, supported clients, authentication/account linking, entitlements, tool capabilities and limits, reconnect/revoke steps, and an end-to-end example.
 - [ ] **ChatGPT plugin:** link the verified public installation/listing when available. Explain MCP plus skills, account linking, prerequisites, example prompts, supported actions and troubleshooting. Reuse the existing delivery record and package.
 - [ ] **Claude plugin:** document its actual installation/distribution route, MCP plus skills, supported clients, account linking, prerequisites, example prompts, supported actions and troubleshooting. Do not assume ChatGPT's packaging or listing process applies.
@@ -80,6 +84,8 @@ Explain the free offering and Pro API separately using the confirmed pricing mod
 ### 4. Serve Markdown to agents
 
 Owner requested on 18 November 2026. Include Markdown representations of public product and documentation pages, prioritising the product overview, pricing and API/MCP/plugin guides. This helps agents consume the information after finding it; HTML discovery and usable integrations remain necessary.
+
+The 19 November ownership clarification applies to API documentation: the existing HTML-to-Markdown build covers locally maintained marketing content. For runtime API documentation, use or link the base project's supplied machine-readable representation; do not copy its documentation into this repository or introduce build-time API fetches to generate tenant Markdown assets. Reconcile discovery links and checks with that delivery model.
 
 - [x] Generate Markdown at build time from the same maintained content as HTML. Preserve meaningful headings, factual copy, plan requirements, limits, examples and links; omit decorative scenes and repeated site chrome. Do not maintain a second set of marketing claims.
 - [x] Serve a page's Markdown representation at its existing canonical URL when the request explicitly prefers `Accept: text/markdown`. Respect media-type quality values and exclusions (`q=0`); define and test tie handling. Missing headers, `*/*` alone and normal browser requests should continue to receive HTML. Do not use User-Agent detection.
@@ -108,11 +114,12 @@ Owner requested on 18 November 2026. Include Markdown representations of public 
 - An agent can follow a discover → assess fit → choose integration → connect → complete a supported task journey. Evaluation records where it succeeds or fails rather than counting mentions as completed use.
 - Public Markdown representations agree with HTML, are discoverable, and are served correctly for `Accept: text/markdown` without mixing HTML and Markdown in caches or exposing unpublished content.
 - Documentation examples match the shipped contracts, and website, pricing, policies and integration materials make consistent claims.
+- API implementation and authoritative API documentation are created and maintained in `wl-bill-splitter`. This tenant renders the upstream documentation dynamically, without committed copies or sync machinery; its build succeeds when the documentation source is unavailable.
 - Outstanding upstream decisions or release dependencies are explicit; unsupported capabilities and unpublished marketplace availability are never presented as live.
 
 ## Dependencies to resolve during implementation
 
-- API contract, authentication and release/version policy from the application repository.
+- API implementation, authoritative documentation, contract, authentication and release/version policy from the base `wl-bill-splitter` project, including a supported runtime documentation delivery endpoint/format for tenant rendering.
 - Pro price, quotas, entitlement lifecycle and corresponding billing/policy wording.
 - MCP, ChatGPT and Claude entitlement decisions and confirmed distribution/install details.
 - Final documentation hosting, public URLs and localisation approach.

@@ -15,6 +15,7 @@ The site redesign (restructure task, homepage task and release 1 of [the site pl
   manifest passes Chrome's installability check (app commits `276634759`, `683b85b1b`), and its
   sign-up page sends signed-in visitors to the dashboard. Still open: watch `/go/app/` counts for
   `cta=hero-sign-in` and `cta=menu` to see how returning phone users sign in.
+- **Receipt scan in the homepage hero.** Promote the existing scan animation from scene 3 into the hero visual: planned in [homepage-receipt-scan-hero.md](./homepage-receipt-scan-hero.md).
 
 ## Owner actions
 

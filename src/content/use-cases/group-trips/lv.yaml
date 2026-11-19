@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -26,9 +26,9 @@ identicalApproved:
   - example.people.3.name
   - example.expenses.1.label
 meta:
-  title: "Sadaliet grupas ceļojuma izmaksas 140 valūtās"
+  title: "Sadaliet grupas ceļojuma izmaksas 133 valūtās"
   description: "Sekojiet, kurš par ko maksāja grupas ceļojumā, ievadiet izmaksas vietējā valūtā, konvertējiet tās vai ne un norēķinieties vienreiz beigās. Bez maksas, jūsu pārlūkprogrammā."
-h1: "Sadaliet grupas ceļojuma izmaksas 140 valūtās"
+h1: "Sadaliet grupas ceļojuma izmaksas 133 valūtās"
 navLabel: "Grupu ceļojumi"
 lead: "Sekojiet villai, taksometriem un tai kokteiļu kārtai, ko neviens neatceras brīvprātīgi apņēmies pirkt. Side Badger uztur kārtējo uzskaiti, kamēr esat prom, [apstrādā mārciņas, eiro un 138 citas valūtas](page:feature/multiple-currencies) un, kad atgriezīsieties mājās, iedod [īsu maksājumu sarakstu](page:feature/settle-up)."
 cta:
@@ -107,4 +107,4 @@ faq:
     - q: "Vai grupu pēc ceļojuma var iesaldēt?"
       a: "Jā. Administrators var bloķēt grupu, lai skaitļi paliktu nemainīgi."
     - q: "Vai ir summu ierobežojums?"
-      a: "Jā. 999 999,99 par izdevumu, savā valūtā."
+      a: "Jā. Izdevums var būt līdz 999 999,99 savā valūtā, un vairāk valūtām ar mazām vienībām, piemēram, jenai vai rūpijai."

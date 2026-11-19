@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -26,9 +26,9 @@ identicalApproved:
   - example.people.3.name
   - example.expenses.1.label
 meta:
-  title: "Verdeel de kosten van een groepsreis, in 140 valuta’s"
+  title: "Verdeel de kosten van een groepsreis, in 133 valuta’s"
   description: "Hou bij wie wat betaalde op een groepsreis, voer kosten in de lokale valuta in, reken om of niet, en reken één keer af op het einde. Gratis, in je browser."
-h1: "Verdeel de kosten van een groepsreis, in 140 valuta’s"
+h1: "Verdeel de kosten van een groepsreis, in 133 valuta’s"
 navLabel: "Groepsreizen"
 lead: "Hou de villa, de taxi en die ene ronde cocktails bij waarvan niemand zich herinnert dat hij ze aanbood. Side Badger houdt de lopende rekening bij terwijl je weg bent, [kan overweg met ponden, euro’s en 138 andere valuta’s](page:feature/multiple-currencies) en geeft je een [korte lijst betalingen](page:feature/settle-up) wanneer je thuiskomt."
 cta:
@@ -107,4 +107,4 @@ faq:
     - q: "Kunnen we de groep na de reis bevriezen?"
       a: "Ja. Een beheerder kan de groep vergrendelen zodat de cijfers blijven staan."
     - q: "Is er een limiet op bedragen?"
-      a: "Ja. 999.999,99 per uitgave, in haar eigen valuta."
+      a: "Ja. Een uitgave kan tot 999.999,99 bedragen in haar eigen valuta, en meer voor valuta’s met kleine eenheden, zoals yen of roepia."

@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -51,7 +51,7 @@ steps:
     shot: S05
     shotAlt: "Y ffurflen gost gyda rhaniad yn ôl canran, yn rhannu'r rhent yn ôl maint ystafell"
   - title: "Gwylio'r balansau"
-    body: "Mae Side Badger yn cadw balans cyfredol ar gyfer pob arian cyfred, fel y gallwch weld pwy sy'n ddyledus i bwy ar un olwg. Yn hytrach na gadael i bawb ddatrys gwe o ddyledion bach, mae'n awgrymu rhestr fer o daliadau sy'n setlo'r grŵp."
+    body: "Mae Side Badger yn cadw balans cyfredol ar gyfer pob arian cyfred, fel y gallwch weld pwy sy'n ddyledus i bwy ar un olwg. Os oedd cost mewn arian cyfred arall, gallwch ei throsi ar gyfradd sydd wedi'i nôl, y gallwch ei golygu; fel arall mae pob arian cyfred yn cadw ei falans ei hun. Yn hytrach na gadael i bawb ddatrys gwe o ddyledion bach, mae'n awgrymu rhestr fer o daliadau sy'n setlo'r grŵp."
     shot: S10
     shotAlt: "Sgrin y balansau yn dangos dyledion wedi'u symleiddio mewn dau arian cyfred, gyda Dangos y cyfan wedi'i droi ymlaen"
   - title: "Setlo y tu allan i'r ap, cofnodi y tu mewn iddo"
@@ -103,4 +103,4 @@ faq:
     - q: "Faint o bobl all ymuno â grŵp?"
       a: "Hyd at 50 o bobl mewn grŵp. Gwahoddwch nhw gyda dolen neu god QR, a throwch gymeradwyaeth ymlaen os ydych am i weinyddwr adael pob person i mewn."
     - q: "Beth am deithiau gyda mwy nag un arian cyfred?"
-      a: "Cedwir balansau ar wahân ar gyfer pob arian cyfred. Gweler [arian cyfred lluosog](page:feature/multiple-currencies)."
+      a: "Cedwir balansau ar wahân ar gyfer pob arian cyfred, a gallwch drosi cost ar gyfradd sydd wedi'i nôl, y gallwch ei golygu. Gweler [arian cyfred lluosog](page:feature/multiple-currencies)."

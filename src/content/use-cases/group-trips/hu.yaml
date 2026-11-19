@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T5-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -26,9 +26,9 @@ claims:
   - permissions.managed-group
   - permissions.lock-the-group
 meta:
-  title: "Oszd meg egy csoportos utazás költségeit, 140 pénznemben"
+  title: "Oszd meg egy csoportos utazás költségeit, 133 pénznemben"
   description: "Kövesd, ki mit fizetett egy csoportos utazáson, add meg a költségeket helyi pénznemben, válts át, vagy ne, és számoljatok el egyszer a végén. Ingyenes, a böngészőben."
-h1: "Oszd meg egy csoportos utazás költségeit, 140 pénznemben"
+h1: "Oszd meg egy csoportos utazás költségeit, 133 pénznemben"
 navLabel: "Csoportos utazások"
 lead: "Kövesd a villát, a taxikat és azt az egy kör koktélt, amelynek kifizetésére senki nem emlékszik, hogy jelentkezett volna. A Side Badger vezeti a számolást, amíg távol vagy, [kezeli a fontot, az eurót és 138 másik pénznemet](page:feature/multiple-currencies), és hazaérkezéskor ad egy [rövid kifizetéslistát](page:feature/settle-up)."
 cta:
@@ -107,4 +107,4 @@ faq:
     - q: "Befagyaszthatjuk a csoportot az utazás után?"
       a: "Igen. Egy adminisztrátor zárolhatja a csoportot, hogy a számok a helyükön maradjanak."
     - q: "Van korlátja az összegeknek?"
-      a: "Igen. 999 999,99 költségenként, a saját pénznemében."
+      a: "Igen. Egy költség legfeljebb 999 999,99 lehet a saját pénznemében, a kis egységű pénznemeknél, például a jennél vagy az indonéz rúpiánál pedig több."

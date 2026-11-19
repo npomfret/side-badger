@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T-amounts-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - multi-currency.currency-count
   - multi-currency.currency-rules
@@ -13,11 +13,11 @@ claims:
   - currency-conversion.owe-euros-pay-pounds
   - settlements.pay-however-then-record
 meta:
-  title: "Bagi biaya dalam 140 mata uang, dikonversi atau dipisahkan"
+  title: "Bagi biaya dalam 133 mata uang, dikonversi atau dipisahkan"
   description: "Catat setiap pengeluaran dalam mata uang yang Anda pakai untuk membayar, pisahkan saldo atau konversi dengan kurs yang bisa Anda lihat dan ubah, lalu lunasi dengan daftar pembayaran singkat."
-h1: "Bagi biaya dalam 140 mata uang"
+h1: "Bagi biaya dalam 133 mata uang"
 navLabel: "Beberapa mata uang"
-lead: "Euro, yen, dan satu taksi dalam baht itu. Side Badger menerima setiap pengeluaran dalam mata uang yang Anda pakai untuk membayar, menjaga saldo tetap rapi, dan bisa mengonversi saat grup Anda lebih suka melunasi sekali saja. Berfungsi dalam 140 mata uang, dan sangat cocok untuk [perjalanan grup](page:use-case/group-trips)."
+lead: "Euro, yen, dan satu taksi dalam baht itu. Side Badger menerima setiap pengeluaran dalam mata uang yang Anda pakai untuk membayar, menjaga saldo tetap rapi, dan bisa mengonversi saat grup Anda lebih suka melunasi sekali saja. Berfungsi dalam 133 mata uang, dan sangat cocok untuk [perjalanan grup](page:use-case/group-trips)."
 cta:
   heading: "Bawa euro Anda, bawa yen Anda"
   body: "Buat akun, mulai grup, dan tambahkan pengeluaran pertama dalam mata uang apa pun yang kebetulan Anda pegang."
@@ -100,8 +100,8 @@ limits:
     - "Kurs ditetapkan saat pengeluaran disimpan. Pengeluaran lama tidak pernah dinilai ulang."
     - "Side Badger mengambil kurs terkini jika bisa. Tidak semua pasangan mata uang dijamin mendapatkannya, dan Anda selalu bisa mengetik kursnya sendiri."
     - "Konversi otomatis grup hanya berlaku untuk pengeluaran baru dan salinan, bukan untuk perubahan atau pengeluaran yang sudah ada."
-    - "Setiap pengeluaran dibatasi 999.999,99 dalam mata uangnya sendiri."
-    - "Ada 140 mata uang. Mata uang kripto dan logam tidak termasuk."
+    - "Satu pengeluaran bisa mencapai 999.999,99 dalam mata uangnya sendiri, dan lebih besar untuk mata uang dengan satuan kecil, seperti yen atau rupiah."
+    - "Ada 133 mata uang. Mata uang kripto dan logam tidak termasuk."
     - "Side Badger mencatat pembayaran. Ia tidak pernah memindahkan atau menukar uang."
 useCasesHeading: "Di mana ini membantu"
 faq:
@@ -112,9 +112,9 @@ faq:
     - q: "Apakah pengeluaran lama dinilai ulang?"
       a: "Tidak. Kurs ditetapkan saat pengeluaran disimpan, jadi saldo tidak bergeser hanya karena pasar bergerak."
     - q: "Apakah mendukung kripto?"
-      a: "Tidak. Ada 140 mata uang, dan mata uang kripto tidak termasuk."
-    - q: "Mengapa saya tidak bisa memasukkan 2.000.000 rupiah?"
-      a: "Setiap pengeluaran dibatasi 999.999,99 dalam mata uangnya sendiri. Masukkan dalam mata uang lain lalu konversi, atau pecah menjadi dua pengeluaran."
+      a: "Tidak. Ada 133 mata uang, dan mata uang kripto tidak termasuk."
+    - q: "Apakah ada batas seberapa besar satu pengeluaran?"
+      a: "Ya. Satu pengeluaran bisa mencapai 999.999,99 dalam mata uangnya sendiri, dan lebih besar untuk mata uang dengan satuan kecil, seperti yen atau rupiah. Jika tercapai, pecah menjadi dua pengeluaran, atau masukkan dalam mata uang lain lalu konversi."
     - q: "Apakah konversi dikenai biaya?"
       a: "Tidak. Mengonversi gratis, seperti bagian Side Badger lainnya. Lihat [harga](page:pricing)."
     - q: "Apakah saya harus mengonversi?"

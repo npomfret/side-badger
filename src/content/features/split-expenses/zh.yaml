@@ -1,8 +1,8 @@
-translatedFrom: "0780798c"
+translatedFrom: "e769b463"
 review:
   status: checked
-  checker: "C2b-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -112,7 +112,7 @@ limits:
     - 每笔支出只有一位付款人。如果两个人都付了钱，就记两笔支出。
     - 不支持按物品分摊，也不支持按份数分摊。现有的就是平均、确切金额和比例。
     - 比例加起来必须是 100。
-    - 一笔支出以其自身货币计，最高 999,999.99，小数位数按该货币的惯例。
+    - 一笔支出以其自身货币计，最高 999,999.99，单位较小的货币可以更高，小数位数按该货币的惯例。
     - 支出不能自动重复。请复制上个月的那笔。
     - 日期不能在未来，也不能早于 10 年前。
     - 涉及已退出群组之人的支出会变成只读。

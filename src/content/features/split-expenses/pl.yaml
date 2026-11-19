@@ -1,8 +1,8 @@
-translatedFrom: "0780798c"
+translatedFrom: "e769b463"
 review:
   status: checked
-  checker: "C2b-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -116,7 +116,7 @@ limits:
     - "Za każdy wydatek płaci jedna osoba. Jeśli zapłaciły dwie, zarejestruj dwa wydatki."
     - "Nie ma dzielenia według pozycji ani według udziałów. Jest po równo, według dokładnych kwot i procentowo."
     - "Procenty muszą dawać w sumie 100."
-    - "Wydatek może wynosić do 999 999,99 w swojej walucie, z liczbą miejsc po przecinku zwykłą dla tej waluty."
+    - "Wydatek może wynosić do 999 999,99 w swojej walucie, a więcej w przypadku walut o małych jednostkach, z liczbą miejsc po przecinku zwykłą dla tej waluty."
     - "Wydatki nie powtarzają się same. Skopiuj zeszłomiesięczny."
     - "Daty nie mogą być w przyszłości ani starsze niż 10 lat."
     - "Wydatek z udziałem osoby, która opuściła grupę, staje się tylko do odczytu."

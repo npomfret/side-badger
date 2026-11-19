@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T1-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -20,9 +20,9 @@ claims:
   - permissions.managed-group
   - permissions.lock-the-group
 meta:
-  title: 分摊团体旅行的费用，支持 140 种货币
+  title: 分摊团体旅行的费用，支持 133 种货币
   description: 记录团体旅行中谁付了什么，用当地货币录入费用，换算与否随你，最后一次结清。免费，在浏览器中使用。
-h1: 分摊团体旅行的费用，支持 140 种货币
+h1: 分摊团体旅行的费用，支持 133 种货币
 navLabel: 团体旅行
 lead: 记下别墅、出租车，还有那轮没人记得自己答应请的鸡尾酒。你在外面玩的时候，Side Badger 帮你持续记账，[支持英镑、欧元和另外 138 种货币](page:feature/multiple-currencies)，回家后给你一份[简短的付款清单](page:feature/settle-up)。
 cta:
@@ -101,7 +101,7 @@ faq:
     - q: 旅行结束后可以冻结群组吗？
       a: 可以。管理员可以锁定群组，让数字不再变动。
     - q: 金额有上限吗？
-      a: 有。每笔支出以其自身货币计，最高 999,999.99。
+      a: 有。一笔支出以其自身货币计，最高 999,999.99；日元、印尼盾等单位较小的货币可以更高。
 identicalApproved:
   - example.people.0.name
   - example.people.1.name

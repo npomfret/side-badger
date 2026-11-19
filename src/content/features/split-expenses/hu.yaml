@@ -1,8 +1,8 @@
-translatedFrom: "0780798c"
+translatedFrom: "e769b463"
 review:
   status: checked
-  checker: "C2a-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -116,7 +116,7 @@ limits:
     - "Minden költséget egy ember fizet. Ha ketten fizettek, rögzíts két költséget."
     - "Nincs tételenkénti felosztás és nincs részarányos felosztás. Az egyenlő, a pontos összegek és a százalékok léteznek."
     - "A százalékoknak együtt 100-at kell kiadniuk."
-    - "Egy költség legfeljebb 999 999,99 lehet a saját pénznemében, az adott pénznem szokásos tizedesjegyeivel."
+    - "Egy költség legfeljebb 999 999,99 lehet a saját pénznemében, a kis egységű pénznemeknél pedig több, az adott pénznem szokásos tizedesjegyeivel."
     - "A költségek nem ismétlődnek maguktól. Másold le helyette a múlt havit."
     - "A dátum nem lehet a jövőben, és nem lehet 10 évnél régebbi."
     - "Az a költség, amelyben olyasvalaki érintett, aki elhagyta a csoportot, csak olvashatóvá válik."

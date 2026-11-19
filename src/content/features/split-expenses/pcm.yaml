@@ -1,8 +1,8 @@
-translatedFrom: "0780798c"
+translatedFrom: "e769b463"
 review:
   status: checked
-  checker: "C2b-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -117,7 +117,7 @@ limits:
     - "One person dey pay for each expense. If two people pay, record two expenses."
     - "No split by item and no split by shares. Equal, exact amounts and percentages na wetin dey."
     - "Di percentages must add up to 100."
-    - "One expense fit reach 999,999.99 for im own currency, with dat currency usual decimal places."
+    - "One expense fit reach 999,999.99 for im own currency, and more for currencies wey get small units, with dat currency usual decimal places."
     - "Expenses no fit repeat by themselves. Copy last month own instead."
     - "Dates no fit dey for future or more than 10 years ago."
     - "Expense wey involve person wey don leave di group go become read-only."

@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T1-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -25,9 +25,9 @@ claims:
   - permissions.managed-group
   - permissions.lock-the-group
 meta:
-  title: グループ旅行の費用を140の通貨で割り勘
+  title: グループ旅行の費用を133の通貨で割り勘
   description: グループ旅行で誰が何を支払ったかを記録し、現地の通貨で入力し、換算するかどうかを選んで、最後に一度で精算します。無料で、ブラウザで使えます。
-h1: グループ旅行の費用を140の通貨で割り勘
+h1: グループ旅行の費用を133の通貨で割り勘
 navLabel: グループ旅行
 lead: ヴィラ代、タクシー代、そして誰も払うと言った覚えのないカクテルの一杯を記録します。Side Badgerは旅行中の収支を記録し続け、[ポンド、ユーロ、ほか138の通貨に対応](page:feature/multiple-currencies)し、帰宅したら[短い支払いリスト](page:feature/settle-up)を提示します。
 cta:
@@ -106,4 +106,4 @@ faq:
     - q: 旅行のあと、グループを固定できますか？
       a: はい。管理者がグループをロックすれば、数字は動きません。
     - q: 金額に上限はありますか？
-      a: はい。1件の支出につき、その通貨で999,999.99までです。
+      a: はい。1件の支出は、その通貨で999,999.99までです。円やインドネシアルピアのように単位が小さい通貨では、さらに大きな額も入力できます。

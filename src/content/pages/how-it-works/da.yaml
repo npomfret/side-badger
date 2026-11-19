@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -51,7 +51,7 @@ steps:
     shot: S05
     shotAlt: Udgiftsformularen med en procentdeling, der fordeler huslejen efter værelsernes størrelse
   - title: Følg med i saldiene
-    body: Side Badger fører en løbende saldo for hver valuta, så du med et enkelt blik kan se, hvem der skylder hvem. I stedet for at lade alle rode et net af små gældsposter ud, foreslår den en kort liste over betalinger, der gør op for gruppen.
+    body: Side Badger fører en løbende saldo for hver valuta, så du med et enkelt blik kan se, hvem der skylder hvem. Hvis en udgift var i en anden valuta, kan du omregne den til en hentet kurs, som du kan redigere; ellers beholder hver valuta sin egen saldo. I stedet for at lade alle rode et net af små gældsposter ud, foreslår den en kort liste over betalinger, der gør op for gruppen.
     shot: S10
     shotAlt: Saldoskærmen med forenklet gæld i to valutaer og Vis alle slået til
   - title: Gør op uden for appen, registrer det i den
@@ -103,4 +103,4 @@ faq:
     - q: Hvor mange kan være med i en gruppe?
       a: Op til 50 personer i en gruppe. Inviter dem med et link eller en QR-kode, og slå godkendelse til, hvis du vil have en administrator til at lukke hver person ind.
     - q: Hvad med ture med mere end én valuta?
-      a: Saldiene føres adskilt for hver valuta. Se [flere valutaer](page:feature/multiple-currencies).
+      a: Saldiene føres adskilt for hver valuta, og du kan omregne en udgift til en hentet kurs, som du kan redigere. Se [flere valutaer](page:feature/multiple-currencies).

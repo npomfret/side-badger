@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T-amounts-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - multi-currency.currency-count
   - multi-currency.currency-rules
@@ -18,11 +18,11 @@ identicalApproved:
   - example.people.2.name
   - example.people.3.name
 meta:
-  title: Jaa kulut 140 valuutassa, muunnettuna tai erillään
+  title: Jaa kulut 133 valuutassa, muunnettuna tai erillään
   description: Syötä jokainen kulu valuutalla, jolla maksoit, pidä saldot erillään tai muunna kurssilla, jonka näet ja voit muuttaa, ja tasaa sitten tilit lyhyellä maksulistalla.
-h1: Jaa kulut 140 valuutassa
+h1: Jaa kulut 133 valuutassa
 navLabel: Useita valuuttoja
-lead: Euroja, jenejä ja se yksi taksi bahteina. Side Badger ottaa jokaisen kulun siinä valuutassa, jolla maksoit, pitää saldot järjestyksessä ja voi muuntaa, kun ryhmä haluaa tasata kerralla. Se toimii 140 valuutassa ja sopii luontevasti [ryhmämatkoille](page:use-case/group-trips).
+lead: Euroja, jenejä ja se yksi taksi bahteina. Side Badger ottaa jokaisen kulun siinä valuutassa, jolla maksoit, pitää saldot järjestyksessä ja voi muuntaa, kun ryhmä haluaa tasata kerralla. Se toimii 133 valuutassa ja sopii luontevasti [ryhmämatkoille](page:use-case/group-trips).
 cta:
   heading: Tuo eurosi, tuo jenisi
   body: Luo tili, perusta ryhmä ja lisää ensimmäinen kulu missä valuutassa tahansa, joka sattui olemaan kädessä.
@@ -105,8 +105,8 @@ limits:
     - Kurssi lukitaan, kun kulu tallennetaan. Vanhoja kuluja ei koskaan arvosteta uudelleen.
     - Side Badger hakee nykyisen kurssin, kun mahdollista. Kaikille valuuttapareille ei ole varmuutta kurssista, ja voit aina kirjoittaa kurssin itse.
     - Ryhmän automaattinen muunnos koskee vain uusia ja kopioituja kuluja, ei muokkauksia eikä olemassa olevia kuluja.
-    - Jokainen kulu on enintään 999 999,99 omassa valuutassaan.
-    - Valuuttoja on 140. Kryptovaluutat ja metallit eivät kuulu joukkoon.
+    - Yksi kulu voi olla enintään 999 999,99 omassa valuutassaan, ja enemmän valuutoissa, joiden yksiköt ovat pieniä, kuten jeni tai Indonesian rupia.
+    - Valuuttoja on 133. Kryptovaluutat ja metallit eivät kuulu joukkoon.
     - Side Badger kirjaa maksuja. Se ei koskaan siirrä rahaa eikä vaihda sitä.
 useCasesHeading: Missä tästä on hyötyä
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: Arvostetaanko vanhat kulut uudelleen?
       a: Ei. Kurssi lukitaan, kun kulu tallennetaan, joten saldo ei ajelehdi markkinoiden mukana.
     - q: Tuetteko kryptoa?
-      a: Ei. Valuuttoja on 140, eivätkä kryptovaluutat kuulu niihin.
-    - q: Miksi en voi syöttää 2 000 000 rupiaa?
-      a: Jokainen kulu on enintään 999 999,99 omassa valuutassaan. Syötä se toisessa valuutassa ja muunna tai jaa kahdeksi kuluksi.
+      a: Ei. Valuuttoja on 133, eivätkä kryptovaluutat kuulu niihin.
+    - q: Onko kulun suuruudella ylärajaa?
+      a: Kyllä. Yksi kulu voi olla enintään 999 999,99 omassa valuutassaan, ja enemmän valuutoissa, joiden yksiköt ovat pieniä, kuten jeni tai Indonesian rupia. Jos raja tulee vastaan, jaa kulu kahdeksi kuluksi tai syötä se toisessa valuutassa ja muunna.
     - q: Maksaako muuntaminen mitään?
       a: Ei. Muuntaminen on ilmaista kuten muukin Side Badgerissa. Katso [hinnoittelu](page:pricing).
     - q: Onko minun pakko muuntaa?

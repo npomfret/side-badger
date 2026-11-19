@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -52,7 +52,7 @@ steps:
     shot: S05
     shotAlt: Utgiftsformuläret med en procentuell delning där hyran delas efter rummens storlek
   - title: Håll koll på saldona
-    body: Side Badger håller ett löpande saldo för varje valuta, så att du med en blick ser vem som är skyldig vem. I stället för att låta alla reda ut ett nät av små skulder föreslår appen en kort lista med betalningar som gör upp för gruppen.
+    body: Side Badger håller ett löpande saldo för varje valuta, så att du med en blick ser vem som är skyldig vem. Om en utgift var i en annan valuta kan du räkna om den till en hämtad kurs som du kan ändra, annars behåller varje valuta sitt eget saldo. I stället för att låta alla reda ut ett nät av små skulder föreslår appen en kort lista med betalningar som gör upp för gruppen.
     shot: S10
     shotAlt: Saldoskärmen med förenklade skulder i två valutor och Visa alla påslaget
   - title: Gör upp utanför appen, registrera i den
@@ -104,4 +104,4 @@ faq:
     - q: Hur många kan gå med i en grupp?
       a: Upp till 50 personer i en grupp. Bjud in dem med en länk eller en QR-kod, och slå på godkännande om du vill att en administratör ska släppa in varje person.
     - q: Hur är det med resor med mer än en valuta?
-      a: Saldona hålls separata för varje valuta. Se [flera valutor](page:feature/multiple-currencies).
+      a: Saldona hålls separata för varje valuta, och du kan räkna om en utgift till en hämtad kurs som du kan ändra. Se [flera valutor](page:feature/multiple-currencies).

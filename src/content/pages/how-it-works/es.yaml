@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -52,7 +52,7 @@ steps:
     shot: S05
     shotAlt: El formulario de gasto con una división por porcentaje, repartiendo el alquiler según el tamaño de cada habitación
   - title: Vigila los saldos
-    body: Side Badger lleva un saldo al día para cada moneda, así que puedes ver de un vistazo quién debe a quién. En lugar de dejar que cada uno desenrede una maraña de deudas pequeñas, sugiere una lista corta de pagos que deja saldado al grupo.
+    body: Side Badger lleva un saldo al día para cada moneda, así que puedes ver de un vistazo quién debe a quién. Si un gasto fue en otra moneda, puedes convertirlo a un tipo de cambio obtenido que puedes editar; si no, cada moneda mantiene su propio saldo. En lugar de dejar que cada uno desenrede una maraña de deudas pequeñas, sugiere una lista corta de pagos que deja saldado al grupo.
     shot: S10
     shotAlt: La pantalla de saldos con las deudas simplificadas en dos monedas y la opción «Mostrar todo» activada
   - title: Salda cuentas fuera de la app y regístralo dentro
@@ -104,4 +104,4 @@ faq:
     - q: ¿Cuántas personas pueden unirse a un grupo?
       a: Hasta 50 personas por grupo. Invítalas con un enlace o un código QR, y activa la aprobación si quieres que un administrador deje entrar a cada persona.
     - q: ¿Y los viajes con más de una moneda?
-      a: Los saldos se llevan por separado para cada moneda. Consulta [varias monedas](page:feature/multiple-currencies).
+      a: Los saldos se llevan por separado para cada moneda, y puedes convertir un gasto a un tipo de cambio obtenido que puedes editar. Consulta [varias monedas](page:feature/multiple-currencies).

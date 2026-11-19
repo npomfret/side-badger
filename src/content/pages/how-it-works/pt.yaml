@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -51,7 +51,7 @@ steps:
     shot: S05
     shotAlt: "O formulário de despesa com uma divisão por percentagem, dividindo a renda pelo tamanho dos quartos"
   - title: "Acompanha os saldos"
-    body: "O Side Badger mantém um saldo corrente para cada moeda, para veres quem deve a quem de relance. Em vez de deixar toda a gente a desembaraçar uma teia de pequenas dívidas, sugere uma lista curta de pagamentos que acerta as contas do grupo."
+    body: "O Side Badger mantém um saldo corrente para cada moeda, para veres quem deve a quem de relance. Se uma despesa foi noutra moeda, podes convertê-la a uma taxa obtida automaticamente que podes editar; caso contrário, cada moeda mantém o seu próprio saldo. Em vez de deixar toda a gente a desembaraçar uma teia de pequenas dívidas, sugere uma lista curta de pagamentos que acerta as contas do grupo."
     shot: S10
     shotAlt: "O ecrã de saldos com dívidas simplificadas em duas moedas, com Mostrar tudo ativado"
   - title: "Acerta fora da app, regista dentro"
@@ -103,4 +103,4 @@ faq:
     - q: "Quantas pessoas podem entrar num grupo?"
       a: "Até 50 pessoas num grupo. Convida-as com um link ou um código QR e ativa a aprovação se quiseres que um administrador deixe entrar cada pessoa."
     - q: "E as viagens com mais de uma moeda?"
-      a: "Os saldos são mantidos em separado para cada moeda. Vê [várias moedas](page:feature/multiple-currencies)."
+      a: "Os saldos são mantidos em separado para cada moeda, e podes converter uma despesa a uma taxa obtida automaticamente que podes editar. Vê [várias moedas](page:feature/multiple-currencies)."

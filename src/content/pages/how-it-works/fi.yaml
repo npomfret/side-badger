@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -51,7 +51,7 @@ steps:
     shot: S05
     shotAlt: Kululomake prosenttijaolla, jossa vuokra jaetaan huoneen koon mukaan
   - title: Seuraa saldoja
-    body: Side Badger pitää jokaiselle valuutalle omaa juoksevaa saldoa, joten näet yhdellä silmäyksellä, kuka on velkaa kenelle. Sen sijaan että jokaisen pitäisi selvittää pienten velkojen vyyhti, se ehdottaa lyhyttä maksulistaa, joka tasaa ryhmän tilit.
+    body: Side Badger pitää jokaiselle valuutalle omaa juoksevaa saldoa, joten näet yhdellä silmäyksellä, kuka on velkaa kenelle. Jos kulu oli toisessa valuutassa, voit muuntaa sen haetulla kurssilla, jota voit muokata; muuten jokainen valuutta pitää oman saldonsa. Sen sijaan että jokaisen pitäisi selvittää pienten velkojen vyyhti, se ehdottaa lyhyttä maksulistaa, joka tasaa ryhmän tilit.
     shot: S10
     shotAlt: Saldonäkymä, jossa yksinkertaistetut velat kahdessa valuutassa ja Näytä kaikki -valinta päällä
   - title: Maksa sovelluksen ulkopuolella, kirjaa sen sisällä
@@ -103,4 +103,4 @@ faq:
     - q: Kuinka monta ihmistä ryhmään voi liittyä?
       a: Ryhmässä voi olla enintään 50 ihmistä. Kutsu heidät linkillä tai QR-koodilla, ja ota hyväksyntä käyttöön, jos haluat ylläpitäjän päästävän jokaisen sisään erikseen.
     - q: Entä matkat, joilla on useampi kuin yksi valuutta?
-      a: Saldot pidetään erikseen jokaiselle valuutalle. Katso [useita valuuttoja](page:feature/multiple-currencies).
+      a: Saldot pidetään erikseen jokaiselle valuutalle, ja voit muuntaa kulun haetulla kurssilla, jota voit muokata. Katso [useita valuuttoja](page:feature/multiple-currencies).

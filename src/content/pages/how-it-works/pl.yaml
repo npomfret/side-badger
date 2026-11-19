@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -51,7 +51,7 @@ steps:
     shot: S05
     shotAlt: "Formularz wydatku z podziałem procentowym czynszu według wielkości pokoju"
   - title: "Patrz na salda"
-    body: "Side Badger prowadzi bieżące saldo osobno dla każdej waluty, więc od razu widać, kto komu jest winien. Zamiast zostawiać wszystkich z plątaniną drobnych długów, podpowiada krótką listę płatności, która rozlicza grupę."
+    body: "Side Badger prowadzi bieżące saldo osobno dla każdej waluty, więc od razu widać, kto komu jest winien. Jeśli wydatek był w innej walucie, możesz go przeliczyć po pobranym kursie, który możesz edytować; w przeciwnym razie każda waluta ma własne saldo. Zamiast zostawiać wszystkich z plątaniną drobnych długów, podpowiada krótką listę płatności, która rozlicza grupę."
     shot: S10
     shotAlt: "Ekran sald z uproszczonymi długami w dwóch walutach i włączonym przyciskiem Pokaż wszystko"
   - title: "Rozlicz się poza aplikacją, zapisz to w aplikacji"
@@ -103,4 +103,4 @@ faq:
     - q: "Ile osób może dołączyć do grupy?"
       a: "Do 50 osób w grupie. Zaproś je linkiem albo kodem QR i włącz zatwierdzanie, jeśli chcesz, żeby administrator wpuszczał każdą osobę."
     - q: "A wyjazdy z więcej niż jedną walutą?"
-      a: "Salda są prowadzone osobno dla każdej waluty. Zobacz [wiele walut](page:feature/multiple-currencies)."
+      a: "Salda są prowadzone osobno dla każdej waluty, a wydatek możesz przeliczyć po pobranym kursie, który możesz edytować. Zobacz [wiele walut](page:feature/multiple-currencies)."

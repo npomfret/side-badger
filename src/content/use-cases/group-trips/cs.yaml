@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T5-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -25,9 +25,9 @@ claims:
   - permissions.managed-group
   - permissions.lock-the-group
 meta:
-  title: "Dělte náklady skupinového výletu ve 140 měnách"
+  title: "Dělte náklady skupinového výletu ve 133 měnách"
   description: "Sledujte, kdo co na skupinovém výletu zaplatil, zadávejte náklady v místní měně, převádějte je, nebo ne, a vyrovnejte se jednou na konci. Zdarma, v prohlížeči."
-h1: "Dělte náklady skupinového výletu ve 140 měnách"
+h1: "Dělte náklady skupinového výletu ve 133 měnách"
 navLabel: "Skupinové výlety"
 lead: "Sledujte vilu, taxíky a to jedno kolo koktejlů, o kterém nikdo neví, že se přihlásil zaplatit. Side Badger vede průběžný přehled, když jste pryč, [zvládá libry, eura a 138 dalších měn](page:feature/multiple-currencies) a po návratu domů vám dá [krátký seznam plateb](page:feature/settle-up)."
 cta:
@@ -106,4 +106,4 @@ faq:
     - q: "Můžeme skupinu po výletu zmrazit?"
       a: "Ano. Správce může skupinu zamknout, aby čísla zůstala."
     - q: "Existuje limit částek?"
-      a: "Ano. 999 999,99 na výdaj, ve své měně."
+      a: "Ano. Jeden výdaj může činit až 999 999,99 ve své měně a více u měn s malými jednotkami, například u jenu nebo indonéské rupie."

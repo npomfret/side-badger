@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -53,7 +53,7 @@ steps:
     shot: S05
     shotAlt: "Di expense form with percentage split, dey share di rent by room size"
   - title: "Watch di balances"
-    body: "Side Badger dey keep running balance for each currency, so you fit see who owe who for one look. Instead of make everybody dey untangle plenty small debts, e go suggest short list of payments wey go settle di group."
+    body: "Side Badger dey keep running balance for each currency, so you fit see who owe who for one look. If expense dey for another currency, you fit convert am with fetched rate wey you fit edit; if e no be so, each currency go keep im own balance. Instead of make everybody dey untangle plenty small debts, e go suggest short list of payments wey go settle di group."
     shot: S10
     shotAlt: "Di balances screen showing simplified debts for two currencies, with Sho all switched on"
   - title: "Settle up outside di app, record am inside"
@@ -105,4 +105,4 @@ faq:
     - q: "How many people fit join one group?"
       a: "Up to 50 people for one group. Invite dem with link or QR code, and turn on approval if you want make admin let each person in."
     - q: "Wetin about trips with more than one currency?"
-      a: "Balances dey separate for each currency. See [multiple currencies](page:feature/multiple-currencies)."
+      a: "Balances dey separate for each currency, and you fit convert expense with fetched rate wey you fit edit. See [multiple currencies](page:feature/multiple-currencies)."

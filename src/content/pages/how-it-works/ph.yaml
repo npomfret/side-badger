@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -52,7 +52,7 @@ steps:
     shot: S05
     shotAlt: Ang expense form na may paghahati ayon sa porsyento, na hinahati ang upa ayon sa laki ng kuwarto
   - title: Bantayan ang mga balanse
-    body: Nagtatabi ang Side Badger ng tumatakbong balanse para sa bawat pera, kaya makikita mo agad kung sino ang may utang kanino. Sa halip na pabayaan ang lahat na magkalas ng gusot ng maliliit na utang, nagmumungkahi ito ng maikling listahan ng mga bayad na nagse-settle sa grupo.
+    body: Nagtatabi ang Side Badger ng tumatakbong balanse para sa bawat pera, kaya makikita mo agad kung sino ang may utang kanino. Kung ibang pera ang gastos, puwede mo itong i-convert sa kinuhang rate na puwede mong i-edit; kung hindi, sariling balanse ang iniingatan ng bawat pera. Sa halip na pabayaan ang lahat na magkalas ng gusot ng maliliit na utang, nagmumungkahi ito ng maikling listahan ng mga bayad na nagse-settle sa grupo.
     shot: S10
     shotAlt: Ang screen ng mga balanse na nagpapakita ng pinasimpleng mga utang sa dalawang pera, nakabukas ang Ipakita lahat
   - title: Mag-settle sa labas ng app, itala sa loob
@@ -104,4 +104,4 @@ faq:
     - q: Ilang tao ang puwedeng sumali sa isang grupo?
       a: Hanggang 50 tao sa isang grupo. Imbitahan sila gamit ang link o QR code, at i-on ang approval kung gusto mong papasukin ng admin ang bawat tao.
     - q: Paano ang mga biyaheng may higit sa isang pera?
-      a: Magkakahiwalay na iniingatan ang mga balanse sa bawat pera. Tingnan ang [maraming pera](page:feature/multiple-currencies).
+      a: Magkakahiwalay na iniingatan ang mga balanse sa bawat pera, at puwede mong i-convert ang gastos sa kinuhang rate na puwede mong i-edit. Tingnan ang [maraming pera](page:feature/multiple-currencies).

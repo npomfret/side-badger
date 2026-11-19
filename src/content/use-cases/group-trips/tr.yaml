@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T5-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -26,9 +26,9 @@ claims:
   - permissions.managed-group
   - permissions.lock-the-group
 meta:
-  title: "Grup gezisi masraflarını 140 para biriminde bölüşün"
+  title: "Grup gezisi masraflarını 133 para biriminde bölüşün"
   description: "Bir grup gezisinde kimin neyi ödediğini takip edin, masrafları yerel para biriminde girin, çevirin ya da çevirmeyin ve sonunda bir kerede ödeşin. Ücretsiz, tarayıcıda."
-h1: "Grup gezisi masraflarını 140 para biriminde bölüşün"
+h1: "Grup gezisi masraflarını 133 para biriminde bölüşün"
 navLabel: "Grup gezileri"
 lead: "Villayı, taksileri ve kimsenin ödemeyi üstlendiğini hatırlamadığı o bir tur kokteyli takip edin. Side Badger siz yokken hesabı tutar, [sterlin, euro ve 138 başka para birimini](page:feature/multiple-currencies) idare eder ve eve dönünce size [kısa bir ödeme listesi](page:feature/settle-up) verir."
 cta:
@@ -107,4 +107,4 @@ faq:
     - q: "Gezi sonrasında grubu dondurabilir miyiz?"
       a: "Evet. Bir yönetici rakamlar yerinde kalsın diye grubu kilitleyebilir."
     - q: "Tutarlarda bir sınır var mı?"
-      a: "Evet. Harcama başına, kendi para biriminde 999.999,99."
+      a: "Evet. Bir harcama kendi para biriminde en fazla 999.999,99 olabilir; yen veya Endonezya rupisi gibi küçük birimli para birimlerinde daha fazlası olabilir."

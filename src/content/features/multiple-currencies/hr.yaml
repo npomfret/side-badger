@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T5-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -18,11 +18,11 @@ claims:
   - currency-conversion.owe-euros-pay-pounds
   - settlements.pay-however-then-record
 meta:
-  title: "Dijeli troškove u 140 valuta, pretvorene ili zasebno"
+  title: "Dijeli troškove u 133 valuta, pretvorene ili zasebno"
   description: "Unesi svaki trošak u valuti u kojoj si platio, vodi stanja zasebno ili pretvaraj po tečaju koji vidiš i možeš promijeniti, a zatim se poravnaj kratkim popisom uplata."
-h1: "Dijeli troškove u 140 valuta"
+h1: "Dijeli troškove u 133 valuta"
 navLabel: "Više valuta"
-lead: "Eura, jeni i onaj jedan taksi u bahtima. Side Badger prima svaki trošak u valuti u kojoj si platio, drži stanja u redu i može pretvarati kad se grupa radije poravna jednom. Radi u 140 valuta i prirodno pristaje [grupnim putovanjima](page:use-case/group-trips)."
+lead: "Eura, jeni i onaj jedan taksi u bahtima. Side Badger prima svaki trošak u valuti u kojoj si platio, drži stanja u redu i može pretvarati kad se grupa radije poravna jednom. Radi u 133 valuta i prirodno pristaje [grupnim putovanjima](page:use-case/group-trips)."
 cta:
   heading: "Donesi svoja eura, donesi svoje jene"
   body: "Napravi korisnički račun, osnuj grupu i dodaj prvi trošak u bilo kojoj valuti koju si slučajno imao u ruci."
@@ -105,8 +105,8 @@ limits:
     - "Tečaj se utvrđuje kad se trošak spremi. Stari troškovi se nikad ne revaloriziraju."
     - "Side Badger dohvaća aktualni tečaj gdje može. Nije svaki par zajamčen, a tečaj uvijek možeš upisati sam."
     - "Automatska pretvorba u grupi vrijedi samo za nove i kopirane troškove, ne za uređivanja ni postojeće troškove."
-    - "Svaki trošak ograničen je na 999.999,99 u svojoj valuti."
-    - "Postoji 140 valuta. Kriptovalute i metali nisu među njima."
+    - "Jedan trošak može iznositi do 999.999,99 u svojoj valuti, a više za valute s malim jedinicama, poput jena ili indonezijske rupije."
+    - "Postoji 133 valuta. Kriptovalute i metali nisu među njima."
     - "Side Badger bilježi uplate. Nikad ne premješta ni ne mijenja novac."
 useCasesHeading: "Gdje ovo pomaže"
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: "Revaloriziraju li se stari troškovi?"
       a: "Ne. Tečaj se utvrđuje kad se trošak spremi, pa stanje ne odlazi samo zato što se tržište pomaknulo."
     - q: "Podržavate li kripto?"
-      a: "Ne. Postoji 140 valuta, a kriptovalute nisu među njima."
-    - q: "Zašto ne mogu unijeti 2.000.000 indonezijskih rupija?"
-      a: "Svaki trošak ograničen je na 999.999,99 u svojoj valuti. Unesi ga u drugoj valuti i pretvori ili ga podijeli na dva troška."
+      a: "Ne. Postoji 133 valuta, a kriptovalute nisu među njima."
+    - q: "Postoji li ograničenje koliko velik trošak može biti?"
+      a: "Da. Jedan trošak može iznositi do 999.999,99 u svojoj valuti, a više za valute s malim jedinicama, poput jena ili indonezijske rupije. Ako ga dosegneš, podijeli ga na dva troška ili ga unesi u drugoj valuti i pretvori."
     - q: "Košta li pretvorba išta?"
       a: "Ne. Pretvorba je besplatna, kao i ostatak Side Badgera. Vidi [cjenik](page:pricing)."
     - q: "Moram li pretvarati?"

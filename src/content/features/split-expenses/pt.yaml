@@ -1,8 +1,8 @@
-translatedFrom: "0780798c"
+translatedFrom: "e769b463"
 review:
   status: checked
-  checker: "C2b-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -116,7 +116,7 @@ limits:
     - "Uma pessoa paga cada despesa. Se duas pessoas pagaram, regista duas despesas."
     - "Não há divisão por item nem por quotas. Partes iguais, valores exatos e percentagens é o que existe."
     - "As percentagens têm de somar 100."
-    - "Uma despesa pode ir até 999 999,99 na sua própria moeda, com as casas decimais habituais dessa moeda."
+    - "Uma despesa pode ir até 999 999,99 na sua própria moeda, e mais para moedas com unidades pequenas, com as casas decimais habituais dessa moeda."
     - "As despesas não se repetem sozinhas. Copia a do mês passado."
     - "As datas não podem estar no futuro nem há mais de 10 anos."
     - "Uma despesa que envolva alguém que saiu do grupo passa a ser só de leitura."

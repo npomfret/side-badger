@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -25,9 +25,9 @@ identicalApproved:
   - example.people.2.name
   - example.people.3.name
 meta:
-  title: "Banatu taldeko bidaiaren kostuak, 140 monetatan"
+  title: "Banatu taldeko bidaiaren kostuak, 133 monetatan"
   description: "Jarraitu bidaia batean nork zer ordaindu duen, sartu kostuak tokiko monetan, bihurtu ala ez, eta kitatu behin amaieran. Doakoa, zure nabigatzailean."
-h1: Banatu taldeko bidaiaren kostuak, 140 monetatan
+h1: Banatu taldeko bidaiaren kostuak, 133 monetatan
 navLabel: Taldeko bidaiak
 lead: Jarraitu villa, taxiak eta inork ordaintzera eskaini zela gogoratzen ez duen koktel-txanda hura. Side Badger-ek kontua eramaten du zu kanpoan zaudela, [libera esterlinak, euroak eta beste 138 moneta kudeatzen ditu](page:feature/multiple-currencies), eta etxera itzultzean [ordainketa-zerrenda labur bat](page:feature/settle-up) ematen dizu.
 cta:
@@ -106,4 +106,4 @@ faq:
     - q: Bidaiaren ondoren taldea izoztu al dezakegu?
       a: Bai. Administratzaile batek taldea blokea dezake zenbakiak lekuan geratzeko.
     - q: Zenbatekoen mugarik ba al dago?
-      a: Bai. 999.999,99 gastu bakoitzeko, bere monetan.
+      a: Bai. Gastu batek gehienez 999.999,99 izan dezake bere monetan, eta gehiago unitate txikiko monetetan, hala nola yenean edo Indonesiako rupian.

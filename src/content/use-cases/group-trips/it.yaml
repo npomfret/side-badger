@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -20,9 +20,9 @@ claims:
   - permissions.managed-group
   - permissions.lock-the-group
 meta:
-  title: Dividi le spese dei viaggi di gruppo, in 140 valute
+  title: Dividi le spese dei viaggi di gruppo, in 133 valute
   description: Tieni traccia di chi ha pagato cosa in un viaggio di gruppo, inserisci i costi nella valuta locale, convertili o no e salda una volta sola alla fine. Gratis, nel browser.
-h1: Dividi le spese dei viaggi di gruppo, in 140 valute
+h1: Dividi le spese dei viaggi di gruppo, in 133 valute
 navLabel: Viaggi di gruppo
 lead: Tieni traccia della villa, dei taxi e di quel giro di cocktail che nessuno ricorda di essersi offerto di pagare. Side Badger tiene il conto mentre sei via, [gestisce sterline, euro e altre 138 valute](page:feature/multiple-currencies) e ti dà una [breve lista di pagamenti](page:feature/settle-up) quando torni a casa.
 cta:
@@ -101,7 +101,7 @@ faq:
     - q: Possiamo congelare il gruppo dopo il viaggio?
       a: Sì. Un admin può bloccare il gruppo così i numeri restano fermi.
     - q: C'è un limite agli importi?
-      a: Sì. 999.999,99 per spesa, nella sua valuta.
+      a: Sì. Una spesa può arrivare a 999.999,99 nella sua valuta, e di più per le valute con unità piccole, come lo yen o la rupia indonesiana.
 identicalApproved:
   - example.people.0.name
   - example.people.1.name

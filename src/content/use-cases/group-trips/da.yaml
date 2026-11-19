@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -26,9 +26,9 @@ identicalApproved:
   - example.people.3.name
   - example.expenses.1.label
 meta:
-  title: Del udgifter på gruppeture, i 140 valutaer
+  title: Del udgifter på gruppeture, i 133 valutaer
   description: Hold styr på, hvem der betalte hvad på en gruppetur, indtast udgifter i lokal valuta, omregn dem eller lad være, og gør op én gang til sidst. Gratis, i din browser.
-h1: Del udgifter på gruppeture, i 140 valutaer
+h1: Del udgifter på gruppeture, i 133 valutaer
 navLabel: Gruppeture
 lead: Hold styr på villaen, taxaerne og den ene omgang cocktails, ingen husker at have meldt sig til at købe. Side Badger fører løbende regnskab, mens I er væk, [håndterer pund, euro og 138 andre valutaer](page:feature/multiple-currencies) og giver jer en [kort liste over betalinger](page:feature/settle-up), når I kommer hjem.
 cta:
@@ -107,4 +107,4 @@ faq:
     - q: Kan vi fryse gruppen efter turen?
       a: Ja. En administrator kan låse gruppen, så tallene bliver stående.
     - q: Er der en grænse for beløb?
-      a: Ja. 999.999,99 pr. udgift i dens egen valuta.
+      a: Ja. En enkelt udgift kan være op til 999.999,99 i sin egen valuta og mere for valutaer med små enheder, som yen eller rupiah.

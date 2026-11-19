@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T5-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -25,9 +25,9 @@ claims:
   - permissions.managed-group
   - permissions.lock-the-group
 meta:
-  title: "Deli stroške skupinskega potovanja v 140 valutah"
+  title: "Deli stroške skupinskega potovanja v 133 valutah"
   description: "Spremljaj, kdo je kaj plačal na skupinskem potovanju, vnašaj stroške v lokalni valuti, jih pretvarjaj ali ne in se poravnaj enkrat na koncu. Brezplačno, v brskalniku."
-h1: "Deli stroške skupinskega potovanja v 140 valutah"
+h1: "Deli stroške skupinskega potovanja v 133 valutah"
 navLabel: "Skupinska potovanja"
 lead: "Spremljaj vilo, taksije in tisti en krog koktajlov, za katerega se nihče ne spomni, da bi se ponudil. Side Badger vodi tekoče štetje, medtem ko te ni, [obvlada funte, evre in 138 drugih valut](page:feature/multiple-currencies) in ti ob vrnitvi domov da [kratek seznam plačil](page:feature/settle-up)."
 cta:
@@ -106,4 +106,4 @@ faq:
     - q: "Ali lahko skupino po potovanju zamrznemo?"
       a: "Da. Skrbnik lahko skupino zaklene, da številke ostanejo."
     - q: "Ali obstaja omejitev zneskov?"
-      a: "Da. 999.999,99 na strošek, v njegovi valuti."
+      a: "Da. Strošek je lahko do 999.999,99 v svoji valuti, v valutah z majhnimi enotami, kot sta jen ali rupija, pa več."

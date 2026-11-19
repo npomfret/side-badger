@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -47,7 +47,7 @@ steps:
     shot: S05
     shotAlt: "Formulir pengeluaran dengan pembagian persentase, membagi uang sewa menurut ukuran kamar"
   - title: "Pantau saldo"
-    body: "Side Badger menyimpan saldo berjalan untuk setiap mata uang, jadi Anda bisa melihat siapa berutang kepada siapa sekilas. Daripada membiarkan semua orang mengurai jaring utang kecil, Side Badger menyarankan daftar pembayaran singkat yang melunasi grup."
+    body: "Side Badger menyimpan saldo berjalan untuk setiap mata uang, jadi Anda bisa melihat siapa berutang kepada siapa sekilas. Jika pengeluaran dalam mata uang lain, Anda bisa mengonversinya dengan kurs yang diambil dan dapat Anda ubah; jika tidak, setiap mata uang menyimpan saldonya sendiri. Daripada membiarkan semua orang mengurai jaring utang kecil, Side Badger menyarankan daftar pembayaran singkat yang melunasi grup."
     shot: S10
     shotAlt: "Layar saldo yang menampilkan utang yang disederhanakan dalam dua mata uang, dengan Tampilkan semua diaktifkan"
   - title: "Lunasi di luar aplikasi, catat di dalamnya"
@@ -99,7 +99,7 @@ faq:
     - q: "Berapa banyak orang yang bisa bergabung dalam satu grup?"
       a: "Hingga 50 orang dalam satu grup. Undang mereka dengan tautan atau kode QR, dan aktifkan persetujuan jika Anda ingin admin meloloskan tiap orang."
     - q: "Bagaimana dengan perjalanan yang memakai lebih dari satu mata uang?"
-      a: "Saldo disimpan terpisah untuk setiap mata uang. Lihat [beberapa mata uang](page:feature/multiple-currencies)."
+      a: "Saldo disimpan terpisah untuk setiap mata uang, dan Anda bisa mengonversi pengeluaran dengan kurs yang diambil dan dapat Anda ubah. Lihat [beberapa mata uang](page:feature/multiple-currencies)."
 identicalApproved:
   - example.people.0.name
   - example.people.1.name

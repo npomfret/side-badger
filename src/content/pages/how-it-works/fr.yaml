@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -47,7 +47,7 @@ steps:
     shot: S05
     shotAlt: "Le formulaire de dépense avec un partage par pourcentage, qui répartit le loyer selon la taille des chambres"
   - title: "Surveillez les soldes"
-    body: "Side Badger tient un solde à jour pour chaque devise, pour voir d'un coup d'œil qui doit quoi à qui. Plutôt que de laisser chacun démêler un écheveau de petites dettes, il suggère une courte liste de paiements qui règle les comptes du groupe."
+    body: "Side Badger tient un solde à jour pour chaque devise, pour voir d'un coup d'œil qui doit quoi à qui. Si une dépense était dans une autre devise, vous pouvez la convertir à un taux récupéré que vous pouvez modifier ; sinon, chaque devise garde son propre solde. Plutôt que de laisser chacun démêler un écheveau de petites dettes, il suggère une courte liste de paiements qui règle les comptes du groupe."
     shot: S10
     shotAlt: "L'écran des soldes affichant des dettes simplifiées dans deux devises, avec « Tout afficher » activé"
   - title: "Réglez en dehors de l'appli, enregistrez dedans"
@@ -99,7 +99,7 @@ faq:
     - q: "Combien de personnes peuvent rejoindre un groupe ?"
       a: "Jusqu'à 50 personnes par groupe. Invitez-les avec un lien ou un code QR, et activez l'approbation si vous voulez qu'un admin laisse entrer chaque personne."
     - q: "Et pour les voyages avec plus d'une devise ?"
-      a: "Les soldes sont tenus séparément pour chaque devise. Voir [plusieurs devises](page:feature/multiple-currencies)."
+      a: "Les soldes sont tenus séparément pour chaque devise, et vous pouvez convertir une dépense à un taux récupéré que vous pouvez modifier. Voir [plusieurs devises](page:feature/multiple-currencies)."
 identicalApproved:
   - example.people.0.name
   - example.people.1.name

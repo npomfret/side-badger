@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -20,9 +20,9 @@ claims:
   - permissions.managed-group
   - permissions.lock-the-group
 meta:
-  title: "Împarte costurile unei excursii de grup, în 140 de valute"
+  title: "Împarte costurile unei excursii de grup, în 133 de valute"
   description: "Urmărește cine a plătit ce într-o excursie de grup, introdu costurile în valuta locală, convertește-le sau nu și achită-te o singură dată, la final. Gratuit, în browser."
-h1: "Împarte costurile unei excursii de grup, în 140 de valute"
+h1: "Împarte costurile unei excursii de grup, în 133 de valute"
 navLabel: "Excursii de grup"
 lead: "Ține evidența vilei, a taxiurilor și a singurei runde de cocktailuri pe care nimeni nu-și mai amintește să se fi oferit s-o plătească. Side Badger ține socoteala cât ești plecat, [se descurcă cu lire, euro și alte 138 de valute](page:feature/multiple-currencies) și îți dă o [listă scurtă de plăți](page:feature/settle-up) când te întorci acasă."
 cta:
@@ -101,7 +101,7 @@ faq:
     - q: "Putem îngheța grupul după excursie?"
       a: "Da. Un administrator poate bloca grupul, ca cifrele să rămână pe loc."
     - q: "Există o limită pentru sume?"
-      a: "Da. 999.999,99 pe cheltuială, în propria valută."
+      a: "Da. O cheltuială poate fi de până la 999.999,99 în propria valută, și mai mult pentru valutele cu unități mici, precum yenul sau rupia indoneziană."
 identicalApproved:
   - example.people.0.name
   - example.people.1.name

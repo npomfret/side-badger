@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -47,7 +47,7 @@ steps:
     shot: S05
     shotAlt: Il modulo della spesa con una divisione percentuale, che ripartisce l'affitto in base alla dimensione delle stanze
   - title: Tieni d'occhio i saldi
-    body: Side Badger tiene un saldo aggiornato per ogni valuta, così vedi a colpo d'occhio chi deve cosa a chi. Invece di lasciare che ognuno districhi una ragnatela di piccoli debiti, suggerisce una breve lista di pagamenti che salda il gruppo.
+    body: Side Badger tiene un saldo aggiornato per ogni valuta, così vedi a colpo d'occhio chi deve cosa a chi. Se una spesa era in un'altra valuta, puoi convertirla a un tasso recuperato che puoi modificare; altrimenti ogni valuta mantiene il proprio saldo. Invece di lasciare che ognuno districhi una ragnatela di piccoli debiti, suggerisce una breve lista di pagamenti che salda il gruppo.
     shot: S10
     shotAlt: La schermata dei saldi con i debiti semplificati in due valute e l'opzione Mostra tutto attivata
   - title: Salda fuori dall'app, registra dentro
@@ -99,7 +99,7 @@ faq:
     - q: Quante persone possono unirsi a un gruppo?
       a: Fino a 50 persone in un gruppo. Invitale con un link o un codice QR e attiva l'approvazione se vuoi che un admin faccia entrare ogni persona.
     - q: E i viaggi con più di una valuta?
-      a: I saldi sono tenuti separati per ogni valuta. Vedi [più valute](page:feature/multiple-currencies).
+      a: I saldi sono tenuti separati per ogni valuta, e puoi convertire una spesa a un tasso recuperato che puoi modificare. Vedi [più valute](page:feature/multiple-currencies).
 identicalApproved:
   - example.people.0.name
   - example.people.1.name

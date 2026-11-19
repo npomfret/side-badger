@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T-amounts-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -25,9 +25,9 @@ identicalApproved:
   - example.people.2.name
   - example.people.3.name
 meta:
-  title: Jaa ryhmämatkan kulut 140 valuutassa
+  title: Jaa ryhmämatkan kulut 133 valuutassa
   description: Seuraa, kuka maksoi mitä ryhmämatkalla, syötä kulut paikallisessa valuutassa, muunna ne tai älä, ja tasaa kerralla lopuksi. Ilmainen, selaimessa.
-h1: Jaa ryhmämatkan kulut 140 valuutassa
+h1: Jaa ryhmämatkan kulut 133 valuutassa
 navLabel: Ryhmämatkat
 lead: Seuraa huvilaa, takseja ja sitä yhtä cocktail-kierrosta, jonka tarjoamiseen kukaan ei muista ilmoittautuneensa. Side Badger pitää kirjaa matkan ajan, [hoitaa punnat, eurot ja 138 muuta valuuttaa](page:feature/multiple-currencies) ja antaa kotiin tultua [lyhyen maksulistan](page:feature/settle-up).
 cta:
@@ -106,4 +106,4 @@ faq:
     - q: Voimmeko jäädyttää ryhmän matkan jälkeen?
       a: Kyllä. Ylläpitäjä voi lukita ryhmän, jotta luvut pysyvät paikoillaan.
     - q: Onko summilla rajaa?
-      a: Kyllä. 999 999,99 kulua kohden omassa valuutassaan.
+      a: Kyllä. Yksi kulu voi olla enintään 999 999,99 omassa valuutassaan, ja enemmän valuutoissa, joiden yksiköt ovat pieniä, kuten jeni tai Indonesian rupia.

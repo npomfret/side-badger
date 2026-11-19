@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -20,9 +20,9 @@ claims:
   - permissions.managed-group
   - permissions.lock-the-group
 meta:
-  title: "Partager les frais d'un voyage en groupe, dans 140 devises"
+  title: "Partager les frais d'un voyage en groupe, dans 133 devises"
   description: "Suivez qui a payé quoi pendant un voyage en groupe, saisissez les frais dans la devise locale, convertissez-les ou non, et réglez une seule fois à la fin. Gratuit, dans votre navigateur."
-h1: "Partager les frais d'un voyage en groupe, dans 140 devises"
+h1: "Partager les frais d'un voyage en groupe, dans 133 devises"
 navLabel: "Voyages en groupe"
 lead: "Suivez la villa, le taxi, et la tournée de cocktails que personne ne se souvient d'avoir proposé de payer. Side Badger tient le compte pendant que vous êtes loin, [gère les livres, les euros et 138 autres devises](page:feature/multiple-currencies), et vous donne une [courte liste de paiements](page:feature/settle-up) à votre retour."
 cta:
@@ -101,7 +101,7 @@ faq:
     - q: "Peut-on figer le groupe après le voyage ?"
       a: "Oui. Un admin peut verrouiller le groupe pour que les chiffres ne bougent plus."
     - q: "Y a-t-il une limite sur les montants ?"
-      a: "Oui. 999 999,99 par dépense, dans sa propre devise."
+      a: "Oui. Une dépense peut aller jusqu'à 999 999,99 dans sa propre devise, et davantage pour les devises à petites unités, comme le yen ou la rupiah."
 identicalApproved:
   - example.people.0.name
   - example.people.1.name

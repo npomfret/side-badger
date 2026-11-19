@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -18,11 +18,11 @@ claims:
   - currency-conversion.owe-euros-pay-pounds
   - settlements.pay-however-then-record
 meta:
-  title: "Divide custos em 140 moedas, convertidas ou em separado"
+  title: "Divide custos em 133 moedas, convertidas ou em separado"
   description: "Introduz cada despesa na moeda em que pagaste, mantém os saldos em separado ou converte a uma taxa que podes ver e alterar, e depois acerta tudo com uma lista curta de pagamentos."
-h1: "Divide custos em 140 moedas"
+h1: "Divide custos em 133 moedas"
 navLabel: "Várias moedas"
-lead: "Euros, ienes e aquele táxi em bahts. O Side Badger aceita cada despesa na moeda em que pagaste, mantém os saldos em ordem e pode converter quando o teu grupo preferir acertar tudo de uma vez. Funciona em 140 moedas e encaixa que nem uma luva nas [viagens em grupo](page:use-case/group-trips)."
+lead: "Euros, ienes e aquele táxi em bahts. O Side Badger aceita cada despesa na moeda em que pagaste, mantém os saldos em ordem e pode converter quando o teu grupo preferir acertar tudo de uma vez. Funciona em 133 moedas e encaixa que nem uma luva nas [viagens em grupo](page:use-case/group-trips)."
 cta:
   heading: "Traz os teus euros, traz os teus ienes"
   body: "Cria uma conta, começa um grupo e adiciona a primeira despesa na moeda que tinhas à mão."
@@ -105,8 +105,8 @@ limits:
     - "A taxa fica fixa quando a despesa é guardada. As despesas antigas nunca são reavaliadas."
     - "O Side Badger obtém uma taxa atual sempre que consegue. Nem todos os pares têm essa garantia, e podes sempre escrever a taxa tu mesmo."
     - "A conversão automática do grupo aplica-se apenas a despesas novas e copiadas, não a edições nem a despesas existentes."
-    - "Cada despesa tem o máximo de 999 999,99 na sua própria moeda."
-    - "Existem 140 moedas. As criptomoedas e os metais não estão entre elas."
+    - "Cada despesa pode ir até 999 999,99 na sua própria moeda, e mais para moedas com unidades pequenas, como o iene ou a rupia indonésia."
+    - "Existem 133 moedas. As criptomoedas e os metais não estão entre elas."
     - "O Side Badger regista pagamentos. Nunca movimenta nem troca dinheiro."
 useCasesHeading: "Onde isto ajuda"
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: "As despesas antigas são reavaliadas?"
       a: "Não. A taxa fica fixa quando a despesa é guardada, por isso um saldo não se desvia só porque o mercado se mexeu."
     - q: "Suportam criptomoedas?"
-      a: "Não. Existem 140 moedas e as criptomoedas não estão entre elas."
-    - q: "Porque não consigo introduzir 2 000 000 rupias?"
-      a: "Cada despesa tem o máximo de 999 999,99 na sua própria moeda. Introduz noutra moeda e converte, ou divide em duas despesas."
+      a: "Não. Existem 133 moedas e as criptomoedas não estão entre elas."
+    - q: "Há algum limite para o valor de uma despesa?"
+      a: "Sim. Uma despesa pode ir até 999 999,99 na sua própria moeda, e mais para moedas com unidades pequenas, como o iene ou a rupia indonésia. Se lá chegares, divide-a em duas despesas, ou introduz noutra moeda e converte."
     - q: "A conversão custa alguma coisa?"
       a: "Não. Converter é grátis, como o resto do Side Badger. Vê os [preços](page:pricing)."
     - q: "Tenho de converter?"

@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -51,7 +51,7 @@ steps:
     shot: S05
     shotAlt: Das Ausgabenformular mit Prozentaufteilung, die die Miete nach Zimmergröße verteilt
   - title: Salden im Blick behalten
-    body: Side Badger führt für jede Währung einen laufenden Saldo, damit du auf einen Blick siehst, wer wem was schuldet. Statt alle ein Netz kleiner Schulden entwirren zu lassen, schlägt es eine kurze Liste von Zahlungen vor, die die Gruppe ausgleicht.
+    body: Side Badger führt für jede Währung einen laufenden Saldo, damit du auf einen Blick siehst, wer wem was schuldet. War eine Ausgabe in einer anderen Währung, kannst du sie zu einem abgerufenen Kurs umrechnen, den du ändern kannst; sonst führt jede Währung ihren eigenen Saldo. Statt alle ein Netz kleiner Schulden entwirren zu lassen, schlägt es eine kurze Liste von Zahlungen vor, die die Gruppe ausgleicht.
     shot: S10
     shotAlt: Der Salden-Bildschirm mit vereinfachten Schulden in zwei Währungen und eingeschaltetem "Alle anzeigen"
   - title: Außerhalb der App abrechnen, in der App erfassen
@@ -103,4 +103,4 @@ faq:
     - q: Wie viele Leute können einer Gruppe beitreten?
       a: Bis zu 50 Personen pro Gruppe. Lade sie mit einem Link oder QR-Code ein und schalte die Freigabe ein, wenn ein Admin jede Person hereinlassen soll.
     - q: Und Reisen mit mehr als einer Währung?
-      a: Salden werden für jede Währung getrennt geführt. Siehe [Mehrere Währungen](page:feature/multiple-currencies).
+      a: Salden werden für jede Währung getrennt geführt, und du kannst eine Ausgabe zu einem abgerufenen Kurs umrechnen, den du ändern kannst. Siehe [Mehrere Währungen](page:feature/multiple-currencies).

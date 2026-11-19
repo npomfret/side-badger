@@ -1,8 +1,8 @@
-translatedFrom: "8a7fd3c8"
+translatedFrom: "b85c0a15"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -66,11 +66,11 @@ sections:
     items:
       - "**Kurz se zafixuje při uložení.** Staré výdaje se nikdy nepřeceňují, takže zůstatek neutíká jen proto, že se pohnul trh. Výdaje zadané v různé dny mohou mít různé kurzy, takže pokud chce skupina jeden kurz na celý výlet, domluvte ho a pokaždé ho zadejte."
       - "**Žádný kurz? Zadejte ho.** Side Badger načte aktuální směnný kurz, kde je to možné, ale ne pro každou dvojici měn je zaručen. Pokud žádný není, nebo vám směnárna dala lepší kurz, zadejte vlastní."
-      - "**999 999,99 na výdaj, ve své měně.** Jeden limit, ať jde o jakékoli peníze. V jenech je to těsně pod 1 000 000 ¥, při kurzu tohoto návodu asi 5 000 £. V měně s velkými čísly, třeba v indonéských rupiích, může jediný účet narazit na limit dřív. Rozdělte účet na dva výdaje, nebo ho zadejte v jiné měně a převeďte."
+      - "**Až 999 999,99 na výdaj, ve své měně.** Měny s malými jednotkami mají víc prostoru: jeny sahají až do 99 999 999 ¥ a indonéské rupie do 9 999 999 999,99 Rp, takže velký účet limit sotva překoná. Pokud se to přece stane, rozdělte účet na dva výdaje, nebo ho zadejte v jiné měně a převeďte."
   - heading: "Co Side Badger tady nedělá"
     items:
       - "Nikdy nepřesouvá ani nesměňuje peníze. Platíte si, jak chcete, a pak platbu zaznamenáte."
-      - "Má 140 měn. Kryptoměny a kovy mezi nimi nejsou."
+      - "Má 133 měn. Kryptoměny a kovy mezi nimi nejsou."
 exampleAfter: 2
 example:
   heading: "Japonsko, vyrovnané dvěma způsoby"

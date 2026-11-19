@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -18,11 +18,11 @@ claims:
   - currency-conversion.owe-euros-pay-pounds
   - settlements.pay-however-then-record
 meta:
-  title: "Rhannu costau mewn 140 o arian cyfred, wedi'u trosi neu ar wahân"
+  title: "Rhannu costau mewn 133 o arian cyfred, wedi'u trosi neu ar wahân"
   description: "Rhowch bob cost yn yr arian cyfred y talwyd ynddo, cadwch y balansau ar wahân neu drosi ar gyfradd y gallwch ei gweld a'i newid, yna setlwch gyda rhestr fer o daliadau."
-h1: "Rhannu costau mewn 140 o arian cyfred"
+h1: "Rhannu costau mewn 133 o arian cyfred"
 navLabel: "Arian cyfred lluosog"
-lead: "Ewros, yen, a'r un tacsi hwnnw mewn baht. Mae Side Badger yn cymryd pob cost yn yr arian cyfred y talwyd ynddo, yn cadw'r balansau'n gywir, a gall drosi pan fyddai'n well gan eich grŵp setlo unwaith. Mae'n gweithio mewn 140 o arian cyfred, ac mae'n gweddu'n naturiol i [deithiau grŵp](page:use-case/group-trips)."
+lead: "Ewros, yen, a'r un tacsi hwnnw mewn baht. Mae Side Badger yn cymryd pob cost yn yr arian cyfred y talwyd ynddo, yn cadw'r balansau'n gywir, a gall drosi pan fyddai'n well gan eich grŵp setlo unwaith. Mae'n gweithio mewn 133 o arian cyfred, ac mae'n gweddu'n naturiol i [deithiau grŵp](page:use-case/group-trips)."
 cta:
   heading: "Dewch â'ch ewros, dewch â'ch yen"
   body: "Creu cyfrif, cychwyn grŵp ac ychwanegu'r gost gyntaf mewn pa bynnag arian cyfred oedd gennych yn eich llaw."
@@ -105,8 +105,8 @@ limits:
     - "Mae'r gyfradd yn sefydlog pan gaiff y gost ei chadw. Ni chaiff hen gostau byth eu hailbrisio."
     - "Mae Side Badger yn nôl cyfradd gyfredol lle bo modd. Nid oes sicrwydd o un ar gyfer pob pâr, a gallwch bob amser deipio'r gyfradd eich hun."
     - "Mae trosi awtomatig y grŵp yn berthnasol i gostau newydd a rhai a gopïwyd yn unig, nid i olygiadau na chostau presennol."
-    - "Mae pob cost wedi'i chyfyngu i 999,999.99 yn ei harian cyfred ei hun."
-    - "Mae 140 o arian cyfred. Nid yw arian crypto a metelau yn eu plith."
+    - "Gall un gost fod hyd at 999,999.99 yn ei harian cyfred ei hun, a mwy ar gyfer arian cyfred ag unedau bach, fel yen neu rwpia Indonesia."
+    - "Mae 133 o arian cyfred. Nid yw arian crypto a metelau yn eu plith."
     - "Mae Side Badger yn cofnodi taliadau. Nid yw byth yn symud nac yn cyfnewid arian."
 useCasesHeading: "Lle mae hyn yn helpu"
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: "Ydy hen gostau'n cael eu hailbrisio?"
       a: "Nac ydyn. Mae'r gyfradd yn sefydlog pan gaiff y gost ei chadw, felly nid yw balans yn symud am fod y farchnad wedi symud."
     - q: "Ydych chi'n cefnogi crypto?"
-      a: "Nac ydym. Mae 140 o arian cyfred, ac nid yw arian crypto yn eu plith."
-    - q: "Pam na allaf roi 2,000,000 rwpia?"
-      a: "Mae pob cost wedi'i chyfyngu i 999,999.99 yn ei harian cyfred ei hun. Rhowch hi mewn arian cyfred arall a throsi, neu ei rhannu'n ddwy gost."
+      a: "Nac ydym. Mae 133 o arian cyfred, ac nid yw arian crypto yn eu plith."
+    - q: "A oes terfyn ar ba mor fawr y gall cost fod?"
+      a: "Oes. Gall un gost fod hyd at 999,999.99 yn ei harian cyfred ei hun, a mwy ar gyfer arian cyfred ag unedau bach, fel yen neu rwpia Indonesia. Os byddwch yn ei gyrraedd, rhannwch hi'n ddwy gost, neu rhowch hi mewn arian cyfred arall a throsi."
     - q: "Ydy trosi yn costio unrhyw beth?"
       a: "Nac ydy. Mae trosi am ddim, fel gweddill Side Badger. Gweler [prisiau](page:pricing)."
     - q: "Oes rhaid i mi drosi?"

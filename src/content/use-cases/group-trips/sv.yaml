@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T-amounts-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -26,9 +26,9 @@ claims:
   - permissions.managed-group
   - permissions.lock-the-group
 meta:
-  title: Dela kostnaderna för gruppresan, i 140 valutor
+  title: Dela kostnaderna för gruppresan, i 133 valutor
   description: Håll koll på vem som betalat vad på en gruppresa, lägg in kostnader i lokal valuta, räkna om dem eller inte, och gör upp en gång i slutet. Gratis, i webbläsaren.
-h1: Dela kostnaderna för gruppresan, i 140 valutor
+h1: Dela kostnaderna för gruppresan, i 133 valutor
 navLabel: Gruppresor
 lead: Håll koll på villan, taxiresorna och den där drinkrundan som ingen minns att de lovade att bjuda på. Side Badger håller den löpande räkningen medan ni är borta, [hanterar pund, euro och 138 andra valutor](page:feature/multiple-currencies) och ger er en [kort lista med betalningar](page:feature/settle-up) när ni kommer hem.
 cta:
@@ -107,4 +107,4 @@ faq:
     - q: Kan vi frysa gruppen efter resan?
       a: Ja. En administratör kan låsa gruppen så att siffrorna ligger kvar.
     - q: Finns det en gräns för belopp?
-      a: Ja. 999 999,99 per utgift, i dess egen valuta.
+      a: Ja. En utgift kan vara upp till 999 999,99 i sin egen valuta, och mer för valutor med små enheter, till exempel yen eller rupiah.

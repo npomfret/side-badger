@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - multi-currency.currency-count
   - multi-currency.currency-rules
@@ -18,11 +18,11 @@ identicalApproved:
   - example.people.2.name
   - example.people.3.name
 meta:
-  title: "Verdeel kosten in 140 valuta’s, omgerekend of apart gehouden"
+  title: "Verdeel kosten in 133 valuta’s, omgerekend of apart gehouden"
   description: "Voer elke uitgave in de valuta in waarin je betaalde, hou saldi apart of reken om tegen een koers die je kunt zien en aanpassen, en reken dan af met een korte lijst betalingen."
-h1: "Verdeel kosten in 140 valuta’s"
+h1: "Verdeel kosten in 133 valuta’s"
 navLabel: "Meerdere valuta’s"
-lead: "Euro’s, yen en dat ene taxiritje in baht. Side Badger neemt elke uitgave aan in de valuta waarin je betaalde, houdt de saldi netjes en kan omrekenen wanneer je groep liever één keer afrekent. Het werkt in 140 valuta’s en past vanzelf bij [groepsreizen](page:use-case/group-trips)."
+lead: "Euro’s, yen en dat ene taxiritje in baht. Side Badger neemt elke uitgave aan in de valuta waarin je betaalde, houdt de saldi netjes en kan omrekenen wanneer je groep liever één keer afrekent. Het werkt in 133 valuta’s en past vanzelf bij [groepsreizen](page:use-case/group-trips)."
 cta:
   heading: "Neem je euro’s mee, neem je yen mee"
   body: "Maak een account aan, start een groep en voeg de eerste uitgave toe in welke valuta je toevallig bij de hand had."
@@ -105,8 +105,8 @@ limits:
     - "De koers ligt vast wanneer de uitgave wordt opgeslagen. Oude uitgaven worden nooit herwaardeerd."
     - "Side Badger haalt een actuele koers op waar het kan. Niet voor elk paar is er gegarandeerd een, en je kunt de koers altijd zelf typen."
     - "Automatisch omrekenen voor de groep geldt enkel voor nieuwe en gekopieerde uitgaven, niet voor wijzigingen of bestaande uitgaven."
-    - "Elke uitgave is begrensd op 999.999,99 in haar eigen valuta."
-    - "Er zijn 140 valuta’s. Cryptovaluta en metalen horen daar niet bij."
+    - "Een uitgave kan tot 999.999,99 bedragen in haar eigen valuta, en meer voor valuta’s met kleine eenheden, zoals yen of roepia."
+    - "Er zijn 133 valuta’s. Cryptovaluta en metalen horen daar niet bij."
     - "Side Badger registreert betalingen. Het verplaatst of wisselt nooit geld."
 useCasesHeading: "Waar dit helpt"
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: "Worden oude uitgaven herwaardeerd?"
       a: "Nee. De koers ligt vast wanneer de uitgave wordt opgeslagen, dus een saldo verschuift niet omdat de markt dat deed."
     - q: "Ondersteunen jullie crypto?"
-      a: "Nee. Er zijn 140 valuta’s en cryptovaluta horen daar niet bij."
-    - q: "Waarom kan ik geen 2.000.000 roepia invoeren?"
-      a: "Elke uitgave is begrensd op 999.999,99 in haar eigen valuta. Voer ze in een andere valuta in en reken om, of splits ze op in twee uitgaven."
+      a: "Nee. Er zijn 133 valuta’s en cryptovaluta horen daar niet bij."
+    - q: "Is er een limiet op hoe groot een uitgave mag zijn?"
+      a: "Ja. Een uitgave kan tot 999.999,99 bedragen in haar eigen valuta, en meer voor valuta’s met kleine eenheden, zoals yen of roepia. Zit je ertegenaan, splits ze dan op in twee uitgaven, of voer ze in een andere valuta in en reken om."
     - q: "Kost omrekenen iets?"
       a: "Nee. Omrekenen is gratis, zoals de rest van Side Badger. Zie [prijzen](page:pricing)."
     - q: "Moet ik omrekenen?"

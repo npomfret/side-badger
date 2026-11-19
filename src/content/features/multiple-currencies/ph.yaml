@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T1-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - multi-currency.currency-count
   - multi-currency.currency-rules
@@ -18,11 +18,11 @@ identicalApproved:
   - example.people.2.name
   - example.people.3.name
 meta:
-  title: Hatiin ang gastos sa 140 pera, na-convert o magkahiwalay
+  title: Hatiin ang gastos sa 133 pera, na-convert o magkahiwalay
   description: Ilagay ang bawat gastos sa perang ginamit mo sa pagbayad, panatilihing magkahiwalay ang mga balanse o mag-convert sa rate na nakikita at mababago mo, saka mag-settle up sa maikling listahan ng mga bayad.
-h1: Hatiin ang gastos sa 140 pera
+h1: Hatiin ang gastos sa 133 pera
 navLabel: Maraming pera
-lead: Euro, yen, at ang isang taxi na baht ang bayad. Tinatanggap ng Side Badger ang bawat gastos sa perang ginamit mo sa pagbayad, pinananatiling tama ang mga balanse, at puwedeng mag-convert kapag mas gusto ng grupo mong mag-settle nang isang beses. Gumagana ito sa 140 pera, at bagay na bagay ito sa mga [group trip](page:use-case/group-trips).
+lead: Euro, yen, at ang isang taxi na baht ang bayad. Tinatanggap ng Side Badger ang bawat gastos sa perang ginamit mo sa pagbayad, pinananatiling tama ang mga balanse, at puwedeng mag-convert kapag mas gusto ng grupo mong mag-settle nang isang beses. Gumagana ito sa 133 pera, at bagay na bagay ito sa mga [group trip](page:use-case/group-trips).
 cta:
   heading: Dalhin ang euro mo, dalhin ang yen mo
   body: Gumawa ng account, magsimula ng grupo, at idagdag ang unang gastos sa anumang perang nasa kamay mo.
@@ -105,8 +105,8 @@ limits:
     - Nakapirmi ang rate kapag na-save ang gastos. Hindi kailanman muling binabalyuhan ang mga lumang gastos.
     - Kumukuha ang Side Badger ng kasalukuyang rate kung kaya. Hindi garantisado ang bawat pares, at puwede mong i-type palagi ang rate.
     - Para lang ang group auto-convert sa mga bago at kinopyang gastos, hindi sa mga edit o kasalukuyang gastos.
-    - May hangganang 999,999.99 ang bawat gastos sa sarili nitong pera.
-    - May 140 pera. Hindi kasama ang mga cryptocurrency at metal.
+    - Hanggang 999,999.99 ang isang gastos sa sarili nitong pera, at mas mataas pa para sa mga pera na maliit ang yunit, gaya ng yen o rupiah.
+    - May 133 pera. Hindi kasama ang mga cryptocurrency at metal.
     - Nagtatala ng bayad ang Side Badger. Hindi ito naglilipat o nagpapalit ng pera.
 useCasesHeading: Saan ito nakakatulong
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: Muli bang binabalyuhan ang mga lumang gastos?
       a: Hindi. Nakapirmi ang rate kapag na-save ang gastos, kaya hindi nag-iiba ang balanse dahil gumalaw ang merkado.
     - q: Sinusuportahan ba ninyo ang crypto?
-      a: Hindi. May 140 pera, at hindi kasama ang mga cryptocurrency.
-    - q: Bakit hindi ako makapaglagay ng 2,000,000 rupiah?
-      a: May hangganang 999,999.99 ang bawat gastos sa sarili nitong pera. Ilagay ito sa ibang pera at i-convert, o hatiin sa dalawang gastos.
+      a: Hindi. May 133 pera, at hindi kasama ang mga cryptocurrency.
+    - q: May limitasyon ba sa laki ng isang gastos?
+      a: Mayroon. Hanggang 999,999.99 ang isang gastos sa sarili nitong pera, at mas mataas pa para sa mga pera na maliit ang yunit, gaya ng yen o rupiah. Kung maabot mo ito, hatiin sa dalawang gastos, o ilagay sa ibang pera at i-convert.
     - q: May bayad ba ang conversion?
       a: Wala. Libre ang pag-convert, tulad ng iba pa sa Side Badger. Tingnan ang [presyo](page:pricing).
     - q: Kailangan ko bang mag-convert?

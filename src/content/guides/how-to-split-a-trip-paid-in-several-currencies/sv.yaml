@@ -1,8 +1,8 @@
-translatedFrom: "8a7fd3c8"
+translatedFrom: "b85c0a15"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -66,11 +66,11 @@ sections:
     items:
       - "**Kursen låses när du sparar.** Gamla utgifter värderas aldrig om, så ett saldo driver inte iväg bara för att marknaden gjorde det. Utgifter som läggs in olika dagar kan ha olika kurser, så om gruppen vill ha en kurs för hela resan, kom överens om den och skriv in den varje gång."
       - "**Ingen kurs? Skriv in en.** Side Badger hämtar en aktuell växelkurs där det går, men alla valutapar är inte garanterade en. Finns det ingen, eller om en växlingskassa gav dig ett bättre pris, skriver du in din egen."
-      - "**999 999,99 per utgift, i dess egen valuta.** Ett tak, oavsett pengar. I yen är det strax under 1 000 000 ¥, ungefär 5 000 £ med den här guidens kurs. I en valuta med stora tal, till exempel indonesiska rupiah, kan en enda nota nå det snabbare. Dela upp notan i två utgifter, eller lägg in den i en annan valuta och räkna om."
+      - "**Upp till 999 999,99 per utgift, i dess egen valuta.** Valutor med små enheter får mer utrymme: yen går upp till 99 999 999 ¥ och rupiah till 9 999 999 999,99 Rp, så en stor nota når sällan taket. Gör den det, dela upp notan i två utgifter eller lägg in den i en annan valuta och räkna om."
   - heading: Vad Side Badger inte gör här
     items:
       - Den flyttar eller växlar aldrig pengar. Ni betalar varandra hur ni vill och registrerar sedan betalningen.
-      - Den har 140 valutor. Kryptovalutor och metaller finns inte bland dem.
+      - Den har 133 valutor. Kryptovalutor och metaller finns inte bland dem.
 exampleAfter: 2
 example:
   heading: Japan, reglerat på två sätt

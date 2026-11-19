@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -52,7 +52,7 @@ steps:
     shot: S05
     shotAlt: "A költségűrlap százalékos felosztással, a lakbért a szobák mérete szerint elosztva"
   - title: "Figyeld az egyenlegeket"
-    body: "A Side Badger pénznemenként folyamatos egyenleget vezet, így első pillantásra látod, ki kinek tartozik. Ahelyett, hogy mindenkire hagyná a kis tartozások hálójának kibogozását, egy rövid kifizetéslistát javasol, amely elszámoltatja a csoportot."
+    body: "A Side Badger pénznemenként folyamatos egyenleget vezet, így első pillantásra látod, ki kinek tartozik. Ha egy költség másik pénznemben volt, átválthatod egy lekért árfolyamon, amelyet szerkeszthetsz; egyébként minden pénznem megtartja a saját egyenlegét. Ahelyett, hogy mindenkire hagyná a kis tartozások hálójának kibogozását, egy rövid kifizetéslistát javasol, amely elszámoltatja a csoportot."
     shot: S10
     shotAlt: "Az egyenlegek képernyője egyszerűsített tartozásokkal két pénznemben, az Összes megjelenítése bekapcsolva"
   - title: "Számoljatok el az alkalmazáson kívül, rögzítsd benne"
@@ -104,4 +104,4 @@ faq:
     - q: "Hány ember csatlakozhat egy csoporthoz?"
       a: "Legfeljebb 50 ember egy csoportban. Hívd meg őket linkkel vagy QR-kóddal, és kapcsold be a jóváhagyást, ha azt szeretnéd, hogy egy adminisztrátor beengedje az egyes embereket."
     - q: "Mi a helyzet az egynél több pénznemes utazásokkal?"
-      a: "Az egyenlegeket pénznemenként külön vezetjük. Lásd a [több pénznemet](page:feature/multiple-currencies)."
+      a: "Az egyenlegeket pénznemenként külön vezetjük, és egy költséget átválthatsz egy lekért árfolyamon, amelyet szerkeszthetsz. Lásd a [több pénznemet](page:feature/multiple-currencies)."

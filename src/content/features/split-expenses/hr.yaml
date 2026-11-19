@@ -1,8 +1,8 @@
-translatedFrom: "0780798c"
+translatedFrom: "e769b463"
 review:
   status: checked
-  checker: "C2a-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -116,7 +116,7 @@ limits:
     - "Za svaki trošak plaća jedna osoba. Ako su platile dvije, zabilježi dva troška."
     - "Nema podjele po stavkama ni po udjelima. Postoje jednako, točni iznosi i postoci."
     - "Postoci moraju zajedno davati 100."
-    - "Trošak može iznositi do 999.999,99 u svojoj valuti, s uobičajenim brojem decimala te valute."
+    - "Trošak može iznositi do 999.999,99 u svojoj valuti, a više za valute s malim jedinicama, s uobičajenim brojem decimala te valute."
     - "Troškovi se ne ponavljaju sami. Umjesto toga kopiraj prošlomjesečni."
     - "Datumi ne smiju biti u budućnosti ni stariji od 10 godina."
     - "Trošak u kojem sudjeluje netko tko je napustio grupu postaje samo za čitanje."

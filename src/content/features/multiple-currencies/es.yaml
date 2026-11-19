@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - multi-currency.currency-count
   - multi-currency.currency-rules
@@ -18,11 +18,11 @@ identicalApproved:
   - example.people.2.name
   - example.people.3.name
 meta:
-  title: Divide gastos en 140 monedas, convertidas o por separado
+  title: Divide gastos en 133 monedas, convertidas o por separado
   description: Introduce cada gasto en la moneda en la que pagaste, mantén los saldos por separado o conviértelos a un tipo que puedes ver y cambiar, y salda cuentas con una lista corta de pagos.
-h1: Divide gastos en 140 monedas
+h1: Divide gastos en 133 monedas
 navLabel: Varias monedas
-lead: Euros, yenes y ese taxi en bahts. Side Badger toma cada gasto en la moneda en la que pagaste, mantiene los saldos en orden y puede convertir cuando tu grupo prefiera saldar de una vez. Funciona en 140 monedas y encaja de forma natural con los [viajes en grupo](page:use-case/group-trips).
+lead: Euros, yenes y ese taxi en bahts. Side Badger toma cada gasto en la moneda en la que pagaste, mantiene los saldos en orden y puede convertir cuando tu grupo prefiera saldar de una vez. Funciona en 133 monedas y encaja de forma natural con los [viajes en grupo](page:use-case/group-trips).
 cta:
   heading: Trae tus euros, trae tus yenes
   body: Crea una cuenta, empieza un grupo y añade el primer gasto en la moneda que tuvieras a mano.
@@ -105,8 +105,8 @@ limits:
     - El tipo queda fijado al guardar el gasto. Los gastos antiguos nunca se revalorizan.
     - Side Badger obtiene un tipo actual cuando puede. No se garantiza uno para cada par, y siempre puedes escribir el tipo tú.
     - La conversión automática del grupo se aplica solo a gastos nuevos y copiados, no a ediciones ni a gastos existentes.
-    - Cada gasto tiene un tope de 999.999,99 en su propia moneda.
-    - Hay 140 monedas. Las criptomonedas y los metales no están entre ellas.
+    - Un gasto puede llegar a 999.999,99 en su propia moneda, y más en las monedas con unidades pequeñas, como el yen o la rupia indonesia.
+    - Hay 133 monedas. Las criptomonedas y los metales no están entre ellas.
     - Side Badger registra pagos. Nunca mueve ni cambia dinero.
 useCasesHeading: Dónde ayuda
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: ¿Se revalorizan los gastos antiguos?
       a: No. El tipo queda fijado al guardar el gasto, así que un saldo no se desvía porque se mueva el mercado.
     - q: ¿Se admiten criptomonedas?
-      a: No. Hay 140 monedas, y las criptomonedas no están entre ellas.
-    - q: ¿Por qué no puedo introducir 2.000.000 de rupias indonesias?
-      a: Cada gasto tiene un tope de 999.999,99 en su propia moneda. Introdúcelo en otra moneda y conviértelo, o divídelo en dos gastos.
+      a: No. Hay 133 monedas, y las criptomonedas no están entre ellas.
+    - q: ¿Hay un límite para lo grande que puede ser un gasto?
+      a: Sí. Un gasto puede llegar a 999.999,99 en su propia moneda, y más en las monedas con unidades pequeñas, como el yen o la rupia indonesia. Si lo alcanzas, divídelo en dos gastos, o introdúcelo en otra moneda y conviértelo.
     - q: ¿Cuesta algo convertir?
       a: No. Convertir es gratis, como el resto de Side Badger. Consulta [precios](page:pricing).
     - q: ¿Tengo que convertir?

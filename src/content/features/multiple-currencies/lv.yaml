@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - multi-currency.currency-count
   - multi-currency.currency-rules
@@ -18,11 +18,11 @@ identicalApproved:
   - example.people.2.name
   - example.people.3.name
 meta:
-  title: "Sadaliet izmaksas 140 valūtās, konvertētas vai atsevišķi"
+  title: "Sadaliet izmaksas 133 valūtās, konvertētas vai atsevišķi"
   description: "Ievadiet katru izdevumu valūtā, kurā maksājāt, turiet atlikumus atsevišķi vai konvertējiet pēc kursa, ko redzat un varat mainīt, tad norēķinieties ar īsu maksājumu sarakstu."
-h1: "Sadaliet izmaksas 140 valūtās"
+h1: "Sadaliet izmaksas 133 valūtās"
 navLabel: "Vairākas valūtas"
-lead: "Eiro, jenas un tas viens taksometrs bahtos. Side Badger pieņem katru izdevumu valūtā, kurā maksājāt, uztur atlikumus kārtībā un var konvertēt, kad jūsu grupa labāk vēlas norēķināties vienreiz. Tas darbojas 140 valūtās un ir dabiska izvēle [grupas ceļojumiem](page:use-case/group-trips)."
+lead: "Eiro, jenas un tas viens taksometrs bahtos. Side Badger pieņem katru izdevumu valūtā, kurā maksājāt, uztur atlikumus kārtībā un var konvertēt, kad jūsu grupa labāk vēlas norēķināties vienreiz. Tas darbojas 133 valūtās un ir dabiska izvēle [grupas ceļojumiem](page:use-case/group-trips)."
 cta:
   heading: "Nesiet savus eiro, nesiet savas jenas"
   body: "Izveidojiet kontu, sāciet grupu un pievienojiet pirmo izdevumu jebkurā valūtā, kāda jums gadījās rokās."
@@ -105,8 +105,8 @@ limits:
     - "Kurss tiek fiksēts, kad izdevums tiek saglabāts. Vecie izdevumi nekad netiek pārvērtēti."
     - "Side Badger iegūst pašreizējo kursu, kur vien var. Ne katram pārim kurss ir garantēts, un kursu vienmēr varat ierakstīt pats."
     - "Grupas automātiskā konvertēšana attiecas tikai uz jauniem un nokopētiem izdevumiem, ne uz labojumiem vai esošiem izdevumiem."
-    - "Katram izdevumam ir ierobežojums 999 999,99 savā valūtā."
-    - "Ir 140 valūtas. Kriptovalūtas un metāli to vidū nav."
+    - "Izdevums var būt līdz 999 999,99 savā valūtā, un vairāk valūtām ar mazām vienībām, piemēram, jenai vai rūpijai."
+    - "Ir 133 valūtas. Kriptovalūtas un metāli to vidū nav."
     - "Side Badger reģistrē maksājumus. Tas nekad nepārvieto naudu un to neapmaina."
 useCasesHeading: "Kur tas palīdz"
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: "Vai vecie izdevumi tiek pārvērtēti?"
       a: "Nē. Kurss tiek fiksēts, kad izdevums tiek saglabāts, tāpēc atlikums nenovirzās tāpēc, ka mainījies tirgus."
     - q: "Vai atbalstāt kripto?"
-      a: "Nē. Ir 140 valūtas, un kriptovalūtas to vidū nav."
-    - q: "Kāpēc nevaru ievadīt 2 000 000 rūpiju?"
-      a: "Katram izdevumam ir ierobežojums 999 999,99 savā valūtā. Ievadiet to citā valūtā un konvertējiet vai sadaliet divos izdevumos."
+      a: "Nē. Ir 133 valūtas, un kriptovalūtas to vidū nav."
+    - q: "Vai ir ierobežojums, cik liels var būt izdevums?"
+      a: "Jā. Izdevums var būt līdz 999 999,99 savā valūtā, un vairāk valūtām ar mazām vienībām, piemēram, jenai vai rūpijai. Ja to sasniedzat, sadaliet izdevumu divos vai ievadiet to citā valūtā un konvertējiet."
     - q: "Vai konvertēšana kaut ko maksā?"
       a: "Nē. Konvertēšana ir bez maksas, tāpat kā pārējais Side Badger. Skatiet [cenas](page:pricing)."
     - q: "Vai man jākonvertē?"

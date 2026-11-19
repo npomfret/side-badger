@@ -1,8 +1,8 @@
-translatedFrom: "8a7fd3c8"
+translatedFrom: "b85c0a15"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - groups.group-per-house-trip-event
   - invites.link-or-qr-code
@@ -62,11 +62,11 @@ sections:
     items:
       - "**Le taux est fixé à l'enregistrement.** Les anciennes dépenses ne sont jamais réévaluées, donc un solde ne dérive pas parce que le marché a bougé. Des dépenses saisies à des jours différents peuvent avoir des taux différents ; si le groupe veut un seul taux pour tout le voyage, convenez-en et saisissez-le à chaque fois."
       - "**Pas de taux ? Saisissez-en un.** Side Badger va chercher un taux de change actuel quand il le peut, mais il n'est pas garanti qu'il en existe un pour chaque paire de devises. S'il n'y en a pas, ou si un bureau de change vous a fait un meilleur prix, saisissez le vôtre."
-      - "**999 999,99 par dépense, dans sa propre devise.** Un seul plafond, quelle que soit la monnaie. En yens, cela fait un peu moins de 1 000 000 ¥, soit environ 5 000 £ au taux de ce guide. Dans une devise aux grands nombres, comme la roupie indonésienne, une seule facture peut l'atteindre plus vite. Scindez la facture en deux dépenses, ou saisissez-la dans une autre devise et convertissez."
+      - "**Jusqu'à 999 999,99 par dépense, dans sa propre devise.** Les devises à petites unités ont plus de marge : le yen monte jusqu'à 99 999 999 ¥ et la rupiah jusqu'à 9 999 999 999,99 Rp, donc une grosse facture a peu de chances de l'atteindre. Si c'est le cas, scindez la facture en deux dépenses, ou saisissez-la dans une autre devise et convertissez."
   - heading: "Ce que Side Badger ne fait pas ici"
     items:
       - "Il ne fait jamais circuler ni échanger d'argent. Vous vous remboursez comme vous voulez, puis vous enregistrez le paiement."
-      - "Il gère 140 devises. Les cryptomonnaies et les métaux n'en font pas partie."
+      - "Il gère 133 devises. Les cryptomonnaies et les métaux n'en font pas partie."
 exampleAfter: 2
 example:
   heading: "Le Japon, réglé de deux façons"

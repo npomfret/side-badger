@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T5-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -18,11 +18,11 @@ claims:
   - currency-conversion.owe-euros-pay-pounds
   - settlements.pay-however-then-record
 meta:
-  title: "Dělte náklady ve 140 měnách, převedené nebo zvlášť"
+  title: "Dělte náklady ve 133 měnách, převedené nebo zvlášť"
   description: "Zadávejte každý výdaj v měně, ve které jste platili, vedte zůstatky zvlášť nebo převádějte podle kurzu, který vidíte a můžete změnit, a pak se vyrovnejte krátkým seznamem plateb."
-h1: "Dělte náklady ve 140 měnách"
+h1: "Dělte náklady ve 133 měnách"
 navLabel: "Více měn"
-lead: "Eura, jeny a ten jeden taxík v bahtech. Side Badger přijme každý výdaj v měně, ve které jste platili, udrží zůstatky v pořádku a umí převádět, když se skupina raději vyrovná jednou. Funguje ve 140 měnách a přirozeně se hodí na [skupinové výlety](page:use-case/group-trips)."
+lead: "Eura, jeny a ten jeden taxík v bahtech. Side Badger přijme každý výdaj v měně, ve které jste platili, udrží zůstatky v pořádku a umí převádět, když se skupina raději vyrovná jednou. Funguje ve 133 měnách a přirozeně se hodí na [skupinové výlety](page:use-case/group-trips)."
 cta:
   heading: "Přineste svá eura, přineste své jeny"
   body: "Vytvořte účet, založte skupinu a přidejte první výdaj v jakékoli měně, kterou jste zrovna měli v ruce."
@@ -105,8 +105,8 @@ limits:
     - "Kurz se zafixuje při uložení výdaje. Staré výdaje se nikdy nepřeceňují."
     - "Side Badger stáhne aktuální kurz, kde to jde. Ne každá dvojice ho má zaručený a kurz můžete vždy zadat sami."
     - "Automatický převod ve skupině platí jen pro nové a zkopírované výdaje, ne pro úpravy ani stávající výdaje."
-    - "Každý výdaj je omezen na 999 999,99 ve své měně."
-    - "Existuje 140 měn. Kryptoměny a kovy mezi nimi nejsou."
+    - "Jeden výdaj může činit až 999 999,99 ve své měně a více u měn s malými jednotkami, například u jenu nebo indonéské rupie."
+    - "Existuje 133 měn. Kryptoměny a kovy mezi nimi nejsou."
     - "Side Badger zaznamenává platby. Nikdy peníze nepřesouvá ani nevyměňuje."
 useCasesHeading: "Kde to pomáhá"
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: "Přeceňují se staré výdaje?"
       a: "Ne. Kurz se zafixuje při uložení výdaje, takže se zůstatek nehýbe jen proto, že se pohnul trh."
     - q: "Podporujete kryptoměny?"
-      a: "Ne. Existuje 140 měn a kryptoměny mezi nimi nejsou."
-    - q: "Proč nemohu zadat 2 000 000 indonéských rupií?"
-      a: "Každý výdaj je omezen na 999 999,99 ve své měně. Zadejte ho v jiné měně a převeďte, nebo ho rozdělte na dva výdaje."
+      a: "Ne. Existuje 133 měn a kryptoměny mezi nimi nejsou."
+    - q: "Existuje limit, jak velký může výdaj být?"
+      a: "Ano. Jeden výdaj může činit až 999 999,99 ve své měně a více u měn s malými jednotkami, například u jenu nebo indonéské rupie. Pokud na limit narazíte, rozdělte výdaj na dva, nebo ho zadejte v jiné měně a převeďte."
     - q: "Stojí převod něco?"
       a: "Ne. Převod je zdarma, stejně jako zbytek Side Badger. Viz [ceník](page:pricing)."
     - q: "Musím převádět?"

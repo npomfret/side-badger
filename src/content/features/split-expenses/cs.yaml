@@ -1,8 +1,8 @@
-translatedFrom: "0780798c"
+translatedFrom: "e769b463"
 review:
   status: checked
-  checker: "C2a-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -116,7 +116,7 @@ limits:
     - "Za každý výdaj platí jedna osoba. Pokud platily dvě, zaznamenejte dva výdaje."
     - "Neexistuje dělení podle položek ani podle podílů. Je rovnoměrně, podle přesných částek a procentuálně."
     - "Procenta musí dávat dohromady 100."
-    - "Výdaj může činit až 999 999,99 ve své měně, s obvyklým počtem desetinných míst této měny."
+    - "Výdaj může činit až 999 999,99 ve své měně, u měn s malými jednotkami i více, s obvyklým počtem desetinných míst této měny."
     - "Výdaje se samy neopakují. Zkopírujte místo toho výdaj z minulého měsíce."
     - "Data nemohou být v budoucnosti ani starší než 10 let."
     - "Výdaj, kterého se týká někdo, kdo opustil skupinu, je jen ke čtení."

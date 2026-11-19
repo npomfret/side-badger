@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -51,7 +51,7 @@ steps:
     shot: S05
     shotAlt: Gastu-formularioa ehuneko-banaketarekin, alokairua gelen tamainaren arabera banatzen
   - title: Jarraitu saldoei
-    body: Side Badger-ek moneta bakoitzaren saldo korrontea gordetzen du, nork nori zor dion begirada batean ikus dezazun. Zor txikien sare bat askatzea denen esku utzi beharrean, taldea kitatzen duen ordainketa-zerrenda labur bat proposatzen du.
+    body: Side Badger-ek moneta bakoitzaren saldo korrontea gordetzen du, nork nori zor dion begirada batean ikus dezazun. Gastu bat beste moneta batean izan bada, eskuratutako kanbio-tasa batekin bihur dezakezu, eta tasa hori editatu dezakezu; bestela, moneta bakoitzak bere saldoa gordetzen du. Zor txikien sare bat askatzea denen esku utzi beharrean, taldea kitatzen duen ordainketa-zerrenda labur bat proposatzen du.
     shot: S10
     shotAlt: Saldoen pantaila, bi monetatako zor sinplifikatuekin eta “Erakutsi guztiak” aktibatuta
   - title: Kitatu aplikaziotik kanpo, erregistratu barruan
@@ -103,4 +103,4 @@ faq:
     - q: Zenbat lagun sar daitezke talde batean?
       a: Gehienez 50 lagun talde batean. Gonbidatu esteka edo QR kode batekin, eta aktibatu onarpena administratzaile batek bakoitza sartzen utz dezan nahi baduzu.
     - q: Eta moneta batean baino gehiagoko bidaiak?
-      a: Saldoak moneta bakoitzeko bereizita gordetzen dira. Ikusi [moneta anitz](page:feature/multiple-currencies).
+      a: Saldoak moneta bakoitzeko bereizita gordetzen dira, eta gastu bat bihur dezakezu eskuratutako kanbio-tasa batekin, editatu dezakezunarekin. Ikusi [moneta anitz](page:feature/multiple-currencies).

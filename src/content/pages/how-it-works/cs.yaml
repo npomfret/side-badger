@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -52,7 +52,7 @@ steps:
     shot: S05
     shotAlt: "Formulář výdaje s procentuálním rozdělením nájmu podle velikosti pokoje"
   - title: "Sledujte zůstatky"
-    body: "Side Badger vede průběžný zůstatek pro každou měnu, takže na první pohled vidíte, kdo komu dluží. Místo aby nechal všechny rozplétat změť drobných dluhů, navrhne krátký seznam plateb, který skupinu vyrovná."
+    body: "Side Badger vede průběžný zůstatek pro každou měnu, takže na první pohled vidíte, kdo komu dluží. Pokud byl výdaj v jiné měně, můžete ho převést podle staženého kurzu, který můžete upravit; jinak si každá měna drží vlastní zůstatek. Místo aby nechal všechny rozplétat změť drobných dluhů, navrhne krátký seznam plateb, který skupinu vyrovná."
     shot: S10
     shotAlt: "Obrazovka zůstatků se zjednodušenými dluhy ve dvou měnách a zapnutou volbou Zobrazit vše"
   - title: "Vyrovnejte se mimo aplikaci, zaznamenejte to v ní"
@@ -104,4 +104,4 @@ faq:
     - q: "Kolik lidí se může připojit ke skupině?"
       a: "Až 50 lidí ve skupině. Pozvěte je odkazem nebo QR kódem a zapněte schvalování, pokud chcete, aby správce každou osobu pustil dovnitř."
     - q: "A co výlety s více než jednou měnou?"
-      a: "Zůstatky se vedou zvlášť pro každou měnu. Viz [více měn](page:feature/multiple-currencies)."
+      a: "Zůstatky se vedou zvlášť pro každou měnu a výdaj můžete převést podle staženého kurzu, který můžete upravit. Viz [více měn](page:feature/multiple-currencies)."

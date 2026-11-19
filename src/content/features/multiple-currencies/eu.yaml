@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - multi-currency.currency-count
   - multi-currency.currency-rules
@@ -18,11 +18,11 @@ identicalApproved:
   - example.people.2.name
   - example.people.3.name
 meta:
-  title: "Banatu kostuak 140 monetatan, bihurtuta edo bereizita"
+  title: "Banatu kostuak 133 monetatan, bihurtuta edo bereizita"
   description: "Sartu gastu bakoitza ordaindu zenuen monetan, mantendu saldoak bereizita edo bihurtu ikus eta alda dezakezun tasa batean, eta gero kitatu ordainketa-zerrenda labur batekin."
-h1: Banatu kostuak 140 monetatan
+h1: Banatu kostuak 133 monetatan
 navLabel: Moneta anitz
-lead: Euroak, yenak, eta baht-etan ordaindutako taxi hura. Side Badger-ek gastu bakoitza ordaindu zenuen monetan hartzen du, saldoak ordenatuta mantentzen ditu, eta bihur dezake zure taldeak behingoz kitatu nahiago duenean. 140 monetatan funtzionatzen du, eta [taldeko bidaietarako](page:use-case/group-trips) oso egokia da.
+lead: Euroak, yenak, eta baht-etan ordaindutako taxi hura. Side Badger-ek gastu bakoitza ordaindu zenuen monetan hartzen du, saldoak ordenatuta mantentzen ditu, eta bihur dezake zure taldeak behingoz kitatu nahiago duenean. 133 monetatan funtzionatzen du, eta [taldeko bidaietarako](page:use-case/group-trips) oso egokia da.
 cta:
   heading: Ekarri zure euroak, ekarri zure yenak
   body: Sortu kontu bat, hasi talde bat eta gehitu lehen gastua eskuan zenuen monetan.
@@ -105,8 +105,8 @@ limits:
     - Tasa gastua gordetzen denean finkatzen da. Gastu zaharrak ez dira inoiz berriro baloratzen.
     - Side Badger egungo tasa bat lortzen saiatzen da ahal duen lekuan. Ez dago bermatuta moneta-pare guztiek tasa bat izango dutenik, eta tasa zeuk idatz dezakezu beti.
     - Taldearen bihurketa automatikoa gastu berriei eta kopiatuei bakarrik aplikatzen zaie, ez edizioei edo lehendik dauden gastuei.
-    - Gastu bakoitzak gehienez 999.999,99 du bere monetan.
-    - 140 moneta daude. Kriptomonetak eta metalak ez daude haien artean.
+    - Gastu batek gehienez 999.999,99 izan dezake bere monetan, eta gehiago unitate txikiko monetetan, hala nola yenean edo Indonesiako rupian.
+    - 133 moneta daude. Kriptomonetak eta metalak ez daude haien artean.
     - Side Badger-ek ordainketak erregistratzen ditu. Ez du inoiz dirua mugitzen ez trukatzen.
 useCasesHeading: Hau non laguntzen duen
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: Gastu zaharrak berriro baloratzen al dira?
       a: Ez. Tasa gastua gordetzen denean finkatzen da, beraz saldo bat ez da mugitzen merkatua mugitu delako.
     - q: Kriptomonetak onartzen al dituzue?
-      a: Ez. 140 moneta daude, eta kriptomonetak ez daude haien artean.
-    - q: Zergatik ezin dut 2.000.000 rupia sartu?
-      a: Gastu bakoitzak gehienez 999.999,99 du bere monetan. Sartu beste moneta batean eta bihurtu, edo zatitu bi gastutan.
+      a: Ez. 133 moneta daude, eta kriptomonetak ez daude haien artean.
+    - q: Ba al dago gastu batek izan dezakeen zenbatekoaren mugarik?
+      a: Bai. Gastu batek gehienez 999.999,99 izan dezake bere monetan, eta gehiago unitate txikiko monetetan, hala nola yenean edo Indonesiako rupian. Mugara iristen bazara, zatitu bi gastutan, edo sartu beste moneta batean eta bihurtu.
     - q: Bihurtzeak ezer kostatzen al du?
       a: Ez. Bihurtzea doakoa da, Side Badger-en gainerakoa bezala. Ikusi [prezioak](page:pricing).
     - q: Bihurtu behar al dut?

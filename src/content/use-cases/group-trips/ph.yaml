@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T1-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -26,9 +26,9 @@ identicalApproved:
   - example.people.3.name
   - example.expenses.1.label
 meta:
-  title: Hatiin ang gastos sa group trip, sa 140 pera
+  title: Hatiin ang gastos sa group trip, sa 133 pera
   description: Subaybayan kung sino ang nagbayad ng ano sa group trip, ilagay ang gastos sa lokal na pera, i-convert o hindi, at mag-settle nang isang beses sa dulo. Libre, sa browser mo.
-h1: Hatiin ang gastos sa group trip, sa 140 pera
+h1: Hatiin ang gastos sa group trip, sa 133 pera
 navLabel: Mga group trip
 lead: Subaybayan ang villa, ang taxi, at ang isang round ng cocktail na walang naaalalang nag-volunteer bumili. Nagtatabi ang Side Badger ng tumatakbong bilang habang wala ka, [kayang hawakan ang pounds, euro, at 138 pang pera](page:feature/multiple-currencies), at ibibigay ang [maikling listahan ng mga bayad](page:feature/settle-up) pag-uwi ninyo.
 cta:
@@ -107,4 +107,4 @@ faq:
     - q: Puwede ba naming i-freeze ang grupo pagkatapos ng biyahe?
       a: Oo. Maaaring i-lock ng admin ang grupo para manatili ang mga numero.
     - q: May limitasyon ba sa halaga?
-      a: Mayroon. 999,999.99 bawat gastos, sa sarili nitong pera.
+      a: Mayroon. Hanggang 999,999.99 ang isang gastos sa sarili nitong pera, at mas mataas pa para sa mga pera na maliit ang yunit, gaya ng yen o rupiah.

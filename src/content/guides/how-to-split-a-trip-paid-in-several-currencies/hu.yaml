@@ -1,8 +1,8 @@
-translatedFrom: "8a7fd3c8"
+translatedFrom: "b85c0a15"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -66,11 +66,11 @@ sections:
     items:
       - "**Az árfolyam mentéskor rögzül.** A régi költségeket soha nem értékeli újra, így egy egyenleg nem sodródik el attól, hogy a piac mozdult. A különböző napokon rögzített költségeken más-más árfolyam lehet, ezért ha a csoport az egész útra egyetlen árfolyamot szeretne, egyezzetek meg benne, és minden alkalommal írjátok be."
       - "**Nincs árfolyam? Írj be egyet.** A Side Badger lekér egy aktuális árfolyamot, ahol tud, de nem minden pároshoz garantált. Ha nincs, vagy a pénzváltóban jobbat kaptál, írd be a sajátodat."
-      - "**Költségenként 999 999,99, a saját pénznemében.** Egyetlen felső határ van, bármilyen pénzről legyen szó. Jenben ez épp 1 000 000 ¥ alatt van, ennek az útmutatónak az árfolyamán nagyjából 5 000 £. Egy nagy számokkal dolgozó pénznemben, például az indonéz rúpiában egy számla hamarabb elérheti. Bontsd két költségre a számlát, vagy add meg egy másik pénznemben, és váltsd át."
+      - "**Költségenként legfeljebb 999 999,99, a saját pénznemében.** A kis egységű pénznemeknél több a mozgástér: a jen 99 999 999 ¥-ig, a rúpia 9 999 999 999,99 Rp-ig mehet, így egy nagy számla aligha éri el. Ha mégis, bontsd két költségre a számlát, vagy add meg egy másik pénznemben, és váltsd át."
   - heading: "Mit nem csinál itt a Side Badger"
     items:
       - "Soha nem mozgat és nem vált pénzt. Ti fizettek egymásnak, ahogy akartok, aztán rögzítitek a kifizetést."
-      - "140 pénznemet ismer. A kriptovaluták és a nemesfémek nincsenek köztük."
+      - "133 pénznemet ismer. A kriptovaluták és a nemesfémek nincsenek köztük."
 exampleAfter: 2
 example:
   heading: "Japán, kétféleképpen elszámolva"

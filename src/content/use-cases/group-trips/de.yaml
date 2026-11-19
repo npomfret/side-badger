@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -25,9 +25,9 @@ claims:
   - permissions.managed-group
   - permissions.lock-the-group
 meta:
-  title: Kosten für Gruppenreisen teilen, in 140 Währungen
+  title: Kosten für Gruppenreisen teilen, in 133 Währungen
   description: Halte fest, wer auf einer Gruppenreise was bezahlt hat, gib Kosten in der Landeswährung ein, rechne sie um oder nicht und rechne am Ende einmal ab. Kostenlos, im Browser.
-h1: Kosten für Gruppenreisen teilen, in 140 Währungen
+h1: Kosten für Gruppenreisen teilen, in 133 Währungen
 navLabel: Gruppenreisen
 lead: Erfasse die Villa, die Taxis und die eine Cocktailrunde, für die sich keiner erinnert, sich zum Bezahlen gemeldet zu haben. Side Badger führt die laufende Rechnung, solange ihr weg seid, [kommt mit Pfund, Euro und 138 weiteren Währungen klar](page:feature/multiple-currencies) und gibt dir daheim eine [kurze Liste von Zahlungen](page:feature/settle-up).
 cta:
@@ -106,4 +106,4 @@ faq:
     - q: Können wir die Gruppe nach der Reise einfrieren?
       a: Ja. Ein Admin kann die Gruppe sperren, damit die Zahlen stehen bleiben.
     - q: Gibt es ein Limit für Beträge?
-      a: Ja. 999.999,99 pro Ausgabe, in der jeweiligen Währung.
+      a: Ja. Eine Ausgabe kann bis zu 999.999,99 in der jeweiligen Währung betragen, bei Währungen mit kleinen Einheiten auch mehr, etwa bei Yen oder Rupiah.

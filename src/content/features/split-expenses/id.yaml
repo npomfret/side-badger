@@ -1,8 +1,8 @@
-translatedFrom: "0780798c"
+translatedFrom: "e769b463"
 review:
   status: checked
-  checker: "C2a-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -112,7 +112,7 @@ limits:
     - "Satu orang membayar untuk setiap pengeluaran. Jika dua orang membayar, catat dua pengeluaran."
     - "Tidak ada pembagian per item dan tidak ada pembagian per bagian. Yang ada hanya rata, jumlah pasti, dan persentase."
     - "Persentase harus berjumlah 100."
-    - "Satu pengeluaran bisa mencapai 999.999,99 dalam mata uangnya sendiri, dengan angka desimal yang lazim untuk mata uang itu."
+    - "Satu pengeluaran bisa mencapai 999.999,99 dalam mata uangnya sendiri, dan lebih besar untuk mata uang dengan satuan kecil, dengan angka desimal yang lazim untuk mata uang itu."
     - "Pengeluaran tidak bisa berulang sendiri. Salin yang bulan lalu."
     - "Tanggal tidak boleh di masa depan atau lebih dari 10 tahun lalu."
     - "Pengeluaran yang melibatkan orang yang sudah keluar dari grup menjadi hanya-baca."

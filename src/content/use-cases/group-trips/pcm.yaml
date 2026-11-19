@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T2-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -27,9 +27,9 @@ identicalApproved:
   - example.people.2.name
   - example.people.3.name
 meta:
-  title: "Share group trip costs, for 140 currencies"
+  title: "Share group trip costs, for 133 currencies"
   description: "Track who pay wetin for group trip, enter costs for local currency, convert dem or not, and settle once for di end. Free, for your browser."
-h1: "Share group trip costs, for 140 currencies"
+h1: "Share group trip costs, for 133 currencies"
 navLabel: "Group trip dem"
 lead: "Track di villa, di taxi, and di one cocktail round wey nobody remember say dem agree to buy. Side Badger dey keep di running count while you dey away, [handle pounds, euros and 138 other currencies](page:feature/multiple-currencies), and give you [short list of payments](page:feature/settle-up) when you reach house."
 cta:
@@ -108,4 +108,4 @@ faq:
     - q: "We fit freeze di group after di trip?"
       a: "Yes. Admin fit lock di group so di numbers go stay put."
     - q: "Limit dey for amounts?"
-      a: "Yes. 999,999.99 per expense, for im own currency."
+      a: "Yes. One expense fit reach 999,999.99 for im own currency, and more for currencies wey get small units, like yen or rupiah."

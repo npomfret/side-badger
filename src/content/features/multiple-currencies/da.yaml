@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - multi-currency.currency-count
   - multi-currency.currency-rules
@@ -18,11 +18,11 @@ identicalApproved:
   - example.people.2.name
   - example.people.3.name
 meta:
-  title: Del udgifter i 140 valutaer, omregnet eller holdt adskilt
+  title: Del udgifter i 133 valutaer, omregnet eller holdt adskilt
   description: Indtast hver udgift i den valuta, du betalte i, hold saldiene adskilt eller omregn med en kurs, du kan se og ændre, og gør så op med en kort liste over betalinger.
-h1: Del udgifter i 140 valutaer
+h1: Del udgifter i 133 valutaer
 navLabel: Flere valutaer
-lead: Euro, yen og den ene taxa i baht. Side Badger tager hver udgift i den valuta, du betalte i, holder styr på saldiene og kan omregne, når gruppen hellere vil gøre op én gang. Den virker i 140 valutaer og passer naturligt til [gruppeture](page:use-case/group-trips).
+lead: Euro, yen og den ene taxa i baht. Side Badger tager hver udgift i den valuta, du betalte i, holder styr på saldiene og kan omregne, når gruppen hellere vil gøre op én gang. Den virker i 133 valutaer og passer naturligt til [gruppeture](page:use-case/group-trips).
 cta:
   heading: Tag dine euro med, tag dine yen med
   body: Opret en konto, start en gruppe, og tilføj den første udgift i den valuta, du tilfældigvis havde ved hånden.
@@ -105,8 +105,8 @@ limits:
     - Kursen fastlåses, når udgiften gemmes. Gamle udgifter omvurderes aldrig.
     - Side Badger henter en aktuel kurs, hvor det er muligt. Ikke alle par er garanteret en, og du kan altid selv skrive kursen.
     - Automatisk omregning til gruppens valuta gælder kun nye og kopierede udgifter, ikke redigeringer eller eksisterende udgifter.
-    - Hver udgift er begrænset til 999.999,99 i sin egen valuta.
-    - Der er 140 valutaer. Kryptovalutaer og metaller er ikke iblandt dem.
+    - En enkelt udgift kan være op til 999.999,99 i sin egen valuta og mere for valutaer med små enheder, som yen eller rupiah.
+    - Der er 133 valutaer. Kryptovalutaer og metaller er ikke iblandt dem.
     - Side Badger registrerer betalinger. Den flytter eller veksler aldrig penge.
 useCasesHeading: Hvor det hjælper
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: Bliver gamle udgifter omvurderet?
       a: Nej. Kursen fastlåses, når udgiften gemmes, så en saldo ikke driver, fordi markedet gjorde.
     - q: Understøtter I kryptovaluta?
-      a: Nej. Der er 140 valutaer, og kryptovalutaer er ikke iblandt dem.
-    - q: Hvorfor kan jeg ikke indtaste 2.000.000 rupiah?
-      a: Hver udgift er begrænset til 999.999,99 i sin egen valuta. Indtast den i en anden valuta, og omregn, eller del den op i to udgifter.
+      a: Nej. Der er 133 valutaer, og kryptovalutaer er ikke iblandt dem.
+    - q: Er der en grænse for, hvor stor en udgift kan være?
+      a: Ja. En enkelt udgift kan være op til 999.999,99 i sin egen valuta og mere for valutaer med små enheder, som yen eller rupiah. Rammer du den, så del den op i to udgifter, eller indtast den i en anden valuta, og omregn.
     - q: Koster omregning noget?
       a: Nej. Omregning er gratis, ligesom resten af Side Badger. Se [priser](page:pricing).
     - q: Skal jeg omregne?

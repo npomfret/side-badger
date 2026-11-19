@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T5-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -25,9 +25,9 @@ claims:
   - permissions.managed-group
   - permissions.lock-the-group
 meta:
-  title: "Dziel koszty wyjazdu grupowego, w 140 walutach"
+  title: "Dziel koszty wyjazdu grupowego, w 133 walutach"
   description: "Śledź, kto za co zapłacił na wyjeździe grupowym, wpisuj koszty w lokalnej walucie, przeliczaj je albo nie i rozlicz się raz na końcu. Za darmo, w przeglądarce."
-h1: "Dziel koszty wyjazdu grupowego, w 140 walutach"
+h1: "Dziel koszty wyjazdu grupowego, w 133 walutach"
 navLabel: "Wyjazdy grupowe"
 lead: "Śledź willę, taksówki i tę jedną kolejkę koktajli, którą nikt nie pamięta, żeby się wyrywał stawiać. Side Badger prowadzi bieżący rachunek w czasie wyjazdu, [obsługuje funty, euro i 138 innych walut](page:feature/multiple-currencies) i po powrocie daje [krótką listę płatności](page:feature/settle-up)."
 cta:
@@ -106,4 +106,4 @@ faq:
     - q: "Czy możemy zamrozić grupę po wyjeździe?"
       a: "Tak. Administrator może zablokować grupę, żeby liczby zostały na miejscu."
     - q: "Czy jest limit kwot?"
-      a: "Tak. 999 999,99 na wydatek, w jego własnej walucie."
+      a: "Tak. Wydatek może wynosić do 999 999,99 w swojej walucie, a więcej w przypadku walut o małych jednostkach, takich jak jen czy rupia indonezyjska."

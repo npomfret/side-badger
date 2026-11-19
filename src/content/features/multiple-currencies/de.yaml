@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -18,11 +18,11 @@ claims:
   - currency-conversion.owe-euros-pay-pounds
   - settlements.pay-however-then-record
 meta:
-  title: Kosten in 140 Währungen teilen, umgerechnet oder getrennt
+  title: Kosten in 133 Währungen teilen, umgerechnet oder getrennt
   description: Gib jede Ausgabe in der Währung ein, in der du bezahlt hast, führe die Salden getrennt oder rechne zu einem Kurs um, den du sehen und ändern kannst, und rechne dann mit einer kurzen Liste von Zahlungen ab.
-h1: Kosten in 140 Währungen teilen
+h1: Kosten in 133 Währungen teilen
 navLabel: Mehrere Währungen
-lead: Euro, Yen und dieses eine Taxi in Baht. Side Badger nimmt jede Ausgabe in der Währung, in der du bezahlt hast, hält die Salden sauber und kann umrechnen, wenn deine Gruppe lieber einmal abrechnet. Es funktioniert in 140 Währungen und passt bestens zu [Gruppenreisen](page:use-case/group-trips).
+lead: Euro, Yen und dieses eine Taxi in Baht. Side Badger nimmt jede Ausgabe in der Währung, in der du bezahlt hast, hält die Salden sauber und kann umrechnen, wenn deine Gruppe lieber einmal abrechnet. Es funktioniert in 133 Währungen und passt bestens zu [Gruppenreisen](page:use-case/group-trips).
 cta:
   heading: Bring deine Euro, bring deine Yen
   body: Erstelle ein Konto, starte eine Gruppe und füge die erste Ausgabe in der Währung hinzu, die du gerade in der Hand hattest.
@@ -105,8 +105,8 @@ limits:
     - Der Kurs wird beim Speichern der Ausgabe festgelegt. Alte Ausgaben werden nie neu bewertet.
     - Side Badger holt einen aktuellen Kurs, wo es geht. Nicht für jedes Paar ist einer garantiert, und du kannst den Kurs immer selbst eintippen.
     - Die automatische Umrechnung der Gruppe gilt nur für neue und kopierte Ausgaben, nicht für Bearbeitungen oder bestehende Ausgaben.
-    - Jede Ausgabe ist auf 999.999,99 in der jeweiligen Währung begrenzt.
-    - Es gibt 140 Währungen. Kryptowährungen und Metalle gehören nicht dazu.
+    - Eine Ausgabe kann bis zu 999.999,99 in der jeweiligen Währung betragen, bei Währungen mit kleinen Einheiten auch mehr, etwa bei Yen oder Rupiah.
+    - Es gibt 133 Währungen. Kryptowährungen und Metalle gehören nicht dazu.
     - Side Badger erfasst Zahlungen. Es bewegt oder tauscht nie Geld.
 useCasesHeading: Wo das hilft
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: Werden alte Ausgaben neu bewertet?
       a: Nein. Der Kurs wird beim Speichern der Ausgabe festgelegt, ein Saldo driftet also nicht, nur weil sich der Markt bewegt hat.
     - q: Unterstützt ihr Krypto?
-      a: Nein. Es gibt 140 Währungen, und Kryptowährungen gehören nicht dazu.
-    - q: Warum kann ich keine 2.000.000 Rupiah eingeben?
-      a: Jede Ausgabe ist auf 999.999,99 in der jeweiligen Währung begrenzt. Gib sie in einer anderen Währung ein und rechne um, oder teile sie in zwei Ausgaben.
+      a: Nein. Es gibt 133 Währungen, und Kryptowährungen gehören nicht dazu.
+    - q: Gibt es eine Obergrenze dafür, wie hoch eine Ausgabe sein darf?
+      a: Ja. Eine Ausgabe kann bis zu 999.999,99 in der jeweiligen Währung betragen, bei Währungen mit kleinen Einheiten auch mehr, etwa bei Yen oder Rupiah. Wenn du sie erreichst, teile die Ausgabe in zwei oder gib sie in einer anderen Währung ein und rechne um.
     - q: Kostet das Umrechnen etwas?
       a: Nein. Umrechnen ist kostenlos, wie der Rest von Side Badger. Siehe [Preise](page:pricing).
     - q: Muss ich umrechnen?

@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T5-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -18,11 +18,11 @@ claims:
   - currency-conversion.owe-euros-pay-pounds
   - settlements.pay-however-then-record
 meta:
-  title: "Masrafları 140 para biriminde bölüşün, çevirerek veya ayrı tutarak"
+  title: "Masrafları 133 para biriminde bölüşün, çevirerek veya ayrı tutarak"
   description: "Her harcamayı ödediğiniz para biriminde girin, bakiyeleri ayrı tutun veya görebildiğiniz ve değiştirebildiğiniz bir kurla çevirin, sonra kısa bir ödeme listesiyle ödeşin."
-h1: "Masrafları 140 para biriminde bölüşün"
+h1: "Masrafları 133 para biriminde bölüşün"
 navLabel: "Birden fazla para birimi"
-lead: "Euro, yen ve baht ile ödenen o tek taksi. Side Badger her harcamayı ödediğiniz para biriminde alır, bakiyeleri düzenli tutar ve grubunuz bir kerede ödeşmeyi tercih ettiğinde çevirebilir. 140 para biriminde çalışır ve [grup gezilerine](page:use-case/group-trips) doğal olarak uyar."
+lead: "Euro, yen ve baht ile ödenen o tek taksi. Side Badger her harcamayı ödediğiniz para biriminde alır, bakiyeleri düzenli tutar ve grubunuz bir kerede ödeşmeyi tercih ettiğinde çevirebilir. 133 para biriminde çalışır ve [grup gezilerine](page:use-case/group-trips) doğal olarak uyar."
 cta:
   heading: "Euronuzu getirin, yeninizi getirin"
   body: "Bir hesap oluşturun, bir grup kurun ve ilk harcamayı elinizde ne para birimi varsa onunla ekleyin."
@@ -105,8 +105,8 @@ limits:
     - "Kur, harcama kaydedildiğinde sabitlenir. Eski harcamalar asla yeniden değerlenmez."
     - "Side Badger mümkün olan yerde güncel bir kur getirir. Her çift için garanti edilmez ve kuru her zaman kendiniz yazabilirsiniz."
     - "Grubun otomatik çevirmesi yalnızca yeni ve kopyalanan harcamalar için geçerlidir; düzenlemeler veya mevcut harcamalar için değil."
-    - "Her harcama kendi para biriminde 999.999,99 ile sınırlıdır."
-    - "140 para birimi var. Kripto paralar ve madenler bunların arasında değil."
+    - "Bir harcama kendi para biriminde en fazla 999.999,99 olabilir; yen veya Endonezya rupisi gibi küçük birimli para birimlerinde daha fazlası olabilir."
+    - "133 para birimi var. Kripto paralar ve madenler bunların arasında değil."
     - "Side Badger ödemeleri kaydeder. Para taşımaz veya bozdurmaz."
 useCasesHeading: "Bunun yardımcı olduğu yerler"
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: "Eski harcamalar yeniden değerlenir mi?"
       a: "Hayır. Kur, harcama kaydedildiğinde sabitlenir; yani piyasa oynadığı için bir bakiye kaymaz."
     - q: "Kriptoyu destekliyor musunuz?"
-      a: "Hayır. 140 para birimi var ve kripto paralar bunların arasında değil."
-    - q: "Neden 2.000.000 Endonezya rupisi giremiyorum?"
-      a: "Her harcama kendi para biriminde 999.999,99 ile sınırlıdır. Başka bir para biriminde girip çevirin ya da iki harcamaya bölün."
+      a: "Hayır. 133 para birimi var ve kripto paralar bunların arasında değil."
+    - q: "Bir harcamanın büyüklüğüne sınır var mı?"
+      a: "Evet. Bir harcama kendi para biriminde en fazla 999.999,99 olabilir; yen veya Endonezya rupisi gibi küçük birimli para birimlerinde daha fazlası olabilir. Sınıra takılırsanız iki harcamaya bölün ya da başka bir para biriminde girip çevirin."
     - q: "Çevirmenin bir maliyeti var mı?"
       a: "Hayır. Çevirmek, Side Badger'ın geri kalanı gibi ücretsizdir. [Fiyatlandırma](page:pricing) sayfasına bakın."
     - q: "Çevirmek zorunda mıyım?"

@@ -1,8 +1,8 @@
-translatedFrom: "0780798c"
+translatedFrom: "e769b463"
 review:
   status: checked
-  checker: "C2a-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -116,7 +116,7 @@ limits:
     - "Mae un person yn talu am bob cost. Os talodd dau berson, cofnodwch ddwy gost."
     - "Does dim rhannu fesul eitem na rhannu fesul cyfrannau. Yn gyfartal, symiau union a chanrannau yw'r cyfan sydd ar gael."
     - "Rhaid i ganrannau adio i 100."
-    - "Gall cost fod hyd at 999,999.99 yn ei harian cyfred ei hun, gyda'r lleoedd degol arferol ar gyfer yr arian cyfred hwnnw."
+    - "Gall cost fod hyd at 999,999.99 yn ei harian cyfred ei hun, a mwy ar gyfer arian cyfred ag unedau bach, gyda'r lleoedd degol arferol ar gyfer yr arian cyfred hwnnw."
     - "Ni all costau ailadrodd ar eu pen eu hunain. Copïwch un y mis diwethaf yn lle hynny."
     - "Ni all dyddiadau fod yn y dyfodol na mwy na 10 mlynedd yn ôl."
     - "Mae cost sy'n cynnwys rhywun sydd wedi gadael y grŵp yn dod yn ddarllen yn unig."

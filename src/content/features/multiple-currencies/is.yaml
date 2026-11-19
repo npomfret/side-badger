@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T4-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - multi-currency.currency-count
   - multi-currency.currency-rules
@@ -18,11 +18,11 @@ identicalApproved:
   - example.people.2.name
   - example.people.3.name
 meta:
-  title: "Skiptu kostnaði í 140 gjaldmiðlum, umreiknuðum eða aðskildum"
+  title: "Skiptu kostnaði í 133 gjaldmiðlum, umreiknuðum eða aðskildum"
   description: "Skráðu hvert útgjald í gjaldmiðlinum sem þú greiddir í, haltu stöðunni aðskilinni eða umreiknaðu á gengi sem þú sérð og getur breytt, og gerðu svo upp með stuttum lista yfir greiðslur."
-h1: "Skiptu kostnaði í 140 gjaldmiðlum"
+h1: "Skiptu kostnaði í 133 gjaldmiðlum"
 navLabel: "Margir gjaldmiðlar"
-lead: "Evrur, jen og þessi eini leigubíll í bahtum. Side Badger tekur við hverju útgjaldi í gjaldmiðlinum sem þú greiddir í, heldur stöðunni réttri og getur umreiknað þegar hópurinn vill frekar gera upp í einu lagi. Það virkar í 140 gjaldmiðlum og á vel við [hópferðir](page:use-case/group-trips)."
+lead: "Evrur, jen og þessi eini leigubíll í bahtum. Side Badger tekur við hverju útgjaldi í gjaldmiðlinum sem þú greiddir í, heldur stöðunni réttri og getur umreiknað þegar hópurinn vill frekar gera upp í einu lagi. Það virkar í 133 gjaldmiðlum og á vel við [hópferðir](page:use-case/group-trips)."
 cta:
   heading: "Komdu með evrurnar þínar, komdu með jenin þín"
   body: "Stofnaðu aðgang, byrjaðu hóp og bættu við fyrsta útgjaldinu í hvaða gjaldmiðli sem þú varst með í höndunum."
@@ -105,8 +105,8 @@ limits:
     - "Gengið festist þegar útgjaldið er vistað. Gömul útgjöld eru aldrei endurmetin."
     - "Side Badger sækir núverandi gengi þar sem það getur. Ekki er tryggt að öll pör hafi gengi og þú getur alltaf slegið gengið inn sjálf(ur)."
     - "Sjálfvirkur umreikningur hópsins gildir aðeins um ný og afrituð útgjöld, ekki breytingar eða núverandi útgjöld."
-    - "Hvert útgjald er takmarkað við 999.999,99 í eigin gjaldmiðli."
-    - "Gjaldmiðlarnir eru 140. Rafmyntir og málmar eru ekki þar á meðal."
+    - "Eitt útgjald getur verið allt að 999.999,99 í eigin gjaldmiðli, og meira fyrir gjaldmiðla með litlar einingar, eins og jen eða indónesíska rúpíu."
+    - "Gjaldmiðlarnir eru 133. Rafmyntir og málmar eru ekki þar á meðal."
     - "Side Badger skráir greiðslur. Það flytur aldrei peninga eða skiptir þeim."
 useCasesHeading: "Hvar þetta hjálpar"
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: "Eru gömul útgjöld endurmetin?"
       a: "Nei. Gengið festist þegar útgjaldið er vistað, svo staða rekur ekki af leið þótt markaðurinn geri það."
     - q: "Styðjið þið rafmyntir?"
-      a: "Nei. Gjaldmiðlarnir eru 140 og rafmyntir eru ekki þar á meðal."
-    - q: "Af hverju get ég ekki skráð 2.000.000 rúpíur?"
-      a: "Hvert útgjald er takmarkað við 999.999,99 í eigin gjaldmiðli. Skráðu það í öðrum gjaldmiðli og umreiknaðu, eða skiptu því í tvö útgjöld."
+      a: "Nei. Gjaldmiðlarnir eru 133 og rafmyntir eru ekki þar á meðal."
+    - q: "Er hámark á því hve stórt útgjald má vera?"
+      a: "Já. Eitt útgjald getur verið allt að 999.999,99 í eigin gjaldmiðli, og meira fyrir gjaldmiðla með litlar einingar, eins og jen eða indónesíska rúpíu. Ef þú nærð því, skiptu því í tvö útgjöld eða skráðu það í öðrum gjaldmiðli og umreiknaðu."
     - q: "Kostar umreikningur eitthvað?"
       a: "Nei. Umreikningur er ókeypis, eins og allt annað í Side Badger. Sjá [verðskrá](page:pricing)."
     - q: "Þarf ég að umreikna?"

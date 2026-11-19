@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -26,9 +26,9 @@ claims:
   - permissions.managed-group
   - permissions.lock-the-group
 meta:
-  title: "Divide os custos de uma viagem em grupo, em 140 moedas"
+  title: "Divide os custos de uma viagem em grupo, em 133 moedas"
   description: "Regista quem pagou o quê numa viagem em grupo, introduz os custos na moeda local, converte-os ou não, e acerta tudo uma só vez no fim. Grátis, no teu navegador."
-h1: "Divide os custos de uma viagem em grupo, em 140 moedas"
+h1: "Divide os custos de uma viagem em grupo, em 133 moedas"
 navLabel: "Viagens em grupo"
 lead: "Regista a villa, o táxi e a ronda de cocktails que ninguém se lembra de ter oferecido pagar. O Side Badger mantém a conta enquanto estás fora, [lida com libras, euros e outras 138 moedas](page:feature/multiple-currencies) e dá-te uma [lista curta de pagamentos](page:feature/settle-up) quando chegares a casa."
 cta:
@@ -107,4 +107,4 @@ faq:
     - q: "Podemos congelar o grupo depois da viagem?"
       a: "Sim. Um administrador pode bloquear o grupo para os números ficarem como estão."
     - q: "Há limite para os valores?"
-      a: "Sim. 999 999,99 por despesa, na sua própria moeda."
+      a: "Sim. Uma despesa pode ir até 999 999,99 na sua própria moeda, e mais para moedas com unidades pequenas, como o iene ou a rupia indonésia."

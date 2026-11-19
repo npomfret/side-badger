@@ -1,8 +1,8 @@
-translatedFrom: "8a7fd3c8"
+translatedFrom: "b85c0a15"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -66,11 +66,11 @@ sections:
     items:
       - "**Kurs jest ustalany przy zapisie.** Stare wydatki nigdy nie są przeszacowywane, więc saldo nie dryfuje dlatego, że ruszył się rynek. Wydatki wpisane w różne dni mogą mieć różne kursy, więc jeśli grupa chce jednego kursu na cały wyjazd, ustalcie go i wpisujcie za każdym razem."
       - "**Nie ma kursu? Wpisz własny.** Side Badger pobiera aktualny kurs wymiany, gdy może, ale nie każda para ma go zagwarantowanego. Jeśli go nie ma albo kantor dał ci lepszy kurs, wpisz własny."
-      - "**999 999,99 na wydatek, w jego własnej walucie.** Jeden limit, niezależnie od waluty. W jenach to tuż poniżej 1 000 000 ¥, czyli około 5 000 £ przy kursie z tego poradnika. W walucie z wielkimi liczbami, takiej jak rupia indonezyjska, pojedynczy rachunek może go osiągnąć szybciej. Podziel rachunek na dwa wydatki albo wpisz go w innej walucie i przelicz."
+      - "**Do 999 999,99 na wydatek, w jego własnej walucie.** Waluty o małych jednostkach mają więcej miejsca: jeny sięgają 99 999 999 ¥, a rupie indonezyjskie 9 999 999 999,99 Rp, więc duży rachunek raczej go nie przekroczy. Jeśli jednak go przekroczy, podziel rachunek na dwa wydatki albo wpisz go w innej walucie i przelicz."
   - heading: "Czego Side Badger tu nie robi"
     items:
       - "Nigdy nie przesyła ani nie wymienia pieniędzy. Płacicie sobie, jak chcecie, a potem rejestrujecie płatność."
-      - "Obsługuje 140 walut. Kryptowalut ani metali wśród nich nie ma."
+      - "Obsługuje 133 waluty. Kryptowalut ani metali wśród nich nie ma."
 exampleAfter: 2
 example:
   heading: "Japonia, rozliczona na dwa sposoby"

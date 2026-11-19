@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -51,7 +51,7 @@ steps:
     shot: S05
     shotAlt: "Obrazac troška s postotnom podjelom najamnine prema veličini sobe"
   - title: "Prati stanja"
-    body: "Side Badger vodi tekuće stanje za svaku valutu, pa na prvi pogled vidiš tko kome duguje. Umjesto da sve prepusti razmrsivanju mreže sitnih dugova, predlaže kratak popis uplata koji poravnava grupu."
+    body: "Side Badger vodi tekuće stanje za svaku valutu, pa na prvi pogled vidiš tko kome duguje. Ako je trošak bio u drugoj valuti, možeš ga pretvoriti po dohvaćenom tečaju koji možeš izmijeniti; inače svaka valuta zadržava vlastito stanje. Umjesto da sve prepusti razmrsivanju mreže sitnih dugova, predlaže kratak popis uplata koji poravnava grupu."
     shot: S10
     shotAlt: "Zaslon stanja s pojednostavljenim dugovima u dvije valute i uključenom opcijom Prikaži sve"
   - title: "Poravnaj se izvan aplikacije, zabilježi u njoj"
@@ -103,4 +103,4 @@ faq:
     - q: "Koliko se ljudi može pridružiti grupi?"
       a: "Do 50 osoba u grupi. Pozovi ih poveznicom ili QR kodom i uključi odobravanje ako želiš da administrator pušta svaku osobu unutra."
     - q: "A putovanja s više od jedne valute?"
-      a: "Stanja se vode zasebno za svaku valutu. Vidi [više valuta](page:feature/multiple-currencies)."
+      a: "Stanja se vode zasebno za svaku valutu, a trošak možeš pretvoriti po dohvaćenom tečaju koji možeš izmijeniti. Vidi [više valuta](page:feature/multiple-currencies)."

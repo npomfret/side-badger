@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -47,7 +47,7 @@ steps:
     shot: S05
     shotAlt: 按比例分摊的支出表单，按房间大小分摊房租
   - title: 留意余额
-    body: Side Badger 为每种货币保持一份持续更新的余额，谁欠谁一眼就能看清。它不会让大家自己去理一团乱麻似的小额债务，而是建议一份简短的付款清单，让整个群组结清。
+    body: Side Badger 为每种货币保持一份持续更新的余额，谁欠谁一眼就能看清。如果某笔支出用的是另一种货币，可以按获取到的汇率换算，这个汇率你可以修改；否则每种货币各记各的余额。它不会让大家自己去理一团乱麻似的小额债务，而是建议一份简短的付款清单，让整个群组结清。
     shot: S10
     shotAlt: 余额界面，显示两种货币的简化债务，并已开启“显示全部”
   - title: 在应用外付款，在应用内记录
@@ -99,7 +99,7 @@ faq:
     - q: 一个群组能加入多少人？
       a: 一个群组最多 50 人。可通过链接或二维码邀请，如果希望由管理员逐个放行，可以开启审批。
     - q: 涉及多种货币的旅行怎么办？
-      a: 每种货币的余额分开记录。参见[多种货币](page:feature/multiple-currencies)。
+      a: 每种货币的余额分开记录，你也可以按获取到的汇率换算一笔支出，这个汇率可以修改。参见[多种货币](page:feature/multiple-currencies)。
 identicalApproved:
   - example.people.0.name
   - example.people.1.name

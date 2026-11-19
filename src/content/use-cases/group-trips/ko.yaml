@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T1-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -25,9 +25,9 @@ identicalApproved:
   - example.people.2.name
   - example.people.3.name
 meta:
-  title: "그룹 여행 비용을 140개 통화로 나누기"
+  title: "그룹 여행 비용을 133개 통화로 나누기"
   description: "그룹 여행에서 누가 무엇을 결제했는지 기록하고, 현지 통화로 비용을 입력하고, 환산하거나 하지 않고, 마지막에 한 번에 정산하세요. 무료이며 브라우저에서 작동합니다."
-h1: "그룹 여행 비용을 140개 통화로 나누기"
+h1: "그룹 여행 비용을 133개 통화로 나누기"
 navLabel: "그룹 여행"
 lead: "빌라, 택시, 그리고 아무도 사겠다고 한 기억이 없는 칵테일 한 라운드를 기록하세요. 사이드 배저는 여행하는 동안 계속 계산을 이어 가고, [파운드, 유로, 그 밖의 138개 통화](page:feature/multiple-currencies)를 다루며, 집에 돌아오면 [짧은 결제 목록](page:feature/settle-up)을 줍니다."
 cta:
@@ -106,4 +106,4 @@ faq:
     - q: "여행이 끝나면 그룹을 고정할 수 있나요?"
       a: "네. 관리자가 그룹을 잠가서 숫자가 그대로 유지되게 할 수 있습니다."
     - q: "금액에 한도가 있나요?"
-      a: "네. 지출 한 건당 해당 통화로 999,999.99입니다."
+      a: "네. 지출 한 건은 해당 통화로 최대 999,999.99까지, 엔이나 루피아처럼 단위가 작은 통화는 그보다 더 큰 금액도 가능합니다."

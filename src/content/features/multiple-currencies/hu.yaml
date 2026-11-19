@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T5-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -18,11 +18,11 @@ claims:
   - currency-conversion.owe-euros-pay-pounds
   - settlements.pay-however-then-record
 meta:
-  title: "Oszd meg a költségeket 140 pénznemben, átváltva vagy külön"
+  title: "Oszd meg a költségeket 133 pénznemben, átváltva vagy külön"
   description: "Add meg minden költséget abban a pénznemben, amelyben fizettél, vezesd külön az egyenlegeket, vagy válts át egy általad látott és módosítható árfolyamon, aztán számoljatok el egy rövid kifizetéslistával."
-h1: "Oszd meg a költségeket 140 pénznemben"
+h1: "Oszd meg a költségeket 133 pénznemben"
 navLabel: "Több pénznem"
-lead: "Euró, jen és az az egy taxi báthban. A Side Badger minden költséget abban a pénznemben fogad el, amelyben fizettél, rendben tartja az egyenlegeket, és át tud váltani, ha a csoport inkább egyszer számolna el. 140 pénznemben működik, és természetesen illik a [csoportos utazásokhoz](page:use-case/group-trips)."
+lead: "Euró, jen és az az egy taxi báthban. A Side Badger minden költséget abban a pénznemben fogad el, amelyben fizettél, rendben tartja az egyenlegeket, és át tud váltani, ha a csoport inkább egyszer számolna el. 133 pénznemben működik, és természetesen illik a [csoportos utazásokhoz](page:use-case/group-trips)."
 cta:
   heading: "Hozd az eurókat, hozd a jeneket"
   body: "Hozz létre fiókot, indíts csoportot, és add hozzá az első költséget bármilyen pénznemben, amely éppen a kezedben volt."
@@ -105,8 +105,8 @@ limits:
     - "Az árfolyam a költség mentésekor rögzül. A régi költségeket sosem értékeljük újra."
     - "A Side Badger lehetőség szerint aktuális árfolyamot kér le. Nem minden párosra garantált, és az árfolyamot mindig beírhatod te magad."
     - "A csoport automatikus átváltása csak az új és a másolt költségekre vonatkozik, a szerkesztésekre és a meglévő költségekre nem."
-    - "Minden költség legfeljebb 999 999,99 lehet a saját pénznemében."
-    - "140 pénznem van. A kriptovaluták és a fémek nincsenek köztük."
+    - "Egy költség legfeljebb 999 999,99 lehet a saját pénznemében, a kis egységű pénznemeknél, például a jennél vagy az indonéz rúpiánál pedig több."
+    - "133 pénznem van. A kriptovaluták és a fémek nincsenek köztük."
     - "A Side Badger kifizetéseket rögzít. Sosem mozgat és nem is vált pénzt."
 useCasesHeading: "Hol segít ez"
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: "Újraértékelődnek a régi költségek?"
       a: "Nem. Az árfolyam a költség mentésekor rögzül, így egy egyenleg nem sodródik el attól, hogy a piac elmozdult."
     - q: "Támogattok kriptót?"
-      a: "Nem. 140 pénznem van, és a kriptovaluták nincsenek köztük."
-    - q: "Miért nem tudok beírni 2 000 000 indonéz rúpiát?"
-      a: "Minden költség legfeljebb 999 999,99 lehet a saját pénznemében. Add meg egy másik pénznemben és válts át, vagy oszd két költségre."
+      a: "Nem. 133 pénznem van, és a kriptovaluták nincsenek köztük."
+    - q: "Van felső határa annak, mekkora lehet egy költség?"
+      a: "Igen. Egy költség legfeljebb 999 999,99 lehet a saját pénznemében, a kis egységű pénznemeknél, például a jennél vagy az indonéz rúpiánál pedig több. Ha eléred, oszd két költségre, vagy add meg egy másik pénznemben, és válts át."
     - q: "Kerül valamibe az átváltás?"
       a: "Nem. Az átváltás ingyenes, mint a Side Badger többi része. Lásd az [árakat](page:pricing)."
     - q: "Kötelező átváltanom?"

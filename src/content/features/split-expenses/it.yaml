@@ -1,8 +1,8 @@
-translatedFrom: "0780798c"
+translatedFrom: "e769b463"
 review:
   status: checked
-  checker: "C2a-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -112,7 +112,7 @@ limits:
     - Una sola persona paga ogni spesa. Se hanno pagato in due, registra due spese.
     - Non c'è la divisione per voce né per quote. Parti uguali, importi esatti e percentuali sono ciò che c'è.
     - Le percentuali devono sommare a 100.
-    - Una spesa può arrivare a 999.999,99 nella sua valuta, con i decimali abituali di quella valuta.
+    - Una spesa può arrivare a 999.999,99 nella sua valuta, e di più per le valute con unità piccole, con i decimali abituali di quella valuta.
     - Le spese non possono ripetersi da sole. Copia invece quella del mese scorso.
     - Le date non possono essere nel futuro né risalire a più di 10 anni fa.
     - Una spesa che coinvolge qualcuno che ha lasciato il gruppo diventa di sola lettura.

@@ -1,8 +1,8 @@
-translatedFrom: "0780798c"
+translatedFrom: "e769b463"
 review:
   status: checked
-  checker: "C2b-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -116,7 +116,7 @@ limits:
     - "Her harcamayı bir kişi öder. İki kişi ödediyse iki harcama kaydedin."
     - "Kaleme göre veya paylara göre bölüşüm yok. Eşit, tam tutarlar ve yüzdeler var."
     - "Yüzdelerin toplamı 100 olmalı."
-    - "Bir harcama, o para biriminin olağan ondalık basamaklarıyla, kendi para biriminde en fazla 999.999,99 olabilir."
+    - "Bir harcama, o para biriminin olağan ondalık basamaklarıyla, kendi para biriminde en fazla 999.999,99, küçük birimli para birimlerinde ise daha fazla olabilir."
     - "Harcamalar kendiliğinden tekrarlanmaz. Bunun yerine geçen ayınkini kopyalayın."
     - "Tarihler gelecekte veya 10 yıldan eski olamaz."
     - "Gruptan ayrılmış biri dahil olan bir harcama salt okunur olur."

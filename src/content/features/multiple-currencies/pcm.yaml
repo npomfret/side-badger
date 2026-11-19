@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T2-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - multi-currency.currency-count
   - multi-currency.currency-rules
@@ -18,11 +18,11 @@ identicalApproved:
   - example.people.2.name
   - example.people.3.name
 meta:
-  title: "Share costs for 140 currencies, converted or kept separate"
+  title: "Share costs for 133 currencies, converted or kept separate"
   description: "Enter each expense for di currency wey you pay am, keep balances separate or convert for rate wey you fit see and change, then settle up with short list of payments."
-h1: "Share costs for 140 currencies"
+h1: "Share costs for 133 currencies"
 navLabel: "Plenty currencies"
-lead: "Euros, yen, and dat one taxi for baht. Side Badger dey take each expense for di currency wey you pay am, keep di balances straight, and fit convert when your group prefer to settle once. E dey work for 140 currencies, and e fit [group trips](page:use-case/group-trips) well well."
+lead: "Euros, yen, and dat one taxi for baht. Side Badger dey take each expense for di currency wey you pay am, keep di balances straight, and fit convert when your group prefer to settle once. E dey work for 133 currencies, and e fit [group trips](page:use-case/group-trips) well well."
 cta:
   heading: "Come with your euros, come with your yen"
   body: "Create account, start group and add di first expense for whatever currency you happen to dey hold."
@@ -105,8 +105,8 @@ limits:
     - "Di rate dey fixed when dem save di expense. Dem no dey ever revalue old expenses."
     - "Side Badger dey fetch current rate where e fit. Not every pair get guarantee, and you fit always type di rate yourself."
     - "Group auto-convert apply to new and copied expenses only, no be to edits or existing expenses."
-    - "Each expense dey capped at 999,999.99 for im own currency."
-    - "140 currencies dey. Cryptocurrencies and metals no dey among dem."
+    - "One expense fit reach 999,999.99 for im own currency, and more for currencies wey get small units, like yen or rupiah."
+    - "133 currencies dey. Cryptocurrencies and metals no dey among dem."
     - "Side Badger dey record payments. E no dey ever move money or exchange am."
 useCasesHeading: "Where dis one help"
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: "Dem dey revalue old expenses?"
       a: "No. Di rate dey fixed when dem save di expense, so balance no dey drift because di market drift."
     - q: "Una support crypto?"
-      a: "No. 140 currencies dey, and cryptocurrencies no dey among dem."
-    - q: "Why I no fit enter 2,000,000 rupiah?"
-      a: "Each expense dey capped at 999,999.99 for im own currency. Enter am for another currency and convert, or split am into two expenses."
+      a: "No. 133 currencies dey, and cryptocurrencies no dey among dem."
+    - q: "Limit dey for how big one expense fit be?"
+      a: "Yes. One expense fit reach 999,999.99 for im own currency, and more for currencies wey get small units, like yen or rupiah. If you reach am, split am into two expenses, or enter am for another currency and convert."
     - q: "Conversion cost anything?"
       a: "No. To convert free, like di rest of Side Badger. See [pricing](page:pricing)."
     - q: "I must convert?"

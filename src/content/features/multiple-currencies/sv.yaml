@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T-amounts-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -18,11 +18,11 @@ claims:
   - currency-conversion.owe-euros-pay-pounds
   - settlements.pay-however-then-record
 meta:
-  title: Dela kostnader i 140 valutor, omräknade eller separata
+  title: Dela kostnader i 133 valutor, omräknade eller separata
   description: Lägg in varje utgift i den valuta du betalade i, håll saldona separata eller räkna om med en kurs som du kan se och ändra, och gör sedan upp med en kort lista med betalningar.
-h1: Dela kostnader i 140 valutor
+h1: Dela kostnader i 133 valutor
 navLabel: Flera valutor
-lead: Euro, yen och den där taxin i baht. Side Badger tar varje utgift i den valuta du betalade i, håller ordning på saldona och kan räkna om när gruppen hellre gör upp en gång. Det fungerar i 140 valutor och passar naturligt för [gruppresor](page:use-case/group-trips).
+lead: Euro, yen och den där taxin i baht. Side Badger tar varje utgift i den valuta du betalade i, håller ordning på saldona och kan räkna om när gruppen hellre gör upp en gång. Det fungerar i 133 valutor och passar naturligt för [gruppresor](page:use-case/group-trips).
 cta:
   heading: Ta med dina euro, ta med dina yen
   body: Skapa ett konto, starta en grupp och lägg till den första utgiften i vilken valuta du än råkade ha i handen.
@@ -105,8 +105,8 @@ limits:
     - Kursen fastställs när utgiften sparas. Gamla utgifter omvärderas aldrig.
     - Side Badger hämtar en aktuell kurs där det går. Alla valutapar är inte garanterade en, och du kan alltid skriva in kursen själv.
     - Gruppens automatiska omräkning gäller bara nya och kopierade utgifter, inte redigeringar eller befintliga utgifter.
-    - Varje utgift är begränsad till 999 999,99 i sin egen valuta.
-    - Det finns 140 valutor. Kryptovalutor och metaller ingår inte.
+    - En utgift kan vara upp till 999 999,99 i sin egen valuta, och mer för valutor med små enheter, till exempel yen eller rupiah.
+    - Det finns 133 valutor. Kryptovalutor och metaller ingår inte.
     - Side Badger registrerar betalningar. Det flyttar eller växlar aldrig pengar.
 useCasesHeading: Där det här hjälper
 faq:
@@ -117,9 +117,9 @@ faq:
     - q: Omvärderas gamla utgifter?
       a: Nej. Kursen fastställs när utgiften sparas, så ett saldo driver inte iväg för att marknaden gjorde det.
     - q: Stöder ni krypto?
-      a: Nej. Det finns 140 valutor, och kryptovalutor ingår inte.
-    - q: Varför kan jag inte skriva in 2 000 000 rupiah?
-      a: Varje utgift är begränsad till 999 999,99 i sin egen valuta. Lägg in den i en annan valuta och räkna om, eller dela upp den i två utgifter.
+      a: Nej. Det finns 133 valutor, och kryptovalutor ingår inte.
+    - q: Finns det en gräns för hur stor en utgift kan vara?
+      a: Ja. En utgift kan vara upp till 999 999,99 i sin egen valuta, och mer för valutor med små enheter, till exempel yen eller rupiah. Om du når gränsen, dela upp den i två utgifter eller lägg in den i en annan valuta och räkna om.
     - q: Kostar omräkning något?
       a: Nej. Omräkning är gratis, precis som resten av Side Badger. Se [prissättning](page:pricing).
     - q: Måste jag räkna om?

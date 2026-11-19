@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - multi-currency.currency-count
   - multi-currency.currency-rules
@@ -13,11 +13,11 @@ claims:
   - currency-conversion.owe-euros-pay-pounds
   - settlements.pay-however-then-record
 meta:
-  title: "Partager les frais dans 140 devises, converties ou séparées"
+  title: "Partager les frais dans 133 devises, converties ou séparées"
   description: "Saisissez chaque dépense dans la devise où vous avez payé, gardez les soldes séparés ou convertissez à un taux que vous voyez et pouvez modifier, puis réglez avec une courte liste de paiements."
-h1: "Partager les frais dans 140 devises"
+h1: "Partager les frais dans 133 devises"
 navLabel: "Plusieurs devises"
-lead: "Des euros, des yens, et ce taxi en bahts. Side Badger prend chaque dépense dans la devise où vous avez payé, garde les soldes en ordre, et peut convertir quand votre groupe préfère régler en une fois. Il fonctionne dans 140 devises, et il convient naturellement aux [voyages en groupe](page:use-case/group-trips)."
+lead: "Des euros, des yens, et ce taxi en bahts. Side Badger prend chaque dépense dans la devise où vous avez payé, garde les soldes en ordre, et peut convertir quand votre groupe préfère régler en une fois. Il fonctionne dans 133 devises, et il convient naturellement aux [voyages en groupe](page:use-case/group-trips)."
 cta:
   heading: "Apportez vos euros, apportez vos yens"
   body: "Créez un compte, lancez un groupe et ajoutez la première dépense dans la devise que vous aviez en poche."
@@ -100,8 +100,8 @@ limits:
     - "Le taux est fixé quand la dépense est enregistrée. Les anciennes dépenses ne sont jamais réévaluées."
     - "Side Badger récupère un taux actuel quand il le peut. Il n'est pas garanti pour chaque paire, et vous pouvez toujours saisir le taux vous-même."
     - "La conversion automatique du groupe ne s'applique qu'aux dépenses nouvelles et copiées, pas aux modifications ni aux dépenses existantes."
-    - "Chaque dépense est plafonnée à 999 999,99 dans sa propre devise."
-    - "Il y a 140 devises. Les cryptomonnaies et les métaux n'en font pas partie."
+    - "Une dépense peut aller jusqu'à 999 999,99 dans sa propre devise, et davantage pour les devises à petites unités, comme le yen ou la rupiah."
+    - "Il y a 133 devises. Les cryptomonnaies et les métaux n'en font pas partie."
     - "Side Badger enregistre les paiements. Il ne fait jamais circuler ni échanger l'argent."
 useCasesHeading: "Où cela aide"
 faq:
@@ -112,9 +112,9 @@ faq:
     - q: "Les anciennes dépenses sont-elles réévaluées ?"
       a: "Non. Le taux est fixé quand la dépense est enregistrée, donc un solde ne dérive pas parce que le marché a bougé."
     - q: "Prenez-vous en charge les cryptomonnaies ?"
-      a: "Non. Il y a 140 devises, et les cryptomonnaies n'en font pas partie."
-    - q: "Pourquoi ne puis-je pas saisir 2 000 000 de roupies indonésiennes ?"
-      a: "Chaque dépense est plafonnée à 999 999,99 dans sa propre devise. Saisissez-la dans une autre devise et convertissez, ou scindez-la en deux dépenses."
+      a: "Non. Il y a 133 devises, et les cryptomonnaies n'en font pas partie."
+    - q: "Y a-t-il une limite à la taille d'une dépense ?"
+      a: "Oui. Une dépense peut aller jusqu'à 999 999,99 dans sa propre devise, et davantage pour les devises à petites unités, comme le yen ou la rupiah. Si vous l'atteignez, scindez-la en deux dépenses, ou saisissez-la dans une autre devise et convertissez."
     - q: "La conversion coûte-t-elle quelque chose ?"
       a: "Non. Convertir est gratuit, comme le reste de Side Badger. Voir les [tarifs](page:pricing)."
     - q: "Dois-je convertir ?"

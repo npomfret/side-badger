@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -52,7 +52,7 @@ steps:
     shot: S05
     shotAlt: "Het uitgavenformulier met een verdeling op percentage, waarbij de huur wordt verdeeld naar grootte van de kamer"
   - title: "Hou de saldi in de gaten"
-    body: "Side Badger houdt per valuta een lopend saldo bij, zodat je in één oogopslag ziet wie wie iets schuldig is. In plaats van iedereen een web van kleine schulden te laten ontwarren, stelt het een korte lijst betalingen voor die de groep afrekent."
+    body: "Side Badger houdt per valuta een lopend saldo bij, zodat je in één oogopslag ziet wie wie iets schuldig is. Stond een uitgave in een andere valuta, dan kun je ze omrekenen tegen een opgehaalde koers die je kunt aanpassen; anders houdt elke valuta haar eigen saldo. In plaats van iedereen een web van kleine schulden te laten ontwarren, stelt het een korte lijst betalingen voor die de groep afrekent."
     shot: S10
     shotAlt: "Het saldoscherm met vereenvoudigde schulden in twee valuta’s, met Alles tonen ingeschakeld"
   - title: "Reken af buiten de app, registreer binnen de app"
@@ -104,4 +104,4 @@ faq:
     - q: "Hoeveel mensen kunnen meedoen aan een groep?"
       a: "Tot 50 personen in een groep. Nodig ze uit met een link of een QR-code, en zet goedkeuring aan als je wilt dat een beheerder elke persoon binnenlaat."
     - q: "Wat met reizen met meer dan één valuta?"
-      a: "Saldi worden per valuta apart bijgehouden. Zie [meerdere valuta’s](page:feature/multiple-currencies)."
+      a: "Saldi worden per valuta apart bijgehouden en je kunt een uitgave omrekenen tegen een opgehaalde koers die je kunt aanpassen. Zie [meerdere valuta’s](page:feature/multiple-currencies)."

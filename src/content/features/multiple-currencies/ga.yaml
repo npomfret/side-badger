@@ -1,8 +1,8 @@
-translatedFrom: "8973fc06"
+translatedFrom: "b793df60"
 review:
   status: checked
-  checker: "T3-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - multi-currency.currency-count
   - multi-currency.currency-rules
@@ -13,11 +13,11 @@ claims:
   - currency-conversion.owe-euros-pay-pounds
   - settlements.pay-however-then-record
 meta:
-  title: "Roinn costais i 140 airgeadra, tiontaithe nó coinnithe ar leith"
+  title: "Roinn costais i 133 airgeadra, tiontaithe nó coinnithe ar leith"
   description: "Cuir isteach gach costas san airgeadra inar íoc tú, coinnigh na hiarmhéideanna ar leith nó tiontaigh ar ráta a fheiceann tú agus is féidir leat a athrú, ansin socraigh suas le liosta gearr íocaíochtaí."
-h1: "Roinn costais i 140 airgeadra"
+h1: "Roinn costais i 133 airgeadra"
 navLabel: "Ilairgeadraí"
-lead: "Euro, yen, agus an tacsaí sin amháin i mbaht. Glacann Side Badger le gach costas san airgeadra inar íoc tú, coinníonn sé na hiarmhéideanna ceart, agus is féidir leis tiontú nuair is fearr le do ghrúpa socrú uair amháin. Oibríonn sé i 140 airgeadra, agus oireann sé go nádúrtha do [thurais ghrúpa](page:use-case/group-trips)."
+lead: "Euro, yen, agus an tacsaí sin amháin i mbaht. Glacann Side Badger le gach costas san airgeadra inar íoc tú, coinníonn sé na hiarmhéideanna ceart, agus is féidir leis tiontú nuair is fearr le do ghrúpa socrú uair amháin. Oibríonn sé i 133 airgeadra, agus oireann sé go nádúrtha do [thurais ghrúpa](page:use-case/group-trips)."
 cta:
   heading: "Tabhair leat do euro, tabhair leat do yen"
   body: "Cruthaigh cuntas, tosaigh grúpa agus cuir an chéad chostas leis in aon airgeadra a tharla a bheith agat."
@@ -100,8 +100,8 @@ limits:
     - "Socraítear an ráta nuair a shábhálaítear an costas. Ní athluacháiltear seanchostais choíche."
     - "Faigheann Side Badger ráta reatha nuair is féidir leis. Ní chinntítear ceann do gach péire, agus is féidir leat an ráta a chlóscríobh tú féin i gcónaí."
     - "Ní bhaineann tiontú uathoibríoch an ghrúpa ach le costais nua agus cóipeáilte, ní le heagarthóireachtaí ná le costais atá ann cheana."
-    - "Tá uasteorainn 999,999.99 ar gach costas ina airgeadra féin."
-    - "Tá 140 airgeadra ann. Níl airgeadraí cripte ná miotail ina measc."
+    - "Is féidir costas amháin a bheith suas le 999,999.99 ina airgeadra féin, agus níos mó d'airgeadraí a bhfuil aonaid bheaga acu, mar an yen nó an rupiah."
+    - "Tá 133 airgeadra ann. Níl airgeadraí cripte ná miotail ina measc."
     - "Taifeadann Side Badger íocaíochtaí. Ní bhogann sé airgead ná ní mhalartaíonn sé é."
 useCasesHeading: "Cá gcabhraíonn sé seo"
 faq:
@@ -112,9 +112,9 @@ faq:
     - q: "An n-athluacháiltear seanchostais?"
       a: "Ní athluacháiltear. Socraítear an ráta nuair a shábhálaítear an costas, mar sin ní imíonn iarmhéid ar strae toisc gur athraigh an margadh."
     - q: "An dtacaíonn sibh le crypto?"
-      a: "Ní thacaímid. Tá 140 airgeadra ann, agus níl airgeadraí cripte ina measc."
-    - q: "Cén fáth nach féidir liom 2,000,000 rupiah a chur isteach?"
-      a: "Tá uasteorainn 999,999.99 ar gach costas ina airgeadra féin. Cuir isteach in airgeadra eile é agus tiontaigh, nó roinn ina dhá chostas é."
+      a: "Ní thacaímid. Tá 133 airgeadra ann, agus níl airgeadraí cripte ina measc."
+    - q: "An bhfuil teorainn le méid costais?"
+      a: "Tá. Is féidir costas amháin a bheith suas le 999,999.99 ina airgeadra féin, agus níos mó d'airgeadraí a bhfuil aonaid bheaga acu, mar an yen nó an rupiah. Má shroicheann tú an teorainn, roinn ina dhá chostas é, nó cuir isteach in airgeadra eile é agus tiontaigh."
     - q: "An gcosnaíonn tiontú rud ar bith?"
       a: "Ní chosnaíonn. Tá tiontú saor in aisce, cosúil le gach rud eile i Side Badger. Féach [praghsáil](page:pricing)."
     - q: "An gcaithfidh mé tiontú?"

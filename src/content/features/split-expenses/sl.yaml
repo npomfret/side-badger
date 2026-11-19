@@ -1,8 +1,8 @@
-translatedFrom: "0780798c"
+translatedFrom: "e769b463"
 review:
   status: checked
-  checker: "C2c-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -116,7 +116,7 @@ limits:
     - "Za vsak strošek plača ena oseba. Če sta plačali dve, zabeleži dva stroška."
     - "Delitve po postavkah ali po deležih ni. Na voljo so enako, točni zneski in odstotki."
     - "Odstotki morajo skupaj dati 100."
-    - "Strošek je lahko do 999.999,99 v svoji valuti, z običajnim številom decimalnih mest te valute."
+    - "Strošek je lahko do 999.999,99 v svoji valuti, v valutah z majhnimi enotami pa več, z običajnim številom decimalnih mest te valute."
     - "Stroški se ne ponavljajo sami. Namesto tega kopiraj strošek prejšnjega meseca."
     - "Datumi ne smejo biti v prihodnosti ali starejši od 10 let."
     - "Strošek, v katerem je oseba, ki je zapustila skupino, postane samo za branje."

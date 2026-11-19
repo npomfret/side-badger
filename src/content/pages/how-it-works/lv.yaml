@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -51,7 +51,7 @@ steps:
     shot: S05
     shotAlt: "Izdevuma veidlapa ar procentuālu sadali, kas sadala īri pēc istabas lieluma"
   - title: "Sekojiet atlikumiem"
-    body: "Side Badger uztur kārtējo atlikumu katrā valūtā, tāpēc varat vienā skatienā redzēt, kurš kam ir parādā. Tā vietā, lai liktu visiem mezglot mazu parādu tīklu, tas iesaka īsu maksājumu sarakstu, kas nokārto grupu."
+    body: "Side Badger uztur kārtējo atlikumu katrā valūtā, tāpēc varat vienā skatienā redzēt, kurš kam ir parādā. Ja izdevums bija citā valūtā, varat to konvertēt pēc ielādēta kursa, ko varat labot; citādi katra valūta saglabā savu atlikumu. Tā vietā, lai liktu visiem mezglot mazu parādu tīklu, tas iesaka īsu maksājumu sarakstu, kas nokārto grupu."
     shot: S10
     shotAlt: "Atlikumu ekrāns ar vienkāršotiem parādiem divās valūtās, kad ieslēgts „Rādīt visu”"
   - title: "Norēķinieties ārpus lietotnes, reģistrējiet tajā"
@@ -103,4 +103,4 @@ faq:
     - q: "Cik cilvēku var pievienoties grupai?"
       a: "Līdz 50 cilvēkiem grupā. Uzaiciniet tos ar saiti vai QR kodu un ieslēdziet apstiprināšanu, ja vēlaties, lai administrators katru ielaiž."
     - q: "Kā ar ceļojumiem, kuros ir vairāk nekā viena valūta?"
-      a: "Atlikumi tiek uzturēti atsevišķi katrai valūtai. Skatiet [vairākas valūtas](page:feature/multiple-currencies)."
+      a: "Atlikumi tiek uzturēti atsevišķi katrai valūtai, un izdevumu varat konvertēt pēc ielādēta kursa, ko varat labot. Skatiet [vairākas valūtas](page:feature/multiple-currencies)."

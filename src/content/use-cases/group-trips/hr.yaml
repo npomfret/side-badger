@@ -1,8 +1,8 @@
-translatedFrom: "58e9087e"
+translatedFrom: "f5d9546a"
 review:
   status: checked
-  checker: "T5-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -25,9 +25,9 @@ claims:
   - permissions.managed-group
   - permissions.lock-the-group
 meta:
-  title: "Dijeli troškove grupnog putovanja, u 140 valuta"
+  title: "Dijeli troškove grupnog putovanja, u 133 valuta"
   description: "Prati tko je što platio na grupnom putovanju, unosi troškove u lokalnoj valuti, pretvaraj ih ili ne i poravnajte se jednom na kraju. Besplatno, u pregledniku."
-h1: "Dijeli troškove grupnog putovanja, u 140 valuta"
+h1: "Dijeli troškove grupnog putovanja, u 133 valuta"
 navLabel: "Grupna putovanja"
 lead: "Prati vilu, taksije i onu jednu rundu koktela za koju se nitko ne sjeća da se javio platiti. Side Badger vodi tekuću evidenciju dok si na putu, [snalazi se s funtama, eurima i 138 drugih valuta](page:feature/multiple-currencies) i daje ti [kratak popis uplata](page:feature/settle-up) kad se vratiš kući."
 cta:
@@ -106,4 +106,4 @@ faq:
     - q: "Možemo li zamrznuti grupu nakon putovanja?"
       a: "Da. Administrator može zaključati grupu da brojevi ostanu."
     - q: "Postoji li ograničenje iznosa?"
-      a: "Da. 999.999,99 po trošku, u njegovoj valuti."
+      a: "Da. Jedan trošak može iznositi do 999.999,99 u svojoj valuti, a više za valute s malim jedinicama, poput jena ili indonezijske rupije."

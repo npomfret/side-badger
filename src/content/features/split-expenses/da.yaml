@@ -1,8 +1,8 @@
-translatedFrom: "0780798c"
+translatedFrom: "e769b463"
 review:
   status: checked
-  checker: "C2a-check"
-  date: "2026-10-15"
+  checker: "CF-check"
+  date: "2026-11-19"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -116,7 +116,7 @@ limits:
     - Én person betaler for hver udgift. Hvis to personer betalte, så registrer to udgifter.
     - Der er ingen deling pr. vare og ingen deling i andele. Ligeligt, nøjagtige beløb og procenter er, hvad der findes.
     - Procenter skal give 100 i alt.
-    - En udgift kan være op til 999.999,99 i sin egen valuta, med den valutas sædvanlige antal decimaler.
+    - En udgift kan være op til 999.999,99 i sin egen valuta og mere for valutaer med små enheder, med den valutas sædvanlige antal decimaler.
     - Udgifter kan ikke gentage sig selv. Kopiér sidste måneds i stedet.
     - Datoer må ikke ligge i fremtiden eller mere end 10 år tilbage.
     - En udgift, der involverer en person, som har forladt gruppen, bliver skrivebeskyttet.

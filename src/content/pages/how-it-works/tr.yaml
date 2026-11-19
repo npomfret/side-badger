@@ -1,8 +1,8 @@
-translatedFrom: "503a8ebc"
+translatedFrom: "206dabde"
 review:
   status: checked
-  checker: "HS-check"
-  date: "2026-10-17"
+  checker: "CF-check"
+  date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -51,7 +51,7 @@ steps:
     shot: S05
     shotAlt: "Kirayı oda büyüklüğüne göre bölen, yüzde bölüşümlü harcama formu"
   - title: "Bakiyeleri izleyin"
-    body: "Side Badger her para birimi için güncel bir bakiye tutar; böylece kimin kime borçlu olduğunu tek bakışta görürsünüz. Herkesi küçük borçlardan oluşan bir ağı çözmekle baş başa bırakmak yerine, grubu ödeştiren kısa bir ödeme listesi önerir."
+    body: "Side Badger her para birimi için güncel bir bakiye tutar; böylece kimin kime borçlu olduğunu tek bakışta görürsünüz. Bir harcama başka bir para birimindeyse, alınan ve düzenleyebileceğiniz bir kurla çevirebilirsiniz; aksi halde her para birimi kendi bakiyesini tutar. Herkesi küçük borçlardan oluşan bir ağı çözmekle baş başa bırakmak yerine, grubu ödeştiren kısa bir ödeme listesi önerir."
     shot: S10
     shotAlt: "İki para biriminde sadeleştirilmiş borçları gösteren ve Tümünü göster açık olan bakiye ekranı"
   - title: "Uygulamanın dışında ödeşin, içinde kaydedin"
@@ -103,4 +103,4 @@ faq:
     - q: "Bir gruba kaç kişi katılabilir?"
       a: "Bir grupta en fazla 50 kişi. Onları bağlantı veya QR koduyla davet edin; bir yöneticinin her kişiyi içeri almasını istiyorsanız onayı açın."
     - q: "Birden fazla para birimli gezilere ne olur?"
-      a: "Bakiyeler her para birimi için ayrı tutulur. [Birden fazla para birimi](page:feature/multiple-currencies) sayfasına bakın."
+      a: "Bakiyeler her para birimi için ayrı tutulur ve bir harcamayı, alınan ve düzenleyebileceğiniz bir kurla çevirebilirsiniz. [Birden fazla para birimi](page:feature/multiple-currencies) sayfasına bakın."

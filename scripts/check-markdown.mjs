@@ -74,9 +74,18 @@ const head = await request('/pricing/', 'text/markdown', { method: 'HEAD' });
 check(head.status === 200 && head.headers.get('content-type') === md.headers.get('content-type') && (await head.text()) === '', 'HEAD has Markdown metadata and no body');
 check(head.headers.get('content-length') === md.headers.get('content-length'), 'HEAD reports selected representation length');
 
+for (const path of ['/privacy/', '/terms/', '/cookies/']) {
+  const response = await request(path, 'text/markdown');
+  const body = await response.text();
+  check(response.status === 200 && response.headers.get('content-type')?.startsWith('text/html'), `${path}: legal page stays HTML for Accept: text/markdown`);
+  check(!/rel="alternate"[^>]*type="text\/markdown"|type="text\/markdown"[^>]*rel="alternate"/.test(body), `${path}: no Markdown alternate link`);
+}
+
 for (const [path, status, target] of [
   ['/pricing?x=1', 301, '/pricing/?x=1'], ['/pricing/index.html', 301, '/pricing/'],
   ['/en-gb/pricing/', 301, '/pricing/'], ['/nope/', 404], ['/nope/index.md', 404],
+  // Legal pages load their text from the app API in the browser: no Markdown alternate stands in for it.
+  ['/privacy/index.md', 404], ['/cookies/index.md', 404], ['/fr/terms/index.md', 404],
   ['/preview/feature/', 404], ['/preview/feature/index.md', 404],
   ['/go/app/', 302, 'https://app.sidebadger.me/dashboard'],
 ]) {

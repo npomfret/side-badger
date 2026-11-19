@@ -77,10 +77,5 @@ describe('rule 11: JSON-LD parses, has the required nodes and matches the visibl
       const problems = checkJsonLd(one('r11/guide-without-article.html', 'guides/preview/index.html'));
       expect(mentions(problems, 'lacks a Article node', 'article page')).toBe(true);
     });
-
-    it('fails an English legal page whose WebPage has no dateModified', () => {
-      expect(mentions(checkJsonLd(one('r11/legal-no-date.html', 'privacy/index.html')), 'dateModified')).toBe(true);
-      expect(checkJsonLd(one('r11/legal-dated.html', 'privacy/index.html'))).toEqual([]);
-    });
   });
 });

@@ -114,9 +114,6 @@ export function checkJsonLd(site: Site): string[] {
     const canonical = canonicalLinks(page)[0] ?? `${SITE_ORIGIN}${page.urlPath}`;
     for (const web of nodes.filter(node => typesOf(node).some(type => type === 'WebPage' || type === 'CollectionPage'))) {
       if (web.url !== canonical) problems.push(`${at}: WebPage.url "${web.url}" differs from the canonical "${canonical}"`);
-      if (page.page?.type === 'legal' && page.locale === 'en' && !web.dateModified) {
-        problems.push(`${at}: English legal WebPage has no dateModified`);
-      }
     }
   }
   return problems;

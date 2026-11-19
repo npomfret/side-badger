@@ -3,10 +3,11 @@ import { load } from 'cheerio';
 import { marked } from 'marked';
 import { dist, squash } from './lib/site';
 import { isPseudoLocale } from '../i18n';
+import { hasMarkdownAlternate } from '../site/pages';
 
 describe('published Markdown representations', () => {
   const site = dist();
-  const published = site.pages.filter(page => page.page?.published && page.locale && !isPseudoLocale(page.locale));
+  const published = site.pages.filter(page => hasMarkdownAlternate(page.page) && page.locale && !isPseudoLocale(page.locale));
 
   it('provides discoverable alternates only for built published pages', () => {
     const expected = new Set(published.map(page => page.file.replace(/index\.html$/, 'index.md')));
@@ -17,6 +18,15 @@ describe('published Markdown representations', () => {
       if (alternates.length) {
         expect(alternates.attr('href'), page.urlPath).toBe(`/${page.file.replace(/index\.html$/, 'index.md')}`);
       }
+    }
+  });
+
+  it('gives the legal pages no Markdown alternate, because their policy text is loaded in the browser', () => {
+    const legal = site.pages.filter(page => page.page?.type === 'legal');
+    expect(legal.length).toBeGreaterThan(0);
+    for (const page of legal) {
+      expect(page.$('link[rel="alternate"][type="text/markdown"]').length, page.urlPath).toBe(0);
+      expect(site.exists(page.file.replace(/index\.html$/, 'index.md')), page.urlPath).toBe(false);
     }
   });
 

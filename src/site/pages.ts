@@ -501,3 +501,13 @@ export function requirePage(id: string): PageDef {
   if (!page) throw new Error(`Unknown page id "${id}"`);
   return page;
 }
+
+/**
+ * Whether a page has a generated Markdown alternate (`index.md`). Legal pages do not: their text is loaded
+ * from the app API in the visitor's browser, so the built HTML is only a loading shell, and a Markdown copy
+ * of it would pass the shell off as the policy. The policy's own source is the API (`/api/policies/<id>/text`).
+ * Preview-only and unpublished pages never get one either.
+ */
+export function hasMarkdownAlternate(page: PageDef | undefined): boolean {
+  return !!page && page.published && page.type !== 'legal';
+}

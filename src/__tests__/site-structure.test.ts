@@ -17,7 +17,7 @@ import {
 } from '@/i18n';
 import { pseudoText } from '@/i18n/pseudo';
 import en from '@/i18n/en';
-import { pages, allPages } from '@/site/pages';
+import { pages, allPages, getPage, hasMarkdownAlternate } from '@/site/pages';
 import { pageForPath } from '@/site/routes';
 import { absoluteUrl, canonicalFor, launchHref, localizedPath } from '@/seo/urls';
 
@@ -489,5 +489,16 @@ describe('pseudo-locale text (D38)', () => {
     expect(t('header.logoText', 'xx-ar')).not.toBe(t('header.logoText', 'en'));
     expect(t('header.logoText', 'xx-ar')).toMatch(/[؀-ۿ]/);
     expect(t('header.logoText', 'xx-long').length).toBeGreaterThan(t('header.logoText', 'en').length);
+  });
+});
+
+describe('Markdown alternates', () => {
+  it('exist for published product pages but never for the legal pages, whose text loads in the browser', () => {
+    expect(hasMarkdownAlternate(getPage('pricing'))).toBe(true);
+    for (const id of ['privacy', 'terms', 'cookies']) {
+      expect(getPage(id)?.type).toBe('legal');
+      expect(hasMarkdownAlternate(getPage(id))).toBe(false);
+    }
+    expect(hasMarkdownAlternate(undefined)).toBe(false);
   });
 });

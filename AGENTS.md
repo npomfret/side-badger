@@ -75,7 +75,7 @@ npm run i18n audit   # Check for missing/extra keys
 - `richText` fields are inline Markdown only. The one link form is `[text](page:<pageId>)`, resolved per locale by `RichText.astro`; an unknown or unbuilt page id fails the build. No app links in rich text.
 - A worked example is data, not prose: `computeExample` (`src/lib/settle.ts`) computes the settlement, `content/money.ts` formats it and `WorkedExample` shows it. Locales may change names, labels and amounts, but people, payers, split methods and payment count must match English. `exampleAfter` places the example after N sections; `navLabel` (max 32 characters) is the short label used in navigation.
 - Every entry has a `review` block. `machine` is the default; `checked` is set by an agent that back-checked the text (needs `checker` and `date`); `reviewed` only for a named fluent human (needs `reviewer` and `date`). Agents never write `reviewed`.
-- Policies: `src/content/policies/*.md` are committed snapshots (see External Dependencies).
+- Policies are not content: the legal pages load the app's current policy in the browser (see External Dependencies).
 
 ### Layouts and content blocks
 
@@ -89,7 +89,7 @@ npm run i18n audit   # Check for missing/extra keys
 ## Components
 
 - `PricingPage.astro` - pricing body
-- `PolicyPage.astro` - Renders a legal page from the committed snapshot in `src/content/policies` (English text; non-English locales show a notice)
+- `PolicyPage.astro` - The legal page shell: title, translated loading/failure/retry UI and a `<noscript>` link to the source text. `src/components/policy/` fetches the policy in the browser (`policy-source.ts`, 10 s timeout, publication date from `/current` only), turns Markdown into a safe element tree (`policy-markdown.ts` over `policy-tree.ts`: no raw HTML, link allowlist, headings shifted under the single h1, tables in labelled scroll regions) and builds it with DOM calls, never `innerHTML`. The Markdown parser is a separate chunk fetched with the request. The text stays English (`lang="en" dir="ltr"`); non-English locales show a translated notice. Legal pages have no Markdown alternate (`hasMarkdownAlternate`)
 - `LanguageSwitcher.astro`, `LanguageDetection.astro` - language picker and first-visit detection
 - `EasterEggs.astro` - Konami code, disco mode, hidden interactions
 
@@ -138,9 +138,7 @@ Multi-stage Dockerfile:
 
 The app lives at `app.sidebadger.me` (production). `staging.sidebadger.me` is for rehearsals only; the built site must never contain it (rule 12). `getAppUrl()` in `src/i18n/index.ts` returns the production app URL.
 
-Policy pages are built from Markdown snapshots in `src/content/policies/`. `scripts/sync-policies.mjs` (`npm run policies:sync`) refreshes them from `https://app.sidebadger.me/api/policies/{policy-type}/current` and `/text`; the `policy-sync.yml` workflow runs it daily and opens a PR. The build never calls the API.
-
-Caveat: a PR opened with the default `GITHUB_TOKEN` does not trigger the `verify` job. Either give the workflow a GitHub App or PAT token, or push an empty commit / close and reopen the PR to run checks. The repository setting "Allow GitHub Actions to create pull requests" must be enabled.
+The legal policies are owned by the app and are never copied into this repository. The build makes no API call and needs no snapshot, so a build and every other page work while the app is down. A policy page's static HTML is a shell; the visitor's browser fetches `https://app.sidebadger.me/api/policies/{privacy-policy,terms-of-service,cookie-policy}/text` (Markdown) and `/current` (publication date, `createdAt`) when the page opens, so a policy change shows on the next page load with no site deploy. The API sends `access-control-allow-origin` for the requesting origin and this site's CSP has no `connect-src`, so no change is needed on either side today. If the API fails, times out (10 s) or returns an empty or malformed body, the page shows a translated message and a Retry button and no policy text. Never point this at staging (rule 12).
 
 <!-- agent-standards:begin -->
 ## Shared agent guidance

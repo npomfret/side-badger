@@ -4,6 +4,7 @@ import { locales, pseudoLocales, isPseudoLocale } from './src/i18n/index.ts';
 import { previewPseudoEnabled } from './src/i18n/pseudo.ts';
 import { isIndexable } from './src/seo/indexability.ts';
 import { pageForPath } from './src/site/routes.ts';
+import { hasMarkdownAlternate } from './src/site/pages.ts';
 import { canonicalFor } from './src/seo/urls.ts';
 import { markdownSite } from './scripts/markdown/index.mjs';
 
@@ -19,7 +20,7 @@ export default defineConfig({
     markdownSite({
       resolvePage: path => {
         const match = pageForPath(path);
-        if (!match?.page.published || isPseudoLocale(match.locale)) return undefined;
+        if (!match || !hasMarkdownAlternate(match.page) || isPseudoLocale(match.locale)) return undefined;
         return {
           url: canonicalFor(match.page.id, match.locale),
           locale: match.locale,

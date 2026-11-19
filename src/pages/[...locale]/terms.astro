@@ -1,10 +1,7 @@
 ---
-import { getEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PolicyPage from '../../components/PolicyPage.astro';
 import { t, type Locale } from '../../i18n';
-import { canonicalFor } from '../../seo/urls';
-import type { JsonLdNode } from '../../seo/jsonld';
 import { pathsFor } from '../../site/routes';
 
 export function getStaticPaths() {
@@ -12,19 +9,6 @@ export function getStaticPaths() {
 }
 
 const { locale } = Astro.props as { locale: Locale };
-const entry = await getEntry('policies', 'terms-of-service');
-
-// English legal pages say when the text last changed (plan 2.5). Localized ones add nothing.
-const jsonLd: JsonLdNode[] =
-  locale === 'en' && entry
-    ? [
-        {
-          '@type': 'WebPage',
-          '@id': `${canonicalFor('terms', locale)}#webpage`,
-          dateModified: entry.data.publishedAt.toISOString(),
-        },
-      ]
-    : [];
 ---
 
 <BaseLayout
@@ -32,7 +16,6 @@ const jsonLd: JsonLdNode[] =
   locale={locale}
   title={t('policy.terms.meta.title', locale)}
   description={t('policy.terms.meta.description', locale)}
-  jsonLd={jsonLd}
 >
   <PolicyPage title={t('policy.terms.title', locale)} policyId="terms-of-service" locale={locale} />
 </BaseLayout>

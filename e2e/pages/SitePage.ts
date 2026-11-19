@@ -3,6 +3,7 @@ import { expect, type Locator, type Page } from '@playwright/test';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { ELEMENT_TIMEOUT, MODAL_TIMEOUT, NAVIGATION_TIMEOUT } from './timeouts';
 import { isRtl, pathFor, text, type ShellLocale, type StringKey } from './strings';
+import { stubPolicyApi } from './policyApi';
 
 /** The registry's launch-counter page id for each route the shell tests visit */
 export type ShellRoute = 'pricing' | 'privacy' | 'terms' | 'cookies' | '';
@@ -20,6 +21,7 @@ export class SitePage {
 
   static async navigateTo(page: Page, locale: ShellLocale, route: ShellRoute): Promise<SitePage> {
     const site = new SitePage(page, locale, route);
+    await stubPolicyApi(page); // the policy pages load their text from the app API
     await page.goto(pathFor(locale, route));
     await site.verifyLoaded();
     return site;

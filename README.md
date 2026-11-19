@@ -53,12 +53,12 @@ docker run -p 80:80 your-app     # Run container
 
 ## Policy Pages
 
-Privacy, Terms, and Cookie pages fetch content from your API:
+Privacy, Terms, and Cookie pages fetch their text from the app API in the visitor's browser (the build never calls it, and no copy is kept here):
 - `GET {api.baseUrl}/api/policies/privacy-policy/text`
 - `GET {api.baseUrl}/api/policies/terms-of-service/text`
 - `GET {api.baseUrl}/api/policies/cookie-policy/text`
 
-Expected response: Markdown text.
+Expected response: Markdown text (`text/plain`; a JSON, HTML or empty reply counts as a failure). `GET .../current` supplies `createdAt`, the publication date shown on the page.
 
 ## Optional website analytics
 
@@ -70,9 +70,9 @@ calculators, preview pages, staging and the private app are excluded. Withdrawal
 can send the current page's final exit measurement during reload, as disclosed
 in the privacy policy. The public site token is configuration, not an API secret.
 
-Policy snapshots must be refreshed with `npm run policies:sync` after publishing
-the shared policies and before deploying a changed collection practice. Existing
-no-third-party-analytics claims refer specifically to the private app.
+Publish a change to the shared policies in the app; the site shows it on the next
+page load, with no site deploy. Existing no-third-party-analytics claims refer
+specifically to the private app.
 
 ## Tech Stack
 

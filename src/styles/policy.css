@@ -33,6 +33,19 @@
   background: var(--glass-bg);
 }
 
+/* Loading and failure message with its Try again button. The region is always present so changes are announced. */
+.policy-state > p:not(:empty) {
+  margin-block-end: var(--space-md);
+}
+
+.policy-state > [hidden] {
+  display: none;
+}
+
+.policy-state > p:focus {
+  outline: none;
+}
+
 /* Override github-markdown-css for site theme */
 .markdown-body {
   background-color: transparent;
@@ -49,13 +62,26 @@
 }
 
 /*
- * Tables scroll inside their own focusable region (wrapTables in PolicyPage.astro), not the table itself, so the
+ * Tables scroll inside their own focusable region (built by policy-markdown.ts), not the table itself, so the
  * keyboard can reach the overflow. The region shows the global focus ring.
  */
 :global(.policy-table-scroll) {
   max-inline-size: 100%;
   margin-block: 0 var(--space-md);
   overflow-x: auto;
+}
+
+/* Table cell alignment from the Markdown; logical, so it follows the text direction */
+:global(.policy-content) :global([data-align='center']) {
+  text-align: center;
+}
+
+:global(.policy-content) :global([data-align='right']) {
+  text-align: end;
+}
+
+:global(.policy-content) :global([data-align='left']) {
+  text-align: start;
 }
 
 :global(.policy-table-scroll) > :global(table) {

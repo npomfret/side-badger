@@ -4,7 +4,7 @@ The site redesign (restructure task, homepage task and release 1 of [the site pl
 
 ## Open work
 
-- **Load policies from the API.** The owner's 19 November direction replaces the snapshot approach in D10: restore browser-side policy loading and remove committed copies and the sync workflow. Implementation is pending in [load-policies-from-api.md](./load-policies-from-api.md).
+- **Load policies from the API** is implemented (see [load-policies-from-api.md](./load-policies-from-api.md)): the policy pages fetch the current text in the browser and keep no copy. What remains is landing and deploying it, then a production check on the three live pages.
 - **P35 app screenshots.** Waits for the capture script and demo scenario in `wl-bill-splitter` (site plan follow-up 9 and D14). This repo owns the shot list (site plan "Shot list", `src/data/screenshots.ts`), optimization and placement. Until then English pages may use `placeholder-en` shots, and localized pages show none.
 - **Release 2** is planned in [release-2-plan.md](./release-2-plan.md): calculators, guides, four feature pages, couples, page art, the Splitwise comparison and a help page, in three waves.
 - **AI discovery and integration docs** are tracked in [ai-discovery-and-integration-docs.md](./ai-discovery-and-integration-docs.md): research-led product copy, Markdown delivery for agents, Pro API documentation, standalone MCP access, and ChatGPT/Claude plugins combining MCP and skills. Implementation has started with Markdown delivery; API contracts, entitlement decisions and integration release verification remain dependencies.
@@ -23,8 +23,6 @@ The site redesign (restructure task, homepage task and release 1 of [the site pl
 | Search Console | Confirm the domain property, submit the sitemap, export baseline reports. | The search reviews wait. |
 | Production field data | Run PageSpeed Insights on production (CrUX at p75: LCP ≤ 2.5 s, INP ≤ 200 ms, CLS ≤ 0.1). | Lab measurements only. |
 | Branch protection | Require the `verify` check on `main`. | The CI gate still blocks deploys. |
-| Policy-sync pull requests | Give `policy-sync.yml` a GitHub App or PAT token, and enable "Allow GitHub Actions to create pull requests". | The workflow fails at the PR step; run `npm run policies:sync` and open the PR by hand. |
-| Policy timestamps | Confirm the policy `createdAt` values in `src/content/policies/`. | |
 | Manual deploy | `scripts/deploy.sh` should copy with `rsync -a --delete`. | |
 | Loki access | Read access to the edge box's Loki. | The `/go/` counter logs; counts are read later. |
 | Fluent reviewers | Find reviewers for the priority markets, starting with any locale with at least 50 clicks a month in its Search Console baseline. | Only English is indexed (D31). |
@@ -57,7 +55,7 @@ Numbered as in the deleted restructure task; the site plan cites them as "restru
 | ID | Decision |
 |----|----------|
 | D8 | A page in a locale is indexable only when it is published and its review status is `reviewed` (fluent human) or `legacy`. Every other built page carries `noindex` and is left out of the sitemap and `hreflang`. |
-| D10 | Legal policies are committed Markdown snapshots in `src/content/policies/`, refreshed by `npm run policies:sync` and a daily workflow that opens a PR. Localized policy URLs show a translated "English only" notice and the English text marked `lang="en"`, and carry `noindex`. |
+| D10 | Legal policies are not copied into this repository. The policy pages are static shells that fetch the current Markdown (`/api/policies/<id>/text`) and publication date (`/current`) from the production app API in the visitor's browser, so a policy change shows on the next page load without a site deploy. The build never calls the API. If the API fails, times out (10 s) or answers with an empty or malformed body, the page shows a translated message with a Retry button and no policy text (owner decision of 19 November 2026; it replaces the committed-snapshot design of 14 October). Legal pages have no Markdown alternate, because their built HTML is only a shell. Localized policy URLs show a translated "English only" notice and the English text marked `lang="en"`, and carry `noindex`. |
 | D11 | Long-form localized copy lives in YAML content collections, one file per page per locale, validated by Zod schemas in `src/content/schemas.ts`. Rich text is inline Markdown only. |
 | D16 | The feature registry is a typed TS module, `src/data/features.ts` (with `use-cases.ts` and `types.ts`), English and internal, transcribed from the site plan's registry. |
 | D20 | `/features/` and `/use-cases/` hubs; articles live under `/guides/<slug>/`. The wait for search data was lifted on 21 October 2026 (release-2-plan R4). |

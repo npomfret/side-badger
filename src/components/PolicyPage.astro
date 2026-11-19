@@ -1,66 +1,59 @@
 ---
-import { getEntry, render } from 'astro:content';
 import 'github-markdown-css/github-markdown-light.css';
-import { localeConfig, t, tf, type Locale } from '../i18n';
+import { getAppUrl, localeConfig, t, type Locale } from '../i18n';
 
 interface Props {
   title: string;
-  /** Snapshot id in the `policies` collection, e.g. `privacy-policy`. */
+  /** The app's policy id, e.g. `privacy-policy` (its API path is `/api/policies/<id>`). */
   policyId: 'privacy-policy' | 'terms-of-service' | 'cookie-policy';
   locale: Locale;
 }
 
 const { title, policyId, locale } = Astro.props;
 
-const entry = await getEntry('policies', policyId);
-if (!entry) {
-  throw new Error(`Policy snapshot "${policyId}" is missing. Run "npm run policies:sync".`);
-}
-const { Content } = await render(entry);
+// The app owns the policies. The build never calls this API: the visitor's browser does, when the page opens.
+const apiBase = `${new URL(getAppUrl()).origin}/api/policies/${policyId}`;
+const textUrl = `${apiBase}/text`;
+const currentUrl = `${apiBase}/current`;
 
-/**
- * Wide tables scroll sideways on a phone. A scrollable region must be reachable by keyboard and have a
- * name, so each table is wrapped (at build time) in a focusable region labelled by the nearest preceding
- * heading, or by the page title when none has an id. The snapshots are plain Markdown, so the wrapping
- * works on the rendered HTML.
- */
-function wrapTables(html: string): string {
-  let label = 'policy-title';
-  return html.replace(/<h[1-6][^>]*\sid="([^"]+)"|<table[\s\S]*?<\/table>/g, (match, headingId?: string) => {
-    if (headingId) {
-      label = headingId;
-      return match;
-    }
-    return `<div class="policy-table-scroll" role="region" aria-labelledby="${label}" tabindex="0">${match}</div>`;
-  });
-}
-const contentHtml = entry.rendered?.html ? wrapTables(entry.rendered.html) : undefined;
-
+const strings = {
+  loading: t('policy.loading', locale),
+  error: t('policy.error', locale),
+  updated: t('policy.lastUpdated', locale),
+};
 const isEnglish = locale === 'en';
-let updated: string;
-try {
-  updated = new Intl.DateTimeFormat(localeConfig[locale].intlCode, { dateStyle: 'long', timeZone: 'UTC' }).format(
-    entry.data.publishedAt
-  );
-} catch {
-  updated = new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' }).format(entry.data.publishedAt);
-}
 ---
 
 <section class="legal-page" aria-labelledby="policy-title">
   <div class="container">
-    <div class="legal-content glass fade-up">
+    <div
+      class="legal-content glass fade-up"
+      data-policy
+      data-text-url={textUrl}
+      data-current-url={currentUrl}
+      data-intl-code={localeConfig[locale].intlCode}
+      data-strings={JSON.stringify(strings)}
+    >
       <h1 id="policy-title" class="policy-title">{title}</h1>
-      <p class="policy-updated">
-        <time datetime={entry.data.publishedAt.toISOString()}>{tf('policy.lastUpdated', { date: updated }, locale)}</time>
-      </p>
+      <p class="policy-updated" data-ref="updated" hidden><time data-ref="time"></time></p>
       {!isEnglish && <p class="policy-notice" role="note">{t('policy.englishOnly', locale)}</p>}
-      <div class="policy-content markdown-body" lang="en" dir="ltr">
-        {contentHtml !== undefined ? <Fragment set:html={contentHtml} /> : <Content />}
+      <div class="policy-state" role="status" aria-live="polite">
+        <p data-ref="message" tabindex="-1"></p>
+        <button type="button" class="btn btn-secondary" data-ref="retry" hidden>{t('policy.retry', locale)}</button>
       </div>
+      <noscript>
+        <p class="policy-notice" role="note">
+          {t('policy.noscript', locale)} <a href={textUrl} rel="noopener noreferrer">{t('policy.sourceLink', locale)}</a>
+        </p>
+      </noscript>
+      <div class="policy-content markdown-body" data-ref="body" lang="en" dir="ltr" aria-busy="true" tabindex="-1" hidden></div>
     </div>
   </div>
 </section>
+
+<script>
+  import './policy/policy-page';
+</script>
 
 <style>
   @import '../styles/policy.css';

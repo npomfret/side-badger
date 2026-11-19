@@ -39,8 +39,13 @@ extracted documents retain working destinations, including `/go/` launch routing
 
 Frontmatter records the page title, description, original URL, language and
 indexability. The registry restricts generation to published, actually built
-page/locale pairs. Preview pages, pseudo-locales and the 404 page have no Markdown
-asset or alternate link.
+page/locale pairs. Preview pages, pseudo-locales, the 404 page and the legal
+pages (privacy, terms, cookies) have no Markdown asset or alternate link: a legal
+page's policy text is loaded from the app API in the browser, so its built HTML is
+only a loading shell and a Markdown copy would misrepresent it as the policy. The
+policy's own source is `https://app.sidebadger.me/api/policies/<id>/text`.
+`hasMarkdownAlternate` (`src/site/pages.ts`) decides, for the link, the generator
+and the output check alike.
 
 The build also writes `.astro/markdown-headers.conf`, which Docker copies into
 nginx's private configuration directory. It supplies canonical HTTP links and

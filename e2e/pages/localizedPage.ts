@@ -4,6 +4,7 @@ import { expect, type Locator, type Page } from '@playwright/test';
 import en from '../../src/i18n/en';
 import type { PageDef } from '../../src/site/pages';
 import { ELEMENT_TIMEOUT, MODAL_TIMEOUT, NAVIGATION_TIMEOUT } from './timeouts';
+import { stubPolicyApi } from './policyApi';
 import {
   HTML_LANG,
   isRtl,
@@ -73,6 +74,7 @@ export class LocalizedPage {
 
   static async navigateTo(page: Page, locale: LocalizedLocale, def: PageDef): Promise<LocalizedPage> {
     const localized = new LocalizedPage(page, locale, def);
+    await stubPolicyApi(page); // the policy pages load their text from the app API
     await page.goto(localized.url);
     await localized.verifyLoaded();
     return localized;

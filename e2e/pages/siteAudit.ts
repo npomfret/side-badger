@@ -3,6 +3,7 @@ import { expect, type Locator, type Page } from '@playwright/test';
 import { allPages, type PageDef } from '../../src/site/pages';
 import { ELEMENT_TIMEOUT, NAVIGATION_TIMEOUT } from './timeouts';
 import { isRtl, pathFor, SHELL_LOCALES, text, type ShellLocale, type StringKey } from './strings';
+import { stubPolicyApi } from './policyApi';
 
 /** Every registry page (published, unpublished and preview-only) that exists in a locale */
 export function pagesIn(locale: ShellLocale): readonly PageDef[] {
@@ -36,6 +37,7 @@ export class SiteAudit {
 
   static async navigateTo(page: Page, locale: ShellLocale, def: PageDef): Promise<SiteAudit> {
     const audit = new SiteAudit(page, locale, def);
+    await stubPolicyApi(page); // the policy pages load their text from the app API
     await page.goto(audit.localized(def));
     await audit.verifyLoaded();
     return audit;

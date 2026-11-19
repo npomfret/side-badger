@@ -2,40 +2,18 @@
 
 Marketing website for a white-label bill splitting app. The actual app is hosted externally at `app.sidebadger.me` (staging at `staging.sidebadger.me`); this repo is just the marketing site.
 
+- **Tech**: Astro 5 static site, TypeScript, YAML content validated with zod, Vitest, Playwright, nginx in Docker; many locales including RTL.
+- **Lifecycle**: production. A push to `main` builds and deploys the site (`.github/workflows/deploy.yml`) once `verify` and `e2e` pass. Verification gates and the output rules below are the change constraints.
+
 ## Architecture
 
 - **Framework**: Astro 5 (static site generation)
 - **Deployment**: Docker container on `sidebadger.me` (behind shared nginx proxy)
 - **CI/CD**: GitHub Actions. Every push and pull request runs the `verify` job; a push to `main` deploys only if it and the `e2e` browser tests pass (see Verify gate)
-- **Branches**: use the repository's default branch and detached worktrees as specified below
-
-## Key Files
-
-| File | Purpose |
-|------|---------|
-| `src/i18n/en.ts` | All user-facing text, URLs, copy |
-| `src/styles/tokens.css` | Design tokens (colors, spacing, typography) |
-| `astro.config.mjs` | Site URL, i18n config |
-
-## Code Patterns
-
-**Translations**: Use `t(key, locale)` from `@/i18n`:
-```typescript
-import { t } from '@/i18n';
-const alt = t('header.logoText', locale);
-```
-
-**Path aliases**:
-- `@/*` → `src/*`
-- `@components/*` → `src/components/*`
-- `@layouts/*` → `src/layouts/*`
-- `@styles/*` → `src/styles/*`
-
-**CSS**: Uses CSS custom properties from `tokens.css`. Layout and the site shell live in `layout.css`.
 
 ## Internationalization (i18n)
 
-- **Text & Routing**: All text is handled via `src/i18n/*.ts`. Astro's dynamic routes provide locale-based URLs (e.g., `/ja/pricing`).
+- **Text & Routing**: All user-facing English text, URLs and copy live in `src/i18n/en.ts` (the master); other locales are `src/i18n/*.ts`. Astro's dynamic routes provide locale-based URLs (e.g., `/ja/pricing`).
 - **RTL**: `ar`, `fa` and `ur` are RTL (`rtlLocales` in `src/i18n/index.ts`). `BaseLayout.astro` sets `<html dir>` and `lang`. Write new CSS with logical properties only (some older rules are still physical); `tokens.css` sets `--dir: -1` under `[dir="rtl"]` for transforms. Check any layout change in `/ar/`.
 - **Fonts**: `BaseLayout.astro` sets `data-font-script` from the locale's `fontScript`; `tokens.css` picks the font stack for each script. Arabic, Devanagari, Bengali and Telugu pages also load that script's Noto Sans stylesheet from `public/fonts/`.
 - **SEO**: `SeoHead.astro` writes the title, description, canonical, `hreflang` alternates (`src/seo/alternates.ts`), `og:locale` and JSON-LD.
@@ -127,18 +105,9 @@ A scroll-driven set of scenes. Styles are in `src/styles/home/` (`tokens.css`, `
 - Homepage text is `home.*` keys in `en.ts`; app links go through `LaunchAppCta`.
 - Retired: the canvas background, floating particles, cursor-follow, glass-layer and aurora effects, and the old single-file homepage are gone. Do not reintroduce ambient background effects; motion belongs to scenes and respects `prefers-reduced-motion`.
 
-## Pages
-
-All in `src/pages/` (file-based routing); most are under `[...locale]/` so one file serves every locale:
-- `index.astro` (homepage), `pricing.astro` (free tier with FAQ schema)
-- `features/index.astro`, `features/[slug].astro`, `use-cases/index.astro`, `use-cases/[slug].astro`, `how-it-works.astro`, `guides/index.astro`, `guides/[slug].astro` - content pages built from the collections
-- `privacy.astro`, `terms.astro`, `cookies.astro` - Policy pages (pre-rendered from snapshots at build time)
-- `preview/[slug].astro` - layout review pages, only under `PREVIEW_UNPUBLISHED=1`
-- Outside `[...locale]/`: `404.astro`, `robots.txt.ts` and `og/[card].png.ts` (social cards)
-
 ## End-to-end tests
 
-`e2e/` is Playwright (`npm run test:e2e`; specs `layouts`, `shell`, `pricing`; page objects in `e2e/pages/`). `playwright.config.ts` builds the site with both preview flags and serves it on `E2E_PORT` (default 18520); it defaults to `I18N_MODE=english-first`. Tests go through page objects only.
+`e2e/` is Playwright (`npm run test:e2e`; specs in `e2e/*.spec.ts`; page objects in `e2e/pages/`). `playwright.config.ts` builds the site with both preview flags and serves it on `E2E_PORT` (default 18520); it defaults to `I18N_MODE=english-first`. Tests go through page objects only.
 
 ## Verify gate
 
@@ -172,12 +141,6 @@ The app lives at `app.sidebadger.me` (production). `staging.sidebadger.me` is fo
 Policy pages are built from Markdown snapshots in `src/content/policies/`. `scripts/sync-policies.mjs` (`npm run policies:sync`) refreshes them from `https://app.sidebadger.me/api/policies/{policy-type}/current` and `/text`; the `policy-sync.yml` workflow runs it daily and opens a PR. The build never calls the API.
 
 Caveat: a PR opened with the default `GITHUB_TOKEN` does not trigger the `verify` job. Either give the workflow a GitHub App or PAT token, or push an empty commit / close and reopen the PR to run checks. The repository setting "Allow GitHub Actions to create pull requests" must be enabled.
-
-## Styling Notes
-
-- Fluid typography and spacing using `clamp()`
-- Confetti via `canvas-confetti` on CTA clicks, scenes and easter eggs (loaded on first use)
-- All animations respect `prefers-reduced-motion`
 
 <!-- agent-standards:begin -->
 ## Shared agent guidance

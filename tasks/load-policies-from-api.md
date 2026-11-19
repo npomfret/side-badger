@@ -1,6 +1,6 @@
 # Load legal policies dynamically from the app API
 
-Requested by the owner on 19 November 2026. Status: implemented in the working tree on 19 November 2026; awaiting landing, deploy and a production check.
+Requested by the owner on 19 November 2026. Status: done. Landed and deployed on 19 November 2026 (`7d79914`, back-check `2749502`, e2e fix `c504e06`; CI run 44514200268 deployed), and checked in production.
 
 ## Direction
 
@@ -58,8 +58,12 @@ Evidence (all one command at a time, worktree `tmp/worktrees/policies-api`, logs
 - Strict `npm run build` with every connection to `*.sidebadger.me` refused by a preloaded guard (`tmp/ad-hoc-scripts/block-app-network.cjs`; a control request was caught and logged, the build logged none): exit 0, 1249 pages, 1131 Markdown representations, no policy fetch (`build.log`). `npm run check:site`: 16 files, 184 tests passed (`check-site.log`).
 - `npx playwright test e2e/policy.spec.ts --workers=1` (API stubbed with `page.route`): success on all three pages, delayed, 500, retry then success, 10 s timeout (page clock), timeout then retry, empty, JSON, NUL-byte body, no metadata, XSS payload (no dialog, no `window.__xss`, no script/img/iframe/handler/`javascript:` link), no-JavaScript fallback, 375 px table scroll and keyboard, `de` and `ar` at 1280 and 375 including axe: 25 passed on the first full run after the fix and the 8 localized cases re-run green (`e2e-policy.log`, `e2e-policy-locales.log`). The other page objects (`SitePage`, `SiteAudit`, `LocalizedPage`) stub the API so no other spec reaches the real one.
 - Live API, real Chromium (`tmp/ad-hoc-scripts/live-policy-check.mjs`, `live-check.log`): `/privacy/`, `/terms/`, `/cookies/` in `en`, `de` and `ar` each showed the current policy (first line equal to the live `/text`), one h1, the date from `/current`, no console errors, `ar` with `dir="rtl"` and the policy body `lang="en" dir="ltr"`. A policy change is therefore visible on the next load with no rebuild (the page has no build-time policy content).
-- Not run: `npm run check:nginx` (Docker not used here). Its Markdown checks for the legal pages were added but not executed.
+- `npm run check:nginx` before landing: 353 passed, 0 failed, including the Markdown suite with the legal-page 404s.
+- Strings: the five `policy.*` keys were back-checked blind in 38 locales by four independent agents (PL-check); nine locales fixed for register or wording.
+- CI: shell.spec failed once on axe colour contrast because the check could sample the policy table mid-fade. Fixed in `c504e06`: a shared `expectAnimationsSettled` before shell axe checks, and `SitePage`/`SiteAudit` wait for the stubbed policy text on legal pages.
 
 Review (independent agent): no sanitizer or race defects found. Fixed: focus after a successful Try again moves to the policy body. Rebutted: `/text` content type is `text/plain` (verified by curl, recorded above), so the JSON/HTML guard is safe; the current policies contain no relative or in-page links (only two https links), so link rebasing and heading slugs are not needed yet; a failed parser chunk lands in the catch and shows Retry. Not done: an e2e for Retry during an in-flight request and a late `/current` reply (guarded by the attempt counter, covered by reasoning only).
 
-Open: deploy and then run the live check against `https://sidebadger.me`; the cookie policy `createdAt` (17 November) differs from its text's "Last revised: 16 November", which is the app's data.
+Production check, 19 November 2026 (`tmp/ad-hoc-scripts/live-policy-check.mjs`): `/privacy/`, `/terms/`, `/cookies/`, `/de/privacy/` and `/ar/terms/` on https://sidebadger.me each loaded the live policy (one h1, `aria-busy="false"`, body `lang="en" dir="ltr"`, `/ar/` page `dir="rtl"`, no page errors); the date from `/current` shows a moment after the text. `/privacy/index.md` and `/cookies/index.md` return 404; `scripts/check-markdown.mjs https://sidebadger.me` passed 145 checks.
+
+Upstream note (app data, not this repo): the cookie policy `createdAt` (17 November) differs from its text's "Last revised: 16 November".

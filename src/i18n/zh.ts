@@ -134,7 +134,7 @@ export default {
   'home.hero.ctaPrimary': '创建群组',
   'home.hero.ctaSecondary': '了解使用方式',
   'home.hero.haveAccount': '已有账户？',
-  'home.hero.lede': 'Side Badger 用 133 种货币记录谁为什么付了钱，并建议谁该付给谁，让你们的群组用更少的付款笔数结清。',
+  'home.hero.lede': 'Side Badger 是一款适合室友、情侣、团体旅行和庆祝活动的账单分摊应用。只在相关人员之间平均、按确切金额或按百分比分摊费用。它记录 133 种货币的支出，并建议谁该付给谁。',
   'home.hero.title': '分摊群组开销，不闹矛盾。',
   'home.hero.trust': '免费。无广告。无每日限制。',
   'home.pricing.body': '免费。无广告。无每日限制。',

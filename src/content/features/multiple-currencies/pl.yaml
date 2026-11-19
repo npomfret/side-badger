@@ -1,7 +1,7 @@
-translatedFrom: "b793df60"
+translatedFrom: "3e39d035"
 review:
   status: checked
-  checker: "CF-check"
+  checker: "CX-check"
   date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
@@ -113,7 +113,7 @@ faq:
   heading: "Pytania"
   items:
     - q: "Jakiego kursu wymiany używacie?"
-      a: "Aktualnego kursu wymiany, pobieranego przy wpisywaniu wydatku, gdy jest dostępny. Możesz zmienić go na ten, który faktycznie obowiązywał, a przeliczona kwota się zaktualizuje."
+      a: "Side Badger pobiera kurs wymiany, gdy zdecydujesz się przeliczyć wydatek, jeśli kurs jest dostępny. Możesz zmienić go na ten, który faktycznie obowiązywał, a przeliczona kwota się zaktualizuje."
     - q: "Czy stare wydatki są przeszacowywane?"
       a: "Nie. Kurs jest ustalany w chwili zapisu wydatku, więc saldo nie dryfuje dlatego, że ruszył się rynek."
     - q: "Czy obsługujecie kryptowaluty?"
@@ -123,4 +123,4 @@ faq:
     - q: "Czy przeliczanie coś kosztuje?"
       a: "Nie. Przeliczanie jest darmowe, tak jak reszta Side Badger. Zobacz [cennik](page:pricing)."
     - q: "Czy muszę przeliczać?"
-      a: "Nie. Waluty zostają osobno, chyba że ty lub twoja grupa zdecydujecie się przeliczać, a każda waluta ma własną krótką listę płatności."
+      a: "Przeliczanie walut w Side Badger jest opcjonalne. Salda zostają osobno dla każdej waluty, chyba że ty lub twoja grupa zdecydujecie się przeliczać, a każda waluta ma własną krótką listę sugerowanych płatności."

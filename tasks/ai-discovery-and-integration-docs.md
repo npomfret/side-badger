@@ -59,9 +59,11 @@ Research consulted on 17 November 2026; recheck changing platform guidance durin
 
 ### 2. Improve product discovery copy
 
-- [ ] Review the homepage opening paragraph so it names Side Badger as a bill-splitting app, its audiences and concrete supported capabilities in one concise passage.
+- [x] Review the homepage opening paragraph so it names Side Badger as a bill-splitting app, its audiences and concrete supported capabilities in one concise passage.
+  - Done 2026-11-19: the hero lede names the category, the four audiences, the split methods, 133 currencies and suggested payments; the separate audience line is removed in every locale. Re-check against Pro messaging when Pro ships.
 - [ ] Review feature/use-case pages for explicit task-to-capability explanations: unequal contributions, excluding absent participants, group-trip currencies and tracking payments made elsewhere.
 - [ ] Make key FAQ answers self-contained, with verified account requirements, supported splits, currency behaviour, money-transfer boundaries, connectivity needs and plan limits.
+  - Partly done 2026-11-19: ten answers chosen from the discovery-evaluation gaps (accounts, connectivity, recording versus moving money, split methods, currency conversion) now open with a complete factual sentence, in every locale (back-checked blind, CX-check). Plan limits wait for the Pro decision; repeat the evaluation set afterwards.
 - [ ] Keep factual descriptions accessible in rendered HTML, with descriptive internal links and visible copy matching metadata/JSON-LD.
 
 Draft direction for the homepage, to verify and reconcile with Pro messaging before use:

@@ -134,7 +134,7 @@ export default {
   'home.hero.ctaPrimary': 'Mulai grup',
   'home.hero.ctaSecondary': 'Lihat cara kerjanya',
   'home.hero.haveAccount': 'Sudah punya akun?',
-  'home.hero.lede': 'Side Badger mencatat siapa membayar apa, dalam 133 mata uang, dan menyarankan siapa membayar siapa, sehingga grup Anda melunasi utang dengan lebih sedikit pembayaran.',
+  'home.hero.lede': 'Side Badger adalah aplikasi pembagi tagihan untuk teman serumah, pasangan, perjalanan grup, dan perayaan. Bagi biaya secara rata, berdasarkan jumlah pasti, atau persentase, hanya di antara orang yang terlibat. Aplikasi ini mencatat pengeluaran dalam 133 mata uang dan menyarankan siapa membayar siapa.',
   'home.hero.title': 'Bagi biaya grup tanpa drama.',
   'home.hero.trust': 'Gratis. Tanpa iklan. Tanpa batas harian.',
   'home.pricing.body': 'Gratis. Tanpa iklan. Tanpa batas harian.',

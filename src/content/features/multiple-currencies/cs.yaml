@@ -1,7 +1,7 @@
-translatedFrom: "b793df60"
+translatedFrom: "3e39d035"
 review:
   status: checked
-  checker: "CF-check"
+  checker: "CX-check"
   date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
@@ -113,7 +113,7 @@ faq:
   heading: "Otázky"
   items:
     - q: "Jaký směnný kurz používáte?"
-      a: "Aktuální směnný kurz, stažený při zadání výdaje tam, kde je k dispozici. Můžete ho změnit na ten, který platil při výměně, a převedená částka se aktualizuje."
+      a: "Side Badger stáhne směnný kurz, když se rozhodnete výdaj převést, pokud je kurz k dispozici. Můžete ho změnit na ten, který platil při výměně, a převedená částka se aktualizuje."
     - q: "Přeceňují se staré výdaje?"
       a: "Ne. Kurz se zafixuje při uložení výdaje, takže se zůstatek nehýbe jen proto, že se pohnul trh."
     - q: "Podporujete kryptoměny?"
@@ -123,4 +123,4 @@ faq:
     - q: "Stojí převod něco?"
       a: "Ne. Převod je zdarma, stejně jako zbytek Side Badger. Viz [ceník](page:pricing)."
     - q: "Musím převádět?"
-      a: "Ne. Měny zůstávají zvlášť, pokud se vy nebo vaše skupina nerozhodnete převádět, a každá měna má vlastní krátký seznam plateb."
+      a: "Převod měn v Side Badger je volitelný. Zůstatky zůstávají zvlášť podle měny, pokud se vy nebo vaše skupina nerozhodnete převádět, a každá měna má vlastní krátký seznam navržených plateb."

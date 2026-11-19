@@ -134,7 +134,7 @@ export default {
   'home.hero.ctaPrimary': 'Crea un gruppo',
   'home.hero.ctaSecondary': 'Scopri come funziona',
   'home.hero.haveAccount': 'Hai già un account?',
-  'home.hero.lede': 'Side Badger tiene traccia di chi ha pagato cosa, in 133 valute, e suggerisce chi paga chi, così il tuo gruppo salda i conti con meno pagamenti.',
+  'home.hero.lede': 'Side Badger è un\'app per dividere le spese, pensata per coinquilini, coppie, viaggi di gruppo e feste. Dividi i costi in parti uguali, per importi esatti o per percentuale, solo tra le persone coinvolte. Tiene traccia delle spese in 133 valute e suggerisce chi paga chi.',
   'home.hero.title': 'Dividi le spese di gruppo senza drammi.',
   'home.hero.trust': 'Gratis. Niente pubblicità. Nessun limite giornaliero.',
   'home.pricing.body': 'Gratis. Niente pubblicità. Nessun limite giornaliero.',

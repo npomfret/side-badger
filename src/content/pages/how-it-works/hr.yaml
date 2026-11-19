@@ -1,7 +1,7 @@
-translatedFrom: "206dabde"
+translatedFrom: "05187fde"
 review:
   status: checked
-  checker: "CF-check"
+  checker: "CX-check"
   date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
@@ -93,14 +93,14 @@ faq:
   heading: "Pitanja"
   items:
     - q: "Treba li svatko korisnički račun?"
-      a: "Da, besplatan. Svaka osoba potvrđuje svoju e-adresu prije nego što išta doda."
+      a: "Svaka osoba u grupi u Side Badgeru treba besplatan korisnički račun. Registriraj se e-adresom i lozinkom te potvrdi svoju e-adresu prije nego što išta dodaš. Nema pristupa za goste."
     - q: "Postoji li aplikacija?"
       a: "Radi u pregledniku. Prijavi se, a zatim je dodaj na početni zaslon ili u dock da se otvara kao aplikacija. Postavke u aplikaciji pokazuju kako. Nema verzije iz trgovine aplikacijama ni načina rada izvan mreže."
     - q: "Premješta li Side Badger novac?"
-      a: "Ne. Vodi evidenciju i predlaže uplate, a vi si plaćate kako god želite. Zatim zabilježiš uplatu. Vidi [poravnanje](page:feature/settle-up)."
+      a: "Side Badger bilježi uplate izvršene drugdje; ne premješta novac. Predlaže tko kome plaća, a vi si plaćate kako god želite. Zatim zabilježiš uplatu. Vidi [poravnanje](page:feature/settle-up)."
     - q: "Može li netko otići dok duguje novac?"
       a: "Ne. Nitko ne može napustiti grupu dok duguje ili mu se duguje novac, pa se prvo poravna."
     - q: "Koliko se ljudi može pridružiti grupi?"
       a: "Do 50 osoba u grupi. Pozovi ih poveznicom ili QR kodom i uključi odobravanje ako želiš da administrator pušta svaku osobu unutra."
     - q: "A putovanja s više od jedne valute?"
-      a: "Stanja se vode zasebno za svaku valutu, a trošak možeš pretvoriti po dohvaćenom tečaju koji možeš izmijeniti. Vidi [više valuta](page:feature/multiple-currencies)."
+      a: "Side Badger podržava 133 valute i vodi stanja zasebno za svaku valutu, osim ako trošak pretvoriš pri unosu. Možeš koristiti dohvaćeni tečaj, ako je dostupan, ili unijeti vlastiti. Vidi [više valuta](page:feature/multiple-currencies)."

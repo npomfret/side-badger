@@ -1,7 +1,7 @@
-translatedFrom: "b793df60"
+translatedFrom: "3e39d035"
 review:
   status: checked
-  checker: "CF-check"
+  checker: "CX-check"
   date: "2026-11-19"
 claims:
   - multi-currency.currency-count
@@ -108,7 +108,7 @@ faq:
   heading: Questions
   items:
     - q: "Quel taux de change utilisez-vous ?"
-      a: "Un taux de change actuel, récupéré quand vous saisissez la dépense là où il y en a un. Vous pouvez le changer pour le taux que vous avez réellement obtenu, et le montant converti se met à jour."
+      a: "Side Badger récupère un taux de change lorsque vous choisissez de convertir une dépense, si un taux est disponible. Vous pouvez le changer pour le taux que vous avez réellement obtenu, et le montant converti se met à jour."
     - q: "Les anciennes dépenses sont-elles réévaluées ?"
       a: "Non. Le taux est fixé quand la dépense est enregistrée, donc un solde ne dérive pas parce que le marché a bougé."
     - q: "Prenez-vous en charge les cryptomonnaies ?"
@@ -118,7 +118,7 @@ faq:
     - q: "La conversion coûte-t-elle quelque chose ?"
       a: "Non. Convertir est gratuit, comme le reste de Side Badger. Voir les [tarifs](page:pricing)."
     - q: "Dois-je convertir ?"
-      a: "Non. Les devises restent séparées sauf si vous ou votre groupe choisissez de convertir, et chaque devise a sa propre courte liste de paiements."
+      a: "La conversion de devises dans Side Badger est facultative. Les soldes restent séparés par devise sauf si vous ou votre groupe choisissez de convertir, et chaque devise a sa propre courte liste de paiements suggérés."
 identicalApproved:
   - example.people.0.name
   - example.people.1.name

@@ -1,7 +1,7 @@
-translatedFrom: "b793df60"
+translatedFrom: "3e39d035"
 review:
   status: checked
-  checker: "CF-check"
+  checker: "CX-check"
   date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
@@ -113,7 +113,7 @@ faq:
   heading: "Kérdések"
   items:
     - q: "Melyik árfolyamot használjátok?"
-      a: "Egy aktuális árfolyamot, amelyet a költség megadásakor kérünk le, ha elérhető. Átírhatod arra, amelyet ténylegesen kaptál, és az átváltott összeg frissül."
+      a: "A Side Badger akkor kér le árfolyamot, amikor egy költség átváltását választod, ha elérhető árfolyam. Átírhatod arra, amelyet ténylegesen kaptál, és az átváltott összeg frissül."
     - q: "Újraértékelődnek a régi költségek?"
       a: "Nem. Az árfolyam a költség mentésekor rögzül, így egy egyenleg nem sodródik el attól, hogy a piac elmozdult."
     - q: "Támogattok kriptót?"
@@ -123,4 +123,4 @@ faq:
     - q: "Kerül valamibe az átváltás?"
       a: "Nem. Az átváltás ingyenes, mint a Side Badger többi része. Lásd az [árakat](page:pricing)."
     - q: "Kötelező átváltanom?"
-      a: "Nem. A pénznemek külön maradnak, hacsak te vagy a csoportod nem dönt az átváltás mellett, és minden pénznemnek megvan a saját rövid kifizetéslistája."
+      a: "A pénznemek átváltása a Side Badgerben választható. Az egyenlegek pénznemenként külön maradnak, hacsak te vagy a csoportod nem dönt az átváltás mellett, és minden pénznemnek megvan a saját rövid listája a javasolt kifizetésekről."

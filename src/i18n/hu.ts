@@ -134,7 +134,7 @@ export default {
   'home.hero.ctaPrimary': 'Indíts csoportot',
   'home.hero.ctaSecondary': 'Nézd meg, hogyan működik',
   'home.hero.haveAccount': 'Már van fiókod?',
-  'home.hero.lede': 'A Side Badger követi, ki mit fizetett, 133 pénznemben, és javasolja, ki kinek fizessen, hogy a csoportod kevesebb kifizetéssel elszámoljon.',
+  'home.hero.lede': 'A Side Badger egy számlamegosztó alkalmazás lakótársaknak, pároknak, csoportos utazásokhoz és ünneplésekhez. Oszd fel a költségeket egyenlően, pontos összegek szerint vagy százalékosan, csak az érintettek között. 133 pénznemben követi a költségeket, és javasolja, ki kinek fizessen.',
   'home.hero.title': 'Oszd el a csoport költségeit dráma nélkül.',
   'home.hero.trust': 'Ingyenes. Hirdetések nélkül. Napi korlátok nélkül.',
   'home.pricing.body': 'Ingyenes. Hirdetések nélkül. Napi korlátok nélkül.',

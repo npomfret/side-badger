@@ -134,7 +134,7 @@ export default {
   'home.hero.ctaPrimary': 'Tosaigh grúpa',
   'home.hero.ctaSecondary': 'Féach conas a oibríonn sé',
   'home.hero.haveAccount': 'An bhfuil cuntas agat cheana?',
-  'home.hero.lede': 'Rianaíonn Side Badger cé a d\'íoc as cad, i 133 airgeadra, agus molann sé cé a íocfaidh cé, ionas go socróidh do ghrúpa suas i níos lú íocaíochtaí.',
+  'home.hero.lede': 'Is aip roinnte billí é Side Badger do chomhchónaitheoirí, do lánúineacha, do thurais ghrúpa agus do cheiliúrthaí. Roinn costais go cothrom, de réir suimeanna cruinne nó de réir céatadáin, idir na daoine lena mbaineann amháin. Rianaíonn sé costais i 133 airgeadra agus molann sé cé leis ar cheart do gach duine íoc.',
   'home.hero.title': 'Roinn costais ghrúpa gan an drámaíocht.',
   'home.hero.trust': 'Saor in aisce. Gan fógraí. Gan teorainneacha laethúla.',
   'home.pricing.body': 'Saor in aisce. Gan fógraí. Gan teorainneacha laethúla.',

@@ -1,7 +1,7 @@
-translatedFrom: "206dabde"
+translatedFrom: "05187fde"
 review:
   status: checked
-  checker: "CF-check"
+  checker: "CX-check"
   date: "2026-11-19"
 claims:
   - groups.group-per-house-trip-event
@@ -89,17 +89,17 @@ faq:
   heading: 常见问题
   items:
     - q: 每个人都需要账户吗？
-      a: 是的，免费账户。每个人在添加任何内容之前都要验证邮箱。
+      a: Side Badger 群组中的每个人都需要一个免费账户。使用邮箱地址和密码注册，并在添加任何内容之前验证邮箱。不支持访客访问。
     - q: 有应用吗？
       a: 它在浏览器中运行。先登录，再把它添加到主屏幕或程序坞，让它像应用一样打开。应用里的设置会告诉你怎么做。没有应用商店版本，也没有离线模式。
     - q: Side Badger 会转移资金吗？
-      a: 不会。它负责记账并建议付款，你们想怎么付就怎么付，之后再记录这笔付款。参见[结算](page:feature/settle-up)。
+      a: Side Badger 记录通过其他方式完成的付款，不转移资金。它建议谁该付给谁，你们想怎么付就怎么付，之后再记录这笔付款。参见[结算](page:feature/settle-up)。
     - q: 欠着钱的人能退出群组吗？
       a: 不能。只要还欠钱或还有钱没收回，谁都不能退出群组，所以要先结清。
     - q: 一个群组能加入多少人？
       a: 一个群组最多 50 人。可通过链接或二维码邀请，如果希望由管理员逐个放行，可以开启审批。
     - q: 涉及多种货币的旅行怎么办？
-      a: 每种货币的余额分开记录，你也可以按获取到的汇率换算一笔支出，这个汇率可以修改。参见[多种货币](page:feature/multiple-currencies)。
+      a: Side Badger 支持 133 种货币，除非你在录入支出时进行换算，否则每种货币的余额分开记录。有汇率可用时，你可以使用获取到的汇率，也可以输入自己的汇率。参见[多种货币](page:feature/multiple-currencies)。
 identicalApproved:
   - example.people.0.name
   - example.people.1.name

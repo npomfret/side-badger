@@ -134,7 +134,7 @@ export default {
   'home.hero.ctaPrimary': 'グループを作る',
   'home.hero.ctaSecondary': '使い方を見る',
   'home.hero.haveAccount': 'アカウントをお持ちの方は',
-  'home.hero.lede': 'Side Badgerは、誰が何にいくら支払ったかを133の通貨で記録し、誰が誰に払うかを提案します。グループはより少ない支払い回数で精算できます。',
+  'home.hero.lede': 'Side Badgerは、ルームメイト、カップル、グループ旅行、お祝いのための割り勘アプリです。費用は均等、金額指定、割合指定で、関係する人だけで分けられます。133の通貨で支出を記録し、誰が誰に払うかを提案します。',
   'home.hero.title': 'グループの費用を、もめずに割り勘。',
   'home.hero.trust': '無料。広告なし。1日の制限なし。',
   'home.pricing.body': '無料。広告なし。1日の制限なし。',

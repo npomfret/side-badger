@@ -134,7 +134,7 @@ export default {
   'home.hero.ctaPrimary': 'Cychwyn grŵp',
   'home.hero.ctaSecondary': 'Gweld sut mae\'n gweithio',
   'home.hero.haveAccount': 'Oes gennych chi gyfrif yn barod?',
-  'home.hero.lede': 'Mae Side Badger yn cadw trac o bwy dalodd am beth, mewn 133 o arian cyfred, ac yn awgrymu pwy sy\'n talu pwy, fel bod eich grŵp yn setlo gyda llai o daliadau.',
+  'home.hero.lede': 'Mae Side Badger yn ap rhannu biliau ar gyfer cyd-letywyr, cyplau, teithiau grŵp a dathliadau. Rhannwch gostau yn gyfartal, yn ôl symiau union neu yn ôl canran, rhwng y bobl dan sylw yn unig. Mae\'n cadw trac o dreuliau mewn 133 o arian cyfred ac yn awgrymu pwy sy\'n talu pwy.',
   'home.hero.title': 'Rhannwch gostau grŵp heb y ddrama.',
   'home.hero.trust': 'Am ddim. Dim hysbysebion. Dim cyfyngiadau dyddiol.',
   'home.pricing.body': 'Am ddim. Dim hysbysebion. Dim cyfyngiadau dyddiol.',

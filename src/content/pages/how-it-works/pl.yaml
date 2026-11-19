@@ -1,7 +1,7 @@
-translatedFrom: "206dabde"
+translatedFrom: "05187fde"
 review:
   status: checked
-  checker: "CF-check"
+  checker: "CX-check"
   date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
@@ -93,14 +93,14 @@ faq:
   heading: "Pytania"
   items:
     - q: "Czy każdy potrzebuje konta?"
-      a: "Tak, darmowego. Każda osoba weryfikuje swój e-mail, zanim cokolwiek doda."
+      a: "Każda osoba w grupie Side Badger potrzebuje darmowego konta. Zarejestruj się za pomocą adresu e-mail i hasła oraz zweryfikuj swój e-mail, zanim cokolwiek dodasz. Nie ma dostępu dla gości."
     - q: "Czy jest aplikacja?"
       a: "Działa w przeglądarce. Zaloguj się, a potem dodaj ją do ekranu głównego albo docka, żeby otwierała się jak aplikacja. Jak to zrobić, pokażą Ustawienia w aplikacji. Nie ma wersji ze sklepu z aplikacjami ani trybu offline."
     - q: "Czy Side Badger przesyła pieniądze?"
-      a: "Nie. Prowadzi rachunek i podpowiada płatności, a wy płacicie sobie, jak chcecie. Potem rejestrujesz płatność. Zobacz [rozliczanie](page:feature/settle-up)."
+      a: "Side Badger rejestruje płatności dokonane poza aplikacją; nie przesyła pieniędzy. Podpowiada, kto komu ma zapłacić, a wy płacicie sobie, jak chcecie. Potem rejestrujesz płatność. Zobacz [rozliczanie](page:feature/settle-up)."
     - q: "Czy ktoś może wyjść, będąc komuś winien pieniądze?"
       a: "Nie. Nikt nie może opuścić grupy, dopóki jest komuś winien pieniądze albo ktoś jest winien jemu, więc najpierw się rozlicza."
     - q: "Ile osób może dołączyć do grupy?"
       a: "Do 50 osób w grupie. Zaproś je linkiem albo kodem QR i włącz zatwierdzanie, jeśli chcesz, żeby administrator wpuszczał każdą osobę."
     - q: "A wyjazdy z więcej niż jedną walutą?"
-      a: "Salda są prowadzone osobno dla każdej waluty, a wydatek możesz przeliczyć po pobranym kursie, który możesz edytować. Zobacz [wiele walut](page:feature/multiple-currencies)."
+      a: "Side Badger obsługuje 133 waluty i prowadzi salda osobno dla każdej waluty, chyba że przeliczysz wydatek podczas jego wpisywania. Możesz użyć pobranego kursu, gdy jest dostępny, lub wpisać własny. Zobacz [wiele walut](page:feature/multiple-currencies)."

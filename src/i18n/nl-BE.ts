@@ -134,7 +134,7 @@ export default {
   'home.hero.ctaPrimary': 'Start een groep',
   'home.hero.ctaSecondary': 'Zo werkt het',
   'home.hero.haveAccount': 'Heb je al een account?',
-  'home.hero.lede': 'Side Badger houdt bij wie wat betaald heeft, in 133 valuta\'s, en stelt voor wie wie betaalt, zodat je groep afrekent met minder betalingen.',
+  'home.hero.lede': 'Side Badger is een app om rekeningen te verdelen voor huisgenoten, koppels, groepsreizen en feesten. Verdeel kosten gelijk, op exacte bedragen of op percentage, enkel tussen de betrokken personen. De app houdt uitgaven bij in 133 valuta\'s en stelt voor wie wie betaalt.',
   'home.hero.title': 'Verdeel groepskosten zonder gedoe.',
   'home.hero.trust': 'Gratis. Geen advertenties. Geen dagelijkse limieten.',
   'home.pricing.body': 'Gratis. Geen advertenties. Geen dagelijkse limieten.',

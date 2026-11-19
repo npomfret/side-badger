@@ -134,7 +134,7 @@ export default {
   'home.hero.ctaPrimary': '그룹 만들기',
   'home.hero.ctaSecondary': '사용 방법 보기',
   'home.hero.haveAccount': '이미 계정이 있으신가요?',
-  'home.hero.lede': '사이드 배저는 누가 무엇을 결제했는지 133개 통화로 기록하고 누가 누구에게 낼지 제안해, 그룹이 더 적은 횟수의 결제로 정산하도록 도와줍니다.',
+  'home.hero.lede': '사이드 배저는 룸메이트, 커플, 단체 여행과 축하 모임을 위한 비용 분할 앱입니다. 관련된 사람들끼리만 비용을 똑같이, 정확한 금액으로 또는 비율로 나누세요. 133개 통화로 지출을 기록하고 누가 누구에게 낼지 제안합니다.',
   'home.hero.title': '드라마 없이 그룹 비용을 나누세요.',
   'home.hero.trust': '무료. 광고 없음. 일일 한도 없음.',
   'home.pricing.body': '무료. 광고 없음. 일일 한도 없음.',

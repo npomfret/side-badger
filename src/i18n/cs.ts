@@ -134,7 +134,7 @@ export default {
   'home.hero.ctaPrimary': 'Založte skupinu',
   'home.hero.ctaSecondary': 'Podívejte se, jak to funguje',
   'home.hero.haveAccount': 'Už máte účet?',
-  'home.hero.lede': 'Side Badger sleduje, kdo co zaplatil, ve 133 měnách, a navrhuje, kdo komu zaplatí, aby se vaše skupina vyrovnala menším počtem plateb.',
+  'home.hero.lede': 'Side Badger je aplikace na dělení účtů pro spolubydlící, páry, skupinové výlety a oslavy. Rozdělte náklady rovnoměrně, podle přesných částek nebo procentuálně, jen mezi ty, kterých se týkají. Sleduje výdaje ve 133 měnách a navrhuje, kdo komu zaplatí.',
   'home.hero.title': 'Dělte náklady skupiny bez dramat.',
   'home.hero.trust': 'Zdarma. Bez reklam. Bez denních limitů.',
   'home.pricing.body': 'Zdarma. Bez reklam. Bez denních limitů.',

@@ -1,7 +1,7 @@
-translatedFrom: "206dabde"
+translatedFrom: "05187fde"
 review:
   status: checked
-  checker: "CF-check"
+  checker: "CX-check"
   date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
@@ -93,14 +93,14 @@ faq:
   heading: "Vprašanja"
   items:
     - q: "Ali vsak potrebuje uporabniški račun?"
-      a: "Da, brezplačen. Vsaka oseba potrdi svoj e-poštni naslov, preden karkoli doda."
+      a: "Vsaka oseba v skupini Side Badger potrebuje brezplačen račun. Registriraj se z e-poštnim naslovom in geslom ter potrdi svoj e-poštni naslov, preden karkoli dodaš. Dostopa za goste ni."
     - q: "Ali obstaja aplikacija?"
       a: "Deluje v brskalniku. Prijavi se, nato jo dodaj na začetni zaslon ali v dock, da se odpre kot aplikacija. Kako, ti pokažejo nastavitve v aplikaciji. Različice iz trgovine z aplikacijami ni in načina brez povezave tudi ne."
     - q: "Ali Side Badger premika denar?"
-      a: "Ne. Vodi štetje in predlaga plačila, vi pa si plačate, kakor želite. Nato plačilo zabeležite. Glej [poravnavo](page:feature/settle-up)."
+      a: "Side Badger beleži plačila, opravljena drugje; denarja ne prenaša. Predlaga, kdo komu plača, vi pa si plačate, kakor želite. Nato plačilo zabeležite. Glej [poravnavo](page:feature/settle-up)."
     - q: "Ali lahko nekdo odide, medtem ko dolguje denar?"
       a: "Ne. Nihče ne more zapustiti skupine, dokler komu dolguje ali mu je kdo dolžan denar, zato se najprej poravna."
     - q: "Koliko ljudi se lahko pridruži skupini?"
       a: "Do 50 oseb v skupini. Povabi jih s povezavo ali kodo QR in vklopi potrjevanje, če želiš, da skrbnik vsako osebo spusti noter."
     - q: "Kaj pa potovanja z več kot eno valuto?"
-      a: "Stanja se vodijo ločeno za vsako valuto, strošek pa lahko pretvoriš po pridobljenem tečaju, ki ga lahko urediš. Glej [več valut](page:feature/multiple-currencies)."
+      a: "Side Badger podpira 133 valut in vodi stanja ločeno za vsako valuto, razen če strošek pretvoriš ob vnosu. Uporabiš lahko pridobljeni tečaj, kjer je na voljo, ali vneseš svojega. Glej [več valut](page:feature/multiple-currencies)."

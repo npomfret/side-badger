@@ -1,7 +1,7 @@
-translatedFrom: "b793df60"
+translatedFrom: "3e39d035"
 review:
   status: checked
-  checker: "CF-check"
+  checker: "CX-check"
   date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
@@ -113,7 +113,7 @@ faq:
   heading: Fragen
   items:
     - q: Welchen Wechselkurs verwendet ihr?
-      a: Einen aktuellen Wechselkurs, der beim Erfassen der Ausgabe abgerufen wird, wo einer verfügbar ist. Du kannst ihn auf den Kurs ändern, den du tatsächlich bekommen hast, und der umgerechnete Betrag aktualisiert sich.
+      a: Side Badger ruft einen Wechselkurs ab, wenn du dich entscheidest, eine Ausgabe umzurechnen, sofern ein Kurs verfügbar ist. Du kannst ihn auf den Kurs ändern, den du tatsächlich bekommen hast, und der umgerechnete Betrag aktualisiert sich.
     - q: Werden alte Ausgaben neu bewertet?
       a: Nein. Der Kurs wird beim Speichern der Ausgabe festgelegt, ein Saldo driftet also nicht, nur weil sich der Markt bewegt hat.
     - q: Unterstützt ihr Krypto?
@@ -123,4 +123,4 @@ faq:
     - q: Kostet das Umrechnen etwas?
       a: Nein. Umrechnen ist kostenlos, wie der Rest von Side Badger. Siehe [Preise](page:pricing).
     - q: Muss ich umrechnen?
-      a: Nein. Währungen bleiben getrennt, es sei denn, du oder deine Gruppe entscheidet sich fürs Umrechnen, und jede Währung bekommt ihre eigene kurze Liste von Zahlungen.
+      a: Die Währungsumrechnung in Side Badger ist optional. Salden bleiben nach Währung getrennt, es sei denn, du entscheidest dich oder deine Gruppe entscheidet sich fürs Umrechnen, und jede Währung bekommt ihre eigene kurze Liste von Zahlungsvorschlägen.

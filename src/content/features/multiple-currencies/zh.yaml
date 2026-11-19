@@ -1,7 +1,7 @@
-translatedFrom: "b793df60"
+translatedFrom: "3e39d035"
 review:
   status: checked
-  checker: "CF-check"
+  checker: "CX-check"
   date: "2026-11-19"
 claims:
   - multi-currency.currency-count
@@ -108,7 +108,7 @@ faq:
   heading: 常见问题
   items:
     - q: 你们用哪个汇率？
-      a: 录入支出时获取的当前汇率（有汇率可用的情况下）。你可以把它改成你实际换到的汇率，换算后的金额会随之更新。
+      a: Side Badger 会在你选择换算一笔支出时获取汇率（有汇率可用的情况下）。你可以把它改成你实际换到的汇率，换算后的金额会随之更新。
     - q: 旧的支出会重新估值吗？
       a: 不会。汇率在保存支出时固定，所以余额不会因为市场变动而漂移。
     - q: 支持加密货币吗？
@@ -118,7 +118,7 @@ faq:
     - q: 换算要花钱吗？
       a: 不要。换算和 Side Badger 的其他部分一样免费。参见[定价](page:pricing)。
     - q: 我必须换算吗？
-      a: 不必。除非你或你的群组选择换算，否则各货币保持分开，每种货币都有自己的一份简短付款清单。
+      a: Side Badger 中的货币换算是可选的。除非你或你的群组选择换算，否则余额按货币分开记录，每种货币都有自己的一份简短付款建议清单。
 identicalApproved:
   - example.people.0.name
   - example.people.1.name

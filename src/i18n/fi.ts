@@ -134,7 +134,7 @@ export default {
   'home.hero.ctaPrimary': 'Perusta ryhmä',
   'home.hero.ctaSecondary': 'Katso, miten se toimii',
   'home.hero.haveAccount': 'Onko sinulla jo tili?',
-  'home.hero.lede': 'Side Badger seuraa, kuka maksoi mitä, 133 valuutassa, ja ehdottaa, kuka maksaa kenelle, jotta ryhmäsi tasaa tilit vähemmillä maksuilla.',
+  'home.hero.lede': 'Side Badger on laskujen jakosovellus kämppiksille, pariskunnille, ryhmämatkoille ja juhliin. Jaa kulut tasan, tarkoilla summilla tai prosenteilla vain niiden kesken, joita kulu koskee. Se kirjaa kulut 133 valuutassa ja ehdottaa, kuka maksaa kenelle.',
   'home.hero.title': 'Jaa ryhmän kulut ilman draamaa.',
   'home.hero.trust': 'Ilmainen. Ei mainoksia. Ei päivittäisiä rajoja.',
   'home.pricing.body': 'Ilmainen. Ei mainoksia. Ei päivittäisiä rajoja.',

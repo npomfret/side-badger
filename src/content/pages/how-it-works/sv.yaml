@@ -1,7 +1,7 @@
-translatedFrom: "206dabde"
+translatedFrom: "05187fde"
 review:
   status: checked
-  checker: "CF-check"
+  checker: "CX-check"
   date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
@@ -94,14 +94,14 @@ faq:
   heading: Frågor
   items:
     - q: Behöver alla ha ett konto?
-      a: Ja, ett gratiskonto. Alla verifierar sin e-postadress innan de lägger till något.
+      a: Alla i en Side Badger-grupp behöver ett gratiskonto. Registrera dig med en e-postadress och ett lösenord och verifiera din e-postadress innan du lägger till något. Det finns ingen gäståtkomst.
     - q: Finns det en app?
       a: Den körs i webbläsaren. Logga in och lägg sedan till den på hemskärmen eller i dockan så öppnas den som en app. Inställningar i appen visar hur. Det finns ingen version i appbutik och inget offlineläge.
     - q: Flyttar Side Badger pengar?
-      a: Nej. Den håller räkningen och föreslår betalningar, och ni betalar varandra hur ni vill. Sedan registrerar ni betalningen. Se [göra upp](page:feature/settle-up).
+      a: Side Badger registrerar betalningar som görs på annat håll; den flyttar inte pengar. Den föreslår vem som ska betala vem, och ni betalar varandra hur ni vill och registrerar sedan betalningen. Se [göra upp](page:feature/settle-up).
     - q: Kan någon lämna gruppen med en skuld?
       a: Nej. Ingen kan lämna en grupp så länge hen är skyldig eller har pengar att få, så hen gör upp först.
     - q: Hur många kan gå med i en grupp?
       a: Upp till 50 personer i en grupp. Bjud in dem med en länk eller en QR-kod, och slå på godkännande om du vill att en administratör ska släppa in varje person.
     - q: Hur är det med resor med mer än en valuta?
-      a: Saldona hålls separata för varje valuta, och du kan räkna om en utgift till en hämtad kurs som du kan ändra. Se [flera valutor](page:feature/multiple-currencies).
+      a: Side Badger stöder 133 valutor och håller saldona separata för varje valuta om du inte räknar om en utgift när du lägger in den. Du kan använda en hämtad kurs, där en finns tillgänglig, eller ange din egen. Se [flera valutor](page:feature/multiple-currencies).

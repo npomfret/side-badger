@@ -1,7 +1,7 @@
-translatedFrom: "b793df60"
+translatedFrom: "3e39d035"
 review:
   status: checked
-  checker: "CF-check"
+  checker: "CX-check"
   date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
@@ -113,7 +113,7 @@ faq:
   heading: Frågor
   items:
     - q: Vilken växelkurs använder ni?
-      a: En aktuell växelkurs, hämtad när du lägger in utgiften där en finns tillgänglig. Du kan ändra den till den kurs du faktiskt fick, så uppdateras det omräknade beloppet.
+      a: Side Badger hämtar en växelkurs när du väljer att räkna om en utgift, där en kurs finns tillgänglig. Du kan ändra den till den kurs du faktiskt fick, så uppdateras det omräknade beloppet.
     - q: Omvärderas gamla utgifter?
       a: Nej. Kursen fastställs när utgiften sparas, så ett saldo driver inte iväg för att marknaden gjorde det.
     - q: Stöder ni krypto?
@@ -123,4 +123,4 @@ faq:
     - q: Kostar omräkning något?
       a: Nej. Omräkning är gratis, precis som resten av Side Badger. Se [prissättning](page:pricing).
     - q: Måste jag räkna om?
-      a: Nej. Valutorna förblir separata om inte du eller din grupp väljer att räkna om, och varje valuta får sin egen korta lista med betalningar.
+      a: Valutaomräkning i Side Badger är valfri. Saldona förblir separata per valuta om inte du eller din grupp väljer att räkna om, och varje valuta får sin egen korta lista med föreslagna betalningar.

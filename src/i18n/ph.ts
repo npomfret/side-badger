@@ -134,7 +134,7 @@ export default {
   'home.hero.ctaPrimary': 'Magsimula ng grupo',
   'home.hero.ctaSecondary': 'Tingnan kung paano ito gumagana',
   'home.hero.haveAccount': 'May account ka na ba?',
-  'home.hero.lede': 'Sinusubaybayan ng Side Badger kung sino ang nagbayad ng ano, sa 133 pera, at nagmumungkahi kung sino ang magbabayad kanino, kaya mas kaunting bayad na lang ang kailangan para makapag-settle ang grupo mo.',
+  'home.hero.lede': 'Ang Side Badger ay app para sa paghahati ng bayarin para sa housemates, magkapareha, mga biyaheng magkakagrupo at mga pagdiriwang. Hatiin ang gastos nang pantay, ayon sa eksaktong halaga o porsyento, sa mga taong kasali lang. Sinusubaybayan nito ang mga gastos sa 133 pera at nagmumungkahi kung sino ang magbabayad kanino.',
   'home.hero.title': 'Hatiin ang gastos ng grupo nang walang drama.',
   'home.hero.trust': 'Libre. Walang ad. Walang pang-araw-araw na limitasyon.',
   'home.pricing.body': 'Libre. Walang ad. Walang pang-araw-araw na limitasyon.',

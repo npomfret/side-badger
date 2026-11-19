@@ -134,7 +134,7 @@ export default {
   'home.hero.ctaPrimary': 'Începe un grup',
   'home.hero.ctaSecondary': 'Vezi cum funcționează',
   'home.hero.haveAccount': 'Ai deja un cont?',
-  'home.hero.lede': 'Side Badger ține evidența cine a plătit ce, în 133 de valute, și sugerează cine plătește cui, ca grupul tău să se achite în mai puține plăți.',
+  'home.hero.lede': 'Side Badger este o aplicație de împărțire a facturilor pentru colegi de casă, cupluri, excursii de grup și sărbători. Împarte costurile egal, pe sume exacte sau procentual, doar între persoanele implicate. Ține evidența cheltuielilor în 133 de valute și sugerează cine plătește cui.',
   'home.hero.title': 'Împarte costurile de grup fără dramă.',
   'home.hero.trust': 'Gratuit. Fără reclame. Fără limite zilnice.',
   'home.pricing.body': 'Gratuit. Fără reclame. Fără limite zilnice.',

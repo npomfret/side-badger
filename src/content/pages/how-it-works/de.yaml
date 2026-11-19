@@ -1,7 +1,7 @@
-translatedFrom: "206dabde"
+translatedFrom: "05187fde"
 review:
   status: checked
-  checker: "CF-check"
+  checker: "CX-check"
   date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
@@ -93,14 +93,14 @@ faq:
   heading: Fragen
   items:
     - q: Braucht jede Person ein Konto?
-      a: Ja, ein kostenloses. Jede Person bestätigt ihre E-Mail-Adresse, bevor sie etwas hinzufügt.
+      a: Jede Person in einer Side Badger-Gruppe braucht ein kostenloses Konto. Registriere dich mit einer E-Mail-Adresse und einem Passwort und bestätige deine E-Mail-Adresse, bevor du etwas hinzufügst. Es gibt keinen Gastzugang.
     - q: Gibt es eine App?
       a: Es läuft im Browser. Melde dich an und füge es dann zum Home-Bildschirm oder Dock hinzu, damit es sich wie eine App öffnet. Die Einstellungen in der App zeigen dir, wie. Es gibt keine App-Store-Version und keinen Offline-Modus.
     - q: Bewegt Side Badger Geld?
-      a: Nein. Es führt die Rechnung und schlägt Zahlungen vor, und ihr zahlt einander, wie ihr wollt. Danach erfasst du die Zahlung. Siehe [Abrechnen](page:feature/settle-up).
+      a: Side Badger erfasst Zahlungen, die anderswo erfolgen; es bewegt kein Geld. Es schlägt vor, wer wem zahlt, und ihr zahlt einander, wie ihr wollt. Danach erfasst du die Zahlung. Siehe [Abrechnen](page:feature/settle-up).
     - q: Kann jemand mit Schulden gehen?
       a: Nein. Niemand kann eine Gruppe verlassen, solange er noch Geld schuldet oder bekommt, deshalb wird vorher abgerechnet.
     - q: Wie viele Leute können einer Gruppe beitreten?
       a: Bis zu 50 Personen pro Gruppe. Lade sie mit einem Link oder QR-Code ein und schalte die Freigabe ein, wenn ein Admin jede Person hereinlassen soll.
     - q: Und Reisen mit mehr als einer Währung?
-      a: Salden werden für jede Währung getrennt geführt, und du kannst eine Ausgabe zu einem abgerufenen Kurs umrechnen, den du ändern kannst. Siehe [Mehrere Währungen](page:feature/multiple-currencies).
+      a: Side Badger unterstützt 133 Währungen und führt Salden für jede Währung getrennt, sofern du eine Ausgabe beim Erfassen nicht umrechnest. Du kannst einen abgerufenen Kurs verwenden, sofern verfügbar, oder deinen eigenen eingeben. Siehe [Mehrere Währungen](page:feature/multiple-currencies).

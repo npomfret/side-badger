@@ -1,7 +1,7 @@
-translatedFrom: "b793df60"
+translatedFrom: "3e39d035"
 review:
   status: checked
-  checker: "CF-check"
+  checker: "CX-check"
   date: "2026-11-19"
 claims:
   - multi-currency.currency-count
@@ -113,7 +113,7 @@ faq:
   heading: Kysymyksiä
   items:
     - q: Mitä valuuttakurssia käytätte?
-      a: Nykyistä valuuttakurssia, joka haetaan kulua syötettäessä, kun sellainen on saatavilla. Voit vaihtaa sen kurssiin, jonka todella sait, ja muunnettu summa päivittyy.
+      a: Side Badger hakee valuuttakurssin, kun valitset kulun muuntamisen, jos kurssi on saatavilla. Voit vaihtaa sen kurssiin, jonka todella sait, ja muunnettu summa päivittyy.
     - q: Arvostetaanko vanhat kulut uudelleen?
       a: Ei. Kurssi lukitaan, kun kulu tallennetaan, joten saldo ei ajelehdi markkinoiden mukana.
     - q: Tuetteko kryptoa?
@@ -123,4 +123,4 @@ faq:
     - q: Maksaako muuntaminen mitään?
       a: Ei. Muuntaminen on ilmaista kuten muukin Side Badgerissa. Katso [hinnoittelu](page:pricing).
     - q: Onko minun pakko muuntaa?
-      a: Ei. Valuutat pysyvät erillään, ellet sinä tai ryhmäsi valitse muuntamista, ja jokaisella valuutalla on oma lyhyt maksulistansa.
+      a: Valuutan muuntaminen Side Badgerissa on valinnaista. Saldot pysyvät erillään valuutoittain, ellet sinä tai ryhmäsi valitse muuntamista, ja jokaisella valuutalla on oma lyhyt listansa ehdotetuista maksuista.

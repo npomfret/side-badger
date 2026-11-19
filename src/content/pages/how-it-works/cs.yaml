@@ -1,7 +1,7 @@
-translatedFrom: "206dabde"
+translatedFrom: "05187fde"
 review:
   status: checked
-  checker: "CF-check"
+  checker: "CX-check"
   date: "2026-11-19"
 identicalApproved:
   - example.people.0.name
@@ -94,14 +94,14 @@ faq:
   heading: "Otázky"
   items:
     - q: "Potřebuje účet každý?"
-      a: "Ano, bezplatný. Každý ověří svůj e-mail, než cokoli přidá."
+      a: "Každý ve skupině Side Badger potřebuje bezplatný účet. Zaregistrujte se pomocí e-mailové adresy a hesla a ověřte svůj e-mail, než cokoli přidáte. Přístup pro hosty není k dispozici."
     - q: "Existuje aplikace?"
       a: "Běží v prohlížeči. Přihlaste se, pak ji přidejte na domovskou obrazovku nebo do docku, aby se otevírala jako aplikace. Nastavení v aplikaci vám ukáže, jak na to. Neexistuje verze z obchodu s aplikacemi ani režim offline."
     - q: "Přesouvá Side Badger peníze?"
-      a: "Ne. Vede přehled a navrhuje platby a vy si platíte, jak chcete. Pak platbu zaznamenáte. Viz [vyrovnání](page:feature/settle-up)."
+      a: "Side Badger zaznamenává platby provedené jinde; peníze nepřevádí. Navrhuje, kdo komu zaplatí, a vy si platíte, jak chcete, a pak platbu zaznamenáte. Viz [vyrovnání](page:feature/settle-up)."
     - q: "Může někdo odejít, když dluží peníze?"
       a: "Ne. Nikdo nemůže skupinu opustit, dokud dluží nebo se mu dluží peníze, takže se nejdřív vyrovná."
     - q: "Kolik lidí se může připojit ke skupině?"
       a: "Až 50 lidí ve skupině. Pozvěte je odkazem nebo QR kódem a zapněte schvalování, pokud chcete, aby správce každou osobu pustil dovnitř."
     - q: "A co výlety s více než jednou měnou?"
-      a: "Zůstatky se vedou zvlášť pro každou měnu a výdaj můžete převést podle staženého kurzu, který můžete upravit. Viz [více měn](page:feature/multiple-currencies)."
+      a: "Side Badger podporuje 133 měn a vede zůstatky zvlášť pro každou měnu, pokud výdaj při zadání nepřevedete. Můžete použít stažený kurz, pokud je k dispozici, nebo zadat vlastní. Viz [více měn](page:feature/multiple-currencies)."

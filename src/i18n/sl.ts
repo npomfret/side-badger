@@ -134,7 +134,7 @@ export default {
   'home.hero.ctaPrimary': 'Ustanovi skupino',
   'home.hero.ctaSecondary': 'Poglej, kako deluje',
   'home.hero.haveAccount': 'Že imaš račun?',
-  'home.hero.lede': 'Side Badger beleži, kdo je kaj plačal, v 133 valutah, in predlaga, kdo komu plača, da se vaša skupina poravna z manj plačili.',
+  'home.hero.lede': 'Side Badger je aplikacija za delitev računov za sostanovalce, pare, skupinska potovanja in praznovanja. Deli stroške enakomerno, po točnih zneskih ali po odstotkih, samo med vpletenimi osebami. Beleži stroške v 133 valutah in predlaga, kdo komu plača.',
   'home.hero.title': 'Deli stroške skupine brez drame.',
   'home.hero.trust': 'Brezplačno. Brez oglasov. Brez dnevnih omejitev.',
   'home.pricing.body': 'Brezplačno. Brez oglasov. Brez dnevnih omejitev.',

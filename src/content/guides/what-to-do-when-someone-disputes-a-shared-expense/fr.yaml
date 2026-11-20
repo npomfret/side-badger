@@ -1,8 +1,8 @@
 translatedFrom: "0900d953"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - expense-questions.question-held-out-of-balances
   - comments.next-to-the-expense
@@ -25,11 +25,11 @@ cta:
   body: "Créez un compte gratuit, lancez un groupe pour le logement et demandez à un admin d'activer les questions sur les dépenses, qui sont désactivées tant que personne ne le fait. Vous voulez d'abord faire le tour ? Voyez [comment ça marche](page:how-it-works) ou [ce que couvre la gratuité](page:pricing)."
 sections:
   - heading: "Trois colocataires et 45 £ de vin"
-    body: "Après la fête, Tom ajoute le vin au groupe du logement. Cela fait 45 £, payées par Tom, partagées à parts égales entre Tom, Priya et Aisha, soit 15 £ chacun. Aisha ne boit pas. Tom l'a acheté pour la fête, et la fête était pour le [logement](page:use-case/housemates), donc il n'a rien fait de mal. Aisha n'a pas tort de poser la question non plus. Personne ici n'est un méchant. Il y a juste 15 £ de vin en litige et mille façons d'en faire un moment gênant. Un message qui pique envoyé à toute la maison en est une. Une question sur la dépense en est une plus douce."
+    body: "Après la fête, Tom ajoute le vin au groupe du logement. Cela fait 45 £, payées par Tom, partagées à parts égales entre Tom, Priya et Aisha, soit 15 £ chacun. Aisha ne boit pas. Tom l'a acheté pour la fête, et la fête réunissait les habitants du [logement](page:use-case/housemates), donc il n'a rien fait de mal. Aisha n'a pas tort de poser la question non plus. Personne ici n'est un méchant. Il y a juste 15 £ de vin en litige et mille façons d'en faire un moment gênant. Un message qui pique envoyé à toute la maison en est une. Une question sur la dépense en est une plus douce."
   - heading: "Ce que fait une question"
-    body: "Aisha ouvre la dépense et pose une question. Toute la dépense sort des soldes de chacun, pas seulement sa part, et rien d'autre n'est touché. Les grosses courses (84 £) et le ménage (60 £) comptent toujours, soit 28 £ + 20 £ = 48 £ chacun. Donc, tant que le vin est en suspens, Aisha doit 48 £, on doit 36 £ à Tom et 12 £ à Priya. Quoi que le logement décide pour le vin, le solde de personne ne l'inclut en attendant. Toute autre personne concernée par la dépense peut aussi poser sa propre question. Le vin ne revient dans les soldes que lorsque la dernière question ouverte à son sujet est fermée, et une question est fermée par la personne qui l'a posée ou par un admin."
+    body: "Aisha ouvre la dépense et pose une question. Toute la dépense sort des soldes de chacun, pas seulement sa part, et rien d'autre n'est touché. Les grosses courses (84 £) et le ménage (60 £) comptent toujours, soit 28 £ + 20 £ = 48 £ chacun. Donc, tant que le vin est en suspens, Aisha doit 48 £, on doit 36 £ à Tom et 12 £ à Priya. Quoi que les colocataires décident pour le vin, le solde de personne ne l'inclut en attendant. Toute autre personne concernée par la dépense peut aussi poser sa propre question. Le vin ne revient dans les soldes que lorsque la dernière question ouverte à son sujet est fermée, et une question est fermée par la personne qui l'a posée ou par un admin."
   - heading: "En parler, puis corriger"
-    body: "La question d'Aisha atterrit dans les commentaires de la dépense, donc les réponses se trouvent juste en dessous. [Planifier ensemble](page:feature/plan-together) en dit plus sur les commentaires et les questions. Tom et Priya la lisent et le logement en discute. Ils décident que le vin était l'affaire de Tom et Priya, puisque ce sont eux qui l'ont bu. Un autre logement pourrait garder le partage en trois, ou convenir d'un compromis, et ce serait très bien aussi. Side Badger garde ce dont vous convenez et n'a aucun avis sur le vin. Tom modifie la dépense pour qu'elle soit partagée à parts égales entre lui et Priya, soit 22,50 £ chacun (45 £ ÷ 2). Aisha n'en fait plus partie, donc sa question part avec l'ancienne version et le vin réintègre les soldes. La version précédente est conservée."
+    body: "La question d'Aisha atterrit dans les commentaires de la dépense, donc les réponses se trouvent juste en dessous. [Planifier ensemble](page:feature/plan-together) en dit plus sur les commentaires et les questions. Tom et Priya la lisent et les colocataires en discutent. Ils décident que le vin était l'affaire de Tom et Priya, puisque ce sont eux qui l'ont bu. Une autre colocation pourrait garder le partage en trois, ou convenir d'un compromis, et ce serait très bien aussi. Side Badger garde ce dont vous convenez et n'a aucun avis sur le vin. Tom modifie la dépense pour qu'elle soit partagée à parts égales entre lui et Priya, soit 22,50 £ chacun (45 £ ÷ 2). Aisha n'en fait plus partie, donc sa question part avec l'ancienne version et le vin réintègre les soldes. La version précédente est conservée."
   - heading: "Lire le résultat"
     body: "Avec le vin de retour, on doit 58,50 £ à Tom, Priya doit 10,50 £ et Aisha doit 48 £. Side Badger suggère deux paiements, les deux pour Tom. Les 48 £ d'Aisha sont le chiffre qu'elle avait pendant que le vin était en suspens, parce qu'elle n'en fait pas partie. Priya est passée de 12 £ à recevoir à 10,50 £ à devoir, ce qui correspond à sa moitié du vin, 22,50 £. Si le partage en trois était resté en place, Aisha aurait dû 63 £ (28 £ + 20 £ + 15 £). Tout le désaccord valait 15 £. Remboursez-vous comme vous voulez, puis enregistrez chaque paiement sous **Régler**. [Régler les comptes](page:feature/settle-up) couvre le reste."
   - heading: "Le formuler pour qu'on continue de vous parler"
@@ -111,7 +111,7 @@ faq:
     - q: "Qui peut fermer une question ?"
       a: "La personne qui l'a posée, ou un admin du groupe. Si la personne qui a ajouté la dépense n'est pas admin, elle ne peut pas la fermer à la place de celle qui a posé la question."
     - q: "Modifier une dépense efface-t-il l'original ?"
-      a: "Non. La version précédente est conservée. Qui peut modifier est décidé par les permissions du groupe, donc mieux vaut prévenir la maison d'abord, car les soldes changent."
+      a: "Non. La version précédente est conservée. Qui peut modifier est décidé par les permissions du groupe, donc mieux vaut prévenir les colocataires d'abord, car les soldes changent."
 identicalApproved:
   - example.people.0.name
   - example.people.1.name

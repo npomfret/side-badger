@@ -1,8 +1,8 @@
 translatedFrom: "76cb361e"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.copy-last-months-rent
@@ -14,8 +14,8 @@ identicalApproved:
   - example.people.1.name
   - example.people.2.name
 meta:
-  title: "Alokairu-kalkulagailua: gelaren edo sarreren arabera | Side Badger"
-  description: "Gela handiagoa, zati handiagoa? Atera etxekide bakoitzaren zatia, gelaren edo sarreren arabera. Nabigatzailean dabil: ezer ez da gordetzen edo bidaltzen."
+  title: "Alokairu-kalkulagailua: gelaren tamainaren edo diru-sarreren arabera | Side Badger"
+  description: "Gela handiagoa, zati handiagoa? Atera etxekide bakoitzaren zatia, gelaren tamainaren edo diru-sarreren arabera. Nabigatzailean dabil: ezer ez da gordetzen edo bidaltzen."
 h1: "Alokairua banatzeko kalkulagailua"
 navLabel: "Alokairuaren kalkulagailua"
 lead: "Logela handiagoa, zati handiagoa? Idatzi alokairua eta ikusi pertsona bakoitzak zenbat ordaintzen duen, gelen tamainaren edo diru-sarreren arabera, zentimora arte. Zure nabigatzailean dabil, ez du ezer gordetzen eta ez du dirurik mugitzen. Etxeak kontua gordeta izan nahi duenean, [banatu gastuak](page:feature/split-expenses) Side Badger-en eta kopiatu alokairua hilero."
@@ -39,7 +39,7 @@ sections:
     items:
       - "**Zure gelak neurtu.** Azalera abiapuntu bat da. Bainugela propioa duen gela batek balio handiagoa du azalera bera duen baina bainugelarik gabeko batek baino, eta ohea eta aulki itxaropentsu bat sartzen diren gelatxo batek gutxiago."
       - "**Diru-sarrera zer den erabaki.** Soldata garbia ala gordina, soldata ala alboko lana: taldeak erabakitzen du. Erabili epe bera denentzat."
-      - "**Ezer gorde.** Itxi fitxa eta zifrak desagertu egiten dira. Gordetzeko, kopiatu esteka. Zure zifrak # ikurraren ondoren daramatza, eta nabigatzaileek ez dute inoiz zerbitzari batera bidaltzen; duen edonork irakur ditzake."
+      - "**Ezer gorde.** Itxi fitxa eta zifrak desagertu egiten dira. Gordetzeko, kopiatu esteka. Zure zifrak # ikurraren ondoren daramatza, eta nabigatzaileek ez dituzte inoiz zerbitzari batera bidaltzen; duen edonork irakur ditzake."
       - "**Dirua mugitu.** Jabeari zuek nahi duzuen moduan ordaintzen diozue."
       - "**Monetak nahastu, edo mugak gainditu.** Aukeratu moneta bakarra. 2 eta 10 pertsona artean onartzen ditu, eta alokairuak gehienez 999.999,99 izan dezake, aplikazioan bezala."
 exampleAfter: 2
@@ -83,4 +83,4 @@ faq:
     - q: "Oin karratuak erabil ditzaket?"
       a: "Bai. Aukeratu ft² eta idatzi zure azalerak oin karratutan. Unitatea etiketa bat besterik ez da, eta zatiak berdinak ateratzen dira denek unitate bera erabiltzen duten bitartean."
     - q: "Kalkulagailua doakoa al da?"
-      a: "Bai. Doakoa. Iragarkirik ez. Eguneko mugarik ez. Ez duzu kontu bat behar ere."
+      a: "Bai. Doakoa. Iragarkirik ez. Eguneko mugarik ez. Ez duzu konturik ere behar."

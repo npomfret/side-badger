@@ -1,8 +1,8 @@
 translatedFrom: "b85c0a15"
 review:
   status: checked
-  checker: "CF-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - groups.group-per-house-trip-event
   - invites.link-or-qr-code
@@ -31,7 +31,7 @@ cta:
   body: 创建免费账户，为这趟旅行建一个群组，收据上是什么货币就按什么货币添加每笔支出。想先了解详情？请看[多种货币](page:feature/multiple-currencies)或[免费包含什么](page:pricing)。
 sections:
   - heading: 三个朋友，一间酒店，一大堆日元
-    body: Zoe、Kenji 和 Lucy 去日本玩了一周，这是一趟[团体旅行](page:use-case/group-trips)，每笔费用三人平均分摊。Zoe 在家订了酒店，用英镑付了 £600。Lucy 在东京买了铁路通票，花了 ¥90,000。Kenji 请大家吃了拉面夜，¥9,000，之后天天都要提一遍。没人想在车站站台上换算三张收据。本文的算式里，¥1 等于 £0.005，这是为本文编的一个整数汇率。在应用里，你会使用当前汇率，或者输入你实际拿到的那个。
+    body: Zoe、Kenji 和 Lucy 去日本玩了一周，这是一趟[团体旅行](page:use-case/group-trips)，每笔费用三人平均分摊。Zoe 在家订了酒店，用英镑付了 £600。Lucy 在东京买了铁路通票，花了 ¥90,000。Kenji 付了那晚拉面的钱，¥9,000，之后天天都要提一遍。没人想在车站站台上换算三张收据。本文的算式里，¥1 等于 £0.005，这是为本文编的一个便于计算的示例汇率。在应用里，你会使用当前汇率，或者输入你实际拿到的那个。
   - heading: 按收据上的货币逐笔录入
     body: 不管选哪条路，这一步都一样。现在还不需要换算。
     items:

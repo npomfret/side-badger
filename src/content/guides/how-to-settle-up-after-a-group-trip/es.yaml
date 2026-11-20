@@ -5,8 +5,8 @@
 translatedFrom: "c0228941"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - groups.group-per-house-trip-event
   - groups.no-leaving-while-owing
@@ -32,7 +32,7 @@ meta:
   description: Saldad antes de que el grupo se disperse. Diez deudas enredadas quedan en cuatro pagos, registrados según llegan, y vale pagar una parte. Cuentas a la vista.
 h1: Cómo saldar cuentas después de un viaje en grupo
 navLabel: Saldar cuentas tras un viaje
-lead: Saldad antes de que todo el mundo se disperse. Añade el último gasto, abre los saldos del grupo y paga lo que debes de la lista corta, como quieras. Después registra cada pago en Side Badger para que el saldo se despeje para todo el grupo. Con cinco amigos y cinco gastos, diez deudas enredadas se quedan en cuatro pagos.
+lead: Saldad antes de que todo el mundo se disperse. Añade el último gasto, abre los saldos del grupo y paga lo que debes de la lista corta, como quieras. Después registra cada pago en Side Badger para que el saldo quede a cero para todo el grupo. Con cinco amigos y cinco gastos, diez deudas enredadas se quedan en cuatro pagos.
 cta:
   heading: Cierra las cuentas antes de que lleguen las fotos
   body: Crea una cuenta gratis, empieza un grupo para el próximo viaje y añade cada gasto según ocurre. La lista corta de pagos te estará esperando cuando llegues al aeropuerto. ¿Quieres ver antes [cómo funciona saldar cuentas](page:feature/settle-up)?
@@ -47,7 +47,7 @@ sections:
       - "**Revisa la lista.** Abre el grupo y mira **Saldos**. Por defecto ves las deudas que te afectan. Elige **Mostrar todo** para ver la lista de todo el grupo."
       - "**Paga como quieras.** Transferencia bancaria, efectivo, un favor que te deben de las últimas vacaciones. Side Badger no mueve el dinero."
       - "**Regístralo.** Elige **Liquidar**. En **Liquidación rápida**, cada botón es uno de tus pagos sugeridos, y al elegir uno se rellena el importe. Añade una **Nota** como transferencia bancaria, revisa la **Fecha** (no puede ser futura) y elige **Registrar liquidación**."
-      - "**Míralo despejarse.** El saldo se actualiza para todos. Cuando entra el último pago, **Saldos** dice **¡Todo liquidado!**"
+      - "**Comprueba que queda a cero.** El saldo se actualiza para todos. Cuando entra el último pago, **Saldos** dice **¡Todo liquidado!**"
   - heading: Pagar una parte ahora y el resto después
     body: Uma puede enviar 200 € esta noche y el resto a final de mes. Registra 200 €, y el formulario le avisa de que después seguirá debiendo 148 € a Mo, que son 348 € menos 200 €. Guárdalo y los 148 € se quedan en su saldo hasta que registre el resto. El aviso funciona también al revés. Si un cero de más convierte 348 € en 3.480 €, el formulario dice que solo debe 348 € a Mo y que guardarlo crearía una deuda en sentido contrario. Corrige el cero antes de guardar.
   - heading: Corregir errores y celebrar pagos

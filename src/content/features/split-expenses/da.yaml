@@ -1,8 +1,8 @@
 translatedFrom: "da031409"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -27,7 +27,7 @@ cta:
   body: Opret en gratis konto, start en gruppe, og tilføj den udgift, du længe har villet få styr på. Ved du ikke, hvad der sker bagefter? Se [sådan virker det](page:how-it-works), eller tjek [hvad gratis dækker](page:pricing).
 problem:
   heading: Ikke alt er 50/50
-  body: Huslejen følger værelsets størrelse. En gave følger den, der lovede hvad. En middag følger den, der blev til dessert. At dele en regning på midten virker, indtil den første regning, hvor det ikke gør, og så åbner nogen et regneark. Side Badger registrerer, hvem der betalte, hvem der delte udgiften, og hvordan den fordeles, så saldiene bliver rigtige, uden at nogen laver lange divisioner ved bordet.
+  body: Huslejen følger værelsets størrelse. En gave følger den, der lovede hvad. En middag følger den, der blev til dessert. At dele en regning på midten virker, indtil den første regning, hvor det ikke gør, og så åbner nogen et regneark. Side Badger registrerer, hvem der betalte, hvem der delte udgiften, og hvordan den fordeles, så saldiene bliver rigtige, uden at nogen skal dividere i hånden ved bordet.
 workflow:
   heading: At tilføje en udgift, fra start til slut
   steps:
@@ -44,14 +44,14 @@ workflow:
       shot: S08
       shotAlt: En udgift med sine detaljer, en kommentartråd og det oprindelige beløb, den blev indtastet som
     - title: Stil et spørgsmål, hvis noget ser forkert ud
-      body: Hvis gruppen har slået udgiftsspørgsmål til, kan enhver, der er med i en udgift, sætte spørgsmålstegn ved den, og udgiftslisten kan kun vise dem med spørgsmål.
+      body: Hvis gruppen har slået udgiftsspørgsmål til, kan enhver, der er med i en udgift, sætte spørgsmålstegn ved den, og udgiftslisten kan indstilles til kun at vise dem med spørgsmål.
       shot: S18
       shotAlt: Udgiftslisten med et mærke for Betvivlet og filteret Kun betvivlet
 options:
   heading: Tre måder at dele på
   items:
     - title: Ligeligt
-      body: Standarden til middage, taxaer og alt, alle delte lige. Hvis totalen ikke går op, går det ulige øre til én person tilfældigt, ikke altid den samme. I taxaen nedenfor er det Ana.
+      body: Standarden til middage, taxaer og alt, alle delte lige. Hvis totalen ikke går op, går det overskydende øre til én person tilfældigt, ikke altid den samme. I taxaen nedenfor er det Ana.
     - title: Efter nøjagtige beløb
       body: Skriv, hvad hver person skylder. Godt til gaven, hvor alle valgte en forskellig pris, eller butikken, hvor én persons indkøbsvogn rummede mere end de fælles dagligvarer. Beløbene skal give totalen.
     - title: I procent
@@ -107,7 +107,7 @@ sections:
       - "Vedhæft op til tre **kvitteringer** som billeder eller PDF'er, så beviset bliver hos udgiften."
       - Brug **kommentarerne** til at holde samtalen ved siden af den udgift, den handler om, frem for i en chattråd, ingen scroller tilbage i.
   - heading: Kopiér, rediger, og se, hvad der er ændret
-    body: Kopiér sidste måneds husleje i stedet for at skrive den igen, og ret så det, der er anderledes. Var et tal forkert, så rediger udgiften. Den tidligere version gemmes, og redigeringen vises i gruppens aktivitet, så ingen ændrer et tal i det stille. Hvad man må redigere, afhænger af gruppens rettigheder.
+    body: Kopiér sidste måneds husleje i stedet for at skrive den igen, og ret så det, der er anderledes. Var et tal forkert, så rediger udgiften. Den tidligere version gemmes, og redigeringen vises i gruppens aktivitet, så ingen ændrer et tal i det stille. Hvad man må redigere, afhænger af gruppens tilladelser.
   - heading: Når noget ser forkert ud
     body: En gruppe kan slå udgiftsspørgsmål til. Enhver, der er med i en udgift, kan stille et spørgsmål og sige hvorfor, og udgiften holdes uden for saldiene, til den, der spurgte, eller en administrator, lukker det. Det er slået fra som standard, og en administrator slår det til for gruppen. Det passer til [begivenheder og fester](page:use-case/events-and-celebrations), hvor depositummet, ingen kan huske, pludselig er alles sag.
 limits:
@@ -133,6 +133,6 @@ faq:
     - q: Kan regninger gentage sig hver måned?
       a: Nej. Kopiér i stedet sidste måneds udgift, hvilket tager et par sekunder.
     - q: Hvem kan redigere en udgift?
-      a: Den, som gruppens rettigheder tillader. Hver redigering vises i gruppens aktivitet, så ændringer aldrig sker i det stille.
+      a: Den, som gruppens tilladelser tillader. Hver redigering vises i gruppens aktivitet, så ændringer aldrig sker i det stille.
     - q: Hvad sker der med saldiene bagefter?
       a: De opdateres, efterhånden som udgifter kommer ind, og [gør op](page:feature/settle-up) forvandler dem til en kort liste over betalinger. Hvis en udgift er i en anden valuta, se [flere valutaer](page:feature/multiple-currencies).

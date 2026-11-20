@@ -1,8 +1,8 @@
 translatedFrom: "0900d953"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -31,7 +31,7 @@ sections:
   - heading: "Hiru etxekide eta 45 £-ko ardoa"
     body: "Festaren ondoren, Tomek ardoa pisuko taldean gehitzen du. 45 £ dira, Tomek ordainduta, Tom, Priya eta Aisharen artean berdin banatuta, hau da, 15 £ bakoitzeko. Aishak ez du edaten. Tomek festarako erosi zuen, eta festa [pisuarentzat](page:use-case/housemates) zen, beraz ez du ezer gaizki egin. Aisha ere ez dago oker galdetzen. Hemen inor ez da gaizkilea. 15 £-ko ardoa dago eztabaidagai, eta modu asko daude hori deserosoa egiteko. Etxe osoari bidalitako mezu zorrotz bat da horietako bat. Gastuari egindako galdera bat, berriz, leunagoa da."
   - heading: "Galdera batek zer egiten duen"
-    body: "Aishak gastua irekitzen du eta galdera bat egiten du. Gastu osoa denen saldoetatik kanpo geratzen da, ez bere zatia bakarrik, eta beste ezer ez da ukitzen. Erosketa handia (84 £) eta garbitzailea (60 £) kontatzen jarraitzen dute, hau da, 28 £ + 20 £ = 48 £ bakoitzeko. Beraz, ardoa zain dagoen bitartean, Aishak 48 £ zor ditu, Tomi 36 £ zor zaizkio eta Priyari 12 £. Pisuak ardoaz zer erabaki ere, bitartean inoren saldoak ez du ardoa barnean hartzen. Gastuan dagoen beste edonork bere galdera ere egin dezake. Ardoa saldoetara itzultzen da gainean irekita dagoen azken galdera itxi denean bakarrik, eta galdera bat galdera egin duenak edo administratzaile batek ixten du."
+    body: "Aishak gastua irekitzen du eta galdera bat egiten du. Gastu osoa denen saldoetatik kanpo geratzen da, ez bere zatia bakarrik, eta beste ezer ez da ukitzen. Erosketa handia (84 £) eta garbitzailea (60 £) kontuan hartzen dira oraindik, hau da, 28 £ + 20 £ = 48 £ bakoitzeko. Beraz, ardoa zain dagoen bitartean, Aishak 48 £ zor ditu, Tomi 36 £ zor zaizkio eta Priyari 12 £. Pisuak ardoaz zer erabaki ere, bitartean inoren saldoak ez du ardoa barnean hartzen. Gastuan dagoen beste edonork bere galdera ere egin dezake. Ardoa saldoetara itzultzen da gainean irekita dagoen azken galdera itxi denean bakarrik, eta galdera bat galdera egin duenak edo administratzaile batek ixten du."
   - heading: "Hitz egin, eta gero konpondu"
     body: "Aisharen galdera gastuaren iruzkinetan ageri da, beraz erantzunak berehala azpian daude. [Planifikatu elkarrekin](page:feature/plan-together) orrian iruzkinei eta galderei buruz gehiago dago. Tomek eta Priyak irakurri egiten dute eta pisuak solasaldi bat egiten du. Erabakitzen dute ardoa Tomena eta Priyarena zela, edan zutelako. Beste pisu batek hiruko banaketari eutsiko lioke, edo tarteko zerbait adostuko luke, eta hori ere ondo legoke. Side Badger-ek adosten duzuena gordetzen du eta ez du iritzirik ardoaz. Tomek gastua editatzen du bera eta Priyaren artean berdin banatuta, hau da, 22,50 £ bakoitzeko (45 £ ÷ 2). Aisha jada ez dago bertan, beraz bere galdera bertsio zaharrarekin joaten da eta ardoa saldoetara itzultzen da. Aurreko bertsioa gordetzen da."
   - heading: "Emaitza irakurtzen"
@@ -66,7 +66,7 @@ sections:
       - >-
         **Gastuan ez zinen.** Gastu batean dauden pertsonek bakarrik egin dezakete galdera. Zerbait arraroa iruditzen bazaizu, esan iruzkinetan edo galdetu gehitu duenari.
       - >-
-        **Norbaitek taldea utzi nahi du.** Galdera ireki batek gastu horretako pertsonak taldea uztea eragozten du. Itxi galdera, edo editatu gastua haiek jada bertan ez egoteko, eta joan daitezke.
+        **Norbaitek taldea utzi nahi du.** Galdera ireki batek gastu horretako pertsonei taldea uztea eragozten die. Itxi galdera, edo editatu gastua haiek jada bertan ez egoteko, eta joan daitezke.
   - heading: "Side Badger-ek hemen egiten ez duena"
     items:
       - "Ez du erabakitzen nork duen arrazoia. Gastua saldoetatik kanpo mantentzen du eta adosten duzuena gordetzen du."

@@ -1,8 +1,8 @@
 translatedFrom: "1a58db8f"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.odd-penny-at-random
@@ -20,7 +20,7 @@ cta:
   body: Questo calcolatore dimentica tutto quando chiudi la scheda, proprio come quello che giura di aver pagato l'ultima volta. Un gruppo di Side Badger conserva le spese, aggiorna il saldo di ciascuno e registra i pagamenti. È gratis, senza pubblicità e senza limiti giornalieri.
 sections:
   - heading: Come funziona il calcolo
-    body: Per ogni spesa, il calcolatore stabilisce la quota di ciascuno. Puoi dividerla in parti uguali, per importi esatti o per percentuale, tra le persone che scegli. Il saldo di ciascuno è poi quello che ha pagato meno quello che deve. Un segno più significa che il gruppo gli deve dei soldi, un segno meno che lui li deve al gruppo. I saldi sommano sempre zero, perché qualunque cifra spetti a una persona, altre persone la devono.
+    body: Per ogni spesa, il calcolatore stabilisce la quota di ciascuno. Puoi dividerla in parti uguali, per importi esatti o per percentuale, tra le persone che scegli. Il saldo di ciascuno è poi quello che ha pagato meno quello che deve. Un segno più significa che il gruppo gli deve dei soldi, un segno meno che lui li deve al gruppo. La somma dei saldi è sempre zero, perché qualunque cifra spetti a una persona, altre persone la devono.
   - heading: Perché la lista dei pagamenti è breve
     body: Nessuno ha bisogno di saldare ogni scontrino per conto suo. Una volta noti tutti i saldi, il calcolatore abbina chi deve di più con chi deve ricevere di più, salda quanto può con un solo pagamento e va avanti lungo la lista finché tutti sono a zero. Non ne servono mai più di quante sono le persone con un saldo, meno uno, e spesso ne servono meno che saldando spesa per spesa. Dà una breve lista di pagamenti e non promette che sia la più breve possibile.
   - heading: Cosa non fa il calcolatore
@@ -86,7 +86,7 @@ faq:
     - q: Posso dividere un viaggio pagato in due valute?
       a: Qui no, perché un calcolo ha una sola valuta. In un gruppo, ogni valuta ha il suo saldo. Vedi [più valute](page:feature/multiple-currencies).
     - q: E se gli importi non tornano?
-      a: Il calcolatore lo dice sotto la spesa e non mostra nessun risultato finché non tornano. Gli importi esatti devono sommare al totale e le percentuali devono fare 100.
+      a: Il calcolatore lo dice sotto la spesa e non mostra nessun risultato finché non tornano. La somma degli importi esatti deve corrispondere al totale e le percentuali devono fare 100.
 identicalApproved:
   - example.people.0.name
   - example.people.1.name

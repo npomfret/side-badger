@@ -1,8 +1,8 @@
 translatedFrom: "da031409"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -27,8 +27,8 @@ problem:
 workflow:
   heading: 添加一笔支出，从头到尾
   steps:
-    - title: 写明谁付的钱、付给了什么
-      body: 输入金额、简短说明和付款的人。每笔支出只有一位付款人，这能让算术保持诚实。
+    - title: 写明谁付的钱、钱花在什么上
+      body: 输入金额、简短说明和付款的人。每笔支出只有一位付款人，这样账才算得清楚。
       shot: S05
       shotAlt: 三人按比例分摊乡间小屋房租的支出表单
     - title: 选择分摊方式

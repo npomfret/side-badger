@@ -1,8 +1,8 @@
 translatedFrom: "a2338738"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -33,7 +33,7 @@ sections:
     body: "Quattro passaggi, un metro a nastro e la calcolatrice del telefono."
     items:
       - "**Metti da parte la quota comune.** Il gruppo concorda quanta parte dell'affitto copre le stanze che usano tutti. Per questa casa è il 40%, cioè il 13,33% a testa tra tre persone."
-      - "**Dividi il resto in base alla superficie.** L'altro 60% va in base alla dimensione delle camere. Le camere sommano 38 m² (16 + 12 + 10), quindi la quota di Priya è 60% × 16/38, cioè 25,26%."
+      - "**Dividi il resto in base alla superficie.** L'altro 60% va in base alla dimensione delle camere. La superficie totale delle camere è di 38 m² (16 + 12 + 10), quindi la quota di Priya è 60% × 16/38, cioè 25,26%."
       - "**Somma le due parti.** Priya: 25,26% + 13,33% = 38,6%. Tom: 60% × 12/38 = 18,95%, più 13,33% fa 32,3%. Aisha: 60% × 10/38 = 15,79%, più 13,33% fa 29,1%."
       - "**Arrotonda e controlla.** Le percentuali intere sono più facili da digitare e da discutere, quindi 38,6% diventa 39%, 32,3% diventa 32% e 29,1% diventa 29%. Controlla che 39 + 32 + 29 faccia 100. Se l'arrotondamento arriva a 99 o a 101, il gruppo decide quale cifra si sposta di un punto."
   - heading: "Leggere il mese della casa"
@@ -42,14 +42,14 @@ sections:
     body: "Una serata, per lo più passata a discutere del 40%."
     items:
       - "**Crea il gruppo.** Nella dashboard scegli **Crea gruppo** e dagli il nome della casa. Scegli **Invita altri** e manda il link o il codice QR. Ognuno accede o crea un account gratuito e sceglie il nome con cui vuole essere visto in questo gruppo."
-      - "**Aggiungi l'affitto.** Scegli **Aggiungi spesa**. Inserisci la descrizione e l'importo, e sotto **Chi ha pagato?** scegli chi ha pagato il proprietario. Lascia tutte e tre le persone sotto **Dividi tra**, poi sotto **Come dividere** scegli **Percentuale** e digita 39, 32 e 29. Il modulo ti avvisa se le percentuali non sommano a 100. Scegli **Salva spesa**."
+      - "**Aggiungi l'affitto.** Scegli **Aggiungi spesa**. Inserisci la descrizione e l'importo, e sotto **Chi ha pagato?** scegli chi ha pagato il proprietario. Lascia tutte e tre le persone sotto **Dividi tra**, poi sotto **Come dividere** scegli **Percentuale** e digita 39, 32 e 29. Il modulo ti avvisa se la somma delle percentuali non è 100. Scegli **Salva spesa**."
       - "**Aggiungi le bollette.** Energia e internet sono spese separate, ognuna con la persona che l'ha pagata. Lascia **Come dividere** su **Uguale**."
       - "**Copiala il mese prossimo.** Apri l'affitto del mese scorso e scegli **Copia spesa**. La copia mantiene chi ha pagato, l'importo e la divisione, e prende la data di oggi. Cambia l'importo se l'affitto è cambiato, poi scegli **Crea copia**."
       - "**Controlla chi deve cosa a chi.** La sezione **Saldi** lo mostra. Pagatevi come vi fa più comodo, poi registrate il pagamento con **Salda**."
   - heading: "Camere con bagno, sgabuzzini e chi se ne va"
     items:
-      - "**Camere con bagno privato e sgabuzzini.** La superficie è solo un punto di partenza. Una camera con il suo bagno vale più della stessa superficie senza, e uno sgabuzzino dove entrano un letto e una sedia ottimista vale meno. Aggiusta le percentuali di comune accordo, controlla che sommino ancora a 100 e scrivi le cifre definitive dove tutta la casa possa vederle."
-      - "**Qualcuno se ne va a metà mese.** Calcola quanto deve ciascuno per quel mese e inserisci l'affitto di quel mese con **Importi esatti** invece di **Percentuale**. Gli importi devono sommare all'affitto. Fallo prima che se ne vada. Nessuno può lasciare un gruppo finché deve o deve ricevere denaro, e una spesa che coinvolge chi se n'è andato diventa di sola lettura."
+      - "**Camere con bagno privato e sgabuzzini.** La superficie è solo un punto di partenza. Una camera con il suo bagno vale più della stessa superficie senza, e uno sgabuzzino dove entrano un letto e, con un po' di ottimismo, una sedia vale meno. Aggiusta le percentuali di comune accordo, controlla che la loro somma sia ancora 100 e scrivi le cifre definitive dove tutta la casa possa vederle."
+      - "**Qualcuno se ne va a metà mese.** Calcola quanto deve ciascuno per quel mese e inserisci l'affitto di quel mese con **Importi esatti** invece di **Percentuale**. La somma degli importi deve corrispondere all'affitto. Fallo prima che se ne vada. Nessuno può lasciare un gruppo finché deve o deve ricevere denaro, e una spesa che coinvolge chi se n'è andato diventa di sola lettura."
       - "**Arriva qualcuno.** Misura di nuovo, rifai i conti con le nuove dimensioni delle camere e usa le nuove percentuali dal prossimo affitto. I mesi passati restano com'erano."
   - heading: "Cosa Side Badger non fa qui"
     items:
@@ -92,7 +92,7 @@ faq:
   heading: "Domande"
   items:
     - q: "E se qualcuno ha una camera più grande ma con meno luce?"
-      a: "La superficie è solo il punto di partenza, quindi il gruppo può concordare un aggiustamento. Togli un punto o due alla camera buia, assegnali agli altri e controlla che le percentuali sommino ancora a 100. Side Badger registra quello che concordate e non lo giudica."
+      a: "La superficie è solo il punto di partenza, quindi il gruppo può concordare un aggiustamento. Togli un punto o due alla camera buia, assegnali agli altri e controlla che la somma delle percentuali sia ancora 100. Side Badger registra quello che concordate e non lo giudica."
     - q: "Anche le bollette vanno divise in base alla dimensione delle stanze?"
       a: "Di solito no. Energia e internet li usano tutti, quindi una divisione in parti uguali è più semplice, come nell'esempio qui sopra. Se un coinquilino è in casa tutto il giorno, il gruppo può accordarsi su qualcos'altro, come gli importi esatti. [Dividere le spese](page:feature/split-expenses) spiega le opzioni."
     - q: "Possiamo cambiare la divisione in seguito?"

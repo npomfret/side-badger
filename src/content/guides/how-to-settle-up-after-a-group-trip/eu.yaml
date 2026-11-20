@@ -1,8 +1,8 @@
 translatedFrom: "c0228941"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -34,7 +34,7 @@ cta:
   body: "Sortu doako kontu bat, hasi talde bat hurrengo bidaiarako eta gehitu kostu bakoitza gertatu ahala. Ordainketa-zerrenda laburra zain egongo da aireportura iristen zarenerako. Lehenago ikusi nahi duzu [kitatzeak nola funtzionatzen duen](page:feature/settle-up)?"
 sections:
   - heading: "Bost lagun, bost gastu, irteera-areto bat"
-    body: "Mo, Ines, Raf, Tess eta Uma aste bat pasatu zuten kostaldean. Mok apartamentua erreserbatu zuen eta erosketak egin zituen, Inesek itsasontzi-bidaia ordaindu zuen eta Rafek afari handia hartu zuen bere gain. Tessek aireportuko taxia hartu zuen Umarekin eta Morekin, Inesek eta Rafek trena zutelako. Umaren txartela etxean geratu zen, beraz ez zuen ezer ordaindu. Bost gastu dira eta 1.700 € guztira, eta irteera-aretoan inork ezin zuen esan nor zegoen aurretik."
+    body: "Mok, Inesek, Rafek, Tessek eta Umak aste bat pasatu zuten kostaldean. Mok apartamentua erreserbatu zuen eta erosketak egin zituen, Inesek itsasontzi-bidaia ordaindu zuen eta Rafek afari handia hartu zuen bere gain. Tessek aireportuko taxia hartu zuen Umarekin eta Morekin, Inesek eta Rafek trena zutelako. Umaren txartela etxean geratu zen, beraz ez zuen ezer ordaindu. Bost gastu dira eta 1.700 € guztira, eta irteera-aretoan inork ezin zuen esan nor zegoen aurretik."
   - heading: "Hamar zor, lau ordainketa"
     body: "Apartamentua, itsasontzia, afaria eta erosketak bost lagunen artean berdin banatzen dira. Hau da, 200 €, 50 €, 60 € eta 18 € bakoitzeko, beraz Inesek eta Rafek 328 € zor dituzte bakoitzak. Taxia hiruren artean partekatzen da, 20 € bakoitzeko, beraz Mok, Tessek eta Umak 348 € zor dituzte. Mok 1.090 € ordaindu zituen eta 348 € zor ditu, beraz 742 € zor zaizkio. Gainerako guztiek zor zutena baino gutxiago ordaindu zuten. Umari 348 € falta zaizkio, Tessi 288 €, Inesi 78 € eta Rafi 28 €, eta horiek guztiek Moren 742 € osatzen dituzte. Pertsona bikote bakoitza zuzenean kitatzen baduzu, hamar zor bereizi lortzen dituzu. Side Badger-ek lau ordainketa proposatzen ditu horren ordez, denak Moren alde."
   - heading: "Kitatu denak sakabanatu aurretik"
@@ -45,7 +45,7 @@ sections:
       - "**Erregistratu.** Aukeratu **Kitatu**. **Likidazio azkarra** azpian botoi bakoitza zure proposatutako ordainketetako bat da, eta bat aukeratzeak zenbatekoa betetzen du. Gehitu **Oharra**, adibidez banku-transferentzia, egiaztatu **Data** (ezin da etorkizunekoa izan) eta aukeratu **Erregistratu likidazioa**."
       - "**Ikusi nola garbitzen den.** Saldoa denentzat eguneratzen da. Azken ordainketa sartzen denean, **Balantzeak** atalean **Dena kitatuta!** ageri da."
   - heading: "Orain zati bat ordaindu, gainerakoa gero"
-    body: "Umak 200 € bidal ditzake gaur gauean eta gainerakoa hilaren amaieran. 200 € erregistratzen ditu, eta formularioak ohartarazten dio ondoren Moni 148 € zor dizkiola oraindik, hau da, 348 € ken 200 €. Gordetzen badu, 148 € bere saldoan geratzen dira gainerakoa erregistratu arte. Ohartarazpenak beste norabidean ere funtzionatzen du. Zero bat soberan sartzen bada eta 348 € 3.480 € bihurtzen badira, formularioak dio Moni 348 € bakarrik zor dizkiola eta gordetzeak kontrako norabidean zor bat sortuko lukeela. Konpondu zeroa gorde aurretik."
+    body: "Umak 200 € bidal ditzake gaur gauean eta gainerakoa hilaren amaieran. 200 € erregistratzen ditu, eta formularioak ohartarazten dio ondoren Mori 148 € zor dizkiola oraindik, hau da, 348 € ken 200 €. Gordetzen badu, 148 € bere saldoan geratzen dira gainerakoa erregistratu arte. Ohartarazpenak beste norabidean ere funtzionatzen du. Zero bat soberan sartzen bada eta 348 € 3.480 € bihurtzen badira, formularioak dio Mori 348 € bakarrik zor dizkiola eta gordetzeak kontrako norabidean zor bat sortuko lukeela. Konpondu zeroa gorde aurretik."
   - heading: "Akatsak konpontzen, eta ordainketak ospatzen"
     items:
       - "**Ordainketa oker bat.** Ordainketa erregistratu duenak bakarrik edita dezake. Berak edo taldeko administratzaile batek ezaba dezake, eta gero berriro erregistratu daiteke."
@@ -108,6 +108,6 @@ faq:
     - q: "Nork erregistratu behar du ordainketa bat, ordaintzen duenak ala ordaintzen zaionak?"
       a: "Ordainketa bat erregistratzeko gastuak editatzeko baimena behar da, eta formularioak **Nork ordaindu du?** eta **Nork jaso du ordainketa?** galdetzen ditu. Erregistratu duenak bakarrik edita dezake gero, beraz normalean errazena ordaintzen duenak egitea da, likidazio azkarreko botoia erabiliz."
     - q: "Eta bidaia bi monetatan egin bada?"
-      a: "Saldoak moneta bakoitzeko gordetzen dira, beraz euro-zor bat euro-zor izaten jarraitzen du eta moneta bakoitzak bere ordainketa-zerrenda labur propioa du, gastuak sartzean bihurtu ez badira. [Hainbat monetatako bidaiak](page:guide/how-to-split-a-trip-paid-in-several-currencies) orriak bi moduak erakusten ditu."
+      a: "Saldoak moneta bakoitzeko gordetzen dira, beraz euro-zor batek euro-zor izaten jarraitzen du eta moneta bakoitzak bere ordainketa-zerrenda labur propioa du, gastuak sartzean bihurtu ez badira. [Hainbat monetatako bidaiak](page:guide/how-to-split-a-trip-paid-in-several-currencies) orriak bi moduak erakusten ditu."
     - q: "Bidaian zehar kitatu behar dugu ala amaieran?"
-      a: "Biak balio dute. Erregistratutako ordainketa bakoitzak saldoak aldatzen ditu, beraz bidaiaren erdian egindako ordainketa bat azken zerrendan kontatzen da. Amaieran errazagoa da, [bidaia osoa](page:use-case/group-trips) toki bakarrean dagoelako."
+      a: "Biek balio dute. Erregistratutako ordainketa bakoitzak saldoak aldatzen ditu, beraz bidaiaren erdian egindako ordainketa bat azken zerrendan kontatzen da. Amaieran errazagoa da, [bidaia osoa](page:use-case/group-trips) toki bakarrean dagoelako."

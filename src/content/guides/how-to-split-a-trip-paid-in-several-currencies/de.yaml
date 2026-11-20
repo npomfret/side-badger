@@ -1,8 +1,8 @@
 translatedFrom: "b85c0a15"
 review:
   status: checked
-  checker: "CF-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -47,7 +47,7 @@ sections:
     items:
       - "**Pfund.** Kenji zahlt Zoe 200 £ und Lucy zahlt Zoe 200 £."
       - "**Yen.** Zoe zahlt Lucy 33.000 ¥ und Kenji zahlt Lucy 24.000 ¥."
-      - "**Insgesamt vier Zahlungen.** Zoe und Lucy schulden einander in zwei Währungen, die sich nicht aufheben. Es kommt kein Kurs ins Spiel, also gibt es nichts, worüber man streiten könnte."
+      - "**Insgesamt vier Zahlungen.** Zoe und Lucy schulden einander Geld in zwei Währungen, die sich nicht aufheben. Es kommt kein Kurs ins Spiel, also gibt es nichts, worüber man streiten könnte."
       - "**Yen geschuldet, in Pfund gezahlt.** Wer keine Yen hat, kann trotzdem in Pfund zahlen. Öffne beim Erfassen der Zahlung **Andere Währung?**, wähle **Umrechnen in** Pfund und prüfe den Kurs. Zoes 33.000 ¥ sind beim Kurs dieser Anleitung 165 £, und der Yen-Saldo geht trotzdem auf."
       - "**Jede Zahlung erfassen.** Zahlt einander, wie ihr wollt, wähle dann **Abrechnen** und nutze **Abrechnung erfassen**. Mehr dazu steht unter [Abrechnen](page:feature/settle-up)."
   - heading: "Weg zwei: unterwegs umrechnen"

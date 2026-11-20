@@ -1,8 +1,8 @@
 translatedFrom: "b85c0a15"
 review:
   status: checked
-  checker: "CF-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -32,11 +32,11 @@ navLabel: "Hainbat monetatako bidaiak"
 lead: "Sartu gastu bakoitza ordaindu zenuen monetan, eta aukeratu bide bat. Mantendu monetak bereizita eta kitatu bakoitza bere dirutan, edo bihurtu egungo kanbio-tasa batean eta kitatu behin. Japoniako bidaia bera lau ordainketatan geratzen da lehen bidean, eta bitan bigarrenean."
 cta:
   heading: "Sartu ordaindu zenuen dirutan"
-  body: "Sortu doako kontu bat, hasi talde bat bidaiarako eta gehitu gastu bakoitza tiketak zuen monetan. Xehetasunak lehenago nahi dituzu? Ikusi [moneta anitz](page:feature/multiple-currencies) edo [doakoak zer hartzen duen](page:pricing)."
+  body: "Sortu doako kontu bat, hasi talde bat bidaiarako eta gehitu gastu bakoitza ordainagiriak zuen monetan. Xehetasunak lehenago nahi dituzu? Ikusi [moneta anitz](page:feature/multiple-currencies) edo [doakoak zer hartzen duen](page:pricing)."
 sections:
   - heading: "Hiru lagun, hotel bat eta yen ugari"
-    body: "Zoe, Kenji eta Lucy aste bat pasatzen ari dira Japonian [taldeko bidaia](page:use-case/group-trips) batean, eta kostu guztiak berdin banatzen dira hirurren artean. Zoek hotela erreserbatu zuen etxetik, libera esterlinetan, 600 £-ren truke. Lucyk tren-pasak erosi zituen Tokion, 90.000 ¥-ren truke. Kenjik ramen-gaua ordaindu zuen, 9.000 ¥, eta ordutik egunero aipatzen du. Inork ez du hiru tiketa bihurtu nahi tren-geltokiko andeanean. Hemengo kontuetarako 1 ¥ = 0,005 £ da, gida honetarako asmatutako tasa borobila. Aplikazioan egungo kanbio-tasa bat erabiliko zenuke, edo benetan lortu zenuena idatziko zenuke."
-  - heading: "Sartu bakoitza tiketeko dirutan"
+    body: "Zoe, Kenji eta Lucy aste bat pasatzen ari dira Japonian [taldeko bidaia](page:use-case/group-trips) batean, eta kostu guztiak berdin banatzen dira hiruren artean. Zoek hotela erreserbatu zuen etxetik, libera esterlinetan, 600 £-ren truke. Lucyk tren-pasak erosi zituen Tokion, 90.000 ¥-ren truke. Kenjik ramen-gaua ordaindu zuen, 9.000 ¥, eta ordutik egunero aipatzen du. Inork ez du hiru ordainagiri bihurtu nahi tren-geltokiko andeanean. Hemengo kontuetarako 1 ¥ = 0,005 £ da, gida honetarako asmatutako tasa borobila. Aplikazioan egungo kanbio-tasa bat erabiliko zenuke, edo benetan lortu zenuena idatziko zenuke."
+  - heading: "Sartu bakoitza ordainagiriko dirutan"
     body: "Zati hau zein bide aukeratu ere egin behar da. Oraingoz ez da ezer bihurtu behar."
     items:
       - "**Egin taldea.** Arbelean aukeratu **Sortu taldea**, jarri bidaiaren izena, eta gero aukeratu **Gonbidatu beste batzuk** eta bidali esteka edo QR kodea."
@@ -60,13 +60,13 @@ sections:
   - heading: "Zein bide hartu?"
     items:
       - "**Mantendu bereizita** jendeak oraindik yenak poltsikoan dituenean, edo tasa baten gainean eztabaidatu nahi ez duzunean. Kostua: ordainketa gehiago, eta moneta batean baino gehiagotan."
-      - "**Bihurtu** taldea moneta bakarrean bizi denean eta bakoitzak zenbaki bakarra eta zerrenda laburragoa nahi dituenean, Kenjiren bi transferentziak bezala. Kostua: taldeak tasa batean fidatzen da, eta tasa gastu bakoitzean finkatzen da gordetzen denean."
+      - "**Bihurtu** taldea moneta bakarrean bizi denean eta bakoitzak zenbaki bakarra eta zerrenda laburragoa nahi dituenean, Kenjiren bi transferentziak bezala. Kostua: taldea tasa batez fidatzen da, eta tasa gastu bakoitzean finkatzen da gordetzen denean."
       - "**Erabaki goiz.** Taldearen monetak gastu berriak eta kopiatuak bakarrik bihurtzen ditu. Ez da atzera joango sartuta duzuna txukuntzera."
   - heading: "Tasa, eta muga"
     items:
       - "**Tasa gordetzean finkatzen da.** Gastu zaharrak ez dira inoiz berriro baloratzen, beraz saldo bat ez da mugitzen merkatua mugitu delako. Egun desberdinetan sartutako gastuek tasa desberdinak izan ditzakete, beraz taldeak bidaia osorako tasa bakarra nahi badu, adostu ezazue eta idatzi aldi bakoitzean."
       - "**Tasarik ez? Idatzi bat.** Side Badger egungo kanbio-tasa bat lortzen saiatzen da ahal duen lekuan, baina ez dago bermatuta moneta-pare guztiek bat izango dutenik. Tasarik ez badago, edo kanbio-bulego batek tratu hobea eman badizu, idatzi zurea."
-      - "**Gehienez 999.999,99 gastu bakoitzeko, bere monetan.** Unitate txikiko monetek tarte handiagoa dute: yenak 99.999.999 ¥ arte iristen da eta Indonesiako rupiak 9.999.999.999,99 Rp arte, beraz faktura handi batek zaila du muga gainditzea. Hala gertatuz gero, zatitu faktura bi gastutan, edo sartu beste moneta batean eta bihurtu."
+      - "**Gehienez 999.999,99 gastu bakoitzeko, bere monetan.** Unitate txikiko monetek tarte handiagoa dute: yenak 99.999.999 ¥ arte iristen dira eta Indonesiako rupiak 9.999.999.999,99 Rp arte, beraz faktura handi batek zaila du muga gainditzea. Hala gertatuz gero, zatitu faktura bi gastutan, edo sartu beste moneta batean eta bihurtu."
   - heading: "Side Badger-ek hemen egiten ez duena"
     items:
       - "Ez du inoiz dirurik mugitzen edo trukatzen. Elkarri nahi duzuen moduan ordaintzen diozue, eta gero ordainketa erregistratzen duzue."
@@ -108,7 +108,7 @@ faq:
   items:
     - q: "Zer kanbio-tasa erabiltzen du Side Badger-ek?"
       a: "Egungo kanbio-tasa bat, gastua sartzen duzunean lortua, eskuragarri dagoen lekuan. Benetan lortu zenuen tasara alda dezakezu."
-    - q: "Taldeak libera esterlinetan eta yenetan geratu al daiteke?"
+    - q: "Taldea libera esterlinetan eta yenetan geratu al daiteke?"
       a: "Bai. Taldearen **Ezarpenak** atalean, aktibatu **Mugatu monetak talde honetarako** **Moneta ezarpenak** azpian, aukeratu **Baimendutako monetak** eta ezarri **Moneta lehenetsia gastu berrietarako**. Zerrendan aukera gutxiago, kutxan moneta oker gutxiago."
     - q: "Bihurtu behar al dugu?"
       a: "Ez. Monetak bereizita geratzen dira zuk edo zure taldeak bihurtzea aukeratzen ez baduzue, eta moneta bakoitzak ordainketen zerrenda labur propioa du."

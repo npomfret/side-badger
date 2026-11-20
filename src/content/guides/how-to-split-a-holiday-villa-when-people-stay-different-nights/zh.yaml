@@ -1,8 +1,8 @@
 translatedFrom: "8f38827e"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -20,7 +20,7 @@ meta:
   title: 度假别墅住的晚数不同，怎么分摊 | Side Badger
   description: Dev 只来三晚，凭什么付六晚？按每个人实际住的晚数分摊度假别墅，算式替你列好。
 h1: 度假别墅住的晚数不同，怎么分摊
-navLabel: 按晚数分别墅
+navLabel: 按晚数分摊别墅费用
 lead: 先算出每人每晚的价格，乘以每个人住的晚数，然后把别墅作为**一笔使用确切金额的支出**录入。到了结算的时候，Side Badger 会一直记着账，并建议一份简短的付款清单。
 cta:
   heading: 把别墅记成一笔清清爽爽的支出
@@ -29,7 +29,7 @@ sections:
   - heading: 六晚，四个人，一张信用卡
     body: "[群组旅行](page:use-case/group-trips)通常从某一个人的信用卡开始。这次是 Ana 的。她订了六晚的别墅，€2,100，因为总得有人先出头。Ana、Ben 和 Chloe 住满六晚。Dev 只能赶上最后三晚，而且是坐火车来的。Ben 租了一辆车，Dev 一次也没坐过。Dev 负责了那次大采购。把别墅四个人平分是最显而易见的做法，但那样 Dev 就要为他在家待着的三晚付钱，这种事到圣诞节还会被翻出来。按晚数分就能避开这场争论，算起来也就一分钟。"
   - heading: 算出一个人一晚的价格
-    body: 一个“人晚”就是一个人住一晚。别墅该多少钱就是多少钱，所以把总价摊到所有人晚上，再按每个人用掉的人晚数分给各人。
+    body: 一个“人晚”就是一个人住一晚。别墅该多少钱就是多少钱，所以把总价除以总人晚数，再按每个人住的晚数计算各自的费用。
     items:
       - "**数一数人晚。**Ana、Ben 和 Chloe 各住六晚，Dev 住三晚：6 + 6 + 6 + 3 = 21。"
       - "**算出单价。**€2,100 ÷ 21 = 每人晚 €100。"

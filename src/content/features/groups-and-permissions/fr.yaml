@@ -1,8 +1,8 @@
 translatedFrom: "1071b584"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -34,7 +34,7 @@ workflow:
       body: "Ouvrez **Inviter d'Autres**, choisissez combien de temps le lien doit durer (15 minutes, 1 heure, 1 jour ou 5 jours), puis copiez le lien ou montrez le code QR à scanner. Vous pouvez aussi inviter, depuis l'appli, des personnes avec qui vous partagez déjà un autre groupe."
       shot: S03
       shotAlt: "La fenêtre d'invitation avec un lien de groupe, son code QR et le choix de la durée du lien"
-    - title: "Laissez-les jeter un œil avant de rejoindre"
+    - title: "Laissez-les jeter un œil avant de rejoindre le groupe"
       body: "Toute personne munie du lien se connecte ou crée un compte, voit un aperçu du groupe et choisit le nom qu'elle veut y utiliser. Puis elle appuie sur **Rejoindre Groupe**."
       shot: S04
       shotAlt: "L'aperçu d'un groupe, montré à une personne connectée avant qu'elle ne le rejoigne"
@@ -61,7 +61,7 @@ options:
       body: "Voit tout et ne change rien. Un spectateur ne peut ni ajouter ni modifier de dépenses ou de listes, ni inviter de personnes, ni changer les paramètres, ni toucher à l'image d'en-tête. Pratique pour celui ou celle qui veut surveiller les chiffres et promet de ne pas y toucher."
 sections:
   - heading: "Ouvert, géré ou vos propres règles"
-    body: "Les nouveaux groupes démarrent en **Collaboration ouverte** : tout le monde peut inviter, modifier les dépenses et les listes, et les nouveaux membres rejoignent automatiquement. **Groupe géré** sert quand il faut que quelqu'un joue l'adulte. Vous pouvez aussi régler les sept permissions une par une, et en changer une à la main fait passer le groupe en personnalisé. Quoi que vous choisissiez, seuls les admins peuvent changer les permissions elles-mêmes, et chaque changement apparaît dans le fil d'activité. Un logement de [colocataires](page:use-case/housemates) peut tout laisser ouvert. Un grand [événement ou une fête](page:use-case/events-and-celebrations) préfère souvent le groupe géré, pour que quelqu'un décide de qui rejoint. Nouveau dans tout ça ? [Comment ça marche](page:how-it-works) suit tout le parcours, de la première dépense au règlement des comptes."
+    body: "Les nouveaux groupes démarrent en **Collaboration ouverte** : tout le monde peut inviter, modifier les dépenses et les listes, et les nouveaux membres rejoignent automatiquement. **Groupe géré** sert quand il faut que quelqu'un joue l'adulte. Vous pouvez aussi régler les sept permissions une par une, et en changer une à la main fait passer le groupe en personnalisé. Quoi que vous choisissiez, seuls les admins peuvent changer les permissions elles-mêmes, et chaque changement apparaît dans le fil d'activité. Un logement de [colocataires](page:use-case/housemates) peut tout laisser ouvert. Un grand [événement ou une fête](page:use-case/events-and-celebrations) préfère souvent le groupe géré, pour que quelqu'un décide de qui rejoint le groupe. Nouveau dans tout ça ? [Comment ça marche](page:how-it-works) suit tout le parcours, de la première dépense au règlement des comptes."
     items:
       - "**Qui peut modifier des dépenses.** Collaboration ouverte : tout membre. Groupe géré : créateurs et admins."
       - "**Qui peut supprimer des dépenses.** Collaboration ouverte : tout membre. Groupe géré : créateurs et admins."
@@ -81,7 +81,7 @@ sections:
   - heading: "Quitter un groupe"
     body: "Tout le monde peut partir une fois les comptes réglés. Vous ne pouvez pas partir tant que vous devez ou qu'on vous doit de l'argent, ne serait-ce que dans une seule devise, tant qu'une question ouverte sur une dépense vous concerne, ni si vous êtes le dernier admin ou le seul membre. [Enregistrez le paiement](page:feature/settle-up), réglez la [question sur la dépense](page:guide/what-to-do-when-someone-disputes-a-shared-expense), ou nommez quelqu'un d'autre admin, puis partez. Pour revenir, il vous faudra une nouvelle invitation."
 limits:
-  heading: "Dans la limite du raisonnable : les petits caractères"
+  heading: "Dans la limite du raisonnable : les détails à connaître"
   items:
     - "Un groupe accueille jusqu'à 50 personnes."
     - "Seuls les admins peuvent changer les permissions et les rôles. Le dernier admin ne peut pas être rétrogradé."
@@ -103,8 +103,8 @@ faq:
       a: "Plus personne ne peut le rouvrir. Seul un admin peut fermer un groupe, il doit taper le nom du groupe pour confirmer, et le groupe devient indisponible pour tout le monde. Si vous voulez seulement arrêter les changements, verrouillez-le. Si vous voulez seulement l'ôter de votre propre tableau de bord, archivez-le."
     - q: "Puis-je annuler un verrou ?"
       a: "Oui. Un admin peut déverrouiller le groupe, et les changements refonctionnent."
-    - q: "Dois-je approuver les gens avant qu'ils rejoignent ?"
-      a: "Seulement si vous le voulez. Les nouveaux groupes démarrent en Collaboration ouverte, où les personnes qui utilisent le lien rejoignent automatiquement. Activez l'approbation par un admin, ou choisissez Groupe géré, et chaque personne attend qu'un admin la laisse entrer."
+    - q: "Dois-je approuver les gens avant qu'ils rejoignent le groupe ?"
+      a: "Seulement si vous le voulez. Les nouveaux groupes démarrent en Collaboration ouverte, où les personnes qui utilisent le lien rejoignent automatiquement le groupe. Activez l'approbation par un admin, ou choisissez Groupe géré, et chaque personne attend qu'un admin la laisse entrer."
     - q: "Combien de personnes un groupe peut-il compter ?"
       a: "Jusqu'à 50."
 identicalApproved:

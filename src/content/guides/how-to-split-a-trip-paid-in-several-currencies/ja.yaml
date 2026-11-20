@@ -1,8 +1,8 @@
 translatedFrom: "b85c0a15"
 review:
   status: checked
-  checker: "CF-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -35,7 +35,7 @@ cta:
   body: 無料アカウントを作成し、旅行のグループを始めて、レシートに書かれていた通貨のまま各支出を追加しましょう。先に詳しく知りたい方は、[複数の通貨](page:feature/multiple-currencies)や[無料で使える範囲](page:pricing)をご覧ください。
 sections:
   - heading: 友だち3人、ホテル1軒、そして大量の円
-    body: Zoe、Kenji、Lucyの3人が、[グループ旅行](page:use-case/group-trips)で1週間日本に滞在し、費用はすべて3人で均等に分けます。Zoeは自宅でホテルをポンドで予約し、£600でした。Lucyは東京で鉄道パスを¥90,000で購入しました。Kenjiはラーメンの夜を¥9,000で支払い、それ以来、毎日その話をしています。駅のホームで3枚のレシートを換算したい人はいません。ここでの計算では、¥1は£0.005です。このガイドのために決めた、キリのいいレートです。アプリでは、現在の為替レートを使うか、実際に適用されたレートを入力します。
+    body: Zoe、Kenji、Lucyの3人が、[グループ旅行](page:use-case/group-trips)で1週間日本に滞在し、費用はすべて3人で均等に分けます。Zoeは自宅でホテルをポンドで予約し、£600でした。Lucyは東京で鉄道パスを¥90,000で購入しました。Kenjiはラーメン代¥9,000を支払い、それ以来、毎日その話をしています。駅のホームで3枚のレシートを換算したい人はいません。ここでの計算では、¥1は£0.005です。このガイドのために決めた、キリのいいレートです。アプリでは、現在の為替レートを使うか、実際に適用されたレートを入力します。
   - heading: レシートに書かれたお金のまま入力する
     body: どちらの進め方を選んでも、この部分は同じです。まだ換算するものはありません。
     items:
@@ -94,7 +94,7 @@ example:
       currency: JPY
       split:
         method: equal
-    - label: ラーメンの夜
+    - label: ラーメン代
       payer: kenji
       amount: 9000
       currency: JPY

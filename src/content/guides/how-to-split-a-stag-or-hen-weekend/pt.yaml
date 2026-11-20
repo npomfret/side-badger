@@ -1,8 +1,8 @@
 translatedFrom: "6c8b8630"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - groups.group-per-house-trip-event
   - invites.link-or-qr-code
@@ -47,13 +47,13 @@ sections:
   - heading: "Antes de reservar, um orçamento e um sinal"
     body: "Combinem o orçamento antes de alguém reservar. Escolhe **Adicionar sondagem**, pergunta quanto o grupo vai gastar na casa de campo e oferece alguns valores como opções. Ativa a **Votação anónima** ao criá-la, para esconder quem votou em quê, para ninguém ter de defender em voz alta um orçamento mais pequeno. Fecha a sondagem quando toda a gente tiver votado e o vencedor aparecer. Depois vem o sinal. Quem reservar paga-o e adiciona-o como despesa, dividida em partes iguais, e o valor restante entra como segunda despesa quando for devido. As outras pessoas podem enviar já a sua parte e registar o pagamento, ou esperar pela conta final. Os saldos dão o mesmo de qualquer das maneiras."
   - heading: "Quando alguém só fica uma noite"
-    body: "Uma amiga que só aparece no sábado não deve pagar a sexta. Deixa-a de fora dos custos de que não fez parte. Quando o custo depende de quanto tempo cada pessoa fica, como um quarto, escolhe **Valores exatos** em **Como dividir** e escreve a parte de cada pessoa, que tem de somar o total. Calcula primeiro um preço por pessoa e por noite e multiplica depois pelas noites que cada pessoa fica. A página de [viagens em grupo](page:use-case/group-trips) tem mais sobre custos que não são iguais para todos."
+    body: "Uma amiga que só aparece no sábado não deve pagar a sexta. Deixa-a de fora dos custos de que não fez parte. Quando o custo depende de quanto tempo cada pessoa fica, como um quarto, escolhe **Valores exatos** em **Como dividir** e escreve a parte de cada pessoa, de forma que a soma das partes corresponda ao total. Calcula primeiro um preço por pessoa e por noite e multiplica depois pelas noites que cada pessoa fica. A página de [viagens em grupo](page:use-case/group-trips) tem mais sobre custos que não são iguais para todos."
   - heading: "O que o Side Badger não faz aqui"
     items:
       - "Nunca movimenta dinheiro. Pagam-se por transferência bancária, em dinheiro ou como for mais conveniente e depois registam o pagamento, para os saldos se atualizarem para todos."
       - "Não envia lembretes de pagamento. Um empurrãozinho simpático no chat do grupo continua a ser trabalho humano."
       - "Cada despesa tem um só pagador, e o Side Badger não consegue dividir um recibo linha a linha. Se dois cartões pagaram a casa de campo, introduz duas despesas. Se algumas pessoas pediram extras ao jantar, introduz os extras como despesa própria."
-      - "Guarda o dinheiro, não o itinerário. As sondagens e os comentários ficam pelos custos, por isso os planos do fim de semana ficam no chat do grupo."
+      - "A app regista as despesas, não o itinerário. As sondagens e os comentários ficam pelos custos, por isso os planos do fim de semana ficam no chat do grupo."
 exampleAfter: 2
 example:
   heading: "A despedida de solteira da Grace, dividida por quatro"

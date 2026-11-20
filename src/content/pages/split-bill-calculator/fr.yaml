@@ -1,8 +1,8 @@
 translatedFrom: "1a58db8f"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.odd-penny-at-random
@@ -11,7 +11,7 @@ claims:
   - settlements.pay-however-then-record
 meta:
   title: "Calculateur pour partager l'addition : qui doit quoi | Side Badger"
-  description: "Qui a payé, qui doit, qui paie qui : trié en secondes. Partage égal, exact ou en pourcentage. Gratuit, dans votre navigateur, rien d'enregistré ni envoyé."
+  description: "Qui a payé, qui doit, qui paie qui : réglé en quelques secondes. Partage égal, exact ou en pourcentage. Gratuit, dans votre navigateur, rien d'enregistré ni envoyé."
 h1: "Calculateur pour partager l'addition"
 navLabel: "Calculateur d'addition"
 lead: "Indiquez qui a payé quoi et le calculateur dit qui doit quoi à qui, avec une courte liste de paiements pour tout régler. Il tourne dans votre navigateur, n'enregistre rien et ne fait circuler aucun argent. Si votre groupe veut que le compte survive à l'onglet, [partager les dépenses](page:feature/split-expenses) et [régler les comptes](page:feature/settle-up) dans Side Badger font les mêmes calculs, et les gardent."
@@ -28,7 +28,7 @@ sections:
       - "**Gérer plusieurs devises.** Choisissez-en une pour tout le calcul. L'appli tient un solde séparé pour chaque devise, et peut convertir une dépense à un taux de change actuel, que vous pouvez modifier."
       - "**Enregistrer quoi que ce soit.** Fermez l'onglet et les chiffres disparaissent. Pour les garder, copiez le lien. Il contient vos chiffres après le #, que votre navigateur n'envoie jamais à un serveur, et toute personne à qui vous l'envoyez peut les lire."
       - "**Faire circuler l'argent.** Il vous dit qui doit payer qui. Vous vous remboursez comme vous voulez, puis vous enregistrez le paiement dans l'appli si votre groupe y tient son compte."
-      - "**Tirer au sort le centime en trop.** Quand une facture ne se divise pas rond, les centimes restants vont aux premières personnes de la liste, pour que les totaux tombent juste. Dans l'appli, le centime en trop va à une personne au hasard, donc pas toujours la même."
+      - "**Tirer au sort le centime en trop.** Quand une facture ne tombe pas juste une fois divisée, les centimes restants vont aux premières personnes de la liste, pour que les totaux tombent juste. Dans l'appli, le centime en trop va à une personne au hasard, donc pas toujours la même."
       - "**Dépasser les limites.** Le calculateur accepte de 2 à 20 personnes, et une dépense peut aller jusqu'à 999 999,99, comme dans l'appli."
 exampleAfter: 2
 example:

@@ -1,8 +1,8 @@
 translatedFrom: "b85c0a15"
 review:
   status: checked
-  checker: "CF-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - groups.group-per-house-trip-event
   - invites.link-or-qr-code
@@ -45,7 +45,7 @@ sections:
       - "**Yens.** Zoe paie 33 000 ¥ à Lucy et Kenji paie 24 000 ¥ à Lucy."
       - "**Quatre paiements en tout.** Zoe et Lucy se doivent de l'argent dans deux devises qui ne s'annulent pas. Aucun taux n'entre en jeu, donc rien sur quoi se disputer."
       - "**Devoir des yens, payer en livres.** Quelqu'un qui n'a pas de yens peut quand même payer en livres. Quand vous enregistrez le paiement, ouvrez **Autre devise ?**, choisissez **Convertir en** livres et vérifiez le taux. Les 33 000 ¥ de Zoe font 165 £ au taux de ce guide, et le solde en yens tombe quand même juste."
-      - "**Enregistrez chaque paiement.** Remboursez-vous comme vous voulez, puis choisissez **Régler** et utilisez **Enregistrer Règlement**. [Régler les comptes](page:feature/settle-up) en dit plus."
+      - "**Enregistrez chaque paiement.** Remboursez-vous comme vous voulez, puis choisissez **Régler** et utilisez **Enregistrer le règlement**. [Régler les comptes](page:feature/settle-up) en dit plus."
   - heading: "Deuxième méthode : convertir au fil de l'eau"
     body: "Si le groupe préfère voir un seul chiffre chacun, convertissez au moment de saisir la dépense."
     items:
@@ -69,7 +69,7 @@ sections:
       - "Il gère 133 devises. Les cryptomonnaies et les métaux n'en font pas partie."
 exampleAfter: 2
 example:
-  heading: "Le Japon, réglé de deux façons"
+  heading: "Japon : les comptes réglés de deux façons"
   currency: GBP
   people:
     - id: zoe

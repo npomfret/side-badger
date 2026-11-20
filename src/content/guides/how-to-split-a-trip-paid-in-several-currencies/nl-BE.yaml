@@ -1,8 +1,8 @@
 translatedFrom: "b85c0a15"
 review:
   status: checked
-  checker: "CF-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -47,7 +47,7 @@ sections:
     items:
       - "**Ponden.** Kenji betaalt Zoe £ 200 en Lucy betaalt Zoe £ 200."
       - "**Yen.** Zoe betaalt Lucy ¥ 33.000 en Kenji betaalt Lucy ¥ 24.000."
-      - "**Vier betalingen in totaal.** Zoe en Lucy zijn elkaar schuldig in twee valuta’s die elkaar niet opheffen. Er komt geen koers aan te pas, dus daar valt niets over te kibbelen."
+      - "**Vier betalingen in totaal.** Zoe en Lucy zijn elkaar geld schuldig in twee valuta’s die elkaar niet opheffen. Er komt geen koers aan te pas, dus daar valt niets over te kibbelen."
       - "**Yen schuldig, in ponden betalen.** Wie geen yen heeft, kan toch in ponden betalen. Open bij het registreren van de betaling **Andere munteenheid?**, kies bij **Converteren naar** ponden en controleer de koers. Zoe’s ¥ 33.000 is £ 165 tegen de koers van deze gids, en het yensaldo klopt nog steeds."
       - "**Registreer elke betaling.** Betaal elkaar zoals je wilt, kies dan **Vereffenen** en gebruik **Vereffening registreren**. Meer daarover bij [afrekenen](page:feature/settle-up)."
   - heading: "Route twee: reken om terwijl je bezig bent"

@@ -1,8 +1,8 @@
-translatedFrom: "3e39d035"
+translatedFrom: "62f45051"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - multi-currency.currency-count
   - multi-currency.currency-rules
@@ -47,9 +47,9 @@ options:
     - title: "L'original reste"
       body: "Le montant d'origine reste sur la dépense, à côté du montant converti, pour quiconque demande combien c'était en yens."
     - title: "Convertir est gratuit"
-      body: "Convertir ne coûte rien. Il n'y a aucun frais pour saisir une dépense dans une autre devise."
+      body: "Convertir ne coûte rien. Il n'y a pas de frais pour saisir une dépense dans une autre devise."
 example:
-  heading: "Quatre amis au Japon, réglés de deux façons"
+  heading: "Quatre amis au Japon : les comptes réglés de deux façons"
   currency: GBP
   people:
     - id: ana
@@ -93,7 +93,7 @@ sections:
   - heading: "Vous devez des euros, vous payez en livres"
     body: "Payé en yens, réglé en livres ? Pas de souci. Quand vous enregistrez un paiement, vous pouvez le convertir aussi, pour que celui qui doit des euros puisse payer en livres et que le solde en euros tombe tout de même juste. Remboursez-vous comme vous voulez, puis enregistrez."
   - heading: "Des règles pour le groupe"
-    body: "Limitez un groupe aux devises que vous utilisez vraiment, et définissez une valeur par défaut pour que le formulaire s'ouvre sur la bonne. Des vacances au Portugal n'ont pas besoin de 139 autres options à côté de la note du dîner, et un [mariage à l'étranger](page:use-case/events-and-celebrations) en demande probablement deux."
+    body: "Limitez un groupe aux devises que vous utilisez vraiment, et définissez une valeur par défaut pour que le formulaire s'ouvre sur la bonne. Des vacances au Portugal n'ont pas besoin de 132 autres options à côté de la note du dîner, et un [mariage à l'étranger](page:use-case/events-and-celebrations) en demande probablement deux."
 limits:
   heading: Limites
   items:

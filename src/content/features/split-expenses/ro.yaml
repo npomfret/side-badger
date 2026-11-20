@@ -1,8 +1,8 @@
 translatedFrom: "da031409"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -23,7 +23,7 @@ cta:
   body: "Creează un cont gratuit, începe un grup și adaugă cheltuiala pe care tot amâni s-o rezolvi. Nu ești sigur ce urmează? Vezi [cum funcționează](page:how-it-works) sau uită-te la [ce acoperă gratuitul](page:pricing)."
 problem:
   heading: "Nu totul se împarte 50/50"
-  body: "Chiria urmează mărimea camerei. Un cadou urmează cine ce a promis. O cină urmează cine a rămas la desert. Să împarți o notă în două merge până la prima notă care nu se împarte așa, și atunci cineva deschide o foaie de calcul. Side Badger înregistrează cine a plătit, cine a împărțit costul și cum se împarte, așa că soldurile ies corecte fără ca cineva să facă împărțiri lungi la masă."
+  body: "Chiria urmează mărimea camerei. Un cadou se împarte după cât a promis fiecare. O cină se împarte între cei care au rămas la desert. Să împarți o notă în două merge până la prima notă care nu se împarte așa, și atunci cineva deschide o foaie de calcul. Side Badger înregistrează cine a plătit, cine a împărțit costul și cum se împarte, așa că soldurile ies corecte fără ca cineva să facă împărțiri în scris la masă."
 workflow:
   heading: "Adăugarea unei cheltuieli, de la cap la coadă"
   steps:
@@ -51,7 +51,7 @@ options:
     - title: "Pe sume exacte"
       body: "Scrie cât datorează fiecare. Bun pentru cadoul la care fiecare a ales alt preț sau pentru magazinul în care coșul cuiva a avut mai mult decât cumpărăturile comune. Sumele trebuie să dea împreună totalul."
     - title: "Procentual"
-      body: "Dă fiecărei persoane o parte din total. Chiria după mărimea camerei e clasicul, cu camera cea mai mare plătind cea mai mare parte și nimeni prefăcându-se altfel."
+      body: "Dă fiecărei persoane o parte din total. Chiria după mărimea camerei e clasicul, unde cine are camera cea mai mare plătește partea cea mai mare și nimeni nu pretinde altceva."
 example:
   heading: "Un weekend la cabană, patru cheltuieli, trei împărțiri"
   currency: GBP
@@ -123,7 +123,7 @@ faq:
     - q: "Pot plăti două persoane pentru o singură cheltuială?"
       a: "Nu într-o singură cheltuială. Înregistrează două, câte una pentru fiecare plătitor, iar soldurile ies la fel."
     - q: "Pot împărți o chitanță pe articole?"
-      a: "Side Badger împarte cheltuielile egal, pe sume exacte sau procentual; nu împarte un bon pe articole. Pentru o notă cu articole diferite, introdu ce datorează fiecare ca sume exacte."
+      a: "Side Badger împarte cheltuielile egal, pe sume exacte sau procentual; nu împarte o chitanță pe articole. Pentru o notă cu articole diferite, introdu ce datorează fiecare ca sume exacte."
     - q: "Pot seta o împărțire implicită?"
       a: "Nu. Copiază o cheltuială anterioară ca să-i refolosești împărțirea și schimbă ce e diferit."
     - q: "Pot facturile să se repete în fiecare lună?"

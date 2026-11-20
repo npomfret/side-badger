@@ -1,8 +1,8 @@
 translatedFrom: "57622bd0"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - balances.who-owes-whom
   - balances.short-list-of-payments
@@ -33,7 +33,7 @@ problem:
   heading: Saldoer som oppdateres underveis
   body: Hver utgift endrer hvem som skylder hvem, så Side Badger holder saldoene oppdatert etter hvert som utgifter og betalinger kommer til. Alle i gruppen ser en endring med en gang, og ser hva som ble endret og hvem som endret det. Saldoer føres per valuta, så euro og pund holdes i hver sin kolonne med mindre en utgift ble konvertert da den ble lagt inn. Som standard ser du gjelden som angår deg; **Vis alle** lister hele gruppen.
 workflow:
-  heading: Tre steg til kvitt
+  heading: Tre steg til alt er gjort opp
   steps:
     - title: Se hvem som skylder hvem
       body: Åpne gruppens saldoer for å se hva du skylder, hva du har til gode, og en kort liste over betalinger som gjør opp for alle, regnet ut per valuta. Utgifter det er stilt spørsmål ved, holdes utenfor summene til de er avklart. I romkamerateksemplet nedenfor blir seks betalinger til to.

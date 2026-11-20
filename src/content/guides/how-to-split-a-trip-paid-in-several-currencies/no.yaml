@@ -1,8 +1,8 @@
 translatedFrom: "b85c0a15"
 review:
   status: checked
-  checker: "CF-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - groups.group-per-house-trip-event
   - invites.link-or-qr-code
@@ -31,12 +31,12 @@ h1: "Slik deler du en tur betalt i flere valutaer"
 navLabel: "Turer i flere valutaer"
 lead: "Legg inn hver utgift i valutaen du betalte i, og velg så en rute. Hold valutaene adskilt og gjør opp hver i sine egne penger, eller konverter med en gjeldende valutakurs og gjør opp én gang. Den samme Japan-turen gir fire betalinger på den første måten og to på den andre."
 cta:
-  heading: "Legg den inn i pengene du betalte med"
+  heading: "Legg den inn i valutaen du betalte i"
   body: "Opprett en gratis konto, start en gruppe for turen og legg til hver utgift i den valutaen som sto på kvitteringen. Vil du ha detaljene først? Se [flere valutaer](page:feature/multiple-currencies) eller [hva gratis dekker](page:pricing)."
 sections:
   - heading: "Tre venner, ett hotell, svært mange yen"
     body: "Zoe, Kenji og Lucy tilbringer en uke i Japan på en [gruppereise](page:use-case/group-trips), og hver kostnad deles likt på tre. Zoe booket hotellet hjemme, i pund, for 600 £. Lucy kjøpte togpassene i Tokyo for 90 000 ¥. Kenji betalte for ramenkvelden, 9 000 ¥, og har nevnt det daglig siden. Ingen vil regne om tre kvitteringer på en stasjonsperrong. I regnestykkene her er 1 ¥ lik 0,005 £, en rund kurs som er diktet opp til denne guiden. I appen bruker du en gjeldende valutakurs, eller skriver inn den du faktisk fikk."
-  - heading: "Legg inn hver utgift i pengene på kvitteringen"
+  - heading: "Legg inn hver utgift i valutaen på kvitteringen"
     body: "Denne delen gjør du uansett hvilken rute du velger. Ingenting trenger å konverteres ennå."
     items:
       - "**Lag gruppen.** På oversikten velger du **Opprett gruppe**, gir den navn etter turen, velger så **Inviter andre** og sender lenken eller QR-koden."
@@ -64,9 +64,9 @@ sections:
       - "**Bestem dere tidlig.** En gruppevaluta konverterer bare nye og kopierte utgifter. Den går ikke tilbake og rydder opp i det dere allerede har lagt inn."
   - heading: "Kursen, og taket"
     items:
-      - "**Kursen låses når du lagrer.** Gamle utgifter revurderes aldri, så en saldo driver ikke bare fordi markedet gjorde det. Utgifter som legges inn på ulike dager, kan ha ulike kurser, så vil gruppen ha én kurs for hele turen, må dere bli enige om den og skrive den inn hver gang."
+      - "**Kursen låses når du lagrer.** Gamle utgifter verdijusteres aldri, og en saldo endrer seg ikke bare fordi markedet gjør det. Utgifter som legges inn på ulike dager, kan ha ulike kurser, så vil gruppen ha én kurs for hele turen, må dere bli enige om den og skrive den inn hver gang."
       - "**Ingen kurs? Skriv inn en.** Side Badger henter en gjeldende valutakurs der det er mulig, men ikke alle valutapar er garantert å få en. Finnes det ingen, eller fikk du en bedre avtale på et vekslingskontor, skriver du inn din egen."
-      - "**Opptil 999 999,99 per utgift, i sin egen valuta.** Valutaer med små enheter får mer rom: yen går opp til 99 999 999 ¥ og rupiah til 9 999 999 999,99 Rp, så en stor regning sjelden når taket. Gjør den det, del regningen i to utgifter, eller legg den inn i en annen valuta og konverter."
+      - "**Opptil 999 999,99 per utgift, i sin egen valuta.** Valutaer med små enheter får mer rom: yen går opp til 99 999 999 ¥ og rupiah til 9 999 999 999,99 Rp, så det er lite sannsynlig at en stor regning når taket. Gjør den det, del regningen i to utgifter, eller legg den inn i en annen valuta og konverter."
   - heading: "Hva Side Badger ikke gjør her"
     items:
       - "Den flytter eller veksler aldri penger. Dere betaler hverandre slik dere vil, og registrerer så betalingen."

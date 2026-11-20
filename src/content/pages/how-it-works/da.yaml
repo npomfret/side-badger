@@ -1,8 +1,8 @@
 translatedFrom: "05187fde"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -55,7 +55,7 @@ steps:
     shot: S10
     shotAlt: Saldoskærmen med forenklet gæld i to valutaer og Vis alle slået til
   - title: Gør op uden for appen, registrer det i den
-    body: Side Badger flytter aldrig penge. Betal hinanden, som I vil, og registrer så betalingen, så saldiene følger med, og alles skærm opdateres uden at skulle genindlæses. »Gjort op« betyder blot, at saldiene viser nul. Ingen kan forlade en gruppe, mens vedkommende stadig skylder eller er til gode, så alle, der er på vej ud, gør først op.
+    body: Side Badger flytter aldrig penge. Betal hinanden, som I vil, og registrer så betalingen, så saldiene følger med, og alles skærm opdateres uden at skulle genindlæses. »Gjort op« betyder blot, at saldiene viser nul. Ingen kan forlade en gruppe, mens vedkommende stadig skylder eller har penge til gode, så alle, der er på vej ud, gør først op.
     shot: S11
     shotAlt: Betalingsformularen med hurtigafregningsknapper og beskeden om delbetaling
 requirements:
@@ -99,7 +99,7 @@ faq:
     - q: Flytter Side Badger penge?
       a: Side Badger registrerer betalinger foretaget andre steder; den flytter ikke penge. Den foreslår, hvem der betaler hvem, og I betaler hinanden, som I vil, og registrerer derefter betalingen. Se [gør op](page:feature/settle-up).
     - q: Kan nogen forlade gruppen, mens de skylder penge?
-      a: Nej. Ingen kan forlade en gruppe, mens de stadig skylder eller er til gode, så de gør først op.
+      a: Nej. Ingen kan forlade en gruppe, mens de stadig skylder eller har penge til gode, så de gør først op.
     - q: Hvor mange kan være med i en gruppe?
       a: Op til 50 personer i en gruppe. Inviter dem med et link eller en QR-kode, og slå godkendelse til, hvis du vil have en administrator til at lukke hver person ind.
     - q: Hvad med ture med mere end én valuta?

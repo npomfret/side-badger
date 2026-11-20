@@ -1,8 +1,8 @@
 translatedFrom: "57622bd0"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - balances.who-owes-whom
   - balances.short-list-of-payments
@@ -82,7 +82,7 @@ example:
 exampleAfter: 0
 sections:
   - heading: Registrar un pago
-    body: Cuando alguien paga, regístralo contra la persona correcta. Los botones de liquidación rápida rellenan el importe a partir de tus pagos sugeridos, y puedes añadir una nota como «transferencia bancaria» (hasta 500 caracteres). Si pagas solo una parte de lo que debes, el resto se queda en el saldo. Si introduces de menos o de más, Side Badger te avisa antes de guardar. Registrar un pago requiere permiso para editar gastos, y la fecha no puede ser futura.
+    body: Cuando alguien paga, regístralo indicando la persona correcta. Los botones de liquidación rápida rellenan el importe a partir de tus pagos sugeridos, y puedes añadir una nota como «transferencia bancaria» (hasta 500 caracteres). Si pagas solo una parte de lo que debes, el resto se queda en el saldo. Si introduces de menos o de más, Side Badger te avisa antes de guardar. Registrar un pago requiere permiso para editar gastos, y la fecha no puede ser futura.
   - heading: ¿Pagaste en otra moneda?
     body: Los saldos se quedan en la moneda en la que se pagaron, así que una deuda en euros sigue siendo una deuda en euros. ¿Debes euros y pagas en libras? Convierte el pago al introducirlo, con un tipo de cambio actual o con el tipo que te aplicaron de verdad. El tipo queda fijado al guardar el pago. [Varias monedas](page:feature/multiple-currencies) explica cómo funciona la conversión, y [viajes en grupo](page:use-case/group-trips) la muestra en uso.
   - heading: Un historial que puedes consultar

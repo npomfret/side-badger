@@ -1,8 +1,8 @@
-translatedFrom: "3e39d035"
+translatedFrom: "62f45051"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - multi-currency.currency-count
   - multi-currency.currency-rules
@@ -28,12 +28,12 @@ cta:
   body: Sortu kontu bat, hasi talde bat eta gehitu lehen gastua eskuan zenuen monetan.
 problem:
   heading: Sartu ordaindu zenuen bezala
-  body: Bidaia bat gutxitan ordaintzen da moneta bakarrean. Hotela etxetik erreserbatu zen libera esterlinetan, afaria yenetan ordaindu zen, eta aireportuko kafea geldialdiak erabiltzen zuen monetan. Dena eskuz bihurtzea sartu ahal izan aurretik da kalkulu-orriak abandonatzen diren modua. Side Badger-en gastu bakoitza tiketan dagoen monetan sartzen duzu, eta zenbateko bakoitzak bere monetaren arauak jarraitzen ditu, beraz yenek ez dute hamartarrik eta dinarrek hiru dituzte. Azkenaldian erabilitako monetak zerrendan lehenengo agertzen dira.
+  body: Bidaia bat gutxitan ordaintzen da moneta bakarrean. Hotela etxetik erreserbatu zen libera esterlinetan, afaria yenetan ordaindu zen, eta aireportuko kafea geldialdiak erabiltzen zuen monetan. Dena eskuz bihurtzea sartu ahal izan aurretik da kalkulu-orriak abandonatzen diren modua. Side Badger-en gastu bakoitza ordainagirian dagoen monetan sartzen duzu, eta zenbateko bakoitzak bere monetaren arauak jarraitzen ditu, beraz yenek ez dute hamartarrik eta dinarrek hiru dituzte. Azkenaldian erabilitako monetak zerrendan lehenengo agertzen dira.
 workflow:
   heading: Mantendu monetak bereizita, edo bihurtu joan ahala
   steps:
     - title: Gehitu gastua bere monetan
-      body: Aukeratu monetak, idatzi zenbatekoa, esan nork ordaindu duen eta nork partekatu duen. Ez da besterik behar. Hau da lehenetsia, eta jatorrizko zenbatekoa sartu zenuen bezala gordetzen du.
+      body: Aukeratu moneta, idatzi zenbatekoa, esan nork ordaindu duen eta nork partekatu duen. Ez da besterik behar. Hau da lehenetsia, eta jatorrizko zenbatekoa sartu zenuen bezala gordetzen du.
       shot: S07
       shotAlt: Yen-zenbateko bat sartuta duen gastu-formularioa
     - title: Ikusi saldo bat moneta bakoitzeko
@@ -98,7 +98,7 @@ sections:
   - heading: Euroak zor, libera esterlinetan ordaindu
     body: Yenetan ordaindu, libera esterlinetan kitatu? Ondo. Ordainketa bat erregistratzean hori ere bihur dezakezu, beraz euroak zor dituenak libera esterlinetan ordain dezake eta euro-saldoak ondo ateratzen jarraitzen du. Ordaindu elkarri nahi duzuen moduan, eta gero erregistratu.
   - heading: Taldearentzako arauak
-    body: Mugatu talde bat benetan erabiltzen ari zareten monetetara, eta ezarri lehenetsi bat formularioa moneta egokian ireki dadin. Portugalen oporraldi batek ez ditu beste 139 aukerak behar afari-fakturaren ondoan, eta [atzerriko ezkontza batek](page:use-case/events-and-celebrations) seguruenik bi behar ditu.
+    body: Mugatu talde bat benetan erabiltzen ari zareten monetetara, eta ezarri lehenetsi bat formularioa moneta egokian ireki dadin. Portugalen oporraldi batek ez ditu beste 132 aukerak behar afari-fakturaren ondoan, eta [atzerriko ezkontza batek](page:use-case/events-and-celebrations) seguruenik bi behar ditu.
 limits:
   heading: Mugak
   items:
@@ -107,8 +107,8 @@ limits:
     - Taldearen bihurketa automatikoa gastu berriei eta kopiatuei bakarrik aplikatzen zaie, ez edizioei edo lehendik dauden gastuei.
     - Gastu batek gehienez 999.999,99 izan dezake bere monetan, eta gehiago unitate txikiko monetetan, hala nola yenean edo Indonesiako rupian.
     - 133 moneta daude. Kriptomonetak eta metalak ez daude haien artean.
-    - Side Badger-ek ordainketak erregistratzen ditu. Ez du inoiz dirua mugitzen ez trukatzen.
-useCasesHeading: Hau non laguntzen duen
+    - Side Badger-ek ordainketak erregistratzen ditu. Ez du inoiz dirua mugitzen edo trukatzen.
+useCasesHeading: Honek non laguntzen duen
 faq:
   heading: Galderak
   items:

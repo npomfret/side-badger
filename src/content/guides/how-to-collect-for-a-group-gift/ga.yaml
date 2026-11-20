@@ -1,8 +1,8 @@
 translatedFrom: "5d92090e"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -36,7 +36,7 @@ sections:
   - heading: "Ceathrar cairde, seinnteoir ceirníní amháin, suim dhifriúil an duine"
     body: "Beidh Bea 30 bliain d'aois agus ba mhaith léi seinnteoir ceirníní. Tá Priya, Omar, Lena agus Sam chun ceann a cheannach di. Aimsíonn Priya ceann ar £240 agus ceannaíonn sí é ar a cárta féin, mar caithfidh duine éigin tosú. Ní chuireann an ceathrar isteach go cothrom. Cuireann Priya agus Omar £60 isteach an duine, Lena £80 agus Sam £40. Ní mhíníonn aon duine a shuim agus ní fhiafraíonn aon duine. Ceannaíonn Omar cárta beannachta agus páipéar bronntanais freisin ar £12. Síníonn an ceathrar acu an cárta, mar sin roinntear an ceann sin go cothrom."
   - heading: "Aontaigh an buiséad sula gcliceálann aon duine Ceannaigh"
-    body: "Sábhálann vótaíocht buiséid an argóint faoi bhord casta £400. Sa ghrúpa, roghnaigh **Cuir Vótaíocht Leis** agus fiafraigh cé mhéad ba cheart don bhronntanas a chostas. Déan suimeanna de na roghanna, mar suas le £150, suas le £200 agus suas le £250. Cuir **Vótáil gan ainm** ar siúl, a cheileann cé a vótáil ar son cad, ionas nach gcaithfidh aon duine uimhir níos lú a chosaint os ard. Ní féidir na socruithe a athrú a luaithe a chaitear an chéad vóta, mar sin seiceáil iad ar dtús. Ní dhúnann vótaíocht í féin. Nuair a bhíonn vóta caite ag gach duine, roghnaigh **Dún an vótaíocht** agus taispeántar an **Buaiteoir**. Aontaíonn an vótaíocht an t-iomlán. Ní shocraíonn sí sciar aon duine."
+    body: "Sábhálann vótaíocht buiséid an argóint faoi sheinnteoir ceirníní £400. Sa ghrúpa, roghnaigh **Cuir Vótaíocht Leis** agus fiafraigh cé mhéad ba cheart don bhronntanas a chostas. Déan suimeanna de na roghanna, mar suas le £150, suas le £200 agus suas le £250. Cuir **Vótáil gan ainm** ar siúl, a cheileann cé a vótáil ar son cad, ionas nach gcaithfidh aon duine uimhir níos lú a chosaint os ard. Ní féidir na socruithe a athrú a luaithe a chaitear an chéad vóta, mar sin seiceáil iad ar dtús. Ní dhúnann vótaíocht í féin. Nuair a bhíonn vóta caite ag gach duine, roghnaigh **Dún an vótaíocht** agus taispeántar an **Buaiteoir**. Aontaíonn an vótaíocht an t-iomlán. Ní shocraíonn sí sciar aon duine."
   - heading: "An cuntas a léamh"
     body: "Roinntear an bronntanas £60, £60, £80 agus £40, rud a dhéanann an £240 ar an admháil. Roinntear an cárta beannachta agus an páipéar bronntanais ceithre bhealach ar £3 an duine. Is é £60 + £3 bille Priya, mar sin £63, agus d'íoc sí £240, rud a fhágann £177 dlite di. Is £63 é bille Omar freisin, ach d'íoc sé £12, mar sin tá £51 dlite aige. Tá £80 + £3 dlite ag Lena, is é sin £83, agus tá £40 + £3 dlite ag Sam, is é sin £43. Is ionann an triúr sin le chéile agus £177 Priya. Dá bhfágfaí é mar atá, rithfeadh na fiacha cúig bhealach timpeall an ghrúpa. Molann Side Badger trí íocaíocht ina áit, gach ceann acu chuig Priya. Tá na sonraí le fáil ar [shocrú suas](page:feature/settle-up)."
   - heading: "Cuir isteach i Side Badger é"
@@ -94,7 +94,7 @@ faq:
   heading: "Ceisteanna"
   items:
     - q: "Cad má bhailímid níos mó ná costas an bhronntanais?"
-      a: "Caithfidh na méideanna cruinne praghas an bhronntanais a bhaint amach, mar sin gearr na sciar síos go dtí go ndéanann siad sin. Nó caith an breis ar rud éigin fíor, mar bhláthanna, agus cuir isteach é sin mar dhara costas, cosúil leis an gcárta agus leis an bpáipéar sa sampla."
+      a: "Caithfidh na méideanna cruinne praghas an bhronntanais a bhaint amach, mar sin gearr na scaireanna síos go dtí go ndéanann siad sin. Nó caith an breis ar rud éigin fíor, mar bhláthanna, agus cuir isteach é sin mar dhara costas, cosúil leis an gcárta agus leis an bpáipéar sa sampla."
     - q: "An féidir le duine ranníocaíocht a dhéanamh gan dul isteach sa ghrúpa?"
       a: "Ní féidir, más mian leat iad a bheith sa chomhaireamh. Teastaíonn cuntas saor in aisce ó gach duine sa roinnt agus caithfidh siad a bheith sa ghrúpa. I gcás duine nach bhfuil aige ach airgead tirim, d'fhéadfadh Priya é a ghlacadh agus an bronntanas a chur isteach ar an méid atá fós dlite ag an ngrúpa. Mar shampla, dá dtabharfadh Sam £40 in airgead tirim di, chuirfeadh sí £200 isteach agus roinnfeadh sí é 60, 60 agus 80 idir í féin, Omar agus Lena."
     - q: "An féidir leis an vótaíocht a shocrú cé mhéad a chuireann gach duine isteach?"

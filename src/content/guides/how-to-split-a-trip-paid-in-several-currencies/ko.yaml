@@ -1,8 +1,8 @@
 translatedFrom: "b85c0a15"
 review:
   status: checked
-  checker: "CF-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -35,7 +35,7 @@ cta:
   body: "무료 계정을 만들고, 여행 그룹을 시작하고, 영수증에 적힌 통화로 지출을 하나씩 추가하세요. 자세한 내용부터 보고 싶다면 [여러 통화](page:feature/multiple-currencies) 또는 [무료로 쓸 수 있는 범위](page:pricing)를 확인하세요."
 sections:
   - heading: "친구 셋, 호텔 하나, 엄청난 양의 엔"
-    body: "Zoe, Kenji, Lucy는 [그룹 여행](page:use-case/group-trips)으로 일본에서 일주일을 보내고, 모든 비용을 세 명이 똑같이 나눕니다. Zoe는 집에서 파운드로 호텔을 £600에 예약했습니다. Lucy는 도쿄에서 철도 패스를 ¥90,000에 샀고요. Kenji는 라멘의 밤 ¥9,000을 냈고, 그 뒤로 매일 그 얘기를 합니다. 역 승강장에서 영수증 세 장을 환산하고 싶은 사람은 없습니다. 여기서 계산할 때는 ¥1을 £0.005로 보는데, 이 가이드를 위해 지어낸 딱 떨어지는 환율이에요. 앱에서는 현재 환율을 쓰거나, 실제로 적용받은 환율을 직접 입력하면 됩니다."
+    body: "Zoe, Kenji, Lucy는 [그룹 여행](page:use-case/group-trips)으로 일본에서 일주일을 보내고, 모든 비용을 세 명이 똑같이 나눕니다. Zoe는 집에서 파운드로 호텔을 £600에 예약했습니다. Lucy는 도쿄에서 철도 패스를 ¥90,000에 샀고요. Kenji는 라멘값으로 ¥9,000을 냈고, 그 뒤로 매일 그 얘기를 합니다. 역 승강장에서 영수증 세 장을 환산하고 싶은 사람은 없습니다. 여기서 계산할 때는 ¥1을 £0.005로 보는데, 이 가이드를 위해 지어낸 딱 떨어지는 환율이에요. 앱에서는 현재 환율을 쓰거나, 실제로 적용받은 환율을 직접 입력하면 됩니다."
   - heading: "영수증에 적힌 돈으로 하나씩 입력하세요"
     body: "어느 방법을 고르든 이 부분은 똑같아요. 아직 환산할 것은 없습니다."
     items:
@@ -94,7 +94,7 @@ example:
       currency: JPY
       split:
         method: equal
-    - label: "라멘의 밤"
+    - label: "라멘값"
       payer: kenji
       amount: 9000
       currency: JPY

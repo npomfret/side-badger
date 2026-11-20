@@ -1,8 +1,8 @@
 translatedFrom: "8f38827e"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -39,7 +39,7 @@ sections:
       - "**Comhair na hoícheanta-duine.** Fanann Ana, Ben agus Chloe sé oíche an duine agus fanann Dev trí oíche: 6 + 6 + 6 + 3 = 21."
       - "**Cuir praghas ar cheann amháin.** €2,100 ÷ 21 = €100 as gach oíche-duine."
       - "**Méadaigh faoi líon oícheanta gach duine.** Íocann Ana, Ben agus Chloe 6 × €100 = €600 an duine. Íocann Dev 3 × €100 = €300."
-      - "**Seiceáil an t-iomlán.** €600 + €600 + €600 + €300 = €2,100. Mura ndéanann na sciar an praghas le chéile, tá oíche ar iarraidh nó comhairthe faoi dhó."
+      - "**Seiceáil an t-iomlán.** €600 + €600 + €600 + €300 = €2,100. Mura ndéanann na scaireanna an praghas le chéile, tá oíche ar iarraidh nó comhairthe faoi dhó."
   - heading: "Cuir isteach i Side Badger é"
     body: "Déan grúpa, tabhair cuireadh don triúr eile le nasc nó cód QR, ansin cuir na costais leis. An teach saoire ar dtús."
     items:
@@ -49,12 +49,12 @@ sections:
       - "Roghnaigh **Sábháil an Costas**."
       - "Cuir an cíos cairr leis ar an mbealach céanna. D'íoc Ben, is **Cothrom** an roinnt, agus fágtar Dev amach, mar tháinig sé ar an traein. Clúdaíonn [roinn costais](page:feature/split-expenses) na bealaí eile chun costas a roinnt."
       - "Cuir na hearraí grósaera leis. D'íoc Dev, is **Cothrom** an roinnt, agus tá an ceathrar acu istigh."
-  - heading: "Léigh an toradh, ansin socraigh suas"
+  - heading: "Léigh an toradh, ansin glan na fiacha"
     body: "Is é bille gach duine a sciar den teach saoire móide a sciar den charr agus den siopadóireacht. Tagann €725 an duine ar Ana, Ben agus Chloe, is é sin €600 + €80 + €45. Tagann €345 ar Dev, is é sin €300 + €45. Bain an méid a d'íoc gach duine agus tagann na hiarmhéideanna amach. D'íoc Ana €2,100, mar sin tá €1,375 dlite di. D'íoc Ben €240 agus tá €485 dlite aige. D'íoc Dev €180 agus tá €165 dlite aige. Níor íoc Chloe aon rud agus tá €725 dlite aici. Dá bhfágfaí na fiacha sin mar atá, rithfeadh siad sé bhealach timpeall an ghrúpa. Molann Side Badger trí íocaíocht ina n-ionad, iad uile chuig Ana. Íoc léi ar an gcaoi is fearr leat, ansin roghnaigh **Socraigh** agus úsáid **Taifead Socrú** do gach íocaíocht, ionas go mbeidh na hiarmhéideanna cothrom le dáta. Líonann na cnaipí Socrú gasta an méid isteach. Tá tuilleadh faoi [socrú suas](page:feature/settle-up)."
   - heading: "Nuair nach bhfuil praghas néata amháin ar an teach saoire"
     items:
       - "**Tá na seomraí éagsúil.** Má tá níos mó luach sa seomra is fearr ná sa seomra beag, aontaigh cad a chosnaíonn gach seomra ar dtús, ansin déan suimeanna na n-oícheanta-duine seomra amháin ag an am. Cuir an teach saoire isteach mar chostas amháin le hiomlán gach duine, nó mar chostas amháin in aghaidh an tseomra. Pé scéal é, caithfidh na méideanna cruinne ar chostas a iomlán a bhaint amach."
-      - "**Éarlais a íocadh míonna roimhe sin.** Faigheann an té a d'íoc í costas dá cuid féin, dátaithe an lá a d'íoc sé. Roinn de réir oícheanta é sna comhréireanna céanna leis an iarmhéid."
+      - "**Éarlais a íocadh míonna roimhe sin.** Faigheann an té a d'íoc í costas dá chuid féin, dátaithe an lá a d'íoc sé. Roinn de réir oícheanta é sna comhréireanna céanna leis an iarmhéid."
       - "**Tá an áirithint in airgeadra eile.** Cuir an teach saoire isteach san airgeadra inar íoc tú. Má thiontaíonn an grúpa de réir mar a théann sé ar aghaidh, úsáid ráta malairte reatha, nó clóscríobh an ráta a fuair tú i ndáiríre. Fanann an tsuim bhunaidh ar an gcostas. Tá na sonraí in [ilairgeadraí](page:feature/multiple-currencies)."
       - "**Oícheanta páirteacha.** Sroicheann duine ag meán oíche, fágann duine eile roimh bhricfeasta. Aontaigh riail amháin chun oícheanta a chomhaireamh agus úsáid í do gach duine."
   - heading: "Cad nach ndéanann Side Badger anseo"

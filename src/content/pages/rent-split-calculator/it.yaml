@@ -1,8 +1,8 @@
 translatedFrom: "76cb361e"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.copy-last-months-rent
@@ -24,12 +24,12 @@ sections:
       - "**In base alla dimensione della stanza.** Una parte dell'affitto paga la cucina, il bagno e il soggiorno, che usano tutti. Scegli tu quella quota (all'inizio è il 40%) e si divide in parti uguali. Il resto va in base alla superficie delle camere, così la camera grande paga di più e lo sgabuzzino ottiene lo sconto che si è guadagnato."
       - "**In base al reddito.** Ognuno paga la stessa fetta di affitto che guadagna sul totale. Aggiungi le bollette condivise e seguono le stesse quote."
   - heading: Come funzionano i conti
-    body: "Ogni persona ottiene una quota esatta, poi una percentuale intera, perché i numeri interi sono più facili da scrivere e da discutere. L'arrotondamento usa il metodo dei resti più alti: ognuno tiene il numero intero sotto la propria quota, e i punti che avanzano vanno a chi ne ha persi di più. Le percentuali sommano sempre 100. Nell'appartamento qui sotto, il 40% in comune fa il 13,33% a testa. La camera di Priya è di 16 dei 38 m² dell'appartamento, quindi 60% × 16/38 fa il 25,26%, più il 13,33% fa il 38,6%, che si arrotonda al 39%. Tom e Aisha arrivano al 32% e al 29%, e 39 + 32 + 29 fa 100. Ogni importo è quella percentuale dell'affitto: il 39% di 1.950 £ è 760,50 £."
+    body: "Ogni persona ottiene una quota esatta, poi una percentuale intera, perché i numeri interi sono più facili da scrivere e da discutere. L'arrotondamento usa il metodo dei resti più alti: ognuno tiene il numero intero sotto la propria quota, e i punti che avanzano vanno a chi ne ha persi di più. La somma delle percentuali è sempre 100. Nell'appartamento qui sotto, il 40% in comune fa il 13,33% a testa. La camera di Priya è di 16 dei 38 m² dell'appartamento, quindi 60% × 16/38 fa il 25,26%, più il 13,33% fa il 38,6%, che si arrotonda al 39%. Tom e Aisha arrivano al 32% e al 29%, e 39 + 32 + 29 fa 100. Ogni importo è quella percentuale dell'affitto: il 39% di 1.950 £ è 760,50 £."
   - heading: Poi scrivilo in Side Badger
     body: "Per la storia completa, metro compreso, vedi [come dividere l'affitto in base alla dimensione delle stanze](page:guide/how-to-split-rent-by-room-size), oppure [un partner che guadagna di più](page:guide/how-to-split-bills-with-a-partner-who-earns-more) per le coppie."
     items:
       - "**Aggiungi l'affitto.** Nel tuo gruppo, scegli **Aggiungi spesa**, indica chi ha pagato il padrone di casa sotto **Chi ha pagato?** e lascia tutti sotto **Dividi tra**."
-      - "**Scegli Percentuale.** Sotto **Come dividere**, scegli **Percentuale** e scrivi le percentuali intere. Il modulo ti avvisa se non sommano 100."
+      - "**Scegli Percentuale.** Sotto **Come dividere**, scegli **Percentuale** e scrivi le percentuali intere. Il modulo ti avvisa se la loro somma non è 100."
       - "**Copialo il mese dopo.** Apri l'affitto del mese scorso e scegli **Copia spesa**. La divisione viene con lui."
   - heading: Cosa non fa il calcolatore
     items:

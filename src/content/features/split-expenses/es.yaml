@@ -1,8 +1,8 @@
 translatedFrom: "da031409"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -31,7 +31,7 @@ problem:
 workflow:
   heading: Añadir un gasto, de principio a fin
   steps:
-    - title: Indica quién pagó y por qué
+    - title: Indica quién pagó y qué pagó
       body: Escribe el importe, una descripción corta y la persona que pagó. Una sola persona paga cada gasto, lo que mantiene honesta la aritmética.
       shot: S05
       shotAlt: El formulario de gasto con el alquiler de una casa rural dividido por porcentaje entre tres personas
@@ -51,7 +51,7 @@ options:
   heading: Tres formas de dividir
   items:
     - title: A partes iguales
-      body: Lo habitual para cenas, taxis y todo lo que todos compartieron a medias. Si el total no se divide exactamente, el céntimo sobrante va a una persona al azar, no siempre a la misma. En el taxi de abajo, le toca a Ana.
+      body: Lo habitual para cenas, taxis y todo lo que todos compartieron a partes iguales. Si el total no se divide exactamente, el céntimo sobrante va a una persona al azar, no siempre a la misma. En el taxi de abajo, le toca a Ana.
     - title: Por importes exactos
       body: Escribe lo que debe cada persona. Va bien para el regalo en el que cada uno eligió un precio distinto, o para la tienda donde el carrito de una persona llevaba más que la compra compartida. Los importes tienen que sumar el total.
     - title: Por porcentaje

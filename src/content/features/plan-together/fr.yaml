@@ -1,8 +1,8 @@
 translatedFrom: "bd4db653"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - comments.next-to-the-expense
   - reactions.celebrate-a-payment
@@ -20,7 +20,7 @@ navLabel: "Planifier ensemble"
 lead: "La liste de courses et la facture des courses, enfin en bons termes. Side Badger donne à votre groupe un endroit où parler d'argent avant et après l'avoir dépensé, avec des commentaires sur chaque dépense, un moyen de questionner celles qui semblent fausses, des listes partagées et des sondages pour les grandes décisions. Ensuite, vous [partagez les dépenses](page:feature/split-expenses) comme d'habitude."
 cta:
   heading: "Planifiez, puis partagez"
-  body: "Créez un compte gratuit, lancez un groupe et mettez la première liste, le premier sondage ou la première question juste à côté de l'argent. Vous ne savez pas ce qui se passe ensuite ? Voyez [comment ça marche](page:how-it-works)."
+  body: "Créez un compte gratuit, lancez un groupe et mettez la première liste, le premier sondage ou la première question juste à côté des dépenses. Vous ne savez pas ce qui se passe ensuite ? Voyez [comment ça marche](page:how-it-works)."
 problem:
   heading: "La discussion est ici, l'addition est là-bas"
   body: "Les dépenses de groupe vivent d'ordinaire à deux endroits. Les chiffres sont dans l'un, et la dispute sur les chiffres dans une discussion qui a défilé mardi. La liste de courses est une photo de frigo. La villa a été décidée par un pouce levé de la plupart des gens, probablement. Side Badger garde la planification dans le groupe, à côté des dépenses qu'elle concerne : il y a un commentaire là où est le coût, une liste là où sont les courses, un sondage pour la grande décision, et un moyen de dire « attendez, c'est bien ça ? » sans écrire un paragraphe. Tout cela reste centré sur l'argent du groupe, ce pour quoi le groupe existe."
@@ -35,7 +35,7 @@ workflow:
       body: "Lancez une liste partagée, ajoutez les articles et cochez-les à mesure qu'ils arrivent dans le caddie. Les courses entrent ensuite comme une dépense."
       shot: S16
       shotAlt: "Une liste de courses partagée avec quelques articles cochés et un compteur de progression"
-    - title: "Parlez du coût là où il vit"
+    - title: "Parlez du coût là où il est enregistré"
       body: "Commentez la dépense elle-même, joignez le reçu et réagissez avec un emoji. La conversation reste à côté du chiffre dont elle parle."
       shot: S08
       shotAlt: "Une dépense avec ses détails, une miniature de reçu, un fil de commentaires et des réactions emoji"
@@ -99,7 +99,7 @@ sections:
   - heading: "Le fil d'activité, pour que rien ne change en douce"
     body: "Chaque groupe a un historique d'activité, et la cloche de notifications rassemble l'activité de tous vos groupes au même endroit. Ajoutez une dépense et tout le monde la voit tout de suite, sans actualiser, et le fil montre ce qui a changé et qui l'a changé. Cela couvre les dépenses ajoutées, modifiées ou supprimées, les questions soulevées et fermées, les commentaires, les changements de listes et de sondages, et les paiements enregistrés."
   - heading: "Les notifications push, si vous les voulez"
-    body: "Les notifications push sont facultatives. Activez-les dans les **Paramètres** de votre compte, sous **Notifications**, et votre appareil vous prévient quand il y a de la nouvelle activité dans vos groupes, comme une nouvelle dépense ou un commentaire. Chaque appareil s'active séparément, et votre navigateur demande d'abord la permission. Sur un iPhone ou un iPad, elles ne fonctionnent que dans l'appli ajoutée à l'écran d'accueil, ce qu'explique la page [appli web](page:feature/web-app). Voyez-les comme un confort, pas une promesse, car la livraison n'est pas garantie."
+    body: "Les notifications push sont facultatives. Activez-les dans les **Paramètres** de votre compte, sous **Notifications**, et votre appareil vous prévient quand il y a de la nouvelle activité dans vos groupes, comme une nouvelle dépense ou un commentaire. Chaque appareil s'active séparément, et votre navigateur demande d'abord la permission. Sur un iPhone ou un iPad, elles ne fonctionnent que dans l'appli ajoutée à l'écran d'accueil, ce qu'explique la page [appli web](page:feature/web-app). Voyez-les comme un confort, pas une promesse, car la réception n'est pas garantie."
 limits:
   heading: Limites
   items:
@@ -109,7 +109,7 @@ limits:
     - "Un groupe peut contenir jusqu'à 100 listes, chacune avec jusqu'à 200 articles de 500 caractères au maximum. Les permissions du groupe décident qui peut créer, modifier et supprimer les listes, et un groupe verrouillé n'autorise aucun changement."
     - "Un groupe peut contenir jusqu'à 50 sondages, chacun avec de deux à dix options et jusqu'à dix votes par personne. Les sondages n'ont pas de date limite et ne se ferment pas tout seuls."
     - "L'historique d'activité est conservé 90 jours."
-    - "Les notifications push se choisissent pour chaque compte et chaque appareil. Elles demandent un navigateur qui les gère et votre permission, elles ne fonctionnent sur iPhone et iPad que depuis l'appli ajoutée à l'écran d'accueil, et la livraison n'est pas garantie. Il n'y a ni alerte par e-mail ou SMS pour l'activité ni rappel de paiement, donc relancer un paiement reste à votre charge."
+    - "Les notifications push se choisissent pour chaque compte et chaque appareil. Elles demandent un navigateur qui les gère et votre permission, elles ne fonctionnent sur iPhone et iPad que depuis l'appli ajoutée à l'écran d'accueil, et la réception n'est pas garantie. Il n'y a ni alerte par e-mail ou SMS pour l'activité ni rappel de paiement, donc relancer un paiement reste à votre charge."
 useCasesHeading: "Là où planifier ensemble aide"
 faq:
   heading: Questions

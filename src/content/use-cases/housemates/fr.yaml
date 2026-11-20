@@ -1,8 +1,8 @@
 translatedFrom: "f4e78952"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -27,12 +27,12 @@ meta:
   description: "Répartissez le loyer selon la taille des chambres, partagez l'énergie et les courses à parts égales, et voyez qui doit quoi à qui chaque mois. Une façon gratuite pour les colocataires de tenir le compte."
 h1: "Partager les factures du foyer entre colocataires"
 navLabel: Colocataires
-lead: "Pour le colocataire qui achète le papier toilette, et ceux qui ne voient jamais comment il arrive. Side Badger tient un seul compte courant du loyer, des factures et des courses pour les **colocataires**, pour que personne n'ait à relancer personne et que le frigo redevienne un simple frigo."
+lead: "Pour le colocataire qui achète le papier toilette, et ceux qui ne voient jamais comment il arrive. Side Badger tient un seul décompte à jour du loyer, des factures et des courses pour les **colocataires**, pour que personne n'ait à relancer personne et que le frigo redevienne un simple frigo."
 cta:
   heading: "Commencez par votre propre logement"
   body: "Créez un compte, faites un groupe pour le logement et envoyez à tout le monde le lien d'invitation. Les factures de ce mois peuvent y entrer dès ce soir."
 scenario:
-  heading: "Installez le logement"
+  heading: "Créez le groupe de la colocation"
   body: "Faites un groupe pour le logement, choisissez le nom sous lequel vous voulez qu'on vous voie, et invitez tout le monde avec un lien ou un code QR. Le groupe peut être ouvert, où chacun ajoute et modifie, ou géré, où les nouveaux membres ont besoin de l'approbation d'un admin et où seuls les créateurs et les admins peuvent modifier les dépenses, ce qui convient au colocataire qui tient les comptes. Celui qui veut juste regarder les chiffres peut être spectateur : il voit tout et ne change rien. Chacun voit une nouvelle dépense tout de suite, donc « je l'ajouterai plus tard » a moins de cachettes."
 sections:
   - heading: "Le loyer et les factures"
@@ -44,9 +44,9 @@ sections:
       - "**À parts égales** convient à ce que tout le monde utilise à peu près autant, comme internet, les produits d'entretien et les courses communes. C'est rapide, et personne n'a à se disputer sur les calculs."
       - "**Selon la taille de la chambre** convient au loyer, parce que les chambres diffèrent et que ce que chacun veut payer pour elles aussi. Convenez des pourcentages une fois, à l'arrivée de quelqu'un, et réutilisez-les chaque mois."
       - "**Selon l'usage** convient aux factures où une personne utilise clairement plus, comme le chauffage d'un bureau à domicile ou un compte de streaming que deux personnes regardent. Laissez de côté ceux qui n'y ont pas pris part, ou saisissez des montants exacts pour chacun."
-      - "Quel que soit votre choix, convenez-en avant la première facture plutôt qu'après la première dispute, et écrivez la règle quelque part où tout le logement peut la voir."
+      - "Quel que soit votre choix, convenez-en avant la première facture plutôt qu'après la première dispute, et écrivez la règle quelque part où tous les colocataires peuvent la voir."
   - heading: "Quand quelqu'un déménage"
-    body: "Il règle d'abord. Personne ne peut quitter un groupe tant qu'il doit de l'argent ou qu'on lui en doit, donc celui qui part paie ou est payé, vous l'enregistrez, puis il s'en va. Continuez le groupe pour les colocataires qui restent et invitez la nouvelle personne avec un lien. Quand le logement lui-même est terminé, un admin peut verrouiller le groupe pour que les chiffres ne bougent plus, ou le fermer pour de bon, ce qui le rend inaccessible à tous : ne le faites donc que quand plus personne n'a besoin de l'historique."
+    body: "Il règle d'abord. Personne ne peut quitter un groupe tant qu'il doit de l'argent ou qu'on lui en doit, donc celui qui part paie ou est payé, vous l'enregistrez, puis il s'en va. Continuez le groupe pour les colocataires qui restent et invitez la nouvelle personne avec un lien. Quand la colocation prend fin, un admin peut verrouiller le groupe pour que les chiffres ne bougent plus, ou le fermer pour de bon, ce qui le rend inaccessible à tous : ne le faites donc que quand plus personne n'a besoin de l'historique."
 exampleAfter: 2
 example:
   heading: "Qui doit quoi à qui ce mois-ci"
@@ -86,12 +86,12 @@ example:
       amount: 80
       split:
         method: equal
-featuresHeading: "Les fonctionnalités qu'un logement utilise"
+featuresHeading: "Les fonctionnalités qu'une colocation utilise"
 faq:
   heading: Questions
   items:
     - q: "Le loyer peut-il se répéter automatiquement ?"
-      a: "Non, il n'y a pas de factures récurrentes. Copiez le loyer du mois dernier en quelques touches, changez la date et c'est fait."
+      a: "Non, il n'y a pas de factures récurrentes. Copiez le loyer du mois dernier en quelques appuis, changez la date et c'est fait."
     - q: "Peut-on partager selon la taille des chambres ?"
       a: "Side Badger peut partager le loyer par pourcentage, ce qui vous permet de donner à chaque colocataire un pourcentage qui reflète la taille de sa chambre. Les pourcentages doivent faire 100 au total. [Partager les dépenses](page:feature/split-expenses) présente les autres façons de partager."
     - q: "Et si un colocataire déménage en devant de l'argent ?"

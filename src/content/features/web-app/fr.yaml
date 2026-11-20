@@ -1,8 +1,8 @@
 translatedFrom: "27875e9f"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - home-screen.opens-like-an-app
   - live-updates.everyone-sees-it-straight-away
@@ -18,7 +18,7 @@ meta:
   description: "Téléphone plein ? On comprend. Side Badger tourne dans le navigateur : ni magasin d'applis ni téléchargement. Sur l'écran d'accueil, il s'ouvre comme une appli."
 h1: "Pas de magasin d'applis. Pas de téléchargement. Et pourtant, l'effet d'une appli"
 navLabel: "Appli web"
-lead: "Side Badger vit dans votre navigateur. Pas de magasin d'applis à fouiller, rien à télécharger d'abord. Connectez-vous sur un téléphone ou un ordinateur, partagez les dépenses en ligne avec votre groupe, et ajoutez-le à votre écran d'accueil ou à votre Dock quand vous le voulez à un toucher de distance."
+lead: "Side Badger vit dans votre navigateur. Pas de magasin d'applis à fouiller, rien à télécharger d'abord. Connectez-vous sur un téléphone ou un ordinateur, partagez les dépenses en ligne avec votre groupe, et ajoutez-le à votre écran d'accueil ou à votre Dock pour y accéder d'un simple appui."
 cta:
   heading: "Ouvrez. Connectez-vous. Lancez un groupe."
   body: "Créez un compte, lancez un groupe et ajoutez la première dépense, le tout depuis le navigateur que vous avez déjà ouvert. Envie de la visite d'abord ? Voyez [comment ça marche](page:how-it-works), ou regardez [ce que couvre la gratuité](page:pricing)."
@@ -51,7 +51,7 @@ options:
       body: "Choisissez **Fichier**, puis **Ajouter au Dock**."
 sections:
   - heading: "Des notifications, seulement si vous en voulez"
-    body: "Les notifications push se choisissent. Activez-les et vous recevez une notification quand il y a de la nouvelle activité dans vos groupes, comme quelqu'un qui ajoute une dépense, laisse un commentaire ou enregistre un paiement. Elles s'activent appareil par appareil, depuis la cloche de notifications ou depuis les **Paramètres**, et vous pouvez les désactiver au même endroit. Elles demandent un navigateur qui les gère et votre permission. Si votre navigateur les a bloquées pour le site, autorisez-les d'abord dans ses paramètres. Sur un iPhone ou un iPad, elles ne fonctionnent que depuis l'appli ajoutée à l'écran d'accueil, pas depuis un onglet du navigateur. La livraison n'est pas garantie, donc voyez une notification comme un coup de coude, pas une promesse. Pour ce qui apparaît dans le fil, voyez [planifier ensemble](page:feature/plan-together)."
+    body: "Les notifications push se choisissent. Activez-les et vous recevez une notification quand il y a de la nouvelle activité dans vos groupes, comme quelqu'un qui ajoute une dépense, laisse un commentaire ou enregistre un paiement. Elles s'activent appareil par appareil, depuis la cloche de notifications ou depuis les **Paramètres**, et vous pouvez les désactiver au même endroit. Elles demandent un navigateur qui les gère et votre permission. Si votre navigateur les a bloquées pour le site, autorisez-les d'abord dans ses paramètres. Sur un iPhone ou un iPad, elles ne fonctionnent que depuis l'appli ajoutée à l'écran d'accueil, pas depuis un onglet du navigateur. La réception n'est pas garantie, donc voyez une notification comme un rappel, pas une promesse. Pour ce qui apparaît dans le fil, voyez [planifier ensemble](page:feature/plan-together)."
   - heading: "Des mises à jour immédiates, sans bouton d'actualisation"
     body: "Ajoutez une dépense et tout le monde la voit tout de suite, avec ce qui a changé et qui l'a changé. Chaque groupe garde un historique d'activité, et la cloche de notifications montre l'activité de tous vos groupes. Personne n'a à demander si vous avez vu ce que vous venez d'ajouter. C'est déjà sur son écran."
   - heading: "39 langues, chacun la sienne"
@@ -69,7 +69,7 @@ limits:
     - "Il n'y a pas d'usage hors ligne. Side Badger a besoin d'une connexion, donc il n'ouvrira pas votre groupe dans un avion sans wifi."
     - "Il n'y a pas d'appli dans un magasin d'applis, ni d'appli native pour iPhone ou Android. Side Badger est une appli web, et l'ajouter à votre écran d'accueil ou à votre Dock est la façon d'obtenir la version qui ressemble à une appli."
     - "L'ajout à un écran d'accueil ou à un Dock dépend de votre navigateur. Le nom des menus varie selon les navigateurs et leurs versions, et certains navigateurs ne le proposent pas."
-    - "Les notifications push se choisissent appareil par appareil, et demandent un navigateur qui les gère et votre permission. Sur un iPhone ou un iPad, elles ne fonctionnent que depuis l'appli ajoutée à l'écran d'accueil. La livraison n'est pas garantie."
+    - "Les notifications push se choisissent appareil par appareil, et demandent un navigateur qui les gère et votre permission. Sur un iPhone ou un iPad, elles ne fonctionnent que depuis l'appli ajoutée à l'écran d'accueil. La réception n'est pas garantie."
     - "Il n'y a ni alerte par e-mail ou SMS ni rappel de paiement. La nouvelle activité apparaît dans l'appli, et sous forme de notifications push si vous les activez. Relancer un paiement reste à votre charge."
     - "L'activité est conservée 90 jours."
     - "Vous vous connectez avec une adresse e-mail et un mot de passe. Il n'y a pas de connexion Google ou Apple, et il faut avoir 18 ans ou plus."
@@ -85,7 +85,7 @@ faq:
     - q: "Marche-t-il hors ligne ?"
       a: "Side Badger a besoin d'une connexion internet et n'a pas de mode hors ligne. L'ajouter à votre écran d'accueil ou à votre Dock n'y change rien."
     - q: "Pourquoi n'ai-je pas de notifications sur mon iPhone ?"
-      a: "Sur un iPhone ou un iPad, les notifications ne fonctionnent que depuis l'appli ajoutée à l'écran d'accueil, pas depuis un onglet du navigateur. Ajoutez-la, ouvrez-la depuis l'icône de l'écran d'accueil, puis activez les notifications dans les **Paramètres**. La livraison n'est pas garantie, donc si l'une manque, l'historique d'activité du groupe montre quand même ce qui a été ajouté."
+      a: "Sur un iPhone ou un iPad, les notifications ne fonctionnent que depuis l'appli ajoutée à l'écran d'accueil, pas depuis un onglet du navigateur. Ajoutez-la, ouvrez-la depuis l'icône de l'écran d'accueil, puis activez les notifications dans les **Paramètres**. La réception n'est pas garantie, donc si l'une manque, l'historique d'activité du groupe montre quand même ce qui a été ajouté."
     - q: "Dois-je activer les notifications ?"
       a: "Non. Elles sont désactivées tant que vous ne les activez pas, un appareil à la fois. Sans elles, la nouvelle activité apparaît quand même dans l'appli, et chacun voit un changement tout de suite quand il l'a ouverte."
     - q: "Chaque personne du groupe a-t-elle besoin d'un compte ?"

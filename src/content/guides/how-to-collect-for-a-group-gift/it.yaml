@@ -1,8 +1,8 @@
 translatedFrom: "5d92090e"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - groups.group-per-house-trip-event
   - invites.link-or-qr-code
@@ -33,12 +33,12 @@ sections:
   - heading: "Concordate il budget prima che qualcuno clicchi su Acquista"
     body: "Un sondaggio sul budget evita la discussione su un giradischi da 400 £. Nel gruppo scegli **Aggiungi sondaggio** e chiedi quanto deve costare il regalo. Fai in modo che le opzioni siano importi, come fino a 150 £, fino a 200 £ e fino a 250 £. Attiva **Voto anonimo**, che nasconde chi ha votato cosa, così nessuno deve difendere ad alta voce una cifra più bassa. Le impostazioni non si possono cambiare dopo il primo voto, quindi controllale prima. Un sondaggio non si chiude da solo. Quando tutti hanno votato, scegli **Chiudi sondaggio** e compare il **Vincitore**. Il sondaggio concorda il totale. Non stabilisce la quota di nessuno."
   - heading: "Leggere il conto"
-    body: "Il regalo si divide in 60 £, 60 £, 80 £ e 40 £, che messe insieme fanno le 240 £ dello scontrino. Il biglietto e la carta da regalo si dividono in quattro, 3 £ a testa. La parte di Priya è 60 £ + 3 £, cioè 63 £, e lei ha pagato 240 £, quindi deve ricevere 177 £. Anche la parte di Omar è 63 £, ma lui ha pagato 12 £, quindi ne deve 51 £. Lena deve 80 £ + 3 £, cioè 83 £, e Sam deve 40 £ + 3 £, cioè 43 £. Questi tre sommano i 177 £ di Priya. Se non facessi niente, i debiti girerebbero in cinque direzioni nel gruppo. Side Badger suggerisce invece tre pagamenti, tutti a Priya. [Saldare i conti](page:feature/settle-up) ha i dettagli."
+    body: "Il regalo si divide in 60 £, 60 £, 80 £ e 40 £, che messe insieme fanno le 240 £ dello scontrino. Il biglietto e la carta da regalo si dividono in quattro, 3 £ a testa. La parte di Priya è 60 £ + 3 £, cioè 63 £, e lei ha pagato 240 £, quindi deve ricevere 177 £. Anche la parte di Omar è 63 £, ma lui ha pagato 12 £, quindi ne deve 51 £. Lena deve 80 £ + 3 £, cioè 83 £, e Sam deve 40 £ + 3 £, cioè 43 £. La somma di questi tre importi è pari ai 177 £ di Priya. Se non facessi niente, i debiti girerebbero in cinque direzioni nel gruppo. Side Badger suggerisce invece tre pagamenti, tutti a Priya. [Saldare i conti](page:feature/settle-up) ha i dettagli."
   - heading: "Mettilo in Side Badger"
     body: "Per Priya ci vogliono circa cinque minuti."
     items:
       - "**Crea il gruppo.** Nella dashboard scegli **Crea gruppo**. Scegli **Invita altri** e manda il link o il codice QR alle persone che partecipano alla colletta, e a nessun altro."
-      - "**Aggiungi il regalo.** Scegli **Aggiungi spesa**, descrivila, scrivi 240 e in **Chi ha pagato?** scegli Priya. Lascia tutti e quattro in **Dividi tra**, poi in **Come dividere** scegli **Importi esatti** e scrivi 60, 60, 80 e 40. Gli importi devono sommare a 240. Se vuoi, allega la conferma dell'ordine. Scegli **Salva spesa**."
+      - "**Aggiungi il regalo.** Scegli **Aggiungi spesa**, descrivila, scrivi 240 e in **Chi ha pagato?** scegli Priya. Lascia tutti e quattro in **Dividi tra**, poi in **Come dividere** scegli **Importi esatti** e scrivi 60, 60, 80 e 40. La somma degli importi deve essere 240. Se vuoi, allega la conferma dell'ordine. Scegli **Salva spesa**."
       - "**Aggiungi il biglietto.** Omar aggiunge da solo le 12 £, sceglie se stesso in **Chi ha pagato?** e lascia **Come dividere** su **Uguale**, con tutte e quattro le persone spuntate."
       - "**Conta, poi paga.** Tutti controllano i **Saldi**, che mostrano chi deve cosa a chi, e mandano a Priya la propria parte come preferiscono. Poi la registrano con **Salda** e **Registra saldo**. Il saldo rapido compila l'importo."
   - heading: "Prima compri, o prima raccogli"
@@ -46,7 +46,7 @@ sections:
     items:
       - "**Prima compri.** Chi compra paga, aggiunge la spesa al prezzo vero e tutti vedono subito la propria parte. È più ordinato, ma chi compra si porta il costo finché gli altri non pagano, quindi scegli qualcuno che può permetterselo."
       - "**Prima raccogli.** Le persone mandano la propria cifra a chi compra prima dell'acquisto. Quando hai il prezzo, inserisci il regalo, poi registra ogni pagamento con la data in cui i soldi sono davvero passati. Aggiungi prima il regalo, così ogni pagamento ha un saldo su cui posarsi."
-      - "**Il prezzo cambia.** La consegna, un codice sconto, un aumento dell'ultimo momento. Modifica il regalo e cambia gli importi esatti in modo che sommino ancora. La versione precedente resta salvata, ma avvisa prima il gruppo, perché i loro saldi cambiano."
+      - "**Il prezzo cambia.** La consegna, un codice sconto, un aumento dell'ultimo momento. Modifica il regalo e cambia gli importi esatti in modo che la loro somma corrisponda ancora al totale. La versione precedente resta salvata, ma avvisa prima il gruppo, perché i loro saldi cambiano."
   - heading: "Tieni Bea fuori"
     body: "Solo i membri di un gruppo possono vederlo, quindi Bea non può vedere un gruppo di cui non fa parte. Invita chi partecipa alla colletta e nessun altro. Un link funziona finché non scade, e puoi scegliere da 15 minuti a 5 giorni, quindi scegli una durata breve e manda il link dove Bea non lo vedrà. Il link mostra un'anteprima del gruppo a chiunque lo apra, quindi dai al gruppo un nome noioso, come Colletta del sabato, e tieni il nome di Bea fuori anche dalle etichette delle spese e dalle opzioni del sondaggio."
   - heading: "Cosa Side Badger non fa qui"
@@ -89,7 +89,7 @@ faq:
   heading: "Domande"
   items:
     - q: "E se raccogliamo più di quanto costa il regalo?"
-      a: "Gli importi esatti devono sommare al prezzo, quindi riduci le quote finché tornano. Oppure metti il sovrappiù in qualcosa di concreto, come dei fiori, e inseriscilo come seconda spesa, come il biglietto e la carta da regalo nell'esempio."
+      a: "La somma degli importi esatti deve corrispondere al prezzo, quindi riduci le quote finché tornano. Oppure metti il sovrappiù in qualcosa di concreto, come dei fiori, e inseriscilo come seconda spesa, come il biglietto e la carta da regalo nell'esempio."
     - q: "Qualcuno può contribuire senza entrare nel gruppo?"
       a: "Non se vuoi che sia nel conto. Tutti quelli nella divisione hanno bisogno di un account gratuito e di stare nel gruppo. Per chi ha solo contanti, Priya potrebbe prenderli e inserire il regalo per quello che il gruppo deve ancora. Per esempio, se Sam le desse 40 £ in contanti, lei inserirebbe un regalo da 200 £ diviso 60, 60 e 80 tra sé, Omar e Lena."
     - q: "Il sondaggio può decidere quanto mette ciascuno?"

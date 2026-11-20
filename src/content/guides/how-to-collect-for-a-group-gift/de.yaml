@@ -1,8 +1,8 @@
 translatedFrom: "5d92090e"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -28,7 +28,7 @@ meta:
   description: "Alle legen verschieden viel zusammen, und eine Karte zahlt zuerst. Stimmt das Budget per Umfrage ab, gebt genaue Beträge ein, Side Badger rechnet."
 h1: "So sammelst du Geld für ein Gruppengeschenk"
 navLabel: "Für ein Geschenk sammeln"
-lead: "Für ein Gruppengeschenk zu sammeln heißt: Eine Person legt das Geld aus, und alle anderen schulden ihr ihren Beitrag. Einigt euch per Umfrage auf ein Budget, lasst die kaufende Person das Geschenk auf ihre Karte legen und tragt es dann als eine Ausgabe mit [genauen Beträgen](page:feature/split-expenses) ein, mit einer Zahl für jede Person. Side Badger zeigt, wer wie viel an die kaufende Person schuldet, und alle schicken ihren Anteil, wie sie wollen."
+lead: "Für ein Gruppengeschenk zu sammeln heißt: Eine Person legt das Geld aus, und alle anderen schulden ihr ihren Beitrag. Einigt euch per Umfrage auf ein Budget, lasst die kaufende Person das Geschenk auf ihre Karte legen und tragt es dann als eine Ausgabe mit [genauen Beträgen](page:feature/split-expenses) ein, mit einer Zahl für jede Person. Side Badger zeigt, wer der kaufenden Person wie viel schuldet, und alle schicken ihren Anteil, wie sie wollen."
 cta:
   heading: "Den Hut herumreichen, ganz ohne Hut"
   body: "Erstelle eine Gruppe, lass die Person, die das Geschenk bekommt, draußen und trage das Geschenk mit genauen Beträgen ein. Side Badger ist kostenlos, ohne Werbung und ohne Tageslimits. Willst du erst einen Rundgang? Dann schau dir an, [wie es funktioniert](page:how-it-works), oder [was kostenlos alles umfasst](page:pricing)."
@@ -36,8 +36,8 @@ sections:
   - heading: "Vier Freunde, ein Plattenspieler, vier verschiedene Summen"
     body: "Bea wird 30 und wünscht sich einen Plattenspieler. Priya, Omar, Lena und Sam schenken ihr einen. Priya findet einen für 240 £ und kauft ihn mit ihrer eigenen Karte, weil jemand den Anfang machen muss. Die vier zahlen nicht gleich viel. Priya und Omar legen je 60 £ rein, Lena 80 £ und Sam 40 £. Niemand erklärt seine Zahl, und niemand fragt. Omar kauft außerdem eine Grußkarte und Geschenkpapier für 12 £. Alle vier unterschreiben die Grußkarte, also wird sie gleichmäßig geteilt."
   - heading: "Einigt euch aufs Budget, bevor jemand auf Kaufen klickt"
-    body: "Eine Budget-Umfrage erspart dir den Streit um einen Plattenspieler für 400 £. Wähle in der Gruppe **Umfrage hinzufügen** und frag, wie viel das Geschenk kosten soll. Mach die Optionen zu Beträgen, etwa bis 150 £, bis 200 £ und bis 250 £. Schalte **Anonyme Abstimmung** ein, die verbirgt, wer wofür gestimmt hat, damit niemand eine kleinere Zahl laut verteidigen muss. Die Einstellungen lassen sich nicht mehr ändern, sobald die erste Stimme drin ist, prüfe sie also vorher. Eine Umfrage schließt sich nicht von selbst. Wenn alle abgestimmt haben, wähle **Umfrage schließen**, und der **Gewinner** erscheint. Die Umfrage einigt die Gruppe auf die Gesamtsumme. Den Anteil einer einzelnen Person legt sie nicht fest."
-  - heading: "Die Zählung lesen"
+    body: "Eine Budget-Umfrage erspart dir den Streit um einen Plattenspieler für 400 £. Wähle in der Gruppe **Umfrage hinzufügen** und frag, wie viel das Geschenk kosten soll. Mach die Optionen zu Beträgen, etwa bis 150 £, bis 200 £ und bis 250 £. Schalte **Anonyme Abstimmung** ein, die verbirgt, wer wofür gestimmt hat, damit niemand eine kleinere Zahl laut verteidigen muss. Die Einstellungen lassen sich nicht mehr ändern, sobald die erste Stimme drin ist, prüfe sie also vorher. Eine Umfrage schließt sich nicht von selbst. Wenn alle abgestimmt haben, wähle **Umfrage schließen**, und der **Gewinner** erscheint. Mit der Umfrage einigt sich die Gruppe auf die Gesamtsumme. Den Anteil einer einzelnen Person legt sie nicht fest."
+  - heading: "Die Rechnung im Überblick"
     body: "Das Geschenk teilt sich in 60 £, 60 £, 80 £ und 40 £, zusammen die 240 £ vom Beleg. Grußkarte und Geschenkpapier teilen sich vierfach zu je 3 £. Priyas Rechnung ist 60 £ + 3 £, also 63 £, und sie hat 240 £ bezahlt, bekommt also 177 £. Omars Rechnung ist ebenfalls 63 £, aber er hat 12 £ bezahlt, also schuldet er 51 £. Lena schuldet 80 £ + 3 £, das sind 83 £, und Sam schuldet 40 £ + 3 £, das sind 43 £. Diese drei ergeben zusammen Priyas 177 £. Ließe man alles, wie es ist, liefen die Schulden auf fünf Wegen durch die Gruppe. Side Badger schlägt stattdessen drei Zahlungen vor, alle an Priya. [Abrechnen](page:feature/settle-up) hat die Einzelheiten."
   - heading: "In Side Badger eintragen"
     body: "Priyas Teil dauert etwa fünf Minuten."
@@ -57,8 +57,8 @@ sections:
   - heading: "Was Side Badger hier nicht tut"
     items:
       - "Es verwahrt oder sammelt das Geld nicht. Beiträge gehen per Banküberweisung, bar oder womit auch immer ihr zahlt an die kaufende Person, und dann erfasst jemand sie."
-      - "Es sendet keine Zahlungserinnerungen. Wer noch nicht gezahlt hat, anzustupsen bleibt Menschensache."
-      - "Es berechnet niemandes Anteil. Eine Umfrage einigt auf das Budget, und es gibt keine Option \"den Rest teilen\", du tippst also jeden Betrag selbst ein."
+      - "Es sendet keine Zahlungserinnerungen. Diejenigen anzustupsen, die noch nicht gezahlt haben, bleibt Menschensache."
+      - "Es berechnet niemandes Anteil. Per Umfrage einigt sich die Gruppe auf das Budget, und es gibt keine Option \"den Rest teilen\", du tippst also jeden Betrag selbst ein."
       - "Jede Ausgabe hat eine zahlende Person. Haben zwei Leute verschiedene Teile des Geschenks gekauft, trage zwei Ausgaben ein."
       - "Alle in der Aufteilung brauchen ein kostenloses Konto und einen Platz in der Gruppe."
 exampleAfter: 2
@@ -98,4 +98,4 @@ faq:
     - q: "Kann jemand etwas beitragen, ohne der Gruppe beizutreten?"
       a: "Nicht, wenn die Person in der Zählung auftauchen soll. Alle in der Aufteilung brauchen ein kostenloses Konto und einen Platz in der Gruppe. Bei jemandem, der nur Bargeld hat, könnte Priya es nehmen und das Geschenk nur in der Höhe eintragen, die die Gruppe noch schuldet. Gibt Sam ihr zum Beispiel 40 £ bar, trägt sie 200 £ ein und teilt sie 60, 60 und 80 auf sich, Omar und Lena auf."
     - q: "Kann die Umfrage entscheiden, wie viel jede Person beiträgt?"
-      a: "Nein. Eine Umfrage einigt die Gruppe auf eine Zahl für alle, etwa das Budget. Der Anteil jeder Person ist etwas, worauf ihr euch untereinander einigt, und dann tippst du ihn als **Genaue Beträge** in die Ausgabe ein."
+      a: "Nein. Mit einer Umfrage einigt sich die Gruppe auf eine Zahl für alle, etwa das Budget. Der Anteil jeder Person ist etwas, worauf ihr euch untereinander einigt, und dann tippst du ihn als **Genaue Beträge** in die Ausgabe ein."

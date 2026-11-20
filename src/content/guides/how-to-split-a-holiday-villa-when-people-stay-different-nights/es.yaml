@@ -1,8 +1,8 @@
 translatedFrom: "8f38827e"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -24,7 +24,7 @@ datePublished: 2026-10-22
 meta:
   title: "Divide una villa según las noches de cada uno | Side Badger"
   description: "Dev solo vino tres noches, ¿por qué iba a pagar seis? Divide una villa de vacaciones según las noches que se quedó cada uno, con las cuentas hechas."
-h1: "Cómo dividir una villa de vacaciones cuando cada uno se queda noches distintas"
+h1: "Cómo dividir una villa de vacaciones cuando cada uno se queda un número distinto de noches"
 navLabel: "Villa según las noches"
 lead: "Calcula el precio por persona y noche, multiplícalo por las noches de cada uno e introduce la villa como **un solo gasto con importes exactos**. Side Badger lleva la cuenta y sugiere una lista corta de pagos cuando toca saldar."
 cta:
@@ -50,7 +50,7 @@ sections:
       - "Añade el alquiler del coche de la misma manera. Pagó Ben, la división es **Igual** y Dev queda fuera, porque vino en tren. [Dividir gastos](page:feature/split-expenses) explica las otras formas de repartir un gasto."
       - "Añade la compra. Pagó Dev, la división es **Igual** y están las cuatro personas."
   - heading: "Lee el resultado y salda cuentas"
-    body: "La cuenta de cada persona es su parte de la villa más su parte del coche y de la compra. Ana, Ben y Chloe salen a 725 € cada uno, que son 600 € + 80 € + 45 €. Dev sale a 345 €, que son 300 € + 45 €. Resta lo que pagó cada persona y salen los saldos. Ana pagó 2.100 €, así que le deben 1.375 €. Ben pagó 240 € y debe 485 €. Dev pagó 180 € y debe 165 €. Chloe no pagó nada y debe 725 €. Si se dejaran tal cual, esas deudas recorrerían el grupo de seis maneras. Side Badger sugiere tres pagos, todos para Ana. Págale como queráis, después elige **Liquidar** y usa **Registrar liquidación** para cada pago, para que los saldos se pongan al día. Los botones de liquidación rápida rellenan el importe. Hay más sobre [saldar cuentas](page:feature/settle-up)."
+    body: "La cuenta de cada persona es su parte de la villa más su parte del coche y de la compra. Ana, Ben y Chloe salen a 725 € cada uno, que son 600 € + 80 € + 45 €. Dev sale a 345 €, que son 300 € + 45 €. Resta lo que pagó cada persona y salen los saldos. Ana pagó 2.100 €, así que le deben 1.375 €. Ben pagó 240 € y debe 485 €. Dev pagó 180 € y debe 165 €. Chloe no pagó nada y debe 725 €. Si se dejaran tal cual, esas deudas recorrerían el grupo de seis maneras. Side Badger sugiere tres pagos, todos para Ana. Pagadle como queráis, después elige **Liquidar** y usa **Registrar liquidación** para cada pago, para que los saldos se pongan al día. Los botones de liquidación rápida rellenan el importe. Hay más sobre [saldar cuentas](page:feature/settle-up)."
   - heading: "Cuando la villa no tiene un precio tan ordenado"
     items:
       - "**Las habitaciones son distintas.** Si la suite vale más que el cuartito, acordad primero cuánto cuesta cada habitación y haced las cuentas de personas-noche habitación por habitación. Introducid la villa como un solo gasto con el total de cada persona, o como un gasto por habitación. En cualquier caso, los importes exactos de un gasto tienen que sumar su total."

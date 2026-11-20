@@ -1,8 +1,8 @@
 translatedFrom: "f4e78952"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -41,9 +41,9 @@ scenario:
   body: Lag en gruppe for hjemmet, velg navnet du vil at folk skal se der, og inviter alle med en lenke eller QR-kode. Gruppen kan være åpen, der alle legger til og redigerer, eller administrert, der nye medlemmer trenger en administrators godkjenning og bare opprettere og administratorer kan endre utgifter, noe som passer for romkameraten som fører regnskapet. Den som bare vil følge med på tallene, kan være seer, som ser alt og ikke endrer noe. Alle ser en ny utgift med en gang, så «jeg legger det inn senere» har færre steder å gjemme seg.
 sections:
   - heading: Husleie og regninger
-    body: "Husleien lar seg sjelden dele på fire, for soverom er ikke like. Del den etter prosent, så det store rommet betaler mer og skapet med vindu betaler mindre. Prosentene må summere seg til 100. Regninger alle bruker, får en lik deling, og en romkamerat som ikke var med på en utgift, kan stå utenfor den. Når en lik deling etterlater en odde øre, går den til én person tilfeldig. Det finnes ingen gjentakende regninger, så hver måned kopierer du forrige måneds husleie, endrer datoen og går videre."
+    body: "Husleien lar seg sjelden dele på fire, for soverom er ikke like. Del den etter prosent, så det store rommet betaler mer og skapet med vindu betaler mindre. Prosentene må summere seg til 100. Regninger alle bruker, får en lik deling, og en romkamerat som ikke var med på en utgift, kan stå utenfor den. Når en lik deling etterlater et øre til overs, går det til én person tilfeldig. Det finnes ingen gjentakende regninger, så hver måned kopierer du forrige måneds husleie, endrer datoen og går videre."
   - heading: Felles handling
-    body: "Ha den felles handlelisten i samme gruppe som handleregningene, og kryss av varer etter hvert som de havner i vogna. Den som handler, legger inn kvitteringssummen som en utgift og deler den likt, eller bare mellom dem som skal spise det. Hvem som stadig kjøper havremelken ingen andre drikker, forblir en sak for huset, men utgiftslisten blir i det minste riktig. Gruppens tillatelser bestemmer hvem som kan opprette og redigere lister. Setter du husleien, regningene og handlingen sammen, får du en måned som den nedenfor, i et hjem med fire: Jo betaler 2 000 £ i husleie, delt 30%, 25%, 25% og 20% etter romstørrelse, deretter betaler Kwame 120 £ for strøm, Lena 40 £ for internett og Matt 80 £ for dagligvarer, hver delt likt. Jo ender med 1 340 £ til gode, og Side Badger foreslår tre betalinger, alle til Jo."
+    body: "Ha den felles handlelisten i samme gruppe som handleregningene, og kryss av varer etter hvert som de havner i vogna. Den som handler, legger inn kvitteringssummen som en utgift og deler den likt, eller bare mellom dem som skal spise det. Hvem som stadig kjøper havremelken ingen andre drikker, forblir en sak for huset, men utgiftslisten blir i det minste riktig. Gruppens tillatelser bestemmer hvem som kan opprette og redigere lister. Setter du husleien, regningene og handlingen sammen, får du en måned som den nedenfor, i et hjem med fire: Jo betaler 2 000 £ i husleie, delt 30 %, 25 %, 25 % og 20 % etter romstørrelse, deretter betaler Kwame 120 £ for energi, Lena 40 £ for internett og Matt 80 £ for dagligvarer, hver delt likt. Jo ender med 1 340 £ til gode, og Side Badger foreslår tre betalinger, alle til Jo."
   - heading: Rettferdige måter å dele husholdningsutgifter på
     items:
       - "**Likt** passer for det alle bruker omtrent like mye, som internett, rengjøringsmidler og felles handling. Det går raskt, og ingen trenger å krangle om regnestykket."
@@ -51,7 +51,7 @@ sections:
       - "**Etter bruk** passer for regninger der én person tydelig bruker mer, som oppvarmingen av et hjemmekontor eller en strømmekonto bare to ser på. La dem som ikke var med på det stå utenfor, eller legg inn nøyaktige beløp for hver person."
       - "Uansett hva du velger, bli enige om det før den første regningen heller enn etter den første krangelen, og skriv regelen ned et sted hele huset ser den."
   - heading: Når noen flytter ut
-    body: De gjør opp først. Ingen kan forlate en gruppe mens de skylder eller har penger til gode, så den som drar, betaler eller får betalt, dere registrerer det, og så drar de. La gruppen leve videre for romkameratene som blir igjen, og inviter den nye personen med en lenke. Når selve hjemmet er ferdig, kan en administrator låse gruppen så tallene blir stående, eller lukke den for godt, noe som gjør den utilgjengelig for alle, så gjør bare det når ingen trenger historikken.
+    body: De gjør opp først. Ingen kan forlate en gruppe mens de skylder eller har penger til gode, så den som drar, betaler eller får betalt, dere registrerer det, og så drar de. La gruppen leve videre for romkameratene som blir igjen, og inviter den nye personen med en lenke. Når dere ikke lenger bor sammen, kan en administrator låse gruppen så tallene blir stående, eller lukke den for godt, noe som gjør den utilgjengelig for alle, så gjør bare det når ingen trenger historikken.
 exampleAfter: 2
 example:
   heading: Hvem som skylder hvem denne måneden

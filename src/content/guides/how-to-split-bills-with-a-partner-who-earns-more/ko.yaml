@@ -1,8 +1,8 @@
 translatedFrom: "92a9bff3"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -64,7 +64,7 @@ sections:
     items:
       - "수입이 얼마인지 묻지 않고, 비율도 계산해 주지 않습니다. 합의한 숫자를 직접 입력하세요."
       - "그룹 전체의 기본 분할을 정할 수 없습니다. 비율은 지출마다 들어가므로, 이미 비율이 들어 있는 지출을 복사하세요."
-      - "반복 청구서가 없으므로 매번 지난달 월세를 복사합니다."
+      - "자동 반복 지출이 없으므로 매번 지난달 월세를 복사합니다."
       - "돈을 옮기지 않습니다. 원하는 방법으로 서로 지불하고 기록하세요."
 exampleAfter: 2
 example:

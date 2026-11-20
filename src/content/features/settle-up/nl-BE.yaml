@@ -1,8 +1,8 @@
 translatedFrom: "57622bd0"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - balances.who-owes-whom
   - balances.short-list-of-payments
@@ -23,7 +23,7 @@ identicalApproved:
   - example.expenses.1.label
 meta:
   title: "Reken af met minder betalingen | Side Badger"
-  description: "Zie wie wie iets schuldig is in je groep, krijg een korte lijst betalingen die iedereen afrekent en registreer elke betaling zodra ze gebeurt. Gratis te gebruiken."
+  description: "Zie wie wie iets schuldig is in je groep, krijg een korte lijst betalingen waarmee iedereen quitte staat en registreer elke betaling zodra ze gebeurt. Gratis te gebruiken."
 h1: "Reken af met minder betalingen"
 navLabel: "Afrekenen"
 lead: "Side Badger houdt een lopend saldo bij voor iedereen in de groep en stelt een korte lijst betalingen voor die het regelt. Jullie betalen elkaar zoals jullie willen en registreren het dan. Wil je eerst zien hoe de bedragen verdeeld worden, begin dan met [uitgaven verdelen](page:feature/split-expenses)."
@@ -34,14 +34,14 @@ problem:
   heading: "Saldi die meteen bijgewerkt worden"
   body: "Elke uitgave verandert wie wie iets schuldig is, dus Side Badger houdt de saldi actueel naarmate er uitgaven en betalingen bijkomen. Iedereen in de groep ziet een wijziging meteen, en ziet wat er veranderd is en wie dat deed. Saldi worden per valuta bijgehouden, dus euro’s en ponden blijven in hun eigen kolom, tenzij een uitgave bij het invoeren omgerekend werd. Standaard zie je de schulden waarbij jij betrokken bent; **Alles tonen** toont de hele groep."
 workflow:
-  heading: "Drie stappen naar quitte"
+  heading: "In drie stappen quitte"
   steps:
     - title: "Zie wie wie iets schuldig is"
-      body: "Open de saldi van de groep om te zien wat je schuldig bent, wat je tegoed hebt en een korte lijst betalingen die iedereen afrekent, per valuta berekend. Betwiste uitgaven blijven buiten de sommen tot ze geregeld zijn. In het voorbeeld met huisgenoten hieronder worden zes betalingen twee."
+      body: "Open de saldi van de groep. Daar zie je per valuta wat je schuldig bent en wat je tegoed hebt, plus een korte lijst betalingen waarmee iedereen quitte staat. Betwiste uitgaven blijven buiten de sommen tot ze geregeld zijn. In het voorbeeld met huisgenoten hieronder worden zes betalingen twee."
       shot: S10
       shotAlt: "Het saldoscherm met vereenvoudigde schulden in twee valuta’s, met Alles tonen ingeschakeld"
     - title: "Betaal zoals je wilt en registreer het dan"
-      body: "Bankoverschrijving, cash, een gunst die nog openstaat van de vorige vakantie. Side Badger verplaatst het geld niet. Zodra het van hand gewisseld is, registreer je de betaling en het saldo wordt voor iedereen bijgewerkt."
+      body: "Bankoverschrijving, cash, een gunst die nog openstaat van de vorige vakantie. Side Badger verplaatst het geld niet. Zodra het geld van eigenaar gewisseld is, registreer je de betaling en het saldo wordt voor iedereen bijgewerkt."
       shot: S11
       shotAlt: "Het betalingsformulier met knoppen voor snel afrekenen en de melding bij een gedeeltelijke betaling"
     - title: "Controleer of het aangekomen is"

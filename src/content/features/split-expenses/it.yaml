@@ -1,8 +1,8 @@
 translatedFrom: "da031409"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -32,7 +32,7 @@ workflow:
       shot: S05
       shotAlt: Il modulo della spesa con l'affitto di un cottage diviso per percentuale tra tre persone
     - title: Scegli la divisione
-      body: Scegli parti uguali, importi esatti o percentuali. Le percentuali devono sommare a 100 e gli importi esatti devono sommare al totale.
+      body: Scegli parti uguali, importi esatti o percentuali. Le percentuali devono dare 100 come somma e la somma degli importi esatti deve corrispondere al totale.
       shot: S06
       shotAlt: Il modulo della spesa con gli importi esatti inseriti per ogni persona per un regalo
     - title: Aggiungi la storia
@@ -49,7 +49,7 @@ options:
     - title: In parti uguali
       body: L'impostazione predefinita per cene, taxi e tutto ciò che tutti hanno condiviso allo stesso modo. Se il totale non si divide in modo esatto, il centesimo di troppo va a una persona a caso, non sempre alla stessa. Nel taxi qui sotto, tocca ad Ana.
     - title: Per importi esatti
-      body: Scrivi quanto deve ciascuno. Va bene per il regalo in cui ognuno ha scelto un prezzo diverso, o per la spesa in cui il carrello di una persona conteneva più della spesa condivisa. Gli importi devono sommare al totale.
+      body: Scrivi quanto deve ciascuno. Va bene per il regalo in cui ognuno ha scelto un prezzo diverso, o per la spesa in cui il carrello di una persona conteneva più della spesa condivisa. La somma degli importi deve corrispondere al totale.
     - title: Per percentuale
       body: Dai a ogni persona una quota del totale. L'affitto in base alla dimensione delle stanze è il classico, con la stanza più grande che paga la quota più grande e nessuno che finge il contrario.
 example:
@@ -111,7 +111,7 @@ limits:
   items:
     - Una sola persona paga ogni spesa. Se hanno pagato in due, registra due spese.
     - Non c'è la divisione per voce né per quote. Parti uguali, importi esatti e percentuali sono ciò che c'è.
-    - Le percentuali devono sommare a 100.
+    - Le percentuali devono dare 100 come somma.
     - Una spesa può arrivare a 999.999,99 nella sua valuta, e di più per le valute con unità piccole, con i decimali abituali di quella valuta.
     - Le spese non possono ripetersi da sole. Copia invece quella del mese scorso.
     - Le date non possono essere nel futuro né risalire a più di 10 anni fa.

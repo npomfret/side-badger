@@ -1,8 +1,8 @@
 translatedFrom: "8f38827e"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -47,10 +47,10 @@ sections:
       - Sørg for, at alle fire er med under **Fordel mellem**.
       - Vælg **Præcise beløb** under **Hvordan skal det fordeles**. Skriv 600 for Ana, Ben og Chloe og 300 for Dev. Beløbene skal give totalen.
       - Vælg **Gem udgift**.
-      - Tilføj biludlejningen på samme måde. Ben betalte, delingen er **Ligeligt**, og Dev er udeladt, fordi han kom med tog. [Del udgifter](page:feature/split-expenses) gennemgår de andre måder at dele en udgift på.
+      - Tilføj billejen på samme måde. Ben betalte, delingen er **Ligeligt**, og Dev er udeladt, fordi han kom med tog. [Del udgifter](page:feature/split-expenses) gennemgår de andre måder at dele en udgift på.
       - Tilføj dagligvarerne. Dev betalte, delingen er **Ligeligt**, og alle fire er med.
   - heading: Læs resultatet, og gør op
-    body: "Hver persons regning er andelen af villaen plus andelen af bilen og indkøbet. Ana, Ben og Chloe lander på 725 € hver, hvilket er 600 € + 80 € + 45 €. Dev lander på 345 €, hvilket er 300 € + 45 €. Træk fra, hvad hver person betalte, så falder saldiene ud af sig selv. Ana betalte 2.100 €, så hun har 1.375 € til gode. Ben betalte 240 € og skylder 485 €. Dev betalte 180 € og skylder 165 €. Chloe betalte ingenting og skylder 725 €. Lod man dem ligge, ville gælden løbe seks veje rundt i gruppen. Side Badger foreslår i stedet tre betalinger, alle til Ana. Betal hende, som I vil, vælg så **Afregn**, og brug **Registrer afregning** for hver betaling, så saldiene følger med. Hurtigafregningsknapperne udfylder beløbet. Der er mere om at [gøre op](page:feature/settle-up)."
+    body: "Hver persons regning er andelen af villaen plus andelen af bilen og indkøbet. Ana, Ben og Chloe lander på 725 € hver, hvilket er 600 € + 80 € + 45 €. Dev lander på 345 €, hvilket er 300 € + 45 €. Træk fra, hvad hver person betalte, så får du saldiene. Ana betalte 2.100 €, så hun har 1.375 € til gode. Ben betalte 240 € og skylder 485 €. Dev betalte 180 € og skylder 165 €. Chloe betalte ingenting og skylder 725 €. Lod man dem ligge, ville gælden løbe seks veje rundt i gruppen. Side Badger foreslår i stedet tre betalinger, alle til Ana. Betal hende, som I vil, vælg så **Afregn**, og brug **Registrer afregning** for hver betaling, så saldiene følger med. Hurtigafregningsknapperne udfylder beløbet. Der er mere om at [gøre op](page:feature/settle-up)."
   - heading: Når villaen ikke har én ryddelig pris
     items:
       - "**Værelserne er forskellige.** Hvis suiten er mere værd end pulterkammeret, så aftal først, hvad hvert værelse koster, og lav så personnat-regnestykket ét værelse ad gangen. Indtast villaen som én udgift med alles total eller som én udgift pr. værelse. Under alle omstændigheder skal de præcise beløb på en udgift give dens total."
@@ -87,7 +87,7 @@ example:
           ben: 600
           chloe: 600
           dev: 300
-    - label: biludlejningen
+    - label: billejen
       payer: ben
       amount: 240
       split:
@@ -105,7 +105,7 @@ faq:
   heading: Spørgsmål om villaen
   items:
     - q: Hvad hvis nogen melder afbud?
-      a: Tag deres nætter ud, regn efter, og redigér villaudgiften, så de præcise beløb igen giver prisen. Den tidligere version bliver gemt, og ændringen vises i gruppens aktivitet, så ingen ændrer et tal i stilhed. Hvem der må redigere, afhænger af gruppens rettigheder.
+      a: Tag deres nætter ud, regn efter, og redigér villaudgiften, så de præcise beløb igen giver prisen. Den tidligere version bliver gemt, og ændringen vises i gruppens aktivitet, så ingen ændrer et tal i stilhed. Hvem der må redigere, afhænger af gruppens tilladelser.
     - q: Skal den, der bookede, betale mindre?
       a: Det er op til gruppen. At booke er en pligt, og grupper er uenige om, om den fortjener rabat. Uanset hvad I aftaler, så læg det ind i de præcise beløb, og skriv det i en note på udgiften eller i en kommentar ved siden af den, så ingen skal huske aftalen.
     - q: Kan vi dele rengøringsgebyrer anderledes?

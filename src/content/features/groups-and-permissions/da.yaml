@@ -1,8 +1,8 @@
 translatedFrom: "1071b584"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -81,7 +81,7 @@ sections:
       - "**Lås** fryser ændringer, til en administrator låser op. Alle kan stadig læse gruppen og dens historik."
       - "**Luk** er permanent og gælder for alle. Kun en administrator kan gøre det, ved at skrive gruppens navn for at bekræfte, og ingen kan åbne gruppen igen."
   - heading: At forlade en gruppe
-    body: Alle kan forlade en gruppe, når de har gjort op. Du kan ikke forlade den, mens du skylder eller er til gode i bare én valuta, mens et åbent spørgsmål om en udgift involverer dig, eller hvis du er den sidste administrator eller det eneste medlem. [Registrer betalingen](page:feature/settle-up), få styr på [udgiftsspørgsmålet](page:guide/what-to-do-when-someone-disputes-a-shared-expense), eller gør en anden til administrator, og gå så. For at komme tilbage skal du have en ny invitation.
+    body: Alle kan forlade en gruppe, når de har gjort op. Du kan ikke forlade den, mens du skylder eller har penge til gode i bare én valuta, mens et åbent spørgsmål om en udgift involverer dig, eller hvis du er den sidste administrator eller det eneste medlem. [Registrer betalingen](page:feature/settle-up), få styr på [udgiftsspørgsmålet](page:guide/what-to-do-when-someone-disputes-a-shared-expense), eller gør en anden til administrator, og gå så. For at komme tilbage skal du have en ny invitation.
 limits:
   heading: "Inden for rimelighedens grænser: det med småt"
   items:
@@ -90,7 +90,7 @@ limits:
     - Hvis redigering af udgifter sættes til **Kun administratorer**, betyder det også, at kun administratorer kan tilføje udgifter.
     - En lås stopper ændringer af udgifter, nye betalinger, lister og afstemninger. Alle kan stadig læse gruppen og dens historik og reagere på betalinger.
     - Lukning er permanent. Appen kan ikke genåbne en lukket gruppe.
-    - Et nyt invitationslink annullerer ikke de gamle. Hvert link gælder, til det udløber, så vælg et kort, hvis du er nervøs for, hvor det kan ende.
+    - Et nyt invitationslink annullerer ikke de gamle. Hvert link gælder, til det udløber, så vælg en kort udløbstid, hvis du er nervøs for, hvor det kan ende.
     - Invitationer i appen viser folk fra dine 10 senest aktive grupper. Alle andre skal have linket, og hvem der må invitere, afhænger af gruppens tilladelser.
     - For at deltage skal man have en konto, og man skal bekræfte sin e-mailadresse, før man kan tilføje noget.
 useCasesHeading: Hvor lidt orden gør godt
@@ -100,7 +100,7 @@ faq:
     - q: Kan en seer tilføje udgifter?
       a: Nej. En seer ser alt og ændrer intet. Vedkommende kan ikke tilføje eller redigere udgifter eller lister, invitere folk eller ændre indstillinger.
     - q: Kan nogen forlade gruppen, mens de skylder penge?
-      a: Nej. Ingen kan forlade en gruppe, mens de skylder eller er til gode i bare én valuta. Gør op først, og gå så.
+      a: Nej. Ingen kan forlade en gruppe, mens de skylder eller har penge til gode i bare én valuta. Gør op først, og gå så.
     - q: Hvad sker der, når en gruppe lukkes?
       a: Ingen kan åbne den igen. Kun en administrator kan lukke en gruppe, vedkommende skal skrive gruppens navn for at bekræfte, og gruppen bliver utilgængelig for alle. Vil du bare stoppe ændringer, så lås den. Vil du bare have den væk fra dit eget dashboard, så arkiver den.
     - q: Kan jeg fortryde en lås?

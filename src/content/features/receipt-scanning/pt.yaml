@@ -1,8 +1,8 @@
 translatedFrom: "42f5cf35"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
@@ -56,7 +56,7 @@ limits:
     - "Só imagens. JPEG, PNG e WebP, e HEIC depois de convertido. Os PDF podem ser anexados a uma despesa, mas não são lidos."
     - "A digitalização é só para despesas novas. Numa despesa existente podes anexar recibos, mas nada é lido."
     - "Só preenche os campos em que ainda não mexeste, e a moeda apenas se o teu grupo o permitir."
-    - "Não divide por item nem atribui itens a pessoas. Preenche uma despesa e tu divides-a como de costume."
+    - "Não divide por item nem atribui itens a pessoas. Preenche uma despesa e tu divide-la como de costume."
     - "Não há promessa de que o que preenche esteja certo, nem de que a digitalização funcione sempre. Confirma antes de guardar e adiciona a despesa à mão se a digitalização falhar ou não estiver disponível."
     - "Uma despesa comporta até três anexos, cada um até 10 MB, em JPEG, PNG, WebP, HEIC ou PDF."
     - "As imagens dos recibos são lidas pelo Google Vertex AI (Gemini) na multirregião dos EUA da Google, e os recibos anexados são visíveis para os membros do grupo."
@@ -65,7 +65,7 @@ faq:
   heading: "Perguntas"
   items:
     - q: "Consegue dividir um recibo por item?"
-      a: "Não. Preenche a despesa, incluindo o total, e tu divides-a em partes iguais, por valores exatos ou por percentagem. Para uma conta em que cada pessoa pediu coisas diferentes, introduz o que cada uma deve como valores exatos. [Dividir despesas](page:feature/split-expenses) tem os detalhes."
+      a: "Não. Preenche a despesa, incluindo o total, e tu divide-la em partes iguais, por valores exatos ou por percentagem. Para uma conta em que cada pessoa pediu coisas diferentes, introduz o que cada uma deve como valores exatos. [Dividir despesas](page:feature/split-expenses) tem os detalhes."
     - q: "Consegue ler um PDF?"
       a: "Não. Podes anexar um PDF a uma despesa para ele viajar com os números, mas só as imagens são lidas."
     - q: "Há limite de digitalizações?"

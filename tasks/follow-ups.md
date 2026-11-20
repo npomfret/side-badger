@@ -32,7 +32,7 @@ The site redesign (restructure task, homepage task and release 1 of [the site pl
 
 ## Fluent review
 
-Every localized page is `checked` (independently back-translated by an agent) and `noindex`. A fluent human reviews a complete locale (all published pages) in one pass and records `reviewed` with their name and date; only then is the locale indexed. Agents never write `reviewed`. Agents may run `review-translations` as a pre-review pass.
+Every localized page is `checked` (independently back-translated by an agent) and `noindex`. Before a marketing drive, the owner wants a detailed human review. Its input is [docs/fluent-review-notes.md](../docs/fluent-review-notes.md): a full Codex review of 22 locales on 20 November 2026, with points left for a fluent human. 16 locales (cs, el, fi, hr, hu, id, is, lv, ph, pl, sl, sr, sv, sw, tr, uk) have not had that review. A fluent human reviews a complete locale (all published pages) in one pass and records `reviewed` with their name and date; only then is the locale indexed. Agents never write `reviewed`. Agents may run `review-translations` as a pre-review pass.
 
 Open questions for reviewers:
 - whether `pricing.faq.q2.answer` quotes the English terms or a translation (locales differ);

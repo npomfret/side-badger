@@ -1,8 +1,8 @@
 translatedFrom: "42f5cf35"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
@@ -19,14 +19,14 @@ cta:
   body: 创建免费账户，建一个群组，添加一笔带收据照片的支出。看看它填了什么，不对的地方改掉，满意了就保存。
 problem:
   heading: 没人想在排队等出租车时敲收据
-  body: 旅行和大型聚会都会带来纸质收据。晚餐、出租车、不知怎么喝到第六轮的那一轮酒。冻着手指对着手机一笔笔敲，身后还排着队，支出就是这样被遗忘的。所以 Side Badger 会替你读收据。它写初稿，由你来核对。它适合[团体旅行](page:use-case/group-trips)和[活动和庆祝](page:use-case/events-and-celebrations)，那里的收据堆得比谁都不想处理的速度还快。
+  body: 旅行和大型聚会都会带来纸质收据。晚餐、出租车、不知怎么喝到第六轮的那一轮酒。冻着手指对着手机一笔笔敲，身后还排着队，支出就是这样被遗忘的。所以 Side Badger 会替你读收据。它写初稿，由你来核对。它适合[团体旅行](page:use-case/group-trips)和[活动和庆祝](page:use-case/events-and-celebrations)，那里的收据越堆越多，谁都不想收拾。
 workflow:
   heading: 三步从照片到支出
   steps:
     - title: 给新支出添加收据
       body: 开始一笔新支出，点击**扫描收据**，或者使用仪表板上的**扫描收据**快捷操作。拍一张照片，或选一张已有的。表单上的**添加收据或附件**也可以。
     - title: 让它读收据
-      body: Side Badger 的 AI 读取图片时，表单会显示**正在分析收据...**。然后它会填入找到的内容，比如描述、总额、货币、日期、时间和地点。你已经输入的内容不会被动。
+      body: Side Badger 的 AI 读取图片时，表单会显示**正在分析收据...**。然后它会填入找到的内容，比如描述、总额、货币、日期、时间和地点。你已经输入的内容不会被改动。
       shot: S09
       shotAlt: 新支出表单先显示“正在分析收据...”，然后是填好详情后的同一张表单
     - title: 核对，然后分摊

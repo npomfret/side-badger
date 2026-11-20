@@ -1,8 +1,8 @@
-translatedFrom: "3e39d035"
+translatedFrom: "62f45051"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - multi-currency.currency-count
   - multi-currency.currency-rules
@@ -98,7 +98,7 @@ sections:
   - heading: Skylder euro, betaler i pund
     body: Betalt i yen, men gør I op i pund? Det går fint. Når du registrerer en betaling, kan du omregne den også, så den, der skylder euro, kan betale i pund, og eurosaldoen stadig stemmer. Betal hinanden, som I vil, og registrer det bagefter.
   - heading: Regler for gruppen
-    body: Begræns en gruppe til de valutaer, I rent faktisk bruger, og sæt en standard, så formularen åbner på den rigtige. En ferie i Portugal behøver ikke 139 andre valg ved siden af middagsregningen, og et [bryllup i udlandet](page:use-case/events-and-celebrations) behøver nok to.
+    body: Begræns en gruppe til de valutaer, I rent faktisk bruger, og sæt en standard, så formularen åbner på den rigtige. En ferie i Portugal behøver ikke 132 andre valg ved siden af middagsregningen, og et [bryllup i udlandet](page:use-case/events-and-celebrations) behøver nok to.
 limits:
   heading: Grænser
   items:
@@ -115,7 +115,7 @@ faq:
     - q: Hvilken valutakurs bruger I?
       a: Side Badger henter en valutakurs, når du vælger at omregne en udgift, hvor en kurs er tilgængelig. Du kan ændre den til den kurs, du faktisk fik, og det omregnede beløb opdateres.
     - q: Bliver gamle udgifter omvurderet?
-      a: Nej. Kursen fastlåses, når udgiften gemmes, så en saldo ikke driver, fordi markedet gjorde.
+      a: Nej. Kursen fastlåses, når udgiften gemmes, og en saldo ændrer sig ikke, blot fordi markedet gør det.
     - q: Understøtter I kryptovaluta?
       a: Nej. Der er 133 valutaer, og kryptovalutaer er ikke iblandt dem.
     - q: Er der en grænse for, hvor stor en udgift kan være?

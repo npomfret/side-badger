@@ -1,8 +1,8 @@
 translatedFrom: "44e97219"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - accounts.all-you-need-is-an-email
   - permissions.viewer-sees-everything
@@ -36,7 +36,7 @@ groups:
       - q: 忘记密码了？
         a: 再优秀的獾也会遇到这种事。在**登录**界面选择**忘记密码？**，输入你账户的电子邮箱，然后点开我们发来的邮件里的链接设置新密码。账户还需要什么，见[使用方式](page:how-it-works)。
       - q: 我已经注册了，却什么都添加不了。为什么？
-        a: 最常见的原因是你的电子邮箱还没验证，请点开验证邮件里的链接，或在提醒横幅上选择**重新发送验证邮件**来获取新的一封。如果已经验证，那么可能是群组被锁定了，或者它的权限不允许你操作；查看者能看到一切，却什么也改不了，详见[群组与权限](page:feature/groups-and-permissions)。
+        a: 最常见的原因是你的电子邮箱还没验证，请点开验证邮件里的链接，或在提醒横幅上选择**重新发送验证邮件**来获取新的一封。如果已经验证，那么可能是群组被锁定了，或者它的权限不允许你操作；观察者能看到一切，却什么也改不了，详见[群组与权限](page:feature/groups-and-permissions)。
       - q: 怎么更改我的电子邮箱或密码？
         a: 在**设置**里选择**更改电子邮件**或**更改密码**。两者都会先要求输入你当前的密码，新的邮箱地址则需要通过我们发到那里的链接来验证。账户相关内容见[使用方式](page:how-it-works)。
       - q: 可以用 Google 或 Apple 登录吗？

@@ -1,8 +1,8 @@
 translatedFrom: "f4e78952"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -42,9 +42,9 @@ scenario:
   body: Lav en gruppe til huset, vælg det navn, du vil have, at folk ser dig som, og inviter alle med et link eller en QR-kode. Gruppen kan være åben, hvor alle tilføjer og redigerer, eller administreret, hvor nye medlemmer skal godkendes af en administrator, og kun oprettere og administratorer kan ændre udgifter, hvilket passer til bofællen, der fører regnskabet. Den, der bare vil følge med i tallene, kan være seer, som ser alt og ikke ændrer noget. Alle ser en ny udgift med det samme, så »jeg tilføjer den senere« har færre steder at gemme sig.
 sections:
   - heading: Husleje og regninger
-    body: "Husleje går sjældent op i fire, for værelser er ikke ens. Del den i procent, så det store værelse betaler mere, og skabet med et vindue betaler mindre. Procenterne skal give 100 i alt. Regninger, alle bruger, får en ligelig deling, og en bofælle, der ikke var med i en udgift, kan udelades af den. Når en ligelig deling efterlader et ulige øre, går det til én person tilfældigt. Der er ingen tilbagevendende regninger, så hver måned kopierer du sidste måneds husleje, ændrer datoen og kører videre."
+    body: "Husleje går sjældent op i fire, for værelser er ikke ens. Del den i procent, så det store værelse betaler mere, og skabet med et vindue betaler mindre. Procenterne skal give 100 i alt. Regninger, alle bruger, får en ligelig deling, og en bofælle, der ikke var med i en udgift, kan udelades af den. Når en ligelig deling efterlader et overskydende øre, går det til én person tilfældigt. Der er ingen tilbagevendende regninger, så hver måned kopierer du sidste måneds husleje, ændrer datoen og kører videre."
   - heading: De fælles indkøb
-    body: "Hav den fælles indkøbsliste i samme gruppe som indkøbsregningerne, og kryds varer af, efterhånden som de lander i indkøbsvognen. Den, der handler ind, tilføjer kvitteringens total som en udgift og deler den ligeligt eller kun mellem dem, der skal spise det. Hvem der bliver ved med at købe den havremælk, ingen andre drikker, er fortsat en sag for huset, men udgiftslisten bliver i det mindste korrekt. Gruppens rettigheder afgør, hvem der kan oprette og redigere lister. Læg huslejen, regningerne og indkøbene sammen, og du får en måned som den nedenfor, i et hus med fire: Jo betaler 2.000 £ i husleje, delt 30 %, 25 %, 25 % og 20 % efter værelsesstørrelse, så betaler Kwame 120 £ for energi, Lena 40 £ for internet og Matt 80 £ for dagligvarer, hver delt ligeligt. Jo ender med 1.340 £ til gode, og Side Badger foreslår tre betalinger, alle til Jo."
+    body: "Hav den fælles indkøbsliste i samme gruppe som indkøbsregningerne, og kryds varer af, efterhånden som de lander i indkøbsvognen. Den, der handler ind, tilføjer kvitteringens total som en udgift og deler den ligeligt eller kun mellem dem, der skal spise det. Hvem der bliver ved med at købe den havremælk, ingen andre drikker, er fortsat en sag for huset, men udgiftslisten bliver i det mindste korrekt. Gruppens tilladelser afgør, hvem der kan oprette og redigere lister. Læg huslejen, regningerne og indkøbene sammen, og du får en måned som den nedenfor, i et hus med fire: Jo betaler 2.000 £ i husleje, delt 30 %, 25 %, 25 % og 20 % efter værelsesstørrelse, så betaler Kwame 120 £ for energi, Lena 40 £ for internet og Matt 80 £ for dagligvarer, hver delt ligeligt. Jo ender med 1.340 £ til gode, og Side Badger foreslår tre betalinger, alle til Jo."
   - heading: Retfærdige måder at dele husholdningsudgifter på
     items:
       - "**Ligeligt** passer til det, alle bruger omtrent lige meget, som internet, rengøringsartikler og de fælles indkøb. Det er hurtigt, og ingen behøver skændes om regnestykket."
@@ -52,7 +52,7 @@ sections:
       - "**Efter brug** passer til regninger, hvor én person tydeligvis bruger mere, som en varmeregning til hjemmekontoret eller en streamingkonto, kun to ser. Udelad dem, der ikke var med, eller indtast nøjagtige beløb for hver person."
       - "Uanset hvad du vælger, så aftal det før den første regning frem for efter det første skænderi, og skriv reglen ned et sted, hele huset kan se."
   - heading: Når nogen flytter ud
-    body: De gør først op. Ingen kan forlade en gruppe, mens de skylder eller er til gode, så den, der flytter, betaler eller får betaling, I registrerer det, og så går vedkommende. Lad gruppen køre videre for de bofæller, der bliver, og inviter den nye med et link. Når selve huset er slut, kan en administrator låse gruppen, så tallene bliver stående, eller lukke den for altid, hvilket gør den utilgængelig for alle, så gør kun det, når ingen længere har brug for historikken.
+    body: De gør først op. Ingen kan forlade en gruppe, mens de skylder eller har penge til gode, så den, der flytter, betaler eller får betaling, I registrerer det, og så går vedkommende. Lad gruppen køre videre for de bofæller, der bliver, og inviter den nye med et link. Når I ikke længere bor sammen, kan en administrator låse gruppen, så tallene bliver stående, eller lukke den for altid, hvilket gør den utilgængelig for alle, så gør kun det, når ingen længere har brug for historikken.
 exampleAfter: 2
 example:
   heading: Hvem skylder hvem denne måned
@@ -101,7 +101,7 @@ faq:
     - q: Kan vi dele efter værelsesstørrelse?
       a: Side Badger kan dele huslejen i procent, så du kan give hver bofælle en procentdel, der afspejler størrelsen på vedkommendes værelse. Procenterne skal give 100 i alt. [Del udgifter](page:feature/split-expenses) gennemgår de andre måder at dele på.
     - q: Hvad hvis en bofælle flytter ud og skylder penge?
-      a: Vedkommende kan ikke forlade gruppen, før der er gjort op, fordi ingen kan forlade den, mens de skylder eller er til gode. Tallene bliver ærlige, indtil alle står lige.
+      a: Vedkommende kan ikke forlade gruppen, før der er gjort op, fordi ingen kan forlade den, mens de skylder eller har penge til gode. Tallene bliver ærlige, indtil alle står lige.
     - q: Betaler Side Badger regningerne?
       a: Nej. Den fører regnskabet og foreslår en kort liste over betalinger. I betaler hinanden, som I vil, og registrerer det bagefter, som [gør op](page:feature/settle-up) forklarer.
     - q: Kan én bofælle føre regnskabet?

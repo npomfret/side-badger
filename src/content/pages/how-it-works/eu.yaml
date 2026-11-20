@@ -1,8 +1,8 @@
 translatedFrom: "05187fde"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - groups.group-per-house-trip-event
   - groups.choose-your-name
@@ -29,14 +29,14 @@ identicalApproved:
   - example.people.1.name
   - example.people.2.name
 meta:
-  title: "Side Badger nola funtzionatzen duen | Banatu taldeko gastuak bost urratsetan"
+  title: "Side Badger-ek nola funtzionatzen duen | Banatu taldeko gastuak bost urratsetan"
   description: "Sortu talde bat, gonbidatu jendea, gehitu gastuak eta kitatu. Ikusi zer gertatzen den “norbaitek ordaindu du” eta “kitatuta gaude” artean, adibide landu batekin."
-h1: Side Badger nola funtzionatzen duen
+h1: Side Badger-ek nola funtzionatzen duen
 navLabel: Nola funtzionatzen duen
 lead: "Zer gertatzen da “norbaitek ordaindu du” eta “kitatuta gaude” artean? Bost urrats, kalkulu-orririk gabe, eta azkonar bat, gehienbat apaingarri. Hona bidaia osoa, lehen taldetik azken ordainketa erregistratzera arte. Urrats batean xehetasun gehiago nahi baduzu, ikusi [gastuak banatzea](page:feature/split-expenses) eta [kitatzea](page:feature/settle-up)."
 cta:
   heading: "“Hau nik ordaintzen dut” esatetik “kitatuta gaude” esatera"
-  body: Sortu doako kontu bat, hasi talde bat eta gehitu lehen gastua. Azkonarrak ez du tiketa epaituko.
+  body: Sortu doako kontu bat, hasi talde bat eta gehitu lehen gastua. Azkonarrak ez du ordainagiria epaituko.
 steps:
   - title: Sortu talde bat
     body: Egin talde bat etxe, bidaia edo ekitaldi bakoitzerako, alokairua eta ezkontza-oparia zerrenda berean amaitu ez daitezen. Jarri izena, aukeratu jendeak zu ikusteko erabiliko duen izena eta, nahi baduzu, mugatu zer monetak onartzen dituen. Zure aginte-panelak talde guztiak erakusten ditu, eta bakoitzean non zauden, pantaila bakarrean.
@@ -55,7 +55,7 @@ steps:
     shot: S10
     shotAlt: Saldoen pantaila, bi monetatako zor sinplifikatuekin eta “Erakutsi guztiak” aktibatuta
   - title: Kitatu aplikaziotik kanpo, erregistratu barruan
-    body: Side Badger-ek ez du inoiz dirurik mugitzen. Ordaindu elkarri nahi duzuen moduan, eta gero erregistratu ordainketa, saldoak eguneratu daitezen; denen pantaila freskatu gabe eguneratzen da. “Kitatu” saldoak zero direla esan nahi du, besterik ez. Inork ezin du talde bat utzi oraindik zor duen edo zor zaion bitartean, beraz, irteerara doanak lehenago kitatzen du.
+    body: Side Badger-ek ez du inoiz dirurik mugitzen. Ordaindu elkarri nahi duzuen moduan, eta gero erregistratu ordainketa, saldoak eguneratu daitezen; denen pantaila freskatu gabe eguneratzen da. “Kitatu” hitzak saldoak zero direla esan nahi du, besterik ez. Inork ezin du talde bat utzi oraindik zor duen edo zor zaion bitartean, beraz, irteerara doanak lehenago kitatzen du.
     shot: S11
     shotAlt: Ordainketa-formularioa likidazio azkarreko botoiekin eta ordainketa partzialaren oharrarekin
 requirements:
@@ -64,7 +64,7 @@ requirements:
     - Doako kontu bat. Posta elektroniko bat eta pasahitz bat besterik ez dituzu behar, eta posta egiaztatu behar duzu ezer gehitu aurretik.
     - 18 urte edo gehiago izatea.
     - Nabigatzaile modernoa telefonoan edo ordenagailuan, eta konexioa. Side Badger ez da aplikazio-denda bateko aplikazioa eta ez du konexiorik gabe funtzionatzen.
-    - "Aukeran, toki bat zure hasierako pantailan. Ez da aplikazio-dendarik behar: hasi saioa eta gero gehitu Side Badger hasierako pantailara edo mahaigainera, eta aplikazio bat bezala irekitzen da. Aplikazioko Ezarpenek erakusten dizute nola."
+    - "Aukeran, toki bat zure hasierako pantailan. Ez da aplikazio-dendarik behar: hasi saioa eta gero gehitu Side Badger hasierako pantailara edo Dock-era, eta aplikazio bat bezala irekitzen da. Aplikazioko Ezarpenek erakusten dizute nola."
 example:
   heading: Hiru lagun gau-irteera baten ostean
   currency: GBP
@@ -95,7 +95,7 @@ faq:
     - q: Denek behar dute kontu bat?
       a: Side Badger talde bateko pertsona guztiek doako kontu bat behar dute. Eman izena posta elektronikoko helbide batekin eta pasahitz batekin, eta egiaztatu posta ezer gehitu aurretik. Ez dago gonbidatuentzako sarbiderik.
     - q: Aplikaziorik ba al dago?
-      a: Nabigatzailean funtzionatzen du. Hasi saioa eta gero gehitu hasierako pantailara edo mahaigainera aplikazio bat bezala ireki dadin. Aplikazioko Ezarpenek erakusten dizute nola. Ez dago aplikazio-dendako bertsiorik eta ez dago konexiorik gabeko modurik.
+      a: Nabigatzailean funtzionatzen du. Hasi saioa eta gero gehitu hasierako pantailara edo Dock-era aplikazio bat bezala ireki dadin. Aplikazioko Ezarpenek erakusten dizute nola. Ez dago aplikazio-dendako bertsiorik eta ez dago konexiorik gabeko modurik.
     - q: Side Badger-ek dirua mugitzen al du?
       a: Side Badger-ek beste bide batzuetatik egindako ordainketak erregistratzen ditu; ez du dirurik mugitzen. Nork nori ordaindu behar dion proposatzen du, eta zuek ordaintzen duzue nahi duzuen moduan. Gero ordainketa erregistratzen duzue. Ikusi [kitatzea](page:feature/settle-up).
     - q: Norbaitek zorrarekin utzi dezake taldea?

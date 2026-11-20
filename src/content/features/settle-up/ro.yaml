@@ -1,8 +1,8 @@
 translatedFrom: "57622bd0"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - balances.who-owes-whom
   - balances.short-list-of-payments
@@ -17,10 +17,10 @@ claims:
   - live-updates.what-changed-and-who
 meta:
   title: "Achită-te cu mai puține plăți | Side Badger"
-  description: "Vezi cine cui datorează în grupul tău, primește o listă scurtă de plăți care îi achită pe toți și înregistrează fiecare plată pe măsură ce are loc. Gratuit."
+  description: "Vezi cine cui datorează în grupul tău, primește o listă scurtă de plăți care stinge toate datoriile și înregistrează fiecare plată pe măsură ce are loc. Gratuit."
 h1: "Achită-te cu mai puține plăți"
 navLabel: "Decontare"
-lead: "Side Badger ține un sold curent pentru fiecare din grup și sugerează o listă scurtă de plăți care îl achită. Vă plătiți unii altora cum preferați, apoi înregistrați. Dacă vrei să vezi mai întâi cum se împart sumele, începe cu [împărțirea cheltuielilor](page:feature/split-expenses)."
+lead: "Side Badger ține un sold curent pentru fiecare din grup și sugerează o listă scurtă de plăți care stinge toate datoriile. Vă plătiți unii altora cum preferați, apoi înregistrați. Dacă vrei să vezi mai întâi cum se împart sumele, începe cu [împărțirea cheltuielilor](page:feature/split-expenses)."
 cta:
   heading: "Gata să descâlcești cine cui datorează?"
   body: "Creează un cont, începe un grup și adaugă prima cheltuială. Soldurile se ocupă de restul."
@@ -28,10 +28,10 @@ problem:
   heading: "Solduri care se actualizează pe parcurs"
   body: "Fiecare cheltuială schimbă cine cui datorează, așa că Side Badger ține soldurile la zi pe măsură ce se adaugă cheltuieli și plăți. Toți din grup văd o schimbare imediat și văd ce s-a schimbat și cine a schimbat. Soldurile se țin pe valute, așa că euro și lirele rămân în coloanele lor, dacă o cheltuială nu a fost convertită la introducere. Implicit vezi datoriile care te privesc; **Arată tot** listează tot grupul."
 workflow:
-  heading: "Trei pași până la chit"
+  heading: "Trei pași până sunteți chit"
   steps:
     - title: "Vezi cine cui datorează"
-      body: "Deschide soldurile grupului ca să vezi ce datorezi, ce ți se datorează și o listă scurtă de plăți care îi achită pe toți, calculată pe valute. Cheltuielile puse sub semnul întrebării rămân în afara socotelilor până se lămuresc. În exemplul cu colegii de casă de mai jos, șase plăți devin două."
+      body: "Deschide soldurile grupului ca să vezi ce datorezi, ce ți se datorează și o listă scurtă de plăți care stinge toate datoriile, calculată pe valute. Cheltuielile puse sub semnul întrebării rămân în afara socotelilor până se lămuresc. În exemplul cu colegii de casă de mai jos, șase plăți devin două."
       shot: S10
       shotAlt: "Ecranul de solduri cu datorii simplificate în două valute, cu Arată tot activat"
     - title: "Plătește cum preferi, apoi înregistrează"

@@ -1,8 +1,8 @@
 translatedFrom: "1a58db8f"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.odd-penny-at-random
@@ -27,7 +27,7 @@ sections:
   - heading: "How di calculation dey work"
     body: "For each expense, di calculator dey work out every person share. You fit share am equal-equal, by exact amounts or by percentage, among di people wey you pick. Each person balance na wetin dem pay minus wetin dem owe. Plus sign mean say di group owe dem, and minus sign mean say dem owe di group. Di balances always add up to zero, because whatever one person dey owed, other people owe am."
   - heading: "Why di list of payments dey short"
-    body: "Nobody need clear each receipt one by one. Once every balance dey known, di calculator go match di person wey owe pass with di person wey dem owe pass, settle as much as one payment fit settle, and continue down di list until everybody reach zero. Di payments no go ever reach di number of people wey get balance (at most one less), and often e need fewer than if you settle bill by bill. E give short list of payments, and e no promise say na di shortest one possible."
+    body: "Nobody need clear each receipt one by one. Once every balance dey known, di calculator go match di person wey owe pass with di person wey dem owe pass, settle as much as one payment fit settle, and continue down di list until everybody reach zero. Di highest number of payments na di number of people wey get balance minus one, and often e need fewer than if you settle bill by bill. E give short list of payments, and e no promise say na di shortest one possible."
   - heading: "Wetin di calculator no dey do"
     items:
       - "**Use plenty currency for one go.** Pick one and use am for di whole calculation. Di app dey keep separate balance for each currency, and e fit convert expense at current exchange rate, wey you fit change."

@@ -1,8 +1,8 @@
 translatedFrom: "27875e9f"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - home-screen.opens-like-an-app
   - live-updates.everyone-sees-it-straight-away
@@ -61,7 +61,7 @@ sections:
   - heading: Bygget til mere end én slags bruger
     body: Side Badger er bygget med tanke på brugere af tastatur og skærmlæser. Medlemsfarver kommer med mønstre, så du ikke behøver at kende forskel på grøn og rød.
     items:
-      - Links til at springe over, så tastaturbrugere kan hoppe direkte til indholdet.
+      - Genvejslinks, så tastaturbrugere kan hoppe direkte til indholdet.
       - Dialoger styrer tastaturfokus.
       - Kontroller har etiketter, til skærmlæsere.
       - Layouts vendes for højre-til-venstre-sprog.
@@ -69,7 +69,7 @@ limits:
   heading: Hvad webappen ikke gør
   items:
     - Der er ingen offlinebrug. Side Badger har brug for en forbindelse, så den åbner ikke din gruppe i et fly uden wifi.
-    - Der er ingen app i en app store og ingen indbygget iPhone- eller Android-app. Side Badger er en webapp, og at føje den til din hjemmeskærm eller dit Dock er sådan, du får den app-lignende version.
+    - Der er ingen app i en app store og ingen særskilt iPhone- eller Android-app. Side Badger er en webapp, og at føje den til din hjemmeskærm eller dit Dock er sådan, du får den app-lignende version.
     - At føje den til en hjemmeskærm eller et Dock afhænger af din browser. Menunavne varierer mellem browsere og versioner, og nogle browsere tilbyder det ikke.
     - Push-notifikationer er valgfrie for hver enhed og kræver en browser, der understøtter dem, og din tilladelse. På en iPhone eller iPad virker de kun fra appen føjet til hjemmeskærmen. Levering er ikke garanteret.
     - Der er ingen e-mail- eller sms-advarsler og ingen betalingspåmindelser. Ny aktivitet vises i appen og som push-notifikationer, hvis du slår dem til. Det er stadig op til dig at rykke for en betaling.

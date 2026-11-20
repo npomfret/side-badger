@@ -1,8 +1,8 @@
 translatedFrom: "57622bd0"
 review:
   status: checked
-  checker: "CX-check"
-  date: "2026-11-19"
+  checker: "CX-review"
+  date: "2026-11-20"
 identicalApproved:
   - example.people.0.name
   - example.people.1.name
@@ -22,7 +22,7 @@ claims:
   - live-updates.what-changed-and-who
 meta:
   title: Mit weniger Zahlungen abrechnen | Side Badger
-  description: Sieh, wer in deiner Gruppe wem was schuldet, erhalte eine kurze Liste von Zahlungen, die alle ausgleicht, und erfasse jede Zahlung, wenn sie passiert. Kostenlos nutzbar.
+  description: Sieh, wer in deiner Gruppe wem was schuldet, erhalte eine kurze Liste von Zahlungen, mit denen alle quitt sind, und erfasse jede Zahlung, wenn sie passiert. Kostenlos nutzbar.
 h1: Mit weniger Zahlungen abrechnen
 navLabel: Abrechnen
 lead: Side Badger führt für alle in der Gruppe einen laufenden Saldo und schlägt eine kurze Liste von Zahlungen vor, die ihn ausgleicht. Ihr zahlt einander, wie ihr wollt, und erfasst es dann. Wenn du zuerst sehen willst, wie die Zahlen aufgeteilt werden, fang mit [Ausgaben teilen](page:feature/split-expenses) an.
@@ -33,10 +33,10 @@ problem:
   heading: Salden, die sich laufend aktualisieren
   body: Jede Ausgabe ändert, wer wem was schuldet, deshalb hält Side Badger die Salden aktuell, wenn Ausgaben und Zahlungen hinzukommen. Alle in der Gruppe sehen eine Änderung sofort und sehen, was sich geändert hat und wer es geändert hat. Salden werden pro Währung geführt, Euro und Pfund bleiben also in ihren eigenen Spalten, es sei denn, eine Ausgabe wurde bei der Eingabe umgerechnet. Standardmäßig siehst du die Schulden, die dich betreffen; **Alle anzeigen** listet die ganze Gruppe.
 workflow:
-  heading: Drei Schritte zu quitt
+  heading: In drei Schritten quitt
   steps:
     - title: Sieh, wer wem was schuldet
-      body: Öffne die Salden der Gruppe, um zu sehen, was du schuldest, was du bekommst und eine kurze Liste von Zahlungen, die alle ausgleicht, pro Währung berechnet. Hinterfragte Ausgaben bleiben aus den Summen, bis sie geklärt sind. Im Mitbewohner-Beispiel unten werden aus sechs Zahlungen zwei.
+      body: Öffne die Salden der Gruppe. Dort siehst du pro Währung, was du schuldest und was du bekommst, sowie eine kurze Liste von Zahlungen, mit denen alle quitt sind. Hinterfragte Ausgaben bleiben aus den Summen, bis sie geklärt sind. Im Mitbewohner-Beispiel unten werden aus sechs Zahlungen zwei.
       shot: S10
       shotAlt: Der Salden-Bildschirm mit vereinfachten Schulden in zwei Währungen und eingeschaltetem "Alle anzeigen"
     - title: Zahle, wie du willst, und erfasse es dann

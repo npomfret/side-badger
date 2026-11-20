@@ -1,8 +1,8 @@
 translatedFrom: "8f38827e"
 review:
   status: checked
-  checker: "R2-check"
-  date: "2026-10-21"
+  checker: "CX-review"
+  date: "2026-11-20"
 claims:
   - expense-splitting.equal-exact-percentage
   - expense-splitting.only-people-involved
@@ -24,7 +24,7 @@ datePublished: 2026-10-22
 meta:
   title: "Verdeel een villa naar het aantal nachten | Side Badger"
   description: "Dev kwam maar drie nachten, dus waarom zes betalen? Verdeel een vakantievilla naar de nachten die mensen echt bleven, met de sommen voor je uitgewerkt."
-h1: "Hoe verdeel je een vakantievilla als mensen verschillende nachten blijven"
+h1: "Hoe verdeel je een vakantievilla als mensen niet evenveel nachten blijven"
 navLabel: "Villa verdelen naar nachten"
 lead: "Reken de prijs van het verblijf om naar een prijs per persoon per nacht, vermenigvuldig met het aantal nachten van elke persoon en voer de villa in als **één uitgave met exacte bedragen**. Side Badger houdt de rekening bij en stelt een korte lijst betalingen voor wanneer het tijd is om af te rekenen."
 cta:
@@ -56,7 +56,7 @@ sections:
       - "**De kamers verschillen.** Als de suite meer waard is dan het kleinste kamertje, spreek dan eerst af wat elke kamer kost en maak de persoonsnachtsommen dan kamer per kamer. Voer de villa in als één uitgave met ieders totaal, of als één uitgave per kamer. In beide gevallen moeten de exacte bedragen van een uitgave samen het totaal van die uitgave zijn."
       - "**Een voorschot dat maanden eerder betaald werd.** Wie het betaalde, krijgt een eigen uitgave, gedateerd op de dag van betaling. Verdeel het naar nachten in dezelfde verhoudingen als het resterende bedrag."
       - "**De boeking is in een andere valuta.** Voer de villa in met de valuta waarin je betaalde. Rekent de groep onderweg om, gebruik dan een actuele wisselkoers of typ de koers die je echt kreeg. Het oorspronkelijke bedrag blijft bij de uitgave staan. [Meerdere valuta’s](page:feature/multiple-currencies) legt de details uit."
-      - "**Halve nachten.** Iemand komt aan om middernacht, iemand vertrekt voor het ontbijt. Spreek één regel af om nachten te tellen en pas ze op iedereen toe."
+      - "**Gedeeltelijke nachten.** Iemand komt aan om middernacht, iemand vertrekt voor het ontbijt. Spreek één regel af om nachten te tellen en pas ze op iedereen toe."
   - heading: "Wat Side Badger hier niet doet"
     items:
       - "Het telt de nachten niet voor je. Er is geen verdeling per nacht of per aandeel, dus je rekent elk bedrag uit zoals hierboven en voert **exacte bedragen** in."

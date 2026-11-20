@@ -2,6 +2,36 @@ import AxeBuilder from '@axe-core/playwright';
 import { expect, type Locator, type Page } from '@playwright/test';
 import { ELEMENT_TIMEOUT, NAVIGATION_TIMEOUT } from './timeouts';
 import { isRtl, pathFor, text, type ShellLocale, type StringKey } from './strings';
+import { auditAnimationWait, expectAnimationsSettled } from './animations';
+import { INTL } from './layoutsFixtures';
+
+/**
+ * Runs in the page before its scripts: logs every stage a timed (`data-play="once"`) scene is set to.
+ * A timed stage lasts well under a second, so sampling the live attribute could miss one on a slow
+ * runner; the log keeps the whole sequence for the page object to assert once the pass is over.
+ */
+function recordTimedStages(): void {
+  const log: string[] = [];
+  (window as unknown as { __timedStages: string[] }).__timedStages = log;
+  new MutationObserver(records => {
+    for (const record of records) {
+      const scene = record.target as HTMLElement;
+      const stage = scene.dataset.stage ?? '';
+      // Only changes count: the controller sets stage 0 both while pending and when the pass starts
+      if (scene.dataset.play === 'once' && stage !== record.oldValue) log.push(stage);
+    }
+  }).observe(document, { subtree: true, attributeFilter: ['data-stage'], attributeOldValue: true });
+}
+
+/** The taxi fare, ¥4,200, in the locale's own digits like the home scenes' formatter (`format.ts`) */
+function heroTaxiFare(locale: ShellLocale): string {
+  return new Intl.NumberFormat(INTL[locale], { style: 'currency', currency: 'JPY' }).format(4200);
+}
+
+/** The taxi receipt's date (12 April, no year) as the hero's receipt and form show it */
+function heroReceiptDate(locale: ShellLocale): string {
+  return new Intl.DateTimeFormat(INTL[locale], { day: 'numeric', month: 'short', timeZone: 'UTC' }).format(Date.UTC(2001, 3, 12));
+}
 
 /** How the page animates: its own choice, the forced fallback, or none at all */
 export type SceneEngine = 'native' | 'stages' | 'static';
@@ -73,6 +103,7 @@ export class HomePage {
    */
   static async navigateTo(page: Page, locale: ShellLocale, engine: SceneEngine = 'native'): Promise<HomePage> {
     const home = new HomePage(page, locale, engine);
+    await page.addInitScript(recordTimedStages);
     await page.goto(pathFor(locale, '') + (engine === 'stages' ? '?scenes=stages' : ''));
     await home.verifyLoaded();
     return home;
@@ -278,6 +309,79 @@ export class HomePage {
 
   // ----- motion -----
 
+  protected heroScan(): Locator {
+    // Rule 2: this is a noninteractive illustration, with no form/control role or single visible
+    // name. Its test id scopes the receipt, mock fields and check markers without CSS selectors.
+    return this.region('home.hero.title').getByTestId('hero-scan');
+  }
+
+  private async expectHeroStage(stage: number): Promise<void> {
+    // As with scene-ready, stage is the scene controller's documented animation contract;
+    // there is intentionally no visible debug label. Also check rendered content below.
+    await auditAnimationWait(`hero reaches stage ${stage}`, () =>
+      expect(this.region('home.hero.title')).toHaveAttribute('data-stage', String(stage)));
+  }
+
+  private async expectScanFields(shown: boolean): Promise<void> {
+    await auditAnimationWait(`receipt fields are ${shown ? 'visible' : 'hidden'}`, () => expect.poll(
+      () => this.heroScan().getByTestId('scan-field').evaluateAll(fields =>
+        fields.map(field => field.checkVisibility({ opacityProperty: true, visibilityProperty: true }))),
+      { message: 'rendered receipt fields', timeout: ELEMENT_TIMEOUT }
+    ).toEqual([shown, shown, shown]));
+  }
+
+  private async expectRendered(locator: Locator, operation: string): Promise<void> {
+    await auditAnimationWait(operation, () => expect.poll(
+      () => locator.evaluate(element => element.checkVisibility({ opacityProperty: true, visibilityProperty: true })),
+      { message: operation, timeout: ELEMENT_TIMEOUT }
+    ).toBe(true));
+  }
+
+  /** The stages the hero's timed pass has been through, from the page's log (`recordTimedStages`) */
+  private async expectHeroStageLog(expected: string[], operation: string): Promise<void> {
+    await auditAnimationWait(operation, () => expect.poll(
+      () => this.page.evaluate(() => [...(window as unknown as { __timedStages: string[] }).__timedStages]),
+      { message: operation, timeout: ELEMENT_TIMEOUT }
+    ).toEqual(expected));
+  }
+
+  async expectHeroScanPlaysOnce(): Promise<void> {
+    await this.expectHeroStageLog(['0', '1', '2', '3'], 'hero passes receipt, scan, fields, review in order');
+    await this.expectHeroScanRest();
+    // Leaving and coming back must not replay the pass: the log would gain a second '0'.
+    await this.settleRegion.scrollIntoViewIfNeeded();
+    await this.heroScan().scrollIntoViewIfNeeded();
+    // Two frames and a still page: an entry observer that would restart the pass has had its callback.
+    await expectAnimationsSettled(this.page);
+    await auditAnimationWait('hero stays done after re-entry', () =>
+      expect(this.region('home.hero.title')).toHaveAttribute('data-play-state', 'done'));
+    await this.expectHeroStageLog(['0', '1', '2', '3'], 'hero did not replay after re-entry');
+  }
+
+  async enterHeroScan(): Promise<void> {
+    await auditAnimationWait('phone hero waits for visual entry', () =>
+      expect(this.region('home.hero.title')).toHaveAttribute('data-play-state', 'pending'));
+    await this.expectScanFields(false);
+    await this.heroScan().scrollIntoViewIfNeeded();
+    await auditAnimationWait('phone visual enters viewport', () => expect(this.heroScan()).toBeInViewport({ ratio: 0.25 }));
+  }
+
+  async expectHeroScanRest(): Promise<void> {
+    await this.expectHeroStage(3);
+    await expectAnimationsSettled(this.page);
+    await this.expectScanFields(true);
+    await this.expectRendered(this.heroScan().getByText(this.string('home.hero.scanReview'), { exact: true }), 'review cue is visible');
+    await this.expectRendered(this.heroScan().getByText(this.string('home.expenses.scanNote'), { exact: true }), 'Google disclosure is visible');
+    await auditAnimationWait('fields match the taxi receipt', () => expect(this.heroScan().getByTestId('scan-field')).toHaveText([
+      this.string('home.chaos.receiptTaxi'), heroTaxiFare(this.locale), heroReceiptDate(this.locale),
+    ]));
+    await auditAnimationWait('all scanned fields carry check markers', () => expect.poll(
+      () => this.heroScan().getByTestId('scan-check').evaluateAll(markers =>
+        markers.map(marker => marker.checkVisibility({ opacityProperty: true }))),
+      { timeout: ELEMENT_TIMEOUT }
+    ).toEqual([true, true, true]));
+  }
+
   /** Nothing loads canvas-confetti until something celebrates */
   async expectNoConfettiAtLoad(): Promise<void> {
     expect(this.requested.filter(url => /confetti/.test(url)), 'confetti requests at load').toEqual([]);
@@ -344,18 +448,8 @@ export class HomePage {
       .toEqual([]);
   }
 
-  /** The page has stopped transitioning (the fallback eases scenes into place on load) */
-  private async waitForTransitionsToEnd(): Promise<void> {
-    await expect
-      .poll(() => this.page.evaluate(() => document.getAnimations().filter(a => a instanceof CSSTransition && a.playState === 'running').length), {
-        message: 'CSS transitions have finished',
-        timeout: ELEMENT_TIMEOUT,
-      })
-      .toBe(0);
-  }
-
   async expectNoSeriousAccessibilityViolations(): Promise<void> {
-    await this.waitForTransitionsToEnd();
+    await expectAnimationsSettled(this.page);
     const results = await new AxeBuilder({ page: this.page }).analyze();
     const serious = results.violations
       .filter(violation => violation.impact === 'serious' || violation.impact === 'critical')

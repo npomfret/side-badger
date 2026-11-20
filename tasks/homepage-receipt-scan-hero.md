@@ -1,6 +1,6 @@
 # Receipt scan in the homepage hero
 
-Requested by the owner on 19 November 2026. Status: planned, not started.
+Requested by the owner on 19 November 2026. Status: built and landed on 20 November 2026. Two things are open: the Lighthouse before/after run, which needs the owner's authorisation, and the four-week measurement.
 
 ## Why
 
@@ -46,19 +46,47 @@ Receipt scanning is Side Badger's strongest feature: snap a receipt and the expe
 
 ## Plan
 
-1. Build the hero visual from the existing props: `Receipt`, `AddExpenseForm` and the scanning frame from `SceneExpenses`. Factor shared pieces into `props/expenses/` rather than copying them.
-2. Add the timed one-shot playback to the scene controller if it's needed. Wire the hero's stages; the rest state is the static stage.
-3. Trim `SceneExpenses` to its non-scan stages and update its header comment and `docs/site-structure.md`.
-4. New strings, if any, go into `en.ts` and all 38 locales: translated, then back-checked blind (D31), with a strict build before landing.
-5. Update the homepage page object and e2e specs (`e2e/pages/homePage.ts`). Cover the stages, reduced motion, `?scenes=stages`, the phone entry path, axe after the animation settles (`expectAnimationsSettled`), and no horizontal overflow.
+1. [x] Build the hero visual from the existing props. `props/expenses/ScanReceipt` owns the factored camera frame, receipt and persistent Google disclosure; `AddExpenseForm` supports a taxi sample and timed scan/review presentation. The original hero copy is unchanged. Normal-flow form/receipt reserve every stage's space.
+2. [x] Add one-shot playback to the existing controller. `play="once"`, `duration={3000}`, boundaries `[13, 50, 90]`: stage 0 receipt/mess, stage 1 scanning at 390 ms, stage 2 fields at 1500 ms, stage 3 review at 2700 ms; final opacity transition ends at 3000 ms. Desktop starts after two paint frames; phones observe 25% visual entry. Stages/native use the same timers, separate from scroll-stage observers. Cleanup cancels timers/observers and invalidates late callbacks; a started pass rests rather than replaying after breakpoint/motion changes. Static/reduced motion/no-JS rest at stage 3.
+3. [x] Trim `SceneExpenses` to filled form at stage 0 and ledger at stage 1, with updated header comment, ranges and `docs/site-structure.md`. The form has no scan animation there.
+4. [x] Add and confirm translations. `home.hero.scanReview` (English: “For you to check”) added in English and all 38 locales. The coordinator blind back-checked all 38 translations and corrected Arabic to “جاهزة لمراجعتك”, then ran `npm run i18n -- lock --all --keys home.hero.scanReview`. The lock updates are intentional; agent back-check does not claim fluent human review.
+5. [x] Author page-object-only homepage coverage: all stages and actual rendered fields/camera/captions, taxi field values, rest, no replay on re-entry, reduced motion, static short viewport, `?scenes=stages`, 375×667 phone entry from below the hero, axe after `expectAnimationsSettled`, and overflow. Arabic, Japanese and `xx-long` rest layouts are included. The settle helper waits eligible pending/playing timed scenes before finite animations, with audited assertion outcomes. The page object uses e2e-local formatting (`INTL` from `layoutsFixtures`), because app modules depend on `import.meta.env` and cannot load in Playwright.
+6. [x] Independent UI review, review fixes (below), browser re-runs and a visual check.
 
 ## Success criteria
 
 - At 1280×800, a first-time visitor sees the scan play beside the h1 within about a second of load, without scrolling. It ends on a filled form marked for checking, with the Google disclosure visible.
-- On a 375×812 phone it plays when the visual scrolls into view. Under reduced motion it shows the filled form at once, with no motion.
+- On a 375×667 phone it plays when the visual scrolls into view. Under reduced motion it shows the filled form at once, with no motion.
 - No accuracy claim, no splitting by item and no PDF scanning appears anywhere. The approved registry claims still pass `registry.test.ts`.
-- Homepage Lighthouse on mobile, run with `scripts/lighthouse-local.sh` before and after: LCP and CLS within the D36 thresholds, and no regression against the current homepage.
-- Strict `npm run verify` passes, and the homepage e2e specs pass serially with one worker. Any new timing wait is repeated 20 times.
+- The h1 stays the intended LCP element. The visual sits in normal flow with every stage's space reserved, so the animation cannot shift the layout. LCP and CLS have not been measured, because Lighthouse needs the owner's authorisation (machine-load rule).
+- Strict `npm run verify` passes. The homepage e2e specs pass serially, and the new timing tests are repeated 20 times.
+
+## Verification evidence (20 November 2026, after the review fixes)
+
+- **E2E,** all serial with `--workers=1`:
+  - `e2e/home-receipt-hero.spec.ts` passed 260/260 with `--repeat-each=20`.
+  - `e2e/home.spec.ts` plus `e2e/localized.spec.ts` passed 258/258.
+- **Strict `npm run verify`:** 1238 unit tests, the i18n audit, `astro check` with 0 errors, the build, and `check:site` 185/185.
+- **The e2e records the stage sequence in the page** (`recordTimedStages` in `e2e/pages/homePage.ts`) rather than sampling a stage that lasts under 400 ms. The no-replay check asserts that the sequence is still `0, 1, 2, 3` after the visitor leaves and comes back.
+- **Phone-entry test and axe.** The phone-entry test leaves out axe, because mid-page the next scene's scroll-linked fades are part-way through. The rest tests run axe at 375 and 1280 in en, ar, ja and xx-long.
+- **Screenshots** of the built site at 1280×800, 375×812 and 375×667:
+  - At stage 0 the disclosure sits above the mess, on the scene's own surface colour (`--surface`), so there is no visible box at rest.
+  - The scanning frame and "Analysing receipt..." show mid-pass.
+  - The rest state shows the ticked fields and "For you to check".
+  - At 375×812 the visual is about half on screen at load and plays immediately. At 375×667 it waits until scrolled into view.
+- **Bundle size:** the loaded homepage bundles total 4346 bytes gzipped, within the 10 KB script budget.
+
+## Review fixes
+
+- Restored the expenses phone ledger override's scene and phone-entry qualifiers so its compiled selector outranks the common entry rule.
+- Shared receipt/form props consume semantic CSS state hooks, with the numbered stage mapping owned by `SceneChaos`. Inactive captions also use visibility transitions; static/no-JS rests on the review cue. Reveal duration and field stagger use shared motion tokens.
+- Stacked the full receipt column above the mess and backed the disclosure with the scene's surface token (`--surface`, which is `--table` in the hero). ChatPhone retains AppFrame's responsive `min(100%, 17.5rem)` width, border-box sizing and 9/17 aspect ratio inside a 42%-wide, scaled mess wrapper. Containment was confirmed in screenshots at 375 and 1280.
+- Removed the unused scene exit mode from props, emitted attributes, controller observer/branch and CSS. `ScrollScene` now discriminates timed playback so `play="once"` requires a numeric duration.
+
+## Remaining work
+
+- **Lighthouse,** mobile homepage, `scripts/lighthouse-local.sh`, before and after (D36), once the owner authorises a performance run.
+- **Measurement,** below, four weeks after release.
 
 ## Measurement
 

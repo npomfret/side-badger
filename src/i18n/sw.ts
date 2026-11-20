@@ -135,6 +135,7 @@ export default {
   'home.hero.ctaSecondary': 'Tazama inavyofanya kazi',
   'home.hero.haveAccount': 'Tayari una akaunti?',
   'home.hero.lede': 'Side Badger ni programu ya kugawanya bili kwa wapangaji wenza, wapenzi, safari za kikundi na sherehe. Gawanya gharama kwa usawa, kwa kiasi halisi au kwa asilimia, kati ya waliohusika tu. Hufuatilia gharama kwa sarafu 133 na kupendekeza nani amlipe nani.',
+  'home.hero.scanReview': 'Ili uhakiki',
   'home.hero.title': 'Gawanya gharama za kikundi bila drama.',
   'home.hero.trust': 'Bure. Hakuna matangazo. Hakuna vikomo vya kila siku.',
   'home.pricing.body': 'Bure. Hakuna matangazo. Hakuna vikomo vya kila siku.',

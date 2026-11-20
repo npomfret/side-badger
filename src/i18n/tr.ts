@@ -135,6 +135,7 @@ export default {
   'home.hero.ctaSecondary': 'Nasıl çalıştığını gör',
   'home.hero.haveAccount': 'Zaten hesabınız var mı?',
   'home.hero.lede': 'Side Badger ev arkadaşları, çiftler, grup gezileri ve kutlamalar için bir masraf bölüşme uygulamasıdır. Masrafları eşit, tam tutarlarla veya yüzdelerle, yalnızca ilgili kişiler arasında bölüşün. Harcamaları 133 para biriminde takip eder ve kimin kime ödeyeceğini önerir.',
+  'home.hero.scanReview': 'Kontrol etmeniz için',
   'home.hero.title': 'Grup masraflarını dramsız bölüşün.',
   'home.hero.trust': 'Ücretsiz. Reklam yok. Günlük sınır yok.',
   'home.pricing.body': 'Ücretsiz. Reklam yok. Günlük sınır yok.',

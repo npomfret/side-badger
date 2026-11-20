@@ -135,6 +135,7 @@ export default {
   'home.hero.ctaSecondary': 'See how it works',
   'home.hero.haveAccount': 'Already have an account?',
   'home.hero.lede': 'Side Badger is a bill-splitting app for housemates, couples, group trips and celebrations. Split costs equally, by exact amounts or by percentage, between only the people involved. It tracks expenses in 133 currencies and suggests who pays whom.',
+  'home.hero.scanReview': 'For you to check',
   'home.hero.title': 'Split group costs without the drama.',
   'home.hero.trust': 'Free. No ads. No daily limits.',
   'home.pricing.body': 'Free. No ads. No daily limits.',

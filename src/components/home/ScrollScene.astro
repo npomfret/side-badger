@@ -20,27 +20,25 @@
  * entry scene has none and uses stage 0 (before it enters) and stage 1 (entered); an entry scene
  * on a phone that is pinned on desktop jumps to its last stage when it enters. `staticStage` is
  * the stage the reduced-motion and no-pin frame rests at; it is rendered as `data-stage`.
+ * With `play="once"`, boundaries instead represent percentages of `duration` in milliseconds.
+ * The controller plays the scene once after desktop paint or phone visual entry, in either
+ * engine; `data-static-stage` is still the no-JS/static/reduced-motion rest state.
  */
 type Runway = number | 'entry';
 
-interface Props {
+interface SceneProps {
   /** Section id and the scene's name in `launchHref` positions (`scene-<id>`) */
   id: string;
   /** Id of the heading that labels the section */
   titleId: string;
   /** `{ desktop, phone }` in vh, either may be 'entry'; or just 'entry' for no pinning at all */
   runway: { desktop: Runway; phone: Runway } | 'entry';
-  /** Stage boundaries in percent of the pinned range; omit for an entry scene */
+  /** Stage boundaries in percent of the pinned range, or of duration with play="once". */
   stages?: number[];
   /** The stage shown under reduced motion. Defaults to the last stage (1 for an entry scene). */
   staticStage?: number;
   /** Section or world palette: `table`, `housemates`, `couples`, `trips` or `celebrations` */
   tone?: 'table' | 'housemates' | 'couples' | 'trips' | 'celebrations';
-  /**
-   * Entry scenes only. `enter` (default): the last stage arrives as the scene scrolls into view.
-   * `exit`: the scene rests at stage 0 and reaches its last stage as it scrolls out (the hero).
-   */
-  stageOn?: 'enter' | 'exit';
   /** Fire confetti once when the pinned range passes this percent (entry scenes: when entered) */
   confettiAt?: number;
   /** Inline origin of that confetti, 0 to 1 (mirrored in right-to-left). Default 0.5, the centre. */
@@ -48,14 +46,21 @@ interface Props {
   class?: string;
 }
 
+type Props = SceneProps & (
+  /** One timed pass: boundaries are percentages of the required duration in milliseconds. */
+  | { play: 'once'; duration: number }
+  | { play?: never; duration?: never }
+);
+
 const {
   id,
   titleId,
   runway,
   stages = [],
+  play,
+  duration,
   staticStage = stages.length || 1,
   tone = 'table',
-  stageOn = 'enter',
   confettiAt,
   confettiX,
   class: className,
@@ -82,9 +87,10 @@ const style = [
   data-pin={pin(desktop)}
   data-pin-phone={pin(phone)}
   data-stages={stages.join(',')}
+  data-play={play}
+  data-duration={duration}
   data-static-stage={staticStage}
   data-stage={staticStage}
-  data-stage-on={stageOn}
   data-confetti-at={confettiAt}
   data-confetti-x={confettiX}
   style={style || undefined}

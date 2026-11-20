@@ -198,11 +198,6 @@
   min-inline-size: 0;
 }
 
-/* An entry scene that resolves as it scrolls out (the hero): its native range is the exit range */
-.scene[data-stage-on='exit'] {
-  --range: exit 0% exit 70%;
-}
-
 /* Links. They never animate their opacity: visible and focusable at every stage. */
 .scene-link {
   display: inline-flex;

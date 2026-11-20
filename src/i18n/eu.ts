@@ -135,6 +135,7 @@ export default {
   'home.hero.ctaSecondary': 'Ikusi nola funtzionatzen duen',
   'home.hero.haveAccount': 'Baduzu kontu bat dagoeneko?',
   'home.hero.lede': 'Side Badger fakturak banatzeko aplikazioa da, etxekideentzat, bikoteentzat, taldeko bidaietarako eta ospakizunetarako. Banatu kostuak zati berdinetan, zenbateko zehatzen arabera edo ehunekoen arabera, parte hartu duten pertsonen artean bakarrik. Gastuen jarraipena egiten du 133 monetatan, eta nork nori ordaindu behar dion proposatzen du.',
+  'home.hero.scanReview': 'Zuk egiaztatzeko',
   'home.hero.title': 'Banatu taldeko kostuak dramarik gabe.',
   'home.hero.trust': 'Doakoa. Iragarkirik ez. Eguneko mugarik ez.',
   'home.pricing.body': 'Doakoa. Iragarkirik ez. Eguneko mugarik ez.',

@@ -7,8 +7,7 @@
  *     or `static` (reduced motion, or a viewport shorter than 560 px: nothing is pinned);
  *   - on the stages engine, appends hidden stage regions to each pinned scene and sets
  *     `data-stage` on the scene from the highest region crossing the middle of the viewport
- *     (entry scenes get their last stage once they scroll into view, or out of it for
- *     `data-stage-on="exit"`);
+ *     (entry scenes get their last stage once they scroll into view);
  *   - sets `data-near` (within one viewport) and `data-active` on scenes, which start ambient
  *     loops, and stops each loop 5 s after the scene activates (WCAG 2.2.2);
  *   - brings the matching world into view when keyboard focus lands inside a pinned
@@ -25,10 +24,34 @@
  *   [data-confetti]                                              fires confetti when clicked
  *   [data-confetti-at="N"] on a scene                            fires once at N % of its range
  *   [data-confetti-x="0..1"] on a scene                          inline origin of that confetti (default 0.5)
+ *   [data-play="once"][data-duration="3000"]                   timed stages, independent of scroll engine
+ *   [data-scene-entry] inside a timed scene                      phone entry target (desktop starts after paint)
+ *   data-play-state="pending|playing|done"                       timed lifecycle; static always rests at done
+ * Timed boundaries are percentages of duration. Timers and observers are cancelled on setup;
+ * a started scene then rests at its static stage, so resize/motion changes never replay it.
  *   document event `home:confetti` ({ detail: { x, y } } in 0..1)  fires from a scene's own code
  */
 type Engine = 'native' | 'stages' | 'static';
 
+/** Schedule one pass through stage boundaries; cancellation also invalidates late callbacks. */
+export function playTimedStages(
+  edges: readonly number[],
+  duration: number,
+  after: (ms: number, callback: () => void) => () => void,
+  show: (stage: number) => void
+): () => void {
+  let cancelled = false;
+  show(0);
+  const cancels = edges.map((edge, index) => after(duration * edge / 100, () => {
+    if (!cancelled) show(index + 1);
+  }));
+  return () => {
+    cancelled = true;
+    cancels.forEach(cancel => cancel());
+  };
+}
+
+export function initScenes() {
 const root = document.documentElement;
 const flatQuery = matchMedia(
   '(prefers-reduced-motion: reduce), (max-height: 559px), (min-width: 600px) and (max-width: 899px) and (max-height: 859px)'
@@ -127,17 +150,8 @@ function setUpStages() {
     }
   });
 
-  // Exit scenes (the hero) rest at stage 0 and reach their last stage as they scroll out
-  const exited = observe({ rootMargin: '-60% 0px 0px 0px' }, entries => {
-    firstReport(exited);
-    for (const entry of entries) {
-      const scene = entry.target as HTMLElement;
-      const gone = !entry.isIntersecting && entry.boundingClientRect.top < 0;
-      scene.dataset.stage = gone ? String(lastStage(scene)) : '0';
-    }
-  });
-
   for (const scene of scenes()) {
+    if (scene.dataset.play === 'once') continue;
     if (isPinned(scene)) {
       const edges = [0, ...boundaries(scene), 100];
       for (let i = 0; i < edges.length - 1; i++) {
@@ -147,12 +161,53 @@ function setUpStages() {
         waiting.add(mid);
       }
     } else {
-      const io = scene.dataset.stageOn === 'exit' ? exited : entered;
-      io.observe(scene);
-      waiting.add(io);
+      entered.observe(scene);
+      waiting.add(entered);
     }
   }
   if (!waiting.size) ready();
+}
+
+const played = new WeakSet<HTMLElement>();
+function setUpTimedScenes() {
+  const start = (scene: HTMLElement) => {
+    if (played.has(scene)) return;
+    played.add(scene);
+    scene.dataset.playState = 'playing';
+    cleanups.push(playTimedStages(boundaries(scene), Number(scene.dataset.duration), (ms, callback) => {
+      const timer = window.setTimeout(callback, ms);
+      return () => clearTimeout(timer);
+    }, stage => {
+      scene.dataset.stage = String(stage);
+      if (stage === lastStage(scene)) scene.dataset.playState = 'done';
+    }));
+  };
+  const entered = observe({ threshold: 0.25 }, entries => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting || entry.intersectionRatio < 0.25) continue;
+      start(sceneOf(entry.target));
+      entered.unobserve(entry.target);
+    }
+  });
+  for (const scene of scenes()) {
+    if (scene.dataset.play !== 'once') continue;
+    if (played.has(scene)) {
+      scene.dataset.stage = scene.dataset.staticStage!;
+      scene.dataset.playState = 'done';
+      continue;
+    }
+    scene.dataset.stage = '0';
+    scene.dataset.playState = 'pending';
+    if (phoneQuery.matches) {
+      entered.observe(scene.querySelector('[data-scene-entry]') ?? scene);
+    } else {
+      const frame = requestAnimationFrame(() => {
+        const painted = requestAnimationFrame(() => start(scene));
+        cleanups.push(() => cancelAnimationFrame(painted));
+      });
+      cleanups.push(() => cancelAnimationFrame(frame));
+    }
+  }
 }
 
 /** data-near and data-active, and the 5 s limit on ambient loops. */
@@ -269,17 +324,21 @@ function setUp() {
     delete root.dataset.sceneReady;
     for (const scene of scenes()) {
       scene.dataset.stage = scene.dataset.staticStage ?? String(lastStage(scene));
+      if (scene.dataset.play === 'once') {
+        played.add(scene);
+        scene.dataset.playState = 'done';
+      }
       scene.removeAttribute('data-active');
       scene.removeAttribute('data-near');
     }
     return;
   }
   if (engine === 'stages') setUpStages();
+  setUpTimedScenes();
   setUpActivity();
   setUpConfettiTriggers();
 }
 
-export function initScenes() {
   setUp();
   flatQuery.addEventListener('change', setUp);
   phoneQuery.addEventListener('change', setUp);

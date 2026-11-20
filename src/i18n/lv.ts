@@ -135,6 +135,7 @@ export default {
   'home.hero.ctaSecondary': 'Skatīt, kā tas darbojas',
   'home.hero.haveAccount': 'Jums jau ir konts?',
   'home.hero.lede': 'Side Badger ir rēķinu sadales lietotne mājokļa biedriem, pāriem, grupu ceļojumiem un svinībām. Sadaliet izmaksas vienādi, pēc precīzām summām vai procentuāli tikai starp iesaistītajiem cilvēkiem. Tā uzskaita izdevumus 133 valūtās un iesaka, kurš kam maksā.',
+  'home.hero.scanReview': 'Jūsu pārbaudei',
   'home.hero.title': 'Sadaliet grupas izdevumus bez drāmas.',
   'home.hero.trust': 'Bez maksas. Bez reklāmām. Bez dienas ierobežojumiem.',
   'home.pricing.body': 'Bez maksas. Bez reklāmām. Bez dienas ierobežojumiem.',

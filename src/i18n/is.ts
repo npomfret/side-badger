@@ -135,6 +135,7 @@ export default {
   'home.hero.ctaSecondary': 'Sjáðu hvernig þetta virkar',
   'home.hero.haveAccount': 'Ertu þegar með aðgang?',
   'home.hero.lede': 'Side Badger er app til að skipta reikningum fyrir meðleigjendur, pör, hópferðir og hátíðarhöld. Skiptu kostnaði jafnt, eftir nákvæmum upphæðum eða í prósentum, aðeins milli þeirra sem eiga hlut að máli. Það heldur utan um útgjöld í 133 gjaldmiðlum og leggur til hver borgar hverjum.',
+  'home.hero.scanReview': 'Til að fara yfir',
   'home.hero.title': 'Skiptu kostnaði hópsins án dramans.',
   'home.hero.trust': 'Ókeypis. Engar auglýsingar. Engin dagleg takmörk.',
   'home.pricing.body': 'Ókeypis. Engar auglýsingar. Engin dagleg takmörk.',

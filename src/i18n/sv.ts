@@ -135,6 +135,7 @@ export default {
   'home.hero.ctaSecondary': 'Se hur det fungerar',
   'home.hero.haveAccount': 'Har du redan ett konto?',
   'home.hero.lede': 'Side Badger är en app för att dela kostnader för rumskamrater, par, gruppresor och firanden. Dela kostnader lika, efter exakta belopp eller i procent, bara mellan dem som är med. Den håller reda på utgifter i 133 valutor och föreslår vem som ska betala vem.',
+  'home.hero.scanReview': 'För dig att kontrollera',
   'home.hero.title': 'Dela gruppens kostnader utan dramat.',
   'home.hero.trust': 'Gratis. Inga annonser. Inga dagliga gränser.',
   'home.pricing.body': 'Gratis. Inga annonser. Inga dagliga gränser.',

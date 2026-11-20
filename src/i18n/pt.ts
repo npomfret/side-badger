@@ -135,6 +135,7 @@ export default {
   'home.hero.ctaSecondary': 'Ver como funciona',
   'home.hero.haveAccount': 'Já tens uma conta?',
   'home.hero.lede': 'O Side Badger é uma app de divisão de despesas para colegas de casa, casais, viagens de grupo e celebrações. Divide os custos em partes iguais, por valores exatos ou por percentagem, apenas entre as pessoas envolvidas. Regista despesas em 133 moedas e sugere quem paga a quem.',
+  'home.hero.scanReview': 'Para conferires',
   'home.hero.title': 'Divide as despesas do grupo sem dramas.',
   'home.hero.trust': 'Grátis. Sem anúncios. Sem limites diários.',
   'home.pricing.body': 'Grátis. Sem anúncios. Sem limites diários.',

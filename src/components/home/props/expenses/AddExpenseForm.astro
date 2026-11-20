@@ -1,10 +1,11 @@
 ---
 /**
  * The app's add-expense form (`ExpenseFormModal` with receipt scanning) as an illustration inside a
- * phone frame. Description, amount and date arrive from the receipt as strips (`slide`), and each
- * is ticked off as the visitor's check. Who paid and how to split were already chosen.
- * Motion hooks: values and ticks are data-at 2; the scanning line is `.exp-win` (visible only
- * while the receipt is being read; its motion lives in SceneExpenses).
+ * phone frame. Filled by default; `scan` adds scanning/review messages and field markers.
+ * The caller maps its stages to inherited --scan-fields-opacity/offset, --scan-review-opacity/
+ * visibility, --scan-scanning-opacity/visibility, --scan-transition-ms and --scan-stagger-ms hooks. Defaults rest
+ * on the filled review state; this prop has no knowledge of scene stages or playback engines.
+ * Who paid and how to split were already chosen. All motion is transforms and opacity.
  */
 import { t, type Locale } from '@/i18n';
 import AppFrame from '../../AppFrame.astro';
@@ -13,58 +14,42 @@ import { expenseById, expenseTitle, memberName, receiptDate, SPLIT_KEYS } from '
 
 interface Props {
   locale: Locale;
+  scan?: boolean;
+  sample?: { description: string; amount: string };
 }
-const { locale } = Astro.props;
+const { locale, scan = false, sample } = Astro.props;
 
 const dinner = expenseById(4);
 const fields = [
-  { label: t('home.expenses.fieldDescription', locale), value: expenseTitle(dinner, locale), money: false },
+  { label: t('home.expenses.fieldDescription', locale), value: sample?.description ?? expenseTitle(dinner, locale), money: false },
   {
     label: t('home.expenses.fieldAmount', locale),
-    value: formatMoney(dinner.original.minor, dinner.original.currency, locale),
+    value: sample?.amount ?? formatMoney(dinner.original.minor, dinner.original.currency, locale),
     money: true,
   },
   { label: t('home.expenses.fieldDate', locale), value: receiptDate(locale), money: false },
-];
-// Native ranges (percent of the pinned range) for strips and ticks; all end by the stage-2 boundary (50)
-const strips = [
-  { from: 36, to: 43 },
-  { from: 38, to: 45 },
-  { from: 40, to: 47 },
-];
-const ticks = [
-  { from: 43, to: 47 },
-  { from: 45, to: 49 },
-  { from: 47, to: 50 },
 ];
 const splits = ['equal', 'exact', 'percent'] as const;
 ---
 
 <AppFrame variant="phone" class="aef">
-  <p class="aef__status exp-win">
-    <span class="aef__dot" aria-hidden="true"></span>{t('home.expenses.scanning', locale)}
-  </p>
+  {scan && <div class="aef__messages">
+    <p class="aef__status aef__scanning"><span class="aef__dot" aria-hidden="true"></span>{t('home.expenses.scanning', locale)}</p>
+    <p class="aef__status aef__review">{t('home.hero.scanReview', locale)}</p>
+  </div>}
   {
     fields.map((field, i) => (
-      <div class="app-field aef__field">
+      <div class:list={['app-field', 'aef__field', { 'aef__field--review': scan }]}>
         <span>{field.label}</span>
         <span class="aef__row">
           <span
-            class="aef__val"
-            data-anim="slide"
-            data-at="2"
-            style={`--dx:-90px;--from:${strips[i].from};--to:${strips[i].to};--i:${i}`}
+            class:list={['aef__val', { 'aef__landing': scan }]}
+            data-testid={scan ? 'scan-field' : undefined}
+            style={scan ? `--i:${i}` : undefined}
           >
             {field.money ? <bdi>{field.value}</bdi> : field.value}
           </span>
-          <svg class="aef__tick" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
-            <path
-              d="M3 11l5 5L17 5"
-              data-anim="draw"
-              data-at="2"
-              style={`--L:26;--from:${ticks[i].from};--to:${ticks[i].to};--i:${i + 3}`}
-            />
-          </svg>
+          {scan && <svg class="aef__tick" data-testid="scan-check" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 11l5 5L17 5" /></svg>}
         </span>
       </div>
     ))
@@ -88,6 +73,28 @@ const splits = ['equal', 'exact', 'percent'] as const;
 </AppFrame>
 
 <style>
+  .aef__messages { display: grid; }
+  .aef__messages > p { grid-area: 1 / 1; }
+  .aef__scanning {
+    opacity: var(--scan-scanning-opacity, 0);
+    visibility: var(--scan-scanning-visibility, hidden);
+  }
+  .aef__review {
+    opacity: var(--scan-review-opacity, 1);
+    visibility: var(--scan-review-visibility, visible);
+  }
+  .aef__field--review { border-style: dashed; }
+  .aef__landing {
+    opacity: var(--scan-fields-opacity, 1);
+    transform: translateX(calc(var(--scan-fields-offset, 0rem) * var(--dir)));
+    transition: opacity var(--scan-transition-ms, 0s) linear, transform var(--scan-transition-ms, 0s) var(--ease-paper);
+    transition-delay: calc(var(--i, 0) * var(--scan-stagger-ms, 0s));
+  }
+  .aef__tick { opacity: var(--scan-review-opacity, 1); }
+  :is(.aef__tick, .aef__review, .aef__scanning) {
+    /* Visibility hides at the end of the fade and becomes visible at its start. */
+    transition: opacity var(--scan-transition-ms, 0s) linear, visibility var(--scan-transition-ms, 0s) linear;
+  }
   .aef :global(.frame__screen) {
     gap: 0.375rem;
   }

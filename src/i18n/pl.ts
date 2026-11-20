@@ -135,6 +135,7 @@ export default {
   'home.hero.ctaSecondary': 'Zobacz, jak to działa',
   'home.hero.haveAccount': 'Masz już konto?',
   'home.hero.lede': 'Side Badger to aplikacja do dzielenia rachunków dla współlokatorów, par oraz na wyjazdy grupowe i uroczystości. Dziel koszty po równo, według dokładnych kwot lub procentowo, tylko między osoby, których dotyczą. Zapisuje wydatki w 133 walutach i podpowiada, kto komu ma zapłacić.',
+  'home.hero.scanReview': 'Do sprawdzenia',
   'home.hero.title': 'Dziel koszty grupy bez dramatów.',
   'home.hero.trust': 'Za darmo. Bez reklam. Bez dziennych limitów.',
   'home.pricing.body': 'Za darmo. Bez reklam. Bez dziennych limitów.',

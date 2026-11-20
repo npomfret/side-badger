@@ -1,54 +1,36 @@
 ---
 /**
- * Scene 1, chaos (`top`): the messy table. An entry scene that tidies as it scrolls OUT (stage 1
- * = tidy) and rests at stage 0, the mess, under reduced motion ("because chaos is the point").
- *
- * Copy: the page's only h1, the lede (which names the audiences), the `/go/register/` button
- * (`LaunchAppCta`, cta `hero`), the "See how it works" link, then one small-print line with
- * plain trust text ("Free. No ads. No daily limits.") and "Already have an account? Sign in"
- * (`/go/app/`, cta `hero-sign-in`). None of it animates.
- *
- * Visual: three receipts, a spreadsheet with an unfinished total, a sticky note and a phone with
- * the group chat. Each prop sits in a `.chaos__item` wrapper that carries the tidy motion
- * (from the mess, it straightens and slides `--cx` percent of the visual's width towards the
- * centre line, mirrored through `--dir`, so the props end as a loose stack); the spreadsheet also
- * folds away. Inside, `.chaos__breathe` carries the gentle ambient scale, which the controller
- * stops after 5 s. Rest state (no engine, no JS) is the tidy layout.
- *
- * Native: `animation-timeline: --scene` over the scene's exit range. Stages engine: `data-stage`
- * 0 (mess) to 1 (tidy), with transitions after `data-scene-ready`.
- *
- * Phones: copy first, then a compact cluster (phone, two receipts, the sticky note). The
- * spreadsheet and the third receipt are not shown below 600px.
+ * Scene 1 (`top`): the taxi receipt from the messy table fills an expense form, once in 3 seconds.
+ * Stages: 0 mess/receipt, 1 scanning, 2 fields land, 3 review. Desktop starts after paint; phones
+ * start when the visual enters. No-JS, static and reduced motion rest on the filled review form.
+ * The copy column never animates. The form reserves the visual's space in every stage.
  */
 import ScrollScene from '../ScrollScene.astro';
 import Receipt from '../props/Receipt.astro';
 import StickyNote from '../props/StickyNote.astro';
 import Spreadsheet from '../props/chaos/Spreadsheet.astro';
 import ChatPhone from '../props/chaos/ChatPhone.astro';
+import ScanReceipt from '../props/expenses/ScanReceipt.astro';
+import AddExpenseForm from '../props/expenses/AddExpenseForm.astro';
 import { t, type Locale } from '@/i18n';
 import { formatMoney } from '../format';
 import LaunchAppCta from '@/components/cta/LaunchAppCta.astro';
 import { resolveHowItWorks } from '../data/links';
-
-interface Props {
-  locale: Locale;
-}
+interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const howItWorks = resolveHowItWorks(locale);
-
-// Illustrative amounts for the messy props, formatted for the locale
 const taxi = formatMoney(4200, 'JPY', locale);
 const groceries = formatMoney(3850, 'EUR', locale);
 const villa = formatMoney(25000, 'EUR', locale);
+const sample = { description: t('home.chaos.receiptTaxi', locale), amount: taxi };
 const sheetRows = [
-  { label: t('home.chaos.receiptTaxi', locale), amount: taxi },
+  { label: sample.description, amount: taxi },
   { label: t('home.chaos.receiptGroceries', locale), amount: groceries },
   { label: t('home.chaos.receiptVilla', locale), amount: villa },
 ];
 ---
 
-<ScrollScene id="top" titleId="top-title" runway="entry" stageOn="exit" staticStage={0}>
+<ScrollScene id="top" titleId="top-title" runway="entry" play="once" duration={3000} stages={[13, 50, 90]} staticStage={3}>
   <Fragment slot="copy">
     <h1 id="top-title">{t('home.hero.title', locale)}</h1>
     <p>{t('home.hero.lede', locale)}</p>
@@ -61,50 +43,18 @@ const sheetRows = [
       <span>{t('home.hero.haveAccount', locale)} <LaunchAppCta target="app" cta="hero-sign-in" pageId="home" locale={locale} variant="link" class="scene-link">{t('header.signIn', locale)}</LaunchAppCta></span>
     </p>
   </Fragment>
-
-  <div slot="visual" class="chaos">
-    <div class="chaos__item chaos__item--taxi" style="--mx:-14px;--my:-18px;--mr:-7deg">
-      <div class="chaos__breathe" data-ambient>
-        <Receipt
-          title={t('home.chaos.receiptTaxi', locale)}
-          total={{ label: '', amount: taxi }}
-        />
-      </div>
-    </div>
-    <div class="chaos__item chaos__item--sheet" style="--mx:12px;--my:-14px;--mr:3deg">
-      <div class="chaos__breathe" data-ambient>
-        <Spreadsheet rows={sheetRows} total={t('home.chaos.sheetError', locale)} />
-      </div>
-    </div>
-    <div class="chaos__item chaos__item--phone" style="--mx:-10px;--my:14px;--mr:-5deg">
-      <div class="chaos__breathe" data-ambient>
-        <ChatPhone locale={locale} class="chaos__phone" />
-      </div>
-    </div>
-    <div class="chaos__item chaos__item--sticky" style="--mx:16px;--my:10px;--mr:8deg">
-      <div class="chaos__breathe" data-ambient>
-        <StickyNote>{t('home.chaos.sticky', locale)}</StickyNote>
-      </div>
-    </div>
-    <div class="chaos__item chaos__item--groceries" style="--mx:8px;--my:18px;--mr:5deg">
-      <div class="chaos__breathe" data-ambient>
-        <Receipt
-          title={t('home.chaos.receiptGroceries', locale)}
-          total={{ label: '', amount: groceries }}
-        />
-      </div>
-    </div>
-    <div class="chaos__item chaos__item--villa" style="--mx:18px;--my:-8px;--mr:-6deg">
-      <div class="chaos__breathe" data-ambient>
-        <Receipt
-          title={t('home.chaos.receiptVilla', locale)}
-          total={{ label: '', amount: villa }}
-        />
-      </div>
+  <div slot="visual" class="hero-scan" data-scene-entry data-testid="hero-scan">
+    <div class="hero-scan__receipt"><ScanReceipt locale={locale} title={sample.description} amount={taxi} /></div>
+    <div class="hero-scan__form"><AddExpenseForm locale={locale} scan sample={sample} /></div>
+    <div class="hero-scan__mess" aria-hidden="true">
+      <div class="hero-scan__sheet"><Spreadsheet rows={sheetRows} total={t('home.chaos.sheetError', locale)} /></div>
+      <div class="hero-scan__phone"><ChatPhone locale={locale} /></div>
+      <div class="hero-scan__sticky"><StickyNote>{t('home.chaos.sticky', locale)}</StickyNote></div>
+      <div class="hero-scan__groceries"><Receipt title={t('home.chaos.receiptGroceries', locale)} total={{ label: '', amount: groceries }} /></div>
+      <div class="hero-scan__villa"><Receipt title={t('home.chaos.receiptVilla', locale)} total={{ label: '', amount: villa }} /></div>
     </div>
   </div>
 </ScrollScene>
-
 <style>
   .scene__meta {
     display: flex;
@@ -115,91 +65,65 @@ const sheetRows = [
     font-size: var(--text-xs);
     color: var(--ink-muted);
   }
-
-  /* ===== Layout: a grid so props grow with their text and never clip ===== */
-  .chaos {
+  /* Normal-flow form and receipt reserve the full translated rest state before animation. */
+  .hero-scan {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-areas:
-      'taxi sheet sheet'
-      'phone sticky villa'
-      'phone groceries villa';
-    gap: 0.875rem;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: var(--space-md);
     align-items: start;
-    padding-block: 0.75rem;
-    /* cqi units in the tidy slide are percent of this box's width */
-    container-type: inline-size;
+    padding-block: var(--space-md);
   }
-  .chaos__item {
-    display: grid;
-    min-inline-size: 0;
-    translate: 0 0;
-    rotate: 0deg;
+  .hero-scan__form { min-inline-size: 0; }
+  .hero-scan__receipt { min-inline-size: 0; position: relative; z-index: 1; }
+  .hero-scan__mess {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+    z-index: 0;
   }
-  /* --cx / --cy: where each prop slides as the hero tidies (cqi, towards the centre line) */
-  .chaos__item--taxi { grid-area: taxi; --cx: 18; --cy: 2rem; }
-  .chaos__item--sheet { grid-area: sheet; transform-origin: 50% 0; --cx: -8; }
-  .chaos__item--phone { grid-area: phone; --cx: 18; }
-  .chaos__item--sticky { grid-area: sticky; align-self: center; }
-  .chaos__item--groceries { grid-area: groceries; }
-  .chaos__item--villa { grid-area: villa; --cx: -18; }
-  .chaos__breathe {
-    display: grid;
-    min-inline-size: 0;
-    animation: chaos-breathe 2.6s ease-in-out infinite alternate;
+  /* Local geometry of the table props; all remain inside the reserved visual. */
+  .hero-scan__mess > div { position: absolute; inline-size: 42%; }
+  .hero-scan__sheet { inset-inline-start: 4%; inset-block-start: 48%; transform: rotate(-5deg); }
+  .hero-scan__phone { inset-inline-end: 8%; inset-block-start: 0; transform: rotate(6deg) scale(0.8); }
+  .hero-scan__sticky { inset-inline-start: 30%; inset-block-end: 4%; transform: rotate(8deg); }
+  .hero-scan__groceries { inset-inline-start: 0; inset-block-end: 6%; transform: rotate(-7deg); }
+  .hero-scan__villa { inset-inline-end: 2%; inset-block-end: 10%; transform: rotate(5deg); }
+  /* The hero owns the stage-to-state mapping; shared props consume only semantic hooks. */
+  :global(html:is([data-scene-engine='native'], [data-scene-engine='stages']) .scene[data-scene='top']:not([data-play-state])) .hero-scan,
+  :global(.scene[data-scene='top']:is([data-stage='0'], [data-stage='1'])) .hero-scan {
+    --scan-fields-opacity: 0;
+    --scan-fields-offset: -3rem;
   }
-  .chaos :global(.chaos__phone) {
-    aspect-ratio: auto;
-    min-block-size: 15rem;
-    inline-size: 100%;
+  :global(html:is([data-scene-engine='native'], [data-scene-engine='stages']) .scene[data-scene='top']:not([data-play-state])) .hero-scan,
+  :global(.scene[data-scene='top']:is([data-stage='0'], [data-stage='1'], [data-stage='2'])) .hero-scan {
+    --scan-review-opacity: 0;
+    --scan-review-visibility: hidden;
   }
-  .chaos :global(.chaos__phone .frame__screen) {
-    padding-block-end: 1rem;
+  :global(.scene[data-scene='top'][data-stage='1']) .hero-scan {
+    --scan-scanning-opacity: 1;
+    --scan-scanning-visibility: visible;
   }
-  @keyframes chaos-breathe {
-    to { scale: 1.015; }
+  :global(html:is([data-scene-engine='native'], [data-scene-engine='stages']) .scene[data-scene='top']:is([data-play-state='playing'], [data-play-state='done'])) .hero-scan {
+    --scan-transition-ms: var(--duration-reveal);
+    --scan-stagger-ms: var(--delay-stagger);
   }
-
-  /* Phones: the compact cluster (phone, two receipts, a sticky note) below the copy */
+  :global(html:is([data-scene-engine='native'], [data-scene-engine='stages']) .scene[data-scene='top']:not([data-play-state])) .hero-scan__form,
+  :global(.scene[data-scene='top'][data-stage='0']) .hero-scan__form { opacity: 0; transform: translateX(calc(1rem * var(--dir))); }
+  :global(html:is([data-scene-engine='native'], [data-scene-engine='stages']) .scene[data-scene='top']:not([data-play-state])) .hero-scan__mess,
+  :global(.scene[data-scene='top'][data-stage='0']) .hero-scan__mess { opacity: 1; transform: scale(1); }
+  :global(.scene[data-scene='top'][data-play-state='playing']) :is(.hero-scan__form, .hero-scan__mess) {
+    transition: transform var(--duration-reveal) var(--ease-paper), opacity var(--duration-reveal) linear;
+  }
   @media (max-width: 599px) {
-    .chaos {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      grid-template-areas:
-        'phone taxi'
-        'phone groceries'
-        'sticky sticky';
-    }
-    .chaos {
-      padding-inline: 0.75rem;
-    }
-    .chaos__item {
-      --k: 0.45;
-    }
-    /* Two columns: the phone and the receipts slide towards each other */
-    .chaos__item--phone { --cx: 12; }
-    .chaos__item--taxi,
-    .chaos__item--groceries { --cx: -12; --cy: 0px; }
-    .chaos__item--sheet,
-    .chaos__item--villa {
-      display: none;
-    }
-    .chaos__item--sticky {
-      justify-self: center;
-      inline-size: min(100%, 15rem);
-    }
+    .hero-scan { gap: var(--space-xs); }
+    .hero-scan__sheet, .hero-scan__villa { display: none; }
   }
-
-  /* Land the copy a --space-lg gap below the fixed header: <main> starts at --header-h (layout.css) */
-  :global(#top .scene__stage) {
-    padding-block-start: var(--space-lg);
-  }
-
-  /* ===== CJK headings: one glyph is a full em wide, so the global heading size wraps to 6+ lines
-     and pushes the call to action below the fold. Smaller type and a tighter stack keep it in the
-     first viewport (1280x800, 390x844, 360x640). ===== */
-  #top-title:lang(ja),
-  #top-title:lang(zh),
-  #top-title:lang(ko) {
+  /* Keep the existing hero copy geometry. */
+  :global(#top .scene__stage) { padding-block-start: var(--space-lg); }
+  #top-title:lang(ja), #top-title:lang(zh), #top-title:lang(ko) {
     font-size: clamp(1.625rem, 1.2vw + 1.25rem, 2.375rem);
     line-height: 1.25;
   }
@@ -209,60 +133,5 @@ const sheetRows = [
     gap: 0.625rem;
     font-size: 1rem;
     line-height: 1.55;
-  }
-
-  /* ===== Motion. Rest state (no engine): the tidy layout. ===== */
-
-  /* Stages and static engines: stage 0 is the mess, stage 1 is tidy */
-  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='0']) .chaos__item {
-    translate: calc(var(--mx) * var(--k, 1) * var(--dir, 1)) calc(var(--my) * var(--k, 1));
-    rotate: var(--mr);
-  }
-  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='1']) .chaos__item {
-    translate: calc(var(--cx, 0) * 1cqi * var(--dir, 1)) var(--cy, 0px);
-  }
-  :global(html:is([data-scene-engine='stages'], [data-scene-engine='static']) .scene[data-stage='1']) .chaos__item--sheet {
-    scale: 1 0.04;
-  }
-  :global(html[data-scene-engine='stages'][data-scene-ready]) .chaos__item {
-    transition:
-      translate var(--stage-ms) var(--ease-paper),
-      rotate var(--stage-ms) var(--ease-paper),
-      scale var(--stage-ms) var(--ease-paper);
-  }
-
-  /* Native: per-element keyframes on the scene's view timeline, over the exit range */
-  @keyframes chaos-tidy {
-    from {
-      translate: calc(var(--mx) * var(--k, 1) * var(--dir, 1)) calc(var(--my) * var(--k, 1));
-      rotate: var(--mr);
-    }
-    to {
-      translate: calc(var(--cx, 0) * 1cqi * var(--dir, 1)) var(--cy, 0px);
-      rotate: 0deg;
-    }
-  }
-  @keyframes chaos-fold {
-    to { scale: 1 0.04; }
-  }
-  @supports (animation-timeline: view()) and (animation-range: exit 0% exit 70%) {
-    @media (prefers-reduced-motion: no-preference) and (min-height: 560px) {
-      :global(html[data-scene-engine='native']) .chaos__item {
-        animation: chaos-tidy linear both;
-        animation-timeline: --scene;
-        animation-range: var(--range, exit 0% exit 70%);
-        animation-timing-function: var(--ease-paper);
-      }
-      :global(html[data-scene-engine='native']) .chaos__item--sheet {
-        animation:
-          chaos-tidy linear both,
-          chaos-fold linear both;
-        animation-timeline: --scene, --scene;
-        animation-range:
-          exit 0% exit 70%,
-          exit 30% exit 70%;
-        animation-timing-function: var(--ease-paper), var(--ease-paper);
-      }
-    }
   }
 </style>

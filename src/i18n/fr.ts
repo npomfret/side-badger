@@ -135,6 +135,7 @@ export default {
   'home.hero.ctaSecondary': 'Voir comment ça marche',
   'home.hero.haveAccount': 'Vous avez déjà un compte ?',
   'home.hero.lede': 'Side Badger est une application de partage des dépenses pour les colocataires, les couples, les voyages en groupe et les fêtes. Partagez les frais à parts égales, par montants exacts ou par pourcentage, entre les seules personnes concernées. Elle suit les dépenses dans 133 devises et suggère qui paie qui.',
+  'home.hero.scanReview': 'À vous de vérifier',
   'home.hero.title': 'Partagez les frais de groupe sans le drame.',
   'home.hero.trust': 'Gratuit. Sans publicité. Sans limite quotidienne.',
   'home.pricing.body': 'Gratuit. Sans publicité. Sans limite quotidienne.',

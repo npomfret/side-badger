@@ -1,7 +1,7 @@
 ---
 /**
  * One expense card in scene 3's ledger: title, split type, the amount as it was paid, and an
- * optional aside. It drops in at stage 3 (`rise` from above); `from`/`to` are its native range.
+ * optional aside. It drops in at stage 1 (`rise` from above); `from`/`to` are its native range.
  * With `card` the text is given outright and the card is still: content pages use it for their
  * hero art (`PageArt`), where the words come from the page's own worked example.
  */
@@ -42,7 +42,7 @@ const note = card ? undefined : expense!.noteKey;
 // A card animates only on the homepage, where it has an expense and a range
 const motion = card
   ? {}
-  : { 'data-anim': 'rise', 'data-at': 3, style: `--dy:-32px;--from:${from};--to:${to};--i:${index}` };
+  : { 'data-anim': 'rise', 'data-at': 1, style: `--dy:-32px;--from:${from};--to:${to};--i:${index}` };
 ---
 
 <li class="lc" {...motion}>

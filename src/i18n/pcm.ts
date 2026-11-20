@@ -135,6 +135,7 @@ export default {
   'home.hero.ctaSecondary': 'See how e dey work',
   'home.hero.haveAccount': 'You don get account before?',
   'home.hero.lede': 'Side Badger na app to share bills for housemates, couples, group trips and celebrations. Share costs equally, by exact amounts or by percentage, among only di people wey join for di expense. E dey track expenses for 133 currencies and suggest who go pay who.',
+  'home.hero.scanReview': 'Make you check am',
   'home.hero.title': 'Share group money without wahala.',
   'home.hero.trust': 'Free. No ads. No daily limits.',
   'home.pricing.body': 'Free. No ads. No daily limits.',

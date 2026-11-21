@@ -15,7 +15,7 @@ The site redesign (restructure task, homepage task and release 1 of [the site pl
   manifest passes Chrome's installability check (app commits `276634759`, `683b85b1b`), and its
   sign-up page sends signed-in visitors to the dashboard. Still open: watch `/go/app/` counts for
   `cta=hero-sign-in` and `cta=menu` to see how returning phone users sign in.
-- **Receipt scan in the homepage hero.** Promote the existing scan animation from scene 3 into the hero visual: planned in [homepage-receipt-scan-hero.md](./homepage-receipt-scan-hero.md).
+- **Receipt scan hero measurement.** The hero receipt scan shipped on 20 November 2026; Lighthouse before and after was unchanged (mobile 99, LCP 1.95 s, CLS 0). From 18 December 2026, compare `/go/register/` clicks with `from=home&cta=hero` for the four weeks before and after release. The counts are first-party (D28), and a change is a signal, not proof. The plan is in git history (`tasks/homepage-receipt-scan-hero.md`).
 
 ## Owner actions
 

@@ -82,7 +82,8 @@ const BANNED_PHRASES = [
 
 /**
  * The homepage. Expected text is the English key (pseudoized for the pseudo-locales), so every
- * check names what the visitor should read. `navigateTo` is the only way in. P41 reruns the spec
+ * check names what the visitor should read. `navigateTo` (or `navigateToWithTextSize`, which
+ * sets the browser text size first) is the only way in. P41 reruns the spec
  * in real locales by extending the locale type and `strings.ts`.
  */
 export class HomePage {
@@ -107,6 +108,19 @@ export class HomePage {
     await page.goto(pathFor(locale, '') + (engine === 'stages' ? '?scenes=stages' : ''));
     await home.verifyLoaded();
     return home;
+  }
+
+  /**
+   * Open the homepage with a larger browser text size (the reader's default font size setting, in
+   * px; Chromium's `Page.setFontSizes`, as Playwright has no option for it). The site sizes text and
+   * the phone visual in rem, so this moves the layout by far more than font metrics differ between
+   * operating systems.
+   */
+  static async navigateToWithTextSize(page: Page, locale: ShellLocale, engine: SceneEngine, textSizePx: number): Promise<HomePage> {
+    const cdp = await page.context().newCDPSession(page);
+    await cdp.send('Page.enable');
+    await cdp.send('Page.setFontSizes', { fontSizes: { standard: textSizePx, fixed: Math.round((textSizePx * 13) / 16) } });
+    return HomePage.navigateTo(page, locale, engine);
   }
 
   // ----- locators, built fresh on every use -----
@@ -462,7 +476,7 @@ export class HomePage {
     await auditAnimationWait('facts band starts in the first viewport', () => expect(this.heroFacts()).toBeInViewport());
   }
 
-  /** On a phone whose visual starts mostly below the fold: nothing plays until it scrolls into view */
+  /** With the hero's visual out of view at load: nothing plays until it scrolls into view */
   async expectHeroScanWaitsThenEnter(): Promise<void> {
     // Two frames and a still page first: the entry observer has had its first report
     await expectAnimationsSettled(this.page);
@@ -471,6 +485,19 @@ export class HomePage {
     await this.expectHeroStageLog(['0'], 'the hero is set to stage 0 and goes no further before entry');
     await this.expectRendered(this.cameraView(), 'the camera view waits at stage 0');
     await this.expectScanFields(false);
+    // A sliver (10 %) of the visual in view is under the 25 % entry threshold: still nothing plays.
+    // The instant scroll sidesteps the page's smooth scrolling so the sliver is exact.
+    await this.heroScan().evaluate(visual => {
+      const box = visual.getBoundingClientRect();
+      scrollTo({ top: scrollY + box.top + box.height * 0.1 - innerHeight, behavior: 'instant' as ScrollBehavior });
+    });
+    await auditAnimationWait('a sliver of the phone visual is in view', () => expect(this.heroScan()).toBeInViewport());
+    await auditAnimationWait('under a quarter of the phone visual is in view', () =>
+      expect(this.heroScan()).not.toBeInViewport({ ratio: 0.25 }));
+    await expectAnimationsSettled(this.page);
+    await auditAnimationWait('phone hero still waits with a sliver in view', () =>
+      expect(this.region('home.hero.title')).toHaveAttribute('data-play-state', 'pending'));
+    await this.expectHeroStageLog(['0'], 'the hero goes no further than stage 0 with a sliver in view');
     await this.heroScan().scrollIntoViewIfNeeded();
     await auditAnimationWait('phone visual enters viewport', () => expect(this.heroScan()).toBeInViewport({ ratio: 0.25 }));
   }

@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Gweld sut mae\'n gweithio',
   'home.hero.fact.assistants': 'Yn gweithio gyda ChatGPT a Claude',
   'home.hero.fact.conversion': 'Trosi arian cyfred am ddim',
-  'home.hero.fact.noAds': 'Dim hysbysebion. Dim cyfyngiadau dyddiol.',
   'home.hero.fact.scanning': 'Sganio derbynebau awtomatig am ddim',
   'home.hero.replay': 'Chwarae eto',
   'home.hero.scanReview': 'I chi eu gwirio',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Yn ôl canran',
   'tools.split.summary': 'Taliadau i setlo: {count}. Cyfanswm a wariwyd: {total}.',
   'tools.split.summarySettled': 'Mae pawb wedi setlo. Dim angen taliadau. Cyfanswm a wariwyd: {total}.',
+  'home.hero.factsLabel': 'Beth gewch chi',
+  'home.hero.without.ads': 'Dim hysbysebion',
+  'home.hero.without.dailyLimits': 'Dim cyfyngiadau dyddiol',
+  'home.hero.without.trackers': 'Dim olrheinwyr hysbysebion na dadansoddeg yn yr ap',
+  'home.hero.without.paidTier': 'Dim haen daledig',
+  'home.hero.goodToKnowLabel': 'Da gwybod',
 } as const;

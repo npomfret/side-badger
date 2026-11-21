@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Podívejte se, jak to funguje',
   'home.hero.fact.assistants': 'Funguje s ChatGPT a Claude',
   'home.hero.fact.conversion': 'Převod měn zdarma',
-  'home.hero.fact.noAds': 'Bez reklam. Bez denních limitů.',
   'home.hero.fact.scanning': 'Automatické skenování účtenek zdarma',
   'home.hero.replay': 'Přehrát znovu',
   'home.hero.scanReview': 'Ke kontrole',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Procentuálně',
   'tools.split.summary': 'Plateb k vyrovnání: {count}. Celkem utraceno: {total}.',
   'tools.split.summarySettled': 'Všichni jsou si kvit. Žádné platby nejsou potřeba. Celkem utraceno: {total}.',
+  'home.hero.factsLabel': 'Co dostanete',
+  'home.hero.without.ads': 'Žádné reklamy',
+  'home.hero.without.dailyLimits': 'Žádné denní limity',
+  'home.hero.without.trackers': 'Žádné reklamní ani analytické trackery v aplikaci',
+  'home.hero.without.paidTier': 'Žádná placená úroveň',
+  'home.hero.goodToKnowLabel': 'Dobré vědět',
 } as const;

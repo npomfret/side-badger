@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Zobacz, jak to działa',
   'home.hero.fact.assistants': 'Działa z ChatGPT i Claude',
   'home.hero.fact.conversion': 'Darmowe przeliczanie walut',
-  'home.hero.fact.noAds': 'Bez reklam. Bez dziennych limitów.',
   'home.hero.fact.scanning': 'Darmowe automatyczne skanowanie paragonów',
   'home.hero.replay': 'Odtwórz ponownie',
   'home.hero.scanReview': 'Do sprawdzenia',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Procentowo',
   'tools.split.summary': 'Płatności do rozliczenia: {count}. Wydano w sumie: {total}.',
   'tools.split.summarySettled': 'Wszyscy są kwita. Nie trzeba żadnych płatności. Wydano w sumie: {total}.',
+  'home.hero.factsLabel': 'Co dostajesz',
+  'home.hero.without.ads': 'Bez reklam',
+  'home.hero.without.dailyLimits': 'Bez dziennych limitów',
+  'home.hero.without.trackers': 'Bez trackerów reklamowych i analitycznych w aplikacji',
+  'home.hero.without.paidTier': 'Bez płatnego abonamentu',
+  'home.hero.goodToKnowLabel': 'Warto wiedzieć',
 } as const;

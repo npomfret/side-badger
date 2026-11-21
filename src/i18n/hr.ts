@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Pogledaj kako radi',
   'home.hero.fact.assistants': 'Radi s ChatGPT-jem i Claudeom',
   'home.hero.fact.conversion': 'Besplatna pretvorba valuta',
-  'home.hero.fact.noAds': 'Bez oglasa. Bez dnevnih ograničenja.',
   'home.hero.fact.scanning': 'Besplatno automatsko skeniranje računa',
   'home.hero.replay': 'Pokreni ponovno',
   'home.hero.scanReview': 'Za tvoju provjeru',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Po postocima',
   'tools.split.summary': 'Uplata za poravnanje: {count}. Ukupno potrošeno: {total}.',
   'tools.split.summarySettled': 'Svi su kvit. Nijedna uplata nije potrebna. Ukupno potrošeno: {total}.',
+  'home.hero.factsLabel': 'Što dobivaš',
+  'home.hero.without.ads': 'Bez oglasa',
+  'home.hero.without.dailyLimits': 'Bez dnevnih ograničenja',
+  'home.hero.without.trackers': 'Bez oglasnih i analitičkih trackera u aplikaciji',
+  'home.hero.without.paidTier': 'Bez plaćene razine',
+  'home.hero.goodToKnowLabel': 'Dobro je znati',
 } as const;

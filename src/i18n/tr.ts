@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Nasıl çalıştığını gör',
   'home.hero.fact.assistants': 'ChatGPT ve Claude ile çalışır',
   'home.hero.fact.conversion': 'Ücretsiz para birimi dönüştürme',
-  'home.hero.fact.noAds': 'Reklam yok. Günlük sınır yok.',
   'home.hero.fact.scanning': 'Ücretsiz otomatik makbuz tarama',
   'home.hero.replay': 'Tekrar oynat',
   'home.hero.scanReview': 'Kontrol etmeniz için',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Yüzdeyle',
   'tools.split.summary': 'Ödeşmek için ödemeler: {count}. Toplam harcama: {total}.',
   'tools.split.summarySettled': 'Herkes başabaş. Ödeme gerekmiyor. Toplam harcama: {total}.',
+  'home.hero.factsLabel': 'Ne elde edersiniz',
+  'home.hero.without.ads': 'Reklam yok',
+  'home.hero.without.dailyLimits': 'Günlük sınır yok',
+  'home.hero.without.trackers': 'Uygulamada reklam ve analiz tracker\'ı yok',
+  'home.hero.without.paidTier': 'Ücretli katman yok',
+  'home.hero.goodToKnowLabel': 'Bilmekte fayda var',
 } as const;

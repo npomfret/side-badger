@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Tazama inavyofanya kazi',
   'home.hero.fact.assistants': 'Inafanya kazi na ChatGPT na Claude',
   'home.hero.fact.conversion': 'Ubadilishaji wa sarafu bila malipo',
-  'home.hero.fact.noAds': 'Hakuna matangazo. Hakuna vikomo vya kila siku.',
   'home.hero.fact.scanning': 'Kuskana risiti kiotomatiki bila malipo',
   'home.hero.replay': 'Cheza tena',
   'home.hero.scanReview': 'Ili uhakiki',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Kwa asilimia',
   'tools.split.summary': 'Malipo ya kumaliza hesabu: {count}. Jumla iliyotumika: {total}.',
   'tools.split.summarySettled': 'Kila mtu amelingana. Hakuna malipo yanayohitajika. Jumla iliyotumika: {total}.',
+  'home.hero.factsLabel': 'Unachopata',
+  'home.hero.without.ads': 'Hakuna matangazo',
+  'home.hero.without.dailyLimits': 'Hakuna vikomo vya kila siku',
+  'home.hero.without.trackers': 'Hakuna vifuatiliaji vya matangazo au takwimu katika programu',
+  'home.hero.without.paidTier': 'Hakuna mpango wa kulipia',
+  'home.hero.goodToKnowLabel': 'Ni vizuri kujua',
 } as const;

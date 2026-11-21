@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'देखें यह कैसे काम करता है',
   'home.hero.fact.assistants': 'ChatGPT और Claude के साथ काम करता है',
   'home.hero.fact.conversion': 'मुफ्त करेंसी कन्वर्शन',
-  'home.hero.fact.noAds': 'कोई विज्ञापन नहीं। रोज़ाना की कोई सीमा नहीं।',
   'home.hero.fact.scanning': 'मुफ्त स्वचालित रसीद स्कैन',
   'home.hero.replay': 'दोबारा चलाएं',
   'home.hero.scanReview': 'आपकी जाँच के लिए',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'प्रतिशत से',
   'tools.split.summary': 'हिसाब चुकता करने के लिए पेमेंट: {count}। कुल खर्च: {total}।',
   'tools.split.summarySettled': 'सबका हिसाब बराबर है। किसी पेमेंट की ज़रूरत नहीं। कुल खर्च: {total}।',
+  'home.hero.factsLabel': 'आपको क्या मिलता है',
+  'home.hero.without.ads': 'कोई विज्ञापन नहीं',
+  'home.hero.without.dailyLimits': 'रोज़ाना की कोई सीमा नहीं',
+  'home.hero.without.trackers': 'ऐप में विज्ञापन या एनालिटिक्स ट्रैकर नहीं',
+  'home.hero.without.paidTier': 'कोई पेड प्लान नहीं',
+  'home.hero.goodToKnowLabel': 'जानना अच्छा है',
 } as const;

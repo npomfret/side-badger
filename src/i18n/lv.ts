@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Skatīt, kā tas darbojas',
   'home.hero.fact.assistants': 'Darbojas ar ChatGPT un Claude',
   'home.hero.fact.conversion': 'Bezmaksas valūtu konvertēšana',
-  'home.hero.fact.noAds': 'Bez reklāmām. Bez dienas ierobežojumiem.',
   'home.hero.fact.scanning': 'Bezmaksas automātiska čeku skenēšana',
   'home.hero.replay': 'Atskaņot vēlreiz',
   'home.hero.scanReview': 'Jūsu pārbaudei',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Procentuāli',
   'tools.split.summary': 'Maksājumu skaits norēķiniem: {count}. Kopā iztērēts: {total}.',
   'tools.split.summarySettled': 'Visi ir kvit. Maksājumi nav vajadzīgi. Kopā iztērēts: {total}.',
+  'home.hero.factsLabel': 'Ko jūs saņemat',
+  'home.hero.without.ads': 'Bez reklāmām',
+  'home.hero.without.dailyLimits': 'Bez dienas ierobežojumiem',
+  'home.hero.without.trackers': 'Bez reklāmu vai analītikas izsekotājiem lietotnē',
+  'home.hero.without.paidTier': 'Bez maksas līmeņa',
+  'home.hero.goodToKnowLabel': 'Labi zināt',
 } as const;

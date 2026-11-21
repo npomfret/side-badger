@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Katso, miten se toimii',
   'home.hero.fact.assistants': 'Toimii ChatGPT:n ja Clauden kanssa',
   'home.hero.fact.conversion': 'Ilmainen valuutanmuunnos',
-  'home.hero.fact.noAds': 'Ei mainoksia. Ei päivittäisiä rajoja.',
   'home.hero.fact.scanning': 'Ilmainen automaattinen kuittiskannaus',
   'home.hero.replay': 'Toista uudelleen',
   'home.hero.scanReview': 'Sinun tarkistettavaksesi',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Prosentteina',
   'tools.split.summary': 'Tilien tasaamiseen tarvittavia maksuja: {count}. Kuluja yhteensä: {total}.',
   'tools.split.summarySettled': 'Kaikki ovat tasoissa. Maksuja ei tarvita. Kuluja yhteensä: {total}.',
+  'home.hero.factsLabel': 'Mitä saat',
+  'home.hero.without.ads': 'Ei mainoksia',
+  'home.hero.without.dailyLimits': 'Ei päivittäisiä rajoja',
+  'home.hero.without.trackers': 'Ei mainos- tai analytiikkaseuraimia sovelluksessa',
+  'home.hero.without.paidTier': 'Ei maksullista tasoa',
+  'home.hero.goodToKnowLabel': 'Hyvä tietää',
 } as const;

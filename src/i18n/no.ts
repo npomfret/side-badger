@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Se hvordan det fungerer',
   'home.hero.fact.assistants': 'Fungerer med ChatGPT og Claude',
   'home.hero.fact.conversion': 'Gratis valutakonvertering',
-  'home.hero.fact.noAds': 'Ingen annonser. Ingen daglige grenser.',
   'home.hero.fact.scanning': 'Gratis automatisk skanning av kvitteringer',
   'home.hero.replay': 'Spill av igjen',
   'home.hero.scanReview': 'Klart for din sjekk',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Etter prosent',
   'tools.split.summary': 'Betalinger for å gjøre opp: {count}. Totalt brukt: {total}.',
   'tools.split.summarySettled': 'Alle er kvitt. Ingen betalinger trengs. Totalt brukt: {total}.',
+  'home.hero.factsLabel': 'Hva du får',
+  'home.hero.without.ads': 'Ingen annonser',
+  'home.hero.without.dailyLimits': 'Ingen daglige grenser',
+  'home.hero.without.trackers': 'Ingen annonse- eller analysesporere i appen',
+  'home.hero.without.paidTier': 'Ingen betalt nivå',
+  'home.hero.goodToKnowLabel': 'Greit å vite',
 } as const;

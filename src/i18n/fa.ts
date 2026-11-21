@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'ببینید چطور کار می‌کند',
   'home.hero.fact.assistants': 'با ChatGPT و Claude کار می‌کند',
   'home.hero.fact.conversion': 'تبدیل ارز رایگان',
-  'home.hero.fact.noAds': 'بدون تبلیغات. بدون محدودیت روزانه.',
   'home.hero.fact.scanning': 'اسکن خودکار رسید رایگان',
   'home.hero.replay': 'پخش دوباره',
   'home.hero.scanReview': 'برای بررسی شما',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'با درصد',
   'tools.split.summary': 'پرداخت‌ها برای تسویه: {count}. مجموع هزینه‌ها: {total}.',
   'tools.split.summarySettled': 'حساب همه صاف است. پرداختی لازم نیست. مجموع هزینه‌ها: {total}.',
+  'home.hero.factsLabel': 'چه چیزی می‌گیرید',
+  'home.hero.without.ads': 'بدون تبلیغات',
+  'home.hero.without.dailyLimits': 'بدون محدودیت روزانه',
+  'home.hero.without.trackers': 'بدون ردیاب تبلیغاتی یا تحلیلی در برنامه',
+  'home.hero.without.paidTier': 'بدون طرح پولی',
+  'home.hero.goodToKnowLabel': 'خوب است بدانید',
 } as const;

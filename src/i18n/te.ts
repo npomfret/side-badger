@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'ఇది ఎలా పనిచేస్తుందో చూడండి',
   'home.hero.fact.assistants': 'ChatGPT మరియు Claude తో పనిచేస్తుంది',
   'home.hero.fact.conversion': 'ఉచిత కరెన్సీ మార్పిడి',
-  'home.hero.fact.noAds': 'ప్రకటనలు లేవు. రోజువారీ పరిమితులు లేవు.',
   'home.hero.fact.scanning': 'ఉచిత ఆటోమేటిక్ రసీదు స్కానింగ్',
   'home.hero.replay': 'మళ్లీ ప్లే చేయండి',
   'home.hero.scanReview': 'మీరు తనిఖీ చేయడానికి',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'శాతంతో',
   'tools.split.summary': 'లెక్క తేల్చడానికి పేమెంట్లు: {count}. మొత్తం ఖర్చు: {total}.',
   'tools.split.summarySettled': 'అందరి లెక్క సరిపోయింది. పేమెంట్లు అవసరం లేదు. మొత్తం ఖర్చు: {total}.',
+  'home.hero.factsLabel': 'మీకు ఏం దొరుకుతుంది',
+  'home.hero.without.ads': 'ప్రకటనలు లేవు',
+  'home.hero.without.dailyLimits': 'రోజువారీ పరిమితులు లేవు',
+  'home.hero.without.trackers': 'యాప్‌లో యాడ్ లేదా అనలిటిక్స్ ట్రాకర్లు లేవు',
+  'home.hero.without.paidTier': 'చెల్లింపు ప్లాన్ లేదు',
+  'home.hero.goodToKnowLabel': 'తెలుసుకోవడం మంచిది',
 } as const;

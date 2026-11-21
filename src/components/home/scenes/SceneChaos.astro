@@ -8,7 +8,8 @@
  * the replay button plays the pass again (timed engines only; the controller unhides it).
  * No-JS, static and reduced motion rest on the filled review form with no replay button. The form
  * reserves the visual's space in every stage; the camera view is laid over it.
- * The facts band under copy and visual is the hero's footing; it does not animate.
+ * Under copy and visual, the hero's footing: a card of what you get and a quieter line of what
+ * you don't. Neither animates.
  */
 import ScrollScene from '../ScrollScene.astro';
 import AddExpenseForm from '../props/expenses/AddExpenseForm.astro';
@@ -26,8 +27,13 @@ const facts = [
   { icon: 'scan-line', text: t('home.hero.fact.scanning', locale) },
   { icon: 'arrow-right-left', text: t('home.hero.fact.conversion', locale) },
   { icon: 'bot', text: t('home.hero.fact.assistants', locale) },
-  { icon: 'ban', text: t('home.hero.fact.noAds', locale) },
 ] as const;
+const without = [
+  t('home.hero.without.ads', locale),
+  t('home.hero.without.dailyLimits', locale),
+  t('home.hero.without.trackers', locale),
+  t('home.hero.without.paidTier', locale),
+];
 ---
 
 <ScrollScene id="top" titleId="top-title" runway="entry" play="once" duration={4500} stages={[15, 50, 80]} staticStage={3}>
@@ -43,7 +49,10 @@ const facts = [
     <AddExpenseForm locale={locale} scan={sample} />
     <IconButton class="hero-scan__replay" icon="rotate-ccw" label={t('home.hero.replay', locale)} tipAlign="end" data-scene-replay hidden />
   </div>
-  <div class="hero-facts"><FactList items={facts} /></div>
+  <div class="hero-facts">
+    <FactList tone="feature" label={t('home.hero.factsLabel', locale)} items={facts} />
+    <FactList tone="without" label={t('home.hero.goodToKnowLabel', locale)} items={without} />
+  </div>
 </ScrollScene>
 <style>
   /* The phone's width (AppFrame's sizing contract); the wrapper matches it, so the replay button
@@ -66,6 +75,8 @@ const facts = [
   }
   .hero-facts {
     grid-column: 1 / -1;
+    display: grid;
+    gap: var(--space-md);
     min-inline-size: 0;
   }
   /* The hero owns the stage-to-state mapping; shared props consume only semantic hooks. Until the

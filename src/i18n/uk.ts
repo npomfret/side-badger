@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Подивитися, як це працює',
   'home.hero.fact.assistants': 'Працює з ChatGPT і Claude',
   'home.hero.fact.conversion': 'Безкоштовна конвертація валют',
-  'home.hero.fact.noAds': 'Без реклами. Без денних обмежень.',
   'home.hero.fact.scanning': 'Безкоштовне автоматичне сканування чеків',
   'home.hero.replay': 'Відтворити ще раз',
   'home.hero.scanReview': 'Для вашої перевірки',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'За відсотками',
   'tools.split.summary': 'Платежів для розрахунку: {count}. Витрачено разом: {total}.',
   'tools.split.summarySettled': 'Усі квити. Платежі не потрібні. Витрачено разом: {total}.',
+  'home.hero.factsLabel': 'Що ви отримуєте',
+  'home.hero.without.ads': 'Без реклами',
+  'home.hero.without.dailyLimits': 'Без денних обмежень',
+  'home.hero.without.trackers': 'Без рекламних і аналітичних трекерів у застосунку',
+  'home.hero.without.paidTier': 'Без платного рівня',
+  'home.hero.goodToKnowLabel': 'Варто знати',
 } as const;

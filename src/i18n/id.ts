@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Lihat cara kerjanya',
   'home.hero.fact.assistants': 'Bisa dipakai dengan ChatGPT dan Claude',
   'home.hero.fact.conversion': 'Konversi mata uang gratis',
-  'home.hero.fact.noAds': 'Tanpa iklan. Tanpa batas harian.',
   'home.hero.fact.scanning': 'Pemindaian struk otomatis gratis',
   'home.hero.replay': 'Putar lagi',
   'home.hero.scanReview': 'Untuk Anda periksa',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Persentase',
   'tools.split.summary': 'Pembayaran untuk melunasi: {count}. Total pengeluaran: {total}.',
   'tools.split.summarySettled': 'Semua sudah impas. Tidak perlu pembayaran. Total pengeluaran: {total}.',
+  'home.hero.factsLabel': 'Apa yang Anda dapatkan',
+  'home.hero.without.ads': 'Tanpa iklan',
+  'home.hero.without.dailyLimits': 'Tanpa batas harian',
+  'home.hero.without.trackers': 'Tanpa pelacak iklan atau analitik di aplikasi',
+  'home.hero.without.paidTier': 'Tanpa paket berbayar',
+  'home.hero.goodToKnowLabel': 'Baik untuk diketahui',
 } as const;

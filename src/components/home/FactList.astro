@@ -1,43 +1,68 @@
 ---
 /**
- * A band of short facts, each with an icon: the hero's footing (`SceneChaos`). No heading. The
- * caller passes translated text and an icon from the site's set; the icons are decoration.
- * Four items run in one row from 900 px and two by two below it.
+ * A band of short facts, each with an icon: the hero's footing (`SceneChaos`). No heading; `label`
+ * names the list for screen readers. The caller passes translated text and an icon from the site's
+ * set; the icons are decoration.
+ * - `tone="feature"`: what the app gives you, on a paper card. One row from 768 px; below it two
+ *   columns for an even count and one for an odd count, so no item sits alone.
+ * - `tone="without"`: what it leaves out ("No ads"), quieter: no card, the items wrap in a line
+ *   under the card, their icons aligned with the card's. The variant draws its own "no" icon, so
+ *   callers pass text only.
  */
 import Icon, { type IconName } from '../icons/Icon.astro';
 
-interface Props {
-  items: ReadonlyArray<{ icon: IconName; text: string }>;
-}
-const { items } = Astro.props;
+type Props =
+  | { label: string; tone: 'feature'; items: ReadonlyArray<{ icon: IconName; text: string }> }
+  | { label: string; tone: 'without'; items: ReadonlyArray<string> };
+const props = Astro.props;
+const rows = props.tone === 'feature' ? props.items : props.items.map(text => ({ icon: 'ban' as const, text }));
+// Runtime values: the feature card's column counts follow its number of items
+const columns = `--facts-columns:${rows.length};--facts-columns-narrow:${rows.length % 2 === 0 ? 2 : 1}`;
 ---
 
-<ul class="facts" role="list">
-  {items.map(item => (
+<ul class:list={['facts', `facts--${props.tone}`]} role="list" aria-label={props.label} style={props.tone === 'feature' ? columns : undefined}>
+  {rows.map(item => (
     <li class="facts__item"><span class="facts__icon"><Icon name={item.icon} size="sm" /></span>{item.text}</li>
   ))}
 </ul>
 
 <style>
   .facts {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-sm) var(--space-md);
     margin: 0;
-    padding: var(--space-md);
     list-style: none;
-    background: var(--paper);
-    border-radius: var(--radius-md);
-    box-shadow: var(--paper-shadow);
     color: var(--ink);
     font-size: var(--text-sm);
     font-weight: var(--weight-semibold);
     line-height: var(--line-height-tight);
   }
+  .facts--feature {
+    display: grid;
+    grid-template-columns: repeat(var(--facts-columns-narrow), minmax(0, 1fr));
+    gap: var(--space-sm) var(--space-md);
+    padding: var(--space-md);
+    background: var(--paper);
+    border-radius: var(--radius-md);
+    box-shadow: var(--paper-shadow);
+  }
+  /* Matches the card's inline padding, so the two rows' icons share a starting edge */
+  .facts--without {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-lg);
+    padding: 0 var(--space-md);
+    color: var(--ink-muted);
+  }
+  @media (min-width: 768px) {
+    .facts--feature {
+      grid-template-columns: repeat(var(--facts-columns), minmax(0, 1fr));
+    }
+  }
   @media (min-width: 900px) {
-    .facts {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+    .facts--feature {
       padding: var(--space-md) var(--space-lg);
+    }
+    .facts--without {
+      padding-inline: var(--space-lg);
     }
   }
   .facts__item {
@@ -55,7 +80,9 @@ const { items } = Astro.props;
     inline-size: var(--icon-badge-size);
     block-size: var(--icon-badge-size);
     border-radius: var(--radius-full);
-    background: var(--app-tint);
     color: var(--green-ink);
+  }
+  .facts--feature .facts__icon {
+    background: var(--app-tint);
   }
 </style>

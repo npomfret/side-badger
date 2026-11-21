@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Ver como funciona',
   'home.hero.fact.assistants': 'Funciona com o ChatGPT e o Claude',
   'home.hero.fact.conversion': 'Conversão de moeda grátis',
-  'home.hero.fact.noAds': 'Sem anúncios. Sem limites diários.',
   'home.hero.fact.scanning': 'Digitalização automática de recibos grátis',
   'home.hero.replay': 'Repetir',
   'home.hero.scanReview': 'Para conferires',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Por percentagem',
   'tools.split.summary': 'Pagamentos para acertar as contas: {count}. Total gasto: {total}.',
   'tools.split.summarySettled': 'Estão todos quites. Não são precisos pagamentos. Total gasto: {total}.',
+  'home.hero.factsLabel': 'O que recebes',
+  'home.hero.without.ads': 'Sem anúncios',
+  'home.hero.without.dailyLimits': 'Sem limites diários',
+  'home.hero.without.trackers': 'Sem rastreadores de anúncios ou de análise na aplicação',
+  'home.hero.without.paidTier': 'Sem nível pago',
+  'home.hero.goodToKnowLabel': 'Bom saber',
 } as const;

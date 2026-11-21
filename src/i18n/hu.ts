@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Nézd meg, hogyan működik',
   'home.hero.fact.assistants': 'Működik a ChatGPT-vel és a Claude-dal',
   'home.hero.fact.conversion': 'Ingyenes valutaátváltás',
-  'home.hero.fact.noAds': 'Hirdetések nélkül. Napi korlátok nélkül.',
   'home.hero.fact.scanning': 'Ingyenes automatikus nyugtaszkennelés',
   'home.hero.replay': 'Újrajátszás',
   'home.hero.scanReview': 'Ellenőrzésre vár',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Százalék szerint',
   'tools.split.summary': 'Az elszámoláshoz szükséges kifizetések száma: {count}. Összesen elköltve: {total}.',
   'tools.split.summarySettled': 'Mindenki kvitt. Nincs szükség kifizetésre. Összesen elköltve: {total}.',
+  'home.hero.factsLabel': 'Mit kapsz',
+  'home.hero.without.ads': 'Nincsenek hirdetések',
+  'home.hero.without.dailyLimits': 'Nincsenek napi korlátok',
+  'home.hero.without.trackers': 'Nincsenek hirdetési és elemző nyomkövetők az alkalmazásban',
+  'home.hero.without.paidTier': 'Nincs fizetős szint',
+  'home.hero.goodToKnowLabel': 'Jó tudni',
 } as const;

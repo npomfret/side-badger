@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Ikusi nola funtzionatzen duen',
   'home.hero.fact.assistants': 'ChatGPT eta Claude-rekin funtzionatzen du',
   'home.hero.fact.conversion': 'Doako moneta-bihurketa',
-  'home.hero.fact.noAds': 'Iragarkirik ez. Eguneko mugarik ez.',
   'home.hero.fact.scanning': 'Doako ordainagiri-eskaneatze automatikoa',
   'home.hero.replay': 'Berriro erreproduzitu',
   'home.hero.scanReview': 'Zuk egiaztatzeko',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Ehunekoen arabera',
   'tools.split.summary': 'Kitatzeko ordainketak: {count}. Guztira gastatua: {total}.',
   'tools.split.summarySettled': 'Denak kitatuta daude. Ez da ordainketarik behar. Guztira gastatua: {total}.',
+  'home.hero.factsLabel': 'Zer lortzen duzun',
+  'home.hero.without.ads': 'Iragarkirik ez',
+  'home.hero.without.dailyLimits': 'Eguneko mugarik ez',
+  'home.hero.without.trackers': 'Aplikazioan iragarkien edo analitiken jarraipen-tresnarik ez',
+  'home.hero.without.paidTier': 'Ordainpeko mailarik ez',
+  'home.hero.goodToKnowLabel': 'Jakitekoa',
 } as const;

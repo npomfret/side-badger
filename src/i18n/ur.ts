@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'دیکھیں یہ کیسے کام کرتا ہے',
   'home.hero.fact.assistants': 'ChatGPT اور Claude کے ساتھ کام کرتا ہے',
   'home.hero.fact.conversion': 'مفت کرنسی تبدیلی',
-  'home.hero.fact.noAds': 'کوئی اشتہار نہیں۔ کوئی یومیہ حد نہیں۔',
   'home.hero.fact.scanning': 'مفت خودکار رسید اسکیننگ',
   'home.hero.replay': 'دوبارہ چلائیں',
   'home.hero.scanReview': 'آپ کی جانچ کے لیے',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'فیصد کے مطابق',
   'tools.split.summary': 'حساب بے باق کرنے کی ادائیگیاں: {count}۔ کل خرچ: {total}۔',
   'tools.split.summarySettled': 'سب کا حساب برابر ہے۔ کسی ادائیگی کی ضرورت نہیں۔ کل خرچ: {total}۔',
+  'home.hero.factsLabel': 'آپ کو کیا ملتا ہے',
+  'home.hero.without.ads': 'کوئی اشتہار نہیں',
+  'home.hero.without.dailyLimits': 'کوئی یومیہ حد نہیں',
+  'home.hero.without.trackers': 'ایپ میں کوئی اشتہاری یا تجزیاتی ٹریکر نہیں',
+  'home.hero.without.paidTier': 'کوئی ادائیگی والا پلان نہیں',
+  'home.hero.goodToKnowLabel': 'جاننا اچھا ہے',
 } as const;

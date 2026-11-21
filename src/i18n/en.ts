@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'See how it works',
   'home.hero.fact.assistants': 'Works with ChatGPT and Claude',
   'home.hero.fact.conversion': 'Free currency conversion',
-  'home.hero.fact.noAds': 'No ads. No daily limits.',
   'home.hero.fact.scanning': 'Free automatic receipt scanning',
   'home.hero.replay': 'Play again',
   'home.hero.scanReview': 'For you to check',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'By percentage',
   'tools.split.summary': 'Payments to settle up: {count}. Total spent: {total}.',
   'tools.split.summarySettled': 'Everyone is square. No payments needed. Total spent: {total}.',
+  'home.hero.factsLabel': 'What you get',
+  'home.hero.without.ads': 'No ads',
+  'home.hero.without.dailyLimits': 'No daily limits',
+  'home.hero.without.trackers': 'No ad or analytics trackers in the app',
+  'home.hero.without.paidTier': 'No paid tier',
+  'home.hero.goodToKnowLabel': 'Good to know',
 } as const;

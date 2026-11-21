@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': '使い方を見る',
   'home.hero.fact.assistants': 'ChatGPTとClaudeに対応',
   'home.hero.fact.conversion': '通貨換算が無料',
-  'home.hero.fact.noAds': '広告なし。1日の制限なし。',
   'home.hero.fact.scanning': 'レシートの自動スキャンが無料',
   'home.hero.replay': 'もう一度再生',
   'home.hero.scanReview': '内容を確認してください',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': '割合指定',
   'tools.split.summary': '精算に必要な支払い：{count}回。支出の合計：{total}。',
   'tools.split.summarySettled': '全員おあいこです。支払いは不要です。支出の合計：{total}。',
+  'home.hero.factsLabel': '利用できる内容',
+  'home.hero.without.ads': '広告なし',
+  'home.hero.without.dailyLimits': '1日の制限なし',
+  'home.hero.without.trackers': 'アプリ内の広告・分析トラッカーなし',
+  'home.hero.without.paidTier': '有料プランなし',
+  'home.hero.goodToKnowLabel': 'うれしいポイント',
 } as const;

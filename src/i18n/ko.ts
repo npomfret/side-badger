@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': '사용 방법 보기',
   'home.hero.fact.assistants': 'ChatGPT, Claude와 함께 사용 가능',
   'home.hero.fact.conversion': '무료 환율 변환',
-  'home.hero.fact.noAds': '광고 없음. 일일 한도 없음.',
   'home.hero.fact.scanning': '무료 자동 영수증 스캔',
   'home.hero.replay': '다시 재생',
   'home.hero.scanReview': '내용을 확인해 주세요',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': '백분율로',
   'tools.split.summary': '정산을 위한 결제: {count}건. 총 지출: {total}.',
   'tools.split.summarySettled': '모두 정산된 상태예요. 결제는 필요 없어요. 총 지출: {total}.',
+  'home.hero.factsLabel': '제공하는 기능',
+  'home.hero.without.ads': '광고 없음',
+  'home.hero.without.dailyLimits': '일일 한도 없음',
+  'home.hero.without.trackers': '앱 내 광고·분석 추적기 없음',
+  'home.hero.without.paidTier': '유료 요금제 없음',
+  'home.hero.goodToKnowLabel': '알아두면 좋아요',
 } as const;

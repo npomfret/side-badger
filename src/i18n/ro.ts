@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Vezi cum funcționează',
   'home.hero.fact.assistants': 'Funcționează cu ChatGPT și Claude',
   'home.hero.fact.conversion': 'Conversie valutară gratuită',
-  'home.hero.fact.noAds': 'Fără reclame. Fără limite zilnice.',
   'home.hero.fact.scanning': 'Scanare automată gratuită a chitanțelor',
   'home.hero.replay': 'Redă din nou',
   'home.hero.scanReview': 'Pentru verificarea ta',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Procentual',
   'tools.split.summary': 'Plăți pentru decontare: {count}. Total cheltuit: {total}.',
   'tools.split.summarySettled': 'Toți sunt chit. Nu e nevoie de plăți. Total cheltuit: {total}.',
+  'home.hero.factsLabel': 'Ce primești',
+  'home.hero.without.ads': 'Fără reclame',
+  'home.hero.without.dailyLimits': 'Fără limite zilnice',
+  'home.hero.without.trackers': 'Fără trackere de reclame sau de analiză în aplicație',
+  'home.hero.without.paidTier': 'Fără nivel plătit',
+  'home.hero.goodToKnowLabel': 'Bine de știut',
 } as const;

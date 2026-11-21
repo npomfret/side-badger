@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Poglej, kako deluje',
   'home.hero.fact.assistants': 'Deluje s ChatGPT in Claude',
   'home.hero.fact.conversion': 'Brezplačno pretvarjanje valut',
-  'home.hero.fact.noAds': 'Brez oglasov. Brez dnevnih omejitev.',
   'home.hero.fact.scanning': 'Brezplačno samodejno skeniranje računov',
   'home.hero.replay': 'Predvajaj znova',
   'home.hero.scanReview': 'Da preveriš',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Po odstotkih',
   'tools.split.summary': 'Plačil za poravnavo: {count}. Skupaj porabljeno: {total}.',
   'tools.split.summarySettled': 'Vsi so kvit. Plačila niso potrebna. Skupaj porabljeno: {total}.',
+  'home.hero.factsLabel': 'Kaj dobiš',
+  'home.hero.without.ads': 'Brez oglasov',
+  'home.hero.without.dailyLimits': 'Brez dnevnih omejitev',
+  'home.hero.without.trackers': 'Brez oglasnih in analitičnih sledilnikov v aplikaciji',
+  'home.hero.without.paidTier': 'Brez plačljive stopnje',
+  'home.hero.goodToKnowLabel': 'Dobro je vedeti',
 } as const;

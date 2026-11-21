@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'See how e dey work',
   'home.hero.fact.assistants': 'E dey work with ChatGPT and Claude',
   'home.hero.fact.conversion': 'Free currency conversion',
-  'home.hero.fact.noAds': 'No ads. No daily limits.',
   'home.hero.fact.scanning': 'Free automatic receipt scanning',
   'home.hero.replay': 'Play am again',
   'home.hero.scanReview': 'Make you check am',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Pasentej',
   'tools.split.summary': 'Payments to clear di account: {count}. Total wey dem spend: {total}.',
   'tools.split.summarySettled': 'Everybody don clear. No payment need to happen. Total wey dem spend: {total}.',
+  'home.hero.factsLabel': 'Wetin you go get',
+  'home.hero.without.ads': 'No ads',
+  'home.hero.without.dailyLimits': 'No daily limits',
+  'home.hero.without.trackers': 'No ad or analytics trackers for di app',
+  'home.hero.without.paidTier': 'No paid plan',
+  'home.hero.goodToKnowLabel': 'E good make you sabi',
 } as const;

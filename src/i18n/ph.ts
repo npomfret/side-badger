@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Tingnan kung paano ito gumagana',
   'home.hero.fact.assistants': 'Gumagana sa ChatGPT at Claude',
   'home.hero.fact.conversion': 'Libreng pag-convert ng pera',
-  'home.hero.fact.noAds': 'Walang ad. Walang pang-araw-araw na limitasyon.',
   'home.hero.fact.scanning': 'Libreng awtomatikong pag-scan ng resibo',
   'home.hero.replay': 'I-play ulit',
   'home.hero.scanReview': 'Para suriin mo',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Ayon sa porsyento',
   'tools.split.summary': 'Mga bayad para makapag-settle: {count}. Kabuuang nagastos: {total}.',
   'tools.split.summarySettled': 'Quits na ang lahat. Walang kailangang bayad. Kabuuang nagastos: {total}.',
+  'home.hero.factsLabel': 'Ano ang makukuha mo',
+  'home.hero.without.ads': 'Walang ad',
+  'home.hero.without.dailyLimits': 'Walang pang-araw-araw na limitasyon',
+  'home.hero.without.trackers': 'Walang ad o analytics tracker sa app',
+  'home.hero.without.paidTier': 'Walang bayad na tier',
+  'home.hero.goodToKnowLabel': 'Mabuting malaman',
 } as const;

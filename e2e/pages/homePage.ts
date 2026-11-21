@@ -400,9 +400,14 @@ export class HomePage {
     return this.heroScan().getByText(this.string('home.hero.replay'), { exact: true });
   }
 
-  /** The hero's facts band: the only list in the hero region */
+  /** The hero's card of what you get, a list named by `home.hero.factsLabel` */
   private heroFacts(): Locator {
-    return this.region('home.hero.title').getByRole('list');
+    return this.region('home.hero.title').getByRole('list', { name: this.string('home.hero.factsLabel'), exact: true });
+  }
+
+  /** The hero's line of what it leaves out ("No ads"), a list named by `home.hero.goodToKnowLabel` */
+  private heroWithout(): Locator {
+    return this.region('home.hero.title').getByRole('list', { name: this.string('home.hero.goodToKnowLabel'), exact: true });
   }
 
   /** At rest, "Play again" plays the whole pass once more, from the viewfinder to the review */
@@ -461,13 +466,18 @@ export class HomePage {
     await auditAnimationWait('no replay button in the static engine', () => expect(this.replayButton()).toHaveCount(0));
   }
 
-  /** The facts band: four facts, in order */
+  /** The hero's two lists, in order: three things you get, then four you don't */
   async expectHeroFacts(): Promise<void> {
-    await auditAnimationWait('the hero lists its four facts', () => expect(this.heroFacts().getByRole('listitem')).toHaveText([
+    await auditAnimationWait('the hero lists what you get', () => expect(this.heroFacts().getByRole('listitem')).toHaveText([
       this.string('home.hero.fact.scanning'),
       this.string('home.hero.fact.conversion'),
       this.string('home.hero.fact.assistants'),
-      this.string('home.hero.fact.noAds'),
+    ]));
+    await auditAnimationWait('the hero lists what you don\'t get', () => expect(this.heroWithout().getByRole('listitem')).toHaveText([
+      this.string('home.hero.without.ads'),
+      this.string('home.hero.without.dailyLimits'),
+      this.string('home.hero.without.trackers'),
+      this.string('home.hero.without.paidTier'),
     ]));
   }
 

@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'So funktioniert es',
   'home.hero.fact.assistants': 'Funktioniert mit ChatGPT und Claude',
   'home.hero.fact.conversion': 'Kostenlose Währungsumrechnung',
-  'home.hero.fact.noAds': 'Keine Werbung. Keine Tageslimits.',
   'home.hero.fact.scanning': 'Kostenloser automatischer Belegscan',
   'home.hero.replay': 'Nochmal abspielen',
   'home.hero.scanReview': 'Für dich zum Prüfen',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'In Prozent',
   'tools.split.summary': 'Zahlungen zum Abrechnen: {count}. Insgesamt ausgegeben: {total}.',
   'tools.split.summarySettled': 'Alle sind quitt. Keine Zahlungen nötig. Insgesamt ausgegeben: {total}.',
+  'home.hero.factsLabel': 'Was du bekommst',
+  'home.hero.without.ads': 'Keine Werbung',
+  'home.hero.without.dailyLimits': 'Keine Tageslimits',
+  'home.hero.without.trackers': 'Keine Werbe- oder Analyse-Tracker in der App',
+  'home.hero.without.paidTier': 'Keine Bezahlstufe',
+  'home.hero.goodToKnowLabel': 'Gut zu wissen',
 } as const;

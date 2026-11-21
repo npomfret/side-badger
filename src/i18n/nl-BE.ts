@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Zo werkt het',
   'home.hero.fact.assistants': 'Werkt met ChatGPT en Claude',
   'home.hero.fact.conversion': 'Gratis valuta omrekenen',
-  'home.hero.fact.noAds': 'Geen advertenties. Geen dagelijkse limieten.',
   'home.hero.fact.scanning': 'Gratis automatisch bonnetjes scannen',
   'home.hero.replay': 'Opnieuw afspelen',
   'home.hero.scanReview': 'Kijk de gegevens na',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Op percentage',
   'tools.split.summary': 'Betalingen om af te rekenen: {count}. Totaal uitgegeven: {total}.',
   'tools.split.summarySettled': 'Iedereen staat quitte. Geen betalingen nodig. Totaal uitgegeven: {total}.',
+  'home.hero.factsLabel': 'Wat je krijgt',
+  'home.hero.without.ads': 'Geen advertenties',
+  'home.hero.without.dailyLimits': 'Geen dagelijkse limieten',
+  'home.hero.without.trackers': 'Geen advertentie- of analysetrackers in de app',
+  'home.hero.without.paidTier': 'Geen betaald abonnement',
+  'home.hero.goodToKnowLabel': 'Goed om te weten',
 } as const;

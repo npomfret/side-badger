@@ -31,7 +31,7 @@ export type FeatureId =
 
 /** Scenes 1 to 9. Scene 7's features are the union of its worlds', and scene 9 depicts none. */
 export const SCENE_FEATURES: Record<SceneId, readonly FeatureId[]> = {
-  top: ['receipt-scanning', 'currency-conversion', 'ai-assistants'], // the facts band
+  top: ['receipt-scanning', 'currency-conversion', 'ai-assistants'], // the facts card
   group: ['groups', 'invites', 'accounts'],
   expenses: ['expense-splitting', 'receipt-scanning'],
   currencies: ['multi-currency', 'currency-conversion'],

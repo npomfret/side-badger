@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Δείτε πώς λειτουργεί',
   'home.hero.fact.assistants': 'Λειτουργεί με ChatGPT και Claude',
   'home.hero.fact.conversion': 'Δωρεάν μετατροπή νομισμάτων',
-  'home.hero.fact.noAds': 'Χωρίς διαφημίσεις. Χωρίς ημερήσια όρια.',
   'home.hero.fact.scanning': 'Δωρεάν αυτόματη σάρωση αποδείξεων',
   'home.hero.replay': 'Επανάληψη',
   'home.hero.scanReview': 'Για να τα ελέγξεις',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Με ποσοστά',
   'tools.split.summary': 'Πληρωμές για την εκκαθάριση: {count}. Σύνολο εξόδων: {total}.',
   'tools.split.summarySettled': 'Είστε όλοι πάτσι. Δεν χρειάζονται πληρωμές. Σύνολο εξόδων: {total}.',
+  'home.hero.factsLabel': 'Τι παίρνετε',
+  'home.hero.without.ads': 'Χωρίς διαφημίσεις',
+  'home.hero.without.dailyLimits': 'Χωρίς ημερήσια όρια',
+  'home.hero.without.trackers': 'Χωρίς διαφημιστικά και αναλυτικά trackers στην εφαρμογή',
+  'home.hero.without.paidTier': 'Χωρίς επί πληρωμή επίπεδο',
+  'home.hero.goodToKnowLabel': 'Καλό είναι να ξέρεις',
 } as const;

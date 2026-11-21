@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'شاهد كيف يعمل',
   'home.hero.fact.assistants': 'يعمل مع ChatGPT وClaude',
   'home.hero.fact.conversion': 'تحويل العملات مجانًا',
-  'home.hero.fact.noAds': 'بلا إعلانات. بلا حدود يومية.',
   'home.hero.fact.scanning': 'مسح الإيصالات تلقائيًا مجانًا',
   'home.hero.replay': 'تشغيل مرة أخرى',
   'home.hero.scanReview': 'جاهزة لمراجعتك',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'بنسبة مئوية',
   'tools.split.summary': 'الدفعات اللازمة للتسوية: {count}. إجمالي المصروفات: {total}.',
   'tools.split.summarySettled': 'حساب الجميع مسوّى. لا حاجة إلى دفعات. إجمالي المصروفات: {total}.',
+  'home.hero.factsLabel': 'ما الذي تحصل عليه',
+  'home.hero.without.ads': 'بلا إعلانات',
+  'home.hero.without.dailyLimits': 'بلا حدود يومية',
+  'home.hero.without.trackers': 'بلا متتبّعات إعلانات أو تحليلات في التطبيق',
+  'home.hero.without.paidTier': 'بلا باقة مدفوعة',
+  'home.hero.goodToKnowLabel': 'من الجيد أن تعرف',
 } as const;

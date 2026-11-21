@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Féach conas a oibríonn sé',
   'home.hero.fact.assistants': 'Oibríonn sé le ChatGPT agus Claude',
   'home.hero.fact.conversion': 'Tiontú airgeadra saor in aisce',
-  'home.hero.fact.noAds': 'Gan fógraí. Gan teorainneacha laethúla.',
   'home.hero.fact.scanning': 'Scanadh uathoibríoch admhálacha saor in aisce',
   'home.hero.replay': 'Seinn arís',
   'home.hero.scanReview': 'Le seiceáil agat',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'De réir céatadáin',
   'tools.split.summary': 'Íocaíochtaí le socrú: {count}. Iomlán caite: {total}.',
   'tools.split.summarySettled': 'Tá gach duine cothrom. Níl aon íocaíocht de dhíth. Iomlán caite: {total}.',
+  'home.hero.factsLabel': 'Cad a gheobhaidh tú',
+  'home.hero.without.ads': 'Gan fógraí',
+  'home.hero.without.dailyLimits': 'Gan teorainneacha laethúla',
+  'home.hero.without.trackers': 'Gan rianairí fógraí ná anailísíochta san aip',
+  'home.hero.without.paidTier': 'Gan leibhéal íoctha',
+  'home.hero.goodToKnowLabel': 'Go maith le fios',
 } as const;

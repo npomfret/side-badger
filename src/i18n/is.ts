@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': 'Sjáðu hvernig þetta virkar',
   'home.hero.fact.assistants': 'Virkar með ChatGPT og Claude',
   'home.hero.fact.conversion': 'Ókeypis gjaldmiðlabreyting',
-  'home.hero.fact.noAds': 'Engar auglýsingar. Engin dagleg takmörk.',
   'home.hero.fact.scanning': 'Ókeypis sjálfvirk kvittanaskönnun',
   'home.hero.replay': 'Spila aftur',
   'home.hero.scanReview': 'Til að fara yfir',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': 'Í prósentum',
   'tools.split.summary': 'Greiðslur til að gera upp: {count}. Heildarútgjöld: {total}.',
   'tools.split.summarySettled': 'Allir eru kvittir. Engar greiðslur nauðsynlegar. Heildarútgjöld: {total}.',
+  'home.hero.factsLabel': 'Það sem þú færð',
+  'home.hero.without.ads': 'Engar auglýsingar',
+  'home.hero.without.dailyLimits': 'Engin dagleg takmörk',
+  'home.hero.without.trackers': 'Engir auglýsinga- eða greiningarrekjarar í appinu',
+  'home.hero.without.paidTier': 'Ekkert greitt þrep',
+  'home.hero.goodToKnowLabel': 'Gott að vita',
 } as const;

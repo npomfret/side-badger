@@ -129,7 +129,6 @@ export default {
   'home.hero.ctaSecondary': '了解使用方式',
   'home.hero.fact.assistants': '支持 ChatGPT 和 Claude',
   'home.hero.fact.conversion': '免费货币换算',
-  'home.hero.fact.noAds': '无广告。无每日限制。',
   'home.hero.fact.scanning': '免费自动扫描收据',
   'home.hero.replay': '再播放一次',
   'home.hero.scanReview': '请核对详情',
@@ -375,4 +374,10 @@ export default {
   'tools.split.splitPercent': '按百分比',
   'tools.split.summary': '需要结清的付款：{count} 笔。总支出：{total}。',
   'tools.split.summarySettled': '大家都已两清，无需付款。总支出：{total}。',
+  'home.hero.factsLabel': '你能得到什么',
+  'home.hero.without.ads': '无广告',
+  'home.hero.without.dailyLimits': '无每日限制',
+  'home.hero.without.trackers': '应用内无广告或分析追踪器',
+  'home.hero.without.paidTier': '无付费档位',
+  'home.hero.goodToKnowLabel': '小贴士',
 } as const;

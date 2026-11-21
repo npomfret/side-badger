@@ -1,6 +1,6 @@
 # Receipt scan in the homepage hero
 
-Requested by the owner on 19 November 2026. Status: built and landed on 20 November 2026. Two things are open: the Lighthouse before/after run, which needs the owner's authorisation, and the four-week measurement.
+Requested by the owner on 19 November 2026. Status: built and landed on 20 November 2026; Lighthouse before/after run on 21 November 2026 (no change, within D36). Only the four-week measurement remains, tracked in `follow-ups.md`.
 
 ## Why
 
@@ -58,7 +58,7 @@ Receipt scanning is Side Badger's strongest feature: snap a receipt and the expe
 - At 1280×800, a first-time visitor sees the scan play beside the h1 within about a second of load, without scrolling. It ends on a filled form marked for checking, with the Google disclosure visible.
 - On a 375×667 phone it plays when the visual scrolls into view. Under reduced motion it shows the filled form at once, with no motion.
 - No accuracy claim, no splitting by item and no PDF scanning appears anywhere. The approved registry claims still pass `registry.test.ts`.
-- The h1 stays the intended LCP element. The visual sits in normal flow with every stage's space reserved, so the animation cannot shift the layout. LCP and CLS have not been measured, because Lighthouse needs the owner's authorisation (machine-load rule).
+- The hero copy stays the LCP element (the lede paragraph, before and after). The visual sits in normal flow with every stage's space reserved, so the animation cannot shift the layout: CLS is 0.
 - Strict `npm run verify` passes. The homepage e2e specs pass serially, and the new timing tests are repeated 20 times.
 
 ## Verification evidence (20 November 2026, after the review fixes)
@@ -83,9 +83,19 @@ Receipt scanning is Side Badger's strongest feature: snap a receipt and the expe
 - Stacked the full receipt column above the mess and backed the disclosure with the scene's surface token (`--surface`, which is `--table` in the hero). ChatPhone retains AppFrame's responsive `min(100%, 17.5rem)` width, border-box sizing and 9/17 aspect ratio inside a 42%-wide, scaled mess wrapper. Containment was confirmed in screenshots at 375 and 1280.
 - Removed the unused scene exit mode from props, emitted attributes, controller observer/branch and CSS. `ScrollScene` now discriminates timed playback so `play="once"` requires a numeric duration.
 
+## Lighthouse (21 November 2026)
+
+`scripts/lighthouse-local.sh --dist … --urls / --devices mobile --runs 5`, strict builds of `7b110c1` (before the hero) and `1d42585` (main), medians:
+
+| Build | Perf | FCP | LCP | CLS | TBT | a11y | SEO | Script | Transfer |
+|---|---|---|---|---|---|---|---|---|---|
+| Before | 99 | 1.28 s | 1.95 s | 0 | 0 ms | 100 | 100 | 5650 B | 155 KB |
+| After | 99 | 1.28 s | 1.95 s | 0 | 0 ms | 100 | 100 | 5936 B | 155 KB |
+
+The LCP element is the hero lede in both builds. There are no third-party requests. Every D36 threshold is met. The run also fixed `--dist` mode, which had stopped working once nginx began including the build's generated `markdown-headers.conf`.
+
 ## Remaining work
 
-- **Lighthouse,** mobile homepage, `scripts/lighthouse-local.sh`, before and after (D36), once the owner authorises a performance run.
 - **Measurement,** below, four weeks after release.
 
 ## Measurement

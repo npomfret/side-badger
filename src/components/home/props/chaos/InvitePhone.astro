@@ -3,6 +3,7 @@
  * The app's invite screen, Link tab (`InviteModal` / `ViaLinkContent`): the group name, the invite
  * link with "Copy", and a QR code with "Or scan this code". Illustration built from the app's
  * labels and tokens. The link has the app's real format with the token elided, so it is no invite.
+ * The screen is as tall as its content; the caller sets the width with `--frame-phone-width`.
  */
 import AppFrame from '../../AppFrame.astro';
 import QrCode from './QrCode.astro';
@@ -19,7 +20,7 @@ const { locale, class: className } = Astro.props;
 const inviteUrl = `${new URL(getAppUrl()).host}/join?shareToken=…`;
 ---
 
-<AppFrame variant="phone" class={className}>
+<AppFrame variant="phone" fit="content" class={className}>
   <p class="app-title">{t('home.group.name', locale)}</p>
   <div class="app-field">
     <span>{t('home.group.inviteLink', locale)}</span>

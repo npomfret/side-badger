@@ -935,6 +935,48 @@ export const features: readonly FeatureRecord[] = [
     release: 1,
   },
 
+  // Owner decision 21 November 2026: claimed ahead of the public listing, while the connection is
+  // still being finished (see limits). The ChatGPT listing must go live to back the claim
+  // (tasks/follow-ups.md, "ChatGPT listing").
+  {
+    id: 'ai-assistants',
+    homePage: null,
+    capability:
+      "Side Badger's MCP server, reached with the ordinary Side Badger sign-in, which a person adds to ChatGPT or Claude as a custom connection. Its ten tools list groups, members, expenses and balances, search, show recent activity, upload and scan a receipt, add an expense and record a payment already made; the assistant confirms before it saves.",
+    problem: "Keeping a group's expenses up to date from the assistant already open.",
+    audiences: { primary: ['organisers'], secondary: ['everyone'] },
+    status: 'available',
+    // Low: the tools are in the app's code and the production endpoint answers, but account linking
+    // in production is unproven and neither assistant has a listing
+    confidence: 'low',
+    evidence: ['server/src/mcp/tool-contracts.ts', 'server/src/mcp/McpTools.ts'],
+    // wl-bill-splitter main, read for tasks/ai-discovery-and-integration-docs.md (19 November 2026)
+    verifiedAt: 'e2b559e2b2',
+    limits: [
+      'Today a person adds a custom MCP connection to ChatGPT or Claude themselves. There is no ChatGPT or Claude listing and no installable package.',
+      'Production account linking is not proven: only unauthenticated probes of the production endpoint and its sign-in discovery were made.',
+      'Whether production runs the ten-tool set is unknown.',
+      'Not accepted in the ChatGPT or Claude phone apps, and Claude has not been accepted end to end.',
+      "It uses the account's existing group permissions. Writes need a verified email.",
+      'Recording a settlement records a payment that already happened; no money moves.',
+      'Receipts: JPEG, PNG and WebP are scanned; PDFs are stored but not scanned; HEIC is refused.',
+      'No editing or deleting records, no group management, invitations, lists or polls.',
+    ],
+    prerequisites: ['A Side Badger account with a verified email (to add expenses or payments)', 'ChatGPT or Claude, with Side Badger added as a connection'],
+    // No public proof yet: no listing, screenshot, demo or setup documentation
+    proof: [],
+    relatedFeatures: ['receipt-scanning', 'expense-splitting', 'balances', 'settlements'],
+    useCases: [],
+    searchLanguage: [],
+    claims: [{ id: 'ai-assistants.works-with-chatgpt-and-claude', text: 'Works with ChatGPT and Claude.' }],
+    notApproved: [
+      'a listing, store or install link before one is public',
+      'naming the MCP server, OAuth or other connection details in page copy',
+      'editing, deleting or bulk changes from the assistant',
+      'moving or sending money',
+    ],
+    release: 2,
+  },
   // -------------------------------------------------------------------------------------------
   // What Side Badger does not do. Never given a page and never given claims; `limits` holds what
   // copy may say. None may be described as "coming soon" (site plan D12).
@@ -1021,13 +1063,6 @@ export const features: readonly FeatureRecord[] = [
     status: 'not-offered',
     capability: 'App-wide dark mode switch.',
     evidence: ['webapp-v2/src/app/stores/theme-store.ts'],
-    copy: 'Not mentioned.',
-  }),
-  notOffered({
-    id: 'ai-assistants',
-    status: 'planned',
-    capability: 'ChatGPT or Claude connectors.',
-    evidence: ['tasks/deferred/chatgpt-claude-mcp-plugins.md'],
     copy: 'Not mentioned.',
   }),
   notOffered({

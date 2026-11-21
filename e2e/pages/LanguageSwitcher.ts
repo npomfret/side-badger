@@ -39,6 +39,68 @@ export class LanguageSwitcher {
       .getByRole('link');
   }
 
+  /**
+   * The button's tooltip (Tooltip.astro), shown where the button shows only its flag. Departs from
+   * rule 2: the tooltip is aria-hidden (the button's name already says it), so no role or name
+   * finds it, and its text is also inside the button. The anchor and text carry data-tooltip and
+   * data-tooltip-text, which the site's own tooltip script uses; nothing perceivable is unique.
+   */
+  private get tooltip(): Locator {
+    return this.header
+      .locator('[data-tooltip]')
+      .filter({ has: this.page.getByRole('button', { name: new RegExp(`^${escapeRegExp(text(this.locale, 'a11y.changeLanguage'))}`) }) })
+      .locator('[data-tooltip-text]');
+  }
+
+  private get homeLink(): Locator {
+    return this.header.getByRole('link', { name: text(this.locale, 'a11y.homeLink') });
+  }
+
+  /**
+   * Where the button shows only its flag, its name shows as a tooltip on hover and on keyboard
+   * focus, and Escape closes it. `name` is the expected name; by default, the button's own.
+   */
+  async expectTooltipOnHoverAndFocus(name?: string): Promise<void> {
+    await this.verifyLoaded();
+    await expect(this.tooltip, 'the language tooltip before hovering').toBeHidden();
+    await this.button.hover();
+    await expect(this.tooltip, 'the language tooltip on hover').toBeVisible();
+    await expect(this.tooltip, 'it starts with the button label').toHaveText(
+      new RegExp(`^${escapeRegExp(text(this.locale, 'a11y.changeLanguage'))}: \\S`)
+    );
+    if (name) await expect(this.tooltip, 'the tooltip names the language').toHaveText(name);
+    // The tooltip, read once it has shown, must be exactly the button's accessible name
+    const shown = ((await this.tooltip.textContent()) ?? '').trim();
+    await expect(this.button, 'the tooltip says what the name says').toHaveAccessibleName(shown);
+    await this.page.getByRole('main').hover();
+    await expect(this.tooltip, 'the language tooltip once the pointer leaves').toBeHidden();
+    await this.homeLink.focus();
+    await this.page.keyboard.press('Tab');
+    await expect(this.button, 'Tab from the logo reaches the language button').toBeFocused();
+    await expect(this.tooltip, 'the language tooltip on keyboard focus').toBeVisible();
+    await this.page.keyboard.press('Escape');
+    await expect(this.tooltip, 'Escape closes the language tooltip').toBeHidden();
+    await expect(this.button, 'Escape leaves the switcher closed').toHaveAttribute('aria-expanded', 'false');
+  }
+
+  /** Where the button shows the language's name, there is no tooltip to repeat it */
+  async expectNoTooltip(): Promise<void> {
+    await this.verifyLoaded();
+    await this.button.hover();
+    await expect(this.tooltip, 'no language tooltip on hover where the name shows').toBeHidden();
+    await this.button.focus();
+    await expect(this.tooltip, 'no language tooltip on focus where the name shows').toBeHidden();
+  }
+
+  /** While the menu is open, the button's tooltip stays closed: the menu is showing */
+  async expectTooltipClosedWhileOpen(): Promise<void> {
+    await this.button.hover();
+    await expect(this.tooltip, 'the tooltip on hover before opening').toBeVisible();
+    await this.openWithClick();
+    await expect(this.tooltip, 'no tooltip over the open menu').toBeHidden();
+    await this.closeWithEscape();
+  }
+
   /** The option for a pseudo-locale, by its display name */
   private optionNamed(name: string): Locator {
     return this.options.filter({ hasText: name });

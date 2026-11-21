@@ -8,8 +8,16 @@
  * Variants: `phone` (bezel, notch, portrait screen) and `card` (a modal or panel with a title
  * bar). The default slot is the screen. The named slot `screenshot` is the later slot for a real
  * capture; recorded decision 4 keeps the homepage free of screenshots, so scenes leave it empty.
+ * The named slot `overlay` is a layer over the whole screen (under the phone's notch), for a view
+ * that covers the interface, such as the camera while it scans; the screen keeps its own height.
  *
- * The screen is an inline-size container, so scenes size its contents with `cqi` units.
+ * Sizing contract: `fit="device"` (default) keeps the phone's 9:17 screen; `fit="content"` lets the
+ * screen's content set the height; `fit="responsive"` is the device shape from 600 px and the
+ * content's height below it. A phone is `min(100%, var(--frame-phone-width))` wide; that
+ * token (home tokens) can be set on any ancestor, and so can `--frame-zoom` (default 1), which
+ * scales the whole phone, text included, when a pinned stage is short of room. `density="compact"` tightens the bezel and the
+ * screen's insets on small screens (under 600 px). The screen is an inline-size container, so scenes size its contents
+ * with `cqi` units.
  */
 import type { HTMLAttributes } from 'astro/types';
 
@@ -18,21 +26,34 @@ interface Props extends HTMLAttributes<'div'> {
   /** Title bar text for the `card` variant (translated by the caller) */
   title?: string;
   rotate?: number;
+  fit?: 'device' | 'content' | 'responsive';
+  density?: 'regular' | 'compact';
 }
 
-const { variant = 'phone', title, rotate = 0, class: className, style, ...rest } = Astro.props;
+const {
+  variant = 'phone',
+  title,
+  rotate = 0,
+  fit = 'device',
+  density = 'regular',
+  class: className,
+  style,
+  ...rest
+} = Astro.props;
 const tilt = rotate ? `--rot:${rotate}deg` : '';
+const overlay = Astro.slots.has('overlay');
 ---
 
 <div
   {...rest}
-  class:list={['frame', `frame--${variant}`, className]}
+  class:list={['frame', `frame--${variant}`, `frame--fit-${fit}`, density === 'compact' && 'frame--compact', className]}
   data-prop="app-frame"
   style={[tilt, style].filter(Boolean).join(';') || undefined}
 >
   {variant === 'card' && title && <div class="frame__bar">{title}</div>}
-  <div class="frame__screen app-ui">
+  <div class:list={['frame__screen', 'app-ui', { 'frame__screen--overlaid': overlay }]}>
     {Astro.slots.has('screenshot') ? <slot name="screenshot" /> : <slot />}
+    {overlay && <div class="frame__overlay"><slot name="overlay" /></div>}
   </div>
 </div>
 
@@ -49,12 +70,21 @@ const tilt = rotate ? `--rot:${rotate}deg` : '';
     overflow: clip;
   }
   .frame--phone {
-    inline-size: min(100%, 17.5rem);
+    zoom: var(--frame-zoom);
+    inline-size: min(100%, var(--frame-phone-width));
     margin-inline: auto;
     padding: 0.625rem;
     border-radius: 2rem;
     background: #111827;
     aspect-ratio: 9 / 17;
+  }
+  .frame--phone.frame--fit-content {
+    aspect-ratio: auto;
+  }
+  @media (max-width: 599px) {
+    .frame--phone.frame--fit-responsive {
+      aspect-ratio: auto;
+    }
   }
   .frame--phone::before {
     content: '';
@@ -71,6 +101,23 @@ const tilt = rotate ? `--rot:${rotate}deg` : '';
     border-radius: 1.5rem;
     padding-block-start: 1.75rem;
     align-content: start;
+  }
+  @media (max-width: 599px) {
+    .frame--phone.frame--compact {
+      padding: 0.5rem;
+    }
+    .frame--phone.frame--compact .frame__screen {
+      padding: 0.5rem 0.625rem;
+      padding-block-start: 1.375rem;
+    }
+  }
+  .frame__screen--overlaid {
+    position: relative;
+  }
+  .frame__overlay {
+    position: absolute;
+    inset: 0;
+    display: grid;
   }
   .frame--card {
     border-radius: var(--frame-radius);

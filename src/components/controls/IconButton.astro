@@ -1,0 +1,84 @@
+---
+/**
+ * An icon-only button with a tooltip (Tooltip.astro). `label` (translated by the caller) is both
+ * the accessible name and the tooltip text, so the two always match; a script that renames the
+ * button at run time uses `setIconButtonLabel` (icon-button.ts), which updates both.
+ *
+ * Variants: `raised` (default: a round white button with a shadow, over illustrations) and `quiet`
+ * (transparent until hovered, inside forms). A disabled button is drawn in the disabled ink in
+ * either variant, and its tooltip stays closed. `tipAlign`: `center` (default) or `end` (for a
+ * button near the inline end of its container). `class` goes on the outer anchor, for the
+ * caller's layout; every other attribute (data-*, hidden, disabled) goes on the <button>. A hidden
+ * button hides its anchor.
+ */
+import type { HTMLAttributes } from 'astro/types';
+import Icon, { type IconName } from '../icons/Icon.astro';
+import Tooltip from './Tooltip.astro';
+
+interface Props extends Omit<HTMLAttributes<'button'>, 'aria-label' | 'type' | 'class'> {
+  label: string;
+  icon: IconName;
+  variant?: 'raised' | 'quiet';
+  tipAlign?: 'center' | 'end';
+  class?: string;
+}
+
+const { label, icon, variant = 'raised', tipAlign = 'center', class: className, ...rest } = Astro.props;
+const anchorClass = ['icon-control', `icon-control--${variant}`, className].filter(Boolean).join(' ');
+---
+
+<Tooltip text={label} align={tipAlign} class={anchorClass}>
+  <button {...rest} type="button" class="icon-control__button" aria-label={label}>
+    <Icon name={icon} />
+  </button>
+</Tooltip>
+
+<style>
+  /* The variants pick the ink; the button reads it, so :disabled below wins in every variant */
+  .icon-control--raised {
+    --icon-control-ink: var(--control-ink);
+  }
+  .icon-control--quiet {
+    --icon-control-ink: var(--text-primary);
+  }
+  .icon-control__button {
+    display: inline-grid;
+    place-items: center;
+    inline-size: var(--control-size);
+    block-size: var(--control-size);
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--icon-control-ink);
+    cursor: pointer;
+  }
+  .icon-control--raised .icon-control__button {
+    background: var(--control-surface);
+    box-shadow: var(--control-shadow);
+  }
+  .icon-control--quiet .icon-control__button {
+    border-radius: var(--radius-md);
+  }
+  .icon-control__button:disabled {
+    cursor: not-allowed;
+    color: var(--control-disabled-ink);
+  }
+  @media (hover: hover) {
+    .icon-control--raised .icon-control__button:hover:not(:disabled) {
+      color: var(--accent-ink-hover);
+    }
+    .icon-control--quiet .icon-control__button:hover:not(:disabled) {
+      background: var(--control-quiet-hover);
+      border-color: var(--control-quiet-border);
+    }
+  }
+  .icon-control__button:active:not(:disabled) {
+    transform: scale(0.94);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .icon-control__button:active:not(:disabled) {
+      transform: none;
+    }
+  }
+</style>

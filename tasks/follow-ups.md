@@ -9,13 +9,15 @@ The site redesign (restructure task, homepage task and release 1 of [the site pl
 - **Release 2** shipped: calculators, guides, four feature pages, couples, page art, the Splitwise comparison and the help page. Its plan was deleted on 20 November 2026; read it in git history (`tasks/release-2-plan.md`, last at `5dc2138`). The Splitwise reframe is open in [reframe-app-comparison.md](./reframe-app-comparison.md).
 - **AI discovery and integration docs** are tracked in [ai-discovery-and-integration-docs.md](./ai-discovery-and-integration-docs.md): research-led product copy, Markdown delivery for agents, Pro API documentation, standalone MCP access, and ChatGPT/Claude plugins combining MCP and skills. Implementation has started with Markdown delivery; API contracts, entitlement decisions and integration release verification remain dependencies.
 - **Search reviews** at 4, 8 and 12 weeks after release (site plan success measures, `/go/app/` counts by `from`), once Search Console and Loki access exist.
+- **Calculator script headroom.** The split calculator loads 10,020 bytes of gzipped script against the 10,240-byte budget (21 November 2026, after the shared Tooltip and the LanguageSwitcher's tooltip setter). The next script added to the calculator pages needs a matching saving first.
 - **Real-device checks** of the homepage: the iOS toolbar behaviour, and a VoiceOver pass.
 - **Install happens in the app.** Since 17 October 2026 this site has no web manifest; its copy says
   sign in, then add Side Badger to the home screen. The app now offers installation itself and its
   manifest passes Chrome's installability check (app commits `276634759`, `683b85b1b`), and its
   sign-up page sends signed-in visitors to the dashboard. Still open: watch `/go/app/` counts for
-  `cta=hero-sign-in` and `cta=menu` to see how returning phone users sign in.
-- **Receipt scan hero measurement.** The hero receipt scan shipped on 20 November 2026; Lighthouse before and after was unchanged (mobile 99, LCP 1.95 s, CLS 0). From 18 December 2026, compare `/go/register/` clicks with `from=home&cta=hero` for the four weeks before and after release. The counts are first-party (D28), and a change is a signal, not proof. The plan is in git history (`tasks/homepage-receipt-scan-hero.md`).
+  `cta=header` and `cta=menu` to see how returning phone users sign in. The hero's own
+  sign-in link (`cta=hero-sign-in`) was removed in the hero redesign of 21 November 2026.
+- **Receipt scan hero measurement.** The hero receipt scan shipped on 20 November 2026; Lighthouse before and after was unchanged (mobile 99, LCP 1.95 s, CLS 0). From 18 December 2026, compare `/go/register/` clicks with `from=home&cta=hero` for the four weeks before and after release. The hero was redesigned again on 21 November 2026 (one phone scan and a new facts band), so treat the window as covering both changes. The counts are first-party (D28), and a change is a signal, not proof. The plan is in git history (`tasks/homepage-receipt-scan-hero.md`).
 
 ## Owner actions
 
@@ -26,7 +28,7 @@ The site redesign (restructure task, homepage task and release 1 of [the site pl
 | Branch protection | Require the `verify` check on `main`. | The CI gate still blocks deploys. |
 | Manual deploy | `scripts/deploy.sh` (now rsync, `--delete` confined to `src/`, `public/`, `nginx/`, `scripts/markdown/`) uploads the local `docker-compose.yml` (service `website`), but CI's `scripts/deploy-ci.sh` installs `docker-compose.prod.yml` (service `side-badger`, the proxy's alias) in the same directory. A manual deploy would overwrite CI's compose file and its container would likely get no traffic; the next CI deploy removes it. Decide whether to retire `deploy.sh` or make it deploy the prod compose. | Deploy through CI only. |
 | Loki access | Read access to the edge box's Loki. | The `/go/` counter logs; counts are read later. |
-| ChatGPT listing | Decide whether the ChatGPT connection is marketed once its listing is public (release 2 R10). | Not mentioned on the site. |
+| ChatGPT listing | The ChatGPT listing must go live (and Claude be accepted end to end) to back the homepage claim (release 2 R10). | From 21 November 2026 the homepage claims "Works with ChatGPT and Claude" (owner decision, ahead of the listing; registry `ai-assistants`). |
 | Fluent reviewers | Find reviewers for the priority markets, starting with any locale with at least 50 clicks a month in its Search Console baseline. | Only English is indexed (D31). |
 | Translated policies | Translated, legally reviewed policies are a task in `wl-bill-splitter`. | Localized policy pages show the English text with a translated notice. |
 

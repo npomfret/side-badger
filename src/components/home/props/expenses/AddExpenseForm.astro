@@ -1,30 +1,41 @@
 ---
 /**
  * The app's add-expense form (`ExpenseFormModal` with receipt scanning) as an illustration inside a
- * phone frame. Filled by default; `scan` adds scanning/review messages and field markers.
- * The caller maps its stages to inherited --scan-fields-opacity/offset, --scan-review-opacity/
- * visibility, --scan-scanning-opacity/visibility, --scan-transition-ms and --scan-stagger-ms hooks. Defaults rest
- * on the filled review state; this prop has no knowledge of scene stages or playback engines.
- * Who paid and how to split were already chosen. All motion is transforms and opacity.
+ * phone frame. Filled by default. `scan` (the scanned receipt's description and amount) turns it
+ * into the receipt-scanning form: the camera view (`ScanViewfinder`) over the screen with the
+ * scanning message, an attachment thumbnail with the review message, and field markers.
+ *
+ * The caller maps its stages to inherited semantic hooks; defaults rest on the filled review
+ * state, and this prop knows nothing of scene stages or playback engines:
+ *   --scan-fields-opacity / --scan-fields-offset        scanned fields, their ticks and the thumbnail
+ *   --scan-review-opacity / --scan-review-visibility    the review message
+ *   --scan-scanning-opacity / --scan-scanning-visibility the scanning message
+ *   --scan-transition-ms / --scan-stagger-ms            fade length and the delay between fields
+ * plus ScanViewfinder's own hooks. Who paid and how to split were already chosen. The phone's width
+ * is the caller's (`--frame-phone-width`, AppFrame's sizing contract); the camera view is the
+ * frame's overlay layer, so the form keeps the screen's height in every stage. All motion is
+ * transforms and opacity.
  */
 import { t, type Locale } from '@/i18n';
 import AppFrame from '../../AppFrame.astro';
+import Receipt from '../Receipt.astro';
+import Icon from '@/components/icons/Icon.astro';
+import ScanViewfinder from './ScanViewfinder.astro';
 import { formatMoney } from '../../format';
 import { expenseById, expenseTitle, memberName, receiptDate, SPLIT_KEYS } from './helpers';
 
 interface Props {
   locale: Locale;
-  scan?: boolean;
-  sample?: { description: string; amount: string };
+  scan?: { description: string; amount: string };
 }
-const { locale, scan = false, sample } = Astro.props;
+const { locale, scan } = Astro.props;
 
 const dinner = expenseById(4);
 const fields = [
-  { label: t('home.expenses.fieldDescription', locale), value: sample?.description ?? expenseTitle(dinner, locale), money: false },
+  { label: t('home.expenses.fieldDescription', locale), value: scan?.description ?? expenseTitle(dinner, locale), money: false },
   {
     label: t('home.expenses.fieldAmount', locale),
-    value: sample?.amount ?? formatMoney(dinner.original.minor, dinner.original.currency, locale),
+    value: scan?.amount ?? formatMoney(dinner.original.minor, dinner.original.currency, locale),
     money: true,
   },
   { label: t('home.expenses.fieldDate', locale), value: receiptDate(locale), money: false },
@@ -32,49 +43,65 @@ const fields = [
 const splits = ['equal', 'exact', 'percent'] as const;
 ---
 
-<AppFrame variant="phone" class="aef">
-  {scan && <div class="aef__messages">
-    <p class="aef__status aef__scanning"><span class="aef__dot" aria-hidden="true"></span>{t('home.expenses.scanning', locale)}</p>
-    <p class="aef__status aef__review">{t('home.hero.scanReview', locale)}</p>
-  </div>}
-  {
-    fields.map((field, i) => (
-      <div class:list={['app-field', 'aef__field', { 'aef__field--review': scan }]}>
-        <span>{field.label}</span>
-        <span class="aef__row">
-          <span
-            class:list={['aef__val', { 'aef__landing': scan }]}
-            data-testid={scan ? 'scan-field' : undefined}
-            style={scan ? `--i:${i}` : undefined}
-          >
-            {field.money ? <bdi>{field.value}</bdi> : field.value}
+<AppFrame variant="phone" fit="content" density="compact" class:list={['aef', { 'aef--scan': scan }]}>
+  <div class="aef__body">
+    {scan && <div class="aef__attached">
+      <Receipt size="thumb" decorative class="aef__thumb" title={scan.description} total={{ label: '', amount: scan.amount }} />
+      <p class="aef__status aef__review">{t('home.hero.scanReview', locale)}</p>
+    </div>}
+    {
+      fields.map((field, i) => (
+        <div class:list={['app-field', 'aef__field', { 'aef__field--review': scan }]}>
+          <span>{field.label}</span>
+          <span class="aef__row">
+            <span
+              class:list={['aef__val', { 'aef__landing': scan }]}
+              data-testid={scan ? 'scan-field' : undefined}
+              style={scan ? `--i:${i}` : undefined}
+            >
+              {field.money ? <bdi>{field.value}</bdi> : field.value}
+            </span>
+            {scan && <Icon name="check" size="sm" class="aef__tick" data-testid="scan-check" style={`--i:${i}`} />}
           </span>
-          {scan && <svg class="aef__tick" data-testid="scan-check" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3 11l5 5L17 5" /></svg>}
-        </span>
-      </div>
-    ))
-  }
-  <div class="app-field aef__field">
-    <span>{t('home.expenses.fieldPaidBy', locale)}</span>
-    <span class="aef__val">{memberName(dinner.paidBy, locale)}</span>
+        </div>
+      ))
+    }
+    <div class="app-field aef__field">
+      <span>{t('home.expenses.fieldPaidBy', locale)}</span>
+      <span class="aef__val">{memberName(dinner.paidBy, locale)}</span>
+    </div>
+    <div class="aef__split">
+      <span class="aef__split-label">{t('home.expenses.fieldSplit', locale)}</span>
+      <span class="aef__chips">
+        {
+          splits.map((kind) => (
+            <span class:list={['aef__chip', { 'is-on': kind === dinner.split.kind }]}>
+              {t(SPLIT_KEYS[kind], locale)}
+            </span>
+          ))
+        }
+      </span>
+    </div>
   </div>
-  <div class="aef__split">
-    <span class="aef__split-label">{t('home.expenses.fieldSplit', locale)}</span>
-    <span class="aef__chips">
-      {
-        splits.map((kind) => (
-          <span class:list={['aef__chip', { 'is-on': kind === dinner.split.kind }]}>
-            {t(SPLIT_KEYS[kind], locale)}
-          </span>
-        ))
-      }
-    </span>
-  </div>
+  {scan && <Fragment slot="overlay">
+    <ScanViewfinder locale={locale} title={scan.description} amount={scan.amount}>
+      <p class="aef__status aef__scanning"><span class="aef__dot" aria-hidden="true"></span>{t('home.expenses.scanning', locale)}</p>
+    </ScanViewfinder>
+  </Fragment>}
 </AppFrame>
 
 <style>
-  .aef__messages { display: grid; }
-  .aef__messages > p { grid-area: 1 / 1; }
+  .aef__attached {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+  .aef__thumb {
+    flex: none;
+    inline-size: 3.25rem;
+    opacity: var(--scan-fields-opacity, 1);
+    transition: opacity var(--scan-transition-ms, 0s) linear;
+  }
   .aef__scanning {
     opacity: var(--scan-scanning-opacity, 0);
     visibility: var(--scan-scanning-visibility, hidden);
@@ -90,30 +117,31 @@ const splits = ['equal', 'exact', 'percent'] as const;
     transition: opacity var(--scan-transition-ms, 0s) linear, transform var(--scan-transition-ms, 0s) var(--ease-paper);
     transition-delay: calc(var(--i, 0) * var(--scan-stagger-ms, 0s));
   }
-  .aef__tick { opacity: var(--scan-review-opacity, 1); }
-  :is(.aef__tick, .aef__review, .aef__scanning) {
+  /* Each tick pops in just after its field lands */
+  .aef__tick {
+    opacity: var(--scan-fields-opacity, 1);
+    transform: scale(calc(0.4 + 0.6 * var(--scan-fields-opacity, 1)));
+    transition: opacity var(--scan-transition-ms, 0s) linear, transform var(--scan-transition-ms, 0s) var(--ease-snap);
+    transition-delay: calc((var(--i, 0) + 2) * var(--scan-stagger-ms, 0s));
+  }
+  :is(.aef__review, .aef__scanning) {
     /* Visibility hides at the end of the fade and becomes visible at its start. */
     transition: opacity var(--scan-transition-ms, 0s) linear, visibility var(--scan-transition-ms, 0s) linear;
   }
-  .aef :global(.frame__screen) {
+  .aef__body {
+    display: grid;
     gap: 0.375rem;
   }
-  .aef:global(.frame--phone) {
-    aspect-ratio: auto;
-    inline-size: 100%;
-    max-inline-size: 17.5rem;
+  .aef--scan .aef__body {
+    gap: 0.5rem;
+    font-size: 0.875rem;
   }
   @media (max-width: 599px) {
-    .aef :global(.frame__screen) {
+    .aef__body {
       gap: 0.25rem;
-      padding: 0.5rem 0.625rem;
-      padding-block-start: 1.375rem;
     }
-    .aef :global(.app-field) {
+    .aef__field {
       padding: 0.25rem 0.5rem;
-    }
-    .aef:global(.frame--phone) {
-      padding: 0.5rem;
     }
   }
   .aef__status {
@@ -146,15 +174,10 @@ const splits = ['equal', 'exact', 'percent'] as const;
     font-weight: 600;
     min-inline-size: 0;
   }
+  /* Stroke as before the move to Icon: 2.6 in a 20-unit box is about 3.1 in Icon's 24 */
   .aef__tick {
-    inline-size: 1.125rem;
-    block-size: 1.125rem;
-    flex: none;
-    fill: none;
-    stroke: var(--app-primary-dark);
-    stroke-width: 2.6;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+    --icon-stroke: 3.1;
+    color: var(--app-primary-dark);
   }
   .aef__split {
     display: grid;

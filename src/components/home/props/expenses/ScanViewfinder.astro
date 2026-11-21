@@ -1,0 +1,107 @@
+---
+/**
+ * The app's camera view of a receipt, for AppFrame's `overlay` slot: the receipt inside camera
+ * corner marks, a scan line, and a caption slot under the receipt (the scanning message). It fills
+ * the overlay layer and is decoration: the form underneath carries the receipt's text.
+ *
+ * The caller drives it through inherited semantic hooks; the defaults are the resting state, in
+ * which the view is gone:
+ *   --scan-viewfinder-opacity / --scan-viewfinder-visibility   the view itself (default 0, hidden)
+ *   --scan-viewfinder-scale    size of the view, shrinking toward the inline-start top (default 0.25)
+ *   --scan-line-opacity        the scan line (default 0)
+ *   --scan-line-progress       0 at the top of the receipt, 1 at its foot (default 1)
+ *   --scan-sweep-ms            how long the line takes to move (default 0s)
+ *   --scan-transition-ms       fades and the shrink (default 0s)
+ * All motion is transforms and opacity.
+ */
+import Receipt from '../Receipt.astro';
+import { t, type Locale } from '@/i18n';
+import { receiptDate } from './helpers';
+
+interface Props {
+  locale: Locale;
+  title: string;
+  amount: string;
+}
+const { locale, title, amount } = Astro.props;
+---
+
+<div class="viewfinder" aria-hidden="true" data-testid="scan-camera">
+  <div class="viewfinder__paper">
+    <Receipt
+      size="large"
+      title={title}
+      lines={[{ label: t('home.expenses.fieldDate', locale), amount: receiptDate(locale) }]}
+      total={{ label: t('home.expenses.fieldAmount', locale), amount }}
+    />
+    <span class="viewfinder__sweep" data-testid="scan-line"></span>
+    <svg class="viewfinder__corners" viewBox="0 0 100 100" preserveAspectRatio="none" focusable="false">
+      <path d="M0 18V0H18M82 0H100V18M100 82V100H82M18 100H0V82" vector-effect="non-scaling-stroke"></path>
+    </svg>
+  </div>
+  <slot />
+</div>
+
+<style>
+  .viewfinder {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 0.875rem;
+    padding: 1.75rem 1.25rem 1rem;
+    background: var(--app-camera);
+    opacity: var(--scan-viewfinder-opacity, 0);
+    visibility: var(--scan-viewfinder-visibility, hidden);
+    transform: scale(var(--scan-viewfinder-scale, 0.25));
+    transform-origin: 0 0;
+    transition:
+      opacity var(--scan-transition-ms, 0s) linear,
+      visibility var(--scan-transition-ms, 0s) linear,
+      transform var(--scan-transition-ms, 0s) var(--ease-paper);
+  }
+  /* transform-origin has no logical form: shrink toward the inline start in either direction */
+  .viewfinder:dir(rtl) {
+    transform-origin: 100% 0;
+  }
+  .viewfinder__paper {
+    position: relative;
+    inline-size: 84%;
+    padding: 0.75rem;
+  }
+  @media (max-width: 599px) {
+    .viewfinder { padding-inline: 0.75rem; }
+    .viewfinder__paper { inline-size: 90%; }
+  }
+  /* A box over the receipt; its band starts just above it and ends at its foot. The band's lower edge is the scan line. */
+  .viewfinder__sweep {
+    position: absolute;
+    inset: 0.75rem;
+    overflow: clip;
+    container-type: size;
+    pointer-events: none;
+    opacity: var(--scan-line-opacity, 0);
+    transition: opacity var(--scan-transition-ms, 0s) linear;
+  }
+  .viewfinder__sweep::before {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    inset-block-start: -2.5rem;
+    block-size: 2.5rem;
+    border-block-end: 3px solid var(--app-primary);
+    background: linear-gradient(to bottom, transparent, var(--app-scan-glow));
+    transform: translateY(calc(var(--scan-line-progress, 1) * (100cqb + 2.5rem)));
+    transition: transform var(--scan-sweep-ms, 0s) var(--ease-float);
+  }
+  .viewfinder__corners {
+    position: absolute;
+    inset: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    fill: none;
+    stroke: var(--paper);
+    stroke-width: 3;
+    stroke-linecap: round;
+    pointer-events: none;
+  }
+</style>

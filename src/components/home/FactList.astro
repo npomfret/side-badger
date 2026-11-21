@@ -1,0 +1,61 @@
+---
+/**
+ * A band of short facts, each with an icon: the hero's footing (`SceneChaos`). No heading. The
+ * caller passes translated text and an icon from the site's set; the icons are decoration.
+ * Four items run in one row from 900 px and two by two below it.
+ */
+import Icon, { type IconName } from '../icons/Icon.astro';
+
+interface Props {
+  items: ReadonlyArray<{ icon: IconName; text: string }>;
+}
+const { items } = Astro.props;
+---
+
+<ul class="facts" role="list">
+  {items.map(item => (
+    <li class="facts__item"><span class="facts__icon"><Icon name={item.icon} size="sm" /></span>{item.text}</li>
+  ))}
+</ul>
+
+<style>
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-sm) var(--space-md);
+    margin: 0;
+    padding: var(--space-md);
+    list-style: none;
+    background: var(--paper);
+    border-radius: var(--radius-md);
+    box-shadow: var(--paper-shadow);
+    color: var(--ink);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    line-height: var(--line-height-tight);
+  }
+  @media (min-width: 900px) {
+    .facts {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      padding: var(--space-md) var(--space-lg);
+    }
+  }
+  .facts__item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    min-inline-size: 0;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+  }
+  .facts__icon {
+    display: grid;
+    place-items: center;
+    flex: none;
+    inline-size: var(--icon-badge-size);
+    block-size: var(--icon-badge-size);
+    border-radius: var(--radius-full);
+    background: var(--app-tint);
+    color: var(--green-ink);
+  }
+</style>

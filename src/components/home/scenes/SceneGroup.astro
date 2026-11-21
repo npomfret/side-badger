@@ -13,6 +13,7 @@
  * The sign-up chips are illustration (aria-hidden): a link card, an email field and a tick. The
  * email addresses are placeholders built from the cast ids.
  */
+import Icon from '@/components/icons/Icon.astro';
 import ScrollScene from '../ScrollScene.astro';
 import SceneLink from '../props/SceneLink.astro';
 import Avatar from '../props/Avatar.astro';
@@ -75,14 +76,7 @@ const seats = MEMBERS.map((member, i) => ({
           <li class="seat">
             <div class="seat__chip" data-anim="rise" data-at="2" style={`${seat.chip};--dy:36px`} aria-hidden="true">
               <bdi dir="ltr">{seat.email}</bdi>
-              <svg
-                viewBox="0 0 12 12"
-                class="seat__tick"
-                data-anim="pop"
-                data-at="3"
-                style={seat.avatar}
-                focusable="false"
-              ><path d="M2 6.5l2.5 2.5L10 3" /></svg>
+              <Icon name="check" class="seat__tick" data-anim="pop" data-at="3" style={seat.avatar} />
             </div>
             <div class="seat__spot">
               <span class="seat__plate" aria-hidden="true"></span>
@@ -138,13 +132,11 @@ const seats = MEMBERS.map((member, i) => ({
     color: var(--green-ink, #2f6b2e);
     font-weight: 600;
   }
+  /* The phone fills this column (AppFrame's sizing contract); InvitePhone sets fit="content" */
   .group__phone {
+    --frame-phone-width: 100%;
     grid-area: phone;
     min-inline-size: 0;
-  }
-  .group__phone :global(.frame--phone) {
-    inline-size: 100%;
-    aspect-ratio: auto;
   }
   .group__seats {
     grid-area: seats;
@@ -188,16 +180,13 @@ const seats = MEMBERS.map((member, i) => ({
     position: absolute;
     inset-block-start: -0.4rem;
     inset-inline-end: -0.4rem;
-    inline-size: 1rem;
-    block-size: 1rem;
+    /* Stroke as before the move to Icon: 2.2 in a 12-unit box is 4.4 in Icon's 24 */
+    --icon-size: 1rem;
+    --icon-stroke: 4.4;
     padding: 0.1875rem;
     border-radius: 50%;
     background: var(--app-primary-dark, #15803d);
-    fill: none;
-    stroke: #fff;
-    stroke-width: 2.2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+    color: #fff;
   }
   .seat__spot {
     display: grid;

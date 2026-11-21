@@ -15,6 +15,7 @@
  * The mechanics (ticks, split, poll bars, comment) play on the native engine only; at rest every
  * one shows its end state. All CSS is logical; the only physical thing is the 90deg plank gradient.
  */
+import Icon from '@/components/icons/Icon.astro';
 import ScrollScene from '../ScrollScene.astro';
 import SceneLink from '../props/SceneLink.astro';
 import HousematesTable from '../props/worlds/HousematesTable.astro';
@@ -91,17 +92,13 @@ const TABLES = {
     </div>
     <div class="worlds__controls">
       <button type="button" class="worlds__btn" data-worlds-prev aria-disabled="true">
-        <svg class="worlds__icon" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" focusable="false">
-          <path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
+        <Icon name="chevron-left" flip class="worlds__icon" />
         {t('home.worlds.previous', locale)}
       </button>
       <p class="worlds__position" role="status" data-worlds-position>{positionText(1, locale)}</p>
       <button type="button" class="worlds__btn" data-worlds-next>
         {t('home.worlds.next', locale)}
-        <svg class="worlds__icon" viewBox="0 0 20 20" width="20" height="20" aria-hidden="true" focusable="false">
-          <path d="m7.5 4 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
+        <Icon name="chevron-right" flip class="worlds__icon" />
       </button>
     </div>
   </div>
@@ -265,6 +262,11 @@ const TABLES = {
   }
 
   /* ===== Previous and next ===== */
+  /* As before the move to Icon: a 12 px chevron drawn 2.2 px thick */
+  .worlds__icon {
+    --icon-size: 1.375rem;
+    --icon-stroke: 2.4;
+  }
   .worlds__btn {
     display: inline-flex;
     align-items: center;
@@ -290,9 +292,6 @@ const TABLES = {
     color: var(--ink-muted);
     border-color: var(--ink-muted);
     cursor: default;
-  }
-  .worlds__icon {
-    scale: var(--dir, 1) 1;
   }
   .worlds__position {
     margin: 0;

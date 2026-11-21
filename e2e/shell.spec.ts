@@ -35,6 +35,11 @@ for (const locale of SHELL_LOCALES) {
       await site.switchLanguageByKeyboard();
     });
 
+    test('header controls show their text, so no tooltip repeats it', async ({ page }) => {
+      const site = await SitePage.navigateTo(page, locale, 'pricing');
+      await site.expectNoHeaderTooltips();
+    });
+
     test('the language switcher search filters the languages', async ({ page }) => {
       const site = await SitePage.navigateTo(page, locale, 'pricing');
       await site.searchLanguages();
@@ -105,6 +110,16 @@ for (const locale of SHELL_LOCALES) {
       await site.verifyPhoneKeyboardOrder();
     });
 
+    test('the icon-only header controls show their names as tooltips on hover and focus; Escape closes them', async ({ page }) => {
+      const site = await SitePage.navigateTo(page, locale, 'pricing');
+      await site.expectHeaderTooltipsOnHoverAndFocus();
+    });
+
+    test('the language tooltip stays closed while its menu is open', async ({ page }) => {
+      const site = await SitePage.navigateTo(page, locale, 'pricing');
+      await site.expectLanguageTooltipClosedWhileMenuOpen();
+    });
+
     test('the menu opens from its button, holds the same links, and closes three ways', async ({ page }) => {
       const site = await SitePage.navigateTo(page, locale, 'pricing');
 
@@ -142,3 +157,12 @@ for (const locale of SHELL_LOCALES) {
     });
   });
 }
+
+test.describe('a stored regional variant at 375x812', () => {
+  test.use({ viewport: { width: 375, height: 812 }, hasTouch: false });
+  test('the language tooltip names the variant the button shows', async ({ page }) => {
+    // A visitor who chose English (American) before: the switcher shows it on English pages
+    const site = await SitePage.navigateWithStoredLanguage(page, 'en', 'pricing', 'en-us');
+    await site.expectLanguageTooltip('Change language: English American');
+  });
+});

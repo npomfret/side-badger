@@ -21,6 +21,7 @@ import { HASH_PREFIX } from './share-hash';
 import type { Outcome, Problem, ProblemCode, Target } from './split-engine';
 import { MAX_EXPENSES, MAX_PEOPLE, MIN_PEOPLE, newExpense, type CalcState, type Method } from './split-state';
 import { cloneTemplate, fill, later, ref, spaceOut } from './tool-dom';
+import { setIconButtonLabel } from '@/components/controls/icon-button';
 
 type Deferred = typeof import('./split-deferred');
 
@@ -158,7 +159,7 @@ function start(root: HTMLElement): void {
         caption.textContent = personDefault(index + 1);
         ref(row, 'error').id = `${id}-error`;
         const remove = ref<HTMLButtonElement>(row, 'remove');
-        remove.setAttribute('aria-label', fill(messages.removePerson, { number: index + 1 }));
+        setIconButtonLabel(remove, fill(messages.removePerson, { number: index + 1 }));
         remove.disabled = state.people.length <= MIN_PEOPLE;
         return row;
       })
@@ -242,7 +243,7 @@ function start(root: HTMLElement): void {
         return row;
       })
     );
-    ref(card, 'remove').setAttribute('aria-label', fill(messages.removeExpense, { number: index + 1 }));
+    setIconButtonLabel(ref(card, 'remove'), fill(messages.removeExpense, { number: index + 1 }));
     return card;
   }
 

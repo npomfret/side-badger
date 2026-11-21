@@ -2,6 +2,8 @@
 /**
  * A till receipt with a torn edge. Amounts arrive already formatted (`formatMoney()`), so this
  * wraps them in <bdi> and never builds a number itself. Dot leaders follow the text direction.
+ * `size`: `regular` (default), `large` (a receipt held up to a camera) or `thumb` (an attachment
+ * thumbnail; pair it with `decorative`, its text is too small to read).
  */
 import type { HTMLAttributes } from 'astro/types';
 
@@ -16,15 +18,16 @@ interface Props extends HTMLAttributes<'div'> {
   total?: Line;
   rotate?: number;
   decorative?: boolean;
+  size?: 'regular' | 'large' | 'thumb';
 }
 
-const { title, lines = [], total, rotate = 0, decorative = false, class: className, style, ...rest } = Astro.props;
+const { title, lines = [], total, rotate = 0, decorative = false, size = 'regular', class: className, style, ...rest } = Astro.props;
 const tilt = rotate ? `--rot:${rotate}deg` : '';
 ---
 
 <div
   {...rest}
-  class:list={['receipt', className]}
+  class:list={['receipt', size !== 'regular' && `receipt--${size}`, className]}
   data-prop="receipt"
   aria-hidden={decorative ? 'true' : undefined}
   style={[tilt, style].filter(Boolean).join(';') || undefined}
@@ -56,6 +59,35 @@ const tilt = rotate ? `--rot:${rotate}deg` : '';
     min-inline-size: 0;
     /* Torn bottom edge */
     mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / 12px 100%;
+  }
+  .receipt--large {
+    padding: 0.875rem 1rem 1.5rem;
+    font-size: 1rem;
+  }
+  @media (max-width: 599px) {
+    .receipt--large {
+      padding-inline: 0.75rem;
+      font-size: 0.875rem;
+    }
+  }
+  /* Large type in a narrow camera view: the label wraps, never the amount */
+  .receipt--large :is(.receipt__lines li, .receipt__total) > bdi {
+    flex: none;
+    white-space: nowrap;
+  }
+  .receipt--thumb {
+    padding: 0.25rem 0.3125rem 0.5rem;
+    font-size: 0.4375rem;
+    line-height: 1.3;
+    mask-size: 6px 100%;
+    overflow: clip;
+  }
+  /* One line each: on the homepage `.home p` sets text-wrap, which would undo an inherited nowrap */
+  .receipt--thumb :is(.receipt__title, .receipt__lines li, .receipt__total) {
+    white-space: nowrap;
+  }
+  .receipt--thumb .receipt__title {
+    margin-block-end: 0.25rem;
   }
   .receipt__title {
     margin: 0 0 0.5rem;

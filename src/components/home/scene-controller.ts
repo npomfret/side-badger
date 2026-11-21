@@ -24,20 +24,27 @@
  *   [data-confetti]                                              fires confetti when clicked
  *   [data-confetti-at="N"] on a scene                            fires once at N % of its range
  *   [data-confetti-x="0..1"] on a scene                          inline origin of that confetti (default 0.5)
- *   [data-play="once"][data-duration="3000"]                   timed stages, independent of scroll engine
+ *   [data-play="once"][data-duration="4500"]                   timed stages, independent of scroll engine
  *   [data-scene-entry] inside a timed scene                      phone entry target (desktop starts after paint)
+ *   [data-scene-replay][hidden] inside a timed scene             button that plays the pass again (see below)
  *   data-play-state="pending|playing|done"                       timed lifecycle; static always rests at done
  * Timed boundaries are percentages of duration. Timers and observers are cancelled on setup;
- * a started scene then rests at its static stage, so resize/motion changes never replay it.
+ * a started scene then rests at its static stage, so resize/motion changes never replay it. The
+ * replay button is unhidden once a timed engine has finished a pass, and hidden again by the
+ * static engine (reduced motion, short viewports); without JS it stays hidden. A click resets the
+ * scene to stage 0 (pending: no transitions), then starts a new pass after that reset has painted.
+ * A click while a pass or a reset is running cancels it first.
  *   document event `home:confetti` ({ detail: { x, y } } in 0..1)  fires from a scene's own code
  */
 type Engine = 'native' | 'stages' | 'static';
+type Schedule = (ms: number, callback: () => void) => () => void;
+export type PlayState = 'pending' | 'playing' | 'done';
 
 /** Schedule one pass through stage boundaries; cancellation also invalidates late callbacks. */
 export function playTimedStages(
   edges: readonly number[],
   duration: number,
-  after: (ms: number, callback: () => void) => () => void,
+  after: Schedule,
   show: (stage: number) => void
 ): () => void {
   let cancelled = false;
@@ -48,6 +55,38 @@ export function playTimedStages(
   return () => {
     cancelled = true;
     cancels.forEach(cancel => cancel());
+  };
+}
+
+/**
+ * One timed scene's passes. `play` starts a pass now; `replay` shows stage 0 as pending, then
+ * plays once `afterPaint` reports the reset painted. Each call cancels the pass or reset before it,
+ * so only the latest one can change the stage.
+ */
+export function timedScene(
+  edges: readonly number[],
+  duration: number,
+  after: Schedule,
+  afterPaint: (callback: () => void) => () => void,
+  show: (stage: number, state: PlayState) => void
+) {
+  let stop = () => {};
+  const cancel = () => {
+    stop();
+    stop = () => {};
+  };
+  const play = () => {
+    cancel();
+    stop = playTimedStages(edges, duration, after, stage => show(stage, stage < edges.length ? 'playing' : 'done'));
+  };
+  return {
+    play,
+    replay() {
+      cancel();
+      show(0, 'pending');
+      stop = afterPaint(play);
+    },
+    cancel,
   };
 }
 
@@ -169,31 +208,39 @@ function setUpStages() {
 }
 
 const played = new WeakSet<HTMLElement>();
+const players = new Map<HTMLElement, ReturnType<typeof timedScene>>();
+const showReplay = (scene: HTMLElement, shown: boolean) =>
+  scene.querySelectorAll<HTMLElement>('[data-scene-replay]').forEach(button => (button.hidden = !shown));
+const afterPaint = (callback: () => void) => {
+  let frame = requestAnimationFrame(() => (frame = requestAnimationFrame(callback)));
+  return () => cancelAnimationFrame(frame);
+};
 function setUpTimedScenes() {
-  const start = (scene: HTMLElement) => {
-    if (played.has(scene)) return;
-    played.add(scene);
-    scene.dataset.playState = 'playing';
-    cleanups.push(playTimedStages(boundaries(scene), Number(scene.dataset.duration), (ms, callback) => {
-      const timer = window.setTimeout(callback, ms);
-      return () => clearTimeout(timer);
-    }, stage => {
-      scene.dataset.stage = String(stage);
-      if (stage === lastStage(scene)) scene.dataset.playState = 'done';
-    }));
-  };
   const entered = observe({ threshold: 0.25 }, entries => {
     for (const entry of entries) {
       if (!entry.isIntersecting || entry.intersectionRatio < 0.25) continue;
-      start(sceneOf(entry.target));
+      const scene = sceneOf(entry.target);
+      if (!played.has(scene)) players.get(scene)?.play();
+      played.add(scene);
       entered.unobserve(entry.target);
     }
   });
   for (const scene of scenes()) {
     if (scene.dataset.play !== 'once') continue;
+    const player = timedScene(boundaries(scene), Number(scene.dataset.duration), (ms, callback) => {
+      const timer = window.setTimeout(callback, ms);
+      return () => clearTimeout(timer);
+    }, afterPaint, (stage, state) => {
+      scene.dataset.stage = String(stage);
+      scene.dataset.playState = state;
+      if (state === 'done') showReplay(scene, true);
+    });
+    players.set(scene, player);
+    cleanups.push(player.cancel);
     if (played.has(scene)) {
       scene.dataset.stage = scene.dataset.staticStage!;
       scene.dataset.playState = 'done';
+      showReplay(scene, true);
       continue;
     }
     scene.dataset.stage = '0';
@@ -201,11 +248,8 @@ function setUpTimedScenes() {
     if (phoneQuery.matches) {
       entered.observe(scene.querySelector('[data-scene-entry]') ?? scene);
     } else {
-      const frame = requestAnimationFrame(() => {
-        const painted = requestAnimationFrame(() => start(scene));
-        cleanups.push(() => cancelAnimationFrame(painted));
-      });
-      cleanups.push(() => cancelAnimationFrame(frame));
+      played.add(scene);
+      player.replay();
     }
   }
 }
@@ -317,6 +361,7 @@ function onFocusIn(event: FocusEvent) {
 function setUp() {
   cleanups.forEach(cleanup => cleanup());
   cleanups = [];
+  players.clear();
   const engine = pickEngine();
   root.dataset.sceneEngine = engine;
 
@@ -327,6 +372,7 @@ function setUp() {
       if (scene.dataset.play === 'once') {
         played.add(scene);
         scene.dataset.playState = 'done';
+        showReplay(scene, false);
       }
       scene.removeAttribute('data-active');
       scene.removeAttribute('data-near');
@@ -349,7 +395,10 @@ function setUp() {
     fireConfetti(x, y);
   });
   document.addEventListener('click', event => {
-    const el = (event.target as Element | null)?.closest<HTMLElement>('[data-confetti]');
+    const target = event.target as Element | null;
+    const replay = target?.closest<HTMLElement>('[data-scene-replay]');
+    if (replay) players.get(sceneOf(replay))?.replay();
+    const el = target?.closest<HTMLElement>('[data-confetti]');
     if (!el) return;
     const box = el.getBoundingClientRect();
     fireConfetti((box.x + box.width / 2) / innerWidth, (box.top + box.height / 2) / innerHeight);

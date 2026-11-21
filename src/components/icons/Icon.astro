@@ -1,0 +1,76 @@
+---
+/**
+ * The site's icon set: Lucide icons (ISC licence, lucide.dev), inline at 24 x 24 with the stroke in
+ * currentColor. Every icon is decoration (aria-hidden): the control or text beside it carries the
+ * meaning. Add an icon here before using it anywhere; never draw one in a component.
+ *
+ * Size: `size` picks a token (`xs` 14 px, `sm` 18 px, `md` 20 px) or `text` (1em, sitting on the line
+ * like a glyph in running text); without it the icon takes the
+ * inherited `--icon-size`, so a caller with its own geometry sets `--icon-size` on its class.
+ * `weight="bold"` thickens the stroke for small ticks. `flip` mirrors a directional icon in
+ * right-to-left text. Extra attributes (class, style, data-*) pass to the <svg>.
+ *
+ * Not icons, so not here: the logo, the homepage illustration props (Doodle, QrCode, the trust
+ * seal, the tangle board, the camera marks in ScanViewfinder).
+ */
+import type { HTMLAttributes } from 'astro/types';
+
+const PATHS = {
+  'arrow-right-left': ['m16 3 4 4-4 4', 'M20 7H4', 'm8 21-4-4 4-4', 'M4 17h16'],
+  ban: ['M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z', 'm4.9 4.9 14.2 14.2'],
+  bot: ['M12 8V4H8', 'M6 8h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2z', 'M2 14h2', 'M20 14h2', 'M15 13v2', 'M9 13v2'],
+  check: ['M20 6 9 17l-5-5'],
+  'chevron-down': ['m6 9 6 6 6-6'],
+  'chevron-left': ['m15 18-6-6 6-6'],
+  'chevron-right': ['m9 18 6-6-6-6'],
+  house: ['M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8', 'M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'],
+  'log-in': ['M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4', 'm10 17 5-5-5-5', 'M15 12H3'],
+  menu: ['M4 6h16', 'M4 12h16', 'M4 18h16'],
+  'move-right': ['m18 8 4 4-4 4', 'M2 12h20'],
+  pencil: ['M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z', 'm15 5 4 4'],
+  'rotate-ccw': ['M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8', 'M3 3v5h5'],
+  'scan-line': ['M3 7V5a2 2 0 0 1 2-2h2', 'M17 3h2a2 2 0 0 1 2 2v2', 'M21 17v2a2 2 0 0 1-2 2h-2', 'M7 21H5a2 2 0 0 1-2-2v-2', 'M7 12h10'],
+  search: ['M11 3a8 8 0 1 0 0 16 8 8 0 0 0 0-16z', 'm21 21-4.3-4.3'],
+  x: ['M18 6 6 18', 'm6 6 12 12'],
+} as const;
+
+export type IconName = keyof typeof PATHS;
+
+interface Props extends HTMLAttributes<'svg'> {
+  name: IconName;
+  size?: 'xs' | 'sm' | 'md' | 'text';
+  weight?: 'regular' | 'bold';
+  flip?: boolean;
+}
+
+const { name, size, weight = 'regular', flip = false, class: className, ...rest } = Astro.props;
+---
+
+<svg
+  {...rest}
+  class:list={['icon', size && `icon--${size}`, weight === 'bold' && 'icon--bold', flip && 'icon--flip', className]}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+  focusable="false"
+>
+  {PATHS[name].map(d => <path d={d} />)}
+</svg>
+
+<style>
+  .icon {
+    inline-size: var(--icon-size);
+    block-size: var(--icon-size);
+    flex: none;
+    stroke-width: var(--icon-stroke);
+  }
+  .icon--xs { --icon-size: var(--icon-size-xs); }
+  .icon--sm { --icon-size: var(--icon-size-sm); }
+  .icon--md { --icon-size: var(--icon-size-md); }
+  .icon--text { --icon-size: 1em; vertical-align: -0.125em; }
+  .icon--bold { --icon-stroke: var(--icon-stroke-bold); }
+  .icon--flip:dir(rtl) { scale: -1 1; }
+</style>

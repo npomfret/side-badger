@@ -4,6 +4,7 @@
  * table, the trust stamp, the terms' notice commitment and the FAQ. One call to action, through
  * the launch counter. Confetti loads on the first click, never at page load (D25).
  */
+import Icon from '@/components/icons/Icon.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import LaunchAppCta from './cta/LaunchAppCta.astro';
 import ContentSection from './content/ContentSection.astro';
@@ -18,8 +19,6 @@ interface Props {
 }
 
 const { locale } = Astro.props;
-
-const checkIcon = `<svg class="check" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
 
 const features = [
   t('pricing.free.feature1', locale),
@@ -87,7 +86,7 @@ const jsonLd = [webPageNode('pricing', locale), ...faqNode(faq)];
       </div>
 
       <ul class="plan-features" role="list">
-        {features.map(feature => <li><Fragment set:html={checkIcon} /><span>{feature}</span></li>)}
+        {features.map(feature => <li><Icon name="check" class="check" /><span>{feature}</span></li>)}
       </ul>
 
       <LaunchAppCta target="register" cta="plan-free" pageId="pricing" locale={locale} class="btn-lg btn-full" confetti>

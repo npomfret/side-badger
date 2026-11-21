@@ -4,6 +4,7 @@
  * the group's currency under a stamp that names the example rate. A card already in euros just
  * shows its amount. `from`/`to` are the stamp's native range on the pinned desktop scene.
  */
+import Icon from '@/components/icons/Icon.astro';
 import { t, type Locale } from '@/i18n';
 import Stamp from '../Stamp.astro';
 import { EXAMPLE_RATES, GROUP, type Expense } from '../../data/example-group';
@@ -31,9 +32,7 @@ const eur = formatMoney(expense.eurCents, GROUP.currency, locale, { whole: true 
     <p class="cc__title">{expenseTitle(expense, locale)}</p>
     <p class="cc__amount"><bdi>{formatMoney(minor, currency, locale)}</bdi></p>
   </div>
-  <svg class="cc__arrow" viewBox="0 0 24 12" aria-hidden="true" focusable="false">
-    <path d="M1 6h20M16 1.5L21.5 6 16 10.5"></path>
-  </svg>
+  <Icon name="move-right" flip class="cc__arrow" />
   <div class="cc__conv">
     {
       converted ? (
@@ -45,7 +44,7 @@ const eur = formatMoney(expense.eurCents, GROUP.currency, locale, { whole: true 
             </bdi>
           </Stamp>
           <span class="app-chip cc__chip" aria-hidden="true">
-            ✎ {t('home.currency.editRate', locale)}
+            <Icon name="pencil" size="text" class="cc__pencil" />{t('home.currency.editRate', locale)}
           </span>
         </>
       ) : (
@@ -89,14 +88,14 @@ const eur = formatMoney(expense.eurCents, GROUP.currency, locale, { whole: true 
     font-weight: 700;
     font-size: 1.0625rem;
   }
+  /* The pencil stands where "✎ " stood */
+  .cc__pencil {
+    margin-inline-end: 0.25em;
+  }
+  /* As before the move to Icon: a long, light arrow (1.8 in a 24-wide box) */
   .cc__arrow {
-    inline-size: 1.25rem;
-    fill: none;
-    stroke: var(--ink-muted, #4e5a52);
-    stroke-width: 1.8;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    scale: var(--dir, 1) 1;
+    --icon-stroke: 1.8;
+    color: var(--ink-muted, #4e5a52);
   }
   .cc__conv {
     display: flex;

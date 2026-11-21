@@ -71,6 +71,19 @@ export class SitePage {
     return new LanguageSwitcher(this.page, this.locale);
   }
 
+  /**
+   * The Sign in link's tooltip (Tooltip.astro), shown on phones where the link shows only its icon.
+   * Departs from rule 2: the tooltip is aria-hidden (the link's name already says it) and the same
+   * text is inside the link, visually hidden, so no role or text finds it alone. The anchor and
+   * text carry data-tooltip and data-tooltip-text, which the site's own tooltip script uses.
+   */
+  private get launchTooltip(): Locator {
+    return this.banner
+      .locator('[data-tooltip]')
+      .filter({ has: this.page.getByRole('link', { name: this.string('header.signIn') }) })
+      .locator('[data-tooltip-text]');
+  }
+
   // ----- the page -----
 
   /** The user is already on this page (a menu closed, a dialog dismissed): verify it, no reload. */
@@ -189,6 +202,52 @@ export class SitePage {
   }
 
   // ----- language switcher -----
+
+  /** Open the page with a regional variant already chosen (stored as a visitor's earlier choice) */
+  static async navigateWithStoredLanguage(page: Page, locale: ShellLocale, route: ShellRoute, stored: string): Promise<SitePage> {
+    await page.addInitScript(choice => localStorage.setItem('preferred-locale', choice), stored);
+    return SitePage.navigateTo(page, locale, route);
+  }
+
+  /**
+   * Phones: the header's icon-only controls (Sign in, the language flag) show their names as
+   * tooltips on hover and on keyboard focus, and Escape closes them.
+   */
+  async expectHeaderTooltipsOnHoverAndFocus(): Promise<void> {
+    await expect(this.launchTooltip, 'the Sign in tooltip before hovering').toBeHidden();
+    await this.launchLink.hover();
+    await expect(this.launchTooltip, 'the Sign in tooltip on hover').toBeVisible();
+    await expect(this.launchTooltip).toHaveText(this.string('header.signIn'));
+    await this.page.getByRole('main').hover();
+    await expect(this.launchTooltip, 'the Sign in tooltip once the pointer leaves').toBeHidden();
+    await this.homeLink.focus();
+    await this.page.keyboard.press('Tab');
+    await this.page.keyboard.press('Tab');
+    await expect(this.launchLink, 'Tab reaches Sign in after the language button').toBeFocused();
+    await expect(this.launchTooltip, 'the Sign in tooltip on keyboard focus').toBeVisible();
+    await this.page.keyboard.press('Escape');
+    await expect(this.launchTooltip, 'Escape closes the Sign in tooltip').toBeHidden();
+    await this.languageSwitcher.expectTooltipOnHoverAndFocus();
+  }
+
+  /** Desktop: the header's controls show their text, so no tooltip repeats it */
+  async expectNoHeaderTooltips(): Promise<void> {
+    await this.launchLink.hover();
+    await expect(this.launchTooltip, 'no Sign in tooltip where the text shows').toBeHidden();
+    await this.launchLink.focus();
+    await expect(this.launchTooltip, 'no Sign in tooltip on focus where the text shows').toBeHidden();
+    await this.languageSwitcher.expectNoTooltip();
+  }
+
+  /** The language button's tooltip stays closed while its menu is open */
+  async expectLanguageTooltipClosedWhileMenuOpen(): Promise<void> {
+    await this.languageSwitcher.expectTooltipClosedWhileOpen();
+  }
+
+  /** The language button's tooltip (phones) names the language shown, `name` exactly */
+  async expectLanguageTooltip(name: string): Promise<void> {
+    await this.languageSwitcher.expectTooltipOnHoverAndFocus(name);
+  }
 
   async switchLanguageByKeyboard(): Promise<void> {
     const switcher = this.languageSwitcher;

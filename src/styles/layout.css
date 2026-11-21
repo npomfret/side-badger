@@ -91,11 +91,6 @@
   display: none;
 }
 
-/* Directional icons mirror in right-to-left scripts */
-:dir(rtl) .launch-cta__icon {
-  transform: scaleX(-1);
-}
-
 /* ===== MAIN CONTENT ===== */
 /* The fixed header's bottom edge is --header-h, so main starts exactly there */
 main {

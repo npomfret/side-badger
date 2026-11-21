@@ -31,6 +31,10 @@ body:has(.home) {
   --stage-h: calc(100svh - var(--header-h, 88px));
   --scene-gutter: clamp(1rem, 4vw, 3rem);
   --scene-gap: clamp(1rem, 3vw, 2.5rem);
+  /* Width of an AppFrame phone; a scene may set its own on any ancestor */
+  --frame-phone-width: 17.5rem;
+  /* Scale of an AppFrame phone; a scene short of room may set its own */
+  --frame-zoom: 1;
 
   background: var(--table);
   color: var(--ink);

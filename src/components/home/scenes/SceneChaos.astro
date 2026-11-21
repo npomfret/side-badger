@@ -1,17 +1,19 @@
 ---
 /**
- * Scene 1 (`top`): the taxi receipt from the messy table fills an expense form, once in 3 seconds.
- * Stages: 0 mess/receipt, 1 scanning, 2 fields land, 3 review. Desktop starts after paint; phones
- * start when the visual enters. No-JS, static and reduced motion rest on the filled review form.
- * The copy column never animates. The form reserves the visual's space in every stage.
+ * Scene 1 (`top`): the hero. The copy column (h1, one summary line, the actions) never animates.
+ * The visual is one phone that scans the taxi receipt once in 4.5 seconds. Stages: 0 viewfinder
+ * (the receipt inside camera marks), 1 scanning (a scan line sweeps down it), 2 fields land (the
+ * receipt shrinks to a thumbnail; description, amount and date land in turn, ticked), 3 review
+ * ("For you to check"). Desktop starts after paint; phones start when the visual enters. At rest
+ * the replay button plays the pass again (timed engines only; the controller unhides it).
+ * No-JS, static and reduced motion rest on the filled review form with no replay button. The form
+ * reserves the visual's space in every stage; the camera view is laid over it.
+ * The facts band under copy and visual is the hero's footing; it does not animate.
  */
 import ScrollScene from '../ScrollScene.astro';
-import Receipt from '../props/Receipt.astro';
-import StickyNote from '../props/StickyNote.astro';
-import Spreadsheet from '../props/chaos/Spreadsheet.astro';
-import ChatPhone from '../props/chaos/ChatPhone.astro';
-import ScanReceipt from '../props/expenses/ScanReceipt.astro';
 import AddExpenseForm from '../props/expenses/AddExpenseForm.astro';
+import FactList from '../FactList.astro';
+import IconButton from '@/components/controls/IconButton.astro';
 import { t, type Locale } from '@/i18n';
 import { formatMoney } from '../format';
 import LaunchAppCta from '@/components/cta/LaunchAppCta.astro';
@@ -19,83 +21,66 @@ import { resolveHowItWorks } from '../data/links';
 interface Props { locale: Locale; }
 const { locale } = Astro.props;
 const howItWorks = resolveHowItWorks(locale);
-const taxi = formatMoney(4200, 'JPY', locale);
-const groceries = formatMoney(3850, 'EUR', locale);
-const villa = formatMoney(25000, 'EUR', locale);
-const sample = { description: t('home.chaos.receiptTaxi', locale), amount: taxi };
-const sheetRows = [
-  { label: sample.description, amount: taxi },
-  { label: t('home.chaos.receiptGroceries', locale), amount: groceries },
-  { label: t('home.chaos.receiptVilla', locale), amount: villa },
-];
+const sample = { description: t('home.chaos.receiptTaxi', locale), amount: formatMoney(4200, 'JPY', locale) };
+const facts = [
+  { icon: 'scan-line', text: t('home.hero.fact.scanning', locale) },
+  { icon: 'arrow-right-left', text: t('home.hero.fact.conversion', locale) },
+  { icon: 'bot', text: t('home.hero.fact.assistants', locale) },
+  { icon: 'ban', text: t('home.hero.fact.noAds', locale) },
+] as const;
 ---
 
-<ScrollScene id="top" titleId="top-title" runway="entry" play="once" duration={3000} stages={[13, 50, 90]} staticStage={3}>
+<ScrollScene id="top" titleId="top-title" runway="entry" play="once" duration={4500} stages={[15, 50, 80]} staticStage={3}>
   <Fragment slot="copy">
     <h1 id="top-title">{t('home.hero.title', locale)}</h1>
-    <p>{t('home.hero.lede', locale)}</p>
+    <p>{t('home.hero.summary', locale)}</p>
     <div class="scene__link">
       <LaunchAppCta target="register" cta="hero" pageId="home" locale={locale} class="btn-lg">{t('home.hero.ctaPrimary', locale)}</LaunchAppCta>
       <a class="scene-link" href={howItWorks.href}>{t(howItWorks.labelKey, locale)}</a>
     </div>
-    <p class="scene__meta">
-      <span>{t('home.hero.trust', locale)}</span>
-      <span>{t('home.hero.haveAccount', locale)} <LaunchAppCta target="app" cta="hero-sign-in" pageId="home" locale={locale} variant="link" class="scene-link">{t('header.signIn', locale)}</LaunchAppCta></span>
-    </p>
   </Fragment>
   <div slot="visual" class="hero-scan" data-scene-entry data-testid="hero-scan">
-    <div class="hero-scan__receipt"><ScanReceipt locale={locale} title={sample.description} amount={taxi} /></div>
-    <div class="hero-scan__form"><AddExpenseForm locale={locale} scan sample={sample} /></div>
-    <div class="hero-scan__mess" aria-hidden="true">
-      <div class="hero-scan__sheet"><Spreadsheet rows={sheetRows} total={t('home.chaos.sheetError', locale)} /></div>
-      <div class="hero-scan__phone"><ChatPhone locale={locale} /></div>
-      <div class="hero-scan__sticky"><StickyNote>{t('home.chaos.sticky', locale)}</StickyNote></div>
-      <div class="hero-scan__groceries"><Receipt title={t('home.chaos.receiptGroceries', locale)} total={{ label: '', amount: groceries }} /></div>
-      <div class="hero-scan__villa"><Receipt title={t('home.chaos.receiptVilla', locale)} total={{ label: '', amount: villa }} /></div>
-    </div>
+    <AddExpenseForm locale={locale} scan={sample} />
+    <IconButton class="hero-scan__replay" icon="rotate-ccw" label={t('home.hero.replay', locale)} tipAlign="end" data-scene-replay hidden />
   </div>
+  <div class="hero-facts"><FactList items={facts} /></div>
 </ScrollScene>
 <style>
-  .scene__meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    column-gap: var(--space-md);
-    row-gap: var(--space-xs);
-    font-size: var(--text-xs);
-    color: var(--ink-muted);
-  }
-  /* Normal-flow form and receipt reserve the full translated rest state before animation. */
+  /* The phone's width (AppFrame's sizing contract); the wrapper matches it, so the replay button
+     sits on the phone's corner */
   .hero-scan {
+    --frame-phone-width: 20rem;
     position: relative;
-    display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    gap: var(--space-md);
-    align-items: start;
-    padding-block: var(--space-md);
+    inline-size: min(100%, var(--frame-phone-width));
+    margin-inline: auto;
   }
-  .hero-scan__form { min-inline-size: 0; }
-  .hero-scan__receipt { min-inline-size: 0; position: relative; z-index: 1; }
-  .hero-scan__mess {
+  @media (max-width: 599px) {
+    .hero-scan { --frame-phone-width: 18rem; }
+  }
+  /* Sits on the phone's lower inline-end corner, over the bezel: positioned, so it never moves layout */
+  .hero-scan :global(.hero-scan__replay) {
     position: absolute;
-    inset: 0;
-    opacity: 0;
-    transform: scale(0.9);
-    pointer-events: none;
-    z-index: 0;
+    inset-block-end: -0.75rem;
+    inset-inline-end: -1rem;
+    z-index: 2;
   }
-  /* Local geometry of the table props; all remain inside the reserved visual. */
-  .hero-scan__mess > div { position: absolute; inline-size: 42%; }
-  .hero-scan__sheet { inset-inline-start: 4%; inset-block-start: 48%; transform: rotate(-5deg); }
-  .hero-scan__phone { inset-inline-end: 8%; inset-block-start: 0; transform: rotate(6deg) scale(0.8); }
-  .hero-scan__sticky { inset-inline-start: 30%; inset-block-end: 4%; transform: rotate(8deg); }
-  .hero-scan__groceries { inset-inline-start: 0; inset-block-end: 6%; transform: rotate(-7deg); }
-  .hero-scan__villa { inset-inline-end: 2%; inset-block-end: 10%; transform: rotate(5deg); }
-  /* The hero owns the stage-to-state mapping; shared props consume only semantic hooks. */
+  .hero-facts {
+    grid-column: 1 / -1;
+    min-inline-size: 0;
+  }
+  /* The hero owns the stage-to-state mapping; shared props consume only semantic hooks. Until the
+     controller has set a play state, a timed engine shows stage 0 so nothing flashes on load. */
   :global(html:is([data-scene-engine='native'], [data-scene-engine='stages']) .scene[data-scene='top']:not([data-play-state])) .hero-scan,
   :global(.scene[data-scene='top']:is([data-stage='0'], [data-stage='1'])) .hero-scan {
+    --scan-viewfinder-opacity: 1;
+    --scan-viewfinder-visibility: visible;
+    --scan-viewfinder-scale: 1;
     --scan-fields-opacity: 0;
-    --scan-fields-offset: -3rem;
+    --scan-fields-offset: -2rem;
+  }
+  :global(html:is([data-scene-engine='native'], [data-scene-engine='stages']) .scene[data-scene='top']:not([data-play-state])) .hero-scan,
+  :global(.scene[data-scene='top'][data-stage='0']) .hero-scan {
+    --scan-line-progress: 0;
   }
   :global(html:is([data-scene-engine='native'], [data-scene-engine='stages']) .scene[data-scene='top']:not([data-play-state])) .hero-scan,
   :global(.scene[data-scene='top']:is([data-stage='0'], [data-stage='1'], [data-stage='2'])) .hero-scan {
@@ -105,21 +90,13 @@ const sheetRows = [
   :global(.scene[data-scene='top'][data-stage='1']) .hero-scan {
     --scan-scanning-opacity: 1;
     --scan-scanning-visibility: visible;
+    --scan-line-opacity: 1;
   }
+  /* Transitions only while a pass plays or rests: a replay's reset to pending is instant */
   :global(html:is([data-scene-engine='native'], [data-scene-engine='stages']) .scene[data-scene='top']:is([data-play-state='playing'], [data-play-state='done'])) .hero-scan {
-    --scan-transition-ms: var(--duration-reveal);
-    --scan-stagger-ms: var(--delay-stagger);
-  }
-  :global(html:is([data-scene-engine='native'], [data-scene-engine='stages']) .scene[data-scene='top']:not([data-play-state])) .hero-scan__form,
-  :global(.scene[data-scene='top'][data-stage='0']) .hero-scan__form { opacity: 0; transform: translateX(calc(1rem * var(--dir))); }
-  :global(html:is([data-scene-engine='native'], [data-scene-engine='stages']) .scene[data-scene='top']:not([data-play-state])) .hero-scan__mess,
-  :global(.scene[data-scene='top'][data-stage='0']) .hero-scan__mess { opacity: 1; transform: scale(1); }
-  :global(.scene[data-scene='top'][data-play-state='playing']) :is(.hero-scan__form, .hero-scan__mess) {
-    transition: transform var(--duration-reveal) var(--ease-paper), opacity var(--duration-reveal) linear;
-  }
-  @media (max-width: 599px) {
-    .hero-scan { gap: var(--space-xs); }
-    .hero-scan__sheet, .hero-scan__villa { display: none; }
+    --scan-transition-ms: var(--duration-base);
+    --scan-stagger-ms: var(--delay-land);
+    --scan-sweep-ms: var(--duration-sweep);
   }
   /* Keep the existing hero copy geometry. */
   :global(#top .scene__stage) { padding-block-start: var(--space-lg); }

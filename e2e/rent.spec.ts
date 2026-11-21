@@ -55,6 +55,7 @@ test.describe('rent split calculator', () => {
     await rent.expectUnit('m²');
     await rent.expectNoResult();
     await rent.expectCannotRemovePeople();
+    await rent.expectNoRemoveTooltipWhileOff(1);
     await rent.expectStartGroupLink();
     await rent.expectAddressWithoutLink();
   });
@@ -193,6 +194,7 @@ test.describe('rent split calculator', () => {
   test('removing a person recalculates for the people who are left', async ({ page }) => {
     const rent = await RentPage.navigateTo(page);
     await rent.addPerson(3);
+    await rent.expectRemovePersonTooltip(3);
     await rent.chooseMode('By income');
     await rent.setRent('600');
     await rent.setFigure(1, 'Income', '1000');

@@ -4,6 +4,7 @@
  * decoration; the list's words (with the count) are the paper's label, so they stay content.
  * `data-mech="tick"` marks the ticks the scene animates on the native engine.
  */
+import Icon from '@/components/icons/Icon.astro';
 interface Props {
   one: string;
   two: string;
@@ -20,9 +21,7 @@ const boxes = Array.from({ length: 7 }, (_, i) => i);
         boxes.map(i => (
           <li class="box">
             {i < 4 && (
-              <svg class="tick" data-mech="tick" style={`--i:${i}`} viewBox="0 0 16 16" focusable="false">
-                <path d="M3 8.5 6.3 11.7 13 4.8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+              <Icon name="check" class="tick" data-mech="tick" style={`--i:${i}`} />
             )}
           </li>
         ))
@@ -71,9 +70,10 @@ const boxes = Array.from({ length: 7 }, (_, i) => i);
     display: grid;
     place-items: center;
   }
+  /* Stroke as before the move to Icon: 2.4 in a 16-unit box is 3.6 in Icon's 24 */
   .tick {
-    inline-size: 1.1rem;
-    block-size: 1.1rem;
+    --icon-size: 1.1rem;
+    --icon-stroke: 3.6;
     color: var(--green-ink);
   }
   .note {

@@ -9,6 +9,7 @@
  * converted amount side by side. Amounts come from example-group.ts; the original always stays.
  * A "Convert to EUR" picker above the tape shows the conversion is chosen, as in the app's form.
  */
+import Icon from '@/components/icons/Icon.astro';
 import ScrollScene from '../ScrollScene.astro';
 import SceneLink from '../props/SceneLink.astro';
 import ConvertedCard from '../props/expenses/ConvertedCard.astro';
@@ -42,7 +43,7 @@ const stamps = EXPENSES.map((_, i) => ({ from: 36 + i * 7, to: 46 + i * 7 }));
   <div slot="visual" class="cur" data-hook="currencies-visual">
     <p class="cur__to">
       {t('home.currency.convertTo', locale)}
-      <span class="app-chip"><bdi>{GROUP.currency}</bdi><span aria-hidden="true"> ▾</span></span>
+      <span class="app-chip"><bdi>{GROUP.currency}</bdi><Icon name="chevron-down" size="text" class="cur__chevron" /></span>
     </p>
     <div class="cur__tape" aria-hidden="true" data-anim="slide" data-at="1" style="--dx:-200px;--from:4;--to:35">
       <span class="cur__head"></span>
@@ -60,6 +61,10 @@ const stamps = EXPENSES.map((_, i) => ({ from: 36 + i * 7, to: 46 + i * 7 }));
 </ScrollScene>
 
 <style>
+  /* The currency picker chip: the chevron stands where " ▾" stood */
+  .cur__chevron {
+    margin-inline-start: 0.2em;
+  }
   .cur {
     display: grid;
     grid-template-columns: minmax(0, 1fr);

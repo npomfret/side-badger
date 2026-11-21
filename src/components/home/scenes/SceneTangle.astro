@@ -34,6 +34,7 @@
  * because Astro's scoping attribute on every element cost about 13 KB here; every selector is
  * prefixed with .scene--tangle or a tangle__ class instead.
  */
+import Icon from '@/components/icons/Icon.astro';
 import ScrollScene from '../ScrollScene.astro';
 import SceneLink from '../props/SceneLink.astro';
 import { t, tf, isRTL, type Locale, type TranslationKey } from '@/i18n';
@@ -265,7 +266,7 @@ const HEAD_PAY = 'M0 0L-15 -6.5L-15 6.5Z';
                                 class={`tangle__bv tangle__bv--${kind} tangle__bv--${tone}`}
                                 style={`--at:${step.at}${step.out ? `;--out:${step.out}` : ''}`}
                               >
-                                {last && <span aria-hidden="true">{'✓ '}</span>}
+                                {last && <Icon name="check" size="text" weight="bold" class="tangle__tick tangle__tick--board" />}
                                 <bdi>{eur(step.cents, !last)}</bdi>
                               </span>
                             );
@@ -321,6 +322,7 @@ const HEAD_PAY = 'M0 0L-15 -6.5L-15 6.5Z';
             const [before, amount, after] = pays(p);
             return (
               <li>
+                <Icon name="check" size="text" weight="bold" class="tangle__tick" />
                 {before}
                 <bdi>{amount}</bdi>
                 {after}
@@ -419,11 +421,19 @@ const HEAD_PAY = 'M0 0L-15 -6.5L-15 6.5Z';
     display: grid;
     gap: 0.25rem;
   }
-  .scene--tangle .tangle__pay-list li::before {
-    content: '\2713\00a0';
-    content: '\2713\00a0' / ''; /* the tick is decoration: empty alternative text */
+  .scene--tangle .tangle__pay-list .tangle__tick {
     color: var(--green-ink);
-    font-weight: 700;
+  }
+  /* The tick stands where a bold "✓" and a space stood, at the glyph's size */
+  .scene--tangle .tangle__tick {
+    --icon-size: 1.1em;
+    margin-inline-end: 0.2em;
+    vertical-align: -0.2em;
+  }
+  /* On a card the line is exactly 1em tall: a taller tick would grow the card */
+  .scene--tangle .tangle__tick--board {
+    --icon-size: 1em;
+    vertical-align: top;
   }
   .scene--tangle .tangle__details {
     position: relative;
@@ -512,7 +522,8 @@ const HEAD_PAY = 'M0 0L-15 -6.5L-15 6.5Z';
   .scene--tangle .tangle__cork svg[data-layout='phone'] {
     display: none;
   }
-  .scene--tangle .tangle__cork svg {
+  /* The thread drawings (each carries data-layout), not the icons on the cards */
+  .scene--tangle .tangle__cork svg[data-layout] {
     position: absolute;
     inset: 0;
     inline-size: 100%;

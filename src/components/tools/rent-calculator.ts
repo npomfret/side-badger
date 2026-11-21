@@ -32,6 +32,7 @@ import {
 } from './rent-state';
 import { HASH_PREFIX } from './share-hash';
 import { cloneTemplate, fill, later, ref, spaceOut } from './tool-dom';
+import { setIconButtonLabel } from '@/components/controls/icon-button';
 
 type Deferred = typeof import('./rent-deferred');
 
@@ -196,7 +197,7 @@ function start(root: HTMLElement): void {
         ref(row, 'nameError').id = `${id}-name-error`;
         ref(row, 'valueError').id = `${id}-value-error`;
         const remove = ref<HTMLButtonElement>(row, 'remove');
-        remove.setAttribute('aria-label', fill(messages.removePerson, { number: index + 1 }));
+        setIconButtonLabel(remove, fill(messages.removePerson, { number: index + 1 }));
         remove.disabled = state.people.length <= MIN_PEOPLE;
         return row;
       })

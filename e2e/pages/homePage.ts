@@ -330,11 +330,23 @@ export class HomePage {
     ).toEqual([shown, shown, shown]));
   }
 
-  private async expectRendered(locator: Locator, operation: string): Promise<void> {
+  private cameraView(): Locator {
+    // Rule 2: the camera view is decoration (aria-hidden; the form carries the receipt's text), so
+    // it has no role or name to find it by. Its test id is the only handle.
+    return this.heroScan().getByTestId('scan-camera');
+  }
+
+  private scanLine(): Locator {
+    // Rule 2: as the camera view, which holds it; the line is a shape with no text
+    return this.heroScan().getByTestId('scan-line');
+  }
+
+  /** Painted or not: opacity 0 and visibility hidden count as not shown, with their ancestors */
+  private async expectRendered(locator: Locator, operation: string, shown = true): Promise<void> {
     await auditAnimationWait(operation, () => expect.poll(
       () => locator.evaluate(element => element.checkVisibility({ opacityProperty: true, visibilityProperty: true })),
       { message: operation, timeout: ELEMENT_TIMEOUT }
-    ).toBe(true));
+    ).toBe(shown));
   }
 
   /** The stages the hero's timed pass has been through, from the page's log (`recordTimedStages`) */
@@ -346,9 +358,16 @@ export class HomePage {
   }
 
   async expectHeroScanPlaysOnce(): Promise<void> {
-    await this.expectHeroStageLog(['0', '1', '2', '3'], 'hero passes receipt, scan, fields, review in order');
+    await this.expectHeroStageLog(['0', '1', '2', '3'], 'hero passes viewfinder, scan, fields, review in order');
     await this.expectHeroScanRest();
-    // Leaving and coming back must not replay the pass: the log would gain a second '0'.
+  }
+
+  /**
+   * Leaving and coming back must not replay the pass: the log would gain a second '0'. This scrolls
+   * through the pinned scenes and back, so run page-wide checks (axe) before it: on the stages
+   * engine a scene's stage can change after the scroll has settled and fade its text mid-audit.
+   */
+  async expectHeroScanStaysDoneAfterReentry(): Promise<void> {
     await this.settleRegion.scrollIntoViewIfNeeded();
     await this.heroScan().scrollIntoViewIfNeeded();
     // Two frames and a still page: an entry observer that would restart the pass has had its callback.
@@ -358,9 +377,99 @@ export class HomePage {
     await this.expectHeroStageLog(['0', '1', '2', '3'], 'hero did not replay after re-entry');
   }
 
-  async enterHeroScan(): Promise<void> {
+  private replayButton(): Locator {
+    return this.heroScan().getByRole('button', { name: this.string('home.hero.replay'), exact: true });
+  }
+
+  /** The replay button's tooltip: hidden from assistive tech (the button's name says the same) */
+  private replayTooltip(): Locator {
+    return this.heroScan().getByText(this.string('home.hero.replay'), { exact: true });
+  }
+
+  /** The hero's facts band: the only list in the hero region */
+  private heroFacts(): Locator {
+    return this.region('home.hero.title').getByRole('list');
+  }
+
+  /** At rest, "Play again" plays the whole pass once more, from the viewfinder to the review */
+  async replayHeroScanAndExpectFullPass(): Promise<void> {
+    await this.expectHeroStageLog(['0', '1', '2', '3'], 'the first pass has finished');
+    await this.expectRendered(this.cameraView(), 'no camera view at rest', false);
+    await auditAnimationWait('replay button is shown at rest', () => expect(this.replayButton()).toBeVisible());
+    await this.replayButton().click();
+    // Stages 0 and 1 (0 to 2250 ms of the pass) show the camera; the scan line sweeps in stage 1
+    await this.expectRendered(this.cameraView(), 'the camera view is back for the replay');
+    await this.expectHeroStageLog(['0', '1', '2', '3', '0', '1'], 'the replay reaches scanning');
+    await this.expectRendered(this.scanLine(), 'the scan line sweeps while scanning');
+    await this.expectHeroStageLog(['0', '1', '2', '3', '0', '1', '2', '3'], 'replay passes viewfinder, scan, fields, review again');
+    await this.expectHeroScanRest();
+  }
+
+  /** A click while a replay runs starts over: the cancelled pass never reaches its later stages */
+  async replayHeroScanTwiceAndExpectOneRestart(): Promise<void> {
+    await this.expectHeroStageLog(['0', '1', '2', '3'], 'the first pass has finished');
+    await auditAnimationWait('replay button is shown at rest', () => expect(this.replayButton()).toBeVisible());
+    await this.replayButton().click();
+    // Stage 1 lasts 1575 ms (15 % to 50 % of 4.5 s), ample time for the second click
+    await this.expectHeroStageLog(['0', '1', '2', '3', '0', '1'], 'the replay reaches scanning');
+    await this.replayButton().click();
+    // Were the first replay not cancelled, its stages 2 and 3 would land in the middle of the restart
+    await this.expectHeroStageLog(['0', '1', '2', '3', '0', '1', '0', '1', '2', '3'], 'the second click restarts the pass once');
+    await this.expectHeroScanRest();
+  }
+
+  /** The tooltip matches the accessible name, opens on keyboard focus and hover, and Escape hides it */
+  async expectReplayTooltip(): Promise<void> {
+    await auditAnimationWait('replay button is shown at rest', () => expect(this.replayButton()).toBeVisible());
+    await auditAnimationWait('tooltip starts hidden', () => expect(this.replayTooltip()).toBeHidden());
+    // Tab from the link before it, so the focus is keyboard focus
+    await this.region('home.hero.title').getByRole('link', { name: this.string('home.hero.ctaSecondary'), exact: true }).focus();
+    await this.page.keyboard.press('Tab');
+    await auditAnimationWait('Tab reaches the replay button', () => expect(this.replayButton()).toBeFocused());
+    await auditAnimationWait('tooltip opens on keyboard focus', () => expect(this.replayTooltip()).toBeVisible());
+    await this.page.keyboard.press('Escape');
+    await auditAnimationWait('Escape hides the tooltip', () => expect(this.replayTooltip()).toBeHidden());
+    await auditAnimationWait('the button keeps focus', () => expect(this.replayButton()).toBeFocused());
+    // Moving focus away ends the dismissal; then the pointer opens it
+    await this.h1.click();
+    await auditAnimationWait('tooltip closes when focus leaves', () => expect(this.replayTooltip()).toBeHidden());
+    await this.replayButton().hover();
+    await auditAnimationWait('tooltip opens on hover', () => expect(this.replayTooltip()).toBeVisible());
+    // WCAG 1.4.13: the pointer can move onto the tooltip and it stays open
+    await this.replayTooltip().hover();
+    await auditAnimationWait('tooltip stays open while hovered', () => expect(this.replayTooltip()).toBeVisible());
+    await this.h1.hover();
+    await auditAnimationWait('tooltip closes when the pointer leaves', () => expect(this.replayTooltip()).toBeHidden());
+  }
+
+  /** The static engine (reduced motion, short windows) has nothing to replay: no button */
+  async expectNoReplayButton(): Promise<void> {
+    await auditAnimationWait('no replay button in the static engine', () => expect(this.replayButton()).toHaveCount(0));
+  }
+
+  /** The facts band: four facts, in order */
+  async expectHeroFacts(): Promise<void> {
+    await auditAnimationWait('the hero lists its four facts', () => expect(this.heroFacts().getByRole('listitem')).toHaveText([
+      this.string('home.hero.fact.scanning'),
+      this.string('home.hero.fact.conversion'),
+      this.string('home.hero.fact.assistants'),
+      this.string('home.hero.fact.noAds'),
+    ]));
+  }
+
+  /** On a desktop window the facts band starts above the fold, under the copy and the phone */
+  async expectHeroFactsStartAboveTheFold(): Promise<void> {
+    await auditAnimationWait('facts band starts in the first viewport', () => expect(this.heroFacts()).toBeInViewport());
+  }
+
+  /** On a phone whose visual starts mostly below the fold: nothing plays until it scrolls into view */
+  async expectHeroScanWaitsThenEnter(): Promise<void> {
+    // Two frames and a still page first: the entry observer has had its first report
+    await expectAnimationsSettled(this.page);
     await auditAnimationWait('phone hero waits for visual entry', () =>
       expect(this.region('home.hero.title')).toHaveAttribute('data-play-state', 'pending'));
+    await this.expectHeroStageLog(['0'], 'the hero is set to stage 0 and goes no further before entry');
+    await this.expectRendered(this.cameraView(), 'the camera view waits at stage 0');
     await this.expectScanFields(false);
     await this.heroScan().scrollIntoViewIfNeeded();
     await auditAnimationWait('phone visual enters viewport', () => expect(this.heroScan()).toBeInViewport({ ratio: 0.25 }));
@@ -369,6 +478,8 @@ export class HomePage {
   async expectHeroScanRest(): Promise<void> {
     await this.expectHeroStage(3);
     await expectAnimationsSettled(this.page);
+    await this.expectRendered(this.cameraView(), 'no camera view at rest', false);
+    await this.expectRendered(this.scanLine(), 'no scan line at rest', false);
     await this.expectScanFields(true);
     await this.expectRendered(this.heroScan().getByText(this.string('home.hero.scanReview'), { exact: true }), 'review cue is visible');
     await auditAnimationWait('fields match the taxi receipt', () => expect(this.heroScan().getByTestId('scan-field')).toHaveText([

@@ -1,4 +1,6 @@
 ---
+import Icon from '@/components/icons/Icon.astro';
+import Tooltip from '@/components/controls/Tooltip.astro';
 import { offeredLocales } from './languageSwitcherLocales';
 import {
   allLocales, localeNames, localeSubtitles, localeFlagCodes, localeConfig, localeAliasMap,
@@ -80,23 +82,22 @@ const noResultsText = t('languageSwitcher.noResults', currentLocale);
 
 <div class="language-switcher" data-current-locale={currentLocale}>
   <!-- No aria-label: the name must include the visible language name (WCAG 2.5.3) -->
-  <button class="language-switcher-btn" aria-expanded="false" aria-controls={id}>
-    <span class="sr-only">{changeLanguageLabel}: </span>
-    <img class="current-flag" src={currentFlagUrl} width="20" height="20" alt="" />
-    <span class="current-lang">
-      <span class="current-name">{currentName}</span>
-      {currentSubtitle && <span class="current-subtitle">{currentSubtitle}</span>}
-    </span>
-    <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <path d="m6 9 6 6 6-6"/>
-    </svg>
-  </button>
+  <!-- Up to 768px only the flag shows (the name stays for screen readers): the tooltip says what the
+       button's name says, and the script below keeps the two together when it shows a variant -->
+  <Tooltip text={`${changeLanguageLabel}: ${currentName}${currentSubtitle ? ` ${currentSubtitle}` : ''}`} side="block-end" narrow="tablet">
+    <button class="language-switcher-btn" aria-expanded="false" aria-controls={id}>
+      <span class="sr-only">{changeLanguageLabel}: </span>
+      <img class="current-flag" src={currentFlagUrl} width="20" height="20" alt="" />
+      <span class="current-lang">
+        <span class="current-name">{currentName}</span>
+        {currentSubtitle && <span class="current-subtitle">{currentSubtitle}</span>}
+      </span>
+      <Icon name="chevron-down" size="xs" class="chevron" />
+    </button>
+  </Tooltip>
   <div class="language-dropdown" id={id}>
     <div class="language-search-wrapper">
-      <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <circle cx="11" cy="11" r="8"/>
-        <path d="m21 21-4.3-4.3"/>
-      </svg>
+      <Icon name="search" size="xs" class="search-icon" />
       <input
         type="text"
         class="language-search"
@@ -136,6 +137,7 @@ const noResultsText = t('languageSwitcher.noResults', currentLocale);
 </div>
 
 <script>
+  import { setTooltipText } from './controls/tooltip';
   const LOCALE_KEY = 'preferred-locale';
 
   // Reorder options so the visitor's browser languages come first
@@ -197,6 +199,8 @@ const noResultsText = t('languageSwitcher.noResults', currentLocale);
           sub.textContent = chosen.dataset.subtitleText;
           switcher.querySelector('.current-lang')?.appendChild(sub);
         }
+        // The tooltip repeats the button's name, which now names the variant
+        if (btn) setTooltipText(btn, (btn.textContent ?? '').replace(/\s+/g, ' ').trim());
       }
     } catch {
       // Storage unavailable: keep the server-rendered choice

@@ -14,6 +14,7 @@
  * Amounts are formatted by the script with the locale's Intl code. The call to the app under the
  * result goes through `LaunchAppCta` (cta `tool-result`).
  */
+import IconButton from '@/components/controls/IconButton.astro';
 import CurrencyField from './CurrencyField.astro';
 import ToolResultFooter from './ToolResultFooter.astro';
 import { localeConfig, t, tf, type Locale } from '../../i18n';
@@ -185,11 +186,8 @@ const messagesJson = JSON.stringify(messages).replace(/</g, '\\u003c');
             <p class="sc-error" data-ref="valueError" hidden></p>
           </div>
         </div>
-        <button type="button" class="sc-remove" data-action="remove-person" data-ref="remove">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
-            <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-          </svg>
-        </button>
+        {/* The script names each copy ("Remove person 2") with setIconButtonLabel */}
+        <IconButton variant="quiet" tipAlign="end" icon="x" label="" data-action="remove-person" data-ref="remove" />
       </fieldset>
     </li>
   </template>

@@ -1,0 +1,124 @@
+---
+/**
+ * The site's tooltip: a short label for the one control in its slot (an icon button, or a link or
+ * button whose text is hidden on small screens). `text` is the control's accessible name, so the
+ * tooltip always says what a screen reader says; it is aria-hidden so it is not read twice.
+ *
+ * It opens on keyboard focus, and on hover where the device can hover (a tap on a touch screen
+ * leaves nothing behind). The pointer can move onto it without closing it, and Escape dismisses
+ * it (WCAG 1.4.13; tooltip.ts, wired by this component's script). It holds nothing interactive
+ * and sits beside the control, so clicking it never activates the control. It stays closed while
+ * the control is disabled (it cannot take focus, so hover alone must not explain it) or expanded
+ * (its own popup is showing), and the whole anchor hides with a hidden control.
+ *
+ * Placement: `side` `block-start` (default, above) or `block-end` (below, for controls at the top
+ * of the page); `align` `center` (default) or `end` (for a control near the inline end of its
+ * container). `narrow` shows it only where the control's own text is hidden: `phone` below 40rem,
+ * `tablet` up to 768px (the header's breakpoints). `class` and other attributes go on the anchor.
+ *
+ * Its script runs once per page: where the first copy sits inside a <template>, the copy runs when
+ * a clone is first inserted, and the module cache and tooltip.ts's guard make any repeat harmless.
+ */
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'span'> {
+  text: string;
+  side?: 'block-start' | 'block-end';
+  align?: 'center' | 'end';
+  narrow?: 'phone' | 'tablet';
+}
+
+const { text, side = 'block-start', align = 'center', narrow, class: className, ...rest } = Astro.props;
+---
+
+<span {...rest} class:list={['tooltip-anchor', className]} data-tooltip data-tip-side={side} data-tip-align={align} data-tip-narrow={narrow}>
+  <slot />
+  <span class="tooltip-anchor__tip" aria-hidden="true" data-tooltip-text>{text}</span>
+</span>
+
+<script>
+  import { dismissTooltipsOnEscape } from './tooltip';
+  dismissTooltipsOnEscape(document);
+</script>
+
+<style>
+  .tooltip-anchor {
+    position: relative;
+    display: inline-grid;
+  }
+  .tooltip-anchor:has(> [hidden]:not(.tooltip-anchor__tip)) {
+    display: none;
+  }
+  .tooltip-anchor__tip {
+    position: absolute;
+    z-index: 1;
+    inset-inline-start: 50%;
+    translate: calc(-50% * var(--dir)) 0;
+    inline-size: max-content;
+    max-inline-size: var(--tooltip-max-inline-size);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    background: var(--tooltip-surface);
+    color: var(--tooltip-ink);
+    font-size: var(--tooltip-text);
+    font-weight: var(--weight-semibold);
+    line-height: var(--line-height-tight);
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--duration-fast) linear, visibility var(--duration-fast) linear;
+  }
+  /* ::after bridges the gap to the control, so the pointer can travel onto the tooltip without
+     leaving the anchor (WCAG 1.4.13: hoverable) */
+  .tooltip-anchor__tip::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    block-size: var(--space-sm);
+  }
+  .tooltip-anchor[data-tip-side='block-start'] .tooltip-anchor__tip {
+    inset-block-end: calc(100% + var(--space-sm));
+  }
+  .tooltip-anchor[data-tip-side='block-start'] .tooltip-anchor__tip::after {
+    inset-block-start: 100%;
+  }
+  .tooltip-anchor[data-tip-side='block-end'] .tooltip-anchor__tip {
+    inset-block-start: calc(100% + var(--space-sm));
+  }
+  .tooltip-anchor[data-tip-side='block-end'] .tooltip-anchor__tip::after {
+    inset-block-end: 100%;
+  }
+  .tooltip-anchor[data-tip-align='end'] .tooltip-anchor__tip {
+    inset-inline: auto 0;
+    translate: none;
+  }
+  .tooltip-anchor:has(> :focus-visible):not([data-tooltip-dismissed]):not(:has(> :disabled, > [aria-expanded='true'])) .tooltip-anchor__tip {
+    opacity: 1;
+    visibility: visible;
+  }
+  @media (hover: hover) {
+    .tooltip-anchor:hover:not([data-tooltip-dismissed]):not(:has(> :disabled, > [aria-expanded='true'])) .tooltip-anchor__tip {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  /* Where the control's own text shows, the tooltip would only repeat it */
+  .tooltip-anchor[data-tip-narrow] .tooltip-anchor__tip {
+    display: none;
+  }
+  @media (max-width: 39.99rem) {
+    .tooltip-anchor[data-tip-narrow='phone'] .tooltip-anchor__tip {
+      display: block;
+    }
+  }
+  @media (max-width: 768px) {
+    .tooltip-anchor[data-tip-narrow='tablet'] .tooltip-anchor__tip {
+      display: block;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tooltip-anchor__tip {
+      transition: none;
+    }
+  }
+</style>

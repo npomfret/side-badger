@@ -178,6 +178,34 @@ export class ToolsPage extends ToolPage {
     await expect(this.personField(limit + 1), `there is no person ${limit + 1}`).toHaveCount(0);
   }
 
+  /**
+   * An icon-only remove button explains itself: its name shows as a tooltip on hover and on
+   * keyboard focus, and Escape dismisses it. Needs person `position` to be removable.
+   */
+  async expectRemovePersonTooltip(position: number): Promise<void> {
+    const tooltip = this.people.getByText(`Remove person ${position}`, { exact: true });
+    await expect(this.removePersonButton(position), 'the remove button is available').toBeEnabled();
+    await expect(tooltip, 'the tooltip before hovering').toBeHidden();
+    await this.removePersonButton(position).hover();
+    await expect(tooltip, 'the tooltip while hovering').toBeVisible();
+    await this.personField(position).hover();
+    await expect(tooltip, 'the tooltip once the pointer leaves').toBeHidden();
+    await this.personField(position).click();
+    for (let i = 0; i < 1; i++) await this.page.keyboard.press('Tab');
+    await expect(this.removePersonButton(position), 'Tab reaches the remove button').toBeFocused();
+    await expect(tooltip, 'the tooltip on keyboard focus').toBeVisible();
+    await this.page.keyboard.press('Escape');
+    await expect(tooltip, 'Escape dismisses the tooltip').toBeHidden();
+  }
+
+  /** An unavailable remove button (it cannot take focus) shows no tooltip on hover either */
+  async expectNoRemoveTooltipWhileOff(position: number): Promise<void> {
+    const tooltip = this.people.getByText(`Remove person ${position}`, { exact: true });
+    await expect(this.removePersonButton(position), 'the remove button is off').toBeDisabled();
+    await this.removePersonButton(position).hover();
+    await expect(tooltip, 'no tooltip on an unavailable button').toBeHidden();
+  }
+
   /** Two people is the least: nobody can be removed below it */
   async expectCannotRemovePeople(): Promise<void> {
     await expect(this.removePersonButton(1)).toBeDisabled();

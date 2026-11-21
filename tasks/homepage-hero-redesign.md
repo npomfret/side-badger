@@ -11,10 +11,12 @@ Requested by the owner on 21 November 2026, after the receipt-scan hero (landed 
 
 1. **The hero keeps the h1 and the primary action together.** It holds four things: the h1, a one-line summary, "Start a group" with the "See how it works" link beside it, and the visual. The owner's sketch moved the whole action block into a band below the hero. That was rejected: on phones it would push "Start a group" below the fold, and the hero would have no action.
 2. **Supporting facts move to their own full-width band** directly under the hero copy and visual. It is a list of four short items, each with an icon, and has no heading (UI rule):
-   - "Split equally, exactly or by percentage" (`expense-splitting`)
-   - "133 currencies" (`multi-currency`; approved substitution for "any currency")
-   - "A short list of who pays whom" (`balances`; approved substitution)
-   - "Free. No ads. No daily limits." (the existing `home.hero.trust`, approved wording)
+   - "Free automatic receipt scanning" (`home.hero.fact.scanning`; `receipt-scanning`; Lucide `scan-line`)
+   - "Free currency conversion" (`home.hero.fact.conversion`; `currency-conversion`; Lucide `arrow-right-left`)
+   - "Works with ChatGPT and Claude" (`home.hero.fact.assistants`; `ai-assistants`; Lucide `bot`)
+   - "No ads. No daily limits." (`home.hero.fact.noAds`; Lucide `ban`)
+
+   Changed by the owner on 21 November 2026 (the first band was split methods, 133 currencies, who pays whom and the trust line; those keys and `home.hero.trust` are deleted). The ChatGPT and Claude claim is an owner decision made ahead of the public listing: `ai-assistants` is recorded as available with low confidence and the listing is tracked in `tasks/follow-ups.md`.
 
    The band is part of the hero scene (`SceneChaos`), after the stage, so it reads as the hero's footing rather than a new section. On a 1280×800 desktop it sits just above the fold. On phones it stacks two by two under the visual.
 3. **The lede becomes one line.** New key `home.hero.summary`: "The bill-splitting app for housemates, couples, group trips and celebrations." It keeps the audience words for search and drops the feature list, which now lives in the band. `home.hero.lede` is deleted: it has a new meaning, so it gets a new ID.
@@ -39,7 +41,7 @@ Requested by the owner on 21 November 2026, after the receipt-scan hero (landed 
 2. Add replay support to `scene-controller.ts` for timed scenes, with a `data-scene-replay` button inside the scene. Unit-test it with the injected scheduler.
 3. Add the hero facts band, a new `props/` or `home/` component that `SceneChaos` renders, with inline Lucide icons like the existing inline SVG icons.
 4. Copy:
-   - English keys: `home.hero.summary`, `home.hero.fact.split`, `home.hero.fact.currencies`, `home.hero.fact.payments`, `home.hero.replay`.
+   - English keys: `home.hero.summary`, `home.hero.replay`, and the band's `home.hero.fact.scanning`, `home.hero.fact.conversion`, `home.hero.fact.assistants` and `home.hero.fact.noAds`.
    - Delete `home.hero.lede` and `home.hero.haveAccount` if unused elsewhere.
    - Translate into all 38 locales with blind back-checks, then lock.
 5. Tests:
@@ -57,3 +59,15 @@ Requested by the owner on 21 November 2026, after the receipt-scan hero (landed 
 - At rest, "Play again" replays the pass. Under reduced motion the phone shows the filled form and the replay button is not rendered.
 - CLS is 0 and the homepage script stays within its budget. A Lighthouse run follows only if the owner asks for one.
 - Strict verify passes. The hero spec passes 20/20 serially.
+
+## Result (21 November 2026)
+
+Done. Built as planned, with these changes made during review:
+
+- **Facts band.** At the owner's request the band became "Free automatic receipt scanning", "Free currency conversion", "Works with ChatGPT and Claude" and "No ads. No daily limits.". The `ai-assistants` feature is claimed as available ahead of its public listing (owner decision); the limits in `src/data/features.ts` record what is unproven.
+- **Shared controls.** `icons/Icon.astro` is the one icon source. Every inline icon SVG and icon glyph across the site moved to it. `controls/Tooltip.astro` and `controls/IconButton.astro` are the shared tooltip and icon button: the calculator remove buttons and the header's phone-width icons use them.
+- **AppFrame.** It gained `fit`, `density`, `--frame-phone-width`, `--frame-zoom` and an `overlay` slot. No caller restyles its internals any more.
+
+Verification: strict verify passed (1243 unit tests, `check:site` 185/185). The hero spec passed 400/400 serially. The tools, rent, home, localized, shell and site specs passed. Two independent UI reviews were run, and every finding was resolved. All 38 locales are translated and blind back-checked, and none is human-reviewed.
+
+Script at load, gzipped, against the 10,240-byte budget: homepage 9209, split calculator 10,020. The headroom risk is in `tasks/follow-ups.md`.

@@ -19,6 +19,7 @@ test.describe('split bill calculator', () => {
     await calculator.expectAmount(1, '');
     await calculator.expectNoResult();
     await calculator.expectCannotRemovePeople();
+    await calculator.expectNoRemoveTooltipWhileOff(1);
     await calculator.expectStartGroupLink();
     await calculator.expectAddressWithoutLink();
   });
@@ -27,6 +28,7 @@ test.describe('split bill calculator', () => {
     const calculator = await ToolsPage.navigateTo(page);
     await calculator.addPerson(3);
     await calculator.expectPeople(['Ana', 'Ben', 'Cara']);
+    await calculator.expectRemovePersonTooltip(3);
 
     // Ana pays £90 for dinner, split three ways: Ben and Cara each owe her £30
     await calculator.setAmount(1, '90');

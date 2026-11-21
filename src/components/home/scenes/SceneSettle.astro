@@ -14,6 +14,7 @@
  *
  * Motion is generic (`data-anim` / `data-at`), with `--from` / `--to` giving the native range.
  */
+import Icon from '@/components/icons/Icon.astro';
 import ScrollScene from '../ScrollScene.astro';
 import SceneLink from '../props/SceneLink.astro';
 import AppFrame from '../AppFrame.astro';
@@ -61,7 +62,7 @@ const reactions: [string, number][][] = [[['👍', 2], ['❤️', 1], ['🎉', 3
 
   <div slot="visual" class="settle" data-hook="settle-visual">
    <div class="settle__inner">
-    <AppFrame variant="phone" class="settle__phone">
+    <AppFrame variant="phone" fit="responsive" class="settle__phone">
       <div class="settle__app">
         <!-- Layer A: the owes row and the settlement form -->
         <div class="settle__form">
@@ -108,7 +109,7 @@ const reactions: [string, number][][] = [[['👍', 2], ['❤️', 1], ['🎉', 3
         <!-- Layer B: all settled up, with the payment history -->
         <div class="settle__done" data-anim="fade" data-at="3" style="--from:68;--to:76">
           <p class="app-title settle__all">
-            <span aria-hidden="true">✓</span>
+            <Icon name="check" size="text" weight="bold" />
             {t('home.settle.allSettled', locale)}
           </p>
           <p class="settle__history-title">{t('home.settle.history', locale)}</p>
@@ -179,9 +180,6 @@ const reactions: [string, number][][] = [[['👍', 2], ['❤️', 1], ['🎉', 3
     gap: var(--scene-gap);
     align-items: center;
     justify-items: center;
-  }
-  .settle :global(.settle__phone) {
-    inline-size: min(100%, 17.5rem);
   }
   .settle__app {
     display: grid;
@@ -315,17 +313,12 @@ const reactions: [string, number][][] = [[['👍', 2], ['❤️', 1], ['🎉', 3
      its labels), so "Record Settlement" is never clipped; the pinned stage must still hold the
      copy, the phone and the link on short screens (360×640) */
   @media (max-width: 599px) {
-    .settle :global(.settle__phone) {
-      inline-size: min(100%, 12.5rem);
-      aspect-ratio: auto;
-    }
-    .settle :global(.settle__phone .frame__screen) {
-      padding-block-end: 0.75rem;
-    }
     /* The pinned stage must hold the copy, the phone and the link with long translations too; the
-       phone is an illustration, so it scales down rather than clipping the copy */
-    .settle :global(.settle__phone) {
-      zoom: 0.9;
+       phone is an illustration, so it scales down rather than clipping the copy (AppFrame's
+       sizing contract; fit="responsive" drops the 9:17 shape here) */
+    .settle {
+      --frame-phone-width: 12.5rem;
+      --frame-zoom: 0.9;
     }
   }
   /* Short phones (360×640): the amount and note fields share a row (the amount as narrow as it
@@ -346,8 +339,8 @@ const reactions: [string, number][][] = [[['👍', 2], ['❤️', 1], ['🎉', 3
     .settle__owes .settle__chip {
       display: none;
     }
-    .settle :global(.settle__phone) {
-      zoom: 0.8;
+    .settle {
+      --frame-zoom: 0.8;
     }
   }
 </style>

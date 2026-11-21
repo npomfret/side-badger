@@ -170,6 +170,32 @@ export class SitePage {
       .toBe(true);
   }
 
+  /**
+   * The page's h1 starts on the site's one content column: the same inline-start edge as the
+   * footer's content (both `.container`). Any page that re-implements the column fails here.
+   */
+  async expectHeadingOnContentColumn(): Promise<void> {
+    await expect
+      .poll(
+        () =>
+          this.page.evaluate(() => {
+            const rtl = document.documentElement.dir === 'rtl';
+            const column = document.querySelector('footer .container');
+            const heading = document.querySelector('main h1');
+            if (!column) return 'no footer .container on the page';
+            if (!heading) return 'no h1 in main';
+            const box = column.getBoundingClientRect();
+            const style = getComputedStyle(column);
+            const columnStart = rtl ? box.right - parseFloat(style.paddingRight) : box.left + parseFloat(style.paddingLeft);
+            const h1 = heading.getBoundingClientRect();
+            const offset = Math.round(Math.abs((rtl ? h1.right : h1.left) - columnStart));
+            return offset <= 1 ? 'on the column' : `the h1 starts ${offset}px off the column`;
+          }),
+        { message: 'the h1 starts on the content column', timeout: ELEMENT_TIMEOUT }
+      )
+      .toBe('on the column');
+  }
+
   /** Tab order from the top of the page on a wide screen: skip link, logo, links, switcher, launch. */
   async verifyDesktopKeyboardOrder(linkKeys: readonly StringKey[]): Promise<void> {
     const order: Locator[] = [

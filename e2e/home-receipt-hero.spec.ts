@@ -51,8 +51,7 @@ for (const engine of ['native', 'stages'] as const) {
         const home = await HomePage.navigateToWithTextSize(page, 'en', engine, 24);
         await home.expectHeroScanWaitsThenEnter();
         await home.expectHeroScanPlaysOnce();
-        // No overflow check: at this text size the worlds scene's previous/next controls overflow a
-        // 320 px phone, a layout bug outside the hero. Add the check back once that is fixed.
+        await home.expectNoHorizontalOverflow();
       });
     });
   });

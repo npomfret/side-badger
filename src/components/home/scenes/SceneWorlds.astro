@@ -137,6 +137,9 @@ const TABLES = {
   /* ===== Base presentation: stack (no JS, reduced motion) ===== */
   .worlds {
     display: grid;
+    /* The column never outgrows the scene: at a large browser text size the strip's content would
+       widen an auto column past a 320 px phone, and the controls with it */
+    grid-template-columns: minmax(0, 1fr);
     gap: 1rem;
     min-inline-size: 0;
   }

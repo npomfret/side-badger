@@ -70,9 +70,6 @@
 }
 /* Normal-flow content before the runway (the tangle's phone lede). Never pinned or animated. */
 .scene__lead {
-  inline-size: min(1200px, 100%);
-  margin-inline: auto;
-  padding-inline: var(--scene-gutter);
   padding-block-start: var(--scene-gap);
 }
 .scene[data-tone] {
@@ -106,9 +103,6 @@
   position: var(--stage-pos);
   inset-block-start: var(--header-h, 88px);
   block-size: var(--stage-height);
-  inline-size: min(1200px, 100%);
-  margin-inline: auto;
-  padding-inline: var(--scene-gutter);
   padding-block: var(--stage-pad);
   display: grid;
   align-content: center;

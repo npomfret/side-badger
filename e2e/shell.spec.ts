@@ -25,6 +25,11 @@ for (const locale of SHELL_LOCALES) {
       await site.saveScreenshot(`${SHOTS}/${locale}-1280-header.png`, 'header');
     });
 
+    test('the homepage and pricing headings start on the shared content column', async ({ page }) => {
+      await (await SitePage.navigateTo(page, locale, '')).expectHeadingOnContentColumn();
+      await (await SitePage.navigateTo(page, locale, 'pricing')).expectHeadingOnContentColumn();
+    });
+
     test('every header control is reachable by keyboard in order', async ({ page }) => {
       const site = await SitePage.navigateTo(page, locale, 'pricing');
       await site.verifyDesktopKeyboardOrder(['nav.features', 'nav.useCases', 'nav.howItWorks', 'nav.pricing']);
@@ -103,6 +108,11 @@ for (const locale of SHELL_LOCALES) {
       await site.expectContentClearsHeader();
       await site.expectNoHorizontalOverflow();
       await site.saveScreenshot(`${SHOTS}/${locale}-375-header.png`, 'header');
+    });
+
+    test('the homepage and pricing headings start on the shared content column', async ({ page }) => {
+      await (await SitePage.navigateTo(page, locale, '')).expectHeadingOnContentColumn();
+      await (await SitePage.navigateTo(page, locale, 'pricing')).expectHeadingOnContentColumn();
     });
 
     test('every header control is reachable by keyboard in order', async ({ page }) => {

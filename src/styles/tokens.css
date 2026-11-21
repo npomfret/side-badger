@@ -72,6 +72,12 @@
   --space-3xl: 4rem;
   --space-4xl: 6rem;
 
+  /* ===== PAGE LAYOUT ===== */
+  /* The one content column (.container): every page, the footer and the homepage scenes. The
+     floating header bar is not on it; it has its own inset (--header-inset, layout.css). */
+  --page-max: 1200px;
+  --page-gutter: var(--space-lg);
+
   /* ===== RADIUS SYSTEM ===== */
   --radius-sm: 8px;
   --radius-md: 12px;

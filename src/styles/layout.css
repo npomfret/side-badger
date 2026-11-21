@@ -11,6 +11,8 @@
  */
 :root {
   --header-top: var(--space-md);
+  /* The floating bar's distance from the window's sides (its own geometry, not the content column) */
+  --header-inset: var(--space-lg);
   --header-bar: 4.5rem;
   --header-h: calc(var(--header-top) + var(--header-bar));
 }
@@ -18,6 +20,7 @@
 @media (max-width: 63.99rem) {
   :root {
     --header-top: var(--space-sm);
+    --header-inset: var(--space-md);
     --header-bar: 4rem;
   }
 }
@@ -27,7 +30,7 @@
   inset-block-start: var(--header-top);
   inset-inline: 0;
   margin-inline: auto;
-  width: min(1200px, calc(100% - var(--space-lg) * 2));
+  width: min(var(--page-max), calc(100% - var(--header-inset) * 2));
   height: var(--header-bar);
   z-index: var(--z-sticky);
   background: rgba(255, 253, 248, 0.92);
@@ -177,7 +180,6 @@ main {
 /* ===== MOBILE LAYOUT ===== */
 @media (max-width: 63.99rem) {
   .site-header {
-    width: calc(100% - var(--space-md) * 2);
     border-radius: var(--radius-lg);
   }
 

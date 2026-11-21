@@ -257,10 +257,11 @@ a:hover {
 }
 
 /* ===== LAYOUT UTILITIES ===== */
+/* The one content column: every page, the footer and the homepage scenes line up on it */
 .container {
-  width: min(1200px, 100%);
+  width: min(var(--page-max), 100%);
   margin: 0 auto;
-  padding-inline: var(--space-lg);
+  padding-inline: var(--page-gutter);
 }
 
 /* Bento Grid */

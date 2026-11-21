@@ -29,7 +29,6 @@ body:has(.home) {
 
   /* Layout */
   --stage-h: calc(100svh - var(--header-h, 88px));
-  --scene-gutter: clamp(1rem, 4vw, 3rem);
   --scene-gap: clamp(1rem, 3vw, 2.5rem);
   /* Width of an AppFrame phone; a scene may set its own on any ancestor */
   --frame-phone-width: 17.5rem;

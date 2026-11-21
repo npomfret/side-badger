@@ -95,9 +95,9 @@ const style = [
   data-confetti-x={confettiX}
   style={style || undefined}
 >
-  {Astro.slots.has('lead') && <div class="scene__lead"><slot name="lead" /></div>}
+  {Astro.slots.has('lead') && <div class="scene__lead container"><slot name="lead" /></div>}
   <div class="scene__runway">
-    <div class="scene__stage">
+    <div class="scene__stage container">
       {Astro.slots.has('copy') && <div class="scene__copy"><slot name="copy" /></div>}
       {Astro.slots.has('visual') && <div class="scene__visual"><slot name="visual" /></div>}
       {Astro.slots.has('link') && <div class="scene__link"><slot name="link" /></div>}

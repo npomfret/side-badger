@@ -113,7 +113,7 @@ export class PricingPage {
     ]);
   }
 
-  /** One free offer with its six features, the receipt-scanning disclosure (D10) and no Pro card. */
+  /** One free offer with its six features and no Pro card. */
   async expectOffer(): Promise<void> {
     const offer = this.section('pricing.get.title');
     await expect(offer.getByText(this.string('pricing.free.price'), { exact: true })).toBeVisible();
@@ -126,7 +126,6 @@ export class PricingPage {
       this.string('pricing.free.feature5'),
       this.string('pricing.free.feature6'),
     ]);
-    await expect(offer.getByText(this.string('pricing.free.scanNote'), { exact: true }), 'the receipt-scanning disclosure').toBeVisible();
     await expect(this.main.getByRole('button'), 'no disabled "Pro" button').toHaveCount(0);
   }
 

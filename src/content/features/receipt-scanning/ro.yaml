@@ -1,4 +1,4 @@
-translatedFrom: "42f5cf35"
+translatedFrom: "6a208498"
 review:
   status: checked
   checker: "R2-check"
@@ -6,14 +6,13 @@ review:
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
-  - receipt-scanning.read-by-googles-ai
   - receipt-attachments.keep-the-receipt
 meta:
   title: "Scanează o chitanță ca să adaugi o cheltuială | Side Badger"
-  description: "Lasă bursucul să citească chitanța. Completează totalul, data și locul ca să le verifici, fără credite de scanare. Imaginea e citită de serviciul AI al Google."
+  description: "Lasă bursucul să citească chitanța. Completează totalul, data și locul ca să le verifici, fără credite de scanare."
 h1: "Scanează chitanța, verifică detaliile, împarte-o"
 navLabel: "Scanarea chitanțelor"
-lead: "Lasă bursucul să citească chitanța, iar tu verifică-i tema. Adaugă o fotografie la o cheltuială nouă, iar Side Badger completează totalul, data și locul ca să le verifici. Apoi [o împarți](page:feature/split-expenses) ca pe orice altă cheltuială. Scanarea este gratuită, fără credite de scanare. Completează o singură cheltuială și nu împarte nota pe articole. Imaginile chitanțelor sunt citite de serviciul AI al Google."
+lead: "Lasă bursucul să citească chitanța, iar tu verifică-i tema. Adaugă o fotografie la o cheltuială nouă, iar Side Badger completează totalul, data și locul ca să le verifici. Apoi [o împarți](page:feature/split-expenses) ca pe orice altă cheltuială. Scanarea este gratuită, fără credite de scanare. Completează o singură cheltuială și nu împarte nota pe articole."
 cta:
   heading: "Fotografiază-o. Verifică-o. Împarte-o."
   body: "Creează un cont gratuit, începe un grup și adaugă o cheltuială cu fotografia unei chitanțe. Vezi ce completează, schimbă ce nu e bine și salvează când arată cum trebuie."
@@ -48,8 +47,6 @@ sections:
     body: "Tot. Tratează ce completează ca pe o ciornă. Verifică totalul față de hârtie, apoi valuta, data și locul. Fotografiile neclare și hârtia mototolită pot păcăli orice cititor și nu promitem că citește corect fiecare chitanță, așa că te rugăm să te uiți înainte să salvezi. Dacă ceva nu e bine, scrie peste. Dacă chitanța e în yeni, iar grupul se achită în lire, [mai multe valute](page:feature/multiple-currencies) explică ce urmează."
   - heading: "Păstrează chitanța lângă cheltuială"
     body: "Scanată sau nu, o chitanță poate rămâne lângă cheltuială. Atașează fotografii sau PDF-uri, până la trei pe cheltuială și până la 10 MB fiecare. Membrii grupului le văd la cheltuială. Imaginile apar ca miniaturi care se deschid într-un vizualizator, iar PDF-urile se deschid ca linkuri. Fotografia pe care o scanezi se atașează și ea, dacă n-o elimini înainte să salvezi. Când cineva întreabă cât a costat de fapt cina aceea, dovada e chiar acolo."
-  - heading: "Unde ajunge chitanța ta"
-    body: "Imaginile chitanțelor sunt citite de serviciul AI al Google. Ca să completeze formularul, imaginea este citită de Google Vertex AI (Gemini), în multi-regiunea SUA a Google. Adaugă o imagine la o cheltuială nouă și ea este citită. Un PDF sau o fotografie adăugată la o cheltuială care există deja se stochează fără să fie citită. Chitanțele atașate sunt vizibile pentru membrii grupului, așa că, dacă o chitanță arată ceva ce ai prefera să nu împărtășești, sari peste fotografie și tastează cheltuiala."
 limits:
   heading: "Limite"
   items:
@@ -59,7 +56,6 @@ limits:
     - "Nu împarte pe articole și nu atribuie rânduri din chitanță unor persoane. Completează o singură cheltuială, iar tu o împarți ca de obicei."
     - "Nu există nicio promisiune că ce completează este corect sau că scanarea va merge de fiecare dată. Verifică înainte să salvezi și adaugă cheltuiala de mână dacă scanarea eșuează sau nu e disponibilă."
     - "O cheltuială poate avea până la trei atașamente, fiecare de până la 10 MB, ca JPEG, PNG, WebP, HEIC sau PDF."
-    - "Imaginile chitanțelor sunt citite de Google Vertex AI (Gemini), în multi-regiunea SUA a Google, iar chitanțele atașate sunt vizibile pentru membrii grupului."
 useCasesHeading: "Unde se adună chitanțele"
 faq:
   heading: "Întrebări"
@@ -71,7 +67,7 @@ faq:
     - q: "Există o limită de scanări?"
       a: "Nu există credite de scanare care să se epuizeze, iar scanarea este gratuită. Fișierele au însă limite: până la trei atașamente pe cheltuială și 10 MB fiecare. [Ce acoperă gratuitul](page:pricing) are restul."
     - q: "Cine îmi poate vedea chitanța?"
-      a: "Membrii grupului pot vedea chitanțele atașate la o cheltuială. Imaginile chitanțelor sunt citite și de serviciul AI al Google, așa se completează formularul."
+      a: "Membrii grupului pot vedea chitanțele atașate la o cheltuială."
     - q: "Pot scana o chitanță pentru o cheltuială pe care am adăugat-o deja?"
       a: "Nu, scanarea este pentru cheltuieli noi. Poți totuși atașa o chitanță la o cheltuială existentă, iar ea se stochează fără să fie citită."
     - q: "Ce se întâmplă dacă completează ceva greșit?"

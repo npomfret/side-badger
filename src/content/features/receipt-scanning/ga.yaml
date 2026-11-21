@@ -1,4 +1,4 @@
-translatedFrom: "42f5cf35"
+translatedFrom: "6a208498"
 review:
   status: checked
   checker: "CX-review"
@@ -6,14 +6,13 @@ review:
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
-  - receipt-scanning.read-by-googles-ai
   - receipt-attachments.keep-the-receipt
 meta:
   title: "Scan admháil chun costas a chur leis | Side Badger"
-  description: "Lig don bhroc an admháil a léamh. Líonann sé an t-iomlán, an dáta agus an áit duit le seiceáil, gan creidmheasanna scanta. Léann seirbhís AI Google an íomhá."
+  description: "Lig don bhroc an admháil a léamh. Líonann sé an t-iomlán, an dáta agus an áit duit le seiceáil, gan creidmheasanna scanta."
 h1: "Scan admháil, seiceáil na sonraí, roinn é"
 navLabel: "Scanadh admhálacha"
-lead: "Lig don bhroc an admháil a léamh, agus seiceáil a obair bhaile. Cuir grianghraf le costas nua agus líonann Side Badger an t-iomlán, an dáta agus an áit duit le seiceáil. Ansin [roinneann tú é](page:feature/split-expenses) cosúil le costas ar bith eile. Tá scanadh saor in aisce, gan creidmheasanna scanta. Líonann sé costas amháin isteach agus ní roinneann sé an bille de réir míre. Léann seirbhís AI Google íomhánna admhálacha."
+lead: "Lig don bhroc an admháil a léamh, agus seiceáil a obair bhaile. Cuir grianghraf le costas nua agus líonann Side Badger an t-iomlán, an dáta agus an áit duit le seiceáil. Ansin [roinneann tú é](page:feature/split-expenses) cosúil le costas ar bith eile. Tá scanadh saor in aisce, gan creidmheasanna scanta. Líonann sé costas amháin isteach agus ní roinneann sé an bille de réir míre."
 cta:
   heading: "Tóg grianghraf. Seiceáil é. Roinn é."
   body: "Cruthaigh cuntas saor in aisce, tosaigh grúpa agus cuir costas leis le grianghraf admhála. Féach cad a líonann sé isteach, athraigh cibé rud atá mícheart, agus sábháil nuair atá tú sásta."
@@ -48,8 +47,6 @@ sections:
     body: "Gach rud. Caith leis an méid a líonann sé isteach mar dhréacht. Seiceáil an t-iomlán in aghaidh an pháipéir, ansin an t-airgeadra, an dáta agus an áit. Is féidir le grianghraif doiléire agus páipéar crapaithe aon léitheoir a chur amú, agus ní gheallaimid go bhfaigheann sé gach admháil ceart, mar sin féach le do thoil sula sábhálann tú. Má tá rud éigin mícheart, clóscríobh thairis é. Má tá an admháil in yen agus go socraíonn an grúpa i bpuint, clúdaíonn [ilairgeadraí](page:feature/multiple-currencies) cad a tharlaíonn ansin."
   - heading: "Coinnigh an admháil leis an gcostas"
     body: "Cibé ar scanadh í nó nár scanadh, is féidir leis an admháil fanacht leis an gcostas. Ceangail grianghraif nó PDFanna, suas le trí in aghaidh an chostais agus suas le 10 MB an ceann. Feiceann baill an ghrúpa iad ar an gcostas. Taispeántar íomhánna mar mhionsamhlacha a osclaíonn i bhfeiceálaí, agus osclaíonn PDFanna mar naisc. Ceanglaítear an grianghraf a scanann tú freisin, mura mbaineann tú de é sula sábhálann tú. Nuair a fhiafraíonn duine cad a chosain an dinnéar sin i ndáiríre, tá an cruthúnas ansin."
-  - heading: "Cá dtéann d'admháil"
-    body: "Léann seirbhís AI Google íomhánna admhálacha. Chun an fhoirm a líonadh, léann Google Vertex AI (Gemini) an íomhá in ilréigiún Google sna Stáit Aontaithe. Cuir íomhá le costas nua agus léitear í. Stóráiltear PDF, nó grianghraf a cuireadh le costas atá ann cheana, gan é a léamh. Feiceann baill an ghrúpa admhálacha ceangailte, mar sin má thaispeánann admháil rud nár mhaith leat a roinnt, scipeáil an grianghraf agus clóscríobh an costas sin isteach."
 limits:
   heading: "Teorainneacha"
   items:
@@ -59,7 +56,6 @@ limits:
     - "Ní roinneann sé de réir míre agus ní shanntaíonn sé míreanna líne do dhaoine. Líonann sé costas amháin isteach agus roinneann tú sin mar is gnách."
     - "Níl aon gheallúint ann go bhfuil an méid a líonann sé isteach ceart, ná go n-oibreoidh scanadh gach uair. Seiceáil sula sábhálann tú, agus cuir an costas leis de láimh má theipeann ar scanadh nó mura bhfuil sé ar fáil."
     - "Is féidir suas le trí cheangaltán a bheith ar chostas, suas le 10 MB an ceann, mar JPEG, PNG, WebP, HEIC nó PDF."
-    - "Léann Google Vertex AI (Gemini) íomhánna admhálacha in ilréigiún Google sna Stáit Aontaithe, agus feiceann baill an ghrúpa admhálacha ceangailte."
 useCasesHeading: "Cá gcruinníonn na hadmhálacha"
 faq:
   heading: "Ceisteanna"
@@ -71,7 +67,7 @@ faq:
     - q: "An bhfuil teorainn ar scanadh?"
       a: "Níl aon chreidmheasanna scanta le rith amach, agus tá scanadh saor in aisce. Tá teorainneacha ar chomhaid, atá suas le trí cheangaltán in aghaidh an chostais agus 10 MB an ceann. Tá an chuid eile ar [cad a chlúdaíonn saor in aisce](page:pricing)."
     - q: "Cé a fheiceann m'admháil?"
-      a: "Feiceann baill an ghrúpa na hadmhálacha atá ceangailte le costas. Léann seirbhís AI Google íomhánna admhálacha freisin, agus sin mar a líontar an fhoirm."
+      a: "Feiceann baill an ghrúpa na hadmhálacha atá ceangailte le costas."
     - q: "An féidir liom admháil a scanadh do chostas atá curtha leis agam cheana?"
       a: "Ní féidir, is do chostais nua atá scanadh. Is féidir leat admháil a cheangal le costas atá ann cheana fós, agus stóráiltear í gan í a léamh."
     - q: "Cad má líonann sé rud éigin mícheart?"

@@ -1,4 +1,4 @@
-translatedFrom: "42f5cf35"
+translatedFrom: "6a208498"
 review:
   status: checked
   checker: "R2-check"
@@ -6,14 +6,13 @@ review:
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
-  - receipt-scanning.read-by-googles-ai
   - receipt-attachments.keep-the-receipt
 meta:
   title: "Pindai struk untuk menambah pengeluaran | Side Badger"
-  description: "Biarkan si badger membaca struknya. Ia mengisi total, tanggal, dan tempat untuk Anda periksa, tanpa kredit pindai. Layanan AI Google yang membaca gambarnya."
+  description: "Biarkan si badger membaca struknya. Ia mengisi total, tanggal, dan tempat untuk Anda periksa, tanpa kredit pindai."
 h1: "Pindai struk, periksa rinciannya, bagi"
 navLabel: "Pemindaian struk"
-lead: "Biarkan si badger membaca struknya, lalu periksa PR-nya. Tambahkan foto ke pengeluaran baru dan Side Badger mengisi total, tanggal, dan tempat untuk Anda periksa. Lalu Anda [membaginya](page:feature/split-expenses) seperti pengeluaran lain. Pemindaian gratis, tanpa kredit pindai. Ia mengisi satu pengeluaran dan tidak membagi tagihan per item. Gambar struk dibaca oleh layanan AI Google."
+lead: "Biarkan si badger membaca struknya, lalu periksa PR-nya. Tambahkan foto ke pengeluaran baru dan Side Badger mengisi total, tanggal, dan tempat untuk Anda periksa. Lalu Anda [membaginya](page:feature/split-expenses) seperti pengeluaran lain. Pemindaian gratis, tanpa kredit pindai. Ia mengisi satu pengeluaran dan tidak membagi tagihan per item."
 cta:
   heading: "Foto. Periksa. Bagi."
   body: "Buat akun gratis, mulai grup, dan tambahkan pengeluaran dengan foto struk. Lihat apa yang diisinya, ubah yang keliru, dan simpan kalau sudah puas."
@@ -48,8 +47,6 @@ sections:
     body: "Semuanya. Anggap yang diisinya sebagai draf. Periksa total dengan kertasnya, lalu mata uang, tanggal, dan tempat. Foto buram dan kertas kusut bisa mengecoh pembaca mana pun, dan kami tidak berjanji ia benar untuk setiap struk, jadi tolong lihat dulu sebelum menyimpan. Jika ada yang keliru, ketik ulang. Jika struknya dalam yen dan grup melunasi dalam pound, [beberapa mata uang](page:feature/multiple-currencies) menjelaskan apa yang terjadi berikutnya."
   - heading: "Simpan struk bersama pengeluaran"
     body: "Dipindai atau tidak, sebuah struk bisa tetap bersama pengeluarannya. Lampirkan foto atau PDF, hingga tiga per pengeluaran dan hingga 10 MB masing-masing. Anggota grup melihatnya di pengeluaran. Gambar tampil sebagai gambar mini yang terbuka di penampil, dan PDF terbuka sebagai tautan. Foto yang Anda pindai ikut terlampir, kecuali Anda menghapusnya sebelum menyimpan. Saat seseorang bertanya berapa sebenarnya harga makan malam itu, buktinya ada di sana."
-  - heading: "Ke mana struk Anda pergi"
-    body: "Gambar struk dibaca oleh layanan AI Google. Untuk mengisi formulir, gambar dibaca oleh Google Vertex AI (Gemini) di multi-region AS milik Google. Tambahkan gambar ke pengeluaran baru dan gambar itu dibaca. PDF, atau foto yang ditambahkan ke pengeluaran yang sudah ada, disimpan tanpa dibaca. Struk terlampir terlihat oleh anggota grup, jadi jika sebuah struk menampilkan sesuatu yang tidak ingin Anda bagikan, lewati fotonya dan ketik pengeluaran itu secara manual."
 limits:
   heading: "Batasan"
   items:
@@ -59,7 +56,6 @@ limits:
     - "Ia tidak membagi per item atau menetapkan item baris kepada orang. Ia mengisi satu pengeluaran dan Anda membaginya seperti biasa."
     - "Tidak ada janji bahwa yang diisinya benar, atau bahwa pemindaian akan berhasil setiap kali. Periksa sebelum menyimpan, dan tambahkan pengeluaran secara manual jika pemindaian gagal atau tidak tersedia."
     - "Satu pengeluaran memuat hingga tiga lampiran, masing-masing hingga 10 MB, berupa JPEG, PNG, WebP, HEIC, atau PDF."
-    - "Gambar struk dibaca oleh Google Vertex AI (Gemini) di multi-region AS milik Google, dan struk terlampir terlihat oleh anggota grup."
 useCasesHeading: "Di mana struk menumpuk"
 faq:
   heading: "Pertanyaan"
@@ -71,7 +67,7 @@ faq:
     - q: "Apakah ada batas pemindaian?"
       a: "Tidak ada kredit pindai yang bisa habis, dan pemindaian gratis. Berkas memang punya batas, yaitu hingga tiga lampiran per pengeluaran dan masing-masing 10 MB. [Apa saja yang gratis](page:pricing) membahas sisanya."
     - q: "Siapa yang bisa melihat struk saya?"
-      a: "Anggota grup bisa melihat struk yang dilampirkan pada sebuah pengeluaran. Gambar struk juga dibaca oleh layanan AI Google, begitulah formulirnya terisi."
+      a: "Anggota grup bisa melihat struk yang dilampirkan pada sebuah pengeluaran."
     - q: "Bisakah saya memindai struk untuk pengeluaran yang sudah saya tambahkan?"
       a: "Tidak, pemindaian hanya untuk pengeluaran baru. Anda tetap bisa melampirkan struk ke pengeluaran yang sudah ada, dan struk itu disimpan tanpa dibaca."
     - q: "Bagaimana jika ia mengisi sesuatu yang salah?"

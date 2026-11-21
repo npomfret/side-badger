@@ -1,4 +1,4 @@
-translatedFrom: "42f5cf35"
+translatedFrom: "6a208498"
 review:
   status: checked
   checker: "CX-review"
@@ -6,14 +6,13 @@ review:
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
-  - receipt-scanning.read-by-googles-ai
   - receipt-attachments.keep-the-receipt
 meta:
   title: Escanea un recibo para añadir un gasto | Side Badger
-  description: Deja que el tejón lea el recibo. Rellena el total, la fecha y el lugar para que los revises, sin créditos de escaneo. Lo lee el servicio de IA de Google.
+  description: Deja que el tejón lea el recibo. Rellena el total, la fecha y el lugar para que los revises, sin créditos de escaneo.
 h1: Escanea un recibo, revisa los detalles, divídelo
 navLabel: Escaneo de recibos
-lead: Deja que el tejón lea el recibo, y revísale los deberes. Añade una foto a un gasto nuevo y Side Badger rellena el total, la fecha y el lugar para que los revises. Luego lo [divides](page:feature/split-expenses) como cualquier otro gasto. Escanear es gratis, sin créditos de escaneo. Rellena un solo gasto y no divide la cuenta por artículos. El servicio de IA de Google lee las imágenes de los recibos.
+lead: Deja que el tejón lea el recibo, y revísale los deberes. Añade una foto a un gasto nuevo y Side Badger rellena el total, la fecha y el lugar para que los revises. Luego lo [divides](page:feature/split-expenses) como cualquier otro gasto. Escanear es gratis, sin créditos de escaneo. Rellena un solo gasto y no divide la cuenta por artículos.
 cta:
   heading: Fotografíalo. Revísalo. Divídelo.
   body: Crea una cuenta gratis, empieza un grupo y añade un gasto con la foto de un recibo. Mira qué rellena, cambia lo que no cuadre y guarda cuando estés conforme.
@@ -48,8 +47,6 @@ sections:
     body: Todo. Trata lo que rellena como un borrador. Compara el total con el papel, y luego la moneda, la fecha y el lugar. Las fotos borrosas y el papel arrugado pueden engañar a cualquier lector, y no prometemos que acierte con todos los recibos, así que mira bien antes de guardar. Si algo no cuadra, escribe encima. Si el recibo está en yenes y el grupo salda en libras, [varias monedas](page:feature/multiple-currencies) explica lo que pasa después.
   - heading: Guarda el recibo con el gasto
     body: Escaneado o no, un recibo puede quedarse con el gasto. Adjunta fotos o PDF, hasta tres por gasto y hasta 10 MB cada uno. Los miembros del grupo los ven en el gasto. Las imágenes aparecen como miniaturas que se abren en un visor, y los PDF se abren como enlaces. La foto que escaneas también se adjunta, a menos que la quites antes de guardar. Cuando alguien pregunte cuánto costó de verdad esa cena, la prueba está ahí mismo.
-  - heading: Adónde va tu recibo
-    body: El servicio de IA de Google lee las imágenes de los recibos. Para rellenar el formulario, la imagen la lee Google Vertex AI (Gemini) en la multirregión de EE. UU. de Google. Añade una imagen a un gasto nuevo y se lee. Un PDF, o una foto añadida a un gasto que ya existe, se guarda sin leerse. Los recibos adjuntos los ven los miembros del grupo, así que si un recibo muestra algo que prefieres no compartir, sáltate la foto y escribe ese gasto a mano.
 limits:
   heading: Límites
   items:
@@ -59,7 +56,6 @@ limits:
     - No divide por artículo ni asigna líneas del recibo a personas. Rellena un solo gasto y tú lo divides como siempre.
     - No se promete que lo que rellena sea correcto, ni que escanear funcione siempre. Comprueba antes de guardar, y añade el gasto a mano si escanear falla o no está disponible.
     - Un gasto admite hasta tres adjuntos, cada uno de hasta 10 MB, en JPEG, PNG, WebP, HEIC o PDF.
-    - Google Vertex AI (Gemini) lee las imágenes de los recibos en la multirregión de EE. UU. de Google, y los recibos adjuntos los ven los miembros del grupo.
 useCasesHeading: Donde se acumulan los recibos
 faq:
   heading: Preguntas
@@ -71,7 +67,7 @@ faq:
     - q: ¿Hay un límite de escaneos?
       a: No hay créditos de escaneo que se agoten, y escanear es gratis. Los archivos sí tienen límites, que son hasta tres adjuntos por gasto y 10 MB cada uno. [Qué cubre lo gratis](page:pricing) tiene el resto.
     - q: ¿Quién puede ver mi recibo?
-      a: Los miembros del grupo pueden ver los recibos adjuntos a un gasto. Además, el servicio de IA de Google lee las imágenes de los recibos, que es como se rellena el formulario.
+      a: Los miembros del grupo pueden ver los recibos adjuntos a un gasto.
     - q: ¿Puedo escanear un recibo de un gasto que ya he añadido?
       a: No, escanear es para gastos nuevos. Aun así puedes adjuntar un recibo a un gasto existente, y se guarda sin leerse.
     - q: ¿Y si rellena algo mal?

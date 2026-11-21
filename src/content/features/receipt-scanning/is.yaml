@@ -1,4 +1,4 @@
-translatedFrom: "42f5cf35"
+translatedFrom: "6a208498"
 review:
   status: checked
   checker: "R2-check"
@@ -6,14 +6,13 @@ review:
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
-  - receipt-scanning.read-by-googles-ai
   - receipt-attachments.keep-the-receipt
 meta:
   title: "Skannaðu kvittun til að bæta við útgjaldi | Side Badger"
-  description: "Láttu greifingjann lesa kvittunina. Hann fyllir út upphæð, dagsetningu og stað til yfirferðar, án skönnunareininga. Gervigreindarþjónusta Google les myndina."
+  description: "Láttu greifingjann lesa kvittunina. Hann fyllir út upphæð, dagsetningu og stað til yfirferðar, án skönnunareininga."
 h1: "Skannaðu kvittun, yfirfarðu upplýsingarnar og skiptu henni"
 navLabel: "Kvittanaskönnun"
-lead: "Láttu greifingjann lesa kvittunina og yfirfarðu heimavinnuna hans. Bættu mynd við nýtt útgjald og Side Badger fyllir út heildarupphæð, dagsetningu og stað fyrir þig til að yfirfara. Svo [skiptirðu því](page:feature/split-expenses) eins og hverju öðru útgjaldi. Skönnun er ókeypis, án skönnunareininga. Hún fyllir út eitt útgjald og skiptir reikningnum ekki eftir liðum. Myndir af kvittunum eru lesnar af gervigreindarþjónustu Google."
+lead: "Láttu greifingjann lesa kvittunina og yfirfarðu heimavinnuna hans. Bættu mynd við nýtt útgjald og Side Badger fyllir út heildarupphæð, dagsetningu og stað fyrir þig til að yfirfara. Svo [skiptirðu því](page:feature/split-expenses) eins og hverju öðru útgjaldi. Skönnun er ókeypis, án skönnunareininga. Hún fyllir út eitt útgjald og skiptir reikningnum ekki eftir liðum."
 cta:
   heading: "Smelltu af. Athugaðu. Skiptu."
   body: "Stofnaðu ókeypis aðgang, byrjaðu hóp og bættu við útgjaldi með mynd af kvittun. Sjáðu hvað það fyllir út, lagaðu það sem er rangt og vistaðu þegar allt er eins og það á að vera."
@@ -48,8 +47,6 @@ sections:
     body: "Allt saman. Líttu á það sem er fyllt út sem drög. Berðu heildarupphæðina saman við pappírinn, svo gjaldmiðilinn, dagsetninguna og staðinn. Óskýrar myndir og krumpaður pappír geta platað hvaða lesara sem er, og við lofum ekki að það lesi hverja kvittun rétt, svo líttu yfir áður en þú vistar. Ef eitthvað er rangt skaltu skrifa yfir það. Ef kvittunin er í jenum og hópurinn gerir upp í pundum útskýrir [margir gjaldmiðlar](page:feature/multiple-currencies) hvað gerist næst."
   - heading: "Geymdu kvittunina með útgjaldinu"
     body: "Hvort sem kvittunin er skönnuð eða ekki getur hún fylgt útgjaldinu. Hengdu við myndir eða PDF-skjöl, allt að þrjú á hvert útgjald og allt að 10 MB hvert. Meðlimir hópsins sjá þau á útgjaldinu. Myndir birtast sem smámyndir sem opnast í skoðara og PDF-skjöl opnast sem tenglar. Myndin sem þú skannar fylgir líka með, nema þú fjarlægir hana áður en þú vistar. Þegar einhver spyr hvað kvöldverðurinn kostaði í raun og veru er sönnunin þarna á staðnum."
-  - heading: "Hvert kvittunin fer"
-    body: "Myndir af kvittunum eru lesnar af gervigreindarþjónustu Google. Til að fylla út eyðublaðið les Google Vertex AI (Gemini) myndina á fjölsvæði Google í Bandaríkjunum (US multi-region). Bættu mynd við nýtt útgjald og hún er lesin. PDF-skjal, eða mynd sem er bætt við útgjald sem er þegar til, er geymt án þess að vera lesið. Meðlimir hópsins sjá kvittanir sem eru hengdar við, svo ef kvittun sýnir eitthvað sem þú vilt helst ekki deila skaltu sleppa myndinni og slá útgjaldið inn handvirkt."
 limits:
   heading: "Takmörk"
   items:
@@ -59,7 +56,6 @@ limits:
     - "Það skiptir ekki eftir liðum og úthlutar ekki liðum á fólk. Það fyllir út eitt útgjald og þú skiptir því eins og venjulega."
     - "Ekkert loforð er gefið um að það sem er fyllt út sé rétt, eða að skönnun virki í hvert skipti. Athugaðu áður en þú vistar og bættu útgjaldinu við handvirkt ef skönnun mistekst eða er ekki í boði."
     - "Útgjald rúmar allt að þrjú viðhengi, hvert allt að 10 MB, sem JPEG, PNG, WebP, HEIC eða PDF."
-    - "Myndir af kvittunum eru lesnar af Google Vertex AI (Gemini) á fjölsvæði Google í Bandaríkjunum (US multi-region) og kvittanir sem eru hengdar við sjást meðlimum hópsins."
 useCasesHeading: "Þar sem kvittanirnar hrannast upp"
 faq:
   heading: "Spurningar"
@@ -71,7 +67,7 @@ faq:
     - q: "Eru takmörk á skönnunum?"
       a: "Það eru engar skönnunareiningar sem geta klárast og skönnun er ókeypis. Skrár hafa þó takmörk: allt að þrjú viðhengi á hvert útgjald og 10 MB hvert. [Hvað ókeypis nær yfir](page:pricing) hefur restina."
     - q: "Hver sér kvittunina mína?"
-      a: "Meðlimir hópsins sjá kvittanirnar sem eru hengdar við útgjald. Myndir af kvittunum eru líka lesnar af gervigreindarþjónustu Google, sem er hvernig eyðublaðið er fyllt út."
+      a: "Meðlimir hópsins sjá kvittanirnar sem eru hengdar við útgjald."
     - q: "Get ég skannað kvittun fyrir útgjald sem ég hef þegar bætt við?"
       a: "Nei, skönnun er fyrir ný útgjöld. Þú getur samt hengt kvittun við útgjald sem er þegar til og hún er geymd án þess að vera lesin."
     - q: "Hvað ef það fyllir út eitthvað rangt?"

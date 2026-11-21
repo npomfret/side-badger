@@ -1,5 +1,5 @@
 ---
-/** Receipt/camera/disclosure. Caller controls --scan-scanning-opacity and --scan-transition-ms. */
+/** Receipt and camera frame. Caller controls --scan-scanning-opacity and --scan-transition-ms. */
 import Receipt from '../Receipt.astro';
 import { t, type Locale } from '@/i18n';
 import { receiptDate } from './helpers';
@@ -14,7 +14,6 @@ const { locale, title, amount } = Astro.props;
       <path d="M0 22V0H22M78 0H100V22M100 78V100H78M22 100H0V78" vector-effect="non-scaling-stroke"></path>
     </svg>
   </div>
-  <small class="scan-receipt__note">{t('home.expenses.scanNote', locale)}</small>
 </div>
 <style>
   .scan-receipt { display: grid; gap: var(--space-sm); min-inline-size: 0; }
@@ -25,6 +24,5 @@ const { locale, title, amount } = Astro.props;
     pointer-events: none; opacity: var(--scan-scanning-opacity, 0);
     transition: opacity var(--scan-transition-ms, 0s) linear;
   }
-  .scan-receipt__note { color: var(--ink-muted); background: var(--surface); padding-inline: 0.5rem; }
   .scan-receipt :global(:is(.receipt__lines li, .receipt__total) > bdi) { flex: none; white-space: nowrap; }
 </style>

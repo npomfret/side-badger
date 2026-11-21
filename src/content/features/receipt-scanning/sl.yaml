@@ -1,4 +1,4 @@
-translatedFrom: "42f5cf35"
+translatedFrom: "6a208498"
 review:
   status: checked
   checker: "R2-check"
@@ -7,14 +7,13 @@ identicalApproved: []
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
-  - receipt-scanning.read-by-googles-ai
   - receipt-attachments.keep-the-receipt
 meta:
   title: "Skeniraj račun in dodaj strošek | Side Badger"
-  description: "Naj jazbec prebere račun. Izpolni skupni znesek, datum in kraj, ti pa preveriš. Brez kreditov za skeniranje. Sliko prebere Googlova storitev z umetno inteligenco."
+  description: "Naj jazbec prebere račun. Izpolni skupni znesek, datum in kraj, ti pa preveriš. Brez kreditov za skeniranje."
 h1: "Skeniraj račun, preveri podrobnosti, razdeli"
 navLabel: "Skeniranje računov"
-lead: "Naj jazbec prebere račun, ti pa mu preglej domačo nalogo. Novemu strošku dodaj fotografijo in Side Badger izpolni skupni znesek, datum in kraj, da jih preveriš. Nato ga [razdeliš](page:feature/split-expenses) kot vsak drug strošek. Skeniranje je brezplačno, brez kreditov za skeniranje. Izpolni en strošek in računa ne razdeli po postavkah. Slike računov bere Googlova storitev z umetno inteligenco."
+lead: "Naj jazbec prebere račun, ti pa mu preglej domačo nalogo. Novemu strošku dodaj fotografijo in Side Badger izpolni skupni znesek, datum in kraj, da jih preveriš. Nato ga [razdeliš](page:feature/split-expenses) kot vsak drug strošek. Skeniranje je brezplačno, brez kreditov za skeniranje. Izpolni en strošek in računa ne razdeli po postavkah."
 cta:
   heading: "Poslikaj. Preveri. Razdeli."
   body: "Ustvari brezplačen uporabniški račun, ustanovi skupino in dodaj strošek s fotografijo računa. Poglej, kaj izpolni, popravi, kar ne drži, in shrani, ko si zadovoljen."
@@ -49,8 +48,6 @@ sections:
     body: "Vse. Tisto, kar izpolni, obravnavaj kot osnutek. Skupni znesek primerjaj s papirjem, nato še valuto, datum in kraj. Zamegljene fotografije in zmečkan papir lahko zavedejo vsakega bralnika in ne obljubljamo, da prebere vsak račun pravilno, zato poglej, preden shraniš. Če je kaj narobe, prepiši. Če je račun v jenih, skupina pa se poravnava v funtih, [več valut](page:feature/multiple-currencies) pojasni, kaj sledi."
   - heading: "Račun naj ostane pri strošku"
     body: "Skeniran ali ne, račun lahko ostane pri strošku. Priloži fotografije ali PDF-je, do tri na strošek in do 10 MB vsaka. Člani skupine jih vidijo pri strošku. Slike se pokažejo kot sličice, ki se odprejo v pregledovalniku, PDF-ji pa se odprejo kot povezave. Tudi fotografija, ki jo skeniraš, je priložena, razen če jo pred shranjevanjem odstraniš. Ko nekdo vpraša, koliko je ta večerja v resnici stala, je dokaz tik zraven."
-  - heading: "Kam gre tvoj račun"
-    body: "Slike računov bere Googlova storitev z umetno inteligenco. Da se obrazec izpolni, sliko prebere Google Vertex AI (Gemini) v Googlovi večregiji ZDA. Dodaj sliko novemu strošku in se prebere. PDF ali fotografija, dodana že obstoječemu strošku, se shrani, ne da bi se prebrala. Priloženi računi so vidni članom skupine, zato fotografijo izpusti in strošek vpiši ročno, če račun kaže kaj, česar ne bi rad delil."
 limits:
   heading: "Omejitve"
   items:
@@ -60,7 +57,6 @@ limits:
     - "Ne deli po postavkah in ne dodeljuje postavk ljudem. Izpolni en strošek, ti pa ga razdeliš kot običajno."
     - "Ni obljube, da je to, kar izpolni, pravilno, ali da bo skeniranje delovalo vsakič. Preveri, preden shraniš, in strošek dodaj ročno, če skeniranje ne uspe ali ni na voljo."
     - "Strošek lahko vsebuje do tri priloge, vsaka do 10 MB, kot JPEG, PNG, WebP, HEIC ali PDF."
-    - "Slike računov bere Google Vertex AI (Gemini) v Googlovi večregiji ZDA, priloženi računi pa so vidni članom skupine."
 useCasesHeading: "Kjer se kopičijo računi"
 faq:
   heading: "Vprašanja"
@@ -72,7 +68,7 @@ faq:
     - q: "Ali so skeniranja omejena?"
       a: "Kreditov za skeniranje, ki bi jih zmanjkalo, ni, skeniranje pa je brezplačno. Datoteke imajo omejitve: do tri priloge na strošek in 10 MB vsaka. Ostalo je v [kaj vključuje brezplačna različica](page:pricing)."
     - q: "Kdo lahko vidi moj račun?"
-      a: "Člani skupine vidijo račune, priložene strošku. Slike računov bere tudi Googlova storitev z umetno inteligenco, tako se izpolni obrazec."
+      a: "Člani skupine vidijo račune, priložene strošku."
     - q: "Ali lahko skeniram račun za strošek, ki sem ga že dodal?"
       a: "Ne, skeniranje je za nove stroške. Račun lahko še vedno priložiš obstoječemu strošku in se shrani, ne da bi se prebral."
     - q: "Kaj, če izpolni kaj narobe?"

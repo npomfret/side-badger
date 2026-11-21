@@ -371,7 +371,6 @@ export class HomePage {
     await expectAnimationsSettled(this.page);
     await this.expectScanFields(true);
     await this.expectRendered(this.heroScan().getByText(this.string('home.hero.scanReview'), { exact: true }), 'review cue is visible');
-    await this.expectRendered(this.heroScan().getByText(this.string('home.expenses.scanNote'), { exact: true }), 'Google disclosure is visible');
     await auditAnimationWait('fields match the taxi receipt', () => expect(this.heroScan().getByTestId('scan-field')).toHaveText([
       this.string('home.chaos.receiptTaxi'), heroTaxiFare(this.locale), heroReceiptDate(this.locale),
     ]));

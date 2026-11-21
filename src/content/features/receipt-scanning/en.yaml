@@ -3,14 +3,13 @@ review:
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
-  - receipt-scanning.read-by-googles-ai
   - receipt-attachments.keep-the-receipt
 meta:
   title: Scan a receipt to add an expense | Side Badger
-  description: Let the badger read the receipt. It fills in the total, date and place for you to check, with no scan credits. Google's AI service reads the image.
+  description: Let the badger read the receipt. It fills in the total, date and place for you to check, with no scan credits.
 h1: Scan a receipt, check the details, split it
 navLabel: Receipt scanning
-lead: Let the badger read the receipt, and check its homework. Add a photo to a new expense and Side Badger fills in the total, date and place for you to check. Then you [split it](page:feature/split-expenses) like any other expense. Scanning is free, with no scan credits. It fills in one expense and does not divide the bill by item. Receipt images are read by Google's AI service.
+lead: Let the badger read the receipt, and check its homework. Add a photo to a new expense and Side Badger fills in the total, date and place for you to check. Then you [split it](page:feature/split-expenses) like any other expense. Scanning is free, with no scan credits. It fills in one expense and does not divide the bill by item.
 cta:
   heading: Snap it. Check it. Split it.
   body: Create a free account, start a group and add an expense with a receipt photo. See what it fills in, change whatever is off, and save when you're happy.
@@ -45,8 +44,6 @@ sections:
     body: All of it. Treat what it fills in as a draft. Check the total against the paper, then the currency, date and place. Blurry photos and crumpled paper can fool any reader, and we don't promise it gets every receipt right, so please look before you save. If something is off, type over it. If the receipt is in yen and the group settles in pounds, [multiple currencies](page:feature/multiple-currencies) covers what happens next.
   - heading: Keep the receipt with the expense
     body: Scanned or not, a receipt can stay with the expense. Attach photos or PDFs, up to three per expense and up to 10 MB each. Group members see them on the expense. Images show as thumbnails that open in a viewer, and PDFs open as links. The photo you scan is attached too, unless you remove it before you save. When someone asks what that dinner really cost, the proof is right there.
-  - heading: Where your receipt goes
-    body: Receipt images are read by Google's AI service. To fill in the form, the image is read by Google Vertex AI (Gemini) in Google's US multi-region. Add an image to a new expense and it gets read. A PDF, or a photo added to an expense that already exists, is stored without being read. Attached receipts are visible to the members of the group, so if a receipt shows something you would rather not share, skip the photo and type that expense in.
 limits:
   heading: Limits
   items:
@@ -56,7 +53,6 @@ limits:
     - It does not split by item or assign line items to people. It fills in one expense and you split that as usual.
     - There is no promise that what it fills in is right, or that scanning will work every time. Check before you save, and add the expense by hand if scanning fails or isn't available.
     - An expense holds up to three attachments, each up to 10 MB, as JPEG, PNG, WebP, HEIC or PDF.
-    - Receipt images are read by Google Vertex AI (Gemini) in Google's US multi-region, and attached receipts are visible to the members of the group.
 useCasesHeading: Where the receipts pile up
 faq:
   heading: Questions
@@ -68,7 +64,7 @@ faq:
     - q: Is there a limit on scans?
       a: There are no scan credits to run out of, and scanning is free. Files do have limits, which are up to three attachments per expense and 10 MB each. [What free covers](page:pricing) has the rest.
     - q: Who can see my receipt?
-      a: Members of the group can see the receipts attached to an expense. Receipt images are also read by Google's AI service, which is how the form gets filled in.
+      a: Members of the group can see the receipts attached to an expense.
     - q: Can I scan a receipt for an expense I have already added?
       a: No, scanning is for new expenses. You can still attach a receipt to an existing expense, and it is stored without being read.
     - q: What if it fills in something wrong?

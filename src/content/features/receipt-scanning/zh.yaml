@@ -1,4 +1,4 @@
-translatedFrom: "42f5cf35"
+translatedFrom: "6a208498"
 review:
   status: checked
   checker: "CX-review"
@@ -6,14 +6,13 @@ review:
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
-  - receipt-scanning.read-by-googles-ai
   - receipt-attachments.keep-the-receipt
 meta:
   title: 扫描收据，快速添加支出 | Side Badger
-  description: 让獾来读收据。它会填好总额、日期和地点，供你核对，没有扫描额度限制。图片由 Google 的 AI 服务读取。
+  description: 让獾来读收据。它会填好总额、日期和地点，供你核对，没有扫描额度限制。
 h1: 扫描收据，核对细节，再分摊
 navLabel: 收据扫描
-lead: 让獾来读收据，再检查它的作业。给新支出加一张照片，Side Badger 会填好总额、日期和地点，供你核对。然后像对待其他支出一样[分摊](page:feature/split-expenses)。扫描免费，没有扫描额度。它填的是一笔支出，不会按条目分摊账单。收据图片由 Google 的 AI 服务读取。
+lead: 让獾来读收据，再检查它的作业。给新支出加一张照片，Side Badger 会填好总额、日期和地点，供你核对。然后像对待其他支出一样[分摊](page:feature/split-expenses)。扫描免费，没有扫描额度。它填的是一笔支出，不会按条目分摊账单。
 cta:
   heading: 拍下来，核对，再分摊。
   body: 创建免费账户，建一个群组，添加一笔带收据照片的支出。看看它填了什么，不对的地方改掉，满意了就保存。
@@ -48,8 +47,6 @@ sections:
     body: 全部。把它填入的内容当作草稿。先对照纸质收据核对总额，再核对货币、日期和地点。模糊的照片和皱巴巴的纸会难倒任何阅读者，我们不保证它能读对每一张收据，所以保存前请看一眼。如果有不对的地方，直接改掉。如果收据是日元，而群组用英镑结算，[多种货币](page:feature/multiple-currencies)介绍了接下来会怎样。
   - heading: 把收据和支出放在一起
     body: 无论是否扫描过，收据都可以留在支出上。可以附上照片或 PDF，每笔支出最多三个，每个最大 10 MB。群组成员能在支出上看到它们。图片显示为缩略图，点击在查看器中打开，PDF 则以链接形式打开。你扫描的那张照片也会一并附上，除非保存前把它移除。有人问那顿晚餐到底花了多少，证据就在那里。
-  - heading: 你的收据去了哪里
-    body: 收据图片由 Google 的 AI 服务读取。为了填写表单，图片由位于 Google 美国多区域的 Google Vertex AI (Gemini) 读取。给新支出添加图片后，它就会被读取。PDF，或添加到已有支出上的照片，只会被存储，不会被读取。附上的收据对群组成员可见，所以如果收据上有你不想分享的内容，就别放照片，把这笔支出手动输入。
 limits:
   heading: 限制
   items:
@@ -59,7 +56,6 @@ limits:
     - 它不会按条目分摊，也不会把明细分配给具体的人。它填的是一笔支出，你照常分摊。
     - 不保证它填的内容正确，也不保证每次都能扫描成功。保存前请核对；扫描失败或无法使用时，请手动添加支出。
     - 一笔支出最多有三个附件，每个最大 10 MB，格式为 JPEG、PNG、WebP、HEIC 或 PDF。
-    - 收据图片由位于 Google 美国多区域的 Google Vertex AI (Gemini) 读取，附上的收据对群组成员可见。
 useCasesHeading: 收据堆积的地方
 faq:
   heading: 常见问题
@@ -71,7 +67,7 @@ faq:
     - q: 扫描有次数限制吗？
       a: 没有会用完的扫描额度，扫描也是免费的。文件确实有限制：每笔支出最多三个附件，每个最大 10 MB。其余内容见[免费包含什么](page:pricing)。
     - q: 谁能看到我的收据？
-      a: 群组成员可以看到附在支出上的收据。收据图片还会由 Google 的 AI 服务读取，表单就是这样被填好的。
+      a: 群组成员可以看到附在支出上的收据。
     - q: 已经添加的支出还能扫描收据吗？
       a: 不能，扫描只用于新支出。你仍然可以给已有的支出附上收据，它只会被存储，不会被读取。
     - q: 如果它填错了怎么办？

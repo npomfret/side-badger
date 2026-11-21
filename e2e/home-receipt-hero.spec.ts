@@ -31,7 +31,7 @@ for (const locale of ['en', 'ar', 'ja', 'xx-long'] as const) {
   for (const viewport of [{ width: 1280, height: 800 }, { width: 375, height: 812 }]) {
     test.describe(`receipt rest ${locale} ${viewport.width}`, () => {
       test.use({ reducedMotion: 'reduce', viewport });
-      test('filled fields await checking with Google disclosure and no overflow', async ({ page }) => {
+      test('filled fields await checking with no overflow', async ({ page }) => {
         const home = await HomePage.navigateTo(page, locale, 'static');
         await home.expectHeroScanRest();
         await home.expectNoHorizontalOverflow();

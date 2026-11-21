@@ -1,4 +1,4 @@
-translatedFrom: "42f5cf35"
+translatedFrom: "6a208498"
 review:
   status: checked
   checker: "R2-check"
@@ -6,14 +6,13 @@ review:
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
-  - receipt-scanning.read-by-googles-ai
   - receipt-attachments.keep-the-receipt
 meta:
   title: "Nyugta beolvasása költség hozzáadásához | Side Badger"
-  description: "A borz elolvassa a nyugtát, kitölti az összeget, a dátumot és a helyet, te ellenőrzöd. Beolvasási kredit nélkül. A képet a Google AI-szolgáltatása olvassa."
+  description: "A borz elolvassa a nyugtát, kitölti az összeget, a dátumot és a helyet, te ellenőrzöd. Beolvasási kredit nélkül."
 h1: "Olvasd be a nyugtát, ellenőrizd a részleteket, oszd fel"
 navLabel: "Nyugta beolvasása"
-lead: "Hagyd, hogy a borz elolvassa a nyugtát, és nézd át a házi feladatát. Adj hozzá egy fotót egy új költséghez, és a Side Badger kitölti az összeget, a dátumot és a helyet, hogy ellenőrizhesd. Aztán [felosztod](page:feature/split-expenses), mint bármelyik másik költséget. A beolvasás ingyenes, beolvasási kredit nélkül. Egy költséget tölt ki, és nem tételenként osztja fel a számlát. A nyugták képeit a Google AI-szolgáltatása olvassa."
+lead: "Hagyd, hogy a borz elolvassa a nyugtát, és nézd át a házi feladatát. Adj hozzá egy fotót egy új költséghez, és a Side Badger kitölti az összeget, a dátumot és a helyet, hogy ellenőrizhesd. Aztán [felosztod](page:feature/split-expenses), mint bármelyik másik költséget. A beolvasás ingyenes, beolvasási kredit nélkül. Egy költséget tölt ki, és nem tételenként osztja fel a számlát."
 cta:
   heading: "Fotózd le. Ellenőrizd. Oszd fel."
   body: "Hozz létre ingyenes fiókot, indíts csoportot, és adj hozzá egy költséget nyugtafotóval. Nézd meg, mit tölt ki, javíts át mindent, ami nem stimmel, és mentsd, ha elégedett vagy."
@@ -48,8 +47,6 @@ sections:
     body: "Mindent. Tekintsd vázlatnak, amit kitölt. Vesd össze a végösszeget a papírral, aztán a pénznemet, a dátumot és a helyet. Az elmosódott fotók és a gyűrött papír bármelyik olvasót megtéveszthetik, és nem ígérjük, hogy minden nyugtát jól kap el, ezért kérjük, nézd át, mielőtt mentenél. Ha valami nem stimmel, írj fölé. Ha a nyugta jenben van, a csoport pedig fontban számol el, a [több pénznem](page:feature/multiple-currencies) oldal elmondja, mi történik ezután."
   - heading: "Tartsd együtt a nyugtát a költséggel"
     body: "Beolvasva vagy sem, a nyugta a költség mellett maradhat. Csatolhatsz fotókat vagy PDF-eket, költségenként legfeljebb hármat, egyenként legfeljebb 10 MB-ot. A csoport tagjai látják őket a költségnél. A képek bélyegképként jelennek meg, amelyek egy megjelenítőben nyílnak meg, a PDF-ek pedig linkként nyílnak. A beolvasott fotó is csatolódik, hacsak mentés előtt el nem távolítod. Amikor valaki megkérdezi, mennyibe is került valójában az a vacsora, a bizonyíték ott van."
-  - heading: "Hová kerül a nyugtád"
-    body: "A nyugták képeit a Google AI-szolgáltatása olvassa. Az űrlap kitöltéséhez a képet a Google Vertex AI (Gemini) olvassa a Google egyesült államokbeli multirégiójában. Adj hozzá egy képet egy új költséghez, és elolvassa. A PDF-et, vagy egy már létező költséghez adott fotót olvasás nélkül tároljuk. A csatolt nyugták a csoport tagjai számára láthatók, ezért ha egy nyugta olyat mutat, amit inkább nem osztanál meg, hagyd ki a fotót, és gépeld be azt a költséget."
 limits:
   heading: "Korlátok"
   items:
@@ -59,7 +56,6 @@ limits:
     - "Nem oszt fel tételenként, és nem rendel tételsorokat emberekhez. Egy költséget tölt ki, és te azt osztod fel, a szokásos módon."
     - "Nincs ígéret arra, hogy amit kitölt, az helyes, vagy hogy a beolvasás mindig működik. Mentés előtt ellenőrizd, és add hozzá kézzel a költséget, ha a beolvasás sikertelen vagy nem elérhető."
     - "Egy költséghez legfeljebb három melléklet tartozhat, egyenként legfeljebb 10 MB-os, JPEG, PNG, WebP, HEIC vagy PDF formátumban."
-    - "A nyugták képeit a Google Vertex AI (Gemini) olvassa a Google egyesült államokbeli multirégiójában, a csatolt nyugták pedig a csoport tagjai számára láthatók."
 useCasesHeading: "Ahol gyűlnek a nyugták"
 faq:
   heading: "Kérdések"
@@ -71,7 +67,7 @@ faq:
     - q: "Van korlát a beolvasásokra?"
       a: "Nincsenek beolvasási kreditek, amelyek kifogyhatnának, és a beolvasás ingyenes. A fájloknak vannak korlátai: költségenként legfeljebb három melléklet, egyenként legfeljebb 10 MB. A többit [mit fed le az ingyenes csomag](page:pricing) tartalmazza."
     - q: "Ki láthatja a nyugtámat?"
-      a: "A csoport tagjai látják a költséghez csatolt nyugtákat. A nyugták képeit a Google AI-szolgáltatása is olvassa, így töltődik ki az űrlap."
+      a: "A csoport tagjai látják a költséghez csatolt nyugtákat."
     - q: "Beolvashatok egy nyugtát egy már hozzáadott költséghez?"
       a: "Nem, a beolvasás új költségekhez van. Egy létező költséghez továbbra is csatolhatsz nyugtát, azt olvasás nélkül tároljuk."
     - q: "Mi van, ha valamit rosszul tölt ki?"

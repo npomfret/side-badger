@@ -38,6 +38,7 @@ Rules that hold across the site (full structure, shell, layouts, components and 
 - `src/data/features.ts`, `use-cases.ts`, `substitutions.ts` and `screenshots.ts` (types in `types.ts`) are the English, internal registry: feature ids and statuses, claims, proof, approved wording. Pages reference ids and never print registry strings. `substitutions.ts` lists phrases banned from English copy and what to write instead. `src/__tests__/registry.test.ts` checks every reference.
 - `richText` fields are inline Markdown only. The one link form is `[text](page:<pageId>)`, resolved per locale by `RichText.astro`; an unknown or unbuilt page id fails the build. No app links in rich text.
 - Every entry has a `review` block. `machine` is the default; `checked` is set by an agent that back-checked the text (needs `checker` and `date`); `reviewed` only for a named fluent human (needs `reviewer` and `date`). Agents never write `reviewed`.
+- Copy never describes how the app works internally: no AI provider, vendor, region or processing detail (owner rule, 21 November 2026). Say what the person gets. `substitutions.ts` bans the known phrases.
 - Policies are not content: the legal pages load the app's current policy in the browser (see External Dependencies).
 - A page's scripts must stay under 10 KB gzipped at load.
 - Retired: the canvas background, floating particles, cursor-follow, glass-layer and aurora effects, and the old single-file homepage are gone. Do not reintroduce ambient background effects; motion belongs to scenes and respects `prefers-reduced-motion`.

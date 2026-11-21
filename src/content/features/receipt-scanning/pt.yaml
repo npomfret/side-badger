@@ -1,4 +1,4 @@
-translatedFrom: "42f5cf35"
+translatedFrom: "6a208498"
 review:
   status: checked
   checker: "CX-review"
@@ -6,14 +6,13 @@ review:
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
-  - receipt-scanning.read-by-googles-ai
   - receipt-attachments.keep-the-receipt
 meta:
   title: "Digitaliza um recibo para adicionar uma despesa | Side Badger"
-  description: "Deixa o texugo ler o recibo. Preenche o total, a data e o local para tu confirmares, sem créditos de digitalização. O serviço de IA da Google lê a imagem."
+  description: "Deixa o texugo ler o recibo. Preenche o total, a data e o local para tu confirmares, sem créditos de digitalização."
 h1: "Digitaliza um recibo, confirma os detalhes, divide"
 navLabel: "Leitura de recibos"
-lead: "Deixa o texugo ler o recibo e corrige-lhe os trabalhos de casa. Adiciona uma fotografia a uma nova despesa e o Side Badger preenche o total, a data e o local para tu confirmares. Depois [divides](page:feature/split-expenses) como qualquer outra despesa. Digitalizar é grátis, sem créditos de digitalização. Preenche uma despesa e não divide a conta por item. As imagens dos recibos são lidas pelo serviço de IA da Google."
+lead: "Deixa o texugo ler o recibo e corrige-lhe os trabalhos de casa. Adiciona uma fotografia a uma nova despesa e o Side Badger preenche o total, a data e o local para tu confirmares. Depois [divides](page:feature/split-expenses) como qualquer outra despesa. Digitalizar é grátis, sem créditos de digitalização. Preenche uma despesa e não divide a conta por item."
 cta:
   heading: "Fotografa. Confirma. Divide."
   body: "Cria uma conta grátis, começa um grupo e adiciona uma despesa com a fotografia de um recibo. Vê o que ele preenche, corrige o que estiver errado e guarda quando ficar como queres."
@@ -48,8 +47,6 @@ sections:
     body: "Tudo. Trata o que ele preenche como um rascunho. Confirma o total com o papel, depois a moeda, a data e o local. Fotografias desfocadas e papel amarrotado podem enganar qualquer leitor, e não prometemos que acerta em todos os recibos, por isso olha antes de guardar. Se algo estiver errado, escreve por cima. Se o recibo estiver em ienes e o grupo acertar as contas em libras, [várias moedas](page:feature/multiple-currencies) explica o que acontece a seguir."
   - heading: "Guarda o recibo com a despesa"
     body: "Lido ou não, um recibo pode ficar com a despesa. Anexa fotografias ou PDF, até três por despesa e até 10 MB cada. Os membros do grupo veem-nos na despesa. As imagens aparecem como miniaturas que abrem num visualizador, e os PDF abrem como links. A fotografia que digitalizas também fica anexada, a menos que a removas antes de guardar. Quando alguém perguntar quanto custou mesmo aquele jantar, a prova está logo ali."
-  - heading: "Para onde vai o teu recibo"
-    body: "As imagens dos recibos são lidas pelo serviço de IA da Google. Para preencher o formulário, a imagem é lida pelo Google Vertex AI (Gemini) na multirregião dos EUA da Google. Adiciona uma imagem a uma nova despesa e ela é lida. Um PDF, ou uma fotografia adicionada a uma despesa que já existe, é guardado sem ser lido. Os recibos anexados são visíveis para os membros do grupo, por isso, se um recibo mostrar algo que preferes não partilhar, salta a fotografia e escreve essa despesa à mão."
 limits:
   heading: "Limites"
   items:
@@ -59,7 +56,6 @@ limits:
     - "Não divide por item nem atribui itens a pessoas. Preenche uma despesa e tu divide-la como de costume."
     - "Não há promessa de que o que preenche esteja certo, nem de que a digitalização funcione sempre. Confirma antes de guardar e adiciona a despesa à mão se a digitalização falhar ou não estiver disponível."
     - "Uma despesa comporta até três anexos, cada um até 10 MB, em JPEG, PNG, WebP, HEIC ou PDF."
-    - "As imagens dos recibos são lidas pelo Google Vertex AI (Gemini) na multirregião dos EUA da Google, e os recibos anexados são visíveis para os membros do grupo."
 useCasesHeading: "Onde os recibos se acumulam"
 faq:
   heading: "Perguntas"
@@ -71,7 +67,7 @@ faq:
     - q: "Há limite de digitalizações?"
       a: "Não há créditos de digitalização que se esgotem, e a digitalização é grátis. Os ficheiros têm limites, que são até três anexos por despesa e 10 MB cada. [O que o grátis inclui](page:pricing) tem o resto."
     - q: "Quem pode ver o meu recibo?"
-      a: "Os membros do grupo podem ver os recibos anexados a uma despesa. As imagens dos recibos também são lidas pelo serviço de IA da Google, que é como o formulário fica preenchido."
+      a: "Os membros do grupo podem ver os recibos anexados a uma despesa."
     - q: "Posso digitalizar um recibo de uma despesa que já adicionei?"
       a: "Não, a digitalização é para despesas novas. Podes na mesma anexar um recibo a uma despesa existente, e ele é guardado sem ser lido."
     - q: "E se preencher algo errado?"

@@ -1,4 +1,4 @@
-translatedFrom: "42f5cf35"
+translatedFrom: "6a208498"
 review:
   status: checked
   checker: "R2-check"
@@ -6,14 +6,13 @@ review:
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
-  - receipt-scanning.read-by-googles-ai
   - receipt-attachments.keep-the-receipt
 meta:
   title: "Naskenujte účtenku a přidejte výdaj | Side Badger"
-  description: "Nechte jezevce přečíst účtenku. Doplní celkovou částku, datum a místo ke kontrole, bez kreditů za skenování. Obrázek čte AI služba společnosti Google."
+  description: "Nechte jezevce přečíst účtenku. Doplní celkovou částku, datum a místo ke kontrole, bez kreditů za skenování."
 h1: "Naskenujte účtenku, zkontrolujte údaje, rozdělte ji"
 navLabel: "Skenování účtenek"
-lead: "Nechte jezevce přečíst účtenku a zkontrolujte jeho domácí úkol. Přidejte k novému výdaji fotku a Side Badger doplní celkovou částku, datum a místo ke kontrole. Pak ji [rozdělíte](page:feature/split-expenses) jako každý jiný výdaj. Skenování je zdarma, bez kreditů za skenování. Doplní jeden výdaj a účet nerozdělí podle položek. Obrázky účtenek čte AI služba společnosti Google."
+lead: "Nechte jezevce přečíst účtenku a zkontrolujte jeho domácí úkol. Přidejte k novému výdaji fotku a Side Badger doplní celkovou částku, datum a místo ke kontrole. Pak ji [rozdělíte](page:feature/split-expenses) jako každý jiný výdaj. Skenování je zdarma, bez kreditů za skenování. Doplní jeden výdaj a účet nerozdělí podle položek."
 cta:
   heading: "Vyfoťte. Zkontrolujte. Rozdělte."
   body: "Vytvořte si bezplatný účet, založte skupinu a přidejte výdaj s fotkou účtenky. Podívejte se, co doplní, opravte, co nesedí, a uložte, až budete spokojeni."
@@ -48,8 +47,6 @@ sections:
     body: "Všechno. Berte doplněné údaje jako koncept. Zkontrolujte celkovou částku podle papíru, pak měnu, datum a místo. Rozmazané fotky a zmačkaný papír mohou zmást jakéhokoli čtenáře a neslibujeme, že přečte správně každou účtenku, takže se prosím před uložením podívejte. Pokud něco nesedí, přepište to. Pokud je účtenka v jenech a skupina se vyrovnává v librách, co se stane dál, popisuje stránka o [více měnách](page:feature/multiple-currencies)."
   - heading: "Nechte účtenku u výdaje"
     body: "Ať už je naskenovaná, nebo ne, účtenka může zůstat u výdaje. Přiložte fotky nebo PDF, až tři na výdaj a každý do 10 MB. Členové skupiny je u výdaje vidí. Obrázky se zobrazí jako náhledy, které se otevřou v prohlížeči příloh, a PDF se otevírají jako odkazy. Fotka, kterou naskenujete, se také přiloží, pokud ji před uložením neodeberete. Když se někdo zeptá, kolik ta večeře opravdu stála, důkaz je hned tam."
-  - heading: "Kam vaše účtenka putuje"
-    body: "Obrázky účtenek čte AI služba společnosti Google. Aby se formulář vyplnil, čte obrázek Google Vertex AI (Gemini) v multiregionu Googlu v USA. Přidáte-li obrázek k novému výdaji, přečte se. PDF nebo fotka přidaná k už existujícímu výdaji se uloží bez přečtení. Přiložené účtenky vidí členové skupiny, takže pokud účtenka ukazuje něco, co byste raději nesdíleli, fotku vynechte a výdaj zadejte ručně."
 limits:
   heading: "Omezení"
   items:
@@ -59,7 +56,6 @@ limits:
     - "Nedělí podle položek ani nepřiřazuje položky lidem. Vyplní jeden výdaj a ten rozdělíte jako obvykle."
     - "Neslibujeme, že doplněné údaje jsou správné, ani že skenování zafunguje pokaždé. Před uložením zkontrolujte a pokud skenování selže nebo není k dispozici, přidejte výdaj ručně."
     - "Výdaj má až tři přílohy, každou do 10 MB, ve formátu JPEG, PNG, WebP, HEIC nebo PDF."
-    - "Obrázky účtenek čte Google Vertex AI (Gemini) v multiregionu Googlu v USA a přiložené účtenky vidí členové skupiny."
 useCasesHeading: "Kde se hromadí účtenky"
 faq:
   heading: "Otázky"
@@ -71,7 +67,7 @@ faq:
     - q: "Je skenování nějak omezené?"
       a: "Žádné kredity za skenování se nemohou vyčerpat a skenování je zdarma. Soubory limity mají: až tři přílohy na výdaj a každá do 10 MB. Zbytek najdete v části [co zahrnuje bezplatná verze](page:pricing)."
     - q: "Kdo vidí moji účtenku?"
-      a: "Členové skupiny vidí účtenky přiložené k výdaji. Obrázky účtenek čte také AI služba společnosti Google, čímž se formulář vyplní."
+      a: "Členové skupiny vidí účtenky přiložené k výdaji."
     - q: "Mohu naskenovat účtenku k výdaji, který už je přidaný?"
       a: "Ne, skenování je pro nové výdaje. K existujícímu výdaji můžete účtenku pořád přiložit a uloží se bez přečtení."
     - q: "Co když doplní něco špatně?"

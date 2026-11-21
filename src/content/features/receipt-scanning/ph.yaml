@@ -1,4 +1,4 @@
-translatedFrom: "42f5cf35"
+translatedFrom: "6a208498"
 review:
   status: checked
   checker: "R2-check"
@@ -6,14 +6,13 @@ review:
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
-  - receipt-scanning.read-by-googles-ai
   - receipt-attachments.keep-the-receipt
 meta:
   title: "I-scan ang resibo para magdagdag ng gastos | Side Badger"
-  description: "Hayaang basahin ng badger ang resibo. Pupunan nito ang kabuuan, petsa, at lugar para suriin mo, walang scan credit. Binabasa ng AI service ng Google ang larawan."
+  description: "Hayaang basahin ng badger ang resibo. Pupunan nito ang kabuuan, petsa, at lugar para suriin mo, walang scan credit."
 h1: "I-scan ang resibo, suriin ang detalye, hatiin"
 navLabel: "Pag-scan ng resibo"
-lead: "Hayaang basahin ng badger ang resibo, at i-check ang homework nito. Magdagdag ng larawan sa bagong gastos at pupunan ng Side Badger ang kabuuan, petsa, at lugar para suriin mo. Saka mo [hahatiin](page:feature/split-expenses) ito gaya ng ibang gastos. Libre ang pag-scan, walang scan credit. Isang gastos ang pinupunan nito at hindi nito hinahati ang bayarin ayon sa item. Binabasa ng AI service ng Google ang mga larawan ng resibo."
+lead: "Hayaang basahin ng badger ang resibo, at i-check ang homework nito. Magdagdag ng larawan sa bagong gastos at pupunan ng Side Badger ang kabuuan, petsa, at lugar para suriin mo. Saka mo [hahatiin](page:feature/split-expenses) ito gaya ng ibang gastos. Libre ang pag-scan, walang scan credit. Isang gastos ang pinupunan nito at hindi nito hinahati ang bayarin ayon sa item."
 cta:
   heading: "Kunan. Suriin. Hatiin."
   body: "Gumawa ng libreng account, magsimula ng grupo, at magdagdag ng gastos na may litrato ng resibo. Tingnan kung ano ang pinupunan nito, baguhin ang mali, at i-save kapag ayos ka na."
@@ -48,8 +47,6 @@ sections:
     body: "Lahat ng ito. Ituring na draft ang pinupunan nito. Ikumpara ang kabuuan sa papel, saka ang pera, petsa, at lugar. Kayang malinlang ng malabong litrato at gusot na papel ang kahit anong tagabasa, at hindi namin ipinapangakong tama ito sa bawat resibo, kaya pakitingnan bago mag-save. Kung may mali, i-type ang tama sa ibabaw. Kung yen ang resibo at pounds ang settlement ng grupo, tinatalakay ng [maraming pera](page:feature/multiple-currencies) ang susunod na mangyayari."
   - heading: "Itabi ang resibo kasama ng gastos"
     body: "Na-scan man o hindi, puwedeng manatili ang resibo sa gastos. Mag-attach ng mga litrato o PDF, hanggang tatlo bawat gastos at hanggang 10 MB ang bawat isa. Nakikita ng mga miyembro ng grupo ang mga ito sa gastos. Lumalabas na thumbnail ang mga larawan na bumubukas sa viewer, at bumubukas bilang link ang mga PDF. Naka-attach din ang litratong na-scan mo, maliban kung aalisin mo ito bago mag-save. Kapag may nagtanong kung magkano talaga ang hapunang iyon, nandiyan na ang patunay."
-  - heading: "Saan napupunta ang resibo mo"
-    body: "Binabasa ng AI service ng Google ang mga larawan ng resibo. Para mapunan ang form, binabasa ang larawan ng Google Vertex AI (Gemini) sa US multi-region ng Google. Magdagdag ng larawan sa bagong gastos at babasahin ito. Ang PDF, o litratong idinagdag sa gastos na umiiral na, ay iniimbak nang hindi binabasa. Nakikita ng mga miyembro ng grupo ang mga naka-attach na resibo, kaya kung may ipinapakita ang resibo na ayaw mong ibahagi, huwag nang idagdag ang litrato at i-type na lang ang gastos na iyon."
 limits:
   heading: "Mga limitasyon"
   items:
@@ -59,7 +56,6 @@ limits:
     - "Hindi ito naghahati ayon sa item at hindi nag-a-assign ng line item sa mga tao. Isang gastos ang pinupunan nito at ikaw ang maghahati nito gaya ng dati."
     - "Walang pangakong tama ang pinupunan nito, o gagana ang pag-scan sa bawat pagkakataon. Suriin bago mag-save, at idagdag ang gastos nang mano-mano kung pumalpak o hindi available ang pag-scan."
     - "Hanggang tatlong attachment ang isang gastos, hanggang 10 MB ang bawat isa, bilang JPEG, PNG, WebP, HEIC, o PDF."
-    - "Binabasa ng Google Vertex AI (Gemini) sa US multi-region ng Google ang mga larawan ng resibo, at nakikita ng mga miyembro ng grupo ang mga naka-attach na resibo."
 useCasesHeading: "Saan dumarami ang mga resibo"
 faq:
   heading: "Mga tanong"
@@ -71,7 +67,7 @@ faq:
     - q: "May limitasyon ba ang mga scan?"
       a: "Walang scan credit na mauubos, at libre ang pag-scan. May limitasyon ang mga file, na hanggang tatlong attachment bawat gastos at 10 MB ang bawat isa. Nasa [saklaw ng libre](page:pricing) ang iba pa."
     - q: "Sino ang makakakita ng resibo ko?"
-      a: "Nakikita ng mga miyembro ng grupo ang mga resibong naka-attach sa isang gastos. Binabasa rin ng AI service ng Google ang mga larawan ng resibo, kaya napupunan ang form."
+      a: "Nakikita ng mga miyembro ng grupo ang mga resibong naka-attach sa isang gastos."
     - q: "Puwede ba akong mag-scan ng resibo para sa gastos na naidagdag ko na?"
       a: "Hindi, para sa mga bagong gastos ang pag-scan. Puwede ka pa ring mag-attach ng resibo sa gastos na umiiral na, at iniimbak ito nang hindi binabasa."
     - q: "Paano kung mali ang napunan nito?"

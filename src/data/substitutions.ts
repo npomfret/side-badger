@@ -20,4 +20,8 @@ export const substitutions: readonly Substitution[] = [
   { insteadOf: 'Instant notifications', use: 'Updates appear in the app straight away' },
   { insteadOf: 'Add friends', use: 'Invite people to a group' },
   { insteadOf: 'Coming soon', use: '(nothing; describe what exists)' },
+  {
+    insteadOf: "Google's AI / Vertex / Gemini / multi-region",
+    use: '(nothing; say what the person gets, never how the app works inside)',
+  },
 ];

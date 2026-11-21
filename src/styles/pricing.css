@@ -107,7 +107,7 @@
 
 .plan-features {
   list-style: none;
-  margin: 0 0 var(--space-md);
+  margin: 0 0 var(--space-xl);
   padding: 0;
 }
 
@@ -138,14 +138,6 @@
 .plan-card :global(.btn-full) {
   inline-size: 100%;
   justify-content: center;
-}
-
-/* The receipt-scanning disclosure (site plan D10), under the feature list */
-.plan-note {
-  margin: 0 0 var(--space-xl);
-  max-inline-size: none;
-  font-size: var(--text-sm);
-  color: var(--text-primary);
 }
 
 /* Limits table */

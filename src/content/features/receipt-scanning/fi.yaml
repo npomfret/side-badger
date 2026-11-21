@@ -1,4 +1,4 @@
-translatedFrom: "42f5cf35"
+translatedFrom: "6a208498"
 review:
   status: checked
   checker: "R2-check"
@@ -6,14 +6,13 @@ review:
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
-  - receipt-scanning.read-by-googles-ai
   - receipt-attachments.keep-the-receipt
 meta:
   title: Skannaa kuitti ja lisää kulu | Side Badger
-  description: Anna mäyrän lukea kuitti. Se täyttää summan, päivämäärän ja paikan tarkistettavaksesi, ilman skannauskrediittejä. Googlen tekoälypalvelu lukee kuvan.
+  description: Anna mäyrän lukea kuitti. Se täyttää summan, päivämäärän ja paikan tarkistettavaksesi, ilman skannauskrediittejä.
 h1: Skannaa kuitti, tarkista tiedot, jaa kulu
 navLabel: Kuittien skannaus
-lead: Anna mäyrän lukea kuitti ja tarkista sen kotitehtävät. Lisää kuva uuteen kuluun, niin Side Badger täyttää summan, päivämäärän ja paikan tarkistettavaksesi. Sitten [jaat kulun](page:feature/split-expenses) kuten minkä tahansa muun. Skannaus on ilmainen, eikä skannauskrediittejä ole. Se täyttää yhden kulun eikä jaa laskua tuotteittain. Googlen tekoälypalvelu lukee kuittikuvat.
+lead: Anna mäyrän lukea kuitti ja tarkista sen kotitehtävät. Lisää kuva uuteen kuluun, niin Side Badger täyttää summan, päivämäärän ja paikan tarkistettavaksesi. Sitten [jaat kulun](page:feature/split-expenses) kuten minkä tahansa muun. Skannaus on ilmainen, eikä skannauskrediittejä ole. Se täyttää yhden kulun eikä jaa laskua tuotteittain.
 cta:
   heading: Ota kuva. Tarkista. Jaa.
   body: Luo ilmainen tili, perusta ryhmä ja lisää kulu kuittikuvalla. Katso, mitä se täyttää, korjaa kaikki väärä ja tallenna, kun olet tyytyväinen.
@@ -48,8 +47,6 @@ sections:
     body: Kaiken. Pidä täytettyä luonnoksena. Tarkista loppusumma paperista, sitten valuutta, päivämäärä ja paikka. Epäselvät kuvat ja rypistynyt paperi voivat hämätä ketä tahansa lukijaa, emmekä lupaa, että se onnistuu jokaisessa kuitissa, joten katso ennen tallennusta. Jos jokin on pielessä, kirjoita päälle. Jos kuitti on jeneissä ja ryhmä tasaa punnissa, [useita valuuttoja](page:feature/multiple-currencies) kertoo, mitä seuraavaksi tapahtuu.
   - heading: Pidä kuitti kulun mukana
     body: Skannattuna tai ei, kuitti voi pysyä kulun mukana. Liitä valokuvia tai PDF-tiedostoja, enintään kolme kulua kohden ja enintään 10 MB kukin. Ryhmän jäsenet näkevät ne kulussa. Kuvat näkyvät pienoiskuvina, jotka avautuvat katseluun, ja PDF-tiedostot avautuvat linkkeinä. Skannaamasi kuva liitetään myös, ellet poista sitä ennen tallennusta. Kun joku kysyy, mitä se illallinen oikeasti maksoi, todiste on heti siinä.
-  - heading: Minne kuittisi menee
-    body: Googlen tekoälypalvelu lukee kuittikuvat. Lomakkeen täyttämiseksi kuvan lukee Google Vertex AI (Gemini) Googlen Yhdysvaltain multi-region-alueella. Lisää kuva uuteen kuluun, niin se luetaan. PDF tai valokuva, joka lisätään jo olemassa olevaan kuluun, tallennetaan lukematta. Liitetyt kuitit näkyvät ryhmän jäsenille, joten jos kuitissa näkyy jotain, mitä et halua jakaa, jätä kuva väliin ja kirjoita kulu käsin.
 limits:
   heading: Rajat
   items:
@@ -59,7 +56,6 @@ limits:
     - Se ei jaa tuotteittain eikä kohdista rivejä ihmisille. Se täyttää yhden kulun, ja jaat sen tavalliseen tapaan.
     - Ei ole lupausta siitä, että täytetty on oikein tai että skannaus toimii joka kerta. Tarkista ennen tallennusta ja lisää kulu käsin, jos skannaus epäonnistuu tai ei ole käytettävissä.
     - Kuluun mahtuu enintään kolme liitettä, kukin enintään 10 MB, JPEG-, PNG-, WebP-, HEIC- tai PDF-muodossa.
-    - Google Vertex AI (Gemini) lukee kuittikuvat Googlen Yhdysvaltain multi-region-alueella, ja liitetyt kuitit näkyvät ryhmän jäsenille.
 useCasesHeading: Missä kuitit kasautuvat
 faq:
   heading: Kysymyksiä
@@ -71,7 +67,7 @@ faq:
     - q: Onko skannauksilla rajaa?
       a: Skannauskrediittejä ei ole, joten ne eivät voi loppua, ja skannaus on ilmaista. Tiedostoilla on rajansa, eli enintään kolme liitettä kulua kohden ja 10 MB kukin. [Mitä ilmaiseen kuuluu](page:pricing) kertoo loput.
     - q: Kuka näkee kuittini?
-      a: Ryhmän jäsenet näkevät kuluun liitetyt kuitit. Googlen tekoälypalvelu lukee kuittikuvat myös, ja niin lomake täyttyy.
+      a: Ryhmän jäsenet näkevät kuluun liitetyt kuitit.
     - q: Voinko skannata kuitin kulusta, jonka olen jo lisännyt?
       a: Ei, skannaus on uusille kuluille. Voit silti liittää kuitin olemassa olevaan kuluun, ja se tallennetaan lukematta.
     - q: Entä jos se täyttää jotain väärin?

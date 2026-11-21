@@ -102,9 +102,9 @@ Each decision is final for this plan. Implementation agents apply them without a
 - **Evidence:** the clubs and teams results are dominated by payment-collection tools that take money and send reminders, such as Spond, SportMember and Collctiv. Side Badger does neither. The terms grant a licence for "personal, non-commercial purposes" (`config/policies/terms-and-conditions.md` section 8.2), which rules out office reimbursements and offsites, and require users to be 18 or over (section 2), which rules out school pupils. Families with children are dropped for the same age reason; adult family members are covered on the couples and housemates pages.
 - **Reopen if:** the app gains payment requests (`tasks/deferred/payment-requests.md`) and the terms allow organisational use.
 
-### D10. Receipt scanning is shown, disclosed, and gets its own page later
+### D10. Receipt scanning is shown, and gets its own page later
 
-- **Decision:** the homepage, how-it-works and feature pages may show receipt scanning as available, worded as "fills in the details for you to check". Every page that mentions it says plainly that the receipt image is read by Google's AI service. The dedicated page waits for release 2, gated on the extraction-quality evidence still open in `tasks/verify-receipt-scanning-production.md`. No accuracy claim is made anywhere until then. Receipt attachments (photos or PDFs, up to three per expense) are not gated: attaching involves no extraction, so they ship in release 1 on the split-expenses page (decided 2026-10-15).
+- **Decision:** the homepage, how-it-works and feature pages may show receipt scanning as available, worded as "fills in the details for you to check". Copy never names the AI provider or says where images are processed: the owner ruled on 21 November 2026 that the site does not describe how the app works internally, which reverses the earlier "read by Google's AI service" disclosure. The dedicated page waits for release 2, gated on the extraction-quality evidence still open in `tasks/verify-receipt-scanning-production.md`. No accuracy claim is made anywhere until then. Receipt attachments (photos or PDFs, up to three per expense) are not gated: attaching involves no extraction, so they ship in release 1 on the split-expenses page (decided 2026-10-15).
 - **Evidence:** production verification passed on 14 October 2026 (direct Vertex check, in-app upload, 3/3 smoke runs). Extraction quality across currencies, languages and poor photos is unrecorded, and heavy blur has already caused a misread year. Images are processed by Vertex AI Gemini in the US multi-region (`server/src/services/ai/VertexAIGeminiClient.ts`, `server/.env.instanceproduction`). The privacy policy does not name this processor.
 - **Reopen if:** the verification task records extraction-quality evidence, at which point the page ships. If quality is poor, the feature moves to "beta" in the registry.
 
@@ -160,7 +160,7 @@ Each decision is final for this plan. Implementation agents apply them without a
 |---|---|---|
 | Real search demand and phrasing | No Search Console history or keyword data | Build on the query hypotheses in each brief; review at 4, 8 and 12 weeks |
 | Launch and sign-up conversion | Nothing is measured today | Ship the [D5](#d5-measurement-uses-search-console-and-a-first-party-launch-counter) counter with the first release; no conversion targets until 4 weeks of data exist |
-| Receipt extraction quality | Evidence task still open | [D10](#d10-receipt-scanning-is-shown-disclosed-and-gets-its-own-page-later): no accuracy claims; dedicated page gated |
+| Receipt extraction quality | Evidence task still open | [D10](#d10-receipt-scanning-is-shown-and-gets-its-own-page-later): no accuracy claims; dedicated page gated |
 | Testimonials and customer evidence | None exist in either repository | Publish no testimonials, ratings, user counts or press quotes until real, consented ones exist |
 | Production exchange-rate refresh interval | Production overrides of the f-eggs schedule are not readable here | Claim "a current exchange rate" only, never an interval |
 
@@ -251,7 +251,7 @@ Transcription notes for P22, so it never has to ask:
 - **Page ids:** the "Home page" column maps to page ids `feature/<slug>`, `how-it-works` and `pricing`. "Pricing FAQ" is `pricing`; where two pages are listed, the first is `homePage`; "none" is `null`.
 - **Statuses:** "available (per-group opt-in)" is `available`. Rows in [What Side Badger does not do](#what-side-badger-does-not-do) are recorded with status `planned` where that table says planned, otherwise `not-offered`, and never get a page.
 - **Claim ids:** each approved claim gets the id `<feature id>.<short kebab-case summary>`, for example `balances.short-list-of-payments`, in the order listed.
-- **Release:** a feature's release is that of its home page in [D7](#d7-page-set-and-release-order); `receipt-scanning` and `receipt-attachments` carry the gate "receipt quality evidence" ([D10](#d10-receipt-scanning-is-shown-disclosed-and-gets-its-own-page-later)).
+- **Release:** a feature's release is that of its home page in [D7](#d7-page-set-and-release-order); `receipt-scanning` and `receipt-attachments` carry the gate "receipt quality evidence" ([D10](#d10-receipt-scanning-is-shown-and-gets-its-own-page-later)).
 - **Audiences:** the audience words become ids: `organisers`, `everyone`, `group-trips`, `housemates`, `events`, `couples`.
 
 ### Registry summary
@@ -486,7 +486,7 @@ Transcription notes for P22, so it never has to ask:
 - **Proof:** C1, S09.
 - **Related:** `receipt-attachments`, `expense-splitting`; group trips, events.
 - **Search language to validate:** "scan receipt to add expense", "receipt scanner split bill app". Results for "split bill from photo" are dominated by item-by-item restaurant splitters, which this is not.
-- **Approved claims:** "Snap the receipt and Side Badger fills in the total, date and place for you to check." "Free, with no scan credits." "Receipt images are read by Google's AI service."
+- **Approved claims:** "Snap the receipt and Side Badger fills in the total, date and place for you to check." "Free, with no scan credits."
 - **Not approved:** any accuracy claim, "split by item", "works with PDFs", "on-device" or "private" processing.
 
 #### `comments`: comments next to the numbers
@@ -696,7 +696,7 @@ Every claim in (site) `src/i18n/en.ts`, (site) `src/components/HomePage.astro` a
 | `features.splits` | Equal, exact, percentages; receipts, locations, currencies | supported | `expense-splitting` | Keep |
 | `features.currency` | "Use any currency you need. Admins can set defaults or restrict" | unclear | 140 currencies; settings permission, not always admins | "140 currencies; groups can set a default or restrict them" |
 | `features.fxConversion` | "Convert … automatically using real-time rates. Split in euros, settle in dollars" | unclear | `currency-conversion`: rate fixed at entry, editable; auto only with the group setting | "Convert at a current rate as you go" ([D15](#d15-debt-and-settlement-wording)) |
-| `features.ai` | "Let AI extract the details … more accuracy" | unclear | `receipt-scanning` works; no accuracy evidence | Drop "more accuracy"; add "for you to check" and Google disclosure |
+| `features.ai` | "Let AI extract the details … more accuracy" | unclear | `receipt-scanning` works; no accuracy evidence | Drop "more accuracy"; add "for you to check" |
 | `features.balances` | "Simplified debts that minimize the number of payments" | unclear | Greedy method, not a guaranteed minimum | "Fewer payments" |
 | `features.settle` | "Settle debts with a single tap" | conflicts | Records only; the form must be submitted | "Record a payment" |
 | `features.activity` | Links that open a specific expense, group or settlement | unclear | `direct-links`: group and expense routes; members only | Supporting detail only |
@@ -767,7 +767,7 @@ Every claim in (site) `src/i18n/en.ts`, (site) `src/components/HomePage.astro` a
 | Scene | Claim | Verdict | Direction for [the homepage task](./follow-ups.md) |
 |---|---|---|---|
 | A group forms | Invite link or QR code; people drop in | supported | Joiners need an account; don't show instant joining by strangers |
-| Expenses land | Equal, exact, percentage; receipt details lift out of the image | supported | Show the fields being checked, not trusted blindly ([D10](#d10-receipt-scanning-is-shown-disclosed-and-gets-its-own-page-later)) |
+| Expenses land | Equal, exact, percentage; receipt details lift out of the image | supported | Show the fields being checked, not trusted blindly ([D10](#d10-receipt-scanning-is-shown-and-gets-its-own-page-later)) |
 | Currencies collide | "Convert at live rates" | unclear | "A current rate, which you can change" |
 | The tangle | "Simplifies into the fewest payments" | conflicts | "Fewer payments"; the homepage uses its own Japan-trip example (ten debts into three payments), and the six-into-two example stays on settle up |
 | Settle up | "One tap" | conflicts | "Record the payment"; no money moves |
@@ -811,7 +811,7 @@ Validated against the registry, the search evidence and the policies. A page exi
 | `/features/split-expenses/` | Keep, first release | Core capability; target of most use-case links; distinct split-method intent | Low |
 | `/features/settle-up/` | Add, first release | The core outcome had no page; "simplify debts" is a distinct intent; strongest visual proof | Low |
 | `/features/multiple-currencies/` | Keep, first release | Clear differentiator: free conversion against Splitwise Pro; strong proof and test coverage | Low |
-| `/features/receipts-and-scanning/` | Rename to `receipt-scanning`, release 2 | Live but quality unproven ([D10](#d10-receipt-scanning-is-shown-disclosed-and-gets-its-own-page-later)); search intent leans toward itemised splitting, which needs careful framing | Medium |
+| `/features/receipts-and-scanning/` | Rename to `receipt-scanning`, release 2 | Live but quality unproven ([D10](#d10-receipt-scanning-is-shown-and-gets-its-own-page-later)); search intent leans toward itemised splitting, which needs careful framing | Medium |
 | `/features/groups-and-permissions/` | Keep, release 2 | Organiser intent is real but smaller; rich material (presets, viewer, approval, locking, invites) | Low |
 | `/features/lists-polls-and-comments/` | Rename to `lists-and-polls`, release 2 | Distinctive, but weak standalone search intent and constrained by terms section 7.1; comments move to the pages they serve | Medium; one page, never two |
 | `/use-cases/` | Add, first release | Navigation target for "Use cases"; short chooser with each scenario's teaser | Medium; keep it short and useful |
@@ -854,7 +854,7 @@ Validated against the registry, the search evidence and the policies. A page exi
 - **Primary query hypotheses:** "bill splitting app", "split expenses with friends".
 - **Secondary query hypotheses:** "free bill splitting app no ads", "expense sharing app", "Side Badger".
 - **The one question:** "What is this, and is it right for my group?"
-- **Outline:** the homepage plan's nine scenes: the chaos hero with the `h1` and call to action; a group forms; expenses land (three split methods, receipt scanning with the Google disclosure); currencies (140 currencies, a current exchange rate you can change); the tangle (who owes whom, fewer payments); settle up (record the payment); the four approved use cases; trust (no ads, no third-party trackers, no selling of personal data); the pricing promise and the final call to action.
+- **Outline:** the homepage plan's nine scenes: the chaos hero with the `h1` and call to action; a group forms; expenses land (three split methods, receipt scanning); currencies (140 currencies, a current exchange rate you can change); the tangle (who owes whom, fewer payments); settle up (record the payment); the four approved use cases; trust (no ads, no third-party trackers, no selling of personal data); the pricing promise and the final call to action.
 - **Required proof:** the homepage's illustrated app frames and the tangle diagram (HTML and SVG). The homepage shows no screenshots; real captures live on the deeper pages.
 - **Worked example:** the homepage plan's Japan trip: five friends paying in yen, dollars and euros, whose ten debts become three payments. Its amounts and currencies are fixed in every locale, because the homepage is an illustrated story. The housemates six-into-two example stays on [settle up](#settle-up); the [housemates](#housemates) page keeps its own example with a different cast.
 - **FAQ candidates:** none on the homepage; link to pricing and how it works.
@@ -1038,7 +1038,7 @@ Validated against the registry, the search evidence and the policies. A page exi
 
 ### Receipt scanning
 
-`/features/receipt-scanning/`, release 2, gated by [D10](#d10-receipt-scanning-is-shown-disclosed-and-gets-its-own-page-later).
+`/features/receipt-scanning/`, release 2, gated by [D10](#d10-receipt-scanning-is-shown-and-gets-its-own-page-later).
 
 - **Target visitor and intent:** people tired of typing receipts in by hand.
 - **Primary query hypotheses:** "scan receipt to add expense", "receipt scanner split bill app".
@@ -1049,7 +1049,6 @@ Validated against the registry, the search evidence and the policies. A page exi
   - H2 "What it fills in"
   - H2 "What you still check"
   - H2 "Keep the receipt with the expense"
-  - H2 "Where your receipt goes": Google's AI service; visible to group members
   - H2 "Limits": images only, new expenses only, no line items
   - H2 "Questions"
 - **Required proof:** C1, S09, using the purpose-made fictional receipt.
@@ -1059,7 +1058,7 @@ Validated against the registry, the search evidence and the policies. A page exi
   - Can it read PDFs? No; attach them, but they aren't read.
   - How long does it take? Usually seconds.
   - Is there a limit on scans? No.
-  - Who sees my receipt? Members of the group, and Google's AI service reads it.
+  - Who sees my receipt? Members of the group.
 - **Links in:** split expenses, group trips, events and celebrations, features index.
 - **Links out:** split expenses, group trips.
 - **Claims:** `receipt-scanning`, `receipt-attachments`.
@@ -1560,7 +1559,7 @@ Each feature record should contain:
 - related features and use cases;
 - search language to validate during keyword research;
 - approved claims, each with its own ID, and wording that is not approved;
-- release wave and any gate, for example [D10](#d10-receipt-scanning-is-shown-disclosed-and-gets-its-own-page-later)'s quality evidence.
+- release wave and any gate, for example [D10](#d10-receipt-scanning-is-shown-and-gets-its-own-page-later)'s quality evidence.
 
 Each page's content file lists the claim IDs it uses. A build check fails when a page uses a claim whose feature is not available, or a claim ID that does not exist. A second check fails when a page body contains a phrase from the "Instead of" column of [Approved substitutions](#approved-substitutions). Each cell splits at "/" into separate phrases, matched case-insensitively.
 

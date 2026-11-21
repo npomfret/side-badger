@@ -1,4 +1,4 @@
-translatedFrom: "42f5cf35"
+translatedFrom: "6a208498"
 review:
   status: checked
   checker: "R2-check"
@@ -6,14 +6,13 @@ review:
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
-  - receipt-scanning.read-by-googles-ai
   - receipt-attachments.keep-the-receipt
 meta:
   title: "Sganio derbynneb i ychwanegu cost | Side Badger"
-  description: "Gadewch i'r mochyn daear ddarllen y dderbynneb. Mae'n llenwi'r cyfanswm, y dyddiad a'r lle i'w gwirio. Dim credydau sganio. Gwasanaeth AI Google sy'n ei darllen."
+  description: "Gadewch i'r mochyn daear ddarllen y dderbynneb. Mae'n llenwi'r cyfanswm, y dyddiad a'r lle i'w gwirio. Dim credydau sganio."
 h1: "Sganiwch dderbynneb, gwiriwch y manylion, rhannwch hi"
 navLabel: "Sganio derbynebau"
-lead: "Gadewch i'r mochyn daear ddarllen y dderbynneb, a gwiriwch ei waith cartref. Ychwanegwch lun at gost newydd ac mae Side Badger yn llenwi'r cyfanswm, y dyddiad a'r lle i chi eu gwirio. Yna rydych yn [ei rhannu](page:feature/split-expenses) fel unrhyw gost arall. Mae sganio am ddim, heb unrhyw gredydau sganio. Mae'n llenwi un gost ac nid yw'n rhannu'r bil fesul eitem. Mae delweddau derbynebau yn cael eu darllen gan wasanaeth AI Google."
+lead: "Gadewch i'r mochyn daear ddarllen y dderbynneb, a gwiriwch ei waith cartref. Ychwanegwch lun at gost newydd ac mae Side Badger yn llenwi'r cyfanswm, y dyddiad a'r lle i chi eu gwirio. Yna rydych yn [ei rhannu](page:feature/split-expenses) fel unrhyw gost arall. Mae sganio am ddim, heb unrhyw gredydau sganio. Mae'n llenwi un gost ac nid yw'n rhannu'r bil fesul eitem."
 cta:
   heading: "Tynnu llun. Gwirio. Rhannu."
   body: "Creu cyfrif am ddim, cychwyn grŵp ac ychwanegu cost gyda llun derbynneb. Gweld beth mae'n ei lenwi, newid beth bynnag sydd o'i le, a chadw pan fyddwch yn hapus."
@@ -48,8 +47,6 @@ sections:
     body: "Y cyfan. Ystyriwch yr hyn y mae'n ei lenwi fel drafft. Gwiriwch y cyfanswm yn erbyn y papur, yna'r arian cyfred, y dyddiad a'r lle. Gall lluniau aneglur a phapur crychlyd dwyllo unrhyw ddarllenydd, ac nid ydym yn addo y bydd yn cael pob derbynneb yn iawn, felly edrychwch cyn i chi gadw. Os oes rhywbeth o'i le, teipiwch drosto. Os yw'r dderbynneb mewn yen a'r grŵp yn setlo mewn punnoedd, mae [arian cyfred lluosog](page:feature/multiple-currencies) yn trafod beth sy'n digwydd nesaf."
   - heading: "Cadw'r dderbynneb gyda'r gost"
     body: "Wedi'i sganio neu beidio, gall derbynneb aros gyda'r gost. Atodwch luniau neu PDFs, hyd at dri fesul cost a hyd at 10 MB yr un. Mae aelodau'r grŵp yn eu gweld ar y gost. Mae delweddau'n ymddangos fel mân-luniau sy'n agor mewn gwyliwr, ac mae PDFs yn agor fel dolenni. Mae'r llun a sganiwch wedi'i atodi hefyd, oni fyddwch yn ei dynnu cyn i chi gadw. Pan fydd rhywun yn gofyn faint gostiodd y swper hwnnw mewn gwirionedd, mae'r prawf reit yno."
-  - heading: "I ble mae eich derbynneb yn mynd"
-    body: "Mae delweddau derbynebau yn cael eu darllen gan wasanaeth AI Google. I lenwi'r ffurflen, mae'r ddelwedd yn cael ei darllen gan Google Vertex AI (Gemini) yn aml-ranbarth Google yn yr Unol Daleithiau. Ychwanegwch ddelwedd at gost newydd ac mae'n cael ei darllen. Caiff PDF, neu lun a ychwanegir at gost sydd eisoes yn bodoli, ei storio heb ei ddarllen. Mae derbynebau wedi'u hatodi yn weladwy i aelodau'r grŵp, felly os yw derbynneb yn dangos rhywbeth y byddai'n well gennych beidio â'i rannu, hepgorwch y llun a theipiwch y gost honno i mewn â llaw."
 limits:
   heading: "Cyfyngiadau"
   items:
@@ -59,7 +56,6 @@ limits:
     - "Nid yw'n rhannu fesul eitem nac yn neilltuo llinellau'r dderbynneb i bobl. Mae'n llenwi un gost ac rydych chi'n ei rhannu fel arfer."
     - "Does dim addewid bod yr hyn y mae'n ei lenwi yn gywir, na bod sganio yn gweithio bob tro. Gwiriwch cyn i chi gadw, ac ychwanegwch y gost â llaw os bydd sganio'n methu neu os nad yw ar gael."
     - "Mae cost yn dal hyd at dri atodiad, pob un hyd at 10 MB, fel JPEG, PNG, WebP, HEIC neu PDF."
-    - "Mae delweddau derbynebau yn cael eu darllen gan Google Vertex AI (Gemini) yn aml-ranbarth Google yn yr Unol Daleithiau, ac mae derbynebau wedi'u hatodi yn weladwy i aelodau'r grŵp."
 useCasesHeading: "Lle mae'r derbynebau'n pentyrru"
 faq:
   heading: "Cwestiynau"
@@ -71,7 +67,7 @@ faq:
     - q: "Oes terfyn ar sganiau?"
       a: "Does dim credydau sganio i redeg allan ohonynt, ac mae sganio am ddim. Mae terfynau ar ffeiliau, sef hyd at dri atodiad fesul cost a 10 MB yr un. Mae [beth mae am ddim yn ei gynnwys](page:pricing) yn rhoi'r gweddill."
     - q: "Pwy all weld fy nerbynneb?"
-      a: "Gall aelodau'r grŵp weld y derbynebau sydd wedi'u hatodi i gost. Mae delweddau derbynebau hefyd yn cael eu darllen gan wasanaeth AI Google, a dyna sut mae'r ffurflen yn cael ei llenwi."
+      a: "Gall aelodau'r grŵp weld y derbynebau sydd wedi'u hatodi i gost."
     - q: "Alla i sganio derbynneb ar gyfer cost rydw i eisoes wedi'i hychwanegu?"
       a: "Na, mae sganio ar gyfer costau newydd. Gallwch ddal i atodi derbynneb at gost sy'n bodoli eisoes, a chaiff ei storio heb ei darllen."
     - q: "Beth os yw'n llenwi rhywbeth o'i le?"

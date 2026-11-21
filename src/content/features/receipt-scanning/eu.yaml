@@ -1,4 +1,4 @@
-translatedFrom: "42f5cf35"
+translatedFrom: "6a208498"
 review:
   status: checked
   checker: "CX-review"
@@ -6,14 +6,13 @@ review:
 claims:
   - receipt-scanning.fills-in-for-you-to-check
   - receipt-scanning.no-scan-credits
-  - receipt-scanning.read-by-googles-ai
   - receipt-attachments.keep-the-receipt
 meta:
   title: "Eskaneatu ordainagiri bat gastua gehitzeko | Side Badger"
-  description: "Utzi azkonarrak ordainagiria irakurtzen: guztizkoa, data eta lekua betetzen ditu zuk egiaztatzeko, kreditu gabe. Googleren adimen artifizialak irakurtzen du."
+  description: "Utzi azkonarrak ordainagiria irakurtzen: guztizkoa, data eta lekua betetzen ditu zuk egiaztatzeko, kreditu gabe."
 h1: Eskaneatu ordainagiria, egiaztatu xehetasunak, banatu
 navLabel: Ordainagiri-eskaneatzea
-lead: Utzi azkonarrak ordainagiria irakurtzen, eta zuk egiaztatu bere etxeko lanak. Gehitu argazki bat gastu berri bati eta Side Badger-ek guztizkoa, data eta lekua beteko ditu zuk egiaztatzeko. Gero [banatzen duzu](page:feature/split-expenses) beste edozein gastu bezala. Eskaneatzea doakoa da, eskaneatze-kreditu gabe. Gastu bat betetzen du eta ez du faktura elementuka banatzen. Ordainagirien irudiak Googleren adimen artifizialeko zerbitzuak irakurtzen ditu.
+lead: Utzi azkonarrak ordainagiria irakurtzen, eta zuk egiaztatu bere etxeko lanak. Gehitu argazki bat gastu berri bati eta Side Badger-ek guztizkoa, data eta lekua beteko ditu zuk egiaztatzeko. Gero [banatzen duzu](page:feature/split-expenses) beste edozein gastu bezala. Eskaneatzea doakoa da, eskaneatze-kreditu gabe. Gastu bat betetzen du eta ez du faktura elementuka banatzen.
 cta:
   heading: Atera argazkia. Egiaztatu. Banatu.
   body: Sortu doako kontu bat, hasi talde bat eta gehitu gastu bat ordainagiriaren argazkiarekin. Ikusi zer betetzen duen, aldatu gaizki dagoena eta gorde pozik zaudenean.
@@ -48,8 +47,6 @@ sections:
     body: Dena. Hartu betetzen duena zirriborro gisa. Egiaztatu guztizkoa paperarekin, gero moneta, data eta lekua. Argazki lausoek eta paper zimurtuek edozein irakurle engaina dezakete, eta ez dugu agintzen ordainagiri guztiak zuzen irakurtzen dituenik, beraz begiratu gorde aurretik. Zerbait gaizki badago, idatzi gainean. Ordainagiria yenetan badago eta taldeak libera esterlinetan kitatzen badu, [moneta anitzek](page:feature/multiple-currencies) azaltzen dute zer gertatzen den hurrengo.
   - heading: Gorde ordainagiria gastuarekin
     body: Eskaneatuta edo ez, ordainagiri bat gastuarekin geratu daiteke. Erantsi argazkiak edo PDFak, gastuko gehienez hiru eta bakoitza gehienez 10 MB-koa. Taldeko kideek gastuan ikusten dituzte. Irudiak miniatura gisa agertzen dira, ikusgailu batean irekitzen direnak, eta PDFak esteka gisa irekitzen dira. Eskaneatzen duzun argazkia ere erantsita dago, gorde aurretik kentzen ez baduzu. Norbaitek afari hura benetan zenbat kostatu zen galdetzen duenean, froga han bertan dago.
-  - heading: Zure ordainagiria nora doan
-    body: Ordainagirien irudiak Googleren adimen artifizialeko zerbitzuak irakurtzen ditu. Formularioa betetzeko, irudia Google Vertex AI-k (Gemini) irakurtzen du Googleren AEBetako eskualde anitzean. Gehitu irudi bat gastu berri bati eta irakurri egiten da. PDF bat, edo lehendik dagoen gastu bati gehitutako argazki bat, irakurri gabe gordetzen da. Erantsitako ordainagiriak taldeko kideentzat ikusgai daude, beraz ordainagiri batek partekatu nahi ez duzun zerbait erakusten badu, saltatu argazkia eta idatzi gastu hori eskuz.
 limits:
   heading: Mugak
   items:
@@ -59,7 +56,6 @@ limits:
     - Ez du elementuka banatzen eta ez dizkio lerroak pertsonei esleitzen. Gastu bat betetzen du eta zuk ohi bezala banatzen duzu.
     - Ez dugu agintzen betetzen duena zuzena denik, ezta eskaneatzeak aldi guztietan funtzionatuko duenik. Egiaztatu gorde aurretik, eta gehitu gastua eskuz eskaneatzeak huts egiten badu edo ez badago eskuragarri.
     - Gastu batek gehienez hiru eranskin izan ditzake, bakoitza gehienez 10 MB-koa, JPEG, PNG, WebP, HEIC edo PDF gisa.
-    - Ordainagirien irudiak Google Vertex AI-k (Gemini) irakurtzen ditu Googleren AEBetako eskualde anitzean, eta erantsitako ordainagiriak taldeko kideentzat ikusgai daude.
 useCasesHeading: Ordainagiriak non pilatzen diren
 faq:
   heading: Galderak
@@ -71,7 +67,7 @@ faq:
     - q: Eskaneatzeen muga bat al dago?
       a: "Ez dago agortzeko eskaneatze-krediturik, eta eskaneatzea doakoa da. Fitxategiek mugak dituzte: gastuko gehienez hiru eranskin eta bakoitza 10 MB-koa. [Doakoak zer hartzen duen](page:pricing) orrian gainerakoa dago."
     - q: Nork ikus dezake nire ordainagiria?
-      a: Taldeko kideek ikus ditzakete gastu bati erantsitako ordainagiriak. Ordainagirien irudiak Googleren adimen artifizialeko zerbitzuak ere irakurtzen ditu, horrela betetzen baita formularioa.
+      a: Taldeko kideek ikus ditzakete gastu bati erantsitako ordainagiriak.
     - q: Ordainagiri bat eskaneatu al dezaket lehendik gehitu dudan gastu baterako?
       a: Ez, eskaneatzea gastu berrietarako da. Lehendik dagoen gastu bati ordainagiri bat erants diezaiokezu oraindik, eta irakurri gabe gordetzen da.
     - q: Zer gertatzen da zerbait gaizki betetzen badu?

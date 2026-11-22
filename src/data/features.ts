@@ -869,7 +869,7 @@ export const features: readonly FeatureRecord[] = [
     id: 'privacy-posture',
     homePage: 'pricing',
     capability:
-      'No ads; no third-party analytics or advertising trackers in the app; only essential cookies; no sale of personal data; group content visible only to group members.',
+      'No third-party analytics or advertising trackers in the app; only essential cookies; no sale of personal data; group content visible only to group members.',
     problem: '',
     audiences: { primary: [], secondary: [] },
     status: 'available',
@@ -893,7 +893,8 @@ export const features: readonly FeatureRecord[] = [
     useCases: [],
     searchLanguage: [],
     claims: [
-      { id: 'privacy-posture.no-ads', text: 'No ads.' },
+      // No "no ads" claim: ads may come, so the site never promises their absence (owner decision,
+      // 22 November 2026)
       { id: 'privacy-posture.no-third-party-trackers', text: 'No third-party analytics or ad trackers.' },
       // The homepage hero's short form, approved by the owner (22 November 2026). It needs no "in the
       // app": the app has no ad or analytics trackers, and this site's analytics are opt-in and
@@ -906,6 +907,7 @@ export const features: readonly FeatureRecord[] = [
       { id: 'privacy-posture.members-only', text: 'Only members of a group can see it.' },
     ],
     notApproved: [
+      'no ads (ads may come; owner decision, 22 November 2026)',
       'zero tracking',
       'privacy first',
       'your data stays yours',
@@ -1081,6 +1083,6 @@ export const features: readonly FeatureRecord[] = [
     status: 'planned',
     capability: 'Sponsored offers based on spending.',
     evidence: ['tasks/deferred/affiliate-recommendation-engine.md', 'terms section 1.1'],
-    copy: 'Its launch ends the "No ads" claim (site plan D3).',
+    copy: 'Not mentioned. The site makes no "no ads" claim, so nothing ends when it launches.',
   }),
 ];

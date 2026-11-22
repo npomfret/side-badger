@@ -6,7 +6,7 @@ Requested by the owner on 22 October 2026. Status: captured; implementation pend
 
 Revise `/compare/splitwise/` so it leads with the reasons to choose Side Badger. The current emphasis on “what Splitwise does better” does not reflect the angle the owner wants. Present Side Badger as a social app centred on shared expenses, with collaboration and group configuration as core strengths.
 
-This task records the owner's requested positioning. Comparative claims and the precise scope of individual features need verification when writing the copy.
+This task records the owner's requested positioning. The page must not promise no ads or no paid tier, since both may come; brag about what Side Badger does better, for free (owner decision, 22 November 2026). Comparative claims and the precise scope of individual features need verification when writing the copy.
 
 ## Points to cover
 

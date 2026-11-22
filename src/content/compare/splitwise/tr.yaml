@@ -1,4 +1,4 @@
-translatedFrom: "ff767339"
+translatedFrom: "18384294"
 review:
   status: checked
   checker: "CF-check"
@@ -10,7 +10,6 @@ claims:
   - receipt-scanning.fills-in-for-you-to-check
   - currency-conversion.convert-as-you-go
   - currency-conversion.original-amount-stays
-  - privacy-posture.no-ads
   - multi-currency.currency-count
   - languages.39-languages
   - home-screen.opens-like-an-app
@@ -21,10 +20,10 @@ claims:
   - accounts.all-you-need-is-an-email
 meta:
   title: "Side Badger ve Splitwise: ücretsiz kısımlar | Side Badger"
-  description: "Splitwise'a ücretsiz bir alternatif, adilce karşılaştırıldı. Makbuz tarama, para birimi çevirme ve reklamsızlık burada ücretsiz; Splitwise'ın daha iyi yaptıklarını da yazdık."
+  description: "Splitwise'a ücretsiz bir alternatif, adilce karşılaştırıldı. Makbuz tarama ve para birimi çevirme burada ücretsiz; Splitwise'ın daha iyi yaptıklarını da yazdık."
 h1: "Side Badger ve Splitwise: ücretsiz kısımlar karşılaştırıldı"
 navLabel: "Side Badger ve Splitwise"
-lead: "Grubunuzdan biri muhtemelen “Splitwise kullanın işte” demiştir. Haklı. Side Badger; makbuz tarama, para birimi çevirme ve reklamsızlık sunan, bunların kilidini açmak için abonelik istemeyen ücretsiz bir web uygulamasıdır. Hangisinin grubunuza uyacağı neye ihtiyaç duyduğunuza bağlı; işte karşılaştırma, Splitwise tarafı yalnızca Splitwise'ın kendi sayfalarından alınarak."
+lead: "Grubunuzdan biri muhtemelen “Splitwise kullanın işte” demiştir. Haklı. Side Badger; makbuz tarama ve para birimi çevirme sunan, bunların kilidini açmak için abonelik istemeyen ücretsiz bir web uygulamasıdır. Hangisinin grubunuza uyacağı neye ihtiyaç duyduğunuza bağlı; işte karşılaştırma, Splitwise tarafı yalnızca Splitwise'ın kendi sayfalarından alınarak."
 cta:
   heading: "Bir sonraki ortak faturanızda deneyin"
   body: "Ücretsiz bir hesap oluşturun, bir grup kurun ve gerçek bir harcama ekleyin. Size uymazsa abonelik değil, birkaç dakika harcamış olursunuz."
@@ -62,11 +61,10 @@ sections:
       - "**Yinelenen harcamalar.** Kirayı tekrarlanacak şekilde ayarlayın ve unutun gitsin."
       - "**Uygulamada ödemeler.** Bazı ülkelerde parayı da taşıyabilir; Splitwise Pay, Venmo, PayPal ya da Pay by Bank ile."
   - heading: "Burada ücretsiz, orada ücretli"
-    body: "Splitwise Pro, Splitwise'ın ücretli planıdır ve kendi Pro sayfası, Side Badger'da hiçbir şeye mal olmayan dört şeyi satar."
+    body: "Splitwise Pro, Splitwise'ın ücretli planıdır ve kendi Pro sayfası, Side Badger'da hiçbir şeye mal olmayan üç şeyi satar."
     items:
       - "**Makbuz tarama.** Splitwise Pro makbuzunuzun fotoğrafını tarar. Side Badger bunu ücretsiz yapar, tarama kredisi olmadan: toplamı, tarihi ve yeri sizin kontrol etmeniz için doldurur."
       - "**Para birimi çevirme.** Splitwise Pro, Convert'e dokunduğunuzda bir grubun harcamalarını varsayılan para biriminize çevirir. Side Badger her harcamayı girerken, güncel bir döviz kuruyla ya da gerçekten aldığınız kurla çevirir ve özgün tutar harcamada kalır."
-      - "**Reklam yok.** Splitwise, tamamen reklamsız deneyimi bir Pro özelliği olarak listeler. Side Badger'da reklam yok."
       - "**Günlük sınır yok.** Splitwise Pro sınırsız harcama satar ve yardım merkezi, ücretsiz kullanıcıların günde en çok 4 harcama ekleyebileceğini söyler. Side Badger'ın günlük sınırı yok."
   - heading: "Splitwise'ın olup Side Badger'ın olmayanlar"
     body: "Bu, Splitwise'ın her özelliği değil; yalnızca kararı çoğunlukla belirleyenler. Tam liste Splitwise'ın kendi sayfalarında. Side Badger'ın yetersiz kaldığı yerler şunlar."
@@ -90,16 +88,12 @@ table:
   rows:
     - feature: "Maliyeti"
       other: "Splitwise Pro aylık ya da yıllık bir aboneliktir. Yıllık planlar, bir gezi grubuna 30 gün Pro özellikleri veren bir Trip Pass içerir."
-      sideBadger: "Ücretsiz. Reklam yok. Günlük sınır yok."
+      sideBadger: "Ücretsiz. Günlük sınır yok."
       source: pro-help
     - feature: "Günlük harcama sayısı"
       other: "Yardım merkezi, ücretsiz kullanıcıların günde en çok 4 harcama ekleyebileceğini söyler. Pro'da günlük sınır yok."
       sideBadger: "Günlük sınır yok."
       source: pro-help
-    - feature: "Reklamlar"
-      other: "Tamamen reklamsız deneyimi bir Pro özelliği olarak listeler."
-      sideBadger: "Reklam yok."
-      source: pro
     - feature: "Makbuz tarama"
       other: "Bir Pro özelliği. Bir makbuzun fotoğrafını tarar ve Pro'nun kalem kalem bölme özelliği kalemleri kişilere atamanıza izin verir."
       sideBadger: "Ücretsiz, tarama kredisi yok. Toplamı, tarihi ve yeri sizin kontrol etmeniz için doldurur; kalemleri kişilere atamaz."
@@ -140,11 +134,11 @@ faq:
   heading: "Sorular"
   items:
     - q: "Side Badger, Splitwise'a ücretsiz bir alternatif mi?"
-      a: "Bir grupta hesap bölüşmek için, evet. Makbuz tarama, para birimi çevirme ve reklamsızlık ücretsiz, günlük sınır da yok. Yerel bir uygulamaya, çevrimdışı kullanıma, yinelenen harcamalara ya da uygulamanın içinde ödemelere ihtiyacınız varsa bunları Splitwise yapar, Side Badger yapmaz."
+      a: "Bir grupta hesap bölüşmek için, evet. Makbuz tarama ve para birimi çevirme ücretsiz, günlük sınır da yok. Yerel bir uygulamaya, çevrimdışı kullanıma, yinelenen harcamalara ya da uygulamanın içinde ödemelere ihtiyacınız varsa bunları Splitwise yapar, Side Badger yapmaz."
     - q: "Splitwise ayrıntıları nereden geliyor?"
       a: "Splitwise'ın kendi sayfalarından: ana sayfası, Pro sayfası ve yardım merkezi. Tablonun her satırı geldiği sayfaya bağlanır ve tablonun üstündeki tarih onları ne zaman okuduğumuzu söyler. Her çeyrekte kontrol ederiz."
     - q: "Side Badger ücretsiz kalacak mı?"
-      a: "Side Badger'daki her şey bugün ücretsiz ve ücretli bir katman yok. Bu bir gün değişirse önceden haber veririz. Ayrıntılar [fiyatlandırma sayfasında](page:pricing)."
+      a: "Side Badger'daki her şey bugün ücretsiz. Bu bir gün değişirse önceden haber veririz. Ayrıntılar [fiyatlandırma sayfasında](page:pricing)."
     - q: "Grubumdaki herkes geçmek zorunda mı?"
       a: "Evet. Bir gruptaki herkesin ücretsiz bir Side Badger hesabı olması gerekir ve bir bağlantı ya da QR koduyla katılabilirler."
     - q: "Side Badger'ın mobil uygulaması var mı?"

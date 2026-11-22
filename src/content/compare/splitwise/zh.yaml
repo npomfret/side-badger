@@ -1,4 +1,4 @@
-translatedFrom: "ff767339"
+translatedFrom: "18384294"
 review:
   status: checked
   checker: "CF-check"
@@ -10,7 +10,6 @@ claims:
   - receipt-scanning.fills-in-for-you-to-check
   - currency-conversion.convert-as-you-go
   - currency-conversion.original-amount-stays
-  - privacy-posture.no-ads
   - multi-currency.currency-count
   - languages.39-languages
   - home-screen.opens-like-an-app
@@ -21,10 +20,10 @@ claims:
   - accounts.all-you-need-is-an-email
 meta:
   title: "Side Badger 与 Splitwise：免费功能对比 | Side Badger"
-  description: "公平对比一款免费的 Splitwise 替代品。收据扫描、货币换算和无广告在这里不花钱，我们也列出 Splitwise 做得更好的地方。"
+  description: "公平对比一款免费的 Splitwise 替代品。收据扫描和货币换算在这里不花钱，我们也列出 Splitwise 做得更好的地方。"
 h1: "Side Badger 与 Splitwise：免费功能对比"
 navLabel: Side Badger 与 Splitwise
-lead: "你们群组里多半有人说过“直接用 Splitwise 吧”。有道理。Side Badger 是一款免费的网页应用，有收据扫描、货币换算和无广告，不必订阅就能用。哪一个更适合你们，取决于群组需要什么，所以这里做了对比，Splitwise 一侧的内容只取自 Splitwise 自己的页面。"
+lead: "你们群组里多半有人说过“直接用 Splitwise 吧”。有道理。Side Badger 是一款免费的网页应用，有收据扫描和货币换算，不必订阅就能用。哪一个更适合你们，取决于群组需要什么，所以这里做了对比，Splitwise 一侧的内容只取自 Splitwise 自己的页面。"
 cta:
   heading: 在你们下一笔共同账单上试试
   body: "创建免费账户，建一个群组，添加一笔真实的支出。如果不适合你，你也只花了几分钟，而不是一份订阅。"
@@ -62,11 +61,10 @@ sections:
       - "**定期支出。**把房租设成重复，然后就不用再管了。"
       - "**应用内付款。**在一些国家，它还能转移资金，通过 Splitwise Pay、Venmo、PayPal 或 Pay by Bank。"
   - heading: 这里免费，那里收费
-    body: "Splitwise Pro 是 Splitwise 的付费方案，它自己的 Pro 页面卖的四样东西，在 Side Badger 里都不花钱。"
+    body: "Splitwise Pro 是 Splitwise 的付费方案，它自己的 Pro 页面卖的三样东西，在 Side Badger 里都不花钱。"
     items:
       - "**收据扫描。**Splitwise Pro 可以扫描收据照片。Side Badger 免费提供，且没有扫描额度：它会填好总额、日期和地点，供你核对。"
       - "**货币换算。**Splitwise Pro 在你点击 Convert 时，把群组的支出换算成你的默认货币。Side Badger 在你录入每笔支出时就换算，按当前汇率或你实际换到的汇率，原始金额会保留在这笔支出上。"
-      - "**无广告。**Splitwise 把完全无广告的体验列为 Pro 功能。Side Badger 没有广告。"
       - "**无每日限制。**Splitwise Pro 卖的是无限支出，它的帮助中心说免费用户每天最多可添加 4 笔支出。Side Badger 没有每日限制。"
   - heading: Splitwise 有而 Side Badger 没有的
     body: "这并不是 Splitwise 的全部功能，只是那些往往决定取舍的功能。Splitwise 自己的页面有完整的列表。下面是 Side Badger 不如它的地方。"
@@ -90,16 +88,12 @@ table:
   rows:
     - feature: 费用
       other: "Splitwise Pro 是按月或按年订阅。年度方案含一张 Trip Pass，可让一个旅行群组在 30 天内使用 Pro 功能。"
-      sideBadger: "免费。无广告。无每日限制。"
+      sideBadger: "免费。无每日限制。"
       source: pro-help
     - feature: 每天可添加的支出
       other: "其帮助中心说免费用户每天最多可添加 4 笔支出。Pro 没有每日限制。"
       sideBadger: "无每日限制。"
       source: pro-help
-    - feature: 广告
-      other: "把完全无广告的体验列为 Pro 功能。"
-      sideBadger: "无广告。"
-      source: pro
     - feature: 收据扫描
       other: "Pro 功能。可以扫描收据照片，Pro 的逐项功能还能把物品分配给个人。"
       sideBadger: "免费，没有扫描额度。它会填好总额、日期和地点供你核对，不会把物品分配给个人。"
@@ -140,11 +134,11 @@ faq:
   heading: 常见问题
   items:
     - q: Side Badger 是 Splitwise 的免费替代品吗？
-      a: "在群组分账这件事上，是的。收据扫描、货币换算和无广告都免费，也没有每日限制。如果你需要原生应用、离线使用、定期支出或应用内付款，这些 Splitwise 有而 Side Badger 没有。"
+      a: "在群组分账这件事上，是的。收据扫描和货币换算都免费，也没有每日限制。如果你需要原生应用、离线使用、定期支出或应用内付款，这些 Splitwise 有而 Side Badger 没有。"
     - q: Splitwise 的详情从哪里来？
       a: "来自 Splitwise 自己的页面：它的首页、Pro 页面和帮助中心。表格的每一行都链接到它的出处，表格上方的日期说明我们是什么时候读的。我们每季度复查一次。"
     - q: Side Badger 会一直免费吗？
-      a: "Side Badger 的一切目前都是免费的，也没有付费档。如果这将来有变化，我们会先通知你。详情见[定价页面](page:pricing)。"
+      a: "Side Badger 的一切目前都是免费的。如果这将来有变化，我们会先通知你。详情见[定价页面](page:pricing)。"
     - q: 我的群组里每个人都得换过来吗？
       a: "是的。群组里每个人都需要一个免费的 Side Badger 账户，可以通过链接或二维码加入。"
     - q: Side Badger 有手机应用吗？

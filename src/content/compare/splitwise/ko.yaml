@@ -1,4 +1,4 @@
-translatedFrom: "ff767339"
+translatedFrom: "18384294"
 review:
   status: checked
   checker: "CF-check"
@@ -8,7 +8,6 @@ claims:
   - receipt-scanning.fills-in-for-you-to-check
   - currency-conversion.convert-as-you-go
   - currency-conversion.original-amount-stays
-  - privacy-posture.no-ads
   - multi-currency.currency-count
   - languages.39-languages
   - home-screen.opens-like-an-app
@@ -19,10 +18,10 @@ claims:
   - accounts.all-you-need-is-an-email
 meta:
   title: "사이드 배저 vs Splitwise: 무료 기능 비교 | 사이드 배저"
-  description: "무료 Splitwise 대안을 공정하게 비교했어요. 영수증 스캔, 통화 환산, 광고 없음은 여기서 무료이고, Splitwise가 더 잘하는 점도 정리했습니다."
+  description: "무료 Splitwise 대안을 공정하게 비교했어요. 영수증 스캔과 통화 환산은 여기서 무료이고, Splitwise가 더 잘하는 점도 정리했습니다."
 h1: "사이드 배저 vs Splitwise: 무료 기능 비교"
 navLabel: "사이드 배저 vs Splitwise"
-lead: "그룹의 누군가는 아마 “그냥 Splitwise 쓰자”고 말했을 거예요. 맞는 말이긴 해요. 사이드 배저는 영수증 스캔, 통화 환산, 광고 없음을 갖춘 무료 웹 앱이고, 이 기능들을 열기 위한 구독도 없습니다. 어느 쪽이 우리 그룹에 맞는지는 그룹에 필요한 것에 달려 있으니, Splitwise 쪽 내용은 Splitwise 자체 페이지에서만 가져와 비교해 보았어요."
+lead: "그룹의 누군가는 아마 “그냥 Splitwise 쓰자”고 말했을 거예요. 맞는 말이긴 해요. 사이드 배저는 영수증 스캔과 통화 환산을 갖춘 무료 웹 앱이고, 이 기능들을 열기 위한 구독도 없습니다. 어느 쪽이 우리 그룹에 맞는지는 그룹에 필요한 것에 달려 있으니, Splitwise 쪽 내용은 Splitwise 자체 페이지에서만 가져와 비교해 보았어요."
 cta:
   heading: "다음 공동 비용으로 써 보세요"
   body: "무료 계정을 만들고, 그룹을 만들고, 실제 지출 하나를 추가해 보세요. 맞지 않더라도 구독료가 아니라 몇 분을 쓴 것뿐이에요."
@@ -60,11 +59,10 @@ sections:
       - "**반복 지출.** 월세를 반복으로 설정해 두고 잊어버리세요."
       - "**앱 안에서의 결제.** 일부 국가에서는 Splitwise Pay, Venmo, PayPal, Pay by Bank를 통해 돈도 옮길 수 있습니다."
   - heading: "여기선 무료, 저기선 유료"
-    body: "Splitwise Pro는 Splitwise의 유료 요금제이고, Splitwise의 Pro 페이지는 사이드 배저에서는 무료인 네 가지를 내세웁니다."
+    body: "Splitwise Pro는 Splitwise의 유료 요금제이고, Splitwise의 Pro 페이지는 사이드 배저에서는 무료인 세 가지를 내세웁니다."
     items:
       - "**영수증 스캔.** Splitwise Pro는 영수증 사진을 스캔합니다. 사이드 배저는 스캔 크레딧 없이 무료로 해 주며, 합계, 날짜, 장소를 채워 줄 테니 확인만 하면 됩니다."
       - "**통화 환산.** Splitwise Pro는 “Convert” 버튼을 누르면 그룹의 지출을 기본 통화로 환산합니다. 사이드 배저는 지출을 입력할 때마다 현재 환율이나 실제로 적용받은 환율로 환산하고, 원래 금액은 지출에 그대로 남습니다."
-      - "**광고 없음.** Splitwise는 완전히 광고 없는 환경을 Pro 기능으로 소개합니다. 사이드 배저에는 광고가 없습니다."
       - "**일일 한도 없음.** Splitwise Pro는 무제한 지출을 내세우며, 도움말 센터에는 무료 사용자가 하루에 최대 4건의 지출을 추가할 수 있다고 나와 있습니다. 사이드 배저에는 일일 한도가 없습니다."
   - heading: "Splitwise에는 있고 사이드 배저에는 없는 것"
     body: "Splitwise의 모든 기능이 아니라 선택에 영향을 주는 기능만 꼽았어요. 전체 목록은 Splitwise 자체 페이지에 있습니다. 사이드 배저가 부족한 부분은 다음과 같아요."
@@ -88,16 +86,12 @@ table:
   rows:
     - feature: "비용"
       other: "Splitwise Pro는 월간 또는 연간 구독입니다. 연간 요금제에는 여행 그룹에 30일 동안 Pro 기능을 제공하는 Trip Pass가 포함됩니다."
-      sideBadger: "무료. 광고 없음. 일일 한도 없음."
+      sideBadger: "무료. 일일 한도 없음."
       source: pro-help
     - feature: "하루 지출 건수"
       other: "도움말 센터에 따르면 무료 사용자는 하루에 최대 4건의 지출을 추가할 수 있습니다. Pro에는 일일 한도가 없습니다."
       sideBadger: "일일 한도 없음."
       source: pro-help
-    - feature: "광고"
-      other: "완전히 광고 없는 환경을 Pro 기능으로 소개합니다."
-      sideBadger: "광고 없음."
-      source: pro
     - feature: "영수증 스캔"
       other: "Pro 기능입니다. 영수증 사진을 스캔하며, Pro의 품목별 분할로 품목을 사람에게 배정할 수 있습니다."
       sideBadger: "스캔 크레딧 없이 무료입니다. 합계, 날짜, 장소를 채워 줄 테니 확인만 하면 되고, 품목을 사람에게 배정하지는 않습니다."
@@ -138,11 +132,11 @@ faq:
   heading: "자주 묻는 질문"
   items:
     - q: "사이드 배저는 Splitwise의 무료 대안인가요?"
-      a: "그룹에서 비용을 나누는 용도라면 그렇습니다. 영수증 스캔, 통화 환산, 광고 없음이 무료이고 일일 한도도 없어요. 네이티브 앱, 오프라인 사용, 반복 지출, 앱 안에서의 결제가 필요하다면 Splitwise는 하고 사이드 배저는 하지 않습니다."
+      a: "그룹에서 비용을 나누는 용도라면 그렇습니다. 영수증 스캔과 통화 환산이 무료이고 일일 한도도 없어요. 네이티브 앱, 오프라인 사용, 반복 지출, 앱 안에서의 결제가 필요하다면 Splitwise는 하고 사이드 배저는 하지 않습니다."
     - q: "Splitwise 내용은 어디서 가져왔나요?"
       a: "Splitwise 자체 페이지, 즉 홈페이지, Pro 페이지, 도움말 센터입니다. 표의 각 행은 출처 페이지로 연결되고, 표 위의 날짜는 우리가 읽은 시점을 알려 줍니다. 분기마다 다시 확인해요."
     - q: "사이드 배저는 계속 무료인가요?"
-      a: "사이드 배저의 모든 기능은 오늘 기준으로 무료이고, 유료 등급은 없습니다. 이 점이 바뀌게 되면 먼저 알려 드리겠습니다. 자세한 내용은 [가격 페이지](page:pricing)에 있어요."
+      a: "사이드 배저의 모든 기능은 오늘 기준으로 무료입니다. 이 점이 바뀌게 되면 먼저 알려 드리겠습니다. 자세한 내용은 [가격 페이지](page:pricing)에 있어요."
     - q: "그룹의 모든 사람이 옮겨야 하나요?"
       a: "네. 그룹의 모든 사람에게 무료 사이드 배저 계정이 필요하며, 링크나 QR 코드로 참여할 수 있어요."
     - q: "사이드 배저에는 모바일 앱이 있나요?"

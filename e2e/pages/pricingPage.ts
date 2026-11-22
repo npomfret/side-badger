@@ -16,7 +16,7 @@ const LIMIT_IDS = [
   'protection',
 ] as const;
 
-/** Phrases the pricing page must never show (site plan D2, D3) */
+/** Phrases the pricing page must never show (site plan D2, D3; no ads or paid-tier promise, owner decision 22 November 2026) */
 const BANNED_PHRASES = [
   'free forever',
   '100% free',
@@ -27,6 +27,8 @@ const BANNED_PHRASES = [
   'coming soon',
   'free until it isn',
   'pro plan',
+  'no ads',
+  'no paid tier',
 ];
 
 /**

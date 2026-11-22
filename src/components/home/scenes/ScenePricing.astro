@@ -4,8 +4,8 @@
  * before it enters; stage 1 has the receipt printed and the two logo halves joined.
  *
  * Two h2s in reading order: pricing (#start-title), then the call to action (#cta-title). The
- * pricing body is exactly the site plan D2 promise and the "See pricing" link goes to /pricing/.
- * The receipt has no price line, so the joke makes no pricing claim. The sign-up button is
+ * pricing body brags about what is free, never promising no ads or no paid tier, and the "See
+ * pricing" link goes to /pricing/. The receipt has no price line, so the joke makes no pricing claim. The sign-up button is
  * `LaunchAppCta` (cta `final`) in a span with `data-confetti`: the controller loads canvas-confetti on click and
  * never under reduced motion. Reduced motion rests at stage 1 (joined face, printed receipt).
  */
@@ -23,7 +23,7 @@ const { locale } = Astro.props;
 
 const zero = new Intl.NumberFormat(intlCodeFor(locale)).format(0);
 const lines = [
-  { label: t('home.cta.receiptAds', locale), amount: zero },
+  { label: t('home.cta.receiptMaths', locale), amount: zero },
   { label: t('home.cta.receiptTrackers', locale), amount: zero },
   { label: t('home.cta.receiptDrama', locale), amount: zero },
 ];

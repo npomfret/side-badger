@@ -6,6 +6,7 @@ import {
   approvedFromLocks, checkEnglishFallback,
   renderedTexts,
 } from './rules/r13-english-fallback';
+import en from '../i18n/en';
 import { dist } from './lib/site';
 import { fx, mentions, sites } from './lib/fixtures';
 
@@ -72,9 +73,9 @@ describe('rule 13: no English text left on translated pages', () => {
     it('resolves each approved key to its English text', () => {
       const lock = { keys: {}, identicalApproved: ['footer.tagline', 'a11y.breadcrumb'], pages: {} };
       expect([...approvedFromLock(lock, 'xx.json')].sort()).toEqual([
-        'Breadcrumb',
-        'Free. No ads. No daily limits.',
-      ]);
+        en['a11y.breadcrumb'],
+        en['footer.tagline'],
+      ].sort());
     });
 
     it('approves nothing that is not listed, and ignores the hashes in keys', () => {

@@ -8,8 +8,13 @@
 import type { Substitution } from './types';
 
 export const substitutions: readonly Substitution[] = [
-  { insteadOf: 'Free forever / 100% free and unlimited', use: 'Free. No ads. No daily limits.' },
-  { insteadOf: 'Zero tracking / no tracking / privacy first', use: 'No ads or third-party trackers' },
+  { insteadOf: 'Free forever / 100% free and unlimited', use: 'Free, even the clever bits' },
+  // Ads and a paid tier may come (owner decision, 22 November 2026)
+  {
+    insteadOf: 'No ads / ad-free / ad free / without ads / show ads / no advertising / no paid tier / premium plan / nothing held back',
+    use: '(nothing; brag about what Side Badger does better, for free)',
+  },
+  { insteadOf: 'Zero tracking / no tracking / privacy first', use: 'No ad or analytics trackers' },
   { insteadOf: 'Your data stays yours', use: "(no substitute; don't make the claim)" },
   { insteadOf: 'Settle with a single tap / pay back', use: 'Record a payment' },
   { insteadOf: 'The fewest payments / minimise', use: 'Fewer payments / a short list of payments' },

@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'What you get',
   'home.hero.without.ads': 'No ads',
   'home.hero.without.dailyLimits': 'No daily limits',
-  'home.hero.without.trackers': 'No ad or analytics trackers in the app',
   'home.hero.without.paidTier': 'No paid tier',
   'home.hero.goodToKnowLabel': 'Good to know',
+  'home.hero.without.creepyTracking': 'No creepy tracking',
 } as const;

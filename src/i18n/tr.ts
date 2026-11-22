@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Ne elde edersiniz',
   'home.hero.without.ads': 'Reklam yok',
   'home.hero.without.dailyLimits': 'Günlük sınır yok',
-  'home.hero.without.trackers': 'Uygulamada reklam ve analiz tracker\'ı yok',
   'home.hero.without.paidTier': 'Ücretli katman yok',
   'home.hero.goodToKnowLabel': 'Bilmekte fayda var',
+  'home.hero.without.creepyTracking': 'Ürkütücü takip yok',
 } as const;

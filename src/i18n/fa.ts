@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'چه چیزی می‌گیرید',
   'home.hero.without.ads': 'بدون تبلیغات',
   'home.hero.without.dailyLimits': 'بدون محدودیت روزانه',
-  'home.hero.without.trackers': 'بدون ردیاب تبلیغاتی یا تحلیلی در برنامه',
   'home.hero.without.paidTier': 'بدون طرح پولی',
   'home.hero.goodToKnowLabel': 'خوب است بدانید',
+  'home.hero.without.creepyTracking': 'بدون ردیابی فضولانه',
 } as const;

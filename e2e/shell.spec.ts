@@ -168,6 +168,27 @@ for (const locale of SHELL_LOCALES) {
   });
 }
 
+/* Large browser text on narrow phones: the header's rem breakpoints follow the text size, so these
+   are the cases where the bar had no room for its Menu button */
+for (const { width, height, textSize } of [
+  { width: 320, height: 568, textSize: 24 },
+  { width: 390, height: 844, textSize: 20 },
+]) {
+  test.describe(`${width}x${height} with ${textSize}px text`, () => {
+    test.use({ viewport: { width, height }, hasTouch: false });
+
+    for (const locale of SHELL_LOCALES) {
+      test(`${locale}: the header fits its bar and the menu carries Sign in`, async ({ page }) => {
+        const site = await SitePage.navigateToWithTextSize(page, locale, 'pricing', textSize);
+        await site.expectCompactHeaderFits();
+        await site.expectNoHorizontalOverflow();
+        const menu = await site.openMenu();
+        await menu.expectSignInLinkReplacesTheBars();
+      });
+    }
+  });
+}
+
 test.describe('a stored regional variant at 375x812', () => {
   test.use({ viewport: { width: 375, height: 812 }, hasTouch: false });
   test('the language tooltip names the variant the button shows', async ({ page }) => {

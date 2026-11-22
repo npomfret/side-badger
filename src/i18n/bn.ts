@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'আপনি কী পান',
   'home.hero.without.ads': 'কোনো বিজ্ঞাপন নেই',
   'home.hero.without.dailyLimits': 'দৈনিক কোনো সীমা নেই',
-  'home.hero.without.trackers': 'অ্যাপে কোনো বিজ্ঞাপন বা অ্যানালিটিক্স ট্র্যাকার নেই',
   'home.hero.without.paidTier': 'কোনো পেইড প্ল্যান নেই',
   'home.hero.goodToKnowLabel': 'জেনে রাখা ভালো',
+  'home.hero.without.creepyTracking': 'কোনো গা-ছমছম ট্র্যাকিং নেই',
 } as const;

@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'आपको क्या मिलता है',
   'home.hero.without.ads': 'कोई विज्ञापन नहीं',
   'home.hero.without.dailyLimits': 'रोज़ाना की कोई सीमा नहीं',
-  'home.hero.without.trackers': 'ऐप में विज्ञापन या एनालिटिक्स ट्रैकर नहीं',
   'home.hero.without.paidTier': 'कोई पेड प्लान नहीं',
   'home.hero.goodToKnowLabel': 'जानना अच्छा है',
+  'home.hero.without.creepyTracking': 'कोई चोरी-छिपे ट्रैकिंग नहीं',
 } as const;

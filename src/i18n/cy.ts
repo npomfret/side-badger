@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Beth gewch chi',
   'home.hero.without.ads': 'Dim hysbysebion',
   'home.hero.without.dailyLimits': 'Dim cyfyngiadau dyddiol',
-  'home.hero.without.trackers': 'Dim olrheinwyr hysbysebion na dadansoddeg yn yr ap',
   'home.hero.without.paidTier': 'Dim haen daledig',
   'home.hero.goodToKnowLabel': 'Da gwybod',
+  'home.hero.without.creepyTracking': 'Dim tracio llechwraidd',
 } as const;

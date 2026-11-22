@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': '你能得到什么',
   'home.hero.without.ads': '无广告',
   'home.hero.without.dailyLimits': '无每日限制',
-  'home.hero.without.trackers': '应用内无广告或分析追踪器',
   'home.hero.without.paidTier': '无付费档位',
   'home.hero.goodToKnowLabel': '小贴士',
+  'home.hero.without.creepyTracking': '无偷偷摸摸的跟踪',
 } as const;

@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Що ви отримуєте',
   'home.hero.without.ads': 'Без реклами',
   'home.hero.without.dailyLimits': 'Без денних обмежень',
-  'home.hero.without.trackers': 'Без рекламних і аналітичних трекерів у застосунку',
   'home.hero.without.paidTier': 'Без платного рівня',
   'home.hero.goodToKnowLabel': 'Варто знати',
+  'home.hero.without.creepyTracking': 'Без моторошного стеження',
 } as const;

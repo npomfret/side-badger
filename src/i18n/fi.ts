@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Mitä saat',
   'home.hero.without.ads': 'Ei mainoksia',
   'home.hero.without.dailyLimits': 'Ei päivittäisiä rajoja',
-  'home.hero.without.trackers': 'Ei mainos- tai analytiikkaseuraimia sovelluksessa',
   'home.hero.without.paidTier': 'Ei maksullista tasoa',
   'home.hero.goodToKnowLabel': 'Hyvä tietää',
+  'home.hero.without.creepyTracking': 'Ei urkkivaa seurantaa',
 } as const;

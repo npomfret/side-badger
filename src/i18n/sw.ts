@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Unachopata',
   'home.hero.without.ads': 'Hakuna matangazo',
   'home.hero.without.dailyLimits': 'Hakuna vikomo vya kila siku',
-  'home.hero.without.trackers': 'Hakuna vifuatiliaji vya matangazo au takwimu katika programu',
   'home.hero.without.paidTier': 'Hakuna mpango wa kulipia',
   'home.hero.goodToKnowLabel': 'Ni vizuri kujua',
+  'home.hero.without.creepyTracking': 'Hakuna ufuatiliaji wa kutisha',
 } as const;

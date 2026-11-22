@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Det här får du',
   'home.hero.without.ads': 'Inga annonser',
   'home.hero.without.dailyLimits': 'Inga dagliga gränser',
-  'home.hero.without.trackers': 'Inga annons- eller analysspårare i appen',
   'home.hero.without.paidTier': 'Ingen betalnivå',
   'home.hero.goodToKnowLabel': 'Bra att veta',
+  'home.hero.without.creepyTracking': 'Ingen läskig spårning',
 } as const;

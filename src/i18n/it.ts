@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Cosa ottieni',
   'home.hero.without.ads': 'Niente pubblicità',
   'home.hero.without.dailyLimits': 'Niente limiti giornalieri',
-  'home.hero.without.trackers': 'Niente tracker pubblicitari o di analisi nell’app',
   'home.hero.without.paidTier': 'Niente piano a pagamento',
   'home.hero.goodToKnowLabel': 'Buono a sapersi',
+  'home.hero.without.creepyTracking': 'Niente tracciamento inquietante',
 } as const;

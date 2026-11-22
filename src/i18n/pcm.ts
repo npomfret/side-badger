@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Wetin you go get',
   'home.hero.without.ads': 'No ads',
   'home.hero.without.dailyLimits': 'No daily limits',
-  'home.hero.without.trackers': 'No ad or analytics trackers for di app',
   'home.hero.without.paidTier': 'No paid plan',
   'home.hero.goodToKnowLabel': 'E good make you sabi',
+  'home.hero.without.creepyTracking': 'No creepy tracking',
 } as const;

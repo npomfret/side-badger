@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Što dobivaš',
   'home.hero.without.ads': 'Bez oglasa',
   'home.hero.without.dailyLimits': 'Bez dnevnih ograničenja',
-  'home.hero.without.trackers': 'Bez oglasnih i analitičkih trackera u aplikaciji',
   'home.hero.without.paidTier': 'Bez plaćene razine',
   'home.hero.goodToKnowLabel': 'Dobro je znati',
+  'home.hero.without.creepyTracking': 'Bez njuškanja',
 } as const;

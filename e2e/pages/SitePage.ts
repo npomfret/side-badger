@@ -5,6 +5,7 @@ import { ELEMENT_TIMEOUT, MODAL_TIMEOUT, NAVIGATION_TIMEOUT } from './timeouts';
 import { isRtl, pathFor, text, type ShellLocale, type StringKey } from './strings';
 import { expectStubPolicyShown, stubPolicyApi } from './policyApi';
 import { expectAnimationsSettled } from './animations';
+import { setBrowserTextSize } from './textSize';
 
 /** The registry's launch-counter page id for each route the shell tests visit */
 export type ShellRoute = 'pricing' | 'privacy' | 'terms' | 'cookies' | '';
@@ -13,6 +14,38 @@ export type ShellRoute = 'pricing' | 'privacy' | 'terms' | 'cookies' | '';
  * Any built page of the site: the header, the mobile menu, the footer and the breadcrumbs are the
  * same everywhere, so one page object covers them. `navigateTo` is the only way in.
  */
+/**
+ * Lists the visible elements matching `selector` whose box crosses `edges`: the viewport, or the box
+ * of the element matching `edges` (an empty list means everything fits). Text kept for screen
+ * readers is clipped to nothing, whatever its own box says, so it is skipped, as is anything inside
+ * an element matching `skip`. Runs in the page.
+ */
+function elementsOutside(page: Page, check: { selector: string; edges: string; skip: string }): Promise<string[]> {
+  return page.evaluate(({ selector, edges, skip }) => {
+    const boundsEl = edges === 'viewport' ? null : document.querySelector(edges);
+    if (edges !== 'viewport' && !boundsEl) return [`no ${edges} to measure against`];
+    const bounds = boundsEl ? boundsEl.getBoundingClientRect() : { left: 0, right: document.documentElement.clientWidth };
+    const clippedAway = (el: Element): boolean => {
+      for (let node: Element | null = el; node && node !== document.body; node = node.parentElement) {
+        if (getComputedStyle(node).clip !== 'auto') return true;
+      }
+      return false;
+    };
+    const offenders: string[] = [];
+    for (const el of document.querySelectorAll<HTMLElement>(selector)) {
+      const style = getComputedStyle(el);
+      if (style.visibility === 'hidden' || style.display === 'none') continue;
+      if (el.closest(skip) || clippedAway(el)) continue;
+      const rect = el.getBoundingClientRect();
+      if (rect.width === 0 || rect.height === 0) continue;
+      if (rect.left < bounds.left - 1 || rect.right > bounds.right + 1) {
+        offenders.push(`${el.tagName.toLowerCase()}.${el.className} [${Math.round(rect.left)}..${Math.round(rect.right)}] of [${Math.round(bounds.left)}..${Math.round(bounds.right)}]`);
+      }
+    }
+    return offenders;
+  }, check);
+}
+
 export class SitePage {
   private constructor(
     protected readonly page: Page,
@@ -26,6 +59,12 @@ export class SitePage {
     await page.goto(pathFor(locale, route));
     await site.verifyLoaded();
     return site;
+  }
+
+  /** As `navigateTo`, with the browser's text size set first (a visitor's "larger text" setting). */
+  static async navigateToWithTextSize(page: Page, locale: ShellLocale, route: ShellRoute, textSizePx: number): Promise<SitePage> {
+    await setBrowserTextSize(page, textSizePx);
+    return SitePage.navigateTo(page, locale, route);
   }
 
   // ----- locators, built fresh on every use -----
@@ -49,6 +88,11 @@ export class SitePage {
 
   private get homeLink(): Locator {
     return this.banner.getByRole('link', { name: this.string('a11y.homeLink') });
+  }
+
+  /** The Sign in link's name: its text, then the visually hidden "External link" */
+  private get launchLinkName(): string {
+    return `${this.string('header.signIn')} ${this.string('a11y.externalLink')}`;
   }
 
   private get launchLink(): Locator {
@@ -300,6 +344,25 @@ export class SitePage {
     await switcher.expectCurrentOption();
   }
 
+  /**
+   * With large text on a narrow phone the bar keeps the logo, the language button and the Menu
+   * button, every visible part of it inside the bar, and drops its Sign in link (the menu holds it).
+   */
+  async expectCompactHeaderFits(): Promise<void> {
+    await this.expectPhoneHeader();
+    await expect(this.homeLink, 'the logo link').toBeVisible();
+    await this.languageSwitcher.expectButtonVisible();
+    // The bar's link and the closed menu's are both in the page, out of the accessibility tree
+    await expect(this.banner.getByRole('link', { name: this.launchLinkName, exact: true, includeHidden: true }), 'Sign in links in the header').toHaveCount(2);
+    await expect(this.banner.getByRole('link', { name: this.launchLinkName, exact: true }), 'the bar drops its Sign in link').toHaveCount(0);
+    await expect
+      .poll(
+        () => elementsOutside(this.page, { selector: 'header *', edges: 'header', skip: '.skip-link, [popover], [data-tooltip-text], .language-dropdown' }),
+        { message: 'every visible part of the header should sit inside the bar', timeout: ELEMENT_TIMEOUT }
+      )
+      .toEqual([]);
+  }
+
   // ----- mobile menu -----
 
   /** Below the breakpoint, the Menu button is shown and the header links are not. */
@@ -374,22 +437,10 @@ export class SitePage {
     await expect
       .poll(
         () =>
-          this.page.evaluate(() => {
-            const width = document.documentElement.clientWidth;
-            const offenders: string[] = [];
-            if (document.documentElement.scrollWidth > width) offenders.push('<html> scrolls sideways');
-            for (const el of document.querySelectorAll<HTMLElement>('header *, footer *, .breadcrumbs *')) {
-              const style = getComputedStyle(el);
-              if (style.visibility === 'hidden' || style.display === 'none') continue;
-              if (el.closest('.sr-only, .skip-link')) continue;
-              const rect = el.getBoundingClientRect();
-              if (rect.width === 0 || rect.height === 0) continue;
-              if (rect.right > width + 1 || rect.left < -1) {
-                offenders.push(`${el.tagName.toLowerCase()}.${el.className} [${Math.round(rect.left)}..${Math.round(rect.right)}] of ${width}`);
-              }
-            }
-            return offenders;
-          }),
+          Promise.all([
+            this.page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth),
+            elementsOutside(this.page, { selector: 'header *, footer *, .breadcrumbs *', edges: 'viewport', skip: '.skip-link' }),
+          ]).then(([scrolls, offenders]) => (scrolls ? ['<html> scrolls sideways', ...offenders] : offenders)),
         { message: 'nothing in the shell should overflow the viewport', timeout: ELEMENT_TIMEOUT }
       )
       .toEqual([]);
@@ -453,6 +504,17 @@ export class OpenMenu {
 
   async verifyLoaded(): Promise<void> {
     await expect(this.closeButton, 'Close menu button in the open menu').toBeVisible({ timeout: MODAL_TIMEOUT });
+  }
+
+  /**
+   * The menu's labelled Sign in link, standing in for the bar's. Only for a bar that has dropped its
+   * own (`SitePage.expectCompactHeaderFits`): that one is then out of the accessibility tree, so the
+   * name finds the menu's alone.
+   */
+  async expectSignInLinkReplacesTheBars(): Promise<void> {
+    // Its name is "Sign in" followed by the visually hidden "External link"
+    const name = `${this.string('header.signIn')} ${this.string('a11y.externalLink')}`;
+    await expect(this.page.getByRole('link', { name, exact: true }), 'Sign in in the open menu').toBeVisible();
   }
 
   /** The menu holds the same links as the desktop header. */

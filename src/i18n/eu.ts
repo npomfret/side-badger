@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Zer lortzen duzun',
   'home.hero.without.ads': 'Iragarkirik ez',
   'home.hero.without.dailyLimits': 'Eguneko mugarik ez',
-  'home.hero.without.trackers': 'Aplikazioan iragarkien edo analitiken jarraipen-tresnarik ez',
   'home.hero.without.paidTier': 'Ordainpeko mailarik ez',
   'home.hero.goodToKnowLabel': 'Jakitekoa',
+  'home.hero.without.creepyTracking': 'Jarraipen beldurgarririk ez',
 } as const;

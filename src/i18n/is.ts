@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Það sem þú færð',
   'home.hero.without.ads': 'Engar auglýsingar',
   'home.hero.without.dailyLimits': 'Engin dagleg takmörk',
-  'home.hero.without.trackers': 'Engir auglýsinga- eða greiningarrekjarar í appinu',
   'home.hero.without.paidTier': 'Ekkert greitt þrep',
   'home.hero.goodToKnowLabel': 'Gott að vita',
+  'home.hero.without.creepyTracking': 'Engin snuðrandi rakning',
 } as const;

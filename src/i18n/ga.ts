@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Cad a gheobhaidh tú',
   'home.hero.without.ads': 'Gan fógraí',
   'home.hero.without.dailyLimits': 'Gan teorainneacha laethúla',
-  'home.hero.without.trackers': 'Gan rianairí fógraí ná anailísíochta san aip',
   'home.hero.without.paidTier': 'Gan leibhéal íoctha',
   'home.hero.goodToKnowLabel': 'Go maith le fios',
+  'home.hero.without.creepyTracking': 'Gan rianú gliúmálach',
 } as const;

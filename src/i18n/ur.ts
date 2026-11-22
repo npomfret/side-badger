@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'آپ کو کیا ملتا ہے',
   'home.hero.without.ads': 'کوئی اشتہار نہیں',
   'home.hero.without.dailyLimits': 'کوئی یومیہ حد نہیں',
-  'home.hero.without.trackers': 'ایپ میں کوئی اشتہاری یا تجزیاتی ٹریکر نہیں',
   'home.hero.without.paidTier': 'کوئی ادائیگی والا پلان نہیں',
   'home.hero.goodToKnowLabel': 'جاننا اچھا ہے',
+  'home.hero.without.creepyTracking': 'کوئی چوری چھپے ٹریکنگ نہیں',
 } as const;

@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Co dostanete',
   'home.hero.without.ads': 'Žádné reklamy',
   'home.hero.without.dailyLimits': 'Žádné denní limity',
-  'home.hero.without.trackers': 'Žádné reklamní ani analytické trackery v aplikaci',
   'home.hero.without.paidTier': 'Žádná placená úroveň',
   'home.hero.goodToKnowLabel': 'Dobré vědět',
+  'home.hero.without.creepyTracking': 'Žádné šmírování',
 } as const;

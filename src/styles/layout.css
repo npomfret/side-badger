@@ -78,6 +78,23 @@
 .site-header .logo img {
   height: 3rem;
   width: auto;
+  max-inline-size: 100%;
+  object-fit: contain;
+}
+
+/* The sign-in link's wrapper exists only so the bar can drop it at large text (below) */
+.header-sign-in {
+  display: contents;
+}
+
+/* Where the links are in the menu (nav.css hides them below 80rem), the logo is the one item that
+   gives way when large text leaves too little room; the controls keep their size. Wider, the nav
+   is the part that shrinks. */
+@media (max-width: 79.99rem) {
+  .site-header .logo {
+    flex-shrink: 1;
+    min-inline-size: 0;
+  }
 }
 
 .site-footer .logo img {
@@ -231,6 +248,19 @@ main {
 
   .site-header .logo img {
     height: 2rem;
+  }
+}
+
+/* Large text on a phone (these rem breakpoints follow the browser's text size): 20px text on a
+   390px phone or 24px on a 320 to 390px one left no room for the Menu button. The bar drops its
+   sign-in icon, which is also the menu's first item; at the default text size that happens only
+   below 320px. Only where the menu exists: a page with no links has none, and a browser without
+   popovers hides it (nav.css), which leaves room for the link anyway. */
+@supports selector(:popover-open) {
+  @media (max-width: 19.99rem) {
+    .header-actions:has(.mobile-nav) .header-sign-in {
+      display: none;
+    }
   }
 }
 

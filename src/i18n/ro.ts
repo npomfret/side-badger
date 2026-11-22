@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Ce primești',
   'home.hero.without.ads': 'Fără reclame',
   'home.hero.without.dailyLimits': 'Fără limite zilnice',
-  'home.hero.without.trackers': 'Fără trackere de reclame sau de analiză în aplicație',
   'home.hero.without.paidTier': 'Fără nivel plătit',
   'home.hero.goodToKnowLabel': 'Bine de știut',
+  'home.hero.without.creepyTracking': 'Fără urmărire creepy',
 } as const;

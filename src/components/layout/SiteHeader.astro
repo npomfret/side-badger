@@ -2,7 +2,9 @@
 /**
  * The site header (restructure 5.1, 5.2, 5.10). Logo, four plain registry links (shown only for
  * published pages), the language switcher and the launch CTA; below the mobile breakpoint the
- * links move into the Popover API menu. `layout.css` sets `--header-h` to the header's bottom edge.
+ * links move into the Popover API menu. When large text leaves no room, the sign-in link leaves the
+ * bar (the menu's first item is the same link) and the logo shrinks to fit (`layout.css`). `layout.css`
+ * sets `--header-h` to the header's bottom edge.
  */
 import LanguageSwitcher from '../LanguageSwitcher.astro';
 import LaunchAppCta from '../cta/LaunchAppCta.astro';
@@ -41,7 +43,9 @@ const logo = logoFor(locale);
 
     <div class="header-actions">
       <LanguageSwitcher currentLocale={locale} currentPath={currentPath} />
-      <LaunchAppCta target="app" cta="header" pageId={pageId} locale={locale} class="btn-launch" icon />
+      <div class="header-sign-in">
+        <LaunchAppCta target="app" cta="header" pageId={pageId} locale={locale} class="btn-launch" icon />
+      </div>
       <MobileNav links={links} locale={locale} pageId={pageId} />
     </div>
   </div>

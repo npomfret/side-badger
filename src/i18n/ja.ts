@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': '利用できる内容',
   'home.hero.without.ads': '広告なし',
   'home.hero.without.dailyLimits': '1日の制限なし',
-  'home.hero.without.trackers': 'アプリ内の広告・分析トラッカーなし',
   'home.hero.without.paidTier': '有料プランなし',
   'home.hero.goodToKnowLabel': 'うれしいポイント',
+  'home.hero.without.creepyTracking': '気味の悪いトラッキングなし',
 } as const;

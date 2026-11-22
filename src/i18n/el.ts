@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Τι παίρνετε',
   'home.hero.without.ads': 'Χωρίς διαφημίσεις',
   'home.hero.without.dailyLimits': 'Χωρίς ημερήσια όρια',
-  'home.hero.without.trackers': 'Χωρίς διαφημιστικά και αναλυτικά trackers στην εφαρμογή',
   'home.hero.without.paidTier': 'Χωρίς επί πληρωμή επίπεδο',
   'home.hero.goodToKnowLabel': 'Καλό είναι να ξέρεις',
+  'home.hero.without.creepyTracking': 'Χωρίς ανατριχιαστικό tracking',
 } as const;

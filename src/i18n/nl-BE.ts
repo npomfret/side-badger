@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Wat je krijgt',
   'home.hero.without.ads': 'Geen advertenties',
   'home.hero.without.dailyLimits': 'Geen dagelijkse limieten',
-  'home.hero.without.trackers': 'Geen advertentie- of analysetrackers in de app',
   'home.hero.without.paidTier': 'Geen betaald abonnement',
   'home.hero.goodToKnowLabel': 'Goed om te weten',
+  'home.hero.without.creepyTracking': 'Geen creepy tracking',
 } as const;

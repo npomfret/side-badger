@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Ano ang makukuha mo',
   'home.hero.without.ads': 'Walang ad',
   'home.hero.without.dailyLimits': 'Walang pang-araw-araw na limitasyon',
-  'home.hero.without.trackers': 'Walang ad o analytics tracker sa app',
   'home.hero.without.paidTier': 'Walang bayad na tier',
   'home.hero.goodToKnowLabel': 'Mabuting malaman',
+  'home.hero.without.creepyTracking': 'Walang nakakatakot na pagsubaybay',
 } as const;

@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Apa yang Anda dapatkan',
   'home.hero.without.ads': 'Tanpa iklan',
   'home.hero.without.dailyLimits': 'Tanpa batas harian',
-  'home.hero.without.trackers': 'Tanpa pelacak iklan atau analitik di aplikasi',
   'home.hero.without.paidTier': 'Tanpa paket berbayar',
   'home.hero.goodToKnowLabel': 'Baik untuk diketahui',
+  'home.hero.without.creepyTracking': 'Tanpa pelacakan menyeramkan',
 } as const;

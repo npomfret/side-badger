@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'ما الذي تحصل عليه',
   'home.hero.without.ads': 'بلا إعلانات',
   'home.hero.without.dailyLimits': 'بلا حدود يومية',
-  'home.hero.without.trackers': 'بلا متتبّعات إعلانات أو تحليلات في التطبيق',
   'home.hero.without.paidTier': 'بلا باقة مدفوعة',
   'home.hero.goodToKnowLabel': 'من الجيد أن تعرف',
+  'home.hero.without.creepyTracking': 'بلا تتبّع مخيف',
 } as const;

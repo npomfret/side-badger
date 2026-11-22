@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': '제공하는 기능',
   'home.hero.without.ads': '광고 없음',
   'home.hero.without.dailyLimits': '일일 한도 없음',
-  'home.hero.without.trackers': '앱 내 광고·분석 추적기 없음',
   'home.hero.without.paidTier': '유료 요금제 없음',
   'home.hero.goodToKnowLabel': '알아두면 좋아요',
+  'home.hero.without.creepyTracking': '소름 돋는 추적 없음',
 } as const;

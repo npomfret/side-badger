@@ -4,6 +4,7 @@ import { ELEMENT_TIMEOUT, NAVIGATION_TIMEOUT } from './timeouts';
 import { isRtl, pathFor, text, type ShellLocale, type StringKey } from './strings';
 import { auditAnimationWait, expectAnimationsSettled } from './animations';
 import { INTL } from './layoutsFixtures';
+import { setBrowserTextSize } from './textSize';
 
 /**
  * Runs in the page before its scripts: logs every stage a timed (`data-play="once"`) scene is set to.
@@ -117,9 +118,7 @@ export class HomePage {
    * operating systems.
    */
   static async navigateToWithTextSize(page: Page, locale: ShellLocale, engine: SceneEngine, textSizePx: number): Promise<HomePage> {
-    const cdp = await page.context().newCDPSession(page);
-    await cdp.send('Page.enable');
-    await cdp.send('Page.setFontSizes', { fontSizes: { standard: textSizePx, fixed: Math.round((textSizePx * 13) / 16) } });
+    await setBrowserTextSize(page, textSizePx);
     return HomePage.navigateTo(page, locale, engine);
   }
 
@@ -476,7 +475,7 @@ export class HomePage {
     await auditAnimationWait('the hero lists what you don\'t get', () => expect(this.heroWithout().getByRole('listitem')).toHaveText([
       this.string('home.hero.without.ads'),
       this.string('home.hero.without.dailyLimits'),
-      this.string('home.hero.without.trackers'),
+      this.string('home.hero.without.creepyTracking'),
       this.string('home.hero.without.paidTier'),
     ]));
   }

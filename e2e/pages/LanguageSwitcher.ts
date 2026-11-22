@@ -106,6 +106,10 @@ export class LanguageSwitcher {
     return this.options.filter({ hasText: name });
   }
 
+  async expectButtonVisible(): Promise<void> {
+    await expect(this.button, 'the language button').toBeVisible();
+  }
+
   async verifyLoaded(): Promise<void> {
     await expect(this.button, 'language switcher button').toBeVisible({ timeout: ELEMENT_TIMEOUT });
     await expect(this.button, 'switcher starts closed').toHaveAttribute('aria-expanded', 'false');

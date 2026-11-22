@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'మీకు ఏం దొరుకుతుంది',
   'home.hero.without.ads': 'ప్రకటనలు లేవు',
   'home.hero.without.dailyLimits': 'రోజువారీ పరిమితులు లేవు',
-  'home.hero.without.trackers': 'యాప్‌లో యాడ్ లేదా అనలిటిక్స్ ట్రాకర్లు లేవు',
   'home.hero.without.paidTier': 'చెల్లింపు ప్లాన్ లేదు',
   'home.hero.goodToKnowLabel': 'తెలుసుకోవడం మంచిది',
+  'home.hero.without.creepyTracking': 'దొంగచాటు ట్రాకింగ్ లేదు',
 } as const;

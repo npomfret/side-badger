@@ -890,6 +890,10 @@ export const features: readonly FeatureRecord[] = [
     claims: [
       { id: 'privacy-posture.no-ads', text: 'No ads.' },
       { id: 'privacy-posture.no-third-party-trackers', text: 'No third-party analytics or ad trackers.' },
+      // The homepage hero's short form, approved by the owner (22 November 2026). It needs no "in the
+      // app": the app has no ad or analytics trackers, and this site's analytics are opt-in and
+      // honour Do Not Track and Global Privacy Control. Never shorten it to "no tracking".
+      { id: 'privacy-posture.no-creepy-tracking', text: 'No creepy tracking.' },
       { id: 'privacy-posture.essential-cookies-only', text: 'Only the cookies needed to keep you signed in.' },
       { id: 'privacy-posture.no-sale-of-data', text: "We don't sell your personal data." },
       { id: 'privacy-posture.members-only', text: 'Only members of a group can see it.' },

@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Mit kapsz',
   'home.hero.without.ads': 'Nincsenek hirdetések',
   'home.hero.without.dailyLimits': 'Nincsenek napi korlátok',
-  'home.hero.without.trackers': 'Nincsenek hirdetési és elemző nyomkövetők az alkalmazásban',
   'home.hero.without.paidTier': 'Nincs fizetős szint',
   'home.hero.goodToKnowLabel': 'Jó tudni',
+  'home.hero.without.creepyTracking': 'Nincs sunyi követés',
 } as const;

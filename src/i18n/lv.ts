@@ -377,7 +377,7 @@ export default {
   'home.hero.factsLabel': 'Ko jūs saņemat',
   'home.hero.without.ads': 'Bez reklāmām',
   'home.hero.without.dailyLimits': 'Bez dienas ierobežojumiem',
-  'home.hero.without.trackers': 'Bez reklāmu vai analītikas izsekotājiem lietotnē',
   'home.hero.without.paidTier': 'Bez maksas līmeņa',
   'home.hero.goodToKnowLabel': 'Labi zināt',
+  'home.hero.without.creepyTracking': 'Bez ēnainas izsekošanas',
 } as const;

@@ -1,34 +1,52 @@
-translatedFrom: "18384294"
+translatedFrom: "100a5816"
 review:
   status: checked
-  checker: "CF-check"
-  date: "2026-11-19"
+  checker: "BT-compare-reframe"
+  date: "2026-11-22"
 identicalApproved:
   - table.columns.sideBadger
 claims:
+  - comments.next-to-the-expense
+  - comments.group-and-everything
+  - comments.attach-files
+  - receipt-attachments.keep-the-receipt
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - reactions.celebrate-a-payment
+  - permissions.viewer-sees-everything
+  - permissions.presets-or-your-own
+  - permissions.lock-the-group
+  - invites.admin-approval
   - receipt-scanning.no-scan-credits
   - receipt-scanning.fills-in-for-you-to-check
   - currency-conversion.convert-as-you-go
   - currency-conversion.original-amount-stays
   - multi-currency.currency-count
+  - multi-currency.limit-group-currencies
+  - groups.default-currency-and-header
   - languages.39-languages
   - home-screen.opens-like-an-app
+  - home-screen.same-app-everywhere
   - settlements.pay-however-then-record
+  - settlements.no-bank-connection
+  - ai-assistants.works-with-chatgpt-and-claude
+  - ai-assistants.ask-your-assistant
+  - feedback.tell-us-from-the-app
   - expense-splitting.equal-exact-percentage
-  - expense-splitting.copy-last-months-rent
   - invites.link-or-qr-code
   - accounts.all-you-need-is-an-email
 meta:
-  title: "Side Badger pret Splitwise: kas ir bezmaksas | Side Badger"
-  description: "Bezmaksas Splitwise alternatīva, godīgi salīdzināta. Čeku skenēšana un konvertēšana neko nemaksā, un mēs norādām, ko Splitwise dara labāk."
-h1: "Side Badger pret Splitwise: bezmaksas lietas salīdzinājumā"
+  title: "Side Badger pret Splitwise: visa grupa, ne tikai summas | Side Badger"
+  description: "Bezmaksas Splitwise alternatīva visai grupai: komentāri, jautājumi, saraksti, aptaujas un īstas lomas, plus bezmaksas čeku skenēšana un valūtu konvertēšana."
+h1: "Side Badger pret Splitwise: visa grupa, ne tikai summas"
 navLabel: "Side Badger pret Splitwise"
-lead: "Kāds jūsu grupā droši vien ir teicis: „vienkārši lietojiet Splitwise”. Pamatoti. Side Badger ir bezmaksas tīmekļa lietotne ar čeku skenēšanu un valūtu konvertēšanu, un nav vajadzīgs abonements, lai tās atbloķētu. Kurš no abiem der jūsu grupai, atkarīgs no tās vajadzībām, tāpēc šeit ir salīdzinājums, kurā Splitwise puse ņemta tikai no Splitwise paša lapām."
+lead: "Kāds jūsu grupā droši vien ir teicis: „vienkārši lietojiet Splitwise”. Pamatoti: rēķināt tas tiešām prot. Side Badger rēķina arī, un pēc tam dod grupai vietu, kur to visu izrunāt: komentāri, jautājumi, saraksti, aptaujas un īstas grupas lomas. Čeku skenēšana un valūtu konvertēšana ir bez maksas."
 cta:
   heading: "Izmēģiniet nākamajā kopīgajā rēķinā"
   body: "Izveidojiet bezmaksas kontu, izveidojiet grupu un pievienojiet vienu īstu izdevumu. Ja tas nav jums, tas jums izmaksāja pāris minūtes, nevis abonementu."
-asOf: 2026-10-21
-asOfNote: "Mēs izlasījām Splitwise paša lapas {date}, lai jums nevajadzētu, un viss, kas šeit teikts par Splitwise, nāk no tām. Katra tabulas rinda ir saistīta ar savu avotu. Plāni mainās, tāpēc mēs pārbaudām vēlreiz katru ceturksni, un, ja Splitwise lapas ar šo lapu nesaskan, ticiet tām."
+asOf: 2026-11-22
+asOfNote: "Mēs izlasījām Splitwise paša lapas {date}, lai jums nebūtu jāpūlas, un viss, kas šeit teikts par Splitwise, nāk no tām. Katra tabulas rinda ir saistīta ar savu avotu. Plāni mainās, tāpēc mēs pārbaudām vēlreiz katru ceturksni, un, ja Splitwise lapas ar šo lapu nesaskan, ticiet drīzāk tām."
 sources:
   - id: home
     label: "Splitwise sākumlapa"
@@ -39,61 +57,82 @@ sources:
   - id: pro-help
     label: "Splitwise palīdzība: kas ir Splitwise Pro?"
     url: https://kb.splitwise.com/pro/what-is-splitwise-pro
+  - id: permissions-help
+    label: "Splitwise palīdzība: grupas atļaujas"
+    url: https://kb.splitwise.com/groups/can-i-prevent-group-members-from-changing-expenses-or-set-permissions
   - id: currencies-help
     label: "Splitwise palīdzība: vairākas valūtas"
     url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-a-friendship-or-group-with-multiple-currencies
   - id: split-help
     label: "Splitwise palīdzība: sadales veidi"
     url: https://kb.splitwise.com/balances-and-expenses/what-are-different-ways-i-can-split-an-expense
-  - id: recurring-help
-    label: "Splitwise palīdzība: atkārtoti izdevumi"
-    url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-recurring-expenses
   - id: payments-help
     label: "Splitwise palīdzība: naudas sūtīšana"
     url: https://kb.splitwise.com/payment-integrations/how-do-i-send-money-to-someone-on-splitwise
 tableAfter: 3
 sections:
-  - heading: "Ko Splitwise dara labi"
-    body: "Ja jūsu grupai vajadzīga vietējā lietotne, lietošana bezsaistē vai maksājumi lietotnes iekšienē, Splitwise ir saprātīga izvēle, un mēs labāk gribētu, lai jūs to izvēlētos, nekā vēlāk uzzinātu. Tā paša lapas min:"
+  - heading: "Naudas runas blakus naudai"
+    body: "Kopīgai naudai līdzi nāk pļāpas, šaubas un plāni. Side Badger tur visus trīs blakus skaitļiem, lai nevienam nav jāritina čats atpakaļ."
     items:
-      - "**Lietotnes un lietošana bezsaistē.** iPhone un Android lietotnes papildus tīmeklim un bezsaistes režīms."
-      - "**Vairāk sadales veidu.** Daļas, korekcijas un sadale pa pozīcijām papildus vienādai, precīzai un procentuālai."
-      - "**Atkārtoti izdevumi.** Iestatiet īri atkārtoties un aizmirstiet par to."
-      - "**Maksājumi lietotnē.** Dažās valstīs tā var arī pārvietot naudu, izmantojot Splitwise Pay, Venmo, PayPal vai Pay by Bank."
+      - "**Komentāri tur, kur tiem jābūt.** Komentējiet pašu grupu vai jebkuru izdevumu, sarakstu vai aptauju un turiet sarunu blakus tam, par ko tā ir."
+      - "**Čeki un foto.** Katram izdevumam var glabāt līdz trim čekiem, bet grupas, saraksta vai aptaujas komentāriem pievienot fotogrāfijas vai PDF."
+      - "**Jautājumi, nevis strīdi.** Administrators var ieslēgt jautājumus, un tad ikviens izdevumā var par to pavaicāt. Tas paliek ārpus atlikumiem, kamēr nav atrisināts."
+      - "**Saraksti un aptaujas.** Turiet kopīgo iepirkumu sarakstu blakus iepirkumu rēķiniem un nobalsojiet par villas īso sarakstu, ja vēlaties, anonīmi."
+      - "**Nedaudz aplausu.** Reaģējiet uz izdevumiem, maksājumiem un komentāriem un nosvinējiet maksājumu, kad tas ienāk."
+  - heading: "Jūsu grupa, jūsu noteikumi"
+    body: "Splitwise palīdzības centrs saka, ka tas neatbalsta grupu administratorus vai īpašas atļaujas. Side Badger ir lomas un atļaujas, grupām, kurām vajag kādu, kas uztur skaitļus kārtībā."
+    items:
+      - "**Administratori, biedri un skatītāji.** Padariet kādu par skatītāju: viņam ir redzams viss, bet mainīt nevar neko."
+      - "**Divi gatavi komplekti vai jūsu pašu iestatījumi.** Sāciet ar Atvērtu sadarbību vai Pārvaldītu grupu, vai iestatiet katru atļauju paši: kurš labo un dzēš izdevumus, labo sarakstus, uzaicina un ielaiž jaunus cilvēkus."
+      - "**Apstiprinājums pievienošanās brīdī.** Ieslēdziet apstiprināšanu, un administrators ielaiž katru cilvēku."
+      - "**Grupas pašas iestatījumi.** Ierobežojiet to ar valūtām, ko patiešām lietojat, izvēlieties tās noklusējuma valūtu un pievienojiet galvenes attēlu."
+      - "**Bloķējiet, kad viss beidzies.** Skaitļi paliek mierā, kamēr administrators grupu atbloķē."
   - heading: "Šeit bez maksas, tur par maksu"
-    body: "Splitwise Pro ir Splitwise maksas plāns, un tā paša Pro lapa pārdod trīs lietas, kas Side Badger neko nemaksā."
+    body: "Splitwise Pro ir Splitwise maksas plāns, un tā paša Pro lapa par maksu piedāvā trīs lietas, kas Side Badger ir bez maksas."
     items:
       - "**Čeku skenēšana.** Splitwise Pro skenē jūsu čeka fotogrāfiju. Side Badger to dara bez maksas un bez skenēšanas kredītiem: tas aizpilda kopsummu, datumu un vietu, lai jūs tos pārbaudītu."
       - "**Valūtu konvertēšana.** Splitwise Pro konvertē grupas izdevumus uz jūsu noklusējuma valūtu, kad pieskaraties pogai „Konvertēt”. Side Badger konvertē katru izdevumu, kad to ievadāt, pēc pašreizējā valūtas kursa vai kursa, ko patiešām saņēmāt, un sākotnējā summa paliek pie izdevuma."
-      - "**Bez dienas ierobežojumiem.** Splitwise Pro pārdod neierobežotu izdevumu skaitu, un tā palīdzības centrs saka, ka bezmaksas lietotāji dienā var pievienot līdz 4 izdevumiem. Side Badger dienas ierobežojumu nav."
-  - heading: "Kas Splitwise ir, bet Side Badger nav"
-    body: "Šīs nav visas Splitwise funkcijas, tikai tās, kas parasti izšķir. Pilnu sarakstu sniedz Splitwise paša lapas. Lūk, kur Side Badger atpaliek."
+      - "**Bez dienas limita.** Splitwise Pro piedāvā neierobežotu izdevumu skaitu, un tā palīdzības centrs saka, ka bezmaksas lietotāji dienā var pievienot līdz 4 izdevumiem. Side Badger dienas limita nav."
+  - heading: "Jūsu banka paliek malā"
+    body: "Side Badger nesavienojas ar jūsu banku un neprasa jūsu bankas datus. Tas glabā uzskaiti, kurš kam ir parādā; jūs maksājat viens otram, kā vēlaties, un tad reģistrējat maksājumu. Nav bankas pieteikšanās datu, ko nodot, tāpēc vienas raizes mazāk."
+  - heading: "Viena lietotne gan pārlūkprogrammā, gan tālrunī"
+    body: "Side Badger darbojas jūsu pārlūkprogrammā. Pierakstieties, pievienojiet to sākuma ekrānam, un tas atveras kā lietotne. Abos gadījumos tā ir viena un tā pati lietotne, tāpēc jauna funkcija jūsu tālrunī parādās nākamreiz, kad to atverat, un nav jāgaida lietotņu veikala atjauninājums."
+  - heading: "Un pāris ballītes triki"
     items:
-      - "**Vietējās lietotnes.** Side Badger darbojas jūsu pārlūkprogrammā. Pierakstieties, tad pievienojiet to sākuma ekrānam, un tas atveras kā lietotne."
+      - "**Pavaicājiet savam asistentam.** Side Badger darbojas ar ChatGPT un Claude: palūdziet savam pievienot izdevumu, noskenēt čeku vai reģistrēt maksājumu."
+      - "**Katrs savā valodā.** Side Badger runā 39 valodās, un katrs izvēlas savējo. Splitwise sākumlapā minētas 7+. Tas darbojas arī ar 133 valūtām, lai der ceļojumam, kas iet visur."
+      - "**Palīdzība, neizejot no lietotnes.** Iestrēdzāt vai atradāt kļūdu? Pastāstiet mums no lietotnes un tur pat izlasiet mūsu atbildi."
+  - heading: "Kur Splitwise joprojām uzvar"
+    body: "Mēs labāk gribētu, lai jūs izvēlētos īsto lietotni, nekā vēlāk uzzinātu. Ja jūsu grupai vajadzīgs kaut kas no šī, Splitwise tas ir, bet Side Badger nav."
+    items:
+      - "**Lietotnes no lietotņu veikala.** Side Badger dzīvo jūsu pārlūkprogrammā un sākuma ekrānā, nevis lietotņu veikalos."
       - "**Bezsaistes režīms.** Side Badger vajadzīgs savienojums."
-      - "**Maksājumi lietotnē.** Side Badger nekad neskar jūsu naudu. Samaksājiet viens otram, kā vēlaties, tad reģistrējiet maksājumu."
-      - "**Atkārtoti izdevumi.** Side Badger to nav. Nokopējiet pagājušā mēneša īri, nevis ierakstiet to vēlreiz."
+      - "**Maksājumi lietotnē.** Dažās valstīs Splitwise var arī pārskaitīt naudu. Side Badger tikai glabā uzskaiti."
       - "**Sadale pa daļām vai pa pozīcijām.** Side Badger katram izdevumam ir viens maksātājs, un to sadala vienādi, pēc precīzām summām vai procentuāli. Čeku skenēšana nepiešķir pozīcijas cilvēkiem."
-      - "**Diagrammas un noklusējuma sadales.** Splitwise Pro ir abas. Side Badger uztur uzskaiti, kurš kam ir parādā, un tas arī viss triks."
+      - "**Diagrammas un noklusējuma sadales.** Splitwise Pro ir abas. Side Badger uztur uzskaiti, kurš kam ir parādā, un tas arī ir viss triks."
   - heading: "Grupas pārcelšana"
     body: "Importēšanas rīka nav, tāpēc pārcelšanās nozīmē jaunu sākumu. Vispirms norēķinieties Splitwise, tad izveidojiet grupu Side Badger un uzaiciniet visus ar saiti vai QR kodu. Ikvienam grupā vajadzīgs bezmaksas konts, un reģistrācijai pietiek ar e-pasta adresi."
 table:
-  heading: "Blakus blakus"
+  heading: "Viens otram blakus"
   caption: "Splitwise dati uz {date}, no Splitwise paša lapām."
   sourceLabel: "Avots"
   columns:
     feature: "Kas"
-    other: "Splitwise pēc tā paša lapām"
+    other: "Splitwise pēc savām lapām"
     sideBadger: Side Badger
   rows:
     - feature: "Cik tas maksā"
       other: "Splitwise Pro ir mēneša vai gada abonements. Gada plāni ietver Trip Pass, kas ceļojuma grupai uz 30 dienām dod Pro funkcijas."
-      sideBadger: "Bez maksas. Bez dienas ierobežojumiem."
+      sideBadger: "Bez maksas."
       source: pro-help
     - feature: "Izdevumi dienā"
       other: "Tā palīdzības centrs saka, ka bezmaksas lietotāji dienā var pievienot līdz 4 izdevumiem. Pro nav dienas ierobežojuma."
-      sideBadger: "Bez dienas ierobežojumiem."
+      sideBadger: "Bez dienas limita."
       source: pro-help
+    - feature: "Grupas lomas un atļaujas"
+      other: "Tā palīdzības centrs saka, ka tas neatbalsta grupu administratorus vai īpašas atļaujas."
+      sideBadger: "Administratori, biedri un skatītāji. Divi gatavi komplekti vai jūsu pašu atļaujas, apstiprinājums pievienošanās brīdī un bloķēšana, kad viss beidzies."
+      source: permissions-help
     - feature: "Čeku skenēšana"
       other: "Pro funkcija. Skenē čeka fotogrāfiju, un Pro sadale pa pozīcijām ļauj pozīcijas piešķirt cilvēkiem."
       sideBadger: "Bez maksas, bez skenēšanas kredītiem. Tas aizpilda kopsummu, datumu un vietu, lai jūs tos pārbaudītu, un nepiešķir pozīcijas cilvēkiem."
@@ -102,29 +141,25 @@ table:
       other: "Pro funkcija. Pieskaraties pogai „Konvertēt”, un Splitwise konvertē grupas izdevumus uz jūsu noklusējuma valūtu pēc tā brīža valūtas kursa."
       sideBadger: "Bez maksas. Konvertējiet katru izdevumu, kad to ievadāt, pēc pašreizējā valūtas kursa vai kursa, ko patiešām saņēmāt. Sākotnējā summa paliek pie izdevuma."
       source: currencies-help
-    - feature: "Kur to lieto"
-      other: "Lietotnes iPhone un Android, kā arī tīmeklis."
-      sideBadger: "Jūsu pārlūkprogrammā. Pierakstieties, tad pievienojiet to sākuma ekrānam, un tas atveras kā lietotne. Vietējās lietotnes nav."
-      source: home
     - feature: "Valūtas un valodas"
       other: "100+ valūtu un 7+ valodu, kā to formulē tā sākumlapa."
-      sideBadger: "133 valūtu un 39 valodas. Katrs grupas dalībnieks var izvēlēties savu valodu."
+      sideBadger: "133 valūtas un 39 valodas. Katrs grupas dalībnieks var izvēlēties savu valodu."
+      source: home
+    - feature: "Kur to lieto"
+      other: "Lietotnes iPhone un Android, kā arī tīmeklis."
+      sideBadger: "Jūsu pārlūkprogrammā. Pierakstieties, tad pievienojiet to sākuma ekrānam, un tas atveras kā lietotne. Lietotņu veikalos tā nav."
       source: home
     - feature: "Sadales veidi"
       other: "Vienādi, pēc precīzām summām, procentuāli, pa daļām, ar korekciju vai pa pozīcijām."
       sideBadger: "Vienādi, pēc precīzām summām vai procentuāli, ar vienu maksātāju katram izdevumam. Ne pa daļām un ne pa pozīcijām."
       source: split-help
-    - feature: "Atkārtoti izdevumi"
-      other: "Jā: katru nedēļu, reizi divās nedēļās, katru mēnesi vai katru gadu."
-      sideBadger: "Nē. Nokopējiet pagājušā mēneša īri, nevis ierakstiet to vēlreiz."
-      source: recurring-help
     - feature: "Lietošana bezsaistē"
       other: "Bezsaistes režīmu min starp savām pamatfunkcijām."
       sideBadger: "Nē. Vajadzīgs savienojums."
       source: home
-    - feature: "Maksājumi"
-      other: "Dažās vietās tas var sūtīt naudu no lietotnes iekšienes: Splitwise Pay ASV, Venmo un PayPal ASV dolāru atlikumiem un Pay by Bank atsevišķās Eiropas valstīs. Citur jūs reģistrējat maksājumu, kas veikts ārpus lietotnes."
-      sideBadger: "Nekad neskar jūsu naudu. Samaksājiet viens otram, kā vēlaties, tad reģistrējiet maksājumu."
+    - feature: "Maksājumi un jūsu banka"
+      other: "Dažās vietās tas var sūtīt naudu no lietotnes iekšienes: Splitwise Pay ASV, Venmo ASV dolāru atlikumiem, PayPal un Pay by Bank atsevišķās Eiropas valstīs, kas saista personīgo tekošo kontu."
+      sideBadger: "Nekad neskar jūsu naudu un neprasa jūsu bankas datus. Samaksājiet viens otram, kā vēlaties, tad reģistrējiet maksājumu."
       source: payments-help
     - feature: "Diagrammas un noklusējuma sadales"
       other: "Abas ir Pro funkcijas."
@@ -134,7 +169,7 @@ faq:
   heading: "Jautājumi"
   items:
     - q: "Vai Side Badger ir bezmaksas alternatīva Splitwise?"
-      a: "Rēķinu sadalei grupā – jā. Čeku skenēšana un valūtu konvertēšana ir bez maksas, bez dienas ierobežojumiem. Ja vajadzīga vietējā lietotne, lietošana bezsaistē, atkārtoti izdevumi vai maksājumi lietotnes iekšienē, tos dara Splitwise, bet Side Badger ne."
+      a: "Rēķinu sadalei grupā – jā, un tas dara vairāk par rēķināšanu: komentāri, jautājumi, saraksti, aptaujas un grupas lomas, ar bezmaksas čeku skenēšanu un valūtu konvertēšanu. Ja vajadzīga lietotne no lietotņu veikala, lietošana bezsaistē vai maksājumi lietotnes iekšienē, tos dara Splitwise, bet Side Badger ne."
     - q: "No kurienes nāk Splitwise dati?"
       a: "No Splitwise paša lapām: tā sākumlapas, Pro lapas un palīdzības centra. Katra tabulas rinda ir saistīta ar lapu, no kuras tā nākusi, un datums virs tabulas norāda, kad mēs tās lasījām. Mēs tās pārbaudām katru ceturksni."
     - q: "Vai Side Badger paliks bez maksas?"

@@ -1,146 +1,181 @@
-translatedFrom: "18384294"
+translatedFrom: "100a5816"
 review:
   status: checked
-  checker: "CX-review"
-  date: "2026-11-20"
+  checker: "BT-compare-reframe"
+  date: "2026-11-22"
+identicalApproved:
+  - navLabel
+  - table.columns.sideBadger
 claims:
+  - comments.next-to-the-expense
+  - comments.group-and-everything
+  - comments.attach-files
+  - receipt-attachments.keep-the-receipt
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - reactions.celebrate-a-payment
+  - permissions.viewer-sees-everything
+  - permissions.presets-or-your-own
+  - permissions.lock-the-group
+  - invites.admin-approval
   - receipt-scanning.no-scan-credits
   - receipt-scanning.fills-in-for-you-to-check
   - currency-conversion.convert-as-you-go
   - currency-conversion.original-amount-stays
   - multi-currency.currency-count
+  - multi-currency.limit-group-currencies
+  - groups.default-currency-and-header
   - languages.39-languages
   - home-screen.opens-like-an-app
+  - home-screen.same-app-everywhere
   - settlements.pay-however-then-record
+  - settlements.no-bank-connection
+  - ai-assistants.works-with-chatgpt-and-claude
+  - ai-assistants.ask-your-assistant
+  - feedback.tell-us-from-the-app
   - expense-splitting.equal-exact-percentage
-  - expense-splitting.copy-last-months-rent
   - invites.link-or-qr-code
   - accounts.all-you-need-is-an-email
 meta:
-  title: "Side Badger vs Splitwise: ce e gratuit, comparat | Side Badger"
-  description: "Alternativă gratuită la Splitwise, comparată corect. Scanarea chitanțelor și conversia sunt gratuite. Spunem și ce face Splitwise mai bine."
-h1: "Side Badger vs Splitwise: ce e gratuit, comparat"
-navLabel: "Side Badger vs Splitwise"
-lead: "Probabil cineva din grupul tău a zis deja „folosește Splitwise”. Are sens. Side Badger este o aplicație web gratuită, cu scanarea chitanțelor și conversie valutară, și fără abonament ca să le deblochezi. Care se potrivește grupului tău depinde de ce are nevoie, așa că iată comparația, cu partea Splitwise luată doar din paginile proprii ale Splitwise."
+  title: "Side Badger vs Splitwise: tot grupul, nu doar calculele | Side Badger"
+  description: "O alternativă gratuită la Splitwise pentru tot grupul: comentarii, întrebări, liste, sondaje și roluri adevărate, plus scanarea chitanțelor și conversia valutară gratuite."
+h1: "Side Badger vs Splitwise: tot grupul, nu doar calculele"
+navLabel: Side Badger vs Splitwise
+lead: "Probabil cineva din grupul tău a zis deja „folosește Splitwise”. Are sens: se pricepe la calcule. Side Badger face și el calculele, apoi dă grupului un loc unde să le discute: comentarii, întrebări, liste, sondaje și roluri de grup adevărate. Scanarea chitanțelor și conversia valutară vin gratis."
 cta:
-  heading: "Încearcă la următoarea notă comună"
-  body: "Creează un cont gratuit, fă un grup și adaugă o singură cheltuială reală. Dacă nu e pentru tine, ai pierdut câteva minute, nu un abonament."
-asOf: 2026-10-21
-asOfNote: "Am citit paginile proprii ale Splitwise pe {date}, ca să nu fie nevoie să le citești tu, și tot ce scriem aici despre Splitwise vine din ele. Fiecare rând din tabel trimite la sursa lui. Planurile se schimbă, așa că verificăm din nou în fiecare trimestru, iar dacă paginile Splitwise contrazic această pagină, crede-le pe ele."
+  heading: Încearcă la următoarea cheltuială comună
+  body: Creează un cont gratuit, fă un grup și adaugă o singură cheltuială reală. Dacă nu e pentru tine, ai pierdut câteva minute, nu un abonament.
+asOf: 2026-11-22
+asOfNote: Am citit paginile proprii ale Splitwise pe {date}, ca să nu fie nevoie să le citești tu, și tot ce scriem aici despre Splitwise vine din ele. Fiecare rând din tabel trimite la sursa lui. Planurile se schimbă, așa că verificăm din nou în fiecare trimestru, iar dacă paginile Splitwise contrazic această pagină, ele au dreptate.
 sources:
   - id: home
-    label: "Pagina principală Splitwise"
+    label: Pagina principală Splitwise
     url: https://www.splitwise.com/
   - id: pro
-    label: "Pagina Splitwise Pro"
+    label: Pagina Splitwise Pro
     url: https://www.splitwise.com/pro
   - id: pro-help
     label: "Ajutor Splitwise: Ce este Splitwise Pro?"
     url: https://kb.splitwise.com/pro/what-is-splitwise-pro
+  - id: permissions-help
+    label: "Ajutor Splitwise: permisiunile grupului"
+    url: https://kb.splitwise.com/groups/can-i-prevent-group-members-from-changing-expenses-or-set-permissions
   - id: currencies-help
     label: "Ajutor Splitwise: mai multe valute"
     url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-a-friendship-or-group-with-multiple-currencies
   - id: split-help
     label: "Ajutor Splitwise: moduri de a împărți"
     url: https://kb.splitwise.com/balances-and-expenses/what-are-different-ways-i-can-split-an-expense
-  - id: recurring-help
-    label: "Ajutor Splitwise: cheltuieli recurente"
-    url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-recurring-expenses
   - id: payments-help
     label: "Ajutor Splitwise: trimiterea banilor"
     url: https://kb.splitwise.com/payment-integrations/how-do-i-send-money-to-someone-on-splitwise
 tableAfter: 3
 sections:
-  - heading: "Ce face bine Splitwise"
-    body: "Dacă grupul tău are nevoie de o aplicație nativă, de utilizare offline sau de plăți în aplicație, Splitwise este alegerea rațională și am prefera să-l alegi decât să afli mai târziu. Paginile lui proprii enumeră:"
+  - heading: Discuții despre bani, lângă bani
+    body: Banii comuni vin cu discuții, nelămuriri și planuri. Side Badger le ține pe toate trei lângă cifre, ca nimeni să nu mai deruleze înapoi prin chat.
     items:
-      - "**Aplicații și utilizare offline.** Aplicații pentru iPhone și Android, pe lângă web, și un mod offline."
-      - "**Mai multe moduri de a împărți.** Împărțire pe părți, ajustări și împărțire pe articole, pe lângă egal, exact și procentual."
-      - "**Cheltuieli recurente.** Setează chiria să se repete și uită de ea."
-      - "**Plăți în aplicație.** În unele țări poate muta și banii, prin Splitwise Pay, Venmo, PayPal sau Pay by Bank."
-  - heading: "Gratuit aici, cu plată acolo"
-    body: "Splitwise Pro este planul cu plată al Splitwise, iar propria lui pagină Pro vinde trei lucruri care nu costă nimic în Side Badger."
+      - "**Comentarii unde le e locul.** Comentează grupul în sine sau orice cheltuială, listă ori sondaj și ține conversația lângă subiectul ei."
+      - "**Chitanțe și fotografii.** Păstrează până la trei chitanțe la fiecare cheltuială și adaugă fotografii sau PDF-uri la comentariile din grup, dintr-o listă sau dintr-un sondaj."
+      - "**Întrebări, nu certuri.** Un administrator poate activa întrebările, iar oricine e într-o cheltuială poate întreba despre ea. Rămâne în afara soldurilor până se lămurește."
+      - "**Liste și sondaje.** Ține lista de cumpărături comună lângă bonurile de la cumpărături și supune la vot lista scurtă de vile, anonim dacă vrei."
+      - "**Câteva aplauze.** Reacționează la cheltuieli, plăți și comentarii și sărbătorește o plată când ajunge."
+  - heading: Grupul tău, regulile tale
+    body: Centrul de ajutor al Splitwise spune că nu are administratori de grup și nici permisiuni speciale. Side Badger are roluri și permisiuni, pentru grupurile care au nevoie de cineva care să țină cifrele în ordine.
+    items:
+      - "**Administratori, membri și vizualizatori.** Fă pe cineva vizualizator: vede tot și nu schimbă nimic."
+      - "**Două presetări sau ale tale.** Pornește de la Colaborare deschisă sau Grup gestionat, sau setează tu fiecare permisiune: cine editează și șterge cheltuieli, editează liste, invită și lasă oameni noi să intre."
+      - "**Aprobare pentru a intra.** Activează aprobarea și un administrator lasă fiecare persoană să intre."
+      - "**Setările proprii ale grupului.** Limitează-l la valutele pe care le folosești de fapt, alege-i valuta implicită și pune-i o imagine antet."
+      - "**Blochează-l când s-a terminat.** Cifrele rămân cum sunt până când un administrator îl deblochează."
+  - heading: Gratuit aici, plătit acolo
+    body: Splitwise Pro este planul plătit al Splitwise, iar propria lui pagină Pro oferă contra cost trei lucruri care nu costă nimic în Side Badger.
     items:
       - "**Scanarea chitanțelor.** Splitwise Pro scanează o fotografie a chitanței. Side Badger o face gratuit, fără credite de scanare: completează totalul, data și locul ca să le verifici."
-      - "**Conversia valutară.** Splitwise Pro convertește cheltuielile unui grup în valuta ta implicită când atingi „Convert”. Side Badger convertește fiecare cheltuială pe măsură ce o introduci, la un curs de schimb actual sau la cel pe care l-ai primit de fapt, iar suma inițială rămâne pe cheltuială."
-      - "**Fără limite zilnice.** Splitwise Pro vinde cheltuieli nelimitate, iar centrul lui de ajutor spune că utilizatorii gratuiți pot adăuga până la 4 cheltuieli pe zi. Side Badger nu are limite zilnice."
-  - heading: "Ce are Splitwise și Side Badger nu"
-    body: "Aceasta nu e lista tuturor funcțiilor Splitwise, ci doar a celor care înclină de obicei balanța. Paginile proprii ale Splitwise au lista completă. Iată unde Side Badger rămâne în urmă."
+      - "**Conversia valutară.** Splitwise Pro convertește cheltuielile unui grup în valuta ta implicită când atingi „Convertește”. Side Badger convertește fiecare cheltuială pe măsură ce o introduci, la un curs de schimb actual sau la cel pe care l-ai primit de fapt, iar suma inițială rămâne pe cheltuială."
+      - "**Fără limită zilnică.** Splitwise Pro oferă cheltuieli nelimitate, iar centrul lui de ajutor spune că utilizatorii gratuiți pot adăuga până la 4 cheltuieli pe zi. Side Badger nu are limită zilnică."
+  - heading: Banca ta rămâne pe dinafară
+    body: "Side Badger nu se conectează la banca ta și nu îți cere datele băncii. Ține evidența cine cui datorează; plătești cum preferi, apoi înregistrezi plata. Nicio autentificare în bancă de predat, deci o grijă în minus."
+  - heading: O singură aplicație, în browser și pe telefon
+    body: Side Badger rulează în browser. Conectează-te, adaugă-l pe ecranul de pornire și se deschide ca o aplicație. E aceeași aplicație în ambele cazuri, așa că o funcție nouă e pe telefonul tău data viitoare când deschizi aplicația, fără să aștepți o actualizare din magazinul de aplicații.
+  - heading: Și câteva trucuri de efect
     items:
-      - "**Aplicații native.** Side Badger funcționează în browser. Conectează-te, apoi adaugă-l pe ecranul de pornire și se deschide ca o aplicație."
+      - "**Întreabă-ți asistentul.** Side Badger funcționează cu ChatGPT și Claude: cere-i asistentului tău să adauge o cheltuială, să scaneze o chitanță sau să înregistreze o plată."
+      - "**Fiecare în limba lui.** Side Badger vorbește 39 de limbi, iar fiecare persoană o alege pe a ei. Pagina principală a Splitwise listează peste 7. Se descurcă și cu 133 de valute, pentru excursia care ajunge peste tot."
+      - "**Ajutor fără să ieși din aplicație.** Te-ai blocat sau ai găsit o greșeală? Spune-ne din aplicație și citește chiar acolo răspunsul nostru."
+  - heading: Unde Splitwise tot câștigă
+    body: Preferăm să alegi aplicația potrivită decât să afli mai târziu. Dacă grupul tău are nevoie de una dintre acestea, Splitwise o are, iar Side Badger nu.
+    items:
+      - "**Aplicații din magazin.** Side Badger trăiește în browser și pe ecranul de pornire, nu în magazinele de aplicații."
       - "**Mod offline.** Side Badger are nevoie de o conexiune."
-      - "**Plăți în aplicație.** Side Badger nu se atinge niciodată de banii tăi. Vă plătiți unii altora cum preferați, apoi înregistrați plata."
-      - "**Cheltuieli recurente.** Side Badger nu are. Copiază chiria lunii trecute în loc să o scrii din nou."
-      - "**Împărțire pe părți sau pe articole.** Side Badger are un singur plătitor pe cheltuială, iar cheltuiala se împarte egal, pe sume exacte sau procentual. Scanarea chitanțelor nu atribuie articole persoanelor."
+      - "**Plăți în aplicație.** În unele țări Splitwise poate transfera și banii. Side Badger doar ține evidența."
+      - "**Împărțire pe cote sau pe articole.** Side Badger are un singur plătitor pe cheltuială, iar cheltuiala se împarte egal, pe sume exacte sau procentual. Scanarea chitanțelor nu atribuie articole persoanelor."
       - "**Grafice și împărțiri implicite.** Splitwise Pro le are pe amândouă. Side Badger ține evidența cine cui datorează, și asta e tot trucul."
-  - heading: "Mutarea grupului tău"
-    body: "Nu există un importator, deci mutarea înseamnă un nou început. Achită-te mai întâi în Splitwise, apoi creează un grup în Side Badger și invită pe toată lumea cu un link sau un cod QR. Fiecare din grup are nevoie de un cont gratuit, iar pentru înscriere ai nevoie doar de o adresă de e-mail."
+  - heading: Mutarea grupului tău
+    body: Nu există o funcție de import, deci mutarea înseamnă un nou început. Închide mai întâi conturile în Splitwise, apoi creează un grup în Side Badger și invită pe toată lumea cu un link sau un cod QR. Toți cei din grup au nevoie de un cont gratuit, iar pentru înscriere ai nevoie doar de o adresă de e-mail.
 table:
-  heading: "Una lângă alta"
-  caption: "Detaliile Splitwise la data de {date}, din paginile proprii ale Splitwise."
-  sourceLabel: "Sursa"
+  heading: Alăturat
+  caption: Detaliile Splitwise la data de {date}, din paginile proprii ale Splitwise.
+  sourceLabel: Sursa
   columns:
-    feature: "Ce"
-    other: "Splitwise, conform paginilor proprii"
-    sideBadger: "Side Badger"
+    feature: Ce
+    other: Splitwise, conform paginilor proprii
+    sideBadger: Side Badger
   rows:
-    - feature: "Cât costă"
-      other: "Splitwise Pro este un abonament lunar sau anual. Planurile anuale includ un Trip Pass, care dă unui grup de excursie funcțiile Pro timp de 30 de zile."
-      sideBadger: "Gratuit. Fără limite zilnice."
+    - feature: Cât costă
+      other: Splitwise Pro este un abonament lunar sau anual. Planurile anuale includ un Trip Pass, care dă unui grup de excursie funcțiile Pro timp de 30 de zile.
+      sideBadger: Gratuit.
       source: pro-help
-    - feature: "Cheltuieli pe zi"
-      other: "Centrul lui de ajutor spune că utilizatorii gratuiți pot adăuga până la 4 cheltuieli pe zi. Pro nu are limită zilnică."
-      sideBadger: "Fără limite zilnice."
+    - feature: Cheltuieli pe zi
+      other: Centrul lui de ajutor spune că utilizatorii gratuiți pot adăuga până la 4 cheltuieli pe zi. Pro nu are limită zilnică.
+      sideBadger: Fără limită zilnică.
       source: pro-help
-    - feature: "Scanarea chitanțelor"
-      other: "O funcție Pro. Scanează o fotografie a unei chitanțe, iar împărțirea pe articole din Pro te lasă să atribui articolele persoanelor."
-      sideBadger: "Gratuit, fără credite de scanare. Completează totalul, data și locul ca să le verifici și nu atribuie articole persoanelor."
+    - feature: Roluri și permisiuni în grup
+      other: Centrul lui de ajutor spune că nu are administratori de grup și nici permisiuni speciale.
+      sideBadger: Administratori, membri și vizualizatori. Două presetări sau permisiunile tale, aprobare pentru a intra și o blocare pentru când s-a terminat.
+      source: permissions-help
+    - feature: Scanarea chitanțelor
+      other: O funcție Pro. Scanează o fotografie a unei chitanțe, iar împărțirea pe articole din Pro te lasă să atribui articolele persoanelor.
+      sideBadger: Gratuit, fără credite de scanare. Completează totalul, data și locul ca să le verifici și nu atribuie articole persoanelor.
       source: pro
-    - feature: "Conversia valutară"
-      other: "O funcție Pro. Atingi „Convert”, iar Splitwise convertește cheltuielile unui grup în valuta ta implicită la cursul de schimb din acel moment."
-      sideBadger: "Gratuit. Convertești fiecare cheltuială pe măsură ce o introduci, la un curs de schimb actual sau la cel pe care l-ai primit de fapt. Suma inițială rămâne pe cheltuială."
+    - feature: Conversia valutară
+      other: O funcție Pro. Atingi „Convertește”, iar Splitwise convertește cheltuielile unui grup în valuta ta implicită la cursul de schimb din acel moment.
+      sideBadger: Gratuit. Convertești fiecare cheltuială pe măsură ce o introduci, la un curs de schimb actual sau la cel pe care l-ai primit de fapt. Suma inițială rămâne pe cheltuială.
       source: currencies-help
-    - feature: "Unde îl folosești"
-      other: "Aplicații pentru iPhone și Android, plus web."
-      sideBadger: "În browser. Conectează-te, apoi adaugă-l pe ecranul de pornire și se deschide ca o aplicație. Fără aplicație nativă."
+    - feature: Valute și limbi
+      other: Peste 100 de valute și peste 7 limbi, cum spune pagina lui principală.
+      sideBadger: 133 de valute și 39 de limbi. Fiecare persoană din grup își poate alege limba.
       source: home
-    - feature: "Valute și limbi"
-      other: "Peste 100 de valute și peste 7 limbi, cum spune pagina lui principală."
-      sideBadger: "133 de valute și 39 de limbi. Fiecare din grup își poate alege limba."
+    - feature: Unde îl folosești
+      other: Aplicații pentru iPhone și Android, plus web.
+      sideBadger: În browser. Conectează-te, apoi adaugă-l pe ecranul de pornire și se deschide ca o aplicație. Nu e în magazinele de aplicații.
       source: home
-    - feature: "Moduri de a împărți"
-      other: "Egal, pe sume exacte, procentual, pe părți, prin ajustare sau pe articole."
-      sideBadger: "Egal, pe sume exacte sau procentual, cu un singur plătitor pe cheltuială. Nu pe părți și nu pe articole."
+    - feature: Moduri de a împărți
+      other: Egal, pe sume exacte, procentual, pe cote, prin ajustare sau pe articole.
+      sideBadger: Egal, pe sume exacte sau procentual, cu un singur plătitor pe cheltuială. Nu pe cote și nu pe articole.
       source: split-help
-    - feature: "Cheltuieli recurente"
-      other: "Da: săptămânal, la două săptămâni, lunar sau anual."
-      sideBadger: "Nu. Copiază chiria lunii trecute în loc să o scrii din nou."
-      source: recurring-help
-    - feature: "Utilizare offline"
-      other: "Listează un mod offline printre funcțiile de bază."
-      sideBadger: "Nu. Are nevoie de o conexiune."
+    - feature: Utilizare offline
+      other: Listează un mod offline printre funcțiile de bază.
+      sideBadger: Nu. Are nevoie de o conexiune.
       source: home
-    - feature: "Plăți"
-      other: "În unele locuri poate trimite bani din aplicație: Splitwise Pay în SUA, Venmo și PayPal pentru solduri în dolari americani și Pay by Bank în anumite țări europene. În alte părți, înregistrezi o plată făcută în afara aplicației."
-      sideBadger: "Nu se atinge niciodată de banii tăi. Vă plătiți unii altora cum preferați, apoi înregistrați plata."
+    - feature: Plăți și banca ta
+      other: "În unele locuri poate trimite bani din aplicație: Splitwise Pay în SUA, Venmo pentru solduri în dolari americani, PayPal și Pay by Bank în anumite țări europene; Pay by Bank conectează un cont curent personal."
+      sideBadger: Nu se atinge niciodată de banii tăi și nu îți cere datele băncii. Plătește cum preferi, apoi înregistrează plata.
       source: payments-help
-    - feature: "Grafice și împărțiri implicite"
-      other: "Ambele sunt funcții Pro."
-      sideBadger: "Niciuna."
+    - feature: Grafice și împărțiri implicite
+      other: Ambele sunt funcții Pro.
+      sideBadger: Niciuna.
       source: pro
 faq:
-  heading: "Întrebări"
+  heading: Întrebări
   items:
-    - q: "Este Side Badger o alternativă gratuită la Splitwise?"
-      a: "Pentru împărțirea notelor într-un grup, da. Scanarea chitanțelor și conversia valutară sunt gratuite, fără limite zilnice. Dacă ai nevoie de o aplicație nativă, de utilizare offline, de cheltuieli recurente sau de plăți în aplicație, Splitwise le face, iar Side Badger nu."
-    - q: "De unde vin detaliile despre Splitwise?"
+    - q: Este Side Badger o alternativă gratuită la Splitwise?
+      a: "Pentru împărțirea cheltuielilor într-un grup, da, și face mai mult decât calculele: comentarii, întrebări, liste, sondaje și roluri de grup, cu scanarea chitanțelor și conversia valutară gratuite. Dacă ai nevoie de o aplicație din magazin, de utilizare offline sau de plăți în aplicație, Splitwise le face, iar Side Badger nu."
+    - q: De unde vin detaliile despre Splitwise?
       a: "Din paginile proprii ale Splitwise: pagina principală, pagina Pro și centrul de ajutor. Fiecare rând din tabel trimite la pagina din care vine, iar data de deasupra tabelului spune când le-am citit. Le verificăm în fiecare trimestru."
-    - q: "Va rămâne Side Badger gratuit?"
-      a: "Tot ce este în Side Badger e gratuit astăzi. Dacă asta se schimbă vreodată, te anunțăm înainte. [Pagina de prețuri](page:pricing) are detaliile."
-    - q: "Trebuie să treacă toți din grupul meu la Side Badger?"
-      a: "Da. Fiecare din grup are nevoie de un cont Side Badger gratuit și se poate alătura cu un link sau un cod QR."
-    - q: "Are Side Badger o aplicație mobilă?"
+    - q: Va rămâne Side Badger gratuit?
+      a: Tot ce este în Side Badger e gratuit astăzi. Dacă asta se schimbă vreodată, te anunțăm înainte. [Pagina de prețuri](page:pricing) are detaliile.
+    - q: Trebuie să treacă toți din grupul meu la Side Badger?
+      a: Da. Toți cei din grup au nevoie de un cont Side Badger gratuit și se pot alătura cu un link sau un cod QR.
+    - q: Are Side Badger o aplicație mobilă?
       a: "Nu într-un magazin de aplicații. Rulează în browser: conectează-te de pe telefon, apoi adaugă-l pe ecranul de pornire ca să se deschidă ca o aplicație. [Cum funcționează](page:how-it-works) arată cum."
-identicalApproved:
-  - navLabel
-  - table.columns.sideBadger

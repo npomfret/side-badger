@@ -1,35 +1,53 @@
-translatedFrom: "18384294"
+translatedFrom: "100a5816"
 review:
   status: checked
-  checker: "CF-check"
-  date: "2026-11-19"
-identicalApproved:
-  - navLabel
-  - table.columns.sideBadger
+  checker: "BT-compare-reframe"
+  date: "2026-11-22"
 claims:
+  - comments.next-to-the-expense
+  - comments.group-and-everything
+  - comments.attach-files
+  - receipt-attachments.keep-the-receipt
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - reactions.celebrate-a-payment
+  - permissions.viewer-sees-everything
+  - permissions.presets-or-your-own
+  - permissions.lock-the-group
+  - invites.admin-approval
   - receipt-scanning.no-scan-credits
   - receipt-scanning.fills-in-for-you-to-check
   - currency-conversion.convert-as-you-go
   - currency-conversion.original-amount-stays
   - multi-currency.currency-count
+  - multi-currency.limit-group-currencies
+  - groups.default-currency-and-header
   - languages.39-languages
   - home-screen.opens-like-an-app
+  - home-screen.same-app-everywhere
   - settlements.pay-however-then-record
+  - settlements.no-bank-connection
+  - ai-assistants.works-with-chatgpt-and-claude
+  - ai-assistants.ask-your-assistant
+  - feedback.tell-us-from-the-app
   - expense-splitting.equal-exact-percentage
-  - expense-splitting.copy-last-months-rent
   - invites.link-or-qr-code
   - accounts.all-you-need-is-an-email
+identicalApproved:
+  - navLabel
+  - table.columns.sideBadger
 meta:
-  title: "Side Badger vs Splitwise: cymharu'r pethau am ddim | Side Badger"
-  description: "Dewis arall am ddim yn lle Splitwise, wedi'i gymharu'n deg: sganio derbynebau a throsi arian cyfred, a beth mae Splitwise yn ei wneud yn well."
-h1: "Side Badger vs Splitwise: cymharu'r pethau am ddim"
-navLabel: "Side Badger vs Splitwise"
-lead: "Mae'n debyg bod rhywun yn eich grŵp wedi dweud “defnyddiwch Splitwise”. Digon teg. Ap gwe am ddim yw Side Badger gyda sganio derbynebau a throsi arian cyfred, a dim tanysgrifiad i'w datgloi. Mae p'un sy'n addas i'ch grŵp yn dibynnu ar yr hyn sydd ei angen arno, felly dyma'r gymhariaeth, gydag ochr Splitwise wedi'i chymryd o dudalennau Splitwise ei hun yn unig."
+  title: "Side Badger vs Splitwise: y grŵp cyfan, nid y symiau'n unig | Side Badger"
+  description: "Dewis arall am ddim yn lle Splitwise ar gyfer y grŵp cyfan: sylwadau, cwestiynau, rhestrau, pleidleisiau a rolau go iawn, ynghyd â sganio derbynebau a throsi arian cyfred am ddim."
+h1: "Side Badger vs Splitwise: y grŵp cyfan, nid y symiau'n unig"
+navLabel: Side Badger vs Splitwise
+lead: "Mae'n debyg bod rhywun yn eich grŵp wedi dweud “defnyddiwch Splitwise”. Digon teg: mae'n dda am y mathemateg. Mae Side Badger yn gwneud y mathemateg hefyd, ac yna'n rhoi lle i'r grŵp siarad amdano: sylwadau, cwestiynau, rhestrau, pleidleisiau a rolau grŵp go iawn. Mae sganio derbynebau a throsi arian cyfred am ddim."
 cta:
-  heading: "Rhowch gynnig arni ar eich bil a rennir nesaf"
-  body: "Crëwch gyfrif am ddim, gwnewch grŵp ac ychwanegwch un gost go iawn. Os nad yw'n addas i chi, rydych wedi treulio ychydig funudau, nid tanysgrifiad."
-asOf: 2026-10-21
-asOfNote: "Darllenon ni dudalennau Splitwise ei hun ar {date} fel nad oes rhaid i chi, ac mae popeth yma am Splitwise yn dod ohonyn nhw. Mae pob rhes o'r tabl yn cysylltu â'i ffynhonnell. Mae cynlluniau'n newid, felly rydyn ni'n gwirio eto bob chwarter, ac os yw tudalennau Splitwise yn anghytuno â'r dudalen hon, credwch nhw."
+  heading: Rhowch gynnig arni ar eich bil a rennir nesaf
+  body: Crëwch gyfrif am ddim, gwnewch grŵp ac ychwanegwch un gost go iawn. Os nad yw'n addas i chi, rydych wedi treulio ychydig funudau, nid tanysgrifiad.
+asOf: 2026-11-22
+asOfNote: Darllenon ni dudalennau Splitwise ei hun ar {date} fel nad oes rhaid i chi, ac mae popeth yma am Splitwise yn dod ohonyn nhw. Mae pob rhes o'r tabl yn cysylltu â'i ffynhonnell. Mae cynlluniau'n newid, felly rydyn ni'n gwirio eto bob chwarter, ac os yw tudalennau Splitwise yn anghytuno â'r dudalen hon, credwch nhw.
 sources:
   - id: home
     label: Tudalen hafan Splitwise
@@ -40,107 +58,124 @@ sources:
   - id: pro-help
     label: "Cymorth Splitwise: Beth yw Splitwise Pro?"
     url: https://kb.splitwise.com/pro/what-is-splitwise-pro
+  - id: permissions-help
+    label: "Cymorth Splitwise: caniatâd grŵp"
+    url: https://kb.splitwise.com/groups/can-i-prevent-group-members-from-changing-expenses-or-set-permissions
   - id: currencies-help
     label: "Cymorth Splitwise: arian cyfred lluosog"
     url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-a-friendship-or-group-with-multiple-currencies
   - id: split-help
     label: "Cymorth Splitwise: ffyrdd o rannu"
     url: https://kb.splitwise.com/balances-and-expenses/what-are-different-ways-i-can-split-an-expense
-  - id: recurring-help
-    label: "Cymorth Splitwise: treuliau cylchol"
-    url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-recurring-expenses
   - id: payments-help
     label: "Cymorth Splitwise: anfon arian"
     url: https://kb.splitwise.com/payment-integrations/how-do-i-send-money-to-someone-on-splitwise
 tableAfter: 3
 sections:
-  - heading: "Beth mae Splitwise yn ei wneud yn dda"
-    body: "Os oes angen ap brodorol, defnydd all-lein neu daliadau y tu mewn i'r ap ar eich grŵp, Splitwise yw'r dewis call, a byddai'n well gennym i chi ei ddewis na darganfod yn nes ymlaen. Mae ei dudalennau ei hun yn rhestru:"
+  - heading: Sgwrs am arian, wrth ymyl yr arian
+    body: Daw sgwrsio, amheuon a chynlluniau gydag arian a rennir. Mae Side Badger yn cadw'r tri wrth ymyl y rhifau, fel nad oes rhaid i neb sgrolio'n ôl drwy sgwrs y grŵp.
     items:
-      - "**Apiau a defnydd all-lein.** Apiau iPhone ac Android yn ogystal â'r we, a modd all-lein."
-      - "**Mwy o ffyrdd o rannu.** Cyfrannau, addasiadau a rhaniadau fesul eitem, yn ogystal â chyfartal, union a chanran."
-      - "**Treuliau cylchol.** Gosodwch y rhent i ailadrodd ac anghofiwch amdano."
-      - "**Taliadau yn yr ap.** Mewn rhai gwledydd gall symud yr arian hefyd, drwy Splitwise Pay, Venmo, PayPal neu Pay by Bank."
-  - heading: "Am ddim yma, â thâl yno"
-    body: "Splitwise Pro yw cynllun taledig Splitwise, ac mae ei dudalen Pro ei hun yn gwerthu tri pheth sy'n costio dim yn Side Badger."
+      - "**Sylwadau lle maen nhw'n perthyn.** Gwnewch sylwadau ar y grŵp ei hun, neu ar unrhyw gost, rhestr neu bleidlais, a chadwch y sgwrs wrth ymyl y peth y mae'n sôn amdano."
+      - "**Derbynebau a lluniau.** Cadwch hyd at dair derbynneb ar bob cost, ac ychwanegwch luniau neu PDFs at sylwadau ar y grŵp, rhestr neu bleidlais."
+      - "**Cwestiynau, nid dadleuon.** Gall gweinyddwr droi cwestiynau ymlaen, ac yna gall unrhyw un mewn cost ofyn amdani. Mae'n aros allan o'r balansau nes iddo gael ei ddatrys."
+      - "**Rhestrau a phleidleisiau.** Cadwch y rhestr siopa a rennir wrth ymyl y biliau siopa, a rhowch restr fer y fila i bleidlais, yn ddienw os mynnwch."
+      - "**Ychydig o gymeradwyaeth.** Ymatebwch i gostau, taliadau a sylwadau, a dathlwch daliad pan fydd yn cyrraedd."
+  - heading: Eich grŵp, eich rheolau
+    body: Mae canolfan gymorth Splitwise yn dweud nad yw'n cefnogi gweinyddwyr grŵp na chaniatâd arbennig. Mae gan Side Badger rolau a chaniatâd, ar gyfer y grwpiau sydd angen rhywun i gadw'r rhifau'n daclus.
+    items:
+      - "**Gweinyddwyr, aelodau a gwylwyr.** Gwnewch rywun yn wyliwr: mae'n gweld popeth ac yn newid dim."
+      - "**Dau osodiad parod, neu eich un chi.** Dechreuwch gyda Chydweithio agored neu Grŵp rheoledig, neu gosodwch bob caniatâd eich hun: pwy sy'n golygu ac yn dileu costau, yn golygu rhestrau, yn gwahodd ac yn gadael pobl newydd i mewn."
+      - "**Cymeradwyaeth i ymuno.** Trowch gymeradwyaeth ymlaen a bydd gweinyddwr yn gadael pob person i mewn."
+      - "**Gosodiadau'r grŵp ei hun.** Cyfyngwch ef i'r arian cyfred rydych chi'n ei ddefnyddio mewn gwirionedd, dewiswch ei arian cyfred diofyn a rhowch ddelwedd pennawd iddo."
+      - "**Cloiwch ef pan fydd drosodd.** Mae'r rhifau'n aros yn eu lle nes bydd gweinyddwr yn ei ddatgloi."
+  - heading: Am ddim yma, â thâl yno
+    body: Splitwise Pro yw cynllun taledig Splitwise, ac mae ei dudalen Pro ei hun yn gwerthu tri pheth sy'n costio dim yn Side Badger.
     items:
       - "**Sganio derbynebau.** Mae Splitwise Pro yn sganio llun o'ch derbynneb. Mae Side Badger yn gwneud hynny am ddim, heb gredydau sganio: mae'n llenwi'r cyfanswm, y dyddiad a'r lle i chi eu gwirio."
-      - "**Trosi arian cyfred.** Mae Splitwise Pro yn trosi treuliau grŵp i'ch arian cyfred diofyn pan fyddwch yn tapio “Convert”. Mae Side Badger yn trosi pob cost wrth i chi ei rhoi i mewn, ar gyfradd gyfnewid gyfredol neu'r un a gawsoch mewn gwirionedd, ac mae'r swm gwreiddiol yn aros ar y gost."
-      - "**Dim cyfyngiadau dyddiol.** Mae Splitwise Pro yn gwerthu treuliau diderfyn, ac mae ei ganolfan gymorth yn dweud y gall defnyddwyr di-dâl ychwanegu hyd at 4 cost bob dydd. Does gan Side Badger ddim cyfyngiadau dyddiol."
-  - heading: "Yr hyn sydd gan Splitwise nad oes gan Side Badger"
-    body: "Nid pob nodwedd Splitwise yw hon, dim ond y rhai sy'n tueddu i benderfynu'r mater. Mae gan dudalennau Splitwise ei hun y rhestr lawn. Dyma ble mae Side Badger yn dod yn brin."
+      - "**Trosi arian cyfred.** Mae Splitwise Pro yn trosi costau grŵp i'ch arian cyfred diofyn pan fyddwch yn tapio “Convert”. Mae Side Badger yn trosi pob cost wrth i chi ei rhoi i mewn, ar gyfradd gyfnewid gyfredol neu'r un a gawsoch mewn gwirionedd, ac mae'r swm gwreiddiol yn aros ar y gost."
+      - "**Dim terfynau dyddiol.** Mae Splitwise Pro yn gwerthu costau diderfyn, ac mae ei ganolfan gymorth yn dweud y gall defnyddwyr am ddim ychwanegu hyd at 4 cost bob dydd. Does gan Side Badger ddim terfynau dyddiol."
+  - heading: Mae eich banc yn aros allan ohoni
+    body: Dyw Side Badger ddim yn cysylltu â'ch banc nac yn gofyn am fanylion eich banc. Mae'n cadw'r cofnod o bwy sy'n gorfod talu i bwy; rydych chi'n talu eich gilydd sut bynnag y dymunwch, yna'n cofnodi'r taliad. Dim mewngofnod banc i'w drosglwyddo, felly un peth yn llai i'w gadw'n ddiogel.
+  - heading: Un ap, yn eich porwr ac ar eich ffôn
+    body: Mae Side Badger yn rhedeg yn eich porwr. Mewngofnodwch, ychwanegwch ef at eich sgrin gartref, ac mae'n agor fel ap. Yr un ap ydyw y naill ffordd neu'r llall, felly mae nodwedd newydd ar eich ffôn y tro nesaf y byddwch yn ei agor, heb ddiweddariad siop apiau i aros amdano.
+  - heading: A rhai pethau bach hwyliog
     items:
-      - "**Apiau brodorol.** Mae Side Badger yn gweithio yn eich porwr. Mewngofnodwch, yna ychwanegwch ef at eich sgrin gartref ac mae'n agor fel ap."
+      - "**Gofynnwch i'ch cynorthwyydd.** Mae Side Badger yn gweithio gyda ChatGPT a Claude: gofynnwch i'ch un chi ychwanegu cost, sganio derbynneb neu gofnodi taliad."
+      - "**Pawb yn eu hiaith eu hunain.** Mae Side Badger yn siarad 39 iaith ac mae pob person yn dewis ei iaith ei hun. Mae hafan Splitwise yn dweud 7+. Mae'n trin 133 o arian cyfred hefyd, ar gyfer y daith sy'n mynd i bobman."
+      - "**Cymorth heb adael yr ap.** Yn sownd, neu wedi dod o hyd i wall? Dywedwch wrthym o'r ap a darllenwch ein hateb reit yno."
+  - heading: Lle mae Splitwise yn dal i ennill
+    body: Byddai'n well gennym i chi ddewis yr ap iawn na darganfod yn nes ymlaen. Os oes angen un o'r rhain ar eich grŵp, mae gan Splitwise ef ac nid oes gan Side Badger.
+    items:
+      - "**Apiau o siop apiau.** Mae Side Badger yn byw yn eich porwr ac ar eich sgrin gartref, nid yn y siopau apiau."
       - "**Modd all-lein.** Mae angen cysylltiad ar Side Badger."
-      - "**Taliadau yn yr ap.** Dyw Side Badger byth yn cyffwrdd â'ch arian. Talwch eich gilydd sut bynnag y dymunwch, yna cofnodwch y taliad."
-      - "**Treuliau cylchol.** Does gan Side Badger ddim. Copïwch rent y mis diwethaf yn lle ei deipio eto."
+      - "**Taliadau yn yr ap.** Mewn rhai gwledydd gall Splitwise symud yr arian hefyd. Dim ond cadw'r cofnod mae Side Badger yn ei wneud."
       - "**Rhannu yn ôl cyfrannau neu fesul eitem.** Mae gan Side Badger un talwr fesul cost, wedi'i rannu'n gyfartal, yn ôl symiau union neu yn ôl canran. Dyw ei sganio derbynebau ddim yn neilltuo eitemau i bobl."
-      - "**Siartiau a rhaniadau diofyn.** Mae gan Splitwise Pro y ddau. Mae Side Badger yn cadw'r cyfrif o bwy sy'n ddyledus i bwy, a dyna'r holl gamp."
-  - heading: "Symud eich grŵp drosodd"
-    body: "Does dim mewnforiwr, felly mae symud yn golygu dechrau o'r newydd. Setlwch yn Splitwise yn gyntaf, yna crëwch grŵp yn Side Badger a gwahoddwch bawb gyda dolen neu god QR. Mae angen cyfrif am ddim ar bawb yn y grŵp, a chyfeiriad e-bost yw'r cyfan sydd ei angen i gofrestru."
+      - "**Siartiau a rhaniadau diofyn.** Mae gan Splitwise Pro y ddau. Mae Side Badger yn cadw'r cyfrif o bwy sy'n gorfod talu i bwy, a dyna'r gyfrinach gyfan."
+  - heading: Symud eich grŵp drosodd
+    body: Does dim mewnforiwr, felly mae symud yn golygu dechrau o'r newydd. Cliriwch y cyfrifon yn Splitwise yn gyntaf, yna crëwch grŵp yn Side Badger a gwahoddwch bawb gyda dolen neu god QR. Mae angen cyfrif am ddim ar bawb yn y grŵp, a chyfeiriad e-bost yw'r cyfan sydd ei angen i gofrestru.
 table:
-  heading: "Ochr yn ochr"
-  caption: "Manylion Splitwise ar {date}, o dudalennau Splitwise ei hun."
+  heading: Ochr yn ochr
+  caption: Manylion Splitwise ar {date}, o dudalennau Splitwise ei hun.
   sourceLabel: Ffynhonnell
   columns:
     feature: Beth
-    other: "Splitwise, yn ôl ei dudalennau ei hun"
+    other: Splitwise, yn ôl ei dudalennau ei hun
     sideBadger: Side Badger
   rows:
-    - feature: "Beth mae'n ei gostio"
-      other: "Mae Splitwise Pro yn danysgrifiad misol neu flynyddol. Mae cynlluniau blynyddol yn cynnwys Trip Pass, sy'n rhoi nodweddion Pro i grŵp taith am 30 diwrnod."
-      sideBadger: "Am ddim. Dim cyfyngiadau dyddiol."
+    - feature: Beth mae'n ei gostio
+      other: Mae Splitwise Pro yn danysgrifiad misol neu flynyddol. Mae cynlluniau blynyddol yn cynnwys Trip Pass, sy'n rhoi nodweddion Pro i grŵp taith am 30 diwrnod.
+      sideBadger: Am ddim.
       source: pro-help
-    - feature: "Costau y dydd"
-      other: "Mae ei ganolfan gymorth yn dweud y gall defnyddwyr di-dâl ychwanegu hyd at 4 cost bob dydd. Does gan Pro ddim terfyn dyddiol."
-      sideBadger: "Dim cyfyngiadau dyddiol."
+    - feature: Costau y dydd
+      other: Mae ei ganolfan gymorth yn dweud y gall defnyddwyr am ddim ychwanegu hyd at 4 cost bob dydd. Does gan Pro ddim terfyn dyddiol.
+      sideBadger: Dim terfynau dyddiol.
       source: pro-help
-    - feature: "Sganio derbynebau"
-      other: "Nodwedd Pro. Mae'n sganio llun o dderbynneb, ac mae rhannu fesul eitem Pro yn gadael i chi neilltuo'r eitemau i bobl."
-      sideBadger: "Am ddim, heb gredydau sganio. Mae'n llenwi'r cyfanswm, y dyddiad a'r lle i chi eu gwirio, ac nid yw'n neilltuo eitemau i bobl."
+    - feature: Rolau a chaniatâd grŵp
+      other: Mae ei ganolfan gymorth yn dweud nad yw'n cefnogi gweinyddwyr grŵp na chaniatâd arbennig.
+      sideBadger: Gweinyddwyr, aelodau a gwylwyr. Dau osodiad parod neu eich caniatâd eich hun, cymeradwyaeth i ymuno, a chlo pan fydd drosodd.
+      source: permissions-help
+    - feature: Sganio derbynebau
+      other: Nodwedd Pro. Mae'n sganio llun o dderbynneb, ac mae rhannu fesul eitem Pro yn gadael i chi neilltuo'r eitemau i bobl.
+      sideBadger: Am ddim, heb gredydau sganio. Mae'n llenwi'r cyfanswm, y dyddiad a'r lle i chi eu gwirio, ac nid yw'n neilltuo eitemau i bobl.
       source: pro
-    - feature: "Trosi arian cyfred"
-      other: "Nodwedd Pro. Tapiwch “Convert” ac mae Splitwise yn trosi treuliau grŵp i'ch arian cyfred diofyn ar gyfradd gyfnewid y foment honno."
-      sideBadger: "Am ddim. Trosiwch bob cost wrth i chi ei rhoi i mewn, ar gyfradd gyfnewid gyfredol neu'r un a gawsoch mewn gwirionedd. Mae'r swm gwreiddiol yn aros ar y gost."
+    - feature: Trosi arian cyfred
+      other: Nodwedd Pro. Tapiwch “Convert” ac mae Splitwise yn trosi costau grŵp i'ch arian cyfred diofyn ar gyfradd gyfnewid y foment honno.
+      sideBadger: Am ddim. Trosiwch bob cost wrth i chi ei rhoi i mewn, ar gyfradd gyfnewid gyfredol neu'r un a gawsoch mewn gwirionedd. Mae'r swm gwreiddiol yn aros ar y gost.
       source: currencies-help
-    - feature: "Ble rydych yn ei ddefnyddio"
-      other: "Apiau ar gyfer iPhone ac Android, a'r we."
-      sideBadger: "Yn eich porwr. Mewngofnodwch, yna ychwanegwch ef at eich sgrin gartref ac mae'n agor fel ap. Dim ap brodorol."
+    - feature: Arian cyfred ac ieithoedd
+      other: 100+ o arian cyfred a 7+ iaith, fel mae ei hafan yn ei roi.
+      sideBadger: 133 o arian cyfred a 39 iaith. Gall pawb yn y grŵp ddewis ei iaith ei hun.
       source: home
-    - feature: "Arian cyfred ac ieithoedd"
-      other: "100+ o arian cyfred a 7+ iaith, fel mae ei hafan yn ei roi."
-      sideBadger: "133 o arian cyfred a 39 iaith. Gall pawb yn y grŵp ddewis ei iaith ei hun."
+    - feature: Ble rydych yn ei ddefnyddio
+      other: Apiau ar gyfer iPhone ac Android, a'r we.
+      sideBadger: Yn eich porwr. Mewngofnodwch, yna ychwanegwch ef at eich sgrin gartref ac mae'n agor fel ap. Ddim yn y siopau apiau.
       source: home
-    - feature: "Ffyrdd o rannu"
-      other: "Yn gyfartal, yn ôl symiau union, yn ôl canran, yn ôl cyfrannau, yn ôl addasiad neu fesul eitem."
-      sideBadger: "Yn gyfartal, yn ôl symiau union neu yn ôl canran, gydag un talwr fesul cost. Nid yn ôl cyfrannau na fesul eitem."
+    - feature: Ffyrdd o rannu
+      other: Yn gyfartal, yn ôl symiau union, yn ôl canran, yn ôl cyfrannau, yn ôl addasiad neu fesul eitem.
+      sideBadger: Yn gyfartal, yn ôl symiau union neu yn ôl canran, gydag un talwr fesul cost. Nid yn ôl cyfrannau na fesul eitem.
       source: split-help
-    - feature: "Treuliau cylchol"
-      other: "Oes: wythnosol, pythefnosol, misol neu flynyddol."
-      sideBadger: "Nac oes. Copïwch rent y mis diwethaf yn lle ei deipio eto."
-      source: recurring-help
-    - feature: "Defnydd all-lein"
-      other: "Yn rhestru modd all-lein ymhlith ei brif nodweddion."
-      sideBadger: "Na. Mae angen cysylltiad."
+    - feature: Defnydd all-lein
+      other: Yn rhestru modd all-lein ymhlith ei brif nodweddion.
+      sideBadger: Na. Mae angen cysylltiad.
       source: home
-    - feature: "Taliadau"
-      other: "Mewn rhai lleoedd gall anfon arian o'r tu mewn i'r ap: Splitwise Pay yn yr UDA, Venmo a PayPal ar gyfer balansau doler yr UDA, a Pay by Bank mewn gwledydd Ewropeaidd dethol. Mewn mannau eraill rydych yn cofnodi taliad a wnaed y tu allan."
-      sideBadger: "Byth yn cyffwrdd â'ch arian. Talwch eich gilydd sut bynnag y dymunwch, yna cofnodwch y taliad."
+    - feature: Taliadau a'ch banc
+      other: "Mewn rhai lleoedd gall anfon arian o'r tu mewn i'r ap: Splitwise Pay yn yr UDA, Venmo ar gyfer balansau doler yr UDA, PayPal, a Pay by Bank mewn gwledydd Ewropeaidd dethol, sy'n cysylltu cyfrif cyfredol personol."
+      sideBadger: Byth yn cyffwrdd â'ch arian a ddim yn gofyn am fanylion eich banc. Talwch eich gilydd sut bynnag y dymunwch, yna cofnodwch y taliad.
       source: payments-help
-    - feature: "Siartiau a rhaniadau diofyn"
-      other: "Mae'r ddau yn nodweddion Pro."
-      sideBadger: "Dim un o'r ddau."
+    - feature: Siartiau a rhaniadau diofyn
+      other: Mae'r ddau yn nodweddion Pro.
+      sideBadger: Dim un o'r ddau.
       source: pro
 faq:
-  heading: "Cwestiynau"
+  heading: Cwestiynau
   items:
-    - q: "Ydy Side Badger yn ddewis arall am ddim yn lle Splitwise?"
-      a: "Ar gyfer rhannu biliau mewn grŵp, ydy. Mae sganio derbynebau a throsi arian cyfred am ddim, heb gyfyngiadau dyddiol. Os oes angen ap brodorol, defnydd all-lein, treuliau cylchol neu daliadau y tu mewn i'r ap arnoch, mae Splitwise yn gwneud y rheini ac nid yw Side Badger yn eu gwneud."
-    - q: "O ble mae manylion Splitwise yn dod?"
+    - q: Ydy Side Badger yn ddewis arall am ddim yn lle Splitwise?
+      a: "Ar gyfer rhannu biliau mewn grŵp, ydy, ac mae'n gwneud mwy na'r mathemateg: sylwadau, cwestiynau, rhestrau, pleidleisiau a rolau grŵp, gyda sganio derbynebau a throsi arian cyfred am ddim. Os oes angen ap siop apiau, defnydd all-lein neu daliadau y tu mewn i'r ap arnoch, mae Splitwise yn gwneud y rheini ac nid yw Side Badger yn eu gwneud."
+    - q: O ble mae manylion Splitwise yn dod?
       a: "O dudalennau Splitwise ei hun: ei hafan, ei dudalen Pro a'i ganolfan gymorth. Mae pob rhes o'r tabl yn cysylltu â'r dudalen y daeth ohoni, ac mae'r dyddiad uwchben y tabl yn dweud pryd y gwnaethon ni eu darllen. Rydyn ni'n eu gwirio bob chwarter."
-    - q: "Fydd Side Badger yn aros am ddim?"
-      a: "Mae popeth yn Side Badger am ddim heddiw. Os bydd hynny'n newid, byddwn yn rhoi rhybudd i chi ymlaen llaw. Mae'r [dudalen brisiau](page:pricing) yn rhoi'r manylion."
-    - q: "Oes rhaid i bawb yn fy ngrŵp newid?"
-      a: "Oes. Mae angen cyfrif Side Badger am ddim ar bawb mewn grŵp, a gallan nhw ymuno gyda dolen neu god QR."
-    - q: "Oes gan Side Badger ap symudol?"
+    - q: Fydd Side Badger yn aros am ddim?
+      a: Mae popeth yn Side Badger am ddim heddiw. Os bydd hynny'n newid, byddwn yn rhoi rhybudd i chi ymlaen llaw. Mae'r [dudalen brisiau](page:pricing) yn rhoi'r manylion.
+    - q: Oes rhaid i bawb yn fy ngrŵp newid?
+      a: Oes. Mae angen cyfrif Side Badger am ddim ar bawb mewn grŵp, a gallan nhw ymuno gyda dolen neu god QR.
+    - q: Oes gan Side Badger ap symudol?
       a: "Nid mewn siop apiau. Mae'n rhedeg yn eich porwr: mewngofnodwch ar eich ffôn, yna ychwanegwch ef at eich sgrin gartref fel ei fod yn agor fel ap. Mae [sut mae'n gweithio](page:how-it-works) yn dangos sut."

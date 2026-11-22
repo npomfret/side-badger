@@ -87,6 +87,7 @@ export const features: readonly FeatureRecord[] = [
       { id: 'groups.group-per-house-trip-event', text: 'Make a group for each house, trip or event.' },
       { id: 'groups.choose-your-name', text: 'Choose the name people see in each group.' },
       { id: 'groups.up-to-50-people', text: 'Up to 50 people in a group.' },
+      { id: 'groups.default-currency-and-header', text: "Pick a group's default currency and give it a header image." },
       { id: 'groups.no-leaving-while-owing', text: 'Nobody can leave a group while they still owe or are owed money.' },
     ],
     notApproved: [
@@ -182,6 +183,7 @@ export const features: readonly FeatureRecord[] = [
         id: 'permissions.managed-group',
         text: 'In a managed group, admins approve new members and only creators and admins can change expenses.',
       },
+      { id: 'permissions.presets-or-your-own', text: 'Start with Open collaboration or Managed group, or set each permission yourself.' },
       { id: 'permissions.lock-the-group', text: "Lock the group when it's over so the numbers stay put." },
     ],
     notApproved: ['anyone can manage permissions', 'any claim that viewers can add expenses'],
@@ -362,6 +364,8 @@ export const features: readonly FeatureRecord[] = [
     claims: [
       { id: 'settlements.pay-however-then-record', text: 'Pay each other however you like, then record it.' },
       { id: 'settlements.quick-settle-fills-amount', text: 'Quick-settle buttons fill in the amount.' },
+      // No payment provider, bank or card field anywhere in the app (code search, 22 November 2026)
+      { id: 'settlements.no-bank-connection', text: "Side Badger doesn't connect to your bank or ask for your bank details." },
       {
         id: 'settlements.part-payment-stays-on-balance',
         text: 'Pay part of what you owe; the rest stays on the balance.',
@@ -550,7 +554,8 @@ export const features: readonly FeatureRecord[] = [
   {
     id: 'comments',
     homePage: 'feature/plan-together',
-    capability: 'Comment on the group, on any expense, list or poll, with formatting and up to three attachments.',
+    capability:
+      'Comment on the group, on any expense, list or poll, with formatting. Comments on the group, a list or a poll take up to three attachments; comments on an expense take none in the app (ExpenseDetailModal sets allowAttachmentUpload false).',
     problem: '',
     audiences: { primary: [], secondary: [] },
     status: 'available',
@@ -572,7 +577,13 @@ export const features: readonly FeatureRecord[] = [
     relatedFeatures: [],
     useCases: [],
     searchLanguage: [],
-    claims: [{ id: 'comments.next-to-the-expense', text: "Keep the conversation next to the expense it's about." }],
+    claims: [
+      { id: 'comments.next-to-the-expense', text: "Keep the conversation next to the expense it's about." },
+      // Group, expense, list and poll are the only comment parents (CommentParentTypes); payments take
+      // reactions, not comments
+      { id: 'comments.group-and-everything', text: 'Comment on the group itself, or on any expense, list or poll.' },
+      { id: 'comments.attach-files', text: 'Attach photos or PDFs to comments on the group, a list or a poll.' },
+    ],
     notApproved: ['group chat', 'messaging'],
     release: 1,
   },
@@ -806,6 +817,11 @@ export const features: readonly FeatureRecord[] = [
       },
       // The homepage hero's short form (owner approval, 22 November 2026): it runs in the browser
       { id: 'home-screen.no-app-to-download', text: 'No app to download.' },
+      // The manifest installs the same web app (start_url and scope "/"), with no separate release
+      {
+        id: 'home-screen.same-app-everywhere',
+        text: "It's the same app in the browser and on your home screen, so new features reach both at once.",
+      },
     ],
     notApproved: ['native app', 'works offline'],
     release: 1,
@@ -981,7 +997,13 @@ export const features: readonly FeatureRecord[] = [
     relatedFeatures: ['receipt-scanning', 'expense-splitting', 'balances', 'settlements'],
     useCases: [],
     searchLanguage: [],
-    claims: [{ id: 'ai-assistants.works-with-chatgpt-and-claude', text: 'Works with ChatGPT and Claude.' }],
+    claims: [
+      { id: 'ai-assistants.works-with-chatgpt-and-claude', text: 'Works with ChatGPT and Claude.' },
+      {
+        id: 'ai-assistants.ask-your-assistant',
+        text: 'Ask ChatGPT or Claude to add an expense, scan a receipt or record a payment.',
+      },
+    ],
     notApproved: [
       'a listing, store or install link before one is public',
       'naming the MCP server, OAuth or other connection details in page copy',

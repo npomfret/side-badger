@@ -1,145 +1,180 @@
-translatedFrom: "18384294"
+translatedFrom: "100a5816"
 review:
   status: checked
-  checker: "CF-check"
-  date: "2026-11-19"
+  checker: "BT-compare-reframe"
+  date: "2026-11-22"
 identicalApproved:
   - table.columns.sideBadger
 claims:
+  - comments.next-to-the-expense
+  - comments.group-and-everything
+  - comments.attach-files
+  - receipt-attachments.keep-the-receipt
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - reactions.celebrate-a-payment
+  - permissions.viewer-sees-everything
+  - permissions.presets-or-your-own
+  - permissions.lock-the-group
+  - invites.admin-approval
   - receipt-scanning.no-scan-credits
   - receipt-scanning.fills-in-for-you-to-check
   - currency-conversion.convert-as-you-go
   - currency-conversion.original-amount-stays
   - multi-currency.currency-count
+  - multi-currency.limit-group-currencies
+  - groups.default-currency-and-header
   - languages.39-languages
   - home-screen.opens-like-an-app
+  - home-screen.same-app-everywhere
   - settlements.pay-however-then-record
+  - settlements.no-bank-connection
+  - ai-assistants.works-with-chatgpt-and-claude
+  - ai-assistants.ask-your-assistant
+  - feedback.tell-us-from-the-app
   - expense-splitting.equal-exact-percentage
-  - expense-splitting.copy-last-months-rent
   - invites.link-or-qr-code
   - accounts.all-you-need-is-an-email
 meta:
-  title: "Side Badger ve Splitwise: ücretsiz kısımlar | Side Badger"
-  description: "Splitwise'a ücretsiz bir alternatif, adilce karşılaştırıldı. Makbuz tarama ve para birimi çevirme burada ücretsiz; Splitwise'ın daha iyi yaptıklarını da yazdık."
-h1: "Side Badger ve Splitwise: ücretsiz kısımlar karşılaştırıldı"
-navLabel: "Side Badger ve Splitwise"
-lead: "Grubunuzdan biri muhtemelen “Splitwise kullanın işte” demiştir. Haklı. Side Badger; makbuz tarama ve para birimi çevirme sunan, bunların kilidini açmak için abonelik istemeyen ücretsiz bir web uygulamasıdır. Hangisinin grubunuza uyacağı neye ihtiyaç duyduğunuza bağlı; işte karşılaştırma, Splitwise tarafı yalnızca Splitwise'ın kendi sayfalarından alınarak."
+  title: "Side Badger ile Splitwise: sadece rakamlar değil, tüm grup | Side Badger"
+  description: "Tüm grup için ücretsiz bir Splitwise alternatifi: yorumlar, sorular, listeler, anketler ve gerçek roller, üstüne ücretsiz makbuz tarama ve para birimi çevirme."
+h1: "Side Badger ile Splitwise: sadece rakamlar değil, tüm grup"
+navLabel: Side Badger ile Splitwise
+lead: "Grubunuzdan biri muhtemelen “Splitwise kullanın işte” demiştir. Anlaşılır: rakam işinde iyi. Side Badger da rakamları hesaplar, sonra gruba bunu konuşup halletmesi için bir yer verir: yorumlar, sorular, listeler, anketler ve gerçek grup rolleri. Makbuz tarama ve para birimi çevirme ücretsiz gelir."
 cta:
-  heading: "Bir sonraki ortak faturanızda deneyin"
-  body: "Ücretsiz bir hesap oluşturun, bir grup kurun ve gerçek bir harcama ekleyin. Size uymazsa abonelik değil, birkaç dakika harcamış olursunuz."
-asOf: 2026-10-21
-asOfNote: "Siz uğraşmayın diye Splitwise'ın kendi sayfalarını {date} tarihinde okuduk ve burada Splitwise hakkında yazılan her şey onlardan gelir. Tablonun her satırı kaynağına bağlanır. Planlar değişir, bu yüzden her çeyrekte yeniden kontrol ederiz; Splitwise'ın sayfaları bu sayfayla çelişirse onlara inanın."
+  heading: Bir sonraki ortak faturanızda deneyin
+  body: Ücretsiz bir hesap oluşturun, bir grup kurun ve gerçek bir harcama ekleyin. Size uymazsa abonelik değil, birkaç dakika harcamış olursunuz.
+asOf: 2026-11-22
+asOfNote: Siz okumak zorunda kalmayın diye Splitwise'ın kendi sayfalarını {date} tarihinde okuduk ve burada Splitwise hakkında yazılan her şey onlardan gelir. Tablonun her satırı kaynağına bağlanır. Planlar değişir, bu yüzden her çeyrekte yeniden kontrol ederiz; Splitwise'ın sayfaları bu sayfayla çelişirse onlara inanın.
 sources:
   - id: home
-    label: "Splitwise ana sayfası"
+    label: Splitwise ana sayfası
     url: https://www.splitwise.com/
   - id: pro
-    label: "Splitwise Pro sayfası"
+    label: Splitwise Pro sayfası
     url: https://www.splitwise.com/pro
   - id: pro-help
     label: "Splitwise yardım: Splitwise Pro nedir?"
     url: https://kb.splitwise.com/pro/what-is-splitwise-pro
+  - id: permissions-help
+    label: "Splitwise yardım: grup izinleri"
+    url: https://kb.splitwise.com/groups/can-i-prevent-group-members-from-changing-expenses-or-set-permissions
   - id: currencies-help
     label: "Splitwise yardım: birden fazla para birimi"
     url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-a-friendship-or-group-with-multiple-currencies
   - id: split-help
     label: "Splitwise yardım: bölüşme yolları"
     url: https://kb.splitwise.com/balances-and-expenses/what-are-different-ways-i-can-split-an-expense
-  - id: recurring-help
-    label: "Splitwise yardım: yinelenen harcamalar"
-    url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-recurring-expenses
   - id: payments-help
     label: "Splitwise yardım: para gönderme"
     url: https://kb.splitwise.com/payment-integrations/how-do-i-send-money-to-someone-on-splitwise
 tableAfter: 3
 sections:
-  - heading: "Splitwise'ın iyi yaptıkları"
-    body: "Grubunuz yerel bir uygulamaya, çevrimdışı kullanıma ya da uygulamanın içinde ödemelere ihtiyaç duyuyorsa Splitwise mantıklı seçimdir ve sonradan öğrenmenizdense onu seçmenizi tercih ederiz. Kendi sayfalarında şunlar yazıyor:"
+  - heading: Para muhabbeti, paranın yanında
+    body: Ortak paranın yanında sohbet, kuşku ve planlar da gelir. Side Badger üçünü de rakamların yanında tutar, kimsenin sohbette geriye kaydırmasına gerek kalmaz.
     items:
-      - "**Uygulamalar ve çevrimdışı kullanım.** Web'in yanı sıra iPhone ve Android uygulamaları ve bir çevrimdışı mod."
-      - "**Daha çok bölüşme yolu.** Eşit, tam tutar ve yüzdenin yanı sıra paylar, düzeltmeler ve kalem kalem bölüşmeler."
-      - "**Yinelenen harcamalar.** Kirayı tekrarlanacak şekilde ayarlayın ve unutun gitsin."
-      - "**Uygulamada ödemeler.** Bazı ülkelerde parayı da taşıyabilir; Splitwise Pay, Venmo, PayPal ya da Pay by Bank ile."
-  - heading: "Burada ücretsiz, orada ücretli"
-    body: "Splitwise Pro, Splitwise'ın ücretli planıdır ve kendi Pro sayfası, Side Badger'da hiçbir şeye mal olmayan üç şeyi satar."
+      - "**Yorumlar olmaları gereken yerde.** Grubun kendisine ya da herhangi bir harcamaya, listeye veya ankete yorum yapın; sohbet konuşulan şeyin yanında kalsın."
+      - "**Makbuzlar ve fotoğraflar.** Her harcamada üç makbuza kadar saklayın, grubun, bir listenin ya da bir anketin yorumlarına fotoğraf veya PDF ekleyin."
+      - "**Kavga değil, soru.** Bir yönetici soruları açabilir, sonra bir harcamadaki herkes onu sorabilir. Çözülene kadar bakiyelerin dışında kalır."
+      - "**Listeler ve anketler.** Ortak alışveriş listesini alışveriş harcamalarının yanında tutun, villa kısa listesini oylayın, isterseniz anonim."
+      - "**Biraz alkış.** Harcamalara, ödemelere ve yorumlara tepki verin, bir ödeme gelince kutlayın."
+  - heading: Grubunuz, kurallarınız
+    body: Splitwise'ın yardım merkezi grup yöneticilerini ya da özel izinleri desteklemediğini söylüyor. Side Badger'da roller ve izinler var; rakamları derli toplu tutacak birine ihtiyacı olan gruplar için.
+    items:
+      - "**Yöneticiler, üyeler ve izleyiciler.** Birini izleyici yapın: her şeyi görür, hiçbir şeyi değiştirmez."
+      - "**İki şablon ya da kendi ayarlarınız.** Açık ya da Yönetilen ile başlayın, ya da her izni kendiniz ayarlayın: harcamaları kimin düzenleyip sileceği, listeleri kimin düzenleyeceği, kimin davet edeceği ve yeni kişileri kimin içeri alacağı."
+      - "**Katılmak için onay.** Onayı açın, her kişiyi bir yönetici içeri alsın."
+      - "**Grubun kendi ayarları.** Gerçekten kullandığınız para birimleriyle sınırlayın, varsayılan para birimini seçin ve bir kapak görseli verin."
+      - "**Bitince kilitleyin.** Bir yönetici kilidini açana kadar rakamlar yerinde durur."
+  - heading: Burada ücretsiz, orada ücretli
+    body: Splitwise Pro, Splitwise'ın ücretli planıdır ve kendi Pro sayfası, Side Badger'da hiçbir şeye mal olmayan üç şeyi satar.
     items:
       - "**Makbuz tarama.** Splitwise Pro makbuzunuzun fotoğrafını tarar. Side Badger bunu ücretsiz yapar, tarama kredisi olmadan: toplamı, tarihi ve yeri sizin kontrol etmeniz için doldurur."
       - "**Para birimi çevirme.** Splitwise Pro, Convert'e dokunduğunuzda bir grubun harcamalarını varsayılan para biriminize çevirir. Side Badger her harcamayı girerken, güncel bir döviz kuruyla ya da gerçekten aldığınız kurla çevirir ve özgün tutar harcamada kalır."
       - "**Günlük sınır yok.** Splitwise Pro sınırsız harcama satar ve yardım merkezi, ücretsiz kullanıcıların günde en çok 4 harcama ekleyebileceğini söyler. Side Badger'ın günlük sınırı yok."
-  - heading: "Splitwise'ın olup Side Badger'ın olmayanlar"
-    body: "Bu, Splitwise'ın her özelliği değil; yalnızca kararı çoğunlukla belirleyenler. Tam liste Splitwise'ın kendi sayfalarında. Side Badger'ın yetersiz kaldığı yerler şunlar."
+  - heading: Bankanız işin dışında
+    body: Side Badger bankanıza bağlanmaz ve sizden banka bilgisi istemez. Kimin kime borçlu olduğunun kaydını tutar; birbirinize istediğiniz yolla ödersiniz, sonra ödemeyi kaydedersiniz. Teslim edeceğiniz bir banka girişi bilgisi yok, yani korunacak bir şey eksik.
+  - heading: Tek uygulama, tarayıcıda ve telefonda
+    body: Side Badger tarayıcınızda çalışır. Giriş yapın, ana ekrana ekleyin, uygulama gibi açılır. İki yerde de aynı uygulama, yani yeni bir özellik uygulamayı bir sonraki açışınızda telefonunuzda olur; uygulama mağazası güncellemesini beklemenize gerek yok.
+  - heading: Bir de birkaç numara
     items:
-      - "**Yerel uygulamalar.** Side Badger tarayıcınızda çalışır. Giriş yapın, sonra ana ekranınıza ekleyin; bir uygulama gibi açılır."
+      - "**Asistanınıza sorun.** Side Badger ChatGPT ve Claude ile çalışır: asistanınızdan harcama eklemesini, makbuz taramasını ya da ödeme kaydetmesini isteyin."
+      - "**Herkes kendi dilinde.** Side Badger 39 dil konuşur ve herkes kendi dilini seçer. Splitwise'ın ana sayfası 7+ diyor. 133 para birimini de destekler, her yere uzanan geziler için."
+      - "**Uygulamadan çıkmadan yardım.** Takıldınız mı, ya da bir hata mı buldunuz? Uygulamadan bize yazın, yanıtımızı da hemen orada okuyun."
+  - heading: Splitwise'ın hâlâ önde olduğu yerler
+    body: Doğru uygulamayı seçmenizi, sonradan öğrenmenize tercih ederiz. Grubunuzun bunlardan birine ihtiyacı varsa, Splitwise'da var, Side Badger'da yok.
+    items:
+      - "**Uygulama mağazası uygulamaları.** Side Badger tarayıcınızda ve ana ekranınızda yaşar, uygulama mağazalarında değil."
       - "**Çevrimdışı mod.** Side Badger bağlantı gerektirir."
-      - "**Uygulamada ödemeler.** Side Badger paranıza asla dokunmaz. Birbirinize istediğiniz yolla ödeyin, sonra ödemeyi kaydedin."
-      - "**Yinelenen harcamalar.** Side Badger'da yok. Yeniden yazmak yerine geçen ayın kirasını kopyalayın."
+      - "**Uygulamada ödemeler.** Bazı ülkelerde Splitwise parayı da gönderebilir. Side Badger yalnızca kaydı tutar."
       - "**Paylara ya da kaleme göre bölüşme.** Side Badger'da harcama başına bir ödeyen var; eşit, tam tutarlarla ya da yüzdeyle bölünür. Makbuz taraması kalemleri kişilere atamaz."
       - "**Grafikler ve varsayılan bölüşümler.** Splitwise Pro'da ikisi de var. Side Badger kimin kime borçlu olduğunun hesabını tutar, bütün numara bu."
-  - heading: "Grubunuzu taşımak"
-    body: "İçe aktarıcı yok, yani taşınmak yeni bir başlangıç demek. Önce Splitwise'ta ödeşin, sonra Side Badger'da bir grup kurun ve herkesi bir bağlantı ya da QR koduyla davet edin. Gruptaki herkesin ücretsiz bir hesaba ihtiyacı var ve kaydolmak için gereken tek şey bir e-posta adresi."
+  - heading: Grubunuzu taşımak
+    body: İçe aktarma özelliği yok, yani taşınmak yeni bir başlangıç demek. Önce Splitwise'ta ödeşin, sonra Side Badger'da bir grup kurun ve herkesi bir bağlantı ya da QR koduyla davet edin. Gruptaki herkesin ücretsiz bir hesaba ihtiyacı var ve kaydolmak için gereken tek şey bir e-posta adresi.
 table:
-  heading: "Yan yana"
+  heading: Yan yana
   caption: "{date} tarihli Splitwise ayrıntıları, Splitwise'ın kendi sayfalarından."
-  sourceLabel: "Kaynak"
+  sourceLabel: Kaynak
   columns:
-    feature: "Ne"
-    other: "Splitwise, kendi sayfalarına göre"
-    sideBadger: "Side Badger"
+    feature: Ne
+    other: Splitwise, kendi sayfalarına göre
+    sideBadger: Side Badger
   rows:
-    - feature: "Maliyeti"
-      other: "Splitwise Pro aylık ya da yıllık bir aboneliktir. Yıllık planlar, bir gezi grubuna 30 gün Pro özellikleri veren bir Trip Pass içerir."
-      sideBadger: "Ücretsiz. Günlük sınır yok."
+    - feature: Ne kadar
+      other: Splitwise Pro aylık ya da yıllık bir aboneliktir. Yıllık planlar, bir gezi grubuna 30 gün Pro özellikleri veren bir Trip Pass içerir.
+      sideBadger: Ücretsiz.
       source: pro-help
-    - feature: "Günlük harcama sayısı"
-      other: "Yardım merkezi, ücretsiz kullanıcıların günde en çok 4 harcama ekleyebileceğini söyler. Pro'da günlük sınır yok."
-      sideBadger: "Günlük sınır yok."
+    - feature: Günlük harcama sayısı
+      other: Yardım merkezi, ücretsiz kullanıcıların günde en çok 4 harcama ekleyebileceğini söyler. Pro'da günlük sınır yok.
+      sideBadger: Günlük sınır yok.
       source: pro-help
-    - feature: "Makbuz tarama"
-      other: "Bir Pro özelliği. Bir makbuzun fotoğrafını tarar ve Pro'nun kalem kalem bölme özelliği kalemleri kişilere atamanıza izin verir."
-      sideBadger: "Ücretsiz, tarama kredisi yok. Toplamı, tarihi ve yeri sizin kontrol etmeniz için doldurur; kalemleri kişilere atamaz."
+    - feature: Grup rolleri ve izinler
+      other: Yardım merkezi, grup yöneticilerini ya da özel izinleri desteklemediğini söylüyor.
+      sideBadger: Yöneticiler, üyeler ve izleyiciler. İki şablon ya da kendi izinleriniz, katılmak için onay ve iş bitince bir kilit.
+      source: permissions-help
+    - feature: Makbuz tarama
+      other: Bir Pro özelliği. Bir makbuzun fotoğrafını tarar ve Pro'nun kalem kalem bölme özelliği kalemleri kişilere atamanıza izin verir.
+      sideBadger: Ücretsiz, tarama kredisi yok. Toplamı, tarihi ve yeri sizin kontrol etmeniz için doldurur; kalemleri kişilere atamaz.
       source: pro
-    - feature: "Para birimi çevirme"
-      other: "Bir Pro özelliği. Convert'e dokunun; Splitwise bir grubun harcamalarını o andaki döviz kuruyla varsayılan para biriminize çevirir."
-      sideBadger: "Ücretsiz. Her harcamayı girerken, güncel bir döviz kuruyla ya da gerçekten aldığınız kurla çevirin. Özgün tutar harcamada kalır."
+    - feature: Para birimi çevirme
+      other: Bir Pro özelliği. Convert'e dokunun; Splitwise bir grubun harcamalarını o andaki döviz kuruyla varsayılan para biriminize çevirir.
+      sideBadger: Ücretsiz. Her harcamayı girerken, güncel bir döviz kuruyla ya da gerçekten aldığınız kurla çevirin. Özgün tutar harcamada kalır.
       source: currencies-help
-    - feature: "Nerede kullanılır"
-      other: "iPhone ve Android uygulamaları ve web."
-      sideBadger: "Tarayıcınızda. Giriş yapın, sonra ana ekranınıza ekleyin; bir uygulama gibi açılır. Yerel uygulama yok."
+    - feature: Para birimleri ve diller
+      other: Ana sayfasının ifadesiyle 100'den fazla para birimi ve 7'den fazla dil.
+      sideBadger: 133 para birimi ve 39 dil. Gruptaki herkes kendi dilini seçebilir.
       source: home
-    - feature: "Para birimleri ve diller"
-      other: "Ana sayfasının ifadesiyle 100'den fazla para birimi ve 7'den fazla dil."
-      sideBadger: "133 para birimi ve 39 dil. Gruptaki herkes kendi dilini seçebilir."
+    - feature: Nerede kullanılır
+      other: iPhone ve Android uygulamaları ve web.
+      sideBadger: Tarayıcınızda. Giriş yapın, sonra ana ekrana ekleyin, uygulama gibi açılır. Uygulama mağazalarında yok.
       source: home
-    - feature: "Bölüşme yolları"
-      other: "Eşit, tam tutarlarla, yüzdeyle, paylarla, düzeltmeyle ya da kalem kalem."
-      sideBadger: "Eşit, tam tutarlarla ya da yüzdeyle, harcama başına bir ödeyenle. Paylarla ya da kaleme göre değil."
+    - feature: Bölüşme yolları
+      other: Eşit, tam tutarlarla, yüzdeyle, paylarla, düzeltmeyle ya da kalem kalem.
+      sideBadger: Eşit, tam tutarlarla ya da yüzdeyle, harcama başına bir ödeyenle. Paylarla ya da kaleme göre değil.
       source: split-help
-    - feature: "Yinelenen harcamalar"
-      other: "Evet: haftalık, iki haftalık, aylık ya da yıllık."
-      sideBadger: "Hayır. Yeniden yazmak yerine geçen ayın kirasını kopyalayın."
-      source: recurring-help
-    - feature: "Çevrimdışı kullanım"
-      other: "Çekirdek özellikleri arasında bir çevrimdışı modu sayar."
-      sideBadger: "Hayır. Bağlantı gerektirir."
+    - feature: Çevrimdışı kullanım
+      other: Çekirdek özellikleri arasında bir çevrimdışı modu sayar.
+      sideBadger: Hayır. Bağlantı gerektirir.
       source: home
-    - feature: "Ödemeler"
-      other: "Bazı yerlerde uygulamanın içinden para gönderebilir: ABD'de Splitwise Pay, ABD doları bakiyeleri için Venmo ve PayPal, seçili Avrupa ülkelerinde Pay by Bank. Başka yerlerde dışarıda yapılan bir ödemeyi kaydedersiniz."
-      sideBadger: "Paranıza asla dokunmaz. Birbirinize istediğiniz yolla ödeyin, sonra ödemeyi kaydedin."
+    - feature: Ödemeler ve bankanız
+      other: "Bazı yerlerde uygulamanın içinden para gönderebilir: ABD'de Splitwise Pay, ABD doları bakiyeleri için Venmo, PayPal ve seçili Avrupa ülkelerinde Pay by Bank; bu, kişisel bir vadesiz hesabı bağlar."
+      sideBadger: Paranıza asla dokunmaz ve banka bilginizi istemez. Birbirinize istediğiniz yolla ödeyin, sonra ödemeyi kaydedin.
       source: payments-help
-    - feature: "Grafikler ve varsayılan bölüşümler"
-      other: "İkisi de Pro özelliği."
-      sideBadger: "İkisi de yok."
+    - feature: Grafikler ve varsayılan bölüşümler
+      other: İkisi de Pro özelliği.
+      sideBadger: İkisi de yok.
       source: pro
 faq:
-  heading: "Sorular"
+  heading: Sorular
   items:
-    - q: "Side Badger, Splitwise'a ücretsiz bir alternatif mi?"
-      a: "Bir grupta hesap bölüşmek için, evet. Makbuz tarama ve para birimi çevirme ücretsiz, günlük sınır da yok. Yerel bir uygulamaya, çevrimdışı kullanıma, yinelenen harcamalara ya da uygulamanın içinde ödemelere ihtiyacınız varsa bunları Splitwise yapar, Side Badger yapmaz."
-    - q: "Splitwise ayrıntıları nereden geliyor?"
+    - q: Side Badger, Splitwise'a ücretsiz bir alternatif mi?
+      a: "Bir gruptaki harcamaları bölüşmek için evet, üstelik hesaplamadan fazlasını yapar: yorumlar, sorular, listeler, anketler ve grup rolleri; makbuz tarama ve para birimi çevirme ücretsiz. Uygulama mağazası uygulaması, çevrimdışı kullanım ya da uygulama içi ödeme gerekiyorsa bunları Splitwise yapar, Side Badger yapmaz."
+    - q: Splitwise ayrıntıları nereden geliyor?
       a: "Splitwise'ın kendi sayfalarından: ana sayfası, Pro sayfası ve yardım merkezi. Tablonun her satırı geldiği sayfaya bağlanır ve tablonun üstündeki tarih onları ne zaman okuduğumuzu söyler. Her çeyrekte kontrol ederiz."
-    - q: "Side Badger ücretsiz kalacak mı?"
-      a: "Side Badger'daki her şey bugün ücretsiz. Bu bir gün değişirse önceden haber veririz. Ayrıntılar [fiyatlandırma sayfasında](page:pricing)."
-    - q: "Grubumdaki herkes geçmek zorunda mı?"
-      a: "Evet. Bir gruptaki herkesin ücretsiz bir Side Badger hesabı olması gerekir ve bir bağlantı ya da QR koduyla katılabilirler."
-    - q: "Side Badger'ın mobil uygulaması var mı?"
-      a: "Uygulama mağazasında yok. Tarayıcınızda çalışır: telefonunuzda giriş yapın, sonra bir uygulama gibi açılması için ana ekranınıza ekleyin. [Nasıl çalışır](page:how-it-works) nasıl yapılacağını gösterir."
+    - q: Side Badger ücretsiz kalacak mı?
+      a: Side Badger'daki her şey bugün ücretsiz. Bu bir gün değişirse önceden haber veririz. Ayrıntılar için [fiyatlandırma sayfasına](page:pricing) bakın.
+    - q: Grubumdaki herkes geçiş yapmak zorunda mı?
+      a: Evet. Bir gruptaki herkesin ücretsiz bir Side Badger hesabı olması gerekir ve bir bağlantı ya da QR koduyla katılabilirler.
+    - q: Side Badger'ın mobil uygulaması var mı?
+      a: "Uygulama mağazasında yok. Tarayıcınızda çalışır: telefonunuzda giriş yapın, ana ekrana ekleyin, uygulama gibi açılsın. [Nasıl çalışır](page:how-it-works) nasıl yapılacağını gösterir."

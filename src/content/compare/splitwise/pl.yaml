@@ -1,35 +1,53 @@
-translatedFrom: "18384294"
+translatedFrom: "100a5816"
 review:
   status: checked
-  checker: "CF-check"
-  date: "2026-11-19"
+  checker: "BT-compare-reframe"
+  date: "2026-11-22"
 identicalApproved:
   - navLabel
   - table.columns.sideBadger
 claims:
+  - comments.next-to-the-expense
+  - comments.group-and-everything
+  - comments.attach-files
+  - receipt-attachments.keep-the-receipt
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - reactions.celebrate-a-payment
+  - permissions.viewer-sees-everything
+  - permissions.presets-or-your-own
+  - permissions.lock-the-group
+  - invites.admin-approval
   - receipt-scanning.no-scan-credits
   - receipt-scanning.fills-in-for-you-to-check
   - currency-conversion.convert-as-you-go
   - currency-conversion.original-amount-stays
   - multi-currency.currency-count
+  - multi-currency.limit-group-currencies
+  - groups.default-currency-and-header
   - languages.39-languages
   - home-screen.opens-like-an-app
+  - home-screen.same-app-everywhere
   - settlements.pay-however-then-record
+  - settlements.no-bank-connection
+  - ai-assistants.works-with-chatgpt-and-claude
+  - ai-assistants.ask-your-assistant
+  - feedback.tell-us-from-the-app
   - expense-splitting.equal-exact-percentage
-  - expense-splitting.copy-last-months-rent
   - invites.link-or-qr-code
   - accounts.all-you-need-is-an-email
 meta:
-  title: "Side Badger vs Splitwise: porównanie darmowych opcji | Side Badger"
-  description: "Darmowa alternatywa dla Splitwise, uczciwie porównana. Skanowanie paragonów i przeliczanie walut za darmo. Piszemy też, co Splitwise robi lepiej."
-h1: "Side Badger vs Splitwise: porównanie darmowych opcji"
-navLabel: "Side Badger vs Splitwise"
-lead: "Ktoś w twojej grupie pewnie powiedział: „po prostu użyjcie Splitwise”. Racja. Side Badger to darmowa aplikacja internetowa ze skanowaniem paragonów i przeliczaniem walut, bez subskrypcji, która by je odblokowywała. To, która pasuje twojej grupie, zależy od tego, czego ona potrzebuje, więc oto porównanie, w którym strona Splitwise pochodzi wyłącznie z jego własnych stron."
+  title: "Side Badger vs Splitwise: cała grupa, nie tylko rozliczenia | Side Badger"
+  description: "Darmowa alternatywa dla Splitwise dla całej grupy: komentarze, pytania, listy, ankiety i porządne role, a do tego darmowe skanowanie paragonów i przeliczanie walut."
+h1: "Side Badger vs Splitwise: cała grupa, nie tylko rozliczenia"
+navLabel: Side Badger vs Splitwise
+lead: "Ktoś w twojej grupie pewnie powiedział: „po prostu użyjcie Splitwise”. Racja: liczenie to jego mocna strona. Side Badger też liczy, a do tego daje grupie miejsce, gdzie można to wszystko omówić: komentarze, pytania, listy, ankiety i porządne role w grupie. Skanowanie paragonów i przeliczanie walut dostajesz gratis."
 cta:
-  heading: "Wypróbuj na następnym wspólnym rachunku"
-  body: "Załóż darmowe konto, utwórz grupę i dodaj jeden prawdziwy wydatek. Jeśli to nie dla ciebie, kosztowało to kilka minut, a nie subskrypcję."
-asOf: 2026-10-21
-asOfNote: "Przeczytaliśmy strony Splitwise w dniu {date}, więc ty nie musisz, a wszystko, co tu piszemy o Splitwise, pochodzi z nich. Każdy wiersz tabeli odsyła do swojego źródła. Plany się zmieniają, więc sprawdzamy ponownie co kwartał, a jeśli strony Splitwise nie zgadzają się z tą, wierz im."
+  heading: Wypróbuj na następnym wspólnym rachunku
+  body: Załóż darmowe konto, utwórz grupę i dodaj jeden prawdziwy wydatek. Jeśli to nie dla ciebie, kosztowało to kilka minut, a nie subskrypcję.
+asOf: 2026-11-22
+asOfNote: Przeczytaliśmy strony Splitwise w dniu {date}, więc ty nie musisz, a wszystko, co tu piszemy o Splitwise, pochodzi z nich. Każdy wiersz tabeli odsyła do swojego źródła. Plany się zmieniają, więc sprawdzamy ponownie co kwartał, a jeśli strony Splitwise nie zgadzają się z tą, wierz im.
 sources:
   - id: home
     label: Strona główna Splitwise
@@ -40,47 +58,64 @@ sources:
   - id: pro-help
     label: "Pomoc Splitwise: czym jest Splitwise Pro?"
     url: https://kb.splitwise.com/pro/what-is-splitwise-pro
+  - id: permissions-help
+    label: "Pomoc Splitwise: uprawnienia w grupie"
+    url: https://kb.splitwise.com/groups/can-i-prevent-group-members-from-changing-expenses-or-set-permissions
   - id: currencies-help
     label: "Pomoc Splitwise: wiele walut"
     url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-a-friendship-or-group-with-multiple-currencies
   - id: split-help
     label: "Pomoc Splitwise: sposoby dzielenia"
     url: https://kb.splitwise.com/balances-and-expenses/what-are-different-ways-i-can-split-an-expense
-  - id: recurring-help
-    label: "Pomoc Splitwise: wydatki cykliczne"
-    url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-recurring-expenses
   - id: payments-help
     label: "Pomoc Splitwise: wysyłanie pieniędzy"
     url: https://kb.splitwise.com/payment-integrations/how-do-i-send-money-to-someone-on-splitwise
 tableAfter: 3
 sections:
-  - heading: "W czym Splitwise jest dobry"
-    body: "Jeśli twoja grupa potrzebuje natywnej aplikacji, pracy offline albo płatności w aplikacji, Splitwise jest rozsądnym wyborem i wolimy, żebyście go wybrali, niż przekonali się o tym później. Jego własne strony wymieniają:"
+  - heading: Rozmowy o pieniądzach, obok pieniędzy
+    body: Wspólne pieniądze to też pogaduchy, wątpliwości i plany. Side Badger trzyma wszystkie trzy obok liczb, więc nikt nie musi cofać się po czacie.
     items:
-      - "**Aplikacje i praca offline.** Aplikacje na iPhone'a i Androida oraz wersja internetowa, a do tego tryb offline."
-      - "**Więcej sposobów dzielenia.** Udziały, korekty i podział według pozycji, oprócz podziału po równo, według dokładnych kwot i procentowo."
-      - "**Wydatki cykliczne.** Ustaw, żeby czynsz się powtarzał, i zapomnij o nim."
-      - "**Płatności w aplikacji.** W niektórych krajach potrafi też przesyłać pieniądze, przez Splitwise Pay, Venmo, PayPal lub Pay by Bank."
-  - heading: "Tu za darmo, tam płatne"
-    body: "Splitwise Pro to płatny plan Splitwise, a jego własna strona Pro sprzedaje trzy rzeczy, które w Side Badger nic nie kosztują."
+      - "**Komentarze tam, gdzie ich miejsce.** Komentuj samą grupę albo dowolny wydatek, listę czy ankietę i trzymaj rozmowę przy tym, czego dotyczy."
+      - "**Paragony i zdjęcia.** Trzymaj do trzech paragonów przy każdym wydatku i dodawaj zdjęcia lub pliki PDF do komentarzy w grupie, na liście albo w ankiecie."
+      - "**Pytania zamiast kłótni.** Administrator może włączyć pytania, a wtedy każdy, kto jest w wydatku, może o niego zapytać. Wydatek zostaje poza saldami, dopóki sprawa nie jest wyjaśniona."
+      - "**Listy i ankiety.** Trzymaj wspólną listę zakupów obok rachunków za zakupy i zrób głosowanie nad krótką listą willi, anonimowo, jeśli wolisz."
+      - "**Trochę oklasków.** Reaguj na wydatki, płatności i komentarze, a gdy płatność wpadnie, zaklaszcz."
+  - heading: Twoja grupa, twoje zasady
+    body: Centrum pomocy Splitwise mówi, że nie obsługuje administratorów grup ani specjalnych uprawnień. Side Badger ma role i uprawnienia, dla grup, które potrzebują kogoś, kto pilnuje porządku w liczbach.
     items:
-      - "**Skanowanie paragonów.** Splitwise Pro skanuje zdjęcie paragonu. Side Badger robi to za darmo, bez kredytów na skany: uzupełnia sumę, datę i miejsce do sprawdzenia."
-      - "**Przeliczanie walut.** Splitwise Pro przelicza wydatki grupy na twoją domyślną walutę, gdy dotkniesz Convert. Side Badger przelicza każdy wydatek przy wpisywaniu, po aktualnym kursie albo po tym, który faktycznie obowiązywał, a oryginalna kwota zostaje przy wydatku."
-      - "**Bez dziennych limitów.** Splitwise Pro sprzedaje nieograniczoną liczbę wydatków, a jego centrum pomocy mówi, że darmowi użytkownicy mogą dodawać do 4 wydatków dziennie. Side Badger nie ma dziennych limitów."
-  - heading: "Co ma Splitwise, a Side Badger nie"
-    body: "To nie wszystkie funkcje Splitwise, tylko te, które zwykle decydują. Pełną listę mają strony samego Splitwise. Tu Side Badger wypada gorzej."
+      - "**Administratorzy, członkowie i widzowie.** Zrób z kogoś widza: widzi wszystko i niczego nie zmienia."
+      - "**Dwa gotowe zestawy albo własne ustawienia.** Zacznij od Otwartej współpracy albo Grupy zarządzanej, albo ustaw każde uprawnienie osobno: kto edytuje i usuwa wydatki, edytuje listy, zaprasza i wpuszcza nowe osoby."
+      - "**Zatwierdzanie dołączenia.** Włącz zatwierdzanie, a administrator wpuszcza każdą osobę osobno."
+      - "**Własne ustawienia grupy.** Ogranicz ją do walut, których naprawdę używasz, wybierz jej domyślną walutę i dodaj zdjęcie nagłówka."
+      - "**Zablokuj, gdy już po wszystkim.** Liczby zostają, jak są, dopóki administrator ich nie odblokuje."
+  - heading: Tu za darmo, tam płatne
+    body: Splitwise Pro to płatny plan Splitwise, a jego własna strona Pro sprzedaje trzy rzeczy, które w Side Badger nic nie kosztują.
     items:
-      - "**Natywne aplikacje.** Side Badger działa w przeglądarce. Zaloguj się, a potem dodaj go do ekranu głównego, a otworzy się jak aplikacja."
+      - "**Skanowanie paragonów.** Splitwise Pro skanuje zdjęcie paragonu. Side Badger robi to za darmo, bez pakietów skanów: uzupełnia sumę, datę i miejsce do sprawdzenia."
+      - "**Przeliczanie walut.** Splitwise Pro przelicza wydatki grupy na twoją domyślną walutę, gdy dotkniesz Przelicz. Side Badger przelicza każdy wydatek przy wpisywaniu, po aktualnym kursie albo po tym, który faktycznie obowiązywał, a oryginalna kwota zostaje przy wydatku."
+      - "**Bez dziennego limitu.** Splitwise Pro sprzedaje nieograniczoną liczbę wydatków, a jego centrum pomocy mówi, że darmowi użytkownicy mogą dodawać do 4 wydatków dziennie. Side Badger nie ma dziennego limitu."
+  - heading: Twój bank zostaje poza grą
+    body: "Side Badger nie łączy się z twoim bankiem i nie prosi o dane twojego banku. Prowadzi rejestr, kto komu jest winien; płacisz, jak chcesz, a potem rejestrujesz płatność. Żadnego logowania do banku, więc o jedną rzecz mniej do pilnowania."
+  - heading: Jedna aplikacja, w przeglądarce i na telefonie
+    body: Side Badger działa w przeglądarce. Zaloguj się, dodaj go do ekranu głównego, a otworzy się jak aplikacja. To ta sama aplikacja tu i tu, więc nowa funkcja jest na twoim telefonie przy najbliższym otwarciu aplikacji, bez czekania na aktualizację ze sklepu.
+  - heading: I kilka popisowych sztuczek
+    items:
+      - "**Zapytaj swojego asystenta.** Side Badger współpracuje z ChatGPT i Claude: poproś swojego, żeby dodał wydatek, zeskanował paragon albo zarejestrował płatność."
+      - "**Każdy w swoim języku.** Side Badger mówi w 39 językach, a każda osoba wybiera własny. Strona główna Splitwise mówi o 7+. Obsługuje też 133 waluty, na wyjazd, który zabierze cię wszędzie."
+      - "**Pomoc bez wychodzenia z aplikacji.** Coś nie działa albo trafił ci się błąd? Napisz do nas z aplikacji i od razu tam przeczytaj naszą odpowiedź."
+  - heading: W czym Splitwise nadal wygrywa
+    body: Lepiej od razu wybrać właściwą aplikację, niż przekonać się o tym później. Jeśli twoja grupa potrzebuje którejś z tych rzeczy, Splitwise to ma, a Side Badger nie.
+    items:
+      - "**Aplikacje ze sklepu.** Side Badger działa w przeglądarce i na ekranie głównym, a nie w sklepach z aplikacjami."
       - "**Tryb offline.** Side Badger potrzebuje połączenia."
-      - "**Płatności w aplikacji.** Side Badger nigdy nie dotyka twoich pieniędzy. Płaćcie sobie, jak chcecie, a potem zarejestrujcie płatność."
-      - "**Wydatki cykliczne.** Side Badger ich nie ma. Skopiuj zeszłomiesięczny czynsz zamiast wpisywać go od nowa."
+      - "**Płatności w aplikacji.** W niektórych krajach Splitwise potrafi też przesyłać pieniądze. Side Badger tylko prowadzi rejestr."
       - "**Dzielenie według udziałów lub pozycji.** W Side Badger każdy wydatek ma jednego płatnika i dzieli się go po równo, według dokładnych kwot albo procentowo. Skanowanie paragonów nie przypisuje pozycji do osób."
       - "**Wykresy i domyślne podziały.** Splitwise Pro ma jedno i drugie. Side Badger prowadzi rachunek, kto komu jest winien, i na tym cała sztuczka polega."
-  - heading: "Przenosiny grupy"
-    body: "Nie ma importera, więc przenosiny oznaczają nowy start. Najpierw rozliczcie się w Splitwise, potem utwórzcie grupę w Side Badger i zaproście wszystkich linkiem lub kodem QR. Każdy w grupie potrzebuje darmowego konta, a do rejestracji wystarczy adres e-mail."
+  - heading: Przenosiny grupy
+    body: Nie ma importera, więc przenosiny oznaczają nowy start. Najpierw rozlicz się w Splitwise, potem utwórz grupę w Side Badger i zaproś wszystkich linkiem lub kodem QR. Każdy w grupie potrzebuje darmowego konta, a do rejestracji wystarczy adres e-mail.
 table:
-  heading: "Obok siebie"
-  caption: "Dane o Splitwise z dnia {date}, ze stron samego Splitwise."
+  heading: Obok siebie
+  caption: Dane o Splitwise z dnia {date}, ze stron samego Splitwise.
   sourceLabel: Źródło
   columns:
     feature: Co
@@ -88,59 +123,59 @@ table:
     sideBadger: Side Badger
   rows:
     - feature: Ile kosztuje
-      other: "Splitwise Pro to subskrypcja miesięczna lub roczna. Plany roczne zawierają Trip Pass, który daje grupie wyjazdowej funkcje Pro na 30 dni."
-      sideBadger: "Za darmo. Bez dziennych limitów."
+      other: Splitwise Pro to subskrypcja miesięczna lub roczna. Plany roczne zawierają Trip Pass, który daje grupie wyjazdowej funkcje Pro na 30 dni.
+      sideBadger: Za darmo.
       source: pro-help
     - feature: Wydatki dziennie
-      other: "Jego centrum pomocy mówi, że darmowi użytkownicy mogą dodawać do 4 wydatków dziennie. Pro nie ma dziennego limitu."
-      sideBadger: "Bez dziennych limitów."
+      other: Jego centrum pomocy mówi, że darmowi użytkownicy mogą dodawać do 4 wydatków dziennie. Pro nie ma dziennego limitu.
+      sideBadger: Bez dziennego limitu.
       source: pro-help
+    - feature: Role i uprawnienia w grupie
+      other: Jego centrum pomocy mówi, że nie obsługuje administratorów grup ani specjalnych uprawnień.
+      sideBadger: Administratorzy, członkowie i widzowie. Dwa gotowe zestawy albo własne uprawnienia, zatwierdzanie dołączenia i blokada na koniec.
+      source: permissions-help
     - feature: Skanowanie paragonów
-      other: "Funkcja Pro. Skanuje zdjęcie paragonu, a podział na pozycje w Pro pozwala przypisać pozycje do osób."
-      sideBadger: "Za darmo, bez kredytów na skany. Uzupełnia sumę, datę i miejsce do sprawdzenia i nie przypisuje pozycji do osób."
+      other: Funkcja Pro. Skanuje zdjęcie paragonu, a podział na pozycje w Pro pozwala przypisać pozycje do osób.
+      sideBadger: Za darmo, bez pakietów skanów. Uzupełnia sumę, datę i miejsce do sprawdzenia i nie przypisuje pozycji do osób.
       source: pro
     - feature: Przeliczanie walut
-      other: "Funkcja Pro. Dotknij Convert, a Splitwise przeliczy wydatki grupy na twoją domyślną walutę po kursie z tej chwili."
-      sideBadger: "Za darmo. Przeliczaj każdy wydatek przy wpisywaniu, po aktualnym kursie albo po tym, który faktycznie obowiązywał. Oryginalna kwota zostaje przy wydatku."
+      other: Funkcja Pro. Dotknij Przelicz, a Splitwise przeliczy wydatki grupy na twoją domyślną walutę po kursie z tej chwili.
+      sideBadger: Za darmo. Przeliczaj każdy wydatek przy wpisywaniu, po aktualnym kursie albo po tym, który faktycznie obowiązywał. Oryginalna kwota zostaje przy wydatku.
       source: currencies-help
-    - feature: Gdzie z tego korzystasz
-      other: "Aplikacje na iPhone'a i Androida oraz wersja internetowa."
-      sideBadger: "W przeglądarce. Zaloguj się, a potem dodaj go do ekranu głównego, a otworzy się jak aplikacja. Bez natywnej aplikacji."
-      source: home
     - feature: Waluty i języki
-      other: "100+ walut i 7+ języków, jak ujmuje to jego strona główna."
-      sideBadger: "133 waluty i 39 języków. Każdy w grupie może wybrać własny język."
+      other: 100+ walut i 7+ języków, jak ujmuje to jego strona główna.
+      sideBadger: 133 waluty i 39 języków. Każdy w grupie może wybrać własny język.
+      source: home
+    - feature: Gdzie z tego korzystasz
+      other: Aplikacje na iPhone'a i Androida oraz wersja internetowa.
+      sideBadger: W przeglądarce. Zaloguj się, dodaj go do ekranu głównego i otworzy się jak aplikacja. Nie ma go w sklepach z aplikacjami.
       source: home
     - feature: Sposoby dzielenia
-      other: "Po równo, według dokładnych kwot, procentowo, według udziałów, według korekty lub według pozycji."
-      sideBadger: "Po równo, według dokładnych kwot albo procentowo, z jednym płatnikiem na wydatek. Nie według udziałów ani pozycji."
+      other: Po równo, według dokładnych kwot, procentowo, według udziałów, według korekty lub według pozycji.
+      sideBadger: Po równo, według dokładnych kwot albo procentowo, z jednym płatnikiem na wydatek. Nie według udziałów ani pozycji.
       source: split-help
-    - feature: Wydatki cykliczne
-      other: "Tak: co tydzień, co dwa tygodnie, co miesiąc lub co rok."
-      sideBadger: "Nie. Skopiuj zeszłomiesięczny czynsz zamiast wpisywać go od nowa."
-      source: recurring-help
     - feature: Praca offline
-      other: "Wymienia tryb offline wśród swoich podstawowych funkcji."
-      sideBadger: "Nie. Potrzebuje połączenia."
+      other: Wymienia tryb offline wśród swoich podstawowych funkcji.
+      sideBadger: Nie. Potrzebuje połączenia.
       source: home
-    - feature: Płatności
-      other: "W niektórych miejscach potrafi wysyłać pieniądze z poziomu aplikacji: Splitwise Pay w USA, Venmo i PayPal dla sald w dolarach amerykańskich oraz Pay by Bank w wybranych krajach europejskich. Gdzie indziej rejestrujesz płatność dokonaną poza aplikacją."
-      sideBadger: "Nigdy nie dotyka twoich pieniędzy. Płaćcie sobie, jak chcecie, a potem zarejestrujcie płatność."
+    - feature: Płatności i twój bank
+      other: "W niektórych miejscach potrafi wysyłać pieniądze z poziomu aplikacji: Splitwise Pay w USA, Venmo dla sald w dolarach amerykańskich, PayPal oraz Pay by Bank w wybranych krajach europejskich, który łączy osobiste konto bieżące."
+      sideBadger: Nigdy nie dotyka twoich pieniędzy i nie prosi o dane banku. Płać, jak chcesz, a potem zarejestruj płatność.
       source: payments-help
     - feature: Wykresy i domyślne podziały
-      other: "Jedno i drugie to funkcje Pro."
-      sideBadger: "Nie ma ani jednego, ani drugiego."
+      other: Jedno i drugie to funkcje Pro.
+      sideBadger: Nie ma ani jednego, ani drugiego.
       source: pro
 faq:
-  heading: "Pytania"
+  heading: Pytania
   items:
-    - q: "Czy Side Badger to darmowa alternatywa dla Splitwise?"
-      a: "Do dzielenia rachunków w grupie tak. Skanowanie paragonów i przeliczanie walut są za darmo, bez dziennych limitów. Jeśli potrzebujesz natywnej aplikacji, pracy offline, wydatków cyklicznych albo płatności w aplikacji, robi to Splitwise, a Side Badger nie."
-    - q: "Skąd pochodzą dane o Splitwise?"
+    - q: Czy Side Badger to darmowa alternatywa dla Splitwise?
+      a: "Do dzielenia rachunków w grupie tak, i robi więcej niż rozliczenia: komentarze, pytania, listy, ankiety i role w grupie, a skanowanie paragonów i przeliczanie walut są za darmo. Jeśli potrzebujesz aplikacji ze sklepu, pracy offline albo płatności w aplikacji, robi to Splitwise, a Side Badger nie."
+    - q: Skąd pochodzą dane o Splitwise?
       a: "Ze stron samego Splitwise: jego strony głównej, strony Pro i centrum pomocy. Każdy wiersz tabeli odsyła do strony, z której pochodzi, a data nad tabelą mówi, kiedy je czytaliśmy. Sprawdzamy je co kwartał."
-    - q: "Czy Side Badger pozostanie darmowy?"
-      a: "Wszystko w Side Badger jest dziś darmowe. Jeśli to się kiedyś zmieni, najpierw damy ci znać. Szczegóły ma [strona z cennikiem](page:pricing)."
-    - q: "Czy wszyscy w mojej grupie muszą się przesiąść?"
-      a: "Tak. Każdy w grupie potrzebuje darmowego konta w Side Badger i może dołączyć linkiem lub kodem QR."
-    - q: "Czy Side Badger ma aplikację mobilną?"
+    - q: Czy Side Badger pozostanie darmowy?
+      a: Wszystko w Side Badger jest dziś darmowe. Jeśli to się kiedyś zmieni, najpierw damy ci znać. Szczegóły ma [strona z cennikiem](page:pricing).
+    - q: Czy wszyscy w mojej grupie muszą się przesiąść?
+      a: Tak. Każdy w grupie potrzebuje darmowego konta w Side Badger i może dołączyć linkiem lub kodem QR.
+    - q: Czy Side Badger ma aplikację mobilną?
       a: "Nie w sklepie z aplikacjami. Działa w przeglądarce: zaloguj się na telefonie, a potem dodaj go do ekranu głównego, żeby otwierał się jak aplikacja. [Jak to działa](page:how-it-works) pokazuje jak."

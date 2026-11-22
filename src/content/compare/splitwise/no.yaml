@@ -1,33 +1,52 @@
-translatedFrom: "18384294"
+translatedFrom: "100a5816"
 review:
   status: checked
-  checker: "CX-review"
-  date: "2026-11-20"
+  checker: "BT-compare-reframe"
+  date: "2026-11-22"
+identicalApproved:
+  - navLabel
+  - table.columns.sideBadger
 claims:
+  - comments.next-to-the-expense
+  - comments.group-and-everything
+  - comments.attach-files
+  - receipt-attachments.keep-the-receipt
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - reactions.celebrate-a-payment
+  - permissions.viewer-sees-everything
+  - permissions.presets-or-your-own
+  - permissions.lock-the-group
+  - invites.admin-approval
   - receipt-scanning.no-scan-credits
   - receipt-scanning.fills-in-for-you-to-check
   - currency-conversion.convert-as-you-go
   - currency-conversion.original-amount-stays
   - multi-currency.currency-count
+  - multi-currency.limit-group-currencies
+  - groups.default-currency-and-header
   - languages.39-languages
   - home-screen.opens-like-an-app
+  - home-screen.same-app-everywhere
   - settlements.pay-however-then-record
+  - settlements.no-bank-connection
+  - ai-assistants.works-with-chatgpt-and-claude
+  - ai-assistants.ask-your-assistant
+  - feedback.tell-us-from-the-app
   - expense-splitting.equal-exact-percentage
-  - expense-splitting.copy-last-months-rent
   - invites.link-or-qr-code
   - accounts.all-you-need-is-an-email
-identicalApproved:
-  - table.columns.sideBadger
 meta:
-  title: "Side Badger mot Splitwise: gratisdelene sammenlignet | Side Badger"
-  description: "Gratis Splitwise-alternativ, rettferdig sammenlignet. Kvitteringsskanning og valutakonvertering er gratis, og vi viser hva Splitwise gjør bedre."
-h1: "Side Badger mot Splitwise: gratisdelene sammenlignet"
-navLabel: Side Badger mot Splitwise
-lead: "Noen i gruppen din har sikkert sagt «bare bruk Splitwise». Greit nok. Side Badger er en gratis nettapp med kvitteringsskanning og valutakonvertering, og uten abonnement for å låse dem opp. Hvilken som passer gruppen din, avhenger av hva den trenger, så her er sammenligningen, med Splitwises side hentet bare fra Splitwises egne sider."
+  title: "Side Badger vs Splitwise: hele gruppen, ikke bare regnestykkene | Side Badger"
+  description: "Et gratis Splitwise-alternativ for hele gruppen: kommentarer, spørsmål, lister, avstemninger og ordentlige roller, pluss gratis kvitteringsskanning og valutakonvertering."
+h1: "Side Badger vs Splitwise: hele gruppen, ikke bare regnestykkene"
+navLabel: Side Badger vs Splitwise
+lead: "Noen i gruppen din har sikkert sagt «bare bruk Splitwise». Greit nok: den er god på regnestykkene. Side Badger gjør regnestykkene også, og gir så gruppen et sted å snakke dem gjennom: kommentarer, spørsmål, lister, avstemninger og ordentlige grupperoller. Kvitteringsskanning og valutakonvertering er gratis."
 cta:
   heading: Prøv det på neste felles regning
   body: "Opprett en gratis konto, lag en gruppe og legg til én ekte utgift. Hvis det ikke er noe for deg, har du brukt noen minutter, ikke et abonnement."
-asOf: 2026-10-21
+asOf: 2026-11-22
 asOfNote: "Vi leste Splitwises egne sider {date} så du slipper det, og alt her om Splitwise kommer fra dem. Hver rad i tabellen lenker til kilden sin. Planer endres, så vi sjekker på nytt hvert kvartal, og hvis Splitwises sider er uenige med denne, tro dem."
 sources:
   - id: home
@@ -39,42 +58,59 @@ sources:
   - id: pro-help
     label: "Splitwise-hjelp: Hva er Splitwise Pro?"
     url: https://kb.splitwise.com/pro/what-is-splitwise-pro
+  - id: permissions-help
+    label: "Splitwise-hjelp: gruppetillatelser"
+    url: https://kb.splitwise.com/groups/can-i-prevent-group-members-from-changing-expenses-or-set-permissions
   - id: currencies-help
     label: "Splitwise-hjelp: flere valutaer"
     url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-a-friendship-or-group-with-multiple-currencies
   - id: split-help
     label: "Splitwise-hjelp: måter å dele på"
     url: https://kb.splitwise.com/balances-and-expenses/what-are-different-ways-i-can-split-an-expense
-  - id: recurring-help
-    label: "Splitwise-hjelp: gjentakende utgifter"
-    url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-recurring-expenses
   - id: payments-help
     label: "Splitwise-hjelp: sende penger"
     url: https://kb.splitwise.com/payment-integrations/how-do-i-send-money-to-someone-on-splitwise
 tableAfter: 3
 sections:
-  - heading: Det Splitwise gjør bra
-    body: "Trenger gruppen din en egen app, bruk uten nett eller betalinger inne i appen, er Splitwise det fornuftige valget, og vi vil heller at du velger det enn at du oppdager det senere. Splitwises egne sider oppgir:"
+  - heading: Pengeprat, ved siden av pengene
+    body: "Felles penger kommer med prat, tvil og planer. Side Badger holder alle tre ved siden av tallene, så ingen må bla seg tilbake i chatten."
     items:
-      - "**Apper og bruk uten nett.** Apper for iPhone og Android i tillegg til nettet, og en frakoblet modus."
-      - "**Flere måter å dele på.** Andeler, justeringer og deling per vare, i tillegg til likt, nøyaktig og etter prosent."
-      - "**Gjentakende utgifter.** La husleien gjentas av seg selv, og glem den."
-      - "**Betalinger i appen.** I noen land kan den flytte pengene også, via Splitwise Pay, Venmo, PayPal eller Pay by Bank."
+      - "**Kommentarer der de hører hjemme.** Kommenter selve gruppen, eller en hvilken som helst utgift, liste eller avstemning, og la samtalen stå ved siden av det den handler om."
+      - "**Kvitteringer og bilder.** Ha opptil tre kvitteringer på hver utgift, og legg til bilder eller PDF-er i kommentarer på gruppen, en liste eller en avstemning."
+      - "**Spørsmål, ikke krangel.** En administrator kan slå på spørsmål, så kan alle i en utgift spørre om den. Den holdes utenfor saldoene til det er avklart."
+      - "**Lister og avstemninger.** Ha den felles handlelisten ved siden av handleregningene, og send villashortlisten til avstemning, anonymt hvis du vil."
+      - "**Litt applaus.** Reager på utgifter, betalinger og kommentarer, og feir en betaling når den kommer inn."
+  - heading: Din gruppe, dine regler
+    body: "Splitwises hjelpesenter sier at den ikke støtter gruppeadministratorer eller spesielle tillatelser. Side Badger har roller og tillatelser, for gruppene som trenger noen som holder orden på tallene."
+    items:
+      - "**Administratorer, medlemmer og seere.** Gjør noen til seer: de ser alt og endrer ingenting."
+      - "**To forhåndsinnstillinger, eller dine egne.** Start med Åpent samarbeid eller Administrert gruppe, eller still inn hver tillatelse selv: hvem som redigerer og sletter utgifter, redigerer lister, inviterer og slipper inn nye."
+      - "**Godkjenning for å bli med.** Slå på godkjenning, så slipper en administrator inn hver enkelt."
+      - "**Gruppens egne innstillinger.** Begrens den til valutaene dere faktisk bruker, velg standardvalutaen og gi den et bannerbilde."
+      - "**Lås den når det er over.** Tallene blir stående til en administrator låser opp."
   - heading: Gratis her, betalt der
-    body: "Splitwise Pro er Splitwises betalte abonnement, og Splitwises egen Pro-side selger tre ting som ikke koster noe i Side Badger."
+    body: "Splitwise Pro er Splitwises betalte abonnement, og Splitwises egen Pro-side tilbyr tre ting som ikke koster noe i Side Badger."
     items:
       - "**Kvitteringsskanning.** Splitwise Pro skanner et bilde av kvitteringen din. Side Badger gjør det gratis, uten skannekreditter: den fyller inn sum, dato og sted, slik at du kan sjekke."
       - "**Valutakonvertering.** Splitwise Pro konverterer en gruppes utgifter til standardvalutaen din når du trykker på Konverter. Side Badger konverterer hver utgift mens du legger den inn, med en gjeldende valutakurs eller den du faktisk fikk, og det opprinnelige beløpet blir stående på utgiften."
-      - "**Ingen daglige grenser.** Splitwise Pro selger ubegrensede utgifter, og hjelpesenteret deres sier at gratisbrukere kan legge til opptil 4 utgifter hver dag. Side Badger har ingen daglige grenser."
-  - heading: Det Splitwise har som Side Badger ikke har
-    body: "Dette er ikke alle Splitwises funksjoner, bare de som ofte avgjør. Splitwises egne sider har hele listen. Her er der Side Badger kommer til kort."
+      - "**Ingen daglig grense.** Splitwise Pro tilbyr ubegrenset antall utgifter, og hjelpesenteret deres sier at gratisbrukere kan legge til opptil 4 utgifter hver dag. Side Badger har ingen daglig grense."
+  - heading: Banken din holdes utenfor
+    body: "Side Badger kobler seg ikke til banken din og ber ikke om bankopplysningene dine. Den fører oversikten over hvem som skylder hvem; dere betaler hverandre slik dere vil, og registrerer så betalingen. Ingen bankinnlogging å levere fra seg, så ett bekymringspunkt mindre."
+  - heading: Én app, i nettleseren og på telefonen
+    body: "Side Badger kjører i nettleseren. Logg inn, legg den til på startskjermen, så åpnes den som en app. Det er den samme appen uansett, så en ny funksjon er på telefonen din neste gang du åpner appen, uten at du må vente på en oppdatering fra appbutikken."
+  - heading: Og noen festkunster
     items:
-      - "**Egne apper.** Side Badger fungerer i nettleseren. Logg inn, og legg den til på startskjermen, så åpnes den som en app."
+      - "**Spør assistenten din.** Side Badger fungerer med ChatGPT og Claude: be din legge til en utgift, skanne en kvittering eller registrere en betaling."
+      - "**Alle på sitt eget språk.** Side Badger snakker 39 språk, og hver og en velger sitt eget. Splitwises hjemmeside oppgir 7+. Den håndterer også 133 valutaer, for turen som går til alle kanter."
+      - "**Hjelp uten å forlate appen.** Står du fast, eller har du funnet en feil? Si fra i appen og les svaret vårt rett der."
+  - heading: Der Splitwise fortsatt vinner
+    body: "Vi vil heller at du velger riktig app enn at du oppdager det senere. Trenger gruppen din noe av dette, har Splitwise det og Side Badger ikke."
+    items:
+      - "**Apper fra appbutikken.** Side Badger bor i nettleseren og på startskjermen, ikke i appbutikkene."
       - "**Frakoblet modus.** Side Badger trenger en tilkobling."
-      - "**Betalinger i appen.** Side Badger rører aldri pengene dine. Betal hverandre slik dere vil, og registrer så betalingen."
-      - "**Gjentakende utgifter.** Side Badger har ingen. Kopier forrige måneds husleie i stedet for å skrive den inn på nytt."
+      - "**Betalinger i appen.** I noen land kan Splitwise flytte pengene også. Side Badger fører bare oversikten."
       - "**Deling etter andeler eller per vare.** Side Badger har én betaler per utgift, delt likt, etter nøyaktige beløp eller etter prosent. Kvitteringsskanningen tildeler ikke varer til personer."
-      - "**Diagrammer og standarddelinger.** Splitwise Pro har begge. Side Badger fører regnskapet over hvem som skylder hvem, og det er hele trikset."
+      - "**Diagrammer og standarddelinger.** Splitwise Pro har begge. Side Badger fører oversikten over hvem som skylder hvem, og det er hele trikset."
   - heading: Flytte gruppen over
     body: "Det finnes ingen importfunksjon, så en flytting betyr en ny start. Gjør opp i Splitwise først, opprett så en gruppe i Side Badger og inviter alle med en lenke eller en QR-kode. Alle i gruppen trenger en gratis konto, og alt som skal til for å registrere seg, er en e-postadresse."
 table:
@@ -88,12 +124,16 @@ table:
   rows:
     - feature: Hva det koster
       other: "Splitwise Pro er et månedlig eller årlig abonnement. Årlige abonnementer inkluderer et Trip Pass, som gir en turgruppe Pro-funksjoner i 30 dager."
-      sideBadger: "Gratis. Ingen daglige grenser."
+      sideBadger: "Gratis."
       source: pro-help
     - feature: Utgifter per dag
       other: "Hjelpesenteret deres sier at gratisbrukere kan legge til opptil 4 utgifter hver dag. Pro har ingen daglig grense."
-      sideBadger: "Ingen daglige grenser."
+      sideBadger: "Ingen daglig grense."
       source: pro-help
+    - feature: Grupperoller og tillatelser
+      other: "Hjelpesenteret deres sier at den ikke støtter gruppeadministratorer eller spesielle tillatelser."
+      sideBadger: "Administratorer, medlemmer og seere. To forhåndsinnstillinger eller dine egne tillatelser, godkjenning for å bli med og en lås for når det er over."
+      source: permissions-help
     - feature: Kvitteringsskanning
       other: "En Pro-funksjon. Skanner et bilde av en kvittering, og Pros spesifisering per vare lar deg tildele varene til personer."
       sideBadger: "Gratis, uten skannekreditter. Den fyller inn sum, dato og sted, slik at du kan sjekke, og tildeler ikke varer til personer."
@@ -102,29 +142,25 @@ table:
       other: "En Pro-funksjon. Trykk på Konverter, så konverterer Splitwise en gruppes utgifter til standardvalutaen din med valutakursen i det øyeblikket."
       sideBadger: "Gratis. Konverter hver utgift mens du legger den inn, med en gjeldende valutakurs eller den du faktisk fikk. Det opprinnelige beløpet blir stående på utgiften."
       source: currencies-help
-    - feature: Hvor du bruker det
-      other: "Apper for iPhone og Android, og nettet."
-      sideBadger: "I nettleseren din. Logg inn, og legg den til på startskjermen, så åpnes den som en app. Ingen egen app."
-      source: home
     - feature: Valutaer og språk
       other: "100+ valutaer og 7+ språk, slik hjemmesiden deres formulerer det."
       sideBadger: "133 valutaer og 39 språk. Alle i gruppen kan velge sitt eget språk."
+      source: home
+    - feature: Hvor du bruker det
+      other: "Apper for iPhone og Android, og nettet."
+      sideBadger: "I nettleseren din. Logg inn, og legg den til på startskjermen, så åpnes den som en app. Ikke i appbutikkene."
       source: home
     - feature: Måter å dele på
       other: "Likt, etter nøyaktige beløp, etter prosent, etter andeler, etter justering eller spesifisert per vare."
       sideBadger: "Likt, etter nøyaktige beløp eller etter prosent, med én betaler per utgift. Ikke etter andeler eller per vare."
       source: split-help
-    - feature: Gjentakende utgifter
-      other: "Ja: ukentlig, annenhver uke, månedlig eller årlig."
-      sideBadger: "Nei. Kopier forrige måneds husleie i stedet for å skrive den inn på nytt."
-      source: recurring-help
-    - feature: Bruk uten nett
+    - feature: Frakoblet bruk
       other: "Oppgir en frakoblet modus blant kjernefunksjonene sine."
       sideBadger: "Nei. Den trenger en tilkobling."
       source: home
-    - feature: Betalinger
-      other: "Noen steder kan den sende penger fra appen: Splitwise Pay i USA, Venmo og PayPal for saldoer i amerikanske dollar, og Pay by Bank i utvalgte europeiske land. Andre steder registrerer du en betaling gjort utenfor."
-      sideBadger: "Rører aldri pengene dine. Betal hverandre slik dere vil, og registrer så betalingen."
+    - feature: Betalinger og banken din
+      other: "Noen steder kan den sende penger fra appen: Splitwise Pay i USA, Venmo for saldoer i amerikanske dollar, PayPal, og Pay by Bank i utvalgte europeiske land, som kobler til en personlig brukskonto."
+      sideBadger: "Rører aldri pengene dine og ber ikke om bankopplysningene dine. Betal hverandre slik dere vil, og registrer så betalingen."
       source: payments-help
     - feature: Diagrammer og standarddelinger
       other: "Begge er Pro-funksjoner."
@@ -134,7 +170,7 @@ faq:
   heading: Spørsmål
   items:
     - q: Er Side Badger et gratis alternativ til Splitwise?
-      a: "For å dele regninger i en gruppe, ja. Kvitteringsskanning og valutakonvertering er gratis, uten daglige grenser. Trenger du en egen app, bruk uten nett, gjentakende utgifter eller betalinger inne i appen, gjør Splitwise det, og Side Badger gjør det ikke."
+      a: "For å dele regninger i en gruppe, ja, og den gjør mer enn regnestykkene: kommentarer, spørsmål, lister, avstemninger og grupperoller, med gratis kvitteringsskanning og valutakonvertering. Trenger du en app fra appbutikken, frakoblet bruk eller betalinger inne i appen, gjør Splitwise det, og Side Badger gjør det ikke."
     - q: Hvor kommer Splitwise-detaljene fra?
       a: "Splitwises egne sider: hjemmesiden, Pro-siden og hjelpesenteret. Hver rad i tabellen lenker til siden den kom fra, og datoen over tabellen sier når vi leste dem. Vi sjekker dem hvert kvartal."
     - q: Forblir Side Badger gratis?

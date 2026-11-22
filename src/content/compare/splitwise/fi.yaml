@@ -1,34 +1,52 @@
-translatedFrom: "18384294"
+translatedFrom: "100a5816"
 review:
   status: checked
-  checker: "CF-check"
-  date: "2026-11-19"
+  checker: "BT-compare-reframe"
+  date: "2026-11-22"
 claims:
+  - comments.next-to-the-expense
+  - comments.group-and-everything
+  - comments.attach-files
+  - receipt-attachments.keep-the-receipt
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - reactions.celebrate-a-payment
+  - permissions.viewer-sees-everything
+  - permissions.presets-or-your-own
+  - permissions.lock-the-group
+  - invites.admin-approval
   - receipt-scanning.no-scan-credits
   - receipt-scanning.fills-in-for-you-to-check
   - currency-conversion.convert-as-you-go
   - currency-conversion.original-amount-stays
   - multi-currency.currency-count
+  - multi-currency.limit-group-currencies
+  - groups.default-currency-and-header
   - languages.39-languages
   - home-screen.opens-like-an-app
+  - home-screen.same-app-everywhere
   - settlements.pay-however-then-record
+  - settlements.no-bank-connection
+  - ai-assistants.works-with-chatgpt-and-claude
+  - ai-assistants.ask-your-assistant
+  - feedback.tell-us-from-the-app
   - expense-splitting.equal-exact-percentage
-  - expense-splitting.copy-last-months-rent
   - invites.link-or-qr-code
   - accounts.all-you-need-is-an-email
 identicalApproved:
   - navLabel
   - table.columns.sideBadger
 meta:
-  title: "Side Badger vs Splitwise: ilmaiset ominaisuudet | Side Badger"
-  description: "Ilmainen Splitwise-vaihtoehto: reilu vertailu. Kuittien skannaus ja valuuttamuunnos ovat ilmaisia, ja kerromme, missä Splitwise on parempi."
-h1: "Side Badger vs Splitwise: ilmaiset ominaisuudet vertailussa"
+  title: "Side Badger vs Splitwise: koko ryhmälle, ei vain laskuille | Side Badger"
+  description: "Ilmainen Splitwise-vaihtoehto koko ryhmälle: kommentit, kysymykset, listat, äänestykset ja kunnon roolit sekä ilmainen kuittien skannaus ja valuuttamuunnos."
+h1: "Side Badger vs Splitwise: koko ryhmälle, ei vain laskuille"
 navLabel: Side Badger vs Splitwise
-lead: "Joku ryhmässäsi on luultavasti sanonut ”käytä vaan Splitwisea”. Ihan reilu ehdotus. Side Badger on ilmainen verkkosovellus, jossa on kuittien skannaus ja valuuttojen muunnos, eikä niiden avaamiseen tarvita tilausta. Kumpi sopii ryhmällesi, riippuu siitä, mitä se tarvitsee, joten tässä vertailu, jossa Splitwisen puoli on otettu vain Splitwisen omilta sivuilta."
+lead: "Joku ryhmässäsi on luultavasti sanonut ”käytä vaan Splitwisea”. Ihan reilu ehdotus: se osaa laskea. Side Badger laskee myös ja antaa sitten ryhmälle paikan, jossa asiat voi puhua halki: kommentit, kysymykset, listat, äänestykset ja kunnon ryhmäroolit. Kuittien skannaus ja valuuttamuunnos tulevat kaupan päälle ilmaiseksi."
 cta:
   heading: Kokeile seuraavaa yhteistä laskua
   body: "Luo ilmainen tili, perusta ryhmä ja lisää yksi oikea kulu. Jos se ei ole sinua varten, olet käyttänyt pari minuuttia, et tilausta."
-asOf: 2026-10-21
+asOf: 2026-11-22
 asOfNote: "Luimme Splitwisen omat sivut {date}, jotta sinun ei tarvitse, ja kaikki täällä Splitwisesta kerrottu tulee niistä. Jokainen taulukon rivi linkittää lähteeseensä. Tilausmallit muuttuvat, joten tarkistamme ne uudelleen neljännesvuosittain, ja jos Splitwisen sivut ovat eri mieltä tämän sivun kanssa, usko niitä."
 sources:
   - id: home
@@ -40,40 +58,57 @@ sources:
   - id: pro-help
     label: "Splitwisen ohje: mikä on Splitwise Pro?"
     url: https://kb.splitwise.com/pro/what-is-splitwise-pro
+  - id: permissions-help
+    label: "Splitwisen ohje: ryhmän oikeudet"
+    url: https://kb.splitwise.com/groups/can-i-prevent-group-members-from-changing-expenses-or-set-permissions
   - id: currencies-help
     label: "Splitwisen ohje: useat valuutat"
     url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-a-friendship-or-group-with-multiple-currencies
   - id: split-help
     label: "Splitwisen ohje: jakotavat"
     url: https://kb.splitwise.com/balances-and-expenses/what-are-different-ways-i-can-split-an-expense
-  - id: recurring-help
-    label: "Splitwisen ohje: toistuvat kulut"
-    url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-recurring-expenses
   - id: payments-help
     label: "Splitwisen ohje: rahan lähettäminen"
     url: https://kb.splitwise.com/payment-integrations/how-do-i-send-money-to-someone-on-splitwise
 tableAfter: 3
 sections:
-  - heading: Missä Splitwise on hyvä
-    body: "Jos ryhmäsi tarvitsee natiivisovelluksen, offline-käyttöä tai maksuja sovelluksen sisällä, Splitwise on järkevä valinta, ja haluamme mieluummin, että valitset sen, kuin että saat sen selville myöhemmin. Sen omilla sivuilla luetellaan:"
+  - heading: "Rahapuhe rahojen vieressä"
+    body: "Yhteisiin rahoihin kuuluu rupattelua, epäilyksiä ja suunnitelmia. Side Badger pitää kaikki kolme lukujen vieressä, joten kenenkään ei tarvitse selata ryhmächattia taaksepäin."
     items:
-      - "**Sovellukset ja offline-käyttö.** iPhone- ja Android-sovellukset verkon lisäksi sekä offline-tila."
-      - "**Enemmän tapoja jakaa.** Jako osuuksina, säätöinä ja tuotteittain tasajaon, tarkkojen summien ja prosenttien lisäksi."
-      - "**Toistuvat kulut.** Aseta vuokra toistumaan ja unohda koko asia."
-      - "**Maksut sovelluksessa.** Joissakin maissa se voi siirtää myös rahat Splitwise Pay -palvelun, Venmon, PayPalin tai Pay by Bank -palvelun kautta."
+      - "**Kommentit siellä, minne ne kuuluvat.** Kommentoi itse ryhmää tai mitä tahansa kulua, listaa tai äänestystä, ja pidä keskustelu sen asian vieressä, josta puhutaan."
+      - "**Kuitit ja kuvat.** Säilytä jopa kolme kuittia jokaisessa kulussa ja lisää kuvia tai PDF-tiedostoja ryhmän, listan tai äänestyksen kommentteihin."
+      - "**Kysymyksiä, ei riitoja.** Ylläpitäjä voi ottaa kysymykset käyttöön, ja sitten kuka tahansa kulussa mukana oleva voi kysyä siitä. Kulu pysyy poissa saldoista, kunnes asia on selvä."
+      - "**Listat ja äänestykset.** Pidä yhteinen ostoslista ruokalaskujen vieressä ja äänestä huvilan lyhytlistasta, halutessasi nimettömästi."
+      - "**Pienet aplodit.** Reagoi kuluihin, maksuihin ja kommentteihin ja juhli maksua, kun se kolahtaa perille."
+  - heading: Sinun ryhmäsi, sinun sääntösi
+    body: "Splitwisen ohjekeskuksen mukaan se ei tue ryhmän ylläpitäjiä eikä erityisoikeuksia. Side Badgerissa on roolit ja oikeudet, niille ryhmille, jotka tarvitsevat jonkun pitämään luvut siisteinä."
+    items:
+      - "**Ylläpitäjät, jäsenet ja katselijat.** Tee jostakusta katselija: hän näkee kaiken eikä muuta mitään."
+      - "**Kaksi esiasetusta tai omat.** Aloita Avoimella yhteistyöllä tai Hallitulla ryhmällä tai aseta jokainen oikeus itse: kuka muokkaa ja poistaa kuluja, muokkaa listoja, kutsuu ja päästää uusia ihmisiä sisään."
+      - "**Hyväksyntä liittymiseen.** Ota hyväksyntä käyttöön, niin ylläpitäjä päästää jokaisen sisään erikseen."
+      - "**Ryhmän omat asetukset.** Rajaa ryhmä valuuttoihin, joita oikeasti käytät, valitse sen oletusvaluutta ja anna sille otsikkokuva."
+      - "**Lukitse, kun kaikki on ohi.** Luvut pysyvät paikallaan, kunnes ylläpitäjä avaa lukituksen."
   - heading: Täällä ilmaista, siellä maksullista
     body: "Splitwise Pro on Splitwisen maksullinen tilaus, ja sen oma Pro-sivu myy kolmea asiaa, jotka eivät maksa Side Badgerissa mitään."
     items:
       - "**Kuittien skannaus.** Splitwise Pro skannaa kuvan kuitistasi. Side Badger tekee sen ilmaiseksi ilman skannauskrediittejä: se täyttää summan, päivämäärän ja paikan tarkistettavaksesi."
       - "**Valuuttojen muunnos.** Splitwise Pro muuntaa ryhmän kulut oletusvaluuttaasi, kun napautat Convert-painiketta. Side Badger muuntaa jokaisen kulun sitä syöttäessäsi nykyisellä valuuttakurssilla tai kurssilla, jonka todella sait, ja alkuperäinen summa säilyy kulussa."
       - "**Ei päivittäisiä rajoja.** Splitwise Pro myy rajattomia kuluja, ja sen ohjekeskuksen mukaan ilmaiskäyttäjät voivat lisätä enintään 4 kulua päivässä. Side Badgerissa ei ole päivittäisiä rajoja."
-  - heading: Mitä Splitwisessa on, mitä Side Badgerissa ei ole
-    body: "Nämä eivät ole kaikki Splitwisen ominaisuudet, vain ne, jotka yleensä ratkaisevat. Täydellinen lista on Splitwisen omilla sivuilla. Tässä kohdat, joissa Side Badger jää jälkeen."
+  - heading: Pankkisi pysyy poissa kuvioista
+    body: "Side Badger ei yhdistä pankkiisi eikä pyydä pankkitietojasi. Se pitää kirjaa siitä, kuka on velkaa kenelle; te maksatte toisillenne miten haluatte ja kirjaatte maksun sitten. Ei pankkitunnuksia luovutettavaksi, joten yksi asia vähemmän suojattavana."
+  - heading: Yksi sovellus selaimessa ja puhelimessa
+    body: "Side Badger toimii selaimessa. Kirjaudu sisään, lisää se aloitusnäytölle, niin se avautuu kuin sovellus. Se on sama sovellus kummassakin, joten uusi ominaisuus on puhelimessasi, kun seuraavan kerran avaat sen, eikä sovelluskaupan päivitystä tarvitse odottaa."
+  - heading: "Ja muutama kikka"
     items:
-      - "**Natiivisovellukset.** Side Badger toimii selaimessa. Kirjaudu sisään ja lisää se sitten aloitusnäytölle, niin se avautuu kuin sovellus."
+      - "**Kysy avustajaltasi.** Side Badger toimii ChatGPT:n ja Clauden kanssa: pyydä avustajaasi lisäämään kulu, skannaamaan kuitti tai kirjaamaan maksu."
+      - "**Jokainen omalla kielellään.** Side Badger puhuu 39 kieltä ja jokainen valitsee omansa. Splitwisen etusivulla lukee 7+. Valuuttojakin se hallitsee 133, matkaa varten, joka vie vaikka minne."
+      - "**Apua poistumatta sovelluksesta.** Jäitkö jumiin tai löysitkö virheen? Kerro meille sovelluksesta ja lue vastauksemme saman tien siellä."
+  - heading: Missä Splitwise yhä voittaa
+    body: "Haluamme mieluummin, että valitset oikean sovelluksen, kuin että saat sen selville myöhemmin. Jos ryhmäsi tarvitsee jotakin näistä, Splitwisessa se on ja Side Badgerissa ei."
+    items:
+      - "**Sovelluskauppojen sovellukset.** Side Badger asuu selaimessasi ja aloitusnäytölläsi, ei sovelluskaupoissa."
       - "**Offline-tila.** Side Badger tarvitsee yhteyden."
-      - "**Maksut sovelluksessa.** Side Badger ei koske rahoihisi koskaan. Maksakaa toisillenne miten haluatte ja kirjatkaa maksu sitten."
-      - "**Toistuvat kulut.** Side Badgerissa ei ole niitä. Kopioi viime kuun vuokra sen sijaan, että kirjoittaisit sen uudelleen."
+      - "**Maksut sovelluksessa.** Joissakin maissa Splitwise voi siirtää rahatkin. Side Badger pitää vain kirjaa."
       - "**Jako osuuksina tai tuotteittain.** Side Badgerissa on yksi maksaja kulua kohden, ja kulu jaetaan tasan, tarkoilla summilla tai prosenteilla. Sen kuittien skannaus ei kohdista tuotteita ihmisille."
       - "**Kaaviot ja oletusjaot.** Splitwise Prossa on molemmat. Side Badger pitää kirjaa siitä, kuka on velkaa kenelle, ja siinä koko temppu."
   - heading: Ryhmän siirtäminen
@@ -89,12 +124,16 @@ table:
   rows:
     - feature: Hinta
       other: "Splitwise Pro on kuukausi- tai vuositilaus. Vuositilauksiin kuuluu Trip Pass, joka antaa matkaryhmälle Pro-ominaisuudet 30 päiväksi."
-      sideBadger: "Ilmainen. Ei päivittäisiä rajoja."
+      sideBadger: "Ilmainen."
       source: pro-help
     - feature: Kuluja päivässä
       other: "Sen ohjekeskuksen mukaan ilmaiskäyttäjät voivat lisätä enintään 4 kulua päivässä. Pro-tilauksessa ei ole päivittäistä rajaa."
       sideBadger: "Ei päivittäisiä rajoja."
       source: pro-help
+    - feature: Ryhmän roolit ja oikeudet
+      other: "Sen ohjekeskuksen mukaan se ei tue ryhmän ylläpitäjiä eikä erityisoikeuksia."
+      sideBadger: "Ylläpitäjät, jäsenet ja katselijat. Kaksi esiasetusta tai omat oikeudet, hyväksyntä liittymiseen ja lukitus, kun kaikki on ohi."
+      source: permissions-help
     - feature: Kuittien skannaus
       other: "Pro-ominaisuus. Skannaa kuvan kuitista, ja Pron tuotteittainen jako antaa kohdistaa tuotteet ihmisille."
       sideBadger: "Ilmainen, ilman skannauskrediittejä. Se täyttää summan, päivämäärän ja paikan tarkistettavaksesi eikä kohdista tuotteita ihmisille."
@@ -103,29 +142,25 @@ table:
       other: "Pro-ominaisuus. Napautat Convert-painiketta, ja Splitwise muuntaa ryhmän kulut oletusvaluuttaasi kyseisen hetken valuuttakurssilla."
       sideBadger: "Ilmainen. Muunna jokainen kulu sitä syöttäessäsi nykyisellä valuuttakurssilla tai kurssilla, jonka todella sait. Alkuperäinen summa säilyy kulussa."
       source: currencies-help
-    - feature: Missä sitä käytetään
-      other: "Sovellukset iPhonelle ja Androidille sekä verkossa."
-      sideBadger: "Selaimessa. Kirjaudu sisään ja lisää se sitten aloitusnäytölle, niin se avautuu kuin sovellus. Ei natiivisovellusta."
-      source: home
     - feature: Valuutat ja kielet
       other: "100+ valuuttaa ja 7+ kieltä, kuten sen etusivulla sanotaan."
       sideBadger: "133 valuuttaa ja 39 kieltä. Jokainen ryhmän jäsen voi valita oman kielensä."
+      source: home
+    - feature: Missä sitä käytetään
+      other: "Sovellukset iPhonelle ja Androidille sekä verkossa."
+      sideBadger: "Selaimessa. Kirjaudu sisään ja lisää se sitten aloitusnäytölle, niin se avautuu kuin sovellus. Ei sovelluskaupoissa."
       source: home
     - feature: Jakotavat
       other: "Tasan, tarkoilla summilla, prosenteilla, osuuksina, säätöinä tai tuotteittain."
       sideBadger: "Tasan, tarkoilla summilla tai prosenteilla, yksi maksaja kulua kohden. Ei osuuksina eikä tuotteittain."
       source: split-help
-    - feature: Toistuvat kulut
-      other: "Kyllä: viikoittain, kahden viikon välein, kuukausittain tai vuosittain."
-      sideBadger: "Ei. Kopioi viime kuun vuokra sen sijaan, että kirjoittaisit sen uudelleen."
-      source: recurring-help
     - feature: Offline-käyttö
       other: "Listaa offline-tilan yhdeksi ydinominaisuudekseen."
       sideBadger: "Ei. Se tarvitsee yhteyden."
       source: home
-    - feature: Maksut
-      other: "Joissakin paikoissa se voi lähettää rahaa sovelluksen sisältä: Splitwise Pay Yhdysvalloissa, Venmo ja PayPal Yhdysvaltain dollarin saldoille sekä Pay by Bank valituissa Euroopan maissa. Muualla kirjaat ulkopuolella tehdyn maksun."
-      sideBadger: "Ei koske rahoihisi koskaan. Maksakaa toisillenne miten haluatte ja kirjatkaa maksu sitten."
+    - feature: Maksut ja pankkisi
+      other: "Joissakin paikoissa se voi lähettää rahaa sovelluksen sisältä: Splitwise Pay Yhdysvalloissa, Venmo Yhdysvaltain dollarin saldoille, PayPal sekä Pay by Bank valituissa Euroopan maissa, joka yhdistää henkilökohtaisen käyttötilin."
+      sideBadger: "Ei koske rahoihisi koskaan eikä pyydä pankkitietojasi. Maksakaa toisillenne miten haluatte ja kirjatkaa maksu sitten."
       source: payments-help
     - feature: Kaaviot ja oletusjaot
       other: "Molemmat ovat Pro-ominaisuuksia."
@@ -135,7 +170,7 @@ faq:
   heading: Kysymyksiä
   items:
     - q: Onko Side Badger ilmainen vaihtoehto Splitwiselle?
-      a: "Laskujen jakamiseen ryhmässä, kyllä. Kuittien skannaus ja valuuttojen muunnos ovat ilmaisia, eikä päivittäisiä rajoja ole. Jos tarvitset natiivisovelluksen, offline-käyttöä, toistuvia kuluja tai maksuja sovelluksen sisällä, Splitwise tekee ne eikä Side Badger."
+      a: "Laskujen jakamiseen ryhmässä, kyllä, ja se osaa muutakin kuin laskea: kommentit, kysymykset, listat, äänestykset ja ryhmäroolit, ja kuittien skannaus ja valuuttojen muunnos ovat ilmaisia. Jos tarvitset sovelluskaupan sovelluksen, offline-käyttöä tai maksuja sovelluksen sisällä, Splitwise tekee ne eikä Side Badger."
     - q: Mistä Splitwisen tiedot ovat peräisin?
       a: "Splitwisen omilta sivuilta: sen etusivulta, Pro-sivulta ja ohjekeskuksesta. Jokainen taulukon rivi linkittää sivuun, josta se on peräisin, ja taulukon yläpuolella oleva päivämäärä kertoo, milloin luimme ne. Tarkistamme ne neljännesvuosittain."
     - q: Pysyykö Side Badger ilmaisena?

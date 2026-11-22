@@ -1,146 +1,181 @@
-translatedFrom: "18384294"
+translatedFrom: "100a5816"
 review:
   status: checked
-  checker: "CF-check"
-  date: "2026-11-19"
+  checker: "BT-compare-reframe"
+  date: "2026-11-22"
 identicalApproved:
   - navLabel
   - table.columns.sideBadger
 claims:
+  - comments.next-to-the-expense
+  - comments.group-and-everything
+  - comments.attach-files
+  - receipt-attachments.keep-the-receipt
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - reactions.celebrate-a-payment
+  - permissions.viewer-sees-everything
+  - permissions.presets-or-your-own
+  - permissions.lock-the-group
+  - invites.admin-approval
   - receipt-scanning.no-scan-credits
   - receipt-scanning.fills-in-for-you-to-check
   - currency-conversion.convert-as-you-go
   - currency-conversion.original-amount-stays
   - multi-currency.currency-count
+  - multi-currency.limit-group-currencies
+  - groups.default-currency-and-header
   - languages.39-languages
   - home-screen.opens-like-an-app
+  - home-screen.same-app-everywhere
   - settlements.pay-however-then-record
+  - settlements.no-bank-connection
+  - ai-assistants.works-with-chatgpt-and-claude
+  - ai-assistants.ask-your-assistant
+  - feedback.tell-us-from-the-app
   - expense-splitting.equal-exact-percentage
-  - expense-splitting.copy-last-months-rent
   - invites.link-or-qr-code
   - accounts.all-you-need-is-an-email
 meta:
-  title: "Side Badger vs Splitwise: ingyenes funkciók összevetve | Side Badger"
-  description: "Ingyenes Splitwise-alternatíva, tisztességesen összevetve. Nyugtaszkennelés és átváltás itt ingyen van, és felsoroljuk, miben jobb a Splitwise."
-h1: "Side Badger vs Splitwise: ingyenes funkciók összevetve"
-navLabel: "Side Badger vs Splitwise"
-lead: "Valaki a csoportodban valószínűleg már mondta, hogy „használjátok a Splitwise-t”. Jogos. A Side Badger egy ingyenes webalkalmazás nyugtaszkenneléssel és pénznemátváltással, és nem kell előfizetés, hogy ezeket feloldd. Hogy melyik illik a csoportodhoz, azon múlik, mire van szüksége, ezért itt az összehasonlítás, a Splitwise oldalát pedig kizárólag a Splitwise saját oldalairól vettük."
+  title: "Side Badger vs Splitwise: az egész csoport, nem csak a számolás | Side Badger"
+  description: "Ingyenes Splitwise-alternatíva az egész csoportnak: hozzászólások, kérdések, listák, szavazások és rendes szerepek, ingyenes nyugtaszkenneléssel és pénznem-átszámítással."
+h1: "Side Badger vs Splitwise: az egész csoport, nem csak a számolás"
+navLabel: Side Badger vs Splitwise
+lead: "Valaki a csoportodban valószínűleg már mondta, hogy „használjátok a Splitwise-t”. Jogos: a számolásban jó. A Side Badger is számol, aztán helyet ad a csoportnak, hogy át tudják beszélni: hozzászólások, kérdések, listák, szavazások és rendes csoportszerepek. A nyugtaszkennelés és a pénznem-átszámítás ingyen jár hozzá."
 cta:
-  heading: "Próbáld ki a következő közös számlán"
-  body: "Hozz létre ingyenes fiókot, csinálj egy csoportot, és adj hozzá egy valódi költséget. Ha nem neked való, pár percet költöttél, nem egy előfizetést."
-asOf: 2026-10-21
-asOfNote: "Elolvastuk a Splitwise saját oldalait ({date}), hogy neked ne kelljen, és minden, amit itt a Splitwise-ról írunk, azokból származik. A táblázat minden sora a forrására mutat. A csomagok változnak, ezért negyedévente újra ellenőrizzük, és ha a Splitwise oldalai ellentmondanak ennek az oldalnak, nekik higgy."
+  heading: Próbáld ki a következő közös számlán
+  body: Hozz létre ingyenes fiókot, csinálj egy csoportot, és adj hozzá egy valódi költséget. Ha nem neked való, pár percet költöttél, nem egy előfizetést.
+asOf: 2026-11-22
+asOfNote: Elolvastuk a Splitwise saját oldalait ({date}), hogy neked ne kelljen, és minden, amit itt a Splitwise-ról írunk, azokból származik. A táblázat minden sora a forrására mutat. A csomagok változnak, ezért negyedévente újra ellenőrizzük, és ha a Splitwise oldalai ellentmondanak ennek az oldalnak, nekik higgy.
 sources:
   - id: home
-    label: "A Splitwise kezdőlapja"
+    label: A Splitwise kezdőlapja
     url: https://www.splitwise.com/
   - id: pro
-    label: "A Splitwise Pro oldala"
+    label: A Splitwise Pro oldala
     url: https://www.splitwise.com/pro
   - id: pro-help
     label: "Splitwise súgó: What is Splitwise Pro?"
     url: https://kb.splitwise.com/pro/what-is-splitwise-pro
+  - id: permissions-help
+    label: "A Splitwise súgója: csoportjogosultságok"
+    url: https://kb.splitwise.com/groups/can-i-prevent-group-members-from-changing-expenses-or-set-permissions
   - id: currencies-help
     label: "Splitwise súgó: több pénznem"
     url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-a-friendship-or-group-with-multiple-currencies
   - id: split-help
     label: "Splitwise súgó: felosztási módok"
     url: https://kb.splitwise.com/balances-and-expenses/what-are-different-ways-i-can-split-an-expense
-  - id: recurring-help
-    label: "Splitwise súgó: ismétlődő költségek"
-    url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-recurring-expenses
   - id: payments-help
     label: "Splitwise súgó: pénz küldése"
     url: https://kb.splitwise.com/payment-integrations/how-do-i-send-money-to-someone-on-splitwise
 tableAfter: 3
 sections:
-  - heading: "Amiben a Splitwise jó"
-    body: "Ha a csoportodnak natív alkalmazás, offline használat vagy alkalmazáson belüli fizetés kell, a Splitwise az észszerű választás, és inkább azt szeretnénk, ha azt választanád, mintsem hogy később jönnél rá. A saját oldalai ezeket sorolják fel:"
+  - heading: "Pénzbeszéd, a pénz mellett"
+    body: "A közös pénzzel jár a csevegés, a kétely és a tervezgetés. A Side Badger mindhármat a számok mellett tartja, hogy senkinek ne kelljen visszagörgetnie a csoportchatben."
     items:
-      - "**Alkalmazások és offline használat.** iPhone-os és Android-alkalmazások a web mellett, és egy offline mód."
-      - "**Több felosztási mód.** Részek, kiigazítások és tételes felosztások, az egyenlő, a pontos és a százalékos mellett."
-      - "**Ismétlődő költségek.** Állítsd be, hogy a lakbér ismétlődjön, és felejtsd el."
-      - "**Fizetés az alkalmazásban.** Bizonyos országokban a pénzt is el tudja mozgatni, a Splitwise Pay, a Venmo, a PayPal vagy a Pay by Bank révén."
-  - heading: "Itt ingyenes, ott fizetős"
-    body: "A Splitwise Pro a Splitwise fizetős csomagja, és saját Pro-oldala három olyan dolgot árul, amely a Side Badgerben nem kerül semmibe."
+      - "**Hozzászólás ott, ahová való.** Szólj hozzá magához a csoporthoz, vagy bármelyik költséghez, listához vagy szavazáshoz, és a beszélgetés ott marad, ahol a téma."
+      - "**Nyugták és fotók.** Tarts meg akár három nyugtát költségenként, a csoporthoz, listához vagy szavazáshoz írt hozzászólásokhoz pedig fotókat és PDF-eket is csatolhatsz."
+      - "**Kérdések, nem veszekedések.** Egy admin bekapcsolhatja a kérdéseket, és utána bárki rákérdezhet egy költségre („Van egy kérdésem”). Amíg nincs tisztázva, kimarad az egyenlegekből."
+      - "**Listák és szavazások.** A közös bevásárlólista a bevásárlásos számlák mellett lakik, a villa szűkített listájáról pedig szavazást tarthattok, akár névtelenül is."
+      - "**Egy kis taps.** Reagálj költségekre, kifizetésekre és hozzászólásokra, és ünnepeld meg, ha megérkezik egy kifizetés."
+  - heading: A csoportod, a te szabályaid
+    body: "A Splitwise súgóközpontja szerint nem támogatja a csoportadminokat és a speciális jogosultságokat. A Side Badgerben vannak szerepek és jogosultságok, azoknak a csoportoknak, amelyeknek kell valaki, aki rendben tartja a számokat."
+    items:
+      - "**Adminisztrátorok, tagok és megfigyelők.** Tegyél valakit megfigyelővé: mindent lát, és semmit sem változtat."
+      - "**Két sablon, vagy a saját jogosultságaid.** Indulj a Nyílt együttműködéssel vagy a Felügyelt csoporttal, vagy állítsd be magad az egyes jogosultságokat: ki szerkeszti és törli a költségeket, ki szerkeszti a listákat, ki hívhat meg, és ki engedhet be új embereket."
+      - "**Jóváhagyás a csatlakozáshoz.** Kapcsold be a jóváhagyást, és egy adminisztrátor engedi be az embereket egyenként."
+      - "**A csoport saját beállításai.** Korlátozd azokra a pénznemekre, amelyeket tényleg használtok, válaszd ki az alapértelmezett pénznemét, és adj neki fejlécképet."
+      - "**Zárd le, ha vége.** A számok addig maradnak, ahogy vannak, amíg egy adminisztrátor fel nem oldja a lezárást."
+  - heading: Itt ingyenes, ott fizetős
+    body: A Splitwise Pro a Splitwise fizetős csomagja, és saját Pro-oldala három olyan dolgot árul, amely a Side Badgerben nem kerül semmibe.
     items:
       - "**Nyugtaszkennelés.** A Splitwise Pro beolvassa a nyugtád fotóját. A Side Badger ingyen csinálja, szkennelési kreditek nélkül: kitölti az összeget, a dátumot és a helyet, hogy ellenőrizhesd."
-      - "**Pénznemátváltás.** A Splitwise Pro a csoport költségeit az alapértelmezett pénznemedre váltja át, amikor a „Convert” gombra koppintasz. A Side Badger minden költséget bevitelkor vált át, egy aktuális árfolyamon vagy azon, amelyet ténylegesen kaptál, és az eredeti összeg a költségnél marad."
+      - "**Pénznem-átszámítás.** A Splitwise Pro a csoport költségeit az alapértelmezett pénznemedre számítja át, amikor a „Convert” gombra koppintasz. A Side Badger minden költséget bevitelkor számít át, egy aktuális árfolyamon vagy azon, amelyet ténylegesen kaptál, és az eredeti összeg a költségnél marad."
       - "**Napi korlátok nélkül.** A Splitwise Pro korlátlan számú költséget árul, súgóközpontja szerint pedig az ingyenes felhasználók naponta legfeljebb 4 költséget adhatnak hozzá. A Side Badgerben nincsenek napi korlátok."
-  - heading: "Ami a Splitwise-nak megvan, a Side Badgernek nincs"
-    body: "Ez nem a Splitwise minden funkciója, csak azok, amelyek általában döntenek. A teljes listát a Splitwise saját oldalain találod. Itt van, miben marad el a Side Badger."
+  - heading: A bankod kimarad belőle
+    body: "A Side Badger nem kapcsolódik a bankodhoz, és nem kéri a bankos adataidat. Nyilvántartja, ki kinek tartozik; ti úgy fizettek egymásnak, ahogy akartok, aztán rögzítitek a kifizetést. Nincs bankos belépés, amit át kellene adni, így eggyel kevesebb dologra kell vigyázni."
+  - heading: Egy alkalmazás, a böngésződben és a telefonodon
+    body: "A Side Badger a böngésződben fut. Jelentkezz be, add hozzá a kezdőképernyődhöz, és úgy nyílik meg, mint egy alkalmazás. Mindkét helyen ugyanaz az alkalmazás, ezért egy új funkció a következő megnyitáskor már ott van a telefonodon, alkalmazásbolti frissítésre várás nélkül."
+  - heading: "És pár partitrükk"
     items:
-      - "**Natív alkalmazások.** A Side Badger a böngésződben működik. Jelentkezz be, aztán add hozzá a kezdőképernyődhöz, és úgy nyílik meg, mint egy alkalmazás."
+      - "**Kérdezd az asszisztensed.** A Side Badger működik a ChatGPT-vel és a Claude-dal: kérd meg a tiédet, hogy adjon hozzá egy költséget, olvasson be egy nyugtát vagy rögzítsen egy kifizetést."
+      - "**Mindenki a saját nyelvén.** A Side Badger 39 nyelven beszél, és mindenki a sajátját választja. A Splitwise kezdőlapja 7+ nyelvet említ. 133 pénznemet is kezel, az olyan utazáshoz, ami mindenhová elvisz."
+      - "**Segítség az alkalmazás elhagyása nélkül.** Elakadtál, vagy hibát találtál? Szólj az alkalmazásból, és a választ is rögtön ott olvasod."
+  - heading: Ahol a Splitwise még mindig nyer
+    body: Inkább azt szeretnénk, ha a megfelelő alkalmazást választanád, mint hogy később jönnél rá. Ha a csoportodnak ezek egyike kell, a Splitwise tudja, a Side Badger nem.
+    items:
+      - "**Alkalmazásboltos alkalmazások.** A Side Badger a böngésződben és a kezdőképernyődön él, nem az alkalmazásboltokban."
       - "**Offline mód.** A Side Badgernek kapcsolat kell."
-      - "**Fizetés az alkalmazásban.** A Side Badger sosem nyúl a pénzedhez. Fizessetek egymásnak, ahogy akartok, aztán rögzítsd a kifizetést."
-      - "**Ismétlődő költségek.** A Side Badgerben nincsenek. A múlt havi lakbért másold le ahelyett, hogy újra begépelnéd."
+      - "**Fizetés az alkalmazásban.** Egyes országokban a Splitwise a pénzt is el tudja mozgatni. A Side Badger csak a nyilvántartást vezeti."
       - "**Felosztás részek vagy tételek szerint.** A Side Badgerben költségenként egy fizető van, és egyenlően, pontos összegek szerint vagy százalékosan osztható fel. A nyugtaszkennelése nem rendel tételeket emberekhez."
-      - "**Grafikonok és alapértelmezett felosztások.** A Splitwise Prónak mindkettő megvan. A Side Badger a számolást vezeti, hogy ki kinek tartozik, és ez az egész trükk."
-  - heading: "A csoportod átköltöztetése"
-    body: "Importáló nincs, így az átköltözés újrakezdést jelent. Előbb számoljatok el a Splitwise-ban, aztán hozzatok létre egy csoportot a Side Badgerben, és hívjatok meg mindenkit linkkel vagy QR-kóddal. A csoport minden tagjának kell egy ingyenes fiók, a regisztrációhoz pedig elég egy e-mail-cím."
+      - "**Grafikonok és alapértelmezett felosztások.** A Splitwise Prónak mindkettő megvan. A Side Badger számon tartja, ki kinek tartozik, és ez az egész trükk."
+  - heading: A csoportod átköltöztetése
+    body: Nincs importáló eszköz, így az átköltözés újrakezdést jelent. Előbb számoljatok el a Splitwise-ban, aztán hozzatok létre egy csoportot a Side Badgerben, és hívjatok meg mindenkit linkkel vagy QR-kóddal. A csoport minden tagjának kell egy ingyenes fiók, a regisztrációhoz pedig elég egy e-mail-cím.
 table:
-  heading: "Egymás mellett"
+  heading: Egymás mellett
   caption: "A Splitwise adatai, állapot: {date}, a Splitwise saját oldalairól."
-  sourceLabel: "Forrás"
+  sourceLabel: Forrás
   columns:
-    feature: "Mit"
-    other: "Splitwise, a saját oldalai szerint"
-    sideBadger: "Side Badger"
+    feature: Mit
+    other: Splitwise, a saját oldalai szerint
+    sideBadger: Side Badger
   rows:
-    - feature: "Mibe kerül"
-      other: "A Splitwise Pro havi vagy éves előfizetés. Az éves csomagok tartalmaznak egy Trip Passt, amely egy utazási csoportnak 30 napra Pro-funkciókat ad."
-      sideBadger: "Ingyenes. Napi korlátok nélkül."
+    - feature: Mibe kerül
+      other: A Splitwise Pro havi vagy éves előfizetés. Az éves csomagok tartalmaznak egy Trip Passt, amely egy utazási csoportnak 30 napra Pro-funkciókat ad.
+      sideBadger: "Ingyenes."
       source: pro-help
-    - feature: "Költségek naponta"
-      other: "A súgóközpontja szerint az ingyenes felhasználók naponta legfeljebb 4 költséget adhatnak hozzá. A Prónak nincs napi korlátja."
-      sideBadger: "Napi korlátok nélkül."
+    - feature: Költségek naponta
+      other: A súgóközpontja szerint az ingyenes felhasználók naponta legfeljebb 4 költséget adhatnak hozzá. A Prónak nincs napi korlátja.
+      sideBadger: Napi korlátok nélkül.
       source: pro-help
-    - feature: "Nyugtaszkennelés"
-      other: "Pro-funkció. Beolvassa a nyugta fotóját, a Pro tételes bontása pedig lehetővé teszi, hogy a tételeket emberekhez rendeld."
-      sideBadger: "Ingyenes, szkennelési kreditek nélkül. Kitölti az összeget, a dátumot és a helyet, hogy ellenőrizhesd, és nem rendel tételeket emberekhez."
+    - feature: Csoportszerepek és jogosultságok
+      other: A súgóközpontja szerint nem támogatja a csoportadminokat és a speciális jogosultságokat.
+      sideBadger: Adminisztrátorok, tagok és megfigyelők. Két sablon vagy saját jogosultságok, jóváhagyás a csatlakozáshoz, és lezárás, ha vége.
+      source: permissions-help
+    - feature: Nyugtaszkennelés
+      other: Pro-funkció. Beolvassa a nyugta fotóját, a Pro tételes bontása pedig lehetővé teszi, hogy a tételeket emberekhez rendeld.
+      sideBadger: Ingyenes, szkennelési kreditek nélkül. Kitölti az összeget, a dátumot és a helyet, hogy ellenőrizhesd, és nem rendel tételeket emberekhez.
       source: pro
-    - feature: "Pénznemátváltás"
-      other: "Pro-funkció. Koppints a „Convert” gombra, és a Splitwise a csoport költségeit az alapértelmezett pénznemedre váltja át az adott pillanat árfolyamán."
-      sideBadger: "Ingyenes. Minden költséget bevitelkor válts át, egy aktuális árfolyamon vagy azon, amelyet ténylegesen kaptál. Az eredeti összeg a költségnél marad."
+    - feature: Pénznem-átszámítás
+      other: Pro-funkció. Koppints a „Convert” gombra, és a Splitwise a csoport költségeit az alapértelmezett pénznemedre számítja át az adott pillanat árfolyamán.
+      sideBadger: Ingyenes. Minden költséget bevitelkor válts át, egy aktuális árfolyamon vagy azon, amelyet ténylegesen kaptál. Az eredeti összeg a költségnél marad.
       source: currencies-help
-    - feature: "Hol használod"
-      other: "iPhone-os és Android-alkalmazások, valamint a web."
-      sideBadger: "A böngésződben. Jelentkezz be, aztán add hozzá a kezdőképernyődhöz, és úgy nyílik meg, mint egy alkalmazás. Natív alkalmazás nincs."
+    - feature: Pénznemek és nyelvek
+      other: 100+ pénznem és 7+ nyelv, ahogy a kezdőlapja fogalmaz.
+      sideBadger: 133 pénznem és 39 nyelv. A csoport minden tagja a saját nyelvét választhatja.
       source: home
-    - feature: "Pénznemek és nyelvek"
-      other: "100+ pénznem és 7+ nyelv, ahogy a kezdőlapja fogalmaz."
-      sideBadger: "133 pénznem és 39 nyelv. A csoport minden tagja a saját nyelvét választhatja."
+    - feature: Hol használod
+      other: iPhone-os és Android-alkalmazások, valamint a web.
+      sideBadger: "A böngésződben. Jelentkezz be, aztán add hozzá a kezdőképernyődhöz, és úgy nyílik meg, mint egy alkalmazás. Az alkalmazásboltokban nincs ott."
       source: home
-    - feature: "Felosztási módok"
-      other: "Egyenlően, pontos összegek szerint, százalékosan, részek szerint, kiigazítással vagy tételesen."
-      sideBadger: "Egyenlően, pontos összegek szerint vagy százalékosan, költségenként egy fizetővel. Részek vagy tételek szerint nem."
+    - feature: Felosztási módok
+      other: Egyenlően, pontos összegek szerint, százalékosan, részek szerint, kiigazítással vagy tételesen.
+      sideBadger: Egyenlően, pontos összegek szerint vagy százalékosan, költségenként egy fizetővel. Részek vagy tételek szerint nem.
       source: split-help
-    - feature: "Ismétlődő költségek"
-      other: "Igen: hetente, kéthetente, havonta vagy évente."
-      sideBadger: "Nem. A múlt havi lakbért másold le ahelyett, hogy újra begépelnéd."
-      source: recurring-help
-    - feature: "Offline használat"
-      other: "Az offline módot a fő funkciói között sorolja fel."
-      sideBadger: "Nem. Kapcsolat kell hozzá."
+    - feature: Offline használat
+      other: Az offline módot a fő funkciói között sorolja fel.
+      sideBadger: Nem. Kapcsolat kell hozzá.
       source: home
-    - feature: "Fizetések"
-      other: "Bizonyos helyeken pénzt is tud küldeni az alkalmazásból: Splitwise Pay az Egyesült Államokban, Venmo és PayPal amerikai dolláregyenlegekhez, és Pay by Bank néhány kiválasztott európai országban. Máshol az alkalmazáson kívül teljesített kifizetést rögzítesz."
-      sideBadger: "Sosem nyúl a pénzedhez. Fizessetek egymásnak, ahogy akartok, aztán rögzítsd a kifizetést."
+    - feature: Fizetések és a bankod
+      other: "Bizonyos helyeken pénzt is tud küldeni az alkalmazásból: Splitwise Pay az Egyesült Államokban, Venmo amerikai dolláregyenlegekhez, PayPal, és Pay by Bank néhány kiválasztott európai országban, amely egy személyes folyószámlát köt össze."
+      sideBadger: "Sosem nyúl a pénzedhez, és nem kéri a bankos adataidat. Fizessetek egymásnak, ahogy akartok, aztán rögzítsd a kifizetést."
       source: payments-help
-    - feature: "Grafikonok és alapértelmezett felosztások"
-      other: "Mindkettő Pro-funkció."
-      sideBadger: "Egyik sincs."
+    - feature: Grafikonok és alapértelmezett felosztások
+      other: Mindkettő Pro-funkció.
+      sideBadger: Egyik sincs.
       source: pro
 faq:
-  heading: "Kérdések"
+  heading: Kérdések
   items:
-    - q: "A Side Badger ingyenes alternatíva a Splitwise-hoz?"
-      a: "Számlák csoportos felosztására igen. A nyugtaszkennelés és a pénznemátváltás ingyenes, napi korlátok nélkül. Ha natív alkalmazásra, offline használatra, ismétlődő költségekre vagy alkalmazáson belüli fizetésre van szükséged, azokat a Splitwise tudja, a Side Badger nem."
-    - q: "Honnan származnak a Splitwise adatai?"
+    - q: A Side Badger ingyenes alternatíva a Splitwise-hoz?
+      a: "Számlák csoportos felosztására igen, és nem csak a számolásra jó: hozzászólások, kérdések, listák, szavazások és csoportszerepek, ingyenes nyugtaszkenneléssel és pénznem-átszámítással. Ha alkalmazásbolti alkalmazásra, offline használatra vagy alkalmazáson belüli fizetésre van szükséged, azokat a Splitwise tudja, a Side Badger nem."
+    - q: Honnan származnak a Splitwise adatai?
       a: "A Splitwise saját oldalairól: a kezdőlapjáról, a Pro-oldaláról és a súgóközpontjából. A táblázat minden sora arra az oldalra mutat, ahonnan származik, a táblázat feletti dátum pedig megmondja, mikor olvastuk el őket. Negyedévente ellenőrizzük őket."
-    - q: "Ingyenes marad a Side Badger?"
-      a: "A Side Badgerben ma minden ingyenes. Ha ez valaha változna, előre szólunk. A részleteket az [árak](page:pricing) oldalon találod."
-    - q: "Mindenkinek át kell állnia a csoportomban?"
-      a: "Igen. A csoport minden tagjának kell egy ingyenes Side Badger-fiók, és linkkel vagy QR-kóddal csatlakozhatnak."
-    - q: "Van a Side Badgernek mobilalkalmazása?"
+    - q: Ingyenes marad a Side Badger?
+      a: A Side Badgerben ma minden ingyenes. Ha ez valaha változna, előre szólunk. A részleteket az [árak](page:pricing) oldalon találod.
+    - q: Mindenkinek át kell állnia a csoportomban?
+      a: Igen. A csoport minden tagjának kell egy ingyenes Side Badger-fiók, és linkkel vagy QR-kóddal csatlakozhatnak.
+    - q: Van a Side Badgernek mobilalkalmazása?
       a: "Alkalmazásboltban nincs. A böngésződben fut: jelentkezz be a telefonodon, aztán add hozzá a kezdőképernyődhöz, hogy úgy nyíljon meg, mint egy alkalmazás. A [hogyan működik](page:how-it-works) megmutatja, hogyan."

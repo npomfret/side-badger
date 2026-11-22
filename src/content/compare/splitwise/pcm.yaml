@@ -1,37 +1,69 @@
-translatedFrom: "18384294"
+translatedFrom: "100a5816"
 review:
   status: checked
-  checker: "CF-check"
-  date: "2026-11-19"
+  checker: "BT-compare-reframe"
+  date: "2026-11-22"
+identicalApproved:
+  - sources.3.label
+  - navLabel
+  - sections.1.heading
+  - table.heading
+  - table.sourceLabel
+  - table.columns.sideBadger
+  - table.rows.0.sideBadger
+  - table.rows.1.feature
+  - table.rows.2.feature
+  - table.rows.3.feature
+  - table.rows.4.feature
+  - table.rows.5.feature
+  - table.rows.7.feature
+  - table.rows.7.other
+  - table.rows.8.feature
+  - table.rows.9.feature
+  - table.rows.10.feature
+  - faq.heading
 claims:
+  - comments.next-to-the-expense
+  - comments.group-and-everything
+  - comments.attach-files
+  - receipt-attachments.keep-the-receipt
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - reactions.celebrate-a-payment
+  - permissions.viewer-sees-everything
+  - permissions.presets-or-your-own
+  - permissions.lock-the-group
+  - invites.admin-approval
   - receipt-scanning.no-scan-credits
   - receipt-scanning.fills-in-for-you-to-check
   - currency-conversion.convert-as-you-go
   - currency-conversion.original-amount-stays
   - multi-currency.currency-count
+  - multi-currency.limit-group-currencies
+  - groups.default-currency-and-header
   - languages.39-languages
   - home-screen.opens-like-an-app
+  - home-screen.same-app-everywhere
   - settlements.pay-however-then-record
+  - settlements.no-bank-connection
+  - ai-assistants.works-with-chatgpt-and-claude
+  - ai-assistants.ask-your-assistant
+  - feedback.tell-us-from-the-app
   - expense-splitting.equal-exact-percentage
-  - expense-splitting.copy-last-months-rent
   - invites.link-or-qr-code
   - accounts.all-you-need-is-an-email
-identicalApproved:
-  - navLabel
-  - table.rows.0.sideBadger
-  - table.rows.9.feature
-  - table.columns.sideBadger
 meta:
-  title: "Side Badger vs Splitwise: di free parts, compared | Side Badger"
-  description: "Free Splitwise alternative, compared fairly. Receipt scanning and currency conversion cost nothing here, and we list wetin Splitwise do better."
-h1: "Side Badger vs Splitwise: di free parts, compared"
+  title: "Side Badger vs Splitwise: di whole group, no be just di sums | Side Badger"
+  description: "Free Splitwise alternative for di whole group: comments, questions, lists, polls and proper roles, plus free receipt scanning and currency conversion."
+h1: "Side Badger vs Splitwise: di whole group, no be just di sums"
 navLabel: "Side Badger vs Splitwise"
-lead: "Somebody for your group don probably talk say “just use Splitwise”. Fair enough. Side Badger na free web app with receipt scanning and currency conversion, and no subscription to unlock dem. Which one suit your group depend on wetin e need, so here be di comparison, with Splitwise side wey we take only from Splitwise own pages."
+lead: "Dem don probably talk for your group say “just use Splitwise”. No wahala: e sabi di maths well. Side Badger dey do di maths too, then e give di whole group place to yarn am: comments, questions, lists, polls and proper group roles. Receipt scanning and currency conversion no cost anything."
 cta:
   heading: "Try am for your next shared bill"
-  body: "Create free account, make group and add one real expense. If e no be for you, you don spend few minutes, no be subscription."
-asOf: 2026-10-21
-asOfNote: "We read Splitwise own pages on {date} so you no go need read dem, and everything wey dey here about Splitwise come from dem. Each row of di table link to im source. Plans dey change, so we dey check again every quarter, and if Splitwise pages no agree with dis one, believe dem."
+  body: "Open free account, start group and put one real expense. If e no suit you, na few minutes you waste, no be subscription."
+asOf: 2026-11-22
+asOfNote: "We read Splitwise own pages on {date} so you no go need read dem, and everything wey we talk here about Splitwise come from dem. Every row for di table link go im source. Plans dey change, so we dey check again every quarter, and if Splitwise pages no gree with dis one, na dem you go believe."
 sources:
   - id: home
     label: "Home page of Splitwise"
@@ -42,48 +74,65 @@ sources:
   - id: pro-help
     label: "Splitwise help: Wetin be Splitwise Pro?"
     url: https://kb.splitwise.com/pro/what-is-splitwise-pro
+  - id: permissions-help
+    label: "Splitwise help: group permissions"
+    url: https://kb.splitwise.com/groups/can-i-prevent-group-members-from-changing-expenses-or-set-permissions
   - id: currencies-help
     label: "Splitwise help: plenty currencies"
     url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-a-friendship-or-group-with-multiple-currencies
   - id: split-help
     label: "Splitwise help: ways to share"
     url: https://kb.splitwise.com/balances-and-expenses/what-are-different-ways-i-can-split-an-expense
-  - id: recurring-help
-    label: "Splitwise help: expenses wey dey repeat"
-    url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-recurring-expenses
   - id: payments-help
     label: "Splitwise help: how to send money"
     url: https://kb.splitwise.com/payment-integrations/how-do-i-send-money-to-someone-on-splitwise
 tableAfter: 3
 sections:
-  - heading: "Wetin Splitwise dey do well"
-    body: "If your group need native app, offline use or payments inside di app, Splitwise na di sensible choice, and we prefer say you pick am than to find out later. Im own pages list:"
+  - heading: "Money gist, beside di money"
+    body: "Where shared money dey, gist, doubt and plans dey too. Side Badger dey keep all three beside di numbers, so nobody go need scroll go back inside di chat."
     items:
-      - "**Apps and offline use.** iPhone and Android apps as well as di web, and offline mode."
-      - "**More ways to share.** Split by shares, by adjustment and per item, plus equal, exact and pasentej."
-      - "**Recurring expenses.** Set di rent to repeat and forget about am."
-      - "**Payments inside di app.** For some countries e fit move di money too, through Splitwise Pay, Venmo, PayPal or Pay by Bank."
+      - "**Comments for where dem suppose dey.** Drop comment for di group itself, or for any expense, list or poll, and keep di yarn beside di thing wey e dey about."
+      - "**Receipts and photos.** Keep up to three receipts for each expense, and add photos or PDFs to comments for di group, a list or a poll."
+      - "**Questions, no be quarrel.** Admin fit turn on questions, then anybody wey dey inside di expense fit ask about am. E go stay out of di balances until dem don settle am."
+      - "**Lists and polls.** Put di shared shopping list beside di shopping bills, and make people vote for di villa shortlist, anonymous if you like."
+      - "**Small clap.** React to expenses, payments and comments, and clap for payment when e land."
+  - heading: "Your group, your rules"
+    body: "Splitwise help centre talk say e no support group admins or special permissions. Side Badger get roles and permissions, for di groups wey need person to keep di numbers neat."
+    items:
+      - "**Admin, member and viewer dem.** Make person viewer: im go see everything but e no go fit change anything."
+      - "**Two presets, or make your own.** Start with Open collaboration or Managed group, or set each permission yourself: who fit edit and delete expenses, edit lists, invite and let new people enter."
+      - "**Approval to join.** Turn on approval and admin go let each person enter."
+      - "**Di group own settings.** Limit am to di currencies wey una really dey use, choose im default currency and give am header picture."
+      - "**Lock am when e don finish.** Di numbers go stay as dem be until admin unlock am."
   - heading: "Free here, pay there"
-    body: "Splitwise Pro na Splitwise paid plan, and im own Pro page dey sell three things wey cost nothing for Side Badger."
+    body: "Splitwise Pro na Splitwise paid plan, and im own Pro page dey sell three things wey no cost anything for Side Badger."
     items:
-      - "**Receipt scanning.** Splitwise Pro dey scan photo of your receipt. Side Badger dey do am for free, with no scan credits: e dey fill di total, date and place make you check am."
-      - "**Currency conversion.** Splitwise Pro dey convert group expenses to your default currency when you tap Convert. Side Badger dey convert each expense as you enter am, at current exchange rate or di one wey you really get, and di original amount go stay on di expense."
-      - "**No daily limits.** Splitwise Pro dey sell unlimited expenses, and im help centre talk say free users fit add up to 4 expenses each day. Side Badger no get daily limits."
-  - heading: "Wetin Splitwise get wey Side Badger no get"
-    body: "Dis no be every Splitwise feature, only di ones wey dey usually decide am. Splitwise own pages get di full list. Here na where Side Badger fall short."
+      - "**Receipt scanning.** Splitwise Pro dey scan photo of your receipt. Side Badger dey do am free, with no scan credits: e go fill di total, date and place make you just check am."
+      - "**Currency conversion.** Splitwise Pro dey change group expenses to your default currency when you tap Convert. Side Badger dey change each expense as you dey put am, with current exchange rate or di one wey you really get, and di original amount go still dey for di expense."
+      - "**No daily limit.** Splitwise Pro dey sell unlimited expenses, and im help centre talk say free users fit add up to 4 expenses each day. Side Badger no get any daily limit."
+  - heading: "Your bank no dey inside dis one"
+    body: "Side Badger no dey connect to your bank and e no dey ask for your bank details. E dey keep record of who owe who; una go pay each other anyhow una like, then record di payment. No bank login to give anybody, so na one less thing to worry about."
+  - heading: "One app, for your browser and your phone"
+    body: "Side Badger dey run for your browser. Sign in, add am to your home screen, and e go open like app. Na di same app either way, so new feature go dey your phone di next time you open am, no app-store update to wait for."
+  - heading: "And small party tricks"
     items:
-      - "**Native apps.** Side Badger dey work for your browser. Sign in, then add am to your home screen and e go open like an app."
+      - "**Ask your assistant.** Side Badger dey work with ChatGPT and Claude: tell yours make e add expense, scan receipt or record payment."
+      - "**Everybody for dia own language.** Side Badger dey speak 39 languages and each person dey choose im own. Splitwise home page talk say 7+. E dey handle 133 currencies too, for di trip wey dey go everywhere."
+      - "**Help without to comot from di app.** You dey stuck, or you see bug? Tell us from di app and read our reply for there."
+  - heading: "Where Splitwise still dey win"
+    body: "We prefer make you choose di right app pass make you find out later. If your group need any of dese ones, Splitwise get am and Side Badger no get."
+    items:
+      - "**App-store apps.** Side Badger dey live for your browser and your home screen, no be for di app stores."
       - "**Offline mode.** Side Badger need connection."
-      - "**Payments inside di app.** Side Badger no dey ever touch your money. Pay each other anyhow you like, then record di payment."
-      - "**Recurring expenses.** Side Badger no get any. Copy last month rent instead of to type am again."
-      - "**Sharing by shares or by item.** Side Badger get one payer for each expense, wey you go share equal-equal, by exact amounts or by percentage. Im receipt scanning no dey assign items to people."
-      - "**Charts and di split wey dey set already.** Splitwise Pro get both. Side Badger dey keep count of who owe who, and na dat be di whole trick."
-  - heading: "How to move your group come"
-    body: "No importer dey, so to move mean fresh start. Settle up for Splitwise first, then create group for Side Badger and invite everybody with link or QR code. Everybody for di group need free account, and email address na all e take to sign up."
+      - "**Payments inside di app.** For some countries Splitwise fit move di money too. Side Badger just dey keep di record."
+      - "**Sharing by shares or by item.** Side Badger get one payer for each expense, wey una go share equally, by exact amounts or by percentage. Im receipt scanning no dey assign items to people."
+      - "**Charts and default split dem.** Splitwise Pro get both. Side Badger just dey keep count of who owe who, and na so di whole trick be."
+  - heading: "How to move your group come here"
+    body: "No importer dey, so to move mean say you go start fresh. Settle up for Splitwise first, then create group for Side Badger and invite everybody with link or QR code. Everybody for di group need free account, and email address na all e take to sign up."
 table:
-  heading: "Dem side by side"
+  heading: "Side by side"
   caption: "Splitwise details as of {date}, from Splitwise own pages."
-  sourceLabel: "Where e come from"
+  sourceLabel: "Source"
   columns:
     feature: "Wetin"
     other: "Splitwise, according to im own pages"
@@ -91,58 +140,58 @@ table:
   rows:
     - feature: "How much e cost"
       other: "Splitwise Pro na monthly or yearly subscription. Yearly plans include Trip Pass, wey give trip group Pro features for 30 days."
-      sideBadger: "Free. No daily limits."
+      sideBadger: "Free."
       source: pro-help
-    - feature: "Expenses for one day"
+    - feature: "Expenses per day"
       other: "Im help centre talk say free users fit add up to 4 expenses each day. Pro no get daily limit."
-      sideBadger: "No daily limits dey."
+      sideBadger: "No daily limit."
       source: pro-help
-    - feature: "Scan di receipt"
-      other: "Pro feature. E dey scan photo of receipt, and Pro itemisation make you assign di items to people."
-      sideBadger: "Free, with no scan credits. E dey fill di total, date and place make you check am, and e no dey assign items to people."
+    - feature: "Group roles and permissions"
+      other: "Im help centre talk say e no support group admins or special permissions."
+      sideBadger: "Admin, member and viewer dem. Two presets or your own permissions, approval to join, and lock for when e don finish."
+      source: permissions-help
+    - feature: "Receipt scanning"
+      other: "Pro feature. E dey scan photo of receipt, and Pro itemisation make you fit assign di items to people."
+      sideBadger: "Free, with no scan credits. E go fill di total, date and place make you just check am, and e no dey assign items to people."
       source: pro
-    - feature: "To convert currency"
-      other: "Pro feature. Tap Convert and Splitwise go convert group expenses to your default currency at dat moment exchange rate."
-      sideBadger: "Free. Convert each expense as you enter am, at current exchange rate or di one wey you really get. Di original amount go stay on di expense."
+    - feature: "Currency conversion"
+      other: "Pro feature. Tap Convert and Splitwise go change group expenses to your default currency with di exchange rate of dat moment."
+      sideBadger: "Free. Change each expense as you dey put am, with current exchange rate or di one wey you really get. Di original amount go still dey for di expense."
       source: currencies-help
+    - feature: "Currencies and languages"
+      other: "100+ currencies and 7+ languages, as im home page talk am."
+      sideBadger: "133 currencies and 39 languages. Everybody for di group fit choose dia own language."
+      source: home
     - feature: "Where you go use am"
       other: "Apps for iPhone and Android, and di web."
-      sideBadger: "For your browser. Sign in, then add am to your home screen and e go open like an app. No native app."
+      sideBadger: "For your browser. Sign in, then add am to your home screen and e go open like app. E no dey for di app stores."
       source: home
-    - feature: "Currency and language dem"
-      other: "100+ currencies and 7+ languages, as im home page talk am."
-      sideBadger: "133 currencies and 39 languages. Everybody for di group fit pick dia own language."
-      source: home
-    - feature: "Ways to share"
-      other: "Equal-equal, by exact amounts, by percentage, by shares, by adjustment or itemised."
-      sideBadger: "Equal-equal, by exact amounts or by percentage, with one payer for each expense. No by shares or by item."
+    - feature: "Ways to split"
+      other: "Equally, by exact amounts, by percentage, by shares, by adjustment or itemised."
+      sideBadger: "Equally, by exact amounts or by percentage, with one payer for each expense. No by shares or by item."
       source: split-help
-    - feature: "Expenses wey dey repeat"
-      other: "Yes: every week, every two weeks, every month or every year."
-      sideBadger: "No. Copy last month rent instead of to type am again."
-      source: recurring-help
-    - feature: "To use am offline"
+    - feature: "Offline use"
       other: "E list offline mode among im core features."
       sideBadger: "No. E need connection."
       source: home
-    - feature: "Payments"
-      other: "For some places e fit send money from inside di app: Splitwise Pay for di US, Venmo and PayPal for US dollar balances, and Pay by Bank for select European countries. For other places you go record payment wey dem make outside."
-      sideBadger: "E no dey ever touch your money. Pay each other anyhow you like, then record di payment."
+    - feature: "Payments and your bank"
+      other: "For some places e fit send money from inside di app: Splitwise Pay for di US, Venmo for US dollar balances, PayPal, and Pay by Bank for some European countries, wey dey connect personal current account."
+      sideBadger: "E no dey ever touch your money and e no dey ask for your bank details. Pay each other anyhow una like, then record di payment."
       source: payments-help
-    - feature: "Charts and default shares"
+    - feature: "Charts and default splits"
       other: "Both na Pro features."
-      sideBadger: "None of dem."
+      sideBadger: "None."
       source: pro
 faq:
-  heading: "Question dem"
+  heading: "Questions"
   items:
     - q: "Side Badger na free alternative to Splitwise?"
-      a: "To share bills for group, yes. Receipt scanning and currency conversion free, with no daily limits. If you need native app, offline use, recurring expenses or payments inside di app, Splitwise dey do dose ones and Side Badger no dey do dem."
+      a: "To split bills for group, yes, and e dey do pass di maths: comments, questions, lists, polls and group roles, with receipt scanning and currency conversion wey dey free. If you need app-store app, offline use or payments inside di app, na Splitwise get dose ones, Side Badger no get."
     - q: "Where di Splitwise details come from?"
-      a: "Splitwise own pages: im home page, im Pro page and im help centre. Each row of di table link to di page wey e come from, and di date wey dey above di table talk when we read dem. We dey check dem every quarter."
+      a: "Splitwise own pages: im home page, im Pro page and im help centre. Each row of di table link to di page wey e come from, and di date above di table talk when we read dem. We dey check dem every quarter."
     - q: "Side Badger go stay free?"
-      a: "Everything for Side Badger free today. If dat one ever change, we go give you notice first. Di [pricing page](page:pricing) get di details."
+      a: "Everything for Side Badger dey free today. If dat one ever change, we go give you notice first. Di [pricing page](page:pricing) get di details."
     - q: "Everybody for my group must switch?"
       a: "Yes. Everybody for group need free Side Badger account, and dem fit join with link or QR code."
     - q: "Side Badger get mobile app?"
-      a: "No for app store. E dey run for your browser: sign in for your phone, then add am to your home screen so e go open like an app. [How e dey work](page:how-it-works) show how."
+      a: "No for app store. E dey run for your browser: sign in for your phone, then add am to your home screen so e go open like app. [How e dey work](page:how-it-works) show how."

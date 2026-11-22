@@ -1,145 +1,180 @@
-translatedFrom: "18384294"
+translatedFrom: "100a5816"
 review:
   status: checked
-  checker: "CF-check"
-  date: "2026-11-19"
-identicalApproved:
-  - table.columns.sideBadger
+  checker: "BT-compare-reframe"
+  date: "2026-11-22"
 claims:
+  - comments.next-to-the-expense
+  - comments.group-and-everything
+  - comments.attach-files
+  - receipt-attachments.keep-the-receipt
+  - expense-questions.question-held-out-of-balances
+  - lists.shared-shopping-list
+  - polls.villa-shortlist-vote
+  - reactions.celebrate-a-payment
+  - permissions.viewer-sees-everything
+  - permissions.presets-or-your-own
+  - permissions.lock-the-group
+  - invites.admin-approval
   - receipt-scanning.no-scan-credits
   - receipt-scanning.fills-in-for-you-to-check
   - currency-conversion.convert-as-you-go
   - currency-conversion.original-amount-stays
   - multi-currency.currency-count
+  - multi-currency.limit-group-currencies
+  - groups.default-currency-and-header
   - languages.39-languages
   - home-screen.opens-like-an-app
+  - home-screen.same-app-everywhere
   - settlements.pay-however-then-record
+  - settlements.no-bank-connection
+  - ai-assistants.works-with-chatgpt-and-claude
+  - ai-assistants.ask-your-assistant
+  - feedback.tell-us-from-the-app
   - expense-splitting.equal-exact-percentage
-  - expense-splitting.copy-last-months-rent
   - invites.link-or-qr-code
   - accounts.all-you-need-is-an-email
+identicalApproved:
+  - table.columns.sideBadger
 meta:
-  title: "Side Badger proti Splitwisu: brezplačne stvari | Side Badger"
-  description: "Brezplačna alternativa Splitwisu, pošteno primerjana. Skeniranje računov in pretvorba valut sta tu brezplačna, našteli pa smo tudi, kaj Splitwise dela bolje."
-h1: "Side Badger proti Splitwisu: brezplačne stvari, primerjane"
-navLabel: "Side Badger proti Splitwisu"
-lead: "Nekdo v tvoji skupini je verjetno rekel „kar uporabi Splitwise“. Prav. Side Badger je brezplačna spletna aplikacija s skeniranjem računov in pretvorbo valut ter brez naročnine, ki bi ju odklenila. Kateri ustreza tvoji skupini, je odvisno od tega, kaj potrebuje, zato je tu primerjava, v kateri je Splitwisova stran povzeta samo s Splitwisovih lastnih strani."
+  title: "Side Badger proti Splitwisu: cela skupina, ne le računi | Side Badger"
+  description: "Brezplačna alternativa Splitwisu za celo skupino: komentarji, vprašanja, seznami, ankete in prave vloge, poleg tega brezplačno skeniranje računov in pretvorba valut."
+h1: "Side Badger proti Splitwisu: cela skupina, ne le računi"
+navLabel: Side Badger proti Splitwisu
+lead: "Nekdo v tvoji skupini je verjetno rekel „kar uporabi Splitwise“. Razumljivo: pri računanju je dober. Side Badger računa tudi, nato pa skupini da prostor, kjer se lahko vse pogovori: komentarji, vprašanja, seznami, ankete in prave vloge v skupini. Skeniranje računov in pretvorba valut sta zastonj."
 cta:
-  heading: "Preizkusi ga pri naslednjem skupnem računu"
-  body: "Ustvari brezplačen uporabniški račun, ustanovi skupino in dodaj en pravi strošek. Če ni zate, si porabil nekaj minut, ne naročnine."
-asOf: 2026-10-21
-asOfNote: "Splitwisove lastne strani smo prebrali {date}, da ti ni treba, in vse tukaj o Splitwisu izhaja iz njih. Vsaka vrstica tabele vodi do svojega vira. Paketi se spreminjajo, zato preverimo vsako četrtletje, če pa se Splitwisove strani ne ujemajo s to, verjemi njim."
+  heading: Preizkusi ga pri naslednjem skupnem računu
+  body: Ustvari brezplačen uporabniški račun, ustvari skupino in dodaj en pravi strošek. Če ni zate, te bo stalo nekaj minut, ne naročnine.
+asOf: 2026-11-22
+asOfNote: Splitwisove lastne strani smo prebrali {date}, da ti ni treba, in vse tukaj o Splitwisu izhaja iz njih. Vsaka vrstica tabele vodi do svojega vira. Paketi se spreminjajo, zato preverimo vsako četrtletje, če pa se Splitwisove strani ne ujemajo s to, verjemi njim.
 sources:
   - id: home
-    label: "Domača stran Splitwisa"
+    label: Domača stran Splitwisa
     url: https://www.splitwise.com/
   - id: pro
-    label: "Stran Splitwise Pro"
+    label: Stran Splitwise Pro
     url: https://www.splitwise.com/pro
   - id: pro-help
-    label: "Pomoč Splitwisa: What is Splitwise Pro?"
+    label: "Pomoč Splitwisa: Kaj je Splitwise Pro?"
     url: https://kb.splitwise.com/pro/what-is-splitwise-pro
+  - id: permissions-help
+    label: "Pomoč Splitwisa: dovoljenja v skupini"
+    url: https://kb.splitwise.com/groups/can-i-prevent-group-members-from-changing-expenses-or-set-permissions
   - id: currencies-help
     label: "Pomoč Splitwisa: več valut"
     url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-a-friendship-or-group-with-multiple-currencies
   - id: split-help
     label: "Pomoč Splitwisa: načini delitve"
     url: https://kb.splitwise.com/balances-and-expenses/what-are-different-ways-i-can-split-an-expense
-  - id: recurring-help
-    label: "Pomoč Splitwisa: ponavljajoči se stroški"
-    url: https://kb.splitwise.com/balances-and-expenses/how-can-i-manage-recurring-expenses
   - id: payments-help
     label: "Pomoč Splitwisa: pošiljanje denarja"
     url: https://kb.splitwise.com/payment-integrations/how-do-i-send-money-to-someone-on-splitwise
 tableAfter: 3
 sections:
-  - heading: "Kaj Splitwise dela dobro"
-    body: "Če tvoja skupina potrebuje domačo aplikacijo, uporabo brez povezave ali plačila znotraj aplikacije, je Splitwise pametna izbira in raje vidimo, da ga izbereš, kot da to ugotoviš pozneje. Njegove lastne strani navajajo:"
+  - heading: Pogovor o denarju, ob denarju
+    body: Skupni denar prinese klepet, dvome in načrte. Side Badger vse troje hrani ob številkah, da nihče ne rije nazaj po klepetu.
     items:
-      - "**Aplikacije in uporaba brez povezave.** Aplikaciji za iPhone in Android poleg spleta ter način brez povezave."
-      - "**Več načinov delitve.** Deleži, prilagoditve in delitev po postavkah, poleg enako, točno in po odstotkih."
-      - "**Ponavljajoči se stroški.** Nastavi, da se najemnina ponavlja, in pozabi nanjo."
-      - "**Plačila v aplikaciji.** V nekaterih državah lahko premakne tudi denar, prek Splitwise Pay, Venmo, PayPal ali Pay by Bank."
-  - heading: "Tu brezplačno, tam plačljivo"
-    body: "Splitwise Pro je Splitwisov plačljiv paket, njegova lastna stran Pro pa prodaja tri stvari, ki v Side Badgerju ne stanejo nič."
+      - "**Komentarji tam, kamor sodijo.** Komentiraj kar skupino ali kateri koli strošek, seznam ali anketo in pogovor imej ob stvari, o kateri teče beseda."
+      - "**Potrdila in fotografije.** Pri vsakem strošku obdrži do tri potrdila o nakupu, h komentarjem pri skupini, seznamu ali anketi pa dodaj fotografije ali PDF-je."
+      - "**Vprašanja, ne prepiri.** Administrator lahko vklopi vprašanja, nato lahko vsak v strošku vpraša o njem. V stanja se ne všteva, dokler ni rešeno."
+      - "**Seznami in ankete.** Skupni nakupovalni seznam imej ob stroških nakupov, o ožjem izboru vil pa glasuj, anonimno, če želiš."
+      - "**Malo aplavza.** Odzovi se na stroške, plačila in komentarje ter proslavi plačilo, ko prispe."
+  - heading: Tvoja skupina, tvoja pravila
+    body: Splitwisov center za pomoč pravi, da ne podpira administratorjev skupin ali posebnih dovoljenj. Side Badger ima vloge in dovoljenja, za skupine, ki potrebujejo nekoga, ki drži številke urejene.
+    items:
+      - "**Administratorji, člani in gledalci.** Nekoga naredi za gledalca: vidi vse, spreminja pa nič."
+      - "**Dve prednastavitvi ali tvoje lastne.** Začni z Odprtim sodelovanjem ali Upravljano skupino ali pa vsako dovoljenje nastavi posebej: kdo ureja in briše stroške, ureja sezname, vabi in spušča nove ljudi noter."
+      - "**Odobritev za vstop.** Vklopi odobritev in administrator vsakogar posebej sprejme."
+      - "**Lastne nastavitve skupine.** Omeji jo na valute, ki jih res uporabljaš, izberi njeno privzeto valuto in ji daj sliko glave."
+      - "**Zakleni, ko je konec.** Številke ostanejo, kakršne so, dokler administrator ne odklene."
+  - heading: Tu zastonj, tam za denar
+    body: Splitwise Pro je Splitwisov plačljiv paket, njegova lastna stran Pro pa prodaja tri stvari, ki v Side Badgerju ne stanejo nič.
     items:
       - "**Skeniranje računov.** Splitwise Pro skenira fotografijo računa. Side Badger to dela brezplačno, brez kreditov za skeniranje: izpolni skupni znesek, datum in kraj, da jih preveriš."
-      - "**Pretvorba valut.** Splitwise Pro pretvori stroške skupine v tvojo privzeto valuto, ko tapneš Convert. Side Badger pretvori vsak strošek, ko ga vneseš, po trenutnem menjalnem tečaju ali tistem, ki si ga res dobil, izvirni znesek pa ostane pri stroških."
+      - "**Pretvorba valut.** Splitwise Pro pretvori stroške skupine v tvojo privzeto valuto, ko pritisneš Convert. Side Badger pretvori vsak strošek, ko ga vneseš, po trenutnem menjalnem tečaju ali tistem, ki ga res dobiš, izvirni znesek pa ostane pri stroških."
       - "**Brez dnevnih omejitev.** Splitwise Pro prodaja neomejene stroške, njegov center za pomoč pa pravi, da lahko brezplačni uporabniki dodajo do 4 stroške na dan. Side Badger nima dnevnih omejitev."
-  - heading: "Kaj ima Splitwise, Side Badger pa ne"
-    body: "To niso vse Splitwisove funkcije, samo tiste, ki običajno odločijo. Splitwisove lastne strani imajo celoten seznam. Tu je, kje Side Badger zaostaja."
+  - heading: Tvoja banka ostane ob strani
+    body: Side Badger se ne povezuje z tvojo banko in ne prosi za podatke o tvoji banki. Vodi evidenco, kdo komu dolguje; plačajte si, kakor želite, nato plačilo zabeležite. Bančne prijave ti ni treba nikomur izročiti, zato je ena stvar manj, ki jo moraš varovati.
+  - heading: Ena aplikacija, v brskalniku in na telefonu
+    body: Side Badger deluje v brskalniku. Prijavi se, dodaj ga na domači zaslon in odpre se kot aplikacija. V obeh primerih je ista aplikacija, zato je nova funkcija na tvojem telefonu, ko ga naslednjič odpreš, brez čakanja na posodobitev iz trgovine z aplikacijami.
+  - heading: Pa še nekaj trikov
     items:
-      - "**Domače aplikacije.** Side Badger deluje v brskalniku. Prijavi se, nato ga dodaj na domači zaslon in odpre se kot aplikacija."
+      - "**Vprašaj svojega pomočnika.** Side Badger deluje s ChatGPT in Claude: prosi svojega, naj doda strošek, skenira račun ali zabeleži plačilo."
+      - "**Vsak v svojem jeziku.** Side Badger govori 39 jezikov in vsak izbere svojega. Splitwisova domača stran navaja 7+. Podpira tudi 133 valut, za potovanja, ki vodijo povsod."
+      - "**Pomoč, ne da bi zapustil aplikacijo.** Se ti zatakne ali opaziš napako? Sporoči nam iz aplikacije in tam preberi naš odgovor."
+  - heading: Kje Splitwise še vedno zmaga
+    body: Raje vidimo, da izbereš pravo aplikacijo, kot da to ugotoviš pozneje. Če tvoja skupina potrebuje katero od teh stvari, jo ima Splitwise, Side Badger pa ne.
+    items:
+      - "**Aplikacije iz trgovine.** Side Badger živi v brskalniku in na domačem zaslonu, ne v trgovinah z aplikacijami."
       - "**Način brez povezave.** Side Badger potrebuje povezavo."
-      - "**Plačila v aplikaciji.** Side Badger se tvojega denarja nikoli ne dotakne. Plačajte si, kakor želite, nato plačilo zabeležite."
-      - "**Ponavljajoči se stroški.** Side Badger jih nima. Namesto ponovnega tipkanja kopiraj najemnino prejšnjega meseca."
+      - "**Plačila v aplikaciji.** V nekaterih državah lahko Splitwise denar tudi premakne. Side Badger vodi samo evidenco."
       - "**Delitev po deležih ali postavkah.** Side Badger ima enega plačnika na strošek, razdeljenega enako, po točnih zneskih ali po odstotkih. Njegovo skeniranje računov ne dodeljuje postavk ljudem."
-      - "**Grafikoni in privzete delitve.** Splitwise Pro ima oboje. Side Badger vodi štetje, kdo komu dolguje, in to je ves trik."
-  - heading: "Selitev skupine"
-    body: "Uvoznika ni, zato selitev pomeni nov začetek. Najprej se poravnajte v Splitwisu, nato ustvari skupino v Side Badgerju in povabi vse s povezavo ali kodo QR. Vsak v skupini potrebuje brezplačen uporabniški račun, za registracijo pa je dovolj e-poštni naslov."
+      - "**Grafikoni in privzete delitve.** Splitwise Pro ima oboje. Side Badger zapiše, kdo komu dolguje, in to je ves trik."
+  - heading: Selitev skupine
+    body: Orodja za uvoz ni, zato selitev pomeni nov začetek. Najprej se poravnajte v Splitwisu, nato ustvari skupino v Side Badgerju in povabi vse s povezavo ali kodo QR. Vsak v skupini potrebuje brezplačen uporabniški račun, za registracijo pa je dovolj e-poštni naslov.
 table:
-  heading: "Drug ob drugem"
-  caption: "Podrobnosti o Splitwisu na dan {date}, s Splitwisovih lastnih strani."
-  sourceLabel: "Vir"
+  heading: Drug ob drugem
+  caption: Podrobnosti o Splitwisu na dan {date}, s Splitwisovih lastnih strani.
+  sourceLabel: Vir
   columns:
-    feature: "Kaj"
-    other: "Splitwise, po lastnih straneh"
-    sideBadger: "Side Badger"
+    feature: Kaj
+    other: Splitwise, po lastnih straneh
+    sideBadger: Side Badger
   rows:
-    - feature: "Koliko stane"
-      other: "Splitwise Pro je mesečna ali letna naročnina. Letni paketi vključujejo Trip Pass, ki skupini za potovanje da funkcije Pro za 30 dni."
-      sideBadger: "Brezplačno. Brez dnevnih omejitev."
+    - feature: Koliko stane
+      other: Splitwise Pro je mesečna ali letna naročnina. Letni paketi vključujejo Trip Pass, ki skupini za potovanje da funkcije Pro za 30 dni.
+      sideBadger: Brezplačno.
       source: pro-help
-    - feature: "Stroški na dan"
-      other: "Njegov center za pomoč pravi, da lahko brezplačni uporabniki dodajo do 4 stroške na dan. Pro nima dnevne omejitve."
-      sideBadger: "Brez dnevnih omejitev."
+    - feature: Stroški na dan
+      other: Njegov center za pomoč pravi, da lahko brezplačni uporabniki dodajo do 4 stroške na dan. Pro nima dnevne omejitve.
+      sideBadger: Brez dnevnih omejitev.
       source: pro-help
-    - feature: "Skeniranje računov"
-      other: "Funkcija Pro. Skenira fotografijo računa, razčlenitev po postavkah v Pro pa omogoča dodelitev postavk ljudem."
-      sideBadger: "Brezplačno, brez kreditov za skeniranje. Izpolni skupni znesek, datum in kraj, da jih preveriš, postavk pa ne dodeljuje ljudem."
+    - feature: Vloge in dovoljenja v skupini
+      other: Njegov center za pomoč pravi, da ne podpira administratorjev skupin ali posebnih dovoljenj.
+      sideBadger: Administratorji, člani in gledalci. Dve prednastavitvi ali lastna dovoljenja, odobritev za vstop in zaklep, ko je konec.
+      source: permissions-help
+    - feature: Skeniranje računov
+      other: Funkcija Pro. Skenira fotografijo računa, razčlenitev po postavkah v Pro pa omogoča dodelitev postavk ljudem.
+      sideBadger: Brezplačno, brez kreditov za skeniranje. Izpolni skupni znesek, datum in kraj, da jih preveriš, postavk pa ne dodeljuje ljudem.
       source: pro
-    - feature: "Pretvorba valut"
-      other: "Funkcija Pro. Tapneš Convert in Splitwise pretvori stroške skupine v tvojo privzeto valuto po menjalnem tečaju tistega trenutka."
-      sideBadger: "Brezplačno. Vsak strošek pretvoriš, ko ga vneseš, po trenutnem menjalnem tečaju ali tistem, ki si ga res dobil. Izvirni znesek ostane pri stroških."
+    - feature: Pretvorba valut
+      other: Funkcija Pro. Pritisneš Convert in Splitwise pretvori stroške skupine v tvojo privzeto valuto po menjalnem tečaju tistega trenutka.
+      sideBadger: Brezplačno. Vsak strošek pretvoriš, ko ga vneseš, po trenutnem menjalnem tečaju ali tistem, ki ga res dobiš. Izvirni znesek ostane pri stroških.
       source: currencies-help
-    - feature: "Kje ga uporabljaš"
-      other: "Aplikaciji za iPhone in Android ter splet."
-      sideBadger: "V brskalniku. Prijavi se, nato ga dodaj na domači zaslon in odpre se kot aplikacija. Domače aplikacije ni."
+    - feature: Valute in jeziki
+      other: Več kot 100 valut in več kot 7 jezikov, kot navaja njegova domača stran.
+      sideBadger: 133 valut in 39 jezikov. Vsak v skupini lahko izbere svoj jezik.
       source: home
-    - feature: "Valute in jeziki"
-      other: "Več kot 100 valut in več kot 7 jezikov, kot navaja njegova domača stran."
-      sideBadger: "133 valut in 39 jezikov. Vsak v skupini lahko izbere svoj jezik."
+    - feature: Kje ga uporabljaš
+      other: Aplikaciji za iPhone in Android ter splet.
+      sideBadger: V brskalniku. Prijavi se, nato ga dodaj na domači zaslon in odpre se kot aplikacija. Ni v trgovinah z aplikacijami.
       source: home
-    - feature: "Načini delitve"
-      other: "Enako, po točnih zneskih, po odstotkih, po deležih, s prilagoditvijo ali po postavkah."
-      sideBadger: "Enako, po točnih zneskih ali po odstotkih, z enim plačnikom na strošek. Ne po deležih ali postavkah."
+    - feature: Načini delitve
+      other: Enako, po točnih zneskih, po odstotkih, po deležih, s prilagoditvijo ali po postavkah.
+      sideBadger: Enako, po točnih zneskih ali po odstotkih, z enim plačnikom na strošek. Ne po deležih ali postavkah.
       source: split-help
-    - feature: "Ponavljajoči se stroški"
-      other: "Da: tedensko, vsaka dva tedna, mesečno ali letno."
-      sideBadger: "Ne. Namesto ponovnega tipkanja kopiraj najemnino prejšnjega meseca."
-      source: recurring-help
-    - feature: "Uporaba brez povezave"
-      other: "Način brez povezave navaja med svojimi osnovnimi funkcijami."
-      sideBadger: "Ne. Potrebuje povezavo."
+    - feature: Uporaba brez povezave
+      other: Način brez povezave navaja med svojimi osnovnimi funkcijami.
+      sideBadger: Ne. Potrebuje povezavo.
       source: home
-    - feature: "Plačila"
-      other: "Na nekaterih krajih lahko pošlje denar iz aplikacije: Splitwise Pay v ZDA, Venmo in PayPal za stanja v ameriških dolarjih ter Pay by Bank v izbranih evropskih državah. Drugje zabeležiš plačilo, opravljeno zunaj."
-      sideBadger: "Tvojega denarja se nikoli ne dotakne. Plačajte si, kakor želite, nato plačilo zabeležite."
+    - feature: Plačila in tvoja banka
+      other: "Na nekaterih krajih lahko pošlje denar iz aplikacije: Splitwise Pay v ZDA, Venmo za stanja v ameriških dolarjih, PayPal in Pay by Bank v izbranih evropskih državah, pri čemer se poveže osebni tekoči račun."
+      sideBadger: Tvojega denarja se nikoli ne dotakne in ne prosi za podatke o tvoji banki. Plačajte si, kakor želite, nato plačilo zabeležite.
       source: payments-help
-    - feature: "Grafikoni in privzete delitve"
-      other: "Oboje sta funkciji Pro."
-      sideBadger: "Nobenega."
+    - feature: Grafikoni in privzete delitve
+      other: Oboje sta funkciji Pro.
+      sideBadger: Nobeno od obojega.
       source: pro
 faq:
-  heading: "Vprašanja"
+  heading: Vprašanja
   items:
-    - q: "Ali je Side Badger brezplačna alternativa Splitwisu?"
-      a: "Za delitev računov v skupini, da. Skeniranje računov in pretvorba valut sta brezplačna, brez dnevnih omejitev. Če potrebuješ domačo aplikacijo, uporabo brez povezave, ponavljajoče se stroške ali plačila znotraj aplikacije, to dela Splitwise, Side Badger pa ne."
-    - q: "Od kod izvirajo podrobnosti o Splitwisu?"
+    - q: Ali je Side Badger brezplačna alternativa Splitwisu?
+      a: "Za delitev računov v skupini, da, in zna več kot samo računanje: komentarje, vprašanja, sezname, ankete in vloge v skupini, skeniranje računov in pretvorba valut pa sta brezplačna. Če potrebuješ aplikacijo iz trgovine, uporabo brez povezave ali plačila znotraj aplikacije, to dela Splitwise, Side Badger pa ne."
+    - q: Od kod so podrobnosti o Splitwisu?
       a: "S Splitwisovih lastnih strani: njegove domače strani, strani Pro in centra za pomoč. Vsaka vrstica tabele vodi do strani, od koder izvira, datum nad tabelo pa pove, kdaj smo jih prebrali. Preverimo jih vsako četrtletje."
-    - q: "Ali bo Side Badger ostal brezplačen?"
-      a: "Vse v Side Badgerju je danes brezplačno. Če se to kdaj spremeni, te bomo prej obvestili. Podrobnosti ima [stran s cenikom](page:pricing)."
-    - q: "Ali mora preiti vsak v moji skupini?"
-      a: "Da. Vsak v skupini potrebuje brezplačen uporabniški račun Side Badger in se lahko pridruži s povezavo ali kodo QR."
-    - q: "Ali ima Side Badger mobilno aplikacijo?"
+    - q: Ali bo Side Badger ostal brezplačen?
+      a: Vse v Side Badgerju je danes brezplačno. Če se to kdaj spremeni, te bomo prej obvestili. Podrobnosti ima [stran s cenikom](page:pricing).
+    - q: Ali mora vsak v moji skupini preklopiti?
+      a: Da. Vsak v skupini potrebuje brezplačen uporabniški račun Side Badger in se lahko pridruži s povezavo ali kodo QR.
+    - q: Ali ima Side Badger mobilno aplikacijo?
       a: "Ne v trgovini z aplikacijami. Deluje v brskalniku: prijavi se na telefonu, nato ga dodaj na domači zaslon, da se odpre kot aplikacija. [Kako deluje](page:how-it-works) pokaže, kako."

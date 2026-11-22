@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': '精算に必要な支払い：{count}回。支出の合計：{total}。',
   'tools.split.summarySettled': '全員おあいこです。支払いは不要です。支出の合計：{total}。',
   'home.hero.factsLabel': '利用できる内容',
-  'home.hero.without.ads': '広告なし',
-  'home.hero.without.dailyLimits': '1日の制限なし',
-  'home.hero.without.paidTier': '有料プランなし',
   'home.hero.goodToKnowLabel': 'うれしいポイント',
   'home.hero.without.creepyTracking': '気味の悪いトラッキングなし',
+  'home.hero.without.sellingData': 'データの販売なし',
+  'home.hero.without.appDownload': 'アプリのダウンロードなし',
+  'home.hero.without.formFilling': 'フォーム入力なし（ほぼ）',
 } as const;

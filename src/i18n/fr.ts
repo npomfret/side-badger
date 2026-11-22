@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Paiements pour régler les comptes : {count}. Total dépensé : {total}.',
   'tools.split.summarySettled': 'Tout le monde est quitte. Aucun paiement nécessaire. Total dépensé : {total}.',
   'home.hero.factsLabel': 'Ce que vous obtenez',
-  'home.hero.without.ads': 'Pas de publicité',
-  'home.hero.without.dailyLimits': 'Pas de limite quotidienne',
-  'home.hero.without.paidTier': 'Pas d’offre payante',
   'home.hero.goodToKnowLabel': 'Bon à savoir',
   'home.hero.without.creepyTracking': 'Pas de pistage flippant',
+  'home.hero.without.sellingData': 'Pas de revente de vos données',
+  'home.hero.without.appDownload': 'Pas d\'appli à télécharger',
+  'home.hero.without.formFilling': 'Pas de formulaire à remplir (ou presque)',
 } as const;

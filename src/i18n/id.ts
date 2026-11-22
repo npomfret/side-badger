@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Pembayaran untuk melunasi: {count}. Total pengeluaran: {total}.',
   'tools.split.summarySettled': 'Semua sudah impas. Tidak perlu pembayaran. Total pengeluaran: {total}.',
   'home.hero.factsLabel': 'Apa yang Anda dapatkan',
-  'home.hero.without.ads': 'Tanpa iklan',
-  'home.hero.without.dailyLimits': 'Tanpa batas harian',
-  'home.hero.without.paidTier': 'Tanpa paket berbayar',
   'home.hero.goodToKnowLabel': 'Baik untuk diketahui',
   'home.hero.without.creepyTracking': 'Tanpa pelacakan menyeramkan',
+  'home.hero.without.sellingData': 'Tanpa jual data Anda',
+  'home.hero.without.appDownload': 'Tanpa aplikasi untuk diunduh',
+  'home.hero.without.formFilling': 'Tanpa isi formulir (hampir)',
 } as const;

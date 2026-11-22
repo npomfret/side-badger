@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Betalningar för att göra upp: {count}. Utgifter totalt: {total}.',
   'tools.split.summarySettled': 'Alla är kvitt. Inga betalningar behövs. Utgifter totalt: {total}.',
   'home.hero.factsLabel': 'Det här får du',
-  'home.hero.without.ads': 'Inga annonser',
-  'home.hero.without.dailyLimits': 'Inga dagliga gränser',
-  'home.hero.without.paidTier': 'Ingen betalnivå',
   'home.hero.goodToKnowLabel': 'Bra att veta',
   'home.hero.without.creepyTracking': 'Ingen läskig spårning',
+  'home.hero.without.sellingData': 'Ingen försäljning av dina data',
+  'home.hero.without.appDownload': 'Ingen app att ladda ner',
+  'home.hero.without.formFilling': 'Ingen formulärifyllning (nästan)',
 } as const;

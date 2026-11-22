@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Payments to clear di account: {count}. Total wey dem spend: {total}.',
   'tools.split.summarySettled': 'Everybody don clear. No payment need to happen. Total wey dem spend: {total}.',
   'home.hero.factsLabel': 'Wetin you go get',
-  'home.hero.without.ads': 'No ads',
-  'home.hero.without.dailyLimits': 'No daily limits',
-  'home.hero.without.paidTier': 'No paid plan',
   'home.hero.goodToKnowLabel': 'E good make you sabi',
   'home.hero.without.creepyTracking': 'No creepy tracking',
+  'home.hero.without.sellingData': 'No selling your data',
+  'home.hero.without.appDownload': 'No app to download',
+  'home.hero.without.formFilling': 'No form filling (almost)',
 } as const;

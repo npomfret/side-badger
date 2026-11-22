@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Plăți pentru decontare: {count}. Total cheltuit: {total}.',
   'tools.split.summarySettled': 'Toți sunt chit. Nu e nevoie de plăți. Total cheltuit: {total}.',
   'home.hero.factsLabel': 'Ce primești',
-  'home.hero.without.ads': 'Fără reclame',
-  'home.hero.without.dailyLimits': 'Fără limite zilnice',
-  'home.hero.without.paidTier': 'Fără nivel plătit',
   'home.hero.goodToKnowLabel': 'Bine de știut',
   'home.hero.without.creepyTracking': 'Fără urmărire creepy',
+  'home.hero.without.sellingData': 'Fără vânzarea datelor tale',
+  'home.hero.without.appDownload': 'Fără aplicație de descărcat',
+  'home.hero.without.formFilling': 'Fără completat formulare (aproape)',
 } as const;

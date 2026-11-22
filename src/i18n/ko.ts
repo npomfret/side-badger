@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': '정산을 위한 결제: {count}건. 총 지출: {total}.',
   'tools.split.summarySettled': '모두 정산된 상태예요. 결제는 필요 없어요. 총 지출: {total}.',
   'home.hero.factsLabel': '제공하는 기능',
-  'home.hero.without.ads': '광고 없음',
-  'home.hero.without.dailyLimits': '일일 한도 없음',
-  'home.hero.without.paidTier': '유료 요금제 없음',
   'home.hero.goodToKnowLabel': '알아두면 좋아요',
   'home.hero.without.creepyTracking': '소름 돋는 추적 없음',
+  'home.hero.without.sellingData': '데이터 판매 없음',
+  'home.hero.without.appDownload': '앱 설치 없음',
+  'home.hero.without.formFilling': '양식 작성 없음(거의)',
 } as const;

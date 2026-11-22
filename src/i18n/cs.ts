@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Plateb k vyrovnání: {count}. Celkem utraceno: {total}.',
   'tools.split.summarySettled': 'Všichni jsou si kvit. Žádné platby nejsou potřeba. Celkem utraceno: {total}.',
   'home.hero.factsLabel': 'Co dostanete',
-  'home.hero.without.ads': 'Žádné reklamy',
-  'home.hero.without.dailyLimits': 'Žádné denní limity',
-  'home.hero.without.paidTier': 'Žádná placená úroveň',
   'home.hero.goodToKnowLabel': 'Dobré vědět',
   'home.hero.without.creepyTracking': 'Žádné šmírování',
+  'home.hero.without.sellingData': 'Žádný prodej vašich dat',
+  'home.hero.without.appDownload': 'Žádná aplikace ke stažení',
+  'home.hero.without.formFilling': 'Žádné vyplňování formulářů (skoro)',
 } as const;

@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Betalingen om af te rekenen: {count}. Totaal uitgegeven: {total}.',
   'tools.split.summarySettled': 'Iedereen staat quitte. Geen betalingen nodig. Totaal uitgegeven: {total}.',
   'home.hero.factsLabel': 'Wat je krijgt',
-  'home.hero.without.ads': 'Geen advertenties',
-  'home.hero.without.dailyLimits': 'Geen dagelijkse limieten',
-  'home.hero.without.paidTier': 'Geen betaald abonnement',
   'home.hero.goodToKnowLabel': 'Goed om te weten',
   'home.hero.without.creepyTracking': 'Geen creepy tracking',
+  'home.hero.without.sellingData': 'Geen verkoop van je gegevens',
+  'home.hero.without.appDownload': 'Geen app om te downloaden',
+  'home.hero.without.formFilling': 'Geen formulieren invullen (bijna)',
 } as const;

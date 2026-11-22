@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Zahlungen zum Abrechnen: {count}. Insgesamt ausgegeben: {total}.',
   'tools.split.summarySettled': 'Alle sind quitt. Keine Zahlungen nötig. Insgesamt ausgegeben: {total}.',
   'home.hero.factsLabel': 'Was du bekommst',
-  'home.hero.without.ads': 'Keine Werbung',
-  'home.hero.without.dailyLimits': 'Keine Tageslimits',
-  'home.hero.without.paidTier': 'Keine Bezahlstufe',
   'home.hero.goodToKnowLabel': 'Gut zu wissen',
   'home.hero.without.creepyTracking': 'Kein unheimliches Tracking',
+  'home.hero.without.sellingData': 'Kein Verkauf deiner Daten',
+  'home.hero.without.appDownload': 'Keine App zum Herunterladen',
+  'home.hero.without.formFilling': 'Kein Formularkram (fast)',
 } as const;

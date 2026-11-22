@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Pagamentos para acertar as contas: {count}. Total gasto: {total}.',
   'tools.split.summarySettled': 'Estão todos quites. Não são precisos pagamentos. Total gasto: {total}.',
   'home.hero.factsLabel': 'O que recebes',
-  'home.hero.without.ads': 'Sem anúncios',
-  'home.hero.without.dailyLimits': 'Sem limites diários',
-  'home.hero.without.paidTier': 'Sem nível pago',
   'home.hero.goodToKnowLabel': 'Bom saber',
   'home.hero.without.creepyTracking': 'Sem rastreamento assustador',
+  'home.hero.without.sellingData': 'Sem venda dos teus dados',
+  'home.hero.without.appDownload': 'Sem app para descarregar',
+  'home.hero.without.formFilling': 'Sem preencher formulários (quase)',
 } as const;

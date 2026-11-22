@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Kitatzeko ordainketak: {count}. Guztira gastatua: {total}.',
   'tools.split.summarySettled': 'Denak kitatuta daude. Ez da ordainketarik behar. Guztira gastatua: {total}.',
   'home.hero.factsLabel': 'Zer lortzen duzun',
-  'home.hero.without.ads': 'Iragarkirik ez',
-  'home.hero.without.dailyLimits': 'Eguneko mugarik ez',
-  'home.hero.without.paidTier': 'Ordainpeko mailarik ez',
   'home.hero.goodToKnowLabel': 'Jakitekoa',
   'home.hero.without.creepyTracking': 'Jarraipen beldurgarririk ez',
+  'home.hero.without.sellingData': 'Datuen salmentarik ez',
+  'home.hero.without.appDownload': 'Deskargatzeko apprik ez',
+  'home.hero.without.formFilling': 'Inprimakirik ez (ia)',
 } as const;

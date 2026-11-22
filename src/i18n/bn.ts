@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'হিসাব মেটাতে পেমেন্ট: {count}টি। মোট খরচ: {total}।',
   'tools.split.summarySettled': 'সবার হিসাব সমান। কোনো পেমেন্ট লাগবে না। মোট খরচ: {total}।',
   'home.hero.factsLabel': 'আপনি কী পান',
-  'home.hero.without.ads': 'কোনো বিজ্ঞাপন নেই',
-  'home.hero.without.dailyLimits': 'দৈনিক কোনো সীমা নেই',
-  'home.hero.without.paidTier': 'কোনো পেইড প্ল্যান নেই',
   'home.hero.goodToKnowLabel': 'জেনে রাখা ভালো',
   'home.hero.without.creepyTracking': 'কোনো গা-ছমছম ট্র্যাকিং নেই',
+  'home.hero.without.sellingData': 'আপনার ডেটা বিক্রি নেই',
+  'home.hero.without.appDownload': 'কোনো অ্যাপ ডাউনলোড নেই',
+  'home.hero.without.formFilling': 'কোনো ফর্ম পূরণ নেই (প্রায়)',
 } as const;

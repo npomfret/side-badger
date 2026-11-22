@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Betalinger for å gjøre opp: {count}. Totalt brukt: {total}.',
   'tools.split.summarySettled': 'Alle er kvitt. Ingen betalinger trengs. Totalt brukt: {total}.',
   'home.hero.factsLabel': 'Hva du får',
-  'home.hero.without.ads': 'Ingen annonser',
-  'home.hero.without.dailyLimits': 'Ingen daglige grenser',
-  'home.hero.without.paidTier': 'Ingen betalt nivå',
   'home.hero.goodToKnowLabel': 'Greit å vite',
   'home.hero.without.creepyTracking': 'Ingen creepy sporing',
+  'home.hero.without.sellingData': 'Ingen salg av dataene dine',
+  'home.hero.without.appDownload': 'Ingen app å laste ned',
+  'home.hero.without.formFilling': 'Ingen skjemautfylling (nesten)',
 } as const;

@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Malipo ya kumaliza hesabu: {count}. Jumla iliyotumika: {total}.',
   'tools.split.summarySettled': 'Kila mtu amelingana. Hakuna malipo yanayohitajika. Jumla iliyotumika: {total}.',
   'home.hero.factsLabel': 'Unachopata',
-  'home.hero.without.ads': 'Hakuna matangazo',
-  'home.hero.without.dailyLimits': 'Hakuna vikomo vya kila siku',
-  'home.hero.without.paidTier': 'Hakuna mpango wa kulipia',
   'home.hero.goodToKnowLabel': 'Ni vizuri kujua',
   'home.hero.without.creepyTracking': 'Hakuna ufuatiliaji wa kutisha',
+  'home.hero.without.sellingData': 'Hakuna kuuza data yako',
+  'home.hero.without.appDownload': 'Hakuna app ya kupakua',
+  'home.hero.without.formFilling': 'Hakuna kujaza fomu (karibu)',
 } as const;

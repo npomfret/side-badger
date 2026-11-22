@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Платежів для розрахунку: {count}. Витрачено разом: {total}.',
   'tools.split.summarySettled': 'Усі квити. Платежі не потрібні. Витрачено разом: {total}.',
   'home.hero.factsLabel': 'Що ви отримуєте',
-  'home.hero.without.ads': 'Без реклами',
-  'home.hero.without.dailyLimits': 'Без денних обмежень',
-  'home.hero.without.paidTier': 'Без платного рівня',
   'home.hero.goodToKnowLabel': 'Варто знати',
   'home.hero.without.creepyTracking': 'Без моторошного стеження',
+  'home.hero.without.sellingData': 'Без продажу ваших даних',
+  'home.hero.without.appDownload': 'Без застосунку для завантаження',
+  'home.hero.without.formFilling': 'Без заповнення форм (майже)',
 } as const;

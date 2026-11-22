@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Pagamenti per saldare i conti: {count}. Totale speso: {total}.',
   'tools.split.summarySettled': 'Tutti sono pari. Nessun pagamento necessario. Totale speso: {total}.',
   'home.hero.factsLabel': 'Cosa ottieni',
-  'home.hero.without.ads': 'Niente pubblicità',
-  'home.hero.without.dailyLimits': 'Niente limiti giornalieri',
-  'home.hero.without.paidTier': 'Niente piano a pagamento',
   'home.hero.goodToKnowLabel': 'Buono a sapersi',
   'home.hero.without.creepyTracking': 'Niente tracciamento inquietante',
+  'home.hero.without.sellingData': 'Niente vendita dei tuoi dati',
+  'home.hero.without.appDownload': 'Niente app da scaricare',
+  'home.hero.without.formFilling': 'Niente moduli da compilare (quasi)',
 } as const;

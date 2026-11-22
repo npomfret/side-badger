@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Betalinger for at gøre op: {count}. Brugt i alt: {total}.',
   'tools.split.summarySettled': 'Alle står lige. Ingen betalinger nødvendige. Brugt i alt: {total}.',
   'home.hero.factsLabel': 'Hvad du får',
-  'home.hero.without.ads': 'Ingen reklamer',
-  'home.hero.without.dailyLimits': 'Ingen daglige grænser',
-  'home.hero.without.paidTier': 'Intet betalt abonnement',
   'home.hero.goodToKnowLabel': 'Godt at vide',
   'home.hero.without.creepyTracking': 'Ingen creepy tracking',
+  'home.hero.without.sellingData': 'Ingen salg af dine data',
+  'home.hero.without.appDownload': 'Ingen app at downloade',
+  'home.hero.without.formFilling': 'Ingen formularer at udfylde (næsten)',
 } as const;

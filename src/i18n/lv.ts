@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Maksājumu skaits norēķiniem: {count}. Kopā iztērēts: {total}.',
   'tools.split.summarySettled': 'Visi ir kvit. Maksājumi nav vajadzīgi. Kopā iztērēts: {total}.',
   'home.hero.factsLabel': 'Ko jūs saņemat',
-  'home.hero.without.ads': 'Bez reklāmām',
-  'home.hero.without.dailyLimits': 'Bez dienas ierobežojumiem',
-  'home.hero.without.paidTier': 'Bez maksas līmeņa',
   'home.hero.goodToKnowLabel': 'Labi zināt',
   'home.hero.without.creepyTracking': 'Bez ēnainas izsekošanas',
+  'home.hero.without.sellingData': 'Bez jūsu datu pārdošanas',
+  'home.hero.without.appDownload': 'Bez lietotnes lejupielādes',
+  'home.hero.without.formFilling': 'Bez veidlapu aizpildīšanas (gandrīz)',
 } as const;

@@ -533,6 +533,9 @@ export const features: readonly FeatureRecord[] = [
         text: 'Snap the receipt and Side Badger fills in the total, date and place for you to check.',
       },
       { id: 'receipt-scanning.no-scan-credits', text: 'Free, with no scan credits.' },
+      // The homepage hero's cheeky short form (owner's wording, 22 November 2026). "(almost)" stays:
+      // scanning fills the details for you to check, and splitting is still yours to set.
+      { id: 'receipt-scanning.no-form-filling-almost', text: 'No form filling (almost).' },
     ],
     notApproved: [
       'any accuracy claim',
@@ -801,6 +804,8 @@ export const features: readonly FeatureRecord[] = [
         id: 'home-screen.opens-like-an-app',
         text: 'No app store needed: sign in, then add Side Badger to your home screen and it opens like an app.',
       },
+      // The homepage hero's short form (owner approval, 22 November 2026): it runs in the browser
+      { id: 'home-screen.no-app-to-download', text: 'No app to download.' },
     ],
     notApproved: ['native app', 'works offline'],
     release: 1,
@@ -896,6 +901,8 @@ export const features: readonly FeatureRecord[] = [
       { id: 'privacy-posture.no-creepy-tracking', text: 'No creepy tracking.' },
       { id: 'privacy-posture.essential-cookies-only', text: 'Only the cookies needed to keep you signed in.' },
       { id: 'privacy-posture.no-sale-of-data', text: "We don't sell your personal data." },
+      // The homepage hero's short form of no-sale-of-data (owner approval, 22 November 2026)
+      { id: 'privacy-posture.no-selling-your-data', text: 'No selling your data.' },
       { id: 'privacy-posture.members-only', text: 'Only members of a group can see it.' },
     ],
     notApproved: [
@@ -1011,7 +1018,7 @@ export const features: readonly FeatureRecord[] = [
     status: 'not-offered',
     capability: 'iOS and Android apps.',
     evidence: [],
-    copy: 'Works in your browser; sign in, then add it to your home screen.',
+    copy: 'Works in your browser; sign in, then add it to your home screen. Its launch ends the "No app to download" claim (home-screen.no-app-to-download).',
   }),
   notOffered({
     id: 'offline',

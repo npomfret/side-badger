@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Mga bayad para makapag-settle: {count}. Kabuuang nagastos: {total}.',
   'tools.split.summarySettled': 'Quits na ang lahat. Walang kailangang bayad. Kabuuang nagastos: {total}.',
   'home.hero.factsLabel': 'Ano ang makukuha mo',
-  'home.hero.without.ads': 'Walang ad',
-  'home.hero.without.dailyLimits': 'Walang pang-araw-araw na limitasyon',
-  'home.hero.without.paidTier': 'Walang bayad na tier',
   'home.hero.goodToKnowLabel': 'Mabuting malaman',
   'home.hero.without.creepyTracking': 'Walang nakakatakot na pagsubaybay',
+  'home.hero.without.sellingData': 'Walang pagbebenta ng data mo',
+  'home.hero.without.appDownload': 'Walang app download',
+  'home.hero.without.formFilling': 'Walang pagpuno ng form (halos)',
 } as const;

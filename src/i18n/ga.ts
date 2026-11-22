@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Íocaíochtaí le socrú: {count}. Iomlán caite: {total}.',
   'tools.split.summarySettled': 'Tá gach duine cothrom. Níl aon íocaíocht de dhíth. Iomlán caite: {total}.',
   'home.hero.factsLabel': 'Cad a gheobhaidh tú',
-  'home.hero.without.ads': 'Gan fógraí',
-  'home.hero.without.dailyLimits': 'Gan teorainneacha laethúla',
-  'home.hero.without.paidTier': 'Gan leibhéal íoctha',
   'home.hero.goodToKnowLabel': 'Go maith le fios',
   'home.hero.without.creepyTracking': 'Gan rianú gliúmálach',
+  'home.hero.without.sellingData': 'Gan do shonraí a dhíol',
+  'home.hero.without.appDownload': 'Gan aip le híoslódáil',
+  'home.hero.without.formFilling': 'Gan foirmeacha a líonadh (beagnach)',
 } as const;

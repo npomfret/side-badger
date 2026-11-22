@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': '需要结清的付款：{count} 笔。总支出：{total}。',
   'tools.split.summarySettled': '大家都已两清，无需付款。总支出：{total}。',
   'home.hero.factsLabel': '你能得到什么',
-  'home.hero.without.ads': '无广告',
-  'home.hero.without.dailyLimits': '无每日限制',
-  'home.hero.without.paidTier': '无付费档位',
   'home.hero.goodToKnowLabel': '小贴士',
   'home.hero.without.creepyTracking': '无偷偷摸摸的跟踪',
+  'home.hero.without.sellingData': '无数据出售',
+  'home.hero.without.appDownload': '无需下载应用',
+  'home.hero.without.formFilling': '无需填表（几乎）',
 } as const;

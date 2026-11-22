@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'پرداخت‌ها برای تسویه: {count}. مجموع هزینه‌ها: {total}.',
   'tools.split.summarySettled': 'حساب همه صاف است. پرداختی لازم نیست. مجموع هزینه‌ها: {total}.',
   'home.hero.factsLabel': 'چه چیزی می‌گیرید',
-  'home.hero.without.ads': 'بدون تبلیغات',
-  'home.hero.without.dailyLimits': 'بدون محدودیت روزانه',
-  'home.hero.without.paidTier': 'بدون طرح پولی',
   'home.hero.goodToKnowLabel': 'خوب است بدانید',
   'home.hero.without.creepyTracking': 'بدون ردیابی فضولانه',
+  'home.hero.without.sellingData': 'بدون فروش داده‌هایت',
+  'home.hero.without.appDownload': 'بدون اپ برای دانلود',
+  'home.hero.without.formFilling': 'بدون پر کردن فرم (تقریباً)',
 } as const;

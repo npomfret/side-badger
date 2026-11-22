@@ -404,7 +404,7 @@ export class HomePage {
     return this.region('home.hero.title').getByRole('list', { name: this.string('home.hero.factsLabel'), exact: true });
   }
 
-  /** The hero's line of what it leaves out ("No ads"), a list named by `home.hero.goodToKnowLabel` */
+  /** The hero's line of what it leaves out ("No creepy tracking"), a list named by `home.hero.goodToKnowLabel` */
   private heroWithout(): Locator {
     return this.region('home.hero.title').getByRole('list', { name: this.string('home.hero.goodToKnowLabel'), exact: true });
   }
@@ -473,10 +473,10 @@ export class HomePage {
       this.string('home.hero.fact.assistants'),
     ]));
     await auditAnimationWait('the hero lists what you don\'t get', () => expect(this.heroWithout().getByRole('listitem')).toHaveText([
-      this.string('home.hero.without.ads'),
-      this.string('home.hero.without.dailyLimits'),
       this.string('home.hero.without.creepyTracking'),
-      this.string('home.hero.without.paidTier'),
+      this.string('home.hero.without.sellingData'),
+      this.string('home.hero.without.appDownload'),
+      this.string('home.hero.without.formFilling'),
     ]));
   }
 

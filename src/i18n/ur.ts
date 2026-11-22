@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'حساب بے باق کرنے کی ادائیگیاں: {count}۔ کل خرچ: {total}۔',
   'tools.split.summarySettled': 'سب کا حساب برابر ہے۔ کسی ادائیگی کی ضرورت نہیں۔ کل خرچ: {total}۔',
   'home.hero.factsLabel': 'آپ کو کیا ملتا ہے',
-  'home.hero.without.ads': 'کوئی اشتہار نہیں',
-  'home.hero.without.dailyLimits': 'کوئی یومیہ حد نہیں',
-  'home.hero.without.paidTier': 'کوئی ادائیگی والا پلان نہیں',
   'home.hero.goodToKnowLabel': 'جاننا اچھا ہے',
   'home.hero.without.creepyTracking': 'کوئی چوری چھپے ٹریکنگ نہیں',
+  'home.hero.without.sellingData': 'کوئی ڈیٹا فروخت نہیں',
+  'home.hero.without.appDownload': 'کوئی ایپ ڈاؤن لوڈ نہیں',
+  'home.hero.without.formFilling': 'کوئی فارم بھرنا نہیں (تقریباً)',
 } as const;

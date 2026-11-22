@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Уплате за поравнање: {count}. Укупно потрошено: {total}.',
   'tools.split.summarySettled': 'Сви су квит. Уплате нису потребне. Укупно потрошено: {total}.',
   'home.hero.factsLabel': 'Шта добијаш',
-  'home.hero.without.ads': 'Без огласа',
-  'home.hero.without.dailyLimits': 'Без дневних ограничења',
-  'home.hero.without.paidTier': 'Без плаћеног нивоа',
   'home.hero.goodToKnowLabel': 'Добро је знати',
   'home.hero.without.creepyTracking': 'Без њушкања',
+  'home.hero.without.sellingData': 'Без продаје података',
+  'home.hero.without.appDownload': 'Без апликације за преузимање',
+  'home.hero.without.formFilling': 'Без попуњавања образаца (скоро)',
 } as const;

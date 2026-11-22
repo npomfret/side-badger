@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Taliadau i setlo: {count}. Cyfanswm a wariwyd: {total}.',
   'tools.split.summarySettled': 'Mae pawb wedi setlo. Dim angen taliadau. Cyfanswm a wariwyd: {total}.',
   'home.hero.factsLabel': 'Beth gewch chi',
-  'home.hero.without.ads': 'Dim hysbysebion',
-  'home.hero.without.dailyLimits': 'Dim cyfyngiadau dyddiol',
-  'home.hero.without.paidTier': 'Dim haen daledig',
   'home.hero.goodToKnowLabel': 'Da gwybod',
   'home.hero.without.creepyTracking': 'Dim tracio llechwraidd',
+  'home.hero.without.sellingData': 'Dim gwerthu eich data',
+  'home.hero.without.appDownload': 'Dim ap i\'w lawrlwytho',
+  'home.hero.without.formFilling': 'Dim llenwi ffurflenni (bron)',
 } as const;

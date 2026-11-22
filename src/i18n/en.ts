@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Payments to settle up: {count}. Total spent: {total}.',
   'tools.split.summarySettled': 'Everyone is square. No payments needed. Total spent: {total}.',
   'home.hero.factsLabel': 'What you get',
-  'home.hero.without.ads': 'No ads',
-  'home.hero.without.dailyLimits': 'No daily limits',
-  'home.hero.without.paidTier': 'No paid tier',
   'home.hero.goodToKnowLabel': 'Good to know',
   'home.hero.without.creepyTracking': 'No creepy tracking',
+  'home.hero.without.sellingData': 'No selling your data',
+  'home.hero.without.appDownload': 'No app to download',
+  'home.hero.without.formFilling': 'No form filling (almost)',
 } as const;

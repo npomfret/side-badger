@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Uplata za poravnanje: {count}. Ukupno potrošeno: {total}.',
   'tools.split.summarySettled': 'Svi su kvit. Nijedna uplata nije potrebna. Ukupno potrošeno: {total}.',
   'home.hero.factsLabel': 'Što dobivaš',
-  'home.hero.without.ads': 'Bez oglasa',
-  'home.hero.without.dailyLimits': 'Bez dnevnih ograničenja',
-  'home.hero.without.paidTier': 'Bez plaćene razine',
   'home.hero.goodToKnowLabel': 'Dobro je znati',
   'home.hero.without.creepyTracking': 'Bez njuškanja',
+  'home.hero.without.sellingData': 'Bez prodaje vaših podataka',
+  'home.hero.without.appDownload': 'Bez aplikacije za preuzimanje',
+  'home.hero.without.formFilling': 'Bez ispunjavanja obrazaca (skoro)',
 } as const;

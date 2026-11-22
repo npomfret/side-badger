@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Πληρωμές για την εκκαθάριση: {count}. Σύνολο εξόδων: {total}.',
   'tools.split.summarySettled': 'Είστε όλοι πάτσι. Δεν χρειάζονται πληρωμές. Σύνολο εξόδων: {total}.',
   'home.hero.factsLabel': 'Τι παίρνετε',
-  'home.hero.without.ads': 'Χωρίς διαφημίσεις',
-  'home.hero.without.dailyLimits': 'Χωρίς ημερήσια όρια',
-  'home.hero.without.paidTier': 'Χωρίς επί πληρωμή επίπεδο',
   'home.hero.goodToKnowLabel': 'Καλό είναι να ξέρεις',
   'home.hero.without.creepyTracking': 'Χωρίς ανατριχιαστικό tracking',
+  'home.hero.without.sellingData': 'Χωρίς πώληση των δεδομένων σου',
+  'home.hero.without.appDownload': 'Χωρίς εφαρμογή για λήψη',
+  'home.hero.without.formFilling': 'Χωρίς συμπλήρωση φορμών (σχεδόν)',
 } as const;

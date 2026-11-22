@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Pagos para saldar cuentas: {count}. Total gastado: {total}.',
   'tools.split.summarySettled': 'Todo el mundo está en paz. No hace falta ningún pago. Total gastado: {total}.',
   'home.hero.factsLabel': 'Lo que obtienes',
-  'home.hero.without.ads': 'Sin anuncios',
-  'home.hero.without.dailyLimits': 'Sin límites diarios',
-  'home.hero.without.paidTier': 'Sin plan de pago',
   'home.hero.goodToKnowLabel': 'Es bueno saberlo',
   'home.hero.without.creepyTracking': 'Sin rastreo siniestro',
+  'home.hero.without.sellingData': 'Sin vender tus datos',
+  'home.hero.without.appDownload': 'Sin app que descargar',
+  'home.hero.without.formFilling': 'Sin rellenar formularios (casi)',
 } as const;

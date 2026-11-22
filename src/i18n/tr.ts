@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Ödeşmek için ödemeler: {count}. Toplam harcama: {total}.',
   'tools.split.summarySettled': 'Herkes başabaş. Ödeme gerekmiyor. Toplam harcama: {total}.',
   'home.hero.factsLabel': 'Ne elde edersiniz',
-  'home.hero.without.ads': 'Reklam yok',
-  'home.hero.without.dailyLimits': 'Günlük sınır yok',
-  'home.hero.without.paidTier': 'Ücretli katman yok',
   'home.hero.goodToKnowLabel': 'Bilmekte fayda var',
   'home.hero.without.creepyTracking': 'Ürkütücü takip yok',
+  'home.hero.without.sellingData': 'Veri satışı yok',
+  'home.hero.without.appDownload': 'İndirilecek uygulama yok',
+  'home.hero.without.formFilling': 'Form doldurmak yok (neredeyse)',
 } as const;

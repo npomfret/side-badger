@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Greiðslur til að gera upp: {count}. Heildarútgjöld: {total}.',
   'tools.split.summarySettled': 'Allir eru kvittir. Engar greiðslur nauðsynlegar. Heildarútgjöld: {total}.',
   'home.hero.factsLabel': 'Það sem þú færð',
-  'home.hero.without.ads': 'Engar auglýsingar',
-  'home.hero.without.dailyLimits': 'Engin dagleg takmörk',
-  'home.hero.without.paidTier': 'Ekkert greitt þrep',
   'home.hero.goodToKnowLabel': 'Gott að vita',
   'home.hero.without.creepyTracking': 'Engin snuðrandi rakning',
+  'home.hero.without.sellingData': 'Engin sala á gögnunum þínum',
+  'home.hero.without.appDownload': 'Ekkert app til að sækja',
+  'home.hero.without.formFilling': 'Engin eyðublaðaútfylling (næstum)',
 } as const;

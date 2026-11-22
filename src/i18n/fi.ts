@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Tilien tasaamiseen tarvittavia maksuja: {count}. Kuluja yhteensä: {total}.',
   'tools.split.summarySettled': 'Kaikki ovat tasoissa. Maksuja ei tarvita. Kuluja yhteensä: {total}.',
   'home.hero.factsLabel': 'Mitä saat',
-  'home.hero.without.ads': 'Ei mainoksia',
-  'home.hero.without.dailyLimits': 'Ei päivittäisiä rajoja',
-  'home.hero.without.paidTier': 'Ei maksullista tasoa',
   'home.hero.goodToKnowLabel': 'Hyvä tietää',
   'home.hero.without.creepyTracking': 'Ei urkkivaa seurantaa',
+  'home.hero.without.sellingData': 'Ei datan myyntiä',
+  'home.hero.without.appDownload': 'Ei ladattavaa appia',
+  'home.hero.without.formFilling': 'Ei lomakkeiden täyttöä (melkein)',
 } as const;

@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'الدفعات اللازمة للتسوية: {count}. إجمالي المصروفات: {total}.',
   'tools.split.summarySettled': 'حساب الجميع مسوّى. لا حاجة إلى دفعات. إجمالي المصروفات: {total}.',
   'home.hero.factsLabel': 'ما الذي تحصل عليه',
-  'home.hero.without.ads': 'بلا إعلانات',
-  'home.hero.without.dailyLimits': 'بلا حدود يومية',
-  'home.hero.without.paidTier': 'بلا باقة مدفوعة',
   'home.hero.goodToKnowLabel': 'من الجيد أن تعرف',
   'home.hero.without.creepyTracking': 'بلا تتبّع مخيف',
+  'home.hero.without.sellingData': 'بلا بيع لبياناتك',
+  'home.hero.without.appDownload': 'بلا تطبيق لتحميله',
+  'home.hero.without.formFilling': 'بلا تعبئة نماذج (تقريبًا)',
 } as const;

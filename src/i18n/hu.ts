@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Az elszámoláshoz szükséges kifizetések száma: {count}. Összesen elköltve: {total}.',
   'tools.split.summarySettled': 'Mindenki kvitt. Nincs szükség kifizetésre. Összesen elköltve: {total}.',
   'home.hero.factsLabel': 'Mit kapsz',
-  'home.hero.without.ads': 'Nincsenek hirdetések',
-  'home.hero.without.dailyLimits': 'Nincsenek napi korlátok',
-  'home.hero.without.paidTier': 'Nincs fizetős szint',
   'home.hero.goodToKnowLabel': 'Jó tudni',
   'home.hero.without.creepyTracking': 'Nincs sunyi követés',
+  'home.hero.without.sellingData': 'Nincs adateladás',
+  'home.hero.without.appDownload': 'Nincs appletöltés',
+  'home.hero.without.formFilling': 'Nincs űrlapkitöltés (majdnem)',
 } as const;

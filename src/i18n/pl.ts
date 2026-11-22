@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'Płatności do rozliczenia: {count}. Wydano w sumie: {total}.',
   'tools.split.summarySettled': 'Wszyscy są kwita. Nie trzeba żadnych płatności. Wydano w sumie: {total}.',
   'home.hero.factsLabel': 'Co dostajesz',
-  'home.hero.without.ads': 'Bez reklam',
-  'home.hero.without.dailyLimits': 'Bez dziennych limitów',
-  'home.hero.without.paidTier': 'Bez płatnego abonamentu',
   'home.hero.goodToKnowLabel': 'Warto wiedzieć',
   'home.hero.without.creepyTracking': 'Bez creepy śledzenia',
+  'home.hero.without.sellingData': 'Bez sprzedawania Twoich danych',
+  'home.hero.without.appDownload': 'Bez aplikacji do pobrania',
+  'home.hero.without.formFilling': 'Bez wypełniania formularzy (prawie)',
 } as const;

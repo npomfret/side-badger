@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'లెక్క తేల్చడానికి పేమెంట్లు: {count}. మొత్తం ఖర్చు: {total}.',
   'tools.split.summarySettled': 'అందరి లెక్క సరిపోయింది. పేమెంట్లు అవసరం లేదు. మొత్తం ఖర్చు: {total}.',
   'home.hero.factsLabel': 'మీకు ఏం దొరుకుతుంది',
-  'home.hero.without.ads': 'ప్రకటనలు లేవు',
-  'home.hero.without.dailyLimits': 'రోజువారీ పరిమితులు లేవు',
-  'home.hero.without.paidTier': 'చెల్లింపు ప్లాన్ లేదు',
   'home.hero.goodToKnowLabel': 'తెలుసుకోవడం మంచిది',
   'home.hero.without.creepyTracking': 'దొంగచాటు ట్రాకింగ్ లేదు',
+  'home.hero.without.sellingData': 'మీ డేటా అమ్మకం లేదు',
+  'home.hero.without.appDownload': 'డౌన్‌లోడ్ చేయడానికి యాప్ లేదు',
+  'home.hero.without.formFilling': 'ఫారమ్ నింపడం లేదు (దాదాపు)',
 } as const;

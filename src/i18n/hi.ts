@@ -375,9 +375,9 @@ export default {
   'tools.split.summary': 'हिसाब चुकता करने के लिए पेमेंट: {count}। कुल खर्च: {total}।',
   'tools.split.summarySettled': 'सबका हिसाब बराबर है। किसी पेमेंट की ज़रूरत नहीं। कुल खर्च: {total}।',
   'home.hero.factsLabel': 'आपको क्या मिलता है',
-  'home.hero.without.ads': 'कोई विज्ञापन नहीं',
-  'home.hero.without.dailyLimits': 'रोज़ाना की कोई सीमा नहीं',
-  'home.hero.without.paidTier': 'कोई पेड प्लान नहीं',
   'home.hero.goodToKnowLabel': 'जानना अच्छा है',
   'home.hero.without.creepyTracking': 'कोई चोरी-छिपे ट्रैकिंग नहीं',
+  'home.hero.without.sellingData': 'आपके डेटा की कोई बिक्री नहीं',
+  'home.hero.without.appDownload': 'कोई ऐप डाउनलोड नहीं',
+  'home.hero.without.formFilling': 'कोई फ़ॉर्म भरना नहीं (लगभग)',
 } as const;

@@ -13,6 +13,8 @@ launch counter, the security headers and /og/ headers.
 
 Options:
   --image NAME      use an existing image instead of building one
+  --markdown-image NAME  run the Node markdown checker in this builder image
+                    (production hosts need no installed Node toolchain)
   --tag NAME        tag for the image this script builds (default: sb-nginx-check)
   --port P          host port for the container (default: 18200)
   --url BASE        test an already running server, e.g. http://127.0.0.1:8080
@@ -39,6 +41,7 @@ die_usage() {
 root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 fixture="$root/src/__tests__/fixtures/legacy-urls.txt"
 image=""
+markdown_image=""
 tag="sb-nginx-check"
 port=18200
 base=""
@@ -57,10 +60,11 @@ while [ $# -gt 0 ]; do
       usage
       exit 0
       ;;
-    --image | --tag | --port | --url | --skip | --log)
+    --image | --markdown-image | --tag | --port | --url | --skip | --log)
       [ $# -ge 2 ] || die_usage "$1 needs a value"
       case "$1" in
         --image) image="$2" ;;
+        --markdown-image) markdown_image="$2" ;;
         --tag) tag="$2" ;;
         --port) port="$2" ;;
         --url) base="${2%/}" ;;
@@ -169,7 +173,7 @@ start_server() {
     image="$tag"
   fi
   container="${tag}-run-$$"
-  docker run -d --name "$container" -p "$port:80" "$image" >>"$log" 2>&1 || {
+  docker run -d --name "$container" -p "127.0.0.1:$port:80" "$image" >>"$log" 2>&1 || {
     echo "error: docker run failed, see $log" >&2
     exit 1
   }
@@ -316,7 +320,7 @@ main() {
   skipped headers || check_headers
   skipped og || check_og
   if ! skipped markdown; then
-    if node "$root/scripts/check-markdown.mjs" "$base" >>"$log" 2>&1; then
+    if check_markdown >>"$log" 2>&1; then
       check markdown "Markdown negotiation and content" "pass" "pass"
     else
       check markdown "Markdown negotiation and content (see log)" "pass" "fail"
@@ -333,6 +337,16 @@ main() {
     # cleanup keeps a copy of the default log, which lives in the temp dir
     echo "full detail: $log"
     exit 1
+  fi
+}
+
+check_markdown() {
+  if [ -n "$markdown_image" ]; then
+    [ -n "$container" ] || { echo '--markdown-image requires an owned image container'; return 2; }
+    docker run --rm --network "container:$container" "$markdown_image" \
+      node scripts/check-markdown.mjs http://127.0.0.1:80
+  else
+    node "$root/scripts/check-markdown.mjs" "$base"
   fi
 }
 

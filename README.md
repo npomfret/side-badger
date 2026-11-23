@@ -34,22 +34,17 @@ src/
 
 ## Deployment
 
-### Automatic (GitHub Actions)
-
-Push to `main` → Docker image builds → Deploys to your server.
-
-Setup requirements:
-1. Add `SSH_PRIVATE_KEY` as GitHub secret
-2. Configure server path in `.github/workflows/deploy.yml`
-3. Login to ghcr.io on server: `docker login ghcr.io -u YOUR_USERNAME`
-
-### Manual
+Push to `main` → TeamCity verifies the exact revision on our Mac agents →
+production builds and smoke-tests the image → health-gated deployment.
 
 ```bash
-npm run build                    # Build static site to dist/
-docker build -t your-app .       # Build Docker image
-docker run -p 80:80 your-app     # Run container
+python3 scripts/teamcity.py status
+python3 scripts/teamcity.py failures
+npm run deploy                    # Queue the same gated production deployment
 ```
+
+The nightly verifies without deploying. See [CI operations](docs/ci.md) for
+credentials, artifacts and rollback. GitHub Actions is retired.
 
 ## Policy Pages
 
@@ -76,7 +71,7 @@ specifically to the private app.
 
 ## Tech Stack
 
-- **Astro 5** - Static site generation
+- **Astro 7** - Static site generation
 - **TypeScript** - Type safety
 - **Docker + nginx** - Production image; nginx serves the static build behind the shared Snowmonkey proxy
-- **GitHub Actions** - CI/CD
+- **TeamCity** - CI/CD on our own Mac agents

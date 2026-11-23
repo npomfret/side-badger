@@ -1,0 +1,23 @@
+{
+  "project": "SideBadger",
+  "composite": "AllChecks",
+  "buildTypes": [
+    "Compile",
+    "StaticChecks",
+    "UnitTests",
+    "IntegrationTests",
+    "BrowserTests1",
+    "BrowserTests2",
+    "BrowserTests3",
+    "AllChecks",
+    "DeployProduction"
+  ],
+  "testLegs": [
+    "UnitTests",
+    "IntegrationTests",
+    "BrowserTests1",
+    "BrowserTests2",
+    "BrowserTests3"
+  ],
+  "logDir": "tmp/teamcity"
+}

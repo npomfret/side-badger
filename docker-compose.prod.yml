@@ -2,7 +2,7 @@ services:
   # The service name is this container's alias on snowmonkey-proxy-network,
   # which the edge proxies to, so it must not collide with another project's
   side-badger:
-    image: ghcr.io/npomfret/side-badger:latest-me
+    image: ${RELEASE_IMAGE:?Select the verified release image explicitly}
     container_name: side-badger-website-me
     restart: unless-stopped
     expose:

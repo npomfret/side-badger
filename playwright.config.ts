@@ -20,18 +20,21 @@ export default defineConfig({
   workers: 1,
   forbidOnly: !!process.env.CI,
   retries: 0,
-  reporter: process.env.CI ? [['list'], ['github']] : [['list']],
+  reporter: [['list'], ['junit', { outputFile: 'test-results/playwright.xml' }]],
   timeout: 30_000,
   expect: { timeout: 5_000 },
   use: {
     baseURL: `http://localhost:${port}`,
     ...devices['Desktop Chrome'],
     trace: 'retain-on-failure',
+    screenshot: 'only-on-failure',
   },
   webServer: {
     command:
       `I18N_MODE=${mode} PREVIEW_UNPUBLISHED=1 PREVIEW_PSEUDO=1 npm run build && ` +
-      `npx astro preview --port ${port}`,
+      // Playwright owns this process; bypass Astro 7's agent auto-backgrounding.
+      `npx astro preview --ignore-lock --port ${port}`,
+    stdout: 'pipe',
     url: `http://localhost:${port}/`,
     reuseExistingServer: false,
     timeout: 300_000,

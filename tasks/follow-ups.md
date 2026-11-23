@@ -31,8 +31,7 @@ The site redesign (restructure task, homepage task and release 1 of [the site pl
 |---|---|---|
 | Search Console | Confirm the domain property, submit the sitemap, export baseline reports. | The search reviews wait. |
 | Production field data | Run PageSpeed Insights on production (CrUX at p75: LCP ≤ 2.5 s, INP ≤ 200 ms, CLS ≤ 0.1). | Lab measurements only. |
-| Branch protection | Require the `verify` check on `main`. | The CI gate still blocks deploys. |
-| Manual deploy | `scripts/deploy.sh` (now rsync, `--delete` confined to `src/`, `public/`, `nginx/`, `scripts/markdown/`) uploads the local `docker-compose.yml` (service `website`), but CI's `scripts/deploy-ci.sh` installs `docker-compose.prod.yml` (service `side-badger`, the proxy's alias) in the same directory. A manual deploy would overwrite CI's compose file and its container would likely get no traffic; the next CI deploy removes it. Decide whether to retire `deploy.sh` or make it deploy the prod compose. | Deploy through CI only. |
+| Branch protection | Configure TeamCity commit-status publication, then require All Checks on `main`. | The CI gate still blocks deploys. |
 | Loki access | Read access to the edge box's Loki. | The `/go/` counter logs; counts are read later. |
 | Fluent reviewers | Find reviewers for the priority markets, starting with any locale with at least 50 clicks a month in its Search Console baseline. | Only English is indexed (D31). |
 | Translated policies | Translated, legally reviewed policies are a task in `wl-bill-splitter`. | Localized policy pages show the English text with a translated notice. |

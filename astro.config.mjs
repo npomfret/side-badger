@@ -11,6 +11,8 @@ import { markdownSite } from './scripts/markdown/index.mjs';
 export default defineConfig({
   site: 'https://sidebadger.me',
   output: 'static',
+  // Preserve semantic spaces between inline elements (Astro 7 defaults to JSX trimming).
+  compressHTML: true,
   // Every URL ends with a slash and is written as <path>/index.html (restructure D1)
   trailingSlash: 'always',
   build: { format: 'directory' },

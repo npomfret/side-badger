@@ -3,13 +3,13 @@
 Marketing website for a white-label bill splitting app. The actual app is hosted externally at `app.sidebadger.me` (staging at `staging.sidebadger.me`); this repo is just the marketing site.
 
 - **Tech**: Astro 7 static site, TypeScript, YAML content validated with zod, Vitest, Playwright, nginx in Docker; many locales including RTL.
-- **Lifecycle**: production. A push to `main` builds and deploys the site (`.github/workflows/deploy.yml`) once `verify` and `e2e` pass. Verification gates and the output rules below are the change constraints.
+- **Lifecycle**: production. A push to `main` builds and deploys the site through TeamCity once the complete snapshot verification chain passes. Verification gates and the output rules below are the change constraints.
 
 ## Architecture
 
 - **Framework**: Astro 7 (static site generation)
 - **Deployment**: Docker container on `sidebadger.me` (behind shared nginx proxy)
-- **CI/CD**: GitHub Actions. Every push and pull request runs the `verify` job; a push to `main` deploys only if it and the `e2e` browser tests pass (see Verify gate)
+- **CI/CD**: TeamCity on the shared Mac agents. A push to `main` runs the verification chain and deploys only if every leg passes; the nightly verifies without deploying (see Verify gate).
 
 ## Internationalization (i18n)
 
@@ -53,7 +53,8 @@ Rules that hold across the site (full structure, shell, layouts, components and 
 `npm run verify` is the full gate: unit tests, `i18n:audit`, `astro check` (0 errors), `build`, then `check:site`.
 - `check:site` (`vitest.site.config.ts`, rules in `src/__site_tests__/`) reads `dist/` and enforces 15 output rules: files, canonicals, noindex, h1, title/description, lang/dir, hreflang, sitemap, links, social image, JSON-LD, leaks, English fallback, image dimensions and alt, launch links. Run `npm run build` first; `SITE_DIST` points it at another directory.
 - `scripts/check-nginx.sh` (`npm run check:nginx`) builds the image (or takes `--image`), runs it and checks redirects, 404s, `/go/`, headers. It needs Docker and a strict build.
-- CI (`.github/workflows/deploy.yml`): the `verify` job runs `npm run verify` and the `e2e` job runs the Playwright suite (three shards, strict mode) on every push and pull request. `build-and-push` and `deploy` need both and run only on pushes to `main`; `build-and-push` builds the image, runs the nginx smoke test against it, then pushes it.
+- CI (`.teamcity/settings.kts`): Compile, Static Checks, Unit Tests, Integration Tests and three serial Browser Tests legs feed All Checks. Deploy (Production) snapshots that gate at the same revision. All agent legs take the estate `high_cpu` writer lock and use one test worker. The production host builds and smoke-tests the image; the Mac agents do not need Docker.
+- Operate CI with `python3 scripts/teamcity.py status|queue|failures|settings`; `npm run deploy` queues the gated production configuration. The shared shim is canonical and is never locally edited. See `docs/ci.md` for credentials and deployment.
 - In English-first mode the unused-key test lets keys listed under `pending/keys.json` `added` stay unused (their code lands in a later wave) and prints them; strict mode fails on any unused key.
 - The Dockerfile `builder` stage runs `check:site` after the build, so a manual `scripts/deploy.sh` build is gated too.
 
@@ -69,7 +70,7 @@ npm run docker:logs
 Multi-stage Dockerfile:
 1. `dev` - hot-reload container
 2. `builder` - Node 26.12.1, install deps (dev included), build, run `check:site`
-3. `production` - digest-pinned `nginx:1.30.6-alpine` serving `dist/`; `nginx/default.conf` goes in `conf.d/`, other `nginx/*.conf` in `/etc/nginx/side-badger/`
+3. `production` - digest-pinned `nginx:1.30.7-alpine` serving `dist/`; `nginx/default.conf` goes in `conf.d/`, other `nginx/*.conf` in `/etc/nginx/side-badger/`
 
 `nginx/default.conf` owns every response header except HSTS, plus caching and the body limit. The shared Snowmonkey proxy terminates TLS, compresses responses (brotli or gzip) and forwards to the `side-badger` alias.
 

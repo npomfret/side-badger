@@ -6,6 +6,8 @@ import { resolve } from 'path';
 export default defineConfig({
   test: {
     globals: true,
+    reporters: ['default', 'junit'],
+    outputFile: { junit: 'test-results/site.xml' },
     maxWorkers: 1,
     fileParallelism: false,
     include: ['src/__site_tests__/**/*.test.ts'],

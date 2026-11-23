@@ -56,7 +56,7 @@ Each decision is final for this plan. Implementation agents apply them without a
 
 ### D2. The pricing promise is "Free. No ads. No daily limits."
 
-- **Superseded (owner decision, 22 November 2026):** ads and a paid tier may come, so the site promises neither. The copy brags about what is free instead (`tasks/brag-not-absences.md`; the rule is in AGENTS.md). The same decision drops D3's "No ads" claim.
+- **Superseded (owner decision, 22 November 2026):** ads and a paid tier may come, so the site promises neither. The copy brags about what is free instead (`tasks/brag-not-absences.md` in git history; the rule is in AGENTS.md). The same decision drops D3's "No ads" claim.
 
 - **Decision:** drop "free forever", "100% free and unlimited", "free until it isn't", the Pro plan card and the "all rights reserved (but not really)" joke. Say "Free. No ads. No daily limits." Publish the real limits as a table on the pricing page. Answer "Will it always be free?" with the terms' own commitment: everything is free today, and any change to that comes with notice first. Full reasoning is in [Pricing and promise](#pricing-and-promise).
 - **Evidence:** there is no billing, plan or subscription code (searched for Stripe, subscription, premium, paywall, plan and checkout across server, migrations, shared, webapp and config). The terms say "The Service is currently provided free of charge" and reserve the right to introduce fees "with reasonable notice" (`config/policies/terms-and-conditions.md` section 1). There is no expense-count limit and no receipt-scan quota; the only caps are size and count limits in `packages/shared/src/constants.ts` and a per-account rate limit of 1,000 changes a minute (`server/.env.instanceproduction`, `__RATE_LIMIT_ACTIONS_PER_MINUTE`).

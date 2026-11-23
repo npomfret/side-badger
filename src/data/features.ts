@@ -964,9 +964,8 @@ export const features: readonly FeatureRecord[] = [
     release: 1,
   },
 
-  // Owner decision 21 November 2026: claimed ahead of the public listing, while the connection is
-  // still being finished (see limits). The ChatGPT listing must go live to back the claim
-  // (tasks/follow-ups.md, "ChatGPT listing").
+  // Owner decision 21 November 2026: claimed ahead of the public listing. The owner confirmed on
+  // 22 November 2026 that it works with ChatGPT and Claude (see limits)
   {
     id: 'ai-assistants',
     homePage: null,
@@ -975,17 +974,15 @@ export const features: readonly FeatureRecord[] = [
     problem: "Keeping a group's expenses up to date from the assistant already open.",
     audiences: { primary: ['organisers'], secondary: ['everyone'] },
     status: 'available',
-    // Low: the tools are in the app's code and the production endpoint answers, but account linking
-    // in production is unproven and neither assistant has a listing
-    confidence: 'low',
+    // The owner confirmed on 22 November 2026 that it works with ChatGPT and Claude in production. A
+    // full plugin is being built; neither assistant has a public listing yet
+    confidence: 'high',
     evidence: ['server/src/mcp/tool-contracts.ts', 'server/src/mcp/McpTools.ts'],
     // wl-bill-splitter main, read for tasks/ai-discovery-and-integration-docs.md (19 November 2026)
     verifiedAt: 'e2b559e2b2',
     limits: [
       'Today a person adds a custom MCP connection to ChatGPT or Claude themselves. There is no ChatGPT or Claude listing and no installable package.',
-      'Production account linking is not proven: only unauthenticated probes of the production endpoint and its sign-in discovery were made.',
-      'Whether production runs the ten-tool set is unknown.',
-      'Not accepted in the ChatGPT or Claude phone apps, and Claude has not been accepted end to end.',
+      'Works with ChatGPT and Claude in production (owner confirmation, 22 November 2026). A full plugin is in progress; claim nothing about it until it is public.',
       "It uses the account's existing group permissions. Writes need a verified email.",
       'Recording a settlement records a payment that already happened; no money moves.',
       'Receipts: JPEG, PNG and WebP are scanned; PDFs are stored but not scanned; HEIC is refused.',

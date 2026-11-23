@@ -2,12 +2,12 @@
 
 Marketing website for a white-label bill splitting app. The actual app is hosted externally at `app.sidebadger.me` (staging at `staging.sidebadger.me`); this repo is just the marketing site.
 
-- **Tech**: Astro 5 static site, TypeScript, YAML content validated with zod, Vitest, Playwright, nginx in Docker; many locales including RTL.
+- **Tech**: Astro 7 static site, TypeScript, YAML content validated with zod, Vitest, Playwright, nginx in Docker; many locales including RTL.
 - **Lifecycle**: production. A push to `main` builds and deploys the site (`.github/workflows/deploy.yml`) once `verify` and `e2e` pass. Verification gates and the output rules below are the change constraints.
 
 ## Architecture
 
-- **Framework**: Astro 5 (static site generation)
+- **Framework**: Astro 7 (static site generation)
 - **Deployment**: Docker container on `sidebadger.me` (behind shared nginx proxy)
 - **CI/CD**: GitHub Actions. Every push and pull request runs the `verify` job; a push to `main` deploys only if it and the `e2e` browser tests pass (see Verify gate)
 

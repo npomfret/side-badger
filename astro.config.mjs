@@ -15,6 +15,8 @@ export default defineConfig({
   trailingSlash: 'always',
   build: { format: 'directory' },
   devToolbar: { enabled: false },
+  // Two routes producing the same URL fail the build (stable since Astro 6).
+  prerenderConflictBehavior: 'error',
   // Only indexable page/locale pairs reach the sitemap (D8, D9); pseudo-locales never do
   integrations: [
     markdownSite({
@@ -35,10 +37,6 @@ export default defineConfig({
       },
     }),
   ],
-  experimental: {
-    // Two routes producing the same URL fail the build (D19)
-    failOnPrerenderConflict: true,
-  },
   i18n: {
     defaultLocale: 'en',
     // Imported from src/i18n/index.ts - single source of truth. Regional aliases are

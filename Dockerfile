@@ -29,7 +29,7 @@ ENV PUBLIC_DOMAIN=${PUBLIC_DOMAIN}
 RUN npm run build && npm run check:site
 
 # Production stage - nginx serves the static files and owns their HTTP headers
-FROM nginx:1.30.6-alpine@sha256:c59d1f8b1e0e42da75be973424cd72e23f7f8adfb54e982f4d1cd0216a5a5576
+FROM nginx:1.30.7-alpine@sha256:caf4e1e032a20f9c3c5e28fc7f25ffd768ad8677b4975c54193075997b3a97e3
 # conf.d/*.conf is auto-included as server-level config, so only default.conf goes there.
 # Any other nginx/*.conf (for example locale-redirects.conf) lands in /etc/nginx/side-badger/
 # and is pulled in by an explicit include, so it can never become a second server block.

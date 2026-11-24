@@ -1,84 +1,55 @@
-# Astro and nginx security updates
+# Astro/nginx security update and TeamCity migration
 
-Owner approved the production application security updates on 23 November.
-Upgrade Astro 5 to 7.4.13 with its official sitemap/check integrations and
-follow the Astro 6 and 7 migration guides. Add the existing estate convention
-`audit:deps` (critical production-dependency advisories) to `verify`, which CI
-already requires before building/deploying. Pin the static runtime to official
-nginx 1.30.7, fixing the nginx/Brotli package findings in the deployed image.
+Owner approved production security updates on 23 November and directed that
+Side Badger verification run on the estate TeamCity Mac agents.
 
-Keep the static output, URL rules, content/locale checks and browser acceptance.
-Read current custom Markdown integration/schema callers before adapting APIs;
-do not remove output or collision checks to make the upgrade pass.
+Astro is 7.4.13 with matching official integrations and a fresh exact lockfile;
+nginx is pinned to official 1.30.7. Critical production dependency advisories
+block the canonical verify command. Static URL/content/locale/collision checks
+remain. Astro 7's new whitespace default caused a language-tooltip regression;
+`compressHTML: true` preserves the previous output. The exact regression passes.
+Astro's supported `--ignore-lock` keeps preview in the foreground for Playwright.
+The failed GitHub run passed 884 cases before catching that regression and never
+deployed. Its remaining jobs were cancelled, and GitHub Actions is now retired.
 
-Acceptance: lockfile-exact install, critical audit, serial unit/output checks,
-Astro checks/build, browser suite and actual-image nginx smoke pass; independent
-review; main pushed; TeamCity verification and deployment succeed; live routes
-and image scan confirm the fix. Preserve the previous deployed image for rollback.
+TeamCity applies exact revision 37ec5b9. Compile, Static Checks, Unit Tests,
+Integration Tests and three serial Browser Tests feed All Checks. Every agent
+leg and production deployment use the existing high_cpu writer lock; every test
+runner uses one worker. Clean workspaces expire after artifacts publish, even
+on failure. The terminal VCS trigger preserves push-to-main deployment while
+the nightly All Checks does not deploy. This documented exception to placing
+VCS triggers on composites avoids nightly production releases.
 
-Local acceptance passes: 1,243 unit tests, Astro check with zero errors/warnings,
-1,249 generated pages and all 185 output checks. Existing Vitest configs run
-one worker without file parallelism. The critical production-dependency audit
-passes; remaining audit findings are development tooling (including an unused
-Vitest UI advisory) and are not runtime image packages. The GitHub browser run was cancelled after its first failing shard; no production deployment occurred.
+Accepted on 24 November:
 
-The old experimental prerender-conflict flag moved to the stable
-`prerenderConflictBehavior: 'error'` option. This preserves collision rejection
-instead of accepting Astro's warning-only default. Existing Markdown alternates,
-schemas, locales and route policies passed their output checks unchanged.
+- Compile 3431 and Static Checks 3432 passed.
+- Unit 3433: runner and JUnit processing both report 1,243 cases. Two pre-existing
+  fixture tests have the same label, producing 1,242 unique TeamCity names.
+- Integration 3434: 185 output checks, four real-Git/fake-SSH transport scenarios.
+- Browser 3435/3436/3437: 885, 884 and 884 cases; all 2,653 pass. Each JUnit
+  processed count matches its runner. All Checks 3438 passed.
+- Deploy 3439 passed through the new dedicated production identity. The host
+  built the exact Git archive, passed all 185 output checks and 353 existing
+  nginx smoke checks, including launch-log privacy and Markdown negotiation.
+  Container health and public HTTPS passed. The whole deployment took about
+  seven minutes; builder build/output checks took about 335 seconds on prod.
+- The live healthy container is exact 37ec5b9, image
+  sha256:25b49416056762dd5fabf0bdb9ac7b627aceaa031712086b1736d97a824bab42;
+  nginx reports 1.30.7. The previous immutable image remains tagged for rollback.
 
-The first browser shard found one regression (884 cases passed): Astro 7's
-new default JSX whitespace compression removed the separator between the
-language name and regional subtitle, making the tooltip say `EnglishAmerican`.
-Independent source/artifact investigation confirmed the old rendered output
-contained that space. Keep the prior lossless `compressHTML: true` policy;
-retain the existing tooltip assertion and rerun that exact browser case before
-the full gate. Remaining jobs from the failed run were cancelled; it did not
-deploy to production.
+The new deployment selects its pinned public identity/host key and requires an
+exact APPLIED receipt. Failed container/public acceptance restores the previous
+immutable image. Fixed owned tags and current/previous source retention avoid
+unbounded releases while leaving older untagged layers to estate GC. No volume
+is pruned. SSH keys live in iCloud and TeamCity; only public material is committed.
+GitHub source access uses a separate read-only key. Existing human, backup and
+old CI authorizations remain intact. Scoped operations registration never pauses
+the queue or changes other projects/agents. Operations b1ba282/69118f8 passed
+5 registration, 11 Linux-root key and 7 virtual-runtime guard cases.
 
-Local browser startup also exposed Astro 7's automatic background preview
-server in agent sessions. Playwright requires a foreground process; the
-supported `--ignore-lock` flag selects that behavior. Stop the owned background
-server through Astro's own stop command. Preserve web-server stdout in the
-existing Playwright configuration so build/startup failures have diagnostics.
-
-Owner directed that Side Badger checks run on the estate's TeamCity agents.
-Replace the GitHub workflow and two divergent deployers with the shared shim,
-Kotlin settings and one gated deployment. Compile, static checks, unit, output
-integration and three browser shards use clean workspaces, one worker and the
-existing estate high_cpu writer lock. JUnit and failure artifacts always publish.
-A VCS trigger on terminal Deploy (Production) deliberately preserves automatic
-main deployment; nightly All Checks does not ship. This is the reason for the
-exception to the composite-only VCS trigger convention.
-
-The production host builds the exact Git archive and runs the existing nginx
-checker, including launch-log privacy checks. Its Node-only Markdown checker
-runs in the builder image, so neither the host nor the CI agents need another
-toolchain. The current and previous immutable runtime image IDs are retained
-under fixed owned tags; older untagged images follow estate garbage collection.
-Source cleanup selects only owned hexadecimal release directories, retaining
-the current and previous accepted revisions.
-
-The old GitHub private deployment key cannot be retrieved from encrypted
-secrets. A new dedicated TeamCity production identity is held in iCloud and
-installed through the operations key helper; it does not remove human/backup
-or old CI authorization. Repository access uses a separate read-only key.
-Scoped registration reuses the existing SSH-only API transport and never pauses
-the queue or changes other projects/agents/Root resources.
-
-Four transport integration tests pass serially using real local Git archives
-and fake SSH processes: exact revision/clean source, host and identity pinning,
-upload/apply errors, mandatory completion receipt, scratch cleanup and retained
-remote errors. The focused tooltip regression passes (1 case, 29.2 seconds).
-Independent review caught dropped Astro diagnostics, skipped launch-log checks
-and unbounded tagged images; all three were corrected. Full TeamCity import,
-complete test chain, actual-image acceptance and live scan remain pending.
-
-Migration verification repeated successfully: all 1,243 unit tests and 185 output
-checks pass with JUnit output, Astro diagnostics remain zero, and 1,249 strict
-pages build. All four transport tests pass after adding precise trust rejection
-diagnostics. Independent follow-up review has no substantive findings. Shell
-syntax/checks pass and the TeamCity shim matches the shared template exactly.
-The ops registration/key installer is pushed as b1ba282; production key SSH/SFTP
-checks passed and GitHub confirms the repository key is read-only. Full TeamCity
-verification and live deployment are still the acceptance gate.
+Independent reviews are clean after correcting verify composition, retained
+launch-log checks, bounded image/source retention and trust rejection diagnostics.
+Four transport cases and six checkout-gate boundary cases passed serially. The
+TeamCity shim matches the canonical shared template. Durable operations are in
+docs/ci.md. Remaining acceptance: the estate's fresh production image scan after
+the other approved applications finish; then delete this task separately.

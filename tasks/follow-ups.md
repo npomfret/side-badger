@@ -4,6 +4,8 @@ The site redesign (restructure task, homepage task and release 1 of [the site pl
 
 ## Open work
 
+- **CI test names.** Two `content rules (fixtures)` cases in `src/__tests__/content.test.ts` share the title "rejects an image in rich text". Both execute and appear in JUnit, but TeamCity merges their history into one name. Give the scenarios distinct labels in a separate test-reporting cleanup.
+
 - **App policy data (upstream).** The policy pages load the app's current text in the browser (D10; `AGENTS.md` External Dependencies). In the app's data, the cookie policy `createdAt` (17 November 2026) differs from its text's "Last revised: 16 November"; correcting it belongs in `wl-bill-splitter`.
 - **P35 app screenshots.** Waits for the capture script and demo scenario in `wl-bill-splitter` (site plan follow-up 9 and D14). This repo owns the shot list (site plan "Shot list", `src/data/screenshots.ts`), optimization and placement. Until then English pages may use `placeholder-en` shots, and localized pages show none.
 - **Release 2** shipped: calculators, guides, four feature pages, couples, page art, the Splitwise comparison and the help page. Its plan was deleted on 20 November 2026; read it in git history (`tasks/release-2-plan.md`, last at `5dc2138`). The Splitwise reframe shipped on 22 November 2026.

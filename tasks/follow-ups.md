@@ -15,8 +15,9 @@ files with explicit links or paths to the old plan. Their references now target 
 The generic “site plan Dn” comments remain valid through its decision index. This is documentation
 and comment maintenance; runtime behaviour and translated content are unchanged. Verification:
 the old filename has no remaining references, D1–D19 are retained, local Markdown links resolve,
-and the source diff contains comments only. The plan can now be deleted in a separate commit;
-no build or test run is needed for these documentation-only changes.
+and the source diff contains comments only. Preservation landed and was pushed in `fcf0431`;
+the obsolete plan is deleted in the separate retirement commit. No build or test run was needed
+for these documentation-only changes.
 
 ## Homepage usability acceptance (24 November 2026)
 

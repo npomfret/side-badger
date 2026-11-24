@@ -8,6 +8,7 @@ import { hasMarkdownAlternate } from '../site/pages';
 describe('published Markdown representations', () => {
   const site = dist();
   const published = site.pages.filter(page => hasMarkdownAlternate(page.page) && page.locale && !isPseudoLocale(page.locale));
+  const agentHint = '<!-- AI agents: This page is available as Markdown. Request this URL with Accept: text/markdown, or follow the text/markdown alternate link in the document head. -->';
 
   it('provides discoverable alternates only for built published pages', () => {
     const expected = new Set(published.map(page => page.file.replace(/index\.html$/, 'index.md')));
@@ -15,6 +16,7 @@ describe('published Markdown representations', () => {
     for (const page of site.pages) {
       const alternates = page.$('link[rel="alternate"][type="text/markdown"]');
       expect(alternates.length, page.urlPath).toBe(published.includes(page) ? 1 : 0);
+      expect(page.html.startsWith(`<!DOCTYPE html>${agentHint}`), page.urlPath).toBe(published.includes(page));
       if (alternates.length) {
         expect(alternates.attr('href'), page.urlPath).toBe(`/${page.file.replace(/index\.html$/, 'index.md')}`);
       }

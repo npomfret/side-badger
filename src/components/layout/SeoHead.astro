@@ -8,8 +8,8 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
 import { OG_RENDER_VERSION, type OgCardId } from '../../pages/og/[card].png';
-import { t, logoLocales, localeConfig, isPseudoLocale, type Locale } from '../../i18n';
-import { getPage, hasMarkdownAlternate, type PageId } from '../../site/pages';
+import { t, logoLocales, localeConfig, type Locale } from '../../i18n';
+import type { PageId } from '../../site/pages';
 import { absoluteUrl, canonicalFor, markdownPathFor } from '../../seo/urls';
 import { isIndexable } from '../../seo/indexability';
 import { alternatesFor } from '../../seo/alternates';
@@ -20,11 +20,12 @@ interface Props {
   locale: Locale;
   title: string;
   description: string;
+  markdownAvailable: boolean;
   ogCard?: OgCardId;
   jsonLd?: JsonLdNode[];
 }
 
-const { page, locale, title, description, ogCard = 'default', jsonLd = [] } = Astro.props;
+const { page, locale, title, description, markdownAvailable, ogCard = 'default', jsonLd = [] } = Astro.props;
 
 const indexable = isIndexable(page, locale);
 const canonical = page === 'not-found' ? undefined : canonicalFor(page, locale);
@@ -68,7 +69,7 @@ const graph = buildGraph({
 {alternates.map((alternate) => (
   <link rel="alternate" hreflang={alternate.hreflang} href={alternate.href} />
 ))}
-{page !== 'not-found' && hasMarkdownAlternate(getPage(page)) && !isPseudoLocale(locale) && (
+{markdownAvailable && page !== 'not-found' && (
   <link rel="alternate" type="text/markdown" href={markdownPathFor(page, locale)} />
 )}
 

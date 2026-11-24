@@ -7,6 +7,9 @@ These are alternate assets; the page's canonical URL still ends in `/`.
 Each HTML page advertises its Markdown asset with
 `<link rel="alternate" type="text/markdown" href="…">`.
 Clients can follow that link even if their fetch tool cannot set request headers.
+Eligible HTML documents also put a short AI-agent instruction immediately after
+the doctype, so clients inspecting raw HTML discover both options before parsing
+the document head.
 
 The production nginx configuration also negotiates Markdown at the page URL:
 

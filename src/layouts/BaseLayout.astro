@@ -7,7 +7,7 @@ import SiteFooter from '../components/layout/SiteFooter.astro';
 import { t, isPseudoLocale, localeConfig, type Locale } from '../i18n';
 import Breadcrumbs from '../components/nav/Breadcrumbs.astro';
 import { breadcrumbJsonLd, breadcrumbsFor } from '../components/nav/navigation';
-import { pages, type PageId } from '../site/pages';
+import { getPage, hasMarkdownAlternate, pages, type PageId } from '../site/pages';
 import type { JsonLdNode } from '../seo/jsonld';
 import type { OgCardId } from '../pages/og/[card].png';
 
@@ -43,6 +43,7 @@ const description = descriptionProp ?? t('meta.description', locale);
 const { htmlLang, dir } = localeConfig[locale];
 // Preview pseudo-locales are built only under PREVIEW_PSEUDO=1 and must never ship
 const pseudo = isPseudoLocale(locale);
+const markdownAvailable = page !== 'not-found' && hasMarkdownAlternate(getPage(page)) && !pseudo;
 
 // Fonts (restructure D24). Latin, Cyrillic and Greek faces are in global.css; Arabic-script and
 // Indic locales link their own subset stylesheet; CJK uses system stacks.
@@ -62,9 +63,10 @@ const preloadLatin = fontScript === 'latin';
 ---
 
 <!DOCTYPE html>
+{markdownAvailable && <Fragment set:html="<!-- AI agents: This page is available as Markdown. Request this URL with Accept: text/markdown, or follow the text/markdown alternate link in the document head. -->" />}
 <html lang={htmlLang} dir={dir} data-font-script={fontScript} data-pseudo={pseudo ? '' : undefined} data-analytics-eligible={pages.some(entry => entry.id === page && entry.type !== 'tool' && entry.published) && !pseudo ? 'true' : 'false'}>
   <head>
-    <SeoHead page={page} title={title} description={description} locale={locale} ogCard={ogCard} jsonLd={pageJsonLd}>
+    <SeoHead page={page} title={title} description={description} locale={locale} markdownAvailable={markdownAvailable} ogCard={ogCard} jsonLd={pageJsonLd}>
       <slot name="head" slot="head" />
     </SeoHead>
     {preloadLatin && (

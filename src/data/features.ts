@@ -1,6 +1,6 @@
 /**
- * The product feature registry (restructure D16), transcribed from the site plan's "Product
- * feature registry" (`tasks/seo-site-expansion-plan.md`). English and internal: pages reference
+ * The product feature registry (restructure D16; design: `docs/marketing-site-design.md`).
+ * English and internal: pages reference
  * ids, statuses and claim ids and never print these strings verbatim.
  *
  * Conventions (the plan's transcription notes):

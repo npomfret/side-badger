@@ -1,6 +1,6 @@
 /**
- * Product screenshot registry (restructure D26, D33). One entry per shot in the site plan's shot
- * list (`tasks/seo-site-expansion-plan.md`, "Shot list"). The app repository's capture script
+ * Product screenshot registry (restructure D26, D33). Capture requirements are in
+ * `docs/marketing-site-design.md`, "Shot list". The app repository's capture script
  * produces the files; P35 imports them and updates `status`.
  *
  * Files live in `src/assets/screenshots/<id>/<locale>.png`, or `neutral.png` when `localized` is

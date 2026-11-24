@@ -245,7 +245,7 @@ describe('computeExample', () => {
 });
 
 // ---------------------------------------------------------------------------
-// The site plan's worked examples (tasks/seo-site-expansion-plan.md, page briefs)
+// Worked examples from the shipped pages (design conventions: docs/marketing-site-design.md)
 // ---------------------------------------------------------------------------
 
 const named = (...names: string[]) => names.map(name => ({ id: name.toLowerCase(), name }));

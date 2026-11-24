@@ -1,6 +1,22 @@
 # Follow-ups after the redesign release
 
-The site redesign (restructure task, homepage task and release 1 of [the site plan](./seo-site-expansion-plan.md)) shipped to production on 15 October 2026. The completed plans were deleted on 16 October 2026; read them in git history at `d4b0a08` (`tasks/restructure-marketing-site.md`, `tasks/homepage-scroll-experience.md`, `tasks/baseline-measurements.md`). This file keeps what is still open and the decisions other documents cite.
+The site redesign (restructure task, homepage task and release 1 of [the site design](../docs/marketing-site-design.md)) shipped to production on 15 October 2026. The completed plans were deleted on 16 October 2026; read them in git history at `d4b0a08` (`tasks/restructure-marketing-site.md`, `tasks/homepage-scroll-experience.md`, `tasks/baseline-measurements.md`). This file keeps what is still open and the decisions other documents cite.
+
+The expansion plan's implementation work is retired from this tracker. Both content releases
+shipped; the historical plan and research remain in Git at `536c922`, and the lasting audience,
+editorial, claim, imagery and measurement guidance is in `docs/marketing-site-design.md`. Its
+D1–D19 index preserves the decision references used in code. Remaining work stays below or in
+the narrower AI discovery task; retiring the plan does not close those dependencies.
+
+Retirement reference inventory: this file, the AI discovery task, `src/data/{features,screenshots}.ts`,
+the worked-example comment in `src/__tests__/settle.test.ts`, housemates YAML comments in
+`en`, `es`, `lv`, `ro`, `sv`, and the couples English YAML comment. These are the eleven tracked
+files with explicit links or paths to the old plan. Their references now target the durable design document.
+The generic “site plan Dn” comments remain valid through its decision index. This is documentation
+and comment maintenance; runtime behaviour and translated content are unchanged. Verification:
+the old filename has no remaining references, D1–D19 are retained, local Markdown links resolve,
+and the source diff contains comments only. The plan can now be deleted in a separate commit;
+no build or test run is needed for these documentation-only changes.
 
 ## Homepage usability acceptance (24 November 2026)
 

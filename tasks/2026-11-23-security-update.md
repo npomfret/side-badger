@@ -51,5 +51,9 @@ Independent reviews are clean after correcting verify composition, retained
 launch-log checks, bounded image/source retention and trust rejection diagnostics.
 All four deployment transport cases passed serially. The
 TeamCity shim matches the canonical shared template. Durable operations are in
-docs/ci.md. Remaining acceptance: the estate's fresh production image scan after
-the other approved applications finish; then delete this task separately.
+docs/ci.md. Final production scan completed 24 November at 00:41:16 UTC:
+all 21 running images scanned without failure. The live Side Badger image
+25b494160567 has zero critical findings; its nginx/Brotli findings are cleared.
+One libxml2 high remains outside this critical-remediation scope. No acceptance
+entry was added. Operations evidence: sec10-footy-betty-scan-report-20261124T004118.json.
+Acceptance is complete; delete this task in a separate follow-up commit.

@@ -2,6 +2,31 @@
 
 The site redesign (restructure task, homepage task and release 1 of [the site plan](./seo-site-expansion-plan.md)) shipped to production on 15 October 2026. The completed plans were deleted on 16 October 2026; read them in git history at `d4b0a08` (`tasks/restructure-marketing-site.md`, `tasks/homepage-scroll-experience.md`, `tasks/baseline-measurements.md`). This file keeps what is still open and the decisions other documents cite.
 
+## Homepage usability acceptance (24 November 2026)
+
+This slice of the SEO site plan fixes the Menu tooltip and small-phone settle-scene clipping.
+Scope inventory: `MobileNav` is the shared menu on every page; its label is already translated
+by `nav.menu`. It reuses `Tooltip`, the canonical hover/focus/Escape implementation used by
+`LaunchAppCta`, `LanguageSwitcher` and `IconButton` (calculators and the hero replay). The native
+menu suppresses its tooltip while open; the tooltip is shown only below the menu label's 30rem
+breakpoint. Popover-specific CSS is feature-guarded so older browsers keep existing tooltips.
+
+`SceneSettle` uses `AppFrame`'s sizing contract: a wider illustration reduces label wrapping on
+short phones, and below 600px high only the illustration scales further. The heading, explanation
+and link keep their text sizes. The locked-toolchain baseline reproduced 29px clipping above and
+below the stage at 320 x 568; the new geometry assertion detects it where visibility alone did not.
+
+Acceptance: Menu's tooltip matches its accessible name, opens on hover and keyboard focus,
+closes on Escape and while the menu is open, and stays hidden where Menu's text is visible.
+The settle heading, illustration and link fit inside the stage at 320 x 568, 360 x 640 and
+390 x 844 in English, the four pseudo-locales and Arabic, with native and fallback animation.
+Verification: 75 targeted Playwright checks passed serially with one worker, including the 36-case
+settle matrix, real Arabic tooltips, the hero's shared tooltip, large-text menus and open-menu axe
+checks. `npm run compile` passed with zero type errors and a strict 1,249-page build. Independent
+UI review found and resolved the older-browser selector issue; no substantive findings remain.
+All 185 production-output checks passed. Production deployment remains gated by TeamCity after
+push; this is not a claim of real-device acceptance.
+
 ## Open work
 
 - **CI test names.** Two `content rules (fixtures)` cases in `src/__tests__/content.test.ts` share the title "rejects an image in rich text". Both execute and appear in JUnit, but TeamCity merges their history into one name. Give the scenarios distinct labels in a separate test-reporting cleanup.
@@ -14,8 +39,6 @@ The site redesign (restructure task, homepage task and release 1 of [the site pl
 - **Splitwise comparison upkeep.** The page promises a quarterly recheck. Re-read Splitwise's pages and update `asOf` by 22 February 2027. Sources and evidence are in git history (`tasks/reframe-app-comparison.md`, deleted 22 November 2026).
   - The page makes no Tricount claims: Tricount's help centre lists 38 languages to Side Badger's 39.
   - Splitwise's comments, lists and polls are not stated on its pages, so the page does not compare them.
-- **Menu button has no tooltip.** Below 30rem the header's Menu button shows only its icon (`MobileNav.astro`, `nav.css`) but has no Tooltip, unlike the sign-in and language buttons. At large text on a phone it is also the only way to Sign in (the bar drops its link below 20rem).
-- **Settle scene clips at 320 x 568 in long text.** In the `xx-long` pseudo-locale on a 320 x 568 phone, the pinned settle scene's h2 starts about 26 px above its stage and the "see how" link ends about 26 px below it, so both are clipped (measured 21 November 2026 with `tmp/ad-hoc-scripts/pinned-clip-probe.mjs`; it was there before the homepage moved onto the shared content column, which added 3 to 4 px). English and 360 x 640 fit.
 - **Header logo vs content edge.** The floating header bar has its own inset (`--header-inset`), so its logo does not sit on the content column's edge: 1 to 9 px off on phones and tablets, about 25 px at 1024 to 1247 px, on it at 1280 and wider. Aligning it means deriving the bar's inset from the column, which changes how far the bar sits from the window's sides; an owner design call.
 - **Calculator script headroom.** The split calculator loads 10,020 bytes of gzipped script against the 10,240-byte budget (21 November 2026, after the shared Tooltip and the LanguageSwitcher's tooltip setter). The next script added to the calculator pages needs a matching saving first.
 - **Real-device checks** of the homepage: the iOS toolbar behaviour, and a VoiceOver pass.

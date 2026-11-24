@@ -4,6 +4,16 @@ This document is the design reference for the marketing site restructure. It hol
 
 ## Status and evidence base
 
+Both content releases have shipped; the release-2 plan was completed and deleted on 20 November
+2026. This file remains the historical design reference, rather than an unstarted page backlog.
+Current acceptance work and dependencies are in [follow-ups](./follow-ups.md); integration work
+has its own [AI discovery task](./ai-discovery-and-integration-docs.md). The current registries and
+`AGENTS.md` copy rules take precedence over the dated product evidence below.
+
+The 24 November 2026 acceptance slice addresses the small-phone Menu tooltip and settle-scene
+clipping; follow-ups records its verification and delivery. Screenshots, search measurement,
+fluent human review and real-device acceptance remain open under their stated dependencies.
+
 Settled plan, updated 14 October 2026. Every decision is recorded in [Decisions](#decisions) with its evidence, the alternatives considered, and what would reopen it. Decision numbers here are this plan's own; the other task files cite them as “site plan Dn”, and this file cites the restructure task's as “restructure Dn”. “Release 1” (the first release) and “release 2” are content releases; the execution waves W0 to W4 are in [the restructure task](./follow-ups.md).
 
 - **App evidence:** the app repository (local clone `wl-bill-splitter_1`) at commit `d2911d837`, 14 October 2026. App paths in this document are relative to that repository's root, for example `webapp-v2/src/pages/DashboardPage.tsx`.

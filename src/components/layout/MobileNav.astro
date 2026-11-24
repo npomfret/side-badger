@@ -6,6 +6,7 @@
  * with a labelled Sign in link, since the header shows only its icon on phones.
  */
 import Icon from '@/components/icons/Icon.astro';
+import Tooltip from '@/components/controls/Tooltip.astro';
 import LaunchAppCta from '../cta/LaunchAppCta.astro';
 import { t, type Locale } from '../../i18n';
 import type { NavLink } from '../nav/navigation';
@@ -22,10 +23,12 @@ const { links, locale, pageId } = Astro.props;
 
 {links.length > 0 && (
   <div class="mobile-nav">
-    <button type="button" class="menu-button" popovertarget="site-menu" aria-controls="site-menu">
-      <Icon name="menu" size="md" class="menu-button__icon" />
-      <span class="menu-button__text">{t('nav.menu', locale)}</span>
-    </button>
+    <Tooltip text={t('nav.menu', locale)} side="block-end" align="end" narrow="small-phone">
+      <button type="button" class="menu-button" popovertarget="site-menu" aria-controls="site-menu">
+        <Icon name="menu" size="md" class="menu-button__icon" />
+        <span class="menu-button__text">{t('nav.menu', locale)}</span>
+      </button>
+    </Tooltip>
     <div id="site-menu" class="mobile-menu" popover>
       <LaunchAppCta target="app" cta="menu" pageId={pageId} locale={locale} class="mobile-menu__sign-in" />
       <nav aria-label={t('a11y.mainNavigation', locale)}>

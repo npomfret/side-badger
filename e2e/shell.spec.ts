@@ -10,6 +10,23 @@ import { SHELL_LOCALES } from './pages/strings';
  */
 const SHOTS = 'test-results/shell';
 
+test.describe('Menu with its text visible at 560x812', () => {
+  test.use({ viewport: { width: 560, height: 812 }, hasTouch: false });
+  test('does not repeat the Menu label in a tooltip', async ({ page }) => {
+    const site = await SitePage.navigateTo(page, 'en', 'pricing');
+    await site.expectNoMenuTooltipWithVisibleLabel();
+  });
+});
+
+test.describe('Arabic header at 375x812', () => {
+  test.use({ viewport: { width: 375, height: 812 }, hasTouch: false });
+  test('the icon-only header controls show Arabic tooltips', async ({ page }) => {
+    const site = await SitePage.navigateTo(page, 'ar', 'pricing');
+    await site.expectHeaderTooltipsOnHoverAndFocus();
+    await site.expectNoHorizontalOverflow();
+  });
+});
+
 for (const locale of SHELL_LOCALES) {
   test.describe(`${locale} at 1280x800`, () => {
     test.use({ viewport: { width: 1280, height: 800 } });

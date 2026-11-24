@@ -553,6 +553,28 @@ export class HomePage {
       .toBeGreaterThan(0);
   }
 
+  /** Readable copy and the scene's link must not be cut off by its pinned clipping boundary. */
+  async expectSettleContentFitsStage(): Promise<void> {
+    await this.settleRegion.scrollIntoViewIfNeeded();
+    // The stage is the scene primitive's clipping boundary, not a user-facing control. Measuring
+    // it is necessary: Playwright's visibility check does not detect partially clipped text.
+    await auditAnimationWait('the settle heading, illustration and link fit their stage', () => expect.poll(
+      () => this.settleRegion.evaluate(scene => {
+        const stage = scene.querySelector('.scene__stage');
+        if (!stage) return ['no settle stage'];
+        const bounds = stage.getBoundingClientRect();
+        return Array.from(stage.children).flatMap(child => {
+          const rect = child.getBoundingClientRect();
+          if (rect.width === 0 || rect.height === 0) return [`${child.className} has no visible content`];
+          return rect.top < bounds.top - 1 || rect.bottom > bounds.bottom + 1
+            ? [`${child.className}: ${Math.round(rect.top - bounds.top)}..${Math.round(rect.bottom - bounds.top)} of ${Math.round(bounds.height)}`]
+            : [];
+        });
+      }),
+      { message: 'settle content clipped by the pinned stage', timeout: ELEMENT_TIMEOUT }
+    ).toEqual([]));
+  }
+
   /** Reduced motion and the fallback keep every scene's content: nothing is hidden at rest */
   async expectEverySceneReadable(): Promise<void> {
     for (const key of REGION_TITLE_KEYS) {

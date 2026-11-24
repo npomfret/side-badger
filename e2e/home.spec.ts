@@ -13,6 +13,24 @@ const VIEWPORTS = [
   { name: '390', size: { width: 390, height: 844 } },
 ] as const;
 
+for (const viewport of [
+  { width: 320, height: 568 },
+  { width: 360, height: 640 },
+  { width: 390, height: 844 },
+]) {
+  test.describe(`settle content at ${viewport.width}x${viewport.height}`, () => {
+    test.use({ viewport });
+    for (const locale of [...SHELL_LOCALES, 'ar'] as const) {
+      for (const engine of ['native', 'stages'] as const) {
+        test(`${locale} ${engine}: the settle content fits its stage`, async ({ page }) => {
+          const home = await HomePage.navigateTo(page, locale, engine);
+          await home.expectSettleContentFitsStage();
+        });
+      }
+    }
+  });
+}
+
 for (const locale of SHELL_LOCALES) {
   for (const viewport of VIEWPORTS) {
     test.describe(`${locale} at ${viewport.name}`, () => {

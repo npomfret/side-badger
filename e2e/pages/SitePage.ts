@@ -4,7 +4,7 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 import { ELEMENT_TIMEOUT, MODAL_TIMEOUT, NAVIGATION_TIMEOUT } from './timeouts';
 import { isRtl, pathFor, text, type ShellLocale, type StringKey } from './strings';
 import { expectStubPolicyShown, stubPolicyApi } from './policyApi';
-import { expectAnimationsSettled } from './animations';
+import { auditAnimationWait, expectAnimationsSettled } from './animations';
 import { setBrowserTextSize } from './textSize';
 
 /** The registry's launch-counter page id for each route the shell tests visit */
@@ -125,6 +125,13 @@ export class SitePage {
     return this.banner
       .locator('[data-tooltip]')
       .filter({ has: this.page.getByRole('link', { name: this.string('header.signIn') }) })
+      .locator('[data-tooltip-text]');
+  }
+
+  /** As for launchTooltip, the tooltip is aria-hidden to avoid repeating the button's name. */
+  private get menuTooltip(): Locator {
+    return this.banner.locator('[data-tooltip]')
+      .filter({ has: this.page.getByRole('button', { name: this.string('nav.menu'), exact: true }) })
       .locator('[data-tooltip-text]');
   }
 
@@ -298,6 +305,34 @@ export class SitePage {
     await this.page.keyboard.press('Escape');
     await expect(this.launchTooltip, 'Escape closes the Sign in tooltip').toBeHidden();
     await this.languageSwitcher.expectTooltipOnHoverAndFocus();
+    await this.expectMenuTooltipOnHoverAndFocus();
+  }
+
+  async expectMenuTooltipOnHoverAndFocus(): Promise<void> {
+    await this.page.getByRole('main').hover();
+    await this.homeLink.focus();
+    await auditAnimationWait('Menu tooltip starts hidden', () => expect(this.menuTooltip).toBeHidden());
+    await this.menuButton.hover();
+    await auditAnimationWait('Menu tooltip opens on hover', () => expect(this.menuTooltip).toBeVisible());
+    await auditAnimationWait('Menu tooltip matches its accessible name', () => expect(this.menuTooltip).toHaveText(this.string('nav.menu')));
+    await this.page.keyboard.press('Escape');
+    await auditAnimationWait('Escape closes the Menu tooltip', () => expect(this.menuTooltip).toBeHidden());
+    await this.page.getByRole('main').hover();
+    await this.menuButton.focus();
+    await auditAnimationWait('Menu tooltip opens on keyboard focus', () => expect(this.menuTooltip).toBeVisible());
+    await this.menuButton.press('Enter');
+    await auditAnimationWait('the native menu opens', () => expect(this.mainNav).toBeVisible());
+    await auditAnimationWait('Menu tooltip stays hidden while the menu is open', () => expect(this.menuTooltip).toBeHidden());
+    await this.page.keyboard.press('Escape');
+    await auditAnimationWait('Escape closes the native menu', () => expect(this.mainNav).toBeHidden());
+  }
+
+  async expectNoMenuTooltipWithVisibleLabel(): Promise<void> {
+    await this.menuButton.hover();
+    await auditAnimationWait('Menu tooltip stays hidden where its text shows on hover', () => expect(this.menuTooltip).toBeHidden());
+    await this.page.getByRole('main').hover();
+    await this.menuButton.focus();
+    await auditAnimationWait('Menu tooltip stays hidden where its text shows on focus', () => expect(this.menuTooltip).toBeHidden());
   }
 
   /** Desktop: the header's controls show their text, so no tooltip repeats it */

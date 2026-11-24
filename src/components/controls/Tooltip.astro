@@ -9,12 +9,14 @@
  * it (WCAG 1.4.13; tooltip.ts, wired by this component's script). It holds nothing interactive
  * and sits beside the control, so clicking it never activates the control. It stays closed while
  * the control is disabled (it cannot take focus, so hover alone must not explain it) or expanded
- * (its own popup is showing), and the whole anchor hides with a hidden control.
+ * (its own popup is showing), including a native popover immediately after the anchor, and the
+ * whole anchor hides with a hidden control.
  *
  * Placement: `side` `block-start` (default, above) or `block-end` (below, for controls at the top
  * of the page); `align` `center` (default) or `end` (for a control near the inline end of its
  * container). `narrow` shows it only where the control's own text is hidden: `phone` below 40rem,
- * `tablet` up to 768px (the header's breakpoints). `class` and other attributes go on the anchor.
+ * `tablet` up to 768px, `small-phone` below 30rem (the header's breakpoints). `class` and other
+ * attributes go on the anchor.
  *
  * Its script runs once per page: where the first copy sits inside a <template>, the copy runs when
  * a clone is first inserted, and the module cache and tooltip.ts's guard make any repeat harmless.
@@ -25,7 +27,7 @@ interface Props extends HTMLAttributes<'span'> {
   text: string;
   side?: 'block-start' | 'block-end';
   align?: 'center' | 'end';
-  narrow?: 'phone' | 'tablet';
+  narrow?: 'phone' | 'tablet' | 'small-phone';
 }
 
 const { text, side = 'block-start', align = 'center', narrow, class: className, ...rest } = Astro.props;
@@ -102,6 +104,14 @@ const { text, side = 'block-start', align = 'center', narrow, class: className, 
       visibility: visible;
     }
   }
+  /* Keep unsupported :popover-open out of the shared selectors: browsers without the Popover
+     API still need the other controls' tooltips (the menu itself has a plain-list fallback). */
+  @supports selector(:popover-open) {
+    .tooltip-anchor:has(> [popovertarget]):has(+ [popover]:popover-open) .tooltip-anchor__tip {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
   /* Where the control's own text shows, the tooltip would only repeat it */
   .tooltip-anchor[data-tip-narrow] .tooltip-anchor__tip {
     display: none;
@@ -113,6 +123,11 @@ const { text, side = 'block-start', align = 'center', narrow, class: className, 
   }
   @media (max-width: 768px) {
     .tooltip-anchor[data-tip-narrow='tablet'] .tooltip-anchor__tip {
+      display: block;
+    }
+  }
+  @media (max-width: 29.99rem) {
+    .tooltip-anchor[data-tip-narrow='small-phone'] .tooltip-anchor__tip {
       display: block;
     }
   }

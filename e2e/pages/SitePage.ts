@@ -69,6 +69,24 @@ export class SitePage {
 
   // ----- locators, built fresh on every use -----
 
+  private get christmasLights(): Locator {
+    // Decorative, aria-hidden art has no perceivable role or name; keep this lookup in the driver.
+    return this.page.locator('.christmas-lights');
+  }
+
+  async expectChristmasLights(visible: boolean): Promise<void> {
+    await auditAnimationWait(`Christmas lights are ${visible ? 'visible' : 'hidden'}`, () =>
+      visible ? expect(this.christmasLights).toBeVisible() : expect(this.christmasLights).toBeHidden());
+    if (!visible) return;
+    await auditAnimationWait('the lights span the page above the header', () => expect.poll(async () => {
+      const lights = await this.christmasLights.boundingBox();
+      const header = await this.banner.boundingBox();
+      const viewport = this.page.viewportSize();
+      return !!lights && !!header && !!viewport && lights.x === 0 && lights.y === 0 &&
+        lights.width === viewport.width && lights.height > 0 && lights.y + lights.height <= header.y;
+    }, { timeout: ELEMENT_TIMEOUT }).toBe(true));
+  }
+
   private get banner(): Locator {
     return this.page.getByRole('banner');
   }

@@ -1,0 +1,67 @@
+---
+/** Decorative illustration: a repeating string keeps the bulbs the same size at every width. */
+---
+
+<div class="christmas-lights" aria-hidden="true">
+  <svg width="100%" height="28" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="christmas-lights-strand" width="160" height="28" patternUnits="userSpaceOnUse">
+        <path class="wire" d="M0 2 Q40 14 80 2 Q120 14 160 2" />
+        <g transform="translate(20 6) rotate(8)">
+          <rect class="socket" x="-2.5" width="5" height="5" rx="1" />
+          <ellipse class="bulb bulb--red" cy="10" rx="3.5" ry="6" />
+        </g>
+        <g transform="translate(60 6) rotate(-8)">
+          <rect class="socket" x="-2.5" width="5" height="5" rx="1" />
+          <ellipse class="bulb bulb--gold" cy="10" rx="3.5" ry="6" />
+        </g>
+        <g transform="translate(100 6) rotate(8)">
+          <rect class="socket" x="-2.5" width="5" height="5" rx="1" />
+          <ellipse class="bulb bulb--green" cy="10" rx="3.5" ry="6" />
+        </g>
+        <g transform="translate(140 6) rotate(-8)">
+          <rect class="socket" x="-2.5" width="5" height="5" rx="1" />
+          <ellipse class="bulb bulb--blue" cy="10" rx="3.5" ry="6" />
+        </g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="28" fill="url(#christmas-lights-strand)" />
+  </svg>
+</div>
+
+<style>
+  /* The head script chooses the visitor's season before paint, independently of build time. */
+  :global(html[data-home-season="christmas"]) {
+    --header-top: var(--christmas-header-clearance);
+  }
+
+  .christmas-lights {
+    display: none;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline: 0;
+    /* Match the SVG's intrinsic tile height; bulbs retain their size on narrow screens. */
+    block-size: 28px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: var(--z-sticky);
+  }
+
+  :global(html[data-home-season="christmas"]) .christmas-lights {
+    display: block;
+  }
+
+  .wire {
+    fill: none;
+    stroke: var(--christmas-wire);
+    stroke-width: 1.25;
+  }
+
+  .socket { fill: var(--christmas-wire); }
+  .bulb { filter: drop-shadow(0 0 3px currentColor); fill: currentColor; }
+  .bulb--red { color: var(--christmas-red); }
+  .bulb--gold { color: var(--christmas-gold); }
+  .bulb--green { color: var(--christmas-green); }
+  .bulb--blue { color: var(--christmas-blue); }
+  /* Steady lights: no flashing or ambient motion, including under reduced motion. */
+</style>

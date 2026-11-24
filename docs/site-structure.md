@@ -41,6 +41,7 @@ Read before changing pages, layouts, content blocks, registries, the shell, or t
 
 A scroll-driven set of scenes. Styles are in `src/styles/home/` (`tokens.css`, `scenes.css`).
 - `HomePage.astro` composes the scenes; `ScrollScene.astro` is the scene wrapper (its `data-*` contract is documented in `scene-controller.ts`; its stage and lead carry `.container`, the site's content column); `AppFrame.astro` frames app-like content.
+- `ChristmasLights.astro` is the steady decorative strand above the homepage header in December. The existing homepage head script selects it from the visitor's local month before paint, independently of the static build date. It is hidden without JavaScript, has no accessible content or pointer interaction, and scrolls away with the top of the page. Its palette and December header clearance are `--christmas-*` tokens; the existing `--header-h` calculation still positions content and pinned scenes.
 - `scenes/` has one component per scene (`SceneChaos`, `SceneTangle`, `SceneGroup`, `SceneExpenses`, `SceneCurrencies`, `SceneSettle`, `SceneWorlds`, `ScenePricing`, `SceneTrust`).
 - `props/` is the illustration kit (`Paper`, `Receipt`, `Polaroid`, `StickyNote`, `Stamp`, `Doodle`, `Avatar`, `ChatBubble`, `Money`, `SceneLink`) with `chaos/`, `expenses/` and `worlds/` sub-kits.
 - `tangle/layout.ts` lays out the debt tangle; `data/` holds the scene data (`example-group.ts`, `home-features.ts`, `links.ts`, `worlds.ts`); `format.ts` formats money.

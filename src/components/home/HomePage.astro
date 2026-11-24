@@ -17,6 +17,7 @@ import SceneSettle from './scenes/SceneSettle.astro';
 import SceneWorlds from './scenes/SceneWorlds.astro';
 import SceneTrust from './scenes/SceneTrust.astro';
 import ScenePricing from './scenes/ScenePricing.astro';
+import ChristmasLights from './ChristmasLights.astro';
 import '@/styles/props.css';
 import '@/styles/home/tokens.css';
 import '@/styles/home/scenes.css';
@@ -39,6 +40,8 @@ const jsonLd = [
   <script is:inline slot="head">
     (function () {
       var d = document.documentElement;
+      // This static site may be built before December: use the visitor's local calendar.
+      if (new Date().getMonth() === 11) d.dataset.homeSeason = 'christmas';
       var flat = matchMedia('(prefers-reduced-motion: reduce), (max-height: 559px), (min-width: 600px) and (max-width: 899px) and (max-height: 859px)').matches;
       var native =
         CSS.supports('animation-timeline: view()') &&
@@ -48,6 +51,7 @@ const jsonLd = [
     })();
   </script>
 
+  <ChristmasLights />
   <div class="home">
     <SceneChaos locale={locale} />
     <SceneGroup locale={locale} />

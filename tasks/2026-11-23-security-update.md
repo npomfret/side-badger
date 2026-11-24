@@ -49,7 +49,7 @@ the queue or changes other projects/agents. Operations b1ba282/69118f8 passed
 
 Independent reviews are clean after correcting verify composition, retained
 launch-log checks, bounded image/source retention and trust rejection diagnostics.
-Four transport cases and six checkout-gate boundary cases passed serially. The
+All four deployment transport cases passed serially. The
 TeamCity shim matches the canonical shared template. Durable operations are in
 docs/ci.md. Remaining acceptance: the estate's fresh production image scan after
 the other approved applications finish; then delete this task separately.

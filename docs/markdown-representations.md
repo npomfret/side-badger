@@ -12,9 +12,10 @@ the doctype, so clients inspecting raw HTML discover both options before parsing
 the document head. The same source-only comment distinguishes the marketing site
 from `https://app.sidebadger.me/`, gives the production MCP endpoint and its OAuth
 account-linking requirement, and points connected clients to `tools/list` for
-current schemas. It names the shared `manage-shared-expenses` workflow skill when
-an integration supplies it. Public skill downloads and REST API reference links
-remain unadvertised until their owning integration work publishes them. This
+current schemas. It links the upstream OpenAPI 3.1 contract at
+`https://app.sidebadger.me/api/docs`, with authentication and permissions taken
+from each operation. It names the shared `manage-shared-expenses` workflow skill
+when an integration supplies it; no public skill download is linked yet. This
 machine-facing instruction stays in English and adds no visible or accessible
 page copy.
 

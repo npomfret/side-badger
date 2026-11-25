@@ -1,6 +1,6 @@
 # AI discovery, product copy and integration documentation
 
-Requested by the owner on 18 November 2026. Status: Markdown delivery is deployed and verified on the public site (19 November 2026); product facts are established (below); the copy fixes and integration documentation are pending upstream decisions.
+Requested by the owner on 18 November 2026. Status: Markdown delivery is deployed and verified on the public site (19 November 2026); the production OpenAPI contract is publicly available (verified 25 November 2026). Integration pages, runtime rendering, quickstarts and entitlement verification remain open. The dated product-fact snapshots below are historical evidence, not current availability guarantees.
 
 ## Aim
 
@@ -46,8 +46,8 @@ Research consulted on 17 November 2026; recheck changing platform guidance durin
 
 ### 1. Establish current product facts
 
-- [ ] Obtain the API contract and supported MCP tool/skill inventory from the application repository. Record the source version and distinguish available, preview and planned functionality.
-  - MCP inventory done (ten tools, revision recorded below). No API contract exists upstream yet; open until the base project supplies one.
+- [x] Obtain the API contract and supported MCP tool/skill inventory. Record the source version and distinguish available, preview and planned functionality.
+  - MCP inventory done (ten tools and shared skill, source revision recorded below). The production API contract is now available at `https://app.sidebadger.me/api/docs`; OpenAPI 3.1.0, API version 1.0.0. Current delivery evidence and remaining release/entitlement checks are below.
 - [ ] Confirm Pro activation, API authentication, access revocation, quotas/rate limits, account and group permissions, and behaviour when Pro expires or is downgraded. Document supported behaviour rather than designing it in marketing copy.
   - Checked 19 November: nothing of this exists in the application (no Pro tier, entitlement, billing, API keys or public API). Blocked on the base project; see Product facts.
 - [x] Confirm whether MCP and each plugin require Pro, which clients are supported, and which installations/listings are actually public.
@@ -79,6 +79,7 @@ API documentation creation and delivery in this section belong to `wl-bill-split
 - [ ] Choose the documentation location and page structure. Provide a public, indexable integration overview linking to API, MCP, ChatGPT and Claude setup guides; final paths are to be settled during implementation.
 - [ ] **API overview and quickstart (base project):** create and serve documentation stating the Pro requirement before setup, showing how to obtain access, identifying the verified production base URL/version, and providing a working request/response example and troubleshooting for missing entitlement or authentication. Render that source in the tenant site.
 - [ ] **API reference (base project):** create and serve the authoritative machine-readable contract (OpenAPI if supported by the implementation) and documentation covering authentication, scopes/permissions, endpoint inputs/outputs, amounts/currencies/dates, pagination, errors, rate limits, retries/idempotency where supported, and version/deprecation guidance. Keep executable examples aligned with that contract upstream; the tenant consumes and renders it.
+  - Machine-readable contract delivered at `/api/docs` (25 November). The full documentation coverage, examples and tenant renderer in this item are not established by fetching the contract.
 - [ ] **Tenant renderer:** consume the base project's documentation delivery contract at runtime, with safe rendering, accessible loading/error states and verified browser/CSP access. Confirm that upstream documentation updates appear without rebuilding this site, and that an unavailable source does not block the build. Do not bundle a documentation snapshot as a fallback.
 - [ ] **MCP setup:** document the verified endpoint, transport, supported clients, authentication/account linking, entitlements, tool capabilities and limits, reconnect/revoke steps, and an end-to-end example.
 - [ ] **ChatGPT plugin:** link the verified public installation/listing when available. Explain MCP plus skills, account linking, prerequisites, example prompts, supported actions and troubleshooting. Reuse the existing delivery record and package.
@@ -185,7 +186,7 @@ These are hypotheses under principle 7, not evidence that wording will improve r
 
 Status after the 19 November fact-finding. Nothing here is decided by the evidence; each is one owner or base-project action.
 
-- **Base project:** build the public API (auth, entitlement check, versioning, contract), the API documentation and a runtime delivery endpoint/format for tenant rendering. None exists today.
+- **Base project:** the OpenAPI contract and runtime delivery endpoint now exist at `/api/docs` (25 November). Confirm Pro access/entitlements, full documentation and examples; the tenant runtime renderer is still to be built. Documentation availability does not prove a Pro offering has launched.
 - **Base project:** Pro implementation (entitlements, billing, quotas, downgrade and expiry behaviour) and the matching terms and privacy changes (terms section 7 currently forbids direct API use).
 - **Owner:** Pro price and what Pro includes.
 - **Owner:** whether MCP and the ChatGPT/Claude plugins require Pro (code has no check; today any verified account can link).
@@ -195,7 +196,34 @@ Status after the 19 November fact-finding. Nothing here is decided by the eviden
 - **Shared proxy follow-up:** compress `text/markdown` (and keep `Vary: Accept-Encoding`).
 - Final documentation hosting, public URLs and localisation approach.
 
-## Product facts — 19 November 2026
+## Production API documentation — 25 November 2026
+
+Public `GET https://app.sidebadger.me/api/docs` returned HTTP 200 with
+`application/json; charset=utf-8`, without authentication. The parsed contract is
+OpenAPI 3.1.0, titled "Billsplit public API", API version 1.0.0, with 115 paths
+and a tenant-relative `/api` server URL. The response SHA-256 was
+`faabe1458455fb2e75599e5645db7a1e8af0facb163c875ca952d55e9793eb87`.
+This supersedes the older observations below that `/api/docs` and an OpenAPI
+contract do not exist. Do not copy the contract into this repository or fetch it
+during the marketing build; the endpoint remains the upstream source.
+
+The security schemes distinguish tenant ID tokens, browser sessions and OAuth
+access tokens. OAuth is accepted only where an operation explicitly lists it;
+unsafe cookie-authenticated requests require a same-origin Origin header.
+The raw contract does not establish a released Pro tier, its price/quotas,
+authenticated workflow acceptance, or a finished quickstart. Those checks remain
+open. The shared source-only AI guidance now links the contract and tells agents
+to follow each operation's documented authentication and permissions, retaining
+MCP and supplied-skill discovery. No visible page copy or translations change.
+
+Source-comment verification: strict compile/build passed with zero errors and
+warnings (1,249 pages, 1,131 Markdown representations); all five existing
+Markdown output checks passed serially with one worker, including the eligible
+page inventory and exclusions. Independent review found no substantive findings.
+No contract snapshot or network build dependency was added. Delivery is through
+the accompanying commit; the remaining integration work above stays open.
+
+## Product facts — 19 November 2026 (historical baseline)
 
 Evidence only; no site copy, i18n or YAML was changed. Labels: **Available** (in code at the revision, behaviour observed or source-read), **Preview**, **Planned**, **Unknown**.
 

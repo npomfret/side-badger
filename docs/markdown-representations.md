@@ -9,7 +9,14 @@ Each HTML page advertises its Markdown asset with
 Clients can follow that link even if their fetch tool cannot set request headers.
 Eligible HTML documents also put a short AI-agent instruction immediately after
 the doctype, so clients inspecting raw HTML discover both options before parsing
-the document head.
+the document head. The same source-only comment distinguishes the marketing site
+from `https://app.sidebadger.me/`, gives the production MCP endpoint and its OAuth
+account-linking requirement, and points connected clients to `tools/list` for
+current schemas. It names the shared `manage-shared-expenses` workflow skill when
+an integration supplies it. Public skill downloads and REST API reference links
+remain unadvertised until their owning integration work publishes them. This
+machine-facing instruction stays in English and adds no visible or accessible
+page copy.
 
 The production nginx configuration also negotiates Markdown at the page URL:
 

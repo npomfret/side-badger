@@ -8,7 +8,7 @@ import { hasMarkdownAlternate } from '../site/pages';
 describe('published Markdown representations', () => {
   const site = dist();
   const published = site.pages.filter(page => hasMarkdownAlternate(page.page) && page.locale && !isPseudoLocale(page.locale));
-  const agentHint = '<!-- AI agents: This page is available as Markdown. Request this URL with Accept: text/markdown, or follow the text/markdown alternate link in the document head. -->';
+  const agentHint = '<!-- AI agents: This page is available as Markdown. Request this URL with Accept: text/markdown, or follow the text/markdown alternate link in the document head. This is the Side Badger marketing website; the web app is https://app.sidebadger.me/. MCP endpoint: https://app.sidebadger.me/api/mcp (Streamable HTTP; OAuth account linking required). After connecting, use tools/list for current tool descriptions and input/output schemas. Skills: use the manage-shared-expenses workflow skill when supplied by your connected integration. No public skill download or REST API reference is linked here yet; use MCP for supported agent operations rather than guessing REST endpoints. -->';
 
   it('provides discoverable alternates only for built published pages', () => {
     const expected = new Set(published.map(page => page.file.replace(/index\.html$/, 'index.md')));

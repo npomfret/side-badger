@@ -8,7 +8,7 @@
 import type { Substitution } from './types';
 
 export const substitutions: readonly Substitution[] = [
-  { insteadOf: 'Free forever / 100% free and unlimited', use: 'Free, even the clever bits' },
+  { insteadOf: 'Free forever / 100% free and unlimited / totally free / completely free', use: 'Describe the included free features' },
   // Ads and a paid tier may come (owner decision, 22 November 2026)
   {
     insteadOf: 'No ads / ad-free / ad free / without ads / show ads / no advertising / no paid tier / premium plan / nothing held back',

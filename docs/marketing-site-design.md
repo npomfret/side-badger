@@ -31,7 +31,7 @@ references remain meaningful; later owner decisions and the current registries o
 | ID | Durable decision and current qualification |
 |---|---|
 | D1 | App links target production through `LaunchAppCta` and the URL helpers, with the visitor's language. |
-| D2 | Describe what is free today and disclose limits. The original “no ads” promise was superseded on 22 November 2026: ads and a paid tier may come, so promise neither absence nor perpetual free service. |
+| D2 | Describe the included free features and disclose limits. The original “no ads” promise was superseded on 22 November 2026: ads may come. The owner confirmed a future paid tier on 25 November 2026, so avoid blanket “totally free” / “completely free” and perpetual-free claims, including in search metadata. Do not advertise an unreleased plan or price. |
 | D3 | Trust claims must agree with the app's current policies and the approved registry wording. Avoid unsupported privacy or ownership promises. |
 | D4 | The public Side Badger site does not offer white-label hosting. |
 | D5 | Use Search Console and the first-party launch counter to assess search and app launches. The nginx configuration owns redirect targets and counter fields. |

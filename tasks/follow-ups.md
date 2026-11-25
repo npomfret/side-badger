@@ -71,7 +71,7 @@ push; this is not a claim of real-device acceptance.
 
 | Dependency | Owner action | Default until then |
 |---|---|---|
-| Search Console | Confirm the domain property, submit the sitemap, export baseline reports. | The search reviews wait. |
+| Search Console | Confirm the domain property, submit the sitemap, export baseline reports, then request recrawling of `/` and `/pricing/` to refresh the old "totally free" / "Free Forever" snippets. | The search reviews wait; metadata and permanent alias redirects are already served, but Google chooses when to recrawl and which text to show. |
 | Production field data | Run PageSpeed Insights on production (CrUX at p75: LCP ≤ 2.5 s, INP ≤ 200 ms, CLS ≤ 0.1). | Lab measurements only. |
 | Branch protection | Configure TeamCity commit-status publication, then require All Checks on `main`. | The CI gate still blocks deploys. |
 | Loki access | Read access to the edge box's Loki. | The `/go/` counter logs; counts are read later. |

@@ -223,6 +223,47 @@ page inventory and exclusions. Independent review found no substantive findings.
 No contract snapshot or network build dependency was added. Delivery is through
 the accompanying commit; the remaining integration work above stays open.
 
+## Agent discovery metadata — 26 November 2026
+
+The owner requested the HTML convention demonstrated in
+[Cloudflare Search for Agents](https://blog.cloudflare.com/search-for-agents/#discoverability),
+matching Markdown frontmatter and the proposed OpenAPI `service-desc` link.
+Scope inventory: existing `BaseLayout` comment; `SeoHead`'s Markdown-alternate
+block; `renderMarkdown` in `scripts/markdown/index.mjs`; the existing Markdown
+unit and output suites; and `docs/markdown-representations.md`. Eligible pages
+are exactly the built published page/locale pairs selected by
+`hasMarkdownAlternate`, excluding legal pages, previews, pseudo-locales and 404s.
+The output suite inventories the entire built page set against that predicate.
+
+Reuse search: the site and all local project workspaces were searched for
+`agent:instructions`, `agentGuidance`, `agent-guidance` and `service-desc`; no
+existing metadata implementation was found. The source comment is the current
+guidance owner, so migrate that data into one immutable
+`src/seo/agent-guidance.ts` value and delete the inline production copy. Both HTML
+surfaces read it. Preserve the existing fixed production URLs; the app-launch
+helper is for dashboard navigation, not the API contract. `renderMarkdown`
+already derives title and description from HTML, so extend it to derive the
+agent fields too rather than importing a second guidance source into the script.
+
+Acceptance: HTML comment and meta instructions agree; `agent:documentation` and
+the `service-desc` link point to the verified production contract; Markdown
+contains a nested `agent` mapping with the same decoded strings. Serialization
+preserves quotes, newlines and URL query characters. Excluded pages receive no
+agent tags/service link. No search endpoint/method tags, visible UI text, new
+translations, dependencies or network build calls. The metadata is a discovery
+convention, not an authentication or universal-client-support claim.
+
+Verification: 12 existing/extended Markdown tests passed, including nested YAML
+round trips for quotes, newlines, query characters and missing fields. The
+existing `verify:site` command passed serially with one worker: strict
+compile/build with zero errors and warnings, 1,249 pages, 1,131 Markdown
+representations and all 186 production-output checks. The six Markdown output
+checks cover the full eligible/excluded inventory and exact HTML/frontmatter
+agreement; the generated homepage frontmatter was also inspected. The production
+contract returned HTTP 200 with JSON on 26 November. Independent review found no
+substantive findings. Delivery is through the accompanying commit; the broader
+integration work above remains open.
+
 ## Product facts — 19 November 2026 (historical baseline)
 
 Evidence only; no site copy, i18n or YAML was changed. Labels: **Available** (in code at the revision, behaviour observed or source-read), **Preview**, **Planned**, **Unknown**.

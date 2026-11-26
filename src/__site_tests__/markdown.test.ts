@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { load } from 'cheerio';
 import { marked } from 'marked';
+import { load as loadYaml } from 'js-yaml';
 import { dist, squash } from './lib/site';
 import { isPseudoLocale, t, type Locale } from '../i18n';
 import { hasMarkdownAlternate } from '../site/pages';
@@ -15,11 +16,32 @@ describe('published Markdown representations', () => {
     expect(new Set(site.files.filter(file => file.endsWith('.md')))).toEqual(expected);
     for (const page of site.pages) {
       const alternates = page.$('link[rel="alternate"][type="text/markdown"]');
+      const instructions = page.$('head meta[name="agent:instructions"]');
+      const documentation = page.$('head meta[name="agent:documentation"]');
+      const api = page.$('head link[rel="service-desc"]');
       expect(alternates.length, page.urlPath).toBe(published.includes(page) ? 1 : 0);
+      expect(instructions.length, page.urlPath).toBe(alternates.length);
+      expect(documentation.length, page.urlPath).toBe(alternates.length);
+      expect(api.length, page.urlPath).toBe(alternates.length);
+      expect(page.$('meta[name="agent:endpoint"], meta[name="agent:method"]').length, page.urlPath).toBe(0);
       expect(page.html.startsWith(`<!DOCTYPE html>${agentHint}`), page.urlPath).toBe(published.includes(page));
       if (alternates.length) {
         expect(alternates.attr('href'), page.urlPath).toBe(`/${page.file.replace(/index\.html$/, 'index.md')}`);
+        expect(instructions.attr('content'), page.urlPath).toBe(agentHint.slice('<!-- AI agents: '.length, -' -->'.length));
+        expect(documentation.attr('content'), page.urlPath).toBe('https://app.sidebadger.me/api/docs');
+        expect(api.attr('href'), page.urlPath).toBe(documentation.attr('content'));
+        expect(api.attr('type'), page.urlPath).toBe('application/json');
       }
+    }
+  });
+
+  it('keeps Markdown agent instructions and documentation identical to the HTML metadata', () => {
+    for (const page of published) {
+      const markdown = site.read(page.file.replace(/index\.html$/, 'index.md'))!.toString('utf8');
+      expect(loadYaml(markdown.split('\n---\n')[0].slice(4)), page.urlPath).toHaveProperty('agent', {
+        instructions: page.$('head meta[name="agent:instructions"]').attr('content'),
+        documentation: page.$('head meta[name="agent:documentation"]').attr('content'),
+      });
     }
   });
 

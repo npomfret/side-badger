@@ -2,15 +2,42 @@ import { describe, expect, it } from 'vitest';
 import { load } from 'cheerio';
 import { marked } from 'marked';
 import { readFileSync } from 'node:fs';
+import { load as loadYaml } from 'js-yaml';
 import { renderMarkdown } from '../../scripts/markdown/index.mjs';
 import { negotiationConfig } from '../../scripts/markdown/nginx.mjs';
 import { markdownPathFor } from '../seo/urls';
 
 const info = { url: 'https://sidebadger.me/features/settle-up/', locale: 'en', indexable: true };
-const document = (body: string, lang = 'en') => `<html lang="${lang}"><head><title>Settle up</title><meta name="description" content="Record payments; no money moves."></head><body><header>Site chrome</header><main>${body}</main><footer>Footer</footer></body></html>`;
+const document = (body: string, lang = 'en', head = '') => `<html lang="${lang}"><head><title>Settle up</title><meta name="description" content="Record payments; no money moves.">${head}</head><body><header>Site chrome</header><main>${body}</main><footer>Footer</footer></body></html>`;
 const rendered = (markdown: string) => load(marked.parse(markdown.replace(/^---\n[\s\S]*?\n---\n/, '')) as string);
 
 describe('Markdown alternate representations', () => {
+  it('mirrors agent discovery metadata as nested YAML, preserving quotes and newlines', () => {
+    const md = renderMarkdown(document('<h1>Settle up</h1><p>Record a payment.</p>', 'en',
+      '<meta name="agent:instructions" content="Use &quot;MCP&quot;: link your account.&#10;Then check permissions.">' +
+      '<meta name="agent:documentation" content="https://example.com/api/docs?format=json&amp;version=1">'), info);
+    expect(loadYaml(md.split('\n---\n')[0].slice(4))).toMatchObject({
+      agent: {
+        instructions: 'Use "MCP": link your account.\nThen check permissions.',
+        documentation: 'https://example.com/api/docs?format=json&version=1',
+      },
+    });
+    expect(rendered(md).text()).not.toContain('link your account');
+  });
+
+  it.each(['instructions', 'documentation'])('does not invent missing agent fields when only %s is supplied', field => {
+    const md = renderMarkdown(document('<h1>Settle up</h1>', 'en',
+      `<meta name="agent:${field}" content="Supplied value">`), info);
+    expect(loadYaml(md.split('\n---\n')[0].slice(4))).toMatchObject({ agent: { [field]: 'Supplied value' } });
+    expect(md).not.toContain('undefined');
+    expect(md).not.toContain(`  ${field === 'instructions' ? 'documentation' : 'instructions'}:`);
+  });
+
+  it('omits the agent block when the HTML has no discovery metadata', () => {
+    const md = renderMarkdown(document('<h1>Settle up</h1>'), info);
+    expect(loadYaml(md.split('\n---\n')[0].slice(4))).not.toHaveProperty('agent');
+  });
+
   it('preserves task explanations, limits, FAQ answers, code, tables and computed balances', () => {
     const md = renderMarkdown(document(`<h1>Settle up</h1><p>Record payments; no money moves.</p>
       <h2>Limits</h2><ul><li>Pay outside Side Badger.</li></ul>

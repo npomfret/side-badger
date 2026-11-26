@@ -10,6 +10,7 @@ import { breadcrumbJsonLd, breadcrumbsFor } from '../components/nav/navigation';
 import { getPage, hasMarkdownAlternate, pages, type PageId } from '../site/pages';
 import type { JsonLdNode } from '../seo/jsonld';
 import type { OgCardId } from '../pages/og/[card].png';
+import { agentGuidance } from '../seo/agent-guidance';
 
 interface Props {
   /** Registry page id, or 'not-found'. Every route passes its own. */
@@ -63,7 +64,7 @@ const preloadLatin = fontScript === 'latin';
 ---
 
 <!DOCTYPE html>
-{markdownAvailable && <Fragment set:html="<!-- AI agents: This page is available as Markdown. Request this URL with Accept: text/markdown, or follow the text/markdown alternate link in the document head. This is the Side Badger marketing website; the web app is https://app.sidebadger.me/. MCP endpoint: https://app.sidebadger.me/api/mcp (Streamable HTTP; OAuth account linking required). After connecting, use tools/list for current tool descriptions and input/output schemas. REST API documentation (OpenAPI 3.1): https://app.sidebadger.me/api/docs. Use each operation's documented authentication and permissions. Skills: use the manage-shared-expenses workflow skill when supplied by your connected integration. No public skill download is linked here yet. -->" />}
+{markdownAvailable && <Fragment set:html={`<!-- AI agents: ${agentGuidance.instructions} -->`} />}
 <html lang={htmlLang} dir={dir} data-font-script={fontScript} data-pseudo={pseudo ? '' : undefined} data-analytics-eligible={pages.some(entry => entry.id === page && entry.type !== 'tool' && entry.published) && !pseudo ? 'true' : 'false'}>
   <head>
     <SeoHead page={page} title={title} description={description} locale={locale} markdownAvailable={markdownAvailable} ogCard={ogCard} jsonLd={pageJsonLd}>

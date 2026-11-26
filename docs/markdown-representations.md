@@ -19,6 +19,29 @@ when an integration supplies it; no public skill download is linked yet. This
 machine-facing instruction stays in English and adds no visible or accessible
 page copy.
 
+The same eligible pages advertise `agent:instructions` and `agent:documentation`
+meta tags in the document head, following the convention demonstrated by
+[Cloudflare Search for Agents](https://blog.cloudflare.com/search-for-agents/#discoverability).
+`src/seo/agent-guidance.ts` owns the existing guidance and production documentation
+URL for both the source comment and `SeoHead`. A `service-desc` link with
+`type="application/json"` points to the OpenAPI contract using the registered
+[service-description relation](https://www.rfc-editor.org/rfc/rfc8631.html).
+No `agent:endpoint` or `agent:method` is advertised: the Cloudflare example uses
+those fields for website search, which this site does not provide.
+
+The Markdown converter reads the two rendered meta tags into a nested frontmatter
+mapping, so it cannot drift from the HTML:
+
+```yaml
+agent:
+  instructions: "The same guidance as the HTML meta tag"
+  documentation: "https://app.sidebadger.me/api/docs"
+```
+
+These are discovery hints; client support varies. They neither perform account
+linking nor authorize API operations, and require no Cloudflare service or new
+network access during the build.
+
 The production nginx configuration also negotiates Markdown at the page URL:
 
 ```sh
@@ -48,8 +71,8 @@ Navigation, scripts, hidden decoration and simulated homepage app screens are
 omitted. Use-case explanations and their links remain. Links become absolute so
 extracted documents retain working destinations, including `/go/` launch routing.
 
-Frontmatter records the page title, description, original URL, language and
-indexability. The registry restricts generation to published, actually built
+Frontmatter records the page title, description, original URL, language,
+indexability and rendered agent guidance. The registry restricts generation to published, actually built
 page/locale pairs. Preview pages, pseudo-locales, the 404 page and the legal
 pages (privacy, terms, cookies) have no Markdown asset or alternate link: a legal
 page's policy text is loaded from the app API in the browser, so its built HTML is

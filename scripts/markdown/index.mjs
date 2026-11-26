@@ -42,7 +42,15 @@ export function renderMarkdown(html, { url, locale, indexable }) {
     robots: indexable ? 'index, follow' : 'noindex',
   };
   const frontmatter = Object.entries(metadata).map(([key, value]) => `${key}: ${JSON.stringify(value)}`).join('\n');
-  return `---\n${frontmatter}\n---\n\n${converter.turndown(main.html() ?? '')}\n`;
+  // Copy the rendered discovery metadata, just like title/description, so the formats stay in sync.
+  const agent = {
+    instructions: $('head meta[name="agent:instructions"]').attr('content'),
+    documentation: $('head meta[name="agent:documentation"]').attr('content'),
+  };
+  const agentFields = Object.entries(agent).filter(([, value]) => value !== undefined);
+  const agentFrontmatter = agentFields.length === 0 ? '' :
+    `\nagent:\n${agentFields.map(([key, value]) => `  ${key}: ${JSON.stringify(value)}`).join('\n')}`;
+  return `---\n${frontmatter}${agentFrontmatter}\n---\n\n${converter.turndown(main.html() ?? '')}\n`;
 }
 
 /** Metadata for nginx lives outside the document root. Explicit .md URLs are alternates. */

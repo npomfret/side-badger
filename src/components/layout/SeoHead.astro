@@ -14,6 +14,7 @@ import { absoluteUrl, canonicalFor, markdownPathFor } from '../../seo/urls';
 import { isIndexable } from '../../seo/indexability';
 import { alternatesFor } from '../../seo/alternates';
 import { buildGraph, serializeJsonLd, type JsonLdNode } from '../../seo/jsonld';
+import { agentGuidance } from '../../seo/agent-guidance';
 
 interface Props {
   page: PageId | 'not-found';
@@ -70,7 +71,12 @@ const graph = buildGraph({
   <link rel="alternate" hreflang={alternate.hreflang} href={alternate.href} />
 ))}
 {markdownAvailable && page !== 'not-found' && (
-  <link rel="alternate" type="text/markdown" href={markdownPathFor(page, locale)} />
+  <>
+    <link rel="alternate" type="text/markdown" href={markdownPathFor(page, locale)} />
+    <meta name="agent:instructions" content={agentGuidance.instructions} />
+    <meta name="agent:documentation" content={agentGuidance.documentation} />
+    <link rel="service-desc" type="application/json" href={agentGuidance.documentation} />
+  </>
 )}
 
 <!-- Open Graph -->

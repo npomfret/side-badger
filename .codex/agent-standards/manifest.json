@@ -141,13 +141,13 @@
     },
     ".codex/agent-standards/plugins/localization/.claude-plugin/plugin.json": {
       "source": "plugin:localization@npomfret/.claude-plugin/plugin.json",
-      "sha256": "947940a054bbf57f4edc47bd321257cc7b9d89b794f1f62a80739f358570a57e",
+      "sha256": "fe4c802c4fdf0fbd5ec9a306106a79a7bda95b5ebaa8f81bec4325b8b2d0a65e",
       "link": false,
       "executable": false
     },
     ".codex/agent-standards/plugins/localization/skills/localization/SKILL.md": {
       "source": "plugin:localization@npomfret/skills/localization/SKILL.md",
-      "sha256": "605bd7eb0d102bcbbddf46e1a3c6eabba3a3cbb977b45c7186d8b80aab93a894",
+      "sha256": "bb6f4b78f6695e3736b6803f1daed137dcc01caeaf74e1c84db6a9f29e1a76c3",
       "link": false,
       "executable": false
     },
@@ -193,15 +193,51 @@
       "link": false,
       "executable": false
     },
+    ".codex/agent-standards/plugins/teamcity/.claude-plugin/plugin.json": {
+      "source": "plugin:teamcity@npomfret/.claude-plugin/plugin.json",
+      "sha256": "ed83b0f779c724768d3511111700ed6405106b211b4904b0177131030fffe5b8",
+      "link": false,
+      "executable": false
+    },
+    ".codex/agent-standards/plugins/teamcity/scripts/teamcity.py": {
+      "source": "plugin:teamcity@npomfret/scripts/teamcity.py",
+      "sha256": "524aa7954cd5e2322ec10b41e5644591e14fab408adb5e49e939457da82ace5e",
+      "link": false,
+      "executable": true
+    },
+    ".codex/agent-standards/plugins/teamcity/scripts/teamcity_operations.py": {
+      "source": "plugin:teamcity@npomfret/scripts/teamcity_operations.py",
+      "sha256": "b698a446710016c4d248ec6e9db54f1a8ba251503b31f91969b8124e014a9737",
+      "link": false,
+      "executable": false
+    },
+    ".codex/agent-standards/plugins/teamcity/scripts/test_teamcity_operations.py": {
+      "source": "plugin:teamcity@npomfret/scripts/test_teamcity_operations.py",
+      "sha256": "eca6f97597bdd6069ea20fdd55ac079fd95de4e2328d2d8e039706f98bab8013",
+      "link": false,
+      "executable": false
+    },
+    ".codex/agent-standards/plugins/teamcity/skills/teamcity-builds/SKILL.md": {
+      "source": "plugin:teamcity@npomfret/skills/teamcity-builds/SKILL.md",
+      "sha256": "e0c41c1ea0deb7f2a5ee52d85fc0b823c0b80c2e7c9ab940e257a0bebd84ac62",
+      "link": false,
+      "executable": false
+    },
+    ".codex/agent-standards/plugins/teamcity/skills/teamcity/SKILL.md": {
+      "source": "plugin:teamcity@npomfret/skills/teamcity/SKILL.md",
+      "sha256": "b6dfeab9247b0313b25b58c1d9760776ee0c6ae737dbde8a9d82c95653d587e4",
+      "link": false,
+      "executable": false
+    },
     ".codex/agent-standards/plugins/testing/.claude-plugin/plugin.json": {
       "source": "plugin:testing@npomfret/.claude-plugin/plugin.json",
-      "sha256": "3578a70268ebd78cda8a702e18282fbd3f160c2729b02b3a929cd9b2a29b4b3e",
+      "sha256": "2d2f7d82357916acda81b37d8f19d74c74da9977d30633bf3a5ca54bedc9790c",
       "link": false,
       "executable": false
     },
     ".codex/agent-standards/plugins/testing/skills/test-design/SKILL.md": {
       "source": "plugin:testing@npomfret/skills/test-design/SKILL.md",
-      "sha256": "1c8fa8215c0d6ab418e0a5eb4e5f16ec8a89bc2d7055c6bc722759e1eae8e20f",
+      "sha256": "e75b03eea5f96770fed4c56da2729a0393793f3bebfa8d32fd909fb3496bc903",
       "link": false,
       "executable": false
     },
@@ -297,7 +333,7 @@
     },
     ".codex/agent-standards/runtime.json": {
       "source": "project and enabled-plugin configuration",
-      "sha256": "0a6b2cdcb35a43edf2b80985523f9c7b6db87c9c89f58e9b22a482d11bf5963b",
+      "sha256": "ea14f0ec223cc8320ab04b1968ef0bc81faeed6ec1d73e86de847eb7526be2aa",
       "link": false,
       "executable": false
     },
@@ -309,7 +345,7 @@
     },
     ".codex/agents/failure-investigator.toml": {
       "source": "plugin:coding@npomfret/agents/failure-investigator.md",
-      "sha256": "29519b4394f20000fe0466ffd142db932f9c8ed5ffabe066e281f619957d0853",
+      "sha256": "ecc0b8939d5d678458acb139fb535f4cf805228bdd68391c987402a9bc41c75b",
       "link": false,
       "executable": false
     },
@@ -321,7 +357,7 @@
     },
     ".codex/hooks.json": {
       "source": "templates/codex-hooks.py",
-      "sha256": "2eb9843dabbb715117e2a4d742d00c5d954e98d09e3dd846aca0fec0ea0d57a3",
+      "sha256": "a72cff6cdb145d90569fb97259b3f7b45f4c43c69e0f114b53b6e97586e3f0a0",
       "link": false,
       "executable": false
     },

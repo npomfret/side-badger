@@ -44,14 +44,23 @@ UI review found and resolved the older-browser selector issue; no substantive fi
 All 185 production-output checks passed. Production deployment remains gated by TeamCity after
 push; this is not a claim of real-device acceptance.
 
-## Open work
+## CI test reporting (28 November 2026)
 
-- **CI test names.** Two `content rules (fixtures)` cases in `src/__tests__/content.test.ts` share the title "rejects an image in rich text". Both execute and appear in JUnit, but TeamCity merges their history into one name. Give the scenarios distinct labels in a separate test-reporting cleanup.
+The feature-schema image fixture now has the title "rejects an image in the
+feature lead"; the inline-Markdown validator keeps "rejects an image in rich
+text". These are the two parameterized cases that previously expanded to the
+same title in `content rules (fixtures)`. Only the scenario label changes; test
+inputs and assertions stay the same. All 89 content checks passed serially with
+one worker; JUnit contains each distinct image-case title exactly once.
+Independent review found no substantive findings. Delivery is through the
+accompanying commit.
+
+## Open work
 
 - **App policy data (upstream).** The policy pages load the app's current text in the browser (D10; `AGENTS.md` External Dependencies). In the app's data, the cookie policy `createdAt` (17 November 2026) differs from its text's "Last revised: 16 November"; correcting it belongs in `wl-bill-splitter`.
 - **P35 app screenshots.** Waits for the capture script and demo scenario in `wl-bill-splitter` (site plan follow-up 9 and D14). This repo owns the shot list (site plan "Shot list", `src/data/screenshots.ts`), optimization and placement. Until then English pages may use `placeholder-en` shots, and localized pages show none.
 - **Release 2** shipped: calculators, guides, four feature pages, couples, page art, the Splitwise comparison and the help page. Its plan was deleted on 20 November 2026; read it in git history (`tasks/release-2-plan.md`, last at `5dc2138`). The Splitwise reframe shipped on 22 November 2026.
-- **AI discovery and integration docs** are tracked in [ai-discovery-and-integration-docs.md](./ai-discovery-and-integration-docs.md): research-led product copy, Markdown delivery for agents, Pro API documentation, standalone MCP access, and ChatGPT/Claude plugins combining MCP and skills. Implementation has started with Markdown delivery; API contracts, entitlement decisions and integration release verification remain dependencies.
+- **AI discovery and integration docs** are tracked in [ai-discovery-and-integration-docs.md](./ai-discovery-and-integration-docs.md): Markdown delivery, HTML agent metadata and matching frontmatter are implemented and verified on production (28 November; 145 HTTP assertions). The production OpenAPI contract is available and permits browser reads from this site's origin, so the runtime documentation renderer has its inputs ready. Pro entitlement decisions, complete setup guides and integration release verification remain separate work.
 - **Search reviews** at 4, 8 and 12 weeks after release (site plan success measures, `/go/app/` counts by `from`), once Search Console and Loki access exist.
 - **Splitwise comparison upkeep.** The page promises a quarterly recheck. Re-read Splitwise's pages and update `asOf` by 22 February 2027. Sources and evidence are in git history (`tasks/reframe-app-comparison.md`, deleted 22 November 2026).
   - The page makes no Tricount claims: Tricount's help centre lists 38 languages to Side Badger's 39.

@@ -1,6 +1,6 @@
 # AI discovery, product copy and integration documentation
 
-Requested by the owner on 18 November 2026. Status: Markdown delivery is deployed and verified on the public site (19 November 2026); the production OpenAPI contract is publicly available (verified 25 November 2026). Integration pages, runtime rendering, quickstarts and entitlement verification remain open. The dated product-fact snapshots below are historical evidence, not current availability guarantees.
+Requested by the owner on 18 November 2026. Status: Markdown delivery, HTML agent metadata and matching Markdown frontmatter are implemented; the production OpenAPI contract is publicly available. The contract now permits browser reads from this site's origin (verified 28 November 2026), so the runtime documentation renderer has its source and CORS input ready. Integration pages, runtime rendering, quickstarts and entitlement verification remain open. The dated product-fact snapshots below are historical evidence, not current availability guarantees.
 
 ## Aim
 
@@ -49,13 +49,13 @@ Research consulted on 17 November 2026; recheck changing platform guidance durin
 - [x] Obtain the API contract and supported MCP tool/skill inventory. Record the source version and distinguish available, preview and planned functionality.
   - MCP inventory done (ten tools and shared skill, source revision recorded below). The production API contract is now available at `https://app.sidebadger.me/api/docs`; OpenAPI 3.1.0, API version 1.0.0. Current delivery evidence and remaining release/entitlement checks are below.
 - [ ] Confirm Pro activation, API authentication, access revocation, quotas/rate limits, account and group permissions, and behaviour when Pro expires or is downgraded. Document supported behaviour rather than designing it in marketing copy.
-  - Checked 19 November: nothing of this exists in the application (no Pro tier, entitlement, billing, API keys or public API). Blocked on the base project; see Product facts.
+  - The 19 November application review is a historical baseline. The published OpenAPI contract now describes authentication per operation; that no longer waits for an upstream contract. Pro entitlements, billing, quotas and downgrade/expiry behaviour still need current upstream verification and must not be inferred from the contract's availability.
 - [x] Confirm whether MCP and each plugin require Pro, which clients are supported, and which installations/listings are actually public.
   - Confirmed 19 November: MCP has no Pro or other entitlement check (any verified account can link); ChatGPT and Claude are the target clients; nothing is public. Whether MCP/plugins should be Pro is an open owner decision (Dependencies).
 - [ ] Reconcile stale or contradictory content. A candidate identified during research is the how-it-works currency explanation versus newer conversion wording; verify against the current app before changing it.
-  - Verified and listed under "Contradictions to fix"; the edits themselves (copy, i18n, translations) are a separate piece of work and are not done.
+  - The established currency/conversion/count/limit corrections were implemented on 19 November, and the AI-assistant registry now records the owner's 22 November production confirmation. The dated list below records those fixes; remaining upstream policy and future-plan checks stay separate.
 - [ ] Audit blanket claims such as "everything is free", "no daily limits" and "no subscriptions" against the new offering. State the scope of free-app claims and Pro API limits precisely; check policies as well as pricing.
-  - Audit done (see Product facts and Contradictions); the claims are true of the app today and become false only when Pro ships. Rewording needs the Pro price/scope decision first.
+  - Current-copy audit and rewording have progressed: no-ads/no-paid-tier promises were removed on 22 November; pricing metadata now describes included free features, and "totally free"/"completely free" are banned by the existing substitutions gate (25 November). Verify plan-specific limits and policies when the paid offering is implemented; its price/scope cannot be invented here.
 
 ### 2. Improve product discovery copy
 
@@ -264,6 +264,36 @@ contract returned HTTP 200 with JSON on 26 November. Independent review found no
 substantive findings. Delivery is through the accompanying commit; the broader
 integration work above remains open.
 
+## Production verification and renderer readiness — 28 November 2026
+
+The existing `scripts/check-markdown.mjs` passed all 145 HTTP assertions against
+`https://sidebadger.me`, sequentially. It exercised content negotiation, explicit
+alternates, canonical/noindex headers, representation-specific validators, HEAD,
+redirects, missing pages and legal-page exclusions through the deployed proxy.
+This is production HTTP evidence, not just another local build check.
+
+Manual homepage inspection also found `agent:instructions`,
+`agent:documentation` and the OpenAPI `service-desc` link in the live HTML, with
+the same instruction/documentation values in negotiated Markdown's nested
+`agent` frontmatter. The discovery metadata slice is deployed; the integration
+overview and documentation pages themselves are still absent.
+
+The API documentation source returned HTTP 200 with
+`Content-Type: application/json; charset=utf-8` and
+`Access-Control-Allow-Origin: https://sidebadger.me` for a request carrying that
+Origin. The runtime renderer can therefore start from a reachable upstream
+contract and an explicit cross-origin read allowance. No source snapshot or
+build-time API fetch is required. A future renderer must still verify its actual
+browser request, safe rendering, loading/error states and upstream changes;
+these HTTP observations do not claim that renderer is built or tested.
+
+Current source cross-checks also confirm the earlier count/conversion/limit
+corrections, available custom-connection AI registry entry, and narrowed pricing
+metadata. The older blanket "edits not done" and "no API contract" notes above
+have been reconciled. Pro activation, policies, quotas and completed client
+workflows remain distinct upstream/release checks. Independent review found no
+substantive findings in this readiness update.
+
 ## Product facts — 19 November 2026 (historical baseline)
 
 Evidence only; no site copy, i18n or YAML was changed. Labels: **Available** (in code at the revision, behaviour observed or source-read), **Preview**, **Planned**, **Unknown**.
@@ -319,7 +349,7 @@ Counted against the facts above. Paths are in this repository; "now" is the curr
 2. **How-it-works omits conversion (incomplete rather than false).** `src/content/pages/how-it-works/en.yaml:49` and `:101` say balances are kept per currency and stop there; `features/multiple-currencies`, `settle-up` and the guides say an expense can be converted at a fetched, editable rate, and a group can auto-convert. Source: `docs/user-features.md` "Currency and conversion". Add the conversion sentence in both places. **Fixed 2026-11-19 in English and all 38 locales, back-checked blind (CF-check).** (conversion sentence added in both places (per-expense conversion only; the group conversion currency was left out of how-it-works)).
 3. **"No limit" on receipt scans.** `src/i18n/en.ts:283` says "No limit", but uploads share a per-user quota (30 per 10 minutes in production, `server/src/services/UploadRateLimiter.ts`). `pricing.faq.q3` (`:238`) already says "no daily cap" correctly; align the limits table (for example "No daily cap"). **Fixed 2026-11-19 in English and all 38 locales, back-checked blind (CF-check).** (now "No daily cap").
 4. **"The same number applies to every currency" (`src/i18n/en.ts:261`, and `src/content/features/multiple-currencies/en.yaml:116`, `src/content/guides/how-to-split-a-trip-paid-in-several-currencies/en.yaml:64` "One cap, whatever the money").** The cap is 999,999.99 in the currency's own units multiplied by an `amount_cap_multiple` for some currencies (`packages/shared/src/currencies.ts`). Check which currencies have multiples and word precisely (`src/data/features.ts:393` has the same shape). **Fixed 2026-11-19 in English and all 38 locales, back-checked blind (CF-check).** (reworded in the limits table, feature page, trip guide, group-trips FAQ, split-expenses and the registry; 85 of 133 currencies have a higher cap, so the guide's yen and rupiah examples were corrected too).
-5. **Stale registry entry for AI assistants.** `src/data/features.ts:1022-1026` marks ChatGPT/Claude as planned with evidence `tasks/deferred/chatgpt-claude-mcp-plugins.md`; the task is no longer under `deferred/`, and the MCP server is live though unlisted. Update the evidence path and status text only when the listing story is settled.
+5. **AI-assistant registry status — resolved.** `src/data/features.ts` now marks the capability available, cites the shared tool contracts/implementation and records the owner's 22 November production confirmation for custom ChatGPT/Claude connections. It explicitly distinguishes those connections from unpublished directory listings and packages.
 6. **Stale evidence note.** `src/data/features.ts:966-970` says "no service worker" as evidence for no offline use. There is a push-only service worker with no cache; the conclusion (no offline) stands, the evidence text should say so. **Fixed 2026-11-19** (internal registry only; registry evidence now describes the push-only service worker).
 7. **Will become false when Pro ships (not wrong today).** Resolved on 22 November 2026: the site no longer promises no ads or no paid tier (`tasks/brag-not-absences.md` in git history), so the line references below are out of date. "No paid tier", "everything is free", "nothing held back for a premium plan": `src/i18n/en.ts:234`, `:236`, `:247`; "Free. No ads. No daily limits." strings at `:77`, `:140`, `:141`, `:209`, `:258`, `:285`, `:286`; `src/data/substitutions.ts:11`; `src/content/compare/splitwise/en.yaml:20,23,26,89,139`. Reword at the same time as the Pro offering, scoped to the free app.
 8. **Upstream (base project, not this repo).** Terms of service section 7 (Acceptable Use) prohibits direct API access except through an authorised integration; needs updating before a public Pro API.

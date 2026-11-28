@@ -428,7 +428,7 @@ describe('content rules (fixtures)', () => {
     ['a block heading in rich text', { ...english, lead: '# Title' }],
     ['a list in rich text', { ...english, lead: '- one\n- two' }],
     ['HTML in rich text', { ...english, lead: 'A <b>bold</b> claim' }],
-    ['an image in rich text', { ...english, lead: '![alt](page:pricing)' }],
+    ['an image in the feature lead', { ...english, lead: '![alt](page:pricing)' }],
     ['two paragraphs', { ...english, lead: 'One.\n\nTwo.' }],
     ['an empty heading', { ...english, h1: '' }],
   ])('rejects %s', (_name, entry) => {

@@ -1,4 +1,6 @@
 /** Machine-facing production guidance shared by the HTML comment and document head. */
+import type { PageType } from '../site/pages';
+
 const documentation = 'https://app.sidebadger.me/api/docs';
 
 export const agentGuidance = Object.freeze({
@@ -13,3 +15,8 @@ export const agentGuidance = Object.freeze({
   ].join(' '),
   documentation,
 });
+
+/** A public source contract is documentation, not an application launch. Keep the exception exact. */
+export function isDocumentationSourceLink(pageType: PageType | undefined, href: string): boolean {
+  return pageType === 'api-reference' && href === agentGuidance.documentation;
+}

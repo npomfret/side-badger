@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ApiReference from '../../../components/api-reference/ApiReference.astro';
+import { apiReferencePage } from '../../../content/schemas';
+import { layoutPaths, loadPageContent } from '../../../components/content/page-content';
+import { agentGuidance } from '../../../seo/agent-guidance';
+
+export async function getStaticPaths() {
+  return layoutPaths('api-reference');
+}
+
+const copy = apiReferencePage.parse(await loadPageContent<unknown>('api-reference', 'en'));
+---
+
+<BaseLayout page="api-reference" title={copy.meta.title} description={copy.meta.description}>
+  <link slot="head" rel="service-desc" type="application/json" href={agentGuidance.documentation} />
+  <ApiReference copy={copy} source={agentGuidance.documentation} />
+</BaseLayout>

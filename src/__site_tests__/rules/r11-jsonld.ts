@@ -24,6 +24,7 @@ export const requiredTypes: Record<PageType, string[]> = {
   // Registered one level below Home (`parent: 'home'`), so like a tool it shows no breadcrumb (D22)
   comparison: BASE,
   legal: BASE,
+  'api-reference': BASE,
   article: [...BASE, 'Article', 'BreadcrumbList'],
   // One level below Home, like the hubs: the visible breadcrumb (D22) and its BreadcrumbList are absent
   tool: [...BASE, 'WebApplication'],

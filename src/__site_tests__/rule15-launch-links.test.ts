@@ -10,6 +10,16 @@ describe('rule 15: every app link goes through /go/ with from, cta, lang and nof
   });
 
   describe('fixtures', () => {
+    it('allows only the exact public contract on the API reference, keeping app launches gated', () => {
+      const html = (href: string) => `<html lang="en"><a href="${href}">Source</a></html>`;
+      const contract = 'https://app.sidebadger.me/api/docs';
+      expect(checkLaunchLinks(siteFromFiles({ 'developers/api/index.html': html(contract) }))).toEqual([]);
+      for (const href of [contract + '?redirect=/dashboard', 'https://app.sidebadger.me/dashboard', 'https://staging.sidebadger.me/api/docs']) {
+        expect(checkLaunchLinks(siteFromFiles({ 'developers/api/index.html': html(href) }))).toHaveLength(1);
+      }
+      expect(checkLaunchLinks(siteFromFiles({ 'index.html': html(contract) }))).toHaveLength(1);
+    });
+
     it('passes English links with no lang', () => {
       expect(checkLaunchLinks(one('r15/en-ok.html'))).toEqual([]);
     });

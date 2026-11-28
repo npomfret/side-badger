@@ -22,7 +22,12 @@ describe('published Markdown representations', () => {
       expect(alternates.length, page.urlPath).toBe(published.includes(page) ? 1 : 0);
       expect(instructions.length, page.urlPath).toBe(alternates.length);
       expect(documentation.length, page.urlPath).toBe(alternates.length);
-      expect(api.length, page.urlPath).toBe(alternates.length);
+      // A runtime reference shell advertises its source contract independently of Markdown eligibility.
+      expect(api.length, page.urlPath).toBe(page.page?.type === 'api-reference' ? 1 : alternates.length);
+      if (page.page?.type === 'api-reference') {
+        expect(api.attr('href'), page.urlPath).toBe('https://app.sidebadger.me/api/docs');
+        expect(api.attr('type'), page.urlPath).toBe('application/json');
+      }
       expect(page.$('meta[name="agent:endpoint"], meta[name="agent:method"]').length, page.urlPath).toBe(0);
       expect(page.html.startsWith(`<!DOCTYPE html>${agentHint}`), page.urlPath).toBe(published.includes(page));
       if (alternates.length) {

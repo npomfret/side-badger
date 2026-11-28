@@ -19,7 +19,8 @@ export type PageType =
   | 'support'
   | 'legal'
   | 'article'
-  | 'tool';
+  | 'tool'
+  | 'api-reference';
 
 /** The page types that describe the product. A guide links to at least two of them (restructure D20). */
 export const PRODUCT_PAGE_TYPES: readonly PageType[] = ['feature', 'use-case', 'how-it-works'];
@@ -45,6 +46,16 @@ export interface PageDef {
 }
 
 export const pages = [
+  {
+    id: 'api-reference',
+    type: 'api-reference',
+    path: '/developers/api/',
+    parent: 'home',
+    published: false,
+    locales: ['en'],
+    content: { collection: 'sitePages', slug: 'api-reference' },
+    indexing: 'english-only',
+  },
   {
     id: 'home',
     type: 'home',
@@ -506,8 +517,9 @@ export function requirePage(id: string): PageDef {
  * Whether a page has a generated Markdown alternate (`index.md`). Legal pages do not: their text is loaded
  * from the app API in the visitor's browser, so the built HTML is only a loading shell, and a Markdown copy
  * of it would pass the shell off as the policy. The policy's own source is the API (`/api/policies/<id>/text`).
+ * API-reference shells also use their upstream contract, rather than a Markdown copy of the loading UI.
  * Preview-only and unpublished pages never get one either.
  */
 export function hasMarkdownAlternate(page: PageDef | undefined): boolean {
-  return !!page && page.published && page.type !== 'legal';
+  return !!page && page.published && page.type !== 'legal' && page.type !== 'api-reference';
 }

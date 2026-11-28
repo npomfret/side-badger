@@ -1,6 +1,6 @@
 # AI discovery, product copy and integration documentation
 
-Requested by the owner on 18 November 2026. Status: Markdown delivery, HTML agent metadata and matching Markdown frontmatter are implemented; the production OpenAPI contract is publicly available. The contract now permits browser reads from this site's origin (verified 28 November 2026), so the runtime documentation renderer has its source and CORS input ready. Integration pages, runtime rendering, quickstarts and entitlement verification remain open. The dated product-fact snapshots below are historical evidence, not current availability guarantees.
+Requested by the owner on 18 November 2026. Status: Markdown delivery, HTML agent metadata and matching Markdown frontmatter are implemented; the production OpenAPI contract is publicly available. An English-only runtime API reference is implemented as an unpublished preview (28 November 2026). Public integration pages, reference publication, quickstarts and entitlement verification remain open. The dated product-fact snapshots below are historical evidence, not current availability guarantees.
 
 ## Aim
 
@@ -79,8 +79,9 @@ API documentation creation and delivery in this section belong to `wl-bill-split
 - [ ] Choose the documentation location and page structure. Provide a public, indexable integration overview linking to API, MCP, ChatGPT and Claude setup guides; final paths are to be settled during implementation.
 - [ ] **API overview and quickstart (base project):** create and serve documentation stating the Pro requirement before setup, showing how to obtain access, identifying the verified production base URL/version, and providing a working request/response example and troubleshooting for missing entitlement or authentication. Render that source in the tenant site.
 - [ ] **API reference (base project):** create and serve the authoritative machine-readable contract (OpenAPI if supported by the implementation) and documentation covering authentication, scopes/permissions, endpoint inputs/outputs, amounts/currencies/dates, pagination, errors, rate limits, retries/idempotency where supported, and version/deprecation guidance. Keep executable examples aligned with that contract upstream; the tenant consumes and renders it.
-  - Machine-readable contract delivered at `/api/docs` (25 November). The full documentation coverage, examples and tenant renderer in this item are not established by fetching the contract.
-- [ ] **Tenant renderer:** consume the base project's documentation delivery contract at runtime, with safe rendering, accessible loading/error states and verified browser/CSP access. Confirm that upstream documentation updates appear without rebuilding this site, and that an unavailable source does not block the build. Do not bundle a documentation snapshot as a fallback.
+  - Machine-readable contract delivered at `/api/docs` (25 November); its tenant viewer is now implemented as an unpublished preview. Full authored documentation coverage and examples remain upstream work.
+- [x] **Tenant renderer:** consume the base project's documentation delivery contract at runtime, with safe rendering, accessible loading/error states and verified browser/CSP access. Confirm that upstream documentation updates appear without rebuilding this site, and that an unavailable source does not block the build. Do not bundle a documentation snapshot as a fallback.
+  - Implemented and verified as the unpublished English-only `/developers/api/` preview on 28 November; publication remains open. See the implementation slice below for source ownership, supported rendering and acceptance evidence.
 - [ ] **MCP setup:** document the verified endpoint, transport, supported clients, authentication/account linking, entitlements, tool capabilities and limits, reconnect/revoke steps, and an end-to-end example.
 - [ ] **ChatGPT plugin:** link the verified public installation/listing when available. Explain MCP plus skills, account linking, prerequisites, example prompts, supported actions and troubleshooting. Reuse the existing delivery record and package.
 - [ ] **Claude plugin:** document its actual installation/distribution route, MCP plus skills, supported clients, account linking, prerequisites, example prompts, supported actions and troubleshooting. Do not assume ChatGPT's packaging or listing process applies.
@@ -171,6 +172,62 @@ Also observed: Markdown link text carries the screen-reader suffix, e.g. `[Start
 
 These are hypotheses under principle 7, not evidence that wording will improve ranking or recommendations. **This is a single run of one assistant.** A human, or tools for the respective assistants, must repeat the unchanged prompts with **ChatGPT, Claude, Gemini and Perplexity**, preferably in fresh sessions, before and after copy changes. Record their actual model/version, date, search queries, answers, citations, ranks, factual omissions/errors and integration/setup/task outcomes; do not treat this Codex run as results for those products. Repeat runs to capture variation and complete the blocked Markdown observations. No checklist item has been newly ticked.
 
+## Current implementation slice: runtime API reference preview
+
+Scope inventory: the English-only `api-reference` registry entry at `/developers/api/`, its
+`sitePages` YAML shell, `ApiReference` component, reference source/loader/view/page modules,
+the existing safe DOM tree's native disclosure tags, and the launch-link rule's exact source-contract
+exception. No integration guide, pricing claim, app operation or translated route is added.
+The page is registered unpublished and cannot ship in a normal strict build.
+
+Reuse checks: source and importer searches in this repository and `wl-bill-splitter` found no
+OpenAPI viewer. `policy-source.boundedRequest` remains the sole existing bounded-request owner;
+the new composition root reuses it and injects its request factory into `ReferenceLoader`.
+`policy-tree.toDom` builds the reference with the same safe text/element boundary used by policies.
+`page-content.layoutPaths/loadPageContent`, `tool-dom.ref`, `IconButton` and `Tooltip` are reused.
+`ReferenceApi` is the shared network stub for the focused tests and whole-site `SiteAudit`;
+both launch-link checks use `agent-guidance.isDocumentationSourceLink` for the same exact exception.
+Browser waits reuse the existing audited
+wait function from `e2e/pages/animations` (its legacy annotation name remains `animation-wait`).
+
+The source validates the supported OpenAPI envelope and operation structure, retaining contract
+fields as literal JSON. Native disclosures expose operations and their schemas; a filter searches
+the operation text. Descriptions remain literal text, including any Markdown or HTML. This is a
+read-only contract viewer: no copied quickstart, executable request form, credentials or external
+description links. Root settings (including servers, security and components), path parameters,
+operation overrides and extensions remain visible rather than being flattened into invented rules.
+Path-reference-only items are refused rather than silently omitted; the verified current source
+uses inline operations and contains no `$ref` values. This slice does not resolve external references.
+
+Localization decision: the source contract is English, and only an English route exists. All shell
+copy lives in the schema-validated English content entry; other locales have no fallback page or
+new catalogue keys. Source ownership and release/entitlement checks remain upstream. The public
+source is linked directly because it is documentation, not an app launch; rule 15 permits exactly
+that URL on this page type and continues to reject dashboard, staging and query variants.
+
+Browser diagnostics deliberately use JSON event metadata plus the original `Error` argument in
+the native console, retaining its stack and causes without another serializer or external telemetry.
+Review found `formatLogLine` in the sibling `@billsplit-wl/shared` workspace package; that package
+is not an available dependency in this independent repository, so no sibling source import or
+copied serializer is added. This is a stated browser diagnostic-format departure from the
+single serialized server-log line. Migrating the older policy page's silent error handler to a
+supported shared browser audit package is separate work.
+
+Verification: 248 targeted source/loader/content/structure/registry/policy checks and 23 browser
+checks passed serially with one worker. Browser coverage includes phone/desktop filtering and
+keyboard disclosures, accessible loading/failure/retry, timeout, hostile text, no-JS source access,
+upstream replacement on reload, ten existing whole-site audits, and two actual live contract/CORS
+reads (143 operations at 375 and 1280 pixels). The current production site's CSP contains no
+connection restriction that blocks this source; its CORS response also explicitly permits
+`https://sidebadger.me`. The built page's scripts, including static imports, total 9,609 bytes
+gzipped against the 10,240-byte budget. Independent UI/code review found three issues (content
+loader bypass, structural interaction locators and a duplicate serializer); all were resolved,
+and the final review found no substantive findings. No source snapshot, extra dependency or
+build-time API fetch is introduced. Normal strict builds omit the preview entirely. Publication
+and real client/account workflows remain separate work; delivery is through the accompanying commit.
+Final `npm run verify:site` passed: Astro check reported zero errors and warnings; the strict
+build produced 1,249 pages and 1,131 Markdown representations, and all 187 output checks passed.
+
 ## Acceptance criteria
 
 - A visitor or assistant can determine what Side Badger does, when it fits, its relevant limits, and how to start without guessing from slogans.
@@ -186,7 +243,7 @@ These are hypotheses under principle 7, not evidence that wording will improve r
 
 Status after the 19 November fact-finding. Nothing here is decided by the evidence; each is one owner or base-project action.
 
-- **Base project:** the OpenAPI contract and runtime delivery endpoint now exist at `/api/docs` (25 November). Confirm Pro access/entitlements, full documentation and examples; the tenant runtime renderer is still to be built. Documentation availability does not prove a Pro offering has launched.
+- **Base project:** the OpenAPI contract and runtime delivery endpoint now exist at `/api/docs` (25 November). Confirm Pro access/entitlements, full documentation and examples. The tenant viewer is an unpublished preview; documentation availability does not prove a Pro offering has launched.
 - **Base project:** Pro implementation (entitlements, billing, quotas, downgrade and expiry behaviour) and the matching terms and privacy changes (terms section 7 currently forbids direct API use).
 - **Owner:** Pro price and what Pro includes.
 - **Owner:** whether MCP and the ChatGPT/Claude plugins require Pro (code has no check; today any verified account can link).
@@ -281,11 +338,10 @@ overview and documentation pages themselves are still absent.
 The API documentation source returned HTTP 200 with
 `Content-Type: application/json; charset=utf-8` and
 `Access-Control-Allow-Origin: https://sidebadger.me` for a request carrying that
-Origin. The runtime renderer can therefore start from a reachable upstream
-contract and an explicit cross-origin read allowance. No source snapshot or
-build-time API fetch is required. A future renderer must still verify its actual
-browser request, safe rendering, loading/error states and upstream changes;
-these HTTP observations do not claim that renderer is built or tested.
+Origin. These HTTP observations established the source and cross-origin allowance.
+The subsequent runtime-preview slice above adds actual browser rendering, failure/retry,
+and upstream-update checks; the HTTP observations alone did not prove those behaviours.
+No source snapshot or build-time API fetch is used. The reference remains unpublished.
 
 Current source cross-checks also confirm the earlier count/conversion/limit
 corrections, available custom-connection AI registry entry, and narrowed pricing

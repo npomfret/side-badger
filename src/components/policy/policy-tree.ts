@@ -15,7 +15,7 @@ export interface PolicyElement {
 
 const TAGS = [
   'p', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li', 'strong', 'em', 'del', 'code', 'pre', 'blockquote', 'hr', 'br',
-  'a', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'div', 'input',
+  'a', 'table', 'thead', 'tbody', 'tr', 'th', 'td', 'div', 'input', 'details', 'summary', 'dl', 'dt', 'dd',
 ] as const;
 export type AllowedTag = (typeof TAGS)[number];
 

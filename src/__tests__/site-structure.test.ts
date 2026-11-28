@@ -501,4 +501,11 @@ describe('Markdown alternates', () => {
     }
     expect(hasMarkdownAlternate(undefined)).toBe(false);
   });
+
+  it('keeps the English-only API preview out of production routes and Markdown, including after publication', async () => {
+    const page = getPage('api-reference')!;
+    expect(page.locales).toEqual(['en']);
+    expect(page.published).toBe(false);
+    expect(hasMarkdownAlternate({ ...page, published: true })).toBe(false);
+  });
 });

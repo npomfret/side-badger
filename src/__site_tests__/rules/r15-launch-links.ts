@@ -1,5 +1,6 @@
 /** Rule 15: every link to the app goes through /go/app/ or /go/register/ with from, cta and (outside English) lang, and carries rel="nofollow". Pseudo-locales need no lang, because launchHref omits it. */
 import { getAppUrl } from '../../i18n';
+import { isDocumentationSourceLink } from '../../seo/agent-guidance';
 import { SITE_ORIGIN, isPseudoPage, type Site } from '../lib/site';
 
 const APP_HOSTS = new Set([new URL(getAppUrl()).host, 'app.sidebadger.me', 'staging.sidebadger.me']);
@@ -19,6 +20,8 @@ export function checkLaunchLinks(site: Site): string[] {
         continue;
       }
       const at = `${page.urlPath}: <a href="${href}">`;
+      // A source-document link reads a public contract; it does not launch the application.
+      if (isDocumentationSourceLink(page.page?.type, href)) continue;
       if (APP_HOSTS.has(url.host)) {
         problems.push(`${at} links straight to the app; use /go/app/ or /go/register/`);
         continue;

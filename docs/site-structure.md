@@ -37,6 +37,17 @@ Read before changing pages, layouts, content blocks, registries, the shell, or t
 - `LanguageSwitcher.astro`, `LanguageDetection.astro` - language picker and first-visit detection
 - `EasterEggs.astro` - Konami code, disco mode, hidden interactions
 
+### API reference preview (`src/components/api-reference/`)
+
+The English-only, unpublished `/developers/api/` shell loads the app's public OpenAPI contract in
+the browser. `reference-source` validates the envelope and preserves fields as literal JSON;
+`ReferenceLoader` owns attempts and cancellation with an injected source and bounded-request
+factory. `reference-view` reuses the policy safe DOM builder for native disclosures. Descriptions
+are literal text; the viewer makes no requests to documented operations. No source snapshot or
+build-time API request is used, and no Markdown alternate is generated from the loading shell.
+`agent-guidance.isDocumentationSourceLink` defines the exact public source-link exception shared
+by the launch-link output rule and browser audits. The normal app launch routing still applies.
+
 ### Homepage (`src/components/home/`)
 
 A scroll-driven set of scenes. Styles are in `src/styles/home/` (`tokens.css`, `scenes.css`).

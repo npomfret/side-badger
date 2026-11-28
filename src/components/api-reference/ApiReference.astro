@@ -1,0 +1,74 @@
+---
+import type { z } from 'astro/zod';
+import type { apiReferencePage } from '../../content/schemas';
+import IconButton from '../controls/IconButton.astro';
+import RichText from '../content/RichText.astro';
+
+interface Props {
+  copy: z.infer<typeof apiReferencePage>;
+  source: string;
+}
+const { copy, source } = Astro.props;
+---
+
+<section class="api-reference container" aria-labelledby="api-reference-title" data-api-reference data-source={source}
+  data-loading={copy.labels.loading} data-error={copy.labels.error}>
+  <h1 id="api-reference-title">{copy.h1}</h1>
+  <RichText as="p" text={copy.lead} locale="en" />
+  <p><a href={source} rel="noopener noreferrer">{copy.labels.source}</a></p>
+  <div role="status" aria-live="polite" aria-label={copy.labels.status}>
+    <p data-ref="message" tabindex="-1"></p>
+  </div>
+  <IconButton label={copy.labels.retry} icon="rotate-ccw" data-ref="retry" hidden />
+  <label class="api-reference__filter" hidden data-ref="filter-label">
+    {copy.labels.filter}
+    <input type="search" data-ref="filter" />
+  </label>
+  <p role="status" data-ref="empty" hidden>{copy.labels.empty}</p>
+  <div class="api-reference__body" role="region" aria-label={copy.labels.body} data-ref="body" aria-busy="true" tabindex="-1" hidden></div>
+</section>
+
+<script>
+  import './reference-page';
+</script>
+
+<style is:global>
+  .api-reference {
+    padding-block: var(--space-3xl);
+    min-block-size: 70vh;
+  }
+  .api-reference > * + * { margin-block-start: var(--space-lg); }
+  .api-reference [hidden] { display: none; }
+  .api-reference__filter {
+    display: grid;
+    gap: var(--space-sm);
+  }
+  .api-reference__filter input {
+    inline-size: 100%;
+    padding: var(--space-md);
+    border: 1px solid var(--control-quiet-border);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    background: var(--control-surface);
+    font: inherit;
+  }
+  .api-reference__body { overflow-wrap: anywhere; }
+  .api-reference__body details {
+    padding: var(--space-md);
+    border-block-end: 1px solid var(--glass-border);
+  }
+  .api-reference__body details details { margin-inline-start: var(--space-md); }
+  .api-reference__body summary {
+    cursor: pointer;
+    padding-block: var(--space-sm);
+    min-block-size: var(--control-size);
+  }
+  .api-reference__body pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    margin-block: var(--space-md);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+  }
+  .api-reference__description { white-space: pre-wrap; }
+</style>

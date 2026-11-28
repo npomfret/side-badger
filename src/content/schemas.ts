@@ -300,12 +300,20 @@ export const supportPage = entry({
  * `sitePages`: `src/content/pages/<pageId>/<locale>.yaml` (how it works, the hubs, the tools, the
  * help page). The page's registry type picks which of the shapes applies (content.test.ts checks it).
  */
-export const sitePage = z.union([hubPage, howItWorksPage, toolPage, supportPage]);
+/** English-only shell; the API owner supplies the actual reference in the visitor's browser. */
+export const apiReferencePage = base.omit({ cta: true }).extend({
+  labels: z.object({
+    loading: text, error: text, retry: text, source: text, filter: text, empty: text, body: text, status: text,
+  }).strict(),
+}).strict();
+
+export const sitePage = z.union([hubPage, howItWorksPage, toolPage, supportPage, apiReferencePage]);
 export const sitePageByType = {
   hub: hubPage,
   'how-it-works': howItWorksPage,
   tool: toolPage,
   support: supportPage,
+  'api-reference': apiReferencePage,
 } as const;
 
 /** An id for a source or a table row's reference to it. Structural: identical in every locale. */

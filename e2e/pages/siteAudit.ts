@@ -5,6 +5,8 @@ import { ELEMENT_TIMEOUT, NAVIGATION_TIMEOUT } from './timeouts';
 import { isRtl, pathFor, SHELL_LOCALES, text, type ShellLocale, type StringKey } from './strings';
 import { expectStubPolicyShown, stubPolicyApi } from './policyApi';
 import { expectAnimationsSettled } from './animations';
+import { ReferenceApi } from './referenceApi';
+import { isDocumentationSourceLink } from '../../src/seo/agent-guidance';
 
 /** Every registry page (published, unpublished and preview-only) that exists in a locale */
 export function pagesIn(locale: ShellLocale): readonly PageDef[] {
@@ -39,6 +41,7 @@ export class SiteAudit {
   static async navigateTo(page: Page, locale: ShellLocale, def: PageDef): Promise<SiteAudit> {
     const audit = new SiteAudit(page, locale, def);
     await stubPolicyApi(page); // the policy pages load their text from the app API
+    if (def.type === 'api-reference') await ReferenceApi.install(page);
     // The homepage's scenes fade with the scroll position, so the scene just below the fold is part
     // faded at load: with CI's CJK fonts the zh hero is short and the group scene's app mock-up sat
     // at 0.6 opacity off screen, which axe reports as low contrast. How far depends on font metrics,
@@ -310,7 +313,8 @@ export class SiteAudit {
     expect(launch.length, 'the header carries a launch link').toBeGreaterThan(0);
     expect(
       {
-        direct: links.filter(link => /^https?:\/\/(app|staging)\.sidebadger\.me/.test(link.href)).map(l => l.href),
+        direct: links.filter(link => /^https?:\/\/(app|staging)\.sidebadger\.me/.test(link.href) &&
+          !isDocumentationSourceLink(this.def.type, link.href)).map(l => l.href),
         malformed: launch.filter(link => !/^\/go\/(app|register)\/\?/.test(link.href)).map(l => l.href),
         noNofollow: launch.filter(link => !link.rel.includes('nofollow')).map(l => l.href),
         unnamed: launch.filter(link => !new URL(link.href, 'http://x').searchParams.get('from')).map(l => l.href),
